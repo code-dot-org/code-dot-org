@@ -9,12 +9,15 @@ import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import errorHandler from '../errorHandler';
-var ErrorLevel = errorHandler.ErrorLevel;
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
 import color from "../util/color";
 import logToCloud from '../logToCloud';
+import {
+  error as outputError,
+  getAsyncWarn as getAsyncErrorHandler,
+  warn as outputWarning,
+} from '../javascriptMode';
 
 var OPTIONAL = true;
 
@@ -41,26 +44,6 @@ var toBeCached = {};
  */
 var eventSandboxer = new EventSandboxer();
 
-function outputWarning(errorString) {
-  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
-}
-
-function outputError(errorString) {
-  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
-}
-
-/**
- * Returns an error handler which prints warnings to the applab console,
- * with line numbers which are accurate even for async callbacks.
- * @returns {function(*)}
- */
-function getAsyncErrorHandler() {
-  const line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  return error => errorHandler.outputError(String(error), ErrorLevel.WARNING, line);
-}
-
 /**
  * @param value
  * @returns {boolean} true if value is a string, number, boolean, undefined or null.
@@ -81,7 +64,7 @@ function isPrimitiveType(value) {
 }
 
 /**
- * Validates a user function paramer, and outputs error to the console if invalid
+ * Validates a user function parameter, and outputs error to the console if invalid
  * @returns {boolean} True if param passed validation.
  */
 function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
@@ -107,7 +90,7 @@ function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
         break;
       case 'number':
         properType = (typeof varValue === 'number' ||
-          (typeof varValue === 'string' && !isNaN(varValue)));
+        (typeof varValue === 'string' && !isNaN(varValue)));
         break;
       case 'primitive':
         properType = isPrimitiveType(varValue);

@@ -5,6 +5,7 @@ var Observer = require('./Observer');
  * Observer responsible for logging to the provided browser console when
  * the interpreter it is observing raises log-worthy events.
  * @constructor
+ * @implements LogTarget
  * @param {Console} window console API
  */
 var JsInterpreterLogger = module.exports = function (outputConsole) {
