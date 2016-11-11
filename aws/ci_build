@@ -80,7 +80,7 @@ def build
       status = begin
         RakeUtils.rake_stream_output 'ci'
       rescue => e
-        CDO.backtrace e
+        "Error: #{e.message}\n#{CDO.backtrace(e)}"
       end
     end
 
