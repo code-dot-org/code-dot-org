@@ -24,7 +24,8 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
     @user = create :teacher
     sign_in(@user)
 
-    @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
+    Plc::UserCourseEnrollment.enroll_users([@user.email], @course.id)
+    @enrollment = Plc::UserCourseEnrollment.find_by(user: @user)
 
     @unit_assignment = @enrollment.plc_unit_assignments.first
   end
