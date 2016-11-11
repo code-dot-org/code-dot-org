@@ -51,7 +51,6 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -395,24 +394,23 @@ function renderFooterInSharedGame() {
     }
   ].filter(item => item);
 
-  ReactDOM.render(
-    <SmallFooter
-      i18nDropdown={''}
-      privacyPolicyInBase={false}
-      copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
-      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
-      rowHeight={applabConstants.FOOTER_HEIGHT}
-      style={{fontSize:18}}
-      baseStyle={{
-        width: $("#divApplab").width(),
-        paddingLeft: 0
-      }}
-      className="dark"
-      menuItems={menuItems}
-      phoneFooter={true}
-    />,
-    footerDiv);
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
+    i18nDropdown: '',
+    copyrightInBase: false,
+    copyrightStrings: copyrightStrings,
+    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
+    rowHeight: applabConstants.FOOTER_HEIGHT,
+    style: {
+      fontSize: 18
+    },
+    baseStyle: {
+      width: $("#divApplab").width(),
+      paddingLeft: 0
+    },
+    className: 'dark',
+    menuItems: menuItems,
+    phoneFooter: true
+  }), footerDiv);
 }
 
 /**
