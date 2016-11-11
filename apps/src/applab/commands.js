@@ -1663,10 +1663,10 @@ applabCommands.onRecordEvent = function (opts) {
 };
 
 applabCommands.getUserId = function (opts) {
-  if (!Applab.user.applabUserId) {
+  if (!Applab.user.labUserId) {
     throw new Error("User ID failed to load.");
   }
-  return Applab.user.applabUserId;
+  return Applab.user.labUserId;
 };
 
 /**
