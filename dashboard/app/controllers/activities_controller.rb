@@ -149,11 +149,9 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
-
-    # Save the activity and user_level synchronously if the level might be saved
-    # to the gallery (for which the activity.id and user_level.id is required).
-    # This is true for levels auto-saved to the gallery, free play levels, and
-    # "impressive" levels.
+    # Save the activity synchronously if the level might be saved to the gallery (for which
+    # the activity.id is required). This is true for levels auto-saved to the gallery, and for
+    # free play and "impressive" levels.
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
@@ -162,27 +160,16 @@ class ActivitiesController < ApplicationController
     else
       @activity = Activity.create_async!(attributes)
     end
+
     if @script_level
-      if synchronous_save
-        @new_level_completed = User.track_level_progress_sync(
-          user_id: current_user.id,
-          level_id: @level.id,
-          script_id: @script_level.script_id,
-          new_result: test_result,
-          submitted: params[:submitted] == 'true',
-          level_source_id: @level_source.try(:id),
-          pairing_user_ids: pairing_user_ids,
-        )
-      else
-        @new_level_completed = current_user.track_level_progress_async(
-          script_level: @script_level,
-          new_result: test_result,
-          submitted: params[:submitted] == "true",
-          level_source_id: @level_source.try(:id),
-          level: @level,
-          pairing_user_ids: pairing_user_ids
-        )
-      end
+      @new_level_completed = current_user.track_level_progress_async(
+        script_level: @script_level,
+        new_result: test_result,
+        submitted: params[:submitted] == "true",
+        level_source_id: @level_source.try(:id),
+        level: @level,
+        pairing_user_ids: pairing_user_ids
+      )
     end
 
     passed = Activity.passing?(test_result)
@@ -192,16 +179,9 @@ class ActivitiesController < ApplicationController
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
 
-    # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
-    # string value.
+    # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(
-        user: current_user,
-        activity: @activity,
-        user_level_id: @new_level_completed.try(:id),
-        level_source_id: @level_source_image.level_source_id,
-        autosaved: true
-      )
+      @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
     end
   end
 
