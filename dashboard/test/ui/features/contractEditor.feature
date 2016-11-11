@@ -7,7 +7,6 @@ Scenario: Testing the contract variable editor
   When I open my eyes to test "contract variable editor"
   Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -29,7 +28,6 @@ Scenario: Creating and modifying a new contract
   When I open my eyes to test "creating a new contract"
   Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
   And I see no difference for "blank game screen"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -78,8 +76,8 @@ Scenario: Changing Parameter names
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
-  And I close the dialog
   And I press "modalEditorClose"
+  And I resize top instructions to "100" pixels tall
 
   When I open the topmost blockly category "Functions"
   And I press the SVG text "Create a Function"
@@ -93,8 +91,9 @@ Scenario: Changing Parameter names
   And I drag block "j" to block "add-block" plus offset 60, 40
   And I see no difference for "used variables in definition"
 
-  Then I press keys ":backspace" for element "#domain-area input"
-  Then I press keys "radius" for element "#domain-area input"
+  Then I scroll the modal blockspace to the top
+  And I press keys ":backspace" for element "#domain-area input"
+  And I press keys "radius" for element "#domain-area input"
   And I see no difference for "changed one variable"
 
   Then I press "modalEditorClose"

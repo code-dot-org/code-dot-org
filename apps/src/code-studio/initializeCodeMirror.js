@@ -40,6 +40,8 @@ module.exports = function (target, mode, callback, attachments) {
     htmlMode = true;
   }
 
+  var node = target.nodeType ? target : document.getElementById(target);
+
   var backdrop = undefined;
   if (mode === 'markdown') {
     backdrop = mode;
@@ -48,7 +50,7 @@ module.exports = function (target, mode, callback, attachments) {
     // In markdown mode, look for a preview element (found by just appending
     // _preview to the target id), if it exists extend our callback to update
     // the preview element with the markdown contents
-    const previewElement = $(`#${target}_preview`);
+    const previewElement = $(`#${node.id}_preview`);
     if (previewElement.length > 0) {
       const originalCallback = callback;
       updatePreview = editor => {
@@ -66,7 +68,6 @@ module.exports = function (target, mode, callback, attachments) {
     }
   }
 
-  var node = target.nodeType ? target : document.getElementById(target);
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
     backdrop: backdrop,

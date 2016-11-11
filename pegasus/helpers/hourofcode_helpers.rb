@@ -29,12 +29,17 @@ def trans_load_i18n
 end
 TRANS_I18N = trans_load_i18n
 
+# Can be called by pages on hourofcode.com, code.org, or csedweek.org to retrieve
+# a string from the hourofcode.com translations.
+# When called on hourofcode.com, it uses @language.
+# When called from the other sites, it uses request.locale and converts that XX-XX
+# locale code into a two-letter language code which notably involves a database hit to
+# do that conversion using information in the cdo-languages gsheet.
 def hoc_s(id)
   id = id.to_s
-
+  language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
   return TRANS_I18N['en-US'][id] if request.site == 'translate.hourofcode.com'
-
-  HOC_I18N[@language][id] || HOC_I18N['en'][id]
+  HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
 def hoc_canonicalized_i18n_path(uri)
@@ -91,6 +96,12 @@ def hoc_detect_language
   language = language[0..1]
   return language if HOC_I18N.keys.include?(language)
   nil
+end
+
+# Called by pages on hourofcode.com to convert the current two-letter language (stored
+# in @language) into an XX-XX locale code as used by code.org/csedweek.org/apps.
+def hoc_get_locale_code
+  Languages.get_hoc_locale_by_unique_language(@language)
 end
 
 def hoc_uri(uri)

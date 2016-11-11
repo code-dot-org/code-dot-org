@@ -52,8 +52,11 @@ reporting.sendReport = function (report) {
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
-  //Post milestone iff the server tells us, or if we are on the last level and have passed
-  if (appOptions.postMilestone || (appOptions.level.puzzle_number && appOptions.level.puzzle_number === appOptions.level.stage_total && report.pass)) {
+  // Post milestone iff the server tells us.
+  // Check a second switch if we passed the last level of the script.
+  // Keep this logic in sync with ActivitiesController#milestone on the server.
+  if (appOptions.postMilestone ||
+    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
 
     var thisAjax = $.ajax({
       type: 'POST',
@@ -137,16 +140,6 @@ function reportComplete(report, response) {
     lastServerResponse.videoInfo = response.video_info;
     lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
     lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
-
-    if (response.redirect) {
-      // Add a "prerender" resource hint as soon as a `nextRedirect` URL is returned.
-      // Ref: https://www.w3.org/TR/resource-hints/#prerender
-      var myHead = document.getElementsByTagName('head')[0];
-      var myLink = document.createElement('link');
-      myLink.setAttribute('rel', 'prerender');
-      myLink.setAttribute('href', response.redirect);
-      myHead.appendChild(myLink);
-    }
   }
   if (report.onComplete) {
     report.onComplete(response);

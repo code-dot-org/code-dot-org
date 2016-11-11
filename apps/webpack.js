@@ -4,13 +4,14 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 // Our base config, on which other configs are derived
 var baseConfig = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      '@cdo/locale': path.resolve(__dirname, 'src', 'locale-do-not-import.js'),
+      '@cdo/locale': path.resolve(__dirname, 'src', 'util', 'locale-do-not-import.js'),
       '@cdo/netsim/locale': path.resolve(__dirname, 'src', 'netsim', 'locale-do-not-import.js'),
       '@cdo/applab/locale': path.resolve(__dirname, 'src', 'applab', 'locale-do-not-import.js'),
       '@cdo/gamelab/locale': path.resolve(__dirname, 'src', 'gamelab', 'locale-do-not-import.js'),
@@ -142,6 +143,7 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {string[]} options.entries - list of input source files
  * @param {bool} options.minify
  * @param {bool} options.watch
+ * @param {bool} options.watchNotify
  * @param {string} options.piskelDevMode
  * @param {Array} options.plugins - list of additional plugins to use
  * @param {Array} options.externals - list of webpack externals
@@ -151,6 +153,7 @@ function create(options) {
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
+  var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
   var externals = options.externals;
@@ -197,6 +200,12 @@ function create(options) {
         appendScriptTag: envConstants.AUTO_RELOAD
       })
     );
+
+    if (watchNotify) {
+      config.plugins = config.plugins.concat(
+        new WebpackNotifierPlugin({alwaysNotify: true})
+      );
+    }
   }
 
   return config;

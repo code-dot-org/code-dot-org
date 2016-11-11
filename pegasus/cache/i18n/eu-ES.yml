@@ -12,7 +12,7 @@
   en: Informatika
   computer_science_edweek: Informatikaren Ikaskuntzaren astea
   csedweek_dates: 2014-ko abenduaren 8-tik 14-ra
-  csedweek_banner_hoc: |2
+  csedweek_banner_hoc: |2-
 
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kode Ordua</a> gerturatzen ari da. Irakasle eta antolatzaile guztientzat, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planifikatu zuen Kode Ordua</a>
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
@@ -36,8 +36,8 @@
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio
     kontzeptu gehiago ondorengo jarraipen ikastaroan.
   og_title: Ume guztiek merezi dute aukera bat
-  og_description: Eskola bakoitzeko ikasle bakoitzak informatika ikasteko aukera merezi
-    du.
+  og_description: Every student in every school deserves the opportunity to study
+    computer science. It's changing everything.
   hoc2014_heading: Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko
     abenduaren 8tik 14era<br/>
   hoc2014_students: Ikasle
@@ -253,7 +253,7 @@
   learn_next_level: Jarraitu hurrengo mailara
   learn_online: Probatu beste online kurtsoak
   learn_classes: Bilatu gertuko klaseak
-  hoc_is_here: "#KodeOrdua hemen dago - probatu! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Oraintxe #KodeOrdua egin dut - Probatu! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -299,16 +299,16 @@
   studiobar_donate_body: Ume batek ikasiko du ematen duzun dolar bakoitzagatik
   studiobar_shop_title: Denda
   studiobar_shop_body: Estereotipoak apurtu. Jantzi gure logoa harrotasunez.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;herrialde guztietako neska guztiei kode ordu bat&rdquo; ikasteko erronka botatzen diet.
     Malala, Pakearen nobel sariaren irabazlea
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;teknologia aldatu badezakezu, mundua alda dezakezu.&rdquo;
     Susan, Youtubeko zuzendari exekutiboa
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Ez jolastu bakarrik zure sakelakoan, programatu ezazu.&rdquo;
     Barack Obama presidentea
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Gure txikiak &mdash; neskak barne &mdash;
     informatika ikasteko aukera behar dute.&rdquo;
     Sheryl, Facebook-eko COO-a
@@ -325,11 +325,11 @@
   homepage_hero_text_student4: "&ldquo;Programazioari esker gauza asko egin ditzakezu.&rdquo;
     Maya, 2. maila"
   homepage_hero_text_student5: "&ldquo;Programazioa ez da beste batentzat. Zuretzat
-    da, hemen eta orain.&rdquo; \nGeraldo, irakasle\n"
+    da, hemen eta orain.&rdquo; \nGeraldo, irakasle"
   homepage_hero_text_teacher1: "&ldquo;Programatzeak sormena, inspirazioa eta berrikuntza
     pizten ditu &mdash; \neta guztiak funtsezkoak dira edozein lanbidetan.&rdquo;\nFloresa,
-    irakasle\n"
-  homepage_hero_text_teacher2: |
+    irakasle"
+  homepage_hero_text_teacher2: |-
     &ldquo;Programa honek lortu zuen nire ikasleen %100 interesatuta, konprometituta eta partizipatibo egotea.&rdquo;
     Adam, irakasle
   homepage_hero_text_stat_loc: 2.5 milioi neskak eman dute izena Code Studio-n, ikasteko
@@ -757,6 +757,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -896,6 +908,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Ikasi gehiago
   dashboard_announce_try_now_button: Saiatu orain
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -904,6 +917,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Kode-ordua iritsi da-Abenduak 8-14!
   code_sign_up: Izena eman Informatikaren Ikaskuntzaren Astean parte hartzeko
   host_an_hour: Host an hour
@@ -1734,7 +1752,7 @@
     erabiliz zure heroia kontrolatzeko, labirintoak zeharkatzeko, ogroei aurre egiteko
     , etsaiei ziria sartzeko eta aliatuk erreskatatzeko! Ikasi JavaScript hasiberrientzat
     zuzendutako HTML 5 sare joko honen bidez.
-  codea_beyond_longdescription: |
+  codea_beyond_longdescription: |-
     Codea iPad-entzat simulazioak eta jokuak sortzen laguntzen dizu, edota egin nahi duzunaren idearen errepresentazio grafikoa ikusteko. Pentsa itzazu nola ereabili ukimen-pantaila, azelerometroa, eta horrelako dispositiboak. Ustez, Codea kodetzeko editorerik politena da, eta erraza ere bai.
     Codea zure kodea ondo egituratzeko prestatuta dago, eta hori lan errezean bilakatzen du. Zenbaki bat aldatu nahi duzu? arrastatu ezazu. Irudia aldatzea nahin duzula, berdina egin. Cideakin nahi duzuna egin dezakezu.
   lego_beyond_longdescription: Sor itzazu robot txiki, eraldagarri eta programagarriak
@@ -1773,3 +1791,22 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on theses course from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

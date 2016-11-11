@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import color from '../../color';
+import color from "../../util/color";
 
 var PlcHeader = React.createClass({
   propTypes: {
@@ -56,4 +56,5 @@ var PlcHeader = React.createClass({
   }
 });
 
+export default PlcHeader;
 window.dashboard.plcHeader = PlcHeader;

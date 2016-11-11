@@ -15,7 +15,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n</details>\r\n</h5>\r\n",
+    "markdown_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

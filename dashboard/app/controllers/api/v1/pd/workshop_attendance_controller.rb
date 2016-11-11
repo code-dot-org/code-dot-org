@@ -1,6 +1,5 @@
-require 'controllers/api/csv_download'
 class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
-  include CsvDownload
+  include Api::CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
   before_action :authorize_manage_attendance, only: [:update]
@@ -70,7 +69,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
 
     enrollment = Pd::Enrollment.find_by_email!(email)
     params = {
-      name: enrollment.name,
+      name: enrollment.full_name,
       email: email,
       school: enrollment.school
     }

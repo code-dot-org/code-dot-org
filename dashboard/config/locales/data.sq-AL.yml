@@ -195,7 +195,7 @@
         turtle_2_4: 'Tani ne do të zbukurohemi. Ndrysho kodin për të vizatuar 36 katrorë,
           100 piksela të gjerë dhe çdo katror të jetë 10 gradë larg njëri tjetrit.
           Ndihmë: ti mund të përdorësh kursorin për të më lëvizur mua më shpejt.'
-        turtle_2_5: |
+        turtle_2_5: |-
           Vizato katrorë me brinjë 50, 60, 70,
           80, dhe 90 piksela. Ty do të duhet të përdorësh funksionin "draw a square" pesë
           herë.
@@ -317,6 +317,28 @@
           së TNT!
         maze_3_4: Argh! Më shkruaj një program që më nxjerr nga TNT dhe më çon drejt
           derrkucit.
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: Bashkangjit një bllok me bllokun "when left arrow" dhe shtyp "Run".
           Lëviz lopatën duke përodrur shigjetën e majtë për të arritur në objektivin
           e fundit.
@@ -488,9 +510,9 @@
           gjithë të tjerët
         studio_playlab_10: Krijo lojën tënde. Kur të përfundosh, kliko Mbaro që të
           lejosh shokët e tu ta provojnë atë në telefonat e tyre.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
+        studio_iceage_hello1: Sid deshiron ti ftoje te gjithe per nje aventure te
+          re. A mund ta ndihmoni ate (pershendetur) duke terhequr bllokun qe thote
+          "Hello" brenda zones se punes dhe duke shkruar brenda ("Hello")?
         studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
           him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
@@ -702,6 +724,11 @@
         infinity_playlab_intro: Hyrja- Laboratori i Lojrave
         infinity_playlab_events: Eventet- Laboratori i Lojrave
         infinity_playlab_repeat_forever: Përsërit përgjithmonë- Laboratorti i Lojrave
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

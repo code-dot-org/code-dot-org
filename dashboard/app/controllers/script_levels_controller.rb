@@ -64,9 +64,9 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden?(@script_level)
+    if stage_hidden_for_user?(@script_level, current_user)
       view_options(full_width: true)
-      render 'levels/hidden_stage'
+      render 'levels/_hidden_stage'
       return
     end
 
@@ -91,7 +91,8 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_under_13_without_tos_teacher(@script_level.level)
+    @level = select_level
+    return if redirect_under_13_without_tos_teacher(@level)
 
     present_level
   end
@@ -286,7 +287,6 @@ class ScriptLevelsController < ApplicationController
 
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = select_level
     @game = @level.game
     @stage = @script_level.stage
 
@@ -329,10 +329,10 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-  def stage_hidden?(script_level)
-    return false if !current_user || current_user.try(:teacher?)
+  def stage_hidden_for_user?(script_level, user)
+    return false if !user || user.try(:teacher?)
 
-    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
+    sections = user.sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
 
     script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
@@ -340,13 +340,21 @@ class ScriptLevelsController < ApplicationController
     if !script_sections.empty?
       # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.all?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+      script_sections.all?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
-      sections.any?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+      sections.any?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
     end
   end
+
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
+  def self.stage_hidden_for_section?(script_level, section_id)
+    return false if script_level.nil? || section_id.nil?
+    !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
+  end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def get_hidden_stage_ids(script_name)
     return [] unless current_user

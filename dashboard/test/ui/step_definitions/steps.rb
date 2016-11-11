@@ -73,6 +73,10 @@ When /^I go to the newly opened tab$/ do
   @browser.switch_to.window(@browser.window_handles.last)
 end
 
+When /^I close the instructions overlay if it exists$/ do
+  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+end
+
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   steps <<-STEPS
@@ -96,14 +100,22 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
+    And I debug version history fetch
+    And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
-    And I wait for 3 seconds
+    And I wait until element "#showVersionsModal" is not visible
+    And I debug version history fetch
     Then I click selector "#versions-header"
+    And I debug version history fetch
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
-    And I wait until element "#showVersionsModal" is gone
+    And I wait until element "#showVersionsModal" is not visible
   STEPS
+end
+
+Then /^I debug version history fetch$/ do
+  puts "version history fetch status: #{@browser.execute_script('return window.__TestInterface.versionHistoryFetchStatus;')}"
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -126,6 +138,10 @@ end
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
+end
+
+Then /^I wait until element "([^"]*)" is not visible/ do |selector|
+  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
@@ -295,8 +311,14 @@ When /^I click selector "([^"]*)"$/ do |jquery_selector|
   @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
 end
 
+When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
+  if @browser.execute_script("return $(\"#{jquery_selector}\").length > 0")
+    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+  end
+end
+
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == true }
   @browser.execute_script("$(\"#{selector}\")[0].click();")
 end
 
@@ -585,6 +607,10 @@ Then /^I see jquery selector (.*)$/ do |selector|
   expect(exists).to eq(true)
 end
 
+Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
+end
+
 Then /^I wait until I see selector "(.*)"$/ do |selector|
   wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
 end
@@ -726,14 +752,11 @@ def generate_teacher_student(name, teacher_authorized)
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
-    And I click selector ".close"
-    And I wait for 3 seconds
-    And I click selector ".btn-white:contains('New section')"
+    And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
     And I click selector ".btn-primary:contains('Save')"
-    And I wait for 3 seconds
-    And I click selector "a:contains('Manage Students')"
+    And I click selector "a:contains('Manage Students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
@@ -852,6 +875,10 @@ end
 
 When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
+end
+
+When /^I debug channel id$/ do
+  puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -984,8 +1011,8 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
 end
 
 Then /^I scroll our lockable stage into view$/ do
-  wait_with_short_timeout.until { @browser.execute_script('return $(".react_stage").length') >= 31 }
-  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView()')
+  wait_with_short_timeout.until { @browser.execute_script('return $(".uitest-locked").length') > 0 }
+  @browser.execute_script('$(".react_stage")[30] && $(".react_stage")[30].scrollIntoView(true)')
 end
 
 Then /^I open the stage lock dialog$/ do
@@ -1001,6 +1028,9 @@ Then /^I unlock the stage for students$/ do
 end
 
 Then /^I select the first section$/ do
+  steps %{
+    And I wait to see ".uitest-sectionselect"
+  }
   @browser.execute_script(
     "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
   )

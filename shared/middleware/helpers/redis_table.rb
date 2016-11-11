@@ -169,9 +169,12 @@ class RedisTable
   # Given a row key, return the name of the RedisTable that it belongs to.
   # @param [String] row_key
   # @return [String] the RedisTable name.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.table_from_row_key(key)
     key.split('_')[0]
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def table_from_row_key(key)
     self.class.table_from_row_key(key)
@@ -180,9 +183,12 @@ class RedisTable
   # Given a row key, return the id of the row that it corresponds to.
   # @param [String] key
   # @return [Integer] the row id.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def id_from_row_key(key)
     self.class.id_from_row_key(key)
@@ -209,9 +215,12 @@ class RedisTable
   # @param [String] value The JSON-encoded value.
   # @return [Hash] The row, or null if no such row exists.
   # @private
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.make_row(value)
     value.nil? ? nil : JSON.parse(value)
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def make_row(value)
     self.class.make_row(value)
@@ -238,9 +247,12 @@ class RedisTable
 
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def internal_key?(k)
     self.class.internal_key?(k)
