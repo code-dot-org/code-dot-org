@@ -4,7 +4,6 @@ const CLOSE_DIALOG = 'instructionsDialog/CLOSE_DIALOG';
 const initialState = {
   open: false,
   autoClose: false,
-  showHints: false,
   aniGifOnly: false,
   hintsOnly: false
 };
@@ -19,7 +18,6 @@ export default function reducer(state = initialState, action) {
     }
     return {
       open: true,
-      showHints: action.showHints,
       autoClose: action.autoClose,
       aniGifOnly: action.aniGifOnly,
       hintsOnly: action.hintsOnly
@@ -37,10 +35,9 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-export const openDialog = ({autoClose, showHints, aniGifOnly, hintsOnly}) => ({
+export const openDialog = ({autoClose, aniGifOnly, hintsOnly}) => ({
   type: OPEN_DIALOG,
   autoClose,
-  showHints,
   aniGifOnly,
   hintsOnly
 });

@@ -51,9 +51,6 @@ group :development, :test do
   gem 'rack-cache'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
-  # Ref: https://github.com/jfirebaugh/konacha/issues/230
-  gem 'konacha', github: 'wjordan/konacha', ref: 'rails-5'  # Mocha + Chai JS testing in Rails
-  gem 'poltergeist'  # Headless JS tests.p
 
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'better_errors'

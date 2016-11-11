@@ -344,8 +344,8 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose, showHints) => {
-            this.showInstructionsDialog_(config.level, autoClose, showHints);
+        showInstructionsDialog={(autoClose) => {
+            this.showInstructionsDialog_(config.level, autoClose);
           }}
       />
     </Provider>,
@@ -452,7 +452,6 @@ StudioApp.prototype.init = function (config) {
       var shouldAutoClose = !!config.level.aniGifURL;
       this.reduxStore.dispatch(openInstructionsDialog({
         autoClose: shouldAutoClose,
-        showHints: false,
         aniGifOnly: false,
         hintsOnly: false
       }));
@@ -1142,9 +1141,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
- * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
   const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
@@ -1226,15 +1224,12 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
-  const authoredHints = showHints ?
-    this.authoredHintsController_.getHintsDisplay() : undefined;
-
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
       <Provider store={this.reduxStore}>
-        <DialogInstructions authoredHints={authoredHints}/>
+        <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
   });
