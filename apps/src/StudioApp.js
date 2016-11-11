@@ -34,7 +34,6 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -826,7 +825,6 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
 
   var reactProps = {
     i18nDropdown: '',
-    privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
@@ -870,7 +868,8 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     phoneFooter: true
   };
 
-  ReactDOM.render(<SmallFooter {...reactProps}/>, footerDiv);
+  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
+    footerDiv);
 };
 
 /**
