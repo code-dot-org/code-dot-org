@@ -40,7 +40,7 @@ class CertificateImageTest < Minitest::Test
 
   def test_image_generation
     mc_certificate_image = create_course_certificate_image('Robot Tester', 'mc')
-    assert_image mc_certificate_image, 1754, 1235, 'JPEG'
+    assert_image mc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image = create_course_certificate_image('Robot Tester', 'flappy')
     assert_image hoc_certificate_image, 1754, 1235, 'JPEG'
     unspecified_course_image = create_course_certificate_image('Robot Tester', nil)
