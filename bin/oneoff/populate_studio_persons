@@ -7,10 +7,9 @@ require_relative '../../dashboard/config/environment'
 
 TIME_NOW = DateTime.now.freeze
 
-User.with_deleted.where(user_type: User::TYPE_TEACHER).each do |teacher|
-  # If the teacher already has an associated StudioPerson, skip them.
-  next if teacher.studio_person_id
-
+User.with_deleted.where(user_type: User::TYPE_TEACHER).
+  where.not(studio_person: nil).
+  each do |teacher|
   # The teacher does not have an associated StudioPerson, so create one,
   # updating the User to point to the StudioPerson.
   studio_person = StudioPerson.create(
