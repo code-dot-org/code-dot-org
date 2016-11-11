@@ -329,6 +329,7 @@ const TutorialExplorer = React.createClass({
               tutorials={this.state.filteredTutorials}
               filters={this.state.filters}
               locale={this.props.locale}
+              localeEnglish={this.isLocaleEnglish()}
             />
           )}
         </div>
