@@ -16,10 +16,11 @@ import i18n from './locale';
 import _ from 'lodash';
 
 const styles = {
-  bottomGuidelinesLink: {
-    textAlign: 'right',
+  bottomLinks: {
     padding: '10px 7px 40px 7px',
-    fontSize: 13
+    fontSize: 13,
+    lineHeight: "17px",
+    clear: "both"
   }
 };
 
@@ -291,11 +292,14 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
-    const bottomGuidelinesLink =
-      i18n.bottomGuidelinesLink({guidelines_url: "https://hourofcode.com/tutorial-guidelines"});
+    const bottomLinksStyle = {
+      ...styles.bottomLinks,
+      textAlign: getResponsiveValue({xs: "left", md: "right"})
+    };
 
     return (
       <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
+
         <FilterHeader
           onUserInput={this.handleUserInputSortBy}
           sortBy={this.state.sortBy}
@@ -343,11 +347,22 @@ const TutorialExplorer = React.createClass({
             />
           )}
 
-          <div style={styles.bottomGuidelinesLink}>
-            <div dangerouslySetInnerHTML={{__html: bottomGuidelinesLink}}/>
-          </div>
-
         </div>
+
+        <div style={bottomLinksStyle}>
+          <div>
+            <a href="https://hourofcode.com/activity-guidelines">
+              {i18n.bottomGuidelinesLink()}
+            </a>
+          </div>
+          <br/>
+          <div>
+            <a href="https://hourofcode.com/supporting-special-needs-students">
+              {i18n.bottomSpecialNeedsLink()}
+            </a>
+          </div>
+        </div>
+
       </div>
     );
   }
