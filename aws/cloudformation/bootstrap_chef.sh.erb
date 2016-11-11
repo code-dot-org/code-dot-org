@@ -35,9 +35,6 @@ cat <<JSON > ${FIRST_BOOT}
     "sync": true
   },
   "cdo-secrets": {
-<% if hipchat_room -%>
-    "hip_chat_log_room": "<%=hipchat_room%>",
-<% end -%>
 <% if local_mode -%>
     "build_apps": true,
     "use_my_apps": true,
