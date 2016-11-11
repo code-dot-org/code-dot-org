@@ -46,13 +46,13 @@ social:
 
   .banner.container_responsive
     .col-50
-      .bannerHeading= hoc_s_by_locale(:learn_banner_heading)
-      = hoc_s_by_locale(:learn_banner_blurb)
+      .bannerHeading= hoc_s(:learn_banner_heading)
+      = hoc_s(:learn_banner_blurb)
       .bannerButtons
         %a{href: "https://hourofcode.com/#join", target: "_blank"}
-          %button= hoc_s_by_locale(:learn_banner_host)
+          %button= hoc_s(:learn_banner_host)
         %a{href: "https://hourofcode.com/how-to", target: "_blank", style: "padding-left: 20px"}
-          %button= hoc_s_by_locale(:learn_banner_teacherguide)
+          %button= hoc_s(:learn_banner_teacherguide)
     #studentImage.col-50.tablet-feature
 
 -# Not ideal but we can pull the undigested files from /blockly.
