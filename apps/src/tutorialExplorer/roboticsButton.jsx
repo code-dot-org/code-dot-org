@@ -8,7 +8,8 @@ import i18n from './locale';
 const styles = {
   roboticsButtonImage: {
     marginTop: 10,
-    marginBottom: 20
+    marginBottom: 20,
+    width: "100%"
   },
   roboticsText: {
     float: "left",
@@ -35,7 +36,7 @@ const RoboticsButton = React.createClass({
           </a>
         </div>
         <div style={roboticsTextStyle}>
-          {i18n.roboticsButtonText({robotics_url: "/learn/robotics"})}
+          <div dangerouslySetInnerHTML={{__html: i18n.roboticsButtonText({robotics_url: "/learn/robotics"})}}/>
         </div>
       </div>
     );

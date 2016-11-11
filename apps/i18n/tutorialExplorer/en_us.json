@@ -49,5 +49,6 @@
   "tutorialDetailsShortLink": "Short link",
   "tutorialDetailInternationalLanguages": "Languages",
   "headingTutorialsYourLanguage": "Tutorials in your language",
-  "headingTutorialsManyLanguages": "Tutorials in many languages"
+  "headingTutorialsManyLanguages": "Tutorials in many languages",
+  "bottomGuidelinesLink": "To see our criteria and submission guidelines for Hour of Code tutorials, <a href='{guidelines_url}'>click here</a>."
 }
