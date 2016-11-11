@@ -70,6 +70,7 @@ include_recipe 'cdo-apps::workers'
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
+node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
