@@ -302,7 +302,7 @@ module RakeUtils
     format("%.1d:%.2d minutes", minutes, seconds)
   end
 
-  # Captures all stdout and stderr within a block, including subprocesses.
+  # Captures all stdout and stderr within a block, including sub-processes.
   # - redirect streams to a pipe
   # - have a background thread read from the pipe
   # - store data in a StringIO
