@@ -69,4 +69,4 @@ uz,uz,uz,uz-UZ,Oʻzbekcha,Uzbek,FALSE,FALSE,uz,Uzbek
 vi,vi,vi,vi-VN,Tiếng Việt,Vietnamese,TRUE,TRUE,vi,Vietnamese
 zh-CN,cn,zh,zh-CN,简体字,Chinese (Simplified),TRUE,TRUE,zh-CN,Chinese Simplified
 zh-TW,zh,zh,zh-TW,繁體字,Chinese (Traditional),TRUE,TRUE,zh-TW,Chinese Traditional
-zu,zu,zu,zu-ZA,isiZulu,Zulu,FALSE,FALSE,zu,Zulu
+zu,zu,zu,zu-ZA,isiZulu,Zulu,FALSE,TRUE,zu,Zulu
