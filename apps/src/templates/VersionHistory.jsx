@@ -31,10 +31,9 @@ var VersionHistory = React.createClass({
 
   componentWillMount: function () {
     if (this.props.useFilesApi) {
-      window.__TestInterface.versionHistoryFetchStatus = `fetching via files api at ${Date.now()}. `;
       filesApi.getVersionHistory(this.onVersionListReceived, this.onAjaxFailure);
     } else {
-      window.__TestInterface.versionHistoryFetchStatus = `fetching via assets api at ${Date.now()}. `;
+      // TODO: Use Dave's client api when it's finished.
       sourcesApi.ajax('GET', 'main.json/versions', this.onVersionListReceived, this.onAjaxFailure);
     }
   },
@@ -45,15 +44,13 @@ var VersionHistory = React.createClass({
    * @param xhr
    */
   onVersionListReceived: function (xhr) {
-    window.__TestInterface.versionHistoryFetchStatus += `succeeded at ${Date.now()}`;
     this.setState({versions: JSON.parse(xhr.responseText), showSpinner: false});
   },
 
   /**
    * Called if the server responds with an error when loading an API request.
    */
-  onAjaxFailure: function (xhr) {
-    window.__TestInterface.versionHistoryFetchStatus += `failed with status ${xhr && xhr.status} at ${Date.now()}`;
+  onAjaxFailure: function () {
     this.setState({statusMessage: 'An error occurred.'});
   },
 
