@@ -109,8 +109,15 @@ Resources:
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 100
     UpdatePolicy:
-      AutoScalingReplacingUpdate:
-        WillReplace: true
+#      AutoScalingReplacingUpdate:
+#        WillReplace: true
+      AutoScalingRollingUpdate:
+        MaxBatchSize: 20
+        MinInstancesInService: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
+        MinSuccessfulInstancesPercent: 80
+        PauseTime: PT50M
+        SuspendProcesses: [ScheduledActions]
+        WaitOnResourceSignals: Boolean
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
