@@ -37,3 +37,23 @@ gamelabCommands.playSound = function (opts) {
     });
   }
 };
+
+/**
+ * Stop playing a sound, or all sounds.
+ * @param {string} [opts.url] The sound to stop.  Stops all sounds if omitted.
+ */
+gamelabCommands.stopSound = function (opts) {
+  // TODO: Extract validation helper from applab and use here
+  //apiValidateType(opts, 'stopSound', 'url', opts.url, 'string');
+
+  if (studioApp.cdoSounds) {
+    if (opts.url) {
+      var url = assetPrefix.fixPath(opts.url);
+      if (studioApp.cdoSounds.isPlayingURL(url)) {
+        studioApp.cdoSounds.stopLoopingAudio(url);
+      }
+    } else {
+      studioApp.cdoSounds.stopAllAudio();
+    }
+  }
+};
