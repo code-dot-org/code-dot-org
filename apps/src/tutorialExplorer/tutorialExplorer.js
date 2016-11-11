@@ -409,6 +409,8 @@ function getFilters({robotics, mobile}) {
     });
 
     initialFilters.activity_type = ["robotics"];
+    initialFilters.teacher_experience = [];
+    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
