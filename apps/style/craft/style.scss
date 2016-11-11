@@ -17,6 +17,7 @@ $callout-fallback-border-color: $very-dark-gray;
 $original-background-color: #F2F2F2;
 $code-block-background-yellow: #d78c01;
 $code-block-outline-yellow: #ffb72f;
+$workspace-corner-rounding: 6px;
 
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
@@ -1066,10 +1067,14 @@ $height-to-width: 434 / 477;
   }
 
   #headers {
-    border-radius: 6px 6px 0 0;
+    border-radius: $workspace-corner-rounding $workspace-corner-rounding 0 0;
   }
 
   #codeWorkspace > svg.blocklySvg {
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 $workspace-corner-rounding $workspace-corner-rounding;
+  }
+
+  .small-footer-base {
+    border-radius: 0 $workspace-corner-rounding 0 0;
   }
 }
