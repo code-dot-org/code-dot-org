@@ -105,7 +105,7 @@ def load_configuration
     'max_table_writes_per_sec'    => 40,
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
-    'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'lint'                        => [:staging, :development].include?(rack_env),
     'files_s3_bucket'             => 'cdo-v3-files',
     'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
     'animations_s3_bucket'        => 'cdo-v3-animations',
