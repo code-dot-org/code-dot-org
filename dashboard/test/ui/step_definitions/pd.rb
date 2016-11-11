@@ -65,7 +65,8 @@ And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/)
 
   number.to_i.times do |x|
     Pd::Enrollment.create(
-      name: "EnrolledTeacher#{SecureRandom.hex}",
+      first_name: "First name - #{SecureRandom.hex}",
+      last_name: "Last name - #{SecureRandom.hex}",
       email: "enrolled_teacher#{x}@foo.com",
       skip_school_validation: true,
       pd_workshop_id: workshop.id
