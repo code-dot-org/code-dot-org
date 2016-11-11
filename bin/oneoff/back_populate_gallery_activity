@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# This script populates the gallery_activities.user_level_id and the
+# gallery_activities.level_source_id fields, when possible. Doing so is part of
+# associating a GalleryActivity with a UserLevel rather than an Activity, as
+# part of deprecating the latter.
+
+GalleryActivity.each do |gallery_activity|
+  activity = gallery_activity.activity
+  user_level = UserLevel.find_by(user_id: activity.user_id, level_id: activity.level_id)
+
+  next unless UserLevel
+
+  gallery_activity.update!(
+    user_level_id: user_level.id,
+    level_source_id: activity.level_source_id
+  )
+end
