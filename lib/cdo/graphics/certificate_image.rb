@@ -113,8 +113,10 @@ end
 
 def certificate_template_for(course)
   if ScriptConstants.script_in_category?(:hoc, course)
-    if ScriptConstants.script_in_category?(:minecraft, course)
-      'MC_Hour_Of_Code_Certificate.jpg'
+    if course == ScriptConstants::MINECRAFT_DESIGNER_NAME
+      'hour_of_code_certificate_with2016.png'
+    elsif ScriptConstants.script_in_category?(:minecraft, course)
+      'hour_of_code_certificate_wo2016.png'
     else
       'hour_of_code_certificate.jpg'
     end
