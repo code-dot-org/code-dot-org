@@ -339,6 +339,7 @@ const TutorialExplorer = React.createClass({
               tutorials={this.state.filteredTutorials}
               filters={this.state.filters}
               locale={this.props.locale}
+              localeEnglish={this.isLocaleEnglish()}
             />
           )}
 
@@ -424,6 +425,8 @@ function getFilters({robotics, mobile}) {
     });
 
     initialFilters.activity_type = ["robotics"];
+    initialFilters.teacher_experience = [];
+    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
