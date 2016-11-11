@@ -1,0 +1,33 @@
+.tutorial-box {
+  position: relative;
+  float: left;
+}
+
+.mc-tutorial-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  left: 228px;
+  top: 0;
+  height: 307px;
+}
+
+.new-mc {
+  color: white;
+  background-color: #7665a0;
+  width: 250px;
+  margin: -10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
+  color: white;
+}
+
+.color-block a:link, .color-block a:visited, .color-block a:hover, .color-block a:active {
+  font-family: "Gotham 5r", sans-serif;
+  color: white;
+  text-decoration: underline;
+}
