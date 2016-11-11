@@ -30,9 +30,12 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     COMPLETED = 'completed'
   ]
 
-  after_save :enroll_user_in_required_modules
-
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
+
+  def self.enroll_in_unit(params)
+    unit_assignment = Plc::EnrollmentUnitAssignment.create(params)
+    unit_assignment.enroll_user_in_required_modules
+  end
 
   def module_assignment_for_type(module_type)
     plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)
