@@ -100,14 +100,14 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015.
+          took the AP Computer Science exam in 2016.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             high school students in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015;
+          took the AP Computer Science exam in 2016;
           - if state_info[:percent_ap_female_i] != 0
             only
             = succeed "%" do
@@ -164,7 +164,7 @@ theme: pdf
           No schools in
           = state_info[:state_code_s]
           offered the AP Computer Science course in 2015-2016.
-        - if state_param != 'ND'
+        - if state_param != 'ND' && state_param != 'MT'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
 
   .chart-text-group
