@@ -15,9 +15,6 @@
 #
 # See also: The Animation Library Tech Spec (requires login):
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit
-#
-# TODO: Optimize: Read existing manifest and don't do full object reads for
-#       entries whose modify date hasn't changed.
 require 'aws-sdk'
 require 'ruby-progressbar'
 require 'optparse'
@@ -28,7 +25,8 @@ require_relative '../../lib/cdo/png_utils'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
-DEFAULT_OUTPUT_FILE = 'apps/src/gamelab/animationLibrary.json'.freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
+DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -95,6 +93,80 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
+  rescue Aws::Errors::ServiceError => service_error
+    warn service_error.inspect
+    warn <<-EOS.unindent
+
+      #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
+
+        * aws_access_key and aws_secret_key in your locals.yml
+        * ENV['AWS_ACCESS_KEY_ID'] and ENV['AWS_SECRET_ACCESS_KEY']
+        * ~/.aws/credentials
+
+      #{dim 'See http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html for more details.'}
+    EOS
+  end
+
+  #
+  # Main entry point for library download feature
+  # See end of file for command line options
+  #
+  def download_entire_animation_library
+    # Connect to S3 and get a listing of all objects in the animation library bucket
+    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+    animation_objects = get_animation_objects(bucket)
+    info "Found #{animation_objects.size} animations."
+
+    info "Downloading library..."
+
+    download_progress_bar = ProgressBar.create(total: animation_objects.size) unless @options[:verbose] || @options[:quiet]
+
+    # Parallelize downloads
+    Parallel.map(animation_objects.keys, finish: lambda do |_, _, result|
+      # This lambda runs synchronously after each entry is done
+      if result.is_a? String
+        @warnings.push result
+      end
+      download_progress_bar.increment unless download_progress_bar.nil?
+    end) do |name|
+      # This is the parallel block.  This block should return a string to
+      # generate a warning and skip the animation, and a metadata Hash in
+      # the success case.
+      objects = animation_objects[name]
+
+      json_destination = File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['json'].key}")
+      png_destination = File.expand_path("#{DOWNLOAD_DESTINATION}/#{objects['png'].key}")
+
+      # Make sure there's a directory to put the downloaded files in
+      `mkdir -p #{File.dirname json_destination}`
+
+      # Download the JSON file and PNG file
+      begin
+        verbose "Writing #{json_destination}"
+        objects['json'].get(response_target: json_destination)
+        verbose "Writing #{png_destination}"
+        objects['png'].get(response_target: png_destination)
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving #{name}.json and #{name}.png from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      end
+
+      true
+    end
+    download_progress_bar.finish unless download_progress_bar.nil?
+
+    @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
+
+    info <<-EOS.unindent
+      Library downloaded to #{DOWNLOAD_DESTINATION}
+
+        #{dim 'd[ o_0 ]b'}
+    EOS
+
+      # Report any issues while talking to S3 and suggest most likely steps for fixing it.
   rescue Aws::Errors::ServiceError => service_error
     warn service_error.inspect
     warn <<-EOS.unindent
@@ -290,6 +362,10 @@ cli_parser = OptionParser.new do |opts|
   opts.separator ""
   opts.separator "Options:"
 
+  opts.on('--download-all', "Download entire animation library to #{DOWNLOAD_DESTINATION}") do
+    options[:download_all] = true
+  end
+
   opts.on('-q', '--quiet', 'Only log warnings and errors') do
     options[:quiet] = true
   end
@@ -304,4 +380,8 @@ cli_parser = OptionParser.new do |opts|
   end
 end
 cli_parser.parse!(ARGV)
-ManifestBuilder.new(options).rebuild_animation_library_manifest
+if options[:download_all]
+  ManifestBuilder.new(options).download_entire_animation_library
+else
+  ManifestBuilder.new(options).rebuild_animation_library_manifest
+end

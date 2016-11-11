@@ -288,6 +288,17 @@ Sounds.prototype.isPlayingURL = function (url) {
   return false;
 };
 
+/**
+ * Stop all playing sounds immediately.
+ */
+Sounds.prototype.stopAllAudio = function () {
+  for (let soundId in this.soundsById) {
+    if (this.soundsById[soundId].isPlaying()) {
+      this.soundsById[soundId].stop();
+    }
+  }
+};
+
 Sounds.prototype.stopLoopingAudio = function (soundId) {
   var sound = this.soundsById[soundId];
   sound.stop();
