@@ -9,7 +9,7 @@ GalleryActivity.each do |gallery_activity|
   activity = gallery_activity.activity
   user_level = UserLevel.find_by(user_id: activity.user_id, level_id: activity.level_id)
 
-  next unless UserLevel
+  next unless user_level
 
   gallery_activity.update!(
     user_level_id: user_level.id,
