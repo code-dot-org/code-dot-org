@@ -39,6 +39,10 @@
   background-color: rgba(185, 191, 21, 0.85);
 }
 
+.gray {
+  background-color: rgba(0, 0, 0, 0.5);;
+}
+
 .character-img {
   width: 100%;
   border-radius: 8px;
