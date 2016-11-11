@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # This script assures the invariant
-#   user.hashed_email == User.hash_email(user.email)
+#   user.hashed_email == User.hash_email(user.email.strip.downcase)
 # for every user with a non-blank email.
 #
 # As of November 2016, this invariant is violated for approximately 150 users.
