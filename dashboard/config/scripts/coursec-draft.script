@@ -69,7 +69,7 @@ level 'grade2_playlab_project_4'
 level 'grade2_playlab_project_5'
 level 'grade2_playlab_project_6'
 
-stage 'Online Internet Safety'
+stage 'Your Digital Footprint'
 level 'DigitalFootprint'
 
 stage 'Build a Flappy Game'

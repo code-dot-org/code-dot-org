@@ -24,7 +24,6 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
-    legacyLink: React.PropTypes.string,
     roboticsButton: React.PropTypes.bool,
     showSortBy: React.PropTypes.bool.isRequired
   },
@@ -291,7 +290,6 @@ const TutorialExplorer = React.createClass({
           onUserInput={this.handleUserInputSortBy}
           sortBy={this.state.sortBy}
           backButton={this.props.backButton}
-          legacyLink={this.props.legacyLink}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
           mobileLayout={this.state.mobileLayout}
           showingModalFilters={this.state.showingModalFilters}
@@ -435,7 +433,6 @@ window.TutorialExplorerManager = function (options) {
         hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
-        legacyLink={options.legacyLink}
         roboticsButton={options.roboticsButton}
         showSortBy={options.showSortBy}
       />,

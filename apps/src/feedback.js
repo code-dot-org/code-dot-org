@@ -175,7 +175,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   };
 
   var onHidden = onlyContinue ? options.onContinue : function () {
-    this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+    if (!continueButton || feedbackDialog.hideButDontContinue) {
+      this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+    } else {
+      options.onContinue();
+    }
   }.bind(this);
 
   var icon;
@@ -205,7 +209,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
+      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
     });
   }
 

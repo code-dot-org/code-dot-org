@@ -32,7 +32,7 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Start by using a nested loop like you had before, but this time, make it squares with sides of 50 pixels.\",\"hint_id\":\"courseD_artist_nestedLoops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/0ab7d3af01a3c46768064bba1969de14/courseD_artist_nestedLoops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Add a second set of nested loops to the end of the first set, but this time use triangles with sides of length 50.\",\"hint_id\":\"courseD_artist_nestedLoops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/157742a44b06027f1b4ee6873b011bc3/courseD_artist_nestedLoops9.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
