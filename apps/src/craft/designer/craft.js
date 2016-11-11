@@ -293,7 +293,7 @@ Craft.init = function (config) {
               }(btn));
         }
 
-        dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
+        dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
         $('#soft-buttons').hide();
 
