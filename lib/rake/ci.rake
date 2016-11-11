@@ -9,7 +9,8 @@ namespace :ci do
 
   desc 'Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.'
   task :chef do
-    if CDO.daemon && CDO.chef_managed
+    if CDO.daemon && CDO.chef_managed && !CDO.chef_local_mode
+      HipChat.log('Updating Chef cookbooks...')
       RakeUtils.with_bundle_dir(cookbooks_dir) do
         # Automatically update Chef cookbook versions in staging environment.
         RakeUtils.bundle_exec './update_cookbook_versions' if rack_env?(:staging)
@@ -37,4 +38,6 @@ namespace :ci do
 end
 
 desc 'Update the server as part of continuous integration.'
-task ci: ['ci:all']
+task :ci do
+  HipChat.wrap('ci build') { Rake::Task['ci:all'].invoke }
+end

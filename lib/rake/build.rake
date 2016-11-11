@@ -10,6 +10,7 @@ namespace :build do
     if CDO.chef_managed
       if rack_env?(:adhoc)
         # Update local cookbooks from repository in adhoc environment.
+        HipChat.log 'Updating local <b>chef</b> cookbooks...'
         RakeUtils.with_bundle_dir(cookbooks_dir) do
           Tempfile.open(['berks','.tgz']) do |file|
             RakeUtils.bundle_exec "berks package #{file.path}"
@@ -144,4 +145,6 @@ namespace :build do
 end
 
 desc 'Builds everything.'
-task :build => ['build:all']
+task :build do
+  HipChat.wrap('build') { Rake::Task['build:all'].invoke }
+end
