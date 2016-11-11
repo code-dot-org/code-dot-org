@@ -43,7 +43,7 @@ var SmallFooter = React.createClass({
       trademark: React.PropTypes.string.isRequired
     }),
     basePrivacyPolicyString: React.PropTypes.string,
-    baseCopyrightString: React.PropTypes.string,
+    baseCopyrightString: React.PropTypes.string.isRequired,
     baseMoreMenuString: React.PropTypes.string.isRequired,
     baseStyle: React.PropTypes.object,
     menuItems: React.PropTypes.arrayOf(
@@ -297,7 +297,7 @@ var SmallFooter = React.createClass({
     );
   }
 });
-export default SmallFooter;
+module.exports = SmallFooter;
 
 window.dashboard = window.dashboard || {};
 window.dashboard.SmallFooter = SmallFooter;
