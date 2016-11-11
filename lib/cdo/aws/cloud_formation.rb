@@ -262,11 +262,10 @@ module AWS
         rescue Aws::Waiters::Errors::FailureStateError
           tail_events(stack_id)
           tail_log
-          CDO.log.info "\nError on #{action}."
           if action == :create
             CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
-          return
+          raise "\nError on #{action}."
         end
         CDO.log.info "\nStack #{action} complete."
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create

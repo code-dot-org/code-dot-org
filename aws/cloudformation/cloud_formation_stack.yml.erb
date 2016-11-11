@@ -117,7 +117,7 @@ Resources:
         MinSuccessfulInstancesPercent: 80
         PauseTime: PT50M
         SuspendProcesses: [ScheduledActions]
-        WaitOnResourceSignals: Boolean
+        WaitOnResourceSignals: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: LaunchConfig}
