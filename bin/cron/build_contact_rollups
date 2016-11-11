@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
-require_relative '../../lib/state_abbr'
+require 'state_abbr'
 require src_dir 'database'
 require_relative('../../dashboard/config/environment')
 require 'cdo/properties'
@@ -15,7 +15,7 @@ DASHBOARD_DB_NAME = "dashboard_#{Rails.env}"
 
 # List of valid PD courses. If more courses get added, need to update this list and also schema in Pardot. We
 # need to filter here to known courses in the Pardot schema - we can't blindly pass values through
-COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science'"
+COURSE_LIST = "'CS Fundamentals','CS in Algebra','CS in Science','CS Principles','Exploring Computer Science','CS Discoveries'"
 
 # values of forms.kind field we care about
 FORM_KINDS = %w(BringToSchool2013 CSEdWeekEvent2013 DistrictPartnerSubmission HelpUs2013 Petition K5OnlineProfessionalDevelopmentPostSurvey)
@@ -29,18 +29,22 @@ FORM_INFOS =
     {kind: "'HocSignup2015'", dest_field: "hoc_organizer_years", dest_value: "'2015'"},
     {kind: "'HocSignup2016'", dest_field: "hoc_organizer_years", dest_value: "'2016'"},
     {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
-  ]
+  ].freeze
 
 def log(s)
   puts s      # emit to stdout
   CDO.log.info s   # emit to log file
 end
 
+def log_completion(start)
+  log "   Completed in #{Time.now - start} seconds"
+end
+
 def truncate_contact_rollups
   start = Time.now
   log "Truncating contact_rollups"
   PEGASUS_DB.run "TRUNCATE TABLE contact_rollups"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def insert_from_dashboard_contacts
@@ -52,7 +56,7 @@ def insert_from_dashboard_contacts
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(email) > 0 AND user_geos.indexed_at IS NOT NULL
     ON DUPLICATE KEY UPDATE contact_rollups.name = VALUES(name), contact_rollups.dashboard_user_id = VALUES(dashboard_user_id), roles = VALUES(roles)"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def insert_from_dashboard_pd_enrollments
@@ -60,10 +64,10 @@ def insert_from_dashboard_pd_enrollments
   log "Inserting contacts from dashboard.pd_enrollments"
   PEGASUS_DB.run "
     INSERT INTO contact_rollups (email, name)
-    SELECT email, name FROM dashboard_development.pd_enrollments AS pd_enrollments
+    SELECT email, name FROM #{DASHBOARD_DB_NAME}.pd_enrollments AS pd_enrollments
     WHERE LENGTH(pd_enrollments.email) > 0
     ON DUPLICATE KEY UPDATE name = contact_rollups.name"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def insert_from_pegasus_contacts
@@ -73,7 +77,7 @@ def insert_from_pegasus_contacts
     INSERT INTO contact_rollups (email, opted_out, name)
     SELECT email, IF(unsubscribed_at IS null, null, true) AS opted_out, name FROM contacts WHERE LENGTH(email) > 0
     ON DUPLICATE KEY UPDATE contact_rollups.name = VALUES(name)"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def insert_from_pegasus_forms
@@ -84,7 +88,7 @@ def insert_from_pegasus_forms
     SELECT email, name, city, state, postal_code, country FROM forms
     LEFT OUTER JOIN form_geos on form_geos.form_id = forms.id
     WHERE form_geos.indexed_at IS NOT NULL"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_roles
@@ -98,7 +102,7 @@ def update_roles
   start = Time.now
   log "Updating Professional Learning Partner role"
   append_plp_to_role_list
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def append_to_role_list_from_permission(permission_name, dest_value)
@@ -120,7 +124,7 @@ def append_to_list_field_from_form(form_kinds, dest_field, dest_value)
     INNER JOIN forms ON forms.email = contact_rollups.email
     SET #{dest_field} = CONCAT(COALESCE(CONCAT(#{dest_field}, ','), ''), #{dest_value})
     WHERE forms.kind IN (#{form_kinds}) AND contact_rollups.id > 0"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def append_plp_to_role_list
@@ -146,7 +150,7 @@ def update_courses_facilitated
     ) src
     SET contact_rollups.courses_facilitated = src.courses
     WHERE contact_rollups.dashboard_user_id = src.facilitator_id"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_professional_learning_enrollment
@@ -164,7 +168,7 @@ def update_professional_learning_enrollment
       ) src
     SET contact_rollups.professional_learning_enrolled = src.courses
     WHERE contact_rollups.dashboard_user_id = src.user_id"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_professional_learning_attendance
@@ -198,7 +202,7 @@ def update_professional_learning_attendance
       ) src
     SET contact_rollups.professional_learning_attended = src.courses
     WHERE contact_rollups.dashboard_user_id = src.teacher_id"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def mysql_multi_connection
@@ -258,7 +262,7 @@ def update_geo_data_from_forms(form_kind)
 
     num_updated += 1
 
-    if record_count % UPDATE_BATCH_SIZE == 0
+    if num_updated % UPDATE_BATCH_SIZE == 0
       begin
         conn.run update_batch
       rescue => e
@@ -281,7 +285,7 @@ def update_geo_data_from_forms(form_kind)
   end
 
   conn.run update_batch unless update_batch.empty?
-  log "- #{record_count} source records, #{num_updated} with geo data, #{num_parse_errors} skipped due to invalid JSON, " + ((Time.now) - start).to_s + " seconds"
+  log "- #{record_count} source records, #{num_updated} with geo data, #{num_parse_errors} skipped due to invalid JSON, #{Time.now - start} seconds"
 end
 
 def update_grades_taught
@@ -300,7 +304,7 @@ def update_grades_taught
     ) src
     SET contact_rollups.grades_taught = src.grades
     WHERE contact_rollups.id > 0 AND (contact_rollups.dashboard_user_id = src.dashboard_user_id)"
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_ages_taught_for_age(age)
@@ -333,7 +337,7 @@ def update_ages_taught_for_age(age)
     WHERE contact_rollups.dashboard_user_id = teacher_user_id"
 
   PEGASUS_DB.run sql
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_ages_taught
@@ -368,7 +372,7 @@ def update_district
       end
     end
   end
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 
   start = Time.now
   log "Updating district information from dashboard.pd_enrollments"
@@ -380,7 +384,7 @@ def update_district
     PEGASUS_DB[:contact_rollups].where(email: pd_enrollment[:email]).update(district_name: pd_enrollment[:district_name], district_city: pd_enrollment[:city],
       district_state: pd_enrollment[:state], district_zip: pd_enrollment[:zip])
   end
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def update_school
@@ -389,7 +393,7 @@ def update_school
   DASHBOARD_REPORTING_DB_READONLY[:pd_enrollments].exclude(email: nil).where('length(school) > 0').find do |pd_enrollment|
     PEGASUS_DB[:contact_rollups].where(email: pd_enrollment[:email]).update(school_name: pd_enrollment[:school])
   end
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 end
 
 def main
@@ -422,7 +426,7 @@ def main
     update_geo_data_from_forms(kind)
   end
 
-  log "Done. Total overall time: " + ((Time.now) - start).to_s + " seconds"
+  log "Done. Total overall time: #{Time.now - start} seconds"
 end
 
 main
