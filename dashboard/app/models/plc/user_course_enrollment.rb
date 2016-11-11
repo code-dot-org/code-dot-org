@@ -26,8 +26,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
-  after_save :create_enrollment_unit_assignments
-
   def self.enroll_users(user_emails, course_id)
     course = Plc::Course.find(course_id)
     enrolled_users = []
@@ -45,7 +43,9 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
         nonteacher_users << email
       else
         enrollment = find_or_create_by(user: user, plc_course: course)
+        enrollment.create_enrollment_unit_assignments
         if enrollment.valid?
+          enrollment.create_enrollment_unit_assignments
           enrolled_users << email
         else
           other_failure_users << email
@@ -59,10 +59,14 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   def create_enrollment_unit_assignments
     plc_course.plc_course_units.each do |course_unit|
-      Plc::EnrollmentUnitAssignment.create(plc_user_course_enrollment: self,
-                                           plc_course_unit: course_unit,
-                                           status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
-                                           user: user)
+      Plc::EnrollmentUnitAssignment.enroll_in_unit(
+        {
+          plc_user_course_enrollment: self,
+          plc_course_unit: course_unit,
+          status: course_unit.started ? Plc::EnrollmentUnitAssignment::IN_PROGRESS : Plc::EnrollmentUnitAssignment::START_BLOCKED,
+          user: user
+        }
+      )
     end
   end
 end
