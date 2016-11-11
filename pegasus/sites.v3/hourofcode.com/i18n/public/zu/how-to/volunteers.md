@@ -1,9 +1,7 @@
 ---
-
 title: <%= hoc_s(:title_how_to_volunteers) %>
 layout: wide
 nav: how_to_nav
-
 ---
 
 <%= view :signup_button %>
