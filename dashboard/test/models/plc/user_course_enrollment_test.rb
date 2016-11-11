@@ -10,7 +10,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
 
   test 'Enrolling user in a task creates unit enrollments' do
     skip 'Skipping plc unit tests temporarily'
-    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+    Plc::UserCourseEnrollment.enroll_users([@user.email], @course.id)
+    enrollment = Plc::UserCourseEnrollment.find_by(user: @user)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status).uniq
@@ -36,7 +37,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     skip 'Skipping plc unit tests temporarily'
     @course_unit1.update(started: true)
 
-    enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
+    Plc::UserCourseEnrollment.enroll_users([@user.email], @course.id)
+    enrollment = Plc::UserCourseEnrollment.find_by(user: @user)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
     assert_equal [Plc::EnrollmentUnitAssignment::IN_PROGRESS, Plc::EnrollmentUnitAssignment::START_BLOCKED], enrollment.plc_unit_assignments.map(&:status)
