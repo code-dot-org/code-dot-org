@@ -1,6 +1,5 @@
 # Disabled on CircleCI 20 Oct 2016
 # Brad B. assigned to fix and re-enable
-@no_circle
 @dashboard_db_access
 @as_student
 Feature: Big Game Versions
@@ -22,14 +21,14 @@ Feature: Big Game Versions
     And I type "" into "#functionNameText"
     And I press keys "VERSION_TEST" for element "#functionNameText"
     And I press "modalEditorClose"
-    And element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
+    And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
     And I click selector "#runButton"
     And I wait until element "#resetButton" is visible
     And I click selector "#resetButton"
 
     # Reset the puzzle to the start
     Then I reset the puzzle to the starting version
-    And element "g#game_title > .blocklyText:eq(0)" contains text "title"
+    And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "title"
 
     # Restore to the previous version, which should have title "VERSION_TEST"
     Then I click selector "#versions-header"
@@ -41,4 +40,4 @@ Feature: Big Game Versions
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
-    And element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
+    And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
