@@ -16,6 +16,7 @@ CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -
 AS_USER=<%= @user %>
 <%= @bundle_env ? @bundle_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
 UPGRADE_DELAY=${UPGRADE_DELAY-4}
+
 action="$1"
 set -u
 
