@@ -46,7 +46,7 @@ def load_configuration
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
-    'chef_local_mode'             => rack_env != :adhoc,
+    'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
