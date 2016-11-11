@@ -411,6 +411,10 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
+  if (this.studioApp_.cdoSounds) {
+    this.studioApp_.cdoSounds.stopAllAudio();
+  }
+
   this.gameLabP5.resetExecution();
 
   // Import to reset these after this.gameLabP5 has been reset
