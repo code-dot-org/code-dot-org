@@ -47,9 +47,9 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
 
   # Make sure the old page is gone, since selenium's navigate.to does not reliably do this for us.
-  @browser.execute_script("window.seleniumNavigationPending = true;")
+  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.to url
-  wait_with_short_timeout.until { !@browser.execute_script('return window.seleniumNavigationPending;') }
+  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
 
   install_js_error_recorder
 end
@@ -656,9 +656,9 @@ end
 Then(/^I reload the page$/) do
   # Make sure the old page is gone before this step completes, since selenium's navigate.refresh
   # does not reliably do this for us.
-  @browser.execute_script("window.seleniumNavigationPending = true;")
+  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
-  wait_with_short_timeout.until { !@browser.execute_script('return window.seleniumNavigationPending;') }
+  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
