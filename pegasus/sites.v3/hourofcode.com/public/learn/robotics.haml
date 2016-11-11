@@ -52,7 +52,8 @@ social:
       %img#robotImage{src: CDO.code_org_url("/images/learn/robotics.png")}
 
 -# Not ideal but we can pull the undigested files from /blockly.
-- js_locale = hoc_locale.to_s.downcase.tr('-', '_')
+- locale_code = hoc_get_locale_code
+- js_locale = locale_code.to_s.downcase.tr('-', '_')
 %script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
 
@@ -74,7 +75,7 @@ social:
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
-      locale: "#{hoc_locale}",
+      locale: "#{locale_code}",
       robotics: true,
       backButton: true,
       showSortBy: window.location.search.indexOf("showsort") !== -1
