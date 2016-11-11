@@ -66,13 +66,19 @@ const styles = {
     padding: 5,
     border: '1px solid lightgrey'
   },
+  tutorialDetailsTableBodyNoWrap: {
+    padding: 5,
+    border: '1px solid lightgrey',
+    whiteSpace: "pre"
+  }
 };
 
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
-    closeClicked: React.PropTypes.func.isRequired
+    closeClicked: React.PropTypes.func.isRequired,
+    localeEnglish: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -94,6 +100,7 @@ const TutorialDetail = React.createClass({
       {key: 5, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
       {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
       // Reserve key 6 for international languages.
+      // Reserve key 7 for standards.
     ];
 
     return (
@@ -206,6 +213,16 @@ const TutorialDetail = React.createClass({
                         {this.props.item.language}
                       </td>
                     </tr>
+                    {this.props.localeEnglish && (
+                      <tr key={7}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          {i18n.tutorialDetailStandards()}
+                        </td>
+                        <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                          {this.props.item.string_standards}
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>
