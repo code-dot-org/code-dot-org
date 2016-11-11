@@ -72,28 +72,30 @@ function getProjectUrl() {
  * @param fragment text to add to url path, before query string if any
  * @returns new url
  */
-function appendUrl(url, fragment) {
+export function appendUrl(url, fragment) {
   var hashIndex = url.indexOf('#');
   if (hashIndex != -1) {
     url = url.substring(0, hashIndex);
   }
   var queryString = '';
-  var queryIndex = url.indexOf('?')
+  var queryIndex = url.indexOf('?');
   if (queryIndex != -1) {
     queryString = url.substring(queryIndex);
     url = url.substring(0, queryIndex);
   }
-  if (url.endsWith('/') && fragment.startsWith('/')) {
-    fragment = fragment.substring(1);
+  if (fragment.startsWith('/')) {
+    while (url.endsWith('/')) {
+      url = url.substring(0, url.length - 1);
+    }
   }
-  return url.substring(0, queryIndex) + fragment + url.substring(queryIndex);
+  return url + fragment + queryString;
 }
 
 
 /**
  * Shows buttons for wireframe version, including "View code", "Make my own app", and "Send to phone".
  */
-module.exports = React.createClass({
+let WireframeButtons = React.createClass({
   propTypes: {
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
@@ -170,3 +172,4 @@ module.exports = React.createClass({
     }
   }
 });
+export default WireframeButtons;
