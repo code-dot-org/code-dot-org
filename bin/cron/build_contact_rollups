@@ -55,7 +55,7 @@ def insert_from_dashboard_contacts
     SELECT email COLLATE utf8_general_ci, name, users.id, 'Teacher', city, state, postal_code, country FROM #{DASHBOARD_DB_NAME}.users AS users
     LEFT OUTER JOIN #{DASHBOARD_DB_NAME}.user_geos AS user_geos ON user_geos.user_id = users.id
     WHERE users.user_type = 'teacher' AND LENGTH(email) > 0 AND user_geos.indexed_at IS NOT NULL
-    ON DUPLICATE KEY UPDATE contact_rollups.name = VALUES(name), contact_rollups.dashboard_user_id = VALUES(dashboard_user_id), roles = VALUES(roles)"
+    ON DUPLICATE KEY UPDATE contact_rollups.name = VALUES(name), contact_rollups.dashboard_user_id = VALUES(dashboard_user_id)"
   log_completion(start)
 end
 
@@ -97,7 +97,7 @@ def update_roles
   append_to_role_list_from_permission("facilitator", "Facilitator")
   append_to_role_list_from_permission("workshop_organizer", "Workshop Organizer")
   append_to_role_list_from_permission("district_contact", "District Contact")
-  log "   Completed in " + ((Time.now) - start).to_s + " seconds"
+  log_completion(start)
 
   start = Time.now
   log "Updating Professional Learning Partner role"
@@ -284,7 +284,12 @@ def update_geo_data_from_forms(form_kind)
     end
   end
 
-  conn.run update_batch unless update_batch.empty?
+  begin
+    conn.run update_batch unless update_batch.empty?
+  rescue => e
+    log "Error: #{e}. Cmd: #{update_batch}"
+    raise
+  end
   log "- #{record_count} source records, #{num_updated} with geo data, #{num_parse_errors} skipped due to invalid JSON, #{Time.now - start} seconds"
 end
 
@@ -294,7 +299,7 @@ def update_grades_taught
   PEGASUS_DB.run "
     UPDATE contact_rollups,
     (SELECT dashboard_user_id, GROUP_CONCAT(grade) as grades FROM
-      (SELECT DISTINCT contact_rollups.dashboard_user_id, sections.grade from contact_rollups
+      (SELECT DISTINCT contact_rollups.dashboard_user_id, sections.grade FROM contact_rollups
         INNER JOIN #{DASHBOARD_DB_NAME}.sections AS sections on sections.user_id = contact_rollups.dashboard_user_id
         WHERE contact_rollups.dashboard_user_id is not null
         AND length(sections.grade) > 0
@@ -318,7 +323,7 @@ def update_ages_taught_for_age(age)
   # for age = 4, include 4 and below
   max_birthday_clause = "students.birthday <= DATE_ADD(NOW(), INTERVAL -#{age} YEAR) AND" unless age <= 4
 
-  sql = "
+  PEGASUS_DB.run "
     UPDATE contact_rollups, (
     SELECT DISTINCT sections.user_id AS teacher_user_id
     FROM #{DASHBOARD_DB_NAME}.users AS students
@@ -331,12 +336,11 @@ def update_ages_taught_for_age(age)
       #{min_birthday_clause}
       #{max_birthday_clause}
       -- filter out teachers who have joined section
-      LENGTH(students.email) = 0
+      students.user_type = 'student'
     ) src
     SET contact_rollups.ages_taught = CONCAT(COALESCE(CONCAT(contact_rollups.ages_taught, ','), ''), '#{age}')
     WHERE contact_rollups.dashboard_user_id = teacher_user_id"
 
-  PEGASUS_DB.run sql
   log_completion(start)
 end
 
@@ -380,7 +384,6 @@ def update_district
     select_append(:school_districts__name___district_name).select_append(:school_districts__updated_at___district_updated_at).
     inner_join(:school_infos, :id => :school_info_id).
     inner_join(:school_districts, :id => :school_district_id).order_by(:district_updated_at).each do |pd_enrollment|
-
     PEGASUS_DB[:contact_rollups].where(email: pd_enrollment[:email]).update(district_name: pd_enrollment[:district_name], district_city: pd_enrollment[:city],
       district_state: pd_enrollment[:state], district_zip: pd_enrollment[:zip])
   end
