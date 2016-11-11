@@ -358,7 +358,7 @@ var projects = module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
+        window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
 
         if (current.hidden) {
           if (!this.isFrozen()) {
@@ -522,20 +522,30 @@ var projects = module.exports = {
     header.updateTimestamp();
   },
   /**
-   * Autosave the code if things have changed
+   * Autosave the code if things have changed. Calls `callback` if autosave was
+   * not needed or after autosave success if a callback function was provided.
+   * @param {function} callback Function to be called after saving.
    */
-  autosave_() {
+  autosave(callback) {
+    const callCallback = () => {
+      if (callback) {
+        callback();
+      }
+    };
     // Bail if baseline code doesn't exist (app not yet initialized)
     if (currentSources.source === null) {
+      callCallback();
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      callCallback();
       return;
     }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      callCallback();
       return;
     }
 
@@ -546,11 +556,13 @@ var projects = module.exports = {
         const newSources = {source, html, animations};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
+          callCallback();
           return;
         }
 
         this.save(newSources, () => {
           hasProjectChanged = false;
+          callCallback();
         });
       });
     });

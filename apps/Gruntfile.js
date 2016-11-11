@@ -45,18 +45,18 @@ module.exports = function (grunt) {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'maze',
-    'turtle',
-    'bounce',
-    'flappy',
-    'studio',
-    'jigsaw',
-    'calc',
     'applab',
-    'eval',
-    'netsim',
+    'bounce',
+    'calc',
     'craft',
+    'eval',
+    'flappy',
     'gamelab',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle',
     'weblab'
   ];
 
@@ -165,10 +165,18 @@ module.exports = function (grunt) {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
+        // Pull p5.js and p5.play.js into the package from our fork of the
+        // p5.play repo at https://github.com/code-dot-org/p5.play
         {
           expand: true,
-          cwd: 'lib/p5play',
-          src: ['*.js'],
+          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          src: ['p5.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          cwd: './node_modules/@code-dot-org/p5.play/lib',
+          src: ['p5.play.js'],
           dest: 'build/package/js/p5play/'
         },
         {
@@ -346,7 +354,7 @@ module.exports = function (grunt) {
 
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
-    return [app, './src/' + app + '/main.js'];
+    return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
     appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
   ));
@@ -367,9 +375,10 @@ module.exports = function (grunt) {
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'signup':                       './src/sites/studio/pages/signup.js',
+    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
     'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'initApp/initApp':              './src/sites/studio/pages/initApp.js',
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
   var otherEntries = {
@@ -383,7 +392,7 @@ module.exports = function (grunt) {
     embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
@@ -406,11 +415,16 @@ module.exports = function (grunt) {
 
     return webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.extend(
-        {},
-        appsEntries,
-        codeStudioEntries,
-        otherEntries
+      entries: _.mapValues(
+        _.extend(
+          {},
+          appsEntries,
+          codeStudioEntries,
+          otherEntries
+        ),
+        function (val) {
+          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+        }
       ),
       externals: [
         {
@@ -440,6 +454,7 @@ module.exports = function (grunt) {
       ],
       minify: minify,
       watch: watch,
+      watchNotify: grunt.option('watch-notify'),
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
   }
@@ -581,7 +596,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
@@ -668,6 +683,7 @@ module.exports = function (grunt) {
     'karma:integration'
   ]);
 
+  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('codeStudioTest', [
     'preconcat',
     'concat',

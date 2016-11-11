@@ -408,6 +408,7 @@ class Documents < Sinatra::Base
       end
       raise e
     rescue => e
+      Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 

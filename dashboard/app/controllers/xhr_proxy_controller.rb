@@ -34,12 +34,14 @@ class XhrProxyController < ApplicationController
     code.org
     data.cityofchicago.org
     data.gv.at
+    githubusercontent.com
     googleapis.com
     herokuapp.com
     lakeside-cs.org
     query.yahooapis.com
     noaa.gov
     rhcloud.com
+    swapi.co
     wikipedia.org
   )
 

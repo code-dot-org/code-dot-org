@@ -1,7 +1,7 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import color from '../../color';
+import color from "../../util/color";
 import Radium from 'radium';
 import SpeedSlider from '../../templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
@@ -16,20 +16,13 @@ var styles = {
     fontSize: 24
   },
   icon: {
+    cursor: 'pointer',
     float: 'left',
     padding: 2,
     borderWidth: 1,
     borderRadius: 4,
     borderStyle: 'solid',
-    borderColor: 'transparent',
-    ':hover': {
-      borderStyle: 'outset',
-      borderColor: color.white
-    },
-    ':active': {
-      borderStyle: 'inset',
-      borderColor: color.white
-    }
+    borderColor: 'transparent'
   },
   trash: {
     marginRight: 12

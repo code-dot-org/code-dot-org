@@ -9,6 +9,9 @@ FactoryGirl.define do
     navigator_user_level {user_level}
   end
 
+  factory :studio_person do
+  end
+
   factory :user do
     birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -73,7 +76,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -530,11 +533,12 @@ FactoryGirl.define do
     capacity 10
     transient do
       num_sessions 0
+      sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(:pd_session, workshop: workshop, start: Date.today + i.days)
+        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
       end
     end
   end
@@ -552,18 +556,80 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
-  factory :school_info do
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
+  # school info
+
+  # this is the only factory used for testing the deprecated data formats (without country).
+  factory :school_info_without_country, class: SchoolInfo do
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
     association :school_district
   end
 
+  factory :school_info_non_us, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_us, class: SchoolInfo do
+    country 'US'
+  end
+
+  # although some US school types behave identically, we keep their factories separate here
+  # because the behavior of each school type may diverge over time.
+
+  factory :school_info_us_private, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_other, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_public, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :public_school
+    end
+  end
+
+  factory :school_info_us_charter, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :charter_school
+    end
+  end
+
+  # end school info
+
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:first_name) { |n| "Participant#{n}" }
+    last_name 'Codeberg'
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    association :school_info
-    school {'Example School'}
+    association :school_info, factory: :school_info_without_country
+    school 'Example School'
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -593,5 +659,27 @@ FactoryGirl.define do
     city "Seattle"
     state "WA"
     zip "98101"
+  end
+
+  factory :public_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle public school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    association :school_district
+  end
+
+  factory :charter_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    id 333
+    name "A seattle charter school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    association :school_district
   end
 end

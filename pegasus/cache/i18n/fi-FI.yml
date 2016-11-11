@@ -249,7 +249,7 @@
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: "#Koodaustunti on täällä - Tsekkaa! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -298,39 +298,39 @@
   studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
   homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
     koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Jos voit muuttaa teknologian, voit muuttaa maailman.&rdquo;
     Susan, YouTube:n toimitusjohtaja
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Älä pelkästään leiki puhelimellasi, ohjelmoi se.&rdquo;
     Presidentti Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Lapsemme &mdash; mukaan lukien tyttömme &mdash;
     tarvitsevat mahdollisuuden oppia tietojenkäsittelytiedettä.&rdquo;
     Sheryl, Facebook:in operatiivinen johtaja
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Tietojenkäsittelytiede voi avata parhaat mahdollisuudet maailmassa.&rdquo;
     Satya, Microsoft:in toimitusjohtaja
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Jos koodaat, voit valita elämäsi suunnan.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Nämä taidot ovat muuttaneet tulevaisuuteni. Puhumattakaan siitä, että se on puhdasta hauskuutta.&rdquo;
     Luna, 7. luokkalainen
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;En ole koskaan nähnyt lapsia näin innostuneina oppimisesta.&rdquo;
     Michael, opettaja
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Tietojenkäsittelytiede on alue, josta et voi tietää, pidätkö siitä vai et, ennen kuin olet sitä kokeillut.&rdquo;
     Jackson, 6. luokka
   homepage_hero_text_student4: "&ldquo;Voit tehdä ohjelmoinnin avulla mitä vain mielesi
-    haluaa.&rdquo; \nMaya, 2. luokka\n"
+    haluaa.&rdquo; \nMaya, 2. luokka"
   homepage_hero_text_student5: "&ldquo;Tietojenkäsittelytiede ei ole jotain muuta
-    varten. Se on sinua varten, tässä, juuri nyt.&rdquo; \nGeraldo, opettaja\n"
+    varten. Se on sinua varten, tässä, juuri nyt.&rdquo; \nGeraldo, opettaja"
   homepage_hero_text_teacher1: "&ldquo;Koodaaminen kipinöi luovuutta, innostusta ja
     innovaatiota &mdash; \njotka kaikki ovat välttämätömiä millä vain uralla.&rdquo;\nFloresa,
-    opettaja\n"
-  homepage_hero_text_teacher2: |
+    opettaja"
+  homepage_hero_text_teacher2: |-
     &ldquo;Tämä ohjelma sai 100% opiskelijoistani sitoutuviksi, osallistuviksi ja mukaan.&rdquo;
     Adam, opettaja
   homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
@@ -544,9 +544,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Jatka
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Epävarma
   volunteer_engineer_submission_commitment_one_hr_per_week: tunti viikossa
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
@@ -751,6 +751,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -885,6 +897,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Lue lisää
   dashboard_announce_try_now_button: Kokeile nyt
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -893,6 +906,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   host_an_hour: Host an hour
@@ -1752,3 +1770,22 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on theses course from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

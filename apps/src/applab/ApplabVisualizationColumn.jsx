@@ -1,7 +1,7 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
-import IFrameEmbedOverlay from './IFrameEmbedOverlay';
-import * as color from '../color';
-
+import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
+import * as color from "../util/color";
+import * as applabConstants from './constants';
 import React from 'react';
 import Radium from 'radium';
 import Visualization from './Visualization';
@@ -12,6 +12,7 @@ import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
+import i18n from '@cdo/locale';
 
 var styles = {
   completion: {
@@ -47,6 +48,9 @@ var styles = {
     marginLeft: 2,
     marginTop: -2,
   },
+  containedInstructions: {
+    marginTop: 10
+  }
 };
 
 /**
@@ -68,6 +72,7 @@ var ApplabVisualizationColumn = React.createClass({
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool,
+    awaitingContainedResponse: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -78,7 +83,13 @@ var ApplabVisualizationColumn = React.createClass({
   render: function () {
     let visualization = [
       <Visualization key="1"/>,
-      this.props.isIframeEmbed && !this.props.isRunning && <IFrameEmbedOverlay key="2"/>
+      (this.props.isIframeEmbed &&
+       !this.props.isRunning &&
+       <IFrameEmbedOverlay
+         key="2"
+         appWidth={applabConstants.APP_WIDTH}
+         appHeight={applabConstants.APP_HEIGHT}
+       />)
     ];
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
@@ -90,6 +101,7 @@ var ApplabVisualizationColumn = React.createClass({
           showSelector={!this.props.isRunning}
           isPaused={this.props.isPaused}
           screenIds={this.props.screenIds}
+          runButtonDisabled={this.props.awaitingContainedResponse}
           onScreenCreate={this.props.onScreenCreate}
         >
           {visualization}
@@ -136,6 +148,11 @@ var ApplabVisualizationColumn = React.createClass({
             <CompletionButton/>
           </div>
         </GameButtons>
+        {this.props.awaitingContainedResponse && (
+          <div style={styles.containedInstructions}>
+            {i18n.predictionInstructions()}
+          </div>
+        )}
         <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
       </div>
     );
@@ -153,6 +170,7 @@ export default connect(function propsFromStore(state) {
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,

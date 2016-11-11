@@ -170,6 +170,7 @@ levels.custom = {
 // Can you make this dog say "hello world"
 levels.dog_hello = {
   'ideal': 2,
+  'instructionsImportant': true,
   'requiredBlocks': [
     saySpriteRequiredBlock({
       notDefaultText: true
@@ -538,6 +539,7 @@ levels.gumball_move_to_actor = extend(levels.playlab_4, {
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
 levels.click_hello =  {
+  'instructionsImportant': true,
   'ideal': 3,
   'requiredBlocks': [
     saySpriteRequiredBlock({
@@ -1865,6 +1867,7 @@ levels.ec_sandbox = extend(levels.sandbox, {
 /* ******* Hour of Code 2015 ********/
 
 levels.js_hoc2015_move_right = {
+  'instructionsImportant': true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -3197,6 +3200,7 @@ levels.js_hoc2015_event_free = {
 };
 
 levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right,  {
+  instructionsImportant: true,
   editCode: false,
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
