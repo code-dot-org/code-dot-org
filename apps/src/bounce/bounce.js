@@ -260,7 +260,7 @@ var drawMap = function () {
         top = GOAL_TILE_SHAPES[tile][1];
         image = skin.goalTiles;
       }
-      if (tile !== 'null0') {
+      if (tile !== 'null0' && skin.drawTiles) {
         // Tile's clipPath element.
         var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
@@ -303,7 +303,7 @@ var drawMap = function () {
     }
   }
 
-  Bounce.ballImage = skin.ball;
+  Bounce.ballImage = level.theme ? skin[level.theme].ball : skin.ball;
   for (i = 0; i < Bounce.ballCount; i++) {
     Bounce.createBallElements(i);
   }
@@ -878,9 +878,10 @@ Bounce.reset = function (first) {
   document.getElementById('score').setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Bounce.setBackground('hardcourt');
-  Bounce.setBall('hardcourt');
-  Bounce.setPaddle('hardcourt');
+  var theme = level.theme || 'hardcourt';
+  Bounce.setBackground(theme);
+  Bounce.setBall(theme);
+  Bounce.setPaddle(theme);
   Bounce.currentBallSpeed = Bounce.defaultBallSpeed;
 
   // Remove any extra balls that were created dynamically.
@@ -1204,6 +1205,9 @@ Bounce.setBackgroundImage = function (backgroundUrl) {
 };
 
 Bounce.loadTiles = function (tiles, goalTiles) {
+  if (!skin.drawTiles) {
+    return;
+  }
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;

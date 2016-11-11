@@ -424,9 +424,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), 'random'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundRetro(), '"retro"']];
+    [[msg.setBackgroundRandom(), 'random']].concat(
+      skin.backgrounds.map((background) =>
+        [msg.setBackground({background: background}), `"${background}"`]));
 
   generator.bounce_setBackground = function () {
     return generateSetterCode(this, 'setBackground');
@@ -479,9 +479,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBall.VALUES =
-      [[msg.setBallRandom(), 'random'],
-       [msg.setBallHardcourt(), '"hardcourt"'],
-       [msg.setBallRetro(), '"retro"']];
+    [[msg.setBallRandom(), 'random']].concat(
+      skin.balls.map((ball) => [msg.setBall({ball: ball}), `"${ball}"`]));
 
   generator.bounce_setBall = function () {
     return generateSetterCode(this, 'setBall');
@@ -536,8 +535,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setPaddleDropdown.VALUES =
-      [[skin.paddle, '"hardcourt"'],
-       [skin.hand_2.paddle, '"hand_2"']];
+      skin.paddles.map((paddle) => [skin[paddle].paddle, `"${paddle}"`]);
 
   generator.bounce_setPaddleDropdown = function () {
     return generateSetterCode(this, 'setPaddle');

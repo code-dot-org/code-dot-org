@@ -12,16 +12,34 @@ var skinsBase = require('../skins');
 var CONFIGS = {
   bounce: {
     nonDisappearingPegmanHittingObstacle: true,
+    backgrounds: [
+      'hardcourt',
+      'retro'
+    ],
+    balls: [
+      'hardcourt',
+      'retro'
+    ],
     ballYOffset: 10,
+    drawTiles: true,
     markerHeight: 43,
     markerWidth: 50
   },
 
   basketball: {
+    drawTiles: true,
     goalSuccess: 'goal.png',
     paddle: 'hand_1.png',
     markerHeight: 61,
     markerWidth: 54,
+    balls: [
+      'hardcourt',
+      'retro'
+    ],
+    paddles: [
+      'hand_1',
+      'hand_2'
+    ],
     teams: [
       'Atlanta Hawks',
       'Boston Celtics',
@@ -54,6 +72,31 @@ var CONFIGS = {
       'Utah Jazz',
       'Washington Wizards',
     ],
+  },
+
+  sports: {
+    drawTiles: false,
+    backgrounds: [
+      'basketball',
+      'football',
+      'hockey',
+      'soccer'
+    ],
+    balls: [
+      'basketball',
+      'football',
+      'hockey',
+      'soccer'
+    ],
+    paddles: [
+      'hand_1',
+      'hand_2',
+      'hockey',
+      'soccer'
+    ],
+    background: 'basketball_background.png',
+    ball: 'basketball_ball.png',
+    paddle: 'basketball_paddle.png',
   }
 };
 
@@ -64,32 +107,32 @@ exports.load = function (assetUrl, id) {
   skin.retro = {
     background: skin.assetUrl('retro_background.png'),
     tiles: skin.assetUrl('retro_tiles_wall.png'),
-    goalTiles: skin.assetUrl('retro_tiles_goal.png'),
+    goaltiles: skin.assetUrl('retro_tiles_goal.png'),
     paddle: skin.assetUrl('retro_paddle.png'),
     ball: skin.assetUrl('retro_ball.png')
+  };
+  skin.hand_1 = {
+    paddle: skin.assetUrl('hand_1.png'),
   };
   skin.hand_2 = {
     paddle: skin.assetUrl('hand_2.png'),
   };
+  skin.basketball = {
+    background: skin.assetUrl('basketball_background.png'),
+    ball: skin.assetUrl('basketball_ball.png')
+  };
   skin.soccer = {
-    background: skin.asetUrl('soccer_background.png'),
-    tiles: skin.assetUrl('soccer_tiles_wall.png'),
-    goalTiles: skin.assetUrl('soccer_tiles_goal.png'),
+    background: skin.assetUrl('soccer_background.png'),
     paddle: skin.assetUrl('soccer_paddle.png'),
     ball: skin.assetUrl('soccer_ball.png')
   };
   skin.hockey = {
-    background: skin.asetUrl('hockey_background.png'),
-    tiles: skin.assetUrl('hockey_tiles_wall.png'),
-    goalTiles: skin.assetUrl('hockey_tiles_goal.png'),
+    background: skin.assetUrl('hockey_background.png'),
     paddle: skin.assetUrl('hockey_paddle.png'),
     ball: skin.assetUrl('hockey_ball.png')
   };
   skin.football = {
-    background: skin.asetUrl('football_background.png'),
-    tiles: skin.assetUrl('football_tiles_wall.png'),
-    goalTiles: skin.assetUrl('football_tiles_goal.png'),
-    paddle: skin.assetUrl('football_paddle.png'),
+    background: skin.assetUrl('football_background.png'),
     ball: skin.assetUrl('football_ball.png')
   };
 
@@ -116,6 +159,10 @@ exports.load = function (assetUrl, id) {
       skin.assetUrl(config.hittingWallAnimation);
   skin.approachingGoalAnimation =
       skin.assetUrl(config.approachingGoalAnimation);
+  skin.drawTiles = config.drawTiles;
+  skin.backgrounds = config.backgrounds || [];
+  skin.balls = config.balls || [];
+  skin.paddles = config.paddles || [];
   skin.teams = config.teams || [];
   skin.teamBackgrounds = {};
   skin.teams.forEach((team) =>
