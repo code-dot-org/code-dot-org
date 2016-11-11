@@ -1,5 +1,8 @@
+require 'honeybadger'
+
 class HocSignup2014
   def self.normalize(data)
+    Honeybadger.context({ :data => data })
     result = {}
     result[:email_s] = required email_address data[:email_s]
     result[:name_s] = required stripped data[:name_s]
