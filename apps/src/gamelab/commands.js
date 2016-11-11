@@ -1,12 +1,15 @@
 /** @file Non-p5 GameLab commands */
 import * as assetPrefix from '../assetManagement/assetPrefix';
+import {
+  OPTIONAL,
+  apiValidateType,
+} from '../javascriptMode';
 var studioApp = require('../StudioApp').singleton;
 
 var gamelabCommands = module.exports;
 
 gamelabCommands.playSound = function (opts) {
-  // TODO: Extract validation helper from applab and use here
-  //apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
   if (studioApp.cdoSounds) {
     var url = assetPrefix.fixPath(opts.url);
@@ -43,8 +46,7 @@ gamelabCommands.playSound = function (opts) {
  * @param {string} [opts.url] The sound to stop.  Stops all sounds if omitted.
  */
 gamelabCommands.stopSound = function (opts) {
-  // TODO: Extract validation helper from applab and use here
-  //apiValidateType(opts, 'stopSound', 'url', opts.url, 'string');
+  apiValidateType(opts, 'stopSound', 'url', opts.url, 'string', OPTIONAL);
 
   if (studioApp.cdoSounds) {
     if (opts.url) {

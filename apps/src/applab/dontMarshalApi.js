@@ -1,6 +1,7 @@
-import {warn as outputWarning} from '../javascriptMode';
-
-var OPTIONAL = true;
+import {
+  OPTIONAL,
+  warn as outputWarning,
+} from '../javascriptMode';
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
