@@ -14,9 +14,12 @@ User.with_deleted.where(user_type: User::TYPE_TEACHER).each do |teacher|
   # The teacher does not have an associated StudioPerson, so create one,
   # updating the User to point to the StudioPerson.
   studio_person = StudioPerson.create(
-    emails: teacher.email,
     created_at: TIME_NOW,
     updated_at: TIME_NOW
   )
-  teacher.update(studio_person_id: studio_person.id)
+  if teacher.email.blank?
+    teacher.update(studio_person_id: studio_person.id)
+  else
+    studio_person.add_email(teacher.email)
+  end
 end
