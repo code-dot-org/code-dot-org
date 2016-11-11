@@ -15,6 +15,8 @@ $main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
+$code-block-background-yellow: #d78c01;
+$code-block-outline-yellow: #ffb72f;
 
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
@@ -1049,7 +1051,7 @@ $height-to-width: 434 / 477;
 }
 
 code {
-  background-color: #d78c01;
-  border: 1px solid #ffb72f;
+  background-color: $code-block-background-yellow;
+  border: 1px solid $code-block-outline-yellow;
   color: $white;
 }
