@@ -6,10 +6,26 @@ import { getResponsiveValue } from './responsive';
 import i18n from './locale';
 
 const styles = {
+  button: {
+    float: "left",
+    width: "100%",
+    paddingLeft: 10,
+    paddingRight: 40
+  },
   roboticsButtonImage: {
     marginTop: 10,
     marginBottom: 20,
     width: "100%"
+  },
+  roboticsButtonText: {
+    fontFamily: "'Gotham 4r', sans-serif",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    margin: 15,
+    color: "white",
+    textAlign: "center",
+    lineHeight: "20px"
   },
   roboticsText: {
     float: "left",
@@ -29,14 +45,23 @@ const RoboticsButton = React.createClass({
     };
 
     return (
-      <div style={{float:"left"}}>
+      <div>
         <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
-          <a href="/learn/robotics">
-            <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
-          </a>
+          <div style={styles.button}>
+            <a href="/learn/robotics">
+              <div style={{position: "relative"}}>
+                <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
+                <div style={styles.roboticsButtonText}>
+                  {i18n.roboticsButtonText()}
+                  &nbsp;
+                  <i className="fa fa-arrow-right" aria-hidden={true}/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
         <div style={roboticsTextStyle}>
-          <div dangerouslySetInnerHTML={{__html: i18n.roboticsButtonText({robotics_url: "/learn/robotics"})}}/>
+          <div dangerouslySetInnerHTML={{__html: i18n.roboticsText({robotics_url: "/learn/robotics"})}}/>
         </div>
       </div>
     );
