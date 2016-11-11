@@ -18,7 +18,7 @@ class CertificateImageTest < Minitest::Test
   end
 
   def test_course_templates
-    assert_equal 'MC_Hour_Of_Code_Certificate.jpg', certificate_template_for('mc')
+    assert_equal 'MC_Hour_Of_Code_Certificate.png', certificate_template_for('mc')
     assert_equal '20hours_certificate.jpg', certificate_template_for('20-hour')
     assert_equal '20hours_certificate.jpg', certificate_template_for('20-hour')
     assert_equal 'hour_of_code_certificate.jpg', certificate_template_for('frozen')
