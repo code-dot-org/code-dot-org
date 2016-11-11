@@ -1050,8 +1050,26 @@ $height-to-width: 434 / 477;
   }
 }
 
-code {
-  background-color: $code-block-background-yellow;
-  border: 1px solid $code-block-outline-yellow;
-  color: $white;
+.minecraft-events {
+  code {
+    background-color: $code-block-background-yellow;
+    border: 1px solid $code-block-outline-yellow;
+    color: $white;
+  }
+
+  #toolbox-header {
+    border-right: none !important;
+  }
+
+  #codeWorkspace {
+    border: none !important;
+  }
+
+  #headers {
+    border-radius: 6px 6px 0 0;
+  }
+
+  #codeWorkspace > svg.blocklySvg {
+    border-radius: 0 0 6px 6px;
+  }
 }
