@@ -22,10 +22,10 @@ const styles = {
     position: "absolute",
     top: 0,
     left: 0,
-    margin: 15,
+    margin: "25px 15px 15px 15px",
     color: "white",
     textAlign: "center",
-    lineHeight: "20px"
+    fontSize: 16
   },
   roboticsText: {
     float: "left",
