@@ -15,6 +15,13 @@ import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiv
 import i18n from './locale';
 import _ from 'lodash';
 
+const styles = {
+  bottomGuidelinesLink: {
+    textAlign: 'right',
+    padding: '10px 7px 40px 7px',
+    fontSize: 13
+  }
+};
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -284,6 +291,9 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
+    const bottomGuidelinesLink =
+      i18n.bottomGuidelinesLink({guidelines_url: "https://hourofcode.com/tutorial-guidelines"});
+
     return (
       <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
         <FilterHeader
@@ -331,6 +341,11 @@ const TutorialExplorer = React.createClass({
               locale={this.props.locale}
             />
           )}
+
+          <div style={styles.bottomGuidelinesLink}>
+            <div dangerouslySetInnerHTML={{__html: bottomGuidelinesLink}}/>
+          </div>
+
         </div>
       </div>
     );
