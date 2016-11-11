@@ -33,8 +33,6 @@
           .form-group
             = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
           = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
-      .right
-        %a#later-link.dismiss-link{href: '#'}= t('terms_interstitial.later')
       .clear
 
 %script{src: minifiable_asset_path('js/termsInterstitial.js')}
