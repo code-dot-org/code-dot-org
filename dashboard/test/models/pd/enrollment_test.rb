@@ -150,6 +150,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     end
   end
 
+  test 'old enrollments with no last name are still valid' do
+    old_enrollment = create :pd_enrollment
+    old_enrollment.update!(created_at: '2016-11-09', last_name: '')
+    assert old_enrollment.valid?
+  end
+
+  test 'last name is required on new enrollments, create and update' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, last_name: ''
+    end
+    assert e.message.include? 'Validation failed: Last name is required'
+
+    enrollment = create :pd_enrollment
+    refute enrollment.update(last_name: '')
+  end
+
   test 'full_name' do
     enrollment = create :pd_enrollment
     enrollment.full_name = 'SplitFirst SplitLast'

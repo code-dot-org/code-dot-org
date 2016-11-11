@@ -45,7 +45,12 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
+
+  # Make sure the old page is gone, since selenium's navigate.to does not reliably do this for us.
+  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.to url
+  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
+
   install_js_error_recorder
 end
 
@@ -649,7 +654,11 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
 end
 
 Then(/^I reload the page$/) do
+  # Make sure the old page is gone before this step completes, since selenium's navigate.refresh
+  # does not reliably do this for us.
+  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
+  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
@@ -703,7 +712,8 @@ def enroll_in_plc_course(user_email)
   require_rails_env
   user = User.find_by_email_or_hashed_email(user_email)
   course = Plc::Course.find_by(name: 'All The PLC Things')
-  enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
+  Plc::UserCourseEnrollment.enroll_users([user.email], course.id)
+  enrollment = Plc::UserCourseEnrollment.find_by(user: user)
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
 end
 
@@ -863,6 +873,11 @@ end
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
+end
+
+When(/^I debug element "([^"]*)" text content$/) do |selector|
+  text = @browser.execute_script("return $('#{selector}').text()")
+  puts "'#{text.strip}'"
 end
 
 When(/^I debug focus$/) do
