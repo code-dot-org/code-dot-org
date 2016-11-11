@@ -16,7 +16,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     @script_level = create :script_level, levels: [level]
     @script = @script_level.script
-    @user = create :teacher
+    @user = create :user
   end
 
   def track_progress(level_source_id, user = @user)
@@ -201,7 +201,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   test 'Merging peer review progress merges progress for enrolled users' do
     @script.update(professional_learning_course: true, peer_reviews_to_complete: 3)
-    Plc::UserCourseEnrollment.enroll_users([@user.email], @script.plc_course_unit.plc_course.id)
+    Plc::UserCourseEnrollment.create(user: @user, plc_course: @script.plc_course_unit.plc_course)
 
     assert PeerReview.get_peer_review_summaries(@user, @script).empty?
 
