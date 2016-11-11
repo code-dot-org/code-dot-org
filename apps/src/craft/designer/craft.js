@@ -70,7 +70,7 @@ const interfaceImages = {
     MEDIA_URL + "Sliced_Parts/X_Button.png",
     MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon.png",
+    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
     MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
     MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
