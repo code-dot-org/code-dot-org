@@ -32,9 +32,9 @@
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_title: The Hour of Code is coming
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
@@ -1760,6 +1760,11 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>

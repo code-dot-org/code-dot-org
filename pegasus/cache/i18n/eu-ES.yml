@@ -36,8 +36,8 @@
   twentyhours_text: Bukatu duzu zure Kode Ordua? Ikasi informatika eta programazio
     kontzeptu gehiago ondorengo jarraipen ikastaroan.
   og_title: Ume guztiek merezi dute aukera bat
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Bat egin <a href="http://hourofcode.com">Kode Orduarekin</a><br/>2014ko
     abenduaren 8tik 14era<br/>
   hoc2014_students: Ikasle
@@ -1791,6 +1791,11 @@
   infinity_shortcode: inf
   playlab_shortcode: hasi
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>

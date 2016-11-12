@@ -35,8 +35,8 @@
   twentyhours_text: "Завршили сте свој први Час програмирања? Научите више основа
     информатике и концепте програмирања у курсу који следи."
   og_title: "Свако дете заслужује шансу"
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Придружите се<a href="http://hourofcode.com">Часу програмирања
     </a><br/>8.-14.децембар,2014<br/>
   hoc2014_students: "Студенти"
@@ -1771,6 +1771,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "играј"
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
