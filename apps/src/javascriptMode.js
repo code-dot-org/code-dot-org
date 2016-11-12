@@ -5,7 +5,8 @@ import RGBColor from './rgbcolor.js';
 export const OPTIONAL = true;
 
 /** @type {JavaScriptModeErrorHandler} */
-var errorHandler;
+let errorHandler;
+
 /**
  * Set an appropriate error handler for to use for any JavaScript errors
  * or warnings generated in static methods.
@@ -16,18 +17,18 @@ export function injectErrorHandler(handler) {
 }
 
 /** @see JavaScriptModeErrorHandler#error */
-export function error() {
-  errorHandler.error.apply(errorHandler, arguments);
+export function error(...args) {
+  errorHandler.error(...args);
 }
 
 /** @see JavaScriptModeErrorHandler#warn */
-export function warn() {
-  errorHandler.warn.apply(errorHandler, arguments);
+export function warn(...args) {
+  errorHandler.warn(...args);
 }
 
 /** @see JavaScriptModeErrorHandler#getAsyncWarn */
-export function getAsyncWarn() {
-  return errorHandler.getAsyncWarn.apply(errorHandler, arguments);
+export function getAsyncWarn(...args) {
+  return errorHandler.getAsyncWarn(...args);
 }
 
 /**
@@ -35,7 +36,7 @@ export function getAsyncWarn() {
  * @returns {boolean} True if param passed validation.
  */
 export function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
+  const validatedTypeKey = 'validated_type_' + varName;
   if (typeof opts[validatedTypeKey] === 'undefined') {
     var properType;
     switch (expectedType) {
@@ -80,9 +81,7 @@ export function apiValidateType(opts, funcName, varName, varValue, expectedType,
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      warn(funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not a " + expectedType + ".");
-
+      warn(`${funcName}() ${varName} parameter value (${varValue}) is not a ${expectedType}.`);
     }
     opts[validatedTypeKey] = properType;
   }
