@@ -173,4 +173,3 @@ let WireframeButtons = React.createClass({
   }
 });
 export default WireframeButtons;
-module.exports = WireframeButtons;

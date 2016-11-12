@@ -25,7 +25,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var DialogButtons = require('./templates/DialogButtons');
-var WireframeButtons = require('./templates/WireframeButtons');
+import WireframeButtons from './templates/WireframeButtons';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
