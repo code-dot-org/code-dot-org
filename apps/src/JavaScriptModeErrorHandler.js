@@ -28,7 +28,7 @@ export default class JavaScriptModeErrorHandler {
    * @param {string} errorString
    * @param {number} [lineNumber]
    */
-  error(errorString, lineNumber) {
+  outputError(errorString, lineNumber) {
     this.output_(errorString, LogLevel.ERROR, lineNumber);
   }
 
@@ -39,16 +39,16 @@ export default class JavaScriptModeErrorHandler {
    * @param {string} errorString
    * @param {number} [lineNumber]
    */
-  warn(errorString, lineNumber) {
+  outputWarning(errorString, lineNumber) {
     this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
 
   /**
-   * Get a warn() function that binds against the current line number, so we can
+   * Get a outputWarning() function that binds against the current line number, so we can
    * report a later error at this line.
    * @returns {function(string)}
    */
-  getAsyncWarn() {
+  getAsyncOutputWarning() {
     const lineNumber = this.getNearestUserCodeLine_();
     return errorString => this.output_(errorString, LogLevel.WARNING, lineNumber);
   }
