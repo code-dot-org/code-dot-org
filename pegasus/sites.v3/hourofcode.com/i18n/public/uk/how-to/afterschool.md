@@ -8,19 +8,21 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# Як навчити кодити у "Одна година коду", коли ти вдома пiсля школи
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Оберiть навчальну програму:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+Ми надаемо рiзноманiтнi [розваги, одно годиннi завдання](<%= resolve_url('https://code.org/learn') %>) для осiб будь-якого вiку, що створенi нашии партнерами. [Спробуйте](<%= resolve_url("https://code.org/learn") %>)
 
-**Всі підручники Години коду:**
+**Всі програми "Година коду":**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Все призначенi для самостiйного навчання - що дозволяэ учням працювати у власному темпi вiдповiдно до iх рiвня знань
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -118,7 +120,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Other Hour of Code resources for educators:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.

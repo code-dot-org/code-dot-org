@@ -8,21 +8,23 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# පාසැල් වේලාවෙන් පසු Hour of Code වැඩසටහනක් කියා දෙන්නේ කෙසේද?
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) කෙසේද යන්න විඩියෝ දර්ශන වලින් <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) නිබන්ධන තෝරන්න:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. ඒවා උත්සාහ කරන්න! </></p> 
 
-**All Hour of Code tutorials:**
+**සියලු Hour of Code නිබන්ධන **
 
   * Require minimal prep-time for organizers
   * Are self-guided - allowing kids to work at their own pace and skill-level
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## 3) ඔබගේ Hour of Code ප්‍රවර්ධනය
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
@@ -60,7 +62,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Code!
+## 6) කේතය!
 
 **Direct participants to the activity**
 
@@ -93,7 +95,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) සමරන්න
 
 [col-33]
 
@@ -118,7 +120,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Other Hour of Code resources for educators:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.

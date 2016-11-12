@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# څرنګه د کوډ ګړۍ خپلې کمپنۍ (شرکت) کې شاملولای شئ
 
 ## Inspire students and volunteer for the Hour of Code
 
