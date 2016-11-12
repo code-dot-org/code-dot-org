@@ -36,8 +36,8 @@
   twentyhours_text: Baigėte savo „Programavimo valandą“?  Išmokite daugiau apie informatiką
     ir programavimą kituose kursuose.
   og_title: Kiekvienas vaikas nusipelno galimybės
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Prisijunkite prie <a href="http://hourofcode.com">Programavimo
     valandos</a><br/>2014 gruodžio 8–14 dienomis<br/>
   hoc2014_students: Mokiniai
@@ -1757,6 +1757,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "žaisti"
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>

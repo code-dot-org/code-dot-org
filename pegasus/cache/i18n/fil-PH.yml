@@ -35,9 +35,9 @@
   twentyhours_heading: Subukan ang aming Intro sa kurso ng Computer Science
   twentyhours_text: Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer
     science at mga programming concept sa follow-up na kurso na ito.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_title: The Hour of Code is coming
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Sumali sa <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Mga mag-aaral
@@ -1790,6 +1790,11 @@
   infinity_shortcode: inf
   playlab_shortcode: i-play
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
