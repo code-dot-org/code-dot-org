@@ -98,7 +98,7 @@ var GameLab = function () {
 
   injectErrorHandler(new JavaScriptModeErrorHandler(
     () => this.JSInterpreter,
-    [this]
+    this
   ));
   consoleApi.setLogMethod(this.log.bind(this));
 
