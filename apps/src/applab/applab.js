@@ -53,7 +53,7 @@ import {
 } from '../containedLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {
-  error,
+  outputError,
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -450,7 +450,7 @@ function queueOnTick() {
 }
 
 function handleExecutionError(err, lineNumber) {
-  error(String(err), lineNumber);
+  outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
   // complete puzzle, which will prevent further execution

@@ -6,7 +6,7 @@ import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import experiments from '../util/experiments';
 import {
-  error,
+  outputError,
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -1044,7 +1044,7 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-  error(String(err), lineNumber);
+  outputError(String(err), lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
   // TODO: Call onPuzzleComplete?

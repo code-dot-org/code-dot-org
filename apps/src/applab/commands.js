@@ -15,9 +15,9 @@ import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
-  error as outputError,
-  getAsyncWarn as getAsyncErrorHandler,
-  warn as outputWarning,
+  getAsyncOutputWarning,
+  outputError,
+  outputWarning,
 } from '../javascriptMode';
 
 // For proxying non-https xhr requests
@@ -1397,7 +1397,7 @@ applabCommands.createRecord = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
@@ -1413,7 +1413,7 @@ applabCommands.getKeyValue = function (opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
@@ -1447,7 +1447,7 @@ applabCommands.setKeyValue = function (opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
@@ -1489,7 +1489,7 @@ applabCommands.readRecords = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
@@ -1519,7 +1519,7 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1549,7 +1549,7 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncErrorHandler();
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1563,7 +1563,7 @@ applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
   apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getAsyncErrorHandler(), opts.includeAll);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getAsyncOutputWarning(), opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {

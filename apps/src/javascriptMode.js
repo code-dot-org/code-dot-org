@@ -16,19 +16,19 @@ export function injectErrorHandler(handler) {
   errorHandler = handler;
 }
 
-/** @see JavaScriptModeErrorHandler#error */
-export function error(...args) {
-  errorHandler.error(...args);
+/** @see JavaScriptModeErrorHandler#outputError */
+export function outputError(...args) {
+  errorHandler.outputError(...args);
 }
 
-/** @see JavaScriptModeErrorHandler#warn */
-export function warn(...args) {
-  errorHandler.warn(...args);
+/** @see JavaScriptModeErrorHandler#outputWarning */
+export function outputWarning(...args) {
+  errorHandler.outputWarning(...args);
 }
 
-/** @see JavaScriptModeErrorHandler#getAsyncWarn */
-export function getAsyncWarn(...args) {
-  return errorHandler.getAsyncWarn(...args);
+/** @see JavaScriptModeErrorHandler#getAsyncOutputWarning */
+export function getAsyncOutputWarning(...args) {
+  return errorHandler.getAsyncOutputWarning(...args);
 }
 
 /**
@@ -81,7 +81,7 @@ export function apiValidateType(opts, funcName, varName, varValue, expectedType,
     }
     properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
     if (!properType) {
-      warn(`${funcName}() ${varName} parameter value (${varValue}) is not a ${expectedType}.`);
+      outputWarning(`${funcName}() ${varName} parameter value (${varValue}) is not a ${expectedType}.`);
     }
     opts[validatedTypeKey] = properType;
   }

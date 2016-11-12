@@ -44,7 +44,7 @@ import { GridMove, GridMoveAndCancel } from './spriteActions';
 import { Provider } from 'react-redux';
 import { singleton as studioApp } from '../StudioApp';
 import {
-  error,
+  outputError,
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
@@ -2803,7 +2803,7 @@ Studio.hasUnexpectedLocalFunction_ = function () {
 };
 
 function handleExecutionError(err, lineNumber) {
-  error(String(err), lineNumber);
+  outputError(String(err), lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:
