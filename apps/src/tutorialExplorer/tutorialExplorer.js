@@ -9,6 +9,7 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
+import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 
 import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
@@ -39,9 +40,11 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    let sortBy = TutorialsSortBy.default;
+    const sortBy = TutorialsSortBy.default;
 
     const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
+
+    const showingAllTutorials = this.isLocaleEnglish();
 
     return {
       filters: filters,
@@ -52,7 +55,8 @@ const TutorialExplorer = React.createClass({
       windowHeight: $(window).height(),
       mobileLayout: isResponsiveCategoryInactive('md'),
       showingModalFilters: false,
-      sortBy: sortBy
+      sortBy: sortBy,
+      showingAllTutorials: showingAllTutorials
     };
   },
 
@@ -105,15 +109,20 @@ const TutorialExplorer = React.createClass({
 
   filterTutorialSet(filters, sortBy) {
     const filterProps = {
-      locale: this.props.locale,
       filters: filters,
       hideFilters: this.props.hideFilters,
       sortBy: sortBy
     };
+
+    // The main set of tutorials should have an en version if user is en, but
+    // for non-en users it shows any tutorial regardless of locale.
     filterProps.specificLocale = false;
+    filterProps.locale = this.isLocaleEnglish() ? this.props.locale : null;
     const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
 
+    // The extra set of tutorials for a specific locale, shown at top for non-en user.
     filterProps.specificLocale = true;
+    filterProps.locale = this.props.locale;
     const filteredTutorialsForLocale = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
 
     return { filteredTutorials, filteredTutorialsForLocale };
@@ -131,6 +140,14 @@ const TutorialExplorer = React.createClass({
     this.setState({showingModalFilters: false});
   },
 
+  showAllTutorials() {
+    this.setState({showingAllTutorials: true});
+  },
+
+  hideAllTutorials() {
+    this.setState({showingAllTutorials: false});
+  },
+
   shouldShowFilters() {
     return !this.state.mobileLayout || this.state.showingModalFilters;
   },
@@ -141,6 +158,10 @@ const TutorialExplorer = React.createClass({
 
   shouldShowTutorialsForLocale() {
     return this.shouldShowTutorials() && !this.isLocaleEnglish();
+  },
+
+  shouldShowAllTutorialsToggleButton() {
+    return !this.isLocaleEnglish();
   },
 
   isLocaleEnglish() {
@@ -212,12 +233,11 @@ const TutorialExplorer = React.createClass({
         // First check that the tutorial language doesn't exclude it immediately.
         // If the tags contain some languages, and we don't have a match, then
         // hide the tutorial.
-        if (tutorial.languages_supported) {
+        if (locale && tutorial.languages_supported) {
           const languageTags = tutorial.languages_supported.split(',');
-          const currentLocale = locale;
           if (languageTags.length > 0 &&
-            languageTags.indexOf(currentLocale) === -1 &&
-            languageTags.indexOf(currentLocale.substring(0,2)) === -1) {
+            languageTags.indexOf(locale) === -1 &&
+            languageTags.indexOf(locale.substring(0,2)) === -1) {
             return false;
           }
         } else if (specificLocale) {
@@ -285,54 +305,67 @@ const TutorialExplorer = React.createClass({
 
   render() {
     return (
-      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
-        <FilterHeader
-          onUserInput={this.handleUserInputSortBy}
-          sortBy={this.state.sortBy}
-          backButton={this.props.backButton}
-          filteredTutorialsCount={this.state.filteredTutorialsCount}
-          mobileLayout={this.state.mobileLayout}
-          showingModalFilters={this.state.showingModalFilters}
-          showModalFilters={this.showModalFilters}
-          hideModalFilters={this.hideModalFilters}
-          showSortBy={this.props.showSortBy}
-        />
-        <div style={{clear: "both"}}/>
+      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 60}}>
 
-        {this.shouldShowFilters() && (
-          <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
-            <FilterSet
-              filterGroups={this.props.filterGroups}
-              onUserInput={this.handleUserInputFilter}
-              selection={this.state.filters}
-              roboticsButton={this.props.roboticsButton}
+        {this.shouldShowTutorialsForLocale() && (
+          <div>
+            <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+            <TutorialSet
+              tutorials={this.state.filteredTutorialsForLocale}
+              filters={this.state.filters}
+              locale={this.props.locale}
+              specificLocale={true}
+              localeEnglish={this.isLocaleEnglish()}
             />
           </div>
         )}
 
-        <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
-          {this.shouldShowTutorialsForLocale() && (
-            <div>
-              <h1>{i18n.headingTutorialsYourLanguage()}</h1>
-              <TutorialSet
-                tutorials={this.state.filteredTutorialsForLocale}
-                filters={this.state.filters}
-                locale={this.props.locale}
-                specificLocale={true}
-              />
-              <h1>{i18n.headingTutorialsManyLanguages()}</h1>
-            </div>
-          )}
+        {this.shouldShowAllTutorialsToggleButton() && (
+          <ToggleAllTutorialsButton
+            showAllTutorials={this.showAllTutorials}
+            hideAllTutorials={this.hideAllTutorials}
+            showingAllTutorials={this.state.showingAllTutorials}
+          />
+        )}
 
-          {this.shouldShowTutorials() && (
-            <TutorialSet
-              tutorials={this.state.filteredTutorials}
-              filters={this.state.filters}
-              locale={this.props.locale}
-              localeEnglish={this.isLocaleEnglish()}
+        {this.state.showingAllTutorials && (
+          <div>
+            <FilterHeader
+              onUserInput={this.handleUserInputSortBy}
+              sortBy={this.state.sortBy}
+              backButton={this.props.backButton}
+              filteredTutorialsCount={this.state.filteredTutorialsCount}
+              mobileLayout={this.state.mobileLayout}
+              showingModalFilters={this.state.showingModalFilters}
+              showModalFilters={this.showModalFilters}
+              hideModalFilters={this.hideModalFilters}
+              showSortBy={this.props.showSortBy}
             />
-          )}
-        </div>
+            <div style={{clear: "both"}}/>
+
+            {this.shouldShowFilters() && (
+              <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+                <FilterSet
+                  filterGroups={this.props.filterGroups}
+                  onUserInput={this.handleUserInputFilter}
+                  selection={this.state.filters}
+                  roboticsButton={this.props.roboticsButton}
+                />
+              </div>
+            )}
+
+            <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+              {this.shouldShowTutorials() && (
+                <TutorialSet
+                  tutorials={this.state.filteredTutorials}
+                  filters={this.state.filters}
+                  locale={this.props.locale}
+                  localeEnglish={this.isLocaleEnglish()}
+                />
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

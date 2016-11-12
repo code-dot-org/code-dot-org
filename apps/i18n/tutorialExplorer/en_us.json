@@ -49,6 +49,7 @@
   "tutorialDetailsShortLink": "Short link",
   "tutorialDetailInternationalLanguages": "Languages",
   "headingTutorialsYourLanguage": "Tutorials in your language",
-  "headingTutorialsManyLanguages": "Tutorials in many languages",
-  "tutorialDetailStandards": "Standards"
+  "tutorialDetailStandards": "Standards",
+  "showAllTutorialsButton": "Show tutorials for many languages",
+  "hideAllTutorialsButton": "Hide tutorials for many languages"
 }
