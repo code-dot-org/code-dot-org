@@ -654,6 +654,11 @@ Then(/^I reload the page$/) do
   @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
   wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  wait_for_jquery
+end
+
+def wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script("return !!$;") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
