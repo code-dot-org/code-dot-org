@@ -189,6 +189,10 @@ module RakeUtils
     `git status --porcelain #{path} 2>/dev/null | egrep \"^\s*(M|A|D)\" | wc -l`.strip.to_i > 0
   end
 
+  def self.git_up_to_date?
+    `git remote show origin 2>&1 | grep \"(up to date)\" | grep \"#{git_branch}\" | wc -l`.strip.to_i > 0
+  end
+
   # Gets a stable hash of the given directory's git-committed files.
   # Uses a hash of the `git ls-tree` contents because a shallow-clone may not have the
   # full revision history needed to find the original commit SHA.
