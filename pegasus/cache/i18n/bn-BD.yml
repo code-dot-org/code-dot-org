@@ -37,8 +37,8 @@
   twentyhours_text: "আপনার প্রথম Houe of Code শেষ? এরপর একাধিক কোর কম্পিউটার বিজ্ঞান
     এবং প্রোগ্রামিং প্রাযুক্তিক পরবর্তী কোর্স, সম্বন্ধে জানুন।"
   og_title: "প্রতিটি শিশু সুযোগের দাবীদার"
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: যুক্ত হন <a href="http://hourofcode.com"> Hour of Code</a><br/>
     ডিসেম্বর 8-14, ২০১৪ <br/>
   hoc2014_students: "ছাত্র"
@@ -1781,6 +1781,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "খেলুন"
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>

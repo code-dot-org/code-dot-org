@@ -38,8 +38,8 @@
   twentyhours_text: Бірінші "Код жазу Сағатын" аяқтадыңыз ба? Информатика және бағдарламалау
     ұғымы туралы толығырақ келесі курста біліңіз.
   og_title: "Әр бір бала мүмкіндікке лайық"
-  og_description: Every student in every school deserves the opportunity to study
-    computer science. It's changing everything.
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: 8-14 желтоқсан 2014 ж. <br/><a href="http://hourofcode.com">"Код
     жазу Сағатына"</a> қатысыңыз <br/>'
   hoc2014_students: "Оқушылар"
@@ -1797,6 +1797,11 @@
   infinity_shortcode: inf
   playlab_shortcode: "ойнау"
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
   videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
     featuring role models and celebrities
   careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
