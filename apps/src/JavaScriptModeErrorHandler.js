@@ -2,12 +2,10 @@
   * that use droplet and allow students to write and execute JavaScript. */
 import annotationList from './acemode/annotationList';
 import logToCloud from './logToCloud';
+import {makeEnum} from './utils';
 
 /** @enum {string} */
-export const LogLevel = {
-  ERROR: 'LogLevel/ERROR',
-  WARNING: 'LogLevel/WARNING'
-};
+export const LogLevel = makeEnum('ERROR', 'WARNING');
 
 /**
  * Logging, annotation and error reporting mediator for use with toolkits where
@@ -64,13 +62,11 @@ export default class JavaScriptModeErrorHandler {
    * @private
    */
   output_(message, logLevel, lineNumber) {
-    const stringLogLevel = logLevelToString(logLevel);
-
     if (lineNumber === undefined) {
       lineNumber = this.getNearestUserCodeLine_();
     }
 
-    let logText = `${stringLogLevel}: `;
+    let logText = `${logLevel}: `;
     if (lineNumber !== undefined) {
       logText += `Line: ${lineNumber}: `;
     }
@@ -81,7 +77,7 @@ export default class JavaScriptModeErrorHandler {
 
     // Add an annotation directly in the editor for this output
     if (lineNumber !== undefined) {
-      annotationList.addRuntimeAnnotation(stringLogLevel, lineNumber, message);
+      annotationList.addRuntimeAnnotation(logLevel, lineNumber, message);
     }
 
     // Send to New Relic if it's an error and meets our sampling rate
@@ -106,21 +102,6 @@ export default class JavaScriptModeErrorHandler {
     }
     return undefined;
   }
-}
-
-/**
- * We use long keys for the LogLevel enum to avoid conflicts, but we want the
- * simple name to use when logging.  This is a reverse lookup.
- * @param {LogLevel} logLevel
- * @returns {string}
- */
-function logLevelToString(logLevel) {
-  for (let key in LogLevel) {
-    if (LogLevel[key] === logLevel) {
-      return key;
-    }
-  }
-  return logLevel;
 }
 
 /**
