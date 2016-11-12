@@ -90,7 +90,7 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true,
+      roboticsButtonUrl: "/learn/robotics",
       showSortBy: window.location.search.indexOf("showsort") !== -1
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
