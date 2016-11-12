@@ -1772,7 +1772,7 @@ Studio.init = function (config) {
   // in JavaScript/Droplet mode.
   injectErrorHandler(new JavaScriptModeErrorHandler(
     () => Studio.JSInterpreter,
-    [consoleLogger]
+    consoleLogger
   ));
 
   // Allow any studioMsg string to be re-mapped on a per-level basis:

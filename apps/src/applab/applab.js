@@ -606,7 +606,7 @@ Applab.init = function (config) {
   // Set up an error handler for student errors and warnings.
   injectErrorHandler(new JavaScriptModeErrorHandler(
     () => Applab.JSInterpreter,
-    [Applab]
+    Applab
   ));
 
   config.loadAudio = function () {

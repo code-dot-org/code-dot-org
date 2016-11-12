@@ -87,7 +87,7 @@ describe('createRecord callbacks', function () {
     var applabLogger = sinon.spy();
     injectErrorHandler(new JavaScriptModeErrorHandler(
       () => window.Applab.JSInterpreter,
-      [{log: applabLogger}]
+      {log: applabLogger}
     ));
 
     applabCommands.createRecord({

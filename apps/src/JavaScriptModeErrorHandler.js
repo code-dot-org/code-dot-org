@@ -13,13 +13,13 @@ export const LogLevel = {
  * Logging, annotation and error reporting mediator for use with toolkits where
  * students write JavaScript.
  * @param {function():JSInterpreter} getJsInterpreter
- * @param {Array.<LogTarget>} logTargets
+ * @param {LogTarget} logTarget
  * @constructor
  */
 export default class JavaScriptModeErrorHandler {
-  constructor(getJsInterpreter, logTargets) {
+  constructor(getJsInterpreter, logTarget) {
     this.getJsInterpreter_ = getJsInterpreter;
-    this.logTargets_ = logTargets;
+    this.logTarget_ = logTarget;
   }
 
   /**
@@ -76,8 +76,8 @@ export default class JavaScriptModeErrorHandler {
     }
     logText += message;
 
-    // Send the assembled output to our logging services.
-    this.logTargets_.forEach(target => target.log(logText));
+    // Send the assembled output to our logging service.
+    this.logTarget_.log(logText);
 
     // Add an annotation directly in the editor for this output
     if (lineNumber !== undefined) {
