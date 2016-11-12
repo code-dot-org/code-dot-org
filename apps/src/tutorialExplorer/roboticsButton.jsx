@@ -38,6 +38,10 @@ const styles = {
 };
 
 const RoboticsButton = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string
+  },
+
   render() {
     const roboticsTextStyle = {
       ...styles.roboticsText,
@@ -48,7 +52,7 @@ const RoboticsButton = React.createClass({
       <div>
         <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
           <div style={styles.button}>
-            <a href="/learn/robotics">
+            <a href={this.props.url}>
               <div style={{position: "relative"}}>
                 <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
                 <div style={styles.roboticsButtonText}>
@@ -62,7 +66,7 @@ const RoboticsButton = React.createClass({
         </div>
 
         <div style={roboticsTextStyle}>
-          <a href="/learn/robotics">
+          <a href={this.props.url}>
             {i18n.roboticsText()}
           </a>
         </div>

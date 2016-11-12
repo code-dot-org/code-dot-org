@@ -98,7 +98,7 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{locale_code}",
-      roboticsButton: true,
+      roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
       showSortBy: window.location.search.indexOf("showsort") !== -1
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
