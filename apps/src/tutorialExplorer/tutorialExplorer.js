@@ -25,7 +25,7 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
-    roboticsButton: React.PropTypes.bool,
+    robotics: React.PropTypes.bool.isRequired,
     showSortBy: React.PropTypes.bool.isRequired
   },
 
@@ -41,9 +41,8 @@ const TutorialExplorer = React.createClass({
     }
 
     const sortBy = TutorialsSortBy.default;
-
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(filters, sortBy);
-
+    const filteredTutorials = this.filterTutorialSet(filters, sortBy);
+    const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
     const showingAllTutorials = this.isLocaleEnglish();
 
     return {
@@ -83,12 +82,11 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(newState.filters, this.state.sortBy);
+    const filteredTutorials = this.filterTutorialSet(newState.filters, this.state.sortBy);
     this.setState({
       ...newState,
       filteredTutorials,
-      filteredTutorialsCount: filteredTutorials.length,
-      filteredTutorialsForLocale
+      filteredTutorialsCount: filteredTutorials.length
     });
   },
 
@@ -98,15 +96,22 @@ const TutorialExplorer = React.createClass({
    * @param {SortBy} value - The new sort order.
    */
   handleUserInputSortBy(value) {
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorialSet(this.state.filters, value);
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, value);
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
-      filteredTutorialsForLocale,
       sortBy: value
     });
   },
 
+  /*
+   * The main tutorial set is returned with the given filters and sort order.
+   *
+   * Whether en or non-en page, this set does not filter by locale:
+   * - For en users, they'll see tutorials in all languages.
+   * - For non-en users, this will be the longer filterable set if they
+   *   choose to view tutorials in many languages.
+   */
   filterTutorialSet(filters, sortBy) {
     const filterProps = {
       filters: filters,
@@ -114,18 +119,29 @@ const TutorialExplorer = React.createClass({
       sortBy: sortBy
     };
 
-    // The main set of tutorials should have an en version if user is en, but
-    // for non-en users it shows any tutorial regardless of locale.
-    filterProps.specificLocale = false;
-    filterProps.locale = this.isLocaleEnglish() ? this.props.locale : null;
-    const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+    return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+  },
 
-    // The extra set of tutorials for a specific locale, shown at top for non-en user.
+  /*
+   * The extra set of tutorials for a specific locale, shown at top for non-en user
+   * with no filter options.
+   * If not robotics page, show all tutorials including robotics.  If robotics page,
+   * then use that filter.
+   */
+  filterTutorialSetForLocale() {
+    const filterProps = {
+      sortBy: TutorialsSortBy.default
+    };
+
+    if (this.props.robotics) {
+      filterProps.filters = {
+        activity_type: ["robotics"]
+      };
+    }
+
     filterProps.specificLocale = true;
     filterProps.locale = this.props.locale;
-    const filteredTutorialsForLocale = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
-
-    return { filteredTutorials, filteredTutorialsForLocale };
+    return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   },
 
   componentDidMount() {
@@ -157,7 +173,7 @@ const TutorialExplorer = React.createClass({
   },
 
   shouldShowTutorialsForLocale() {
-    return this.shouldShowTutorials() && !this.isLocaleEnglish();
+    return !this.isLocaleEnglish();
   },
 
   shouldShowAllTutorialsToggleButton() {
@@ -349,7 +365,7 @@ const TutorialExplorer = React.createClass({
                   filterGroups={this.props.filterGroups}
                   onUserInput={this.handleUserInputFilter}
                   selection={this.state.filters}
-                  roboticsButton={this.props.roboticsButton}
+                  robotics={this.props.robotics}
                 />
               </div>
             )}
@@ -469,7 +485,7 @@ window.TutorialExplorerManager = function (options) {
         hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
-        roboticsButton={options.roboticsButton}
+        robotics={options.robotics}
         showSortBy={options.showSortBy}
       />,
       element

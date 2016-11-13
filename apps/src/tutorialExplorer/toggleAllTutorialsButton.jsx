@@ -14,7 +14,7 @@ const ToggleAllTutorialsButton = React.createClass({
 
   render() {
     return (
-      <div style={{width: "100%", textAlign: "center"}}>
+      <div style={{width: "100%", textAlign: "center", paddingTop: 30}}>
         {!this.props.showingAllTutorials && (
           <button onClick={this.props.showAllTutorials}>
             {i18n.showAllTutorialsButton()}
