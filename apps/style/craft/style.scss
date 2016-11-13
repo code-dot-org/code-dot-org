@@ -134,9 +134,9 @@ $workspace-corner-rounding: 6px;
   -ms-touch-action: none;
 }
 
-@mixin arrow-icon($direction) {
+@mixin arrow-icon($assetUrl) {
   @include no-interact();
-  background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat !important;
+  background: url($assetUrl) no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
   width: 40px !important;
@@ -146,20 +146,20 @@ $workspace-corner-rounding: 6px;
 }
 
 .left-btn {
-  @include arrow-icon("Run");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   @include flip-horizontal(1);
   background-size: 16px 32px !important;
 }
 .right-btn {
-  @include arrow-icon("Run");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   background-size: 16px 32px !important;
 }
 .down-btn {
-  @include arrow-icon("Down");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png");
   background-size: 28px 20px !important;
 }
 .up-btn {
-  @include arrow-icon("Up");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png");
   background-size: 28px 20px !important;
 }
 
