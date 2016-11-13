@@ -114,6 +114,7 @@ When /^I reset the puzzle to the starting version$/ do
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
   STEPS
 end
 
