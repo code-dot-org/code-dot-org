@@ -2256,6 +2256,13 @@ en:
           description_audience: ''
           description_short: The Design Process
           description: ''
+        minecraft:
+          stage:
+            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
+          title: Minecraft Hour of Code Designer
+          description_audience: ''
+          description_short: Build a Minecraft game.
+          description: Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey

@@ -654,7 +654,6 @@ module.exports = connect(function propsFromStore(state) {
     showInstructionsDialog(height) {
       dispatch(openDialog({
         autoClose: false,
-        showHints: true,
         aniGifOnly: false,
         hintsOnly: true
       }));

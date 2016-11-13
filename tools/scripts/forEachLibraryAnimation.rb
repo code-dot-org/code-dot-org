@@ -1,4 +1,4 @@
-#!/usr/bin/env/ruby
+#!/usr/bin/env ruby
 #
 # Makes a change to every animation in the animation library on S3.
 
