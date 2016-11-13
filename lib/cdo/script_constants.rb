@@ -3,53 +3,14 @@
 # Used for conditional behaviors.
 
 module ScriptConstants
-  HOC_2013_NAME = 'Hour of Code' # this is the old (2013) hour of code
-  EDIT_CODE_NAME = 'edit-code'
-  TWENTY_FOURTEEN_NAME = 'events'
-  JIGSAW_NAME = 'jigsaw'
-  HOC_NAME = 'hourofcode' # name of the new (2014) hour of code script
-  STARWARS_NAME = 'starwars'
-  MINECRAFT_NAME = 'mc'
-  STARWARS_BLOCKS_NAME = 'starwarsblocks'
-  FROZEN_NAME = 'frozen'
-  PLAYLAB_NAME = 'playlab'
-  GUMBALL_NAME = 'gumball'
-  ICEAGE_NAME = 'iceage'
-  INFINITY_NAME = 'infinity'
-  ARTIST_NAME = 'artist'
-  ALGEBRA_NAME = 'algebra'
-  ALGEBRA_A_NAME = 'AlgebraA'
-  ALGEBRA_B_NAME = 'AlgebraB'
-  FLAPPY_NAME = 'flappy'
-  TWENTY_HOUR_NAME = '20-hour'
-  ACCELERATED_NAME = 'accelerated'
-  COURSE1_NAME = 'course1'
-  COURSE2_NAME = 'course2'
-  COURSE3_NAME = 'course3'
-  COURSE4_NAME = 'course4'
-  CSP_UNIT1_NAME = 'cspunit1'
-  CSP_UNIT2_NAME = 'cspunit2'
-  CSP_UNIT3_NAME = 'cspunit3'
-  CSP_UNIT4_NAME = 'cspunit4'
-  CSP_UNIT5_NAME = 'cspunit5'
-  CSP_UNIT6_NAME = 'cspunit6'
+  EDIT_CODE_NAME = 'edit-code'.freeze
+  TWENTY_FOURTEEN_NAME = 'events'.freeze
+  JIGSAW_NAME = 'jigsaw'.freeze
+  ACCELERATED_NAME = 'accelerated'.freeze
 
-  CSP17_UNIT1_NAME = 'csp1'
-  CSP17_UNIT2_NAME = 'csp2'
-  CSP17_UNIT3_NAME = 'csp3'
-  CSP17_UNIT4_NAME = 'csp4'
-
-  CSP_ASSESSMENT_NAME = 'cspassessment'
-  CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'
-  CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'
-
-  CSD1_NAME = 'csd1'
-  CSD2_NAME = 'csd2'
-  CSD3_NAME = 'csd3'
-  CSD4_NAME = 'csd4'
-
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft'
-  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft-simple'.freeze
+  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'minecraft-designer'.freeze
+  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
@@ -61,66 +22,75 @@ module ScriptConstants
       # you must also update the Data_HocTutorials gsheet so the end of script API works
 
       nil,
-      HOC_2013_NAME,
-      HOC_NAME,
-      FROZEN_NAME,
-      FLAPPY_NAME,
-      PLAYLAB_NAME,
-      GUMBALL_NAME,
-      ICEAGE_NAME,
-      STARWARS_NAME,
-      STARWARS_BLOCKS_NAME,
-      MINECRAFT_NAME,
-      INFINITY_NAME,
-      ARTIST_NAME
+      HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
+      HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
+      FROZEN_NAME = 'frozen'.freeze,
+      FLAPPY_NAME = 'flappy'.freeze,
+      PLAYLAB_NAME = 'playlab'.freeze,
+      GUMBALL_NAME = 'gumball'.freeze,
+      ICEAGE_NAME = 'iceage'.freeze,
+      STARWARS_NAME = 'starwars'.freeze,
+      STARWARS_BLOCKS_NAME = 'starwarsblocks'.freeze,
+      MINECRAFT_NAME = 'mc'.freeze,
+      MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      INFINITY_NAME = 'infinity'.freeze,
+      ARTIST_NAME = 'artist'.freeze,
     ],
     csf: [
-      TWENTY_HOUR_NAME,
-      COURSE1_NAME,
-      COURSE2_NAME,
-      COURSE3_NAME,
-      COURSE4_NAME
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
+      COURSE1_NAME = 'course1'.freeze,
+      COURSE2_NAME = 'course2'.freeze,
+      COURSE3_NAME = 'course3'.freeze,
+      COURSE4_NAME = 'course4'.freeze,
     ],
     csd: [
-      CSD1_NAME,
-      CSD2_NAME,
-      CSD3_NAME,
-      CSD4_NAME
+      CSD1_NAME = 'csd1'.freeze,
+      CSD2_NAME = 'csd2'.freeze,
+      CSD3_NAME = 'csd3'.freeze,
+      CSD4_NAME = 'csd4'.freeze,
     ],
     csp: [
-      CSP_UNIT1_NAME,
-      CSP_UNIT2_NAME,
-      CSP_UNIT3_NAME,
-      CSP_UNIT4_NAME,
-      CSP_UNIT5_NAME,
-      CSP_UNIT6_NAME
+      CSP_UNIT1_NAME = 'cspunit1'.freeze,
+      CSP_UNIT2_NAME = 'cspunit2'.freeze,
+      CSP_UNIT3_NAME = 'cspunit3'.freeze,
+      CSP_UNIT4_NAME = 'cspunit4'.freeze,
+      CSP_UNIT5_NAME = 'cspunit5'.freeze,
+      CSP_UNIT6_NAME = 'cspunit6'.freeze,
     ],
     csp17: [
-      CSP17_UNIT1_NAME,
-      CSP17_UNIT2_NAME,
-      CSP17_UNIT3_NAME,
-      CSP17_UNIT4_NAME
+      CSP17_UNIT1_NAME = 'csp1'.freeze,
+      CSP17_UNIT2_NAME = 'csp2'.freeze,
+      CSP17_UNIT3_NAME = 'csp3'.freeze,
+      CSP17_UNIT4_NAME = 'csp4'.freeze,
     ],
     cspexams: [
-      CSP_ASSESSMENT_NAME,
-      CSP_EXAM1_NAME,
-      CSP_EXAM2_NAME
+      CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
+      CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
+      CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
     ],
     math: [
-      ALGEBRA_NAME,
-      ALGEBRA_A_NAME,
-      ALGEBRA_B_NAME
+      ALGEBRA_NAME = 'algebra'.freeze,
+      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
+      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
+    ],
+    research_studies: [
+      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
+      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
     ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
-    minecraft: [MINECRAFT_NAME]
+    minecraft: [
+      MINECRAFT_NAME,
+      MINECRAFT_DESIGNER_NAME
+    ]
   }
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
   # This can be used to override that, with lower numbers ordered sooner, and higher numbers
   # ordered later.
   CATEGORY_ORDERING_PRIORITY = {
-    csp: 1,
+    research_studies: 1,
+    csp: 2,
   }
 
   def self.script_in_category?(category, script)
@@ -143,6 +113,8 @@ module ScriptConstants
   def self.teacher_dashboard_name(script)
     if script == MINECRAFT_NAME
       MINECRAFT_TEACHER_DASHBOARD_NAME
+    elsif script == MINECRAFT_DESIGNER_NAME
+      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
     elsif script == HOC_NAME
       HOC_TEACHER_DASHBOARD_NAME
     else
