@@ -69,7 +69,7 @@ const styles = {
   tutorialDetailsTableBodyNoWrap: {
     padding: 5,
     border: '1px solid lightgrey',
-    whiteSpace: "pre"
+    whiteSpace: "pre-wrap"
   }
 };
 
