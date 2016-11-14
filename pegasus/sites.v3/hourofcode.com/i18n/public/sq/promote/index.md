@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Dergo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) në drejtori dhe sfidoni të gjithat klasat ne shkollën tuaj për tu regjistruar. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Dergo këtë email](<%= resolve_url('/promote/resources#sample-emails') %>) në drejtori dhe sfidoni të gjithat klasat ne shkollën tuaj për tu regjistruar.
 
 ## 3. Pyesni punëdhënsin tuaj për tu përfshirë
 

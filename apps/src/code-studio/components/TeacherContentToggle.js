@@ -6,6 +6,9 @@ import { ViewType, fullyLockedStageMapping } from '../stageLockRedux';
 import { isHiddenFromState } from '../hiddenStageRedux';
 
 const styles = {
+  container: {
+    height: '100%'
+  },
   hidden: {
     display: 'none'
   }
@@ -63,7 +66,9 @@ export const TeacherContentToggle = Radium(React.createClass({
       height: window.screen.height
     };
 
-    let contentStyle = {};
+    let contentStyle = {
+      height: '100%'
+    };
     let hasOverlayFrame = (isLockedStage || isHiddenStage);
 
     if (viewAs === ViewType.Student) {
@@ -90,7 +95,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     // Note: This component depends on the fact that the only thing we change about
     // our children as we rerender is their style.
     return (
-      <div>
+      <div style={styles.container}>
         <div style={contentStyle} ref="content"/>
         <div style={[frameStyle, !showLockedStageMessage && styles.hidden]} ref="lockMessage"/>
         <div style={[frameStyle, !showHiddenStageMessage && styles.hidden]} ref="hiddenMessage"/>

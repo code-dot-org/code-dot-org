@@ -43,7 +43,7 @@ After reading the guidelines below, feel free to submit your activity, lesson pl
 
 - [What to Submit](#whatsubmit)
 - [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit (Due 10/1/2016)](#submit)
+- [How to Submit](#submit)
 - [How activities will be evaluated](#inclusion)
 - [Suggestions for designing your activity](#design)
 - [Trademark Guidelines](#tm)
@@ -107,7 +107,7 @@ The activities should teach a computer science concept such as how the Internet 
 
 <a id="submit"></a>
 
-## How to submit (Due 10/1/2016)
+## How to submit
 
 Visit the [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki) and complete the questions to submit your activity.
 
@@ -261,9 +261,9 @@ Many of our tutorial partners have used our trademark "Hour of Code" on their we
 
 <a id="pixel"></a>
 ## Tracking Pixel
-In order to more accurately track participation we ask every third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials (A starting pixel-image on the start page and a final pixel-image on the end page. And not on interim pages). 
+In order to more accurately track participation we ask every tutorial partner to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. The starting pixel-image must be on the start page only and the finish pixel-image must be on the last page of your tutorial. Do not include either pixel on any interim pages of your tutorial.
 
-This will allow us to count users who you directly recruit to visit your website to do their Hour of Code, or users who visit when a teacher types your URL directly on their whiteboard. It will lead to more accurate participation counts for your tutorial, which will help you attract users. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates. 
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial. If you integrate the pixel at the end it will also allow us to measure tutorial completion rates.
 
 If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below. 
 

@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
 اپنے آور-آف-کوڈ کو [ان ٹولز کے ساتھ](%= resolve_url('/promote') %) فروغ دیں اور دوسروں کو اپنی تقریبات ہوسٹ کرنے پر حوصلہ افزائی کریں.
@@ -116,11 +118,10 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 ## آور-آف-کوڈ کے دیگر ذرائع (ریسورسز) برائے ایجوکیٹرز:
 
-  * اپنے آور-آف-کوڈ کو آرگنائز کرنے کے لیے اس [ٹیمپلیٹ لیسن پلان](/files/AfterschoolEducatorLessonPlanOutline.docx) کو استعمال کریں۔
-  * گزشتہ آور-آف-کوڈ کے آرگنائزرز کے [بہترین طریقوں](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) کو دیکھیں۔ 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * دیگر آرگنائزرز سے مشاورت، بصیرت اور معاونت حاصل کرنے کے لیے [آور-آف-کوڈ فورم](http://forum.code.org/c/plc/hour-of-code) پر وزٹ کریں <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔ <% end %>
 
 ## آور-آف-کوڈ کے بعد کیا آتا ہے؟
