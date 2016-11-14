@@ -9,12 +9,11 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-
 import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
-
+import queryString from 'query-string';
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -423,42 +422,33 @@ function getFilters({robotics, mobile}) {
   return {filters, initialFilters, hideFilters};
 }
 
-function getUrlParameters(filters) {
-  let providedParameters = null;
+/*
+ * Parse URL parameters to retrieve an override of initialFilters.
+ *
+ * @return {object} - Returns an object containing arrays of strings.  Each
+ *   array is named for a filterGroup name, and each string inside is named
+ *   for a filter entry.  Note that this is not currently white-listed against
+ *   our known name of filterGroups/entries, but invalid entries should be
+ *   ignored in the filtering user experience.
+ */
+function getUrlParameters() {
+  // Create a result object that has a __proto__ so that React validation will work
+  // properly.
+  let parametersObject = {};
 
-  const parameters = decodeURIComponent(window.location.search.substring(1)).split('&');
+  let parameters = queryString.parse(location.search);
 
-  for (let p = 0; p < parameters.length; p++) {
-    const parameter = parameters[p];
-    const [parameterName, parameterValue] = parameter.split('=');
-
-    // Does this parameter name match a filter group name?
-    for (let f = 0; f < filters.length; f++) {
-      const filter = filters[f];
-      const filterName = filter.name;
-
-      if (parameterName === filterName) {
-        // Next, does the parameter value match a filter entry for that group?
-        for (let e = 0; e < filter.entries.length; e++) {
-          const entry = filter.entries[e];
-          const entryName = entry.name;
-
-          // Set the entry.
-          if (parameterValue === entryName) {
-            if (!providedParameters) {
-              providedParameters = {};
-            }
-            if (!providedParameters[filterName]) {
-              providedParameters[filterName] = [];
-            }
-            providedParameters[filterName].push(entryName);
-          }
-        }
-      }
+  for (const name in parameters) {
+    if (typeof parameters[name] === "string") {
+      // Convert items with a single filter entry into an array containing that
+      // string.
+      parametersObject[name] = [parameters[name]];
+    } else {
+      parametersObject[name] = parameters[name];
     }
   }
 
-  return providedParameters;
+  return parametersObject;
 }
 
 window.TutorialExplorerManager = function (options) {
