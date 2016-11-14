@@ -141,7 +141,7 @@ namespace :build do
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :restart_process_queues if CDO.daemon
-  tasks << :resload_varnish if CDO.build_dashboard || CDO.build_pegasus
+  tasks << :reload_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end
 
