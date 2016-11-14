@@ -75,7 +75,7 @@ var CONFIGS = {
   },
 
   sports: {
-    drawTiles: false,
+    drawTiles: true,
     backgrounds: [
       'basketball',
       'football',
@@ -124,16 +124,19 @@ exports.load = function (assetUrl, id) {
   skin.soccer = {
     background: skin.assetUrl('soccer_background.png'),
     paddle: skin.assetUrl('soccer_paddle.png'),
-    ball: skin.assetUrl('soccer_ball.png')
+    ball: skin.assetUrl('soccer_ball.png'),
+    drawTiles: false
   };
   skin.hockey = {
     background: skin.assetUrl('hockey_background.png'),
     paddle: skin.assetUrl('hockey_paddle.png'),
-    ball: skin.assetUrl('hockey_ball.png')
+    ball: skin.assetUrl('hockey_ball.png'),
+    drawTiles: false
   };
   skin.football = {
     background: skin.assetUrl('football_background.png'),
-    ball: skin.assetUrl('football_ball.png')
+    ball: skin.assetUrl('football_ball.png'),
+    drawTiles: false
   };
 
   // Images

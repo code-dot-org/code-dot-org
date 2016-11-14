@@ -260,7 +260,7 @@ var drawMap = function () {
         top = GOAL_TILE_SHAPES[tile][1];
         image = skin.goalTiles;
       }
-      if (tile !== 'null0' && skin.drawTiles) {
+      if (tile !== 'null0' && Bounce.drawTiles) {
         // Tile's clipPath element.
         var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
@@ -705,6 +705,7 @@ Bounce.init = function (config) {
     Bounce.paddleFinishCount = 0;
     Bounce.defaultBallSpeed = level.ballSpeed || tiles.DEFAULT_BALL_SPEED;
     Bounce.defaultBallDir = level.ballDirection || tiles.DEFAULT_BALL_DIRECTION;
+    Bounce.drawTiles = level.theme ? skin[level.theme].drawTiles : skin.drawTiles;
 
     // Locate the start and finish squares.
     for (var y = 0; y < Bounce.ROWS; y++) {
@@ -1181,7 +1182,7 @@ Bounce.displayScore = function () {
 };
 
 var skinTheme = function (value) {
-  if (value === 'hardcourt') {
+  if (value === 'hardcourt' || value === 'basketball') {
     return skin;
   }
   return skin[value];
@@ -1194,6 +1195,7 @@ Bounce.setTeam = function (value) {
 
 Bounce.setBackground = function (value) {
   var theme = skinTheme(value);
+  Bounce.drawTiles = theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
   Bounce.setBackgroundImage(theme.background);
   Bounce.loadTiles(theme.tiles, theme.goalTiles);
 };
@@ -1205,9 +1207,6 @@ Bounce.setBackgroundImage = function (backgroundUrl) {
 };
 
 Bounce.loadTiles = function (tiles, goalTiles) {
-  if (!skin.drawTiles) {
-    return;
-  }
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;
@@ -1238,10 +1237,13 @@ Bounce.loadTiles = function (tiles, goalTiles) {
         }
         image = goalTiles;
       }
-      if (!empty) {
-        var element = document.getElementById('tileElement' + tileId);
+      var element = document.getElementById('tileElement' + tileId);
+      if (!empty && Bounce.drawTiles) {
         element.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href', image);
+        element.setAttribute('visibility', 'visible');
+      } else if (element) {
+        element.setAttribute('visibility', 'hidden');
       }
       tileId++;
     }
