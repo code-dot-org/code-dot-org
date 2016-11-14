@@ -78,7 +78,7 @@ class GameController {
     this.score = 0;
     this.useScore = false;
     this.scoreText = null;
-    this.scorePanel = null;
+    this.onScoreUpdate = gameControllerConfig.onScoreUpdate;
 
     this.events = [];
 
@@ -156,7 +156,7 @@ class GameController {
 
     this.score = 0;
     if (this.useScore) {
-      this.scoreText.text = 'Score: ' + this.score;
+      this.updateScore();
     }
 
     this.initializeCommandRecord();
@@ -179,20 +179,9 @@ class GameController {
     this.addCheatKeys();
     this.assetLoader.loadPacks(this.levelData.assetPacks.afterLoad);
     this.game.load.image('timer', `${this.assetRoot}images/placeholderTimer.png`);
-    this.game.load.image('scorePanel', `${this.assetRoot}images/Frame_Large_Plus_LogoNub.png`);
     this.game.load.onLoadComplete.addOnce(() => {
       if (this.afterAssetsLoaded) {
         this.afterAssetsLoaded();
-      }
-      if (this.useScore) {
-        let scale = 400 / 552;
-        this.scorePanel = this.game.add.sprite(216 * scale, 0, 'scorePanel');
-        this.scorePanel.scale.setTo(scale, scale);
-        this.scorePanel.fixedToCamera = true;
-        this.scoreText = this.game.add.text(280 * scale, -2, 'Score: ' + this.score, { fontSize: '14px', fill: '#FFFFFF' });
-        this.scoreText.anchor.x = 0.5;
-        this.scoreText.fontWeight = 'bold';
-        this.scoreText.fixedToCamera = true;
       }
     });
     this.levelEntity.loadData(this.levelData);
@@ -1384,12 +1373,15 @@ class GameController {
     this.addCommandRecord("addScore", undefined, commandQueueItem.repeat);
     if (this.useScore) {
       this.score += score;
-
-      if (this.scoreText) {
-        this.scoreText.text = 'Score: ' + this.score;
-      }
+      this.updateScore();
     }
     commandQueueItem.succeeded();
+  }
+
+  updateScore() {
+    if (this.onScoreUpdate) {
+      this.onScoreUpdate(this.score);
+    }
   }
 
   isPathAhead(blockType) {
