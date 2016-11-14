@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 318,
   "properties": {
-    "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":4,\"range\":4}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}]]",
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[2],\"startsHidden\":true},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[0,1,2,3],\"startsHidden\":true},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[0,1,2,3],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,15 +22,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
+    "start_direction": "3",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "This will look essentially the same as the previous puzzle. There should be two crops randomly planted in the row. Each plant should start at a random growth stage and grow when the user runs their algorithm. Students are using the while loop and hopefully understand that it's better at picking all the crops of one type.",
+    "instructions": "*\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"*",
     "step_speed": "2",
-    "ideal": "5",
-    "markdown_instructions": "VIDEO HERE explaining that when you used the IF block we left behind lots of crops. When you use while loops, we are combining the power of loops with the intelligence of conditionals.",
-    "contained_level_names": null
+    "ideal": "9",
+    "instructions_important": "false",
+    "contained_level_names": null,
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To get all of the items, try nesting `if` statements three deep.\\n\\nThis means you should put one `if` statement inside of another, then put a third `if` statement inside the second one.\",\"hint_id\":\"grade3_RunningFarm_3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/022291bd14265e51f2ac41d351415130/grade3_RunningFarm_3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"For this puzzle, you should have two `if/else` statements and one plain `if` statement.\",\"hint_id\":\"grade3_RunningFarm_3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a37652c6c140190d69bc9b38d1b58001/grade3_RunningFarm_3.mp3\"}]"
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
@@ -46,13 +47,18 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="collector_collect"/>
-        <block type="maze_fill"/>
+        <block type="harvester_ifAtCropElse">
+          <title name="LOC">Corn</title>
+        </block>
+        <block type="harvester_ifAtCrop">
+          <title name="LOC">Pumpkin</title>
+        </block>
+        <block type="harvester_corn"/>
+        <block type="harvester_pumpkin"/>
+        <block type="harvester_lettuce"/>
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
-        <block type="collector_whileCollectible"/>
-        <block type="collector_ifCollectible"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -60,101 +66,35 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">6</title>
+              <title name="TIMES">7</title>
               <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_fill"/>
-                  </next>
-                </block>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="controls_repeat">
-                              <title name="TIMES">6</title>
+                    <block type="harvester_ifAtCropElse">
+                      <title name="LOC">Corn</title>
+                      <statement name="DO">
+                        <block type="harvester_corn"/>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="harvester_ifAtCropElse">
+                          <title name="LOC">Pumpkin</title>
+                          <statement name="DO">
+                            <block type="harvester_pumpkin"/>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="harvester_ifAtCrop">
+                              <title name="LOC">Lettuce</title>
                               <statement name="DO">
-                                <block type="maze_fill">
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </next>
-                                </block>
+                                <block type="harvester_lettuce"/>
                               </statement>
-                              <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
-                                  <next>
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
-                                          <next>
-                                            <block type="controls_repeat">
-                                              <title name="TIMES">6</title>
-                                              <statement name="DO">
-                                                <block type="maze_move">
-                                                  <title name="DIR">moveForward</title>
-                                                  <next>
-                                                    <block type="maze_fill"/>
-                                                  </next>
-                                                </block>
-                                              </statement>
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnRight</title>
-                                                  <next>
-                                                    <block type="maze_move">
-                                                      <title name="DIR">moveForward</title>
-                                                      <next>
-                                                        <block type="maze_turn">
-                                                          <title name="DIR">turnRight</title>
-                                                          <next>
-                                                            <block type="controls_repeat">
-                                                            <title name="TIMES">6</title>
-                                                            <statement name="DO">
-                                                            <block type="maze_fill">
-                                                            <next>
-                                                            <block type="maze_move">
-                                                            <title name="DIR">moveForward</title>
-                                                            </block>
-                                                            </next>
-                                                            </block>
-                                                            </statement>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
                             </block>
-                          </next>
+                          </statement>
                         </block>
-                      </next>
+                      </statement>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
