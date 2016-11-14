@@ -40,16 +40,20 @@ exports.handler = function (event, context) {
       event.ResponseData = responseData;
       event.PhysicalResourceId = physicalId;
       var currentlyWaiting = true;
+      var timer;
       ec2.waitFor(waiter.state, waiter.params, function (err, data) {
         if (currentlyWaiting) {
-          if (err) { error(err, 'error waiting for ' + waiter.state);}
-          else success();
+          if (timer) clearTimeout(timer);
+          if (err) {error(err, 'error waiting for ' + waiter.state);}
+          else {
+            success();
+          }
         } else {
           console.log("No longer waiting:", err, data);
         }
       });
 
-      setTimeout(function () {
+      timer = setTimeout(function () {
         console.log("Timeout reached, re-executing function");
         currentlyWaiting = false;
         var lambda = new AWS.Lambda();
