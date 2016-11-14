@@ -55,11 +55,11 @@ video_player: true
   %br
 
 
-  .color-block{style: 'width: 478px; height: 230px; background-color: #0094ca; color: white; float: left; padding: 0 20px;'}
+  .color-block.mc-store
     %h2.white-text= I18n.t(:minecraft_store_camps)
     = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
 
-  .color-block{style: 'width: 478px; height: 230px; background-color: #b9bf15; color: white; float: right; padding: 0 20px;'}
+  .color-block.mc-host-event
     %h2.white-text= I18n.t(:minecraft_host_event)
     %a{href: '/hourofcode/mc'}= I18n.t(:minecraft_teach_resources)
     %br
@@ -71,7 +71,7 @@ video_player: true
 
   .clear
 
-  .color-block{style: 'background-color: #7665a0; color: white; margin-top: 15px; padding: 20px; padding-top: 10px; font-size: 14px;'}
+  .color-block.mc-youth-spark
     %h2.white-text= I18n.t(:minecraft_youthspark_continue_learning)
     = I18n.t(:minecraft_youthspark_create_your_future)
     %span= I18n.t(:minecraft_youthspark_tools).gsub('%{youthspark_link}', 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub')
