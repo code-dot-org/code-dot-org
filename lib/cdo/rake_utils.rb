@@ -22,10 +22,6 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
-  def self.reload_service(id)
-    sudo 'service', id.to_s, 'reload' if OS.linux? && CDO.chef_managed
-  end
-
   def self.upgrade_service(id)
     sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
   end
