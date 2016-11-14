@@ -1411,7 +1411,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
 
   var editorColumn = $(".editor-column");
   var visualization = document.getElementById('visualization');
-  var visualizationScalePartner = document.getElementById('scale-with-visualization');
   var visualizationResizeBar = document.getElementById('visualizationResizeBar');
   var visualizationColumn = document.getElementById('visualizationColumn');
 
@@ -1444,12 +1443,6 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var scale = (newVizWidth / this.nativeVizWidth);
 
   applyTransformScaleToChildren(visualization, 'scale(' + scale + ')');
-  if (visualizationScalePartner) {
-    applyTransformScaleToChildren(visualizationScalePartner, 'scale(' + scale + ')');
-    visualizationScalePartner.style.maxWidth = newVizWidthString;
-    visualizationScalePartner.style.maxHeight = newVizHeightString;
-
-  }
 
   if (oldVizWidth < 230 && newVizWidth >= 230) {
     $('#soft-buttons').removeClass('soft-buttons-compact');
