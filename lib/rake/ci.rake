@@ -5,9 +5,6 @@ require 'cdo/git_utils'
 require 'cdo/aws/cloudfront'
 
 namespace :ci do
-  desc 'Update Firebase configuration for this environment.'
-  task firebase: ['firebase:ci']
-
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   task :chef_update do
     if CDO.daemon && CDO.chef_managed && !CDO.chef_local_mode
@@ -72,7 +69,7 @@ namespace :ci do
   end
 
   task all: [
-    :firebase,
+    'firebase:ci',
     :build_with_cloudfront,
     :deploy
   ]
