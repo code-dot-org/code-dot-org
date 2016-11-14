@@ -126,22 +126,12 @@ namespace :build do
     end
   end
 
-  task :reload_varnish do
-    unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
-      HipChat.log 'Restarting <b>varnish</b>...'
-      RakeUtils.reload_service 'varnish'
-      # Flush Varnish cache using 'ban'
-      RakeUtils.sudo 'varnishadm', '"ban obj.status ~ ."'
-    end
-  end
-
   tasks = []
   tasks << :configure
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :restart_process_queues if CDO.daemon
-  tasks << :reload_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end
 
