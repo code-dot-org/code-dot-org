@@ -10,13 +10,6 @@ namespace :build do
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
     end
-
-    unless CDO.chef_managed
-      Dir.chdir(aws_dir) do
-        HipChat.log 'Installing <b>aws</b> bundle...'
-        RakeUtils.bundle_install
-      end
-    end
   end
 
   desc 'Builds apps.'
@@ -44,9 +37,6 @@ namespace :build do
         RakeUtils.ln_s('../test/ui', dashboard_dir('public', 'ui_test'))
       end
 
-      HipChat.log 'Stopping <b>dashboard</b>...'
-      RakeUtils.stop_service_with_retry(CDO.dashboard_unicorn_name, 10) unless rack_env?(:development)
-
       HipChat.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
@@ -55,8 +45,8 @@ namespace :build do
         RakeUtils.rake 'db:migrate'
 
         # Update the schema cache file, except for production which always uses the cache.
-        schema_cache_file = dashboard_dir('db/schema_cache.dump')
         unless rack_env?(:production)
+          schema_cache_file = dashboard_dir('db/schema_cache.dump')
           RakeUtils.rake 'db:schema:cache:dump' unless ENV['CI']
           if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.
@@ -86,6 +76,7 @@ namespace :build do
         end
       end
 
+      # Skip asset precompile in development where `config.assets.digest = false`.
       unless rack_env?(:development)
         HipChat.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile'
