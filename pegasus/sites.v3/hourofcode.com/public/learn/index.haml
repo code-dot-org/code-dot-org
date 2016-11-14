@@ -99,7 +99,8 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      disableTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

@@ -52,6 +52,11 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 14
   },
+  tutorialDetailDisabled: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
+    paddingTop: 40
+  },
   tutorialDetailsTable: {
     marginTop: 20,
     width: '100%'
@@ -78,7 +83,8 @@ const TutorialDetail = React.createClass({
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
     closeClicked: React.PropTypes.func.isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired
+    localeEnglish: React.PropTypes.bool.isRequired,
+    disableTutorial: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -165,9 +171,16 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
-                  <a href={this.props.item.launch_url} target="_blank">
-                    <button style={{marginTop: 20}}>Start</button>
-                  </a>
+                  {this.props.disableTutorial && (
+                    <div style={styles.tutorialDetailDisabled}>
+                      {i18n.tutorialDetailDisabled()}
+                    </div>
+                  )}
+                  {!this.props.disableTutorial && (
+                    <a href={this.props.item.launch_url} target="_blank">
+                      <button style={{marginTop: 20}}>Start</button>
+                    </a>
+                  )}
                 </div>
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
