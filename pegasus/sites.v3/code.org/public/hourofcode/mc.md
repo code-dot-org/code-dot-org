@@ -5,7 +5,7 @@ nav: hoc_teacher_resources_nav
 
 # MINECRAFT Hour of Code
 
-<center><iframe width="830" height="429" src="https://www.youtube.com/embed/55jADN4Y7Pg" frameborder="0" allowfullscreen></iframe></center>
+<center><iframe src="https://player.vimeo.com/video/190732678?color=d1c054&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></center>
 
 [col-50]
 
@@ -14,6 +14,7 @@ nav: hoc_teacher_resources_nav
 ### Lesson Plans:
 
 - [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
+- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
 
 ### Extension Activities:
 
