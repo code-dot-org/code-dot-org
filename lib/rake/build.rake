@@ -36,15 +36,6 @@ namespace :build do
     end
   end
 
-  task :stop_varnish do
-    Dir.chdir(aws_dir) do
-      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
-        HipChat.log 'Stopping <b>varnish</b>...'
-        RakeUtils.stop_service 'varnish'
-      end
-    end
-  end
-
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -100,8 +91,8 @@ namespace :build do
         RakeUtils.rake 'assets:precompile'
       end
 
-      HipChat.log 'Starting <b>dashboard</b>.'
-      RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
+      HipChat.log 'Upgrading <b>dashboard</b>.'
+      RakeUtils.upgrade_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
       if rack_env?(:production)
         RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
@@ -112,12 +103,8 @@ namespace :build do
   desc 'Builds pegasus (install gems, migrate/seed db).'
   task :pegasus do
     Dir.chdir(pegasus_dir) do
-      HipChat.log 'Stopping <b>pegasus</b>...'
-      RakeUtils.stop_service CDO.pegasus_unicorn_name unless rack_env?(:development)
-
       HipChat.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
-
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
         begin
@@ -136,8 +123,8 @@ namespace :build do
         end
       end
 
-      HipChat.log 'Starting <b>pegasus</b>.'
-      RakeUtils.start_service CDO.pegasus_unicorn_name unless rack_env?(:development)
+      HipChat.log 'Upgrading <b>pegasus</b>.'
+      RakeUtils.upgrade_service CDO.pegasus_unicorn_name unless rack_env?(:development)
     end
   end
 
@@ -148,23 +135,22 @@ namespace :build do
     end
   end
 
-  task :start_varnish do
-    Dir.chdir(aws_dir) do
-      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
-        HipChat.log 'Starting <b>varnish</b>...'
-        RakeUtils.start_service 'varnish'
-      end
+  task :reload_varnish do
+    unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
+      HipChat.log 'Restarting <b>varnish</b>...'
+      RakeUtils.reload_service 'varnish'
+      # Flush Varnish cache using 'ban'
+      RakeUtils.sudo 'varnishadm', '"ban obj.status ~ ."'
     end
   end
 
   tasks = []
   tasks << :configure
   tasks << :apps if CDO.build_apps
-  tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :restart_process_queues if CDO.daemon
-  tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
+  tasks << :resload_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end
 
