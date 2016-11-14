@@ -435,8 +435,10 @@ class GameController {
       } else {
         commandMap.set(targetType, 1);
       }
-      const msgHeader = repeat ? "Repeat " : "" + "Command :";
-      console.log(msgHeader + commandName + " executed in mob type : " + targetType + " updated count : " + commandMap.get(targetType));
+      if (this.DEBUG) {
+        const msgHeader = repeat ? "Repeat " : "" + "Command :";
+        console.log(msgHeader + commandName + " executed in mob type : " + targetType + " updated count : " + commandMap.get(targetType));
+      }
     }
   }
 
