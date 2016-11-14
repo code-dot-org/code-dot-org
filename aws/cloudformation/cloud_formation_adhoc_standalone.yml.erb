@@ -1,9 +1,12 @@
 <%
 require 'cdo/aws/cloudfront'
-unless system("git ls-remote --exit-code 'https://github.com/code-dot-org/code-dot-org.git' #{branch} > /dev/null")
+unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
   raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
 To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
 end
+
+commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
+
 unless dry_run
   update_certs.call
   update_cookbooks.call
@@ -16,7 +19,7 @@ Description: Standalone Code.org application on a single EC2 instance<%=cdn_enab
 Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC' %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM' %>
-  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}" %>
+  AMI: <%= lambda_fn.call 'LookupStackOutputs', StackName: "AMI-#{environment}", commit: commit %>
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -52,7 +55,9 @@ Resources:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('bootstrap_standalone.sh.erb')%>
+        Fn::Base64: <%=file.call('bootstrap_standalone.sh.erb',
+          commit: commit
+        )%>
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0

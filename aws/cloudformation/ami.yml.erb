@@ -1,11 +1,20 @@
 <%
+require 'active_support/core_ext/object/try'
+
+unless system("git ls-remote --exit-code origin #{branch} > /dev/null")
+  raise 'Current branch needs to be pushed to GitHub with the same name, otherwise deploy will fail.
+To specify an alternate branch name, run `rake stack:start branch=BRANCH`.'
+end
+
+commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
+
+# Nonce value to generate a new base AMI for each unique commit.
+ami = commit[0..4]
+
 unless dry_run
   update_cookbooks.call
   update_bootstrap_script.call
 end
-
-# Nonce value for AMI resources. Change this value to generate a new base AMI on the next CloudFormation update.
-ami = 1
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -13,48 +22,41 @@ Description: AWS CloudFormation Template for Code.org application
 Resources:
   VPC: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'VPC' %>
   IAM: <%= lambda_fn.call 'LookupStackOutputs', StackName: 'IAM' %>
-  AMIComplete<%=ami%>:
+  # Signal when the instance is fully provisioned and ready for AMI creation.
+  AMICreate<%=ami%>:
     Type: AWS::CloudFormation::WaitCondition
-    DependsOn: AMI<%=ami%>
+    DependsOn: WebServerAMI
     CreationPolicy:
       ResourceSignal:
         Timeout: PT60M
         Count: 1
-  WebServerAMI<%=ami%>:
+  WebServerAMI:
     Type: AWS::EC2::Instance
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT40M
-        Count: 1
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: c4.8xlarge
+      InstanceType: <%=instance_type%>
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
       KeyName: <%=ssh_key_name%>
-      InstanceInitiatedShutdownBehavior: terminate
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
             VolumeSize: 64
             VolumeType: gp2
       UserData:
-        Fn::Base64: <%=file.call('ami_bootstrap.sh.erb',
-          create_id: "WebServerAMI#{ami}",
-          ami_id: "AMI#{ami}",
-          complete_id: "AMIComplete#{ami}",
+        Fn::Base64: <%=file.call('bootstrap_chef.sh.erb',
+          create_id: "AMICreate#{ami}",
           node_name: 'ami-${INSTANCE_ID}',
           run_list: [
-            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]',
-            'recipe[cdo-apps::stop]',
+            local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'
           ],
-          commit: `git ls-remote origin #{branch} | cut -f1`.strip) %>
+          commit: commit,
+          shutdown: true
+        )%>
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
-    DependsOn: "WebServerAMI#{ami}",
-    StackName: {Ref: 'AWS::StackName' },
-    Region: {Ref: 'AWS::Region' },
-    InstanceId: {Ref: "WebServerAMI#{ami}" } %>
+    DependsOn: "AMICreate#{ami}",
+    InstanceId: {Ref: "WebServerAMI" } %>
 Outputs:
   ImageId:
     Description: Image ID

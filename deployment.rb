@@ -46,6 +46,7 @@ def load_configuration
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
+    'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -105,7 +106,7 @@ def load_configuration
     'max_table_writes_per_sec'    => 40,
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
-    'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'lint'                        => [:staging, :development].include?(rack_env),
     'files_s3_bucket'             => 'cdo-v3-files',
     'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
     'animations_s3_bucket'        => 'cdo-v3-animations',
@@ -310,13 +311,14 @@ class CDOImpl < OpenStruct
     DelegateWithDefault.new(self, default_value)
   end
 
-  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # When running on Chef Server, use EC2 API to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed && rack_env?(:production)
+    return super unless CDO.chef_managed
     require 'aws-sdk'
+    stack_name = rack_env?(:production) ? 'autoscale-prod' : CDO.stack_name
     servers = Aws::EC2::Client.new.describe_instances(filters: [
-        { name: 'tag:aws:cloudformation:stack-name', values: ['autoscale-prod'] },
+        { name: 'tag:aws:cloudformation:stack-name', values: [stack_name]},
         { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
         { name: 'instance-state-name', values: ['running']}
     ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h

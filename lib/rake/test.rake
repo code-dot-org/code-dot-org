@@ -16,6 +16,58 @@ namespace :test do
     TestRunUtils.run_local_ui_test
   end
 
+  task :ui_regular do
+    Dir.chdir(dashboard_dir('test/ui')) do
+      HipChat.log 'Running <b>dashboard</b> UI tests...'
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-d', 'test-studio.code.org', '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
+      if failed_browser_count == 0
+        message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
+        HipChat.log message
+        HipChat.developers message, color: 'green'
+      else
+        message = "(╯°□°）╯︵ ┻━┻ UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+        HipChat.log message, color: 'red'
+        HipChat.developers message, color: 'red', notify: 1
+      end
+    end
+  end
+
+  task :ui_eyes do
+    Dir.chdir(dashboard_dir('test/ui')) do
+      HipChat.log 'Running <b>dashboard</b> UI visual tests...'
+      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      failed_browser_count = RakeUtils.system_with_hipchat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      if failed_browser_count == 0
+        message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
+        HipChat.log message
+        HipChat.developers message, color: 'green'
+      else
+        message = 'ಠ_ಠ Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
+        HipChat.log message, color: 'red'
+        HipChat.developers message, color: 'red', notify: 1
+      end
+    end
+  end
+
+  multitask ui_tests: [:ui_eyes, :ui_regular]
+
+  task :ui_test_flakiness do
+    Dir.chdir(deploy_dir) do
+      flakiness_output = `./bin/test_flakiness 5`
+      HipChat.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
+    end
+  end
+
+  task :wait_for_test_server do
+    RakeUtils.wait_for_url 'https://test-studio.code.org'
+  end
+
+  task ui_live: [
+    :ui_test_flakiness,
+    :wait_for_test_server,
+    :ui_tests
+  ]
+
   desc 'Runs dashboard tests.'
   task :dashboard do
     TestRunUtils.run_dashboard_tests
@@ -78,6 +130,7 @@ namespace :test do
   task changed: ['changed:all']
 
   task all: [:apps, :dashboard, :pegasus, :shared, :lib]
+  task ci: [:pegasus, :shared, :dashboard, :ui_live]
 end
 task test: ['test:changed']
 

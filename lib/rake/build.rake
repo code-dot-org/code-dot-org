@@ -2,20 +2,24 @@ require_relative '../../deployment'
 require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'tempfile'
 
 namespace :build do
   desc 'Runs Chef Client to configure the OS environment.'
-  task :configure do
+  task :chef do
     if CDO.chef_managed
+      if rack_env?(:adhoc)
+        # Update local cookbooks from repository in adhoc environment.
+        HipChat.log 'Updating local <b>chef</b> cookbooks...'
+        RakeUtils.with_bundle_dir(cookbooks_dir) do
+          Tempfile.open(['berks','.tgz']) do |file|
+            RakeUtils.bundle_exec "berks package #{file.path}"
+            RakeUtils.sudo "tar xzf #{file.path} -C /var/chef"
+          end
+        end
+      end
       HipChat.log 'Applying <b>chef</b> profile...'
       RakeUtils.sudo 'chef-client'
-    end
-
-    unless CDO.chef_managed
-      Dir.chdir(aws_dir) do
-        HipChat.log 'Installing <b>aws</b> bundle...'
-        RakeUtils.bundle_install
-      end
     end
   end
 
@@ -36,15 +40,6 @@ namespace :build do
     end
   end
 
-  task :stop_varnish do
-    Dir.chdir(aws_dir) do
-      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') != 0)
-        HipChat.log 'Stopping <b>varnish</b>...'
-        RakeUtils.stop_service 'varnish'
-      end
-    end
-  end
-
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -52,9 +47,6 @@ namespace :build do
       unless rack_env?(:production)
         RakeUtils.ln_s('../test/ui', dashboard_dir('public', 'ui_test'))
       end
-
-      HipChat.log 'Stopping <b>dashboard</b>...'
-      RakeUtils.stop_service_with_retry(CDO.dashboard_unicorn_name, 10) unless rack_env?(:development)
 
       HipChat.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
@@ -64,8 +56,8 @@ namespace :build do
         RakeUtils.rake 'db:migrate'
 
         # Update the schema cache file, except for production which always uses the cache.
-        schema_cache_file = dashboard_dir('db/schema_cache.dump')
         unless rack_env?(:production)
+          schema_cache_file = dashboard_dir('db/schema_cache.dump')
           RakeUtils.rake 'db:schema:cache:dump' unless ENV['CI']
           if GitUtils.file_changed_from_git?(schema_cache_file)
             # Staging is responsible for committing the authoritative schema cache dump.
@@ -95,13 +87,16 @@ namespace :build do
         end
       end
 
+      # Skip asset precompile in development where `config.assets.digest = false`.
       unless rack_env?(:development)
-        HipChat.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile'
+        if CDO.sync_assets && !CDO.daemon
+          HipChat.log 'Fetching <b>dashboard</b> manifest...'
+          RakeUtils.rake 'assets:manifest'
+        else
+          HipChat.log 'Precompiling <b>dashboard</b> assets...'
+          RakeUtils.rake 'assets:precompile'
+        end
       end
-
-      HipChat.log 'Starting <b>dashboard</b>.'
-      RakeUtils.start_service CDO.dashboard_unicorn_name unless rack_env?(:development)
 
       if rack_env?(:production)
         RakeUtils.rake "honeybadger:deploy TO=#{rack_env} REVISION=`git rev-parse HEAD`"
@@ -112,12 +107,8 @@ namespace :build do
   desc 'Builds pegasus (install gems, migrate/seed db).'
   task :pegasus do
     Dir.chdir(pegasus_dir) do
-      HipChat.log 'Stopping <b>pegasus</b>...'
-      RakeUtils.stop_service CDO.pegasus_unicorn_name unless rack_env?(:development)
-
       HipChat.log 'Installing <b>pegasus</b> bundle...'
       RakeUtils.bundle_install
-
       if CDO.daemon
         HipChat.log 'Migrating <b>pegasus</b> database...'
         begin
@@ -135,9 +126,6 @@ namespace :build do
           raise e
         end
       end
-
-      HipChat.log 'Starting <b>pegasus</b>.'
-      RakeUtils.start_service CDO.pegasus_unicorn_name unless rack_env?(:development)
     end
   end
 
@@ -148,25 +136,15 @@ namespace :build do
     end
   end
 
-  task :start_varnish do
-    Dir.chdir(aws_dir) do
-      unless rack_env?(:development) || (RakeUtils.system_('ps aux | grep -v grep | grep varnishd -q') == 0)
-        HipChat.log 'Starting <b>varnish</b>...'
-        RakeUtils.start_service 'varnish'
-      end
-    end
-  end
-
   tasks = []
-  tasks << :configure
   tasks << :apps if CDO.build_apps
-  tasks << :stop_varnish if CDO.build_dashboard || CDO.build_pegasus
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :restart_process_queues if CDO.daemon
-  tasks << :start_varnish if CDO.build_dashboard || CDO.build_pegasus
   task :all => tasks
 end
 
 desc 'Builds everything.'
-task :build => ['build:all']
+task :build do
+  HipChat.wrap('build') { Rake::Task['build:all'].invoke }
+end

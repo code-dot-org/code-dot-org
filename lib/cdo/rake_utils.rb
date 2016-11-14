@@ -107,6 +107,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
+    0
   end
 
   def self.exec_in_background(command)
@@ -300,4 +301,36 @@ module RakeUtils
     seconds = total_seconds - (minutes * 60)
     format("%.1d:%.2d minutes", minutes, seconds)
   end
+
+  # Captures all stdout and stderr within a block, including sub-processes.
+  # - redirect streams to a pipe
+  # - have a background thread read from the pipe
+  # - store data in a StringIO
+  # - execute the block and return the string output
+  def self.capture(&block)
+    old_stdout = STDOUT.clone
+    old_stderr = STDERR.clone
+    pipe_r, pipe_w = IO.pipe
+    pipe_r.sync    = true
+    output         = StringIO.new('', 'w')
+    reader = Thread.new do
+      begin
+        loop do
+          output << pipe_r.readpartial(1024)
+        end
+      rescue EOFError
+      end
+    end
+    STDOUT.reopen(pipe_w)
+    STDERR.reopen(pipe_w)
+    yield
+  ensure
+    STDOUT.reopen(old_stdout)
+    STDERR.reopen(old_stderr)
+    pipe_w.close
+    reader.join
+    pipe_r.close
+    return output.string
+  end
+
 end
