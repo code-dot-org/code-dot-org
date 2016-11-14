@@ -173,8 +173,14 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# UnFiltering\r\n\r\nBit filters can be used to _undo_ filtering as well, here's an image of a bird that's been filtered from it's original colors - can you get it back to normal?\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png\" style=\"float:right; width: 200px\"/>\r\nHere's what our bird should look like, use the filter to get him back to normal.\r\n\r\n* First, determine which bits needs to change in order to the change you want\r\n* Once you've figured out which bits needs changing, set the filter dropdown appropriately to test your answer\r\n* After you've fixed the image, write down both your process and your final filter in the Level 6 section of your Activity Guide\r\n\r\n_How many tries did it take you to find the right filter?_\r\n",
-    "contained_level_names": null
+    "markdown_instructions": "# UnFiltering\r\n\r\nBit filters can be used to _undo_ filtering as well. Here's an image of a bird that's been filtered from it's original colors. Can you get it back to normal?\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/c15636bda16e8792c59ac955332e37a5-image-1471372091393.22.56.png\" style=\"float:right; width: 200px\"/>\r\nHere's what our bird should look like. Use the filter to get him back to normal.\r\n\r\n* Decide which colors (and so which bits) you need to change. You might need to write your thoughts with pencil and paper.\r\n* Once you know which bits need changing, set the filter dropdown appropriately to test your answer\r\n* After you've fixed the image, write down both your process and your final filter in the Level 6 section of your Activity Guide\r\n\r\n_How many tries did it take you to find the right filter?_\r\n",
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
