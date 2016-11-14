@@ -1863,7 +1863,7 @@
     featuring professionals in technology fields
   minecraft_designer: Minecraft Designer
   minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of CodeTutorials
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
@@ -1885,7 +1885,7 @@
     (in English only) on Nov 22 or Nov 29
   minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
     use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Minecraft YouthSpark</a>
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
     provides free tools and resources to pursue your passion.
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
     Due to high traffic from millions of students doing the Hour of Code, <b>Code
