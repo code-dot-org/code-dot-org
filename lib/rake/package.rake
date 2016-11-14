@@ -13,8 +13,8 @@ namespace :package do
     task 'update' do
       require 'cdo/aws/s3_packaging'
 
-      # never download if we build our own
-      next if CDO.use_my_apps || !BUILD_PACKAGE
+      # never download if we build our own and we're not building a package ourselves.
+      next if CDO.use_my_apps && !BUILD_PACKAGE
 
       unless apps_packager.update_from_s3
         if BUILD_PACKAGE
