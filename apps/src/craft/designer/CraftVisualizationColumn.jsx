@@ -20,12 +20,12 @@ export default React.createClass({
             <div id="phaser-game">
             </div>
             {this.props.showScore &&
-            <div id="score-container">
-              <div id="score-inner">
-                <span>{craftMsg.score()}: </span>
-                <span id="score-number">0</span>
+              <div id="score-container">
+                <div id="score-inner">
+                  <span>{craftMsg.score()}: </span>
+                  <span id="score-number">0</span>
+                </div>
               </div>
-            </div>
             }
           </div>
         </ProtectedVisualizationDiv>
