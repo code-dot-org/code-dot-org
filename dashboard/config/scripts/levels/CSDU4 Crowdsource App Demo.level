@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "true",
-    "markdown_instructions": "# Crowdsourcing\r\n\r\nCrowdsourcing apps allow multiple users to submit content for everyone to use (the _source_ of content is the _crowd_). This app is very similar to the list app, with the main difference being that the list app assumes a single user while this app allows all users to add to the same list and \"like\" submissions.\r\n\r\nThis example uses a list of crowdsourced information for simplicity, but you could display any kind of information in many different formats. A crowdsourcing apps could allow users to submit locations for display on a map, images to go into a gallery, or any number of other types of information.\r\n\r\n# Functionality Missing from this Prototype\r\n\r\n* User's can't create accounts or profiles\r\n* Submitted things aren't added to the list\r\n* Clicking on the \"like\" icons don't change their state",
+    "markdown_instructions": "# Crowdsourcing\r\n\r\nCrowdsourcing apps allow multiple users to submit content for everyone to use (the _source_ of content is the _crowd_). This app is very similar to the list app, with the main difference being that the list app assumes a single user while this app allows all users to add to the same list and \"like\" submissions.\r\n\r\nThis example uses a list of crowdsourced information for simplicity, but you could display any kind of information in many different formats. A crowdsourcing app could allow users to submit locations for display on a map, images to go into a gallery, or any number of other types of information.\r\n\r\n# Functionality Missing from this Prototype\r\n\r\n* User's can't create accounts or profiles\r\n* Submitted things aren't added to the list\r\n* Clicking on the \"like\" icons don't change their state",
     "start_blocks": "// Home page navigation\r\nonEvent(\"home_worksBtn\", \"click\", function(event) {\r\n  setScreen(\"howto\");\r\n});\r\nonEvent(\"home_listViewBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"home_profileBtn\", \"click\", function(event) {\r\n  setScreen(\"profile\");\r\n});\r\nonEvent(\"home_aboutBtn\", \"click\", function(event) {\r\n  setScreen(\"about\");\r\n});\r\n// Navigation Back Home\r\nonEvent(\"about_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\nonEvent(\"howto_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\nonEvent(\"listView_homeBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\n// List Editing\r\nonEvent(\"listView_addBtn\", \"click\", function(event) {\r\n  setScreen(\"addItem\");\r\n});\r\nonEvent(\"addItem_addBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\nonEvent(\"addItem_cancelBtn\", \"click\", function(event) {\r\n  setScreen(\"listView\");\r\n});\r\n// Profile Editing\r\nonEvent(\"profile_saveBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\nonEvent(\"profile_cancelBtn\", \"click\", function(event) {\r\n  setScreen(\"home\");\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,7 +40,12 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",
