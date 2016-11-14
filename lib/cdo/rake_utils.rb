@@ -330,7 +330,6 @@ module RakeUtils
     pipe_w.close
     reader.join
     pipe_r.close
-    return output.string
+    return output.string # rubocop:disable Lint/EnsureReturn
   end
-
 end
