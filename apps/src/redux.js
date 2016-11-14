@@ -1,12 +1,112 @@
-/** @file Code.org configured store-creation method.
- *  @see http://redux.js.org/docs/api/createStore.html */
 import Immutable from 'immutable';
 import experiments from "./util/experiments";
+import * as redux from 'redux';
+import reduxThunk from 'redux-thunk';
+import { connect } from 'react-redux';
 
-var redux = require('redux');
-var reduxThunk = require('redux-thunk').default;
 if (process.env.NODE_ENV !== "production") {
   var createLogger = require('redux-logger');
+}
+
+
+let reduxStore;
+let globalReducers = {};
+
+let __oldReduxStore;
+let __oldGlobalReducers;
+
+export function stubRedux() {
+  if (__oldReduxStore) {
+    throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
+  }
+  __oldReduxStore = reduxStore;
+  __oldGlobalReducers = globalReducers;
+  reduxStore = null;
+  globalReducers = {};
+}
+
+export function restoreRedux() {
+  reduxStore = __oldReduxStore;
+  globalReducers = __oldGlobalReducers;
+  __oldReduxStore = null;
+  __oldGlobalReducers = null;
+}
+
+
+/**
+ * Get a reference to our redux store. If it doesn't exist yet, create it.
+ */
+export function getStore() {
+  if (!reduxStore) {
+    reduxStore = createStore(redux.combineReducers(globalReducers));
+  }
+
+  return reduxStore;
+}
+
+/**
+ * Register a top-level reducer with the global store and get back
+ * a selector function to access the state for that reducer.
+ * @param {string} key - a unique key to identify this reducer.
+ *     The key will be used in the state object.
+ * @param {function} reducer - the reducer function
+ * @returns {function} a selector function to access the state for that reducer.
+ */
+export function registerReducer(key, reducer) {
+  return registerReducers({[key]: reducer})[key];
+}
+
+/**
+ * Register multiple top-level reducers with the global store and get back
+ * selector functions to access the state for each reducer.
+ * @param {object} reducers - an object mapping unique keys to reducer functions
+ *     The keys will be used in the state object.
+ * @returns {object} - an object mapping the keys to selector functions for accessing
+ *     the state of the corresponding reducer.
+ */
+export function registerReducers(reducers) {
+  for (var key in reducers) {
+    if (hasReducer(key)) {
+      throw new Error(`reducer with key "${key}" already registered!`);
+    }
+  }
+  Object.assign(globalReducers, reducers);
+  if (reduxStore) {
+    reduxStore.replaceReducer(redux.combineReducers(globalReducers));
+  }
+  const selectors = {};
+  for (key in reducers) {
+    selectors[key] = getReducerStateSelector(key);
+  }
+  return selectors;
+}
+
+/**
+ * @returns {function} a selector function to access the state for that reducer.
+ */
+export function getReducerStateSelector(key) {
+  return state => state[key];
+}
+
+/**
+ * @returns {function} a new connect function where the state is the state for the
+ * specified global reducer key.
+ */
+export function getConnectFunction(key) {
+  const selector = getReducerStateSelector(key);
+  return function (mapStateToProps, ...args) {
+    return connect(
+      (state, ...rest) => mapStateToProps(selector(state), ...rest),
+      ...args
+    );
+  };
+}
+
+/**
+ * @returns {boolean} whether or not a reducer with the given key has been registered
+ */
+export function hasReducer(key) {
+  return !!globalReducers[key];
 }
 
 /**
@@ -15,7 +115,7 @@ if (process.env.NODE_ENV !== "production") {
  * @param {!function} reducer
  * @return {Store} Configured Redux store, ready for use.
  */
-module.exports.createStore = function (reducer, initialState) {
+function createStore(reducer, initialState) {
 
   // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
@@ -58,4 +158,4 @@ module.exports.createStore = function (reducer, initialState) {
   }
 
   return redux.createStore(reducer, initialState, redux.applyMiddleware(reduxThunk));
-};
+}

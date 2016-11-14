@@ -1,5 +1,5 @@
 var actions = require('@cdo/apps/gamelab/actions');
-var createStore = require('@cdo/apps/redux').createStore;
+var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
