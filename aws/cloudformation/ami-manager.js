@@ -75,7 +75,15 @@ exports.handler = function (event, context) {
   // Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/crpg-ref-requesttypes.html
   console.log("REQUEST TYPE:", event.RequestType);
   if (event.waiter) {
-    wait(event.waiter);
+    ec2.describeImages({ImageIds: [ physicalId ]}, function (err, data) {
+      if (err) {
+        error(err, "DescribeImages call failed");
+      } else if (data.Images.length === 0) {
+        error(null, "Image not found");
+      } else {
+        wait(event.waiter);
+      }
+    });
   } else if (event.RequestType == "Delete") {
     if (physicalId.indexOf('ami-') !== 0) {
       responseData.Info = "No image to delete";
