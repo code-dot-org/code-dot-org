@@ -91,8 +91,8 @@ var CONFIGS = {
     paddles: [
       'hand_1',
       'hand_2',
-      'hockey',
-      'soccer'
+      'hockey_stick',
+      'foot'
     ],
     background: 'basketball_background.png',
     ball: 'basketball_ball.png',
@@ -117,19 +117,23 @@ exports.load = function (assetUrl, id) {
   skin.hand_2 = {
     paddle: skin.assetUrl('hand_2.png'),
   };
+  skin.hockey_stick = {
+    paddle: skin.assetUrl('hockey_paddle.png'),
+  };
+  skin.foot = {
+    paddle: skin.assetUrl('soccer_paddle.png'),
+  };
   skin.basketball = {
     background: skin.assetUrl('basketball_background.png'),
     ball: skin.assetUrl('basketball_ball.png')
   };
   skin.soccer = {
     background: skin.assetUrl('soccer_background.png'),
-    paddle: skin.assetUrl('soccer_paddle.png'),
     ball: skin.assetUrl('soccer_ball.png'),
     drawTiles: false
   };
   skin.hockey = {
     background: skin.assetUrl('hockey_background.png'),
-    paddle: skin.assetUrl('hockey_paddle.png'),
     ball: skin.assetUrl('hockey_ball.png'),
     drawTiles: false
   };
