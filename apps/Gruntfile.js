@@ -615,7 +615,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'check-entry-points',
+    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -626,12 +626,23 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('check-entry-points', function () {
-    const numBadEntryPoints = checkEntryPoints(config.webpack.build);
-    if (numBadEntryPoints > 0) {
-      // comment this out while we fix all this stuff.
-      //grunt.warn(
-      //  `${numBadEntryPoints} entry points do not conform to naming conventions`
-      //);
+    checkEntryPoints(config.webpack.build, {verbose: true});
+  });
+
+  grunt.registerTask('lint-entry-points', function () {
+    const stats = checkEntryPoints(config.webpack.build);
+    console.log(
+      [
+        chalk.green(`[${stats.passed} passed]`),
+        stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+        stats.failed && chalk.red(`[${stats.failed} failed]`),
+      ].filter(f=>f).join(' ')
+    );
+    if (stats.failed > 0) {
+      grunt.warn(
+        `${stats.failed} entry points do not conform to naming conventions.\n` +
+        `Run grunt check-entry-points for details.\n`
+      );
     }
   });
 

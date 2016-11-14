@@ -8,16 +8,50 @@ const SITES_CONFIG = {
   'studio': {
     templateRoot: '../dashboard/app/views/',
     templateGlobs: ['**/*.erb', '**/*.haml'],
+    silence: [
+      'applab',
+      'applab-api',
+      'bounce',
+      'calc',
+      'craft',
+      'eval',
+      'flappy',
+      'gamelab',
+      'jigsaw',
+      'levelbuilder',
+      'levels/dashboardDialogHelper',
+      'levels/multi',
+      'maker/dependencies',
+      'maze',
+      'netsim',
+      'publicKeyCryptography',
+      'studio',
+      'turtle',
+      'weblab',
+    ],
   },
   'code.org': {
     templateRoot: '../pegasus/sites.v3/code.org/public/',
     templateGlobs: ['**/*.erb', '**/*.haml'],
+    silence: [
+      'learn/index',
+    ]
   },
 };
 
 
-module.exports = function (webpackConfig) {
-  let numBadEntryPoints = 0;
+module.exports = function (webpackConfig, options={verbose: false}) {
+  const stats = {
+    failed: 0,
+    silenced: 0,
+    passed: 0,
+  };
+
+  let logVerbose = () => undefined;
+  let logError = console.log;
+  if (options.verbose) {
+    logVerbose = console.log;
+  }
 
   for (var key in webpackConfig.entry) {
     var errors = [];
@@ -39,7 +73,6 @@ module.exports = function (webpackConfig) {
         if (fs.readFileSync(templatePath).indexOf(searchString) >= 0) {
           usageCount++;
           var relativePath = templatePath.replace(siteConfig.templateRoot, '');
-//          console.log(relativePath, relativePath.split('.')[0]);
           possibleValidKeys.add(relativePath.split('.')[0]);
           matchedTemplatePaths.push(relativePath);
         }
@@ -69,35 +102,53 @@ module.exports = function (webpackConfig) {
         );
       }
 
-      console.log(
-        errors.length === 0 ?
-        chalk.green(`✓ ${key}`) :
+      const isEntryPointSilenced = siteConfig.silence && siteConfig.silence.includes(key);
+
+      let log = logVerbose;
+      if (errors.length > 0 && !isEntryPointSilenced) {
+        log = logError;
+      }
+      log(
+        errors.length === 0 ? chalk.green(`✓ ${key}`) :
+        isEntryPointSilenced ? chalk.yellow(`⚠ ${key}`) :
         chalk.red(`✘ ${key}`),
         '➜',
         entryPointPath
       );
-
+      let errorColor = chalk.red;
+      if (isEntryPointSilenced) {
+        stats.silenced++;
+        errorColor = chalk.yellow;
+        if (errors.length > 0) {
+          log(errorColor(`  ⚠ These errors have been silenced`));
+        }
+      } else if (errors.length > 0) {
+        stats.failed++;
+      } else {
+        stats.passed++;
+      }
       errors.forEach(
-        error => console.log(chalk.red(`  ✘ ${error.split('\n').join('\n    ')}`))
+        error => log(errorColor(`  ✘ ${error.split('\n').join('\n    ')}`))
       );
 
-      if (errors.length > 0) {
-        numBadEntryPoints++;
-        if (matchedTemplatePaths.length > 0) {
-          console.log(chalk.yellow(
-            `  this entry point is referenced by the following templates:`
-          ));
-          console.log(`    ${siteConfig.templateRoot}`+chalk.blue(matchedTemplatePaths[0]));
-          matchedTemplatePaths.slice(1).forEach(templatePath => {
-            console.log('   ', chalk.blue(' '.repeat(siteConfig.templateRoot.length) + templatePath));
-          });
-        }
+      if (errors.length > 0 && matchedTemplatePaths.length > 0) {
+        log(chalk.yellow(
+          `  this entry point is referenced by the following templates:`
+        ));
+        log(`    ${siteConfig.templateRoot}`+chalk.blue(matchedTemplatePaths[0]));
+        matchedTemplatePaths.slice(1).forEach(templatePath => {
+          log('   ', chalk.blue(' '.repeat(siteConfig.templateRoot.length) + templatePath));
+        });
       }
     } else {
-      console.log(chalk.red(`✘ ${key}`));
-      console.log(chalk.red(`  ✘ Entry points should be in a sites directory`));
-      numBadEntryPoints++;
+      stats.failed++;
+      logError(
+        chalk.red(`✘ ${key}`),
+        '➜',
+        entryPointPath
+      );
+      logError(chalk.red(`  ✘ Entry points should be in a sites directory`));
     }
   }
-  return numBadEntryPoints;
+  return stats;
 };
