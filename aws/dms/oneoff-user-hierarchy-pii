@@ -17,7 +17,7 @@
       "rule-name": "2",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users"
+        "table-name": "studio_persons"
       },
       "rule-action": "include"
     },
@@ -27,7 +27,27 @@
       "rule-name": "3",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "megausers"
+        "table-name": "teacher_profiles"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "4",
+      "rule-name": "4",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "users"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "5",
+      "rule-name": "5",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "user_geos"
       },
       "rule-action": "include"
     }
