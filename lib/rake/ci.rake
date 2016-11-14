@@ -56,7 +56,7 @@ namespace :ci do
         Dir.chdir(deploy_dir) do
           num_failures = 0
           thread_count = (app_servers.keys.length * 0.20).ceil
-          threaded_each app_servers.keys, thread_count do |name|
+          RakeUtils.threaded_each app_servers.keys, thread_count do |name|
             succeeded = upgrade_frontend name, app_servers[name]
             unless succeeded
               num_failures += 1
