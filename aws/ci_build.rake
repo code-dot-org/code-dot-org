@@ -38,35 +38,6 @@ def build_task(name, dependencies=[], params={})
   path
 end
 
-task :apps_task do
-  packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
-
-  updated_package = packager.update_from_s3
-  if updated_package
-    HipChat.log "Downloaded apps package from S3: #{packager.commit_hash}"
-    next # no need to do anything if we already got a package from s3
-  end
-
-  # Test and staging are the only environments that should be uploading new packages
-  raise 'No valid apps package found' unless rack_env?(:staging) || rack_env?(:test)
-
-  raise 'Wont build apps with staged changes' if RakeUtils.git_staged_changes?(apps_dir)
-
-  HipChat.log 'Building apps...'
-  RakeUtils.system 'cp', deploy_dir('rebuild'), deploy_dir('rebuild-apps')
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'build:apps'
-  HipChat.log 'apps built'
-
-  HipChat.log 'testing apps..'
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'test:apps'
-  HipChat.log 'apps test finished'
-
-  # upload to s3
-  package = packager.upload_package_to_s3('/build/package')
-  HipChat.log "Uploaded apps package to S3: #{packager.commit_hash}"
-  packager.decompress_package(package)
-end
-
 file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
