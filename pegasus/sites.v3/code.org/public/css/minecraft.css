@@ -82,15 +82,17 @@
     height: auto;
   }
 
+  .responsive-padding {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
     left: 238px;
     top: 0;
     height: 307px;
-  }
-
-  .responsive-padding {
-    padding: 10px;
   }
 
   .tutorial-box {
@@ -115,5 +117,9 @@
     width: 100%;
     background-image: url(/images/mc/MC_Wide_Blank_V2.jpg);
     background-size: 605px 100px;
+  }
+
+  .mc-img {
+    display: none;
   }
 }
