@@ -1196,6 +1196,9 @@ Bounce.setTeam = function (value) {
 Bounce.setBackground = function (value) {
   var theme = skinTheme(value);
   Bounce.drawTiles = theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
+  if (level.maps) {
+    Bounce.map = level.maps[value === 'hardcourt' ? 'basketball' : value];
+  }
   Bounce.setBackgroundImage(theme.background);
   Bounce.loadTiles(theme.tiles, theme.goalTiles);
 };
