@@ -480,6 +480,26 @@ levels['11_basketball'] = extend(levels['11'], {
 });
 levels['11_sports'] = extend(levels['11_basketball'], {
 });
+var topGoalLarge = [
+  [1, 1, 2, 2, 2, 2, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0,16, 0, 0, 0, 0, 1]
+];
+var topGoalSmall = [
+  [1, 1, 1, 2, 2, 1, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0,16, 0, 0, 0, 0, 1]
+];
 levels['12'] = {
   'requiredBlocks': [
   ],
@@ -492,16 +512,7 @@ levels['12'] = {
   ],
   'minWorkspaceHeight': 800,
   'freePlay': true,
-  'map': [
-    [1, 1, 2, 2, 2, 2, 1, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0,16, 0, 0, 0, 0, 1]
-  ],
+  'map': topGoalLarge,
   'toolbox':
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
@@ -536,16 +547,7 @@ levels['12_basketball'] = {
   ],
   'minWorkspaceHeight': 800,
   'freePlay': true,
-  'map': [
-    [1, 1, 1, 2, 2, 1, 1, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0,16, 0, 0, 0, 0, 1]
-  ],
+  'map': topGoalSmall,
   'toolbox':
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
@@ -579,6 +581,12 @@ levels['12_sports'] = extend(levels['12_basketball'], {
         <block type="bounce_setBall"></block> \
         <block type="bounce_setPaddleSpeed"></block> \
         <block type="bounce_setBallSpeed"></block>'),
+  'maps': {
+    'basketball': topGoalSmall,
+    'football': topGoalLarge,
+    'hockey': topGoalSmall,
+    'soccer': topGoalLarge,
+  },
 });
 
 module.exports = levels;
