@@ -33,26 +33,34 @@ social:
     outline: 0;
   }
 
+  .banner {
+    color: white;
+    text-align: center;
+  }
+  .bannerHeading {
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    font-style: italic;
+    padding: 20px 0px 20px 0px;
+  }
+  #robotImage {
+    height: 222px;
+  }
+
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   = view :header
 
-  .banner
-    .container{style: "color: white"}
-      .col-xs-12.col-sm-6{style: "text-align: center"}
-        %br/
-        %br/
-        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
-          ROBOTICS
-        %br/
-        %br/
-        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
-        %br/
-        %br/
-      #studentimage.col-xs-12.col-sm-6.hidden-xs
-        %img{src: CDO.code_org_url("/images/learn/robotics.png"), style: "text-align: center"}
+  .banner.container
+    .col-xs-12.col-sm-6
+      .bannerHeading= hoc_s(:learn_robotics_banner_heading)
+      = hoc_s(:learn_robotics_banner_blurb)
+    .col-xs-12.col-sm-6.hidden-xs
+      %img#robotImage{src: CDO.code_org_url("/images/learn/robotics.png")}
 
 -# Not ideal but we can pull the undigested files from /blockly.
-- js_locale = hoc_locale.to_s.downcase.tr('-', '_')
+- locale_code = hoc_get_locale_code
+- js_locale = locale_code.to_s.downcase.tr('-', '_')
 %script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
 %script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
 
@@ -63,6 +71,15 @@ social:
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
+  - prefix = "tutorial_#{tutorial[:short_code]}_"
+  - tutorial[:name]                                 = hoc_s(prefix + "name")
+  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
 #tutorials
 
@@ -74,7 +91,7 @@ social:
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
-      locale: "#{hoc_locale}",
+      locale: "#{locale_code}",
       robotics: true,
       backButton: true,
       showSortBy: window.location.search.indexOf("showsort") !== -1

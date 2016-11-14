@@ -1,4 +1,4 @@
 import loadMaze from "./init/loadMaze";
-import loadApp from "@cdo/apps/code-studio/initApp/loadApp";
+import loadAppOptions from "@cdo/apps/code-studio/initApp/loadApp";
 
-loadApp(loadMaze);
+loadAppOptions().then(loadMaze);

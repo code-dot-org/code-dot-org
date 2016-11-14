@@ -1,0 +1,97 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2016-11-09T21:50:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "x": "200",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": ".7",
+    "free_play": "true",
+    "instructions": "Now it's your turn.  Take the skills you have learned and make something that you love!",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "instructions_important": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"courseD_artist_nestedLoopsFP_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/d9958e63ee312b0931fdd1ab1fe54a78/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using similar code to other levels in this series, but with circles (repeat 360 times: move forward 1, turn 1 degree).\\n\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/38366708f6c9bce7d409717657140817/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/d0dec117b7b795a92e0c9a16a5eee4a1/courseD_artist_nestedLoopsFP.mp3\"}]",
+    "markdown_instructions": "Now it's your turn.  Take the skills you have learned and make something that you love!\r\n\r\nNeed an idea?  Try to make one of these:\r\n\r\n<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/><img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/><img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\r\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ff0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+            <block type="colour_random"/>
+          </value>
+        </block>
+        <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+            <block type="math_number_dropdown">
+              <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">100</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_width_inline">
+          <title name="WIDTH">1</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="turtle_stamp">
+          <title name="VALUE">Elephant</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Artist>

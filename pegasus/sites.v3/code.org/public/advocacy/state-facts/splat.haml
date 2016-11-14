@@ -100,14 +100,14 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015.
+          took the AP Computer Science exam in 2016.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             high school students in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015;
+          took the AP Computer Science exam in 2016;
           - if state_info[:percent_ap_female_i] != 0
             only
             = succeed "%" do
@@ -159,12 +159,12 @@ theme: pdf
           = surround "(", "% of" do
             = state_info[:percent_schools_ap_cs_i]
           = state_info[:state_code_s]
-          schools with AP programs) offered the AP Computer Science course in 2014-2015.
+          schools with AP programs) offered the AP Computer Science course in 2015-2016.
         - else
           No schools in
           = state_info[:state_code_s]
-          offered the AP Computer Science course in 2013-2014.
-        - if state_param != 'ND'
+          offered the AP Computer Science course in 2015-2016.
+        - if state_param != 'ND' && state_param != 'MT'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
 
   .chart-text-group
@@ -256,7 +256,11 @@ theme: pdf
         in 
         = succeed "." do
           = state_info[:state_name_s]
-
+    %p
+      - if state_info[:other_partners_t] != 'none'
+        Code.org has a partnership with 
+        = state_info[:other_partners_t]
+        to help spread K-5 computer science to its schools. 
 
   .quote-center
     %h3 “Computer Science is a liberal art: it’s something that everybody should be exposed to and everyone should have a mastery of to some extent.”

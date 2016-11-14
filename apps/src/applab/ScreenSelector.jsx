@@ -1,6 +1,5 @@
 /** @file Dropdown for selecting design mode screens */
 /* global Applab */
-import experiments from "../util/experiments";
 import React from 'react';
 import Radium from 'radium';
 import color from "../util/color";
@@ -84,8 +83,7 @@ var ScreenSelector = React.createClass({
         disabled={Applab.isRunning()}
       >
         {options}
-        {experiments.isEnabled('applab-import') &&
-         canAddScreen &&
+        {canAddScreen &&
          <option>{constants.IMPORT_SCREEN}</option>}
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
       </select>

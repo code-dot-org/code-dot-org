@@ -34,7 +34,7 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to move down, then turn him back to get ready to move forward again.\",\"hint_id\":\"courseF_artist_variables_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/2b77736d316fd98694ab27c94c289575/courseF_artist_variables_4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)\",\"hint_id\":\"courseF_artist_variables_4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_variables_4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to move down, then turn him back to get ready to move forward again.\",\"hint_id\":\"courseF_artist_variables_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2b77736d316fd98694ab27c94c289575/courseF_artist_variables_4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)\",\"hint_id\":\"courseF_artist_variables_4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_variables_4.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
