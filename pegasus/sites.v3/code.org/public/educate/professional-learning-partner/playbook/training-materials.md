@@ -128,6 +128,7 @@ November 2016:
 
 - Facilitator Selection Process [Video](http://videos.code.org/plp/facilitator-application-process.mp4)
 - Facilitator Selection Process [Slides](https://docs.google.com/presentation/d/12ZZ3hyVzjmhv3ymjrOKstbVptteAneMFOJkOog6jMD8/edit#slide=id.g18aec17c00_6_25)
+- How to Run a VIrtual Administrator and Counselor PD [Video](https://www.dropbox.com/s/fd985otbep028sk/How%20to%20run%20a%20virtual%20Administrator%20or%20Counselor%20PD.mp4?dl=0)
 
 [**Back to the top**](#top)
 <br/>
