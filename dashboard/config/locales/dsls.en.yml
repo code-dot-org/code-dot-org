@@ -747,6 +747,9 @@ en:
       Categorizing Data: {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
+      'Chirpr: @johnsnow': {}
+      'Chirpr: @lillizard': {}
+      'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
@@ -1167,6 +1170,9 @@ en:
         title: title
       External level test (will):
         first computer program: first computer program
+      'Facespace: John T': {}
+      'Facespace: Lizzie Dell': {}
+      'Facespace: Soleil M': {}
       Favicon Instructions: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
@@ -2302,6 +2308,10 @@ en:
       gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      'instaframe: photolizzie': {}
+      instantframe - johnsnow: {}
+      'instantframe: johnsnow': {}
+      'instantframe: moonbeam': {}
       intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
@@ -6565,9 +6575,14 @@ en:
         An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
+        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
+        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
+        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
+        day == "Saturday": day == "Saturday"
+        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
@@ -6628,6 +6643,7 @@ en:
         'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
         'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
         'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
+        'Change Line 3 to:  total = promptNum("Enter next item price");': 'Change Line 3 to:  total = promptNum("Enter next item price");'
         'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
       cspu5_assess3_counter:
         '0': '0'
@@ -6689,6 +6705,7 @@ en:
         <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
         <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
       cspu5_assess3_whileTrue:
+        While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
         While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
         While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
