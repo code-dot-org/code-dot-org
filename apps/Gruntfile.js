@@ -626,24 +626,32 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('check-entry-points', function () {
-    checkEntryPoints(config.webpack.build, {verbose: true});
+    const done = this.async();
+    checkEntryPoints(config.webpack.build, {verbose: true})
+      .then(stats => {
+        done();
+      });
   });
 
   grunt.registerTask('lint-entry-points', function () {
-    const stats = checkEntryPoints(config.webpack.build);
-    console.log(
-      [
-        chalk.green(`[${stats.passed} passed]`),
-        stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
-        stats.failed && chalk.red(`[${stats.failed} failed]`),
-      ].filter(f=>f).join(' ')
-    );
-    if (stats.failed > 0) {
-      grunt.warn(
-        `${stats.failed} entry points do not conform to naming conventions.\n` +
-        `Run grunt check-entry-points for details.\n`
-      );
-    }
+    const done = this.async();
+    checkEntryPoints(config.webpack.build)
+      .then(stats => {
+        console.log(
+          [
+            chalk.green(`[${stats.passed} passed]`),
+            stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+            stats.failed && chalk.red(`[${stats.failed} failed]`),
+          ].filter(f=>f).join(' ')
+        );
+        if (stats.failed > 0) {
+          grunt.warn(
+            `${stats.failed} entry points do not conform to naming conventions.\n` +
+            `Run grunt check-entry-points for details.\n`
+          );
+        }
+        done();
+      });
   });
 
   grunt.registerTask('compile-firebase-rules', function () {
