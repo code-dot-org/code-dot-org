@@ -57,7 +57,7 @@
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'*/2 * * * *', do:dashboard_dir('bin','build_scripts'), notify:'dev+crontab@code.org'
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'fetch_external_resources'), notify:'dev+crontab@code.org'
-      cronjob at:'30 16 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
+      cronjob at:'30 17 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
     end
 
     if node.chef_environment == 'production' # production daemon
@@ -69,7 +69,8 @@
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
-
+      cronjob at:'5 16 * * *', do:deploy_dir('bin', 'cron', 'calculate_workshop_survey_results')
+      
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_rds_backup_to_secondary_account')
     end

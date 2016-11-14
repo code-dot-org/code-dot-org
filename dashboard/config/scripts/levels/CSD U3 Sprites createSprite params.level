@@ -24,7 +24,6 @@
       "sprite.height": null,
       "shapeColor": null,
       "background": null,
-      "comment": null,
       "rect": null,
       "fill": null
     },
@@ -57,6 +56,10 @@
     "debugger_disabled": "true",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
+    "instructions_important": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

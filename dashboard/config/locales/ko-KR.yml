@@ -387,12 +387,18 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "더 알아보기"
     announcement_try_now_button: "지금 해보기"
+    announcement_host_an_hour_button: Host an Hour
     announcement_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고
       있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은
       미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
     announcement_petition_button: "이름을 입력하세요"
     announcement_all: "교사 블로그에서 새로운 내용이나 추가사항을 확인할 수 있습니다. <a href='%{teacher_blog_url}'
       target='_blank'>지난 공지사항 보기</a>"
+    announcement_hoc_launch: Thousands of educators in more than 180 countries will
+      start teaching computer science during the Hour of Code this December 5-11.
+      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+      target='_blank'>Register your Hour of Code event</a> and let another teacher
+      know that anyone can start teaching computer science.
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_not_entered: Current_section_code를 입력 하십시오.
@@ -672,6 +678,21 @@
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
     review_terms: Review updated terms
+  race_interstitial:
+    title: 'Optional: Help us track our progress toward improving diversity in computer
+      science'
+    message: Please tell us your race (check all that apply)
+    races:
+    - white: White
+    - black: Black or African American
+    - hispanic: Hispanic or Latino
+    - asian: Asian
+    - hawaiian: Native Hawaiian or other Pacific Islander
+    - american_indian: American Indian/Alaska Native
+    - other: "기타"
+    - opt_out: Prefer not to say
+    submit: "제출하기"
+    decline: "닫기"
   zendesk_too_young_message: 어린 학생들은 도움 사이트에 가입할 수 없습니다. 대신 가입하거나 부모나 보호자의 동의 없이  <a
     href="http://support.code.org">support.code.org</a> 를 사용할 수 있습니다.
   progress:
@@ -832,3 +853,51 @@
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
   return_course_overview: Go to unit overview
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

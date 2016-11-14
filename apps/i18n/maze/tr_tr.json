@@ -3,8 +3,6 @@
   "atFlower": "çiçekte",
   "atHoneycomb": "Petekte",
   "avoidCowAndRemove": "inek kaçın ve 1 çıkarın",
-  "bean": "fasülye",
-  "beanTooltip": "Bir fasülye topla",
   "collect": "topla",
   "collectiblePresent": "biraz hazine var",
   "collectorCollectTooltip": "Nesneleri topla",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Üstünde bulunduğun çiçekte daha fazla nektar kalmadı.",
   "get": "değer al",
   "has": "vardır",
-  "hasbean": "fasülyeler var",
+  "haslettuce": "there is lettuce",
   "hascorn": "mısır var",
   "haspumpkin": "balkabakları var",
   "heightParameter": "Yükseklik",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Belirtilen yönde bir yol varsa, o zaman ilk bloktaki işlemleri yap. Yoksa, ikinci bloktaki işlemleri yap.",
   "insufficientHoney": "Doğru miktarda bal yapman gerek.",
   "insufficientNectar": "Doğru miktarda nektar toplaman gerek.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "yap",
   "moveBackward": "geriye git",
   "moveEastTooltip": "Beni doğuya bir boşluk ilerlet.",
@@ -112,7 +112,5 @@
   "wrongCropError": "Ürünü buradan toplayamam.",
   "yes": "Evet",
   "youSpelled": "Açıkladınız",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

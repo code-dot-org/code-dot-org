@@ -1,0 +1,76 @@
+{"frames": {
+
+"Leaves_Acacia0.png":
+{
+	"frame": {"x":0,"y":130,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia1.png":
+{
+	"frame": {"x":0,"y":260,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia2.png":
+{
+	"frame": {"x":0,"y":390,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia3.png":
+{
+	"frame": {"x":0,"y":0,"w":159,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":80,"w":159,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia4.png":
+{
+	"frame": {"x":0,"y":520,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia5.png":
+{
+	"frame": {"x":0,"y":650,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia6.png":
+{
+	"frame": {"x":0,"y":780,"w":151,"h":129},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":59,"y":80,"w":151,"h":129},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Acacia7.png":
+{
+	"frame": {"x":0,"y":909,"w":71,"h":89},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":139,"y":80,"w":71,"h":89},
+	"sourceSize": {"w":240,"h":240}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Leaves_Acacia_Decay.png",
+	"format": "RGBA8888",
+	"size": {"w":159,"h":998},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0c6bdc243b4a9ba4db57f1921f3bf86f:7aad1b72718242caeace3ff3ed61bcb6:f158876a4b4f8279d86d3a9f267a8771$"
+}
+}

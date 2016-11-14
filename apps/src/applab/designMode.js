@@ -4,7 +4,7 @@ import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DesignWorkspace from './DesignWorkspace';
-import assetPrefix from '../assetManagement/assetPrefix';
+import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import {singleton as studioApp} from '../StudioApp';
@@ -731,6 +731,14 @@ function makeDraggable(jqueryElements) {
         ui.size.height = dimensions.height;
 
         // Set original element properties to update values in Property tab
+        if (elm.is("canvas")) {
+          // for canvas we need to set width/height attributes directly as these
+          // control canvas size rather than style.width/style.height
+          elm.attr('width', dimensions.width + "px");
+          elm.attr('height', dimensions.height + "px");
+        }
+        // set style.width/style.height regardless, as this is used to size our
+        // background image
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
 

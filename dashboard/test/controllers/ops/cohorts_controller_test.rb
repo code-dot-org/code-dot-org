@@ -428,9 +428,9 @@ module Ops
       get :teachers, id: @cohort.id, format: 'csv'
 
       expected_response = <<EOS
-id,email,ops_first_name,ops_last_name,district_name,ops_school,ops_gender
-#{teacher1.id},#{teacher1.email},1,2,#{@district.name},,
-#{teacher2.id},#{teacher2.email},3,4,#{@district.name},,
+id,email,ops_first_name,ops_last_name,district_name,ops_school,ops_gender,races
+#{teacher1.id},#{teacher1.email},1,2,#{@district.name},,,
+#{teacher2.id},#{teacher2.email},3,4,#{@district.name},,,
 EOS
       assert_equal expected_response, @response.body
     end

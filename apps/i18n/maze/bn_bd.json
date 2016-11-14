@@ -3,8 +3,6 @@
   "atFlower": "ফুলের কাছে",
   "atHoneycomb": "মধুর চাকে",
   "avoidCowAndRemove": "গরু এড়িয়ে যান এবং ১ অপসারণ করুন",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "আপনি ভ্রমণরত ফুল আর কোন পুষ্পমধু নেই।",
   "get": "প্রাপ্ত",
   "has": "has",
-  "hasbean": "there are beans",
+  "haslettuce": "there is lettuce",
   "hascorn": "there is corn",
   "haspumpkin": "there are pumpkins",
   "heightParameter": "উচ্চতা",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "নির্দিষ্ট দিক একটি পথ থাকলে প্রথম ব্লকের কাজ করুন। না থাকলে দ্বিতীয় ব্লক কাজ করুন।",
   "insufficientHoney": "আপনি সঠিক পরিমাণ মধু তৈরি করা প্রয়োজন।",
   "insufficientNectar": "আপনি সঠিক পরিমাণ পুষ্পমধু সংগ্রহ করা প্রয়োজন।",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "তৈরি করা",
   "moveBackward": "পেছনে চলুন",
   "moveEastTooltip": "আমাকে পূর্ব দিকে এক ঘর স্থানান্তর করুন",
@@ -112,7 +112,5 @@
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "\"হ্যাঁ\"",
   "youSpelled": "আপনি বানান করেছেন",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

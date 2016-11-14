@@ -11,7 +11,7 @@
 - [Countries](/private/countries_leaderboard)
 - [States](/private/states_leaderboard)
 - [Cities](/private/cities_leaderboard)
-- [Tutorials](/private/tutorials_leaderboard)
+- [Tutorials](/private/tutorial_leaderboard)
 
 ## Affiliate Workshops
 - [Workshop stats](/private/workshop-stats)

@@ -1885,7 +1885,7 @@
           Parametro bat duen funtzioa erabili dezakegu.
       2:
         image: notes/C4_function_parameters_2.png
-        text: |
+        text: |-
           Parametroek funtzioetan aldagai gisa erabiliko diren balioak pasatzea ahalbidetzen dute. Funtzio honi Luzera izeneko parametroa gehitzen saiatuko gara tamaina desberdineko karratuak marraztu ahal izateko. Funtzio editorean, lehen bezala funtzioaren izena eta azalpena editatu ditzakezu baina
           parametro bat ere gehitu dezakezu. Idatzi parametroaren izena eremuan eta egin klik Gehitu Parametroa-n. Honek, sortu berri duzun parametroaren izena duen bloke gorri bat sortuko du. Orain, "mugitu aurrera 100 pixel" blokea ordeztu dezakezu Luzera parametroarekin aurrera Luzera-k adierazten duen adina egin dezan.
       3:
@@ -1940,7 +1940,7 @@
           konputagailuaren ordez.
       2:
         image: notes/C4_math_artist_2.png
-        text: |
+        text: |-
           Berrogeitamar bider bi egitea buruz agian ez da oso nekeza zure buruarentzat baina konputagailuak oso onak dira kalkulu matematikoak egiten eta,
           horregatik, ahal dugun neurrian haien esku utzi behar ditugu. Altuera izeneko aldagaia erabili izan banu, orduan, erraz aldatu ahal izango nule altuera berrogei eta hamarrera eta aldatu nire algoritmoa artistari altuera adina egiteko gora, eskuinera bira eta, gero, aurrera egiteko altuera 2 aldiz, zabalera altueraren bikoitza duen laukizuzena marrazteko.
     C4_unplugged_algorithms:

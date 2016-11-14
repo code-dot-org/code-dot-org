@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## Inspire alunos e voluntários para a Hora do Código
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**A Code.org oferece aos funcionários da empresa a oportunidade de [conectarem-se](%= resolve_url('https://code.org/volunteer') %) a salas de aula da região e fazer a Hora do Código para compartilhar sua experiência na carreira tecnológica e inspirar os alunos a estudar ciência da computação.**
 
   * [Cadastre-se](%= resolve_url('https://code.org/volunteer') %) para ser um voluntário.
   * Para mais instruções sobre como conectar seus empregados a salas de aula, consulte nosso [guia para parceiros corporativos](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -32,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Escolha um tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Confira aqui!](%= resolve_url("https://code.org/learn") %)
+Teremos uma grande variedade de [tutoriais divertidos de uma hora de duração](%= resolve_url('https://code.org/learn') %) para participantes de todas as idades, criados por diversos parceiros. [Confira aqui!](%= resolve_url("https://code.org/learn") %)
 
 **Todos os tutoriais da Hora do Código:**
 
@@ -43,7 +43,7 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## 4) Avalie suas necessidades tecnológicas (computadores são opcionais)
 
-A melhor experiência da Hora do Código inclui computadores conectados à Internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada participante, e pode inclusive realizar a Hora do Código sem computador nenhum.
 
 **Planeje com antecedência!** Faça o seguinte antes do início do seu evento:
 
@@ -56,7 +56,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
 
 ## 5) Comece sua Hora do Código com um vídeo inspirador
 
-Comece seu evento da Hora do Código inspirando os participantes e discutindo sobre o impacto da ciência da computação em cada situação de suas vidas. Share more about what inspired you to pursue computer science and your role at your company.
+Comece seu evento da Hora do Código inspirando os participantes e discutindo sobre o impacto da ciência da computação em cada situação de suas vidas. Compartilhe mais informações sobre o que inspirou você a seguir o caminho da ciência da computação e sobre seu papel dentro da empresa.
 
 **Mostre um vídeo inspirador:**
 
@@ -65,7 +65,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Encontre outros vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Ideias para apresentar sua atividade da Hora do Código:**
 
   * Explique de que forma a tecnologia interfere em nossas vidas, usando exemplos que sensibilizem tanto meninos como meninas (fale sobre a tecnologia que salva vidas, ajuda e conecta as pessoas). 
   * Se você trabalha em uma empresa de tecnologia, demonstre produtos divertidos e inovadores nos quais sua empresa está trabalhando.
@@ -80,7 +80,7 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
   * Escreva o link para o tutorial em uma lousa. Encontre o link apresentado nas [informações de seu tutorial selecionado](%= resolve_url('https://code.org/learn') %) abaixo do número de participantes.
   * Para alunos mais jovens, carregue a página do tutorial antecipadamente ou adicione-a aos favoritos.
 
-**When participants come across difficulties it's okay to respond:**
+**Quando os participantes tiverem dificuldades, tudo bem responder:**
 
   * "Eu não sei. Vamos descobrir juntos".
   * "A tecnologia nem sempre funciona da maneira que queremos".
@@ -138,6 +138,6 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## O que vem depois da Hora do Código?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar nesta jornada, [incentive os participantes a aprender on-line](%= resolve_url('https://code.org/learn/beyond') %).
 
 <%= view :signup_button %>

@@ -46,20 +46,20 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_for" inline="true" deletable="false" movable="false" editable="false">
+            <block type="controls_for" inline="true" movable="false" editable="false">
               <title name="VAR">counter</title>
               <value name="FROM">
-                <block type="math_number" deletable="true" movable="true" editable="true">
+                <block type="math_number" movable="false">
                   <title name="NUM">1</title>
                 </block>
               </value>
               <value name="TO">
-                <block type="math_number" deletable="true" movable="true" editable="true">
+                <block type="math_number" movable="false">
                   <title name="NUM">5</title>
                 </block>
               </value>
               <value name="BY">
-                <block type="math_number" deletable="true" movable="true" editable="true">
+                <block type="math_number" movable="false">
                   <title name="NUM">1</title>
                 </block>
               </value>
@@ -68,7 +68,7 @@
                   <next>
                     <block type="controls_repeat_ext" inline="true" deletable="false">
                       <value name="TIMES">
-                        <block type="variables_get">
+                        <block type="variables_get" movable="false">
                           <title name="VAR">counter</title>
                         </block>
                       </value>
@@ -85,11 +85,7 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="controls_for" inline="true"/>
-        <block type="math_number"/>
-        <block type="variables_get"/>
-      </xml>
+      <xml/>
     </toolbox_blocks>
     <recommended_blocks>
       <xml>

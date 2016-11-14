@@ -4,14 +4,14 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
-var color = require('./color');
+var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require('./experiments');
+var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -28,13 +28,13 @@ var DialogButtons = require('./templates/DialogButtons');
 var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
-import Overlay from './templates/Overlay';
 var assetsApi = require('./clientApi').assets;
-var assetPrefix = require('./assetManagement/assetPrefix');
+import * as assetPrefix from './assetManagement/assetPrefix';
 var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -295,7 +295,9 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions ||
+      config.level.markdownInstructions ||
+      config.level.aniGifURL);
 };
 
 /**
@@ -343,17 +345,10 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose, showHints) => {
-            this.showInstructionsDialog_(config.level, autoClose, showHints);
+        showInstructionsDialog={(autoClose) => {
+            this.showInstructionsDialog_(config.level, autoClose);
           }}
       />
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
-
-  ReactDOM.render(
-    <Provider store={this.reduxStore}>
-      <Overlay />
     </Provider>,
     document.body.appendChild(document.createElement('div'))
   );
@@ -458,7 +453,6 @@ StudioApp.prototype.init = function (config) {
       var shouldAutoClose = !!config.level.aniGifURL;
       this.reduxStore.dispatch(openInstructionsDialog({
         autoClose: shouldAutoClose,
-        showHints: false,
         aniGifOnly: false,
         hintsOnly: false
       }));
@@ -832,6 +826,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
 
   var reactProps = {
     i18nDropdown: '',
+    privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
@@ -875,8 +870,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     phoneFooter: true
   };
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
-    footerDiv);
+  ReactDOM.render(<SmallFooter {...reactProps}/>, footerDiv);
 };
 
 /**
@@ -1148,9 +1142,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
- * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
   const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
@@ -1232,15 +1225,12 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
-  const authoredHints = showHints ?
-    this.authoredHintsController_.getHintsDisplay() : undefined;
-
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
       <Provider store={this.reduxStore}>
-        <DialogInstructions authoredHints={authoredHints}/>
+        <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
   });
@@ -1555,6 +1545,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1826,6 +1818,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
@@ -2860,7 +2853,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2898,11 +2891,13 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
+    visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    isK1: config.level.isK1,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));

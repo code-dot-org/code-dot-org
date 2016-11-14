@@ -1134,7 +1134,7 @@
           изгубиш пътя нощем\nи нещо грубо, лошо, непознато \nте дебне скрито зад
           бутончето крилато\n\nТогава от главата до петите потръпни\nи спри се и се
           змисли, \nи от петичките до връхчето намалкото носле \nпоспри се и мисли
-          добре,\nзащото в нета дебнат опасности и страхове!\n"
+          добре,\nзащото в нета дебнат опасности и страхове!"
       5:
         image: notes/C2_digital_footprint_5.png
         text: И така, мисли с главата си и чувствай със сърцето си, балансирай с ръцете
@@ -1670,54 +1670,55 @@
           контакта наведнъж, а след това телефона ви да поиска следващите 100."
       6:
         image: notes/C3_internet_6.png
-        text: The most exciting thing about software is the fact that it can impact
-          the entire world. I first learned to program when I was about nineteen.
-          I think I was already a sophomore or a junior in college. The first program
-          I remember writing is something that converted Celsius to Fahrenheit. I
-          like programming because I like helping people. I can write programs at
-          Google that help people all over the world and that's really mind-boggling
-          and exciting.
+        text: "Най-вълнуващото нещо за софтуера е фактът, че той може да повлияе на
+          целия свят. Научих се да програмирам, когато бях на деветнадесет. Мисля,
+          че вече бях второкурсник или първокурсник в колежа. Спомням си, че първата
+          програма която написах превръщаше градусите от Целзий към Фаренхайт. Аз
+          обичам програмирането, тъй като то помага на хората. Мога да пиша програми
+          в Google, които помагат на хората по целия свят и това е наистина изумително
+          и вълнуващо."
     C3_maze_conditionals:
       1:
         image: notes/C3_maze_conditionals_1.png
-        text: People make decisions everyday. For example, before you go outside,
-          you have an if statement that says if it's raining, then I need to get my
-          jacket. Computers are amazing once you decide those kinds of statements
-          that they can reliably execute those things and unbelievable speed. A computer
-          program really is a little bit of math and some if statements where the
-          decision gets made.
+        text: Хората вземат решения всеки ден. Например, преди да излезнете навън,
+          имате "ако" оператор, който казва, че ако вали, тогава трябва да си вземете
+          яке. Компютрите са невероятни във взимането на подобни решения с оператори.
+          Те могат надеждно да ги изпълнят с невероятна скорост. Такава програма представлява
+          малко математика и няколко "ако" оператора, които са нужни на компютъра
+          за да взима решения.
       2:
         image: notes/C3_maze_conditionals_2.png
-        text: The if block helps the zombie make a decision. It checks something.
-          For example, let's use the block that says if there's a path to the left,
-          and put a turn left command inside it. We're telling the zombie to check
-          its surroundings, see if there's a path on the left and if so, make that
-          turn.
+        text: '"Ако" блока помага на зомбито да направи решение. Той проверява нещо.
+          Например, нека да използваме блок, който казва "ако има път наляво" и ще
+          го поставим "завърти наляво" команда вътре в него. Ние казваме на зомбито
+          да провери наоколо дали има път наляво и ако е така, да се обърне в тази
+          посока.'
       3:
         image: notes/C3_maze_conditionals_3.png
-        text: Then we use the move forward block inside this repeat to get it to keep
-          moving forward as long as it just wants to go straight. Then when there's
-          a turn, the if block will tell it to make that turn to the left. You can
-          see that if we do that, if we take the turn to the left and otherwise moving
-          forward, we'll achieve our goal.
+        text: Тогава ние използваме "върви напред" блок вътре в повторението, за да
+          продължи да се движи напред, докато той трябва да отидете направо. Тогава,
+          когато трябва да се завърти, блокът "ако" ще му каже да направи завой вляво.
+          Можете да видите, че ако направим това, когато е необходимо, ние ще завиваме
+          наляво, а иначе ще се движим напред, за да постигнем целта си.
       4:
         image: notes/C3_maze_conditionals_4.png
-        text: It's an example of using an if statement which is really a fundamental
-          concept in computer programming. One of the first things I learned was how
-          to write a program that played tic-tac-toe. I had if statements to say,
-          ok, if the other person is about to win, go ahead and block that spot. Have
-          fun learning how to use if statements, it's a key concept.
+        text: Това е пример за използване на "ако" оператор, който е наистина основна
+          концепция в компютърното програмиране. Едно от първите неща, които научих,
+          е как да се напише програма, която представлява игра tic-tac-toe. Имах "ако"
+          оператори, които да взимат решение ако другият човек е на път да спечели,
+          да блокират мястото. Забавлявайте се, научите как да използвате "ако" оператори,
+          защото те се ключова концепция.
     C3_maze_level_4:
       1:
         image: notes/C3_maze_level_4_1.png
-        text: In this example, your goal is to get zombie to the sunflower. We could
-          use five move forward blocks or we could tell the computer to move forward
-          and repeat five times using the one repeat block.
+        text: В този пример целта ви е да завесете зомбито до слънчогледа. Бихме могли
+          да използваме пет "върви напред" блокове или може да кажем на компютъра
+          да "върви напред" веднъж и да повтори пет пъти блока за действие.
       2:
         image: notes/C3_maze_level_4_2.png
-        text: This saves time and makes it way easier. To use it, just put the move
-          forward block inside the repeat block. Hit run and the zombie will move
-          forward five times to the yummy sunflower.
+        text: Това спестява време и е по-лесно. За да го използвате, просто поставете
+          "върви напред" блок вътре в блока за повторение. Натиснете "Старт" и зомбито
+          ще се премести напред пет пъти до вкусния слънчоглед.
     C3_playlab_create_game:
       1:
         image: notes/playlab_1.png
@@ -1731,60 +1732,62 @@
     C3_songwriting_with_parameters:
       1:
         image: notes/C3_songwriting_with_parameters_1.png
-        text: This is the song writing lesson. Music is a lot like a computer program.
-          The written notes and words tell the singer exactly what to do. Some parts
-          of music are used over and over again.
+        text: Това е урок за писане на песен. Музиката много прилича на компютърна
+          програма. Написаните ноти и думи "казват" на певеца точно какво да прави.
+          Някои части от музиката и текста се използват отново и отново.
       2:
         image: notes/C3_songwriting_with_parameters_2.png
-        text: We call this the chorus. In a computer program, the parts of the program
-          that are used over and over again are called functions. When you read song
-          lyrics and it says the word chorus, do you sing the word chorus? No, you
-          look at the top of the page to see what words make up the chorus.
+        text: Ние наричаме това припев. В компютърната програма частите, които се
+          използват отново и отново се наричат функции. Когато четеш текстове на песните
+          и там е написано думата "припев", пееш ли и тази дума? Не, поглеждаш в горната
+          част на страницата, за да видиш кои думи съставляват припева.
       3:
         image: notes/C3_songwriting_with_parameters_3.png
-        text: In this lesson, you'll learn a silly little song called little bunny
-          foo foo. The song has a chorus that you will sing several times over and
-          over again. A function is a piece of code that you can call and use over
-          and over again. It makes programming easier and more efficient so you don't
-          have to write out the steps of your function over and over again. You can
-          just write it once!
+        text: "В този урок ще научите една малка песничка, наречена малко зайче foo
+          foo. Песента има припев, който се пее няколко пъти отново и отново. Функцията
+          е част от код, който можете да използвате отново и отново. Това прави програмирането,
+          по-лесно и по-ефективно! Така не е нужно да пишеш стъпките на функцията
+          отново и отново. Просто да ги пишеш веднъж!"
     C4_bee_conditional:
       1:
         image: notes/C4_bee_conditional_1.png
-        text: This is the conditional block. It says if you're at the flower or the
-          honeycomb, then do something. This is useful when we don't know how much
-          honey or nectar to get as we see here with this question mark.
+        text: "Това е условен блок. Той казва, че ако сте в цветето или медената пита,
+          тогава трябва да направите нещо. Това е полезно, в случаите когато не знаем
+          колко мед да направим или колко нектар да съберем и виждаме само този въпросителен
+          знак."
       2:
         image: notes/C4_bee_conditional_2.png
-        text: In this example, we're going to say, if it's a flower, get all the nectar
-          and then use another one to say, if it's a honeycomb, make honey. Ta-dah!
+        text: "В този пример, ние ще да се кажем, ако е цвете, ще вземем всичкия нектар
+          и след това ще използваме друг за да каже, ако е медена пита, да се направи
+          мед. Ta-Да!"
     C4_conditionals:
       1:
         image: notes/C4_conditionals_1.png
-        text: We have a new block that's called the if/else block. It's a conditional
-          statement just like the if block you've used in the puzzles before. But
-          now there's a new part at the bottom that says else. The if/else block lets
-          the bee make a decision between two sets of actions. If the bee is at a
-          flower, the bee will do the set of actions you put in the first part where
-          it says do. If the bee is not at a flower, the bee will do the set of actions
-          you put in the slot where it says else.
+        text: Имаме нов блок, който се нарича "ако/друго" блок. Това е условен оператор
+          точно като блока "ако", който сте използвали в пъзелите преди. Но сега има
+          нова част накрая, която се казва "иначе". "Ако/иначе" блока позволява на
+          пчелата да направи решение между два набора от действия. Ако пчелата е на
+          цвете, пчелата ще направи набор от действия, които поставяте в първата част,
+          където се казва "ако". Ако пчелата не е цвете, пчелата ще направи друг набор
+          от действия, които ще поставим в частта, където се казва "друго".
       2:
         image: notes/C4_conditionals_2.png
-        text: If statements are how computers are able to make decisions. Humans set
-          up conditions for the computer that say if the computer is presented with
-          a certain situation do this. Else, which just means otherwise, do that.
-          The top of our if/else block says if at flower. But the top of our block
-          could say other things, like if nectar equals 2 or if there's a path ahead,
-          our block will behave in the same way. That if the statement at the top
-          is true it will do the first set of actions. But if the statement at the
-          top is false, it will do the second set of actions.
+        text: '"Ако" операторите са начинът, по който компютрите могат да вземат решения.
+          Хората създават условия за компютъра, които казват, какво да направи компютърът
+          "ако" е в определена ситуация. "Иначе" означава какво той да прани в противен
+          случай. Горната част на нашия ако/иначе блок оказва действие ако пчелата
+          е на цвете. Но в началото на нашия блок може да се кажат и други неща, като
+          колко нектар да се вземе или ако има път напред, нашият блок ще се държи
+          по същия начин. Ако се случи събитие, което да включи "Ако" оператора, то
+          ще се направи първия набор от действия. Но ако това не се случи, пчелата
+          ще направи вторият набор от действия.'
     C4_for_loops:
       1:
         image: notes/C4_for_loops_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: "Когато използвате блок за повторение за да повторите кода си, как компютърът
+          знае колко пъти да повтаря? Под Блокът за повторение се крие по-сложно парче
+          от код, наречен брояч, който брои от началната до крайната стойност с нарастване
+          с определена стъпка."
       2:
         image: notes/C4_for_loops_2.png
         text: For example, a repeat three block counts from 1 to 3 by 1. Every time
@@ -1809,10 +1812,10 @@
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: "Когато използвате блок за повторение за да повторите кода си, как компютърът
+          знае колко пъти да повтаря? Под Блокът за повторение се крие по-сложно парче
+          от код, наречен брояч, който брои от началната до крайната стойност с нарастване
+          с определена стъпка."
       2:
         image: notes/C4_for_loops_bee_2.png
         text: For example, a repeat three block counts from 1 to 3 by 1. Every time
@@ -1837,10 +1840,10 @@
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
-        text: When you use a repeat block to loop your code, how does the computer
-          know when it's repeated enough times? The repeat block is actually hiding
-          a more sophisticated piece of code called a for loop which counts from a
-          starting value up to an ending value by a specific increment.
+        text: "Когато използвате блок за повторение за да повторите кода си, как компютърът
+          знае колко пъти да повтаря? Под Блокът за повторение се крие по-сложно парче
+          от код, наречен брояч, който брои от началната до крайната стойност с нарастване
+          с определена стъпка."
       2:
         image: notes/C4_for_loops_no_bee_2.png
         text: For example, a repeat three block counts from 1 to 3 by 1. Every time

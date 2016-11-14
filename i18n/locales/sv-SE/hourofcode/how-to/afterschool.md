@@ -9,71 +9,73 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 # Att lära ut Hour of Code på fritids
 
 ## 1) Titta på den här videon <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 2) Välj ett material:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+Vi erbjuder en mängd [roliga, timslånga guider](%= resolve_url('https://code.org/learn') %) för deltagare i alla åldrar, skapade av en mängd partners. [Prova dem!](%= resolve_url("https://code.org/learn") %)
 
 **Alla övningar i Hour of Code:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Är självinstruerande så att alla kan jobba i sin takt på sin nivå
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+## 3) Marknadsför din Hour of Code
 
-## 4) Plan your technology needs - computers are optional
+Marknadsför din Hour of Code [med dessa verktyg](%= resolve_url('/promote') %) och uppmuntra andra att vara hålla egna evenemang.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+## 2) Vad behöver du för teknik? Datorer är inte nödvändiga
 
-**Plan Ahead!** Do the following before your event starts:
+Den bästa Hour of Code erfarenheten fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Coode utan datorer.
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever samarbetar, hjälper de varandra och vänder sig mindre till läraren. De ser också att programmering är socialt och bygger på samarbete.
+**Planera!** Gör följande steg innan evenemanget startar:
+
+  * **Testa övningarna på elevdatorer eller enheter.** Kontrollera att de fungerar korrekt (med ljud och video).
+  * **Fixa hörlurar till din klass**, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
+  * **Inte har tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
   * **Är tillgängligheten till internet för dålig?** Planera att se videor på gemensamt, så att varje elev inte behöver ladda ner sina egna videos. Eller prova unplugged / offline övningar.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Starta din Hour of Code med en inspirerande video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur datavetenskap påverkar alla delar av våra liv.
 
-**Show an inspirational video:**
+**Visa en inspirerande video:**
 
   * Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Lanseringsvideon från Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) eller <% if @country == 'uk' %> [ videon för Hour of Code 2014](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %>[ Hour of Code 2015 videon](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Hitta fler inspirerande videor [här](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+  * Förklara hur teknik påverkar våra liv, med exempel som alla elever i klassrummet kommer att bry sig om och inte endast ett fåtal (berätta om appar och teknik som används för att rädda liv, hjälpa människor, och föra personer närmare, o. s. v.).
+  * Lista saker som använder kod i vardagslivet.
+  * Se tips för att få tjejer intresserade av datavetenskap [här](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-**Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
+**Vill ha mer undervisning idéer?** Kolla in [bästa tipsen ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) från erfarna utbildare.
 
-## 6) Code!
+## 6) Koda!
 
-**Direct participants to the activity**
+**Visa eleverna till aktiviteten**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Skriv länken till guiden på en whiteboard. Länken listas på [informationen för din valda handledning](%= resolve_url('https://code.org/learn') %) under antalet deltagare.
 
 **When someone comes across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Jag vet inte. Låt oss lista ut detta tillsammans."
+  * "Tekniken inte alltid fungerar som vi vill."
+  * "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
 
-**What to do if someone finishes early?**
+**Vad gör man om en elev blir färdig tidigare?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
-  * Or, ask those who finish early to help others who are having trouble.
+  * Uppmuntra deltagarna att prova en annan Hour of Code aktivitet [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Eller be dem som slutför tidigt för att hjälpa andra som har problem.
 
 [col-33]
 
@@ -91,7 +93,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Fira
 
 [col-33]
 
@@ -99,10 +101,10 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 [/col-33]
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for your students.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) för dina elever.
+  * [Skriva ut "Jag gjorde en timme av kod!"](%= resolve_url('/promote/resources#stickers') %) klistermärken för dina elever.
+  * [Beställ t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) för din skola.
+  * Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
 [col-33]
 
@@ -114,20 +116,19 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Andra Hour of Code resurser för lärare:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
-  * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-  * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
+  * Titta på inspelningen av vår [Utbildarhandledning till Hour of Code](https://youtu.be/EJeMeSW2-Mw).
+  * [Delta på en Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) med vår grundare, Hadi Partovi att förbereda dig inför Hour of Code.
   * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-  * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+  * Läs igenom [ vanliga frågor och svar](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Vad kommer efter kodtimmen?
+## Vad kan jag göra efter Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Hour of Code är bara första steget på en resa för att lära dig mer om hur teknik fungerar och hur du skapar egna program. För att fortsätta den här resan:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Uppmuntra eleverna att fortsätta att [lära sig på nätet](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Delta](%= resolve_url('https://code.org/professional-development-workshops') %) i en 1-dags, i-person workshop att få undervisning från en erfaren datavetenskaps facilitator. (Endast för lärare i USA)
 
 <%= view :signup_button %>

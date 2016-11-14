@@ -1,0 +1,9 @@
+name 'CSD U3 Functions SFLP'
+css 'unplugged'
+markdown <<MARKDOWN
+# Programming - Interactive Games and Animations: Lesson 15 - Functions
+
+## Background
+
+You've learned how to use a number of abstractions in the last several lessons that represent more complex code. This meant you learned to use a single block that represented more detailed code. Now it's time to learn how to create your own blocks by writing **functions**. You'll use functions to remove repetition in your code and break your draw loop into more logical sections. Using this code you'll build a simple coin collector game.
+MARKDOWN

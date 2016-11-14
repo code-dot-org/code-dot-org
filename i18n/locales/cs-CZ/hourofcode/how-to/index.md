@@ -55,7 +55,7 @@ The best Hour of Code experience includes Internet-connected computers. Ale **ne
   * Původní video od Code.org, ukazující Billa Gates, Zuckerberga a NBA hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Hodina kódu 2013 spusťte video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or <% if @country == 'uk' %> [video Hodina kódu 2015 ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video Hodina kódu 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama vyzývá všechny studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 

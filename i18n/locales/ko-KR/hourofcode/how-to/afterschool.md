@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) 당신의 Hour of Code를 알려주세요.
 
 [이 도구들을 이용하여](%= resolve_url('/promote') %) 여러분의 Hour of Code를 알리고 다른 친구들이 자신만의 이벤트를 진행할 수 있도록 응원해주세요.
@@ -116,11 +118,10 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 교육자를 위한 다른 Hour of Code 리소스들
 
-  * 여러분의 Hour of Code를 구성하기 위한 [수업계획안 서식](/files/AfterschoolEducatorLessonPlanOutline.docx)을 이용하세요.
-  * 여러분보다 먼저 Hour of Code를 교육하신 분들의 [모범 활동 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 확인하세요. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * 다음 가이드를 살펴보세요. [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * Hour of Code 행사를 준비하기 위해, [라이브 Q&A에 참여해보세요.](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) Hour of Code 를 만든, Hadi Partovi 가 도와 줄 것입니다.
-  * 다른 교육자들의 조언, 견해 그리고 지원을 얻을 수 있는 [Hour of Code 포럼](http://forum.code.org/c/plc/hour-of-code) 에 방문해 보세요. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요. <% end %>
 
 ## Hour of Code 이후에는 어떤 것들이 있나요?

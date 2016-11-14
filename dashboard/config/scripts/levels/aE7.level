@@ -31,7 +31,8 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Draw the bottom half of a circle and then the top half of a circle to make one segment.\",\r\n  \"hint_id\": \"aE7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need 4 segments to complete this puzzle.\",\r\n  \"hint_id\": \"aE7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Draw the bottom half of a circle and then the top half of a circle to make one segment.\",\r\n  \"hint_id\": \"aE7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need 4 segments to complete this puzzle.\",\r\n  \"hint_id\": \"aE7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
