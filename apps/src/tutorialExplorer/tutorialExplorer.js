@@ -423,9 +423,52 @@ function getFilters({robotics, mobile}) {
   return {filters, initialFilters, hideFilters};
 }
 
+function getUrlParameters(filters) {
+  let providedParameters = null;
+
+  const parameters = decodeURIComponent(window.location.search.substring(1)).split('&');
+
+  for (let p = 0; p < parameters.length; p++) {
+    const parameter = parameters[p];
+    const [parameterName, parameterValue] = parameter.split('=');
+
+    // Does this parameter name match a filter group name?
+    for (let f = 0; f < filters.length; f++) {
+      const filter = filters[f];
+      const filterName = filter.name;
+
+      if (parameterName === filterName) {
+        // Next, does the parameter value match a filter entry for that group?
+        for (let e = 0; e < filter.entries.length; e++) {
+          const entry = filter.entries[e];
+          const entryName = entry.name;
+
+          // Set the entry.
+          if (parameterValue === entryName) {
+            if (!providedParameters) {
+              providedParameters = {};
+            }
+            if (!providedParameters[filterName]) {
+              providedParameters[filterName] = [];
+            }
+            providedParameters[filterName].push(entryName);
+          }
+        }
+      }
+    }
+  }
+
+  return providedParameters;
+}
+
 window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
-  const {filters, initialFilters, hideFilters} = getFilters(options);
+  let {filters, initialFilters, hideFilters} = getFilters(options);
+
+  const providedParameters = getUrlParameters(filters);
+  if (providedParameters) {
+    initialFilters = providedParameters;
+  }
 
   this.renderToElement = function (element) {
     ReactDOM.render(
