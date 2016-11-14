@@ -1079,7 +1079,7 @@ $height-to-width: 434 / 477;
     margin-bottom: -100%;
 
     #score-inner {
-      @include pixelated(); // TODO: only background (not text)
+      @include pixelated();
 
       top: -411px;
       height: 17px;
