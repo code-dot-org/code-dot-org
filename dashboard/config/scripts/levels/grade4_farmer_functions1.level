@@ -29,8 +29,7 @@
     "instructions": "*\"Have we met before? I'm the farmer!\"*\r\n\r\nHelp the farmer get to the pumpkins and pick them.",
     "instructions_important": "false",
     "ideal": "5",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
