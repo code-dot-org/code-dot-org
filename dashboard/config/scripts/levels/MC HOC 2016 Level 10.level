@@ -41,7 +41,9 @@
     "use_player": "true",
     "level_verification_timeout": "0",
     "use_score": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "video_key": "mc_2016_congrats",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",

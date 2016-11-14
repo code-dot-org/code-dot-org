@@ -42,7 +42,9 @@
     "failure_message_override": "Place `spawn sheep` under `when run`.",
     "use_player": "true",
     "use_score": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "video_key": "mc_2016_spawn",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "UPDATE:\r\n\r\nThis level teaches Spawning an Entity",

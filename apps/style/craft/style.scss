@@ -18,6 +18,7 @@ $original-background-color: #F2F2F2;
 $code-block-background-yellow: #d78c01;
 $code-block-outline-yellow: #ffb72f;
 $workspace-corner-rounding: 6px;
+$text-shadow-gray: #5a5a5a;
 
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
@@ -283,14 +284,6 @@ body {
   width: 434px;
   height: 477px;
   background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_Logo.png");
-  background-size: 100%;
-}
-
-.minecraft-scoring #minecraft-frame {
-  //@include pixelated();
-  width: 434px;
-  height: 477px;
-  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_LogoNew.png") !important;
   background-size: 100%;
 }
 
@@ -686,7 +679,7 @@ $height-to-width: 434 / 477;
   & > div {
     font-size: 24px;
     color: white !important;
-    text-shadow: 2px 2px #5A5A5A !important;
+    text-shadow: 2px 2px $text-shadow-gray !important;
   }
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
@@ -768,7 +761,7 @@ $height-to-width: 434 / 477;
     & > div {
       font-size: 24px;
       color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
       margin-left: 8px;
       padding-right: 0;
       margin-right: 2px;
@@ -1051,6 +1044,19 @@ $height-to-width: 434 / 477;
   }
 }
 
+@mixin scoreboard-background {
+  $fallback-gray: #6a6a6a;
+
+  background: $fallback-gray;
+  border-style: solid !important;
+  border-width: 1px 7px 7px 7px !important;
+  -moz-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -webkit-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -o-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 fill stretch !important;
+  @include pixelated();
+}
+
 .minecraft-events {
   code {
     background-color: $code-block-background-yellow;
@@ -1076,5 +1082,26 @@ $height-to-width: 434 / 477;
 
   .small-footer-base {
     border-radius: 0 $workspace-corner-rounding 0 0;
+  }
+
+  #score-container {
+    float: left;
+    position: relative;
+    left: 50%;
+
+    height: 0;
+    margin-bottom: -100%;
+
+    #score-inner {
+      @include scoreboard-background();
+      top: -411px;
+      height: 17px;
+      float: left;
+      position: relative;
+      left: -50%;
+      font-size: 15px;
+      color: $white !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
+    }
   }
 }
