@@ -1,29 +1,25 @@
-/* global Applab */
-
 import { ColumnType, castValue, isBoolean, isNumber, toBoolean } from './dataBrowser/dataUtils';
 import parseCsv from 'csv-parse';
-import { loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
+import { init, loadConfig, fixFirebaseKey, getDatabase, validateFirebaseKey } from './firebaseUtils';
 import { enforceTableCount, incrementRateLimitCounters, getLastRecordId, updateTableCounters } from './firebaseCounters';
-import {  addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
+import { addColumnName, deleteColumnName, renameColumnName, addMissingColumns, getColumnsRef } from './firebaseMetadata';
 
-// TODO(dave): convert FirebaseStorage to an ES6 class, so that we can pass in
-// firebaseName and firebaseAuthToken rather than access them as globals.
 /**
  * Namespace for Firebase storage.
  */
-let FirebaseStorage = {};
+const FirebaseStorage = {};
 
 // Upper bound on the number of additional characters needed in the JSON representation
 // of a record when an 'id' field (up to 10 digits) is added to it, e.g. ' "id":1234567890'.
 const RECORD_ID_PADDING = 16;
 
-function getKeysRef(channelId) {
-  let kv = getDatabase(channelId).child('storage/keys');
+function getKeysRef() {
+  let kv = getDatabase().child('storage/keys');
   return kv;
 }
 
-function getRecordsRef(channelId, tableName) {
-  return getDatabase(channelId).child(`storage/tables/${tableName}/records`);
+function getRecordsRef(tableName) {
+  return getDatabase().child(`storage/tables/${tableName}/records`);
 }
 
 /**
@@ -36,7 +32,7 @@ function getRecordsRef(channelId, tableName) {
 FirebaseStorage.getKeyValue = function (key, onSuccess, onError) {
   key = fixKeyName(key, onError);
 
-  const keyRef = getKeysRef(Applab.channelId).child(key);
+  const keyRef = getKeysRef().child(key);
   keyRef.once("value", snapshot => {
     // Return undefined if the key was not found, otherwise return the decoded value.
     const value = snapshot.val() === null ? undefined : JSON.parse(snapshot.val());
@@ -96,7 +92,7 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
       return Promise.reject(`The value is too large. The maximum allowable size is ${config.maxPropertySize} bytes.`);
     }
     return incrementRateLimitCounters();
-  }).then(() => getKeysRef(Applab.channelId).child(key).set(jsonValue)).then(onSuccess, onError);
+  }).then(() => getKeysRef().child(key).set(jsonValue)).then(onSuccess, onError);
 };
 
 /**
@@ -106,7 +102,7 @@ FirebaseStorage.setKeyValue = function (key, value, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
-  const keyRef = getKeysRef(Applab.channelId).child(key);
+  const keyRef = getKeysRef().child(key);
   keyRef.set(null).then(onSuccess, onError);
 };
 
@@ -117,7 +113,7 @@ FirebaseStorage.deleteKeyValue = function (key, onSuccess, onError) {
  * @returns {Promise<boolean>} whether the record exists
  */
 function getRecordExistsPromise(tableName, recordId) {
-  let recordRef = getDatabase(Applab.channelId)
+  let recordRef = getDatabase()
     .child(`storage/tables/${tableName}/records/${recordId}`);
   return recordRef.once('value').then(snapshot => snapshot.val() !== null);
 }
@@ -145,7 +141,7 @@ FirebaseStorage.createRecord = function (tableName, record, onSuccess, onError) 
     .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
       record.id = nextId;
-      const recordRef = getDatabase(Applab.channelId)
+      const recordRef = getDatabase()
         .child(`storage/tables/${tableName}/records/${record.id}`);
       return recordRef.set(JSON.stringify(record));
     }).then(() => onSuccess(record), onError);
@@ -207,7 +203,7 @@ function validateRecord(record, hasId) {
 FirebaseStorage.readRecords = function (tableName, searchParams, onSuccess, onError) {
   tableName = fixTableName(tableName, onError);
 
-  let recordsRef = getRecordsRef(Applab.channelId, tableName);
+  let recordsRef = getRecordsRef(tableName);
 
   // Get all records in the table and filter them on the client.
   recordsRef.once('value', recordsSnapshot => {
@@ -239,7 +235,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
   tableName = fixTableName(tableName, onError);
 
   const recordJson = JSON.stringify(record);
-  const recordRef = getDatabase(Applab.channelId)
+  const recordRef = getDatabase()
     .child(`storage/tables/${tableName}/records/${record.id}`);
   const hasId = true;
 
@@ -273,7 +269,7 @@ FirebaseStorage.updateRecord = function (tableName, record, onComplete, onError)
 FirebaseStorage.deleteRecord = function (tableName, record, onComplete, onError) {
   tableName = fixTableName(tableName, onError);
 
-  const recordRef = getDatabase(Applab.channelId)
+  const recordRef = getDatabase()
     .child(`storage/tables/${tableName}/records/${record.id}`);
 
   // There is a race condition in which we might inaccurately report whether the operation
@@ -327,7 +323,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
   listenedTables.push(tableName);
 
   getLastRecordId(tableName).then(lastId => {
-    const recordsRef = getRecordsRef(Applab.channelId, tableName);
+    const recordsRef = getRecordsRef(tableName);
 
     recordsRef.on('child_added', childSnapshot => {
       const record = JSON.parse(childSnapshot.val());
@@ -350,7 +346,7 @@ FirebaseStorage.onRecordEvent = function (tableName, onRecord, onError, includeA
 
 FirebaseStorage.resetRecordListener = function () {
   listenedTables = [];
-  getDatabase(Applab.channelId).off();
+  getDatabase().off();
 };
 
 /**
@@ -364,7 +360,7 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
   return validateTableName(tableName).then(incrementRateLimitCounters).then(loadConfig).then(config => {
     return enforceTableCount(config, tableName);
   }).then(() => {
-    const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+    const countersRef = getDatabase().child(`counters/tables/${tableName}`);
     countersRef.transaction(countersData => {
       if (countersData === null) {
         return {lastId: 0, rowCount: 0};
@@ -387,8 +383,8 @@ FirebaseStorage.createTable = function (tableName, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
-  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
-  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  const tableRef = getDatabase().child(`storage/tables/${tableName}`);
+  const countersRef = getDatabase().child(`counters/tables/${tableName}`);
   tableRef.set(null)
     .then(() => countersRef.set(null))
     .then(() => getColumnsRef(tableName).set(null))
@@ -402,9 +398,9 @@ FirebaseStorage.deleteTable = function (tableName, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.clearTable = function (tableName, onSuccess, onError) {
-  const tableRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}`);
+  const tableRef = getDatabase().child(`storage/tables/${tableName}`);
   tableRef.set(null).then(() => {
-    const rowCountRef = getDatabase(Applab.channelId)
+    const rowCountRef = getDatabase()
       .child(`counters/tables/${tableName}/rowCount`);
     return rowCountRef.set(0);
   }).then(onSuccess, onError);
@@ -419,7 +415,7 @@ function getExistingTables(overwrite) {
   if (overwrite) {
     return Promise.resolve({});
   }
-  const tablesRef = getDatabase(Applab.channelId).child('storage/tables');
+  const tablesRef = getDatabase().child('storage/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
 
@@ -478,7 +474,7 @@ function getExistingKeyValues(overwrite) {
   if (overwrite) {
     return Promise.resolve({});
   }
-  return getKeysRef(Applab.channelId).once('value')
+  return getKeysRef().once('value')
     .then(snapshot => snapshot.val() || {});
 }
 
@@ -506,7 +502,7 @@ FirebaseStorage.populateKeyValue = function (jsonData, overwrite, onSuccess, onE
         keysData[key] = JSON.stringify(newKeyValues[key]);
       }
     }
-    getKeysRef(Applab.channelId).update(keysData).then(onSuccess, onError);
+    getKeysRef().update(keysData).then(onSuccess, onError);
   });
 };
 
@@ -523,7 +519,7 @@ FirebaseStorage.addColumn = function (tableName, columnName, onSuccess, onError)
  */
 FirebaseStorage.deleteColumn = function (tableName, columnName, onSuccess, onError) {
   const recordsRef =
-    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+    getDatabase().child(`storage/tables/${tableName}/records`);
   recordsRef.once('value')
     .then(snapshot => {
       let recordsData = snapshot.val() || {};
@@ -554,7 +550,7 @@ FirebaseStorage.renameColumn = function (tableName, oldName, newName, onSuccess,
     return;
   }
   const recordsRef =
-    getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+    getDatabase().child(`storage/tables/${tableName}/records`);
   recordsRef.once('value')
     .then(snapshot => {
       let recordsData = snapshot.val() || {};
@@ -619,7 +615,7 @@ function coerceRecord(record, columnName, columnType) {
  * @param onError
  */
 FirebaseStorage.coerceColumn = function (tableName, columnName, columnType, onSuccess, onError) {
-  const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+  const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
   recordsRef.once('value').then(snapshot => {
     const recordsData = snapshot.val() || {};
     let allConverted = true;
@@ -690,9 +686,9 @@ function validateRecordsData(recordsData) {
  * @returns {Promise} A promise which is successful if all writes were successful.
  */
 function overwriteTableData(tableName, recordsData) {
-  const recordsRef = getDatabase(Applab.channelId).child(
+  const recordsRef = getDatabase().child(
     `storage/tables/${tableName}/records`);
-  const countersRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+  const countersRef = getDatabase().child(`counters/tables/${tableName}`);
   return getColumnsRef(tableName).set(null)
     .then(() => recordsRef.set(recordsData))
     .then(() => {
@@ -714,4 +710,7 @@ FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onErro
     .then(onSuccess, onError);
 };
 
-export default FirebaseStorage;
+export default function createFirebaseStorage(config) {
+  init(config);
+  return FirebaseStorage;
+}

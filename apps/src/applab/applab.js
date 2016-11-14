@@ -17,7 +17,7 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
-import FirebaseStorage from '../storage/firebaseStorage';
+import createFirebaseStorage from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
 import { getDatabase } from '../storage/firebaseUtils';
 import experiments from "../util/experiments";
@@ -119,8 +119,6 @@ var twitterOptions = {
 // The unscaled dimensions of the visualization area
 var vizAppWidth = 400;
 var VIZ_APP_HEIGHT = 400;
-
-var hasSeenRateLimitAlert = false;
 
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -550,11 +548,14 @@ Applab.init = function (config) {
       'You may need to sign in to your code studio account first.');
   }
   Applab.channelId = config.channel;
-  Applab.firebaseName = config.firebaseName;
-  Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.firebaseChannelIdSuffix = config.firebaseChannelIdSuffix || '';
   var useFirebase = window.dashboard.project.useFirebase() || false;
-  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
+  Applab.storage = useFirebase ? createFirebaseStorage({
+    channelId: config.channel,
+    firebaseName: config.firebaseName,
+    firebaseAuthToken: config.firebaseAuthToken,
+    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+    showRateLimitAlert: studioApp.showRateLimitAlert
+  }) : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -1628,27 +1629,6 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
-};
-
-Applab.showRateLimitAlert = function () {
-  // only show the alert once per session
-  if (hasSeenRateLimitAlert) {
-    return false;
-  }
-  hasSeenRateLimitAlert = true;
-
-  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
-  if (studioApp.share) {
-    studioApp.displayPlayspaceAlert("error", alert);
-  } else {
-    studioApp.displayWorkspaceAlert("error", alert);
-  }
-
-  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: window.dashboard.project.isEditing(),
-    isOwner: window.dashboard.project.isOwner(),
-    share: !!studioApp.share,
-  });
 };
 
 Applab.getAppReducers = function () {
