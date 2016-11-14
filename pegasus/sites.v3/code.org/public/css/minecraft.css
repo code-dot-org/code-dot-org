@@ -7,10 +7,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   width: 250px;
   padding: 10px;
-  position: absolute;
-  left: 228px;
-  top: 0;
-  height: 307px;
 }
 
 .new-mc {
@@ -59,6 +55,15 @@
   font-size: 14px;
 }
 
+@media screen and (min-width: 971px) {
+  .mc-tutorial-info {
+    position: absolute;
+    left: 228px;
+    top: 0;
+    height: 307px;
+  }
+}
+
 @media screen and (min-width: 0px) and (max-width: 970px) {
   .tutorial-box {
     margin-bottom: 15px;
@@ -76,5 +81,39 @@
     padding-bottom: 15px;
     height: auto;
   }
+
+  .mc-tutorial-info {
+    position: absolute;
+    left: 238px;
+    top: 0;
+    height: 307px;
+  }
+
+  .responsive-padding {
+    padding: 10px;
+  }
+
+  .tutorial-box {
+    padding-left: 10px;
+  }
 }
 
+@media screen and (min-width: 0px) and (max-width: 512px) {
+  .mc-tutorial-info {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+
+  .mc-h1-second-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tutorial-box {
+    width: 100%;
+    background-image: url(/images/mc/MC_Wide_Blank_V2.jpg);
+    background-size: 605px 100px;
+  }
+}
