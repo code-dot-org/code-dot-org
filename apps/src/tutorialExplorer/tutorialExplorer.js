@@ -26,7 +26,7 @@ const TutorialExplorer = React.createClass({
     backButton: React.PropTypes.bool,
     roboticsButton: React.PropTypes.bool,
     showSortBy: React.PropTypes.bool.isRequired,
-    disableTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   getInitialState() {
@@ -320,7 +320,7 @@ const TutorialExplorer = React.createClass({
                 filters={this.state.filters}
                 locale={this.props.locale}
                 specificLocale={true}
-                disableTutorials={this.props.disableTutorials}
+                disabledTutorials={this.props.disabledTutorials}
               />
               <h1>{i18n.headingTutorialsManyLanguages()}</h1>
             </div>
@@ -332,7 +332,7 @@ const TutorialExplorer = React.createClass({
               filters={this.state.filters}
               locale={this.props.locale}
               localeEnglish={this.isLocaleEnglish()}
-              disableTutorials={this.props.disableTutorials}
+              disabledTutorials={this.props.disabledTutorials}
             />
           )}
         </div>
@@ -441,7 +441,7 @@ window.TutorialExplorerManager = function (options) {
         backButton={options.backButton}
         roboticsButton={options.roboticsButton}
         showSortBy={options.showSortBy}
-        disableTutorials={options.disableTutorials}
+        disabledTutorials={options.disabledTutorials}
       />,
       element
     );

@@ -57,6 +57,9 @@ const styles = {
     fontSize: 16,
     paddingTop: 40
   },
+  tutorialDetailDisabledIcon: {
+    color: "#d9534f"
+  },
   tutorialDetailsTable: {
     marginTop: 20,
     width: '100%'
@@ -74,7 +77,7 @@ const styles = {
   tutorialDetailsTableBodyNoWrap: {
     padding: 5,
     border: '1px solid lightgrey',
-    whiteSpace: "pre"
+    whiteSpace: "pre-wrap"
   }
 };
 
@@ -84,7 +87,7 @@ const TutorialDetail = React.createClass({
     item: shapes.tutorial.isRequired,
     closeClicked: React.PropTypes.func.isRequired,
     localeEnglish: React.PropTypes.bool.isRequired,
-    disableTutorial: React.PropTypes.bool.isRequired
+    disabledTutorial: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -171,12 +174,14 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
-                  {this.props.disableTutorial && (
+                  {this.props.disabledTutorial && (
                     <div style={styles.tutorialDetailDisabled}>
+                      <i className="fa fa-warning warning-sign" style={styles.tutorialDetailDisabledIcon}/>
+                      &nbsp;
                       {i18n.tutorialDetailDisabled()}
                     </div>
                   )}
-                  {!this.props.disableTutorial && (
+                  {!this.props.disabledTutorial && (
                     <a href={this.props.item.launch_url} target="_blank">
                       <button style={{marginTop: 20}}>Start</button>
                     </a>
@@ -185,7 +190,7 @@ const TutorialDetail = React.createClass({
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                    {this.props.item.teachers_notes &&
+                    {this.props.item.teachers_notes && (
                       <tr key={0}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           More resources
@@ -197,8 +202,10 @@ const TutorialDetail = React.createClass({
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
                         </td>
-                      </tr>}
-                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
+                      </tr>
+                    )}
+                    {!this.props.disabledTutorial &&
+                     this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 && (
                       <tr key={1}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailsShortLink()}
@@ -208,7 +215,8 @@ const TutorialDetail = React.createClass({
                             {`https://hourofcode.com/${this.props.item.short_code}`}
                           </a>
                         </td>
-                      </tr>}
+                      </tr>
+                    )}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
