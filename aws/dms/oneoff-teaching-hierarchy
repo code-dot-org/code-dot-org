@@ -19,6 +19,16 @@
         "table-name": "followers"
       },
       "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "3",
+      "rule-name": "3",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "section_hidden_stages"
+      },
+      "rule-action": "include"
     }
   ]
 }
