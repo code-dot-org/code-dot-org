@@ -1,42 +1,29 @@
 require_relative '../../deployment'
 
-# Rake tasks for asset packages.
+# Rake tasks for asset packages (currently only 'apps').
 namespace :package do
-  # Special package-specific configurations listed here.
-  # TODO standardize these special cases on a common convention shared among all packages.
-  PACKAGES = {
-    apps: {
-      target: apps_dir('build/package'),
-      symlink_name: 'blockly'
-    }
-  }
+  namespace :apps do
+    desc 'Update apps static asset package.'
+    task 'update' do
+      require 'cdo/aws/s3_packaging'
 
-  PACKAGES.keys.each do |package|
-    namespace package do
-      desc "Update #{package} static asset package."
-      task 'update' do
-        require 'cdo/aws/s3_packaging'
+      # never download if we build our own
+      next if CDO.use_my_apps
 
-        package_dash = package.to_s.tr('_', '-')
-        # never download if we build our own
-        next if CDO["use_my_#{package}"]
-
-        packager = S3Packaging.new(package_dash, method("#{package}_dir").call, dashboard_dir("public/#{package_dash}-package"))
-        package_found = packager.update_from_s3
-        raise 'No valid package found' unless package_found
-      end
-      desc "Update Dashboard symlink for #{package} package."
-      task 'symlink' do
-        package_dash = package.to_s.tr('_', '-')
-        Dir.chdir(method("#{package}_dir").call) do
-          target = CDO["use_my_#{package}"] ? PACKAGES[package][:target] : "#{package_dash}-package"
-          RakeUtils.ln_s target, dashboard_dir('public', PACKAGES[package][:symlink_name])
-        end
+      packager = S3Packaging.new('apps', apps_dir, dashboard_dir('public/apps-package'))
+      package_found = packager.update_from_s3
+      raise 'No valid apps package found' unless package_found
+    end
+    desc 'Update Dashboard symlink for apps package.'
+    task 'symlink' do
+      Dir.chdir(apps_dir) do
+        target = CDO.use_my_apps ? apps_dir('build/package') : 'apps-package'
+        RakeUtils.ln_s target, dashboard_dir('public', 'blockly')
       end
     end
-    desc "Update #{package} package and create Dashboard symlink."
-    task(package => %w(update symlink).map{|x| "package:#{package}:#{x}"})
   end
+  desc 'Update apps package and create Dashboard symlink.'
+  task apps: ['apps:update', 'apps:symlink']
 end
-desc "Update all packages (#{PACKAGES.keys.join(', ')})."
-task package: PACKAGES.keys.map{|x| "package:#{x}"}
+desc 'Update all packages (apps).'
+task package: ['package:apps']
