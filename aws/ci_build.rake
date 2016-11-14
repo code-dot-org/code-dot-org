@@ -67,12 +67,6 @@ task :apps_task do
   packager.decompress_package(package)
 end
 
-task :firebase_task do
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:upload_rules'
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:set_config'
-  RakeUtils.rake '--rakefile', deploy_dir('Rakefile'), 'firebase:clear_test_channels'
-end
-
 file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
