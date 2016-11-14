@@ -135,6 +135,7 @@ class GameController {
 
   reset() {
     this.dayNightCycle = false;
+    this.queue.reset();
     this.levelEntity.reset();
     this.levelModel.reset();
     this.levelView.reset(this.levelModel);
@@ -873,17 +874,22 @@ class GameController {
           let entity = value[1];
           for (let i = -1; i <= 1; i++) {
             for (let j = -1; j <= 1; j++) {
+              if (i === 0 && j === 0) {
+                continue;
+              }
               let position = [targetEntity.position[0] + i, targetEntity.position[1] + j];
               this.destroyBlockWithoutPlayerInteraction(position);
               if (entity.position[0] === targetEntity.position[0] + i && entity.position[1] === targetEntity.position[1] + j) {
-                let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, entity.identifier); }, entity.identifier);
-                entity.queue.startPushHighPriorityCommands();
-                entity.addCommand(callbackCommand, commandQueueItem.repeat);
-                entity.queue.endPushHighPriorityCommands();
+                entity.blowUp(commandQueueItem, targetEntity.position);
               }
             }
           }
         }
+
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, targetEntity.identifier); }, targetEntity.identifier);
+        targetEntity.queue.startPushHighPriorityCommands();
+        targetEntity.addCommand(callbackCommand, commandQueueItem.repeat);
+        targetEntity.queue.endPushHighPriorityCommands();
       }
       commandQueueItem.succeeded();
       this.updateFowPlane();
