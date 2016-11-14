@@ -25,8 +25,8 @@ video_player: true
 - if page_mode == 'feature-minecraft2016'
   %link{href: "/css/minecraft.css", rel: "stylesheet"}
 
-  %h1= I18n.t(:minecraft_tutorials)
-  %p= I18n.t(:minecraft_specs)
+  %h1.responsive-padding= I18n.t(:minecraft_tutorials)
+  %p.responsive-padding= I18n.t(:minecraft_specs)
   %div{style: "clear:both"}
   .mc-container
     .mc-tutorials
@@ -48,12 +48,9 @@ video_player: true
             %button.primary= I18n.t(:minecraft_adventurer_button)
 
   .clear
-  %br
-  %h2.mc-header2
+  %h2.mc-header2.responsive-padding
     =I18n.t(:minecraft_no_internet)
     %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
-  %br
-
 
   .color-block.mc-store
     %h2.white-text= I18n.t(:minecraft_store_camps)
@@ -77,7 +74,7 @@ video_player: true
     %span= I18n.t(:minecraft_youthspark_tools).gsub('%{youthspark_link}', 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub')
 
   .mc-videos{style: "clear: both;"}
-    %h2.mc-header2= I18n.t(:watch_inspirational_videos)
+    %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
     =view :inspirational_videos
 
 - else
