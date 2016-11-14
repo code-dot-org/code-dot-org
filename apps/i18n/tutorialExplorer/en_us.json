@@ -35,7 +35,7 @@
   "filterProgrammingLanguageTyping": "Typing",
   "filterProgrammingLanguageOther": "Other",
   "filterActivityTypeRobotics": "Robotics",
-  "backButtonBack": "Back to all tutorials",
+  "backButtonBack": "Back to all activities",
   "filterHeaderFilterBy": "Filter By",
   "filterHeaderShowFilters": "Filters",
   "filterHeaderHideFilters": "Apply",
@@ -48,8 +48,8 @@
   "tutorialDetailsTeacherNotes": "Teacher notes",
   "tutorialDetailsShortLink": "Short link",
   "tutorialDetailInternationalLanguages": "Languages",
-  "headingTutorialsYourLanguage": "Tutorials in your language",
+  "headingTutorialsYourLanguage": "Activities in your language",
   "tutorialDetailStandards": "Standards",
-  "showAllTutorialsButton": "Show tutorials for many languages",
-  "hideAllTutorialsButton": "Hide tutorials for many languages"
+  "showAllTutorialsButton": "Show activities for many languages",
+  "hideAllTutorialsButton": "Hide activities for many languages"
 }
