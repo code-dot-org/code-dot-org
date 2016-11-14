@@ -18,23 +18,6 @@ require 'shellwords'
 require 'cdo/aws/cloudfront'
 require 'cdo/aws/s3_packaging'
 
-def with_hipchat_logging(name)
-  start_time = Time.now
-  HipChat.log "Running #{name}..."
-  yield if block_given?
-  HipChat.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
-
-rescue => e
-  # notify developers room and our own room
-  "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
-    HipChat.log message, color: 'red', notify: 1
-    HipChat.developers message, color: 'red', notify: 1
-  end
-  # log detailed error information in our own room
-  HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
-  raise
-end
-
 #
 # build_task - BUILDS a TASK that uses a hidden (.dotfile) to keep build steps idempotent. The file
 # ".<name>-built" depends on the files listed in dependencies. If any of those are newer, build_task
@@ -46,7 +29,7 @@ def build_task(name, dependencies=[], params={})
   path = aws_dir(".#{name}-built")
 
   file path => dependencies do
-    with_hipchat_logging(name) do
+    HipChat.wrap(name) do
       yield if block_given?
       touch path
     end
@@ -215,7 +198,7 @@ multitask build_with_cloudfront: [:build, :cloudfront]
 # If there are changes to be applied, the update can take 15 minutes to complete.
 task :cloudfront do
   if CDO.daemon && CDO.chef_managed
-    with_hipchat_logging('Update CloudFront') do
+    HipChat.wrap('Update CloudFront') do
       AWS::CloudFront.create_or_update
     end
   end
@@ -225,10 +208,10 @@ end
 # Additionally run the lint task if specified for the environment.
 task build: [:chef_update] do
   Dir.chdir(deploy_dir) do
-    with_hipchat_logging("rake lint") do
+    HipChat.wrap("rake lint") do
       RakeUtils.rake 'lint' if CDO.lint
     end
-    with_hipchat_logging("rake build") do
+    HipChat.wrap("rake build") do
       RakeUtils.rake 'build'
     end
   end
@@ -238,7 +221,7 @@ end
 # instances at any one time.
 MAX_FRONTEND_UPGRADE_FAILURES = 5
 task :deploy do
-  with_hipchat_logging("deploy frontends") do
+  HipChat.wrap("deploy frontends") do
     app_servers = CDO.app_servers
     if CDO.daemon && app_servers.any?
       Dir.chdir(deploy_dir) do
@@ -268,7 +251,7 @@ task 'websites' => [$websites] {}
 
 task :pegasus_unit_tests do
   Dir.chdir(pegasus_dir) do
-    with_hipchat_logging("pegasus ruby unit tests") do
+    HipChat.wrap("pegasus ruby unit tests") do
       RakeUtils.rake 'test'
     end
   end
@@ -276,7 +259,7 @@ end
 
 task :shared_unit_tests do
   Dir.chdir(shared_dir) do
-    with_hipchat_logging("shared ruby unit tests") do
+    HipChat.wrap("shared ruby unit tests") do
       RakeUtils.rake 'test'
     end
   end
@@ -285,7 +268,7 @@ end
 task :dashboard_unit_tests do
   Dir.chdir(dashboard_dir) do
     name = "dashboard ruby unit tests"
-    with_hipchat_logging(name) do
+    HipChat.wrap(name) do
       # Unit tests mess with the database so stop the service before running them
       RakeUtils.stop_service CDO.dashboard_unicorn_name
       RakeUtils.rake 'db:test:prepare'
