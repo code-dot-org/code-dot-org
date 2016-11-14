@@ -169,4 +169,6 @@ namespace :build do
 end
 
 desc 'Builds everything.'
-task :build => ['build:all']
+task :build do
+  HipChat.wrap('build') { Rake::Task['build:all'].invoke }
+end
