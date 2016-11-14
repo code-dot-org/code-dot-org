@@ -865,6 +865,11 @@ When(/^I debug cookies$/) do
   debug_cookies(@browser.manage.all_cookies)
 end
 
+When(/^I debug element "([^"]*)" text content$/) do |selector|
+  text = @browser.execute_script("return $('#{selector}').text()")
+  puts "'#{text.strip}'"
+end
+
 When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end

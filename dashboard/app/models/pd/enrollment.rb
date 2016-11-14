@@ -37,11 +37,22 @@ class Pd::Enrollment < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates :first_name, :last_name, :email, presence: true
+  validates_presence_of :first_name
+
+  # Some old enrollments, from before the first/last name split, don't have last names.
+  # Require on all new enrollments.
+  validates_presence_of :last_name, unless: :created_before_name_split?
+
+  validates_presence_of :email
   validates_confirmation_of :email
 
   validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
+
+  # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
+  def created_before_name_split?
+    self.persisted? && self.created_at < '2016-11-10'
+  end
 
   def self.for_school_district(school_district)
     self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})

@@ -1,34 +1,32 @@
 cn:
-  site_name: 编程一小时
-  hour_of_code: 编程一小时
-  language: 简体字
+  site_name: '编程一小时'
+  hour_of_code: '编程一小时'
+  language: '简体字'
   front_title: '加入史上最大的学习活动，%{campaign_date} 2015'
-  coming_soon: 即将推出
+  coming_soon: '即将推出'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: 12 月 5 日
-  campaign_date_start_long: 12 月 5 日
-  campaign_date_short: 12 月 5-11
-  campaign_date_full: 12 月 5-11日
+  campaign_date_start_short: "12 月 5 日"
+  campaign_date_start_long: "12 月 5 日"
+  campaign_date_short: "12 月 5-11"
+  campaign_date_full: "12 月 5-11日"
   campaign_date_year: "2016"
-  campaign_date_full_year: 2016年12月5日至12月11日
-  front_header_banner: 2015年12月7日至13日，加入有史以来最大的学习活动
+  campaign_date_full_year: "2016年12月5日至12月11日"
+  front_header_banner: '2015年12月7日至13日，加入有史以来最大的学习活动'
   front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>'
-  front_watch_video: 观看新的视频
-  front_watch_regular_video: 观看视频
-  front_volunteers: 需要技术志愿者
-  front_start_learning: 开始学习
-  header_menu_resources: 资源
-  header_menu_faq: 常见问题
-  header_menu_how_to: 操作方法
-  header_menu_promote: 推广
+  front_watch_video: '观看新的视频'
+  front_watch_regular_video: '观看视频'
+  front_volunteers: '需要技术志愿者'
+  front_start_learning: '开始学习'
+  header_menu_resources: '资源'
+  header_menu_faq: '常见问题'
+  header_menu_how_to: '操作方法'
+  header_menu_promote: '推广'
   company_4-H: 4-H青少年发展
   company_asa: 课后联盟
   company_asos: ASOS
   company_bgca: 美国男孩和女孩俱乐部
   company_bsusa: 美国童子军
-  company_cgcs: |
-    大城市学校理事会
-    
+  company_cgcs: "大城市学校理事会\n"
   company_gsusa: 美国女童子军
   company_khanacademy: 汗学院
   company_mesa: 数学工程科学成就
@@ -39,6 +37,7 @@ cn:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
+  company_afterschool: after school
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -66,6 +65,7 @@ cn:
   company_ccsoh: Columbus City School District
   company_cresskillboe: Cresskill Public Schools
   company_dallasisd: Dallas Independent School District
+  company_disney: Disney
   company_dpsk12: Denver Public Schools
   company_dcsdk12: Douglas County Schools
   company_dpsnc: Durham Public Schools
@@ -80,7 +80,7 @@ cn:
   company_fpschools: Franklin Pierce School District
   company_frederickcountypublicschools: Frederick County Public Schools
   company_fultonschools: Fulton County Schools
-  company_vadoe: "Governor's School Programs"
+  company_vadoe: Governor's School Programs
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
@@ -146,165 +146,171 @@ cn:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: 返回到资源
-  how_to_nav_educators: 给教育工作者
-  how_to_nav_after_school: 给课后教育机构
-  how_to_nav_parents: 给父母
-  how_to_nav_public_officials: 给公职人员
-  how_to_nav_districts: 给区域管理者
-  how_to_nav_assemblies: 给学校的小组
-  how_to_nav_organizations: 给单位
-  how_to_nav_companies: 给公司
-  how_to_nav_afterschool_educators: 给校外教育工作者
-  how_to_nav_volunteers: 给志愿者
-  whats_next_header: 下一步是什么?
+  nav_back_to_resources: "返回到资源"
+  how_to_nav_educators: "给教育工作者"
+  how_to_nav_after_school: "给课后教育机构"
+  how_to_nav_parents: "给父母"
+  how_to_nav_public_officials: "给公职人员"
+  how_to_nav_districts: "给区域管理者"
+  how_to_nav_assemblies: "给学校的小组"
+  how_to_nav_organizations: "给单位"
+  how_to_nav_companies: "给公司"
+  how_to_nav_afterschool_educators: "给校外教育工作者"
+  how_to_nav_volunteers: "给志愿者"
+  whats_next_header: "下一步是什么?"
   whats_next_description: "我们会为您的活动寄出材料和有用的提示。新的2015年教程即将推出，适合任何浏览器，智能手机—甚至没有电脑 ！<a href='http://code.org/learn'>试试目前的教程</a>"
   whats_next_how_to: "<a href='/how-to'> 如何组织编程一小时</a>"
   whats_next_promote: "<a href='/promote'> 推广编程一小时</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'> 如何推广编程一小时</a>"
   whats_next_how_to_promote_link: "<a href='/promote'> 如何推广编程一小时</a>"
   whats_next_try: "<a href='http://code.org/learn'> 试学教程</a>"
-  whats_next_try_button: 试学教程
-  n_have_learned_an_hoc: '<h1>尝试</h1><h2>一小时编程</h2><h3># 已完成</h3>'
-  anybody_can_learn: 任何人都可以学习。
-  get_started: 开始
-  beyond_an_hour: 《编程一小时》以外的更多内容
-  register_now: 立即注册
-  share_on_facebook: 分享到Facebook
-  share_on_twitter: 分享到Twitter
-  front_join_us_heading: 一次每个学生都可以参与的编程一小时活动。
-  front_join_us_anybody_can_learn: Anybody can learn
-  front_join_us_description: 计算机科学是每一个学生的基础知识。帮助我们把它介绍给 1 亿学生。
-  front_join_us_description_short: 计算机科学是每个学生的基础。
-  front_join_us_button: 加入我们
-  front_what_is_hoc: 编程一小时是什么？
-  front_join_us_header: 任何人都可以学习基础知识，并享受动手做的乐趣 ！
-  front_join_us_volunteer_header: 编程一小时志愿者
-  front_join_us_teacher: 你是一个老师吗？
-  front_join_us_inspire: 激发学生兴趣
-  front_join_us_inspire_link: 教室里的《编程一小时》。
-  front_join_us_teacher_link: 用编程一小时在课堂上鼓励学生
-  front_join_us_teacher_volunteer: 寻找可以访问你的课堂或者远程激励学生的志愿者
-  front_join_us_parent: 你是父母吗？
-  front_join_us_ask_link: 让你当地的学校
-  front_join_us_ask: 举办一个编程一小时活动。
-  front_join_us_parent_link: 邀请当地的学校来举办编程一小时
-  front_join_us_computer_science: 只是自己喜欢计算机科学吗？
-  front_join_us_cs_volunteer: 热心参与计算机科学教育？
-  front_join_us_spread: 分享给你的朋友
-  front_join_us_spread_word: 在社区中传播这些信息
-  front_join_us_spread_word_work: 在社区中或工作场所传播这些信息
-  front_join_us_sign_up_volunteer: 注册能够参与本地课堂或通过远程视频聊天的志愿者
-  front_join_us_organize: 或者自己组织一个编程一小时活动。
-  front_join_us_how_to_run: 了解如何举办编程一小时活动
-  front_join_us_help_promote: 帮助提高编程一小时活动
-  front_join_us_students: 学生
-  front_join_us_teachers: 教师
-  front_join_us_everyone: 任何人
-  front_join_us_try: 体验一下。
-  front_join_us_sign_up: 注册
-  front_join_us_host: 举办它
-  front_join_us_support: 点赞
+  whats_next_try_button: '试学教程'
+  n_have_learned_an_hoc: "<h1>尝试</h1><h2>一小时编程</h2><h3># 已完成</h3>"
+  anybody_can_learn: '任何人都可以学习。'
+  get_started: '开始'
+  beyond_an_hour: '《编程一小时》以外的更多内容'
+  register_now: '立即注册'
+  share_on_facebook: '分享到Facebook'
+  share_on_twitter: '分享到Twitter'
+  front_join_us_heading: '一次每个学生都可以参与的编程一小时活动。'
+  front_join_us_announcements: 'Announcements'
+  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_description: '计算机科学是每一个学生的基础知识。帮助我们把它介绍给 1 亿学生。'
+  front_join_us_description_short: '计算机科学是每个学生的基础。'
+  front_join_us_button: '加入我们'
+  front_what_is_hoc: '编程一小时是什么？'
+  front_join_us_header: '任何人都可以学习基础知识，并享受动手做的乐趣 ！'
+  front_join_us_volunteer_header: '编程一小时志愿者'
+  front_join_us_tutorials: "Try this year's new tutorials!"
+  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_robotics: 'Got robots?'
+  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_teacher: '你是一个老师吗？'
+  front_join_us_inspire: '激发学生兴趣'
+  front_join_us_inspire_link: '教室里的《编程一小时》。'
+  front_join_us_teacher_link: "用编程一小时在课堂上鼓励学生"
+  front_join_us_teacher_volunteer: "寻找可以访问你的课堂或者远程激励学生的志愿者"
+  front_join_us_parent: '你是父母吗？'
+  front_join_us_ask_link: '让你当地的学校'
+  front_join_us_ask: '举办一个编程一小时活动。'
+  front_join_us_parent_link: "邀请当地的学校来举办编程一小时"
+  front_join_us_computer_science: '只是自己喜欢计算机科学吗？'
+  front_join_us_cs_volunteer: '热心参与计算机科学教育？'
+  front_join_us_spread: '分享给你的朋友'
+  front_join_us_spread_word: "在社区中传播这些信息"
+  front_join_us_spread_word_work: "在社区中或工作场所传播这些信息"
+  front_join_us_sign_up_volunteer: '注册能够参与本地课堂或通过远程视频聊天的志愿者'
+  front_join_us_organize: '或者自己组织一个编程一小时活动。'
+  front_join_us_how_to_run: "了解如何举办编程一小时活动"
+  front_join_us_help_promote: "帮助提高编程一小时活动"
+  front_join_us_students: "学生"
+  front_join_us_teachers: "教师"
+  front_join_us_everyone: "任何人"
+  front_join_us_try: "体验一下。"
+  front_join_us_sign_up: "注册"
+  front_join_us_host: "举办它"
+  front_join_us_support: "点赞"
   front_join_us_more_info: "更多信息，请访问<a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: 有关详细信息，请访问 code.org
-  front_join_us_n_students_served: '#次使用'
+  front_join_us_code_info: "有关详细信息，请访问 code.org"
+  front_join_us_n_students_served: "#次使用"
   signup_header: '在%{campaign_date} 期间主持编程一小时，并在这里登记。'
-  signup_name_label: 您的姓名
-  signup_email_label: 您的电子邮件地址
-  signup_organization_name_label: 学校或组织名称
-  signup_event_type_label: 活动类型
-  signup_event_entire_school_label: 我的整个学校都在参与
-  signup_event_location_label: 活动地址（可选）
-  signup_special_event_flag_label: 突出显示我的特别活动
-  signup_special_event_details_label: 特别活动的详细信息
+  signup_name_label: '您的姓名'
+  signup_email_label: '您的电子邮件地址'
+  signup_organization_name_label: '学校或组织名称'
+  signup_event_type_label: '活动类型'
+  signup_event_entire_school_label: '我的整个学校都在参与'
+  signup_event_location_label: '活动地址（可选）'
+  signup_special_event_flag_label: '突出显示我的特别活动'
+  signup_special_event_details_label: '特别活动的详细信息'
   signup_send_posters_flag_label: '给我的学校或组织发送 <a href= "/resources#posters">海报</a>'
-  signup_send_posters_address_label: 学校或组织的地址
-  signup_whole_school_flag_label: 这一活动是为整个学校举办
-  signup_your_event: 登记您的活动
-  signup_host_an_hour: Host an hour
-  signup_match_volunteer: 帮我找一个本地的软件工程师来激励我的学生
-  signup_multiple_event_warning: 如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。
-  signup_name_placeholder: 您的姓名
-  signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: 例如，林肯高中
-  signup_event_location_placeholder: "邮政编码和国家或完整地址.\r （我们需要在地图上放置一个标记）"
-  signup_special_event_details_placeholder: 请描述这一活动的特殊之处
-  signup_send_posters_address_placeholder: 此地址不会在我们的地图上被共享
-  signup_event_type_in_school: 在一所学校
-  signup_event_type_out_of_school: 学校之外
-  signup_submit_label: 注册
-  signup_submit_error_message: 有一个错误。请检查以确保所有必填的字段都已正确地填写。
-  signup_thank_you_header: 感谢您注册主办一个编程一小时活动。
-  signup_thank_you_message: 我们发送了一封确认邮件，其中有帮助您开始的信息。
-  map_title: 编程一小时地图
-  map_header: 世界各地的《编程一小时》活动
-  see_all_events: 查看所有事件
+  signup_send_posters_address_label: '学校或组织的地址'
+  signup_whole_school_flag_label: '这一活动是为整个学校举办'
+  signup_your_event: '登记您的活动'
+  signup_host_an_hour: 'Host an hour'
+  signup_match_volunteer: '帮我找一个本地的软件工程师来激励我的学生'
+  signup_multiple_event_warning: "如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。"
+  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_name_placeholder: '您的姓名'
+  signup_email_placeholder: 'you@example.com'
+  signup_organization_name_placeholder: "例如，林肯高中"
+  signup_event_location_placeholder: "邮政编码和国家或完整地址.\\r （我们需要在地图上放置一个标记）"
+  signup_special_event_details_placeholder: '请描述这一活动的特殊之处'
+  signup_send_posters_address_placeholder: '此地址不会在我们的地图上被共享'
+  signup_event_type_in_school: '在一所学校'
+  signup_event_type_out_of_school: '学校之外'
+  signup_submit_label: '注册'
+  signup_submit_error_message: "有一个错误。请检查以确保所有必填的字段都已正确地填写。"
+  signup_thank_you_header: "感谢您注册主办一个编程一小时活动。"
+  signup_thank_you_message: '我们发送了一封确认邮件，其中有帮助您开始的信息。'
+  map_title: "编程一小时地图"
+  map_header: '世界各地的《编程一小时》活动'
+  see_all_events: '查看所有事件'
   map_header_company: '#公司组织'
   map_header_country: '#次在%{country}'
-  map_search_placeholder: 搜索《编程一小时》事件
-  map_search_search: 搜索
-  map_search_reset: 重置
-  map_legend_title: 图例
-  map_legend_hoc_events: 编程一小时活动
-  map_legend_cs_tech_jam: 特别活动
-  meta_tag_og_title: 编程一小时活动即将开始
-  meta_tag_og_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。
-  meta_tag_twitter_title: 编程一小时活动即将开始
-  meta_tag_twitter_description: 编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。参与者的年龄可以从4岁到104岁。
-  twitter_default_text: '我正在参加今年的 #HourOfCode，你呢？@codeorg'
-  hoc_faq_title: 常见问题
-  hoc_faq_what_is_hoc_q: 编程一小时是什么？
+  map_search_placeholder: '搜索《编程一小时》事件'
+  map_search_search: '搜索'
+  map_search_reset: '重置'
+  map_legend_title: '图例'
+  map_legend_hoc_events: '编程一小时活动'
+  map_legend_cs_tech_jam: '特别活动'
+  meta_tag_og_title: '编程一小时活动即将开始'
+  meta_tag_og_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。'
+  meta_tag_twitter_title: '编程一小时活动即将开始'
+  meta_tag_twitter_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。参与者的年龄可以从4岁到104岁。'
+  twitter_default_text: "我正在参加今年的 #HourOfCode，你呢？@codeorg"
+  hoc_faq_title: '常见问题'
+  hoc_faq_what_is_hoc_q: '编程一小时是什么？'
   hoc_faq_what_is_hoc_a: "编程一小时是一个介绍计算机科学一小时的活动，旨在揭秘编程并说明它是任何人都可以学习的基础知识。<a href='http://code.org/learn'>查看教程</a>。"
-  hoc_faq_last_year: 尝试教程
-  hoc_faq_when_is_hoc_q: 编程一小时活动将在什么时候举行？
+  hoc_faq_last_year: "尝试教程"
+  hoc_faq_when_is_hoc_q: '编程一小时活动将在什么时候举行？'
   hoc_faq_when_is_hoc_a: "任何人任何时候都能主办编程一小时，但是基层运动的目标是为数千万学生在%{campaign_date}期间尝试编程一小时，并庆祝<a href='http://csedweek.org'>计算机科学教育周</a>。这是某个指定的<i>小时</i>吗？不是。你可以在这一周的任何时候安排编程一小时。也欢迎你将编程一小时分成多次，以便于学生能够完成编程一小时教程。用对你和你的学生最适合的方式即可。（如果不能在那一周主办，也可以提前或延后。）"
-  hoc_faq_why_cs_q: 为什么要学习计算机科学？
+  hoc_faq_why_cs_q: '为什么要学习计算机科学？'
   hoc_faq_why_cs_a: "<i>每一个</i>学生都应该获得学习计算机科学的机会。它有益于培养解决问题的能力，逻辑能力和创造性。通过早期的学习，学生们将为他们在21世纪的职业成功打下基础。在<a href='http://code.org'>Code.org</a>上查看更多数据。"
-  hoc_faq_how_participate_q: 我怎样才能参加编程一小时活动？
+  hoc_faq_how_participate_q: '我怎样才能参加编程一小时活动？'
   hoc_faq_how_participate_a: "<a href='/how-to'>点击这里阅读使用指南</a>，开启新的旅程！你可以在学校或者你所在的团体&mdash;，比如在课外兴趣小组、非营利性组织或是在工作圈子里组织《编程一小时》活动。当然，你自己也可以选择在%{campaign_date} 来一次自我挑战。"
-  hoc_faq_behind_hoc_q: 谁是编程一小时活动的组织者？
+  hoc_faq_behind_hoc_q: '谁是编程一小时活动的组织者？'
   hoc_faq_behind_hoc_a: "编程一小时活动的组织者是<a href='http://code.org'>Code.org</a>, 它是一个面向公众的501c3公益组织，致力于在更多的学校推广计算机科学教育，并为女性和就业率低的有色人种学生学习计算机的机会。同时，一个<a href='http://code.org/about/partners'>空前强大的合作伙伴联盟</a>也在支持着编程一小时活动。&mdash; 这些合作伙伴包括：微软公司,苹果公司,亚马逊公司,美国男孩女孩俱乐部和大学理事会。"
-  hoc_faq_host_q: 我完全不懂编程。我也可以举办这个活动吗？
+  hoc_faq_host_q: "我完全不懂编程。我也可以举办这个活动吗？"
   hoc_faq_host_a: "当然。代码一小时活动是自我引导的。你要做的就是 <a href='%{codeorg_url}/learn'> 尝试我们当前的教程</a>，挑选你想要的教程，并安排一个小时的时间 &mdash; 其余部分就交给我们。我们提供了适应每个年龄和经验水平的课程，从幼儿园到成年。阅读我们 <a href='/how-to'> 如何策划</a>，来开始规划您的编程一小时活动。"
-  hoc_faq_devices_q: 我应该给我的学生用什么设备?
+  hoc_faq_devices_q: "我应该给我的学生用什么设备?"
   hoc_faq_devices_a: "Code.org教程在所有设备和浏览器上都能使用。你可以点击<a href='%{codeorg_url}/educate/it'>这里</a>看到更多code.org教程的技术要求信息。非code.org教程的技术要求信息在 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 的教程具体描述里。别忘了我们也提供了离线活动，如果你的学校不能使用这些教程！"
-  hoc_faq_need_computers_q: 我需要为所有的学生准备计算机吗？
+  hoc_faq_need_computers_q: '我需要为所有的学生准备计算机吗？'
   hoc_faq_need_computers_a: "不需要。我们的教程可以在电脑、智能手机、平板电脑上运行，也可以完全不用电脑来完成！无论你在哪里，有什么设备，都可以参加编程一小时的活动。<p><i>这里有一些参考选项：</i> <br> <ul> <li><b>结对学习</b> 研究表明，学生在共享一台电脑并且共同工作的<a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>结对编程</a>中学习效果最好，应当鼓励学生们结对互助。<li><b>使用投影设备</b>使用投影设备和连接互联网的电脑，通过一起观看视频，轮流解决谜题和回答问题，全体学员可以一起参加编程一小时活动。<li><b>不插电活动</b>我们提供完全不需要电脑的编程一小时活动教程。</ul>"
-  hoc_faq_international_q: '我在<country>。我如何加入国际化的活动？'
+  hoc_faq_international_q: "我在<country>。我如何加入国际化的活动？"
   hoc_faq_international_a: "任何人在世界任何地方，都可以组织一个编程一小时活动。去年，全世界的学生一起参与编程一小时。查看更多<a href='/promote'>点击这里</a>。"
-  hoc_faq_tutorial_q: 我怎样才能编写编程一小时的教程？
+  hoc_faq_tutorial_q: '我怎样才能编写编程一小时的教程？'
   hoc_faq_tutorial_a: "如果你有兴趣成为教程的合作伙伴，<a href='targetHOC'> 请参阅我们的指南和介绍</a>。我们需要各种引人入胜的项目，但主要目标是为那些不熟悉计算机科学的学生和教师提供更优化的体验。"
-  hoc_faq_account_q: 学生需要使用帐户登录吗?
+  hoc_faq_account_q: "学生需要使用帐户登录吗?"
   hoc_faq_account_a: "不，学生尝试编程一小时完全不需要注册或登陆。大多数<a href='http://code.org/learn/beyond'>后续课程</a>需要创建账户以保存学生的学习进度。"
-  hoc_faq_high_school_q: 哪些活动适合高中生？
+  hoc_faq_high_school_q: "哪些活动适合高中生？"
   hoc_faq_high_school_a: "在所有年龄段，我们建议你在<a href='http://code.org/learn'> Code.org/learn</a>初学者教程开始尝试，如愤怒的小鸟教程或安娜和艾尔莎教程。一名高中学生应该能够在30分钟内完成下列操作之一，然后可以在JavaScript中尝试更高级教程，如Khan Academy或CodeHS。"
-  hoc_faq_scratch_q: 我正在为编程一小时制作简易程序，但是如果我的学生只有iPad没有笔记本电脑怎么办？
+  hoc_faq_scratch_q: "我正在为编程一小时制作简易程序，但是如果我的学生只有iPad没有笔记本电脑怎么办？"
   hoc_faq_scratch_a: "Scratch不能在平板电脑上运行。如果你的学生都很小，他们可以使用ScratchJR iPad应用程序（早期阅读器）。如果你看一下<a href='http://code.org/learn'> Code.org/learn</a>的教程，你可以找到在iPad可行的其他教程 - Code.org，Tynker， Lightbot，或CodeSpark。"
-  hoc_faq_count_hoc_q: 你对《编程一小时》有多期待？
-  hoc_faq_map_q: 为什么在地图上见不到我的小点?
-  hoc_faq_map_a: 非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图上的点，就会到达按照州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！
+  hoc_faq_count_hoc_q: "你对《编程一小时》有多期待？"
+  hoc_faq_map_q: "为什么在地图上见不到我的小点?"
+  hoc_faq_map_a: "非常抱歉，你不能在编程一小时地图上看到你的活动。因为有成千上万的组织者报名，地图会将活动都聚集起来，几个活动只会显示一个点。如果你点击地图上的点，就会到达按照州组织的活动列表，这样就能在列表里看到你的活动了。另外，由于数千人都在报名编程一小时，地图和活动列表通常需要48小时来更新。过几天再来看吧！"
   hoc_faq_count_hoc_a: "《编程一小时》跟踪器不会对使用情况进行准确测量。在学员参与《编程一小时》时，我们不会对学生的登录信息进行精准统计，特别是因为我们不需要学生注册或登陆。因此，高估和低估的情况会同时发生。<a href='http://code.org/loc'>点击这里</a>阅读详细信息。"
-  hoc_faq_one_hour_q: 一小时能学到多少？
+  hoc_faq_one_hour_q: "一小时能学到多少？"
   hoc_faq_one_hour_a: '编程一小时的目的不是让任何人在一小时内成为一个计算机科学的专家。一个小时只够用来了解计算机科学的趣味和创造力，它是可以被所有年龄，无论什么背景的学生使用的。这个运动成功的衡量标准不是有多少计算机科学的学生学习了，而是由有多广泛的跨性别，跨种族和社会经济组织的参与来反映，以及能够让更多的各个年级的学生愿意注册和参与计算机科学的课程。上百万参与过的老师和学生已经决定超越一小时——去学习一整天，一周或更长，并且很多学生已经决定报名参加整个课程（甚至大学专业）。<br/><br/>除了学生之外，另一种“学习者”是教育工作者，他们在这一小时后，虽然他们可能没有计算机科学的学位，也会有信心能够讲授计算机科学了。数万名教师决定进一步追寻计算机科学，提供进一步的在线课程和离线课程。学校的管理者也是一样，他们人知道了计算机科学是学生们需要的，也是老师能教的。<br/><br/>总之，这就是所有的参与者在一小时内得到的，也是我们所做的。'
-  hoc_faq_more_questions_q: 还有更多的问题吗？
+  hoc_faq_more_questions_q: "还有更多的问题吗？"
   hoc_faq_more_questions_a: "试着在我们的 <a href='http://support.code.org'> 支持论坛</a> 中找到答案。"
-  hoc_faq_keep_learning_q: 我如何在一小时后还接着学习？
+  hoc_faq_keep_learning_q: "我如何在一小时后还接着学习？"
   hoc_faq_keep_learning_a: "任何人在任何时候都可以组织编程一小时。这个指南是全年的。你可以认为我们的教程和课程是永远在线的。 请转到<a href='/promote'>活动的资源</a>获得操作指南和其它资源来帮助你成功举办编程一小时活动。"
-  hoc_faq_certificates_q: 在哪里可以为我的学生打印证书？
+  hoc_faq_certificates_q: "在哪里可以为我的学生打印证书？"
   hoc_faq_certificates_a: "转到<a href='%{codeorg_url}/certificates'>证书页面</a>，你就能在开始之前为全班打印证书了。你也能给参加了《我的世界》教程的学生打印<a href='%{codeorg_url}/certificates?course=mc'>特别证书</a>。"
-  hoc_faq_logo_q: 是否有我能否使用编程一小时标志或名称的限制？
+  hoc_faq_logo_q: "是否有我能否使用编程一小时标志或名称的限制？"
   hoc_faq_logo_a: "编程一小时已进行商标注册。我们不希望阻止它的使用，但我们想要确保它的使用符合限制。请参阅 <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'> 使用准则</a>。"
-  stats_hoc_2013_image_alt: 2013年编程一小时活动统计数据
-  stats_growth: 它以最快的速度到达 1500 万用户。
-  stats_i18n: 学生在用40种语言学习
+  stats_hoc_2013_image_alt: '2013年编程一小时活动统计数据'
+  stats_growth: "它以最快的速度到达 1500 万用户。"
+  stats_i18n: "学生在用40种语言学习"
   stats_tumblr: Tumblr： 3.5 年
   stats_facebook: Facebook： 3 年
   stats_twitter: Twitter： 2.5 年
   stats_pinterest: Pinterest： 2 年
   stats_instagram: Instagram： 14 个月
   stats_hoc: 编程一小时： 5 天
-  stats_global: 上亿学生参与过编程一小时
-  stats_girls_more: 尝试过计算机科学的女孩比过去70年的都多
+  stats_global: "上亿学生参与过编程一小时"
+  stats_girls_more: "尝试过计算机科学的女孩比过去70年的都多"
   stats_nina: '"每一天都是一样 &mdash; 学生们100%参与."-尼娜尼科尔斯佩里，老师'
   stats_student: '"我认识到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: '“我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师'
@@ -325,15 +331,15 @@ cn:
   resources_social: 社交网络
   resources_country_resources: 不同国家的特殊资源
   resources_stickers: 贴纸
-  resources_how_to_guides: 操作方法指南
-  resources_promote: 推广
-  resources_nav_tutorials: 尝试教程
-  resources_nav_promote: 传播信息
-  resources_nav_spread_word: 如何参与
-  resources_banner_promote_text: 推广
-  resources_banner_promote_button: 用小册子，鼓舞人心的海报和社交媒体横幅来鼓励他人报名。
-  resources_banner_howto_text: 操作方法
-  resources_banner_howto_button: 教育工作者、 家长和校区主办编程一小时的资源。
+  resources_how_to_guides: '操作方法指南'
+  resources_promote: '推广'
+  resources_nav_tutorials: '尝试教程'
+  resources_nav_promote: '传播信息'
+  resources_nav_spread_word: '如何参与'
+  resources_banner_promote_text: "推广"
+  resources_banner_promote_button: "用小册子，鼓舞人心的海报和社交媒体横幅来鼓励他人报名。"
+  resources_banner_howto_text: "操作方法"
+  resources_banner_howto_button: "教育工作者、 家长和校区主办编程一小时的资源。"
   handouts_section: 分享这些传单
   handouts_onepager: 传播这个消息和这一页的传单
   handouts_brochure: 将这本小册子给教师和学校
@@ -350,6 +356,7 @@ cn:
   title_how_to_companies: 如何主办编程一小时 —— 公司
   title_how_to_officials: 公职人员的操作指南
   title_how_to_volunteers: 如何主办编程一小时 —— 志愿者
+  title_how_to_parents: How-to guide for parents
   title_how_to: 操作方法指南
   title_press_release: 当地官员使用的编程一小时新闻稿
   title_op_ed: 支持计算机科学教育周和编程一小时的专栏样例
@@ -366,7 +373,7 @@ cn:
   events_nav_whole_schools: 整个学校
   events_nav_special: 特别活动
   events_nav_orgs: 组织
-  events_all_old_title: 所有 @year 编程一小时的活动
+  events_all_old_title: "所有 @year 编程一小时的活动"
   events_all_title: 所有编程一小时活动
   events_whole_school_title: 全校的编程一小时活动
   events_special_title: 编程一小时特别活动
@@ -376,10 +383,10 @@ cn:
   highlights_title: 重点
   highlights_header: 编程一小时重点
   highlights_description: 编程一小时活动的精彩瞬间
-  footer_copyright_message: 版权所有 2015 Code.org。保留所有的权利。
-  footer_trademark_message: Hour of Code ™ 是 Code.org 的注册商标。
-  footer_menu_partners: 合作伙伴
-  footer_menu_contact: 联系我们
-  footer_menu_support: 支持
-  footer_menu_terms: 条款
-  footer_menu_privacy: 隐私政策
+  footer_copyright_message: '版权所有 2015 Code.org。保留所有的权利。'
+  footer_trademark_message: 'Hour of Code ™ 是 Code.org 的注册商标。'
+  footer_menu_partners: '合作伙伴'
+  footer_menu_contact: '联系我们'
+  footer_menu_support: '支持'
+  footer_menu_terms: '条款'
+  footer_menu_privacy: '隐私政策'
