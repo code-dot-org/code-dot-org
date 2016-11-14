@@ -333,5 +333,4 @@ module RakeUtils
 
     threads.each(&:join)
   end
-
 end
