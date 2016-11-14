@@ -37,3 +37,10 @@ gamelabCommands.playSound = function (opts) {
     });
   }
 };
+
+gamelabCommands.getUserId = function (opts) {
+  if (!studioApp.labUserId) {
+    throw new Error("User ID failed to load.");
+  }
+  return studioApp.labUserId;
+};
