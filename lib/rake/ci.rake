@@ -9,7 +9,7 @@ namespace :ci do
   task firebase: ['firebase:ci']
 
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
-  task :chef do
+  task :chef_update do
     if CDO.daemon && CDO.chef_managed && !CDO.chef_local_mode
       HipChat.log('Updating Chef cookbooks...')
       RakeUtils.with_bundle_dir(cookbooks_dir) do
@@ -44,12 +44,8 @@ namespace :ci do
   # Additionally run the lint task if specified for the environment.
   task build: [:chef_update] do
     Dir.chdir(deploy_dir) do
-      HipChat.wrap('rake lint') do
-        RakeUtils.rake 'lint' if CDO.lint
-      end
-      HipChat.wrap('rake build') do
-        RakeUtils.rake 'build'
-      end
+      HipChat.wrap('rake lint') { Rake::Task['lint'].invoke } if CDO.lint
+      HipChat.wrap('rake build') { Rake::Task['build'].invoke }
     end
   end
 
@@ -75,21 +71,20 @@ namespace :ci do
     end
   end
 
-
-  task test: ['test:ci']
-
-  tasks = []
-  tasks << :chef
-  tasks << :lint if CDO.lint
-  tasks << 'build:chef'
-  tasks << :build
-  tasks << 'stack:start'
-  task all: tasks
+  task all: [
+    :firebase,
+    :build_with_cloudfront,
+    :deploy
+  ]
+  task test: [
+    :all,
+    'test:ci'
+  ]
 end
 
 desc 'Update the server as part of continuous integration.'
 task :ci do
-  HipChat.wrap('CI build') { Rake::Task['ci:all'].invoke }
+  HipChat.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
 end
 
 # Use the AWS-provided scripts to cleanly deregister a frontend instance from its load balancer(s),
