@@ -263,6 +263,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
+          onScoreUpdate: config.level.useScore ? s => $('#score-number').text(s) : null,
           assetRoot: Craft.skin.assetUrl('designer/'),
           audioPlayer: {
             register: studioApp.registerAudio.bind(studioApp),
@@ -372,7 +373,9 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-        visualizationColumn={<CraftVisualizationColumn/>}
+        visualizationColumn={
+          <CraftVisualizationColumn showScore={!!config.level.useScore}/>
+        }
         onMount={onMount}
       />
     </Provider>,
