@@ -2,8 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var glob = require('glob-all');
-var memoize = require('lodash/memoize');
 
 const ENTRY_POINT_FILE_PATH_PATTERN = /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
 const SITES_CONFIG = {
