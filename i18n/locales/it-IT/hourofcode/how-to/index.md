@@ -13,9 +13,9 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+Abbiamo a disposizione diversi [corsi divertenti da un'ora ](%= resolve_url('https://code.org/learn') %) per partecipanti di tutte le età, sviluppati da molti partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Tutti i corsi dell'Ora del Codice:](%= resolve_url("https://code.org/learn") %)**
 
   * Richiedono un tempo di preparazione minimo per gli insegnanti
   * Sono auto-guidati — cioè permettono agli studenti di imparare secondo il proprio ritmo e livello di abilità
@@ -55,11 +55,11 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Il [ video di lancio de l'Ora del Codice 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) o il <% if @country == 'uk' %>[Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video de l'Ora del Codice 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Il video del Presidente Obama che invita gli studenti ad imparare l'informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
-  * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+  * Spiega in che modo la tecnologia può incidere sulle nostre vite, con esempi che possano interessare sia i ragazzi che le ragazze (parla ad esempio di come la tecnologia salva vite umane, aiuta le persone, le mette in contatto).
   * Come classe, elenca tutte le cose che utilizzano l'informatica nella vita quotidiana.
   * Puoi trovare dei suggerimenti per far interessare le ragazze all'informatica [qui](%= resolve_url('https://code.org/girls') %).
 
@@ -79,7 +79,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 [/col-33]
 
-**When your students come across difficulties it's okay to respond:**
+**Quando i partecipanti incontrano delle difficoltà, si può rispondere così:**
 
   * "Non lo so. Cerchiamo di capirlo insieme."
   * "La tecnologia non sempre funziona come vorremmo."
@@ -87,9 +87,9 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**What to do if a student finishes early?**
+**Cosa fare se qualcuno finisce prima del previsto?**
 
-  * Gli studenti possono accedere a tutte le lezioni e provare altre attività dell'Ora del Codice su [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Gli studenti possono accedere a tutte le lezioni e provare altre attività dell'Ora del Codice su code.org/learn [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
   * Oppure è possibile proporre agli studenti che hanno terminato anticipatamente di aiutare i compagni di classe che hanno difficoltà con l'attività.
 
 [col-33]

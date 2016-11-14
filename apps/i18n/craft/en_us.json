@@ -1,6 +1,6 @@
 {
   "blockActionAdd": "add",
-  "blockActionAttack": "hit",
+  "blockActionAttack": "attack",
   "blockActionDestroyEntity": "disappear",
   "blockActionDrop": "drop",
   "blockActionExplodeEntity": "explode",
@@ -83,7 +83,7 @@
   "entityTypePlayer": "player",
   "entityTypeSheep": "sheep",
   "entityTypeZombie": "zombie",
-  "eventTypeWhenAttacked": "when hit",
+  "eventTypeWhenAttacked": "when attacked",
   "eventTypeWhenDay": "when day",
   "eventTypeWhenNight": "when night",
   "eventTypeWhenRun": "when run",

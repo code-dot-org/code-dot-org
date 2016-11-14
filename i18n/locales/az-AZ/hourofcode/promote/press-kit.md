@@ -19,7 +19,7 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 ### Mərhələlər üzrə bələdçi:
 
-**1. Plan your event**
+**1. Tədbirinizi planlaşdırın**
 
   * Kod Saatəna başlamaq üçün yığıncaq təşkil edin.
   * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
@@ -51,7 +51,7 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 **More details and a quote you can use in materials**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+Hadi Partovi, "Code.org" təsisçisi və baş icraçı direktoru söylədi: "Kod Saatı proqramlaşdırma barədə mifləri dağıtmaq, informatikanın kvant fizikası kimi qəliz bir elm olmadığını göstərmək üçün hazırlanıb - hər kəs əsasları öyrənə bilər". "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
 
 **About Code.org**
 

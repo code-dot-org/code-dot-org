@@ -3,7 +3,10 @@ import FirebaseStorage from '@cdo/apps/applab/firebaseStorage';
 import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
 
 describe('FirebaseStorage', () => {
+  let originalWindowApplab;
+
   beforeEach(() => {
+    originalWindowApplab = window.Applab;
     window.Applab = {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
@@ -22,6 +25,10 @@ describe('FirebaseStorage', () => {
     }).then(() => {
       getDatabase(Applab.channelId).set(null);
     });
+  });
+
+  afterEach(() => {
+    window.Applab = originalWindowApplab;
   });
 
   describe('setKeyValue', () => {

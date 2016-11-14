@@ -32,8 +32,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "authored_hints": "[]",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

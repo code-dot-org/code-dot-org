@@ -1,26 +1,26 @@
 nl:
-  site_name: CodeUur
-  hour_of_code: CodeUur
-  language: Nederlands
+  site_name: 'CodeUur'
+  hour_of_code: 'CodeUur'
+  language: 'Nederlands'
   front_title: 'Doe mee met het grootste onderwijsproject in de geschiedenis, %{campaign_date}, 2015'
-  coming_soon: Binnenkort beschikbaar
+  coming_soon: 'Binnenkort beschikbaar'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: 7 dec.
-  campaign_date_start_long: 7 december
-  campaign_date_short: 7-13 dec
-  campaign_date_full: 7-13 december
+  campaign_date_start_short: "7 dec."
+  campaign_date_start_long: "7 december"
+  campaign_date_short: "7-13 dec"
+  campaign_date_full: "7-13 december"
   campaign_date_year: "2016"
-  campaign_date_full_year: December 5-11, 2016
-  front_header_banner: Doe mee met het grootste onderwijsproject in de geschiedenis, 7-13 december, 2015
+  campaign_date_full_year: "December 5-11, 2016"
+  front_header_banner: 'Doe mee met het grootste onderwijsproject in de geschiedenis, 7-13 december, 2015'
   front_intro_default: 'Het CodeUur is een wereldwijde beweging die tientallen miljoenen studenten in meer dan 180 landen bereikt. Iedereen kan waar dan ook een CodeUur organiseren. Tutorials van een uur zijn in meer dan 40 talen beschikbaar. Er is geen ervaring nodig. <strong>Leeftijd 4-104</strong>'
-  front_watch_video: Bekijk de nieuwe video
-  front_watch_regular_video: Bekijk de video
-  front_volunteers: Technische vrijwilligers gezocht
-  front_start_learning: Start learning
-  header_menu_resources: Middelen
-  header_menu_faq: Veelgestelde Vragen
-  header_menu_how_to: Uitleg
-  header_menu_promote: Promoot
+  front_watch_video: 'Bekijk de nieuwe video'
+  front_watch_regular_video: 'Bekijk de video'
+  front_volunteers: 'Technische vrijwilligers gezocht'
+  front_start_learning: 'Start learning'
+  header_menu_resources: 'Middelen'
+  header_menu_faq: 'Veelgestelde Vragen'
+  header_menu_how_to: 'Uitleg'
+  header_menu_promote: 'Promoot'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -37,6 +37,7 @@ nl:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
+  company_afterschool: after school
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -64,6 +65,7 @@ nl:
   company_ccsoh: Columbus City School District
   company_cresskillboe: Cresskill Public Schools
   company_dallasisd: Dallas Independent School District
+  company_disney: Disney
   company_dpsk12: Denver Public Schools
   company_dcsdk12: Douglas County Schools
   company_dpsnc: Durham Public Schools
@@ -78,7 +80,7 @@ nl:
   company_fpschools: Franklin Pierce School District
   company_frederickcountypublicschools: Frederick County Public Schools
   company_fultonschools: Fulton County Schools
-  company_vadoe: "Governor's School Programs"
+  company_vadoe: Governor's School Programs
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
@@ -144,165 +146,171 @@ nl:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: Terug naar Middelen
-  how_to_nav_educators: Voor leerkrachten
-  how_to_nav_after_school: Voor na schooltijd
-  how_to_nav_parents: Voor ouders
-  how_to_nav_public_officials: Voor ambtenaren
-  how_to_nav_districts: Voor gemeenten
-  how_to_nav_assemblies: Voor scholengemeenschappen
-  how_to_nav_organizations: Voor organisaties
-  how_to_nav_companies: Voor bedrijven
-  how_to_nav_afterschool_educators: Voor naschoolse opvang
-  how_to_nav_volunteers: Voor vrijwilligers
-  whats_next_header: En nu?
+  nav_back_to_resources: "Terug naar Middelen"
+  how_to_nav_educators: "Voor leerkrachten"
+  how_to_nav_after_school: "Voor na schooltijd"
+  how_to_nav_parents: "Voor ouders"
+  how_to_nav_public_officials: "Voor ambtenaren"
+  how_to_nav_districts: "Voor gemeenten"
+  how_to_nav_assemblies: "Voor scholengemeenschappen"
+  how_to_nav_organizations: "Voor organisaties"
+  how_to_nav_companies: "Voor bedrijven"
+  how_to_nav_afterschool_educators: "Voor naschoolse opvang"
+  how_to_nav_volunteers: "Voor vrijwilligers"
+  whats_next_header: "En nu?"
   whats_next_description: "We je materiaal en handige tips sturen voor je event. Er komen snel nieuwe tutorials van 2015 voor alle browsers en smartphones – of zelfs voor gebruik zonder computer! <a href='http://code.org/learn'>Probeer de huidige tutorials</a>"
   whats_next_how_to: "<a href='/how-to'>Hoe organiseer je een CodeUUr</a>"
   whats_next_promote: "<a href='/promote'>Promoot het CodeUur</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>Hoe promoot je het CodeUur?</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Hoe promoot je het CodeUur</a>"
   whats_next_try: "<a href='http://code.org/learn'>Probeer de tutorials uit</a>"
-  whats_next_try_button: Probeer de tutorials uit
-  n_have_learned_an_hoc: '<h1>Probeer een</h1><h2>CodeUur</h2><h3># bediend</h3>'
-  anybody_can_learn: Iedereen kan leren.
-  get_started: Start
+  whats_next_try_button: 'Probeer de tutorials uit'
+  n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>CodeUur</h2><h3># bediend</h3>"
+  anybody_can_learn: 'Iedereen kan leren.'
+  get_started: 'Start'
   beyond_an_hour: 'Een CodeUur: Erna'
-  register_now: Registreer nu
-  share_on_facebook: Deel op Facebook
-  share_on_twitter: Deel op Twitter
-  front_join_us_heading: Een CodeUur voor elk leerling.
-  front_join_us_anybody_can_learn: Anybody can learn
-  front_join_us_description: Programmering is een stichting voor iedere leerling. Help ons het introduceren aan 100 miljoen mensen.
-  front_join_us_description_short: Informatica is een basis voor ieder leerling.
-  front_join_us_button: Doe mee
-  front_what_is_hoc: Wat is het CodeUur?
-  front_join_us_header: Iedereen kan de basis leren, en zelfs plezier hebben als je leert!
-  front_join_us_volunteer_header: Vrijwilligers voor het CodeUur
-  front_join_us_teacher: Bent u een leraar?
-  front_join_us_inspire: Inspireer leerlingen met
-  front_join_us_inspire_link: een CodeUur in de klas.
-  front_join_us_teacher_link: Inspireer leerlingen met een CodeUur in de klas
-  front_join_us_teacher_volunteer: Ga op zoek naar lokale vrijwilligers die uw klas kunnen bezoeken of de leerlingen van ver af kunnen inspireren
-  front_join_us_parent: Bent u een ouder?
-  front_join_us_ask_link: Vraag uw lokale school
-  front_join_us_ask: voor het organiseren van een CodeUur.
-  front_join_us_parent_link: Vraag je plaatselijke school een CodeUur te doen
-  front_join_us_computer_science: Hou je gewoon van informatica?
-  front_join_us_cs_volunteer: Heeft u een passie voor codering en/of programmering?
-  front_join_us_spread: Vertel het verder.
-  front_join_us_spread_word: Vertel het door in jouw omgeving
-  front_join_us_spread_word_work: Vertel het door in jouw omgeving of op je werk
-  front_join_us_sign_up_volunteer: Meld u aan als vrijwilliger bij een lokale klaslokaal of via een video-chat
-  front_join_us_organize: "Of organiseer zelf een 'CodeUur'-evenement."
+  register_now: 'Registreer nu'
+  share_on_facebook: 'Deel op Facebook'
+  share_on_twitter: 'Deel op Twitter'
+  front_join_us_heading: 'Een CodeUur voor elk leerling.'
+  front_join_us_announcements: 'Announcements'
+  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_description: 'Programmering is een stichting voor iedere leerling. Help ons het introduceren aan 100 miljoen mensen.'
+  front_join_us_description_short: 'Informatica is een basis voor ieder leerling.'
+  front_join_us_button: 'Doe mee'
+  front_what_is_hoc: 'Wat is het CodeUur?'
+  front_join_us_header: 'Iedereen kan de basis leren, en zelfs plezier hebben als je leert!'
+  front_join_us_volunteer_header: 'Vrijwilligers voor het CodeUur'
+  front_join_us_tutorials: "Try this year's new tutorials!"
+  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_robotics: 'Got robots?'
+  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_teacher: 'Bent u een leraar?'
+  front_join_us_inspire: 'Inspireer leerlingen met'
+  front_join_us_inspire_link: 'een CodeUur in de klas.'
+  front_join_us_teacher_link: "Inspireer leerlingen met een CodeUur in de klas"
+  front_join_us_teacher_volunteer: "Ga op zoek naar lokale vrijwilligers die uw klas kunnen bezoeken of de leerlingen van ver af kunnen inspireren"
+  front_join_us_parent: 'Bent u een ouder?'
+  front_join_us_ask_link: 'Vraag uw lokale school'
+  front_join_us_ask: 'voor het organiseren van een CodeUur.'
+  front_join_us_parent_link: "Vraag je plaatselijke school een CodeUur te doen"
+  front_join_us_computer_science: 'Hou je gewoon van informatica?'
+  front_join_us_cs_volunteer: 'Heeft u een passie voor codering en/of programmering?'
+  front_join_us_spread: 'Vertel het verder.'
+  front_join_us_spread_word: "Vertel het door in jouw omgeving"
+  front_join_us_spread_word_work: "Vertel het door in jouw omgeving of op je werk"
+  front_join_us_sign_up_volunteer: 'Meld u aan als vrijwilliger bij een lokale klaslokaal of via een video-chat'
+  front_join_us_organize: 'Of organiseer zelf een ''CodeUur''-evenement.'
   front_join_us_how_to_run: "Hier leer je hoe je een 'CodeUur'-evenement kunt begeleiden"
-  front_join_us_help_promote: Help het CodeUur te promoten
-  front_join_us_students: Leerlingen
-  front_join_us_teachers: Leraren
-  front_join_us_everyone: Iedereen
-  front_join_us_try: Probeer het
-  front_join_us_sign_up: Meld je aan
-  front_join_us_host: Organiseer het
-  front_join_us_support: Ondersteun het
+  front_join_us_help_promote: "Help het CodeUur te promoten"
+  front_join_us_students: "Leerlingen"
+  front_join_us_teachers: "Leraren"
+  front_join_us_everyone: "Iedereen"
+  front_join_us_try: "Probeer het"
+  front_join_us_sign_up: "Meld je aan"
+  front_join_us_host: "Organiseer het"
+  front_join_us_support: "Ondersteun het"
   front_join_us_more_info: "Ga voor meer informatie naar <a href='https://code.org'>code.org</a>."
-  front_join_us_code_info: Ga voor meer informatie naar code.org
-  front_join_us_n_students_served: '# geholpen'
+  front_join_us_code_info: "Ga voor meer informatie naar code.org"
+  front_join_us_n_students_served: "# geholpen"
   signup_header: 'Organiseer een CodeUur tijdens %{campaign_date}, en registreer het hier.'
-  signup_name_label: Je naam
-  signup_email_label: Jouw E-mail
-  signup_organization_name_label: Naam van school of organisatie
-  signup_event_type_label: Soort evenement
-  signup_event_entire_school_label: Mijn gehele school doet mee
-  signup_event_location_label: Evenement Locatie (Optioneel)
-  signup_special_event_flag_label: Markeer mijn speciale evenement
-  signup_special_event_details_label: Speciale evenement details
+  signup_name_label: 'Je naam'
+  signup_email_label: 'Jouw E-mail'
+  signup_organization_name_label: 'Naam van school of organisatie'
+  signup_event_type_label: 'Soort evenement'
+  signup_event_entire_school_label: 'Mijn gehele school doet mee'
+  signup_event_location_label: 'Evenement Locatie (Optioneel)'
+  signup_special_event_flag_label: 'Markeer mijn speciale evenement'
+  signup_special_event_details_label: 'Speciale evenement details'
   signup_send_posters_flag_label: '<a href= "/resources#posters">posters</a> versturen naar mijn school of organisatie'
-  signup_send_posters_address_label: Adres van school of organisatie
-  signup_whole_school_flag_label: Dit evenement is voor een hele school
-  signup_your_event: Meld uw evenement aan
-  signup_host_an_hour: Host an hour
-  signup_match_volunteer: Help me een software-ontwikkelaar in de buurt te vinden om mijn leerlingen te inspireren
-  signup_multiple_event_warning: Als u meerdere evenementen host, geef de evenementen dan verschillende namen of verstuur ze in aparte e-mails. We tellen alleen één evenement per naam en e-mail.
-  signup_name_placeholder: Je Naam
-  signup_email_placeholder: je@voorbeeld.com
-  signup_organization_name_placeholder: Bijvoorbeeld, Lincoln High School
-  signup_event_location_placeholder: "Postcode en land OF volledige adres. \r (We zullen dit gebruiken om een pin te plaatsen op onze kaart)"
-  signup_special_event_details_placeholder: Beschrijf wat dit een special evenement maakt
-  signup_send_posters_address_placeholder: Dit adres zal niet worden gedeeld op onze kaart
-  signup_event_type_in_school: In een school
-  signup_event_type_out_of_school: Buiten de school
-  signup_submit_label: Meld je aan
-  signup_submit_error_message: Er is een fout opgetreden. Gelieve te controleren of alle vereiste velden correct zijn ingevuld.
-  signup_thank_you_header: Bedankt voor het registreren om een CodeUur evenement te organiseren.
-  signup_thank_you_message: We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen.
-  map_title: Hour of Code map
+  signup_send_posters_address_label: 'Adres van school of organisatie'
+  signup_whole_school_flag_label: 'Dit evenement is voor een hele school'
+  signup_your_event: 'Meld uw evenement aan'
+  signup_host_an_hour: 'Host an hour'
+  signup_match_volunteer: 'Help me een software-ontwikkelaar in de buurt te vinden om mijn leerlingen te inspireren'
+  signup_multiple_event_warning: "Als u meerdere evenementen host, geef de evenementen dan verschillende namen of verstuur ze in aparte e-mails. We tellen alleen één evenement per naam en e-mail."
+  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_name_placeholder: 'Je Naam'
+  signup_email_placeholder: 'je@voorbeeld.com'
+  signup_organization_name_placeholder: "Bijvoorbeeld, Lincoln High School"
+  signup_event_location_placeholder: "Postcode en land OF volledige adres. \\r (We zullen dit gebruiken om een pin te plaatsen op onze kaart)"
+  signup_special_event_details_placeholder: 'Beschrijf wat dit een special evenement maakt'
+  signup_send_posters_address_placeholder: 'Dit adres zal niet worden gedeeld op onze kaart'
+  signup_event_type_in_school: 'In een school'
+  signup_event_type_out_of_school: 'Buiten de school'
+  signup_submit_label: 'Meld je aan'
+  signup_submit_error_message: "Er is een fout opgetreden. Gelieve te controleren of alle vereiste velden correct zijn ingevuld."
+  signup_thank_you_header: "Bedankt voor het registreren om een CodeUur evenement te organiseren."
+  signup_thank_you_message: 'We sturen u een bevestigingse-mail met informatie om u aan de slag te kunnen.'
+  map_title: "Hour of Code map"
   map_header: '# CodeUur gebeurtenissen rond de wereld'
-  see_all_events: Bekijk alle evenementen
+  see_all_events: 'Bekijk alle evenementen'
   map_header_company: '# door bedijfsorganisatoren'
   map_header_country: '# in %{country}'
-  map_search_placeholder: Zoek CodeUur events
-  map_search_search: Zoek
-  map_search_reset: Resetten
-  map_legend_title: Legenda
-  map_legend_hoc_events: CodeUur-Events
-  map_legend_cs_tech_jam: CS Tech Jam
-  meta_tag_og_title: Het CodeUur komt eraan
+  map_search_placeholder: 'Zoek CodeUur events'
+  map_search_search: 'Zoek'
+  map_search_reset: 'Resetten'
+  map_legend_title: 'Legenda'
+  map_legend_hoc_events: 'CodeUur-Events'
+  map_legend_cs_tech_jam: 'CS Tech Jam'
+  meta_tag_og_title: 'Het CodeUur komt eraan'
   meta_tag_og_description: 'Het CodeUur is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
-  meta_tag_twitter_title: Het Uur Code komt eraan
+  meta_tag_twitter_title: 'Het Uur Code komt eraan'
   meta_tag_twitter_description: 'Het CodeUur is een wereldwijde beweging die tientallen miljoenen leerlingen wil bereiken in 180+ landen en in meer dan 30 talen. Leeftijd: 4 t/m 104.'
-  twitter_default_text: 'Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg'
-  hoc_faq_title: Veelgestelde vragen
-  hoc_faq_what_is_hoc_q: Wat is het CodeUur?
+  twitter_default_text: "Ik neem dit jaar deel aan het #HourOfCode, jij ook? @codeorg"
+  hoc_faq_title: 'Veelgestelde vragen'
+  hoc_faq_what_is_hoc_q: 'Wat is het CodeUur?'
   hoc_faq_what_is_hoc_a: "Het CodeUur is een één uur durende introductie in de wereld van informatica, ontworpen om coderen begrijpbaar te maken en aan te tonen dat iederen de basis kan leren. <a href='http://code. org/learn'>Bekijk de handleidingen</a>.<a href='%{codeorg_url}'>."
-  hoc_faq_last_year: Probeer de tutorials
-  hoc_faq_when_is_hoc_q: Wanneer is het CodeUur?
+  hoc_faq_last_year: "Probeer de tutorials"
+  hoc_faq_when_is_hoc_q: 'Wanneer is het CodeUur?'
   hoc_faq_when_is_hoc_a: "Iedereen kan wanneer hij maar wil een CodeUur organiseren, maar ons doel is om tijdens %{campaign_date} tientallen miljoenen leerlingen een CodeUur te laten proberen, om <a href='http://csedweek.org'>de week van programmeren</a> te vieren. Is het specifiek één uur <i>uur</i>? Nee. Je kunt het CodeUur op ieder moment in de week doen. (En lukt het niet in deze week, doe het dan de week ervoor of erna)."
-  hoc_faq_why_cs_q: Waarom Informatica?
+  hoc_faq_why_cs_q: 'Waarom Informatica?'
   hoc_faq_why_cs_a: "<i>Elke</i> leerling moet de kans krijgen om te leren programmeren. Het helpt probleemoplossende vaardigheden, logica en creativiteit te ontwikkelen. Leerlingen krijgen door vroeg te beginnen de basis voor een succesvole hedendaagse loopbaan. Kijk voor meer informatie op <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: Hoe kan ik aan het CodeUur deelnemen?
+  hoc_faq_how_participate_q: 'Hoe kan ik aan het CodeUur deelnemen?'
   hoc_faq_how_participate_a: "<a href='/how-to'>Begin hier met plannen</a> door onze handleiding door te nemen. Je kunt een CodeUur organiseren op jouw school of in je gemeenschap &mdash; zoals een naschoolse club, vrijwilligersorganisatie of op het werk. Of probeer het gewoon zelf op %{campaign_date}."
-  hoc_faq_behind_hoc_q: Wie zit er achter het CodeUur?
+  hoc_faq_behind_hoc_q: 'Wie zit er achter het CodeUur?'
   hoc_faq_behind_hoc_a: "Het CodeUur wordt georganiseerd door <a href='http://code.org'>Code.org</a>, een openbare 501c3 non-profit gewijd aan het verspreiden van interesse in de informatica, door deze beschikbaar te stellen aan scholen en door de deelname door vrouwen en allochtone leerlingen te ondersteunen. Een <a href='http://code.org/about/partners'>ongekende coalitie van partners</a> steunen samen het CodeUur &mdash; waaronder Microsoft, Apple, Amazon, Boys and Girls Clubs of America en het College Board.<a href='%{codeorg_url}/about/partners'>."
-  hoc_faq_host_q: Ik weet niets over programmeren. Kan ik nog steeds een evenement organiseren?
+  hoc_faq_host_q: "Ik weet niets over programmeren. Kan ik nog steeds een evenement organiseren?"
   hoc_faq_host_a: "Natuurlijk. De CodeUur-activiteiten zijn doe-het-zelf. Het enige wat je hoeft te doen is <a href='%{codeorg_url}/learn'>onze tutorials uit te proberen</a>: kies de tutorial, en kies een uur &mdash; wij zorgen voor de rest. We hebben mogelijkheden voor iedere leeftijd en ervaringsniveau, van kleuterschool en hoger. Ga van start door onze <a href='/how-to'>handleiding te lezen</a>."
-  hoc_faq_devices_q: Welke apparaten moet ik gebruiken voor mijn leerlingen?
+  hoc_faq_devices_q: "Welke apparaten moet ik gebruiken voor mijn leerlingen?"
   hoc_faq_devices_a: "Code.org tutorials werken op alle apparaten en browsers. U kunt meer informatie over de Code.org tech needs tutorials vinden op < een href = '%{codeorg_url}/educatie/it' >. Tech needs voor non-Code.org tutorials kunt u vinden op <a href=''%{codeorg_url}/learn'> in de tutorial beschrijving. Vergeet niet dat wij ook unplugged activiteiten bieden!"
-  hoc_faq_need_computers_q: Heb ik een computer nodig voor iedere deelnemer?
+  hoc_faq_need_computers_q: 'Heb ik een computer nodig voor iedere deelnemer?'
   hoc_faq_need_computers_a: "Nee. We hebben cursussen die werken op PC's, smartphones, tablets, en een paar waarvoor je helemaal geen computer nodig hebt! Je kunt meedoen waar je ook bent, wat je ook hebt. <p><i>Hier zijn een aantal mogelijkheden:</i> <br> <ul> <li><b>Werk in paren.</b> Onderzoek wijst uit dat leerlingen het best leren met <a href='https://nl.wikipedia.org/wiki/Pair_programming'>pair programming</a>, door een computer te delen en samen te werken. Moedig je leerlingen aan tweetallen te vormen. <li><b>Gebruik een projector.</b> Als je een projector en scherm hebt voor een computer met een internetverbinding, dan kan je hele groep samen een CodeUur doen. Kijk naar stukken video en los om de beurt opdrachten op of beantwoord vragen. <li><b>Ga draadloos</b> We hebben ook tutorials die helemaal geen computer vereisen.</ul>"
-  hoc_faq_international_q: 'Ik ben in <country>. Hoe doe ik internationaal mee?'
+  hoc_faq_international_q: "Ik ben in <country>. Hoe doe ik internationaal mee?"
   hoc_faq_international_a: "Iedereen kan een CodeUur organiseren, waar je ook bent. Vorig jaar deden leerlingen van over de hele wereld een CodeUur. Lees <a href='/promote'>hier</a> meer."
-  hoc_faq_tutorial_q: Hoe kan ik een CodeUur tutorial maken?
+  hoc_faq_tutorial_q: 'Hoe kan ik een CodeUur tutorial maken?'
   hoc_faq_tutorial_a: "Als je tutorial-partner wil worden, <a href='targetHOC'>lees onze richtlijnen en instructies</a>. We bieden graag een veelheid aan mogelijkheden, maar het hoofddoel is de ervaring voor leerlingen en leraren die nieuw zijn in de informatica te optimaliseren."
-  hoc_faq_account_q: Moeten leerlingen zich aanmelden met een account?
+  hoc_faq_account_q: "Moeten leerlingen zich aanmelden met een account?"
   hoc_faq_account_a: "Neen. Er is absoluut geen inschrijving of login vereist van leerlingen om het CodeUur te proberen. Meeste van de <a href='http://code.org/learn/beyond'> vervolg-cursussen</a> vereisen het maken van een account om op die manier de vooruitgang van de leerlingen op te slaan.<a href='%{codeorg_url}/learn/beyond'>."
-  hoc_faq_high_school_q: Welke activiteit doe ik best met leerlingen van een middelbare school?
+  hoc_faq_high_school_q: "Welke activiteit doe ik best met leerlingen van een middelbare school?"
   hoc_faq_high_school_a: "Ongeacht de leeftijd raden we aan om te beginnen bij een van de beginnershandleidingen op <a href='http://code.org/learn'Code.org/learn</a> om te beginnen met een handleiding zoals Angry Birds of met Anna en Elsa. Een leerling van het middelbaar zou in staat moeten zijn om zo'n handleiding af te werken in een 30-tal minuten en dan kunnen ze verder gaan met een meer geavanceerde handleiding in Javascript zoals Khan Academy of CodeHS."
-  hoc_faq_scratch_q: Ik doe Scratch voor CodeUur maar wat als mijn leerlingen iPads hebben in plaats van laptops?
+  hoc_faq_scratch_q: "Ik doe Scratch voor CodeUur maar wat als mijn leerlingen iPads hebben in plaats van laptops?"
   hoc_faq_scratch_a: "Scratch werkt niet op tablets. Als je leerlingen jong zijn kunnen ze gebruik maken van de ScratchJR iPad app (voor kinderen die al kunnen lezen). Wanneer je naar de handleidingen kijkt op <a href='http://code.org/learn'>Code.org/learn</a>, kan je daar andere handleidingen vinden die werken op iPads - van Code.org, Tynker,Lightbot of CodeSpark."
-  hoc_faq_count_hoc_q: Hoe tellen jullie het totale aantal van CodeUur?
-  hoc_faq_map_q: Waarom zie ik mijn punt niet op de kaart?
-  hoc_faq_map_a: Het spijt ons zeer dat u uw CodeUur evenement niet kunt vinden op de CodeUur kaart. Vanwege de tientallen duizenden organisatoren die zich aanmelden, aggregeert de kaart de gegevens en weergeeft één punt voor verschillende evenementen. Als u klikt op het nummer boven de kaart wordt u geleid naar een lijst van alle evenementen gesorteerd op gemeente, daar staat uw evenement vermeld. Bovendien duurt het, gezien de duizenden aanmeldingen voor het CodeUur, 48 uur om de kaart en event bij te werken. Probeer het een paar dagen later weer!
+  hoc_faq_count_hoc_q: "Hoe tellen jullie het totale aantal van CodeUur?"
+  hoc_faq_map_q: "Waarom zie ik mijn punt niet op de kaart?"
+  hoc_faq_map_a: "Het spijt ons zeer dat u uw CodeUur evenement niet kunt vinden op de CodeUur kaart. Vanwege de tientallen duizenden organisatoren die zich aanmelden, aggregeert de kaart de gegevens en weergeeft één punt voor verschillende evenementen. Als u klikt op het nummer boven de kaart wordt u geleid naar een lijst van alle evenementen gesorteerd op gemeente, daar staat uw evenement vermeld. Bovendien duurt het, gezien de duizenden aanmeldingen voor het CodeUur, 48 uur om de kaart en event bij te werken. Probeer het een paar dagen later weer!"
   hoc_faq_count_hoc_a: "De teller van een CodeUur is geen nauwkeurige meting van het gebruik. We kunnen niet het exacte aantal unieke leerlingen tellen tijdens het volgen van het gebruik van het CodeUur, met name omdat we inloggen of registreren niet verplicht stellen voor de leerlingen. Daardoor tellen we tegelijkertijd zowel te veel als te weinig deelnemers. Lees de verdere details <a href='http://code. org/loc'>hier</a>.<a href='%{codeorg_url}/loc'>."
-  hoc_faq_one_hour_q: Hoeveel kan men leren in een uur?
+  hoc_faq_one_hour_q: "Hoeveel kan men leren in een uur?"
   hoc_faq_one_hour_a: 'Het doel van CodeUur is niet om van iedereen in één uur een programmering expert te maken. Eén uur is alleen genoeg om te leren dat programmering leuk en creatief is, dat het toegankelijk is op alle leeftijden, voor alle scholieren ongeacht wat de achtergrond is. De maatstaf voor het succes van deze campagne is niet in hoeveel scholieren programmering leren - het succes is doorgevoerd in brede deelname op geslacht en etnische en sociaal-economische groepen, en de daaruit voortvloeiende toename van de inschrijving en deelname die we in programmering cursussen op alle niveaus zien. Miljoenen van de deelnemende leerkrachten en leerlingen hebben besloten verder te gaan dan alleen één uur - om te leren voor een hele dag, een hele week of zelfs langer, ook hebben veel studenten besloten zich in te schrijven voor een hele cursus (of zelfs een college). <br/><br/> Naast de studenten is een andere "leerling" de opvoeder die het vertrouwen heeft na een uur les programmeren te leren aan anderen hoewel deze geen universiteitsgraad als een computerwetenschapper hebben. Tienduizenden leraren besluiten verder te gaan met programmering, door PD bij te wonen of online cursussen aan te bieden, of beide. En dat geldt ook voor school directeurs die beseffen dat programmeren iets is wat de studenten willen leren en de leerkrachten willen kunnen. <br/><br/> Bovendien, wat alle deelnemers kunnen leren één uur is dat we dit kunnen doen.'
-  hoc_faq_more_questions_q: Heb je meer vragen?
+  hoc_faq_more_questions_q: "Heb je meer vragen?"
   hoc_faq_more_questions_a: "Probeer het antwoord te vinden in ons  <a href='http://support.code.org'>forum</a>."
-  hoc_faq_keep_learning_q: Hoe kan ik blijven leren na het CodeUur?
+  hoc_faq_keep_learning_q: "Hoe kan ik blijven leren na het CodeUur?"
   hoc_faq_keep_learning_a: "Iedereen kan, op elk gewenst moment, een CodeUur hosten. De tutorials blijven gedurende een jaar op de site staan. U kunt verwachten dat alle onze tutorials en curriculum beschikbaar zullen zijn op onze site. Ga naar <a href='/promote'> onze middelen</a> voor how-to gidsen en andere middelen die u kunnen helpen uw CodeUur evenement tot een succes te maken."
-  hoc_faq_certificates_q: Waar kan ik certificaten voor mijn studenten afdrukken?
+  hoc_faq_certificates_q: "Waar kan ik certificaten voor mijn studenten afdrukken?"
   hoc_faq_certificates_a: "Ga naar onze <a href='%{codeorg_url}/certificates'> certificaten pagina</a> waar u certificaten voor uw hele klas kunt afdrukken."
-  hoc_faq_logo_q: Are there limitations to how I can use the Hour of Code logo or name?
+  hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
   hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>these guidelines for usage</a>."
-  stats_hoc_2013_image_alt: Statistieken van CodeUur van 2013
-  stats_growth: Bereikte het als snelste 15 miljoen deelnemers.
-  stats_i18n: Leerlingen leren in 40 talen
+  stats_hoc_2013_image_alt: 'Statistieken van CodeUur van 2013'
+  stats_growth: "Bereikte het als snelste 15 miljoen deelnemers."
+  stats_i18n: "Leerlingen leren in 40 talen"
   stats_tumblr: 'Tumble: 3.5 jaar'
   stats_facebook: 'Facebook: 3 jaar'
   stats_twitter: 'Twitter: 2.5 jaar'
   stats_pinterest: 'Pinterest: 2 jaar'
   stats_instagram: 'Instagram: 14 maanden'
   stats_hoc: 'Het CodeUur: 5 dagen'
-  stats_global: Meer dan 100M leerlingen hebben een CodeUur geprobeerd
-  stats_girls_more: Meer meisjes hebben informatica geprobeerd dan in de afgelopen 70 jaar
+  stats_global: "Meer dan 100M leerlingen hebben een CodeUur geprobeerd"
+  stats_girls_more: "Meer meisjes hebben informatica geprobeerd dan in de afgelopen 70 jaar"
   stats_nina: '"Iedere dag leverde hetzelfde resultaat op &mdash; 100% deelname." - Nina Nichols Peery, lerares'
   stats_student: '"Ik wist dat dit een <b>once-in-a-lifetime</b>-kans was." - Mariana Alzate, groep-8er'
   stats_michael: 'Ik heb mijn leerlingen nog <b>nooit</b> zo enthousiast gezien over leren." - Michael Clark, leraar'
@@ -314,7 +322,7 @@ nl:
   resources_one_pager: Hand-out van 1 pagina
   resources_brochure: Brochure
   resources_posters: Posters
-  resources_videos: "Video 's"
+  resources_videos: Video 's
   resources_banners: Banners
   resources_emails: Voorbeeld e-mails
   resources_logo: CodeUur-logo
@@ -323,31 +331,32 @@ nl:
   resources_social: Sociaal
   resources_country_resources: Middelen Per Land
   resources_stickers: Stickers
-  resources_how_to_guides: Handleidingen
-  resources_promote: Promoot
-  resources_nav_tutorials: Probeer de tutorials
-  resources_nav_promote: Vertel het verder
-  resources_nav_spread_word: Doe mee
-  resources_banner_promote_text: Promoot
-  resources_banner_promote_button: Moedig anderen aan om zich aan te melden met behulp van brochures, inspirerende posters en social media banners.
-  resources_banner_howto_text: Handleiding
-  resources_banner_howto_button: Middelen voor leerkrachten, ouders en gemeenten om een CodeUur te organiseren.
+  resources_how_to_guides: 'Handleidingen'
+  resources_promote: 'Promoot'
+  resources_nav_tutorials: 'Probeer de tutorials'
+  resources_nav_promote: 'Vertel het verder'
+  resources_nav_spread_word: 'Doe mee'
+  resources_banner_promote_text: "Promoot"
+  resources_banner_promote_button: "Moedig anderen aan om zich aan te melden met behulp van brochures, inspirerende posters en social media banners."
+  resources_banner_howto_text: "Handleiding"
+  resources_banner_howto_button: "Middelen voor leerkrachten, ouders en gemeenten om een CodeUur te organiseren."
   handouts_section: Deel deze handouts
   handouts_onepager: Vertel het verder met deze handout van 1 pagina
   handouts_brochure: Deel deze brochure uit aan leerkrachten en scholen
   handouts_participationguide: Plan je CodeUur met deze deelname handleiding
-  videos_title: "Toon deze video's om leerlingen te inspireren"
+  videos_title: Toon deze video's om leerlingen te inspireren
   videos_what_most_schools_dont_teach: Wat Je Op De Meeste Scholen Niet Leert (5 min)
-  videos_hoc_2014: 'Het CodeUur is Aangebroken - Iedereen Kan Het Leren'
+  videos_hoc_2014: Het CodeUur is Aangebroken - Iedereen Kan Het Leren
   videos_obama_cs: President Obama over informatica
   videos_anybody_can_learn: Iederen Kan Het Leren (1 min)
   title_country_resources: Middelen Per Land
   title_how_to_districts: CodeUur-Handleiding voor Gemeenten
   title_how_to_events: CodeUur Organisatie Handleiding
-  title_how_to_organizations: 'Hoe organiseer je een CodeUur - Organisaties'
-  title_how_to_companies: 'Hoe organiseer je een CodeUur - Bedrijven'
+  title_how_to_organizations: Hoe organiseer je een CodeUur - Organisaties
+  title_how_to_companies: Hoe organiseer je een CodeUur - Bedrijven
   title_how_to_officials: How-to guide voor overheidsfunctionarissen
   title_how_to_volunteers: Handleiding voor CodeUur-vrijwilligers
+  title_how_to_parents: How-to guide for parents
   title_how_to: Handleiding
   title_press_release: CodeUur Persbericht voor Ambtenaren
   title_op_ed: Voorbeeld-opiniestuk ter ondersteuning van de week van programmeren en het CodeUur
@@ -364,7 +373,7 @@ nl:
   events_nav_whole_schools: Gehele scholen
   events_nav_special: Speciale evenementen
   events_nav_orgs: Orgranisaties
-  events_all_old_title: Alle CodeUur-events in @year
+  events_all_old_title: "Alle CodeUur-events in @year"
   events_all_title: Alle Uur Code eventementen
   events_whole_school_title: Geheel-schoolevenementen van CodeUur
   events_special_title: CodeUur Tech Jams
@@ -374,10 +383,10 @@ nl:
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
-  footer_copyright_message: Copyright 2015 Code.org. Alle rechten voorbehouden.
-  footer_trademark_message: CodeUur™ is een handelsmerk van Code.org.
-  footer_menu_partners: Partners
-  footer_menu_contact: Neem contact op
-  footer_menu_support: Ondersteuning
-  footer_menu_terms: Voorwaarden
-  footer_menu_privacy: Privacybeleid
+  footer_copyright_message: 'Copyright 2015 Code.org. Alle rechten voorbehouden.'
+  footer_trademark_message: 'CodeUur™ is een handelsmerk van Code.org.'
+  footer_menu_partners: 'Partners'
+  footer_menu_contact: 'Neem contact op'
+  footer_menu_support: 'Ondersteuning'
+  footer_menu_terms: 'Voorwaarden'
+  footer_menu_privacy: 'Privacybeleid'
