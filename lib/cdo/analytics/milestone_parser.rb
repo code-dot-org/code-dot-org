@@ -50,7 +50,18 @@ class MilestoneParser
     start_time = Time.now
     debug 'Fetching milestone logs..'
 
-    hosts = s3_client.list_objects(bucket: 'cdo-logs', prefix: 'hosts/', delimiter: '/').data.common_prefixes.map(&:prefix)
+    hosts = []
+    continuation_token = nil
+    loop do
+      objects = s3_client.list_objects_v2(
+        bucket: 'cdo-logs',
+        prefix: 'hosts/',
+        delimiter: '/',
+        continuation_token: continuation_token
+      ).data
+      hosts.concat objects.common_prefixes.map(&:prefix)
+      break unless (continuation_token = objects.next_continuation_token)
+    end
     hosts.select! do |prefix|
       match = prefix.match /^hosts\/(?<host>[^\/]+)\//
       match && !(Regexp.union(IGNORE_HOSTS).match match[:host])

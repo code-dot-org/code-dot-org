@@ -4,8 +4,8 @@
   'yes': Ja
   'no': Nei
   select_language: Velg ditt språk
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org vil snart fjerne støtten for Internet Explorer 8, 9
+    og 10. Vennligst oppgrader til en moderne nettleser.
   upgrade_ie_message_csedweek: CSEdWeek.org kommer snart til å fjerne støtte for Internet
     Explorer 8, 9 og 10. Venligst ppgrader til en moderne nettleser.
   upgrade_ie_link: Lær mer
@@ -93,7 +93,7 @@
     kurs fra våre <a href="%{current_path}/next">samarbeidspartenere</a>.
   get_a_certificate_of_achievement: Hent et diplom for din prestasjon
   view_course: Se kurset
-  view_unit: View unit
+  view_unit: Se kursenhet
   make_app: Lag en app
   congrats_guest_speaker_title: Finn en gjeste høyttaler for ditt klasserom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
@@ -103,7 +103,7 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
+  congrats_third_party_title: Nå kan du bruke det du har lært på disse appene og nettstedene
   third_party_gradelevel_kto8: Grades K-8
   third_party_gradelevel_kto2: Grades K-2
   third_party_gradelevel_2to8: Grades 2-8
@@ -111,9 +111,9 @@
   third_party_gradelevel_5to12: Grades 5-12
   third_party_gradelevel_6plus: Grades 6+
   third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_platform_all: 'Plattform: Internett, iPad & Android'
+  third_party_platform_mobile: 'Plattform: iPad & Android'
+  third_party_platform_web: 'Plattform: Internett'
   third_party_price_varies: 'Price: Plans vary'
   third_party_price_free: 'Pris: Gratis'
   third_party_price_299: 'Pris: $2.99/nedlasting'
@@ -248,10 +248,10 @@
   learn_classes: Finn lokale kodeklubber
   hoc_is_here: Lær å programmere. Det forandrer alt. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_course1: Jeg fullførte nettopp Kurs 1 - sjekk det ut! @codeorg
+  just_did_course2: Jeg fullførte nettopp Kurs 2 - sjekk det ut! @codeorg
+  just_did_course3: Jeg fullførte nettopp Kurs 3 - sjekk det ut! @codeorg
+  just_did_course4: Jeg fullførte nettopp Kurs 4 - sjekk det ut! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: 9 av 10 personer enig, skoler bør lære informatikk. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
@@ -305,36 +305,36 @@
     Satya, CEO i Microsoft"
   homepage_hero_text_bosh: '"Hvis du kan programmere, kan du velge og vrake retningen
     til ditt eget liv." Chris Bosh'
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     "Disse ferdighetene har endret framtiden min.
     Dessuten er det bare moro."
     Luna, 7. klasse
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     "Jeg har aldri noensinne sett elevene
     så ivrige etter å lære"
     - Michael, lærer
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     "Du vet ikke om du liker IT eller ikke
     før du har prøvd det."
     Jackson, 6. klasse
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     "Alt du kan forestille deg
     kan du gjøre med programmering."
     Maya, 2. klasse
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     "IT er ikke for alle andre.
     Det er for deg, her og nå."
     Geraldo, lærer
   homepage_hero_text_teacher1: "\"Koding setter igang kreativitet, inspirasjon og
-    innovasjon - \nalt som er viktig i enhver karriere.\"\nFloresa, lærer\n"
+    innovasjon - \nalt som er viktig i enhver karriere.\"\nFloresa, lærer"
   homepage_hero_text_teacher2: "\"Dette programmet har fått 100 % av elevene \nengasjert,
-    involvert og delaktige.\"\nAdam, lærer\n"
+    involvert og delaktige.\"\nAdam, lærer"
   homepage_hero_text_stat_loc: "#loc linjer med kode skrevet av elever"
   homepage_hero_text_stat_students: "#elev_count elevkontoer på koden Studio"
   homepage_hero_text_stat_served: 'Time kode: #served servert'
   homepage_slot_text_hoc: Kodetimen
   homepage_slot_text_frozen: Frost med Anna og Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Lærersider
   homepage_slot_text_studio: Alle våre øvelser
   homepage_slot_text_course4: Kurs 4
   homepage_slot_text_shop: Butikk
@@ -368,7 +368,7 @@
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Les mer
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Lær mer
   homepage_slot_text_title_hoc: Kodetimen
@@ -396,7 +396,7 @@
   homepage_slot_text_link_stats: Se statistikken
   homepage_slot_text_link_buy: Bli involvert
   homepage_slot_text_link_donate: Gi et bidrag
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-skjorter, hatter, & mer
   homepage_header_codestudio: Code Studio elev kreasjoner
   homepage_header_donors: Code.org takker sine støttespillere
   homepage_donors_seall: Se alt
@@ -443,7 +443,7 @@
     videoer </a>
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Klassisk
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Gumballs fantastiske verden
   playlab_iceage_title: Istid - kommer snart
   playlab_iceage_title_live: Istid
   starwars_subtitle: Skap en galakse med kode
@@ -465,12 +465,11 @@
   mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   mc_specs: Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106
   minecraft_subtitle: Kodetimen med Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  watch_inspirational_videos: Før du begynner, se en av disse videoene og la deg inspirere
+  speak_another_language: Snakker du et annet språk?
+  help_translate: Hjelp oss å oversette.
+  no_internet: Har du ikke internett?
+  download_offline: Last ned offlineversjonen.
   are_you_teacher: Er du en lærer?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer
@@ -585,7 +584,7 @@
   dashboard_landing_new_beta: Nyhet! Prøv våre betakurs for barneskoleelever.
   dashboard_landing_new_k5courses: Nyhet! Prøv våre kurs for barneskoleelever.
   dashboard_landing_useful_links: Andre nyttige lenker (kun engelsk)
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Ressurser for ditt klasserom
   dashboard_landing_office_hours: Still et spørsmål direkte til oss! Besøk vår månedlige
     video-kontortid.
   dashboard_landing_print_certificates: Skriv ut diplomer for elever som fullfører
@@ -605,10 +604,10 @@
     href="/learn/beyond">tilbudt av partnerne våre.</a> Lær å programmere med roboter,
     lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
     Ruby eller Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
+  dashboard_landing_inspire: Inspirer elevene dine med plakater, videoer, med mer.
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_report_bug: Send inn et endringsønske eller rapporter en feil.
   dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: Kodetimen for alle aldersgrupper
   dashboard_hoc_courses_desc: Prøv hvilken som helst av disse korte, én times lange
@@ -662,7 +661,7 @@
   dashboard_action_remove_confirm: Fjern?
   dashboard_action_done: Ferdig
   dashboard_action_required: kreves
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Skriv ut diplomer
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
@@ -672,11 +671,11 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_surveys_answers: Undersøkelser
+  dashboard_percent: Prosent
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_filter_all: Alle
+  dashboard_download_csv: Last ned CSV
   dashboard_navigation_home_page: Hjemmeside for lærere
   dashboard_navigation_section_student_progress: Studentkontoer og Progresjon
   dashboard_navigation_section_teacher_progress: Fremdriften din
@@ -687,12 +686,12 @@
   dashboard_navigation_all_sections: Studentkontoer og Progresjon
   dashboard_navigation_view_progress: Fremgang
   dashboard_navigation_view_text_responses: Se tekstsvarene
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments: Vurderinger
+  dashboard_navigation_view_assessments_surveys: Vurderinger/Undersøkelser
   dashboard_navigation_add_students: Legg til elever
   dashboard_navigation_manage_students: Administrer elever
   dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
-  dashboard_navigation_view_stats: Vis statistikk
+  dashboard_navigation_view_stats: Statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
   dashboard_progress_not_started: ikke påbegynt
@@ -701,8 +700,8 @@
   dashboard_progress_completed_too_many_blocks: fullført, for mange blokker
   dashboard_progress_completed_perfect: Perfekt fulført
   dashboard_progress_furthest_level_attempted: fremste nivå forsøkt
-  dashboard_progress_submitted: submitted
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_submitted: innsendt
+  dashboard_progress_view: 'Vis fremdrift i:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
   dashboard_progress_pair_programming: pair programming
@@ -740,15 +739,27 @@
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
   dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_other_section: Annen lærer
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
+  dashboard_sections_move_students: Flytt elever
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
+  dashboard_error_none_selected: Du valgte ingen elever til å flytte. Vennligst velg
+    minst en elev.
   dashboard_error_other_section: If you're moving students between your own sections,
     select your section from the dropdown. Only select 'Other Section' to move your
     students to a different teacher's section.
@@ -839,7 +850,7 @@
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Riktig
-  dashboard_correctness_incorrect: Incorrect
+  dashboard_correctness_incorrect: Feil
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
   dashboard_status: Status
@@ -880,14 +891,21 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Lær mer
   dashboard_announce_try_now_button: Prøv nå
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Legg til navnet ditt
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_all: Hold deg oppdatert med oppdateringer og ny funksjonalitet
+    på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere
+    kunngjøringer.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
   host_an_hour: Host an hour
@@ -1732,10 +1750,10 @@
     gir barna et morsomt intensivkurs i å programmere roboter, samtidig som de skjerper
     sine ferdigheter i matematikk og naturfag.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Nettleseren din støttes ikke. Vennligst oppdater
+    til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>.
+    Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det
+    er ment.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1744,3 +1762,53 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Try 2016 now
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Try 2015 now
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

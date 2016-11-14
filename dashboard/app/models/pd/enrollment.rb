@@ -4,7 +4,9 @@
 #
 #  id                  :integer          not null, primary key
 #  pd_workshop_id      :integer          not null
-#  name                :string(255)      not null
+#  name                :string(255)
+#  first_name          :string(255)
+#  last_name           :string(255)
 #  email               :string(255)      not null
 #  created_at          :datetime
 #  updated_at          :datetime
@@ -35,11 +37,22 @@ class Pd::Enrollment < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
-  validates :name, :email, presence: true
+  validates_presence_of :first_name
+
+  # Some old enrollments, from before the first/last name split, don't have last names.
+  # Require on all new enrollments.
+  validates_presence_of :last_name, unless: :created_before_name_split?
+
+  validates_presence_of :email
   validates_confirmation_of :email
 
   validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
+
+  # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
+  def created_before_name_split?
+    self.persisted? && self.created_at < '2016-11-10'
+  end
 
   def self.for_school_district(school_district)
     self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
@@ -84,6 +97,34 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
     self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
+  end
+
+  # TODO: Once we're satisfied with the first/last name split data,
+  # remove the name field entirely.
+  def name=(value)
+    ActiveSupport::Deprecation.warn('name is deprecated. Use first_name & last_name instead.')
+    self.full_name = value
+  end
+
+  def name
+    ActiveSupport::Deprecation.warn('name is deprecated. Use first_name & last_name instead.')
+    full_name
+  end
+
+  # Convenience method for combining first and last name into a full name
+  # @return [String] Combined first_name last_name
+  def full_name
+    "#{first_name} #{last_name}".strip
+  end
+
+  # Convenience method for setting first and last names from a full name
+  # @param value [String]
+  #   Combined full name, which will be split on the first space to set
+  #   the first_name and last_name properties
+  def full_name=(value)
+    first_name, last_name = value.split(' ', 2)
+    write_attribute :first_name, first_name
+    write_attribute :last_name, last_name || ''
   end
 
   protected

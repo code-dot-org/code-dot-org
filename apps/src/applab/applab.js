@@ -20,7 +20,7 @@ import AppStorage from './appStorage';
 import FirebaseStorage from './firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
 import { getDatabase } from './firebaseUtils';
-import experiments from '../experiments';
+import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -37,6 +37,7 @@ import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
 import {Provider} from 'react-redux';
 import reducers from './reducers';
+import {add as addWatcher} from '../redux/watchedExpressions';
 import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
@@ -50,6 +51,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -393,23 +395,24 @@ function renderFooterInSharedGame() {
     }
   ].filter(item => item);
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
-    i18nDropdown: '',
-    copyrightInBase: false,
-    copyrightStrings: copyrightStrings,
-    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
-    rowHeight: applabConstants.FOOTER_HEIGHT,
-    style: {
-      fontSize: 18
-    },
-    baseStyle: {
-      width: $("#divApplab").width(),
-      paddingLeft: 0
-    },
-    className: 'dark',
-    menuItems: menuItems,
-    phoneFooter: true
-  }), footerDiv);
+  ReactDOM.render(
+    <SmallFooter
+      i18nDropdown={''}
+      privacyPolicyInBase={false}
+      copyrightInBase={false}
+      copyrightStrings={copyrightStrings}
+      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
+      rowHeight={applabConstants.FOOTER_HEIGHT}
+      style={{fontSize:18}}
+      baseStyle={{
+        width: $("#divApplab").width(),
+        paddingLeft: 0
+      }}
+      className="dark"
+      menuItems={menuItems}
+      phoneFooter={true}
+    />,
+    footerDiv);
 }
 
 /**
@@ -727,6 +730,15 @@ Applab.init = function (config) {
     }
 
     setupReduxSubscribers(studioApp.reduxStore);
+    if (config.level.watchersPrepopulated) {
+      try {
+        JSON.parse(config.level.watchersPrepopulated).forEach(option => {
+          studioApp.reduxStore.dispatch(addWatcher(option));
+        });
+      } catch (e) {
+        console.warn('Error pre-populating watchers.');
+      }
+    }
 
     designMode.addKeyboardHandlers();
     designMode.renderDesignWorkspace();
@@ -757,7 +769,7 @@ Applab.init = function (config) {
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
-    showDebugWatch: false
+    showDebugWatch: config.level.showDebugWatch || experiments.isEnabled('showWatchers')
   });
 
   studioApp.reduxStore.dispatch(changeInterfaceMode(

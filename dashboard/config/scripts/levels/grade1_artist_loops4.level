@@ -33,6 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"bottom-out\",\r\n  \"hint_markdown\": \"Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?\",\r\n  \"hint_id\": \"grade1_artist_loops4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "ideal": "4",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/505d619f0e0dda1847614770164c345e-image-1478587486468.png\", \"position\": [0,0]}\r\n]",
     "contained_level_names": null
   },
   "published": true,
@@ -94,40 +96,5 @@
         </block>
       </xml>
     </solution_blocks>
-    <predraw_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_colour_simple">
-              <title name="COLOUR">#228b22</title>
-              <next>
-                <block type="simple_jump_right">
-                  <next>
-                    <block type="simple_jump_right">
-                      <next>
-                        <block type="controls_repeat_simplified_dropdown">
-                          <title name="TIMES" config="3-10">6</title>
-                          <statement name="DO">
-                            <block type="simple_jump_up"/>
-                          </statement>
-                          <next>
-                            <block type="controls_repeat_simplified_dropdown">
-                              <title name="TIMES" config="3-10">7</title>
-                              <statement name="DO">
-                                <block type="simple_move_down"/>
-                              </statement>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </predraw_blocks>
   </blocks>
 </Artist>

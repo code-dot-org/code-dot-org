@@ -261,7 +261,7 @@
   learn_next_level: Ga door naar het volgende niveau
   learn_online: Probeer andere cursussen online
   learn_classes: Zoek naar klassen in de buurt
-  hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -312,7 +312,7 @@
     Code te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede"
   homepage_hero_text_susan: "&ldquo;Als je technologie kunt veranderen, kun je de
     wereld veranderen.&rdquo; Susan, directeur van YouTube"
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Speel niet alleen met je telefoon,
     programmeer hem&rdquo;
     President Barack Obama
@@ -322,31 +322,31 @@
     ter wereld.&rdquo; Satya, directeur van Microsoft"
   homepage_hero_text_bosh: "&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
     Chris Bosh"
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Deze vaardigheden hebben mijn toekomst
     veranderd. Maar het is ook gewoon leuk.&rdquo;
     Luna, brugklas
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Mijn kinderen waren nog nooit zo
     enthousiast over leren.&rdquo;
     Michael, leraar
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Van computerkunde weet je pas of je
     't leuk vindt, wanneer je het probeert&rdquo;
     Jackson, groep 8
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Met programmeren kun je alles
     doen wat je brein kan bedenken.&rdquo;
     Maya, groep 4
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Computerkunde is niet iets voor een ander.
     Het is iets voor jou, hier, nu.&rdquo;
     Geraldo, leraar
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;Programmeren bevordert creativiteit, inspiratie en innovatie &mdash;
     zaken die belangrijk zijn voor elke carrière.&rdquo;
     Floresa, lerares
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;100% van mijn leerlingen raakte door dit
     programma geëngageerd en betrokken en deed actief mee.&rdquo;
     Adam, leraar
@@ -772,6 +772,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Verplaatsen van studenten
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -815,7 +827,7 @@
   dashboard_students_reset_word: "U kan op elk moment de wachtwoord van een student
     \ resetten door <b>Toon geheim</b> en <b>Reset geheim</b> te kiezen. Een nieuwe
     \nwachtwoordpaar zal worden gegenereerd welke  gebruikt moet worden wanneer ze
-    inloggen. \n"
+    inloggen. "
   dashboard_students_join_link: Vertel uw studenten om hun eigen accounts te maken
     en met hun groep mee te doen op
   dashboard_students_no_email: Als uw leerlingen geen e-mailadressen hebben, of als
@@ -910,6 +922,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Leer meer
   dashboard_announce_try_now_button: Probeer nu
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: Als leerkracht neemt u het voortouw in een beweging
     die elke leerling op elke school de mogelijkheid geeft om informatica te leren.
     Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
@@ -919,6 +932,11 @@
   dashboard_announce_petition_button: Voeg je naam toe
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   host_an_hour: Host an hour
@@ -1363,7 +1381,7 @@
     Elize te bouwen die als een robot-psychotherapeut werkt. Je leert Eliza hoe ze
     moet praten en wat ze moet zeggen. Kun jij je vrienden foppen en laten denken
     dat ze met een echt persoon praten in plaats van met een computer?
-  quorum_longdescription: |
+  quorum_longdescription: |-
     Deze cursus is toegankelijk voor de slechtzienden en werkt met screenreaders. Volg Mary op haar pad waar ze als programmeur bij een biologielab aansluit en de Quorum programmeertaal leert.
     Deze Cursus is leerling-gericht met online voorbeeldactiviteiten.
   codespark_longdescription: De Foos is een leuke en kindvriendelijke manier om te
@@ -1801,3 +1819,53 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Try 2016 now
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Try 2015 now
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

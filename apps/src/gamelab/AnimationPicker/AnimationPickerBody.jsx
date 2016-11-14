@@ -2,7 +2,7 @@
 import React from 'react';
 import Radium from 'radium';
 import Immutable from 'immutable';
-import color from '../../color';
+import color from "../../util/color";
 import {AllAnimationsCategory, AnimationCategories} from '../constants';
 import gamelabMsg from '@cdo/gamelab/locale';
 import animationLibrary from '../animationLibrary.json';
@@ -31,6 +31,9 @@ const animationPickerStyles = {
   },
   emptyResults: {
     paddingBottom: 10
+  },
+  navigation: {
+    minHeight: 30
   }
 };
 
@@ -105,19 +108,21 @@ const AnimationPickerBody = React.createClass({
           value={this.state.searchQuery}
           onChange={this.onSearchQueryChange}
         />
-        <div>
-          {this.state.categoryQuery !== '' &&
-            <div style={animationPickerStyles.breadCrumbs}>
-              <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
-              <span>{AnimationCategories[this.state.categoryQuery]}</span>
-            </div>
-          }
-          {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
-            <div style={animationPickerStyles.pagination}>
-              <PaginationWrapper totalPages={pageCount} currentPage={this.state.currentPage + 1} onChangePage={this.onChangePageNumber}/>
-            </div>
-          }
-        </div>
+        {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+          <div style={animationPickerStyles.navigation}>
+            {this.state.categoryQuery !== '' &&
+              <div style={animationPickerStyles.breadCrumbs}>
+                <span onClick={this.onClearCategories} style={animationPickerStyles.allAnimations}>{"All categories > "}</span>
+                <span>{AnimationCategories[this.state.categoryQuery]}</span>
+              </div>
+            }
+            {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') &&
+              <div style={animationPickerStyles.pagination}>
+                <PaginationWrapper totalPages={pageCount} currentPage={this.state.currentPage + 1} onChangePage={this.onChangePageNumber}/>
+              </div>
+            }
+          </div>
+        }
         <ScrollableList style={{maxHeight: 420}}> {/* TODO: Is this maxHeight appropriate? */}
           {pageCount === 0 &&
             <div style={animationPickerStyles.emptyResults}>Sorry, no results found.</div>

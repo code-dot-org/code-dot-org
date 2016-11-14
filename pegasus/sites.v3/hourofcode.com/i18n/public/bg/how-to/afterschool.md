@@ -13,7 +13,7 @@ nav: how_to_nav
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [ Изпробвайте ги!](%= resolve_url()
+Ние предлагаме разнообразие от [ забавни, дълги около час уроци](<%= resolve_url('https://code.org/learn') %>) за участници от всички възрасти, създадени от различни партньори. [ Изпробвайте ги!](%= resolve_url()
 
 **Всички уроци на Hour of Code:**
 
@@ -21,6 +21,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
   * Предвиждат самостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## Промотирайте своя Hour of Code
 
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## Други ресурси за педагози:
 
-  * Използвайте този [ примерен урочен план](/files/AfterschoolEducatorLessonPlanOutline.docx) за организиране на Hour of Code.
-  * Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от миналите събития, споделени от учители. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Гледайте запис от нашето [ ръководство за преподаватели за Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [ Присъствайте на живо Q & А](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) с нашия основател, Хади Partovi да се подготвите за Hour of Code.
-  * Посетете [ Hour of Code Форум](http://forum.code.org/c/plc/hour-of-code), за да получите съвети и подкрепа от други преподаватели. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Какво идва след Hour of Code?

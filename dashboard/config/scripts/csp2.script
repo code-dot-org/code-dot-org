@@ -1,5 +1,6 @@
-hidden 'false'
-login_required 'true'
+hidden false
+login_required true
+hideable_stages true
 
 stage 'Bytes and File Sizes'
 level 'v2 U2L1 Student Lesson Introduction'
@@ -35,7 +36,6 @@ named_level 'Favicon Instructions'
 named_level 'Widget: Color Pixelation'
 assessment 'U2L5 Color Pixel MC Question'
 assessment 'U2L5 FR brighten darken image'
-
 
 stage 'Lossy Compression and File Formats'
 level 'v2 U2L5 Student Lesson Introduction'
@@ -87,7 +87,6 @@ named_level 'Cleaning Data'
 named_level 'Categorizing Data'
 assessment 'U2L13 Cleaning Data MC'
 assessment 'U2L13 FR Reflection data analysis objective'
-
 
 stage 'Creating Summary Tables'
 level 'v2 U2L14 Student Lesson Introduction'

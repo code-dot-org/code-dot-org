@@ -192,12 +192,14 @@ end
 
 # Accepts a hash of SOLR queries in the form: {query_name: query}
 # Executes each query in order, and returns the resulting contacts, merged and deduped.
+# Stores the query key in a 'category' param
 def query_from_list(queries)
   {}.tap do |contacts|
     # query_subscribed_contacts dedupes by rejecting duplicate emails.
-    queries.each do |query_name, query|
+    queries.each do |category, query|
       new_contacts = query_subscribed_contacts(q: query)
-      puts "#{query_name}: #{new_contacts.count} contacts"
+      new_contacts.each_value{|contact| contact[:category] = category}
+      puts "#{category}: #{new_contacts.count} contacts"
       contacts.merge! new_contacts
     end
   end

@@ -100,6 +100,11 @@
     "callout_json": "[]",
     "start_blocks": "var clicks = 0\r\n\r\nfunction draw() {\r\n  // If mouseWentDown, add one to the clicks variable\r\n  \r\n  background(\"white\");\r\n  textSize(50);\r\n  textAlign(CENTER, CENTER);\r\n  text(clicks, 0, 0, 400, 400);\r\n}",
     "hide_animation_mode": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

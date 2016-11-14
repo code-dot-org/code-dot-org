@@ -1,0 +1,99 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2016-11-03T02:44:05.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "instructions": "Now, get Jorge to move right when the `right` button is clicked.",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "instructions_important": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "timeout_failure_tick": "0",
+    "callout_json": "[]",
+    "project_template_level_name": "gradek_playlab_events5c_template",
+    "markdown_instructions": "Now, get Jorge to move right when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png) button is clicked.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the event block that you will need to get Jorge to move right:\\n\\n![](https://images.code.org/cfc4b696b1ad5762ff40c1c8a17a194d-image-1478141370249.png)\",\"hint_id\":\"gradek_playlab_events3c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321ffeed9aa0b3f8cf96ac440e650672/gradek_playlab_events3c.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the block you should connect to the `when right` event:\\n\\n![](https://images.code.org/e5c559cc1deef643c8b997d17ecb78e3-image-1478141726783.png)\",\"hint_id\":\"gradek_playlab_events3c_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be92fc2b8339b9e5650d9fe356b36ce0/gradek_playlab_events3c.mp3\"}]",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">2</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">random</title>
+        </block>
+        <block type="studio_playSound" id="callMe">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_changeScore"/>
+        <block type="studio_vanish">
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">random</title>
+        </block>
+        <block type="studio_repeatForever"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>
