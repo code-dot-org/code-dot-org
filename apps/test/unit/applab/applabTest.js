@@ -339,27 +339,41 @@ describe('startSharedAppAfterWarnings', function () {
     window.dashboard = originalState.dashboard;
   });
 
-  describe('promptForAge', function () {
-    it('is true if user is signed in and the server says so', function () {
-      var component = shareWarnings.checkSharedAppWarnings({
+  describe('promptForAge', () => {
+    it('is false if user is signed in', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
         channelId: 'current_channel',
         isSignedIn: true,
-        is13Plus: true,
       });
-      assert.equal(component.props.promptForAge, true);
+      // If we're signed in, we depend on the server routing you appropriately,
+      // i.e. if you're under 13, we'll only let you see shared apps if your
+      // teacher has accepted TOS
+      assert.equal(component.props.promptForAge, false);
     });
 
-    it('is true if user is not signed in but has local storage set', function () {
+    it('is false if user is not signed in but has local storage set', () => {
       localStorage.setItem('is13Plus', 'true');
-      var component = shareWarnings.checkSharedAppWarnings({
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
+        channelId: 'current_channel'
+      });
+      assert.equal(component.props.promptForAge, false);
+    });
+
+    it('is true if user is not signed in and has no local storage set', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => true,
         channelId: 'current_channel'
       });
       assert.equal(component.props.promptForAge, true);
     });
 
-    it('is false if user is not signed in and has no local storage set', function () {
-      var component = shareWarnings.checkSharedAppWarnings({
-        channelId: 'current_channel'
+    it('is false if we dont have data APIs', () => {
+      const component = shareWarnings.checkSharedAppWarnings({
+        hasDataAPIs: () => false,
+        channelId: 'current_channel',
+        isSignedIn: false,
       });
       assert.equal(component.props.promptForAge, false);
     });
