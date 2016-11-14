@@ -1846,12 +1846,12 @@
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_store_camps: Microsoft Store Hour of Code Camps
   minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with YouthSpark
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
   minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of code camps at a Microsoft store in Australia, Canada, Puerto Rico or the
-    US. Learn how to combine your creativity with coding.
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
   minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and leader an event.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
   minecraft_facilitating_event: Facilitating an event?
   minecraft_join_online_training: Join Microsoft and Minecraft for an online training
     (in English only) on Nov 22 or Nov 29
