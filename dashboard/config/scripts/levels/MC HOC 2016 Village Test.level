@@ -41,8 +41,8 @@
     "failure_message_override": "You need to make the Iron Golem chase and attack the zombies to win.",
     "level_verification_timeout": "0",
     "use_score": "false",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This was a test to see if we could get mobs to interact successfully. This will now be level 8.",
