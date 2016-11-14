@@ -286,14 +286,6 @@ body {
   background-size: 100%;
 }
 
-.minecraft-scoring #minecraft-frame {
-  //@include pixelated();
-  width: 434px;
-  height: 477px;
-  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_LogoNew.png") !important;
-  background-size: 100%;
-}
-
 #right-button-cell {
   display: none;
   vertical-align: top;
@@ -1076,5 +1068,34 @@ $height-to-width: 434 / 477;
 
   .small-footer-base {
     border-radius: 0 $workspace-corner-rounding 0 0;
+  }
+
+  #score-container {
+    float: left;
+    position: relative;
+    left: 50%;
+
+    height: 0;
+    margin-bottom: -100%;
+
+    #score-inner {
+      @include pixelated(); // TODO: only background (not text)
+
+      top: -411px;
+      height: 17px;
+      background: #6a6a6a;
+      float: left;
+      position: relative;
+      left: -50%;
+      border-style: solid !important;
+      border-width: 1px 7px 7px 7px !important;
+      -moz-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+      -webkit-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+      -o-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+      border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 fill stretch !important;
+      font-size: 15px;
+      color: white !important;
+      text-shadow: 2px 2px #5A5A5A !important;
+    }
   }
 }
