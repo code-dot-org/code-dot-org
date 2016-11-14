@@ -55,7 +55,6 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  * @param {!Object} options
  * @param {!string} options.channelId - service side channel.
  * @param {!boolean} options.isSignedIn - login state of current user.
- * @param {!boolean} options.is13Plus - age state of current user (if signed in).
  * @param {function} options.hasDataAPIs - Function to call to determine if
  *        the current program uses any data APIs.
  * @param {function} options.onWarningsComplete - Callback will be called after
@@ -66,6 +65,10 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  *        redirected to /too_young
  */
 exports.checkSharedAppWarnings = function (options) {
+  const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
+  const promptForAge = hasDataAPIs && !options.isSignedIn && localStorage.getItem('is13Plus') !== "true";
+  const showStoreDataAlert = hasDataAPIs && !hasSeenDataAlert(options.channelId);
+
   const handleShareWarningsTooYoung = () => {
     utils.trySetLocalStorage('is13Plus', 'false');
     if (options.onTooYoung) {
@@ -75,22 +78,15 @@ exports.checkSharedAppWarnings = function (options) {
     }
   };
 
-  const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
-
-  // dashboard will redirect young signed in users unless they are on an iframe
-  // embed, so we will redirect them if they got here somehow
-  const promptForAge = !(options.isSignedIn && options.is13Plus) &&
-    !localStorage.getItem('is13Plus') === "true";
-
-  const showStoreDataAlert = hasDataAPIs && !hasSeenDataAlert(options.channelId);
+  const handleClose = () => onCloseShareWarnings(showStoreDataAlert, options);
 
   return ReactDOM.render(
-      <ShareWarningsDialog
-        showStoreDataAlert={!!showStoreDataAlert}
-        promptForAge={promptForAge}
-        handleClose={onCloseShareWarnings.bind(null, showStoreDataAlert, options)}
-        handleTooYoung={handleShareWarningsTooYoung}
-      />,
+    <ShareWarningsDialog
+      showStoreDataAlert={!!showStoreDataAlert}
+      promptForAge={promptForAge}
+      handleClose={handleClose}
+      handleTooYoung={handleShareWarningsTooYoung}
+    />,
     document.body.appendChild(document.createElement('div'))
   );
 };
