@@ -357,7 +357,7 @@ module.exports = function (grunt) {
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
-    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
+    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/sites/studio/pages/applab-api.js']]
   ));
   var codeStudioEntries = {
     'layouts/application':          './src/sites/studio/pages/layouts/application.js',
@@ -404,7 +404,7 @@ module.exports = function (grunt) {
 
     'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
 
-    publicKeyCryptography: './src/publicKeyCryptography/main.js',
+    publicKeyCryptography: './src/sites/studio/pages/publicKeyCryptography.js',
 
     'weblab_host/index': './src/sites/studio/pages/weblab_host/index.js',
   };
