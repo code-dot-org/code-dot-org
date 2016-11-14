@@ -14,21 +14,21 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Спасибо за регистрацию на проведение Часа Кода!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. What can you do now?
+Вы делаете это возможно для учеников всего мира, чтобы заниматься Часом кода, которая может*изменить жизнь*, во время <%= campaign_date('full') %>. Мы будем сообщать о новых учебных материалов, а также другие интересные обновления. Что вы можете сделать сейчас?
 
 ## 1. Распространите новость
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Ты можешь присоединится к Часу кода. Расскажите своим друзьям **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Find a local volunteer to help you with your event.
+## 1. Найти местных волонтеров (добровольцев), которые помогут вам с организацией вашего мероприятия.
 
-[Search our volunteer map](%= resolve_url('https://code.org/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Поиск добровольцев на карте](%= resolve_url('https://code.org/volunteer/local') %)для добровольцев, которые могут посетить ваш класс или удаленно, чтобы вдохновить ваших студентов о широте возможностей в компьютерной индустрии.
 
-## 3. Ask your whole school to offer an Hour of Code
+## 2. Попросите провести Час Программирования в Вашей школе
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
+[Отправьте это письмо](%= resolve_url('/promote/resources#sample-emails') %)вашей основной задачей в каждом классе в вашей школе, чтобы зарегистрировать учеников.
 
 ## 4. Попросите своего работодателя принять участие
 
@@ -45,5 +45,9 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 ## 7. Plan your Hour of Code
 
 Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

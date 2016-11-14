@@ -111,5 +111,6 @@
   "word": "Znajdź słowa",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Tak",
-  "youSpelled": "Przeliterowałeś"
+  "youSpelled": "Przeliterowałeś",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

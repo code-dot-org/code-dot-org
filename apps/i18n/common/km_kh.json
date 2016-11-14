@@ -314,5 +314,6 @@
   "when": "នៅ​ពេល",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "យល់ព្រម"
+  "yes": "យល់ព្រម",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

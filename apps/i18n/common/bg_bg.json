@@ -314,5 +314,6 @@
   "when": "когато",
   "whenRun": "при стартиране",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да"
+  "yes": "Да",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

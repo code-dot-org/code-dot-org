@@ -314,5 +314,6 @@
   "when": "kun",
   "whenRun": "suoritettaessa",
   "workspaceHeaderShort": "Työtila: ",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

@@ -314,5 +314,6 @@
   "when": "quan",
   "whenRun": "quan s'executa",
   "workspaceHeaderShort": "Zona de treball: ",
-  "yes": "Sí"
+  "yes": "Sí",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

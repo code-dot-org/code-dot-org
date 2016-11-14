@@ -111,5 +111,6 @@
   "word": "Troba la paraula",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Sí",
-  "youSpelled": "Has escrit"
+  "youSpelled": "Has escrit",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

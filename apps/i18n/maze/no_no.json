@@ -111,5 +111,6 @@
   "word": "Finn ordet",
   "wrongCropError": "Jeg kan ikke høste avlingen herfra.",
   "yes": "Ja",
-  "youSpelled": "Du stavet"
+  "youSpelled": "Du stavet",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

@@ -314,5 +314,6 @@
   "when": "Ne zaman",
   "whenRun": "Çalıştığı zaman",
   "workspaceHeaderShort": "Çalışma alanı: ",
-  "yes": "Evet"
+  "yes": "Evet",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

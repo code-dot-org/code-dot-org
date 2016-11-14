@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Proposez à votre école de participer à Une Heure de Code
 
-[Envoyez ce courriel](%= resolve_url('/promote/resources#sample-emails') %) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Envoyez ce courriel](%= resolve_url('/promote/resources#sample-emails') %) à votre principal ou au directeur de votre école et proposez à chaque professeur de s'inscrire.
 
 ## 3. Invitez votre employeur à s'impliquer
 
