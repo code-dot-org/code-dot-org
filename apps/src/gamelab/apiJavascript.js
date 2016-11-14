@@ -12,3 +12,7 @@ exports.playSound = function (url) {
       'playSound',
       {'url': url});
 };
+
+exports.getUserId = function () {
+  return GameLab.executeCmd(null, 'getUserId');
+};

@@ -166,6 +166,8 @@ GameLab.prototype.init = function (config) {
 
   gameLabSprite.injectLevel(this.level);
 
+  this.studioApp_.labUserId = config.labUserId;
+
   this.gameLabP5.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
