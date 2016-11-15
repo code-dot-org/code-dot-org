@@ -17,6 +17,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installPickOne(blockly);
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
+  installJoinBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -160,5 +161,35 @@ function installWhenRun(blockly, skin, isK1) {
   blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
     return '\n';
+  };
+}
+
+function installJoinBlock(blockly) {
+  blockly.Blocks.text_join_simple = {
+    init: function () {
+      this.helpUrl = '';
+      this.setColour(160);
+      this.setOutput(true, Blockly.BlockValueType.STRING);
+      this.setTooltip(commonMsg.JoinTextTooltip());
+    },
+
+    setInputCount: function (inputCount) {
+      this.inputCount = parseInt(inputCount);
+      this.appendValueInput('ADD0')
+        .appendTitle(commonMsg.joinText());
+      for (var i = 1; i < this.inputCount; i++) {
+        this.appendValueInput('ADD' + i);
+      }
+    },
+  };
+
+  blockly.JavaScript.text_join_simple = function () {
+    var parts = new Array(this.inputCount);
+    for (var n = 0; n < this.inputCount; n++) {
+      parts[n] = Blockly.JavaScript.valueToCode(this, 'ADD' + n,
+          Blockly.JavaScript.ORDER_COMMA) || '\'\'';
+    }
+    var code = '[' + parts.join(',') + '].join(\'\')';
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 }
