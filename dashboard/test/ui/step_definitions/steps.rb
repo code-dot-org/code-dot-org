@@ -652,7 +652,16 @@ Then(/^check that level (\d+) on this stage is not done$/) do |level|
 end
 
 Then(/^I reload the page$/) do
+  # Make sure the old page is gone before this step completes, since selenium's navigate.refresh
+  # does not reliably do this for us.
+  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
+  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  wait_for_jquery
+end
+
+def wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script("return !!$;") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
