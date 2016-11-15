@@ -15,7 +15,7 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved
+# Hvordan involvere seg
 
 ## 1. Spre budskapet
 
@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Spør hele skolen din om å tilby en Kodetime
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Spør arbeidsgiveren din om å bidra
 
