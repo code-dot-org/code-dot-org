@@ -114,8 +114,6 @@
                       %i.fa.fa-users.pair-programming-icon
 - content_for(:head) do
   :javascript
-    console.log('head', new Date());
     $(document).ready(function () {
-      console.log('ready', new Date());
       window.dashboard.teacher.onReady();
     });
