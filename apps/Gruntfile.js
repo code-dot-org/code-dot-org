@@ -8,6 +8,7 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
+var checkEntryPoints = require('./script/checkEntryPoints');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -614,6 +615,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
+    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -622,6 +624,35 @@ module.exports = function (grunt) {
     'newer:strip_code',
     'ejs'
   ]);
+
+  grunt.registerTask('check-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build, {verbose: true})
+      .then(stats => {
+        done();
+      });
+  });
+
+  grunt.registerTask('lint-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build)
+      .then(stats => {
+        console.log(
+          [
+            chalk.green(`[${stats.passed} passed]`),
+            stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+            stats.failed && chalk.red(`[${stats.failed} failed]`),
+          ].filter(f=>f).join(' ')
+        );
+        if (stats.failed > 0) {
+          grunt.warn(
+            `${stats.failed} entry points do not conform to naming conventions.\n` +
+            `Run grunt check-entry-points for details.\n`
+          );
+        }
+        done();
+      });
+  });
 
   grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {
