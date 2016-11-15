@@ -41,10 +41,6 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">get corn and come back</title>
-        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
