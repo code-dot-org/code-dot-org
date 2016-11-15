@@ -45,12 +45,7 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-
-  # Make sure the old page is gone, since selenium's navigate.to does not reliably do this for us.
-  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.to url
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
-
   install_js_error_recorder
 end
 
@@ -105,13 +100,16 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
+    And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
+    And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
   STEPS
 end
 
@@ -658,7 +656,12 @@ Then(/^I reload the page$/) do
   # does not reliably do this for us.
   @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
+  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  wait_for_jquery
+end
+
+def wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script("return !!$;") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
@@ -881,6 +884,10 @@ end
 
 When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
+end
+
+When /^I debug channel id$/ do
+  puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|

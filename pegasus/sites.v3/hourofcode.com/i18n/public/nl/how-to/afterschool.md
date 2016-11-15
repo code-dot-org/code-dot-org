@@ -22,6 +22,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
@@ -118,11 +120,10 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## Andere CodeUur bronnen voor docenten:
 
-  * Maak gebruik van [de sjabloon van de lessen plan](/files/AfterschoolEducatorLessonPlanOutline.docx) om uw CodeUur te organiseren.
-  * Bekijk [de methoden](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) van eerdere CodeUur organisatoren. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Kijk naar de opname van onze [ opvoeders gids voor de lezing van CodeUur](https://youtu.be/EJeMeSW2-Mw).
   * [Woon een live Q & A bij ](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) met onze stichter, Hadi Partovi om CodeUur voor te bereiden.
-  * Bezoek de [CodeUur Forum](http://forum.code.org/c/plc/hour-of-code) om advies, inzicht en steun van andere organisatoren te krijgen. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Bekijk het [CodeUur FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Wat komt er na het CodeUur?

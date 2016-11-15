@@ -49,6 +49,7 @@
       "setAnimation": null,
       "sprite.height": null,
       "sprite.width": null,
+      "visible": null,
       "x": null,
       "y": null,
       "rotation": null,
@@ -92,6 +93,7 @@
       "console.log": null
     },
     "show_debug_watch": "true",
+    "palette_category_at_start": "sprites",
     "contained_level_names": null
   },
   "published": true,
