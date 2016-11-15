@@ -127,40 +127,12 @@ file deploy_dir('rebuild') do
   touch deploy_dir('rebuild')
 end
 
-# Use the AWS-provided scripts to cleanly deregister a frontend instance from its load balancer(s),
-# with zero downtime and support for auto-scaling groups.
-# Raises a RuntimeError if the script returns a non-zero exit code.
-def deregister_frontend(host, log_path)
-  command = [
-    "cd #{rack_env}",
-    'bin/deploy_frontend/deregister_from_elb.sh',
-  ].join(' ; ')
-
-  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>', log_path
-end
-
-# Use the AWS-provided script to cleanly re-register a frontend instance with its load balancer(s).
-# Raises a RuntimeError if the script returns a non-zero exit code.
-def reregister_frontend(host, log_path)
-  command = [
-    "cd #{rack_env}",
-    'bin/deploy_frontend/register_with_elb.sh',
-  ].join(' ; ')
-  RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
-end
-
 #
 # upgrade_frontend - this is called by daemon to update the user-facing front-end instances. for
 #   this to work, daemon has an SSH key (deploy-id_rsa) that gives it access to connect to the front-ends.
 #
 def upgrade_frontend(name, host)
-  commands = [
-    "cd #{rack_env}",
-    'git pull --ff-only',
-    'sudo bundle install',
-    'rake build'
-  ]
-  command = commands.join(' && ')
+  command = "~/#{rack_env}/bin/deploy_frontend/deploy.sh"
 
   HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
 
@@ -168,18 +140,14 @@ def upgrade_frontend(name, host)
 
   success = false
   begin
-    # Remove the frontend from load balancer rotation before running the commands,
-    # so that the git pull doesn't modify files out from under a running instance.
-    deregister_frontend host, log_path
     RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
     success = true
-    reregister_frontend host, log_path
     HipChat.log "Upgraded <b>#{name}</b> (#{host})."
   rescue
     # The frontend is in an indeterminate state, and is not registered with the load balancer.
     HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade, and may currently be out of the load balancer rotation.\n" \
       "Either re-deploy, or run the following command (from Gateway) to manually upgrade this instance:\n" \
-      "`ssh #{name} '~/#{rack_env}/bin/deploy_frontend/deregister_from_elb.sh && #{command} && ~/#{rack_env}/bin/deploy_frontend/register_with_elb.sh'`",
+      "`ssh #{name} '#{command}'`",
       color: 'red'
     HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
     HipChat.log "/quote #{File.read(log_path)}"
