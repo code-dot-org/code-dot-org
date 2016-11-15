@@ -17,9 +17,9 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
-import FirebaseStorage from './firebaseStorage';
-import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
-import { getDatabase } from './firebaseUtils';
+import FirebaseStorage from '../storage/firebaseStorage';
+import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
+import { getDatabase } from '../storage/firebaseUtils';
 import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
@@ -42,10 +42,11 @@ import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 import * as applabConstants from './constants';
-const { ApplabInterfaceMode, DataView } = applabConstants;
+const { ApplabInterfaceMode } = applabConstants;
+import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
-import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
+import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,

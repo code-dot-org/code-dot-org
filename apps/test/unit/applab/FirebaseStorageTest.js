@@ -1,6 +1,6 @@
 import { expect } from '../../util/configuredChai';
-import FirebaseStorage from '@cdo/apps/applab/firebaseStorage';
-import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
+import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
+import { getDatabase, getConfigRef } from '@cdo/apps/storage/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   let originalWindowApplab;
