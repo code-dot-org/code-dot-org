@@ -143,6 +143,7 @@ describe('MockFirebase', () => {
         channelId: "test-firebase-channel-id",
         firebaseName: 'test-firebase-name',
         firebaseAuthToken: 'test-firebase-auth-token',
+        showRateLimitAlert: () => {},
       });
       channelRef = getDatabase();
       channelRef.autoFlush();

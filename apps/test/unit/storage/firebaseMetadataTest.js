@@ -8,6 +8,7 @@ describe('firebaseMetadata', () => {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
+      showRateLimitAlert: () => {},
     });
     getDatabase().autoFlush();
     return getConfigRef().set({
