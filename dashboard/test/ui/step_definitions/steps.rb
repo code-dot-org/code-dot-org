@@ -46,6 +46,7 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
+  refute_bad_gateway
   install_js_error_recorder
 end
 
@@ -1043,4 +1044,9 @@ Then /^I select the first section$/ do
   @browser.execute_script(
     "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
   )
+end
+
+def refute_bad_gateway
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  expect(first_header_text).not_to eq('Bad Gateway')
 end
