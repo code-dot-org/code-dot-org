@@ -651,6 +651,9 @@ Bounce.init = function (config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.loadAudio = function () {
+    if (skin.disableAudio) {
+      return;
+    }
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
     studioApp.loadAudio(skin.ballStartSound, 'ballstart');
