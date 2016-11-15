@@ -8,6 +8,23 @@ class UserTest < ActiveSupport::TestCase
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
 
+  test 'make_teachers_21' do
+    teacher = create :teacher, birthday: Time.now - 18.years
+    assert_equal '21+', teacher.age
+  end
+
+  test 'normalize_email' do
+    teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
+    assert_equal 'caps@example.com', teacher.email
+  end
+
+  test 'hash_email' do
+    teacher = create :teacher
+    teacher.update!(email: 'hash_email@example.com')
+    assert_equal User.hash_email('hash_email@example.com'),
+      teacher.hashed_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 

@@ -127,6 +127,8 @@
   "whileMsg": "mentras",
   "whileTooltip": "Repita as accións até satisfacer a condición.",
   "yes": "Si",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

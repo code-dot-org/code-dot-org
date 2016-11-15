@@ -127,6 +127,8 @@
   "whileMsg": "semasa",
   "whileTooltip": "Ulangi tindakan yang tertutup sehingga titik penamat dicapai.",
   "yes": "Ya",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"
