@@ -16,3 +16,4 @@ nodejs_npm 'npm' do
 end
 
 nodejs_npm 'grunt-cli'
+nodejs_npm 'yarn'
