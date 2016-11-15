@@ -43,6 +43,8 @@
     "use_player": "true",
     "use_score": "false",
     "show_popup_on_load": "playerSelection",
+    "video_key": "mc_2016_events",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

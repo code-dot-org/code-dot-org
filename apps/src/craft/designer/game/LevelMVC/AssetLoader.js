@@ -354,6 +354,40 @@ export default class AssetLoader {
       },
     };
 
+    const ALL_SOUND_ASSETS = [
+      'dig_wood1',
+      'stepGrass',
+      'stepWood',
+      'stepStone',
+      'stepGravel',
+      'stepFarmland',
+      'failure',
+      'success',
+      'fall',
+      'fuse',
+      'explode',
+      'placeBlock',
+      'collectedBlock',
+      'bump',
+      'punch',
+      'fizz',
+      'doorOpen',
+      'minecart',
+      'sheepBaa',
+      'chickenHurt',
+      'chickenBawk',
+      'cowHuff',
+      'cowHurt',
+      'cowMoo',
+      'cowMooLong',
+      'creeperHiss',
+      'ironGolemHit',
+      'metalWhack',
+      'zombieBrains',
+      'zombieGroan',
+      'zombieHurt',
+    ];
+
     const CHICKEN_LEVEL_ASSETS = [
       'chicken',
       'entityShadow',
@@ -367,7 +401,8 @@ export default class AssetLoader {
       'stepGrass',
       'failure',
       'success',
-    ];
+    ].concat(ALL_SOUND_ASSETS);
+
     this.assetPacks = {
       levelOneAssets: CHICKEN_LEVEL_ASSETS,
       levelTwoAssets: CHICKEN_LEVEL_ASSETS,

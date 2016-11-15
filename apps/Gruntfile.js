@@ -655,16 +655,11 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('compile-firebase-rules', function () {
-    try {
-      child_process.execSync('ls `npm bin`/firebase-bolt');
-    } catch (e) {
-      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
-      try {
-        child_process.execSync('which npm');
-      } catch (e) {
-        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
-      }
-      child_process.execSync('npm install');
+    if (process.env.RACK_ENV === 'production') {
+      throw new Error(
+        "Cannot compile firebase security rules on production.\n" +
+        "Instead, upload security rules from the apps package which was downloaded from s3."
+      );
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
