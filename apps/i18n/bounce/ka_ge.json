@@ -127,6 +127,8 @@
   "whileMsg": "სანამ",
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
   "yes": "დიახ",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

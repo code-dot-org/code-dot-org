@@ -78,7 +78,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**सबै एक Hour of Code को अभ्यासहरू:**
+**सबै Hour of Code का ट्युटोरियलहरू:**
 
   * Require minimal prep-time for organizers
   * स्वतः निर्देशक छन् - विद्यार्थीहरूलाई तिनिहरूको आफ्नो ठाउँ र क्षमताको-स्तरा काम गर्न अनुमति दिन 

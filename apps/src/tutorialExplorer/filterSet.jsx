@@ -10,7 +10,7 @@ const FilterSet = React.createClass({
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    robotics: React.PropTypes.bool.isRequired
+    roboticsButtonUrl: React.PropTypes.string
   },
 
   render() {
@@ -29,8 +29,8 @@ const FilterSet = React.createClass({
           )
         )}
 
-        {!this.props.robotics && (
-          <RoboticsButton/>
+        {this.props.roboticsButtonUrl && (
+          <RoboticsButton url={this.props.roboticsButtonUrl}/>
         )}
 
       </div>

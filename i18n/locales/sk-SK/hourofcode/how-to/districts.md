@@ -20,11 +20,11 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
 
-## What comes after the Hour of Code?
+## Čo príde po Hodine Kódu?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Povzbuď študentov, aby pokračovali [v učení sa online](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (Len školitelia z USA)
 
 <%= view :signup_button %>

@@ -127,6 +127,8 @@
   "whileMsg": "যখন",
   "whileTooltip": "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।",
   "yes": "\"হ্যাঁ\"",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

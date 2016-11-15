@@ -34,13 +34,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## План за примерно събитие
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Събитие:** Седмица на компютърните науки и образованието в Училище Старт на събранието
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Дата:** 5-ти декември (началото на седмицата на компютърните науки и образованието)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Време:** По време на учебния ден. Средата на сутринта е за предпочитане за събитието. Около 1 час.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Местоположение:** Училищна зала (театър, фитнес зала, кафене)   
   
 
 
