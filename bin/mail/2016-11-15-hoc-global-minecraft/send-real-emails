@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# 750550 teachers
-../send-to-mailing-list --limit 751000 2016-11-15-hoc-global-minecraft ./teachers.csv
+# 752294 teachers
+../send-to-mailing-list --limit 753000 2016-11-15-hoc-global-minecraft ./teachers.csv
