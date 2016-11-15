@@ -14,19 +14,25 @@ require_relative '../../dashboard/config/environment'
 # Fix violations of the invariant
 #   user.email == user.email.strip.downcase
 # by setting user.email.
+all = false
 User.with_deleted.
   where(user_type: 'teacher').
   where.not(email: nil).
-  each do |user|
+  find_each do |user|
   normalized_email = user.email.strip.downcase
   next if user.email == normalized_email
   puts "DIFF: user.id: #{user.id}:, "\
     "user.email: #{user.email}, "\
     "user.email.downcase: #{normalized_email}"
 
-  print "Update? Y/S/Q: "
-  response = gets
-  if response == 'Y'
+  unless all
+    print "Update? Y/S/A/Q: "
+    response = gets.strip
+  end
+  if response == 'A'
+    all = true
+  end
+  if all || response == 'Y'
     user.update!(email: normalized_email)
   elsif response == 'S'
     next
@@ -38,11 +44,12 @@ end
 # Fix violations of the invariant
 #   user.hashed_email == User.hash_email(user.email.strip.downcase)
 # by setting user.hashed_email.
+all = false
 User.with_deleted.
   where(user_type: 'teacher').
   where.not(email: nil).
   where.not(email: '').
-  each do |user|
+  find_each do |user|
   correct_hashed_email = User.hash_email(user.email)
   next if user.hashed_email == correct_hashed_email
 
@@ -51,9 +58,14 @@ User.with_deleted.
     "user.hashed_email: #{user.hashed_email}, "\
     "correct_hashed_email: #{correct_hashed_email}"
 
-  print "Update? Y/S/Q: "
-  response = gets
-  if response == 'Y'
+  unless all
+    print "Update? Y/S/A/Q: "
+    response = gets.strip
+  end
+  if response == 'A'
+    all = true
+  end
+  if all || response == 'Y'
     user.update!(hashed_email: correct_hashed_email)
   elsif response == 'S'
     next
