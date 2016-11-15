@@ -100,13 +100,16 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
+    And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
+    And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
   STEPS
 end
 
@@ -872,6 +875,10 @@ end
 
 When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
+end
+
+When /^I debug channel id$/ do
+  puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
