@@ -89,9 +89,8 @@ Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
       full_output_string = output[0]['message']
       if full_output_string.include? known_fail[:search_string]
         if options[:count]
-          count = 0
-          full_output_string.split("\n").each do |line|
-            count += 1 if line.include? known_fail[:search_string]
+          count = full_output_string.split("\n").count do |line|
+            line.include? known_fail[:search_string]
           end
           puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains #{count} of: #{known_fail[:search_string]}"
         elsif options[:whole_lines]
