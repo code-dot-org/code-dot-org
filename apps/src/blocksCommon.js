@@ -181,6 +181,12 @@ function installJoinBlock(blockly) {
         this.appendValueInput('ADD' + i);
       }
     },
+
+    onMouseOver: function () {
+    },
+
+    onMouseOut: function () {
+    },
   };
 
   blockly.JavaScript.text_join_simple = function () {
