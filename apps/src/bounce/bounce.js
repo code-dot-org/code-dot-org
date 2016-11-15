@@ -260,7 +260,7 @@ var drawMap = function () {
         top = GOAL_TILE_SHAPES[tile][1];
         image = skin.goalTiles;
       }
-      if (tile !== 'null0') {
+      if (tile !== 'null0' && Bounce.drawTiles) {
         // Tile's clipPath element.
         var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
@@ -303,7 +303,7 @@ var drawMap = function () {
     }
   }
 
-  Bounce.ballImage = skin.ball;
+  Bounce.ballImage = level.theme ? skin[level.theme].ball : skin.ball;
   for (i = 0; i < Bounce.ballCount; i++) {
     Bounce.createBallElements(i);
   }
@@ -705,6 +705,7 @@ Bounce.init = function (config) {
     Bounce.paddleFinishCount = 0;
     Bounce.defaultBallSpeed = level.ballSpeed || tiles.DEFAULT_BALL_SPEED;
     Bounce.defaultBallDir = level.ballDirection || tiles.DEFAULT_BALL_DIRECTION;
+    Bounce.drawTiles = level.theme ? skin[level.theme].drawTiles : skin.drawTiles;
 
     // Locate the start and finish squares.
     for (var y = 0; y < Bounce.ROWS; y++) {
@@ -878,9 +879,10 @@ Bounce.reset = function (first) {
   document.getElementById('score').setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Bounce.setBackground('hardcourt');
-  Bounce.setBall('hardcourt');
-  Bounce.setPaddle('hardcourt');
+  var theme = level.theme || 'hardcourt';
+  Bounce.setBackground(theme);
+  Bounce.setBall(theme);
+  Bounce.setPaddle(theme);
   Bounce.currentBallSpeed = Bounce.defaultBallSpeed;
 
   // Remove any extra balls that were created dynamically.
@@ -1180,7 +1182,7 @@ Bounce.displayScore = function () {
 };
 
 var skinTheme = function (value) {
-  if (value === 'hardcourt') {
+  if (value === 'hardcourt' || value === 'basketball') {
     return skin;
   }
   return skin[value];
@@ -1193,6 +1195,10 @@ Bounce.setTeam = function (value) {
 
 Bounce.setBackground = function (value) {
   var theme = skinTheme(value);
+  Bounce.drawTiles = theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
+  if (level.maps) {
+    Bounce.map = level.maps[value === 'hardcourt' ? 'basketball' : value];
+  }
   Bounce.setBackgroundImage(theme.background);
   Bounce.loadTiles(theme.tiles, theme.goalTiles);
 };
@@ -1234,10 +1240,13 @@ Bounce.loadTiles = function (tiles, goalTiles) {
         }
         image = goalTiles;
       }
-      if (!empty) {
-        var element = document.getElementById('tileElement' + tileId);
+      var element = document.getElementById('tileElement' + tileId);
+      if (!empty && Bounce.drawTiles) {
         element.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href', image);
+        element.setAttribute('visibility', 'visible');
+      } else if (element) {
+        element.setAttribute('visibility', 'hidden');
       }
       tileId++;
     }

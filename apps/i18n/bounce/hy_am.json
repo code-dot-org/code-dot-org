@@ -127,6 +127,8 @@
   "whileMsg": "ժամանակ",
   "whileTooltip": "Կրկնել կից գործողությունները, մինչեւ Սալոնի կետն է հասել:",
   "yes": "այո",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"
