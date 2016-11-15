@@ -1,0 +1,125 @@
+.tutorial-box {
+  position: relative;
+  float: left;
+}
+
+.mc-tutorial-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 10px;
+}
+
+.new-mc {
+  color: white;
+  background-color: #7665a0;
+  width: 250px;
+  margin: -10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
+  color: white;
+}
+
+.color-block a:link, .color-block a:visited, .color-block a:hover, .color-block a:active {
+  font-family: "Gotham 5r", sans-serif;
+  color: white;
+  text-decoration: underline;
+}
+
+.mc-store {
+  width: 478px;
+  height: 230px;
+  background-color: #0094ca;
+  color: white;
+  float: left;
+  padding: 0 20px;
+}
+
+.mc-host-event {
+  width: 478px;
+  height: 230px;
+  background-color: #b9bf15;
+  color: white;
+  float: right;
+  padding: 0 20px;
+}
+
+.mc-youth-spark {
+  background-color: #7665a0;
+  color: white;
+  margin-top: 15px;
+  padding: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 971px) {
+  .mc-tutorial-info {
+    position: absolute;
+    left: 228px;
+    top: 0;
+    height: 307px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  .tutorial-box {
+    margin-bottom: 15px;
+  }
+
+  .color-block {
+    width: 100%;
+  }
+
+  .mc-store {
+    margin-bottom: 15px;
+  }
+
+  .mc-host-event, .mc-youth-spark, .mc-store {
+    padding-bottom: 15px;
+    height: auto;
+  }
+
+  .responsive-padding {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 513px) and (max-width: 970px) {
+  .mc-tutorial-info {
+    position: absolute;
+    left: 238px;
+    top: 0;
+    height: 307px;
+  }
+
+  .tutorial-box {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 512px) {
+  .mc-tutorial-info {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+
+  .mc-h1-second-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tutorial-box {
+    width: 100%;
+    background-image: url(/images/mc/MC_Wide_Blank_V2.jpg);
+    background-size: 605px 100px;
+  }
+
+  .mc-img {
+    display: none;
+  }
+}
