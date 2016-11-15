@@ -66,6 +66,13 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "project_template_level_name": "CSD U3 Counters sunset template",
+    "encrypted_examples": "E1+Ot03GEZ35vm3xfwCxJ64P0zTUhHJXQm0GIsMpiy2my7X2SRLTtwUQyS0R\no9m8\n",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

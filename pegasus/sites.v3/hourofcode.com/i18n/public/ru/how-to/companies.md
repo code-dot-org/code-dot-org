@@ -12,15 +12,15 @@ nav: how_to_nav
 
 ## Вдохновляйте учеников и волонтеров
 
-**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**Code.org предоставляет сотрудникам компании возможность[объединять](<%= resolve_url('https://code.org/volunteer') %>) классы делать "Час кода", чтобы поделиться своим опытом и вдохновить учеников, чтобы изучать компьютерные науки.**
 
   * [Регистрация](<%= resolve_url('https://code.org/volunteer') %>)для добровольцев.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+  * Дополнительные инструкции по подключению Ваших сотрудников к аудиториям, обратитесь в [руководство для корпоративных партнеров](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
-## Additional ways companies can support the Hour of Code:
+## Дополнительные возможности компании могут поддержать "Час кода":
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Используйте[маркетинговый инструментарий](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>)чтобы создать временную шкалу связи и делиться рекламным контентом.
+  * Спросите своего директора, чтобы отправить компании по электронной почте подчеркивая важность информатики и поощрения сотрудников, чтобы распространить Час кода. [Посмотреть email](<%= resolve_url('/promote/resources#sample-emails') %>).
   * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
