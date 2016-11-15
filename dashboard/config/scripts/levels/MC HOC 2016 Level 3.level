@@ -37,7 +37,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "5000",
-    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.isEntityTypeRunning('chicken');\r\n }",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getRepeatCommandExecutedCount('moveForward');\r\n }",
     "failure_message_override": "Use a `forever do` block and `move forward` and `turn` commands to keep your chicken wandering.",
     "use_player": "false",
     "use_score": "false",
