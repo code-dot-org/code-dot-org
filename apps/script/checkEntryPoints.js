@@ -58,6 +58,7 @@ const SITES_CONFIG = {
       'publicKeyCryptography',
       'publicKeyCryptography',
       'raceInterstitial',
+      'schoolInfo',
       'scriptOverview',
       'signup',
       'studio',
