@@ -197,4 +197,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.last_name = 'SeparateLast'
     assert_equal 'SeparateFirst SeparateLast', enrollment.full_name
   end
+
+  test 'email format validation' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, email: 'invalid@ example.net'
+    end
+    assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
+
+    assert create :pd_enrollment, email: 'valid@example.net'
+  end
 end
