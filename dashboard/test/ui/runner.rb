@@ -411,7 +411,6 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
     match = error_regex.match(html)
     full_error = match && match[1]
-    puts "debug full_error: #{full_error}"
     full_error ? full_error.strip.split("\n").first : 'no selenium error found'
   end
 
