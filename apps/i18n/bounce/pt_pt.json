@@ -127,6 +127,8 @@
   "whileMsg": "enquanto",
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
   "yes": "Sim",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

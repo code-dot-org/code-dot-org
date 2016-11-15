@@ -3,7 +3,10 @@ import { addColumnName, deleteColumnName, renameColumnName, getColumnNames, onCo
 import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
 
 describe('firebaseMetadata', () => {
+  let originalWindowApplab;
+
   beforeEach(() => {
+    originalWindowApplab = window.Applab;
     window.Applab = {
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
@@ -22,6 +25,10 @@ describe('firebaseMetadata', () => {
     }).then(() => {
       getDatabase(Applab.channelId).set(null);
     });
+  });
+
+  afterEach(() => {
+    window.Applab = originalWindowApplab;
   });
 
   it('adds column names', done => {

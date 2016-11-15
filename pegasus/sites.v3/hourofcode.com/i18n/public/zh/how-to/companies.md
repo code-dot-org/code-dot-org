@@ -34,9 +34,9 @@ nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [試一試 ！](<%= resolve_url("https://code.org/learn") %>)
 
-**所有的代碼小時教程:**
+**所有的Hour of Code教程:**
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level
@@ -75,7 +75,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
   * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-## 6) Code!
+## 6) 寫Code ！
 
 **Direct participants to the activity**
 
@@ -109,7 +109,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) 慶祝
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.

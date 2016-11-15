@@ -127,6 +127,8 @@
   "whileMsg": "Selagi",
   "whileTooltip": "Ulangi perintah sampai tujuan tercapai.",
   "yes": "Ya",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

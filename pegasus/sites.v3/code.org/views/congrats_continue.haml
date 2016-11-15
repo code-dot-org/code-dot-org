@@ -1,17 +1,26 @@
-#continue{:style=>"background-color:grey; color:white; overflow:hidden; padding:20px; text-align:center"}
-  
-  %p{:style=>"font-size: 18px; font-family: 'Gotham 5r', sans-serif;"}
-    %b=I18n.t :continue_learning_header
-
-  %a{:href=>'http://studio.code.org'}
-    %button.button-color-share{:style=>'margin:10px'}
-      %b=I18n.t :learn_next_level
-
-  %a{:href=>'/learn/beyond'}
-    %button.button-color-share{:style=>'margin:10px'}
-      %b=I18n.t :learn_online
-
+%link{href: "/css/congrats-continue.css", rel: "stylesheet"}
+- page_mode = PageMode.get(request)
+%h2=I18n.t :continue_learning_header
+%div.image-collection
+  %a.white-link{:href=>'http://studio.code.org'}
+    %div.choice
+      %div.choice-container
+        %div.choice-label.purple=I18n.t :learn_code_studio
+        %img.character-img{src: "/images/congrats_studio_tutorials.jpg"}
+  %a.white-link{:href=>'/learn/beyond'}
+    %div.choice
+      %div.choice-container
+        %div.choice-label.purple.tall=I18n.t :learn_online
+        %img.character-img{src: "/images/congrats-beyond-other.jpg"}
   -if request.site != 'uk.code.org'
-    %a{:href=>'/learn/local'}
-      %button.button-color-share{:style=>'margin:10px'}
-        %b=I18n.t :learn_classes
+    %a.white-link{:href=>'/learn/local'}
+      %div.choice
+        %div.choice-container
+          %div.choice-label.purple=I18n.t :learn_classes
+          %img.character-img{src: "/images/map_local_classes.png"}
+  - if page_mode == 'feature-minecraft2016' && (script == 'mc' || script == 'minecraft')
+    %a.white-link{:href=>'https://education.minecraft.net/hour-of-code'}
+      %div.choice
+        %div.choice-container
+          %div.choice-label.gray=I18n.t :learn_back_to_minecraft
+          %img.character-img{src: "/images/beyond_mc.png"}
