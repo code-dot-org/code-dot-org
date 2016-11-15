@@ -2,7 +2,6 @@ import Immutable from 'immutable';
 import experiments from "./util/experiments";
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
-import { connect } from 'react-redux';
 
 if (process.env.NODE_ENV !== "production") {
   var createLogger = require('redux-logger');
@@ -12,26 +11,28 @@ if (process.env.NODE_ENV !== "production") {
 let reduxStore;
 let globalReducers = {};
 
-let __oldReduxStore;
-let __oldGlobalReducers;
 
-export function stubRedux() {
-  if (__oldReduxStore) {
-    throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
-  }
-  __oldReduxStore = reduxStore;
-  __oldGlobalReducers = globalReducers;
-  reduxStore = null;
-  globalReducers = {};
+if (IN_UNIT_TEST) {
+  let __oldReduxStore;
+  let __oldGlobalReducers;
+
+  module.exports.stubRedux = function () {
+    if (__oldReduxStore) {
+      throw new Error("Reduce store has already been stubbed. Did you forget to call restore?");
+    }
+    __oldReduxStore = reduxStore;
+    __oldGlobalReducers = globalReducers;
+    reduxStore = null;
+    globalReducers = {};
+  };
+
+  module.exports.restoreRedux = function () {
+    reduxStore = __oldReduxStore;
+    globalReducers = __oldGlobalReducers;
+    __oldReduxStore = null;
+    __oldGlobalReducers = null;
+  };
 }
-
-export function restoreRedux() {
-  reduxStore = __oldReduxStore;
-  globalReducers = __oldGlobalReducers;
-  __oldReduxStore = null;
-  __oldGlobalReducers = null;
-}
-
 
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
@@ -45,27 +46,14 @@ export function getStore() {
 }
 
 /**
- * Register a top-level reducer with the global store and get back
- * a selector function to access the state for that reducer.
- * @param {string} key - a unique key to identify this reducer.
- *     The key will be used in the state object.
- * @param {function} reducer - the reducer function
- * @returns {function} a selector function to access the state for that reducer.
- */
-export function registerReducer(key, reducer) {
-  return registerReducers({[key]: reducer})[key];
-}
-
-/**
  * Register multiple top-level reducers with the global store and get back
  * selector functions to access the state for each reducer.
  * @param {object} reducers - an object mapping unique keys to reducer functions
  *     The keys will be used in the state object.
- * @returns {object} - an object mapping the keys to selector functions for accessing
- *     the state of the corresponding reducer.
+ * @returns void
  */
 export function registerReducers(reducers) {
-  for (var key in reducers) {
+  for (let key in reducers) {
     if (hasReducer(key)) {
       throw new Error(`reducer with key "${key}" already registered!`);
     }
@@ -74,32 +62,6 @@ export function registerReducers(reducers) {
   if (reduxStore) {
     reduxStore.replaceReducer(redux.combineReducers(globalReducers));
   }
-  const selectors = {};
-  for (key in reducers) {
-    selectors[key] = getReducerStateSelector(key);
-  }
-  return selectors;
-}
-
-/**
- * @returns {function} a selector function to access the state for that reducer.
- */
-export function getReducerStateSelector(key) {
-  return state => state[key];
-}
-
-/**
- * @returns {function} a new connect function where the state is the state for the
- * specified global reducer key.
- */
-export function getConnectFunction(key) {
-  const selector = getReducerStateSelector(key);
-  return function (mapStateToProps, ...args) {
-    return connect(
-      (state, ...rest) => mapStateToProps(selector(state), ...rest),
-      ...args
-    );
-  };
 }
 
 /**
