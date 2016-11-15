@@ -2,7 +2,7 @@
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
 
-%script{src: asset_path('js/levels/external.js')}
+%script{src: asset_path('js/levels/_external.js')}
 :javascript
   var options = #{level.properties['options'].to_json}
 

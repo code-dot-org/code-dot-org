@@ -8,6 +8,7 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
+var checkEntryPoints = require('./script/checkEntryPoints');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -356,56 +357,56 @@ module.exports = function (grunt) {
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
   }).concat(
-    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
+    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/sites/studio/pages/applab-api.js']]
   ));
   var codeStudioEntries = {
-    'code-studio':                  './src/sites/studio/pages/code-studio.js',
-    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
+    'layouts/application':          './src/sites/studio/pages/layouts/application.js',
+    'shared/_district_dropdown':    './src/sites/studio/pages/shared/_district_dropdown.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
-    'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
-    'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
-    'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
-    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
-    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
-    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/editors/_applab':       './src/sites/studio/pages/levels/editors/_applab.js',
+    'scripts/_form':                './src/sites/studio/pages/scripts/_form.js',
+    'levels/editors/_gamelab':      './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_dsl':          './src/sites/studio/pages/levels/editors/_dsl.js',
+    'levels/editors/_studio':       './src/sites/studio/pages/levels/editors/_studio.js',
+    'levels/_contract_match':       './src/sites/studio/pages/levels/_contract_match.jsx',
     'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
-    'levels/external':              './src/sites/studio/pages/levels/external.js',
-    'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
+    'levels/_external':             './src/sites/studio/pages/levels/_external.js',
+    'levels/_level_group':          './src/sites/studio/pages/levels/_level_group.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
-    'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
-    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
-    'signup':                       './src/sites/studio/pages/signup.js',
-    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
-    'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
-    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+    'levels/_text_match':           './src/sites/studio/pages/levels/_text_match.js',
+    'levels/_widget':               './src/sites/studio/pages/levels/_widget.js',
+    'devise/registrations/new':     './src/sites/studio/pages/devise/registrations/new.js',
+    'layouts/_race_interstitial':   './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
+    'scripts/show':                 './src/sites/studio/pages/scripts/show.js'
   };
 
   var otherEntries = {
-    plc: './src/sites/studio/pages/plc.js',
+    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
+    'videos/embed': './src/sites/studio/pages/videos/embed.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
-    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
+    'levels/embed_blocks': './src/sites/studio/pages/levels/embed_blocks.js',
 
     // tutorialExplorer for code.org/learn 2016 edition.
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
+    'learn/index': './src/sites/code.org/pages/learn/index.js',
 
-    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
+    'maker/dependencies': './src/sites/studio/pages/maker/dependencies.js',
 
-    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
+    'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
 
-    publicKeyCryptography: './src/publicKeyCryptography/main.js',
+    publicKeyCryptography: './src/sites/studio/pages/publicKeyCryptography.js',
 
-    brambleHost: './src/weblab/brambleHost.js',
+    'weblab_host/index': './src/sites/studio/pages/weblab_host/index.js',
   };
 
   // Create a config for each of our bundles
@@ -614,6 +615,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
+    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -622,6 +624,35 @@ module.exports = function (grunt) {
     'newer:strip_code',
     'ejs'
   ]);
+
+  grunt.registerTask('check-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build, {verbose: true})
+      .then(stats => {
+        done();
+      });
+  });
+
+  grunt.registerTask('lint-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build)
+      .then(stats => {
+        console.log(
+          [
+            chalk.green(`[${stats.passed} passed]`),
+            stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+            stats.failed && chalk.red(`[${stats.failed} failed]`),
+          ].filter(f=>f).join(' ')
+        );
+        if (stats.failed > 0) {
+          grunt.warn(
+            `${stats.failed} entry points do not conform to naming conventions.\n` +
+            `Run grunt check-entry-points for details.\n`
+          );
+        }
+        done();
+      });
+  });
 
   grunt.registerTask('compile-firebase-rules', function () {
     if (process.env.RACK_ENV === 'production') {

@@ -4,12 +4,12 @@
 // which need to be explicitly required here.
 window.$ = require('jquery');
 
-window.Applab = require('./applab');
-import applabCommands from './commands';
-import * as api from './api';
-import appStorage from './appStorage';
-import Sounds from '../Sounds';
-import {singleton as studioApp} from '../StudioApp';
+window.Applab = require('@cdo/apps/applab/applab');
+import applabCommands from '@cdo/apps/applab/commands';
+import * as api from '@cdo/apps/applab/api';
+import appStorage from '@cdo/apps/applab/appStorage';
+import Sounds from '@cdo/apps/Sounds';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 studioApp.cdoSounds = new Sounds();
 
 // TODO: remove the below two monkey patches.

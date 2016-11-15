@@ -2,8 +2,8 @@
  *        Public Key Cryptography widget levels. */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
-import ModuloClockWidget from './ModuloClockWidget';
+import PublicKeyCryptographyWidget from '@cdo/apps/publicKeyCryptography/PublicKeyCryptographyWidget';
+import ModuloClockWidget from '@cdo/apps/publicKeyCryptography/ModuloClockWidget';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 // These constants should stay in sync with the levelbuilder options on
