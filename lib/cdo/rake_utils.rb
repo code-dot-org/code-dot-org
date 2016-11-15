@@ -22,6 +22,10 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
+  def self.upgrade_service(id)
+    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
+  end
+
   def self.start_service(id)
     sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
