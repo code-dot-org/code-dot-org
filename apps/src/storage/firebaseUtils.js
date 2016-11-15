@@ -5,10 +5,6 @@ let firebaseConfig;
 
 export function init(setupConfig) {
   config = setupConfig;
-
-  if (typeof config.showRateLimitAlert !== 'function') {
-    throw 'No `showRateLimitAlert` set for Firebase';
-  }
 }
 
 /**
