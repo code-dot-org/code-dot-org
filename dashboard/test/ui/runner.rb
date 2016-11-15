@@ -409,8 +409,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   def first_selenium_error(filename)
     html = File.read(filename)
     error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
-    full_error = error_regex.match(html)[1]
-    full_error && full_error.split("\n").first
+    match = error_regex.match(html)
+    full_error = match && match[1]
+    full_error ? full_error.split("\n").first : 'no selenium error found'
   end
 
   arguments = ''
