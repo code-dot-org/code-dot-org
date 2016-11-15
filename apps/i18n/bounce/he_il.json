@@ -127,6 +127,8 @@
   "whileMsg": "כאשר",
   "whileTooltip": "חזור על הפעולות עד שנקודת הסיום הושגה.",
   "yes": "כן",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"
