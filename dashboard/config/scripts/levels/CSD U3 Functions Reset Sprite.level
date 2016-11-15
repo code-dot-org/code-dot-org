@@ -62,6 +62,8 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
+    "show_debug_watch": "false",
+    "teacher_markdown": "**Why Use Functions** \r\n\r\nThis and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels.",
     "contained_level_names": null
   },
   "published": true,
