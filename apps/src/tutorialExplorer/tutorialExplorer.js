@@ -431,13 +431,12 @@ function getFilters({robotics, mobile}) {
  *   our known name of filterGroups/entries, but invalid entries should be
  *   ignored in the filtering user experience.
  */
-function getUrlParameters() {
+function getUrlParameters(robotics) {
   // Create a result object that has a __proto__ so that React validation will work
   // properly.
   let parametersObject = {};
 
   let parameters = queryString.parse(location.search);
-
   for (const name in parameters) {
     if (typeof parameters[name] === "string") {
       // Convert items with a single filter entry into an array containing that
@@ -445,6 +444,11 @@ function getUrlParameters() {
       parametersObject[name] = [parameters[name]];
     } else {
       parametersObject[name] = parameters[name];
+    }
+
+    if (robotics) {
+      // The robotics page remains dedicated to robotics activities.
+      parametersObject.activity_type = ["robotics"];
     }
   }
 
@@ -455,8 +459,9 @@ window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
 
-  const providedParameters = getUrlParameters(filters);
-  if (providedParameters) {
+  // Check for URL-based override of initialFilters.
+  const providedParameters = getUrlParameters(!options.roboticsButton);
+  if (!_.isEmpty(providedParameters)) {
     initialFilters = providedParameters;
   }
 
