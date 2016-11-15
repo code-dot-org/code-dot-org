@@ -2,6 +2,7 @@
 @dashboard_db_access
 @as_student
 @no_circle_ie
+@no_circle
 Feature: App Lab Scenarios
 
   Scenario: Template backed level
