@@ -127,6 +127,8 @@
   "whileMsg": "mens",
   "whileTooltip": "Gentag de lukkede handlinger indtil målet er nået.",
   "yes": "Ja",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

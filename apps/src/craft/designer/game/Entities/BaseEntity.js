@@ -412,7 +412,7 @@ export default class BaseEntity {
         }, 200, this);
     }
 
-    pushBack(commandQueueItem, pushDirection, movementTime) {
+    pushBack(commandQueueItem, pushDirection, movementTime, completionHandler) {
         var levelModel = this.controller.levelModel;
         var pushBackPosition = levelModel.getPushBackPosition(this, pushDirection);
         var canMoveBack = levelModel.isPositionEmpty(pushBackPosition)[0];
@@ -424,11 +424,19 @@ export default class BaseEntity {
                 x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
             }, movementTime, Phaser.Easing.Linear.None);
             tween.onComplete.add(() => {
-                setTimeout(() => { commandQueueItem.succeeded(); }, movementTime);
+                setTimeout(() => {
+                    commandQueueItem.succeeded();
+                    if (completionHandler !== undefined) {
+                        completionHandler(this);
+                    }
+                }, movementTime);
             });
             tween.start();
         } else {
             commandQueueItem.succeeded();
+            if (completionHandler !== undefined) {
+                completionHandler(this);
+            }
         }
     }
 
@@ -443,9 +451,9 @@ export default class BaseEntity {
             }, 1500);
         } else {
             this.healthPoint--;
+            this.sprite.animations.stop(null, true);
             this.controller.levelView.playScaledSpeed(this.sprite.animations, "die" + facingName);
             setTimeout(() => {
-
                 var tween = this.controller.levelView.addResettableTween(this.sprite).to({
                     alpha: 0
                 }, 300, Phaser.Easing.Linear.None);
@@ -494,6 +502,34 @@ export default class BaseEntity {
 
     getDistance(entity) {
         return Math.abs(Math.pow(this.position[0] - entity.position[0], 2) + Math.pow(this.position[1] - entity.position[1], 2));
+    }
+
+    blowUp(commandQueueItem, explosionPosition) {
+        let pushBackDirection = FacingDirection.Down;
+        if (explosionPosition[0] > this.position[0]) {
+            pushBackDirection = FacingDirection.Left;
+            this.facing = FacingDirection.Right;
+            this.updateAnimationDirection();
+        } else if (explosionPosition[0] < this.position[0]) {
+            pushBackDirection = FacingDirection.Right;
+            this.facing = FacingDirection.Left;
+            this.updateAnimationDirection();
+        } else if (explosionPosition[1] > this.position[1]) {
+            pushBackDirection = FacingDirection.Up;
+            this.facing = FacingDirection.Down;
+            this.updateAnimationDirection();
+        } else if (explosionPosition[1] < this.position[1]) {
+            pushBackDirection = FacingDirection.Down;
+            this.facing = FacingDirection.Up;
+            this.updateAnimationDirection();
+        }
+        this.pushBack(commandQueueItem, pushBackDirection, 150, function (entity) {
+            let callbackCommand = new CallbackCommand(entity.controller, () => { }, () => { entity.controller.destroyEntity(callbackCommand, entity.identifier); }, entity.identifier);
+            entity.queue.startPushHighPriorityCommands();
+            entity.addCommand(callbackCommand, commandQueueItem.repeat);
+            entity.queue.endPushHighPriorityCommands();
+        });
+
     }
 
 }

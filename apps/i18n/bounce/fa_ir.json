@@ -127,6 +127,8 @@
   "whileMsg": "هنگامیکه",
   "whileTooltip": "کارهای بسته شده را تکرار کن تا زمانیکه به نقطه پایان برسی.",
   "yes": "بله",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

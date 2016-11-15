@@ -71,6 +71,15 @@ social:
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
+  - prefix = "tutorial_#{tutorial[:short_code]}_"
+  - tutorial[:name]                                 = hoc_s(prefix + "name")
+  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
 #tutorials
 

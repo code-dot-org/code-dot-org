@@ -8,8 +8,6 @@
 #  emails     :string(255)
 #
 
-require 'digest/md5'
-
 class StudioPerson < ActiveRecord::Base
   has_many :users
 
@@ -17,36 +15,46 @@ class StudioPerson < ActiveRecord::Base
   # email with this user. If new, adds it to the list of emails. If existing,
   # links the associated user (as well as all users associated with the user)
   # to this user (removing the duplicate studio_person if necessary).
-  # @param email [String] The email address to associate with this
+  #
+  # WARNING: As this method stores emails in plaintext, the email argument
+  # should include only teacher emails.
+  #
+  # @param email_to_add [String] The email address to associate with this
   #   studio_person.
-  def add_email(email)
-    add_email_to_emails(email)
+  def add_email(email_to_add)
+    add_email_to_emails(email_to_add)
 
-    # Look for whether there is a User and a StudioPerson for the email address.
-    existing_user = User.find_by_email_or_hashed_email(email)
-    existing_studio_person = existing_user.studio_person if existing_user
-    # Merge the existing user, if any, with this studio_person.
-    if existing_user
-      existing_user.update!(studio_person_id: self.id)
-    end
+    # Look for whether there is (are) a User and a StudioPerson for the email
+    # address. By using hashed_email, we handle the many teachers missing a
+    # plaintext email.
+    hashed_email_to_add = User.hash_email(email_to_add)
+    User.where(hashed_email: hashed_email_to_add).each do |matching_user|
+      matching_studio_person = matching_user.studio_person
+      begin
+        matching_user.update!(studio_person_id: self.id)
+      rescue
+        matching_user.update!(studio_person_id: self.id, email: email_to_add)
+      end
 
-    # Merge the existing studio_person (also all associated users), if any, with
-    # this studio_person.
-    if existing_studio_person && self != existing_studio_person
-      existing_studio_person.emails_as_array.each do |existing_email|
-        add_email_to_emails(existing_email)
+      # Merge the matching studio_person (also all associated users), if any,
+      # with this studio_person.
+      if self != matching_studio_person
+        matching_studio_person.emails_as_array.each do |existing_email|
+          add_email_to_emails(existing_email)
+        end
+        User.where(studio_person_id: matching_studio_person.id).each do |user|
+          # TODO(asher): If necessary, bypass validations as many of our users do
+          # not pass our own validations.
+          user.update!(studio_person_id: self.id)
+          add_email_to_emails(user.email)
+        end
       end
-      User.where(studio_person_id: existing_studio_person.id).each do |user|
-        # TODO(asher): If necessary, bypass validations as many of our users do
-        # not pass our own validations.
-        user.update!(studio_person_id: self.id)
-        add_email_to_emails(user.email)
-      end
+
+      # Delete the (now) orphaned studio_person.
+      matching_studio_person.delete if matching_studio_person
     end
 
     self.save!
-    # Delete the (now) orphaned studio_person.
-    existing_studio_person.delete if existing_studio_person
   end
 
   # @returns [Array[String]] An array of emails associated with the studio_person.
@@ -62,7 +70,9 @@ class StudioPerson < ActiveRecord::Base
   # @param email [String] The email to associate with this studio_person.
   def add_email_to_emails(email)
     return if email.nil? || email.blank?
-    return if emails_as_array.include? email
-    self.emails = (emails_as_array << email).join(',')
+
+    normalized_email = email.strip.downcase
+    return if emails_as_array.include? normalized_email
+    self.emails = (emails_as_array << normalized_email).join(',')
   end
 end

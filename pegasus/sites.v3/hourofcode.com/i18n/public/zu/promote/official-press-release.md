@@ -8,42 +8,42 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-# Imbonakaliso yoku khululiwe kwabezindaba yezikhulu
+# Imbonakaliso yokukhululiwe yezikhulu ezikhethwe ngokusemthethweni
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+Ukuze kuKhululwe Ngokushesha  
+[**USUKU**]  
+Xhumana: [**ULWAZI LOKUXHUMANA**]  
   
 
 
 **
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  UNDUNANKULU/UMBUSI/ILUNGALENHLANGANO/UMKHULUMELI/UMPHATHIDOLOBHA/iLUNGULOMKHANDLU [FAKA IGAMA][BAMBE IQHAZA KUHORA LOKUFINGQWA NEBAFUNDI BENDAWO]</strong><br /> uPhakathi uhlanganyela ukuqwashisa ngokubaluleka kwemfundiso yekhompyutha sayensi ngokuzibandakanya kuViki leMfundiso yeKhompyutha Sayensi
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**USUKU** - [**FAKA IGAMA**] ungenelele nothishanhloko kanye nothisha be [**FAKA IGAMA LESIKOLE**], abaholi bezohwebo kanye nemindeni yekhaya namhlanje [**IGAMA LOMCIMBI**] ukuzibandakanya neHora loKufingqwa njengengxenye yeViki leMfundiso yeKhompyutha Sayensi. [FAGA IGAMA] kanye namalunga omphakathi bewephakathi kwamakhulu abantu emhlabeni wonke jikelele athethe ichaza kowona mcimbi omkhulu kumlandu.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**FAKA IMINININGWANE YOMCIMBI, SEBENZISA INCAZELO EJULILE FUTHI NOLWIMI OLUQAVILE. ISIBONELO:**]  
+"Daniels Run Elementary School ibambe umcimbi esikoleni sonke weHora loKufingqwa ukuze yambulele abafundi bayo ikhompyutha sayensi. Badlulela kumakhulu ayisikhombisa abafundi bawowonke amabanga abenze ihora elilodwa leHora loKufingqwa. Kanti abazali novolontiya abayishumi nambili abavela kumphakathi basizile ngosuku baletha nezingane ndawonye kumhlangano obukhombisa ngokuthi kungani ikhompyutha sayensi ibaluleke kanjani ezimpilweni yalaba bafundi."
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**ISIBONAKALISO SESITOKWE SOMBALO WENDIKIMBA:**]  
+Amakhompyutha akhona indawo yonke, kodwa ngezimbalwa izikole ezifundisa ikhompyutha sayensi kuneminyaka eyishumi endlule. Amantombazane kanye nabafundi bombala abamelwanga kahle. Izindaba ezinhle ukuba sishintsha loku ngokuka ngcono. IHora loKufingqwa liyisango eliya ekuletheni kubafundi bonke ukufinyelela emfundisweni yekhompyutha sayensi eseqopheleleni eliphezulu.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa. Sibonga kuHora loKufingqwa, ngokuba ikhompyutha sayensi ibivele kukhasikhaya lakwa Google, MSN, Yahoo! Kanye neDisney. Umongameli uObama, Shakira kanye no Ashton Kutcher bonke baqale iHora loKufingqwa ngama vidiyo. Badlulele kukhulu abahlanganyeli abeze ukuzosingatha lomnyakazo.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+[**FAKA INKULUMO EVELA KUMKHULUMELI, ISIBONELO NGEZANSI:**]  
+"Sidinga ukukhuthaza kanye nokusingatha intshisakalo zabafundi bethu kukhompyutha sayensi," kusho [** FAKA IGAMA**]. "Wonke umfundi ufanelwe ukuba athole ithuba lokufunda ikhompyutha sayensi ukuze afinyelele kumsebenzi owona ophambili esikhathini samanje."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[** FAKA ULWZAZI OLUBANZI NGOMCIMBI WAKHO OKANYE NGENHLANGANO YAKHO**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**FAKA UKUHUMUSHA OKUVELA KUNKAMPANI ETHILE OKANYE KOMUNYE OBEKADE EKHONA KUMCIMBI**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+Ngemininingane ebanzi nge [**UMCIMBI/UHLELO/NJLL**, vakashela [**FAKA IWEBHUSAYITHI**] okanye xhumana [**FAKA IMINININGWANE YOKUXHUMANA**]
 
   
   
