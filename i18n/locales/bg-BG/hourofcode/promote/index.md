@@ -14,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## Разпространете новината
 
-Tell your friends about the **#HourOfCode**!
+Кажете на приятелите си за **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Попитайте във Вашето училище, дали се предлага участие в Часът на кодирането
 
-[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на директора и предизвикайте всяка класна стая в училището да се регистрира. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[ Изпратете този имейл](%= resolve_url('/promote/resources#sample-emails') %) на директора и предизвикайте всяка класна стая в училището да се регистрира.
 
 ## 3. Предложете на Вашия работодател да се включи в инициативата
 

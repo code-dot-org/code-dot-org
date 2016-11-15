@@ -11,7 +11,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Escolha um tutorial:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Confira aqui!](%= resolve_url("https://code.org/learn") %)
+Oferecemos diversos [tutoriais divertidos de uma hora de duração](%= resolve_url('https://code.org/learn') %), criados por vários parceiros, para participantes de todas as idades. [Confira aqui!](%= resolve_url("https://code.org/learn") %)
 
 **Todos os tutoriais da Hora do Código:**
 
@@ -19,6 +19,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
   * São autoexplicativos, o que permite que as crianças trabalhem em seu próprio ritmo e nível de habilidade
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promova sua Hora do Código
 
@@ -116,11 +118,10 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## Outros recursos da Hora do Código para educadores:
 
-  * Use este [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para organizar a Hora do Código.
-  * Confira as [melhores práticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dos organizadores que já trabalharam na Hora do Código. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Assista à gravação de nosso [Guia do educador para o seminário web da Hora do Código](https://youtu.be/EJeMeSW2-Mw).
   * [Assista ao vivo a uma sessão de perguntas e respostas](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) com nosso fundador, Hadi Partovi, para se preparar para a Hora do Código.
-  * Visite o [Fórum da Hora do Código](http://forum.code.org/c/plc/hour-of-code) para conseguir conselhos, ideias e apoio de outros organizadores. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Veja as [Perguntas Frequentes da Hora do Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## O que vem depois da Hora do Código?

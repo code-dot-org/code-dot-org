@@ -49,6 +49,7 @@
       "setAnimation": null,
       "sprite.height": null,
       "sprite.width": null,
+      "visible": null,
       "x": null,
       "y": null,
       "rotation": null,
@@ -91,11 +92,12 @@
       "comment_Sprites": null,
       "console.log": null
     },
+    "show_debug_watch": "true",
     "contained_level_names": null,
     "encrypted_examples": [
 
     ],
-    "show_debug_watch": "true"
+    "palette_category_at_start": "sprites"
   },
   "published": true,
   "notes": "",

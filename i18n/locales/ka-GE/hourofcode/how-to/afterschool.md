@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
 გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](%= resolve_url('/promote') %) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
@@ -116,11 +118,10 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის:
 
-  * გამოიყენეთ ეს [გაკვეთილის გეგმის ნიმუში](/files/AfterschoolEducatorLessonPlanOutline.docx) და დაგეგმეთ თქვენი კოდის ერთი საათი.
-  * მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის ორგანიზატორებისგან. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * უყურეთ ჩვენი [პედაგოგების კოდის ერთი საათის ვებინარის](https://youtu.be/EJeMeSW2-Mw) ჩანაწერს.
   * [დაესწარით კითხვებისა და პასუხების სესიას რეალურ დროში](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) ჩვენს დამფუძნებელთან ჰადი პატოვთან და გაიგეთ მეტი კოდის ერთი საათის შესახებ.
-  * სხვა ორგანიზატორების მხარდაჭერისა და რჩევებისთვის ესტუმრეთ [კოდის ერთი საათის ფორუმს](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?

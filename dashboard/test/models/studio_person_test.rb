@@ -29,6 +29,11 @@ class StudioPersonTest < ActiveSupport::TestCase
     assert_equal [NEW_EMAIL], @studio_person.emails_as_array
   end
 
+  def test_add_email_when_nonnormalized
+    @studio_person.add_email(' ' + NEW_EMAIL.upcase + ' ')
+    assert_equal [NEW_EMAIL], @studio_person.emails_as_array
+  end
+
   def test_add_email_when_repeated
     @studio_person.add_email(NEW_EMAIL)
     @studio_person.add_email(NEW_EMAIL)

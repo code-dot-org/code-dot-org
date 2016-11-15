@@ -16,9 +16,9 @@ nav: promote_nav
 
 ### Leve a ciência da computação para sua escola: promova a Hora do Código
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! A boa notícia é que estamos a caminho de mudar essa realidade. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Com a tecnologia mudando todos os setores do planeta, o conhecimento em computação tornou-se parte de um conjunto de habilidades equilibrado. But fewer than half of all schools teach computer science! A boa notícia é que estamos a caminho de mudar essa realidade. Se você ouviu falar da Hora do Código do ano passado, sabe que ela marcou a história. Cem milhões de alunos já sabem o quanto a ciência da computação pode ser acessível e divertida, fazendo apenas uma Hora do Código.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+A Hora do Código é uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos desta ciência. Saiba mais em <http://HourofCode.com>, faça uma hora você mesmo, ou sedie um evento da Hora do Código para levar o mundo da computação a outras pessoas!
 
 <a id="infographics"></a>
 

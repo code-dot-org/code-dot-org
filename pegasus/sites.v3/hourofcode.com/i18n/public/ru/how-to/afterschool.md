@@ -13,7 +13,7 @@ nav: how_to_nav
 ## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Попробуйте!](<%= resolve_url("https://code.org/learn") %>)
+Мы предоставляем различные[классные часы](<%= resolve_url('https://code.org/learn') %>)для участников всех возрастов, созданные различными партнерами. [Попробуйте!](<%= resolve_url("https://code.org/learn") %>)
 
 **Все уроки Часа Кода:**
 
@@ -21,6 +21,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
   * Независимы друг от друга, то есть с ними можно работать в любом темпе и при любом уровне подготовки учеников
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) продвигайте свой час кода
 
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## Другие ресурсы для учителей Часа Кода:
 
-  * Воспользуйтесь этим [примером плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx) для организации Часа Кода.
-  * Просмотрите [лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от прошлых организаторов Часа Кода. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Посмотрите запись[вебинара о том, как провести Час Кода](https://youtu.be/EJeMeSW2-Mw).
   * [Задавайте вопросы в режиме онлайн &](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) основателю проекта Хади Партови касаемо того, как подготовиться к проведению Часа Кода.
-  * Посетите [Форум Часа Кода](http://forum.code.org/c/plc/hour-of-code) на котором Вы получите советы и поддержку от других организаторов. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Просмотрите [Часто задаваемые вопросы по Часу Кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Час Кода: а что дальше?

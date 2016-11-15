@@ -80,7 +80,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**所有的代碼小時教程:**
+**所有的Hour of Code教程:**
 
   * Require minimal prep-time for organizers
   * 是自學式的-允許學生用自己的步調和技能層次進行。
