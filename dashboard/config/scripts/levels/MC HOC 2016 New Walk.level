@@ -43,7 +43,9 @@
     "use_player": "true",
     "use_score": "false",
     "show_popup_on_load": "playerSelection",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "video_key": "mc_2016_events",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "UPDATE:\r\n\r\nThis level teaches Walking and Use",

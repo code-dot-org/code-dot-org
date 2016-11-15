@@ -22,6 +22,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
@@ -118,11 +120,10 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
-  * Usa questa [esempio di lezione](/files/AfterschoolEducatorLessonPlanOutline.docx) per organizzare la tua Ora del Codice.
-  * Leggi i [consigli](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) degli organizzatori delle passate edizioni de L'Ora del Codice. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Guarda la registrazione del nostro webinar [Guida per l'Educatore all'Ora del Codice](https://youtu.be/EJeMeSW2-Mw).
   * [Partecipa dal vivo a una sessione di Domande&Risposte](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) con il nostro fondatore, Hadi Partovi, per prepararti all'Ora del Codice.
-  * Visita il [Forum dell'Ora del Codice](http://forum.code.org/c/plc/hour-of-code) per ricevere consigli, opinioni e assistenza dagli altri organizzatori. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Controlla le [FAQ dell'Ora del Codice](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Cosa c'è dopo l'Ora del Codice?

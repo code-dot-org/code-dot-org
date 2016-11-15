@@ -1459,6 +1459,7 @@ en:
             Unit 5 Assessment 2: Unit 5 Assessment 2
             "'If' Statements Unplugged": "'If' Statements Unplugged"
             '"If" Statements Unplugged': '"If" Statements Unplugged'
+            Getting started with If Statements: Getting started with If Statements
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2260,8 +2261,8 @@ en:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Build a Minecraft game.
-          description: Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.
+          description_short: Program animals and enemies in your own version of Minecraft.
+          description: Program animals and enemies in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey

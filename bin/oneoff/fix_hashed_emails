@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+# This script assures the invariant
+#   user.hashed_email == User.hash_email(user.email.strip.downcase)
+# for every user with a non-blank email.
+#
+# As of November 2016, this invariant is violated for approximately 150 users.
+
+require_relative '../../dashboard/config/environment'
+
+User.with_deleted.where(user_type: 'teacher').where.not(email: nil).where.not(email: '').each do |user|
+  correct_hashed_email = User.hash_email(user.email)
+  next if user.hashed_email == correct_hashed_email
+
+  puts "DIFF: user.id: #{user.id}, "\
+    "user.email: #{user.email}, "\
+    "user.hashed_email: #{user.hashed_email}, "\
+    "correct_hashed_email: #{correct_hashed_email}..."
+
+  print "Update? Y/S/Q: "
+  response = gets
+  if response == 'Y'
+    user.update!(hashed_email: correct_hashed_email)
+  elsif response == 'S'
+    next
+  else
+    exit(-1)
+  end
+end
