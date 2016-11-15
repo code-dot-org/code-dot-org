@@ -232,6 +232,8 @@ Dashboard::Application.routes.draw do
   get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
   post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
 
+  get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
+  post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
@@ -392,4 +394,5 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
 end

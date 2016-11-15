@@ -184,7 +184,7 @@ function renderContentToggle() {
     $("#try-it-yourself").hide();
 
     const levelContent = $('#level-body');
-    const element = $('<div/>').insertAfter(levelContent)[0];
+    const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
     const store = getStore();
 
     const { scriptName } = store.getState().progress;

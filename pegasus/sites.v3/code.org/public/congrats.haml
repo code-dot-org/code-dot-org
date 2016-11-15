@@ -86,14 +86,14 @@ max_age: 60
 
   %div{:style=>'clear: both; height:30px'}
 
-  = view :congrats_continue
+  = view :congrats_continue, script:cert_script
 
   %div{:style=>'clear: both; height:30px'}
 
   = view :congrats_leaderboards
 
   %br
-  = view :petition
+  = view :petition_expand
 
 = view 'popup_window.js'
 

@@ -411,6 +411,10 @@ GameLab.prototype.reset = function (ignore) {
   }
   */
 
+  if (this.studioApp_.cdoSounds) {
+    this.studioApp_.cdoSounds.stopAllAudio();
+  }
+
   this.gameLabP5.resetExecution();
 
   // Import to reset these after this.gameLabP5 has been reset
@@ -736,8 +740,6 @@ GameLab.prototype.execute = function () {
       this.executionError) {
     return;
   }
-
-  this.studioApp_.playAudio('start');
 
   if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running

@@ -66,13 +66,19 @@ const styles = {
     padding: 5,
     border: '1px solid lightgrey'
   },
+  tutorialDetailsTableBodyNoWrap: {
+    padding: 5,
+    border: '1px solid lightgrey',
+    whiteSpace: "pre"
+  }
 };
 
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
-    closeClicked: React.PropTypes.func.isRequired
+    closeClicked: React.PropTypes.func.isRequired,
+    localeEnglish: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -88,12 +94,14 @@ const TutorialDetail = React.createClass({
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
-      {key: 2, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
-      {key: 3, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 4, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 5, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 2, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+      {key: 3, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 4, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
+      {key: 5, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
       {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      // Reserve key 6 for international languages.
+      {key: 7, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
+      {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
+      // Reserve key 9 for the optional standards.
     ];
 
     return (
@@ -198,14 +206,16 @@ const TutorialDetail = React.createClass({
                         </td>
                       </tr>
                     )}
-                    <tr key={6}>
-                      <td style={styles.tutorialDetailsTableTitle}>
-                        {i18n.tutorialDetailInternationalLanguages()}
-                      </td>
-                      <td style={styles.tutorialDetailsTableBody}>
-                        {this.props.item.language}
-                      </td>
-                    </tr>
+                    {this.props.localeEnglish && this.props.item.string_standards && (
+                      <tr key={9}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          {i18n.tutorialDetailStandards()}
+                        </td>
+                        <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                          {this.props.item.string_standards}
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>

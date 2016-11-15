@@ -8,19 +8,19 @@ title: <%= hoc_s(:title_stats) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Blurbs and Useful Stats
+# Kort text och informationsvisualiseringar
 
-## Use this short blurb in newsletters
+## Använd den är korta texten i nyhetsbrev
 
-### Bring computer science to your school. Start with an Hour of Code
+### Ta datavetenskap till din skola. Börja med en timmes kod
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Good news is, we’re on our way to change this. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Med tekniken förändras varje industri på planeten, datalogiskt tänkande har blivit en del av vår nödvändiga kunskap. But fewer than half of all schools teach computer science! Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code, kanske du vet det gjorde historia förra året. 100 miljoner elever har nu upptäckt hur tillgänglig och rolig datavetenskap kan vara genom att bara göra en timmes programmering.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hour of Code är en entimmes introduktion till datavetenskap, utformad för att avmystifiera kod och visa att vem som helst kan lära sig grunderna. Läs mer på <http://HourofCode.com>, prova en timme själv eller var värd för en Hour of Code för att introducera andra tilll datorernas värld!
 
 <a id="infographics"></a>
 
-## Infographics
+## Informationsvisualiseringar
 
 <%= view :stats_carousel %>
 

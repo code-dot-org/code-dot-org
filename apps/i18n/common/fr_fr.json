@@ -314,5 +314,6 @@
   "when": "quand",
   "whenRun": "quand l'exécution commence",
   "workspaceHeaderShort": "Espace de travail :",
-  "yes": "Oui"
+  "yes": "Oui",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

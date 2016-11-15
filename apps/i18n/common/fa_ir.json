@@ -314,5 +314,6 @@
   "when": "وقتی",
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
-  "yes": "بله"
+  "yes": "بله",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

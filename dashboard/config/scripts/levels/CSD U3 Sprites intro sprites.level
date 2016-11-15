@@ -53,6 +53,8 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "video_key": "csd_gamelab_sprites_1",
+    "show_debug_watch": "true",
+    "encrypted_examples": "p0LWDtQXq0z/uR8DDQIYjduyHsQvRUgbfP4QaFwTfx326OX4CcZDYJG3ItKp\n9YtH\n",
     "contained_level_names": null
   },
   "published": true,

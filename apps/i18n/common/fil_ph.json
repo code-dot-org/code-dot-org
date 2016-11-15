@@ -314,5 +314,6 @@
   "when": "kelan",
   "whenRun": "kapag tumakbo",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Oo"
+  "yes": "Oo",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

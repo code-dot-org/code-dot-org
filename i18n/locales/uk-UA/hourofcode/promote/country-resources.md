@@ -78,7 +78,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Всі підручники Години коду:**
+**Всі програми "Година коду":**
 
   * Require minimal prep-time for organizers
   * Призначені для самостійного навчання - дозволяючи учням працювати у власному темпі відповідно до свого рівня знань

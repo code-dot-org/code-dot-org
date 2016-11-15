@@ -93,6 +93,7 @@
       "comment_Sprites": null,
       "console.log": null
     },
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

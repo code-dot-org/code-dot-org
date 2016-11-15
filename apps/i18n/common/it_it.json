@@ -314,5 +314,6 @@
   "when": "quando",
   "whenRun": "quando si clicca su \"Esegui\"",
   "workspaceHeaderShort": "Area di lavoro: ",
-  "yes": "Sì"
+  "yes": "Sì",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

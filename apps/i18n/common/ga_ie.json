@@ -314,5 +314,6 @@
   "when": "nuair",
   "whenRun": "nuair a ritear é",
   "workspaceHeaderShort": "Spás oibre: ",
-  "yes": "Tá"
+  "yes": "Tá",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

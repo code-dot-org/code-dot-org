@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Promociona tu Hora de Código
 
 Promociona tu Hora del Código [con estas herramientas](%= resolve_url('/promote') %) y anima a otros a organizar sus propios eventos.
@@ -116,11 +118,10 @@ Empiece su Hora del Código inspirando a los participantes y comentando cómo la
 
 ## Otros recursos de Hora del Código para los educadores:
 
-  * Utilice esta [plantilla de programación de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para organizar su Hora del Código.
-  * Revise [las mejores prácticas](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) de anteriores organizadores de la Hora del Código. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Vea la grabación de nuestra webinar [Guía del educador para la Hora de Código](https://youtu.be/EJeMeSW2-Mw).
   * [Asista a una sesión de preguntas y respuestas en vivo ](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) con nuestro fundador, Hadi Partovi para prepararse para la Hora del Código.
-  * Visite el [Foro de la Hora del Código](http://forum.code.org/c/plc/hour-of-code) para obtener consejos y apoyo de otros organizadores. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Revise las [ FAQS de la Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## ¿Qué viene después de la Hora de Código?
