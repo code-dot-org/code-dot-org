@@ -168,6 +168,7 @@ module RakeUtils
   end
 
   def self.git_push
+    system 'git', 'pull', 'origin', git_branch # allow a merge commit if any new commits from origin.
     system 'git', 'push', 'origin', git_branch
   end
 
