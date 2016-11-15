@@ -34,7 +34,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment_with_no_user.resolve_user
   end
 
-  test 'required field validations' do
+  test 'required field validations without country' do
     enrollment = Pd::Enrollment.new
     refute enrollment.valid?
     assert_equal [
@@ -51,6 +51,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.school = 'test school'
     enrollment.school_info = create(:school_info_without_country)
     assert enrollment.valid?
+  end
+
+  test 'required field validations with country' do
+    enrollment = Pd::Enrollment.new
+    enrollment.first_name = 'FirstName'
+    enrollment.last_name = 'LastName'
+    enrollment.email = 'teacher@example.net'
+    enrollment.school_info = build :school_info_us_public, :with_district, :with_school
+    assert enrollment.valid?
+
+    enrollment.school = 'test school'
+    refute enrollment.valid?
+    assert_equal ['School is forbidden'], enrollment.errors.full_messages
   end
 
   test 'emails are stored in lowercase and stripped' do
