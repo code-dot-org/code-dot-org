@@ -17,8 +17,6 @@ import designerLevels from "@cdo/apps/craft/designer/levels";
 import designerSkins from "@cdo/apps/craft/designer/skins";
 
 export default function loadCraft(options) {
-  console.log(DesignerCraft, designerBlocks, designerLevels, designerSkins);
-
   window.Craft = options.level.isEventLevel ? DesignerCraft : Craft;
   if (typeof global !== 'undefined') {
     global.Craft = window.Craft;

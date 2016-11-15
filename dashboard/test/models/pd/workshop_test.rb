@@ -350,6 +350,24 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal plp, @workshop.professional_learning_partner
   end
 
+  test 'errors in send_reminder_for_upcoming_in_days do not stop batch' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil)
+    3.times do
+      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
+    end
+
+    workshop = create :pd_workshop
+    3.times{create :pd_enrollment, workshop: workshop}
+    Pd::Workshop.expects(:start_in_days).returns([workshop])
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+    end
+    assert e.message.include? 'Failed to send 1 day workshop reminders:'
+    assert e.message.include? 'bad email'
+  end
+
   private
 
   def session_on_day(day_offset)

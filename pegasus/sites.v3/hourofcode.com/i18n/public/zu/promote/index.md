@@ -15,17 +15,17 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved
+# Indlela yokuzibandakanya
 
 ## 1. Sabalalisa izwi
 
-Tell your friends about the **#HourOfCode**!
+Xoxela izihlobo zakho ngalo i **#HoraloKufingqwa**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Cela isikole sakho sonke ukuthi sizinikele ngeHora loKufingqwa
+## 2. Cela isikole sakho sonke ukuba sinikele ngeHora loKufingqwa
 
-[Thumela imeyili leli](<%= resolve_url('/promote/resources#sample-emails') %>) kuthisha nhloko wakho uphinde ufake inselela kumakilasi wonke akho kusikole sakho ukuba babhalise. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Thumela imeyili leli](<%= resolve_url('/promote/resources#sample-emails') %>) kuthisha nhloko wakho uphinde ufake inselela kumakilasi wonke akho kusikole sakho ukuba babhalise.
 
 ## 3. Cela umqhashi wakho ukuthi azibandakanye
 
@@ -33,10 +33,10 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Khuthaza iHora loKufingqwa kusigodi sakho
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Faka iqembu lendawo](<%= resolve_url('/promote/resources#sample-emails') %>)- umfana/intombazana ikilabhu yamaskhawuthi, ibandla, inyuvesi, iqembu lamaqhawe akudala, inyunyana zabasebenzi, okanye abagane abathize. Akudingeki ukuba ube esikoleni ukuze ufunde amakhono amasha. Sebenzisa lokhu [amaphosta, amabhena, izitembu, amavidiyo kanye nokunye okuningi](<%= resolve_url('/promote/resources') %>) kumcimbi wakho.
 
 ## 5. Cela okhethiwe ngokusemthethweni womphakarthi ukuba asekele iHora loKufingqwa
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Thumela le-imayili](<%= resolve_url('/promote/resources#sample-emails') %>) kulabo abamela indawo yakini, umasipaladi, okanye ibhodi yesikole uphinde ubameme ukuba bezovakashela isikole sakho ngeHora loKufingqwa. Ingasiza ukwakha ukusekelwa kwekhompyutha sayensi kusigodi sakho phambi kwehora elilodwa.
 
 <%= view :signup_button %>

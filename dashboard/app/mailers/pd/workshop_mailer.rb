@@ -128,7 +128,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@enrollment.full_name || @teacher.name, @teacher.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   private
@@ -145,7 +145,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def generate_csf_certificate
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @teacher.name || @teacher.email,
+      @enrollment.full_name,
       y: 444,
       height: 100,
     )
