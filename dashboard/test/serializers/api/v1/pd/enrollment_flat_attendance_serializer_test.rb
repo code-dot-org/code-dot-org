@@ -12,8 +12,10 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
     teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = teacher.name.split(' ', 2)
     expected = {
-      name: teacher.name,
+      first_name: first_name,
+      last_name: last_name,
       email: teacher.email,
       in_section?: false,
       session_1_date: @workshop.sessions[0].formatted_date,
@@ -29,8 +31,10 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       in_section: true, attended: [@workshop.sessions[0]]
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = teacher.name.split(' ', 2)
     expected = {
-      name: teacher.name,
+      first_name: first_name,
+      last_name: last_name,
       email: teacher.email,
       in_section?: true,
       session_1_date: @workshop.sessions[0].formatted_date,
@@ -46,8 +50,10 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
       in_section: true, attended: true
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
+    first_name, last_name = teacher.name.split(' ', 2)
     expected = {
-      name: teacher.name,
+      first_name: first_name,
+      last_name: last_name,
       email: teacher.email,
       in_section?: true,
       session_1_date: @workshop.sessions[0].formatted_date,
@@ -63,7 +69,8 @@ class Api::V1::Pd::EnrollmentFlatAttendanceSerializerTest < ::ActionController::
 
     serialized = ::Api::V1::Pd::EnrollmentFlatAttendanceSerializer.new(Pd::Enrollment.last).attributes
     expected = {
-      name: rogue_enrollment.name,
+      first_name: rogue_enrollment.first_name,
+      last_name: rogue_enrollment.last_name,
       email: rogue_enrollment.email,
       in_section?: false,
       session_1_date: @workshop.sessions[0].formatted_date,

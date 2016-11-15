@@ -22,6 +22,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3）推广您的编程一小时活动
 
 [使用这些工具](<%= resolve_url('/promote') %>) 推广您的编程一小时活动，并鼓励他人举办他们自己的活动。
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## 给教育工作者的其他编程一小时的资源
 
-  * 使用这个 [模板教案](/files/EducatorHourofCodeLessonPlanOutline. docx) 组织编程一小时。
-  * 查看以往编程一小时组织者的[最佳实践](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)。 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * 观看我们 [教育工作者的编程一小时指导网络研讨会](https://youtu.be/EJeMeSW2-Mw) 的录像.
   * 我们的创始人，哈迪帕托维为编程一小时准备的 [现场问与答 q&a](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911)。
-  * 访问[编程一小时论坛](http://forum.code.org/c/plc/hour-of-code)，获取其他组织者的建议，思想和支持。 <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * 阅读 [编程一小时常见问题](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)。 <% end %>
 
 ## 编程一小时之后做什么？

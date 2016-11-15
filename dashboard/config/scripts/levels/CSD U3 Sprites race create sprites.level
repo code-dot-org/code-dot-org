@@ -69,6 +69,10 @@
     "project_template_level_name": "CSD U3 Sprites Template Race",
     "hide_animation_mode": "false",
     "pause_animations_by_default": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
     "contained_level_names": null
   },
   "published": true,

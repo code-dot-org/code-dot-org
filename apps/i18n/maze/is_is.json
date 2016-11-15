@@ -111,5 +111,6 @@
   "word": "Finna orðið",
   "wrongCropError": "Ég get ekki uppskorið þessa plöntu héðan.",
   "yes": "Já",
-  "youSpelled": "Þú stafaðir"
+  "youSpelled": "Þú stafaðir",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

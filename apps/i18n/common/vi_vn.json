@@ -314,5 +314,6 @@
   "when": "Khi nào",
   "whenRun": "Khi chạy",
   "workspaceHeaderShort": "Không gian làm việc:",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

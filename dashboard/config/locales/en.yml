@@ -379,6 +379,7 @@ en:
     announcement_petition_button: "Add your name"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_scaling: "ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate."
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_not_entered: "Please provide current_section_code."
@@ -507,6 +508,9 @@ en:
     minecraft:
       title: "Minecraft"
       body: "Explore a Minecraft world through code."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and enemies in your own version of Minecraft."
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ages 4+"
@@ -608,7 +612,6 @@ en:
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept: "Accept"
     print: "Print"
-    later: "Later"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: "Review updated terms"
   race_interstitial:

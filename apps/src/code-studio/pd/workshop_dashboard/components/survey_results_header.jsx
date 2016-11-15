@@ -162,7 +162,7 @@ const SurveyResultsHeader = React.createClass({
     const allWorkshopsForCourse = this.state.workshopSurveyData['all_workshops_for_course'];
 
     return (
-      <table className="table table-bordered" style={{width: 'auto'}}>
+      <table id="surveyResultsTable" className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             <th/>
@@ -230,7 +230,7 @@ const SurveyResultsHeader = React.createClass({
     });
 
     return (
-      <table className="table table-bordered" style={{width: 'auto'}}>
+      <table id="surveyResultsTable" className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             {

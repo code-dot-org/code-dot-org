@@ -173,7 +173,10 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Filtering Pixels\r\nIf you've ever used Instragram you've probably encountered an image filter. Image filters read in each pixel, process it in some way, and the return the filtered pixel. In this tool we're going to start by filtering just a single pixel before moving on to a full image.\r\n\r\n# Do This\r\n\r\n* Try changing the color drop downs in the Filter section\r\n* Click on the top row of lightbulbs in the Diagram section to see how the filter will convert the input (top bulbs) to the output (bottom bulbs)\r\n* Look at how the numbers in the Binary section reflect changes to the colors\r\n* Based on how the bits change, can you formulate what replace is doing? Talk to your partner and see if you can figure it out.\r\n* Complete the Level 2 table in your Activity Guide\r\n\r\n",
+    "markdown_instructions": "# Filtering Pixels\r\nIf you've ever used Instagram you've probably encountered an image filter. Image filters read in each pixel, process it in some way, and the return the filtered pixel. In this tool we're going to start by filtering just a single pixel before moving on to a full image.\r\n\r\n# Do This\r\n\r\n* Try changing the color drop downs in the Filter section\r\n* Click on the top row of lightbulbs in the Diagram section to see how the filter will convert the input (top bulbs) to the output (bottom bulbs)\r\n* Look at how the numbers in the Binary section reflect changes to the colors\r\n* Based on how the bits change, can you formulate what replace is doing? Talk to your partner and see if you can figure it out.\r\n* Complete the Level 2 table in your Activity Guide\r\n\r\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

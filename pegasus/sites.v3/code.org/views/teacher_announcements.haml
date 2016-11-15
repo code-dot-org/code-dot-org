@@ -1,9 +1,19 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
 - signup_url = 'https://hourofcode.com/#join'
+- scaling_url = 'http://teacherblog.code.org/post/152968866984/an-important-note-about-computer-science'
 
 .teacher-announce
   .announce-heading
     = I18n.t(:dashboard_announcements)
+  .announce-content
+    %a{href: scaling_url, target: '_blank'}
+      .content-img-container
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/hoc-scaling.png'), width: '200px'}
+    .content-text
+      = I18n.t(:dashboard_announce_hoc_scaling)
+    .announce-learn-more
+      %a{href: scaling_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
   .announce-content
     %a{href: signup_url, target: '_blank'}
       .content-img-container

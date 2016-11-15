@@ -314,5 +314,6 @@
   "when": "~할 때",
   "whenRun": "실행하면",
   "workspaceHeaderShort": "작업 영역: ",
-  "yes": "예"
+  "yes": "예",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

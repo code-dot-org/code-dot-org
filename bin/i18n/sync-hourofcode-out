@@ -114,25 +114,25 @@ def clean_crowdin_markdown_errors
   Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
     puts file
     social_media_metada = "---
-  title: <%= hoc_s(:title_signup_thanks) %>
-  layout: wide
-  nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
 
-  social:
-    \"og:title\": \"<%= hoc_s(:meta_tag_og_title) %>\"
-    \"og:description\": \"<%= hoc_s(:meta_tag_og_description) %>\"
-    \"og:image\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
-    \"og:image:width\": 1440
-    \"og:image:height\": 900
-    \"og:url\": \"http://<%=request.host%>\"
+social:
+  \"og:title\": \"<%= hoc_s(:meta_tag_og_title) %>\"
+  \"og:description\": \"<%= hoc_s(:meta_tag_og_description) %>\"
+  \"og:image\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+  \"og:image:width\": 1440
+  \"og:image:height\": 900
+  \"og:url\": \"http://<%=request.host%>\"
 
-    \"twitter:card\": player
-    \"twitter:site\": \"@codeorg\"
-    \"twitter:url\": \"http://<%=request.host%>\"
-    \"twitter:title\": \"<%= hoc_s(:meta_tag_twitter_title) %>\"
-    \"twitter:description\": \"<%= hoc_s(:meta_tag_twitter_description) %>\"
-    \"twitter:image:src\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
-  ---"
+  \"twitter:card\": player
+  \"twitter:site\": \"@codeorg\"
+  \"twitter:url\": \"http://<%=request.host%>\"
+  \"twitter:title\": \"<%= hoc_s(:meta_tag_twitter_title) %>\"
+  \"twitter:description\": \"<%= hoc_s(:meta_tag_twitter_description) %>\"
+  \"twitter:image:src\": \"http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png\"
+---"
     if file.split('/').last(2).first.size == 2
       File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
     end
@@ -150,8 +150,10 @@ def check_for_bad_translations
     pattern = /pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
     source_file = i18n_file.gsub(pattern, "i18n/locales/source/hourofcode")
 
-    puts "checking: " + i18n_file
-    diff_checker(i18n_file, source_file)
+    unless %w(privacy.md tos.md).include? i18n_file.split('/').last
+      puts "checking: " + i18n_file
+      diff_checker(i18n_file, source_file)
+    end
   end
 end
 

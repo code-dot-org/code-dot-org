@@ -79,7 +79,7 @@ module TextToSpeech
   end
 
   def tts_url(text, voice=:sharon)
-    "https://#{TTS_BUCKET}.s3.amazonaws.com/#{self.tts_path(text, voice)}"
+    "https://tts.code.org/#{self.tts_path(text, voice)}"
   end
 
   def tts_path(text, voice=:sharon)

@@ -111,5 +111,6 @@
   "word": "Scrivi la parola",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Sì",
-  "youSpelled": "Hai scritto finora"
+  "youSpelled": "Hai scritto finora",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }
