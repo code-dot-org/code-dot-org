@@ -17,7 +17,7 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
-import createFirebaseStorage from '../storage/firebaseStorage';
+import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
 import { getDatabase } from '../storage/firebaseUtils';
 import experiments from "../util/experiments";
@@ -549,7 +549,7 @@ Applab.init = function (config) {
   }
   Applab.channelId = config.channel;
   var useFirebase = window.dashboard.project.useFirebase() || false;
-  Applab.storage = useFirebase ? createFirebaseStorage({
+  Applab.storage = useFirebase ? initFirebaseStorage({
     channelId: config.channel,
     firebaseName: config.firebaseName,
     firebaseAuthToken: config.firebaseAuthToken,

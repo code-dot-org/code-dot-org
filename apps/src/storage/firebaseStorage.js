@@ -710,7 +710,9 @@ FirebaseStorage.importCsv = function (tableName, tableDataCsv, onSuccess, onErro
     .then(onSuccess, onError);
 };
 
-export default function createFirebaseStorage(config) {
+export default FirebaseStorage;
+
+export function initFirebaseStorage(config) {
   init(config);
   return FirebaseStorage;
 }
