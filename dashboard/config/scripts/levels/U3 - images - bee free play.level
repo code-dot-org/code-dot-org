@@ -83,6 +83,12 @@
     "markdown_instructions": "# Bee Free Play\r\n\r\nHere is the swarm of bees you have been working on. Continute to improve the animation!\r\n\r\n# Do This\r\n* Add a background \r\n* Add a flower or nest sprite\r\n* Make the flower or nest sprite move\r\n* Add more ideas of your own!",
     "start_blocks": "function draw() {\r\n\r\n}",
     "project_template_level_name": "CSD U3 - images - bee template",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

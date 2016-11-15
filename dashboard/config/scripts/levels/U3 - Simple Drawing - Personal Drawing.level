@@ -64,11 +64,11 @@
     "hide_animation_mode": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
     "encrypted_examples": "UrbGo9/B2ngixq6JXaYc8B1pNnSEMSiKQYnK++hrP2euwd+ORkJ12mKLRyM5\nyJtLGPYbilxKo7qocPEFRXs8nw==\n",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

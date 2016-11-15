@@ -19,10 +19,28 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+- page_mode = PageMode.get(request)
 
 :css
   .noFocusButton:focus {
     outline: 0;
+  }
+
+  .banner {
+    color: white;
+    text-align: center;
+  }
+  .bannerHeading {
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    padding: 20px 0px 20px 0px;
+  }
+  .bannerButtons {
+    padding: 20px 0px 20px 0px;
+  }
+  #studentImage {
+    height: 278px;
   }
 
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
@@ -34,25 +52,16 @@ social:
     - else
       = view :header, variant: "mobile"
 
-  .banner
-    .container_responsive{style: "color: white"}
-      .col-50{style: "text-align: center"}
-        %img{src: "/images/learn/hour-of-code-logo-2016.png", style: "margin-top: 30px; margin-bottom: 30px; max-width: 100%; padding-left: 5px; padding-right: 5px;"}
-        %br/
-        The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages.
-        %br/
-        %br/
+  .banner.container_responsive
+    .col-50
+      .bannerHeading= hoc_s(:learn_banner_heading)
+      = hoc_s(:learn_banner_blurb)
+      .bannerButtons
         %a{href: "https://hourofcode.com/#join", target: "_blank"}
-          %button
-            Host an Hour
-        &nbsp;
-        &nbsp;
-        %a{href: "https://hourofcode.com/how-to", target: "_blank"}
-          %button
-            Teacher Guide
-        %br/
-        %br/
-      #studentimage.col-50.tablet-feature{style: "height: 278px"}
+          %button= hoc_s(:learn_banner_host)
+        %a{href: "https://hourofcode.com/how-to", target: "_blank", style: "padding-left: 20px"}
+          %button= hoc_s(:learn_banner_teacherguide)
+    #studentImage.col-50.tablet-feature
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
@@ -63,6 +72,17 @@ social:
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
+  - prefix = "tutorial_#{tutorial[:short_code]}_"
+  - tutorial[:name]                                 = hoc_s(prefix + "name")
+  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - if tutorial[:short_code] == "mchoc" && page_mode == "feature-minecraft2016"
+    - tutorial[:image] = "/images/tutorials/new/minecraft2016.png"
 
 #tutorials
 
@@ -74,7 +94,6 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButton: true,
-      legacyLink: '/learn/legacy',
       showSortBy: window.location.search.indexOf("showsort") !== -1
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
@@ -86,7 +105,7 @@ social:
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');
-    img.appendTo('#studentimage');
+    img.appendTo('#studentImage');
     img.on('load', function() {
       img.fadeTo('normal', 1);
     });

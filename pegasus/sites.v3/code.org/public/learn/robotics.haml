@@ -25,26 +25,33 @@ social:
     outline: 0;
   }
 
+  .banner {
+    color: white;
+    text-align: center;
+  }
+  .bannerHeading {
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    font-style: italic;
+    padding: 20px 0px 20px 0px;
+  }
+  #robotImage {
+    height: 222px;
+  }
+
 #fullwidth{style: "background-color: #2799a4; overflow: hidden"}
   #desktop-header.desktop-feature
     = view :header, variant: "desktop"
   #mobile-header.mobile-feature
     = view :header, variant: "mobile"
 
-  .banner
-    .container_responsive{style: "color: white"}
-      .col-50{style: "text-align: center"}
-        %br/
-        %br/
-        %i{style: "font-family: 'Gotham 5r', sans-serif; font-size: 56px"}
-          ROBOTICS
-        %br/
-        %br/
-        Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!
-        %br/
-        %br/
-      .col-50.tablet-feature
-        %img{src: "/images/learn/robotics.png", style: "text-align: center"}
+  .banner.container_responsive
+    .col-50
+      .bannerHeading= hoc_s(:learn_robotics_banner_heading)
+      = hoc_s(:learn_robotics_banner_blurb)
+    .col-50.tablet-feature
+      %img#robotImage{src: "/images/learn/robotics.png"}
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
@@ -55,6 +62,15 @@ social:
 
 - tutorials_contents.each do |tutorial|
   - tutorial[:contact] = nil
+  - prefix = "tutorial_#{tutorial[:short_code]}_"
+  - tutorial[:name]                                 = hoc_s(prefix + "name")
+  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
 
 #tutorials
 

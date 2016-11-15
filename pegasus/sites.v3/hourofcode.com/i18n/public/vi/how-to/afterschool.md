@@ -22,6 +22,8 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Quảng bá lớp Một Giờ Lập Trình của bạn
 
 Quảng bá lớp Một Giờ Lập Trình của bạn [ với các công cụ này ](<%= resolve_url('/promote') %>) và khuyến khích những người khác mở chương trình của riêng họ.
@@ -118,11 +120,10 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 ## Tài liệu Một Giờ Lập Trình khác cho người đào tạo:
 
-  * Sử dụng [ kế hoạch bài giảng mẫu này ](/files/AfterschoolEducatorLessonPlanOutline.docx) để tổ chức Một Giờ Lập Trình của bạn.
-  * Xem thử [ bài giảng thực tiễn hay nhất](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) từ những người đào tạo Một Giờ Lập Trình trước đây. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Xem bản thu [ Hướng dẫn Người đào tạo với hội thảo Một Giờ Lập Trình qua mạng](https://youtu.be/EJeMeSW2-Mw).
   * [Tham dự buổi Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) trực tiếp với người sáng lập của chúng tôi, Hadi Partovi để chuẩn bị cho sự kiện Một Giờ Lập Trình.
-  * Truy cập [ diễn đàn Một Giờ Lập Trình ](http://forum.code.org/c/plc/hour-of-code) để được nhận tư vấn, cái nhìn sâu sắc và hỗ trợ từ các tổ chức khác. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Xem lại [ câu hỏi thường gặp (FAQ) của Một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Tiếp sau Một Giờ Lập Trình sẽ là gì?
