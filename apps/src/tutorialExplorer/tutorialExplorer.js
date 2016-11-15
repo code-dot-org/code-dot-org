@@ -15,6 +15,14 @@ import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiv
 import i18n from './locale';
 import _ from 'lodash';
 
+const styles = {
+  bottomLinks: {
+    padding: '10px 7px 40px 7px',
+    fontSize: 13,
+    lineHeight: "17px",
+    clear: "both"
+  }
+};
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -24,7 +32,7 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
-    roboticsButton: React.PropTypes.bool,
+    roboticsButtonUrl: React.PropTypes.string,
     showSortBy: React.PropTypes.bool.isRequired
   },
 
@@ -284,8 +292,14 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
+    const bottomLinksStyle = {
+      ...styles.bottomLinks,
+      textAlign: getResponsiveValue({xs: "left", md: "right"})
+    };
+
     return (
       <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
+
         <FilterHeader
           onUserInput={this.handleUserInputSortBy}
           sortBy={this.state.sortBy}
@@ -305,7 +319,7 @@ const TutorialExplorer = React.createClass({
               filterGroups={this.props.filterGroups}
               onUserInput={this.handleUserInputFilter}
               selection={this.state.filters}
-              roboticsButton={this.props.roboticsButton}
+              roboticsButtonUrl={this.props.roboticsButtonUrl}
             />
           </div>
         )}
@@ -319,6 +333,7 @@ const TutorialExplorer = React.createClass({
                 filters={this.state.filters}
                 locale={this.props.locale}
                 specificLocale={true}
+                localeEnglish={!this.isLocaleEnglish()}
               />
               <h1>{i18n.headingTutorialsManyLanguages()}</h1>
             </div>
@@ -332,7 +347,23 @@ const TutorialExplorer = React.createClass({
               localeEnglish={this.isLocaleEnglish()}
             />
           )}
+
         </div>
+
+        <div style={bottomLinksStyle}>
+          <div>
+            <a href="https://hourofcode.com/activity-guidelines">
+              {i18n.bottomGuidelinesLink()}
+            </a>
+          </div>
+          <br/>
+          <div>
+            <a href="https://hourofcode.com/supporting-special-needs-students">
+              {i18n.bottomSpecialNeedsLink()}
+            </a>
+          </div>
+        </div>
+
       </div>
     );
   }
@@ -436,7 +467,7 @@ window.TutorialExplorerManager = function (options) {
         hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
-        roboticsButton={options.roboticsButton}
+        roboticsButtonUrl={options.roboticsButtonUrl}
         showSortBy={options.showSortBy}
       />,
       element

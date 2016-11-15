@@ -29,6 +29,10 @@
       - heroes_celeba.shuffle!
       - heroes_arranged.unshift(heroes_celeba.first)
 
+  -# Temporary for Nov 14-21: feature Minecraft 2016 tutorial first
+  - if page_mode == "feature-minecraft2016"
+    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"minecraft_subtitle",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
+
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
     #newsbanner
@@ -67,15 +71,20 @@
             - lines = text.lines
             - if entry[:param3_s] == "bottom"
               - position_class = "homepage-caption-bottom"
-            .captionarea{id: "captionarea#{index}", class: position_class}
-              -# Nokogiri::HTML is use to strip any HTML tags.
-              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
-              .caption.caption1{style: "left: 50px; top: 50px"}
-                = Nokogiri::HTML(lines[0])
-              .caption.caption2{style: "left: 30px; top: 95px"}
-                = Nokogiri::HTML(lines[1])
-              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
-                = Nokogiri::HTML(lines[2])
+            - if entry[:id_s] == "hero_minecraft2016"
+              .captionarea{id: "captionarea#{index}", style: "cursor: pointer; display: none;",  onclick:"location.href='/minecraft'", class: position_class}
+                .captionspecial{style: "text-align: left; padding-left: 680px; padding-top: 100px;"}
+                  %img{src: "/images/fit-240/mc/MC_Logo_Small.png", style: "margin-top:20px"}
+            - else
+              .captionarea{id: "captionarea#{index}", class: position_class}
+                -# Nokogiri::HTML is use to strip any HTML tags.
+                -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+                .caption.caption1{style: "left: 50px; top: 50px"}
+                  = Nokogiri::HTML(lines[0])
+                .caption.caption2{style: "left: 30px; top: 95px"}
+                  = Nokogiri::HTML(lines[1])
+                .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                  = Nokogiri::HTML(lines[2])
 
       &nbsp;
 
@@ -116,11 +125,8 @@
 
     $("#fullwidth0").fadeTo(4000, 1);
 
-    if ("#{page_mode}" == "feature-starwars") {
-      $("#captionarea_sw").fadeTo(4000, 1);
-    }
-    else {
-      $("#captionarea_mc").fadeTo(4000, 1);
+    if ("#{page_mode}" == "feature-minecraft2016") {
+      $("#captionarea0").fadeTo(4000, 1);
     }
 
     showQuote(null, 0);
@@ -143,6 +149,7 @@
     {
       var lastImageId = "#captionarea" + lastImage;
       //console.log("hiding", lastImageId);
+      $(lastImageId + " .captionspecial").animate({left: "50px", opacity:0}, { duration: 2000 });
       $(lastImageId + " .caption1").animate({left: "50px", opacity:0}, { duration: 2000 });
       $(lastImageId + " .caption2").animate({left: "30px", opacity:0}, { duration: 2000 });
       $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
@@ -152,24 +159,13 @@
     {
       var nextImageId = "#captionarea" + nextImage;
       //console.log("showing", nextImageId);
+      $(nextImageId + " .captionspecial").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption1").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
       $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
     }
 
     $(".action").delay(4000).animate({ opacity: 1 }, { duration: 2000 });
-  }
-
-  function showCaption()
-  {
-    if ($("#captionarea_sw").is(':visible') && $("#captionarea_sw").css('opacity') == 1) {
-      $("#captionarea_sw").fadeTo(4000, 0);
-      $("#captionarea_mc").fadeTo(4000, 1);
-    }
-    else {
-      $("#captionarea_sw").fadeTo(4000, 1);
-      $("#captionarea_mc").fadeTo(4000, 0);
-    }
   }
 
   function adjustScroll(destination)
@@ -194,7 +190,6 @@
     currentImage = nextImage;
 
     showQuote(lastImage, currentImage);
-    showCaption();
   }
 
   $.ready()
