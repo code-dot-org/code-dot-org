@@ -339,13 +339,19 @@ const TutorialExplorer = React.createClass({
         {this.shouldShowTutorialsForLocale() && (
           <div>
             <h1>{i18n.headingTutorialsYourLanguage()}</h1>
-            <TutorialSet
-              tutorials={this.state.filteredTutorialsForLocale}
-              filters={this.state.filters}
-              locale={this.props.locale}
-              specificLocale={true}
-              localeEnglish={this.isLocaleEnglish()}
-            />
+            {this.state.filteredTutorialsForLocale.length === 0 &&
+              i18n.noTutorialsYourLanguage()
+            }
+
+            {this.state.filteredTutorialsForLocale.length > 0 && (
+              <TutorialSet
+                tutorials={this.state.filteredTutorialsForLocale}
+                filters={this.state.filters}
+                locale={this.props.locale}
+                specificLocale={true}
+                localeEnglish={this.isLocaleEnglish()}
+              />
+            )}
           </div>
         )}
 
