@@ -2262,8 +2262,8 @@ en:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Program animals and enemies in your own version of Minecraft.
-          description: Program animals and enemies in your own version of Minecraft.
+          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2414,3 +2414,10 @@ en:
           description_audience: ''
           description_short: Try the basics of computer science with many fun characters!
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
+        sports:
+          stage:
+            Sports: Sports
+          title: Sports
+          description_audience: ''
+          description_short: Code your own sport
+          description: ''

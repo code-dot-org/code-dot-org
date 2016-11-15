@@ -291,18 +291,9 @@ class User < ActiveRecord::Base
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # we make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   # NOTE: Order is important here.
   before_save :make_teachers_21,
+    :normalize_email,
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students
@@ -310,6 +301,21 @@ class User < ActiveRecord::Base
   def make_teachers_21
     return unless teacher?
     self.age = 21
+  end
+
+  def normalize_email
+    return unless email.present?
+    self.email = email.strip.downcase
+  end
+
+  def dont_reconfirm_emails_that_match_hashed_email
+    # We make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed.
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
   end
 
   def self.hash_email(email)
@@ -331,6 +337,8 @@ class User < ActiveRecord::Base
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
+    # TODO(asher): Change this to always (primarily?) search by hashed_email,
+    # eliminating a DB query.
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
