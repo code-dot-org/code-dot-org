@@ -25,12 +25,15 @@ const styles = {
 const CollapserButton = props => (
   <button
     style={[styles.collapseButton, props.style]}
+    id="toggleButton"
     onClick={props.onClick}
   >
+    {props.isMinecraft ?
+    <img src="/blockly/media/1x1.gif" className={[(props.collapsed ? 'more-btn' : 'less-btn'), 'toggle26'].join(' ')} /> :
     <FontAwesome
       icon={props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'}
       style={props.isRtl ? styles.collapseIconRtl : styles.collapseIcon}
-    />
+    />}
     {props.collapsed ? msg.more() : msg.less()}
   </button>
 );
@@ -38,11 +41,13 @@ CollapserButton.propTypes = {
   style: React.PropTypes.object,
   isRtl: React.PropTypes.bool.isRequired,
   onClick: React.PropTypes.func.isRequired,
-  collapsed: React.PropTypes.bool.isRequired
+  collapsed: React.PropTypes.bool.isRequired,
+  isMinecraft: React.PropTypes.bool.isRequired,
 };
 
 export default connect(state => {
   return {
     isRtl: state.pageConstants.localeDirection === 'rtl',
+    isMinecraft: !!state.pageConstants.isMinecraft,
   };
 })(Radium(CollapserButton));

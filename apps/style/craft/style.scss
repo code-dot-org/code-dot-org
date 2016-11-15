@@ -196,6 +196,9 @@ body {
 
 .blocklySvg {
   background-color: $main-blockspace-background;
+  .csf-top-instructions & {
+    background-color: $very-dark-gray;
+  }
 }
 
 .blocklyFlyoutBackground {
@@ -762,6 +765,35 @@ $height-to-width: 434 / 477;
       margin: 16px -3px -18px 23px;
       padding-right: 13px;
       background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png") no-repeat 0 0;
+      @include pixelated();
+    }
+
+  }
+
+  &#toggleButton {
+    min-width: 110px;
+
+    padding-top: 6px;
+    padding-bottom: 4px;
+
+    & > div {
+      margin-top: 4px;
+      margin-left: 2px;
+      margin-right: 18px;
+    }
+
+    .toggle26 {
+      &.more-btn {
+        background: url("#{$root}CDO_MC_More.png") no-repeat;
+      }
+      &.less-btn {
+        background: url("#{$root}CDO_MC_Less.png") no-repeat;
+      }
+      background-position: center !important;
+      background-size: 18px 20px !important;
+      width: 18px;
+      height: 25px;
+      margin-right: 5px;
       @include pixelated();
     }
 
