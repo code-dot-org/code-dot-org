@@ -2262,8 +2262,8 @@ en:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Program animals and enemies in your own version of Minecraft.
-          description: Program animals and enemies in your own version of Minecraft.
+          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
