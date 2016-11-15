@@ -2893,6 +2893,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
+    failureAvatar: config.skin.failureAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
