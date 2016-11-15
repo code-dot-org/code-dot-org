@@ -74,8 +74,7 @@ namespace :circle do
           " --parallel #{use_saucelabs ? 16 : 8}" \
           " --abort_when_failures_exceed 10" \
           " --retry_count 2" \
-          " --html"\
-          " --show_first_selenium_error"
+          " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
             " --eyes" \
@@ -86,8 +85,7 @@ namespace :circle do
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \
-            " --html"\
-            " --show_first_selenium_error"
+            " --html"
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?

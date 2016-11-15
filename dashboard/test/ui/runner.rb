@@ -165,9 +165,6 @@ opt_parser = OptionParser.new do |opts|
     puts opts
     exit
   end
-  opts.on("--show_first_selenium_error", "Print out the first line of the first selenium error.") do
-    $options.show_first_selenium_error = true
-  end
 end
 
 opt_parser.parse!(ARGV)
@@ -515,7 +512,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
       duration: test_duration.to_s
   })
 
-  if !succeeded && $options.show_first_selenium_error && $options.html
+  if !succeeded && $options.html
     HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}"
   end
 
