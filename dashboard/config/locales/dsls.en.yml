@@ -747,6 +747,9 @@ en:
       Categorizing Data: {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
+      'Chirpr: @johnsnow': {}
+      'Chirpr: @lillizard': {}
+      'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
@@ -765,6 +768,9 @@ en:
         description here: description here
         title: title
       Digital Footprint Chirpr solmoon: {}
+      Digital Footprint FaceSpace Haley:
+        description here: description here
+        title: title
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
       Digital Footprint FaceSpace Lizzie:
@@ -1164,6 +1170,9 @@ en:
         title: title
       External level test (will):
         first computer program: first computer program
+      'Facespace: John T': {}
+      'Facespace: Lizzie Dell': {}
+      'Facespace: Soleil M': {}
       Favicon Instructions: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
@@ -2029,6 +2038,9 @@ en:
       U5 - Explore PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5L08 - Student Intro If statements:
+        description here: description here
+        title: title
       U6 - Charts - Student Introduction:
         description here: description here
         title: title
@@ -2197,6 +2209,7 @@ en:
         description here: description here
         title: title
       courseF_external_variableConstant: {}
+      csp_ap_intro: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2295,6 +2308,9 @@ en:
       gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      'instaframe: photolizzie': {}
+      'instantframe: johnsnow': {}
+      'instantframe: moonbeam': {}
       intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
@@ -2737,6 +2753,7 @@ en:
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
         brendan test survey: {}
+        csp_ap_questions: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -6285,6 +6302,28 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      csp_ap_exam_signup:
+        'No': 'No'
+        'Yes': 'Yes'
+      csp_ap_number_exams:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        4+: 4+
+      csp_ap_previous_years:
+        'No': 'No'
+        'Yes': 'Yes'
+      csp_ap_taking_ap_class:
+        'No': 'No'
+        Not sure: Not sure
+        'Yes': 'Yes'
+      csp_ap_taking_exam:
+        Before I decide, I would like to have a better sense of how well I will do: Before I decide, I would like to have a better sense of how well I will do
+        Before I decide, I would like to know more about the AP exam and what it involves: Before I decide, I would like to know more about the AP exam and what it involves
+        I was unaware I had the option.: I was unaware I had the option.
+        No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
+        Yes, definitely.: Yes, definitely.
       cspu3_assess1_callfunction:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>

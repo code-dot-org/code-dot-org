@@ -1459,6 +1459,7 @@ en:
             Unit 5 Assessment 2: Unit 5 Assessment 2
             "'If' Statements Unplugged": "'If' Statements Unplugged"
             '"If" Statements Unplugged': '"If" Statements Unplugged'
+            Getting started with If Statements: Getting started with If Statements
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2092,6 +2093,7 @@ en:
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
             Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey: Taking the AP exam'
           description_audience: ''
           description_short: ''
           description: ''
@@ -2254,6 +2256,13 @@ en:
           description_audience: ''
           description_short: The Design Process
           description: ''
+        minecraft:
+          stage:
+            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
+          title: Minecraft Hour of Code Designer
+          description_audience: ''
+          description_short: Program animals and enemies in your own version of Minecraft.
+          description: Program animals and enemies in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2278,6 +2287,7 @@ en:
             'Events: The Big Event': 'Events: The Big Event'
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
+            Going Places Safely: Going Places Safely
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2297,6 +2307,7 @@ en:
             'Events: The Big Event': 'Events: The Big Event'
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
+            Keep it Private: Keep it Private
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2316,6 +2327,7 @@ en:
             More CS with Run Marco: More CS with Run Marco
             Binary Bracelets: Binary Bracelets
             Events in Play Lab: Events in Play Lab
+            Your Digital Footprint: Your Digital Footprint
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2336,6 +2348,8 @@ en:
             Impacts of Computing: Impacts of Computing
             More Programming with CS4FN: More Programming with CS4FN
             Build a Play Lab Game: Build a Play Lab Game
+            Conditionals in Bee: Conditionals in Bee
+            Digital Citizenship: Digital Citizenship
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2395,7 +2409,7 @@ en:
             Pre Hour of Code Survey: Pre Hour of Code Survey
             Hour of Code 2013: Hour of Code 2013
             Post Hour of Code Survey: Post Hour of Code Survey
-          title: Hour of Code with Survey
+          title: Classic Maze with Survey
           description_audience: ''
           description_short: Try the basics of computer science with many fun characters!
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.

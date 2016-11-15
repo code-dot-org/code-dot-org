@@ -1,4 +1,4 @@
 import loadCraft from "./init/loadCraft";
-import loadApp from "@cdo/apps/code-studio/initApp/loadApp";
+import loadAppOptions from "@cdo/apps/code-studio/initApp/loadApp";
 
-loadApp(loadCraft);
+loadAppOptions().then(loadCraft);

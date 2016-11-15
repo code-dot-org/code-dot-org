@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Red flowers can have an unknown amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
+    "instructions": "These flowers can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -17,7 +17,6 @@
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "10",
     "honey_goal": "0",
-    "markdown_instructions": "Red flowers can have an unknown amount of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects all of the nectar from each flower.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -34,6 +33,7 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":0,\"range\":5},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

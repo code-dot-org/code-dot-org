@@ -24,7 +24,6 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
-    legacyLink: React.PropTypes.string,
     roboticsButton: React.PropTypes.bool,
     showSortBy: React.PropTypes.bool.isRequired
   },
@@ -291,7 +290,6 @@ const TutorialExplorer = React.createClass({
           onUserInput={this.handleUserInputSortBy}
           sortBy={this.state.sortBy}
           backButton={this.props.backButton}
-          legacyLink={this.props.legacyLink}
           filteredTutorialsCount={this.state.filteredTutorialsCount}
           mobileLayout={this.state.mobileLayout}
           showingModalFilters={this.state.showingModalFilters}
@@ -331,6 +329,7 @@ const TutorialExplorer = React.createClass({
               tutorials={this.state.filteredTutorials}
               filters={this.state.filters}
               locale={this.props.locale}
+              localeEnglish={this.isLocaleEnglish()}
             />
           )}
         </div>
@@ -411,6 +410,8 @@ function getFilters({robotics, mobile}) {
     });
 
     initialFilters.activity_type = ["robotics"];
+    initialFilters.teacher_experience = [];
+    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
@@ -435,7 +436,6 @@ window.TutorialExplorerManager = function (options) {
         hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
-        legacyLink={options.legacyLink}
         roboticsButton={options.roboticsButton}
         showSortBy={options.showSortBy}
       />,

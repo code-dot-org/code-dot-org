@@ -314,5 +314,6 @@
   "when": "երբ",
   "whenRun": "երբ կսկսի",
   "workspaceHeaderShort": "խաղային տարածք",
-  "yes": "այո"
+  "yes": "այո",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

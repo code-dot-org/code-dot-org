@@ -81,6 +81,12 @@
     "show_d_pad": "false",
     "markdown_instructions": "# Wheel Free Play\r\n\r\nHere is the spinning wheel you created so far. Continue to improve it.\r\n\r\n# Do This\r\n\r\n* Create a background scene for the wheel to go in\r\n* Resize the wheel to fit the scene\r\n* Add at least 1 other sprite to the scene and give it some movement\r\n* Add your own ideas!",
     "project_template_level_name": "CSD U3 - wheel template",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
     "contained_level_names": null
   },
   "published": true,

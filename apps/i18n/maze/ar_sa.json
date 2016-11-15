@@ -111,5 +111,6 @@
   "word": "ابحث عن الكلمة",
   "wrongCropError": "أنا لا استطيع حصاد هذا المحصول من هنا.",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة"
+  "youSpelled": "قمت بكتابة",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

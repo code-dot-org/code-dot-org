@@ -1,0 +1,116 @@
+---
+title: Minecraft
+theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://code.org/minecraft"
+  "twitter:image:src" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "twitter:title": "Minecraft Hour of Code"
+  "twitter:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and enemies in your own version of Minecraft."
+  "og:title": "Minecraft Hour of Code"
+  "og:description": "Minecraft is back with a new activity for the Hour of Code. Program animals and enemies in your own version of Minecraft."
+  "og:image" : "https://code.org/images/mc/mc_social_2016.jpg"
+  "og:image:width": "1200"
+  "og:image:height": "630"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+video_player: true
+---
+
+- page_mode = PageMode.get(request)
+
+- if page_mode == 'feature-minecraft2016'
+  %link{href: "/css/minecraft.css", rel: "stylesheet"}
+
+  %h1.responsive-padding= I18n.t(:minecraft_tutorials)
+  %p.responsive-padding= I18n.t(:minecraft_specs)
+  %div{style: "clear:both"}
+  .mc-container
+    .mc-tutorials
+      .tutorial-box{style: "margin-right: 14px;"}
+        .img-container
+          %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2016.jpg'}
+        .mc-tutorial-info
+          %h2.mc-h1-second-box= I18n.t(:minecraft_designer)
+          %p.mc-tutorial-description= I18n.t(:minecraft_designer_description)
+          %a{:href => CDO.studio_url('/s/minecraft/reset'), :target=>'_self'}
+            %button.primary= I18n.t(:minecraft_designer_button)
+      .tutorial-box
+        .img-container
+          %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2015.jpg'}
+        .mc-tutorial-info
+          %h2.mc-h1-second-box= I18n.t(:minecraft_adventurer)
+          %p.mc-tutorial-description= I18n.t(:minecraft_adventurer_description)
+          %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+            %button.primary= I18n.t(:minecraft_adventurer_button)
+
+  .clear
+  %h2.mc-header2.responsive-padding
+    =I18n.t(:minecraft_no_internet)
+    %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
+
+  .color-block.mc-store
+    %h2.white-text= I18n.t(:minecraft_store_camps)
+    = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
+
+  .color-block.mc-host-event
+    %h2.white-text= I18n.t(:minecraft_host_event)
+    %a{href: '/hourofcode/mc'}= I18n.t(:minecraft_teach_resources)
+    %br
+    %a{href: 'https://docs.com/hourofcode2016'}= I18n.t(:minecraft_leader_guide)
+    %br
+    %br
+    %span= I18n.t(:minecraft_facilitating_event)
+    %a.white-link{href: 'https://aka.ms/hourofcode-register'}= I18n.t(:minecraft_join_online_training)
+
+  .clear
+
+  .color-block.mc-youth-spark
+    %h2.white-text= I18n.t(:minecraft_youthspark_continue_learning)
+    = I18n.t(:minecraft_youthspark_create_your_future)
+    %span= I18n.t(:minecraft_youthspark_tools).gsub('%{youthspark_link}', 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub')
+
+  .mc-videos{style: "clear: both;"}
+    %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
+    =view :inspirational_videos
+
+- else
+  %link{href: "/css/mc.css", rel: "stylesheet"}
+
+  %div{style: "clear:both"}
+
+  .mc-container
+    .img-container
+      %img.mc-img{src:"/images/fit-1940/mc/MC_Wide_Big_2_V4.jpg"}
+
+
+    .mc-tutorial
+      %h1.mc-h1= I18n.t(:hour_of_code)
+      .tutorial-box
+        .mc-tutorial-info
+          %h1.mc-h1-second-box= I18n.t(:mc_name)
+          %p.mc-tutorial-description= I18n.t(:mc_longdescription)
+          %p.mc-tutorial-specs= I18n.t(:mc_specs)
+        %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+          %button= I18n.t(:try_now)
+
+  %div{style: "clear:both"}
+
+  .mc-videos{style: "clear: both;"}
+    %h2.mc-header2= I18n.t(:watch_inspirational_videos)
+    =view :inspirational_videos
+
+  %h2.mc-header2
+    = I18n.t(:are_you_teacher)
+    %a{href: "/hourofcode/mc"}= I18n.t(:review_lesson_plan)
+
+  %h2.mc-header2
+    = I18n.t(:speak_another_language)
+    %a{href: "/translate/mc"}= I18n.t(:help_translate)
+
+  %h2.mc-header2
+    = I18n.t(:no_internet)
+    %a{href: CDO.studio_url("/download/mc")}= I18n.t(:download_offline)  

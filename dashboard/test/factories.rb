@@ -9,7 +9,7 @@ FactoryGirl.define do
     navigator_user_level {user_level}
   end
 
-  factory :megauser do
+  factory :studio_person do
   end
 
   factory :user do
@@ -517,13 +517,6 @@ FactoryGirl.define do
     repeat_loops_d2_count 2
     repeat_loops_d4_count 3
     conditionals_d5_count 4
-  end
-
-  factory :user_profile do
-    user { create :teacher }
-    created_at { Time.zone.now }
-    updated_at { Time.zone.now }
-    course UserProfile::CSP
   end
 
   factory :pd_workshop, class: 'Pd::Workshop' do

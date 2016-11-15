@@ -314,5 +314,6 @@
   "when": "коли",
   "whenRun": "коли гра починається",
   "workspaceHeaderShort": "Робоча область: ",
-  "yes": "Так"
+  "yes": "Так",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

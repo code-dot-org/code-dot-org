@@ -52,6 +52,10 @@ Dashboard::Application.configure do
   # Whether or not to display pretty shared js assets
   config.pretty_sharedjs = true
 
+  # Whether or not to skip script preloading. Setting this to true
+  # significantly speeds up server startup time
+  config.skip_script_preload = true
+
   # disable this for developers by default, it won't make much sense because we have our own db
   CDO.disable_s3_image_uploads = true
 #  CDO.disable_s3_image_uploads = false

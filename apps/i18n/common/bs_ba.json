@@ -314,5 +314,6 @@
   "when": "kada",
   "whenRun": "pri pokretanju",
   "workspaceHeaderShort": "Radni prostor: ",
-  "yes": "Da"
+  "yes": "Da",
+  "predictionInstructions": "Make a prediction before you run the program."
 }

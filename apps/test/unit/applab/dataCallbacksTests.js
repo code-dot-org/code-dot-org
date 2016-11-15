@@ -12,6 +12,7 @@ var AppStorage = require('@cdo/apps/applab/appStorage');
 describe('createRecord callbacks', function () {
   var xhr;
   var lastRequest;
+  let originalWindowApplab;
 
   // Intercept all XHR requests, storing the last one
   before(function () {
@@ -19,6 +20,7 @@ describe('createRecord callbacks', function () {
     xhr.onCreate = function (req) {
       lastRequest = req;
     };
+    originalWindowApplab = window.Applab;
     window.Applab = {
       // used in design mode
       appWidth: 320,
@@ -35,6 +37,7 @@ describe('createRecord callbacks', function () {
   after(function () {
     lastRequest = null;
     xhr.restore();
+    window.Applab = originalWindowApplab;
   });
 
   it('calls onSuccess for 200', function () {

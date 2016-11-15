@@ -92,6 +92,7 @@
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

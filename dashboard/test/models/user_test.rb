@@ -177,12 +177,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 
@@ -195,12 +192,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 

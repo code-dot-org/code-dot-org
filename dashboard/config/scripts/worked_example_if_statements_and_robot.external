@@ -18,8 +18,29 @@ The purpose of the example is to show:
 
 View the above as a separate document: [Worked Example - If-Statements and Robot](https://docs.google.com/document/d/1KGF-HxAP65bvQbzugKORXnzfplptWvw2eqCMntm8qS0)
 
-Before clicking continue make sure you:
+Before clicking continue:
 
-* Understand each step of the example
-* Have tried out the last one on your own and compared results with a classmate
+* Make sure you understand each step of the example
+* Have tried out the last one on your own? and compared results with a classmate?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+!!!tip
+    Again, this page is largely meant as reference.
+   
+    You don't need to belabor the points here, as students will get **much more practice** with the "Will it crash?" activity.
+   
+    Remind students that this is here if they need to refer back to it when doing the next activity.
+   
+You have a few options for how to review this worked example:
+
+* You may want to review this worked example as an entire class, projecting it on the screen.
+* Have students read, individually, or in pairs, then follow up with a partner, or review questions.
+* You may want to print - though it is a long-ish document to print, especially since the "will it crash" handout is long as well.
+
+**Don't miss the problem** at the very end of the document.  Students should try it and you can review as a class to verify that they understand.
+
+
+
+   
 MARKDOWN
