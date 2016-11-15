@@ -46,7 +46,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## Run of Show
 
-| Time             | Action                                                                                                                                          |
+| Čas              | Činnosť                                                                                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
 | 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |

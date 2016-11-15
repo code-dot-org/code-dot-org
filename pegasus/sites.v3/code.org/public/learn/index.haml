@@ -19,6 +19,7 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+- page_mode = PageMode.get(request)
 
 :css
   .noFocusButton:focus {
@@ -80,6 +81,8 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - if tutorial[:short_code] == "mchoc" && page_mode == "feature-minecraft2016"
+    - tutorial[:image] = "/images/tutorials/new/minecraft2016.png"
 
 #tutorials
 

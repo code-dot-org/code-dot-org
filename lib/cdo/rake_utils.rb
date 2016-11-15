@@ -220,7 +220,7 @@ module RakeUtils
     sudo = CDO.npm_use_sudo ? 'sudo' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += "#{sudo} npm install && #{sudo} npm prune && #{sudo} npm update --quiet".split
+    commands += "#{sudo} yarn".split
     commands += args
     RakeUtils.system(*commands)
   end
@@ -241,10 +241,12 @@ module RakeUtils
       RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
       RakeUtils.system 'sudo npm install -g npm@2.9.1'
       RakeUtils.npm_install_g 'grunt-cli'
+      RakeUtils.npm_install_g 'yarn'
     elsif OS.mac?
       RakeUtils.system 'brew install node'
       RakeUtils.system 'npm', 'update', '-g', 'npm'
       RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      RakeUtils.system 'npm', 'install', '-g', 'yarn'
     end
   end
 
@@ -299,5 +301,37 @@ module RakeUtils
     minutes = (total_seconds / 60).to_i
     seconds = total_seconds - (minutes * 60)
     format("%.1d:%.2d minutes", minutes, seconds)
+  end
+
+  # Captures all stdout and stderr within a block, including subprocesses:
+  # - redirect STDOUT and STDERR streams to a pipe
+  # - have a background thread read from the pipe
+  # - store data in a StringIO
+  # - execute the block
+  # - revert streams to original pipes and return output
+  def self.capture(&block)
+    old_stdout = STDOUT.clone
+    old_stderr = STDERR.clone
+    pipe_r, pipe_w = IO.pipe
+    pipe_r.sync = true
+    output = StringIO.new('', 'w')
+    reader = Thread.new do
+      begin
+        loop do
+          output << pipe_r.readpartial(1024)
+        end
+      rescue EOFError
+      end
+    end
+    STDOUT.reopen(pipe_w)
+    STDERR.reopen(pipe_w)
+    yield
+  ensure
+    STDOUT.reopen(old_stdout)
+    STDERR.reopen(old_stderr)
+    pipe_w.close
+    reader.join
+    pipe_r.close
+    return output.string # rubocop:disable Lint/EnsureReturn
   end
 end

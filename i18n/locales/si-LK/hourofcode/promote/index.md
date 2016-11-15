@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# How to get involved
+# කොහොමද සම්බන්ධ වෙන්නේ
 
 ## 1. Spread the word
 
@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Ask your employer to get involved
 
