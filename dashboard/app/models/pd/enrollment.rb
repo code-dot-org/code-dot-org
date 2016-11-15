@@ -45,6 +45,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validates_presence_of :email
   validates_confirmation_of :email
+  validates_email_format_of :email, allow_blank: true
 
   validates_presence_of :school, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation

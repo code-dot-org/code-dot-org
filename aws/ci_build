@@ -48,15 +48,6 @@ rescue Exception => msg
   return ''
 end
 
-def capture_stdout
-  old_stdout = $stdout
-  $stdout = StringIO.new('', 'w')
-  yield
-  $stdout.string
-ensure
-  $stdout = old_stdout
-end
-
 def build
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
@@ -78,7 +69,7 @@ def build
     status = 0
     Dir.chdir(aws_dir) do
       status = begin
-        RakeUtils.rake '--rakefile', 'ci_build.rake', *ARGV
+        RakeUtils.rake_stream_output '--rakefile', 'ci_build.rake', *ARGV
       rescue => e
         CDO.backtrace e
       end
@@ -94,7 +85,7 @@ def main
   start_time = Time.now
   # Run the build command and exit if it didn't do anything.
   status = 0
-  log = capture_stdout do
+  log = RakeUtils.capture do
     begin
       status = build
     rescue => e
