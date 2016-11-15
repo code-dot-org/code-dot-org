@@ -2261,8 +2261,8 @@ en:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Build a Minecraft game.
-          description: Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.
+          description_short: Program animals and enemies in your own version of Minecraft.
+          description: Program animals and enemies in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
