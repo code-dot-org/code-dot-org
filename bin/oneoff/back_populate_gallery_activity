@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+# This script populates the gallery_activities.user_level_id and the
+# gallery_activities.level_source_id fields, when possible. Doing so is part of
+# associating a GalleryActivity with a UserLevel rather than an Activity, as
+# part of deprecating the latter.
+
+require_relative '../../dashboard/config/environment'
+
+count = GalleryActivity.
+  where('user_level_id <> ? OR level_source_id <> ?', nil, nil).
+  count
+puts "UPDATING GalleryActivity: #{count} records"
+
+updates = 0
+GalleryActivity.
+  where('user_level_id <> ? OR level_source_id <> ?', nil, nil).
+  find_each(batch_size: 10_000) do |gallery_activity|
+  # We grab the user_level_id and level_source_id from data in the associated
+  # activity.
+  activity = gallery_activity.activity
+  user_level = UserLevel.find_by(user_id: activity.user_id, level_id: activity.level_id)
+
+  next unless user_level
+
+  gallery_activity.update!(
+    user_level_id: user_level.id,
+    level_source_id: activity.level_source_id
+  )
+
+  updates += 1
+  if updates % 10_000 == 0
+    puts "  UPDATED GalleryActivity: #{updates} records"
+  end
+end
+
+puts "UPDATED GalleryActivity: #{updates} records"
