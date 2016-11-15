@@ -69,7 +69,7 @@ def build
     status = 0
     Dir.chdir(aws_dir) do
       status = begin
-        RakeUtils.rake '--rakefile', 'ci_build.rake', *ARGV
+        RakeUtils.rake_stream_output '--rakefile', 'ci_build.rake', *ARGV
       rescue => e
         CDO.backtrace e
       end
