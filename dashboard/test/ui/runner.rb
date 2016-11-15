@@ -408,9 +408,12 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     end
   end
 
+  # returns the first line of the first selenium error in the html output file.
   def first_selenium_error(filename)
-    prefix = '<div class="message"><pre>'
-    `grep -m 1 -o '#{prefix}\\(.*\\)' #{filename} | cut -c #{prefix.size + 1}-`
+    html = File.read(filename)
+    error_regex = %r{<div class="message"><pre>(.*)</pre>}m
+    full_error = error_regex.match(html)[1]
+    full_error && full_error.split("\n").first
   end
 
   arguments = ''
