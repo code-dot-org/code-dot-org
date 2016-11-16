@@ -68,7 +68,13 @@ And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/)
       first_name: "First name - #{SecureRandom.hex}",
       last_name: "Last name - #{SecureRandom.hex}",
       email: "enrolled_teacher#{x}@foo.com",
-      skip_school_validation: true,
+      school_info: SchoolInfo.find_or_create_by({
+        country: 'US',
+        school_type: 'other',
+        state: 'WA',
+        zip: '98101',
+        school_name: 'Code.org'
+      }),
       pd_workshop_id: workshop.id
     )
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete

@@ -31,9 +31,6 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :school_info
   belongs_to :user
 
-  # Allow overriding the school and school_info requirements.
-  attr_accessor :skip_school_validation
-
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
@@ -47,12 +44,17 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_confirmation_of :email
   validates_email_format_of :email, allow_blank: true
 
-  validate :validate_school_name, unless: :skip_school_validation
-  validates_presence_of :school_info, unless: :skip_school_validation
+  validate :validate_school_name, unless: :created_before_school_info?
+  validates_presence_of :school_info, unless: :created_before_school_info?
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
     self.persisted? && self.created_at < '2016-11-10'
+  end
+
+  # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
+  def created_before_school_info?
+    self.persisted? && self.created_at < '2016-08-30'
   end
 
   # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
@@ -106,8 +108,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
-    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-    self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
+    self.update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
