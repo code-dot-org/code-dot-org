@@ -93,7 +93,7 @@ dependencies:
         timeout: 840
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
-    - rake firebase_task --rakefile aws/build.rake
+    - rake firebase:ci
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
