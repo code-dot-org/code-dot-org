@@ -263,6 +263,9 @@ level 'CSPU5_U3 - Keys - Add Image URLs'
 level 'CSPU5_U3 - Keys - Final Image Scroller'
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket'
 
+stage 'Unit 3 Chapter 1 Assessment 3', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 3 MC'
+
 stage 'Processing Arrays'
 level 'CSPU5_U3L32 Student Lesson Introduction'
 level 'CSPU5_U3 - Loops And Arrays - Intro For Loop'

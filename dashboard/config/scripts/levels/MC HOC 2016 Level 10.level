@@ -41,6 +41,8 @@
     "use_player": "true",
     "level_verification_timeout": "0",
     "use_score": "true",
+    "video_key": "mc_2016_congrats",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
