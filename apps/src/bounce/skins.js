@@ -146,6 +146,7 @@ exports.load = function (assetUrl, id) {
     ball: skin.assetUrl('football_ball.png'),
     drawTiles: false,
     paddle: skin.foot.paddle,
+    rotateBall: true,
   };
 
   // Images
