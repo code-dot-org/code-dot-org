@@ -116,61 +116,70 @@ const ScrollButtons = React.createClass({
 
   render() {
 
-    const scrollUpStyle = [
-      styles.all,
-      !this.props.isMinecraft && styles.arrow,
-      !this.props.isMinecraft && styles.arrowUp,
-      {
-        opacity: this.props.visible ? 1 : 0,
-        top: this.getMargin()
-      }
-    ];
+    const upStyle = {
+      opacity: this.props.visible ? 1 : 0,
+      top: this.getMargin()
+    };
 
-    const scrollDownStyle = [
-      styles.all,
-      !this.props.isMinecraft && styles.arrow,
-      !this.props.isMinecraft && styles.arrowDown,
-      {
-        opacity: this.props.visible ? 1 : 0,
-        bottom: -(this.props.height - this.getMargin())
-      }
-    ];
+    const downStyle = {
+      opacity: this.props.visible ? 1 : 0,
+      bottom: -(this.props.height - this.getMargin())
+    };
 
-    if (this.props.isMinecraft) {
-      return (
-        <div style={this.props.style}>
-          <button
-            className="arrow"
-            ref="scrollUp"
-            onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
-            style={scrollUpStyle}
-          >
-            <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
-          </button>
-          <button
-            className="arrow"
-            ref="scrollDown"
-            onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
-            style={scrollDownStyle}
-          >
-            <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
-          </button>
-        </div>
-      );
-    }
+    // for most tutorials, we have minimalist arrow elements. For
+    // minecraft, we use a special button element to stylistically align
+    // with the other buttons on the screen.
+
+    const upButton = (this.props.isMinecraft) ?
+      <button
+        className="arrow"
+        ref="scrollUp"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        style={[
+          styles.all,
+          upStyle
+        ]}
+      >
+        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
+      </button> :
+      <div
+        ref="scrollUp"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        style={[
+          styles.all,
+          styles.arrow,
+          styles.arrowUp,
+          upStyle
+        ]}
+      />;
+
+    const downButton = (this.props.isMinecraft) ?
+      <button
+        className="arrow"
+        ref="scrollDown"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        style={[
+          styles.all,
+          downStyle
+        ]}
+      >
+        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
+      </button> :
+      <div
+        ref="scrollDown"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        style={[
+          styles.all,
+          styles.arrow,
+          styles.arrowDown,
+          downStyle
+        ]}
+      />;
 
     return (
       <div style={this.props.style}>
-        <div
-          ref="scrollUp"
-          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
-          style={scrollUpStyle}
-        />
-        <div
-          ref="scrollDown"
-          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
-          style={scrollDownStyle}
-        />
+        {upButton}
+        {downButton}
       </div>
     );
   }
