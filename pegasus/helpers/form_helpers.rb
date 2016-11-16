@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 def validate_form(kind, data)
   def csv_multivalue(value)
     return value if value.class == FieldError
@@ -129,11 +131,11 @@ def insert_form(kind, data, options={})
 
   timestamp = DateTime.now
 
-  sanitized_email = data[:email_s].to_s.strip.downcase
+  normalized_email = data[:email_s].to_s.strip.downcase
   row = {
     secret: SecureRandom.hex,
     parent_id: options[:parent_id],
-    email: sanitized_email,
+    email: normalized_email,
     name: data[:name_s].to_s.strip,
     kind: kind,
     data: data.to_json,
@@ -141,7 +143,7 @@ def insert_form(kind, data, options={})
     created_ip: request.ip,
     updated_at: timestamp,
     updated_ip: request.ip,
-    hashed_email: Digest::MD5.hexdigest(sanitized_email),
+    hashed_email: Digest::MD5.hexdigest(normalized_email),
   }
   row[:user_id] = dashboard_user ? dashboard_user[:id] : data[:user_id_i]
 
