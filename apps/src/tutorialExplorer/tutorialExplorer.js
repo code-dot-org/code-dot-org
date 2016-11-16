@@ -528,7 +528,7 @@ function getUrlParameters(filters, robotics) {
 
   let parameters = queryString.parse(location.search);
   for (const name in parameters) {
-    const filterGroup = filters.find(item => {return item.name === name;});
+    const filterGroup = filters.find(item => item.name === name);
 
     // Validate filterGroup name.
     if (filterGroup) {
@@ -544,7 +544,7 @@ function getUrlParameters(filters, robotics) {
         const entryName = entryNames[entry];
 
         // Validate entry name.
-        if (filterGroup.entries.find(item => {return item.name === entryName;})) {
+        if (filterGroup.entries.find(item => item.name === entryName)) {
           if (!parametersObject[name]) {
             parametersObject[name] = [];
           }
