@@ -50,6 +50,7 @@
   "tutorialDetailsShortLink": "Short link",
   "tutorialDetailInternationalLanguages": "Languages",
   "tutorialDetailStandards": "Standards",
+  "tutorialDetailDisabled": "This tutorial is temporarily unavailable.",
   "headingTutorialsYourLanguage": "Activities in your language",
   "showAllTutorialsButton": "Show activities for many languages",
   "hideAllTutorialsButton": "Hide activities for many languages",
