@@ -58,12 +58,12 @@ social:
                 </div>
 <div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://systems.metrogroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/msys.png"></a>
+                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.visma.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/visma.png"></a>
                     </div>
                 </div>
 <div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.visma.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/visma.png"></a>
+                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://systems.metrogroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/msys.png"></a>
                     </div>
                 </div>
             </div>
@@ -221,6 +221,10 @@ social:
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.femei-in-afaceri.ro/ro/index" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
+                    </div>
+                  </div><div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://urbanteh.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/urbanteh.png"></a>
                     </div>
                   </div></div><h1 class="text-align-center">PR</h1><div class="row"><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">

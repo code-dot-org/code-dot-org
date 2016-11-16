@@ -22,6 +22,10 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
+  def self.upgrade_service(id)
+    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
+  end
+
   def self.start_service(id)
     sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
@@ -107,6 +111,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
+    0
   end
 
   def self.exec_in_background(command)
@@ -168,6 +173,7 @@ module RakeUtils
   end
 
   def self.git_push
+    system 'git', 'pull', '--rebase', '--autostash', 'origin', git_branch # Rebase local commit(s) if any new commits on origin.
     system 'git', 'push', 'origin', git_branch
   end
 
@@ -333,5 +339,38 @@ module RakeUtils
     reader.join
     pipe_r.close
     return output.string # rubocop:disable Lint/EnsureReturn
+  end
+
+  #
+  # threaded_each provide a simple way to process an array of elements using multiple threads.
+  # create_threads is a helper for threaded_each.
+  #
+  def self.create_threads(count)
+    [].tap do |threads|
+      count.times do
+        threads << Thread.new do
+          yield
+        end
+      end
+    end
+  end
+
+  def self.threaded_each(array, thread_count=2)
+    # NOTE: Queue is used here because it is threadsafe - it is the ONLY threadsafe datatype in base ruby!
+    #   Without Queue, the array would need to be protected using a Mutex.
+    queue = Queue.new.tap do |q|
+      array.each do |i|
+        q << i
+      end
+    end
+
+    threads = create_threads(thread_count) do
+      until queue.empty?
+        next unless item = queue.pop(true) rescue nil
+        yield item if block_given?
+      end
+    end
+
+    threads.each(&:join)
   end
 end

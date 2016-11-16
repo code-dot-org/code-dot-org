@@ -1,7 +1,5 @@
-/* global Applab $ */
-
 import Firebase from 'firebase';
-import { loadConfig, getDatabase } from './firebaseUtils';
+import { loadConfig, getDatabase, showRateLimitAlert } from './firebaseUtils';
 
 /**
  * Ensure that creating the table will not bring this app over the maximum
@@ -12,7 +10,7 @@ import { loadConfig, getDatabase } from './firebaseUtils';
  * @returns {Promise}
  */
 export function enforceTableCount(config, tableName) {
-  const tablesRef = getDatabase(Applab.channelId).child(`counters/tables`);
+  const tablesRef = getDatabase().child(`counters/tables`);
   return tablesRef.once('value').then(snapshot => {
     if (snapshot.numChildren() >= config.maxTableCount &&
       snapshot.child(tableName).val() === null) {
@@ -39,7 +37,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
     }
     return Promise.resolve(config);
   }).then(config => {
-    const tableRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}`);
+    const tableRef = getDatabase().child(`counters/tables/${tableName}`);
     return tableRef.transaction(tableData => {
       tableData = tableData || {};
       if (updateNextId) {
@@ -76,7 +74,7 @@ export function updateTableCounters(tableName, rowCountChange, updateNextId) {
  * @returns {Promise}
  */
 function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
-  const limitRef = getDatabase(Applab.channelId).child(`counters/limits/${interval}`);
+  const limitRef = getDatabase().child(`counters/limits/${interval}`);
   const intervalMs = Number(interval) * 1000;
   return limitRef.transaction(limitData => {
     limitData = limitData || {};
@@ -100,7 +98,7 @@ function incrementIntervalCounters(maxWriteCount, interval, currentTimeMs) {
       const lastResetTimeMs = transactionData.snapshot.child('lastResetTime').val();
       const nextResetTimeMs = lastResetTimeMs + intervalMs;
       const timeRemaining = Math.ceil((nextResetTimeMs - currentTimeMs) / 1000);
-      Applab.showRateLimitAlert();
+      showRateLimitAlert();
       return Promise.reject(`rate limit exceeded. please wait ${timeRemaining} seconds before retrying.`);
     } else {
       return Promise.resolve();
@@ -169,7 +167,7 @@ export function incrementRateLimitCounters() {
  * @returns {Promise<number>} The current server time in milliseconds.
  */
 function getCurrentTime() {
-  const serverTimeRef = getDatabase(Applab.channelId).child('serverTime');
+  const serverTimeRef = getDatabase().child('serverTime');
   return serverTimeRef.set(Firebase.ServerValue.TIMESTAMP).then(() => {
     return serverTimeRef.once('value').then(snapshot => snapshot.val());
   });
@@ -181,7 +179,7 @@ function getCurrentTime() {
  * current table, or 0 if no rows exist in the table or the table does not exist.
  */
 export function getLastRecordId(tableName) {
-  const lastIdRef = getDatabase(Applab.channelId).child(`counters/tables/${tableName}/lastId`);
+  const lastIdRef = getDatabase().child(`counters/tables/${tableName}/lastId`);
   return lastIdRef.once('value').then(snapshot => {
     return snapshot.val() || 0;
   });
