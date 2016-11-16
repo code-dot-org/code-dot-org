@@ -38,7 +38,7 @@ video_player: true
           .mc-tutorial-details
             %h2.mc-h1-second-box= I18n.t(:minecraft_designer)
             %p.mc-tutorial-description= I18n.t(:minecraft_designer_description)
-            %a{:href => CDO.studio_url('/s/mc/reset'), :target=>'_self'}
+            %a{:href => CDO.studio_url('/s/minecraft/reset'), :target=>'_self'}
               %button.primary= I18n.t(:minecraft_designer_button)
       .tutorial-box
         .img-container
@@ -116,4 +116,4 @@ video_player: true
 
   %h2.mc-header2
     = I18n.t(:no_internet)
-    %a{href: CDO.studio_url("/download/mc")}= I18n.t(:download_offline)  
+    %a{href: CDO.studio_url("/download/mc")}= I18n.t(:download_offline)
