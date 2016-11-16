@@ -1,8 +1,15 @@
-/* global Applab */
-
 import Firebase from 'firebase';
+let config;
 let firebaseCache;
 let firebaseConfig;
+
+export function init(setupConfig) {
+  config = setupConfig;
+
+  if (typeof config.showRateLimitAlert !== 'function') {
+    throw 'No `showRateLimitAlert` set for Firebase';
+  }
+}
 
 /**
  * Returns a promise which resolves once Firebase channel config has been fetched from
@@ -62,31 +69,31 @@ export function getConfigRef() {
   return getFirebase().child('v3/config/channels');
 }
 
-export function getDatabase(channelId) {
-  channelId = channelId + Applab.firebaseChannelIdSuffix;
-  return getFirebase().child(`v3/channels/${channelId}`);
+export function getDatabase() {
+  const path = `v3/channels/${config.channelId}${config.firebaseChannelIdSuffix}`;
+  return getFirebase().child(path);
 }
 
 function getFirebase() {
   let fb = firebaseCache;
   if (!fb) {
-    if (!Applab.firebaseName) {
+    if (!config.firebaseName) {
       throw new Error("Error connecting to Firebase: Firebase name not specified");
     }
-    if (!Applab.firebaseAuthToken) {
+    if (!config.firebaseAuthToken) {
       let msg = "Error connecting to Firebase: Firebase auth token not specified. ";
-      if (Applab.firebaseName === 'cdo-v3-dev') {
-        msg += 'To use Applab data blocks or data browser in development, you must ' +
+      if (config.firebaseName === 'cdo-v3-dev') {
+        msg += 'To use data blocks or data browser in development, you must ' +
           'set "firebase_secret" in locals.yml to the value at ' +
           'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
           '-> cdo-secrets';
       }
       throw new Error(msg);
     }
-    let base_url = `https://${Applab.firebaseName}.firebaseio.com`;
+    let base_url = `https://${config.firebaseName}.firebaseio.com`;
     fb = new Firebase(base_url);
-    if (Applab.firebaseAuthToken) {
-      fb.authWithCustomToken(Applab.firebaseAuthToken, (err, user) => {
+    if (config.firebaseAuthToken) {
+      fb.authWithCustomToken(config.firebaseAuthToken, (err, user) => {
         if (err) {
           throw new Error(`error authenticating to Firebase: ${err}`);
         }
@@ -131,4 +138,8 @@ export function validateFirebaseKey(key) {
       throw new Error(`The name ${key} contains an illegal character code ${key.charCodeAt(i)}`);
     }
   }
+}
+
+export function showRateLimitAlert() {
+  config.showRateLimitAlert();
 }

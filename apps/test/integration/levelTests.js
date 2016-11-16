@@ -14,7 +14,7 @@ import sinon from 'sinon';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');

@@ -47,12 +47,22 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_confirmation_of :email
   validates_email_format_of :email, allow_blank: true
 
-  validates_presence_of :school, unless: :skip_school_validation
+  validate :validate_school_name, unless: :skip_school_validation
   validates_presence_of :school_info, unless: :skip_school_validation
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
     self.persisted? && self.created_at < '2016-11-10'
+  end
+
+  # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
+  # To avoid breaking any existing codepaths, use the old format when school_info is absent.
+  def validate_school_name
+    if school_info.try(:country)
+      errors.add(:school, 'is forbidden') if school
+    else
+      errors.add(:school, 'is required') unless school
+    end
   end
 
   def self.for_school_district(school_district)
@@ -136,11 +146,17 @@ class Pd::Enrollment < ActiveRecord::Base
   # that case.
   def check_school_info(school_info_attr)
     attr = {
+      country: school_info_attr['country'],
       school_type: school_info_attr['school_type'],
       state: school_info_attr['school_state'],
-      school_district_id: school_info_attr['school_district_id'],
       zip: school_info_attr['school_zip'],
-      school_district_other: school_info_attr['school_district_other']
+      school_district_id: school_info_attr['school_district_id'],
+      school_district_other: school_info_attr['school_district_other'],
+      school_district_name: school_info_attr['school_district_name'],
+      school_id: school_info_attr['school_id'],
+      school_other: school_info_attr['school_other'],
+      school_name: school_info_attr['school_name'],
+      full_address: school_info_attr['full_address'],
     }
 
     # Remove empty attributes.  Notably school_district_id can come through
@@ -149,6 +165,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] = true if attr[:school_district_other] == "true"
+    attr[:school_other] = true if attr[:school_other] == "true"
 
     return false unless SchoolInfo.new(attr).valid?
 
