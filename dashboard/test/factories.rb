@@ -625,6 +625,7 @@ FactoryGirl.define do
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     association :school_info, factory: :school_info_without_country
     school 'Example School'
+    code {SecureRandom.hex(10)}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
