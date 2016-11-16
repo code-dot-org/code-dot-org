@@ -127,6 +127,8 @@
   "whileMsg": "当",
   "whileTooltip": "重复块所包含的操作直到完成。",
   "yes": "是",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

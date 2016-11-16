@@ -28,7 +28,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `while path ahead` block to get around the need for multiple `repeat` loops.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c97c655e86ad6ddba227823332f3226e/grade3_robotFarmer_ConditionalsIntro_8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67bf5b89188b28ffa16d00c7dcd7e8ce/grade3_robotFarmer_ConditionalsIntro_8.mp3\"}]",
     "ideal": "6",
     "contained_level_names": null
   },
@@ -78,7 +78,7 @@
                     <block type="maze_moveForward"/>
                   </statement>
                   <next>
-                    <block type="maze_dig">
+                    <block type="maze_fill">
                       <next>
                         <block type="maze_turn">
                           <title name="DIR">turnLeft</title>

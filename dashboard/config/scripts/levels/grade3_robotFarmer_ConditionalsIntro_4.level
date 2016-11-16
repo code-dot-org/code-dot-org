@@ -29,6 +29,7 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "ideal": "4",
+    "video_key": "loop_while",
     "contained_level_names": null
   },
   "published": true,
