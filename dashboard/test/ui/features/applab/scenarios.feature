@@ -1,6 +1,6 @@
 @dashboard_db_access
 @as_student
-@no_mobile
+@no_circle
 Feature: App Lab Scenarios
 # Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
