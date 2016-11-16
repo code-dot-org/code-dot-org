@@ -171,15 +171,40 @@ function installJoinBlock(blockly) {
       this.setColour(160);
       this.setOutput(true, Blockly.BlockValueType.STRING);
       this.setTooltip(commonMsg.joinTextTooltip());
+      this.inputCount = 0;
+    },
+
+    getCustomContextMenuItems: function () {
+      var joinBlock = this;
+      return [
+        {
+          text: `Set number of inputs (current: ${this.inputCount})`,
+          enabled: true,
+          callback: function () {
+            var ret = prompt('Number of inputs', joinBlock.inputCount);
+            if (ret !== '') {
+              joinBlock.setInputCount(parseInt(ret));
+            }
+          }
+        }
+      ];
     },
 
     setInputCount: function (inputCount) {
-      this.inputCount = parseInt(inputCount);
-      this.appendValueInput('ADD0')
-        .appendTitle(commonMsg.joinText());
-      for (var i = 1; i < this.inputCount; i++) {
-        this.appendValueInput('ADD' + i);
+      var newInputCount = parseInt(inputCount);
+      if (inputCount > this.inputCount) {
+        for (var i = this.inputCount; i < newInputCount; i++) {
+          var input = this.appendValueInput('ADD' + i);
+          if (i === 0) {
+            input.appendTitle(commonMsg.joinText());
+          }
+        }
+      } else {
+        for (i = this.inputCount - 1; i >= newInputCount; i--) {
+          this.removeInput('ADD' + i);
+        }
       }
+      this.inputCount = newInputCount;
     },
 
     onMouseOver: function () {
