@@ -1,144 +1,187 @@
-var chalk = require('chalk');
-var child_process = require('child_process');
-var path = require('path');
-var fs = require('fs');
-
-/**
- * Configuration for entry points. Mostly this just silences all the bad entry points
- * we have right now.
+/**                                       /   \
+ *  _                             )      ((   ))     (
+ * (@)                           /|\      ))_((     /|\
+ * |-|                          / | \    (/\|/\)   / | \                          (@)
+ * | | ------------------------/--|-voV---\`|'/--Vov-|--\-------------------------|-|
+ * |-|                              '^`   (o o)  '^`                              | |
+ * | |                                    `\Y/'                                   |-|
+ * |-|  Dear wary traveler,                                                       | |
+ * | |                                                                            |-|
+ * |-|  You have opened this file to find out why your apps build is giving you   | |
+ * | |  error messages about your new entry point not conforming to naming        |-|
+ * |-|  conventions.                                                              | |
+ * | |                                                                            |-|
+ * |-|  But what are the conventions you make ask?                                | |
+ * | |                                                                            |-|
+ * |-|  1) Entry points should be in the src/sites/<site-name>/pages directory!   | |
+ * | |  2) Entry points should only be referenced by one template file!           |-|
+ * |-|  3) Entry points should match the name of the template they are used in!   | |
+ * | |                                                                            |-|
+ * |-|  If you follow these rules, you will reach new levels of glorious          | |
+ * | |  enlightenment. If you do not follow these rules, dragons shall burn your  |-|
+ * |-|  village to the ground!                                                    | |
+ * | |                                                                            |-|
+ * |-|  You may be tempted to add your entry point to the list of silenced entry  | |
+ * | |  points, but that would be a mistake:                                      |-|
+ * |-|                                                                            | |
+ * | |  a) they are only silenced because they are existing violations.           |-|
+ * |-|  b) we shouldn't be adding new violations.                                 | |
+ * | |  c) we'd like to fix up our old violations over time.                      |-|
+ * |-|                                                                            | |
+ * | |  With this information in hand, choose the right side of history and make  |-|
+ * |-|  your entry point conform to the naming conventions.                       | |
+ * | |                                                                            |-|
+ * |_|____________________________________________________________________________| |
+ * (@)                   l   /\ /         ( (       \ /\   l                    `\|-|
+ *                       l /   V           \ \       V   \ l                      (@)
+ *                       l/                _) )_          \I
+ *                                         `\ /'
  */
-const SILENCE_OUT_OF_SITES = [
+
+const chalk = require('chalk');
+const child_process = require('child_process');
+const path = require('path');
+const fs = require('fs');
+
+const SILENCED = [
   'applab-api',
   'tutorialExplorer',
   'makerlab',
   'pd',
   'publicKeyCryptography',
   'brambleHost',
+  'applab',
+  'applab-api',
+  'bounce',
+  'brambleHost',
+  'calc',
+  'code-studio',
+  'craft',
+  'districtDropdown',
+  'embedBlocks',
+  'embedVideo',
+  'eval',
+  'flappy',
+  'gamelab',
+  'jigsaw',
+  'levelbuilder',
+  'levelbuilder_applab',
+  'levelbuilder_edit_script',
+  'levelbuilder_gamelab',
+  'levelbuilder_markdown',
+  'levelbuilder_studio',
+  'levels/contract_match',
+  'levels/dashboardDialogHelper',
+  'levels/external',
+  'levels/levelGroup',
+  'levels/multi',
+  'levels/textMatch',
+  'levels/widget',
+  'maker/dependencies',
+  'makerlab',
+  'makerlab/setupPage',
+  'maze',
+  'netsim',
+  'pd',
+  'plc',
+  'publicKeyCryptography',
+  'publicKeyCryptography',
+  'raceInterstitial',
+  'schoolInfo',
+  'scriptOverview',
+  'signup',
+  'studio',
+  'termsInterstitial',
+  'turtle',
+  'tutorialExplorer',
+  'weblab',
+  'learn/index',
 ];
 const SITES_CONFIG = {
   'studio': {
     templateRoot: '../dashboard/app/views',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
-    silence: [
-      'applab',
-      'applab-api',
-      'bounce',
-      'brambleHost',
-      'calc',
-      'code-studio',
-      'craft',
-      'districtDropdown',
-      'embedBlocks',
-      'embedVideo',
-      'eval',
-      'flappy',
-      'gamelab',
-      'jigsaw',
-      'levelbuilder',
-      'levelbuilder_applab',
-      'levelbuilder_edit_script',
-      'levelbuilder_gamelab',
-      'levelbuilder_markdown',
-      'levelbuilder_studio',
-      'levels/contract_match',
-      'levels/dashboardDialogHelper',
-      'levels/external',
-      'levels/levelGroup',
-      'levels/multi',
-      'levels/textMatch',
-      'levels/widget',
-      'maker/dependencies',
-      'makerlab',
-      'makerlab/setupPage',
-      'maze',
-      'netsim',
-      'pd',
-      'plc',
-      'publicKeyCryptography',
-      'publicKeyCryptography',
-      'raceInterstitial',
-      'schoolInfo',
-      'scriptOverview',
-      'signup',
-      'studio',
-      'termsInterstitial',
-      'turtle',
-      'tutorialExplorer',
-      'weblab',
-    ],
   },
   'code.org': {
     templateRoot: '../pegasus/sites.v3/code.org/public',
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
-    silence: [
-      'learn/index',
-    ]
   },
 };
 
 const ENTRY_POINT_FILE_PATH_PATTERN = /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
 
-module.exports = function (webpackConfig, options={verbose: false}) {
-  const stats = {
-    failed: 0,
-    silenced: 0,
-    passed: 0,
-  };
 
+function findTemplatesForSite(siteConfig) {
+  const findArgs = siteConfig.templateExtensions.map(ext => `-name '*.${ext}'`).join(' -o ');
+  return new Promise(resolve => child_process.exec(
+    `find ${siteConfig.templateRoot} ${findArgs}`,
+    (err, stdout, stderr) => {
+      const templatesToSearch = stdout.split('\n').filter(f=>f);
+      resolve(templatesToSearch);
+    }
+  ));
+}
+
+function searchFilesForString(filesToSearch, searchString) {
+  return new Promise(resolve => child_process.exec(
+    `grep "${searchString}" ${filesToSearch.join(' ')}`,
+    (err, stdout, stderr) => {
+      let filesWithString = stdout
+        .split('\n')
+        .filter(line => line)
+        .map(line => line.split(':')[0]);
+      resolve(filesWithString);
+    }
+  ));
+}
+
+/**
+ * check a given entry point / path for compliance with the naming conventions
+ *
+ * @param entryKey string - the key for the entry point e.g. 'signup'
+ * @param entryPath string - the path the entry point loads e.g. 'sites/studio/pages/signup.js'
+ * @param stats Object - a stats object for collecting pass/fail/skip info
+ * @param options Object - an options config that turns on/off verbose logging
+ * @returns Promise<void> - a promise that resolves when it is done checking this entry point
+ */
+function checkEntryPoint(entryKey, entryPointPath, stats, options) {
+  const isEntryPointSilenced = SILENCED.includes(entryKey);
+
+  let errorColor = isEntryPointSilenced ? chalk.yellow : chalk.red;
   let logVerbose = () => undefined;
-  let logError = console.log;
+  const logError = console.log;
   if (options.verbose) {
     logVerbose = console.log;
   }
 
-  let entryPromises = Object.keys(webpackConfig.entry).map(key => {
-    let promise = new Promise(resolve => resolve());
-    var errors = [];
-    var usageCount = 0;
-    var entryPointPath = webpackConfig.entry[key][1];
-    var searchString = 'js/'+key+'.js';
-    var possibleValidKeys = new Set();
-    var matchedTemplatePaths = [];
-    var entryPointPatternMatch = entryPointPath.match(
-      ENTRY_POINT_FILE_PATH_PATTERN
-    );
-    const site = entryPointPatternMatch && entryPointPatternMatch[1];
-    if (site) {
-      const siteConfig = SITES_CONFIG[site];
-      //const templatesToSearch = glob.sync(
-      //  siteConfig.templateGlobs.map(glob => siteConfig.templateRoot + glob)
-      //);
-      let findArgs = siteConfig.templateExtensions.map(ext => `-name '*.${ext}'`).join(' -o ');
-      promise = new Promise(resolve =>
-        child_process.exec(
-          `find ${siteConfig.templateRoot} ${findArgs}`,
-          (err, stdout, stderr) => {
-            const templatesToSearch = stdout.split('\n').filter(f=>f);
-            child_process.exec(
-              `grep "${searchString}" ${templatesToSearch.join(' ')}`,
-              (err, stdout, stderr) => {
-                let lines = stdout.split('\n');
-                lines.forEach(line => {
-                  if (!line) {
-                    return;
-                  }
-                  let templatePath = line.split(':')[0];
-                  usageCount++;
-                  var relativePath = templatePath.replace(siteConfig.templateRoot, '').slice(1);
-                  possibleValidKeys.add(relativePath.split('.')[0]);
-                  matchedTemplatePaths.push(relativePath);
-                });
-                resolve();
-              }
-            );
-          }
-        )
-      ).then(() => {
-        if (possibleValidKeys.size === 1) {
-          var keyShouldBe = possibleValidKeys.keys().next().value;
-          if (keyShouldBe !== key) {
+  const errors = [];
+  const entryPointPatternMatch = entryPointPath.match(
+    ENTRY_POINT_FILE_PATH_PATTERN
+  );
+  const site = entryPointPatternMatch && entryPointPatternMatch[1];
+  if (site) {
+    const siteConfig = SITES_CONFIG[site];
+    return findTemplatesForSite(siteConfig)
+      .then(templatesToSearch => searchFilesForString(templatesToSearch, `js/${entryKey}.js`))
+      .then(templates => {
+        // Grab the set of all valid entry keys (e.g. name of the template minus extension)
+        // Also convert the template paths to relative paths for easier display.
+        const possibleValidEntryKeys = new Set();
+        const matchedTemplatePaths = [];
+        templates.forEach(templatePath => {
+          const relativePath = templatePath.replace(siteConfig.templateRoot, '').slice(1);
+          possibleValidEntryKeys.add(relativePath.split('.')[0]);
+          matchedTemplatePaths.push(relativePath);
+        });
+
+        if (possibleValidEntryKeys.size === 1) {
+          const keyShouldBe = possibleValidEntryKeys.keys().next().value;
+          if (keyShouldBe !== entryKey) {
+            // entry point is used by only one template (good)
+            // but the file name of the template and the file name of the
+            // entry point don't match (bad)
             errors.push(
               `Entry point names should match the name of the file they are used in.\n` +
               `This entry point should be renamed to ${chalk.underline(keyShouldBe)}!`
@@ -147,11 +190,13 @@ module.exports = function (webpackConfig, options={verbose: false}) {
         } else {
           errors.push(
             `Entry points should only be used by one template ` +
-            `but this one is used by ${possibleValidKeys.size}!`
+            `but this one is used by ${possibleValidEntryKeys.size}!`
           );
         }
         if (entryPointPatternMatch) {
-          if (entryPointPatternMatch[2] !== key) {
+          // entry point is in the sites/<site-name>/pages direcotory (good)
+          // but it doesn't have the same name as the js file it points to (bad)
+          if (entryPointPatternMatch[2] !== entryKey) {
             errors.push(`Entry points should have the same name as the file they point to!`);
           }
         } else {
@@ -160,23 +205,21 @@ module.exports = function (webpackConfig, options={verbose: false}) {
           );
         }
 
-        const isEntryPointSilenced = siteConfig.silence && siteConfig.silence.includes(key);
-
+        // spit out the list of errors depending on
+        // verbosity and silencing configuration
         let log = logVerbose;
         if (errors.length > 0 && !isEntryPointSilenced) {
           log = logError;
         }
         log(
-          errors.length === 0 ? chalk.green(`✓ ${key}`) :
-          isEntryPointSilenced ? chalk.yellow(`⚠ ${key}`) :
-          chalk.red(`✘ ${key}`),
+          errors.length === 0 ? chalk.green(`✓ ${entryKey}`) :
+          isEntryPointSilenced ? chalk.yellow(`⚠ ${entryKey}`) :
+          chalk.red(`✘ ${entryKey}`),
           '➜',
           entryPointPath
         );
-        let errorColor = chalk.red;
         if (isEntryPointSilenced) {
           stats.silenced++;
-          errorColor = chalk.yellow;
           if (errors.length > 0) {
             log(errorColor(`  ⚠ These errors have been silenced`));
           }
@@ -189,36 +232,61 @@ module.exports = function (webpackConfig, options={verbose: false}) {
           error => log(errorColor(`  ✘ ${error.split('\n').join('\n    ')}`))
         );
 
+        // spit out the list of templates that refer to this entry point
         if (errors.length > 0 && matchedTemplatePaths.length > 0) {
           log(chalk.yellow(
             `  this entry point is referenced by the following templates:`
           ));
-          log(`    ${siteConfig.templateRoot}`+chalk.blue(matchedTemplatePaths[0]));
+          log(`    ${siteConfig.templateRoot}/`+chalk.blue(matchedTemplatePaths[0]));
           matchedTemplatePaths.slice(1).forEach(templatePath => {
-            log('   ', chalk.blue(' '.repeat(siteConfig.templateRoot.length) + templatePath));
+            log('    ', chalk.blue(' '.repeat(siteConfig.templateRoot.length) + templatePath));
           });
         }
       });
-    } else {
-      const isEntryPointSilenced = SILENCE_OUT_OF_SITES.includes(key);
-      let log = logVerbose;
-      if (isEntryPointSilenced) {
-        stats.silenced++;
-      } else {
-        stats.failed++;
-        log = logError;
-      }
-      log(
-        isEntryPointSilenced ? chalk.yellow(`⚠ ${key}`) :
-        chalk.red(`✘ ${key}`),
-        '➜',
-        entryPointPath
-      );
-      log(chalk.red(`  ✘ Entry points should be in a sites directory`));
-    }
+  }
 
-    return promise;
-  });
+  // this entry point is not in a sites directory, so we don't know
+  // which templates to search. Just log an error and return an
+  // empty promise.
+  let log = logVerbose;
+  if (isEntryPointSilenced) {
+    stats.silenced++;
+  } else {
+    stats.failed++;
+    log = logError;
+  }
+  log(
+    isEntryPointSilenced ? chalk.yellow(`⚠ ${entryKey}`) :
+    chalk.red(`✘ ${entryKey}`),
+    '➜',
+    entryPointPath
+  );
+  log(errorColor(`  ✘ Entry points should be in a sites directory`));
+  return new Promise(resolve => resolve());
+}
+
+
+/**
+ * Checks all the entry points for the given webpack config.
+ *
+ * @param webpackConfig Object - the webpack config with the entry points to check
+ * @param options Object - some config options
+ * @param options.verbose bool - whether or not to log verbosely
+ *
+ * @returns Promise<{failed: number, silenced: number, passed: number}> -
+ *   a promise that resolves to a statsu object containing the number of
+ *   entry points that passed/failed or were silenced.
+ */
+module.exports = function (webpackConfig, options={verbose: false}) {
+  const stats = {
+    failed: 0,
+    silenced: 0,
+    passed: 0,
+  };
+
+  const entryPromises = Object
+    .keys(webpackConfig.entry)
+    .map(entryKey => checkEntryPoint(entryKey, webpackConfig.entry[entryKey][1], stats, options));
 
   return Promise.all(entryPromises).then(() => stats);
 };
