@@ -71,8 +71,8 @@ describe("TutorialExplorer filterTutorials tests", function () {
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
     assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, "tut4");
-    assert.equal(filtered[1].name, "tut5");
+    assert.equal(filtered[0].name, "tut5");
+    assert.equal(filtered[1].name, "tut6");
   });
 
   it("filter on subject and language, use hideFilters", function () {
