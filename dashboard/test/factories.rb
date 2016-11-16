@@ -475,7 +475,6 @@ FactoryGirl.define do
   end
   factory :plc_course, class: 'Plc::Course' do
     name "MyString"
-    id Plc::Course.maximum(:id).try(:next) || 1
   end
 
   factory :level_group, class: LevelGroup do
