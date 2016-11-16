@@ -92,7 +92,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# needed for /rails/mailers email previews
+# needed for unit testing, and also for /rails/mailers email previews
 gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 
 # for pegasus PDF generation
