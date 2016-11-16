@@ -1,5 +1,5 @@
 import { expect } from '../../util/configuredChai';
-import { castValue, displayableValue, editableValue, isNumber, isBoolean, toBoolean } from '@cdo/apps/applab/dataBrowser/dataUtils';
+import { castValue, displayableValue, editableValue, isNumber, isBoolean, toBoolean } from '@cdo/apps/storage/dataBrowser/dataUtils';
 
 describe('isNumber', () => {
   it('detects valid numerical values', () => {

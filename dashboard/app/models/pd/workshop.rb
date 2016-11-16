@@ -305,8 +305,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Updates enrollments with resolved users.
   def resolve_enrolled_users
     self.enrollments.each do |enrollment|
-      # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-      enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
+      enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
   end
 

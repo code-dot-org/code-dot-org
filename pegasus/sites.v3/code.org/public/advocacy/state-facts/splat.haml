@@ -124,7 +124,7 @@ theme: pdf
               students were 
           - else
             no students were 
-          Hispanic;
+          Hispanic or Latino;
           - if state_info[:ap_black_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_black_i])
@@ -134,7 +134,7 @@ theme: pdf
               students were 
           - else
             no students were 
-          black;
+          Black;
           - if state_info[:ap_native_american_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_native_american_i])
@@ -144,7 +144,7 @@ theme: pdf
               students were
           - else
             no students were
-          Native American.
+          Native American or Alaska Native.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only

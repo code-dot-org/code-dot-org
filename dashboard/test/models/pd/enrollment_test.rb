@@ -96,18 +96,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert enrollment.in_section?
   end
 
-  test 'skip_school_validation' do
-    enrollment = create :pd_enrollment
-
-    enrollment.school = nil
-    enrollment.school_info = nil
-    refute enrollment.valid?
-    assert 2, enrollment.errors.count
-
-    enrollment.skip_school_validation = true
-    assert enrollment.valid?
-  end
-
   test 'soft delete' do
     enrollment = create :pd_enrollment
     enrollment.destroy!
@@ -161,6 +149,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_deprecated 'name is deprecated. Use first_name & last_name instead.' do
       enrollment.name = 'First Last'
     end
+  end
+
+  test 'old enrollments with no school info are still valid' do
+    old_enrollment = create :pd_enrollment
+    old_enrollment.update!(created_at: '2016-08-29', school_info: nil)
+    assert old_enrollment.valid?
+  end
+
+  test 'school info is required on new enrollments, create and update' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, school_info: nil
+    end
+    assert e.message.include? 'Validation failed: School info is required'
+
+    enrollment = create :pd_enrollment
+    refute enrollment.update(school_info: nil)
   end
 
   test 'old enrollments with no last name are still valid' do
