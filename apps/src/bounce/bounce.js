@@ -183,6 +183,7 @@ Bounce.createBallElements = function (i) {
   ballIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
   ballIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballIcon.setAttribute('clip-path', 'url(#ballClipPath' + i + ')');
+  ballIcon.style.transformOrigin = 'center';
   svg.appendChild(ballIcon);
 };
 
@@ -530,6 +531,7 @@ Bounce.onTick = function () {
 
     Bounce.ballX[i] += deltaX;
     Bounce.ballY[i] += deltaY;
+    Bounce.ballRotation[i] += Bounce.ballRotationSpeed;
 
     if (0 === (Bounce.ballFlags[i] &
                (Bounce.BallFlags.MISSED_PADDLE | Bounce.BallFlags.IN_GOAL))) {
@@ -589,7 +591,7 @@ Bounce.onTick = function () {
       }
     }
 
-    Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i]);
+    Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i], Bounce.ballRotation[i]);
   }
 
   Bounce.displayPaddle(Bounce.paddleX, Bounce.paddleY);
@@ -700,12 +702,14 @@ Bounce.init = function (config) {
     Bounce.ballStart_ = [];
     Bounce.ballX = [];
     Bounce.ballY = [];
+    Bounce.ballRotation = [];
     Bounce.ballDir = [];
     Bounce.ballSpeed = [];
     Bounce.ballFlags = [];
     Bounce.ballCount = 0;
     Bounce.originalBallCount = 0;
     Bounce.paddleFinishCount = 0;
+    Bounce.ballRotationSpeed = 0;
     Bounce.defaultBallSpeed = level.ballSpeed || tiles.DEFAULT_BALL_SPEED;
     Bounce.defaultBallDir = level.ballDirection || tiles.DEFAULT_BALL_DIRECTION;
     Bounce.drawTiles = level.theme ? skin[level.theme].drawTiles : skin.drawTiles;
@@ -810,6 +814,7 @@ Bounce.moveBallOffscreen = function (i) {
   Bounce.ballX[i] = 100;
   Bounce.ballY[i] = 100;
   Bounce.ballDir[i] = 0;
+  Bounce.ballRotation[i] = 0;
   // stop the ball from moving if we're not planning to respawn:
   Bounce.ballSpeed[i] = 0;
 };
@@ -846,13 +851,14 @@ Bounce.resetBall = function (i, options) {
                                  Bounce.ballStart_[i].x;
   Bounce.ballY[i] =  randStart ? tiles.DEFAULT_BALL_START_Y :
                                  Bounce.ballStart_[i].y;
+  Bounce.ballRotation[i] = 0;
   Bounce.ballDir[i] = randStart ?
                         (Math.random() * Math.PI / 2) + Math.PI * 0.75 :
                         Bounce.defaultBallDir;
   Bounce.ballSpeed[i] = Bounce.currentBallSpeed;
   Bounce.ballFlags[i] = 0;
 
-  Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i]);
+  Bounce.displayBall(i, Bounce.ballX[i], Bounce.ballY[i], Bounce.ballRotation[i]);
 };
 
 /**
@@ -1147,12 +1153,14 @@ Bounce.setTileTransparent = function () {
  * @param {number} x Horizontal grid (or fraction thereof).
  * @param {number} y Vertical grid (or fraction thereof).
  */
-Bounce.displayBall = function (i, x, y) {
+Bounce.displayBall = function (i, x, y, rotation) {
   var ballIcon = document.getElementById('ball' + i);
   ballIcon.setAttribute('x',
                         x * Bounce.SQUARE_SIZE);
   ballIcon.setAttribute('y',
                         y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
+  ballIcon.style.transform = `rotate(${rotation}deg)`;
+
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);
@@ -1257,11 +1265,16 @@ Bounce.loadTiles = function (tiles, goalTiles) {
 };
 
 Bounce.setBall = function (value) {
-  Bounce.ballImage = skinTheme(value).ball;
+  var theme = skinTheme(value);
+  Bounce.ballImage = theme.ball;
+  Bounce.ballRotationSpeed = theme.rotateBall ? 10 : 0;
   for (var i = 0; i < Bounce.ballCount; i++) {
     var element = document.getElementById('ball' + i);
     element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
       Bounce.ballImage);
+    if (!theme.rotateBall) {
+      Bounce.ballRotation[i] = 0;
+    }
   }
 };
 
