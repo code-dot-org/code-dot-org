@@ -525,7 +525,6 @@ var TopInstructions = React.createClass({
             ]}
           >
             <div
-              id="bubble"
               className="prompt-icon-cell"
               onClick={this.handleClickBubble}
             >
