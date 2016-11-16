@@ -46,7 +46,8 @@ const styles = {
 const Tutorial = React.createClass({
   propTypes: {
     item: shapes.tutorial.isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired
+    localeEnglish: React.PropTypes.bool.isRequired,
+    disabledTutorial: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -76,6 +77,7 @@ const Tutorial = React.createClass({
           item={this.props.item}
           closeClicked={this.tutorialDetailClosed}
           localeEnglish={this.props.localeEnglish}
+          disabledTutorial={this.props.disabledTutorial}
         />
         <div
           style={tutorialOuterStyle}
