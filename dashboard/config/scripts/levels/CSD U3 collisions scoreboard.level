@@ -46,6 +46,8 @@
       "keyDown": null,
       "comment_GameLab": null,
       "var sprite = createSprite": null,
+      "x": null,
+      "y": null,
       "isTouching": null,
       "setAnimation": null,
       "debug": null,
@@ -69,7 +71,11 @@
     "all_animations_single_frame": "false",
     "start_in_animation_tab": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",
