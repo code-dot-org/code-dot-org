@@ -45,10 +45,6 @@ const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 // Minecraft-specific styles
 const craftStyles = {
-  main: {
-    //marginTop: 20,
-    //marginBottom: 10
-  },
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
@@ -494,7 +490,6 @@ var TopInstructions = React.createClass({
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
     ];
 
@@ -522,7 +517,6 @@ var TopInstructions = React.createClass({
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
-          allowScrolling={true}
         >
           <div
             style={[
