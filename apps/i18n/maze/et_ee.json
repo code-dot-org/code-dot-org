@@ -3,8 +3,6 @@
   "atFlower": "lille juures",
   "atHoneycomb": "kärje juures",
   "avoidCowAndRemove": "väldi lehma ja eemalda 1",
-  "bean": "bean",
-  "beanTooltip": "Harvest a bean",
   "collect": "collect",
   "collectiblePresent": "there is some treasure",
   "collectorCollectTooltip": "Collect an item",
@@ -37,7 +35,7 @@
   "flowerEmptyError": "Lillel, millel oled, ei ole rohkem nektarit.",
   "get": "võta",
   "has": "on",
-  "hasbean": "seal on oad",
+  "haslettuce": "there is lettuce",
   "hascorn": "seal on mais",
   "haspumpkin": "seal on kõrvitsad",
   "heightParameter": "kõrgus",
@@ -56,6 +54,8 @@
   "ifelseTooltip": "Kui märgitud suunas on tee, siis tee esimese ploki toiminguid. Vastasel juhul tee teise ploki toiminguid.",
   "insufficientHoney": "Sa pead tegema õige koguse mett.",
   "insufficientNectar": "Sa pead koguma õige koguse nektarit.",
+  "lettuce": "lettuce",
+  "lettuceTooltip": "Harvest some lettuce",
   "make": "tee",
   "moveBackward": "liigu tagasi",
   "moveEastTooltip": "Liiguta mind ühe ühiku võrra itta.",
@@ -112,7 +112,5 @@
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Jah",
   "youSpelled": "Sa kirjutasid",
-  "haslettuce": "there is lettuce",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce"
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

@@ -1,5 +1,9 @@
 class Api::V1::Pd::WorkshopAttendanceSerializer < ActiveModel::Serializer
-  attributes :state, :session_attendances
+  attributes :state, :section_code, :session_attendances
+
+  def section_code
+    object.section.try(:code)
+  end
 
   def session_attendances
     object.sessions.map do |session|

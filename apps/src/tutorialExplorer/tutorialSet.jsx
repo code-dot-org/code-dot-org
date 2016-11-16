@@ -8,20 +8,19 @@ import shapes from './shapes';
 const TutorialSet = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
-    filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired
+    filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
+    localeEnglish: React.PropTypes.bool.isRequired
   },
 
   render() {
     return (
-      <div
-        className="col-80"
-        style={{float: 'left'}}
-      >
+      <div style={{overflow: "hidden"}}>
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}
             filters={this.props.filters}
             key={item.code}
+            localeEnglish={this.props.localeEnglish}
           />
         ))}
       </div>

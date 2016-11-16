@@ -2,7 +2,7 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
-var assetPrefix = require('@cdo/apps/assetManagement/assetPrefix');
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 testUtils.setExternalGlobals();
 

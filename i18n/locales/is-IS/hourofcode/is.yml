@@ -1,26 +1,26 @@
 is:
-  site_name: KLUKKUSTUND KÓÐUNAR
-  hour_of_code: Klukkustund kóðunar
-  language: Enska
+  site_name: 'KLUKKUSTUND KÓÐUNAR'
+  hour_of_code: 'Klukkustund kóðunar'
+  language: 'Enska'
   front_title: 'Taktu þátt í stærsta námsviðburði í sögunni, %{campaign_date} 2015'
-  coming_soon: Á næsta leiti
+  coming_soon: 'Á næsta leiti'
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-  campaign_date_start_short: 7. des.
-  campaign_date_start_long: 7. desember
-  campaign_date_short: 7.-13. des.
-  campaign_date_full: 7.-13. desember
+  campaign_date_start_short: "7. des."
+  campaign_date_start_long: "7. desember"
+  campaign_date_short: "7.-13. des."
+  campaign_date_full: "7.-13. desember"
   campaign_date_year: "2016"
-  campaign_date_full_year: 5.-11. desember 2016
+  campaign_date_full_year: "5.-11. desember 2016"
   front_header_banner: 'Taktu þátt í stærsta námsviðburði sögunnar 7. - 13. des. 2015'
   front_intro_default: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í 180+ löndum. Hver sem er, hvar sem er getur skipulagt Klukkustund kóðunar viðburð. Klukkustundar kennsluefni er tiltækt á yfir 40 tungumálum. Engin forkunnátta er nauðsynleg. <strong>Fyrir 4 til 104 ára.</strong>'
-  front_watch_video: Horfa á nýja myndbandið
-  front_watch_regular_video: Horfa á myndbandið
-  front_volunteers: Sjálfboðaliðar með tæknikunnáttu óskast
-  front_start_learning: Byrja að læra
-  header_menu_resources: Tilföng
-  header_menu_faq: Algengar spurningar
-  header_menu_how_to: Hvernig
-  header_menu_promote: Kynna
+  front_watch_video: 'Horfa á nýja myndbandið'
+  front_watch_regular_video: 'Horfa á myndbandið'
+  front_volunteers: 'Sjálfboðaliðar með tæknikunnáttu óskast'
+  front_start_learning: 'Byrja að læra'
+  header_menu_resources: 'Tilföng'
+  header_menu_faq: 'Algengar spurningar'
+  header_menu_how_to: 'Hvernig'
+  header_menu_promote: 'Kynna'
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -37,6 +37,7 @@ is:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
+  company_afterschool: after school
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -64,6 +65,7 @@ is:
   company_ccsoh: Columbus City School District
   company_cresskillboe: Cresskill Public Schools
   company_dallasisd: Dallas Independent School District
+  company_disney: Disney
   company_dpsk12: Denver Public Schools
   company_dcsdk12: Douglas County Schools
   company_dpsnc: Durham Public Schools
@@ -78,7 +80,7 @@ is:
   company_fpschools: Franklin Pierce School District
   company_frederickcountypublicschools: Frederick County Public Schools
   company_fultonschools: Fulton County Schools
-  company_vadoe: "Governor's School Programs"
+  company_vadoe: Governor's School Programs
   company_gcs: Granville County Schools
   company_gcisd: Grapevine-Colleyville ISD
   company_godaddy: Go Daddy
@@ -144,165 +146,171 @@ is:
   company_wuhsd: Whittier Union High School District
   company_wcschools: Wilson County Schools
   company_yelp: Yelp
-  nav_back_to_resources: Aftur í tilföng
-  how_to_nav_educators: Fyrir fræðara
-  how_to_nav_after_school: Fyrir viðveru eftir skóla
-  how_to_nav_parents: Fyrir foreldra
-  how_to_nav_public_officials: Fyrir opinbera aðila
-  how_to_nav_districts: Fyrir skólaumdæmi
-  how_to_nav_assemblies: Fyrir skólasamkomur
-  how_to_nav_organizations: Fyrir samtök
-  how_to_nav_companies: Fyrir fyrirtæki
-  how_to_nav_afterschool_educators: Fyrir utanskólafræðslu
-  how_to_nav_volunteers: Fyrir sjálfboðaliða
-  whats_next_header: Hvað næst?
+  nav_back_to_resources: "Aftur í tilföng"
+  how_to_nav_educators: "Fyrir fræðara"
+  how_to_nav_after_school: "Fyrir viðveru eftir skóla"
+  how_to_nav_parents: "Fyrir foreldra"
+  how_to_nav_public_officials: "Fyrir opinbera aðila"
+  how_to_nav_districts: "Fyrir skólaumdæmi"
+  how_to_nav_assemblies: "Fyrir skólasamkomur"
+  how_to_nav_organizations: "Fyrir samtök"
+  how_to_nav_companies: "Fyrir fyrirtæki"
+  how_to_nav_afterschool_educators: "Fyrir utanskólafræðslu"
+  how_to_nav_volunteers: "Fyrir sjálfboðaliða"
+  whats_next_header: "Hvað næst?"
   whats_next_description: "Við munum senda þér efni og hjálplegar ábendingar fyrir viðburð þinn. Nýtt 2015 kennsluefni er á næsta leiti til að nota í vafra, í snjallsíma - eða jafnvel án tölvu! <a href='http://code.org/learn'>Prófaðu kennsluefnið sem er til</a>"
   whats_next_how_to: "<a href='/how-to'>Hvernig á að halda Klukkustund kóðunar</a>"
   whats_next_promote: "<a href='/promote'>Kynna Klukkustund kóðunar</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>Hvernig á að kynna Klukkustund kóðunar</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Hvernig á að kynna Klukkustund kóðunar</a>"
   whats_next_try: "<a href='http://code.org/learn'>Prófa kennsluefni</a>"
-  whats_next_try_button: Prófa kennsluefni
-  n_have_learned_an_hoc: '<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3>það hafa #</h3>'
-  anybody_can_learn: Allir geta lært.
-  get_started: Byrja
-  beyond_an_hour: Eftir Klukkstund kóðunar
-  register_now: Skráðu þig núna
-  share_on_facebook: Deila á Facebook
-  share_on_twitter: Deila á Twitter
-  front_join_us_heading: Klukkustund kóðunar fyrir sérhvern nemanda.
-  front_join_us_anybody_can_learn: Anybody can learn
-  front_join_us_description: Tölvunarfræði er grunnur sem allir nemendur ættu að hafa. Hjálpaðu okkur að kynna hana fyrir 100 miljónum.
-  front_join_us_description_short: Tölvunarfræði er undirstaða fyrir hvern nemanda.
-  front_join_us_button: Vertu með
-  front_what_is_hoc: Hvað er Klukkustund kóðunar?
-  front_join_us_header: Allir geta lært grunninn og haft gaman af því!
-  front_join_us_volunteer_header: Sjálfboðaliðar fyrir Klukkustund kóðunar
-  front_join_us_teacher: Ertu kennari?
-  front_join_us_inspire: Veittu nemendum innblástur með
-  front_join_us_inspire_link: Klukkustund kóðunar í skólastofunni.
-  front_join_us_teacher_link: Veittu nemendum hvatningu með Klukkustund kóðunar í tíma
-  front_join_us_teacher_volunteer: Leita að nálægum sjálfboðaliðum sem geta heimsótt skólann eða veitt nemendum hvatningu um netið
-  front_join_us_parent: Ertu foreldri?
-  front_join_us_ask_link: Biddu skólann í hverfinu
-  front_join_us_ask: að bjóða Klukkustund kóðunar.
-  front_join_us_parent_link: Biddu skóla á staðnum að halda Klukkustund kóðunar
-  front_join_us_computer_science: Er tölvunarfræði í uppáhaldi?
-  front_join_us_cs_volunteer: Hefur þú áhuga á menntun í tölvunarfræði?
-  front_join_us_spread: Breiddu úr boðskapinn.
-  front_join_us_spread_word: Segðu frá þessu í samfélaginu
-  front_join_us_spread_word_work: Segðu frá þessu í samfélaginu eða á vinnustað
-  front_join_us_sign_up_volunteer: Skráðu þig sem sjálfboðaliða í skóla eða fyrir spjall um netið
-  front_join_us_organize: Eða skipulegðu eigin Klukkustund kóðunar viðburð.
-  front_join_us_how_to_run: Að skipuleggja Klukkustund kóðunar
-  front_join_us_help_promote: Hjálpaðu við að kynna Klukkustund kóðunar
-  front_join_us_students: Nemendur
-  front_join_us_teachers: Kennarar
-  front_join_us_everyone: Allir
-  front_join_us_try: Prófaðu
-  front_join_us_sign_up: Nýskrá
-  front_join_us_host: Miðlaðu
-  front_join_us_support: Veittu stuðning
+  whats_next_try_button: 'Prófa kennsluefni'
+  n_have_learned_an_hoc: "<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3>það hafa #</h3>"
+  anybody_can_learn: 'Allir geta lært.'
+  get_started: 'Byrja'
+  beyond_an_hour: 'Eftir Klukkstund kóðunar'
+  register_now: 'Skráðu þig núna'
+  share_on_facebook: 'Deila á Facebook'
+  share_on_twitter: 'Deila á Twitter'
+  front_join_us_heading: 'Klukkustund kóðunar fyrir sérhvern nemanda.'
+  front_join_us_announcements: 'Announcements'
+  front_join_us_anybody_can_learn: 'Anybody can learn'
+  front_join_us_description: 'Tölvunarfræði er grunnur sem allir nemendur ættu að hafa. Hjálpaðu okkur að kynna hana fyrir 100 miljónum.'
+  front_join_us_description_short: 'Tölvunarfræði er undirstaða fyrir hvern nemanda.'
+  front_join_us_button: 'Vertu með'
+  front_what_is_hoc: 'Hvað er Klukkustund kóðunar?'
+  front_join_us_header: 'Allir geta lært grunninn og haft gaman af því!'
+  front_join_us_volunteer_header: 'Sjálfboðaliðar fyrir Klukkustund kóðunar'
+  front_join_us_tutorials: "Try this year's new tutorials!"
+  front_join_us_tutorials_link: 'Filter and browse an expanded list of <i>over 200 tutorials and lesson plans</i>! Find activities for different subject areas, multiple hardware needs, and students at any experience level.'
+  front_join_us_robotics: 'Got robots?'
+  front_join_us_robotics_link: 'Thank you to our robotics partners below for supporting the Hour of Code! If your classroom has robots, click on the logos to find a list of robot-related activities!'
+  front_join_us_teacher: 'Ertu kennari?'
+  front_join_us_inspire: 'Veittu nemendum innblástur með'
+  front_join_us_inspire_link: 'Klukkustund kóðunar í skólastofunni.'
+  front_join_us_teacher_link: "Veittu nemendum hvatningu með Klukkustund kóðunar í tíma"
+  front_join_us_teacher_volunteer: "Leita að nálægum sjálfboðaliðum sem geta heimsótt skólann eða veitt nemendum hvatningu um netið"
+  front_join_us_parent: 'Ertu foreldri?'
+  front_join_us_ask_link: 'Biddu skólann í hverfinu'
+  front_join_us_ask: 'að bjóða Klukkustund kóðunar.'
+  front_join_us_parent_link: "Biddu skóla á staðnum að halda Klukkustund kóðunar"
+  front_join_us_computer_science: 'Er tölvunarfræði í uppáhaldi?'
+  front_join_us_cs_volunteer: 'Hefur þú áhuga á menntun í tölvunarfræði?'
+  front_join_us_spread: 'Breiddu úr boðskapinn.'
+  front_join_us_spread_word: "Segðu frá þessu í samfélaginu"
+  front_join_us_spread_word_work: "Segðu frá þessu í samfélaginu eða á vinnustað"
+  front_join_us_sign_up_volunteer: 'Skráðu þig sem sjálfboðaliða í skóla eða fyrir spjall um netið'
+  front_join_us_organize: 'Eða skipulegðu eigin Klukkustund kóðunar viðburð.'
+  front_join_us_how_to_run: "Að skipuleggja Klukkustund kóðunar"
+  front_join_us_help_promote: "Hjálpaðu við að kynna Klukkustund kóðunar"
+  front_join_us_students: "Nemendur"
+  front_join_us_teachers: "Kennarar"
+  front_join_us_everyone: "Allir"
+  front_join_us_try: "Prófaðu"
+  front_join_us_sign_up: "Nýskrá"
+  front_join_us_host: "Miðlaðu"
+  front_join_us_support: "Veittu stuðning"
   front_join_us_more_info: "Heimsæktu <a href='https://code.org'>code.org</a> til að fá nánari upplýsingar."
-  front_join_us_code_info: Fáðu nánari upplýsingar á code.org
-  front_join_us_n_students_served: '# þátttakendur'
+  front_join_us_code_info: "Fáðu nánari upplýsingar á code.org"
+  front_join_us_n_students_served: "# þátttakendur"
   signup_header: 'Skipulegðu Klukkustund kóðunar %{campaign_date} og skráðu það hér.'
-  signup_name_label: Nafn þitt
-  signup_email_label: Netfang þitt
+  signup_name_label: 'Nafn þitt'
+  signup_email_label: 'Netfang þitt'
   signup_organization_name_label: 'Nafn þátttökuaðila, t.d. skóla '
-  signup_event_type_label: Tegund viðburðar
-  signup_event_entire_school_label: Allur skólinn minn tekur þátt
-  signup_event_location_label: Staður viðburðar (ef við á)
-  signup_special_event_flag_label: Vekja athygli á mínum viðburði
-  signup_special_event_details_label: Nánar um sérviðburð
+  signup_event_type_label: 'Tegund viðburðar'
+  signup_event_entire_school_label: 'Allur skólinn minn tekur þátt'
+  signup_event_location_label: 'Staður viðburðar (ef við á)'
+  signup_special_event_flag_label: 'Vekja athygli á mínum viðburði'
+  signup_special_event_details_label: 'Nánar um sérviðburð'
   signup_send_posters_flag_label: 'Fá send <a href= "/resources#posters">veggspjöld</a> til skóla eða annars þátttökuaðila'
-  signup_send_posters_address_label: Heimilisfang skóla eða annars þátttökuaðila
-  signup_whole_school_flag_label: Þessi viðburður nær til alls skólans
-  signup_your_event: Skráðu þinn viðburð
-  signup_host_an_hour: Host an hour
-  signup_match_volunteer: Hjálpaðu mér að finna nálægan hugbúnaðarsérfræðing til að hvetja nemendur mína
-  signup_multiple_event_warning: Ef þú ert að skipuleggja fleiri en einn viðburð, þarftu að senda inn sérstakt heiti eða netfang fyrir hvern. Við skráum hvert heiti/netfang sem aðeins einn viðburð.
-  signup_name_placeholder: Nafn þitt
-  signup_email_placeholder: you@example.com
-  signup_organization_name_placeholder: Til dæmis, Salaskóli
-  signup_event_location_placeholder: "Póstnúmer og land EÐA fullt heimilisfang.\r\n(Notað til að setja flagg á kortið okkar.)"
-  signup_special_event_details_placeholder: Lýstu því hvað gerir þetta að sérstökum viðburði
-  signup_send_posters_address_placeholder: Þessu heimilisfangi verður ekki deilt á kortinu okkar
-  signup_event_type_in_school: Í skóla
-  signup_event_type_out_of_school: Utan skóla
-  signup_submit_label: Nýskrá
-  signup_submit_error_message: Villa kom upp. Vinsamlegast gættu þess að allir nauðsynlegir reitir hafi verið rétt útfylltir.
-  signup_thank_you_header: Takk fyrir að skrá viðburð tengdan Klukkustund kóðunar.
-  signup_thank_you_message: Við höfum sent þér tölvupóst til staðfestingar ásamt upplýsingum til að hjálpa þér að byrja.
-  map_title: Kort fyrir Klukkustund kóðunar
+  signup_send_posters_address_label: 'Heimilisfang skóla eða annars þátttökuaðila'
+  signup_whole_school_flag_label: 'Þessi viðburður nær til alls skólans'
+  signup_your_event: 'Skráðu þinn viðburð'
+  signup_host_an_hour: 'Host an hour'
+  signup_match_volunteer: 'Hjálpaðu mér að finna nálægan hugbúnaðarsérfræðing til að hvetja nemendur mína'
+  signup_multiple_event_warning: "Ef þú ert að skipuleggja fleiri en einn viðburð, þarftu að senda inn sérstakt heiti eða netfang fyrir hvern. Við skráum hvert heiti/netfang sem aðeins einn viðburð."
+  signup_registration_deadline: "Registration for the Hour of Code closes December 12."
+  signup_name_placeholder: 'Nafn þitt'
+  signup_email_placeholder: 'you@example.com'
+  signup_organization_name_placeholder: "Til dæmis, Salaskóli"
+  signup_event_location_placeholder: "Póstnúmer og land EÐA fullt heimilisfang.\\r\n(Notað til að setja flagg á kortið okkar.)"
+  signup_special_event_details_placeholder: 'Lýstu því hvað gerir þetta að sérstökum viðburði'
+  signup_send_posters_address_placeholder: 'Þessu heimilisfangi verður ekki deilt á kortinu okkar'
+  signup_event_type_in_school: 'Í skóla'
+  signup_event_type_out_of_school: 'Utan skóla'
+  signup_submit_label: 'Nýskrá'
+  signup_submit_error_message: "Villa kom upp. Vinsamlegast gættu þess að allir nauðsynlegir reitir hafi verið rétt útfylltir."
+  signup_thank_you_header: "Takk fyrir að skrá viðburð tengdan Klukkustund kóðunar."
+  signup_thank_you_message: 'Við höfum sent þér tölvupóst til staðfestingar ásamt upplýsingum til að hjálpa þér að byrja.'
+  map_title: "Kort fyrir Klukkustund kóðunar"
   map_header: '# Klukkustundir kóðunar um allan heim'
-  see_all_events: Sjá alla atburði
+  see_all_events: 'Sjá alla atburði'
   map_header_company: '# af skipuleggjendum fyrirtækja'
   map_header_country: '# á %{country}'
-  map_search_placeholder: Leita að Klukkustundum kóðunar
-  map_search_search: Leit
-  map_search_reset: Endurstilla
-  map_legend_title: Skýring
-  map_legend_hoc_events: Klukkustund kóðunar
-  map_legend_cs_tech_jam: Sérstakur viðburður
-  meta_tag_og_title: Klukkustund kóðunar er komin
-  meta_tag_og_description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
-  meta_tag_twitter_title: Klukkustund kóðunar er komin
-  meta_tag_twitter_description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.
-  twitter_default_text: 'Ég tek þátt í #HourOfCode þetta árið. Hvað með þig? @codeorg'
+  map_search_placeholder: 'Leita að Klukkustundum kóðunar'
+  map_search_search: 'Leit'
+  map_search_reset: 'Endurstilla'
+  map_legend_title: 'Skýring'
+  map_legend_hoc_events: 'Klukkustund kóðunar'
+  map_legend_cs_tech_jam: 'Sérstakur viðburður'
+  meta_tag_og_title: 'Klukkustund kóðunar er komin'
+  meta_tag_og_description: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.'
+  meta_tag_twitter_title: 'Klukkustund kóðunar er komin'
+  meta_tag_twitter_description: 'Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tuga miljóna nemenda í yfir 180 löndum og meira en 30 tungumála. Fyrir 4 til 104 ára.'
+  twitter_default_text: "Ég tek þátt í #HourOfCode þetta árið. Hvað með þig? @codeorg"
   hoc_faq_title: 'Spurt & svarað'
-  hoc_faq_what_is_hoc_q: Hvað er Klukkustund kóðunar?
+  hoc_faq_what_is_hoc_q: 'Hvað er Klukkustund kóðunar?'
   hoc_faq_what_is_hoc_a: "Klukkustund kóðunar er einnar klukkustundar kynning á tölvunarfræði sem er ætlað að svipta hulunni af forritun og sýna að allir geti lært grunnatriðin. <a href='http://code.org/learn'>Skoða kennsluefnið</a>."
-  hoc_faq_last_year: Prófa kennsluefnið
-  hoc_faq_when_is_hoc_q: Hvenær er Klukkustund kóðunar?
+  hoc_faq_last_year: "Prófa kennsluefnið"
+  hoc_faq_when_is_hoc_q: 'Hvenær er Klukkustund kóðunar?'
   hoc_faq_when_is_hoc_a: "Það geta allir miðlað Klukkutíma kóðunar hvenær sem er, en markmið grasrótarátaksins er fá tugir miljóna nemenda til að spreyta sig á einhverri Klukkustund kóðunar vikuna %{campaign_date} í tengslum við <a href='http://csedweek.org'>Computer Science Education Week</a> í USA. Er þetta ein tiltekin <i>klukkustund</i>? Nei. Það er hægt að gera þetta hvenær sem er þessa viku. (Og ef það næst ekki, þá vikuna á undan eða eftir)."
-  hoc_faq_why_cs_q: Hvers vegna tölvunarfræði?
+  hoc_faq_why_cs_q: 'Hvers vegna tölvunarfræði?'
   hoc_faq_why_cs_a: "<i>Öllum</i> nemendum ætti að vera gefið tækifæri til að læra tölvunarfræði. Það hjálpar til að þroska færni í að leysa vandamál, rökvísi og sköpun. Með því að byrja snemma fá nemendur grunn til að ná árangri í störfum 21. aldarinnar. Meiri tölfræði má finna á <a href='http://code.org'>Code.org</a>."
-  hoc_faq_how_participate_q: Hvernig tek ég þátt í Klukkustund kóðunar?
+  hoc_faq_how_participate_q: 'Hvernig tek ég þátt í Klukkustund kóðunar?'
   hoc_faq_how_participate_a: "<a href='target-resources-how-to'>Byrjaðu að skipuleggja hér</a> með því að lesa leiðarvísi okkar. Þú getur haldið Klukkustund kóðunar í skólanum þínum eða út í samfélaginu &mdash; svo sem í tómstundaklúbbi, félagi eða í vinnunni. Eða bara prófað þetta sjálf/ur %{campaign_date}."
-  hoc_faq_behind_hoc_q: Hver stendur að baki Klukkustund kóðunar?
+  hoc_faq_behind_hoc_q: 'Hver stendur að baki Klukkustund kóðunar?'
   hoc_faq_behind_hoc_a: "Klukkustund kóðunar er skipulögð af <a href='http://code.org'>Code.org</a>, sem eru almenn óháð samtök sem hafa það að markmiði að auka þátttöku í tölvunarfræði með því að gera hana aðgengilega í fleiri skólum, og að auka þátttöku kvenna og minnihlutahópa. Fordæmalaust <a href='http://code.org/about/partners'>samstarf hefur tekist</a> milli aðila hefur tekist til að styðja við Klukkustund kóðunar. Þar má nefna Microsoft, Apple, Amazon, ungmennafélög og skólayfirvöld."
-  hoc_faq_host_q: Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?
+  hoc_faq_host_q: "Ég veit ekkert um forritun. Get ég samt skipulagt viðburð?"
   hoc_faq_host_a: "Að sjálfsögðu. Verkefni í Klukkustund kóðunar eru sjálfstýrð. Allt sem þú þarft að gera er að <a href='%{codeorg_url}/learn'>prófa núverandi kennsluefni okkar</a>, velja efnið sem þú vilt nota og velja stundina &mdash; við munum sjá um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='/how-to'>leiðarvísinn okkar</a>."
-  hoc_faq_devices_q: Hvaða tæki ætti ég að nota með nemendum mínum?
+  hoc_faq_devices_q: "Hvaða tæki ætti ég að nota með nemendum mínum?"
   hoc_faq_devices_a: "Kennsluefni Code.org virkar á öllum tækjum og vöfrum. Þú getur séð meiri upplýsingar um tæknikröfur <a href='%{codeorg_url}/educate/it'>hér</a>. Tæknikröfur kennsluefnis sem ekki er frá Code.org má finna á <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> í lýsingu kennsluefnisins. Ekki gleyma að við erum líka með <a href='%{unplugged_url}'>ótengd verkefni</a> fyrir æfingar án nettengingar!"
-  hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
+  hoc_faq_need_computers_q: 'Þarf ég tölvu fyrir hvern þátttakanda?'
   hoc_faq_need_computers_a: "Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur tekið þátt sama hvar þú ert með því tæki sem þú hefur.<p><i>Hér eru nokkrir valkostir:</i><br><ul><li><b>Vinna með félaga</b>Rannsóknir sýna að nemendur læra best að <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>forrita með félaga</a> þar sem tveir nemendur deila tölvu og vinna saman. Hvettu nemendur þína til að gera það.<li><b>Nota skjávarpa.</b>Með skjávarpa og internet-tengdri tölvu getur heill hópur hjálpast að með Klukkustund kóðunar. Horft á myndskeiðin saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>"
-  hoc_faq_international_q: 'Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku háttað?'
+  hoc_faq_international_q: "Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku háttað?"
   hoc_faq_international_a: "Það geta allir skipulagt Klukkustund kóðunar, hvar sem er í heiminum. Á síðasta ári komu nemendur um allan heim saman til að prófa Klukkustund kóðunar. Nánari upplýsingar <a href='/promote'>hér</a>."
-  hoc_faq_tutorial_q: Hvernig get ég búið til kennsluefni fyrir Klukkustund kóðunar?
+  hoc_faq_tutorial_q: 'Hvernig get ég búið til kennsluefni fyrir Klukkustund kóðunar?'
   hoc_faq_tutorial_a: "Ef þú hefur áhuga á að gerast samstarfsaðili í gerð kennsluefnis, þá mælum við með að þú kynnir þér <a href='target-tutorial-guidelines'>leiðarvísa okkar og leiðbeiningar</a>. Við mundum vilja hýsa fjölmörg áhugaverð viðfangsefni, en meginmarkmiðið er að hámarka upplifunina fyrir nemendur og kennara sem hafa ekki fyrri reynslu af tölvunarfræði."
-  hoc_faq_account_q: Þurfa nemendur að skrá sig inn með notendaupplýsingum?
+  hoc_faq_account_q: "Þurfa nemendur að skrá sig inn með notendaupplýsingum?"
   hoc_faq_account_a: "Nei. Það er alls engin krafa að nemendur skrái sig eða skrái sig inn til að prófa Klukkustund kóðunar. En flest <a href='http://code.org/learn/beyond'>námskeiðin sem fara á eftir</a> gera kröfu um innskráningu til að geta varðveitt framvindu nemenda."
-  hoc_faq_high_school_q: Hvaða verkefni ætti ég að nota með framhaldsskólanemendum?
+  hoc_faq_high_school_q: "Hvaða verkefni ætti ég að nota með framhaldsskólanemendum?"
   hoc_faq_high_school_a: "Fyrir alla aldurshópa mælum við með að prófa byrjendaefnið á <a href='http://code.org/learn'>Code.org/learn</a> til að byrja með, svo sem kennsluefnið með Angry Birds eða með Önnu og Elsu. Nemandi í framhaldsskóla ætti að geta klárað svona efni á 30 mínútum og getur þá spreytt sig á ítarlegra efni með JavaScript, svo sem hjá Khan Academy eða CodeHS."
-  hoc_faq_scratch_q: Ég er að gera Klukkustund kóðunar í Scratch en hvað ef nemendur mínir hafa iPad spjöld fremur en fartölvur?
+  hoc_faq_scratch_q: "Ég er að gera Klukkustund kóðunar í Scratch en hvað ef nemendur mínir hafa iPad spjöld fremur en fartölvur?"
   hoc_faq_scratch_a: "Scratch keyrir ekki á spjaldtölvum. Ef nemendur þínir eru ungir, geta þeir notað ScratchJR iPad appið (fyrir byrjendur í lestri). Ef þú skoðar kennsluefnið í boði á <a href='http://code.org/learn'>Code.org/learn</a>, munt þú finna annað kennsluefni sem virkar á iPad - frá Code.org, Tynker, Lightbot eða CodeSpark."
-  hoc_faq_count_hoc_q: Hvernig eru Klukkustundir kóðunar taldar?
-  hoc_faq_map_q: Af hverju sé ég ekki punktinn minn á kortinu?
-  hoc_faq_map_a: Okkur finnst mjög leitt ef þú sérð ekki viðburðinn þinn á Klukkustund kóðunar kortinu. En vegna þess að það eru tugir þúsunda sem skrá sig þá sameinar kortið gögnin og sýnir einn punkt fyrir nokkra nálæga viðburði. Ef þú smellir á töluna ofan við kortið færðu lista yfir alla viðburði eftir stað og ættir að finna viðburðinn þinn þar. Auk þess, vegna fjöldans sem skráir sig, tekur kortið yfirleitt 48 tíma að uppfærast. Athugaðu aftur eftir nokkra daga!
+  hoc_faq_count_hoc_q: "Hvernig eru Klukkustundir kóðunar taldar?"
+  hoc_faq_map_q: "Af hverju sé ég ekki punktinn minn á kortinu?"
+  hoc_faq_map_a: "Okkur finnst mjög leitt ef þú sérð ekki viðburðinn þinn á Klukkustund kóðunar kortinu. En vegna þess að það eru tugir þúsunda sem skrá sig þá sameinar kortið gögnin og sýnir einn punkt fyrir nokkra nálæga viðburði. Ef þú smellir á töluna ofan við kortið færðu lista yfir alla viðburði eftir stað og ættir að finna viðburðinn þinn þar. Auk þess, vegna fjöldans sem skráir sig, tekur kortið yfirleitt 48 tíma að uppfærast. Athugaðu aftur eftir nokkra daga!"
   hoc_faq_count_hoc_a: "Notendatalningin fyrir Klukkustund kóðunar er ekki hárnákvæm. Við teljum ekki auðkenni nemenda þegar þátttakan í Klukkustund kóðunar er metin, enda gerum við það ekki að skilyrði að nemendur skrái sig inn eða skrái sig yfirleitt. Afleiðing af því er að við bæði ofteljum og vanteljum á sama tíma. Þú getur lesið nánar um þetta <a href='http://code.org/loc'>hér</a>."
-  hoc_faq_one_hour_q: Hve mikið er hægt að læra á klukkutíma?
+  hoc_faq_one_hour_q: "Hve mikið er hægt að læra á klukkutíma?"
   hoc_faq_one_hour_a: 'Markmið Klukkustundar kóðunar er ekki að gera neinn að tölvusérfræðingi á einni klukkustund. Ein klukkustund er þó nóg til að komast að því að tölvunarfræði er skemmtileg og skapandi, að hún er aðgengileg fyrir alla aldurshópa og alla nemendur óháð bakgrunni. Mælikvarðinn á árangur þessa átaks er ekki hve mikla tölvunarfræði nemendur læra, heldur hin almenna þátttaka óháð kyni eða þjóðfélagshópi og aukin skráning og þátttaka í tölvunarfræðinámi á öllum skólastigum. Miljónir kennara og nemenda hafa ákveðið að halda áfram eftir klukkustundina - og lært í heilan dag eða viku eða lengur og margir nemendur hafa skráð sig í heilan kúrs eða valið tölvunarfræðibrautir í framhaldskóla.<br/><br/> Auk nemenda, bætist við "nemandi" sem er sjálfur kennarinn sem öðlast það mikið sjálfstraust eftir klukkustundina að hann treystir sér til að kenna tölvunarfræði án þess að hafa háskólagráðu í faginu. Tugþúsundir kennara ákveða að læra meira í tölvunarfræði -  á netinu eða með öðrum hætti. Og þetta á einnig við um skólastjórnendur sem átta sig á því að nemendur þeirra vilja tölvunarfræði og að kennararnir geta kennt hana.<br/><br/>Umfram allt geta allir þátttakendur lært það á klukkustund að þetta er viðráðanlegt.'
-  hoc_faq_more_questions_q: Er einhverjum spurningum ósvarað?
+  hoc_faq_more_questions_q: "Er einhverjum spurningum ósvarað?"
   hoc_faq_more_questions_a: "Gáðu hvort þú finnir svör á <a href='http://support.code.org'>stuðningsspjallvef okkar</a>."
-  hoc_faq_keep_learning_q: Hvernig get ég haldið áfram að læra eftir Klukkustund kóðunar?
+  hoc_faq_keep_learning_q: "Hvernig get ég haldið áfram að læra eftir Klukkustund kóðunar?"
   hoc_faq_keep_learning_a: "Allir geta séð um halda Klukkustund kóðunar hvenær sem er. Kennsluefnið er aðgengilegt allt árið. Þú getur gengið að því vísu að allt kennsluefnið verði tiltækt það sem eftir er. Farðu á síðuna <a href='/promote'>efniviður</a> til að finna leiðbeiningar fyrir viðburði og annað efni sem getur hjálpað til að þín Klukkustund kóðunar heppnist vel."
-  hoc_faq_certificates_q: Hvar get ég prentað skírteini fyrir nemendur mína?
+  hoc_faq_certificates_q: "Hvar get ég prentað skírteini fyrir nemendur mína?"
   hoc_faq_certificates_a: "Farðu á <a href='%{codeorg_url}/certificates'>skírteinasíðuna</a> þar sem þú getur prentað skírteini fyrir allan bekkinn fyrirfram. Þú getur líka prentað <a href='%{codeorg_url}/certificates?course=mc'>sérstök skírteini</a> fyrir nemendur sem fara í Minecraft kennsluefnið."
-  hoc_faq_logo_q: Eru takmörk á því hvernig ég má nota merki eða heiti Klukkustundar kóðunar (Hour of Code)?
+  hoc_faq_logo_q: "Eru takmörk á því hvernig ég má nota merki eða heiti Klukkustundar kóðunar (Hour of Code)?"
   hoc_faq_logo_a: "Hour of Code er skrásett vörumerki. Við viljum ekki koma í veg fyrir notkun þess, en við viljum að notkun þess sé háð nokkrum takmörkunum. Kynntu þér <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>þennan leiðarvísi um notkun</a>."
-  stats_hoc_2013_image_alt: Tölur frá Klukkustund kóðunar 2013
-  stats_growth: Fljótust að ná til 15 miljón notenda.
-  stats_i18n: Nemendur eru að læra á 40 tungumálum
+  stats_hoc_2013_image_alt: 'Tölur frá Klukkustund kóðunar 2013'
+  stats_growth: "Fljótust að ná til 15 miljón notenda."
+  stats_i18n: "Nemendur eru að læra á 40 tungumálum"
   stats_tumblr: 'Tumblr: 3,5 ár'
   stats_facebook: 'Facebook: 3 ár'
   stats_twitter: 'Twitter: 2,5 ár'
   stats_pinterest: 'Pinterest: 2 ár'
   stats_instagram: 'Instagram: 14 mánuðir'
   stats_hoc: 'Klukkustund kóðunar: 5 daga'
-  stats_global: Yfir 100m nemendur hafa prófað Klukkustund kóðunar
-  stats_girls_more: Fleiri stúlkur prófuðu tölvunarfræði en síðastliðin 70 ár
+  stats_global: "Yfir 100m nemendur hafa prófað Klukkustund kóðunar"
+  stats_girls_more: "Fleiri stúlkur prófuðu tölvunarfræði en síðastliðin 70 ár"
   stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni." - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana Alzate, 5. bekk'
   stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra." - Michael Clark, kennari'
@@ -323,33 +331,34 @@ is:
   resources_social: Samskiptamiðlar
   resources_country_resources: Tilföng einstakra landa
   resources_stickers: Límmiðar
-  resources_how_to_guides: Leiðarvísar
-  resources_promote: Kynna
-  resources_nav_tutorials: Prófa kennsluefnið
-  resources_nav_promote: Láta þetta berast
-  resources_nav_spread_word: Hvernig á að taka þátt
-  resources_banner_promote_text: Kynna
-  resources_banner_promote_button: Fáðu aðra til að skrá sig með kynningarpésum, hvetjandi veggspjöldum og borðum í samfélagsmiðlum.
-  resources_banner_howto_text: Hvernig
-  resources_banner_howto_button: Tilföng fyrir fræðara, foreldra og skólaumdæmi sem vilja halda Klukkustund kóðunar.
+  resources_how_to_guides: 'Leiðarvísar'
+  resources_promote: 'Kynna'
+  resources_nav_tutorials: 'Prófa kennsluefnið'
+  resources_nav_promote: 'Láta þetta berast'
+  resources_nav_spread_word: 'Hvernig á að taka þátt'
+  resources_banner_promote_text: "Kynna"
+  resources_banner_promote_button: "Fáðu aðra til að skrá sig með kynningarpésum, hvetjandi veggspjöldum og borðum í samfélagsmiðlum."
+  resources_banner_howto_text: "Hvernig"
+  resources_banner_howto_button: "Tilföng fyrir fræðara, foreldra og skólaumdæmi sem vilja halda Klukkustund kóðunar."
   handouts_section: Deila þessum dreifiblöðum
   handouts_onepager: Breiða út boðskapinn með þessum einblöðungi
   handouts_brochure: Láta kennara og skóla fá þennan pésa
   handouts_participationguide: Skipuleggja þína Klukkustund kóðunar með þessum þátttökuleiðarvísi
   videos_title: Sýna þessi myndbönd til að hvetja nemendur
   videos_what_most_schools_dont_teach: Það sem flestir skólar kenna ekki (5 mín.)
-  videos_hoc_2014: 'Klukkustund kóðunar er komin - allir geta lært'
+  videos_hoc_2014: Klukkustund kóðunar er komin - allir geta lært
   videos_obama_cs: Obama forseti um tölvunarfræði
   videos_anybody_can_learn: Allir geta lært (1 mín.)
   title_country_resources: Tilföng einstakra landa
-  title_how_to_districts: 'Klukkustund kóðunar - leiðarvísir fyrir skólaumdæmi'
-  title_how_to_events: 'Klukkustund kóðunar - leiðarvísir fyrir viðburði'
-  title_how_to_organizations: 'Að halda Klukkustund kóðunar - Félagasamtök'
-  title_how_to_companies: 'Að halda Klukkustund kóðunar - Fyrirtæki'
+  title_how_to_districts: Klukkustund kóðunar - leiðarvísir fyrir skólaumdæmi
+  title_how_to_events: Klukkustund kóðunar - leiðarvísir fyrir viðburði
+  title_how_to_organizations: Að halda Klukkustund kóðunar - Félagasamtök
+  title_how_to_companies: Að halda Klukkustund kóðunar - Fyrirtæki
   title_how_to_officials: Leiðarvísir fyrir opinbera aðila
   title_how_to_volunteers: Leiðarvísir fyrir sjálfboðaliða á Klukkustund kóðunar
+  title_how_to_parents: How-to guide for parents
   title_how_to: Leiðarvísir
-  title_press_release: 'Klukkustund kóðunar - Fjölmiðlaefni fyrir opinbera aðila'
+  title_press_release: Klukkustund kóðunar - Fjölmiðlaefni fyrir opinbera aðila
   title_op_ed: Dæmi um blaðagrein til stuðnings Viku tölvunarfræðináms og Klukkustund kóðunar
   title_press_kit: Fjölmiðlapakki
   title_proclamation: Dæmi um ályktun til stuðnings Viku tölvunarfræðináms og Klukkustund kóðunar
@@ -364,7 +373,7 @@ is:
   events_nav_whole_schools: Skólaviðburðir
   events_nav_special: Sérstakir viðburðir
   events_nav_orgs: Félagasamtök
-  events_all_old_title: Allar Klukkstundir kóðunar @year
+  events_all_old_title: "Allar Klukkstundir kóðunar @year"
   events_all_title: Allar Klukkustundir kóðunar
   events_whole_school_title: Allir skólar með Klukkustund kóðunar
   events_special_title: Sérstakar Klukkustundir kóðunar
@@ -374,10 +383,10 @@ is:
   highlights_title: Hápunktar
   highlights_header: Hápunktar Klukkustundar kóðunar
   highlights_description: Hér eru nokkur eftirlætisaugnablik í átakinu fyrir Klukkustund kóðunar.
-  footer_copyright_message: Höfundarréttur 2015 Code.org. Öll réttindi áskilin.
-  footer_trademark_message: Hour of Code™ er vörumerki Code.org.
-  footer_menu_partners: Samstarfsaðilar
-  footer_menu_contact: Hafðu samband
-  footer_menu_support: Stuðningur
-  footer_menu_terms: Skilmálar
-  footer_menu_privacy: Meðferð persónuupplýsinga
+  footer_copyright_message: 'Höfundarréttur 2015 Code.org. Öll réttindi áskilin.'
+  footer_trademark_message: 'Hour of Code™ er vörumerki Code.org.'
+  footer_menu_partners: 'Samstarfsaðilar'
+  footer_menu_contact: 'Hafðu samband'
+  footer_menu_support: 'Stuðningur'
+  footer_menu_terms: 'Skilmálar'
+  footer_menu_privacy: 'Meðferð persónuupplýsinga'

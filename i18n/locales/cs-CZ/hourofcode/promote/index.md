@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Požádejte, aby celá vaše škola nabídla akci Hodina kódu
 
-[Poslat tento email](%= resolve_url('/promote/resources#sample-emails') %) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Poslat tento email](%= resolve_url('/promote/resources#sample-emails') %) vašemu řediteli školy a vyzvat každou třídu ve škole se přihlásit.
 
 ## 3. Požádejte svého zaměstnavatele, aby se zapojil
 

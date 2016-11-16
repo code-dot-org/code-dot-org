@@ -1,4 +1,4 @@
-"zh-CN":
+"zh":
   data:
     game:
       name:
@@ -161,6 +161,28 @@
         maze_3_2: "写一个程序，让我能够到达那只猪。"
         maze_3_3: "我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！"
         maze_3_4: "写个程序，让我绕过那些TNT炸药，抓住那只猪。"
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
         bounce_1: "在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。"
         bounce_2: 在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。
         bounce_3: 现在，尝试类似的做法用"当按上方向键时"块，来移动球拍到顶部目标。
@@ -246,9 +268,9 @@
         studio_playlab_9: "为这次外星人入侵事件设置背景画面，并通过加快空间机器人的速度来使到达外星人。通过方向键来移动太空机器人，并警告其它人。"
         studio_playlab_10: "创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。"
         studio_iceage_hello1: 喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“说”模块拖放到工作区，然后在里面输入"你好"。
-        studio_iceage_hello2: 喜得(演员1) 发现了曼尼(演员2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"演员 说"块两次。
+        studio_iceage_hello2: 喜得(角色1) 发现了曼尼(角色2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"角色 说"块两次。
         studio_iceage_move_to_flag: 斯奎特正在找他的橡子！使用"移动"模块帮他移动到最后200像素位置。
-        studio_iceage_move_to_actor: |
+        studio_iceage_move_to_actor: |-
           迪亚哥 (演员 1) 正寻找曼尼 (演员 2)。请帮助迪亚哥使用"移动演员"块 ，向曼尼移动200 个像素。
           接着，在"当演员碰到"事件块的下面，拼接”播放声音"块，以便当他们发现对方的时候，播放声音。
         studio_iceage_repeat: '"一直重复"块可以连续不停地运行代码。你可以拼上这个块，帮助格瑞尼重复地左右移动来锻炼吗?'
@@ -398,6 +420,11 @@
         infinity_playlab_intro: "游戏实验室 -- 简介"
         infinity_playlab_events: "游戏实验室 - 事件"
         infinity_playlab_repeat_forever: "游戏实验室 - 一直重复"
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2

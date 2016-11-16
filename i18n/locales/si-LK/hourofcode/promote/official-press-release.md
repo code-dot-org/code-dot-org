@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-# Sample press release for elected officials
+# තෝරාපත් නිලධරීන් සදහා නියැදි මාධ්‍ය නිවේදනයක් 
 
 For Immediate Release  
 [**DATE**]  

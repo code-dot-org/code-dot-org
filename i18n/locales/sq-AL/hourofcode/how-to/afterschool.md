@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
@@ -116,11 +118,10 @@ Filloje Orën tuaj të Kodimit duke inspiruar pjesëmarrësit dhe duke diskutuar
 
 ## Burime të tjera për Orën e Kodimit për mësuesit:
 
-  * Përdor këtë[plan të mësimit shabllon](/files/AfterschoolEducatorLessonPlanOutline.docx)të organizosh Orën tënde të Kodimit.
-  * Shiko [praktikat më të mia](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) nga organizatorët e kalur të Orës së Kodimit. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Vizito [Forumin e Orës së Kodimit](http://forum.code.org/c/plc/hour-of-code) për të marrë këshilla dhe mbështetje nga organizatrët tjerë. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Shiko [PTSH të Orës së Kodimit](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Çfarë vjen pas Orës së Kodimit?

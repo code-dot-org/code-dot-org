@@ -21,16 +21,16 @@ An introduction to else statements and nested if statements to add more complex 
 ### Conditionals: 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|else{}|Executes set of commands if all previous conditions are false|`if(keyDown("up"){} else{}`  | link |
+|else{}|Executes set of commands if all previous conditions are false|`if(keyDown("up")) {} else {}`  | link |
 
 ### Input : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|mouseDidMove()|Returns true if the mouse did move|`if(mouseDidMove()){}`  | link |
-|mouseWentDown(side)|Gives the y position of the mouse|`if(mouseWentDown("left")){}` | link |
-|mouseWentUp(side)|Gives the x position of the mouse|`if(mouseWentUp("left")){}`  | link |
-|keyWentDown(key)|Gives the y position of the mouse|`if(keyWentDown("e")){}`| link |
-|keyWentUp(key)|Gives the y position of the mouse|`if(keyWentDown("m")){}` | link |
+|mouseDidMove()|Returns true if the mouse did move|`if(mouseDidMove()) {}`  | link |
+|mouseWentDown(side)|Gives the y position of the mouse|`if(mouseWentDown("left")) {}` | link |
+|mouseWentUp(side)|Gives the x position of the mouse|`if(mouseWentUp("left")) {}`  | link |
+|keyWentDown(key)|Gives the y position of the mouse|`if(keyWentDown("e")) {}`| link |
+|keyWentUp(key)|Gives the y position of the mouse|`if(keyWentDown("m")) {}` | link |
 
 # Resources
 

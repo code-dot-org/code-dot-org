@@ -18,7 +18,6 @@ var dom = require('../dom');
 var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
 var KeyCodes = constants.KeyCodes;
-var experiments = require('../experiments');
 
 var SquareType = tiles.SquareType;
 
@@ -79,6 +78,8 @@ var loadLevel = function () {
   Bounce.softButtons_ = level.softButtons || [];
   Bounce.respawnBalls = level.respawnBalls || false;
   Bounce.failOnBallExit = level.failOnBallExit || false;
+  Bounce.goal = level.useFlagGoal ? skin.flagGoal : skin.goal;
+  Bounce.goalSuccess = level.useFlagGoal ? skin.flagGoalSuccess : skin.goalSuccess;
 
   // Override scalars.
   for (var key in level.scale) {
@@ -259,7 +260,7 @@ var drawMap = function () {
         top = GOAL_TILE_SHAPES[tile][1];
         image = skin.goalTiles;
       }
-      if (tile !== 'null0') {
+      if (tile !== 'null0' && Bounce.drawTiles) {
         // Tile's clipPath element.
         var tileClip = document.createElementNS(Blockly.SVG_NS, 'clipPath');
         tileClip.setAttribute('id', 'tileClipPath' + tileId);
@@ -302,7 +303,7 @@ var drawMap = function () {
     }
   }
 
-  Bounce.ballImage = skin.ball;
+  Bounce.ballImage = level.theme ? skin[level.theme].ball : skin.ball;
   for (i = 0; i < Bounce.ballCount; i++) {
     Bounce.createBallElements(i);
   }
@@ -336,7 +337,7 @@ var drawMap = function () {
       paddleFinishMarker.setAttribute('id', 'paddlefinish' + i);
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
-                                        skin.goal);
+                                        Bounce.goal);
       paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
       paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
       svg.appendChild(paddleFinishMarker);
@@ -349,7 +350,7 @@ var drawMap = function () {
     ballFinishMarker.setAttribute('id', 'ballfinish');
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
-                                    skin.goal);
+                                    Bounce.goal);
     ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
     ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
     svg.appendChild(ballFinishMarker);
@@ -704,6 +705,7 @@ Bounce.init = function (config) {
     Bounce.paddleFinishCount = 0;
     Bounce.defaultBallSpeed = level.ballSpeed || tiles.DEFAULT_BALL_SPEED;
     Bounce.defaultBallDir = level.ballDirection || tiles.DEFAULT_BALL_DIRECTION;
+    Bounce.drawTiles = level.theme ? skin[level.theme].drawTiles : skin.drawTiles;
 
     // Locate the start and finish squares.
     for (var y = 0; y < Bounce.ROWS; y++) {
@@ -754,7 +756,7 @@ Bounce.init = function (config) {
 
   config.enableShowCode = false;
   config.enableShowBlockCount = false;
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
+  config.showInstructionsInTopPane = true;
 
   var onMount = function () {
     studioApp.init(config);
@@ -877,9 +879,10 @@ Bounce.reset = function (first) {
   document.getElementById('score').setAttribute('visibility', 'hidden');
 
   // Reset configurable variables
-  Bounce.setBackground('hardcourt');
-  Bounce.setBall('hardcourt');
-  Bounce.setPaddle('hardcourt');
+  var theme = level.theme || 'hardcourt';
+  Bounce.setBackground(theme);
+  Bounce.setBall(theme);
+  Bounce.setPaddle(theme);
   Bounce.currentBallSpeed = Bounce.defaultBallSpeed;
 
   // Remove any extra balls that were created dynamically.
@@ -918,7 +921,7 @@ Bounce.reset = function (first) {
       paddleFinishIcon.setAttributeNS(
           'http://www.w3.org/1999/xlink',
           'xlink:href',
-          skin.goal);
+          Bounce.goal);
     }
   }
 
@@ -936,7 +939,7 @@ Bounce.reset = function (first) {
     ballFinishIcon.setAttributeNS(
         'http://www.w3.org/1999/xlink',
         'xlink:href',
-        skin.goal);
+        Bounce.goal);
   }
 
   // Reset the obstacle image.
@@ -1179,17 +1182,34 @@ Bounce.displayScore = function () {
 };
 
 var skinTheme = function (value) {
-  if (value === 'hardcourt') {
+  if (value === 'hardcourt' || value === 'basketball') {
     return skin;
   }
   return skin[value];
 };
 
+Bounce.setTeam = function (value) {
+  Bounce.setBackgroundImage(skin.teamBackgrounds[value]);
+  Bounce.loadTiles(skin.tiles, skin.goalTiles);
+};
+
 Bounce.setBackground = function (value) {
+  var theme = skinTheme(value);
+  Bounce.drawTiles = theme.drawTiles === undefined ? skin.drawTiles : theme.drawTiles;
+  if (level.maps) {
+    Bounce.map = level.maps[value === 'hardcourt' ? 'basketball' : value];
+  }
+  Bounce.setBackgroundImage(theme.background);
+  Bounce.loadTiles(theme.tiles, theme.goalTiles);
+};
+
+Bounce.setBackgroundImage = function (backgroundUrl) {
   var element = document.getElementById('background');
   element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-    skinTheme(value).background);
+    backgroundUrl);
+};
 
+Bounce.loadTiles = function (tiles, goalTiles) {
   // Recompute all of the tiles to determine if they are walls, goals, or empty
   // TODO: do this once during init and cache the result
   var tileId = 0;
@@ -1206,7 +1226,7 @@ Bounce.setBackground = function (value) {
 
       // Draw the tile.
       if (WALL_TILE_SHAPES[tile]) {
-        image = skinTheme(value).tiles;
+        image = tiles;
       } else {
         // Compute the tile index.
         tile = goalNormalize(x, y) +
@@ -1218,12 +1238,15 @@ Bounce.setBackground = function (value) {
         if (!GOAL_TILE_SHAPES[tile]) {
           empty = true;
         }
-        image = skinTheme(value).goalTiles;
+        image = goalTiles;
       }
-      if (!empty) {
-        element = document.getElementById('tileElement' + tileId);
+      var element = document.getElementById('tileElement' + tileId);
+      if (!empty && Bounce.drawTiles) {
         element.setAttributeNS(
             'http://www.w3.org/1999/xlink', 'xlink:href', image);
+        element.setAttribute('visibility', 'visible');
+      } else if (element) {
+        element.setAttribute('visibility', 'hidden');
       }
       tileId++;
     }
@@ -1270,7 +1293,7 @@ Bounce.allFinishesComplete = function () {
           paddleFinishIcon.setAttributeNS(
               'http://www.w3.org/1999/xlink',
               'xlink:href',
-              skin.goalSuccess);
+              Bounce.goalSuccess);
         }
       } else {
         finished++;
@@ -1295,7 +1318,7 @@ Bounce.allFinishesComplete = function () {
         ballFinishIcon.setAttributeNS(
             'http://www.w3.org/1999/xlink',
             'xlink:href',
-            skin.goalSuccess);
+            Bounce.goalSuccess);
         return true;
       }
     }

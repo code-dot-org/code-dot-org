@@ -43,10 +43,6 @@ class HipChat
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
 
-  def self.notify(room, message, options={})
-    message(room, message, options.merge(notify: true))
-  end
-
   def self.slackify(message)
     # format with slack markdownish formatting instead of html
     # https://slack.zendesk.com/hc/en-us/articles/202288908-Formatting-your-messages
@@ -152,5 +148,22 @@ class HipChat
   # Set the initial exponential backoff interval, for testing only.
   def self.set_backoff_for_test(backoff)
     @@initial_backoff = backoff
+  end
+
+  def self.wrap(name)
+    start_time = Time.now
+    HipChat.log "Running #{name}..."
+    yield if block_given?
+    HipChat.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
+
+  rescue => e
+    # notify developers room and our own room
+    "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
+      HipChat.log message, color: 'red', notify: 1
+      HipChat.developers message, color: 'red', notify: 1
+    end
+    # log detailed error information in our own room
+    HipChat.log "/quote #{e}\n#{CDO.backtrace e}", message_format: 'text'
+    raise
   end
 end

@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var color = require('../color');
+var color = require("../util/color");
 var AgeDropdown = require('./AgeDropdown');
 
 var commonMsg = require('@cdo/locale');

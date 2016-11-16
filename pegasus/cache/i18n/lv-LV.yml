@@ -36,9 +36,9 @@
   twentyhours_heading: Izmēģiniet mūsu datorzinību kursa ievadu
   twentyhours_text: Pabeidzi savu pirmo "Programmēšanas stundu"? Apgūsti pamatzināšanas
     datorzinībās un programmēšanas pamatlietas nākamajos kursos.
-  og_title: Every child deserves opportunity
-  og_description: Every student in every school deserves the opportunity to study
-    computer science.
+  og_title: The Hour of Code is coming
+  og_description: The Hour of Code is a global movement reaching tens of millions
+    of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Pievienojies  <a href="http://hourofcode.com">"Programmēšanas stundai"
     </a><br/>2014. gada 8. - 14. decembrī<br/>
   hoc2014_students: Skolēni
@@ -254,7 +254,7 @@
   learn_next_level: Turpināt nākamo līmeni
   learn_online: Izmēģiniet citus kursus tiešsaistē
   learn_classes: Atrast vietējās klases
-  hoc_is_here: "#Programmēšanas_stunda ir šeit - pārbaudi @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Es tikko izpildīju #Programmēšanas_stundu - pārbaudi! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -301,52 +301,52 @@
   studiobar_shop_title: Veikals
   studiobar_shop_body: Lauz stereotipus. Valkā mūsu logo ar lepnumu.
   homepage_hero_text_malala: "&ldquo;Es izaicini meitenes no visas pasaules\nmācīties
-    Programmēšanas stundā&rdquo; \nMalala, Nobela Miera prēmijas laureāte\n"
-  homepage_hero_text_susan: |
+    Programmēšanas stundā&rdquo; \nMalala, Nobela Miera prēmijas laureāte"
+  homepage_hero_text_susan: |-
     &ldquo;Ja tu vari mainīt tehnoloģijas,
     tu vari mainīt pasauli.&rdquo;
     Susan, Youtube CEO
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Ne tikai spēlējies ar savu telefonu,
     programmē to.&rdquo;
     ASV prezidents Baraks Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Mūsu bērniem &mdash; tajā skaitā mūsu meitenēm &mdash;
     jābūt iespējai mācīties datorzinības.&rdquo;
     Šerila, Facebook COO
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Datorzināte var padarīt pieejamas
     labākās iespējas pasaulē.&rdquo;
     Satija, Microsoft CEO
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Ja tu kodē, tu vari izvēlēties
     virzienu savai dzīvei.&rdquo;
     Kriss Bošs
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Šīs  prasmes ir mainījušas manu nākotni.
     Protams, tas ir arī vienkārši jautri.&rdquo;
     Luna, 7. klase
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Es vēl nekad neesmu redzējis savus bērnus
     tiek pārņemtus ar mācīšanos.&rdquo;
     Maikls, skolotājs
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Datorzinātne ir tāda joma, kuru tu nevari
     pārzināt, ja neesi nekad izmēģinājis.&rdquo;
     Džeksons, 6. klase
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Ar programmēšanu Tu vari darīt
     jebko, ko tavs prāts vēlas.&rdquo;
     Maija, 2. klase
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Datorzinības nav domātas kādam
     citam. Tās ir tev, šeit un tagad.&rdquo;
     Džeraldo, skolotājs
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;Programmēšana attīsta radošumu, iztēli un inovācijas &mdash;
     viss no tā ir nozīmīgs karjeras veidošanai.&rdquo;
     Floresa, skolotāja
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Šī programma iesaistīja, iedvesmoja un
     lika piedalīties 100% manu skolēnu.&rdquo;
     Ādams, skolotājs
@@ -561,9 +561,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Iesniegt
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: Neskaidrs
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 stundu katru nedēļu
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 stundas katru nedēļu
@@ -772,6 +772,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -909,6 +921,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Uzzini vairāk
   dashboard_announce_try_now_button: Izmēģini tūlīt
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -917,6 +930,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: 'Programmēšanas stunda ir klāt: no 8. līdz 14. decembrim!'
   code_sign_up: Reģistrējies, lai piedalītos Datorzinību izglītības nedēļā
   host_an_hour: Host an hour
@@ -1760,3 +1778,58 @@
   infinity_shortcode: inf
   playlab_shortcode: spēlēt
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

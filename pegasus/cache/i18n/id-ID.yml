@@ -254,7 +254,7 @@
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: "#HourOfCode ada di sini – coba lihat! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -304,44 +304,44 @@
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
   homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
     belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Jika Anda bisa mengubah teknologi,
     Anda bisa mengubah dunia.&rdquo;
     Susan, Direktur Utam YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Jangan hanya memainkan ponselmu, programkanlah..&rdquo;
     Presiden AS, Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Anak cucu kita&mdash; termasuk yang perempuan &mdash;
     memerlukan kesempatan untuk belajar ilmu komputer..&rdquo;
     Sheryl, Ketua Pegawai Operasi Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
     Satya, Direktur Utama Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Keterampilan ini telah mengubah masa depan saya.
     Bukan untuk mempersaksikan, itu hanya mengungkapkan kesenangan.&rdquo;
     Luna, kelas 7
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Saya telah pernah, pernah melihat anak-anak saya begitu gembira tentang pembelajaran.&rdquo;
     Michael, guru
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Ilmu komputer adalah bidang Anda tidak bisa
     tahu apakah Anda suka atau tidak sebelum Anda mencobanya.&rdquo;
     Jackson, kelas 6
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Anda bisa melakukan apa-apa pikiran Anda ingin lakukan dengan pemrograman.&rdquo;
     Maya, grade 2
   homepage_hero_text_student5: "&ldquo;Ilmu komputer bukan untuk orang lain. Ini adalah
-    untuk Anda, di sini, sekarang.&rdquo; \nGeraldo, guru\n"
-  homepage_hero_text_teacher1: |
+    untuk Anda, di sini, sekarang.&rdquo; \nGeraldo, guru"
+  homepage_hero_text_teacher1: |-
     &ldquo;Coding memicu kreativitas, inspirasi dan inovasi &mdash;
     yang semuanya penting dalam setiap karir.&rdquo;
     Floresa, guru
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
   homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
@@ -776,6 +776,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -916,6 +928,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Pelajari lebih banyak
   dashboard_announce_try_now_button: Coba sekarang
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -924,6 +937,11 @@
   dashboard_announce_petition_button: Tambahkan nama Anda
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
   host_an_hour: Host an hour
@@ -1422,7 +1440,7 @@
     internet)? Download tutorial Blockly yang merupakan pendahulu dari tutorial Code.org
     - ukuran 3MB ZIP file tunggal dapat dimuat ke komputer atau digunakan dari memory
     stick
-  thinkersmith2_longdescription: |2
+  thinkersmith2_longdescription: |2-
 
     Siswa belajar tentang merepresentasikan dan menyimpan surat-surat dalam bentuk biner, sebagai fungsi on dan off( nyala dan padam). Pada akhir materi ini, diharapkan kelas dapat mengkodekan (menyandikan) inisial mereka sendiri untuk mereka bawa pulang ke rumah.
   kodableunplugged_longdescription: Dirancang untuk digunakan dengan kertas biasa,
@@ -1780,7 +1798,7 @@
     di browser Anda, kemudian langsung melihat pratinjau pekerjaan Anda.  Host dan
     Share proyek Anda yang telah selesai dengan satu kali klik. Sangat sempurna untuk
     pemula dan juga untuk ahli.
-  codecombat_beyond_longdescription: |2
+  codecombat_beyond_longdescription: |2-
 
     Bermain sebagai Wizard menggunakan kode (mantra) untuk mengontrol pahlawan Anda, menavigasi labirin,  mengalahkan raksasa, menipu musuh dan menyelamatkan sekutu ! Belajar JavaScript dalam permainan web HTML 5  untuk pemula yang telah selesai.
   codea_beyond_longdescription: Kode untuk iPad memungkinkan Anda membuat game dan
@@ -1832,3 +1850,58 @@
   infinity_shortcode: inf
   playlab_shortcode: mainkan
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

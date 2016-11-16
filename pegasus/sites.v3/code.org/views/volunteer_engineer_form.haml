@@ -13,11 +13,13 @@
 
 %form#volunteer-engineer-submit-form{role: "form", onsubmit: "return volunteerEngineerFormSubmit()"}
   - if form.secret
-    %h1= I18n.t(:volunteer_engineer_submission_update_information)
+    %h2= I18n.t(:volunteer_engineer_submission_update_information)
+    %h3= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  %h2= I18n.t(:volunteer_engineer_submission_header_shared)
+  - else 
+    %h2= I18n.t(:volunteer_engineer_submission_header_shared)
 
-  #error-message{style: 'display: none'}
+  .alert.alert-danger#error-message{style: 'display: none', role: 'alert'}
 
   .form-group
     %label.control-label{for: "volunteer-name"}= I18n.t(:volunteer_engineer_submission_field_name)
@@ -59,7 +61,7 @@
   .form-group
     .checkbox
       %label
-        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: '1', required: false}/
+        %input#volunteer-after-hoc{name: "volunteer_after_hoc_b", type: "checkbox", value: '1', checked: form.data["volunteer_after_hoc_b"], required: false}/
         = I18n.t(:volunteer_engineer_submission_checkbox_after_hoc)
 
   .form-group{style: "display: none;"}
@@ -108,7 +110,13 @@
     %button.btn.btn-submit{type: "submit"}= I18n.t(:volunteer_engineer_submission_submit)
 
 #volunteer-engineer-thanks{:style=>"display: none;"}
-  %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
+  .alert.alert-success{role:"alert"}
+    %p= I18n.t(:volunteer_engineer_submission_thankyou).gsub('%{url}', '/volunteer/local')
+  - if !form.secret
+    #edit-information
+      You can update your volunteer information or email subscription preferences anytime
+      %a#edit-link-tag{href: "#"} here.
+      Please bookmark this page to easily reference later.
 
 :javascript
   $(document).ready(function() {
@@ -126,20 +134,20 @@
         $('#volunteer-languages-other-wrapper').hide();
       }
     }).triggerHandler('change');
-
     $('#volunteer-after-hoc').change(function() {
       if($(this).is(':checked')) {
         $('#volunteer-time-commitment').closest('.form-group').slideDown();
       } else {
         $('#volunteer-time-commitment').closest('.form-group').slideUp();
       }
-    });
+    }).triggerHandler('change');
   });
 
   function processVolunteerEngineerFormResponse(data)
   {
     $('form').hide();
     $('#volunteer-engineer-thanks').show();
+    $('#edit-link-tag').attr('href', '/volunteer/engineer/edit/' + data.secret);
   }
 
   function processVolunteerEngineerFormError(data)
@@ -167,11 +175,21 @@
     $("#volunteer-engineer-submit-form #btn-submit").attr('disabled','disabled');
     $("#volunteer-engineer-submit-form #btn-submit").removeClass("button_enabled").addClass("button_disabled");
 
+    var serializedData = $('#volunteer-engineer-submit-form').serializeArray();
+
+    // Send null when checkbox is unchecked to reset the value. Otherwise nothing will be updated for the field.
+    serializedData = serializedData.concat(
+      $('input[type=checkbox]:not(:checked)#volunteer-after-hoc').map(
+        function() {
+            return {"name": this.name, "value": null}
+        }).get()
+    );
+
     $.ajax({
       url: "/forms/VolunteerEngineerSubmission2015#{'/' + form.secret if form && form.secret}",
       type: "post",
       dataType: "json",
-      data: $('#volunteer-engineer-submit-form').serialize()
+      data: serializedData
     }).done(processVolunteerEngineerFormResponse).fail(processVolunteerEngineerFormError);
 
     return false;
