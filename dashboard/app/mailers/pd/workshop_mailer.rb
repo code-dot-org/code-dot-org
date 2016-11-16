@@ -30,6 +30,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
   }
 
+  after_action :save_timestamp
+
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -130,6 +132,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
   end
 
   private
+
+  def save_timestamp
+    return unless @enrollment
+    Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
+  end
 
   def first_workshop_for_teacher?(teacher)
     Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
