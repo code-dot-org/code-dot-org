@@ -512,31 +512,51 @@ function getFilters({robotics, mobile}) {
 /*
  * Parse URL parameters to retrieve an override of initialFilters.
  *
+ * @param {Array} filters - Array of filterGroup objects.
+ * @param {bool} robotics - whether on the robotics page.
+ *
  * @return {object} - Returns an object containing arrays of strings.  Each
  *   array is named for a filterGroup name, and each string inside is named
  *   for a filter entry.  Note that this is not currently white-listed against
  *   our known name of filterGroups/entries, but invalid entries should be
  *   ignored in the filtering user experience.
  */
-function getUrlParameters(robotics) {
+function getUrlParameters(filters, robotics) {
   // Create a result object that has a __proto__ so that React validation will work
   // properly.
   let parametersObject = {};
 
   let parameters = queryString.parse(location.search);
   for (const name in parameters) {
-    if (typeof parameters[name] === "string") {
-      // Convert items with a single filter entry into an array containing that
-      // string.
-      parametersObject[name] = [parameters[name]];
-    } else {
-      parametersObject[name] = parameters[name];
-    }
+    const filterGroup = filters.find(item => {return item.name === name;});
 
-    if (robotics) {
-      // The robotics page remains dedicated to robotics activities.
-      parametersObject.activity_type = ["robotics"];
+    // Validate filterGroup name.
+    if (filterGroup) {
+      let entryNames = [];
+      if (typeof parameters[name] === "string") {
+        // Convert item with single filter entry into array containing the string.
+        entryNames = [parameters[name]];
+      } else {
+        entryNames = parameters[name];
+      }
+
+      for (const entry in entryNames) {
+        const entryName = entryNames[entry];
+
+        // Validate entry name.
+        if (filterGroup.entries.find(item => {return item.name === entryName;})) {
+          if (!parametersObject[name]) {
+            parametersObject[name] = [];
+          }
+          parametersObject[name].push(entryName);
+        }
+      }
     }
+  }
+
+  if (robotics) {
+    // The robotics page remains dedicated to robotics activities.
+    parametersObject.activity_type = ["robotics"];
   }
 
   return parametersObject;
@@ -547,7 +567,7 @@ window.TutorialExplorerManager = function (options) {
   let {filters, initialFilters, hideFilters} = getFilters(options);
 
   // Check for URL-based override of initialFilters.
-  const providedParameters = getUrlParameters(!options.roboticsButtonUrl);
+  const providedParameters = getUrlParameters(filters, !options.roboticsButtonUrl);
   if (!_.isEmpty(providedParameters)) {
     initialFilters = providedParameters;
   }
