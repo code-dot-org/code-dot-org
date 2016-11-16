@@ -44,6 +44,8 @@ Dashboard::Application.routes.draw do
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
 
+  get 'redirected_url', to: 'redirect_proxy#get', format: false
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
