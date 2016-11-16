@@ -131,7 +131,7 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
-        <FlexGroup />
+        {window.betaScriptEditor && <FlexGroup />}
       </div>
     );
   }
