@@ -137,8 +137,10 @@ describe('MockFirebase', () => {
 
   describe('when invoked via firebaseUtils', () => {
     let channelRef;
+    let originalWindowApplab;
 
     beforeEach(() => {
+      originalWindowApplab = window.Applab;
       window.Applab = {
         channelId: "test-firebase-channel-id",
         firebaseName: 'test-firebase-name',
@@ -146,6 +148,10 @@ describe('MockFirebase', () => {
       };
       channelRef = getDatabase(Applab.channelId);
       channelRef.autoFlush();
+    });
+
+    afterEach(() => {
+      window.Applab = originalWindowApplab;
     });
 
     it('resolves promises', done => {
