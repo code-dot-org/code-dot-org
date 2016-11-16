@@ -67,6 +67,7 @@ $options.auto_retry = false
 $options.magic_retry = false
 $options.parallel_limit = 1
 $options.abort_when_failures_exceed = Float::INFINITY
+$options.abort_when_systemic_errors_exceed = Float::INFINITY
 
 # start supporting some basic command line filtering of which browsers we run against
 opt_parser = OptionParser.new do |opts|
@@ -140,6 +141,9 @@ opt_parser = OptionParser.new do |opts|
   end
   opts.on("--abort_when_failures_exceed Limit", Numeric, "Maximum allowed feature failures before the whole test run is aborted (default is infinity)") do |max_failures|
     $options.abort_when_failures_exceed = max_failures
+  end
+  opts.on("--abort_when_systemic_errors_exceed Limit", Numeric, "Maximum allowed systemic errors before the whole test run is aborted (default is infinity)") do |max_failures|
+    $options.abort_when_systemic_errors_exceed = max_failures
   end
   opts.on("-n", "--parallel ParallelLimit", String, "Maximum number of browsers to run in parallel (default is 1)") do |p|
     $options.parallel_limit = p.to_i
@@ -330,11 +334,22 @@ end
 # if we exceed a certain limit.  See $options.abort_when_failures_exceed.
 failed_features = 0
 
+# Track the number of failed test runs (more granular than features) due to systemic errors
+# (e.g. "bad gateway") so we can abort the run if we exceed a certain limit.
+systemic_errors = 0
+
 # This lambda function is called by Parallel.map each time it needs a new work
 # item.  It should return Parallel::Stop when there is no more work to do.
 next_feature = lambda do
   if failed_features > $options.abort_when_failures_exceed
     message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
+    HipChat.log message, color: 'red'
+    return Parallel::Stop
+  end
+  # this condition may not be hit immediately upon reaching the limit, since we count
+  # errors on every test run but only check the limit when a feature completes.
+  if systemic_errors > $options.abort_when_systemic_errors_exceed
+    message = "Abandoning test run; passed limit of #{$options.abort_when_systemic_errors_exceed} systemic errors."
     HipChat.log message, color: 'red'
     return Parallel::Stop
   end
@@ -355,6 +370,19 @@ parallel_config = {
       failed_features += 1 unless succeeded
     end
 }
+
+SYSTEMIC_ERRORS = [
+  'Bad Gateway',
+  'connection refused',
+  'NoMethodError'
+]
+
+def systemic_error?(error)
+  SYSTEMIC_ERRORS.any? do |systemic_error|
+    error.include? systemic_error
+  end
+end
+
 run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
@@ -516,7 +544,16 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
-    HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
+    if $options.html
+      error = first_selenium_error(html_output_filename)
+      HipChat.log "#{test_run_string} first selenium error: #{error}"
+      if systemic_error?(error)
+        puts "systemic error detected"
+        systemic_errors += 1
+        puts "debug systemic_errors: #{systemic_errors}"
+      end
+    end
+
     HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
@@ -609,6 +646,12 @@ $errbrowserfile.close
 # Produce a final report if we aborted due to excess failures
 if failed_features > $options.abort_when_failures_exceed
   abandoned_message = "Test run abandoned; limit of #{$options.abort_when_failures_exceed} failed features was exceeded."
+  HipChat.log abandoned_message, color: 'red'
+end
+
+# Produce a final report if we aborted due to excess systemic errors (e.g. bad gateway)
+if systemic_errors > $options.abort_when_systemic_errors_exceed
+  abandoned_message = "Test run abandoned; limit of #{$options.abort_when_systemic_errors_exceed} systemic errors was exceeded."
   HipChat.log abandoned_message, color: 'red'
 end
 
