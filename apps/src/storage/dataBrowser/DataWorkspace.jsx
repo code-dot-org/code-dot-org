@@ -1,4 +1,4 @@
-import { ApplabInterfaceMode } from '../constants';
+import { ApplabInterfaceMode } from '../../applab/constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';

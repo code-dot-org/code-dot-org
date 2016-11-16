@@ -1,6 +1,6 @@
 import { expect } from '../../util/configuredChai';
 import MockFirebase from '../../util/MockFirebase';
-import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { init, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 describe('MockFirebase', () => {
   describe('initialization', () => {
@@ -137,21 +137,16 @@ describe('MockFirebase', () => {
 
   describe('when invoked via firebaseUtils', () => {
     let channelRef;
-    let originalWindowApplab;
 
     beforeEach(() => {
-      originalWindowApplab = window.Applab;
-      window.Applab = {
+      init({
         channelId: "test-firebase-channel-id",
         firebaseName: 'test-firebase-name',
         firebaseAuthToken: 'test-firebase-auth-token',
-      };
-      channelRef = getDatabase(Applab.channelId);
+        showRateLimitAlert: () => {},
+      });
+      channelRef = getDatabase();
       channelRef.autoFlush();
-    });
-
-    afterEach(() => {
-      window.Applab = originalWindowApplab;
     });
 
     it('resolves promises', done => {

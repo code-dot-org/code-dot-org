@@ -1,5 +1,5 @@
 import { expect } from '../../util/configuredChai';
-import { fixFirebaseKey, validateFirebaseKey } from '@cdo/apps/applab/firebaseUtils';
+import { fixFirebaseKey, validateFirebaseKey } from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseUtils', () => {
   describe('validateFirebaseKey', () => {
