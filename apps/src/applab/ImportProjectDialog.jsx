@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
-import color from '../color';
+import color from "../util/color";
 import {fetchProject, toggleImportScreen} from './redux/screens';
 
 const styles = {

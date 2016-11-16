@@ -8,6 +8,23 @@ class UserTest < ActiveSupport::TestCase
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
 
+  test 'make_teachers_21' do
+    teacher = create :teacher, birthday: Time.now - 18.years
+    assert_equal '21+', teacher.age
+  end
+
+  test 'normalize_email' do
+    teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
+    assert_equal 'caps@example.com', teacher.email
+  end
+
+  test 'hash_email' do
+    teacher = create :teacher
+    teacher.update!(email: 'hash_email@example.com')
+    assert_equal User.hash_email('hash_email@example.com'),
+      teacher.hashed_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -177,12 +194,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 
@@ -195,12 +209,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 
@@ -1364,5 +1375,65 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
     assert user.should_see_inline_answer?((create :script_level))
+  end
+
+  test 'account_age_days should return days since account creation' do
+    student = create :student, created_at: DateTime.now - 10
+    assert student.account_age_days == 10
+  end
+
+  test 'do not show race interstitial to teacher' do
+    teacher = create :teacher, created_at: DateTime.now - 8
+    refute teacher.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts under 13' do
+    student = User.create(@good_data_young)
+    student.created_at = DateTime.now - 8
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts less than one week old' do
+    student = create :student, created_at: DateTime.now - 3
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts that have already entered race information' do
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(white black)
+    refute student.show_race_interstitial?
+  end
+
+  test 'do not show race interstitial to user accounts that have closed the dialog already' do
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(closed_dialog)
+    refute student.show_race_interstitial?
+  end
+
+  test 'show race interstitial if IP address is nil' do
+    student = create :student, created_at: DateTime.now - 8
+    mock_ip = nil
+    assert RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
+  end
+
+  test 'do not show race interstitial to non-US users' do
+    mock_non_us_object = OpenStruct.new(:country_code => 'CA')
+    Geocoder.stubs(:search).returns([mock_non_us_object])
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = '127.0.0.1'
+    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
+  test 'show race interstitial to US users' do
+    mock_us_object = OpenStruct.new(:country_code => 'US')
+    Geocoder.stubs(:search).returns([mock_us_object])
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = '8.8.8.8'
+    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
+  test 'show race interstitial for student over 13 with account more than 1 week old' do
+    student = create :student, created_at: DateTime.now - 8
+    assert student.show_race_interstitial?
   end
 end

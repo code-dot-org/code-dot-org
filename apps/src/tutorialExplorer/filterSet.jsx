@@ -10,31 +10,29 @@ const FilterSet = React.createClass({
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    roboticsButton: React.PropTypes.bool
+    roboticsButtonUrl: React.PropTypes.string
   },
 
   render() {
     return (
       <div>
-        <div className="col-20">
-          {this.props.filterGroups.map(item =>
-            item.display !== false && (
-              <FilterGroup
-                name={item.name}
-                text={item.text}
-                filterEntries={item.entries}
-                onUserInput={this.props.onUserInput}
-                selection={this.props.selection[item.name]}
-                key={item.name}
-              />
-            )
-          )}
+        {this.props.filterGroups.map(item =>
+          item.display !== false && (
+            <FilterGroup
+              name={item.name}
+              text={item.text}
+              filterEntries={item.entries}
+              onUserInput={this.props.onUserInput}
+              selection={this.props.selection[item.name]}
+              key={item.name}
+            />
+          )
+        )}
 
-          {this.props.roboticsButton && (
-            <RoboticsButton/>
-          )}
+        {this.props.roboticsButtonUrl && (
+          <RoboticsButton url={this.props.roboticsButtonUrl}/>
+        )}
 
-        </div>
       </div>
     );
   }

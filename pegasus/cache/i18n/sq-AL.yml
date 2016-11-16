@@ -252,7 +252,7 @@
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_online: Provo kurse të tjera online
   learn_classes: Gjej klasa lokale
-  hoc_is_here: "#OraPërKodim është ketu - provoje! @codeorg"
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Unë sapo mbarova #OrënPërKodim - provoje! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -300,41 +300,41 @@
   studiobar_shop_title: Dyqani
   studiobar_shop_body: Anashkalo stereotipet. Vishni logon tonë me krenari.
   homepage_hero_text_malala: "&ldquo; Sfidoj vajzat në mbarëbotën të mësojnë të kodojnë
-    për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen\n"
-  homepage_hero_text_susan: |
+    për një orë &rdquo; \nMalala, Fituese e Çmimit Nobel për Paqen"
+  homepage_hero_text_susan: |-
     &ldquo; Nëse mund të ndryshosh teknologjinë mund të ndryshosh botën. &rdquo;
     Susan, Themeluese e YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo; Mos e përdor telefonin vetëm për të luajtur, mëso ta programosh atë. &rdquo;
     Presidenti Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
     kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
     Sheryl, COO në Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo; Shkenca kompjuterike mund të hap
     mundësitë më të mira në botë. &rdquo;
     Satya, Shef Ekzekutiv në Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Nëse arrin të kodosh mund të zgjedhësh dhe kryesh kursin e jetës tënde. &rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo; Këto aftësi kanë ndryshuar të ardhmen time.
     Për të mos folur për argëtimin që bën përmes tyre. &rdquo;
     Luna, klasa e 7-të
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo; Nuk i kam parë kurrë fëmijët e mi më të apasionuar pas të mësuarit se tani. &rdquo;
     Michael, mësues
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo; Shkencat Kompjuterike është terren të cilin pa e provuar nuk arrin do ta kuptosh nëse e pëlqen apo jo. &rdquo;
     Jackson, klasa e 6-të
   homepage_hero_text_student4: "&ldquo; Ti mund të bësh çdo gjë që të thotë mendja
-    me anë të programimit. &rdquo; \nMaya, klasa e 2-të\n"
+    me anë të programimit. &rdquo; \nMaya, klasa e 2-të"
   homepage_hero_text_student5: "&ldquo; Shkencat kompjuterike nuk janë për ndokënd
-    tjetër. Janë për ty, këtu, tani. &rdquo; \nGeraldo, mësues\n"
+    tjetër. Janë për ty, këtu, tani. &rdquo; \nGeraldo, mësues"
   homepage_hero_text_teacher1: "&ldquo; Kodimi sjell kreativitet, frymëzim dhe risi
-    &mdash; \ntë gjitha këto janë thelbësore në karrierë. &rdquo;\nFloresa, mësuese\n"
-  homepage_hero_text_teacher2: |
+    &mdash; \ntë gjitha këto janë thelbësore në karrierë. &rdquo;\nFloresa, mësuese"
+  homepage_hero_text_teacher2: |-
     &ldquo; Ky program i bën të gjithë nxënësit të përfshihen, të marrin pjesë dhe të angazhohen plotësisht.&rdquo;
     Adam, mësues
   homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
@@ -545,9 +545,9 @@
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
   volunteer_engineer_submission_submit: Dorëzo
-  volunteer_engineer_submission_thankyou: Thank you for volunteering for the Hour
-    of Code. To get ready for the Hour of Code and recruit other volunteers, <a href="%{url}">learn
-    more here.</a>
+  volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
+    will be using <a href="%{url}">this map</a> to search for and contact volunteers
+    like you.
   volunteer_engineer_submission_commitment_uncertain: I/e pasigurtë
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 orë në javë
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 orë në javë
@@ -760,6 +760,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Assign Course
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -904,6 +916,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Mëso më shumë
   dashboard_announce_try_now_button: Provo tani
+  dashboard_announce_host_an_hour_button: Host an Hour
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -912,6 +925,11 @@
   dashboard_announce_petition_button: Add your name
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
   code_hoc_coming: Ora e Kodimit është këtu - Dhjetor 8-14!
   code_sign_up: Rregjistrohu për të marrë pjesë në Javën Edukative për SHK
   host_an_hour: Host an hour
@@ -1783,3 +1801,58 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
+  learn_code_studio: Try Code Studio courses
+  learn_back_to_minecraft: Keep learning with Minecraft
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  csd_category_name: 'Under Development: CS Discoveries'
+  research_studies_category_name: Research Studies

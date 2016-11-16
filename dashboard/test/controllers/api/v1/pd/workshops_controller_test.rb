@@ -37,7 +37,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     workshop_2 = create(:pd_workshop, organizer: @organizer, facilitators: [@organizer])
 
     sign_in @organizer
-    get :index, params: {workshops_ive_facilitated: true}
+    get :index, params: {facilitator_view: 1}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal 1, response.length

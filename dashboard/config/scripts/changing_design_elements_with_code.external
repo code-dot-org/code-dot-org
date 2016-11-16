@@ -1,0 +1,54 @@
+name 'Changing Design Elements with Code'
+markdown <<MARKDOWN
+# Changing Design Elements with Code
+
+
+The simplest way to begin adding more functionality to your app is to take the design elements that are already on screen and make them more interactive. By using code to change the content or look of an existing element you can make your app much more functional without adding a ton more screens. If fact, any time you are using multiple similar screens you may be better off using a single screen and changing its content with code.
+
+
+## Make a Screen Do Double Duty
+
+
+If you wanted to make a quiz app, you could make three screens for each question:
+
+1) The question
+2) The correct answer
+3) The incorrect answer
+
+![](https://images.code.org/46d19a118e5034a8ab8499ac5ea5025c-image-1478027392949.png)
+
+That's nine screens just to ask three questions. It’s a lot of work to make all of those screens, and even more work the more questions you want (in this model, a 10 question quiz would need 30 screens _just for the questions and answers!_
+
+
+## Reusable Regions
+
+Looking at those screens, you might notice that they’re really more alike than they are different. If you think about the screen in regions, then you could just update each of those regions depending on which answer was chosen
+
+<div style="float: left; width: 33%">
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+The title of the screen, which starts as the question and then is changed to the result depending on your answer.
+<br><br>
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+The first answer choice. If this is the correct answer, clicking it should change the title to "Correct", otherwise it should change the title to "Incorrect."
+<br><br>
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+The second answer choice, same as the first.
+<br><br>
+<span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+We moved the "Next Question" button below the answers. To prevent users from moving on without answering the question, you could hide this to start and then show it once the question has been answered.
+
+</div>
+
+![](https://images.code.org/caee15ead287a81cbabee4102b7dd66d-image-1478028319976.png)
+
+With this setup you could use just a single screen for each question (and with some clever use of variables you could actually get down to using only _one screen for all of the questions!_)
+
+In the following levels you’ll learn how to use code to change lots of different element properties, including the text, location, size, and even visibility
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### This is Not a Programming Unit
+
+We are presenting a small amount of programming instruction here primarily to satisfy the students' desire to make an app that feels "real," but it's essential to note that this is _not_ intended to be a programming unit, and you shouldn't assess apps with the assumption that students have mastered any of these concepts. Students will be able to apply many of the programming fundamentals they learned in Unit 3, but they won't really dig into new concepts, particularly those central to App Lab's event-driven model until Unit 6. Let this be fun.
+MARKDOWN

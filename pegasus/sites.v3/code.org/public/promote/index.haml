@@ -28,16 +28,20 @@ social:
       = view :interactive_map, use_url: true
 
     #stats-section.section.clear
-      %h2 What’s wrong with this picture? Share these stats.
+      %h2 What’s wrong with this picture? Share these stats
       = view :stats_carousel
 
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
-      = view :promote_tools, state:nil
+      = view :promote_tools, state:nil, section_name: 'local_tools'
+
+    #resources-section.section.clear
+      %h2 Policy development resources
+      = view :promote_tools, state:nil, section_name: 'policy_resources'
 
   %div{:id=>'universal_content'}
     #youtube-section.section.clear
-      %h2{:style=>'margin-top: 0px'} Tell the world! Share the Code.org video.
+      %h2{:style=>'margin-top: 0px'} Tell the world! Share the Code.org video
       = view :youtube_videos
 
       #stateaction{:style=>'padding-left:30px'}

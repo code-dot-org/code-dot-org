@@ -31,14 +31,12 @@ module Solr
     class Query
       include Enumerable
 
+      attr_reader :count
+
       def initialize(http, params)
         @http = http
         @params = params.dup
         @start, @count, @docs = fetch(params[:start] || 0)
-      end
-
-      def count
-        @count
       end
 
       def each(&block)

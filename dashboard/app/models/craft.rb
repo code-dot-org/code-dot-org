@@ -34,15 +34,25 @@ class Craft < Blockly
     :action_plane,
     :player_start_position,
     :available_blocks,
+    :drop_dropdown_options,
+    :play_sound_options,
     :if_block_options,
     :place_block_options,
     :player_start_direction,
     :verification_function,
+    :failure_check_function,
+    :timeout_verification_function,
     :show_popup_on_load,
     :is_daytime,
+    :use_score,
+    :is_event_level,
     :special_level_type,
     :grid_width,
     :grid_height,
+    :day_night_cycle_start,
+    :day_night_cycle_time,
+    :level_verification_timeout,
+    :use_player,
     :free_play
   )
 
@@ -103,7 +113,99 @@ class Craft < Blockly
       wool: true
   }
 
+  ALL_MINIBLOCKS = {
+      dirt: true,
+      dirtCoarse: true,
+      sand: true,
+      gravel: true,
+      bricks: true,
+      logAcacia: true,
+      logBirch: true,
+      logJungle: true,
+      logOak: true,
+      logSpruce: true,
+      planksAcacia: true,
+      planksBirch: true,
+      planksJungle: true,
+      planksOak: true,
+      planksSpruce: true,
+      cobblestone: true,
+      sandstone: true,
+      wool: true,
+      redstoneDust: true,
+      lapisLazuli: true,
+      ingotIron: true,
+      ingotGold: true,
+      emerald: true,
+      diamond: true,
+      coal: true,
+      bucketWater: true,
+      bucketLava: true,
+      gunPowder: true,
+      wheat: true,
+      potato: true,
+      carrots: true,
+      milk: true,
+      egg: true,
+      poppy: true,
+      sheep: true,
+  }
+
+  ALL_SOUNDS = {
+      dirt: true,
+      dirtCoarse: true,
+      sand: true,
+      gravel: true,
+      bricks: true,
+      logAcacia: true,
+      logBirch: true,
+      logJungle: true,
+      logOak: true,
+      logSpruce: true,
+      planksAcacia: true,
+      planksBirch: true,
+      planksJungle: true,
+      planksOak: true,
+      planksSpruce: true,
+      cobblestone: true,
+      sandstone: true,
+      wool: true,
+      redstoneDust: true,
+      lapisLazuli: true,
+      ingotIron: true,
+      ingotGold: true,
+      emerald: true,
+      diamond: true,
+      coal: true,
+      bucketWater: true,
+      bucketLava: true,
+      gunPowder: true,
+      wheat: true,
+      potato: true,
+      carrots: true,
+      milk: true,
+      egg: true,
+      poppy: true,
+      sheep: true,
+      sheepBaa: true,
+      chickenHurt: true,
+      chickenBawk: true,
+      cowHuff: true,
+      cowHurt: true,
+      cowMoo: true,
+      cowMooLong: true,
+      creeperHiss: true,
+      ironGolemHit: true,
+      metalWhack: true,
+      zombieBrains: true,
+      zombieGroan: true,
+      zombieHurt: true,
+      zombieHurt2: true,
+  }
+
   ALL_BLOCKS_ARRAY = "[\"#{ALL_BLOCKS.keys[1..-1].join('", "')}\"]"
+  ALL_MINIBLOCKS_ARRAY = "[\"#{ALL_MINIBLOCKS.keys[1..-1].join('", "')}\"]"
+  ALL_SOUNDS_ARRAY = "[\"#{ALL_SOUNDS.keys[1..-1].join('", "')}\"]"
 
   KNOWN_TILE_TYPES = {
     ground_plane: ALL_BLOCKS,
@@ -150,6 +252,42 @@ class Craft < Blockly
       treeOak: '/blockly/media/skins/craft/images/Leaves_Oak_Decay.png',
   }
 
+  SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS = {
+      fail:
+'function (verificationAPI) {
+  // Fail if we hit the end of the timeout.
+  return false;
+}',
+      turnRandomCount:
+'function(verificationAPI) {
+  return verificationAPI.getTurnRandomCount() >= 1;
+},',
+      playerSurvived:
+'function(verificationAPI) {
+  // if we have reached the timeout without fail, they succeeded.
+  return true;
+},',
+
+  }
+
+  SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS = {
+      neverFailEarly:
+'function (verificationAPI) {
+  // Fail instantly
+  return false;
+}',
+      failInstantly:
+'function (verificationAPI) {
+  // Fail instantly
+  return true;
+}',
+      turnRandomCount:
+'function(verificationAPI) {
+  // Fail instantly when they turn once.
+  return verificationAPI.getTurnRandomCount() >= 1;
+},',
+  }
+
   SAMPLE_VERIFICATION_FUNCTIONS = {
       mapMatches:
 'function (verificationAPI) {
@@ -192,7 +330,41 @@ class Craft < Blockly
 'function (verificationAPI) {
       // the player has collected at least 2 wool
       return verificationAPI.getInventoryAmount("wool") >= 2;
-}'
+}',
+      isEntityAt:
+'function (verificationAPI) {
+  // [5, 5]: grid coordinates, 0, 0 is top left
+  verificationAPI.isEntityAt("sheep", [5, 5]);
+}
+',
+      sheepOnGrassCount:
+'function (verificationAPI) {
+  var grassPositions = [[0, 0], [1, 1]]
+  Var sheepOnGrassCount = 0;
+  for(var i = 0 ; i < grassPositions.length ; i++ ) {
+    if(verificationAPI.isEntityAt("sheep", grassPositions[i]))
+      sheepOnGrassCount++;
+    }
+  return sheepOnGrassCount >= 2;
+}
+',
+      isEntityDied:
+'function (verificationAPI) {
+  // replace 3 with number of zombies in map
+  verificationAPI.isEntityDied("zombie", 3);
+}
+',
+      playerAtOneOfManyPositions:
+'function (verificationAPI) {
+  // List of x, y positions.
+  var successPositions = [[0, 0], [0, 1], [0, 2]];
+  for (var i = 0; i < successPositions.length; i++) {
+    if (verificationAPI.isEntityAt("Player", successPositions[i])) {
+      return true;
+    }
+  }
+}
+'
 
   }
 
@@ -227,12 +399,19 @@ class Craft < Blockly
     default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 10).join(',')] * 10).join(",\n") + ']'
     default_game_params[:ground_decoration_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
     default_game_params[:action_plane] = '[' + ([(['""'] * 10).join(',')] * 10).join(",\n") + ']'
-    default_game_params[:player_start_position] = '[0, 0]'
+    default_game_params[:player_start_position] = '[4, 4]'
     default_game_params[:grid_width] = '10'
     default_game_params[:grid_height] = '10'
+    default_game_params[:player_start_direction] = 1
     default_game_params[:is_daytime] = true
+    default_game_params[:is_event_level] = true
+    default_game_params[:use_player] = true
+    default_game_params[:use_score] = false
 
     default_game_params[:verification_function] = SAMPLE_VERIFICATION_FUNCTIONS[:isPlayerNextTo]
+    default_game_params[:timeout_verification_function] = SAMPLE_TIMEOUT_VERIFICATION_FUNCTIONS[:fail]
+    default_game_params[:failure_check_function] = SAMPLE_EARLY_FAILURE_CHECK_FUNCTIONS[:neverFailEarly]
+    default_game_params[:level_verification_timeout] = '30000'
 
     create!(level_params.
                 merge(user: params[:user], game: Game.craft, level_num: 'custom').
@@ -252,6 +431,8 @@ class Craft < Blockly
       available_blocks
       if_block_options
       place_block_options
+      drop_dropdown_options
+      play_sound_options
     ).map{ |x| x.camelize(:lower) }
   end
 
@@ -276,6 +457,64 @@ class Craft < Blockly
   <block type='craft_plantCrop'></block>
   <block type='craft_tillSoil'></block>
   <block type='craft_placeBlockAhead'></block>
+  <block type="when_run"></block>
+</category>
+<category name="Event Loops">
+  <block type="craft_forever"></block>
+  <block type="craft_repeatDropdown"></block>
+  <block type="craft_repeatRandom"></block>
+  <block type="craft_repeatTimes"></block>
+</category>
+<category name="Global Actions">
+  <block type='craft_playSound'></block>
+  <block type='craft_addScore'></block>
+  <block type="craft_spawnEntity"></block>
+  <block type="craft_spawnEntityRandom"></block>
+</category>
+<category name="Entity Actions">
+  <block type="craft_attack"></block>
+  <block type="craft_destroyEntity"></block>
+  <block type="craft_drop"></block>
+  <block type="craft_explodeEntity"></block>
+  <block type="craft_flashEntity"></block>
+  <block type="craft_moveAway"></block>
+  <block type="craft_moveDirection"></block>
+  <block type="craft_moveForward"></block>
+  <block type="craft_moveRandom"></block>
+  <block type="craft_moveTo"></block>
+  <block type="craft_moveToward"></block>
+  <block type="craft_entityTurn"></block>
+  <block type="craft_entityTurnLR"></block>
+  <block type="craft_wait"></block>
+</category>
+<category name="Limited Actions">
+  <block type="craft_moveTowardSheepPlayerChicken"></block>
+</category>
+<category name="Limited Entities">
+  <block type="craft_chickenSpawned"></block>
+  <block type="craft_sheepSpawnedClicked"></block>
+  <block type="craft_creeperSpawnedTouchedClicked"></block>
+  <block type="craft_sheepClicked"></block>
+  <block type="craft_chickenSpawnedClicked"></block>
+  <block type="craft_sheepSpawnedTouchedClicked"></block>
+  <block type="craft_cowSpawnedTouchedClicked"></block>
+  <block type="craft_zombieSpawnedTouchedClickedDay"></block>
+  <block type="craft_creeperSpawnedTouchedClickedDay"></block>
+  <block type="craft_zombieNoDayNight"></block>
+  <block type="craft_ironGolemNoDayNight"></block>
+</category>
+<category name="Entities">
+  <block type="craft_sheep"></block>
+  <block type="craft_zombie"></block>
+  <block type="craft_ironGolem"></block>
+  <block type="craft_creeper"></block>
+  <block type="craft_cow"></block>
+  <block type="craft_chicken"></block>
+</category>
+<category name="Global Events">
+  <block type="craft_whenRun"></block>
+  <block type="craft_whenDay"></block>
+  <block type="craft_whenNight"></block>
 </category>
 <category name="Loops">
   <block type='craft_whileBlockAhead'></block>

@@ -1,5 +1,5 @@
 import React from 'react';
-import color from '../../color';
+import color from "../../util/color";
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 

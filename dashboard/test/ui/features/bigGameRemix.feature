@@ -5,9 +5,8 @@ Feature: Big Game Remix
   Background:
     Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
-    Then I wait to see a dialog titled "Puzzle 6 of 11"
-    And I close the dialog
-    And element "#runButton" is visible
+    And I wait to see "#runButton"
+    Then element "#runButton" is visible
 
   @no_mobile
   Scenario: Big Game Remix
@@ -16,4 +15,6 @@ Feature: Big Game Remix
     Then I wait until element ".project_updated_at" contains text "Saved"
     And check that the URL contains "http://studio.code.org/projects/algebra_game"
     Then I am on "http://studio.code.org/projects"
+    And I wait until element ".projects td:eq(0)" is visible
+    And I debug element ".projects td:eq(0)" text content
     And I wait until element ".projects td:eq(0)" contains text "Remix: Big Game Template"

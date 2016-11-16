@@ -40,7 +40,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: teacher_enrollment_subject(enrollment),
-      to: email_address(@enrollment.name, @enrollment.email),
+      to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -62,7 +62,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.name, @enrollment.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -83,7 +83,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: teacher_enrollment_subject(enrollment),
-      to: email_address(@enrollment.name, @enrollment.email),
+      to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -95,7 +95,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: detail_change_notification_subject(enrollment),
-      to: email_address(@enrollment.name, @enrollment.email),
+      to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -126,7 +126,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@enrollment.name || @teacher.name, @teacher.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   private
@@ -138,7 +138,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def generate_csf_certificate
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @teacher.name || @teacher.email,
+      @enrollment.full_name,
       y: 444,
       height: 100,
     )

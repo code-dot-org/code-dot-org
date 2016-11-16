@@ -1,4 +1,4 @@
-var color = require('../color');
+var color = require("../util/color");
 var evalUtils = require('./evalUtils');
 var EvalImage = require('./evalImage');
 var EvalCircle = require('./evalCircle');
