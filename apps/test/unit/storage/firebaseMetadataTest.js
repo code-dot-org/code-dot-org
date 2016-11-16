@@ -1,18 +1,16 @@
 import { expect } from '../../util/configuredChai';
-import { addColumnName, deleteColumnName, renameColumnName, getColumnNames, onColumnNames } from '@cdo/apps/applab/firebaseMetadata';
-import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
+import { addColumnName, deleteColumnName, renameColumnName, getColumnNames, onColumnNames } from '@cdo/apps/storage/firebaseMetadata';
+import { init, getDatabase, getConfigRef } from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseMetadata', () => {
-  let originalWindowApplab;
-
   beforeEach(() => {
-    originalWindowApplab = window.Applab;
-    window.Applab = {
+    init({
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-    };
-    getDatabase(Applab.channelId).autoFlush();
+      showRateLimitAlert: () => {},
+    });
+    getDatabase().autoFlush();
     return getConfigRef().set({
       limits: {
         '15': 5,
@@ -23,12 +21,8 @@ describe('firebaseMetadata', () => {
       maxTableRows: 20,
       maxTableCount: 3
     }).then(() => {
-      getDatabase(Applab.channelId).set(null);
+      getDatabase().set(null);
     });
-  });
-
-  afterEach(() => {
-    window.Applab = originalWindowApplab;
   });
 
   it('adds column names', done => {

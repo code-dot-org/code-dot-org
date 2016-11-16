@@ -2,7 +2,7 @@
  *  @see http://redux.js.org/docs/basics/Reducers.html */
 import { ActionType } from './actions';
 import { ApplabInterfaceMode } from './constants';
-import data from './redux/data';
+import data from '../storage/redux/data';
 import screens from './redux/screens';
 
 function interfaceMode(state, action) {
