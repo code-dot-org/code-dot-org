@@ -127,6 +127,8 @@
   "whileMsg": "în timp ce",
   "whileTooltip": "Repetă acţiunile cuprinse până când punctul final este atins.",
   "yes": "Da",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

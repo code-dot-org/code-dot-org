@@ -30,6 +30,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try nesting a `while` loop inside of a `repeat` loop.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_5a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19d1c41677cb490391281b0da570a460/grade3_robotFarmer_ConditionalsIntro_5.mp3\"}]",
     "instructions_important": "false",
     "ideal": "5",
+    "video_key": "loop_while",
     "contained_level_names": null
   },
   "published": true,

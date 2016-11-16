@@ -127,6 +127,8 @@
   "whileMsg": "докато",
   "whileTooltip": "Повтаря поставените в блока действия, докато целта не бъде достигната.",
   "yes": "Да",
+  "setBackground": "set {background} scene",
+  "setBall": "set {ball} ball",
   "setTeamTooltip": "Sets the logo and color scheme",
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random"

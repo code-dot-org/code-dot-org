@@ -519,13 +519,6 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  factory :user_profile do
-    user { create :teacher }
-    created_at { Time.zone.now }
-    updated_at { Time.zone.now }
-    course UserProfile::CSP
-  end
-
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
@@ -582,6 +575,7 @@ FactoryGirl.define do
   factory :school_info_us_private, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -589,6 +583,7 @@ FactoryGirl.define do
   factory :school_info_us_other, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end

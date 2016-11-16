@@ -9,6 +9,7 @@ Feature: App Lab Scenarios
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
     And I rotate to landscape
     And I wait to see "#runButton"
+    And I debug channel id
 
     Then I reset the puzzle to the starting version
     And I wait to see "#runButton"
