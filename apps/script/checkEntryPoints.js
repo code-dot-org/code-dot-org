@@ -91,7 +91,6 @@ const SILENCED = [
   'scriptOverview',
   'signup',
   'studio',
-  'termsInterstitial',
   'turtle',
   'tutorialExplorer',
   'weblab',
