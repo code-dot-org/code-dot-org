@@ -628,9 +628,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check-entry-points', function () {
     const done = this.async();
     checkEntryPoints(config.webpack.build, {verbose: true})
-      .then(stats => {
-        done();
-      });
+      .then(stats => done());
   });
 
   grunt.registerTask('lint-entry-points', function () {
