@@ -175,17 +175,16 @@ function installJoinBlock(blockly) {
     },
 
     getCustomContextMenuItems: function () {
-      var joinBlock = this;
       return [
         {
           text: `Set number of inputs (current: ${this.inputCount})`,
           enabled: true,
           callback: function () {
-            var ret = prompt('Number of inputs', joinBlock.inputCount);
+            var ret = prompt('Number of inputs', this.inputCount);
             if (ret !== '') {
-              joinBlock.setInputCount(parseInt(ret));
+              this.setInputCount(parseInt(ret));
             }
-          }
+          }.bind(this)
         }
       ];
     },
