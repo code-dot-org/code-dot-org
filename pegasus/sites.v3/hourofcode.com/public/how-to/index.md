@@ -92,7 +92,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if a student finishes early?**
 
-- Students can see all tutorials and try another Hour of Code activity at [HourOfCode.com/learn](<%= resolve_url('/learn') %>)
+- Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
 - Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]

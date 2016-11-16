@@ -24,7 +24,11 @@
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'How-To'
   header_menu_promote: 'Promote'
-  header_menu_learn: 'Learn'
+  header_menu_activities: 'Activities'
+
+  not_found_title: 'Page Not Found'
+  not_found_desc: 'The requested page was not found'
+  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance

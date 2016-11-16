@@ -76,7 +76,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if someone finishes early?**
 
-- Encourage participants to try another Hour of Code activity at [HourOfCode.com/learn](<%= resolve_url('/learn') %>)
+- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
 - Or, ask those who finish early to help others who are having trouble.
 
 [col-33]

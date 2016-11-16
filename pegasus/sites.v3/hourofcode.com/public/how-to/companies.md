@@ -87,7 +87,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **What to do if someone finishes early?**
 
-- They can try another Hour of Code activity at HourOfCode.com/learn
+- They can try another Hour of Code activity at hourofcode.com/learn
 - Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

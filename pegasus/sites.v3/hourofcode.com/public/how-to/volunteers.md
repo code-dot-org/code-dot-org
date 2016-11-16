@@ -29,7 +29,7 @@ Ask your employer to get involved. [Send this email](https://hourofcode.com/prom
 	* If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
 
 ## How to prepare: 
-Try out tutorials before heading to the classroom by going to https://HourOfCode.com/learn
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn
 Prepare an intro:
 Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
