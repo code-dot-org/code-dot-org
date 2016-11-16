@@ -475,7 +475,7 @@ FactoryGirl.define do
   end
   factory :plc_course, class: 'Plc::Course' do
     name "MyString"
-    id SecureRandom.random_number(100000000) + 1
+    id Plc::Course.maximum(:id).next
   end
 
   factory :level_group, class: LevelGroup do
