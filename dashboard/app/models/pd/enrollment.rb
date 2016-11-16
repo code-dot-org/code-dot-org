@@ -31,9 +31,6 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :school_info
   belongs_to :user
 
-  # Allow overriding the school and school_info requirements.
-  attr_accessor :skip_school_validation
-
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
@@ -111,8 +108,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
-    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-    self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
+    self.update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
