@@ -9,7 +9,7 @@ TIME_NOW = DateTime.now.freeze
 
 User.with_deleted.where(user_type: User::TYPE_TEACHER).
   where(studio_person: nil).
-  each do |teacher|
+  find_each do |teacher|
   # The teacher does not have an associated StudioPerson, so create one,
   # updating the User to point to the StudioPerson.
   studio_person = StudioPerson.create(
