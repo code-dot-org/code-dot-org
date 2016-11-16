@@ -205,12 +205,6 @@ function installJoinBlock(blockly) {
       }
       this.inputCount = newInputCount;
     },
-
-    onMouseOver: function () {
-    },
-
-    onMouseOut: function () {
-    },
   };
 
   blockly.JavaScript.text_join_simple = function () {
