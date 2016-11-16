@@ -127,25 +127,25 @@ exports.load = function (assetUrl, id) {
   skin.basketball = {
     background: skin.assetUrl('basketball_background.png'),
     ball: skin.assetUrl('basketball_ball.png'),
-    paddle: skin.assetUrl('hand_1.png'),
+    paddle: skin.hand_1.paddle,
   };
   skin.soccer = {
     background: skin.assetUrl('soccer_background.png'),
     ball: skin.assetUrl('soccer_ball.png'),
     drawTiles: false,
-    paddle: skin.assetUrl('soccer_paddle.png'),
+    paddle: skin.foot.paddle,
   };
   skin.hockey = {
     background: skin.assetUrl('hockey_background.png'),
     ball: skin.assetUrl('hockey_ball.png'),
     drawTiles: false,
-    paddle: skin.assetUrl('hockey_paddle.png'),
+    paddle: skin.hockey_stick.paddle,
   };
   skin.football = {
     background: skin.assetUrl('football_background.png'),
     ball: skin.assetUrl('football_ball.png'),
     drawTiles: false,
-    paddle: skin.assetUrl('soccer_paddle.png'),
+    paddle: skin.foot.paddle,
   };
 
   // Images
