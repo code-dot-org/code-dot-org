@@ -24,6 +24,11 @@
   header_menu_faq: 'FAQ'
   header_menu_how_to: 'How-To'
   header_menu_promote: 'Promote'
+  header_menu_activities: 'Activities'
+
+  not_found_title: 'Page Not Found'
+  not_found_desc: 'The requested page was not found'
+  not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
 
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
@@ -171,7 +176,7 @@
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour of Code</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
-  whats_next_try: "<a href='http://code.org/learn'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
   whats_next_try_button: 'Try tutorials'
 
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
@@ -564,7 +569,7 @@
   tutorial_tlcknight_name: "Knight's Tour Activity"
   tutorial_fufafit_name: "fuzzFamily Fitness"
   tutorial_ozodance_name: "Ozobot Dance-Off"
-  tutorial_codingrobotics_name: "Intro to Coding through Robotics"
+  tutorial_codingrobotics_name: "Intro to Coding through Robotics (ft. Wonder Workshop)"
   tutorial_box_name: "Box Island"
   tutorial_hopgame_name: "Hopscotch Game Design Workshop"
   tutorial_icontrol_name: "iControl"
@@ -589,7 +594,7 @@
   tutorial_hopquiz_name: "Quiz Creator"
   tutorial_unfortunate_name: "A Series of Unfortunate Events"
   tutorial_cha_name: "Computer History Activity"
-  tutorial_elaseq_name: "ELA Integration: Sequence"
+  tutorial_elaseq_name: "Writing and Coding: ELA Integration with Common Core Standards"
   tutorial_bbcmathi_name: "Bitsbox Coding + Math (3-5)"
   tutorial_tlcpixel_name: "Pixel Puzzles"
   tutorial_arduino_name: "Arduino Activity"
@@ -813,7 +818,7 @@
   tutorial_tlcknight_shortdescription: "Solve a puzzle where you must find a way for a knight to visit every square on a board exactly once."
   tutorial_fufafit_shortdescription: "Use functions to shorten the code that will help the fuzzFamily build their strength! "
   tutorial_ozodance_shortdescription: "Help Ozobot learn to dance! Create and program a dance routine for the Ozobot robot."
-  tutorial_codingrobotics_shortdescription: "Introduction to Coding Through Robotics: Using communication to solve problems using algorithms. "
+  tutorial_codingrobotics_shortdescription: "Students will focus on communication as it relates to programming."
   tutorial_box_shortdescription: "Take a coding trip on Box Island with the brave Hiro."
   tutorial_hopgame_shortdescription: "Lead a coding workshop, club, or a hackathon with this 6-lesson guide."
   tutorial_icontrol_shortdescription: "Programming physical systems with iPads and Sphero"
@@ -838,7 +843,7 @@
   tutorial_hopquiz_shortdescription: "Code a multiple-choice quiz to test a friend's knowledge in any subject!"
   tutorial_unfortunate_shortdescription: "Teach Dash and Dot to respond to events that happen around them!"
   tutorial_cha_shortdescription: "Learn about some key events in Computer History"
-  tutorial_elaseq_shortdescription: "Teaching Sequence through English Language Arts. "
+  tutorial_elaseq_shortdescription: "Students will learn about sequence, the most foundational programming concept, as it relates to reading and writing."
   tutorial_bbcmathi_shortdescription: "Standards-based lesson plan for levels 3-5. "
   tutorial_tlcpixel_shortdescription: "Solve simple colour-by-number and logical thinking puzzles and gain a deeper understanding of image representation and compression. "
   tutorial_arduino_shortdescription: "Learn how to make a basic circuit and make a light blink."
@@ -1062,7 +1067,7 @@
   tutorial_tlcknight_longdescription: "This activity involves trying to solve a puzzle using two different representations. To start with it is fairly hard, but when the representation of the board and moves is changed it becomes really easy. Create graphs to represent the problem. See the power of using abstraction and how the choice of representation can make a problem much easier. This activity follows from the Tour Guide activity."
   tutorial_fufafit_longdescription: "Students will learn advanced programming concepts (functions) through a lesson and kinesthetic activity. Students will apply knowledge of functions on-screen to run a program.  This lesson is for students and teachers who have some experience with sequence, conditions, loops, or other foundational programming concepts."
   tutorial_ozodance_longdescription: "This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.\n\nNo programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities."
-  tutorial_codingrobotics_longdescription: "Introduction to foundational programming concepts (sequence) through robotics. Lesson plan and graphic organizers included, option to use both Kodable and Wonder Workshop during the lesson. Targeted for K-2 but can be used with any elementary age group. "
+  tutorial_codingrobotics_longdescription: "Students will learn about foundational programming concepts and apply new knowledge to robotics. Working with both Kodable and Wonder Workshop, students will use programming knowledge to command \"Dash\" the robot in the Path app."
   tutorial_box_longdescription: "Take a trip on Box Island and help Hiro collect all the clocks scattered in the wilderness! In this tutorial you will learn the basics of algorithms, sequences, loops and conditionals!"
   tutorial_hopgame_longdescription: "Keep the fun going! Use this project-based guide to facilitate a game design workshop, hackathon, or in-class series. \n\nMake: \n1. Cross the Road\n2. Geometry Jumper\n3. Quiz Creator\n4. Falling Bird \n5. Subway Skaters\n6. Escape the Room\n\nEach includes discussion questions, differentiation, and a video tutorial. \n\nStudents can build off your instructions to customize their games. No prior experience required."
   tutorial_icontrol_longdescription: "This teacher facilitated lesson, adapted for the Hour of Code, provides pupils with an opportunity to explore physical programming through robotics - Sphero.\n\nUsing a drag-and-drop programming environment and a programmable robotic sphere, pupils will learn that physical systems can be programmed and controlled."
@@ -1087,7 +1092,7 @@
   tutorial_hopquiz_longdescription: "This lesson plan is a template that you can adapt and use in any subject—Science, Language Arts, World Languages, or History. It includes step-by-step instructions and explanations that you can use to help your students code multiple choice quizzes. During the process, they will practice and explore core coding concepts like sequence, loops, variables, and conditionals. "
   tutorial_unfortunate_longdescription: "We all react to events that happen around us, be it cheering when the school team wins, crying at a sad movie, or dancing when we hear music. In this lesson, students will learn how to teach Dash and Dot to respond to events that happen around them!"
   tutorial_cha_longdescription: "The history of computers is fascinating. This is your chance to learn more."
-  tutorial_elaseq_longdescription: "K-5 lessons that teach the computer science concept of Sequence through reading and writing activities. Aligned with grade level Common Core ELA standards."
+  tutorial_elaseq_longdescription: "Students will examine the concept of sequence in the context of reading and writing. Through grade level aligned ELA lessons, students will apply their knowledge of sequence to farther their understanding of the role sequence plays in programming."
   tutorial_bbcmathi_longdescription: "Standards-based lesson plan for grades 3-5. Take your kids to the computer lab with worksheets in hand, and build apps involving fractions, variables, and formulas."
   tutorial_tlcpixel_longdescription: "Pixel puzzles turn the ways images are represented as a series of numbers representing pixels into puzzles. They come in various forms from a simple variant of colour-by-numbers to more complex puzzles based on compression where images are represented by fewer numbers so take up less storage – but can you get them back! Each representation needs its own algorithm to follow to get the image back."
   tutorial_arduino_longdescription: "Ever wonder how toys make noises and blink lights when you push buttons? Microcontrollers and circuits are used in all sorts of everyday objects. From remote controlled cars to robots and drones. Streetlights use sensors to determine when the sun goes down, the volume knob on a car stereo adjusts resistance through a microcontroller. They are everywhere!"
@@ -1834,7 +1839,7 @@
   tutorial_hopquiz_string_platforms: "iPad and iPhone"
   tutorial_unfortunate_string_platforms: "Dash and Dot robot"
   tutorial_cha_string_platforms: "All modern browsers"
-  tutorial_elaseq_string_platforms: "Unplugged"
+  tutorial_elaseq_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
   tutorial_bbcmathi_string_platforms: "do-not-show"
   tutorial_tlcpixel_string_platforms: "Unplugged"
   tutorial_arduino_string_platforms: "Arduino Circut Boards"
@@ -2383,7 +2388,7 @@
   tutorial_baypt_string_detail_programming_languages: "Blocks"
   tutorial_code-combat_string_detail_programming_languages: "do-not-show"
   tutorial_mky_string_detail_programming_languages: "CoffeeScript"
-  tutorial_spellcraft_string_detail_programming_languages: "Blocks, Python"
+  tutorial_spellcraft_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_pirates_string_detail_programming_languages: "Blocks, Pirate code"
   tutorial_csfirst_string_detail_programming_languages: "Scratch"
   tutorial_loopedy_string_detail_programming_languages: "Blocks"
