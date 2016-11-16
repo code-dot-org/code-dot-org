@@ -170,7 +170,7 @@ function installJoinBlock(blockly) {
       this.helpUrl = '';
       this.setColour(160);
       this.setOutput(true, Blockly.BlockValueType.STRING);
-      this.setTooltip(commonMsg.JoinTextTooltip());
+      this.setTooltip(commonMsg.joinTextTooltip());
     },
 
     setInputCount: function (inputCount) {
@@ -195,7 +195,7 @@ function installJoinBlock(blockly) {
       parts[n] = Blockly.JavaScript.valueToCode(this, 'ADD' + n,
           Blockly.JavaScript.ORDER_COMMA) || '\'\'';
     }
-    var code = '[' + parts.join(',') + '].join(\'\')';
+    var code = `[${ parts.join(',') }].join('')`;
     return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 }
