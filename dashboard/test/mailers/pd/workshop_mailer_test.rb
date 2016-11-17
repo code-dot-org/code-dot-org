@@ -12,4 +12,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     assert_equal enrollment.id, notification.pd_enrollment_id
     assert_equal 'teacher_enrollment_receipt', notification.name
   end
+
+  test 'previewing mail with a transient enrollment succeeds and does not create an enrollment notification' do
+    transient_enrollment = build :pd_enrollment
+
+    assert_does_not_create Pd::EnrollmentNotification do
+      Pd::WorkshopMailer.teacher_enrollment_receipt(transient_enrollment).deliver_now
+    end
+  end
 end
