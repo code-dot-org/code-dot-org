@@ -45,60 +45,37 @@
             #suggestcourse.smalltext= link_to t('home.no_primary_course'), root_url
     - else
       #body{class: "hero_disabled"}
-        During Hour of Code, we will not be showing the personalized links to the courses you are currently working on.
-        Due to high database load, students in Computer Science Principles can reach their courses here:
+        During Hour of Code, we will not be showing the personalized links to the courses you are currently working on
+        due to high database load. Students can reach their courses here:
         %ul
-          %li
-            %a{href: script_path(Script.get_from_cache('csp1'))} Computer Science Principles Unit 1
-          %li
-            %a{href: script_path(Script.get_from_cache('csp2'))} Computer Science Principles Unit 2
-          %li
-            %a{href: script_path(Script.get_from_cache('csp3'))} Computer Science Principles Unit 3
-          %li
-            %a{href: script_path(Script.get_from_cache('csp4'))} Computer Science Principles Unit 4
-          %li
-            %a{href: script_path(Script.get_from_cache("csp5"))} Computer Science Principles Unit 5
-          %li
-            %a{href: script_path(Script.get_from_cache("csp6"))} Computer Science Principles Unit 6
+          %li Computer Science Principles
+          %ul
+            %li
+              %a{href: script_path(Script.get_from_cache('csp1'))} CSP Unit 1 - The Internet
+            %li
+              %a{href: script_path(Script.get_from_cache('csp2'))} CSP Unit 2 - Digital Information
+            %li
+              %a{href: script_path(Script.get_from_cache('csp3'))} CSP Unit 3 - Intro to Programming
+            %li
+              %a{href: script_path(Script.get_from_cache('csp4'))} CSP Unit 4 - Big Data and Privacy
+          %li Computer Science in Algebra
+          %ul
+            %li
+              %a{href: script_path(Script.get_from_cache('Algebra'))} Computer Science in Algebra
+            %li
+              %a{href: script_path(Script.get_from_cache('AlgebraA'))} Computer Science in Algebra: Course A
+            %li
+              %a{href: script_path(Script.get_from_cache('AlgebraB'))} Computer Science in Algebra: Course B
         Teachers in Professional Learning Programs can reach the online content and supports here:
         %ul
-          %li Computer Science Principles Online Professional Learning
-          %ul
-            %li
-              %a{href: script_path(Script.get_from_cache('csp1-support'))} CSP unit 1
-            %li
-              %a{href: 'http://studio.code.org/s/csp2-support'} CSP unit 2
-            %li
-              %a{href: 'http://studio.code.org/s/csp3-support'} CSP unit 3
-        %ul
-          %li Exploring Computer Science Online Professional Learning
-          %ul
-            %li
-              %a{href: script_path(Script.get_from_cache('ecs-unit1'))} Exploring Computer Science Unit 1
-            %li
-              %a{href: script_path(Script.get_from_cache('ecs-unit2'))} Exploring Computer Science Unit 2
-            %li
-              %a{href: script_path(Script.get_from_cache('ecs-unit3'))} Exploring Computer Science Unit 3
-            %li
-              %a{href: script_path(Script.get_from_cache('ecs-unit4'))} Exploring Computer Science Unit 4
-        %ul
-          %li Computer Science in Algebra Online Professional Learning
-          %ul
-            %li
-              %a{href: script_path(Script.get_from_cache('algebraPD1'))} CS in Algebra Part 1
-            %li
-              %a{href: script_path(Script.get_from_cache('algebraPD2'))} CS in Algebra Part 2
-        %ul
-          %li Computer Science in Science Online Professional Learning
-          %ul
-            %li
-              %a{href: script_path(Script.get_from_cache('sciencePD1'))} CS in Science Part 1
-            %li
-              %a{href: script_path(Script.get_from_cache('sciencePD2'))} CS in Science Part 2
-            %li
-              %a{href: script_path(Script.get_from_cache('sciencePD3'))} CS in Science Part 3
-            %li
-              %a{href: 'https://studio.code.org/s/sciencePD4'} CS in Science Part 4
-        %ul
-          %li Computer Science Fundamentals Online Professional Learning
+          %li
+            %a{href: CDO.studio_url(course_path('csp-support')) } Computer Science Principles Online Professional Learning
+          %li
+            %a{href: CDO.studio_url(course_path('ecs-support')) } Exploring Computer Science Online Professional Learning
+          %li
+            %a{href: CDO.studio_url(course_path('cs-in-algebra-support'))} Computer Science in Algebra Online Professional Learning
+          %li
+            %a{href: CDO.studio_url(course_path('cs-in-science-support'))} Computer Science in Science Online Professional Learning
+          %li
+            %a{href: script_path(Script.get_from_cache('Equity-OnlinePD'))} Creating More Equitable Computer Science Classrooms
   #clearboth{ style: 'clear:both;' }
