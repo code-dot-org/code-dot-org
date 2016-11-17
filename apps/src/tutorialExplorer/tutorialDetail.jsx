@@ -113,6 +113,15 @@ const TutorialDetail = React.createClass({
       // Reserve key 9 for the optional standards.
     ];
 
+    var imageComponent = (
+      <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
+        <img
+          src={this.props.item.image.replace(".png", ".jpg")}
+          style={{width: '100%'}}
+        />
+      </div>
+    );
+
     return (
       <div
         id="tutorialPopupFullWidth"
@@ -154,12 +163,15 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
-                  <img
-                    src={this.props.item.image.replace(".png", ".jpg")}
-                    style={{width: '100%'}}
-                  />
-                </div>
+                {!this.props.disabledTutorial && (
+                  <a href={this.props.item.launch_url} target="_blank">
+                    {imageComponent}
+                  </a>
+                )}
+                {this.props.disabledTutorial &&
+                  imageComponent
+                }
+
                 <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
