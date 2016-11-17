@@ -6,6 +6,7 @@ Background:
 Scenario: Drag a dropdown and select a different option.
   When I rotate to landscape
   And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   And I drag the play sound block to offset "200, 100"
   And I press the dropdown
   Then the dropdown is visible
