@@ -64,7 +64,10 @@ const freeResponseQuestions = [
 
 const SurveyResultsHeader = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: React.PropTypes.object.isRequired,
+    params: React.PropTypes.shape({
+      workshopId: React.PropTypes.string
+    })
   },
 
   propTypes: {
@@ -84,6 +87,8 @@ const SurveyResultsHeader = React.createClass({
 
   componentDidMount() {
     const courses = this.getCoursesForWorkshops();
+
+    console.log(this.props.params);
 
     if (courses.length > 0) {
       this.filterWorkshops(courses[0]);
