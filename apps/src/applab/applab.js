@@ -53,12 +53,18 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {
+  outputError,
+  injectErrorHandler
+} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 /**
  * Create a namespace for the application.
+ * @implements LogTarget
  */
 const Applab = {};
 export default Applab;
@@ -90,11 +96,6 @@ Applab.log = function (object) {
   }
 };
 consoleApi.setLogMethod(Applab.log);
-
-import errorHandler from '../errorHandler';
-errorHandler.setLogMethod(Applab.log);
-var outputError = errorHandler.outputError;
-var ErrorLevel = errorHandler.ErrorLevel;
 
 var level;
 var skin;
@@ -448,7 +449,7 @@ function queueOnTick() {
 }
 
 function handleExecutionError(err, lineNumber) {
-  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
   // complete puzzle, which will prevent further execution
@@ -603,6 +604,12 @@ Applab.init = function (config) {
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
+
+  // Set up an error handler for student errors and warnings.
+  injectErrorHandler(new JavaScriptModeErrorHandler(
+    () => Applab.JSInterpreter,
+    Applab
+  ));
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.failureSound, 'failure');
