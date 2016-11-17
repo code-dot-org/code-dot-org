@@ -64,6 +64,10 @@ $text-shadow-gray: #5a5a5a;
   -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }
 
+.pixelated {
+  @include pixelated()
+}
+
 @mixin mc-x-close-button() {
   $button-centering-offset: 35px;
 
