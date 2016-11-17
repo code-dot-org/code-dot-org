@@ -1,7 +1,18 @@
-var React = require('react');
-var color = require("../util/color");
+import React from 'react';
+import color from "../util/color";
 
-var Lightbulb = React.createClass({
+const styles = {
+  count: {
+    fontWeight: 'bold',
+    fontSize: '400px',
+    fill: color.white,
+    stroke: color.black,
+    strokeWidth: '30px',
+    fontFamily: 'Verdana, Geneva, sans-serif',
+  }
+};
+
+const Lightbulb = React.createClass({
 
   propTypes: {
     shouldAnimate: React.PropTypes.bool,
@@ -21,19 +32,8 @@ var Lightbulb = React.createClass({
     };
   },
 
-  getHintCountStyle: function () {
-    return {
-      fontWeight: 'bold',
-      fontSize: '400px',
-      fill: color.white,
-      stroke: color.black,
-      strokeWidth: '30px',
-      fontFamily: 'Verdana, Geneva, sans-serif',
-    };
-  },
-
   render: function () {
-    var lines = this.props.lit ? [
+    const lines = this.props.lit ? [
       <g key="line-0">
         <line fill="#EFB834" x1="473.582" y1="208.1" x2="560.578" y2="159.16"/>
         <path
@@ -138,7 +138,7 @@ var Lightbulb = React.createClass({
       </g>
     ] : [];
 
-    var bulbDisplay = (<g className={this.props.shouldAnimate ? "animate-hint" : ""}>
+    const bulbDisplay = (<g className={this.props.shouldAnimate ? "animate-hint" : ""}>
       <path
         fill={this.props.lit ? "#EFB834" : "#C9C9C9"}
         d="M453.775,353.156c0,24.012-57.189,128.942-61.414,132.265c-12.384,9.741-48.514,15.318-82.869,16.518
@@ -174,22 +174,30 @@ var Lightbulb = React.createClass({
       {lines}
     </g>);
 
-    var countDisplay;
+    let countDisplay;
     if (this.props.lit && this.props.count) {
       // If there are more than nine hints, simply display "9+"
-      var countText = (this.props.count > 9) ? "9+" : this.props.count;
+      const countText = (this.props.count > 9) ? "9+" : this.props.count;
       countDisplay = (<g>
-        <text id="hintCount" x="400" y="700" style={this.getHintCountStyle()} >{countText}</text>
+        <text id="hintCount" x="400" y="700" style={styles.count} >{countText}</text>
       </g>);
     }
 
-    return (<svg width={this.props.size} height={this.props.size} style={this.props.style} viewBox="0 0 612 792">
-      {bulbDisplay}
-      {countDisplay}
-    </svg>);
+    return (
+      <svg
+        width={this.props.size}
+        height={this.props.size}
+        style={this.props.style}
+        viewBox="0 0 612 792"
+      >
+        {bulbDisplay}
+        {countDisplay}
+      </svg>
+    );
   }
 });
-module.exports = Lightbulb;
+
+export default Lightbulb;
 
 if (BUILD_STYLEGUIDE) {
   Lightbulb.styleGuideExamples = storybook => {
