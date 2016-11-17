@@ -880,7 +880,7 @@ end
 
 When(/^I debug element "([^"]*)" text content$/) do |selector|
   text = @browser.execute_script("return $('#{selector}').text()")
-  puts "'#{text.strip}'"
+  puts "element #{selector} text content: '#{text.to_s.strip}'"
 end
 
 When(/^I debug focus$/) do
