@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# Hvordan innføre Kodetimen i hele lokalsamfunnet ditt.
 
 [col-33]
 
@@ -20,13 +20,13 @@ nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## Få hver skole til å delta, hver elev til å lære!
 
-  1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
+  1. **Les vårt info-ark**om hvorfor informatikkutdanning er viktig, og om hvordan du kan bidra ved å støtte Kodetimen. [Les info-arket her.](/files/hoc-one-pager-public-officials-2016.pdf)
 
-  2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
+  2. **Rekrutter lokale skoler og kommunen.** Bruk[denne eposten](<%= resolve_url('/promote/resources#sample-emails') %>)eller[denne reklameteksten](<%= resolve_url('/promote/stats') %>)som utgangspunkt, og ta en titt på denne [veiledningen](<%= resolve_url('/how-to') %>)for skoler og kommuner.
 
-  3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  3. **Arranger et kodetimearrangement.** Se vår [arrangementsveiledning](<%= resolve_url('/how-to/events') %>)for hvordan arrangere, hvordan skaffe mediadekning, og andre planleggingsressurser. Å være vertskap for et arrangement er en flott måte å fremme Kodetimen på, og øke deltagelsen.
 
   4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
 

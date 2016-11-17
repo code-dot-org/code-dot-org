@@ -3,7 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
-import errorHandler from '../errorHandler';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 import commonMsg from '@cdo/locale';
@@ -31,7 +30,6 @@ const WebLab = function () {
   this.studioApp_ = null;
 
   consoleApi.setLogMethod(this.log.bind(this));
-  errorHandler.setLogMethod(this.log.bind(this));
 
   // store reference to singleton
   webLab_ = this;
@@ -126,7 +124,6 @@ WebLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;

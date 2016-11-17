@@ -11,7 +11,7 @@ In 2015, the kick-off was [on Wall Street](http://business.nasdaq.com/discover/m
 
 The details are confidential, but if you want a chance to give your students a very special opportunity, [register your Hour of Code event now](https://hourofcode.com/#join)! One lucky class in Canada will be selected from the list of this year's organizers.
 
-<img src="https://s3.amazonaws.com/cdo-email-images/Centre_Block_-_Parliament_Hill.jpg" width="80%">
+<img src="https://s3.amazonaws.com/cdo-email-images/canadianlandmarks.png" width="100%">
 
 Thank you for supporting our mission and the exciting build-up to Computer Science Education Week, December 5-11!
 
@@ -23,7 +23,7 @@ Code.org
 <p>
 <hr/>
 <small>
-Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you hosted an <a href="https://hourofcode.com/">Hour of Code</a> in a previous year. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
+Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101. You’re receiving this email because you hosted an <a href="https://hourofcode.com/">Hour of Code</a> in a previous year or signed one of our petitions. <br /><strong>Don’t like these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a></strong>
 </small></p>
 
 ![](<%= tracking_pixel %>)

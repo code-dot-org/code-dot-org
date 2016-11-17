@@ -44,7 +44,6 @@ import {
   setFeedback
 } from './redux/instructions';
 import {
-  openDialog as openInstructionsDialog,
   closeDialog as closeInstructionsDialog
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
@@ -446,17 +445,7 @@ StudioApp.prototype.init = function (config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(function () {
-      if (config.showInstructionsInTopPane) {
-        return;
-      }
-      var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog({
-        autoClose: shouldAutoClose,
-        aniGifOnly: false,
-        hintsOnly: false
-      }));
-    }.bind(this));
+    config.showInstructionsWrapper(() => {});
   }
 
   // In embed mode, the display scales down when the width of the
@@ -1146,7 +1135,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
-  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1193,12 +1181,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   }
 
   var hideFn = _.bind(function () {
-    // Momentarily flash the instruction block white then back to regular.
-    if (!instructionsInTopPane) {
-      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
-        .delay(500)
-        .animate({"background-color":"rgba(0,0,0,0)"},1000);
-    }
     // Set focus to ace editor when instructions close:
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
@@ -1572,10 +1554,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  *     of this.TestResults).false
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  // If instructions in top pane are enabled and we show instructions
-  // when collapsed, we only use dialogs for success feedback.
+  // If we show instructions when collapsed, we only use dialogs for
+  // success feedback.
   const constants = this.reduxStore.getState().pageConstants;
-  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
+  if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
   return true;
@@ -2885,7 +2867,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
@@ -2893,6 +2874,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
+    failureAvatar: config.skin.failureAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
@@ -2904,4 +2886,25 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
+};
+
+StudioApp.prototype.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (this.hasSeenRateLimitAlert_) {
+    return false;
+  }
+  this.hasSeenRateLimitAlert_ = true;
+
+  var alert = <div>{msg.dataLimitAlert()}</div>;
+  if (this.share) {
+    this.displayPlayspaceAlert("error", alert);
+  } else {
+    this.displayWorkspaceAlert("error", alert);
+  }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!this.share,
+  });
 };

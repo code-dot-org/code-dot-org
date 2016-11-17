@@ -58,6 +58,7 @@
     "start_blocks": "var balloon = createSprite(200,200);\r\nballoon.setAnimation(\"balloon\");\r\n\r\nvar tack = createSprite(300, 100);\r\ntack.setAnimation(\"tack\");\r\n\r\nfunction draw() {\r\n  // check if tack is touching balloon\r\n  if (__) {\r\n    balloon.setAnimation(\"popped\");\r\n  }\r\n\r\n  // make tack move with arrow keys\r\n  if (keyDown(\"up\")) {\r\n    tack.y = tack.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    tack.y = tack.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    tack.x = tack.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    tack.x = tack.x + 1;\r\n  }\r\n  \r\n  background(\"gray\");\r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_L12_S2_C1\",\r\n  \"callout_text\": \"Add your block here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"if (false) {\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 100,\r\n     \"y\": -10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,

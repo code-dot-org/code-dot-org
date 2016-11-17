@@ -10,7 +10,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 ## Вдъхновение за учениците и доброволците -Hour of Code
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**Code.org предлага на служители от компанията възможност да [ се свържат](%= resolve_url('https://code.org/volunteer') %) с местните класни стаи и да подпомогнат Hour of Code, за да споделят техническия си опит в кариерата и да вдъхновят учениците да учат компютърни науки.**
 
   * [ Регистрирайте се](%= resolve_url('https://code.org/volunteer') %), за доброволец.
   * За повече инструкции за свързване на Вашите служители с класни стаи, използвайте нашето [ ръководство за корпоративни партньори](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
@@ -32,7 +32,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [ Изпробвайте ги!](%= resolve_url()
+Ние ще качим разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code.org/learn') %) за ученици от всички възрасти, създадени от различни партньори. [ Изпробвайте ги!](%= resolve_url()
 
 **Всички уроци на Hour of Code:**
 
@@ -43,20 +43,20 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
-Най-добрият Час на кодирането се провежда с Интернет свързани компютри. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Най-добрият Час на кодирането се провежда с Интернет свързани компютри. Вие **нямате** не се нуждаете от компютър за всеки участник и дори може да направите Hour of Code без компютри.
 
 **Предварителен план!** Направете следното, преди вашето събитие да започне:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Няма достатъчно устройства?** Използвайте [ програмиране по двойки](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Те ще се убедят, че компютърните науки се нуждаят от социално сътрудничество.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * Тестирайте уроците на компютри или устройства. Уверете се, че те работят правилно на браузъри със звук и видео.
+  * Предоставете слушалки, или помогнете на участниците да използват свои, ако сте избрали уроци със звук.
+  * **Няма достатъчно устройства?** Използвайте [ програмиране по двойки](https://www.youtube.com/watch?v=vgkahOzFH2Q). Когато участниците работят по двойки, те си помагат един на друг и разчитат по-малко на учителя. Те ще се убедят, че компютърните науки се нуждаят от социално сътрудничество.
+  * **Имате слаби машини?** Планирайте показване на видео клиповете пред целия клас, така че да няма нужда учениците да ги стартират на техните компютри. Или опитайте дейностите без компютър.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Започнете Вашия час на кода с вдъхновяващо видео
 
-Преди началото на събитието, вдъхновете децата с обсъждане как компютърните науки влияят върху всяка част от живота ни. Share more about what inspired you to pursue computer science and your role at your company.
+Преди началото на събитието, вдъхновете децата с обсъждане как компютърните науки влияят върху всяка част от живота ни. Напишете повече за това, което Ви вдъхнови да изберете компютърните науки и Вашата роля във Вашата компания.
 
 **Покажи вдъхновяващо видео:**
 
@@ -65,12 +65,12 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Намери още вдъхновяващи видео клипове [ тук](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Идеи за въвеждане към дейността часът на кода:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+  * Обяснете начина как технологията въздейства на живота ни, с примери, които ще впечатлят момчета и момичета (спасяване на живот, помощ за хората, свързване на хора и др.). 
+  * -Ако сте технологична компания, демонстрирайте забавни иновативни продукти, по които вашата компания работи.
+  * -Ако не сте технологична компания, обсъдете начини, Вашата фирма да използва технологията за решаване на проблемите и изпълнение на целите.
+  * -Поканете софтуерни инженери от вашата фирма да говорят за това, защо те са решили да учат компютърни науки и да работят по проекти.
   * Вижте съвети за въвличане на момичета в компютърните науки [тук](%= resolve_url('https://code.org/girls') %).
 
 ## 6) Кодене!
@@ -78,9 +78,9 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 **Пряко участие в дейността**
 
   * Напишете линка към урока на бялата дъска. Намерете връзката в списъка на [ и информация за избраните уроци](%= resolve_url('https://code.org/learn') %) под броя на участниците.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+  * За по-малките ученици заредете урок от страницата предварително или го запишете в избрани.
 
-**When participants come across difficulties it's okay to respond:**
+**Когато участниците имат трудности е добре да се помогне:**
 
   * "Аз не знам. Нека да разберем това заедно."
   * "Технологията не винаги работи по начина, по който ние искаме."
@@ -88,8 +88,8 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **Какво да направя ако някой завършва по-рано?**
 
-  * They can try another Hour of Code activity at code.org/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+  * Те могат да опитат друга Hour of Code дейност в code.org/learn
+  * Или ги помолете да помогнат на приятели, които имат проблеми с дейността.
 
 [col-33]
 
@@ -109,9 +109,9 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## 7) Празник
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+  * [ Отпечатайте сертификати](%= resolve_url('https://code.org/certificates') %) за Вашите ученици.
+  * [ Разпечатайте "Преминах Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) стикери.
+  * [ поръчайте тениски](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) за вашето училище.
   * Споделете снимки и видео на събитието си в социалните медии. Използвайте #HourOfCode и @codeorg,, така ще можем да научим за Вашия успех!
 
 [col-33]
@@ -138,6 +138,6 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 ## Какво идва след Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+Hour of Code е само първата стъпка в образователното пътуване за това, как технологията работи и как се създават софтуерни приложения. За да продължат това пътуване, [ насърчете децата си да учат онлайн](%= resolve_url('https://code.org/learn/beyond') %).
 
 <%= view :signup_button %>

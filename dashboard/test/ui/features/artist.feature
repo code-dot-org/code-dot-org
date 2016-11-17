@@ -3,7 +3,7 @@ Feature: Playing the Artist Game
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
