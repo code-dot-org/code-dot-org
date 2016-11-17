@@ -177,6 +177,7 @@ var TopInstructions = React.createClass({
     ttsInstructionsUrl: React.PropTypes.string,
     ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
+    hideOverlay: React.PropTypes.func.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -558,7 +559,7 @@ var TopInstructions = React.createClass({
                 />
               }
               {this.props.overlayVisible &&
-                <Button type="primary">
+                <Button type="primary" onClick={this.props.hideOverlay}>
                   {msg.dialogOK()}
                 </Button>
               }
@@ -642,6 +643,9 @@ module.exports = connect(function propsFromStore(state) {
   };
 }, function propsFromDispatch(dispatch) {
   return {
+    hideOverlay: function ()  {
+      dispatch(instructions.hideOverlay());
+    },
     toggleInstructionsCollapsed: function () {
       dispatch(instructions.toggleInstructionsCollapsed());
     },
