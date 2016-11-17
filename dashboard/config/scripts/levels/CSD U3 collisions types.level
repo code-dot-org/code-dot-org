@@ -56,6 +56,7 @@
     "start_blocks": "var basketball = createSprite(200, 0);\r\nbasketball.setAnimation(\"basketball\");\r\nbasketball.velocityY = 5;\r\n\r\nvar wood = createSprite(200, 375);\r\nwood.setAnimation(\"floor\");\r\n\r\n\r\nfunction draw() {\r\n  \r\n  background(\"skyblue\");\r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
     "callout_json": "[\r\n \r\n {\r\n  \"localization_key\": \"CSD_U3_L13_S6_C1\",\r\n  \"callout_text\": \"Add your code here.\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"code_triggered\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"function draw() {\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,

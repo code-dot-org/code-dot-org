@@ -42,6 +42,14 @@
       background-color: $light_purple;
       color: $white;
     }
+    &.hero_disabled {
+      font-size: 14px;
+      line-height: 20px;
+      background-color: $lightest_cyan;
+      a {
+        color: $cyan;
+      }
+    }
   }
   #plc_course_progress {
     background-color: $lightest_cyan;

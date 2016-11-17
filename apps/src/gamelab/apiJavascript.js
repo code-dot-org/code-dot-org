@@ -13,6 +13,16 @@ export const playSound = function (url) {
       {'url': url});
 };
 
+/**
+ * Stop playing sounds.
+ * @param {string} [url] - optional.  If omitted, stops all sounds.
+ */
+export const stopSound = function (url) {
+  return GameLab.executeCmd(null,
+      'stopSound',
+      {'url': url});
+};
+
 export const getUserId = function () {
   return GameLab.executeCmd(null, 'getUserId');
 };
