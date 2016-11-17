@@ -65,7 +65,7 @@ $text-shadow-gray: #5a5a5a;
 }
 
 .pixelated {
-  @include pixelated()
+  @include pixelated();
 }
 
 @mixin mc-x-close-button() {
