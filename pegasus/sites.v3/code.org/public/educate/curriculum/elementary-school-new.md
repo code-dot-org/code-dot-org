@@ -1,6 +1,7 @@
 ---
 title: CS Fundamentals for grades K-5
 nav: educate_nav
+video_player: true
 ---
 
 # Computer Science Fundamentals for elementary school
@@ -9,11 +10,29 @@ nav: educate_nav
 
 Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate.
 
-<iframe width="600" height="337" src="//www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
+<%=view :display_video_thumbnail, id: "compression", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
+
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
+<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>'Getting Started with Code Studio @codeorg'} %>
+<%=view :display_video_thumbnail, id: "compression", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear:both"></div>
 
 ## <a name="overview"></a>Computer Science Fundamentals: Curriculum Overview
 Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This <strong>completely free</strong> curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
 
+[Download complete curriculum for Courses 1 - 4](/curriculum/docs/k-5/complete.pdf)
 
 | Course | Ages | Description | Teacher Resources |
 | :------------------:|-----------|-----------|-----------|
@@ -59,8 +78,8 @@ All lessons align to all relevant computer science standards, as well as to the 
 
 <p style="clear:both">&nbsp;</p>
 
-### <strong>Teacher dashboard</strong>
-The Code Studio teacher dashboard makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
+### <strong>Teacher Home Page</strong>
+The Code Studio teacher home page makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
 
 [col-50]
 
@@ -76,6 +95,13 @@ The Code Studio teacher dashboard makes it easy for teachers to view lesson plan
 
 <p style="clear:both">&nbsp;</p>
 
+
+[<button>Go to the Teacher Home Page</button>](https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher`)<br />
+
+
+### <strong>Tech support & teacher forums</strong>
+Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
+
 ## <a name="teach"></a> High quality workshops for teachers, at no cost (US only)
 
 Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. 
@@ -90,9 +116,7 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 ### <strong>No workshop in your area?</strong>
 [Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
 
-### <strong>Tech support & teacher forums</strong>
-Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
-
+[<button>View the online course</button>](/educate/professional-development-online)<br />
 
 ## <a name="other"></a>Other resources
 
