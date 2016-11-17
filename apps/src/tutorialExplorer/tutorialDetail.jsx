@@ -84,8 +84,9 @@ const styles = {
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
-    item: shapes.tutorial.isRequired,
+    item: shapes.tutorial,
     closeClicked: React.PropTypes.func.isRequired,
+    changeTutorial: React.PropTypes.func.isRequired,
     localeEnglish: React.PropTypes.bool.isRequired,
     disabledTutorial: React.PropTypes.bool.isRequired
   },
@@ -101,6 +102,10 @@ const TutorialDetail = React.createClass({
   onEscape({keyCode}) {
     if (keyCode === 27) {
       this.props.closeClicked();
+    } else if (keyCode === 37) {
+      this.props.changeTutorial("previous");
+    } else if (keyCode === 39) {
+      this.props.changeTutorial("next");
     }
   },
 
