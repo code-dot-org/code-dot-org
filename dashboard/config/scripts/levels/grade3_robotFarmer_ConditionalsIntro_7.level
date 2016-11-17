@@ -27,7 +27,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/grade3_robotFarmer_ConditionalsIntro_7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to go over and down several times in a stair-step pattern.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f86c558cf9f52f9b6f0708bb2faf403/grade3_robotFarmer_ConditionalsIntro_7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure you're using the `while` loop to figure out how many times to fill each hole.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3c44e00dc533b0ae359d374e23dc345a/grade3_robotFarmer_ConditionalsIntro_7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the farmer needs to move forward and down several times in a stair-step pattern.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d6430ae7dff887a4cb06283eb1707d8/grade3_robotFarmer_ConditionalsIntro_7.mp3\"}]",
     "instructions_important": "false",
     "ideal": "10",
     "contained_level_names": null

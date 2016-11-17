@@ -51,7 +51,7 @@
     "instructions": "Do This",
     "start_blocks": "rect(0,0,30,50);",
     "show_d_pad": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
