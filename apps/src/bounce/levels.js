@@ -269,6 +269,7 @@ levels['7_basketball'] = extend(levels['7'], {
         <block type="bounce_bounceBall"></block>')
 });
 levels['7_sports'] = extend(levels['7_basketball'], {
+  theme: 'football',
 });
 /*
   '8': {
@@ -401,6 +402,7 @@ levels['10_basketball'] = extend(levels['10'], {
         <block type="bounce_incrementOpponentScore"></block>')
 });
 levels['10_sports'] = extend(levels['10_basketball'], {
+  theme: 'football',
 });
 levels['11'] = {
   'requiredBlocks': [
