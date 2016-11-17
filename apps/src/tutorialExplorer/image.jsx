@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom';
 
 const Image = React.createClass({
   propTypes: {
-    src: React.PropTypes.string.isRequired,
     style: React.PropTypes.object.isRequired
   },
 
@@ -42,13 +41,11 @@ const Image = React.createClass({
       };
     }
 
-    const styleProps = Object.assign({}, this.props.style, style);
-
     return (
       <img
         ref="img"
-        src={this.props.src}
-        style={styleProps}
+        {...this.props}
+        style={{...this.props.style, ...style}}
         onLoad={this.onImageLoad}
       />
     );
