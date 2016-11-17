@@ -4,6 +4,16 @@
 import React from 'react';
 import Tutorial from './tutorial';
 import shapes from './shapes';
+import i18n from './locale';
+
+const styles = {
+  tutorialSetNoTutorials: {
+    backgroundColor: "#d6d6d6",
+    padding: 20,
+    margin: 60,
+    whiteSpace: "pre-wrap"
+  }
+};
 
 const TutorialSet = React.createClass({
   propTypes: {
@@ -15,8 +25,8 @@ const TutorialSet = React.createClass({
 
   render() {
     return (
-      <div style={{overflow: "hidden"}}>
-        {this.props.tutorials.map(item => (
+      <div>
+        {this.props.tutorials.length > 0 && this.props.tutorials.map(item => (
           <Tutorial
             item={item}
             filters={this.props.filters}
@@ -25,6 +35,11 @@ const TutorialSet = React.createClass({
             disabledTutorial={this.props.disabledTutorials.indexOf(item.short_code) !== -1}
           />
         ))}
+        {this.props.tutorials.length === 0 && (
+          <div style={styles.tutorialSetNoTutorials}>
+            {i18n.tutorialSetNoTutorials()}
+          </div>
+        )}
       </div>
     );
   }
