@@ -77,11 +77,11 @@ module.exports = function (app) {
   } else if (app === 'craft') {
     appCache[app] = function () {
       return {
-        skins: require('@cdo/apps/craft/skins'),
+        skins: require('@cdo/apps/craft/simple/skins'),
         levels: {
-          levels: require('@cdo/apps/craft/levels')
+          levels: require('@cdo/apps/craft/simple/levels')
         },
-        blocks: require('@cdo/apps/craft/blocks')
+        blocks: require('@cdo/apps/craft/simple/blocks')
       };
     };
   } else if (app === 'applab') {

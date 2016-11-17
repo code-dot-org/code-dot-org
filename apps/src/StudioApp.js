@@ -34,6 +34,7 @@ var annotationList = require('./acemode/annotationList');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 var redux = require('./redux');
 import { Provider } from 'react-redux';
@@ -344,8 +345,8 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose, showHints) => {
-            this.showInstructionsDialog_(config.level, autoClose, showHints);
+        showInstructionsDialog={(autoClose) => {
+            this.showInstructionsDialog_(config.level, autoClose);
           }}
       />
     </Provider>,
@@ -452,7 +453,6 @@ StudioApp.prototype.init = function (config) {
       var shouldAutoClose = !!config.level.aniGifURL;
       this.reduxStore.dispatch(openInstructionsDialog({
         autoClose: shouldAutoClose,
-        showHints: false,
         aniGifOnly: false,
         hintsOnly: false
       }));
@@ -826,6 +826,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
 
   var reactProps = {
     i18nDropdown: '',
+    privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
@@ -869,8 +870,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     phoneFooter: true
   };
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
-    footerDiv);
+  ReactDOM.render(<SmallFooter {...reactProps}/>, footerDiv);
 };
 
 /**
@@ -1142,9 +1142,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
- * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
   const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
@@ -1226,15 +1225,12 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
-  const authoredHints = showHints ?
-    this.authoredHintsController_.getHintsDisplay() : undefined;
-
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
       <Provider store={this.reduxStore}>
-        <DialogInstructions authoredHints={authoredHints}/>
+        <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
   });
@@ -2908,4 +2904,25 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
+};
+
+StudioApp.prototype.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (this.hasSeenRateLimitAlert_) {
+    return false;
+  }
+  this.hasSeenRateLimitAlert_ = true;
+
+  var alert = <div>{msg.dataLimitAlert()}</div>;
+  if (this.share) {
+    this.displayPlayspaceAlert("error", alert);
+  } else {
+    this.displayWorkspaceAlert("error", alert);
+  }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!this.share,
+  });
 };

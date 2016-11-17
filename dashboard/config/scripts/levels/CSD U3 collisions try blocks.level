@@ -12,6 +12,7 @@
       "comment_GameLab": null,
       "var sprite = createSprite": null,
       "bounce": null,
+      "bounceOff": null,
       "collide": null,
       "displace": null,
       "setAnimation": null,
@@ -68,7 +69,8 @@
     "contained_level_names": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

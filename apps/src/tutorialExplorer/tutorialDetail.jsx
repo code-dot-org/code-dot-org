@@ -52,6 +52,14 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 14
   },
+  tutorialDetailDisabled: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
+    paddingTop: 40
+  },
+  tutorialDetailDisabledIcon: {
+    color: "#d9534f"
+  },
   tutorialDetailsTable: {
     marginTop: 20,
     width: '100%'
@@ -66,13 +74,20 @@ const styles = {
     padding: 5,
     border: '1px solid lightgrey'
   },
+  tutorialDetailsTableBodyNoWrap: {
+    padding: 5,
+    border: '1px solid lightgrey',
+    whiteSpace: "pre-wrap"
+  }
 };
 
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
     item: shapes.tutorial.isRequired,
-    closeClicked: React.PropTypes.func.isRequired
+    closeClicked: React.PropTypes.func.isRequired,
+    localeEnglish: React.PropTypes.bool.isRequired,
+    disabledTutorial: React.PropTypes.bool.isRequired
   },
 
   render() {
@@ -88,12 +103,14 @@ const TutorialDetail = React.createClass({
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
-      {key: 2, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
-      {key: 3, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
-      {key: 4, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
-      {key: 5, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 2, title: i18n.filterTeacherExperience(), body: getTagString("teacher_experience", this.props.item.tags_teacher_experience)},
+      {key: 3, title: i18n.filterStudentExperience(), body: getTagString("student_experience", this.props.item.tags_student_experience)},
+      {key: 4, title: i18n.filterPlatform(),          body: this.props.item.string_platforms},
+      {key: 5, title: i18n.filterTopics(),            body: getTagString("subject", this.props.item.tags_subject)},
       {key: 6, title: i18n.filterActivityType(),      body: getTagString("activity_type", this.props.item.tags_activity_type)},
-      // Reserve key 6 for international languages.
+      {key: 7, title: i18n.filterLength(),            body: getTagString("length", this.props.item.tags_length)},
+      {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
+      // Reserve key 9 for the optional standards.
     ];
 
     return (
@@ -157,14 +174,23 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
-                  <a href={this.props.item.launch_url} target="_blank">
-                    <button style={{marginTop: 20}}>Start</button>
-                  </a>
+                  {this.props.disabledTutorial && (
+                    <div style={styles.tutorialDetailDisabled}>
+                      <i className="fa fa-warning warning-sign" style={styles.tutorialDetailDisabledIcon}/>
+                      &nbsp;
+                      {i18n.tutorialDetailDisabled()}
+                    </div>
+                  )}
+                  {!this.props.disabledTutorial && (
+                    <a href={this.props.item.launch_url} target="_blank">
+                      <button style={{marginTop: 20}}>Start</button>
+                    </a>
+                  )}
                 </div>
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                    {this.props.item.teachers_notes &&
+                    {this.props.item.teachers_notes && (
                       <tr key={0}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           More resources
@@ -176,8 +202,10 @@ const TutorialDetail = React.createClass({
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
                         </td>
-                      </tr>}
-                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
+                      </tr>
+                    )}
+                    {!this.props.disabledTutorial &&
+                     this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 && (
                       <tr key={1}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailsShortLink()}
@@ -187,7 +215,8 @@ const TutorialDetail = React.createClass({
                             {`https://hourofcode.com/${this.props.item.short_code}`}
                           </a>
                         </td>
-                      </tr>}
+                      </tr>
+                    )}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>
@@ -198,14 +227,16 @@ const TutorialDetail = React.createClass({
                         </td>
                       </tr>
                     )}
-                    <tr key={6}>
-                      <td style={styles.tutorialDetailsTableTitle}>
-                        {i18n.tutorialDetailInternationalLanguages()}
-                      </td>
-                      <td style={styles.tutorialDetailsTableBody}>
-                        {this.props.item.language}
-                      </td>
-                    </tr>
+                    {this.props.localeEnglish && this.props.item.string_standards && (
+                      <tr key={9}>
+                        <td style={styles.tutorialDetailsTableTitle}>
+                          {i18n.tutorialDetailStandards()}
+                        </td>
+                        <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                          {this.props.item.string_standards}
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>

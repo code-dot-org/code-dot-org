@@ -33,7 +33,9 @@ exports.injectGameLab = function (gamelab) {
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter);
+  dashboard.assets.showAssetManager(callback, typeFilter, null, {
+    showUnderageWarning: !gameLab.studioApp_.reduxStore.getState().pageConstants.is13Plus
+  });
 }
 
 module.exports.blocks = [
