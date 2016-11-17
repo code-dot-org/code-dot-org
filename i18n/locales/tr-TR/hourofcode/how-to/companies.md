@@ -6,28 +6,28 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Kodlama saatini şirketinize getirmek için
 
-## Inspire students and volunteer for the Hour of Code
+## Gönüllü ve öğrencilere kodlama saati için ilham verir
 
 **Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
-  * [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
+  * Gönüllü olarak [kayıt olun](%= resolve_url('https://code.org/volunteer') %).
+  * Daha fazla önerge için çalışanlarla sınıflara bağlanın [şirket ortakları rehberine](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %) danışın.
 
-## Additional ways companies can support the Hour of Code:
+## Şirketinizin kodlama saatini desteklemesi için ek yollar:
 
-  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Bir iletişim zaman tüneli oluşturmak için bizim [pazarlama araçlarımız](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %)ı kullanın veya promosyon içerik paylaşmak için kullanın.
+  * Sirketinin CEOsundan bilgisayar bilimi önemini vurgulayan ve çalışanlarına bu epostaya yaymayi teşvik eden şirket çapında bir e-posta göndermesini rica et. [Bu e-postaya bakınız.](%= resolve_url('/promote/resources#sample-emails') %).
+  * Arkadaşlarınızla eğlenceli [eğitimler](%= resolve_url('https://code.org/learn') %) ile kodlama saati yapmak için ev sahipliği yapın.
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
-## How to host an Hour of Code event
+## Kodlama saati etkinliğine nasıl ev sahipliği yapılır
 
 ## 1) Kendi Kodlama Saati'nizi destekleyin
 
-  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * Kendi [Kodlama saati](%= resolve_url('/promote') %) etkinliğinizi destekleyin ve diğer insanlara ev sahipliği yapmaları için cesaretlendirin.
+  * Şirketinizdeki **yazılım mühendislerini** yerel sınıflardaki öğrencilere Kod Saatinde liderlik etmeleri için cesaretlendirin ve bilgisayar bilimi öğrencilerine ilham vermelerini sağlayın. Yazılım mühendisleri buradan [kayıt](%= resolve_url('https://code.org/volunteer/engineer') %) olarak sınıflara bağlanabilir.
 
 ## 2) Nasıl Yapılır videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Bir öğretici seçin:
@@ -36,41 +36,41 @@ We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://cod
 
 **Tüm Kodlama Zamanı öğreticileri:**
 
-  * Require minimal prep-time
+  * Hazırlık biraz zaman gerektirir
   * Are self-guided - allowing participants to work at their own pace and skill-level
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
 ## 4) Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanımı isteğe bağlı
 
-En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+En iyi Kodlama Saati deneyimi internete bağlı olan bilgisayarları içerir. Hiçbir katılımcı için bir bilgisayara **ihtiyaç duymazsınız** ve hiç bilgisayar olmadan bile Kodlama Saati yapabilirsin.
 
 **Önceden planla!** Etkinlik başlamadan önce aşağıdakileri yapın:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * Öğreticileri bilgisayar veya cihazlarda deneyin. Tabi ki ses ve videoların tarayıcılar için düzgün bir şekilde çalıştıklarından emin olun.
+  * Etkinlik için kulaklıklar temin edin veya katılımcılardan kendi kulaklıklarını getirmelerini isteyin eğer seçtiğiniz öğretici sesli bir öğretici ise bu en iyisi olacaktır.
+  * **Yeterli ekipman yok mu?** o halde [ çift programlayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. Çocuklar takım halinde çalıştıklarında birbirlerine yardımcı olacak ve organizatöre daha az ihtiyaç duyacaklar. Ayrıca bu yöntemle öğrenciler bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklar.
+  * **Bant genişliğiniz düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin videoyu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen öğreticileri deneyin.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Kodlama Saati etkinliğinizi ilham verici bir video ile başlatın
 
-Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Share more about what inspired you to pursue computer science and your role at your company.
+Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar biliminin hayatımızın her parçasını nasıl etkilediğini anlatarak başlayın. Bilgisayar bilimi ve şirketteki rolünüz hakkında ilham kaynağı olabilecek daha fazla bilgi paylaşın.
 
 **İlham verici bir video gösterin:**
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [2013 Kodlama Saati başlangıç videosu](https://www.youtube.com/watch?v=FC5FbmsH4fw), ya da <% if @country == 'uk' %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Kodlama Saati videosu](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Kod saati etkinliğini tanıtmak için fikirler:**
 
   * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+  * Eğer bir teknoloji şirketi iseniz, şirket eğlenceli demolar, yenilikçi ürünler üzerinde çalışıyordur.
+  * Eğer bir teknoloji şirketi değilseniz, şirket sorunları çözmek ve hedeflerine ulaşmak için teknolojiyi kullanır.
+  * Şirketinizdeki yazılım mühendislerini neden bilgisayar bilimini seçtiler ve projeler üzerinde çalışmaya karar verdiler bunun hakkında konuşması için davet ediyoruz.
   * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 ## 6) Code!
@@ -78,7 +78,7 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 **Direct participants to the activity**
 
   * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+  * Genç öğrenciler, eğitim sayfasını daha önceden yükleyin veya yer imi olarak kayıt edin.
 
 **When participants come across difficulties it's okay to respond:**
 
@@ -88,8 +88,8 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 **What to do if someone finishes early?**
 
-  * They can try another Hour of Code activity at code.org/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+  * Onlar başka bir Kodlama Saati etkinliğini code.org/learn 'dan deneyebilir
+  * Veya, problemi olan arkadaşlarına yardımcı olabilir.
 
 [col-33]
 
@@ -109,9 +109,9 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 ## 7) Celebrate
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+  * Katılımcılar için [Sertifika basılır](%= resolve_url('https://code.org/certificates') %).
+  * ["Bir Kodlama Saati yaptım!"](%= resolve_url('/promote/resources#stickers') %) yapıştırmaları basılır.
+  * Çalışanlarınız için [özel sipariş t-shirtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
   * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [col-33]
@@ -138,6 +138,6 @@ Kodlama Saati etkinliğinize katılımcılara ilham vererek ve bilgisayar bilimi
 
 ## Kodlama Zamanından sonra ne olacak?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+Kodlama Zamanı, teknolojinin nasıl çalıştığı hakkında daha fazla bilgi edinme ve uygulama yazılımı oluşturmayı öğrenme yolculuğunda sadece ilk basamaktır. Bu yolculuğa devam etmek için, [çocuklarınızı çevrimiçi öğrenmeye teşvik edin](http://uk. code. org/learn/beyond).
 
 <%= view :signup_button %>

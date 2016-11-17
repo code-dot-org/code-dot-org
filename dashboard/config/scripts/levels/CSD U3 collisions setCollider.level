@@ -64,12 +64,9 @@
     "start_blocks": "var goldCoin = createSprite(49,50);\r\ngoldCoin.setAnimation(\"gold_coin\");\r\ngoldCoin.velocityX = 2;\r\ngoldCoin.velocityY = 2;\r\ngoldCoin.debug = true;\r\ngoldCoin.setCollider(\"rectangle\");\r\n\r\nvar silverCoin = createSprite(350,350);\r\nsilverCoin.setAnimation(\"silver_coin\");\r\nsilverCoin.velocityX = -2;\r\nsilverCoin.velocityY = -2;\r\nsilverCoin.debug = true;\r\n\r\nfunction draw() {\r\n  goldCoin.bounce(silverCoin);\r\n  \r\n  background(\"darkgreen\");\r\n  drawSprites();\r\n}",
     "palette_category_at_start": "sprites",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

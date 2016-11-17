@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 14-16'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 14-16
+# Unit 5 Lessons > Days 14 - 16
 
 ## Concepts Covered
 
@@ -38,8 +38,5 @@ As in previous activities, there is not a specific tool that is suggested to use
 	- **Good for:** quickly seeing the relationship between two or more variables. NOTE: not native to excel OR google sheets, but there is a plugin and a template below that enable use. 
 	- <a href="http://www.clearlyandsimply.com/clearly_and_simply/2014/05/marimekko-charts-in-microsoft-excel.html " target=_blank>in Excel</a>  
 	-  <a href="https://code.google.com/p/mosaic-plot-gadget/ " target=_blank>in Google Sheets</a>  
-	
-Click “Continue” below to learn about the next lesson. 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

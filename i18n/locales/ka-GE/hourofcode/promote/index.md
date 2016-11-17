@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის ერთი საათის ჩატარება
 
-[გაუგზავნეთ ეს წერილი](%= resolve_url('/promote/resources#sample-emails') %) თქვენს დირექტორს და შესთავაზეთ რეგისტრაციის გავლა სკოლის ყოველ კლასს. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[გაუგზავნეთ ეს წერილი](%= resolve_url('/promote/resources#sample-emails') %) თქვენს დირექტორს და შესთავაზეთ რეგისტრაციის გავლა სკოლის ყოველ კლასს.
 
 ## 3. მოუხმეთ თქვენს დამსაქმებელს, მიიღოს მონაწილეობა
 

@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2016-06-07T14:57:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -56,7 +52,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Change the value assigned to size and rerun the program\",\r\n  \"element_id\": \".droplet-gutter-line:nth-of-type(2)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": null,\r\n    \"adjust\": {\r\n     \"x\": 130,\r\n     \"y\": 20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
@@ -65,6 +61,10 @@
     "show_debug_watch": "false",
     "contained_level_names": null
   },
+  "game_id": 50,
+  "created_at": "2016-06-07T14:57:15.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

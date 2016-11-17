@@ -81,6 +81,7 @@ untranslated_apps = %w(
   calc
   eval
   netsim
+  tutorialExplorer
 )
 
 locales.each_value do |locale|

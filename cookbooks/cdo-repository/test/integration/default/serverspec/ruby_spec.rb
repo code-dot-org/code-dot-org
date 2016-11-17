@@ -7,5 +7,5 @@ def cmd(exec, match)
   end
 end
 
-cmd 'git --version', '1.9.1'
+cmd 'git --version', '2.10.2'
 cmd 'cd ${HOME}/adhoc; git status', 'On branch staging'

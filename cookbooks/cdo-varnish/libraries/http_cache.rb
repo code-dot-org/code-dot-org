@@ -97,7 +97,7 @@ class HttpCache
               /
               /learn*
               /congrats
-              /mc
+              /minecraft
               /starwars
               /playlab
             ),

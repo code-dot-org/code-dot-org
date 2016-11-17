@@ -11,7 +11,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Попробуйте!](%= resolve_url("https://code.org/learn") %)
+Мы предоставляем различные[классные часы](%= resolve_url('https://code.org/learn') %)для участников всех возрастов, созданные различными партнерами. [Попробуйте!](%= resolve_url("https://code.org/learn") %)
 
 **Все уроки Часа Кода:**
 
@@ -19,6 +19,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
   * Независимы друг от друга, то есть с ними можно работать в любом темпе и при любом уровне подготовки учеников
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) продвигайте свой час кода
 
@@ -44,7 +46,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 **Покажите им вдохновляющее видео:**
 
   * Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * В[запуске видео Час кода 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) или <% if @country == 'uk' %>[Час кода 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc)<% еще %>[Час кода 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * В[запуске видео Час кода 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) или <% if @country == 'uk' %>[Час кода 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Час кода 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Найти более вдохновляющее видео[здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -116,11 +118,10 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 ## Другие ресурсы для учителей Часа Кода:
 
-  * Воспользуйтесь этим [примером плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx) для организации Часа Кода.
-  * Просмотрите [лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от прошлых организаторов Часа Кода. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Посмотрите запись[вебинара о том, как провести Час Кода](https://youtu.be/EJeMeSW2-Mw).
   * [Задавайте вопросы в режиме онлайн &](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) основателю проекта Хади Партови касаемо того, как подготовиться к проведению Часа Кода.
-  * Посетите [Форум Часа Кода](http://forum.code.org/c/plc/hour-of-code) на котором Вы получите советы и поддержку от других организаторов. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Просмотрите [Часто задаваемые вопросы по Часу Кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Час Кода: а что дальше?
