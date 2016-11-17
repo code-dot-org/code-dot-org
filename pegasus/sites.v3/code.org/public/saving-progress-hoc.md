@@ -2,7 +2,7 @@
 title: Saving progress in HOC tutorials
 ---
 
-# Saving Progress in Hour of Code tutorials(December 3 - 11)
+# Saving Progress in Hour of Code tutorials (December 3 - 11)
 
 ### For students
 We’re so excited that you’re trying out an Hour of Code!  You might be wondering why your bubbles are gray and aren’t turning green like you may be used to.  
@@ -14,7 +14,7 @@ This week, millions of students are trying computer science for the Hour of Code
 But, keep going! You can still do the full Hour of Code tutorial and get your certificate of completion at the end.
 
 ### For teachers
-Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week (December 5-11) this year, our servers will be overloaded again as organizers across the globe lead their classrooms through activities.
+Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week this year, our servers will be overloaded again as organizers across the globe lead their classrooms through activities.
 
 
 It’s an exciting time of year, but our servers can’t handle it! We can’t store progress for this many students simultaneously.
