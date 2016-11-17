@@ -355,8 +355,6 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = true;
-
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.subtype = new Bee(Maze, studioApp, config);
   } else if (mazeUtils.isCollectorSkin(config.skinId)) {
@@ -456,12 +454,6 @@ Maze.init = function (config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
-
-    const instructionsInTopPane = studioApp.reduxStore.getState()
-      .pageConstants.instructionsInTopPane;
-    if (skin.hideInstructions && !instructionsInTopPane) {
-      document.getElementById("bubble").style.display = "none";
-    }
   };
 
   // Push initial level properties into the Redux store
