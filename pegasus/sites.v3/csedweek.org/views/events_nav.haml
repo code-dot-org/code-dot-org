@@ -1,9 +1,0 @@
-#about_nav
-  %span.about_list
-    -current_url = request.path_info
-    -{ 'Map' => '/2013/events', 'All Events'=>'/2013/events/events', 'Classrooms'=>'/2013/events/classrooms', 'Whole Schools'=>'/2013/events/schools', 'Special Events'=>'/2013/events/special', }.each_pair do |label,url|
-      - if current_url == url
-        %span.about_list_item_selected= label
-      -else
-        %a.about_list_item{:href=>url}= label
-      %hr.narrow_hr

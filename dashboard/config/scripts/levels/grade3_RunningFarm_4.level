@@ -31,8 +31,7 @@
     "ideal": "6",
     "markdown_instructions": "*\"Gosh! Now the crops are growing in clusters!\"*  \r\n\r\nHelp the farmer pick all of the lettuce in each cluster before moving on to the next bunch.",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
@@ -40,6 +39,27 @@
   }
 }]]></config>
   <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="harvester_ifAtCropElse">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_ifAtCrop">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_lettuce"/>
+        <block type="harvester_whileHasLettuce"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

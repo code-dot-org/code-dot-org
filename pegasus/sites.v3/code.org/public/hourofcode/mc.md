@@ -6,15 +6,9 @@ video_player: true
 
 # MINECRAFT Hour of Code
 
-<% page_mode = PageMode.get(request) %>
-<% if page_mode == 'feature-minecraft2016' %>
 <div style="width: 600px;">
 <%= view :display_video_thumbnail, id: "mc_video", video_code: "dfPF33rG9ms", play_button: 'center' %>
 </div>
-<% else %>
-<center><iframe width="830" height="429" src="https://www.youtube.com/embed/55jADN4Y7Pg" frameborder="0" allowfullscreen></iframe></center>
-<% end %>
-
 
 [col-50]
 
