@@ -272,11 +272,20 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
+    errors = []
     start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+        begin
+          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
+          email.deliver_now
+        rescue => e
+          # Collect errors, but do not stop batch. Rethrow all errors below.
+          errors << "#{enrollment.id} - #{e.message}"
+        end
       end
     end
+
+    raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_automated_emails
@@ -296,8 +305,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Updates enrollments with resolved users.
   def resolve_enrolled_users
     self.enrollments.each do |enrollment|
-      # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-      enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
+      enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
   end
 

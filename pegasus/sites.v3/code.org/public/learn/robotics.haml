@@ -83,7 +83,8 @@ social:
       locale: "#{request.locale}",
       robotics: true,
       backButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

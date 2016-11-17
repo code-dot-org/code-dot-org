@@ -59,6 +59,22 @@ describe("TutorialExplorer filterTutorials tests", function () {
     assert.equal(filtered[0].name, "tut5");
   });
 
+  it("filter on platform, no locale provided", function () {
+    const props = {
+      filters: {
+        platform: ["iphone"]
+      },
+      locale: null,
+      sortBy: "displayweight"
+    };
+
+    const filtered = TutorialExplorer.filterTutorials(tutorials, props);
+
+    assert.equal(filtered.length, 2);
+    assert.equal(filtered[0].name, "tut5");
+    assert.equal(filtered[1].name, "tut6");
+  });
+
   it("filter on subject and language, use hideFilters", function () {
     const props = {
       filters: {
