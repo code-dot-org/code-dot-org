@@ -168,9 +168,14 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
     this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
   }
 
+  const isMinecraft = this.studioApp_.reduxStore.getState().pageConstants.isMinecraft;
+
+  // TODO update this component to be rendered directly by react instead
+  // of by this helper
   ReactDOM.render(
     <Lightbulb
       count={hintCount}
+      isMinecraft={isMinecraft}
       lit={hintCount > 0}
       shouldAnimate={shouldAnimate}
     />,
