@@ -42,7 +42,7 @@ def hoc_s(id)
   HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
-def hoc_canonicalized_i18n_path(uri)
+def hoc_canonicalized_i18n_path(uri, query_string)
   _, possible_country_or_company, possible_language, path = uri.split('/', 4)
 
   if HOC_COUNTRIES[possible_country_or_company]
@@ -70,7 +70,7 @@ def hoc_canonicalized_i18n_path(uri)
   canonical_urls << File.join(["/#{(@company || @country)}", path].select{|i| !i.nil_or_empty?}) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
-    redirect canonical_urls.last
+    redirect canonical_urls.last + (!query_string.empty? ? "?#{query_string}" : "")
   end
 
   # We no longer want the country to be part of the path we use to search:

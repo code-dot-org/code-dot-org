@@ -15,6 +15,7 @@ import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
+import queryString from 'query-string';
 
 const styles = {
   bottomLinks: {
@@ -508,9 +509,68 @@ function getFilters({robotics, mobile}) {
   return {filters, initialFilters, hideFilters};
 }
 
+/*
+ * Parse URL parameters to retrieve an override of initialFilters.
+ *
+ * @param {Array} filters - Array of filterGroup objects.
+ * @param {bool} robotics - whether on the robotics page.
+ *
+ * @return {object} - Returns an object containing arrays of strings.  Each
+ *   array is named for a filterGroup name, and each string inside is named
+ *   for a filter entry.  Note that this is not currently white-listed against
+ *   our known name of filterGroups/entries, but invalid entries should be
+ *   ignored in the filtering user experience.
+ */
+function getUrlParameters(filters, robotics) {
+  // Create a result object that has a __proto__ so that React validation will work
+  // properly.
+  let parametersObject = {};
+
+  let parameters = queryString.parse(location.search);
+  for (const name in parameters) {
+    const filterGroup = filters.find(item => item.name === name);
+
+    // Validate filterGroup name.
+    if (filterGroup) {
+      let entryNames = [];
+      if (typeof parameters[name] === "string") {
+        // Convert item with single filter entry into array containing the string.
+        entryNames = [parameters[name]];
+      } else {
+        entryNames = parameters[name];
+      }
+
+      for (const entry in entryNames) {
+        const entryName = entryNames[entry];
+
+        // Validate entry name.
+        if (filterGroup.entries.find(item => item.name === entryName)) {
+          if (!parametersObject[name]) {
+            parametersObject[name] = [];
+          }
+          parametersObject[name].push(entryName);
+        }
+      }
+    }
+  }
+
+  if (robotics) {
+    // The robotics page remains dedicated to robotics activities.
+    parametersObject.activity_type = ["robotics"];
+  }
+
+  return parametersObject;
+}
+
 window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
-  const {filters, initialFilters, hideFilters} = getFilters(options);
+  let {filters, initialFilters, hideFilters} = getFilters(options);
+
+  // Check for URL-based override of initialFilters.
+  const providedParameters = getUrlParameters(filters, !options.roboticsButtonUrl);
+  if (!_.isEmpty(providedParameters)) {
+    initialFilters = providedParameters;
+  }
 
   this.renderToElement = function (element) {
     ReactDOM.render(
