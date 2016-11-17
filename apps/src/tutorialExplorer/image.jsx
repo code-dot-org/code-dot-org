@@ -7,6 +7,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const Image = React.createClass({
+  propTypes: {
+    src: React.PropTypes.string.isRequired,
+    style: React.PropTypes.object.isRequired
+  },
+
   getInitialState() {
     return {
       loaded: false
@@ -25,12 +30,25 @@ const Image = React.createClass({
   },
 
   render() {
-    const rootClassName = 'image ' + (this.state.loaded ? 'image-loaded' : '');
+    let style;
+    if (this.state.loaded) {
+      style = {
+        opacity: 1,
+        transition: "opacity 200ms ease-in"
+      };
+    } else {
+      style = {
+        opacity: 0.1
+      };
+    }
+
+    const styleProps = Object.assign({}, this.props.style, style);
+
     return (
       <img
         ref="img"
-        {...this.props}
-        className={rootClassName}
+        src={this.props.src}
+        style={styleProps}
         onLoad={this.onImageLoad}
       />
     );
