@@ -5,17 +5,19 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Word Soup: Conditionals, Booleans, expressions, statements
-
+<div style="width: 33%; float: right; border: solid 1px #00adbc; padding: 10px; margin: 10px;">
+<Strong>Historical Notes on Booleans</Strong><br>
+<li> Named after mathematician George Boole 
+<li> He invented a corner of mathematics that is now named after him called "Boolean Algebra" 
+<li> Boolean Algebra is math that operates using only true/false values. 
+<li> This is important work for computer science because true/false maps very easily to binary.
+</div>
 As you saw in the video there a bunch of terms that generally are all talking about the same thing.
 
 **Boolean, Boolean values, Boolean expressions:**
 
-* Named after mathematician George Boole 
-* He invented a corner of mathematics that is now called "Boolean Algebra" that operates using only true/false values. 
-* This is a very important corner of mathematics for computer science because it maps very easily to binary.
-
-Thus, a **Boolean value** simply a computer science-y term that means **a true/false value**.
-A **Boolean expression** is a statement that *evaluates* to a Boolean value (a single true/false).
+* a **Boolean value** simply a computer science-y term that means **a true/false value**.
+* A **Boolean expression** is a statement that *evaluates* to a Boolean value (a single true/false).
 
 **Condition, Conditionals, Conditional Statements**:
 

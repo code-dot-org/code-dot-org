@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 intro to u5'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Overview > What's Covered?
+# Unit 5 Overview
 
 ## Concepts
 
@@ -34,5 +34,5 @@ We will also want to check data against other sources to verify truths, draw con
   - Day 28 - 29: Build project presentations 		
   - Day 30: Present final project
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
