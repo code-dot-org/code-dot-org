@@ -663,7 +663,7 @@ Then(/^I reload the page$/) do
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return !!$;") }
+  wait_with_timeout.until { @browser.execute_script("return (typeof $ !== 'undefined');") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
