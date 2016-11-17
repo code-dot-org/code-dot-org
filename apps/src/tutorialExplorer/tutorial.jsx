@@ -24,6 +24,15 @@ const styles = {
     height: 0,
     paddingTop: "75%"
   },
+  tutorialImageBackground: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: "#f1f1f1",
+    border: "solid 1px #cecece"
+  },
   tutorialImage: {
     position: "absolute",
     top: 0,
@@ -88,6 +97,7 @@ const Tutorial = React.createClass({
           onClick={this.tutorialClicked}
         >
           <div style={styles.tutorialImageContainer}>
+            <div style={styles.tutorialImageBackground}/>
             <LazyLoad offset={1000}>
               <Image
                 src={imageSrc}
