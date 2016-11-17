@@ -5,24 +5,6 @@
   	margin-bottom: 30px;
   	height: 244px;
   }
-  .half-resource-block {
-  	width: 472px;
-  	float: left;
-  	margin-bottom: 30px;
-  }
-  .description-area {
-  	padding: 20px 30px;
-  	background-color: #00adbc;
-  	color: #fff;
-  	height: 165px;
-  	border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .top-image {
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
   .description {
   	padding-bottom: 10px;
   	color: #fff;
@@ -35,66 +17,58 @@
     padding-bottom: 10px;
   }
   .side-image {
-    width: 320px;
+    width: 485px;
+    height: 244px;
     float: left;
+  }
+  .side-image.right, .side-description-area.right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .side-image.left, .side-description-area.left {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
   .side-description-area {
     float: left;
-    width: 650px;
+    width: 485px;
     height: 100%;
     background-color: #00adbc;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     padding: 30px 30px;
   }
-
-%h1 Getting started
+  .gray-button {
+    background-color: #c6cacd;
+    border-color: #c6cacd;
+    color: #5b6770;
+  }
 
 .full-resource-block
-  %img.side-image{src: "/images/student/hour_of_code.png"}
-  .side-description-area
+  %img.side-image.left{src: "/images/student/hour_of_code.png"}
+  .side-description-area.right
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Hour of Code
       Get started by choosing a tutorial from a list of over 100 one hour computer science activities from Code.org and partners.
     %a{href: "/learn"}
       %button Try a tutorial
 
-%h1 Courses on Code Studio
-.half-resource-block{style: "margin-right: 20px;"}
-  %img.top-image{src: "/images/student/code_studio.png"}
-  .description-area
+.full-resource-block
+  .side-description-area.left
     .description 
-      %h2.resource-title Code Studio
-      Code.org is a platform for full year computer science courses for K-12 students.
+      %h2.resource-title Courses on Code Studio
+      Code.org is a platform for full year computer science courses for K-12 students with full resources and lesson plans for teachers to use classrooms.
     %a{href: "https://studio.code.org/"}
-      %button Go to Code Studio
-
-.half-resource-block
-  %img.top-image{src: "/images/student/teacher.jpg"}
-  .description-area
-    .description 
-      %h2.resource-title Code Studio for Teachers
-      Code Studio courses have lesson plans and other resources for teachers to use in classrooms.
+      %button Students
     %a{href: "/educate"}
-      %button Go to teacher resources
+      %button.gray-button Teachers
+  %img.side-image.right{src: "/images/student/code_studio.jpg"}
 
-%h1 Partner courses
-.half-resource-block{style: "margin-right: 20px;"}
-  %img.top-image{src: "/images/student/courses.png"}
-  .description-area
+.full-resource-block
+  %img.side-image.left{src: "/images/student/courses.jpg"}
+  .side-description-area.right
     .description
-      %h2.resource-title Online partner courses
-      Checkout a compiled list of K-12 computer science courses made by partners.
+      %h2.resource-title{style: "padding-bottom: 10px;"} Courses from partners
+      Checkout a compiled list of K-12 computer science courses made by partners or find a local classroom to take a computer science course.
     %a{href: "/learn/beyond"}
-      %button Learn more
-
-.half-resource-block
-  %img.top-image{src: "/images/student/local_map.png"}
-  .description-area
-    .description 
-      %h2.resource-title Find a local classroom
-      Search the map for a local classroom teaching computer science.
+      %button Learn online
     %a{href: "/learn/local"}
-      %button Find a classroom
+      %button Local classes
