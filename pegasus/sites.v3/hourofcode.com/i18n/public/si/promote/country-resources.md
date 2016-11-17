@@ -30,7 +30,7 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <% elsif @country == 'ca' %>
 
-## Videos <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
+## වීඩියෝ <iframe width="560" height="315" src="https://www.youtube.com/embed/k3cg1e27zQM" frameborder="0" allowfullscreen></iframe>
 <
 
 p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
@@ -80,7 +80,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**All Hour of Code tutorials:**
+**සියලු Hour of Code නිබන්ධන **
 
   * Require minimal prep-time for organizers
   * Are self-guided - allowing students to work at their own pace and skill-level

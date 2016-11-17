@@ -1,9 +1,12 @@
 @dashboard_db_access
 @as_student
+@no_circle
 Feature: App Lab Scenarios
+# Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
   Background:
     Given I start a new Applab project
+    And I wait for the page to fully load
 
   Scenario: App Lab Http Image
     # Create an app with an http image.
@@ -20,6 +23,7 @@ Feature: App Lab Scenarios
     And I switch to code mode
     And Applab HTML has a button
     And I reset the puzzle to the starting version
+    And I wait to see "#divApplab"
     And I wait until element "#divApplab" is visible
     And Applab HTML has no button
 

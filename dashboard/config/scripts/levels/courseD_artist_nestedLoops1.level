@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a triangle to kickstart this stage.  \r\n(Each side is 100 pixels long.)",
+    "instructions": "Draw a triangle to kickstart this stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees for each exterior angle.)",
     "x": "150",
     "y": "200",
     "start_direction": "90",
@@ -53,13 +53,13 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,60,90,120,180">120</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="45,60,90,120,180">120</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -77,9 +77,9 @@
                   <title name="DIR">moveForward</title>
                   <title name="VALUE">100</title>
                   <next>
-                    <block type="draw_turn_by_constant">
+                    <block type="draw_turn_by_constant_dropdown">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
+                      <title name="VALUE" config="45,60,90,120,180">120</title>
                     </block>
                   </next>
                 </block>

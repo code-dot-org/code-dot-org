@@ -72,7 +72,7 @@
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,

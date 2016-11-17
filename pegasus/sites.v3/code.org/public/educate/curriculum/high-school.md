@@ -28,7 +28,19 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
 # Computer Science Discoveries
+
+<img src="/images/csdiscoveries-montage.jpg" width="500px">
+
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+
+## Units of Study
+
+* **Unit 1:** Problem Solving: Computers and Logic
+* **Unit 2:** The Internet: Web Development
+* **Unit 3:** Programming: Interactive Games & Animations
+* **Unit 4:** Problem Solving: The Design Process
+* **Unit 2:** The Internet: Data and Society
+* **Unit 3:** Programming: The Internet of Things
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 

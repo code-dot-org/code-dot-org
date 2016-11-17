@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2016-04-11T21:23:10.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -43,7 +39,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Find the randomNumber() block here\",\r\n  \"element_id\": \".droplet-palette-header .orange\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions": "Using console.log() write a program that randomly returns a number in a range you define.",
     "show_d_pad": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "encrypted_examples": "zkKHp7uhC2s0RmdmoXrh4JccbeWEngtXhNID/zSeOG4qW5KJ6pnz7uO8XUDG\nqjcj\n",
     "instructions_important": "false",
@@ -52,6 +48,10 @@
     "show_debug_watch": "false",
     "contained_level_names": null
   },
+  "game_id": 50,
+  "created_at": "2016-04-11T21:23:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

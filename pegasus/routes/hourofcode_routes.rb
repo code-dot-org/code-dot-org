@@ -8,6 +8,6 @@ end
 get '*' do |uri|
   only_for ['hourofcode.com', 'translate.hourofcode.com']
   dont_cache unless rack_env == :production
-  env['PATH_INFO'] = hoc_canonicalized_i18n_path(uri) unless resolve_static('public', uri)
+  env['PATH_INFO'] = hoc_canonicalized_i18n_path(uri, request.query_string) unless resolve_static('public', uri)
   pass
 end
