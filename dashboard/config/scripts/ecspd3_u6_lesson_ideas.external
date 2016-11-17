@@ -1,17 +1,13 @@
 name 'ECSPD3-u6 lesson ideas'
 css 'unplugged'
 markdown <<MARKDOWN
-# Alternative Ideas for Unit 6 >  Lesson Ideas with Other Robots
-
-## Concepts Covered
-
-Robots or devices that we use with technology.
+# Alternative Robotic Platforms
 
 ## Overview
 
 There are so many devices that could be considered robots and technology that works with robots that it is hard to name them all.
 
-On this page, you will find links to a variety of robots and devices.  Explore their uses and how you might use them your them in your classroom to help your students better understand human computer interaction, problem solving, and coding.
+On this page, you will find links to a variety of robots and devices.  Explore their uses and how you might use them your them in your classroom to help your students better understand human computer interaction, problem solving, and coding. The following resources can be used to help put robotics into context: 
 
 - <a href="http://www.roboticstoday.com/" target=_blank>Link to Robotics Today >></a> 
 - <a href="http://www.roboticstoday.com/robots/by-category/consumer/toyrobots" target=_blank>What are the latest robot toys and how cool are they?</a> 
@@ -20,9 +16,7 @@ On this page, you will find links to a variety of robots and devices.  Explore t
 - <a href="http://www.roboticstoday.com/robots/by-category/consumer" target=_blank>Robots Can Play a Role in Daily life.</a> 
 - <a href="http://www.roboticstoday.com/robots/by-category/healthcare" target=_blank>Robots Designed to Help Take Care of People</a> 
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/alTF-g7oMFk?rel=0" frameborder="0" allowfullscreen></iframe>
-
-### Other Types of Robots
+### Types of Robots
 
 - Ozobot: 
 	- <a href="https://www.youtube.com/watch?v=3-cWPzBiO8c" target=_blank>Ozobot Video</a>
@@ -50,7 +44,4 @@ https://cs10kcommunity.org/sites/default/files/event/2016/02/spherorobotsminipbl
 > ## Hints from an ECS Teacher: 
 > Whatever robot you are using, remember to have students use the problem solving problem to solve a task for the robot.
 
-Click “Continue” below to learn about the next lesson.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
