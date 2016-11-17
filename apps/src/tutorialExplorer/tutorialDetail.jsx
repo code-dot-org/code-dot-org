@@ -90,6 +90,20 @@ const TutorialDetail = React.createClass({
     disabledTutorial: React.PropTypes.bool.isRequired
   },
 
+  componentDidMount() {
+    document.addEventListener('keydown', this.onEscape);
+  },
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onEscape);
+  },
+
+  onEscape({keyCode}) {
+    if (keyCode === 27) {
+      this.props.closeClicked();
+    }
+  },
+
   render() {
     if (!this.props.showing) {
       // Enable body scrolling.
