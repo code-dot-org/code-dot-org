@@ -5,7 +5,7 @@ class CustomDeviseFailure < Devise::FailureApp
   include LocaleHelper
 
   def hashed_email_in_hoc_2016_signups?(hashed_email)
-    !PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: 'HocSignup2016').first.nil?
+    PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: 'HocSignup2016').any?
   end
 
   def respond
@@ -14,7 +14,7 @@ class CustomDeviseFailure < Devise::FailureApp
       # If the user has a full account as well, don't use the HOC flow
       user = User.find_by(hashed_email: hashed_email)
       unless user
-        redirect_to '/users/sign_up?already_hoc_registered=true'
+        redirect_to "#{new_user_registration_path}?already_hoc_registered=true"
         return
       end
     end
@@ -22,7 +22,8 @@ class CustomDeviseFailure < Devise::FailureApp
   end
 
   def failed_login?
-    (options = request.env["warden.options"]) && options[:action] == "unauthenticated"
+    options = request.env["warden.options"]
+    options && options[:action] == "unauthenticated"
   end
 
   protected

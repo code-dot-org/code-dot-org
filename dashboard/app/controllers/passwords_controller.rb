@@ -10,7 +10,7 @@ class PasswordsController < Devise::PasswordsController
       # If the user has a full account as well, don't use the HOC flow
       user = User.find_by_email_or_hashed_email(email)
       unless user
-        redirect_to '/users/sign_up?already_hoc_registered=true'
+        redirect_to "#{new_user_registration_path}?already_hoc_registered=true"
         return
       end
     end
@@ -30,7 +30,8 @@ class PasswordsController < Devise::PasswordsController
   private
 
   def email_in_hoc_2016_signups?(email)
-    !PEGASUS_DB[:forms].where(email: email, kind: 'HocSignup2016').first.nil?
+    normalized_email = email.strip.downcase
+    PEGASUS_DB[:forms].where(email: normalized_email, kind: 'HocSignup2016').any?
   end
 
   def show_reset_url_if_admin
