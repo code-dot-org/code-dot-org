@@ -40,6 +40,7 @@ var ALLOWED_KEYS = new Set([
   'noVisualization',
   'pinWorkspaceToBottom',
   'smallStaticAvatar',
+  'failureAvatar',
   'aniGifURL',
   'inputOutputTable',
   'showAnimationMode',
