@@ -1,7 +1,14 @@
-import {
-  OPTIONAL,
-  outputWarning,
-} from '../javascriptMode';
+import errorHandler from '../errorHandler';
+var outputError = errorHandler.outputError;
+var ErrorLevel = errorHandler.ErrorLevel;
+
+var OPTIONAL = true;
+
+
+function outputWarning(errorString) {
+  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
+  outputError(errorString, ErrorLevel.WARNING, line);
+}
 
 // APIs designed specifically to run on interpreter data structures without marshalling
 // (valuable for performance or to support in/out parameters)
