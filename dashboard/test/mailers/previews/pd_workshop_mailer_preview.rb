@@ -38,6 +38,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_enrollment_receipt
   end
 
+  def organizer_enrollment_reminder
+    mail :organizer_enrollment_reminder, send_workshop: true
+  end
+
   # The teacher_cancel_receipt has a variation for CSF. It's the same for all other courses.
   def teacher_cancel_receipt__general
     mail :teacher_cancel_receipt
@@ -74,7 +78,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   private
 
-  def mail(method, course = nil, subject = nil, options: nil)
+  def mail(method, course = nil, subject = nil, options: nil, send_workshop: false)
     unless course
       course = DEFAULT_COURSE
       subject = DEFAULT_SUBJECT
@@ -93,10 +97,11 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     enrollment.assign_code
 
+    arg = send_workshop ? workshop : enrollment
     if options
-      Pd::WorkshopMailer.send(method, enrollment, options)
+      Pd::WorkshopMailer.send(method, arg, options)
     else
-      Pd::WorkshopMailer.send(method, enrollment)
+      Pd::WorkshopMailer.send(method, arg)
     end
   end
 end

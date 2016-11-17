@@ -41,7 +41,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(enrollment),
+      subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -84,9 +84,20 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(enrollment),
+      subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def organizer_enrollment_reminder(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: teacher_enrollment_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def detail_change_notification(enrollment)
@@ -177,9 +188,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     nil
   end
 
-  def teacher_enrollment_subject(enrollment)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
-      "Your upcoming #{enrollment.workshop.course_name} workshop"
+  def teacher_enrollment_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Your upcoming #{workshop.course_name} workshop"
     else
       'Your upcoming Code.org workshop and next steps'
     end

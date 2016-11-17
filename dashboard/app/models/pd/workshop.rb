@@ -280,8 +280,14 @@ class Pd::Workshop < ActiveRecord::Base
           email.deliver_now
         rescue => e
           # Collect errors, but do not stop batch. Rethrow all errors below.
-          errors << "#{enrollment.id} - #{e.message}"
+          errors << "teacher enrollment #{enrollment.id} - #{e.message}"
         end
+      end
+      begin
+        Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+      rescue => e
+        # Collect errors, but do not stop batch. Rethrow all errors below.
+        errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
     end
 
