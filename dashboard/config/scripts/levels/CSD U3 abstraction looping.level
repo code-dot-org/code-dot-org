@@ -75,7 +75,7 @@
     "markdown_instructions": "# Looping\r\n\r\nThe game will be more fun if the frog can jump more than once.  You can make the mushroom \"loop\" by checking whether it's moved past the left edge and moving it back to the right edge when it has.\r\n\r\n# Do this\r\n* Find the `if` statement that checks whether the mushroom has passed the left edge. [Show me where](#triggercallout=code_triggered1)\r\n* Use the `sprite.x` block to set the mushroom's position back to the right edge if it has.\r\n\r\n",
     "project_template_level_name": "CSD U3 abstraction sidescroll template",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "instructions_important": "false",
     "contained_level_names": null
   },

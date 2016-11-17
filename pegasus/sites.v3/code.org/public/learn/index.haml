@@ -19,7 +19,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -90,8 +89,9 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      roboticsButtonUrl: "/learn/robotics",
+      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

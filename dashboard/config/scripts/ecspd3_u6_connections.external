@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 connections'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Overview > Connections
+# Unit 6 Connections
  
 The ECS curriculum can be broken down into three parts --Foundation (units 1 and 2, which focus on developing habits of the mind and approaches to understanding and tackling problems), Application (units 3 and 4, where students begin using these skills to develop computational artifacts), and Extension (units 5 and 6, where students extend their knowledge and skills to new situations).
  
@@ -12,6 +12,5 @@ Now we’ve come to Unit 6, Robotics where students will apply and extend their 
 Check out the video below for an overview of how Artificial Intelligence and Robots are typically portrayed in media: 
 
 <iframe src="https://drive.google.com/a/nicolescourse.com/file/d/0ByEMUaw5Z_pNWXBRTkVyQzNvLTA/preview" width="640" height="480"></iframe>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<br><br>
 MARKDOWN

@@ -38,7 +38,7 @@ const Overlay = React.createClass({
   },
 
   render() {
-    return (<div style={this.props.visible ? visible_style : hidden_style} />);
+    return (<div id="overlay" style={this.props.visible ? visible_style : hidden_style} />);
   },
 });
 

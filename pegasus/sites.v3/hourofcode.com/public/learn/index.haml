@@ -18,7 +18,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
   @media (min-width: 992px)
@@ -98,8 +97,9 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{locale_code}",
-      roboticsButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
+      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 

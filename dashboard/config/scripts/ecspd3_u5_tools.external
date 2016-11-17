@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 tools'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Overview > What tools make sense for this unit? 
+# Unit 5 Tools
 
 There are many tools to choose from  that enable you to manipulate, analyze, and visualize data, and this unit does not prescribe the use of any particular tool. As always there are tradeoffs to consider with any tool, **but you will need to choose a spreadsheet tool that supports the development of charts and graphs as well as a tool to develop word clouds.** 
 
@@ -14,5 +14,4 @@ There are many tools to choose from  that enable you to manipulate, analyze, and
   - <a href="http://www.wordclouds.com/" target=_blank>http://www.wordclouds.com/</a>
   - <a href="http://www.wordle.net" target=_blank>http://www.wordle.net</a>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

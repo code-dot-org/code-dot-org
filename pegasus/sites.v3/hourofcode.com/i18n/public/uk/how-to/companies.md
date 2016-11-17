@@ -34,9 +34,9 @@ nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Спробуйте](<%= resolve_url("https://code.org/learn") %>)
 
-**Всі підручники Години коду:**
+**Всі програми "Година коду":**
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level

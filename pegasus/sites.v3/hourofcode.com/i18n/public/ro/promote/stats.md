@@ -14,11 +14,11 @@ nav: promote_nav
 
 ## Folosiți acest scurt rezumat în buletinele de știri
 
-### Aduceți informatica în școala dvs. Începeți cu o Ora de Programare
+### Aduceți tehnologia computerelor si programarea în școala dvs. Începeți cu o Ora de Programare
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Vestea bună e că suntem pe cale să schimbăm acest lucru. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Cu tehnologia ce schimbă fiecare industrie pe planeta, cunoştinţele It au devenit parte a unei abilităţi bine rotunjite. But fewer than half of all schools teach computer science! Vestea bună e că suntem pe cale să schimbăm acest lucru. Dacă ați auzit de Ora de Programare anul trecut, probabil știți că a făcut istorie. 100 de milioane de studenţi au descoperit cât de accesibila şi distractiva poate fi stiinta computerului si programarea doar prin incercarea unei Ore de Programare.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+[ Hour of Code ](<%= hoc_uri('/') %>) este o introducere de o oră in programare, proiectata să desluseasca limbajul de programare şi sa arate că oricine poate învăţa elementele lui de bază. Aflaţi mai multe la <http://HourofCode.com>, încercaţi o oră sau găzduiti un eveniment Hour of Code pentru a introduce si pe altii in lumea computerelor!
 
 <a id="infographics"></a>
 

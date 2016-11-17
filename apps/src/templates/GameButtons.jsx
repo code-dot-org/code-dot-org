@@ -8,10 +8,9 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 
 const styles = {
-  instructionsInTopPane: {
+  main: {
     // common.scss provides an :after selector that ends up adding 18px of height
-    // to gameButtons. We want to get rid of that when we have don't have
-    // instructions below game buttons
+    // to gameButtons. We want to get rid of that
     marginBottom: -18
   },
   runImage: {
@@ -78,7 +77,7 @@ ResetButton.propTypes = {
 const GameButtons = props => (
   <ProtectedStatefulDiv
     id="gameButtons"
-    style={props.instructionsInTopPane ? styles.instructionsInTopPane : undefined}
+    style={styles.main}
   >
     {!props.playspacePhoneFrame &&
     <RunButton
@@ -95,7 +94,6 @@ const GameButtons = props => (
 );
 GameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
-  instructionsInTopPane: React.PropTypes.bool,
   isMinecraft: React.PropTypes.bool,
   playspacePhoneFrame: React.PropTypes.bool,
   children: React.PropTypes.node,
@@ -103,7 +101,6 @@ GameButtons.propTypes = {
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
-  instructionsInTopPane: state.pageConstants.instructionsInTopPane,
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);

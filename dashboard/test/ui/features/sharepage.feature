@@ -3,7 +3,7 @@ Feature: Puzzle share page
 
 Background:
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I've initialized the workspace with my flappy puzzle.
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace

@@ -45,12 +45,8 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-
-  # Make sure the old page is gone, since selenium's navigate.to does not reliably do this for us.
-  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.to url
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
-
+  refute_bad_gateway
   install_js_error_recorder
 end
 
@@ -79,7 +75,14 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+  steps 'When I click selector "#overlay" if it exists'
+end
+
+When /^I wait for the page to fully load$/ do
+  steps <<-STEPS
+    When I wait to see "#runButton"
+    And I close the instructions overlay if it exists
+  STEPS
 end
 
 When /^I close the dialog$/ do
@@ -105,13 +108,16 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
+    And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
+    And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
   STEPS
 end
 
@@ -658,7 +664,12 @@ Then(/^I reload the page$/) do
   # does not reliably do this for us.
   @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
+  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  wait_for_jquery
+end
+
+def wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script("return !!$;") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
@@ -883,6 +894,10 @@ When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
 end
 
+When /^I debug channel id$/ do
+  puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
+end
+
 And(/^I ctrl-([^"]*)$/) do |key|
   # Note: Safari webdriver does not support actions API
   @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
@@ -1036,4 +1051,9 @@ Then /^I select the first section$/ do
   @browser.execute_script(
     "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
   )
+end
+
+def refute_bad_gateway
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  expect(first_header_text).not_to eq('Bad Gateway')
 end
