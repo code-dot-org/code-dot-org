@@ -9,7 +9,6 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a task creates unit enrollments' do
-    skip 'Skipping plc unit tests temporarily'
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)
 
     assert_equal [@course_unit1, @course_unit2], enrollment.plc_unit_assignments.map(&:plc_course_unit)
@@ -17,7 +16,6 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'test bulk enrollments' do
-    skip 'Skipping plc unit tests temporarily'
     @student = create :student
     student_email = 'some_student@code.org'
     @student.update(email: student_email)
@@ -33,7 +31,6 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'enrolling in a started course creates unit enrollments that are in progress' do
-    skip 'Skipping plc unit tests temporarily'
     @course_unit1.update(started: true)
 
     enrollment = Plc::UserCourseEnrollment.create(user: @user, plc_course: @course)

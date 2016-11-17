@@ -2,7 +2,7 @@ require_relative '../../deployment'
 
 # Rake tasks for asset packages (currently only 'apps').
 namespace :package do
-  BUILD_PACKAGE = %i[staging test].include?(rack_env)
+  BUILD_PACKAGE = %i[staging test].include?(rack_env) && !ENV['CI']
 
   namespace :apps do
     def apps_packager

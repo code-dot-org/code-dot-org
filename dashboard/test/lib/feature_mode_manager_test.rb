@@ -54,7 +54,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_normal_mode
-    scripts = ScriptConfig.cached_scripts
+    scripts = ScriptConfig.scale_mode_scripts
     FeatureModeManager.set_mode('normal', @gatekeeper, @dcdo, scripts)
     assert @gatekeeper.allows('puzzle_rating')
     assert @gatekeeper.allows('hint_view_request')
@@ -104,7 +104,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_scale_mode
-    scripts = ScriptConfig.cached_scripts
+    scripts = ScriptConfig.scale_mode_scripts
     FeatureModeManager.set_mode('scale', @gatekeeper, @dcdo, scripts)
     refute @gatekeeper.allows('puzzle_rating')
     refute @gatekeeper.allows('hint_view_request')
@@ -121,7 +121,7 @@ class FeatureModeManagerTest < ActiveSupport::TestCase
   end
 
   def test_emergency_mode
-    scripts = ScriptConfig.cached_scripts
+    scripts = ScriptConfig.scale_mode_scripts
     FeatureModeManager.set_mode('emergency', @gatekeeper, @dcdo, scripts)
     refute @gatekeeper.allows('puzzle_rating')
     refute @gatekeeper.allows('hint_view_request')

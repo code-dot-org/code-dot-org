@@ -6,6 +6,8 @@ import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
 import { getResponsiveValue } from './responsive';
+import Image from './image';
+import LazyLoad from 'react-lazy-load';
 
 const styles = {
   tutorialOuter: {
@@ -21,6 +23,15 @@ const styles = {
     width: "100%",
     height: 0,
     paddingTop: "75%"
+  },
+  tutorialImageBackground: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: "#f1f1f1",
+    border: "solid 1px #cecece"
   },
   tutorialImage: {
     position: "absolute",
@@ -70,6 +81,8 @@ const Tutorial = React.createClass({
       width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})
     };
 
+    const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
+
     return (
       <div>
         <TutorialDetail
@@ -84,10 +97,13 @@ const Tutorial = React.createClass({
           onClick={this.tutorialClicked}
         >
           <div style={styles.tutorialImageContainer}>
-            <img
-              src={this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg")}
-              style={styles.tutorialImage}
-            />
+            <div style={styles.tutorialImageBackground}/>
+            <LazyLoad offset={1000}>
+              <Image
+                src={imageSrc}
+                style={styles.tutorialImage}
+              />
+            </LazyLoad>
           </div>
           <div style={styles.tutorialName}>
             {this.props.item.name}

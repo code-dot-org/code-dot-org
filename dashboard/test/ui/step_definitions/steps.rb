@@ -75,7 +75,14 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+  steps 'When I click selector "#overlay" if it exists'
+end
+
+When /^I wait for the page to fully load$/ do
+  steps <<-STEPS
+    When I wait to see "#runButton"
+    And I close the instructions overlay if it exists
+  STEPS
 end
 
 When /^I close the dialog$/ do
