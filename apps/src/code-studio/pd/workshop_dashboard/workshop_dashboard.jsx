@@ -45,7 +45,17 @@ const WorkshopDashboard = (
         component={SurveyResults}
       />
       <Route
+        path="survey_results/:workshopId"
+        breadcrumbs="Workshops"
+        component={SurveyResults}
+      />
+      <Route
         path="organizer_survey_results"
+        breadcrumbs="Organizer Survey Results"
+        component={OrganizerSurveyResults}
+      />
+      <Route
+        path="organizer_survey_results/:workshopId"
         breadcrumbs="Organizer Survey Results"
         component={OrganizerSurveyResults}
       />
