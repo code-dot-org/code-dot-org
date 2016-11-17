@@ -20,6 +20,8 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
 ## 3) Promote your Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
@@ -116,11 +118,10 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## Inne zasoby Godziny Kodowania dla nauczycieli:
 
-  * Użyj tego [szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx) do zorganizowania swojej Godziny Kodowania.
-  * Sprawdź [najlepsze praktyki](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) organizatorów poprzednich Godzin Kodowania. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Obejrzyj nagranie naszego [Przewodnika edukatora z seminarium o Godzinie Kodowania](https://youtu.be/EJeMeSW2-Mw).
   * [Weź udział na żywo w Q & A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) z naszym założycielem, Hadi Partovi, aby przygotować się do Godziny Kodowania.
-  * Odwiedź [Forum Godziny Kodowania](http://forum.code.org/c/plc/hour-of-code), aby znaleźć porady, wyjaśnienia i wsparcie od innych organizatorów. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co będzie się działo po Godzinie Kodowania?

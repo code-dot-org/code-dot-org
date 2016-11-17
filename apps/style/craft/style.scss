@@ -15,6 +15,10 @@ $main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
+$code-block-background-yellow: #d78c01;
+$code-block-outline-yellow: #ffb72f;
+$workspace-corner-rounding: 6px;
+$text-shadow-gray: #5a5a5a;
 
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
@@ -24,6 +28,29 @@ $original-background-color: #F2F2F2;
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
+}
+
+@mixin gray-button() {
+  -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
+  border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+
+
+  &:hover {
+    @include box-shadow(none);
+  }
+
+  &:active {
+    outline: none;
+
+    border-image-slice: 2 3 4 3 fill;
+    border-image-width: 10px 20px 20px 20px;
+    -moz-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    -webkit-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    -o-border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 stretch !important;
+    border-image: url("#{$root}Sliced_Parts/MC_Button_Pressed.png") 2 3 4 3 fill stretch !important;
+  }
 }
 
 @mixin pixelated() {
@@ -56,8 +83,91 @@ $original-background-color: #F2F2F2;
   }
 }
 
+@mixin flip-horizontal($multiple) {
+  -moz-transform: scaleX(-1 * $multiple);
+  -o-transform: scaleX(-1 * $multiple);
+  -webkit-transform: scaleX(-1 * $multiple);
+  -ms-transform: scaleX(-1 * $multiple);
+  transform: scaleX(-1 * $multiple);
+  -ms-filter: "FlipH";
+  filter: FlipH;
+}
+
+@mixin flip-vertical() {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -ms-filter: "FlipV";
+  filter: FlipV;
+}
+
+@mixin scaleXBrowser($multiple) {
+  -moz-transform: scale($multiple);
+  -webkit-transform: scale($multiple);
+  transform: scale($multiple);
+}
+
+@mixin scaleXBrowserTwoParam($multipleX, $multipleY) {
+  -moz-transform: scale($multipleX, $multipleY);
+  -webkit-transform: scale($multipleX, $multipleY);
+  transform: scale($multipleX, $multipleY);
+}
+
+@mixin no-interact() {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.arrow {
+  @include no-interact();
+  display: inline !important;
+  padding: 0 !important;
+  margin-top: 5px !important;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+@mixin arrow-icon($assetUrl) {
+  @include no-interact();
+  background: url($assetUrl) no-repeat !important;
+  background-position: center !important;
+  // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
+  width: 40px !important;
+  height: 40px !important;
+
+  @include pixelated();
+}
+
+.left-btn {
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
+  @include flip-horizontal(1);
+  background-size: 16px 32px !important;
+}
+.right-btn {
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
+  background-size: 16px 32px !important;
+}
+.down-btn {
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png");
+  background-size: 28px 20px !important;
+}
+.up-btn {
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png");
+  background-size: 28px 20px !important;
+}
+
 body {
   background-color: $below-header-background;
+  -ms-content-zooming: none;
+  -ms-touch-action: none;
 }
 
 .header-wrapper {
@@ -321,6 +431,9 @@ $height-to-width: 434 / 477;
     $width: 144px;
     $height: 268px;
     background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
+    .minecraft-events & {
+      background-image: url("#{$root}Events/Steve_Character_Select.png");
+    }
     width: $width;
     height: $height;
     margin-top: 13px; // matches bottom with Alex
@@ -336,6 +449,9 @@ $height-to-width: 434 / 477;
     $width: 136px;
     $height: 271px;
     background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
+    .minecraft-events & {
+      background-image: url("#{$root}Events/Alex_Character_Select.png");
+    }
     width: $width;
     height: $height;
 
@@ -365,10 +481,7 @@ $height-to-width: 434 / 477;
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include gray-button();
     @include mc-text-shadow();
 
     color: #f1f1f1 !important;
@@ -548,10 +661,7 @@ $height-to-width: 434 / 477;
     border-style: solid !important;
     border-width: 4px 5px 6px !important;
     @include pixelated();
-    -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-    border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
+    @include gray-button();
     @include mc-text-shadow();
 
     color: #f1f1f1 !important;
@@ -569,7 +679,7 @@ $height-to-width: 434 / 477;
   & > div {
     font-size: 24px;
     color: white !important;
-    text-shadow: 2px 2px #5A5A5A !important;
+    text-shadow: 2px 2px $text-shadow-gray !important;
   }
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
@@ -600,11 +710,7 @@ $height-to-width: 434 / 477;
   border-style: solid !important;
   border-width: 4px 5px 6px !important;
   @include pixelated();
-  -moz-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  -webkit-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  -o-border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 stretch !important;
-  border-image: url("#{$root}Sliced_Parts/Button_Grey_Slice.png") 4 5 6 fill stretch !important;
-
+  @include gray-button();
 
   $run-width: 16px;
   $reset-width: 40px;
@@ -638,14 +744,12 @@ $height-to-width: 434 / 477;
     }
 
     .run26 {
-      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
-      width: $run-width;
+      @include scaleXBrowser(2);
+      width: 6px;
       height: 34px;
-      margin-left: $run-left-margin;
-      margin-right: 3px;
-      margin-top: -2px;
-      margin-bottom: -1px;
+      margin: 16px -3px -18px 23px;
       padding-right: 13px;
+      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png") no-repeat 0 0;
       @include pixelated();
     }
 
@@ -657,7 +761,7 @@ $height-to-width: 434 / 477;
     & > div {
       font-size: 24px;
       color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
       margin-left: 8px;
       padding-right: 0;
       margin-right: 2px;
@@ -937,5 +1041,67 @@ $height-to-width: 434 / 477;
 .csf-top-instructions, .instructions-markdown {
   p {
     color: $white;
+  }
+}
+
+@mixin scoreboard-background {
+  $fallback-gray: #6a6a6a;
+
+  background: $fallback-gray;
+  border-style: solid !important;
+  border-width: 1px 7px 7px 7px !important;
+  -moz-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -webkit-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -o-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 fill stretch !important;
+  @include pixelated();
+}
+
+.minecraft-events {
+  code {
+    background-color: $code-block-background-yellow;
+    border: 1px solid $code-block-outline-yellow;
+    color: $white;
+  }
+
+  #toolbox-header {
+    border-right: none !important;
+  }
+
+  #codeWorkspace {
+    border: none !important;
+  }
+
+  #headers {
+    border-radius: $workspace-corner-rounding $workspace-corner-rounding 0 0;
+  }
+
+  #codeWorkspace > svg.blocklySvg {
+    border-radius: 0 0 $workspace-corner-rounding $workspace-corner-rounding;
+  }
+
+  .small-footer-base {
+    border-radius: 0 $workspace-corner-rounding 0 0;
+  }
+
+  #score-container {
+    float: left;
+    position: relative;
+    left: 50%;
+
+    height: 0;
+    margin-bottom: -100%;
+
+    #score-inner {
+      @include scoreboard-background();
+      top: -411px;
+      height: 17px;
+      float: left;
+      position: relative;
+      left: -50%;
+      font-size: 15px;
+      color: $white !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
+    }
   }
 }

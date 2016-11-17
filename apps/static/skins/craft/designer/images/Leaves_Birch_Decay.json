@@ -1,0 +1,84 @@
+{"frames": {
+
+"Leaves_Birch0.png":
+{
+	"frame": {"x":0,"y":142,"w":155,"h":150},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":60,"w":155,"h":150},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch1.png":
+{
+	"frame": {"x":155,"y":152,"w":155,"h":150},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":60,"w":155,"h":150},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch2.png":
+{
+	"frame": {"x":159,"y":0,"w":155,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":60,"w":155,"h":152},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch3.png":
+{
+	"frame": {"x":0,"y":0,"w":159,"h":142},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":54,"y":80,"w":159,"h":142},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch4.png":
+{
+	"frame": {"x":0,"y":292,"w":155,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":80,"w":155,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch5.png":
+{
+	"frame": {"x":310,"y":271,"w":115,"h":130},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":98,"y":80,"w":115,"h":130},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch6.png":
+{
+	"frame": {"x":314,"y":0,"w":112,"h":129},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":99,"y":80,"w":112,"h":129},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch7.png":
+{
+	"frame": {"x":310,"y":152,"w":116,"h":119},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":95,"y":90,"w":116,"h":119},
+	"sourceSize": {"w":240,"h":240}
+},
+"Leaves_Birch8.png":
+{
+	"frame": {"x":155,"y":302,"w":114,"h":118},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":95,"y":90,"w":114,"h":118},
+	"sourceSize": {"w":240,"h":240}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Leaves_Birch_Decay.png",
+	"format": "RGBA8888",
+	"size": {"w":426,"h":426},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c4ce3fc35bac1571090992f2669ed292:6d8263eee7c896c3cd4fc4d0ab9f547f:fe81fbdaf0f9b8a4cc6efb6e8dc6f054$"
+}
+}
