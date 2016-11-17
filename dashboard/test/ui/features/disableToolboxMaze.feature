@@ -3,7 +3,8 @@ Feature: Disabling/Reenabling the Toolbox While Running
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/17?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I drag block "4" to block "6"

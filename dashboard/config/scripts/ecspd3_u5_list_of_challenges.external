@@ -1,11 +1,11 @@
 name 'ECSPD3-u5 list of challenges'
 css 'unplugged'
 markdown <<MARKDOWN
-# Challenge Overview > List of Lessons 
+# Unit 4 Challenge Options
 
 See below for the list of challenge lessons. Feel free to click through to the lesson plans and explore the materials so you can select one to complete. **Your goal right now is to pick the lesson that you will complete later.**
 
-As you check out the lessons and choose a topic, focus your energy on stuff that's new to you, and do as much as you feel you need to do to understand the concepts, give suggestions about how to teach the lesson, and create an assessment or extension activity.
+As you check out the lessons and choose a topic, focus your energy on material that's new to you, and do as much as you feel you need to do to understand the concepts, give suggestions about how to teach the lesson, and create an assessment or extension activity.
 
 - Days 1-8 give some context for data and set up the final project (which students work towards for the whole unit)
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/2" target=_blank>Day 1 - 3: Room data project, set up final project</a>
@@ -28,7 +28,5 @@ As you check out the lessons and choose a topic, focus your energy on stuff that
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/15" target=_blank>Day 28 - 29: Build project presentations </a>		
 	- <a href = "https://studio.code.org/s/ECSPD3-Unit5/stage/3/puzzle/16" target=_blank>Day 30: Present final project </a>
 
-Once you've selected a lesson, click **continue** below. 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
