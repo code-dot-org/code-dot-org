@@ -39,6 +39,27 @@
   }
 }]]></config>
   <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="harvester_ifAtCropElse">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_ifAtCrop">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_lettuce"/>
+        <block type="harvester_whileHasLettuce"/>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -1,10 +1,8 @@
-/* global Applab */
-
 import { getDatabase } from './firebaseUtils';
 import _ from 'lodash';
 
 export function getColumnsRef(tableName) {
-  return getDatabase(Applab.channelId).child(`metadata/tables/${tableName}/columns`);
+  return getDatabase().child(`metadata/tables/${tableName}/columns`);
 }
 
 /**
@@ -93,7 +91,7 @@ export function onColumnNames(tableName, callback) {
  */
 export function addMissingColumns(tableName) {
   return getColumnNames(tableName).then(existingColumnNames => {
-    const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/${tableName}/records`);
+    const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
     return recordsRef.once('value').then(snapshot => {
       const recordsData = snapshot.val() || {};
       getColumnNamesFromRecords(recordsData).forEach(columnName => {

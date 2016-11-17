@@ -1,18 +1,18 @@
 import { expect } from '../../util/configuredChai';
-import FirebaseStorage from '@cdo/apps/applab/firebaseStorage';
-import { getDatabase, getConfigRef } from '@cdo/apps/applab/firebaseUtils';
+import { initFirebaseStorage } from '@cdo/apps/storage/firebaseStorage';
+import { getDatabase, getConfigRef } from '@cdo/apps/storage/firebaseUtils';
 
 describe('FirebaseStorage', () => {
-  let originalWindowApplab;
+  let FirebaseStorage;
 
   beforeEach(() => {
-    originalWindowApplab = window.Applab;
-    window.Applab = {
+    FirebaseStorage = initFirebaseStorage({
       channelId: "test-firebase-channel-id",
       firebaseName: 'test-firebase-name',
       firebaseAuthToken: 'test-firebase-auth-token',
-    };
-    getDatabase(Applab.channelId).autoFlush();
+      showRateLimitAlert: () => {},
+    });
+    getDatabase().autoFlush();
     return getConfigRef().set({
       limits: {
         '15': 5,
@@ -23,12 +23,8 @@ describe('FirebaseStorage', () => {
       maxTableRows: 20,
       maxTableCount: 3
     }).then(() => {
-      getDatabase(Applab.channelId).set(null);
+      getDatabase().set(null);
     });
-  });
-
-  afterEach(() => {
-    window.Applab = originalWindowApplab;
   });
 
   describe('setKeyValue', () => {
@@ -40,7 +36,7 @@ describe('FirebaseStorage', () => {
         error => console.warn(error));
 
       function verifyStringValue() {
-        getDatabase(Applab.channelId).child(`storage/keys`)
+        getDatabase().child(`storage/keys`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.deep.equal({'key': '"val"'});
@@ -57,7 +53,7 @@ describe('FirebaseStorage', () => {
         error => console.warn(error));
 
       function verifyNumberValue() {
-        getDatabase(Applab.channelId).child(`storage/keys`)
+        getDatabase().child(`storage/keys`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.deep.equal({'key': '7'});
@@ -74,7 +70,7 @@ describe('FirebaseStorage', () => {
         error => console.warn(error));
 
       function verifySetKeyValue() {
-        getDatabase(Applab.channelId).child(`storage/keys`)
+        getDatabase().child(`storage/keys`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(null);
@@ -102,7 +98,7 @@ describe('FirebaseStorage', () => {
         });
 
       function verifyNoKeys() {
-        getDatabase(Applab.channelId).child(`storage/keys`)
+        getDatabase().child(`storage/keys`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(null);
@@ -124,7 +120,7 @@ describe('FirebaseStorage', () => {
 
       function verifyValueAndWarning() {
         expect(didWarn).to.be.true;
-        getDatabase(Applab.channelId).child(`storage/keys`)
+        getDatabase().child(`storage/keys`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.deep.equal({'foo-bar': '"baz"'});
@@ -167,7 +163,7 @@ describe('FirebaseStorage', () => {
         'mytable',
         {name: 'bob', age: 8},
         () => {
-          getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+          getDatabase().child(`storage/tables/${'mytable'}/records`)
             .once('value')
             .then(snapshot => {
               expect(snapshot.val()).to.deep.equal({1:'{"name":"bob","age":8,"id":1}'});
@@ -233,7 +229,7 @@ describe('FirebaseStorage', () => {
 
       function handleDelete(status) {
         expect(status).to.equal(true);
-        getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+        getDatabase().child(`storage/tables/${'mytable'}/records`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(null);
@@ -249,7 +245,7 @@ describe('FirebaseStorage', () => {
         zeroRowCount,
         error => {throw error;});
 
-      const rowCountRef = getDatabase(Applab.channelId)
+      const rowCountRef = getDatabase()
         .child(`counters/tables/${'mytable'}/rowCount`);
 
 
@@ -275,7 +271,7 @@ describe('FirebaseStorage', () => {
 
       function handleDelete(status) {
         expect(status).to.equal(true);
-        getDatabase(Applab.channelId).child(`storage/tables/${'mytable'}/records`)
+        getDatabase().child(`storage/tables/${'mytable'}/records`)
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(null);
@@ -300,10 +296,10 @@ describe('FirebaseStorage', () => {
    * @param {function} callback
    */
   function verifyEmptyTable(callback) {
-    const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+    const rowCountRef = getDatabase().child('counters/tables/mytable/rowCount');
     rowCountRef.once('value').then(snapshot => {
       expect(snapshot.val()).to.equal(0);
-      const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+      const recordsRef = getDatabase().child('storage/tables/mytable/records');
       return recordsRef.once('value');
     }).then(snapshot => {
       expect(snapshot.val()).to.equal(null);
@@ -384,10 +380,10 @@ describe('FirebaseStorage', () => {
       }
 
       function verifyNoTable() {
-        const countersRef = getDatabase(Applab.channelId).child('counters/tables/mytable');
+        const countersRef = getDatabase().child('counters/tables/mytable');
         countersRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.equal(null);
-          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          const recordsRef = getDatabase().child('storage/tables/mytable/records');
           return recordsRef.once('value');
         }).then(snapshot => {
           expect(snapshot.val()).to.equal(null);
@@ -418,7 +414,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        const recordsRef = getDatabase().child(`storage/tables/mytable/records`);
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1:'{"foo":"1","id":1}',
@@ -451,7 +447,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        const recordsRef = getDatabase().child(`storage/tables/mytable/records`);
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1:'{"foo":true,"id":1}',
@@ -480,7 +476,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        const recordsRef = getDatabase().child(`storage/tables/mytable/records`);
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1:'{"foo":1,"id":1}',
@@ -511,7 +507,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        const recordsRef = getDatabase().child(`storage/tables/mytable/records`);
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1:'{"foo":true,"id":1}',
@@ -541,7 +537,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase(Applab.channelId).child(`storage/tables/mytable/records`);
+        const recordsRef = getDatabase().child(`storage/tables/mytable/records`);
         recordsRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.deep.equal({
             1:'{"foo":1,"id":1}',
@@ -578,7 +574,7 @@ describe('FirebaseStorage', () => {
     };
 
     function verifyTable(expectedTablesData) {
-      return getDatabase(Applab.channelId).child(`storage/tables`).once('value')
+      return getDatabase().child(`storage/tables`).once('value')
         .then(snapshot => {
           expect(snapshot.val()).to.deep.equal(expectedTablesData);
         }, error => {throw error;});
@@ -595,7 +591,7 @@ describe('FirebaseStorage', () => {
 
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
-      getDatabase(Applab.channelId).child(`storage/tables`).set(EXISTING_TABLE_DATA)
+      getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
         .then(() => {
           FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
@@ -608,7 +604,7 @@ describe('FirebaseStorage', () => {
 
     it('does overwrite existing data when overwrite is true', done => {
       const overwrite = true;
-      getDatabase(Applab.channelId).child(`storage/tables`).set(EXISTING_TABLE_DATA)
+      getDatabase().child(`storage/tables`).set(EXISTING_TABLE_DATA)
         .then(() => {
           FirebaseStorage.populateTable(
             NEW_TABLE_DATA_JSON,
@@ -632,7 +628,7 @@ describe('FirebaseStorage', () => {
     };
 
     function verifyKeyValue(expectedData) {
-      return getDatabase(Applab.channelId).child(`storage/keys`).once('value')
+      return getDatabase().child(`storage/keys`).once('value')
         .then(snapshot => {
           expect(snapshot.val()).to.deep.equal(expectedData);
         }, error => {throw error;});
@@ -649,7 +645,7 @@ describe('FirebaseStorage', () => {
 
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
-      getDatabase(Applab.channelId).child(`storage/keys`).set(EXISTING_KEY_VALUE_DATA)
+      getDatabase().child(`storage/keys`).set(EXISTING_KEY_VALUE_DATA)
         .then(() => {
           FirebaseStorage.populateKeyValue(
             NEW_KEY_VALUE_DATA_JSON,
@@ -662,7 +658,7 @@ describe('FirebaseStorage', () => {
 
     it('does overwrite existing data when overwrite is true', done => {
       const overwrite = true;
-      getDatabase(Applab.channelId).child(`storage/keys`).set(EXISTING_KEY_VALUE_DATA)
+      getDatabase().child(`storage/keys`).set(EXISTING_KEY_VALUE_DATA)
         .then(() => {
           FirebaseStorage.populateKeyValue(
             NEW_KEY_VALUE_DATA_JSON,
@@ -694,10 +690,10 @@ describe('FirebaseStorage', () => {
         error => {throw error;});
 
       function validateTableData() {
-        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        const rowCountRef = getDatabase().child('counters/tables/mytable/rowCount');
         rowCountRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.equal(3);
-          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          const recordsRef = getDatabase().child('storage/tables/mytable/records');
           return recordsRef.once('value');
         }).then(snapshot => {
           expect(snapshot.val()).to.deep.equal(expectedTableData);
@@ -722,10 +718,10 @@ describe('FirebaseStorage', () => {
       }
 
       function validateTableData() {
-        const rowCountRef = getDatabase(Applab.channelId).child('counters/tables/mytable/rowCount');
+        const rowCountRef = getDatabase().child('counters/tables/mytable/rowCount');
         rowCountRef.once('value').then(snapshot => {
           expect(snapshot.val()).to.equal(3);
-          const recordsRef = getDatabase(Applab.channelId).child('storage/tables/mytable/records');
+          const recordsRef = getDatabase().child('storage/tables/mytable/records');
           return recordsRef.once('value');
         }).then(snapshot => {
           expect(snapshot.val()).to.deep.equal(expectedTableData);

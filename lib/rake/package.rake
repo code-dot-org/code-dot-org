@@ -18,7 +18,7 @@ namespace :package do
 
       unless apps_packager.update_from_s3
         if BUILD_PACKAGE
-          Rake::Task['build'].invoke
+          Rake::Task['package:apps:build'].invoke
         else
           raise 'No valid apps package found'
         end
