@@ -3,16 +3,28 @@ var GameLab;
 // API definitions for functions exposed for JavaScript (droplet/ace) levels.
 // The p5/p5play API is injected separately.
 
-exports.injectGameLab = function (gamelab) {
+export const injectGameLab = function (gamelab) {
   GameLab = gamelab;
 };
 
-exports.playSound = function (url) {
+export const playSound = function (url) {
   return GameLab.executeCmd(null,
       'playSound',
       {'url': url});
 };
 
-exports.getUserId = function () {
+export const getUserId = function () {
   return GameLab.executeCmd(null, 'getUserId');
+};
+
+export const getKeyValue = function (key, onSuccess, onError) {
+  return GameLab.executeCmd(null, 'getKeyValue', {
+    key, onSuccess, onError
+  });
+};
+
+export const setKeyValue = function (key, value, onSuccess, onError) {
+  return GameLab.executeCmd(null, 'setKeyValue', {
+    key, value, onSuccess, onError
+  });
 };
