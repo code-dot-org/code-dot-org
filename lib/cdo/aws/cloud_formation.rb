@@ -133,12 +133,6 @@ module AWS
       end
 
       def create_or_update
-        if rack_env?(:adhoc) && BRANCH == RakeUtils.git_branch
-          unless RakeUtils.git_up_to_date?
-            raise 'Current branch needs to be up-to-date with GitHub branch of the same name, otherwise deploy will fail.
-  To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`.'
-          end
-        end
         template = json_template
         action = stack_exists? ? :update : :create
         CDO.log.info "#{action} stack: #{STACK_NAME}..."
