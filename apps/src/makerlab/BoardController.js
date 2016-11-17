@@ -116,6 +116,7 @@ export default class BoardController {
       CapTouch: PlaygroundIO.CapTouch,
       Tap: PlaygroundIO.Tap,
       Accelerometer: five.Accelerometer,
+      Servo: five.Servo,
       TouchSensor: TouchSensor
     };
 
