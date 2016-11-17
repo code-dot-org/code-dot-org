@@ -48,6 +48,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   @browser.navigate.to url
   refute_bad_gateway
   install_js_error_recorder
+  wait_for_jquery
 end
 
 def install_js_error_recorder
@@ -967,10 +968,12 @@ Then /^I navigate to the share URL$/ do
   wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I copy the embed code into a new document$/ do
@@ -980,6 +983,7 @@ end
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to url
+  wait_for_jquery
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
