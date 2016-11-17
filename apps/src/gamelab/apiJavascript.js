@@ -12,3 +12,13 @@ exports.playSound = function (url) {
       'playSound',
       {'url': url});
 };
+
+/**
+ * Stop playing sounds.
+ * @param {string} [url] - optional.  If omitted, stops all sounds.
+ */
+exports.stopSound = function (url) {
+  return GameLab.executeCmd(null,
+      'stopSound',
+      {'url': url});
+};
