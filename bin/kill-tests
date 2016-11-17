@@ -1,17 +1,23 @@
 #!/usr/bin/env ruby
 
+# kill an entire test run on the test machine, regardless of what step it is currently running.
+
 require_relative '../deployment'
 require 'cdo/hip_chat'
 
 HipChat.log "killing tests via #{$0}"
 
 def kill_tests
+  # kill dashboard unit tests
+  `pkill -f 'rake test'`
+
+  # kill ui tests
   `pkill -f runner.rb`
   `pkill -f cucumber`
 end
 
 def tests_running?
-  !`pgrep -f runner.rb`.empty? || !`pgrep -f cucumber`.empty?
+  !`pgrep -f runner.rb`.empty? || !`pgrep -f cucumber`.empty? || !`pgrep -f 'rake test'`.empty?
 end
 
 SUCCESS_MSG = "successfully killed all tests"
