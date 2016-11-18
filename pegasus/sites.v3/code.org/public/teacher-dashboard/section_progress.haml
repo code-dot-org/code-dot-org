@@ -4,6 +4,8 @@ theme: none
 content-type: text/ng-template
 ---
 
+%link(rel='stylesheet' type='text/css' href='/shared/css/teacher-announcement.css')
+
 %br/
 
 .loading{'ng-hide' => 'progressLoadedFirst'}
@@ -12,6 +14,16 @@ content-type: text/ng-template
 %div{'ng-show' => 'progressLoadedFirst'}
   = I18n.t('dashboard_progress_view')
   %select{"ng-model" => "course_id", "ng-options"=>"course.id as course.name group by course.category for course in course_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeProgress(course_id)'}
+
+-# This is meant to be similar to teacher-announcements.haml and can be removed after HOC
+%div{'ng-show' => 'progress_disabled'}
+  .teacher-announce
+    .announce-content{style: "min-height: 0px"}
+      = I18n.t('dashboard_announce_hoc_scaling_progress')
+      .announce-learn-more{style: "margin-top: 10px"}
+        %a{"ng-href" => "/saving-progress-{{is_hoc_course ? 'hoc' : 'csf'}}", target: '_blank'}
+          %button.primary
+            = I18n.t('dashboard_announce_learn_more_button')
 
 %h3 {{progress.script.name}}
 
