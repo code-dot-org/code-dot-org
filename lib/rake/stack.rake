@@ -11,10 +11,7 @@ namespace :stack do
 
   namespace :start do
     task default: :environment do
-      require 'cdo/hip_chat'
-      HipChat.wrap('CloudFormation stack update') do
-        AWS::CloudFormation.create_or_update
-      end
+      AWS::CloudFormation.create_or_update
     end
 
     desc 'Launch/update a full-stack deployment with CloudFront CDN disabled.
