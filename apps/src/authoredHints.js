@@ -3,10 +3,7 @@
  * Used exclusively by StudioApp.
  */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 var authoredHintUtils = require('./authoredHintUtils');
-var Lightbulb = require('./templates/Lightbulb');
 
 import { setHasAuthoredHints } from './redux/instructions';
 import {
@@ -27,12 +24,6 @@ var AuthoredHints = function (studioApp) {
    * @type {number}
    */
   this.levelId_ = undefined;
-
-  /**
-   * @type {Element}
-   */
-  this.lightbulb = document.createElement('div');
-  this.lightbulb.id = "lightbulb";
 };
 
 module.exports = AuthoredHints;
@@ -59,12 +50,7 @@ AuthoredHints.prototype.getSeenHints = function () {
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-
-  let oldNumHints = this.getUnseenHints().length;
   this.studioApp_.reduxStore.dispatch(displayMissingBlockHints(newContextualHints));
-  let newNumHints = this.getUnseenHints().length;
-
-  this.updateLightbulbDisplay_(oldNumHints !== newNumHints);
 
   if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
     this.studioApp_.reduxStore.dispatch(setHasAuthoredHints(true));
@@ -106,18 +92,6 @@ AuthoredHints.prototype.init = function (hints, scriptId, levelId) {
   }
 };
 
-/**
- * Sets up the Authored Hints UI; decorates the specified element with a
- * lightbulb image and hint counter
- *
- * @param {Element} promptIcon - the page element to "decorate" with the
- *        lightbulb
- */
-AuthoredHints.prototype.display = function (promptIcon) {
-  this.promptIcon = promptIcon;
-  this.updateLightbulbDisplay_();
-};
-
 AuthoredHints.prototype.showNextHint = function () {
   if (this.getUnseenHints().length === 0) {
     return;
@@ -134,8 +108,6 @@ AuthoredHints.prototype.showNextHint = function () {
  */
 AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
   this.studioApp_.reduxStore.dispatch(showNextHint(hint));
-  this.updateLightbulbDisplay_();
-
   authoredHintUtils.recordUnfinishedHint({
     // level info
     scriptId: this.scriptId_,
@@ -146,33 +118,4 @@ AuthoredHints.prototype.recordUserViewedHint_ = function (hint) {
     hintClass: hint.hintClass,
     hintType: hint.hintType,
   });
-};
-
-/**
- * Adjusts the displayed number of unseen hints. Dims the lightbulb
- * image if there are no hints. Optionally plays a simple CSS animation
- * to highlight the update.
- * @param {boolean} shouldAnimate defaults to false
- */
-AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
-  shouldAnimate = shouldAnimate || false;
-
-  var hintCount = this.getUnseenHints().length;
-
-  // If we have hints to show, but are not in the DOM, insert ourselves
-  // into the DOM. This can happen when contextual hints appear in a
-  // level that was initialized with no hints. Note that we can be in
-  // the DOM and have zero hints to show, and that's just fine.
-  if (hintCount > 0 && !document.body.contains(this.lightbulb) && this.promptIcon) {
-    this.promptIcon.parentNode.className += ' authored_hints';
-    this.promptIcon.parentNode.insertBefore(this.lightbulb, this.promptIcon);
-  }
-
-  ReactDOM.render(
-    <Lightbulb
-      count={hintCount}
-      lit={hintCount > 0}
-      shouldAnimate={shouldAnimate}
-    />,
-    this.lightbulb);
 };

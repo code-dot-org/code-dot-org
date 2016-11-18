@@ -15,7 +15,6 @@ var instructions = require('../../redux/instructions');
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
     // props provided via connect
-    showInstructions: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
 
     setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired,
@@ -94,7 +93,7 @@ var InstructionsWithWorkspace = React.createClass({
   render() {
     return (
       <span>
-        {this.props.showInstructions && <TopInstructions/>}
+        <TopInstructions/>
         <CodeWorkspaceContainer
           ref="codeWorkspaceContainer"
           topMargin={this.props.instructionsHeight}
@@ -108,7 +107,6 @@ var InstructionsWithWorkspace = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    showInstructions: state.pageConstants.instructionsInTopPane,
     instructionsHeight: state.instructions.renderedHeight
   };
 }, function propsFromDispatch(dispatch) {
