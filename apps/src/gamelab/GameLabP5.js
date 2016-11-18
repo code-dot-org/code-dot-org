@@ -115,8 +115,15 @@ GameLabP5.prototype.init = function (options) {
         }
 
         var touches = [];
+        var touchIndex = 0;
         for (var i = 0; i < e.touches.length; i++) {
-          touches[i] = getTouchInfo(this._curElement.elt, e, i);
+          // Only some touches are valid - only push valid touches into the
+          // array for the `touches` property.
+          touchInfo = getTouchInfo(this._curElement.elt, e, i);
+          if (touchInfo) {
+            touches[touchIndex] = touchInfo;
+            touchIndex++;
+          }
         }
         this._setProperty('touches', touches);
       }
