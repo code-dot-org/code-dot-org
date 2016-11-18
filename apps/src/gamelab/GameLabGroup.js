@@ -11,7 +11,7 @@ module.exports.Group = function (baseConstructor) {
    * Create new helper called _groupCollideGameLab() which can be called as a
    * stateful nativeFunc by the interpreter. This enables the native method to
    * be called multiple times so that it can go asynchronous every time it
-   * (or any native function that it calls, such as AABBops) wants to execute
+   * (or any native function that it calls, such as _collideWith) wants to execute
    * a callback back into interpreter code. The interpreter state object is
    * retrieved by calling JSInterpreter.getCurrentState().
    *
@@ -41,13 +41,13 @@ module.exports.Group = function (baseConstructor) {
     }
     if (state.__i < this.size()) {
       if (!state.__subState) {
-        // Before we call AABBops (another stateful function), hang a __subState
+        // Before we call _collideWith (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
         state.__subState = { doneExec: true };
       }
-      var resultAABBops = this.get(state.__i).AABBops(type, target, callback);
+      var result_collideWith = this.get(state.__i)._collideWith(type, target, callback);
       if (state.__subState.doneExec) {
-        state.__didCollide = resultAABBops || state.__didCollide;
+        state.__didCollide = result_collideWith || state.__didCollide;
         delete state.__subState;
         state.__i++;
       }
@@ -85,7 +85,7 @@ module.exports.Group = function (baseConstructor) {
     }
     if (state.__i < this.size()) {
       if (!state.__subState) {
-        // Before we call Sprite.isTouching which calls AABBops (another stateful function),
+        // Before we call Sprite.isTouching which calls _collideWith (another stateful function),
         // hang a __subState off of state, so it can use that instead to track its state:
         state.__subState = { doneExec: true };
       }
