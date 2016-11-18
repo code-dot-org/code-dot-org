@@ -449,7 +449,13 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     #  "0m1.548s\n"]
 
     lines = output_text.lines
-    return lines.map { |line| "#{log_prefix}#{line}" }.join
+
+    failing_scenarios = lines.rindex("Failing Scenarios:\n")
+    if failing_scenarios
+      return lines[failing_scenarios..-1].map { |line| "#{log_prefix}#{line}" }.join
+    else
+      return lines.last(3).map { |line| "#{log_prefix}#{line}" }.join
+    end
   end
 
   def how_many_reruns?(test_run_string)
