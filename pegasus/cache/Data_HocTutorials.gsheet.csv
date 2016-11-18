@@ -965,3 +965,45 @@ CCSS Math: MP.3.2, MP.3.8, MD.4.5, NF.4.7
 CSTA: L1:6.CT.1, L1:6.CPP.5, L1:6.CPP.6, L2:9.CT.1, L2:9.CT.3, L2:9.CT.5, L2:9.CT.12, L2:9.CPP.3, L2:9.CPP.5"
 1,248,codeintl,Write your first computer program,Code.org,http://studio.code.org/s/2/reset,Learn to code with Mark Zuckerberg and Angry Birds!,"Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.","Modern browsers, smartphones, tablets.",Ages 4-104,/images/codehoc3.jpg,"codeintl,2015-tutorial,do-not-show",https://code.org/hourofcode/hourofcode,"Azerbaijani, Serbian","az,sr",cintl,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show
 1,249,minecraft,Minecraft Hour of Code,Code.org,http://studio.code.org/s/mc-events/reset,"Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.","Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.","Modern browsers, smartphones, tablets.",Ages 6+,/images/mc/MC_Panorama_Stack_V2.jpg,"2016-tutorial,do-not-show",,Multiple,en,minecraft-2016,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show,do-not-show
+580,250,persistence,Persistence: Building a Foundation,Code.org,https://studio.code.org/s/course1/stage/9/puzzle/1,"This lesson teaches that failure is not the end of a journey, but a hint for how to succeed.","New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. This lesson teaches that failure is not the end of a journey, but a hint for how to succeed.",Unplugged,Pre-reader+,/images/tutorials/new/persistence.png,2016-tutorial,,English only,en,persistence,"pre,2-5,6-8,9+",Pre-reader+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+1000,251,getting_loopy,Getting Loopy,Code.org,https://studio.code.org/s/course1/stage/12/puzzle/1,"In this lesson, students will practice converting sets of actions into a single loop.","Loops are a handy way of describing actions that repeat a certain numbers of times. In this lesson, students will practice converting sets of actions into a single loop.",Unplugged,Pre-reader+,/images/tutorials/new/getting_loopy.png,2016-tutorial,,English only,en,getloopy,"pre,2-5,6-8,9+",Pre-reader+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+790,252,create_face,Create-a-Face,CAS London,https://teachinglondoncomputing.files.wordpress.com/2014/02/activity-create-a-face.pdf,"This is an exploration of affective computing, which relates to moods and emotions. The class makes an affective (relating to moods and emotions) robot face out of card, tubes and themselves.",The aim of this activity is to demonstrate how apparently complicated behaviour can be programmed using some simple rules. It also shows how programs are just rules followed by computers and specifically introduces object-based programming. The activity shows how breaking a program into objects can be much easier to write than trying to write it in one go. The class get to write some simple programs to control the face they created.,Unplugged,Grades 2+,/images/tutorials/new/create_face.png,2016-tutorial,,English only,en,createface,"2-5,6-8,9+",Grades 2+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+860,253,happy_maps,Happy Maps,Code.org,https://studio.code.org/s/course1/stage/1/puzzle/1,Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.,"At the root of all computer science is something called an algorithm. The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result. To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms.",Unplugged,Pre-reader+,/images/tutorials/new/happy_maps.png,2016-tutorial,,English only,en,happymaps,"pre,2-5,6-8,9+",Pre-reader+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+890,254,move_it,"Move it, Move it!",Code.org,https://studio.code.org/s/course1/stage/2/puzzle/1,Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.,"This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures. Once they understand the language, they will begin to ""program"" one another by giving multiple instructions in advance.",Unplugged,Pre-reader+,/images/tutorials/new/move_it.png,2016-tutorial,,English only,en,moveit,"pre,2-5,6-8,9+",Pre-reader+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+960,255,big_event,The Big Event,Code.org,https://studio.code.org/s/course1/stage/15/puzzle/1,"Students are introduced to the programming concept of ""events,"" which are actions that a computer constantly monitors for.",Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.,Unplugged,Pre-reader+,/images/tutorials/new/big_event.png,2016-tutorial,,English only,en,bigevent,"pre,2-5,6-8,9+",Pre-reader+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+960,256,graph_paper_programming,Graph Paper Programming,Code.org,https://studio.code.org/s/course2/stage/1/puzzle/1,Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing.,"By ""programming"" one another to draw pictures, students will begin to understand what programming is really about. The activity will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture.",Unplugged,Grades 2+,/images/tutorials/new/graph_paper_programming.png,2016-tutorial,,English only,en,gpp,"2-5,6-8,9+",Grades 2+,beginner,beginner,lesson-plan,cs-only,"no-computers,no-internet",Unplugged ,Unplugged,1hour,other,Language independent,
+1530,257,foos_gamemaker,codeSpark Academy with The Foos - Game Maker,codeSpark,http://thefoos.com/hour-of-code/,Design and code your own video game with codeSpark Academy with The Foos.,Code your own video game with codeSpark Academy with The Foos’ new Game Kits. This activity guides students brand new to game design using a “paint-by-numbers” approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends.,2016-tutorial,Pre-reader - Grade 5,/images/tutorials/new/codeSpark_foos_gamemaker.jpg,2016-tutorial,,"English, Arabic, German, Spanish, French, Japanese, Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional Chinese, Simplified Chinese, Greek, Italian, Polish","en,ar,de,es,fr,ja,ko,nl,pt-PT,pt-BR,ro,tr,zh-CN,zh-TW,el,it,pl",foosgame,"pre,2-5",Pre-reader - Grade 5,beginner,beginner,online-tutorial,art,"android,ios,no-internet","Android tablet, iPad, Android phone, iPhone",,1hour,blocks,Blocks,"CSTA:
+CSTA 1A-A-5-2
+CSTA 1A-A-4-4
+CSTA 1A-A-3-5
+CSTA 1A-A-3-6
+CSTA 1A-A-3-7
+CSTA 1A-C-7-9
+CSTA 1A-N-2-16
+CSTA 1B-A-5-4
+CSTA 1B-A-3-7
+Common Core Math:
+CCSS.Math.Practice.MP1
+CCSS.Math.Practice.MP2
+CCSS.Math.Practice.MP4
+CCSS.Math.Practice.MP6
+CCSS.Math.Practice.MP7
+CCSS.Math.Practice.MP8
+CCSS.Math.Content.K.MD.B.3
+National Core Arts Standards:
+MA:Cr1.1.K
+MA:Cr2.1.K
+MA:Cr3.1.1.a
+MA:Cr3.1.1.b
+MA:Pr5.1.1.a
+MA:Pr5.1.1.b
+ISTE:
+EmpoweredLearner-a1
+EmpoweredLearner-4d
+EmpoweredLearner-c1
+ComputationalThinker-5a
+ComputationalThinker-5c
+ComputationalThinker-5d
+CreativeCommunicator-6b
+CreativeCommunicator-6d
+GlobalCollaborator-7a"

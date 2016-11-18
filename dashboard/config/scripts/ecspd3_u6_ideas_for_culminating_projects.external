@@ -1,15 +1,11 @@
 name 'ECSPD3-u6 ideas for culminating projects' 
 css 'unplugged'
 markdown <<MARKDOWN
-# Alternative Ideas for Unit 6 > Ideas for Culminating Projects, Portfolios, Etc.
-
-## Concepts Covered
-
-End of year projects, portfolios, articles or videos for reflection.
+# Ideas for Culminating Projects, Portfolios, Etc.
 
 ## Overview
 
-As you are considering an end of year final project, portfolio or reflection piece that would demonstrate students understanding of the curriculum, you will want to consider a project that brings in the three strands of ECS, the computational thinking practices, and the process of problem solving.
+As you are considering an end of year final project, portfolio, or reflection piece that would demonstrate students understanding of the curriculum, you will want to consider a project that brings in the three strands of ECS, the computational thinking practices, and the process of problem solving.
 
 Let's take a look at some possible curriculum connections to the units.
 Unit 1 - Explore ethical issues relating to technology, privacy or security. 
@@ -41,8 +37,6 @@ A great resource that was recently shared on the CS10K Community by Leslie Aaron
 - <a href="https://www.youtube.com/watch?v=l5Tw0PGcyN0"target=_blank>Pitch Day</a>
 - <a href="https://docs.google.com/document/d/1TxaHXQFekZpL9q-iUtTnICiTAmt6u7WfQxtp3fvrq8Q/edit"target=_blank>Pitch Day for Industry leaders</a>
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/l5Tw0PGcyN0" frameborder="0" allowfullscreen></iframe>	
-
 ### Portfolio
 
 Have students create portfolio using PowerPoint or web site, where the students have a slide or pages dedicated to one unit or all units on that slide show artifacts and a description of what they learned and why they chose that one.
@@ -55,7 +49,4 @@ Have students create portfolio using PowerPoint or web site, where the students 
 	- <a href="https://docs.google.com/document/d/1z7ORyOnks3s0CNKYS1fykZ8dxW3rqIZbxY6tqALS4EM/edit"target=_blank>Tell A Story With Data</a>
 	- <a href="https://docs.google.com/document/d/1zmN9u0qbuJGXSOLbjDawDpDLaoSDRywkqX-6vXTCJkU/edit"target=_blank>Propose and Innovation</a>
 
-Click “Continue” below to learn about the next lesson.  
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
