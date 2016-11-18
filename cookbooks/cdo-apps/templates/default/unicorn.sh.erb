@@ -33,6 +33,12 @@ oldsig () {
 }
 
 run () {
+<% if node['cdo-apps']['nginx_enabled'] %>
+  if [ ! -d "/run/unicorn" ]
+  then
+      mkdir -p /run/unicorn; chown ${AS_USER}: /run/unicorn
+  fi
+<% end %>
   if [ "$(id -un)" = "$AS_USER" ]; then
     eval $1
   else
@@ -42,12 +48,6 @@ run () {
 
 case $action in
 start)
-<% if node['cdo-apps']['nginx_enabled'] %>
-        if [ ! -d "/run/unicorn" ]
-        then
-            mkdir -p /run/unicorn; chown ${AS_USER}: /run/unicorn
-        fi
-<% end %>
         sig 0 && echo >&2 "Already running" && exit 0
         run "$CMD"
         ;;

@@ -146,8 +146,6 @@ Calc.init = function (config) {
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
 
-  config.showInstructionsInTopPane = true;
-
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
