@@ -85,7 +85,7 @@ namespace :ci do
       HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
     rescue
       # During migration, don't abort the actual deploy if canary stack-update fails for any reason.
-      HipChat.log "Stack update failed!\nFor further debugging, see the 'Events' tab of the #{CDO.stack_name} stack in the AWS Management Console.", color: 'red'
+      HipChat.log "See 'Events' tab of '#{CDO.stack_name}' stack in the AWS Console for details.\n", color: 'gray'
     end
   end
 
