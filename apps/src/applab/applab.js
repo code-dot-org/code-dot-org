@@ -17,9 +17,9 @@ import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
-import FirebaseStorage from './firebaseStorage';
-import { getColumnsRef, onColumnNames, addMissingColumns } from './firebaseMetadata';
-import { getDatabase } from './firebaseUtils';
+import { initFirebaseStorage } from '../storage/firebaseStorage';
+import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
+import { getDatabase } from '../storage/firebaseUtils';
 import experiments from "../util/experiments";
 import apiTimeoutList from '../timeoutList';
 import designMode from './designMode';
@@ -42,22 +42,29 @@ import * as actions from './actions';
 import { changeScreen } from './redux/screens';
 var changeInterfaceMode = actions.changeInterfaceMode;
 import * as applabConstants from './constants';
-const { ApplabInterfaceMode, DataView } = applabConstants;
+const { ApplabInterfaceMode } = applabConstants;
+import { DataView } from '../storage/constants';
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
-import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from './redux/data';
+import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import {
+  outputError,
+  injectErrorHandler
+} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
 /**
  * Create a namespace for the application.
+ * @implements LogTarget
  */
 const Applab = {};
 export default Applab;
@@ -90,11 +97,6 @@ Applab.log = function (object) {
 };
 consoleApi.setLogMethod(Applab.log);
 
-import errorHandler from '../errorHandler';
-errorHandler.setLogMethod(Applab.log);
-var outputError = errorHandler.outputError;
-var ErrorLevel = errorHandler.ErrorLevel;
-
 var level;
 var skin;
 var copyrightStrings;
@@ -118,8 +120,6 @@ var twitterOptions = {
 // The unscaled dimensions of the visualization area
 var vizAppWidth = 400;
 var VIZ_APP_HEIGHT = 400;
-
-var hasSeenRateLimitAlert = false;
 
 function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
@@ -449,7 +449,7 @@ function queueOnTick() {
 }
 
 function handleExecutionError(err, lineNumber) {
-  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  outputError(String(err), lineNumber);
   Applab.executionError = { err: err, lineNumber: lineNumber };
 
   // complete puzzle, which will prevent further execution
@@ -549,11 +549,14 @@ Applab.init = function (config) {
       'You may need to sign in to your code studio account first.');
   }
   Applab.channelId = config.channel;
-  Applab.firebaseName = config.firebaseName;
-  Applab.firebaseAuthToken = config.firebaseAuthToken;
-  Applab.firebaseChannelIdSuffix = config.firebaseChannelIdSuffix || '';
   var useFirebase = window.dashboard.project.useFirebase() || false;
-  Applab.storage = useFirebase ? FirebaseStorage : AppStorage;
+  Applab.storage = useFirebase ? initFirebaseStorage({
+    channelId: config.channel,
+    firebaseName: config.firebaseName,
+    firebaseAuthToken: config.firebaseAuthToken,
+    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+    showRateLimitAlert: studioApp.showRateLimitAlert
+  }) : AppStorage;
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
 
@@ -568,7 +571,7 @@ Applab.init = function (config) {
   level = config.level;
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
-    applabUserId: config.applabUserId,
+    labUserId: config.labUserId,
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };
@@ -601,6 +604,12 @@ Applab.init = function (config) {
   if (showDebugButtons || showDebugConsole) {
     debuggerUi = new JsDebuggerUi(Applab.runButtonClick, studioApp.reduxStore);
   }
+
+  // Set up an error handler for student errors and warnings.
+  injectErrorHandler(new JavaScriptModeErrorHandler(
+    () => Applab.JSInterpreter,
+    Applab
+  ));
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.failureSound, 'failure');
@@ -699,7 +708,6 @@ Applab.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   Applab.storage.populateTable(level.dataTables, false); // overwrite = false
@@ -1627,27 +1635,6 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
-};
-
-Applab.showRateLimitAlert = function () {
-  // only show the alert once per session
-  if (hasSeenRateLimitAlert) {
-    return false;
-  }
-  hasSeenRateLimitAlert = true;
-
-  var alert = <div>{applabMsg.dataLimitAlert()}</div>;
-  if (studioApp.share) {
-    studioApp.displayPlayspaceAlert("error", alert);
-  } else {
-    studioApp.displayWorkspaceAlert("error", alert);
-  }
-
-  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: window.dashboard.project.isEditing(),
-    isOwner: window.dashboard.project.isOwner(),
-    share: !!studioApp.share,
-  });
 };
 
 Applab.getAppReducers = function () {

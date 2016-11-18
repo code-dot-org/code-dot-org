@@ -16,11 +16,11 @@ and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits
 cd apps
 
 # Machine setup (OSX with Homebrew)
-brew install node
+brew install node yarn
 npm install -g grunt-cli
 
 # Perform first full build
-npm install
+yarn
 npm run build
 ```
 

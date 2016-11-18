@@ -190,8 +190,6 @@ Artist.prototype.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = true;
-
   if (this.skin.id === "anna") {
     this.avatarWidth = 73;
     this.avatarHeight = 100;

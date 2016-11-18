@@ -335,6 +335,7 @@ module AWS
           CloudFrontDefaultCertificate: true,
           MinimumProtocolVersion: 'TLSv1' # accepts SSLv3, TLSv1
         },
+        HttpVersion: 'http2'
       }.to_json
     end
 

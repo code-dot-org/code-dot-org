@@ -44,6 +44,9 @@ OptionParser.new do |opts|
   opts.on('--whole-lines', TrueClass, 'Print entire lines of found strings in output') do |is_true|
     options[:whole_lines] = is_true
   end
+  opts.on('--count', TrueClass, 'Counts number of found strings in output') do |is_true|
+    options[:count] = is_true
+  end
   opts.on('--grep-container ', String, 'Search given container # for grep string') do |grep_container|
     options[:grep_container] = grep_container.to_i
   end
@@ -85,7 +88,12 @@ Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
     begin
       full_output_string = output[0]['message']
       if full_output_string.include? known_fail[:search_string]
-        if options[:whole_lines]
+        if options[:count]
+          count = full_output_string.split("\n").count do |line|
+            line.include? known_fail[:search_string]
+          end
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains #{count} of: #{known_fail[:search_string]}"
+        elsif options[:whole_lines]
           lines = []
           full_output_string.split("\n").each do |line|
             lines << line if line.include? known_fail[:search_string]

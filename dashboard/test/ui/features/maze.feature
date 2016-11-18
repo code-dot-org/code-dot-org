@@ -4,7 +4,8 @@ Background:
   Given I am on "http://studio.code.org/reset_session"
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/15?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   And element ".csf-top-instructions p" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
 @no_mobile
@@ -25,8 +26,8 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  Then I wait until element "#runButton" is visible
-  And element "#resetButton" is hidden
+  When I wait for the page to fully load
+  Then element "#resetButton" is hidden
   Then I drag block "4" to block "6"
   And I drag block "1" to block "7" plus offset 35, 50
   Then block "8" is child of block "7"
