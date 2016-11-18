@@ -3,30 +3,30 @@ import Lightbulb from './Lightbulb';
 
 import { connect } from 'react-redux';
 
-var HintDisplayLightbulb = React.createClass({
+const HintDisplayLightbulb = React.createClass({
   propTypes: {
     unseenHints: React.PropTypes.arrayOf(React.PropTypes.object),
     isMinecraft: React.PropTypes.bool
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {
       shouldAnimate: false
     };
   },
 
-  getCount: function () {
+  getCount() {
     return this.props.unseenHints.length;
   },
 
-  componentWillReceiveProps: function (nextProps) {
+  componentWillReceiveProps(nextProps) {
     const receivingNewHints = nextProps.unseenHints.length > this.getCount();
     this.setState({
       shouldAnimate: receivingNewHints
     });
   },
 
-  render: function () {
+  render() {
     return (
       <div id="lightbulb">
         <Lightbulb
