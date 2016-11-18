@@ -449,13 +449,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     #  "0m1.548s\n"]
 
     lines = output_text.lines
-
-    failing_scenarios = lines.rindex("Failing Scenarios:\n")
-    if failing_scenarios
-      return lines[failing_scenarios..-1].map { |line| "#{log_prefix}#{line}" }.join
-    else
-      return lines.last(3).map { |line| "#{log_prefix}#{line}" }.join
-    end
+    return lines.map { |line| "#{log_prefix}#{line}" }.join
   end
 
   def how_many_reruns?(test_run_string)
@@ -516,6 +510,8 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   if !succeeded && $options.html
     HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}"
   end
+
+  HipChat.log output_stderr, {wrap_with_tag: 'pre'}
 
   while !succeeded && (reruns < max_reruns)
     reruns += 1
