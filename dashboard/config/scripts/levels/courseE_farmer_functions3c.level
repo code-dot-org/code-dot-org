@@ -32,8 +32,8 @@
     "markdown_instructions": "*\"I feel so functional!\"*\r\n\r\nLet's make this easier by building a function to check for produce and pick it when it is available.  Make sure you call your function from inside the `while path ahead` loops.",
     "authored_hints": "[]",
     "callout_json": "[]",
-    "contained_level_names": null,
-    "step_speed": "1"
+    "step_speed": "1",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
