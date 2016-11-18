@@ -24,6 +24,13 @@ class StudioPersonTest < ActiveSupport::TestCase
       @studio_person.emails_as_array
   end
 
+  def test_add_email_when_blank
+    student = create :student
+    @studio_person.add_email('')
+    assert_nil student.reload.studio_person_id
+    assert_equal [], @studio_person.emails_as_array
+  end
+
   def test_add_email_when_new
     @studio_person.add_email(NEW_EMAIL)
     assert_equal [NEW_EMAIL], @studio_person.emails_as_array

@@ -16,4 +16,19 @@ class ScriptConfig
   def self.cached_scripts
     HttpCache.cached_scripts
   end
+
+  # Returns the names of the scripts affected by the 'Scale Mode' feature setting.
+  def self.scale_mode_scripts
+    cached_scripts + %w(
+      20-hour
+      course1
+      course2
+      course3
+      course4
+      playlab
+      artist
+      infinity
+      iceage
+    )
+  end
 end
