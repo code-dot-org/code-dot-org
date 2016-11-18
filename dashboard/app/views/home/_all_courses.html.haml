@@ -1,4 +1,5 @@
 - show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
+- page_mode = PageMode.get(request)
 - if page_mode == "feature-minecraft2016"
   - first_tutorial = Script::MINECRAFT_DESIGNER_NAME
   - second_tutorial = Script::STARWARS_NAME

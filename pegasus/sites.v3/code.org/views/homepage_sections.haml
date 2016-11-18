@@ -4,8 +4,9 @@
     - display = block[:active_s] == "hide" ? "none" : "block"
     .block{style: "display: #{display}"}
       - hoc_block = block[:id_s] == "block_hoc" || block[:id_s] == "blockshort_hoc_noten"
-      // if main hero is mc, then hoc block is star wars
-      - if hoc_block && (page_mode == "feature-minecraft2016" || page_mode == "feature-mc")
+      -# If we're featuring mc, then hoc block is star wars.
+      -# If we're featuring star wars, then hoc block is mc.
+      - if hoc_block && page_mode == "feature-minecraft2016"
         - block[:image_t] = "/shared/images/courses/logo_tall_starwars_footer.jpg"
       - elsif hoc_block && page_mode == "feature-starwars"
         - block[:image_t] = "/images/mc/2016_homepage_hocblock.jpg"

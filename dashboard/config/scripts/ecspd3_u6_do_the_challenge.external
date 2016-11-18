@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 do the challenge'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Challenge > Do the Challenge
+# Do the Challenge
 
 It's time to go read the lesson plan and complete the activities related to your lesson!
 
@@ -25,7 +25,4 @@ It's time to go read the lesson plan and complete the activities related to your
  - How you plan to structure your final unit (details on what types of activities students will do, what skills they will build, etc). 
  - Overview of and links to resources and materials you plan use in your final unit. 
 
-When you're finished reading your lesson plan and completing the levels, come back and hit 'Continue'!
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

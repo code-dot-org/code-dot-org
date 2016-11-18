@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 list of challenges'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Challenge  > List of Challenges
+# Unit 6 Challenge Options
 
 ## Teaching Unit 6 from the Curriculum?
 
@@ -40,7 +40,4 @@ If you don't have robots and aren't able to complete Unit 6 as written, use your
 - <a href="https://studio.code.org/s/ECSPD3-Unit6/stage/4/puzzle/3" target=_blank>Online  simulations and other physical computing options</a>
 - <a href="https://studio.code.org/s/ECSPD3-Unit6/stage/4/puzzle/4" target=_blank>Projects and portfolios</a>
 
-Once you've selected a challenge topic, click **continue** below.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

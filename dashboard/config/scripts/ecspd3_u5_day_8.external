@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 8'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 8
+# Unit 5 Lessons > Day 8
 
 ## Concepts Covered
 
@@ -18,7 +18,4 @@ Day 8 is a check in day to talk about any issues arising with the data collectio
 > ## Hints from an ECS Teacher:
 While students are narrowing down their questionnaires, remind them of the types of realizations they had during about how data is formatted or reported in the "room happiness activity". This should guide the types of questions they put into their final survey and by extension the types of data they collect. 
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

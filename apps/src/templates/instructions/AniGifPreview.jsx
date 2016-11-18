@@ -6,9 +6,6 @@ import { openDialog } from '../../redux/instructionsDialog';
 const styles = {
   wrapper: {
     display: 'inline-block',
-    position: 'absolute'
-  },
-  wrapperTopPane: {
     position: 'relative'
   },
   aniGifPreview: url => ({
@@ -26,7 +23,6 @@ const styles = {
 const AniGifPreview = React.createClass({
   propTypes: {
     url: React.PropTypes.string.isRequired,
-    instructionsInTopPane: React.PropTypes.bool.isRequired,
     showInstructionsDialog: React.PropTypes.func.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
   },
@@ -35,7 +31,7 @@ const AniGifPreview = React.createClass({
     return (
       <div
         id="ani-gif-preview-wrapper"
-        style={[styles.wrapper, this.props.instructionsInTopPane && styles.wrapperTopPane]}
+        style={styles.wrapper}
       >
         <div
           id="ani-gif-preview"
@@ -43,7 +39,7 @@ const AniGifPreview = React.createClass({
               styles.aniGifPreview(this.props.url),
               this.props.noVisualization && styles.bigPreview
             ]}
-          onClick={this.props.instructionsInTopPane ? this.props.showInstructionsDialog : undefined}
+          onClick={this.props.showInstructionsDialog}
         />
       </div>
     );
@@ -53,7 +49,6 @@ const AniGifPreview = React.createClass({
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
   noVisualization: state.pageConstants.noVisualization,
-  instructionsInTopPane: state.pageConstants.instructionsInTopPane
 }), dispatch => ({
   showInstructionsDialog() {
     dispatch(openDialog({
