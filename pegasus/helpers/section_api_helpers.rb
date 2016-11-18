@@ -252,6 +252,14 @@ class DashboardSection
         end
   end
 
+  def self.progress_disabled_courses(user_id = nil)
+    disabled_courses = valid_courses(user_id).select do |course|
+      script_name = Script.find(course[:id]).name
+      !Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+    end
+    disabled_courses.map{|course| course[:id]}
+  end
+
   def self.valid_course_id?(course_id)
     valid_courses.find{|course| course[:id] == course_id.to_i}
   end
