@@ -22,7 +22,7 @@ const Lightbulb = React.createClass({
     style: React.PropTypes.object
   },
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
       shouldAnimate: false,
       count: 0,
@@ -32,7 +32,7 @@ const Lightbulb = React.createClass({
     };
   },
 
-  render: function () {
+  render() {
     const lines = this.props.lit ? [
       <g key="line-0">
         <line fill="#EFB834" x1="473.582" y1="208.1" x2="560.578" y2="159.16"/>
