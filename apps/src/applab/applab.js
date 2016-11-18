@@ -571,7 +571,7 @@ Applab.init = function (config) {
   level = config.level;
   copyrightStrings = config.copyrightStrings;
   Applab.user = {
-    applabUserId: config.applabUserId,
+    labUserId: config.labUserId,
     isAdmin: (config.isAdmin === true),
     isSignedIn: config.isSignedIn
   };

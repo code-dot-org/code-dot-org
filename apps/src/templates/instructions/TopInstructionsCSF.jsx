@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
+import classNames from 'classnames';
 import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
@@ -20,6 +21,7 @@ import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import HintDisplayLightbulb from '../HintDisplayLightbulb';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
@@ -525,9 +527,13 @@ var TopInstructions = React.createClass({
             ]}
           >
             <div
-              className="prompt-icon-cell"
+              className={classNames({
+                  "prompt-icon-cell": true,
+                  "authored_hints": this.props.hasAuthoredHints
+                })}
               onClick={this.handleClickBubble}
             >
+              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
               {this.getAvatar() &&
                 <PromptIcon src={this.getAvatar()} ref="icon"/>
               }

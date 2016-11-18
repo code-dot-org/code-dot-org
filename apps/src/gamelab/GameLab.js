@@ -25,6 +25,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
 var dom = require('../dom');
+import { initFirebaseStorage } from '../storage/firebaseStorage';
 
 import {
   setInitialAnimationList,
@@ -172,6 +173,15 @@ GameLab.prototype.init = function (config) {
   config.usesAssets = true;
 
   gameLabSprite.injectLevel(this.level);
+
+  this.studioApp_.labUserId = config.labUserId;
+  this.studioApp_.storage = initFirebaseStorage({
+    channelId: config.channel,
+    firebaseName: config.firebaseName,
+    firebaseAuthToken: config.firebaseAuthToken,
+    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+    showRateLimitAlert: this.studioApp_.showRateLimitAlert
+  });
 
   this.gameLabP5.init({
     gameLab: this,

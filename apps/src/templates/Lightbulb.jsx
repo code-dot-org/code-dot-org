@@ -1,6 +1,17 @@
 import React from 'react';
 import color from "../util/color";
 
+const styles = {
+  count: {
+    fontWeight: 'bold',
+    fontSize: '400px',
+    fill: color.white,
+    stroke: color.black,
+    strokeWidth: '30px',
+    fontFamily: 'Verdana, Geneva, sans-serif',
+  }
+};
+
 const Lightbulb = React.createClass({
 
   propTypes: {
@@ -12,7 +23,7 @@ const Lightbulb = React.createClass({
     isMinecraft: React.PropTypes.bool,
   },
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
       shouldAnimate: false,
       count: 0,
@@ -22,18 +33,7 @@ const Lightbulb = React.createClass({
     };
   },
 
-  getHintCountStyle: function () {
-    return {
-      fontWeight: 'bold',
-      fontSize: '400px',
-      fill: color.white,
-      stroke: color.black,
-      strokeWidth: '30px',
-      fontFamily: 'Verdana, Geneva, sans-serif',
-    };
-  },
-
-  render: function () {
+  render() {
     let bulbDisplay;
 
     if (this.props.isMinecraft) {
@@ -203,7 +203,6 @@ const Lightbulb = React.createClass({
         </g>
         {lines}
       </g>);
-
     }
 
     let countDisplay;
@@ -211,14 +210,21 @@ const Lightbulb = React.createClass({
       // If there are more than nine hints, simply display "9+"
       const countText = (this.props.count > 9) ? "9+" : this.props.count;
       countDisplay = (<g>
-        <text id="hintCount" x="400" y="700" style={this.getHintCountStyle()} >{countText}</text>
+        <text id="hintCount" x="400" y="700" style={styles.count} >{countText}</text>
       </g>);
     }
 
-    return (<svg width={this.props.size} height={this.props.size} style={this.props.style} viewBox="0 0 612 792">
-      {bulbDisplay}
-      {countDisplay}
-    </svg>);
+    return (
+      <svg
+        width={this.props.size}
+        height={this.props.size}
+        style={this.props.style}
+        viewBox="0 0 612 792"
+      >
+        {bulbDisplay}
+        {countDisplay}
+      </svg>
+    );
   }
 });
 

@@ -7973,7 +7973,7 @@ pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
 
-performance-now@~0.2.0:
+performance-now@^0.2.0, performance-now@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
@@ -8693,6 +8693,13 @@ react-modal@^1.2.1:
     exenv "1.2.0"
     lodash.assign "^3.2.0"
 
+react-motion@0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.4.5.tgz#ecc42f692fec9b2de4c92f85e26375071f779b76"
+  dependencies:
+    performance-now "^0.2.0"
+    raf "^3.1.0"
+
 react-onclickoutside@^4.8.0:
   version "4.9.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-4.9.0.tgz#2908c3136e244102bea5e5437a838a528d5d2995"
@@ -8745,7 +8752,7 @@ react-router@2.6.0:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react-select@^1.0.0-beta14:
+react-select@^1.0.0-beta14, react-select@^1.0.0-rc.1:
   version "1.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.2.tgz#9fc11b149a3dc1ac831289d21b40a59742f82f8d"
   dependencies:
