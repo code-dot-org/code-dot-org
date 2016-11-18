@@ -61,7 +61,7 @@ const TutorialSet = React.createClass({
           disabledTutorial={disabledTutorial}
           changeTutorial={this.changeTutorial}
         />
-        {this.props.tutorials.length > 0 && this.props.tutorials.map(item => (
+        {this.props.tutorials.map(item => (
           <Tutorial
             item={item}
             filters={this.props.filters}
