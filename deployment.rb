@@ -70,7 +70,7 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    'npm_use_sudo'                => ((![:development, :adhoc].include?(rack_env)) && OS.linux?),
     'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
