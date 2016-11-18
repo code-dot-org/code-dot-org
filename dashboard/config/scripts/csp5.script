@@ -132,6 +132,7 @@ stage 'If statements'
 level 'U5 video Booleans'
 named_level 'Boolean Expressions and Comparison Operators'
 level 'CSPU5_U3L18 comparison operators'
+level 'If and If-Else part 1'
 named_level 'How If Statements Work pt 1'
 
 stage 'Introduction to Digital Assistants'
