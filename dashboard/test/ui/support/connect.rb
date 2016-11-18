@@ -18,8 +18,8 @@ class Selenium::WebDriver::Driver
       execute_script_without_retry(script, *args)
     rescue Net::HTTP::Persistent::Error => e
       raise unless e.message =~ /too many connection resets/
-      $stderr.puts "WARNING: 'too many connection resets.' retrying execute_script(#{script.dump})"
-      if retry_count >= MAX_RESET_RETRIES
+      if retry_count <= MAX_RESET_RETRIES
+        $stderr.puts "WARNING: 'too many connection resets.' retrying execute_script(#{script.dump})"
         retry_count += 1
         retry
       end
