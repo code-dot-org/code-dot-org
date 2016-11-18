@@ -1,6 +1,7 @@
 namespace :adhoc do
   task :environment do
     require_relative '../../deployment'
+    CDO.stack_name = nil
     CDO.chef_local_mode = !ENV['CHEF_SERVER']
     if CDO.chef_local_mode
       ENV['RAILS_ENV'] = ENV['RACK_ENV'] = 'adhoc'
