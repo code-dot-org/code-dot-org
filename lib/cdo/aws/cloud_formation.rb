@@ -151,7 +151,16 @@ module AWS
         start_time = Time.now
         options = stack_options(template)
         options[:on_failure] = 'DO_NOTHING' if action == :create
-        updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
+        begin
+          updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          if e.message == 'No updates are to be performed.'
+            CDO.log.info e.message
+            return
+          else
+            raise e
+          end
+        end
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
         cfn.describe_stacks(stack_name: updated_stack_id).stacks.first.outputs.each do |output|
