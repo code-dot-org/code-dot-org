@@ -5,6 +5,12 @@ require 'dynamic_config/gatekeeper'
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'
 CARTOON_NETWORK = 'CN'
 
+ACTIVITY_TRACKING_SOURCES = {
+  HOC: 'hoc',
+  LEARN: 'learn',
+  PIXEL: 'pixel'
+}.freeze
+
 # Creates a session row and sets the hour of code cookie to the session_id,
 # if the user is assigned to the sample set (as decided by a random choice
 # based on the reciprocal of the hoc_activity_sample_weight DCDO variable).
@@ -151,6 +157,22 @@ def launch_tutorial(tutorial, params={})
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
       company: params[:company],
+      source: ACTIVITY_TRACKING_SOURCES[:HOC],
+      started_at: DateTime.now,
+      started_ip: request.ip,
+    )
+  end
+
+  dont_cache
+  redirect tutorial[:url], 302
+end
+
+def launch_tutorial_learn(tutorial)
+  unless settings.read_only || unsampled_session?
+    create_session_row_unless_unsampled(
+      referer: request.referer_site_with_port,
+      tutorial: tutorial[:code],
+      source: ACTIVITY_TRACKING_SOURCES[:LEARN],
       started_at: DateTime.now,
       started_ip: request.ip,
     )
@@ -173,6 +195,7 @@ def launch_tutorial_pixel(tutorial)
         referer: request.host_with_port,
         tutorial: tutorial[:code],
         company: params[:company],
+        source: ACTIVITY_TRACKING_SOURCES[:PIXEL],
         pixel_started_at: DateTime.now,
         pixel_started_ip: request.ip,
       )

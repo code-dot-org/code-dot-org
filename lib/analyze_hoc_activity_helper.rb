@@ -63,7 +63,7 @@ def rank_tutorials(end_date)
     memo[key] = {}
     start_date = end_date - num_days.days
     PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(start_date, end_date: end_date, tutorial_pixel: false)} GROUP BY tutorial ORDER BY count DESC"
+      "SELECT tutorial, #{WEIGHTED_COUNT} #{generate_from_where(start_date, end_date: end_date, tutorial_pixel: false)} AND source='learn' GROUP BY tutorial ORDER BY count DESC"
     ).each_with_index do |row, index|
       next if row[:tutorial].nil_or_empty?
       memo[key][row[:tutorial]] = index + 1
