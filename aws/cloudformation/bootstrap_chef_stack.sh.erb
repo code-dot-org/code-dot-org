@@ -1,25 +1,20 @@
 #!/bin/bash -x
 # UserData bootstrap script for CloudFormation stack instances.
-# Note: Minimize changes to this script! Every time its contents change,
-# the next CloudFormation update will reboot all servers using this script.
+
+# Modify cloud-init to re-run this user-data script every time instance restarts.
+# Ref: http://stackoverflow.com/a/10455027
+sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
 
 # Bootstrap prerequisites
 apt-get update
+unattended-upgrade
 apt-get -y install python3-pip curl
 test "$(pip3 show awscli)" || pip3 install awscli
 
 STACK=<%=stack_name%>
+CHEF_VERSION=12.7.2
 REGION=<%=region%>
-
-function ref() {
-  aws cloudformation describe-stack-resources \
-    --stack-name=${STACK} \
-    --logical-resource-id=$1 \
-    --output=text \
-    --region ${REGION} \
-    | cut -f3
-}
-
+BRANCH=<%=branch%>
 S3_BUCKET=<%=s3_bucket%>
 ENVIRONMENT=<%=environment%>
 RUN_LIST='<%=run_list.to_json%>'
@@ -27,42 +22,48 @@ INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 NODE_NAME=<%=node_name%>
 RESOURCE_ID=<%=resource_id%>
 
+# Customize Chef configuration.
 FIRST_BOOT=/etc/chef/first-boot.json
 mkdir -p $(dirname ${FIRST_BOOT})
 cat <<JSON > ${FIRST_BOOT}
 {
   "cdo-repository": {
-    "revision": "<%=commit%>",
+    <% if commit %>
+      "revision": "<%=commit%>",
+    <% end -%>
+    "branch": "<%=branch%>",
     "sync": true
   },
+  "cdo-secrets": {
+<% if local_mode -%>
+    "build_apps": true,
+    "use_my_apps": true,
+<% end -%>
+    "stack_name": "${STACK}"
+  },
+<% if local_mode -%>
+  "omnibus_updater": {
+    "version": "${CHEF_VERSION}"
+  },
+<% end -%>
+<% if daemon -%>
+  "cdo-apps": {
+    "daemon": true
+  },
+<% end -%>
   "run_list": ${RUN_LIST}
 }
 JSON
 
-# Bootstrap the first cdo-apps Rakefile build on a new instance.
-# TODO move this run-once notification somewhere more appropriate
-rm -f /etc/init.d/{dashboard,pegasus}
-
-OPTIONS="<%=local_mode ? '-z' : ''%> -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
+# Provision via Chef.
+OPTIONS="<%=local_mode ? '-z ' : ''%> -b ${BRANCH} -n ${NODE_NAME} -r '${RUN_LIST}' -e ${ENVIRONMENT}"
 sudo -u ubuntu bash -c "aws s3 cp s3://${S3_BUCKET}/chef/bootstrap-${STACK}.sh - | sudo bash -s -- ${OPTIONS}"
-
 [ $? -eq 0 ] && STATUS=SUCCESS || STATUS=FAILURE
-[ ${STATUS} = 'SUCCESS' ] && LIFECYCLE_RESULT=CONTINUE || LIFECYCLE_RESULT=ABANDON
 
-# Signal CompleteLifecycleAction, in case this instance was launched from an Auto Scaling process.
-LIFECYCLE_HOOK=$(ref WebServerHook)
-AUTO_SCALING_GROUP=$(ref WebServer)
-if [ -n "${LIFECYCLE_HOOK}" ] && [ -n "${AUTO_SCALING_GROUP}" ]; then
-  aws autoscaling complete-lifecycle-action \
-    --lifecycle-action-result ${LIFECYCLE_RESULT} \
-    --instance-id ${INSTANCE_ID} \
-    --lifecycle-hook-name ${LIFECYCLE_HOOK} \
-    --auto-scaling-group-name ${AUTO_SCALING_GROUP} \
-    --region ${REGION} \
-    || true
-fi
+# Workaround for version-controlled files modified by seed.
+sudo -u ubuntu bash -c "cd /home/ubuntu/${ENVIRONMENT} && git reset --hard"
 
-# Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
+# Signal CloudFormation resource.
 aws cloudformation signal-resource \
   --unique-id ${INSTANCE_ID} \
   --stack-name ${STACK} \
@@ -70,3 +71,7 @@ aws cloudformation signal-resource \
   --status ${STATUS} \
   --region ${REGION} \
   || true
+
+<% if shutdown -%>
+shutdown -h now
+<% end -%>
