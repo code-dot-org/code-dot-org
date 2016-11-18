@@ -1,9 +1,12 @@
 @dashboard_db_access
 @as_student
+@no_circle
 Feature: App Lab Scenarios
+# Do not re-enable on circle until https://github.com/elgalu/docker-selenium/issues/20 is addressed.
 
   Background:
     Given I start a new Applab project
+    And I wait for the page to fully load
 
   Scenario: App Lab Http Image
     # Create an app with an http image.

@@ -17,7 +17,7 @@ video_player: true
 
 <div style="margin-left: 300px;">
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra. Join our team to help make this vision a reality.
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
 </div>
 
@@ -31,10 +31,9 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Outreach**
 	- [Regional Manager, Southwest](#outreach)
 - **Product**
+	- [Data Scientist](#data)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
-- **Professional Learning & Community**
-	- [Program Coordinator](#coord)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
 
@@ -82,6 +81,50 @@ Additional desired strengths include:
 - Strong existing connections to the computer science community 
 
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="data"href="#data">Data Scientist (Seattle, WA or Chicago, IL)</a>
+
+**Job Summary:**
+
+At Code.org we create and support computer science curriculum that reaches millions of students, and we prepare tens of thousands of teachers to begin teaching computer science each year. The core function of the Data Scientist role is to help us gain an increasingly deeper and better understanding of two very important high-level questions: 
+
+- How much are our students learning? (and how can we improve the outcome?)
+- How effective is our teacher professional development? (and how can we improve the outcome?)
+
+We already have tons of indicators, stats and data, but these very big questions go beyond a few database queries or analytics stats. Our Code Studio platform has become the most popular coding platform in K-12, and every single line of code written by students contributes to data we could analyze to improve student learning.  We can look at how students and teachers find our courses, how they start them, how they answer each puzzle, the places they solve things correctly, the common mistakes people make, areas students get stuck, and more. 
+
+We’re looking for someone who’s passionate about understanding and using data- someone who wants to ask questions and find answers. Prior experience as a data scientist is a must; educational experience is a plus, but not required. We have lots of education/curriculum experts on the team - we need your help understanding how we can use our data to do more. 
+
+The responsibility in this job isn't just to answer analytic questions but ultimately to help the team improve outcomes for students, teachers, and schools. This role will help establish the questions to ask in the first place, figure out how to answer them, and ensure we are measuring and collecting the right data across our education products, services, and processes.
+
+Job responsibilities will include:
+
+- Helping decide what questions we should be asking of our data
+- Analyzing data from the website to understand how we can improve outcomes including:
+	- Optimizing courses to be engaging, challenging (but not too challenging) and to increase student learning and coding proficiency outcomes
+	- Gaining a deep understanding about our teachers and their experiences in our professional learning programs in order to help them be successful in the classroom
+	- Recruiting teachers and students, retaining users, and increasing engagement
+- Suggesting new data we can/should collect or experiments we should run
+	- Working with others to craft measurement protocols and assessments we can use to track student learning and teacher preparedness
+- Writing code/scripts/queries as well as using Tableau (or other tools you recommend) to analyze the data and find answers
+- Working with teams across Code.org (product management, professional learning, curriculum, outreach) to design and create actionable dashboards 
+- Creating data models to predict outcomes and test experiments 
+Generating reports for donors and fundraising purposes
+- Collaborating with third party evaluators and external researchers from universities evaluating our work in the classrooms 
+
+**Experience and Qualifications:**
+
+The ideal candidate has a breadth of experience and qualifications:
+
+- A degree in computer science, applied math, or statistics, with multiple years of experience in data and statistical analysis
+- Strong analytical skills with attention to detail and the ability to create clear reports to communicate actionable findings to others
+- Ability to communicate effectively with both technical and non-technical audiences to fully understand the experiences of our students, teachers, and facilitators resulting in significantly deeper learning and impact.
+- A deep familiarity with traditional web-based analytics and data analysis tools - such as Google Analytics, SQL, Redshift, and map reduce. You’ll be working with a Data Engineer on our team who will write production code and implement changes to how we store data from our service. You should be experienced writing scripts to analyze data with at least one analytic programming language (R or Python)
+- Knowledge of visualization/analysis tools including Tableau and spreadsheets
+- Experience with using web-based analysis and A/B testing to measure/improve online usage
+- Experience analyzing data around customer retention and engagement for an online app or website
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
@@ -133,37 +176,12 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-Code.org is looking for an Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. 
-
-Duties of this role may include: 
-
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
-- Updating and managing event attendee lists
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate also has the following qualifications:
-
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability to travel 10% time 
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 ## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
 
 **Internship Summary:**
 
-We are looking for a Fall/Winter intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+We are looking for a Winter/Spring intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
 
 Responsibilities of the may position include: 
 

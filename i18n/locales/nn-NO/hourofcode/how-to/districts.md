@@ -6,25 +6,25 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# Korleis få Kodetimen til kommuna di
 
-## Get every school participating, every student learning!
+## Få kvar skule til å delta, kvar elev til å lære!
 
-  1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
+  1. **Rekrutter lokale skular.** Del [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) og [rettleiing for lærarar](%= resolve_url('/how-to') %), eller inkluder ein [kort introduksjon](%= resolve_url('/promote/stats') %) i nyhetsbrev/lokalavis.
 
-  2. **Provide a sample logistics plan for schools.** Share this [sample logistics plan](%= localized_file('/files/HOC_Logistics_plan.pdf') %) with schools to give them ideas of how to organize whole school participation. It’s as easy as doing it in every math class, homeroom period, or rotating throughout the week through the computer lab.
+  2. **Gi eksempel på gjennomføringsplan til skuler.** Del dette [eksempelet](%= localized_file('/files/HOC_Logistics_plan.pdf') %) med skulene for å gi dei idear om korleis ein organiserer heile skulen si deltaking. Det er så enkelt som å gjøre det i ein mattetime for kvar klasse denne veka.
 
-  3. **Share on social media.** Post to [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) or [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Or share one of these inspirational [pictures and quotes](%= resolve_url('/promote/resources#social') %) from world leaders, or [stats](%= resolve_url('/promote/stats') %).
+  3. **Del på sosiale medier.** Del på [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) eller [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Eller del eit av desse inspirerande [bileta og sitata](%= resolve_url('/promote/resources#social') %) frå verdas leiarar, eller [stats](%= resolve_url('/promote/stats') %).
 
-  4. **Promote on your district’s homepage.** Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](%= resolve_url('/') %).
+  4. **Promoter på kommuna si heimeside.** La besøkande få vite om deltaking og arrangement i Kodetimen. Link til [Kodetimen](%= resolve_url('/') %).
 
-  5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
+  5. **Ver vert for eit Kodetime-arrangement i kommuna di.** Sjå vår [rettleiing for arrangement](%= resolve_url('/how-to/events') %) for eksempel på mediemateriale eller anna støttemateriale.
 
 ## Kva kjem etter Kodetimen?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lagar dine eigne program. For å halde fram på denne reisa:
 
-  * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
-  * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+  * Oppmuntre elevane til å halde fram å [lære på nettet](%= resolve_url('https://code.org/learn/beyond') %).
+  * [Delta på](%= resolve_url('https://code.org/professional-development-workshops') %) en 1-dags seminar der du vil få opplæring fra en erfaren tilrettelegger med kompetanse på informatikk. (gjeld kun lærarar i USA)
 
 <%= view :signup_button %>

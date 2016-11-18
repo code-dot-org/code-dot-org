@@ -78,7 +78,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 ## 1) Testa övningarna:
 
-We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
+Vi har en stor variation på roliga entimmeslektioner för alla åldrar, gjorda av olika samarbetspartners. Nya övningar kommer lagom till årets Hour of Code <%= campaign_date('full') %>.
 
 **Alla övningar i Hour of Code:**
 
@@ -89,7 +89,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Vad behöver du för hårdvara? -datorer är inte nödvändiga
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Den bästa upplevelsen av Hour of Code får du med internetuppkopplade datorer, men det behövs inte en dator per elev och du behöver inte ha datorer för att genomföra en Hour of Code.
 
   * **Testa övningarna på elevdatorer eller enheter.** Kontrollera att de fungerar korrekt (med ljud och video).
   * **Förhandsgranska Diplomsidan** för att se vad eleverna kommer att se när de är klara. 
@@ -102,16 +102,16 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Inspirera eleverna – Visa en video
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Visa elever en inspirerande video till starta Hour of Code. Exempel:
 
   * Originalvideon från lanseringen av Code.org, där bland annat Bill Gates, Mark Zuckerberg och basketstjärnan Chris Bosh är med (det finns olika versioner som är [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuter](https://www.youtube.com/watch?v=nKIu9yen5nc) och [9 minuter](https://www.youtube.com/watch?v=dU1xS07N-FA) långa)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [President Obama uppmanar alla elever att lära sig datavetenskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Få dina elever engagerade - ge dem en kort introduktion**
 
 <% else %>
 
-# Ytterligare innehåll kommer snart!
+# Fler övningar kommer snart!
 
 <% end %>
