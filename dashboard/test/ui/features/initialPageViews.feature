@@ -11,6 +11,7 @@ Feature: Looking at a few things with Applitools Eyes
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     When I rotate to landscape
+    And I close the instructions overlay if it exists
     And I see no difference for "initial load"
     And I close my eyes
     And I sign out
@@ -36,6 +37,7 @@ Feature: Looking at a few things with Applitools Eyes
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     When I rotate to landscape
+    And I close the instructions overlay if it exists
     Then I see no difference for "initial load"
     And I close my eyes
     And I sign out
@@ -56,6 +58,7 @@ Feature: Looking at a few things with Applitools Eyes
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     When I rotate to landscape
+    And I close the instructions overlay if it exists
     Then I see no difference for "initial load"
     And I close my eyes
     And I sign out
