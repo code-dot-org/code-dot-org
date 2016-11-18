@@ -188,14 +188,14 @@ const Workshop = React.createClass({
     });
   },
 
-  getAttendanceUrl(index) {
-    return `/workshops/${this.props.params.workshopId}/attendance/${index}`;
+  getAttendanceUrl(sessionId) {
+    return `/workshops/${this.props.params.workshopId}/attendance/${sessionId}`;
   },
 
   handleTakeAttendanceClick(event) {
     event.preventDefault();
-    const index = event.currentTarget.dataset.index;
-    this.context.router.push(this.getAttendanceUrl(index));
+    const sessionId = event.currentTarget.dataset.session_id;
+    this.context.router.push(this.getAttendanceUrl(sessionId));
   },
 
   handleEditClick() {
@@ -361,13 +361,13 @@ const Workshop = React.createClass({
       </div>
     );
 
-    const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
+    const attendanceButtons = this.state.workshop.sessions.map(session => {
       const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
         <Button
-          key={i}
-          data-index={i}
-          href={this.context.router.createHref(this.getAttendanceUrl(i))}
+          key={session.id}
+          data-session_id={session.id}
+          href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
           onClick={this.handleTakeAttendanceClick}
         >
           {date}

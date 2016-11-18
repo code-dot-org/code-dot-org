@@ -67,7 +67,7 @@ const WorkshopDashboard = (
         view="edit"
       />
       <Route
-        path="workshops/:workshopId/attendance(/:sessionIndex)"
+        path="workshops/:workshopId/attendance(/:sessionId)"
         breadcrumbs="Workshops,Workshop,Take Attendance"
         component={WorkshopAttendance}
       />
