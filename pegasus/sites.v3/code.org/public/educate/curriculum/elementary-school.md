@@ -20,12 +20,10 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 <br />
 [<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-<em>Want to partner with us to train K-5 teachers in your school, district, or region? [Go here.] (/educate/professional-learning/cs-fundamentals-facilitator)</em>
-
 <img src="/images/k5teacherquotes.png" width="800"/> 
 
 ### <strong>No workshop in your area?</strong>
-[Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you or consider completing one of our [online self-paced courses](/educate/professional-development-online) on your own.
+[Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
 
 
 ## <a name="overview"></a>Computer Science Fundamentals: Curriculum Overview

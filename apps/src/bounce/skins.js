@@ -97,6 +97,7 @@ var CONFIGS = {
     background: 'basketball_background.png',
     ball: 'basketball_ball.png',
     paddle: 'basketball_paddle.png',
+    disableAudio: true,
   }
 };
 
@@ -125,22 +126,27 @@ exports.load = function (assetUrl, id) {
   };
   skin.basketball = {
     background: skin.assetUrl('basketball_background.png'),
-    ball: skin.assetUrl('basketball_ball.png')
+    ball: skin.assetUrl('basketball_ball.png'),
+    paddle: skin.hand_1.paddle,
   };
   skin.soccer = {
     background: skin.assetUrl('soccer_background.png'),
     ball: skin.assetUrl('soccer_ball.png'),
-    drawTiles: false
+    drawTiles: false,
+    paddle: skin.foot.paddle,
   };
   skin.hockey = {
     background: skin.assetUrl('hockey_background.png'),
     ball: skin.assetUrl('hockey_ball.png'),
-    drawTiles: false
+    drawTiles: false,
+    paddle: skin.hockey_stick.paddle,
   };
   skin.football = {
     background: skin.assetUrl('football_background.png'),
     ball: skin.assetUrl('football_ball.png'),
-    drawTiles: false
+    drawTiles: false,
+    paddle: skin.foot.paddle,
+    rotateBall: true,
   };
 
   // Images
@@ -174,6 +180,7 @@ exports.load = function (assetUrl, id) {
   skin.teamBackgrounds = {};
   skin.teams.forEach((team) =>
       skin.teamBackgrounds[team] = skin.assetUrl(`teams/${team}.png`));
+  skin.disableAudio = config.disableAudio || false;
 
   // Sounds
   skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];

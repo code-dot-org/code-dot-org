@@ -37,7 +37,7 @@ banner_emailprivacy,banner,homepage_banner_emailprivacy,homepage_banner_emailpri
 banner_40k_teachers,banner,homepage_banner_40k_teachers,homepage_banner_40k_teachers_link,http://blog.code.org/post/150312492108/the-biggest-year-yet-for-computer-science,,,,,code.org,nah,en
 block_hoc_frozen,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",https://hourofcode.com,,/shared/images/courses/logo_tall_hoc.jpg,code.org,nah,en
 block_hoc,block,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,en
-block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students_courses,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
+block_students,block,homepage_slot_text_title_students,homepage_slot_text_blurb_students_courses,"118, 101, 160","166, 155, 193",https://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,en
 block_educators,block,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",/educate,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,en
 block_advocates,block,homepage_slot_text_title_advocates,homepage_slot_text_blurb_advocates,"185, 191, 21","209, 213, 103",/promote,,/shared/images/courses/logo_tall_map.jpg,code.org,show,en
 blocklink_hoc,blocklink,block_hoc,homepage_slot_text_link_hoc,https://hourofcode.com/,,,,,code.org,show,en
@@ -53,6 +53,6 @@ blocklink_stats,blocklink,block_advocates,homepage_slot_text_link_stats,/promote
 blocklink_buy,blocklink,block_advocates,homepage_slot_text_link_buy,/help,,,,,code.org,show,en
 blocklink_donate,blocklink,block_advocates,homepage_slot_text_link_shop,/shop,,,,,code.org,show,en
 blockshort_hoc_noten,blockshort,homepage_slot_text_title_hoc,homepage_slot_text_blurb_hoc,"0, 173, 188","89, 202, 211",/learn,,/shared/images/courses/logo_tall_frozen_footer.jpg,code.org,show,not en
-blockshort_students_noten,blockshort,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",http://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en
-blockshort_educators_noten,blockshort,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",http://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,not en
-blockshort_flappy_noten,blockshort,studiobar_flappy_title,studiobar_flappy_body,"185, 191, 21","209, 213, 103",http://studio.code.org/s/flappy/reset,,/shared/images/courses/logo_tall_flappy.jpg,code.org,show,not en
+blockshort_students_noten,blockshort,homepage_slot_text_title_students,homepage_slot_text_blurb_students,"118, 101, 160","166, 155, 193",https://studio.code.org,,/shared/images/courses/logo_tall_elementary.jpg,code.org,show,not en
+blockshort_educators_noten,blockshort,homepage_slot_text_title_educators,homepage_slot_text_blurb_educators,"0, 148, 202","89, 185, 220",https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher,,/shared/images/courses/logo_tall_teacher2.jpg,code.org,show,not en
+blockshort_flappy_noten,blockshort,studiobar_flappy_title,studiobar_flappy_body,"185, 191, 21","209, 213, 103",https://studio.code.org/s/flappy/reset,,/shared/images/courses/logo_tall_flappy.jpg,code.org,show,not en
