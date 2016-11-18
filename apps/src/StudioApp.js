@@ -486,8 +486,6 @@ StudioApp.prototype.init = function (config) {
     config.loadAudio();
   }
 
-  this.configureHints_(config);
-
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -632,20 +630,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   } else {
     this.runButtonClick();
   }
-};
-
-/**
- * If we have hints, add a click handler to them and add the lightbulb above the
- * icon. Depends on the existence of DOM elements with particular ids, which
- * might be located below the playspace or in the top pane.
- */
-StudioApp.prototype.configureHints_ = function (config) {
-  if (!this.hasInstructionsToShow(config)) {
-    return;
-  }
-
-  var promptIcon = document.getElementById('prompt-icon');
-  this.authoredHintsController_.display(promptIcon);
 };
 
 /**

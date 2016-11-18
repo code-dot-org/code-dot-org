@@ -193,7 +193,6 @@ class ScriptsControllerTest < ActionController::TestCase
     get :edit, id: script.name
 
     assert_equal script, assigns(:script)
-    assert assigns(:script_file)
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
