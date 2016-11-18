@@ -10,9 +10,7 @@ include_recipe 'apt'
 include_recipe 'sudo-user'
 include_recipe 'cdo-networking'
 
-# Set hostname to the Chef node name (via chef_hostname cookbook)
-HOSTNAME_INVALID_CHAR = /[^[:alnum:]-]/
-hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
+include_recipe 'cdo-apps::hostname'
 
 # These packages are used by Gems we install via Bundler.
 
@@ -72,6 +70,7 @@ include_recipe 'cdo-apps::workers'
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
+node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'

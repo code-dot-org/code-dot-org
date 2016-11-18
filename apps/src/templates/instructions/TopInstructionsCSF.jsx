@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
+import classNames from 'classnames';
 import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
@@ -20,12 +21,12 @@ import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import HintDisplayLightbulb from '../HintDisplayLightbulb';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import Button from '../Button';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
@@ -169,6 +170,7 @@ var TopInstructions = React.createClass({
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
+    failureAvatar: React.PropTypes.string,
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
@@ -177,6 +179,7 @@ var TopInstructions = React.createClass({
     ttsInstructionsUrl: React.PropTypes.string,
     ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
+    hideOverlay: React.PropTypes.func.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -472,6 +475,12 @@ var TopInstructions = React.createClass({
     return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
+  getAvatar() {
+    // Show the "sad" avatar if there is failure feedback. Otherwise,
+    // show the default avatar.
+    return this.props.feedback ? this.props.failureAvatar : this.props.smallStaticAvatar;
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -497,7 +506,7 @@ var TopInstructions = React.createClass({
     const instructions2 = this.props.shortInstructions2 ?
       processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
-    const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
+    const leftColWidth = (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
@@ -518,15 +527,18 @@ var TopInstructions = React.createClass({
               this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
             ]}
           >
-            <ProtectedStatefulDiv
-              id="bubble"
-              className="prompt-icon-cell"
+            <div
+              className={classNames({
+                  "prompt-icon-cell": true,
+                  "authored_hints": this.props.hasAuthoredHints
+                })}
               onClick={this.handleClickBubble}
             >
-              {this.props.smallStaticAvatar &&
-                <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
+              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
+              {this.getAvatar() &&
+                <PromptIcon src={this.getAvatar()} ref="icon"/>
               }
-            </ProtectedStatefulDiv>
+            </div>
           </div>
           <div
             ref="instructions"
@@ -553,7 +565,7 @@ var TopInstructions = React.createClass({
                 />
               }
               {this.props.overlayVisible &&
-                <Button type="primary">
+                <Button type="primary" onClick={this.props.hideOverlay}>
                   {msg.dialogOK()}
                 </Button>
               }
@@ -631,11 +643,15 @@ module.exports = connect(function propsFromStore(state) {
     feedback: state.instructions.feedback,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+    failureAvatar: state.pageConstants.failureAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
     noVisualization: state.pageConstants.noVisualization
   };
 }, function propsFromDispatch(dispatch) {
   return {
+    hideOverlay: function ()  {
+      dispatch(instructions.hideOverlay());
+    },
     toggleInstructionsCollapsed: function () {
       dispatch(instructions.toggleInstructionsCollapsed());
     },

@@ -5,6 +5,7 @@ Feature: Visiting a studio page
 Scenario: Using a studio dropdown
   Given I am on "http://studio.code.org/s/course1/stage/16/puzzle/2"
   And I rotate to landscape
+  And I wait for the page to fully load
   Then there's an SVG image "studio/dog_thumb.png"
   Then there's not an SVG image "studio/cat_thumb.png"
   And I drag block "1" to block "2"
@@ -21,6 +22,7 @@ Scenario: Using a studio dropdown
 Scenario: Resizing Sprites
   Given I am on "http://studio.code.org/s/allthethings/stage/22/puzzle/1?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
 
   Then the 0th sprite image has height "100"
   And the 15th sprite image has height "100"

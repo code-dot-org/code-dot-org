@@ -23,6 +23,7 @@ window.Radium = require('radium');
 require('@cdo/apps/code-studio/components/abuse_error');
 require('@cdo/apps/code-studio/components/report_abuse_form');
 require('@cdo/apps/code-studio/components/SendToPhone');
+require('@cdo/apps/code-studio/components/SmallFooter');
 require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
 

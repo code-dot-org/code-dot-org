@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 25'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 25
+# Unit 5 Lessons > Day 25
 
 ## Concepts Covered
 
@@ -22,7 +22,4 @@ Students will use the data they are collecting for their final project to do tex
 	- <a href="http://www.wordclouds.com/" target=_blank>http://www.wordclouds.com/</a>
 	- <a href="http://www.wordle.net" target=_blank>http://www.wordle.net</a>
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

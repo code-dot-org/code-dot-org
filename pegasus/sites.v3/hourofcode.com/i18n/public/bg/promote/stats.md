@@ -16,9 +16,9 @@ nav: promote_nav
 
 ### Въведете компютърните науки във Вашето училище. Започнете с един Час на кодирането
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skillset. But only one in every four schools teaches computer science! Добрата новина е, че ние сме на път да променим това. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+С технологията се променя всяка индустрия на планетата, компютърните познания са станали част от необходимите умения. But fewer than half of all schools teach computer science! Добрата новина е, че ние сме на път да променим това. Ако сте чували за часът на кода, може би знаете, че ние влезнахме в историята. 100 милиона ученици откриха колко достъпни и забавни са компютърните науки само за един "час на кода".
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at <http://HourofCode.com>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Часът на кода е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. Научете повече на [ http://HourofCode.com](http://HourofCode.com), опитайте един час сами или станете домакин на "часът на кода" събитие за въведете и други в света на компютрите!
 
 <a id="infographics"></a>
 

@@ -64,12 +64,20 @@ And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/)
   workshop = role == 'organized' ? Pd::Workshop.organized_by(user).first : Pd::Workshop.facilitated_by(user).first
 
   number.to_i.times do |x|
-    Pd::Enrollment.create(
-      name: "EnrolledTeacher#{SecureRandom.hex}",
+    enrollment = Pd::Enrollment.create(
+      first_name: "First name - #{SecureRandom.hex}",
+      last_name: "Last name - #{SecureRandom.hex}",
       email: "enrolled_teacher#{x}@foo.com",
-      skip_school_validation: true,
+      school_info: SchoolInfo.find_or_create_by({
+        country: 'US',
+        school_type: 'other',
+        state: 'WA',
+        zip: '98101',
+        school_name: 'Code.org'
+      }),
       pd_workshop_id: workshop.id
     )
+    PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
   end
   workshop.update(started_at: Time.now)
   workshop.update(ended_at: Time.now)

@@ -3,6 +3,7 @@ Feature: Looking at a few things with Applitools Eyes
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
+  And I wait for the page to fully load
 
 Scenario:
   When I open my eyes to test "bounce game"
@@ -90,8 +91,7 @@ Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
-  And I close the instructions overlay if it exists
+  And I wait for the page to fully load
   And I press "runButton"
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
@@ -99,7 +99,7 @@ Scenario:
 
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1/lang/ar-sa"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I see no difference for "maze RTL"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds
@@ -123,7 +123,7 @@ Scenario:
   And I open my eyes to test "embedded ninjacat"
   When I am on "http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   Then element "#runButton" is visible
   And I see no difference for "level load"
 
@@ -140,7 +140,7 @@ Scenario:
   And I open my eyes to test "calc expression evaluation"
   When I am on "http://studio.code.org/s/algebra/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
 
@@ -156,7 +156,7 @@ Scenario:
   And I open my eyes to test "calc variable"
   When I am on "http://studio.code.org/s/algebra/stage/6/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I press "modalEditorClose"
   And I've initialized the workspace with the solution blocks
   Then I see no difference for "level load, closed dialog"
