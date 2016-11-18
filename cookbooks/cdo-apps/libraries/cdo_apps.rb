@@ -46,7 +46,7 @@ module CdoApps
         user: user,
         env: node.chef_environment,
         bundle_env: node['cdo-apps']['bundle_env']
-      notifies :restart, "service[#{app_name}]", :delayed
+      notifies :reload, "service[#{app_name}]", :delayed
 
       # Bootstrap the first cdo-apps Rakefile build on a new system.
       # Runs only on initial install because `rake build` is managed by the CI script after bootstrapping.
@@ -87,10 +87,10 @@ module CdoApps
       action [:enable, :start]
 
       # Restart when Ruby is upgraded
-      subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
+      subscribes :reload, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
 
       # Restart when gem bundle is updated
-      subscribes :restart, 'execute[bundle-install]', :delayed
+      subscribes :reload, 'execute[bundle-install]', :delayed
 
       # Ensure globals.yml is up-to-date before (re)starting service.
       notifies :create, 'template[globals]', :before
@@ -101,7 +101,7 @@ module CdoApps
     file "#{app_name}_listeners" do
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
       content lazy { "#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}" }
-      notifies :restart, "service[#{app_name}]", :immediately
+      notifies :reload, "service[#{app_name}]", :immediately
     end
   end
 

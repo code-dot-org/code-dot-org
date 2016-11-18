@@ -2905,3 +2905,24 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };
+
+StudioApp.prototype.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (this.hasSeenRateLimitAlert_) {
+    return false;
+  }
+  this.hasSeenRateLimitAlert_ = true;
+
+  var alert = <div>{msg.dataLimitAlert()}</div>;
+  if (this.share) {
+    this.displayPlayspaceAlert("error", alert);
+  } else {
+    this.displayWorkspaceAlert("error", alert);
+  }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!this.share,
+  });
+};
