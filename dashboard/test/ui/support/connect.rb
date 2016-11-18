@@ -9,6 +9,27 @@ require_relative '../utils/selenium_browser'
 $browser_configs = JSON.load(open("browsers.json"))
 
 MAX_CONNECT_RETRIES = 3
+MAX_RESET_RETRIES = 3
+
+class Selenium::WebDriver::Driver
+  def execute_script_with_retry(script, *args)
+    $stderr.puts "calling execute_script_with_retry"
+    retry_count = 0
+    begin
+      execute_script_without_retry(script, *args)
+    rescue Net::HTTP::Persistent::Error => e
+      raise unless e.message =~ /too many connection resets/
+      $stderr.puts "WARNING: 'too many connection resets.' retrying..."
+      if retry_count >= MAX_RESET_RETRIES
+        retry_count += 1
+        retry
+      end
+      raise "giving up after 3 retries: #{e}"
+    end
+  end
+  alias_method :execute_script_without_retry, :execute_script
+  alias_method :execute_script, :execute_script_with_retry
+end
 
 def slow_browser?
   ['iPhone', 'iPad'].include? ENV['BROWSER_CONFIG']
