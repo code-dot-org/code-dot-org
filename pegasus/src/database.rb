@@ -26,7 +26,7 @@ class Tutorials
     api_domain = api_domain.gsub('tr.code.org', 'code.org')
     api_domain = api_domain.gsub('uk.code.org', 'code.org')
     api_domain = api_domain.gsub('za.code.org', 'code.org')
-    "http://#{api_domain}/api/hour/begin/#{code}"
+    "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
   def find_with_tag(tag)
