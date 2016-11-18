@@ -64,7 +64,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
     init: function () {
-      this.setHSV(196, 1.0, 0.79);
+      this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
           .appendTitle([msg.repeatUntil(), msg.at(), msg[crop]()].join(' '));
       this.setInputsInline(true);
@@ -210,7 +210,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.harvester_untilAtCrop = {
     helpUrl: '',
     init: function () {
-      this.setHSV(196, 1.0, 0.79);
+      this.setHSV(322, 0.90, 0.95);
       this.appendDummyInput()
           .appendTitle([msg.repeatUntil(), msg.at()].join(' '));
       this.appendDummyInput()
