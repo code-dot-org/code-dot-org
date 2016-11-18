@@ -48,7 +48,6 @@ Given /^I am on "([^"]*)"$/ do |url|
   @browser.navigate.to url
   refute_bad_gateway
   install_js_error_recorder
-  wait_for_jquery
 end
 
 def install_js_error_recorder
@@ -125,10 +124,12 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
+  wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
 end
 
@@ -362,6 +363,7 @@ end
 
 # The selector should be wrapped in appropriate quotes when passed into here.
 def type_into_selector(input_text, selector)
+  wait_for_jquery
   @browser.execute_script("$('#{selector}').val(#{input_text})")
   @browser.execute_script("$('#{selector}').keyup()")
   @browser.execute_script("$('#{selector}').change()")
@@ -983,7 +985,6 @@ end
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
   @browser.navigate.to url
-  wait_for_jquery
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
