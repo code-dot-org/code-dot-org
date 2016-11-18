@@ -1,26 +1,4 @@
-%h1= @page_title = "Editing script #{@script.name}"
-%h4 <span style="color: red; font-weight: bold; text-decoration: underline">Warning! Don't rename stages!</span>
-%p
-  There are currently unsolved issues with renaming stages
-  (see pivotal items:
-  %a{href: "https://www.pivotaltracker.com/story/show/76999866"} 76999866
-  %a{href: "https://www.pivotaltracker.com/story/show/82514628"} 82514628
-  For now, ask an engineer - refer them to
-  %a{href: "http://wiki.code.org/pages/viewpage.action?pageId=690458"} this wiki page.
-
-%h4 Reordering stages
-%p Reordering stages without renaming them is fine
-
-%h4 Renaming levels
-%p
-  Renaming levels works for some level types (the UI will not let you
-  rename levels that cannot be renamed). Changing only the case
-  (uppercase/lowercase) of a level name causes problems (the UI will
-  not let you do this). Note: renaming a level is essentially making a
-  copy and deleting the old one. This means that progress in that
-  level is lost, so don't do this for published scripts. If you do
-  rename a level you need to update all scripts referencing it, this
-  does not happen automatically.
+%h1= @page_title = "Editing script '#{@script.name}'"
 
 = render 'form'
 = link_to t('crud.show'), @script
