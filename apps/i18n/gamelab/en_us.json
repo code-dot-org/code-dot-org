@@ -52,6 +52,8 @@
   "dropletBlock_sprite.height_description": "The height of the sprite.",
   "dropletBlock_sprite.width_signatureOverride": "[Sprite].width",
   "dropletBlock_sprite.width_description": "The width of the sprite.",
+  "dropletBlock_stopSound_description": "Stops playing the sound file from the specified URL, or all sounds if no URL is given.",
+  "dropletBlock_stopSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL.",
   "dropletBlock_Group_description": "Creates an empty group.",
   "dropletBlock_add_description": "Adds the given sprite to group.",
   "dropletBlock_add_param0_description": "The sprite to be added.",

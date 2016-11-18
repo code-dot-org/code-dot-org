@@ -338,6 +338,9 @@ en:
         title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Boolean Expressions and Comparison Operators:
+        description here: description here
+        title: title
       Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
@@ -1067,6 +1070,7 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
+      ECSPD3- unit 5- welcome: {}
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}

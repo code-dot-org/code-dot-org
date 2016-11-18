@@ -53,6 +53,7 @@
     "hide_animation_mode": "false",
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,
