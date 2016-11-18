@@ -5,7 +5,7 @@ Feature: Big Game Remix
   Background:
     Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/6?noautoplay=true"
     And I rotate to landscape
-    And I wait to see "#runButton"
+    And I wait for the page to fully load
     Then element "#runButton" is visible
 
   @no_mobile
