@@ -56,7 +56,8 @@ class SectionApiHelperTest < Minitest::Test
             {id: 1, name: 'Foo', hidden: false},
             {id: 3, name: 'Bar', hidden: false},
             {id: 4, name: 'mc', hidden: false},
-            {id: 5, name: 'hourofcode', hidden: false}
+            {id: 5, name: 'hourofcode', hidden: false},
+            {id: 6, name: 'minecraft', hidden: false}
         ]
       end
 
@@ -71,16 +72,18 @@ class SectionApiHelperTest < Minitest::Test
         assert !DashboardSection.valid_course_id?('invalid!!')
       end
 
-      it 'rewrites mc as minecraft-simple, hourofcode as "Classic Maze"' do
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'minecraft-simple'
+      it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Adventurer'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Designer'
         assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Classic Maze'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'
       end
 
-      it 'rewrites mc as minecraft-simple, hourofcode as "Laberinto clásico" in Spanish"' do
+      it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Laberinto clásico" in Spanish"' do
         I18n.locale = 'es-ES'
-        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'minecraft-simple'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Adventurer'
+        assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Minecraft Designer'
         assert_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'Laberinto clásico'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'mc'
         refute_includes DashboardSection.valid_courses.map {|course| course[:name]}, 'hourofcode'

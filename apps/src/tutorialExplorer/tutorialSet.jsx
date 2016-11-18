@@ -9,7 +9,8 @@ const TutorialSet = React.createClass({
   propTypes: {
     tutorials: React.PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired
+    localeEnglish: React.PropTypes.bool.isRequired,
+    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   render() {
@@ -21,6 +22,7 @@ const TutorialSet = React.createClass({
             filters={this.props.filters}
             key={item.code}
             localeEnglish={this.props.localeEnglish}
+            disabledTutorial={this.props.disabledTutorials.indexOf(item.short_code) !== -1}
           />
         ))}
       </div>

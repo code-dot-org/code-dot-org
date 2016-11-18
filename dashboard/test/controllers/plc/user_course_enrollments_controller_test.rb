@@ -114,7 +114,7 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'Can navigate to specific course with underscored url' do
-    other_course = create(:plc_course, name: 'Other Course')
+    other_course = create(:plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next)
     create(:plc_user_course_enrollment, user: @user, plc_course: other_course)
 
     get :index, course: 'test-course'
