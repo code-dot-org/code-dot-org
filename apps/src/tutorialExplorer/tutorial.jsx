@@ -2,7 +2,6 @@
  */
 
 import React from 'react';
-import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
 import { getResponsiveValue } from './responsive';
@@ -57,22 +56,7 @@ const styles = {
 const Tutorial = React.createClass({
   propTypes: {
     item: shapes.tutorial.isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired,
-    disabledTutorial: React.PropTypes.bool.isRequired
-  },
-
-  getInitialState() {
-    return {
-      showingDetail: false
-    };
-  },
-
-  tutorialClicked() {
-    this.setState({showingDetail: true});
-  },
-
-  tutorialDetailClosed() {
-    this.setState({showingDetail: false});
+    tutorialClicked: React.PropTypes.func.isRequired
   },
 
   render() {
@@ -84,33 +68,24 @@ const Tutorial = React.createClass({
     const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
 
     return (
-      <div>
-        <TutorialDetail
-          showing={this.state.showingDetail}
-          item={this.props.item}
-          closeClicked={this.tutorialDetailClosed}
-          localeEnglish={this.props.localeEnglish}
-          disabledTutorial={this.props.disabledTutorial}
-        />
-        <div
-          style={tutorialOuterStyle}
-          onClick={this.tutorialClicked}
-        >
-          <div style={styles.tutorialImageContainer}>
-            <div style={styles.tutorialImageBackground}/>
-            <LazyLoad offset={1000}>
-              <Image
-                src={imageSrc}
-                style={styles.tutorialImage}
-              />
-            </LazyLoad>
-          </div>
-          <div style={styles.tutorialName}>
-            {this.props.item.name}
-          </div>
-          <div style={styles.tutorialSub}>
-            {getTutorialDetailString(this.props.item)}
-          </div>
+      <div
+        style={tutorialOuterStyle}
+        onClick={this.props.tutorialClicked}
+      >
+        <div style={styles.tutorialImageContainer}>
+          <div style={styles.tutorialImageBackground}/>
+          <LazyLoad offset={1000}>
+            <Image
+              src={imageSrc}
+              style={styles.tutorialImage}
+            />
+          </LazyLoad>
+        </div>
+        <div style={styles.tutorialName}>
+          {this.props.item.name}
+        </div>
+        <div style={styles.tutorialSub}>
+          {getTutorialDetailString(this.props.item)}
         </div>
       </div>
     );
