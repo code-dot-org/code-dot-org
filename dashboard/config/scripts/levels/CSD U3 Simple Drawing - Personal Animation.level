@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2016-04-19T22:44:06.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -63,7 +59,7 @@
     "start_blocks": "// Create your drawing here",
     "show_d_pad": "false",
     "instructions_important": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
@@ -71,6 +67,10 @@
     "show_debug_watch": "false",
     "contained_level_names": null
   },
+  "game_id": 50,
+  "created_at": "2016-04-19T22:44:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

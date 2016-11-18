@@ -135,11 +135,13 @@ def main
   existing_lines_of_code = Properties.get(:metrics)['lines_of_code']
   lines_of_code = [lines_of_code, existing_lines_of_code].max
 
+  petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
+
   time = DateTime.now
   Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,
-    petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
+    petition_signatures:      petition_signatures,
     lines_of_code:            lines_of_code,
   }
 

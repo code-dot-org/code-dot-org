@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 intro to u6'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Overview > What's Covered?
+# Unit 6 Overview
 
 ## Concepts
 
@@ -29,6 +29,5 @@ NOTE: If you don't have robots for Unit 6, we will discuss alternate activities:
     - Days 16-18 Program dancing robot
     - Days 19-23 Program rescue robot
     - Days 24-33 Final projects and presentations
- 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

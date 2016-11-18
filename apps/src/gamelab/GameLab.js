@@ -25,6 +25,7 @@ var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
 var dom = require('../dom');
+import { initFirebaseStorage } from '../storage/firebaseStorage';
 
 import {
   setInitialAnimationList,
@@ -173,6 +174,15 @@ GameLab.prototype.init = function (config) {
 
   gameLabSprite.injectLevel(this.level);
 
+  this.studioApp_.labUserId = config.labUserId;
+  this.studioApp_.storage = initFirebaseStorage({
+    channelId: config.channel,
+    firebaseName: config.firebaseName,
+    firebaseAuthToken: config.firebaseAuthToken,
+    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+    showRateLimitAlert: this.studioApp_.showRateLimitAlert
+  });
+
   this.gameLabP5.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
@@ -207,7 +217,6 @@ GameLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug

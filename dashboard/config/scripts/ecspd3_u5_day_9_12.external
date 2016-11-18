@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 9-12'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 9-12
+# Unit 5 Lessons > Days 9 - 12
 
 ## Concepts Covered 
 
@@ -52,7 +52,4 @@ In this activity students explore LA Bike Data.  You may want to use your own d
 > ## Hints from an ECS Teacher:
 > - If you're using a spreadsheet tool like Excel or Google Sheets, consider using a filter, which will allow you to see a subset of the data while hiding the other rows.  If you filter the data down to just the relevant cells for the location, students will easily be able to copy/paste the data into a mapping tool. 
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

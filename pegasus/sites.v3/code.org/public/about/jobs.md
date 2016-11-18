@@ -95,16 +95,16 @@ At Code.org we create and support computer science curriculum that reaches milli
 
 We already have tons of indicators, stats and data, but these very big questions go beyond a few database queries or analytics stats. Our Code Studio platform has become the most popular coding platform in K-12, and every single line of code written by students contributes to data we could analyze to improve student learning.  We can look at how students and teachers find our courses, how they start them, how they answer each puzzle, the places they solve things correctly, the common mistakes people make, areas students get stuck, and more. 
 
-We’re looking for someone who’s passionate about understanding and using data - someone who wants to ask questions and find answers. Prior experience as a data scientist is a must; educational experience is a plus, but not required. We have lots of education/curriculum experts on the team - we need your help understanding how we can use our data to do more. 
+We’re looking for someone who’s passionate about understanding and using data- someone who wants to ask questions and find answers. Prior experience as a data scientist is a must; educational experience is a plus, but not required. We have lots of education/curriculum experts on the team - we need your help understanding how we can use our data to do more. 
 
-The responsibility in this job isn't just to answer analytic questions, but to help establish the questions to ask in the first place, and then to figure out how to answer them, to measure our education products, services, and processes to improve outcomes for students, teachers and schools. 
+The responsibility in this job isn't just to answer analytic questions but ultimately to help the team improve outcomes for students, teachers, and schools. This role will help establish the questions to ask in the first place, figure out how to answer them, and ensure we are measuring and collecting the right data across our education products, services, and processes.
 
 Job responsibilities will include:
 
 - Helping decide what questions we should be asking of our data
 - Analyzing data from the website to understand how we can improve outcomes including:
 	- Optimizing courses to be engaging, challenging (but not too challenging) and to increase student learning and coding proficiency outcomes
-	- Improving professional development for teachers to help them be successful in the classroom
+	- Gaining a deep understanding about our teachers and their experiences in our professional learning programs in order to help them be successful in the classroom
 	- Recruiting teachers and students, retaining users, and increasing engagement
 - Suggesting new data we can/should collect or experiments we should run
 	- Working with others to craft measurement protocols and assessments we can use to track student learning and teacher preparedness
@@ -120,6 +120,7 @@ The ideal candidate has a breadth of experience and qualifications:
 
 - A degree in computer science, applied math, or statistics, with multiple years of experience in data and statistical analysis
 - Strong analytical skills with attention to detail and the ability to create clear reports to communicate actionable findings to others
+- Ability to communicate effectively with both technical and non-technical audiences to fully understand the experiences of our students, teachers, and facilitators resulting in significantly deeper learning and impact.
 - A deep familiarity with traditional web-based analytics and data analysis tools - such as Google Analytics, SQL, Redshift, and map reduce. You’ll be working with a Data Engineer on our team who will write production code and implement changes to how we store data from our service. You should be experienced writing scripts to analyze data with at least one analytic programming language (R or Python)
 - Knowledge of visualization/analysis tools including Tableau and spreadsheets
 - Experience with using web-based analysis and A/B testing to measure/improve online usage
