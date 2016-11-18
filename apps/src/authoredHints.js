@@ -170,8 +170,8 @@ AuthoredHints.prototype.updateLightbulbDisplay_ = function (shouldAnimate) {
 
   const isMinecraft = this.studioApp_.reduxStore.getState().pageConstants.isMinecraft;
 
-  // TODO update this component to be rendered directly by react instead
-  // of by this helper
+  // TODO elijah update this component to be rendered directly by react
+  // instead of by this helper
   ReactDOM.render(
     <Lightbulb
       count={hintCount}
