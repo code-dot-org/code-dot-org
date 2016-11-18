@@ -252,6 +252,8 @@ class DashboardSection
         end
   end
 
+  # Gets a list of valid courses in which progress tracking has been disabled via
+  # the gatekeeper key postMilestone.
   def self.progress_disabled_courses(user_id = nil)
     disabled_courses = valid_courses(user_id).select do |course|
       script_name = Script.get_from_cache(course[:id]).name
