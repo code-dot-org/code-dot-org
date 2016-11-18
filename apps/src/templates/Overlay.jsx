@@ -1,5 +1,4 @@
 import React from 'react';
-import dom from '../dom';
 
 import { hideOverlay } from '../redux/instructions';
 
@@ -9,7 +8,7 @@ import { connect } from 'react-redux';
 // video modal backdrop (at 1040)
 export const Z_INDEX = 1020;
 
-const visible_style = {
+const style = {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -20,25 +19,20 @@ const visible_style = {
   zIndex: Z_INDEX
 };
 
-const hidden_style = {
-  display: 'none'
-};
-
 const Overlay = React.createClass({
   propTypes: {
     visible: React.PropTypes.bool,
     hide: React.PropTypes.func
   },
 
-  componentDidMount() {
-    var unbind = dom.addClickTouchEvent(document.body, function () {
-      this.props.hide();
-      unbind();
-    }.bind(this));
-  },
-
   render() {
-    return (<div style={this.props.visible ? visible_style : hidden_style} />);
+    return (this.props.visible ?
+      <div
+        id="overlay"
+        onClick={this.props.hide}
+        style={style}
+      /> :
+      null);
   },
 });
 
