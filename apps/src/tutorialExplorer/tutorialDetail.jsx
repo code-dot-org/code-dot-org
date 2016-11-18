@@ -92,20 +92,20 @@ const TutorialDetail = React.createClass({
   },
 
   componentDidMount() {
-    document.addEventListener('keydown', this.onEscape);
+    document.addEventListener('keydown', this.onKeyDown);
   },
 
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.onEscape);
+    document.removeEventListener('keydown', this.onKeyDown);
   },
 
-  onEscape({keyCode}) {
+  onKeyDown({keyCode}) {
     if (keyCode === 27) {
       this.props.closeClicked();
     } else if (keyCode === 37) {
-      this.props.changeTutorial("previous");
+      this.props.changeTutorial(-1);
     } else if (keyCode === 39) {
-      this.props.changeTutorial("next");
+      this.props.changeTutorial(1);
     }
   },
 

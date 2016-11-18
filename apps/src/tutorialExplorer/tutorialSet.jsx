@@ -39,14 +39,9 @@ const TutorialSet = React.createClass({
     this.setState({showingDetail: false, chosenItem: null});
   },
 
-  changeTutorial(direction) {
+  changeTutorial(delta) {
     const index = this.props.tutorials.indexOf(this.state.chosenItem);
-    let nextItem = null;
-    if (direction === "next" && index < this.props.tutorials.length - 1) {
-      nextItem = this.props.tutorials[index + 1];
-    } else if (direction === "previous" && index > 0) {
-      nextItem = this.props.tutorials[index - 1];
-    }
+    let nextItem = this.props.tutorials[index + delta];
     if (nextItem) {
       this.setState({showingDetail: true, chosenItem: nextItem});
     }
