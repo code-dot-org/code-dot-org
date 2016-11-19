@@ -34,8 +34,7 @@ const styles = {
   },
   filterBy: {
     float: "left",
-    lineHeight: "44px",
-    marginLeft: 10
+    lineHeight: "44px"
   },
   left: {
     float: "left",
