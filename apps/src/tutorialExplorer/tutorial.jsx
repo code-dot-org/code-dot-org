@@ -21,8 +21,7 @@ const styles = {
     position: "relative",
     width: "100%",
     height: 0,
-    paddingTop: "75%",
-    zIndex: -1
+    paddingTop: "75%"
   },
   tutorialImageBackground: {
     position: "absolute",
