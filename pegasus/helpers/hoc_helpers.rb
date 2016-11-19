@@ -157,22 +157,7 @@ def launch_tutorial(tutorial, params={})
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
       company: params[:company],
-      source: ACTIVITY_TRACKING_SOURCES[:HOC],
-      started_at: DateTime.now,
-      started_ip: request.ip,
-    )
-  end
-
-  dont_cache
-  redirect tutorial[:url], 302
-end
-
-def launch_tutorial_learn(tutorial)
-  unless settings.read_only || unsampled_session?
-    create_session_row_unless_unsampled(
-      referer: request.referer_site_with_port,
-      tutorial: tutorial[:code],
-      source: ACTIVITY_TRACKING_SOURCES[:LEARN],
+      source: params[:source] || ACTIVITY_TRACKING_SOURCES[:HOC],
       started_at: DateTime.now,
       started_ip: request.ip,
     )
