@@ -13,8 +13,7 @@ const styles = {
     paddingRight: 40
   },
   container: {
-    position: "relative",
-    zIndex: -1
+    position: "relative"
   },
   roboticsButtonImage: {
     marginTop: 10,

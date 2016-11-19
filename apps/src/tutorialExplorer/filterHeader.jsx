@@ -35,16 +35,16 @@ const styles = {
   },
   filterBy: {
     float: "left",
-    lineHeight: "44px"
+    lineHeight: "42px"
   },
   left: {
     float: "left",
-    lineHeight: "44px",
+    lineHeight: "42px",
     marginLeft: 10
   },
   right: {
     float: "right",
-    lineHeight: "44px",
+    lineHeight: "42px",
     marginRight: 10
   }
 };
@@ -86,7 +86,7 @@ const FilterHeader = React.createClass({
       <div style={styles.header}>
         {this.props.backButton && <BackButton/>}
 
-        <Sticky>
+        <Sticky style={{zIndex: 1}}>
           <div style={styles.bar}>
             <div style={styles.left}>
               {this.props.mobileLayout && (
