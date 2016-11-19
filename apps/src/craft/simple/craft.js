@@ -123,7 +123,6 @@ Craft.init = function (config) {
   }
 
   config.level.disableFinalStageMessage = true;
-  config.showInstructionsInTopPane = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function () {

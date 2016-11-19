@@ -60,7 +60,6 @@ var styles = {
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    instructionsInTopPane: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
@@ -153,7 +152,7 @@ var ApplabVisualizationColumn = React.createClass({
             {i18n.predictionInstructions()}
           </div>
         )}
-        <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
+        <BelowVisualization />
       </div>
     );
   }
@@ -162,7 +161,6 @@ var ApplabVisualizationColumn = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),

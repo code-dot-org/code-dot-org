@@ -117,15 +117,13 @@ const TutorialExplorer = React.createClass({
   /*
    * The main tutorial set is returned with the given filters and sort order.
    *
-   * Whether en or non-en page, this set does not filter by locale:
-   * - For en users, they'll see tutorials in all languages.
-   * - For non-en users, this will be the longer filterable set if they
-   *   choose to view tutorials in many languages.
+   * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
   filterTutorialSet(filters, sortBy) {
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
+      locale: "en-US",
       sortBy: sortBy
     };
 
