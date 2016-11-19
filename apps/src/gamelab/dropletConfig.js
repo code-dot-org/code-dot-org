@@ -333,6 +333,11 @@ draw() - USEFUL?
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'comment_Variables', block: '// Comment', expansion: '// ', category: 'Variables' },
 
+  // Data
+  {func: 'getUserId', parent: api, category: 'Game Lab', noAutocomplete: true},
+  {func: 'getKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
+  {func: 'setKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
+
   // Advanced
 ];
 
