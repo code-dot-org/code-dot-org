@@ -283,6 +283,13 @@ class Pd::Workshop < ActiveRecord::Base
           errors << "teacher enrollment #{enrollment.id} - #{e.message}"
         end
       end
+      workshop.facilitators.each do |facilitator|
+        begin
+          Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "facilitator #{facilitator.id} - #{e.message}"
+        end
+      end
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => e
