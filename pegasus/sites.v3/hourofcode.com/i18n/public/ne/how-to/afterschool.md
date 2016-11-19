@@ -8,21 +8,23 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# विद्यालय सकिएपछि One Hour of Code कसरी सिकाउने
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## १) यो कसरी-गर्ने भिडियो हेर्नुहोस् <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## २) एउटा ट्युटोरियल छान्नुहोस्:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+हामी विभिन्न साजेदारहरूद्वारा सिर्जना गरिएका विभिन्न प्रकारका [रमाइला, घण्टा लामा ट्यूटोरियलहरू](<%= resolve_url('https://code.org/learn') %>) सबै उमेरका सहभागीहरुलाई प्रदान गर्छौ। [तिनीहरूलाई प्रयास गर्नुहोस्!](<%= resolve_url("https://code.org/learn") %>)
 
-**सबै एक Hour of Code को अभ्यासहरू:**
+**सबै Hour of Code का ट्युटोरियलहरू:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * आत्म-निर्देशित - बच्चाहरूलाई आफ्नै गति र सीप-स्तरमा काम गर्न दिने छन्
 
 [![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## ३) तपाईको Hour of Code अघि बढाउनुहोस्
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
@@ -118,7 +120,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Other Hour of Code resources for educators:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.

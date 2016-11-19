@@ -1,0 +1,88 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2016-10-21T04:08:57.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"flowerDandelion\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\",\"\",\"\",\"\",\"tallGrass\",\"\"]",
+    "action_plane": "[\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"chicken\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\"]",
+    "player_start_position": "[4, 1]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "is_daytime": "true",
+    "verification_function": "function (verificationAPI) {\r\n      return !verificationAPI.isEntityTypeRunning(\"chicken\") && verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n}",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "player_start_direction": "2",
+    "instructions": "The chicken is frozen. Place `move` and `turn` blocks in the `when spawned` slot to get it to move.",
+    "is_event_level": "true",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"moveForward\") >= 1 && verificationAPI.getCommandExecutedCount(\"turn\") >= 1;\r\n }",
+    "failure_message_override": "Use `move forward` and `turn` commands to get your chicken moving.",
+    "use_player": "false",
+    "level_verification_timeout": "5000",
+    "failure_check_function": "function (verificationAPI) {\r\n  // Fail if chicken is not running \r\n  return !verificationAPI.isEntityTypeRunning(\"chicken\") && (verificationAPI.getCommandExecutedCount(\"moveForward\") < 1 || verificationAPI.getCommandExecutedCount(\"turn\") < 1);\r\n}",
+    "use_score": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft2_run_button_callout\",\r\n  \"callout_text\": \"When you are ready, hit \\\"Run\\\" to try your program.\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "video_key": "mc_2016_intro",
+    "instructions_important": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "This chicken has forgotten how to move! Get it moving around by putting “moveWalk fForward” and “tTurn” commands in the “When sSpawned” slot. When an mobentity is created it is called ‘“spawning’,”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\nWhen spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n    When Clicked\r\n\r\n\r\nSuccess criteria: Spawned chicken walks and turns at least once.\r\nHow to check? At least one Turn and Move Forward. (possibly check based on chicken location)\r\nSuccess check function:\r\n\r\n\r\nverificationAPI.getCommandExecutedCount(“moveForward”) >= 1 && verificationAPI.getCommandExecutedCount(“turn”) >= 1\r\nTimer: No timer\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nError message: Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move.",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_chickenSpawned" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_moveForward"/>
+        <block type="craft_entityTurnLR">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_playSound">
+          <title name="TYPE">chickenBawk</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="craft_chickenSpawned">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveForward">
+              <next>
+                <block type="craft_turn">
+                  <title name="DIR">left</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>

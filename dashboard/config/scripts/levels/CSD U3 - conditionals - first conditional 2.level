@@ -37,7 +37,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -49,6 +49,7 @@
       "setAnimation": null,
       "sprite.height": null,
       "sprite.width": null,
+      "visible": null,
       "x": null,
       "y": null,
       "rotation": null,
@@ -91,6 +92,8 @@
       "comment_Sprites": null,
       "console.log": null
     },
+    "show_debug_watch": "true",
+    "palette_category_at_start": "sprites",
     "contained_level_names": null
   },
   "published": true,

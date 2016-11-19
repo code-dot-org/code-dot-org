@@ -16,7 +16,7 @@ var Dialog = require('../dialog');
  * @param [options.showUnderageWarning] {boolean} Warn if underage.
  * @param [options.useFilesApi] {boolean} Use files API instead of assets API.
  */
-module.exports = function (assetChosen, typeFilter, onClose, options) {
+module.exports = function showAssetManager(assetChosen, typeFilter, onClose, options) {
   options = options || {};
   var codeDiv = document.createElement('div');
   var showChoseImageButton = assetChosen && typeof assetChosen === 'function';
@@ -29,12 +29,12 @@ module.exports = function (assetChosen, typeFilter, onClose, options) {
   ReactDOM.render(React.createElement(ImagePicker, {
     typeFilter: typeFilter,
     uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
-    useFilesApi: options.useFilesApi,
+    useFilesApi: !!options.useFilesApi,
     assetChosen: showChoseImageButton ? function (fileWithPath) {
       dialog.hide();
       assetChosen(fileWithPath);
     } : null,
-    showUnderageWarning: options.showUnderageWarning,
+    showUnderageWarning: !!options.showUnderageWarning,
   }), codeDiv);
 
   dialog.show();

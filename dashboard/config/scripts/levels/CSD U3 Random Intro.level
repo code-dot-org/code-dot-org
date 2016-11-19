@@ -44,13 +44,15 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"This program will print out a result here\",\r\n  \"element_id\": \"#debug-console\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": -25\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "show_d_pad": "false",
     "instructions_important": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "contained_level_names": [
       "CSD U3 Random FreeResponse"
-    ]
+    ],
+    "encrypted_examples": "1bYEYYGa5AXccXMUxfNp6UE43u7zicO3cBEF/FI5krVvlhc0m3Z6AYfVHJGw\nkDHx\n",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

@@ -4,10 +4,22 @@ nav: educate_nav
 ---
 
 # Middle School
-Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in 2017), will be a year-long or semester computer science course designed for middle school students. In addition, the online courses in our [Code Studio](http://studio.code.org) platform may be used at all grade levels. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
 # Computer Science Discoveries
+
+<img src="/images/csdiscoveries-montage.jpg" width="500px">
+
 Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+
+## Units of Study
+
+* **Unit 1:** Problem Solving: Computers and Logic
+* **Unit 2:** The Internet: Web Development
+* **Unit 3:** Programming: Interactive Games & Animations
+* **Unit 4:** Problem Solving: The Design Process
+* **Unit 2:** The Internet: Data and Society
+* **Unit 3:** Programming: The Internet of Things
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
@@ -62,7 +74,7 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 | [Scalable Game Design](http://scalablegamedesign.cs.colorado.edu) | Introduction to Game Design, Advanced Game Design (3D), and Introduction to Simulation Design, FREE | In-person summer institute, FREE to schools participating in NSF research. Otherwise, $1900/teacher and travel not included |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
-| [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$1000. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
+| [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$800. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>

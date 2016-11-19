@@ -333,7 +333,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'gradeKinder' || name == 'grade1' || name == 'grade2' || name == 'grade3' || name == 'grade4' || name == 'grade5' || name.start_with?('csd')
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name.start_with?('csd')
   end
 
   # TODO(asher): Rename this method to k1?, removing the need to disable lint.
@@ -368,7 +368,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere gradeKinder grade1 grade2 grade3 grade4 grade5).include?(self.name)
+    k5_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 cspoptional csd1 csd2 csd3 csd4 text-compression netsim pixelation frequency_analysis vigenere coursea-draft courseb-draft coursec-draft coursed-draft coursee-draft coursef-draft).include?(self.name)
   end
 
   def has_banner?
@@ -641,7 +641,7 @@ class Script < ActiveRecord::Base
   def summarize
     summarized_stages = stages.map(&:summarize)
 
-    if peer_reviews_to_complete
+    if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {

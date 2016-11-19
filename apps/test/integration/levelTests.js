@@ -14,7 +14,7 @@ import sinon from 'sinon';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -129,7 +129,7 @@ describe('Level tests', function () {
       var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
-      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true});
+      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true, configurable: true});
     }
 
     // Recreate our redux store so that we have a fresh copy

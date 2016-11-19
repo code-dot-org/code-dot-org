@@ -69,7 +69,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
 
     enrollment = Pd::Enrollment.find_by_email!(email)
     params = {
-      name: enrollment.name,
+      name: enrollment.full_name,
       email: email,
       school: enrollment.school
     }

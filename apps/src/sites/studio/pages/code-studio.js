@@ -6,9 +6,6 @@
  * Note: This is included _after_ application.js.erb during our transition period,
  * so when moving things preserve the include order as much as possible.
  */
-// Require this first at each bundle entry point for full ES6 support.
-require("babel-polyfill");
-
 import $ from 'jquery';
 
 // Shim window.console to be safe in IE
@@ -26,7 +23,7 @@ window.Radium = require('radium');
 require('@cdo/apps/code-studio/components/abuse_error');
 require('@cdo/apps/code-studio/components/report_abuse_form');
 require('@cdo/apps/code-studio/components/SendToPhone');
-require('@cdo/apps/code-studio/components/small_footer');
+require('@cdo/apps/code-studio/components/SmallFooter');
 require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
 
@@ -67,6 +64,7 @@ require('@cdo/apps/code-studio/levels/textMatch');
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.
 var windowOnError = window.onerror;
+
 window.onerror = function (msg, url, ln) {
   if (/^Script error/.test(msg) && url) {
     arguments[0] = 'Script Error: ' + url;

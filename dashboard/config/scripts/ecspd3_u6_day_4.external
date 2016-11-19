@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 day 4'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Lessons > Days 4
+# Unit 6 Lessons > Day 4
 
 ## Concepts Covered
 
@@ -19,7 +19,4 @@ This lesson gives students the opportunity of working in groups, where they will
 ## Things to keep in mind 
 Label the robots and kits so that you know what goes together.  It may be helpful to laminate the cardboard board picture that shows where the LEGO pieces go.
 
-Click “Continue” below to learn about the next lesson.
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -7,7 +7,7 @@ machine:
   ruby:
     version: 2.2.3
   node:
-    version: 0.12.0
+    version: 6.9
   java:
     version: openjdk8 # used for Applitools merge API tool
   environment:
@@ -30,12 +30,18 @@ dependencies:
     - google-chrome --version
     - ./bin/circle/upgrade-google-chrome.sh
     - google-chrome --version
+    # Install Yarn
+    - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
+    - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    - sudo apt-get update -qq
+    - sudo apt-get install -y -qq yarn
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
     - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
+    - "~/.yarn-cache"
   override:
     # Install any dependencies not covered by rake install
     # When installing moreutils, make sure it does not overwrite GNU parallel,
@@ -72,9 +78,7 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org\"" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "dashboard_port: 3000" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "pegasus_port: 3000" >> locals.yml ;; esac'
-    - npm --version
-    - npm install npm@3.10.7
-    - npm --version
+    - yarn version -V
     # For install and build, increase default 10 minute timeout to 14 minutes (840s)
     # We use ts to timestamp output lines
     # We use mispipe instead of | to exit with the first step's exit code
@@ -89,7 +93,7 @@ dependencies:
         timeout: 840
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
-    - rake firebase_task --rakefile aws/build.rake
+    - rake firebase:ci
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
@@ -103,3 +107,8 @@ test:
     - ./test.sh:
         pwd:
             cookbooks
+experimental:
+  notify:
+    branches:
+      only:
+        - staging

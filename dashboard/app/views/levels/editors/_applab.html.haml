@@ -20,6 +20,7 @@
 .field
   = f.label :makerlab_enabled, 'Enable Maker APIs'
   = boolean_check_box f, :makerlab_enabled
+= render partial: 'levels/editors/watchers_ui', locals: {f: f}
 .field
   = f.label :autocomplete_palette_apis_only, 'Autocomplete palette APIs only'
   = boolean_check_box f, :autocomplete_palette_apis_only

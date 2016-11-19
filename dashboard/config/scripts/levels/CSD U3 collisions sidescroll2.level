@@ -75,6 +75,7 @@
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "project_template_level_name": "CSD U3 abstraction sidescroll template",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,

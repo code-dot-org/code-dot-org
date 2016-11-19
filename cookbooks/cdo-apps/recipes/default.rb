@@ -10,9 +10,7 @@ include_recipe 'apt'
 include_recipe 'sudo-user'
 include_recipe 'cdo-networking'
 
-# Set hostname to the Chef node name (via chef_hostname cookbook)
-HOSTNAME_INVALID_CHAR = /[^[:alnum:]-]/
-hostname node.name.downcase.gsub(HOSTNAME_INVALID_CHAR, '-')
+include_recipe 'cdo-apps::hostname'
 
 # These packages are used by Gems we install via Bundler.
 
@@ -72,6 +70,7 @@ include_recipe 'cdo-apps::workers'
 %w(dashboard pegasus).each do |app|
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
+node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
@@ -79,9 +78,10 @@ include_recipe 'cdo-varnish'
 include_recipe 'cdo-cloudwatch-extra-metrics'
 
 include_recipe 'cdo-apps::bundle_bootstrap'
+include_recipe 'cdo-apps::build'
 
-# Install optional package build targets if specified in attributes.
-include_recipe "cdo-apps::apps" if node['cdo-secrets'] && node['cdo-secrets']["build_apps"]
+# Install nodejs if apps build specified in attributes.
+include_recipe 'cdo-nodejs' if node['cdo-secrets'] && node['cdo-secrets']["build_apps"]
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
