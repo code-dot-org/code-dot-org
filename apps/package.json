@@ -154,6 +154,7 @@
     "react-redux": "4.4.5",
     "react-router": "2.6.0",
     "react-select": "^1.0.0-rc.1",
+    "react-sticky": "5.0.5",
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-tether": "^0.5.2",
     "react-virtualized": "^7.19.4",
