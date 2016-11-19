@@ -65,13 +65,13 @@ social:
   = view :header
 
   .banner.container{style: "color: white"}
-    .col-xs-12.col-sm-12.col-md-6{style: "text-align: center"}
+    .col-sm-12.col-md-6{style: "text-align: center"}
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
         = hoc_s(:learn_banner_teachers)
-    #studentImage.col-xs-12.col-sm-12.col-md-6.hidden-xs
+    #studentImage.hidden-xs.col-sm-12.col-md-6
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
