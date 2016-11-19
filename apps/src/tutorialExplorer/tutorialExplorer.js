@@ -9,9 +9,22 @@ import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
-import { mobileCheck } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive } from './responsive';
+import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+
+import { TutorialsSortBy, mobileCheck } from './util';
+import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import i18n from './locale';
 import _ from 'lodash';
+import queryString from 'query-string';
+
+const styles = {
+  bottomLinks: {
+    padding: '10px 7px 40px 7px',
+    fontSize: 13,
+    lineHeight: "17px",
+    clear: "both"
+  }
+};
 
 const TutorialExplorer = React.createClass({
   propTypes: {
@@ -21,13 +34,13 @@ const TutorialExplorer = React.createClass({
     hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
     locale: React.PropTypes.string.isRequired,
     backButton: React.PropTypes.bool,
-    legacyLink: React.PropTypes.string,
-    roboticsButton: React.PropTypes.bool
+    roboticsButtonUrl: React.PropTypes.string,
+    showSortBy: React.PropTypes.bool.isRequired,
+    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   getInitialState() {
     let filters = {};
-
     for (const filterGroupName in this.props.filterGroups) {
       const filterGroup = this.props.filterGroups[filterGroupName];
       filters[filterGroup.name] = [];
@@ -37,7 +50,10 @@ const TutorialExplorer = React.createClass({
       }
     }
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(filters);
+    const sortBy = TutorialsSortBy.default;
+    const filteredTutorials = this.filterTutorialSet(filters, sortBy);
+    const filteredTutorialsForLocale = this.filterTutorialSetForLocale();
+    const showingAllTutorials = this.isLocaleEnglish();
 
     return {
       filters: filters,
@@ -47,7 +63,9 @@ const TutorialExplorer = React.createClass({
       windowWidth: $(window).width(),
       windowHeight: $(window).height(),
       mobileLayout: isResponsiveCategoryInactive('md'),
-      showingModalFilters: false
+      showingModalFilters: false,
+      sortBy: sortBy,
+      showingAllTutorials: showingAllTutorials
     };
   },
 
@@ -59,7 +77,7 @@ const TutorialExplorer = React.createClass({
    * @param {string} filterEntry - The name of the filter entry.
    * @param {bool} value - Whether the entry was checked or not.
    */
-  handleUserInput(filterGroup, filterEntry, value) {
+  handleUserInputFilter(filterGroup, filterEntry, value) {
     const state = Immutable.fromJS(this.state);
 
     let newState = {};
@@ -74,28 +92,64 @@ const TutorialExplorer = React.createClass({
 
     newState = newState.toJS();
 
-    const { filteredTutorials, filteredTutorialsForLocale } = this.filterTutorials(newState.filters);
+    const filteredTutorials = this.filterTutorialSet(newState.filters, this.state.sortBy);
     this.setState({
       ...newState,
       filteredTutorials,
-      filteredTutorialsCount: filteredTutorials.length,
-      filteredTutorialsForLocale
+      filteredTutorialsCount: filteredTutorials.length
     });
   },
 
-  filterTutorials(filters, hideFilters) {
+  /**
+   * Called when the sort order is changed via dropdown.
+   *
+   * @param {SortBy} value - The new sort order.
+   */
+  handleUserInputSortBy(value) {
+    const filteredTutorials = this.filterTutorialSet(this.state.filters, value);
+    this.setState({
+      filteredTutorials,
+      filteredTutorialsCount: filteredTutorials.length,
+      sortBy: value
+    });
+  },
+
+  /*
+   * The main tutorial set is returned with the given filters and sort order.
+   *
+   * Whether en or non-en user, this filters as though the user is of "en-US" locale.
+   */
+  filterTutorialSet(filters, sortBy) {
     const filterProps = {
-      locale: this.props.locale,
       filters: filters,
-      hideFilters: this.props.hideFilters
+      hideFilters: this.props.hideFilters,
+      locale: "en-US",
+      sortBy: sortBy
     };
-    filterProps.specificLocale = false;
-    const filteredTutorials = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+
+    return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
+  },
+
+  /*
+   * The extra set of tutorials for a specific locale, shown at top for non-en user
+   * with no filter options.
+   * If not robotics page, show all tutorials including robotics.  If robotics page,
+   * then use that filter.
+   */
+  filterTutorialSetForLocale() {
+    const filterProps = {
+      sortBy: TutorialsSortBy.default
+    };
+
+    if (!this.props.roboticsButtonUrl) {
+      filterProps.filters = {
+        activity_type: ["robotics"]
+      };
+    }
 
     filterProps.specificLocale = true;
-    const filteredTutorialsForLocale = TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
-
-    return { filteredTutorials, filteredTutorialsForLocale };
+    filterProps.locale = this.props.locale;
+    return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
   },
 
   componentDidMount() {
@@ -110,6 +164,14 @@ const TutorialExplorer = React.createClass({
     this.setState({showingModalFilters: false});
   },
 
+  showAllTutorials() {
+    this.setState({showingAllTutorials: true});
+  },
+
+  hideAllTutorials() {
+    this.setState({showingAllTutorials: false});
+  },
+
   shouldShowFilters() {
     return !this.state.mobileLayout || this.state.showingModalFilters;
   },
@@ -119,7 +181,11 @@ const TutorialExplorer = React.createClass({
   },
 
   shouldShowTutorialsForLocale() {
-    return this.shouldShowTutorials() && !this.isLocaleEnglish();
+    return !this.isLocaleEnglish();
+  },
+
+  shouldShowAllTutorialsToggleButton() {
+    return !this.isLocaleEnglish();
   },
 
   isLocaleEnglish() {
@@ -179,7 +245,7 @@ const TutorialExplorer = React.createClass({
      *   the currently active filters.  Each array is named for its filter group.
      */
     filterTutorials(tutorials, filterProps) {
-      const { locale, specificLocale, filters, hideFilters } = filterProps;
+      const { locale, specificLocale, filters, hideFilters, sortBy } = filterProps;
 
       const filteredTutorials = tutorials.filter(tutorial => {
         // Check that the tutorial isn't marked as do-not-show.  If it does,
@@ -191,12 +257,11 @@ const TutorialExplorer = React.createClass({
         // First check that the tutorial language doesn't exclude it immediately.
         // If the tags contain some languages, and we don't have a match, then
         // hide the tutorial.
-        if (tutorial.languages_supported) {
+        if (locale && tutorial.languages_supported) {
           const languageTags = tutorial.languages_supported.split(',');
-          const currentLocale = locale;
           if (languageTags.length > 0 &&
-            languageTags.indexOf(currentLocale) === -1 &&
-            languageTags.indexOf(currentLocale.substring(0,2)) === -1) {
+            languageTags.indexOf(locale) === -1 &&
+            languageTags.indexOf(locale.substring(0,2)) === -1) {
             return false;
           }
         } else if (specificLocale) {
@@ -237,7 +302,11 @@ const TutorialExplorer = React.createClass({
 
         return filterGroupsSatisfied;
       }).sort((tutorial1, tutorial2) => {
-        return tutorial2.displayweight - tutorial1.displayweight;
+        if (sortBy === TutorialsSortBy.popularityrank) {
+          return tutorial1.popularityrank - tutorial2.popularityrank;
+        } else {
+          return tutorial2.displayweight - tutorial1.displayweight;
+        }
       });
 
       return filteredTutorials;
@@ -259,106 +328,153 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
-    return (
-      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto"}}>
-        <FilterHeader
-          backButton={this.props.backButton}
-          legacyLink={this.props.legacyLink}
-          filteredTutorialsCount={this.state.filteredTutorialsCount}
-          mobileLayout={this.state.mobileLayout}
-          showingModalFilters={this.state.showingModalFilters}
-          showModalFilters={this.showModalFilters}
-          hideModalFilters={this.hideModalFilters}
-        />
-        <div style={{clear: "both"}}/>
+    const bottomLinksStyle = {
+      ...styles.bottomLinks,
+      textAlign: getResponsiveValue({xs: "left", md: "right"})
+    };
 
-        {this.shouldShowFilters() && (
-          <FilterSet
-            filterGroups={this.props.filterGroups}
-            onUserInput={this.handleUserInput}
-            selection={this.state.filters}
-            roboticsButton={this.props.roboticsButton}
-          />
-        )}
+    return (
+      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
 
         {this.shouldShowTutorialsForLocale() && (
           <div>
-            <h1>Tutorials in your language</h1>
-            <TutorialSet
-              tutorials={this.state.filteredTutorialsForLocale}
-              filters={this.state.filters}
-              locale={this.props.locale}
-              specificLocale={true}
-            />
-            <h1>Tutorials in many languages</h1>
+            <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+            {this.state.filteredTutorialsForLocale.length === 0 &&
+              i18n.noTutorialsYourLanguage()
+            }
+
+            {this.state.filteredTutorialsForLocale.length > 0 && (
+              <TutorialSet
+                tutorials={this.state.filteredTutorialsForLocale}
+                filters={this.state.filters}
+                locale={this.props.locale}
+                specificLocale={true}
+                localeEnglish={this.isLocaleEnglish()}
+                disabledTutorials={this.props.disabledTutorials}
+              />
+            )}
           </div>
         )}
 
-        {this.shouldShowTutorials() && (
-          <TutorialSet
-            tutorials={this.state.filteredTutorials}
-            filters={this.state.filters}
-            locale={this.props.locale}
+        {this.shouldShowAllTutorialsToggleButton() && (
+          <ToggleAllTutorialsButton
+            showAllTutorials={this.showAllTutorials}
+            hideAllTutorials={this.hideAllTutorials}
+            showingAllTutorials={this.state.showingAllTutorials}
           />
+        )}
+
+        {this.state.showingAllTutorials && (
+          <div>
+            <FilterHeader
+              onUserInput={this.handleUserInputSortBy}
+              sortBy={this.state.sortBy}
+              backButton={this.props.backButton}
+              filteredTutorialsCount={this.state.filteredTutorialsCount}
+              mobileLayout={this.state.mobileLayout}
+              showingModalFilters={this.state.showingModalFilters}
+              showModalFilters={this.showModalFilters}
+              hideModalFilters={this.hideModalFilters}
+              showSortBy={this.props.showSortBy}
+            />
+            <div style={{clear: "both"}}/>
+
+            {this.shouldShowFilters() && (
+              <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+                <FilterSet
+                  filterGroups={this.props.filterGroups}
+                  onUserInput={this.handleUserInputFilter}
+                  selection={this.state.filters}
+                  roboticsButtonUrl={this.props.roboticsButtonUrl}
+                />
+              </div>
+            )}
+
+            <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+              {this.shouldShowTutorials() && (
+                <TutorialSet
+                  tutorials={this.state.filteredTutorials}
+                  filters={this.state.filters}
+                  locale={this.props.locale}
+                  localeEnglish={this.isLocaleEnglish()}
+                  disabledTutorials={this.props.disabledTutorials}
+                />
+              )}
+            </div>
+
+            <div style={bottomLinksStyle}>
+              <div>
+                <a href="https://hourofcode.com/activity-guidelines">
+                  {i18n.bottomGuidelinesLink()}
+                </a>
+              </div>
+              <br/>
+              <div>
+                <a href="https://hourofcode.com/supporting-special-needs-students">
+                  {i18n.bottomSpecialNeedsLink()}
+                </a>
+              </div>
+            </div>
+          </div>
         )}
       </div>
     );
   }
 });
 
-
 function getFilters({robotics, mobile}) {
   const filters = [
     { name: "grade",
-      text: "Grades",
+      text: i18n.filterGrades(), //"Grades",
       entries: [
-        {name: "pre", text: "Pre-reader"},
-        {name: "2-5", text: "Grades 2-5"},
-        {name: "6-8", text: "Grades 6-8"},
-        {name: "9+", text: "Grades 9+"}]},
+        {name: "pre",             text: i18n.filterGradesPre()},
+        {name: "2-5",             text: i18n.filterGrades25()},
+        {name: "6-8",             text: i18n.filterGrades68()},
+        {name: "9+",              text: i18n.filterGrades9()}]},
     { name: "teacher_experience",
-      text: "Educator's experience",
+      text: i18n.filterTeacherExperience(),
       entries: [
-        {name: "beginner", text:"Beginner"},
-        {name: "comfortable", text:"Comfortable"}]},
+        {name: "beginner",        text: i18n.filterTeacherExperienceBeginner()},
+        {name: "comfortable",     text: i18n.filterTeacherExperienceComfortable()}]},
     { name: "student_experience",
-      text: "Student's experience",
+      text: i18n.filterStudentExperience(),
       entries: [
-        {name: "beginner", text: "Beginner"},
-        {name: "comfortable", text: "Comfortable"}]},
+        {name: "beginner",        text: i18n.filterStudentExperienceBeginner()},
+        {name: "comfortable",     text: i18n.filterStudentExperienceComfortable()}]},
     { name: "platform",
-      text: "Classroom technology",
+      text: i18n.filterPlatform(),
       entries: [
-        {name: "computers", text: "Computers"},
-        {name: "android", text: "Android"},
-        {name: "ios", text: "iPad/iPhone"},
-        {name: "no-internet", text: "Poor or no internet"},
-        {name: "no-computers", text: "No computers or devices"}]},
+        {name: "computers",       text: i18n.filterPlatformComputers()},
+        {name: "android",         text: i18n.filterPlatformAndroid()},
+        {name: "ios",             text: i18n.filterPlatformIos()},
+        {name: "no-internet",     text: i18n.filterPlatformNoInternet()},
+        {name: "no-computers",    text: i18n.filterPlatformNoComputers()}]},
     { name: "subject",
-      text: "Topics",
+      text: i18n.filterTopics(),
       entries: [
-        {name: "science", text: "Science"},
-        {name: "math", text: "Math"},
-        {name: "history", text: "Social Studies"},
-        {name: "la", text: "Language Arts"},
-        {name: "art", text: "Art, Media, Music"},
-        {name: "cs-only", text: "Computer Science only"}]},
+        {name: "science",         text: i18n.filterTopicsScience()},
+        {name: "math",            text: i18n.filterTopicsMath()},
+        {name: "history",         text: i18n.filterTopicsHistory()},
+        {name: "la",              text: i18n.filterTopicsLa()},
+        {name: "art",             text: i18n.filterTopicsArt()},
+        {name: "cs-only",         text: i18n.filterTopicsCsOnly()}]},
     { name: "activity_type",
-      text: "Activity type",
+      text: i18n.filterActivityType(),
       entries: [
-        {name: "online-tutorial", text: "Self-led tutorials"},
-        {name: "lesson-plan", text: "Lesson plan"}]},
-    { name: "length", text: "Length",
+        {name: "online-tutorial", text: i18n.filterActivityTypeOnlineTutorial()},
+        {name: "lesson-plan",     text: i18n.filterActivityTypeLessonPlan()}]},
+    { name: "length",
+      text: i18n.filterLength(),
       entries: [
-        {name: "1hour", text: "One hour"},
-        {name: "1hour-follow", text: "One hour with follow-on"},
-        {name: "few-hours", text: "A few hours"}]},
+        {name: "1hour",           text: i18n.filterLength1Hour()},
+        {name: "1hour-follow",    text: i18n.filterLength1HourFollow()},
+        {name: "few-hours",       text: i18n.filterLengthFewHours()}]},
     { name: "programming_language",
-      text: "Language",
+      text: i18n.filterProgrammingLanguage(),
       entries: [
-        {name: "blocks", text: "Blocks"},
-        {name: "typing", text: "Typing"},
-        {name: "other", text: "Other"}]}];
+        {name: "blocks",          text: i18n.filterProgrammingLanguageBlocks()},
+        {name: "typing",          text: i18n.filterProgrammingLanguageTyping()},
+        {name: "other",           text: i18n.filterProgrammingLanguageOther()}]}];
 
   const initialFilters = {
     teacher_experience: ["beginner"],
@@ -372,12 +488,14 @@ function getFilters({robotics, mobile}) {
   if (robotics) {
     filters.forEach(filterGroup => {
       if (filterGroup.name === "activity_type") {
-        filterGroup.entries = [{name: "robotics", text: "Robotics"}];
+        filterGroup.entries = [{name: "robotics", text: i18n.filterActivityTypeRobotics()}];
         filterGroup.display = false;
       }
     });
 
     initialFilters.activity_type = ["robotics"];
+    initialFilters.teacher_experience = [];
+    initialFilters.student_experience = [];
 
     hideFilters.activity_type = [];
   }
@@ -389,9 +507,68 @@ function getFilters({robotics, mobile}) {
   return {filters, initialFilters, hideFilters};
 }
 
+/*
+ * Parse URL parameters to retrieve an override of initialFilters.
+ *
+ * @param {Array} filters - Array of filterGroup objects.
+ * @param {bool} robotics - whether on the robotics page.
+ *
+ * @return {object} - Returns an object containing arrays of strings.  Each
+ *   array is named for a filterGroup name, and each string inside is named
+ *   for a filter entry.  Note that this is not currently white-listed against
+ *   our known name of filterGroups/entries, but invalid entries should be
+ *   ignored in the filtering user experience.
+ */
+function getUrlParameters(filters, robotics) {
+  // Create a result object that has a __proto__ so that React validation will work
+  // properly.
+  let parametersObject = {};
+
+  let parameters = queryString.parse(location.search);
+  for (const name in parameters) {
+    const filterGroup = filters.find(item => item.name === name);
+
+    // Validate filterGroup name.
+    if (filterGroup) {
+      let entryNames = [];
+      if (typeof parameters[name] === "string") {
+        // Convert item with single filter entry into array containing the string.
+        entryNames = [parameters[name]];
+      } else {
+        entryNames = parameters[name];
+      }
+
+      for (const entry in entryNames) {
+        const entryName = entryNames[entry];
+
+        // Validate entry name.
+        if (filterGroup.entries.find(item => item.name === entryName)) {
+          if (!parametersObject[name]) {
+            parametersObject[name] = [];
+          }
+          parametersObject[name].push(entryName);
+        }
+      }
+    }
+  }
+
+  if (robotics) {
+    // The robotics page remains dedicated to robotics activities.
+    parametersObject.activity_type = ["robotics"];
+  }
+
+  return parametersObject;
+}
+
 window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
-  const {filters, initialFilters, hideFilters} = getFilters(options);
+  let {filters, initialFilters, hideFilters} = getFilters(options);
+
+  // Check for URL-based override of initialFilters.
+  const providedParameters = getUrlParameters(filters, !options.roboticsButtonUrl);
+  if (!_.isEmpty(providedParameters)) {
+    initialFilters = providedParameters;
+  }
 
   this.renderToElement = function (element) {
     ReactDOM.render(
@@ -402,8 +579,9 @@ window.TutorialExplorerManager = function (options) {
         hideFilters={hideFilters}
         locale={options.locale}
         backButton={options.backButton}
-        legacyLink={options.legacyLink}
-        roboticsButton={options.roboticsButton}
+        roboticsButtonUrl={options.roboticsButtonUrl}
+        showSortBy={options.showSortBy}
+        disabledTutorials={options.disabledTutorials}
       />,
       element
     );

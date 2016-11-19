@@ -6,24 +6,24 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# Как обучать "Часу Программирования"
+# Как обучать "Часу кода"
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+Присоединяйтесь к движению и представьте группу учеников на их первом часу информатики с помощью этих шагов:
 
 ## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник для вашего часа:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+Мы предоставляем различные[классные часы](%= resolve_url('https://code.org/learn') %)для участников всех возрастов, созданные различными партнерами.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url("https://code.org/learn") %)**
 
   * Требуют от учителя минимальное время на подготовку
   * Являются интуитивными, позволяя ученикам работать в их собственном темпе и уровне квалификации
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Ученик должен руководится учебными пособиями Час кода:](%= resolve_url("https://code.org/educate/teacher-led") %)**
 
-  * Are lesson plans that require some advance teacher preparation
-  * Are categorized by grade level *and* by subject area (eg Math, English, etc)
+  * Планы уроков, которые требуют предварительной подготовки учителя
+  * Подразделяются по классам*и*по предметной области (например, Математика, английский и т. д.)
 
 [![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
 
@@ -37,7 +37,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 **Планируйте Заранее!**Выполните следующие действия, прежде чем событие начнётся:
 
-  * Test tutorials on student computers or devices. Make sure they work properly on browsers with sound and video.
+  * Тестируйте уроки на ученических компьютерах или устройствах. Убедитесь, что они корректно будут работать в браузерах, также со звуком и видео.
   * Обеспечьте наушники для вашего класса, или попросите учеников принести свои собственные, если учебник, который вы выбрали лучше всего работает со звуком.
   * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Когда ученики становятся партнерами, они помогают друг другу и меньше полагаются на учителя. Также они увидят, что компьютерная наука социальна и кооперативна.
   * **Низкая пропускная способность интернет соединения?** Покажите видео всему классу, чтобы каждый ученик не загружал видео на свое устройство. Или попробуйте оффлайн учебники.
@@ -46,7 +46,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 ## 5) Начните свой Час Кода с вдохновляющей речи или видео
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Используйте эту карту](https://code.org/volunteer/local)чтобы найти местных волонтеров, которые могут посетить ваш класс или присоединиться к видео-чату с вашими учениками.
 
 [![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
 
@@ -55,21 +55,21 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
   * Оригинальное начальное видео от Code.org, в котором вы сможете увидеть Билла Гейтса, Марка Цукерберга и звезду NBA Криса Боша ([1минутная версия](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-минутная версия](https://www.youtube.com/watch?v=nKIu9yen5nc) и [9-минутная версия](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [ПРезидент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Найдите еще больше вдохновляющих видео [здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
   * Расскажите о том, как технология влияет на нашу жизнь, приводя примеры, которые понравятся как мальчикам, так и девочкам (побеседуйте о спасении жизней, помощи другим людям, поиске новых знакомств и так далее).
-  * As a class, list things that use code in everyday life.
+  * Расскажите, как код в используется повседневной жизни.
   * Смотрите советы для девушек, интересующихся информатикой[здесь](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Нужны дополнительные рекомендации?** Загрузите этот [пример плана урока](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Хотите узнать больше идей о том, как провести занятие?** Почитайте[лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от опытных преподавателей.
 
 ## 6) Программируйте!
 
-**Direct students to the activity**
+**Объясните ученикам, как начать**
 
   * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](%= resolve_url('https://code.org/learn') %)под количество участников.
 

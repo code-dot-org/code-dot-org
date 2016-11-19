@@ -111,5 +111,6 @@
   "word": "ことばを　みつけましょう",
   "wrongCropError": "私はここから作物を収穫することができません。",
   "yes": "はい",
-  "youSpelled": "あなたのスペル"
+  "youSpelled": "あなたのスペル",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
 }

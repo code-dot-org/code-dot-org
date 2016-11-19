@@ -6,7 +6,7 @@
     - {text: answer['text'], index: index, letter: letter}
   - end.compact
   - unless correct_answers.empty?
-    #markdown.teacher
+    #markdown.teacher.hide-as-student
       %h3= t('teacher.answer')
       .content
         - correct_answers.each do |correct_answer|

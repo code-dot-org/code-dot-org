@@ -3,13 +3,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
-import errorHandler from '../errorHandler';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
+import reducers from './reducers';
+import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -28,7 +30,6 @@ const WebLab = function () {
   this.studioApp_ = null;
 
   consoleApi.setLogMethod(this.log.bind(this));
-  errorHandler.setLogMethod(this.log.bind(this));
 
   // store reference to singleton
   webLab_ = this;
@@ -123,7 +124,6 @@ WebLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
@@ -201,17 +201,20 @@ WebLab.prototype.init = function (config) {
     } else {
       this.brambleHost.disableInspector();
     }
+    this.studioApp_.reduxStore.dispatch(actions.changeInspectorOn(inspectorOn));
   }
 
   function onFinish() {
-    this.studioApp_.report({
-      app: 'weblab',
-      level: this.level.id,
-      result: true,
-      testResult: this.studioApp_.TestResults.FREE_PLAY,
-      program: this.getCurrentFilesVersionId() || '',
-      submitted: false,
-      onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
+    window.dashboard.project.autosave(() => {
+      this.studioApp_.report({
+        app: 'weblab',
+        level: this.level.id,
+        result: true,
+        testResult: this.studioApp_.TestResults.FREE_PLAY,
+        program: this.getCurrentFilesVersionId() || '',
+        submitted: false,
+        onComplete: this.studioApp_.onContinue.bind(this.studioApp_),
+      });
     });
   }
 
@@ -283,23 +286,24 @@ WebLab.prototype.renderFooterInSharedMode = function (container, copyrightString
     });
   }
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
-    i18nDropdown: '',
-    copyrightInBase: false,
-    copyrightStrings: copyrightStrings,
-    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
-    rowHeight: WEBLAB_FOOTER_HEIGHT,
-    style: {
-      fontSize: 18
-    },
-    baseStyle: {
-      width: '100%',
-      paddingLeft: 0
-    },
-    className: 'dark',
-    menuItems: menuItems,
-    phoneFooter: true
-  }), footerDiv);
+  ReactDOM.render(
+    <SmallFooter
+      i18nDropdown={''}
+      privacyPolicyInBase={false}
+      copyrightInBase={false}
+      copyrightStrings={copyrightStrings}
+      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
+      rowHeight={WEBLAB_FOOTER_HEIGHT}
+      style={{fontSize:18}}
+      baseStyle={{
+        width: '100%',
+        paddingLeft: 0
+      }}
+      className="dark"
+      menuItems={menuItems}
+      phoneFooter={true}
+    />,
+    footerDiv);
 };
 
 WebLab.prototype.getCodeAsync = function () {
@@ -454,6 +458,10 @@ WebLab.prototype.loadFileEntries = function () {
  */
 WebLab.prototype.reset = function (ignore) {
   // TODO - implement
+};
+
+WebLab.prototype.getAppReducers = function () {
+  return reducers;
 };
 
 export default WebLab;

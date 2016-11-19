@@ -392,6 +392,7 @@ class Studio < Grid
 </category>
 <category name="Text">
   <block type="text" />
+  <block type="text_join_simple" inputcount="2"/>
   <block type="text_join" />
   <block type="text_append">
     <value name="TEXT">

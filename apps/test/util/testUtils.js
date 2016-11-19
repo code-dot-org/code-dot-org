@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';

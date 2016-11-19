@@ -12,6 +12,7 @@ import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
+import i18n from '@cdo/locale';
 
 var styles = {
   completion: {
@@ -47,6 +48,9 @@ var styles = {
     marginLeft: 2,
     marginTop: -2,
   },
+  containedInstructions: {
+    marginTop: 10
+  }
 };
 
 /**
@@ -56,7 +60,6 @@ var styles = {
 var ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    instructionsInTopPane: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
@@ -68,6 +71,7 @@ var ApplabVisualizationColumn = React.createClass({
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool,
+    awaitingContainedResponse: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -96,6 +100,7 @@ var ApplabVisualizationColumn = React.createClass({
           showSelector={!this.props.isRunning}
           isPaused={this.props.isPaused}
           screenIds={this.props.screenIds}
+          runButtonDisabled={this.props.awaitingContainedResponse}
           onScreenCreate={this.props.onScreenCreate}
         >
           {visualization}
@@ -142,7 +147,12 @@ var ApplabVisualizationColumn = React.createClass({
             <CompletionButton/>
           </div>
         </GameButtons>
-        <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
+        {this.props.awaitingContainedResponse && (
+          <div style={styles.containedInstructions}>
+            {i18n.predictionInstructions()}
+          </div>
+        )}
+        <BelowVisualization />
       </div>
     );
   }
@@ -151,7 +161,6 @@ var ApplabVisualizationColumn = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
@@ -159,6 +168,7 @@ export default connect(function propsFromStore(state) {
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,

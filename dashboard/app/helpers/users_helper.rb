@@ -1,3 +1,5 @@
+require 'cdo/activity_constants'
+
 module UsersHelper
   include ApplicationHelper
 
@@ -107,7 +109,9 @@ module UsersHelper
       user_data[:levels] = {}
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|
-          ul = uls.try(:[], level_id)
+          # if we have a contained level, use that to represent progress
+          contained_level_id = Level.cache_find(level_id).contained_levels.try(:first).try(:id)
+          ul = uls.try(:[], contained_level_id || level_id)
           completion_status = activity_css_class(ul)
           # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
           submitted = !!ul.try(:submitted) &&
@@ -206,13 +210,14 @@ module UsersHelper
     pages_completed
   end
 
-  # NOTE: Though the method name would suggest this returns a percentage, the
-  # method returns a decimal.
-  # TODO(asher): Make the name and the return consistent.
+  # @return [Float] The percentage, between 0.0 and 100.0, of the levels in the
+  #   script that were passed or perfected.
   def percent_complete_total(script, user = current_user)
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)
-    completed = levels.count{|l| sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])}
-    completed.to_f / levels.count
+    completed = levels.count do |l|
+      sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])
+    end
+    (100.0 * completed / levels.count).round(2)
   end
 end

@@ -36,6 +36,7 @@ locales = {
   'Irish' => 'ga-IE',
   'Italian' => 'it-IT',
   'Japanese' => 'ja-JP',
+  'Kazakh' => 'kk-KZ',
   'Khmer' => 'km-KH',
   'Korean' => 'ko-KR',
   'Kurdish' => 'ku-IQ',
@@ -44,9 +45,10 @@ locales = {
   'Macedonian (FYROM)' => 'mk-MK',
   'Malay' => 'ms-MY',
   'Maltese' => 'mt-MT',
+  'Maori' => 'mi-NZ',
   'Marathi' => 'mr-IN',
   'Nepali' => 'ne-NP',
-  'Northern Sami' => 'se',
+  'Northern Sami' => 'se-FI',
   'Norwegian' => 'no-NO',
   'Norwegian Nynorsk' => 'nn-NO',
   'Pashto' => 'ps-AF',
@@ -57,9 +59,11 @@ locales = {
   'Romanian' => 'ro-RO',
   'Russian' => 'ru-RU',
   'Serbian (Cyrillic)' => 'sr-SP',
+  'Sinhala' => 'si-LK',
   'Slovak' => 'sk-SK',
   'Slovenian' => 'sl-SI',
   'Spanish' => 'es-ES',
+  'Spanish, Argentina' => 'es-AR',
   'Spanish, Mexico' => 'es-MX',
   'Swedish' => 'sv-SE',
   'Tamil' => 'ta-IN',
@@ -67,7 +71,9 @@ locales = {
   'Turkish' => 'tr-TR',
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
-  'Vietnamese' => 'vi-VN'
+  'Uzbek' => 'uz-UZ',
+  'Vietnamese' => 'vi-VN',
+  'Zulu' => 'zu-ZA'
 }
 
 untranslated_apps = %w(
@@ -75,6 +81,7 @@ untranslated_apps = %w(
   calc
   eval
   netsim
+  tutorialExplorer
 )
 
 locales.each_value do |locale|

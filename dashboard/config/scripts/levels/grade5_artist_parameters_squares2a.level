@@ -35,7 +35,7 @@
     "video_key": "C4_function_parameters",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You need to click the \\\"edit\\\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!\",\"hint_id\":\"grade5_artist_parameters_squares2a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/b7defcaec660038f173a08dcd10da1a7/grade5_artist_parameters_squares2a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When calling your function, use a `for loop` for the best possible code!\",\"hint_id\":\"grade5_artist_parameters_squares2a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/062ac7c51ade064cc84b325a0e4b17db/grade5_artist_parameters_squares2a.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You need to click the \\\"edit\\\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!\",\"hint_id\":\"grade5_artist_parameters_squares2a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b7defcaec660038f173a08dcd10da1a7/grade5_artist_parameters_squares2a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When calling your function, use a `for loop` for the best possible code!\",\"hint_id\":\"grade5_artist_parameters_squares2a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/062ac7c51ade064cc84b325a0e4b17db/grade5_artist_parameters_squares2a.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

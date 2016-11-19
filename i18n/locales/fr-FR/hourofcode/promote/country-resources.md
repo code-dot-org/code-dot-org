@@ -78,7 +78,7 @@ Va multumim pentru inregistrare, daca doriti materiale printate pentru promovare
 
 We’ll host a variety of fun, hour-long tutorials, created by a variety of partners. New tutorials are coming to kick off the Hour of Code before <%= campaign_date('full') %>.
 
-**Tous les tutoriels Une Heure de Code:**
+**Tous les tutoriels de l'Heure de Code:**
 
   * Nécessitent un minimum de préparation
   * Sont guidés, pour permettre aux élèves de travailler à leur rythme et à leur niveau

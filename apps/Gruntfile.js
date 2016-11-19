@@ -8,6 +8,7 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
+var checkEntryPoints = require('./script/checkEntryPoints');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -360,7 +361,6 @@ module.exports = function (grunt) {
   ));
   var codeStudioEntries = {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
-    'districtDropdown':             './src/sites/studio/pages/districtDropdown.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
     'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
     'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
@@ -374,11 +374,11 @@ module.exports = function (grunt) {
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
-    'termsInterstitial':            './src/sites/studio/pages/termsInterstitial.js',
+    'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
-    'initApp/initApp':              './src/sites/studio/pages/initApp.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
   };
 
@@ -393,7 +393,7 @@ module.exports = function (grunt) {
     embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
     embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
@@ -416,11 +416,16 @@ module.exports = function (grunt) {
 
     return webpackConfig.create({
       output: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.extend(
-        {},
-        appsEntries,
-        codeStudioEntries,
-        otherEntries
+      entries: _.mapValues(
+        _.extend(
+          {},
+          appsEntries,
+          codeStudioEntries,
+          otherEntries
+        ),
+        function (val) {
+          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+        }
       ),
       externals: [
         {
@@ -450,6 +455,7 @@ module.exports = function (grunt) {
       ],
       minify: minify,
       watch: watch,
+      watchNotify: grunt.option('watch-notify'),
       piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
   }
@@ -591,7 +597,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
@@ -609,6 +615,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
+    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -618,17 +625,39 @@ module.exports = function (grunt) {
     'ejs'
   ]);
 
+  grunt.registerTask('check-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build, {verbose: true})
+      .then(stats => done());
+  });
+
+  grunt.registerTask('lint-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build)
+      .then(stats => {
+        console.log(
+          [
+            chalk.green(`[${stats.passed} passed]`),
+            stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+            stats.failed && chalk.red(`[${stats.failed} failed]`),
+          ].filter(f=>f).join(' ')
+        );
+        if (stats.failed > 0) {
+          grunt.warn(
+            `${stats.failed} entry points do not conform to naming conventions.\n` +
+            `Run grunt check-entry-points for details.\n`
+          );
+        }
+        done();
+      });
+  });
+
   grunt.registerTask('compile-firebase-rules', function () {
-    try {
-      child_process.execSync('ls `npm bin`/firebase-bolt');
-    } catch (e) {
-      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
-      try {
-        child_process.execSync('which npm');
-      } catch (e) {
-        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
-      }
-      child_process.execSync('npm install');
+    if (process.env.RACK_ENV === 'production') {
+      throw new Error(
+        "Cannot compile firebase security rules on production.\n" +
+        "Instead, upload security rules from the apps package which was downloaded from s3."
+      );
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');

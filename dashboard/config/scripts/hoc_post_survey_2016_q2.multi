@@ -1,0 +1,6 @@
+name 'HOC post-survey 2016 q2'
+question 'I like computer science.'
+right 'Disagree a lot'
+right 'Disagree a little'
+right 'Agree a little'
+right 'Agree a lot'

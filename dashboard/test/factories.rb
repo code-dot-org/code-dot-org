@@ -9,6 +9,9 @@ FactoryGirl.define do
     navigator_user_level {user_level}
   end
 
+  factory :studio_person do
+  end
+
   factory :user do
     birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
@@ -73,7 +76,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -516,13 +519,6 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  factory :user_profile do
-    user { create :teacher }
-    created_at { Time.zone.now }
-    updated_at { Time.zone.now }
-    course UserProfile::CSP
-  end
-
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
@@ -579,6 +575,7 @@ FactoryGirl.define do
   factory :school_info_us_private, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -586,6 +583,7 @@ FactoryGirl.define do
   factory :school_info_us_other, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -622,10 +620,12 @@ FactoryGirl.define do
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:first_name) { |n| "Participant#{n}" }
+    last_name 'Codeberg'
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     association :school_info, factory: :school_info_without_country
-    school {'Example School'}
+    school 'Example School'
+    code {SecureRandom.hex(10)}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

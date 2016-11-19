@@ -4,19 +4,18 @@
 import React from 'react';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
-import { getResponsiveValue } from './responsive';
 
 const FilterSet = React.createClass({
   propTypes: {
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    roboticsButton: React.PropTypes.bool
+    roboticsButtonUrl: React.PropTypes.string
   },
 
   render() {
     return (
-      <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+      <div>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup
@@ -30,8 +29,8 @@ const FilterSet = React.createClass({
           )
         )}
 
-        {this.props.roboticsButton && (
-          <RoboticsButton/>
+        {this.props.roboticsButtonUrl && (
+          <RoboticsButton url={this.props.roboticsButtonUrl}/>
         )}
 
       </div>

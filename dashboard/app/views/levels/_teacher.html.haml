@@ -1,6 +1,6 @@
 - if current_user.try(:teacher?) && @script_level
-
-  .teacher-panel{class: params[:user_id] || params[:section_id] || params[:solution] ? '' : 'hidden'}
+  - show_panel = (params[:user_id] || params[:section_id] || params[:solution]) && params[:viewAs] != 'Student'
+  .teacher-panel{class: show_panel ? '' : 'hidden'}
     .hide-handle
       %i.fa.fa-chevron-right{onclick: '$(".teacher-panel").toggleClass("hidden"); return false;'}
     .show-handle
@@ -10,8 +10,10 @@
       = t('teacher.panel.answer_viewer')
     .content
       .non-scrollable-wrapper
+        -# This is rendered into by react
+        #teacher-panel-viewas
         - if @user
-          .students
+          .students.hide-as-student
             %h4= t('teacher.panel.student')
             = link_to @user.name, teacher_dashboard_student_progress_url(@section, @user)
         - if @user_level
@@ -71,8 +73,9 @@
                     = t('teacher.panel.example_with_number', solution_number: index + 1)
                   - else
                     = t('teacher.panel.example')
+          -# Get rid of this once we turn on viewAsToggle experiment
           = link_to build_script_level_path(@script_level, @section? {section_id: @section.id} : {}) do
-            %button.btn.btn-info= t('teacher.panel.try_it_yourself')
+            %button.btn.btn-info{id: "try-it-yourself"}= t('teacher.panel.try_it_yourself')
         - if @section
           .section
             %h4
@@ -88,7 +91,7 @@
               = link_to t('teacher.panel.update_lock_settings'), script_path(@script_level.script)
       - if @section
         .scrollable-wrapper
-          %table.section-students
+          %table.section-students.hide-as-student
             - @section.students.order(:name).each do |student|
               - active = 'active' if @user && student.id == @user.id
               %tr.section-student{class: active}
@@ -109,5 +112,8 @@
                     = student.name
                     - if user_level && (user_level.navigator_user_levels.present? || user_level.driver_user_levels.present?) # I am a driver
                       %i.fa.fa-users.pair-programming-icon
+- content_for(:head) do
   :javascript
-    $(document).ready(window.dashboard.teacher.onReady);
+    $(document).ready(function () {
+      window.dashboard.teacher.onReady();
+    });

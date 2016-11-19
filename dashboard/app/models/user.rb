@@ -3,7 +3,7 @@
 # Table name: users
 #
 #  id                         :integer          not null, primary key
-#  megauser_id                :integer
+#  studio_person_id           :integer
 #  email                      :string(255)      default(""), not null
 #  encrypted_password         :string(255)      default("")
 #  reset_password_token       :string(255)
@@ -57,16 +57,17 @@
 #
 # Indexes
 #
+#  index_users_on_birthday                               (birthday)
 #  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
 #  index_users_on_invitation_token                       (invitation_token) UNIQUE
 #  index_users_on_invitations_count                      (invitations_count)
 #  index_users_on_invited_by_id                          (invited_by_id)
-#  index_users_on_megauser_id                            (megauser_id)
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
 #  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
@@ -111,6 +112,7 @@ class User < ActiveRecord::Base
   USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER]
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
+  belongs_to :studio_person
   has_many :permissions, class_name: 'UserPermission', dependent: :destroy
   has_many :hint_view_requests
 
@@ -289,18 +291,9 @@ class User < ActiveRecord::Base
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # we make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   # NOTE: Order is important here.
   before_save :make_teachers_21,
+    :normalize_email,
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
     :hide_email_and_full_address_for_students
@@ -308,6 +301,21 @@ class User < ActiveRecord::Base
   def make_teachers_21
     return unless teacher?
     self.age = 21
+  end
+
+  def normalize_email
+    return unless email.present?
+    self.email = email.strip.downcase
+  end
+
+  def dont_reconfirm_emails_that_match_hashed_email
+    # We make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed.
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
   end
 
   def self.hash_email(email)
@@ -329,6 +337,8 @@ class User < ActiveRecord::Base
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
+    # TODO(asher): Change this to always (primarily?) search by hashed_email,
+    # eliminating a DB query.
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end

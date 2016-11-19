@@ -24,7 +24,7 @@ nav: how_to_nav
   * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
-## How to host an Hour of Code event
+## කොහොමද සත්කාරකත්වය දක්වන්නේ Hour of Code වැඩසටහන් උත්සවයේ
 
 ## 1) Promote your Hour of Code
 
@@ -32,11 +32,11 @@ nav: how_to_nav
   * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](<%= resolve_url('https://code.org/volunteer/engineer') %>) to be connected with a classroom.
 
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Choose a tutorial:
+## 2) නිබන්ධන තෝරන්න:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. ඒවා උත්සාහ කරන්න! </></p> 
 
-**All Hour of Code tutorials:**
+**සියලු Hour of Code නිබන්ධන **
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level
@@ -75,7 +75,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
   * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
 
-## 6) Code!
+## 6) කේතය!
 
 **Direct participants to the activity**
 
@@ -109,7 +109,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) සමරන්න
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.

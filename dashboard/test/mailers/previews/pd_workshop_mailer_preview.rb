@@ -1,3 +1,4 @@
+# This can be viewed on non-production environments at /rails/mailers/pd/workshop_mailer
 class Pd::WorkshopMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
@@ -87,7 +88,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     school_info = build :school_info_without_country, school_district: SchoolDistrict.first
 
-    enrollment = build :pd_enrollment, workshop: workshop, name: teacher.name, email: teacher.email, user: teacher,
+    enrollment = build :pd_enrollment, workshop: workshop, full_name: teacher.name, email: teacher.email, user: teacher,
       school_info: school_info
 
     enrollment.assign_code
