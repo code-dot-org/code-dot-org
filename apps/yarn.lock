@@ -8766,6 +8766,10 @@ react-simple-di@^1.2.0:
     babel-runtime "6.x.x"
     hoist-non-react-statics "1.x.x"
 
+react-sticky@5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-5.0.5.tgz#995871273f8a001fa4d462d3b96f381ee54b2649"
+
 react-storybook-addon-add-stories-group@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/react-storybook-addon-add-stories-group/-/react-storybook-addon-add-stories-group-0.1.0.tgz#eee200fa51a0baf1054185f14ebf8726fcacd9d2"
