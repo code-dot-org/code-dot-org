@@ -28,6 +28,38 @@ class Selenium::WebDriver::Driver
   end
   alias_method :execute_script_without_retry, :execute_script
   alias_method :execute_script, :execute_script_with_retry
+
+  def find_element_with_retry(script, *args)
+    retry_count = 0
+    begin
+      find_element_without_retry(script, *args)
+    rescue NoMethodError => e
+      if retry_count <= MAX_RESET_RETRIES
+        $stderr.puts "WARNING: retrying find_element(#{script.dump}) after rescuing #{e}"
+        retry_count += 1
+        retry
+      end
+      raise "giving up after 3 retries: #{e}"
+    end
+  end
+  alias_method :find_element_without_retry, :find_element
+  alias_method :find_element, :find_element_with_retry
+
+  def find_elements_with_retry(script, *args)
+    retry_count = 0
+    begin
+      find_elements_without_retry(script, *args)
+    rescue NoMethodError => e
+      if retry_count <= MAX_RESET_RETRIES
+        $stderr.puts "WARNING: retrying find_elements(#{script.dump}) after rescuing #{e}"
+        retry_count += 1
+        retry
+      end
+      raise "giving up after 3 retries: #{e}"
+    end
+  end
+  alias_method :find_elements_without_retry, :find_elements
+  alias_method :find_elements, :find_elements_with_retry
 end
 
 def slow_browser?
