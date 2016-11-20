@@ -387,6 +387,7 @@ const TutorialExplorer = React.createClass({
                     filterGroups={this.props.filterGroups}
                     onUserInput={this.handleUserInputFilter}
                     selection={this.state.filters}
+                    mobileLayout={this.state.mobileLayout}
                     roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>
