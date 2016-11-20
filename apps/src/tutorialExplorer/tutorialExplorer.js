@@ -403,19 +403,21 @@ const TutorialExplorer = React.createClass({
                 )}
               </div>
 
-              <div style={bottomLinksStyle}>
-                <div>
-                  <a href="https://hourofcode.com/activity-guidelines">
-                    {i18n.bottomGuidelinesLink()}
-                  </a>
+              {this.shouldShowTutorials() && (
+                <div style={bottomLinksStyle}>
+                  <div>
+                    <a href="https://hourofcode.com/activity-guidelines">
+                      {i18n.bottomGuidelinesLink()}
+                    </a>
+                  </div>
+                  <br/>
+                  <div>
+                    <a href="https://hourofcode.com/supporting-special-needs-students">
+                      {i18n.bottomSpecialNeedsLink()}
+                    </a>
+                  </div>
                 </div>
-                <br/>
-                <div>
-                  <a href="https://hourofcode.com/supporting-special-needs-students">
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
+              )}
             </div>
           )}
         </div>
