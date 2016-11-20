@@ -330,7 +330,8 @@ const TutorialExplorer = React.createClass({
   render() {
     const bottomLinksStyle = {
       ...styles.bottomLinks,
-      textAlign: getResponsiveValue({xs: "left", md: "right"})
+      textAlign: getResponsiveValue({xs: "left", md: "right"}),
+      opacity: this.shouldShowTutorials() ? 1 : 0
     };
 
     return (
@@ -403,21 +404,19 @@ const TutorialExplorer = React.createClass({
                 )}
               </div>
 
-              {this.shouldShowTutorials() && (
-                <div style={bottomLinksStyle}>
-                  <div>
-                    <a href="https://hourofcode.com/activity-guidelines">
-                      {i18n.bottomGuidelinesLink()}
-                    </a>
-                  </div>
-                  <br/>
-                  <div>
-                    <a href="https://hourofcode.com/supporting-special-needs-students">
-                      {i18n.bottomSpecialNeedsLink()}
-                    </a>
-                  </div>
+              <div style={bottomLinksStyle}>
+                <div>
+                  <a href="https://hourofcode.com/activity-guidelines">
+                    {i18n.bottomGuidelinesLink()}
+                  </a>
                 </div>
-              )}
+                <br/>
+                <div>
+                  <a href="https://hourofcode.com/supporting-special-needs-students">
+                    {i18n.bottomSpecialNeedsLink()}
+                  </a>
+                </div>
+              </div>
             </div>
           )}
         </div>
