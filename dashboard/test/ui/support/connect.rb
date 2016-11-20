@@ -29,13 +29,13 @@ class Selenium::WebDriver::Driver
   alias_method :execute_script_without_retry, :execute_script
   alias_method :execute_script, :execute_script_with_retry
 
-  def find_element_with_retry(script, *args)
+  def find_element_with_retry(*args)
     retry_count = 0
     begin
-      find_element_without_retry(script, *args)
+      find_element_without_retry(*args)
     rescue NoMethodError => e
       if retry_count <= MAX_RESET_RETRIES
-        $stderr.puts "WARNING: retrying find_element(#{script.dump}) after rescuing #{e}"
+        $stderr.puts "WARNING: retrying find_element(#{args.inspect}) after rescuing: #{e}"
         retry_count += 1
         retry
       end
@@ -45,13 +45,13 @@ class Selenium::WebDriver::Driver
   alias_method :find_element_without_retry, :find_element
   alias_method :find_element, :find_element_with_retry
 
-  def find_elements_with_retry(script, *args)
+  def find_elements_with_retry(*args)
     retry_count = 0
     begin
-      find_elements_without_retry(script, *args)
+      find_elements_without_retry(*args)
     rescue NoMethodError => e
       if retry_count <= MAX_RESET_RETRIES
-        $stderr.puts "WARNING: retrying find_elements(#{script.dump}) after rescuing #{e}"
+        $stderr.puts "WARNING: retrying find_elements(#{args.inspect}) after rescuing: #{e}"
         retry_count += 1
         retry
       end
