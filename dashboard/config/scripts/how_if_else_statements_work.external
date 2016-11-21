@@ -54,7 +54,7 @@ You can always type any of the code we compose in blocks.  Here is an animation 
 
 **In JavaScript, spaces and line breaks are the treated the same, and 1 space is the same as 2 or 10 or 20**.  
 
-There actually aren't any rules about how you should format your code. There are certain style conventions that programmers can get in heated arguments about, but there are no rules about style that will make your code run any differently. 
+There are certain stylistic conventions that programmers can get in heated arguments about, there actually are no rules about style that will make your code run any differently.  JavaScript looks for keywords, parentheses, curly braces and so on, but ignores extra spaces.
 
 You usually use white space to make your code more readable.  Here are some examples.
 

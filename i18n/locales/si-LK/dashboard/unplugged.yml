@@ -129,7 +129,7 @@ si:
         video: 'C3_functional_suncatchers'
       'SongwritingParameters':
         title: 'පරාමිතීන් සමඟ ගීත ලිවීම'
-        desc: 'Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).'
+        desc: 'Students use the concept of the chorus in a song to learn about defining and calling functions.'
         video: 'C3_songwriting_with_parameters'
       'DiceRace':
         title: 'තත්කාලීන ඇල්ගොරිතම: දාදු කැටය විහිදීම'

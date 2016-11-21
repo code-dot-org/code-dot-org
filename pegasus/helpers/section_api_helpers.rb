@@ -245,6 +245,7 @@ class DashboardSection
           {
             id: course[:id],
             name: name,
+            script_name: course[:name],
             category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
@@ -256,8 +257,7 @@ class DashboardSection
   # the gatekeeper key postMilestone.
   def self.progress_disabled_courses(user_id = nil)
     disabled_courses = valid_courses(user_id).select do |course|
-      script_name = Script.get_from_cache(course[:id]).name
-      !Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
     end
     disabled_courses.map{|course| course[:id]}
   end
