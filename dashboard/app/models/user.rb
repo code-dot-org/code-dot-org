@@ -1083,7 +1083,7 @@ class User < ActiveRecord::Base
   end
 
   def show_race_interstitial?(ip = nil)
-    ip_to_check = ip || @current_sign_in_ip
+    ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
   end
 end
