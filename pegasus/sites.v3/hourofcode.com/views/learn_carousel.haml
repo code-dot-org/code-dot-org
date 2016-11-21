@@ -7,7 +7,7 @@
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
-  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+  %h3{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -unless subheading.nil_or_empty?
     %p=subheading
@@ -28,7 +28,7 @@
             .slide.clear{:style=>styling}
               .slide-img<
                 %a{:href=>url, :target=>'_blank'}<
-                  %img{:src=>tutorial[:image].sub("/images/", "/images/fit-520/").sub(".png", ".jpg")}
+                  %img{:src=>tutorial[:image].sub("/images/", "https://code.org/images/fit-520/").sub(".png", ".jpg")}
               .slide-text
                 %a{:href=>url, :target=>'_blank'}<
                   -unless international_layout
