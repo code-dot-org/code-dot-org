@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.\r\n\r\n<br/>\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)",
+    "markdown_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
