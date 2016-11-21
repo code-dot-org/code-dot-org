@@ -3,7 +3,7 @@ Feature: Visiting a jigsaw page
 Background:
   Given I am on "http://studio.code.org/s/course1/stage/3/puzzle/1?noautoplay=1"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
 
 @new_courses
 Scenario: Loading the first jigsaw level

@@ -24,7 +24,6 @@ const styles = {
 var GameLabVisualizationColumn = React.createClass({
   propTypes: {
     finishButton: React.PropTypes.bool.isRequired,
-    instructionsInTopPane: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     awaitingContainedResponse: React.PropTypes.bool.isRequired
   },
@@ -104,7 +103,7 @@ var GameLabVisualizationColumn = React.createClass({
             {i18n.predictionInstructions()}
           </div>
         )}
-        <BelowVisualization instructionsInTopPane={props.instructionsInTopPane}/>
+        <BelowVisualization />
       </span>
     );
   }
@@ -112,7 +111,6 @@ var GameLabVisualizationColumn = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     isShareView: state.pageConstants.isShareView,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
   };

@@ -27,6 +27,8 @@ it-IT:
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
   og_title: "Ogni bambino merita un'opportunità"
   og_description: "Ogni stupende in ogni scuola merita l'opportunità di studiare l'informatica. Essa sta cambiando tutto."
+  csedweek_og_title: "The Hour of Code is coming"
+  csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Iscriviti alla <a href=\"http://hourofcode.com/it\">Ora del Codice</a> <br/>8-14 dicembre 2014 <br/>"
   hoc2014_students: "Studenti"
   hoc2014_try: "Prova"
@@ -181,9 +183,11 @@ it-IT:
   petition_thankyou: "Grazie per aver firmato la petizione"
   continue_learning_header: "Continua ad imparare dopo l'Ora del Codice"
   continue_learning_body: "Ci sono molte opzioni.  Puoi imparare online, o presso una scuola locale, o presso un campo estivo."
+  learn_code_studio: "Try Code Studio courses"
   learn_next_level: "Prova un altro corso di Code Studio"
   learn_online: "Prova altri corsi on-line"
   learn_classes: "Trova le scuole locali"
+  learn_back_to_minecraft: "Keep learning with Minecraft"
   hoc_is_here: 'Impara la scienza dell''informatica. Sta cambiando ogni cosa.'
   just_did_hoc: 'Ho appena completato la mia prima Ora del Codice #HourOfCode - provala! @codeorg @programmafuturo'
   just_did_course1: "Ho appena completato il Corso 1 - Provalo! Su @codeorg @programmafuturo"
@@ -366,7 +370,8 @@ it-IT:
   class_submission_level_college: "Università"
   class_submission_level_vocational: "Formazione professionale"
   class_submission_languages_other: "Altre lingue"
-  inspirational_videos_more: "Altri <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP\">video stimolanti</a> fatti da celebrità e modelli di riferimento"
+  videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
+  careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
   playlab_choose_theme: "Scegli il tema del tuo Laboratorio"
   playlab_classic_title: "Classico"
   playlab_gumball_title: "Lo straordinario mondo di Gumball"
@@ -386,6 +391,26 @@ it-IT:
   mc_gradelevel: "Da 4 a 104 anni"
   mc_platformtext: "Browser moderni, smartphone, Tablet"
   mc_specs: "Molte lingue | Browser e tablet moderni | Da 6 anni in su"
+  minecraft_designer: "Minecraft Designer"
+  minecraft_adventurer: "Minecraft Adventurer"
+  minecraft_tutorials: "Minecraft Hour of Code Tutorials"
+  minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_designer_button: "Inizia"
+  minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
+  minecraft_adventurer_button: "Inizia"
+  minecraft_no_internet: "Non hai Internet?"
+  minecraft_download_adventurer: "Download the offline version of Minecraft Adventurer."
+  minecraft_store_camps: "Microsoft Store Hour of Code Camps"
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_youthspark_continue_learning: "Continue learning with Microsoft YouthSpark"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\">Sign up</a> for free Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the U.S. Learn how to combine your creativity with coding."
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "Facilitating an event?"
+  minecraft_join_online_training: "Join Microsoft and Minecraft for an online training (in English only) on Nov 22 or Nov 29"
+  minecraft_youthspark_create_your_future: "Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours."
+  minecraft_youthspark_tools: "<a href=\"%{youthspark_link}\">Microsoft YouthSpark</a> provides free tools and resources to pursue your passion."
   minecraft_subtitle: "L'Ora del Codice con Minecraft"
   watch_inspirational_videos: "Prima di iniziare, guarda uno di questi video stimolanti"
   speak_another_language: "Parli un'altra lingua?"
@@ -583,9 +608,9 @@ it-IT:
   dashboard_sections_yes_both: "Sì, voglio <b><u>copiare</u></b> gli studenti nella nuova classe <b><u>mantenendoli</u></b> anche in quella attuale."
   dashboard_sections_no_move: "No, voglio <b><u>spostare</u></b> gli studenti nella nuova classe <b><u>togliendoli</u></b> da quella attuale."
   dashboard_sections_move_students: "Sposta gli studenti"
-  dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 5-11, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to go further, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
-  dashboard_sections_assign_activity: "Assign Course"
+  dashboard_sections_assign_hoc_script_desc: "Partecipate all'ora del codice?"
+  dashboard_sections_assign_hoc_script_msg: "Vi preghiamo considerare che in questo corso, durante la settimana del 5-11 dicembre, i progressi non saranno salvati a causa del livello di traffico che riceveremo senza precedenti sul nostro sito per l'Ora del Codice.  Si può ancora assegnare il corso e dare tutti gli studenti il certificato di partecipazione.  (La maggior parte delle insegnanti <a href='%{certificate_url}'> li stampa in anticipo</a>.) <br/> <br/> Siamo entusiasti per il numero di insegnanti e studenti partecipanti e ci dispiace non poter essere in grado di salvare tutto.  Se la classe volesse procedere, è possibile avviare un corso dell'Ora del Codice per insegnare Fondamenti di Informatica.  Il nostro cruscotto insegnante vi permetterà di monitorare i progressi dei vostri studenti ogni altra settimana dell'anno."
+  dashboard_sections_assign_activity: "Assegnare un corso"
   dashboard_error_none_selected: "Non hai selezionato alcuno studente. Per favore, scegli almeno uno studente."
   dashboard_error_other_section: "Se stai spostando degli studenti tra le tue classi, selezionane una dal primo menù a tendina. Scegli \"<b>Altro insegnante</b>\" in tale menù a tendina <b>solo</b> se devi spostare degli studenti nella classe di un <b>altro<b> insegnante."
   dashboard_students_add_student: "Aggiungi uno studente"
@@ -692,11 +717,13 @@ it-IT:
   dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "Ulteriori informazioni"
   dashboard_announce_try_now_button: "Prova adesso"
-  dashboard_announce_host_an_hour_button: "Host an Hour"
+  dashboard_announce_host_an_hour_button: "Ospita un'ora"
   dashboard_announce_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
   dashboard_announce_petition_button: "Aggiungi il tuo nome"
   dashboard_announce_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
-  dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+  dashboard_announce_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   host_an_hour: "Ospita un'ora"
@@ -815,6 +842,10 @@ it-IT:
   cspunit4_name: I principi dell'informatica - Unità 4
   cspunit5_name: I principi dell'informatica - Unità 5
   cspunit6_name: I principi dell'informatica - Unità 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -833,12 +864,16 @@ it-IT:
   iceage_name: "L'Era Glaciale"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Guerre Stellari (Blocchi)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Fondamenti d'informatica"
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "I principi dell'informatica"
   csp17_category_name: "'16-'17 principi d'informatica"
   cspexams_category_name: "Prova pratica di principi d'informatica"
+  research_studies_category_name: "Research Studies"
   applab_name: "Laboratorio per le App"
   applab_gradelevel: "Eta' 13+"
   applab_shortdescription_congrats: "App Lab è un programma ambientale con cui puoi fare semplici app. Fare il design, scrivere il codice con blocchi o JavaScript per farla funzionare, quindi condividi la tua app in pochi secondi"

@@ -185,6 +185,8 @@
   "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Ignore",
   "infinity": "Infinity",
+  "joinText": "join",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "jump",
   "keepPlaying": "Keep playing",
   "keyValuePairLink": "Key/value pairs",

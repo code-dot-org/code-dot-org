@@ -1,3 +1,6 @@
+login_required true
+hideable_stages true
+
 stage 'Binary Images'
 level 'BinaryImages'
 level 'grade5_pixelation'
@@ -16,3 +19,13 @@ level 'mike3bit'
 level 'mike3bitbird'
 level 'mike3bitmario'
 level 'mike3bitfreeplay'
+
+stage 'Processing with Bits'
+level 'Unit 1 Lesson 6 Overview'
+level 'CSD U1 - PixFilter 1x1 intro'
+level 'CSD U1 - PixFilter Filter Intro'
+level 'CSD U1 - PixFilter Mushroom'
+level 'CSD U1 - PixFilter Filter Revisit'
+level 'CSD U1 - PixFilter Mario'
+level 'CSD U1 - PixFilter UnFilter'
+level 'CSD U1 - PixFilter FreePlay'

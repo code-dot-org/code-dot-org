@@ -1070,6 +1070,7 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
+      ECSPD3- unit 5- welcome: {}
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -1195,7 +1196,16 @@ en:
       HOC survey 2016 external text: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How "if-else-if" Works:
+        description here: description here
+        title: title
+      How Dropdown Menus Work:
+        description here: description here
+        title: title
       How If Statements Work pt 1:
+        description here: description here
+        title: title
+      How If-Else Statements Work:
         description here: description here
         title: title
       How Images Work:

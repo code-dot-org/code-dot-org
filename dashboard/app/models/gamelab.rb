@@ -96,6 +96,7 @@ class Gamelab < Blockly
         "Game.frameRate": null,
         "Game.frameCount": null,
         "playSound": null,
+        "stopSound": null,
         "keyDown": null,
         "keyWentDown": null,
         "keyWentUp": null,

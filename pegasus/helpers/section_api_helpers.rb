@@ -245,11 +245,21 @@ class DashboardSection
           {
             id: course[:id],
             name: name,
+            script_name: course[:name],
             category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
           }
         end
+  end
+
+  # Gets a list of valid courses in which progress tracking has been disabled via
+  # the gatekeeper key postMilestone.
+  def self.progress_disabled_courses(user_id = nil)
+    disabled_courses = valid_courses(user_id).select do |course|
+      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
+    end
+    disabled_courses.map{|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)

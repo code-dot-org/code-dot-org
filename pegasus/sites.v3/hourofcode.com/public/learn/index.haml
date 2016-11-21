@@ -42,8 +42,20 @@ social:
     line-height: 56px;
     padding: 20px 0px 20px 0px;
   }
-  .bannerButtons {
-    padding: 20px 0px 20px 0px;
+  .bannerTeachers {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    opacity: 0;
+  }
+  .bannerTeachers a {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .bannerTeacherIcon {
+    height: 20px;
+    padding-right: 3px;
+    vertical-align: top;
   }
   #studentImage {
     height: 278px;
@@ -53,15 +65,13 @@ social:
   = view :header
 
   .banner.container{style: "color: white"}
-    .col-xs-12.col-sm-6{style: "text-align: center"}
+    .col-sm-12.col-md-6{style: "text-align: center"}
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
-      .bannerButtons
-        %a{href: "https://hourofcode.com/#join", target: "_blank"}
-          %button= hoc_s(:learn_banner_host)
-        %a{href: "https://hourofcode.com/how-to", target: "_blank", style: "padding-left: 20px"}
-          %button= hoc_s(:learn_banner_teacherguide)
-    #studentImage.col-xs-12.col-sm-6.hidden-xs
+      .bannerTeachers
+        %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
+        = hoc_s(:learn_banner_teachers)
+    #studentImage.hidden-xs.col-sm-12.col-md-6
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
@@ -114,4 +124,13 @@ social:
     img.on('load', function() {
       img.fadeTo('normal', 1);
     });
+
+    // Set up teacher hyperlinks.
+    $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
+    });
+    $("#teacher_banner_howto").attr({href: "https://hourofcode.com/how-to", target: "_blank"}).click(function() {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
+    });
+    $(".bannerTeachers").fadeTo('slow', 1);
   });

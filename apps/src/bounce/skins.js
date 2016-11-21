@@ -8,6 +8,7 @@
 // graph: Colour of optional grid lines, or false.
 
 var skinsBase = require('../skins');
+var msg = require('./locale');
 
 var CONFIGS = {
   bounce: {
@@ -23,7 +24,22 @@ var CONFIGS = {
     ballYOffset: 10,
     drawTiles: true,
     markerHeight: 43,
-    markerWidth: 50
+    markerWidth: 50,
+    blockMsgs: {
+      launchBall: msg.launchBall(),
+      launchBallTooltip: msg.launchBallTooltip(),
+      paddleCollide: msg.whenPaddleCollided(),
+      paddleCollideTooltip: msg.whenPaddleCollidedTooltip(),
+      paddleMiss: msg.whenBallMissesPaddle(),
+      paddleSpeedRandom: msg.setPaddleSpeedRandom(),
+      paddleSpeedVerySlow: msg.setPaddleSpeedVerySlow(),
+      paddleSpeedSlow: msg.setPaddleSpeedSlow(),
+      paddleSpeedNormal: msg.setPaddleSpeedNormal(),
+      paddleSpeedFast: msg.setPaddleSpeedFast(),
+      paddleSpeedVeryFast: msg.setPaddleSpeedVeryFast(),
+      paddleSpeedTooltip: msg.setPaddleSpeedTooltip(),
+      setPaddle: msg.setPaddle(),
+    },
   },
 
   basketball: {
@@ -72,6 +88,21 @@ var CONFIGS = {
       'Utah Jazz',
       'Washington Wizards',
     ],
+    blockMsgs: {
+      launchBall: msg.basketballLaunchBall(),
+      launchBallTooltip: msg.basketballLaunchBallTooltip(),
+      paddleCollide: msg.basketballWhenPaddleCollided(),
+      paddleCollideTooltip: msg.whenPaddleCollidedTooltip(),
+      paddleMiss: msg.basketballWhenBallMissesPaddle(),
+      paddleSpeedRandom: msg.basketballSetPaddleSpeedRandom(),
+      paddleSpeedVerySlow: msg.basketballSetPaddleSpeedVerySlow(),
+      paddleSpeedSlow: msg.basketballSetPaddleSpeedSlow(),
+      paddleSpeedNormal: msg.basketballSetPaddleSpeedNormal(),
+      paddleSpeedFast: msg.basketballSetPaddleSpeedFast(),
+      paddleSpeedVeryFast: msg.basketballSetPaddleSpeedVeryFast(),
+      paddleSpeedTooltip: msg.basketballSetPaddleSpeedTooltip(),
+      setPaddle: msg.basketballSetPaddle(),
+    },
   },
 
   sports: {
@@ -98,6 +129,21 @@ var CONFIGS = {
     ball: 'basketball_ball.png',
     paddle: 'basketball_paddle.png',
     disableAudio: true,
+    blockMsgs: {
+      launchBall: msg.basketballLaunchBall(),
+      launchBallTooltip: msg.basketballLaunchBallTooltip(),
+      paddleCollide: msg.whenPlayerCollided(),
+      paddleCollideTooltip: msg.whenPlayerCollidedTooltip(),
+      paddleMiss: msg.whenBallMissesPlayer(),
+      paddleSpeedRandom: msg.setPlayerSpeedRandom(),
+      paddleSpeedVerySlow: msg.setPlayerSpeedVerySlow(),
+      paddleSpeedSlow: msg.setPlayerSpeedSlow(),
+      paddleSpeedNormal: msg.setPlayerSpeedNormal(),
+      paddleSpeedFast: msg.setPlayerSpeedFast(),
+      paddleSpeedVeryFast: msg.setPlayerSpeedVeryFast(),
+      paddleSpeedTooltip: msg.setPlayerSpeedTooltip(),
+      setPaddle: msg.setPlayer(),
+    },
   }
 };
 
@@ -181,6 +227,7 @@ exports.load = function (assetUrl, id) {
   skin.teams.forEach((team) =>
       skin.teamBackgrounds[team] = skin.assetUrl(`teams/${team}.png`));
   skin.disableAudio = config.disableAudio || false;
+  skin.blockMsgs = config.blockMsgs;
 
   // Sounds
   skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];

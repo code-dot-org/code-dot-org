@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
+import classNames from 'classnames';
 import renderer from "../../util/StylelessRenderer";
 import { connect } from 'react-redux';
 var instructions = require('../../redux/instructions');
@@ -20,12 +21,12 @@ import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
 import PromptIcon from './PromptIcon';
+import HintDisplayLightbulb from '../HintDisplayLightbulb';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
 import Button from '../Button';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
@@ -46,13 +47,19 @@ const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 // Minecraft-specific styles
 const craftStyles = {
-  main: {
-    marginTop: 20,
-    marginBottom: 10
-  },
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
+  },
+  collapserButton: {
+    padding: 5,
+    marginBottom: 0
+  },
+  scrollButtons: {
+    left: 38
+  },
+  scrollButtonsRtl: {
+    right: 38
   },
 };
 
@@ -169,6 +176,7 @@ var TopInstructions = React.createClass({
     hasAuthoredHints: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     smallStaticAvatar: React.PropTypes.string,
+    failureAvatar: React.PropTypes.string,
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
@@ -177,6 +185,7 @@ var TopInstructions = React.createClass({
     ttsInstructionsUrl: React.PropTypes.string,
     ttsMarkdownInstructionsUrl:  React.PropTypes.string,
 
+    hideOverlay: React.PropTypes.func.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -258,7 +267,7 @@ var TopInstructions = React.createClass({
       this.setState({
         promptForHint: false
       });
-      if (!this.props.isMinecraft && nextProps.collapsed) {
+      if (nextProps.collapsed) {
         this.handleClickCollapser();
       }
     }
@@ -317,7 +326,7 @@ var TopInstructions = React.createClass({
   getMinHeight(collapsed=this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
-        this.refs.scrollButtons.getMinHeight() : 0;
+        this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
 
     const minIconHeight = this.refs.icon ?
       getOuterHeight(this.refs.icon, true) : 0;
@@ -444,11 +453,6 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
-    // Minecraft should never show the button
-    if (this.props.isMinecraft) {
-      return false;
-    }
-
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
@@ -472,6 +476,12 @@ var TopInstructions = React.createClass({
     return !this.shouldIgnoreShortInstructions() && (this.props.collapsed || !this.props.longInstructions);
   },
 
+  getAvatar() {
+    // Show the "sad" avatar if there is failure feedback. Otherwise,
+    // show the default avatar.
+    return this.props.feedback ? this.props.failureAvatar : this.props.smallStaticAvatar;
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -482,7 +492,6 @@ var TopInstructions = React.createClass({
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
     ];
 
@@ -497,7 +506,7 @@ var TopInstructions = React.createClass({
     const instructions2 = this.props.shortInstructions2 ?
       processMarkdown(this.props.shortInstructions2, { renderer }) : undefined;
 
-    const leftColWidth = (this.props.smallStaticAvatar ? PROMPT_ICON_WIDTH : 10) +
+    const leftColWidth = (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
       (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
 
     return (
@@ -510,7 +519,6 @@ var TopInstructions = React.createClass({
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
-          allowScrolling={!this.props.isMinecraft}
         >
           <div
             style={[
@@ -518,15 +526,18 @@ var TopInstructions = React.createClass({
               this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
             ]}
           >
-            <ProtectedStatefulDiv
-              id="bubble"
-              className="prompt-icon-cell"
+            <div
+              className={classNames({
+                  "prompt-icon-cell": true,
+                  "authored_hints": this.props.hasAuthoredHints
+                })}
               onClick={this.handleClickBubble}
             >
-              {this.props.smallStaticAvatar &&
-                <PromptIcon src={this.props.smallStaticAvatar} ref="icon"/>
+              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
+              {this.getAvatar() &&
+                <PromptIcon src={this.getAvatar()} ref="icon"/>
               }
-            </ProtectedStatefulDiv>
+            </div>
           </div>
           <div
             ref="instructions"
@@ -553,7 +564,7 @@ var TopInstructions = React.createClass({
                 />
               }
               {this.props.overlayVisible &&
-                <Button type="primary">
+                <Button type="primary" onClick={this.props.hideOverlay}>
                   {msg.dialogOK()}
                 </Button>
               }
@@ -568,14 +579,13 @@ var TopInstructions = React.createClass({
                 block={hint.block}
               />
             )}
-            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
+            {this.props.feedback && !this.props.collapsed &&
               <InlineFeedback
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
             {this.shouldDisplayHintPrompt() &&
               <HintPrompt
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
@@ -584,13 +594,20 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
               ref="collapser"
-              style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
+              style={[
+                styles.collapserButton,
+                this.props.isMinecraft && craftStyles.collapserButton,
+                !this.shouldDisplayCollapserButton() && commonStyles.hidden
+              ]}
               collapsed={this.props.collapsed}
               onClick={this.handleClickCollapser}
             />
             {!this.props.collapsed &&
               <ScrollButtons
-                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
+                style={[
+                  this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
+                  this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
+                ]}
                 ref="scrollButtons"
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}
@@ -631,11 +648,15 @@ module.exports = connect(function propsFromStore(state) {
     feedback: state.instructions.feedback,
     isRtl: state.pageConstants.localeDirection === 'rtl',
     smallStaticAvatar: state.pageConstants.smallStaticAvatar,
+    failureAvatar: state.pageConstants.failureAvatar,
     inputOutputTable: state.pageConstants.inputOutputTable,
     noVisualization: state.pageConstants.noVisualization
   };
 }, function propsFromDispatch(dispatch) {
   return {
+    hideOverlay: function ()  {
+      dispatch(instructions.hideOverlay());
+    },
     toggleInstructionsCollapsed: function () {
       dispatch(instructions.toggleInstructionsCollapsed());
     },

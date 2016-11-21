@@ -17,10 +17,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/InheritException:
   Enabled: false
 
-# Offense count: 24
-Lint/NestedMethodDefinition:
-  Enabled: false
-
 # Offense count: 21
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false

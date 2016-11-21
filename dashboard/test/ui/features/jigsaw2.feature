@@ -3,7 +3,7 @@ Feature: Solving a jigsaw puzzle
 Background:
   Given I am on "http://studio.code.org/s/course1/stage/3/puzzle/2?noautoplay=1"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
 
 Scenario: Solving puzzle
   And I drag block "2" to block "1"

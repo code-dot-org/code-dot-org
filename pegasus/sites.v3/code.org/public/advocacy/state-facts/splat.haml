@@ -144,7 +144,17 @@ theme: pdf
               students were
           - else
             no students were
-          Native American or Alaska Native.
+          Native American or Alaska Native;
+          - if state_info[:ap_hawaiian_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_hawaiian_i])
+            - if state_info[:ap_hawaiian_i] == 1
+              student was
+            - else
+              students were
+          - else
+            no students were
+          Native Hawaiian or Pacific Islander.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only

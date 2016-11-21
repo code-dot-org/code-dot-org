@@ -537,6 +537,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -549,6 +550,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -567,6 +569,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -585,6 +588,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: Phase 2 Online Blended Summer Study
@@ -800,6 +804,7 @@ en:
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -843,6 +848,7 @@ en:
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1405,6 +1411,7 @@ en:
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey: Taking the AP exam'
           description_audience: ''
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
@@ -1461,6 +1468,7 @@ en:
             '"If" Statements Unplugged': '"If" Statements Unplugged'
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
+            If statements: If statements
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1947,6 +1955,8 @@ en:
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+            Unit 5 Challenge: Unit 5 Challenge
+            Close & Next Steps: Close & Next Steps
           description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
@@ -1959,6 +1969,8 @@ en:
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+            Close & Next Steps: Close & Next Steps
+          description_audience: ''
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -2186,8 +2198,9 @@ en:
             Binary Images: Binary Images
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
+            Processing with Bits: Processing with Bits
           title: Binary
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
         csd2:
@@ -2420,4 +2433,39 @@ en:
           title: Sports
           description_audience: ''
           description_short: Code your own sport
+          description: ''
+        2016_sciencePD-phase2b:
+          stage:
+            Welcome!: Welcome!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Wrap-Up
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2016_sciencePD_phase2b:
+          stage:
+            Welcome!: Welcome!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Wrap-Up
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd3-2016:
+          stage:
+            Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+          title: ''
+          description_audience: ''
+          description_short: ''
           description: ''

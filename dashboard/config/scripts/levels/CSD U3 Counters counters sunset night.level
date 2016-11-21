@@ -68,7 +68,7 @@
     "project_template_level_name": "CSD U3 Counters sunset template",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",

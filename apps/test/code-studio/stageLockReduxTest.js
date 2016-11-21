@@ -1,10 +1,9 @@
 import { assert } from 'chai';
-import { createStore } from '@cdo/apps/redux';
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import sinon from 'sinon';
 import fakeSectionData from './fakeSectionData';
-
+import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import { NO_SECTION, setSections, selectSection } from '@cdo/apps/code-studio/sectionsRedux';
 
 import reducer, {
@@ -31,7 +30,13 @@ const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 describe('stageLockRedux reducer tests', () => {
   let store;
   beforeEach(() => {
-    store = createStore(combineReducers({stageLock: reducer}));
+    stubRedux();
+    registerReducers({stageLock: reducer});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
   });
 
   describe('setViewType', () => {
@@ -217,10 +222,13 @@ describe('saveLockDialog', () => {
       lastRequest = req;
     };
     reducerSpy = sinon.spy(reducer);
-    store = createStore(combineReducers({stageLock: reducerSpy}));
+    stubRedux();
+    registerReducers({stageLock: reducerSpy});
+    store = getStore();
   });
 
   afterEach(() => {
+    restoreRedux();
     lastRequest = null;
     xhr.restore();
   });

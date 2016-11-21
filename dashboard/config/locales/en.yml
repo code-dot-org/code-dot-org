@@ -104,6 +104,8 @@ en:
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'See educator guide'
     title: "Sign up for Code.org"
     school_name: 'School Name (optional)'

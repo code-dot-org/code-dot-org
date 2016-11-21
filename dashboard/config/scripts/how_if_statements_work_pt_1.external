@@ -4,7 +4,6 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-
 ## Understanding Program Flow
 Programs are said to have a "flow of execution". You start by executing some line of code and then the next and so on.
 
@@ -12,152 +11,51 @@ Programs are said to have a "flow of execution". You start by executing some lin
 
 A flow chart is a common visual that's used to represent the various paths of execution that your program might take.  Many people use them to help plan.  
 
-<span style="color: #00adbc; font-size: 200%">1.</span>
+<span style="color: #00adbc; font-size: 150%">1.</span>
 This flow chart depicts a program executing one line after another until it gets to a point where it needs to make a decision.
 
-<span style="color: #00adbc; font-size: 16px">2.</span>
-In order to determine which path to take you state some **condition**. In programming a condition is a statement or expression that evaluates to **true** or **false**.  A very common type of condition you want to check is a **comparsion** of two values.  Is this number less than than that one? Is this text equal to that text? and so on.
+<span style="color: #00adbc; font-size: 150%">2.</span>
+In order to determine which path to take you state some **condition**. It should be a **Boolean expression** - something that evaluates to **true** or **false**.  Here we have a simple **comparsion** of two values: the person's age and the number 18.
 
-<span style="color: #00adbc; font-size: 16px">3.</span> The program does one thing if the condition is true, and something else if the condition is false.
+<span style="color: #00adbc; font-size: 150%">3.</span> The program does one thing if the condition is true, and something else if the condition is false.
 
-<span style="color: #00adbc; font-size: 16px">4.</span> The program can continue a single thread of execution after the condition as well.
+<span style="color: #00adbc; font-size: 150%">4.</span> The program can continue a single thread of execution after the condition as well.
 
 
 ## How If statements work
 
+<img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
 `if` statements are the code you need to change the flow while you're program is running. You can write code that *makes a decision that determines which lines of code should be run next.*
 
-Here is a simple example showing a basic `if` statement that *only does part* of what the flow chart above describes.
+At right is diagram showing the elements of a basic `if` statement in JavaScript.
 
 There are two basic parts to an if-statement.
 
-1. An expression is evaluated to be **true** or **false**
+1. A condition to be evaluated (A Boolean expression that evaluates to **true** or **false**)
 2. Code that should run *if* the expression was true - enclosed in curly braces
 
-<img src="https://images.code.org/cc5a4a176456544c2fc419dc1bd7328c-image-1479312724618.png" style="display: block; margin: auto; float: right">
+## A worked example
+<img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
 
 <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
-When the <code>if</code> statement is encountered the <em>first</em> thing that happens is the expression is evaluated. It checks to see if, at this point in the program, the value in a variable 'age' is greater than or equal to 18.  If it is then we say the expression "<strong>returns true</strong>".  Otherwise it returns false.
+Program executes line by line as you would expect. It displays a message, then prompts the user to enter a number.  Whatever the user types will be stored in the variable <code>age</code> and then proceeds to the next line...
 </p>
 
 <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+When the <code>if</code> statement is encountered the <em>first</em> thing it does is evaluate the condition in the parentheses. It checks to see if, at this point in the program, the value in a variable <code>age</code> is greater than or equal to 18.  If it is then we say the expression "<strong>returns true</strong>".  Otherwise it returns false.
+</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
 These console.log statements will <em>only</em> execute if the expression was true. The curly braces surround all of the code that should be executed if, and only if, the expression was true.  Otherwise, the entire section of code encapsulated in the if statement is <em>skipped</em>.
 </p>
 
-
-
-<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
-Execution picks up here, on the first line after the closing curly brace of the if-statement. Notice that at this point in the program one of two things have happened: <em>either</em> two statements were displayed to console (if age was at least 18) <em>or</em> nothing was displayed.
+<p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+Execution picks up here, on the first line after the closing curly brace of the if-statement.  This line will <em>always</em> execute, but notice that if the user entered an age less than 18, the entire if statement would be skipped, and it would just say "Thanks for verifying".  (We'll fix this awkwardness soon).
 
 </p>
 
 <div style="clear: both">&nbsp;</div>
 
-## Comparison Operators
-
-A common type of condition is a comparison of two values.  Here are 6 common **comparison operators**.  Each compares a value on the left with a value on the right and returns **true** or **false**.  Most of these do what you would expect. 
-
-![](https://images.code.org/e45563faedfbbba85f5492101d5a40da-image-1479233332278.png)
-
-## Why these symbols: **==**, **!=**, **<=**, and **>=**?
-
-1. We use `==` because the single equal sign <code>=</code> is the assignment operator. We need something different to indicate we want to compare two values instead of assign one to the other.
-
-    **Common mistake:** writing something like `if (age = 18)`  instead of `if (age == 18)`.  We'll make sure we get this down later.
-
-2. We use `!=`, `<=`, and `>=` because they only requires ASCII symbols. Historically the mathematical symbols <code>&ne;</code>, <code>&le;</code> and <code>&ge;</code> were hard or impossible to produce on some systems.  The `!` is universally read as "not".
-
-## Examples
-
-Below are a bunch of example of how you might see comparisons in code.
-
-Review them if you like or continue on and come back if you need reference.
-
-<hr>
-
-<img src="https://images.code.org/ea8cf41d0e06e6ddee31086fbb9ea2b9-image-1479232029068.png" style="float: left; margin-left: 50px; margin-right: 50px">
-
-Compares two values - numbers, strings, or other booleans - and returns *true*  if they are equal, otherwise *false*.
-
-* `"Hello" == "hello"` returns *false* because the strings are slightly different.
-* `"3" == 3` returns *false*  because the string 3 is not the same as the integer 3.
-* `(2+1) == 3` returns *true*  because the arithmetic expression evaluates to 3.
-* `x == 7` returns *true*  when the variable x has the value 7.
-
-<div style="clear:both"> </div>
-<hr>
-
-<img src="https://images.code.org/67fc10f1dec4f129c64c62d583ebf7ee-image-1479232142029.png" style="float: left; margin-left: 50px; margin-right: 50px">
-
-Compares two values - numbers, strings, or other booleans - and returns `true` if they are **not equal**, otherwise `false`.
-
-* `"Hello" != "hello"` returns *true* because the strings are slightly different.
-* `"3" != 3` returns *true* because the string 3 is not the same as the integer 3.
-* `(2+1) != 3` returns *false* because the arithmetic expression evaluates to 3.
-* `x != 7` returns *true* when...the variable x *is any value other than* 7.
-
-<div style="clear:both"> </div>
-<hr>
-
-<img src="https://images.code.org/536aed5657843fca3b52a044f2f3bdc7-image-1479242736018.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
-
-Compares two values to see if the number on the left is <em>greater than</em> the number on the right.
-
-* `4 > 3` returns *true*
-* `3 > 7` returns *false*
-* `age > 17` returns *true* when the value of the variable "age" is strictly greater than 17, otherwise false.
-
-<div style="clear:both"> </div>
-<hr>
-
-<img src="https://images.code.org/3c7c9336270e093bad437d69d155a8c7-image-1479242773012.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
-Compares two values to see if the number on the left is <em>less than</em> the number on the right.
-
-* `4 < 3` returns *false*
-* `3 < 7` returns *true*
-* `age < 17` returns *true* when the value of the variable "age" is strictly less than 17, otherwise false.
-
-<div style="clear:both"> </div>
-<hr>
-
-<img src="https://images.code.org/e899b0040a9f8ddc899b1df66773be74-image-1479242843374.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
-
-Compares two values to see if the number on the left is *less than or equal to* the number on the right. 
-
-* `3 <= 4` returns *true*
-* `4 <= 3` returns *false*
-* `age <= 18` returns *true* when the value of the variable "age" is 18 or less.
-
-
-<div style="clear:both"> </div>
-
-<hr>
-<img src="https://images.code.org/2ca857bff29bca22a2a42433c6b3981f-image-1479242807960.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
-Compares two values to see if the number on the left is *greater than or equal to* the number on the right.
-
-* `3 >= 4` returns *false*
-* `4 >= 3` returns *true*
-* `age >= 18` returns *true* when the value of the variable "age" is 18 or greater.
-
-<div style="clear:both"> </div>
-
-<hr>
-
-## Word Soup: Conditionals, Booleans, expressions, statements
-
-As you saw in the video there a bunch of terms that generally are all talking about the same thing.
-
-**Boolean, Boolean values, Boolean expressions:**
-
-* Named after mathematician George Boole 
-* He invented a corner of mathematics that is now called "Boolean Algebra" that operates using only true/false values. 
-* This is a very important corner of mathematics for computer science because it maps very easily to binary.
-
-Thus, a **Boolean value** simply a computer science-y term that means a true/false value. A **Boolean expression** is a statement that evaluates to single true/false value.
-
-**"Condition"**:
-
-* "Condition" is simply the generic term for code that alters program flow based on true/false values.
-* Examples: Condition, Conditionals, Conditional statements, conditional execution
 
 MARKDOWN

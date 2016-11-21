@@ -23,7 +23,6 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
-    skip 'Skipping plc unit tests temporarily'
     module_assignments = @unit_enrollment.plc_module_assignments
     assert_equal Plc::EnrollmentUnitAssignment::START_BLOCKED, @unit_enrollment.status
     assert_equal 1, module_assignments.count

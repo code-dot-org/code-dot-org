@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-var redux = require('./redux');
+import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -44,12 +44,10 @@ import {
   setFeedback
 } from './redux/instructions';
 import {
-  openDialog as openInstructionsDialog,
   closeDialog as closeInstructionsDialog
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
-var combineReducers = require('redux').combineReducers;
 
 var copyrightStrings;
 
@@ -229,11 +227,6 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-// TODO: once code-studio and apps share common modules in the same bundle,
-// get rid of this window nonsense.
-module.exports = window.StudioApp = window.StudioApp || {
-  singleton: new StudioApp()
-};
 
 /**
  * Configure StudioApp options
@@ -282,8 +275,9 @@ StudioApp.prototype.configureRedux = function (reducers) {
  * runs).
  */
 StudioApp.prototype.createReduxStore_ = function () {
-  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
-  this.reduxStore = redux.createStore(combined);
+  registerReducers(_.assign({}, commonReducers, this.reducers_));
+
+  this.reduxStore = getStore();
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
@@ -446,17 +440,7 @@ StudioApp.prototype.init = function (config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(function () {
-      if (config.showInstructionsInTopPane) {
-        return;
-      }
-      var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog({
-        autoClose: shouldAutoClose,
-        aniGifOnly: false,
-        hintsOnly: false
-      }));
-    }.bind(this));
+    config.showInstructionsWrapper(() => {});
   }
 
   // In embed mode, the display scales down when the width of the
@@ -496,8 +480,6 @@ StudioApp.prototype.init = function (config) {
   if (config.loadAudio) {
     config.loadAudio();
   }
-
-  this.configureHints_(config);
 
   if (this.editCode) {
     this.handleEditCode_(config);
@@ -643,20 +625,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   } else {
     this.runButtonClick();
   }
-};
-
-/**
- * If we have hints, add a click handler to them and add the lightbulb above the
- * icon. Depends on the existence of DOM elements with particular ids, which
- * might be located below the playspace or in the top pane.
- */
-StudioApp.prototype.configureHints_ = function (config) {
-  if (!this.hasInstructionsToShow(config)) {
-    return;
-  }
-
-  var promptIcon = document.getElementById('prompt-icon');
-  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
@@ -1146,7 +1114,6 @@ StudioApp.prototype.onReportComplete = function (response) {
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
-  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1193,12 +1160,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   }
 
   var hideFn = _.bind(function () {
-    // Momentarily flash the instruction block white then back to regular.
-    if (!instructionsInTopPane) {
-      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
-        .delay(500)
-        .animate({"background-color":"rgba(0,0,0,0)"},1000);
-    }
     // Set focus to ace editor when instructions close:
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
@@ -1572,10 +1533,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  *     of this.TestResults).false
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  // If instructions in top pane are enabled and we show instructions
-  // when collapsed, we only use dialogs for success feedback.
+  // If we show instructions when collapsed, we only use dialogs for
+  // success feedback.
   const constants = this.reduxStore.getState().pageConstants;
-  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
+  if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
   return true;
@@ -2885,7 +2846,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
     puzzleNumber: level.puzzle_number,
@@ -2893,6 +2853,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     noVisualization: false,
     visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
+    failureAvatar: config.skin.failureAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
@@ -2926,3 +2887,5 @@ StudioApp.prototype.showRateLimitAlert = function () {
     share: !!this.share,
   });
 };
+
+export const singleton = new StudioApp();

@@ -21,13 +21,6 @@ function dialogHidden() {
   if (dialogType === "error") {
     adjustScroll();
   }
-
-  if (dialogType === "instructions") {
-    // Momentarily flash the instruction block white then back to regular.
-    $('#bubble').css({backgroundColor: "rgba(255,255,255,1)"})
-        .delay(500)
-        .animate({backgroundColor: "rgba(0,0,0,0)"}, 1000);
-  }
 }
 
 export function showDialog(type, callback) {
@@ -54,11 +47,7 @@ export function showDialog(type, callback) {
     dialog.hide();
   });
 
-  if (dialogType === "instructions") {
-    dialog.show({hideOptions: {endTarget: "#bubble"}});
-  } else {
-    dialog.show();
-  }
+  dialog.show();
 }
 
 export function showStartOverDialog(callback) {
