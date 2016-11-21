@@ -23,11 +23,11 @@ var header = {};
 const PUZZLE_PAGE_NONE = -1;
 
 /**
- * @param scriptData {object}
- * @param scriptData.disablePostMilestone {boolean}
- * @param scriptData.isHocScript {boolean}
- * @param scriptData.name {string}
- * @param stageData{{
+ * @param {object} scriptData
+ * @param {boolean} scriptData.disablePostMilestone
+ * @param {boolean} scriptData.isHocScript
+ * @param {string} scriptData.name
+ * @param {object} stageData{{
  *   script_id: number,
  *   script_name: number,
  *   script_stages: id,
@@ -41,8 +41,13 @@ const PUZZLE_PAGE_NONE = -1;
  *     kind: string
  *   }>
  * }}
+ * @param {object} progressData
+ * @param {string} currentLevelId
+ * @param puzzlePage
+ * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ *   user, null otherwise
  */
-header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage) {
+header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn) {
   scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
@@ -63,7 +68,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation);
+  progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
 
   $('.level_free_play').qtip({
     content: {

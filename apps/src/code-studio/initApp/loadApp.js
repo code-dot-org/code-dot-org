@@ -2,6 +2,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { getStore } from '../redux';
+import { setUserSignedIn, SignInState } from '../progressRedux';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
@@ -312,6 +314,19 @@ function loadAppAsync(appOptions) {
 
         if (progress.refreshStageProgress) {
           progress.refreshStageProgress();
+        }
+
+        const store = getStore();
+        const signInState = store.getState().progress.signInState;
+        if (signInState === SignInState.Unknown) {
+          // if script was cached, we won't have signin state until we've made
+          // our user_progress call
+          // Depend on the fact that even if we have no levelProgress, our progress
+          // data will have other keys
+          const signedInUser = Object.keys(data).length > 0;
+          store.dispatch(setUserSignedIn(signedInUser));
+
+          // TODO - also may need to display toast
         }
       }).fail(loadLastAttemptFromSessionStorage);
 

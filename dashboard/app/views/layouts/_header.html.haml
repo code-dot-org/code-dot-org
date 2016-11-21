@@ -56,7 +56,9 @@
   - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page.to_i - 1}" : script_level.level_id.to_s
 
   - script_data = { disablePostMilestone: script.disable_post_milestone?, isHocScript: script.hoc?, name: script.name }
+  -# If caching, we don't know the sign in state, and should be nil
+  - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript
     //<![CDATA[
-    dashboard.header.build(#{script_data.to_json}, #{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", #{puzzle_page})
+    dashboard.header.build(#{script_data.to_json}, #{script_level.stage.summarize.to_json}, #{user_progress}, "#{uid}", #{puzzle_page}, #{signed_in})
     //]]>

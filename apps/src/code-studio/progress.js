@@ -56,9 +56,11 @@ function showDisabledButtonsAlert(isHocScript) {
  * @param {object} progressData
  * @param {string} currentLevelid
  * @param {boolean} saveAnswersBeforeNavigation
+ * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ *   user, null otherwise
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
-    currentLevelId, saveAnswersBeforeNavigation) {
+    currentLevelId, saveAnswersBeforeNavigation, signedIn) {
   const store = getStore();
 
   const { name, disablePostMilestone, isHocScript } = scriptData;
@@ -79,9 +81,11 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     store.dispatch(mergeProgress(clientState.allLevelsProgress()[name] || {}));
   };
 
-  const isSignedIn = Object.keys(progressData).length > 0;
-  store.dispatch(setUserSignedIn(isSignedIn));
-  if (isSignedIn && (disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI'))) {
+  if (signedIn !== null) {
+    store.dispatch(setUserSignedIn(signedIn));
+  }
+  if (signedIn && (disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI'))) {
+    // TODO - may have to show this later if we werent signed in
     showDisabledButtonsAlert(isHocScript);
   }
 
