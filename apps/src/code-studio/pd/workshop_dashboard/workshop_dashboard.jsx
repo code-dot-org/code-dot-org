@@ -40,22 +40,12 @@ const WorkshopDashboard = (
         component={WorkshopIndex}
       />
       <Route
-        path="survey_results"
+        path="survey_results(/:workshopId)"
         breadcrumbs="Survey Results"
         component={SurveyResults}
       />
       <Route
-        path="survey_results(/:workshopId)"
-        breadcrumbs="Workshops"
-        component={SurveyResults}
-      />
-      <Route
-        path="organizer_survey_results"
-        breadcrumbs="Organizer Survey Results"
-        component={OrganizerSurveyResults}
-      />
-      <Route
-        path="organizer_survey_results/(:workshopId)"
+        path="organizer_survey_results(/:workshopId)"
         breadcrumbs="Organizer Survey Results"
         component={OrganizerSurveyResults}
       />

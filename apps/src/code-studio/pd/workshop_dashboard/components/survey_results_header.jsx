@@ -85,18 +85,17 @@ const SurveyResultsHeader = React.createClass({
 
   componentDidMount() {
     const courses = this.getCoursesForWorkshops();
+    let preselectedWorkshop;
 
     if (courses.length > 0) {
       if (this.props.preselectedWorkshopId) {
-        const preselectedWorkshop = _.find(this.props.workshops, workshop => {
+        preselectedWorkshop = this.props.workshops.find(workshop => {
           return workshop.id === parseInt(this.props.preselectedWorkshopId);
         });
+      }
 
-        if (preselectedWorkshop) {
-          this.filterWorkshops(preselectedWorkshop.course, preselectedWorkshop);
-        } else {
-          this.filterWorkshops(courses[0]);
-        }
+      if (preselectedWorkshop) {
+        this.filterWorkshops(preselectedWorkshop.course, preselectedWorkshop);
       } else {
         this.filterWorkshops(courses[0]);
       }
@@ -115,26 +114,21 @@ const SurveyResultsHeader = React.createClass({
 
     _.reverse(filteredWorkshops);
 
+    let selectedWorkshopId;
 
     if (preselectedWorkshop) {
-      this.setState({
-        selectedCourse: course,
-        filteredWorkshops: filteredWorkshops,
-        selectedWorkshopId: preselectedWorkshop.id
-      });
-
-      this.setSurveyPanel(course, preselectedWorkshop.id, this.getWorkshopFriendlyName(preselectedWorkshop));
+      selectedWorkshopId = preselectedWorkshop.id;
     } else {
-      let firstWorkshopId = this.props.organizerView ? undefined : (filteredWorkshops[0] ? filteredWorkshops[0].id : undefined);
-
-      this.setState({
-        selectedCourse: course,
-        filteredWorkshops: filteredWorkshops,
-        selectedWorkshopId: firstWorkshopId,
-      });
-
-      this.setSurveyPanel(course, firstWorkshopId, firstWorkshopId && this.getWorkshopFriendlyName(filteredWorkshops[0]));
+      selectedWorkshopId = this.props.organizerView ? undefined : (filteredWorkshops[0] ? filteredWorkshops[0].id : undefined);
     }
+
+    this.setState({
+      selectedCourse: course,
+      filteredWorkshops: filteredWorkshops,
+      selectedWorkshopId: selectedWorkshopId
+    });
+
+    this.setSurveyPanel(course, selectedWorkshopId, selectedWorkshopId && this.getWorkshopFriendlyName(preselectedWorkshop || filteredWorkshops[0]));
   },
 
   setSurveyPanel(course, workshopId, workshopName) {
