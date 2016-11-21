@@ -97,10 +97,13 @@
         "matchType": "exact",
         "minTimes": 2,
         "maxTimes": 3,
-        "message": "App Lab is expecting that you'll need to call turnRight(degrees) at least twice to do this task."
+        "message": "App Lab is expecting that you'll need to call turnRight(degrees) twice, or three times, to do this task."
       }
     ],
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",
