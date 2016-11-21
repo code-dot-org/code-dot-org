@@ -4,7 +4,8 @@ Sequel.migration do
       primary_key :id
       DateTime :created_at, index: true
       DateTime :updated_at, index: true
-      String :session, index: true, size: 50
+      Integer :hoc_activity_id, index: true
+      Integer :weight, null: false
       String :referer, size: 50
       String :tutorial, index: true, null: false, size: 50
     end
