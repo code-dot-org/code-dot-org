@@ -2,6 +2,18 @@
   width: 970px;
 }
 
+.solid-block-header {
+  font-size: 32px;
+  font-family: 'Gotham 7r', sans-serif;
+  line-height: 1.2em;
+  background-color: #7665a0;
+  color: white;
+  height: 60px;
+  padding-top: 12px;
+  padding-left: 15px;
+  margin: 50px 0 10px 0;
+}
+
 .video-smalltext {
   padding: 10px;
 }
