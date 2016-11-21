@@ -90,7 +90,7 @@ const SurveyResultsHeader = React.createClass({
     if (courses.length > 0) {
       if (this.props.preselectedWorkshopId) {
         preselectedWorkshop = this.props.workshops.find(workshop => {
-          return workshop.id === parseInt(this.props.preselectedWorkshopId);
+          return workshop.id === parseInt(this.props.preselectedWorkshopId, 10);
         });
       }
 
