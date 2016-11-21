@@ -1434,6 +1434,6 @@ class UserTest < ActiveSupport::TestCase
 
   test 'show race interstitial for student over 13 with account more than 1 week old' do
     student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?('8.8.8.8')
+    assert student.show_race_interstitial?('allow')
   end
 end
