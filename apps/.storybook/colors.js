@@ -1,6 +1,6 @@
 import React from 'react';
 import * as storybook from '@kadira/storybook';
-import color from '../src/color';
+import color from '../src/util/color';
 
 const styles = {
   colorWrapper: {
