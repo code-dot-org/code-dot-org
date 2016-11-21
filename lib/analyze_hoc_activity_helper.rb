@@ -69,7 +69,8 @@ def rank_tutorials(end_date)
           created_at >= '#{start_date.strftime('%Y-%m-%d')}' AND
           created_at < '#{end_date.strftime('%Y-%m-%d')}'
         )
-        GROUP BY tutorial ORDER BY count DESC"
+        GROUP BY tutorial
+        ORDER BY count DESC"
     ).each_with_index do |row, index|
       next if row[:tutorial].nil_or_empty?
       memo[key][row[:tutorial]] = index + 1
