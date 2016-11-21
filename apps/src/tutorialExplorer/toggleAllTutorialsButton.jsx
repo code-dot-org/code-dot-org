@@ -5,6 +5,16 @@
 import React from 'react';
 import i18n from './locale';
 
+const styles = {
+  toggleAllTutorialsBlock: {
+    width: "100%",
+    clear: "both",
+    textAlign: "center",
+    paddingTop: 30,
+    paddingBottom: 30
+  }
+};
+
 const ToggleAllTutorialsButton = React.createClass({
   propTypes: {
     showAllTutorials: React.PropTypes.func.isRequired,
@@ -14,7 +24,7 @@ const ToggleAllTutorialsButton = React.createClass({
 
   render() {
     return (
-      <div style={{width: "100%", textAlign: "center", paddingTop: 30, paddingBottom: 30}}>
+      <div style={styles.toggleAllTutorialsBlock}>
         {!this.props.showingAllTutorials && (
           <button onClick={this.props.showAllTutorials}>
             {i18n.showAllTutorialsButton()}
