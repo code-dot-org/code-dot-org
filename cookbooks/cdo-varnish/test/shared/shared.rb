@@ -227,20 +227,6 @@ module HttpCacheIntegrationTest
 end
 
 module HttpCacheTest
-  def does_not_strip_cookies_from_png_in_path(path)
-    url = build_url path, 'image.png'
-    cookie = 'hour_of_code' # whitelisted for this path
-    text = 'Hello World!'
-    text_cookie = 'Hello Cookie!'
-    mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
-    mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
-
-    # Does not strip request cookie or response cookie
-    response = proxy_request url, {}, {cookie => 'cookie_value'}
-    assert_equal text_cookie, last_line(response)
-    refute_nil get_header(response, 'Set-Cookie')
-  end
-
   def self.setup(environment, helpers, cloudfront=false)
     describe 'http proxy cache' do
       include helpers
@@ -427,6 +413,22 @@ module HttpCacheTest
       it 'Does not strip cookies from assets in v3/animations path' do
         does_not_strip_cookies_from_png_in_path 'v3/animations'
       end
+
+      # rubocop:disable Lint/NestedMethodDefinition
+      def does_not_strip_cookies_from_png_in_path(path)
+        url = build_url path, 'image.png'
+        cookie = 'hour_of_code' # whitelisted for this path
+        text = 'Hello World!'
+        text_cookie = 'Hello Cookie!'
+        mock_response url, text, {}, {'Set-Cookie' => "#{cookie}=cookie_value; path=/"}
+        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
+
+        # Does not strip request cookie or response cookie
+        response = proxy_request url, {}, {cookie => 'cookie_value'}
+        assert_equal text_cookie, last_line(response)
+        refute_nil get_header(response, 'Set-Cookie')
+      end
+      # rubocop:enable Lint/NestedMethodDefinition
 
       it 'caches individually on whitelisted cookie values' do
         url = build_url 10
