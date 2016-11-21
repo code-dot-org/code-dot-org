@@ -12,6 +12,9 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 40
   },
+  container: {
+    position: "relative"
+  },
   roboticsButtonImage: {
     marginTop: 10,
     marginBottom: 20,
@@ -53,7 +56,7 @@ const RoboticsButton = React.createClass({
         <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
           <div style={styles.button}>
             <a href={this.props.url}>
-              <div style={{position: "relative"}}>
+              <div style={styles.container}>
                 <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
                 <div style={styles.roboticsButtonText}>
                   {i18n.roboticsButtonText()}
