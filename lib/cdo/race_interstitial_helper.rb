@@ -9,8 +9,6 @@ module RaceInterstitialHelper
 
     # Restrict to cases where we can successfully geolocate to the US
     return false if request_ip.nil?
-    # For tests, we can't actually call Geocoder, so 'allow' pretends that check would pass
-    return true if request_ip == 'allow'
     location = Geocoder.search(request_ip).first
     return false unless location
     return false if location.country_code.to_s.downcase != 'us'
