@@ -35,6 +35,8 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
+      HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
+      TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
     ],
     csf: [
       TWENTY_HOUR_NAME = '20-hour'.freeze,
