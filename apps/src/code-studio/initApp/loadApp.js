@@ -1,9 +1,5 @@
 /* global dashboard addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
-import { getStore } from '../redux';
-import { disableBubbleColors } from '../progressRedux';
-import experiments from '../../util/experiments';
-import DisabledBubblesAlert from '../DisabledBubblesAlert';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var renderAbusive = require('./renderAbusive');
@@ -54,19 +50,6 @@ function mergeProgressData(scriptName, serverProgress) {
       );
     }
   });
-}
-
-function showDisabledButtonsAlert(isHocScript) {
-  const div = $('<div>').css({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 45,
-    zIndex: 1000
-  });
-  $(document.body).append(div);
-
-  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
 }
 
 // Legacy Blockly initialization that was moved here from _blockly.html.haml.
@@ -329,13 +312,6 @@ function loadAppAsync(appOptions) {
 
         if (progress.refreshStageProgress) {
           progress.refreshStageProgress();
-        }
-
-        const signedOutUser = Object.keys(data).length === 0;
-        if (!signedOutUser && (data.disablePostMilestone ||
-                               experiments.isEnabled('postMilestoneDisabledUI'))) {
-          getStore().dispatch(disableBubbleColors());
-          showDisabledButtonsAlert(!!data.isHoc);
         }
       }).fail(loadLastAttemptFromSessionStorage);
 
