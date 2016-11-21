@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2016-11-17T22:57:38.000Z",
+  "created_at": "2016-11-21T16:39:27.000Z",
   "level_num": "custom",
   "user_id": 42,
   "properties": {
@@ -20,8 +20,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Do it yourself - What's the secret number?\r\n\r\nInsert lines of code between the \"Welcome\" and \"Goodbye\" that do the following:\r\n\r\n1. use `promtNum` to ask the user to enter the \"secret number\"\r\n2. add an `if` statement to check if the number is the secret (you can make up your own secret number)\r\n3. use `console.log` to display a message if the user guessed correctly\r\n\r\n**NOTE:** Don't go overboard here adding messages. Just get practice adding a prompt and an if-statement on your own.  Make sure it works and move on.\r\n",
-    "start_blocks": "console.log(\"Welcome\");\r\n// insert your code here\r\nconsole.log(\"Goodbye\");\r\n\r\n",
+    "markdown_instructions": "# You try it\r\n\r\nThis is only *slightly* different from the voting example you just saw.\r\n\r\n* **Add an if-statement** to the code to check the `age` to see if the person is old enough to drive. (In most states you need to be 16 or older).\r\n* **Display a message if the person is old enough drive.**\r\n\r\nYou can add an if-statement by dragging it out from the toolbox.  We've provided the console.log message you should use.  Just drag it inside the if-statement.  This animation shows most of what you have to do.\r\n\r\n![](https://images.code.org/4ef3562d035ffacf292daac508fea34f-image-1479746969387.gif)",
+    "start_blocks": "console.log(\"Driver Verification\");\r\nvar age = promptNum(\"Please Enter Your Age\");\r\nconsole.log(\"It looks like you're old enough to drive!\");\r\nconsole.log(\"Thanks for verifying.\");\r\n\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -69,7 +69,8 @@
     "encrypted_examples": [
 
     ],
-    "teacher_markdown": "Validation: This only checks whether the student added a call to `promptNum`. It does not check whether they added an if-statement."
+    "palette_category_at_start": "control",
+    "teacher_markdown": "Note this level cannot be validated."
   },
   "published": true,
   "notes": "",
