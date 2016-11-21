@@ -14,7 +14,9 @@ const SurveyResults = React.createClass({
     return (
       <div>
         <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended&facilitator_view=1">
-          <SurveyResultsHeader preselectedWorkshopId={this.props.params && this.props.params['workshopId']} />
+          <SurveyResultsHeader
+            preselectedWorkshopId={this.props.params && this.props.params['workshopId']}
+          />
         </WorkshopTableLoader>
       </div>
     );
