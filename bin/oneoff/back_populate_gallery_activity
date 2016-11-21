@@ -29,16 +29,15 @@ exit(-1) unless filename
 
 puts "READING #{filename}..."
 
-data = []
-CSV.foreach(filename) do |line|
-  gallery_activity_id = line[0]
-  user_level_id = line[1]
-  data << [gallery_activity_id, user_level_id, level_source_id]
+data = CSV.read(filename).map do |line|
+  [line[0].to_i, line[1].to_i, line[2].to_i]
 end
 
 puts "UPDATING #{data.count} ROWS..."
 
+slice = 0
 data.each_slice(TRANSACTION_SIZE) do |data_slice|
+  puts "PROCESSING: slice #{slice}..."
   ActiveRecord::Base.transaction do
     data_slice.each do |gallery_activity_id, user_level_id, level_source_id|
       GalleryActivity.find_by_id(gallery_activity_id).update!(
@@ -47,4 +46,5 @@ data.each_slice(TRANSACTION_SIZE) do |data_slice|
       )
     end
   end
+  slice += 1
 end
