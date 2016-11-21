@@ -21,7 +21,7 @@ git git_path do
 
   branch = node['cdo-repository']['branch']
   checkout_branch branch
-  revision node['cdo-repository']['revision'] || branch
+  revision branch
 
   action(
     # Skip git-repo sync when using a shared volume to prevent data loss on the host.
