@@ -63,7 +63,7 @@ def rank_tutorials(end_date)
     memo[key] = {}
     start_date = end_date - num_days.days
     PEGASUS_REPORTING_DB_READONLY.fetch(
-      "SELECT tutorial, COUNT(*) AS count
+      "SELECT tutorial, SUM(weight) AS count
         FROM hoc_learn_activity
         WHERE (
           created_at >= '#{start_date.strftime('%Y-%m-%d')}' AND
