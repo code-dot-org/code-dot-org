@@ -156,13 +156,17 @@ def launch_tutorial(tutorial, params={})
     )
   end
 
-  if params[:track_learn]
-    DB[:hoc_learn_activity].insert(
-      referer: request.referer_site_with_port,
-      session: row && row[:session],
-      tutorial: tutorial[:code],
-      created_at: DateTime.now,
-    )
+  if params[:track_learn] && !settings.read_only
+    learn_weight = DCDO.get('hoc_learn_activity_sample_weight', 1).to_i
+    if learn_weight > 0 && Kernel.rand < (1.0 / learn_weight)
+      DB[:hoc_learn_activity].insert(
+        referer: request.referer_site_with_port,
+        weight: learn_weight,
+        hoc_activity_id: row && row[:id],
+        tutorial: tutorial[:code],
+        created_at: DateTime.now,
+      )
+    end
   end
 
   dont_cache
