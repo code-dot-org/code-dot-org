@@ -414,6 +414,7 @@ module HttpCacheTest
         does_not_strip_cookies_from_png_in_path 'v3/animations'
       end
 
+      # rubocop:disable Lint/NestedMethodDefinition
       def does_not_strip_cookies_from_png_in_path(path)
         url = build_url path, 'image.png'
         cookie = 'hour_of_code' # whitelisted for this path
@@ -427,6 +428,7 @@ module HttpCacheTest
         assert_equal text_cookie, last_line(response)
         refute_nil get_header(response, 'Set-Cookie')
       end
+      # rubocop:enable Lint/NestedMethodDefinition
 
       it 'caches individually on whitelisted cookie values' do
         url = build_url 10

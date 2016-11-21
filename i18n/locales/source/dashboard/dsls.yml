@@ -333,8 +333,14 @@ en:
       Begin planning your project:
         description here: description here
         title: title
+      'Big Picture: If-statements':
+        description here: description here
+        title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Boolean Expressions and Comparison Operators:
+        description here: description here
+        title: title
       Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
@@ -364,18 +370,25 @@ en:
       CSD U3 - images - pick your final work: {}
       CSD U3 -conditionals - stop booleans: {}
       CSD U3 AnimationsMulti STOP project guide: {}
+      CSD U3 Collision Detection: {}
+      CSD U3 Collisions SFLP: {}
       CSD U3 Compound Nested Stop: {}
       CSD U3 Counters match outputs: {}
+      CSD U3 Defender SFLP: {}
       CSD U3 Draw Loop Stop: {}
       CSD U3 Expressions STOP writing 10: {}
       CSD U3 Functions Introduction: {}
+      CSD U3 Functions SFLP: {}
       CSD U3 Keypress Stop: {}
+      CSD U3 Project Build a Game SFLP: {}
       CSD U3 SFLP Card Project: {}
       CSD U3 SFLP Conditionals: {}
       CSD U3 SFLP Sprites and Images:
         description here: description here
         title: title
+      CSD U3 SFLP Velocity: {}
       CSD U3 Sprites STOP sprites and variables: {}
+      CSD U3 Using the Game Design Process SLFP: {}
       CSD U3 Variables Reassign Predict No Response: {}
       CSD U3 Variables STOP misconceptions: {}
       CSD U3 Variables STOP misconceptions prediction: {}
@@ -391,6 +404,7 @@ en:
       CSD U3 collisions STOP isTouching:
         STOP: STOP
         description here: description here
+      CSD U3 complex sprite movement SFLP: {}
       CSD U3 game intro:
         Create Your Own Game: Create Your Own Game
         description here: description here
@@ -736,6 +750,9 @@ en:
       Categorizing Data: {}
       Changing Design Elements with Code: {}
       Check for Internet Accessibility: {}
+      'Chirpr: @johnsnow': {}
+      'Chirpr: @lillizard': {}
+      'Chirpr: @solmoon': {}
       Choosing Good IDs: {}
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
@@ -754,6 +771,9 @@ en:
         description here: description here
         title: title
       Digital Footprint Chirpr solmoon: {}
+      Digital Footprint FaceSpace Haley:
+        description here: description here
+        title: title
       Digital Footprint FaceSpace John:
         FaceSpace - John T: FaceSpace - John T
       Digital Footprint FaceSpace Lizzie:
@@ -1050,6 +1070,7 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
+      ECSPD3- unit 5- welcome: {}
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -1153,6 +1174,9 @@ en:
         title: title
       External level test (will):
         first computer program: first computer program
+      'Facespace: John T': {}
+      'Facespace: Lizzie Dell': {}
+      'Facespace: Soleil M': {}
       Favicon Instructions: {}
       Forum-ECSPD-Unit 2-Teaching Practice: {}
       Forum-ECSPD-Unit 3-Teaching Practice: {}
@@ -1169,8 +1193,15 @@ en:
         description here: description here
         title: title
       Group Work and Peer Learning in Unit 1: {}
+      HOC survey 2016 external text: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How If Statements Work pt 1:
+        description here: description here
+        title: title
+      How If-Else Statements Work:
+        description here: description here
+        title: title
       How Images Work:
         description here: description here
         title: title
@@ -1470,6 +1501,9 @@ en:
         CS in Science PD commitments: CS in Science PD commitments
         overview of program commitments: overview of program commitments
       PLC- check your progress: {}
+      PS - Responding to User Input:
+        description here: description here
+        title: title
       Personal Website Examples: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
@@ -2014,6 +2048,9 @@ en:
       U5 - Explore PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5L08 - Student Intro If statements:
+        description here: description here
+        title: title
       U6 - Charts - Student Introduction:
         description here: description here
         title: title
@@ -2087,6 +2124,9 @@ en:
       What is HTML?: {}
       What's inside and how is it organized?: {}
       Why Teach Number Systems?: {}
+      'Worked Example: If-statements and Robot':
+        description here: description here
+        title: title
       aEstory1:
         Artist Exemplar First Story: Artist Exemplar First Story
         Why are they doing this stage?: Why are they doing this stage?
@@ -2179,6 +2219,7 @@ en:
         description here: description here
         title: title
       courseF_external_variableConstant: {}
+      csp_ap_intro: {}
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -2277,6 +2318,9 @@ en:
       gradeK_unplugged_programming: {}
       gradek1_activity_beNice:
         The computer is your friend: The computer is your friend
+      'instaframe: photolizzie': {}
+      'instantframe: johnsnow': {}
+      'instantframe: moonbeam': {}
       intro to self assessment: {}
       introduction to events: {}
       introduction to turtle: {}
@@ -2702,7 +2746,10 @@ en:
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
+        CSP Unit 5 Cumulative Assessment 3 MC: {}
         CSP pre-assessment survey: {}
+        HOC post-survey 2016 levelgroup: {}
+        HOC pre-survey 2016 levelgroup: {}
         PS U3 Assessment1 new: {}
         PS pre-assessment all: {}
         Part 1 - CSP Culminating Assessment: {}
@@ -2717,6 +2764,7 @@ en:
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
         brendan test survey: {}
+        csp_ap_questions: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -2900,6 +2948,10 @@ en:
         keyDown(): keyDown()
         keyWentDown(): keyWentDown()
         keyWentUp(): keyWentUp()
+      CSD U3 keyinput match:
+        Answer 1: Answer 1
+        CSD U3 keyinput match: CSD U3 keyinput match
+        Question: Question
       CSD validator Matching:
         "&lt;!DOCTYPE html&gt;": "&lt;!DOCTYPE html&gt;"
         "&lt;head&gt;": "&lt;head&gt;"
@@ -3600,6 +3652,10 @@ en:
         Where is Brendan from?: Where is Brendan from?
         blue: blue
         salt: salt
+      unique level name here:
+        Answer 1: Answer 1
+        CSD U3 keyinput match: CSD U3 keyinput match
+        Question: Question
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4072,6 +4128,13 @@ en:
         The x and y value are the center of a sprite and in the upper right corner of a rectangle: The x and y value are the center of a sprite and in the upper right corner of a rectangle
         There is no difference. They have the same x and y values: There is no difference. They have the same x and y values
         What is the difference for the x and y values of sprites and rectangles?: What is the difference for the x and y values of sprites and rectangles?
+      CSD U3 Boolean MC:
+        "  200<br>10<br>-20": "  200<br>10<br>-20"
+        "  false<br>true<br>false": "  false<br>true<br>false"
+        "  true<br>error<br>true": "  true<br>error<br>true"
+        Which result will be printed in the console by this program?: Which result will be printed in the console by this program?
+        title: title
+        true<br>false<br>true: true<br>false<br>true
       CSD U3 Functions Prediction define first:
         Both squares will be drawn. You can create functions anywhere you like in your code.: Both squares will be drawn. You can create functions anywhere you like in your code.
         ? Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!
@@ -4653,6 +4716,64 @@ en:
         right answer: right answer
         title: title
         wrong answer: wrong answer
+      HOC post-survey 2016 q1:
+        Before today, I have...: Before today, I have...
+        Done more computer science than just an Hour of Code: Done more computer science than just an Hour of Code
+        Never done an Hour of Code: Never done an Hour of Code
+        Only done an Hour of Code: Only done an Hour of Code
+      HOC post-survey 2016 q2:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I like computer science.: I like computer science.
+      HOC post-survey 2016 q3:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I think computer science is interesting.: I think computer science is interesting.
+      HOC post-survey 2016 q4:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+      HOC post-survey 2016 q5:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I am better at computer science than most kids at my school.: I am better at computer science than most kids at my school.
+      HOC pre-survey 2016 q1:
+        Before today, I have...: Before today, I have...
+        Done more computer science than just an Hour of Code: Done more computer science than just an Hour of Code
+        Never done an Hour of Code: Never done an Hour of Code
+        Only done an Hour of Code: Only done an Hour of Code
+      HOC pre-survey 2016 q2:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I like computer science.: I like computer science.
+      HOC pre-survey 2016 q3:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I think computer science is interesting.: I think computer science is interesting.
+      HOC pre-survey 2016 q4:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I have the ability to learn computer science.: I have the ability to learn computer science.
+      HOC pre-survey 2016 q5:
+        Agree a little: Agree a little
+        Agree a lot: Agree a lot
+        Disagree a little: Disagree a little
+        Disagree a lot: Disagree a lot
+        I am better at computer science than most kids at my school.: I am better at computer science than most kids at my school.
       K-1 Artist 1 Multi 1:
         "/script_assets/k_1_images/artist_images/E-S-S.png": "/script_assets/k_1_images/artist_images/E-S-S.png"
         "/script_assets/k_1_images/artist_images/E-S.png": "/script_assets/k_1_images/artist_images/E-S.png"
@@ -6192,6 +6313,28 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      csp_ap_exam_signup:
+        'No': 'No'
+        'Yes': 'Yes'
+      csp_ap_number_exams:
+        '0': '0'
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        4+: 4+
+      csp_ap_previous_years:
+        'No': 'No'
+        'Yes': 'Yes'
+      csp_ap_taking_ap_class:
+        'No': 'No'
+        Not sure: Not sure
+        'Yes': 'Yes'
+      csp_ap_taking_exam:
+        Before I decide, I would like to have a better sense of how well I will do: Before I decide, I would like to have a better sense of how well I will do
+        Before I decide, I would like to know more about the AP exam and what it involves: Before I decide, I would like to know more about the AP exam and what it involves
+        I was unaware I had the option.: I was unaware I had the option.
+        No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
+        Yes, definitely.: Yes, definitely.
       cspu3_assess1_callfunction:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
@@ -6243,7 +6386,7 @@ en:
         <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">: <img src="https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png">
         <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">: <img src="https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png">
         <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">: <img src="https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png">
-        <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">: <img src="https://images.code.org/c85fa04b04f7505049d0efd87dee44e0-image-1474952959232.png">
+        <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">: <img src="https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png">
         <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">: <img src="https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png">
       cspu3_assess1_parameters:
         Parameters allow for more flexible, generalized behaviors in functions.: Parameters allow for more flexible, generalized behaviors in functions.
@@ -7079,6 +7222,12 @@ en:
         Presidents: Presidents
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
+      unique level name here:
+        " Press the _w_ key ": " Press the _w_ key "
+        'Press the _space_ bar  ': 'Press the _space_ bar  '
+        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
+        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
+        title: title
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

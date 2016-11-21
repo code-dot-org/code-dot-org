@@ -1,12 +1,12 @@
 ---
-title: "Translate Minecraft: Hour of Code"
+title: "Translate Minecraft Adventurer"
 nav: translate_nav
 ---
 
-# Translating Minecraft: Hour of Code
-Translations for the tutorial progression are down on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
+# Translating Minecraft Adventurer
+Translations for the tutorial progression are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
 
-## Getting setup
+## Getting set up
 
 1. [Click here](https://amara.org/en/auth/login/?next=/) to create an Amara account.
 1. [Click here to join our Code.org project](https://crowdin.com/project/codeorg/invite) on Crowdin.
@@ -32,7 +32,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 ## Translating the video captions
 
 1. To use Amara, first click on a video link below.
-1. On the left, you'll see a list of languages. If you don't see your language listed, click "Add a new language". A language with a yellow dot means it's been started but incomplete, please go ahead and complete the translation. A language with a green dot means it's been completed and published.
+1. On the left, you'll see a list of languages. If you don't see your language listed, click "Add a new language". A language with a yellow dot means it's been started but incomplete; please go ahead and complete the translation. A language with a green dot means it's been completed and published.
 1. When you begin you'll see the English track on the left and you can enter your translations on the right. Feel free to edit the timing if necessary. When complete, click the Publish button in the top right.
 1. Complete all 5 video translations then email translations@code.org so that we can upload your translations to YouTube. Please include that you completed the Minecraft videos and your language.
 1. The links for the videos are below:

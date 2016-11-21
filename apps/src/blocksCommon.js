@@ -17,6 +17,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installPickOne(blockly);
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
+  installJoinBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -160,5 +161,59 @@ function installWhenRun(blockly, skin, isK1) {
   blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
     return '\n';
+  };
+}
+
+function installJoinBlock(blockly) {
+  blockly.Blocks.text_join_simple = {
+    init: function () {
+      this.helpUrl = '';
+      this.setColour(160);
+      this.setOutput(true, Blockly.BlockValueType.STRING);
+      this.setTooltip(commonMsg.joinTextTooltip());
+      this.inputCount = 0;
+    },
+
+    getCustomContextMenuItems: function () {
+      return [
+        {
+          text: `Set number of inputs (current: ${this.inputCount})`,
+          enabled: true,
+          callback: function () {
+            var ret = prompt('Number of inputs', this.inputCount);
+            if (ret !== '') {
+              this.setInputCount(parseInt(ret));
+            }
+          }.bind(this)
+        }
+      ];
+    },
+
+    setInputCount: function (inputCount) {
+      var newInputCount = parseInt(inputCount);
+      if (inputCount > this.inputCount) {
+        for (var i = this.inputCount; i < newInputCount; i++) {
+          var input = this.appendValueInput('ADD' + i);
+          if (i === 0) {
+            input.appendTitle(commonMsg.joinText());
+          }
+        }
+      } else {
+        for (i = this.inputCount - 1; i >= newInputCount; i--) {
+          this.removeInput('ADD' + i);
+        }
+      }
+      this.inputCount = newInputCount;
+    },
+  };
+
+  blockly.JavaScript.text_join_simple = function () {
+    var parts = new Array(this.inputCount);
+    for (var n = 0; n < this.inputCount; n++) {
+      parts[n] = Blockly.JavaScript.valueToCode(this, 'ADD' + n,
+          Blockly.JavaScript.ORDER_COMMA) || '\'\'';
+    }
+    var code = `[${ parts.join(',') }].join('')`;
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 }
