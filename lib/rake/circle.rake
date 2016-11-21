@@ -93,10 +93,13 @@ namespace :circle do
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
-  task :check_for_unexpected_changes do
-    # Changes to yarn.lock specifcially is a common case; catch it early and
+  task :check_for_unexpected_apps_changes do
+    # Changes to yarn.lock is a particularly common case; catch it early and
     # provide a helpful error message.
     raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.' if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+
+    # More generally, we shouldn't have _any_ staged changes in the apps directory.
+    raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
   end
 end
 
