@@ -17,11 +17,6 @@ class GalleryActivitiesController < ApplicationController
       return
     end
 
-    def gallery_activities_for_app(app)
-      per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
-      GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
-    end
-
     if params[:app]
       @gallery_activities = gallery_activities_for_app params[:app]
     else
@@ -69,5 +64,10 @@ class GalleryActivitiesController < ApplicationController
   def gallery_activity_params
     params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
     params.require(:gallery_activity).permit(:activity_id, :user_id)
+  end
+
+  def gallery_activities_for_app(app)
+    per_page = params[:app] ? INDEX_PER_PAGE : INDEX_PER_PAGE / 2 # when we show both apps, show half as many per app
+    GalleryActivity.where(autosaved: false, app: app).order(id: :desc).page(params[:page]).per(per_page)
   end
 end
