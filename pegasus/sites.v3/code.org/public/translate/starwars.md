@@ -4,7 +4,7 @@ nav: translate_nav
 ---
 
 # Translating the Star Wars: Building a Galaxy with Code tutorial
-Translations for the tutorial progression are down on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
+Translations for the tutorial progression are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
 
 ## Getting setup
 

@@ -1,9 +1,9 @@
 ---
-title: "Translate Minecraft Adventurer"
+title: "Translate Minecraft Designer"
 nav: translate_nav
 ---
 
-# Translating Minecraft Adventurer
+# Translating Minecraft Designer
 Translations for the tutorial progression are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
 
 ## Getting setup
@@ -18,14 +18,14 @@ Translations for the tutorial progression are done on Crowdin and translations f
 ## Translating the tutorial progression
 The following links all lead directly to the Spanish tutorial. Replace the "es" in the URL with the language code you got earlier. Your translations will be updated on the site at the end of each week. You can watch this [demo video](/files/crowdin.swf) for how to use Crowdin.
 
-1. [tutorial title](https://crowdin.com/translate/codeorg/63/enus-es#54318)
-1. [tutorial description](https://crowdin.com/translate/codeorg/63/enus-es#54319)
-1. [tutorial blocks and failure messages](https://crowdin.com/translate/codeorg/527/enus-es)
-1. tutorial instructions [here](https://crowdin.com/translate/codeorg/318/enus-es#q=Overworld) and [here](https://crowdin.com/translate/codeorg/318/enus-es#q=underground)
-1. [hints in callout bubbles](https://crowdin.com/translate/codeorg/41/enus-es#q=callout+craft)
+1. [tutorial title](https://crowdin.com/translate/codeorg/63/enus-es#68955)
+1. tutorial description [here](https://crowdin.com/translate/codeorg/63/enus-es#68959) and [here](https://crowdin.com/translate/codeorg/40/enus-es#68846)
+1. [tutorial instructions](https://crowdin.com/translate/codeorg/318/enus-es#q=MC+HOC+2016)
+1. [tutorial blocks](https://crowdin.com/translate/codeorg/527/enus-es)
+1. [tutorial hints in callout bubbles](https://crowdin.com/translate/codeorg/41/enus-es#q=callout+craft)
 1. [strings about Minecraft on Code.org](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft)
-1. [video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=video+minecraft)
-1. [video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=mc) - These notes are basically a copy of the video captions. They are shown on the second tab, side by side screenshots of the video. These are intended for slow internet users. Since it is very close to the captions, I suggest completing the translation for the caption on Amara and then reusing those translations here.
+1. [video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2016)
+1. [video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=mc_2016) - These notes are basically a copy of the video captions. They are shown on the second tab, side by side screenshots of the video. These are intended for slow internet users. Since it is very close to the captions, I suggest completing the translation for the video caption on Amara (see below) and then reusing those translations here.
   
 <img src="/images/fit-500/translate-mc-show-notes.jpg"> 
 
@@ -36,8 +36,8 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. When you begin you'll see the English track on the left and you can enter your translations on the right. Feel free to edit the timing if necessary. When complete, click the Publish button in the top right.
 1. Complete all 5 video translations then email translations@code.org so that we can upload your translations to YouTube. Please include that you completed the Minecraft videos and your language.
 1. The links for the videos are below:
-	* [Introduction](https://amara.org/en/videos/hM6XN1YgrcnZ/info/minecraft-hour-of-code-intro/)
-	* [Repeat loops](https://amara.org/en/videos/9db4OJsugkRs/info/minecraft-hour-of-code-repeat-loops/)
-	* [If statements](https://amara.org/en/videos/CQ2Pl9U4YGzH/info/minecraft-hour-of-code-if-statements/)
-	* [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
-	* [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
+	* [Introduction](https://www.amara.org/en/videos/5fkU0gFODp70/info/minecraft-hour-of-code-introduction/)
+	* [Loops](https://www.amara.org/en/videos/OoZrErE5kUl1/info/minecraft-hour-of-code-loops/)
+	* [Events](https://www.amara.org/en/videos/hxYdN6C1btWM/info/minecraft-hour-of-code-events/)
+	* [Spawning](https://www.amara.org/en/videos/C39R4IDzVqgL/info/minecraft-hour-of-code-spawn/)
+	* [Congratulations](https://www.amara.org/en/videos/QAwclz2DTh3J/info/minecraft-hour-of-code-congratulations/)
