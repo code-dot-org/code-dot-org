@@ -54,7 +54,7 @@ class Artist < Blockly
     ))
   end
 
-  def toolbox(type)
+  def toolbox(_type)
     <<-XML.strip_heredoc.chomp
 #{k1_blocks_category}
     <category id="actions" name="Actions">

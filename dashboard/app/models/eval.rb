@@ -106,7 +106,7 @@ class Eval < Blockly
     XML
   end
 
-  def toolbox(type)
+  def toolbox(_type)
     Eval.toolbox
   end
 

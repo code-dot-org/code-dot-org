@@ -462,7 +462,7 @@ class Studio < Grid
   end
 
   # Other K1 blocks are just variants of common_blocks, but display differently when is_k1 is set
-  def k1_blocks(type)
+  def k1_blocks(_type)
     <<-XML.chomp
 <category name="K1-only Blocks">
   <block type="studio_moveNorthDistance"></block>

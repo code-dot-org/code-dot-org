@@ -21,7 +21,7 @@ class TestMilestoneParser < Minitest::Test
   LOG_SIZE = File.stat(MILESTONE_LOG).size
   CACHE_FILE = File.join(__dir__, 'fixtures', 'milestone-cache-test.json')
 
-  def fetch(key, path, bytes)
+  def fetch(_key, path, bytes)
     @fetch_count += 1
     @bytes_count += bytes
     log = MILESTONE_LOG

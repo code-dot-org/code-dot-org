@@ -15,7 +15,7 @@ module SQS
       }
     end
 
-    def as_json(options = nil)
+    def as_json(_options = nil)
       {'successes' => @successes.value, 'failures' => @failures.value}
     end
 

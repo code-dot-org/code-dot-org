@@ -8,7 +8,7 @@ module Pd::Payment
     # Determines the payment type.
     # @param workshop [Pd::Workshop]
     # @return [String] payment type: always 'CSF Facilitator'
-    def get_payment_type(workshop)
+    def get_payment_type(_workshop)
       'CSF Facilitator'
     end
 
@@ -16,7 +16,7 @@ module Pd::Payment
     # CSF workshops are always qualified for payment.
     # @param total_teacher_attendance_days [Integer] total number of teacher days attended.
     # @return [true]
-    def qualified?(total_teacher_attendance_days)
+    def qualified?(_total_teacher_attendance_days)
       true
     end
 

@@ -29,7 +29,7 @@ class SiteTest < Minitest::Test
 
   module ::NewRelic
     class Agent
-      def self.set_transaction_name(name)
+      def self.set_transaction_name(_name)
       end
     end
   end

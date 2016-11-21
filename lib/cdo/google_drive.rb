@@ -38,7 +38,7 @@ module Google
       @session
     end
 
-    def initialize(params={})
+    def initialize(_params={})
       $log.debug 'Establishing Google Drive session'
       @session = GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
     end

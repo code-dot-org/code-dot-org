@@ -315,7 +315,7 @@ module RakeUtils
   # - store data in a StringIO
   # - execute the block
   # - revert streams to original pipes and return output
-  def self.capture(&block)
+  def self.capture
     old_stdout = STDOUT.clone
     old_stderr = STDERR.clone
     pipe_r, pipe_w = IO.pipe

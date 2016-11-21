@@ -41,7 +41,7 @@ class Maze < Grid
     [['Run Button Only', 0], ['Run and Step', 1], ['Step Button Only', 2]]
   end
 
-  def common_blocks(type)
+  def common_blocks(_type)
     <<-XML.chomp
 #{k1_blocks}
 <category name="Actions">

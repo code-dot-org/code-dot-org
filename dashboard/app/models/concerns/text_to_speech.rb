@@ -29,15 +29,15 @@ VOICES = {
 }
 
 class TTSSafe < Redcarpet::Render::StripDown
-  def block_code(code, language)
+  def block_code(_code, _language)
     ''
   end
 
-  def link(link, title, content)
+  def link(_link, _title, _content)
     ''
   end
 
-  def image(link, title, alt_text)
+  def image(_link, _title, _alt_text)
     ''
   end
 end

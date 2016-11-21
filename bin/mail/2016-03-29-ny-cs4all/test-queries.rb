@@ -51,7 +51,7 @@ class CS4AllTestCase < MailQueryTestCase
   end
 
   # mock solr query
-  def query_subscribed_contacts(query)
+  def query_subscribed_contacts(_query)
     {
       'hoc_organizer@schools.nyc.gov' => {},
       'hoc_organizer@another.domain.net' => {},

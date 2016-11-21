@@ -440,7 +440,7 @@ class Craft < Blockly
     ['craft']
   end
 
-  def common_blocks(type)
+  def common_blocks(_type)
     <<-XML.chomp
 <category name="Actions">
   <block type='craft_moveForward'></block>

@@ -208,7 +208,7 @@ class Level < ActiveRecord::Base
     end
   end
 
-  def to_xml(options = {})
+  def to_xml(_options = {})
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(type) do
         xml.config do

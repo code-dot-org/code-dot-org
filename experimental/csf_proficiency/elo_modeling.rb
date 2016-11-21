@@ -72,7 +72,7 @@ end
 # @param num_authored_hints [Integer] the number of authored hints associated
 #   with the UserLevel.
 # @return [Float] whether the level was passed perfectly without hints.
-def perfect_without_hints(best_result, attempts, num_hints, num_authored_hints)
+def perfect_without_hints(best_result, _attempts, num_hints, num_authored_hints)
   raise ArgumentError.new('FreePlay') if best_result == 30
   return 1.0 if best_result > 30 && num_hints == 0 && num_authored_hints == 0
   0.0
@@ -151,7 +151,7 @@ end
 # @param output [Array[Array[String]]] an array of arrays of strings to be
 #   written to out_file
 # @param out_file [String] the filepath to write output to
-def write_output(concept, output, out_file)
+def write_output(_concept, output, out_file)
   # TODO(asher): Filter by the concept argument.
   CSV.open(out_file, 'w') do |csv|
     output.each do |line|
