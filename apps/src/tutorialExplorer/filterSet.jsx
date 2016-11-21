@@ -10,16 +10,7 @@ const FilterSet = React.createClass({
     filterGroups: React.PropTypes.array.isRequired,
     onUserInput: React.PropTypes.func.isRequired,
     selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    mobileLayout: React.PropTypes.bool.isRequired,
     roboticsButtonUrl: React.PropTypes.string
-  },
-
-  componentDidMount() {
-    if (this.props.mobileLayout) {
-      $('html, body').animate({
-        scrollTop: $("#filterset").offset().top - $("#filterheader").height() - 6
-      }, 1000);
-    }
   },
 
   render() {
