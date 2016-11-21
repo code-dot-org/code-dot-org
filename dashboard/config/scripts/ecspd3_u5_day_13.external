@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 13'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 13
+# Unit 5 Lessons > Day 13
 
 ## Concepts Covered
 
@@ -38,7 +38,4 @@ Students will have the chance to create their own map with data they’ve collec
 	- <a href="https://support.office.com/en-in/article/Present-your-data-in-a-bubble-chart-424d7bda-93e8-4983-9b51-c766f3e330d9" target=_blank>Making in Excel</a> 
 	- <a href="https://support.google.com/docs/answer/190724?hl=en" target=_blank>Making in Google Sheets</a> 
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

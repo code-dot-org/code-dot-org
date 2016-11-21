@@ -10,12 +10,12 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-
 import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
 import queryString from 'query-string';
+import { StickyContainer } from 'react-sticky';
 
 const styles = {
   bottomLinks: {
@@ -117,15 +117,13 @@ const TutorialExplorer = React.createClass({
   /*
    * The main tutorial set is returned with the given filters and sort order.
    *
-   * Whether en or non-en page, this set does not filter by locale:
-   * - For en users, they'll see tutorials in all languages.
-   * - For non-en users, this will be the longer filterable set if they
-   *   choose to view tutorials in many languages.
+   * Whether en or non-en user, this filters as though the user is of "en-US" locale.
    */
   filterTutorialSet(filters, sortBy) {
     const filterProps = {
       filters: filters,
       hideFilters: this.props.hideFilters,
+      locale: "en-US",
       sortBy: sortBy
     };
 
@@ -336,90 +334,92 @@ const TutorialExplorer = React.createClass({
     };
 
     return (
-      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
+      <StickyContainer>
+        <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
 
-        {this.shouldShowTutorialsForLocale() && (
-          <div>
-            <h1>{i18n.headingTutorialsYourLanguage()}</h1>
-            {this.state.filteredTutorialsForLocale.length === 0 &&
-              i18n.noTutorialsYourLanguage()
-            }
+          {this.shouldShowTutorialsForLocale() && (
+            <div>
+              <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+              {this.state.filteredTutorialsForLocale.length === 0 &&
+                i18n.noTutorialsYourLanguage()
+              }
 
-            {this.state.filteredTutorialsForLocale.length > 0 && (
-              <TutorialSet
-                tutorials={this.state.filteredTutorialsForLocale}
-                filters={this.state.filters}
-                locale={this.props.locale}
-                specificLocale={true}
-                localeEnglish={this.isLocaleEnglish()}
-                disabledTutorials={this.props.disabledTutorials}
-              />
-            )}
-          </div>
-        )}
-
-        {this.shouldShowAllTutorialsToggleButton() && (
-          <ToggleAllTutorialsButton
-            showAllTutorials={this.showAllTutorials}
-            hideAllTutorials={this.hideAllTutorials}
-            showingAllTutorials={this.state.showingAllTutorials}
-          />
-        )}
-
-        {this.state.showingAllTutorials && (
-          <div>
-            <FilterHeader
-              onUserInput={this.handleUserInputSortBy}
-              sortBy={this.state.sortBy}
-              backButton={this.props.backButton}
-              filteredTutorialsCount={this.state.filteredTutorialsCount}
-              mobileLayout={this.state.mobileLayout}
-              showingModalFilters={this.state.showingModalFilters}
-              showModalFilters={this.showModalFilters}
-              hideModalFilters={this.hideModalFilters}
-              showSortBy={this.props.showSortBy}
-            />
-            <div style={{clear: "both"}}/>
-
-            {this.shouldShowFilters() && (
-              <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
-                <FilterSet
-                  filterGroups={this.props.filterGroups}
-                  onUserInput={this.handleUserInputFilter}
-                  selection={this.state.filters}
-                  roboticsButtonUrl={this.props.roboticsButtonUrl}
-                />
-              </div>
-            )}
-
-            <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
-              {this.shouldShowTutorials() && (
+              {this.state.filteredTutorialsForLocale.length > 0 && (
                 <TutorialSet
-                  tutorials={this.state.filteredTutorials}
+                  tutorials={this.state.filteredTutorialsForLocale}
                   filters={this.state.filters}
                   locale={this.props.locale}
+                  specificLocale={true}
                   localeEnglish={this.isLocaleEnglish()}
                   disabledTutorials={this.props.disabledTutorials}
                 />
               )}
             </div>
+          )}
 
-            <div style={bottomLinksStyle}>
-              <div>
-                <a href="https://hourofcode.com/activity-guidelines">
-                  {i18n.bottomGuidelinesLink()}
-                </a>
+          {this.shouldShowAllTutorialsToggleButton() && (
+            <ToggleAllTutorialsButton
+              showAllTutorials={this.showAllTutorials}
+              hideAllTutorials={this.hideAllTutorials}
+              showingAllTutorials={this.state.showingAllTutorials}
+            />
+          )}
+
+          {this.state.showingAllTutorials && (
+            <div>
+              <FilterHeader
+                onUserInput={this.handleUserInputSortBy}
+                sortBy={this.state.sortBy}
+                backButton={this.props.backButton}
+                filteredTutorialsCount={this.state.filteredTutorialsCount}
+                mobileLayout={this.state.mobileLayout}
+                showingModalFilters={this.state.showingModalFilters}
+                showModalFilters={this.showModalFilters}
+                hideModalFilters={this.hideModalFilters}
+                showSortBy={this.props.showSortBy}
+              />
+              <div style={{clear: "both"}}/>
+
+              {this.shouldShowFilters() && (
+                <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+                  <FilterSet
+                    filterGroups={this.props.filterGroups}
+                    onUserInput={this.handleUserInputFilter}
+                    selection={this.state.filters}
+                    roboticsButtonUrl={this.props.roboticsButtonUrl}
+                  />
+                </div>
+              )}
+
+              <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+                {this.shouldShowTutorials() && (
+                  <TutorialSet
+                    tutorials={this.state.filteredTutorials}
+                    filters={this.state.filters}
+                    locale={this.props.locale}
+                    localeEnglish={this.isLocaleEnglish()}
+                    disabledTutorials={this.props.disabledTutorials}
+                  />
+                )}
               </div>
-              <br/>
-              <div>
-                <a href="https://hourofcode.com/supporting-special-needs-students">
-                  {i18n.bottomSpecialNeedsLink()}
-                </a>
+
+              <div style={bottomLinksStyle}>
+                <div>
+                  <a href="https://hourofcode.com/activity-guidelines">
+                    {i18n.bottomGuidelinesLink()}
+                  </a>
+                </div>
+                <br/>
+                <div>
+                  <a href="https://hourofcode.com/supporting-special-needs-students">
+                    {i18n.bottomSpecialNeedsLink()}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      </StickyContainer>
     );
   }
 });

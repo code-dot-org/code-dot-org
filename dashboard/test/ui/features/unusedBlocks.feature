@@ -4,6 +4,7 @@ Feature: Unused Blocks
 Scenario: Solve a level with unused blocks
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
 
   When I open my eyes to test "Unused Blocks"
 

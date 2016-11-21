@@ -2,8 +2,7 @@ Feature: Blocks can be dragged from popouts
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/1?noautoplay=true"
-  Then I wait until element "#runButton" is visible
-  And I close the instructions overlay if it exists
+  And I wait for the page to fully load
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape

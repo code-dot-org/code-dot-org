@@ -21,7 +21,7 @@ git git_path do
 
   branch = node['cdo-repository']['branch']
   checkout_branch branch
-  revision branch
+  revision node['cdo-repository']['revision'] || branch
 
   action(
     # Skip git-repo sync when using a shared volume to prevent data loss on the host.
@@ -37,6 +37,11 @@ git git_path do
       :checkout
     end
   )
+
+  # Build app on repo updates.
+  if node['cdo-apps']
+    notifies :run, "execute[build-cdo]", :delayed
+  end
 
   user node[:user]
   group node[:user]

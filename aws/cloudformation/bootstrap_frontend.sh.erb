@@ -1,0 +1,27 @@
+#!/bin/bash -x
+# UserData bootstrap script for CloudFormation stack instances.
+# Note: Every time this script's contents change,
+# the LaunchConfiguration will be replaced in the CloudFormation stack.
+
+STACK=<%=stack_name%>
+REGION=<%=region%>
+INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+RESOURCE_ID=<%=resource_id%>
+CHEF_CACHE=<%=local_mode ? '/etc/chef/local-mode-cache/cache' : '/var/chef/cache' %>
+
+# This line causes the LaunchConfiguration to be replaced on each new commit.
+COMMIT=<%=commit%>
+
+# Update frontend hostname using local-mode chef-client.
+pushd ${CHEF_CACHE}
+  chef-client -z -N <%=node_name%> -o 'recipe[cdo-apps::hostname]'
+popd
+
+# Signal CloudFormation, in case this instance was launched from a CloudFormation stack update.
+aws cloudformation signal-resource \
+  --status SUCCESS \
+  --unique-id ${INSTANCE_ID} \
+  --stack-name ${STACK} \
+  --logical-resource-id ${RESOURCE_ID} \
+  --region ${REGION} \
+  || true

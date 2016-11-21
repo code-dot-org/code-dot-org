@@ -1,7 +1,7 @@
 name 'ECSPD3-u6 day 5'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 6 Lessons > Days 5
+# Unit 6 Lessons > Day 5
 
 ## Concepts Covered
 
@@ -24,7 +24,4 @@ Groups of students will get their box/kit and pull out the manual start going th
 
 Make sure to have the batteries charged so that your students will be able to use their robots. 
 
-Click “Continue” below to learn about the next lesson.  
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

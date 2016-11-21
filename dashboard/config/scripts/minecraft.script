@@ -1,7 +1,6 @@
-hidden 'false'
+hidden false
 
 stage 'Minecraft Hour of Code Designer'
-
 level 'MC HOC 2016 Level 2-2'
 level 'MC HOC 2016 Level 3'
 level 'MC HOC 2016 Level 4'

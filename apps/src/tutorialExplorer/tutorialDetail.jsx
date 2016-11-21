@@ -84,10 +84,29 @@ const styles = {
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
-    item: shapes.tutorial.isRequired,
+    item: shapes.tutorial,
     closeClicked: React.PropTypes.func.isRequired,
+    changeTutorial: React.PropTypes.func.isRequired,
     localeEnglish: React.PropTypes.bool.isRequired,
     disabledTutorial: React.PropTypes.bool.isRequired
+  },
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  },
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  },
+
+  onKeyDown({keyCode}) {
+    if (keyCode === 27) {
+      this.props.closeClicked();
+    } else if (keyCode === 37) {
+      this.props.changeTutorial(-1);
+    } else if (keyCode === 39) {
+      this.props.changeTutorial(1);
+    }
   },
 
   render() {
@@ -112,6 +131,15 @@ const TutorialDetail = React.createClass({
       {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
       // Reserve key 9 for the optional standards.
     ];
+
+    var imageComponent = (
+      <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
+        <img
+          src={this.props.item.image.replace(".png", ".jpg")}
+          style={{width: '100%'}}
+        />
+      </div>
+    );
 
     return (
       <div
@@ -154,12 +182,15 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
-                  <img
-                    src={this.props.item.image.replace(".png", ".jpg")}
-                    style={{width: '100%'}}
-                  />
-                </div>
+                {!this.props.disabledTutorial && (
+                  <a href={this.props.item.launch_url} target="_blank">
+                    {imageComponent}
+                  </a>
+                )}
+                {this.props.disabledTutorial &&
+                  imageComponent
+                }
+
                 <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}

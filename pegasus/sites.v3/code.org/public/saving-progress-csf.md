@@ -11,7 +11,7 @@ This week, millions of students are trying computer science for the Hour of Code
 Ask your teacher if you should be working on something else this week instead.
 
 ### For teachers
-Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week (December 3-11) this year, our servers will be overloaded again as organizers across the globe lead their classrooms through activities.
+Part of Code.org’s mission is to remove the obstacles that keep students all over the world from the opportunity to learn computer science. That’s why we offer tools, curriculum, and resources for teachers at no cost. We’re also thrilled that we’ve been able to introduce millions of students to computer science through the Hour of Code campaign. During Computer Science Education Week this year, our servers will be overloaded again as organizers across the globe lead their classrooms through activities.
 
 
 It’s an exciting time of year, but our servers can’t handle it! We can’t store progress for this many students simultaneously.

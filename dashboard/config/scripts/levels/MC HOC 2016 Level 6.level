@@ -42,7 +42,9 @@
     "use_player": "true",
     "use_score": "false",
     "failure_message_override": "Use the `spawn zombie` command under `when night` to spawn at least three zombies. Then, add `move a step toward player` to their `when spawned` event with a loop to help them chase you. If they’re too fast, add a `wait` command to slow them down.",
-    "contained_level_names": null
+    "instructions_important": "false",
+    "contained_level_names": null,
+    "video_key": "mc_2016_spawn"
   },
   "published": true,
   "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",
@@ -52,7 +54,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" x="250px" y="15px">
+        <block type="craft_whenNight" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" x="15px" y="140px">
           <statement name="WHEN_TOUCHED">
             <block type="craft_wait">
               <title name="TYPE">2.0</title>
@@ -72,7 +75,6 @@
             <block type="craft_destroyEntity"/>
           </statement>
         </block>
-        <block type="craft_whenNight" deletable="false" x="15px" y="15px"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

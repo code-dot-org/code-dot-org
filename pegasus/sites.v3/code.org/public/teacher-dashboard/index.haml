@@ -585,6 +585,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoaded = false;
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.progress_disabled_courses = #{DashboardSection::progress_disabled_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
@@ -651,9 +652,21 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       }
     };
 
+    var isInCategory = function (course_list, course_id, categoryName) {
+      for (var i = 0; i < course_list.length; i++) {
+        if (course_list[i].id === course_id) {
+          return categoryName === course_list[i].category;
+        }
+      }
+      return false;
+    };
+
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
       $scope.course_id = $scope.progress.script.id;
+      $scope.progress_disabled = $scope.progress_disabled_courses.indexOf($scope.course_id) !== -1
+      var hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
+      $scope.is_hoc_course = isInCategory($scope.course_list, $scope.course_id, hocCategoryName);
       // calculate width of each level in the progress bar assuming the overall width is 780 px
 
       // Takes the level's position in the script, and returns its level number in its stage

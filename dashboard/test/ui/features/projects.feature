@@ -4,7 +4,7 @@ Scenario: Save Artist Project
   Given I am on "http://studio.code.org/projects/artist"
   And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
@@ -26,10 +26,10 @@ Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
+  And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
-  And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"

@@ -75,7 +75,14 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+  steps 'When I click selector "#overlay" if it exists'
+end
+
+When /^I wait for the page to fully load$/ do
+  steps <<-STEPS
+    When I wait to see "#runButton"
+    And I close the instructions overlay if it exists
+  STEPS
 end
 
 When /^I close the dialog$/ do
@@ -124,10 +131,12 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
 end
 
 When /^I wait until element "([^"]*)" is visible$/ do |selector|
+  wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
 end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
 end
 
@@ -361,6 +370,7 @@ end
 
 # The selector should be wrapped in appropriate quotes when passed into here.
 def type_into_selector(input_text, selector)
+  wait_for_jquery
   @browser.execute_script("$('#{selector}').val(#{input_text})")
   @browser.execute_script("$('#{selector}').keyup()")
   @browser.execute_script("$('#{selector}').change()")
@@ -662,7 +672,7 @@ Then(/^I reload the page$/) do
 end
 
 def wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return !!$;") }
+  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
 end
 
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
@@ -880,7 +890,7 @@ end
 
 When(/^I debug element "([^"]*)" text content$/) do |selector|
   text = @browser.execute_script("return $('#{selector}').text()")
-  puts "'#{text.strip}'"
+  puts "element #{selector} text content: '#{text.to_s.strip}'"
 end
 
 When(/^I debug focus$/) do
@@ -967,10 +977,12 @@ Then /^I navigate to the share URL$/ do
   wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I copy the embed code into a new document$/ do

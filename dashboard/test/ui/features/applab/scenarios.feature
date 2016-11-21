@@ -6,6 +6,7 @@ Feature: App Lab Scenarios
 
   Background:
     Given I start a new Applab project
+    And I wait for the page to fully load
 
   Scenario: App Lab Http Image
     # Create an app with an http image.

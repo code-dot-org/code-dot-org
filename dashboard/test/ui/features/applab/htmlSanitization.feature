@@ -4,6 +4,7 @@ Feature: App Lab HTML Sanitization
 
   Background:
     Given I start a new Applab project
+    And I wait for the page to fully load
 
   Scenario: Elements do not become nested
     Given I switch to design mode

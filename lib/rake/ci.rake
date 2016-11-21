@@ -3,11 +3,21 @@ require 'cdo/hip_chat'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'cdo/aws/cloudfront'
+require 'tempfile'
 
 namespace :ci do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   task :chef_update do
-    if CDO.daemon && CDO.chef_managed && !CDO.chef_local_mode
+    if CDO.chef_local_mode
+      # Update local cookbooks from repository in local mode.
+      HipChat.log 'Updating local <b>chef</b> cookbooks...'
+      RakeUtils.with_bundle_dir(cookbooks_dir) do
+        Tempfile.open(['berks', '.tgz']) do |file|
+          RakeUtils.bundle_exec "berks package #{file.path}"
+          RakeUtils.sudo "tar xzf #{file.path} -C /var/chef"
+        end
+      end
+    elsif CDO.daemon && CDO.chef_managed
       HipChat.log('Updating Chef cookbooks...')
       RakeUtils.with_bundle_dir(cookbooks_dir) do
         # Automatically update Chef cookbook versions in staging environment.
@@ -21,6 +31,8 @@ namespace :ci do
         RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
         RakeUtils.bundle_exec 'berks', 'apply', rack_env
       end
+      HipChat.log 'Applying <b>chef</b> profile...'
+      RakeUtils.sudo 'chef-client'
     end
   end
 
@@ -68,10 +80,22 @@ namespace :ci do
     end
   end
 
+  task :deploy_stack do
+    begin
+      HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
+    rescue
+      # During migration, don't abort the actual deploy if canary stack-update fails for any reason.
+      HipChat.log "See 'Events' tab of '#{CDO.stack_name}' stack in the AWS Console for details.\n", color: 'gray'
+    end
+  end
+
+  # Run frontend-deploy in parallel with stack update.
+  multitask deploy_multi: [:deploy, :deploy_stack]
+
   task all: [
     'firebase:ci',
     :build_with_cloudfront,
-    :deploy
+    :deploy_multi
   ]
   task test: [
     :all,
@@ -112,10 +136,7 @@ end
 #
 def upgrade_frontend(name, host)
   commands = [
-    "cd #{rack_env}",
-    'git pull --ff-only',
-    'sudo bundle install',
-    'rake build'
+    "sudo chef-client"
   ]
   command = commands.join(' && ')
 

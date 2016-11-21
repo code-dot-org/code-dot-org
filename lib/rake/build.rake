@@ -4,14 +4,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 
 namespace :build do
-  desc 'Runs Chef Client to configure the OS environment.'
-  task :configure do
-    if CDO.chef_managed
-      HipChat.log 'Applying <b>chef</b> profile...'
-      RakeUtils.sudo 'chef-client'
-    end
-  end
-
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
@@ -127,7 +119,6 @@ namespace :build do
   end
 
   tasks = []
-  tasks << :configure
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus

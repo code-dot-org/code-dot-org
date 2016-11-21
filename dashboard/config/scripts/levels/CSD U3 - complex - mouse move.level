@@ -104,7 +104,7 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"30cff2ca-74f5-47a9-b863-d3777b89b368\": {\r\n      \"name\": \"salt\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/v3/animations/z_qn83ftD6Be6o4jqROXGw/30cff2ca-74f5-47a9-b863-d3777b89b368.png?version=pD_G4aOqeo06a7_kV.wGAvOPmupLzWAU\",\r\n      \"frameSize\": {\r\n        \"x\": 95,\r\n        \"y\": 95\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pD_G4aOqeo06a7_kV.wGAvOPmupLzWAU\"\r\n    }\r\n  }\r\n}",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "contained_level_names": null

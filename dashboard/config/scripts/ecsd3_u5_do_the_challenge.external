@@ -1,7 +1,7 @@
 name 'ECSD3-u5 do the challenge'
 css 'unplugged'
 markdown <<MARKDOWN
-# Complete the Challenge > Get into the Lesson 
+Get into the Lesson 
 
 It's time to go read the lesson plan and complete the activities related to your lesson! 
 
@@ -14,5 +14,5 @@ It's time to go read the lesson plan and complete the activities related to your
     - what did you enjoy about this lesson?
     - what additional resources might be useful for teaching this lesson? 
 
-When you're finished reading your lesson plan and completing the levels, come back and hit 'Continue'!
+When you're finished reading your lesson plan and doing the core activity, come back and click 'next resource'. 
 MARKDOWN

@@ -181,7 +181,7 @@ class Game < ActiveRecord::Base
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB
+    app == APPLAB || app == GAMELAB
   end
 
   def self.setup
