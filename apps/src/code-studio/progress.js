@@ -165,8 +165,13 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
   // viewing a student's work.
   var isViewingStudentAnswer = !!clientState.queryParams('user_id');
   if (!isViewingStudentAnswer) {
+    let lastProgress;
     store.subscribe(() => {
-      clientState.batchTrackProgress(scriptData.name, store.getState().progress.levelProgress);
+      const nextProgress = store.getState().progress.levelProgress;
+      if (nextProgress !== lastProgress) {
+        lastProgress = nextProgress;
+        clientState.batchTrackProgress(scriptData.name, nextProgress);
+      }
     });
   }
 }
