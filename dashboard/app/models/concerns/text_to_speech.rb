@@ -74,59 +74,59 @@ module TextToSpeech
   end
 
   def tts_upload_to_s3(text, voice=:sharon)
-    filename = self.tts_path(text)
+    filename = tts_path(text)
     TextToSpeech.tts_upload_to_s3(text, filename, voice)
   end
 
   def tts_url(text, voice=:sharon)
-    "https://tts.code.org/#{self.tts_path(text, voice)}"
+    "https://tts.code.org/#{tts_path(text, voice)}"
   end
 
   def tts_path(text, voice=:sharon)
     content_hash = Digest::MD5.hexdigest(text)
-    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{self.name}.mp3"
+    "#{VOICES[voice][:VOICE]}/#{VOICES[voice][:SPEED]}/#{VOICES[voice][:SHAPE]}/#{content_hash}/#{name}.mp3"
   end
 
   def tts_should_update(property)
-    changed = self.property_changed?(property)
-    changed && write_to_file? && self.published
+    changed = property_changed?(property)
+    changed && write_to_file? && published
   end
 
   def tts_instructions_text
-    self.tts_instructions_override || self.instructions || self.try(:localized_instructions) || ""
+    tts_instructions_override || instructions || try(:localized_instructions) || ""
   end
 
   def tts_should_update_instructions?
-    relevant_property = self.tts_instructions_override ? 'tts_instructions_override' : 'instructions'
-    return self.tts_should_update(relevant_property)
+    relevant_property = tts_instructions_override ? 'tts_instructions_override' : 'instructions'
+    return tts_should_update(relevant_property)
   end
 
   def tts_markdown_instructions_text
-    self.tts_markdown_instructions_override || TTSSafeRenderer.render(self.markdown_instructions || "")
+    tts_markdown_instructions_override || TTSSafeRenderer.render(markdown_instructions || "")
   end
 
   def tts_should_update_markdown_instructions?
-    relevant_property = self.tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
-    return self.tts_should_update(relevant_property)
+    relevant_property = tts_markdown_instructions_override ? 'tts_markdown_instructions_override' : 'markdown_instructions'
+    return tts_should_update(relevant_property)
   end
 
   def tts_authored_hints_texts
-    JSON.parse(self.authored_hints || '[]').map do |hint|
+    JSON.parse(authored_hints || '[]').map do |hint|
       TTSSafeRenderer.render(hint["hint_markdown"])
     end
   end
 
   def tts_update
-    self.tts_upload_to_s3(self.tts_instructions_text) if self.tts_should_update_instructions?
+    tts_upload_to_s3(tts_instructions_text) if tts_should_update_instructions?
 
-    self.tts_upload_to_s3(self.tts_markdown_instructions_text) if self.tts_should_update_markdown_instructions?
+    tts_upload_to_s3(tts_markdown_instructions_text) if tts_should_update_markdown_instructions?
 
-    if self.authored_hints && self.tts_should_update('authored_hints')
-      hints = JSON.parse(self.authored_hints)
+    if authored_hints && tts_should_update('authored_hints')
+      hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TTSSafeRenderer.render(hint["hint_markdown"])
-        self.tts_upload_to_s3(text)
-        hint["tts_url"] = self.tts_url(text)
+        tts_upload_to_s3(text)
+        hint["tts_url"] = tts_url(text)
       end
       self.authored_hints = JSON.dump(hints)
     end

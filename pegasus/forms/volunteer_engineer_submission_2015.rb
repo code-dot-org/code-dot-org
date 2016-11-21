@@ -109,7 +109,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
   def self.solr_query(params)
     # Remove and add UNSUBSCRIBE_HOC before and after each Hour of Code.
-    query = "kind_s:\"#{self.name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
+    query = "kind_s:\"#{name}\" && allow_contact_b:true && -unsubscribed_s:\"#{UNSUBSCRIBE_FOREVER}\""
 
     coordinates = params['coordinates']
     distance = params['distance'] || DEFAULT_DISTANCE

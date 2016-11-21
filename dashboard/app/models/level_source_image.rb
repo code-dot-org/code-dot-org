@@ -37,7 +37,7 @@ class LevelSourceImage < ActiveRecord::Base
       return false unless upload_framed_image(image)
     end
 
-    self.save
+    save
   end
 
   S3_BUCKET = 'cdo-art'
