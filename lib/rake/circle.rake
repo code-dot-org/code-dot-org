@@ -91,6 +91,13 @@ namespace :circle do
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
   end
+
+  desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
+  task :check_for_unexpected_changes do
+    # Changes to yarn.lock specifcially is a common case; catch it early and
+    # provide a helpful error message.
+    raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.' if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
