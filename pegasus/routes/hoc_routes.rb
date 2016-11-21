@@ -49,7 +49,7 @@ end
 get '/api/hour/begin_learn/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
-  launch_tutorial(tutorial, source: ACTIVITY_TRACKING_SOURCES[:LEARN])
+  launch_tutorial(tutorial, track_learn: true)
 end
 
 get '/api/hour/begin_:code.png' do |code|
