@@ -148,7 +148,6 @@ class Craft < Blockly
       milk: true,
       egg: true,
       poppy: true,
-      sheep: true,
   }
 
   ALL_SOUNDS = {
