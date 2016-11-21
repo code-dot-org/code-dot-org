@@ -22,7 +22,8 @@ import {
   updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
-  setUserSignedIn
+  setUserSignedIn,
+  setIsHocScript
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -36,7 +37,9 @@ function showDisabledBubblesModal() {
   ReactDOM.render(<DisabledBubblesModal/>, div[0]);
 }
 
-function showDisabledButtonsAlert(isHocScript) {
+progress.showDisabledButtonsAlert = function () {
+  const store = getStore();
+  const isHocScript = store.getState().progress.isHocScript;
   const div = $('<div>').css({
     position: 'absolute',
     left: 0,
@@ -47,7 +50,7 @@ function showDisabledButtonsAlert(isHocScript) {
   $(document.body).append(div);
 
   ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
-}
+};
 
 /**
  * @param {object} scriptData (Note - This is only a subset of the information
@@ -84,9 +87,9 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   if (signedIn !== null) {
     store.dispatch(setUserSignedIn(signedIn));
   }
+  store.dispatch(setIsHocScript(isHocScript));
   if (signedIn && (disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI'))) {
-    // TODO - may have to show this later if we werent signed in
-    showDisabledButtonsAlert(isHocScript);
+    progress.showDisabledButtonsAlert();
   }
 
   ReactDOM.render(
