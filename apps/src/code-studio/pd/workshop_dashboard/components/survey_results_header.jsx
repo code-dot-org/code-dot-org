@@ -64,15 +64,13 @@ const freeResponseQuestions = [
 
 const SurveyResultsHeader = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired,
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string
-    })
+    router: React.PropTypes.object.isRequired
   },
 
   propTypes: {
     workshops: React.PropTypes.arrayOf(workshopShape),
-    organizerView: React.PropTypes.bool
+    organizerView: React.PropTypes.bool,
+    preselectedWorkshopId: React.PropTypes.string
   },
 
   getInitialState() {
@@ -88,27 +86,55 @@ const SurveyResultsHeader = React.createClass({
   componentDidMount() {
     const courses = this.getCoursesForWorkshops();
 
-    console.log(this.props.params);
-
     if (courses.length > 0) {
-      this.filterWorkshops(courses[0]);
+      if (this.props.preselectedWorkshopId) {
+        const preselectedWorkshop = _.find(this.props.workshops, workshop => {
+          return workshop.id === parseInt(this.props.preselectedWorkshopId);
+        });
+
+        if (preselectedWorkshop) {
+          this.filterWorkshops(preselectedWorkshop.course, preselectedWorkshop);
+        } else {
+          this.filterWorkshops(courses[0]);
+        }
+      } else {
+        this.filterWorkshops(courses[0]);
+      }
     }
   },
 
-  filterWorkshops(course) {
+  filterWorkshops(course, preselectedWorkshop = undefined) {
     let filteredWorkshops = _.filter(this.props.workshops, function (workshop) {
       return workshop.course === course;
     });
 
-    let firstWorkshopId = this.props.organizerView ? undefined : (filteredWorkshops[0] ? filteredWorkshops[0].id : undefined);
 
-    this.setState({
-      selectedCourse: course,
-      filteredWorkshops: filteredWorkshops,
-      selectedWorkshopId: firstWorkshopId,
+    filteredWorkshops = _.sortBy(filteredWorkshops, workshop => {
+      return this.getWorkshopFriendlyName(workshop);
     });
 
-    this.setSurveyPanel(course, firstWorkshopId, firstWorkshopId && this.getWorkshopFriendlyName(filteredWorkshops[0]));
+    _.reverse(filteredWorkshops);
+
+
+    if (preselectedWorkshop) {
+      this.setState({
+        selectedCourse: course,
+        filteredWorkshops: filteredWorkshops,
+        selectedWorkshopId: preselectedWorkshop.id
+      });
+
+      this.setSurveyPanel(course, preselectedWorkshop.id, this.getWorkshopFriendlyName(preselectedWorkshop));
+    } else {
+      let firstWorkshopId = this.props.organizerView ? undefined : (filteredWorkshops[0] ? filteredWorkshops[0].id : undefined);
+
+      this.setState({
+        selectedCourse: course,
+        filteredWorkshops: filteredWorkshops,
+        selectedWorkshopId: firstWorkshopId,
+      });
+
+      this.setSurveyPanel(course, firstWorkshopId, firstWorkshopId && this.getWorkshopFriendlyName(filteredWorkshops[0]));
+    }
   },
 
   setSurveyPanel(course, workshopId, workshopName) {
@@ -345,6 +371,7 @@ const SurveyResultsHeader = React.createClass({
             <select
               name="course_name"
               onChange={this.handleCourseChange}
+              value={this.state.selectedCourse}
             >
               {courseOptions}
             </select>
@@ -354,6 +381,7 @@ const SurveyResultsHeader = React.createClass({
             <select
               name="workshop"
               onChange={this.handleWorkshopIdChange}
+              value={this.state.selectedWorkshopId || ''}
             >
               {workshopOptions}
             </select>
