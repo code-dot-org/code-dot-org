@@ -2,67 +2,67 @@ mi:
   data:
     game:
       name:
-        'Unplug1': 'Introduction to Computer Science'
-        'Maze': 'The Maze'
+        'Unplug1': 'Whakatakinga ki te Mātauranga Rorohiko'
+        'Maze': 'Te Rīrapa'
         'Multi': 'Multiple Choice Stuffs'
         'Unplug2': 'Computational Thinking'
-        'Unplug3': 'Graph Paper Programming'
-        'Artist': 'The Artist'
-        'Unplug4': 'Algorithms'
-        'Artist2': 'The Artist 2'
-        'Unplug5': 'Functions'
-        'Farmer': 'The Farmer'
+        'Unplug3': 'Papatono Pepa Kauwhata'
+        'Artist': 'Te Rehetoi'
+        'Unplug4': 'Ngā Hātepe'
+        'Artist2': 'Te Rehetoi 2'
+        'Unplug5': 'Ngā Taumahi'
+        'Farmer': 'Te Kaiahuwhenua'
         'Unplug6': 'Conditionals'
-        'Artist3': 'The Artist 3'
-        'Unplug7': 'Song Writing'
-        'Farmer2': 'The Farmer 2'
+        'Artist3': 'Te Rehetoi 3'
+        'Unplug7': 'Tito Waiata'
+        'Farmer2': 'Te Kaiahuwhenua 2'
         'Unplug8': 'Abstraction'
-        'Artist4': 'The Artist 4'
+        'Artist4': 'Te Rehetoi 4'
         'Unplug9': 'Relay Programming'
-        'Farmer3': 'The Farmer 3'
-        'Unplug10': 'The Internet'
-        'Artist5': 'The Artist 5'
-        'Unplug11': 'Wrap-up'
-        'MazeEC': 'The Maze'
-        'Bounce': 'Bounce'
+        'Farmer3': 'Te Kaiahuwhenua 3'
+        'Unplug10': 'Te Ipurangi'
+        'Artist5': 'Te Rehetoi 5'
+        'Unplug11': 'Tākaia'
+        'MazeEC': 'Te Rīrapa'
+        'Bounce': 'Tupana'
         'Flappy': 'Flappy Bird'
-        'Jigsaw': 'Jigsaw'
-        'MazeStep': 'Maze Step Mode'
-        'Wordsearch': 'Wordsearch'
-        'Webapp': 'App Lab'
-        'ArtistEC': 'The Artist'
-        'TextMatch': 'Text Match'
+        'Jigsaw': 'Pangahono'
+        'MazeStep': 'Aratau Hipanga Rīrapa'
+        'Wordsearch': 'Rapukupu'
+        'Webapp': 'Taiwhanga Taupānga'
+        'ArtistEC': 'Te Rehetoi'
+        'TextMatch': 'Whakaōrite Kuputuhi'
         'StudioEC': 'Play Lab'
-        'Applab': 'App Lab'
-        'NetSim': 'Internet Simulator'
+        'Applab': 'Taiwhanga Taupānga'
+        'NetSim': 'Pūtaruna ā-Ipurangi'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
     trophy:
       name:
-        'Bronze': 'Bronze'
-        'Silver': 'Silver'
-        'Gold': 'Gold'
+        'Bronze': 'Rauwhero'
+        'Silver': 'Hiriwa'
+        'Gold': 'Kōura'
     concept:
       description:
-        'sequence': 'Sequence'
-        'if': 'If block'
-        'if_else': 'If-else block'
-        'loop_times': 'Repeat times block'
-        'loop_until': 'Repeat until block'
-        'loop_while': 'While block'
-        'loop_for': 'Counter block'
-        'function': 'Functions'
-        'parameters': 'Functions with parameters'
+        'sequence': 'Raupapa'
+        'if': 'paraka Mēnā'
+        'if_else': 'paraka Mēnā-kē'
+        'loop_times': 'paraka Tōaitia ngā wā'
+        'loop_until': 'paraka Tōaitia kia'
+        'loop_while': 'paraka Ina'
+        'loop_for': 'Paraka pūtatau'
+        'function': 'Ngā Taumahi'
+        'parameters': 'Ngā taumahi me ngā tawhā'
     level:
       instructions:
-        'maze_2_2': "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there. "
-        'maze_2_1': "This pig is ruffling my feathers. Help me to find him!"
-        'maze_2_2_5': "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!"
-        'maze_2_3': "Guide me to the green evilness! (Watch out for TNT)"
-        'maze_2_4': "Keep calm and help me to find the bad pig. Otherwise I might get angry!"
-        'maze_2_5': "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?"
-        'maze_2_6': "Try to get me to the green intruder using only three blocks."
-        'maze_2_7': "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block."
+        'maze_2_2': "E pai ana māu au e tautoko ki te hopu i te poaka kino? Whakaemihia ētahi paraka \"neke ki mua\", ā, pāwhiritia te \"Whakarere\" kia tae atu au. "
+        'maze_2_1': "E whakatakariri ana te poaka i ahau. Tēnā āwhinatia ahau ki te rapu i a ia!"
+        'maze_2_2_5': "Whakatakina te ara kia tae atu ai au ki te poaka rorirori rā. Karohia te TNT kei rere ngā raukura!"
+        'maze_2_3': "Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)"
+        'maze_2_4': "Kia mauri tau, ā, āwhinatia ahau ki te rapu i te poaka kino. Kei riri ahau!"
+        'maze_2_5': "He ara e tae atu ai au ki te poaka mā te whakamahi i ngā paraka e rua noa iho. E āhei ana koe te kite?"
+        'maze_2_6': "Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki me ngā paraka e toru noa iho."
+        'maze_2_7': "Āwhinatia ahau ki te pei i tēnei poaka kino mā te whakamahi i te itinga o ngā paraka e taea ana. Tēnā, whakamahia kia neke atu i te kotahi paraka \"tōai kia () ngā wā\"."
         'maze_2_8': "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn."
         'maze_2_9': "Ok, try the new \"repeat until\" block - it will repeat until I reach the annoying pig."
         'maze_2_10': "Ok, one last time for practice - can you solve this one using only 4 blocks?"
@@ -165,6 +165,14 @@ mi:
         'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
         'bounce_11_basketball': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
         'bounce_12_basketball': "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
+        'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
+        'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
+        'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
+        'bounce_6_sports': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
+        'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
+        'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
+        'bounce_11_sports': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
+        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
         'bounce_1': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the paddle using the left arrow to reach the finish target."
         'bounce_2': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the paddle to reach both finish targets."
         'bounce_3': "Now try something similar with the \"when up arrow\" block. Move the paddle to the finish target at the top."
@@ -301,22 +309,22 @@ mi:
         'if': "If Block"
         'if_else': "If/else Block"
         'if_else_scrat': "If/else Block"
-        'function': "Functions"
+        'function': "Ngā Taumahi"
         'loop_while': "While Block"
         'loop_for': "Counter Block"
         'parameters': "Functions with Parameters"
         'hoc_wrapup': "Hour of Code Wrapup"
         'Unplug1': 'What is CS?'
         'Unplug2': 'Computational Thinking'
-        'Unplug3': 'Graph Paper Programming'
-        'Unplug4': 'Algorithms'
-        'Unplug5': 'Functions'
+        'Unplug3': 'Papatono Pepa Kauwhata'
+        'Unplug4': 'Ngā Hātepe'
+        'Unplug5': 'Ngā Taumahi'
         'Unplug6': 'Conditionals'
         'Unplug7': 'Songwriting'
         'Unplug8': 'Abstraction'
         'Unplug9': 'Relay programming'
         'Unplug10': 'Internet'
-        'Unplug11': 'Wrap-up'
+        'Unplug11': 'Tākaia'
         'C1_happy_maps_unplugged': 'Happy Maps'
         'C1_moveitmoveit_unplugged': 'Move It, Move It'
         'C1_bigevent_unplugged': 'The Big Event'
@@ -343,7 +351,7 @@ mi:
         'C2_bee_debugging': 'Bee Debugging'
         'C2_bee_conditionals': 'Bee Conditionals'
         'C2_playlab_createstory': 'Play Lab - Create a Story'
-        'C2_graph_paper': 'Graph Paper Programming'
+        'C2_graph_paper': 'Papatono Pepa Kauwhata'
         'C2_conditionals_with_cards': 'Conditionals'
         'C2_binary_bracelets': 'Binary Bracelets'
         'C2_relay_programming': 'Relay Programming'
@@ -360,7 +368,7 @@ mi:
         'C3_farmer_while': 'While Loops'
         'C3_bee_nested_loops': 'Nested Loops'
         'C3_bee_debugging': 'Bee Debugging'
-        'C3_bounce': 'Bounce'
+        'C3_bounce': 'Tupana'
         'C3_playlab_create_game': 'Play Lab - Create a Game'
         'C3_computational_thinking': 'Computational Thinking'
         'C3_dice_race': 'Dice Race'
@@ -478,6 +486,11 @@ mi:
         'iceage_intro': 'Ice Age Hour of Code - Introduction'
         'iceage_events': 'Ice Age Hour of Code - Events'
         'iceage_repeat': 'Ice Age Hour of Code - Repeat statements'
+        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
+        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
+        'mc_2016_events': 'Minecraft Hour of Code - Events'
+        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
+        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

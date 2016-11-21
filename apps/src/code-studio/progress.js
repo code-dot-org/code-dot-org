@@ -69,6 +69,8 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, currentLevelId);
 
+  const onOverviewPage = !currentLevelId;
+
   var mountPoint = document.createElement('div');
 
   if (scriptData.hideable_stages) {
@@ -89,7 +91,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (!signedOutUser && (scriptData.disablePostMilestone ||
         experiments.isEnabled('postMilestoneDisabledUI'))) {
       store.dispatch(disableBubbleColors());
-      if (!scriptData.isHocScript) {
+      if (onOverviewPage && !scriptData.isHocScript) {
         showDisabledBubblesModal();
       }
     }
