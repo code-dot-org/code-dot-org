@@ -66,7 +66,7 @@ const WorkshopManagement = React.createClass({
         href={this.context.router.createHref(this.props.viewUrl)}
         onClick={this.handleViewClick}
       >
-        View
+        View Workshop
       </Button>
     );
   },
@@ -98,7 +98,7 @@ const WorkshopManagement = React.createClass({
         href={this.context.router.createHref(this.props.surveyUrl)}
         onClick={this.handleSurveyClick}
       >
-        Survey Results
+        View Survey Results
       </Button>
     );
   },
