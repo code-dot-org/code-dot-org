@@ -45,6 +45,8 @@ const TutorialExplorer = React.createClass({
     disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
+  shouldScrollToTop: false,
+
   getInitialState() {
     let filters = {};
     for (const filterGroupName in this.props.filterGroups) {
@@ -122,11 +124,21 @@ const TutorialExplorer = React.createClass({
     this.scrollToTop();
   },
 
+  /*
+   * Now that we've re-rendered changes, possibly use jQuery to scroll to the top.
+   */
+  componentDidUpdate() {
+    if (this.shouldScrollToTop) {
+      $('html, body').animate({scrollTop: $("#tutorials").offset().top});
+      this.shouldScrollToTop = false;
+    }
+  },
+
   /**
-   * Scroll smoothly to the top of the page.  Uses jQuery.
+   * Set up a smooth scroll to the top once we've re-rendered the relevant changes.
    */
   scrollToTop() {
-    $('html, body').animate({scrollTop: $("#tutorials").offset().top});
+    this.shouldScrollToTop = true;
   },
 
   /*
