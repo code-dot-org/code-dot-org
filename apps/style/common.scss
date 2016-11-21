@@ -433,7 +433,7 @@ html[dir='rtl'] div#visualizationResizeBar {
   margin-bottom: 5px;
 }
 
-.bee-counter-text {
+.karel-counter-text {
   text-anchor: end;
   font-size: 16px;
   font-family: Verdana, Geneva, sans-serif;
@@ -505,8 +505,8 @@ html[dir='rtl'] div#visualizationResizeBar {
   @include visualization-width-height-original($width, $width, 400px);
 }
 
-@mixin bee-counter($font-size, $stroke-width) {
-  .bee-counter-text {
+@mixin karel-counter($font-size, $stroke-width) {
+  .karel-counter-text {
     font-size: $font-size;
     stroke-width: $stroke-width;
   }
@@ -514,22 +514,22 @@ html[dir='rtl'] div#visualizationResizeBar {
 
 @media screen and (min-width: 1101px) and (max-width: 1150px) {
   @include visualization-width(350px);
-  @include bee-counter(20px, 1.2px);
+  @include karel-counter(20px, 1.2px);
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1100px) {
   @include visualization-width(300px);
-  @include bee-counter(24px, 1.4px);
+  @include karel-counter(24px, 1.4px);
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1050px) {
   @include visualization-width(250px);
-  @include bee-counter(28px, 1.6px);
+  @include karel-counter(28px, 1.6px);
 }
 
 @media screen and (max-width: 1000px) {
   @include visualization-width(200px);
-  @include bee-counter(32px, 2px);
+  @include karel-counter(32px, 2px);
 
   #soft-buttons {
     margin-left: 0;
