@@ -1,0 +1,68 @@
+-check_language ||= nil
+-international_layout ||= nil
+-subheading ||= nil
+-company = request.GET['company']
+-if check_language
+  -items = tutorials.find_with_tag_and_language(tag, request.locale)
+-else
+  -items = tutorials.find_with_tag(tag)
+-if items.count > 0
+  %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
+
+  -unless subheading.nil_or_empty?
+    %p=subheading
+
+  .learnpage{:style=>'position:relative'}
+
+    .carousel-wrapper
+      %div{id: id, class: 'carousel course-carousel'}
+        .slides
+
+          -count = 0
+          -items.each_pair do |key, tutorial|
+            -tags = tutorial[:gradelevel] + ' | ' + tutorial[:platformtext]
+            -url = tutorials.launch_url_for(key,request.host_with_port)
+            -url = url + "?company=#{company}" if company
+            -short_url = ('http://hourofcode.com/' + tutorial[:short_code]) unless tutorial[:short_code].nil_or_empty?
+            -styling = "display:none" unless count == 0
+            .slide.clear{:style=>styling}
+              .slide-img<
+                %a{:href=>url, :target=>'_blank'}<
+                  %img{:src=>tutorial[:image].sub("/images/", "/images/fit-520/").sub(".png", ".jpg")}
+              .slide-text
+                %a{:href=>url, :target=>'_blank'}<
+                  -unless international_layout
+                    %h2= tutorial[:name]
+                %h3= tutorial[:orgname]
+                -unless international_layout
+                  %p.slide-longdescription= tutorial[:longdescription]
+                  %p.slide-shortdescription= tutorial[:shortdescription]
+                  .slide-tags= tags
+                  .slide-participants-count<
+                    %b{:class=>"participants_string_#{key}", :style=>'display: none'}
+                      %span{:class=>"participants_value_#{key}"}
+                        3
+                      = I18n.t(:participants)
+                  -unless tutorial[:teachers_notes].nil_or_empty?
+                    .slide-teachers-notes-link<
+                      %a{:href=>tutorial[:teachers_notes], :target=>'blank'}<
+                        = I18n.t(:teachers_notes)
+                -unless short_url.nil_or_empty?
+                  .slide-shorturl-link
+                    %a{:href=>url, :target=>'_blank'}
+                      =short_url
+              %a{:href=>url, :target=>'_blank'}<
+                -if tutorial[:code] == "codeorg"
+                  %img.scrat-standing.desktop-feature{:src=>"/images/scrat_standing.png", :style=>'width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
+                  %img.scrat-standing-blink.desktop-feature{:src=>"/images/scrat_standing_blink.png", :style=>'opacity:0; width:60px; height:53px; position:absolute; right: 134px; bottom: 7px;'}
+                .btn-carousel-slide=I18n.t(:go)
+            -count += 1
+
+        %a.slide-prev{:href=>'#'}<
+          %span<
+            %span.label= I18n.t(:previous)
+        %a.slide-next{:href=>'#'}<
+          %span<
+            %span.label= I18n.t(:next)
+      .pagination
+        %div{:id => "pagination-#{id}"}
