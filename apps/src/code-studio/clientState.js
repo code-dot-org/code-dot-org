@@ -238,6 +238,21 @@ function recordVisualElementSeen(visualElementType, visualElementId) {
   }
 }
 
+clientState.cacheUserSignedIn = function (isSignedIn) {
+  safelySetItem('isSignedIn', isSignedIn);
+};
+
+
+clientState.getUserSignedIn = function () {
+  let isSignedIn;
+  try {
+    isSignedIn = JSON.parse(sessionStorage.getItem('isSignedIn'));
+  } catch (e) {
+    isSignedIn = null;
+  }
+  return isSignedIn;
+};
+
 /**
  * Private helper for videos and callouts - looks in local storage to see if the element has been seen
  * @param visualElementType
