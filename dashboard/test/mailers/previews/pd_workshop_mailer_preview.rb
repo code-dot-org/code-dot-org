@@ -63,6 +63,10 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :detail_change_notification, Pd::Workshop::COURSE_CSF
   end
 
+  def organizer_detail_change_notification__csf
+    mail :organizer_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :workshop
+  end
+
   def detail_change_notification__admin
     mail :detail_change_notification, Pd::Workshop::COURSE_ADMIN
   end

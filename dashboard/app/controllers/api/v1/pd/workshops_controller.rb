@@ -86,6 +86,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
+    Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
   end
 
   def process_location(force: false)
