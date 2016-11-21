@@ -82,6 +82,8 @@ bg:
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
     overview: 'Регистрирайте се, за да следите напредъка си или да управлявате вашата класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a> и без регистрация, но няма да запазите вашия напредък и проекти.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'Виж ръководството за възпитатели'
     title: "Регистрирайте се в Code.org"
     school_name: 'Име на училище (по желание)'
@@ -286,7 +288,7 @@ bg:
       unsubmit: 'Не е добавено'
       worked_with: 'Работи с'
       update_lock_settings: 'Актуализирайте настройките за заключване тук.'
-      clear_response: 'Clear response'
+      clear_response: 'Ясен отговор'
   user:
     email_confirm_needed: 'Имейл адресът не е потвърден:'
     email_confirm_needed_required: 'Вашият email адрес не е потвърден %{email} :'
@@ -349,11 +351,13 @@ bg:
     announcement_csp_widgets_message: "Търсите забавни начини да покажете на своя клас как работи интернет, как криптографията запазва данни и други концепции? Вземете най-добрите интерактивни инструменти от нашата учебна програма Принципи на компютърните науки и използвайте инструментите по всяко време!"
     announcement_learn_more_button: "Научете повече"
     announcement_try_now_button: "Опитайте сега"
-    announcement_host_an_hour_button: "Host an Hour"
+    announcement_host_an_hour_button: "Стани домакин на Hour of Code"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да дадете на всеки ученик във всяко училище възможност да изучава компютърни науки. Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица, образователни лидери, 28 управители и директори на компании в Америка се обединяват зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно образование."
     announcement_petition_button: "Добавете името си"
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните съобщения.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_launch: "Хиляди преподаватели в над 180 страни ще преподават компютърни науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}' target='_blank'> Регистрирайте Вашето \"час на кода\" събитие</a> и помогнете и на друг учител да научи, че всеки може да започне обучение по компютърни науки."
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел."
     section_code_not_entered: "Моля, представете current_section_code."
@@ -482,6 +486,9 @@ bg:
     minecraft:
       title: "Minecraft"
       body: "Изследвайте Minecraft света чрез код."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
@@ -583,29 +590,28 @@ bg:
     accept_label: 'Съгласен съм с актуализираните <a href="%{tos_url}" target="_blank"> Условия за ползване</a> и <a href="%{privacy_url}" target="_blank"> Поверителност</a>'
     accept: "Приемам"
     print: "Печат"
-    later: "По-късно"
     reminder_desc: 'Ние обновихме нашите <a href="%{tos_url}" target="_blank"> Условия за ползване</a> и <a href="%{privacy_url}" target="_blank"> Политика за поверителност</a>. Моля, прочетете внимателно преди да ги приемете. Обърнете внимание, че нашите инструменти за преподаването JavaScript може да са недостъпни за вашите ученици преди изрично приемане на променените условия.'
     review_terms: "Преглед на актуализираните условия"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
-    message: "Please tell us your race (check all that apply)"
+    title: 'По желание: Помогнете ни подобрим многообразието от уроци по компютърни науки'
+    message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
       - 
-        white: White
+        white: Бяла
       - 
-        black: Black or African American
+        black: Черна или афро-американска
       - 
-        hispanic: Hispanic or Latino
+        hispanic: Испанска или латино
       - 
-        asian: Asian
+        asian: Азиатска
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Хавайска или друг тихоокеански островитянин
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: Индианец/Аляска Native
       - 
         other: Друго
       - 
-        opt_out: Prefer not to say
+        opt_out: Предпочитам да не отговоря
     submit: "Изпрати"
     decline: "Затваряне"
   zendesk_too_young_message: 'Съжаляваме, но малки потребители не може да влизат в нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org"> support.code.org</a> без регистрация или попитайте вашия родител или учител да се свърже с нас за вас.'
