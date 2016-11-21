@@ -110,7 +110,7 @@ export function setupApp(appOptions) {
       $(document).trigger('appInitialized');
     },
     onAttempt: function (report) {
-      if (appOptions.level.isProjectLevel) {
+      if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return;
       }
       // or unless the program is actually the result for a contained level
