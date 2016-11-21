@@ -37,19 +37,24 @@
     padding: 30px 30px;
   }
   .gray-button {
-    background-color: #c6cacd;
+    background-color: #e7e8ea;
     border-color: #c6cacd;
     color: #5b6770;
+    text-decoration: none;
+  }
+  .orange-button {
+    text-decoration: none;
+    background-color: #ffa400;
   }
 
-.full-resource-block
+.full-resource-block{style: "margin-top: 20px;"}
   %img.side-image.left{src: "/images/student/hour_of_code.png"}
   .side-description-area.right
     .description
       %h2.resource-title{style: "padding-bottom: 10px;"} Hour of Code
-      Get started by choosing a tutorial from over 100 one our computer science activities from Code.org and partners. Join 10% of the world's students, it's your turn to try!
+      Get started by choosing a tutorial from over 100 one hour computer science activities from Code.org and partners. Join 10% of the world's students; it's your turn to try!
     %a{href: "/learn"}
-      %button Start
+      %button.orange-button Start
 
 .full-resource-block
   .side-description-area.left
@@ -57,7 +62,8 @@
       %h2.resource-title Courses on Code Studio
       Code Studio is the most popular coding platform in K-12 education. We offer fun introductory courses you can learn alone or in a classroom, all the way through full year computer science curriculum for middle or high school.
     %a{href: "https://studio.code.org/"}
-      %button I'm a student
+      %button.orange-button I'm a student
+    &nbsp;&nbsp;
     %a{href: "/educate"}
       %button.gray-button I'm a teacher
   %img.side-image.right{src: "/images/student/code_studio.jpg"}
@@ -69,6 +75,7 @@
       %h2.resource-title{style: "padding-bottom: 10px;"} Courses from 3rd parties
       Check out some of the 3rd party online courses we recommend, or find a local workshop, school, or summer camp to learn in a classroom.
     %a{href: "/learn/beyond"}
-      %button Learn online
+      %button.orange-button Learn online
+    &nbsp;&nbsp;
     %a{href: "/learn/local"}
       %button.gray-button Local classes
