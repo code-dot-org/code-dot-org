@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 
 import { hideOverlay } from '../redux/instructions';
 
@@ -19,10 +20,15 @@ const style = {
   zIndex: Z_INDEX
 };
 
+const craftStyle = {
+  opacity: 0.8
+};
+
 const Overlay = React.createClass({
   propTypes: {
     visible: React.PropTypes.bool,
-    hide: React.PropTypes.func
+    hide: React.PropTypes.func,
+    isMinecraft: React.PropTypes.bool,
   },
 
   render() {
@@ -30,7 +36,10 @@ const Overlay = React.createClass({
       <div
         id="overlay"
         onClick={this.props.hide}
-        style={style}
+        style={[
+          style,
+          this.props.isMinecraft && craftStyle
+        ]}
       /> :
       null);
   },
@@ -38,7 +47,8 @@ const Overlay = React.createClass({
 
 export default connect(function propsFromStore(state) {
   return {
-    visible: state.instructions.overlayVisible
+    visible: state.instructions.overlayVisible,
+    isMinecraft: !!state.pageConstants.isMinecraft,
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -46,4 +56,4 @@ export default connect(function propsFromStore(state) {
       dispatch(hideOverlay());
     },
   };
-})(Overlay);
+})(Radium(Overlay));
