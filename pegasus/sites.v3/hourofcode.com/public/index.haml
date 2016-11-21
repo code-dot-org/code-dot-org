@@ -118,10 +118,9 @@ social:
   -# Map
 
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
-    = view :hoc_events_counter
     #maparea.full-width
-      %a{href: resolve_url('/map')}
-        %img{src: '/images/map.png', style: 'width: 100%;'}
+      =view :hoc_events_counter
+      =view :hoc_events_map
       .footnote
         The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
         %a{href: resolve_url('/events')}
