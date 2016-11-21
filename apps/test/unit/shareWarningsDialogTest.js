@@ -98,7 +98,7 @@ describe('ShareWarningsDialog', function () {
     assert.strictEqual(ageDropdowns.length, 1);
   });
 
-  it('doesnt show a dialog when note promptForAge and app doesnt store data', function () {
+  it('doesnt show a dialog when not promptForAge and app doesnt store data', function () {
     var reactElement = React.createElement(ShareWarningsDialog, {
       showStoreDataAlert: false,
       promptForAge: false,
