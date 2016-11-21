@@ -119,9 +119,20 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: detail_change_notification_subject(enrollment),
+      subject: detail_change_notification_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def organizer_detail_change_notification(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   # Exit survey email
@@ -208,9 +219,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
   end
 
-  def detail_change_notification_subject(enrollment)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
-      "Details for your upcoming #{enrollment.workshop.course_name} workshop have changed"
+  def detail_change_notification_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'
     end
