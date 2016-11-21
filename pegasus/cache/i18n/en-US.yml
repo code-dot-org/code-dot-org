@@ -25,8 +25,8 @@
   submit: "Submit"
   twentyhours_heading: "Try our Intro to Computer Science Course"
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
-  og_title: "Coding is foundational"
-  og_description: "Technology is changing everything. Every student in every school deserves the opportunity to study computer science."
+  og_title: 'Code.org: Anybody can Learn'
+  og_description: "Every student in every school deserves the opportunity to study computer science."
   csedweek_og_title: "The Hour of Code is coming"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
@@ -869,6 +869,8 @@
   starwarsblocks_name: "Star Wars (Blocks)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Math"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
