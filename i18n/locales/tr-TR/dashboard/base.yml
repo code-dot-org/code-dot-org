@@ -82,6 +82,8 @@ tr:
     student_count: '%{count}öğrenciler çoktan giriş yaptı.'
     teacher_count: '%{count}öğrenciler zaten giriş yaptı.'
     overview: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'Eğitim rehberine bakın'
     title: "Code.org için kayıt ol"
     school_name: 'Okul Adı (isteğe bağlı)'
@@ -285,7 +287,7 @@ tr:
       unsubmit: 'Gönderme'
       worked_with: 'İle çalıştı'
       update_lock_settings: 'Kilit ayarlarını burada değiştirin.'
-      clear_response: 'Clear response'
+      clear_response: 'Net yanıt'
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -352,7 +354,9 @@ tr:
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: "Adınızı Ekleyin"
     announcement_all: "Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_launch: "180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde, ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini öğretmeye başlayabileceğini söyleyin."
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_not_entered: "Lütfen current_section_code giriniz."
@@ -481,6 +485,9 @@ tr:
     minecraft:
       title: "Minecraft"
       body: "Kod aracılığıyla Minecraft dünyasını keşfedin."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     unplugged:
       title: "Bağımsız dersler"
       audience: "6 yaş ve üzeri"
@@ -582,29 +589,28 @@ tr:
     accept_label: 'Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a> kabul ediyorum'
     accept: "Kabul et"
     print: "Yazdır"
-    later: "Sonra"
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
-    message: "Please tell us your race (check all that apply)"
+    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun'
+    message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
       - 
-        white: White
+        white: Beyaz
       - 
-        black: Black or African American
+        black: Siyahi veya Afrika kökenli Amerikalı
       - 
-        hispanic: Hispanic or Latino
+        hispanic: İspanyol veya Latin
       - 
-        asian: Asian
+        asian: Asyalı
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
       - 
         american_indian: American Indian/Alaska Native
       - 
         other: Diğer
       - 
-        opt_out: Prefer not to say
+        opt_out: Söylememek istemiyorum
     submit: "Gönder"
     decline: "Kapat"
   zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
