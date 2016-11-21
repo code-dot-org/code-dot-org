@@ -97,6 +97,7 @@ class Stage < ActiveRecord::Base
           lockable: !!lockable,
           # Ensures we get the cached ScriptLevels, vs hitting the db
           levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+          # disablePostMilestone: script.disable_post_milestone?
       }
 
       # Use to_a here so that we get access to the cached script_levels.

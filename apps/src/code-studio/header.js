@@ -23,6 +23,10 @@ var header = {};
 const PUZZLE_PAGE_NONE = -1;
 
 /**
+ * @param scriptData {object}
+ * @param scriptData.disablePostMilestone {boolean}
+ * @param scriptData.isHocScript {boolean}
+ * @param scriptData.name {string}
  * @param stageData{{
  *   script_id: number,
  *   script_name: number,
@@ -38,9 +42,12 @@ const PUZZLE_PAGE_NONE = -1;
  *   }>
  * }}
  */
-header.build = function (stageData, progressData, currentLevelId, scriptName, puzzlePage) {
+header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage) {
+  scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
+
+  const scriptName = scriptData.name;
 
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
@@ -56,7 +63,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation);
+  progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation);
 
   $('.level_free_play').qtip({
     content: {
