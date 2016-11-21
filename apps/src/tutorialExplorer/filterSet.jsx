@@ -15,7 +15,7 @@ const FilterSet = React.createClass({
 
   render() {
     return (
-      <div id="filterset">
+      <div>
         {this.props.filterGroups.map(item =>
           item.display !== false && (
             <FilterGroup

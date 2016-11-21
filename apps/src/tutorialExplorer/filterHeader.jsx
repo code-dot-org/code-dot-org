@@ -83,7 +83,7 @@ const FilterHeader = React.createClass({
       i18n.filterHeaderTutorialCountPlural({tutorial_count: tutorialCount});
 
     return (
-      <div id="filterheader" style={styles.header}>
+      <div style={styles.header}>
         {this.props.backButton && <BackButton/>}
 
         <Sticky style={{zIndex: 1}}>
