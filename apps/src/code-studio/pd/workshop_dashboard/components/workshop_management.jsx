@@ -14,7 +14,8 @@ const WorkshopManagement = React.createClass({
     workshopId: React.PropTypes.number.isRequired,
     viewUrl: React.PropTypes.string.isRequired,
     editUrl: React.PropTypes.string,
-    onDelete: React.PropTypes.func
+    onDelete: React.PropTypes.func,
+    surveyUrl: React.PropTypes.string
   },
 
   getDefaultProps() {
@@ -53,6 +54,11 @@ const WorkshopManagement = React.createClass({
     this.props.onDelete(this.props.workshopId);
   },
 
+  handleSurveyClick(event) {
+    event.preventDefault();
+    this.context.router.push(this.props.surveyUrl);
+  },
+
   renderViewButton() {
     return (
       <Button
@@ -81,6 +87,22 @@ const WorkshopManagement = React.createClass({
     );
   },
 
+  renderSurveyButton() {
+    if (!this.props.surveyUrl) {
+      return null;
+    }
+
+    return (
+      <Button
+        bsSize="xsmall"
+        href={this.context.router.createHref(this.props.surveyUrl)}
+        onClick={this.handleSurveyClick}
+      >
+        Survey Results
+      </Button>
+    );
+  },
+
   renderDeleteButton() {
     if (!this.props.onDelete) {
       return null;
@@ -99,6 +121,7 @@ const WorkshopManagement = React.createClass({
         {this.renderViewButton()}
         {this.renderEditButton()}
         {this.renderDeleteButton()}
+        {this.renderSurveyButton()}
         <ConfirmationDialog
           show={this.state.showDeleteConfirmation}
           onOk={this.handleDeleteConfirmed}
