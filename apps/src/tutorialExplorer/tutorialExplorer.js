@@ -18,11 +18,17 @@ import queryString from 'query-string';
 import { StickyContainer } from 'react-sticky';
 
 const styles = {
-  bottomLinks: {
+  bottomLinksContainer: {
     padding: '10px 7px 40px 7px',
     fontSize: 13,
     lineHeight: "17px",
     clear: "both"
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
   }
 };
 
@@ -328,10 +334,10 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
-    const bottomLinksStyle = {
-      ...styles.bottomLinks,
+    const bottomLinksContainerStyle = {
+      ...styles.bottomLinksContainer,
       textAlign: getResponsiveValue({xs: "left", md: "right"}),
-      opacity: this.shouldShowTutorials() ? 1 : 0
+      visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
     return (
@@ -405,15 +411,14 @@ const TutorialExplorer = React.createClass({
                 )}
               </div>
 
-              <div style={bottomLinksStyle}>
-                <div>
-                  <a href="https://hourofcode.com/activity-guidelines">
+              <div style={bottomLinksContainerStyle}>
+                <div style={styles.bottomLinksLinkFirst}>
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/activity-guidelines">
                     {i18n.bottomGuidelinesLink()}
                   </a>
                 </div>
-                <br/>
                 <div>
-                  <a href="https://hourofcode.com/supporting-special-needs-students">
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/supporting-special-needs-students">
                     {i18n.bottomSpecialNeedsLink()}
                   </a>
                 </div>
