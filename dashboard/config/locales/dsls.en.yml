@@ -6762,11 +6762,9 @@ en:
         The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
         The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
       cspu5_assess4_playGame:
-        DISPLAY ("game over"): DISPLAY ("game over")
         DISPLAY (count): DISPLAY (count)
         DISPLAY (“game over”): DISPLAY (“game over”)
         Nothing. Procedure works as is.: Nothing. Procedure works as is.
-        RETURN ("game over"): RETURN ("game over")
         RETURN (count): RETURN (count)
         RETURN (“game over”): RETURN (“game over”)
       cspu5_assess4_robot:
