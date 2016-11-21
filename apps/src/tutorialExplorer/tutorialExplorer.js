@@ -118,6 +118,15 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsCount: filteredTutorials.length,
       sortBy: value
     });
+
+    this.scrollToTop();
+  },
+
+  /**
+   * Scroll smoothly to the top of the page.  Uses jQuery.
+   */
+  scrollToTop() {
+    $('html, body').animate({scrollTop: $("#tutorials").offset().top});
   },
 
   /*
@@ -164,10 +173,18 @@ const TutorialExplorer = React.createClass({
 
   showModalFilters() {
     this.setState({showingModalFilters: true});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   hideModalFilters() {
     this.setState({showingModalFilters: false});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   showAllTutorials() {
@@ -393,7 +410,6 @@ const TutorialExplorer = React.createClass({
                     filterGroups={this.props.filterGroups}
                     onUserInput={this.handleUserInputFilter}
                     selection={this.state.filters}
-                    mobileLayout={this.state.mobileLayout}
                     roboticsButtonUrl={this.props.roboticsButtonUrl}
                   />
                 </div>
