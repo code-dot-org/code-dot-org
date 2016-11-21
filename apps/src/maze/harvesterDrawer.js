@@ -52,28 +52,32 @@ export default class HarvesterDrawer extends Drawer {
     if (running) {
       if (cell.getCurrentValue() > 0) {
         this.updateOrCreateText_('counter', row, col, cell.getCurrentValue());
-        this.show('counter', row, col);
       } else {
-        this.hide('counter', row, col);
+        this.updateOrCreateText_('counter', row, col, '');
       }
     } else {
       if (cell.startsHidden()) {
-        this.hide('counter', row, col);
+        this.updateOrCreateText_('counter', row, col, '');
       } else if (variableCell.isVariableRange()) {
         this.updateOrCreateText_('counter', row, col, '?');
-        this.show('counter', row, col);
       } else {
         this.updateOrCreateText_('counter', row, col, cell.getCurrentValue());
-        this.show('counter', row, col);
       }
     }
   }
 
+  /**
+   * @override
+   */
+  updateOrCreateText_(prefix, row, col, text) {
+    let textElement = super.updateOrCreateText_(prefix, row, col, text);
+    textElement.setAttribute('class', 'karel-counter-text');
+    return textElement;
+  }
+
   hide(prefix, row, col) {
-    let element = document.getElementById(Drawer.cellId(prefix, row, col));
-    if (element) {
-      element.setAttribute('visibility', 'hidden');
-    }
+    const element = this.getOrCreateImage_(prefix, row, col);
+    element.setAttribute('visibility', 'hidden');
   }
 
   show(prefix, row, col) {
