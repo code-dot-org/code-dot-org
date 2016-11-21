@@ -6,7 +6,7 @@ import {
   channels as channelsApi,
   assets as assetsApi,
 } from '@cdo/apps/clientApi';
-import {createStore} from '@cdo/apps/redux';
+import {createStore} from '../../../util/redux';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,

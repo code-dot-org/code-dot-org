@@ -166,33 +166,19 @@
     "log_conditions": [
       {
         "entries": [
-          "[forTest]",
-          "randomNumber:2",
-          "randomNumber:2",
-          "randomNumber:2",
-          "penRGB:4",
-          "randomNumber:2",
-          "randomNumber:2",
-          "moveTo:2",
-          "randomNumber:2",
-          "dot:1",
-          "[forUpdate]"
-        ],
-        "matchType": "exact",
-        "minTimes": 100,
-        "message": "Did you change the code inside the loop?  You shouldn't need to. Just change the number of times the loop runs...and make it run a lot!  If you want to start over from the starting code, click 'Version History' then 'Delete Progress'."
-      },
-      {
-        "entries": [
           "[forTest]"
         ],
         "matchType": "exact",
         "minTimes": 1500,
-        "message": "You're probably not running the loop enough times to completely fill the screen with dots consistently.  Try running it more."
+        "message": "You're probably not running the loop enough times to completely fill the screen with dots consistently.  Try running it more.  HINT: If you want to start over from the starting code, click 'Version History' then 'Delete Progress'."
       }
     ],
     "fail_on_lint_errors": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note: we don't check to see if the screen is filled. We only check that some loop is runs at least 1500 times."
   },
   "published": true,
   "notes": "",

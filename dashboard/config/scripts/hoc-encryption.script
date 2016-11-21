@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Simple Encryption'
 named_level 'Crack a Caesar Cipher'
 named_level 'Terminology Recap'
