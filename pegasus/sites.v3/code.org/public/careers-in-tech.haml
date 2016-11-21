@@ -19,13 +19,18 @@ video_player: true
 
 #videos
   %h1.responsive-body Video library
-  .col-33.soft-padding
+  .col-50.soft-padding
     %h2 My name is Brina
-    = view :display_video_thumbnail, id: 'brina_instagram', video_code: 't0-Z_LfGwUM', caption: 'Meet Brina: Brina has worked as a software engineer on Instagram.', play_button: 'center'
-    %a{href: '#'} Learn more
-  .col-33.soft-padding
+    = view :display_video_thumbnail, id: 'brina_instagram', video_code: 't0-Z_LfGwUM', caption: 'Meet Brina: Brina has worked as a software engineer on Instagram.', play_button: 'center', download_path: "//videos.code.org/careers-in-tech/my_name_is_brina.mp4"
+  .col-50.soft-padding
     %h2 My name is Federico
-    = view :display_video_thumbnail, id: 'jerome_microsoft', video_code: 'EUF2mad21jo', caption: 'Meet Federico: Federico is a technical program manager at Microsoft.', play_button: 'center'
-    %a{href: '#'} Learn more
+    = view :display_video_thumbnail, id: 'federico_microsoft', video_code: 'EUF2mad21jo', caption: 'Meet Federico: Federico is a technical program manager at Microsoft.', play_button: 'center', download_path: "//videos.code.org/careers-in-tech/my_name_is_federico.mp4"
+  .clear
+  .col-50.soft-padding
+    %h2 My name is Kinsley
+    = view :display_video_thumbnail, id: 'kinsley_facebook', video_code: 'suJZ9z426P0', caption: 'Meet Kinsley: Kinsley is an engineer at Facebook who works on video sharing.', play_button: 'center', download_path: "//videos.code.org/careers-in-tech/my_name_is_kinsley.mp4"
+  .col-50.soft-padding
+    %h2 My name is Tess
+    = view :display_video_thumbnail, id: 'tess_google', video_code: 'RfbbDgx6l1g', caption: 'Meet Tess: Tess is a software engineer at Google who works on combating online fraud.', play_button: 'center', download_path: "//videos.code.org/careers-in-tech/my_name_is_tess.mp4"
   .clear
 

@@ -31,8 +31,8 @@
     "markdown_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "ideal": "12",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle uses almost the exact same code as the last level, except you only need to repeat 4 times.\",\"hint_id\":\"grade3_RunningFarm_10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a36fe7e0b69e33a473db85ad596b2ce1/grade3_RunningFarm_10.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle uses almost the exact same code as the last level, except you only need to repeat 4 times.\",\"hint_id\":\"grade3_RunningFarm_10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a36fe7e0b69e33a473db85ad596b2ce1/grade3_RunningFarm_10.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Second \"If there is some treasure\" should be \"If no crop\"\r\n\r\nCollect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
