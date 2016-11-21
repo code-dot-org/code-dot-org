@@ -124,6 +124,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
+  def facilitator_detail_change_notification(user, workshop)
+    @user = user
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@user.name, @user.email),
+         reply_to: email_address(@user.name, @user.email)
+  end
+
   def organizer_detail_change_notification(workshop)
     @workshop = workshop
     @cancel_url = '#'
