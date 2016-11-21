@@ -84,6 +84,12 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     store.dispatch(mergeProgress(clientState.allLevelsProgress()[name] || {}));
   };
 
+  // If the server didn't tell us about signIn state (i.e. because script is
+  // cached) see if we cached locally
+  if (signedIn === null) {
+    signedIn = clientState.getUserSignedIn();
+  }
+
   if (signedIn !== null) {
     store.dispatch(setUserSignedIn(signedIn));
   }
