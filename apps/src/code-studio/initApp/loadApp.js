@@ -325,8 +325,9 @@ function loadAppAsync(appOptions) {
           // data will have other keys
           const signedInUser = Object.keys(data).length > 0;
           store.dispatch(setUserSignedIn(signedInUser));
-
-          // TODO - also may need to display toast
+          if (signedInUser) {
+            progress.showDisabledButtonsAlert();
+          }
         }
       }).fail(loadLastAttemptFromSessionStorage);
 

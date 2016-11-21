@@ -17,6 +17,7 @@ const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
+const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -32,7 +33,8 @@ const initialState = {
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
-  postMilestoneDisabled: false
+  postMilestoneDisabled: false,
+  isHocScript: null
 };
 
 /**
@@ -109,6 +111,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_IS_HOC_SCRIPT) {
+    return {
+      ...state,
+      isHocScript: action.isHocScript
+    };
+  }
+
   return state;
 }
 
@@ -172,7 +181,8 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 
 export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
-export const setUserSignedIn = (isSignedIn) => ({ type: SET_USER_SIGNED_IN, isSignedIn });
+export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
+export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

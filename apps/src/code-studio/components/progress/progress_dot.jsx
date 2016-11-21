@@ -161,7 +161,10 @@ export const ProgressDot = Radium(React.createClass({
     stageId: React.PropTypes.number,
 
     // redux provdied
+
+    // if false, display all progress as not tried
     showProgress: React.PropTypes.bool,
+    // if true, display all progress as gray (dots_disabled)
     grayProgress: React.PropTypes.bool,
     overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
     currentLevelId: React.PropTypes.string,
