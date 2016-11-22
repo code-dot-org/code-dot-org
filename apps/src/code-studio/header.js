@@ -43,7 +43,7 @@ const PUZZLE_PAGE_NONE = -1;
  * }}
  * @param {object} progressData
  * @param {string} currentLevelId
- * @param puzzlePage
+ * @param {number} puzzlePage
  * @param {boolean} [signedIn] True/false if we know the sign in state of the
  *   user, null otherwise
  */

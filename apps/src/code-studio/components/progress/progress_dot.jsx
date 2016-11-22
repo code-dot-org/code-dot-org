@@ -310,6 +310,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -331,6 +332,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -352,8 +354,9 @@ if (BUILD_STYLEGUIDE) {
           description: "Should still show lock icon",
           story: () => (
             <ProgressDot
-              bubbleColorsDisabled
               courseOverviewPage={true}
+              showProgress={true}
+              grayProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -375,6 +378,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -396,6 +400,28 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 1,
+                previous: [7,15],
+                status: 'attempted',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'attempted puzzle in course overview with showProgress false',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              showProgress={false}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -415,8 +441,9 @@ if (BUILD_STYLEGUIDE) {
           name: 'attempted puzzle in course overview with bubble colors disabled',
           story: () => (
             <ProgressDot
-              bubbleColorsDisabled
               courseOverviewPage={true}
+              showProgress={true}
+              grayProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -437,6 +464,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -457,6 +485,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -476,6 +505,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               currentLevelId="2288"
               level={{
@@ -495,6 +525,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -514,6 +545,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
@@ -533,6 +565,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
@@ -553,6 +586,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-video-camera',
@@ -574,6 +608,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -594,6 +629,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -614,6 +650,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -634,6 +671,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [0],
@@ -652,6 +690,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -671,6 +710,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -692,6 +732,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -713,6 +754,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -733,6 +775,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="2049"
               saveAnswersBeforeNavigation={false}
               level={{
