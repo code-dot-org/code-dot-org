@@ -803,6 +803,7 @@ Craft.executeUserCode = function () {
 
   codegen.evalWith(code, evalApiMethods, true);
   appCodeOrgAPI.startAttempt(function (success) {
+    $('#soft-buttons').hide();
     if (Craft.level.freePlay) {
       return;
     }

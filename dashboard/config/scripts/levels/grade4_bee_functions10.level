@@ -6,17 +6,17 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Use the given function to collect nectar from each flower.",
+    "instructions": "Create a function to collect all of the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "1",
-    "nectar_goal": "14",
+    "nectar_goal": "0",
     "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,0,0],[0,0,1,2,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,7,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,7,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "10",
+    "ideal": "13",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -33,6 +33,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":5,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.\",\"hint_id\":\"grade4_bee_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba822e2e922376acd91cd5ba9cf337cc/grade4_bee_functions10.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -43,17 +45,10 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" deletable="false" editable="false" y="250">
+        <block type="when_run" deletable="false" movable="false"/>
+        <block type="procedures_defnoreturn" deletable="false">
           <mutation/>
-          <title name="NAME">get 7</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">7</title>
-              <statement name="DO">
-                <block type="maze_nectar"/>
-              </statement>
-            </block>
-          </statement>
+          <title name="NAME">get all nectar</title>
         </block>
       </xml>
     </start_blocks>
@@ -73,8 +68,17 @@
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
+        <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+        </block>
         <block type="procedures_callnoreturn">
-          <mutation name="get 7"/>
+          <mutation name="get all nectar"/>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <title name="NAME">get all nectar</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -86,7 +90,7 @@
               <title name="DIR">moveForward</title>
               <next>
                 <block type="procedures_callnoreturn">
-                  <mutation name="get 7"/>
+                  <mutation name="get all nectar"/>
                   <next>
                     <block type="maze_turn">
                       <title name="DIR">turnRight</title>
@@ -98,7 +102,22 @@
                               <title name="DIR">moveForward</title>
                               <next>
                                 <block type="procedures_callnoreturn">
-                                  <mutation name="get 7"/>
+                                  <mutation name="get all nectar"/>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">3</title>
+                                      <statement name="DO">
+                                        <block type="maze_move">
+                                          <title name="DIR">moveForward</title>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="get all nectar"/>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>
@@ -112,12 +131,14 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" deletable="false" editable="false">
+        <block type="procedures_defnoreturn" deletable="false">
           <mutation/>
-          <title name="NAME">get 7</title>
+          <title name="NAME">get all nectar</title>
           <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">7</title>
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>
               <statement name="DO">
                 <block type="maze_nectar"/>
               </statement>
