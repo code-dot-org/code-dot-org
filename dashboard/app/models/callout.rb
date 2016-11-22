@@ -33,7 +33,7 @@ class Callout < ActiveRecord::Base
   def self.find_or_create_all_from_tsv!(filename)
     created = []
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << self.first_or_create_from_tsv_row!(row)
+      created << first_or_create_from_tsv_row!(row)
     end
     created
   end

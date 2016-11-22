@@ -160,7 +160,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def section_type
-    SECTION_TYPE_MAP[self.course]
+    SECTION_TYPE_MAP[course]
   end
 
   def self.organized_by(organizer)
@@ -239,30 +239,30 @@ class Pd::Workshop < ActiveRecord::Base
   # Puts workshop in 'In Progress' state, creates a section and returns the section.
   # If the workshop has already been started, it will return the existing section.
   def start!
-    return self.section unless self.started_at.nil?
-    raise 'Workshop must have at least one session to start.' if self.sessions.empty?
+    return section unless started_at.nil?
+    raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     self.started_at = Time.zone.now
     self.section = Section.create!(
       name: friendly_name,
-      user_id: self.organizer_id,
-      section_type: self.section_type
+      user_id: organizer_id,
+      section_type: section_type
     )
-    self.save!
-    self.section
+    save!
+    section
   end
 
   # Ends the workshop, or no-op if it's already ended.
   # The return value is undefined.
   def end!
-    return unless self.ended_at.nil?
+    return unless ended_at.nil?
     self.ended_at = Time.zone.now
-    self.save!
+    save!
   end
 
   def state
-    return STATE_NOT_STARTED if self.started_at.nil?
-    return STATE_IN_PROGRESS if self.ended_at.nil?
+    return STATE_NOT_STARTED if started_at.nil?
+    return STATE_IN_PROGRESS if ended_at.nil?
     STATE_ENDED
   end
 
@@ -316,7 +316,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Updates enrollments with resolved users.
   def resolve_enrolled_users
-    self.enrollments.each do |enrollment|
+    enrollments.each do |enrollment|
       enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
   end
@@ -325,7 +325,7 @@ class Pd::Workshop < ActiveRecord::Base
     resolve_enrolled_users
 
     # Send the emails
-    self.enrollments.each do |enrollment|
+    enrollments.each do |enrollment|
       next unless enrollment.user
 
       # Make sure user joined the section
@@ -349,7 +349,7 @@ class Pd::Workshop < ActiveRecord::Base
   # Min number of days a teacher must attend for it to count.
   # @return [Integer]
   def min_attendance_days
-    constraints = TIME_CONSTRAINTS_BY_SUBJECT[self.subject]
+    constraints = TIME_CONSTRAINTS_BY_SUBJECT[subject]
     if constraints
       constraints[:min_days]
     else
@@ -360,20 +360,20 @@ class Pd::Workshop < ActiveRecord::Base
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
-    max_days = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_days]}
-    [self.sessions.count, max_days].compact.min
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_days]}
+    [sessions.count, max_days].compact.min
   end
 
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
-    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[self.subject].try{|constraints| constraints[:max_hours]}
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
     [actual_hours, max_hours].compact.min
   end
 
   # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
   def professional_learning_partner
-    ProfessionalLearningPartner.find_by_contact_id self.organizer.id
+    ProfessionalLearningPartner.find_by_contact_id organizer.id
   end
 end

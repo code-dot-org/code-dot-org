@@ -61,11 +61,11 @@ class Workshop < ActiveRecord::Base
   end
 
   def phase_info
-    WorkshopConstants::PHASES[self.phase.to_i]
+    WorkshopConstants::PHASES[phase.to_i]
   end
 
   def program_type_info
-    WorkshopConstants::PROGRAM_TYPES[self.program_type.to_i]
+    WorkshopConstants::PROGRAM_TYPES[program_type.to_i]
   end
 
   def exit_survey_url
