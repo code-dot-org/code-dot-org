@@ -5,7 +5,7 @@
 # This script reads a file of user ids (one per line). For each,
 # it clears out the user's 'races' field.
 #
-# The CSV file should be created by dumping the output of a SQL query on the dashboard DB to a file:
+# The CSV file is created by dumping the output of a SQL query against the dashboard DB to a file:
 #
 # SELECT users.id
 # FROM users
@@ -29,17 +29,20 @@ File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
   # As we don't want to hammer production (too badly) with queries, we sleep for
   # a (arbitrary) fraction of a second.
   sleep(0.05)
-
-  user = User.find(id)
-  next if user.nil? || user.races.nil_or_empty?
-
   begin
-    puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
-    user.update(races: nil) # this will delete the races property altogether in the JSON, not just clear it
-  rescue Exception => e
-    puts "EXCEPTION:"
-    puts "  USER: #{user}"
-    puts "  MESSAGE: #{e.message}"
-    sleep(10)
+    user = User.find(id) # throws RecordNotFound
+    next if user.nil? || user.races.nil_or_empty?
+    begin
+      puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
+      user.update(races: nil) # this will delete the races property altogether in the JSON, not just clear it
+    rescue Exception => e
+      puts "EXCEPTION:"
+      puts "  USER: #{user}"
+      puts "  MESSAGE: #{e.message}"
+      sleep(10)
+    end
+  rescue ActiveRecord::RecordNotFound
+    puts "USER ID NOT FOUND: #{id}"
+    next
   end
 end
