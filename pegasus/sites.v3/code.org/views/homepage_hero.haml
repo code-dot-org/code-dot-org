@@ -31,7 +31,10 @@
 
   -# Temporary for Nov 14-21: feature Minecraft 2016 tutorial first
   - if page_mode == "feature-minecraft2016"
-    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"minecraft_subtitle",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
+    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
+  - elsif page_mode == "feature-moana"
+    - heroes_arranged.insert(0, {:id=>3,:id_s=>"hero_moana",:type_s=>"widehero",:text1_s=>"",:param1_s=>"50% 50%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/moana.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
+    - heroes_arranged.insert(2, {:id=>3,:id_s=>"hero_minecraft2016",:type_s=>"widehero",:text1_s=>"",:param1_s=>"21% 80%",:param2_s=>"celeba",:param3_s=>"bottom",:image_t=>"/images/homepage/minecraft2016.jpg",:site_s=>"both",:active_s=>"show",:language_supported_s=>"all"})
 
   - newsbanner = DB[:cdo_homepage].where(type_s: "banner", active_s: ["show","hide"], site_s: [request.site,"both"], language_supported_s: ["all", languageFilter]).first
   - if newsbanner
@@ -71,20 +74,15 @@
             - lines = text.lines
             - if entry[:param3_s] == "bottom"
               - position_class = "homepage-caption-bottom"
-            - if entry[:id_s] == "hero_minecraft2016"
-              .captionarea{id: "captionarea#{index}", style: "cursor: pointer; display: none;",  onclick:"location.href='/minecraft'", class: position_class}
-                .captionspecial{style: "text-align: left; padding-left: 680px; padding-top: 100px;"}
-                  %img{src: "/images/fit-240/mc/MC_Logo_Small.png", style: "margin-top:20px"}
-            - else
-              .captionarea{id: "captionarea#{index}", class: position_class}
-                -# Nokogiri::HTML is use to strip any HTML tags.
-                -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
-                .caption.caption1{style: "left: 50px; top: 50px"}
-                  = Nokogiri::HTML(lines[0])
-                .caption.caption2{style: "left: 30px; top: 95px"}
-                  = Nokogiri::HTML(lines[1])
-                .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
-                  = Nokogiri::HTML(lines[2])
+            .captionarea{id: "captionarea#{index}", class: position_class}
+              -# Nokogiri::HTML is use to strip any HTML tags.
+              -# Some translated quotes we were using had <b> tags and some broken <b/> tags.
+              .caption.caption1{style: "left: 50px; top: 50px"}
+                = Nokogiri::HTML(lines[0])
+              .caption.caption2{style: "left: 30px; top: 95px"}
+                = Nokogiri::HTML(lines[1])
+              .caption.caption3.smallcaption{style: "left: 40px; top: 140px"}
+                = Nokogiri::HTML(lines[2])
 
       &nbsp;
 
@@ -124,10 +122,6 @@
     $(".widehero").css({display: "block", opacity: 0});
 
     $("#fullwidth0").fadeTo(4000, 1);
-
-    if ("#{page_mode}" == "feature-minecraft2016") {
-      $("#captionarea0").fadeTo(4000, 1);
-    }
 
     showQuote(null, 0);
 
