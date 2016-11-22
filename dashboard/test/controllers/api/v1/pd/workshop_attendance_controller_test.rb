@@ -3,8 +3,6 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
   freeze_time
 
-  attr_accessor :workshop, :session, :teacher
-
   setup do
     @organizer = create :workshop_organizer
     @facilitator = create :facilitator
@@ -270,7 +268,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
 
   private
 
-  def assert_manage_response(response, workshop: self.workshop, session: nil, user: self.teacher)
+  def assert_manage_response(response, workshop: @workshop, session: nil, user: @teacher)
     session ||= workshop.sessions.first
 
     create_attendance workshop, session, user
@@ -280,7 +278,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_response response
   end
 
-  def assert_read_response(response, workshop: self.workshop, session: nil)
+  def assert_read_response(response, workshop: @workshop, session: nil)
     session ||= workshop.sessions.first
 
     get_workshop_attendance workshop
