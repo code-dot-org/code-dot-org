@@ -99,4 +99,4 @@ I’m always inspired by this quote:
 <div style="clear:both;"></div>
 
 ## Print a poster of Maddy for your classroom
-[![image](/images/careers/maddy maxey_thumbnail.jpg)](/files/careers/maddy-maxey.pdf)
+[![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)

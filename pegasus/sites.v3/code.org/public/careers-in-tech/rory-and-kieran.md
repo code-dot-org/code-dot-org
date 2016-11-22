@@ -62,4 +62,4 @@ We re-branded to <a href="https://gifs.com" target="_blank">gifs.com</a>, opened
 **Kieran:** The hardest part is taking the first step. If you love what you're doing, you will continue to walk forward. Take the first step and see what it feels like.
 
 ## Print a poster of Rory and Kieran for your classroom
-[![image](/images/careers/rory and kieran_thumbnail.jpg)](/files/careers/rory-and-kieran.pdf)
+[![image](/images/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)

@@ -70,3 +70,6 @@ Focus on following your intuition. Listen to people's thoughts and advice as a d
 
 ## What would you tell the innovators of tomorrow? 
 Don't be afraid to try something many, many times until it really clicks. If something doesn't work out the first time, use that as a learning point to try again. Don't give up on yourself.
+
+## Print a poster of Erin and Nidhi for your classroom
+[![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
