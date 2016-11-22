@@ -125,7 +125,10 @@ const TutorialExplorer = React.createClass({
   },
 
   /*
-   * Now that we've re-rendered changes, possibly use jQuery to scroll to the top.
+   * Now that we've re-rendered changes, check to see if there's a pending
+   * scroll to the top of all tutorials.
+   * jQuery is used to do the scrolling, which is a little unusual, but
+   * ensures a smooth, well-eased movement.
    */
   componentDidUpdate() {
     if (this.shouldScrollToTop) {
@@ -135,7 +138,9 @@ const TutorialExplorer = React.createClass({
   },
 
   /**
-   * Set up a smooth scroll to the top once we've re-rendered the relevant changes.
+   * Set up a smooth scroll to the top of all tutorials once we've re-rendered the
+   * relevant changes.
+   * Note that if that next render never comes, we won't actually do the scroll.
    */
   scrollToTop() {
     this.shouldScrollToTop = true;

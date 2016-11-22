@@ -110,7 +110,7 @@ const TutorialDetail = React.createClass({
     }
   },
 
-  startTutorialClicked: function (shortCode) {
+  startTutorialClicked(shortCode) {
     ga('send', 'event', 'learn', 'start', shortCode);
   },
 
