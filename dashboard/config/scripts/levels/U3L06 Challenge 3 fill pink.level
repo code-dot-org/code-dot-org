@@ -51,7 +51,7 @@
     "app_height": "480",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
-    "markdown_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Set the pen color to some new color.\r\n  * Note: even if you just want the default dot color - black - explicitly set the color to black here.\r\n\r\n2. Using that color, make a dot so big that it fills the screen.\r\n\r\n3. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)",
+    "markdown_instructions": "# Drawing with Dots\r\n\r\nWe've added a new command called `dot()`.  \r\n\r\n**Read the documentation** for the `dot()` command.\r\n\r\n**Make a \"snowman\"**\r\n\r\n1. Set the pen color to some new color (we made ours pink)\r\n\t* Note: even if you just want the default dot color - black - explicitly set the color to black here.\r\n\r\n2. Using that color, make a dot so big that it fills the screen.\r\n\r\n3. In a different color, make 3 dots in a row, each one smaller than the next. (We made our dots white to look like a snowman)\r\n\r\nYou might want to go back to the documentation for `penColor()` to look up other colors to use.\r\n\r\n![](https://images.code.org/e63f3cf801abf22c01c475031c46ff66-image-1441992129690.gif)",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
@@ -99,27 +99,13 @@
         "matchType": "exact",
         "minTimes": 2,
         "message": "To complete this task you need to moveForward at least twice"
-      },
-      {
-        "entries": [
-          "penColor:1",
-          "dot:1",
-          "penColor:1",
-          "dot:1",
-          "moveForward:1",
-          "dot:1",
-          "moveForward:1",
-          "dot:1"
-        ],
-        "matchType": "exact",
-        "minTimes": 1,
-        "message": "App Lab is expecting that you'll set the pen color, draw a big dot, then set the pen color again, and draw 3 more dots moving forward a little bit each time."
       }
     ],
     "instructions_important": "false",
     "makerlab_enabled": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a snowman.  We check that the student:\r\n\r\n* set the `penColor` at least twice\r\n* made 4 dots\r\n* moved forward twice."
   },
   "published": true,
   "notes": "",

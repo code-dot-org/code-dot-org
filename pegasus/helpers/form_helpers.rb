@@ -1,105 +1,105 @@
 require 'digest/md5'
 
+def csv_multivalue(value)
+  return value if value.class == FieldError
+  begin
+    CSV.parse_line(value.to_s) || []
+  rescue
+    return FieldError.new(value, :invalid)
+  end
+end
+
+def default_if_empty(value, default_value)
+  return value if value.class == FieldError
+  return default_value if value.nil_or_empty?
+  value
+end
+
+def downcased(value)
+  return value if value.class == FieldError
+  if value.is_a?(Enumerable)
+    value.map{|i| i.to_s.downcase}
+  else
+    value.to_s.downcase
+  end
+end
+
+def enum(value, allowed)
+  return value if value.class == FieldError
+  return FieldError.new(value, :invalid) unless allowed.include?(value)
+  value
+end
+
+def integer(value)
+  return value if value.class == FieldError
+  return nil if value.nil_or_empty?
+
+  s_value = value.to_s.strip
+  i_value = s_value.to_i
+  return FieldError.new(value, :invalid) unless i_value.to_s == s_value
+
+  i_value
+end
+
+def nil_if_empty(value)
+  return value if value.class == FieldError
+  return nil if value.nil_or_empty?
+  value
+end
+
+def required(value)
+  return value if value.class == FieldError
+  return value if value.class == Fixnum
+  return FieldError.new(value, :required) if value.nil_or_empty?
+  value
+end
+
+def stripped(value)
+  return value if value.class == FieldError
+  if value.is_a?(Enumerable)
+    value.map{|i| i.to_s.strip}
+  else
+    value.to_s.strip
+  end
+end
+
+def uploaded_file(value)
+  return value if value.class == FieldError
+  return nil if value.nil_or_empty?
+  AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
+end
+
+def email_address(value)
+  return value if value.class == FieldError
+  email = downcased stripped value
+  return nil if email.nil_or_empty?
+  return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
+  email
+end
+
+def zip_code(value)
+  return value if value.class == FieldError
+  value = stripped value
+  return nil if value.nil_or_empty?
+  return FieldError.new(value, :invalid) unless zip_code?(value)
+  value
+end
+
+def confirm_match(value, value2)
+  return value if value.class == FieldError
+  return FieldError.new(value, :mismatch) if value != value2
+  value
+end
+
+def us_phone_number(value)
+  return value if value.class == FieldError
+  value = stripped value
+  return nil if value.nil_or_empty?
+  return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
+  RegexpUtils.extract_us_phone_number_digits(value)
+end
+
 def validate_form(kind, data)
-  def csv_multivalue(value)
-    return value if value.class == FieldError
-    begin
-      CSV.parse_line(value.to_s) || []
-    rescue
-      return FieldError.new(value, :invalid)
-    end
-  end
-
-  def default_if_empty(value, default_value)
-    return value if value.class == FieldError
-    return default_value if value.nil_or_empty?
-    value
-  end
-
-  def downcased(value)
-    return value if value.class == FieldError
-    if value.is_a?(Enumerable)
-      value.map{|i| i.to_s.downcase}
-    else
-      value.to_s.downcase
-    end
-  end
-
-  def enum(value, allowed)
-    return value if value.class == FieldError
-    return FieldError.new(value, :invalid) unless allowed.include?(value)
-    value
-  end
-
-  def integer(value)
-    return value if value.class == FieldError
-    return nil if value.nil_or_empty?
-
-    s_value = value.to_s.strip
-    i_value = s_value.to_i
-    return FieldError.new(value, :invalid) unless i_value.to_s == s_value
-
-    i_value
-  end
-
-  def nil_if_empty(value)
-    return value if value.class == FieldError
-    return nil if value.nil_or_empty?
-    value
-  end
-
-  def required(value)
-    return value if value.class == FieldError
-    return value if value.class == Fixnum
-    return FieldError.new(value, :required) if value.nil_or_empty?
-    value
-  end
-
-  def stripped(value)
-    return value if value.class == FieldError
-    if value.is_a?(Enumerable)
-      value.map{|i| i.to_s.strip}
-    else
-      value.to_s.strip
-    end
-  end
-
-  def uploaded_file(value)
-    return value if value.class == FieldError
-    return nil if value.nil_or_empty?
-    AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
-  end
-
-  def email_address(value)
-    return value if value.class == FieldError
-    email = downcased stripped value
-    return nil if email.nil_or_empty?
-    return FieldError.new(value, :invalid) unless Poste2.email_address?(email)
-    email
-  end
-
-  def zip_code(value)
-    return value if value.class == FieldError
-    value = stripped value
-    return nil if value.nil_or_empty?
-    return FieldError.new(value, :invalid) unless zip_code?(value)
-    value
-  end
-
-  def confirm_match(value, value2)
-    return value if value.class == FieldError
-    return FieldError.new(value, :mismatch) if value != value2
-    value
-  end
-
-  def us_phone_number(value)
-    return value if value.class == FieldError
-    value = stripped value
-    return nil if value.nil_or_empty?
-    return FieldError.new(value, :invalid) unless RegexpUtils.us_phone_number?(value)
-    RegexpUtils.extract_us_phone_number_digits(value)
-  end
-
   data = Object.const_get(kind).normalize(data)
 
   errors = {}

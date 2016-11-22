@@ -42,7 +42,6 @@
     "failure_message_override": "Place `spawn sheep` under `when run`.",
     "use_player": "true",
     "use_score": "false",
-    "video_key": "mc_2016_spawn",
     "instructions_important": "false",
     "contained_level_names": null
   },

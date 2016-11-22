@@ -79,7 +79,7 @@ Scenario: Changing Parameter names
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instrutions overlay if it exists
+  And I close the instructions overlay if it exists
   And I press "modalEditorClose"
   And I resize top instructions to "100" pixels tall
 

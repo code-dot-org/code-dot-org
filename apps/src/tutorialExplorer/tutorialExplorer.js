@@ -18,11 +18,17 @@ import queryString from 'query-string';
 import { StickyContainer } from 'react-sticky';
 
 const styles = {
-  bottomLinks: {
+  bottomLinksContainer: {
     padding: '10px 7px 40px 7px',
     fontSize: 13,
     lineHeight: "17px",
     clear: "both"
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
   }
 };
 
@@ -38,6 +44,8 @@ const TutorialExplorer = React.createClass({
     showSortBy: React.PropTypes.bool.isRequired,
     disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
+
+  shouldScrollToTop: false,
 
   getInitialState() {
     let filters = {};
@@ -112,6 +120,25 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsCount: filteredTutorials.length,
       sortBy: value
     });
+
+    this.scrollToTop();
+  },
+
+  /*
+   * Now that we've re-rendered changes, possibly use jQuery to scroll to the top.
+   */
+  componentDidUpdate() {
+    if (this.shouldScrollToTop) {
+      $('html, body').animate({scrollTop: $(this.allTutorials).offset().top});
+      this.shouldScrollToTop = false;
+    }
+  },
+
+  /**
+   * Set up a smooth scroll to the top once we've re-rendered the relevant changes.
+   */
+  scrollToTop() {
+    this.shouldScrollToTop = true;
   },
 
   /*
@@ -158,10 +185,18 @@ const TutorialExplorer = React.createClass({
 
   showModalFilters() {
     this.setState({showingModalFilters: true});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   hideModalFilters() {
     this.setState({showingModalFilters: false});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   showAllTutorials() {
@@ -328,9 +363,10 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
-    const bottomLinksStyle = {
-      ...styles.bottomLinks,
-      textAlign: getResponsiveValue({xs: "left", md: "right"})
+    const bottomLinksContainerStyle = {
+      ...styles.bottomLinksContainer,
+      textAlign: getResponsiveValue({xs: "left", md: "right"}),
+      visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
     return (
@@ -366,7 +402,7 @@ const TutorialExplorer = React.createClass({
           )}
 
           {this.state.showingAllTutorials && (
-            <div>
+            <div ref={allTutorials => this.allTutorials = allTutorials}>
               <FilterHeader
                 onUserInput={this.handleUserInputSortBy}
                 sortBy={this.state.sortBy}
@@ -403,15 +439,14 @@ const TutorialExplorer = React.createClass({
                 )}
               </div>
 
-              <div style={bottomLinksStyle}>
-                <div>
-                  <a href="https://hourofcode.com/activity-guidelines">
+              <div style={bottomLinksContainerStyle}>
+                <div style={styles.bottomLinksLinkFirst}>
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/activity-guidelines">
                     {i18n.bottomGuidelinesLink()}
                   </a>
                 </div>
-                <br/>
                 <div>
-                  <a href="https://hourofcode.com/supporting-special-needs-students">
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/supporting-special-needs-students">
                     {i18n.bottomSpecialNeedsLink()}
                   </a>
                 </div>
