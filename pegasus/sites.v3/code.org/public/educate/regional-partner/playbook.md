@@ -20,14 +20,13 @@ title: Regional Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Ordering Supplies', description_t: "Guidance on ordering swag and materials and access to the Mimeo Marketplace", url_s: CDO.code_org_url("/educate/regional-partner/playbook/ordering-supplies"), button_s: "Learn more"} %>
 
-
 <%= view :educate_box, item: {title_s: 'Payment Information', description_t: "Everything you need to know about how your organization will be compensated", url_s: CDO.code_org_url("/educate/regional-partner/playbook/payments"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Regional Partner Directory', description_t: "Browse the list of Regional Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/regional-partner/playbook/directory"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "All you need to know about annual reports, workshop surveys, and the Regional Partner Roadmap", url_s: CDO.code_org_url("/educate/regional-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Teacher & District Recruitment', description_t: "Coming soon!"} %>
+<%= view :educate_box, item: {title_s: 'Teacher and District Recruitment', description_t: "Infromation on how to recruit teachers and districts.", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-recruitment"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "Resources for teachers such as course supports, online supports, classroom materials, and technology", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-support"), button_s: "Learn more"} %>
 

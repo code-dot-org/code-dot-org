@@ -3,7 +3,11 @@ title: CS Fundamentals for grades K-5
 nav: educate_nav
 ---
 
-# Computer Science Fundamentals for elementary school
+[solid-block-header]
+
+Computer Science Fundamentals for elementary school
+
+[/solid-block-header]
 
 ### [No-Cost Teacher Workshops](#teach) |  [Curriculum Overview](#overview) | [Other Resources](#other)
 
@@ -13,9 +17,11 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 [solid-block-header]
 
-## <a name="teach"></a> High quality workshops for teachers, at no cost (US only)
+<a name="teach"></a> Free Teacher Workshops
 
 [/solid-block-header]
+
+## High quality workshops for teachers, at no cost (US only)
 
 Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. 
 

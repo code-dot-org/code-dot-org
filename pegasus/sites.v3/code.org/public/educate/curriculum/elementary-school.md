@@ -4,7 +4,11 @@ nav: educate_nav
 video_player: true
 ---
 
-# Computer Science Fundamentals for elementary school
+[solid-block-header]
+
+Computer Science Fundamentals
+
+[/solid-block-header]
 
 ### [No-Cost Teacher Workshops](#teach) | [Curriculum Overview](#overview) | [Other Resources](#other)
 
@@ -14,7 +18,7 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
-<%=view :display_video_thumbnail, id: "compression", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
 
 
 </div>
@@ -23,13 +27,19 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 <% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
 <% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>'Getting Started with Code Studio @codeorg'} %>
-<%=view :display_video_thumbnail, id: "compression", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
+<%=view :display_video_thumbnail, id: "GettingStarted", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
 
 </div>
 
 <div style="clear:both"></div>
 
-## <a name="teach"></a> High quality workshops for teachers, at no cost (US only)
+[solid-block-header]
+
+<a name="teach"></a> Free Teacher Workshops
+
+[/solid-block-header]
+
+## High quality workshops for teachers, at no cost (US only)
 
 Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. 
 
@@ -45,7 +55,12 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 
 [<button>View the online course</button>](/educate/professional-development-online)<br />
 
-## <a name="overview"></a>Computer Science Fundamentals: Curriculum Overview
+[solid-block-header]
+
+<a name="overview"></a>Curriculum Overview
+
+[/solid-block-header]
+
 Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This <strong>completely free</strong> curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
 
 [Download complete curriculum for Courses 1 - 4](/curriculum/docs/k-5/complete.pdf)
@@ -118,11 +133,13 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
+[solid-block-header]
 
+<a name="other"></a>Other Resources
 
-## <a name="other"></a>Other resources
+[/solid-block-header]
 
-### <strong>3rd Party resources for elementary school computer science</strong>
+## 3rd Party resources for elementary school computer science
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -137,19 +154,17 @@ Get online assistance while using our curriculum through product FAQs, technical
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
 
-### <strong>Inspire students to try computer science</strong>
+## Inspire students
+We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-Our [Inspire a student](/educate/inspire) page has all kinds of stuff you can use to get kids excited about computer science—like posters and videos featuring musicians, celebrities, entrepreneurs, and students!
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-Want even more videos? Check out the [Video Library](/educate/videos).
-
-### <strong>Find a guest speaker for your classroom</strong>
-
-Want your students to hear from an inspiring computer science professional? Use the button below to find a guest speaker for your class from our list of volunteers! Local guest speakers are available in select areas; guest speakers via teleconference are available to all teachers.
+## Find a guest speaker for your classroom
+Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)
 
-### <strong>Spread the word!</strong> 
+## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
 
 
