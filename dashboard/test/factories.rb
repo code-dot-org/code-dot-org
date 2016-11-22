@@ -409,7 +409,7 @@ FactoryGirl.define do
   factory :segment do
     workshop
     start DateTime.now.utc
-    self.send(:end, DateTime.now.utc + 1.day)
+    send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
