@@ -8,6 +8,7 @@ import color from "../../../util/color";
 import progressStyles, { createOutline } from './progressStyles';
 import { LevelStatus } from '../../activityUtils';
 import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { SignInState } from '../../progressRedux';
 
 const dotSize = 24;
 const styles = {
@@ -160,7 +161,11 @@ export const ProgressDot = Radium(React.createClass({
     stageId: React.PropTypes.number,
 
     // redux provdied
-    bubbleColorsDisabled: React.PropTypes.bool,
+
+    // if false, display all progress as not tried
+    showProgress: React.PropTypes.bool,
+    // if true, display all progress as gray (dots_disabled)
+    grayProgress: React.PropTypes.bool,
     overrideLevelStatus: React.PropTypes.oneOf(Object.keys(LevelStatus)),
     currentLevelId: React.PropTypes.string,
     saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
@@ -181,11 +186,15 @@ export const ProgressDot = Radium(React.createClass({
   render() {
     const level = this.props.level;
     let levelStatus = this.props.overrideLevelStatus || level.status;
-    if (this.props.bubbleColorsDisabled && levelStatus !== LevelStatus.locked) {
+    if (levelStatus !== LevelStatus.locked) {
       // During hoc we're going to disable milestone posts. If disabled, we want
       // to display dots as gray (unless the level is locked, in which case we
       // want to leave as is).
-      levelStatus = LevelStatus.dots_disabled;
+      if (!this.props.showProgress) {
+        levelStatus = LevelStatus.not_tried;
+      } else if (this.props.grayProgress) {
+        levelStatus = LevelStatus.dots_disabled;
+      }
     }
     const onCurrent = this.props.currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(this.props.currentLevelId) !== -1) ||
@@ -275,10 +284,15 @@ export default connect((state, ownProps) => {
     overrideLevelStatus = LevelStatus.locked;
   }
 
+  const { postMilestoneDisabled, signInState } = state.progress;
+
   return {
     currentLevelId: state.progress.currentLevelId,
     saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation,
-    bubbleColorsDisabled: state.progress.bubbleColorsDisabled,
+    // If milestone posts are disabled, don't show progress (i.e. leave bubbles
+    // white) until we know whether we're signed in or not.
+    showProgress: !postMilestoneDisabled || signInState !== SignInState.Unknown,
+    grayProgress: postMilestoneDisabled && signInState === SignInState.SignedIn,
     overrideLevelStatus
   };
 })(ProgressDot);
@@ -296,6 +310,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -317,6 +332,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -338,8 +354,9 @@ if (BUILD_STYLEGUIDE) {
           description: "Should still show lock icon",
           story: () => (
             <ProgressDot
-              bubbleColorsDisabled
               courseOverviewPage={true}
+              showProgress={true}
+              grayProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -361,6 +378,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -382,6 +400,28 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
+              saveAnswersBeforeNavigation={false}
+              level={{
+                icon: null,
+                ids: [5275],
+                kind: 'puzzle',
+                next: [2, 1],
+                position: 1,
+                previous: [7,15],
+                status: 'attempted',
+                title: 1,
+                url: 'http://localhost-studio.code.org:3000/s/course1/stage/8/puzzle/1'
+              }}
+            />
+          )
+        },
+        {
+          name: 'attempted puzzle in course overview with showProgress false',
+          story: () => (
+            <ProgressDot
+              courseOverviewPage={true}
+              showProgress={false}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -401,8 +441,9 @@ if (BUILD_STYLEGUIDE) {
           name: 'attempted puzzle in course overview with bubble colors disabled',
           story: () => (
             <ProgressDot
-              bubbleColorsDisabled
               courseOverviewPage={true}
+              showProgress={true}
+              grayProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -423,6 +464,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -443,6 +485,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -462,6 +505,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               currentLevelId="2288"
               level={{
@@ -481,6 +525,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -500,6 +545,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
@@ -519,6 +565,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-file-text',
@@ -539,6 +586,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: 'fa-video-camera',
@@ -560,6 +608,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -580,6 +629,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -600,6 +650,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [1073563865],
@@ -620,6 +671,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 ids: [0],
@@ -638,6 +690,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={true}
+              showProgress={true}
               saveAnswersBeforeNavigation={false}
               level={{
                 icon: null,
@@ -657,6 +710,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -678,6 +732,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -699,6 +754,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="1379"
               saveAnswersBeforeNavigation={false}
               level={{
@@ -719,6 +775,7 @@ if (BUILD_STYLEGUIDE) {
           story: () => (
             <ProgressDot
               courseOverviewPage={false}
+              showProgress={true}
               currentLevelId="2049"
               saveAnswersBeforeNavigation={false}
               level={{

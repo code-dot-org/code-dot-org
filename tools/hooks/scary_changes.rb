@@ -1,7 +1,10 @@
 #!/usr/bin/env bundle exec ruby
 REPO_DIR = File.expand_path('../../../', __FILE__)
+require_relative "#{REPO_DIR}/lib/cdo/cdo_cli"
 
 class ScaryChangeDetector
+  include CdoCli
+
   def initialize
     @added = []
     @deleted = []
@@ -46,11 +49,25 @@ class ScaryChangeDetector
     end
   end
 
+  def detect_missing_yarn_lock
+    changed_package_json = @all.include? 'apps/package.json'
+    changed_yarn_lock = @all.include? 'apps/yarn.lock'
+    if changed_package_json && !changed_yarn_lock
+      puts "You changed #{bold 'apps/package.json'} but didn't also change #{bold 'apps/yarn.lock'}:"
+      puts "  You should run #{bold 'yarn'} and commit the updated yarn.lock file along"
+      puts "  with your changes to package.json."
+      puts dim "  If you are legitimately making a change to package.json that does not"
+      puts dim "  affect yarn.lock, you can bypass this message with the --no-verify flag."
+      raise "Commit blocked."
+    end
+  end
+
   public
 
   def detect_scary_changes
     detect_db_changes
     detect_new_models
+    detect_missing_yarn_lock
   end
 end
 

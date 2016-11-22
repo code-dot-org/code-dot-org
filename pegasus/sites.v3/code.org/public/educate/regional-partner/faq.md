@@ -1,6 +1,6 @@
 ---
 title: Regional Partner FAQs
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 ---
 <a id="top"></a>
 
@@ -24,10 +24,6 @@ Still have questions? See below for answers to commonly asked questions or email
 - [Does my organization need to provide facilitators for the programs?](#facilitators)
 - [Can I recruit teachers from local districts to become a part of the 2017-18  professional learning programs in my area?](#recruit)
 - [What is counselor/administrator professional development?](#ca)
-
-**Questions about the budget:**<br/>
-
-- [Where can I find a breakdown of what Code.org provides?](#pay)
 	
 
 <br/>
@@ -136,15 +132,7 @@ Code.org has computer science workshops designed for Counselors and Administrato
 
 [**Back to the top**](#top)
 <br/>
-___________________________________________
-<br/>
-<br/>
-<a id="pay"></a>
-### **Where can I find a breakdown of what Code.org provides?**
-<a href="https://docs.google.com/spreadsheets/d/1zuxMqmkhVOzAu22YgOEX61dG4xfgnw_jG0Z0-E-DMzY/view#gid=0" target=_blank>Click here</a> to see an example budget. 
 
-[**Back to the top**](#top)
-<br/>
 ___________________
 <br/>
 

@@ -18,7 +18,8 @@ const WorkshopTable = React.createClass({
     canEdit: React.PropTypes.bool,
     onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool
+    showOrganizer: React.PropTypes.bool,
+    surveyBaseUrl: React.PropTypes.string
   },
 
   getDefaultProps() {
@@ -92,6 +93,7 @@ const WorkshopTable = React.createClass({
         viewUrl={`/workshops/${workshopId}`}
         editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
         onDelete={this.props.onDelete}
+        surveyUrl={this.props.surveyBaseUrl ? `${this.props.surveyBaseUrl}/${workshopId}` : null}
       />
     );
   },

@@ -1,6 +1,6 @@
 ---
 title: Regional Partner
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 ---
 
 <%= view :plp_partners_map %>
