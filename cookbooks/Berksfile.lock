@@ -87,7 +87,7 @@ GRAPH
     ark (>= 0.0.0)
     poise-service (>= 0.0.0)
   cdo-github-access (0.1.6)
-  cdo-home-ubuntu (0.1.2)
+  cdo-home-ubuntu (0.1.3)
   cdo-java-7 (0.1.1)
     build-essential (>= 0.0.0)
   cdo-mysql (0.1.3)
