@@ -190,7 +190,6 @@ var TopInstructions = React.createClass({
                   renderedMarkdown={processMarkdown(this.props.markdown,
                       { renderer })}
                   onResize={this.adjustMaxNeededHeight}
-                  inTopPane
                 />
                 <TeacherOnlyMarkdown/>
               </div>

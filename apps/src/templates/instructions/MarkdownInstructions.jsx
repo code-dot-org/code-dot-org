@@ -7,20 +7,13 @@ import { connect } from 'react-redux';
 
 var styles = {
   standard: {
-    marginBottom: 35,
-    paddingTop: 19
-  },
-  inTopPane: {
     marginTop: 10,
     marginBottom: 10,
     paddingTop: 0
   },
-  inTopPaneCanCollapse: {
+  canCollapse: {
     marginTop: 0,
     marginBottom: 0,
-  },
-  inTopPaneWithImage: {
-    minHeight: 300
   }
 };
 
@@ -28,9 +21,7 @@ const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
     noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool
   },
 
   /**
@@ -75,27 +66,15 @@ const MarkdownInstructions = React.createClass({
   },
 
   render() {
-    const {
-      inTopPane,
-      renderedMarkdown,
-    } = this.props;
-
-    // In cases where we have a full-size image (as opposed to the inline images we use in
-    // Star Wars), we want to guarantee a certain amount of height, to deal with the fact
-    // that we won't know how much height the image actually needs until it has loaded
-    const hasFullSizeImage = !this.props.hasInlineImages && /<img src/.test(renderedMarkdown);
-
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
         className="instructions-markdown"
         style={[
           styles.standard,
-          inTopPane && styles.inTopPane,
-          inTopPane && hasFullSizeImage && styles.inTopPaneWithImage,
-          inTopPane && canCollapse && styles.inTopPaneCanCollapse
+          canCollapse && styles.canCollapse
         ]}
-        dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
+        dangerouslySetInnerHTML={{ __html: this.props.renderedMarkdown }}
       />
     );
   }
@@ -104,5 +83,4 @@ const MarkdownInstructions = React.createClass({
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
 export default connect(state => ({
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
-  hasInlineImages: state.instructions.hasInlineImages
 }))(Radium(MarkdownInstructions));

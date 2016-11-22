@@ -1,7 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import { openDialog } from '../../redux/instructionsDialog';
 
 const styles = {
   wrapper: {
@@ -23,8 +22,8 @@ const styles = {
 const AniGifPreview = React.createClass({
   propTypes: {
     url: React.PropTypes.string.isRequired,
-    showInstructionsDialog: React.PropTypes.func.isRequired,
     noVisualization: React.PropTypes.bool.isRequired,
+    showAniGifModal: React.PropTypes.func.isRequired,
   },
 
   render() {
@@ -39,7 +38,7 @@ const AniGifPreview = React.createClass({
               styles.aniGifPreview(this.props.url),
               this.props.noVisualization && styles.bigPreview
             ]}
-          onClick={this.props.showInstructionsDialog}
+          onClick={this.props.showAniGifModal}
         />
       </div>
     );
@@ -49,12 +48,5 @@ const AniGifPreview = React.createClass({
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
   noVisualization: state.pageConstants.noVisualization,
-}), dispatch => ({
-  showInstructionsDialog() {
-    dispatch(openDialog({
-      autoClose: false,
-      aniGifOnly: true,
-      hintsOnly: false
-    }));
-  }
+  showAniGifModal: state.pageConstants.showAniGifModal
 }))(Radium(AniGifPreview));
