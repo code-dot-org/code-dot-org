@@ -819,7 +819,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal false, body['disableSocialShare']
-    assert_equal false, body['disablePostMilestone']
     assert_equal 100, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
@@ -872,7 +871,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disableSocialShare']
-    assert_equal false, body['disablePostMilestone']
     assert_equal({}, body['progress'])
   end
 
@@ -884,8 +882,6 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
-    body = JSON.parse(response.body)
-    assert_equal true, body['disablePostMilestone']
   end
 
   test "should get user progress for stage with swapped level" do
