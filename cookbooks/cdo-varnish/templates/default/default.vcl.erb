@@ -217,7 +217,7 @@ sub vcl_deliver {
     set resp.http.X-Varnish-Cache = "MISS";
   }
 
-  set resp.http.X-Varnish-Node = std.fileread("/etc/hostname");
+  set resp.http.X-Varnish-Node = "<%= node.name %>";
   # Pass-through to builtin.
 }
 
