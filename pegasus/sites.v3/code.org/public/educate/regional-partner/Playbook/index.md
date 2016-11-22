@@ -1,5 +1,5 @@
 ---
-title: Professional Learning Partner Virtual Playbook
+title: Regional Partner Virtual Playbook
 ---
 
 <link type="text/css" rel="stylesheet" href="/css/educate.css" />
@@ -23,9 +23,9 @@ title: Professional Learning Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Payment Information', description_t: "Everything you need to know about how your organization will be compensated", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/payments"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Professional Learning Partner Directory', description_t: "Browse the list of Professional Learning Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Regional Partner Directory', description_t: "Browse the list of Regional Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/directory"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "All you need to know about annual reports, workshop surveys, and the Professional Learning Partner Roadmap", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "All you need to know about annual reports, workshop surveys, and the Regional Partner Roadmap", url_s: CDO.code_org_url("/educate/professional-learning-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher & District Recruitment', description_t: "Coming soon!"} %>
 
