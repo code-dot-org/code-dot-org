@@ -6,6 +6,10 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
     user ? user.id : nil
   end
 
+  def school
+    object.try(:school_info).try{|si| si.school.try(:name) || si.school_name} || object.school
+  end
+
   def district_name
     object.try(:school_info).try(:school_district).try(:name)
   end

@@ -76,6 +76,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     head :no_content
   end
 
+  # GET /api/v1/pd/workshops/1/summary
+  def summary
+    render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+  end
+
   private
 
   def should_notify?
