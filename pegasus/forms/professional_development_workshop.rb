@@ -64,7 +64,7 @@ class ProfessionalDevelopmentWorkshop
       results.merge! location.to_solr if location
 
       if data['stopped_dt'] && (last_processed_data.blank? || last_processed_data['progress_snapshot_t'].blank?)
-        snapshot = self.progress_snapshot(data['section_id_s'])
+        snapshot = progress_snapshot(data['section_id_s'])
         results['total_attendee_count_i'] = snapshot.count
         results['qualifying_attendee_count_i'] = snapshot.count {|u| u[:levels_count] >= MINIMUM_ATTENDEE_LEVELS_COUNT}
 
@@ -113,7 +113,7 @@ class ProfessionalDevelopmentWorkshop
 
   def self.solr_query(params)
     fq = {
-      kind_s: self.name,
+      kind_s: name,
       type_s: 'Public',
       first_date_dt: '[NOW TO *]',
     }.map{|key, value| "#{key}:#{value}"}.join(' AND ')

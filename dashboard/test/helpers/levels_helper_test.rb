@@ -5,7 +5,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   def sign_in(user)
     # override the default sign_in helper because we don't actually have a request or anything here
-    self.stubs(:current_user).returns user
+    stubs(:current_user).returns user
   end
 
   setup do
@@ -18,7 +18,7 @@ class LevelsHelperTest < ActionView::TestCase
       )
     end
 
-    self.stubs(:current_user).returns nil
+    stubs(:current_user).returns nil
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
@@ -227,7 +227,7 @@ class LevelsHelperTest < ActionView::TestCase
   def stub_country(code)
     req = request
     req.location = OpenStruct.new country_code: code
-    self.stubs(:request).returns(req)
+    stubs(:request).returns(req)
   end
 
   test 'send to phone enabled for US' do
@@ -252,7 +252,7 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:teacher)
     sign_in user
 
-    app_options = self.question_options
+    app_options = question_options
 
     assert_equal true, app_options[:level]['submittable']
   end
@@ -264,7 +264,7 @@ class LevelsHelperTest < ActionView::TestCase
     user = create(:teacher)
     sign_in user
 
-    app_options = self.question_options
+    app_options = question_options
 
     assert_not app_options[:level]['submittable']
   end

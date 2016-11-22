@@ -39,7 +39,7 @@ class Properties
     # Include stale default values as of 2016-06-22 so we never show 0. These
     # would be used, for example, if the DB is unavailable or the cron failed to
     # run properly.
-    self.get(:about_stats) || {
+    get(:about_stats) || {
       'percent_female' => 43,
       'number_served' => 256_924_978,
       'number_students' => 11_309_238,

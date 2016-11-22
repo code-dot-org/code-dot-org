@@ -105,6 +105,6 @@ class Form2 < OpenStruct
 
   def self.from_row(row)
     return nil unless row
-    self.new row
+    new row
   end
 end

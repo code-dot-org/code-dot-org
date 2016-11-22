@@ -18,7 +18,7 @@ module AWS
 
     # A simpler name for connect_v2!
     def self.create_client
-      self.connect_v2!
+      connect_v2!
     end
 
     # Returns the value of the specified S3 key in bucket.
