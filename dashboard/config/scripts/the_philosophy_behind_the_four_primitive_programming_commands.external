@@ -1,0 +1,22 @@
+name 'The Philosophy Behind the Four Primitive Programming Commands'
+css 'unplugged'
+markdown <<MARKDOWN
+# The Philosophy Behind the Four Primitive Programming Commands
+
+Unit three kicks off with students learning about the building blocks of programming by creating simple line drawings using only 4 built-in commands(move forward, turn left, pen up, pen down). The drawing is done using "turtle graphics." Turtle graphics go way back in computing history as a way for newcomers to learn how to program. The system is modeled after an old robot called the "turtle robot" that held a pen and could be controlled to move around and draw things as it moved. In this version we have commands that represent the robot controls and the "turtle" is represented as a triangle on the screen.
+
+
+<img src="https://images.code.org/d34378b6e55d7f46b43af89dd0df5e38-image-1479787422962.02.38 PM.png" style="float:right; margin-left:10px; width:300px">
+
+
+Even though we know your students can handle more than the four primitive commands, we still strongly suggest that they use these commands at the beginning.  These lessons are, for many students, the first formal introduction to programming that they will have.  When they have the opportunity to ‘complete the bubbles’, many students’ tendency is to focus solely on turning the bubbles green and finishing the puzzle.  In doing so, they may not consider the larger patterns that begin to emerge and lose track of the process and structure of the program.  They want to get it done, and in doing so they miss the learning that occurs in the process.  This is a pitfall that we want to avoid, and with these four primitive commands we are trying to send an alternative message:  
+
+
+## Programming as an Art
+Programming is an art; there is a very small set of things that the computer can actually do, and the beauty and elegance of programming comes from cleverly crafting these simple commands in o the complex programs you need.  Of course these four drawing commands are not what the whole world of computing are built upon, but by using them to complete these levels, students begin thinking intentionally about how they will design algorithms to efficiently complete a task.  We want students to focus on this skill just as much as completing the given 'task'.
+
+
+## Impact on Curriculum Flow
+Working with a constrained toolbox of commands motivates students to write functions of their own which are constructed by combining a set of actions you want to perform and assigning those actions a name. 
+
+MARKDOWN

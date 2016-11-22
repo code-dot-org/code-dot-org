@@ -123,11 +123,11 @@
         "message": "App Lab is expecting you to use turnTo at least once - just to try it out."
       }
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Validation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `moveTo(x,y)` at least once\r\n* called `turnTo` at least once\r\n* made at least 2 dots - one for the background and one for the face. (The eyes can be made with dots, but don't have to be.)."
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew this exact figure. We check that the student:\r\n\r\n* called `moveTo(x,y)` at least once\r\n* called `turnTo` at least once\r\n* made at least 2 dots - one for the background and one for the face. (The eyes can be made with dots, but don't have to be.).",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
