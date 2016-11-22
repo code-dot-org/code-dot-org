@@ -29,7 +29,6 @@ class ScriptConfig
       artist
       infinity
       iceage
-      minecraft
     )
   end
 end
