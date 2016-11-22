@@ -55,7 +55,7 @@ I ended up being accepted into the Women in Technology program at MIT for a summ
 ## How can mentors help? 
 It's good to have mentors, but we don't rely on them to make decisions for us. 
 
-If you need to, ask for help, but make the decision based on what you believe is right, not based on someone else's experience. A mentor’s experience and vision is not the same as yours. 
+Ask for help, but make the decision based on what you believe is right, not based on someone else's experience. A mentor’s experience and vision is not the same as yours. 
 
 Focus on following your intuition. Listen to people's thoughts and advice as a data point to inform a decision that you ultimately make. 
 

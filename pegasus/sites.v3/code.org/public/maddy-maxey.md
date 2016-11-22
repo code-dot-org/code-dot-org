@@ -88,3 +88,6 @@ I’m always inspired by this quote:
 [/col-50]
 
 <div style="clear:both;"></div>
+
+## Print a poster of Maddy for your classroom
+[![image](/images/careers/maddy maxey_thumbnail.jpg)](/files/careers/maddy-maxey.pdf)
