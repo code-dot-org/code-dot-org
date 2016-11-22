@@ -85,10 +85,10 @@ class Blockly < Level
 
   def to_xml(options={})
     xml_node = Nokogiri::XML(super(options))
-    Nokogiri::XML::Builder.with(xml_node.at(self.type)) do |xml|
+    Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
         xml_blocks.each do |attr|
-          xml.send(attr) { |x| x << self.send(attr)} if self.send(attr).present?
+          xml.send(attr) { |x| x << send(attr)} if send(attr).present?
         end
       end
     end
@@ -124,10 +124,10 @@ class Blockly < Level
   XML_OPTIONS = Nokogiri::XML::Node::SaveOptions::NO_DECLARATION
 
   def normalize_xml(attr)
-    attr_val = self.send(attr)
+    attr_val = send(attr)
     if attr_val.present?
       normalized_attr = Nokogiri::XML(attr_val, &:noblanks).serialize(save_with: XML_OPTIONS).strip
-      self.send("#{attr}=", normalized_attr)
+      send("#{attr}=", normalized_attr)
     end
   end
 
@@ -137,7 +137,7 @@ class Blockly < Level
   end
 
   def pretty_block(block_name)
-    xml_string = self.send("#{block_name}_blocks")
+    xml_string = send("#{block_name}_blocks")
     self.class.pretty_print_xml(xml_string)
   end
 
@@ -196,7 +196,7 @@ class Blockly < Level
 
   # for levels with solutions
   def update_ideal_level_source
-    return if !self.respond_to?(:solution_blocks) || solution_blocks.blank?
+    return if !respond_to?(:solution_blocks) || solution_blocks.blank?
     self.ideal_level_source_id = LevelSource.find_identical_or_create(self, solution_blocks).id
   end
 
@@ -306,14 +306,14 @@ class Blockly < Level
   end
 
   def localized_instructions
-    if self.custom?
-      loc_val = I18n.t("data.instructions").try(:[], "#{self.name}_instruction".to_sym)
+    if custom?
+      loc_val = I18n.t("data.instructions").try(:[], "#{name}_instruction".to_sym)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
     else
-      val = [self.game.app, self.game.name].map { |name|
-        I18n.t("data.level.instructions").try(:[], "#{name}_#{self.level_num}".to_sym)
+      val = [game.app, game.name].map { |name|
+        I18n.t("data.level.instructions").try(:[], "#{name}_#{level_num}".to_sym)
       }.compact.first
       return val unless val.nil?
     end
@@ -332,7 +332,7 @@ class Blockly < Level
   # related videos collection).
   def autoplay_blocked_by_level?
     # Wrapped since we store our serialized booleans as strings.
-    self.never_autoplay_video == 'true'
+    never_autoplay_video == 'true'
   end
 
   def fix_examples

@@ -437,7 +437,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[10][1]); // default to warriors
+      dropdown.setValue(this.VALUES[14][1]); // default to warriors
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
