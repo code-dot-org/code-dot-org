@@ -239,6 +239,10 @@ en:
         How comfortable are you using spreadsheet tools to find relationships in data?: How comfortable are you using spreadsheet tools to find relationships in data?
         Not very comfortable: Not very comfortable
         Very comfortable!: Very comfortable!
+      U2 evaluation q10:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
       U2 evaluation q11:
         Students working in small groups to build knowledge: Students working in small groups to build knowledge
         Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
@@ -293,6 +297,11 @@ en:
         I am pretty new to it or have never done it at all.: I am pretty new to it or have never done it at all.
         I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
         Yes--- I make visualizations frequently!: Yes--- I make visualizations frequently!
+      U2 evaluation q9:
+        Do you have experience **using or interpreting data visualizations made by other people**?: Do you have experience **using or interpreting data visualizations made by other people**?
+        Eh, I look at them occasionally.: Eh, I look at them occasionally.
+        I more or less ignore or skim over data visualizations.: I more or less ignore or skim over data visualizations.
+        Yes--- I look at data visualizations all the time!: Yes--- I look at data visualizations all the time!
       U3 evaluation q1:
         I am new and would really love some support!: I am new and would really love some support!
         I generally understand but am not super confident.: I generally understand but am not super confident.
