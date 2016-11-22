@@ -39,7 +39,7 @@ We re-branded to <a href="https://gifs.com" target="_blank">gifs.com</a>, opened
 
 [col-50]
 
-## Where do you draw inspiration?
+## Where do you draw inspiration from?
 **Rory and Kieran:** Our parents have been the biggest help and inspiration in our lives. The hardships they've overcome, the entrepreneurial tasks they've undertaken, the examples they have set for us, and the support they give us is amazing.
 
 [/col-50]
@@ -60,3 +60,6 @@ We re-branded to <a href="https://gifs.com" target="_blank">gifs.com</a>, opened
 **Rory:** Challenges are part of life. We look at challenges as an opportunity to grow, and welcome any hurdle that is in our path.
 
 **Kieran:** The hardest part is taking the first step. If you love what you're doing, you will continue to walk forward. Take the first step and see what it feels like.
+
+## Print a poster of Rory and Kieran for your classroom
+[![image](/images/careers/rory and kieran_thumbnail.jpg)](/files/careers/rory-and-kieran.pdf)
