@@ -16,6 +16,7 @@ class HttpCache
     mc
     frozen
     gumball
+    minecraft
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
