@@ -5,7 +5,7 @@ module Seeded
   module ClassMethods
     # (USE WITH CAUTION) Deletes ALL data from the specified DB table
     def reset_db
-      self.delete_all # use delete instead of destroy so callbacks are not called
+      delete_all # use delete instead of destroy so callbacks are not called
       reset_autoincrement
     end
 
@@ -13,7 +13,7 @@ module Seeded
     # See: http://stackoverflow.com/a/5437720
     def reset_autoincrement
       connection = self.connection
-      table = self.table_name
+      table = table_name
       connection.execute("ALTER TABLE #{table} auto_increment = 1")
     end
 

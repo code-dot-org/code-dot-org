@@ -34,7 +34,7 @@ class BaseDSL
   end
 
   def self.parse(str, filename, name=nil)
-    object = self.new
+    object = new
     object.name(name) if name.present?
     object.instance_eval(str.to_ascii, filename)
     [object.parse_output, object.i18n_hash]
