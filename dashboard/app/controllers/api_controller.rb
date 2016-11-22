@@ -180,7 +180,6 @@ class ApiController < ApplicationController
         }
       end
       response[:disableSocialShare] = current_user.under_13?
-      response[:disablePostMilestone] = script.disable_post_milestone?
       response[:isHoc] = script.hoc?
 
       recent_driver = UserLevel.most_recent_driver(script, level, current_user)
