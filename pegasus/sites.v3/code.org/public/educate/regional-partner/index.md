@@ -1,6 +1,6 @@
 ---
 title: Code.org Regional Partner Program
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 video_player: true
 ---
 # Regional Partner Program 

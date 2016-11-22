@@ -1,6 +1,6 @@
 ---
 title: Regional Partner FAQs
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 ---
 <a id="top"></a>
 
