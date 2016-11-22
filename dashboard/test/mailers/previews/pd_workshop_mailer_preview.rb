@@ -38,6 +38,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_enrollment_receipt
   end
 
+  def organizer_enrollment_reminder
+    mail :organizer_enrollment_reminder, target: :workshop
+  end
+
+  def facilitator_enrollment_reminder
+    mail :facilitator_enrollment_reminder, target: :facilitator
+  end
+
   # The teacher_cancel_receipt has a variation for CSF. It's the same for all other courses.
   def teacher_cancel_receipt__general
     mail :teacher_cancel_receipt
@@ -53,6 +61,14 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   def detail_change_notification__csf
     mail :detail_change_notification, Pd::Workshop::COURSE_CSF
+  end
+
+  def organizer_detail_change_notification__csf
+    mail :organizer_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :workshop
+  end
+
+  def facilitator_detail_change_notification__csf
+    mail :facilitator_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :facilitator
   end
 
   def detail_change_notification__admin
@@ -74,15 +90,17 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
   private
 
-  def mail(method, course = nil, subject = nil, options: nil)
+  def mail(method, course = nil, subject = nil, options: nil, target: :enrollment)
     unless course
       course = DEFAULT_COURSE
       subject = DEFAULT_SUBJECT
     end
 
+    facilitator = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
     organizer = build :workshop_organizer, name: 'Oscar Organizer', email: 'oscar_organizer@example.net'
     workshop = build :pd_workshop, organizer: organizer, num_sessions: 2, course: course, subject: subject,
-      location_name: 'Code.org office', location_address: '1501 4th Ave, Suite 900, Seattle, WA'
+      location_name: 'Code.org office', location_address: '1501 4th Ave, Suite 900, Seattle, WA',
+      facilitators: [facilitator]
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 
@@ -93,10 +111,19 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
 
     enrollment.assign_code
 
-    if options
-      Pd::WorkshopMailer.send(method, enrollment, options)
-    else
-      Pd::WorkshopMailer.send(method, enrollment)
+    case target
+      when :enrollment
+        if options
+          Pd::WorkshopMailer.send(method, enrollment, options)
+        else
+          Pd::WorkshopMailer.send(method, enrollment)
+        end
+      when :workshop
+        Pd::WorkshopMailer.send(method, workshop)
+      when :facilitator
+        Pd::WorkshopMailer.send(method, facilitator, workshop)
+      else
+        raise "unknown target"
     end
   end
 end
