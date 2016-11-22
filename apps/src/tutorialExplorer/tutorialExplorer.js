@@ -129,7 +129,7 @@ const TutorialExplorer = React.createClass({
    */
   componentDidUpdate() {
     if (this.shouldScrollToTop) {
-      $('html, body').animate({scrollTop: $("#tutorials").offset().top});
+      $('html, body').animate({scrollTop: $(this.allTutorials).offset().top});
       this.shouldScrollToTop = false;
     }
   },
@@ -402,7 +402,7 @@ const TutorialExplorer = React.createClass({
           )}
 
           {this.state.showingAllTutorials && (
-            <div>
+            <div ref={allTutorials => this.allTutorials = allTutorials}>
               <FilterHeader
                 onUserInput={this.handleUserInputSortBy}
                 sortBy={this.state.sortBy}
