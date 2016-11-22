@@ -15,7 +15,7 @@ title: Hour of Code Role Models
 
 [col-50]
 
-<img src="/images/careers/fit-300/maddy.jpg">
+<img style="padding-left: 50px;" src="/images/careers/fill-400x300/maddy.jpg">
 
 [/col-50]
 
@@ -24,51 +24,33 @@ title: Hour of Code Role Models
 </br>
 </br>
 
-[col-50]
+
 
 ## So, what is smart apparel? 
-**Maddy**: I write code for controlling smart garments like this one → 
-This is a **smart garment** because code controls this vest to read information from the wearer. 
+**Maddy:** I write code for controlling smart garments, meaning code controls the piece of clothing to read information from the wearer. 
 
-[/col-50]
-
-[col-50]
-
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-
-<img src="/images/careers/fit-200/maddy2.png">
-
-</div>
-
-[/col-50]
-
-<div style="clear:both;"></div>
-
-I also write code for **computational design**! Making patterns using code is quicker than drawing thousands of individual lines in a computer using a software program. With code, I can make hundreds of variations quickly and make super accurate geometries! Here’s how: 
+I also write code for computational design! Making patterns using code is quicker than drawing thousands of individual lines in a computer using a software program. With code, I can make hundreds of variations quickly and make super accurate geometries! Here’s how: 
 
 [col-33]
 
-I write code to generate this ⬇</br>
-![image](/images/careers/fit-300/maddy4.png)
+**I write code to generate this:**</br>
+<img style="padding-top: 50px;" src="/images/careers/fit-300/maddy4.png">
 
 [/col-33]
 
 [col-33]
 
-Which is used on a garment like this ⬇</br>
-![image](/images/careers/fit-300/maddy3.png)
+**Which is used on a garment like this:**</br>
+</br>
+</br>
+<img src="/images/careers/fit-300/maddy3.png">
 
 [/col-33]
 
 [col-33]
 
-For a collection like this ⬇</br>
-![image](/images/careers/fit-300/maddy1.png)
+**For a collection like this:**</br>
+<img style="padding-top: 25px;" src="/images/careers/fit-300/maddy1.png">
 
 [/col-33]
 
@@ -83,7 +65,10 @@ The creative coding community is a huge inspiration to me. I love watching video
 </br>
 </br>
 
+
 ## What would you tell the innovators of tomorrow?
+
+[col-50]
 
 **Maddy:** Creating the future begins today, so tinker and experiment as much as you can in the fields that inspire you. 
 
@@ -91,5 +76,15 @@ As a student, you are at a magnificent time in your life where you can design wh
 
 I’m always inspired by this quote: 
 
->>*“Don't assume that what we currently think is out there is the full story. Go after the dark matter in whatever field you choose to explore. There are unknowns all around us and they're just waiting to be discovered.”
->>- Nathan Wolfe*
+>>***“Don't assume that what we currently think is out there is the full story. Go after the dark matter in whatever field you choose to explore. There are unknowns all around us and they're just waiting to be discovered.”
+>>- Nathan Wolfe***
+
+[/col-50]
+
+[col-50]
+
+<img style="padding-left:50px;" src="/images/careers/fill-400x350/madison.jpg">
+
+[/col-50]
+
+<div style="clear:both;"></div>

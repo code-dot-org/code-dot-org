@@ -37,9 +37,17 @@ function showDisabledBubblesModal() {
   ReactDOM.render(<DisabledBubblesModal/>, div[0]);
 }
 
-progress.showDisabledButtonsAlert = function () {
+/**
+ * If milestone posts are disabled, show an alert about progress not being tracked.
+ */
+progress.showDisabledBubblesAlert = function () {
   const store = getStore();
-  const isHocScript = store.getState().progress.isHocScript;
+  const { isHocScript, disablePostMilestone } = store.getState().progress;
+  const showAlert = disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI');
+  if (!showAlert) {
+    return;
+  }
+
   const div = $('<div>').css({
     position: 'absolute',
     left: 0,
@@ -94,8 +102,8 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
     store.dispatch(setUserSignedIn(signedIn));
   }
   store.dispatch(setIsHocScript(isHocScript));
-  if (signedIn && (disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI'))) {
-    progress.showDisabledButtonsAlert();
+  if (signedIn) {
+    progress.showDisabledBubblesAlert();
   }
 
   ReactDOM.render(

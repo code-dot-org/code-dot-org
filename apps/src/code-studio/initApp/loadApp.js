@@ -327,7 +327,7 @@ function loadAppAsync(appOptions) {
           store.dispatch(setUserSignedIn(signedInUser));
           clientState.cacheUserSignedIn(signedInUser);
           if (signedInUser) {
-            progress.showDisabledButtonsAlert();
+            progress.showDisabledBubblesAlert();
           }
         }
       }).fail(loadLastAttemptFromSessionStorage);
