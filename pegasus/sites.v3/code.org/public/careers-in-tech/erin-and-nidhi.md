@@ -73,3 +73,4 @@ Don't be afraid to try something many, many times until it really clicks. If som
 
 ## Print a poster of Erin and Nidhi for your classroom
 [![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
+
