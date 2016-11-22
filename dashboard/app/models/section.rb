@@ -48,7 +48,7 @@ class Section < ActiveRecord::Base
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
   def workshop_section?
-    Pd::Workshop::SECTION_TYPES.include? self.section_type
+    Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
   def user_must_be_teacher
@@ -73,13 +73,13 @@ class Section < ActiveRecord::Base
   end
 
   def add_student(student, move_for_same_teacher: true)
-    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: self.user_id))
+    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
       # new one
       follower.update_attributes!(section: self)
     else
-      follower = Follower.find_or_create_by!(user_id: self.user_id, student_user: student, section: self)
+      follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
     end
     follower
   end

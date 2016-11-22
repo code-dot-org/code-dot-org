@@ -9,7 +9,7 @@ require_relative './circle_project'
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[self.map {|k, v| yield k, v }]
+    Hash[map {|k, v| yield k, v }]
   end
 end
 

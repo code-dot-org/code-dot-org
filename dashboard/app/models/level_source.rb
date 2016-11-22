@@ -56,16 +56,16 @@ class LevelSource < ActiveRecord::Base
   end
 
   def standardized?
-    !self.data.include? XMLNS_STRING
+    !data.include? XMLNS_STRING
   end
 
   # Get the id of the LevelSource with the standardized version of self.data.
   def get_standardized_id
     if standardized?
-      self.id
+      id
     else
       data = self.data.gsub(XMLNS_STRING, '')
-      LevelSource.where(level_id: self.level_id,
+      LevelSource.where(level_id: level_id,
                         data: data,
                         md5: Digest::MD5.hexdigest(data)).first_or_create.id
     end
@@ -77,7 +77,7 @@ class LevelSource < ActiveRecord::Base
     if level.game.name == 'Flappy' && data.include?('flappy_whenRunButtonClick')
       self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
       self.md5 = Digest::MD5.hexdigest(data)
-      self.save!
+      save!
     end
   end
 end
