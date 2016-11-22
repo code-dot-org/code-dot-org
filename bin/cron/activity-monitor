@@ -113,7 +113,7 @@ class Monitor
 
   def self.collate(params)
     collater = Collater.new
-    self.new(params).each_row do |level, tag, browser, locale|
+    new(params).each_row do |level, tag, browser, locale|
       collater.insert level, tag, browser, locale
     end
     collater

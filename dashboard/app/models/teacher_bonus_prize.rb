@@ -26,7 +26,7 @@ class TeacherBonusPrize < ActiveRecord::Base
     elsif !user.teacher_bonus_prize_earned
       raise "assign_to_user() called when teacher has not earned bonus prize"
     else
-      prize = self.where(user_id: nil, prize_provider_id: prize_provider_id).lock(true).first
+      prize = where(user_id: nil, prize_provider_id: prize_provider_id).lock(true).first
       if prize
         prize.transaction do
           user.update_attributes!(:teacher_bonus_prize_id => prize.id)

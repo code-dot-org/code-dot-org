@@ -170,14 +170,14 @@ class CDOImpl < OpenStruct
     return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
     return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
 
-    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
     return domain if rack_env?(:production)
 
     # our HTTPS wildcard certificate only supports *.code.org
     # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
     sep = (domain.include?('.code.org')) ? '-' : '.'
     return "localhost#{sep}#{domain}" if rack_env?(:development)
-    return "translate#{sep}#{domain}" if self.name == 'crowdin'
+    return "translate#{sep}#{domain}" if name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
   end
 
