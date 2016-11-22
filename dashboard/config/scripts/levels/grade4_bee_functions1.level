@@ -30,6 +30,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is more than one right answer to this puzzle.\",\"hint_id\":\"grade4_bee_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78051678003b3a6126aecdfdb0bed3ec/grade4_bee_functions1.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

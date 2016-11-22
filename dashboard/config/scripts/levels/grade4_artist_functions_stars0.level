@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "We will come back to functions shortly. Let's take a break to practice making this star. You can make this drawing by adding a turn and a repeat block.",
+    "instructions": "You can make this drawing by adding a repeat block.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "ideal": "5",
     "embed": "false",
-    "markdown_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. You can make this drawing by adding a turn and a repeat block.",
+    "markdown_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \r\n\r\nYou can make this drawing by adding a repeat block.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,6 +33,8 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.\\n\\nIf you can't remember what the starter code was, click \\\"start over\\\" in the upper right corner of the workspace.\",\"hint_id\":\"grade4_artist_functions_stars0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f19457b322a3d1c9cc5f440af586e26/grade4_artist_functions_stars0.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -52,6 +54,12 @@
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveBackward</title>
                   <title name="VALUE">25</title>
+                  <next>
+                    <block type="draw_turn_by_constant_dropdown">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE" config="45,60,90,120,180">45</title>
+                    </block>
+                  </next>
                 </block>
               </next>
             </block>
@@ -61,7 +69,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
+        <block type="draw_move_by_constant" limit="2">
           <title name="DIR">moveForward</title>
           <title name="VALUE">25</title>
         </block>

@@ -104,8 +104,8 @@
     "instructions_important": "false",
     "makerlab_enabled": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a snowman.  We check that the student:\r\n\r\n* set the `penColor` at least twice\r\n* made 4 dots\r\n* moved forward twice."
+    "teacher_markdown": "Validation note: we don't check to see if the student actually drew a snowman.  We check that the student:\r\n\r\n* set the `penColor` at least twice\r\n* made 4 dots\r\n* moved forward twice.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

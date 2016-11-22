@@ -102,10 +102,10 @@
         "message": "App Lab is expecting that you will define drawTrinagle to moveFoward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started."
       }
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

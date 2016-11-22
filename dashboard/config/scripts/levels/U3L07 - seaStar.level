@@ -185,19 +185,6 @@
       },
       {
         "entries": [
-          "[forTest]",
-          "drawSeaStar:1",
-          "[forInit]",
-          "[forTest]",
-          "[forUpdate]",
-          "[forUpdate]"
-        ],
-        "matchType": "inexact",
-        "minTimes": 3,
-        "message": "App lab is expecting that the drawSeaStar function will contain a loop.  See part one of the instructions."
-      },
-      {
-        "entries": [
           "drawAllFish:0",
           "[forInit]"
         ],
@@ -237,6 +224,9 @@
     ],
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllSeaStars` function\r\n* called `drawSeaStar` inside a loop that runs at least 5 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, fish, etc.).\r\n\r\nWe **do not check** whether `drawSeaStar` uses a loop as part 1 of the instructions indicate.",
     "contained_level_names": null
   },
   "published": true,

@@ -204,6 +204,10 @@
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllFish` function\r\n* That `drawFish(size, r, g, b)` is called inside a loop that runs at least 15 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "contained_level_names": null
   },
   "published": true,
