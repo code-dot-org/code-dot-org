@@ -5,6 +5,7 @@ import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
 import i18n from './locale';
+/* global ga */
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -109,6 +110,10 @@ const TutorialDetail = React.createClass({
     }
   },
 
+  startTutorialClicked: function (shortCode) {
+    ga('send', 'event', 'learn', 'start', shortCode);
+  },
+
   render() {
     if (!this.props.showing) {
       // Enable body scrolling.
@@ -183,7 +188,11 @@ const TutorialDetail = React.createClass({
                 style={styles.tutorialDetailModalBody}
               >
                 {!this.props.disabledTutorial && (
-                  <a href={this.props.item.launch_url} target="_blank">
+                  <a
+                    href={this.props.item.launch_url}
+                    target="_blank"
+                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                  >
                     {imageComponent}
                   </a>
                 )}
@@ -213,7 +222,11 @@ const TutorialDetail = React.createClass({
                     </div>
                   )}
                   {!this.props.disabledTutorial && (
-                    <a href={this.props.item.launch_url} target="_blank">
+                    <a
+                      href={this.props.item.launch_url}
+                      target="_blank"
+                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                    >
                       <button style={{marginTop: 20}}>Start</button>
                     </a>
                   )}

@@ -1,13 +1,13 @@
 ---
 title: Code.org Regional Parter Program
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 ---
 
 # Regional Partner Application #
 
 We're so excited that you are interested in becoming a Code.org Regional Partner for the 2017-18 school year and look forward to starting to work with you this Fall!
 
-Please note that we will only accept applicants from regions in the United States where we do not currently have a Regional Partner. Check out a map of those regions <a href="/educate/professional-learning-partner/partners" target=_blank>here</a>. 
+Please note that we will only accept applicants from regionss in the United States where we do not currently have a Regional Partner. Check out a map of those regions <a href="/educate/professional-learning-partner/partners" target=_blank>here</a>. 
 
 ### Application Process ###
 

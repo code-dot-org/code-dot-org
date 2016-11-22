@@ -71,6 +71,7 @@ const WorkshopIndex = React.createClass({
         <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended">
           <WorkshopTable
             showOrganizer={showOrganizer}
+            surveyBaseUrl={isPlp ? "/organizer_survey_results" : "/survey_results"}
           />
         </WorkshopTableLoader>
       </div>

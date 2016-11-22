@@ -27,8 +27,14 @@ namespace :package do
 
     desc 'Build and test apps package and upload to S3.'
     task 'build' do
-      raise "Won't build apps with staged changes" if RakeUtils.git_staged_changes?(apps_dir)
+      # Don't build apps if there are staged changes
+      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
+
       HipChat.wrap('Building apps') { Rake::Task['build:apps'].invoke }
+
+      # Check that building apps did not generate unexpected changes either.
+      Rake::Task['circle:check_for_unexpected_apps_changes'].invoke
+
       HipChat.wrap('Testing apps') { Rake::Task['test:apps'].invoke }
 
       # upload to s3

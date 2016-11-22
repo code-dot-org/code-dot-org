@@ -1,11 +1,11 @@
 ---
 title: Code.org Regional Partner Program
-nav: plc_plp_nav
+nav: plc_regional_partner_nav
 
 ---
 # Regional Partner Term Sheet #
 
-
+Note: The following is an example term sheet based on the commitments made by/to 2016 partners. An updated term sheet will be released with the new application in April 2017.
 
 ## Your Commitment (Regional Partner)
 
@@ -61,7 +61,7 @@ Organize and host a 1-day workshop for counselors and administrators of teachers
 - Support an online community for all programs.
 
 ### Funding ###
-- For each cohort of teachers, Code.org will work with the partner to determine how much funding to provide based on demonstrated need to cover the following: an onsite staffer, facilitator compensation, food, and venue <a href="https://docs.google.com/spreadsheets/d/1zuxMqmkhVOzAu22YgOEX61dG4xfgnw_jG0Z0-E-DMzY/edit#gid=0" target=_blank>(see example budget here)</a>. You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
+- For each cohort of teachers, Code.org will work with the partner to determine how much funding to provide based on demonstrated need to cover the following: an onsite staffer, facilitator compensation, food, and venue. You may work out a different schedule of workshops with the local school districts, as long as it’s within these costs.
 - Provide access to workshop supplies as well as materials for teachers such as a virtual curriculum guide containing course lesson plans, certificates of completion, and classroom supplies for some activities.
 
 ### Metrics/Evaluation ###
