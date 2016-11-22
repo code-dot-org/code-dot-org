@@ -155,7 +155,7 @@ class ClassSubmission
 
   # OPTIONAL: Enable searching the SOLR index
   def self.solr_query(params)
-    query = "kind_s:\"#{self.name}\" && (published_s:\"approved\" || review_s:\"approved\")"
+    query = "kind_s:\"#{name}\" && (published_s:\"approved\" || review_s:\"approved\")"
 
     coordinates = params['coordinates']
     distance = 100

@@ -87,7 +87,7 @@ class Video < ActiveRecord::Base
       path = "/c/video_thumbnails/#{id}.jpg"
       return path if File.exist? dashboard_dir('public', path)
     end
-    self.thumbnail_url
+    thumbnail_url
   end
 
   def localized_name
