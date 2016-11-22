@@ -118,7 +118,6 @@ const TutorialDetail = React.createClass({
     if (!this.props.showing) {
       // Enable body scrolling.
       $('body').css('overflow', 'auto');
-
       return null;
     }
 
