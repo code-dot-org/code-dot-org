@@ -272,6 +272,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.send_reminder_for_upcoming_in_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
@@ -279,7 +280,6 @@ class Pd::Workshop < ActiveRecord::Base
           email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
           email.deliver_now
         rescue => e
-          # Collect errors, but do not stop batch. Rethrow all errors below.
           errors << "teacher enrollment #{enrollment.id} - #{e.message}"
         end
       end
@@ -293,7 +293,6 @@ class Pd::Workshop < ActiveRecord::Base
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => e
-        # Collect errors, but do not stop batch. Rethrow all errors below.
         errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
     end
