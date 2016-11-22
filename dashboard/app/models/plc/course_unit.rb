@@ -69,6 +69,7 @@ class Plc::CourseUnit < ActiveRecord::Base
     default_module_assignments
   end
 
+  # Use this command to unblock a course unit and enable enrolled teachers to start making progress in it
   def launch
     update(started: true)
 
