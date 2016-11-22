@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-var redux = require('./redux');
+import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -48,7 +48,6 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
-var combineReducers = require('redux').combineReducers;
 
 var copyrightStrings;
 
@@ -228,11 +227,6 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-// TODO: once code-studio and apps share common modules in the same bundle,
-// get rid of this window nonsense.
-module.exports = window.StudioApp = window.StudioApp || {
-  singleton: new StudioApp()
-};
 
 /**
  * Configure StudioApp options
@@ -281,8 +275,9 @@ StudioApp.prototype.configureRedux = function (reducers) {
  * runs).
  */
 StudioApp.prototype.createReduxStore_ = function () {
-  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
-  this.reduxStore = redux.createStore(combined);
+  registerReducers(_.assign({}, commonReducers, this.reducers_));
+
+  this.reduxStore = getStore();
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
@@ -2892,3 +2887,5 @@ StudioApp.prototype.showRateLimitAlert = function () {
     share: !!this.share,
   });
 };
+
+export const singleton = new StudioApp();

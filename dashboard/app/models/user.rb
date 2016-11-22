@@ -390,14 +390,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.name_from_omniauth(raw_name)
+    return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
+    # clever returns a hash instead of a string for name
+    "#{raw_name['first']} #{raw_name['last']}".squish
+  end
+
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
-    def self.name_from_omniauth(raw_name)
-      return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
-      # clever returns a hash instead of a string for name
-      "#{raw_name['first']} #{raw_name['last']}".squish
-    end
-
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
@@ -1083,6 +1083,7 @@ class User < ActiveRecord::Base
   end
 
   def show_race_interstitial?(ip = nil)
-    RaceInterstitialHelper.show_race_interstitial?(self, ip)
+    ip_to_check = ip || current_sign_in_ip
+    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
   end
 end

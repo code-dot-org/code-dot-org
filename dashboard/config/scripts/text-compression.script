@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Text Compression'
 named_level 'Text Compression'
 named_level 'Widget: Text Compression'
