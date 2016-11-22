@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 The whole point is to be able to handle cases where you can’t know ahead of time whether or when certain conditions will exist in your program.  So you have to write code to say something like: “Okay, at this point in the program, if *such and such* is true, then do *this*, otherwise do *that*.”
 
 
-### Practice with the AP Pseduocode
+### Practice with the AP Pseudocode
 
 For the activities that follow, we’re going to get our feet wet with if-statements using the **AP CS Principles pseudocode** language.  To start we're going to use the IF/ELSE structures, but to keep things simple we'll only use the Robot conditional expression `CAN_MOVE (direction)` - which evaluates to **true** or **false**.
 

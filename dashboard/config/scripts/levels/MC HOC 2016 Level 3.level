@@ -43,7 +43,7 @@
     "use_score": "false",
     "use_verification_function_for_failure": "false",
     "video_key": "mc_2016_loops",
-    "instructions_important": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
