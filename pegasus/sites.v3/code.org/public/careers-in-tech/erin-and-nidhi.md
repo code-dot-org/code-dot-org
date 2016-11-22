@@ -2,12 +2,21 @@
 title: Hour of Code Role Models
 ---
 
-# We're Nidhi and Erin...
-**... and we're *Spitfire strong* because of code**
+[solid-block-header]
+
+We're Nidhi and Erin...
+
+[/solid-block-header]
+
+[solid-block-subheader]
+
+... and we're *Spitfire strong* because of code
+
+[/solid-block-subheader]
 
 [col-50]
 
-**Erin Parker and Nidhi Kulkarni** learned about computer science at different times in their lives. They teamed up to solve a problem they’re passionate about. Through technology, they found a way to empower potentially millions of women to learn weightlifting and other varieties of strength training. The app gives you daily workouts, tips, and encouragement—for beginners or experts.
+**Erin Parker and Nidhi Kulkarni** learned about computer science at different times in their lives. They teamed up to solve a problem they’re passionate about. Through technology, they found a way to empower potentially millions of women to learn weightlifting and other varieties of strength training. The app gives you daily workouts, tips, and encouragement&mdash;for beginners or experts.
 
 
 >>***“Our vision is a world where women are half of the weight room and where we train without limit or restraint to build our strength and power.”*** 
@@ -18,13 +27,13 @@ title: Hour of Code Role Models
 
 [col-50]
 
-<img style="padding-left: 50px;" src="/images/careers/fill-400x300/nidhierin.jpg">
+<img style="padding-left: 85px;" src="/images/careers/fill-400x300/nidhierin.jpg">
 
 [/col-50]
 
 <div style="clear:both;"></div>
  
-**Erin and Nidhi:** The most exciting part of Spitfire Athlete is that it impacts women's lives at the personal level, all over the world. We have helped women lift more than their body weight, learn how to do their first pull-up, compete in their first triathlons, and train to overcome anorexia. Our vision is a world where women are half of the weight room and where we train without limit or restraint to build our strength and power.  
+**Erin and Nidhi:** The most exciting part of <a href="http://spitfireathlete.com/" target="_blank">Spitfire Athlete</a> is that it impacts women's lives at the personal level, all over the world. We have helped women lift more than their body weight, learn how to do their first pull-up, compete in their first triathlons, and train to overcome anorexia. Our vision is a world where women are half of the weight room and where we train without limit or restraint to build our strength and power.  
 
 ## Tell us a bit about your own personal journeys into technology.
 **Erin’s story**: I started Spitfire because I was frustrated with the quality and message behind many women's fitness resources. They were more about exercising to look a certain way and not about how strong and powerful you can be. 
