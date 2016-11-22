@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2016-11-22T05:12:19.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "video_key": "csp_applab_turtle",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "markdown_instructions": "The video below is from lesson 4, and introduces App Lab and the Turtle. "
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
