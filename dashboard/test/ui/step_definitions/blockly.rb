@@ -110,6 +110,7 @@ end
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
+  # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute('block-id')
   actual_parent_id.should eql get_block_id(parent)
 end
@@ -117,6 +118,7 @@ end
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
+  # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute('block-id')
   actual_parent_id.should_not eql get_block_id(parent)
 end
