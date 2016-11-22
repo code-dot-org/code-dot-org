@@ -42,7 +42,7 @@
     "failure_message_override": "Use the arrow keys to walk to the sheep and press space bar or click the game board to use the sheep. And, don’t forget to add the 'Drop' block to your code.",
     "use_player": "true",
     "use_score": "false",
-    "instructions_important": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,

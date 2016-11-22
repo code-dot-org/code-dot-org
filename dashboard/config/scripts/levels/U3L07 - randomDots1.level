@@ -174,11 +174,11 @@
       }
     ],
     "fail_on_lint_errors": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Validation note: we don't check to see if the screen is filled. We only check that some loop is runs at least 1500 times."
+    "teacher_markdown": "Validation note: we don't check to see if the screen is filled. We only check that some loop is runs at least 1500 times.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
