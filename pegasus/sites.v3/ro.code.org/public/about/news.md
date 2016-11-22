@@ -15,6 +15,16 @@ social:
 
 # Noutăți
 
+## <b>Hour of Code revine în 2016 – Programarea este accesibilă tuturor!</b>
+
+- [<b>Comunicat de presa</b>](https://drive.google.com/open?id=0ByKUp0T0IcAMZnh3WmVfTmRaTUU) 
+
+
+## <b>Iti multumim Calin!</b>
+<b>Calin Goia sustine Hour of Code 2016 (Video)</b>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IG12z6qs_Ic" frameborder="0" allowfullscreen></iframe>
+
 ## <b>Președintele României, domnul Klaus Iohannis, susține campania Hour of Code 2015, cel mai mare eveniment de educaţie din lume.</b>
 În acest sens, Președintele Klaus Iohannis a participat vineri, 4 decembrie a.c., la Palatul Cotroceni, alături de un grup de 23 de copii, cu vârste cuprinse între 5 și 14 ani, la o oră de programare.
 

@@ -8,6 +8,23 @@ class UserTest < ActiveSupport::TestCase
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
 
+  test 'make_teachers_21' do
+    teacher = create :teacher, birthday: Time.now - 18.years
+    assert_equal '21+', teacher.age
+  end
+
+  test 'normalize_email' do
+    teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
+    assert_equal 'caps@example.com', teacher.email
+  end
+
+  test 'hash_email' do
+    teacher = create :teacher
+    teacher.update!(email: 'hash_email@example.com')
+    assert_equal User.hash_email('hash_email@example.com'),
+      teacher.hashed_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -1365,58 +1382,68 @@ class UserTest < ActiveSupport::TestCase
     assert student.account_age_days == 10
   end
 
+  def mock_geocoder_result(result)
+    mock_us_object = OpenStruct.new(:country_code => result)
+    Geocoder.stubs(:search).returns([mock_us_object])
+  end
+
   test 'do not show race interstitial to teacher' do
+    mock_geocoder_result('US')
     teacher = create :teacher, created_at: DateTime.now - 8
-    refute teacher.show_race_interstitial?
+    refute teacher.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts under 13' do
+    mock_geocoder_result('US')
     student = User.create(@good_data_young)
     student.created_at = DateTime.now - 8
-    refute student.show_race_interstitial?
+    refute student.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts less than one week old' do
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 3
-    refute student.show_race_interstitial?
+    refute student.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts that have already entered race information' do
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
     student.races = %w(white black)
-    refute student.show_race_interstitial?
+    refute student.show_race_interstitial?('ignored_ip')
   end
 
   test 'do not show race interstitial to user accounts that have closed the dialog already' do
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
     student.races = %w(closed_dialog)
-    refute student.show_race_interstitial?
+    refute student.show_race_interstitial?('ignored_ip')
   end
 
-  test 'show race interstitial if IP address is nil' do
+  test 'do not show race interstitial if IP address is nil' do
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
     mock_ip = nil
-    assert RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
+    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
   end
 
   test 'do not show race interstitial to non-US users' do
-    mock_non_us_object = OpenStruct.new(:country_code => 'CA')
-    Geocoder.stubs(:search).returns([mock_non_us_object])
+    mock_geocoder_result('CA')
     student = create :student, created_at: DateTime.now - 8
-    unused_ip = '127.0.0.1'
+    unused_ip = 'ignored'
     refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
   end
 
   test 'show race interstitial to US users' do
-    mock_us_object = OpenStruct.new(:country_code => 'US')
-    Geocoder.stubs(:search).returns([mock_us_object])
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    unused_ip = '8.8.8.8'
+    unused_ip = 'ignored'
     assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
   end
 
   test 'show race interstitial for student over 13 with account more than 1 week old' do
+    mock_geocoder_result('US')
     student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?
+    assert student.show_race_interstitial?('ignored_ip')
   end
 end

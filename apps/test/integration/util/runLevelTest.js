@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
-import { getConfigRef, getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 

@@ -32,6 +32,8 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
+    "markdown_instructions": "What happens if you also turn 90 degrees between circles?\r\n\r\n(To get this image, you still need to jump 50 pixels between circles)",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To do this easily:\\n\\n- repeat 4 times\\n  - make a cirlce\\n  - jump forward 50 pixels\\n  - turn right 90 degrees\",\"hint_id\":\"courseD_artist_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ffbc8926c065d171f5e494b23013ca97/courseD_artist_nestedLoops5.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -55,13 +57,13 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="1,90,180">90</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="1,90,180">1</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -99,9 +101,9 @@
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">1</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnLeft</title>
-                              <title name="VALUE">1</title>
+                              <title name="VALUE" config="1,90,180">1</title>
                             </block>
                           </next>
                         </block>
@@ -111,9 +113,9 @@
                           <title name="DIR">jumpForward</title>
                           <title name="VALUE">50</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
+                              <title name="VALUE" config="1,90,180">90</title>
                             </block>
                           </next>
                         </block>

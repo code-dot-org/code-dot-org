@@ -22,7 +22,6 @@ var generateSetterCode = function (ctx, name) {
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
-  var isBasketball = skin.id === 'basketball';
 
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
@@ -141,7 +140,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(isBasketball ? msg.basketballWhenBallMissesPaddle() : msg.whenBallMissesPaddle());
+        .appendTitle(skin.blockMsgs.paddleMiss);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallMissesPaddleTooltip());
@@ -159,10 +158,10 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(isBasketball ? msg.basketballWhenPaddleCollided() : msg.whenPaddleCollided());
+        .appendTitle(skin.blockMsgs.paddleCollide);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenPaddleCollidedTooltip());
+      this.setTooltip(skin.blockMsgs.paddleCollideTooltip);
     }
   };
 
@@ -335,11 +334,10 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(isBasketball ? msg.basketballLaunchBall() : msg.launchBall());
+      this.appendDummyInput().appendTitle(skin.blockMsgs.launchBall);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(isBasketball ? msg.basketballLaunchBallTooltip() : msg.launchBallTooltip());
+      this.setTooltip(skin.blockMsgs.launchBallTooltip);
     }
   };
 
@@ -388,17 +386,17 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.setPaddleSpeedTooltip());
+      this.setTooltip(skin.blockMsgs.paddleSpeedTooltip);
     }
   };
 
   blockly.Blocks.bounce_setPaddleSpeed.VALUES =
-      [[isBasketball ? msg.basketballSetPaddleSpeedRandom() : msg.setPaddleSpeedRandom(), 'random'],
-       [isBasketball ? msg.basketballSetPaddleSpeedVerySlow() : msg.setPaddleSpeedVerySlow(), 'Bounce.PaddleSpeed.VERY_SLOW'],
-       [isBasketball ? msg.basketballSetPaddleSpeedSlow() : msg.setPaddleSpeedSlow(), 'Bounce.PaddleSpeed.SLOW'],
-       [isBasketball ? msg.basketballSetPaddleSpeedNormal() : msg.setPaddleSpeedNormal(), 'Bounce.PaddleSpeed.NORMAL'],
-       [isBasketball ? msg.basketballSetPaddleSpeedFast() : msg.setPaddleSpeedFast(), 'Bounce.PaddleSpeed.FAST'],
-       [isBasketball ? msg.basketballSetPaddleSpeedVeryFast() : msg.setPaddleSpeedVeryFast(), 'Bounce.PaddleSpeed.VERY_FAST']];
+      [[skin.blockMsgs.paddleSpeedRandom, 'random'],
+       [skin.blockMsgs.paddleSpeedVerySlow, 'Bounce.PaddleSpeed.VERY_SLOW'],
+       [skin.blockMsgs.paddleSpeedSlow, 'Bounce.PaddleSpeed.SLOW'],
+       [skin.blockMsgs.paddleSpeedNormal, 'Bounce.PaddleSpeed.NORMAL'],
+       [skin.blockMsgs.paddleSpeedFast, 'Bounce.PaddleSpeed.FAST'],
+       [skin.blockMsgs.paddleSpeedVeryFast, 'Bounce.PaddleSpeed.VERY_FAST']];
 
   generator.bounce_setPaddleSpeed = function (velocity) {
     return generateSetterCode(this, 'setPaddleSpeed');
@@ -424,9 +422,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), 'random'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundRetro(), '"retro"']];
+    [[msg.setBackgroundRandom(), 'random']].concat(
+      skin.backgrounds.map((background) =>
+        [msg.setBackground({background: background}), `"${background}"`]));
 
   generator.bounce_setBackground = function () {
     return generateSetterCode(this, 'setBackground');
@@ -479,9 +477,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBall.VALUES =
-      [[msg.setBallRandom(), 'random'],
-       [msg.setBallHardcourt(), '"hardcourt"'],
-       [msg.setBallRetro(), '"retro"']];
+    [[msg.setBallRandom(), 'random']].concat(
+      skin.balls.map((ball) => [msg.setBall({ball: ball}), `"${ball}"`]));
 
   generator.bounce_setBall = function () {
     return generateSetterCode(this, 'setBall');
@@ -526,7 +523,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()
-          .appendTitle(msg.basketballSetPaddle())
+          .appendTitle(skin.blockMsgs.setPaddle)
           .appendTitle(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -536,8 +533,7 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setPaddleDropdown.VALUES =
-      [[skin.paddle, '"hardcourt"'],
-       [skin.hand_2.paddle, '"hand_2"']];
+      skin.paddles.map((paddle) => [skin[paddle].paddle, `"${paddle}"`]);
 
   generator.bounce_setPaddleDropdown = function () {
     return generateSetterCode(this, 'setPaddle');

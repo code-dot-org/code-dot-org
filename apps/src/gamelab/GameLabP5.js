@@ -97,25 +97,28 @@ GameLabP5.prototype.init = function (options) {
   // positions before reporting touch coordinates
   //
   // NOTE: _updateNextTouchCoords() is nearly identical, but calls a modified
-  // getTouchInfo() function below that can return undefined
+  // getTouchInfo() function below that scales the touch postion with the play
+  // space and can return undefined
   window.p5.prototype._updateNextTouchCoords = function (e) {
-    if (e.type === 'mousedown' ||
-        e.type === 'mousemove' ||
+    var x = this.touchX;
+    var y = this.touchY;
+    if (e.type === 'mousedown' || e.type === 'mousemove' ||
         e.type === 'mouseup' || !e.touches) {
-      this._setProperty('_nextTouchX', this._nextMouseX);
-      this._setProperty('_nextTouchY', this._nextMouseY);
+      x = this.mouseX;
+      y = this.mouseY;
     } else {
       if (this._curElement !== null) {
         var touchInfo = getTouchInfo(this._curElement.elt, e, 0);
-
         if (touchInfo) {
-          this._setProperty('_nextTouchX', touchInfo.x);
-          this._setProperty('_nextTouchY', touchInfo.y);
+          x = touchInfo.x;
+          y = touchInfo.y;
         }
 
         var touches = [];
         var touchIndex = 0;
         for (var i = 0; i < e.touches.length; i++) {
+          // Only some touches are valid - only push valid touches into the
+          // array for the `touches` property.
           touchInfo = getTouchInfo(this._curElement.elt, e, i);
           if (touchInfo) {
             touches[touchIndex] = touchInfo;
@@ -124,6 +127,13 @@ GameLabP5.prototype.init = function (options) {
         }
         this._setProperty('touches', touches);
       }
+    }
+    this._setProperty('touchX', x);
+    this._setProperty('touchY', y);
+    if (!this._hasTouchInteracted) {
+      // For first draw, make previous and next equal
+      this._updateTouchCoords();
+      this._setProperty('_hasTouchInteracted', true);
     }
   };
 
@@ -147,24 +157,31 @@ GameLabP5.prototype.init = function (options) {
   // positions before reporting mouse coordinates
   //
   // NOTE: _updateNextMouseCoords() is nearly identical, but calls a modified
-  // getMousePos() function below that can return undefined
+  // getMousePos() function below that scales the mouse postion with the play
+  // space and can return undefined.
   window.p5.prototype._updateNextMouseCoords = function (e) {
-    if (e.type === 'touchstart' ||
-        e.type === 'touchmove' ||
+    var x = this.mouseX;
+    var y = this.mouseY;
+    if (e.type === 'touchstart' || e.type === 'touchmove' ||
         e.type === 'touchend' || e.touches) {
-      this._setProperty('_nextMouseX', this._nextTouchX);
-      this._setProperty('_nextMouseY', this._nextTouchY);
-    } else {
-      if (this._curElement !== null) {
-        var mousePos = getMousePos(this._curElement.elt, e);
-        if (mousePos) {
-          this._setProperty('_nextMouseX', mousePos.x);
-          this._setProperty('_nextMouseY', mousePos.y);
-        }
+      x = this.touchX;
+      y = this.touchY;
+    } else if (this._curElement !== null) {
+      var mousePos = getMousePos(this._curElement.elt, e);
+      if (mousePos) {
+        x = mousePos.x;
+        y = mousePos.y;
       }
     }
+    this._setProperty('mouseX', x);
+    this._setProperty('mouseY', y);
     this._setProperty('winMouseX', e.pageX);
     this._setProperty('winMouseY', e.pageY);
+    if (!this._hasMouseInteracted) {
+      // For first draw, make previous and next equal
+      this._updateMouseCoords();
+      this._setProperty('_hasMouseInteracted', true);
+    }
   };
 
   // NOTE: returns undefined if the position is outside of the valid range
@@ -201,16 +218,7 @@ GameLabP5.prototype.init = function (options) {
       mousePosition = this.createVector(this.mouseX, this.mouseY);
     }
 
-    if (sprite.collider instanceof this.CircleCollider) {
-      return this.dist(mousePosition.x, mousePosition.y, sprite.collider.center.x, sprite.collider.center.y) < sprite.collider.radius;
-    } else if (sprite.collider instanceof this.AABB) {
-      return mousePosition.x > sprite.collider.left() &&
-          mousePosition.y > sprite.collider.top() &&
-          mousePosition.x < sprite.collider.right() &&
-          mousePosition.y < sprite.collider.bottom();
-    }
-
-    return false;
+    return sprite.collider.overlap(new window.p5.PointCollider(mousePosition));
   };
 
   window.p5.prototype.mousePressedOver = function (sprite) {
@@ -715,6 +723,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function () {
     { instance: window.p5.Font },
     { instance: window.p5.Table },
     { instance: window.p5.TableRow },
+    // TODO: Maybe add collider types here?
   ];
 };
 

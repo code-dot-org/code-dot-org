@@ -36,6 +36,9 @@ social:
     font-style: italic;
     padding: 20px 0px 20px 0px;
   }
+  .bannerRobotics {
+    padding-bottom: 10px;
+  }
   #robotImage {
     height: 222px;
   }
@@ -49,7 +52,7 @@ social:
   .banner.container_responsive
     .col-50
       .bannerHeading= hoc_s(:learn_robotics_banner_heading)
-      = hoc_s(:learn_robotics_banner_blurb)
+      .bannerRobotics= hoc_s(:learn_robotics_banner_blurb)
     .col-50.tablet-feature
       %img#robotImage{src: "/images/learn/robotics.png"}
 
@@ -83,7 +86,8 @@ social:
       locale: "#{request.locale}",
       robotics: true,
       backButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });

@@ -409,7 +409,7 @@ FactoryGirl.define do
   factory :segment do
     workshop
     start DateTime.now.utc
-    self.send(:end, DateTime.now.utc + 1.day)
+    send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
@@ -575,6 +575,7 @@ FactoryGirl.define do
   factory :school_info_us_private, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -582,6 +583,7 @@ FactoryGirl.define do
   factory :school_info_us_other, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -623,6 +625,7 @@ FactoryGirl.define do
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     association :school_info, factory: :school_info_without_country
     school 'Example School'
+    code {SecureRandom.hex(10)}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do

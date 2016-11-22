@@ -43,9 +43,9 @@
     "use_player": "true",
     "use_score": "false",
     "show_popup_on_load": "playerSelection",
-    "contained_level_names": null,
     "video_key": "mc_2016_events",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "UPDATE:\r\n\r\nThis level teaches Walking and Use",
@@ -55,11 +55,16 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false" movable="false" deletable="false"/>
+        <block type="when_run" deletable="false" movable="false" uservisible="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml/>
+      <xml>
+        <block type="craft_whenRun" uservisible="false"/>
+        <block type="craft_playSound" uservisible="false">
+          <title name="TYPE">collectedBlock</title>
+        </block>
+      </xml>
     </toolbox_blocks>
     <required_blocks>
       <xml>

@@ -23,13 +23,12 @@ const styles = {
 const DisabledBubblesModal = React.createClass({
   getInitialState() {
     return {
-      open: !sessionStorage.getItem('disableBubblesModalSeen')
+      open: true
     };
   },
 
   handleClose() {
     this.setState({open: false});
-    sessionStorage.setItem('disableBubblesModalSeen', true);
   },
 
   render() {

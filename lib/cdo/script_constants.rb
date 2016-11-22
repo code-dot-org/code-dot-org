@@ -8,8 +8,8 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
 
-  MINECRAFT_TEACHER_DASHBOARD_NAME = 'minecraft-simple'.freeze
-  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'minecraft-designer'.freeze
+  MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
+  MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
@@ -35,6 +35,8 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       INFINITY_NAME = 'infinity'.freeze,
       ARTIST_NAME = 'artist'.freeze,
+      HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
+      TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
     ],
     csf: [
       TWENTY_HOUR_NAME = '20-hour'.freeze,

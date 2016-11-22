@@ -82,6 +82,8 @@ es:
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} profesores ya se han registrado.'
     overview: 'Regístrate para darle seguimiento a tu avance o administrar tu salón de clases. <a href="/">Puedes explorar varias etapas y rompecabezas</a> si una cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'Consulta la Guía del educador'
     title: "Regístrate en Code.org"
     school_name: 'Nombre de la escuela (opcional)'
@@ -282,7 +284,7 @@ es:
       unsubmit: 'NO enviado'
       worked_with: 'Trabajado con'
       update_lock_settings: 'Actualiza las opciones de bloqueo aquí.'
-      clear_response: 'Clear response'
+      clear_response: 'Respuesta clara'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no ha sido confirmada:'
@@ -345,11 +347,13 @@ es:
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Aprende más"
     announcement_try_now_button: "Probar ahora"
-    announcement_host_an_hour_button: "Host an Hour"
+    announcement_host_an_hour_button: "Anfitrión una hora"
     announcement_petition: "Como profesor, está liderando el camino de un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática. Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana, los líderes de la educación, los 28 gobernadores y CEO's de las compañías más grandes de América se unieron en una carta abierta pidiendo al congreso de los Estados Unidos financiar la educación en informática para K-12."
     announcement_petition_button: "Agrega tu nombre"
     announcement_all: "Manténte al día con las nuevas características y actualizaciones en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver anuncios anteriores.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_launch: "Miles de educadores en más de 180 países comenzarán a enseñar informática durante la hora del código del 5 al 11 de diciembre. Nosotros estamos contando contigo para que nos ayudes a llegar a más estudiantes que nunca antes. <a href='%{signup_url}' target='_blank'> Registre su evento hora del código</a> y haga saber a otros profesores que cualquiera puede empezar a enseñar informática."
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Introduce un código de sección diferente."
     section_code_not_entered: "Por favor, provee el código de sección actual."
@@ -478,6 +482,9 @@ es:
     minecraft:
       title: "Minecraft"
       body: "Explora un mundo de Minecraft, a través de Code."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     unplugged:
       title: "Lecciones sin conexión"
       audience: "Mayores de 6 años"
@@ -579,29 +586,28 @@ es:
     accept_label: 'Estoy de acuerdo con los <a href="%{tos_url}" target="_blank"> Términos de Servcio</a> y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a> actualizados'
     accept: "Acepto"
     print: "Imprimir"
-    later: "Más adelante"
     reminder_desc: 'Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">Términos de Servicio</a> y <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>. Por favor lee éstos cuidadosamente antes de aceptarlos. Nota que nuestras herramientas para aprender JavaScript pueden no estar disponibles a tus alumnos antes de aceptar explícitamente estos términos actualizados.'
     review_terms: "Revisa los términos actualizados"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
-    message: "Please tell us your race (check all that apply)"
+    title: 'Opcional: Ayudanos a guardar nuestro progreso hacia la mejora de la diversidad en informática'
+    message: "Por favor díganos su raza (marque todo lo que aplique)"
     races:
       - 
-        white: White
+        white: Blanco
       - 
-        black: Black or African American
+        black: Negro o Afroamericano
       - 
-        hispanic: Hispanic or Latino
+        hispanic: Hispano o Latino
       - 
-        asian: Asian
+        asian: Asiático
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: Indio Americano/Nativo de Alaska
       - 
         other: Otros
       - 
-        opt_out: Prefer not to say
+        opt_out: Prefiero no decir
     submit: "Enviar"
     decline: "Cerrar"
   zendesk_too_young_message: 'Lo sentimos, los usuarios más jóvenes no pueden registrarse en nuestro sitio de soporte. Puedes navegar por <a href="http://support.code.org">support.code.org</a> sin registrarte o pedir a tus padres o profesores que nos contacten en tu nombre.'

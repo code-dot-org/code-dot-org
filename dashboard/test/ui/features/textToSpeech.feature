@@ -7,7 +7,8 @@ Feature: Text To Speech
 Scenario: Listen to TTS Audio
   Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/3?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
 
   # note: we expect no audio for the instructions, because this test
   # level is not in course1.

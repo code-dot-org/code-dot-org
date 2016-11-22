@@ -44,6 +44,9 @@ OptionParser.new do |opts|
   opts.on('--whole-lines', TrueClass, 'Print entire lines of found strings in output') do |is_true|
     options[:whole_lines] = is_true
   end
+  opts.on('--count', TrueClass, 'Counts number of found strings in output') do |is_true|
+    options[:count] = is_true
+  end
   opts.on('--grep-container ', String, 'Search given container # for grep string') do |grep_container|
     options[:grep_container] = grep_container.to_i
   end
@@ -52,6 +55,9 @@ OptionParser.new do |opts|
     options[:grep_step] = grep_step
   end
   options[:grep_step] ||= RUN_UI_TESTS_STEP_STRING
+  opts.on('--branch BranchName', String, 'Limit results to builds for one branch') do |branch_name|
+    options[:branch_name] = branch_name
+  end
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
     exit
@@ -77,15 +83,24 @@ end
 
 fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
 puts "Checking builds #{build_range} for output:\n#{fail_types_list}"
+puts "Limiting to branch #{options[:branch_name]}" unless options[:branch_name].nil?
 
 Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
   fail_types_to_check.each do |known_fail|
+    # Skip this build if it's not on the requested branch
+    next unless options[:branch_name].nil? || (@project.get_build(build)['branch'] == options[:branch_name])
+
     output = @project.get_log(build, known_fail[:container], known_fail[:step_string])
 
     begin
       full_output_string = output[0]['message']
       if full_output_string.include? known_fail[:search_string]
-        if options[:whole_lines]
+        if options[:count]
+          count = full_output_string.split("\n").count do |line|
+            line.include? known_fail[:search_string]
+          end
+          puts "Build https://circleci.com/gh/code-dot-org/code-dot-org/#{build} output contains #{count} of: #{known_fail[:search_string]}"
+        elsif options[:whole_lines]
           lines = []
           full_output_string.split("\n").each do |line|
             lines << line if line.include? known_fail[:search_string]

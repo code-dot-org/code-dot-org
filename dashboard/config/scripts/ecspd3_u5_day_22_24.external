@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 22-24'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 22-24
+# Unit 5 Lessons > Days 22 - 24
 
 ## Concepts Covered
 
@@ -36,7 +36,4 @@ In this lesson you will help students learn how to use a variety of filters, que
 	
 > - As you get to part II – Focusing on the Words:  you can use check your word cloud tool to see if it can automatically remove Stop Words (“Remove Common Words”) and combines similar words (“Combine Related Words”).  
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

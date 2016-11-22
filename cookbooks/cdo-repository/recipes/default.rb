@@ -38,6 +38,11 @@ git git_path do
     end
   )
 
+  # Build app on repo updates.
+  if node['cdo-apps']
+    notifies :run, "execute[build-cdo]", :delayed
+  end
+
   user node[:user]
   group node[:user]
 end

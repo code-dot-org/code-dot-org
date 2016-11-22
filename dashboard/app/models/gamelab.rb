@@ -74,8 +74,8 @@ class Gamelab < Blockly
   end
 
   def update_palette
-    if self.code_functions.present? && self.code_functions.is_a?(String)
-      self.code_functions = JSON.parse(self.code_functions)
+    if code_functions.present? && code_functions.is_a?(String)
+      self.code_functions = JSON.parse(code_functions)
     end
   rescue JSON::ParserError => e
     errors.add(:code_functions, "#{e.class.name}: #{e.message}")
@@ -96,6 +96,7 @@ class Gamelab < Blockly
         "Game.frameRate": null,
         "Game.frameCount": null,
         "playSound": null,
+        "stopSound": null,
         "keyDown": null,
         "keyWentDown": null,
         "keyWentUp": null,

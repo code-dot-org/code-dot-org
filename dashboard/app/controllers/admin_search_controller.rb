@@ -54,6 +54,17 @@ class AdminSearchController < ApplicationController
     end
   end
 
+  def undelete_section
+    section = Section.find_by_code params[:section_code]
+    if section && section.deleted_at
+      section.update!(deleted_at: nil)
+      flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
+    else
+      flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."
+    end
+    redirect_to :lookup_section
+  end
+
   def search_for_teachers
     SeamlessDatabasePool.use_persistent_read_connection do
       teachers = User.where(user_type: 'teacher')

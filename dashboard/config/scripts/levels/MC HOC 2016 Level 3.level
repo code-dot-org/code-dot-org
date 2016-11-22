@@ -54,7 +54,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawned" deletable="false" movable="false"/>
+        <block type="craft_chickenSpawned" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

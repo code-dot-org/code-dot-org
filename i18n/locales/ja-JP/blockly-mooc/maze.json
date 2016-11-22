@@ -9,6 +9,7 @@
   "collectorCollectedEverything":"おめでとう！ あなたは{count}つのすべてのアイテムをあつめました！",
   "collectorCollectedNothing":"コーディングをつづけよう！できるだけたくさんのアイテムをあつめてね。",
   "collectorCollectedSome":"よくやりました！ あなたは{count}つのアイテムをあつめました！",
+  "collectorCollectedNotEnough":"Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany":"そのスペースには私が収集するのに十分なアイテムがありません。",
   "collectorTooManyBlocks":"{blockLimit} ブロックだけつかえるよ。コードをよくみて、もういちどやりなおそう!",
   "continue":"続行",

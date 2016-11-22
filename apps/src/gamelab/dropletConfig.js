@@ -54,6 +54,7 @@ module.exports.blocks = [
   {func: 'Game.frameRate', category: 'Game Lab', type: 'property' },
   {func: 'Game.frameCount', category: 'Game Lab', type: 'readonlyproperty' },
   {func: 'playSound', parent: api, category: 'Game Lab', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
+  {func: 'stopSound', parent: api, category: 'Game Lab', paramButtons: { minArgs: 0, maxArgs: 1 }, paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
   {func: 'keyIsPressed', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyIsPressed" },
   {func: 'key', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/key" },
   {func: 'keyCode', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyCode" },
@@ -331,6 +332,11 @@ draw() - USEFUL?
   // Variables
   {func: 'console.log', parent: consoleApi, category: 'Variables', paletteParams: ['message'], params: ['"message"'] },
   {func: 'comment_Variables', block: '// Comment', expansion: '// ', category: 'Variables' },
+
+  // Data
+  {func: 'getUserId', parent: api, category: 'Game Lab', noAutocomplete: true},
+  {func: 'getKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
+  {func: 'setKeyValue', parent: api, category: 'Game Lab', noAutocomplete: true},
 
   // Advanced
 ];

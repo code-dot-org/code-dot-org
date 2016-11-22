@@ -338,6 +338,9 @@ en:
         title: title
       Binary as an Encoding Scheme: {}
       Binary, Hex, and Images: {}
+      Boolean Expressions and Comparison Operators:
+        description here: description here
+        title: title
       Building a UI with Design Mode: {}
       CSD - Headers and Lists - Hobbies Project: {}
       CSD - Headers and Lists - Recipe Project: {}
@@ -1067,6 +1070,7 @@ en:
       ECSPD1 your role:
         ECS Your Role as a Learner and Facilitator: ECS Your Role as a Learner and Facilitator
         ECS your role as a learner and facilitator: ECS your role as a learner and facilitator
+      ECSPD3- unit 5- welcome: {}
       ECSPD3-u5 about: {}
       ECSPD3-u5 challenge details: {}
       ECSPD3-u5 challenge inside: {}
@@ -1192,6 +1196,18 @@ en:
       HOC survey 2016 external text: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How "if-else-if" Works:
+        description here: description here
+        title: title
+      How Dropdown Menus Work:
+        description here: description here
+        title: title
+      How If Statements Work pt 1:
+        description here: description here
+        title: title
+      How If-Else Statements Work:
+        description here: description here
+        title: title
       How Images Work:
         description here: description here
         title: title
@@ -2736,6 +2752,7 @@ en:
         CSP Unit 4 Ch1 Cumulative Assessment MC: {}
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
+        CSP Unit 5 Cumulative Assessment 3 MC: {}
         CSP pre-assessment survey: {}
         HOC post-survey 2016 levelgroup: {}
         HOC pre-survey 2016 levelgroup: {}

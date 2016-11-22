@@ -39,7 +39,7 @@ class Properties
     # Include stale default values as of 2016-06-22 so we never show 0. These
     # would be used, for example, if the DB is unavailable or the cron failed to
     # run properly.
-    self.get(:about_stats) || {
+    get(:about_stats) || {
       'percent_female' => 43,
       'number_served' => 256_924_978,
       'number_students' => 11_309_238,
@@ -54,11 +54,6 @@ def fetch_metrics
   Properties.get(:metrics) || {
     'created_at' => "2016-01-04T21:37:19+00:00",
     'created_on' => "2016-01-04",
-    'csedweek_organizers' => 38236,
-    'csedweek_teachers' => 24025,
-    'csedweek_entire_schools' => 12754,
-    'csedweek_students' => 4_875_091,
-    'csedweek_countries' => 356,
     'petition_signatures' => 2_053_571,
     'lines_of_code' => 11_151_730_618,
   }

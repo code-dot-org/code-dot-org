@@ -15,6 +15,8 @@ PID=<%= @pid_file %>
 CMD="cd $APP_ROOT; LANG=en_US.UTF-8 bundle exec unicorn -D -c <%= @src_file %> -E <%= @env %>"
 AS_USER=<%= @user %>
 <%= @bundle_env ? @bundle_env.map{|k,v|"export #{k}=#{v}"}.join("\n") : '' %>
+UPGRADE_DELAY=${UPGRADE_DELAY-4}
+
 action="$1"
 set -u
 
@@ -31,21 +33,21 @@ oldsig () {
 }
 
 run () {
+<% if node['cdo-apps']['nginx_enabled'] %>
+  if [ ! -d "/run/unicorn" ]
+  then
+      mkdir -p /run/unicorn; chown ${AS_USER}: /run/unicorn
+  fi
+<% end %>
   if [ "$(id -un)" = "$AS_USER" ]; then
     eval $1
   else
-    su -c "$1" - $AS_USER
+    su -c "$1" $AS_USER
   fi
 }
 
 case $action in
 start)
-<% if node['cdo-apps']['nginx_enabled'] %>
-        if [ ! -d "/run/unicorn" ]
-        then
-            mkdir -p /run/unicorn; chown ${AS_USER}: /run/unicorn
-        fi
-<% end %>
         sig 0 && echo >&2 "Already running" && exit 0
         run "$CMD"
         ;;
@@ -102,7 +104,7 @@ upgrade)
 
         if test -n "$cur_pid" &&
                 kill -USR2 "$cur_pid" &&
-                sleep 1 &&
+                sleep $UPGRADE_DELAY &&
                 new_pid=$(cat $PID) &&
                 test x"$new_pid" != x"$cur_pid" &&
                 kill -0 "$new_pid"

@@ -17,7 +17,7 @@
       "rule-name": "2",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "studio_persons"
+        "table-name": "studio_people"
       },
       "rule-action": "include"
     },

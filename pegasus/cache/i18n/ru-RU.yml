@@ -1867,9 +1867,9 @@
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
-  minecraft_designer_button: Try 2016 now
+  minecraft_designer_button: Start
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Try 2015 now
+  minecraft_adventurer_button: Start
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_store_camps: Microsoft Store Hour of Code Camps
@@ -1894,6 +1894,11 @@
     the Hour of Code during Computer Science Education Week. While our own Hour of
     Code tutorials will also not save progress that week, students can still do the
     full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
   csd1_name: 'Unit 1: Computers and Logic'
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'

@@ -75,7 +75,7 @@
     "markdown_instructions": "# Mushroom\r\n\r\nNow you just need something for your sprite to jump over.  This program already has a mushroom just past the right edge of the screen, but it needs to move toward your frog.\r\n\r\n# Do this\r\n* Use the `velocityX` block to make the mushroom move left across the screen.\r\n\r\n*Hint: The mushroom should start moving and rotating at the very beginning of the game, and never change, so should it be inside or outside the draw loop?*\r\n\r\n",
     "project_template_level_name": "CSD U3 abstraction sidescroll template",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "instructions_important": "false",
     "contained_level_names": null
   },

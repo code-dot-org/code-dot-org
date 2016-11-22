@@ -1,8 +1,10 @@
-import React from 'react';
 import Radium from 'radium';
+import React from 'react';
 import color from "../../util/color";
-import { getOuterHeight, scrollBy } from './utils';
+
 import { addMouseUpTouchEvent } from '../../dom';
+import { connect } from 'react-redux';
+import { getOuterHeight, scrollBy } from './utils';
 
 const WIDTH = 20;
 const HEIGHT = WIDTH;
@@ -27,6 +29,11 @@ const DIRECTIONS = {
 };
 
 const styles = {
+  all: {
+    position: 'absolute',
+    transition: 'opacity 200ms',
+    margin: 0
+  },
   arrow: {
     width: 0,
     height: 0,
@@ -35,8 +42,6 @@ const styles = {
     borderColor: 'transparent',
     borderRightWidth: WIDTH,
     borderLeftWidth: WIDTH,
-    position: 'absolute',
-    transition: 'opacity 200ms',
     ':hover': {
       filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
     }
@@ -52,6 +57,7 @@ const styles = {
 };
 
 const MARGIN = 5;
+const CRAFT_MARGIN = 0;
 
 /**
  * A pair of buttons for scrolling instructions in CSF
@@ -62,12 +68,17 @@ const ScrollButtons = React.createClass({
     visible: React.PropTypes.bool.isRequired,
     height: React.PropTypes.number.isRequired,
     getScrollTarget: React.PropTypes.func.isRequired,
+    isMinecraft: React.PropTypes.bool.isRequired,
+  },
+
+  getMargin() {
+    return this.props.isMinecraft ? CRAFT_MARGIN : MARGIN;
   },
 
   getMinHeight() {
     const scrollButtonsHeight = getOuterHeight(this.refs.scrollUp, true) +
         getOuterHeight(this.refs.scrollDown, true);
-    return scrollButtonsHeight + (MARGIN * 2);
+    return scrollButtonsHeight + (this.getMargin() * 2);
   },
 
   scrollStart(dir) {
@@ -105,39 +116,79 @@ const ScrollButtons = React.createClass({
 
   render() {
 
-    const scrollUpStyle = [
-      styles.arrow,
-      styles.arrowUp,
-      {
-        opacity: this.props.visible ? 1 : 0,
-        top: MARGIN
-      }
-    ];
+    const upStyle = {
+      opacity: this.props.visible ? 1 : 0,
+      top: this.getMargin()
+    };
 
-    const scrollDownStyle = [
-      styles.arrow,
-      styles.arrowDown,
-      {
-        opacity: this.props.visible ? 1 : 0,
-        bottom: -(this.props.height - MARGIN)
-      }
-    ];
+    const downStyle = {
+      opacity: this.props.visible ? 1 : 0,
+      bottom: -(this.props.height - this.getMargin())
+    };
+
+    // for most tutorials, we have minimalist arrow elements. For
+    // minecraft, we use a special button element to stylistically align
+    // with the other buttons on the screen.
+
+    const upButton = (this.props.isMinecraft) ?
+      <button
+        className="arrow"
+        ref="scrollUp"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        style={[
+          styles.all,
+          upStyle
+        ]}
+      >
+        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
+      </button> :
+      <div
+        ref="scrollUp"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
+        style={[
+          styles.all,
+          styles.arrow,
+          styles.arrowUp,
+          upStyle
+        ]}
+      />;
+
+    const downButton = (this.props.isMinecraft) ?
+      <button
+        className="arrow"
+        ref="scrollDown"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        style={[
+          styles.all,
+          downStyle
+        ]}
+      >
+        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
+      </button> :
+      <div
+        ref="scrollDown"
+        onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
+        style={[
+          styles.all,
+          styles.arrow,
+          styles.arrowDown,
+          downStyle
+        ]}
+      />;
 
     return (
       <div style={this.props.style}>
-        <div
-          ref="scrollUp"
-          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.UP)}
-          style={scrollUpStyle}
-        />
-        <div
-          ref="scrollDown"
-          onMouseDown={this.scrollStart.bind(this, DIRECTIONS.DOWN)}
-          style={scrollDownStyle}
-        />
+        {upButton}
+        {downButton}
       </div>
     );
   }
 });
 
-export default Radium(ScrollButtons);
+export default connect(function propsFromStore(state) {
+  return {
+    isMinecraft: !!state.pageConstants.isMinecraft,
+  };
+}, undefined, undefined, {
+  withRef: true
+})(Radium(ScrollButtons));
