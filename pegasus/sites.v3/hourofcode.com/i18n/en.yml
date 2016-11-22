@@ -433,6 +433,7 @@
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
 
+  tutorial_moana_name: "Moana: Wayfinding with Code"
   tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
   tutorial_mchoc_name: "Minecraft Hour of Code"
@@ -690,6 +691,7 @@
   tutorial_gpp_name: "Graph Paper Programming"
   tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
 
+  tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
   tutorial_mchoc_shortdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
@@ -947,6 +949,7 @@
   tutorial_gpp_shortdescription: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
   tutorial_foosgame_shortdescription: "Design and code your own video game with codeSpark Academy with The Foos."
 
+  tutorial_moana_longdescription: "Moana: Wayfinding with Code is targeted for kids ages 8+ trying an introduction to computer science for the first time. The tutorial will be available in over 25 languages, open-source and free online with a digital toolkit for educators and Hour of Code event organizers. Disney's goal is to inspire kids from all backgrounds and ethnicities to try coding. Through a brand-new, engaging and fun experience starring a strong female lead character - Moana - our goal is to continue providing the spark kids need to continue their studies in computer science.\nIn the tutorial, Moana is now a master wayfinder and she is leading her people on the New Migrations. When the tutorial starts, students will help Moana and Maui sail through an unknown territory while learning basic coding commands to help steer the boat.\nAs students learn how to use sequences, loops and conditionals to master the art of navigation, Moana and Maui are suddenly ambushed by the Kakamora.\nStudents must help Moana and Maui dodge the coconut-armoured pirates on an adventure that takes them through computer science concepts in a fun, creative and engaging way!"
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
   tutorial_mchoc_longdescription: "Use blocks of code to take Alex or Steve on an adventure through this Minecraft world."
@@ -1204,6 +1207,7 @@
   tutorial_gpp_longdescription: "By \"programming\" one another to draw pictures, students will begin to understand what programming is really about. The activity will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture."
   tutorial_foosgame_longdescription: "Code your own video game with codeSpark Academy with The Foos’ new Game Kits. This activity guides students brand new to game design using a \"paint-by-numbers\" approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends."
 
+  tutorial_moana_language: "English, Arabic, Chinese, Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
   tutorial_mchoc_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1461,6 +1465,7 @@
   tutorial_gpp_language: "English only"
   tutorial_foosgame_language: "English, Arabic, German, Spanish, French, Japanese, Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional Chinese, Simplified Chinese, Greek, Italian, Polish"
 
+  tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
   tutorial_mchoc_string_detail_grades: "Grades 2+"
@@ -1718,6 +1723,7 @@
   tutorial_gpp_string_detail_grades: "Grades 2+"
   tutorial_foosgame_string_detail_grades: "Pre-reader - Grade 5"
 
+  tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
   tutorial_mchoc_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -1975,6 +1981,7 @@
   tutorial_gpp_string_platforms: "Unplugged"
   tutorial_foosgame_string_platforms: "Android tablet, iPad"
 
+  tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
   tutorial_mchoc_string_detail_platforms: ""
@@ -2232,6 +2239,7 @@
   tutorial_gpp_string_detail_platforms: "Unplugged"
   tutorial_foosgame_string_detail_platforms: ""
 
+  tutorial_moana_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"
   tutorial_mchoc_string_detail_programming_languages: "Blocks"
