@@ -29,10 +29,6 @@ td.rerun-command {
   white-space: nowrap;
 }
 
-td.rerun-command input {
-  width: 5px;
-}
-
 .centered-column {
   width: 100%;
   max-width: 1000px;
