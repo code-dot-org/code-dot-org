@@ -41,7 +41,7 @@
               %td.status
               %td.log-link
               %td.rerun-command
-                %input{type:"text", value:"bundle exec ./runner.rb --html -c #{browser} -f #{feature}"}
+                %input{type:"text", value:"bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature}"}
                 %button.copy-button= "Copy Rerun Cmd"
   %input#test-type{type: 'hidden', value: type}
   %input#api-origin{type: 'hidden', value: api_origin}
