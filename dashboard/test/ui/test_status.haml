@@ -40,6 +40,9 @@
               %td= feature.sub(/features\//, '')
               %td.status
               %td.log-link
+              %td.rerun-command
+                %input{type:"text", value:"bundle exec ./runner.rb --html -c #{browser} -f #{feature}"}
+                %button.copy-button= "Copy Rerun Cmd"
   %input#test-type{type: 'hidden', value: type}
   %input#api-origin{type: 'hidden', value: api_origin}
   %input#s3-bucket{type: 'hidden', value: s3_bucket}
