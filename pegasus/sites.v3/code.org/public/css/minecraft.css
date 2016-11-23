@@ -23,6 +23,14 @@
   text-align: center;
 }
 
+.mc-img {
+  width: 478px;
+}
+
+.mc-new-tag {
+  width: 100px;
+}
+
 .white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
   color: white;
 }
