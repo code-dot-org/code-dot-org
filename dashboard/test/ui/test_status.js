@@ -145,6 +145,19 @@ Test.prototype.publicLogUrl = function () {
   return `https://${S3_BUCKET}.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`;
 };
 
+// Connect up "Copy Rerun Command" buttons
+function copyFromSibling(e) {
+  const input = e.target.previousElementSibling;
+  input.select();
+  document.execCommand('copy');
+  input.blur();
+}
+
+const copyButtons = document.querySelectorAll('button.copy-button');
+copyButtons.forEach(button => {
+  button.addEventListener('click', copyFromSibling);
+});
+
 // Build a cache of tests for this run.
 var tests = {};
 var rows = document.querySelectorAll('tbody tr');

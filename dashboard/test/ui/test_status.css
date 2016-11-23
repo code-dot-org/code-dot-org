@@ -24,6 +24,15 @@ td.log-link {
   text-align: center;
 }
 
+td.rerun-command {
+  width: 1%;
+  white-space: nowrap;
+}
+
+td.rerun-command input {
+  width: 5px;
+}
+
 .centered-column {
   width: 100%;
   max-width: 1000px;
