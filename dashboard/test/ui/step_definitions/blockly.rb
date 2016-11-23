@@ -109,18 +109,30 @@ end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
+  @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  # check for block id without relying on selenium element equality.
-  actual_parent_id = @actual_parent_item.attribute('block-id')
-  actual_parent_id.should eql get_block_id(parent)
+
+  # Applitools wraps the webdriver and breaks element equality; this is a workaround.
+  # Should be removable after we have this fix:
+  # https://github.com/applitools/Eyes.Selenium.Ruby/pull/46
+  @parent_item = @parent_item.web_element if @parent_item.respond_to?(:web_element)
+  @actual_parent_item = @actual_parent_item.web_element if @actual_parent_item.respond_to?(:web_element)
+
+  @parent_item.should eql @actual_parent_item
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
+  @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  # check for block id without relying on selenium element equality.
-  actual_parent_id = @actual_parent_item.attribute('block-id')
-  actual_parent_id.should_not eql get_block_id(parent)
+
+  # Applitools wraps the webdriver and breaks element equality; this is a workaround.
+  # Should be removable after we have this fix:
+  # https://github.com/applitools/Eyes.Selenium.Ruby/pull/46
+  @parent_item = @parent_item.web_element if @parent_item.respond_to?(:web_element)
+  @actual_parent_item = @actual_parent_item.web_element if @actual_parent_item.respond_to?(:web_element)
+
+  @parent_item.should_not eq @actual_parent_item
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
