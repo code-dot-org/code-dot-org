@@ -36,7 +36,7 @@ File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
     next if user.nil? || user.races.nil_or_empty?
     begin
       puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
-      user.update(races: nil) # this will delete the races property altogether in the JSON, not just clear it
+      user.update!(races: nil) # this will delete the races property altogether in the JSON, not just clear it
     rescue Exception => e
       puts "EXCEPTION:"
       puts "  USER: #{user}"
