@@ -147,6 +147,9 @@
         "message": "It seems like you modified code a bit more than we were expecting.  Assuming you've studied the setup here enough to get the gist, you're ready to move on.  Revert back to the original state (click 'Version History' then 'Delete Progress') and continue on to the next level."
       }
     ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

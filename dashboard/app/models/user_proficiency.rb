@@ -79,7 +79,7 @@ class UserProficiency < ActiveRecord::Base
     num_levels = 0
     (difficulty_number..MAXIMUM_CONCEPT_DIFFICULTY).each do |d|
       field_name = "#{concept}_d#{d}_count"
-      num_levels += self.send(field_name).to_i
+      num_levels += send(field_name).to_i
     end
     return num_levels
   end
@@ -88,7 +88,7 @@ class UserProficiency < ActiveRecord::Base
   # indicated concept and difficulty.
   def increment_level_count(concept, difficulty_number)
     field_name = "#{concept}_d#{difficulty_number}_count"
-    self.attributes = {field_name => self.send(field_name).to_i + 1}
+    self.attributes = {field_name => send(field_name).to_i + 1}
   end
 
   # As of April 2015, we define a user as having basic proficiency if they have

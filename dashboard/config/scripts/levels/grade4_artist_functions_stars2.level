@@ -7,8 +7,8 @@
   "properties": {
     "skin": "artist_zombie",
     "embed": "false",
-    "instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "instructions": "Draw only those three stars to finish this puzzle.",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"grade4_artist_functions_stars2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/grade4_artist_functions_stars2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"grade4_artist_functions_stars2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/grade4_artist_functions_stars2.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -31,7 +31,9 @@
     "start_direction": "90",
     "x": "50",
     "y": "100",
-    "ideal": "15",
+    "ideal": "11",
+    "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -94,11 +96,11 @@
         </block>
         <block type="draw_move_by_constant">
           <title name="DIR">moveForward</title>
-          <title name="VALUE">100</title>
+          <title name="VALUE">25</title>
         </block>
         <block type="draw_turn_by_constant">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE">45</title>
         </block>
         <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
@@ -108,22 +110,20 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="controls_repeat">
-          <title name="TIMES">4</title>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">8</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw a star"/>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a star</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">200</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
@@ -136,76 +136,22 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat">
-                  <title name="TIMES">8</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
-                      <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveBackward</title>
-                          <title name="VALUE">25</title>
-                          <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">45</title>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a star"/>
                   <next>
                     <block type="jump_by_constant">
                       <title name="DIR">jumpForward</title>
                       <title name="VALUE">200</title>
                       <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">8</title>
-                          <statement name="DO">
-                            <block type="draw_move_by_constant">
-                              <title name="DIR">moveForward</title>
-                              <title name="VALUE">25</title>
-                              <next>
-                                <block type="draw_move_by_constant">
-                                  <title name="DIR">moveBackward</title>
-                                  <title name="VALUE">25</title>
-                                  <next>
-                                    <block type="draw_turn_by_constant">
-                                      <title name="DIR">turnRight</title>
-                                      <title name="VALUE">45</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </statement>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="draw a star"/>
                           <next>
                             <block type="jump_by_constant">
                               <title name="DIR">jumpForward</title>
                               <title name="VALUE">100</title>
                               <next>
-                                <block type="controls_repeat">
-                                  <title name="TIMES">8</title>
-                                  <statement name="DO">
-                                    <block type="draw_move_by_constant">
-                                      <title name="DIR">moveForward</title>
-                                      <title name="VALUE">25</title>
-                                      <next>
-                                        <block type="draw_move_by_constant">
-                                          <title name="DIR">moveBackward</title>
-                                          <title name="VALUE">25</title>
-                                          <next>
-                                            <block type="draw_turn_by_constant">
-                                              <title name="DIR">turnRight</title>
-                                              <title name="VALUE">45</title>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="draw a star"/>
                                 </block>
                               </next>
                             </block>
@@ -218,6 +164,33 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">25</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveBackward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">45</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
         </block>
       </xml>
     </solution_blocks>

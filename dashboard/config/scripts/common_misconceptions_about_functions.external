@@ -1,0 +1,30 @@
+name 'Common Misconceptions about Functions'
+css 'unplugged'
+markdown <<MARKDOWN
+# Common Misconceptions about Functions
+
+
+Functions give us several benefits when programming. First, they allow us to reuse certain blocks of code. Rather than writing the same code over and over again throughout our program, we can write it once within a function, and then call that function multiple times. This simplifies the readability and logical structure of code. Second, functions can be treated as black box instructions that do complex things. Once a function has been written, future programmers don't need to understand how it was implemented in order to use it. This lets code be reused between programmers via libraries or APIs.
+
+
+Want more info about functions?  Check out <a href=”https://www.cs.utah.edu/~germain/PPS/Topics/functions.html”  target=_blank>this resource from the University of Utah <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/6003202c010f82eda217414edde5f2ae-image-1446478209533.26.38 AM.png" width=“150” style="float:right; margin-left:10px">
+
+## Defining a Function
+Functions are blocks of code that is chunked together and given a name so it can be used as many times as needed in the execution of a program. When you define a function you give a name to a set of actions you want the computer to perform. (see the example on the right) 
+
+
+## Calling a Function
+<img src="https://images.code.org/4550aa5b8266da4fb51582e80f9b4819-image-1479789227708.33.27 PM.png" width=“75” style="float:left; margin-right:10px">
+When you call a function you are telling the computer to run (or execute) that set of actions. The function described above would be called like this: square(); 
+
+## Placement of Function Definitions and Calls
+A function definition can be provided anywhere in your code - in some ways the function definition lives independently of the code around it. You can call a function from anywhere, either before or after the function definition. In this course, we will follow the convention of always putting function definitions at the bottom of our program, and the code for calling functions at the top of our program.
+
+In general, you don't want to call a function within the definition of that same function. During execution of the function, it will call itself, while executing that new call it will call itself again, and so on. This is known as recursion, and while it is sometimes a useful programming tool, it must be used carefully and within strict limits to prevent the process from continuing indefinitely.
+
+An example of a simple recursive function can be <a href ="https://studio.code.org/projects/applab/cWu6VaeVPrAHI6Ml_FKVpw/view" target =_blank>found here <i class="fa fa-code" aria-hidden="true"></i></a> 
+
+
+MARKDOWN
