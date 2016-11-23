@@ -26,6 +26,11 @@ module AWS
       certificate_summary_list.
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
+    HOC_CERTIFICATE = Aws::ACM::Client.new(region: ACM_REGION).
+      list_certificates(certificate_statuses: ['ISSUED']).
+      certificate_summary_list.
+      find { |cert| cert.domain_name == "*.hourofcode.com" }.
+      certificate_arn
 
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
@@ -50,9 +55,8 @@ module AWS
       end
 
       # CNAME to use for this stack.
-      # Suffix env-named stacks with "_cfn" during migration.
       def cname
-        stack_name == rack_env.to_s ? "#{stack_name}-cfn" : stack_name
+        stack_name
       end
 
       # Fully qualified domain name
@@ -300,6 +304,7 @@ module AWS
           environment: rack_env,
           ssh_ip: SSH_IP,
           certificate_arn: CERTIFICATE_ARN,
+          hoc_cert: CERTIFICATE_ARN,
           cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
           subdomain: fqdn,
