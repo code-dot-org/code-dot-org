@@ -122,6 +122,10 @@ EOS
 
 user_name = ask_for_name
 
+should_i "integrate staging into staging-next" do
+  open_pull_request 'staging-next', 'staging', 'staging > staging-next'
+end
+
 should_i "start a morning test run" do
   # TODO: More detail on this process.
   puts "TBD: SSH to staging-next machine, pull latest changes, run tests"
