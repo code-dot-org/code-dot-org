@@ -428,7 +428,7 @@
 
   learn_banner_heading: 'HOUR of CODE'
   learn_banner_blurb: "Try a one-hour tutorial designed for all ages in over 45 languages.  Join millions of students and teachers in over 180 countries starting with an Hour of Code."
-  learn_banner_beyond: "Want to keep learning?  <a id='teacher_banner_beyond'>Go beyond an hour</a>."
+  learn_banner_beyond: "Want to keep learning?  <a id='learn_banner_beyond'>Go beyond an hour</a>"
   learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
