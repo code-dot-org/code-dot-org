@@ -24,7 +24,7 @@ Feature: App Lab HTML Sanitization
     And element "#label1" has text ""
     And element "#text_area1" has text ""
 
-    Then element "#screen2" is a child of element "#divApplab"
-    And element "#screen3" is a child of element "#divApplab"
-    And element "#text_area1" is a child of element "#screen3"
-    And element "#button1" is a child of element "#screen3"
+    Then element "screen2" is a child of element "divApplab"
+    And element "screen3" is a child of element "divApplab"
+    And element "text_area1" is a child of element "screen3"
+    And element "button1" is a child of element "screen3"
