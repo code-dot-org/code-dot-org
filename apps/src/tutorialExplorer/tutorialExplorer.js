@@ -141,9 +141,15 @@ const TutorialExplorer = React.createClass({
    * Set up a smooth scroll to the top of all tutorials once we've re-rendered the
    * relevant changes.
    * Note that if that next render never comes, we won't actually do the scroll.
+   *
+   * Also note that this is currently disabled unless URL parameter "scrolltotop" is
+   * provided, due to flicker and mispositioning of the sticky header after scrolling
+   * on iOS devices.
    */
   scrollToTop() {
-    this.shouldScrollToTop = true;
+    if (window.location.search.indexOf("scrolltotop") !== -1) {
+      this.shouldScrollToTop = true;
+    }
   },
 
   /*
