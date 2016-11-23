@@ -1,6 +1,6 @@
 "mi-NZ":
   hour_of_code: Hour of Code
-  hello: Hello world
+  hello: Tēnā koe e te ao
   'yes': 'Yes'
   'no': 'No'
   select_language: Please select your language
@@ -27,15 +27,18 @@
   petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: Name
-  email: Email
+  email: "Īmēra"
   zipcode: ZIP code or country
   submit: Submit
   twentyhours_heading: Try our Intro to Computer Science Course
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
-  og_title: The Hour of Code is coming
-  og_description: The Hour of Code is a global movement reaching tens of millions
-    of students of all ages in 180+ countries and over 45 languages.
+  og_title: Coding is foundational
+  og_description: Technology is changing everything. Every student in every school
+    deserves the opportunity to study computer science.
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
@@ -53,9 +56,9 @@
   csedweek_map_legend_title: Legend
   csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: Special Event
-  cded_sign_up: Sign up
+  cded_sign_up: Waitohu
   cded_try_it: Try it
-  try_now: Try now
+  try_now: Whakamātauria ināianei
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
@@ -214,7 +217,7 @@
   support_url: http://support.code.org/
   country: Country
   city: City
-  gender: Gender
+  gender: Ira
   boys: Boys
   girls: Girls
   give_my_hour: 'Give my Hour to:'
@@ -245,9 +248,11 @@
   continue_learning_header: Continue learning beyond an Hour
   continue_learning_body: There are lots of options.  You can learn online, or at
     a local school, or summer camp.
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Try another Code Studio course
   learn_online: Try other courses online
   learn_classes: Find local classes
+  learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
@@ -284,7 +289,7 @@
   studiobar_elementary_body: Our three new courses for K&#8209;5
   studiobar_hoc_title: The Hour of Code
   studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_title: Flappy Code
+  studiobar_flappy_title: Waehere Flappy
   studiobar_flappy_body: Make and share your own Flappy game
   studiobar_teacher_title: Made for teachers
   studiobar_teacher_body: Introduce Code Studio in your classroom
@@ -347,11 +352,11 @@
   homepage_slot_text_studio: All of our tutorials
   homepage_slot_text_course4: Course 4
   homepage_slot_text_shop: Shop
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: Waehere Flappy
   homepage_action_text_hoc: An Hour of Code for every student.
   homepage_action_text_num_served: "# served"
   homepage_action_text_join_us: Join us
-  homepage_action_text_sign_up: Sign up
+  homepage_action_text_sign_up: Waitohu
   homepage_action_text_try_it: Try it
   homepage_action_text_volunteers: Technical volunteers wanted
   homepage_action_text_codevideo: Watch the video
@@ -448,8 +453,10 @@
   class_submission_level_college: College
   class_submission_level_vocational: Vocational
   class_submission_languages_other: Other language(s)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
   playlab_classic_title: Classic
   playlab_gumball_title: The Amazing World of Gumball
@@ -472,6 +479,32 @@
   mc_gradelevel: Ages 6-106
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6-106
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Minecraft Hour of Code
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
@@ -479,7 +512,7 @@
   help_translate: Help us translate.
   no_internet: Don't have Internet?
   download_offline: Download the offline version.
-  are_you_teacher: Are you a teacher?
+  are_you_teacher: He pouako rānei koe?
   review_lesson_plan: Review the lesson plan and other teacher resources.
   volunteer_engineer_submission_title: Inspire students and volunteer
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host
@@ -534,10 +567,10 @@
     include it here.
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
-  volunteer_engineer_submission_field_email: Email address
+  volunteer_engineer_submission_field_email: Wāhitau īmēra
   volunteer_engineer_submission_field_email_desc: Your email address will never be
     shared, but we'll send you requests from teachers.
-  volunteer_engineer_submission_field_email_placeholder: Email address
+  volunteer_engineer_submission_field_email_placeholder: Wāhitau īmēra
   volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
     teachers to contact you for the Hour of Code or other volunteer opportunities.
     Your email and exact address will NEVER be shared by us. But the other information
@@ -583,7 +616,7 @@
     to say a few words of inspiration to the kids
   volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
     prepare me for coding with my students
-  petition_age: Age
+  petition_age: Pakeke
   dashboard_landing_title: Teacher Home Page
   dashboard_landing_welcome: Welcome to the new and improved teacher dashboard.
   dashboard_landing_video: Watch this video
@@ -598,11 +631,11 @@
   dashboard_landing_classroom_resources: Resources for your classroom
   dashboard_landing_office_hours: Ask a question in person! Visit our monthly video
     office hours.
-  dashboard_landing_print_certificates: Print certificates for students who finish
-    this course
-  dashboard_landing_educator_blog: Read about news and updates to our materials at
-    our Educator Blog
-  dashboard_landing_video_player: Test our new video player at your school
+  dashboard_landing_print_certificates: Tāngia ngā tiwhikete mō ngā ākonga ka oti
+    i a rātou tēnei whakaakoranga
+  dashboard_landing_educator_blog: Pānuihia ngā pūrongo me ngā whakahoutanga o ā mātou
+    rauemi ki tā mātou Rangitaki Kaiwhakaako
+  dashboard_landing_video_player: Whakamātauria tā mātou pūrere ataata hou ki tō kura
   dashboard_landing_progress_title: Main class progress
   dashboard_landing_progress_biggest: This is the progress for your biggest section.
   dashboard_landing_view_progress: View Progress for %{biggest_section}
@@ -658,7 +691,7 @@
   dashboard_course_csp_desc: Code.org has designed a rigorous, engaging, and approachable
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Loading...
-  dashboard_action_edit: Edit
+  dashboard_action_edit: Whakatika
   dashboard_action_save: Save
   dashboard_action_save_all: Save all
   dashboard_action_cancel: Cancel
@@ -689,7 +722,7 @@
   dashboard_navigation_section_student_progress: Student Accounts and Progress
   dashboard_navigation_section_teacher_progress: Your Course Progress
   dashboard_navigation_section_lesson_plans: Lesson Plans and Resources
-  dashboard_navigation_section_community: Help and Community
+  dashboard_navigation_section_community: Tautoko
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
@@ -703,13 +736,14 @@
   dashboard_navigation_view_stats: View Stats
   dashboard_navigation_section: 'Section: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
-  dashboard_progress_not_started: not started
-  dashboard_progress_in_progress: in progress
+  dashboard_progress_not_started: kāore anō kia tīmata
+  dashboard_progress_in_progress: e kauneke ana
   dashboard_progress_not_completed: not completed
-  dashboard_progress_completed_too_many_blocks: completed, too many blocks
-  dashboard_progress_completed_perfect: completed, perfect
-  dashboard_progress_furthest_level_attempted: furthest level attempted
-  dashboard_progress_submitted: submitted
+  dashboard_progress_completed_too_many_blocks: kua oti, he nui kē ngā paraka
+  dashboard_progress_completed_perfect: kua oti, pāruhi kē
+  dashboard_progress_furthest_level_attempted: kua whakamātauria te taumata tiketike
+    rawa
+  dashboard_progress_submitted: kua tāpaetia
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
@@ -740,7 +774,7 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: Close
+  dashboard_sections_close: Kati
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -781,12 +815,12 @@
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Name
   dashboard_students_progress: Progress
-  dashboard_students_age: Age
-  dashboard_students_gender: Gender
-  dashboard_students_male: Male
-  dashboard_students_female: Female
+  dashboard_students_age: Pakeke
+  dashboard_students_gender: Ira
+  dashboard_students_male: Tāne
+  dashboard_students_female: Wahine
   dashboard_students_secret: Secret
-  dashboard_students_password: Password
+  dashboard_students_password: Kupuhipa
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Completed Levels
@@ -837,7 +871,7 @@
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Overview
-  dashboard_sequence: Sequence
+  dashboard_sequence: Raupapa
   dashboard_framework: Framework
   dashboard_standards: Standards
   dashboard_implementation_guide: Implementation Guide
@@ -855,16 +889,16 @@
   dashboard_grade_other: Other
   dashboard_login_word: Word
   dashboard_login_picture: Picture
-  dashboard_login_none: Email
+  dashboard_login_none: "Īmēra"
   dashboard_new_password: new password
-  dashboard_stage: Stage
-  dashboard_puzzle: Puzzle
+  dashboard_stage: Taumata
+  dashboard_puzzle: Panga
   dashboard_question: Question
   dashboard_response: Response
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
-  dashboard_correctness_correct: Correct
+  dashboard_correctness_correct: Tika
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
@@ -905,21 +939,35 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Learn more
-  dashboard_announce_try_now_button: Try it now
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_try_now_button: Whakamātauria ināianei
+  dashboard_announce_host_an_hour_button: Hāpaitia tētahi Hour
+  dashboard_announce_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai
+    wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
+    eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
+    o ngā kaiurungi mātauranga, ngā kaikāwana 28, rātou ko ngā Kaihautū o ngā umanga
+    mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki te
+    tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko.
+  dashboard_announce_petition_button: Tāpiritia tō ingoa
+  dashboard_announce_all: Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā
+    āhuahira me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia
+    ngā whakapāohotanga o mua.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
     will start teaching computer science during the Hour of Code this December 5-11.
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -930,10 +978,10 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: Try now
+  learn_more: Whakamātauria ināianei
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: Sign up
+  learn_sign_up_button: Waitohu
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -952,9 +1000,10 @@
   learn_inspirational_videos: Inspire students by showing them <a href="https://code.org/educate/inspire">these
     videos</a>
   hoc2014_try_new_tutorials: Try our new Hour of Code tutorials
-  hoc2014_try_new_tutorial: Try our new Hour of Code tutorial in beta
+  hoc2014_try_new_tutorial: Whakamātauria tā mātou whakaaroranga Hour of Code hou
+    ki peta
   hoc2014_try_scrat: Angry Birds, PvZ, and Scrat
-  hoc2014_try_frozen: Artist with Anna and Elsa, from Frozen
+  hoc2014_try_frozen: Rehetoi me Anna rāua ko Elsa nō Frozen
   carousel_heading_codeorg: Tutorials by Code.org
   carousel_heading_codeorg_any_device: Tutorials by Code.org (for all devices)
   carousel_heading_3rd_party: Tutorials by 3rd parties
@@ -997,8 +1046,8 @@
   mobile_devices: Partner tutorials for mobile devices
   frozen_name: Code with Anna and Elsa
   starwars_name: 'Star Wars: Building a Galaxy with Code'
-  codeorg_name: Classic Maze
-  codeintl_name: Classic Maze
+  codeorg_name: Rīrapa Tauhira
+  codeintl_name: Rīrapa Tauhira
   thinkersmithspanish_name: Mis Amigos Roboticos
   khan_name: An introduction to JavaScript
   khanes_name: An introduction to JavaScript
@@ -1034,7 +1083,7 @@
   thinkersmith2_name: Binary Baubles
   kodableunplugged_name: fuzzFamily Frenzy
   projguts_name: Rock, Paper, Scissors
-  hourofcode_name: Classic Maze
+  hourofcode_name: Rīrapa Tauhira
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artist
@@ -1049,13 +1098,17 @@
   course2_name: Course 2
   course3_name: Course 3
   course4_name: Course 4
-  accelerated_name: Accelerated Course
+  accelerated_name: Whakaakoranga Whakatere
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Unit 3: Programming'
   cspunit4_name: 'Unit 4: Data'
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1069,23 +1122,27 @@
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: Accelerated Course
+  20-hour_name: Whakaakoranga Whakatere
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
-  classicmaze_name: Classic Maze
+  classicmaze_name: Rīrapa Tauhira
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
   math_category_name: Math
   hoc_category_name: Hour of Code
   csf_category_name: CS Fundamentals
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
-  applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  research_studies_category_name: Research Studies
+  applab_name: Taiwhanga Taupānga
+  applab_gradelevel: Pakeke 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1756,10 +1813,10 @@
     give kids a fun crash course in programming robots while sharpening their skills
     in math and science.
   compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_unsupported_browser: Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia
+    tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'>
+    tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi,
+    heoi anō, kia takatū i te whatinga o te taumahinga.
   starwars_shortcode: star
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1768,58 +1825,10 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
