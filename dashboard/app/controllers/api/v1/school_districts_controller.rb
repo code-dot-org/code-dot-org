@@ -8,6 +8,6 @@ class Api::V1::SchoolDistrictsController < ApplicationController
   # GET /api/v1/school_district.csv
   def index
     districts = SchoolDistrict.where(state: params[:state]).where.not(id: EXCLUDED_DISTRICT_IDS)
-    render json: ActiveModel::Serializer.new(districts, each_serializer: Api::V1::SchoolDistrictSerializer)
+    render json: districts, each_serializer: Api::V1::SchoolDistrictSerializer
   end
 end
