@@ -7,6 +7,6 @@ class String
   #
   # @return [String]
   def titleize_with_id
-    self.titleize + (self.end_with?('_id') ? ' Id' : '')
+    titleize + (end_with?('_id') ? ' Id' : '')
   end
 end

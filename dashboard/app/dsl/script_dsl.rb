@@ -145,7 +145,7 @@ class ScriptDSL < BaseDSL
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 
     s << '' unless s.empty?
-    s << self.serialize_stages(script)
+    s << serialize_stages(script)
 
     File.write(filename, s.join("\n"))
   end
@@ -165,11 +165,11 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(self.serialize_level(level, type, sl.active?(level)).map{ |l| l.indent(2) })
+            s.concat(serialize_level(level, type, sl.active?(level)).map{ |l| l.indent(2) })
           end
           s << 'endvariants'
         else
-          s.concat(self.serialize_level(sl.level, type))
+          s.concat(serialize_level(sl.level, type))
         end
       end
       s << ''

@@ -7,7 +7,7 @@ class String
   # Returns true if the string contains any one of the strings passed
   def include_one_of?(*items)
     items.flatten.each do |item|
-      return true if self.include?(item)
+      return true if include?(item)
     end
     false
   end
@@ -16,7 +16,7 @@ class String
   unless method_defined?(:to_bool) # May be provided by Rails
     def to_bool
       return true if self =~ (/^(true|t|yes|y|1)$/i)
-      return false if self.empty? || self =~ (/^(false|f|no|n|0)$/i)
+      return false if empty? || self =~ (/^(false|f|no|n|0)$/i)
       raise ArgumentError.new("'#{self}' is not convertable to true/false.")
     end
   end
@@ -59,9 +59,9 @@ class String
   #
   # Returns converted string.
   def force_8859_to_utf8
-    self.force_encoding('utf-8')
-    return self if self.valid_encoding?
-    self.force_encoding('ISO-8859-1')
-    self.encode!('utf-8')
+    force_encoding('utf-8')
+    return self if valid_encoding?
+    force_encoding('ISO-8859-1')
+    encode!('utf-8')
   end
 end

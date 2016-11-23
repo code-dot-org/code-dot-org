@@ -100,11 +100,11 @@
         "message": "To draw a square you need to moveForward(pixels) at least 4 times."
       }
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Validation note: this does not verify that a student actually drew a blue square.  Only that they used `penColor` and `penWidth`"
+    "teacher_markdown": "Validation note: this does not verify that a student actually drew a blue square.  Only that they used `penColor` and `penWidth`",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

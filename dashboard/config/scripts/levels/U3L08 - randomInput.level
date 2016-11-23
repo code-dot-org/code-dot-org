@@ -166,36 +166,12 @@
     "log_conditions": [
       {
         "entries": [
-          "drawFish:4"
-        ],
-        "matchType": "exact",
-        "minTimes": 2,
-        "message": "The task asks you to add 3 parameters to drawFish (for a total of 4 parameters) to help control the color of the fish. Call it at least twice to create two fish of different sizes and different colors."
-      },
-      {
-        "entries": [
-          "drawSeaGrass:1"
-        ],
-        "matchType": "exact",
-        "minTimes": 2,
-        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
-      },
-      {
-        "entries": [
-          "drawStarfish:1"
-        ],
-        "matchType": "exact",
-        "minTimes": 2,
-        "message": "The task asks you to modify drawStarfish to add a parameter and call it at least twice to create two star fish of different sizes."
-      },
-      {
-        "entries": [
           "randomNumber:2",
           "drawStarfish:1"
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawStarfish."
+        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawStarfish.  It should look something like drawStarfish(randomNumber(10,30))"
       },
       {
         "entries": [
@@ -204,7 +180,7 @@
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawSeaGrass."
+        "message": "The task asks you to use a call to randomNumber(min,max) as the parameter to drawSeaGrass. It should look something like drawSeaGrass(randomNumber(5,20))"
       },
       {
         "entries": [
@@ -217,6 +193,10 @@
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note: here we only check to see if `randomNumber(min,max)` is used as a parameter in calls to the functions.",
     "contained_level_names": null
   },
   "published": true,

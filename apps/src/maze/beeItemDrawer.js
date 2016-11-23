@@ -106,7 +106,7 @@ export default class BeeItemDrawer extends Drawer {
    */
   updateOrCreateText_(prefix, row, col, text) {
     let textElement = super.updateOrCreateText_(prefix, row, col, text);
-    textElement.setAttribute('class', 'bee-counter-text');
+    textElement.setAttribute('class', 'karel-counter-text');
     return textElement;
   }
 
