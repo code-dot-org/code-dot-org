@@ -3,7 +3,9 @@
 # Based off of data_fix_for_missing_emails
 #
 # This script reads a file of user ids (one per line). For each,
-# it clears out the user's 'races' field.
+# it clears out the user's 'races' field. This script does NOT
+# verify that the user is not in the US, that is assumed to have been
+# checked when creating the list of ids to wipe.
 #
 # The CSV file is created by dumping the output of a SQL query against the dashboard DB to a file:
 #
@@ -30,7 +32,7 @@ File.foreach('/tmp/non_us_ids_with_races.csv').with_index do |line, line_num|
   # a (arbitrary) fraction of a second.
   sleep(0.05)
   begin
-    user = User.find(id) # throws RecordNotFound
+    user = User.with_deleted.find(id) # throws RecordNotFound
     next if user.nil? || user.races.nil_or_empty?
     begin
       puts "UPDATING: #{user.id} (deleting races: #{user.races})..."
