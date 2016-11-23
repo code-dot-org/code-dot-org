@@ -102,6 +102,16 @@ social:
                         <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.britishcouncil.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/British-Council-stacked-Corporate-rgb-e1415722280172-558x160.jpg"></a>
                     </div>
                 </div>
+<div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.didactic.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/didactic.png"></a>
+                    </div>
+                </div>
+<div class="col-sm-3 col span_3">
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+                        <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.examenultau.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/et.png"></a>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-sm-3 col span_3">
@@ -193,8 +203,8 @@ social:
                     </div>
                 </div>
             </div><h1 class="text-align-center">Parteneri Media</h1><div class="row"><div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 140px; width: 800%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://digi24.ro" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/D24.jpg"></a>
+                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;”>
+                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.radio21.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/Radio21.jpg"></a>
                     </div>
                   </div><div class="col-sm-3 col span_3">
                     <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">

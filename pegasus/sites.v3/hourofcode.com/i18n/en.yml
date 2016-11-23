@@ -691,6 +691,8 @@
   tutorial_gpp_name: "Graph Paper Programming"
   tutorial_foosgame_name: "codeSpark Academy with the Foos - GameMaker"
   tutorial_solopython_name: "My First Python Code"
+  tutorial_kodableint_name: "Introduction to Programming"
+  tutorial_kodableadv_name: "Advanced Programming Concepts"
 
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -950,6 +952,8 @@
   tutorial_gpp_shortdescription: "Students write an algorithm (a set of instructions) using a set of predefined commands to direct their classmates to reproduce a drawing."
   tutorial_foosgame_shortdescription: "Design and code your own video game with codeSpark Academy with The Foos."
   tutorial_solopython_shortdescription: "Letter Counter in Python"
+  tutorial_kodableint_shortdescription: "Students will be introduced to programming with the most foundational concept: Sequence."
+  tutorial_kodableadv_shortdescription: "Students will build on foundational programming concepts and learn about higher level, JavaScript code."
 
   tutorial_moana_longdescription: "Moana: Wayfinding with Code is targeted for kids ages 8+ trying an introduction to computer science for the first time. The tutorial will be available in over 25 languages, open-source and free online with a digital toolkit for educators and Hour of Code event organizers. Disney's goal is to inspire kids from all backgrounds and ethnicities to try coding. Through a brand-new, engaging and fun experience starring a strong female lead character - Moana - our goal is to continue providing the spark kids need to continue their studies in computer science.\nIn the tutorial, Moana is now a master wayfinder and she is leading her people on the New Migrations. When the tutorial starts, students will help Moana and Maui sail through an unknown territory while learning basic coding commands to help steer the boat.\nAs students learn how to use sequences, loops and conditionals to master the art of navigation, Moana and Maui are suddenly ambushed by the Kakamora.\nStudents must help Moana and Maui dodge the coconut-armoured pirates on an adventure that takes them through computer science concepts in a fun, creative and engaging way!"
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
@@ -1208,7 +1212,9 @@
   tutorial_bigevent_longdescription: "Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for."
   tutorial_gpp_longdescription: "By \"programming\" one another to draw pictures, students will begin to understand what programming is really about. The activity will begin by having students instruct each other to color squares in on graph paper in an effort to reproduce an existing picture."
   tutorial_foosgame_longdescription: "Code your own video game with codeSpark Academy with The Foos’ new Game Kits. This activity guides students brand new to game design using a \"paint-by-numbers\" approach. Students will follow the on screen prompts to design and program a fun video game that they can share with their family and friends."
-  tutorial_solopython_longdescription: "Learn Python basics using the first two modules on SoloLearn’s Python app, consult discussions and comments to help you understand better, run code examples in the compiler to help with material retention. Write and compile a simple program that takes your name as input, counts the number of letters, and outputs the result. Share and get community upvotes. "
+  tutorial_solopython_longdescription: "Learn Python basics using the first two modules on SoloLearn’s Python app, consult discussions and comments to help you understand better, run code examples in the compiler to help with material retention. Write and compile a simple program that takes your name as input, counts the number of letters, and outputs the result. Share and get community upvotes."
+  tutorial_kodableint_longdescription: "Students will learn about the role of a programmer in making machines function. Students will focus on sequence and practice giving instructions in order. This activity includes an unplugged group practice, as well as on-screen, independent practice."
+  tutorial_kodableadv_longdescription: "Students will engage in developmentally appropriate lessons on higher level programming concepts such as loops, functions, variables, and object-oriented programming. Lessons included unplugged instruction, guided practice, and on-screen independent practice."
 
   tutorial_moana_language: "English, Arabic, Chinese, Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1468,6 +1474,8 @@
   tutorial_gpp_language: "English only"
   tutorial_foosgame_language: "English, Arabic, German, Spanish, French, Japanese, Korean, Dutch, Portuguese, Brazilian Portuguese, Romanian, Turkish, Traditional Chinese, Simplified Chinese, Greek, Italian, Polish"
   tutorial_solopython_language: "English only"
+  tutorial_kodableint_language: "English only"
+  tutorial_kodableadv_language: "English only"
 
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
@@ -1727,6 +1735,8 @@
   tutorial_gpp_string_detail_grades: "Grades 2+"
   tutorial_foosgame_string_detail_grades: "Pre-reader - Grade 5"
   tutorial_solopython_string_detail_grades: "Grades 9+"
+  tutorial_kodableint_string_detail_grades: "Pre-reader - Grade 5"
+  tutorial_kodableadv_string_detail_grades: "Pre-reader - Grade 5"
 
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
@@ -1986,6 +1996,8 @@
   tutorial_gpp_string_platforms: "Unplugged"
   tutorial_foosgame_string_platforms: "Android tablet, iPad"
   tutorial_solopython_string_platforms: "All modern browsers, Android tablet, Android phone, iPad, iPhone"
+  tutorial_kodableint_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
+  tutorial_kodableadv_string_platforms: "Unplugged, All modern browsers, iPad, Android tablet"
 
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
@@ -2245,6 +2257,8 @@
   tutorial_gpp_string_detail_platforms: "Unplugged"
   tutorial_foosgame_string_detail_platforms: ""
   tutorial_solopython_string_detail_platforms: ""
+  tutorial_kodableint_string_detail_platforms: "Unplugged"
+  tutorial_kodableadv_string_detail_platforms: "Unplugged"
 
   tutorial_moana_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
@@ -2504,3 +2518,5 @@
   tutorial_gpp_string_detail_programming_languages: "Language independent"
   tutorial_foosgame_string_detail_programming_languages: "Blocks"
   tutorial_solopython_string_detail_programming_languages: "Python"
+  tutorial_kodableint_string_detail_programming_languages: "Language independent, Symbols"
+  tutorial_kodableadv_string_detail_programming_languages: "Language independent, Javascript"
