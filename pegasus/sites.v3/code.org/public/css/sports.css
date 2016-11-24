@@ -20,8 +20,9 @@
 }
 
 .choice {
-  width: 70%;
-  padding: 5px;
+  width: 235px;
+  padding: 0 5px;
+  float: left;
 }
 
 .choice-container {
