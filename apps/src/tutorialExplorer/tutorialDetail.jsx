@@ -137,10 +137,12 @@ const TutorialDetail = React.createClass({
       // Reserve key 9 for the optional standards.
     ];
 
+    const imageSrc = this.props.item.image.replace("/images/", "/images/fill-600x450/").replace(".png", ".jpg");
+
     var imageComponent = (
       <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
         <img
-          src={this.props.item.image.replace(".png", ".jpg")}
+          src={imageSrc}
           style={{width: '100%'}}
         />
       </div>
