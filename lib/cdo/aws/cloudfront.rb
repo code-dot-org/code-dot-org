@@ -119,7 +119,6 @@ module AWS
         end
         puts "#{app} cache invalidated!"
       end
-
     end
 
     # Creates or updates the CloudFront distribution based on the current configuration.
