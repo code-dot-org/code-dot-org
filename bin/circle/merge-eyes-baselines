@@ -11,7 +11,7 @@ require_relative '../../lib/cdo/eyes_utils'
 
 begin
   puts "Merge staging eyes into staging-next"
-  EyesUtils.merge_eyes_baselines('staging', 'staging-next')
+  EyesUtils.merge_eyes_baselines('test', 'staging-next')
   # commit_merges_branch = GitUtils.get_latest_commit_merged_branch
   # if commit_merges_branch
   #   puts "Commit appears to merge #{commit_merges_branch} into #{GitUtils.current_branch}"
