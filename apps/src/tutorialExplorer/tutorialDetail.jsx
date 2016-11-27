@@ -4,6 +4,7 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
+import Image from './image';
 import i18n from './locale';
 /* global ga */
 
@@ -27,9 +28,30 @@ const styles = {
     top: 0,
     width: '100%'
   },
-  tutorialDetailImageContainer: {
+  tutorialDetailImageOuterContainer: {
     float: "left",
     paddingBottom: 10
+  },
+  tutorialDetailImageContainer: {
+    position: "relative",
+    width: "100%",
+    height: 0,
+    paddingTop: "75%"
+  },
+  tutorialDetailImageBackground: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: "#f1f1f1",
+    border: "solid 1px #cecece"
+  },
+  tutorialDetailImage: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%"
   },
   tutorialDetailInfoContainer: {
     float: "left",
@@ -140,11 +162,11 @@ const TutorialDetail = React.createClass({
     const imageSrc = this.props.item.image.replace("/images/", "/images/fill-600x450/").replace(".png", ".jpg");
 
     var imageComponent = (
-      <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
-        <img
-          src={imageSrc}
-          style={{width: '100%'}}
-        />
+      <div style={styles.tutorialDetailImageOuterContainer} className="col-xs-12 col-sm-6">
+        <div style={styles.tutorialDetailImageContainer}>
+          <div style={styles.tutorialDetailImageBackground}/>
+          <Image style={styles.tutorialDetailImage} src={imageSrc}/>
+        </div>
       </div>
     );
 
