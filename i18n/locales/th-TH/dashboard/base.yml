@@ -2,9 +2,9 @@ th:
   errors:
     messages:
       not_saved: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
-      too_young: 'This content has age restrictions in place and is not available for younger students.'
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
+      too_young: 'เนื้อหานี้มีข้อจำกัดด้านอายุและไม่เหมาะสำหรับผู้เรียนที่มีอานุน้อย'
+      teacher_must_accept_terms: 'เนื้อหานี้มีข้อจำกัดด้านอายุและไม่เหมาะสำหรับผู้เรียนที่มีอานุน้อย หากต้องการใช้ ต่องขอให้คุณครูของนักเรียยอมรับเงื่อนไขการใช้บริการที่มีการอัพเดทเพื่อให้นักเรียนสามารถเข้าถึงเนื้อหานี้ได้ คุณครูสามารถทำได้ โดยการเข้าไปใส่วนของ Code Studio และคลิกปุ่ม "Review updated terms - ทบทวนเงื่อนไขที่มีการอัพเดท" ที่อยู่บริเวณด้านบนของหน้าแรกของหน้า Code Studio'
+      pair_programmer: 'ตอนนี้คุณกำลังจับคู่เขียนโปรแกรมกับนักเรียนที่ไม่สามารถเข้าถึงเนื้อหานี้ได้ ถ้าคุณต้องการเข้าถึงเนื้อหานี้ ให้หยุดจับคู่เขียนโปรแกรม แล้วลองใหม่อีกครั้ง'
   activerecord:
     errors:
       messages:
@@ -31,7 +31,7 @@ th:
   unsubmit: ไม่ส่ง
   previous_page: หน้าที่แล้ว
   next_page: หน้าถัดไป
-  next_resource: Next resource
+  next_resource: ทรัพยากรที่มีให้ใช้ถัดไป
   done_with_module: Done with this Learning Module
   cancel: "ยกเลิก"
   okay: "ตกลง"
@@ -81,9 +81,9 @@ th:
   signup_form:
     student_count: '%{count} นักเรียนได้ลงทะเบียนไว้แล้ว'
     teacher_count: 'ครู %{count} ได้ลงทะเบียนไว้แล้ว'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    overview: 'ลงทะเบียนเพื่อที่จะได้มีบัญชีเพื่อติดตามความคืบหน้า หรือจัดการชั้นเรียนของคุณ <a href="/">คุณสามารถเรียกดูขั้นตอนและปริศนาต่าง ๆ</a> โดยที่ไม่ต้องมีบัญชีผู้ใช้ แต่คุณจะต้องลงทะเบียนหากต้องการบันทึกความคืบหน้าและโครงการของคุณ'
+    hoc_already_signed_up_heading: 'เริ่มใช้งานโดยไม่ต้องลงชื่อเข้าใช้'
+    hoc_already_signed_up_content: 'คุณลงทะเบียนเพื่อสอน Hour of Code! คุณและนักเรียนของคุณไม่จำเป็นต้องลงชื่อเข้าใช้ในส่วนของ Code Studio เพื่อเข้าร่วมในปฏิบัติการนี้ คุณสามารถเริ่มต้นโดย <a href="https://code.org/learn">เลือกหลักสูตรการอบรม</a>สำหรับชั้นเรียนของคุณและแบ่งปันลิงค์กับนักเรียนเหล่านี้ <br/> <br/> ถ้าคุณชอบ Hour of Code และต้องการจะก้าวต่อไป คุณสามารถตั้งค่ารหัสผ่าน และสร้างบัญชีผู้ใช้สำหรับ Code Studio เพื่อลงทะเบียนนักเรียน--ของคุณต่อไปได้ที่<a href="https://code.org/educate">สำหรับหลักสูตรเพิ่มเติม</a>ของเรา'
     teacher_educator_guide: 'ดูคำแนะนำสำหรับผู้ฝึกสอน'
     title: "Sign up for Code.org"
     school_name: 'ชื่อโรงเรียน (ถ้ามี)'
@@ -490,7 +490,7 @@ th:
       body: "Explore a Minecraft world through code."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ages 4+"

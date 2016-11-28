@@ -93,6 +93,14 @@
     overview: Sign up for an account to track your progress or manage your classroom.
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Sign up for Code.org
     school_name: Məktəbin Adı (vacib deyil)
@@ -438,6 +446,18 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -488,7 +508,7 @@
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and
       Hour of Code&reg; are trademarks of Code.org."
-    copyright: Copyright
+    copyright: Müəllif Haqqı
     more: Daha çox
     feedback: Rəy verin
     translate: Sizin dilinizə tərcümə etməkdə bizə kömək edin
@@ -527,7 +547,7 @@
   try_reloading: Səhifəni yenidən yükləməyə cəhd edin
   next_stage: Qurtardı! Növbəti mərhələyə keçin
   download_pdf: Dərs planını aç
-  lesson_plan: Lesson Plan
+  lesson_plan: Dərs Planı
   view_lesson_plan: Dərs palnına baxın
   pdf_download: PDF faylını endir
   download_coming_soon: Downloadable activity coming soon.
@@ -551,7 +571,7 @@
     created: You created a new script.
     destroyed: You destroyed a script.
     manage: Build Levels
-    view: View
+    view: Görünüş
     back: Back to scripts
     success: You successfully edited the blocks.
     level:
@@ -560,13 +580,13 @@
       unused: Unused Levels
   upsell:
     applab:
-      title: App Lab
+      title: Proqram Labı
       body: App Lab is a programming environment where you can make simple apps. Design
         an app, code with blocks or JavaScript to make it work, then share your app
         in seconds.
       body_short: Design an app, code with blocks or JavaScript to make it work, then
         share your app in seconds.
-      audience: Ages 13+
+      audience: 13+ yaş
       cta: Learn how
     hoc:
       title: Kod Saatı
@@ -600,9 +620,12 @@
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    minecraft2016:
+      title: Minecraft
+      body: Program animals and other Minecraft creatures in your own version of Minecraft.
     unplugged:
       title: Unplugged Lessons
-      audience: Ages 6+
+      audience: 4+ yaş
       body: We've compiled a list of unplugged lessons for you to use in your classroom.
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
@@ -691,7 +714,7 @@
       in the wrong order.
   text_match:
     placeholder: Cavabınızı buraya daxil edin
-    open_response_title: Thanks
+    open_response_title: Təşəkkürlər,
     open_response_body: Thanks for your response!
     correct_title: Düzgün
     correct_body: Bu düzgün cavabdır.
@@ -734,9 +757,8 @@
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: Qəbul et
     print: "çap"
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -748,16 +770,16 @@
       science'
     message: Please tell us your race (check all that apply)
     races:
-    - white: White
+    - white: Ağ
     - black: Black or African American
     - hispanic: Hispanic or Latino
-    - asian: Asian
+    - asian: Asyalı
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
     - other: Digər
     - opt_out: Prefer not to say
     submit: Göndər
-    decline: Close
+    decline: Bağla
   zendesk_too_young_message: Sorry, younger users may not sign in to our support site.
     You may browse <a href="http://support.code.org">support.code.org</a> without
     signing in or ask your parent or teacher to contact us for you.
@@ -767,7 +789,7 @@
     completed_too_many_blocks: tamamlanıb, artıq bloklar var
     completed_perfect: tamamlanıb, əladır
     furthest_level_attempted: furthest level attempted
-    assessment: qiymətləndirilir
+    assessment: yoxlama
     submitted: submitted
   studio:
     courses_working_on: "Üzərində işlədiyiniz kurslar"
@@ -778,9 +800,9 @@
     create: Create Project
     create_a_project: 'Yeni bir layihə düzəlt:'
     new: Yenisini düzəlt
-    rename: Rename
-    save: Save
-    delete: Delete
+    rename: Adını dəyiş
+    save: Yadda saxla
+    delete: Sil
     exit: Return to Course
     my_projects: Mənim layihələrim
     share: Bölüşün
@@ -790,18 +812,18 @@
       the project on a webpage.
     share_u13_warning: Ask your teacher before sharing. Only share with others in
       your school.
-    embed: Embed
+    embed: Yerləşdir
     advanced_share: Show advanced options
-    close: Close
+    close: Bağla
     more: Daha çox
     name: Ad
-    updated: Updated
+    updated: Yeniləndi
     project_type: Project Type
     help_text: Click <strong>Make an App</strong> or <strong>Draw Something</strong>
       below to make a new Play Lab or Artist project!<br/>You can come back and work
       on your projects at any time.
     need_help: Need help getting started?
-    really_delete: Delete?
+    really_delete: Sil?
     delete_yes: Bəli
     delete_no: Xeyr
     saved: Qalereyada yadda saxlandı!
@@ -848,11 +870,11 @@
           and the %{link_start_tos}Terms of Service%{link_end}
   peer_review:
     accepted:
-      name: Accepted
+      name: Qəbul edildi
       description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
         requirements"
     rejected:
-      name: Rejected
+      name: Rədd edildi
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
@@ -879,13 +901,13 @@
       artist_title: New Drawing
       continue_button: Go on to the next Stage
       playlab_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
-      playlab_title: New App
+      playlab_title: Yeni Proqram
       primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
       projects_title: Yeni layihə aç
       secondary_header: Ask your teacher what to do next
   flex_category:
-    required: Overview
+    required: Yekun
     content: Məzmun
     practice: "Öyrədici proqramlar"
     peer_review: Peer Review

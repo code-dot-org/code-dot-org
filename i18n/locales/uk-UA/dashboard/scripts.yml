@@ -30,7 +30,7 @@ uk:
           title: Курс 2
           description: Курс 2 розроблено для учнів, котрі вміють читати, але не мають попереднього досвіду програмування. Протягом навчання учні створюватимуть програми для розв'язування задач та розроблятимуть інтерактивні ігри чи історії, якими зможуть поділитися з іншими. Рекомендується для 2-5 класів.
           description_short: Курс 2 призначено для учнів, котрі вміють читати.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Вік 6 + (необхідне читання)
           stage:
             'Artist: Debugging': 'Художник: відлагодження'
             'Artist: Loops': 'Художник: цикли'
@@ -53,7 +53,7 @@ uk:
             Your Digital Footprint: Твій цифровий слід
         course3:
           title: Курс 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Курс 3 розроблено для учнів, котрі опанували Курс 2. Учні глибше розглянуть ті поняття програмування, з якими ознайомились у попередніх курсах, щоб розробляти гнучкіші рішення для складніших задач. До кінця навчання учні створять інтерактивні історії та ігри, якими зможуть поділитися з іншими. Рекомендується для 4-5 класів.
           description_short: Курс 3 є продовженням Курсу 2.
           description_audience: Вік 8-18
           stage:
@@ -1455,6 +1455,8 @@ uk:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2139,6 +2141,10 @@ uk:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2254,11 +2260,11 @@ uk:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Година коду від Майнкрафт - Розробник
+          title: Година коду від Майнкрафт - Розробник
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри.
+          description: Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ uk:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Безпечне добирання
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ uk:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Життєві алгоритми: посадити насіння'
+            Your Digital Footprint: Твій цифровий слід
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ uk:
             Binary Bracelets: Двійкові браслети
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Твій цифровий слід
+            Building a Foundation: Закладання основ
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ uk:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Цифрове громадянство
+            'Unplugged: Binary': 'Безмашинні вправи: двійкова система'
+            Artist Binary: 'Художник: двійкова система'
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ uk:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Інтернет
+            Crowdsourcing: Краудсорсинг
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ uk:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Пісні з параметрами
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,10 +2429,10 @@ uk:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Спорт
+          title: Спорт
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Закодуй власний спорт
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2448,6 +2466,20 @@ uk:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

@@ -21,8 +21,8 @@ require 'cdo/properties'
 # *_DB_READONLY constants.
 require_relative '../../lib/analyze_hoc_activity_helper'
 
-# This default number of lines of code is from 2016-01-04.
-DEFAULT_LINES_OF_CODE = 11_151_730_618
+# This default number of lines of code is from 2016-11-23.
+DEFAULT_LINES_OF_CODE = 20_886_942_901
 
 def main
   return unless only_one_running?(__FILE__)

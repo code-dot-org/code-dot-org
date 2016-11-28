@@ -312,28 +312,51 @@
         maze_3_3: "¿Cómo llego al cerdo? ¡Asegúrate de no pasar por la caja de TNT!"
         maze_3_4: "¡Argh! Escríbeme un programa que me haga esquivar al TNT y llegar
           hasta el cerdo."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+        bounce_1_basketball: Une un bloque al bloque "cuando flecha izquierda" y presiona
+          "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo
+          final.
+        bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y
+          "cuando flecha izquierda". Mueve la mano para alcanzar ambos objetivos finales.
+        bounce_5_basketball: Vamos a enviar una pelota volando hacia la mano. Coloque
+          un bloque en el bloque "cuando la bola golpea la mano" para que la pelota
+          llegue a la bandera.
+        bounce_6_basketball: Ahora la bandera está en la parte superior. Tienes que
+          unir bloques a ambos bloques de "cuando la pelota choca" para resolver este
+          puzzle.
+        bounce_7_basketball: Coloque bloques en cada uno de lo bloques "cuando". Rebota
+          la pelota hasta que golpee la bandera.
+        bounce_10_basketball: Ahora hay una meta en la parte superior. Une los bloques
+          "anotar punto" y "anotar punto del oponente" a los bloques "cuando pelota
+          alcanza la meta" y "cuando pelota pierde mano" para crear un juego. Prueba
+          cuantos puntos puedes anotar antes de que tu oponente anote dos veces.
+        bounce_11_basketball: Ahora puedes unir bloques al bloque "cuando ejecute".
+          Tienes que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar.
+          También, trata de cambiar la escena o la velocidad de la mano y la pelota
+          y ver cuantos puntos puedes anotar antes de que tu oponente anote dos veces!
+        bounce_12_basketball: Cree su propio juego de baloncesto. Usted puede cambiar
+          todas las reglas. Cuando haya terminado, haga clic en finalizar para permitir
+          a sus amigos probar su juego en sus teléfonos.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: Ahora la bandera está en la parte superior. Tienes que unir
+          bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.
+        bounce_7_sports: Coloque bloques en cada uno de lo bloques "cuando". Rebota
+          la pelota hasta que golpee la bandera.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
           and "score opponent point" blocks to the "when ball in goal" and "when ball
           misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+          your opponent scores twice!
+        bounce_11_sports: Ahora puedes unir bloques al bloque "cuando ejecute". Tienes
+          que colocar el nuevo bloque "lanzar pelota nueva" en más de un lugar. También,
+          trata de cambiar la escena o la velocidad de la mano y la pelota y ver cuantos
+          puntos puedes anotar antes de que tu oponente anote dos veces!
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: Une un bloque al bloque "cuando flecha izquierda" y pulsa "Ejecutar
           Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
           final.
@@ -816,6 +839,11 @@
         iceage_intro: Hora de Code Era del Hielo - Introducción
         iceage_events: Hora de Code Era del Hielo - Eventos
         iceage_repeat: Hora de Code Era del Hielo - Repetir comando
+        mc_2016_intro: "《我的世界》编程一小时——介绍"
+        mc_2016_loops: "《我的世界》编程一小时——循环"
+        mc_2016_events: "《我的世界》编程一小时——事件"
+        mc_2016_spawn: "《我的世界》编程一小时——生成"
+        mc_2016_congrats: "《我的世界》编程一小时——祝贺！"
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

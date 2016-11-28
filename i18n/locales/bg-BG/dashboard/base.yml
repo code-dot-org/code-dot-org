@@ -82,8 +82,8 @@ bg:
     student_count: '%{count} ученици вече са се регистрирали.'
     teacher_count: '%{count} учители вече са се регистрирали.'
     overview: 'Регистрирайте се, за да следите напредъка си или да управлявате вашата класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a> и без регистрация, но няма да запазите вашия напредък и проекти.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Започнете без логване'
+    hoc_already_signed_up_content: 'Вие сте се регистрирали да учите с Hour of Code! Вие и вашите ученици не е нужно да влезете в Code Studio, за да участвате в това събитие. За да започнете, <a href="https://code.org/learn"> изберете ръководство</a> за класната стая и споделете връзката с тях. <br/> <br/> Ако ви хареса Hour of Code и искате да отидете по-далеч, можете да зададете парола и да създадете акаунт в Code Studio и да запишете учениците си в някой от нашите <a href="https://code.org/educate"> други курсове</a>.'
     teacher_educator_guide: 'Виж ръководството за възпитатели'
     title: "Регистрирайте се в Code.org"
     school_name: 'Име на училище (по желание)'
@@ -125,7 +125,7 @@ bg:
     picture: 'Сега намерете вашата тайна картина'
     words: 'Сега въведете вашите тайни думи'
     login: 'Вход'
-    invalid_login: 'Невалидна влизане, моля опитайте отново'
+    invalid_login: 'Невалидно влизане, моля опитайте отново'
     pair_programming: 'Имам партньор на моя компютър'
   password:
     reset_form:
@@ -356,8 +356,8 @@ bg:
     announcement_petition_button: "Добавете името си"
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните съобщения.</a>"
     announcement_hoc_launch: "Хиляди преподаватели в над 180 страни ще преподават компютърни науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}' target='_blank'> Регистрирайте Вашето \"час на кода\" събитие</a> и помогнете и на друг учител да научи, че всеки може да започне обучение по компютърни науки."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 'ПРЕДУПРЕЖДЕНИЕ за учители: курсове 1-4 и ускореният курс, поради голям трафик от милиони ученици, правещи Hour of Code, <b>Code Studio няма да записват или докладват ученическия напредък през декември 3-11</b>. Ние препоръчваме по време на Hour of Code дейността с вашия клас да празнувате CS edu Week. Учениците няма да отбележат напредък тази седмица, но ще спечелят сертификат.'
+    announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение! Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света. Можете да създаде напълно уникален Minecraft опит, а след това да го споделите с приятели или да играете на телефоните си. Направете го с класа си за Hour of Code."
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля, въведете код за друг раздел."
     section_code_not_entered: "Моля, представете current_section_code."
@@ -488,7 +488,7 @@ bg:
       body: "Изследвайте Minecraft света чрез код."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
@@ -597,17 +597,17 @@ bg:
     message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
       - 
-        white: Бяла
+        white: Бял
       - 
-        black: Черна или афро-американска
+        black: Черен или афро-американец
       - 
-        hispanic: Испанска или латино
+        hispanic: Испанец или латино
       - 
-        asian: Азиатска
+        asian: Азиатец
       - 
-        hawaiian: Хавайска или друг тихоокеански островитянин
+        hawaiian: Хавайец или друг тихоокеански островитянин
       - 
-        american_indian: Индианец/Аляска Native
+        american_indian: Индианец/от Аляска
       - 
         other: Друго
       - 
@@ -716,7 +716,7 @@ bg:
       playlab_description: 'Създайте история или направете игра с Театрална лаборатория!'
       playlab_title: 'Ново приложение'
       primary_header: 'Поздравления! Вие завършихте %{stageName}!'
-      projects_description: 'Вижте отново един от Вашите проекти.'
+      projects_description: 'Вижте отново един от вашите проекти.'
       projects_title: 'Отваряне на проект'
       secondary_header: 'Попитай учителя си какво да правиш'
   flex_category:

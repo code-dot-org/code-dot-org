@@ -1701,31 +1701,31 @@ th:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "สวัสดีครับ ผมชื่อ เจนส์ และผมเป็นหัวหน้าทีมสร้างสรรค์และออกแบบเกม Minecraft\nในชั่วโมงถัดไป คุณจะได้สร้างเกม Minecraft ในแบบฉบับของคุณเอง\nทุกอย่างจะดูเหมือนกับเกม Minecraft ในภาคปกติ แต่ทุกอย่างในโลกจะหยุดลง\nแกะจะไม่เดินไปไหน ไก่จะไม่วางไข่ ซอมบี้จะยืนอยู่นิ่งๆ\nมันขึ้นอยู่กับคุณที่จะเพิ่มโค้ดเพื่อให้โลก Minecraft กลับมาทำงานอีกครั้ง"
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: "ฉันชื่อ เมลิซซ่า และฉันเป็นนักวิจัยผู้ใช้งาน ที่ Minecraft\nในงานนี้ สิ่งที่ฉันสนใจอย่างจริงจัง จะเป็นเรื่องที่ผู้คนคิดและมีปฏิสัมพันธ์กับเทคโนโลยีอย่างไร\nและงานนี้มันเป็นงานที่ยอดเยี่ยมมากสำหรับฉันที่จะทำให้วิศวกรรมคอมพิวเตอร์และจิตวิทยาเรื่องการคิดและการกระทำของมนุษย์ไปด้วยกันได้"
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "คุณจะเห็นว่าหน้าจอถูกแบ่งออกเป็นสามส่วนหลักๆ ได้แก่\n1)ส่วนพื้นที่ด้านซ้ายสุดจะเป็น Gamespace ใช้สำหรับเล่นเกม Minecraft\nซึ่งตอนนี้ทั้งโลกหยุดนิ่งไปหมด เราต้องช่วยกันแก้ปัญหานี้ด้วยการเขียนโค้ด"
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2)ส่วนพื้นที่ตรงกลางคือ Toolbox กล่องต่างๆในพื้นที่นี้คือชุดคำสั่งที่ไก่ แกะและสัตว์อื่นๆใน Minecraft สามารถเข้าใจคำสั่งได้"
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3)ส่วนพื้นที่ด้านขวาเราเรียกว่า workspace หรือพื้นที่ทำงาน\nซึ่งเป็นพื้นที่ ที่จะใช้สร้างโปรแกรมของเรา"
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "และหากคุณลืมไปว่าต้องทำอะไร ก็จะมีคำแนะนำสำหรับแต่ละด่านอยู่ด้านบน"
       7:
         image: 'notes/mc_2016_intro_7.jpg'
-        text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
+        text: "ในการเริ่มต้น เราจะเขียนโปรแกรมให้กับไก่\nให้ลากกล่องคำสั่ง 'move forward' ไปยัง workspace\nและเมื่อฉันคลิกที่ปุ่ม Run ไก่ก็จะเดินไปข้างหน้าหนึ่งก้าว\nขั้นตอนต่อไป ฉันจะทำการลากคำสั่ง 'move forward' อีกกล่อง\nไปไว้ภายใต้คำสั่ง 'move forward' ตัวแรกจนกระทั่งมีแถบสีส้มสว่างปรากฎขึ้นมา \nจากนั้นให้ปล่อยเมาส์แล้วคำสั่งทั้งสองกล่องก็จะติดเข้าด้วยกัน\nและเมื่อฉันคลิกที่ปุ่ม Run อีกครั้ง ไก่ก็จะเดินไปสองก้าว"
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "เมื่อใดที่คุณต้องการจะลบกล่องคำสั่ง ก็แค่ลบออกจากชุดคำสั่งที่ต่อกันอยู่ โดยการคลิกลากกลับมาที่ Toolbox"
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "หลังจากคุณคลิกที่ปุ่ม Run คุณสามารถคลิกที่ปุ่ม Reset เพื่อเริ่มเกมใหม่ได้ตลอดเวลา\nเอาล่ะ ตอนนี้ถึงตาคุณแล้วที่จะสร้างเกม Minecraft ในแบบฉบับของคุณเอง ขอให้สนุกนะทุกคน!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'

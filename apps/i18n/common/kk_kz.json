@@ -33,6 +33,7 @@
   "copy": "Көшіру",
   "copyright": "Авторлық құқық",
   "currentVersion": "Қазіргі нұсқа",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Table name",
   "dataWorkspaceHeader": "Data Browser",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Белгі іздеу...",
   "ignore": "Ескермеу",
   "infinity": "Шексіздік",
+  "joinText": "бірігу",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "секіру",
   "keepPlaying": "Ойынауды жалғастыр",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "Ең сыртқы сол жақтағы орынға",
   "positionTopOutRight": "Ең сыртқы оң жақтағы орынға",
   "positionTopRight": "ең оң жақтағы орынға",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Шығару",
   "privacyPolicy": "Құпиялылық саясаты",
   "projectWarning": "Ескерту: Сіз ұзағырақ жобаның бөлігі болып табылатын деңгейдесіз. Бұл деңдейде жасалған өзгерістер жобаның басқа деңгейлерінде де көрінетін болады.",
@@ -314,9 +318,5 @@
   "when": "кезде",
   "whenRun": "қосу кезінде",
   "workspaceHeaderShort": "Жұмыс аумағы: ",
-  "yes": "Иә",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Иә"
 }

@@ -1701,65 +1701,65 @@ is:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "Hæ, ég heiti Jens og ég er yfirmaður hönnunar á Minecraft. Næsta klukkutímann munt þú búa til þinn eigin Minecraft leik. Þetta lítur út eins og Minecraft en heimurinn hefur stöðvast. Kindurnar hreyfast ekki, hænurnar verpa ekki og uppvakingarnir standa bara kyrrir. Það er þitt verkefni að bæta við kóða svo að Minecraft heimurinn virki."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: 'Ég heiti Melissa og ég vinn við rannsóknir á notendum hjá Minecraft. Ég hef sérstakan áhuga á því hvernig fólk hugsar um og notar tölvutækni svo að þetta er fullkomið starf fyrir mig að geta tvinnað saman tölvuhönnun og sálfræði: hvernig fólk hugsar og hvað það gerir.'
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "Þú sérð að skjárinn þinn skiptist í þrjá aðalhluta. 1) Vinstra megin er Minecraft leikurinn. Þessa stundina er heimurinn frosinn en við ætlum að laga það með kóða."
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2) Þetta miðsvæði er verkfærakassinn. Hver þessara kubba er skipun sem hænur, kindur og aðrar Minecraft verur skilja."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3) Svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum setja saman forritið okkar."
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "Ef þú gleymir hvað á að gera, getur þú lesið leiðbeiningarnar efst."
       7:
         image: 'notes/mc_2016_intro_7.jpg'
-        text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
+        text: "Við ætlum að byrja á að forrita hænu. Við drögum \"færa áfram\" skipun yfir á vinnusvæðið. Þegar ég ýti \"Keyra\" þá færist hænan fram um eitt skref. Svo hún fari lengra dreg ég annan \"færa áfram kubb\" inn undir fyrsta \"færa áfram\" kubbinn þar til hann lýsist upp. Þá sleppi ég honum og kubbarnir tveir smella saman. Ef ég ýti aftur á \"Keyra\" gengur hænan tvö skref."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "Ef þú vilt eyða kubbi, skaltu bara fjarlægja hann úr stæðunni og draga hann aftur inn í verkfærakassann."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "Eftir að þú hefur ýtt á \"Keyra\" getur þú alltaf ýtt á \"Endurstilla\" hnappinn til endurstilla leikinn og byrja upp á nýtt. Nú er komið að þér að búa til þína útgáfu af Minecraft. Skemmtu þér vel!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
-        text: "Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some of the animals and enemies in the game. One of the animals that I worked on is the ocelot. I worked on the part where you can feed an ocelot a fish to tame it into your own cat."
+        text: "Hæ, ég heiti Lísa. Ég starfa við hugbúnaðarþróun og vinn við sum dýrin og óvinina í Minecraft. Eitt af dýrunum sem ég vann við var villikötturinn. Ég vann við það að maður getur gefið villiketti fisk og þannig tamið hann og gert hann að sínum eigin ketti."
       2:
         image: 'notes/mc_2016_loops_2.jpg'
-        text: "As humans, we get really bored if we have to do the same thing over and over and over again. But the cool thing about computers is that they can do the same thing millions or even billions of times in a row without getting bored. This repetition is called a loop and every creature in Minecraft uses loops."
+        text: "Við erum mannverur og verðum hundleið ef við þurfum að gera það sama aftur og aftur og aftur. En það sniðuga við tölvur er að þær geta gert sama hlutinn miljón eða jafnvel biljón sinnum í röð án þess að þeim leiðist. Svona endurtekning er kölluð lykkja og hver einasta vera í Minecraft notar lykkjur."
       3:
         image: 'notes/mc_2016_loops_3.jpg'
-        text: "Earlier, we got a chicken to move across the screen but then she stopped. In Minecraft, the chickens wander around forever and ever. Let's use a \"forever do\" loop from our toolbox to keep our chickens moving around forever too. The power of loops will save you tons of time and open up all kinds of neat options as you build your own version of Minecraft."
+        text: "Áður fengum við hænu til að færast yfir skjáinn en svo stansaði hún. Í Minecraft ráfa hænurnar um endalaust. Við skulum nota \"gera án enda\" lykkju úr verkfærakassanum til að láta hænurnar okkar líka hreyfa sig endalaust. Lykkjur eru mjög öflugar og munu spara þér mikinn tíma og opna á alls konar sniðuga möguleika þegar þú býrð til þína útgáfu af Minecraft."
     mc_2016_events:
       1:
         image: 'notes/mc_2016_events_1.jpg'
-        text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
+        text: "Í þessu borði getur þú valið að vera annað hvort Steve eða Alex. Ýttu á örvarlyklana á lyklaborðinu til að fara upp, niður, til vinstri og til hægri. Nú getur þú fært þig um borðið hvert sem þú vilt. Notaðu veru með því að ganga að henni, snúa þér að henni og ýta á bilslána."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
+        text: "Ef þú ert að nota snertiskjá, hreyfir þú þig með því að strjúka upp, niður, til vinstri og til hægri. Pikkaðu svo á leikinn til að nota hlutinn fyrir framan þig."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
+        text: "En hvað gerist þegar þú notar veru? Í Minecraft gefa kindur ull þegar þú rýjar þær, kýr hlaupa í burt þegar þú slærð þær og laumupúkar springa þegar þú ferð nálægt þeim. Þessi viðbrögð gerast vegna nokkurs sem kallast atvik. Atvik segja forritinu þínu að hlusta eða bíða eftir því að eitthvað gerist. Og þegar það gerist þá fer einhver aðgerð af stað."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
+        text: "Hingað til hefur þú notað eitt atvik. Kóðinn sem þú settir í \"þegar kviknað\" raufina keyrir þegar veran er búin til eða þegar leikurinn byrjar. Í næstu borðum færðu nýjar raufar fyrir atvik eins og \"þegar snert\" sem keyrir þegar þú snertir veruna, eða \"þegar notað\" sem gerist þegar þú notar veruna. Eða ef þú vilt að uppvakningurinn hverfi þegar sólin kemur upp, þá geturðu sett það í raufina \"þegar dagur\""
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "In games, spawn means the same thing as create. In this level, let's make zombies spawn when the sun goes down. To do this, we'll use the \"when night\" block."
+        text: "Í leikjum þýðir kveikja það sama og að búa til. Í þessu borði ætlum við að láta uppvakninga kvikna þegar sólin sest. Til að gera þetta notum við \"þegar kvöldar\" kubb."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Since we want the zombies to spawn at night we'll add the \"spawn zombie\" block under the \"when night\" block. As soon as they're spawned, each zombie will run the code that you put in their \"when spawned\" event slot. Have fun spawning zombies!"
+        text: "Þar sem við viljum að uppvakningar kvikni á nóttunni ætlum við að setja \"kveikja uppvakning\" kubbinn undir \"þegar nótt\" kubbinn. Um leið og þeir hafa kviknað mun hver uppvakningur keyra kóðann sem þú settir í raufina fyrir \"þegar kviknað\" atvikið. Skemmtu þér við skapa uppvakninga!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'
-        text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
+        text: "Til hamingju! Þú hefur lært að nota skipanir tölvunarfræði til að vekja Minecraft heiminn til lífsins. Nú ert þú hönnuðurinn. Þú hefur nú aðgang að öllum skipunum og öllum verunum. Þú ákveður hvað gerist."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "Þegar leikurinn er tilbúinn getur þú valið að deila til að fá tengil sem þú getur látið vini þína fá eða til að spila leikinn í símanum þínum. Hafðu gaman af! Ég hlakka til að spila þína útgáfu af Minecraft."

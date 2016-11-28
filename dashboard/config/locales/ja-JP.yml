@@ -3,14 +3,10 @@
     messages:
       not_saved: "次の間違い（エラー）を正しく直してください。"
       too_young: "このコンテンツには年齢制限があるため、対象年齢に達していない生徒には使用できません。"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      teacher_must_accept_terms: "このコンテンツは、年齢制限があり、若い学生は使用できません。このコンテンツにあなたがアクセスする為には、最新の利用規約を受け入れるように、あなたの先生に頼んで下さい。先生は、コード
+        スタジオにログインし、コード スタジオ ホームページの上部にある「更新利用規約をレビューする」ボタンをクリックして、これを行うことができます。"
+      pair_programmer: "あなたは今、このコンテンツへのアクセスが出来ない学生とペア プログラミングをしています。このコンテンツにアクセスするには、ペア
+        プログラミングを止めて、もう一度やり直してください。"
   activerecord:
     errors:
       messages:
@@ -31,13 +27,13 @@
           future: "現在までの日付にする"
   hello: "世界の皆さん、こんにちは"
   welcome_back: Welcome Back, %{name}
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  your_professional_learning_plan: "専門的な学習計画"
+  see_your_learning_plan: "学習計画を参照してください。"
   submit: "送信"
   unsubmit: "取り消す"
   previous_page: "前のページ"
   next_page: "次のページ"
-  next_resource: Next resource
+  next_resource: "次のリソース"
   done_with_module: Done with this Learning Module
   cancel: "キャンセル"
   okay: "オッケー"
@@ -87,11 +83,17 @@
   signup_form:
     student_count: "%{count} 人の生徒がサインアップ済みです。"
     teacher_count: "%{count} 人の教師がサインアップ済みです。"
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: あなたの進捗状況を追跡したり、あなたの教室を管理するには、アカウントにサインアップします。アカウント無しでも<a href="/">様々なステージとパズルを参照できます</a>が、あなたの進捗状況とプロジェクトを保存するにはサインアップが必要です。
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: "教育者のガイドを参照する"
-    title: Sign up for Code.org
+    title: Code.org にサインアップします
     school_name: "学校名 （オプション）"
     school_address: "学校の住所（オプション）"
     address_placeholder: "住所、市、県、郵便番号"
@@ -395,6 +397,18 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -550,6 +564,9 @@
     minecraft:
       title: "マインクラフト"
       body: "プログラムを通して、Minecraftの世界を探検しましょう。"
+    minecraft2016:
+      title: "マインクラフト"
+      body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
     unplugged:
       title: Unplugged Lessons
       audience: 6歳以上対象
@@ -676,7 +693,6 @@
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
     print: "印刷"
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching

@@ -95,6 +95,10 @@
       klassrum. <a href="/"> Du kan bläddra mellan de olika stadierna och pussel</a>
       som finns utan ett konto, men du kommer att behöva registrera dig för att spara
       dina framsteg och projekt.
+    hoc_already_signed_up_heading: Kom igång utan att logga in
+    hoc_already_signed_up_content: |-
+      Du ska ansvara för att undervisa i Hour of Code! Du och dina elever behöver inte logga in i Code Studio för att kunna delta.
+      För att komma igång, <a href="https://code.org/learn">välj en kurs</a> att använda i ditt klassrum och dela länken med eleverna.<br/><br/>Om du uppskattade the Hour of Code och vill fortsätta, kan du skapa ett konto på Code Studio med ett eget lösenord. Det ger dig möjlighet att lägga in dina elever i våra längre, och mer omfattande kurser. <a href="https://code.org/educate">longer courses</a>.
     teacher_educator_guide: Se pedagogguiden
     title: Skapa konto på Code.org
     school_name: Skolans namn (valfritt)
@@ -329,7 +333,7 @@
       unsubmit: "Ångra Inlämnad"
       worked_with: Arbetat med
       update_lock_settings: Uppdatera låsinställningar här.
-      clear_response: Clear response
+      clear_response: Tydligt svar
   user:
     email_confirm_needed: 'E-postadressen har inte bekräftats:'
     email_confirm_needed_required: 'Din e-postadress %{email} har inte bekräftats:'
@@ -393,8 +397,8 @@
     heading_hoc2014: "<h2>Timmen med kod för</h2><h1>Alla åldrar</h1>"
     heading_elementary: "<h2>20 timmars kurser för</h2><h1>Nybörjare (alla åldrar)</h1>"
     heading_apps: "<h2>Kul för</h2><h1>Alla</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Är du redo för nästa steg?</h2> <h1>JavaScript verktyg för
+      gymnasiet</h1>"
     heading_legacy: "<h2>Vår allmänna kurs för</h2><h1>Alla åldrar</h1>"
     your_gallery: Galleri
     no_primary_course: Prova en kurs på Code Studio
@@ -415,37 +419,46 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Lär dig mer
     announcement_try_now_button: Prova nu
-    announcement_host_an_hour_button: Host an Hour
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_host_an_hour_button: Var värd för en Hour of Code
+    announcement_petition: Som lärare är du en del av en rörelse som syftar till att
+      ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap.
     announcement_petition_button: Ange ditt namn
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_all: Håll dig uppdaterad med nya funktioner och uppdateringar på
+      vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>
+    announcement_hoc_launch: Tusentals lärare i mer än 180 länder börjar undervisningen
+      i datavetenskap under Hour of Code de5-11 December. Vi räknar med dig för att
+      kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'>
+      registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon
+      kan börja undervisningen i datavetenskap.
+    announcement_hoc_scaling: 'VARNING för kurs 1-4 och den korta lärarkursen: På
+      grund av hög last från miljontals studenter under the Hour of Code, <b>kommer
+      inte Code Studio att spara eller rapportera elevernas framsteg på dessa kurser
+      från den 3-11 December </b>. Vi rekommenderar att du genomför the Hour of Code
+      med dina klasser under den 3-11 December. Det är Science Education Week i USA.
+      Medan vår egen Hour of Code kurs inte kommer också spara elevers framsteg denna
+      vecka, kan studenter fortfarande göra andra kurser och få certifikat för dem.'
+    announcement_mc_launch: En av våra mest populära tutorials nu har nu fått en uppföljare!
+      Den helt nya Minecraft Hour of Code Designer låter elever sätta reglerna för
+      Minecraft världen. De kan skapa en helt unik Minecraftupplevelse, och sedan
+      dela den med vänner och spela i den på sina telefoner. Gör det med dina elever
+      under Hour of Code.
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
+    new_section_dne: Ledsen, men avsnittet %{new_section_code} existerar inte. Ange
+      koden för ett annat avsnitt.
+    section_code_not_entered: Ange koden för önskat avsnitt.
+    section_code_cant_be_current_section: Det aktuella avsnittet kan inte vara samma
+      som det nya avsnittet.
+    current_section_dne: Ledsen, men avsnittet %{current_section_code} existerar inte.
+      Ange koden för ett annat avsnitt.
+    students_not_yours: Du kan inte flytta elever från ett avsnitt som inte tillhör
+      dig.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    student_ids_not_entered: Vänligen ange elevernas id.
+    student_not_found: En eller flera elever kunde inte hittas.
+    all_students_must_be_in_current_section: Alla elever måste vara inskrivna i din
+      grupp.
+    already_enrolled_in_new_section: Du kan inte flytta dessa studenter eftersom deras
+      lärare redan har placerat dem i en annat grupp.
   share:
     title: Lär med Code Studio
     description: Alla kan lära sig datavetenskap. Gör spel, apps och konst med kod.
@@ -466,13 +479,23 @@
       till med att skapa denna övning.
     help_from_html_old: Ingenjörer från Google, Microsoft, Facebook, och Twitter hjälpte
       till med att skapa detta material.
-    art_from_html: Angry Birds ™ & © 2009-2014 Rovio Entertainment Ltd. Alla rättigheter
-      reserverade. <br/> Plants vs Zombies ™ & © 2014 Electronic Arts Inc. Alla rättigheter
-      reserverade.
-    art_from_html_old: Angry Birds &#8482; &amp; © 2009-%{current_year} Rovio Entertainment
-      Ltd. Alla rättigheter reserverade. < br / > Plants vs Zombies &#8482; &amp;
-      © %{current_year} Electronic Arts Inc. Alla rättigheter reserverade
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
+    art_from_html: Minecraft &#8482; © %{current_year} Microsoft. Alla rättigheter
+      reserverade. Star Wars &#8482; © %{current_year} Disney och Lucasfilm. Alla
+      rättigheter reserverade. Frysta &#8482; © %{current_year} Disney. Alla rättigheter
+      reserverade. Ice Age &#8482; © %{current_year} 20th Century Fox. Alla rättigheter
+      reserverade. Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment
+      Ltd. Alla rättigheter reserverade. Plants vs Zombies &#8482; © %{current_year}
+      Electronic Arts Inc. Alla rättigheter reserverade. Den fantastiska världen av
+      Gumball är varumärke och © %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft &#8482; © %{current_year} Microsoft. Alla rättigheter
+      reserverade. Star Wars &#8482; © %{current_year} Disney och Lucasfilm. Alla
+      rättigheter reserverade. Frysta &#8482; © %{current_year} Disney. Alla rättigheter
+      reserverade. Ice Age &#8482; © %{current_year} 20th Century Fox. Alla rättigheter
+      reserverade. Angry Birds &#8482; © 2009-%{current_year} Rovio Entertainment
+      Ltd. Alla rättigheter reserverade. Plants vs Zombies &#8482; © %{current_year}
+      Electronic Arts Inc. Alla rättigheter reserverade. Den fantastiska världen av
+      Gumball är varumärke och © %{current_year} Cartoon Network.
+    code_from_html: Code.org använder p5.play, som är licensierad under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Drivs av Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotypen och
@@ -507,10 +530,10 @@
     download: Ladda ner video
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: Din webbläsare stöds inte. Uppgradera din webbläsare till
+        <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna
+        som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar
+        fullt ut.
       link: Lär dig mer
   slow_loading: Det här tar längre tid  än vanligt...
   try_reloading: Försök ladda sidan igen
@@ -551,11 +574,12 @@
   upsell:
     applab:
       title: App Lab
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body: App Lab är en programmeringsmiljö där du kan göra enkla appar. Skapa en
+        app, koda med block eller JavaScript och få den att fungera. Dela sedan med
+        dig av den till andra inom några sekunder.
+      body_short: Utveckla en app, bygg den med blocks eller JavaScript. När du har
+        fått den att fungerar som du tänkte kan du inom några sekunder dela med dig
+        av den till andra.
       audience: "Ålder 13+"
       cta: Läs mer
     hoc:
@@ -589,15 +613,18 @@
     minecraft:
       title: Minecraft
       body: Utforska en Minecraft värld med kod.
+    minecraft2016:
+      title: Minecraft
+      body: Programmet djur och andra Minecraft varelser i din egen version av Minecraft.
     unplugged:
-      title: Unplugged Lessons
+      title: Lektioner där du inte behöver tillgång till en dator
       audience: "Ålder 4+"
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body: Vi har sammanställt en lista över lektioner som du kan använda i klassrummet
+        där du inte behöver tillgång till en dator. Nu kan du lära grunderna i datavetenskap,
+        om du har datorer i klassrummet eller inte! Prova att använda dessa lektioner
+        som en fristående kurs eller som kompletterande lektioner för någon datavetenskapskurs.
+      body_short: Om du inte har några datorer tillgängliga, prova dessa "unplugged"
+        lektioner i klassrummet.
   gallery:
     students_drew_these_with_code: Elever ritade dessa med kod!
     students_made_these_with_code: Elever gjorde dessa med kod!
@@ -608,8 +635,8 @@
       appar och bilder genom att skriva egna datorprogram. Klicka på bilderna och
       skärmdumparna för att se varje program i aktion.
     want_to_make_your_own: Vill du göra din egen?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: På den sista nivån av dessa uppgifter, klicka på "Finish" (Avsluta)
+      och "Save" (Spara) för att spara ditt arbete i galleriet.
     more: Mer &rarr;
     caption_by_name_age: av %{name}, ålder %{age}
     caption_time_ago: "%{time_ago} tid sedan"
@@ -626,7 +653,7 @@
     report_bug: Rapportera bugg
     support: Få hjälp
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Hjälp och resurser
   multi:
     wrong_title: Felaktigt svar
     wrong_body: Svaret du angett är inte korrekt.  Försök igen!
@@ -636,33 +663,33 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Tack
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Tack för ditt lämnade svar.
     correct_title: Tack
-    correct_body: Thank you for submitting an answer.
+    correct_body: Tack för ditt lämnade svar.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Tack
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Tack för lämnade svar.
     correct_title: Tack
-    correct_body: Thank you for submitting an answer
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    correct_body: Tack för lämnade svar.
+    hide_survey_last_answer: Undersökningen är anonym.  Besök lärarnas statussida
+      för det sammanfattade resultatet.  Observera att resultaten endast är synliga
+      om minst fem elever har lämnat in enkäten.
   level_group-submittable:
     wrong_title: Tack
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Tack för lämnade svar.
     correct_title: Tack
-    correct_body: Thank you for submitting answers.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    correct_body: Tack för lämnade svar.
+    unsubmit-title: Skicka inte in din bedömning
+    unsubmit-body: Att inte skicka in din utvärdering kommer att återställa tid och
+      datum för den. Är du säker?
+    submit-incomplete-title: Skicka in din bedömning
+    submit-incomplete-body: Du lämnade några frågor ofullständigt besvarade.  Det
+      går inte att ändra din utvärdering efter att den har skickats in.  Är du säker?
+    submit-complete-title: Skicka in din bedömning
+    submit-complete-body: Det går inte att ändra din utvärdering efter att den har
+      skickats in.  Är du säker?
   match:
     wrong_title: Fel lösning
     wrong_body: Din lösning är inte rätt.  Försök pånytt!
@@ -703,36 +730,36 @@
       dela denna information med tredje part.
     sign_out: Om du inte vill ange din ålder kan du <a href="%{url}"> logga ut</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: Uppdaterade användarvillkor och Sekretesspolicy
+    intro_desc: 'Vi har uppdaterat våra användarvillkor och sekretesspolicy, som visas
+      nedan. Förändringarna träder i kraft from den 24 Augusti, 2016.  Den största
+      förändringen: vi kommer <i>inte längre att lagra e-postadresser för elevkonton
+      på kod Studio.</i> Detta är en stor sak för oss, och vi hoppas att det sätter
+      en ny standard för elevernas sekretess i teknisk utbildning. Vi har skickat
+      Er en sammanfattning av de övriga förändringarna via e-post.'
+    intro_instructions: För att elever under 13 år ska kunna få tillgång till de senaste
+      funktionerna i Code Studio måste de nya användarvillkoren accepteras. När du
+      registrerar ett konto för en student under 13, blir du ombedd att bekräfta att
+      din skola har målsmans tillstånd för insamling av studentens personuppgifter
+      för användning och nytta av skolan, inklusive utbildningsprogram såsom Ckod
+      Studio.
     tos: Villkor
     privacy: Sekretesspolicy
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: Sekretessmeddelande
+    accept_label: |-
+      Jag samtycker till att de uppdaterade <a href="%{tos_url}" target="_blank"> Användarvillkoren
+      </a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>
+    accept: Godkänn
     print: Skriv ut
-    later: Later
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    reminder_desc: Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a>
+      och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>. Vänligen
+      läs igenom dessa noggrant innan du accepterar dem. Observera att våra verktyg
+      för undervisning i JavaScript kan vara otillgängliga för era elever innan ni
+      uttryckligen accepterar de uppdaterade villkoren.
+    review_terms: Granska uppdaterade villkor
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
+    title: 'Tillval: Hjälp oss att följa våra framsteg med att förbättra mångfalden
+      inom datavetenskapen'
     message: Please tell us your race (check all that apply)
     races:
     - white: White
@@ -742,7 +769,7 @@
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
     - other: Annat
-    - opt_out: Prefer not to say
+    - opt_out: Föredrar att inte svara
     submit: Skicka in
     decline: Avsluta
   zendesk_too_young_message: Tyvärr, yngre användare kan inte logga in på vår supportsida.
@@ -755,7 +782,7 @@
     completed_perfect: Avklarad perfekt
     furthest_level_attempted: försökt nå bortersta nivån
     assessment: Test
-    submitted: submitted
+    submitted: inlämnat
   studio:
     courses_working_on: Kurser du påbörjat
     completed_courses: Avslutade kurser
@@ -773,12 +800,12 @@
     share: Dela
     share_title: Dela ditt projekt
     share_copy_link: 'Kopiera länken:'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Du kan klistra in inbäddad kod i en HTML-sida att visa
+      projektet på en webbsida.
+    share_u13_warning: Fråga din lärare innan du delar. Dela bara med andra i din
+      skola.
+    embed: Inbäddad
+    advanced_share: Visa avancerade alternativ
     close: Avsluta
     more: Mer
     name: Namn
@@ -805,8 +832,8 @@
     abuse:
       tos: Detta projekt har rapporterats för brott mot Code.org i <a href='http://code.org/tos'>
         Användarvillkor</a> och kan inte delas med andra.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Detta projekt innehåller information som inte kan delas med
+        andra. Vänligen kontakta app-ägaren för att åtgärda innehållet i deras app.
       contact_us: Om du tror att detta är ett fel, vänligen <a href='https://code.org/contact'>
         Kontakta oss.</a>
       go_to_code_studio: Gå till Code Studio
@@ -833,19 +860,19 @@
           Policy%{link_end} och %{link_start_tos}Terms av Service%{link_end}
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: Godkänd
+      description: "<strong>Ja</strong>, denna inlämning <strong>uppfyller</strong>
+        kraven"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: Ej godkänd
+      description: "<strong>Nej</strong>, denna inlämning <strong>uppfyller inte</strong>
+        kraven"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: Upptrappad
+      description: Jag skulle vilja att en instruktör granskar denna inlämning
+    instructor_feedback: "Återkoppling till instruktör"
+    peer_feedback: Din feedback
+    outdated: Denna feedback skapades för en tidigare skickad version
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -861,19 +888,19 @@
       no_icons_found: Inga ikoner hittades
     playzone:
       artist_description: Rita häftiga bilder och mönster med konstnären!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Ny ritning
+      continue_button: Gå vidare till nästa nivå
       playlab_description: Skapa en berättelse eller gör ett spel med Spel-labbet!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Ny App
+      primary_header: Grattis! Du har klarat %{stageName}.
+      projects_description: Gå tillbaka till något av dina befintliga projekt.
+      projects_title: "Öppna ett projekt"
+      secondary_header: Fråga din lärare om vad du ska fortsätta med
   flex_category:
     required: "Översikt"
-    content: Content
-    practice: Teacher Practices
-    peer_review: Peer Review
+    content: Innehåll
+    practice: Undervisningsmetoder
+    peer_review: Din recension
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
@@ -885,7 +912,7 @@
       objectionable, or if the linked site is no longer available.
   hoc_download:
     title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    capsule_title: Har du Internet?
     capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
     instructions_headline: No Internet?
     instructions: 'Instructions for teachers: if you have poor Internet service, these
@@ -897,11 +924,11 @@
       <a href="%{url}">here</a>.'
     minecraft_name: Minecraft Hour Of Code
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
-    windows: Windows
+    starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
+    download_message: Hämta %{app_name} för offlineanvändning (136MB)
+    download_in_english: 'Hämta på engelska:'
+    download_in_spanish: 'Hämta på spanska:'
+    windows: Windows (64-bitars)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -916,12 +943,12 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: Innehållet i detta steg syns inte eftersom det för närvarande är låst.
+    Din lärare kan låsa upp steget när det är dags att arbeta på det eller för att
+    granska dina svar.
+  hidden_stage: Din lärare förväntar sig inte att du är på denna lektion. Fråga gärna
+    din lärare vilka lektion som du bör vara på.
+  return_course_overview: Gå till avsnittets översikt
   pd:
     survey:
       number_teachers: Number of attending teachers

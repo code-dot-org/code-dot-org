@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Til hamingju! Þú náðir öllum {count} hlutunum!",
   "collectorCollectedNothing": "Haltu áfram að kóða! Þú þarft að safna sem flestum af hlutunum.",
   "collectorCollectedSome": "Vel gert! Þú safnaðir {count} hlutum!",
+  "collectorCollectedNotEnough": "Haltu áfram að kóða! Þú þarft að safna minnst {goal, plural, one {1 item} other {# hlutum}}.",
   "collectorCollectedTooMany": "Þetta svæði inniheldur ekki nógu margt sem ég get safnað.",
   "collectorTooManyBlocks": "Þú mátt aðeins nota {blockLimit} kubba. Athugaðu kóðann þinn og reyndu aftur!",
   "continue": "Halda áfram",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "Blómið sem þú ert á hefur ekki meiri blómasafa.",
   "get": "sækja",
   "has": "hefur",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "það er kál",
   "hascorn": "það er maís",
   "haspumpkin": "það eru grasker",
   "heightParameter": "hæð",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Ef það er slóð í þessa stefnu þá á að gera fyrstu kubbastæðuna. Annars á að gera stæðu númer tvö.",
   "insufficientHoney": "Þú þarft að búa til rétt magn hunangs.",
   "insufficientNectar": "Þú þarft að safna réttu magni af blómasafa.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "kál",
+  "lettuceTooltip": "Uppskera kál",
   "make": "búa til",
   "moveBackward": "fara aftur á bak",
   "moveEastTooltip": "Færa mig austur um eitt bil.",
@@ -111,6 +112,5 @@
   "word": "Finna orðið",
   "wrongCropError": "Ég get ekki uppskorið þessa plöntu héðan.",
   "yes": "Já",
-  "youSpelled": "Þú stafaðir",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Þú stafaðir"
 }

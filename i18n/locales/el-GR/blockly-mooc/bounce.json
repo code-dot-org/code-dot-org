@@ -111,7 +111,7 @@
   "setPlayerSpeedSlow":"set slow player speed",
   "setPlayerSpeedTooltip":"Sets the speed of the player",
   "setPlayerSpeedVeryFast":"set very fast player speed",
-  "setPlayerSpeedVerySlow":"set very slow player speed",
+  "setPlayerSpeedVerySlow":"θέσε τον παίκτη σε πολύ αργή ταχύτητα",
   "setTeamTooltip":"Sets the logo and color scheme",
   "setTeam":"Set team {team}",
   "setTeamRandom":"Set team random",

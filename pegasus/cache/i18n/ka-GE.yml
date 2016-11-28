@@ -971,6 +971,11 @@
     Minecraft world. They can create a totally unique Minecraft experience, and then
     share it with friends or play it on their phones. Do it with your class for the
     Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
   host_an_hour: "ჩაატარეთ ერთი საათი"
@@ -1137,6 +1142,8 @@
   starwarsblocks_name: "ვარსკვალვური ომები (ბლოკები)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: "მარტივი შიფრირება"
+  text-compression_name: Text Compression
   math_category_name: "მათემატიკა"
   hoc_category_name: "კოდის ერთი საათი"
   csf_category_name: CS საფუძვლები
@@ -1833,10 +1840,3 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression

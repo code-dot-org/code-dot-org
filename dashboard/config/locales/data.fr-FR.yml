@@ -325,28 +325,57 @@
           pas dans la boite de TNT !
         maze_3_4: Argh ! Écris-moi un programme qui me permet d'éviter le TNT et d’arriver
           au cochon.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Attache un bloc au bloc « Quand flèche vers la gauche »
+          et appuie sur « Exécuter ». Déplace la main à l'aide de la flèche de gauche
+          pour atteindre la cible visée.
+        bounce_2_basketball: Attache un bloc aux blocx « Quand flèche vers la droite »
+          et « Quand flèche vers la gauche » et appuie sur « Exécuter ». Déplace la
+          main pour atteindre les deux cibles visées.
+        bounce_5_basketball: Nous allons faire voler une balle vers le bas, jusqu’à
+          la main. Attache un bloc au bloc « Quand la balle touche la raquette » pour
+          veiller à ce que la balle atteigne le drapeau.
+        bounce_6_basketball: Maintenant le drapeau est en haut. Tu dois attacher des
+          blocs aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
+        bounce_7_basketball: Attache des blocs à tous les blocs « Quand ». Fais rebondir
+          la balle jusqu'à ce qu'elle touche le drapeau.
+        bounce_10_basketball: Il y a maintenant un but en haut. Attache les blocs
+          « Marquer un point » et « Marquer un point pour l’adversaire » aux blocs
+          « Quand la balle dans le but » et « Quand la balle manque la main » pour
+          créer un jeu. Vois combien de points tu peux marquer avant que ton adversaire
+          marque deux fois.
+        bounce_11_basketball: Tu peux maintenant attacher des blocs au bloc « Lors
+          du lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
+          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
+          de la main et de la balle pour voir combien de points tu peux marquer avant
+          que ton adversaire marque deux fois!
+        bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes
+          les règles. Quand tu as fini, clique « Terminer » pour que tes amis puissent
+          essayer ton jeu sur leur téléphone.
+        bounce_1_sports: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la
+          flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
+        bounce_2_sports: Il y a deux drapeaux maintenant! Attachez un bloc aux blocs
+          "Quand flèche à gauche" et "Quand flèche à droite" pour faire bouger votre
+          joueur dans deux directions.
+        bounce_5_sports: La rondelle de hockey va voler vers le bas vers le joueur!
+          Attachez un bloc au bloc "quand le ballon touche le joueur" pour frapper
+          le drapeau.
+        bounce_6_sports: Maintenant le drapeau est en haut. Tu dois attacher des blocs
+          aux deux blocs « Quand le balle touche… » pour résoudre ce puzzle.
+        bounce_7_sports: Attache des blocs à tous les blocs « Quand ». Fais rebondir
+          la balle jusqu'à ce qu'elle touche le drapeau.
+        bounce_10_sports: Maintenant, il ya un but au sommet! Attachez les blocs «points
+          de points» et «points adverses» aux blocs «Quand la balle dans le but» et
+          «Quand la balle rate la main» pour faire une partie. Voyez combien de points
+          vous pouvez marquer avant que votre adversaire marque deux fois!
+        bounce_11_sports: Tu peux maintenant attacher des blocs au bloc « Lors du
+          lancement ». Tu dois attacher le nouveau bloc « Lancer une nouvelle balle »
+          à plusieurs endroits. Essaie également de changer la scène ou la vitesse
+          de la main et de la balle pour voir combien de points tu peux marquer avant
+          que ton adversaire marque deux fois!
+        bounce_12_sports: 'Créez votre propre jeu! Vous êtes responsable ici: vous
+          pouvez changer toutes les règles, mélanger et faire correspondre les sports,
+          soyez créatifs! Lorsque vous avez terminé, cliquez sur Terminer pour laisser
+          les amis essayer votre jeu sur leurs téléphones.'
         bounce_1: Attache un bloc au bloc « Quand flèche vers la gauche »  et appuie
           sur « Exécuter ». Déplace la raquette à l'aide de la flèche de gauche pour
           atteindre la cible visée.
@@ -839,6 +868,11 @@
         iceage_intro: Heure de Code avec l'Âge de Glace - Introduction
         iceage_events: Heure de Code avec l'Âge de Glace - Événements
         iceage_repeat: Heure de Code avec l'Âge de Glace - Commandes de répétition
+        mc_2016_intro: Minecraft Hour of Code - Présentation
+        mc_2016_loops: Minecraft Heure du code - Loops
+        mc_2016_events: Minecraft Hour of Code - Événements
+        mc_2016_spawn: Minecraft Heure du Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - Félicitations
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
