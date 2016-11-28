@@ -82,8 +82,8 @@ zh-TW:
     student_count: '%{count} 學生已經註冊。'
     teacher_count: '%{count} 教師已經註冊。'
     overview: '註冊一個帳號來追蹤你的進度或管理你的教室。 <a href="/">你可以瀏覽許多階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: '使用但不登錄'
+    hoc_already_signed_up_content: '您已經登錄參加了一個Hour of Code的課程教學! 您與您的學生可以在參與這個課程時不需登入在Code Studio。要開始課程的時候，在您的課堂上<a href="https://code.org/learn">選擇一個課程</a>並和您的學生們分享這個連結。<br/><br/>如果您覺得 Hour of Code 的內容很棒，想要更進一步使用時，您可以設定您的密碼並且在 Code Studio 建立一個帳號來為您的學生們註冊使用任何一個 <a href="https://code.org/educate">較長的課程</a>.'
     teacher_educator_guide: '請參閱教師指南'
     title: "在Code.org上註冊"
     school_name: '學校名稱 （選填）'
@@ -358,8 +358,8 @@ zh-TW:
     announcement_petition_button: "新增你的名字"
     announcement_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看過去的公告。</a>"
     announcement_hoc_launch: "數以千計的180多個國家教育者將開始在12月5-11日透過Hour of Code教導電腦科學。我們指望你去幫我們達到比以往更多的學生。. <a href='%{signup_url}' target='_blank'>註冊你的Hour of Code事件</a>，並且讓其他老師知道所有人都可以開始教導電腦科學。"
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: '給課程1-4及快速課程教師的重要提示: 因為數以百萬計的學員在同時間使用 Hour of Code 課程造成的高流量，<b>Code Studio在12月3-11號期間將無法儲存或統計使用這些課程的學員進度</b>，我們建議您的學生們可以在電腦科學教育周時參與慶祝Hour of Code的活動時來使用這些課程。因為在活動當周我們的 Hour of Code 導覽課程同樣也不會紀錄進度，您的學生仍然可以完成完整的導覽並獲取認證。'
+    announcement_mc_launch: "我們最熱門的一個導覽課程現在有續集了! 全新的Minecraft設計器可以讓學生們自己定出Minecraft世界的規則。他們可以創造出一個獨一無二的Minecraft遊戲體驗，並在手機上與朋友分享。您可以在您的課堂上使用這個Hour of Code課程。"
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
@@ -490,7 +490,7 @@ zh-TW:
       body: "使用程式來探索創世神的世界"
     minecraft2016:
       title: "當個創世神"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "在您自己的Minecraft程式遊戲版本中編寫動物和其他生物的程式。"
     unplugged:
       title: "離線課程"
       audience: "4歲以上"

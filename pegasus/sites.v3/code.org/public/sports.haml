@@ -1,0 +1,59 @@
+---
+title: Sports Hour of Code
+theme: responsive
+social:
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://code.org/sports"
+  "twitter:image:src" : "https://code.org/images/sports/basketball.png"
+  "twitter:title": "Sports Hour of Code Tutorials"
+  "twitter:description": "Select between NBA and WNBA or all sports coding tutorials."
+  "og:title": "Sports Hour of Code Tutorials"
+  "og:description": "Select between NBA and WNBA or all sports coding tutorials."
+  "og:image" : "https://code.org/images/sports/basketball.png"
+  "og:image:width": "445"
+  "og:image:height": "728"
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+video_player: true
+---
+
+%link{href: "/css/sports.css", rel: "stylesheet"}
+
+%div{style: "clear:both"}
+
+%h1.header Code your own sports game
+.tutorial-video-container
+  %h2 Watch the video
+  - videos = []
+  - videos << { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', text: 'Computer Science is Changing Everything', duration: '5 min', download: '//videos.code.org/social/cs-is-everything.mp4'}
+  - videos.each do |video|
+    - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+    - facebook = {u: url}
+    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
+    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
+.tutorials-container
+  %div.image-collection
+    %h2 Select your tutorial theme
+    %a.white-link{href: "/api/hour/begin/basketball"}
+      %div.choice
+        %div.choice-container
+          %div.choice-label.blue Make a basketball game
+          %img.character-img{src: "/images/sports/basketball.png"}
+    %a.white-link{href: "/api/hour/begin/sports"}
+      %div.choice
+        %div.choice-container
+          %div.choice-label.blue Mix and match across sports
+          %img.character-img{src: "/images/sports/all_sports.png"}
+
+%div{style: "clear:both"}
+
+%h2.header
+  = I18n.t(:speak_another_language)
+  %a{href: "/translate"}= I18n.t(:help_translate)
+
+.inspire-videos{style: "clear: both;"}
+  %h2.header= I18n.t(:watch_inspirational_videos)
+  =view :inspirational_videos

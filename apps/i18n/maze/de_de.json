@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Herzlichen Glückwunsch! Du hast alle {count} Elemente gesammelt!",
   "collectorCollectedNothing": "Programmiere weiter! Du musst so viele Punkte sammeln, wie möglich.",
   "collectorCollectedSome": "Gute Arbeit! Du hast {count} Elemente gesammelt!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Dieser Raum hat zum sammeln nicht genügend Elemente für mich.",
   "collectorTooManyBlocks": "Du kannst nur {blockLimit} Blöcke nutzen. Schau Dir deinen Code genauer an und versuche es nochmal!",
   "continue": "Fortfahren",
@@ -111,6 +112,5 @@
   "word": "Finde das Wort",
   "wrongCropError": "Ich kann dieses Getreide nicht von hier aus ernten.",
   "yes": "Ja",
-  "youSpelled": "Du hast geschrieben",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Du hast geschrieben"
 }

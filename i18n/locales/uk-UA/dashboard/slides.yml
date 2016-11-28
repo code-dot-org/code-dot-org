@@ -1748,14 +1748,14 @@ uk:
         text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
+        text: "Наразі ми використали одну подію. Код, розміщений у розділі \"коли створено\", виконується, коли створюється істота, або розпочинається гра. На наступних кількох рівнях будуть нові розділи для таких подій, як \"коли торкається\" - запускається, коли ми торкаємось істоти, або \"коли використовується\", коли ми використовуємо об'єкт. Або, якщо хочеш, щоб зомбі зник зі сходом сонця, розмісти цю дію в розділі \"коли настає день\""
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "In games, spawn means the same thing as create. In this level, let's make zombies spawn when the sun goes down. To do this, we'll use the \"when night\" block."
+        text: "В іграх створення ще називають породженням. На цьому рівні будемо створювати зомбі після заходу сонця. Щоб це зробити, використаємо блок \"коли настає ніч\"."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Since we want the zombies to spawn at night we'll add the \"spawn zombie\" block under the \"when night\" block. As soon as they're spawned, each zombie will run the code that you put in their \"when spawned\" event slot. Have fun spawning zombies!"
+        text: "Оскільки ми хочемо створити зомбі вночі, ми додаємо блок \"створити зомбі\" під блок \"коли настає ніч\". Як тільки вони будуть створені, кожен зомбі виконає код, який ти розмістиш у їхньому розділі подій \"коли створено\". Розважайся, створюючи зомбі!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'

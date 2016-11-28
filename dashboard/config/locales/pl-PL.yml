@@ -4,11 +4,12 @@
       not_saved: 'Proszę poprawić następujące błędy:'
       too_young: Ta zawartość ma przypisane ograniczenia wiekowe i nie jest dostępna
         dla młodszych uczniów.
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
+      teacher_must_accept_terms: Ta zawartość jest objęta ograniczeniem wiekowym i
+        nie jest dostępna dla młodszych uczniów. Poproś nauczyciela, aby zaakceptował
+        zaktualizowane Warunki korzystania, dając ci dostęp do tej zawartości. Nauczyciel
+        może to zrobić logując się na do Studio Kodowania i klikając przycisk "Wyświetl
+        zaktualizowane warunki korzystania" w górnej części strony głównej Studio
+        Kodowania.
       pair_programmer: You are currently pair programming with a student who does
         not have access to this content. To access this content, stop pair programming
         and try again.
@@ -93,6 +94,14 @@
     overview: Sign up for an account to track your progress or manage your classroom.
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Patrz podręcznik nauczyciela
     title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
@@ -123,7 +132,7 @@
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
     field_is_required: jest wymagane
-    accept_terms: Musisz wyrazić zgodę aby utworzyć konto
+    accept_terms: Musisz wyrazić zgodę, aby utworzyć konto
   signin_form:
     title: Masz już konto? Zaloguj się
     login: E-mail lub nazwa użytkownika
@@ -140,8 +149,8 @@
     picture: Teraz znajdź swój tajny obrazek
     words: Teraz wpisz swoje tajne słowa
     login: Zaloguj się
-    invalid_login: Zły login, proszę spróbować ponownie
-    pair_programming: Mam partnera na moim komputerze
+    invalid_login: Nieprawidłowy login, proszę spróbować ponownie
+    pair_programming: Mam partnera przy moim komputerze
   password:
     reset_form:
       title: Nie pamiętasz hasła?
@@ -300,7 +309,7 @@
       pair_programming: Programowanie w parach
       team: Zespół
       driver: Kierowca
-      navigator: Nawigacja
+      navigator: Nawigator
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
@@ -326,7 +335,7 @@
     user_not_found: Nie można odnaleźć nauczyciela.
     student_teacher_disassociated: Usunąłeś %{teacher_name} jako swojego nauczyciela.
     panel:
-      answer_viewer: Podgląd odpowiedzi
+      answer_viewer: Panel nauczyciela
       student: Uczeń
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
@@ -337,7 +346,7 @@
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
       update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
-      clear_response: Clear response
+      clear_response: Wyczyść odpowiedź
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -438,6 +447,18 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Przepraszamy, sekcja %{new_section_code} nie istnieje. Wprowadź
       inny kod sekcji.
@@ -609,6 +630,9 @@
     minecraft:
       title: Minecraft
       body: Odkrywaj świat Minecraft poprzez kodowanie.
+    minecraft2016:
+      title: Minecraft
+      body: Program animals and other Minecraft creatures in your own version of Minecraft.
     unplugged:
       title: Lekcje niewymagające komputera
       audience: Wiek 6+
@@ -744,26 +768,25 @@
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Akceptuj
     print: Drukuj
-    later: Poźniej
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: Wyświetl zaktualizowane Warunki korzystania
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer
       science'
     message: Please tell us your race (check all that apply)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Biały
+    - black: Czarny lub Afroamerykanin
+    - hispanic: Hiszpanie lub Latynosi
+    - asian: Azjatycki
+    - hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
+    - american_indian: Native American Indian/Alaska
     - other: Inni/inne
-    - opt_out: Prefer not to say
+    - opt_out: Wolę nie mówić
     submit: Wyślij
     decline: Zamknij
   zendesk_too_young_message: Przepraszamy, młodsi użytkownicy nie mogą logować się
@@ -925,7 +948,7 @@
     download_message: Pobierz %{app_name} do użycia w trybie offline (136MB)
     download_in_english: 'Pobierz w języku angielskim:'
     download_in_spanish: 'Pobierz w języku hiszpańskim:'
-    windows: Windows
+    windows: Windows (64-bitowy)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -943,8 +966,8 @@
   locked_stage: The contents of this stage are not visible because this stage is currently
     locked. Your teacher can unlock this stage when it is time to work on it or review
     your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
+  hidden_stage: Twój nauczyciel nie oczekiwał Ciebie tutaj. Zapytaj swojego nauczyciela,
+    na której powinieneś być lekcji.
   return_course_overview: Go to unit overview
   pd:
     survey:

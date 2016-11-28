@@ -486,11 +486,11 @@ es:
         'iceage_intro': 'Hora de Code Era del Hielo - Introducción'
         'iceage_events': 'Hora de Code Era del Hielo - Eventos'
         'iceage_repeat': 'Hora de Code Era del Hielo - Repetir comando'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': '《我的世界》编程一小时——介绍'
+        'mc_2016_loops': '《我的世界》编程一小时——循环'
+        'mc_2016_events': '《我的世界》编程一小时——事件'
+        'mc_2016_spawn': '《我的世界》编程一小时——生成'
+        'mc_2016_congrats': '《我的世界》编程一小时——祝贺！'
     callout:
       text:
         drag_blocks: 'Arrastra un bloque de "mover" y pégalo debajo del otro bloque'

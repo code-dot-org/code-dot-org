@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Tebrikler! Tüm {count} nesneleri topladın!",
   "collectorCollectedNothing": "Kodlamaya devam et! Mümkün olduğunca çok nesne toplaman gerekir.",
   "collectorCollectedSome": "Hariha iş! {count} nesneleri topladın!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Burada toplamam için yeterli eşya yok.",
   "collectorTooManyBlocks": "Sadece {blockLimit} bloklarını kullanabilirsin. Koduna bir göz at ve tekrar dene!",
   "continue": "Devam",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "Üstünde bulunduğun çiçekte daha fazla nektar kalmadı.",
   "get": "değer al",
   "has": "vardır",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "marul",
   "hascorn": "mısır var",
   "haspumpkin": "balkabakları var",
   "heightParameter": "Yükseklik",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Belirtilen yönde bir yol varsa, o zaman ilk bloktaki işlemleri yap. Yoksa, ikinci bloktaki işlemleri yap.",
   "insufficientHoney": "Doğru miktarda bal yapman gerek.",
   "insufficientNectar": "Doğru miktarda nektar toplaman gerek.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "marul",
+  "lettuceTooltip": "Biraz marul topla",
   "make": "yap",
   "moveBackward": "geriye git",
   "moveEastTooltip": "Beni doğuya bir boşluk ilerlet.",
@@ -111,6 +112,5 @@
   "word": "Sözcüğü bul",
   "wrongCropError": "Ürünü buradan toplayamam.",
   "yes": "Evet",
-  "youSpelled": "Açıkladınız",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Açıkladınız"
 }

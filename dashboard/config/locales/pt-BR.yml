@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   errors:
     messages:
       not_saved: 'Corrija os seguintes erros:'
@@ -95,6 +95,14 @@
     overview: Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar
       sua sala de aula. <a href="/">Você pode explorar diversas fases e desafios</a>
       sem uma conta, mas precisará fazer login para salvar seu progresso e seus projetos.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Consultar o guia do professor
     title: Cadastre-se na Code.org
     school_name: Nome da escola (opcional)
@@ -432,7 +440,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saiba mais
     announcement_try_now_button: Experimente agora
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Organize um evento
     announcement_petition: Como professor, você está abrindo as portas de um movimento
       que dará a cada aluno de todas as escolas a oportunidade de aprender ciência
       da computação. Agora chegou a hora de seus representantes ouvirem o que você
@@ -444,11 +452,23 @@
     announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
       blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
       últimas novidades.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Milhares de professores em mais de 180 países começarão
+      a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro.
+      Estamos contando com você para nos ajudar a atingir mais alunos do que nunca.
+      <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a>
+      e avise outro professor que ele também pode começar a ensinar ciência da computação.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.
@@ -621,6 +641,10 @@
     minecraft:
       title: Minecraft
       body: Explore o mundo de Minecraft usando códigos.
+    minecraft2016:
+      title: Minecraft
+      body: Crie animais e outras criaturas de Minecraft em sua própria versão do
+        Minecraft.
     unplugged:
       title: Aulas off-line
       audience: A partir de 4 anos
@@ -758,7 +782,6 @@
       e a <a href="%{privacy_url}" target="_blank">Política de Privacidade</a> atualizados
     accept: Aceitar
     print: Imprimir
-    later: Mais tarde
     reminder_desc: Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos
       de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>.
       Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os
@@ -766,18 +789,18 @@
       podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
   race_interstitial:
-    title: 'Opcional: Ajude-nos a acompanhar nosso progresso através do aumento de
-      diversidade na ciência da computação'
-    message: Por favor diga-nos sua raça (marque todas aplicáveis)
+    title: 'Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade
+      na ciência da computação'
+    message: Diga-nos qual é sua raça (marque todas as opções aplicáveis)
     races:
     - white: Branco
-    - black: Negro ou Afro Americano
+    - black: Negro ou Afro-americano
     - hispanic: Hispânico ou Latino
     - asian: Asiático
-    - hawaiian: Havaiano Nativo ou outro Ilhéu do Pacífico
+    - hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
     - american_indian: "Índio Americano/Nativo do Alaska"
     - other: Outros
-    - opt_out: Prefiro não dizer
+    - opt_out: Prefiro não responder
     submit: Enviar
     decline: Fechar
   zendesk_too_young_message: Desculpe, usuários mais jovens não podem se inscrever
@@ -939,7 +962,7 @@
     download_message: Faça o download de %{app_name} para usar off-line (136 MB)
     download_in_english: 'Download em inglês:'
     download_in_spanish: 'Download em espanhol:'
-    windows: Janelas
+    windows: Windows (64 bits)
     mac: Mac OS X
   plc:
     preview_assignments:

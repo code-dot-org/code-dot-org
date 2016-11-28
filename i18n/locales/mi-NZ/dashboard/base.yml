@@ -33,7 +33,7 @@ mi:
   next_page: Whārangi tōmuri
   next_resource: Rauemi tōmuri
   done_with_module: Done with this Learning Module
-  cancel: "Cancel"
+  cancel: "Whakakore"
   okay: "Pai noa"
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
@@ -61,7 +61,7 @@ mi:
   k8intro: "Akoranga Whakataki K-8 ki te Pūtaiao Rorohiko (15-25 haora)"
   already_started: "Kua tīmata kē? Haere anō i konei >> "
   demos: 'Whakahaere: Ngā Tauira Katoa'
-  continue: 'Continue'
+  continue: 'Haere tonu'
   prize: 'whakawhiwhinga'
   more_info: 'Mōhiohio Anō'
   auth:
@@ -82,8 +82,8 @@ mi:
     student_count: '%{count} ngā ākonga kua waitohu kē.'
     teacher_count: '%{count} ngā pouako kua waitohu kē.'
     overview: 'Waitohungia kia whiwhi pūkete kia āhei koe te whai i tō kauneketanga, ki te whakahaere rānei i tō akomanga. <a href="/"> E āhei ana koe ki te tirotiro ki ngā taumata rerekē me ngā panga </a>, heoi anō, me mātua waitohu kia āhei hoki koe tō kauneketanga me o tūmahi te tiaki.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Tīmataria me te kore takitaki'
+    hoc_already_signed_up_content: 'Kua uru koe ki te whakaako i tētahi Hour of Code! Me takiuru koutou ko ō ākonga ki Code Studio ka whai wāhi ai. Kia tīmata<a href="https://code.org/learn"> kōwhiritia tētahi whakaakoranga</a> mō tō akomanga kātahi me tiritiri i te honongaitua ki a rātou.<br/><br/>Me i ngahau te Hour of Code mōu, ā, e hiahia ana koe ki te haere tonu, e whakaae ana kia tautuhia e koe tētahi kupuhipa me te whakarite i tētahi pūkete ki raro iho nei kia pai ai tō whakauru i ō ākonga ki tētahi o ā mātou <a href="https://code.org/educate"> whakaakoanga roa</a>.'
     teacher_educator_guide: 'Tirohia te ārahi mātauranga'
     title: "Waitohu mō Core.org"
     school_name: 'Ingoa Kura (kei a koe te kōwhiringa)'
@@ -186,8 +186,8 @@ mi:
     teacher_email_required: "Me mātua whai wāhitau īmēra kua whakaūngia ngā whakawhiwhinga pouako:"
     confirm:
       title: 'Tēnā Whakaūngia'
-      'no': 'No'
-      'yes': 'Yes'
+      'no': 'Kāore'
+      'yes': 'Āe'
       msg: 'Āe rānei e hiahia ana koe ki te tiki i te whakawhiwhinga %{prize_name}?'
       msg_student: 'KIA MŌHIO AI KOE: E whakaae noa iho ana kia whiriwhiria tētahi momo whakawhiwhinga.'
       msg_publicschool: 'Tēnā whakaūngia tō tū hei pouako i tētahi kura tūmatanui o te U.S.'
@@ -279,7 +279,7 @@ mi:
     user_not_found: 'Kāore te poauko i kitea.'
     student_teacher_disassociated: 'Kua tangohia a %{teacher_name} hei pouako mōu.'
     panel:
-      answer_viewer: 'Teacher Panel'
+      answer_viewer: 'Pae Pouako'
       student: 'Student'
       viewing_solution: 'Tirotiro Whakautu'
       try_it_yourself: 'Māu anō e whakamātau'
@@ -351,15 +351,15 @@ mi:
     announcement_title: "Announcements"
     announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
-    announcement_learn_more_button: "Learn more"
+    announcement_learn_more_button: "Me ako tonu"
     announcement_try_now_button: "Whakamātauria ināianei"
     announcement_host_an_hour_button: "Hāpaitia tētahi Hour"
     announcement_petition: "Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi o ngā kaiurungi mātauranga, ngā kaikāwana 28, rātou ko ngā Kaihautū o ngā umanga mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko."
     announcement_petition_button: "Tāpiritia tō ingoa"
     announcement_all: "Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā whakapāohotanga o mua.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_launch: "Hei te 5-11 o tēnei Hakihea i te wiki Hour of Code, ka tīmataria te whakaako pūtaiao rorohiko e te manomano pouako nō ngā whenua 180 neke atu. Ko koutou hei pou whirinaki mō mātou kia whānui ake te toro atu ki ngā tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako mātauranga rorohiko te tangata ahakoa ko wai."
+    announcement_hoc_scaling: 'WHAKAMATAARA mā ngā pouako e whai ana i ngā Whakaakoranga 1-4 me te Whakaakoranga Whakatere: Nā te miriona ākonga e mahi ana i Hour of Code i tēnei wā kua kore te <b>Code Studio e āhei ki te tiaki, ki te pūrongo rānei i te kauneketanga ākonga i aua whakaakoranga mai i te 3-11 o Hakihea</b>. E tūtohi ana mātou kia whai koutou i tētahi o ngā ngohe Hour of Code i tō akomanga hei whakanui i te Hour of Code i Te Wiki o te Mātaruranga Pūtaiao Rorohiko. Ahakoa kāore ā mātou whakaakoranga Hour of Code e tiaki i ngā kōrero kauneke i taua wiki, e wātea tonu ana ngā whakaakoranga matua ki a rātou, ā, ka whiwhi tiwhikete tonu.'
+    announcement_mc_launch: "Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code."
   move_students:
     new_section_dne: "Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā whakaurua he waehere wāhanga rerekē."
     section_code_not_entered: "Tēnā whakaratoa mai he waehere_wāhanga_onāianei."
@@ -422,7 +422,7 @@ mi:
   compatibility:
     upgrade:
       unsupported_message: "Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga."
-      link: "Learn more"
+      link: "Me ako tonu"
   slow_loading: 'E takaroa ana...'
   try_reloading: 'Me ngana ki te uta anō i te whārangi'
   next_stage: 'Kua mutu! E koke ki te wāhanga o muri'
@@ -470,7 +470,7 @@ mi:
       body: 'E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!'
     20-hour:
       title: 'Whakaakoranga Whakatere'
-      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body: 'Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga 2-4 kia whānui ake te wheako!'
       body_short: 'Ako i te pūtaiao rorohiko waiwai i tētahi putanga whakatere o ngā whakaakoranga 2-4.'
     hoc2014:
       try_new_tutorial: 'Whakamātauria tā mātou whakaaroranga Hour of Code hou ki peta'
@@ -484,13 +484,13 @@ mi:
       title: "Star Wars"
     infinity:
       title: "Infinity Play Lab"
-      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
+      body: "Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Tūhuratia tētahi ao Minecraft mā roto mai i te waehere."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina."
     unplugged:
       title: "Akoranga Momotu"
       audience: "Pakeke 4+"
@@ -568,11 +568,11 @@ mi:
     correct_title: "Tika"
     correct_body: "Koinā te whakautu tika."
   dialog:
-    ok: "OK"
-    startover_title: "Are you sure you want to start over?"
+    ok: "Ka Pai"
+    startover_title: "Āe rānei e hiahia ana koe ki te tīmata anō?"
     startover_body: "Mā tēnei ka tautuhi anō te panga ki tōna hanga i te tīmatanga, ā, ka tautahi hoki i te katoa o te raraunga kua tāpiritia, kua panonihia rānei e koe."
-    startover_ok: "Start Over"
-    startover_cancel: "Cancel"
+    startover_ok: "Tīmata Anō"
+    startover_cancel: "Whakakore"
   time:
     hour: '1 haora'
     day: 'rā'
@@ -591,7 +591,7 @@ mi:
     privacy_notice: "Pānui Tūmataitinga"
     accept_label: 'E whakaae ana ahau ki ngā whakahoutanga o <a href="%{tos_url}" target="_blank"> Ngā Ture Whakaratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>'
     accept: "Whakaae"
-    print: "Print"
+    print: "Tāngia"
     reminder_desc: 'Kua whakahoungia e mātou ā mātou <a href="%{tos_url}" target="_blank">Ture Ratonga</a> me <a href="%{privacy_url}" target="_blank"> te Kaupapahere Tūmataitinga</a>. Tēnā āta pānuihia i mua i tō whakaae atu. Kia mōhio ai koe, tērā pea kāore tā mātou utauta whakaako JavaScript e wātea ki ō ākonga i mua i tō whakaae mārika ki ngā ture hou.'
     review_terms: "Arotakehia ngā ture hou"
   race_interstitial:
@@ -639,7 +639,7 @@ mi:
     delete: "Delete"
     exit: "Hoki atu ki te Akoranga"
     my_projects: "Aku Tūmahi"
-    share: "Share"
+    share: "Tiri"
     share_title: Tiria tō tūmahi
     share_copy_link: "Tāruatia te honongaitua:"
     share_embed_description: "E āhei ana koe te waehere tāmau te whakapiri ki tētahi whārangi HTML ki te whakaatu i te tūmahi ki tētahi whārangi tukutuku."
@@ -654,11 +654,11 @@ mi:
     help_text: "Pāwhiritia te <strong> Hanga Taupānga </strong>rānei, te <strong> Tā i Tētahi Mea </strong>rānei ki raro iho nei ki te tīmata i tētahi tūmahi hou!<br/>E wātea ana kia hoki atu koe ki te whanake i tō tūmahi i ngā wā katoa."
     need_help: "Whakamātauria ēnei whakaakoranga hei hāpai i a koe ki te tīmata i tō tūmahi hou"
     really_delete: 'Delete?'
-    delete_yes: 'Yes'
-    delete_no: 'No'
-    saved: "Saved"
+    delete_yes: 'Āe'
+    delete_no: 'Kāore'
+    saved: "Kua Tiakina"
     not_saved: "Kāore anō kia tiakina"
-    cancel: 'Cancel'
+    cancel: 'Whakakore'
     delete_confirm_title: Āe rānei e hiahia ana koe ki te muku i tēnei tūmahi?
     delete_confirm_text: "Mā te muku i tō tūmahi ka poroa rawatia i tō rārangi Aku Tūmahi. Ko te katoa o ngā tāngata nāu te honongaitua o tēnei tūmahi i tiri ki a rātou, ka kore e kite tonu i tō tūmahi."
     view_all: 'Tirohia Aku Tūmahi'
@@ -709,13 +709,13 @@ mi:
     review_new_submission: 'Review a new submission'
   components:
     icon_library:
-      search_placeholder_text: 'Search for an icon...'
-      no_icons_found: 'No icons found'
+      search_placeholder_text: 'Rapuhia tētahi ata...'
+      no_icons_found: 'Kāore he ata i kitea'
     playzone:
-      artist_description: 'Draw cool pictures and designs with the Artist!'
+      artist_description: 'Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!'
       artist_title: 'Tānga Hou'
       continue_button: 'E koke ki te Wāhanga o muri'
-      playlab_description: 'Create a story or make a game with Play Lab!'
+      playlab_description: 'Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro!'
       playlab_title: 'Taupānga Hou'
       primary_header: 'Ngā mihi! Kua oti i a koe te wāhanga %{stageName}!'
       projects_description: 'Tirohia anō tētahi o āu tūmahi tīari.'

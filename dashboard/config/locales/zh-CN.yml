@@ -3,8 +3,8 @@
     messages:
       not_saved: "请更正以下错误:"
       too_young: "此内容有年龄限制，不适合低龄的学生。"
-      teacher_must_accept_terms: 此内容有年龄限制，对于低年级的学生不可用。问你的老师以接受更新的服务条款给你访问此内容。你的老师通过登录到代码工作室并单击代码工作室主页顶部附近的"审查更新条款"按钮来做这件事。
-      pair_programmer: "你正在与另一个不能访问此内容的学生结伴编程。要访问此内容，请停止与这个学生的结伴编程后再次尝试。"
+      teacher_must_accept_terms: 此内容有年龄限制，对于低年级的学生不可用。询问你的老师是否能接受更新的服务条款来让你访问此内容。你的老师能通过登录到代码工作室并单击代码工作室主页顶部的"查看更新的条款"按钮来接受条款。
+      pair_programmer: "你正在与另一个不能访问此内容的学生结伴编程。要访问此内容，请停止结伴编程后再尝试。"
   activerecord:
     errors:
       messages:
@@ -35,7 +35,7 @@
   done_with_module: Done with this Learning Module
   cancel: "取消"
   okay: "好吧"
-  heading_x_of_y: "%{heading} (%{y} 第%{x} 页)"
+  heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
   add_teacher_form:
     code:
       label: "添加一个老师:"
@@ -82,6 +82,10 @@
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
     overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
+    hoc_already_signed_up_heading: "使用客人身份开始"
+    hoc_already_signed_up_content: 你已经注册教授“小时代码”！你和你的学生不需要登陆到 Code Studio 来参加该活动。想要开始，为你的班级
+      <a href="https://code.org/learn">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢“小时代码”并希望更深入地了解，你可以在下面设置一个密码并创建一个
+      Code Studio 账号，以为你的学生在我们任何的 <a href="https://code.org/educate">大型课程</a>注册。
     teacher_educator_guide: "请参阅教师指南"
     title: "注册 Code.org"
     school_name: "学校名称 （可选）"
@@ -100,11 +104,12 @@
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
     student_terms: "我同意 Code.org 的<a href='http://code.org/tos'> 服务条款</a> 的约束.如果我未满13岁，我确认提交这份表格，有我的父母或法定监护人的许可使用
-      Code.org 服务。 <br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中."
+      Code.org 服务。<1><br/>对于13岁以下的用户, 电子邮件地址不会存储在用于联络的表单中。学生不会收到除密码重置的邮件外的任何邮件。查看我们的<a
+      href='http://code.org/privacy'>隐私政策</a>来获取更多信息。"
     teacher_terms: "我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
       隐私政策</a>。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
-    user_type_label: "账户种类"
+    user_type_label: "帐户类型"
     user_type_teacher: "老师"
     user_type_student: "学生"
     field_is_required: "必填"
@@ -242,10 +247,10 @@
       finished_hoc: "我已经完成了我的编程一小时项目。"
       sign_in_to_save: "登录以保存进度"
       free_play:
-        playlab: "构建一个应用程序"
-        artist: "绘画一些东西"
+        playlab: "创建一个游戏实验室应用"
+        artist: "画一些东西"
         calculate: Calculate Something
-        applab: "构建一个应用程序"
+        applab: "创建一个游戏实验室应用"
     user:
       classroom: "教师主页"
       district_dashboard: "分区信息"
@@ -259,8 +264,8 @@
       already_registered: "已经注册了？"
       pair_programming: "结对编程"
       team: "团队"
-      driver: "驱动"
-      navigator: "导航"
+      driver: "驱动者"
+      navigator: "导航者"
     popup:
       progress_for_user: "%{name}的进度"
       progress: "您的进度"
@@ -295,9 +300,9 @@
       example_with_number: "示例解决方案 %{solution_number}"
       submitted_on: "已提交于："
       unsubmit: "未提交"
-      worked_with: "一起工作"
+      worked_with: "共事"
       update_lock_settings: "在这里更新锁设置。"
-      clear_response: Clear response
+      clear_response: "清除回复"
   user:
     email_confirm_needed: "电子邮件地址尚未被确认："
     email_confirm_needed_required: "你的电子邮件地址%{email} 尚未被确认："
@@ -356,38 +361,38 @@
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
     announcement_title: "公告"
-    announcement_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，您可以 <a href="%{pp_url}"target="_blank">
-      跟踪多个学生取得的进步</a> 即使他们结对编程在一台设备。你可以用 <i>任何</i> 课堂从我们 CS 原理课 <a href="%{csp_widgets_url}"target="_blank">
-      的最佳互动的工具</a>。你的学生可以 <a href="%{unused_code_url}"target="_blank"> 保持未使用的代码</a>
-      在他们的工作区，鼓励实验 ！签出我们所有的新功能，让我们知道你的想法。
+    announcement_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，即使学生们结对编程在一台设备，您也可以
+      <a href="%{pp_url}" target="_blank">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a
+      href="%{csp_widgets_url}" target="_blank">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href="%{unused_code_url}"
+      target="_blank">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "了解详情"
     announcement_try_now_button: "现在就试试"
-    announcement_host_an_hour_button: Host an Hour
-    announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
-      28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
+    announcement_host_an_hour_button: "主办一小时"
+    announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
+      28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
       看以前的公告。</a>"
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
+      href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
+    announcement_hoc_scaling: "课程 1-4 和加速课程老师警告：由于数以万计的学生对于“一小时代码”的巨大访问量， <b>至 11
+      年 12 月 3 日起，Code Studio 将不会保存或汇报学生在这些课程中的进度</b>。我们建议在“计算机科学教育周” 期间与你的班级做一个“一小时代码”的活动来庆祝“一小时代码”。虽然我们自己的“一小时代码”教程在其间也无法保存进度，但是学生仍然可以使用完整的教程并获得认证。"
+    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的时间》“编程一小时”设计师让学生们为《我的时间》里的世界设置规则。他们可以获得一个完全独一无二的《我的时间》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
   move_students:
-    new_section_dne: "抱歉，但分段 %{new_section_code} 并不存在。请输入一个不同的分段代码。"
+    new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
-    section_code_cant_be_current_section: "当前单元无法与新建单元相同。"
-    current_section_dne: "抱歉，单元%{current_section_code}不存在。请输入一个不同的单元代码。"
-    students_not_yours: "您不能移动不属于您这一段的学生。"
+    section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
+    current_section_dne: "抱歉，章节%{current_section_code} 不存在。请输入不同的章节代码。"
+    students_not_yours: "您不能移动不属于您的章节的学生。"
     stay_enrolled_not_entered: "请提供 stay_enrolled_in_current_section。"
     student_ids_not_entered: "请提供 student_ids。"
-    student_not_found: "无法找到这一个或多个学生"
-    all_students_must_be_in_current_section: "所有的学生都必须修读您的部分。"
-    already_enrolled_in_new_section: "您无法移动这些学生，因为有老师在另外的课程中有了这些学生。"
+    student_not_found: "无法找到这一个或多个学生。"
+    all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
+    already_enrolled_in_new_section: "您无法移动这些学生，因为有老师将这些学生加入了别的章节中。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -409,12 +414,12 @@
       &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year}
       迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482;
       &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; 2015 卡通网络."
+      电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; %{current_year} 卡通网络."
     art_from_html_old: "《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482;
       &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year}
       迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482;
       &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络."
+      电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; %{current_year} 卡通网络."
     code_from_html: Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>之许可。
     powered_by_aws: "由亚马逊网络服务"
@@ -451,7 +456,7 @@
   compatibility:
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
-        target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
+        target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
       link: "了解详情"
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
@@ -489,9 +494,9 @@
     applab:
       title: "应用实验室"
       body: "应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。"
-      body_short: "设计一个应用，用代码块或者JavaScript 来写出这个程序，然后马上分享你的应用吧。"
+      body_short: "设计一个应用，用代码模块或者JavaScript 来写出这个程序，然后马上分享你的应用吧。"
       audience: 13岁以上
-      cta: "知其然"
+      cta: "了解操作方法"
     hoc:
       title: "经典迷宫"
       body: "请尝试计算机科学的基本知识。数百万人尝试了它。"
@@ -518,12 +523,13 @@
     minecraft:
       title: "我的世界"
       body: "用代码来探索《我的世界》。"
+    minecraft2016:
+      title: "我的世界"
+      body: "利用编程，在你自己的《我的世界》里创建动物和其他生活在《我的世界》里的生物。"
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"
-      body: |-
-        我们已经编译拔出经验教训，为您在您的课堂中使用的列表。现在你可以教计算机科学基础是否你有电脑在你的教室或不 ！尝试利用这些经验教训，作为一门独立的课程或互补借鉴任何计算机科学课程。
-        我们做了一套离线课程在课堂上使用。现在，你即使没有电脑，也可以教授计算机科学的基础。尝试使用这些教材，作为一门独立课程或借鉴任何计算机科学课程。
+      body: "我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。"
       body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
   gallery:
     students_drew_these_with_code: "学生使用代码画了这些图案!"
@@ -616,8 +622,8 @@
     sign_out: 如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。
   terms_interstitial:
     title: "更新的服务条款和隐私政策"
-    intro_desc: "我们更新我们的服务条款和隐私政策，如下所示。这些变化是自 2016 年 8 月 24 日起生效。 最大的变化︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大问题，我们希望它在教育技术中设置学生隐私的新标准。我们已经派你通过电子邮件的其他更改的摘要。"
-    intro_instructions: "你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信作为学校的使用和效益，包括代码工作室这类的教育方案。"
+    intro_desc: "我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。"
+    intro_instructions: "你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信息来为学校的所使用，包括代码工作室这样的教育程序。"
     tos: "条目"
     privacy: "隐私政策"
     privacy_notice: "隐私声明"
@@ -625,23 +631,21 @@
       隐私政策</a>
     accept: "同意"
     print: "打印"
-    later: "稍后​​​"
     reminder_desc: 我们更新了我们的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学 JavaScript 的工具学生可能不能使用。
     review_terms: "查看更新后的条款"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: "可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。"
+    message: "请告诉我们您的种族（选择所有适用的项目）"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: "白人"
+    - black: "黑人或非裔美国人"
+    - hispanic: "西班牙裔或拉丁裔"
+    - asian: "亚裔"
+    - hawaiian: "夏威夷土著或其他太平洋岛民"
+    - american_indian: "美国印第安/阿拉斯加原住民"
     - other: "其他"
-    - opt_out: Prefer not to say
+    - opt_out: "不想说"
     submit: "提交"
     decline: "关闭"
   zendesk_too_young_message: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org">
@@ -671,17 +675,17 @@
     share: "分享"
     share_title: "分享您的项目"
     share_copy_link: "复制链接："
-    share_embed_description: "您可以将嵌入的代码粘贴到HTML页，就可以在另一个网页上显示这个项目。"
+    share_embed_description: "您可以将嵌入的代码粘贴到HTML页，就可以在一个网页上显示这个项目。"
     share_u13_warning: "在分享之前问问你的老师。只和你学校里的其他人分享。"
-    embed: "插入"
+    embed: "嵌入"
     advanced_share: "显示更高级的选项"
     close: "关闭"
     more: "更多"
     name: "姓名"
     updated: "最后更新于"
     project_type: "项目类型"
-    help_text: "单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目<br/>。您可以在随时回到项目来继续制作。"
-    need_help: "需要获得帮助以开始吗？"
+    help_text: "单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目！<br/>您可以在随时来继续这个项目。"
+    need_help: "实施这些课程来帮助你开始新项目。"
     really_delete: "要删除吗？"
     delete_yes: "是"
     delete_no: "不"
@@ -714,7 +718,7 @@
           infringement: "著作权侵权"
           other: "其他"
         detail: "请提供尽可能详细的信息，尽可能关于您所报告的内容。"
-        acknowledge: "提交的信息将会根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的职权范围进行处理。"
+        acknowledge: "通过提交此信息，你承认它将会被根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的规定进行处理。"
   peer_review:
     accepted:
       name: "已接受"
@@ -724,7 +728,7 @@
       description: "<strong>否决</strong>这个提交<strong>不能满足</strong> 的要求"
     escalated:
       name: "升级"
-      description: "我想老师来审查此提交"
+      description: "我想让老师来审查此提交"
     instructor_feedback: "教师反馈"
     peer_feedback: "同伴反馈"
     outdated: "这个反馈是添加给以前提交的版本"
@@ -739,7 +743,7 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: "查询图标"
+      search_placeholder_text: "搜索图标..."
       no_icons_found: "找不到图标"
     playzone:
       artist_description: "和小艺术家一起设计出很酷的图形！"
@@ -747,7 +751,7 @@
       continue_button: "去下一阶段"
       playlab_description: "通过游戏实验室创建故事或制作游戏！"
       playlab_title: "新的应用"
-      primary_header: "祝贺你 ！你完成 %{stageName} ！"
+      primary_header: "祝贺你 ！你完成了 %{stageName} ！"
       projects_description: "重新审视你现有的项目之一。"
       projects_title: "打开一个项目"
       secondary_header: "问你的老师要下一步做什么"
@@ -759,23 +763,22 @@
   external_links:
     disclaimer: "免责声明"
     leaving_domain: "你现在正在离开code.org，访问一个不由我们创建的站点。"
-    disclaimer_text: "这个站点可能包含与Code.org不同的隐私策略。我们选择了这些第三方资源，因为我们认为他们对你有帮助。我们并不直接对该网站的内容负责，如果你发现了让你感到反感的内容，或这个链接指向的站点已不再可用，请通过
-      <a href='%{support_url}'>和支持部门联系。</a>"
+    disclaimer_text: "这个站点可能包含与Code.org不同的隐私策略。我们选择了这些第三方资源，因为我们认为他们对你有帮助。我们并不直接对该网站的内容负责，如果你发现了让你感到反感的内容，或这个链接指向的站点已不再可用，请<a
+      href='%{support_url}'>联系支持部门</a>。"
   hoc_download:
-    title: "编程一小时项目下载"
+    title: "编程一小时下载"
     capsule_title: "你有网络吗？"
-    capsule_desc: 使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。
+    capsule_desc: 使用在线的，基于网页的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: "没有网络？"
-    instructions: 指导教师︰ 如果你有互联网服务差，这些代码小时教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用
-      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可打印证书提前 <a href="%{url}">
-      在这里</a>。
+    instructions: 给教师的指导︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用
+      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可提前 <a href="%{url}">打印证书</a>。
     minecraft_name: "我的世界 编程一小时"
     starwars_blocks_name: "星球大战: 用代码构建一个星系（块）"
     starwars_javascript_name: "星球大战: 用代码构建一个星系-JavaScript"
     download_message: "下载 %{app_name}，供离线使用 (136MB)"
     download_in_english: "下载英语版本："
     download_in_spanish: "下载西班牙语版本："
-    windows: "窗口"
+    windows: Windows （64位）
     mac: Mac OS X
   plc:
     preview_assignments:
