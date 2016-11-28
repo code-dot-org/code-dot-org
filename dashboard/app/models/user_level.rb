@@ -84,8 +84,12 @@ class UserLevel < ActiveRecord::Base
 
   def self.most_recent_driver(script, level, user)
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    # Note that most_recent.user will be nil if the user was soft-deleted.
-    most_recent && most_recent.user ? most_recent.user.name : nil
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user
+    return 'Deleted user' unless most_recent_user
+
+    return most_recent_user.name
   end
 
   def paired?
