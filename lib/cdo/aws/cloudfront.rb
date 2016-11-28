@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'digest'
+require 'securerandom'
 require 'aws-sdk'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
@@ -88,6 +89,36 @@ module AWS
     # Test-stubbable class method.
     def self.alias_cache
       CLOUDFRONT_ALIAS_CACHE
+    end
+
+    def self.invalidate_caches
+      puts 'Creating CloudFront cache invalidations...'
+      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+                                               log_level: :debug,
+                                               http_wire_trace: true)
+      invalidations = CONFIG.keys.map do |app|
+        hostname = CDO.method("#{app}_hostname").call
+        id = get_distribution_id_with_retry(cloudfront, hostname)
+        invalidation = cloudfront.create_invalidation({
+          distribution_id: id,
+          invalidation_batch: {
+            paths: {
+              quantity: 1,
+              items: ['/'],
+            },
+            caller_reference: SecureRandom.hex,
+          },
+        }).invalidation.id
+        [app, id, invalidation]
+      end
+      puts 'Invalidations created.'
+      invalidations.map do |app, id, invalidation|
+        cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
+          waiter.max_attempts = 60 # wait up to 20 minutes for invalidations
+          waiter.before_wait { |_| puts "Waiting for #{app} cache invalidation.." }
+        end
+        puts "#{app} cache invalidated!"
+      end
     end
 
     # Creates or updates the CloudFront distribution based on the current configuration.
