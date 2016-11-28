@@ -44,6 +44,7 @@ describe('The Exporter,', function () {
 
   afterEach(function () {
     server.restore();
+    assetPrefix.init({});
     dashboard.assets.listStore.list.restore();
   });
 
