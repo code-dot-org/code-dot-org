@@ -126,7 +126,7 @@ end
 
 def check_for_page_errors
   js_errors = @browser.execute_script('return window.detectedJSErrors;')
-  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors && js_errors.is_a?(Array)
 
   # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
   # js_errors.should eq nil
