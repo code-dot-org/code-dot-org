@@ -358,7 +358,8 @@ parallel_config = {
 run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
-  log_prefix = "[#{feature.gsub(/.*features\//, '').gsub('.feature', '')}] "
+  short_path = feature.gsub(/.*features\//, '').gsub('.feature', '')
+  log_prefix = "[#{short_path}] "
 
   if $options.pegasus_domain =~ /test/ && rack_env?(:development) && RakeUtils.git_updates_available?
     message = "Killing <b>dashboard</b> UI tests (changes detected)"
@@ -601,7 +602,7 @@ EOS
     print skip_warning
   end
 
-  [succeeded, message, reruns]
+  [succeeded, message, reruns, short_path]
 end
 
 $logfile.close
@@ -618,7 +619,9 @@ end
 # exit with a failure code.
 exit 1 if run_results.nil?
 
-run_results.each do |succeeded, message, reruns|
+$rerun_failed_command = "bundle exec ./runner.rb -l --feature "
+
+run_results.each do |succeeded, message, reruns, short_path|
   $total_flaky_reruns += reruns
   if succeeded
     $total_flaky_successful_reruns += reruns
@@ -626,6 +629,7 @@ run_results.each do |succeeded, message, reruns|
   else
     $suite_fail_count += 1
     $failures << message
+    $rerun_failed_command += "features/#{short_path}.feature,"
   end
 end
 
@@ -640,7 +644,8 @@ HipChat.log "#{$suite_success_count} succeeded.  #{$suite_fail_count} failed. " 
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
 if $suite_fail_count > 0
-  HipChat.log "Failed tests: \n #{$failures.join("\n")}"
+  HipChat.log "\nFailed tests: \n #{$failures.join("\n")}\n"
+  HipChat.log "\nTo rerun failed tests locally:\n#{$rerun_failed_command}\n"
 end
 
 exit $suite_fail_count
