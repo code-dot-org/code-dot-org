@@ -960,6 +960,11 @@
     Minecraft world. They can create a totally unique Minecraft experience, and then
     share it with friends or play it on their phones. Do it with your class for the
     Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. Decembra!
   code_sign_up: Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu
   host_an_hour: Host an hour
@@ -1124,6 +1129,8 @@
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Matematika
   hoc_category_name: Sat Kodiranja
   csf_category_name: CS Fundamentals
@@ -1829,10 +1836,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
