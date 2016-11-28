@@ -8,7 +8,7 @@ require 'sshkit/dsl'
 include SSHKit::DSL
 
 CDO.log.info 'Flushing Varnish caches on frontends...'
-on CDO.app_servers.values do |host|
+on CDO.app_servers.values do
   execute "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
 end
 CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
