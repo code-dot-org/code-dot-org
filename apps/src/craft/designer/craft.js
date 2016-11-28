@@ -181,12 +181,11 @@ Craft.init = function (config) {
   var bodyElement = document.body;
   bodyElement.className = bodyElement.className + " minecraft";
 
-  if (config.level.showPopupOnLoad) {
-    config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
-      var event = document.createEvent('Event');
-      event.initEvent('instructionsShown', true, true);
-      document.dispatchEvent(event);
-
+  // Always add a hook for after the video but before the level proper begins.
+  // Use this to start music, and sometimes to show an extra dialog.
+  config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+    Craft.beginBackgroundMusic();
+    if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('MinecraftDesigner', 'ChoseCharacter', selectedPlayer);
@@ -197,8 +196,10 @@ Craft.init = function (config) {
           showInstructions();
         });
       }
-    };
-  }
+    } else {
+      showInstructions();
+    }
+  };
 
   if (config.level.puzzle_number && eventsLevelbuilderOverrides[config.level.puzzle_number]) {
     Object.assign(config.level, eventsLevelbuilderOverrides[config.level.puzzle_number]);
@@ -229,8 +230,7 @@ Craft.init = function (config) {
   );
 
   // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsHidden', playOnce);
+  Craft.beginBackgroundMusic = function () {
     if (studioApp.cdoSounds) {
       studioApp.cdoSounds.whenAudioUnlocked(function () {
         var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
@@ -239,7 +239,6 @@ Craft.init = function (config) {
       });
     }
   };
-  document.addEventListener('instructionsHidden', playOnce);
 
   const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
 
