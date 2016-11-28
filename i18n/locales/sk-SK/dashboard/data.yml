@@ -132,21 +132,21 @@ sk:
         'turtle_3_2': "Použitím funkcie \"nakresli štvorec\" ako predlohy, vytvor funkciu \"nakresli trojuholník\" a použi ju."
         'turtle_3_3': "Nakresli trojuholníkový plot okolo mačiek a štvorcový plot okolo kravy. Tip: priebežne testuj program."
         'turtle_3_4': "Pozrime sa, či už dokážete používať \"nakresliť štvorec\" a \"nakresliť trojuholník\" (a niektoré ďalšie bloky), aby ste nakreslili domček domček okolo leva."
-        'turtle_3_5': "Now create a new \"draw a house\" function and use it to house two cats. Hint: create a new function using the \"do something\" block, and type your own text to name the block."
-        'turtle_3_6': "Using \"draw a square\" as an example, add an input named \"length\" to \"draw a triangle\". Then, draw triangles in different sizes. (Hint: click the star to add an input to a function)"
-        'turtle_3_7': "Add an input named \"length\" to \"draw a house\" and build a big house for the elephant (with edges 150 pixels long)"
-        'turtle_3_8': "Modify \"draw a house\" so I end up at the bottom right corner after drawing a new house. Use this modified function to draw three houses."
-        'turtle_3_9': "Can you re-create the \"draw a house\" function without help? Try it, and then draw a row of houses."
-        'turtle_3_10': "You've learned a lot! Now use it to draw whatever you want. Try to draw a star, or a spiral, or a fancy snowflake."
-        'maze_karel_debug_seq_1': "Welcome to debugging! My code doesn't work right. Can you spot the problem and fix it so that I can get my field flat and ready for planting?"
-        'maze_karel_debug_seq_2': "What's wrong with this program? How should you fix it so I can remove that pile?"
-        'maze_karel_debug_repeat': "De-bug this program for me so my field will be nice and flat."
+        'turtle_3_5': "Teraz vytvor novú funkciu \"nakresliť dom\" a použi ho ako bývanie dvoch mačiek. Tip: na vytvorenie novej funkcie použi blok \"urobiť niečo,\" a ako názov bloku napíš svoj vlastný text."
+        'turtle_3_6': "S použitím bloku \"nakresliť štvorec\" ako vzoru pridaj vstupnú hodnotu \"dĺžka\" bloku \"nakresliť trojuholník. Potom nakresli trojuholníky s rôznymi veľkosťami. (Tip: vstupné hodnoty funkcii pridáš po kliknutí na hviezdičku)"
+        'turtle_3_7': "Pridaj vstupnú hodnotu \"dĺžka\" bloku \"nakresliť dom\" a postav veľký dom pre slona (so stranami dlhými 150 pixelov)"
+        'turtle_3_8': "Uprav funkciu \"nakresliť dom\" tak, aby po nakreslení nového domu skončila v pravom dolnom rohu. Použi upravenú funkciu na nakreslenie troch domov."
+        'turtle_3_9': "Dokážeš znovu zostrojiť funkciu \"nakresliť dom\" bez pomoci? Skús to, a potom nakresli rad domov."
+        'turtle_3_10': "Naučil si sa toho naozaj veľa! Teraz to môžeš využiť a nakresli, čo chceš. Skús nakresliť hviezdu alebo špirálu alebo efektnú snehovú vločku."
+        'maze_karel_debug_seq_1': "Vitaj pri ladení programov! Môj kód nepracuje správne. Môžeš nájsť problém a opraviť ho tak, aby bolo pole vyrovnané a pripravené na sadenie?"
+        'maze_karel_debug_seq_2': "Čo je zlé v tomto programe? Ako ho opraviť, aby sa odstránila kôpka?"
+        'maze_karel_debug_repeat': "Vylaď tento program tak, aby pole bolo čisté a rovné."
         'maze_karel_debug_while': "Ako by si zmenil tento program, aby si mi pomohol vyplniť jamu?"
         'maze_karel_debug_if': "Pomóc! Uprav program tak, aby bolo moje pole úplne zarovnané."
-        'maze_karel_debug_if_else': "De-bug this program so I can fill in the holes and remove all the piles."
-        'maze_karel_debug_function_1': "What should you change about this program to help me remove all the piles?"
-        'maze_karel_debug_function_2': "Can you de-bug this program for me so I can make my field flat?"
-        'maze_karel_debug_function_3': "Edit this program so I'll remove all the piles on my field. "
+        'maze_karel_debug_if_else': "Vylaď tento program tak, aby sa vyplnili všetky jamy a odstránili všetky kôpky."
+        'maze_karel_debug_function_1': "Ako zmeníš tento program, aby sa odstránili všetky kôpky?"
+        'maze_karel_debug_function_2': "Môžeš vyladiť tento program tak, aby zarovnal pole?"
+        'maze_karel_debug_function_3': "Uprav tento program tak, aby z poľa odstránil všetky kôpky. "
         'turtle_5_1': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
         'turtle_5_2': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
         'turtle_5_3': "Try running this program, and make changes to see what happens. Can you figure out how it works? (Or delete it and replace it with something totally different)"
@@ -486,11 +486,11 @@ sk:
         'iceage_intro': 'Doba ľadová Hodina Kódu - Úvod'
         'iceage_events': 'Ice Age Hour of Code - Events'
         'iceage_repeat': 'Ice Age Hour of Code - Repeat statements'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Hodina kódu Minecraft - Úvod'
+        'mc_2016_loops': 'Hodina kódu Minecraft - Cykly'
+        'mc_2016_events': 'Hodina kódu Minecraft - Udalosti'
+        'mc_2016_spawn': 'Hodina kódu Minecraft - Vytváranie postáv'
+        'mc_2016_congrats': 'Hodina kódu Minecraft - Gratulujeme'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

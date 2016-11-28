@@ -531,7 +531,7 @@ zh-TW:
     C1_pair_programming:
       1:
         image: 'notes/C1_pair_programming_1.png'
-        text: "Today we're going to learn about Pair Programming. In pair programming you work as a team. Why should two people use one computer? Because two heads are better than one. In pair programming you and your partner are going to sit down together at one computer and you are both going to work on the same project."
+        text: "今天我們要來學習雙人程式設計的概念。在雙人合作程式設計時你們是一個團隊。為什麼要讓兩人使用同一台電腦？因為合作的力量要比單打獨鬥強。在雙人合作程式設計時，你和你的夥伴要一起坐在一台電腦前，合作執行同一個專案。"
       2:
         image: 'notes/C1_pair_programming_2.png'
         text: "https://crowdin.com/translate/codeorg/38/enus-zhtw#49894"

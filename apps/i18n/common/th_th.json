@@ -33,6 +33,7 @@
   "copy": "คัดลอก",
   "copyright": "ลิขสิทธิ์",
   "currentVersion": "เวอร์ชั่นที่กำลังใช้งาน",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "ชื่อตาราง",
   "dataWorkspaceHeader": "ข้อมูล Browser",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "ค้นหาไอคอน...",
   "ignore": "เพิกเฉย",
   "infinity": "ไม่จำกัด",
+  "joinText": "เชื่อมต่อ",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "กระโดด",
   "keepPlaying": "เล่นต่อไป",
   "keyValuePairLink": "คีย์/คู่",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "ไปที่ตำแหน่งด้านบนซ้ายข้างนอก",
   "positionTopOutRight": "ไปที่ตำแหน่งด้านบนขวาด้านนอก",
   "positionTopRight": "ไปที่ตำแหน่งด้านบนขวา",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "พิมพ์",
   "privacyPolicy": "นโยบายความเป็นส่วนตัว",
   "projectWarning": "หมายเหตุ: คุณอยู่ในระดับที่เป็นส่วนหนึ่งของโครงการที่ยาวนาน การเปลี่ยนแปลงในระดับนี้จะปรากฏในระดับอื่น ๆ ในโครงการด้วย",
@@ -314,9 +318,5 @@
   "when": "เมื่อ",
   "whenRun": "เมื่อเรียกให้ทำงาน",
   "workspaceHeaderShort": "พื้นที่ทำงาน: ",
-  "yes": "ใช่",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "ใช่"
 }

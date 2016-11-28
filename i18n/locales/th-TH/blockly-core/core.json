@@ -22,7 +22,7 @@
   "COLOUR_RGB_BLUE":"ฟ้า",
   "COLOUR_RGB_GREEN":"เขียว",
   "COLOUR_RGB_HELPURL":"http://www.december.com/html/spec/colorper.html",
-  "COLOUR_RGB_RED":"แดง",
+  "COLOUR_RGB_RED":"สีแดง",
   "COLOUR_RGB_TITLE":"ลงสีด้วย",
   "COLOUR_RGB_TOOLTIP":"สร้างสีด้วยจำนวนสีแดง เขียว และน้ำเงินตามปริมาณที่กำหนด ค่าทั้งหมดจะต้องอยู่ในช่วง 0 ถึง 100",
   "CONFIRM_CREATE_VARIABLE":"สร้าง",

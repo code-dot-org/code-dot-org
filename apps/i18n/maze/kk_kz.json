@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
   "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "continue": "Жалғастыру",
@@ -111,6 +112,5 @@
   "word": "Сөзді табу",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Иә",
-  "youSpelled": "Сіздің жазғаныңыз",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Сіздің жазғаныңыз"
 }

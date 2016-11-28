@@ -2039,11 +2039,15 @@
         Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time.
       Course 4 Artist For Loops Challenge_instruction: |-
-        Can you figure out how to
-        use all of the things you've learned to create this image?\r
+        **Challenge:** Can you figure
+        out how to use all of the things you've learned to create this image of polygons,
+        all with 40 pixel sides?
+      Course 4 Artist For Loops Challenge_a_instruction: |-
+        Can you figure out how
+        to use all of the things you've learned to create this image?\r
         \r
-        Need a
-        hint? Click here.
+        Need
+        a hint? Click here.
       Course 4 Artist For Loops inspire_instruction: |-
         Free-Play Inspiration: You've
         now learned everything you need to know to make a pattern like this! If this
@@ -2704,8 +2708,8 @@
         Adjust the interval on these `for`
         loops so that the two characters end in the exact same place.
       Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create\na
-        game that's fun for you to play!\\r\n\\r\nPress \"Run\" and click Madame\nUnicorn
-        four times to win. "
+        game that's fun for you to play! \\r\nPress \"Run\" and click Madame Unicorn\nas
+        many times as you can.  Can you beat our score of 24? "
       Course 4 SCF 1_instruction: |-
         Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?
@@ -2918,6 +2922,141 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseD_artist_nestedLoops1_instruction: |-
+        Draw a triangle to kickstart this
+        stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120 degrees
+        for each exterior angle.)
+      courseD_artist_nestedLoops10_instruction: |-
+        Take the triangles from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1a_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops2_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops3_instruction: |-
+        Use what you've learned to draw
+        the last row of windows for this building.\r
+        \r
+        The windows are 20 pixels
+        long and 20 pixels apart.
+      courseD_artist_nestedLoops4_instruction: |
+        Great!  Do the same thing with these
+        circles.\r
+      courseD_artist_nestedLoops5_instruction: |-
+        What happens if you also turn 90
+        degrees between circles?
+      courseD_artist_nestedLoops6_instruction: |-
+        Edit blocks within your existing
+        code to make this image.
+      courseD_artist_nestedLoops7_instruction: |
+        Use what you've learned to make
+        this drawing.\r
+      courseD_artist_nestedLoops8_instruction: |-
+        Using what you have learned in the
+        last couple of puzzles, build this image from the beginning.
+      courseD_artist_nestedLoops9_instruction: |-
+        **Challenge:** Can you figure out
+        how to make a picture like this?
+      courseD_artist_nestedLoopsFP_instruction: |-
+        Now it's your turn.  Take the skills
+        you have learned and make something that you love!
+      courseD_artist_nestedLoopsPre1_instruction: |-
+        Create a triangle to kickstart
+        this stage.
+      courseD_maze_until1_instruction: Get the angry bird to the pig.
+      courseD_maze_until2_instruction: |-
+        Now, use the `repeat until` loop to do the
+        same thing without specifying how many times to move forward and turn.
+      courseD_maze_until3_instruction: Get the bird to the pig.
+      courseE_farmer_functions1_instruction: |-
+        Help the farmer get to the pumpkin
+        and pick it.
+      courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
+        \ Use `if` statements to write the code to check and harvest each one.   "
+      courseE_farmer_functions10b_instruction: |-
+        Figure out which function to use
+        and which one to delete, then solve this puzzle!
+      courseE_farmer_functions1a_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions2_instruction: |-
+        Now, there will be a different number
+        of pumpkins each time you run the program.   \r
+        \r
+        Use the `while` block
+        to pick only as many pumpkins as you need.
+      courseE_farmer_functions2a_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2aALT_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2b_instruction: |-
+        Help the farmer pick the corn, lettuce,
+        and pumpkin.
+      courseE_farmer_functions3_instruction: |-
+        What happens when the paths to the
+        pumpkins are all different lengths?   \r
+        \r
+        Get them all with as few blocks
+        as possible.
+      courseE_farmer_functions3b_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions3c_instruction: |-
+        Let's make this easier by building
+        a function to check for produce and pick it when it is available.  Make sure
+        you call your function from inside the `while path ahead` loops.
+      courseE_farmer_functions4_instruction: |-
+        Great!  Now you have code that will
+        work to get pumpkins from any size path.\r
+        \r
+        Let's drag that code into
+        a function so we can use it in lots of ways...but first use it to solve this
+        puzzle again.
+      courseE_farmer_functions4b_instruction: |-
+        Now use your new function to solve
+        this puzzle.
+      courseE_farmer_functions5_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5a_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5b_instruction: |-
+        The crops are now growing in clusters.  Add
+        some new `while` loops to your function to make sure you get all of the produce.
+      courseE_farmer_functions6_instruction: |-
+        *"Lettuce try something new!"*\r
+        \r
+        Here's
+        some code to collect all of the lettuce.  Move it into a function so we can
+        use it later.
+      courseE_farmer_functions6b_instruction: Pick all of the produce.
+      courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
+      courseE_farmer_functions7b_instruction: |-
+        Make a second function that lets the
+        farmer get all of the produce down a path, then brings her back to where she
+        began.
+      courseE_farmer_functions8_instruction: |-
+        **Challenge:**  Solve this puzzle with
+        as few blocks as possible.
+      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
+        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_playLab_exampleProject2_instruction: |-
+        Here's all of your code to choose
+        a card - try adding some other fun features!
+      courseE_video_createFunctions_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.
         \ Try\nediting the variable in other ways.  "
       courseF_artist_variables_2_instruction: |
@@ -3322,6 +3461,22 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
+      CSPU5_basic if - check driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - DIY secret number_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - voting examle_instruction: |-
+        Use console.log to print out the
+        different boolean expressions below to see what information they return. (Click
+        to see full instructions)
+      CSPU5_basic if-else - driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
       CSPU5_clickerGame_v1_template_instruction: |-
         Create your own "Chaser App".
         (Click to see full instructions)
@@ -4399,8 +4554,8 @@
         line.
       frozen perpendicular_instruction: |-
         Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block.
+        that are at a 90 degree angle to each other. You will need to use the "Turn"
+        block as well as the "Move" block.
       frozen snowflake branch_instruction: |-
         Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake.
@@ -4472,7 +4627,7 @@
         Help the artist draw a line 7 times to make
         a garden wall.
       grade1_artist_loops3_instruction: "Now we need to get the soil ready to plant.\nFind
-        the bugs and help the artist prepare the ground. "
+        the bugs in the code and help the artist prepare the ground. "
       grade1_artist_loops4_instruction: |-
         Time to fix the stairs!  Repeat this pattern
         five times so the artist can reach the top of the bushes.
@@ -4492,8 +4647,8 @@
         Time to head home. Can you fix this ladder
         to help the artist get down?
       grade1_artist_loops8_instruction: |-
-        Let's take the short way over the pond.
-        Can you help the artist stay on the stones?
+        Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?
       grade1_artist_loops9_instruction: I still need a story for this puzzle
       grade1_artist_loopsFP_instruction: |-
         Use what you have learned to draw a picture
@@ -5140,47 +5295,57 @@
       grade3_playLab_buildGame_final2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
+      grade3_robotFarmer_ConditionalsIntro4_instruction: |-
+        Help the farmer remove
+        this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_1_instruction: |-
-        Hi, I'm a farmer. I need
-        your help to flatten the field on my farm so it's ready for planting. Move
-        me to the pile of dirt and use the "remove" block to remove it.
+        *"Hi, I'm a farmer.
+        I need your help to flatten the field on my farm so it's ready for planting!"*  \r
+        \r
+        Move
+        to the pile of dirt and use the `remove` block to remove it.
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
         and if there is a pile, remove it
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_11_instruction: |-
         It's still dark outside.
         Move me along the field. If there is a pile, remove it, and if there is a
         hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_2_instruction: |-
-        Next, move me to the hole
-        and fill it with TWO shovelfuls of dirt, using the "fill" block.
+        Next, move to the hole
+        and fill it with six shovelfuls of dirt, using the `fill` block.
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
-        Move me to the pile of
-        dirt and tell me how many shovelfuls to remove using as few blocks as possible.
+        *"Move to the pile of
+        dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
       grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
-        Can you help me remove
-        all four piles of dirt? Hint: use a repeat block if you can.
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: |-
-        Help me fill in all these
-        holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside
-        the "while" block.
+        *"I don't know how much
+        dirt is in this pile!"*\r
+        \r
+        Help the farmer remove this entire pile using
+        a `while` loop.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
+        dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: |-
         Remove all the piles of
         dirt, using as few blocks as possible. The new options in the dropdown menu
         on the "while" block tell me if I'm standing on a pile or a hole.
       grade3_robotFarmer_ConditionalsIntro_7_instruction: |-
-        Wow, I found a really
-        deep hole! I don't know how many shovelfuls of dirt it needs. Can you write
-        a program that fills it until the ground is even?
+        Look at all of those holes!  Each
+        one needs a different amount of dirt.   \r
+        \r
+        You can use the `while` loop
+        to easily fill them all!
       grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
-        Help me fill in the hole
-        at the end of the field, using as few blocks as possible.
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: |-
-        Make me remove all these
-        piles of dirt. Try to use as few blocks as possible. Hint: try using a "while"
-        block.
+        Fill in the hole at the
+        end of each of these paths.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all\nof
+        these holes using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: |-
         Help me fill
         in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat"
@@ -5191,58 +5356,32 @@
         don't have all the options I used to have on the while block. Move me along
         the field, and if there is a pile, remove it
       grade3_RunningFarm_1_instruction: |-
-        (Notes for Review) Since the last stage
-        taught the 'repeat until' block, the purpose of this is most likely to teach
-        the 'repeat while' block. In the context of the levels already created,
-        I think using the 'repeat' and 'if' blocks could be possible,  (ex. if
-        the crops weren't spread as evenly on the field so the farmer would have
-        to test for wheat present before collecting it). A Repeat While block would
-        be more applicable if there were multiple wheat/potatoes in each square, which
-        might be a possible change.\r
-        \r
-        Grant Notes: for the coins, 1=0 and 2=1
-        (I couldn't get the coins to show up with a value of 0). The wheat should
-        grow at random intervals. For the graphic, think about the Minecraft way of
-        growing wheat (green, has multiple heights showing growth, then yellow for
-        ripe).
+        Use conditionals to make sure that you pick
+        all of the corn, but don't disturb the stalks where nothing is growing yet.
       grade3_RunningFarm_10_instruction: |-
-        This is another debugging to make sure
-        the students understand the difference between the IF block and While loop.
-        Start off all crops as ripe with at least 1 item, with growth after Run.
-      grade3_RunningFarm_2_instruction: |
-        NOTES: have wheat and potatoes interspersed
-        throughout the row. Potatoes should be fully grown, with some randomly showing
-        more than 1 potato per spot. This is different from the previous puzzle because
-        students will have to use the drop down menu on the IF block to select potatoes
-        instead of harvesting wheat.\r
-        \r
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_11a_instruction: |-
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_2_instruction: |-
+        Help the farmer collect both corn and lettuce
+        from the field.
       grade3_RunningFarm_3_instruction: |-
-        This will look essentially the same as the
-        previous puzzle. There should be two crops randomly planted in the row. Each
-        plant should start at a random growth stage and grow when the user runs their
-        algorithm. Students are using the while loop and hopefully understand that
-        it's better at picking all the crops of one type.
+        *"Corn, lettuce, AND pumpkins! Help me
+        harvest them all."*
       grade3_RunningFarm_4_instruction: |-
-        Since students started this course using
-        events, we wanted to include them into this culminating stage. We will only
-        use them in a few stages then move on. This puzzle should randomly populate
-        the entire column with wheat and potatoes. The puzzle should also start with
-        the following event blocks: up arrow, down arrow, and space bar. Attached
-        to the space bar should be a collect block.
+        Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch.
       grade3_RunningFarm_5_instruction: |-
-        This puzzle should randomly populate the
-        entire row with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, and space bar. Can we check
-        to make sure students are using while loop?
+        This field has clusters of corn, lettuce,
+        and pumpkins all growing together.  Can you collect them all?
       grade3_RunningFarm_6_instruction: |-
-        This puzzle should randomly populate the
-        entire field with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, left arrow, right arrow, and
-        space bar. Can we check to make sure students are using while loop?
+        Can you figure out how to pick the pumpkin?  Make
+        sure to collect all of the corn along the way!
       grade3_RunningFarm_7_instruction: |-
-        Have wheat and potatoes planted randomly
-        at various growth stages. I just wanted a quick debugging puzzles in here
-        to transition away from events
+        **Challenge:** Collect all of the corn and
+        lettuce, then pick the pumpkin.
       grade3_RunningFarm_8_instruction: |-
         Have wheat and potatoes planted randomly
         at various growth stages. Now we introduce multiple while loops (stacked)
@@ -5334,23 +5473,21 @@
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
       grade4_artist_functions_stars0_instruction: |-
-        We will come back to functions
-        shortly. Let's take a break to practice making this star. You can make this
-        drawing by adding a turn and a repeat block.
+        You can make this drawing by adding
+        a repeat block.
       grade4_artist_functions_stars1_instruction: |-
         Now that you can draw a star,
         try drawing four stars!
       grade4_artist_functions_stars2_instruction: |-
-        When is drawing three stars harder
-        than drawing four? When you also have to jump over the moon!
+        Draw only those three stars to
+        finish this puzzle.
       grade4_artist_functions_stars3_instruction: |-
         That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade4_artist_functions_windows0_instruction: |-
-        You are doing great! Do you
-        remember when you used nested loops to draw a pinwheel shape out of triangles?
-        Let's try using that same algorithm to make a window!
+        Make this window by drawing
+        a square, then turning 90 degrees before drawing another, and so on.
       grade4_artist_functions_windows1_instruction: |-
         If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
@@ -5508,31 +5645,26 @@
         help me remove this pile of dirt and fill this hole.
       grade4_bee_functions1_instruction: Collect all the nectar from each flower.
       grade4_bee_functions10_instruction: |-
-        Assessment: Use the given function to
-        collect nectar from each flower.
+        Create a function to collect all of the
+        nectar from each flower.
       grade4_bee_functions11_instruction: |-
-        Assessment: Create a function to turn,
-        move forward and make 3 honey, then return the bee to where it started and
-        turn back.
+        Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back.
       grade4_bee_functions2_instruction: |-
         Functions are blocks of code that perform
         a task. Use the "get 2 nectar" function to collect the nectar from each
         flower.
       grade4_bee_functions3_instruction: |-
-        Functions are blocks of code that perform
-        a task.  \r
-        \r
-        Use the `get 5` function to get 5 nectars at a time.
+        Build the `get 5` function to use in this
+        puzzle.
       grade4_bee_functions4_instruction: |-
-        The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r
-        \r
-        Use
-        the function to collect all of the nectar.
+        Use the `move and get nectar` function
+        to collect all of the nectar.
       grade4_bee_functions5_instruction: This puzzle will be deleted!
       grade4_bee_functions6_instruction: |-
         Now write the function to collect nectar
-        from the three flowers.
+        from the flowers.
       grade4_bee_functions7_instruction: |-
         Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb.
@@ -5541,11 +5673,8 @@
         a path, gets nectar, makes honey, and then returns the bee to the top of the
         path. Then collect all the nectar and make all the honey!
       grade4_bee_functions9_instruction: |-
-        Red flowers can have an unknown amount
-        of nectar each time you run the puzzle.   \r
-        \r
-        Create a function that collects
-        all of the nectar from each flower.
+        Create a function that collects all of
+        the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: Use a loop to collect all of the nectar.
       grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.\nUse
         a nested loop. "
@@ -5568,8 +5697,10 @@
         Prepare to build a project within some
         given parameters.
       grade4_farmer_functions1_instruction: |-
-        Have we met before? I'm the farmer!
-        Please help me remove this pile and fill this hole.
+        *"Have we met before? I'm the farmer!"*\r
+        \r
+        Help
+        the farmer get to the pumpkins and pick them.
       grade4_farmer_functions2_instruction: |-
         Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle.
@@ -6269,12 +6400,19 @@
       gradek_playlab_events1a_instruction: |-
         Add a block so that when you click the
         "up" button, Olive the Cat walks up.
+      gradek_playlab_events1c_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       gradek_playlab_events2_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
       gradek_playlab_events2a_instruction: |-
         Add a block so that when you click "down"
         Olive the Cat walks down.
+      gradek_playlab_events2c_instruction: |-
+        Help Jorge the Dog get moving by connecting
+        the `move left` block to the `when left` event block that is already in the
+        workspace.
       gradek_playlab_events3_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -6284,28 +6422,38 @@
       gradek_playlab_events3b_instruction: |-
         Add a button so that Olive the Cat moves
         right when you click the "right" button.
+      gradek_playlab_events3c_instruction: |-
+        Now, get Jorge to move right when the
+        `right` button is clicked.
       gradek_playlab_events4_instruction: |-
         Add code to make something happen when
         the fourth bird is clicked. Be creative!
       gradek_playlab_events4a_instruction: |-
         Add a block so that Olive the Cat moves
         left when you click the "left" button.
+      gradek_playlab_events4c_instruction: |-
+        Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed.
       gradek_playlab_events5_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
       gradek_playlab_events5a_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
+      gradek_playlab_events5c_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
       gradek_playlab_eventsA_instruction: |-
         Now, have the cat change to a random size
         AND have it play a random sound when you click the center button.
       gradek_playlab_eventsFP_instruction: |-
         Add anything you want to this game.  Can
-        you make Olive the Cat disappear when you click on her?
+        you make the dinosaur disappear when Jorge runs into him?
       gradek_playlab_eventsPre_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
+      group test_instruction: Make a game
       Guess The Number_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
@@ -6737,6 +6885,70 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC HOC 2016 Level 1_instruction: |-
+        This sheep is coded to 'drop wool' when
+        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
+        or tap the game space to 'use' it. Collect the wool to win!
+      MC HOC 2016 Level 10_instruction: |-
+        It's time to make your own Minecraft! Spawn
+        creatures and then make them do whatever you want. Have fun!
+      MC HOC 2016 Level 2-2_instruction: |-
+        The chicken is frozen. Place `move` and
+        `turn` blocks in the `when spawned` slot to get it to move.
+      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
+        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
+        slot. "
+      MC HOC 2016 Level 3_instruction: |
+        Great, the chicken moved! But then she stopped.
+        In games, chickens walk forever. Use a `forever do` loop to keep these chickens
+        moving.\r
+      MC HOC 2016 Level 4_instruction: |-
+        Now the chickens look weird moving the same
+        way. Games use random moves to make things look real. Make the chickens `turn
+        random`.
+      MC HOC 2016 Level 5_instruction: |-
+        These cows are lost! Lead them to the grass
+        with the `move a step toward` block in a `forever do` loop.
+      MC HOC 2016 Level 6_instruction: |-
+        Now you make the zombies. Use the `spawn`
+        block to make 3 zombies when night falls. Get them to move towards you. Survive
+        until morning.
+      MC HOC 2016 Level 7_instruction: |-
+        Now let’s combine what you've learned and
+        create a new mob! Make a cow, lead it to the pasture, and get it to give you
+        milk.
+      MC HOC 2016 Level 8_instruction: |-
+        The path to your sheep is blocked by a stone
+        wall. Luckily there is a Creeper here. Creepers explode after you touch them.
+        Get the Creeper to explode the wall so you can reach your sheep!
+      MC HOC 2016 Level 9_instruction: |
+        Zombies are attacking the village! Code the
+        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
+      MC HOC 2016 Nerop_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Drop_instruction: |-
+        In Minecraft, sheep drop wool. Place the
+        `drop` block in `when used`, then walk over and use the sheep to drop an item.
+      MC HOC 2016 New pn_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Spawn_instruction: |-
+        Now you can fill the world with what you
+        want! Place`spawn` blocks under `when run` to spawn things when the game starts.
+      MC HOC 2016 New Walk_instruction: |-
+        Let's explore our world! Move with the
+        arrows, and press the space bar or tap the game board to use items. Use the
+        door to get inside the house.
+      MC HOC 2016 SCORE LEVEL_instruction: |-
+        Some games let you keep score. Play tag
+        with these Iron Golems and use the `add 1 to score` block to give yourself
+        a point when you tag them. Reach five points to win!
+      MC HOC 2016 Village Test_instruction: |-
+        Oh no! Zombies have trapped you inside!
+        Code the Iron Golem to chase and attack the zombies!
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions
@@ -7693,11 +7905,12 @@
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
-      Text Compression 1_instruction: |-
+      Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern.
+        into the text in place of the pattern.\r
+        \r
       The Vigenere Cipher Widget_instruction: Instrukcijas
       The Vigenere Cipher_instruction: Instrukcijas
       Total Artist Clone Me_instruction: |-

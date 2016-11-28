@@ -296,28 +296,50 @@
           sprengiefnið!
         maze_3_4: Arrg! Skrifaðu forrit fyrir mig sem kemur mér í kringum TNT sprengiefnið
           og til svínsins.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á
+          "Keyra". Færðu höndina með vinstri ör til að komast að endamarkinu.
+        bounce_2_basketball: Tengdu kubb við "þegar til hægri" og "þegar til vinstri"
+          kubbana. Færðu höndina til að ná báðum endamörkum.
+        bounce_5_basketball: Við ætlum að senda bolta svífandi niður í átt að höndinni.
+          Tengdu kubb við kubbinn "þegar bolti hittir hönd" til að tryggja að boltinn
+          nái að endamarkinu.
+        bounce_6_basketball: Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba
+          við báða "þegar bolti hittir" kubbana til að leysa þrautina.
+        bounce_7_basketball: Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa
+          þar til hann hittir í endamarkið.
+        bounce_10_basketball: Nú er mark efst! Tengdu kubbana "skora stig" og "skora
+          stig andstæðings" við kubbana "þegar bolti í marki" og "þegar bolti hittir
+          ekki hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
+          skorar tvisvar.
+        bounce_11_basketball: Þú getur núna tengt kubba við kubbinn "þegar keyrt".
+          Þú verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað.
+          Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
+          hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
+        bounce_12_basketball: Búðu til þinn eigin körfuboltaleik. Þú getur breytt
+          öllum reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til
+          að vinir geti prófað leikinn í símunum sínum.
+        bounce_1_sports: Náðu til flaggsins! Festu kubb við "þegar vinstri ör" kubbinn
+          og ýttu á "Keyra" til að færa leikmanninn að flagginu.
+        bounce_2_sports: Nú eru tvö flögg! Festu kubb við "þegar vinstri ör" og "þegar
+          hægri ör" kubbana til að láta leikmanninn færast í tvær áttir.
+        bounce_5_sports: Hokkípukkurinn mun þeytast niður í átt að leikmanninum! Festu
+          kubb við "þegar bolti hittir leikmann" til að hitta á flaggið.
+        bounce_6_sports: Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við
+          báða "þegar bolti hittir" kubbana til að leysa þrautina.
+        bounce_7_sports: Tengdu kubba við hvern "þegar" kubb. Láttu boltann skoppa
+          þar til hann hittir í endamarkið.
+        bounce_10_sports: Nú er mark efst! Tengdu kubbana "skora stig" og "skora stig
+          andstæðings" við kubbana "þegar bolti í marki" og "þegar bolti hittir ekki
+          hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
+          skorar tvisvar!
+        bounce_11_sports: Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú
+          verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað.
+          Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
+          hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
+        bounce_12_sports: 'Búðu til leik eftir þínu höfði! Þú stjórnar hér: þú getur
+          breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið! Smelltu
+          á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað hann
+          í símunum sínum.'
         bounce_1: Tengdu kubb við "þegar vinstri ör" kubbinn og ýttu á "Keyra forrit".
           Færðu spaðann með vinstri ör til að komast að endamarkinu.
         bounce_2: Tengdu kubb við "þegar til hægri" og "þegar til vinstri" kubbana.
@@ -514,38 +536,38 @@
           á "Ljúka" og leyfðu vinum þínum að prófa leikinn í síma, spjaldtölvu eða
           venjulegri tölvu!
         studio_gumball_hello1: Anais vill kynnast nýjum vinum. Getur þú hjálpað henni
-          að segja "hello" með því að draga "segja" kubbinn inn á vinnusvæðið og skrifa
-          orðið "hello" í hann?
-        studio_gumball_hello2: Darwin (leikari 1) og bróðir hans Gumball (leikari
-          2) eru á leið í skólann. Hjálpaðu þeim að heilsast með því að nota "leikari
+          að segja "hæ" með því að draga "segja" kubbinn inn á vinnusvæðið og skrifa
+          "hæ" í hann?
+        studio_gumball_hello2: Darwin (leikmaður 1) og bróðir hans Gumball (leikmaður
+          2) eru á leið í skólann. Hjálpaðu þeim að heilsast með því að nota "leikmaður
           segir" kubbinn tvisvar.
         studio_gumball_move_to_flag: Banana Joe er alveg að sigra í hlaupakeppni!
           Hjálpaðu honum að komast síðustu 200 dílana með "færa" kubbnum.
-        studio_gumball_move_to_actor: Gumball (leikari 1) og Darwin (leikari 2) eru
-          seinir á íþróttamótið! Hjálpaðu Gumball að komast 200 díla niður til Darwin
-          með "færa leikara" kubbnum. Tengdu svo kubb við "þegar leikari snertir"
-          atvikið svo það spili hljóð þegar þeir hittast.
+        studio_gumball_move_to_actor: Gumball (leikmaður 1) og Darwin (leikmaður  2)
+          eru seinir á íþróttamótið! Hjálpaðu Gumball að komast 200 díla niður til
+          Darwin með "færa leikmann" kubbnum. Tengdu svo kubb við "þegar leikmaður
+          snertir" atvikið svo það spili hljóð þegar þeir hittast.
         studio_gumball_repeat: Kubburinn "endurtaka endalaust" getur keyrt kóða stanslaust.
           Getur þú tengt kubba við hann og hjálpað Gumball að hita upp fyrir hlaup
           með því að hreyfa sig í sífellu til vinstri og hægri?
         studio_gumball_click_hello: Getur þú hjálpað Anton að ræsa keppendur með því
-          að segja "Ready, set, go!"? Gleymdu svo ekki að smella á Anton eftir að
-          þú smellir á "Keyra"!
+          að segja "Viðbúin, tilbúin, nú!"? Gleymdu svo ekki að smella á Anton eftir
+          að þú smellir á "Keyra"!
         studio_gumball_move_events: Darwin er í keppni um að safna flöggum! Hjálpaðu
           honum að hlaupa um með því að tengja "færa" kubb við hvert atvik. Smelltu
           svo á "Keyra" og reyndu að safna öllum flöggunum.
         studio_gumball_sound_and_points: Við höfum lagt til mestallan kóðann sem lætur
-          Anton (leikara 2) færast til vinstri og hægri, og líka kóðann sem færir
-          Banana Joe (leikara 1) um skjáinn. Getur þú lokið við kóðann og bætt kubbum
-          við "þegar leikari snertir" atvikið svo að þú bæði spilir hljóð og skorir
+          Anton (leikmann 2) færast til vinstri og hægri, og líka kóðann sem færir
+          Banana Joe (leikmann 1) um skjáinn. Getur þú lokið við kóðann og bætt kubbum
+          við "þegar leikmaður snertir" atvikið svo að þú bæði spilir hljóð og skorir
           stig þegar Banana Joe og Anton rekast saman? Smelltu á "Keyra" til að spila
           leikinn.
         studio_gumball_warn_food_fight: Darwin er nýsloppin úr matarslag! Breyttu
-          bakgrunninum í "leikverur" og stilltu hraða Darwins á "hratt". Smelltu svo
-          á "Keyra" og færðu hann til Penny til að vara hana við.
-        studio_gumball_join_food_fight: Taktu þátt í matarslagnum! Notaðu "leikari
-          kastar hlut til hægri" skipunina til að láta Banana Joe (leikara 1) kasta
-          mat í Anton (leikara 2)! Láttu Anton verða reiðan þegar hann verður fyrir
+          bakgrunninum í "leikverur" og stilltu hraða Darwins á "hraðan". Smelltu
+          svo á "Keyra" og færðu hann til Penny til að vara hana við.
+        studio_gumball_join_food_fight: Taktu þátt í matarslagnum! Notaðu "leikmaður
+          kastar hlut til hægri" skipunina til að láta Banana Joe (leikmann 1) kasta
+          mat í Anton (leikmann 2)! Láttu Anton verða reiðan þegar hann verður fyrir
           kasti.
         studio_gumball_free_play: Búðu til þinn eigin leik eða sögu. Smelltu svo á
           "Ljúka" og leyfðu vinum þínum að prófa leikinn í síma, spjaldtölvu eða venjulegri
@@ -770,6 +792,11 @@
         iceage_intro: Klukkustund kóðunar með Ísöld - Kynning
         iceage_events: Klukkustund kóðunar með Ísöld - Atvik
         iceage_repeat: Klukkustund kóðunar með Ísöld - Endurtekningar
+        mc_2016_intro: Klukkustund kóðunar með Minecraft - Kynning
+        mc_2016_loops: Klukkustund kóðunar með Minecraft - Lykkjur
+        mc_2016_events: Klukkustund kóðunar með Minecraft - Atvik
+        mc_2016_spawn: Klukkustund kóðunar með Minecraft - Kveikjur
+        mc_2016_congrats: Klukkustund kóðunar með Minecraft - Hamingjuóskir
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

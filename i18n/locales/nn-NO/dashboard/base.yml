@@ -82,8 +82,8 @@ nn:
     student_count: '%{count} studentar har allereie registrert seg.'
     teacher_count: '%{count} lærarar har allereie registrert seg.'
     overview: 'Registrer deg for å følgje fremdrifta din eller administrere klasserommet. <a href="/">Du kan bla gjennom dei ulike scenane og oppgåvene</a> utan ein konto, men du må registrere deg for å lagre framgang og prosjekt.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Kom i gong utan å logge inn'
+    hoc_already_signed_up_content: 'Du er påmeldt Kodetimen! De treng ikkje å logge inn i Code Studio for å delta. For å kome i gong, <a href="https://code.org/learn">velg eit oppgåvesett</a> til klasserommet ditt, og del lenkja med elevane.<br/><br/>Om de likte Kodetimen og ønskjer å kode meir, kan de opprette kontoar i Code Studio og la elevane jobbe med dei <a href="https://code.org/educate">lengre kursa</a>.'
     teacher_educator_guide: 'Sjå veiledning for lærar'
     title: "Registrer deg på Code.org"
     school_name: 'Namnet på skulen (valfritt)'
@@ -358,8 +358,8 @@ nn:
     announcement_petition_button: "Legg til namnet ditt"
     announcement_all: "Held deg oppdatert med oppdateringar og ny funksjonalitet på lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare kunngjeringar.</a>"
     announcement_hoc_launch: "Tusener av lærarar i meir enn 180 land vil undervise i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: OBS! På grunn av veldig mykje trafikk frå millionar av elevar i løpet av Kodetimen (veke 49), vil ikkje Code Studio lagre eller rapportere elevfremgong i dei øvrige kursa. Vi anbefaler å gjennomføre eit Kodetime-opplegg med klassa di i løpet av denne veka i staden. Sjølv om heller ikkje Kodetimen-kursa kjem til å lagre nokon framgang, kan elevane likevel fullføre dei og få ein diplom etter fullført Kodetime.
+    announcement_mc_launch: "Eit av våre mest populære opplegg har fått ein oppfølgjar! Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft. Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime."
   move_students:
     new_section_dne: "Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn ein annan seksjonskode."
     section_code_not_entered: "Legg inn gjeldande_seksjons_kode."
@@ -490,7 +490,7 @@ nn:
       body: "Utforsk ei Minecraft-verd gjennom kode."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft."
     unplugged:
       title: "Analoge leksjonar"
       audience: "Alder 4+"

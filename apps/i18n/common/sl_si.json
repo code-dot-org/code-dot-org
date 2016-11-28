@@ -33,6 +33,7 @@
   "copy": "Kopiraj",
   "copyright": "Avtorska pravice",
   "currentVersion": "Trenutna različica",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Ime tabele",
   "dataWorkspaceHeader": "Brskalnik podatkov",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Poiščite ikono...",
   "ignore": "Prezri",
   "infinity": "Neskončnost",
+  "joinText": "združi",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "skoči",
   "keepPlaying": "Igraj naprej",
   "keyValuePairLink": "Ključ/vrednost parov",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "na vrhnji položaj, zunaj levo",
   "positionTopOutRight": "na vrhnji položaj, zunaj desno",
   "positionTopRight": "na vrhnji položaj, desno",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Natisni",
   "privacyPolicy": "Izjava o zasebnosti",
   "projectWarning": "Opomba: Ste na stopnji, ki je del daljšega projekta. Spremembe narejene na tej ravni bodo prikazane tudi na drugih stopnjah tega projekta.",
@@ -314,9 +318,5 @@
   "when": "ko",
   "whenRun": "ob zagonu",
   "workspaceHeaderShort": "Delovni prostor: ",
-  "yes": "Da",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Da"
 }

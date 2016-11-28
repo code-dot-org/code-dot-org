@@ -2,312 +2,326 @@
   data:
     unplugged:
       Unplug1:
-        title: Introduction to Computer Science
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        title: Whakatakinga ki te Mātauranga Rorohiko
+        desc: Ka whakatakina i tēnei whakaakoranga ngā ariā o te Pūtaiao Rorohiko,
+          ka whakamārama hoki i ngā mahi a te Kaipūtaiao Rorohiko. Mā tēnei ka whai
+          wāhi ngā ākonga ki te tū hei kaipūtaiao rorohiko. Hei te mutunga o te ngohe,
+          ka whakawhiwhia ki ia ākonga tētahi tohu whakamaumahara i a rātou ki ngā
+          mea kua akona. Tērā pea kāore koe i te hiahia ki te whakaako i te reo, i
+          ngā kupu hoki e tika ana hei hāpai i ngā akoranga ka whai atu, heoi anō,
+          ki te ngahau te tuku ka tino whai hua.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Computational Thinking
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        title: Whakaaro ā-Rorohiko
+        desc: Ka ako ngā ākonga ki ngā hipanga e whā o te whakaaro ā-rorohiko mā te
+          pepa me te pene noa iho. Mutu ana te kupu whakataki poto me whakawehe i
+          ngā ākonga kia noho ki ētahi rōpū, ki reira ka waihanga i ētahi tohutohu
+          kia tāngia e ētahi atu ākonga, tētahi weriweri (nō tētahi putumōhio weriweri
+          kua kōwhiria kētia). Ka pūririkitia te ngohe, kātahi ngā rōpū ka arohaehae
+          i ngā weriweri kei te putumōhio ki te rapu i ngā tauira, ki te tō i ētahi
+          āhuatanga motuhake o ia weriweri ka whakamahia ai ki te waihanga hātepe
+          (tohutohu) kia tāngia te weriweri e tētahi atu rōpū. Kātahi ngā rōpū ka
+          whakawhiti hātepe, ā, ka tāngia te weriweri a ai ki te hātepe. Ko te hua
+          tā te rōpū i whakaaro ai?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
-        title: Graph Paper Programming
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares on graph paper in an effort to reproduce
-          an existing picture.  If there's time, the lesson can conclude with images
-          that the students create themselves.
+        title: Papatono Pepa Kauwhata
+        desc: Mā te whakapapatono i tēnā, i tēnā o tātou ki te tā pikitia, ka mārama
+          haere ngā ākonga ki tēnei mea te papatonotanga. Hei tīmatanga, ka tohutohungia
+          ngā ākonga i a rātou anō ki te whakatae i ngā tapawhā kei te pepa kauwhata
+          i te tā anō i tētahi pikitia kua tāngia kētia. Me he wā e toe ana, mā ngā
+          ākonga e waihanga i ā rātou ake atahanga hei whakaoti i te whakaakoranga.
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
-        title: Algorithms
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        title: Ngā Hātepe
+        desc: Ka kapia i tēnei whakaakoranga ngā hātepe. I tēnei ngohe ka whakamahia
+          ngā āhua hangawhitu me te pepa kauwhata kia mārama ai te tangata ki te hira
+          o te whakatakoto tohutohu hāngai, mārama hoki. Mō muri atu, ka aro te akomanga
+          ki ngā ara huhua ki te pōkai i te pepa kia tapawhā te hanga, ā, ka āta titiro
+          ki ngā ara me te rerekē o ngā pōkai ka taea.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
-        title: Functions
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        title: Ngā Taumahi
+        desc: I tēnei whakaakoranga ka hanga hopu-rā ngā ākonga mā te aho, ngā perepere
+          me tētahi tino taonga. Ka whai ngā ākonga i tētahi rārangi hipanga tōai,
+          kātahi ka tonoa ratou ki te tautohu i ngā tautuhinga "pūkenga" ka tōaitia.
+          Kia mutu te whakamahuki i aua pūkenga, ka karangahia ērā i tētahi papatono
+          matua, ā, ka tuhia te katoa o te tukanga waihanga ki tētahi pepa kotahi.
+          Ko tā te papatono whakamutunga rawa, he aro ki te akomanga katoa, ki ngā
+          momo aho, perepere, tino taonga hoki ka whakamahia. E tutuki pai ai, mā
+          te ākonga e āta "tō ki waho" ngā āhuatanga o ngā rauemi, kātahi ia ka waihanga
+          i ētahi kupu rehurehu mō ngā rauemi a tēnā, a tēnā. He rawe te whakamahi
+          i ngā puriwāhi whānui hei whakataki i tēnei mea te taurangi.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
-        title: Conditions
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        title: Ngā Here
+        desc: He kēmu tēnei mā te akomanga. Kia mutu te mahi whakamārama i ngā here,
+          ngā tauākī-ki te me ngā koromeke, ka wātea te akomanga ki te whakaharatau
+          tahi mā te whakamahi i tētahi papatono kua tuhia kētia, he pākete kāri,
+          me te waimaria.
         pdfs:
         - unplug6
         video: Unplug6
       Unplug7:
-        title: Song Writing
-        desc: Reading lyrics is a pretty intuitive venture for most students.  We'll
-          take an activity that's already common knowledge and shift it into a solid
-          education on defining and calling functions. Once students are familiar
-          with the define/call process, we will add the extra capabilities that come
-          along with passing parameters within those function calls.
+        title: Tito Waiata
+        desc: Hanga ngāwari noa iho te pānui i ngā kupu o tētahi waiata mō te nuinga
+          o ngā ākonga. Ka tōia e mātou tētahi ngohe kei te mārama kē ki tētahi mahi
+          ako e hāngai ana ki te whakamahuki me te karanga taumahi. Kia waia haere
+          ngā ākonga ki te tukanga whakamahuki/karanga, ka tāpiri i ētahi atu āheinga
+          ka noho tahi ki te mahi hoatu tawhā ki roto i aua karanga taumahi.
         pdfs:
         - unplug7
         video: Unplug7
       Unplug8:
-        title: Abstraction
-        desc: This activity combines your students' everyday routine and a Mad-Lib
-          style thinking game to help your class learn about the effectiveness of
-          abstraction.
+        title: Te Whakawaitara
+        desc: He whenumitanga tēnei ngohe o ngā mahi o ia rā me tētahi kēmu whakaaroaro
+          e rite ana ki ērā o Mad-Lib ki te tautoko i te akomanga ki te ako e pā ana
+          ki te whaitake o te whakawaitara.
         pdfs:
         - unplug8
         video: Unplug8
       Unplug9:
-        title: Relay Programming
-        desc: This lesson will take an idea from a previous activity (4. Graph Paper
-          Programming) and use those skills to emphasize the importance of completing
-          programs that operate in sequence and frequently checking programs for "bugs".
+        title: Papatonotanga ā-Tānga
+        desc: Kua kapohia tētahi huatau nō te ngohe o mua (4. Patatonotanga Pepa Kauwhata)
+          mō tēnei whakaakoranga, ā, ka whakamahia i konei aua pūkenga ki te whakakaha
+          i te hira o te hanga papatono ka rere ā-raupapatia, ka auau hoki te tirotiro
+          i ngā papatono kei tupono he "iro".
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
-        title: The Internet
-        desc: In this lesson, students will pretend to flow through the Internet,
-          all the while learning about web addresses, IPs and the DNS.
+        title: Te Ipurangi
+        desc: I tēnei whakaakoranga ka whakataruna ngā ākonga ānō nei kei te tere
+          rātou i te Ipurangi i a rātou e ako ana e pā ana ki ngā wāhitau tukutuku,
+          ngā IP (kawa ipurangi) me te DNS (ratonga ingoa rohe).
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Wrap-Up
-        desc: The final wrap-up in the first 20-hour series will help the class relive
-          all of their favorite moments, while giving them next steps that they can
-          take on their own if they are interested in continuing their computer science
-          journey.
+        title: Whakamutunga
+        desc: Ko tā te whakamutunga rawa o tēnei terenga 20 haora tuatahi, he tautoko
+          i te akomanga ki te whakahoki mahara ki nga mahi i tino rata ki a rātou,
+          heoi anō, he akiaki hoki i a rātou e hiahia ana ki te koke tonu i roto i
+          ngā mahi e pā ana ki te pūtaiao rorohiko.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: Ngā Mahere Harikoa
+        desc: Mā ngā ākonga ētahi hātepe (he tautuhinga tohutohu) māmā ki te whakaneke
+          i tētahi kiripuaki i waenganui i tētahi rīrapa mā te whakahau kotahi.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
-        desc: Students create simple algorithms (sets of instructions) to move a character
-          through a maze using a single command.
+        title: E Neke, E Neke
+        desc: Mā ngā ākonga ētahi hātepe (he tautuhinga tohutohu) māmā ki te whakaneke
+          i tētahi kiripuaki i waenganui i tētahi rīrapa mā te whakahau kotahi.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
-        title: 'Real-life Algorithms: Plant a Seed'
-        desc: This lesson calls out ways we use algorithms in our daily lives, using
-          the act of planting a seed as an example. It also focuses on the bigger
-          picture of computer science and how algorithms play an essential part.
+        title: 'Hātepe Motuhenga: Whakatōkia he Kano'
+        desc: Mā te whakatō kano hei tauira, ka whakapuakitia i tēnei whakaakoranga
+          ngā hātepe ka whakamahia e tātou i ngā mahi o ia rā. Ka aronuitia te tirohanga
+          whānui ki te pūtaiao rorohiko me te nui o te whaitake o ngā hātepe i ēnei
+          mahi.
         video: C1_planting_seed
       BuildingAFoundation:
-        title: Building a Foundation
-        desc: Students build a structure using only provided supplies. Structures
-          must complete a task (reach a certain height or bear a certain weight),
-          and students discuss the idea of being persistent when things get complicated.
+        title: Te Hanga Tūāpapa
+        desc: Ka hangaia e ngā ākonga tētahi hanga me ngā rauemi kua whakaratoa noa
+          iho. Me tutuki e ngā hanga tētahi mahi (me eke ki tētahi teiteitanga, ki
+          tētahi taumahatanga rānei), ā, ka whakawhiti kōrero ngā ākonga mō te āhua
+          o te tōnakingaki i ngā wā o te uaua.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Kia Koromeke
+        desc: Ko tā tēnei whakaakoranga he whakatakoto i te ariā koromeke (ngā tohutohu
+          kua tōaitia) o te papatonotanga mā tētahi ngohe kanikani. Ka ako ngā ākonga
+          i ētahi nekehanga māmā, kātahi ka whakahautia rātou kia tōaitia.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
-        desc: Students run a relay race, where they dash across the yard to write
-          an algorithm based on a "Graph Paper Programming" image. They can only write
-          one instruction at a time and if there's an error somewhere, they have to
-          erase everything back to that point.
+        title: Papatonotanga ā-Tānga
+        desc: He omanga ā-tanga kei te haere. Ka oma whakawhiti ngā ākonga i te pātiki
+          ki te tuhi i tētahi hātepe e ai ki tētahi atahanga "Papatonotanga Pepa Kauwhata".
+          Te tikanga, kotahi anake te tohutohu ka tuhia i ia wā, ā, mēnā rā he hapa,
+          me muku i te katoa o ngā tohutohu kia hoki atu ki te tohutohu nā reira i
+          hapa ai.
         video: C2_relay_programming
       Conditionals:
-        title: Conditionals
-        desc: To learn about conditional statements, students play a card game and
-          create rules like "If I draw a red card, I get a point" and "If I draw a
-          black card, you get a point."
+        title: Ngā Here
+        desc: Ki te ako e pā ana ki ngā tauākī here, ka tākaro ngā ākonga i tētahi
+          kēmu kāri mā rātou ngā ture e waihanga pēnei i, "Ki te tango ahau i tētahi
+          kāri whero, ka whiwhi ahau i tētahi piro", i tēnei hoki "Ki te tango ahau
+          i tētahi kāri pango, ka whiwhi koe i tētahi piro."
         video: C2_conditionals_with_cards
       BigEvent:
-        title: The Big Event
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
+        title: Te Takahanga Nui
+        desc: Ka tūtaki ngā ākonga ki te ariā papatonotanga e kīia nei ko "ngā takahanga",
+          arā, ngā whakahau e auau ana te mātaihia e te rorohiko. Ka pēhi te pouako
+          i ētahi pātene kei tētahi raumamao pepa, ā, ka tauhohe ngā ākonga e ai ki
+          tāna i pēhi ai.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
-        title: Going Places Safely
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
+        title: Te Karore Haumaru
+        desc: He mana nui tō te Ipurangi, heoi anō, he wāhi mōrearea i ētahi wā. Mā
+          ngā pouako e tīmata ki te whakaako i ngā mahi e tika ana kia haumaru ai
+          te haere i te tangata e torotoro haere ana i te Ipurangi.
         video: C1_going_places_safely
       GraphPaperProgramming:
-        title: Graph Paper Programming
-        desc: Students write an algorithm (a set of instructions) using a set of predefined
-          commands to direct their classmates to reproduce a drawing.
+        title: Papatono Pepa Kauwhata
+        desc: Mā ngā ākonga tētahi hātepe (he tautuhinga tohutohu) e tuhi me ngā whakahau
+          kua whakamahukitia kētia ki te tohutohu i ō rātou hoa ako ki te tā anō i
+          tētahi tānga.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
-        desc: This lesson calls out ways we use algorithms in our daily lives, specifically
-          making paper airplanes. This lesson also focuses on the bigger picture of
-          computer science and how algorithms play an essential part.
+        title: 'Hātepe Motuhenga: Waka Rererangi Pepa'
+        desc: Mā te hanga waka rerengarangi pepa, ka whakapuakitia i tēnei whakaakoranga
+          ngā hātepe ka whakamahia e tātou i ngā mahi o ia rā. Ka aronuitia te tirohanga
+          whānui ki te pūtaiao rorohiko me te nui o te whaitake o ngā hātepe i ēnei
+          mahi.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
-        desc: Students create bracelets as a binary representations of the first letter
-          of their name. Students learn that data can be represented and stored in
-          more than one way.
+        title: Kōmore Ā-Rua
+        desc: Ka waihangahia e ngā ākonga ētahi kōmore hei whakaaturanga ā-rua o te
+          pū tuatahi o ō rātou ingoa. E ako ana ngā ākonga i te nui o ngā ara whakaatu
+          me ngā ara rokiroki hoki i te raraunga.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        title: Tō Tapuwae Matihiko
+        desc: Ka whakamāramatia e ngā pouako ki ngā ākonga, kei te waihangahia e rātou
+          ō rātou ake tapuwae matihiko, "huarahi" rānei mā te hoatu mōhiohio whaiaro
+          ki te ipurangi, me ngā rokohanga o taua mahi.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Computational Thinking
-        desc: Students use the steps of computational thinking (decompose, pattern
-          match, abstract, algorithm) to figure out how to play a game that comes
-          with no instructions.
+        title: Whakaaro ā-Rorohiko
+        desc: Ka whakamahi ngā ākonga i ngā hipanga o te whakaaro ā-rorohiko (whakapūririki,
+          whakaurite tauira, whakawaitara, hātepe) ki te tākaro i tētahi kēmu kāore
+          ōna tohutohu.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of
-          code that you want to use over and over again) to create suncatchers using
-          string and beads.
+        title: Ngā Hopu Rā Taumahinga
+        desc: Ka waihangahia e ngā ākonga tētahi hātepe me ngā taurangi, ngā taumahi
+          hoki (he waehere ka rite tonu te whakamahi) ki te hanga i ngā hopu rā ki
+          te aho me ngā pere.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
-        desc: Students use the concept of the chorus in a song to learn about passing
-          parameters (which customize a function without having to rewrite the entire
-          function).
+        title: Te Tito Waiata
+        desc: Ka whakamahia e ngā ākonga te ariā o te kōrihi i tētahi waiata ki te
+          ako e pā ana ki ngā taumahi whakamahuki, karanga hoki.
         video: C3_songwriting_with_parameters
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As
-          part of that, students will identify and write down the algorithm for a
-          dice race game.
+        title: 'Hātepe Motuhenga: Whakataetae Mataono'
+        desc: Ka whakapuakitia i tēnei whakaakoranga ngā hātepe ka whakamahia e tātou
+          i ngā mahi o ia rā. Ka tautohu, ka tuhituhi hoki ngā ākonga i te hātepe
+          mō te whakataetae mataono.
         video: C3_dice_race
       Internet:
-        title: Internet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        title: Te Ipurangi
+        desc: Ka tukuna e ngā ākonga ētahi karere ki te whakatauira i ngā momo aratuka
+          whakawhitinga Ipurangi mā te pepa.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
-        desc: Students use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        title: Te Mahi ā-Ohu
+        desc: Ka whakamahi ngā ākonga i te mahi ā-ohu, he huarahi whakaoti-rapanga
+          pūnoa i ngā mahi pūtaiao rorohiko, ki te whakatutuki pai i tētahi mahi ā-akomanga,
+          kaua kē ia ā-ākonga takitahi.
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        title: Te Kirirarautanga Matihiko
+        desc: Ka tirohia e ngā ākonga te rerekētanga o te mōhiohio tūmatanui me te
+          mōhiohio whaiaro ka whakatauhia ai he aha oti ngā mea haumaru me ngā me
+          mōrearea ki te tiri ā-tuihono.
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep
-          an algorithm simple there are lots of ways to use it. If you want to make
-          sure everyone ends up with the same thing, then your algorithm needs more
-          detail.
+        title: Hātepe Hangawhitu
+        desc: Ka whakaaturia e tēnei whakaakoranga tētahi tino āhuatanga o te hātepe.
+          Mēnā ka noho māmā te momo hātepe, ka nui ake tana whakamahinga. Mēnā e hiahia
+          ana ki ōrite te huanga mā tēnā, mā tēnā, me āmiki kē te hātepe.
         video: C4_unplugged_algorithms
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson
-          helps to explain what variables are and how we can use them in many different
-          ways. Use this activity before (or in conjunction with) the lesson on abstraction
-          to really hit the idea home.
+        title: Ngā Taurangi Kōpaki
+        desc: Nā te taurangi ka tino wātea ngā mahi i te pūtaiao rorohiko. Mā tēnei
+          whakaakoranga e āwhina ki te whakamārama he aha oti tēnei mea te taurangi,
+          ā, me pēhea hoki tā tātou whakamahi i ngā taurangi. Whakahaerehia tēnei
+          whakaakoranga i mua (i te wā ōrite rānei) i te whakaakoranga whakawaitara
+          kia tino mārama ai.
         video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist
-          to understand.  This activity will have your students analyzing stories
-          for differences so that they can abstract them away. Those abstracted stories
-          become templates for fun and crazy new ones.
+        desc: Ko te whakawaitara tētahi o ngā pūkenga matua me mārama ki te kaipūtaiao
+          rorohiko. Mā tēnei ngohe ka whai wāhi ai ō ākonga ki te arohaehae i ngā
+          rerekētanga o ngā paki ki pai ai tā rātou whakawaitara. Ko ngā paki kua
+          waitarahia ērā ka noho hei tauiraira mō ngā paki hou ka ngahau ake, ka rorirori
+          ake hoki.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now
-          we’re going to learn how to use loops with extra structure built right in.
+        title: Kia Ngahau te Mahi Koromeke
+        desc: E mōhio ana tātou ko tā te koromeke mahi he tōai, he tōai, he tōai,
+          heoi anō, i konei ka ako tātou ki te whakamahi i ngā koromeke kua whakakahangia.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Songwriting With Parameters
-        desc: 'One of the most magnificent structures in the computer science world
-          is the function.  Functions (sometimes called procedures) are mini programs
-          that you can use over and over inside of your bigger program. This lesson
-          will help students intuitively understand why combining chunks of code into
-          functions is such a helpful practice.  '
+        desc: 'Ko tētahi o ngā tino whakamīharotanga o te pūtaiao rorohiko ko te taumahi.
+          He papatono moroiti ngā taumahi (he hātepe i ētahi wā) he rite tonu te whakamahinga
+          o ēnei taumahi i roto i tō papatono matua. Mā tēnei whakaakoranga ka māori
+          noa te mārama ki te pai o te kōmitimiti i ngā kohinga waehere ki ngā taumahi.  '
         video: C4_unplugged_parameters
       BinaryImages:
-        title: Binary Images
-        desc: Though many people think of binary as strictly zeros and ones, our previous
-          courses taught students that information can be represented in a variety
-          of binary options.  This lesson takes that concept one step further as it
-          illustrates how a computer can store even more complex information (such
-          as images and colors) in binary, as well.
+        title: Ngā Atahanga Tāhūrua
+        desc: He nui te pōhēhē he 0, he 1 noa iho te ā-rua, heoi anō, i ngā whakaakoranga
+          o mua, i ako ngā ākonga ki ngā kōwhiringa tāhūrua rerekē hei whakatauira
+          i te mōhiohio. Ka whakawhanakehia tērā ariā i tēnei whakaakoranga mā te
+          whakaahua i te āheinga o te rorohiko ki te rokiroki i ngā mōhiohio matatini
+          (pēnei i ngā atahanga me ngā tae) me te ā-rua hoki.
         video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
-        title: Video Games and Coordinate Planes
-        desc: Discover how the video games you love to play are actually driven by
-          algebra! Explore how algebraic expressions and the coordinate plane can
-          help us understand how video games work, and then start planning for the
-          video game that you will create.
+        title: Ngā Kēmu Ataata me Ngā Waka Rererangi Ruruku
+        desc: Tūhuratia te wāhi ki te taurangi (algebra) i roto i ngā kēmu ataata
+          e tino rata ana koe. Torohia te pānga o ngā kīanga taurangi me te waka rererangi
+          ruruku kia pai ai tā tātou mārama ki te whakamahinga o ngā kēmu, mutu ana,
+          me tīmata tō whakamahere i te kemu ka waihangahia e koe.
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: Contracts give us a way to understand and discuss functions. In this
-          lesson we'll look at how Contracts can help us make sense of a new programming
-          language or function.
+        title: Kirimana, Rohe, Inenga Whānui
+        desc: Ka whai wāhi tātou ki te mārama ki me te kōrero mō ngā taumahi mā ngā
+          Kirimana. I tēnei whakaakoranga ka titiro tātou ki ngā mahi hāpai a ngā
+          Kirimana i roto i tō tātou māramatanga ki tētahi papatonotanga reo, papatonotanga
+          taumahi hou rānei.
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
-        desc: In the last stage students wrote some very simple functions - but more
-          sophisticated functions demand a more thoughtful approach. The Design Recipe
-          is a structured approach to writing functions that includes writing test
-          cases to ensure that the function works as expected.
+        title: Te Tohutohu Hoahoa
+        desc: I te wāhanga o mua i tuhia e ngā ākonga ētahi taumahi tino māmā, heoi
+          anō, me whakaaro nui ina koe ka aro ki ngā taumahi matatini. Ko te Tohutohu
+          Hoahoa tētahi huarahi tuhituhi taumahi kua āta whakaritea, ā, e whai wāhi
+          ana i tētahi huarahi ki te tuhituhi whakamātautau ki te whakaū kei te tika
+          te taumahi.
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans and Logic
-        desc: Booleans are the fourth and final data type that you will learn about
-          in this course. In this activity you will learn about what Booleans are,
-          and how they can help us write functions that think logically
+        title: Te Pono, Te Tika me Te Ararau
+        desc: Ko te Booleans te tuawhā, ka mutu, te whakamutunga o ngā momo raraunga
+          hei ako māu i tēnei akoranga. I tēnei o ngā ngohe ka ako he aha tēnei mea
+          te Boolean, ā, he aha hoki te wāhi ki a rātou e āhei ai tātou ki te tuhi
+          taumahi ararau
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: The parameters we pass to functions cause the outputs to vary based
-          on a very rigid pattern. Suppose we want parameters with some values to
-          create outputs using one pattern but other values to use a different pattern.
-          This is where conditionals are needed...
+        title: Ngā Taumahi Here, Taumahiroto
+        desc: Ko ngā tawhā ka hoatu e tātou ki ngā taumahi ka pā ki ngā tāputa nā
+          reira ka rerekē i tētahi tauira mārō. Tēnā, ki te hiahia tātou ki ētahi
+          tawhā me ētahi uara ki te waihanga i ētahi tāputa me te tauira kotahi, otirā,
+          ko ētahi atu uara ka whakamahi i tētahi tauira rerekē. Koinei te wā ka whai
+          take ai ngā here...
         video: alg_10_conditionals
       CollisionDetection:
-        title: Collision Detection and the Pythagorean Theorem
-        desc: Determining when objects on the screen touch is an important aspect
-          of most games. In this lesson we'll look at how the Pythagorean Theorem
-          and the Distance Formula can be used to measure the distance between two
-          points on the plane, and then decide whether those two points (or game characters)
-          are touching.
+        title: Te Mātai Tūtuki me te Huatau Pythagorean
+        desc: He mea nui i te nuinga o ngā kēmu te whakatau āhea puta mai ai ngā ahanoa
+          i te pānga o te mata. I tēnei whakaakoranga ka aro tātou ki te whakamahi
+          o te Ariā Pythagorean me te Tātai Tawhiti ki te ine i te tawhiti i waenganui
+          i tētahi pūwāhi me tētahi atu pūwāhi o te waka rererangi. Mutu ana, ka whakatauhia
+          mēnā rā e pā ana aua pūwāhi (kiripuaki rānei).
         video: alg_16_biggame_collision_detection

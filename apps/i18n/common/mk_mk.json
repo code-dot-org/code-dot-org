@@ -33,6 +33,7 @@
   "copy": "копирај",
   "copyright": "Copyright",
   "currentVersion": "Тековна верзија",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Име на табела",
   "dataWorkspaceHeader": "Data Browser",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "Игнорирај",
   "infinity": "Бесконечно",
+  "joinText": "спои",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "Рипај ",
   "keepPlaying": "Продолжи со играта",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "to the top outside left position",
   "positionTopOutRight": "to the top outside right position",
   "positionTopRight": "to the top right position",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Печати",
   "privacyPolicy": "Privacy Policy",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
@@ -314,9 +318,5 @@
   "when": "Кога",
   "whenRun": "Кога трча",
   "workspaceHeaderShort": "Работна површина: ",
-  "yes": "Yes",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Yes"
 }

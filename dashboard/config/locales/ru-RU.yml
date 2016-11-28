@@ -93,6 +93,14 @@
       управлять своим классом. <a href="/"> Вы можете просматривать различные задачи
       и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов
       вы должны будете зарегистрироваться.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: "Смотрите руководство для учителя"
     title: "Зарегистрироваться на Code.org"
     school_name: "Название школы (не обязательно)"
@@ -344,7 +352,7 @@
       unsubmit: "Не отправлять"
       worked_with: "Работал с"
       update_lock_settings: "Обновите настройки блокировки здесь."
-      clear_response: Clear response
+      clear_response: "Очистить ответ"
   user:
     email_confirm_needed: "Адрес электронной почты не был подтвержден:"
     email_confirm_needed_required: "Адрес вашей электронной почты %{email} не был
@@ -431,7 +439,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "Узнать больше"
     announcement_try_now_button: "Попробуйте сейчас"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: "Хозяин часов"
     announcement_petition: "Как учитель вы лидер движения, чтобы дать каждому студенту
       в каждой школе возможность для изучения компьютерных наук. Теперь пришло время,
       чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28
@@ -441,11 +449,23 @@
     announcement_petition_button: "Добавьте ваше имя"
     announcement_all: "Будьте в курсе новых функций и обновлений нашего блога учителей.
       <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут
+      урок информатики с помощью Часа Кода 5-11 декабря. Мы рассчитываем на вас, чтобы
+      помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}'
+      target='_blank'> зарегистрируйте ваш Час Кода</a> и поделитесь с другими учителями,
+      что бы любой жалеющий мог начать преподавание информатики."
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста,
       введите другой код группы."
@@ -618,6 +638,10 @@
     minecraft:
       title: Minecraft
       body: "Изучайте мир Minecraft через программный код."
+    minecraft2016:
+      title: Minecraft
+      body: "Создай свой мир Minecraft. Запрограммируй поведение животных и существ
+        своего мира: куриц, овец, криперов, зомби и других."
     unplugged:
       title: "Уроки без компьютера"
       audience: "Возраст 6+"
@@ -756,7 +780,6 @@
       конфиденциальности</a>
     accept: "Принять"
     print: "Печать"
-    later: "Позже"
     reminder_desc: Мы обновили наши <a href="%{tos_url}" target="_blank">Условия обслуживания</a>
       и <a href="%{privacy_url}" target="_blank"> Политику конфиденциальности</a>.
       Пожалуйста, прочитайте их внимательно, прежде чем принимать их. Обратите внимание,
@@ -764,18 +787,18 @@
       студентов, если не принять обновленные условия.
     review_terms: "Просмотр обновленных условий"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: "Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения
+      разнообразия в области компьютерных наук"
+    message: "Пожалуйста, укажите вашу расу (необходимое пометить)"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: "Белый"
+    - black: "Черный или Афроамериканец"
+    - hispanic: "Испанец или Латиноамериканец"
+    - asian: "Азиат"
+    - hawaiian: "Коренной житель Гавайских островов или других островов Тихого океана"
+    - american_indian: "Американский Индеец / Коренной Житель Аляски"
     - other: "Другое"
-    - opt_out: Prefer not to say
+    - opt_out: "Предпочитаю не отвечать"
     submit: "Отправить"
     decline: "Закрыть"
   zendesk_too_young_message: Извините, но пользователи твоего возраста не могут авторизоваться

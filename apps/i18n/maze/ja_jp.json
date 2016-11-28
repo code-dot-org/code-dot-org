@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "おめでとう！ あなたは{count}つのすべてのアイテムをあつめました！",
   "collectorCollectedNothing": "コーディングをつづけよう！できるだけたくさんのアイテムをあつめてね。",
   "collectorCollectedSome": "よくやりました！ あなたは{count}つのアイテムをあつめました！",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "そのスペースには私が収集するのに十分なアイテムがありません。",
   "collectorTooManyBlocks": "{blockLimit} ブロックだけつかえるよ。コードをよくみて、もういちどやりなおそう!",
   "continue": "続行",
@@ -111,6 +112,5 @@
   "word": "ことばを　みつけましょう",
   "wrongCropError": "私はここから作物を収穫することができません。",
   "yes": "はい",
-  "youSpelled": "あなたのスペル",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "あなたのスペル"
 }

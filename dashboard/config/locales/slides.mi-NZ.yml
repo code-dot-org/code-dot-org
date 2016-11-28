@@ -3,8 +3,8 @@
     maze_intro:
       1:
         image: notes/hoc1_1.jpg
-        text: Welcome to your first hour of code! Let's dive right into your first
-          taste of programming.
+        text: Nau mai ki tō hour of code tuatahi! Tēnā me wawe te koke kia rongo ai
+          koe i tēnei mea te papatongotanga.
       2:
         image: notes/hoc1_2.jpg
         text: We'll be using Blockly, a visual programming language where you drag
@@ -3118,3 +3118,126 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: |-
+          Tēnā koe, ko Jens tōku ingoa, ko au te kaihoahoa matua o Mahimaina. I roto i te haora e whai ake nei, ka hangaia e koe tāu ake kēmu Mahimaina. He rite tōna hanga ki Mahimaina, heoi anō, kua rerekē nā te mea, kua tū te ao. Kāore ngā hipi i te neke, kāore ngā heihei i te whānau hēki, ka mutu, e tū pakoko ana ngā kairoro. Kua riro māu e tāpiri i te waehere
+          kia rere anō ai te ao Mahimaina.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Ko Melissa tōku ingoa, he kairangahau kaiwhakmahi ahau ki Mahimaina.
+          Ko tāku e aro nui nei ko te āhua o te tō te tangata whakaaro me tana mahi
+          me te hangarau. Nā reira, ko tēnei umanga taku tino, nā te mea e āhei ana
+          ahau ki te whakakotahi i te mātai pūhanga ki te mātai hinengaro: tō te tangata
+          whakaaro, whanonga hoki.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Kei te kite atu koe, kua wāhia tō mata ki ngā wāhanga matua e toru.
+          1) Kei te taha mauī te kēmu Mahimaina. Kua tū te ao i tēnei wā, heoi anō,
+          mā tātou tērā e whakatika me te waehere.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Ko te wāhanga o waenganui nei te pouaka utauta. He whakahau ēnei
+          paraka katoa e mārama ana ki ngā heihei, ngā hipi me ētahi atu koiora o
+          Mahimaina.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā,
+          koinei te wāhi ka mahi tātou ki te hanga i tā tātou papatono.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Hei tīmatanga, ka papatonotia e tātou tētahi heihei. Me tō tātou i te
+          whakahau "neke ki mua" ki te papamahi. Ka neke te heihei ki mua kotahi te
+          hipanga ina pāwhiri au i te "Whakahaere". Ka tōia e au tētahi atu paraka
+          "neke ki mua" kia noho ki raro i te paraka "neke ki mua" tuatahi kia minamina
+          rā anō, kia neke tonu. Kātahi au ka tuku, ā, ka piri tahi ngā paraka e rua.
+          Ki te pāwhiri anō ahau i te "Whakahaere" ka rua hipanga te nekehanga o te
+          heihei.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Ki te hiahia koe ki te muku i tētahi paraka me tango noa iho i te raupapatanga,
+          me tō ki te pouaka utauta.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Kia pāwhiri koe i te "Whakahaere" e wātea ana kia pāwhritia te pātene
+          "Tautuhi Anō" ki te tautuhi anō i te kēmu me te tīmata anō!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Kia ora, ko Lisa ahau. Ko ahau tētahi o ngā kaiwhakawhanake pūmanawa
+          o Mahimaina, ā, ka mahi ahau me ētahi o ngā kararehe me ngā hoariri i te
+          kēmu. Ko tētahi o ngā kararehe nāku i whakawhanake ko te rēpara. Nāku i
+          taea ai te rēpara te whāngai ki te ika kia pai ai tō whakamōkai i a ia hei
+          ngeru māu.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Mehemea he auau te mahi ka kaha te hongehongeā o tātou, o te tangata.
+          Heoi anō, ko te mea pai rawa atu o te rorohiko, ko tana āhei ki te mahi
+          auau ao noa, pō noa, me tana kore e hōhā. Ko te koromeke te mahi tōai e
+          kōrerohia ana, ā, ka whakamahi te katoa o ngā koiora o Mahimaina i ngā koromeke.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: I mua rā, i whakaneke tātou i tētahi heihei whakawhiti i te mata kātahi,
+          ia ka tū. Ka hīkoi haere ngā heihei i Mahimaina āke, āke. Me whakamahi tātou
+          i tētahi koromeke "mahia atu āke, āke" i tā tātou pouaka utauta kia neke
+          āke, āke tonu ā tātou heihei. Mā te mana o te koromeke e poto ake ai te
+          mahi, e tūwhera ai hoki ngā kōwhiringa pai i a koe e hanga ana i tō ake
+          whakaputanga Mahimaina.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Māu e whiriwhiri i a Steve, i a Alex rānei i tēnei taumata. Me pēhi
+          koe i ngā pātene kei tō papapātuhi ki te neke ki runga, ki raro, ki te taha
+          mauī, ki te taha matau hoki. Nā ināianei, e wātea ana koe ki te neke haere
+          ki ngā wāhi e hiahia ana i te taumata. Ki te whakamahi i tētahi koiora me
+          hīkoi atu koe ki a ia, me huri ki a ia, kātahi ke pēhi i te paemokowā.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Me e whakamahi ana koe i tētahi mata whakapā me mātua miri ki runga,
+          ki raro. ki te taha mauī, ki te taha matau hoki ki te neke haere. Kātahi
+          me pato koe i te kēmu ki te whakamahi i te pūkei kei tō aroaro.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Ina whakamahia, he aha te hua? I te ao Mahimaina ka tuku wūru te hipi
+          ki te kuti koe i ōna huruhuru, ka oma atu ngā kau ina patua, ā, ka pahū
+          mai ngā konihi ki te tata atu koe ki a rātou. He tauhohenga ēnei nā ngā
+          takahanga. Ko tā te takahanga mahi he kī atu ki tō papatono me whakarongo,
+          me whanga rānei kia hua mai tētahi āhuatanga. Ā, i te huatanga mai ka kawea
+          tētahi hohenga.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Ā mohoa noa nei kua whakamahia e koe tētahi takahanga. Ko tā te waehere
+          ka purua ki te kāniwha "ina whakaputa" he rere i te waihangatanga o tō koiora,
+          i te tīmatanga rānei o te kēmu. Hei ngā taumata e whai atu ana ka wātea
+          ki a koe ētahi kāniwha mō ētahi takahanga pēnei i te "ina pāngia" ka rere
+          ina koe ka pā ki tētahi koiora, i te "ina whakamahia" rānei ina koe ka whakamahi
+          i tētahi koiora. Māna, mēnā e hiahia ana koe kia nunumi tō kairoro i te
+          urunga mai o te rā, hoatu tēnā ki te kāniwha "i te awatea"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: He rite te tikanga o te whakaputa ki te waihanga i ngā kemu. I tēnei
+          taumata me whakarite tātou ki te whakaputa kairoro i te tōnga o te rā. Ka
+          whakamahi tātou i te paraka "i te pō" ki te whakatutuki.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Nā te mea e hiahia tātou ki te whakaputa kairoro i te pō me tāpiri i
+          te paraka "whakaputa kairoro" ki te paraka "i te pō". Kia puta, ka whakatinanahia
+          e ngā kairoro te waehere ka hoatu e koe ki ō rātou kāniwha takahanga "ina
+          whakaputa". Kia ngahau te whakaputa kairoro!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Ka wani kē! Kua ako koe ki te whakamahi i ngā whakahau pūtaiao rorohiko
+          kia ora anō te ao Mahimaina. Ko koe te kaihoahoa ināianei. Kua wetea e koe
+          ngā aukatitanganga o ngā whakahau me ngā koiora katoa. Māu e whiriwhiri
+          ka aha haere ake nei.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Mutu ana tō hanga i tō kēmu, pāwhiritia te tiri kia riro i a koe te
+          honongaitua hei tiritiri ki ō hoa, hei korikori rānei māu ki tō waea. Kia
+          ngahau! E hīkaka ana ahau ki te tākaro i tō putanga o Mahimaina.

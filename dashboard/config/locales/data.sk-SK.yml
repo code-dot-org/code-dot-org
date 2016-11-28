@@ -5,23 +5,23 @@
         Unplug1: "Úvod do vedy o počítačoch (informatiky)"
         Maze: Bludisko
         Multi: Viacnásobný výber
-        Unplug2: Aritmetické myslenie
+        Unplug2: Algoritmické myslenie
         Unplug3: Programovanie na milimetrovom papieri
-        Artist: Umelec
+        Artist: Postava
         Unplug4: Algoritmy
-        Artist2: Umelec 2
+        Artist2: Postava 2
         Unplug5: Funkcie
         Farmer: Farmár
         Unplug6: Podmienky
-        Artist3: Umelec 3
+        Artist3: Postava 3
         Unplug7: Napísanie piesne
         Farmer2: Farmár 2
         Unplug8: Abstrakcia
-        Artist4: Umelec 4
+        Artist4: Postava 4
         Unplug9: "Štafetové programovanie"
         Farmer3: Farmár 3
         Unplug10: Internet
-        Artist5: Umelec 5
+        Artist5: Postava 5
         Unplug11: Zhrnutie
         MazeEC: Bludisko
         Bounce: Odraziť
@@ -30,7 +30,7 @@
         MazeStep: Krokový režim bludiska
         Wordsearch: Osemsmerovka
         Webapp: Laboratórium aplikácií
-        ArtistEC: Umelec
+        ArtistEC: Postava
         TextMatch: Priraďovačka textu
         StudioEC: Play Lab
         Applab: Laboratórium aplikácií
@@ -45,20 +45,20 @@
     concept:
       description:
         sequence: Postupnosť
-        if: "Časť - If"
-        if_else: "Časť if-else"
-        loop_times: "Časť - repeat"
-        loop_until: "Časť - repeat until"
-        loop_while: "Časť - while"
-        loop_for: "Časť - counter"
+        if: Blok - Ak
+        if_else: Blok Ak- tak
+        loop_times: Blok Opakuj niekoľko krát
+        loop_until: Blok Opakuj kým
+        loop_while: Blok Kým
+        loop_for: Blok Počítadlo
         function: Funkcie
         parameters: Funkcie s parametrami
     level:
       instructions:
-        maze_2_2: 'Pomôžete mi chytiť neposlušné prasa? Dajte dohromady niekoľko blokov
-          "posunúť vpred" a stlačte "Spustiť", aby som sa tam dostal. '
+        maze_2_2: 'Pomôžeš mi chytiť neposlušné prasa? Daj dohromady niekoľko blokov
+          "posunúť vpred" a stlač "Spustiť", aby som sa tam dostal. '
         maze_2_1: To prasa mi pije krv. Pomôž mi ho nájsť!
-        maze_2_2_5: Nájdi cestu a veď ma k tomu hlúpemu prasaťu. Vyhni se TNT, lebo
+        maze_2_2_5: Nájdi cestu a veď ma k tomu hlúpemu prasaťu. Vyhni sa TNT, lebo
           bude lietať perie!
         maze_2_3: Naviguj ma k zelenému zlu! (Pozor na TNT)
         maze_2_4: Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Ináč sa rozhnevám!
@@ -95,7 +95,7 @@
           Použi pár blokov aby som nakreslil nad šedé čiary v obrázku.
         turtle_1_2: 'Teraz nakresli štvorec. Poznámka: použi svoju obľúbenú farbu
           výberom z nového bloku "nastavenie farby".'
-        turtle_1_3: Urobte štvorec s použitím iba 3 častí.
+        turtle_1_3: Urobte štvorec použitím 3 blokov.
         turtle_1_4: 'Nakresli trojuholník, ktorého každá strana je inou farbou, použitím
           nastavenia "náhodná farba", ktoré vždy vyberie inú farbu. Poznámka: budeš
           musieť zistiť ako ďaleko otočiť kliknutím na číslo v bloku otoč.'
@@ -220,49 +220,49 @@
           odstránil/a všetky hromady špiny použitím len pár nových blokov.
         maze_karel_2_10: Presuň ma cez polia a použi tieto dve funkcie na odstránenie
           všetkých hromád a na vyplnenie všetkých dier.
-        turtle_3_1: Toto puzzle ti ukazuje ako sú funkcie "nakresli štvorec" a "nakresli
+        turtle_3_1: Táto úloha ti ukazuje ako sú funkcie "nakresli štvorec" a "nakresli
           kruh" definované. Definovanie funkcie neznamená, že sa aj spustí. Aby sa
           ti štvorec nakreslil musíš použiť blok "nakresli štvorec" na ploche.
         turtle_3_2: Použitím funkcie "nakresli štvorec" ako predlohy, vytvor funkciu
           "nakresli trojuholník" a použi ju.
         turtle_3_3: 'Nakresli trojuholníkový plot okolo mačiek a štvorcový plot okolo
           kravy. Tip: priebežne testuj program.'
-        turtle_3_4: See if you can figure out how to use "draw a square" and "draw
-          a triangle" (and some other blocks) to draw a house around the lion.
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house
-          two cats. Hint: create a new function using the "do something" block, and
-          type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length"
-          to "draw a triangle". Then, draw triangles in different sizes. (Hint: click
-          the star to add an input to a function)'
-        turtle_3_7: Add an input named "length" to "draw a house" and build a big
-          house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Here are all of the blocks from the previous puzzle.  Modify "draw
-          a house" so I end up at the bottom right corner after drawing a new house.
-          Use this modified function to draw three houses.
-        turtle_3_9: Can you re-create the "draw a house" function without help? Try
-          it, and then draw a row of houses.
-        turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
-          to draw a star, or a spiral, or a fancy snowflake.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
-        maze_karel_debug_seq_2: What's wrong with this program? How should you fix
-          it so I can remove that pile?
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice
-          and flat.
-        maze_karel_debug_while: How should you change this program to help me fill
-          the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely
-          flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and
-          remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to
-          help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make
-          my field flat?
-        maze_karel_debug_function_3: 'Edit this program so I''ll remove all the piles
-          on my field. '
+        turtle_3_4: Pozrime sa, či už dokážete používať "nakresliť štvorec" a "nakresliť
+          trojuholník" (a niektoré ďalšie bloky), aby ste nakreslili domček domček
+          okolo leva.
+        turtle_3_5: 'Teraz vytvor novú funkciu "nakresliť dom" a použi ho ako bývanie
+          dvoch mačiek. Tip: na vytvorenie novej funkcie použi blok "urobiť niečo,"
+          a ako názov bloku napíš svoj vlastný text.'
+        turtle_3_6: 'S použitím bloku "nakresliť štvorec" ako vzoru pridaj vstupnú
+          hodnotu "dĺžka" bloku "nakresliť trojuholník. Potom nakresli trojuholníky
+          s rôznymi veľkosťami. (Tip: vstupné hodnoty funkcii pridáš po kliknutí na
+          hviezdičku)'
+        turtle_3_7: Pridaj vstupnú hodnotu "dĺžka" bloku "nakresliť dom" a postav
+          veľký dom pre slona (so stranami dlhými 150 pixelov)
+        turtle_3_8: Uprav funkciu "nakresliť dom" tak, aby po nakreslení nového domu
+          skončila v pravom dolnom rohu. Použi upravenú funkciu na nakreslenie troch
+          domov.
+        turtle_3_9: Dokážeš znovu zostrojiť funkciu "nakresliť dom" bez pomoci? Skús
+          to, a potom nakresli rad domov.
+        turtle_3_10: Naučil si sa toho naozaj veľa! Teraz to môžeš využiť a nakresli,
+          čo chceš. Skús nakresliť hviezdu alebo špirálu alebo efektnú snehovú vločku.
+        maze_karel_debug_seq_1: Vitaj pri ladení programov! Môj kód nepracuje správne.
+          Môžeš nájsť problém a opraviť ho tak, aby bolo pole vyrovnané a pripravené
+          na sadenie?
+        maze_karel_debug_seq_2: "Čo je zlé v tomto programe? Ako ho opraviť, aby sa
+          odstránila kôpka?"
+        maze_karel_debug_repeat: Vylaď tento program tak, aby pole bolo čisté a rovné.
+        maze_karel_debug_while: Ako by si zmenil tento program, aby si mi pomohol
+          vyplniť jamu?
+        maze_karel_debug_if: Pomóc! Uprav program tak, aby bolo moje pole úplne zarovnané.
+        maze_karel_debug_if_else: Vylaď tento program tak, aby sa vyplnili všetky
+          jamy a odstránili všetky kôpky.
+        maze_karel_debug_function_1: Ako zmeníš tento program, aby sa odstránili všetky
+          kôpky?
+        maze_karel_debug_function_2: Môžeš vyladiť tento program tak, aby zarovnal
+          pole?
+        maze_karel_debug_function_3: 'Uprav tento program tak, aby z poľa odstránil
+          všetky kôpky. '
         turtle_5_1: Try running this program, and make changes to see what happens.
           Can you figure out how it works? (Or delete it and replace it with something
           totally different)
@@ -307,9 +307,30 @@
           have to attach the new "throw new ball" block in more than one place. Also,
           try changing the scene or the speed of the hand and the ball and see how
           many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_12_basketball: Vytvor si svoju vlastnú basketbalovú hru. Môžeš zmeniť
+          pravidlá. Keď budeš hotový, klikni na Skončiť, nech tvoju hru môžu vyskúšať
+          kamaráti na svojich telefónoch.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
+          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
+          until it hits the flag.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice!
+        bounce_11_sports: You can now attach blocks to the "when run" block. You have
+          to attach the new "throw new ball" block in more than one place. Also, try
+          changing the scene or the speed of the hand and the ball and see how many
+          points you can score before your opponent scores twice!
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
           the paddle using the left arrow to reach the finish target.
         bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
@@ -380,32 +401,32 @@
           "when run" block.
         flappy_k1_9: Try changing the player by attaching a "set player" block to
           the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
+        jigsaw_1: Klikni na blok
+        jigsaw_2: Presuň blok do cieľa
+        jigsaw_3: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_4: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_5: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_6: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_7: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_8: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_9: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_10: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_11: Usporiadaj bloky tak, aby sa vytvoril obrázok
+        jigsaw_12: Usporiadaj bloky tak, aby sa vytvoril obrázok
         jigsaw_13: Fix the puzzle!
         mazestep_1: Maze step description here
         mazestep_2: Maze step description here
         mazestep_3: Maze step description here
         mazestep_4: Maze step description here
         mazestep_5: Maze step description here
-        studio_c2_1: Can you make this dog say "hello world"?
+        studio_c2_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
+        studio_c2_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech mačka
+          povie "ahoj", keď k nej pes príde?
+        studio_c2_5: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj",
+          keď na ňu klikneš?
         studio_c2_6: Can you write a program to make this penguin move around using
           the up / down / left /right keys to hit all of the targets?
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
@@ -417,19 +438,19 @@
           the octopus, and then move him with the arrows until you score?
         studio_c2_10: Can you add blocks to change the background and the speed of
           the penguin, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
-        studio_c3_story_1: Can you make this dog say "hello world"?
+        studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť,
+          nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_story_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
         studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech
+          mačka povie "ahoj", keď k nej pes príde?
         studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
+        studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni
+          na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj",
+          keď na ňu klikneš?
         studio_c3_game_2: Can you write a program to make this penguin move around
           using the up / down / left /right keys to hit all of the targets?
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
@@ -441,14 +462,14 @@
           into the octopus, and then move him with the arrows until you score?
         studio_c3_game_6: Can you add blocks to change the background and the speed
           of the penguin, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
+        studio_c3_game_7: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na
+          Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
         studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
           say "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
+        studio_playlab_3: Dokážeš pomôcť tenistke dostať sa k vlajke?
+        studio_playlab_4: Dokážeš pomôcť tenistovi (postava 1) dostať sa k tenistke
+          (postava 2) a prehrať zvuk, keď k nej príde?
         studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
           it is clicked? Don’t forget to click it after you click Run
         studio_playlab_6: Can you help the Witch move around using the up/down/right/left
@@ -461,8 +482,8 @@
         studio_playlab_9: Set the background for this alien invasion and help the
           Spacebot get to the alien faster by changing its speed. Then move him with
           the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_playlab_10: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na
+          Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
         studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
           you help him say "hello" by dragging the `say` block out into the work area
           and typing the word "hello" inside?
@@ -496,9 +517,9 @@
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
           with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh.
+          Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti
+          na svojich telefónoch, tabletoch, alebo na počítačoch!
         studio_gumball_hello1: Anais wants to make some new friends. Can you help
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
@@ -532,19 +553,19 @@
         studio_gumball_join_food_fight: Join the food fight! Use the "actor throw
           item right" command to have Banana Joe (actor 1) throw food at Anton (actor
           2)! Set Anton’s mood to angry when he gets hit.
-        studio_gumball_free_play: Create your own game or story. When you're done,
-          click Finish to let friends try your game on their phones, tablets, or computers!
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your game on their phones.
-        studio_k1_1: Can you make this dog say "hello world"?
+        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš
+          hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich
+          telefónoch, tabletoch, alebo na počítačoch!
+        studio_full_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni
+          na Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
+        studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
         studio_k1_3: Can you write a program to make this dog move to the cat?
-        studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
-          gets there.
+        studio_k1_4: Presuň psa k mačke, keď k nej príde, mačka mu povie "ahoj".
         studio_k1_5: Can you add a block to make the octopus happy?
-        studio_k1_6: Create your own story! Move around the cat and dog, and make
-          them say things.
+        studio_k1_6: Vytvor si svoj vlastný príbeh! Popresúvaj mačku i psa, a nauč
+          ich rozprávať.
         maze_wordsearch_k_1: Move me to spell the word EAST
         maze_wordsearch_k_2: Move me to spell the word SOUTH
         maze_wordsearch_k_3: Move me to spell the word WEST
@@ -562,8 +583,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_ec_sandbox: Vytvor si svoju vlastnú hru. Keď budeš hotový, klikni na
+          Skončiť, nech tvoju hru môžu vyskúšať kamaráti na svojich telefónoch.
     video:
       name:
         maze_intro: Maze Intro
@@ -580,21 +601,21 @@
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
-        Unplug1: What is CS?
-        Unplug2: Aritmetické myslenie
+        Unplug1: "Čo je to CS?"
+        Unplug2: Algoritmické myslenie
         Unplug3: Programovanie na milimetrovom papieri
         Unplug4: Algoritmy
         Unplug5: Funkcie
         Unplug6: Podmienky
-        Unplug7: Songwriting
+        Unplug7: Písanie pesničiek s parametrami
         Unplug8: Abstrakcia
-        Unplug9: Relay programming
+        Unplug9: "Štafetové programovanie"
         Unplug10: Internet
         Unplug11: Zhrnutie
-        C1_happy_maps_unplugged: Happy Maps
+        C1_happy_maps_unplugged: Veselé mapy
         C1_moveitmoveit_unplugged: Move It, Move It
         C1_bigevent_unplugged: Veľká udalosť
-        C1_getting_loopy: Getting Loopy
+        C1_getting_loopy: Neustále opakovanie
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -605,7 +626,7 @@
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Planting a Seed
+        C1_planting_seed: Výsadba osiva
         C1_building_foundation: Stavanie základov
         C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Maze Intro
@@ -619,11 +640,11 @@
         C2_playlab_createstory: Play Lab - Create a Story
         C2_graph_paper: Programovanie na milimetrovom papieri
         C2_conditionals_with_cards: Podmienky
-        C2_binary_bracelets: Binary Bracelets
+        C2_binary_bracelets: Binárne náramky
         C2_relay_programming: "Štafetové programovanie"
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
+        C2_digital_footprint: Tvoj digitálny otlačok
+        C2_digital_footprint_v2: Tvoj digitálny otlačok
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
@@ -636,13 +657,13 @@
         C3_bee_debugging: Bee Debugging
         C3_bounce: Odraziť
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Aritmetické myslenie
+        C3_computational_thinking: Algoritmické myslenie
         C3_dice_race: Dice Race
         C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_functional_suncatchers: Dekorácie
         C3_songwriting_with_parameters: Songwriting With Parameters
-        C4_intro: Introduction
+        C4_intro: "Úvod"
         C4_loops_zombie: Cykly
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
@@ -651,8 +672,8 @@
         C4_for_loops_bee: For Loops
         C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: Editing Functions
-        C4_function_create: Creating Functions
+        C4_function_edit: "Úprava Funkcií"
+        C4_function_create: Tvorba Funkcií
         C4_function_parameters: Functions with Parameters
         C4_conditionals: Podmienky
         C4_unplugged_algorithms: Algorithms with Tangrams
@@ -660,7 +681,7 @@
         C4_unplugged_variables: Variables in Envelopes
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Písanie pesničiek s parametrami
-        C4_unplugged_binary: Binary
+        C4_unplugged_binary: Binárny
         frozen_intro: "Úvod do Hodiny kódu"
         frozen_loops: "Úvod do cyklov"
         frozen_functions: "Úvod do funkcií"
@@ -750,17 +771,22 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
-        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_intro: Doba ľadová Hodina Kódu - Úvod
         iceage_events: Ice Age Hour of Code - Events
         iceage_repeat: Ice Age Hour of Code - Repeat statements
+        mc_2016_intro: Hodina kódu Minecraft - Úvod
+        mc_2016_loops: Hodina kódu Minecraft - Cykly
+        mc_2016_events: Hodina kódu Minecraft - Udalosti
+        mc_2016_spawn: Hodina kódu Minecraft - Vytváranie postáv
+        mc_2016_congrats: Hodina kódu Minecraft - Gratulujeme
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
-        run: Hit "Run" to try your program
-        watch_again: Click here to watch the video again
+        run: Stlač "Spustiť" pre vyskúšanie svojho programu
+        watch_again: Pre opätovné prezretie videa klikni sem
         gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
           the puzzle anyway?
-        show_code_explanation: Click here to see the code for the program you're making
+        show_code_explanation: Klikni sem, aby si videl kód programu, ktorý tvoríš
         instructions_repeat_explanation: The instructions for each puzzle are repeated
           here
         category_explanation: You have all the same blocks but they've now been arranged
@@ -768,7 +794,7 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: Klikni na tento blok!
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
@@ -818,42 +844,43 @@
         playlab_arrow_keys: Remember to use these to move the witch after clicking
           on Run
         playlab_add_move: Add "move" blocks inside this repeat block
-        playlab_add_score: Add score blocks here
-        playlab_add_blocks: Add your blocks here
-        set_variable: Drag a number block here to set your variable
+        playlab_add_score: Tu pridaj blok skóre
+        playlab_add_blocks: Tu pridaj svoje bloky
+        set_variable: Tu pritiahni blok čísel, aby si mohol nastaviť svoju premennú
         place_variable: Drag your variable inside this block
         bee_for_loop: Drag the largest number of nectar you want the bee to collect
           here
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
-        change_here: Make your change here
+        change_here: Tu urob zmenu
         write_draw_square_function: Drag blocks from the toolbox into here that draw
           a square
         write_draw_triangle_function: Drag blocks from the toolbox into here that
           draw a triangle
-        edit_add_parameter: Click edit to add a parameter in your function
+        edit_add_parameter: Klikni na položku upraviť, aby si mohol do svojej funkcie
+          pridať parameter
         add_and_drag_parameter: Write in the name of your parameter here, click add,
           and then drag it into your function definition
-        fill_in_actor: Fill in the ??? with numbers that correspond to each actor
-          (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
+        fill_in_actor: Vyplň ??? číslami, ktoré zodpovedajú každej postave (1, 2,
+          a 3)
+        repeat: Pre opakovanie príkazov, vlož bloky do slučky
         if_bee_nectar: Use the "if" block to decide if the bee should get nectar
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
           and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
+        repeat_full_circle: Zadaj číslo, koľko krát sa má zombie posunúť tak, aby
+          spravil celý kruh
         place_length_variable: Drag the length variable here to replace the question
           marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
+        arrows_move_actor: Pre pohyb postavy použi šípky
+        right_arrow_fireball: Na streľbu ohnivých gulí použi pravú šípku
+        name_function: Tu napíš meno svojej funkcie
+        Infinity_move_right_runbutton: Tu pridaj blok posunúť
         Infinity_move_directions_callout: Which block will make Baymax move up when
           the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
+        Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
+        Infinity_repeat_callout: Sem umiestni blok Posunúť
         craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
         craft_drag_block_callout: Potiahni "posunúť vpred()" blok a zapoj ho pod iný
           blok

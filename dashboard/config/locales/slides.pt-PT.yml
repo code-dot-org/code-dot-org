@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   slides:
     maze_intro:
       1:
@@ -3145,3 +3145,124 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Olá, chamo-me Jens e sou o designer criativo principal de Minecraft.
+          Durante a próxima hora, vais criar o teu próprio jogo Minecraft. Isto parece-se
+          com Minecraft, mas o mundo parou. As ovelhas não se mexem, as galinhas não
+          põem ovos e os mortos-vivos estão parados. Cabe-te a ti adicionar o código
+          para que o mundo Minecraft funcione.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: como as pessoas pensam e se comportam.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Verás que o teu ecrã está dividido em três partes principais. 1) À esquerda
+          está o jogo Minecraft. Neste momento, o mundo está parado, mas vamos resolver
+          isso com código.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Esta zona intermédia é a caixa de ferramentas. Cada um destes blocos
+          é um comando que as galinhas, as ovelhas e outras criaturas de Minecraft
+          entendem.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) O espaço à direita chama-se espaço de trabalho e é lá que vamos construir
+          o nosso programa.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Se te esqueceres do que tens de fazer, tens as instruções para cada
+          nível ao cimo.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Para começar, vamos programar uma galinha. Vamos arrastar o comando
+          “avançar” para o espaço de trabalho. Quando eu clicar em “Executar”, a galinha
+          avança um passo. Para ir mais longe, vou arrastar outro bloco de “avançar”
+          para debaixo do primeiro bloco de “avançar” até aparecer o contorno. Depois,
+          eu largo-o e os dois blocos encaixam-se. Se eu clicar em “Executar” de novo,
+          a galinha anda dois passos.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Se quiseres eliminar um bloco, basta removê-lo da pilha e arrastá-lo
+          de volta para a caixa de ferramentas.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Depois de clicares em “Executar”, podes clicar no botão “Repor” para
+          reiniciar o jogo e começar de novo. Agora é a tua vez de criar a tua própria
+          versão de Minecraft. Diverte-te!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Olá, eu sou a Lisa. Sou programadora em Minecraft e trabalho em alguns
+          dos animais e inimigos no jogo. Um dos animais em que trabalhei foi o ocelote.
+          Trabalhei na parte em que podes dar um peixe ao ocelote para o domesticar
+          e torná-lo no teu gato.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Enquanto humanos, aborrecemo-nos muito se tivermos de fazer a mesma
+          coisa vezes sem conta. Mas a coisa boa dos computadores é que eles fazem
+          a mesma coisa milhões ou mesmo milhares de milhões de vezes seguidas sem
+          se aborrecerem. Esta repetição chama-se loop e todas as criaturas em Minecraft
+          as utilizam.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Há pouco, conseguimos que uma galinha atravessasse o ecrã, mas depois
+          parou. Em Minecraft, as galinhas andam para sempre para lá e para cá. Vamos
+          utilizar um loop de “fazer para sempre”, da nossa caixa de ferramentas,
+          para manter as nossas galinhas em movimento. O poder dos loops vai poupar-te
+          muito tempo e dar-te muitas opções fixes enquanto constróis a tua própria
+          versão de Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Neste nível, podes escolher ser Steve ou Alex. Prime as teclas de seta
+          para te moveres para cima, para baixo, para a esquerda e para a direita.
+          Agora podes circular num nível para onde quiseres. Para utilizares uma criatura,
+          avança para ela, vira-te de frente para ela e prime a barra de espaços.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Se utilizares um ecrã tátil, desliza o dedo para baixo, para a esquerda
+          e para a direita para te moveres. Depois toca no jogo para utilizar o item
+          à tua frente.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Mas o que acontece quando o utilizas? Em Minecraft, as ovelhas largam
+          lã quando as tosquias, as vacas fogem quando as atinges e os creepers explodem
+          quando te aproximas deles. Estas reações acontecem graças a uma coisa chamada
+          eventos. Os eventos dizem ao teu programa para esperar que algo aconteça.
+          E, quando isso acontece, executam uma ação.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Até agora, utilizaste um evento. O código que puseste na vaga “quando
+          gerado” é executado quando a tua criatura é criada ou quando o jogo começa.
+          Nos próximos níveis, vais ter novas vagas para eventos como “quando tocado”,
+          que é executado quando tocas na criatura, ou “quando utilizado” para quando
+          utilizas a criatura. Ou, se quiseres que o teu morto-vivo desapareça quando
+          o sol nascer, coloca essa instrução na vaga “quando é dia”.
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Nos jogos, gerar significa o mesmo que criar. Neste nível, vamos fazer
+          com que os mortos-vivos se gerem quando o sol se põe. Para isso, vamos utilizar
+          o bloco “quando é noite”.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Como queremos que os mortos-vivos se gerem à noite, vamos adicionar
+          o bloco “gerar morto-vivo” debaixo do bloco “quando é noite”. Logo que são
+          gerados, os mortos-vivos vão executar o código que colocaste na sua vaga
+          de eventos “quando gerado”. Diverte-te a gerar mortos-vivos!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Parabéns! Aprendeste a utilizar comandos de informática para dar vida
+          ao mundo de Minecraft. Agora, o programador és tu. Desbloqueaste todos os
+          comandos e todas as criaturas. Tu escolhes o que acontece.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Quando acabares de criar o teu jogo, escolhe partilhar para obter uma
+          hiperligação para partilhar com os teus amigos ou para jogar no teu telemóvel.
+          Diverte-te! Estou à espera de jogar a tua versão de Minecraft.
