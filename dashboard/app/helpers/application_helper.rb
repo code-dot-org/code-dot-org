@@ -149,6 +149,7 @@ module ApplicationHelper
 
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
+    skin = opts[:level].try(:properties)["skin"]
 
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image)
@@ -160,8 +161,14 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
       asset_url "#{app}_sharing_drawing.png"
+    elsif app == Game::BOUNCE
+      if ["basketball", "sports"].include? skin
+        asset_url "#{skin}_sharing_drawing.png"
+      else
+        asset_url "bounce_sharing_drawing.png"
+      end
     else
       asset_url 'sharing_drawing.png'
     end
