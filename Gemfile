@@ -224,3 +224,4 @@ gem "selectize-rails"
 gem 'bcrypt'
 gem 'addressable'
 gem 'validates_email_format_of'
+gem 'sshkit'
