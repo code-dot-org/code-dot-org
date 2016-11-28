@@ -13,7 +13,7 @@
         - if can? :edit, @level
           - if Rails.application.config.levelbuilder_mode
             %li
-              = link_to 'edit', edit_level_path(@level)
+              = link_to '[e]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
               - if @level.is_a? Blockly
                 %ul
                   %li= link_to 'solution', level_edit_blocks_path(@level, :solution_blocks)
