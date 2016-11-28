@@ -26,15 +26,23 @@ def get_all_progress(script_id)
 
   data[:user_scripts] = UserScript.
     where(script_id: script_id).
-    to_a
+    to_a.
+    map(&:serializable_hash)
   data[:user_levels] = UserLevel.
     where(script_id: script_id).
-    where(user_id: data[:user_scripts].map(&:user_id))
+    where(user_id:
+      data[:user_scripts].map do |user_script|
+        user_script['user_id']
+      end.compact
+    ).
+    to_a.
+    map(&:serializable_hash)
   data[:user_levels].each do |user_level|
     data[:activities] << Activity.
-      where(level_id: user_level.level_id).
-      where(user_id: user_level.user_id).
-      to_a
+      where(level_id: user_level['level_id']).
+      where(user_id: user_level['user_id']).
+      to_a.
+      map(&:serializable_hash)
     data[:activities].flatten!
   end
 
@@ -45,19 +53,13 @@ end
 # @param data [Hash] the data to delete from the DB.
 def delete_all_progress(data)
   data[:activities].each do |activity|
-    Activity.where(level_id: activity.level_id).
-      where(user_id: activity.user_id).
-      destroy
+    Activity.find_by_id(activity['id']).destroy
   end
   data[:user_levels].each do |user_level|
-    UserLevel.where(level_id: user_level.level_id).
-      where(user_id: user_level.user_id).
-      destroy
+    UserLevel.find_by_id(user_level['id']).destroy
   end
   data[:user_scripts].each do |user_script|
-    UserScript.where(user_id: user_script.user_id).
-      where(user_script.script_id).
-      destroy
+    UserScript.find_by_id(user_script['id']).destroy
   end
 end
 
