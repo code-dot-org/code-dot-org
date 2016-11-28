@@ -2,6 +2,7 @@
   %title= "#{type} Test Status"
   %link{:rel => :stylesheet, :type => :"text/css", :href => "test_status.css"}
   %script{src: 'https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js'}
+  %script{src: 'https://cdn.jsdelivr.net/clipboard.js/1.5.13/clipboard.min.js'}
 %body
   .centered-column
     %div#refresh-controls
@@ -40,6 +41,9 @@
               %td= feature.sub(/features\//, '')
               %td.status
               %td.log-link
+              %td.rerun-command
+                - rerun_command = "bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature}"
+                %button.copy-button{'data-clipboard-text': rerun_command}= "Copy Rerun Cmd"
   %input#test-type{type: 'hidden', value: type}
   %input#api-origin{type: 'hidden', value: api_origin}
   %input#s3-bucket{type: 'hidden', value: s3_bucket}
