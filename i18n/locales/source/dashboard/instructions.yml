@@ -2065,10 +2065,16 @@ en:
         you have learned and make something that you love!"
       courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart
         this stage."
+      courseD_maze_until1_instruction: "Get the angry bird to the pig."
+      courseD_maze_until2_instruction: "Now, use the `repeat until` loop to do the
+        same thing without specifying how many times to move forward and turn."
+      courseD_maze_until3_instruction: "Get the bird to the pig."
       courseE_farmer_functions1_instruction: "Help the farmer get to the pumpkin
         and pick it."
       courseE_farmer_functions10_instruction: "No one knows what these sprouts will
         become.  Use `if` statements to write the code to check and harvest each one.   "
+      courseE_farmer_functions10b_instruction: "Figure out which function to use
+        and which one to delete, then solve this puzzle!"
       courseE_farmer_functions1a_instruction: "Now help the farmer pick the corn,
         lettuce, **and** pumpkin."
       courseE_farmer_functions2_instruction: "Now, there will be a different number
@@ -2105,9 +2111,15 @@ en:
       courseE_farmer_functions6_instruction: "*\"Lettuce try something new!\"*\r\n\r\nHere's
         some code to collect all of the lettuce.  Move it into a function so we can
         use it later."
+      courseE_farmer_functions6b_instruction: "Pick all of the produce."
       courseE_farmer_functions7_instruction: "Use your functions to solve this puzzle."
+      courseE_farmer_functions7b_instruction: "Make a second function that lets the
+        farmer get all of the produce down a path, then brings her back to where she
+        began."
       courseE_farmer_functions8_instruction: "**Challenge:**  Solve this puzzle with
         as few blocks as possible."
+      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the
+        pumpkin and collect all of the lettuce and corn along the way. "
       courseE_farmer_functions9_instruction: "Use conditionals to simplify your program."
       courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
@@ -2385,12 +2397,18 @@ en:
       CSPU5_AddLabelToChaserGame_instruction: "Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked."
+      CSPU5_basic if - check driving age_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
       CSPU5_basic if - DIY secret number_instruction: "Use console.log to print out
         the different boolean expressions below to see what information they return.
         (Click to see full instructions)"
       CSPU5_basic if - voting examle_instruction: "Use console.log to print out the
         different boolean expressions below to see what information they return. (Click
         to see full instructions)"
+      CSPU5_basic if-else - driving age_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
       CSPU5_clickerGame_v1_template_instruction: "Create your own \"Chaser App\".
         (Click to see full instructions)"
       CSPU5_Debugging predict unexpected behavior - two onEvents to one ID_instruction: "Predict
@@ -3181,8 +3199,8 @@ en:
       frozen line_instruction: "Hi! I'm Elsa of Arendelle. Help me create a single
         line."
       frozen perpendicular_instruction: "Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block."
+        that are at a 90 degree angle to each other. You will need to use the \"Turn\"
+        block as well as the \"Move\" block."
       frozen snowflake branch_instruction: "Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake."
       frozen snowflake full_instruction: "Now let's repeat it 8 times to make a
@@ -3761,9 +3779,9 @@ en:
         the functions you used in this stage or try this new function that will automatically
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!"
-      grade4_artist_functions1_instruction: "\"Me zombie artist. Me love drawing!\"  \r\n\r\nHelp
-        the zombie draw glasses using squares with sides of 100 pixels.  \r\n\r\nThe
-        bridge between the glasses is 75 pixels long."
+      grade4_artist_functions1_instruction: "Help the zombie draw glasses using squares
+        with sides of 100 pixels.  \r\nThe bridge between the glasses is 75 pixels
+        long."
       grade4_artist_functions2_instruction: "Functions let you define new blocks!
         \r\n\r\nWe've moved the blocks needed for drawing a square into a function
         called `draw a square`. This time, use the `draw a square` function to create
@@ -3779,19 +3797,17 @@ en:
         will automatically give your image a beautiful background color! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!"
-      grade4_artist_functions_stars0_instruction: "We will come back to functions
-        shortly. Let's take a break to practice making this star. You can make this
-        drawing by adding a turn and a repeat block."
+      grade4_artist_functions_stars0_instruction: "You can make this drawing by adding
+        a repeat block."
       grade4_artist_functions_stars1_instruction: "Now that you can draw a star,
         try drawing four stars!"
-      grade4_artist_functions_stars2_instruction: "When is drawing three stars harder
-        than drawing four? When you also have to jump over the moon!"
+      grade4_artist_functions_stars2_instruction: "Draw only those three stars to
+        finish this puzzle."
       grade4_artist_functions_stars3_instruction: "That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**."
-      grade4_artist_functions_windows0_instruction: "You are doing great! Do you
-        remember when you used nested loops to draw a pinwheel shape out of triangles?
-        Let's try using that same algorithm to make a window!"
+      grade4_artist_functions_windows0_instruction: "Make this window by drawing
+        a square, then turning 90 degrees before drawing another, and so on."
       grade4_artist_functions_windows1_instruction: "If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
         Don't forget the jump block!"
@@ -3898,18 +3914,18 @@ en:
       grade4_bee_functions_instruction: "Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole."
       grade4_bee_functions1_instruction: "Collect all the nectar from each flower."
-      grade4_bee_functions10_instruction: "Use the given function to collect nectar
-        from each flower."
-      grade4_bee_functions11_instruction: "Create a function to turn, move forward
-        and make 3 honey, then return the bee to where it started and turn back."
+      grade4_bee_functions10_instruction: "Create a function to collect all of the
+        nectar from each flower."
+      grade4_bee_functions11_instruction: "Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back."
       grade4_bee_functions2_instruction: "Functions are blocks of code that perform
         a task. Use the \"get 2 nectar\" function to collect the nectar from each
         flower."
-      grade4_bee_functions3_instruction: "Functions are blocks of code that perform
-        a task.  \r\n\r\nUse the `get 5` function to get 5 nectars at a time."
-      grade4_bee_functions4_instruction: "The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse
-        the function to collect all of the nectar."
+      grade4_bee_functions3_instruction: "Build the `get 5` function to use in this
+        puzzle."
+      grade4_bee_functions4_instruction: "Use the `move and get nectar` function
+        to collect all of the nectar."
       grade4_bee_functions5_instruction: "This puzzle will be deleted!"
       grade4_bee_functions6_instruction: "Now write the function to collect nectar
         from the flowers."
@@ -3918,9 +3934,8 @@ en:
       grade4_bee_functions8_instruction: "Create your own function that goes down
         a path, gets nectar, makes honey, and then returns the bee to the top of the
         path. Then collect all the nectar and make all the honey!"
-      grade4_bee_functions9_instruction: "These flowers can have a different amount
-        of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects
-        all of the nectar from each flower."
+      grade4_bee_functions9_instruction: "Create a function that collects all of
+        the nectar from each flower."
       grade4_bee_nestedLoops0_instruction: "Use a loop to collect all of the nectar."
       grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.
         Use a nested loop. "

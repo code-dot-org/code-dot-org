@@ -1,4 +1,4 @@
-"pt":
+"pt-BR":
   slides:
     maze_intro:
       1:
@@ -3202,3 +3202,123 @@
           algo continuamente. Aprender sobre o funcionamento dos comandos de repetição
           vai ajudar você a economizar muito tempo no futuro, quando você criar seu
           próprio jogo.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Oi, meu nome é Jens. Sou o líder de design criativo do Minecraft. Na
+          próxima hora, você vai fazer seu próprio Minecraft. Isso parece com Minecraft,
+          mas o mundo parou. As ovelhas não estão se movendo, as galinhas não estão
+          pondo ovos, e os zumbis estão parados. Cabe a você criar os códigos para
+          fazer o mundo de Minecraft funcionar.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Meu nome é Melissa, sou pesquisadora de usuários do Minecraft. Meu
+          principal interesse é saber como as pessoas pensam e interagem com a tecnologia.
+          Assim, este trabalho é perfeito para juntar a engenharia da computação com
+          a psicologia: como as pessoas pensam e se comportam.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Você vai ver sua tela dividida em três partes principais. 1) À esquerda
+          está o jogo do Minecraft. No momento, o mundo está congelado, mas vamos
+          consertar isso com códigos.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Essa área do meio é a caixa de ferramentas. Cada um desses blocos
+          é um comando que galinhas, ovelhas e outras criaturas do Minecraft podem
+          entender.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) O espaço à direita é o espaço de trabalho, e é aqui que vamos construir
+          nosso programa.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Se você se esquecer do que deve fazer, as instruções para cada nível
+          estão no topo da página.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Para começar, vamos programar uma galinha. Vamos arrastar o comando
+          "mover para a frente" até a área de trabalho. Quando eu clicar em "Executar",
+          a galinha avança um passo. Para ir adiante, vou arrastar outro "mover para
+          a frente" abaixo do primeiro bloco até que o destaque apareça. Depois eu
+          vou soltá-lo e os dois blocos vão se juntar. Se eu clicar em "Executar"
+          de novo, a galinha andará dois passos.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Se você quiser deletar um bloco, é só tirá-lo da pilha e arrastar de
+          volta à caixa de ferramentas.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Depois de clicar em "Executar" você sempre pode clicar em "Redefinir"
+          para redefinir o jogo e recomeçar. Agora, é sua vez de fazer sua própria
+          versão do Minecraft. Divirta-se!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Oi, eu sou a Lisa. Sou uma desenvolvedora de software do Minecraft e
+          trabalho em alguns dos animais e inimigos do jogo. Um dos animais em que
+          eu trabalhei é a jaguatirica. Eu trabalhei na parte em que você pode alimentá-la
+          com um peixe para ela virar seu gato.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Nós, humanos, ficamos entediados se fazemos a mesma coisa de novo e
+          de novo. O legal nos computadores é que eles podem fazer a mesma coisa milhões
+          ou até bilhões de vezes consecutivas, sem ficarem entediados. Chamamos essa
+          repetição de laço, e todas as criaturas do Minecraft usam laços.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Antes, fizemos uma galinha se mover pela tela, mas depois ela parou.
+          No Minecraft, as galinhas andam por aí o tempo todo. Vamos usar um laço
+          "fazer eterno" em nossa caixa de ferramentas para manter as galinhas andando
+          por aí. O poder dos laços vai poupar muito tempo e abrirá todo tipo de opções
+          divertidas para você fazer sua própria versão do Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Neste próximo nível, você pode escolher ser Alex ou Steve. Aperte as
+          teclas de seta no seu teclado para ir para cima, para baixo, para a esquerda
+          e para a direita. Agora você pode ir aonde quiser em um nível. Para usar
+          uma criatura, caminhe até ela, vire para encará-la, e aperte a barra de
+          espaço.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Se estiver usando uma tela sensível ao toque, deslize o dedo para cima,
+          para baixo, para a esquerda e para a direita para se mover. Para usar o
+          item à sua frente, toque no jogo.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Mas, o que acontece ao usar algo? No Minecraft, ovelhas derrubam lã
+          quando você as tosquiar, vacas fogem quando atacadas e creepers explodem
+          quando você chega perto. Essas reações acontecem graças a algo que chamamos
+          de eventos. Os eventos dizem ao seu programa para esperar até algo acontecer.
+          E, quando acontecer, fazer algo.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Até agora, você usou um evento. O código que você colocou no espaço
+          "ao invocar" executa quando sua criatura é criada ou quando o jogo começa.
+          Nos próximos níveis, você terá novos espaços para eventos, como "ao tocar",
+          que executa quando você toca na criatura, ou "ao usar", para quando você
+          usar a criatura. Ou, se você quer que seu zumbi desapareça quando o sol
+          aparece, coloque isso no espaço "durante o dia"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Nos jogos, invocar pode ser o mesmo que criar. Neste nível, vamos invocar
+          zumbis quando o sol se põe. Para fazer isso, vamos usar o bloco "durante
+          a noite".
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Como queremos que os zumbis apareçam à noite, vamos colocar o bloco
+          "invocar zumbi" abaixo do bloco "durante a noite". Assim que for criado,
+          cada zumbi vai executar o código que você colocar no espaço "ao invocar".
+          Divirta-se invocando zumbis!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Parabéns! Você aprendeu a usar comandos de ciências da computação para
+          trazer o mundo de Minecraft à vida. Agora é você quem desenvolve. Você desbloqueou
+          todos os comandos e todas as criaturas. Você escolhe o que acontece.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Quando você tiver terminado seu jogo, escolha compartilhar para conseguir
+          um link que você pode mandar para seus amigos, ou para acessar seu jogo
+          no celular. Divirta-se! Estou ansioso para jogar sua versão do Minecraft.

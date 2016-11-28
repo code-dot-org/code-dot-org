@@ -30,7 +30,7 @@ sv:
           title: Kurs 2
           description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa program för att lösa problem och utveckla interaktiva spel eller berättelser som de kan dela. Rekommenderas för årskurserna 2-5.
           description_short: Kurs 2 är utformad för elever som kan läsa.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Åldrar 6 + (läsförmåga krävs)
           stage:
             'Artist: Debugging': 'Konstnären: Felsökning'
             'Artist: Loops': 'Konstnären: Slingor'
@@ -53,7 +53,7 @@ sv:
             Your Digital Footprint: Ditt digitala fotavtryck
         course3:
           title: Kurs 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats i föregående kurser för att skapa flexibla lösningar till mer komplexa problem. I slutet av kursen skapar eleverna interaktiva berättelser och spel som de kan dela. Rekommenderas för årskurs 4-5.
           description_short: Kurs 3 är en uppföljning till kurs 2.
           description_audience: Åldrar 8 + (efter kurs 2)
           stage:
@@ -104,7 +104,7 @@ sv:
             Artist: Konstnären
         course4:
           title: Kurs 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Kurs 4 är utformad för elever som har gjort kurserna 2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning. När kursen är klar, kommer eleverna att skapa program som låter dem visa upp flera färdigheter, inklusive för loopar och funktioner med parametrar. Rekommenderas för årskurs 4-8.
           description_short: Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.
           description_audience: Åldrar 10 + (efter kurs 3)
           stage:
@@ -1455,6 +1455,8 @@ sv:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1724,7 +1726,7 @@ sv:
             Classes: Classes
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
-            Peer Review: Peer Review
+            Peer Review: Din recension
             Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
@@ -2139,6 +2141,10 @@ sv:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2198,7 +2204,7 @@ sv:
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
-            Peer Review: Peer Review
+            Peer Review: Din recension
             Box Model and Page Layout: Box Model and Page Layout
             Digital Footprint: Digital Footprint
             Publishing a Website: Publishing a Website
@@ -2257,8 +2263,8 @@ sv:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Programmet djur och andra Minecraft varelser i din egen version av Minecraft.
+          description: Programmet djur och andra Minecraft varelser i din egen version av Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ sv:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Trygg resa
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ sv:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Verklighetsalgoritmer: Så ett frö'
+            Your Digital Footprint: Ditt digitala fotavtryck
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ sv:
             Binary Bracelets: Binära armband
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Ditt digitala fotavtryck
+            Building a Foundation: Bygga en grund
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ sv:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Digitalt medborgarskap
+            'Unplugged: Binary': 'Ouppkopplad: Binärt'
+            Artist Binary: Artist binär
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ sv:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Crowdsourcing
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ sv:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Låtskrivande Med parametrar
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,10 +2429,10 @@ sv:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Sport
+          title: Sport
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Koda din egen sport
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2448,6 +2466,20 @@ sv:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

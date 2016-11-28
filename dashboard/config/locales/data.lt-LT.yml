@@ -323,6 +323,27 @@
         bounce_12_basketball: Create your own Basketball game. You can change all
           the rules. When you're done, click Finish to let friends try your game on
           their phones.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
+          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
+          until it hits the flag.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice!
+        bounce_11_sports: You can now attach blocks to the "when run" block. You have
+          to attach the new "throw new ball" block in more than one place. Also, try
+          changing the scene or the speed of the hand and the ball and see how many
+          points you can score before your opponent scores twice!
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą.
           Kad pasiektum tikslą, judink raketę su rodykle.
         bounce_2: Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“
@@ -778,6 +799,11 @@
         iceage_intro: Ledynmečio programavimo valanda – Įvadas
         iceage_events: Ledynmečio programavimo valanda – renginiai
         iceage_repeat: Ledynmečio programavimo valanda – kartojimo sakiniai
+        mc_2016_intro: Minecraft Hour of Code - Introduction
+        mc_2016_loops: Minecraft Hour of Code - Loops
+        mc_2016_events: Minecraft Hour of Code - Events
+        mc_2016_spawn: Minecraft Hour of Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - Congratulations
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
@@ -850,7 +876,7 @@
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
-        change_here: Make your change here
+        change_here: "Štai čia įterpk savo pakeitimą"
         write_draw_square_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
           kvadratą
         write_draw_triangle_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
@@ -870,7 +896,7 @@
           marks
         arrows_move_actor: Naudok rodykles, kad pajudintum veikėją
         right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        name_function: "Štai čia parašyk savo funkcijos pavadinimą"
         Infinity_move_right_runbutton: Pridėti judėjimo blokelį čia
         Infinity_move_directions_callout: Kuris blokelis privers Baymax judėti aukštyn,
           kai yra nuspausta rodyklė aukštyn?

@@ -543,11 +543,7 @@
     C1_pair_programming:
       1:
         image: notes/C1_pair_programming_1.png
-        text: Today we're going to learn about Pair Programming. In pair programming
-          you work as a team. Why should two people use one computer? Because two
-          heads are better than one. In pair programming you and your partner are
-          going to sit down together at one computer and you are both going to work
-          on the same project.
+        text: "今天我們要來學習雙人程式設計的概念。在雙人合作程式設計時你們是一個團隊。為什麼要讓兩人使用同一台電腦？因為合作的力量要比單打獨鬥強。在雙人合作程式設計時，你和你的夥伴要一起坐在一台電腦前，合作執行同一個專案。"
       2:
         image: notes/C1_pair_programming_2.png
         text: https://crowdin.com/translate/codeorg/38/enus-zhtw#49894
@@ -815,11 +811,7 @@
         text: "迴圈是一個重複動作。我進到蜂巢裡，拿起一個框做檢查、再放回去，我重複這動作很多次。這就是迴圈，重複相同的動作很多次。"
       2:
         image: notes/C2_bee_loops_2.png
-        text: This is the repeat block. Whatever you put inside the repeat block will
-          repeat those actions the number of times that you tell it to. For example,
-          in this level, rather than drag out move forward and get nectar three times,
-          we're going to just drag them out once each and repeat the action three
-          times. That made it easy!
+        text: 這是“重複”積木。不論你在重複積木裡放了些什麼動作積木，程式都會按照你告訴它的重複次數，重複這些動作。例如，在這個關卡中，與其重複拖拉“向前移動”與"採花蜜"各3次，還不如拖拉“向前移動”與"採花蜜"各1次，並且放到重複積木中，重複這組動作3次。這樣是不是更簡單了！
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -2642,3 +2634,77 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: "嗨，我是 Jens，擔任 Minecraft 首席創意設計師。下一小時，會請你創造自己的 Minecraft 遊戲。這看來像 Minecraft，世界卻已停頓。綿羊沒在動，雞不下蛋，殭屍只是站得挺直。你可隨意加入程式碼，讓
+          Minecraft 世界運作。"
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: 研究人們的思考方式與行為。'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: "你會看到，畫面分割為三個主要部分。1) 左側是 Minecraft 遊戲。現在世界雖然凍結，但我們會用程式碼解決。"
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) 這個中央區是工具箱。這些方塊各是一個指令，是雞、綿羊和 Minecraft 其他生物所能瞭解的。
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) 右側的空間稱為工作空間，是我們建置程式的地方。
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: "若你忘了怎麼做，各關卡的指示在頂端。"
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: 首先，我們要設計雞的程式。我們把 "往前移動" 指令拖到工作空間。我按 "執行" 時，雞會往前一步。為了繼續走，我再把一個 "往前移動"方塊放在第一個
+          "往前移動" 方塊下，至開始強調顯示。這時我再放掉，兩方塊便會貼緊。若我再度按 "執行"，雞會走兩步。
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: "若你想要刪除方塊，只需從堆疊移除，拖回工具箱。"
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: 按下 "執行" 之後，隨時可按 "重置" 按鈕，重置遊戲，從頭再來。現在，該你製作自己版本的 Minecraft。祝你玩得愉快！
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: "嗨，我是 Lisa。我是 Minecraft 的軟體開發師，負責遊戲中的一些動物和敵人。我處理過一種豹貓。那部分是可以拿魚餵豹貓，馴化成為你自己的貓。"
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: "身為人類，遇到一再相同的事物容易厭倦。不過電腦很酷的地方就是同一件事能連續做百萬、甚至數十億遍，卻毫不厭倦。這種重複稱為循環，Minecraft
+          中的每一生物都用循環。"
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: 早先，我們讓雞走過畫面，但後來就停止了。Minecraft 中的雞會永遠不停地四處漫步。我們來使用工具箱的 "永遠執行" 循環，使我們的雞也始終四處移動。運用循環的能耐可省下大把時間，開闢各種精闢選項，讓你建置本身版本的
+          Minecraft。
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: "接下來這一關，你可選擇要當史提夫還是愛莉克斯。按鍵盤的方向鍵可上、下、左、右移動。現在你可在關卡內任意移動。若要使用生物，只需走過去，轉向面對它，再按空格鍵。"
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: "若你使用觸控螢幕，往上、下、左、右滑動即可四處移動。接著輕觸遊戲，使用你正前方的物品。"
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: "不過，使用起來會怎麼樣？在 Minecraft 中，幫綿羊修剪時會掉出羊毛，乳牛被你擊中時會跑開，苦力怕在你接近時會爆炸。之所以能有這些反應，得感謝稱為事件的這種項目。事件可以告訴你的程式，傾聽或等候某件事發生。等發生時，再執行一個動作。"
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: 目前，你已使用一個事件。你放進 "當增生時" 欄的程式碼會在你的生物創造出來或遊戲開始時執行。後幾個關卡當中，你會有新的事件欄可用，例如
+          "當碰觸時" 會在你碰觸生物時執行，或 "當使用時" 在使用生物時執行。或者，若你希望太陽升起時殭屍會消失，請把它放進 "當白天時" 欄。
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: 在遊戲中，增生指創造相同東西的意思。這個關卡，我們要在太陽下山時讓殭屍增生。作法是使用 "當夜晚時" 方塊。
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: 因為我們要殭屍在夜晚增生，所以應把 "增生殭屍" 方塊加在 "當夜晚時" 方塊之下。每具殭屍一旦增生，都會執行你放在它們的 "當增生時"
+          事件欄位中的程式碼。祝你增生殭屍玩得愉快！
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: "恭喜！你已學會用電腦科學指令讓 Minecraft 世界活起來。你現在已是開發師。你已解鎖全部指令和所有生物。發生什麼事隨你選擇。"
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: "把遊戲製作完成後，選擇分享可取得連結，用來分享給好友，或到手機玩你的遊戲。祝你玩得愉快！我很期待玩你所做版本的 Minecraft 喔。"

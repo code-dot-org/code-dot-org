@@ -9,7 +9,7 @@
   "collectorCollectedEverything":"恭喜！你收集到了所有的 {count} 个项目！",
   "collectorCollectedNothing":"坚持编下去！你需要尽可能多地收集物品。",
   "collectorCollectedSome":"真棒！你收集到了 {count} 个物品！",
-  "collectorCollectedNotEnough":"Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
+  "collectorCollectedNotEnough":"坚持编下去！你需要收集至少 {goal, plural, one {1 个物品} other {# 物品}}.",
   "collectorCollectedTooMany":"那个空间没有足够的物品来收集。",
   "collectorTooManyBlocks":"你只能够使用 {blockLimit} 个模块。检查一下你的代码然后再试一试！",
   "continue":"继续",

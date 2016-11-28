@@ -9,7 +9,7 @@
   "collectorCollectedEverything":"Felicitări! Ați colectat toate cele {count} obiecte!",
   "collectorCollectedNothing":"Continuă să programezi! Trebuie să colectezi cât de multe obiecte poți.",
   "collectorCollectedSome":"Bună treabă! Ai colectat {count} obiecte!",
-  "collectorCollectedNotEnough":"Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
+  "collectorCollectedNotEnough":"Continuă să programezi! Trebuie să colectezi cel putin {goal, plural,one {1 item}other {# itemi}}.",
   "collectorCollectedTooMany":"Spațiul respectiv nu are suficiente elemente pentru a le colecta.",
   "collectorTooManyBlocks":"Poți folosi numai {blockLimit} blocuri. Aruncă o privire la codul tău și încearcă din nou!",
   "continue":"Continuă",

@@ -299,7 +299,7 @@
   "moveSprite": "move",
   "moveSpriteN": "move actor {spriteIndex}",
   "toXY": "to x,y",
-  "moveDown": "move down",
+  "moveDown": "pastga yuring",
   "moveDownTooltip": "Move an actor down.",
   "moveLeft": "move left",
   "moveLeftTooltip": "Move an actor to the left.",

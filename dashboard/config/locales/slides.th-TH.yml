@@ -3082,3 +3082,122 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: |-
+          สวัสดีครับ ผมชื่อ เจนส์ และผมเป็นหัวหน้าทีมสร้างสรรค์และออกแบบเกม Minecraft
+          ในชั่วโมงถัดไป คุณจะได้สร้างเกม Minecraft ในแบบฉบับของคุณเอง
+          ทุกอย่างจะดูเหมือนกับเกม Minecraft ในภาคปกติ แต่ทุกอย่างในโลกจะหยุดลง
+          แกะจะไม่เดินไปไหน ไก่จะไม่วางไข่ ซอมบี้จะยืนอยู่นิ่งๆ
+          มันขึ้นอยู่กับคุณที่จะเพิ่มโค้ดเพื่อให้โลก Minecraft กลับมาทำงานอีกครั้ง
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: |-
+          ฉันชื่อ เมลิซซ่า และฉันเป็นนักวิจัยผู้ใช้งาน ที่ Minecraft
+          ในงานนี้ สิ่งที่ฉันสนใจอย่างจริงจัง จะเป็นเรื่องที่ผู้คนคิดและมีปฏิสัมพันธ์กับเทคโนโลยีอย่างไร
+          และงานนี้มันเป็นงานที่ยอดเยี่ยมมากสำหรับฉันที่จะทำให้วิศวกรรมคอมพิวเตอร์และจิตวิทยาเรื่องการคิดและการกระทำของมนุษย์ไปด้วยกันได้
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: |-
+          คุณจะเห็นว่าหน้าจอถูกแบ่งออกเป็นสามส่วนหลักๆ ได้แก่
+          1)ส่วนพื้นที่ด้านซ้ายสุดจะเป็น Gamespace ใช้สำหรับเล่นเกม Minecraft
+          ซึ่งตอนนี้ทั้งโลกหยุดนิ่งไปหมด เราต้องช่วยกันแก้ปัญหานี้ด้วยการเขียนโค้ด
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2)ส่วนพื้นที่ตรงกลางคือ Toolbox กล่องต่างๆในพื้นที่นี้คือชุดคำสั่งที่ไก่
+          แกะและสัตว์อื่นๆใน Minecraft สามารถเข้าใจคำสั่งได้
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: |-
+          3)ส่วนพื้นที่ด้านขวาเราเรียกว่า workspace หรือพื้นที่ทำงาน
+          ซึ่งเป็นพื้นที่ ที่จะใช้สร้างโปรแกรมของเรา
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: "และหากคุณลืมไปว่าต้องทำอะไร ก็จะมีคำแนะนำสำหรับแต่ละด่านอยู่ด้านบน"
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: "ในการเริ่มต้น เราจะเขียนโปรแกรมให้กับไก่\nให้ลากกล่องคำสั่ง 'move forward'
+          ไปยัง workspace\nและเมื่อฉันคลิกที่ปุ่ม Run ไก่ก็จะเดินไปข้างหน้าหนึ่งก้าว\nขั้นตอนต่อไป
+          ฉันจะทำการลากคำสั่ง 'move forward' อีกกล่อง\nไปไว้ภายใต้คำสั่ง 'move forward'
+          ตัวแรกจนกระทั่งมีแถบสีส้มสว่างปรากฎขึ้นมา \nจากนั้นให้ปล่อยเมาส์แล้วคำสั่งทั้งสองกล่องก็จะติดเข้าด้วยกัน\nและเมื่อฉันคลิกที่ปุ่ม
+          Run อีกครั้ง ไก่ก็จะเดินไปสองก้าว"
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: "เมื่อใดที่คุณต้องการจะลบกล่องคำสั่ง ก็แค่ลบออกจากชุดคำสั่งที่ต่อกันอยู่
+          โดยการคลิกลากกลับมาที่ Toolbox"
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: |-
+          หลังจากคุณคลิกที่ปุ่ม Run คุณสามารถคลิกที่ปุ่ม Reset เพื่อเริ่มเกมใหม่ได้ตลอดเวลา
+          เอาล่ะ ตอนนี้ถึงตาคุณแล้วที่จะสร้างเกม Minecraft ในแบบฉบับของคุณเอง ขอให้สนุกนะทุกคน!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
+          of the animals and enemies in the game. One of the animals that I worked
+          on is the ocelot. I worked on the part where you can feed an ocelot a fish
+          to tame it into your own cat.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

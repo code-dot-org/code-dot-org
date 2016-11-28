@@ -82,7 +82,7 @@ sk:
     student_count: '%{count} študentov sa už zaregistrovalo.'
     teacher_count: '%{count} učitelov sa už zaregistrovalo.'
     overview: 'Prihlás sa na účet, aby si mohol sledovať svoj pokroky alebo spravovať svoju triedu. <a href="/">Môžeš prechádzať jednotlivé stupne a skladačky</a> aj bez účtu, ale ak budeš chcieť uložiť svoje pokroky alebo projekty, musíš sa Zaregistrovať.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_heading: 'Začať bez prihlasovania sa'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'Pozrieť príručku učiteľa'
     title: "Zaregistruj sa na Code.org"
@@ -490,7 +490,7 @@ sk:
       body: "Preskúmajte Minecraft svet prostredníctvom kódu."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft."
     unplugged:
       title: "Hody bez použitia počítača"
       audience: "Vek 4+"

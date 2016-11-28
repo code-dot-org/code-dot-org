@@ -94,6 +94,14 @@
     overview: Maak een account aan om je vorderingen te volgen of je klad te managen.<a
       href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je
       vorderingen en projecten wil opslaan dan moet je ingelogd zijn.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Kijk in de lerarengids
     title: Log in voor Code.org
     school_name: School naam (optioneel)
@@ -142,13 +150,13 @@
     picture: Zoek nu je geheime afbeelding
     words: Vul nu je geheime woorden in
     login: Aanmelden
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Onjuiste login, probeer opnieuw
+    pair_programming: Ik werk met een partner achter de computer
   password:
     reset_form:
       title: Wachtwoord vergeten?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Vul hieronder uw e-mail adres in en wij sturen u instructies voor
+        het opnieuw instellen van het wachtwoord.
       email: Email-adres
       submit: Insturen
     change_form:
@@ -299,7 +307,7 @@
       prizes: Prijzen
       logout: Uitloggen
       signin: Aanmelden
-      signup: Meld je aan
+      signup: Maak een account aan
       already_registered: Al aangemeld?
       pair_programming: Programmeren in Tweetallen
       team: Team
@@ -340,8 +348,8 @@
       submitted_on: Ingeleverd op %{date}
       unsubmit: Intrekken
       worked_with: Werkte samen met
-      update_lock_settings: Update lock settings here.
-      clear_response: Clear response
+      update_lock_settings: Update lock instellingen hier.
+      clear_response: Wis het antwoord
   user:
     email_confirm_needed: 'Emailadres is niet bevestigd:'
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
@@ -427,7 +435,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Leer meer
     announcement_try_now_button: Probeer nu
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Verzorg een uur
     announcement_petition: Als leerkracht neemt u het voortouw in een beweging die
       elke leerling op elke school de mogelijkheid geeft om informatica te leren.
       Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven
@@ -435,13 +443,25 @@
       een open brief aan het Amerikaanse Congres met de vraag om informatica op de
       basisschool te financieren.
     announcement_petition_button: Voeg je naam toe
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_all: Blijf up-to-date met nieuws en updates op onze blog voor docenten.
+      <a href='%{teacher_blog_url}' target='_blank'> Bekijk eerdere aankondigingen.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
       start teaching computer science during the Hour of Code this December 5-11.
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Sorry, maar de groep %{new_section_code} bestaat niet. Vul een
       andere groepscode in.
@@ -612,6 +632,9 @@
     minecraft:
       title: Minecraft
       body: Ontdek een Minecraft-wereld met code.
+    minecraft2016:
+      title: Minecraft
+      body: Program animals and other Minecraft creatures in your own version of Minecraft.
     unplugged:
       title: "'Unplugged' lessen"
       audience: Leeftijden 6+
@@ -748,7 +771,6 @@
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accepteren
     print: Afdrukken
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching

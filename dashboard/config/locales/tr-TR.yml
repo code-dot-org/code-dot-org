@@ -95,6 +95,14 @@
     overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
+    hoc_already_signed_up_heading: Giriş yaparak başla
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Eğitim rehberine bakın
     title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
@@ -334,7 +342,7 @@
       unsubmit: Gönderme
       worked_with: "İle çalıştı"
       update_lock_settings: Kilit ayarlarını burada değiştirin.
-      clear_response: Clear response
+      clear_response: Net yanıt
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -419,7 +427,7 @@
       ve kendibaşına kullanılabilen bileşenler oluşturduk!"
     announcement_learn_more_button: Daha fazlasını öğren
     announcement_try_now_button: "Şimdi dene"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
       bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
       izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
@@ -428,11 +436,24 @@
     announcement_petition_button: Adınızı Ekleyin
     announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
       takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
+      ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
+      organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a
+      href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
+      başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
+      öğretmeye başlayabileceğini söyleyin.
+    announcement_hoc_scaling: 'DİKKAT, Ders 1-4 ve hızlandırılmış kurs için öğretmenlere
+      uyarı: milyonlarca öğrenci Kod Saati  etkinliğinde çalıştığından aşırı trafik
+      oluşmaktadır, bu nedenle <b>3-11 aralık tarihlerinde öğrenci çalışmaları kayıt
+      edilmeyecektir.</b>  Sınıfınızda Kod Saati etkinlikleri yaparak Bilgisayar Bilimleri
+      Eğitimi Haftası'' nı kutlamanızı öneririz. Kod Saati etkinlikleri bu hafta kayıt
+      yapmamasına rağmen, öğrenciler etkinlikler yapabilir ve sertifika kazanmaya
+      devam edebilirler.'
+    announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
+      Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
+      oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
+      paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
+      sınıfınla birlikte yap.
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin."
@@ -584,7 +605,7 @@
     frozen:
       title: Donmuş
     starwars:
-      title: Star Wars
+      title: Yıldız Savaşları
     infinity:
       title: Sınırsız oyun laboratuarı
       body: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play
@@ -592,9 +613,13 @@
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    minecraft2016:
+      title: Minecraft
+      body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
+        programla.
     unplugged:
       title: Bağımsız dersler
-      audience: 6 yaş ve üzeri
+      audience: 4 yaş ve üzeri
       body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
         bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
         Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
@@ -726,25 +751,24 @@
       kabul ediyorum
     accept: Kabul et
     print: Yazdır
-    later: Sonra
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
       <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi.
       Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği
       güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki
+      ilerlememizi izlememize yardımcı olun'
+    message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Beyaz
+    - black: Siyahi veya Afrika kökenli Amerikalı
+    - hispanic: "İspanyol veya Latin"
+    - asian: Asyalı
+    - hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+    - american_indian: Amerikalı Kızılderili / Alaska Yerlisi
     - other: Diğer
-    - opt_out: Prefer not to say
+    - opt_out: Söylememek istemiyorum
     submit: Gönder
     decline: Kapat
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.

@@ -358,8 +358,8 @@ it:
     announcement_petition_button: "Aggiungi il tuo nome"
     announcement_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
     announcement_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 'AVVISO per gli insegnanti che usano i Corsi 1-2-3-4 e il Corso Rapido: a causa dell''elevato traffico causato da milioni di studenti, la piattaforma <b>studio. code. org non salverà né segnalerà i progressi degli studenti relativi a questi Corsi nel periodo tra il 3 e l''11 dicembre</b>. Vi raccomandiamo comunque di svolgere una delle Ore del Codice con le vostre classi per festeggiare l''Ora del Codice durante la Settimana Internazionale di Educazione all''Informatica. Al termine dell''Ora del Codice gli studenti possono ottenere l''attestato di completamento. Se sei un insegnante in Italia usa gli attestati personalizzati di <a href="http://www. programmailfuturo. it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>.'
+    announcement_mc_launch: "Uno delle nostre esercitazioni dell'Ora del Codice più popolari adesso ha un seguito! Il nuovissimo <b>Progetta il tuo Minecraft</b> permette allo studente di definire le sue regole del mondo di Minecraft. Potrà così creare un'esperienza con Minecraft del tutto unica, e condividerla con i suoi amici e giocarci insieme a loro. Svolgila nella tua classe come Ora del Codice."
   move_students:
     new_section_dne: "Ci dispiace, la classe col codice %{new_section_code} non esiste. Inserisci un codice di classe esistente."
     section_code_not_entered: "Inserisci il codice di classe."
@@ -490,7 +490,7 @@ it:
       body: "Esplora il mondo di Minecraft attraverso il codice."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
     unplugged:
       title: "Lezioni Tradizionali"
       audience: "Età 4+"

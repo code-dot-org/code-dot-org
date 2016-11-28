@@ -1455,6 +1455,8 @@ pt-BR:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2139,6 +2141,10 @@ pt-BR:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2257,8 +2263,8 @@ pt-BR:
             Minecraft Hour of Code Designer: Designer Minecraft Hora do Código
           title: Designer Minecraft Hora do Código
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Construa um jogo de Minecraft. Faça suas próprias versões de galinhas, ovelhas, Creepers, zumbis e mais
+          description_short: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
+          description: Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ pt-BR:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Navegando com segurança
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ pt-BR:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Algoritmos da vida real: plante uma semente'
+            Your Digital Footprint: Seu rastro digital
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ pt-BR:
             Binary Bracelets: Pulseiras binárias
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Seu rastro digital
+            Building a Foundation: Criando uma base
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ pt-BR:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Cidadania digital
+            'Unplugged: Binary': 'Offline: binário'
+            Artist Binary: 'Artista: binário'
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ pt-BR:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Crowdsourcing
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ pt-BR:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Composição de música com parâmetros
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,10 +2429,10 @@ pt-BR:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Esportes
+          title: Esportes
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Codifique o seu próprio esporte
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2448,6 +2466,20 @@ pt-BR:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
