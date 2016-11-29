@@ -4,11 +4,11 @@ set -e # Exit on error
 echo "Going to build and deploy storybook to cdo-styleguide gh-pages repo"
 
 DIR_TO_DEPLOY=storybook-deploy
-if [ -z "$STORYBOOK_GH_REPO_TOKEN" ]
+if [ -z "$CDO_STYLEGUIDE_REPO_TOKEN" ]
 then
     REPO="git@github.com:code-dot-org/cdo-styleguide.git"
 else
-    REPO="https://${STORYBOOK_GH_REPO_TOKEN}@github.com/code-dot-org/cdo-styleguide.git"
+    REPO="https://${CDO_STYLEGUIDE_REPO_TOKEN}@github.com/code-dot-org/cdo-styleguide.git"
 fi
 echo "USING REPO: $REPO"
 SHA=`git rev-parse --verify HEAD`
