@@ -567,7 +567,9 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
+    # The following line was resulting in more noise than we wanted in our test room.
+    # May make sense to reenable (or log to a different room) in the future
+    # HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
     HipChat.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"
     short_message = message
