@@ -101,6 +101,7 @@ class HttpCache
               /minecraft
               /starwars
               /playlab
+              /sports
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
