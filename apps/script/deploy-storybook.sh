@@ -4,7 +4,13 @@ set -e # Exit on error
 echo "Going to build and deploy storybook to cdo-styleguide gh-pages repo"
 
 DIR_TO_DEPLOY=storybook-deploy
-SSH_REPO=git@github.com:code-dot-org/cdo-styleguide.git
+if [ -z "$STORYBOOK_GH_REPO_TOKEN" ]
+then
+    REPO="git@github.com:code-dot-org/cdo-styleguide.git"
+else
+    REPO="https://${STORYBOOK_GH_REPO_TOKEN}@github.com/code-dot-org/cdo-styleguide.git"
+fi
+echo "USING REPO: $REPO"
 SHA=`git rev-parse --verify HEAD`
 
 # get rid of old build if it is still around for some reason
@@ -31,7 +37,7 @@ popd
 echo "Pushing to github... cloning gh-pages branch"
 # Clone the gh-pages branch to /tmp/pages
 rm -rf /tmp/pages
-git clone --branch gh-pages --single-branch --depth 1 -- $SSH_REPO /tmp/pages
+git clone --branch gh-pages --single-branch --depth 1 -- $REPO /tmp/pages
 
 # Delete the old release
 rm -rf /tmp/pages/*
@@ -52,7 +58,7 @@ git add --all
 git commit -m "Update GitHub Pages: $SHA"
 # Push our updated gh-pages branch
 echo "Pushing to github... pushing new gh-pages branch"
-git push $SSH_REPO gh-pages
+git push $REPO gh-pages
 
 echo "cleaning up!"
 # clean up after ourselves
