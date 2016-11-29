@@ -111,7 +111,8 @@ var CONFIGS = {
     ],
     paddles: [
       'hand_1',
-      'hand_2'
+      'hand_2',
+      'hand_3'
     ],
     teams: [
       'Atlanta Dream',
@@ -209,6 +210,7 @@ var CONFIGS = {
     paddles: [
       'hand_1',
       'hand_2',
+      'hand_3',
       'hockey_stick',
       'foot'
     ],
@@ -275,6 +277,9 @@ exports.load = function (assetUrl, id) {
   };
   skin.hand_2 = {
     paddle: skin.assetUrl('hand_2.png'),
+  };
+  skin.hand_3 = {
+    paddle: skin.assetUrl('hand_3.png'),
   };
   skin.hockey_stick = {
     paddle: skin.assetUrl('hockey_paddle.png'),
