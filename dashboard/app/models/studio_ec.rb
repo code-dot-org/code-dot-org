@@ -51,8 +51,8 @@ class StudioEC < Studio
   end
 
   def update_palette
-    if self.code_functions.present? && self.code_functions.is_a?(String)
-      self.code_functions = JSON.parse(self.code_functions)
+    if code_functions.present? && code_functions.is_a?(String)
+      self.code_functions = JSON.parse(code_functions)
     end
   end
 
@@ -69,8 +69,8 @@ class StudioEC < Studio
   end
 
   def update_goal_override
-    if self.goal_override.present? && self.goal_override.is_a?(String)
-      self.goal_override = JSON.parse(self.goal_override)
+    if goal_override.present? && goal_override.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
     end
   end
 

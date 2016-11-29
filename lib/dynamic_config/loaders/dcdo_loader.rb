@@ -32,7 +32,7 @@ module DCDOLoader
     commands = []
 
     yaml.each do |k, v|
-      self.validate_setting(k, v)
+      validate_setting(k, v)
       commands << [k, v]
     end
     commands
@@ -50,7 +50,7 @@ module DCDOLoader
   # @param filepath [String]
   def self.load(filepath)
     yaml = File.open(filepath, 'r').read
-    commands = self.yaml_to_commands(yaml)
-    self.apply_commands(commands)
+    commands = yaml_to_commands(yaml)
+    apply_commands(commands)
   end
 end

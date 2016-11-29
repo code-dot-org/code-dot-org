@@ -241,10 +241,7 @@ en:
         Very comfortable!: Very comfortable!
       U2 evaluation q10:
         How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
-        How do you typically organize students in your classes?: How do you typically organize students in your classes?
         Not Comfortable: Not Comfortable
-        Students usually work in small groups: Students usually work in small groups
-        Students usually work independently: Students usually work independently
         Very Comfortable: Very Comfortable
       U2 evaluation q11:
         Students working in small groups to build knowledge: Students working in small groups to build knowledge
@@ -301,12 +298,9 @@ en:
         I have some experience, but would not call myself a pro.: I have some experience, but would not call myself a pro.
         Yes--- I make visualizations frequently!: Yes--- I make visualizations frequently!
       U2 evaluation q9:
-        Answer it yourself: Answer it yourself
         Do you have experience **using or interpreting data visualizations made by other people**?: Do you have experience **using or interpreting data visualizations made by other people**?
         Eh, I look at them occasionally.: Eh, I look at them occasionally.
         I more or less ignore or skim over data visualizations.: I more or less ignore or skim over data visualizations.
-        Put the question to the other students in the classroom: Put the question to the other students in the classroom
-        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
         Yes--- I look at data visualizations all the time!: Yes--- I look at data visualizations all the time!
       U3 evaluation q1:
         I am new and would really love some support!: I am new and would really love some support!
@@ -858,7 +852,6 @@ en:
         title: title
       Discovery Learning in Unit 1: {}
       Documentation in App Lab: {}
-      'Documentation in App Lab ': {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -1587,7 +1580,6 @@ en:
         description here: description here
         title: title
       Personal Website Examples: {}
-      Philosophy of Programming in Unit 3: {}
       Pixelation - Lesson 14 - Instructions Make Your Own:
         Make your own B&W image: Make your own B&W image
         description here: description here
@@ -2208,7 +2200,6 @@ en:
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
-      What is "Big Data" and Why Should we Protect or Data?: {}
       What is "Big" Data and Why Should we Protect or Data?: {}
       What is ASCII?: {}
       What is HTML?: {}
@@ -6199,8 +6190,6 @@ en:
         Moore's Law: Moore's Law
         Powers of 2 Principle: Powers of 2 Principle
         The "Big Data Effect": The "Big Data Effect"
-        description here: description here
-        title: title
       U4L10 Choose 2:
         'Choose 2: simple description here': 'Choose 2: simple description here'
         right1: right1

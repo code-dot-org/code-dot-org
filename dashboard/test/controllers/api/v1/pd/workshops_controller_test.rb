@@ -222,6 +222,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     end
     mock_mail = stub(deliver_now: nil)
     Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
+    Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
 
     put :update, id: @workshop.id, pd_workshop: workshop_params, notify: true
   end
@@ -377,6 +379,21 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'anyone can see the K5 public map index' do
     get :k5_public_map_index
     assert_response :success
+  end
+
+  test 'summary' do
+    sign_in @admin
+    workshop = create :pd_workshop, num_sessions: 3
+    workshop.start!
+
+    get :summary, id: workshop.id
+    assert_response :success
+    response = JSON.parse(@response.body)
+    puts response
+
+    assert_equal workshop.state, response['state']
+    assert_equal workshop.section.code, response['section_code']
+    assert_equal 3, response['sessions'].count
   end
 
   private

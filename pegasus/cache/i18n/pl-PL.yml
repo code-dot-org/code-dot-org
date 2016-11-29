@@ -36,9 +36,12 @@
   twentyhours_heading: Wypróbuj nasz kurs Wstęp do informatyki
   twentyhours_text: Czy ukończyłeś pierwszą Godzinę Kodowania? Poznaj więcej podstawowych
     pojęć informatycznych i dotyczących programowania w tym kursie, który następuje.
-  og_title: Każde dziecko zasługuje na szansę
+  og_title: Zbliża się Godzina Kodowania
   og_description: Każdy uczeń w każdej szkole zasługuje możliwość studiowania (uczenia)
     się informatyki. To zmienia wszystko.
+  csedweek_og_title: Zbliża się Godzina Kodowania
+  csedweek_og_description: Godzina Kodowania jest globalnym ruchem, docierającym do
+    dziesiątków milionów uczniów w każdym wieku w ponad 180 krajach i w ponad 45 językach.
   hoc2014_heading: Dołącz do <a href="http://hourofcode.com"> Godziny Kodowania (Hour
     of Code)</a> <br/> 8-14 grudnia 2014 r. <br/>
   hoc2014_students: Uczniowie
@@ -121,11 +124,12 @@
   third_party_platform_all: 'Platformy: Web, iPad oraz Android'
   third_party_platform_mobile: 'Platforma: iPad i Android'
   third_party_platform_web: 'Platforma: Web'
-  third_party_price_varies: Cenowo plny się różnią
+  third_party_price_varies: 'Cena: Zmienne plany'
   third_party_price_free: 'Cena: bezpłatny'
   third_party_price_299: 'Cena: $2.99/Pobierz'
-  third_party_price_individual: 'Indywidualne Ceny: Free Trial i $ 25 / miesiąc'
-  third_party_price_school: 'Cena dla szkół: darmowe plany i pro w  $ +2.500 +'
+  third_party_price_individual: 'Cena indywidualna: Bezpłatna wersja próbna i $25
+    miesięcznie'
+  third_party_price_school: 'Cena dla szkół: Darmowe plany i wersja pro za $2500 +'
   third_party_tynker_desc: 'Szkolna cena: Darmowe Plany & Pro w $ 2500 + kreatywne
     platformy Tynker do wykonywania obliczeń pomaga dzieciom rozwijać obliczeniowej
     myślenia i umiejętności programowania w przyjemny i intuicyjny i z użyciem wyobraźni
@@ -133,7 +137,7 @@
     oraz działania. Programowanie do gier opartych umożliwiają łatwe wprowadzenie
     do programowania i umożliwić dzieciom do innowacji i tworzenia.'
   third_party_tynker_btn_curriculum: Wypróbuj Tynker program nauczania dla początkujących
-  third_party_tynker_btn_site: Odwiedź Tynker
+  third_party_tynker_btn_site: Odwiedź Tynkera
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
     and games. Children snap together graphical programming blocks to make characters
@@ -147,21 +151,21 @@
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Pobierz Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Odwiedź Scratch
+  third_party_scratch_btn_forum: Forum Nauczycieli Scratcha
+  third_party_scratch_btn_site: Odwiedź Scratcha
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: Pobierz program nauczania z Lightbot
+  third_party_lightbot_btn_site: Odwiedź Lightbot
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_learn: Ucz się informatyki z Akademią Khana
+  third_party_khan_btn_forum: Forum informatyki Akademii Khana
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
@@ -184,10 +188,10 @@
   third_party_codecademy_btn_site: Odwiedź Codeacademy
   third_party_organization: Organizacja
   third_party_curriculum: Program nauczania
-  third_party_pricing: Pricing
+  third_party_pricing: Cennik
   third_party_cost_free: Bezpłatne dla uczniów i nauczycieli
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
+  third_party_cost_5permonth: "$5 miesięcznie na klasę"
+  third_party_cost_299: "$2.99/pobierz"
   third_party_cost_free_399: Free to try, $399/classroom
   third_party_cost_free_2: Free to try, $2/student
   third_party_cost_free_10: Free to try, $9.99/month
@@ -255,9 +259,11 @@
   continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
+  learn_back_to_minecraft: Ucz się z Minecraftem
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg
@@ -367,15 +373,15 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Naucz się więcej
-  homepage_banner_20k_teachers: 20,000 nauczycieli jest wyszkolonych, a teraz uczy
+  homepage_banner_20k_teachers: Wyszkolonych jest 20,000 nauczycieli i teraz uczą
     informatyki w klasach.
   homepage_banner_20k_teachers_link: Ucz się więcej
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
-  homepage_banner_congress_link: Add your support
+  homepage_banner_congress_link: Dodaj swoje wsparcie
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Dowiedz się więcej
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Ucz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
@@ -386,7 +392,7 @@
   homepage_solot_text_link_volunteer: Zostań wolontariuszem w Godzinie Kodowania
   homepage_slot_text_title_students: Uczniowie
   homepage_slot_text_blurb_students: Poznaj wszystkie nasze samouczki
-  homepage_slot_text_blurb_students_courses: Zbadaj nasze kursy
+  homepage_slot_text_blurb_students_courses: Wypróbuj nasze kursy
   homepage_slot_text_link_codestudio: Wypróbuj Studio Kodowania
   homepage_slot_text_link_local: Znajdź klasę w okolicy
   homepage_slot_text_link_othercourses: Pozostałe kursy online
@@ -403,7 +409,7 @@
   homepage_slot_text_link_stats: Zobacz statystyki
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Koszulki, czapki i inne
   homepage_header_codestudio: Twórczość uczniów Studia Kodowania
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
@@ -447,8 +453,10 @@
   class_submission_level_college: Kolegium (College)
   class_submission_level_vocational: Zawodowy
   class_submission_languages_other: Inne języki
-  inspirational_videos_more: Więcej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
-    inspirujących filmów </a> z udziałem osobistości i gwiazd
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: Wybierz własny motyw Play Lab
   playlab_classic_title: Klasyczny
   playlab_gumball_title: Niesamowity świat Gumball
@@ -473,13 +481,39 @@
   mc_gradelevel: Wiek 6 +
   mc_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   mc_specs: Wiele języków | Nowoczesne przeglądarki i tablety | W wieku 6 - 106
+  minecraft_designer: Projektant Minecrafta
+  minecraft_adventurer: Poszukiwacz przygód z Minecraftem
+  minecraft_tutorials: Samouczki Minecrafta w Godzinie Kodowania
+  minecraft_specs: Wiele języków | Nowoczesne przeglądarki i tablety | Klasy 2 +
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Użyj kodu, aby zabrać Alexa lub Steva na wycieczkę.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Nie masz internetu?
+  minecraft_download_adventurer: Pobierz wersję offline Poszukiwacza Przygód z Minecraftem.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Godzina Kodowania z Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
+  watch_inspirational_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących
+    filmów
+  speak_another_language: Czy mówisz w innym języku?
+  help_translate: Pomóż nam z tłumaczeniem.
   no_internet: Nie masz internetu?
-  download_offline: Download the offline version.
+  download_offline: Pobierz wersję do użycia offline.
   are_you_teacher: Czy jesteś nauczycielem?
   review_lesson_plan: Przejrzyj plan lekcji i inne materiały dla nauczycieli.
   volunteer_engineer_submission_title: Inspiruj uczniów i wolontariuszy
@@ -501,8 +535,9 @@
   volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
     jesteś studentem informatyki lub profesjonalnym programistą. Pola oznaczone <span
     class="form-required-field"> *</span> są wymagane.
-  volunteer_engineer_submission_intro_links: Czy chcesz znaleźć wolontariusza? Odszukaj
-    wolontariusza w okolicy na naszej <a href="%{volunteer_local}"> mapie wolontariuszy</a>.
+  volunteer_engineer_submission_intro_links: Czy jesteś nauczycielem poszukującym
+    wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href="%{volunteer_local}">
+    mapie wolontariuszy</a>.
   volunteer_engineer_submission_update_information: Uaktualnij informacje o sobie
   volunteer_engineer_submission_header_shared: Informacje udostępniane nauczycielom
     na mapie wolontariuszy
@@ -683,11 +718,11 @@
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
+  dashboard_surveys_answers: Ankiety
   dashboard_percent: Percent
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_download_csv: Pobierz CSV
   dashboard_navigation_home_page: Domowa strona nauczyciela
   dashboard_navigation_section_student_progress: Konta i postępy ucznia
   dashboard_navigation_section_teacher_progress: Twoje postępy w kursie
@@ -697,13 +732,13 @@
   dashboard_navigation_section_speakers: Informatyka <br/> Gościnni mówcy
   dashboard_navigation_all_sections: Konta i postępy ucznia
   dashboard_navigation_view_progress: Postęp
-  dashboard_navigation_view_text_responses: Wyświetl tekstowe odpowiedzi
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_text_responses: Odpowiedzi tekstowe
+  dashboard_navigation_view_assessments: Oceny
+  dashboard_navigation_view_assessments_surveys: Oceny/ankiety
   dashboard_navigation_add_students: Dodaj uczniów
   dashboard_navigation_manage_students: Zarządzaj uczniami
   dashboard_navigation_lesson_plans_resources: Plany lekcji i zasoby
-  dashboard_navigation_view_stats: Przejrzyj statystyki
+  dashboard_navigation_view_stats: Statystyki
   dashboard_navigation_section: 'Sekcja: %{section_name}'
   dashboard_navigation_student: 'Uczeń: %{student_name}'
   dashboard_progress_not_started: nierozpoczęte
@@ -713,12 +748,14 @@
   dashboard_progress_completed_perfect: zakończona, doskonale
   dashboard_progress_furthest_level_attempted: próbowano najdalszy poziom
   dashboard_progress_submitted: Wysłano
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: 'Zobacz postęp w:'
+  dashboard_progress_student_in_script: Informacje o postępie %{student_name} w %{script_name}
+  dashboard_progress_pair_programming: programowanie w parach
+  dashboard_responses_view: 'Wyświetl odpowiedź dla:'
+  dashboard_responses_none: Większość naszych lekcji jest przeznaczona dla młodszych
+    dzieci i nie wymaga od nich wpisywania odpowiedzi tekstowych, zatem nie znajdziesz
+    ich tutaj. W przypadku kursów dla gimnazjalistów i licealistów, ich odpowiedzi
+    na zadania otwarte znajdziesz wybierając odpowiedni kurs z rozwijanej listy powyżej.
   dashboard_sections_new_section: Nowa sekcja
   dashboard_sections_jumbotron_instruction: Utwórz nowe sekcje i dodaj do nich uczniów.
     Sekcje umożliwiają podział uczniów na mniejsze grupy, dzięki czemu łatwiej jest
@@ -744,15 +781,16 @@
     informacje o kontach, aby indywidualnie wręczyć je swoim uczniom.
   dashboard_sections_switch_section: 'Przełącz sekcję:'
   dashboard_sections_close: Zamknij
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
+  dashboard_sections_move_students_desc: Wybierz uczniów, aby przenieść ich do nowej
+    części. Przeniesienie uczniów nie spowoduje wyczyszczenia ich postępów.
+  dashboard_sections_one_per_teacher: Uczniowie mogą być tylko w jednej sekcji dla
+    każdego nauczyciela. Twoi uczniowie zostaną dodani do tej nowej sekcji i opuszczą
+    ich starą sekcję.
+  dashboard_sections_move_to_section: 'Przejdź do sekcji:'
+  dashboard_sections_enter_code: 'Wprowadź kod sekcji:'
+  dashboard_sections_code_placeholder: 6-znakowy kod (ABCDEF)
+  dashboard_sections_other_section: Inny nauczyciel
+  dashboard_sections_both_sections: Czy chcesz, aby uczeń/uczniowie byli w obu sekcjach?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
@@ -868,16 +906,16 @@
   dashboard_puzzle: "Łamigłówka"
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
-  dashboard_correctness: Correctness
+  dashboard_correctness: Poprawność
   dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness_unsubmitted: Nieprzesłane
   dashboard_correctness_correct: Poprawnie
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_correctness_incorrect: Nieprawidłowe
+  dashboard_submission_submitted: Przesłane
+  dashboard_submission_in_progress: W trakcie
   dashboard_status: Status
   dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
+  dashboard_multi_count: "# wielokrotny wybór"
   dashboard_multi_correct_percent: "% multiple choice correct"
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
@@ -932,11 +970,28 @@
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
   host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
+  learn_banner_title: Dołącz do nas na Godzinę Kodowania
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
     Code event. Help us give every student the opportunity to learn computer science!
@@ -1069,40 +1124,50 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Przyspieszony Kurs
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
+  cspunit2_name: "(stary) Unit 2: Internet"
+  cspunit3_name: "(stary) Unit 3: Programowanie"
+  cspunit4_name: "(stary) Unit 4: Dane"
+  cspunit5_name: "(stary) Unit 5: Wypróbuj i Utwórz PT"
+  cspunit6_name: 'Post-AP: Baz Danych w Aplikacjach'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csp1_name: 'Unit 1: Internet'
+  csp2_name: 'Unit 2: Cyfrowe informacje'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspassessment_name: Pełen test - 50 pytań
+  cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
+  cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
+  cspunit3_gradelevel: Klasy 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Przyspieszony Kurs
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: Informatyka w algebrze
+  AlgebraA_name: Informatyka w Kursie A Algebry
+  AlgebraB_name: Informatyka w Kursie B Algebry
   gumball_name: Gumball
   classicmaze_name: Klasyczny labirynt
   iceage_name: Epoka lodowcowa
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (Bloki)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Matematyka
   hoc_category_name: Godzina Kodowania
-  csf_category_name: CS Fundamentals
+  csf_category_name: Podstawy Informatyki
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
+  research_studies_category_name: Research Studies
   applab_name: App Lab
   applab_gradelevel: Wiek 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
@@ -1835,58 +1900,22 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min

@@ -170,14 +170,14 @@ class CDOImpl < OpenStruct
     return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
     return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
 
-    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
     return domain if rack_env?(:production)
 
     # our HTTPS wildcard certificate only supports *.code.org
     # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
     sep = (domain.include?('.code.org')) ? '-' : '.'
     return "localhost#{sep}#{domain}" if rack_env?(:development)
-    return "translate#{sep}#{domain}" if self.name == 'crowdin'
+    return "translate#{sep}#{domain}" if name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
   end
 
@@ -320,7 +320,7 @@ class CDOImpl < OpenStruct
     require 'aws-sdk'
     servers = Aws::EC2::Client.new.describe_instances(filters: [
         { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
-        { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
+        { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
         { name: 'instance-state-name', values: ['running']}
     ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)

@@ -3,7 +3,7 @@
   hello: Hei, verden
   'yes': Ja
   'no': Nei
-  select_language: Velg ditt språk
+  select_language: Velg språk
   upgrade_ie_message: Code.org vil snart fjerne støtten for Internet Explorer 8, 9
     og 10. Vennligst oppgrader til en moderne nettleser.
   upgrade_ie_message_csedweek: CSEdWeek.org kommer snart til å fjerne støtte for Internet
@@ -36,6 +36,10 @@
   og_title: Hvert eneste barn fortjener en mulighet
   og_description: Alle elever i alle skoler fortjener mulighet til å lære seg å programmere.
     Det forandrer alt.
+  csedweek_og_title: Kodetimen kommer
+  csedweek_og_description: Kodetimen er en verdensomspennende bevegelse som når ut
+    til et titalls millioner elever i alle aldre i mer enn 180 land og finnes på over
+    45 språk.
   hoc2014_heading: Bli med i <a href="http://hourofcode.com">Kodetimen</a><br/> 8.
     – 14. desember 2014<br/>
   hoc2014_students: Elever
@@ -95,83 +99,84 @@
   view_course: Se kurset
   view_unit: Se kursenhet
   make_app: Lag en app
-  congrats_guest_speaker_title: Finn en gjeste høyttaler for ditt klasserom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
+  congrats_guest_speaker_title: Finn en gjesteforeleser til klassen
+  congrats_guest_speaker_desc: Nå som elevene dine har fullført et informatikk-kurs,
+    vurder å feire og koble det til ting de kan lage i den virkelige verden ved å
+    invitere noen som jobber med det til å snakke for klassen. Du kan bruke vårt kart
+    over frivillige for å kontakte en lokal frivillig, eller finne programmerings-studenter
+    eller noen som jobber med teknologi fra andre byer til å inspirere elevene dine
+    via videochat.
+  congrats_guest_speaker_cta: Finn en gjesteforeleser
   congrats_third_party_title: Nå kan du bruke det du har lært på disse appene og nettstedene
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: 1.-8. klasse
+  third_party_gradelevel_kto2: 1.-3.-klasse
+  third_party_gradelevel_2to8: 2.-8. klasse
+  third_party_gradelevel_4to12: 4. klasse til videregående skole
+  third_party_gradelevel_5to12: 5. klasse til videregående skole
+  third_party_gradelevel_6plus: 6.+ klasse
+  third_party_gradelevel_8plus: 8.+ klasse
   third_party_platform_all: 'Plattform: Internett, iPad & Android'
   third_party_platform_mobile: 'Plattform: iPad & Android'
   third_party_platform_web: 'Plattform: Internett'
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: 'Pris: Varierende'
   third_party_price_free: 'Pris: Gratis'
   third_party_price_299: 'Pris: $2.99/nedlasting'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_price_individual: 'Individuell pris: Gratis prøveperiode og $25 per
+    måned'
+  third_party_price_school: 'Skole-pris: Gratis planer og Pro på $2500 +'
+  third_party_tynker_desc: Tynkers kreative dataplattform hjelper barn å utvikle beregningsorientert
+    tenkegang og programmeringsferdigheter på en morsom, intuitivt og fantasifull
+    måte. Vårt nyskapende, visuelle programmeringsspråk, interaktive selvstudier,
+    og spillbaserte programmeringsaktiviteter gir en enkel introduksjon til programmering
+    og styrker barn til å utvikle og skape.
+  third_party_tynker_btn_curriculum: Prøv Tynkers læreplan for barn i tidlig lesefase
   third_party_tynker_btn_site: Besøk Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
+  third_party_scratchjr_desc: Scratch er et innledende programmeringsspråk som gjør
+    at små barn (fra 5-7) kan opprette egne interaktive historier og spill. Barn setter
+    sammen grafiske programmeringsblokker slik at de kan få karakterer til å flytte,
+    hoppe, danse og synge. Barn kan endre utseende på karakterene, legge til sine
+    egne stemmer og lyder, sette inn bilder av seg selv og deretter bruke programmeringsblokkene
+    for å gi liv til egne karakterer.
+  third_party_scratchjr_btn_curriculum: Last ned pensum for Scratch Junior
   third_party_scratchjr_btn_site: Besøk Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: Med Scratch kan du programmere dine egen interaktive historier,
+    spill og animasjoner og dele det du har laget med andre i nettsamfunnet. Scratch
+    hjelper unge mennesker å lære hvordan de kan tenke kreativt, begrunne systematisk
+    og samarbeide. Grunnleggende ferdigheter for livet i det 21. århundre!
   third_party_scratch_btn_curriculum: Last ned Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_forum: Scratch lærer-forum
   third_party_scratch_btn_site: Besøk Bunnen
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_desc: I Lightbot må elever programmere en robot med kommandoer
+    for å løse oppgaver. Elevene kan spille det i en nettleser (krever Flash Player),
+    på Android- eller iOS-enheter. Elevene spiller det første settet med "Grunnleggende"
+    nivåer i Lightbot. De vil lære hvordan fortelle en datamaskin hva den skal gjøre
+    ved en serie med grunnleggende kommandoer og de vil få brukt den generelle prosessen
+    som dataprogrammer er skrevet med.
   third_party_lightbot_btn_curriculum: Last ned Lightbot Curriculun
   third_party_lightbot_btn_site: Besøk Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
+  third_party_khan_desc: Lær hvordan du kan programmere tegninger, animasjoner og
+    spill ved bruk av JavaScript og ProcessingJS, eller lær hvordan du kan lage nettsider
+    med HTML og CSS. Du kan dele alt du lager, se hva andre lager og lære av hverandre!
   third_party_khan_btn_learn: Lær CS med Khan Akadamiet
   third_party_khan_btn_forum: Khan Akademiet CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
+  third_party_appinv_desc: MIT App Inventor er et blokk-basert programmeringsverktøy
+    som gjør at alle, også nybegynnere, kan starte med programmering og bygge fullt
+    funksjonelle apper for Android-enheter. Nykommere til App Inventor kan få sin
+    første app oppe og kjøre på en time eller mindre! De kan programmere mer kompliserte
+    apper på betydelig mindre tid enn med mer tradisjonelle tekst-baserte språk.
   third_party_appinv_btn_curriculum: Last ned Appen Inventor 2 Curriculum
   third_party_appinv_btn_forum: Appen Iventor 2 Forum
   third_party_appinv_btn_site: Besøk Appen Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
+  third_party_codehs_desc: CodeHS introduserer byggeklossene i programmering med korte
+    videoer, eksempel-kode og mange programmerings-oppgaver som gjør koding morsomt
+    og tilgjengelig for nybegynnere. For skoler og lærere tilbyr CodeHS pensum og
+    lærerverktøy. For de som vil lære på egenhånd kan du få hjelpen du trenger fra
+    et nettverk av lærere.
+  third_party_codehs_btn_try: Introduksjon til informatikk Lær mer for skoler
+  third_party_codecademy_desc: Vi revurderer utdanning fra bunnen av. Internett har
+    gjort om på nesten alt - handel, sosiale nettverk, helse og mer. Vi skaper utdanningen
+    verden trenger - den første virkelige utdanningen for de som har vokst opp med
+    Internett.
   third_party_codecademy_btn_curriculum: Last ned Codecademy Curriculum
   third_party_codecademy_btn_site: Besøk Codecademy
   third_party_organization: Organisasjon
@@ -183,17 +188,20 @@
   third_party_cost_free_399: Gratis å prøve, $399/klasserommet
   third_party_cost_free_2: Gratis å prøve. $2/student
   third_party_cost_free_10: Gratis å prøve, $9.99/måned
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
+  third_party_desc_5_4to8: Omtrent 5 leksjoner, rettet mot karakterene 4-8
   third_party_desc_10to12_kto3: Omtrent 10-12 leksjoner, rettet mot karakterer K-3
   third_party_desc_11_kto5: Omtrent 11 leksjoner, rettet mot karakterer K-5
   third_party_desc_10to12_kto5: Omtrent 10-12 leksjoner, rettet mot karakterer K-3
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_40_4to8: Mer enn 40 leksjoner, rettet mot karakterene 4-8
+  third_party_desc_dozens_kto8: Dusinvis av leksjoner for alle karakterer K-8
+  third_party_desc_10to15_3to12: Mellom 10 og 15 leksjoner, rettet mot 3. klassetrinn
+    på barneskolen til 3. trinn på videregående.
+  third_party_desc_25to40_3to12: Fra 25 til 40 leksjoner, beregnet for 3 klasse på
+    barneskolen til 3. trinn på videregående
+  third_party_desc_20_2to8: Omtrent 20 leksjoner, rettet mot karakterer 2-8
+  third_party_desc_7to22_5to12: Mellom 7 og 22 leksjoner, rettet mot 5. klassetrinn
+    på barneskolen til 3. trinn på videregående
+  third_party_desc_20_4to12: Mer enn 20 leksjoner, rettet mot karakterene 4-12
   enter_valid_age: Vennligst velg en gyldig alder
   enter_valid_email: Vennligst skriv inn en gyldig e-postadresse
   get_a_certificate_message: Vi sender deg et sertifikat og informasjon om hvordan
@@ -243,16 +251,19 @@
   continue_learning_header: Fortsett å lære etter denne ene timen
   continue_learning_body: 'Det er mange muligheter: Du kan lære på nettet, på en kodeklubb,
     eller en sommerskole.'
+  learn_code_studio: Prøve Code Studio-kurs
   learn_next_level: Fortsett til neste nivå
   learn_online: Prøv andre kurs på nettet
   learn_classes: Finn lokale kodeklubber
-  hoc_is_here: Lær å programmere. Det forandrer alt. https://youtu.be/xJqSu1IbcHg.
+  learn_back_to_minecraft: Fortsett å lære med Minecraft
+  hoc_is_here: "#HourOfCode (#kodetimen) kommer igjen 5-11 desember. https://youtu.be/KsOIlDT145A."
   just_did_hoc: 'Jeg ble nettopp ferdig med #kodetimen! @kidsakoder'
   just_did_course1: Jeg fullførte nettopp Kurs 1 - sjekk det ut! @codeorg
   just_did_course2: Jeg fullførte nettopp Kurs 2 - sjekk det ut! @codeorg
   just_did_course3: Jeg fullførte nettopp Kurs 3 - sjekk det ut! @codeorg
   just_did_course4: Jeg fullførte nettopp Kurs 4 - sjekk det ut! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_accelerated: Jeg har nettopp avsluttet det framskynda kurset - sjekk det
+    ut! @codeorg
   twitter_teach_cs: 9 av 10 personer enig, skoler bør lære informatikk. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
   learn_hoc: Lær en Time med Kode
@@ -360,14 +371,13 @@
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include
     tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: Lær mer
-  homepage_banner_20k_teachers: 20,000 teachers trained, and now teaching computer
-    science in classrooms.
+  homepage_banner_20k_teachers: 20 000 lærere har trent, og underviser nå informatikk
+    i klasserommet.
   homepage_banner_20k_teachers_link: Lær mer
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
+  homepage_banner_congress: USAs ledere ber Kongressen om å finansiere K-12 informatikk.
+  homepage_banner_congress_link: Gi din støtte
+  homepage_banner_emailprivacy: Vi gjør en viktig endring på hvordan vi støtter studentenes
+    personvern.
   homepage_banner_emailprivacy_link: Les mer
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Lær mer
@@ -385,7 +395,7 @@
   homepage_slot_text_link_othercourses: Andre nettbaserte kurs
   homepage_slot_text_title_educators: Lærere
   homepage_slot_text_blurb_educators: Lær opp elevene dine
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: Grunnskole
   homepage_slot_text_link_middle: Ungdomskole
   homepage_slot_text_link_high: Videregående
   homepage_slot_text_link_k5: Kurs for barnehage til 5.trinn
@@ -439,9 +449,11 @@
   class_submission_level_college: Høyskole
   class_submission_level_vocational: Videregående (Yrkesfag)
   class_submission_languages_other: Andre språk
-  inspirational_videos_more: Flere <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
-    videoer </a>
-  playlab_choose_theme: Choose your Play Lab theme
+  videos_more: Flere <a href='%{inspiring_videos_playlist}'>inspirerende videoer</a>
+    med rollemodeller og kjendiser
+  careers_page_more: Flere <a href='%{careers_url}' target='_blank'>inspirerende videoer</a>
+    med profesjonelle innenfor teknologi
+  playlab_choose_theme: Velg ditt tema for Spill-lab
   playlab_classic_title: Klassisk
   playlab_gumball_title: Gumballs fantastiske verden
   playlab_iceage_title: Istid - kommer snart
@@ -464,6 +476,34 @@
   mc_gradelevel: Passer for de som er 6 år og eldre
   mc_platformtext: Moderne nettlesere, smart-telefoner, nettbrett
   mc_specs: Mange språk | Moderne nettlesere og nettbrett | Alderen 6-106
+  minecraft_designer: Minecraft-designer
+  minecraft_adventurer: Minecraft-eventyrer
+  minecraft_tutorials: Minecraft Kodetime-oppgaver
+  minecraft_specs: Mange språk | Moderne nettlesere og nettbrett | 2. klasse og oppover
+  minecraft_designer_description: Programmer dyr og andre Minecraft-vesener i din
+    egen versjon av Minecraft.
+  minecraft_designer_button: Start
+  minecraft_adventurer_description: Bruke kode for å ta med Alex eller Steve på et
+    eventyr.
+  minecraft_adventurer_button: Start
+  minecraft_no_internet: Har du ikke internett?
+  minecraft_download_adventurer: Last ned Minecraft-eventyrer for bruk uten internett.
+  minecraft_store_camps: Microsoft Store Kodetimen leire
+  minecraft_host_event: Hold Kodetimen med Minecraft
+  minecraft_youthspark_continue_learning: Fortsett læring med Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Registrer deg</a> for
+    en gratis Kodetimen leir i en Microsoft butikk i Australia, Canada, Puerto Rico
+    eller USA. Lær hvordan du kan kombinere din kreativitet med koding.
+  minecraft_teach_resources: Lærerressurser og oppgaveplan.
+  minecraft_leader_guide: Last ned ressurser for å få hjelp til å planlegge og holde
+    en Kodetime.
+  minecraft_facilitating_event: Holde en Kodetime?
+  minecraft_join_online_training: Bli med Microsoft og Minecraft for en treningssesjon
+    på nett (kun på engelsk) den 22. eler 29, november
+  minecraft_youthspark_create_your_future: Hva enn du er opptatt av, kan du bruke
+    informatikk til å forestille, opprette og lage en fremtid som er din.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoft YouthSpark</a>
+    tilbyr gratis verktøy og ressurser for å følge dine interesser.
   minecraft_subtitle: Kodetimen med Minecraft
   watch_inspirational_videos: Før du begynner, se en av disse videoene og la deg inspirere
   speak_another_language: Snakker du et annet språk?
@@ -471,7 +511,7 @@
   no_internet: Har du ikke internett?
   download_offline: Last ned offlineversjonen.
   are_you_teacher: Er du en lærer?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Se gjennom oppgaveplanene og andre lærerressurser.
   volunteer_engineer_submission_title: Meld deg som frivillig til Kodetimen og inspirer
     elevene.
   volunteer_engineer_submission_subtitle_generic: '100 000 lærere skal holde en Kodetime
@@ -551,8 +591,8 @@
   volunteer_engineer_submission_location_flexibility_onsite: På en skole
   volunteer_engineer_submission_location_flexibility_remote: Ekstern veiledning (lærere
     eller elever)
-  volunteer_engineer_submission_location_flexibility_curriculum: Villig til å bidra
-    til åpen kildekode læreplan prosjekter
+  volunteer_engineer_submission_location_flexibility_curriculum: bidrar til skoleprosjekter
+    med åpen kildekode
   volunteer_engineer_submission_experience_unspecified: Uspesifisert
   volunteer_engineer_submission_experience_tech_company: Ikke-teknolog i et teknologiselskap
   volunteer_engineer_submission_experience_university_student_or_researcher: Gjeldende
@@ -605,10 +645,9 @@
     lage nettsider, lage din egen applikasjon eller utforske andre språk som C++,
     Ruby eller Python!
   dashboard_landing_inspire: Inspirer elevene dine med plakater, videoer, med mer.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
+  dashboard_landing_video_library: Bruk en video fra video-biblioteket av informatikk-konsepter.
   dashboard_landing_report_bug: Send inn et endringsønske eller rapporter en feil.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_teacher_forum: Bli med i det faglige lærings-miljøet.
   dashboard_hoc_courses: Kodetimen for alle aldersgrupper
   dashboard_hoc_courses_desc: Prøv hvilken som helst av disse korte, én times lange
     opplæringsprogrammene med elevene dine!
@@ -662,18 +701,21 @@
   dashboard_action_done: Ferdig
   dashboard_action_required: kreves
   dashboard_action_print_certificates: Skriv ut diplomer
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_view: 'Se vurderinger i:'
+  dashboard_assessments_none: Mange lærere måler sine elevers framgang ved å bruke
+    "Se framgang"-fanen. Hvis du er interessert i å gi dine elever flere vurderinger
+    kan du finne anbefalte spørsmål og områder i oppgaveplanene. Disse blir gjort
+    utenfor CodeStudio.
+  dashboard_assessments_none_part2: Hvis du underviser på ungdomstrinnet eller videregående,
+    har vi vurdering spørsmål tilgjengelig som en del av Code Studio for å hjelpe
+    studentene med å forberede AP testen. For å bruke disse vurderingene, må du først
+    tilordne kurset til klassen og deretter velge kurset fra rullegardinmenyen ovenfor
+    og du vil se elevsvarene her.
+  dashboard_assessments_summaries: Vurderings-oppsummeringer
+  dashboard_assessments_answers: Alle svar fra vurderinger
   dashboard_surveys_answers: Undersøkelser
   dashboard_percent: Prosent
-  dashboard_filter_by_stage: 'Filter by stage:'
+  dashboard_filter_by_stage: 'Filtrer etter scene:'
   dashboard_filter_all: Alle
   dashboard_download_csv: Last ned CSV
   dashboard_navigation_home_page: Hjemmeside for lærere
@@ -685,12 +727,12 @@
   dashboard_navigation_section_speakers: Informatikk <br/> Gjesteforelesere
   dashboard_navigation_all_sections: Studentkontoer og Progresjon
   dashboard_navigation_view_progress: Fremgang
-  dashboard_navigation_view_text_responses: Se tekstsvarene
+  dashboard_navigation_view_text_responses: Tekstsvar
   dashboard_navigation_view_assessments: Vurderinger
   dashboard_navigation_view_assessments_surveys: Vurderinger/Undersøkelser
   dashboard_navigation_add_students: Legg til elever
   dashboard_navigation_manage_students: Administrer elever
-  dashboard_navigation_lesson_plans_resources: Lærerplaner og Resurser
+  dashboard_navigation_lesson_plans_resources: Oppgaveplaner og Resurser
   dashboard_navigation_view_stats: Statistikk
   dashboard_navigation_section: 'Seksjon: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
@@ -702,11 +744,15 @@
   dashboard_progress_furthest_level_attempted: fremste nivå forsøkt
   dashboard_progress_submitted: innsendt
   dashboard_progress_view: 'Vis fremdrift i:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_student_in_script: Fremdriftsinformasjon for %{student_name}
+    i %{script_name}
+  dashboard_progress_pair_programming: parprogrammering
+  dashboard_responses_view: 'Vis tekstsvar i:'
+  dashboard_responses_none: De fleste av våre kurs er utformet for yngre aldersgrupper
+    og krever ikke at studenter skriver tekstsvar på spørsmål, så du vil ikke se noen
+    tekstsvar her. For eldre elever i ungdomsskolen og videregående skole, kan du
+    se elevenes innleveringer på åpent tekstsvar-spørsmål ved å velge tilordnede kurs
+    fra rullegardinmenyen ovenfor.
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Lag nye seksjoner og legg til elever.
     Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore
@@ -715,7 +761,7 @@
   dashboard_sections_table_secret: Logg inn Type
   dashboard_sections_table_grade: Karakter
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Tilleggsmateriale
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Delkode
   dashboard_sections_name: Seksjonsnavn
@@ -732,37 +778,34 @@
     inneholder kontoopplysninger for å dele ut til hver enkelt elev.
   dashboard_sections_switch_section: 'Bytt avsnitt:'
   dashboard_sections_close: Lukk
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_move_students_desc: Velg hvilke elever som skal flyttes til en
+    ny inndeling. Dette vil ikke påvirke det de har gjort så langt.
+  dashboard_sections_one_per_teacher: Elever kan bare være i en seksjon per lærer.
+    Elevene dine vil bli lagt til den nye seksjonen og forlate den gamle.
+  dashboard_sections_move_to_section: 'Gå til seksjon:'
+  dashboard_sections_enter_code: 'Legg inn seksjonskode:'
+  dashboard_sections_code_placeholder: 6 tegns kode (ABCDEF)
   dashboard_sections_other_section: Annen lærer
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
+  dashboard_sections_both_sections: Vil du ha eleven(e) i begge seksjoner?
+  dashboard_sections_yes_both: Ja, jeg vil kopiere eleven(e) i denne seksjonen OG
+    den nye seksjonen
+  dashboard_sections_no_move: Nei, jeg vil flytte eleven(e) over til den nye seksjonen.
   dashboard_sections_move_students: Flytt elever
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_hoc_script_desc: Deltar dere i Kodetimen?
+  dashboard_sections_assign_hoc_script_msg: På grunn av mengden traffikk i forbindselse
+    med Kodetimen, vil ikke fremgangen i dette kurset bli lagret i løpet av uken 5.
+    til 11. desember. Du kan fremdeles tilordne kurset og gi elevene deltakelsesdiplom.
+    (Mange lærere foretrekker å <a href='%{certificate_url}'>skrive ut disse på forhånd</a>.)<br/><br/>
+    Vi er begeistret over mengden lærere og elever som deltar og beklager at vi ikke
+    har mulighet til å lagre alt. Hvis klassen din ønsker å gå videre, kan du gå forbi
+    Kodetimekursene og for eksempel bruke kursene om datavitenskap. Hjemmesiden for
+    lærere vil la deg følge elevenes utvikling gjennom resten av året.
+  dashboard_sections_assign_activity: Tilordne kurs
   dashboard_error_none_selected: Du valgte ingen elever til å flytte. Vennligst velg
     minst en elev.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_error_other_section: Hvis du flytter elever mellom egne seksjoner, velg
+    inndelingen fra rullgardinlisten. Velg "flytt elever" og "andre lærere" for å
+    flytte elever til en annen lærers seksjon.
   dashboard_students_add_student: Legg til elev
   dashboard_students_add_students: Leg til flere elever
   dashboard_students_add_multiple: 'Skriv eller lim inn navnene på dine elever, en
@@ -811,14 +854,14 @@
   dashboard_curriculum_k5_title: K-5 lærerressurser
   dashboard_curriculum_middle_title: Midtskolelærerressurser
   dashboard_curriculum_high_title: Høyskolelærerressurser
-  dashboard_lesson_plans: Leksjonsplaner
+  dashboard_lesson_plans: Oppgaveplaner
   dashboard_view_all_lesson_plans: Vis alle kursplaner
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged: Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve
+    disse analoge leksjonene</a>.
   dashboard_curriculum: Skoleplan
   dashboard_curriculum_overview: K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)
   dashboard_overview: Oversikt
@@ -846,18 +889,18 @@
   dashboard_puzzle: Oppgave
   dashboard_question: Spørsmål
   dashboard_response: Svar
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Riktighet
+  dashboard_correctness_free_response: Gratis tilbakemelding
+  dashboard_correctness_unsubmitted: Ikke innsendt
   dashboard_correctness_correct: Riktig
   dashboard_correctness_incorrect: Feil
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Innsendt
+  dashboard_submission_in_progress: Pågår
   dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_multi_correct: "# flervalg riktig"
+  dashboard_multi_count: "# flervalg"
+  dashboard_multi_correct_percent: "% flervalg riktig"
+  dashboard_submission_timestamp: Innleverings-tidspunkt
   stats_hoc_2013_heading: 'Utrolig statistikk fra fjorårets Kodetime. På kun en uke:'
   stats_hoc_2013_image_alt: Statistikk fra Kodetimen 2013
   dashboard_teacher: Lærer
@@ -877,45 +920,59 @@
   dashboard_faq: Ofte stilte spørsmål
   dashboard_faq_k5: K-5 Ofte stilte spørsmål
   dashboard_announcements: Kunngjøringer
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: We har brukt sommeren på å gjøre om
+    tilbakemeldingene vi har fått til nye funksjoner. Nå kan du <a href="%{pp_url}"
+    target="_blank">følge flere elevers fremgang</a>, selv om de jobber i par på en
+    maskin. Du kan bruke <a href="%{csp_widgets_url}" target="_blank">de beste interaktive
+    verktøyene</a> fra CS prinsipper-kurset i <i>hvilket som helst</i> klasserom.
+    Elevene dine kan <a href="%{unused_code_url}" target="_blank">beholde ubrukt kode</a>
+    på arbeidsområdet for å fremme utprøving! Se på de nye funksjonene og la oss få
+    vite hva du tenker.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Lær mer
   dashboard_announce_try_now_button: Prøv nå
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_host_an_hour_button: Inviter til en kodetime
+  dashboard_announce_petition: Som lærer, er du del av en bevegelse som ønsker å gi
+    alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på
+    tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning,
+    28 guvernører og administrerende direktører i de største selskapene i USA sammen
+    og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning.
   dashboard_announce_petition_button: Legg til navnet ditt
   dashboard_announce_all: Hold deg oppdatert med oppdateringer og ny funksjonalitet
     på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere
     kunngjøringer.</a>
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  dashboard_announce_hoc_launch: Tusener av lærere i mer enn 180 land vil undervise
+    programmering under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss
+    å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer
+    din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise
+    programmering.
+  dashboard_announce_hoc_scaling: OBS! På grunn av svært mye trafikk fra millioner
+    av elever i løpet av Kodetimen (uke 49), vil ikke Code Studio lagre eller rapportere
+    elevfremgang i de øvrige kursene. Vi anbefaler å gjennomføre et Kodetime-opplegg
+    med klassen din i løpet av denne uka i stedet. Selv om heller ikke Kodetimen-kursene
+    kommer til å lagre noen fremgang, kan elevene likevel fullføre dem og få et diplom
+    etter fullført Kodetime.
+  dashboard_announce_mc_launch: Et av våre mest populære opplegg har fått en oppfølger!
+    Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
+    De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
+    spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  host_an_hour: Hold en Kodetime
+  learn_banner_title: Bli med på Kodetimen
+  learn_banner_desc: Kodetimen er en internasjonal bevegelse som når over hundre millioner
+    elever i mer enn 180 land. Hvem som helst, hvor som helst, kan organisere en Kodetime.
+    Hjelp oss å gi alle elever muligheten til å lære informatikk. Arrangørene kan
+    følge <a href='%{how_to_url}' target='_blank'>guiden</a> for å undervise en Kodetime
+    og inspirere elever med <a href='%{videos_url}' target='_blank'>disse videoene</a>.
   learn_more: Lær mer
   learn_sign_up_description: Registrer deg for å delta på Kodetimen under CS Code
     Week
@@ -929,8 +986,8 @@
     hvordan du kan gjennomføre Kodetimen</a>
   learn_find_volunteer: <a href="https://code.org/volunteer/local"> Finn en lokal
     frivillig</a> å hjelpe deg under "Hour of Code"
-  learn_teacher_led_lesson_plans: Bli inspirert av <a href="https://code.org/teacher-led">
-    lærer ledet "Hour of Code" timeplanlegging</a>
+  learn_teacher_led_lesson_plans: Bli inspirert av <a href="https://code.org/teacher-led">Kodetimens
+    oppgaveplaner</a>
   learn_how_to_hoc: Følg <a href="https://hourofcode.com/how-to"> vår "how-to guide"</a>
     for undervisning av "Hour of Code"
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Lær mer</a> om premiene
@@ -950,7 +1007,7 @@
   carousel_heading_beginners: "Øvinger for nybegynnere"
   carousel_heading_beyond_beginners: "Øvinger for nybegynnere"
   carousel_heading_javascript: "Øvinger som underviser JavaScript"
-  carousel_heading_beyond_javascript: Tutorials that teach JavaScript
+  carousel_heading_beyond_javascript: "Øvinger som lærer deg JavaScript"
   carousel_heading_unplugged: Ingen enhet eller Internett? Prøv 'frakoblet' koding
   carousel_heading_devices: "Øvings-apper for telefoner og nettbrett"
   carousel_heading_beyond_devices: "Øvings-apper for telefoner og nettbrett"
@@ -963,10 +1020,10 @@
   carousel_heading_ide: Plattformer som er populære blant lærere
   educator_notes: Lærernotater
   teach_led_lesson_plans: Planlegging av Kodetimen
-  learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
-    list of Hour of Code tutorials</a>. To see our criteria and submission guidelines
-    for Hour of Code tutorials, <a href="https://hourofcode.com/tutorial-guidelines">click
-    here.</a>
+  learn_footer_all_tutorials: Se en <a href="https://code.org/educate/allhourofcode">omfattende
+    liste over veiledninger i Kodetimen</a>. For å se kriteriene for å sende inn en
+    Kodetimeveiledning, <a href="https://hourofcode.com/tutorial-guidelines">klikk
+    her.</a>
   how_to_teach_hoc: Hvordan lære bort en Kodetime
   more_resources_educators: Flere lærerressurser
   beyond_submission: "Ønsker du sende inn en oppskrift til Kodetimen? Se vilkår og
@@ -1024,8 +1081,8 @@
   playlab_name: Spill-lab
   infinity_name: Infinity Spill-Lab
   artist_name: Kunstner
-  monstercoding_name: Mystery Island Coding Quest
-  allcancode_name: Run Marco!
+  monstercoding_name: Kodeoppdraget Mysterieøya
+  allcancode_name: Kjør Marco!
   csfirst_name: CS først
   boxisland_name: Box Island
   codesters_name: Codesters
@@ -1036,45 +1093,55 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   accelerated_name: Framskyndet kurs
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  cspunit1_name: "(gammel) Enhet 1: Digital informasjon"
+  cspunit2_name: "(gammel) Enhet 2: Internett"
+  cspunit3_name: "(gammel) Enhet 3: Programmering"
+  cspunit4_name: "(gammel) Enhet 4: Data"
+  cspunit5_name: "(gammel) Enhet 5: Utforsk og lag PT"
+  cspunit6_name: 'Post-AP: Databaser i apper'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csp1_name: 'Enhet 1: Internett'
+  csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspassessment_name: Full Test - 50 spørsmål
+  cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
+  cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
+  cspunit3_gradelevel: 9.-12. klasse
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Framskyndet kurs
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: Informatikk i algebra
+  AlgebraA_name: Informatikk i algrebra kurs A
+  AlgebraB_name: Informatikk i algebra kurs B
   gumball_name: Gumball
   classicmaze_name: Klassisk labyrint
   iceage_name: Istid
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (blokker)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Matematikk
   hoc_category_name: Kodetimen
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csf_category_name: Grunnleggende informatikk
+  csd_category_name: 'Under Development: CS Discoveries'
+  csp_category_name: "'15-'16 Prinsipper i informatikk"
+  csp17_category_name: "'16-'17 Prinsipper i informatikk"
+  cspexams_category_name: Prinsipper i informatikk teoriprøve
+  research_studies_category_name: Research Studies
   applab_name: App Lab
   applab_gradelevel: Minstealder 13 år
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab er et programmeringsmiljø hvor du kan
+    lage enkle apper. Design en app, programmer med blokker eller JavaScript for å
+    få den til å fungere og del appen din på få sekunder
   codeorg_gradelevel: Alder 4-104
   codeintl_gradelevel: Alder 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1234,31 +1301,31 @@
   infinity_shortdescription: Bruk Spill-lab for å lage en historie eller spill med
     Disney Infinity figurer.
   artist_shortdescription: Tegn kule bilder og tegninger med Kunstneren!
-  monsterocding_shortdescription: A colorful self-guided programming adventure for
-    children.
-  allcancode_shortdescription: An immersive game to guide Marco with a visual programming
-    language.
-  csfirst_shortdescription: Animate a story about two characters on the ocean. Add
-    your own style!
-  boxisland_shortdescription: Take a coding trip on Box Island with the brave Hiro.
-  codesters_shortdescription: Create your own games, animations, and artwork using
-    Python.
-  texasinstruments_shortdescription: Learn basic coding using the TI-84&#8482; Plus
-    calculator.
-  teacherled_shortdescription: Be inspired to design your own Hour of Code event with
-    these lesson plans.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  monsterocding_shortdescription: Et fargerikt selvstyrt programmeringseventyr for
+    barn.
+  allcancode_shortdescription: Et engasjerende spill for å lede Marco med et visuelt
+    programmeringsspråk.
+  csfirst_shortdescription: Animer en historie om to karakterer på havet. Legg til
+    din egen stil!
+  boxisland_shortdescription: Ta en kode-tur på Box Island med den modige Hiro.
+  codesters_shortdescription: Lag dine egne spill, animasjoner og kunstverk ved å
+    bruke Python.
+  texasinstruments_shortdescription: Lær grunnleggende programmering ved å bruke TI-84&#8482;
+    Plus-kalkulatoren.
+  teacherled_shortdescription: Bli inspirert til å lage din egen Kodetime med disse
+    økt-planene.
+  course2_shortdescription_congrats: For elever med grunnleggende leseferdigheter.
+    Dette kurset bygger på Kurs 1. Elevene vil lage prigrammer for å løse problemer
+    og utvikle interaktive spill og historier som de etterpå kan dele. Anbefalt for
+    2.-5. klasse.
+  course3_shortdescription_congrats: Klar for neste nivå? Elevene vil gå dypere inn
+    i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible
+    løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive
+    historier og spill som de kan dele med andre. Anbefalt for 4.-5. klasse.
+  course4_shortdescription_congrats: Klar for å gå videre? Elevene vil gå dypere inn
+    i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible
+    løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive
+    historier og spill som de kan dele med andre. Anbefalt for 4.-8. klasse.
   codeorg_longdescription: Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering.
     Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates,
     Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser
@@ -1399,37 +1466,35 @@
   playlab_longdescription: Lag en historie eller lag et spill med "Spill-Lab"! Få
     dyr, pirater, zombier, ninjaer, og mange flere figurer til å bevege seg, lage
     lyder, få poeng, og til og med kaste flammekuler!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
-  csfirst_longdescription: Create a story about two characters at sea. Animate the
-    water, and customize the scenery to add your own flare. Use code to tell the story
-    you want to tell!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Create your own games, animations, and artwork using
-    Python.  Once you’re done, share them with friends! Program in Python, a real
-    programming language used every day at companies - our drag and drop toolkit makes
-    it easy to learn!  Try building a basketball game, choreographing a dance, or
-    designing an animated card! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
-  teacherled_longdescription: Now that tens of thousands of educators have tried the
-    Hour of Code, many classrooms are ready for more creative, less one-size-fits-all
-    activities that teach the basics of computer science. To help teachers find inspiration,
-    we collected and curated one-hour teacher-led lesson and activity plans designed
-    for different subject areas for Hour of Code veterans.
+  monstercoding_longdescription: Kodeoppdraget på Mystery Island av Monster Coding,
+    tilbyr et morsomt introduksjonsoppdrag som lærer bort nøkkelbegreper til barn.
+    Hver blokkbasert aktivitet bygger på en tidligere, og introduserer barna til funksjoner,
+    boolske verdier, løkker, betingelser og matriser ved bruk av fargerik og animert
+    grafikk og lydinstruksjoner.
+  allcancode_longdescription: Elevene spiller et eventyrspill basert på en original
+    historie. De leder Marco, hovedpersonen, gjennom hvert nivå ved å gi ham steg-for-steg
+    instruksjoner i form av et visuellt programmeringsspråk, brukt av Kodetimen. Uten
+    å merke det, blir de introdusert for sekvensering av kommandoer, gjentagelse og
+    betingelser.
+  csfirst_longdescription: Lag en historie om to figurer på sjøen. Animer vannet og
+    tilpass landskapet slik du ønsker. Fortell din egen historie ved hjelp av kode!
+  boxisland_longdescription: Ta en tur til Box Island og hjelp Hiro med å samle alle
+    klokker spredt i ørkenen! I denne opplæringen vil du lære grunnleggende om algoritmer,
+    sekvenser, looper og "conditionals?"!
+  codesters_longdescription: 'Opprette dine egne spill, animasjoner og grafikk ved
+    hjelp av Python.  Når du er ferdig, del dem med venner! Programmér i Python, et
+    ekte programmeringsspråk som brukes hver dag i selskaper - vårt dra og slipp-verktøy
+    gjør det enkelt å lære!  Prøve å bygge en basketballkamp, siden en dans, eller
+    designe et animert kort! '
+  texasinstruments_longdescription: 'De 10 minuttene av kode-aktiviteter kan brukes
+    i klassen for å gi studentenes interesse for koding med TI teknologi de bærer
+    i ryggsekkene sine hver dag.  Lær grunnleggende koding med TI-84 &#8482; pluss
+    og kom i gang programmering på bare 10 minutter – ingen erfaring trengs!  '
+  teacherled_longdescription: Nå som titusenvis av lærere har prøvd kodetimen, er
+    mange klasserom klar for mer kreative og bedre tilpassede aktiviteter for å lære
+    grunnleggende informatikk. For å inspirere lærere har vi samlet og tilrettelagt
+    entimes lærerledede leksjoner og aktivitetsplaner lagd for ulike fagområder for
+    de som er erfarne med kodetimen.
   codeorg_beyond_name: Introduksjon til koding (1.-8. trinn)
   khan_beyond_name: Lær koding
   tynker_beyond_name: Lær koding hjemme
@@ -1749,7 +1814,7 @@
   sphero_beyond_longdescription: Enten du er lærer eller foresatt, SPRK-leksjoner
     gir barna et morsomt intensivkurs i å programmere roboter, samtidig som de skjerper
     sine ferdigheter i matematikk og naturfag.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Skjul denne advarselen
   compatibility_unsupported_browser: Nettleseren din støttes ikke. Vennligst oppdater
     til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>.
     Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det
@@ -1762,58 +1827,22 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
