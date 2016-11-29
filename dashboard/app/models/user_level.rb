@@ -87,7 +87,7 @@ class UserLevel < ActiveRecord::Base
     return nil unless most_recent
 
     most_recent_user = most_recent.user
-    return 'Deleted user' unless most_recent_user
+    return I18n.t('deleted_user') unless most_recent_user
 
     return most_recent_user.name
   end
