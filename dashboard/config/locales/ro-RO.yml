@@ -94,6 +94,14 @@
     overview: Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona
       clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără
       un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.
+    hoc_already_signed_up_heading: "Începe fără logare"
+    hoc_already_signed_up_content: Esti logat pentru a preda o Oră de Programare!
+      Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa
+      la acest eveniment. Pentru a incepe, <a href="https://code.org/learn">alegeți
+      un tutorial</a>pentru clasa ta si dați-le și lor link-ul.<br/><br/>Dacă v-a
+      plăcut Hour of Code și vreți să mergeți mai departe, puteți alege o parolă pentru
+      a crea un cont Code Studio și pentru a vă înrola elevii pentru studiu folosind
+      <a href="https://code.org/educate">cursuri mai lungi</a>.
     teacher_educator_guide: Consultă ghidul educatorului
     title: "Înregistrați-vă pentru Code.org"
     school_name: Numele şcolii (opţional)
@@ -344,7 +352,7 @@
       unsubmit: Retrage
       worked_with: A lucrat cu
       update_lock_settings: Actualizează setările de blocare aici.
-      clear_response: Clear response
+      clear_response: Răspuns clar
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -431,7 +439,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Află mai mult
     announcement_try_now_button: "Încearcă acum"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Organizeaza o ora
     announcement_petition: Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui
       student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este
       timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În
@@ -442,11 +450,24 @@
     announcement_all: Fii la curent cu noutățile si actualizarile de pe blogul cadrelor
       noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea
       anunturile vechi.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Mii de cadre didactice în peste 180 de ţări vor începe
+      predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11
+      decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi
+      decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul
+      Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare.
+    announcement_hoc_scaling: 'ALERTA pentru cursul 1-4 şi accelerator curs profesori:
+      datorită traficului de milioane de studenţi ce fac o oră de programare, <b>code
+      Studio nu va salva sau raporta progresele înregistrate pe aceste cursuri din
+      3-11 decembrie</b>. Vă recomandăm să faceti o activitate oră de cprogramare
+      cu clasa dvs. pentru a sărbători ora de programare in săptămâna educaţiei Computer
+      Science. În timp ce propriile noastre tutoriale ora de programare, de asemenea,
+      nu va salva progresul acelei săptămâni, studenţii pot face tutoriale complete
+      şi câştiga un certificat.'
+    announcement_mc_launch: Unul din tutorialele noastre cele mai populare acum are
+      o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea
+      Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească
+      cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu
+      clasa ta la Hour of Code.
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
@@ -620,6 +641,10 @@
     minecraft:
       title: Minecraft
       body: Exploreaza o lume Minecraft prin cod.
+    minecraft2016:
+      title: Minecraft
+      body: Programeaza animale şi alte creaturi Minecraft în propria ta versiune
+        a jocului.
     unplugged:
       title: Lecţii offline
       audience: Vârsta +4 ani
@@ -756,7 +781,6 @@
       Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>
     accept: Accept
     print: Tipărire
-    later: Mai tarziu
     reminder_desc: Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a>
       şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>.
       Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele
@@ -764,18 +788,18 @@
       înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: Revedeţi termenii actualizati
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Optional: Ajuta-ne sa urmarim progresul fata de imbunatatirea nivelului
+      diversitatii in domeniu.'
+    message: Va rog sa ne spuneti rasa dvs
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Alb
+    - black: Negru sau afro-americani
+    - hispanic: Hispanic sau Latino
+    - asian: Asiatic
+    - hawaiian: Nativ hawaian sau din zona Pacificului
+    - american_indian: American Indian/Nativ Alaska
     - other: Alte
-    - opt_out: Prefer not to say
+    - opt_out: Prefer să nu răspund
     submit: Trimite
     decline: "Închide"
   zendesk_too_young_message: Ne pare rău, însă utilizatorii mai tineri nu au voie

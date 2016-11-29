@@ -3282,3 +3282,120 @@
         text: Bei der nächsten Aufgabe lassen wir die Figur eine Aufgabe ständig wiederholen.
           Wenn du lernst, wie der "Wiederholen"-Befehl funktioniert, kannst du später
           viel Zeit sparen, wenn du dein eigenes Spiel programmierst.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hi, mein Name ist Jens und ich bin der leitende Designer von Minecraft.
+          In der nächsten Stunde erschaffst du dein eigenes Minecraft-Spiel. Das sieht
+          wie Minecraft aus, aber die Welt steht still. Die Schafe bewegen sich nicht,
+          die Hühner legen keine Eier und die Zombies stehen nur herum. Es liegt jetzt
+          an dir, die Minecraft-Welt mit Code wiederzubeleben.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: wie Menschen denken und sich verhalten.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Dein Bildschirm ist in drei Hauptbereiche gegliedert. 1) Links befindet
+          sich das Spiel. Im Moment steht die Welt still, aber das werden wir mithilfe
+          von Code ändern.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) In der Mitte ist die Werkzeugkiste. Jeder dieser Blöcke ist ein Befehl,
+          den Hühner, Schafe und andere Minecraft-Kreaturen verstehen können.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Auf der rechten Seite haben wir den Arbeitsplatz, wo wir unser Programm
+          erstellen werden.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Hast du vergessen, was du in einem Level tun musst, findest du oben
+          die nötigen Anweisungen.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Wir werden zu Beginn ein Huhn programmieren. Ziehen wir den „vorwärts“-Befehl
+          auf den Arbeitsplatz. Mit „Ausführen“ bewegt sich das Huhn einen Schritt
+          vorwärts. Das kann ich mit einem weiteren „vorwärts“-Block unter dem ersten
+          „vorwärts“-Block erweitern, wenn das Zeichen erscheint. Dann lass ich ihn
+          los und die Blöcke verbinden sich. Klicke ich auf „Ausführen“, macht das
+          Huhn zwei Schritte.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Wenn du einen Block löschen möchtest, entferne ihn vom Stapel und ziehe
+          ihn zurück in die Werkzeugkiste.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Nach „Ausführen“ kannst du mit „Zurücksetzen“ das Spiel zurücksetzen
+          und von vorne beginnen. Jetzt kannst du deine eigene Version von Minecraft
+          erstellen. Viel Spaß!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hi, ich bin Lisa. Ich bin eine Entwicklerin von Minecraft und ich arbeite
+          an einigen Tieren und Feinden im Spiel. Eines der Tiere, an dem ich gearbeitet
+          habe, ist der Ozelot. Du kannst ihn mit einem Fisch füttern und ihn zu deiner
+          eigenen Katze machen.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Uns Menschen wird schnell mal langweilig, wenn wir immer und immer wieder
+          dasselbe tun müssen. Das Coole an Computern ist, dass ihnen nie langweilig
+          wird, wenn sie unzählige Male pausenlos dasselbe wiederholen müssen. Das
+          nennt man eine Schleife, und jede Kreatur in Minecraft verwendet sie.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Vorhin haben wir ein Huhn dazu gebracht, sich zu bewegen, doch dann
+          ist es stehengeblieben. In Minecraft hören die Hühner nie auf, sich zu bewegen.
+          Setzen wir eine „immer tun“-Schleife ein, um auch unsere Hühner nie stillstehen
+          zu lassen. Schleifen werden dir eine Menge Zeit sparen und dir tolle Möglichkeiten
+          beim Bauen deiner eigenen Minecraft-Version eröffnen.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Beim nächsten Level kannst du Steve oder Alex auswählen. Drücke die
+          Pfeiltasten deiner Tastatur und bewege dich nach oben, unten, links und
+          rechts. So kannst du in einem Level überall hingehen. Verwende eine Kreatur,
+          indem du hingehst, dich drehst und die Leertaste drückst.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Wische zum Bewegen auf einem Touchscreen nach oben, unten, links und
+          rechts. Tippe dann auf das Feld und verwende den Gegenstand vor dir.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Aber was passiert dabei genau? In Minecraft lassen Schafe Wolle fallen,
+          wenn du sie scherst. Kühen laufen bei einem Treffer fort und Creeper explodieren
+          in deiner Nähe. Diese Reaktionen lösen sich dank sogenannter Ereignisse
+          aus. Ereignisse lassen dein Programm zuhören oder warten, wenn etwas passiert.
+          Wenn was passiert, führt es etwas aus.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Bis jetzt hast du ein Ereignis genutzt. Code im „beim Spawnen“-Platz
+          läuft, wenn deine Kreatur erstellt wird oder das Spiel beginnt. In den nächsten
+          Levels hast du neue Plätze für Ereignisse wie „bei Berührung“, die beim
+          Berühren der Kreatur laufen, oder „bei Verwendung“, wenn du die Kreatur
+          verwendest. Wenn Zombies beim Sonnenaufgang verschwinden sollen, dann nutze
+          den „bei Tag“-Platz.
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In Spielen ist spawnen das Gleiche wie erschaffen. Lass uns in diesem
+          Level Zombies beim Sonnenuntergang spawnen. Dafür brauchen wir den „bei
+          Nacht“-Block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Da die Zombies in der Nacht spawnen sollen, fügen wir den „Zombie spawnen“-Block
+          unter dem „bei Nacht“-Block hinzu. Beim Spawnen wird jeder Zombie den Code
+          ausführen, den du in seinem „beim Spawnen“-Ereignisplatz gewählt hast. Viel
+          Spaß beim Spawnen!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Glückwunsch! Du hast gelernt, wie man mit Programmierbefehlen die Minecraft-Welt
+          zum Leben erweckt. Du bist jetzt der Entwickler. Du hast alle Befehle und
+          alle Kreaturen freigeschaltet. Du entscheidest, was passiert.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Wenn dein Spiel fertig ist, wähle teilen, um einen Link zu erhalten,
+          den du mit deinen Freunden teilen kannst, oder spiele es auf deinem Handy.
+          Viel Spaß! Ich freue mich darauf, deine Version von Minecraft zu spielen.

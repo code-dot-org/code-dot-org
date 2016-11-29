@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Felicitări! Ați colectat toate cele {count} obiecte!",
   "collectorCollectedNothing": "Continuă să programezi! Trebuie să colectezi cât de multe obiecte poți.",
   "collectorCollectedSome": "Bună treabă! Ai colectat {count} obiecte!",
+  "collectorCollectedNotEnough": "Continuă să programezi! Trebuie să colectezi cel putin {goal, plural,one {1 item}other {# itemi}}.",
   "collectorCollectedTooMany": "Spațiul respectiv nu are suficiente elemente pentru a le colecta.",
   "collectorTooManyBlocks": "Poți folosi numai {blockLimit} blocuri. Aruncă o privire la codul tău și încearcă din nou!",
   "continue": "Continuă",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "Floarea pe care ești nu mai are nectar.",
   "get": "obţine",
   "has": "are",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "acolo este salata verde",
   "hascorn": "există porumb",
   "haspumpkin": "există dovleci",
   "heightParameter": "înălțime",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Dacă există o cale de acces în direcţia specificată, atunci realizează primul bloc de acţiuni. Altfel, execută al doilea bloc de acţiuni.",
   "insufficientHoney": "Folosești toate blocurile corecte, dar trebuie să produci cantitatea necesară de miere.",
   "insufficientNectar": "Folosești toate blocurile corecte, dar trebuie să aduni cantitatea necesară de nectar.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "salata verde",
+  "lettuceTooltip": "Cultiva niste salata verde",
   "make": "fă",
   "moveBackward": "mută înapoi",
   "moveEastTooltip": "Mută-mă un spaţiu la est.",
@@ -111,6 +112,5 @@
   "word": "Găsește cuvântul",
   "wrongCropError": "Nu pot recolta această cultură de aici.",
   "yes": "Da",
-  "youSpelled": "Ai scris",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Ai scris"
 }

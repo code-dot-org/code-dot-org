@@ -30,21 +30,24 @@ social:
     padding-left: 12px;
     padding-right: 12px;
   }
+  .banner a {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
+  }
   .bannerHeading {
     font-family: 'Gotham 5r', sans-serif;
     font-size: 56px;
     line-height: 56px;
     padding: 20px 0px 20px 0px;
   }
+  .bannerBeyond {
+    padding-top: 15px;
+  }
   .bannerTeachers {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 10px;
     opacity: 0;
-  }
-  .bannerTeachers a {
-    color: white;
-    text-decoration: underline;
-    font-family: 'Gotham 5r', sans-serif;
   }
   .bannerTeacherIcon {
     height: 26px;
@@ -68,6 +71,8 @@ social:
     .col-50
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
+      .bannerBeyond
+        = hoc_s(:learn_banner_beyond)
       .bannerTeachers
         %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
         = hoc_s(:learn_banner_teachers)
@@ -118,6 +123,9 @@ social:
     img.on('load', function() {
       img.fadeTo('normal', 1);
     });
+
+    // Set up beyond hyperlink.
+    $("#learn_banner_beyond").attr({href: "https://hourofcode.com/beyond", target: "_blank"});
 
     // Set up teacher hyperlinks.
     $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {

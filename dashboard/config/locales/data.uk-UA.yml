@@ -304,28 +304,49 @@
         maze_3_3: "Як я повинен дістатися до свині? Зроби так, аби я не зачепив вибухівку!"
         maze_3_4: "Ох! Напиши програму, яка приведе мене до свині і допоможе уникнути
           вибухівки."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Додай блок до блоку "коли стрілка вліво" і натисни "Запустити".
+          Переміщуй руку, використовуючи стрілку ліворуч для досягнення цілі.
+        bounce_2_basketball: Додай блоки до блоків "коли стрілка вправо" і "коли стрілка
+          вліво". Переміщуй руку для досягнення обох цільових показників.
+        bounce_5_basketball: Ми запускатимемо м'яч у напрямку руки. Прикріпи блок
+          до блоку "коли м'яч влучає у руку", щоб забезпечити досягнення цілі.
+        bounce_6_basketball: Тепер ціль знаходиться вгорі. Для розв'язання цієї задачі
+          потрібно додати блоки до обох блоків "коли м'яч влучає".
+        bounce_7_basketball: Додай блоки до кожного з блоків "коли". Відбивай м'яч,
+          поки він не досягне цілі.
+        bounce_10_basketball: Тепер ціль знаходиться нагорі! Для створення гри додай
+          блоки "додати бал" і "додати бал супротивнику" до блоків "коли м'яч влучає
+          в ціль" і "коли м'яч промахується повз руку". Подивись, скільки очок зможеш
+          заробити, перш ніж супротивник отримає два очка.
+        bounce_11_basketball: Тепер блоки можна прикріпити до блоку "коли гра починається".
+          Потрібно додати блок "запустити новий м'яч" у кількох місцях. Також, спробуй
+          змінити сцену чи швидкість платформи та м'яча і подивитись, скільки очок
+          зможеш заробити, поки супротивник не отримає два!
+        bounce_12_basketball: Створи свою власну гру Баскетбол. Можна змінити всі
+          правила гри. Коли роботу буде завершено, натисни кнопку "Поділитися", щоб
+          запросити друзів спробувати гру на своїх телефонах.
+        bounce_1_sports: Дістатись до прапора! Додай блок до блоку "коли стрілка вліво"
+          та натисни "Запустити", щоб переміщувати гравця до прапора.
+        bounce_2_sports: Тепер вже два прапори! Додай блок до блоків "коли стрілка
+          ліворуч" та "коли стрілка праворуч", щоб гравець рухався в двох напрямках.
+        bounce_5_sports: Хокейна шайба рухатиметься вниз до гравця! Додай блок до
+          блоку "коли м'яч влучить у гравця", щоб збити прапорець.
+        bounce_6_sports: Тепер ціль знаходиться вгорі. Для розв'язання цієї задачі
+          потрібно додати блоки до обох блоків "коли м'яч влучає".
+        bounce_7_sports: Додай блоки до кожного з блоків "коли". Відбивай м'яч, поки
+          він не досягне цілі.
+        bounce_10_sports: Тепер ціль знаходиться нагорі! Для створення гри додай блоки
+          "додати бал" і "додати бал супротивнику" до блоків "коли м'яч влучає в ціль"
+          і "коли м'яч промахується повз руку". Подивись, скільки очок зможеш заробити,
+          перш ніж супротивник отримає два!
+        bounce_11_sports: Тепер блоки можна прикріпити до блоку "коли гра починається".
+          Потрібно додати блок "запустити новий м'яч" у кількох місцях. Також, спробуй
+          змінити сцену чи швидкість платформи та м'яча і подивитись, скільки очок
+          зможеш заробити, поки супротивник не отримає два!
+        bounce_12_sports: 'Створи свою власну гру. Керуєш ти: можна змінювати всі
+          правила, поєднувати спортивні ігри та проявляти творчість! Коли роботу буде
+          завершено, натисни кнопку "Завершити", щоб запросити друзів спробувати гру
+          на своїх телефонах.'
         bounce_1: Додай блок до блоку "коли стрілка вліво" і натисни "Запустити".
           Переміщуй платформу, використовуючи стрілку ліворуч для досягнення цілі.
         bounce_2: Додайте блоки до блоків "коли стрілка вправо" і "коли стрілка вліво".
@@ -785,6 +806,11 @@
         iceage_intro: "Година коду Льодовикового періоду - Вступ"
         iceage_events: "Година коду Льодовикового періоду - Події"
         iceage_repeat: "Година коду Льодовикового періоду - Команди повторення"
+        mc_2016_intro: "Година коду від Майнкрафт - Вступ"
+        mc_2016_loops: "Година коду від Майнкрафт - Цикли"
+        mc_2016_events: "Година коду від Майнкрафт - Події"
+        mc_2016_spawn: "Година коду від Майнкрафт - Створення"
+        mc_2016_congrats: "Година коду від Майнкрафт - Вітання"
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

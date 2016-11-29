@@ -82,8 +82,8 @@ is:
     student_count: '%{count} nemendur hafa þegar skráð sig.'
     teacher_count: '%{count} kennarar hafa þegar skráð sig.'
     overview: 'Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Byrja án þess að skrá inn'
+    hoc_already_signed_up_content: 'Þú hefur skráð þig til að kenna Klukkustund kóðunar! Þú og nemendur þínir þurfa ekki að skrá ykkur inn í Kóðastúdíóið til að taka þátt í viðburðinum. Byrjaðu á að <a href="https://code.org/learn">velja kennsluefni</a> fyrir hópinn þinn og deildu svo tenglinum með þeim.<br/><br/>Ef þið hafið gaman af Klukkustund kóðunar og viljið halda lengra, getur þú sett aðgangsorð og stofnað aðgang að Kóðastúdíóinu hér fyrir neðan til skrá nemendur þína á eitt af <a href="https://code.org/educate">lengri námskeiðum</a> okkar.'
     teacher_educator_guide: 'Sjá leiðarvísi kennara'
     title: "Nýskrá á Code.org"
     school_name: 'Nafn skóla (valfrjálst)'
@@ -358,8 +358,8 @@ is:
     announcement_petition_button: "Bættu nafni þínu við"
     announcement_all: "Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>"
     announcement_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja að kenna tölvunarfræði í Klukkustund kóðunar dagana 5. - 11. desember. Við treystum á þig að hjálpa okkur að ná til fleiri nemenda en nokkru sinni áður. <a href='%{signup_url}' target='_blank'>Skráðu þinn Klukkustund kóðunar-viðburð</a> og láttu aðra kennara vita að það geti hver sem er byrjað að kenna tölvunarfræði."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 'Kennarar Námskeiða 1 - 4 og Hraðnámskeiðs ATHUGIÐ: Vegna mikils álags þegar miljónir nemenda eru að gera Klukkustund kóðunar, mun <b>Kóðastúdíóið ekki geta vistað framvindu nemenda á þessum námskeiðum frá 3. - 11. desember</b>. Við mælum með að bekkir fari sé Klukkustund kóðunar-verkefnið til að halda upp á Klukkustund-kóðunar átakið í Viku tölvunarfræðimenntunar. Okkar eigin Klukkustund-kóðunar verkefni munu heldur ekki vista framvindu þessa viku, en nemendur geta samt klárað verkefnin og unnið sér inn skírteini.'
+    announcement_mc_launch: "Eitt vinsælasta kennsluefnið okkar er nú komið með framhald! Með glænýjum Minecraft Hour of Code Designer (Minecraft hönnuði) geta nemendur búið til reglur fyrir Minecraft heiminn. Þeir geta skapað alveg einstaka Minecraft upplifun og deilt henni síðan með vinum eða spilað hana í síma. Láttu bekkinn prófa þetta fyrir Klukkustund kóðunar."
   move_students:
     new_section_dne: "Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast færðu inn annan kóða fyrir hóp."
     section_code_not_entered: "Vinsamlegast tilgreindu current_section_code."
@@ -490,7 +490,7 @@ is:
       body: "Kannaðu Minecraft heim með kóða."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
     unplugged:
       title: "Verkefni án tölvu"
       audience: "Aldur 6+"

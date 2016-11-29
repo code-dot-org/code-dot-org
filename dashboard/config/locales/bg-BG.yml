@@ -94,6 +94,14 @@
     overview: Регистрирайте се, за да следите напредъка си или да управлявате вашата
       класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a>
       и без регистрация, но няма да запазите вашия напредък и проекти.
+    hoc_already_signed_up_heading: "Започнете без логване"
+    hoc_already_signed_up_content: Вие сте се регистрирали да учите с Hour of Code!
+      Вие и вашите ученици не е нужно да влезете в Code Studio, за да участвате в
+      това събитие. За да започнете, <a href="https://code.org/learn"> изберете ръководство</a>
+      за класната стая и споделете връзката с тях. <br/> <br/> Ако ви хареса Hour
+      of Code и искате да отидете по-далеч, можете да зададете парола и да създадете
+      акаунт в Code Studio и да запишете учениците си в някой от нашите <a href="https://code.org/educate">
+      други курсове</a>.
     teacher_educator_guide: "Виж ръководството за възпитатели"
     title: "Регистрирайте се в Code.org"
     school_name: "Име на училище (по желание)"
@@ -145,7 +153,7 @@
     picture: "Сега намерете вашата тайна картина"
     words: "Сега въведете вашите тайни думи"
     login: "Вход"
-    invalid_login: "Невалидна влизане, моля опитайте отново"
+    invalid_login: "Невалидно влизане, моля опитайте отново"
     pair_programming: "Имам партньор на моя компютър"
   password:
     reset_form:
@@ -335,7 +343,7 @@
       unsubmit: "Не е добавено"
       worked_with: "Работи с"
       update_lock_settings: "Актуализирайте настройките за заключване тук."
-      clear_response: Clear response
+      clear_response: "Ясен отговор"
   user:
     email_confirm_needed: "Имейл адресът не е потвърден:"
     email_confirm_needed_required: "Вашият email адрес не е потвърден %{email} :"
@@ -423,7 +431,7 @@
       на компютърните науки и използвайте инструментите по всяко време!"
     announcement_learn_more_button: "Научете повече"
     announcement_try_now_button: "Опитайте сега"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: "Стани домакин на Hour of Code"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да
       дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
       Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -434,11 +442,22 @@
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия
       учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните
       съобщения.</a>"
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Хиляди преподаватели в над 180 страни ще преподават компютърни
+      науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да
+      ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}'
+      target='_blank'> Регистрирайте Вашето "час на кода" събитие</a> и помогнете
+      и на друг учител да научи, че всеки може да започне обучение по компютърни науки.
+    announcement_hoc_scaling: "ПРЕДУПРЕЖДЕНИЕ за учители: курсове 1-4 и ускореният
+      курс, поради голям трафик от милиони ученици, правещи Hour of Code, <b>Code
+      Studio няма да записват или докладват ученическия напредък през декември 3-11</b>.
+      Ние препоръчваме по време на Hour of Code дейността с вашия клас да празнувате
+      CS edu Week. Учениците няма да отбележат напредък тази седмица, но ще спечелят
+      сертификат."
+    announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение!
+      Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света.
+      Можете да създаде напълно уникален Minecraft опит, а след това да го споделите
+      с приятели или да играете на телефоните си. Направете го с класа си за Hour
+      of Code."
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел."
@@ -611,6 +630,10 @@
     minecraft:
       title: Minecraft
       body: "Изследвайте Minecraft света чрез код."
+    minecraft2016:
+      title: Minecraft
+      body: "Програмирай животни и други Minecraft същества в своя собствена версия
+        на Minecraft."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
@@ -746,7 +769,6 @@
       Условия за ползване</a> и <a href="%{privacy_url}" target="_blank"> Поверителност</a>
     accept: "Приемам"
     print: "Печат"
-    later: "По-късно"
     reminder_desc: Ние обновихме нашите <a href="%{tos_url}" target="_blank"> Условия
       за ползване</a> и <a href="%{privacy_url}" target="_blank"> Политика за поверителност</a>.
       Моля, прочетете внимателно преди да ги приемете. Обърнете внимание, че нашите
@@ -754,18 +776,18 @@
       преди изрично приемане на променените условия.
     review_terms: "Преглед на актуализираните условия"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: "По желание: Помогнете ни подобрим многообразието от уроци по компютърни
+      науки"
+    message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: "Бял"
+    - black: "Черен или афро-американец"
+    - hispanic: "Испанец или латино"
+    - asian: "Азиатец"
+    - hawaiian: "Хавайец или друг тихоокеански островитянин"
+    - american_indian: "Индианец/от Аляска"
     - other: "Друго"
-    - opt_out: Prefer not to say
+    - opt_out: "Предпочитам да не отговоря"
     submit: "Изпрати"
     decline: "Затваряне"
   zendesk_too_young_message: Съжаляваме, но малки потребители не може да влизат в
@@ -898,7 +920,7 @@
       playlab_description: "Създайте история или направете игра с Театрална лаборатория!"
       playlab_title: "Ново приложение"
       primary_header: "Поздравления! Вие завършихте %{stageName}!"
-      projects_description: "Вижте отново един от Вашите проекти."
+      projects_description: "Вижте отново един от вашите проекти."
       projects_title: "Отваряне на проект"
       secondary_header: "Попитай учителя си какво да правиш"
   flex_category:

@@ -108,7 +108,7 @@ pl:
     user_type_teacher: "Nauczyciel"
     user_type_student: "Uczeń"
     field_is_required: "jest wymagane"
-    accept_terms: "Musisz wyrazić zgodę aby utworzyć konto"
+    accept_terms: "Musisz wyrazić zgodę, aby utworzyć konto"
   signin_form:
     title: 'Masz już konto? Zaloguj się'
     login: 'Email'
@@ -125,8 +125,8 @@ pl:
     picture: 'Teraz znajdź swój tajny obrazek'
     words: 'Teraz wpisz swoje tajne słowa'
     login: 'Zaloguj się'
-    invalid_login: 'Zły login, proszę spróbować ponownie'
-    pair_programming: 'Mam partnera na moim komputerze'
+    invalid_login: 'Nieprawidłowy login, proszę spróbować ponownie'
+    pair_programming: 'Mam partnera przy moim komputerze'
   password:
     reset_form:
       title: 'Nie pamiętasz hasła?'
@@ -253,7 +253,7 @@ pl:
       pair_programming: 'Programowanie w parach'
       team: 'Zespół'
       driver: 'Kierowca'
-      navigator: 'Nawigacja'
+      navigator: 'Nawigator'
     popup:
       progress_for_user: "%{name} w toku"
       progress: 'Twoje postępy'
@@ -599,21 +599,21 @@ pl:
     message: "Please tell us your race (check all that apply)"
     races:
       - 
-        white: White
+        white: Biały
       - 
-        black: Black or African American
+        black: Czarny lub Afroamerykanin
       - 
-        hispanic: Hispanic or Latino
+        hispanic: Hiszpanie lub Latynosi
       - 
-        asian: Asian
+        asian: Azjatycki
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: Native American Indian/Alaska
       - 
         other: Inni/inne
       - 
-        opt_out: Prefer not to say
+        opt_out: Wolę nie mówić
     submit: "Wyślij"
     decline: "Zamknij"
   zendesk_too_young_message: 'Przepraszamy, młodsi użytkownicy nie mogą logować się na naszej stronie pomocy. Możesz przejrzeć <a href="http://support.code.org"> support.code.org</a> bez logowania się lub poprosić rodziców lub nauczyciela, by skontaktowali się z nami  w Twoim imieniu.'
@@ -754,7 +754,7 @@ pl:
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
-  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  hidden_stage: "Twój nauczyciel nie oczekiwał Ciebie tutaj. Zapytaj swojego nauczyciela, na której powinieneś być lekcji."
   return_course_overview: 'Go to unit overview'
   pd:
     survey:

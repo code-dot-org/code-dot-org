@@ -265,7 +265,7 @@
   learn_next_level: Continuar al siguiente nivel
   learn_online: Pruebe otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: "Продолжаем учиться с Minecraft"
   hoc_is_here: 'La #HourOfCode viene otra vez del 5 al 11 de diciembre. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: Yo he terminado the HourofCode - Dale un vistazo! @codeorg
   just_did_course1: He terminado el Curso 1 - ¡mira! @codeorg
@@ -489,8 +489,8 @@
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Construye tu propia versión de Minecraft. Crea tus
+    propias versiones de las gallinas, ovejas, Creepers, zombis y más.
   minecraft_designer_button: Inicio
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Inicio
@@ -1004,6 +1004,11 @@
     Minecraft world. They can create a totally unique Minecraft experience, and then
     share it with friends or play it on their phones. Do it with your class for the
     Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: "¡La Hora del Código está aquí: del 8 al 14 de diciembre!"
   code_sign_up: Inscribirse para participar durante la Semana de la Educación en Computación
   host_an_hour: Hospeda una hora
@@ -1172,6 +1177,8 @@
   starwarsblocks_name: Star Wars (bloques)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Compresión de texto
   math_category_name: Matemáticas
   hoc_category_name: Hora del código
   csf_category_name: Fundamentos de CS
@@ -1911,10 +1918,22 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min

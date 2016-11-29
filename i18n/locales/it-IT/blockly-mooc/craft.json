@@ -196,5 +196,5 @@
   "timeVeryLong":"molto lungo",
   "timeVeryShort":"molto breve",
   "tooManyBlocksFail":"Puzzle {puzzleNumber} completato. Congratulazioni! È anche possibile completarlo con {numBlocks, plural, one {un blocco} other {# blocchi}}.",
-  "turnRandom":"gira casuale"
+  "turnRandom":"gira a caso"
 }

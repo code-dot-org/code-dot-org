@@ -3257,3 +3257,122 @@
         text: En el sigueinte rompecabezas, nuestro objetivo es ayudar al actor a
           que haga un trabajo continuamente. Aprendiendo cómo el comando de repetición
           trabaja te ahorrará mucho tiempo más tarde cuando construyas tu propio juego.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hola, me llamo Jens y soy el diseñador creativo jefe de Minecraft. Durante
+          la próxima hora, vas a crear tu propia versión de Minecraft. Esto se parece
+          a Minecraft, pero el mundo se ha detenido. Las ovejas no se mueven, las
+          gallinas no ponen huevos y los zombis están parados. Depende de ti añadir
+          el código para hacer que este mundo de Minecraft funcione.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: cómo se comporta y piensa la gente.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Verás que la pantalla está dividida en tres partes principales. 1) A
+          la izquierda está Minecraft. Ahora mismo el mundo está congelado, pero vamos
+          a arreglarlo con el código.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) La zona central es la caja de herramientas. Cada uno de estos bloques
+          es un comando que las gallinas, las ovejas y otras criaturas de Minecraft
+          entienden.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) La zona derecha se llama espacio de trabajo y es donde construiremos
+          nuestro programa.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Si te olvidas de qué hacer, las instrucciones de cada nivel están en
+          la parte superior.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Vamos a programar una gallina para empezar. Arrastra el comando "avanzar"al
+          espacio de trabajo. Cuando hago clic en "Ejecutar", la gallina se mueve
+          un paso hacia delante. Para llegar más lejos, arrastro otro bloque "avanzar"
+          debajo del primero hasta que aparezca la marca. Luego lo suelto y los dos
+          bloques se unen. Si vuelvo a darle a "Ejecutar", la gallina camina dos pasos.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Si alguna vez quieres borrar un bloque, elimínalo del montón y arrástralo
+          de vuelta a la caja de herramientas.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Después de darle a "Ejecutar", siempre puedes darle al botón "Restablecer"
+          para reiniciar la partida y comenzar de nuevo. Ahora te toca a ti crear
+          tu propia versión de Minecraft. ¡Diviértete!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hola, me llamo Lisa. Soy desarrolladora de software en Minecraft y trabajo
+          en algunos de los animales y enemigos del juego. Uno de los animales en
+          los que he trabajado es el ocelote. Me he ocupado de la parte en la que
+          puedes darle de comer un pescado para domarlo y convertirlo en tu gato.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Como humanos, nos aburrimos mucho si tenemos que hacer lo mismo una
+          y otra y otra vez. Pero lo que mola de los ordenadores es que pueden hacer
+          la misma cosa millones de veces de forma seguida sin que se aburran. Esta
+          repetición se llama bucle y todas las criaturas de Minecraft usan bucles.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Antes conseguimos que una gallina se moviera por la pantalla, pero luego
+          se detuvo. En Minecraft, las gallinas se mueven toooodo el rato, no paran.
+          Vamos a usar un bucle "hacer para siempre" de la caja de herramientas para
+          hacer que las gallinas no dejen de moverse nunca. El poder de los bucles
+          te ahorrará muchísimo tiempo y te descubrirá todo tipo de opciones chulas
+          mientras construyes tu propia versión de Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: En este nivel, puedes elegir ser Steve o Alex. Pulsa las flechas del
+          teclado para moverte arriba, abajo, izquierda y derecha. Ahora te puedes
+          mover por el nivel como quieras. Para usar una criatura, camina hacia ella,
+          gírate para mirar hacia ella y pulsa espacio.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Si estás usando una pantalla táctil, desliza el dedo hacia arriba, abajo,
+          izquierda y derecha para moverte. Luego toca el juego para usar el objeto
+          que tengas delante.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Pero ¿qué sucede cuando lo usas? En Minecraft, las ovejas dan lana cuando
+          las esquilas, las vacas salen corriendo cuando las atacas y los Creepers
+          explotan cuando te acercas a ellos. Estas reacciones ocurren gracias a algo
+          llamado eventos. Los eventos le dicen al programa que escuche o espere hasta
+          que suceda algo. Y cuando lo hace, realiza una acción.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Hasta ahora has usado un evento. El código que pones en la ranura "al
+          generarse" se ejecuta cuando la criatura se crea o cuando comienza la partida.
+          Durante los próximos niveles tendrás nuevas ranuras para eventos como "al
+          ser tocado", que se ejecuta cuando tocas a la criatura, o "al usarse" para
+          cuando usas a la criatura. O, si quieres que el zombi desaparezca cuando
+          salga el sol, ponlo en la ranura "de día".
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: En el juego, generar significa lo mismo que crear. En este nivel, vamos
+          a hacer que los zombis se generen cuando se ponga el sol. Para ello, vamos
+          a usar el bloque "de noche".
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Ya que queremos que los zombis aparezcan de noche, vamos a añadir el
+          bloque "generar zombi" debajo del bloque "de noche". En cuanto se generen,
+          cada zombi ejecutará el código que has puesto en su ranura de evento "al
+          generarse". ¡Diviértete generando zombis!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: "¡Enhorabuena! Has aprendido a usar comandos de ciencia computacional
+          para darle vida al mundo de Minecraft. Ahora tú eres el desarrollador. Has
+          desbloqueado todos los comandos y todas las criaturas. Tú eliges qué sucede."
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Cuando termines de crear tu juego, elige compartir para obtener un enlace
+          con el que compartirlo con tus amigos o para jugarlo en tu teléfono. ¡Diviértete!
+          Estoy deseando jugar a tu versión de Minecraft.

@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
   "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorCollectedNotEnough": "Continua programando! Necesitas recoger al menos {goal, plural,one {1 ítem}other {# ítems}}",
   "collectorCollectedTooMany": "Ese espacio no tiene suficientes objetos para recogerlos.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "continue": "Continuar",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "La flor en la que estás no tiene más néctar.",
   "get": "obtener",
   "has": "ha",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "aquí hay lechuga",
   "hascorn": "hay un elote",
   "haspumpkin": "hay calabazas",
   "heightParameter": "altura",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Si hay un camino en la dirección especificada, realizar el primer bloque de acciones. De lo contrario, realizar el segundo bloque de acciones.",
   "insufficientHoney": "Necesitas hacer la cantidad correcta de miel.",
   "insufficientNectar": "Necesitas recoger la cantidad correcta de néctar.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "lechuga",
+  "lettuceTooltip": "Cosecha algo de lechuga",
   "make": "hacer",
   "moveBackward": "retroceder",
   "moveEastTooltip": "Muéveme un espacio al Este.",
@@ -111,6 +112,5 @@
   "word": "Encuentra la palabra",
   "wrongCropError": "No puedo cosechar ese cultivo desde aquí.",
   "yes": "Sí",
-  "youSpelled": "Escribiste",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Escribiste"
 }

@@ -82,8 +82,8 @@ uk:
     student_count: '%{count} учнів вже зареєструвались.'
     teacher_count: '%{count} вчителів вже зареєструвались.'
     overview: 'Створіть обліковий запис для відстеження власного прогресу чи керування своїм класом. <a href="/">Ви можете переглядати різні етапи та завдання</a> без облікового запису, але потрібно зареєструватися, щоб зберігати свій прогрес та проекти.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Розпочати роботу без входу'
+    hoc_already_signed_up_content: 'Ви зареєструвались для проведення Години коду! Вам і Вашим учням не потрібно реєструватись у Студії коду, щоб провести цей захід. Щоб розпочати, <a href="https://code.org/learn">оберіть підручник</a> для свого класу та поділіться посиланням на нього.<br/><br/>Якщо вам сподобається Година коду, і захочете продовжити навчання, можна створити пароль та обліковий запис для Студії коду, щоб зареєструвати своїх учнів на наші <a href="https://code.org/educate">триваліші курси</a>.'
     teacher_educator_guide: 'Переглянути посібник для вчителя'
     title: "Реєстрація на Code.org"
     school_name: 'Назва навчального закладу (необов''язково)'
@@ -358,8 +358,8 @@ uk:
     announcement_petition_button: "Додайте своє ім'я"
     announcement_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
     announcement_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть викладати інформатику протягом Години коду 5-11 грудня цього року. Ми розраховуємо на вашу допомогу в охопленні більше учнів, ніж раніше. <a href='%{signup_url}' target='_blank'>Зареєструйте свою подію Години коду</a> та покажіть іншим вчителям, що кожен може почати викладати інформатику."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 'ОГОЛОШЕННЯ для вчителів курсів 1-4 та прискореного курсу: через великий обсяг трафіку від мільйонів учнів під час Години коду, <b>Студія коду не зберігатиме і не звітуватиме про прогрес учнів на цих курсах від 3 по 11 грудня</b>. Ми рекомендуємо виконати завдання Години коду зі своїм класом для відзначення Години коду протягом тижня інформатики. Тоді як наші власні підручники Години коду теж не зберігатимуть прогрес того тижня, учні все-ж можуть виконати завдання та отримати сертифікат.'
+    announcement_mc_launch: "Один із наших найпопулярніших підручників отримав продовження! Зовсім нова Година коду від Майнкрафт - Розробник дозволяє створити власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт, а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі своїм класом на Годині коду."
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи."
     section_code_not_entered: "Будь ласка, вкажіть current_section_code."
@@ -490,7 +490,7 @@ uk:
       body: "Дослідимо світ Майнкрафту через код."
     minecraft2016:
       title: "Майнкрафт"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
     unplugged:
       title: "Безмашинні вправи"
       audience: "Вік 6+"
@@ -583,37 +583,37 @@ uk:
     message: "Ми в процесі оновлення для надання ретельнішого захисту Вашої конфіденційності та безпеки. З цією метою існуючі користувачі повинні вказати свій вік.<br/> Як і раніше, code.org ніколи не надаватиме, не продаватиме і не ділитиметься цією інформацією з третіми особами."
     sign_out: 'Якщо Ви не бажаєте надавати інформацію про свій вік, Ви можете <a href="%{url}">вийти з системи</a>.'
   terms_interstitial:
-    title: "Updated Terms of Service and Privacy Policy"
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
-    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
+    title: "Оновлені умови надання послуг та політики конфіденційності"
+    intro_desc: 'Ми оновили наші умови користування та політику конфіденційності. Зміни вступили в силу з 24 серпня 2016 року. Найбільша зміна: ми більше <i>не будемо зберігати електронні адреси для облікових записів учнів у Студії коду.</i> Для нас це дуже важливо, і ми сподіваємось, що це задасть новий стандарт учнівської конфіденційності в освітніх технологіях. Ми надіслали Вам коротку інформацію про зміни на електронну скриньку.'
+    intro_instructions: "Вам потрібно прийняти ці нові умови, щоб Ваші учні, молодші 13 років, мали повний доступ до останніх можливостей Студії коду. Коли реєструєте обліковий запис для учня, молодшого 13 років, потрібно підтвердити, що Ваша школа має згоду батьків на збір особистих даних учня для використання у школі, включно з освітніми програмами, такими як Студія коду."
     tos: "Умови надання послуг"
     privacy: "Політика конфіденційності"
-    privacy_notice: "Конфеденційність"
+    privacy_notice: "Конфіденційність"
     accept_label: 'Я згіден з тим, що можуть бути оновлені <a href="%{tos_url}" target="_blank">Умови використання сервісу</a>, <a href="%{privacy_url}" target="_blank">Конфеденційність Policy</a>'
     accept: "Підтвердити"
     print: "Друк"
     reminder_desc: 'Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила використання сервісу</a> та <a href="%{privacy_url}" target="_blank">Конфеденційність</a>. Будь ласка, прочитайте це перед тим, як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.'
     review_terms: "Переглянути оновлені домовленості"
   race_interstitial:
-    title: 'За бажанням: Допоможіть нам відстежувати прогрес для покращування різноманіття галузі Ікт(Інформаційних Технологій) та програмування'
-    message: "Please tell us your race (check all that apply)"
+    title: 'За бажанням: Допоможіть нам відстежувати прогрес для підвищення різноманіття у галузі інформатики'
+    message: "Вкажіть свою расову приналежність (позначте всі потрібні варіанти)"
     races:
       - 
         white: Білий
       - 
         black: Чорний або Афроамериканець
       - 
-        hispanic: Hispanic or Latino
+        hispanic: Іспаномовний або латиноамериканець
       - 
-        asian: Asian
+        asian: Азіат
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Корінний житель Гавайських островів або інших островів Тихого океану
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: Американський індіанець/корінний житель Аляски
       - 
         other: Інше
       - 
-        opt_out: Prefer not to say
+        opt_out: Не волію відповідати
     submit: "Надіслати"
     decline: "Закрити"
   zendesk_too_young_message: 'На жаль, молодші користувачі не можуть входити на цей сайт підтримки. Ви можете користуватись <a href="http://support.code.org">support.code.org</a> не входячи в обліковий запис, або попросіть своїх батьків чи вчителя зв''язатися з нами.'
@@ -742,7 +742,7 @@ uk:
     download_message: 'Завантажити %{app_name} для оффлайнового використання (136MB)'
     download_in_english: 'Завантаження англійською:'
     download_in_spanish: 'Завантаження іспанською:'
-    windows: 'Windows (64-bit)'
+    windows: 'Windows (64-розрядна версія)'
     mac: 'Mac OS X'
   plc:
     preview_assignments:
@@ -753,8 +753,8 @@ uk:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
-  hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
+  locked_stage: 'Вміст цього етапу не видимий, бо цей етап поки що заблокований. Ваш вчитель розблокує цей етап, коли прийде час над ним працювати або перевіряти відповіді.'
+  hidden_stage: "Ваш вчитель не очікував, що ви тут опинитесь. Запитайте у вчителя, який урок вам потрібен."
   return_course_overview: 'Перейти до огляду розділу'
   pd:
     survey:
