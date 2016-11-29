@@ -9,17 +9,15 @@ var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 
+const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
+const DEFAULT_CHANNEL_ID = undefined;
 
-var assetPathPrefix = "/v3/assets/";
-var channelId;
+let assetPathPrefix = DEFAULT_ASSET_PATH_PREFIX;
+let channelId = DEFAULT_CHANNEL_ID;
 
 export function init(config) {
-  if (config.assetPathPrefix) {
-    assetPathPrefix = config.assetPathPrefix;
-  }
-  if (config.channel) {
-    channelId = config.channel;
-  }
+  assetPathPrefix = config.assetPathPrefix || DEFAULT_ASSET_PATH_PREFIX;
+  channelId = config.channel || DEFAULT_CHANNEL_ID;
 }
 
 /**
