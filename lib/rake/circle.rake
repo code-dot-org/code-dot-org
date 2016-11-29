@@ -34,6 +34,11 @@ TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 # Run UI tests against SafariYosemite
 TEST_SAFARI_TAG = 'test safari'.freeze
 
+# Run UI tests against iPad, iPhone or both
+TEST_IPAD_TAG = 'test ipad'.freeze
+TEST_IPHONE_TAG = 'test iphone'.freeze
+TEST_IOS_TAG = 'test ios'.freeze
+
 # Overrides for whether to run Applitools eyes tests
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
@@ -110,6 +115,8 @@ def browsers_to_run
   browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
+  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
+  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers
 end
 
