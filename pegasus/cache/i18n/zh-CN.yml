@@ -4,8 +4,8 @@
   'yes': "是"
   'no': "不"
   select_language: "请选择您的语言"
-  upgrade_ie_message: Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到更新版本的浏览器。
-  upgrade_ie_message_csedweek: CSEdWeek.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到更新版本的浏览器。
+  upgrade_ie_message: Code.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。
+  upgrade_ie_message_csedweek: CSEdWeek.org 将很快停止对 Internet Explorer 8、 9 和 10 的支持。请升级到新版本的浏览器。
   upgrade_ie_link: "了解详情"
   en: "计算机科学"
   computer_science_edweek: "计算机科学教育周"
@@ -28,8 +28,11 @@
   submit: "提交"
   twentyhours_heading: "看看我们对计算机科学课程的简介"
   twentyhours_text: "完成您的第一个编程一小时了吗？在此后续课程中更深入的了解计算机科学和编程的概念。"
-  og_title: "每个孩子都应该有机会"
+  og_title: "《编程一小时》活动即将开始"
   og_description: "每个学校的每个学生都应该有学习计算机科学的机会。计算机科学正在改变所有的东西。"
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: 加入<a href="http://hourofcode.com">编程一小时</a><br/>2014年12月8至14日<br/>
   hoc2014_students: "学生"
   hoc2014_try: "体验一下"
@@ -82,7 +85,7 @@
   view_unit: "查看单元"
   make_app: "创建一个应用"
   congrats_guest_speaker_title: "为你的班级找到了一位演讲人"
-  congrats_guest_speaker_desc: "既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，使它与能在现实世界中的制作联系起来。你可以利用我们的'志愿者地图'去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。"
+  congrats_guest_speaker_desc: "现在既然你的学生们已经完成了一门计算机科学课程，你可以考虑庆祝一下，并通过邀请一个演讲嘉宾到你的教室，将我们学的课程与现实世界联系起来。你可以利用我们的'志愿者地图'去邀请当地的志愿者参观你的教室，你也可以在任意城市里寻找愿意远程辅导你的学生的计算机科学的学生或者专业的技术人员。"
   congrats_guest_speaker_cta: "找到的特邀演讲者"
   congrats_third_party_title: "在这些应用和网站上使用你的新技能"
   third_party_gradelevel_kto8: 8年级
@@ -99,14 +102,14 @@
   third_party_price_free: "价格：免费"
   third_party_price_299: "价格：2.99美元／下载"
   third_party_price_individual: "个人价格 ︰ 免费试用 & 25 美元/月"
-  third_party_price_school: "学校价格 ︰ 免费计划 & Pro 在 $2500年 +"
+  third_party_price_school: "学校价格 ︰ 免费计划 或者2500美元以上的Pro"
   third_party_tynker_desc: Tynker 的创意计算平台帮助孩子愉快的，直观和富有想象力的养成计算机思维和培养编程技巧。我们创新的可视化编程语言，交互式自学课程，和游戏为基础的编程活动提供了一个简单的方式介绍编程并且让孩子学会创新和创造。
   third_party_tynker_btn_curriculum: "早期的读者尝试 Tynker 课程"
   third_party_tynker_btn_site: "访问 Tynker"
   third_party_scratchjr_desc: Scratch Jr. 是一种能够让孩子（5-7岁）创造他们自己的互动故事和游戏的介绍性编程语言。孩子只要将图形化的编程块扣合在一起，就能让角色移动、跳跃、跳舞和唱歌。孩子可以在编辑器中修改角色，可以添加他们自己的声音，甚至可以插入他们自己的照片——然后用编程块使他们的角色活灵活现。
   third_party_scratchjr_btn_curriculum: "下载Scratch Jr. 的课程"
   third_party_scratchjr_btn_site: "访问 Scratch Jr."
-  third_party_scratch_desc: "在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——21世纪生活的基本技能。"
+  third_party_scratch_desc: "在 Scratch 中，你可以通过编程的方式来设计你自己的互动故事、游戏和动画，还可以在在线社区与他人分享你的创作。Scratch帮助年轻人学会创造性思考、系统性学习以及协同工作——这是21世纪生活的基本技能。"
   third_party_scratch_btn_curriculum: "下载Scratch Jr. 的课程"
   third_party_scratch_btn_forum: Scratch 教育家论坛
   third_party_scratch_btn_site: "访问 Scratch"
@@ -119,37 +122,37 @@
   third_party_khan_btn_learn: "与Khan Academy一起学习cs"
   third_party_khan_btn_forum: Khan 学院 CS 论坛
   third_party_appinv_desc: MIT App Inventor是一款以模块为基础的的编程工具，可以让包括新手在内的所有人来进行编程并且创建功能齐全的安卓应用程序。第一次使用App
-    Inventor的用户可以在一小时内创建并且运行自制的应用，而且比起传统的编程语言来讲，可以更快速的制作功能更加复杂的应用程序。
+    Inventor的用户可以在一小时内创建并且运行自制的应用，相比传统的编程语言，可以更快速的制作功能更加复杂的应用程序。
   third_party_appinv_btn_curriculum: "下载 App Inventor 2 课程"
   third_party_appinv_btn_forum: App Inventor 2 论坛
   third_party_appinv_btn_site: "访问 App Inventor 2"
   third_party_codehs_desc: CodeHS采用视频短片、示例代码和丰富的编程练习来介绍模块式编程，使编码充满了乐趣，并且很适合初学者。对于学校和教师，CodeHS提供课程，教学工具和产品设计
     。自学者则可以通过网上的导师们得到帮助。
-  third_party_codehs_btn_try: "介绍CS了解更多的学校"
-  third_party_codecademy_desc: "我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界需要教育
-    - 第一个真正的净母语教育。"
+  third_party_codehs_btn_try: "介绍CS，了解更多关于学校的。"
+  third_party_codecademy_desc: "我们是从下到上重新思考教育。该网站已经重新考虑几乎一切 - 电子商务，社交网络，医疗保健等。我们正在建设世界所需要的教育
+    - 第一个真正的网络教育。"
   third_party_codecademy_btn_curriculum: "下载 Codecademy 课程"
-  third_party_codecademy_btn_site: "访问代码学院"
+  third_party_codecademy_btn_site: "访问 Codecademy"
   third_party_organization: "组织"
   third_party_curriculum: "课程"
   third_party_pricing: "定价"
   third_party_cost_free: "学生和教师免费"
   third_party_cost_5permonth: "每节课每月5美元"
-  third_party_cost_299: "每次下载要2.99美元"
+  third_party_cost_299: "每次下载2.99美元"
   third_party_cost_free_399: "免费试用，每间教室399美元"
   third_party_cost_free_2: "免费试用，每位学生2美元"
   third_party_cost_free_10: "免费试用，每月9.99美元"
-  third_party_desc_5_4to8: "大约有五节课，成绩朝四到八个面向"
-  third_party_desc_10to12_kto3: "最多10-12 课，为幼儿园-3年级设计"
-  third_party_desc_11_kto5: "你制杖吗"
-  third_party_desc_10to12_kto5: "你持盾吗"
-  third_party_desc_40_4to8: "你捡币吗"
-  third_party_desc_dozens_kto8: "不，我撒币"
-  third_party_desc_10to15_3to12: "为 3-12 年级提供10到15节课"
-  third_party_desc_25to40_3to12: "从25-40的课程，专门给3-12年级"
-  third_party_desc_20_2to8: "大约有20节课时面向2到8年级的"
-  third_party_desc_7to22_5to12: "课程7-22之间，倾向5-12年级"
-  third_party_desc_20_4to12: "超过20个课程， 倾向4-12年级"
+  third_party_desc_5_4to8: "大约有5课时，面向4到8年级。"
+  third_party_desc_10to12_kto3: "大约有10-12课时，面向3年级。"
+  third_party_desc_11_kto5: "大约有11课时，面向5年级。"
+  third_party_desc_10to12_kto5: "大约有10-12课时，面向5年级。"
+  third_party_desc_40_4to8: "超过40课时， 面向4-8年级。"
+  third_party_desc_dozens_kto8: "数十个课时，面向8年级。"
+  third_party_desc_10to15_3to12: 10到15课时，面向3到12年级。
+  third_party_desc_25to40_3to12: 25到40课时，面向3到12年级。
+  third_party_desc_20_2to8: "大约有20课时，面向2到8年级。"
+  third_party_desc_7to22_5to12: 7到22课时，面向5到12年级
+  third_party_desc_20_4to12: "超过20课时， 面向4到12年级"
   enter_valid_age: "请选择一个有效的年龄"
   enter_valid_email: "请输入一个有效的电子邮件地址"
   get_a_certificate_message: "我们会向您发送证书和有关的信息 关于如何<a href='/learn/beyond'> 学习 1小时
@@ -195,10 +198,12 @@
   petition_thankyou: "谢谢你在请愿书上签名"
   continue_learning_header: "继续学习"
   continue_learning_body: "你有很多的选择。你可以在线，或在当地学校或夏令营学习。"
+  learn_code_studio: Try Code Studio courses
   learn_next_level: "继续到下一级别"
   learn_online: "请尝试其他在线课程"
   learn_classes: "查找本地的课程"
-  hoc_is_here: "学习计算机科学。计算机科学改变一切。 https://youtu.be/xJqSu1IbcHg."
+  learn_back_to_minecraft: "通过《我的世界》不断学习"
+  hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
   just_did_hoc: "我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg"
   just_did_course1: "我刚完成课程1-请查看！@codeorg"
   just_did_course2: "我刚完成课程2-请查看！@codeorg"
@@ -222,7 +227,7 @@
   contact_form_topic_press: "新闻/媒体（采访或演讲）"
   stats_nina: '"每一天学生们都如此 &mdash; 100%的参与."-尼娜尼科尔斯佩里，老师'
   stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
-  stats_michael: "“我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师"
+  stats_michael: "“我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 弗兰克. 马丁内斯，教师。"
   studiobar_title: "探索我们的 <a href='http://studio.code.org'>《编程工作室》</a>"
   studiobar_title_nolink: "探索我们的 编程工作室"
   studiobar_elementary_title: "初级课程"
@@ -285,9 +290,9 @@
   homepage_banner_privacy_link: "了解详情"
   homepage_banner_20k_teachers: "两万名老师经过训练后，正在课堂上传授计算机科学。"
   homepage_banner_20k_teachers_link: "了解详情"
-  homepage_banner_congress: "美国领导人正在呼吁国会拨款给 幼儿园-12年级 的计算机科学课程。"
+  homepage_banner_congress: "美国领导人正在呼吁国会拨款给12年级的计算机科学课程。"
   homepage_banner_congress_link: "添加您的支持"
-  homepage_banner_emailprivacy: "我们正在对如何支持学生的隐私做重要改变"
+  homepage_banner_emailprivacy: "我们正在对如何支持学生的隐私做一项重要的改进。"
   homepage_banner_emailprivacy_link: "阅读更多"
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: "了解详情"
@@ -316,7 +321,7 @@
   homepage_slot_text_link_stats: "请看统计信息"
   homepage_slot_text_link_buy: "加入进来"
   homepage_slot_text_link_donate: "捐一笔钱"
-  homepage_slot_text_link_shop: T 恤、 帽子，与更多
+  homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
   homepage_header_codestudio: "编程工作室 学生作品"
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
@@ -359,8 +364,10 @@
   class_submission_level_college: "大学"
   class_submission_level_vocational: "职业级"
   class_submission_languages_other: "其他语言"
-  inspirational_videos_more: 更多<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> 榜样和名人激励人心的视频
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: "选择你的游戏实验室主题"
   playlab_classic_title: "经典"
   playlab_gumball_title: "阿甘妙世界"
@@ -380,6 +387,29 @@
   mc_gradelevel: 6岁以上
   mc_platformtext: "最新的浏览器，智能手机，平板电脑"
   mc_specs: "多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上"
+  minecraft_designer: "《我的世界》造物主"
+  minecraft_adventurer: "《我的世界》大冒险"
+  minecraft_tutorials: "编程一小时《我的世界》教程"
+  minecraft_specs: "多种语言|最新的浏览器或平板电脑|2年级以上"
+  minecraft_designer_description: "利用编程，在你自己的《我的世界》里创建动物和其他生活在《我的世界》里的生物。"
+  minecraft_designer_button: "开始"
+  minecraft_adventurer_description: "编写代码来带领Alex或Steve开启一段冒险之旅。"
+  minecraft_adventurer_button: "开始"
+  minecraft_no_internet: "没有互联网吗？"
+  minecraft_download_adventurer: "下载离线版《我的世界》大冒险"
+  minecraft_store_camps: "微软商店编程一小时训练营"
+  minecraft_host_event: "主办《我的世界》编程一小时活动"
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: "教室资源和课程计划"
+  minecraft_leader_guide: "下载资源来帮助你组织和规划活动"
+  minecraft_facilitating_event: "想让活动更便利？"
+  minecraft_join_online_training: "参加微软和《我的世界》在11月22日或29日组织的在线培训（仅限英语）"
+  minecraft_youthspark_create_your_future: "无论你的兴趣所向，你可以用计算机科学去想象、创造和创建属于自己的未来。"
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
   minecraft_subtitle: "我的世界 编程一小时"
   watch_inspirational_videos: "在开始之前，看一段鼓舞人心的视频"
   speak_another_language: "使用另一种语言？"
@@ -413,8 +443,8 @@
   volunteer_engineer_submission_field_location_desc: "您所在的位置将被用作教师寻找附近志愿者的参考，并且会以大头针的形式标注在地图上。如果您很在意隐私问题，请使用您工作或者学校的地址，亦或只使用城市名称。"
   volunteer_engineer_submission_field_location_placeholder: "邮编、 城市和省/国家或街道地址"
   volunteer_engineer_submission_field_location_flexibility: "编程一小时活动中我可以帮助......（请选择所有适用项）"
-  volunteer_engineer_submission_checkbox_after_hoc: "参与了编程一小时活动之后，我对志愿工作很感兴趣"
-  volunteer_engineer_submission_field_time_commitment: "编程一小时活动之后能贡献的时间"
+  volunteer_engineer_submission_checkbox_after_hoc: "我有兴趣做一年的志愿者"
+  volunteer_engineer_submission_field_time_commitment: "能贡献的时间"
   volunteer_engineer_submission_field_linkedin: "领英帐号"
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/你的_姓名
   volunteer_engineer_submission_field_facebook: "脸谱上的个人资料"
@@ -482,9 +512,9 @@
   dashboard_landing_available_courses: "这些是目前可供您和您的学生使用的课程。"
   dashboard_landing_more_tutorials: "想看更多教程吗？"
   dashboard_landing_more_tutorials_desc: <a href="/learn/beyond">我们的合作伙伴提供了更多的教程</a>。可以通过机器人，制作网页，制作你自己的应用程序学习编程，或探索其他语言如C++，Ruby，Python！
-  dashboard_landing_inspire: "用海报、 视频和更多来激励你的学生。"
-  dashboard_landing_video_library: "使用从计算机科学概念的视频库里的视频。"
-  dashboard_landing_report_bug: "请求一个特性或报告一个漏洞。"
+  dashboard_landing_inspire: "用海报、 视频和更多东西来激励你的学生。"
+  dashboard_landing_video_library: "使用来自计算机科学概念的视频库里的视频。"
+  dashboard_landing_report_bug: "请求一个功能或报告一个漏洞。"
   dashboard_landing_teacher_forum: "加入一个专业学习的团体。"
   dashboard_hoc_courses: "《代码一小时》适合所有年龄的人。"
   dashboard_hoc_courses_desc: "和你的学生一同尝试任何这些不到 1 小时的辅导！"
@@ -523,12 +553,12 @@
   dashboard_action_required: "必填"
   dashboard_action_print_certificates: "打印证书"
   dashboard_assessments_view: "查看评价："
-  dashboard_assessments_none: "没有评价"
+  dashboard_assessments_none: "多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是在代码工作室之外完成的。"
   dashboard_assessments_none_part2: "如果你在教中学或高中课程，我们代码工作室提供的部分评估问题可帮助你的学生用于准备 AP 考试。若要使用这些评估，首先将课程分配到课堂，然后上面的下拉列表中选择课程，你将会在此处看到学生的答案。"
-  dashboard_assessments_summaries: "总结"
-  dashboard_assessments_answers: "全部答案"
+  dashboard_assessments_summaries: "评估总结"
+  dashboard_assessments_answers: "所有评估的答案"
   dashboard_surveys_answers: "调查"
-  dashboard_percent: "百分之"
+  dashboard_percent: "百分比"
   dashboard_filter_by_stage: "按阶段筛选 ︰"
   dashboard_filter_all: "全部"
   dashboard_download_csv: "下载 CSV"
@@ -536,13 +566,13 @@
   dashboard_navigation_section_student_progress: "学生账户和进度"
   dashboard_navigation_section_teacher_progress: "您的课程进度"
   dashboard_navigation_section_lesson_plans: "课程计划及资源"
-  dashboard_navigation_section_community: "帮助和社区"
+  dashboard_navigation_section_community: "支持"
   dashboard_navigation_section_pd: "职业发展"
   dashboard_navigation_section_speakers: "计算机科学 <br/> 特邀演讲人"
   dashboard_navigation_all_sections: "学生账户和进度"
   dashboard_navigation_view_progress: "进度"
   dashboard_navigation_view_text_responses: "文字回应"
-  dashboard_navigation_view_assessments: "测验"
+  dashboard_navigation_view_assessments: "评估"
   dashboard_navigation_view_assessments_surveys: "评估/调查"
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
@@ -561,7 +591,7 @@
   dashboard_progress_student_in_script: "%{student_name} 的进度信息在 %{script_name}"
   dashboard_progress_pair_programming: "结对编程"
   dashboard_responses_view: "查看文本响应 ︰"
-  dashboard_responses_none: "没有文本响应"
+  dashboard_responses_none: "我们的大多数课程是为较小年纪的孩子设计的，不要求学生用文本回答问题，所以，你不会在这里看到任何文本答案。给初中或高中学生的课程里，通过在上面的下拉框中选择，你能分配给他们的开放式的文本问题。"
   dashboard_sections_new_section: "新的学习小组"
   dashboard_sections_jumbotron_instruction: "创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。"
   dashboard_sections_table_section: "单元"
@@ -590,18 +620,10 @@
   dashboard_sections_yes_both: "是的，我想要复制学生到本章节和新章节中。"
   dashboard_sections_no_move: "不，我想移动学生到新章节中。"
   dashboard_sections_move_students: "转移学生"
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_hoc_script_desc: "参与编程一小时？"
+  dashboard_sections_assign_hoc_script_msg: "请注意，在12月5日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a
+    href='%{certificate_url}'>打印</a>这些证书。）<br/><br/>我们对有如此之多的教师和学生参与感到非常高兴，但同时对无法保存所有信息感到抱歉。如果你的班级想进一步学习，你可以继续在诸如《计算机科学基础》这类的课程中教授《编程一小时》。我们的教师仪表盘能让你在一年中的其它时候查看学生的进展。"
+  dashboard_sections_assign_activity: "指派课程"
   dashboard_error_none_selected: "你没有选择任何要转移的学生，请至少选择一个学生。"
   dashboard_error_other_section: "如果你要在自己管理的单元中调整学生，可以从下拉菜单选择你要调的单元。如果你要将学生调整到其他教师负责的单元，请选择”其它单元”。"
   dashboard_students_add_student: "添加学生"
@@ -645,11 +667,11 @@
   dashboard_curriculum_middle_title: "初中教育资源"
   dashboard_curriculum_high_title: "高中教育资源"
   dashboard_lesson_plans: "课程计划"
-  dashboard_view_all_lesson_plans: "查看所有课程计划"
+  dashboard_view_all_lesson_plans: "下载1-4课的完整教案"
   dashboard_course1: "课程 1:"
   dashboard_course2: "课程 2："
   dashboard_course3: "课程 3："
-  dashboard_course4: "课程 4 (测试版)："
+  dashboard_course4: "课程 4："
   dashboard_unplugged: "如果你没有电脑，可以在你的教室<a href='%{unplugged_url}'>试试这些离线的教程。</a>"
   dashboard_curriculum: "课程"
   dashboard_curriculum_overview: K-5课程概述
@@ -707,34 +729,39 @@
   dashboard_faq: "常见的问题"
   dashboard_faq_k5: K-5 组的常见问题
   dashboard_announcements: "公告"
-  dashboard_announce_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，您可以 <a href="%{pp_url}"target="_blank">
-    跟踪多个学生取得的进步</a> 即使他们结对编程在一台设备。你可以用 <i>任何</i> 课堂从我们 CS 原理课 <a href="%{csp_widgets_url}"target="_blank">
-    的最佳互动的工具</a>。你的学生可以 <a href="%{unused_code_url}"target="_blank"> 保持未使用的代码</a>
-    在他们的工作区，鼓励实验 ！签出我们所有的新功能，让我们知道你的想法。
+  dashboard_announce_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，即使学生们结对编程在一台设备，您也可以
+    <a href="%{pp_url}" target="_blank">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a
+    href="%{csp_widgets_url}" target="_blank">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href="%{unused_code_url}"
+    target="_blank">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "了解详情"
   dashboard_announce_try_now_button: "现在就试试"
-  dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每个学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
-    28 州长和美国地球观测卫星委员会大公司一起在一封公开信要求美国国会资助 K-12 计算机科学教育。"
+  dashboard_announce_host_an_hour_button: "主办一小时"
+  dashboard_announce_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
+    28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
   dashboard_announce_petition_button: "添加您的姓名"
   dashboard_announce_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
     看以前的公告。</a>"
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  dashboard_announce_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
+    href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
+  dashboard_announce_hoc_scaling: "课程 1-4 和加速课程老师警告：由于数以万计的学生对于“一小时代码”的巨大访问量， <b>至
+    11 年 12 月 3 日起，Code Studio 将不会保存或汇报学生在这些课程中的进度</b>。我们建议在“计算机科学教育周” 期间与你的班级做一个“一小时代码”的活动来庆祝“一小时代码”。虽然我们自己的“一小时代码”教程在其间也无法保存进度，但是学生仍然可以使用完整的教程并获得认证。"
+  dashboard_announce_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的时间》“编程一小时”设计师让学生们为《我的时间》里的世界设置规则。他们可以获得一个完全独一无二的《我的时间》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: "代码小时就在这里 — — 12 月 8-14 ！"
   code_sign_up: "注册以便在计算机科学教育周期间参加"
   host_an_hour: "主办一小时"
-  learn_banner_title: "加入我们的代码小时"
-  learn_banner_desc: "代码小时是一个全球性的活动，达到 180 多个国家的超过 1 亿学生。任何人，任何地方都可以组织一个小时的代码事件。帮助我们给每个学生学习计算机科学的机会
-    ！组织者可以按照我们的 <a href='%{how_to_url}' target='_blank'> 操作指南</a> 为教学代码小时，激发学生的 <a
-    href='%{videos_url}' target='_blank'> 这些</a> 视频。"
+  learn_banner_title: "加入《编程一小时》"
+  learn_banner_desc: "《编程一小时》是一个全球性的活动，有180 多个国家的超过 1 亿学生在参与。任何人，任何地方都可以组织编程一小时活动。帮助我们给每个学生学习计算机科学的机会
+    ！组织者可以按照我们的 <a href='%{how_to_url}' target='_blank'> 操作指南</a> 来教授编程一小时，用 <a href='%{videos_url}'
+    target='_blank'>这些视频</a>来激发学生的热情。"
   learn_more: "现在就试试"
   learn_sign_up_description: "报名参与在计算机科学教育周期间的编程一小时活动。"
   learn_sign_up_button: "注册"
@@ -847,14 +874,18 @@
   course3_name: "课程 3"
   course4_name: "第4课"
   accelerated_name: "加速课程"
-  cspunit1_name: "单元 1︰ 数字信息"
-  cspunit2_name: "单元 2︰ 互联网"
-  cspunit3_name: "单元 3︰ 编程"
-  cspunit4_name: "单元 4︰ 数据"
-  cspunit5_name: "单元 5︰ 探索和创建 PT"
+  cspunit1_name: "（旧）单元 1︰ 数字信息"
+  cspunit2_name: "（旧）单元 2︰ 互联网"
+  cspunit3_name: "（旧版）第3单元︰ 编程"
+  cspunit4_name: "（旧版）第4单元︰ 数据"
+  cspunit5_name: "（旧版）第5单元︰ 探索和创建 PT"
   cspunit6_name: Post-AP：应用程序中的数据库
-  csp1_name: "第一单元：互联网"
-  csp2_name: "单元 2︰ 数字信息"
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csp1_name: "第1单元：互联网"
+  csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   cspassessment_name: "完整测试 - 共50题"
@@ -875,16 +906,21 @@
   iceage_name: "冰河世纪"
   minecraft_name: "我的世界"
   starwarsblocks_name: "星球大战(块)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
-  csf_category_name: "电脑科学基本原理"
-  csp_category_name: "电脑科学法则"
+  csf_category_name: "计算机科学基本原理"
+  csd_category_name: 'Under Development: CS Discoveries'
+  csp_category_name: 15-16 计算机原理
   csp17_category_name: 16-17 计算机原理
   cspexams_category_name: "计算机原理练习测试"
+  research_studies_category_name: Research Studies
   applab_name: "应用实验室"
   applab_gradelevel: 13岁以上
-  applab_shortdescription_congrats: "应用实验室是一个可以让你制造简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript
-    来使它有作用，然后马上分享您的应用程序。"
+  applab_shortdescription_congrats: "应用实验室是一个可以让你使用简单的应用程序的编程环境。用代码块或 JavaScript来设计应用程序，然后马上分享您的应用程序。"
   codeorg_gradelevel: "适合年龄 4 岁以上"
   codeintl_gradelevel: "适合年龄 4 岁以上"
   thinkersmithspanish_gradelevel: Por todos
@@ -1040,10 +1076,10 @@
   teacherled_shortdescription: "从这些课件中得到启发，设计您自己的编程一小时活动。"
   course2_shortdescription_congrats: "对于具有基本阅读能力的学生来说，本课程是基于课程1。 学生将创造程序来解决问题和开发他们可以分享的互动式游戏或者故事。建议
     2-5年级。"
-  course3_shortdescription_congrats: "准备好到下一个级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
-    学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-5年级。"
+  course3_shortdescription_congrats: "准备好到下一级别了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
+    学生将创造可以与任何人分享的的交互式故事和游戏。 建议4-5年级学习。"
   course4_shortdescription_congrats: "准备好继续了吗？学生将会更深入的探究前面课程介绍的编程主题来灵活解决更为复杂的问题。这门课程结束时，
-    学生将创造可以与任何人分享的的交互式故事和游戏。 建议给 4-8年级。"
+    学生将创造可以与任何人分享的的交互式故事和游戏。 建议 4-8年级。"
   codeorg_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这是一个游戏一样的自学教程，并由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座。通过学习，会了解到重复，循环，条件和基本算法。"
   codeintl_longdescription: "通过拖拽编程，学习计算机科学的基本概念。这就像游戏一样，自我指导教程由比尔·盖茨，马克·扎克伯格，愤怒的小鸟和植物大战僵尸主演的视频讲座组成。通过它，你可以了解重复，循环，条件和基本算法。"
   thinkersmithspanish_longdescription: Mediante el uso de un "Vocabulario Robot" predefinido,
@@ -1317,7 +1353,7 @@
   sphero_beyond_longdescription: "无论你是教育工作者或者是父母，SPRK课程可以让孩子们快乐地学习给机器人编程，同时又有助于他们对数学和科学的学习。"
   compatibility_hide_this_warning: "隐藏此警告"
   compatibility_unsupported_browser: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
-    target='_blank'>我们支持的浏览器之一</a>。您可以尝试访问此网页，但无法获得期望的效果。"
+    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1326,58 +1362,22 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min

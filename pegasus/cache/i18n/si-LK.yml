@@ -38,9 +38,12 @@
     කර බලන්න"
   twentyhours_text: "ඔබගේ පළමු  Hour of Code වැඩසටහන අවසන්ද? මෙම පාඨමාලාවේ පසුවට මූලික
     පරිගණක විද්‍යාව සහ  ක්‍රමලේඛන සංකලප තව දුරටත් ඉගෙනගන්න."
-  og_title: "සෑම දරුවෙකුටම අවස්ථාවක් ලැබිය යුතුය"
+  og_title: Hour of Code වැඩසටහන ළඟදීම
   og_description: "පරිගණක විද්‍යාව හැදෑරීමේ අවස්තාව, සෑම පාසලකම සිටින සෑම දරුවෙකුටම
     ලැබිය යුතු වේ. එය සෑමදෙයක්ම වෙනස් කරමින් පවතී."
+  csedweek_og_title: Hour of Code ළඟදීම
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> වැඩසටහන සමග එක්වන්න<br/>දෙසැම්බර්
     8 - 14, 2014<br/>
   hoc2014_students: "සිසුන්"
@@ -51,12 +54,12 @@
   hoc2014_support: "එයට සහය වන්න &#x25BE;"
   hoc2014_whatishoc: Hour of Code යනු කුමක්ද?
   csedweek_map_header: "# CSEdWeek / ලොව පුරා Hour of Code වැඩසටහන්"
-  csedweek_map_signup: "ඔබේ උළෙල ලියාපදින්චි කරන්න"
-  csedweek_map_search_placeholder: Hour of Code සිදුවීම් සොයන්න
+  csedweek_map_signup: "ඔබේ වැඩසටහන ලියාපදින්චි කරන්න"
+  csedweek_map_search_placeholder: Hour of Code වැඩසටහන් සොයන්න
   csedweek_map_search_search: "සොයන්න"
   csedweek_map_search_reset: "යලි පිහිටුවන්න"
   csedweek_map_legend_title: "ආඛ්‍යානය"
-  csedweek_map_legend_event: Hour of Code සිදුවීම්
+  csedweek_map_legend_event: Hour of Code වැඩසටහන
   csedweek_map_legend_cs_tech_jam: "විශේෂ උත්සවය"
   cded_sign_up: Sign up
   cded_try_it: "එය උත්සහ කරන්න"
@@ -202,8 +205,8 @@
   third_party_desc_20_4to12: 4-12 ශ්‍රේණි සඳහා පාඩම් 20කට අධික ප්‍රමාණයක්
   enter_valid_age: "කරුණාකර වලංගු වයසක් තෝරා ගන්න"
   enter_valid_email: "කරුණාකර වලංගු විද්‍යුත් තැපැල් ලිපිනයක් ඇතුලත් කරන්න"
-  get_a_certificate_message: We'll send you a certificate and information about how
-    to <a href='/learn/beyond'>Learn beyond an Hour</a>
+  get_a_certificate_message: "සහතික පත්‍රයක් සහ <a href='/learn/beyond'>මෙම පැයෙන්
+    ඔබ්බට ඉගෙනගන්නා ආකාරය</a> පිළිබඳ තොරතුරු අප විසින් ඔබ වෙත ලබාදෙනු ඇත"
   get_a_certificate_message_after: "සහතිකය බාගත කිරීමට හෝ මුද්‍රණය කිරීමට ඒ මත ක්ලික්
     කරන්න. දැන් තවදුරටත් අපේ <a href='http://studio.code.org'>අනෙකුත් පාඨමාලා</a>
     සමග ඉදිරියට යන්න, නැතහොත් තවත් විකල්ප සඳහා <a href='/learn/beyond'>Learn beyond
@@ -251,9 +254,11 @@
   continue_learning_header: "පැයකට සීමා නොවී දිගටම ඉගෙන ගන්න"
   continue_learning_body: "විකල්ප රැසක් පවතී. ඔබට අන්තර්ජාලය ඔස්සේ, හෝ ඔබ ප්‍රදේශයේ
     පාසලක දී, හෝ ගිම්හාන කඳවුරක දී ඉගෙන ගත හැකියි."
+  learn_code_studio: Code Studio පාඨමාලා උත්සාහ කර බලන්න
   learn_next_level: "තවත් Code Studio පාඨමාලාවක් සදහා යොමු වන්න"
   learn_online: "තවත් පාඨමාලා සබැඳිව උත්සාහ කරන්න"
   learn_classes: "දේශීය පන්තියක් සොයාගන්න"
+  learn_back_to_minecraft: Minecraft සමග තවදුරටත් ඉගෙනගන්න
   hoc_is_here: "පරිගණක විද්‍යාව ඉගෙන ගන්න. එය සෑම දෙයක්ම වෙනස් කරමින් පවතී. https://youtu.be/xJqSu1IbcHg."
   just_did_hoc: "මම #HourOfCode වැඩසටහන සම්පූර්ණ කළා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course1: "මම දැන් පළමු පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
@@ -350,7 +355,7 @@
   homepage_slot_text_hoc: Hour of Code වැඩසටහන
   homepage_slot_text_frozen: Anna සහ Elsa සමග Frozen
   homepage_slot_text_teacher: "ගුරු උපකරණ පුවරුව"
-  homepage_slot_text_studio: "අපගේ සියලු නිබන්ධන"
+  homepage_slot_text_studio: "අපගේ නිබන්ධන සියල්ල"
   homepage_slot_text_course4: "පාඨමාලාව 4"
   homepage_slot_text_shop: "සාප්පුව"
   homepage_slot_text_flappy: "ෆ්ලැපි කේතය"
@@ -359,7 +364,7 @@
   homepage_action_text_join_us: "අප හා එක් වන්න"
   homepage_action_text_sign_up: Sign up
   homepage_action_text_try_it: "එය උත්සහ කරන්න"
-  homepage_action_text_volunteers: "තාක්ෂණික ස්වේච්ඡා සේවකයින් අවශ්යයි"
+  homepage_action_text_volunteers: "තාක්ෂණික ස්වේච්ඡා දායකයින් අවශ්‍යයි"
   homepage_action_text_codevideo: "වීඩියෝව නරඹන්න"
   homepage_action_text_teachervideo: "වීඩියෝව නරඹන්න"
   homepage_action_text_girlvideo: "ගැහැණු ළමයෙකු උනන්දු කරවන්න"
@@ -369,7 +374,7 @@
   homepage_diversity_pledge: "පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිදත්වය සඳහා ප්‍රතිඥා
     දෙන්න"
   homepage_banner_text_prizes: 'Hour of Code ළඟදීම පැමිණේ, දෙසැම්බර් 7-13. '
-  homepage_banner_link_prizes: "ඉතිහාසයේ දැවැන්තම ඉගෙනුම් උත්සවයට එක් වන්න. "
+  homepage_banner_link_prizes: "ඉතිහාසයේ දැවැන්තම ඉගෙනුම් වැඩසටහනට එක් වන්න. "
   homepage_banner_text_main: Code.org සහ එම විද්යාලයේ සභා පරිගණක විද්යාව විවිධත්වය
     වැඩි දියුණු කිරීම සඳහා සන්ධානයක් සාදයි.
   homepage_banner_text_link: "වැඩිදුර ඉගෙන ගන්න"
@@ -389,7 +394,7 @@
   homepage_banner_40k_teachers_link: "වැඩිදුර ඉගෙන ගන්න"
   homepage_slot_text_title_hoc: "පැයේ කේතය"
   homepage_slot_text_blurb_hoc: "ඕනෑම අයෙකුට ඉගෙනගත හැකියි. අදම ආරම්භ කරන්න"
-  homepage_slot_text_link_hoc: "පැයේ කේතය උත්සාහ කරන්න"
+  homepage_slot_text_link_hoc: Hour of Code උත්සාහ කරන්න
   homepage_slot_text_link_host: Hour of Code වැඩසටහනක් සංවිධානය කරන්න
   homepage_slot_text_link_hocserved: "# ක් උත්සාහ කර ඇත"
   homepage_solot_text_link_volunteer: Hour of Code සඳහා ස්වෙච්චාවෙන් ඉදිරිපත් වන්න
@@ -421,32 +426,32 @@
   contact_form_topic_parent: "මම දෙමාපියෙක්"
   contact_form_topic_teacher: "මම ගුරුවරයෙකු / අධ්යාපනඥයෙකු"
   contact_form_topic_outside_us: "මම එක්සත් ජනපදයෙන් පිටත ඉන්නේ."
-  contact_form_topic_contribution: "පුණ්ය දායකත්වය"
+  contact_form_topic_contribution: "පරිත්‍යාගශීලී දායකත්වය"
   contact_form_topic_partner: "මම සහයෝගය දක්වන්න කැමතියි"
   contact_form_topic_other: "වෙනත්"
   contact_form_label_topic: "මාතෘකාව"
-  contact_form_label_email: "ඔබේ ඊ තැපැල් ලිපිනය"
+  contact_form_label_email: "ඔබේ ඊමේල් ලිපිනය"
   contact_form_label_message: "පණිවිඩය"
   contact_form_label_submit: "පණිවිඩය යවන්න"
-  class_submission_in_school: "පාසලේ"
+  class_submission_in_school: "පාසල තුළදී"
   class_submission_in_school_daily_programming_course: "දෛනික ක්‍රමලේඛන පාඨමාලාව"
   class_submission_in_school_ap_computer_science: "උසස් පරිගණක විද්‍යාව"
-  class_submission_in_school_full_university_cs_curriculum: "පූර්ණ විශ්ව විද්යාල CS
+  class_submission_in_school_full_university_cs_curriculum: "පූර්ණ විශ්වවිද්‍යාල CS
     විෂය මාලාව"
   class_submission_in_school_robotics_club: Robotics සංගමය
   class_submission_in_school_programming_integrated_in_other_classes: "ක්‍රම ලේඛනය
     ඒකාබද්ධ කළා අනෙකුත් පංති (ගණිතය, විද්‍යාව, ආදිය)"
   class_submission_in_school_summer_school_cs_program: "ගිම්හාන පරිගණක විද්‍යා පාසල්
     වැඩසටහන"
-  class_submission_in_school_exploring_computer_science: "පරිගණක විද්‍යාව ගවේශණය කරමින්"
-  class_submission_in_school_other: "පාසලේ වෙනත් අය"
+  class_submission_in_school_exploring_computer_science: "පරිගණක විද්‍යාව ගවේශණය"
+  class_submission_in_school_other: "පාසැල තුළ වෙනත් වැඩසටහන්"
   class_submission_out_of_school: "පාසලින් පිටත"
   class_submission_out_of_school_summer_camp: "ගිම්හාන කඳවුර"
   class_submission_out_of_school_afterschool_program: "පාසලෙන් වේලාවෙන් පසුව පැවැත්වෙන
     වැඩසටහන"
   class_submission_out_of_school_all-day_workshop: "මුළු-දින වැඩමුළු (සතියක් වනතුරු)"
   class_submission_out_of_school_multi-week_workshop: "සති කිහිපයක වැඩමුළුව"
-  class_submission_out_of_school_other: "පාසලින් පිටත වෙනත්"
+  class_submission_out_of_school_other: "පාසලින් පිටත වෙනත් වැඩසටහන්"
   class_submission_online: "අන්තර්ජාලය හරහා"
   class_submission_online_programming_class: "සබැඳි ක්‍රමලේඛන පන්තිය"
   class_submission_online_teacher_resource: "අන්තර්ජාල ගුරු සම්පත්"
@@ -458,9 +463,10 @@
   class_submission_level_college: "විද්‍යාලය"
   class_submission_level_vocational: "වෘත්තිමය"
   class_submission_languages_other: "වෙනත් භාෂා"
-  inspirational_videos_more: ආදර්ශමත් සහ කීර්තිමත් පුද්ගලයින් විසින් ඉදිරිපත් කරන
-    <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">අගනා
-    වීඩියෝ</a> රැසක්
+  videos_more: "ප්‍රසිද්ධ චරිත සහ කලාකරුවන්ගෙන් තවත් <a href='%{inspiring_videos_playlist}'>ආදර්ශමත්
+    වීඩියෝ</a> රැසක්"
+  careers_page_more: "තාක්ෂණික ක්ෂේත්‍ර වල ප්‍රවීණයන් ගෙන් තවත් <a href='%{careers_url}'
+    target='_blank'>ආදර්ශමත් වීඩියෝ</a> රැසක්"
   playlab_choose_theme: "ඔබේ Play Lab තේමාව තෝරාගන්න"
   playlab_classic_title: "පැරණි"
   playlab_gumball_title: Gumball ගේ අරුම පුදුම ලෝකය
@@ -483,6 +489,32 @@
   mc_gradelevel: "වයස 6-106"
   mc_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   mc_specs: "භාෂා රැසක්| නවීන බ්‍රව්සර් සහ ටැබ්ලට් | වයස අවුරුදු 6-106"
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code නිබන්ධන
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: "ආරම්භ කරන්න"
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: "ආරම්භ කරන්න"
+  minecraft_no_internet: "අන්තර්ජාල පහසුකම් නොමැති ද?"
+  minecraft_download_adventurer: Minecraft Adventurer නොබැඳි අනුවාදය බාගන්න.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Minecraft Hour of Code වැඩසටහනක් සංවිධානය කරන්න
+  minecraft_youthspark_continue_learning: Microsoft YouthSpark සමග තවදුරටත් ඉගෙනගන්න
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: "ගුරු සම්පත් සහ පාඩම් සැලසුම."
+  minecraft_leader_guide: "වැඩසටහනක් සංවිධානය කිරීමට අවශ්‍ය සම්පත් බාගත කරන්න."
+  minecraft_facilitating_event: "ඔබ වැඩසටහනක් සංවිධානය කරනවාද?"
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Minecraft Hour of Code
   watch_inspirational_videos: "ඔබ ආරම්භ කිරීමට පෙර, මෙම ප්‍රබෝධමත් කරවන වීඩියෝ එකක්
     බලන්න"
@@ -564,7 +596,7 @@
   volunteer_engineer_submission_thankyou: ස්තූතියි ස්වේච්ඡා සේවකයෙක් ලෙස ඇතුලත් වීම.
     ගුරුවරුන් බාවිතා කරනුයේ <a href="%{url}">මෙම සිතියම </a>ස්වේච්ඡා සේවකයන් සොයාගැනීමට
     හා සම්බන්ද කරගැනීමට.
-  volunteer_engineer_submission_commitment_uncertain: "අනියත"
+  volunteer_engineer_submission_commitment_uncertain: "අවිනිශ්චිතයි"
   volunteer_engineer_submission_commitment_one_hr_per_week: "සතියකට පැයක්"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "සතියකට පැය 3ක්"
   volunteer_engineer_submission_commitment_five_hrs_per_week: "සතියකට පැය 5ක්"
@@ -585,14 +617,14 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: "විශ්වවිද්‍යාල
     පරිගණක විද්‍යා සිසුන් "
   volunteer_engineer_submission_experience_software_professional: "මෘදුකාංග ඉංජිනේරු"
-  volunteer_engineer_submission_distance_8: "සැතපුම් 5"
-  volunteer_engineer_submission_distance_16: "සැතපුම් 10"
-  volunteer_engineer_submission_distance_24: "සැතපුම් 15"
-  volunteer_engineer_submission_distance_32: "සැතපුම් 20"
-  volunteer_engineer_submission_num_volunteers_5: "ස්වෙච්ඡා සේවකයින් 5"
-  volunteer_engineer_submission_num_volunteers_10: "ස්වේච්ඡා සේවකයන් 10"
-  volunteer_engineer_submission_num_volunteers_25: "ස්වේච්ඡා සේවකයන් 25"
-  volunteer_engineer_submission_num_volunteers_50: "ස්වේච්ඡා සේවකයන් 50"
+  volunteer_engineer_submission_distance_8: "සැතපුම් 5යි"
+  volunteer_engineer_submission_distance_16: "සැතපුම් 10යි"
+  volunteer_engineer_submission_distance_24: "සැතපුම් 15යි"
+  volunteer_engineer_submission_distance_32: "සැතපුම් 20යි"
+  volunteer_engineer_submission_num_volunteers_5: "ස්වෙච්ඡා දායකයින් 5යි"
+  volunteer_engineer_submission_num_volunteers_10: "ස්වේච්ඡා දායකයින් 10යි"
+  volunteer_engineer_submission_num_volunteers_25: "ස්වේච්ඡා දායකයින් 25යි"
+  volunteer_engineer_submission_num_volunteers_50: "ස්වේච්ඡා දායකයින් 50යි"
   volunteer_engineer_submission_type_task_onsite: "තාක්ෂණික උපකාර හා ප්‍රබෝධමත් අදහස්
     සදහා මගේ පන්ති කාමරයට පැමිණෙන්න"
   volunteer_engineer_submission_type_task_remote: "මට අවශ්‍යයි ශිෂ්‍යන්ගේ ආශ්වාදය
@@ -669,7 +701,7 @@
   dashboard_course_csins_desc: "ආකෘති නිර්මාණය සහ අනුරූපන සන්දර්භය තුල පරිගණක විද්යාව
     සංකල්ප හැඳින්වීමක් ඉදිරිපත් කිරීමට Code.org GUTSව්යාපෘතිය මෙයින් අදහස් සමග අත්වැල්
     බැඳගෙන ඇත."
-  dashboard_course_ecs: "පරිගණක විද්‍යාව ගවේශණය කරමින්"
+  dashboard_course_ecs: "පරිගණක විද්‍යාව ගවේශණය"
   dashboard_course_ecs_desc: "පරිගණක විද්‍යාව ගවේෂණය එක් අවුරුදු කොටස 6 කින් සමන්විත
     පාඨමාලාවකි. මානව පරිගණක අන්තර් ක්රියාකාරිත්වය. ප්රශ්නය විසඳීම, වෙබ් නිර්මාණ, ක්රමලේඛ,
     තොරතුරු තාක්ෂණය සහ දත්ත විශ්ලේෂණය, සහ රොබෝ විද්යාව."
@@ -700,21 +732,21 @@
     ඇති drop down මෙනුවෙන් තොර ගන්න. ඔබට ඔබගේ සිසුන් පිළිතුරු සපයන ආකාරය බලාගත හැක."
   dashboard_assessments_summaries: "ඇගයීම් වල සාරාංශය"
   dashboard_assessments_answers: "සියලුම ඇගයීම් සඳහා පිලිතුරු"
-  dashboard_surveys_answers: "සමීක්ශණ"
-  dashboard_percent: "ප්‍රතිශතය"
-  dashboard_filter_by_stage: "මෙම පියවරෙන් පෙන්වන්න:"
+  dashboard_surveys_answers: "සමීක්ෂණ"
+  dashboard_percent: "සියයට"
+  dashboard_filter_by_stage: "අදියරයන් අනුව වර්ග කරන්න:"
   dashboard_filter_all: "සියල්ල"
   dashboard_download_csv: CSV ලෙස බාගත කරන්න
   dashboard_navigation_home_page: "ගුරුවරයාගේ මුල් පිටුව"
-  dashboard_navigation_section_student_progress: "සිසු ගිණුම් සහ ප්‍රගති"
+  dashboard_navigation_section_student_progress: "සිසු ගිණුම් සහ ප්‍රගති වාර්තා"
   dashboard_navigation_section_teacher_progress: "පාඨමාලාව තුළ ඔබේ ප්‍රගතිය"
   dashboard_navigation_section_lesson_plans: "පාඩම් සැලසුම් සහ සම්පත්"
   dashboard_navigation_section_community: "සහාය"
   dashboard_navigation_section_pd: "වෘත්තිමය සංවර්ධනය"
-  dashboard_navigation_section_speakers: "පරිගණක විද්‍යාව <br/> ආගන්තුක කථිකයන්"
-  dashboard_navigation_all_sections: "සිසු ගිණුම් සහ ප්‍රගති"
-  dashboard_navigation_view_progress: "ප්රගතිය"
-  dashboard_navigation_view_text_responses: "පාඨමය ප්රතිචාර"
+  dashboard_navigation_section_speakers: "පරිගණක විද්‍යාව <br/> ආරාධිත කථිකයන්"
+  dashboard_navigation_all_sections: "සිසු ගිණුම් සහ ප්‍රගති වාර්තා"
+  dashboard_navigation_view_progress: "ප්‍රගතිය"
+  dashboard_navigation_view_text_responses: "ලිඛිත ප්‍රතිචාර"
   dashboard_navigation_view_assessments: "ඇගයීම්"
   dashboard_navigation_view_assessments_surveys: "ඇගයීම් / සමීක්ෂණ"
   dashboard_navigation_add_students: "සිසුන් එක් කරන්න"
@@ -778,18 +810,18 @@
     \ නව කොටසකට පිටපත් කිරිමට අවශ්‍යයයි"
   dashboard_sections_no_move: "නැහැ, මට අවශ්‍ය සිසු අලුත් කොටසට ඇතුලත් කිරීමට පමණයි."
   dashboard_sections_move_students: "සිසුන් ගෙන යන්න"
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_hoc_script_desc: Hour of Code වැඩසටහනට සහභාගී වෙනවාද?
+  dashboard_sections_assign_hoc_script_msg: Hour of Code  වැඩසටහන නිසා අප වෙබ් අඩවිය
+    කාර්යබහුල වන බැවින්, දෙසැම්බර් 5-11 සතිය තුළදී මෙම පාඨමාලාවේ ප්‍රගතිය ගබඩා නොවන
+    බව කරුණාවෙන් සළකන්න. ඔබට පාඨමාලා පැවරීමට සහ සහභාගීත්ව සහතික ලබාදීමේ හැකියාව තවදුරටත්
+    පවතී. (බොහෝ ගුරුවරු මෙම පාඩම් කල් තියා <a href='%{certificate_url}'>මුද්‍රණය</a>
+    කර තබාගනියි.)<br/><br/>මෙම වැඩසටහනට සඳහා ගුරුවරු සහ සිසුන් විශාල ගණනකගේ සහභාගීත්වය
+    පිළිබඳ අප ඉතාමත් සතුටු වන අතරම ඔබේ ක්‍රියාකාරකම් සියල්ල ගබඩා කිරීමට නොහැකි වීම
+    පිළිබඳ  කණගාටු වෙමු. ඔබේ සිසුන්ට තවදුරටත් ඉගෙනීමට අවශ්‍යනම්, Hour of Code වැඩසටහනින්
+    ඔබ්බට ගොස් ඔබට පරිගණක විද්‍යාවේ මූලික සංකල්ප වැනි පාඨමාලාවක් ඉගැන්විය හැකියි.
+    සති දෙකකට වරක් අපගේ ගුරු මෙවලම් පුවරුව මගින් ඔබට සිසුන්ගේ ප්‍රගතිය නිරීක්ෂණය කළ
+    හැක.
+  dashboard_sections_assign_activity: "පාඨමාලාව පවරන්න"
   dashboard_error_none_selected: "කරුණාකර එක සිසුවෙක් වත් තෝරන්න."
   dashboard_error_other_section: "ඔබ ඔබේ ම කොටස් අතර සිසුන් මාරු කරන්නේ නම්, ඔබේ කොටස
     dropdown මෙනුවෙන් තෝරන්න. ඔබගේ සිසුන් වෙනත් ගුරුවරුයෙකුගේ කොටසකට මාරු කිරීමට 'වෙනත්
@@ -803,7 +835,7 @@
     භාවිතා කරන්න."
   dashboard_students_placeholder_name: "සිසුවාගේ නම"
   dashboard_students_name: "නම"
-  dashboard_students_progress: "ප්රගතිය"
+  dashboard_students_progress: "ප්‍රගතිය"
   dashboard_students_age: "වයස"
   dashboard_students_gender: "ලිංගභේදය"
   dashboard_students_male: "පිරිමි"
@@ -846,35 +878,35 @@
   dashboard_privacy_document_link: ඔබේ සිසුන් සඳහා බෙදාගත හැකි හෝ මුද්‍රණය කළ හැකි
     අපගේ රහස්‍යතා ලේඛනය සඳහා <a href="/privacy/student-privacy", target="_blank">මෙතැන
     ක්ලික් කරන්න</a>.
-  dashboard_curriculum_k5_title: K-5 අධ්‍යාපක සම්පත්
-  dashboard_curriculum_middle_title: "මැදි පාසල් අධ්‍යාපක සම්පත්"
-  dashboard_curriculum_high_title: "උසස් පාසල් අධ්‍යාපක සම්පත්"
+  dashboard_curriculum_k5_title: "පෙරපාසල් සිට 5 ශ්‍රේණිය දක්වා අධ්‍යාපක සම්පත්"
+  dashboard_curriculum_middle_title: "කනිෂ්ට ශ්‍රේණි සඳහා අධ්‍යාපක සම්පත්"
+  dashboard_curriculum_high_title: "ජේෂ්ට ශ්‍රේණි සඳහා අධ්‍යාපක සම්පත්"
   dashboard_lesson_plans: "පාඩම් සැලසුම්"
   dashboard_view_all_lesson_plans: "පාඨමාලා 1-4 සඳහා සම්පූර්ණ විෂය මාලාව බාගන්න"
   dashboard_course1: "පාඨමාලා අංක 1:"
   dashboard_course2: "පාඨමාලා අංක 2:"
   dashboard_course3: "පාඨමාලා අංක 3:"
-  dashboard_course4: "පාඨමාලා 4: "
+  dashboard_course4: "පාඨමාලා අංක 4: "
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම
     එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
-  dashboard_curriculum: "\tවිෂයමාලාව"
+  dashboard_curriculum: "විෂයමාලාව"
   dashboard_curriculum_overview: K-5 විශය මාලාවේ සාරංශය
   dashboard_overview: "දළ විශ්ලේෂණය"
   dashboard_sequence: "පටිපාටිය"
   dashboard_framework: "රාමුව"
   dashboard_standards: "සම්මතයන්"
   dashboard_implementation_guide: "ක්‍රියාවට නැංවීමේ උපදෙස්"
-  dashboard_glossary: "\tපදමාලාව"
+  dashboard_glossary: "පදමාලාව"
   dashboard_classroom_strategies: "ගුරුවරුන් සඳහා පන්තිකාමර ක්‍රමෝපායන්"
   dashboard_debugging: "දෝෂ හරණයේ:"
   dashboard_puzzle_solving: "ප්‍රහේලිකා විසඳීම:"
-  dashboard_student_worksheet: "ශිෂ්ය කාර්ය පත්රිකාව"
-  dashboard_teacher_worksheet: "ගුරු කාර්ය පත්රිකාව"
+  dashboard_student_worksheet: "ශිෂ්‍ය කාර්ය පත්‍රිකාව"
+  dashboard_teacher_worksheet: "ගුරු කාර්ය පත්‍රිකාව"
   dashboard_curriculum_csina: "වීජ ගණිතයෙන් පරිගණක විද්‍යාව:"
   dashboard_curriculum_csins: "විද්‍යාවේ පරිගණක විද්‍යාව:"
   dashboard_curriculum_csp: 'AP® පරිගණක විද්‍යා මූලධර්ම:'
   dashboard_curriculum_ecs: "පරිගණක විද්‍යාව ගවේශණය:"
-  dashboard_grade_k: K
+  dashboard_grade_k: "පෙරපාසල්"
   dashboard_grade_other: "වෙනත්"
   dashboard_login_word: "වචනය"
   dashboard_login_picture: "පින්තූරය"
@@ -885,16 +917,16 @@
   dashboard_question: "ප්‍රශ්නය"
   dashboard_response: "ප්‍රතිචාරය"
   dashboard_correctness: "නිරවද්‍යතාවය"
-  dashboard_correctness_free_response: "නිදහස් ප්රතිචාර"
+  dashboard_correctness_free_response: "නිදහස් ප්‍රතිචාර"
   dashboard_correctness_unsubmitted: "ඉදිරිපත් නොකරන ලද"
   dashboard_correctness_correct: "නිවැරදියි"
   dashboard_correctness_incorrect: "වැරදියි"
   dashboard_submission_submitted: "ඉදිරිපත් කරන ලදි"
-  dashboard_submission_in_progress: "ප්රගතියේ"
+  dashboard_submission_in_progress: "කරමින් පවතියි"
   dashboard_status: "තත්වය"
   dashboard_multi_correct: "# බහු වරණය නිවැරදියි"
   dashboard_multi_count: "# බහු වරණ"
-  dashboard_multi_correct_percent: "& බහු වරණය නිවැරදියි"
+  dashboard_multi_correct_percent: "% බහු වරණය නිවැරදියි"
   dashboard_submission_timestamp: "ඉදිරිපත් කරන ලද වේලාව"
   stats_hoc_2013_heading: "පසුගිය වසරේ Hour of Code වෙතින් ඇදහිය නොහැකි සංඛ්‍යාන.
     සතියකට පමණක්:"
@@ -933,7 +965,7 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: "වැඩිදුර ඉගෙන ගන්න"
   dashboard_announce_try_now_button: "දැන් අත්හදා බලන්න"
-  dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_host_an_hour_button: Hour of Code වැඩසටහනක් සංවිධානය කරන්න
   dashboard_announce_petition: "ඔබ ගුරුවරයෙකු වශයෙන් ඔබේ පාසලේ සෑම සිසුවෙකුටම පරිගණක
     විද්‍යාව පිලිබඳ අධ්‍යාපනය ලබා දෙන වැඩ පිලිවෙලක කොටස් කරුවෙකි. දැන් ඔබේ නියෝජිතයින්ට
     කතා කිරීමට කාලයයි. මෙම සතියේදි අධ්‍යාපනය පිලිබඳ ක්‍රියාධරයින්, ආණ්ඩුකාරවරු 28
@@ -943,14 +975,31 @@
   dashboard_announce_petition_button: "ඔබේ නම එක් කරන්න"
   dashboard_announce_all: teacher blog හි, නව අංග හා යාවත්කාලීන කිරීම් ගැන දැනගැනීමට
     <a href='%{teacher_blog_url}' target='_blank'>පසුගිය නිවේදන බලන්න.</a>
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
-  code_hoc_coming: The Hour of Code is here - December 8-14!
+  dashboard_announce_hoc_launch: "ලොවපුරා 180කට වැඩි රටවල් ගණනකින්, අධ්‍යපකයින් දහස්
+    ගණනක් මෙම දෙසම්බර් මස 5-11 සතිය තුළ Hour of Code වැඩසටහන ඔස්සේ පරිගණක විද්‍යාව
+    ඉගැන්වීම අරඹනු ඇත. පෙර වතාවන් වලට වැඩි සිසුන් ගණනක් මෙවර සහභාගී කරගැනීමට අප ඔබගේ
+    දායකත්වය අවශ්‍ය වන අතර තවත් ගුරුවරුන් මේ සඳහා සම්බන්ධ වීමට පොළඹවමින් දැන්ම <a
+    href='%{signup_url}' target='_blank'>ඔබේ Hour of Code වැඩසටහන ලියාපදිංචි කරන්න</a>."
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
+  code_hoc_coming: Hour of Code වැඩසටහන් දැන් පැවැත්වේ - දෙසැම්බර් 8-14!
   code_sign_up: CS අධ්‍යාපනික සතිය අතරේ සහභාගී වීමට ලියාපදිංචි වන්න
-  host_an_hour: "පැයක් සංවිධානය කරන්න"
+  host_an_hour: Hour of Code වැඩසටහනක් සංවිධානය කරන්න
   learn_banner_title: Hour of Code සඳහා අපත් සමඟ එක් වන්න
   learn_banner_desc: Hour of Code වැඩසටහන ගෝලීය ව්‍යාපාරයකි රටවල් 180 කට වඩා වැඩි
     සිසුන් මිලියන 100 කට ලඟා වන. ඕනෙම කෙනෙකුට, ඕනෙම තැනක සංවිධානය කළ හැකියි Hour of
@@ -964,12 +1013,12 @@
   learn_sign_up_button: Sign up
   learn_videos_watch: "ඔබේ පන්ති කාමරය සමඟ මෙම ප්‍රබෝධමත් කරවන වීඩියෝව නරඹන්න"
   learn_videos_show: "මෙම ප්‍රබෝධමත් වීඩියෝව පන්තියට පෙන්වන්න"
-  learn_videos_before_hoc: 'Hour of Code කිරීමට පෙර  ඔබ ප්‍රබෝධමත් කරවන රුපදර්ශනයක්
-    නරබන්න '
-  learn_educator_resources_description: Hour of Code එකක් උගන්වන හැටි ඉගෙන ගන්න
+  learn_videos_before_hoc: Hour of Code වැඩසටහන කිරීමට පෙර ඔබ ප්‍රබෝධමත් කරවන වීඩියෝවක්
+    නරඹන්න
+  learn_educator_resources_description: Hour of Code වැඩසටහනක් උගන්වන හැටි ඉගෙන ගන්න
   learn_educator_resources_button: "අධ්‍යාපක සම්පත්"
-  learn_are_you_educator: ඔබ අධ්‍යාපකයෙක් ද? <a href="http://hourofcode.com/resources/how-to">පැයේ
-    කේතයක් උගන්වන හැටි</a> ඉගෙන ගන්න
+  learn_are_you_educator: ඔබ අධ්‍යාපකයෙක් ද? <a href="http://hourofcode.com/resources/how-to">Hour
+    of Code වැඩසටහනක් උගන්වන හැටි</a> ඉගෙන ගන්න
   learn_find_volunteer: ඔබේ Hour of Code තුළ උදවු කිරීමට <a href="https://code.org/volunteer/local">දේශීය
     ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නෙකු සොයා ගන්න</a>
   learn_teacher_led_lesson_plans: |
@@ -1083,6 +1132,10 @@
   cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
   cspunit5_name: "(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න"
   cspunit6_name: "පසු-AP: යෙදුම් තුළ දත්ත සංචිත"
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: "පාඩම් අංක 1: අන්තර්ජාලය"
   csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
   csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
@@ -1105,12 +1158,18 @@
   iceage_name: "හිම යුගය"
   minecraft_name: "මයින්ක්‍රාෆ්ට්"
   starwarsblocks_name: Star Wars (කොටස්)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "ගණිත"
   hoc_category_name: "පැයේ කේතය"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
   csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   cspexams_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය"
+  research_studies_category_name: Research Studies
   applab_name: "මෘදුකාංග විද්‍යාගාරය"
   applab_gradelevel: "වයස් 13+"
   applab_shortdescription_congrats: App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා
@@ -1802,58 +1861,22 @@
   infinity_shortcode: inf
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
