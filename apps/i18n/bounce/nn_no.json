@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Utfør handlingane nedanfor når ein ball kolliderer med ein vegg.",
   "whileMsg": "så lenge",
   "whileTooltip": "Gjenta handlingene som er omslutta inntil målet blir nådd.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

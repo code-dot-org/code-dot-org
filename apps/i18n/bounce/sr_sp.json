@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Изврши акције испод кад се лоптица судари са зидом.",
   "whileMsg": "док је",
   "whileTooltip": "Понавлјај затворену акцију док се не досегне циљна тачка.",
-  "yes": "Да"
+  "yes": "Да",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Կատարել գործողությունները ստորեւ, երբ է գնդակը բախվում է պատին.",
   "whileMsg": "ժամանակ",
   "whileTooltip": "Կրկնել կից գործողությունները, մինչեւ Սալոնի կետն է հասել:",
-  "yes": "այո"
+  "yes": "այո",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Executar les accions de sota quan una pilota colpeja una paret.",
   "whileMsg": "mentres",
   "whileTooltip": "Repetiu les accions tancades fins que s'arribi al punt final.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

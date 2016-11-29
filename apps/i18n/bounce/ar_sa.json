@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "تنفيذ الإجراءات أدناه عندما تصطدم الكرة مع الجدار.",
   "whileMsg": "أكرر طالما",
   "whileTooltip": "تكرار الإجراءات المغلقة حتى الوصول إلى نقطة النهاية.",
-  "yes": "نعم"
+  "yes": "نعم",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

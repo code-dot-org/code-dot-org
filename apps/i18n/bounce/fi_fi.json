@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Suorita alla olevat toiminnot, kun pallo osuu seinään.",
   "whileMsg": "niin kauan kuin",
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

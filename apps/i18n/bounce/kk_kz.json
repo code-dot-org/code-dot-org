@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Доп қабырғаға соқтыққан кезде келесі іс-әрекеттерді орындау",
   "whileMsg": "болған кезде ",
   "whileTooltip": "Біріккен іс-әрекеттер аяқталғанша қайталаңыз.",
-  "yes": "Иә"
+  "yes": "Иә",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

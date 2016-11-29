@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Keď lopta narazí do steny, vykonaj nasledujúce príkazy.",
   "whileMsg": "pokiaľ",
   "whileTooltip": "Opakujte priložené činnosti dokým dosiahnete cieľový bod.",
-  "yes": "Áno"
+  "yes": "Áno",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

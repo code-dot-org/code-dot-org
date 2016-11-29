@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Laksanakan aksi-aksi dibawah ini ketika bola bertabrakan dengan dinding.",
   "whileMsg": "Selagi",
   "whileTooltip": "Ulangi perintah sampai tujuan tercapai.",
-  "yes": "Ya"
+  "yes": "Ya",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

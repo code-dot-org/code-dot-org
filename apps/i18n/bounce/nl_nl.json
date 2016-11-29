@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Voer de actie hieronder uit wanneer een bal botst met een muur.",
   "whileMsg": "terwijl",
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }
