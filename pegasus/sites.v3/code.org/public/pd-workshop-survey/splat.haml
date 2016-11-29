@@ -43,11 +43,7 @@ title: "Professional Development Workshop Survey"
 %script{type: "text/javascript", src: "/js/pd-workshop-survey.js"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 
-- if previous_response
-  %h1 Thank you
-  %h3 You have already completed this survey.
-
-- else
+- if true
 
   %form#pd-workshop-survey-form{role: 'form'}
     %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
