@@ -308,9 +308,6 @@ Students explore, identify, and perform transformations on the coordinate plane 
 [Scratch Dance, Dance, Dance](https://scratch.mit.edu/scratchr2/static/pdfs/help/DanceGuide.pdf)  
 **Ages 8 to 16. Programming, Creativity, Web-based. Participants will create and code an animated dance scene.**
 
-[Looking at Data with Splunk](https://www.dropbox.com/s/46ed5ilhvsam8ci/SplunkLessonPlan.pdf?dl=1)  
-**Ages 14-18. Math (data analysis), Web-based.** Students will analyze the data from a theoretical game to find levels which are too easy of difficult.
-
 [Input and Output, Math Activity](https://app.vidcode.io/doc/unplugged-activity-math.pdf)   
 **Ages 12-16. Math (Algebra), Math (Functions), Unplugged.** Connect JavaScript functions to both math and real world problems.
 
