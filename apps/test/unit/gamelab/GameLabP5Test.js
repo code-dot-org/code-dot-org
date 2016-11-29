@@ -37,6 +37,77 @@ describe('GameLabP5', function () {
 
   });
 
+  describe('mouseDidMove method', function () {
+    beforeEach(function () {
+      // Create an element with default playspace dimensions to make unit
+      // testing mouse input easier.
+      const fakePlaySpaceElement = {
+        getBoundingClientRect: () => ({
+          left: 0,
+          top: 0,
+          width: 400,
+          height: 400
+        })
+      };
+      gameLabP5.p5._curElement.elt = fakePlaySpaceElement;
+    });
+
+    it('returns true when the mouse moved since the last frame', function () {
+      // Create a user-draw function that captures mouse values since the
+      // bug we're fixing has to do with sequencing within the draw loop.
+      let mouseX, mouseY, pmouseX, pmouseY, mouseDidMove;
+      gameLabP5.p5.draw = function () {
+        mouseX = gameLabP5.p5.mouseX;
+        mouseY = gameLabP5.p5.mouseY;
+        pmouseX = gameLabP5.p5.pmouseX;
+        pmouseY = gameLabP5.p5.pmouseY;
+        mouseDidMove = gameLabP5.p5.mouseDidMove();
+      };
+
+      // Set an initial mouse position
+      gameLabP5.p5._onmousemove({
+        type: 'mousemove',
+        clientX: 200,
+        clientY: 210
+      });
+
+      // Simulate advancing a few frames to get past first-frame weirdness around
+      // previous mouse position values.
+      gameLabP5.p5._draw();
+      gameLabP5.p5._draw();
+
+      // Initial state: Mouse positions are the same, mouseDidMove is false.
+      expect(mouseX).to.equal(pmouseX).to.equal(200);
+      expect(mouseY).to.equal(pmouseY).to.equal(210);
+      expect(mouseDidMove).to.be.false;
+
+      // Simulate a mouse movement
+      gameLabP5.p5._onmousemove({
+        type: 'mousemove',
+        clientX: 201,
+        clientY: 211
+      });
+
+      // Advance a frame to pick up the new values
+      gameLabP5.p5._draw();
+
+      // New state: Mouse positions are different
+      expect(mouseX).to.equal(201);
+      expect(pmouseX).to.equal(200);
+      expect(mouseY).to.equal(211);
+      expect(pmouseY).to.equal(210);
+      expect(mouseDidMove).to.be.true;
+
+      // Simulate advancing a frame WITHOUT moving the mouse
+      gameLabP5.p5._draw();
+
+      // Previous position catches up with current position, mouseDidMove is false again.
+      expect(mouseX).to.equal(pmouseX).to.equal(201);
+      expect(mouseY).to.equal(pmouseY).to.equal(211);
+      expect(mouseDidMove).to.be.false;
+    });
+  });
+
   describe('createEdgeSprites method', function () {
     var edgeGroup;
 
