@@ -161,6 +161,13 @@ Craft.init = function (config) {
             studioApp.setStartBlocks_(config, true);
           }
           Craft.initializeAppLevel(config.level);
+
+          // Fire a custom event on the document to trigger a callout
+          // showing up.
+          var event = document.createEvent('Event');
+          event.initEvent('houseLayoutSelected', true, true);
+          document.dispatchEvent(event);
+
           showInstructions();
         });
       }
