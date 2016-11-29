@@ -22,10 +22,7 @@ build-storybook -o $DIR_TO_DEPLOY -s build/package/
 echo "Removing some unused files"
 pushd $DIR_TO_DEPLOY
 rm -rf media
-mv js/en_us/common_locale.js .
 rm -rf js
-mkdir -p js/en_us
-mv common_locale.js js/en_us/
 popd
 
 echo "Pushing to github... cloning gh-pages branch"
@@ -46,7 +43,7 @@ if [ -z "$CHANGED_FILES" ]; then
 fi
 
 # Commit the changes to the gh-pages branch
-git config user.name "Travis CI"
+git config user.name "Circle CI"
 git config user.email "paul@code.org"
 git add --all
 git commit -m "Update GitHub Pages: $SHA"
