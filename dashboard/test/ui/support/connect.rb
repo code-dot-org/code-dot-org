@@ -96,7 +96,15 @@ Before do
   end
   @browser.manage.delete_all_cookies
 
-  debug_cookies(@browser.manage.all_cookies) if @browser
+  begin
+    cookies = @browser.manage.all_cookies
+  rescue NoMethodError => e
+    # Selenium sometimes throws an internal error
+    raise unless e.message.include? "undefined method `map' for nil:NilClass"
+    $stderr.puts "ignoring selenium internal error while reading cookies: #{e.message}"
+  end
+
+  debug_cookies(cookies) if @browser && cookies
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id
