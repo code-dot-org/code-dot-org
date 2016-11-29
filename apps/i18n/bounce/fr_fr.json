@@ -75,7 +75,7 @@
   "repeatUntilBlocked": "Tant que chemin devant",
   "repeatUntilFinish": "répéter jusqu'à la fin",
   "scoreText": "Résultat: {playerScore} : {opponentScore}",
-  "setBackground": "définir {background} de la scène",
+  "setBackground": "définir l'arrière plan de la scène",
   "setBackgroundHardcourt": "définir le décor d’un court à surface dure",
   "setBackgroundRandom": "définir une scène aléatoire",
   "setBackgroundRetro": "définir une scène rétro",
@@ -113,7 +113,7 @@
   "setPlayerSpeedVeryFast": "régler la vitesse très rapide du joueur",
   "setPlayerSpeedVerySlow": "régler la vitesse du joueur très lente",
   "setTeamTooltip": "Définir le logo et les couleurs",
-  "setTeam": "Définir équipe {team}",
+  "setTeam": "Définir équipe {équipe}",
   "setTeamRandom": "Définir l'équipe aléatoirement",
   "shareBounceTwitter": "Découvrez le jeu de rebond que j'ai créé. Je l'ai écrit moi-même avec @codeorg",
   "shareGame": "Partagez votre jeu :",
@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Exécute les actions ci-dessous quand une balle se heurte à un mur.",
   "whileMsg": "tant que",
   "whileTooltip": "Répète les actions incluses jusqu'à ce que le point final soit atteint.",
-  "yes": "Oui"
+  "yes": "Oui",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

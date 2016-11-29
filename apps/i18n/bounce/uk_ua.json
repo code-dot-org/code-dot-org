@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Виконати дії, подані нижче, коли м'яч стикається з платформою.",
   "whileMsg": "поки",
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
-  "yes": "Так"
+  "yes": "Так",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

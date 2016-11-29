@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Ejecuta las instrucciones siguientes cuando la pelota choca con una pared.",
   "whileMsg": "mientras",
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

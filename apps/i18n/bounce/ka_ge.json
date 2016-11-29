@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "შესრულდეს ქვემოთ მოცემული მოქმედებები, როცა ბურთი ეჯახება კედელს.",
   "whileMsg": "სანამ",
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
-  "yes": "დიახ"
+  "yes": "დიახ",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "当球撞到墙时，执行下面的操作",
   "whileMsg": "当",
   "whileTooltip": "重复块所包含的操作直到完成。",
-  "yes": "是"
+  "yes": "是",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }
