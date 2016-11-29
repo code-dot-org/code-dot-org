@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "සුභ පැතුම්! ඔබ විසින් භාණ්ඩ {count} ම එකතු කර ඇත!",
   "collectorCollectedNothing": "ඔබට හැකි තරම් භාණ්ඩ එකතු කර ගත හැකියි. ඉදිරියටම යන්න.",
   "collectorCollectedSome": "සුභ පැතුම්! ඔබ විසින් භාණ්ඩ {count} ම එකතු කර ඇත!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "එම ඉඩ තුල මට එකතු කිරීමට ප්රමාණවත් තරම් භාණ්ඩ නැත.",
   "collectorTooManyBlocks": "ඔබට භාවිත කල හැක්කේ කැබැලි {blockLimit} ක් පමණයි. නැවතත් උත්සාහ කර බලන්න!",
   "continue": "ඉදිරියට යන්න",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "ඔබ සිටින මල තුල තව දුරටත් මල්පැණි නැත.",
   "get": "ලබාගන්න",
   "has": "ඇත",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "මෙන්න සළාද කොළ",
   "hascorn": "බඩ ඉරිඟු ඇත",
   "haspumpkin": "වට්ටක්කා ඇත",
   "heightParameter": "උස",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "සඳහන් කර ඇති මාර්ගයේ මාර්ගයක් තිබේනම් මුලින්ම ඇති කැබැල්ල ක්‍රියාත්මක කරන්න. නැතහොත් දෙවෙනි කැබැල්ල ක්‍රියාත්මක කරන්න.",
   "insufficientHoney": "ඔබ විසින් නියමිත පැණි ප්‍රමාණය එකතු කර ගත යුතුය.",
   "insufficientNectar": "ඔබ විසින් නියමිත පැණි ප්‍රමාණය එකතු කර ගත යුතුය.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "සළාද කොළ",
+  "lettuceTooltip": "සළාද කොළ ටිකක් නෙලාගන්න",
   "make": "සකසන්න",
   "moveBackward": "පසුපසට යන්න",
   "moveEastTooltip": "මාව එක පියවරකින් නැගෙනහිරට ගෙන යන්න.",
@@ -111,6 +112,5 @@
   "word": "වචනය සොයන්න",
   "wrongCropError": "මට ඒ වගාබිමේ අස්වැන්න මෙතැන සිට නෙලාගැනීමට නොහැක.",
   "yes": "ඔව්",
-  "youSpelled": "ඔයා කිව්වා",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "ඔයා කිව්වා"
 }

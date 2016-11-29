@@ -288,7 +288,7 @@ nn:
         text: "Det kvite flata til høyre kallast arbeidsområdet, og dette er her vi skal sette saman programmet vårt. For å flytte rundt på isflata, kan du bruke \"Flytt fremover\"-blokka."
       8:
         image: 'notes/frozen1_8.jpg'
-        text: "Her, sier \"flytt framover\"-blokken, \"flytt fram 100 piksler.\" Når vi trykker \"Køyr\", kva skjer då? Elsa flytter fram en bestemt lengde på skjermen, 100 pikslar faktisk! Piksler er dei minste punkta på dataskjermen."
+        text: "Her sier \"flytt framover\"-blokken, \"flytt fram 100 piksler.\" Når vi trykker \"Køyr\", kva skjer då? Elsa flytter fram en bestemt lengde på skjermen, 100 pikslar faktisk! Piksler er dei minste punkta på dataskjermen."
       9:
         image: 'notes/frozen1_9.jpg'
         text: "Den andre blokka vi har i denne oppgåven sier \"snu til høgre med 90 grader\". Og når vi bruker denne \"snu til høyre\"-blokka, får det Elsa snu en gitt mengde. Du kan prøve ut hvor mye du vil at Elsa skal snu. Vinkelen måles fra retningen foran Elsa. Så dette er ei 90 graders vending. Og dette er ei 120 graders vending."
@@ -345,7 +345,7 @@ nn:
         text: "Det midterste området er verktykassen, og kvar av desse blokkene er ein kodedel. Den kvite flata til høyre blir kalla arbeidsområdet og det er der vi skal bygge opp programmet vårt."
       4:
         image: 'notes/playlab_intro_4.png'
-        text: "For å starte må du koble blokkene dine til den oransje-\"når køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
+        text: "For å starte må du koble blokkene dine til den oransje-\"når den køyrer\"-blokka. Du kan knyte fleire blokker saman ved å dra dei til du ser den gule lina og vil dei snappe saman."
       5:
         image: 'notes/playlab_intro_5.png'
         text: "I denne første oppgåva er skodespelaren ein pingvin og vi skal få den til å sei \"Hallo\" ved å dra \"sei\"-blokka ut, knytte den til å \"når køyrer\"-blokka og skrive inn \"Hallo.\" Vi kan også få pingvinen til å flytte på seg ved hjelp av bruke blokkene for å flytte til høyre og venstre. Når du har blokkene dine på plass, trykk på Køyr-knappen for å sjå kva du har programmert."
@@ -475,34 +475,34 @@ nn:
         text: "Eg gjekk gjennom alle stega og skjønte kvar feilen var. Eg satte ikkje henda på bommen på rett måte. Eg prøvde å sprette ein gong til med ein ny måte å sette handa på bommen på og da fekk eg det til. Eg var veldig glad eg debugga turninga mi."
       3:
         image: 'notes/C1_maze_debugging_3.png'
-        text: "For å lære om debugging, starter vi med noen eksisterende blokker. Du vil snart se at disse blokkene ikke fører deg til målet. Så vi må debugge løsningen og fikse den. Hva gikk galt? Du vil oppdage at vi må bevege oss vestover med en blokk til."
+        text: "For å lære om debugging startar me med nokre blokker på scena. Du ser at desse blokkene ikkje løyser oppgåva. Me må debugge løysinga og fikse ho. Kva gjekk gale? Du ser kanskje at du må gå ei blokk til mot vest?"
       4:
         image: 'notes/C1_maze_debugging_4.png'
-        text: "La oss fikse dette ved å legge til en vest blokk, og trykke kjør for å se om det ble riktig. Du fikk det til!"
+        text: "Lat oss fikse dette ved å leggje til ei vest blokk, og trykkje køyr for å sjå om det vart rett. Du fekk det til!"
     C1_maze_intro_sequencing:
       1:
         image: 'notes/C1_maze_intro_sequencing_1.png'
-        text: "I denne oppgaven skal du flytte fuglen til grisen. Se på oppgave og finn ut hvilke retninger den må ta."
+        text: "I denne oppgåva skal du flytte fuglen til grisen. Sjå på oppgåva og finn ut kva retningar den må ta."
       2:
         image: 'notes/C1_maze_intro_sequencing_2.png'
-        text: "Du skal dra blokkene fra verktøykassen til og bort arbeidsområdet. Der skal de henge fast under \"når kjører\" blokken. Når du mener du har den rette løsningen, kan du klikke \"Kjør\" og se fuglen gå til grisen."
+        text: "Du skal dra blokkene frå verktøykassa og bort til arbeidsområdet. Der skal dei henge fast under \"når køyrer\" blokka. Når du meiner du har den rette løsninga, kan du klikke \"Køyr\" og sjå fuglen gå til grisen."
     C1_maze_loops:
       1:
         image: 'notes/C1_maze_loops_1.png'
-        text: "Noe datamaskiner er veldig gode til, er å gjenta kommandoer. Vi som er mennesker går fort lei hvis vi må gjøre den samme oppgaven mange, mange ganger på rad. Men en datamaskin kan gjøre det samme millioner eller selv milliarder av ganger uten å gå lei."
+        text: "Noko datamaskiner er veldig gode til, er å gjenta kommandoar. Vi menneske gjeng fort leide dersom vi må gjere den same oppgåva mange, mange gongar på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar av gongar utan å gå lei."
       2:
         image: 'notes/C1_maze_loops_2.png'
-        text: "Hvis jeg for eksempel ønsket å sende en mail for å gratulere alle på Facebook som har fødselsdag i dag, ville det tatt meg over hundre år å sende alle mailene. Men med bare noen linjer kode kan jeg få et dataprogram til å gratulere dem på noen få sekunder."
+        text: "Viss eg til dømes ønskja å sende ein mail for å gratulere alle på Facebook som har bursdag i dag, ville det ha teke meg over hundre år å sende alle mailane. Men med berre nokre linjer kode kan eg få eit dataprogram til å gratulere dei på nokre få sekund."
       3:
         image: 'notes/C1_maze_loops_3.png'
-        text: "For få fuglen til å nå bort til grisen kan du bruke en gjenta-blokk i stedet for å dra tre Nord-blokker til arbeidsområdet. Så dra en gjenta-blokk til arbeidsområdet, og angi 3. Dra deretter en Nord blokk inn i gjenta-blokken og trykk på \"Kjør\" for å se hva som skjer. Gratulerer, du fikk det til!"
+        text: "For få fuglen til å nå bort til grisen kan du bruke ei gjenta-blokk i staden for å dra tre Nord-blokker til arbeidsområdet. Så dra ei gjenta-blokk til arbeidsområdet, og angje 3. Dra deretter ei Nord blokk inn i gjenta-blokka og trykk på \"Køyr\" for å sjå kva som skjer. Gratulerer, du fekk det til!"
     C1_moveitmoveit_unplugged:
       1:
         image: 'notes/C1_moveitmoveit_unplugged_1.png'
-        text: "Denne oppgaven heter flytt den, flytt den. Sammen skal vi skrive et program som flytter våre venner fra kompassrosen til målet med det smilende ansiktet."
+        text: "Denne oppgåva heiter flytt den, flytt den. Saman skal vi skrive eit program som flytter venene våre fra kompassrosa til målet med det smilande andletet."
       2:
         image: 'notes/C1_moveitmoveit_unplugged_2.png'
-        text: "Men ansiktet er opp ned, og bare en person vet hvordan en skal komme dit. La oss sette i gang med programmet."
+        text: "Men andletet er opp ned, og berre ein person veit korleis ein skal kome dit. Lat oss setje i gong med programmet."
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
         text: "Et program er en algoritme som har blitt kodet slik at en datamaskin kan utføre den. De fleste av oss tenker på et program som noe brukes av en datamaskin. Programmer er bra til det, men de kan også være nyttige til andre ting. Du kan lage ditt eget spill, eller programmere en robot til å gjøre ting for deg."
@@ -580,10 +580,10 @@ nn:
     C1_zuck_repeat_loop:
       1:
         image: 'notes/C1_zuck_repeat_loop_1.png'
-        text: "Noe datamaskiner er veldig gode til, er å gjenta kommandoer. Vi som er mennesker går fort lei hvis vi må gjøre den samme oppgaven mange, mange ganger på rad. Men en datamaskin kan gjøre det samme millioner eller selv milliarder av ganger uten å gå lei."
+        text: "Noko datamaskiner er veldig gode til, er å gjenta kommandoar. Vi menneske gjeng fort leide dersom vi må gjere den same oppgåva mange, mange gongar på rad. Men ei datamaskin kan gjere det same millionar eller sjølv milliardar av gongar utan å gå lei."
       2:
         image: 'notes/C1_zuck_repeat_loop_2.png'
-        text: "Hvis jeg for eksempel ønsket å sende en mail for å gratulere alle på Facebook som har fødselsdag i dag, ville det tatt meg over hundre år å sende alle mailene. Men med bare noen linjer kode kan jeg få et dataprogram til å gratulere dem på noen få sekunder."
+        text: "Viss eg til dømes ønskja å sende ein mail for å gratulere alle på Facebook som har bursdag i dag, ville det ha teke meg over hundre år å sende alle mailane. Men med berre nokre linjer kode kan eg få eit dataprogram til å gratulere dei på nokre få sekund."
       3:
         image: 'notes/C1_zuck_repeat_loop_3.png'
         text: "I dette eksempelet skal du flytte fuglen bort til grisen. Og vi har en gjenta-blokk til rådighet for å for å forenkle oppgaven. Du kunne jo ha brukt fem flytt-blokker etter hverandre for å komme til grisen. Men i stedet kan vi bruke en eneste flytt-blokk og så bare fortelle datamaskinen at den skal gjenta handlingen fem ganger."
@@ -892,7 +892,7 @@ nn:
     C3_dice_race:
       1:
         image: 'notes/C3_dice_race_1.png'
-        text: "Denne leksjonen kalles terningracet. Nesten alle liker å spille dataspill. Har du noen gang tenkt over hvordan dataprogrammer ordner stegene i et spill inn i et program? Det første steget i å lage dataspill og å løse andre problemer krever tenking og planlegging."
+        text: "Denne oppgaven kalles terningracet. Nesten alle liker å spille dataspill. Har du noen gang tenkt over hvordan dataprogrammer ordner stegene i et spill inn i et program? Det første steget i å lage dataspill og å løse andre problemer krever tenking og planlegging."
       2:
         image: 'notes/C3_dice_race_2.png'
         text: "Tenkesteget i problemløsing produserer en algoritme, som er en steg-for-steg-plan for å løse et problem, eller fullføre en oppgave. I denne leksjonen skal du lage en algoritme for et terningracespill. Deretter skal du be vennene dine om å prøve ut planen din for å se om de kan følge stegene i spillet. Etter at programmereren er sikker på at stegene er korrekte, er tiden inne for å oversette algoritmen til et program med et språk som datamaskinen kan forstå."
@@ -1375,7 +1375,7 @@ nn:
         text: "Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på hvilken som helst oppgave for å bytte fra blokker til å skrive koden som tekst."
       4:
         image: 'notes/starwars_typing_4.JPG'
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: "I neste leksjon vil du starte opp i skrive modus. Her kan du fremdeles dra blokken fra verktøykassen, eller du kan skrive kommandonavnet. Når du begynner å skrive, vil du se at navnene på mulig kommandoer vil vises nedenfor der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for autofullføring hele tiden når jeg skriver kode."
       5:
         image: 'notes/starwars_typing_5.JPG'
         text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
@@ -1701,16 +1701,16 @@ nn:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "Hei, eg heiter Jens og er kreativ sjefs-designar av Minecraft. I den neste timen skal du lage ditt eiga Minecraft-spel. Det ser ut som vanleg Minecraft, men verda har stoppa. Sauene flytter seg ikkje, hønene legg ikkje egg og zombiar står berre stille. Det er opp til deg å legge til koden for å få Minecraft-verda til å verke."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: Mitt navn er Melissa og jeg er interaksjonsdesigner i Minecraft. Det jeg egentlig er interessert i er hvordan mennesker tenker og bruker teknologi. Derfor er denne jobben perfekt for meg, jeg bruker både informatikk og psykologi for å finne ut hvordan folk tenker og oppfører seg.
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "Du ser at skjermen er delt i tre hoveddeler. 1) På den venstre er Minecraft-spillet. Akkurat nå er verdenen frosset, men vi skal fikse det ved å bruke kode."
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2) Dette området i midten er verktøykassa. Hver av disse blokkene er en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
         text: "3) The space on the right is called the workspace and this is where we'll build our program."
@@ -1725,7 +1725,7 @@ nn:
         text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "Etter du har trykket på \"Kjør\" kan du alltid trykke på \"Nullstill\"-knappe for å nullstille spillet og starte på nytt. Nå er det din tur til å lage din egen versjon av Minecraft. Kos deg!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
@@ -1745,7 +1745,7 @@ nn:
         text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
+        text: "Men hva skjer når du bruker dne? I Minecraft slipper sauer ull når du klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser. Hendelser forteller programmet ditt at det skal lytte etter eller vente på at noe skjer og når det skjer, gjøre en handling."
       4:
         image: 'notes/mc_2016_events_4.jpg'
         text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
@@ -1759,7 +1759,7 @@ nn:
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'
-        text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
+        text: "Gratulerer! Du har lært å bruke datamaskinkommandoer for å få noe til å skje i Minecraft verdenen. Det er du som er utvikleren nå. Du har låst opp alle kommandoene og alle skapningene. Du bestemmer hva som skal skje."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "Når du er ferdig å lage spillet ditt, velg deling for å få en lenke som du kan dele med vennene dine eller for å spille spillet ditt på telefonen. Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft."

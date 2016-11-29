@@ -486,11 +486,11 @@ th:
         'iceage_intro': 'Ice Age Hour of Code - Introduction'
         'iceage_events': 'Ice Age Hour of Code - Events'
         'iceage_repeat': 'Ice Age Hour of Code - Repeat statements'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Minecraft ชั่วโมงแห่งการเขียนโค้ด - คำแนะนำ'
+        'mc_2016_loops': 'Minecraft ชั่วโมงแห่งการเขียนโค้ด - คำสั่งทำซ้ำ หรือ Loops'
+        'mc_2016_events': 'Minecraft ชั่วโมงแห่งการเขียนโค้ด - เหตุการณ์ หรือ Events'
+        'mc_2016_spawn': 'Minecraft ชั่วโมงแห่งการเขียนโค้ด - การสร้างสิ่งต่างๆ หรือ Spawn'
+        'mc_2016_congrats': 'Minecraft ชั่วโมงแห่งการเขียนโค้ด - ขอแสดงความยินดีด้วย'
     callout:
       text:
         drag_blocks: 'Drag a "move" block and snap it below the other block'

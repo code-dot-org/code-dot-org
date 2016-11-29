@@ -1849,16 +1849,13 @@ Studio.init = function (config) {
     Studio.musicController.preload();
   };
 
-  // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsShown', playOnce);
+  // Add a post-video hook to start the background music, if available.
+  config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     if (studioApp.cdoSounds) {
-      studioApp.cdoSounds.whenAudioUnlocked(function () {
-        Studio.musicController.play();
-      });
+      studioApp.cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
     }
+    showInstructions();
   };
-  document.addEventListener('instructionsShown', playOnce);
 
   config.afterInject = function () {
     // Connect up arrow button event handlers
@@ -2408,6 +2405,10 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
  */
 // XXX This is the only method used by the templates!
 Studio.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Studio.onPuzzleComplete();
+    return;
+  }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

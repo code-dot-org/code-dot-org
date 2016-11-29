@@ -1,95 +1,98 @@
 "mi":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
-      send_instructions: You will receive an email with instructions about how to
-        confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions about how to confirm your account
-        in a few minutes.
+      confirmed: I tutuki te whakaū i tō wāhitau īmēra.
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te whakaū i tō pūkete."
+      send_paranoid_instructions: Mehemea kei tō mātou pūtengi raraunga tō wāhitau
+        īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra me ngā tohutohu kia whakaū
+        koe i tō pūkei.
     failure:
-      already_authenticated: You are already signed in.
-      inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
-      invalid_token: Invalid authentication token.
-      locked: Your account is locked.
-      not_found_in_database: Invalid email or password.
-      timeout: Your session expired, please sign in again to continue.
-      unauthenticated: You need to sign in or sign up before continuing.
-      unconfirmed: You have to confirm your account before continuing.
+      already_authenticated: Kua waitohungia kētia koe.
+      inactive: Kāore anō tō pūkei kia whakahohengia.
+      invalid: He muhu te īmēra, te kupuhipa rānei.
+      invalid_token: He muhu te maimai motuhēhēnga.
+      locked: Kua rakaina tō pūkei.
+      not_found_in_database: He muhu te īmēra, te kupuhipa rānei.
+      timeout: Kua mōnehu tō wātū, tēnā takiuru anō ki te haere tonu.
+      unauthenticated: Me mātua takiuru, waitohu rānei kia āhei te haere tonu.
+      unconfirmed: Me mātua whakaū i tō pūkei kia āhei te haere tonu.
     mailer:
       confirmation_instructions:
-        subject: Code.org confirmation instructions
+        subject: Ngā tohutohu whakaū nā Code.org
       reset_password_instructions:
-        subject: Code.org reset password instructions
+        subject: Ngā tohutohu tautuhi kupuhipa anō nā Code.org
       unlock_instructions:
-        subject: Unlock Instructions
+        subject: Wetea ngā Tohutohu
     omniauth_callbacks:
-      failure: Could not authenticate you from %{kind} because "%{reason}".
-      success: Successfully authenticated from %{kind} account.
+      failure: Kāore i tutuki te whakamotuhēhē i a koe i %{kind} nā te mea "%{reason}".
+      success: Kua eke te whakamotuhēhē i tō %{kind} pūkei.
     passwords:
-      no_token: You can't access this page without coming from a password reset email.
-        If you do come from a password reset email, please make sure you used the
-        full URL provided.
-      send_instructions: You will receive an email with instructions about how to
-        reset your password in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive a password recovery link at your email address in a few minutes.
-      updated: Your password was changed successfully. You are now signed in.
-      updated_not_active: Your password was changed successfully.
+      no_token: E kore e tutuki tō whai wāhi ki tēnei whārangi ki te kore koe e uru
+        mā te īmēra tautuhi kupuhipa anō. Ki te uru koe mā te īmēra tautuhi kupuhipa
+        anō, me mātua whakamahi koe i te katoa o te URL i whakaratoa.
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te tautuhi anō i tō kupuhipa."
+      send_paranoid_instructions: Mehemea kei tō mātou pūtengi raraunga tō wāhitau
+        īmēra, kāore e roa ka tae atu ki a koe tētahi īmēra ki tō wāhitau īmēra ki
+        te whakaora i tō kupuhipa.
+      updated: I tutuki te panonitanga o tō kupuhipa. Kua takiurua koe ināianei.
+      updated_not_active: I tutuki te panonitanga o tō kupuhipa.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
-      signed_up: Welcome! You have signed up successfully.
-      signed_up_but_inactive: You have signed up successfully. However, we could not
-        sign you in because your account is not yet activated.
-      signed_up_but_locked: You have signed up successfully. However, we could not
-        sign you in because your account is locked.
-      signed_up_but_unconfirmed: A message with a confirmation link has been sent
-        to your email address. Please open the link to activate your account.
-      update_needs_confirmation: You updated your account successfully, but we need
-        to verify your new email address. Please check your email and click on the
-        confirm link to finalize confirming your new email address.
-      updated: You updated your account successfully.
+      destroyed: Hei konei rā! Kua whakakoretia tō pūkei. Te manako ia ka kite anō
+        tāua i a tāua ākuanei.
+      signed_up: Nau mai! I angitu tō waitohu mai.
+      signed_up_but_inactive: I angitu tō waitohu mai. Heoi anō, kāore anō tō pūkei
+        kia whakahohengia, nā reira, kāore anō koe kia takiuru.
+      signed_up_but_locked: I angitu tō waitohu mai. Heoi anō, e mau ana tō pūkei,
+        nā reira, kāore anō koe kia takiuru.
+      signed_up_but_unconfirmed: Kua tukuna tahitia tētahi kōrero me tētahi honongaitua
+        whakaū ki tō wāhitau īmēra. Tēnā tūwheratia te honongaitua ki te whakahohe
+        i tō pūkei.
+      update_needs_confirmation: I angitu tō whakahou i tō pūkei, otirā, me manatoko
+        mātou i tō wāhitau īmēra. Tēnā tirohia ō īmēra kātahi ka pāwhiri i te honongaitua
+        whakaū ki te whakaoti i ngā mahi whakaū i tō wāhitau īmēra.
+      updated: I angitu te whakahoutanga o tō pūkei.
     sessions:
       signed_in: ''
-      signed_out: Signed out successfully.
+      signed_out: I angitu tō takiputa.
     unlocks:
-      send_instructions: You will receive an email with instructions about how to
-        unlock your account in a few minutes.
-      send_paranoid_instructions: If your account exists, you will receive an email
-        with instructions about how to unlock it in a few minutes.
-      unlocked: Your account has been unlocked successfully. Please sign in to continue.
+      send_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā tohutohu
+        e whakamārama ana me pēhea te whakawātea i tō pūkete."
+      send_paranoid_instructions: "Ākuanei ka tae atu ki a koe tētahi īmēra me ngā
+        tohutohu ki te whakawātea i tō pūkei mēnā rā he tīari tō pūkei."
+      unlocked: I angitu te whakawāteatanga o tō pūkei. Tēnā takiuru atu ki te haere
+        tonu.
   errors:
     messages:
-      already_confirmed: was already confirmed, please try signing in
-      confirmation_period_expired: needs to be confirmed within %{period}, please
-        request a new one
-      expired: has expired, please request a new one
-      not_found: not found
-      not_locked: was not locked
+      already_confirmed: i whakaūngia kētia, me ngana ki te takiuru
+      confirmation_period_expired: me whakaū i roto i te %{period}, tēnā tonoa he
+        mea hou
+      expired: kua mōnehu, tēnā tonoa he mea hou
+      not_found: kāore i kitea
+      not_locked: kāore i raka
       not_saved:
-        one: '1 error prohibited this %{resource} from being saved:'
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: 'Kāore tēnei %{resource} i tiakina, i haukotia i runga i te hē kotahi:'
+        other: 'Kāore tēnei %{resource} i tiakina, i haukotia i runga i ngā hē %{count}:'
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
-      invitation_token_invalid: The invitation token provided is not valid!
-      updated: Your password was set successfully. You are now signed in.
-      no_invitations_remaining: No invitations remaining
-      invitation_removed: Your invitation was removed.
+      send_instructions: Kua tukuna te pōhiri ā-īmērā ki %{email}.
+      invitation_token_invalid: He muhu te maimai pōhiri nei!
+      updated: I tutuki te tautuhitanga o tō kupuhipa. Kua takiurua koe ināianei.
+      no_invitations_remaining: Korekau pōhiri e toe ana
+      invitation_removed: I tangohia tō pōhiri.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: Tuku pōhiri
+        submit_button: Tukuna tētahi pōhiri
       edit:
-        header: Set your password
-        submit_button: Set my password
+        header: Tautuhia tō kupuhipa
+        submit_button: Tautuhia taku kupuhipa
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
-        someone_invited_you: Someone has invited you to %{url}, you can accept it
-          through the link below.
-        accept: Accept invitation
-        ignore: If you don't want to accept the invitation, please ignore this email.<br
-          />Your account won't be created until you access the link above and set
-          your password.
+        subject: Ngā tohutohu pōhiri
+        hello: Tēnā koe %{email}
+        someone_invited_you: Nā tētahi koe i pōhiri ki %{url}. E āhei ana te whakaae
+          mā te honongaitua kei raro iho nei.
+        accept: Whakaae ki te pōhiri
+        ignore: Waiho noa iho tēnei īmēra mēnā kāore koe i te hiahia ki te whakaae
+          ki te pōhiri.<br />Ka kore tō pūkei e waihangahia tae noa atu ki te wā kua
+          toro atu koe ki te honongaitua nei me te tautuhi i tō kupuhipa.

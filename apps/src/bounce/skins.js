@@ -40,6 +40,63 @@ var CONFIGS = {
       paddleSpeedTooltip: msg.setPaddleSpeedTooltip(),
       setPaddle: msg.setPaddle(),
     },
+    customSounds: {
+      ballstart: {
+        filenames: ['ball_start.mp3', 'ball_start.ogg'],
+      },
+      flag: {
+        filenames: ['win_goal.mp3', 'win_goal.ogg'],
+      },
+
+      hit: {
+        msg: msg.playSoundHit(),
+        filenames: ['2_wall_bounce.mp3', '2_wall_bounce.ogg'],
+      },
+      wood: {
+        msg: msg.playSoundWood(),
+        filenames: ['1_paddle_bounce.mp3', '1_paddle_bounce.ogg'],
+      },
+      retro: {
+        msg: msg.playSoundRetro(),
+        filenames: ['2_paddle_bounce.mp3', '2_paddle_bounce.ogg'],
+      },
+      slap: {
+        msg: msg.playSoundSlap(),
+        filenames: ['1_wall_bounce.mp3', '1_wall_bounce.ogg'],
+      },
+      rubber: {
+        msg: msg.playSoundRubber(),
+        filenames: ['wall.mp3', 'wall.ogg'],
+      },
+      crunch: {
+        msg: msg.playSoundCrunch(),
+        filenames: ['wall0.mp3', 'wall0.ogg'],
+      },
+      winpoint: {
+        msg: msg.playSoundWinPoint(),
+        filenames: ['1_we_win.mp3', '1_we_win.ogg'],
+      },
+      winpoint2: {
+        msg: msg.playSoundWinPoint2(),
+        filenames: ['2_we_win.mp3', '2_we_win.ogg'],
+      },
+      losepoint: {
+        msg: msg.playSoundLosePoint(),
+        filenames: ['1_we_lose.mp3', '1_we_lose.ogg'],
+      },
+      losepoint2: {
+        msg: msg.playSoundLosePoint2(),
+        filenames: ['2_we_lose.mp3', '2_we_lose.ogg'],
+      },
+      goal1: {
+        msg: msg.playSoundGoal1(),
+        filenames: ['1_goal.mp3', '1_goal.ogg'],
+      },
+      goal2: {
+        msg: msg.playSoundGoal2(),
+        filenames: ['2_goal.mp3', '2_goal.ogg'],
+      },
+    }
   },
 
   basketball: {
@@ -54,38 +111,51 @@ var CONFIGS = {
     ],
     paddles: [
       'hand_1',
-      'hand_2'
+      'hand_2',
+      'hand_3'
     ],
     teams: [
+      'Atlanta Dream',
       'Atlanta Hawks',
       'Boston Celtics',
       'Brooklyn Nets',
       'Charlotte Hornets',
       'Chicago Bulls',
+      'Chicago Sky',
       'Cleveland Cavaliers',
+      'Connecticut Sun',
       'Dallas Mavericks',
+      'Dallas Wings',
       'Denver Nuggets',
       'Detroit Pistons',
       'Golden State Warriors',
       'Houston Rockets',
+      'Indiana Fever',
       'Indiana Pacers',
       'Los Angeles Clippers',
       'Los Angeles Lakers',
+      'Los Angeles Sparks',
       'Memphis Grizzlies',
       'Miami Heat',
       'Milwaukee Bucks',
+      'Minnesota Lynx',
       'Minnesota Timberwolves',
       'New Orleans Pelicans',
       'New York Knicks',
+      'New York Liberty',
       'Oklahoma City Thunder',
       'Orlando Magic',
       'Philadelphia 76ers',
+      'Phoenix Mercury',
       'Phoenix Suns',
       'Portland Trail Blazers',
       'Sacramento Kings',
       'San Antonio Spurs',
+      'San Antonio Stars',
+      'Seattle Storm',
       'Toronto Raptors',
       'Utah Jazz',
+      'Washington Mystics',
       'Washington Wizards',
     ],
     blockMsgs: {
@@ -102,6 +172,24 @@ var CONFIGS = {
       paddleSpeedVeryFast: msg.basketballSetPaddleSpeedVeryFast(),
       paddleSpeedTooltip: msg.basketballSetPaddleSpeedTooltip(),
       setPaddle: msg.basketballSetPaddle(),
+    },
+    customSounds: {
+      bounce: {
+        msg: msg.playSoundBounce(),
+        filenames: ['bounce.mp3', 'bounce.ogg'],
+      },
+      cheer: {
+        msg: msg.playSoundCheer(),
+        filenames: ['cheer.mp3', 'cheer.ogg'],
+      },
+      whistle: {
+        msg: msg.playSoundWhistle(),
+        filenames: ['whistle.mp3', 'whistle.ogg'],
+      },
+      swish: {
+        msg: msg.playSoundSwish(),
+        filenames: ['swish.mp3', 'swish.ogg'],
+      },
     },
   },
 
@@ -122,13 +210,13 @@ var CONFIGS = {
     paddles: [
       'hand_1',
       'hand_2',
+      'hand_3',
       'hockey_stick',
       'foot'
     ],
     background: 'basketball_background.png',
     ball: 'basketball_ball.png',
     paddle: 'basketball_paddle.png',
-    disableAudio: true,
     blockMsgs: {
       launchBall: msg.basketballLaunchBall(),
       launchBallTooltip: msg.basketballLaunchBallTooltip(),
@@ -143,6 +231,32 @@ var CONFIGS = {
       paddleSpeedVeryFast: msg.setPlayerSpeedVeryFast(),
       paddleSpeedTooltip: msg.setPlayerSpeedTooltip(),
       setPaddle: msg.setPlayer(),
+    },
+    customSounds: {
+      bounce: {
+        msg: msg.playSoundBounce(),
+        filenames: ['bounce.mp3', 'bounce.ogg'],
+      },
+      cheer: {
+        msg: msg.playSoundCheer(),
+        filenames: ['cheer.mp3', 'cheer.ogg'],
+      },
+      whistle: {
+        msg: msg.playSoundWhistle(),
+        filenames: ['whistle.mp3', 'whistle.ogg'],
+      },
+      swish: {
+        msg: msg.playSoundSwish(),
+        filenames: ['swish.mp3', 'swish.ogg'],
+      },
+      slapshot: {
+        msg: msg.playSoundSlapshot(),
+        filenames: ['slapshot.mp3', 'slapshot.ogg'],
+      },
+      kick: {
+        msg: msg.playSoundKick(),
+        filenames: ['kick.mp3', 'kick.ogg'],
+      },
     },
   }
 };
@@ -163,6 +277,9 @@ exports.load = function (assetUrl, id) {
   };
   skin.hand_2 = {
     paddle: skin.assetUrl('hand_2.png'),
+  };
+  skin.hand_3 = {
+    paddle: skin.assetUrl('hand_3.png'),
   };
   skin.hockey_stick = {
     paddle: skin.assetUrl('hockey_paddle.png'),
@@ -226,34 +343,14 @@ exports.load = function (assetUrl, id) {
   skin.teamBackgrounds = {};
   skin.teams.forEach((team) =>
       skin.teamBackgrounds[team] = skin.assetUrl(`teams/${team}.png`));
-  skin.disableAudio = config.disableAudio || false;
   skin.blockMsgs = config.blockMsgs;
 
   // Sounds
-  skin.rubberSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
-  skin.flagSound = [skin.assetUrl('win_goal.mp3'),
-                    skin.assetUrl('win_goal.ogg')];
-  skin.crunchSound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
-  skin.ballStartSound = [skin.assetUrl('ball_start.mp3'),
-                         skin.assetUrl('ball_start.ogg')];
-  skin.winPointSound = [skin.assetUrl('1_we_win.mp3'),
-                        skin.assetUrl('1_we_win.ogg')];
-  skin.winPoint2Sound = [skin.assetUrl('2_we_win.mp3'),
-                         skin.assetUrl('2_we_win.ogg')];
-  skin.losePointSound = [skin.assetUrl('1_we_lose.mp3'),
-                         skin.assetUrl('1_we_lose.ogg')];
-  skin.losePoint2Sound = [skin.assetUrl('2_we_lose.mp3'),
-                          skin.assetUrl('2_we_lose.ogg')];
-  skin.goal1Sound = [skin.assetUrl('1_goal.mp3'), skin.assetUrl('1_goal.ogg')];
-  skin.goal2Sound = [skin.assetUrl('2_goal.mp3'), skin.assetUrl('2_goal.ogg')];
-  skin.woodSound = [skin.assetUrl('1_paddle_bounce.mp3'),
-                    skin.assetUrl('1_paddle_bounce.ogg')];
-  skin.retroSound = [skin.assetUrl('2_paddle_bounce.mp3'),
-                     skin.assetUrl('2_paddle_bounce.ogg')];
-  skin.slapSound = [skin.assetUrl('1_wall_bounce.mp3'),
-                    skin.assetUrl('1_wall_bounce.ogg')];
-  skin.hitSound = [skin.assetUrl('2_wall_bounce.mp3'),
-                   skin.assetUrl('2_wall_bounce.ogg')];
+  skin.customSounds = config.customSounds || {};
+  for (var sound in skin.customSounds) {
+    skin.customSounds[sound].urls =
+      skin.customSounds[sound].filenames.map(skin.assetUrl);
+  }
 
   skin.pegmanHeight = config.pegmanHeight || 52;
   skin.pegmanWidth = config.pegmanWidth || 49;

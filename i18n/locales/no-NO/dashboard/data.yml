@@ -165,14 +165,14 @@
         'bounce_10_basketball': "Nå er målet på toppen! Fest \"skår poeng\"- og \"motstanderen skårer poeng\"-blokker til \"når ballen er i mål\" og \"når ballen bommer på hånden\"-blokkene for å lage et spill. Se hvor mange poeng du kan få før motstanderen får to poeng."
         'bounce_11_basketball': "Nå kan du feste blokker til \"når kjør\"-blokken. Du må feste en ny \"kast ny ball\"-blokk på mer enn ett sted. Du kan også endre scenen eller hastigheten på hånden og ballen for å se hvor mange poeng du kan få før motstanderen skårer to poeng!"
         'bounce_12_basketball': "Lag ditt eget basketballspill. Du kan endre alle reglene. Klikk ferdig når du er fornøyd og la vennene dine prøve spillet på telefonene sine."
-        'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
-        'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
-        'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
+        'bounce_1_sports': "Kom deg til flagget! Koble en blokk til \"når venstre pil\"-blokken og trykk \"Kjør\" for å flytte spillfiguren til flagget."
+        'bounce_2_sports': "Nå er det to flagg! Koble en blokk til \"når venstre pil\"- og \"når høyre pil\"-blokkene for å kunne flytte spillfiguren i to retninger."
+        'bounce_5_sports': "Hockey-pucken kommer til å fly ned mot spillfiguren! Koble en blokk til \"når ball treffer spilleren\"-blokken for å treffe flagget."
         'bounce_6_sports': "Nå er flagget på toppen. Du må feste blokker til begge \"når ballen treffer\"-blokkene for å løse denne oppgaven."
         'bounce_7_sports': "Fest blokkene til begge \"når\"-blokkene. Sprett ballen til den treffer flagget."
-        'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
+        'bounce_10_sports': "Nå er det et mål på toppen! Fest blokkene \"øk poeng\" og \"øk motstanderens poeng\" til blokkene \"når ballen er i mål\" og \"når ballen bommer på rekkerten\" for å lage et spill. Se hvor mange poeng du greier å få før motstanderen din får to poeng!"
         'bounce_11_sports': "Nå kan du feste blokker til \"når kjør\"-blokken. Du må feste en ny \"kast ny ball\"-blokk på mer enn ett sted. Du kan også endre scenen eller hastigheten på hånden og ballen for å se hvor mange poeng du kan få før motstanderen skårer to poeng!"
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+        'bounce_12_sports': "Lag ditt eget spill! Du bestemmer: Du kan endre på alle regler, blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig, trykk \"Fullført\" for å dele spillet med vennene dine, så de kan prøve det på sine telefoner!"
         'bounce_1': "Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt åren ved å bruke venstre pil for å nå målet."
         'bounce_2': "Fest en blokk til «når pil høyre» og «når pil venstre» blokkene. Flytt åren for å nå begge målene."
         'bounce_3': "Prøv noe lignende med «når opp pil» blokken. Flytt åren til målet på toppen."
@@ -486,11 +486,11 @@
         'iceage_intro': 'Kodetime med istid - introduksjon'
         'iceage_events': 'Kodetime med istid - hendelser'
         'iceage_repeat': 'Kodetimen med istid - gjentagelser'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Minecraft Kodetimen - Introduksjon'
+        'mc_2016_loops': 'Minecraft Kodetimen - Løkker'
+        'mc_2016_events': 'Minecraft Kodetimen - Hendelser'
+        'mc_2016_spawn': 'Minecraft Kodetimen - Sett ut'
+        'mc_2016_congrats': 'Minecraft Kodetimen - Gratulerer!'
     callout:
       text:
         drag_blocks: 'Dra en "flytt" blokk og fest den under den andre blokken'

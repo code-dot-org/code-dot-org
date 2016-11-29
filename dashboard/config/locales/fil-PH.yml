@@ -94,6 +94,14 @@
     overview: Sign up for an account to track your progress or manage your classroom.
       <a href="/">You can browse the various stages and puzzles</a> without an account,
       but you will need to sign up to save your progress and projects.
+    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Bisitahin ang gabay para sa mga guro
     title: Sign up for Code.org
     school_name: Pangalan ng Paaralan (optional)
@@ -435,6 +443,18 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -595,7 +615,10 @@
       body: Use Play Lab to create a story or game starring Disney Infinity characters.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Tuklasin ang mundo ng Minecraft sa pamamagitan ng code.
+    minecraft2016:
+      title: Minecraft
+      body: Program animals and other Minecraft creatures in your own version of Minecraft.
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
@@ -732,7 +755,6 @@
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
     print: I-print
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching

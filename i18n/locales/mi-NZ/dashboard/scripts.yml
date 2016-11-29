@@ -5,145 +5,145 @@ mi:
         course1:
           title: Akoranga 1
           description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā akonga e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki te mahi tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui ki te whakaoti i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia e ngā akonga i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari atu. Pai mō ngā tamariki tau 1-2 i te kura.
-          description_short: Tīmatahia ngā kaipānui pihinga kei Akoranga 1.
-          description_audience: Tamariki 4-6
+          description_short: Tīmataria ki te Akoranga 1 mō ngā kaipānui pīpī.
+          description_audience: Ngā Tau 4-6
           stage:
-            'Artist: Loops': 'Ringa Toi: Hurihanga'
-            'Artist: Sequence': 'Ringa Toi: Raupapa'
-            'Artist: Shapes': 'Artist: Shapes'
-            'Bee: Loops': 'Bee: Loops'
-            'Bee: Sequence': 'Bee: Sequence'
-            Building a Foundation: Building a Foundation
-            Getting Loopy: Getting Loopy
-            Going Places Safely: Going Places Safely
-            Happy Maps: Happy Maps
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-            'Maze: Debugging': 'Maze: Debugging'
-            'Maze: Loops': 'Maze: Loops'
-            'Maze: Sequence': 'Maze: Sequence'
-            Move it, Move it: Move it, Move it
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-            Spelling Bee: Spelling Bee
-            'Studio: Create a Story': 'Play Lab: Create a Story'
-            The Big Event: The Big Event
+            'Artist: Loops': 'Rehetoi: Ngā Koromeke'
+            'Artist: Sequence': 'Rehetoi: Raupapa'
+            'Artist: Shapes': 'Rehetoi: Ngā Āhua'
+            'Bee: Loops': 'Pī: Ngā Koromeke'
+            'Bee: Sequence': 'Pī: Raupapa'
+            Building a Foundation: Te Hanga Tūāpapa
+            Getting Loopy: Kia Koromeke
+            Going Places Safely: Te Karore Haumaru
+            Happy Maps: Ngā Mahere Harikoa
+            'Jigsaw: Learn to drag and drop': 'Pangahono: Ākona ki te tō me te whakataka'
+            'Maze: Debugging': 'Rīrapa: Patuirotanga'
+            'Maze: Loops': 'Rīrapa: Ngā Koromeke'
+            'Maze: Sequence': 'Rīrapa: Raupapa'
+            Move it, Move it: E Neke, E Neke
+            'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he Kano'
+            Spelling Bee: Ohu Takikupu
+            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
+            The Big Event: Te Takahanga Nui
         course2:
-          title: Course 2
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
-          description_short: Start with Course 2 for students who can read.
-          description_audience: Ages 6+ (reading required)
+          title: Akoranga 2
+          description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou wheako tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata 2-5.
+          description_short: Tīmataria ki te Akoranga 2 mō ngā ākonga e taea ana te pānui.
+          description_audience: Ngā Tau 6+ (me mātua pānui)
           stage:
-            'Artist: Debugging': 'Artist: Debugging'
-            'Artist: Loops': 'Ringa Toi: Hurihanga'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Ringa Toi: Raupapa'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Loops': 'Bee: Loops'
-            Binary Bracelets: Binary Bracelets
-            Conditionals: Conditionals
+            'Artist: Debugging': 'Rehetoi: Patuirotanga'
+            'Artist: Loops': 'Rehetoi: Ngā Koromeke'
+            'Artist: Nested Loops': 'Rehetoi: Ngā Koromeke Tauroto'
+            'Artist: Sequence': 'Rehetoi: Raupapa'
+            'Bee: Conditionals': 'Pī: Ngā Here'
+            'Bee: Debugging': 'Pī: Patuirotanga'
+            'Bee: Loops': 'Pī: Ngā Koromeke'
+            Binary Bracelets: Kōmore Ā-Rua
+            Conditionals: Ngā Here
             Flappy: Flappy
-            Getting Loopy: Getting Loopy
+            Getting Loopy: Kia Koromeke
             Graph Paper Programming: Papatono Pepa Kauwhata
-            'Maze: Loops': 'Maze: Loops'
-            'Maze: Sequence': 'Maze: Sequence'
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-            Relay programming: Relay programming
-            'Studio: Create a Story': 'Play Lab: Create a Story'
-            The Big Event: The Big Event
-            Your Digital Footprint: Your Digital Footprint
+            'Maze: Loops': 'Rīrapa: Ngā Koromeke'
+            'Maze: Sequence': 'Rīrapa: Raupapa'
+            'Real-life Algorithms: Paper Planes': 'Hātepe Motuhenga: Waka Rererangi Pepa'
+            Relay programming: Papatonotanga ā-Tānga
+            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
+            The Big Event: Te Takahanga Nui
+            Your Digital Footprint: Tō Tapuwae Matihiko
         course3:
-          title: Course 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
-          description_audience: Ages 8-18
+          title: Akoranga 3
+          description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē i te Akoranga 2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa tuhiwaehere i tirohia i ngā akoranga o muri kia waihanga i ngā otinga hangore mō ngā rapanga matatini. Kia tae ki te paunga o tēnei ākoranga, ka waihangahia e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri ki te tangata ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
+          description_short: Ka whai-ake te Akoranga 3 i te Akoranga 2.
+          description_audience: Ngā Tau 8-18
           stage:
-            Artist: Artist
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Patterns': 'Artist: Patterns'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Functions': 'Bee: Functions'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
+            Artist: Rehetoi
+            'Artist: Functions': 'Rehetoi: Ngā Taumahi'
+            'Artist: Nested Loops': 'Rehetoi: Ngā Koromeke Tauroto'
+            'Artist: Patterns': 'Rehetoi: Ngā Tauira'
+            'Bee: Conditionals': 'Pī: Ngā Here'
+            'Bee: Debugging': 'Pī: Patuirotanga'
+            'Bee: Functions': 'Pī: Ngā Taumahi'
+            'Bee: Nested Loops': 'Pī: Ngā Koromeke Tauroto'
             Bounce: Tupana
-            Computational Thinking: Computational Thinking
-            Crowdsourcing: Crowdsourcing
+            Computational Thinking: Whakaaro ā-Rorohiko
+            Crowdsourcing: Te Mahi ā-Ohu
             Dice Race: Dice Race
-            Digital Citizenship: Digital Citizenship
-            'Farmer: While Loops': 'Farmer: While Loops'
-            Functional Suncatchers: Functional Suncatchers
-            Internet: Internet
-            Maze: Maze
-            'Maze: Conditionals': 'Maze: Conditionals'
-            Songwriting: Songwriting
-            'Studio: Create a Game': 'Play Lab: Create a Game'
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            Digital Citizenship: Te Kirirarautanga Matihiko
+            'Farmer: While Loops': 'Kaiahuwhenua: Ngā Koromeke I Te'
+            Functional Suncatchers: Ngā Hopu Rā Taumahinga
+            Internet: Te Ipurangi
+            Maze: Rīrapa
+            'Maze: Conditionals': 'Rīrapa: Ngā Here'
+            Songwriting: Te Tito Waiata
+            'Studio: Create a Game': 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
+            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
         playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          description_short: Create a story or make a game with Play Lab!
+          title: Taiwhanga Tākaro
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro!
           stage:
-            Play Lab: Play Lab
+            Play Lab: Taiwhanga Tākaro
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Rehetoi
+          description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
+          description_short: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
           stage:
-            Artist: Artist
+            Artist: Rehetoi
         hourofcode:
           title: Rīrapa Tauhira
-          description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā tini pūāhua ngahau!
           stage:
-            Maze: Maze
+            Maze: Rīrapa
         frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          title: Tuhia te waehere ki tō Anna me Elsa taha
+          description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
           description_short: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice.
           stage:
-            Artist: Artist
+            Artist: Rehetoi
         course4:
-          title: Course 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description_audience: Ages 9-18
+          title: Akoranga 4
+          description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē i ngā Akoranga 2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga matatini rawa i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti ana i ia wero. Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga papatono hei whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā taumahi whai tawhā. E manakohia ana mō ngā taumata 4-8.
+          description_short: Me puta kē ngā ihu o ngā ākonga i ngā Akoranga 2 me te 3 i mua i te whai Akoranga 4.
+          description_audience: Ngā Tau 9-18
           stage:
-            Artist: Artist
-            Artist Binary: Artist Binary
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-            Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
-            Maze and Bee: Maze and Bee
-            'Play Lab: For Loops': 'Play Lab: For Loops'
-            'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-            'Play Lab: Variables': 'Play Lab: Variables'
-            Super Challenge - For Loops: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters: Super Challenge - Functions and Parameters
-            Super Challenge - Variables: Super Challenge - Variables
-            'Unplugged: Binary': 'Unplugged: Binary'
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-            'Unplugged: Madlibs': 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-            'Unplugged: Tangrams': 'Unplugged: Tangrams'
+            Artist: Rehetoi
+            Artist Binary: Rehetoi Tāhūrua
+            'Artist: For Loops': 'Rehetoi: Mō Ngā Koromeke'
+            'Artist: Functions': 'Rehetoi: Ngā Taumahi'
+            'Artist: Functions with Parameters': 'Rehetoi: Ngā Taumahi whai Tawhā'
+            'Artist: Variables': 'Rehetoi: Ngā Tāupe'
+            'Bee: For Loops': 'Pī: Mō Ngā Koromeke'
+            'Bee: Functions with Parameters': 'Pī: Ngā Taumahi whai Tawhā'
+            Extreme Challenge - Comprehensive: Wero Nui Rawa Atu - Matawhānui
+            Maze and Bee: Rīrapa me te Pī
+            'Play Lab: For Loops': 'Taiwhanga Tākaro: Mō Ngā Koromeke'
+            'Play Lab: Functions with Parameters': 'Taiwhanga Tākaro: Ngā Taumahi whai Tawhā'
+            'Play Lab: Variables': 'Taiwhanga Tākaro: Ngā Tāupe'
+            Super Challenge - For Loops: Wero Nui Rawa - Mō Ngā Koromeke
+            Super Challenge - Functions and Parameters: 'Wero Nui Rawa: Ngā Taumahi me ngā Tawhā'
+            Super Challenge - Variables: Wero Nui Rawa - Ngā Tāupe
+            'Unplugged: Binary': 'Momotu: Tāhūrua'
+            'Unplugged: Envelope Variables': 'Momotu: Ngā Tāupe Pūhera'
+            'Unplugged: For Loop Fun': 'Momotu: Mō te Ngahau Koromeke'
+            'Unplugged: Madlibs': 'Momotu: Ngā Madlibs'
+            'Unplugged: Songwriting with Parameters': 'Momotu: Titowaiata me ngā Tawhā'
+            'Unplugged: Tangrams': 'Momotu: Ngā Hangawhitu'
         Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          title: Akoranga 4 Tōmua
+          description: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia whāia te Akoranga 2 me te 3.
+          description_short: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia whāia te Akoranga 2 me te 3.
           stage:
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Loops': 'Ringa Toi: Hurihanga'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Ringa Toi: Raupapa'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
-            'Farmer: While Loops': 'Farmer: While Loops'
-            'Maze: Sequence': 'Maze: Sequence'
+            'Artist: Functions': 'Rehetoi: Ngā Taumahi'
+            'Artist: Loops': 'Rehetoi: Ngā Koromeke'
+            'Artist: Nested Loops': 'Rehetoi: Ngā Koromeke Tauroto'
+            'Artist: Sequence': 'Rehetoi: Raupapa'
+            'Bee: Conditionals': 'Pī: Ngā Here'
+            'Bee: Debugging': 'Pī: Patuirotanga'
+            'Bee: Nested Loops': 'Pī: Ngā Koromeke Tauroto'
+            'Farmer: While Loops': 'Kaiahuwhenua: Ngā Koromeke I Te'
+            'Maze: Sequence': 'Rīrapa: Raupapa'
           description_audience: ''
         usability:
           title: Usability Testing
@@ -152,9 +152,9 @@ mi:
           stage:
             Binary: Binary
             For Loops: For Loops
-            Functions and Functions with Parameters: Functions and Functions with Parameters
-            Intro: Intro
-            Variables: Variables
+            Functions and Functions with Parameters: Ngā Taumahi me Ngā Taumahi whai Tawhā
+            Intro: Whakataki
+            Variables: Ngā Taurangi
           description_audience: ''
         algebra:
           title: Computer Science in Algebra
@@ -164,7 +164,7 @@ mi:
             'Calc: Defining Variables': Defining Variables and Substitution
             'Calc: Evaluation Blocks': Evaluation Blocks and Arithmetic Expressions
             'Eval: Boolean Operators': Boolean Operators
-            'Eval: Conditionals': Conditionals
+            'Eval: Conditionals': Ngā Here
             'Eval: Defining Functions': Composite Functions
             'Eval: Functions': Solving Word Problems with the Design Recipe
             'Eval: Strings and Images': Strings and Images
@@ -183,11 +183,11 @@ mi:
             'Unplugged: Video Games and Coordinate Planes': 'Unplugged: Video Games and Coordinate Planes'
           description_audience: ''
         infinity:
-          title: Disney Infinity Play Lab
-          description: Use Play Lab to create a story or game starring Disney Infinity characters.
-          description_short: Use Play Lab to create a story or game starring Disney Infinity characters.
+          title: Taiwhanga Tākaro Disney Infinity
+          description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
+          description_short: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
           stage:
-            Infinity: Infinity
+            Infinity: Mutunga Kore
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -197,7 +197,7 @@ mi:
             Defining Variables: Defining Variables
             Evaluation Blocks: Evaluation Blocks
             Making Pictures: Making Pictures
-            The Design Recipe: The Design Recipe
+            The Design Recipe: Te Tohutohu Hoahoa
         K5PD:
           title: K5 Professional Development
           description: Professional Development for K5 Courses
@@ -212,7 +212,7 @@ mi:
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Unplugged lessons: Unplugged lessons
             Writing computer programs: Writing computer programs
           description_audience: ''
@@ -244,19 +244,19 @@ mi:
             Color Pixelation Tutorial: Color Pixelation Tutorial
           description_audience: ''
         20-hour:
-          title: Accelerated Intro to CS Course
-          description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          description_audience: Ages 10-18
+          title: Whakataki Whakatere ki te Akoranga CS
+          description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga 2-4 kia whānui ake te wheako!
+          description_short: Ka whakaakona i tēnei akoranga 20-haora te roa ngā ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4.
+          description_audience: Ngā Tau 10-18
           stage:
-            Abstraction: Abstraction
+            Abstraction: Te Whakawaitara
             Algorithms: Ngā Hātepe
-            Computational Thinking: Computational Thinking
-            Conditionals: Conditionals
+            Computational Thinking: Whakaaro ā-Rorohiko
+            Conditionals: Ngā Here
             Functions: Ngā Taumahi
             Graph Paper Programming: Papatono Pepa Kauwhata
             Introduction to Computer Science: Whakatakinga ki te Mātauranga Rorohiko
-            Relay Programming: Relay Programming
+            Relay Programming: Papatonotanga ā-Tānga
             Song Writing: Tito Waiata
             The Artist: Te Rehetoi
             The Artist 2: Te Rehetoi 2
@@ -276,43 +276,43 @@ mi:
           stage:
             Applab: Applab
             Hoc2015 Blockly: Hoc2015 Blockly
-            Play Lab: Play Lab
+            Play Lab: Taiwhanga Tākaro
             The Artist: Te Rehetoi
             The Maze: Te Rīrapa
           description_audience: ''
         events:
-          title: Takunetanga
-          description: Takunetanga
-          description_short: Takunetanga
+          title: Ngā Takunetanga
+          description: Ngā Takunetanga
+          description_short: Ngā Takunetanga
           stage:
             Bounce: Tupana
             Calc: Calc
             Eval: Eval
-            Studio: Studio
+            Studio: Taupuni
         flappy:
           title: Waehere Flappy
           description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Tuhia tō ake kēmu Flappy i te 10 meneti iti iho!
           stage:
             Flappy Code: Waehere Flappy
         jigsaw:
           title: Pangahono
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Whakamātauhia tā mātou akoranga Pangahono
+          description_short: Whakamātauhia tā mātou akoranga Pangahono
           stage:
             Jigsaw: Pangahono
           description_audience: ''
         step:
-          title: Step
-          description: Step tutorial
-          description_short: Step tutorial
+          title: Tohutohu
+          description: Akoranga Hātepe
+          description_short: Akoranga Hātepe
           stage:
-            Step: Step
+            Step: Tohutohu
           description_audience: ''
         Hour of Code:
           title: Hour of Code 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
+          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā pūāhua o Angry Birds me Plants vs. Zombies!
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā tini pūāhua ngahau!
           stage:
             Hour of Code 2013: Hour of Code 2013
           description_audience: ''
@@ -321,14 +321,14 @@ mi:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Ngā Panga
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Ngā Panga
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -361,7 +361,7 @@ mi:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algPDmiami:
@@ -495,9 +495,9 @@ mi:
             Evaluation Blocks: Evaluation Blocks
             Next Steps: Next Steps
             Strings and Images: Strings and Images
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             The Big Game: The Big Game
-            The Design Recipe: The Design Recipe
+            The Design Recipe: Te Tohutohu Hoahoa
           description_audience: ''
         ECSPD-NexTech:
           title: Exploring Computer Science PD
@@ -533,7 +533,7 @@ mi:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD-iZone:
@@ -546,7 +546,7 @@ mi:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD-NexTech:
@@ -598,7 +598,7 @@ mi:
             Revisiting Agent Movement: Revisiting Agent Movement
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
         sciencePD3:
           title: 'CS in Science: Part 3'
           description: Academic Year Support - Semester 1
@@ -661,7 +661,7 @@ mi:
             Rocket-Height: Rocket-Height
             Sam the Bat: Sam the Bat
             Strings and Images: Strings and Images
-            The Design Recipe: The Design Recipe
+            The Design Recipe: Te Tohutohu Hoahoa
           description_audience: ''
         allthethings:
           title: All the Things!
@@ -671,7 +671,7 @@ mi:
             Anonymous student survey: Anonymous student survey
             Anonymous student survey 2: Anonymous student survey 2
             AppLab: AppLab
-            Artist: Artist
+            Artist: Rehetoi
             Bee: Bee
             Bounce: Tupana
             CSinA: CSinA
@@ -683,7 +683,7 @@ mi:
             Long assessment: Long assessment
             Markdown Details: Markdown Details
             Match: Match
-            Maze: Maze
+            Maze: Rīrapa
             Minecraft: Minecraft
             Multi: Multi
             Multi2: Multi2
@@ -696,7 +696,7 @@ mi:
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Taupuni
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -717,7 +717,7 @@ mi:
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: Strings and Images
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -780,10 +780,10 @@ mi:
           description_short: Academic Year Support
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
-            The Design Recipe: The Design Recipe
+            The Design Recipe: Te Tohutohu Hoahoa
             Welcome!: Welcome!
           description_audience: ''
         sciencePD2b:
@@ -797,7 +797,7 @@ mi:
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
           description_audience: ''
         equity-pd:
           title: Leading a Discussion on Equity
@@ -818,7 +818,7 @@ mi:
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
           description_audience: ''
         Equity-OnlinePD:
           title: Creating More Equitable Computer Science Classrooms
@@ -841,7 +841,7 @@ mi:
             Reviewing the Modules: Reviewing the Modules
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
           description_audience: ''
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
@@ -901,15 +901,15 @@ mi:
           description_short: Short unplugged course designed for informal learning
           description_audience: Ages 6-13
           stage:
-            Binary Bracelets: Binary Bracelets
-            Building a Foundation: Building a Foundation
-            Getting Loopy: Getting Loopy
+            Binary Bracelets: Kōmore Ā-Rua
+            Building a Foundation: Te Hanga Tūāpapa
+            Getting Loopy: Kia Koromeke
             Graph Paper Programming: Papatono Pepa Kauwhata
-            Happy Maps: Happy Maps
-            Move it, Move it: Move it, Move it
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
-            Songwriting: Songwriting
-            The Big Event: The Big Event
+            Happy Maps: Ngā Mahere Harikoa
+            Move it, Move it: E Neke, E Neke
+            'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he Kano'
+            Songwriting: Te Tito Waiata
+            The Big Event: Te Takahanga Nui
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
@@ -1052,7 +1052,7 @@ mi:
             Physical Science Challenges: Physical Science Challenges
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1088,7 +1088,7 @@ mi:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Ngā Tau 10-18
           stage:
             Halloween 2015: Halloween 2015
           description: ''
@@ -1096,16 +1096,16 @@ mi:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Ngā Tau 10-18
           stage:
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: Taiwhanga Tākaro Ice Age
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Ice Age!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Ice Age!
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: Taiwhanga Tākaro Ice Age
           description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1150,11 +1150,11 @@ mi:
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: Taiwhanga Tākaro Gumball
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: Taiwhanga Tākaro Gumball
         starwars:
           title: 'Nga Pakanga Whetū: Hangaia he ikarangi me te uhingaro'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
@@ -1170,8 +1170,8 @@ mi:
             Hour of Code 2015: Hour of Code 2015
           description_audience: ''
         mc:
-          title: Minecraft Hour of Code
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
+          title: Hour of Code Mahimaina
+          description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
           description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
           stage:
             Hour of Code 2015: Hour of Code 2015
@@ -1191,7 +1191,7 @@ mi:
             "(optional) Refresh your connection to Complex Adaptive Systems": "(optional) Refresh your connection to Complex Adaptive Systems"
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1323,7 +1323,7 @@ mi:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD3c:
@@ -1455,6 +1455,8 @@ mi:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1522,7 +1524,7 @@ mi:
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: Ages 8-18
+          description_audience: Ngā Tau 8-18
           stage:
             Sample Stage: Sample Stage
         ECSPD1:
@@ -1543,7 +1545,7 @@ mi:
           stage:
             Evaluation Blocks: Evaluation Blocks
             Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD1:
@@ -1758,7 +1760,7 @@ mi:
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: Ages 8-18
+          description_audience: Ngā Tau 8-18
           stage:
             Artist Exemplar: Artist Exemplar
         teachercon:
@@ -1782,7 +1784,7 @@ mi:
           description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': 'Bee: Conditionals'
+            'Bee: Conditionals': 'Pī: Ngā Here'
             Kindergarten Stage 1: Kindergarten Stage 1
           title: ''
           description_audience: ''
@@ -1796,18 +1798,18 @@ mi:
           stage:
             Being Safe Online: Being Safe Online
             Debugging: Debugging
-            Events: Takunetanga
+            Events: Ngā Takunetanga
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-            Loops: Loops
+            'Jigsaw: Learn to drag and drop': 'Pangahono: Ākona ki te tō me te whakataka'
+            Loops: Ngā Koromeke
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
             Persistence & Frustration: Persistence & Frustration
             Programming: Programming
             Programming Unplugged: Programming Unplugged
             Sequences & Algorithms: Sequences & Algorithms
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+            'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he Kano'
             'Programming Unplugged: Happy Maps': 'Programming Unplugged: Happy Maps'
         grade4:
           title: Grade 4
@@ -1818,7 +1820,7 @@ mi:
             'Bee: Determine the Concept': 'Bee: Determine the Concept'
             'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
             Build a Star Wars Game!: Build a Star Wars Game!
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: Te Kirirarautanga Matihiko
             Explore project ideas: Explore project ideas
             'Farmer: Functions (New)': 'Farmer: Functions (New)'
             Final Project - Presentation Day: Final Project - Presentation Day
@@ -1827,7 +1829,7 @@ mi:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Songwriting
+            Songwriting: Te Tito Waiata
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1837,10 +1839,10 @@ mi:
           stage:
             Being Safe Online: Being Safe Online
             Debugging: Debugging
-            Events: Takunetanga
+            Events: Ngā Takunetanga
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
-            Loops: Loops
+            'Jigsaw: Learn to drag and drop': 'Pangahono: Ākona ki te tō me te whakataka'
+            Loops: Ngā Koromeke
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
             More Computer Science: More Computer Science
@@ -1857,22 +1859,22 @@ mi:
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 10-110
           stage:
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-            Digital Citizenship: Digital Citizenship
+            'Artist: For Loops': 'Rehetoi: Mō Ngā Koromeke'
+            'Artist: Functions with Parameters': 'Rehetoi: Ngā Taumahi whai Tawhā'
+            'Artist: Variables': 'Rehetoi: Ngā Tāupe'
+            'Bee: For Loops': 'Pī: Mō Ngā Koromeke'
+            'Bee: Functions with Parameters': 'Pī: Ngā Taumahi whai Tawhā'
+            Digital Citizenship: Te Kirirarautanga Matihiko
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: Final Project - Presentation Day
             Final Project - Review/Revise Day: Final Project - Review/Revise Day
             'Final Project - Unplugged: Design Process': 'Final Project - Unplugged: Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
-            'Play Lab: Variables': 'Play Lab: Variables'
+            'Play Lab: Variables': 'Taiwhanga Tākaro: Ngā Tāupe'
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+            'Unplugged: Envelope Variables': 'Momotu: Ngā Tāupe Pūhera'
+            'Unplugged: For Loop Fun': 'Momotu: Mō te Ngahau Koromeke'
+            'Unplugged: Songwriting with Parameters': 'Momotu: Titowaiata me ngā Tawhā'
         ecs-unit1:
           title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -1960,7 +1962,7 @@ mi:
           description_audience: Ages 5-18
           stage:
             " Bee: Conditionals": " Bee: Conditionals"
-            'Artist: Nested Loops': 'Artist: Nested Loops'
+            'Artist: Nested Loops': 'Rehetoi: Ngā Koromeke Tauroto'
             Bee Debugging: Bee Debugging
             Bounce: Tupana
             Build a Game: Build a Game
@@ -1968,7 +1970,7 @@ mi:
             Farmer Debug Relay Programming: Farmer Debug Relay Programming
             Farmer Graph Paper Programming: Farmer Graph Paper Programming
             Farmer Impacts of Computing: Farmer Impacts of Computing
-            'Farmer: While Loops': 'Farmer: While Loops'
+            'Farmer: While Loops': 'Kaiahuwhenua: Ngā Koromeke I Te'
             'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
             'Maze: Nested Loops': 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
@@ -2038,9 +2040,9 @@ mi:
             Puppy Loops: Puppy Loops
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
-            Binary Bracelets: Binary Bracelets
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-            The Big Event: The Big Event
+            Binary Bracelets: Kōmore Ā-Rua
+            'Real-life Algorithms: Paper Planes': 'Hātepe Motuhenga: Waka Rererangi Pepa'
+            The Big Event: Te Takahanga Nui
         transferring-over:
           stage:
             20-hr Stage 2: 20-hr Stage 2
@@ -2056,14 +2058,14 @@ mi:
           title: K5 Concepts
           stage:
             Binary: Binary
-            Conditionals: Conditionals
-            Events: Takunetanga
+            Conditionals: Ngā Here
+            Events: Ngā Takunetanga
             For Loops: For Loops
             Functions: Ngā Taumahi
             Functions with Parameters: Functions with Parameters
-            Loops: Loops
+            Loops: Ngā Koromeke
             Nested Loops: Nested Loops
-            Variables: Variables
+            Variables: Ngā Taurangi
             While Loops: While Loops
           description_audience: ''
           description_short: ''
@@ -2074,10 +2076,10 @@ mi:
           description_short: '\tPhase 3: School Year Support'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Paemana Pouako
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
-            The Design Recipe: The Design Recipe
+            The Design Recipe: Te Tohutohu Hoahoa
             Welcome!: Welcome!
           description_audience: ''
         csp-pre-survey:
@@ -2139,6 +2141,10 @@ mi:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2176,8 +2182,8 @@ mi:
           description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
         fesbinary:
           stage:
-            Binary Bracelets: Binary Bracelets
-            Binary Images: Binary Images
+            Binary Bracelets: Kōmore Ā-Rua
+            Binary Images: Ngā Atahanga Tāhūrua
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
             Processing with Bits: Processing with Bits
@@ -2254,11 +2260,11 @@ mi:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Pūhoahoa Hour of Code Mahimaina
+          title: Pūhoahoa Hour of Code Mahimaina
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina.
+          description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2272,7 +2278,7 @@ mi:
           stage:
             'Debugging: Bugs in Codeville': 'Debugging: Bugs in Codeville'
             'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration: Stevie and the Marbles'
-            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+            'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he Kano'
             Learn to Drag and Drop: Learn to Drag and Drop
             'Programming: Happy Maps': 'Programming: Happy Maps'
             Programming in Maze: Programming in Maze
@@ -2283,7 +2289,8 @@ mi:
             'Events: The Big Event': 'Events: The Big Event'
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
-            Going Places Safely: Going Places Safely
+            Going Places Safely: Te Karore Haumaru
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ mi:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he Kano'
+            Your Digital Footprint: Tō Tapuwae Matihiko
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2311,7 +2320,7 @@ mi:
         coursec-draft:
           stage:
             Programming in Maze: Programming in Maze
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+            'Real-life Algorithms: Paper Planes': 'Hātepe Motuhenga: Waka Rererangi Pepa'
             Programming in Collector: Programming in Collector
             Programming in Artist: Programming in Artist
             'Loops: Getting Loopy': 'Loops: Getting Loopy'
@@ -2321,9 +2330,11 @@ mi:
             Online Internet Safety: Online Internet Safety
             Build a Flappy Game: Build a Flappy Game
             More CS with Run Marco: More CS with Run Marco
-            Binary Bracelets: Binary Bracelets
+            Binary Bracelets: Kōmore Ā-Rua
             Events in Play Lab: Events in Play Lab
-            Your Digital Footprint: Your Digital Footprint
+            Your Digital Footprint: Tō Tapuwae Matihiko
+            Building a Foundation: Te Hanga Tūāpapa
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2345,14 +2356,16 @@ mi:
             More Programming with CS4FN: More Programming with CS4FN
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: Te Kirirarautanga Matihiko
+            'Unplugged: Binary': 'Momotu: Tāhūrua'
+            Artist Binary: Rehetoi Tāhūrua
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 3rd grade.
         coursee-draft:
           stage:
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: Te Kirirarautanga Matihiko
             Build a Star Wars Game: Build a Star Wars Game
             'Functions: Songwriting': 'Functions: Songwriting'
             Functions in Artist: Functions in Artist
@@ -2365,17 +2378,20 @@ mi:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Te Ipurangi
+            Crowdsourcing: Te Mahi ā-Ohu
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 4th grade.
         coursef-draft:
           stage:
-            Digital Citizenship: Digital Citizenship
-            Envelope Variables: Envelope Variables
+            Digital Citizenship: Te Kirirarautanga Matihiko
+            Envelope Variables: Ngā Taurangi Kōpaki
             Variables in Play Lab: Variables in Play Lab
             Variables in Artist: Variables in Artist
-            For Loop Fun: For Loop Fun
+            For Loop Fun: Kia Ngahau te Mahi Koromeke
             For Loops in Bee: For Loops in Bee
             For Loops in Artist: For Loops in Artist
             'Functions with Parameters: Songwriting with Parameters': 'Functions with Parameters: Songwriting with Parameters'
@@ -2387,6 +2403,8 @@ mi:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Songwriting with Parameters
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2398,7 +2416,7 @@ mi:
             Post Hour of Code Survey: Post Hour of Code Survey
           title: Hour of Code with Survey
           description_audience: ''
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā tini pūāhua ngahau!
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         hoc-impact-study:
           stage:
@@ -2407,14 +2425,14 @@ mi:
             Post Hour of Code Survey: Post Hour of Code Survey
           title: Classic Maze with Survey
           description_audience: ''
-          description_short: Try the basics of computer science with many fun characters!
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā tini pūāhua ngahau!
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Ngā Hākinakina
+          title: Ngā Hākinakina
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Tuhia te waehere o tō ake hākinakina
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2424,7 +2442,7 @@ mi:
             Advanced StarLogo Nova: Advanced StarLogo Nova
             Remixing Phases 1 and 2: Remixing Phases 1 and 2
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
           title: ''
           description_audience: ''
           description_short: ''
@@ -2437,7 +2455,7 @@ mi:
             Advanced StarLogo Nova: Advanced StarLogo Nova
             Remixing Phases 1 and 2: Remixing Phases 1 and 2
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
-            Wrap-Up: Wrap-Up
+            Wrap-Up: Whakamutunga
           title: ''
           description_audience: ''
           description_short: ''
@@ -2448,6 +2466,20 @@ mi:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

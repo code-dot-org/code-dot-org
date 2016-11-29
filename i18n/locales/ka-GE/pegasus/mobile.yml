@@ -25,7 +25,7 @@ ka-GE:
   submit: "გაგზავნა"
   twentyhours_heading: "სცადეთ ჩვენი პროგრამირების კურსი"
   twentyhours_text: "დაასრულეთ თქვენი პირველი კოდის ერთი საათი? გაიგეთ მეტი ინფორმატიკისა და პროგრამირების შესახებ მომდევნო კურსში."
-  og_title: "ყოველი ბავშვი იმსახურებს შესაძლებლობას"
+  og_title: ყოველი ბავშვი იმსახურებს შესაძლებლობას
   og_description: "ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის."
   csedweek_og_title: "The Hour of Code is coming"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
@@ -709,6 +709,7 @@ ka-GE:
   dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "გვიახლოვდება კოდის ერთი საათი - დეკემბრის 8-დან 14-მდე!"
   code_sign_up: "დარეგისტრირდით და მიიღეთ მონაწილეობა CS განათლების კვირეულში"
   host_an_hour: "ჩაატარეთ ერთი საათი"
@@ -851,6 +852,8 @@ ka-GE:
   starwarsblocks_name: "ვარსკვალვური ომები (ბლოკები)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: მარტივი შიფრირება
+  text-compression_name: Text Compression
   math_category_name: "მათემატიკა"
   hoc_category_name: "კოდის ერთი საათი"
   csf_category_name: "CS საფუძვლები"

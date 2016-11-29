@@ -181,9 +181,8 @@
           за да стигне до прасето?"
       3:
         image: notes/hoc3_3.jpg
-        text: Ако сложим "предвижи се напред" блок вътре в блока, "повтаряй докато",
-          птицата ще продължи напред, докато достигне прасето (или ще се блъсне в
-          стената).
+        text: Ако сложим "върви напред" блок вътре в блока, "повтаряй докато", птицата
+          ще продължи напред, докато достигне прасето (или ще се блъсне в стената).
       4:
         image: notes/hoc3_4.jpg
         text: 'И това е важно: както преди, можем да сложим няколко блока вътре в
@@ -1202,10 +1201,10 @@
       2:
         image: notes/C2_bee_loops_2.png
         text: "Това е блок за повторение. Каквото и да сложиш вътре в блока за повторение,
-          той ще повтаря тези действия определен брой пъти, които вие определите.
-          Например, в това ниво, е необходимо да се движите напред и да вземете нектар
-          три пъти, ние обаче ще плъзнем един блок, а блокът за повторение ще го повтори
-          три пъти. Това прави нещата лесни!"
+          той ще повтаря тези действия определен брой пъти, които си определил. Например,
+          в това ниво, е необходимо да се движиш напред и да вземеш нектар три пъти,
+          ние обаче ще плъзнем един блок, а блокът за повторение ще го повтори три
+          пъти. Това прави нещата лесни!"
     C2_maze_intro:
       1:
         image: notes/C2_maze_intro_1.png
@@ -1790,25 +1789,25 @@
           с определена стъпка."
       2:
         image: notes/C4_for_loops_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: На пример, "повтори 3" блока брои от 1 до 3 през 1. Всеки път, когато
+          отброява, той изпълнява кода, поставен в цикъла. Блокът знае колко пъти
+          да повтаря с помощта на брояч, на който е зададена началната стойност в
+          началото на цикъла и има нарастване, което се добавя към него всеки път
+          когато цикъла се изпълнява. Веднага щом стойността на брояча стане по-голяма
+          от крайната стойност, цикъла спира да работи.
       3:
         image: notes/C4_for_loops_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Ползата от използването на "за" цикъла вместо блок за повторение е,
+          че всъщност можете да видите брояча и да го използвате във вашият цикъл.
+          Например, ако аз имам една серия от цветя и първото има 1 нектар, второто
+          има 2 нектара, а третото има три, мога да използваме "за" цикъла "да каже"
+          на пчелите да събират като броят нектарите всеки път, които са един в първото
+          цвете, две във второто и три на трето.
       4:
         image: notes/C4_for_loops_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Също в "за" цикъл може да увеличавате стойността на брояча с номер,
+          различен от едно всеки път. Потенциално може да се брои през 2s, 4s или
+          дори сума, която да се променя всеки път.
     C4_for_loops_bee:
       1:
         image: notes/C4_for_loops_bee_1.png
@@ -1818,25 +1817,25 @@
           с определена стъпка."
       2:
         image: notes/C4_for_loops_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running.
+        text: На пример, "повтори 3" блока брои от 1 до 3 през 1. Всеки път, когато
+          отброява, той изпълнява кода, поставен в цикъла. Блокът знае колко пъти
+          да повтаря с помощта на брояч, на който е зададена началната стойност в
+          началото на цикъла и има нарастване, което се добавя към него всеки път
+          когато цикъла се изпълнява. Веднага щом стойността на брояча стане по-голяма
+          от крайната стойност, цикъла спира да работи.
       3:
         image: notes/C4_for_loops_bee_3.png
-        text: The benefit of using a real for loop instead of the repeat block is
-          that you can actually see the counter variable and use it in your loop.
-          For example, if I have a series of flowers and the first one has one nectar,
-          the second one has two nectars and the third one has three, I can use the
-          for loop to tell the bee to collect 'counter' nectars each time, which would
-          one at the first flower, two at the second and three at the third.
+        text: Ползата от използването на "за" цикъла вместо блок за повторение е,
+          че всъщност можете да видите брояча и да го използвате във вашият цикъл.
+          Например, ако аз имам една серия от цветя и първото има 1 нектар, второто
+          има 2 нектара, а третото има три, мога да използваме "за" цикъла "да каже"
+          на пчелите да събират като броят нектарите всеки път, които са един в първото
+          цвете, две във второто и три на трето.
       4:
         image: notes/C4_for_loops_bee_4.png
-        text: Also in a for loop, you can increment the counter by a number other
-          than one each time. You can potentially count by 2s, 4s or even an amount
-          that changes every time through.
+        text: Също в "за" цикъл може да увеличавате стойността на брояча с номер,
+          различен от едно всеки път. Потенциално може да се брои през 2s, 4s или
+          дори сума, която да се променя всеки път.
     C4_for_loops_no_bee:
       1:
         image: notes/C4_for_loops_no_bee_1.png
@@ -1846,14 +1845,14 @@
           с определена стъпка."
       2:
         image: notes/C4_for_loops_no_bee_2.png
-        text: For example, a repeat three block counts from 1 to 3 by 1. Every time
-          it counts, it runs the code inside the loop. The for loop knows how many
-          times it has run by using a counter variable which is set to the starting
-          value at the beginning of the loop and has the increment added to it each
-          time the loop is run. As soon as the counter variable is greater than the
-          ending value, the loop stops running. The benefit of using a real for loop
-          instead of the repeat block is that you can actually see the counter variable
-          and use it in your loop.
+        text: На пример, "повтори 3" блока брои от 1 до 3 през 1. Всеки път, когато
+          отброява, той изпълнява кода, поставен в цикъла. Блокът знае колко пъти
+          да повтаря с помощта на брояч, на който е зададена началната стойност в
+          началото на цикъла и има нарастване, което се добавя към него всеки път
+          когато цикъла се изпълнява. Веднага щом стойността на брояча стане по-голяма
+          от крайната стойност, цикъла спира да работи. Ползата от използването на
+          "за" цикъла вместо блок за повторение е, че всъщност можете да видите брояча
+          и да го използвате във вашият цикъл.
     C4_function_create:
       1:
         image: notes/C4_function_create_1.png
@@ -1864,17 +1863,16 @@
           already used to edit existing function blocks.
       2:
         image: notes/C4_function_create_2.png
-        text: Just like before, you started by naming your function, writing down
-          a description for what the function is supposed to do. For instance, it's
-          supposed to draw a square or draw a triangle and then drag blocks from the
-          toolbox into the white work space below. Remember to drag these blocks inside
-          the green wrapping block for the function.
+        text: "Точно както преди, започвате да наименовате функция си като написвате
+          описание за това каква функция се предполага да извършва. Например, предполага
+          се, че чертае квадрат или чертае триъгълник и после да приплъзне блокове
+          от кутията с инструменти към бялото работно пространство отдолу. Запомнете
+          да приплъзнете тези блокове в зеления обвиващ блок за тази функция."
       3:
         image: notes/C4_function_create_3.png
-        text: Once you're done, click on save and exit. This will take you back to
-          the main puzzle work space. The new function you created will show up as
-          a green block in the function category in your toolbox. Drag and drop this
-          into the main work space and use it like any other block to solve the puzzle.
+        text: |-
+          След като сте готови, натиснете бутона запази и излезте. Това ще ви отведе обратно в основното работно пространство с пъзели.
+          Новата функция, която сте създали ще се появи като зелен блок в категорията с функции във Вашата кутия с инструменти. Провлачете и пуснете в основното работно пространство и я използвайте като всеки друг блок, за да решите пъзела.
     C4_function_edit:
       1:
         image: notes/C4_function_edit_1.png
@@ -1884,21 +1882,21 @@
           разширяване на езика."
       2:
         image: notes/C4_function_edit_2.png
-        text: In the program we built, we learned how to draw a square by moving and
-          turning four times. We can take that function and give it a name, draw a
-          square so that any time we want to do that, we simply say draw a square
-          and it will go back and invoke that function, that code and it will get
-          done for us. We've added that concept to our programming language.
+        text: В програмата, която ние изградихме, се научихме как да начертаем квадрат
+          чрез преместване и завъртане четири пъти. Ние нарекохме тази функция "начертай
+          квадрат", така че всеки път когато искаме да направим квадрат ще извикваме
+          тази функция с код, който ще направи за нас квадрат. Добавихме тази концепция
+          в нашия език за програмиране.
       3:
         image: notes/C4_function_edit_3.png
-        text: In this puzzle, we have already created a draw a square function for
-          you. You'll see it in the toolbox as a green block. What you'll need to
-          do is write the same code you wrote before to draw a square and put it in
-          this function. To do that, click on the edit option in the green draw a
-          square block. This will open up the function editor. The function editor
-          has three parts. A place where you name your function. This will appear
-          on the green block before that function. Then write out a short description
-          of what your function is supposed to do.
+        text: В този пъзел ние вече създали "начертай квадрат" функция за вас. Вие
+          ще я видите в кутията с инструменти като зелен блок. Това, което трябва
+          да направите е да напишете същия код, с който преди изчертавахте квадрат
+          и да го сложите в тази функция. За да направите това, щракнете върху опцията
+          редактиране в зеления блок. Така ще се отвори редактора на функцията. Тук
+          имате три части. Място, където се дава име на функцията. То ще се появи
+          в зеления блок. След това се пише кратко описание на това, което вашата
+          функция е трябва да направи.
       4:
         image: notes/C4_function_edit_4.png
         text: In this case, it's supposed to draw a square. The white space below
@@ -1911,20 +1909,23 @@
     C4_function_parameters:
       1:
         image: notes/C4_function_parameters_1.png
-        text: Here's a function that draws a square with 50 pixel sides. That's great
-          but what if I wanted to draw a square with sides 50 pixels and another square
-          with sides of 100 pixels? We shouldn't have to make two separate functions
-          that do almost the same thing. Instead, we can use one function with a parameter.
+        text: "Тук е функция, която изчертава квадрат с 50 пиксела дълги страни. Това
+          е страхотно, но ако искаме да нарисувате квадрат със страни 50 пиксела и
+          друг квадрат със страни от 100 пиксела? Ние не трябва да правим две отделни
+          функции, които правят почти същото нещо. Вместо това можем да използваме
+          една функция с параметър."
       2:
         image: notes/C4_function_parameters_2.png
-        text: Parameters allow us to pass values into a function that get used as
-          variables inside the function. Let's try adding a parameter called like
-          to this function so we can use it to create squares of different sizes.
-          In the function editor, you can edit the name and description like before
-          but now you can also add a parameter. Write the name of your parameter in
-          the space and click Add Parameter. This will create a red block with the
-          name of the parameter you just created. Now we can replace the move forward
-          by 100 block with the parameter Length so it will move forward by Length.
+        text: "Параметрите ни позволяват да поставяме стойности в една функция, които
+          се използват като променливи вътре във функцията. Нека опитаме да добавим
+          параметър, който ще се задейства с извикване на тази функция, така ще може
+          да го използвате за да създадем квадрати с различни размери. В редактора
+          на функцията можете да редактирате името и описанието, както преди но сега
+          можете да добавите и параметър. Напишете името на вашия параметър в пространството
+          и щракнете върху добави параметър. Така ще се създаде червен блок с името
+          на параметъра, който току що създадохте. Сега можем да заменим блокът за
+          движение напред с параметъра за дължина, така че ще се извърши движение
+          напред по дължина."
       3:
         image: notes/C4_function_parameters_3.png
         text: Click save and close and drag out your new create a square block from
@@ -1951,16 +1952,17 @@
           област и това е мястото, където ние ще изградим нашата програма.
       3:
         image: notes/C4_intro_3.png
-        text: If I drag the move block to our work space and press "run", what happens?
-          The bird moves forward one box on the grid. And what if I want the bird
-          to do something after it moves forward one box? I can add another block
-          to our program.
+        text: Ако плъзнете блок за движение в работно поле и натиснете "Старт", какво
+          ще се случи? Птицата се придвижи напред една кутийка. Ако искам птицата
+          да направи нещо, след като се е придвижила напред една кутия? Тогава ще
+          добавя още един блок в нашата програма.
       4:
         image: notes/C4_intro_4.png
-        text: I'm going to choose the "turn right" block and I'll drag it under my
-          move block until the yellow arrow appears. Then I'll drop it and the two
-          blocks will snap together. When I press "run" again,  the bird will perform
-          the commands that are stacked from top to bottom on our work space.
+        text: Аз ще използвам "завърти надясно" блок и ще го плъзна под моя блок за
+          движение, докато се появи жълта стрелка. Тогава, ще го пусна и двата блока
+          ще се съединят заедно. Когато натисна "Старт" отново, птицата ще изпълнява
+          командите, които са подредени от първата до последната в нашето работно
+          поле.
       5:
         image: notes/C4_intro_5.png
         text: "Ако някога искате да изтриете блок, просто го премахнете от съединените
@@ -3156,3 +3158,122 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: "Здравейте моето име е Йенс и съм главен креативен дизайнер на Minecraft.
+          В следващия час вие ще направите своя собствена Minecraft игра. Това изглежда
+          като Minecraft, но светът е замръзнал. Овцете не се движат, пилетата не
+          снасят яйца, а зомбитата са неподвижни. Вие трябва да добавите код, за да
+          заработи Minecraft света."
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: "Моето име е Мелиса. Аз изследвам потребителите на Minecraft. Това,
+          от което наистина се интересувам  е как хората мислят и си взаимодействат
+          с технологиите. Това е добър начин да обединя компютърното инженерство с
+          психологията: как хората мислят и се държат."
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: "Както виждате, вашия екран е разделен на три основни части. 1) вляво
+          е игралното поле на Minecraft. Сега светът е замръзнал, но ние ще поправим
+          това с код."
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) тази средна област е кутията с инструменти. Всеки от тези блокове
+          са команди, които пилетата, овцете и другите същества в Minecraft разбират.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) The space on the right is called the workspace and this is where
+          we'll build our program.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back to the toolbox.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: След като сте натиснали "Старт" и нещо в кода не е правилно, винаги
+          можете да натиснете бутона "стартиране отначало", за да рестартирате играта.
+          Сега е ваш ред да направите своя собствена версия на Minecraft. Забавлявайте
+          се!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: "Здравейте аз съм Лиза. Аз съм софтуерен разработчик в Minecraft. Работя
+          върху някои от животните и врагове в играта. Едно от животните, върху които
+          съм работила е оцелота. Работила съм върху тази част, където можете да го
+          нахраните с риба, да го укротите и опитомите."
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: "Като хора, на нас ни е наистина скучно ако трябва да правим едно и
+          също нещо отново и отново и отново и отново. Но готиното при компютрите
+          е, че те могат да направят същото нещо милиони или дори милиарди пъти, без
+          да се отегчават. Тези повторения се наричат цикли и всяко създание в Minecraft
+          ги използва."
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: По-рано трябваше да задвижим пилето по екрана, но след това то сприраше.
+          В Minecraft пилетата се скитат наоколо постоянно Нека използваме "завинаги
+          прави" цикъл от нашия инструментариум, за да накараме нашите пилета се движат
+          също непрекъснато. Силата на циклите ще ви спести тонове от време и ще ви
+          отвори различни възможности когато създавате своя версия на Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: "Но какво се случва, когато го използвате? В Minecraft овцете дават
+          вълна, когато ги срижете, кравите бягат, когато ги ударите, и шиповете на
+          пълзящите ръстения експлодират, когато сте близо до тях. Тези реакции се
+          случват благодарение на неща, наречени събития. Те казват на програмата
+          да слуша или да чака да се случи нещо. И когато това стане- извършва действие."
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: "Поздравления! Вие сте научили да използват Cs команди, за да вдъхнете
+          живот на Minecraft света. Сега сте разработчик. Вие сте отключили всички
+          команди и всички същества. Можете да изберете какво ще се случва."
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: "Когато приключите с правенето на вашата игра, споделете я и ще получите
+          връзка, която да дадете на вашите приятели или да играете на вашия телефон.
+          Забавлявайте се! Очаквам с нетърпение вашите версии на Minecraft."

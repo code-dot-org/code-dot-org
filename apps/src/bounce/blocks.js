@@ -255,19 +255,13 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.bounce_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.bounce_playSound.SOUNDS = [];
+  for (var sound in skin.customSounds) {
+    if (skin.customSounds[sound].msg) {
+      blockly.Blocks.bounce_playSound.SOUNDS.push(
+          [skin.customSounds[sound].msg, sound]);
+    }
+  }
 
   generator.bounce_playSound = function () {
     // Generate JavaScript for playing a sound.
@@ -437,7 +431,7 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[10][1]); // default to warriors
+      dropdown.setValue(this.VALUES[14][1]); // default to warriors
 
       this.setHSV(184, 1.00, 0.74);
       this.appendDummyInput()

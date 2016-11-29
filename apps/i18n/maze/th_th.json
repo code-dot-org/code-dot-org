@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
   "collectorCollectedSome": "เยี่ยมมาก! คุณได้เก็บสิ่งของ {count} ชิ้นแล้ว!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "คุณสามารถใช้ได้แค่ {blockLimit} บล็อกเท่านั้น ตรวจเช็คโค้ดของคุณแล้วลองอีกครั้ง!",
   "continue": "ต่อไป\n",
@@ -84,7 +85,7 @@
   "plant": "plant",
   "plantInNonSoilError": "I can only plant something in fresh soil.",
   "plantTooltip": "Plant a sprout",
-  "pumpkin": "pumpkin",
+  "pumpkin": "ฟักทอง",
   "pumpkinTooltip": "Harvest a pumpkin",
   "putdownTower": "วางตึกลง",
   "removeAndAvoidTheCow": "ตักดินออก 1 ครั้ง แล้ว หลบวัว ",
@@ -111,6 +112,5 @@
   "word": "ค้นหาคำ",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ใช่",
-  "youSpelled": "คุณถูกสะกด",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "คุณถูกสะกด"
 }

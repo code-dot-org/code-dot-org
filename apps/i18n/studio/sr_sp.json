@@ -113,7 +113,7 @@
   "dropletBlock_setDroidSpeed_description": "Поставља брзину дроида.",
   "dropletBlock_setDroidSpeed_param0": "брзина",
   "dropletBlock_setDroidSpeed_param0_description": "Вредности за брзину ('случајан избор', 'споро', 'нормално' или 'брзо').",
-  "dropletBlock_setSpriteEmotion_description": "Postavi glumčevo raspoloženje",
+  "dropletBlock_setSpriteEmotion_description": "Подеси расположење.",
   "dropletBlock_setSpritePosition_description": "Одмах помера играча на позицију.",
   "dropletBlock_setSpriteSpeed_description": "Sets the speed of an actor",
   "dropletBlock_setSprite_description": "Sets the actor image",
