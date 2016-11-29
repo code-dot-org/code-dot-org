@@ -299,28 +299,49 @@
           kommer borti boksen med TNT!
         maze_3_4: Argh! Skriv meg et program for å komme meg rundt sprengstoffet og
           helt frem til grisen.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Fest en blokk til "når venstre pil"-blokken og klikk
+          "Kjør". Bruk venstre pil til å flytten hånden til målet.
+        bounce_2_basketball: Fest en blokk til "når høyre pil"- og "når venstre pil"-blokkene.
+          Flytt hånden for å nå begge målene.
+        bounce_5_basketball: Vi skal sende en ball mot hånden. Fest en blokk til "når
+          ballen treffer hånden"-blokken, for å være sikker på at ballen når flagget.
+        bounce_6_basketball: Nå er flagget på toppen. Du må feste blokker til begge
+          "når ballen treffer"-blokkene for å løse denne oppgaven.
+        bounce_7_basketball: Fest blokkene til begge "når"-blokkene. Sprett ballen
+          til den treffer flagget.
+        bounce_10_basketball: Nå er målet på toppen! Fest "skår poeng"- og "motstanderen
+          skårer poeng"-blokker til "når ballen er i mål" og "når ballen bommer på
+          hånden"-blokkene for å lage et spill. Se hvor mange poeng du kan få før
+          motstanderen får to poeng.
+        bounce_11_basketball: Nå kan du feste blokker til "når kjør"-blokken. Du må
+          feste en ny "kast ny ball"-blokk på mer enn ett sted. Du kan også endre
+          scenen eller hastigheten på hånden og ballen for å se hvor mange poeng du
+          kan få før motstanderen skårer to poeng!
+        bounce_12_basketball: Lag ditt eget basketballspill. Du kan endre alle reglene.
+          Klikk ferdig når du er fornøyd og la vennene dine prøve spillet på telefonene
+          sine.
+        bounce_1_sports: Kom deg til flagget! Koble en blokk til "når venstre pil"-blokken
+          og trykk "Kjør" for å flytte spillfiguren til flagget.
+        bounce_2_sports: Nå er det to flagg! Koble en blokk til "når venstre pil"-
+          og "når høyre pil"-blokkene for å kunne flytte spillfiguren i to retninger.
+        bounce_5_sports: Hockey-pucken kommer til å fly ned mot spillfiguren! Koble
+          en blokk til "når ball treffer spilleren"-blokken for å treffe flagget.
+        bounce_6_sports: Nå er flagget på toppen. Du må feste blokker til begge "når
+          ballen treffer"-blokkene for å løse denne oppgaven.
+        bounce_7_sports: Fest blokkene til begge "når"-blokkene. Sprett ballen til
+          den treffer flagget.
+        bounce_10_sports: Nå er det et mål på toppen! Fest blokkene "øk poeng" og
+          "øk motstanderens poeng" til blokkene "når ballen er i mål" og "når ballen
+          bommer på rekkerten" for å lage et spill. Se hvor mange poeng du greier
+          å få før motstanderen din får to poeng!
+        bounce_11_sports: Nå kan du feste blokker til "når kjør"-blokken. Du må feste
+          en ny "kast ny ball"-blokk på mer enn ett sted. Du kan også endre scenen
+          eller hastigheten på hånden og ballen for å se hvor mange poeng du kan få
+          før motstanderen skårer to poeng!
+        bounce_12_sports: 'Lag ditt eget spill! Du bestemmer: Du kan endre på alle
+          regler, blande og sette sammen ulike sporter. Vær kreativ! Når du er ferdig,
+          trykk "Fullført" for å dele spillet med vennene dine, så de kan prøve det
+          på sine telefoner!'
         bounce_1: Fest en blokk til «Når pil venstre» blokken og trykk «Kjør». Flytt
           åren ved å bruke venstre pil for å nå målet.
         bounce_2: Fest en blokk til «når pil høyre» og «når pil venstre» blokkene.
@@ -766,9 +787,14 @@
         gumball_intro: Gumball Hour of Code - introduksjon
         gumball_events: Gumball Hour of Code - hendelser
         gumball_repeat: Gumball Hour of Code - Repeter argument
-        iceage_intro: Kodetimen Istid - Introduksjon
-        iceage_events: Kodetimen Istid - Hendingar
-        iceage_repeat: Kodetimen Istid - Gjenta-kommandoer
+        iceage_intro: Kodetime med istid - introduksjon
+        iceage_events: Kodetime med istid - hendelser
+        iceage_repeat: Kodetimen med istid - gjentagelser
+        mc_2016_intro: Minecraft Kodetimen - Introduksjon
+        mc_2016_loops: Minecraft Kodetimen - Løkker
+        mc_2016_events: Minecraft Kodetimen - Hendelser
+        mc_2016_spawn: Minecraft Kodetimen - Sett ut
+        mc_2016_congrats: Minecraft Kodetimen - Gratulerer!
     callout:
       text:
         drag_blocks: Dra en "flytt" blokk og fest den under den andre blokken

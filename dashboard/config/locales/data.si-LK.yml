@@ -59,13 +59,13 @@
           යන්න උදව් කිරීම සඳහා, "ඉදිරියට චලනය වන්න" බ්ලොක්ස් දෙක තුනක් එකට එකතු කරලා
           "ක්‍රියාත්මක කරන්න" බොත්තම ඔබන්න. '
         maze_2_1: "මේ ඌරා මගේ කේන්ති අවුස්සනවා. මට උදව් කරන්න ඔහුව හොයා ගන්න!"
-        maze_2_2_5: "මෝඩ ඌරු වෙත යාමට මාර්ගය මාර්ගය ලකුණු කර මා හට මග පෙන්නවන්න. TNT
-          වලින් වැළකී සිටින්න නැතහොත් පිහාටු පියාසර කරනු ඇත!"
-        maze_2_3: '"green evilness" වෙත යාමට මා හට මග පෙන්වන්න! (TNT මගින් ප්‍රවේසම්වන්න)'
+        maze_2_2_5: "මෝඩ ඌරා වෙත යාමට මාර්ගය ලකුණු කර මා හට මග පෙන්නවන්න. TNT මගහරින්න,
+          නැතහොත් ඔබට තුවාල වෙයි!"
+        maze_2_3: "ඌරන් වෙත යාමට මා හට මග පෙන්වන්න! (TNT වලින් ප්‍රවේසම්වන්න)"
         maze_2_4: "නරක ඌරා සොයා ගැනීමට මා හට උදව් කරන්න. එහෙම නැති උනොත් මට කේන්ති
           යාවි!"
-        maze_2_5: "බ්ලොක්ස් 2 මගින් මෙහි සිටින මෝඩ ඌරා සොයා ගැනීමට මාර්ගයක් ඇත. ඔබට
-          එය සොයා ගත හැකිද?"
+        maze_2_5: "බ්ලොක්ස් 2ක් පමණක් යොදාගෙන මෙහි සිටින මෝඩ ඌරා ලඟට යාමට මාර්ගයක්
+          ඇත. ඔබට එය සොයා ගත හැකිද?"
         maze_2_6: "බ්ලොක්ස් 3ක් මගින් කොළ පැහැති හොරෙන් ඇතුල් වූ පුද්ගලයා වෙත මා රැගෙන
           යාමට උත්සහ කරන්න."
         maze_2_7: අඩුම බ්ලොක්ස් ගණනක් භාවිතා කර මෙම නරක ඌරා නෙරපා හැරීමට මා හට උදව්
@@ -75,35 +75,35 @@
           මේ කොටස් 3 අළු "repeat" කොටස ඇතුළට දන්න.
         maze_2_9: හරි, උත්සහකරන්න අලුත් "repeat until" කොටස - මම වදකාර ඌරා ගාවට යනකම්
           එය නැවත නැවත කරනවා.
-        maze_2_10: "හරි, පුහුණු වෙන්න දෙන අන්තිම අවස්ථාව -ඔබට පුලුවන්ද කොටස් 4 කින්
-          පමණක් විසදන්න?"
-        maze_2_11: "අනේ, මම zombie යෙක්. මට බඩගිනි. මට සූරියකාන්ත මල ගාවට යන්නම ඕන
-          කොටු 5 කින් විතරක්?"
-        maze_2_12: "හරි, මේක එකවගෙමයි එත් තරමක් වෙනස්. ඔබට පුලුවන්ද නැවත කොටස් 5 කින්
-          පමණක් මෙය කරන්න?"
+        maze_2_10: "හරි, පුහුණු වෙන්න දෙන අන්තිම අවස්ථාව -ඔබට පුලුවන්ද මෙය බ්ලොක්
+          4 කින් පමණක් විසදන්න?"
+        maze_2_11: "අනේ, මම zombie යෙක්. මට බඩගිනි. මට සූරියකාන්ත මල ගාවට යන්නම ඕන.
+          බ්ලොක් 5ක් විතරක් යොදාගෙන මව එතනට ගෙනියන්න පුළුවන්ද?"
+        maze_2_12: "හරි, මේක එකවගෙමයි එත් තරමක් වෙනස්. ඔබට පුලුවන්ද නැවත බ්ලොක් 5
+          කින් පමණක් මෙය කරන්න?"
         maze_2_13: 'නව "if" බ්ලොක් එකක් භාවිතා කර මට හැරෙන වෙලාව තීරණය කිරීමට උපදෙස්
-          දෙන්න. ඉඟිය: ඔබට අවශ්‍ය තවත් එක් block එකක් පමණයි, නමුත් මීළඟ අවස්ථාවේ එය
-          තනිවම කරගැනීමට එය සකසන ආකාරය ඉගෙන ගන්න.'
+          දෙන්න. ඉඟිය: ඔබට අවශ්‍ය තවත් එක් බ්ලොක් එකක් පමණයි, නමුත් මීළඟ අවස්ථාවේ
+          එය තනිවම කරගැනීමට එය සකසන ආකාරය ඉගෙන ගන්න.'
         maze_2_14: "හරි, මේ ප්‍රේහෙලිකවත් අන්තිම ප්‍රේහෙලිකාව වගේමයි, ඒ වුනත් ඔබ මතක
-          තබා ගත යුතුයි if block \nඑකයි report block එකයි දෙකම භාවිතා කරන්නේ කොහොමද
+          තබා ගත යුතුයි if බ්ලොක් එකයි report බ්ලොක් එකයි දෙකම භාවිතා කරන්නේ කොහොමද
           කියලා."
-        maze_2_15: "මට ඕන සුරියකාන්ත මලක්! if block භාවිත කරලා අඩුම කොටස් ගණනකින්
+        maze_2_15: "මට ඕන සුරියකාන්ත මලක්! if බ්ලොක් එකක් භාවිත කරලා අඩුම බ්ලොක් ගණනකින්
           මාව එතනට ගෙනියන්න."
         maze_2_16: "හරි.අපි අයෙත් වරක් මේ අභ්‍යාසය කරමු - මෙය ගොඩක් අමාරු නෑ නමුත්
           \ chompers ලාගෙන් ප්‍රවේශම් වෙන්න."
         maze_2_17: '"If-else" බ්ලොක් එක මගින් කොන්දේසියක් පරික්ෂා කරයි, ඊට පසු එම
-          කොන්දේසිය මත පදනම් වී යම් කිසි දෙයක් හෝ ඊට වෙනස් දෙයක් සිදු කරයි. මෙම නව
+          කොන්දේසිය මත පදනම් වී යම් කිසි දෙයක් හෝ ඊට වෙනස් දෙයක් සිදු කරයි. මෙම අලුත්
           බ්ලොක් එක භාවිතා කරමින් මාව සූරීයකාන්ත මල වෙතට ගෙනියන්න.'
         maze_2_18: '"if-else" බ්ලොක් එක තව වරක් පුහුණු වෙමු, ඔබට එය පළමු වරම නිවැරදිව
           කළ හැකිද?'
-        maze_2_19: "ගොඩක් සංකීර්ණ වංකගිරියක් මට විසඳන්න ඔයාට පුලුවන්ද බ්ලොක්ස් 3ක්
-          එකතු කරන්න? ඔයා ඒක හරියටම කළොත් මට දිග ප්‍රශ්නයක් නැතුව ඕනෙම වක්‍රාකාර මාර්ගයක
-          ගමන් කරන්න පුළුවන්."
+        maze_2_19: "ඔයාට පුළුවන්ද බ්ලොක් 3ක් විතරක් එකතු කරලා මට වඩාත් සංකීර්ණ වංකගිරියක්
+          විසඳන්න උදව් කරන්න? ඔයා ඒක හරියට කළොත් මට ඕනිම දිගක් තියෙන වක්‍රාකාර පාරක
+          යන්න පුළුවන්."
         turtle_1_1: "ආයුබෝවන්, මම චිත්‍ර ශිල්පියෙක්. මට ඕනම දෙයක් ඇඳීමට හැකි වන ලෙස,
           පරිගණක කේතයක් ලිවීමට ඔබට පුළුවන්. බ්ලොක් කිහිපයක් භාවිතා කර, ඡායාරූපයේ අළු
           පැහැති රේඛා උඩින් ඇඳීමට මාව යොමු කරන්න."
         turtle_1_2: 'දැන් සමචතුරසයක් අදින්න. සටහන: ප්‍රියතම වර්ණය තේරීම සදහා "set
-          color" කොටස තෝරන්න.'
+          color" බ්ලොක් එක තෝරන්න.'
         turtle_1_3: "බ්ලොක් 3ක් භාවිතා කර සමචතුරස්‍රයක් නිර්මාණය කරන්න."
         turtle_1_4: 'සැම අවස්ථාවකම වෙනස් වර්ණයක් ලබාදෙන "random color" විකල්පය භාවිතා
           කර, පැති වලට එකිනෙකට වෙනස් වර්ණ යොදාගනිමින් ත්‍රිකෝණයක් නිර්මාණය කරන්න.
@@ -157,8 +157,8 @@
           the "remove" block to remove it.
         maze_karel_1_2: ඊලඟට "fill" කොටස භාවිතා කරලා හිඩැස ළඟට මාව ගෙනියලා කුණු සවල්
           2ක් ගහන්න.
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls
-          to remove using as few blocks as possible.
+        maze_karel_1_3: "මාව කුණු ගොඩ ළඟට අරගෙන යන්න. කුණු ගොඩ අයින් කරන්න සවල් කීයක්
+          ගන්න ඕනේද කියලා කියන්න. හැබැයි කොටස් අවම ප්‍රමාණයකින්."
         maze_karel_1_4: "ඔයාට මට උදව් කරන්න පුලුවන්ද ඔක්කොම කුණු ටික අයින් කරලා දාන්න?
           උදව්වක්: පුලුවන්නම් repeat කොටස් භාවිතා කරන්න."
         maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt.
@@ -192,8 +192,8 @@
         turtle_2_4: 'Now we''re going to get fancy. Change the code to draw 36 squares,
           100 pixels wide, and each 10 degrees apart. Hint: you may want to use the
           slider to make me go faster.'
-        turtle_2_5: Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll
-          need to use the "draw a square" function five times.
+        turtle_2_5: 50, 60, 70, 80, 90 පික්සල් දිගවලින් යුතු සමචතුරශ්‍ර "draw a square"
+          ශ්‍රිතය භාවිතයෙන් නිර්මාණය කරන්න.
         turtle_2_6: 'Ok, this program will use a counter, to draw the same squares
           as last time. You want the square to be the same size as the counter, so
           use the "counter" block. Hint: It''s in the Variables category.'
@@ -219,10 +219,10 @@
         maze_karel_2_3: Use the new "fill 5" function block to make me fill in all
           the holes. You'll have to drag out the "fill 5" block out from the Functions
           category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use
-          it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile,
-          and use it to help me level out all the piles.
+        maze_karel_2_4: "කුණු ගොඩෙන් සවල් 7ක් අයින් කරන්න පුලුවන් ශ්‍රිතයක් ලියන්න.
+          ඊළඟට කුණු ඔක්කොම අයින් කරන්න පුලුවන් වැඩසටහනක් හදන්න."
+        maze_karel_2_5: "කුණු ගොඩෙන් සවල් 6ක් අයින් කරන්න පුලුවන් ශ්‍රිතයක් ලියන්න.
+          එතකොට මට පුලුවන් කුණු ගොඩ මට්ටම් කරන්න."
         maze_karel_2_6: '"fill 8" සහ "remove 8" වන අලුත් ශ්‍රිත 2ක් භාවිත කරන්න. කුණු
           ගොඩ මට්ටම් කර හිඩැස පිරවීමට මට උදව් කරන්න.'
         maze_karel_2_7: "ඔන්න මගේ කුඹුරට හරකෙක් ඇවිත්! දැන් අලුත් ශ්‍රිතයක් හදන්න
@@ -308,10 +308,10 @@
         bounce_5_basketball: We're going to send a ball flying down towards the hand.
           Attach a block to the "when ball hits hand" block to ensure the ball reaches
           the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
+        bounce_6_basketball: ඔන්න දැන් කොඩිය මුදුනෙම තියෙන්නේ. ඔයාට ප්‍රහේලිකාව විසඳන්න
+          නම් "when ball hits" කොටස් දෙකටම තව කොටස් එකතු කරන්න වෙනවා.
+        bounce_7_basketball: සෑම "when" කොටසක් සඳහාම කොටස් සවි කරන්න. බෝලය කොඩියේ
+          වැදෙන තුරු පන්නවන්න.
         bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
           and "score opponent point" blocks to the "when ball in goal" and "when ball
           misses hand" blocks to make a game. See how many points you can score before
@@ -323,6 +323,27 @@
         bounce_12_basketball: Create your own Basketball game. You can change all
           the rules. When you're done, click Finish to let friends try your game on
           their phones.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: ඔන්න දැන් කොඩිය මුදුනෙම තියෙන්නේ. ඔයාට ප්‍රහේලිකාව විසඳන්න
+          නම් "when ball hits" කොටස් දෙකටම තව කොටස් එකතු කරන්න වෙනවා.
+        bounce_7_sports: සෑම "when" කොටසක් සඳහාම කොටස් සවි කරන්න. බෝලය කොඩියේ වැදෙන
+          තුරු පන්නවන්න.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice!
+        bounce_11_sports: You can now attach blocks to the "when run" block. You have
+          to attach the new "throw new ball" block in more than one place. Also, try
+          changing the scene or the speed of the hand and the ball and see how many
+          points you can score before your opponent scores twice!
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
           the paddle using the left arrow to reach the finish target.
         bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
@@ -421,8 +442,8 @@
           පූසා ළඟට ගියාට පස්සේ පූසා "හෙලෝ" කියලා කියන්න ඕනේ.
         studio_c2_5: "වැඩසටහන පටන්ගත් වහාම බූවල්ලා හෙලෝ කියලා කිය යුතුයි. ඔබට මෙය
           සෑදිය හැකිද?"
-        studio_c2_6: Can you write a program to make Waddles move around using the
-          up / down / left /right keys to hit all of the targets?
+        studio_c2_6: "ඔයාට පුලුවන්ද කීබෝඩ් එකේ බොත්තම් භාවිතා කරලා ඌරාට ඔක්කොම ඉලක්ක
+          සම්පූර්ණ කරන්න පුලුවන් වැඩසටහනක් ලියන්න?"
         studio_c2_7: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
         studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
@@ -445,8 +466,8 @@
           ෆෝන් වල ඔයාගෙ කතාව බලන්න Finish ක්ලික් කරන්න."
         studio_c3_game_1: "වැඩසටහන පටන්ගත් වහාම බූවල්ලා හෙලෝ කියලා කිය යුතුයි. ඔබට
           මෙය සෑදිය හැකිද?"
-        studio_c3_game_2: Can you write a program to make Waddles move around using
-          the up / down / left /right keys to hit all of the targets?
+        studio_c3_game_2: "ඔයාට පුලුවන්ද කීබෝඩ් එකේ බොත්තම් භාවිතා කරලා ඌරාට ඔක්කොම
+          ඉලක්ක සම්පූර්ණ කරන්න පුලුවන් වැඩසටහනක් ලියන්න?"
         studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to move this dinosaur up and down repeatedly?
         studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
@@ -495,8 +516,8 @@
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
+        studio_iceage_click_hello: "ඔයාට පුලුවන්ද සිඩ් ලව්වා එයාව ක්ලික් කරහම එයාගේ
+          යාලුවන්ට කතා කරවන්න? Run කරාට පස්සේ එයාව ක්ලික් කරන්න අමතක කරන්න එපා."
         studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
           around by attaching the "move" block to each of the events and changing
           the direction to work for each arrow key. When you’re done, click Run and
@@ -513,9 +534,9 @@
           that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
           hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
           with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
+        studio_iceage_free_play: "ඔයාගෙම ගේම් එකක් හෝ කතාවක් හදන්න. හදලා ඉවරවුණහම
+          කියන Finish එක කිලික් කරන්න. එතකොට ඔයාගේ යාලුවන්ටත් ඒගොල්ලන්ගේ ෆෝන් වල ටැබලට්
+          වල හෝ පරිගණක වල ඒක ගහන්න පුලුවන්!"
         studio_gumball_hello1: Anais wants to make some new friends. Can you help
           her say "hello" by dragging the "say" block out into the work area and typing
           the word "hello" inside?
@@ -564,11 +585,12 @@
         studio_k1_5: "ඔබට බුවල්ලා සතුටට පත්වන සේ බෝලොක් එකක් එකතු කල හැකිද?"
         studio_k1_6: "ඔබේම කතාවක් නිර්මාණය කරගන්න! බල්ලා සහ පුසා එහා මෙහා කර, ඔවුන්
           කුමක් හෝ කියන ආකාරයට සකසන්න."
-        maze_wordsearch_k_1: EAST වචනය උච්චාරණය කිරීමට හැකි වනසේ මාව චලනය කරන්න
-        maze_wordsearch_k_2: SOUTH වචනය උච්චාරණය කිරීමට හැකි වනසේ මාව චලනය කරන්න
-        maze_wordsearch_k_3: WEST වචනය උච්චාරණය කිරීමට හැකි වනසේ මාව චලනය කරන්න
-        maze_wordsearch_k_4: NORTH වචනය උච්චාරණය කිරීමට හැකි වනසේ මාව චලනය කරන්න
-        maze_wordsearch_k_6: JUMP වචනය කිවීමට මාව නැගෙනහිරට හරවා පසුව දකුණට හරවන්න
+        maze_wordsearch_k_1: EAST යන වචනය ලියැවෙන සේ මාව චලනය කරන්න
+        maze_wordsearch_k_2: SOUTH යන වචනය ලියැවෙන සේ මාව චලනය කරන්න
+        maze_wordsearch_k_3: WEST යන වචනය ලියැවෙන සේ මාව චලනය කරන්න
+        maze_wordsearch_k_4: NORTH යන වචනය ලියැවෙන සේ මාව චලනය කරන්න
+        maze_wordsearch_k_6: JUMP යන වචනය ලියැවෙන සේ මාව නැගෙනහිරට හරවා පසුව දකුණට
+          හරවන්න
         maze_wordsearch_k_9: "මුලින්ම එක පාරක යන්න. ඊට පස්සේ තව පාරක ගිහින් කියන CODE
           වචනය කියලා පෙන්වන්න"
         maze_wordsearch_k_13: "මුලින්ම එක පාරක යන්න. ඊට පස්සේ තව පාරක ගිහින් DEBUG
@@ -786,6 +808,11 @@
         iceage_intro: "අයිස් ඒජ් Hour of Code - හැදින්වීම"
         iceage_events: Ice Age Hour of Code වැඩසටහන - සිද්ධිය
         iceage_repeat: Ice Age Hour of Code වැඩසටහන - නැවත සිදු වෙන ප්‍රකාශන
+        mc_2016_intro: Minecraft Hour of Code - හැඳින්වීම
+        mc_2016_loops: Minecraft Hour of Code - ලූප
+        mc_2016_events: Minecraft Hour of Code - වැඩසටහන්
+        mc_2016_spawn: Minecraft Hour of Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - සුභ පැතුම්
     callout:
       text:
         drag_blocks: '"move" කොටසක් අරගෙන අනික් කොටසේ යටට හයි කරන්න'
@@ -797,8 +824,8 @@
         instructions_repeat_explanation: "එක් එක් ප්‍රහේලිකාව සදහා උපදෙස් මෙහි පුනරාවර්ත
           කර ඇත"
         category_explanation: "ඔබ සතුව ඇත්තේ එකම කොටස් කැබැලි වුණත් ඒවා වර්ග කර ඇත"
-        set_sprite_image: Attach a "set actor to image" block to the "when story starts"
-          block to enable an actor for this story
+        set_sprite_image: මෙම කතාවට නලුවෙකු ඇතුලත් කිරීමට "when story starts" කොටසට
+          "set actor to image" කොටසක් සවි කරන්න
         studio_say_text: "නලුවා විසින් කිව යුතු දේ උදෘත පාඨ ඇතුලත ටයිප් කරන්න"
         jigsaw_click: "මෙම කොටස ක්ලික් කරන්න!"
         move_elsa_forward: එල්සා ව ඉදිරියට ගමන් කරවීම සඳහා "When Run" කොටස යටට "Move

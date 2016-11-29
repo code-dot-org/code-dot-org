@@ -9,7 +9,7 @@
   "collectorCollectedEverything":"祝賀你 ！你已收集所有的 {count} 物件 ！",
   "collectorCollectedNothing":"繼續編寫 ！你需要收集盡可能多的物件。",
   "collectorCollectedSome":"做得好! 你已收集到{count} 物件!",
-  "collectorCollectedNotEnough":"Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
+  "collectorCollectedNotEnough":"請繼續編碼 ！您需要至少收集 {goal, plural, one {1 item} other {# items}}。",
   "collectorCollectedTooMany":"那空間不夠項目讓我來收集",
   "collectorTooManyBlocks":"你可以使用 {blockLimit} 塊。看看你的代碼，然後重試 ！",
   "continue":"繼續",

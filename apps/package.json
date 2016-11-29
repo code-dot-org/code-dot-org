@@ -188,6 +188,7 @@
   "dependencies": {
     "filesaver.js": "0.2.0",
     "jszip": "3.0.0",
+    "karma-coveralls": "^1.1.2",
     "query-string": "4.1.0"
   }
 }

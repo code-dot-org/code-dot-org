@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Zorionak! {count} elementuak bildu dituzu!",
   "collectorCollectedNothing": "Segi kodetzen! Ahal bezainbeste elementu bildu behar dituzu.",
   "collectorCollectedSome": "Lan ederra! {count} elementu jaso dituzu!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "continue": "Jarraitu",
@@ -111,6 +112,5 @@
   "word": "Bilatu hitza",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Bai",
-  "youSpelled": "Idatzi duzu",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Idatzi duzu"
 }

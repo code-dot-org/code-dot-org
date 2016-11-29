@@ -39,7 +39,7 @@
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
   next_page: Page suivante
-  next_resource: Love
+  next_resource: Ressource suivante
   done_with_module: Done with this Learning Module
   cancel: Annuler
   okay: OK
@@ -95,6 +95,15 @@
     overview: Inscrivez-vous pour suivre vos progrès ou gérer votre classe. <a href="/">Vous
       pouvez parcourir les différentes étapes et les puzzles</a> sans compte, mais
       vous devez vous inscrire pour sauvegarder votre progression et vos projets.
+    hoc_already_signed_up_heading: Commencez sans vous connecter
+    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une heure de code!
+      Vous et vos élèves n'ont pas besoin de vous connecter à Code Studio pour participer
+      à cet événement. Pour commencer, <a href="https://code.org/learn"> choisissez
+      un didacticiel </a> pour votre classe et partagez le lien avec eux. <br/> <br/>
+      Si vous avez apprécié l'heure De Code et souhaitez aller plus loin, vous pouvez
+      configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire
+      vos étudiants dans l'un de nos <a href="https://code.org/educate"> cours plus
+      longs </ a >.
     teacher_educator_guide: Consultez le guide de l'enseignant
     title: S'inscrire sur Code.org
     school_name: Nom de l'école (facultatif)
@@ -339,7 +348,7 @@
     student_teacher_disassociated: Tu as supprimé % {teacher_name} en tant que ton
       professeur.
     panel:
-      answer_viewer: Visualisation des réponses
+      answer_viewer: "Écran de l'enseignant"
       student: "Élève"
       viewing_solution: Voir la solution
       try_it_yourself: Essaie-le toi-même
@@ -350,7 +359,7 @@
       unsubmit: Ne pas envoyer
       worked_with: Travaille avec
       update_lock_settings: Actualiser les paramètres de verrouillage ici.
-      clear_response: Clear response
+      clear_response: Effacer la réponse
   user:
     email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
@@ -439,7 +448,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Pour en savoir plus
     announcement_try_now_button: Essaie maintenant
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Héberger une heure
     announcement_petition: Comme enseignant, vous ouvrez la voie à un mouvement visant
       à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
       Maintenant, il est temps de vous faire entendre par vos représentants. Cette
@@ -451,11 +460,25 @@
     announcement_all: Tenu à jour avec de nouvelles fonctionnalités et mises à jour
       sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
       les anciennes annonces.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Des milliers d’enseignants de plus de 180 pays commenceront
+      à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous
+      comptons sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant.
+      <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de
+      Code</a> pour faire savoir aux autres enseignants que n’importe qui peut commencer
+      à enseigner l'informatique.
+    announcement_hoc_scaling: 'ALERTE pour les cours 1-4 et les professeurs de cours
+      accélérés: En raison du fort trafic de millions d''élèves qui font l''heure
+      du code, <b> Code Studio n''économisera pas ni ne signalera les progrès des
+      élèves sur ces cours du 3 au 11 décembre </ b>. Nous recommandons de faire une
+      activité Hora of Code avec votre salle de classe pour célébrer l''Heure du code
+      pendant la Semaine de l''éducation en informatique. Alors que nos propres didacticiels
+      Hour of Code ne permettront pas non plus d''enregistrer des progrès cette semaine,
+      les étudiants peuvent encore faire les tutoriels complets et obtenir un certificat.'
+    announcement_mc_launch: Un de nos didacticiels les plus populaires a maintenant
+      une suite! Le tout nouveau Minecraft Hour of Code Designer permet aux étudiants
+      de faire les règles du monde Minecraft. Ils peuvent créer une expérience unique
+      de Minecraft, puis le partager avec des amis ou le jouer sur leurs téléphones.
+      Faites-le avec votre classe pour l'heure du code.
   move_students:
     new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
       saisir un nom de section différent.
@@ -632,6 +655,10 @@
     minecraft:
       title: Minecraft
       body: Explore un monde Minecraft à travers son code.
+    minecraft2016:
+      title: Minecraft
+      body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
+        version de Minecraft.
     unplugged:
       title: Leçons en mode "déconnecté"
       audience: 6 ans et plus
@@ -775,7 +802,6 @@
       Politique de confidentialité</a>
     accept: Accepter 
     print: Imprimer
-    later: Plus tard
     reminder_desc: Nous avons actualisé nos <a href="%{tos_url}" target="_blank">
       Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">
       Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les
@@ -783,18 +809,18 @@
       pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: Consulter les éléments modifiés
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'En option : Aidez-nous à évaluer les progrès de nos actions en faveur
+      de la diversité en informatique'
+    message: Veuillez renseigner votre origine (plusieurs choix possibles)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Blanc
+    - black: Noir ou afro-américain
+    - hispanic: Hispanique ou latino
+    - asian: Asiatique
+    - hawaiian: Hawaïen indigène ou autres îles du Pacifique
+    - american_indian: Indien d'Amérique ou Alaska
     - other: Autres
-    - opt_out: Prefer not to say
+    - opt_out: Préfère ne pas dire
     submit: Envoyer
     decline: Fermer
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
@@ -918,7 +944,7 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Chercher pour une icône...
+      search_placeholder_text: Recherchez pour une icône...
       no_icons_found: Aucune icône trouvée
     playzone:
       artist_description: Dessine des super images et dessins avec l'Artiste!

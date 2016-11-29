@@ -675,15 +675,13 @@ def wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
 end
 
-Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
   wait_with_short_timeout.until {
-    @child_item = @browser.find_element(:css, child)
+    @child_item = @browser.find_element(:id, child_id)
   }
-  wait_with_short_timeout.until {
-    @parent_item = @browser.find_element(:css, parent)
-  }
-  @actual_parent_item = @child_item.find_element(:xpath, "..")
-  expect(@parent_item).to eq(@actual_parent_item)
+  actual_parent_item = @child_item.find_element(:xpath, "..")
+  actual_parent_id = actual_parent_item.attribute('id')
+  expect(actual_parent_id).to eq(parent_id)
 end
 
 And(/^I set the language cookie$/) do

@@ -5,7 +5,7 @@ th-TH:
   'no': 'ไม่ใช่'
   select_language: "กรุณาเลือกภาษาของคุณ"
   upgrade_ie_message: "Code.org จะไม่สนับสนุน Internet Explorer รุ่น 8, 9 และ 10 ในเร็ว ๆ นี้ กรุณาอัพเกรดเบราเซอร์ของคุณให้ทันสมัย"
-  upgrade_ie_message_csedweek: "CSEdWeek.org will soon remove support for Internet Explorer 8, 9, and 10. Please upgrade to a modern browser."
+  upgrade_ie_message_csedweek: "Code.org จะไม่สนับสนุน Internet Explorer รุ่น 8, 9 และ 10 ในเร็ว ๆ นี้ กรุณาอัพเกรดเบราเซอร์ของคุณให้ทันสมัย."
   upgrade_ie_link: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   en: "วิทยาการคอมพิวเตอร์"
   computer_science_edweek: "สัปดาห์การศึกษาวิทยาการคอมพิวเตอร์"
@@ -25,9 +25,9 @@ th-TH:
   submit: "ส่ง"
   twentyhours_heading: "ทดลองเรียนหลักสูตรวิทยาศาสตร์คอมพิวเตอร์เบื้องต้นของเรา"
   twentyhours_text: "เรียนบทแรกของ Hour of Code แล้วใช่ไหม? เรียนรู้เพิ่มเติมเกี่ยวกับหลักสูตรวิทยาการคอมพิวเตอร์ และหลักการเขียนโปรแกรม (Programming Concepts) ได้ในหลักสูตรต่อไปนี้"
-  og_title: "เด็กทุกคนสมควรได้รับโอกาส"
+  og_title: เด็กทุกคนสมควรได้รับโอกาส
   og_description: "นักเรียนทุกคนในทุกโรงเรียนควรได้รับโอกาสศึกษาวิทยาการคอมพิวเตอร์. มันมีการเปลี่ยนแปลงทุกๆ อย่าง."
-  csedweek_og_title: "The Hour of Code is coming"
+  csedweek_og_title: "Hour of Code กำลังมา"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "เข้าร่วม <a href=\"http://hourofcode.com\">Hour of Code</a><br/> ในวันที่ 8 - 14 ธันวาคม 2014<br/>"
   hoc2014_students: "นักเรียน"
@@ -302,7 +302,7 @@ th-TH:
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
-  homepage_banner_emailprivacy_link: "Read more"
+  homepage_banner_emailprivacy_link: "อ่านเพิ่มเติม"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "สิ่งที่น่าเรียนรู้ยังมีอีก"
   homepage_slot_text_title_hoc: "ช่วงเวลาของ Code"
@@ -394,10 +394,10 @@ th-TH:
   mc_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   mc_specs: "หลายภาษา | เบราว์เซอร์ที่ทันสมัย แท็ปเล็ต | อายุ 6-106 ปี"
   minecraft_designer: "Minecraft Designer"
-  minecraft_adventurer: "Minecraft Adventurer"
+  minecraft_adventurer: "การผจญภัยใน Minecraft"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
-  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_designer_description: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft ในแบบฉบับของคุณเอง"
   minecraft_designer_button: "เริ่มต้น"
   minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
   minecraft_adventurer_button: "เริ่มต้น"
@@ -726,6 +726,7 @@ th-TH:
   dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "นี่คือ Hour of Code - 8-14 ธันวาคม!"
   code_sign_up: "ลงทะเบียนเพื่อเข้าร่วมในช่วงสัปดาห์ของวิทยาการคอมพิวเตอร์"
   host_an_hour: "Host an hour"
@@ -868,6 +869,8 @@ th-TH:
   starwarsblocks_name: "Star Wars (Blocks)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "คำนวณ"
   hoc_category_name: "ช่วงเวลาของ Code"
   csf_category_name: "CS Fundamentals"

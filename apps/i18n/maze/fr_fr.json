@@ -1,5 +1,5 @@
 {
-  "at": "at",
+  "at": "à",
   "atFlower": "à la fleur",
   "atHoneycomb": "au nid d'abeille",
   "avoidCowAndRemove": "éviter la vache et retirer 1",
@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Bravo! Tu as collecté les {count} objets!",
   "collectorCollectedNothing": "Continue le codage! Tu as besoin de collecter autant d'objets que tu peux.",
   "collectorCollectedSome": "Beau boulot! Tu as collecté les {count} objets!",
+  "collectorCollectedNotEnough": "Continuez à coder! Vous devez encore collecter {goal, plural, one {1 objet} other {# objets}}.",
   "collectorCollectedTooMany": "Cet espace ne dispose pas d'assez d'objets à collecter.",
   "collectorTooManyBlocks": "Tu peux n'utiliser que {blockLimit} blocs. Regarde à nouveau ton code et réessaye !",
   "continue": "Continuer",
@@ -25,7 +26,7 @@
   "dirW": "O",
   "doCode": "faire",
   "elseCode": "sinon",
-  "emptyCropError": "That crop is all gone.",
+  "emptyCropError": "Cette culture a totalement disparu.",
   "fill": "remplir 1",
   "fillN": "remplir {shovelfuls}",
   "fillSquare": "remplir le carré",
@@ -34,8 +35,8 @@
   "finalLevel": "Félicitations ! Tu as résolu le dernier puzzle.",
   "flowerEmptyError": "La fleur sur laquelle tu es n'a plus de nectar.",
   "get": "obtenir",
-  "has": "has",
-  "haslettuce": "there is lettuce",
+  "has": "a",
+  "haslettuce": "il y a de la laitue",
   "hascorn": "il y a du maïs",
   "haspumpkin": "il y a des citrouilles",
   "heightParameter": "hauteur",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "S'il y a un chemin dans la direction indiquée, alors effectue le premier bloc d’actions. Autrement, fais le deuxième bloc d'actions.",
   "insufficientHoney": "Tu dois produire la bonne quantité de miel.",
   "insufficientNectar": "Tu dois recueillir la bonne quantité de nectar.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "laitue",
+  "lettuceTooltip": "Récolter de la laitue",
   "make": "produire",
   "moveBackward": "reculer",
   "moveEastTooltip": "Me déplacer d’une case vers l’Est.",
@@ -111,6 +112,5 @@
   "word": "Trouver le mot",
   "wrongCropError": "Je ne peux pas récolter cette culture d’ici.",
   "yes": "Oui",
-  "youSpelled": "Tu as épelé",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Tu as épelé"
 }

@@ -486,11 +486,11 @@ si:
         'iceage_intro': 'අයිස් ඒජ් Hour of Code - හැදින්වීම'
         'iceage_events': 'Ice Age Hour of Code වැඩසටහන - සිද්ධිය'
         'iceage_repeat': 'Ice Age Hour of Code වැඩසටහන - නැවත සිදු වෙන ප්‍රකාශන'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
+        'mc_2016_intro': 'Minecraft Hour of Code - හැඳින්වීම'
+        'mc_2016_loops': 'Minecraft Hour of Code - ලූප'
+        'mc_2016_events': 'Minecraft Hour of Code - වැඩසටහන්'
         'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_congrats': 'Minecraft Hour of Code - සුභ පැතුම්'
     callout:
       text:
         drag_blocks: '"move" කොටසක් අරගෙන අනික් කොටසේ යටට හයි කරන්න'

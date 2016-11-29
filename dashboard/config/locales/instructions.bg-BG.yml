@@ -1,7 +1,7 @@
 "bg":
   data:
     instructions:
-      2-3 Artist 1 new_instruction: "Здравейте, аз съм художник. Можете да напишете
+      2-3 Artist 1 new_instruction: "Здравейте, аз съм художникът. Можете да напишете
         код, с който да ме накарате да нарисувам почти всичко. Използвайте няколко
         блока, за да довърша сивите линии в картината. (Всеки ред е дълъг 100 пиксела)"
       2-3 Artist 11_instruction: |
@@ -15,7 +15,8 @@
       2-3 Artist 2_instruction: "Тази къща има полуготова стена. Всяка страна е 100,
         но незавършената стена е само 50. Завърши стената. "
       2-3 Artist 3.4_instruction: '"Скок" блокът премества художника без да оставя
-        следа. Начертайте пунктирана линия с помощта на блоковете за скок и чертане.'
+        следа. Начертайте пунктирна линия с помощта на блоковете за скок и чертане.
+        Всяка линия е дълга 50 пиксела.'
       2-3 Artist 3_instruction: "Тази шапка е висока 100 пиксела. Начертайте шапка,
         която е 70 пиксела по-малка."
       2-3 Artist 3new_instruction: "Червената шапка е 100 пиксела висока. Завършете
@@ -563,8 +564,8 @@
         градуса. Дължината на наклонената страна(хипотенуза)  е два пъти по-голяма
         от височината, която е 100 пиксела. Завърши рисунката."
       4-5 Artist 8_instruction: "Средната линия на футболно игрище е перпендикулярна
-        на периферията. Това поле има периметър 800 пиксела и е дълго 240 пиксела.
-        Колко е широко? Начертайте границите и централната линия."
+        на периферната. Това поле има периметър 800 пиксела и е дълго 240 пиксела.
+        Колко е широко? Начертайте границите и средната линия."
       4-5 Artist 9_instruction: "Начертайте другата половина, така че дизайнът да
         е симетричен. Триъгълниците са равностранни и с дължина 50 пиксела."
       4-5 Artist Assessment 1_instruction: "Оценка: Използвайте цикъл за изчертаване
@@ -908,12 +909,13 @@
         лопати пръст с помощта на блок за запълване."
       4-5 While Loops 2_instruction: "Премести ме към купчината, за да я премахна
         с 5 лопати с помощта на блок за премахване."
-      4-5 While Loops 3_instruction: "Премести ме към купчината за да я изравня, след
-        това ме премести до ямата за да я запълня  Съвет: Използвайте по-малко блокове
-        ако е възможно."
-      4-5 While Loops 4_instruction: 'Уау, аз намерих наистина дълбока яма! Не знам
-        с колко лопати да я запълня.  Можете ли да напишете програма, която ще запълва
-        с колкото лопати е нужно?  Съвет: Опитайте се да използвате "докато" повторение.'
+      4-5 While Loops 3_instruction: |-
+        Премести ме към купчината за да я изравня, след това ме премести до ямата за да я запълня.   \r
+        \rСъвет: Използвайте по-малко блокове ако е възможно.
+      4-5 While Loops 4_instruction: "Уау, аз намерих наистина дълбока яма!  \\r\n\\rНе
+        знам с колко лопати да я запълня. \\r Можете ли да напишете програма, която
+        ще запълва с колкото лопати е нужно?  Съвет: Опитайте се да използвате \"докато\"
+        повторение?  "
       4-5 While Loops 5_instruction: "Уау, сега има две дълбоки ями! Можете ли да
         напишете програма, която да ги изпълва и двете?"
       4-5 While Loops 6_instruction: "Уау, сега там има голяма купчина! Можете ли
@@ -1527,11 +1529,9 @@
       Course 4 Artist 8_instruction: "Начертайте това слънце като повторите целия
         блок от код 12 пъти."
       Course 4 Artist 8a_instruction: "Запомнихте ли тази форма?  Сега  ще  Ви позволим
-        да я изградите без да даваме предварително блокове! \\r Съвет: има 3 триъгълника
-        в рамките на 360 градуса ротация... колко пъти 360 се дели 3?"
-      Course 4 Artist 9_instruction: "Повторете този дизайн 10 пъти и се уверете,
-        че ще се завъртате между всяка фигура, от която е съставен. Ето един съвет
-        на колко градуса трябва да се завъртате: Колко е 360 делено на 10?"
+        да я изградите без да даваме предварително блокове!"
+      Course 4 Artist 9_instruction: |
+        Повторете този дизайн 10 пъти и се уверете, че ще се завъртате между всяка фигура, от която е съставен. \r
       Course 4 Artist Binary 1_instruction: "Това е функция, която взема двоичен низ
         от 1 и 0 и възлага на художника да се движи отляво надясно и отгоре надолу,
         като попълва квадратчета, когато вижда 1 и ги прескача, когато  вижда 0. Изпълнете
@@ -1641,6 +1641,9 @@
       Course 4 Artist For Loops Challenge_instruction: "Можете ли да разберете как
         да използвате всички неща, за да се създадете това изображение? \\r \\r Трябва
         ли Ви съвет? Щракнете тук."
+      Course 4 Artist For Loops Challenge_a_instruction: "Можете ли да разберете как
+        да използвате всички неща, които сте научили, за да създадете това изображение?
+        \\r \\r Трябва ли Ви съвет? Щракнете тук."
       Course 4 Artist For Loops inspire_instruction: "Свободна игра за вдъхновение:
         Вече сте научили всичко, което трябва да знаете за да направите модел като
         този! Ако тази картина Ви вдъхновява, опитайте се да направите нещо подобно.
@@ -1759,8 +1762,9 @@
         триъгълник, променете го, така че да използва променливата "страни". Заменете
         цифрата 3 с променливата "страни". Съвет: не забравяйте да използвате "задава
         страни" блок.'
-      Course 4 Artist Vars 1_instruction: "Ще ми помогнете ли да начертая триъгълник?
-        Всяка от страните е 100 пиксела."
+      Course 4 Artist Vars 1_instruction: |-
+        Ще ми помогнете ли да начертая триъгълник?\r
+        \r Всяка от страните е 100 пиксела.
       Course 4 Artist Vars 10_instruction: |-
         Ето алгоритъм, който ще начертае триъгълник от по-малки триъгълници.
         Можеш ли да го промениш (модифицираш) така, че да използва променливата "страни", начертавайки всеки триъгълник? Прегледай кода и всеки път, когато видиш числото 3, замени го с променливата "страни". Не забравяй да използваш блокчето "задай страни".
@@ -1809,8 +1813,10 @@
       Course 4 Artist Vars 9_instruction: Променете алгоритъма, така че да използва
         променливата "страни" вместо статично число за начертаване на триъгълник.
         Заместете числото 3 със "страни" и използвайте блока "задай страните".
-      Course 4 Bee 1_instruction: "Пчелата не може да прецени дали това е цвете или
-        медена пита. Провери първо дали е цвете или пита, и вземи нектар, ако е цвете. "
+      Course 4 Bee 1_instruction: |-
+        Пчелата не може да прецени дали това е цвете или медена пита. \r
+        \rПровери първо дали е цвете или пита.\r
+        \r Вземи нектар, ако е цвете.
       Course 4 Bee 2_instruction: Използвайте "Ако/иначе" блок, за да проверите всеки
         обект, за да видите дали това е цвете или медена пита. Ако е цвете, съберете
         нектар... в противен случай, направете мед!
@@ -2115,11 +2121,12 @@
         \r Всеки от тях ще се движи, "брояч" стъпки за време, но техните броячи ще
         имат различни стойности поради "за" циклите.  \r \r Можете ли да промените
         нарастването в някой от циклите, така че състезанието завърши с равенство?
-      Course 4 Playlab For Loops 5b_instruction: Настроите интервала на тези "за"
+      Course 4 Playlab For Loops 5b_instruction: Настройте интервала на тези "за"
         цикли, така че двата героя да спират накрая на едно и също място.
-      Course 4 Playlab For Loops 6b_instruction: 'Редактирай на този "за" цикъл, за
-        да създадеш игра, която ще е забавно да играеш! \r \r Натисни "Старт" и щракни
-        върху Мадам еднорог четири пъти, за да спечелиш. '
+      Course 4 Playlab For Loops 6b_instruction: 'Редактирай този "за" цикъл, за да
+        създадеш игра, която ще е забавно да играеш! \r \r Натисни "Старт" и щракни
+        върху Мадам еднорог колкото пъти можеш. Можеш ли да биеш нашия резултат от
+        24 точки? '
       Course 4 SCF 1_instruction: "Използвайте предложените функции, за да начертаете
         четири реда от шестоъгълници. Забележете как нашите дори номерирани редове
         са изместени надясно?"
@@ -2293,6 +2300,141 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseD_artist_nestedLoops1_instruction: |-
+        Draw a triangle to kickstart this
+        stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120 degrees
+        for each exterior angle.)
+      courseD_artist_nestedLoops10_instruction: |-
+        Take the triangles from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1a_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops2_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops3_instruction: |-
+        Use what you've learned to draw
+        the last row of windows for this building.\r
+        \r
+        The windows are 20 pixels
+        long and 20 pixels apart.
+      courseD_artist_nestedLoops4_instruction: |
+        Great!  Do the same thing with these
+        circles.\r
+      courseD_artist_nestedLoops5_instruction: |-
+        What happens if you also turn 90
+        degrees between circles?
+      courseD_artist_nestedLoops6_instruction: |-
+        Edit blocks within your existing
+        code to make this image.
+      courseD_artist_nestedLoops7_instruction: |
+        Use what you've learned to make
+        this drawing.\r
+      courseD_artist_nestedLoops8_instruction: |-
+        Using what you have learned in the
+        last couple of puzzles, build this image from the beginning.
+      courseD_artist_nestedLoops9_instruction: |-
+        **Challenge:** Can you figure out
+        how to make a picture like this?
+      courseD_artist_nestedLoopsFP_instruction: |-
+        Now it's your turn.  Take the skills
+        you have learned and make something that you love!
+      courseD_artist_nestedLoopsPre1_instruction: |-
+        Create a triangle to kickstart
+        this stage.
+      courseD_maze_until1_instruction: Get the angry bird to the pig.
+      courseD_maze_until2_instruction: |-
+        Now, use the `repeat until` loop to do the
+        same thing without specifying how many times to move forward and turn.
+      courseD_maze_until3_instruction: Get the bird to the pig.
+      courseE_farmer_functions1_instruction: |-
+        Help the farmer get to the pumpkin
+        and pick it.
+      courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
+        \ Use `if` statements to write the code to check and harvest each one.   "
+      courseE_farmer_functions10b_instruction: |-
+        Figure out which function to use
+        and which one to delete, then solve this puzzle!
+      courseE_farmer_functions1a_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions2_instruction: |-
+        Now, there will be a different number
+        of pumpkins each time you run the program.   \r
+        \r
+        Use the `while` block
+        to pick only as many pumpkins as you need.
+      courseE_farmer_functions2a_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2aALT_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2b_instruction: |-
+        Help the farmer pick the corn, lettuce,
+        and pumpkin.
+      courseE_farmer_functions3_instruction: |-
+        What happens when the paths to the
+        pumpkins are all different lengths?   \r
+        \r
+        Get them all with as few blocks
+        as possible.
+      courseE_farmer_functions3b_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions3c_instruction: |-
+        Let's make this easier by building
+        a function to check for produce and pick it when it is available.  Make sure
+        you call your function from inside the `while path ahead` loops.
+      courseE_farmer_functions4_instruction: |-
+        Great!  Now you have code that will
+        work to get pumpkins from any size path.\r
+        \r
+        Let's drag that code into
+        a function so we can use it in lots of ways...but first use it to solve this
+        puzzle again.
+      courseE_farmer_functions4b_instruction: |-
+        Now use your new function to solve
+        this puzzle.
+      courseE_farmer_functions5_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5a_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5b_instruction: |-
+        The crops are now growing in clusters.  Add
+        some new `while` loops to your function to make sure you get all of the produce.
+      courseE_farmer_functions6_instruction: |-
+        *"Lettuce try something new!"*\r
+        \r
+        Here's
+        some code to collect all of the lettuce.  Move it into a function so we can
+        use it later.
+      courseE_farmer_functions6b_instruction: Pick all of the produce.
+      courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
+      courseE_farmer_functions7b_instruction: |-
+        Make a second function that lets the
+        farmer get all of the produce down a path, then brings her back to where she
+        began.
+      courseE_farmer_functions8_instruction: |-
+        **Challenge:**  Solve this puzzle with
+        as few blocks as possible.
+      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
+        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_playLab_exampleProject2_instruction: |-
+        Here's all of your code to choose
+        a card - try adding some other fun features!
+      courseE_video_createFunctions_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.
         \ Try\nediting the variable in other ways.  "
       courseF_artist_variables_2_instruction: |
@@ -2683,6 +2825,22 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
+      CSPU5_basic if - check driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - DIY secret number_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - voting examle_instruction: |-
+        Use console.log to print out the
+        different boolean expressions below to see what information they return. (Click
+        to see full instructions)
+      CSPU5_basic if-else - driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
       CSPU5_clickerGame_v1_template_instruction: |-
         Create your own "Chaser App".
         (Click to see full instructions)
@@ -3746,10 +3904,10 @@
       frozen freeplay_instruction: "Вие официално сте главен художник! Създайте зимна
         приказка и я споделете с приятелите си."
       frozen line_instruction: "Здравейте! Аз съм Елза от Арендейл. Помогнете ми да
-        създам отсечка."
+        начертая права линия."
       frozen perpendicular_instruction: "Сега, нека да видим дали можем да създадем
-        две линии, които образуват 90 градуса ъгъл помежду си. Ще трябва да използвате
-        блок за завъртане, както и на блок за преместване."
+        две прави, които образуват 90 градуса ъгъл помежду си. Ще трябва да използвате
+        блок за завъртане, както и блок за преместване."
       frozen snowflake branch_instruction: Нека да използваме "създаване клонче на
         снежинка" блока, за да създадем три клончета, които започват да изглеждат
         като снежинка.
@@ -3816,7 +3974,7 @@
         Help the artist draw a line 7 times to make
         a garden wall.
       grade1_artist_loops3_instruction: "Now we need to get the soil ready to plant.\nFind
-        the bugs and help the artist prepare the ground. "
+        the bugs in the code and help the artist prepare the ground. "
       grade1_artist_loops4_instruction: |-
         Time to fix the stairs!  Repeat this pattern
         five times so the artist can reach the top of the bushes.
@@ -3836,8 +3994,8 @@
         Time to head home. Can you fix this ladder
         to help the artist get down?
       grade1_artist_loops8_instruction: |-
-        Let's take the short way over the pond.
-        Can you help the artist stay on the stones?
+        Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?
       grade1_artist_loops9_instruction: I still need a story for this puzzle
       grade1_artist_loopsFP_instruction: |-
         Use what you have learned to draw a picture
@@ -4009,7 +4167,8 @@
         \r
         Draw this
         diamond with 200 pixel sides.
-      grade2_MakeDogTag_6_instruction: "Свободна игра! Начертайте каквото искате."
+      grade2_MakeDogTag_6_instruction: "Предизвикателство: Този етикет е специален!
+        \ Може ли да разберете как да нарисувате очертанията?"
       grade2_MakeDogTag_7_instruction: |-
         One more tag.  This is a triangle for Pi.\r
         (Each
@@ -4426,47 +4585,57 @@
       grade3_playLab_buildGame_final2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
+      grade3_robotFarmer_ConditionalsIntro4_instruction: |-
+        Help the farmer remove
+        this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_1_instruction: |-
-        Hi, I'm a farmer. I need
-        your help to flatten the field on my farm so it's ready for planting. Move
-        me to the pile of dirt and use the "remove" block to remove it.
+        *"Hi, I'm a farmer.
+        I need your help to flatten the field on my farm so it's ready for planting!"*  \r
+        \r
+        Move
+        to the pile of dirt and use the `remove` block to remove it.
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
         and if there is a pile, remove it
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_11_instruction: |-
         It's still dark outside.
         Move me along the field. If there is a pile, remove it, and if there is a
         hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_2_instruction: |-
-        Next, move me to the hole
-        and fill it with TWO shovelfuls of dirt, using the "fill" block.
+        Next, move to the hole
+        and fill it with six shovelfuls of dirt, using the `fill` block.
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
-        Move me to the pile of
-        dirt and tell me how many shovelfuls to remove using as few blocks as possible.
+        *"Move to the pile of
+        dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
       grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
-        Can you help me remove
-        all four piles of dirt? Hint: use a repeat block if you can.
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: |-
-        Help me fill in all these
-        holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside
-        the "while" block.
+        *"I don't know how much
+        dirt is in this pile!"*\r
+        \r
+        Help the farmer remove this entire pile using
+        a `while` loop.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
+        dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: |-
         Remove all the piles of
         dirt, using as few blocks as possible. The new options in the dropdown menu
         on the "while" block tell me if I'm standing on a pile or a hole.
       grade3_robotFarmer_ConditionalsIntro_7_instruction: |-
-        Wow, I found a really
-        deep hole! I don't know how many shovelfuls of dirt it needs. Can you write
-        a program that fills it until the ground is even?
+        Look at all of those holes!  Each
+        one needs a different amount of dirt.   \r
+        \r
+        You can use the `while` loop
+        to easily fill them all!
       grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
-        Help me fill in the hole
-        at the end of the field, using as few blocks as possible.
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: |-
-        Make me remove all these
-        piles of dirt. Try to use as few blocks as possible. Hint: try using a "while"
-        block.
+        Fill in the hole at the
+        end of each of these paths.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all\nof
+        these holes using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: |-
         Help me fill
         in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat"
@@ -4477,58 +4646,32 @@
         don't have all the options I used to have on the while block. Move me along
         the field, and if there is a pile, remove it
       grade3_RunningFarm_1_instruction: |-
-        (Notes for Review) Since the last stage
-        taught the 'repeat until' block, the purpose of this is most likely to teach
-        the 'repeat while' block. In the context of the levels already created,
-        I think using the 'repeat' and 'if' blocks could be possible,  (ex. if
-        the crops weren't spread as evenly on the field so the farmer would have
-        to test for wheat present before collecting it). A Repeat While block would
-        be more applicable if there were multiple wheat/potatoes in each square, which
-        might be a possible change.\r
-        \r
-        Grant Notes: for the coins, 1=0 and 2=1
-        (I couldn't get the coins to show up with a value of 0). The wheat should
-        grow at random intervals. For the graphic, think about the Minecraft way of
-        growing wheat (green, has multiple heights showing growth, then yellow for
-        ripe).
+        Use conditionals to make sure that you pick
+        all of the corn, but don't disturb the stalks where nothing is growing yet.
       grade3_RunningFarm_10_instruction: |-
-        This is another debugging to make sure
-        the students understand the difference between the IF block and While loop.
-        Start off all crops as ripe with at least 1 item, with growth after Run.
-      grade3_RunningFarm_2_instruction: |
-        NOTES: have wheat and potatoes interspersed
-        throughout the row. Potatoes should be fully grown, with some randomly showing
-        more than 1 potato per spot. This is different from the previous puzzle because
-        students will have to use the drop down menu on the IF block to select potatoes
-        instead of harvesting wheat.\r
-        \r
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_11a_instruction: |-
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_2_instruction: |-
+        Help the farmer collect both corn and lettuce
+        from the field.
       grade3_RunningFarm_3_instruction: |-
-        This will look essentially the same as the
-        previous puzzle. There should be two crops randomly planted in the row. Each
-        plant should start at a random growth stage and grow when the user runs their
-        algorithm. Students are using the while loop and hopefully understand that
-        it's better at picking all the crops of one type.
+        *"Corn, lettuce, AND pumpkins! Help me
+        harvest them all."*
       grade3_RunningFarm_4_instruction: |-
-        Since students started this course using
-        events, we wanted to include them into this culminating stage. We will only
-        use them in a few stages then move on. This puzzle should randomly populate
-        the entire column with wheat and potatoes. The puzzle should also start with
-        the following event blocks: up arrow, down arrow, and space bar. Attached
-        to the space bar should be a collect block.
+        Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch.
       grade3_RunningFarm_5_instruction: |-
-        This puzzle should randomly populate the
-        entire row with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, and space bar. Can we check
-        to make sure students are using while loop?
+        This field has clusters of corn, lettuce,
+        and pumpkins all growing together.  Can you collect them all?
       grade3_RunningFarm_6_instruction: |-
-        This puzzle should randomly populate the
-        entire field with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, left arrow, right arrow, and
-        space bar. Can we check to make sure students are using while loop?
+        Can you figure out how to pick the pumpkin?  Make
+        sure to collect all of the corn along the way!
       grade3_RunningFarm_7_instruction: |-
-        Have wheat and potatoes planted randomly
-        at various growth stages. I just wanted a quick debugging puzzles in here
-        to transition away from events
+        **Challenge:** Collect all of the corn and
+        lettuce, then pick the pumpkin.
       grade3_RunningFarm_8_instruction: |-
         Have wheat and potatoes planted randomly
         at various growth stages. Now we introduce multiple while loops (stacked)
@@ -4617,23 +4760,21 @@
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
       grade4_artist_functions_stars0_instruction: |-
-        We will come back to functions
-        shortly. Let's take a break to practice making this star. You can make this
-        drawing by adding a turn and a repeat block.
+        You can make this drawing by adding
+        a repeat block.
       grade4_artist_functions_stars1_instruction: |-
         Now that you can draw a star,
         try drawing four stars!
       grade4_artist_functions_stars2_instruction: |-
-        When is drawing three stars harder
-        than drawing four? When you also have to jump over the moon!
+        Draw only those three stars to
+        finish this puzzle.
       grade4_artist_functions_stars3_instruction: |-
         That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade4_artist_functions_windows0_instruction: |-
-        You are doing great! Do you
-        remember when you used nested loops to draw a pinwheel shape out of triangles?
-        Let's try using that same algorithm to make a window!
+        Make this window by drawing
+        a square, then turning 90 degrees before drawing another, and so on.
       grade4_artist_functions_windows1_instruction: |-
         If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
@@ -4789,12 +4930,12 @@
         help me remove this pile of dirt and fill this hole.
       grade4_bee_functions1_instruction: "Съберете всичкия нектар от всяко цвете."
       grade4_bee_functions10_instruction: |-
-        Assessment: Use the given function to
-        collect nectar from each flower.
+        Create a function to collect all of the
+        nectar from each flower.
       grade4_bee_functions11_instruction: |-
-        Assessment: Create a function to turn,
-        move forward and make 3 honey, then return the bee to where it started and
-        turn back.
+        Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back.
       grade4_bee_functions2_instruction: Функциите са блокове с код, които изпълняват
         задача. Използвайте функцията "вземи 2 нектар", за събиране на нектар от всяко
         цвете.
@@ -4807,7 +4948,7 @@
       grade4_bee_functions5_instruction: This puzzle will be deleted!
       grade4_bee_functions6_instruction: |-
         Now write the function to collect nectar
-        from the three flowers.
+        from the flowers.
       grade4_bee_functions7_instruction: |-
         Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb.
@@ -4816,11 +4957,8 @@
         a path, gets nectar, makes honey, and then returns the bee to the top of the
         path. Then collect all the nectar and make all the honey!
       grade4_bee_functions9_instruction: |-
-        Red flowers can have an unknown amount
-        of nectar each time you run the puzzle.   \r
-        \r
-        Create a function that collects
-        all of the nectar from each flower.
+        Create a function that collects all of
+        the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: "Използвайте повторение(цикъл), за да се
         съберете всичкия нектар."
       grade4_bee_nestedLoops1_instruction: "Съберете всичкия на нектара от всяко цвете.
@@ -4843,8 +4981,10 @@
         Prepare to build a project within some
         given parameters.
       grade4_farmer_functions1_instruction: |-
-        Have we met before? I'm the farmer!
-        Please help me remove this pile and fill this hole.
+        *"Have we met before? I'm the farmer!"*\r
+        \r
+        Help
+        the farmer get to the pumpkins and pick them.
       grade4_farmer_functions2_instruction: |-
         Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle.
@@ -5499,12 +5639,19 @@
       gradek_playlab_events1a_instruction: |-
         Add a block so that when you click the
         "up" button, Olive the Cat walks up.
+      gradek_playlab_events1c_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       gradek_playlab_events2_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
       gradek_playlab_events2a_instruction: |-
         Add a block so that when you click "down"
         Olive the Cat walks down.
+      gradek_playlab_events2c_instruction: |-
+        Help Jorge the Dog get moving by connecting
+        the `move left` block to the `when left` event block that is already in the
+        workspace.
       gradek_playlab_events3_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -5514,28 +5661,38 @@
       gradek_playlab_events3b_instruction: |-
         Add a button so that Olive the Cat moves
         right when you click the "right" button.
+      gradek_playlab_events3c_instruction: |-
+        Now, get Jorge to move right when the
+        `right` button is clicked.
       gradek_playlab_events4_instruction: |-
         Add code to make something happen when
         the fourth bird is clicked. Be creative!
       gradek_playlab_events4a_instruction: |-
         Add a block so that Olive the Cat moves
         left when you click the "left" button.
+      gradek_playlab_events4c_instruction: |-
+        Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed.
       gradek_playlab_events5_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
       gradek_playlab_events5a_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
+      gradek_playlab_events5c_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
       gradek_playlab_eventsA_instruction: |-
         Now, have the cat change to a random size
         AND have it play a random sound when you click the center button.
       gradek_playlab_eventsFP_instruction: |-
         Add anything you want to this game.  Can
-        you make Olive the Cat disappear when you click on her?
+        you make the dinosaur disappear when Jorge runs into him?
       gradek_playlab_eventsPre_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
+      group test_instruction: Make a game
       Guess The Number_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
@@ -5625,13 +5782,14 @@
         See the worksheet handed out by your teacher for more detailed instructions!
       jessie-test_instruction: Lots of instructions
       Just for Testing_instruction: Test instructions
-      K-1 Artist 1 Assessment 1_instruction: "Начертай къса линия нагоре и дълга  вдясно!"
-      K-1 artist 1 level 10_instruction: "Начертай пунктирана линия с помощта на  блокове
+      K-1 Artist 1 Assessment 1_instruction: "Начертай къса линия нагоре и дълга линия
+        вдясно!"
+      K-1 artist 1 level 10_instruction: "Начертай пунктирна линия с помощта на блокове
         за скок и чертане"
       K-1 artist 1 level 9_instruction: "Начертай това с три линии"
       K-1 Artist Loops 1_instruction: "Направи тази линия чрез преместване на изток
         4 пъти."
-      K-1 Artist Loops 2_instruction: "Може ли да начертаете същата линия с цикъл?"
+      K-1 Artist Loops 2_instruction: "Начертайте същата линия с цикъл."
       K-1 Artist Loops 3_instruction: "Можете ли да повторите тези блокове, за да
         начертаете 6 линии?"
       K-1 Artist Loops 4_instruction: "Може ли с повторение да начертаеш  горната
@@ -5645,7 +5803,7 @@
       K-1 Artist Loops 9_instruction: "Оценка: Използвайте цикъл, за да начертаете
         стълбите"
       K-1 Artist Loops Free Play_instruction: "Свободна игра, начертайте нещо забавно!"
-      K-1 Artist1 1_instruction: "Начертайте стъпалото на човек с една линия"
+      K-1 Artist1 1_instruction: "Начертайте стъпалото на човечето с една линия"
       K-1 Artist1 10_instruction: "Чертай и скочи по пунктираната линия към съкровището
         X"
       K-1 Artist1 2_instruction: "Начертайте мустаците котката с две линии!"
@@ -5700,10 +5858,10 @@
       K-1 Bee Loops 1_instruction: "Вземи нектара и направи мед!"
       K-1 Bee Loops 10_instruction: "Използвай функция за повторения, за да вземеш
         нектар, направиш мед , и да продължиш!"
-      K-1 Bee Loops 11_instruction: "Задача! Използвай цикли, за да вземеш нектара
-        и направиш мед!"
-      K-1 Bee Loops 12_instruction: "Задача! Използвай  повторения, за да вземеш нектар,
-        направиш мед и продължиш!"
+      K-1 Bee Loops 11_instruction: "Използвай цикли, за да вземеш нектара и направиш
+        мед!"
+      K-1 Bee Loops 12_instruction: "Използвай повторения, за да вземеш нектар и направиш
+        мед."
       K-1 Bee Loops 2_instruction: "Използвай цикли , за да се преместиш, вземеш нектар
         и направиш мед!"
       K-1 Bee Loops 3_instruction: "Използвай цикли, за да вземеш нектар и направиш
@@ -5774,20 +5932,17 @@
       K-1 Maze debug Assessment 1_instruction: "Задача-Коригирай нивото като преместваш
         и добавяш блокове, за да достигна до прасето!"
       K-1 Maze Loops 1_instruction: "Заведи ме до прасето!"
-      K-1 Maze Loops 10_instruction: "Заведи ме до прасето! Използвай повтарящ се
-        цикъл."
-      K-1 Maze Loops 11_instruction: "Заведи ме до прасето! Използвай повтарящ се
-        цикъл."
-      K-1 Maze Loops 12_instruction: "Заведи ме до прасето! Използвай повтарящ се
-        цикъл."
-      K-1 Maze Loops 2_instruction: "Използвай Блока за повторение, за да стигна до
+      K-1 Maze Loops 10_instruction: "Заведи ме до прасето! Използвай цикъл."
+      K-1 Maze Loops 11_instruction: "Заведи ме до прасето!  \\rИзползвай цикъл."
+      K-1 Maze Loops 12_instruction: "Заведи ме до прасето! Използвай цикъл."
+      K-1 Maze Loops 2_instruction: "Използвай блока за повторение, за да стигна до
         прасето!"
-      K-1 Maze Loops 3_instruction: "Заведи ме до прасето! Използвай повтарящ се цикъл."
+      K-1 Maze Loops 3_instruction: "Заведи ме до прасето! Използвай цикъл."
       K-1 Maze Loops 4_instruction: "Заведи ме до прасето!"
-      K-1 Maze Loops 5_instruction: "Заведи ме до прасето! Използвай повтарящ се цикъл."
-      K-1 Maze Loops 6_instruction: "Заведи ме до прасето! Използвай повтарящ се цикъл."
-      K-1 Maze Loops 7_instruction: "Заведи ме до прасето! Използвай повтарящ се цикъл."
-      K-1 Maze Loops 8_instruction: "Заведи ме до прасето! Използвай повтарящ се цикъл."
+      K-1 Maze Loops 5_instruction: "Заведи ме до прасето! Използвай цикъл."
+      K-1 Maze Loops 6_instruction: "Заведи ме до прасето! Използвай цикъл."
+      K-1 Maze Loops 7_instruction: "Заведи ме до прасето! Използвай цикъл."
+      K-1 Maze Loops 8_instruction: "Заведи ме до прасето! Използвай цикъл."
       K-1 Maze Loops 9_instruction: "Заведи ме до прасето!"
       K-1 Maze Loops Assessment 1_instruction: "Задача- Използвай цикли за да стигна
         до прасето!"
@@ -5796,11 +5951,10 @@
       K-1 Maze Multi 14_instruction: "Ниво с оценки"
       K-1 Maze Multi 15_instruction: "Ниво с оценки"
       K-1 Maze Sequence Assessment 1_instruction: |-
-        Така се тестват различни функции "test!\r"
+        Да видим какво си научил!\r"
         Премести ме в една посока,
-        после в друга, за да стигна до прасето
+        после в друга, за да стигна до прасето.
       K-1 Maze Sequence Assessment 2_instruction: |-
-        Така се тестват различни функции "test!\r"
         Премести ме в една посока,
         после в друга, за да стигна до прасето.
       K2.0 sequence 1_instruction: "Промени кода, за да ме заведеш до прасето!"
@@ -5946,6 +6100,62 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC HOC 2016 Level 1_instruction: |-
+        This sheep is coded to 'drop wool' when
+        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
+        or tap the game space to 'use' it. Collect the wool to win!
+      MC HOC 2016 Level 10_instruction: "Време е да направите свой собствен Minecraft!
+        Създайте същества и след това да ги накарайте да правят каквото искате. Забавлявайте
+        се!"
+      MC HOC 2016 Level 2-2_instruction: Пилето не се движи. Поставете "върви" и "завърти"
+        блокове към "когато създадеш" слота, за да се задвижи.
+      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
+        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
+        slot. "
+      MC HOC 2016 Level 3_instruction: |
+        Страхотно, пилето се движи! Но след това то спира. В игрите пилета се движат постоянно. Използвайте "завинаги правя" цикъл, за да се движат постоянно пилетата. \r
+      MC HOC 2016 Level 4_instruction: "Сега пилетата изглеждат странно, движат се
+        по един същи начин. В игрите те имат произволни движения, за да изглеждат
+        нещата по-реалистично. Направете пилетата да се завъртат в случайни посоки."
+      MC HOC 2016 Level 5_instruction: Тези крави са изгубени! Заведи ги до тревата
+        като добавиш "движи се една стъпка към" блока в "завинаги правя" цикъла.
+      MC HOC 2016 Level 6_instruction: Сега направете зомбита. Използвайте "създаване"
+        блок, за да направите 3 зомбита, когато падне нощта. Програмирайте ги да се
+        движат към вас. Оцелейте до сутринта.
+      MC HOC 2016 Level 7_instruction: |-
+        Now let’s combine what you've learned and
+        create a new mob! Make a cow, lead it to the pasture, and get it to give you
+        milk.
+      MC HOC 2016 Level 8_instruction: "Пътя до твоята овца е блокиран от каменна
+        стена. За щастие има пълзящо растение тук. Шипове му се взривяват след като
+        ги докоснеш. Доведи пълзящото растение да взриви стената, така че да можеш
+        да стигнеш до овцата!"
+      MC HOC 2016 Level 9_instruction: |
+        Zombies are attacking the village! Code the
+        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
+      MC HOC 2016 Nerop_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Drop_instruction: В Minecraft овцете дават вълна. Постави "пуска"
+        блок в "когато се използва", след това се разходи и използвай овцата да пусне
+        елемент.
+      MC HOC 2016 New pn_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Spawn_instruction: Сега можете да запълните света с това, което
+        искате! Поставете 'създаване "блок под "при стартиране", за да създадете неща,
+        когато играта започне.
+      MC HOC 2016 New Walk_instruction: "Да опознаем нашия свят! Движи се със стрелките
+        и натискай Интервал или чукни на екрана, за да използваш елементи. Използвай
+        вратата, за да влезнеш вътре в къщата."
+      MC HOC 2016 SCORE LEVEL_instruction: Някои игри ти позволяват да запазиш резултата.
+        Увеличи своя резултат, като си добавяш точка всеки път щом докоснеш железен
+        голем. Използвай "Добавяне на 1 точка към резултата" блок. Направи пет точки
+        за победа!
+      MC HOC 2016 Village Test_instruction: "О не! Зомбита са те вкарали в капан вътре!
+        Напиши код за железния голем, за да го накараш да гони и атакува зомбитата!"
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions
@@ -6138,15 +6348,14 @@
         пъзели да изготвите този модел."
       NEW Course 4 Artist Functions 10_instruction: Щракнете върху "Редактиране",
         за да попълните блокчетата във функцията и направите квадрат от 40 пиксела.
-      NEW Course 4 Artist Functions 11_instruction: |
-        Сега искаме да създадем нова функция, наречена "начертайте линия от квадрати", която чертае шест квадратчета на ред.  Можете ли да вградите в тази функция друга- "начертайте 20 квадрати" функция, която ние вече сме създали? Забележка: Вижте, че е променена дебелината, с която чертае моливът. Тя е много по-тънка. Щракнете върху "Редактиране" на "начертайте 20 квадрата" функция, за да видите как сме го направили! \r
+      NEW Course 4 Artist Functions 11_instruction: Сега искаме да създадем нова функция,
+        наречена "начертайте линия от квадрати", която чертае шест квадратчета на
+        ред.  Можете ли да вградите в тази функция друга- "начертайте 20 квадрати"
+        функция, която ние вече сме създали?
       NEW Course 4 Artist Functions 12_instruction: Използвайте функцията "начертайте
         линия от квадрати" от последната загадка, за да нарисувате този модел."
       NEW Course 4 Artist Functions 13_instruction: 'Можете ли да начертаете звезда,
-        използвайки функцията " начертай линия от квадрати"? Съвет: Редактирайте функцията
-        "начертай линия от квадрати", така че да не се налага да я извиквате втори
-        път. Знайте, че трябва да вървите напред определен брой пиксели и да се завъртите
-        на 144 градуса.'
+        използвайки функцията " начертай линия от квадрати"?  '
       NEW Course 4 Artist Functions 14_instruction: "Свободно време за игра! "
       NEW Course 4 Artist Functions 2_instruction: "Можете ли да начертаете 3 квадрата
         на разстояние 20 пиксела един от друг? Съвет: всеки квадрат има страни 100
@@ -6204,7 +6413,7 @@
         Create a `draw triangle` function
         from scratch that makes a triangle with  50 pixel sides.
       NEW Course 4 Artist Params 3_instruction: |
-        Сега, нека да използваме функцията, за да начертаем 3-те триъгълника от последната загадка в един ред. Съвет: всеки триъгълник е на 50 пиксела от другия. \r
+        Сега, нека да използваме функцията, за да начертаем 5-те триъгълника от последната загадка в един ред. Съвет: всеки триъгълник е на 30 пиксела от другия. \r
       NEW Course 4 Artist Params 4_instruction: Забелязвате ли нещо различно в тези
         функционални блокове? Щракнете върху "Старт", за да видите какво се случва.
       NEW Course 4 Artist Params 5_instruction: 'Запълнете  полето с ??? в параметъра
@@ -6243,9 +6452,9 @@
       NEW Course 4 Artist Vars 4 5_instruction: "Страхотна работа свършихме в последната
         загадка, нека да пробваме отново, този път нека да направим този страхотен
         дизайн със шестоъгълници. Страната на всеки е 60 пиксела."
-      NEW Course 4 Artist Vars 4_instruction: 'Нека да опитаме отново. Можете ли да
-        зададете променливата "дължина" за да направим този страхотен дизайн от шестоъгълници?
-        Съвет: Числото е кратно 10.'
+      NEW Course 4 Artist Vars 4_instruction: |-
+        Нека да опитаме отново. \r
+        \rМожете ли да зададете на променливата "дължина" стойност 60, за да направим този страхотен дизайн от шестоъгълници?
       NEW Course 4 Artist Vars 6_instruction: |
         Начертайте този модел като поставите променливата "дължина" на правилните места и след това задайте правилната стойност за променливата. (Съвет: това е кратно на 10).  \r \r Видяхте ли как само задаваме стойността за дължина веднъж, а кодът използва правилната стойност навсякъде? \r \r \r
       NEW Course 4 Bee For Loops 1_instruction: "Използвайте цикъл, за да събера нектар
@@ -6824,11 +7033,12 @@
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
-      Text Compression 1_instruction: |-
+      Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern.
+        into the text in place of the pattern.\r
+        \r
       The Vigenere Cipher Widget_instruction: "Инструкции"
       The Vigenere Cipher_instruction: "Инструкции"
       Total Artist Clone Me_instruction: |-

@@ -3109,3 +3109,120 @@
         text: Í þessari næstu þraut er markmiðið að hjálpa leikaranum að gera eitthvað
           í sífellu. Ef þú lærir hvernig "endurtaka" skipunin virkar, mun það spara
           þér mikinn tíma þegar þú smíðar þinn eigin leik.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hæ, ég heiti Jens og ég er yfirmaður hönnunar á Minecraft. Næsta klukkutímann
+          munt þú búa til þinn eigin Minecraft leik. Þetta lítur út eins og Minecraft
+          en heimurinn hefur stöðvast. Kindurnar hreyfast ekki, hænurnar verpa ekki
+          og uppvakingarnir standa bara kyrrir. Það er þitt verkefni að bæta við kóða
+          svo að Minecraft heimurinn virki.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: "Ég heiti Melissa og ég vinn við rannsóknir á notendum hjá Minecraft.
+          Ég hef sérstakan áhuga á því hvernig fólk hugsar um og notar tölvutækni
+          svo að þetta er fullkomið starf fyrir mig að geta tvinnað saman tölvuhönnun
+          og sálfræði: hvernig fólk hugsar og hvað það gerir."
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: "Þú sérð að skjárinn þinn skiptist í þrjá aðalhluta. 1) Vinstra megin
+          er Minecraft leikurinn. Þessa stundina er heimurinn frosinn en við ætlum
+          að laga það með kóða."
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Þetta miðsvæði er verkfærakassinn. Hver þessara kubba er skipun sem
+          hænur, kindur og aðrar Minecraft verur skilja.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Svæðið hægra megin nefnist vinnusvæðið og það er hér sem við munum
+          setja saman forritið okkar.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Ef þú gleymir hvað á að gera, getur þú lesið leiðbeiningarnar efst.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Við ætlum að byrja á að forrita hænu. Við drögum "færa áfram" skipun
+          yfir á vinnusvæðið. Þegar ég ýti "Keyra" þá færist hænan fram um eitt skref.
+          Svo hún fari lengra dreg ég annan "færa áfram kubb" inn undir fyrsta "færa
+          áfram" kubbinn þar til hann lýsist upp. Þá sleppi ég honum og kubbarnir
+          tveir smella saman. Ef ég ýti aftur á "Keyra" gengur hænan tvö skref.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Ef þú vilt eyða kubbi, skaltu bara fjarlægja hann úr stæðunni og draga
+          hann aftur inn í verkfærakassann.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Eftir að þú hefur ýtt á "Keyra" getur þú alltaf ýtt á "Endurstilla"
+          hnappinn til endurstilla leikinn og byrja upp á nýtt. Nú er komið að þér
+          að búa til þína útgáfu af Minecraft. Skemmtu þér vel!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hæ, ég heiti Lísa. Ég starfa við hugbúnaðarþróun og vinn við sum dýrin
+          og óvinina í Minecraft. Eitt af dýrunum sem ég vann við var villikötturinn.
+          Ég vann við það að maður getur gefið villiketti fisk og þannig tamið hann
+          og gert hann að sínum eigin ketti.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Við erum mannverur og verðum hundleið ef við þurfum að gera það sama
+          aftur og aftur og aftur. En það sniðuga við tölvur er að þær geta gert sama
+          hlutinn miljón eða jafnvel biljón sinnum í röð án þess að þeim leiðist.
+          Svona endurtekning er kölluð lykkja og hver einasta vera í Minecraft notar
+          lykkjur.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Áður fengum við hænu til að færast yfir skjáinn en svo stansaði hún.
+          Í Minecraft ráfa hænurnar um endalaust. Við skulum nota "gera án enda" lykkju
+          úr verkfærakassanum til að láta hænurnar okkar líka hreyfa sig endalaust.
+          Lykkjur eru mjög öflugar og munu spara þér mikinn tíma og opna á alls konar
+          sniðuga möguleika þegar þú býrð til þína útgáfu af Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: "Í þessu borði getur þú valið að vera annað hvort Steve eða Alex. Ýttu
+          á örvarlyklana á lyklaborðinu til að fara upp, niður, til vinstri og til
+          hægri. Nú getur þú fært þig um borðið hvert sem þú vilt. Notaðu veru með
+          því að ganga að henni, snúa þér að henni og ýta á bilslána."
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Ef þú ert að nota snertiskjá, hreyfir þú þig með því að strjúka upp,
+          niður, til vinstri og til hægri. Pikkaðu svo á leikinn til að nota hlutinn
+          fyrir framan þig.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: En hvað gerist þegar þú notar veru? Í Minecraft gefa kindur ull þegar
+          þú rýjar þær, kýr hlaupa í burt þegar þú slærð þær og laumupúkar springa
+          þegar þú ferð nálægt þeim. Þessi viðbrögð gerast vegna nokkurs sem kallast
+          atvik. Atvik segja forritinu þínu að hlusta eða bíða eftir því að eitthvað
+          gerist. Og þegar það gerist þá fer einhver aðgerð af stað.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Hingað til hefur þú notað eitt atvik. Kóðinn sem þú settir í "þegar
+          kviknað" raufina keyrir þegar veran er búin til eða þegar leikurinn byrjar.
+          Í næstu borðum færðu nýjar raufar fyrir atvik eins og "þegar snert" sem
+          keyrir þegar þú snertir veruna, eða "þegar notað" sem gerist þegar þú notar
+          veruna. Eða ef þú vilt að uppvakningurinn hverfi þegar sólin kemur upp,
+          þá geturðu sett það í raufina "þegar dagur"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Í leikjum þýðir kveikja það sama og að búa til. Í þessu borði ætlum
+          við að láta uppvakninga kvikna þegar sólin sest. Til að gera þetta notum
+          við "þegar kvöldar" kubb.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Þar sem við viljum að uppvakningar kvikni á nóttunni ætlum við að setja
+          "kveikja uppvakning" kubbinn undir "þegar nótt" kubbinn. Um leið og þeir
+          hafa kviknað mun hver uppvakningur keyra kóðann sem þú settir í raufina
+          fyrir "þegar kviknað" atvikið. Skemmtu þér við skapa uppvakninga!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Til hamingju! Þú hefur lært að nota skipanir tölvunarfræði til að vekja
+          Minecraft heiminn til lífsins. Nú ert þú hönnuðurinn. Þú hefur nú aðgang
+          að öllum skipunum og öllum verunum. Þú ákveður hvað gerist.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: "Þegar leikurinn er tilbúinn getur þú valið að deila til að fá tengil
+          sem þú getur látið vini þína fá eða til að spila leikinn í símanum þínum.
+          Hafðu gaman af! Ég hlakka til að spila þína útgáfu af Minecraft."

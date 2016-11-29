@@ -486,11 +486,11 @@ ja:
         'iceage_intro': 'Ice Age Hour of Code - Introduction'
         'iceage_events': '氷河期Hour of Code（コーディングを学ぶ時間） - イベント'
         'iceage_repeat': '氷河期Hour of Code（コーディングを学ぶ時間） - 繰り返し文'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Minecraft Hour of Code - イントロダクション'
+        'mc_2016_loops': 'Minecraft Hour of Code - 繰り返し (ループ)'
+        'mc_2016_events': 'Minecraft Hour of Code - イベント'
+        'mc_2016_spawn': 'Minecraft Hour of Code - スポーン'
+        'mc_2016_congrats': 'Minecraft Hour of Code - おめでとう'
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'
@@ -562,7 +562,7 @@ ja:
         Infinity_move_directions_callout_arrow: "これらの矢印を使って操縦してください。"
         Infinity_move_collide_callout: "このイベントが起きたときに音を鳴らしてください。"
         Infinity_repeat_callout: "移動ブロックをこの中に置いてください"
-        craft_run_button_callout: '"実行"を押してプログラムを試します'
+        craft_run_button_callout: '「実行」ボタンをおして、プログラムを動かしてください。'
         craft_drag_block_callout: '"前進();"ブロックをもう1つのブロックの下にドラッグします'
         craft_callout_preplaced: "用意されたブロックを使って始めましょう"
         craft_inside_repeat: "ここにブロックを置いて繰り返しましょう"

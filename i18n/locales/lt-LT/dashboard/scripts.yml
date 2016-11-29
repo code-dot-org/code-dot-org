@@ -30,7 +30,7 @@ lt:
           title: Kursas 2
           description: Kursas 2 yra skirtas tiems, kas jau išmoko skaityti, bet anksčiau niekada neprogramavo. Jo metu, mokiniai spręs programavimo galvosūkius, kurs  interaktyvius žaidimus ar istorijas. Rekomenduojama 2-5 klasėms.
           description_short: 2 kursas yra skirtas mokiniams, kurie jau moka skaityti.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Amžius 6+ (reikalingas skaitymas)
           stage:
             'Artist: Debugging': 'Menininkas: klaidų ieškojimas'
             'Artist: Loops': 'Menininkas: kartojimas'
@@ -106,10 +106,10 @@ lt:
           title: Kursas 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
           description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
-          description_audience: Amžius 10+ (pabaigus 3 kursą)
+          description_audience: Amžius 9-18
           stage:
             Artist: Menininkas
-            Artist Binary: Artist Binary
+            Artist Binary: 'Meninkas: dvejetainis'
             'Artist: For Loops': 'Menininkas: kartojimai'
             'Artist: Functions': 'Menininkas: komandų kūrimas'
             'Artist: Functions with Parameters': 'Menininkas: komandos su parametrais'
@@ -125,9 +125,9 @@ lt:
             Super Challenge - Functions and Parameters: Super iššūkis - funkcijos ir parametrai
             Super Challenge - Variables: Super iššūkis - Kintamieji
             'Unplugged: Binary': 'Be kompiuterio: dvejetainiai skaičiai'
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+            'Unplugged: Envelope Variables': 'Be kompiuterių: Vokų kintamieji'
             'Unplugged: For Loop Fun': 'Be kompiuterio: kartojimai'
-            'Unplugged: Madlibs': 'Unplugged: Madlibs'
+            'Unplugged: Madlibs': 'Be kompiuterių: Madlibs žodžių žaidimas'
             'Unplugged: Songwriting with Parameters': 'Be kompiuterio: dainų rašymas pagal parametrus'
             'Unplugged: Tangrams': 'Be kompiuterio: tanagramos'
         Course4pre:
@@ -183,7 +183,7 @@ lt:
             'Unplugged: Video Games and Coordinate Planes': 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
           description_audience: ''
         infinity:
-          title: Disney Infinity Play Lab
+          title: Disnėjaus Infinity laboratorija
           description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
           description_short: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai.
           stage:
@@ -246,8 +246,8 @@ lt:
         20-hour:
           title: 20-ties valandų įvadiniai kursai
           description: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          description_audience: Amžius 10+ (pabaigus 3 kursą)
+          description_short: Šis 20-ties valandų kursas apima 2-4 kursų pagrindines informatikos ir programavimo idėjas.
+          description_audience: Amžius 10-18
           stage:
             Abstraction: Komandos su parametrais
             Algorithms: Algoritmai
@@ -286,32 +286,32 @@ lt:
           description_short: Įvykiai
           stage:
             Bounce: Tenisas
-            Calc: Calc
-            Eval: Eval
-            Studio: Studio
+            Calc: Skaič
+            Eval: Įvert
+            Studio: Studija
         flappy:
           title: Flappy kodas
           description: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: Parašyk savo nuosavą Flappy žaidimą per mažiau, nei 10 minučių!
           stage:
             Flappy Code: Flappy kodas
         jigsaw:
           title: Dėlionės
-          description: Try our Jigsaw tutorial
-          description_short: Try our Jigsaw tutorial
+          description: Išbandykite Dėlionės pamokėlę
+          description_short: Išbandykite Dėlionės pamokėlę
           stage:
             Jigsaw: Dėlionės
           description_audience: ''
         step:
           title: Žingsnis
-          description: Step tutorial
-          description_short: Step tutorial
+          description: Žingsnio pamoka
+          description_short: Žingsnio pamoka
           stage:
             Step: Žingsnis
           description_audience: ''
         Hour of Code:
           title: Programavimo valanda 2013
-          description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies!
+          description: Išmėginkite programavimo pradmenis su personažais iš Angry Birds ir Plants vs. Zombies!
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
           stage:
             Hour of Code 2013: Programavimo valanda 2013
@@ -696,7 +696,7 @@ lt:
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Studija
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -1088,7 +1088,7 @@ lt:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Amžius 10+ (pabaigus 3 kursą)
+          description_audience: Amžius 10-18
           stage:
             Halloween 2015: Halloween 2015
           description: ''
@@ -1096,16 +1096,16 @@ lt:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Amžius 10+ (pabaigus 3 kursą)
+          description_audience: Amžius 10-18
           stage:
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: Ledynmečio laboratorija
+          description: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
+          description_short: Sukurk istoriją arba žaidimą su Ledynmečio laboratorija!
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: Ledynmečio laboratorija
           description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1150,11 +1150,11 @@ lt:
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: Gumball laboratorija
+          description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
+          description_short: Sukurk istoriją arba žaidimą su Gumball laboratorija!
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: Gumball laboratorija
         starwars:
           title: 'Žvaigždžių Karai: programuojame Galaktiką'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
@@ -1455,6 +1455,8 @@ lt:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1870,7 +1872,7 @@ lt:
             'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables': 'Žaidimų laboratorija: kintamieji'
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
+            'Unplugged: Envelope Variables': 'Be kompiuterių: Vokų kintamieji'
             'Unplugged: For Loop Fun': 'Be kompiuterio: kartojimai'
             'Unplugged: Songwriting with Parameters': 'Be kompiuterio: dainų rašymas pagal parametrus'
         ecs-unit1:
@@ -2139,6 +2141,10 @@ lt:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2254,11 +2260,11 @@ lt:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Minecraft „Programavimo valandos“ projektavimo aplinka
+          title: Minecraft „Programavimo valandos“ projektavimo aplinka
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft versijoje.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ lt:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Saugus naršymas internete
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ lt:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Algoritmai realiame gyvenime: sėklos sodinimas'
+            Your Digital Footprint: Virtualūs pirštų antspaudai
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ lt:
             Binary Bracelets: Dvejetainės apyrankės
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Virtualūs pirštų antspaudai
+            Building a Foundation: Laiptuota piramidė
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ lt:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Virtuali pilietybė
+            'Unplugged: Binary': 'Be kompiuterio: dvejetainiai skaičiai'
+            Artist Binary: 'Meninkas: dvejetainis'
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ lt:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internetas
+            Crowdsourcing: Komandinis programavimas
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ lt:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Dainų rašymas su parametrais
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,10 +2429,10 @@ lt:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Sportas
+          title: Sportas
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Sukurk savo sportą
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2448,6 +2466,20 @@ lt:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

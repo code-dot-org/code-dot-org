@@ -302,12 +302,75 @@ en:
         Eh, I look at them occasionally.: Eh, I look at them occasionally.
         I more or less ignore or skim over data visualizations.: I more or less ignore or skim over data visualizations.
         Yes--- I look at data visualizations all the time!: Yes--- I look at data visualizations all the time!
+      U3 evaluation q1:
+        I am new and would really love some support!: I am new and would really love some support!
+        I generally understand but am not super confident.: I generally understand but am not super confident.
+        In general, do you feel comfortable writing computer programs?: In general, do you feel comfortable writing computer programs?
+        Yes - I am super confident in my programming skills: Yes - I am super confident in my programming skills
+      U3 evaluation q10:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
+      U3 evaluation q11:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U3 evaluation q12:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U3 evaluation q2:
+        How comfortable are you discussing the relationship between human and computer languages?: How comfortable are you discussing the relationship between human and computer languages?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U3 evaluation q3:
+        How comfortable are you identifying sequencing, selection, and iteration within an algorithm?: How comfortable are you identifying sequencing, selection, and iteration within an algorithm?
+        I feel confident in my ability to identify all three.: I feel confident in my ability to identify all three.
+        I feel uncomfortable identifying any part of an algorithm.: I feel uncomfortable identifying any part of an algorithm.
+      U3 evaluation q4:
+        Do you have any experience using App Lab?: Do you have any experience using App Lab?
+        I have used it before, but not extensively.: I have used it before, but not extensively.
+        Nope - the last time I used it was at TeacherCon!: Nope - the last time I used it was at TeacherCon!
+        Yes - I feel super comfortable with App Lab!: Yes - I feel super comfortable with App Lab!
+      U3 evaluation q5:
+        ? Have you ever thought about how efficiency can be defined in the context of computer programming or tried to make a program more efficient?
+        : Have you ever thought about how efficiency can be defined in the context of computer programming or tried to make a program more efficient?
+        I consider it occasionally.: I consider it occasionally.
+        No - It has never crossed my mind!: No - It has never crossed my mind!
+        Yes - I consider this a lot when writing programs.: Yes - I consider this a lot when writing programs.
+      U3 evaluation q6:
+        In general, which topic sounds most like something you do not already have experience with?: In general, which topic sounds most like something you do not already have experience with?
+        Top-Down Design principles: Top-Down Design principles
+        Using Loops: Using Loops
+        Using an API: Using an API
+        'Writing Functions ': 'Writing Functions '
+        Writing functions with Parameters: Writing functions with Parameters
+      U3 evaluation q7:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U3 evaluation q8:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U3 evaluation q9:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
       2.3 and 2.4 Lesson Connections: {}
       2.5 and 2.6 Lesson Connections: {}
       2.7 -  10 Lesson Connections: {}
+      3.1 - 3.3 Lesson Connections: {}
+      3.1 - 3.3 Lesson Connections in the Framework: {}
+      3.4 - 3.6 Lesson Connections: {}
+      3.7 - 3.9 Lesson Connections: {}
+      4.1 - 4.4 Lesson Connections: {}
+      4.5 - 4.7 Lesson Connections: {}
+      4.8 - 4.9 Lesson Connections: {}
       A Note On Metadata in the Curriculum Framework: {}
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
@@ -757,6 +820,7 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Common Misconceptions about Functions: {}
       Conditions and Logic: {}
       Correlation vs Causation: {}
       Curriculum Framework Connections in Unit 2: {}
@@ -787,6 +851,7 @@ en:
         description here: description here
         title: title
       Discovery Learning in Unit 1: {}
+      Documentation in App Lab: {}
       Downloading the Data Set: {}
       ECS PD1 classroom culture:
         ECS classroom culture: ECS classroom culture
@@ -1140,6 +1205,7 @@ en:
       Encoding Numbers Real World Student Lesson Introduction:
         description here: description here
         title: title
+      Encryption in CS: {}
       Equity About: {}
       Equity CS: {}
       Equity Celebrate: {}
@@ -1196,6 +1262,12 @@ en:
       HOC survey 2016 external text: {}
       Hobbies Page Example: {}
       Hour of Code test content: {}
+      How "if-else-if" Works:
+        description here: description here
+        title: title
+      How Dropdown Menus Work:
+        description here: description here
+        title: title
       How If Statements Work pt 1:
         description here: description here
         title: title
@@ -1232,10 +1304,13 @@ en:
       Intro to Debugging and Common Problems:
         description here: description here
         title: title
+      Introduction to Functions with Parameters: {}
+      Introduction to Loops: {}
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
       Introduction to Unit 1: {}
       Introduction to Unit 2: {}
+      Introduction to Unit 3: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1539,6 +1614,7 @@ en:
         description here: description here
       Practice Performance Tasks in Unit 1: {}
       Practice Performance Tasks in Unit 2: {}
+      Practice Performance Tasks in Unit 3: {}
       Prepare for your presentation:
         description here: description here
         title: title
@@ -1577,6 +1653,7 @@ en:
       TLO practical:
         TLO in Practice: TLO in Practice
       TeacherCon Agenda: {}
+      Teaching Programming in Unit 3: {}
       Teaching with the Internet Simulator: {}
       'Technique: Frequency Analysis':
         How to crack a substitution cipher: How to crack a substitution cipher
@@ -1589,6 +1666,7 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
         The Great Bug Bash: The Great Bug Bash
@@ -2070,6 +2148,7 @@ en:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
+      Understanding the Human Machine Language: {}
       Unit 1 Lesson 1 Overview: {}
       Unit 1 Lesson 2 Overview: {}
       Unit 1 Lesson 3 Overview: {}
@@ -2100,6 +2179,7 @@ en:
       Unit 2 Lesson 9 Overview: {}
       Unit 2 Tool Talk: {}
       Unit 3 Survey 2: {}
+      Unit 3 Tool Talk: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
         title: title
@@ -2120,6 +2200,7 @@ en:
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
+      What is "Big" Data and Why Should we Protect or Data?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
@@ -2218,7 +2299,16 @@ en:
       courseB_unplugged_mrfProgramming:
         description here: description here
         title: title
+      courseC_screenoutthemean:
+        description here: description here
+        title: title
       courseF_external_variableConstant: {}
+      coursee-privateandpersonalinformation:
+        description here: description here
+        title: title
+      coursef_powerofwords:
+        description here: description here
+        title: title
       csp_ap_intro: {}
       csp_unit_assessment_overview:
         description here: description here
@@ -2262,6 +2352,7 @@ en:
       equity vids:
         Videos for Equity Segment: Videos for Equity Segment
       facilitator test: {}
+      final practice pt vs. explore pt: {}
       grade1_activity_frustration:
         Dealing with Frustration: Dealing with Frustration
       grade1_activity_groupTower:
@@ -2325,6 +2416,9 @@ en:
       introduction to events: {}
       introduction to turtle: {}
       k5 what next 1: {}
+      more encryption algorithms:
+        description here: description here
+        title: title
       newCSFsample:
         Intro: Intro
         description here: description here
@@ -2747,6 +2841,7 @@ en:
         CSP Unit 5 Cumulative Assessment 1 MC: {}
         CSP Unit 5 Cumulative Assessment 2 MC: {}
         CSP Unit 5 Cumulative Assessment 3 MC: {}
+        CSP Unit 5 Cumulative Assessment 4 MC: {}
         CSP pre-assessment survey: {}
         HOC post-survey 2016 levelgroup: {}
         HOC pre-survey 2016 levelgroup: {}
@@ -2763,6 +2858,7 @@ en:
         Test longassessment levelgroup split new: {}
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
+        Unit 3 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -6081,6 +6177,19 @@ en:
         wrong2: wrong2
         wrong3: wrong3
         wrong4: wrong4
+      U4L1 - MC big data def:
+        Big Data: Big Data
+        It implies that the findings from the data are potentially hugely important for society.: It implies that the findings from the data are potentially hugely important for society.
+        That a dataset is larger than 5TB which is the common "Big Data" threshold.: That a dataset is larger than 5TB which is the common "Big Data" threshold.
+        That there is so much data it's virtually impossible to process.: That there is so much data it's virtually impossible to process.
+        There is enough data that traditional data processing applications are inadequate.: There is enough data that traditional data processing applications are inadequate.
+        When a computer scientist uses the term "Big Data" what do they typically mean?: When a computer scientist uses the term "Big Data" what do they typically mean?
+      U4L1 - MC moores law:
+        Boolean's Conjecture: Boolean's Conjecture
+        'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:': 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
+        Moore's Law: Moore's Law
+        Powers of 2 Principle: Powers of 2 Principle
+        The "Big Data Effect": The "Big Data Effect"
       U4L10 Choose 2:
         'Choose 2: simple description here': 'Choose 2: simple description here'
         right1: right1
@@ -6291,6 +6400,13 @@ en:
         wrong2: wrong2
         wrong3: wrong3
         wrong4: wrong4
+      U4L4 - MC cost of free:
+        Companies are required by law to give users options to personalize what data they collect about them: Companies are required by law to give users options to personalize what data they collect about them
+        Companies can sell the personal information of users to advertisers or other businesses: Companies can sell the personal information of users to advertisers or other businesses
+        Companies frequently offer services free of charge in exchange for access to data about their users: Companies frequently offer services free of charge in exchange for access to data about their users
+        Personal data about users may be saved by a company permanently, never to be deleted.: Personal data about users may be saved by a company permanently, never to be deleted.
+        ? Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
+        : Which of the following statements is the LEAST TRUE about personal data that technology companies potentially collect about their users?
       U4LXX Multiple Choice:
         'Multiple Choice: simple description here': 'Multiple Choice: simple description here'
         right: right
