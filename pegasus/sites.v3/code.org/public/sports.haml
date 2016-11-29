@@ -1,15 +1,15 @@
 ---
-title: Sports Hour of Code
+title: "<%= I18n.t(:sports_page_title) %>"
 theme: responsive
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/sports"
   "twitter:image:src" : "https://code.org/images/sports/basketball.png"
-  "twitter:title": "Sports Hour of Code Tutorials"
-  "twitter:description": "Select between NBA and WNBA or all sports coding tutorials."
-  "og:title": "Sports Hour of Code Tutorials"
-  "og:description": "Select between NBA and WNBA or all sports coding tutorials."
+  "twitter:title": "<%= I18n.t(:sports_og_title) %>"
+  "twitter:description": "<%= I18n.t(:sports_og_description) %>"
+  "og:title": "<%= I18n.t(:sports_og_title) %>"
+  "og:description": "<%= I18n.t(:sports_og_description) %>"
   "og:image" : "https://code.org/images/sports/basketball.png"
   "og:image:width": "445"
   "og:image:height": "728"
@@ -24,11 +24,11 @@ video_player: true
 
 %div{style: "clear:both"}
 
-%h1.header Code your own sports game
+%h1.header= I18n.t(:sports_title)
 .tutorial-video-container
-  %h2 Watch the video
+  %h2= I18n.t(:sports_watch_video)
   - videos = []
-  - videos << { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', text: 'Computer Science is Changing Everything', duration: '5 min', download: '//videos.code.org/social/cs-is-everything.mp4'}
+  - videos << { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', text: I18n.t(:sports_video_title), duration: I18n.t(:video_5min), download: '//videos.code.org/social/cs-is-everything.mp4'}
   - videos.each do |video|
     - url = "https://www.youtube.com/watch?v=#{video[:code]}"
     - facebook = {u: url}
@@ -36,16 +36,16 @@ video_player: true
     =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
 .tutorials-container
   %div.image-collection
-    %h2 Select your tutorial theme
+    %h2= I18n.t(:sports_select_theme)
     %a.white-link{href: "/api/hour/begin/basketball"}
       %div.choice
         %div.choice-container
-          %div.choice-label.blue Make a basketball game
+          %div.choice-label.blue= I18n.t(:sports_basketball_title)
           %img.character-img{src: "/images/sports/basketball.png"}
     %a.white-link{href: "/api/hour/begin/sports"}
       %div.choice
         %div.choice-container
-          %div.choice-label.blue Mix and match across sports
+          %div.choice-label.blue= I18n.t(:sports_all_sports_title)
           %img.character-img{src: "/images/sports/all_sports.png"}
 
 %div{style: "clear:both"}
