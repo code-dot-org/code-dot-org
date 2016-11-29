@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Spusťte níže uvedené akce, když se míč dotkne zdi.",
   "whileMsg": "dokud",
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
-  "yes": "Ano"
+  "yes": "Ano",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

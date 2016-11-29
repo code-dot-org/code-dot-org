@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "جب ایک دیوار کے ساتھ ایک گیند ٹکرائے مندرجہ ذیل افعال سرانجام دیں",
   "whileMsg": "جب تک",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "جی"
+  "yes": "جی",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }
