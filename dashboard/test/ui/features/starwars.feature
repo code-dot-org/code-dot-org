@@ -14,6 +14,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Then element "#continue-button" is visible
     When I close the dialog
     Then I wait until I am on "http://studio.code.org/s/starwars/stage/1/puzzle/2"
+    And I wait for the page to fully load
     When element "#runButton" is visible
     And I verify progress in the header of the current page is "perfect" for level 1
 
