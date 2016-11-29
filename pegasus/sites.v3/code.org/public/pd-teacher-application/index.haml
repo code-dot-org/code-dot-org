@@ -1,0 +1,43 @@
+:ruby
+  dont_cache
+
+  def form_control(control, name, label, options = {}, required = false)
+    view "pd_form_controls/#{control}", {name: name, label: label, options: options, required: required}
+  end
+
+.heading
+  %h1
+    2017-18 Professional Learning Program Teacher Application
+  %p
+    Please complete the form below to apply for the 2017-18 Code.org Professional Learning Program for teachers. The application should take 10 - 15 minutes to complete, and will require your principal’s approval.
+    %strong
+      The deadline to apply is March 17, 2017.
+
+  %p
+    If you need more information on the program before you apply, please visit
+    %a{href: '/educate/professional-learning/cs-discoveries', target: "_blank"}
+      CS Discoveries
+    and
+    %a{href: '/educate/professional-learning/cs-principles', target: "_blank"}
+      CS Principles.
+    For additional questions regarding the program or application, please contact
+    %a{href: 'mailto:teacher@code.org'}
+      teacher@code.org.
+
+%form#pd-teacher-application-form
+  #section1
+    %h2
+      Section 1: Which program is right for you?
+
+  #section2
+    %h2
+      Section 2: Teacher Information
+
+    = form_control 'input_field', 'first_name_s', 'First name', required: true
+    = form_control 'input_field', 'preferred_first_name_s', 'Preferred first name'
+    = form_control 'input_field', 'last_name_s', 'Last name', required: true
+    = form_control 'input_field', 'email_s', 'Your school email address', required: true
+    = form_control 'input_field', 'personal_email_s', 'Your personal email address (we may need to contact you during the summer)', required: true
+    = form_control 'input_field', 'phone_number_s', 'Preferred phone number', required: true
+    = form_control 'select', 'gender_identity_s', 'Gender Identity', options: {items: ['Female', 'Male', 'Prefer not to answer']}, required: true
+    = form_control 'select', 'grades_teaching', 'What grades are you teaching in the current 2016-17 school year? (select all that apply)', options: {items: %w(K 1 2 3 4 5 6 7 8 9 10 11 12), multi: true}, required: true
