@@ -47,7 +47,7 @@ fi
 
 # Commit the changes to the gh-pages branch
 git config user.name "Circle CI"
-git config user.email "paul@code.org"
+git config user.email "dev@code.org"
 git add --all
 git commit -m "Update GitHub Pages: $SHA"
 # Push our updated gh-pages branch
