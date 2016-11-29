@@ -373,4 +373,12 @@ module RakeUtils
 
     threads.each(&:join)
   end
+
+  def self.fanout(command)
+    require 'sshkit'
+    SSHKit::Backend::Netssh.configure{|ssh| ssh.ssh_options = {paranoid: false}}
+    SSHKit::Coordinator.new(CDO.app_servers.values).each do
+      CDO.log.info capture(command)
+    end
+  end
 end
