@@ -71,8 +71,7 @@ group :development, :test do
 
   # for ui testing
   gem 'cucumber', '~> 2.0.2'
-  gem 'selenium-webdriver', '~> 2.45.0'
-  gem 'net-http-persistent'
+  gem 'selenium-webdriver', '~> 2.53.0'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -224,3 +223,4 @@ gem "selectize-rails"
 gem 'bcrypt'
 gem 'addressable'
 gem 'validates_email_format_of'
+gem 'sshkit'

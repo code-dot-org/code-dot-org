@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Təbriklər! Bütün {count} ədəd maddəni topladın!",
   "collectorCollectedNothing": "Kodlamağa davam et! Mümkün olduqca çox maddə toplamalısan.",
   "collectorCollectedSome": "Böyük iş! {count} ədəd maddə topladın!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Burada toplamğım üçün yetərli maddə yoxdur.",
   "collectorTooManyBlocks": "Sadəcə {blockLimit} ədəd blok işlədə bilərsən. Koduna bax və yenidən yoxla!",
   "continue": "Davam et",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "Üstündəki çiçəkdə nektar qalmadı.",
   "get": "götür",
   "has": "vardır",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "burda kahı var",
   "hascorn": "qarğıdalı var",
   "haspumpkin": "balqabaqlar var",
   "heightParameter": "hündürlük",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Əgər göstərilən istiqamətdə yol varsa, əmrlərin birinci blokunu yerinə yetir. Əks halda isə əmrlərin ikinci blokunu.",
   "insufficientHoney": "Lazımi bütün blokları işlədirsiniz, lakin lazımi qədər bal yığmağınız tələb olunur.",
   "insufficientNectar": "Nektarı düzgün miqdarda toplamalısan.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "kahı",
+  "lettuceTooltip": "Kahı yığ",
   "make": "hazırla",
   "moveBackward": "geriyə get",
   "moveEastTooltip": "Məni şərqə bir boşluq apar.",
@@ -111,6 +112,5 @@
   "word": "Sözü tap",
   "wrongCropError": "Məhsulu buradan toplaya bilmərəm.",
   "yes": "Bəli",
-  "youSpelled": "Açıqladınız",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Açıqladınız"
 }

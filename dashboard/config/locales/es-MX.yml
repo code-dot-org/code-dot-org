@@ -2,16 +2,17 @@
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: https://code.org/mc
-      teacher_must_accept_terms: Este contenido tiene restricciones de edad asignadas
-        y no está disponible para alumnos mas jóvenes. Pide a tu maestro que acepte
-        los Términos de Servicio actualizados para darte acceso a este contenido.
-        Tu maestro puede hacer esto ingresando en Code Studio y dando clic en el botón
-        "Revisar términos actualizados" cerca de la parte superior de la pagina inicial
-        del Code Studio.
-      pair_programmer: Estás trabajando en programación por pares con un alumno que
-        no tiene acceso a este contenido. Para acceder a este contenido, anula la
-        programación por pares e intenta de nuevo.
+      too_young: Este contenido tiene restricciones de edad establecidas y no está
+        disponible para estudiantes jóvenes.
+      teacher_must_accept_terms: Este contenido tiene restricciones de edad establecidas
+        y no está disponible para estudiantes jóvenes. Solicítale a tu profesor que
+        acepte los Términos de Servicio actualizados para darte acceso a este contenido.
+        Tu instructor puede hacerlo iniciando sesión en Code Studio y haciendo clic
+        en el botón "Revisar términos actualizados" cerca de la parte superior de
+        la página de inicio de Code Studio.
+      pair_programmer: En este momento, estás programando a la par con un estudiante
+        que no tiene acceso a este contenido. Para acceder a este contenido, detén
+        la programación en par e intenta nuevamente.
   activerecord:
     errors:
       messages:
@@ -93,6 +94,14 @@
     overview: Regístrate para darle seguimiento a tu avance o administrar tu salón
       de clases. <a href="/">Puedes explorar varias etapas y rompecabezas</a> si una
       cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.
+    hoc_already_signed_up_heading: Empezar sin iniciar sesión
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
     teacher_educator_guide: Consulte la guía del educador
     title: Regístrate en Code.org
     school_name: Nombre de la escuela (opcional)
@@ -149,8 +158,8 @@
   password:
     reset_form:
       title: "¿Olvidaste tu contraseña?"
-      instructions: Introduce tu dirección de correo electrónico a continuación y
-        te enviaremos las instrucciones para restablecer tu contraseña.
+      instructions: Ingresa tu dirección de correo a continuación y te enviaremos
+        las instrucciones para establecer una nueva contraseña.
       email: Dirección de correo electrónico
       submit: Enviar
     change_form:
@@ -294,7 +303,7 @@
       prizes: Premios
       logout: Cerrar sesión
       signin: Iniciar Sesión
-      signup: Crea una cuenta
+      signup: Crear una cuenta
       already_registered: "¿Ya estás registrado?"
       pair_programming: Programación de pares
       team: Team
@@ -336,8 +345,8 @@
       submitted_on: Enviado el %{date}
       unsubmit: NO enviado
       worked_with: Worked With
-      update_lock_settings: Actualiza las opciones de bloqueo aquí.
-      clear_response: Clear response
+      update_lock_settings: Actualizar los ajustes de bloqueo aquí.
+      clear_response: Respuesta clara
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no
@@ -427,7 +436,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Aprende más
     announcement_try_now_button: Probar ahora
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Anfitrión una hora
     announcement_petition: Como profesor, usted está liderando un movimiento para
       dar a cada estudiante en todas las escuelas la oportunidad de aprender computación.
       Ahora, es tiempo de dejar que sus representantes lo escuchen. Esta semana, líderes
@@ -435,14 +444,27 @@
       se unieron en una carta abierta pidiendo el Congreso de Estados Unidos para
       financiar en la educacion de K-12 informática.
     announcement_petition_button: Agrega tu nombre
-    announcement_all: Manténte al día con las nuevas características y actualizaciones
-      en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver
-      anuncios anteriores.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_all: Mantente al tanto con nuevas características y actualizaciones
+      en nuestro blog del profesor. <a href='%{teacher_blog_url}' target='_blank'>Mira
+      los anuncios anteriores.</a>
+    announcement_hoc_launch: Miles de educadores en más de 180 países comenzarán a
+      enseñar ciencias computacionales durante la Hora del Código del 5 al 11 de Diciembre.
+      Contamos contigo para ayudarnos a alcanzar más estudiantes de lo que hemos hecho
+      antes. <a href='%{signup_url}' target='_blank'>Registra tu evento de la Hora
+      del Código</a> y permite que otro profesor sepa que cualquiera puede comenzar
+      a enseñar ciencias computacionales.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Introduzca
       un código de sección diferente.
@@ -613,6 +635,10 @@
     minecraft:
       title: Minecraft
       body: Explora un mundo de Minecraft, a través de código.
+    minecraft2016:
+      title: Minecraft
+      body: Construye tu propia versión de Minecraft. Crea tus propias versiones de
+        las gallinas, ovejas, Creepers, zombis y más.
     unplugged:
       title: Lecciones sin conexión
       audience: Mayores de 6 años
@@ -670,9 +696,9 @@
     wrong_body: Gracias por enviar respuestas.
     correct_title: Gracias
     correct_body: Gracias por enviar respuestas.
-    hide_survey_last_answer: Esta encuesta es anónima.  Por favor visite el tablero
-      para resultados agragantes.  Ten en cuenta que los resultados sólo son visibles,
-      si por lo menos cinco estudiantes entregaron la encuesta.
+    hide_survey_last_answer: Esta encuesta es anónima. Por favor visita el panel del
+      profesor para ver los resultados acumulados. Toma en cuenta que los resultados
+      son visibles sólo si al menos 5 estudiantes presentaron la encuesta.
   level_group-submittable:
     wrong_title: Gracias
     wrong_body: Gracias por enviar respuestas.
@@ -729,48 +755,47 @@
     sign_out: Si no quieres proporcionar tu edad, puedes <a heref="%{url}">finalizar
       tu sesión</a>.
   terms_interstitial:
-    title: Términos de Servicio y Política de Privacidad actualizados
-    intro_desc: 'Hemos actualizado nuestros Términos de Servicio y Política de Privacidad,
-      como se muestra a continuación. Los cambios son efectivos el 224 de agosto de
-      2016. El cambio más grande: <i>no almacenaremos direcciones de correo electrónico
-      para cuentas de alumnos en Code Studio.</i>Esto es un gran problema para nosotros,
-      y esperamos que establezca un nuevo estándar para la privacidad de los alumnos
-      en educación tecnológica. Hemos enviado un resumen de los otros cambios por
-      correo electrónico.'
-    intro_instructions: Deberás aceptar estos nuevos términos para alumnos menores
-      de 13 años en tu salón de clases para tener acceso a todas las últimas características
-      en Code Studio. Cuando registres una cuenta para un alumno menor de 13 años,
-      se te pedirá que confirmes que tu escuela tiene el permiso de los padres o tutores
-      legales para la recolección de la información personal de los alumnos para uso
-      y beneficio de la escuela, incluyendo programas educativos tales como Code Studio.
+    title: Términos del Servicio Actualizados y Política de Privacidad
+    intro_desc: 'Actualizamos nuestros Términos del Servicio y Política de Privacidad,
+      como se muestra a continuación. Los cambios son efectivos a partir del 24 de
+      Agosto de 2016. El cambios más importante: <i>no almacenaremos las direcciones
+      de correo para las cuentas de estudiantes en Code Studio.</i> Es un gran acuerdo
+      para nosotros, y esperamos que establezca un nuevo estándar para la privacidad
+      de los estudiantes en las tecnologías de la educación. Te hemos enviado un resumen
+      de otros cambios por correo.'
+    intro_instructions: Es requerido que aceptes estos nuevos términos para estudiantes
+      menores de 13 años en tu salón de clases para tener acceso completo a las últimas
+      características en Code Studio. Cuando registres una cuenta para un estudiante
+      menor a 13 años, se te solicitará confirmar que tu escuela cuenta con el consentimiento
+      de los padres para el almacenamiento de la información personal de los estudiantes
+      para el uso y beneficio de la escuela, incluyendo programas educacionales como
+      Code Studio.
     tos: Términos de uso
     privacy: Política de Privacidad
-    privacy_notice: Aviso de privacidad
-    accept_label: Estoy de acuerdo con los <a href="%{tos_url}" target="_blank"> Términos
-      de Servcio</a> y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>
-      actualizados
+    privacy_notice: Noticia de Privacidad
+    accept_label: Acepto los <a href="%{tos_url}" target="_blank">Términos de Servicio</a>
+      actualizados y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>
     accept: Acepto
     print: Imprimir
-    later: Más adelante
     reminder_desc: Hemos actualizado nuestros <a href="%{tos_url}" target="_blank">Términos
-      de Servicio</a> y <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>.
-      Por favor lee éstos cuidadosamente antes de aceptarlos. Nota que nuestras herramientas
-      para aprender JavaScript pueden no estar disponibles a tus alumnos antes de
-      aceptar explícitamente estos términos actualizados.
-    review_terms: Revisa los términos actualizados
+      de Servicio</a> y la <a href="%{privacy_url}" target="_blank">Política de Privacidad</a>.
+      Por favor lee con cuidado antes de aceptarlos. Toma en cuenta que nuestras herramientas
+      de enseñanza de JavaScript podrían estar indispuestas a tus estudiantes antes
+      de aceptar explícitamente los términos actualizados.
+    review_terms: Revisar los términos actualizados
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Opcional: Ayúdanos a seguir nuestro avance hacia la mejora de la diversidad
+      en ciencias de la computación'
+    message: Por favor díganos su raza (marque todo lo que aplique)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Blanco
+    - black: Negro o Afroamericano
+    - hispanic: Hispano o Latino
+    - asian: Asiático
+    - hawaiian: Nativo Hawaiano o de otra Isla del Pacífico
+    - american_indian: Indio Americano/Nativo de Alaska
     - other: Otros
-    - opt_out: Prefer not to say
+    - opt_out: Prefiero no decir
     submit: Enviar
     decline: Cerrar
   zendesk_too_young_message: Lo sentimos, los usuarios más jóvenes no pueden registrarse
@@ -909,11 +934,11 @@
     disclaimer: Descargo de responsabilidad
     leaving_domain: Usted se está saliendo de este dominio, a una página que no es
       operado por Code.org.
-    disclaimer_text: Este sitio puede tener políticas de privacidad diferentes a las
-      de Code.org. Hemos seleccionado los recursos de éste pues pensamos que te pueden
-      ser útiles. Aunque no somos directamente responsables del contenido de este
-      sitio, por favor <a href='%{support_url}'>contacta a soporte</a> si encuentras
-      contenido cuestionable, o si el sitio enlazado ya no se encuentra disponible.
+    disclaimer_text: Este sitio podría tener políticas de privacidad que difieran
+      de las de Code.org. Hemos seleccionado esos recursos de terceros porque creemos
+      que te serán útiles. En tanto no somos responsables directamente del contenido
+      de este sitio, por favor <a href='%{support_url}'>contacta a soporte</a> si
+      encuentras objetable el contenido o si el sitio enlazado dejó de estar disponible.
   hoc_download:
     title: Hora de codigo descargas
     capsule_title: "¿Tienes Internet?"
@@ -952,9 +977,9 @@
   locked_stage: Los contenidos de esta etapa no son visibles ya que se encuentra actualmente
     bloqueada. Tu maestro puede desbloquear esta etapa cuando sea tiempo de trabajar
     en ella o para revisar tus respuestas.
-  hidden_stage: Tu maestro no espera que estés aquí. Por favor pregúntale a tu maestro
-    en cual lección deberías estar.
-  return_course_overview: Ir al resumen de la unidad
+  hidden_stage: Tu instructor no esperaba que estuvieras aquí. Por favor pregunta
+    a tu instructor en qué lección deberías estar.
+  return_course_overview: Ve a la vista general de la unidad
   pd:
     survey:
       number_teachers: Number of attending teachers

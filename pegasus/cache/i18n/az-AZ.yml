@@ -37,8 +37,11 @@
   twentyhours_text: "İlk Kod saatınızı bitirdiniz? Kursları izləyərək kompyuter sahəsi
     və proqramlaşdırma anlayışları barədə daha çox şey öyrənin."
   og_title: Hər bir uşaq fürsətə layiqdir
-  og_description: The Hour of Code is a global movement reaching tens of millions
-    of students of all ages in 180+ countries and over 45 languages.
+  og_description: Technology is changing everything. Every student in every school
+    deserves the opportunity to study computer science.
+  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 -
     14 dekabr, 2014<br/>
   hoc2014_students: "Şagirdlər"
@@ -112,8 +115,8 @@
   third_party_gradelevel_2to8: Grades 2-8
   third_party_gradelevel_4to12: Grades 4-12
   third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_6plus: 6+ siniflər
+  third_party_gradelevel_8plus: 8+ siniflər
   third_party_platform_all: 'Platform: Web, iPad & Android'
   third_party_platform_mobile: 'Platform: iPad & Android'
   third_party_platform_web: 'Platform: Web'
@@ -179,7 +182,7 @@
   third_party_codecademy_btn_site: Visit Codecademy
   third_party_organization: Organization
   third_party_curriculum: Curriculum
-  third_party_pricing: Pricing
+  third_party_pricing: Qiymət
   third_party_cost_free: "Şagird və müəllimlər üçün ödənişsiz"
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
@@ -248,9 +251,11 @@
   continue_learning_header: Bir saatdan daha çox öyrənməyə davam edin
   continue_learning_body: Variantlar çoxdur. Ya onlayn, ya yerli bir məktəbdə və yaxud
     da yay düşərgəsində öyrənə bilərsiniz.
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Növbəti mərhələyə keçin
   learn_online: Digər onlayn kursları sınaqdan keçirin
   learn_classes: Yerli siniflər tapın
+  learn_back_to_minecraft: Keep learning with Minecraft
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Mən elə indicə #HourOfCode Kod Saatını bitirdim - özünüz baxın! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
@@ -422,7 +427,7 @@
   contact_form_topic_other: Digər
   contact_form_label_topic: Mövzu
   contact_form_label_email: Sizin e-poçt ünvanınız
-  contact_form_label_message: Message
+  contact_form_label_message: "İsmarıc"
   contact_form_label_submit: Send Message
   class_submission_in_school: Məktəbdə
   class_submission_in_school_daily_programming_course: Gündəlik proqramlaşdırma kursu
@@ -440,7 +445,7 @@
   class_submission_out_of_school_all-day_workshop: Tam günlük məşğələ (1 həftəyə qədər)
   class_submission_out_of_school_multi-week_workshop: Bir neçə həftəlik məşğələ
   class_submission_out_of_school_other: Other out of school
-  class_submission_online: Online
+  class_submission_online: Onlayn
   class_submission_online_programming_class: Online programming class
   class_submission_online_teacher_resource: Online teacher resource
   class_submission_online_other: Other online
@@ -448,16 +453,18 @@
   class_submission_level_elementary: "İbtidai"
   class_submission_level_middle_school: Middle school
   class_submission_level_high_school: High school
-  class_submission_level_college: College
+  class_submission_level_college: Kollec
   class_submission_level_vocational: Texbiki-peşə
   class_submission_languages_other: Digər dil(lər)
-  inspirational_videos_more: More <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">inspirational
-    videos</a> by role models and celebrities
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: Choose your Play Lab theme
-  playlab_classic_title: Classic
+  playlab_classic_title: Klassik
   playlab_gumball_title: Gumball
   playlab_iceage_title: Ice Age - Coming soon
-  playlab_iceage_title_live: Ice Age
+  playlab_iceage_title_live: Buz dövrü
   starwars_subtitle: Qalaktikanı proqramlaşdırın
   starwars_javascript_title: CavaSkript
   starwars_javascript_description: Sürüklə-burax tipli bloklar və CavaSkript.
@@ -475,6 +482,32 @@
   mc_gradelevel: 4-104 yaş
   mc_platformtext: Modern browsers, smartphones, tablets
   mc_specs: Many languages | Modern browsers and tablets | Ages 6+
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Başlayın
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Başlayın
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_store_camps: Microsoft Store Hour of Code Camps
+  minecraft_host_event: Host a Minecraft Hour of Code Event
+  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
+    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
+    U.S. Learn how to combine your creativity with coding.
+  minecraft_teach_resources: Teacher resources and lesson plan.
+  minecraft_leader_guide: Download resources to help you plan and lead an event.
+  minecraft_facilitating_event: Facilitating an event?
+  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
+    (in English only) on Nov 22 or Nov 29
+  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
+    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
+    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Maynkraft Kod Saatı
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
@@ -511,11 +544,11 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Ad
-  volunteer_engineer_submission_field_name_placeholder: Full Name
+  volunteer_engineer_submission_field_name_placeholder: Tam Ad
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
   volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_location: Yer
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
   volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
@@ -570,10 +603,10 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Current
     university student (or researcher)
   volunteer_engineer_submission_experience_software_professional: Proqramçı-mühəndis
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
+  volunteer_engineer_submission_distance_8: 8 km
+  volunteer_engineer_submission_distance_16: 16 km
+  volunteer_engineer_submission_distance_24: 24 km
+  volunteer_engineer_submission_distance_32: 32 km
   volunteer_engineer_submission_num_volunteers_5: 5 volunteers
   volunteer_engineer_submission_num_volunteers_10: 10 volunteers
   volunteer_engineer_submission_num_volunteers_25: 25 volunteers
@@ -660,17 +693,17 @@
     course that explores the foundational ideas of computing.
   dashboard_landing_loading: Yüklənir...
   dashboard_action_edit: Düzəliş et
-  dashboard_action_save: Save
-  dashboard_action_save_all: Save all
+  dashboard_action_save: Yadda saxla
+  dashboard_action_save_all: Hamısını yadda saxla
   dashboard_action_cancel: "İmtina et"
-  dashboard_action_delete: Delete
+  dashboard_action_delete: Sil
   dashboard_action_delete_yes: Bəli
   dashboard_action_delete_no: Xeyr
-  dashboard_action_confirm: Delete?
-  dashboard_action_remove: Remove
-  dashboard_action_remove_confirm: Remove?
-  dashboard_action_done: Done
-  dashboard_action_required: required
+  dashboard_action_confirm: Sil?
+  dashboard_action_remove: Sil
+  dashboard_action_remove_confirm: Silinsin?
+  dashboard_action_done: Tamamlandı
+  dashboard_action_required: zəruri
   dashboard_action_print_certificates: Print certificates
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: No assessments
@@ -680,11 +713,11 @@
     the assessment to your class and then pick it from the drop down above and you'll
     see your students' answers here.
   dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_assessments_answers: Bütün yoxlama cavabları
+  dashboard_surveys_answers: Anketlər
+  dashboard_percent: Faiz
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: Hamısı
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Müəllimin ev səhifəsi
   dashboard_navigation_section_student_progress: Student Accounts and Progress
@@ -694,14 +727,14 @@
   dashboard_navigation_section_pd: Professional Development
   dashboard_navigation_section_speakers: Computer Science <br/> Guest Speakers
   dashboard_navigation_all_sections: Student Accounts and Progress
-  dashboard_navigation_view_progress: View Progress
+  dashboard_navigation_view_progress: Nəticə
   dashboard_navigation_view_text_responses: View Text Responses
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments: Yoxlamalar
+  dashboard_navigation_view_assessments_surveys: Yoxlamalar və sorğular
   dashboard_navigation_add_students: Add Students
   dashboard_navigation_manage_students: Manage Students
   dashboard_navigation_lesson_plans_resources: Lesson Plans and Resources
-  dashboard_navigation_view_stats: View Stats
+  dashboard_navigation_view_stats: Göstəricilər
   dashboard_navigation_section: 'Bölmə: %{section_name}'
   dashboard_navigation_student: "Şagird: %{student_name}"
   dashboard_progress_not_started: başlanmayıb
@@ -723,7 +756,7 @@
     their progress and manage their accounts.
   dashboard_sections_table_section: Bölmə
   dashboard_sections_table_secret: Login Type
-  dashboard_sections_table_grade: Grade
+  dashboard_sections_table_grade: Sinif
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Şagirdlər"
@@ -741,7 +774,7 @@
   dashboard_sections_print_secrets: You may then print a sheet of cards containing
     account information to be distributed to your students individually.
   dashboard_sections_switch_section: 'Switch section:'
-  dashboard_sections_close: Close
+  dashboard_sections_close: Bağla
   dashboard_sections_move_students_desc: Select students to move to a new section.
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
@@ -781,12 +814,12 @@
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
   dashboard_students_name: Ad
-  dashboard_students_progress: Progress
+  dashboard_students_progress: Nəticə
   dashboard_students_age: Yaşınız
   dashboard_students_gender: Cins
   dashboard_students_male: Kişi
   dashboard_students_female: Qadın
-  dashboard_students_secret: Secret
+  dashboard_students_secret: Gizli
   dashboard_students_password: parol
   dashboard_students_username: 'Username: %{student_username}'
   dashboard_students_email: 'Email: %{student_email}'
@@ -825,18 +858,18 @@
   dashboard_view_all_lesson_plans: Kurs 1-3 üçün tam kurikulumu endirin
   dashboard_course1: 'Kurs 1:'
   dashboard_course2: 'Kurs 2:'
-  dashboard_course3: 'Course 3:'
+  dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Course 4 (beta): '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
-  dashboard_overview: Overview
+  dashboard_overview: Yekun
   dashboard_sequence: Ardıcıllıq
   dashboard_framework: Framework
-  dashboard_standards: Standards
+  dashboard_standards: Standartlar
   dashboard_implementation_guide: Implementation Guide
-  dashboard_glossary: Glossary
+  dashboard_glossary: Lüğət
   dashboard_classroom_strategies: Classroom strategies for teachers
   dashboard_debugging: 'Debugging:'
   dashboard_puzzle_solving: 'Puzzle-solving:'
@@ -848,14 +881,14 @@
   dashboard_curriculum_ecs: 'Exploring Computer Science:'
   dashboard_grade_k: K
   dashboard_grade_other: Digər
-  dashboard_login_word: Word
-  dashboard_login_picture: Picture
+  dashboard_login_word: Söz
+  dashboard_login_picture: "Şəkil"
   dashboard_login_none: E-poçt
   dashboard_new_password: new password
   dashboard_stage: mərhələ
   dashboard_puzzle: Tapmaca
-  dashboard_question: Question
-  dashboard_response: Response
+  dashboard_question: Sual
+  dashboard_response: Cavab
   dashboard_correctness: Correctness
   dashboard_correctness_free_response: Free response
   dashboard_correctness_unsubmitted: Unsubmitted
@@ -863,7 +896,7 @@
   dashboard_correctness_incorrect: Incorrect
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
-  dashboard_status: Status
+  dashboard_status: Vəziyyət
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "% multiple choice correct"
@@ -915,6 +948,23 @@
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+    Due to high traffic from millions of students doing the Hour of Code, <b>Code
+    Studio will not save or report student progress on these courses from December
+    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
+    the Hour of Code during Computer Science Education Week. While our own Hour of
+    Code tutorials will also not save progress that week, students can still do the
+    full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Kod Saatı artıq buradadır - 8-14 dekabr!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -980,10 +1030,10 @@
   more_resources_educators: More resources for teachers and educators
   beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
     and submission form.
-  participants: participants
+  participants: iştirakçılar
   teachers_notes: Teacher's Notes
   teachers_notes_hoc: 'Teachers: Read important educator notes here'
-  previous: Previous
+  previous: "Əvvəlki"
   next: Növbəti
   older_systems: Tutorials that work on older systems
   older_systems_subheading: These should work on older Web browsers. To access all
@@ -1051,6 +1101,10 @@
   cspunit4_name: 'Unit 4: Data'
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1070,17 +1124,23 @@
   AlgebraB_name: CS in Algebra Course B
   gumball_name: Gumball
   classicmaze_name: Classic Maze
-  iceage_name: Ice Age
+  iceage_name: Buz dövrü
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Riyaziyyat
   hoc_category_name: Kod Saatı
   csf_category_name: CS Fundamentals
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
-  applab_name: App Lab
-  applab_gradelevel: Ages 13+
+  research_studies_category_name: Research Studies
+  applab_name: Proqram Labı
+  applab_gradelevel: 13+ yaş
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
     work, then share your app in seconds
@@ -1128,12 +1188,12 @@
   infinity_gradelevel: 4-104 yaş
   artist_gradelevel: 8+ yaş
   monstercoding_gradelevel: 5-13 yaş
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: 5-10 yaş
+  csfirst_gradelevel: 9-14 yaş
   boxisland_gradelevel: "İbtidai"
   codesters_gradelevel: Ages 12-14
   texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
+  teacherled_gradelevel: 5+ yaş
   course1_gradelevel: 4+ yaş (oxumağı bacarmayanlar)
   course2_gradelevel: 6+ yaş (oxuma tələb olunur)
   course3_gradelevel: 8+ yaş (Kurs 2-dən sonra)
@@ -1444,7 +1504,7 @@
   scratch_beyond_name: Proqramlaşdırma ilə yaradıcı olun
   lightbot_beyond_name: LightBot
   codecademy_beyond_name: Codecademy
-  kodable_beyond_name: Kodable
+  kodable_beyond_name: Kodlanabilər
   scratchjr_beyond_name: ScratchJR for pre-readers
   hopscotch_beyond_name: 'Hopscotch: Programming On Your iPad'
   pocketcode_beyond_name: Pocket Code
@@ -1529,12 +1589,12 @@
   appinventor_beyond_platformtext: Müasir veb səyyah + Android
   touchdevelop_beyond_platformtext: Müasir veb səyyahlar, smartfonlar, bütün cihazlar
   codehs_beyond_platformtext: Müasir veb səyyahlar (ödənişlidir)
-  udemy_beyond_platformtext: Web based
+  udemy_beyond_platformtext: Web əsaslı
   lynda_beyond_platformtext: Web based ($$ required)
   edx_beyond_platformtext: Müasir veb səyyahlar
   coursera_beyond_platformtext: Müasir veb səyyahlar
   udacity_beyond_platformtext: Müasir veb səyyahlar
-  teachingtree_beyond_platformtext: Web based
+  teachingtree_beyond_platformtext: Web əsaslı
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
   kidsruby_beyond_platformtext: Desktop install
@@ -1765,58 +1825,22 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
-  learn_code_studio: Try Code Studio courses
-  learn_back_to_minecraft: Keep learning with Minecraft
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
-  minecraft_designer_button: Start
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
-  minecraft_adventurer_button: Start
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min

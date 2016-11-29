@@ -82,7 +82,7 @@ es:
     student_count: '%{count} estudiantes ya se han registrado.'
     teacher_count: '%{count} profesores ya se han registrado.'
     overview: 'Regístrate para darle seguimiento a tu avance o administrar tu salón de clases. <a href="/">Puedes explorar varias etapas y rompecabezas</a> si una cuenta, pero necesitarás registrarte para guardar tus avances y proyectos.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_heading: 'Empezar sin iniciar sesión'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
     teacher_educator_guide: 'Consulta la Guía del educador'
     title: "Regístrate en Code.org"
@@ -484,7 +484,7 @@ es:
       body: "Explora un mundo de Minecraft, a través de Code."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
     unplugged:
       title: "Lecciones sin conexión"
       audience: "Mayores de 6 años"

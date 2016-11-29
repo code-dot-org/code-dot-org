@@ -368,7 +368,6 @@ GEM
     mustermann (1.0.0.beta2)
     mysql2 (0.3.21)
     naturally (2.1.0)
-    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.2.0)
@@ -521,9 +520,8 @@ GEM
       rdoc (~> 4.0)
     securecompare (1.0.0)
     selectize-rails (0.12.2)
-    selenium-webdriver (2.45.0)
+    selenium-webdriver (2.53.4)
       childprocess (~> 0.5)
-      multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sequel (4.10.0)
@@ -557,6 +555,9 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
+    sshkit (1.11.4)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     stringex (2.5.2)
     sysexits (1.2.0)
     term-ansicolor (1.3.2)
@@ -676,7 +677,6 @@ DEPENDENCIES
   mocha
   mysql2 (~> 0.3.13)
   naturally
-  net-http-persistent
   net-scp
   net-ssh
   newrelic_rpm (~> 3.16.0)
@@ -717,7 +717,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool!
   selectize-rails
-  selenium-webdriver (~> 2.45.0)
+  selenium-webdriver (~> 2.53.0)
   sequel (~> 4.10)
   shotgun
   simplecov (~> 0.9)
@@ -727,6 +727,7 @@ DEPENDENCIES
   sprockets (~> 3.6.3)
   sprockets-rails (~> 3.1.1)
   sqlite3
+  sshkit
   stringex (~> 2.5.2)
   therubyracer (~> 0.12.2)
   thin

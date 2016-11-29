@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "تهانينا! لقد قمت بجمع كل {count} العناصر!",
   "collectorCollectedNothing": "استمر بكتابة التعليمات البرمجية! أنت تحتاج لجمع أكبر قدر من العناصر بقدر ما يمكنك.",
   "collectorCollectedSome": "عمل عظيم! لقد جمعت {count} من العناصر!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "أن الفضاء لا تملك ما يكفي من المواد لكي أجمعها.",
   "collectorTooManyBlocks": "يمكنك فقط استخدام {blockLimit} كتل. ألقي نظرة على التعليمات البرمجية الخاصة بك و حاول مجدداً!",
   "continue": "إستمرار",
@@ -111,6 +112,5 @@
   "word": "ابحث عن الكلمة",
   "wrongCropError": "أنا لا استطيع حصاد هذا المحصول من هنا.",
   "yes": "نعم",
-  "youSpelled": "قمت بكتابة",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "قمت بكتابة"
 }

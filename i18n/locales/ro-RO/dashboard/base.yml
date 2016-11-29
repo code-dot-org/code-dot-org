@@ -82,8 +82,8 @@ ro:
     student_count: '%{count} studenţi s-au înregistrat deja.'
     teacher_count: '%{count} profesori s-au înregistrat deja.'
     overview: 'Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Începe fără logare'
+    hoc_already_signed_up_content: 'Esti logat pentru a preda o Oră de Programare! Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa la acest eveniment. Pentru a incepe, <a href="https://code.org/learn">alegeți un tutorial</a>pentru clasa ta si dați-le și lor link-ul.<br/><br/>Dacă v-a plăcut Hour of Code și vreți să mergeți mai departe, puteți alege o parolă pentru a crea un cont Code Studio și pentru a vă înrola elevii pentru studiu folosind <a href="https://code.org/educate">cursuri mai lungi</a>.'
     teacher_educator_guide: 'Consultă ghidul educatorului'
     title: "Înregistrați-vă pentru Code.org"
     school_name: 'Numele şcolii (opţional)'
@@ -358,8 +358,8 @@ ro:
     announcement_petition_button: "Adaugă-ți numele"
     announcement_all: "Fii la curent cu noutățile si actualizarile de pe blogul cadrelor noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea anunturile vechi.</a>"
     announcement_hoc_launch: "Mii de cadre didactice în peste 180 de ţări vor începe predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11 decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 'ALERTA pentru cursul 1-4 şi accelerator curs profesori: datorită traficului de milioane de studenţi ce fac o oră de programare, <b>code Studio nu va salva sau raporta progresele înregistrate pe aceste cursuri din 3-11 decembrie</b>. Vă recomandăm să faceti o activitate oră de cprogramare cu clasa dvs. pentru a sărbători ora de programare in săptămâna educaţiei Computer Science. În timp ce propriile noastre tutoriale ora de programare, de asemenea, nu va salva progresul acelei săptămâni, studenţii pot face tutoriale complete şi câştiga un certificat.'
+    announcement_mc_launch: "Unul din tutorialele noastre cele mai populare acum are o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu clasa ta la Hour of Code."
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_not_entered: "Vă rugăm să furnizaţi current_section_code."
@@ -490,7 +490,7 @@ ro:
       body: "Exploreaza o lume Minecraft prin cod."
     minecraft2016:
       title: "Minecraft"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
     unplugged:
       title: "Lecţii offline"
       audience: "Vârsta +4 ani"

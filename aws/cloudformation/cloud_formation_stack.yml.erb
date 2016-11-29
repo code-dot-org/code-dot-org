@@ -14,7 +14,6 @@ unless dry_run
   update_bootstrap_script.call
 end
 
-old_commit = '521b9fa4942aded6733afd98bc17079d4c23c457'
 frontends = %i(production adhoc).include?(rack_env)
 -%>
 ---
@@ -106,21 +105,6 @@ Resources:
         Timeout: 300
 
 <% if frontends -%>
-  WebServer:
-    Type: AWS::AutoScaling::AutoScalingGroup
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT50M
-    Properties:
-      VPCZoneIdentifier: <%=subnets%>
-      LaunchConfigurationName: {Ref: LaunchConfig}
-      MinSize: 2
-      MaxSize: 20
-      HealthCheckType: ELB
-      HealthCheckGracePeriod: 2000
-      LoadBalancerNames: [Ref: LoadBalancer]
-      MetricsCollection:
-        - Granularity: 1Minute
   Frontends:
     DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
@@ -149,25 +133,6 @@ Resources:
       LoadBalancerNames: [Ref: LoadBalancer]
       MetricsCollection:
         - Granularity: 1Minute
-  LaunchConfig:
-    Type: AWS::AutoScaling::LaunchConfiguration
-    Properties:
-      ImageId: {'Fn::GetAtt': [AMI, ImageId]}
-      InstanceType: <%=instance_type%>
-      IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
-      SecurityGroups: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
-      KeyName: <%=ssh_key_name%>
-      BlockDeviceMappings:
-        - DeviceName: /dev/sda1
-          Ebs:
-            VolumeSize: 64
-            VolumeType: gp2
-      UserData:
-        Fn::Base64: <%=file.call('bootstrap_old.sh.erb',
-          resource_id: 'WebServer',
-          node_name: 'fe-${INSTANCE_ID}',
-          run_list: ['role[front-end]'],
-          commit: old_commit )%>
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
@@ -187,14 +152,13 @@ Resources:
           hook: 'WebServerHookNew',
           node_name: 'fe-${INSTANCE_ID}',
           commit: commit)%>
-<% {'' => 'WebServer', 'New' => 'Frontends'}.each do |fe, server| %>
 # Create associated resources for old and new Auto Scaling Groups.
 # TODO remove old resources after migration complete.
-  ScaleUpPolicy<%=fe%>:
+  ScaleUpPolicyNew:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
       AdjustmentType: PercentChangeInCapacity
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 600
@@ -215,11 +179,11 @@ Resources:
         # 90-100% cpu, +80% instances
         - MetricIntervalLowerBound: 40
           ScalingAdjustment: 80
-  ScaleDownPolicy<%=fe%>:
+  ScaleDownPolicyNew:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
       AdjustmentType: PercentChangeInCapacity
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       MetricAggregationType: Average
       MinAdjustmentMagnitude: 1
       EstimatedInstanceWarmup: 300
@@ -244,11 +208,11 @@ Resources:
         # 10-0% cpu, -50% instances
         - MetricIntervalUpperBound: -20
           ScalingAdjustment: -50
-  ScaleUpAlarm<%=fe%>:
+  ScaleUpAlarmNew:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmDescription: Scale-up if average CPU is greater than 50% for 10 minutes
-      AlarmActions: [Ref: ScaleUpPolicy<%=fe%>]
+      AlarmActions: [Ref: ScaleUpPolicyNew]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
@@ -258,12 +222,12 @@ Resources:
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - Name: AutoScalingGroupName
-          Value: {Ref: <%=server%>}
-  ScaleDownAlarm<%=fe%>:
+          Value: {Ref: Frontends}
+  ScaleDownAlarmNew:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmDescription: Scale-down if average CPU is less than 30% for 10 minutes
-      AlarmActions: [Ref: ScaleDownPolicy<%=fe%>]
+      AlarmActions: [Ref: ScaleDownPolicyNew]
       MetricName: CPUUtilization
       Namespace: AWS/EC2
       Statistic: Average
@@ -273,41 +237,40 @@ Resources:
       ComparisonOperator: LessThanOrEqualToThreshold
       Dimensions:
         - Name: AutoScalingGroupName
-          Value: {Ref: <%=server%>}
-  WebServerHook<%=fe%>:
+          Value: {Ref: Frontends}
+  WebServerHookNew:
     Type: AWS::AutoScaling::LifecycleHook
     Properties:
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       LifecycleTransition: 'autoscaling:EC2_INSTANCE_LAUNCHING'
       DefaultResult: ABANDON
       HeartbeatTimeout: 3000 # seconds = 50 minutes
-      NotificationTargetARN: {Ref: WebServerHookTopic<%=fe%>}
+      NotificationTargetARN: {Ref: WebServerHookTopicNew}
       RoleARN: {'Fn::GetAtt': [IAM, LifecycleHookRoleARN]}
-  WebServerHookTopic<%=fe%>: {Type: 'AWS::SNS::Topic'}
+  WebServerHookTopicNew: {Type: 'AWS::SNS::Topic'}
   <%if environment == :production -%>
   # Scale up min instances at 4AM PDT (=11:00 UTC)
-  ClassroomTrafficBegin<%=fe%>:
+  ClassroomTrafficBeginNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       MinSize: 5
       Recurrence: "0 11 * * MON-FRI"
   # Scale down min instances at 1PM PDT (=20:00 UTC)
-  ClassroomTrafficEnd<%=fe%>:
+  ClassroomTrafficEndNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       MinSize: 3
       Recurrence: "0 20 * * MON-FRI"
   # Further scale down min instances at 8PM PDT (=3:00+1day UTC)
-  Overnight<%=fe%>:
+  OvernightNew:
     Type: AWS::AutoScaling::ScheduledAction
     Properties:
-      AutoScalingGroupName: {Ref: <%=server%>}
+      AutoScalingGroupName: {Ref: Frontends}
       MinSize: 2
       Recurrence: "0 3 * * TUE-SAT"
 <%   end -%>
-<% end -%>
 <% end -%>
 # Route53 (DNS) and CloudFront (CDN) resources:
 # TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.

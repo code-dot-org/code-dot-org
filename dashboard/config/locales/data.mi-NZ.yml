@@ -2,513 +2,617 @@
   data:
     game:
       name:
-        Unplug1: Introduction to Computer Science
-        Maze: The Maze
-        Multi: Multiple Choice Stuffs
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Artist: The Artist
-        Unplug4: Algorithms
-        Artist2: The Artist 2
-        Unplug5: Functions
-        Farmer: The Farmer
-        Unplug6: Conditionals
-        Artist3: The Artist 3
-        Unplug7: Song Writing
-        Farmer2: The Farmer 2
-        Unplug8: Abstraction
-        Artist4: The Artist 4
-        Unplug9: Relay Programming
-        Farmer3: The Farmer 3
-        Unplug10: The Internet
-        Artist5: The Artist 5
-        Unplug11: Wrap-up
-        MazeEC: The Maze
-        Bounce: Bounce
+        Unplug1: Whakatakinga ki te Mātauranga Rorohiko
+        Maze: Te Rīrapa
+        Multi: Momo Kōwhiringa Mahi
+        Unplug2: Whakaaro ā-Rorohiko
+        Unplug3: Papatono Pepa Kauwhata
+        Artist: Te Rehetoi
+        Unplug4: Ngā Hātepe
+        Artist2: Te Rehetoi 2
+        Unplug5: Ngā Taumahi
+        Farmer: Te Kaiahuwhenua
+        Unplug6: Ngā Here
+        Artist3: Te Rehetoi 3
+        Unplug7: Tito Waiata
+        Farmer2: Te Kaiahuwhenua 2
+        Unplug8: Te Whakawaitara
+        Artist4: Te Rehetoi 4
+        Unplug9: Papatonotanga ā-Tānga
+        Farmer3: Te Kaiahuwhenua 3
+        Unplug10: Te Ipurangi
+        Artist5: Te Rehetoi 5
+        Unplug11: Tākaia
+        MazeEC: Te Rīrapa
+        Bounce: Tupana
         Flappy: Flappy Bird
-        Jigsaw: Jigsaw
-        MazeStep: Maze Step Mode
-        Wordsearch: Wordsearch
-        Webapp: App Lab
-        ArtistEC: The Artist
-        TextMatch: Text Match
-        StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Internet Simulator
-        Custom: Artist
-        CustomStudio: Play Lab
+        Jigsaw: Pangahono
+        MazeStep: Aratau Hipanga Rīrapa
+        Wordsearch: Rapukupu
+        Webapp: Taiwhanga Taupānga
+        ArtistEC: Te Rehetoi
+        TextMatch: Whakaōrite Kuputuhi
+        StudioEC: Taiwhanga Tākaro
+        Applab: Taiwhanga Taupānga
+        NetSim: Pūtaruna ā-Ipurangi
+        Custom: Rehetoi
+        CustomStudio: Taiwhanga Tākaro
     trophy:
       name:
-        Bronze: Bronze
-        Silver: Silver
-        Gold: Gold
+        Bronze: Rauwhero
+        Silver: Hiriwa
+        Gold: Kōura
     concept:
       description:
-        sequence: Sequence
-        if: If block
-        if_else: If-else block
-        loop_times: Repeat times block
-        loop_until: Repeat until block
-        loop_while: While block
-        loop_for: Counter block
-        function: Functions
-        parameters: Functions with parameters
+        sequence: Raupapa
+        if: paraka Ki te
+        if_else: paraka Ki te-kē
+        loop_times: paraka Tōai i ngā wā
+        loop_until: paraka Tōaitia kia
+        loop_while: paraka Ina
+        loop_for: Paraka pūtatau
+        function: Ngā Taumahi
+        parameters: Ngā taumahi me ngā tawhā
     level:
       instructions:
-        maze_2_2: 'Can you help me to catch the naughty pig? Stack a couple of "move
-          forward" blocks together and press "Run" to help me get there. '
-        maze_2_1: This pig is ruffling my feathers. Help me to find him!
-        maze_2_2_5: Trace the path and lead me to the silly pig. Avoid TNT or the
-          feathers will fly!
-        maze_2_3: Guide me to the green evilness! (Watch out for TNT)
-        maze_2_4: Keep calm and help me to find the bad pig. Otherwise I might get
-          angry!
-        maze_2_5: There's a way I can get to the silly pig using only 2 blocks. Can
-          you figure it out?
-        maze_2_6: Try to get me to the green intruder using only three blocks.
-        maze_2_7: Help me banish this bad piggy using the fewest number of blocks.
-          Try using more than one "repeat times" block.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
-        maze_2_9: Ok, try the new "repeat until" block - it will repeat until I reach
-          the annoying pig.
-        maze_2_10: Ok, one last time for practice - can you solve this one using only
-          4 blocks?
-        maze_2_11: Dear person.  Me zombie. Me hungry. Must... get... to sunflower...
-          Can you get me there with only 5 blocks?
-        maze_2_12: Ok, this is similar, but slightly different. Can you do it in only
-          5 blocks?
-        maze_2_13: 'Use the new "if" block to let me decide when to turn. Hint: you
-          only need one more block, but learn how we set it up so you can do it on
-          your own next time.'
-        maze_2_14: Ok, this is just like the last puzzle, but you need to remember
-          how you used the "if" block and the "repeat" block together.
-        maze_2_15: Me want sunflower! Use an "if" block to get me there with the fewest
-          number of blocks.
-        maze_2_16: Ok, let's do that again for practice - this isn't very different,
-          but watch out for the chompers!
-        maze_2_17: The "If-else" blocks checks a condition, and then does one thing
-          OR another. To get me to the sunflower try to use this new block.
-        maze_2_18: One more practice of the "if-else" block, can you get it right
-          on your first try?
-        maze_2_19: Can you add just 3 blocks to help me solve a more complex maze?
-          If you do it right, I can walk any curvy path no matter the length.
-        turtle_1_1: Hi, I'm an artist. You can write code to make me draw almost anything.
-          Use a few blocks to make me draw over the grey lines in the picture.
-        turtle_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
-          it in the new "set color" block.'
-        turtle_1_3: Make a square using only 3 blocks.
-        turtle_1_4: 'Draw a triangle whose sides are all in different colors, using
-          the "random color" option that picks a different color each time. Hint:
-          you''ll have to figure out how far to turn by clicking on the number in
-          the turn block.'
-        turtle_1_5: Now, for practice, draw a triangle and then a square to draw an
-          envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do
-          the triangle first, then figure out how much to turn before drawing the
-          square.'
-        turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green
-          glasses. The squares are 100 pixels on each side, and they're 50 pixels
-          apart. Don't forget to draw in green!
-        turtle_1_8: Ok, try to figure out what happens if you run this code (or press
-          "Run" to try it). Then, repeat it enough times to complete the drawing.
-          The colors will be different every time.
-        turtle_1_9: Can you figure out what number to replace the question marks with
-          to draw a circle?
-        turtle_1_10: 'You made it! Now, draw anything you want. Some fun ideas: a
-          stick figure, snowflake, or spiral. Also try the new "set width" block.
-          Have fun!'
-        turtle_4_1: 'Can you draw a triangle (with edges of 100 pixels) with only
-          3 blocks? Hint: use a "repeat" block.'
-        turtle_4_2: Add a "turn right by 90 degrees" block somewhere in the middle
-          of the program already out on the workspace to draw these triangles.
-        turtle_4_3: Ok, here's the code you wrote to draw a single triangle. Can you
-          add a "repeat" and "turn" block to make a pretty flower?
-        turtle_4_4: 'Here''s the same code from the previous puzzle, but turning only
-          36 degrees after drawing each triangle. How many times does this need to
-          repeat? (Hint: after 360 degrees of turning the drawing will come full circle)'
-        turtle_4_5: 'Here''s the same code from the previous puzzle, but repeating
-          the turns 36 times. How many degrees should the turns be? (Hint: after 360
-          degrees of turning the drawing will come full circle)'
-        turtle_4_6: Using only 3 blocks, can you draw a square with edges of 20 pixels?
-        turtle_4_7: 'Here''s the code for drawing the square from last puzzle. Can
-          you repeat it to draw 10 adjacent squares like a ladder? Hint: you only
-          need 2 more blocks.'
-        turtle_4_8: Here's the solution to the previous puzzle. Can you add just 2
-          more blocks to complete the drawing?
-        turtle_4_9: Here's the solution to the previous puzzle. How many degrees should
-          you turn to complete the drawing? (You probably need to guess a few times)
-        turtle_4_10: Here's the solution to the previous puzzle. How many times should
-          you repeat to complete the drawing?
-        turtle_4_11: Try changing the numbers in the "turn" and "repeat" blocks to
-          make different patterns. Or, experiment changing the rest of the code to
-          draw anything you want.
-        maze_karel_1_1: Hi, I'm a farmer. I need your help to flatten the field on
-          my farm so it's ready for planting. Move me to the pile of dirt and use
-          the "remove" block to remove it.
-        maze_karel_1_2: Next, move me to the hole and fill it with TWO shovelfuls
-          of dirt, using the "fill" block.
-        maze_karel_1_3: Move me to the pile of dirt and tell me how many shovelfuls
-          to remove using as few blocks as possible.
-        maze_karel_1_4: 'Can you help me remove all four piles of dirt? Hint: use
-          a repeat block if you can.'
-        maze_karel_1_5: 'Help me fill in all these holes with 5 shovelfuls of dirt.
-          Hint: you can put a "repeat" block inside the "while" block.'
-        maze_karel_1_6: Remove all the piles of dirt, using as few blocks as possible.
-          The new options in the dropdown menu on the "while" block tell me if I'm
-          standing on a pile or a hole.
-        maze_karel_1_7: Wow, I found a really deep hole! I don't know how many shovelfuls
-          of dirt it needs. Can you write a program that fills it until the ground
-          is even?
-        maze_karel_1_8: Help me fill in the hole at the end of the field, using as
-          few blocks as possible.
-        maze_karel_1_9: 'Make me remove all these piles of dirt. Try to use as few
-          blocks as possible. Hint: try using a "while" block.'
-        maze_karel_1_10: I'm working late, so it's dark out, and I can't tell how
-          large the piles are. Now I don't have all the options I used to have on
-          the while block. Move me along the field, and if there is a pile, remove
-          it.
-        maze_karel_1_11: 'It''s still dark outside. Move me along the field. If there
-          is a pile, remove it, and if there is a hole, fill it in. Hint: use the
-          dropdown menu of options on the "if" block.'
-        turtle_2_1: 'Hello. Me zombie artist. Me love drawing! Help me draw a square
-          in a special color. Important note: you have all the same blocks but they''ve
-          now been arranged in categories.'
-        turtle_2_2: Welcome to using functions, which let you define new blocks! Try
-          the new "draw a square" block, found in the "Functions" category, to draw
-          a small 50x50 green square.
-        turtle_2_3: Use the "repeat" block (in the "Loops" category) to draw 3 squares
-          of size 100, each 120 degrees apart. And do it in 3 different, random colors.
-        turtle_2_4: 'Now we''re going to get fancy. Change the code to draw 36 squares,
-          100 pixels wide, and each 10 degrees apart. Hint: you may want to use the
-          slider to make me go faster.'
-        turtle_2_5: Draw squares with sides of 50, 60, 70, 80, and 90 pixels.  You'll
-          need to use the "draw a square" function five times.
-        turtle_2_6: 'Ok, this program will use a counter, to draw the same squares
-          as last time. You want the square to be the same size as the counter, so
-          use the "counter" block. Hint: It''s in the Variables category.'
-        turtle_2_7: Here's a program to draw a spiral, but the blocks are disabled
-          so they won't run. Make a new program using a "count with" block (in the
-          Loops category) and "counter" block (in the Variables category) to draw
-          the same spiral.
-        turtle_2_7_5: There's a new "draw a snowman" function (in the Functions category).
-          Draw two snowmen, of height 250 and 100.
-        turtle_2_8: This one's a bit tricky. Use the "draw a snowman" function and
-          the new "jump forward" block (in the Actions category). Draw 3 snowmen in
-          different colors, 100 pixels apart.
-        turtle_2_9: Use a "count with" loop to draw a family of snowmen with heights
-          of 110, 100, 90, 80, and 70. The snowmen should all be 60 pixels apart.
-        turtle_2_10: Here's some code to try experimenting with different spirals.  What
-          happens if you change the turn amount? Or set a random color in the loop?  Draw
-          anything you like.
-        maze_karel_2_1: 'Try using the blocks to help me remove all the piles and
-          fill in all the holes on the ground. Try to use loops instead of using too
-          many blocks. Hint: you can put a loop inside another loop.'
-        maze_karel_2_2: We've defined our own block called "fill 5", which is now
-          in the Functions category. Use it to help me fill in this hole.
-        maze_karel_2_3: Use the new "fill 5" function block to make me fill in all
-          the holes. You'll have to drag out the "fill 5" block out from the Functions
-          category.
-        maze_karel_2_4: Define a new function that removes 7 shovelfuls. Then use
-          it to write a program that helps me remove all the piles.
-        maze_karel_2_5: Create a new function that removes 6 shovelfuls from a pile,
-          and use it to help me level out all the piles.
-        maze_karel_2_6: Use two new functions, "fill 8" and "remove 8", to help me
-          level out the pile and fill in the hole.
-        maze_karel_2_7: There's a cow in my field! Write a new function that helps
-          me avoid the cow and remove the pile. Put all your blocks inside the new
-          function.
-        maze_karel_2_8: Use this new function, "avoid the cow and remove 1", to help
-          me remove all the piles.
-        maze_karel_2_9: Ok, here's a function that removes 4 different piles of dirt
-          in a vertical column. Try putting this function inside a loop, so that you
-          remove all the piles of dirt using only a few new blocks.
-        maze_karel_2_10: Move me across the field, and use these two functions to
-          help me remove all the piles and fill all the holes.
-        turtle_3_1: This puzzle shows you how the "draw a square" and "draw a circle"
-          functions are defined.  Defining a function doesn't run its blocks.  You
-          have to pull out the "draw a square" block to actually draw a square.
-        turtle_3_2: Using the "draw a square" function as an example, create a "draw
-          a triangle" function and use it.
-        turtle_3_3: 'Draw triangular fences around the cats and a square fence around
-          the cow.  Tip: test the program as you go along.'
-        turtle_3_4: See if you can figure out how to use "draw a square" and "draw
-          a triangle" (and some other blocks) to draw a house around the lion.
-        turtle_3_5: 'Now create a new "draw a house" function and use it to house
-          two cats. Hint: create a new function using the "do something" block, and
-          type your own text to name the block.'
-        turtle_3_6: 'Using "draw a square" as an example, add an input named "length"
-          to "draw a triangle". Then, draw triangles in different sizes. (Hint: click
-          the star to add an input to a function)'
-        turtle_3_7: Add an input named "length" to "draw a house" and build a big
-          house for the elephant (with edges 150 pixels long)
-        turtle_3_8: Modify "draw a house" so I end up at the bottom right corner after
-          drawing a new house. Use this modified function to draw three houses.
-        turtle_3_9: Can you re-create the "draw a house" function without help? Try
-          it, and then draw a row of houses.
-        turtle_3_10: You've learned a lot! Now use it to draw whatever you want. Try
-          to draw a star, or a spiral, or a fancy snowflake.
-        maze_karel_debug_seq_1: Welcome to debugging! My code doesn't work right.
-          Can you spot the problem and fix it so that I can get my field flat and
-          ready for planting?
-        maze_karel_debug_seq_2: What's wrong with this program? How should you fix
-          it so I can remove that pile?
-        maze_karel_debug_repeat: De-bug this program for me so my field will be nice
-          and flat.
-        maze_karel_debug_while: How should you change this program to help me fill
-          the hole?
-        maze_karel_debug_if: Help! Fix the program so my field will be completely
-          flat.
-        maze_karel_debug_if_else: De-bug this program so I can fill in the holes and
-          remove all the piles.
-        maze_karel_debug_function_1: What should you change about this program to
-          help me remove all the piles?
-        maze_karel_debug_function_2: Can you de-bug this program for me so I can make
-          my field flat?
-        maze_karel_debug_function_3: 'Edit this program so I''ll remove all the piles
-          on my field. '
-        turtle_5_1: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move();
-          so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: How should I get to the pig? Make sure I don't run into the box
-          of TNT!
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the
-          pig.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        bounce_1: Attach a block to the "when left arrow" block and press "Run". Move
-          the paddle using the left arrow to reach the finish target.
-        bounce_2: Attach a block to the "when right arrow" and "when left arrow" blocks.
-          Move the paddle to reach both finish targets.
-        bounce_3: Now try something similar with the "when up arrow" block. Move the
-          paddle to the finish target at the top.
-        bounce_4: This time you need to add four blocks. Move the paddle to all four
-          finish targets to complete this puzzle.
-        bounce_5: We're going to send a ball flying down towards the paddle. Attach
-          a block to the "when ball hits paddle" block to ensure the ball reaches
-          the finish target.
-        bounce_6: Now the finish target is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7: Attach blocks to each of the "when" blocks. Bounce the ball until
-          it hits the finish target.
-        bounce_10: There is a now a goal at the top. Attach the "score point" and
-          "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses paddle" blocks to make a game. See how many points you can score
-          before your opponent scores twice.
-        bounce_11: You can now attach blocks to the "when run" block. You have to
-          attach the new "launch new ball" block in more than one place. Also, try
-          changing the scene or the speed of the paddle and the ball and see how many
-          points you can score before your opponent scores twice.
-        bounce_12: Create your own Bounce game. You can change all the visuals and
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
-        Custom_builder: Drag blocks from the toolbox to the workspace to draw the
-          level you wish to create. Press "Run" when you are ready.
-        flappy_1: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_2: Now we've added some ground.  Attach a block to the "when hit the
-          ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle, instead of ending the
-          game try setting the score back to 0.
-        flappy_11: Create your own Flappy game. You can change all the visuals and
-          all the rules, even the gravity. When you're done, click Finish to let friends
-          try your game on their phones.
-        flappy_k1_1: Play Flappy
-        flappy_k1_2: Attach a block to the "when click" block, then press "Run". Click
-          or tap the screen to move Flappy to the target.
-        flappy_k1_3: Now we've added some ground.  Attach a block to the "when hit
-          the ground" block.  Your code needs to 'END GAME' when Flappy crashes.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
-        jigsaw_1: Click the block
-        jigsaw_2: Drag the block to the target
-        jigsaw_3: Arrange the blocks to form the image
-        jigsaw_4: Arrange the blocks to form the image
-        jigsaw_5: Arrange the blocks to form the image
-        jigsaw_6: Arrange the blocks to form the image
-        jigsaw_7: Arrange the blocks to form the image
-        jigsaw_8: Arrange the blocks to form the image
-        jigsaw_9: Arrange the blocks to form the image
-        jigsaw_10: Arrange the blocks to form the image
-        jigsaw_11: Arrange the blocks to form the image
-        jigsaw_12: Arrange the blocks to form the image
-        jigsaw_13: Fix the puzzle!
-        mazestep_1: Maze step description here
-        mazestep_2: Maze step description here
-        mazestep_3: Maze step description here
-        mazestep_4: Maze step description here
-        mazestep_5: Maze step description here
+        maze_2_2: 'E pai ana māu au e tautoko ki te hopu i te poaka kino? Whakaemihia
+          ētahi paraka "neke ki mua", ā, pāwhiritia te "Whakarere" kia tae atu au. '
+        maze_2_1: E whakatakariri ana te poaka i ahau. Tēnā āwhinatia ahau ki te rapu
+          i a ia!
+        maze_2_2_5: Whakatakina te ara kia tae atu ai au ki te poaka rorirori rā.
+          Karohia te TNT kei rere ngā raukura!
+        maze_2_3: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
+        maze_2_4: Kia mauri tau, ā, āwhinatia ahau ki te rapu i te poaka kino. Kei
+          riri ahau!
+        maze_2_5: He ara e tae atu ai au ki te poaka mā te whakamahi i ngā paraka
+          e rua noa iho. E āhei ana koe te kite?
+        maze_2_6: Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki me ngā
+          paraka e toru noa iho.
+        maze_2_7: Āwhinatia ahau ki te pei i tēnei poaka kino mā te whakamahi i te
+          itinga o ngā paraka e taea ana. Tēnā, whakamahia kia neke atu i te kotahi
+          paraka "tōai kia () ngā wā".
+        maze_2_8: 'Me he kiwikiwi te paraka, he tohu tēnā kāore e āhei taua paraka
+          te muku. Whakaotihia tēnei panga mā te whakamahi i te paraka "tōai" ka tōai
+          i ngā wā e toru. Me ngana ki te hoatu i ēnei paraka e toru ki roto i te
+          paraka "tōai": neke, neke, huri.'
+        maze_2_9: Ka pai, tēnā whakamātauria te paraka hou "tōaitia kia" - ka tōai
+          tonu kia tae rawa atu au ki te poaka whakapōrearea.
+        maze_2_10: Ka pai, kotahi anō te wā whakaharatau - ka taea e koe tēnei te
+          whakaoti mā te whakamahi i ngā paraka e 4 noa iho?
+        maze_2_11: Tēnā koe e te tangata. He kairoro ahau. E hia kai ana. Me... tae...
+          atu ki te putiputi... E taea ana e koe te kawe i ahau ki kō me ngā paraka
+          e 5 noa iho?
+        maze_2_12: Na, he āhua rite hoki tēnei, heoi anō, he paku rerekē. Ka tutuki
+          i a koe me ngā paraka e 5 noa iho?
+        maze_2_13: 'Whakamahia te paraka hou "ki te" kia pai ai taku whakatau, āhea
+          ahau huri ai. Tīwhiri: ka mātua i te paraka kotahi, engari, me ako ki te
+          whakarite kia āhei koe ki te mahi me tō kotahi haere ake nei.'
+        maze_2_14: Ka pai, he rite tēnei ki te panga o mua, heoi anō, me maumahara
+          koe i pēhea tō whakamahi tahi i te paraka "ki te" me te paraka "tōai".
+        maze_2_15: He putiputi māku! Whakamahia tētahi paraka "ki te" kia tae atu
+          ahau me te torutoru noa iho o ngā paraka.
+        maze_2_16: Ka pai, me mahi anō hei whakaharatau - ehara i te mea he tino rerekē
+          tēnei, heoi anō, kia mataara i ngā kaingaungau!
+        maze_2_17: Ka takitaki te paraka "ki te-ka" i tētahi āhuatanga, kātahi ka
+          mahi i tētahi mahi, i tētahi atu mahi RĀNEI. Kia pai ai taku tae atu ki
+          te putiputi whakamahia tēnei paraka hou.
+        maze_2_18: Kotahi anō te whakamātau o te paraka "ki te-ka", ka tutuki i a
+          koe i te whakamahinga tuatahi?
+        maze_2_19: E āhei ana koe ki te tāpiri i ngā paraka e toru noa iho ki te āwhina
+          i ahau ki te whakaoti i tētahi rīrapa uaua ake? Ki te tika i a koe, ka āhei
+          ahau ki te hikoi i ngā ara kōpikopiko ahakoa te roanga.
+        turtle_1_1: Tēnā koe, he rehetoi ahau. Mā tō tuhi waehere ka meatia kia tāngia
+          e ahau te aha rānei. Whakamahia ētahi paraka kia tā ahau ki runga ngā rārangi
+          kiwikiwi kei te pikitia.
+        turtle_1_2: 'Na, me tā tapawhā i nāianei. KIA MAHARA: whakamahia tō tino tae
+          mā te whiriwhiri i taua tae ki te paraka "tautuhi tae" hou.'
+        turtle_1_3: Hangaia tētahi tapawhā me ngā paraka e 3 noa iho.
+        turtle_1_4: 'Tāngia he tapatoru he rerekē te tae o ōna tapa mā te whakamahi
+          i te kōwhiringa "tae matapōkere", tērā ka whiriwhiri i tētahi tae rerekē
+          i ia wā. Tīwhiri: māu anō e whiriwhiri me pēhea te roa o te huri mā te pāwhiri
+          i te tau kei te paraka huri.'
+        turtle_1_5: Na, hei whakaharatau, tāngia tētahi tapatoru, kātahi tētahi tapawhā
+          ki te tā i tētahi kōpaki.
+        turtle_1_6: 'E āhei ana koe ki te whiriwhiri me pēhea te tā i tēnei tapatoru
+          me tēnei tapawhā? Tīwhiri: Tāngia te tapatoru i te tuatahi, kātahi me whiriwhiri
+          e hia ngā huringa i mua i tānga o te tapawhā.'
+        turtle_1_7: Ka pai, ka mahi kua uaua ake - tēnā whakamātauria tō āheinga ki
+          te tā i ēnei mōhiti kākāriki. 100 pika te nui o ngā tapa katoa o ngā tapawhā,
+          e 50 pika te whānui i waenganui. Kei wareware ki te tā ki te tae kākāriki!
+        turtle_1_8: Ka pai, māu e matapae te hua ina koe ka whakahaere i tēnei waehere
+          (pāwhiritia rānei te "Whakahaere" ki te whakamātau). Kātahi ka tōaitia kia
+          oti rā anō te tānga. Ka rerekē ngā tae i ia wā.
+        turtle_1_9: Ka āhei koe te matapae ko tēhea tau ka tuhia hei whakakapi i ngā
+          tohu pātai ki te tā porohita?
+        turtle_1_10: 'Kua tutuki! Nā, tāngia mai tāu e hiahia ana. Anei ētahi whakaaro
+          ngahau: he tangata pekapeka, he tarahī huka, he tōrino rānei. Whakamātauria
+          hoki te paraka "tautuhi whānuitanga" hou. Kia ngahau!'
+        turtle_4_1: 'E taea ana e koe tētahi tapatoru (100 pika te nui o ōna tapa)
+          me ngā paraka e 3 noa iho? Tīwhiri: Whakamahia te paraka "tōai".'
+        turtle_4_2: Tāpiritia tētahi paraka "e huri whakatematau mā te 90 putu" ki
+          tētahi wāhi ki waenganui i te pūmanawa kei te wāhi mahi kē ki te tā i ēnei
+          tapatoru.
+        turtle_4_3: Ka pai, anei te waehere i tuhia e koe ki te tā i te tapatoru kotahi.
+          E āhei ana e koe tētahi paraka "tōai" me tētahi paraka "huri" te tāpiri
+          ki te hanga i tētahi putiputi ātaahua?
+        turtle_4_4: 'Anei anō te waehere nō te panga o mua, heoi anō, kua hurihia
+          noatia mā te 36 putu i muri mai i te tānga o ia tapatoru. E hia ngā wā e
+          tika ana kia tōaitia tēnei? (Tīwhiri: Kia hurihia mā te 360 putu ka huri
+          te tānga hei porohita pū)'
+        turtle_4_5: 'Anei anō te waehere nō te panga o mua, engari kua tōaitia mā
+          te 36 putu. Tōna tikanga, e hia putu te nui o ngā huringa? (Tīwhiri: Kia
+          hurihia mā te 360 putu ka huri te tānga hei porohita pū)'
+        turtle_4_6: Mā te whakamahi i ngā paraka e toru noa iho, e taea ana e koe
+          tētahi tapawhā te tā, ko ōna tapa e 20 pika te nui?
+        turtle_4_7: 'Anei te waehere mō te tā i te tapawhā nō te panga o mua. E āhei
+          ana e koe tēnei te tōai ki te tā i ngā tapawhā pātata pēnei i te arawhata?
+          Tīwhiri: e rua anō ngā paraka kia tutuki.'
+        turtle_4_8: Anei te urupare ki te panga o mua. E āhei ana koe e 2 paraka anō
+          te tāpiri ki te whakaoti i te tānga?
+        turtle_4_9: Anei te urupare ki te panga o mua. E hia putu te nui o te huringa
+          ki te whakaoti i te tānga? (E tika ana kia nui ake i te kotahi matapae)
+        turtle_4_10: Anei te urupare ki te panga o mua. E hia ngā wā e tika ana kia
+          tōaitia ki te whakaoti i te tānga?
+        turtle_4_11: Me ngana ki te panoni i ngā tau i te parak "huri' me te paraka
+          "tōai" ki te hanga tauira rerekē. Ka whakamātau rānei ki te tā i te aha
+          rānei ka hiahiatia mā te panoni i te toenga o te waehere.
+        maze_karel_1_1: Tēnā koe, he kaipāmu ahau. Me whai tautoko ana i a koe ki
+          te whakapapatau i te whenua kei taku pāmu kia rite pai mō te whakatō. Tēnā
+          nekehia ahau ki te pūkei oneone, ā, whakamahia te paraka "tangohia" ki te
+          tango.
+        maze_karel_1_2: Whai muri ana, tēnā nekehia ahau ki te rua ka whakakīia ai
+          ki ngā kārehu e RUA o te oneone mā te whakamahi i te paraka "whakakī".
+        maze_karel_1_3: Tēnā nekehia ahau ki te pūkei oneone ka kōrero mai ai e hia
+          kārehu te nui ki te tango mā te whakamahi i te torutoru noa iho o ngā paraka
+          e āhei ana.
+        maze_karel_1_4: 'E āhei ana koe ki te tautoko i ahau ki te tango i ngā pūkeitanga
+          oneone e whā? Tīwhiri: whakamahia tētahi paraka tōai me e taea ana.'
+        maze_karel_1_5: 'Tēnā āwhinatia ahau ki te whakakī i ēnei rua me ngā kārehu
+          e 5 o te oneone. Tīwhiri: e āhei ana te hoatu i tētahi paraka "tōai" ki
+          roto i te paraka "i te".'
+        maze_karel_1_6: Tangohia ngā pūkei oneone katoa, mā te whakamahi i ngā paraka
+          torutoru noa iho. Mā ngā kōwhiringa hou kei te tahua takaiho o te paraka
+          "i te" e whakamōhio mai mēnā e tū ana ahau ki runga i tētahi pūkei, ki roro
+          rānei i tētahi rua.
+        maze_karel_1_7: Kātahi rā! Kua kitea e ahau tētahi rua tino hōhonu. Kāore
+          i aro i au te nui o ngā kārehu me hoatu. E āhei ana koe tētahi papatono
+          te tuhi kia ōrite te takoto o te whenua?
+        maze_karel_1_8: "Āwhinatia ahau ki te whakakī i te rua kei te pito o te whīra
+          mā te whakamahi i ngā paraka torutoru noa iho nei."
+        maze_karel_1_9: 'Meatia kia tangohia e ahau ēnei pūkei oneone katoa. Me ngana
+          me ngā paraka torutoru noa iho. Tīwhiri: whakamahia tētahi paraka "i te".'
+        maze_karel_1_10: Kua roa taku noho ki te mahi, kua pōuri ki waho, ā, kāore
+          au i te paku mōhio he aha te nui o ngā pūkei. Kāore i au ngā kōwhiringa
+          katoa i au i mua i te paraka i te. Tēnā nekehia ahau i te whīra, me he pūkei,
+          tangohia.
+        maze_karel_1_11: 'E pōuri tonu ana i waho. Tēnā nekehia ahau i te whīra. Me
+          he pūkei, tangohia, ā, me he rua, whakakīia. Tīwhiri: whakamahia te tahua
+          takaiho o ngā kōwhiringa kei runga i te paraka "ki te".'
+        turtle_2_1: 'Kia ora. Ko ahau tētahi rehetoi kairoro. Rata pai au ki te tā!
+          Tēnā āwhinatia ahau ki te tā i tētahi tapawhā ki tētahi tae mīharo. Kia
+          mahara ake: he rite tonu katoa ngā momo paraka ki a koe, heoi anō, kua whakarōpūhia
+          ki ngā momo kāwai ināianei.'
+        turtle_2_2: Nau mai ki te wāhanga whakamahi taumahi, te momo ka hāpai i tō
+          tautuhi paraka hou! Whakamātauria te paraka "tāngia he tapawhā", ka kitea
+          i te kāwai "Ngā Taumahi" ki te tā i tētahi tapawhā kākāriki iti, he 50x50
+          te nui.
+        turtle_2_3: Whakamahia te paraka "tōai" (kei te kāwai "Ngā Koromeke") ki te
+          tā i ngā tapawhā e toru, 100 te rahi, ā, he 120 putu te āputa i waenganui
+          i ia tapawhā. Mahia atu me ngā tae 3 rerekē, matapōkere hoki.
+        turtle_2_4: 'Kātahi ka rehe ā tātou mahi. Panonihia te waehere ki te tā i
+          te 36 tapawhā, 100 pika te whānui, 10 putu te āputa i waenganui i ia tapawhā.
+          Tīwhiri: tērā pea ka hiahia koe ki te whakamahi i te purēreti ki tere ake
+          taku haere.'
+        turtle_2_5: Tāngia ētahi tapawhā e  50, 60, 70, 80, me te 90 pika te nui o
+          ngā tapa. Me whakamahi koe i te taumahi "tāngia he tapawhā" e rima ngā wā.
+        turtle_2_6: 'Ka pai, ka whakamahia e tēnei papatono tētahi pūtatau ki te tā
+          i ngā tapawhā kia ōrite ki ērā atu o mua. Ko te hiahia ki ōrite te rahi
+          o te tapawhā ki te pūtatau, nā reira, whakamahia te paraka "pūtatau". Tīwhiri:
+          Kei roto i te kāwai Ngā Taurangi.'
+        turtle_2_7: Koinei tētahi papatono mō te tā tōrino, otirā, kua monoa ngā paraka
+          nā reira e kore e rere. Hangaia tētahi papatono hou me te paraka "tatau
+          me" (kei te kāwai Ngā Koromeke) me te paraka "pūtatau" (kei te kāwai Ngā
+          Taurangi) ki te tā i te tōrino ōrite.
+        turtle_2_7_5: He taumahi "tā tangata huka" hou (kei te kāwai Ngā Taumahi).
+          Tāngia kia runga ngā tāngata huka, kia 250 me te 100 te tāroaroa.
+        turtle_2_8: He āhua uaua tēnei. Whakamahia te taumahi "tā tangata huka" me
+          te paraka "peke whakamua" hou (kei te kāwai Ngā Hohenga). Tāngia kia toru
+          ngā tāngata huka me ngā tae rerekē, kia 100 pika te whānuitanga i waenganui.
+        turtle_2_9: Whakamahia tētahi koromeke "tatau me" ki te tā i tētahi whānau
+          tangata huka kia 110, 110, 90, 80 me te 70 te tāroaroa. Me 60 pika te whānuitanga
+          o te āputa i waenganui i ngā tāngata huka katoa.
+        turtle_2_10: Anei he waehere hei whakamātau me ngā momo tōrino. He aha te
+          hua ki te panoni e koe te nui o te huringa? Ki te tautuhi rānei i tētahi
+          tae matapōkere ki te koromeke? Tāngia tāu e hiahia ana.
+        maze_karel_2_1: 'Me ngana ki te whakamahi i ngā paraka ki te tango i ngā pūkei
+          katoa, me te whakakī i ngā rua katoa kei te whenua. Whakamātauhia ngā koromeke
+          kē kia kaua e whakamahi i te nui o ngā paraka. Tīwhiri: e āhei ana te hoatu
+          koromeke ki roto i tētahi atu koromeke.'
+        maze_karel_2_2: Kua tautuhia e mātou tō mātou ake paraka, "whakakīia kia 5",
+          ā, kei te kāwai Ngā Taumahi. Whakamahia ki te tautoko i ahau ki te whakakī
+          i tēnei rua.
+        maze_karel_2_3: Whakamahia te paraka taumahi hou "whakakīia kia 5" kia whakakīia
+          e au ngā rua katoa. Me tō koe i te paraka "whakakīia kia 5" i te kāwai Ngā
+          Taumahi.
+        maze_karel_2_4: Tautuhia tētahi taumahi hou ka tango i te 7 kārehunga ka whakamahia
+          ai ki te tuhi papatono hāpai i au ki te tango i ngā pūkei katoa.
+        maze_karel_2_5: Waihangahia he taumahi hou ka tango i te 6 kārehunga i te
+          pūkei ka whakamahia ai ki te āwhina i ahau ki te whakapapatahi i ngā pūkei.
+        maze_karel_2_6: Whakamahia ngā taumahi hou, "whakakīia kia 8" me te "tangohia
+          kia 8" ki te āwhina i ahau ki te whakapapatahi i te pūkei me te whakakī
+          i te rua.
+        maze_karel_2_7: He kau kei taku whīra! Tuhia tētahi taumahi hou ka hāpai i
+          taku karo i te kau me te tango i te pūkei. Hoatu ō paraka katoa ki taua
+          taumahi hou.
+        maze_karel_2_8: Whakamahia tēnei taumahi hou, "karohia te kau, ā, tangohia
+          tētahi", ki te āwhina i ahau ki te tango i ngā pūkei katoa.
+        maze_karel_2_9: Ka pai, anei te taumahi ka tango i ngā pūkei oneone rerekē
+          e 4 i tētahi tīwae poutū. Me ngana ki te hoatu i tēnei taumahi ki roto i
+          te koromeke, ki te tango i ngā pūkei oneone katoa mā te whakamahi i ngā
+          paraka torutoru noa iho.
+        maze_karel_2_10: Nekehia hīpae ahau i te whīra, ā, whakamahia ēnei taumahi
+          e rua ki te āwhina i ahau ki te tango i ngā pūkei me te whakakī i ngā rua
+          katoa.
+        turtle_3_1: E whakaatu ana tēnei panga te tautuhinga o te taumahi "tāngia
+          tētahi tapawhā" me te "tāngia tētahi porohita". E kore te tautuhi taumahi
+          e whakamahi i ōna paraka. Me tango rawa koe i te paraka "tāngia tētahi tapawhā"
+          ki te tā tapawā.
+        turtle_3_2: Mā te whakamahi i te taumahi "tāngia he tapawhā" hei tauira, waihangahia
+          tētahi taumahi "tāngia he tapatoru" ka whakamahia ai.
+        turtle_3_3: 'Tāngia he taiapa tapatoru ka karapoti i ngā ngeru me tētahi taiapa
+          karapoti i te kau. Aki: whakamātauria te papatono i a koe e mahi ana.'
+        turtle_3_4: Tēnā whiriwhiri whakaaro e pā ana ki te whakamahinga o te "tāngia
+          tētahi tapawhā" me te "tāngia tētahi tapatoru" (me ētahi atu paraka) ki
+          te tā i tētahi whare ka karapoti i te raiona.
+        turtle_3_5: 'Na, hangaia mai tētahi taumahi hou, "tāngia he whare", ā, whakamahia
+          ki te hanga whare mō ngā ngeru e rua. Tīwhiri: hangaia he taumahi hou me
+          te paraka "mahi i tētahi mahi", ā, patopatohia ō ake kuputuhi ki te tapa
+          ingoa ki te paraka.'
+        turtle_3_6: 'Mā te whakamahi i te "tāngia he tapawhā" hei tauira tāpiritia
+          tētahi taiuru kua whakaingoatia "roa" ki te "tāngia tētahi tapatoru". Kātahi
+          me tā tapatoru rarahi rerekē. (Tīwhiri: pāwhiritia te whetū ki te tāpiri
+          taiuru ki tētahi taumahi)'
+        turtle_3_7: Tāpiritia tētahi taiuru kua whakaingoatia "roa" ki te "tāngia
+          tētahi whare", a, hangaia mai tētahi whare rahi mō te arewhana (he tapa
+          ōna 150 pika te roa)
+        turtle_3_8: Whakakētia te "tāngia tētahi whare" kia tau atu ahau ki te kokona
+          o raro i te taha matau i muri mai i te tānga o tētahi whare hou. Whakamahia
+          te taumahi kua whakakētia ki te hanga i ngā whare e toru.
+        turtle_3_9: E taea ana e koe te taumahi "tāngia tētahi whare" te hangaia houhia
+          me te kore tautoko? Whakamātauria, ā, tāngia tētahi rārangi whare.
+        turtle_3_10: Inā te nui o ngā mea kua ako! Whakamahia ināianei ki te tā i
+          tāu e hiahia ana. Me ngana ki te tā whetū, tōrino, taratī huka kounga rānei.
+        maze_karel_debug_seq_1: Nau mai ki te patuirotanga! Kei te hē te rere o taku
+          waehere. E kite ana koe i te mate, e taea ana hoki e koe tēnā mate te whakatika
+          kia āhei ai ahau ki te whakarite i taku whīra mō te whakatō?
+        maze_karel_debug_seq_2: He aha te mate me tēnei papatono? Me pēhea tō whakatika
+          kia āhei ai au tēnā te tango i taua pūkei?
+        maze_karel_debug_repeat: Patuhia te iro o tēnei papatono mōku kia pai, kia
+          papatahi ai hoki taku whīra.
+        maze_karel_debug_while: He aha ngā mea o tēnei papatono hei panoni māu kia
+          pai ai taku whakakī i te rua?
+        maze_karel_debug_if: "Āwhina mai! Whakatikaina te papatono kia papatahi rawa
+          ai taku whīra."
+        maze_karel_debug_if_else: Patuhia te iro o tēnei papatono mōku kia pai ai
+          taku whakakī i ngā rua ka tahi, ki te tango i ngā pūkei ka rua.
+        maze_karel_debug_function_1: He aha ngā mea o tēnei papatono hei panoni māu
+          ki te tautoko i ahau ki te tango i ngā pūkei?
+        maze_karel_debug_function_2: Ka taea e koe ngā iro o tēnei papatono te patu
+          mōku ki pai ai taku whakapapatahi i taku whīra?
+        maze_karel_debug_function_3: 'Whakatikahia tēnei papatono kia tangohia e au
+          te katoa o ngā pūkei kei taku whīra. '
+        turtle_5_1: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        turtle_5_2: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        turtle_5_3: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        turtle_5_4: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        turtle_5_5: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        turtle_5_6: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
+          mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
+          mea rerekē noa atu)
+        maze_3_1: Me whiwhi au ki taua poaka! Patotuhia ētahi karanga nekeneke() kia
+          pai ai taku whakahoki mai i aku hua.
+        maze_3_2: Tuhia mai tētahi papatono māku kia pai ai taku taenga atu ki te
+          poaka.
+        maze_3_3: Me pēhea taku tae atu ki te poaka? Kei tūpono atu ahau ki tētahi
+          pouaka TNT!
+        maze_3_4: Kātahi rā! Tuhia mai tētahi papatono māku hei karo i te TNT kia
+          tae atu ai au ki te poaka.
+        bounce_1_basketball: Whakapiri i tētahi paraka ki te paraka "ina pere mauī",
+          ā, pāwhiritia te "Whakahaere". Nekehia te ringa mā te whakamahi i te pere
+          mauī kia tae atu ki te ūnga.
+        bounce_2_basketball: Whakapiri i tētahi paraka ki te paraka "ina pere mauī",
+          ā, pāwhiritia te "Whakahaere". Nekehia te ringa mā te whakamahi i te pere
+          mauī kia tae atu ki ngā ūnga.
+        bounce_5_basketball: Kei te tukuna e mātou tētahi pōro kia rere whakaiho ki
+          te ringa. Whakapiri atu i tētahi paraka ki te paraka "ki te tuki te pōro
+          ki te ringa" kia mātua tae atu te pōro ki te haki.
+        bounce_6_basketball: Kei runga te haki ināianei. Me mātua whakapiri paraka
+          ki ngā paraka "ki te patu te pōro" ki te whakaoti i tēnei panga.
+        bounce_7_basketball: Me whakapiri paraka ki ngā paraka "ki te". Me whakatūpana
+          i te pōro tae noa atu ki te wā ka tuki ki te haki.
+        bounce_10_basketball: He whāinga kei runga ināianei! Me whakapiri i te paraka
+          "whakawhiwhi piro" me te paraka "whakawhiwhi piro hoariri" ki te paraka
+          "i te pōro i te kuru" me te paraka "ki te hipa te pōro i te ringa" ki te
+          waihanga kēmu. Me kite koe e hia piro ka riro i a koe i mua i tō hoariri
+          riro piro e rua ngā wā.
+        bounce_11_basketball: E āhei ana ināianei ki te whakapiri i te paraka "ki
+          te oma". Me whakapiri i te paraka hou "maka pōro hou" i ngā wāhi maha. Hei
+          āpiti atu, tēnā panonihia te tirohanga, te tere rānei o te ringa me te pōro
+          me te kite e hia piro ka riro i a koe i mua i tō hoariri riro piro e rua
+          ngā wā!
+        bounce_12_basketball: Waihangahia tō ake kēmu Poitūkohu. E whakaae ana kia
+          panonihia ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria
+          e ō hoa ki ā rātou waea.
+        bounce_1_sports: Me tae atu ki te haki! Whakapiri i tētahi paraka ki te pakara
+          "ina pere mauī" ka pāwhiritia ai te "Whakahaere" ki te neke i te kaitākaro
+          ki te haki.
+        bounce_2_sports: E rua ngā haki ināianei! Whakapiri i tētahi paraka ki te
+          paraka "ina pere mauī" me te paraka "ina pere matau" ki te whakaneke i tō
+          kaitākaro i ngā ahunga e rua.
+        bounce_5_sports: Ka rere whakaiho te pere hōkī ki te kaitākaro! Whakapiri
+          i tētahi paraka ki te paraka "ina tuku te pōro ki te kaitākaro" ki te patu
+          i te haki.
+        bounce_6_sports: Kei runga te haki ināianei. Me mātua whakapiri paraka ki
+          ngā paraka "ki te patu te pōro" ki te whakaoti i tēnei panga.
+        bounce_7_sports: Me whakapiri paraka ki ngā paraka "ki te". Me whakatūpana
+          i te pōro tae noa atu ki te wā ka tuki ki te haki.
+        bounce_10_sports: He kuru kei runga ināianei! Me whakapiri i te paraka "whakawhiwhi
+          piro" me te paraka "whakawhiwhi piro hoariri" ki te paraka "i te pōro i
+          te kuru" me te paraka "ki te hipa te pōro i te ringa" ki te waihanga kēmu.
+          Me kite koe e hia piro ka riro i a koe i mua i tō hoariri riro piro e rua
+          ngā wā!
+        bounce_11_sports: E āhei ana ināianei ki te whakapiri i te paraka "ki te oma".
+          Me whakapiri i te paraka hou "maka pōro hou" i ngā wāhi maha. Hei āpiti
+          atu, tēnā panonihia te tirohanga, te tere rānei o te ringa me te pōro me
+          te kite e hia piro ka riro i a koe i mua i tō hoariri riro piro e rua ngā
+          wā!
+        bounce_12_sports: 'Waihangahia tō ake kēmu! Ko koe te rangatira: e whakaae
+          ana kia panonihia ngā ture, kia whakawhenumi hoki i ngā momo tākaro, kia
+          auaha! Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria e ō hoa
+          ki ā rātou waea.'
+        bounce_1: Whakapiri i tētahi paraka ki te paraka "ina pere mauī", ā, pāwhiritia
+          te "Whakahaere". Nekehia te patu mā te whakamahi i te pere mauī kia tae
+          atu ki te ūnga whakamutunga.
+        bounce_2: Whakapiri i tētahi paraka ki te paraka "ina pere matau" me te paraka
+          "ina pere mauī". Nekehia te patu kia tae atu ki ngā ūnga whakamutunga e
+          rua.
+        bounce_3: Ināianei me whakamātau i tētahi āhuatanga ōrite me te paraka "ina
+          pere whakarunga". Nekehia te patu ki te ūnga whakamutunga kei runga.
+        bounce_4: I tēnei wā me tāpiri koe i ngā paraka e whā. Nekehia te patu ki
+          ngā ūnga whakamutunga e whā ki te whakaoti i tēnei panga.
+        bounce_5: Ka tukuna e mātou tētahi pōro kia rere whakaiho ki te patu. Whakapiri
+          i tētahi paraka ki te paraka "ki te tuki te pōro ki te patu" hei whakaū
+          i te taenga atu o te pōro ki te ūnga whakamutunga.
+        bounce_6: Kei runga te ūnga whakamutunga ināianei. Me mātua whakapiri koe
+          ki ngā paraka "ki te pā te pōro" ki te whakaoti i tēnei panga.
+        bounce_7: Me whakapiri paraka ki ngā paraka "ki te". Me whakatūpana i te pōro
+          tae noa atu ki te wā ka tuki ki te ūnga whakamutunga.
+        bounce_10: He kuru kei runga ināianei. Me whakapiri i te paraka "whakawhiwhi
+          piro" me te paraka "whakawhiwhi piro hoariri" ki te paraka "i te pōro i
+          te kuru" me te paraka "ki te hipa te pōro i te ringa" ki te waihanga kēmu.
+          Me kite koe e hia piro ka riro i a koe i mua i tō hoariri riro piro e rua
+          ngā wā.
+        bounce_11: E āhei ana ināianei ki te whakapiri i te paraka "ki te oma". Me
+          whakapiri i te paraka hou "maka pōro hou" i ngā wāhi maha. Hei āpiti atu,
+          tēnā panonihia te tirohanga, te tere rānei o te patu me te pōro me te kite
+          e hia piro ka riro i a koe i mua i tō hoariri riro piro e rua ngā wā.
+        bounce_12: Waihangahia tō ake kēmu Bounce. E whakaae ana kia panonihia ata
+          me ngā ture. Mutu ana, pāwhiritia te Mutu kia wātea kia whakamātauria e
+          ō hoa ki ā rātou waea.
+        Custom_builder: Tōia mai ētahi paraka i te pouaka utauta ki te mokowāmahi
+          ki te tā i te taumata e hiahia ana koe ki te waihnga. Pāwhiritia te "Whakahaere"
+          kia rite koe.
+        flappy_1: Whakapiri i tētahi paraka ki te paraka "ina pāwhiri", kātahi ka
+          pāwhiritia te "Whakahaere". Pāwhiritia, patupatu rānei i te mata ke te whakaneke
+          i a Flappy ki te ūnga.
+        flappy_2: Kua tāpiritia he papa. Whakapiri i tētahi paraka ki te paraka "ka
+          tau ki te papa". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU" i te wā ka
+          pao a Flappy ki te papa.
+        flappy_3: Ko te paraka "whakahaere ki te" tērā ka whakaae kia whakahaerehia
+          tō waehere ina tīmata tō kēmu. Me ngana ki te tautuhi i te tere o te taumata
+          me te paki ki te ūnga.
+        flappy_4: Ki te kore koe e tuhi waehere kia pao a Flappy ka rere ia ki waenganui
+          i ngā taunahua. Me whakapiri i tētahi paraka ki te paraka "ina pao ki tētahi
+          taunahua". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU" i te wā ka pao
+          a Flappy ki te huinga kōrero tuatahi.
+        flappy_5: Me tāpiri tātou i tētahi papa tātai ka kautehia ai ngā piro i te
+          wā ka karo a Flappy i ngā taunahua. Tāpiritia ki te paraka "ina hipa i tētahi
+          taunahua" ka whakawhiwhi piro ai mā te ārahi i a Flappy kia puta i te huinga
+          kōrere tuatahi.
+        flappy_6: Me kite mena e āhei tonu ana koe ki te whiwhi piro ina meatia a
+          Flappy ki te paki parirau kia iti ake, kia nui ake rānei ngā wā.
+        flappy_7: Hei whai atu, me ngana ki te panoni i te tirohanga mā te whakapiri
+          i tētahi atu paraka ki te paraka "ina whakahaerehia".
+        flappy_8: Kei te pai ki te tautuhi i ngā atanga i mea wā, kaua noa iho i te
+          wā ka tīmata te kēmu. Me ngana ki te tautuhi i te tirohanga MATAPŌKERE ina
+          puta tētahi atu āhuatanga pēnei i te wā ka hipa i tētahi taunahua.
+        flappy_9: Kia rerekē noa iho, ki te tuki ki tētahi taunahua me whakahoki i
+          te tapeke piro ki te 0 kaua kē ia te whakamutu i te kēmu.
+        flappy_11: Waihangahia tō ake kēmu Flappy. E whakaae ana kia panonihia e kore
+          ngā atanga katoa, ngā ture, ka mutu, te tō ā-papa. Kia mutu koe, pāwhiritia
+          te Mutu kia wātea kia whakamātauria e ō hoa ki ō rātou waea.
+        flappy_k1_1: Tākaro Flappy
+        flappy_k1_2: Whakapiri i tētahi paraka ki te paraka "ina pāwhiri", kātahi
+          ka pāwhiritia te "Whakahaere". Pāwhiritia, patupatu rānei i te mata ke te
+          whakaneke i a Flappy ki te ūnga.
+        flappy_k1_3: Kua tāpiritia he papa. Whakapiri i tētahi paraka ki te paraka
+          "ka tau ki te papa". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU" i te
+          wā ka pao a Flappy ki te papa.
+        flappy_k1_4: Ko te paraka "whakahaere ki te" tērā ka whakaae kia whakahaerehia
+          tō waehere ina tīmata tō kēmu. Me ngana ki te tautuhi i te tere o te taumata
+          me te paki ki te ūnga.
+        flappy_k1_5: Ki te kore koe e tuhi waehere kia pao a Flappy ka rere ia ki
+          waenganui i ngā taunahua. Me whakapiri i tētahi paraka ki te paraka "ina
+          pao ki tētahi taunahua". Me whai tō waehere i te "WHAKAMUTU I TE KĒMU" i
+          te wā ka pao a Flappy ki te huinga kōrero tuatahi.
+        flappy_k1_6: Me tāpiri tātou i tētahi papa tātai ka kautehia ai ngā piro i
+          te wā ka karo a Flappy i ngā taunahua. Tāpiritia ki te paraka "ina hipa
+          i tētahi taunahua" ka whakawhiwhi piro ai mā te ārahi i a Flappy kia puta
+          i te huinga kōrere tuatahi.
+        flappy_k1_7: Tēnā, me kite mēnā e āhei ana koe ki te whiwhi i ngā piro kua
+          whakaraungia mō te hipa pai i tētahi taunahua
+        flappy_k1_8: Hei whai atu, me ngana ki te panoni i te tirohanga mā te whakapiri
+          i tētahi atu paraka ki te paraka "ina whakahaerehia".
+        flappy_k1_9: Me ngana ki te panoni i te kaitākaro mā te whakapiri i tētahi
+          paraka "tautuhi kaitākaro" ki te paraka "ina whakahaerehia".
+        jigsaw_1: Pāwhiritia te paraka
+        jigsaw_2: Tōia te paraka ki te ūnga
+        jigsaw_3: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_4: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_5: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_6: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_7: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_8: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_9: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_10: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_11: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_12: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_13: Whakatikahia te panga!
+        mazestep_1: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_2: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_3: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_4: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_5: Whakaahuatanga tohutohu rīrapa ki konei
         studio_c2_1: Can you make this dog say "hello world"?
         studio_c2_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_c2_3: Can you write a program to make this dog move to the cat?
-        studio_c2_4: Can you write a program that makes the dog move to the cat, and
-          have the cat say "hello" when the dog reaches him?
-        studio_c2_5: Can you write a program to make the octopus say "hello" when
-          it is clicked?
-        studio_c2_6: Can you write a program to make Waddles move around using the
-          up / down / left /right keys to hit all of the targets?
-        studio_c2_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c2_8: Can you have Waddles say "Ouch!" and play a "hit" sound if he
-          runs into the dinosaur, and then move him with the arrows to make that happen?
-        studio_c2_9: Can you add a block to score a point when Waddles runs into the
-          octopus, and then move him with the arrows until you score?
-        studio_c2_10: Can you add blocks to change the background and the speed of
-          Waddles, and then move him with the arrows until you score?
-        studio_c2_11: Create your own story. When you're done, click Finish to let
-          friends try your story on their phones.
+        studio_c2_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru?
+        studio_c2_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu te kurī
+          ki a ia?
+        studio_c2_5: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora" atu
+          te wheke ina pāwhititia?
+        studio_c2_6: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i a
+          Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
+        studio_c2_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō waehere.
+          Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o te mokoweri
+          ki runga, ki raro, ki runga, ki raro?
+        studio_c2_8: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi rā!"
+          ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki, ā, ka
+          whakaneke i a ia me ngā pere kia tutuki taua mahi?
+        studio_c2_9: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina tuki
+          a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa ki
+          te wā ka riro i ētahi piro?
+        studio_c2_10: E taea ana e koe ētahi paraka te tāpiri ki te panoni i te papamuri
+          me te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae noa ki
+          te wā ka riro i ētahi piro?
+        studio_c2_11: Waihangahia tō ake pūrākau. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
         studio_c3_story_1: Can you make this dog say "hello world"?
         studio_c3_story_2: Can you make the dog say something and then have the cat
           say something afterwards?
-        studio_c3_story_3: Can you write a program to make this dog move to the cat?
-        studio_c3_story_4: Can you write a program that makes the dog move to the
-          cat, and have the cat say "hello" when the dog reaches him?
+        studio_c3_story_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i tēnei kurī ki te ngeru?
+        studio_c3_story_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i tēnei kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu
+          te kurī ki a ia?
         studio_c3_story_5: Can you add a block to make the octopus happy?
-        studio_c3_story_6: Create your own story. When you're done, click Finish to
-          let friends try your story on their phones.
-        studio_c3_game_1: Can you write a program to make the octopus say "hello"
-          when it is clicked?
-        studio_c3_game_2: Can you write a program to make Waddles move around using
-          the up / down / left /right keys to hit all of the targets?
-        studio_c3_game_3: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to move this dinosaur up and down repeatedly?
-        studio_c3_game_4: Can you have Waddles say "Ouch!" and play a "hit" sound
-          if he runs into the dinosaur, and then move him with the arrows to make
-          that happen?
-        studio_c3_game_5: Can you add a block to score a point when Waddles runs into
-          the octopus, and then move him with the arrows until you score?
-        studio_c3_game_6: Can you add blocks to change the background and the speed
-          of Waddles, and then move him with the arrows until you score?
-        studio_c3_game_7: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_playlab_1: Waddles wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Jasmine (actor 2) would like to say
-          "hello" to each other. Can you help them by using the "say" block twice?
-        studio_playlab_3: Can you help Tennis Girl get to the flag?
-        studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
-          2) and play a sound when he gets there?
-        studio_playlab_5: Can you help the Spacebot say "greetings earthlings" when
-          it is clicked? Don’t forget to click it after you click Run
-        studio_playlab_6: Can you help the Witch move around using the up/down/right/left
-          arrow keys to get to all the magical fireballs?
-        studio_playlab_7: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help the wizard move right and left repeatedly?
-        studio_playlab_8: Can you add a block to score a point and a block to play
-          a sound when the unicorn runs into the wizard, and then move him with the
-          arrows until you score?
-        studio_playlab_9: Set the background for this alien invasion and help the
-          Spacebot get to the alien faster by changing its speed. Then move him with
-          the arrow keys to get to the Spacebot and alert everyone else
-        studio_playlab_10: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the "say" block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego move 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
-        studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
-          Can you attach blocks to it to help Granny get some exercise by moving left
-          and right repeatedly?
-        studio_iceage_click_hello: Can you help Sid do a final call for friends when
-          clicked? Don’t forget to click on him after you hit Run.
-        studio_iceage_move_events: Scrat is still looking for acorns! Help him scamper
-          around by attaching the "move" block to each of the events and changing
-          the direction to work for each arrow key. When you’re done, click Run and
-          try to collect all of the acorns.
-        studio_iceage_sound_and_points: We’ve provided most of the code that keeps
-          Granny moving left and right, as well as the code to move Sid around the
-          screen. Can you finish the code and add blocks to the "when actor touches"
-          event to make it so that you both play a sound and score a point when Sid
-          and Granny collide? Press Run to play the game.
-        studio_iceage_warn_ice_age: Everyone needs to move faster because an ice age
-          is coming! Change the background to an icy background and set Sid’s speed
-          to fast, then press Run and move him to Diego to warn him.
-        studio_iceage_throw_hearts: Sid wants to let his grandmother, Granny, know
-          that he loves her. Use the "actor throw" command to have Sid (actor 1) throw
-          hearts at Granny (actor 2)! Set Granny's mood to happy when she gets hit
-          with the hearts.
-        studio_iceage_free_play: Time to create your own game or story! When you're
-          done, click Finish to let friends try your game on their phones, tablets,
-          or computers!
-        studio_gumball_hello1: Anais wants to make some new friends. Can you help
-          her say "hello" by dragging the "say" block out into the work area and typing
-          the word "hello" inside?
-        studio_gumball_hello2: Darwin (actor 1) and his brother Gumball (actor 2)
-          are heading to school.  Help them greet each other by using the "actor say"
-          block twice.
+        studio_c3_story_6: Waihangahia tō ake pūrākau. Mutu ana, pāwhiritia te Mutu
+          kia wātea kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
+        studio_c3_game_1: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora"
+          atu te wheke ina pāwhititia?
+        studio_c3_game_2: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i a Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
+        studio_c3_game_3: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
+          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
+          te mokoweri ki runga, ki raro, ki runga, ki raro?
+        studio_c3_game_4: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi
+          rā!" ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki,
+          ā, ka whakaneke i a ia me ngā pere kia tutuki taua mahi?
+        studio_c3_game_5: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina
+          tuki a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa
+          ki te wā ka riro i ētahi piro?
+        studio_c3_game_6: E taea ana e koe ētahi paraka te tāpiri ki te panoni i te
+          papamuri me te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae
+          noa ki te wā ka riro i ētahi piro?
+        studio_c3_game_7: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_playlab_1: E hiahia ana a Waddles ki te mihi "kia ora" - māu ia e āwhina?
+        studio_playlab_2: E hiahia ana a Cave Boy (kaiwhakaari 1) rāua ko Jasmine
+          (kaiwhakaari 2) ki te mihi "kia ora" rāua ki a rāua. Māu rāua e āwhina mā
+          te whakamahi i te paraka "kōrero" e rua ngā wā?
+        studio_playlab_3: Māu a Tennis Girl e āwhina ki te tae atu ki te haki?
+        studio_playlab_4: Māu a Tennis Boy (kaiwhakaari 1) e āwhina kia tae atu ia
+          ki Tennis Girl (kaiwhakaari 2) me te whakatangi i tētahi oro i tōna taenga
+          atu?
+        studio_playlab_5: Māu te Karetao Tuarangi e āwhina ki te kī "kia ora tangata
+          mā" ina pāwhiritia? Kaua e wareware ki te pāwhiri i a ia i muri i tō pāwhiri
+          i te Whakahaere
+        studio_playlab_6: Māu te Wahine Wetiweti e whakaneke mā te whakamahi i ngā
+          kī o ngā pere runga/raro/matau/mauī ki te tiki i ngā poiahi mīharo?
+        studio_playlab_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
+          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
+          te ruānuku ki te taha matau me te taha mauī?
+        studio_playlab_8: E taea ana e koe tētahi paraka te tāpiri kia riro ki tētahi
+          piro me tētahi paraka ki te whakatangi i tētahi oro ina tuki ruānuku ki
+          te mairetahi, ka whakaneke i a ia me ngā pere tae noa ki te wā ka riro i
+          ētahi piro?
+        studio_playlab_9: Tautuhia te papamuri mō te whakaekenga o ngā kaituarangi,
+          kātahi me āwhina i te Karetao Tuarangi ki te tae tere atu ki te kaituarangi
+          mā te panoni i tōna tere. Tēnā, nekehia ia me ngā kī pere kia tae atu ki
+          te koiora tuarangi me te whakatūpato i te marea
+        studio_playlab_10: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_iceage_hello1: E hiahia ana a Syd ki te whakarāmemene i te marea ki
+          te whai i tētahi mahi mātātoa hou. Māu ia e āwhina ki te kī "kia ora" mā
+          te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia ai te kupu "kia
+          ora" ki roto?
+        studio_iceage_hello2: I kite a Manny (kaitapere 1) i a Sid (kaitapere 2),
+          ā, e hiahia ana ia ki te pōhiri i a ia ki tana mahi mātātoa. Māu rāua e
+          āwhina mā te whakamahi i te paraka "ka kōrero te kaitapere" e rua ngā wā,
+          kia pai ai tā rāua mihi ki a rāua anō.
+        studio_iceage_move_to_flag: Kei te rapu a Scrat i tana kano oke! Āwhinatia
+          a ia ki te koke i ngā pika 200 noa iho e toe ana me te paraka "neke".
+        studio_iceage_move_to_actor: Kei te rapu a Diego (kaitapere 1) i a Manny (kaitapere2).
+          Āwhinatia a Diego ki te neke ki raro e 200 pika ki a Manny me te paraka
+          "nekehia te kaitapere". Mutu ana, tūhonotia te paraka ki te takahanga "ina
+          pāngia te kaitapere" kia tangi mai tētahi oro i te wā ka kite rāua i a rāua.
+        studio_iceage_repeat: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere
+          o tō waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke
+          o Karanimā ki te taha matau me te taha mauī ki pai ai tana korikori tinana?
+        studio_iceage_click_hello: Māu a Sid e āwhina ki te tuku karanga whakamutunga
+          ki ōna hoa ina pāwhiritia ia? Kaua e wareware ki te pāwhiri i a ia i muri
+          i tō pāwhiri i te Whakahaere.
+        studio_iceage_move_events: Kei te rapu tonu a Scrat i ngā kano oke! Āwhinatia
+          a ia ki te karapetapeta haere mā te whakapiri i tētahi paraka "neke" ki
+          ngā takahanga katoa, mā te panoni hoki i te ahunga kia tutuki pai ai me
+          ngā kī pere. Mutu ana, pāwhiritia te Whakahaerehia, kātahi me ngana ki te
+          kohikohi i ngā kano oke katoa.
+        studio_iceage_sound_and_points: Nā mātou te nuinga o te waehere whakaneke
+          i a Karanimā ki te taha mauī me te taha matau. Nā mātou hoki te waehere
+          whakaneke i a Sid i te mata. Māu te waehere e whakaoti, māu hoki e tāpiri
+          i ngā paraka ki te takahanga "ina pāngia te kaitapere" kia tangi mai he
+          oro, kia riro hoki ki tētahi piro i te tukinga o Sid rāua ko Karanimā? Pāwhiritia
+          te Whakahaerehia ki te tākaro i te kēmu.
+        studio_iceage_warn_ice_age: Me horo ake te haere, nā te mea, e whakatata mai
+          ana te ao tio! Panonihia te papamuri kia tio te hanga, ā, tautuhia te tere
+          o Sid ki te hohoro. Mutu ana, me pāwhiri i te Whakahaerehia me te whakaneke
+          i a ia ki a Diego kia pai ai tana whakatūpato i a ia.
+        studio_iceage_throw_hearts: E hiahia ana a Sid kia mōhio tōna kuia, a Karanimā,
+          i te nui o tana aroha mōna. Whakamahia te whakahau "makaia e te kaitapere"
+          kia makaia e Sid (kaitapere 1) ngā manawa ki a Karanimā (kaitapere 2)! Tautuhia
+          te wairua o Karanimā kia harikoa ia ina patua me ngā manawa.
+        studio_iceage_free_play: Kua eke te wā māu anō tāu ake kēmu, paki rānei e
+          waihanga! Kia tutuki i a koe tēnā, pāwhiritia te Mutu kia wātea tō kēmu
+          ki ō hoa hei korikori mā rātou i ā rātou waea, paparorohiko, rorohiko rānei!
+        studio_gumball_hello1: Kei te kimi hoa hou a Anais. Māu a ia e āwhina ki te
+          kī "kia ora" mā te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia
+          ai te kupu "kia ora" ki roto?
+        studio_gumball_hello2: E haere ana a Darwin (kaitapere 1) rāua ko tana taina
+          Gumball (kaitapere 2) ki te kura. Māu rāua e āwhina mā te whakamahi i te
+          paraka "ka kōrero te kaitapere" e rua ngā wā, kia pai ai tā rāua mihi ki
+          a rāua anō.
         studio_gumball_move_to_flag: Banana Joe is about to win a field day race!  Help
           him go the last 200 pixels using the "move" block.
         studio_gumball_move_to_actor: Gumball (actor 1) and Darwin (actor 2) are late
@@ -538,12 +642,13 @@
           2)! Set Anton’s mood to angry when he gets hit.
         studio_gumball_free_play: Create your own game or story. When you're done,
           click Finish to let friends try your game on their phones, tablets, or computers!
-        studio_full_sandbox: Create your own game. When you're done, click Finish
-          to let friends try your game on their phones.
+        studio_full_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu
+          kia wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
         studio_k1_1: Can you make this dog say "hello world"?
         studio_k1_2: Can you make the dog say something and then have the cat say
           something afterwards?
-        studio_k1_3: Can you write a program to make this dog move to the cat?
+        studio_k1_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru?
         studio_k1_4: Make the dog move to the cat and the cat say "hello" when he
           gets there.
         studio_k1_5: Can you add a block to make the octopus happy?
@@ -566,8 +671,8 @@
         turtle_ec_1_10: 'You made it! Now, draw anything you want. Some fun ideas:
           a stick figure, snowflake, or spiral. Also try the new "penWidth" block.
           Have fun!'
-        studio_ec_sandbox: Create your own game. When you're done, click Finish to
-          let friends try your game on their phones.
+        studio_ec_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
     video:
       name:
         maze_intro: Maze Intro
@@ -579,26 +684,26 @@
         if: If Block
         if_else: If/else Block
         if_else_scrat: If/else Block
-        function: Functions
+        function: Ngā Taumahi
         loop_while: While Block
         loop_for: Counter Block
         parameters: Functions with Parameters
         hoc_wrapup: Hour of Code Wrapup
         Unplug1: What is CS?
-        Unplug2: Computational Thinking
-        Unplug3: Graph Paper Programming
-        Unplug4: Algorithms
-        Unplug5: Functions
-        Unplug6: Conditionals
-        Unplug7: Songwriting
-        Unplug8: Abstraction
-        Unplug9: Relay programming
-        Unplug10: Internet
-        Unplug11: Wrap-up
-        C1_happy_maps_unplugged: Happy Maps
+        Unplug2: Whakaaro ā-Rorohiko
+        Unplug3: Papatono Pepa Kauwhata
+        Unplug4: Ngā Hātepe
+        Unplug5: Ngā Taumahi
+        Unplug6: Ngā Here
+        Unplug7: Te Tito Waiata
+        Unplug8: Te Whakawaitara
+        Unplug9: Papatonotanga ā-Tānga
+        Unplug10: Te Ipurangi
+        Unplug11: Tākaia
+        C1_happy_maps_unplugged: Ngā Mahere Harikoa
         C1_moveitmoveit_unplugged: Move It, Move It
-        C1_bigevent_unplugged: The Big Event
-        C1_getting_loopy: Getting Loopy
+        C1_bigevent_unplugged: Te Takahanga Nui
+        C1_getting_loopy: Kia Koromeke
         C1_pair_programming: Pair Programming
         C1_maze_intro_sequencing: Maze Sequencing Intro
         C1_maze_debugging: Maze Debugging
@@ -610,8 +715,8 @@
         C1_maze_loops: Maze Loops
         C1_playlab_storytelling: Play Lab - Create a Story
         C1_planting_seed: Planting a Seed
-        C1_building_foundation: Building a Foundation
-        C1_going_places_safely: Going Places Safely
+        C1_building_foundation: Te Hanga Tūāpapa
+        C1_going_places_safely: Te Karore Haumaru
         C2_maze_intro: Maze Intro
         C2_artist_intro: Artist Intro
         C2_zuck_repeat_loop: Maze Loops
@@ -621,13 +726,13 @@
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
         C2_playlab_createstory: Play Lab - Create a Story
-        C2_graph_paper: Graph Paper Programming
-        C2_conditionals_with_cards: Conditionals
-        C2_binary_bracelets: Binary Bracelets
-        C2_relay_programming: Relay Programming
+        C2_graph_paper: Papatono Pepa Kauwhata
+        C2_conditionals_with_cards: Ngā Here
+        C2_binary_bracelets: Kōmore Ā-Rua
+        C2_relay_programming: Papatonotanga ā-Tānga
         C2_paper_airplanes: Paper Airplanes
-        C2_digital_footprint: Your Digital Footprint
-        C2_digital_footprint_v2: Your Digital Footprint
+        C2_digital_footprint: Tō Tapuwae Matihiko
+        C2_digital_footprint_v2: Tō Tapuwae Matihiko
         C3_maze_level_4: Maze Loops
         C3_artist_intro: Artist Intro
         C3_artist_functions: Artist Functions
@@ -638,16 +743,16 @@
         C3_farmer_while: While Loops
         C3_bee_nested_loops: Nested Loops
         C3_bee_debugging: Bee Debugging
-        C3_bounce: Bounce
+        C3_bounce: Tupana
         C3_playlab_create_game: Play Lab - Create a Game
-        C3_computational_thinking: Computational Thinking
+        C3_computational_thinking: Whakaaro ā-Rorohiko
         C3_dice_race: Dice Race
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Functional Suncatchers
+        C3_internet: Te Ipurangi
+        C3_crowdsourcing: Te Mahi ā-Ohu
+        C3_functional_suncatchers: Ngā Hopu Rā Taumahinga
         C3_songwriting_with_parameters: Songwriting With Parameters
         C4_intro: Introduction
-        C4_loops_zombie: Loops
+        C4_loops_zombie: Ngā Koromeke
         C4_bee_conditional: Bee Conditionals
         C4_variables_artist: Variables - Artist
         C4_variables_playlab: Variables - Play Lab
@@ -658,7 +763,7 @@
         C4_function_edit: Editing Functions
         C4_function_create: Creating Functions
         C4_function_parameters: Functions with Parameters
-        C4_conditionals: Conditionals
+        C4_conditionals: Ngā Here
         C4_unplugged_algorithms: Algorithms with Tangrams
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variables in Envelopes
@@ -696,7 +801,7 @@
         csp_applab_variables_2: Introduction to Variables - Part 2
         csp_applab_functions: Introduction to Functions
         csp_applab_functions_parameters: Functions with Parameters
-        csp_applab_loops: Loops
+        csp_applab_loops: Ngā Koromeke
         csp_applab_turtle: Turtle Programming
         csp_concept_bigdata_medicine: Data & Medicine
         csp_concept_cybercrime: 'The Internet: Cybersecurity & Crime'
@@ -757,6 +862,11 @@
         iceage_intro: Ice Age Hour of Code - Introduction
         iceage_events: Ice Age Hour of Code - Events
         iceage_repeat: Ice Age Hour of Code - Repeat statements
+        mc_2016_intro: Hour of Code Mahimaina - Kupu Whakataki
+        mc_2016_loops: Hour of Code Mahimaina - Ngā Koromeke
+        mc_2016_events: Hour of Code Mahimaina - Ngā Takahanga
+        mc_2016_spawn: Hour of Code Mahimaina - Te Whakaputa
+        mc_2016_congrats: Hour of Code Mahimaina - Kupu Whakamiha
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
@@ -841,30 +951,33 @@
           and then drag it into your function definition
         fill_in_actor: Fill in the ??? with numbers that correspond to each actor
           (1, 2, and 3)
-        repeat: Put blocks inside the loop to repeat commands
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
-          and makes honey if it's not a flower
-        repeat_full_circle: Enter in the number of times the zombie has to move to
-          make a full circle
-        place_length_variable: Drag the length variable here to replace the question
-          marks
-        arrows_move_actor: Use the arrows to move the actor
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
-        Infinity_move_right_runbutton: Add move block here
-        Infinity_move_directions_callout: Which block will make Baymax move up when
-          the up arrow is pressed?
-        Infinity_move_directions_callout_arrow: Use these arrows to steer
-        Infinity_move_collide_callout: Play a sound when this event occurs.
-        Infinity_repeat_callout: Place Move blocks inside here
+        repeat: Hoatu i ngā paraka ki roto i te koromeke ki te tōai i ngā tono
+        if_bee_nectar: Whakamahia te paraka "ki te" ki te whakatau āe rānei me tiki
+          te pī i te waireka
+        if_else_bee: Whakamahia te paraka "ki te/kē" kia tiki te Pī i te waireka i
+          tētahi putiputi, ā, mēnā ehara i te putiputi ka mahi mīere
+        repeat_full_circle: Tāurutia te nui o ngā wā me neke te kairoro ki te waihanga
+          i tētahi porohita
+        place_length_variable: Tōia te taurangi roanga ki konei ki te whakakapi i
+          ngā tohu pātai
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
+        right_arrow_fireball: Whakamahia te pere matau ki te puhi i ngā poiahi
+        name_function: Tuhia te ingoa o tō taumahi ki konei
+        Infinity_move_right_runbutton: Tāpiritia he paraka whakaneke ki konei
+        Infinity_move_directions_callout: Mā tēhea paraka a Baymax ka neke ki runga
+          ina pēhia te pere whakarunga?
+        Infinity_move_directions_callout_arrow: Whakamahia ēnei pere ki te whakatere
+        Infinity_move_collide_callout: Whakatangihia mai tētahi oro ki te puta tēnei
+          āhuatanga.
+        Infinity_repeat_callout: Hoatu paka Neke ki roto nei
         craft_run_button_callout: Hit "Run" to try your program
-        craft_drag_block_callout: Drag a "moveForward();" block and snap it below
-          the other block
-        craft_callout_preplaced: We've put some blocks here to get you started
-        craft_inside_repeat: Repeat actions by placing blocks in here
-        craft_callout_preplaced_house: This code will start building your house. Can
-          you finish it?
-        craft_what_is_iron: Mine this iron!
-        craft_callout_moveforward: This code will check for lava, can you add a command
-          to move forward?
+        craft_drag_block_callout: Tōia tētahi paraka "nekeWhakamua();", kātahi me
+          hoatu ki raro i tērā atu paraka
+        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
+        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto
+          nei
+        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare.
+          Ka taea e koe tēnā te whakaoti?
+        craft_what_is_iron: Mainahia tēnei rino!
+        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana
+          e koe tētahi tono neke whakamua te tāpiri?

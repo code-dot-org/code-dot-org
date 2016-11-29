@@ -8,7 +8,8 @@
   "collectorCollectTooltip": "Зібрати об'єкт",
   "collectorCollectedEverything": "Вітання! Зібрано всі {count} об'єкти!",
   "collectorCollectedNothing": "Продовжуй кодувати! Потрібно зібрати якомога більше об'єктів.",
-  "collectorCollectedSome": "Чудова робота! Зібрано {count} об'єктів!",
+  "collectorCollectedSome": "Чудова робота! Зібрано {count, plural, one {1 об'єкт} other {# об'єктів}}!!",
+  "collectorCollectedNotEnough": "Продовжуй кодувати! Потрібно зібрати принаймні {goal, plural, one {1 елемент} other {# елементів}}.",
   "collectorCollectedTooMany": "Тут немає достатньо елементів для збору.",
   "collectorTooManyBlocks": "Можна використати лише {blockLimit} блоків. Переглянь свій код і спробуй знову!",
   "continue": "Далі",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "У квітки, на якій ви перебуваєте, більше немає нектару.",
   "get": "отримати",
   "has": "має",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "Це салат-латук",
   "hascorn": "тут є кукурудза",
   "haspumpkin": "тут є гарбузи",
   "heightParameter": "висота",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "Якщо є шлях у вказаному напрямку, то виконуй перший блок дій. У протилежному випадку, виконуй другий блок дій.",
   "insufficientHoney": "Потрібно виготовити вказану кількість меду.",
   "insufficientNectar": "Потрібно виготовити вказану кількість нектару.",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "Салат-латук",
+  "lettuceTooltip": "Урожай салат-латук",
   "make": "зробити",
   "moveBackward": "рухатися назад",
   "moveEastTooltip": "Перемісти мене на одну позицію на схід.",
@@ -111,6 +112,5 @@
   "word": "Знайти слово",
   "wrongCropError": "Я не можу зібрати цю культуру тут.",
   "yes": "Так",
-  "youSpelled": "Ви написали",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Ви написали"
 }

@@ -1701,65 +1701,65 @@ ro:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "Buna, numele meu este Jane si sunt designerul creativ al Minecraft. In urmatoarea ora, iti vei face propriul joc Minecraft. Acesta arata ca un Minecraft insa lumea s-a oprit. Oile nu se misca, gainile nu fac oua iar zombi doar stau nemiscati. Ramane ca tu sa adaugi codul pentru a realiza lumea Minecraft."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: 'Numele meu este Melissa si sunt cercetator la Minecraft. Sunt foarte interesata dece gandesc oamenii si cum interactioneaza acestia cu tehnologia asa ca acesta este job-ul perfect pentru mine de a pune laolalta ingineria computerului si psihologia: cum oamenii gandesc si cum se comporta.'
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "Veţi vedea ca ecranul este împărţit în trei părţi principale. 1) Pe partea stângă este jocul Minecraft. Acum lumea este îngheţata, dar vom repara asta cu blocurile de cod."
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2) Zona acest mijloc este setul de instrumente. Fiecare dintre aceste blocuri este o comandă catre gaini, oi şi alte creaturi Minecraft pot înţelege."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3) Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom construi programul nostru."
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "Daca ati uitat ce trebuie sa faceti, instructiunile pentru fiecare nivel sunt in partea de sus."
       7:
         image: 'notes/mc_2016_intro_7.jpg'
-        text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
+        text: "Pentru a incepe, vom programa o gaina. Haideti sa mutam blocul \"mergi inainte\" in spatiul de lucru. Cand apas \"Ruleaza\" gaina merge inainte un pas. Pentru a merge mai departe, voi lua un alt bloc \"mergi inainte: si il voi atasa la blocul existent pana apare o linie evidentiatoare. Apoi il las jos si cele doua blocuri de unesc. Daca apas \"Ruleaza\" din nou, gaina merge doi pasi."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "Daca vei vrea sa stergi un bloc, scoate-l din stiva si trage-l inapoi in toolbox."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "După ce le-aţi apasat \"Run\" puteţi apasa întotdeauna butonul \"Reset\" pentru a reseta jocul şi începe din nou. Acum, este rândul tău să faci propria ta versiune de Minecraft. Distracţie plăcută!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
-        text: "Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some of the animals and enemies in the game. One of the animals that I worked on is the ocelot. I worked on the part where you can feed an ocelot a fish to tame it into your own cat."
+        text: "Buna, eu sunt Lisa. Sunt programator software pentru Minecraft si lucrez cu unele dintre enimalele si inamicii din joc. Unul dintre animalele la care am lucrat este ocelotul. Am lucrat la partea in care poti da ocelotului un peste pentru a-l imblanzi si a-l transforma in pisica ta."
       2:
         image: 'notes/mc_2016_loops_2.jpg'
-        text: "As humans, we get really bored if we have to do the same thing over and over and over again. But the cool thing about computers is that they can do the same thing millions or even billions of times in a row without getting bored. This repetition is called a loop and every creature in Minecraft uses loops."
+        text: "Ca oameni, devenim plictisiti cand avem de facut acelasi lucru din nou si din nou. Dar lucrul cool despre computere este ca pot face acelasi lucru de milioane de ori fara a se plictisi. Aceasta repetitie se numeste bucla si fiecare creatura din Minecraft foloseste bucle."
       3:
         image: 'notes/mc_2016_loops_3.jpg'
-        text: "Earlier, we got a chicken to move across the screen but then she stopped. In Minecraft, the chickens wander around forever and ever. Let's use a \"forever do\" loop from our toolbox to keep our chickens moving around forever too. The power of loops will save you tons of time and open up all kinds of neat options as you build your own version of Minecraft."
+        text: "Mai devreme, am facut o gaina să se misce pe ecran dar apoi s-a oprit. În Minecraft, puii rătăcesc tot timpul. Să folosim o bucta \"pentru totdeauna\" din bara noastra de instrumente pentru a menţine miscarea gainilor noastre pentru totdeuna. Puterea buclelor va economisi tone de timp şi va deschide tot felul de opţiuni de pentru a vă construi propria voastră versiune a Minecraft."
     mc_2016_events:
       1:
         image: 'notes/mc_2016_events_1.jpg'
-        text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
+        text: "In acest nivel, puteţi alege să fiti Steve sau Alex. Apăsați săgeatile de pe tastatură pentru a muta sus, jos, stânga, și dreapta. Acum aveţi posibilitatea să va mutaţi de-l lungul nivelului. Pentru a utiliza o creatură, doar mergi pe jos spre ea, stai fata in fata şi apăsaţi bara de spaţiu."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
+        text: "Dacă utilizaţi un ecran tactil, glisati sus, jos, stânga şi la dreapta pentru a muta împrejur. Apoi atingeţi jocul pentru a utiliza elementul în faţa ta."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
+        text: "Dar ce se întâmplă când îl folosiţi? În Minecraft, oile lasa lână atunci când le tundeti, vacile fug când le lovesti şi lianele explodeaza atunci când ajungi langa ele. Aceste reacţii se întâmplă datorită a ceva numit evenimente. Evenimente spun programului tău să asculte sau să aştepte pentru atunci când ceva se întâmplă. Şi când se intampla, se efectueaza o acţiune."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
+        text: "Până în prezent, ai folosit un singur eveniment. Codul pus în slotul \"atunci când apare\" se execută atunci când creatura ta este creata sau atunci când începe jocul. Peste următoarele câteva niveluri veţi avea sloturi noi pentru evenimente cum ar fi \"atunci când atins\" care se execută atunci când vă atingeţi creatura sau \"cand e folosit\" pentru atunci când utilizaţi creatura. Sau, dacă doriţi ca zombieul să dispară când soarele apare, puneti comanda in blocul \"atunci cand zi\""
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "In games, spawn means the same thing as create. In this level, let's make zombies spawn when the sun goes down. To do this, we'll use the \"when night\" block."
+        text: "În jocuri, \"a aparea\" înseamnă acelaşi lucru ca a crea. La acest nivel, facem Zombieul sa apara atunci cand apune soarele. Pentru aceasta, vom folosi blocul \"atunci când noapte\"."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Since we want the zombies to spawn at night we'll add the \"spawn zombie\" block under the \"when night\" block. As soon as they're spawned, each zombie will run the code that you put in their \"when spawned\" event slot. Have fun spawning zombies!"
+        text: "Deoarece vrem ca zombiul sa apara noaptea, vom adauga blocul \"cand apare\" sub cel \"cand noapte\". De îndată ce acestia apar, fiecare zombie va rula codul pe care l-aţi pus în blocul \"atunci când apare\". Distreaza-te dand nastere la zombi!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'
-        text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
+        text: "Felicitări! Ai învăţat să utilizezi comenzi de tehnologia computerelor pentru a aduce lumea Minecraft la viaţă. Sunteţi dezvoltator web acum. Ai deblocat toate comenzile şi toate creaturile. Tu alegi ceea ce se întâmplă."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "Cand ai terminat sa-ti realizezi jocul, alegi sa distribui un link pe care il poti da prietenilor sau sa joci tu propriul joc pe telefon. Distractie placuta! De abia astept sa joc versiunea ta de Minecraft."

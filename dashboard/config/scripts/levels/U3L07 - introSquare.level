@@ -94,10 +94,10 @@
         "message": "For this test App Lab is expecting that inside the loop, you will moveForward before turning left."
       }
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

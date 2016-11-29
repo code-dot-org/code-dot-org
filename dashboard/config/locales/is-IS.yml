@@ -92,6 +92,14 @@
     overview: Skráðu þig til að geta fylgst með framvindu þinni eða haft umsjón með
       nemendum. <a href="/">Þú getur prófað hin ýmsu borð og þrautir</a> án þess að
       skrá þig, en þú verður að skrá þig ef þú vilt vista það sem þú gerir.
+    hoc_already_signed_up_heading: Byrja án þess að skrá inn
+    hoc_already_signed_up_content: Þú hefur skráð þig til að kenna Klukkustund kóðunar!
+      Þú og nemendur þínir þurfa ekki að skrá ykkur inn í Kóðastúdíóið til að taka
+      þátt í viðburðinum. Byrjaðu á að <a href="https://code.org/learn">velja kennsluefni</a>
+      fyrir hópinn þinn og deildu svo tenglinum með þeim.<br/><br/>Ef þið hafið gaman
+      af Klukkustund kóðunar og viljið halda lengra, getur þú sett aðgangsorð og stofnað
+      aðgang að Kóðastúdíóinu hér fyrir neðan til skrá nemendur þína á eitt af <a
+      href="https://code.org/educate">lengri námskeiðum</a> okkar.
     teacher_educator_guide: Sjá leiðarvísi kennara
     title: Nýskrá á Code.org
     school_name: Nafn skóla (valfrjálst)
@@ -338,7 +346,7 @@
       unsubmit: Afturkalla innsendingu
       worked_with: vann með
       update_lock_settings: Uppfærðu stillingar fyrir læsingu hér.
-      clear_response: Clear response
+      clear_response: Hreinsa svar
   user:
     email_confirm_needed: 'Netfangið hefur ekki verið staðfest:'
     email_confirm_needed_required: 'Netfangið þitt %{email} hefur ekki verið staðfest:'
@@ -425,7 +433,7 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Læra meira
     announcement_try_now_button: Prófa núna
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Sjá um Klukkustund
     announcement_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill gefa
       öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn
       tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar,
@@ -435,11 +443,23 @@
     announcement_petition_button: Bættu nafni þínu við
     announcement_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
       kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja að
+      kenna tölvunarfræði í Klukkustund kóðunar dagana 5. - 11. desember. Við treystum
+      á þig að hjálpa okkur að ná til fleiri nemenda en nokkru sinni áður. <a href='%{signup_url}'
+      target='_blank'>Skráðu þinn Klukkustund kóðunar-viðburð</a> og láttu aðra kennara
+      vita að það geti hver sem er byrjað að kenna tölvunarfræði."
+    announcement_hoc_scaling: 'Kennarar Námskeiða 1 - 4 og Hraðnámskeiðs ATHUGIÐ:
+      Vegna mikils álags þegar miljónir nemenda eru að gera Klukkustund kóðunar, mun
+      <b>Kóðastúdíóið ekki geta vistað framvindu nemenda á þessum námskeiðum frá 3.
+      - 11. desember</b>. Við mælum með að bekkir fari sé Klukkustund kóðunar-verkefnið
+      til að halda upp á Klukkustund-kóðunar átakið í Viku tölvunarfræðimenntunar.
+      Okkar eigin Klukkustund-kóðunar verkefni munu heldur ekki vista framvindu þessa
+      viku, en nemendur geta samt klárað verkefnin og unnið sér inn skírteini.'
+    announcement_mc_launch: Eitt vinsælasta kennsluefnið okkar er nú komið með framhald!
+      Með glænýjum Minecraft Hour of Code Designer (Minecraft hönnuði) geta nemendur
+      búið til reglur fyrir Minecraft heiminn. Þeir geta skapað alveg einstaka Minecraft
+      upplifun og deilt henni síðan með vinum eða spilað hana í síma. Láttu bekkinn
+      prófa þetta fyrir Klukkustund kóðunar.
   move_students:
     new_section_dne: "Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast
       færðu inn annan kóða fyrir hóp."
@@ -607,6 +627,9 @@
     minecraft:
       title: Minecraft
       body: Kannaðu Minecraft heim með kóða.
+    minecraft2016:
+      title: Minecraft
+      body: Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft.
     unplugged:
       title: Verkefni án tölvu
       audience: Aldur 6+
@@ -742,7 +765,6 @@
       og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a>
     accept: Samþykkja
     print: Prenta
-    later: Seinna
     reminder_desc: Við höfum uppfært <a href="%{tos_url}" target="_blank">þjónustuskilmála</a>
       og <a href="%{privacy_url}" target="_blank">persónuverndarstefnu</a> okkar.
       Vinsamlegast lestu þetta áður en þú samþykkir. Athugaðu að verkfærin okkar til
@@ -750,18 +772,18 @@
       skilmálar eru samþykktir.
     review_terms: Skoða uppfærða skilmála
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Ef vill: Hjálpaðu okkur að fylgjast með viðleitni okkar til að fá sem
+      flesta hópa með í tölvunarfræði'
+    message: Segðu okkur frá kynþætti þínum (merktu við allt sem á við)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Hvít/ur
+    - black: Svartur/svört eða afrísk-amerísk/ur
+    - hispanic: Latnesk-amerísk/ur
+    - asian: Asísk/ur
+    - hawaiian: Hawaii frumbyggi eða af annarri Kyrrahafsþjóð
+    - american_indian: Amerískur indíáni / Alaska frumbyggi
     - other: Annað
-    - opt_out: Prefer not to say
+    - opt_out: Vil ekki gefa upp
     submit: Senda inn
     decline: Loka
   zendesk_too_young_message: Því miður mega yngri notendur ekki skrá sig á hjálparvefinn.

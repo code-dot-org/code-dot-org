@@ -486,11 +486,11 @@ pt-BR:
         'iceage_intro': 'Hora do Código com A Era do Gelo - Introdução'
         'iceage_events': 'Hora do Código com A Era do Gelo - Eventos'
         'iceage_repeat': 'Hora do Código com A Era do Gelo - Instruções de repetição'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Hora do Código Minecraft - Introdução'
+        'mc_2016_loops': 'Hora do Código Minecraft - Laços'
+        'mc_2016_events': 'Hora do Código Minecraft - Eventos'
+        'mc_2016_spawn': 'Hora do Código Minecraft - Invocar'
+        'mc_2016_congrats': 'Hora do Código Minecraft - Parabéns'
     callout:
       text:
         drag_blocks: 'Arraste um bloco "avance" e o encaixe embaixo do outro bloco'
