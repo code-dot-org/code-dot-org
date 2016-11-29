@@ -149,7 +149,7 @@ module ApplicationHelper
 
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
-    skin = opts[:level].try(:properties)["skin"]
+    skin = opts[:level].try(:properties).try(:[], "skin")
 
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image)
