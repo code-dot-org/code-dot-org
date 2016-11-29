@@ -13,7 +13,7 @@ sq:
             'Artist: Shapes': 'Artist: Format'
             'Bee: Loops': 'Bletë: Ciklet'
             'Bee: Sequence': 'Bletë: Sekuencë'
-            Building a Foundation: Krijimi i një Baze
+            Building a Foundation: Krijimi i një fondacioni
             Getting Loopy: Duke u Çmëndur
             Going Places Safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
             Happy Maps: Hartat e Gëzuara
@@ -30,7 +30,7 @@ sq:
           title: Kursi 2
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
           description_short: Kursi 2 është dizenjuar për studentët, që mund të lexojnë.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Moshat 6+ (lexim i kërkuar )
           stage:
             'Artist: Debugging': 'Artist: Rregullimi'
             'Artist: Loops': 'Artist: Ciklet'
@@ -53,7 +53,7 @@ sq:
             Your Digital Footprint: Gjurmët e Tua Dixhitale
         course3:
           title: Kursi 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar për klasën 4-5.
           description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
           description_audience: Moshat 8-18
           stage:
@@ -75,7 +75,7 @@ sq:
             Internet: Internet
             Maze: Labirint
             'Maze: Conditionals': 'Maze: Kushtet'
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             'Studio: Create a Game': 'Play Lab - Krijo një Lojë'
             'Studio: Create a Story': 'Play Lab: Krijo një Histori'
         playlab:
@@ -91,7 +91,7 @@ sq:
           stage:
             Artist: Artisti
         hourofcode:
-          title: Classic Maze
+          title: Labirint Klasik
           description: Provo bazat e shkencës kompjuterike me karaktere nga Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           stage:
@@ -104,7 +104,7 @@ sq:
             Artist: Artisti
         course4:
           title: Kursi 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
           description_short: Studentët që marrin Kursin 4 duhet të kenë marrë tashmë Kursin 2 dhe 3.
           description_audience: Moshat 10-18
           stage:
@@ -902,13 +902,13 @@ sq:
           description_audience: Ages 6-13
           stage:
             Binary Bracelets: Byzylykët Binarë
-            Building a Foundation: Krijimi i një Baze
+            Building a Foundation: Krijimi i një fondacioni
             Getting Loopy: Duke u Çmëndur
             Graph Paper Programming: Programimi me grafikë
             Happy Maps: Hartat e Gëzuara
             Move it, Move it: Lëvize, Lëvize
             'Real-life Algorithms: Plant a Seed': 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             The Big Event: Eventi i Madh
         afterschool1:
           title: Afterschool 1
@@ -1455,6 +1455,8 @@ sq:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1724,7 +1726,7 @@ sq:
             Classes: Classes
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
-            Peer Review: Peer Review
+            Peer Review: Rishikimi i ndërsjellë
             Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
@@ -1827,7 +1829,7 @@ sq:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -2139,6 +2141,10 @@ sq:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2198,7 +2204,7 @@ sq:
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
-            Peer Review: Peer Review
+            Peer Review: Rishikimi i ndërsjellë
             Box Model and Page Layout: Box Model and Page Layout
             Digital Footprint: Digital Footprint
             Publishing a Website: Publishing a Website
@@ -2257,8 +2263,8 @@ sq:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
+          description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ sq:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ sq:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Algoritmet e jetës-Reale: Mbill një Farë'
+            Your Digital Footprint: Gjurmët e Tua Dixhitale
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ sq:
             Binary Bracelets: Byzylykët Binarë
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Gjurmët e Tua Dixhitale
+            Building a Foundation: Krijimi i një fondacioni
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ sq:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Shtetësi Dixhitale
+            'Unplugged: Binary': 'Unplugged: Binare'
+            Artist Binary: Artist Binar
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ sq:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Crowdsourcing
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ sq:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Të shkruarit këngë me Parametra
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2448,6 +2466,20 @@ sq:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

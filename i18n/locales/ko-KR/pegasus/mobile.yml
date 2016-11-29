@@ -25,7 +25,7 @@ ko-KR:
   submit: "제출하기"
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: "Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요."
-  og_title: "모든 아이들에게 기회가 주어져야 합니다."
+  og_title: 모든 아이들에게 기회가 주어져야 합니다.
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
   csedweek_og_title: "The Hour of Code is coming"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
@@ -709,6 +709,7 @@ ko-KR:
   dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "Hour of Code 가 여기있습니다. - 12월8일-14일!"
   code_sign_up: "CS Education Week 기간 동안의 활동을 신청하세요."
   host_an_hour: "Host an hour"
@@ -851,6 +852,8 @@ ko-KR:
   starwarsblocks_name: "스타워즈 (블록)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "계산"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS 기초"

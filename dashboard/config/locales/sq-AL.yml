@@ -2,16 +2,16 @@
   errors:
     messages:
       not_saved: 'Të lutem korrigjo gabimet që vijojnë:'
-      too_young: Ky kontekst ka limite moshore dhe nuk është i disponueshëm për studentë
-        më të rinj
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: Kjo përmbajtje ka kufizime në moshë dhe nuk është në dispozicion
+        për studentët e rinj.
+      teacher_must_accept_terms: Kjo përmbajtje ka kufizime në moshë dhe nuk është
+        në dispozicion për studentët e rinj. Kërkoj mësuesit tuaj te pranoj përditësimin
+        e Kushteve  të Shërbimit tju jap juve akses në këtë përmbajtje. Mësuesi juaj
+        mund ta bëj këtë duke hyrë nëCode Studio dhe të klikoj butonin "Review updated
+        terms"  afër fillimit  të faqes Code Studio.
+      pair_programmer: Ju jeni duke programuar në çift me një student i cili nuk ka
+        akses në  këtë përmbajtje. Për të patur akses në këtë përmbajtje , ndalo së
+        programuari në çift dhe provo përsëri.
   activerecord:
     errors:
       messages:
@@ -35,12 +35,12 @@
   your_professional_learning_plan: Plani Juaj Profesional i Mësimit
   see_your_learning_plan: Shikoni planin juaj të mësimit
   submit: Dorëzo
-  unsubmit: Unsubmit
+  unsubmit: E pa dërguar
   previous_page: Faqja e kaluar
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
   done_with_module: Done with this Learning Module
-  cancel: Anulo
+  cancel: Anullo
   okay: Në rregull
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
   add_teacher_form:
@@ -90,11 +90,16 @@
   signup_form:
     student_count: "%{count} nxënës janë regjistruar tashmë."
     teacher_count: "%{count}  mesues janë regjistruar tashmë."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Rregjistrohuni për një llogari për të ndjekur progresin tuaj ose të
+      menaxhuar klasën tuaj. <a href="/"> Ju mund të shfletoni fazat e  ndryshme dhe
+      puzzles </a>   pa një llogari, por do t'ju duhet të rregjistroheni  për të ruajtur
+      progresin dhe projektet tuaja.
+    hoc_already_signed_up_heading: 'Fillo pa u loguar '
+    hoc_already_signed_up_content: |2-
+
+      Ju jeni rregjistruar për të mësuar një Orë Kodimi! Ju dhe nxënësit tuaj nuk duhet të rregjistroheni në Code Studio për të marrë pjesë në këtë ngjarje. Për të filluar, <a href="https://code.org/learn"> zgjidhni një tutorial </a> për klasën tuaj dhe shperndani lidhjen me ta. <br/> <br/> Nëse ju ka pëlqyer Ora e Kodimit dhe dëshironi  të shkoni më tej, ju mund të vendosni një fjalëkalim dhe për të krijuar një llogari në Code Studio për të regjistruar më poshtë  studentët tuaj në ndonjë nga <a  href="https://code.org/educate"> kurset tona më të gjata </ a >.
     teacher_educator_guide: Shiko guidën e edukimit
-    title: Sign up for Code.org
+    title: Regjistrohuni për Code.org
     school_name: Emri i shkollës (jo i domosdoshëm)
     school_address: Adresa e shkollës (jo e domosdoshme)
     address_placeholder: adresa, qyteti, shteti, kodi postar
@@ -110,20 +115,23 @@
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    student_terms: Unë pajtohem me <a href='http://code.org/tos'>kushtet e përdorimit</a>
-      të Code.org. Nëse jam më pak se 13 vjeç, duke plotesuar këtë formular unë dëshmoj
-      që kam lejen e prindërve ose mbikqyrësit ligjor për të përdorur shërbimet e
-      Code.org.<br/> Për përdorues nën moshën 13 vjeçare, adresat e emaileve nuk do
-      të ruhen në formularin që na lejon t'i kontaktojmë.
-    teacher_terms: Unë pajtohem me <a href='http://code.org/tos'> kushtet e përdorimit</a>
-      të Code.org.
+    student_terms: Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve
+      të shërbimit</a> të Code.org. Nëse unë jam nën 13 vjeç, unë konfirmoj me dorëzimin
+      e këtij formulari që kam lejen e prindin tim apo kujdestarit ligjor për të përdorur
+      shërbimet Code.org. <br/> <br/> Adresat e Email-ve nuk janë ruajtur në një formë
+      që na lejon të kontaktojmë studentët. Studentët nuk do të marrin email nga Code.org
+      përveç për të rimarr fjalëkalimin. Shiko <a href='http://code.org/privacy'>
+      Termat e privatesisë</a>tonë për më shumë informacion.
+    teacher_terms: Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve
+      të shërbimit</a> të Code.org. Për më shumë informacion shiko <a href='http://code.org/privacy'>
+      Termat e privatesisë</a>.
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar
       me rregjistrimin tuaj.
     user_type_label: Lloji i llogarisë
     user_type_teacher: Mësues
     user_type_student: student
     field_is_required: E domosdoshme
-    accept_terms: You must agree to create an account
+    accept_terms: Ju duhet të jeni dakord për të krijuar një llogari
   signin_form:
     title: Ke një llogari ekzistuese? Logohu
     login: Email-i ose emri i përdoruesit
@@ -140,13 +148,13 @@
     picture: Tani gjej figurën tënde të fshehtë
     words: Tani fut fjalët e tua të fshehta
     login: Futu
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Login i pavlefshme, ju lutem provoni përsëri
+    pair_programming: Unë kam një partner në kompjuterin tim
   password:
     reset_form:
       title: Keni harruar fjalëkalimin?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Shkruani adresën tuaj të e-mail më poshtë dhe ne do t`ju dërgojnë
+        instruksionet për të rivendosur fjalëkalimin.
       email: Adresa Email-it
       submit: Dorëzo
     change_form:
@@ -274,10 +282,10 @@
       finished_hoc: Unë e mbarova Orën e Kodimit
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       free_play:
-        playlab: Bëj një Aplikacion
+        playlab: Bëj një Aplikacion Play Lab
         artist: Vizato Diçka
         calculate: Calculate Something
-        applab: Bëj një Aplikacion
+        applab: Bëj një Aplikacion App Lab
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -287,12 +295,12 @@
       prizes: "Çmimet"
       logout: Dil
       signin: Futu
-      signup: Rregjistrohu
+      signup: Krijo një llogari
       already_registered: Jeni i rregistruar?
       pair_programming: Programim në çift
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Skuadra
+      driver: Përdorues
+      navigator: Lundrues
     popup:
       progress_for_user: Progresi i %{name}
       progress: Progresi yt
@@ -305,8 +313,8 @@
       prize_us_only: "(vetëm studentët në SHBA)"
       prizes_link: Më shumë informacion
   teacher:
-    answer: Answer
-    for_teachers_only: For Teachers Only
+    answer: Përgjigje
+    for_teachers_only: Vetëm për mësuesit
     title:
       one: 'Mësuesi yt:'
       other: 'Mësuesit e tu:'
@@ -315,21 +323,21 @@
       remove: A jeni i sigurtë që dëshironi ta hiqni këtë mësues?
     students:
       dashboard: Shko tek Paneli i Mësuesit
-    user_not_found: Mësuesi ose studenti nuk mund te gjendet
-    student_teacher_disassociated: "%{teacher_name} është hequr si mësues për %{student_name}"
+    user_not_found: Mësuesi nuk mund te gjendet.
+    student_teacher_disassociated: Ju e keni hequr %{teacher_name} si mësuesi juaj.
     panel:
-      answer_viewer: Paneli i Mësuesit
+      answer_viewer: Paneli i mësuesit
       student: student
       viewing_solution: Duke parë zgjidhjen
       try_it_yourself: Bëje vetë
       section: Pjesë
       example: Shëmbuj Zgjidhjesh
       example_with_number: Shëmbuj Zgjidhjesh %{solution_number}
-      submitted_on: Submitted on %{date}
-      unsubmit: Unsubmit
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
-      clear_response: Clear response
+      submitted_on: 'Dërguar në:'
+      unsubmit: E pa dërguar
+      worked_with: Ka punuar me
+      update_lock_settings: Përditeso parametrat e bllokimit këtu.
+      clear_response: Përgjigja e qartë
   user:
     email_confirm_needed: 'Adresa e email-it nuk është konfirmuar:'
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
@@ -394,8 +402,8 @@
     heading_hoc2014: "<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>"
     heading_elementary: "<h2>20 orë kurse për</h2><h1>Fillestarët (të gjitha moshat)</h1>"
     heading_apps: "<h2>Zbavitje për</h2><h1>Të Gjithë</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<H2> Gati për hapin e ardhshëm? </ H2> <h1> Mjetet e JavaScript
+      për shkollën e mesme </ h1>"
     heading_legacy: "<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>"
     your_gallery: Galeria
     no_primary_course: Provo një kurs të Code Studio
@@ -416,42 +424,57 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Mëso më shumë
     announcement_try_now_button: Provo tani
-    announcement_host_an_hour_button: Host an Hour
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_host_an_hour_button: Të organizojë një Orën
+    announcement_petition: Si mësues, ju jeni duke udhëhequr në mënyrë që t'i jepni
+      çdo nxënësi në çdo shkollë mundësi për të mësuar shkencën kompjuterike. Tani,
+      është koha që përfaqësuesit tuaj të dëgjojmë nga ju. Këtë javë, liderët e arsimit,
+      28 qeveritarët dhe CEOs të kompanive më të mëdha të Amerikës u bashkuan së bashku
+      në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12
+      shkolla të shkencave kompjuterike.
+    announcement_petition_button: Shto emrin tuaj
+    announcement_all: |-
+      Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>
+       
+    announcement_hoc_launch: Mijëra mësues në më shumë se 180 vende do të fillojnë
+      mësimin e shkencës kompjuterike gjatë Orës së Kodit, nga5-11 dhjetor. Ne jemi
+      duke u mbështetur te ju për të na ndihmuar që të kemi më shumë studentë se kurrë
+      më parë. <a href='%{signup_url}' target='_blank'> Regjistrohu në eventin tuaj
+      të Orës së Kodimit </a> dhe bëjini të ditur një tjetër mësuesi se cdo kush mund
+      të filloj të shpjegoj shkenca kompjuterike.
+    announcement_hoc_scaling: 'KUJDES për Kursin 1-4 dhe mësuesit e përshpejtuar të
+      kursit: Për shkak të trafikut të lartë nga miliona e nxënësve që janë duke bërë
+      Orën e Kodimit, <b> Code Studio nuk do të të ruaj ose raportoj progresin e studentëve
+      në këto kurse nga dhjetori 3-11 </ b>. Ne ju rekomandojmë të bëni aktivitetin
+      Ora e Kodimit me klasën tuaj për të festuar Orën e Kodit gjatë Javës së Edukimit
+      të Shkencave Kompjuterike. Ndërsa vetë tutorialet tona të Orës së Kodimit gjithashtu
+      nuk do të ruajnë progresin atë javë, studentët ende mund të bëjnë mësime të
+      plota dhe të fitojnë një certifikatë.'
+    announcement_mc_launch: |-
+      Një nga mësime tona më të njohura tani ka një vazhdim! Të gjithë dizenjuesit e rinj të Orës së Kodimit Minecraft lejojnë nxënësit të bëjnë rregullat e botës Minecraft. Ata mund të krijojnë një përvojë krejtësisht unike Minecraft, dhe pastaj të ndajnë atë me miqtë ose ta luajnë atë në telefonat e tyre. Bëjeni atë me klasën tuaj për Orën e Kodimit.
+       .
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju
+      lutem, jepni një tjetër kod seksioni.
+    section_code_not_entered: Ju lutem jepni kodin e seksionit aktual.
+    section_code_cant_be_current_section: Seksioni aktual nuk mund të jetë i njëjtë
+      me seksionin e ri.
+    current_section_dne: Na vjen keq, por seksioni %{current_section_code} nuk ekziston.
+      Ju lutem, jepni një tjetër kod seksioni.
+    students_not_yours: Ju nuk mund të lëvizin studentët në një seksion që nuk ju
+      përket.
+    stay_enrolled_not_entered: Ju lutem sigurohuni që të qendroni brenda seksionit
+      aktual.
+    student_ids_not_entered: Ju lutem jepni id-të e studenteve.
+    student_not_found: Një ose më shumë studentë nuk mund të gjendet.
+    all_students_must_be_in_current_section: Të gjithë studentët aktualisht duhet
+      të jenë regjistruar në seksionin tuaj.
+    already_enrolled_in_new_section: Ju nuk mund t`i lëvizni këta studentë për shkak
+      se ky mësues i ka tashmë ato në një seksion tjetër.
   share:
     title: Mëso në Code Studio
     description: "Çdokush mund të mësojë shkencat kompjuterike. Krijoni lojra, aplikacione
       dhe art me kode."
-    try_hour_of_code: Try an Hour of Code!
+    try_hour_of_code: Provo një Orë Kodimi!
   gender:
     male: Mashkull
     female: Femër
@@ -470,14 +493,26 @@
       në krijimin e këtij tutoriali.
     help_from_html_old: Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë
       ndihmuar në krijimin e këtyre materialeve.
-    art_from_html: Angry Birds&trade; & &copy; 2009 - 2014 Rovio Entertainment Ltd.
-      Të gjitha të drejtat e rezervuara.<br/>Plants vs. Zombies&trade; & &copy; 2014
-      Electronic Arts Inc. Të gjitha të drejtat e rezervuara.
-    art_from_html_old: Zogj të nevrikosur&#8482;&#8482;&amp;&copy; 2009 %{current_year}  Zbavitje
-      Rivio Ltd. Të drejtat e rezervuara.<br />Bimë dhe Xombi &#8482;&amp;&copy;%{current_year}
-      Artet Elektronike Inc. Të drejtat e rezervuara
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    art_from_html: Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të
+      drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe
+      Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year}
+      Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year}
+      20th Century Fox..Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy;
+      2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara
+      <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc.
+      Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha
+      të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney
+      dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy;
+      %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy;
+      %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br />
+      Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të
+      gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year}
+      Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing
+      e Gumball is trademark and &copy;  %{current_year} Cartoon Network.
+    code_from_html: Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU
+      LGPL 2.1</a> .
     powered_by_aws: Mundësuar nga Amazon Web Services
     trademark: "&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora
       e Kodit&reg;  janë marka tregtare të Code.org."
@@ -491,11 +526,11 @@
     tos: Kushtet e shërbimit
     privacy: Rregullat e Privatësisë
     secure: Versioni i Sigurtë
-    report_abuse: Report Abuse
-    built_on_code_studio: Built on Code Studio
-    make_my_own_app: Make my own app
-    how_it_works: How it works
-    try_hour_of_code: Try an Hour of Code!
+    report_abuse: Raporto abuzimin
+    built_on_code_studio: Krijo në Code Studio
+    make_my_own_app: Ndërtoj aplikacionin tim
+    how_it_works: Si funksionon
+    try_hour_of_code: Provo një Orë Kodimi!
   reference_area:
     title: Keni nevojë për ndihmë?
     subtitle: Shiko këto video dhe udhëzimet
@@ -511,10 +546,10 @@
     download: Shkarko Videon
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin
+        e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një
+        nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
+        mundet që të mos funksionojë.
       link: Mëso më shumë
   slow_loading: Kjo po zgjat më shumë seç duhet...
   try_reloading: Provo të rifreskosh faqen
@@ -525,7 +560,7 @@
   pdf_download: Shkarko PDF
   download_coming_soon: Së shpejti veprime me shkarkim.
   video_coming_soon: Video vjen së shpejti!
-  not_started: The student has not attempted this level.
+  not_started: Studenti nuk e ka tentuar këtë nivel.
   share_code:
     title: Kliko 'Run' të shohësh programin tim në veprim
     bounce_og_title: Shiko Lojën time me Përplasje
@@ -552,15 +587,15 @@
   upsell:
     applab:
       title: Laboratori i Aplikacioneve
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      body: Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni
+        aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript
+        për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond.
+      body_short: Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë
+        funksionale dhe shpërndaje aplikacionin tuaj në sekond.
+      audience: Moshat 13 +
+      cta: 'Mëso si '
     hoc:
-      title: Ora e Kodimit
+      title: Labirint Klasik
       body: Provo bazat e shkencave kompjuterike. Miliona veta e kanë provuar.
     flappy:
       title: Kodi Flappy
@@ -583,23 +618,27 @@
     frozen:
       title: Frozen
     starwars:
-      title: Star Wars
+      title: Lufta e Yjeve
     infinity:
       title: Laboratori i Pafundmë
       body: Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi
         personazhesh Disney.
     minecraft:
       title: Minecraft
-      body: Explore a Minecraft world through code.
+      body: Eksploro  një botë Minecraft nëpërmjet kodit.
+    minecraft2016:
+      title: Minecraft
+      body: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të
+        Minecraft.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: Mësimet e shkëputura
+      audience: Moshat 4+
+      body: Ne kemi përpiluar një listë të mësimeve të shkëputura për ju për ti përdorur
+        në klasën tuaj. Tani ju mund të mësoni bazat e shkencave kompjuterike edhe
+        në qoftë se nuk keni kompjuter në klasën tuaj ! Provoni të përdorni këto mësime
+        si një kurs më vete apo si mësime  plotësuese për çdo kurs të shkenca kompjuterike.
+      body_short: Nëse ju nuk keni kompjutera, provoni këto mësime të shkëputura në
+        klasën tuaj.
   gallery:
     students_drew_these_with_code: Studentët vizatuan këto me kod!
     students_made_these_with_code: Studentët e bënë këtë me kod!
@@ -610,15 +649,15 @@
       apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në
       pikturat dhe screenshotet për të parë çdo program që funksionon.
     want_to_make_your_own: Dëshiron të bësh tëndin?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: Në nivelin e fundit të këtyre mësime, kliko "Finish" dhe "Save" për
+      të ruajtur punën tuaj në galeri.
     more: Më shumë &rarr;
     caption_by_name_age: nga %{name}, mosha %{age}
     caption_time_ago: "%{time_ago} më përpara"
     header: Galeria
     header_playlab: Play Lab
     header_artist: Artisti
-    report_abuse: Report Abuse
+    report_abuse: Raporto abuzimin
   landing:
     prerelease: Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton
       që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku
@@ -628,7 +667,7 @@
     report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: "//support.code.org"
-    help_resources: Help and Resources
+    help_resources: Ndihmë dhe Burime
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
@@ -638,33 +677,33 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Faleminderit
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Ju faleminderit për dërgimin e një përgjigje.
     correct_title: Faleminderit
-    correct_body: Thank you for submitting an answer.
+    correct_body: Ju faleminderit për dërgimin e një përgjigje.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
     wrong_title: Faleminderit
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Ju faleminderit për përgjigjen.
     correct_title: Faleminderit
-    correct_body: Thank you for submitting an answer
-    hide_survey_last_answer: This survey is anonymous.  Please visit the teacher dashboard
-      for aggregate results.  Note that results are only visible if at least five
-      students submitted the survey.
+    correct_body: Ju faleminderit për përgjigjen.
+    hide_survey_last_answer: Ky studim është anonim. Ju lutem vizitoni panelin e mësuesve
+      për rezultatet agregate. Vini re se rezultatet janë të dukshme vetëm në qoftë
+      se të paktën pesë studentë kanë dorëzuar studimin.
   level_group-submittable:
     wrong_title: Faleminderit
-    wrong_body: Thank you for submitting answers.
+    wrong_body: Ju faleminderit për përgjigjen.
     correct_title: Faleminderit
-    correct_body: Thank you for submitting answers.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: Unsubmitting your assessment will reset the submitted time and
-      date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    correct_body: Ju faleminderit për përgjigjen.
+    unsubmit-title: Mos dërgo vlerësimin tuaj
+    unsubmit-body: Mos dërgimi i vlerësimit tuaj do të përditësoj datën dhe orën e
+      dërgimit. A jeni të sigurt?
+    submit-incomplete-title: Dërgo vlerësimin tuaj
+    submit-incomplete-body: Ju keni lënë disa pyetje të paplotësuara. Ju nuk mund
+      të modifikoni vlerësimin tuaj pasi ta keni dorëzuar atë. A je i sigurt?
+    submit-complete-title: Dërgo vlerësimin tuaj
+    submit-complete-body: " Ju nuk mund të modifikoni vlerësimin tuaj pasi ta keni
+      dorëzuar atë. A je i sigurt?"
   match:
     wrong_title: Zgjidhje e pasaktë
     wrong_body: Zgjidhja që keni futur është e pasktë. Ju lutem provojeni përsëri!
@@ -691,8 +730,8 @@
     startover_title: A jeni i sigurt që doni të filloni nga fillimi?
     startover_body: Kjo do ta rikthejë formuesen në gjëndjen fillestare dhe do të
       fshijë të gjitha blloqet që ke shtuar ose ndryshuar.
-    startover_ok: Fillo nga fillimi
-    startover_cancel: Anulo
+    startover_ok: 'Fillo nga fillimi '
+    startover_cancel: Anullo
   time:
     hour: 1 orë
     day: ditë
@@ -706,46 +745,47 @@
       nuk do e shesi apo ta shpërndajë këtë informacion me palë të treta.
     sign_out: Nëse nuk do të japësh moshën tënde, ti mund të <a href="%{url}">dalësh</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: Përditësimi i Kushtet e Shërbimit dhe Rregullave të Privatësisë
+    intro_desc: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat e Privatësisë,
+      siç tregohet më poshtë. Ndryshimet janë në fuqi që nga 24 gusht 2016. Ndryshimi
+      më i madh: ne  <i> nuk do të ruajmë me adresat e e-mail për llogaritë e  studentëve
+      në Code Studio </ i> Kjo është një arritje e madhe për ne dhe ne shpresojmë
+      që kjo të përcaktoj një standard i ri për privatësinë e studentëve në shkollat
+      teknologjike. Ne ju kemi  dërguar një përmbledhje të ndryshimeve të tjera përmes
+      emailit.'
+    intro_instructions: Ju do të duhet të pranoni këto kushte të reja për studentët
+      nën moshën 13 në klasën tuaj për të pasur qasje të plotë në të gjitha vecoritë
+      e fundit në Code Studio. Kur regjistrimit një llogari për një student nën 13,
+      do ju kërkohet për të konfirmuar se shkolla juaj ka pëlqimin e prindërve për
+      mbledhjen e informacionit personal të nxënësit për përdorimin dhe përfitimin
+      e shkollës, duke përfshirë programet arsimore të tilla si Code Studio.
     tos: Kushtet e shërbimit
     privacy: Rregullat e Privatësisë
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
-    print: Shtyp
-    later: Later
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    privacy_notice: E Drejta e Autorit
+    accept_label: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
+      Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika
+      e Privatësisë </ a>
+    accept: Pranoj
+    print: Printo
+    reminder_desc: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
+      Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika
+      e Privatësisë </ a>. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini
+      re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion
+      për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.
+    review_terms: Rishikimi i kushteve të përditësimit
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Opsionale: Na ndihmoni të ndjekim progresin tonë drejt përmirësimit të
+      diversitetit në shkenca kompjuterike'
+    message: Ju lutem na tregoni garën tuaj (kontrollo të gjitha aplikimet)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: E bardhë
+    - black: I zi ose Afrikano American
+    - hispanic: Hispanik ose Latin
+    - asian: Aziatik
+    - hawaiian: Vendas Havajan ose banues të  tjetër të Paqësorit
+    - american_indian: Amerikano-Indian/Vendas nga Alaska
     - other: Tjetër
-    - opt_out: Prefer not to say
+    - opt_out: Preferoj të mos përgjigjem
     submit: Dorëzo
     decline: Mbyll
   zendesk_too_young_message: Na vjen keq, përdoruesit e vegjël nuk mund të futen tek
@@ -758,7 +798,7 @@
     completed_perfect: i përfunduar, në mënyrë perfekte
     furthest_level_attempted: përpjekja e nivelit më të largët
     assessment: Vlerësim
-    submitted: submitted
+    submitted: Dorëzuar
   studio:
     courses_working_on: Kurset në të cilat po punoni
     completed_courses: Kurset e përfunduara
@@ -776,27 +816,28 @@
     share: Shpërndaje
     share_title: Shpërndaje projektin
     share_copy_link: 'Kopjo lidhjen:'
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
-    embed: Embed
-    advanced_share: Show advanced options
+    share_embed_description: Ju mund të kopjoni kodin e integruar në një faqe HTML
+      për të shfaqur projektin për një webpage.
+    share_u13_warning: Pyetni mësuesin tuaj para shpërndarjes. Vetëm shpërndajeni
+      me të tjerët në shkollën tuaj.
+    embed: I integruar
+    advanced_share: Trego opsione të avancuara
     close: Mbyll
     more: Më shumë
     name: Emri
     updated: U ndryshua
     project_type: Lloji i Projektit
     help_text: Shtyp <strong>Bëj një Aplikacion</strong> ose <strong>Vizato Diçka</strong>
-      më poshtë për të hapur një Laborator të ri ose një Projekt Artistik!<br/> Mund
-      të kthehesh kur të duash, dhe të zhvillosh projektin tend.
-    need_help: Të duhet ndihmë për të filluar?
+      më poshtë për të hapur    një Projekt të ri!<br/> Mund të kthehesh kur të duash
+      dhe të zhvillosh projektin tënd.
+    need_help: Provoni këto kurse për t`ju ndihmuar  të filloni me projektin tuaj
+      të ri
     really_delete: Fshirje?
     delete_yes: Po
     delete_no: Jo
     saved: E ruajtur
     not_saved: E pa ruajtur
-    cancel: Anulo
+    cancel: Anullo
     delete_confirm_title: A jeni i sugurt që dëshironi ta fshini këtë projekt?
     delete_confirm_text: Duke fshirë projektin, ju do ta hiqni përfundisht nga lista
       e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden
@@ -809,49 +850,52 @@
       tos: Ky projekt është raportuar si shkelje e <a href='http://code.org/tos'>
         së Termave të Shërbimit të Code.org</a> dhe nuk mund të behet publik për të
         tjerët.
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: Ky projekt përmban informacion që nuk mund të ndahet me të
+        tjerët. Ju lutemi të kontaktoni pronarin e aplikacionit për të rregulluar
+        përmbajtjen e aplikacionit të tyre.
       contact_us: Nëse mendoni që kjo nuk është e drejtë, ju lutem n'a kontaktoni
         në <a href='https://code.org/contact'></a>
       go_to_code_studio: Shkoni në Studioja e Kodit
       report_abuse_form:
-        intro: If you have encountered offensive content, threats, cyberbullying,
-          harassment, or an instance of copyright infringement for content you own
-          while using apps built on Code Studio, please fill out the form below. We
-          will take your report very seriously, investigate accordingly, and take
-          appropriate action.
+        intro: Nëse ju keni hasur përmbajtje fyese, kërcënime, bullinizëm, ngacmimi,
+          ose një shembull i shkeljes së autorit për përmbajtjen që ju zotëroni duke
+          përdorur aplikacione të ndërtuara në Kodi Studio, ju lutemi plotësoni formularin
+          e mëposhtëm. Ne do të marrë raportin tuaj shumë seriozisht, do të hetojmë
+          në përputhje me rrethanat dhe për të marrë masat e duhura.
         validation:
-          email: Please provide an email address
-          age: Please specify an age
-          abuse_type: Please answer how this content violates the Terms of Service
-          abuse_detail: Please provide details regarding the content you are reporting
-        abusive_url: URL of the content being reported
+          email: Ju lutemi jepni një adresë e-mail
+          age: Ju lutem përcaktoni një moshë
+          abuse_type: Ju lutemi përgjigjuni se si kjo përmbajtje shkel Kushtet e Shërbimit
+          abuse_detail: Ju lutemi jepni detaje lidhur me përmbajtjen ju jeni duke
+            raportuar
+        abusive_url: URL e përmbajtjes po raportohet
         abuse_type:
-          question: How does this content violate the %{link_start}Terms of Service%{link_end}?
-          harassment: Threats, cyberbullying, harassement
-          offensive: Offensive content
-          infringement: Copyright Infringement
+          question: Si e bën këtë përmbajtje të shkel %{link_start} Kushtet e Shërbimit
+            %{link_end}?
+          harassment: Kërcënimet, bullizmi në internet, ngacmimi
+          offensive: Përmbajtje fyese
+          infringement: Shkelja e së Drejtës së Autorit
           other: Tjetër
-        detail: Please provide as much detail as possible regarding the content you
-          are reporting.
-        acknowledge: By submitting this information, you acknowledge it will be handled
-          in accordance with the terms of the %{link_start_privacy}Privacy Policy%{link_end}
-          and the %{link_start_tos}Terms of Service%{link_end}
+        detail: Ju lutemi jepni sa më shumë detaje të jetë e mundur në lidhje me përmbajtjen
+          që ju jeni duke raportuar.
+        acknowledge: Duke dërguar këtë informacion, ju duhet ta dini se do të trajtohen
+          në përputhje me kushtet e %{link_start_privacy} Rregullave të privatësisë%{link_end}
+          dhe %{link_start_tos} Kushtet e Shërbimit %{link_end}.
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: Pranuar
+      description: "<strong> Po </ strong>, ky nënshtrim <strong> përmbush </ strong>
+        kërkesat"
     rejected:
-      name: Rejected
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
+      name: Refuzuar
+      description: "<strong> Jo</ strong>, ky nënshtrim <strong> nuk përmbush </ strong>
+        kërkesat"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
+      name: përshkallëzuar
+      description: Unë do të doja një instruktor për të shqyrtuar këtë dorëzim
+    instructor_feedback: Instruktor i Përgjigjes
+    peer_feedback: Reagim i ndërsjelltë
+    outdated: Ky reagim është shtuar për një version të dorëzuar më parë
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
     reviews_unavailable: Reviews unavailable at this time
@@ -863,50 +907,52 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Kerko nje ikone...
-      no_icons_found: Nuk u gjet ikona
+      search_placeholder_text: Kërko për një ikonë...
+      no_icons_found: Ikona nuk u gjet
     playzone:
       artist_description: Vizato figura të hatashme dhe dizenjo me Artistin!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
+      artist_title: Vizatim i ri
+      continue_button: Shko për në fazën tjetër
       playlab_description: Krijo një histori ose bëj një lojë me Play Lab!
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      playlab_title: Aplikacione të reja
+      primary_header: Urime! Ti përfundove %{stageName}!
+      projects_description: Rishiko një nga projektet tuaja ekzistuese.
+      projects_title: Hapni një projekt
+      secondary_header: Pyetni mësuesin tuaj se çfarë të bëni më tej
   flex_category:
     required: Përmbledhja
-    content: Content
-    practice: Teacher Practices
-    peer_review: Peer Review
+    content: Përmbajtja
+    practice: Praktikat mësimore
+    peer_review: Rishikimi i ndërsjellë
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated
-      by Code.org.
-    disclaimer_text: This site may have privacy policies that differ from Code.org's.
-      We have selected these third party resources because we think they will be useful
-      to you. While we are not directly responsible for the content of this website,
-      please <a href='%{support_url}'>contact support</a> if you find the content
-      objectionable, or if the linked site is no longer available.
+    disclaimer: Mohim
+    leaving_domain: Ju tani jeni duke e lënë këtë domain, në një vend që nuk është
+      i operuar nga Code.org.
+    disclaimer_text: Kjo faqe mund të ketë politikat e privatësisë që ndryshojnë nga
+      Code.org-së. Ne kemi zgjedhur këto burime të palës së tretë, sepse ne mendojmë
+      se ata do të jenë të dobishme për ju. Ndërsa ne nuk jemi drejtpërdrejt përgjegjës
+      për përmbajtjen e kësaj faqe interneti, ju lutem <a href='%{support_url}'> kontaktoni
+      suportin</a>  në qoftë se ju të gjeni përmbajtje të pakëndshme, ose në qoftë
+      se linku nuk është më në dispozicion.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    title: Shkarkime të Orës së Kodimit
+    capsule_title: A keni internet?
+    capsule_desc: Përdorni internet e bazuar në web<a href="%{url}">%{app_name} </a>.
+    instructions_headline: Nuk ka internet?
+    instructions: 'Udhëzime për mësuesit: në qoftë se ju keni shërbim të dobët të
+      internetit, këto tutoriale të Orës së Kodimit janë në dispozicion për t`u shkarkuar
+      dhe instaluar për përdorim offline. Zgjidhni gjuhën dhe platformën tuaj, shkarkoheni
+      dhe instaloheni atë në të gjitha kompjuterat në klasën tuaj. Ju mund të të përdorni
+      një disk USB për ta shkarkuar një herë dhe për ta instaluar në të gjithë kompjuterat.
+      Shënim: Studentët nuk do të jetë në gjendje të hyjne në Code Studio, ruani progresin
+      apo certifikata të shtypura. Mësuesit mund të printoni certifikatat para kohe
+      <a href="%{url}"> këtu </a>.'
+    minecraft_name: Ora e Kodimit Minecraft
+    starwars_blocks_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
+    starwars_javascript_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
+    download_message: Shkarko%{app_name} përdorim offline (136MB)
+    download_in_english: 'Shkarko në Anglisht:'
+    download_in_spanish: 'Shkarko në Spanjisht:'
     windows: Windows
     mac: Mac OS X
   plc:
@@ -922,12 +968,12 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë
+    është e bllokuar aktualisht. Mësuesi juaj mund të zhbllokuar këtë fazë kur është
+    koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.
+  hidden_stage: Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj
+    se cili mësim duhet të jetë.
+  return_course_overview: Shko në njësinë e rishikimit
   pd:
     survey:
       number_teachers: Number of attending teachers

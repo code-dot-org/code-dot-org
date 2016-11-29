@@ -2,7 +2,7 @@ el:
   errors:
     messages:
       not_saved: 'Παρακαλώ διόρθωσε τα ακόλουθα σφάλματα:'
-      too_young: 'This content has age restrictions in place and is not available for younger students.'
+      too_young: 'Αυτό το περιεχόμενο έχει περιορισμούς ηλικίας στο περιεχόμενο και δεν είναι διαθέσιμο για τους νεότερους μαθητές.'
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
       pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:

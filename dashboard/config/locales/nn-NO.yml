@@ -93,6 +93,12 @@
     overview: Registrer deg for å følgje fremdrifta din eller administrere klasserommet.
       <a href="/">Du kan bla gjennom dei ulike scenane og oppgåvene</a> utan ein konto,
       men du må registrere deg for å lagre framgang og prosjekt.
+    hoc_already_signed_up_heading: Kom i gong utan å logge inn
+    hoc_already_signed_up_content: Du er påmeldt Kodetimen! De treng ikkje å logge
+      inn i Code Studio for å delta. For å kome i gong, <a href="https://code.org/learn">velg
+      eit oppgåvesett</a> til klasserommet ditt, og del lenkja med elevane.<br/><br/>Om
+      de likte Kodetimen og ønskjer å kode meir, kan de opprette kontoar i Code Studio
+      og la elevane jobbe med dei <a href="https://code.org/educate">lengre kursa</a>.
     teacher_educator_guide: Sjå veiledning for lærar
     title: Registrer deg på Code.org
     school_name: Namnet på skulen (valfritt)
@@ -331,7 +337,7 @@
       unsubmit: Trekk tilbake
       worked_with: Jobba med
       update_lock_settings: Oppdater låsestatus her.
-      clear_response: Clear response
+      clear_response: Fjern tilbakemelding
   user:
     email_confirm_needed: 'E-postadressa er ikkje stadfesta:'
     email_confirm_needed_required: 'E-postadressa di %{email} er ikkje blitt stadfesta:'
@@ -400,35 +406,44 @@
     choose_next_course: Prøv eit kurs frå Code Studio ved å velje eit nedanfor
     print_certificate: Skriv ut sertifikat
     announcement_title: Kunngjeringar
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: We har brukt sommeren på å gjøre om tilbakemeldingene
+      vi har fått til nye funksjoner. Nå kan du <a href="%{pp_url}" target="_blank">følge
+      flere elevers fremgang</a>, selv om de jobber i par på en maskin. Du kan bruke
+      <a href="%{csp_widgets_url}" target="_blank">de beste interaktive verktøyene</a>
+      fra CS prinsipper-kurset i <i>hvilket som helst</i> klasserom. Elevene dine
+      kan <a href="%{unused_code_url}" target="_blank">beholde ubrukt kode</a> på
+      arbeidsområdet for å fremme utprøving! Se på de nye funksjonene og la oss få
+      vite hva du tenker.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Lær meir
     announcement_try_now_button: Prøv no
-    announcement_host_an_hour_button: Host an Hour
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_host_an_hour_button: Ver vert for ein Kodetime
+    announcement_petition: Som lærar, er du del av ei rørsle som ynskjer å gje alle
+      elevar, i alle skular, høve til å lære programmering. No er det på tide å la
+      myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar
+      og administrerande direktørar i dei største selskapa i USA saman og leverte
+      eit ope brev, kor dei ba kongressen finansiere K-12 programmeringsutdanning.
     announcement_petition_button: Legg til namnet ditt
     announcement_all: Held deg oppdatert med oppdateringar og ny funksjonalitet på
       lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare
       kunngjeringar.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Tusener av lærarar i meir enn 180 land vil undervise
+      i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe
+      oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer
+      din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering.
+    announcement_hoc_scaling: OBS! På grunn av veldig mykje trafikk frå millionar
+      av elevar i løpet av Kodetimen (veke 49), vil ikkje Code Studio lagre eller
+      rapportere elevfremgong i dei øvrige kursa. Vi anbefaler å gjennomføre eit Kodetime-opplegg
+      med klassa di i løpet av denne veka i staden. Sjølv om heller ikkje Kodetimen-kursa
+      kjem til å lagre nokon framgang, kan elevane likevel fullføre dei og få ein
+      diplom etter fullført Kodetime.
+    announcement_mc_launch: Eit av våre mest populære opplegg har fått ein oppfølgjar!
+      Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft.
+      Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller
+      spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime.
   move_students:
     new_section_dne: Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn
       ein annan seksjonskode.
@@ -442,9 +457,9 @@
     stay_enrolled_not_entered: Ver vennleg å oppgi stay_enrolled_in_current_section.
     student_ids_not_entered: Ver vennleg å oppgi student_ids.
     student_not_found: Kunne ikkje finne ein eller fleire elevar.
-    all_students_must_be_in_current_section: Alle elevar må vere registert i den gruppe.
+    all_students_must_be_in_current_section: Alle elevar må vere registert i di gruppe.
     already_enrolled_in_new_section: Du kan ikkje flytte desse elevane fordi denne
-      læraren allereie har dem i ei anna gruppe.
+      læraren allereie har dei i ei anna gruppe.
   share:
     title: Lær i Code Studio
     description: Alle kan lære programmering. Lag spel, appar og kunst med kode.
@@ -593,6 +608,9 @@
     minecraft:
       title: Minecraft
       body: Utforsk ei Minecraft-verd gjennom kode.
+    minecraft2016:
+      title: Minecraft
+      body: Programmer dyr og andre Minecraft-vesen i din eigen versjon av Minecraft.
     unplugged:
       title: Analoge leksjonar
       audience: Alder 4+
@@ -728,7 +746,6 @@
       og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>
     accept: Godta
     print: Skriv ut
-    later: Seinare
     reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tenestevilkår</a>
       og <a href="%{privacy_url}" target="_blank">vilkår for personvern</a>. Ver venleg
       å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise
@@ -736,18 +753,18 @@
       er akseptert.
     review_terms: Les våre oppdaterte vilkår
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Valfritt: Hjelp oss å spora framdrifta av forbetringa av mangfaldet innan
+      programmering.'
+    message: Oppgi din etnisitet (kryss av alle som passar)
     races:
-    - white: Hvit
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
+    - white: Kvit
+    - black: Afrikansk
+    - hispanic: Latinamerikansk
     - asian: Asiatisk
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - hawaiian: Hawaii eller Stillehavsøyane
+    - american_indian: Amerikansk urbefolkning
     - other: Anna
-    - opt_out: "Ønsker ikke å si"
+    - opt_out: Ynskjer ikkje å svare
     submit: Send
     decline: Lukk
   zendesk_too_young_message: Beklager, yngre brukarar kan ikkje logge inn på nettstaden
@@ -895,7 +912,7 @@
     capsule_desc: Bruk nettbasert <a href="%{url}">%{app_name}</a>.
     instructions_headline: Ingen internett?
     instructions: 'Instruksjonar for lærarar: Om du har dårleg tilgang til internett,
-      så er desse Kodetime opplegga tilgjengeleg for nedlasting og installasjon for
+      så er desse Kodetime-opplegga tilgjengeleg for nedlasting og installasjon for
       fråkobla bruk. Vel språk og plattform, last ned og installer på alle datamaskinane
       i ditt klasserom. Du kan bruke ein USB minnepinne for å laste ned ein gong,
       og deretter installere på alle datamaskinane. Merk: elevane vil ikkje kunne
@@ -923,7 +940,7 @@
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
   locked_stage: Innhaldet på dette nivået er ikkje synleg fordi dette nivået er låst.
-    Læraren kan låse opp dette stadiet når det er til for å arbeide med den eller
+    Læraren kan låse opp dette stadiet når det er tid for å arbeide med den eller
     sjå på svara.
   hidden_stage: Læreraren din forventa ikkje at du kom hit. Ver vennleg og spør læraren
     din kva leksjon du skal vere på.

@@ -3,58 +3,121 @@
     instructions:
       2-3 Artist 1 new_instruction: "您好，我是一个艺术家。你写的代码可以让我画任何的东西。 用几个程序模块来让我画一些灰色线条吧。
         (每一行是100个像素长)"
-      2-3 Artist 11_instruction: "为停止标志画一个八边形的边界，八边形每条边长100像素。每次需要转多少度？（提示：360除以8是多少？）"
-      2-3 Artist 12_instruction: 设置"重复次数"模块，以便它创建一个"圈"来完成眼球。如果每次都是向右转1度，你需要重复次才能完成这个圈？180
-        吗？360 吗？500 吗？
+      2-3 Artist 11_instruction: |
+        为停止标志画一个八边形的边，边长为100像素。\r
+        \r
+      2-3 Artist 12_instruction: |-
+        画一个圆圈来完成这个眼球！\r
+        \r
+        如果每次都是转1度，你需要重复次才能完成这个圈？180 、360 、还是500次呢？
       2-3 Artist 2 new_instruction: "这所房子有一堵墙只完成了一半。每一边长都是 100，但是完成了一半的墙只有 50。请完成该墙。 "
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. "
-      2-3 Artist 3.4_instruction: "“跳”模块会移动艺术家但不画线。通过使用两个“跳”块和“画”块来画出虚线。"
+      2-3 Artist 3.4_instruction: |-
+        “跳”模块会移动艺术家但不画线。通过使用“向前跳”块和“向前移动”块来画出虚线。
+        每行是50像素长。
       2-3 Artist 3_instruction: "这顶帽子的高度是 100 像素。请你画一顶高度为 70 像素的帽子。"
-      2-3 Artist 3new_instruction: "红色的帽子高度是 100 像素。请绘制一顶高度矮70 个像素的黑色帽子，帽子的宽度为 50
-        像素。"
+      2-3 Artist 3new_instruction: |-
+        红色的帽子高度是 100 像素。请绘制一顶高度矮70个像素的黑色帽子。\r
+        （注意：每顶帽子的宽度是50像素。）
       2-3 Artist 4_instruction: "帮我为小猫盖好房子"
       2-3 Artist 5_instruction: "将这段代码用“重复次数”模块来代替，画出同样的房子只需要3块模块。"
       2-3 Artist 6_instruction: "这个房子需要一个屋顶！提示：所有三面都具有相同的长度。"
-      2-3 Artist 7_instruction: "请绘制最后一个窗口的右半部分。窗口的每个方块为 25 像素。"
-      2-3 Artist 8_instruction: "把矩形分拆成两个大小相等的正方形，来给每只动物做个房间。这个矩形的宽是 200 像素，高是100
-        像素。"
+      2-3 Artist 7_instruction: "画完学校窗户的最后一部分，这样班级里的每个人都可以看到外面了。每个正方形窗户的边长都是25像素。 "
+      2-3 Artist 8_instruction: "把矩形分成两个相等的正方形来为每只动物提供一个房间。长方形的宽是200像素，高是100像素。有很多方法都可以解决这个难题，所以找出一些乐趣吧！"
       2-3 Artist 9 NEW_instruction: "完成这只风筝"
       2-3 Artist 9 REPLACEMENT_instruction: "绘制完这些楼梯 ！"
       2-3 Artist 9_instruction: "完成这只风筝"
-      2-3 Artist Assessment 1_instruction: "评估： 完成绘制最后一个齿, 宽度25 像素并且高度 25 像素。"
+      2-3 Artist Assessment 1_instruction: "评估： 完成绘制最后一个齿。宽度为25像素并且高度为25像素。"
       2-3 Artist Debugging 1_instruction: "这顶帽子应该只有50像素宽。 你能改好它吗？"
-      2-3 Artist Debugging 10_instruction: "我的游戏控制器方向键太窄了。\\r 你能让它增加 10 像素吗？ \\r 运行后，第一次看到的代码有什么不对劲儿。"
-      2-3 Artist Debugging 11_instruction: "帮我完成我美丽的雪花。我需要重复多少次才能完成呢？"
+      2-3 Artist Debugging 10_instruction: |-
+        我的游戏控制器方向键太窄了。\r
+        \r
+        你能让它增加 10 像素吗？ \r
+        \r
+        试试先运行代码看看哪里有问题。
+      2-3 Artist Debugging 11_instruction: |-
+        我的雪花在崩塌！\r
+        \r
+        你能找到哪里错了吗？
       2-3 Artist Debugging 12_instruction: "我希望添加一片海浪到场景里。能帮我吗？"
-      2-3 Artist Debugging 2_instruction: "你看到的三条胡须的代码是错误的。提示： 每条胡须是 75 像素。请修复此代码来绘制胡须。"
-      2-3 Artist Debugging 3_instruction: "我的船有个洞! 你可以帮我调整线的角度修好它吗? 提示: 最后一个角偏差了 15
-        度。"
+      2-3 Artist Debugging 2_instruction: |-
+        这只猫的三条胡须的代码是错误的。
+        \r
+        \r
+        修改代码来画出一样长的胡须。
+      2-3 Artist Debugging 3_instruction: |-
+        我的船有个洞!\r
+        \r
+        你可以帮我修好它吗?
       2-3 Artist Debugging 4_instruction: |-
         我们想要画的图是什么？
         用适当的线条和角度连接这些点。
-      2-3 Artist Debugging 5_instruction: "画腿脚的程序是错误的。提示：脚太长了，可能需要删除一步。"
-      2-3 Artist Debugging 6_instruction: "好像我坐的椅子少了一条腿，能帮忙补上吗？"
-      2-3 Artist Debugging 7_instruction: "代码里面的这个“C”看起来像是画反了，你们能把它再画成“C”吗？"
-      2-3 Artist Debugging 8_instruction: "我的风车还没完成呢。我要重复多少次才能完成它呢？"
-      2-3 Artist Debugging 9_instruction: "茎的代码不正确。提示: 角度应该是60度。"
-      2-3 Artist Debugging Assessment 1_instruction: "这个形状太小了，能把它变大一点吗？提示：每条边都应该是75像素。"
+      2-3 Artist Debugging 5_instruction: |-
+        画腿和脚的程序是错误的。\r
+        \r
+        你能改对它吗？
+      2-3 Artist Debugging 6_instruction: |-
+        好像我坐的椅子少了一条腿！\r
+        \r
+        编辑代码来画出最后一条腿。
+      2-3 Artist Debugging 7_instruction: |-
+        代码里面的这个“C”看起来像是画反了！\r
+        \r
+        你能把它再改成“C”吗？
+      2-3 Artist Debugging 8_instruction: |-
+        我的老师说应该有始有终！\r
+        \r
+        帮我完成我的风车。你能找出哪里错了吗？
+      2-3 Artist Debugging 9_instruction: |-
+        有东西断了！\r
+        \r
+        茎的代码错了。你能让小画家画出正确的茎吗？
+      2-3 Artist Debugging Assessment 1_instruction: |-
+        评估：为什么每条边75像素太短了？\r
+        \r
+        代码哪里错了？
       2-3 Artist Free Play_instruction: "自己玩吧！想画什么就画什么。"
-      2-3 Artist Functions 1_instruction: "你好。我的僵尸艺术家。我爱画画 ！请帮我画副方形眼镜。 提示： 眼镜之间的桥梁比正方形边长短25
-        像素。"
-      2-3 Artist Functions 10_instruction: "这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。使用它们来绘制一个机器的内部结构！"
-      2-3 Artist Functions 11.5_instruction: 这里同样是"画一个六边形"的功能。如果在循环中每次只转 60 度会发生什么呢？
-      2-3 Artist Functions 11_instruction: "我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！能把“画一个六边形”的函数改成能画边长50像素的六边形，然后用它画一个六边形吗？"
-      2-3 Artist Functions 12 Mike_instruction: "函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）
-        \ "
-      2-3 Artist Functions 12_instruction: "函数对于多次画一个复杂的事物非常有帮助。能用“画一朵花”的函数来填满整个花盆吗？（提示：植物应该相隔100像素。）
-        \ "
+      2-3 Artist Functions 1_instruction: |-
+        “我，僵尸艺术家。我，爱画画 ！”\r
+        \r
+        请帮它画副方形眼镜。\r
+        \r
+        正方形的宽度是100像素，而眼镜间的桥比它短25像素。
+      2-3 Artist Functions 10_instruction: "自由发挥：这里有两个函数，一个是绘制一个大齿轮，另一个是画一个小齿轮。用它们来绘制一个机器的内部结构！"
+      2-3 Artist Functions 11.5_instruction: |-
+        这里同样是"画一个六边形"的功能。\r
+        \r
+        如果在循环中每次转 60 度，一共转6次，会发生什么呢？
+      2-3 Artist Functions 11_instruction: |-
+        我们将“画一个正方形”的函数改成了“画一个六边形”，但它实际上还是只能画正方形！你能把“画一个六边形”的函数改成能画边长50像素的六边形吗？\r
+        \r
+        用新函数来画这个图形吧！
+      2-3 Artist Functions 12 Mike_instruction: |-
+        函数对于多次画一个复杂的事物非常有帮助。\r
+        \r
+        你能用“画一朵花”函数来填满整个花盆吗？\r
+        提示：每株花应该相隔100像素。
+      2-3 Artist Functions 12_instruction: |-
+        函数对于多次画一个复杂的事物非常有帮助。\r
+        \r
+        你能用“画一朵花”函数来填满整个花盆吗？\r
+        提示：每株花应该相隔100像素。
       2-3 Artist Functions 13_instruction: "我们提供了4个函数。你可以随意把它们放在一个或者多个循环中来画图，然后分享给你的朋友们。点击“运行”来看示例。"
-      2-3 Artist Functions 2_instruction: "函数能让你定义新的模块。我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。能用“画一个正方形”函数来画个眼镜吗？正方形间隔75像素。"
-      2-3 Artist Functions 3_instruction: "将画一个正方形的函数改为画115像素边长的正方形，从而能够画出一个更大的眼镜。正方形的间隔为45个像素。"
-      2-3 Artist Functions 4_instruction: "用重复模块来画这三个正方形。"
+      2-3 Artist Functions 2_instruction: |-
+        函数能让你定义新的模块。\r
+        \r
+        我们将画正方形的模块挪到了一个叫做“画一个正方形”的函数里。这次，用“画一个正方形”函数来画个眼镜吗。
+        \r
+        \r
+        正方形间隔75像素。
+      2-3 Artist Functions 3_instruction: |-
+        编辑这个函数来画一个边长115像素的正方形，从而能够画出一个更大的眼镜。\r
+        \r
+        正方形的间隔为45个像素。
+      2-3 Artist Functions 4_instruction: "现在，将函数放到循环里来画这三个正方形。"
       2-3 Artist Functions 7_instruction: '用“画一个房子"的函数来画两个参数不同的房子。（提示: 第一个房子是100像素的）。'
-      2-3 Artist Functions 9_instruction: "这里有个雪花函数。试试用它创造出冬季的景色！这是一个自由关卡，不需要解决问题。随便玩吧！"
+      2-3 Artist Functions 9_instruction: "自由发挥：这里有个雪花函数。试试用它创造出冬季的景色！这是一个自由关卡，不需要解决问题。随便玩吧！"
       2-3 Artist Loops 1_instruction: "可以做出一个边长100像素的六边形吗？记住，这代表每次只能转60度。"
       2-3 Artist Loops 10_instruction: "如果让最后一步提早一半，将会发生什么？"
       2-3 Artist Loops 11_instruction: "现在，让我们用另一个循环把整个作品都包围起来！ 别忘了在外层循环的最后增加一个角度。"
@@ -68,92 +131,182 @@
       2-3 Artist Loops 8_instruction: "将两个元素放到一个循环里。"
       2-3 Artist Loops 9_instruction: "我们要循环同样的元素了，但是现在我们需要给它们之间加一些距离。\\r用和以前一样的代码，但是在外面的循环结束时往前走一步。"
       2-3 Artist Loops New 1_instruction: "让我们来画一个机器人的头！你可以创建一个100像素边的正方形。"
-      2-3 Artist Loops New 10_instruction: "现在，让我们把这一堆V连在一起，在一个循环里画出它们。"
-      2-3 Artist Loops New 11_instruction: "这次，让我们画24次。添加一个左转30度的模块，并且将它放到循环里。"
+      2-3 Artist Loops New 10_instruction: "现在，让我们把这一堆V用循环连在一起。"
+      2-3 Artist Loops New 11_instruction: "重构刚刚那一关的代码，但是这次，加一个左转30度到循环里。现在，重复24次，而不是8次。"
       2-3 Artist Loops New 12_instruction: |
         画一个边长100像素的菱形。
-      2-3 Artist Loops New 13_instruction: "现在，在一个循环中画三次菱形。"
-      2-3 Artist Loops New 14_instruction: "现在让我们来画10个菱形，但是每个之间要旋转90度。"
-      2-3 Artist Loops New 15_instruction: "绘制一些有趣的东西。"
-      2-3 Artist Loops New 2_instruction: "这里有一些你用来绘制该正方形的代码。如果您使用重复块来运行这段代码 4 次，会发生什么？"
-      2-3 Artist Loops New 9_instruction: "画一个两边都是50像素的V形，来完成这个箭头。"
+      2-3 Artist Loops New 13_instruction: |-
+        现在，我们从一些（灰色的）代码开始来画一个菱形。\r
+        \r
+        循环灰色的代码来创造一个有趣的图形！
+      2-3 Artist Loops New 14_instruction: "改一改画菱形的代码，看看能画出什么别的形状。试试改变转向的度数和循环的次数。"
+      2-3 Artist Loops New 15_instruction: "现在，随便画你喜欢的东西吧！"
+      2-3 Artist Loops New 2_instruction: |-
+        这是一个以前解决过的问题，但是这次，我们只用一个“向前移动”和一个“转向”模块。\r
+        \r
+        你能用一个“重复”模块来解决这个问题吗？
+      2-3 Artist Loops New 9_instruction: "画一个简单的V（两边都是50像素）来完成这个箭头。"
       2-3 Artist Match Hex Pic_instruction: "比赛： 帮助完成六角形。"
       2-3 Artist Match Rho Pic_instruction: "比赛： 补全缺少的代码。"
       2-3 Artist Match Sq Pic_instruction: "比赛： 完成缺少的代码"
       2-3 Artist Match Tri pic_instruction: "匹配： 填写缺少的代码。"
-      2-3 Artist Nested Loops 1_instruction: "你之前已经使用过循环了，但你知道吗，还可以把一个循环中放到另一个循环中?
-        \\r 循环这段代码 3次就能绘制出需要的图形了。"
+      2-3 Artist Nested Loops 1_instruction: "将整个代码块放到一个“重复”模块中来画出这个形状。"
       2-3 Artist Nested Loops 10_instruction: "让这段代码循环12次来完成这个图案。"
       2-3 Artist Nested Loops 11_instruction: "让这段代码循环4次可以完成该图案，在每个圆圈后要旋转 90 度哦。"
       2-3 Artist Nested Loops 12_instruction: "让这段代码循环12次就可完成这个弯曲的图案。"
-      2-3 Artist Nested Loops 2_instruction: "现在，循环这个三角形6此。在画完每个三角形后，需要转60度。"
-      2-3 Artist Nested Loops 3_instruction: "你需要循环这个三角形12次来画出图形。将圆周（360度）除以重复次数（12）来算算每次应该转多少度。"
-      2-3 Artist Nested Loops 4_instruction: "将菱形循环12次来画出一朵花。提示：12个菱形和以前画的12个三角形差不多
-        - 画出每个形状后应该转多少度？"
-      2-3 Artist Nested Loops 5_instruction: "用嵌套循环来填满建筑物的窗户。这些窗户长20像素，相隔20像素。"
-      2-3 Artist Nested Loops 6_instruction: "这只恐龙的尾巴上有8个尖刺，每根刺有30像素长。将三角形循环8次，确保画出每个三角形后向前移动一些。"
-      2-3 Artist Nested Loops 7_instruction: "循环这个三角形10次来化出太阳。画出每个三角形后，需要移动并转向。你可以用圆圈的度数（360）除以三角形的数量，来算算每次需要转多少度。"
-      2-3 Artist Nested Loops 8_instruction: "现在我们加一些草，每一簇草50像素。"
-      2-3 Artist Nested Loops 9_instruction: "再加上一朵花，这幅图就完成了。将菱形循环12次来画出这朵花。"
+      2-3 Artist Nested Loops 2_instruction: |-
+        现在，循环这个三角形6次。\r
+        \r
+        在画完每个三角形后，需要转60度。
+      2-3 Artist Nested Loops 3_instruction: |-
+        你需要循环这个三角形12次来画出图形。\r
+        \r
+        将圆周（360度）除以要画形状的数量（12）来算算每次画完后应该转多少度。
+      2-3 Artist Nested Loops 4_instruction: |-
+        将菱形循环12次来画出一朵花!\r
+        \r
+        提示：我们会用和画12个三角形一样的角度来画12个菱形。\r
+        \r
+        画出每个形状后应该转多少度？
+      2-3 Artist Nested Loops 5_instruction: |-
+        用嵌套循环来填满建筑物的窗户。\r
+        \r
+        这些窗户长20像素，相隔20像素。
+      2-3 Artist Nested Loops 6_instruction: |-
+        这只恐龙的尾巴上有8个尖刺。\r
+        每根刺有30像素长。将三角形循环8次，但确保画出每个三角形之后向前跳！
+      2-3 Artist Nested Loops 7_instruction: |-
+        循环这个三角形10次来画出太阳。\r
+        \r
+        画出每个三角形后，需要移动并转向。\r
+        \r
+        你可以用圆圈的度数（360）除以三角形的数量，来算算每次需要转多少度。
+      2-3 Artist Nested Loops 8_instruction: |-
+        现在我们加一些草到图画中。
+        \r
+        \r
+        每一簇草相隔50像素。
+      2-3 Artist Nested Loops 9_instruction: |-
+        再加上一朵花，这幅图就完成了。\r
+        \r
+        将菱形循环12次来画出这朵花。
       2-3 Artist Nested Loops Free Play_instruction: "自由发挥，用嵌套循环画一些很酷的东西"
       2-3 Bee Conditionals 1_instruction: "嗨！我是一只蜜蜂。帮我从这朵花获得花蜜。"
       2-3 Bee Conditionals 10_instruction: |
         紫色的话也许有一个花蜜，或者一个都没有。小心不要从没有蜜的花里面采蜜。\r
-      2-3 Bee Conditionals 11_instruction: "如果花里面有蜜，则收集花蜜。"
-      2-3 Bee Conditionals 12_instruction: "用循环来从花朵里检查和收集花蜜。"
-      2-3 Bee Conditionals 13_instruction: "收集花蜜，并制作蜂蜜。提示: 通过将“如果花蜜”条件用到红色的花上会发生什么?
-        可以完成这个循环吗？"
-      2-3 Bee Conditionals 14_instruction: "收集花蜜，并制作蜂蜜。如果紫色的花里面没有花蜜，就不要收集了。"
-      2-3 Bee Conditionals 15_instruction: "从四朵花中采集花蜜。"
-      2-3 Bee Conditionals 2_instruction: "你好，我是一只蜜蜂。帮我从所有花中采集花蜜。记得使用循环哦。"
-      2-3 Bee Conditionals 3_instruction: "帮我从所有花中采集花蜜并酿造蜂蜜。使用一个循环。"
+      2-3 Bee Conditionals 11_instruction: "我想知道那里有什么！\\r\n\\r\n帮我飞到院子里，只从有花蜜的花里收集花蜜。 "
+      2-3 Bee Conditionals 12_instruction: "帮我用尽可能少的模块找到所有的花蜜！"
+      2-3 Bee Conditionals 13_instruction: |-
+        这里有好多！\r
+        \r
+        用你学到的知识来收集所有的花蜜，并制作蜂蜜。
+      2-3 Bee Conditionals 14_instruction: |-
+        让我们把东西都放到一起！\r
+        \r
+        用你学到的知识只从有花蜜的花里收集，用的模块越少越好。别忘了最后制作蜂蜜。
+      2-3 Bee Conditionals 15_instruction: |-
+        这个像阶梯一样的图形看起来很熟悉。\r
+        \r
+        你能用尽量少的模块从花里收集一些花蜜吗？
+      2-3 Bee Conditionals 2_instruction: |-
+        我是一只饥饿的蜜蜂！\r
+        帮我用最少的模块从花朵中采集花蜜。
+      2-3 Bee Conditionals 3_instruction: "查看所有的花蜜！\\r\n\\r\n帮我用尽可能少的模块来收集花蜜并酿成蜂蜜。
+        \ "
       2-3 Bee Conditionals 4_instruction: "帮我从所有花中采集花蜜并酿造成蜂蜜。"
-      2-3 Bee Conditionals 5_instruction: "紫色的话可能有一个花蜜，也可能一个都没有，但是你不知道有没有！小心不要从没有花蜜的紫花里收集花蜜。用“如果”模块来检查是否花蜜等于1。"
+      2-3 Bee Conditionals 5_instruction: |-
+        小心不要从没有花蜜的紫花里收集花蜜。\r
+        你必须先用“如果”模块来检查是否花蜜等于1。
       2-3 Bee Conditionals 6_instruction: "用“如果”模块来检查是否花里面有花蜜。"
       2-3 Bee Conditionals 7_instruction: "从每一朵花中采集花蜜（如果有的话）。"
       2-3 Bee Conditionals 8_instruction: "这块地里有红色和紫色的花。你能看到红色的花里有多少花蜜，但不知道紫色的有多少。收集所有的花蜜。"
       2-3 Bee Conditionals 9_instruction: "采集每一朵花的花蜜。"
       2-3 Bee Conditionals Assessment 1_instruction: "评估：收集所有的花蜜。小心，不要采集没有花蜜的紫花。"
-      2-3 Bee Debugging 1_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 10_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 2_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 3_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      2-3 Bee Debugging 1_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜。"
+      2-3 Bee Debugging 10_instruction: |-
+        这些模块真的让我很困扰。\r
+        改正错误，从而能够采集所有花蜜，并酿成蜂蜜。
+      2-3 Bee Debugging 2_instruction: |-
+        你能找到问题吗？\r
+        改正错误，从而能够采集所有花蜜。
+      2-3 Bee Debugging 3_instruction: |-
+        哎呀，被蛰了！\r
+        \r
+        改正错误，从而能够采集所有花蜜。
       2-3 Bee Debugging 4_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 5_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。你可以用“运行”和“下一步”了。"
-      2-3 Bee Debugging 6_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜。"
-      2-3 Bee Debugging 7_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 8_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging 9_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      2-3 Bee Debugging Assessment 1_instruction: "评估：这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      2-3 Bee Debugging 5_instruction: |-
+        那朵花看起来很好吃！\r
+        \r
+        改正错误，从而能够采集所有花蜜。你可以用“运行”和“下一步”了。
+      2-3 Bee Debugging 6_instruction: |-
+        真是一个甜蜜的挑战！\r
+        \r
+        改正错误，从而能够采集所有花蜜。
+      2-3 Bee Debugging 7_instruction: "改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      2-3 Bee Debugging 8_instruction: |-
+        这么多美丽的花！\r
+        \r
+        改正错误，从而能够采集所有花蜜。
+      2-3 Bee Debugging 9_instruction: |-
+        有点耐心！\r
+        \r
+        你需要修复这个程序的一些问题，，从而能够采集所有花蜜，并酿成蜂蜜。
+      2-3 Bee Debugging Assessment 1_instruction: |-
+        评估：现在是时候看看你学会了什么了！\r
+        \r
+        改正错误，从而能够采集所有花蜜，并酿成蜂蜜。
       2-3 Bee Functions 1_instruction: "函数能执行多个模块来完成一个任务。使用“采2份花蜜”方程来采集花蜜。"
-      2-3 Bee Functions 10_instruction: "紫色的花可能有 1 或 0 的花蜜。 创建一个函数，只从有花蜜的紫色花收集花蜜。"
-      2-3 Bee Functions 2_instruction: "函数是由多个模块组合起来完成同一个任务。用“获得5”函数来同时得到5个花蜜。确保使用循环来减少使用的模块数量。"
+      2-3 Bee Functions 10_instruction: |-
+        每次你运行关卡的时候，紫色花朵内的花蜜都会在 1 和 0 中变动。 \r
+        \r
+        创建一个函数，使小蜜蜂只从有花蜜的紫色花收集花蜜。
+      2-3 Bee Functions 2_instruction: |-
+        函数是由多个模块组合起来完成同一个任务。\r
+        \r
+        用“get 5”函数来一次得到5个花蜜。
       2-3 Bee Functions 3_instruction: "采集每一朵花的花蜜。"
-      2-3 Bee Functions 4_instruction: "“移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。用这个函数收集所有的花蜜。"
+      2-3 Bee Functions 4_instruction: |-
+        “移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。\r
+        \r
+        用这个函数收集所有的花蜜。
       2-3 Bee Functions 5_instruction: "现在花里有更多的花蜜了。编辑这个函数，以使它每次能收集4个花蜜，然后用它收集到所有的花蜜。"
       2-3 Bee Functions 6_instruction: "现在用同样的函数来从三朵花里收集花蜜。"
       2-3 Bee Functions 7_instruction: "现在，花更远了。编辑给定的函数，用它收集所有的花蜜。"
       2-3 Bee Functions 8_instruction: "创建函数来获取花蜜，向前移动，并酿造蜂蜜。用函数来收集花蜜，并在蜂窝那里酿造花蜜。"
       2-3 Bee Functions 9_instruction: "创造您自己的函数。这个函数可以向下走，采集花蜜，酿造蜂蜜，然后返回起点。"
       2-3 Bee Functions Assessment 1_instruction: "评估：用给定的函数从每朵花上收集花蜜。"
-      2-3 Bee Functions Assessment 2_instruction: "评估：创建一个函数一次酿造三个蜂蜜。"
-      2-3 Bee Loops 1_instruction: "每朵花都有一个蜂蜜。从所有花里收集蜂蜜。 "
+      2-3 Bee Functions Assessment 2_instruction: "评估：创建一个函数来转向、往前移动、并酿造三个蜂蜜，然后让蜜蜂返回出发的位置并向后转。"
+      2-3 Bee Loops 1_instruction: |-
+        这些花看上去很好吃！\r
+        \r
+        用尽可能少的模块，从每朵花里收集蜂蜜。
       2-3 Bee Loops 10_instruction: "可以把“当”循环放到另外两个循环里来收集所有的花蜜吗？"
       2-3 Bee Loops 11_instruction: "在这块地里，用当循环来收集所有的花蜜。"
       2-3 Bee Loops 12_instruction: "在这块地里，用当循环来收集所有的花蜜。"
-      2-3 Bee Loops 13_instruction: "评估：用重复模块来收集所有的花蜜。"
+      2-3 Bee Loops 13_instruction: "评估：用尽可能少的模块来收集所有的花蜜。"
       2-3 Bee Loops 1A_instruction: "你好，我是蜜蜂。可以帮我从这些花里收集花蜜吗？ "
-      2-3 Bee Loops 2_instruction: "用循环来收集花蜜，并酿造蜂蜜。"
-      2-3 Bee Loops 2A_instruction: "可以通过用循环来让这个任务更简单吗？"
-      2-3 Bee Loops 3_instruction: "收集花蜜，并在蜂窝那里酿造蜂蜜。"
-      2-3 Bee Loops 3A_instruction: "可以用循环来收集所有花蜜吗？"
-      2-3 Bee Loops 3B_instruction: "现在，用新的重复模块来收集花蜜，并酿造蜂蜜。"
+      2-3 Bee Loops 2_instruction: "用尽可能少的模块来收集花蜜，并酿造蜂蜜。"
+      2-3 Bee Loops 2A_instruction: "这次，用循环来收集所有花蜜。"
+      2-3 Bee Loops 3_instruction: "用最少的模块来收集花蜜，并在蜂窝那里酿造蜂蜜。"
+      2-3 Bee Loops 3A_instruction: "用一个“重复”循环来收集所有花蜜。"
+      2-3 Bee Loops 3B_instruction: "现在，用“重复”模块来收集花蜜，并酿造蜂蜜。"
       2-3 Bee Loops 4_instruction: "使用与前一个谜题相似的循环，但需要添加一个转弯哦。"
-      2-3 Bee Loops 4A_instruction: "如果循环这个序列三次会发生什么？别忘了最后酿造蜂蜜。"
-      2-3 Bee Loops 5_instruction: "用循环来往下走并收集花蜜。"
-      2-3 Bee Loops 6_instruction: "用循环来收集花蜜，然后在蜂窝里酿造蜂蜜。"
-      2-3 Bee Loops 7_instruction: "将这些块放入一个循环就可以从每一朵花中采集花蜜。"
-      2-3 Bee Loops 8_instruction: "紫色花里有位置数量的花蜜。使用“当花蜜”循环来收集所有花蜜。循环将在条件为真时不停的运行。在这里的条件为花蜜大于0。"
+      2-3 Bee Loops 4A_instruction: |-
+        这个谜题中的循环应该进行多少次？\r
+        \r
+        循环是你的朋友！用一些循环来减少模块，并完成这道谜题。
+      2-3 Bee Loops 5_instruction: |-
+        这条路的形状和其它的不一样。\r
+        \r
+        你能用尽量少的模块来收集所有花蜜吗？
+      2-3 Bee Loops 6_instruction: "你能为蜜蜂找到最快的路，收集所有花蜜并酿造蜂蜜吗？"
+      2-3 Bee Loops 7_instruction: "多美的花园啊！帮助蜜蜂访问每一朵。你能找到只用7个模块就实现的方法吗？"
+      2-3 Bee Loops 8_instruction: |-
+        在每次你游玩这个谜题时紫色花里的花蜜数量都是不一样的。\r
+        \r
+        使用“当有花蜜时”循环来收集所有花蜜。\r
+        \r
+        循环在条件为真时会不停的运行。在这里循环的条件为花蜜大于0。
       2-3 Bee Loops 9_instruction: "“当循环”就像在循环里面有个“如果”语句一样。添加一个当循环到代码里来完成同样的任务。"
       2-3 Bee Loops Assessment 1_instruction: "评估 - 用当循环来收集所有花蜜。"
       2-3 Maze 1_instruction: "可以帮我抓住这只顽皮的猪吗？放几个“向前移动”的模块，然后点击“运行”。 "
@@ -184,7 +337,7 @@
       2-3 Maze 8_instruction: "帮我到达那只猪。"
       2-3 Maze 9_instruction: "带我去找那个绿色的小恶魔！（小心 TNT 炸药）"
       2-3 Maze Loops 1_instruction: "能用5个模块来帮我到达猪那里吗？"
-      2-3 Maze Loops 17_instruction: "帮我到达太阳花！"
+      2-3 Maze Loops 17_instruction: "用你学会的知识让我到达太阳花那里！"
       2-3 Maze Loops 18_instruction: "帮我到达太阳花！\\r（提示：你需要加一个“重复”循环到另一个“重复循环”里来通过这一关）"
       2-3 Maze Loops 19_instruction: "帮我到达太阳花！"
       2-3 Maze Loops 20_instruction: "帮我到达太阳花！"
@@ -448,7 +601,7 @@
       4-5 Maze 7_instruction: "亲爱的人. 我僵尸. 必须... 得到... 那朵太阳花."
       4-5 Maze 8_instruction: "用“重复”模块来让僵尸到达太阳花。（躲开食人花！）"
       4-5 Maze 9_instruction: "用“重复直到”模块创建一个循环。"
-      4-5 Maze Assessment 1_instruction: "评估：到达太阳花。"
+      4-5 Maze Assessment 1_instruction: "评估：用尽可能少的模块到达太阳花。"
       4-5 Maze Conditionals 1_instruction: "用“重复直到”模块让僵尸到达太阳花。"
       4-5 Maze Conditionals 10_instruction: |-
         你能只是添加3个块去帮助僵尸解决一个更复杂的迷宫吗？\r
@@ -457,8 +610,14 @@
       4-5 Maze Conditionals 2_instruction: "用“重复直到”模块让僵尸到达太阳花。"
       4-5 Maze Conditionals 3_instruction: 用新的"如果"模块让我来决定什么时候转弯。提示： 你只需要加一个模块，但记住其它模块是怎么排列的，这样下次你就会自己写了。
       4-5 Maze Conditionals 4_instruction: 好啦，这是最后一个谜题了，但你需要记住如何一起使用"如果"模块和"重复"模块。
-      4-5 Maze Conditionals 5_instruction: 我想要向日葵 ！使用"如果"模块，让我用最少的模块到达那里。
-      4-5 Maze Conditionals 6_instruction: 我想要向日葵 ！使用"如果"模块，让我用最少的模块到达那里。
+      4-5 Maze Conditionals 5_instruction: |-
+        “我，想要向日葵” ！\r
+        \r
+        使用"如果"模块，让僵尸用最少的模块到达太阳花那里。
+      4-5 Maze Conditionals 6_instruction: |-
+        “吃掉向日葵 ！”\r
+        \r
+        使用"如果"模块，让僵尸用最少的模块到达太阳花那里。
       4-5 Maze Conditionals 7_instruction: "好啦，让我们再来练习一次 —— 这和之前的差不多，但是小心别被食人花吃了！"
       4-5 Maze Conditionals 8_instruction: "“如果/否则”否则模块会检查一个条件，然后根据结果执行相应的部分。是使用这个新的模块让我到达太阳花那里。"
       4-5 Maze Conditionals 9_instruction: "让我们来再练习一次使用“如果 - 否则”块，你能试一次就成功么？"
@@ -499,8 +658,8 @@
         14 napkins and sew 14 of those together with another **outer loop** to make
         a cover for our table.
       aE3alternate_instruction: Alternate
-      aE3alternateB_instruction: "交替，轮流"
-      aE4_instruction: "交替，轮流"
+      aE3alternateB_instruction: "交替"
+      aE4_instruction: "交替"
       aE5_instruction: Example of puzzle using highest difficulty level shape.
       aE6_instruction: "How many times do you need to loop this to draw half  of\na
         circle? "
@@ -851,13 +1010,13 @@
       Calc Circles of Eval 4_instruction: |-
         This code is missing a couple of Evaluation
         Blocks - make sure you put everything in the right order.
-      Calc Circles of Eval 5_instruction: "完成评估模块以匹配次情况。"
+      Calc Circles of Eval 5_instruction: "完成评估模块来匹配此声明。"
       Calc Circles of Eval 6_instruction: |-
         Complete the Evaluation Blocks to match
         this expression.
-      Calc Circles of Eval 7_instruction: "完成评估模块以匹配次情况。"
-      Calc Circles of Eval 8_instruction: "完成评估模块以匹配次情况。"
-      Calc Circles of Eval 9_instruction: "完成评估模块以匹配次情况。"
+      Calc Circles of Eval 7_instruction: "完成评估模块来匹配此声明。"
+      Calc Circles of Eval 8_instruction: "完成评估模块来匹配此声明。"
+      Calc Circles of Eval 9_instruction: "完成评估模块来匹配此声明。"
       Calc Circles of Eval Free Play_instruction: |-
         Free Play: Try using the Evaluation
         Blocks to write some equations of your own. How does nesting the blocks in
@@ -1098,7 +1257,7 @@
         \r
         运行一下代码，看看小艺术家是怎样用二进制来画出这个图形的。
       Course 4 Artist Binary 2_instruction: "哪个二进制字符串能让你循环8次来画出这个图像？"
-      Course 4 Artist Binary 3_instruction: "你能通过循环一个三位的二进制字符串来画出这个图形吗？"
+      Course 4 Artist Binary 3_instruction: "你能通过循环一个三位的二进制字符串（0和1）来画出这个图形吗？"
       Course 4 Artist Binary 4_instruction: "每个二进制字符串表达这个图形中的一行。你能重新排列他们，从而能够画出一张笑脸，而不是皱眉的脸吗？"
       Course 4 Artist Binary 5_instruction: "哪个6位的二进制字符串重复11次后能够画出这个图形?"
       Course 4 Artist Binary 6_instruction: "能让你重复并画出这个图形的最短的二进制字符串是什么?"
@@ -1148,9 +1307,15 @@
       Course 4 Artist For Loops 8a_instruction: "只从上一关的代码中改动一处就能创建出这幅图像。你能找到什么需要改动吗？"
       Course 4 Artist For Loops 9_instruction: "你能创造一个螺旋吗？从1增加到75像素，每次增加1像素。"
       Course 4 Artist For Loops Challenge_instruction: |-
-        你能相处怎样用所有你学到的知识来创建出这幅图象吗？\r
+        你能想出怎样用所有你学到的知识来创建出这幅图象吗？\r
         \r
         需要提示？点击这里。
+      Course 4 Artist For Loops Challenge_a_instruction: |-
+        你可以相处如何
+        使用所有你学到的东西创建这幅图片吗？\r
+        \r
+        需要
+        帮助？点击这里。
       Course 4 Artist For Loops inspire_instruction: |-
         自由发挥灵感：你已经学会了所有需要创建这个模式的知识了！如果这个图形引起了你的联想，试试画出一些类似的图像。要不然，就画画你想画的一些东西。\r
         \r
@@ -1287,7 +1452,7 @@
       Course 4 Binary 8_instruction: "你能通过重复一个5位的二进制字符串来完成这个图的大部分 —— 然后还需要一个4位的数字来完成右下角。"
       Course 4 EC 1a_instruction: "没有规则。没有线索。只有挑战！"
       Course 4 EC 1b_instruction: "没有规则。没有线索。只有挑战！"
-      Course 4 EC 2a_instruction: "* * 极限挑战: * * 没有规则。没有线索。只有挑战！"
+      Course 4 EC 2a_instruction: "没有规则。没有线索。只有挑战！"
       Course 4 EC 2b_instruction: "没有规则。没有线索。只有挑战！"
       Course 4 EC 2c_instruction: "没有规则。没有线索。只有挑战！"
       Course 4 EC 2d_instruction: "没有规则。没有线索。只有挑战！"
@@ -1388,8 +1553,13 @@
         2) 如果巫师在小狗数到30前，巫师被点击了至少10次，就将“increment”（增量）增加1，并重新开始。\r
         3) 如果巫师没有被点击10次，游戏就结束。
       Course 4 Playlab For Loop Freeplay_instruction: "自由的游戏：使用到目前为止你已经学会的一切制作一个游戏，包括for循环。"
-      Course 4 Playlab For Loops 4b_instruction: "小恐龙要和小鼹鼠比赛！但是他们每个人将会按照“计数器”的设定前进，而且是依照“for”循环完成的，你能尝试修改他们任何一个人的前进条件，是他们最终同时到达终点吗？：）"
-      Course 4 Playlab For Loops 5b_instruction: "调整上这些 for 循环的间隔，以便这两个字符在完全相同的位置结束。"
+      Course 4 Playlab For Loops 4b_instruction: |-
+        小恐龙要和小鼹鼠比赛！\r
+        \r
+        但是他们每次都会移动“计数器”这么多步，但因为“for”循环，他们的计数器值会不一样。\r
+        \r
+        你能尝试修改他们其中一个的循环间隔，使他们能同时到达终点吗？：）
+      Course 4 Playlab For Loops 5b_instruction: "调整计数循坏的间隔，以便这两个角色到达完全相同的位置。"
       Course 4 Playlab For Loops 6b_instruction: |-
         请你尝试修改“for”循环来编一个好玩的游戏吧！
         按“运行”后，快速点击小独角兽来得分吧，看谁得分多：）
@@ -1506,6 +1676,141 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseD_artist_nestedLoops1_instruction: |-
+        Draw a triangle to kickstart this
+        stage.  \r
+        (Each side is 100 pixels long and you'll need to turn 120 degrees
+        for each exterior angle.)
+      courseD_artist_nestedLoops10_instruction: |-
+        Take the triangles from before,
+        but this time only make 7 of them, and lay them out in a row.
+      courseD_artist_nestedLoops1a_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops2_instruction: |-
+        Now loop the triangle 6 times. \r
+        After
+        each triangle, you'll need to turn 60 degrees before drawing the next.
+      courseD_artist_nestedLoops3_instruction: |-
+        Use what you've learned to draw
+        the last row of windows for this building.\r
+        \r
+        The windows are 20 pixels
+        long and 20 pixels apart.
+      courseD_artist_nestedLoops4_instruction: |
+        Great!  Do the same thing with these
+        circles.\r
+      courseD_artist_nestedLoops5_instruction: |-
+        What happens if you also turn 90
+        degrees between circles?
+      courseD_artist_nestedLoops6_instruction: |-
+        Edit blocks within your existing
+        code to make this image.
+      courseD_artist_nestedLoops7_instruction: |
+        Use what you've learned to make
+        this drawing.\r
+      courseD_artist_nestedLoops8_instruction: |-
+        Using what you have learned in the
+        last couple of puzzles, build this image from the beginning.
+      courseD_artist_nestedLoops9_instruction: |-
+        **Challenge:** Can you figure out
+        how to make a picture like this?
+      courseD_artist_nestedLoopsFP_instruction: |-
+        Now it's your turn.  Take the skills
+        you have learned and make something that you love!
+      courseD_artist_nestedLoopsPre1_instruction: |-
+        Create a triangle to kickstart
+        this stage.
+      courseD_maze_until1_instruction: Get the angry bird to the pig.
+      courseD_maze_until2_instruction: |-
+        Now, use the `repeat until` loop to do the
+        same thing without specifying how many times to move forward and turn.
+      courseD_maze_until3_instruction: Get the bird to the pig.
+      courseE_farmer_functions1_instruction: |-
+        Help the farmer get to the pumpkin
+        and pick it.
+      courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
+        \ Use `if` statements to write the code to check and harvest each one.   "
+      courseE_farmer_functions10b_instruction: |-
+        Figure out which function to use
+        and which one to delete, then solve this puzzle!
+      courseE_farmer_functions1a_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions2_instruction: |-
+        Now, there will be a different number
+        of pumpkins each time you run the program.   \r
+        \r
+        Use the `while` block
+        to pick only as many pumpkins as you need.
+      courseE_farmer_functions2a_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2aALT_instruction: |-
+        We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier.
+      courseE_farmer_functions2b_instruction: |-
+        Help the farmer pick the corn, lettuce,
+        and pumpkin.
+      courseE_farmer_functions3_instruction: |-
+        What happens when the paths to the
+        pumpkins are all different lengths?   \r
+        \r
+        Get them all with as few blocks
+        as possible.
+      courseE_farmer_functions3b_instruction: |-
+        Now help the farmer pick the corn,
+        lettuce, **and** pumpkin.
+      courseE_farmer_functions3c_instruction: |-
+        Let's make this easier by building
+        a function to check for produce and pick it when it is available.  Make sure
+        you call your function from inside the `while path ahead` loops.
+      courseE_farmer_functions4_instruction: |-
+        Great!  Now you have code that will
+        work to get pumpkins from any size path.\r
+        \r
+        Let's drag that code into
+        a function so we can use it in lots of ways...but first use it to solve this
+        puzzle again.
+      courseE_farmer_functions4b_instruction: |-
+        Now use your new function to solve
+        this puzzle.
+      courseE_farmer_functions5_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5a_instruction: |-
+        How can you change your program to
+        get this function to work for each of these paths?
+      courseE_farmer_functions5b_instruction: |-
+        The crops are now growing in clusters.  Add
+        some new `while` loops to your function to make sure you get all of the produce.
+      courseE_farmer_functions6_instruction: |-
+        *"Lettuce try something new!"*\r
+        \r
+        Here's
+        some code to collect all of the lettuce.  Move it into a function so we can
+        use it later.
+      courseE_farmer_functions6b_instruction: Pick all of the produce.
+      courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
+      courseE_farmer_functions7b_instruction: |-
+        Make a second function that lets the
+        farmer get all of the produce down a path, then brings her back to where she
+        began.
+      courseE_farmer_functions8_instruction: |-
+        **Challenge:**  Solve this puzzle with
+        as few blocks as possible.
+      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
+        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_playLab_exampleProject2_instruction: |-
+        Here's all of your code to choose
+        a card - try adding some other fun features!
+      courseE_video_createFunctions_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.
         \ Try\nediting the variable in other ways.  "
       courseF_artist_variables_2_instruction: |
@@ -1583,7 +1888,7 @@
         Add the numbers 1 through 10. Multiply
         the numbers 1 through 10. Check your answers with a neighbor.
       CSD U3 Frame Rate_instruction: Slow down Gamelab Gary's animation with frameRate()
-      CSD U3 Keypress Boolean_instruction: "修改代码，以便使所有的console.log命令正确。"
+      CSD U3 Keypress Boolean_instruction: "修改代码，以便使所有的console.log命令打印“真”。"
       CSD U3 Keypress Watchers_instruction: "修改代码，以便使所有的console.log命令正确。"
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
@@ -1900,6 +2205,22 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
+      CSPU5_basic if - check driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - DIY secret number_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
+      CSPU5_basic if - voting examle_instruction: |-
+        Use console.log to print out the
+        different boolean expressions below to see what information they return. (Click
+        to see full instructions)
+      CSPU5_basic if-else - driving age_instruction: |-
+        Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)
       CSPU5_clickerGame_v1_template_instruction: |-
         Create your own "Chaser App".
         (Click to see full instructions)
@@ -2996,7 +3317,7 @@
         Help the artist draw a line 7 times to make
         a garden wall.
       grade1_artist_loops3_instruction: "Now we need to get the soil ready to plant.\nFind
-        the bugs and help the artist prepare the ground. "
+        the bugs in the code and help the artist prepare the ground. "
       grade1_artist_loops4_instruction: |-
         Time to fix the stairs!  Repeat this pattern
         five times so the artist can reach the top of the bushes.
@@ -3016,14 +3337,14 @@
         Time to head home. Can you fix this ladder
         to help the artist get down?
       grade1_artist_loops8_instruction: |-
-        Let's take the short way over the pond.
-        Can you help the artist stay on the stones?
+        Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?
       grade1_artist_loops9_instruction: I still need a story for this puzzle
       grade1_artist_loopsFP_instruction: |-
         Use what you have learned to draw a picture
         of what you think the artist saw when he got home.
       grade1_maze_sequence1_instruction: "修改代码来让我到达那只猪！"
-      grade1_maze_sequence10_instruction: "把我移动到TNT的周围以获得猪"
+      grade1_maze_sequence10_instruction: "移动我绕过炸药，来到达那只猪。"
       grade1_maze_sequence2_instruction: "修改代码来让我到达那只猪！"
       grade1_maze_sequence3_instruction: |
         Can you add 2 blocks to get the bird to
@@ -3043,7 +3364,7 @@
         me to the pig!
       grade1_maze_sequence9_instruction: |
         Go around the TNT to get me to the pig!
-      grade1_maze_sequenceA_instruction: "把我移动到TNT的周围以获得猪"
+      grade1_maze_sequenceA_instruction: "挑战：移动我绕过炸药，来到达那只猪。"
       grade1_maze_sequenceB_instruction: Fix the bugs to get the bird to the pig.
       grade1_maze_sequenceC_instruction: It's all you!  Get the bird to the pig.
       grade1_maze_sequenceD_instruction: 'It''s a pig party!  Get those pigs! '
@@ -3173,7 +3494,7 @@
       grade2_MakeDogTag_1_instruction: |-
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
-      grade2_MakeDogTag_10_instruction: "绘制一些有趣的东西。"
+      grade2_MakeDogTag_10_instruction: "现在，随便画你喜欢的东西吧！"
       grade2_MakeDogTag_2_instruction: |-
         This spaceship needs a window!\r
         \r
@@ -3191,7 +3512,7 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
-      grade2_MakeDogTag_8_instruction: "现在，让我们把这一堆V连在一起，在一个循环里画出它们。"
+      grade2_MakeDogTag_8_instruction: "现在，让我们把这一堆V用循环连在一起。"
       grade2_MakeDogTag_9_instruction: |-
         Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
@@ -3274,7 +3595,10 @@
       grade2_PuppyLoops_1_instruction: |-
         Can you get me to the pig using 5 of the
         same kind of blocks?
-      grade2_PuppyLoops_10_instruction: "我的风车还没完成呢。我要重复多少次才能完成它呢？"
+      grade2_PuppyLoops_10_instruction: |-
+        我的老师说应该有始有终！\r
+        \r
+        帮我完成我的风车。你能找出哪里错了吗？
       grade2_PuppyLoops_2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
@@ -3288,9 +3612,16 @@
       grade2_PuppyLoops_6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence to get me to the pig?
-      grade2_PuppyLoops_7_instruction: "帮我到达太阳花！"
-      grade2_PuppyLoops_8_instruction: "你看到的三条胡须的代码是错误的。提示： 每条胡须是 75 像素。请修复此代码来绘制胡须。"
-      grade2_PuppyLoops_9_instruction: "代码里面的这个“C”看起来像是画反了，你们能把它再画成“C”吗？"
+      grade2_PuppyLoops_7_instruction: "用你学会的知识让我到达太阳花那里！"
+      grade2_PuppyLoops_8_instruction: |-
+        这只猫的三条胡须的代码是错误的。
+        \r
+        \r
+        修改代码来画出一样长的胡须。
+      grade2_PuppyLoops_9_instruction: |-
+        代码里面的这个“C”看起来像是画反了！\r
+        \r
+        你能把它再改成“C”吗？
       grade3_AboutMyRobot_1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.
@@ -3364,18 +3695,29 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_Conditionals_1 BAD_instruction: "用循环来收集所有的花蜜。"
-      grade3_Conditionals_1_instruction: "你好，我是一只蜜蜂。帮我从所有花中采集花蜜。记得使用循环哦。"
+      grade3_Conditionals_1_instruction: |-
+        我是一只饥饿的蜜蜂！\r
+        帮我用最少的模块从花朵中采集花蜜。
       grade3_Conditionals_10 BAD_instruction: "用嵌套循环从每行的所有花里收集花蜜。"
-      grade3_Conditionals_10_instruction: "收集花蜜，并制作蜂蜜。提示: 通过将“如果花蜜”条件用到红色的花上会发生什么?
-        可以完成这个循环吗？"
+      grade3_Conditionals_10_instruction: |-
+        这里有好多！\r
+        \r
+        用你学到的知识来收集所有的花蜜，并制作蜂蜜。
       grade3_Conditionals_11 BAD_instruction: "评估 - 用当循环来收集所有花蜜。"
-      grade3_Conditionals_11_instruction: "收集花蜜，并制作蜂蜜。如果紫色的花里面没有花蜜，就不要收集了。"
-      grade3_Conditionals_12_instruction: "从四朵花中采集花蜜。"
+      grade3_Conditionals_11_instruction: |-
+        让我们把东西都放到一起！\r
+        \r
+        用你学到的知识只从有花蜜的花里收集，用的模块越少越好。别忘了最后制作蜂蜜。
+      grade3_Conditionals_12_instruction: |-
+        这个像阶梯一样的图形看起来很熟悉。\r
+        \r
+        你能用尽量少的模块从花里收集一些花蜜吗？
       grade3_Conditionals_13_instruction: |-
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: "帮我从所有花中采集花蜜并酿造蜂蜜。使用一个循环。"
+      grade3_Conditionals_2_instruction: "查看所有的花蜜！\\r\n\\r\n帮我用尽可能少的模块来收集花蜜并酿成蜂蜜。
+        \ "
       grade3_Conditionals_3_instruction: |-
         Be careful not to collect nectar from a
         purple flower if it doesn't have any. \r
@@ -3385,7 +3727,7 @@
       grade3_Conditionals_5_instruction: "从每一朵花中采集花蜜（如果有的话）。"
       grade3_Conditionals_6_instruction: "这块地里有红色和紫色的花。你能看到红色的花里有多少花蜜，但不知道紫色的有多少。收集所有的花蜜。"
       grade3_Conditionals_7_instruction: "采集每一朵花的花蜜。"
-      grade3_Conditionals_8_instruction: "如果花里面有蜜，则收集花蜜。"
+      grade3_Conditionals_8_instruction: "我想知道那里有什么！\\r\n\\r\n帮我飞到院子里，只从有花蜜的花里收集花蜜。 "
       grade3_Conditionals_9_instruction: |-
         Help me find all of the nectar using as
         few blocks as possible!
@@ -3440,32 +3782,47 @@
         to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Debugging_1_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      grade3_Debugging_1_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜。"
       grade3_Debugging_5_instruction: |-
         That flower looks tasty! \r
         \r
         Fix the error(s)
         to collect all of the nectar.  You can now use both run and step.
-      grade3_Debugging_6_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜。"
-      grade3_Debugging_7_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
-      grade3_Debugging_9_instruction: "这些模块真的让我很困扰。改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      grade3_Debugging_6_instruction: |-
+        真是一个甜蜜的挑战！\r
+        \r
+        改正错误，从而能够采集所有花蜜。
+      grade3_Debugging_7_instruction: "改正错误，从而能够采集所有花蜜，并酿成蜂蜜。"
+      grade3_Debugging_9_instruction: |-
+        有点耐心！\r
+        \r
+        你需要修复这个程序的一些问题，，从而能够采集所有花蜜，并酿成蜂蜜。
       grade3_Debugging_TeacherIDo_instruction: |-
         These blocks are really bugging me.
         Fix the error(s) to collect all of the nectar and make all of the honey.
       grade3_Loops_1_instruction: "Can you help me collect the nectar from these\nflowers? "
       grade3_Loops_10_instruction: "使用与前一个谜题相似的循环，但需要添加一个转弯哦。"
-      grade3_Loops_11_instruction: "用循环来往下走并收集花蜜。"
-      grade3_Loops_12_instruction: "用循环来收集花蜜，然后在蜂窝里酿造蜂蜜。"
-      grade3_Loops_2_instruction: "可以通过用循环来让这个任务更简单吗？"
-      grade3_Loops_3_instruction: "可以用循环来收集所有花蜜吗？"
+      grade3_Loops_11_instruction: |-
+        这条路的形状和其它的不一样。\r
+        \r
+        你能用尽量少的模块来收集所有花蜜吗？
+      grade3_Loops_12_instruction: "你能为蜜蜂找到最快的路，收集所有花蜜并酿造蜂蜜吗？"
+      grade3_Loops_2_instruction: "这次，用循环来收集所有花蜜。"
+      grade3_Loops_3_instruction: "用一个“重复”循环来收集所有花蜜。"
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
-      grade3_Loops_5_instruction: "将这些块放入一个循环就可以从每一朵花中采集花蜜。"
-      grade3_Loops_6_instruction: "如果循环这个序列三次会发生什么？别忘了最后酿造蜂蜜。"
-      grade3_Loops_7_instruction: "每朵花都有一个蜂蜜。从所有花里收集蜂蜜。 "
-      grade3_Loops_8_instruction: "用循环来收集花蜜，并酿造蜂蜜。"
-      grade3_Loops_9_instruction: "收集花蜜，并在蜂窝那里酿造蜂蜜。"
+      grade3_Loops_5_instruction: "多美的花园啊！帮助蜜蜂访问每一朵。你能找到只用7个模块就实现的方法吗？"
+      grade3_Loops_6_instruction: |-
+        这个谜题中的循环应该进行多少次？\r
+        \r
+        循环是你的朋友！用一些循环来减少模块，并完成这道谜题。
+      grade3_Loops_7_instruction: |-
+        这些花看上去很好吃！\r
+        \r
+        用尽可能少的模块，从每朵花里收集蜂蜜。
+      grade3_Loops_8_instruction: "用尽可能少的模块来收集花蜜，并酿造蜂蜜。"
+      grade3_Loops_9_instruction: "用最少的模块来收集花蜜，并在蜂窝那里酿造蜂蜜。"
       grade3_Loops_TeacherIDo_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -3530,47 +3887,57 @@
       grade3_playLab_buildGame_final2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
+      grade3_robotFarmer_ConditionalsIntro4_instruction: |-
+        Help the farmer remove
+        this entire pile using a `while` loop.
       grade3_robotFarmer_ConditionalsIntro_1_instruction: |-
-        Hi, I'm a farmer. I need
-        your help to flatten the field on my farm so it's ready for planting. Move
-        me to the pile of dirt and use the "remove" block to remove it.
+        *"Hi, I'm a farmer.
+        I need your help to flatten the field on my farm so it's ready for planting!"*  \r
+        \r
+        Move
+        to the pile of dirt and use the `remove` block to remove it.
       grade3_robotFarmer_ConditionalsIntro_10_instruction: |-
         I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
         and if there is a pile, remove it
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_11_instruction: |-
         It's still dark outside.
         Move me along the field. If there is a pile, remove it, and if there is a
         hole, fill it in. Hint: use the dropdown menu of options on the "if" block.
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: "Flatten all of these\npiles
+        using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_2_instruction: |-
-        Next, move me to the hole
-        and fill it with TWO shovelfuls of dirt, using the "fill" block.
+        Next, move to the hole
+        and fill it with six shovelfuls of dirt, using the `fill` block.
       grade3_robotFarmer_ConditionalsIntro_3_instruction: |-
-        Move me to the pile of
-        dirt and tell me how many shovelfuls to remove using as few blocks as possible.
+        *"Move to the pile of
+        dirt and tell me how many shovelfuls to remove using as few blocks as possible."*
       grade3_robotFarmer_ConditionalsIntro_4_instruction: |-
-        Can you help me remove
-        all four piles of dirt? Hint: use a repeat block if you can.
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: |-
-        Help me fill in all these
-        holes with 5 shovelfuls of dirt. Hint: you can put a "repeat" block inside
-        the "while" block.
+        *"I don't know how much
+        dirt is in this pile!"*\r
+        \r
+        Help the farmer remove this entire pile using
+        a `while` loop.
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of\nthis
+        dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: |-
         Remove all the piles of
         dirt, using as few blocks as possible. The new options in the dropdown menu
         on the "while" block tell me if I'm standing on a pile or a hole.
       grade3_robotFarmer_ConditionalsIntro_7_instruction: |-
-        Wow, I found a really
-        deep hole! I don't know how many shovelfuls of dirt it needs. Can you write
-        a program that fills it until the ground is even?
+        Look at all of those holes!  Each
+        one needs a different amount of dirt.   \r
+        \r
+        You can use the `while` loop
+        to easily fill them all!
       grade3_robotFarmer_ConditionalsIntro_8_instruction: |-
-        Help me fill in the hole
-        at the end of the field, using as few blocks as possible.
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: |-
-        Make me remove all these
-        piles of dirt. Try to use as few blocks as possible. Hint: try using a "while"
-        block.
+        Fill in the hole at the
+        end of each of these paths.
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all\nof
+        these holes using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: |-
         Help me fill
         in all these holes with 5 shovelfuls of dirt. Hint: you can put a "repeat"
@@ -3581,58 +3948,32 @@
         don't have all the options I used to have on the while block. Move me along
         the field, and if there is a pile, remove it
       grade3_RunningFarm_1_instruction: |-
-        (Notes for Review) Since the last stage
-        taught the 'repeat until' block, the purpose of this is most likely to teach
-        the 'repeat while' block. In the context of the levels already created,
-        I think using the 'repeat' and 'if' blocks could be possible,  (ex. if
-        the crops weren't spread as evenly on the field so the farmer would have
-        to test for wheat present before collecting it). A Repeat While block would
-        be more applicable if there were multiple wheat/potatoes in each square, which
-        might be a possible change.\r
-        \r
-        Grant Notes: for the coins, 1=0 and 2=1
-        (I couldn't get the coins to show up with a value of 0). The wheat should
-        grow at random intervals. For the graphic, think about the Minecraft way of
-        growing wheat (green, has multiple heights showing growth, then yellow for
-        ripe).
+        Use conditionals to make sure that you pick
+        all of the corn, but don't disturb the stalks where nothing is growing yet.
       grade3_RunningFarm_10_instruction: |-
-        This is another debugging to make sure
-        the students understand the difference between the IF block and While loop.
-        Start off all crops as ripe with at least 1 item, with growth after Run.
-      grade3_RunningFarm_2_instruction: |
-        NOTES: have wheat and potatoes interspersed
-        throughout the row. Potatoes should be fully grown, with some randomly showing
-        more than 1 potato per spot. This is different from the previous puzzle because
-        students will have to use the drop down menu on the IF block to select potatoes
-        instead of harvesting wheat.\r
-        \r
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_11a_instruction: |-
+        Collect all of the corn and lettuce, then
+        pick the pumpkin.
+      grade3_RunningFarm_2_instruction: |-
+        Help the farmer collect both corn and lettuce
+        from the field.
       grade3_RunningFarm_3_instruction: |-
-        This will look essentially the same as the
-        previous puzzle. There should be two crops randomly planted in the row. Each
-        plant should start at a random growth stage and grow when the user runs their
-        algorithm. Students are using the while loop and hopefully understand that
-        it's better at picking all the crops of one type.
+        *"Corn, lettuce, AND pumpkins! Help me
+        harvest them all."*
       grade3_RunningFarm_4_instruction: |-
-        Since students started this course using
-        events, we wanted to include them into this culminating stage. We will only
-        use them in a few stages then move on. This puzzle should randomly populate
-        the entire column with wheat and potatoes. The puzzle should also start with
-        the following event blocks: up arrow, down arrow, and space bar. Attached
-        to the space bar should be a collect block.
+        Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch.
       grade3_RunningFarm_5_instruction: |-
-        This puzzle should randomly populate the
-        entire row with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, and space bar. Can we check
-        to make sure students are using while loop?
+        This field has clusters of corn, lettuce,
+        and pumpkins all growing together.  Can you collect them all?
       grade3_RunningFarm_6_instruction: |-
-        This puzzle should randomly populate the
-        entire field with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, left arrow, right arrow, and
-        space bar. Can we check to make sure students are using while loop?
+        Can you figure out how to pick the pumpkin?  Make
+        sure to collect all of the corn along the way!
       grade3_RunningFarm_7_instruction: |-
-        Have wheat and potatoes planted randomly
-        at various growth stages. I just wanted a quick debugging puzzles in here
-        to transition away from events
+        **Challenge:** Collect all of the corn and
+        lettuce, then pick the pumpkin.
       grade3_RunningFarm_8_instruction: |-
         Have wheat and potatoes planted randomly
         at various growth stages. Now we introduce multiple while loops (stacked)
@@ -3720,23 +4061,21 @@
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
       grade4_artist_functions_stars0_instruction: |-
-        We will come back to functions
-        shortly. Let's take a break to practice making this star. You can make this
-        drawing by adding a turn and a repeat block.
+        You can make this drawing by adding
+        a repeat block.
       grade4_artist_functions_stars1_instruction: |-
         Now that you can draw a star,
         try drawing four stars!
       grade4_artist_functions_stars2_instruction: |-
-        When is drawing three stars harder
-        than drawing four? When you also have to jump over the moon!
+        Draw only those three stars to
+        finish this puzzle.
       grade4_artist_functions_stars3_instruction: |-
         That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**.
       grade4_artist_functions_windows0_instruction: |-
-        You are doing great! Do you
-        remember when you used nested loops to draw a pinwheel shape out of triangles?
-        Let's try using that same algorithm to make a window!
+        Make this window by drawing
+        a square, then turning 90 degrees before drawing another, and so on.
       grade4_artist_functions_windows1_instruction: |-
         If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
@@ -3885,19 +4224,25 @@
         help me remove this pile of dirt and fill this hole.
       grade4_bee_functions1_instruction: "采集每一朵花的花蜜。"
       grade4_bee_functions10_instruction: |-
-        Assessment: Use the given function to
-        collect nectar from each flower.
+        Create a function to collect all of the
+        nectar from each flower.
       grade4_bee_functions11_instruction: |-
-        Assessment: Create a function to turn,
-        move forward and make 3 honey, then return the bee to where it started and
-        turn back.
+        Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back.
       grade4_bee_functions2_instruction: "函数能执行多个模块来完成一个任务。使用“采2份花蜜”方程来采集花蜜。"
-      grade4_bee_functions3_instruction: "函数是由多个模块组合起来完成同一个任务。用“获得5”函数来同时得到5个花蜜。确保使用循环来减少使用的模块数量。"
-      grade4_bee_functions4_instruction: "“移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。用这个函数收集所有的花蜜。"
+      grade4_bee_functions3_instruction: |-
+        函数是由多个模块组合起来完成同一个任务。\r
+        \r
+        用“get 5”函数来一次得到5个花蜜。
+      grade4_bee_functions4_instruction: |-
+        “移动并获得花蜜”函数会让蜜蜂转身并收集花蜜，然后会让蜜蜂返回出发的地方。\r
+        \r
+        用这个函数收集所有的花蜜。
       grade4_bee_functions5_instruction: This puzzle will be deleted!
       grade4_bee_functions6_instruction: |-
         Now write the function to collect nectar
-        from the three flowers.
+        from the flowers.
       grade4_bee_functions7_instruction: |-
         Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb.
@@ -3906,11 +4251,8 @@
         a path, gets nectar, makes honey, and then returns the bee to the top of the
         path. Then collect all the nectar and make all the honey!
       grade4_bee_functions9_instruction: |-
-        Red flowers can have an unknown amount
-        of nectar each time you run the puzzle.   \r
-        \r
-        Create a function that collects
-        all of the nectar from each flower.
+        Create a function that collects all of
+        the nectar from each flower.
       grade4_bee_nestedLoops0_instruction: "用循环来收集所有的花蜜。"
       grade4_bee_nestedLoops1_instruction: "从每朵花里收集所有的花蜜。用嵌套循环。 "
       grade4_bee_nestedLoops2_instruction: Can you determine the missing blocks?
@@ -3929,8 +4271,10 @@
         Prepare to build a project within some
         given parameters.
       grade4_farmer_functions1_instruction: |-
-        Have we met before? I'm the farmer!
-        Please help me remove this pile and fill this hole.
+        *"Have we met before? I'm the farmer!"*\r
+        \r
+        Help
+        the farmer get to the pumpkins and pick them.
       grade4_farmer_functions2_instruction: |-
         Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle.
@@ -4029,7 +4373,7 @@
       grade4_review_bee1_instruction: |-
         Now use the `repeat` block to collect all
         of the nectar and make all of the honey.
-      grade4_review_bee2_instruction: "收集花蜜，并在蜂窝那里酿造蜂蜜。"
+      grade4_review_bee2_instruction: "用最少的模块来收集花蜜，并在蜂窝那里酿造蜂蜜。"
       grade4_review_bee3_instruction: "使用与前一个谜题相似的循环，但需要添加一个转弯哦。"
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
@@ -4538,12 +4882,19 @@
       gradek_playlab_events1a_instruction: |-
         Add a block so that when you click the
         "up" button, Olive the Cat walks up.
+      gradek_playlab_events1c_instruction: |-
+        Jorge the Dog wants to say "Hi there."  Can
+        you help him?
       gradek_playlab_events2_instruction: |-
         Edit the code so that when the second
         bird is clicked, your program plays a sound!
       gradek_playlab_events2a_instruction: |-
         Add a block so that when you click "down"
         Olive the Cat walks down.
+      gradek_playlab_events2c_instruction: |-
+        Help Jorge the Dog get moving by connecting
+        the `move left` block to the `when left` event block that is already in the
+        workspace.
       gradek_playlab_events3_instruction: |-
         When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?
@@ -4553,28 +4904,38 @@
       gradek_playlab_events3b_instruction: |-
         Add a button so that Olive the Cat moves
         right when you click the "right" button.
+      gradek_playlab_events3c_instruction: |-
+        Now, get Jorge to move right when the
+        `right` button is clicked.
       gradek_playlab_events4_instruction: |-
         Add code to make something happen when
         the fourth bird is clicked. Be creative!
       gradek_playlab_events4a_instruction: |-
         Add a block so that Olive the Cat moves
         left when you click the "left" button.
+      gradek_playlab_events4c_instruction: |-
+        Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed.
       gradek_playlab_events5_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
       gradek_playlab_events5a_instruction: |-
         About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot.
+      gradek_playlab_events5c_instruction: |-
+        Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked.
       gradek_playlab_eventsA_instruction: |-
         Now, have the cat change to a random size
         AND have it play a random sound when you click the center button.
       gradek_playlab_eventsFP_instruction: |-
         Add anything you want to this game.  Can
-        you make Olive the Cat disappear when you click on her?
+        you make the dinosaur disappear when Jorge runs into him?
       gradek_playlab_eventsPre_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
       gradeK_sequence_4_instruction: Try this one yourself from the beginning.
+      group test_instruction: Make a game
       Guess The Number_instruction: "建立任何你想要的东西。这是一个猜数游戏的例子 ！"
       Harvester Test_instruction: |-
         It's harvest time! But I forgot what crop I planted
@@ -4596,7 +4957,7 @@
       Infinity_test_instruction: This is a test Infinity level.
       Infinity_touch_faster_instruction: "接触更多的雪花！"
       Infinity_touch_four_instruction: "让安娜上、下、左、右移动来碰到这4朵雪花。"
-      Infinity_touch_score_instruction: "当安娜接触到一片雪花时，就得一分。然后点击“运行”后控制她碰一下每片雪花。"
+      Infinity_touch_score_instruction: "当安娜碰到一片雪花时，就得一分。然后点击“运行”后控制她碰一下每片雪花。"
       Inspirational Artwork_instruction: "Free Play Inspiration: You've now learned\neverything
         you need to know to make a pattern like this! If this picture inspires\nyou,
         try to make something similar. Otherwise, create something all your own.\\r\n\n\\r\nWant
@@ -4910,6 +5271,40 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
+      MC HOC 2016 Level 1_instruction: |-
+        This sheep is coded to 'drop wool' when
+        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
+        or tap the game space to 'use' it. Collect the wool to win!
+      MC HOC 2016 Level 10_instruction: "现在，是制作您自己的 我的世界 的时候了！生成生物，让它们做你要它们做的事。祝您玩得愉快！"
+      MC HOC 2016 Level 2-2_instruction: "鸡一动不动。在`当生成时`栏中放置`移动`和`转向`方格，让它动起来。"
+      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
+        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
+        slot. "
+      MC HOC 2016 Level 3_instruction: "好极了，鸡动起来了！不过她又停了。在游戏中，鸡永远走来走去。使用`永远执行`循环，让这些鸡一直走动。"
+      MC HOC 2016 Level 4_instruction: "现在鸡都朝同一个方向走动，显得很奇怪。游戏可利用随机移动，让事物看起来真实。让鸡`随机转向`。"
+      MC HOC 2016 Level 5_instruction: "这些牛迷路了！在`永远执行`循环中使用`向目标移动一步`方块，带它们找到草。"
+      MC HOC 2016 Level 6_instruction: "现在你来做出僵尸。使用`生成`方块，在夜晚降临时做出 3 只僵尸。让它们朝您移动。坚持存活到天明。"
+      MC HOC 2016 Level 7_instruction: |-
+        Now let’s combine what you've learned and
+        create a new mob! Make a cow, lead it to the pasture, and get it to give you
+        milk.
+      MC HOC 2016 Level 8_instruction: "您去羊那里的路被一面石头墙挡住了。很走运，这儿有一只爬行者。爬行者会在您碰过它们之后爆炸。让爬行者炸掉墙壁，你才能到达羊身边！"
+      MC HOC 2016 Level 9_instruction: |
+        Zombies are attacking the village! Code the
+        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
+      MC HOC 2016 Nerop_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Drop_instruction: "在 我的世界 中，羊会掉落羊毛。在`当使用时`方块中放置`掉落`方块，然后走过去，让羊掉落物品。"
+      MC HOC 2016 New pn_instruction: |-
+        Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue.
+      MC HOC 2016 New Spawn_instruction: "在游戏中，生成表示添加一些事物到世界里。在`当运行时`下方放置`生成`方块，在游戏开始时生成事物。"
+      MC HOC 2016 New Walk_instruction: "我们来探索世界吧！用方向箭移动，按空格键或轻按游戏板使用物品。用门进入房屋。"
+      MC HOC 2016 SCORE LEVEL_instruction: "有的游戏会让你保留分数。跟这些铁傀儡玩捉迷藏，用`增加 1 分`方块，让您在标记它们时给自己得一分。达到五分就算赢！"
+      MC HOC 2016 Village Test_instruction: "哦不好！僵尸将您困在里面了！编码让铁傀儡追踪并攻击僵尸！"
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions
@@ -5624,11 +6019,12 @@
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
-      Text Compression 1_instruction: |-
+      Text Compression 1_instruction: |
         Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern.
+        into the text in place of the pattern.\r
+        \r
       The Vigenere Cipher Widget_instruction: "说明"
       The Vigenere Cipher_instruction: "说明"
       Total Artist Clone Me_instruction: |-

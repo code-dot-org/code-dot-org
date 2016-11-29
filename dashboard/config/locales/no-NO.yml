@@ -7,7 +7,7 @@
       teacher_must_accept_terms: Det er aldersgrense på dette innholdet og det er
         ikke tilgjengelig for yngre elever. Be læreren din godkjenne de oppdaterte
         tjenestebetingelsene for å gi deg tilgang til dette innholdet. Læreren din
-        kan gjøre dette ved å logge inn på Code Studio og klikke på "Se oppdaterte
+        kan gjøre dette ved å logge inn på Code Studio og klikke på "Les våre oppdaterte
         betingelser" øverst på hjemmesiden.
       pair_programmer: Du programmerer for tiden i par med en elev som ikke har tilgang
         til dette innholdet. For å få tilgang, må du avslutte parprogrammering og
@@ -94,6 +94,13 @@
     overview: Registrer deg for å følge fremdriften din eller administrere klasserommet.
       <a href="/">Du kan bla gjennom de ulike scenene og oppgavene</a> uten en konto,
       men du må registrere deg for å lagre fremgang og prosjekter.
+    hoc_already_signed_up_heading: Kom i gang uten å logge inn
+    hoc_already_signed_up_content: Du er meldt på til Kodetimen! Dere trenger ikke
+      å logge inn i Code Studio for å delta. For å komme i gang, <a href="https://code.org/learn">velg
+      et oppgavesett</a> til klasserommet ditt, og del lenken med elevene.<br/><br/>Om
+      dere likte Kodetimen og ønsker å kode mer, kan dere opprette kontoer i Code
+      Studio og la elevene jobbe med de <a href="https://code.org/educate">lengre
+      kursene</a>.
     teacher_educator_guide: Se lærerveiledningen
     title: Registrer deg på Code.org
     school_name: Skolens navn (valgfritt)
@@ -322,7 +329,7 @@
     user_not_found: Læreren kunne ikke bli funnet.
     student_teacher_disassociated: Du har fjernet %{teacher_name} som din lærer.
     panel:
-      answer_viewer: Lærerpanel
+      answer_viewer: Lærermodul
       student: elev
       viewing_solution: Viser løsning
       try_it_yourself: Prøv selv
@@ -333,7 +340,7 @@
       unsubmit: Trekk tilbake
       worked_with: Jobbet Med
       update_lock_settings: Oppdater låsestatus her.
-      clear_response: Clear response
+      clear_response: Fjern tilbakemelding
   user:
     email_confirm_needed: 'E-postadressen er ikke bekreftet:'
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
@@ -357,7 +364,7 @@
     lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count}
       MILLIONER STUDENTER"
     all_courses: Oversikt over kurs 1, 2 og 3
-    lesson_plans: Plan for øvelser
+    lesson_plans: Oppgaveplaner
     signin_message: Allerede registrert? %{link}
     student_reg_link: Påmelding for elever
     teacher_reg_link: Påmelding Lærer
@@ -402,35 +409,45 @@
     choose_next_course: Prøv et av Code Studio kursene ved å velge nedenfor
     print_certificate: Skriv ut diplom
     announcement_title: Kunngjøringer
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: We har brukt sommeren på å gjøre om tilbakemeldingene
+      vi har fått til nye funksjoner. Nå kan du <a href="%{pp_url}" target="_blank">følge
+      flere elevers fremgang</a>, selv om de jobber i par på en maskin. Du kan bruke
+      <a href="%{csp_widgets_url}" target="_blank">de beste interaktive verktøyene</a>
+      fra CS prinsipper-kurset i <i>hvilket som helst</i> klasserom. Elevene dine
+      kan <a href="%{unused_code_url}" target="_blank">beholde ubrukt kode</a> på
+      arbeidsområdet for å fremme utprøving! Se på de nye funksjonene og la oss få
+      vite hva du tenker.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Lær mer
     announcement_try_now_button: Prøv nå
-    announcement_host_an_hour_button: Host an Hour
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_host_an_hour_button: Inviter til en kodetime
+    announcement_petition: Som lærer, er du del av en bevegelse som ønsker å gi alle
+      elever, i alle skoler, muligheten til å lære programmering. Nå er det på tide
+      å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning, 28
+      guvernører og administrerende direktører i de største selskapene i USA sammen
+      og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning.
     announcement_petition_button: Legg til navnet ditt
     announcement_all: Hold deg oppdatert med oppdateringer og ny funksjonalitet på
       lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere
       kunngjøringer.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Tusener av lærere i mer enn 180 land vil undervise programmering
+      under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss å nå flere
+      elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer din
+      kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise
+      programmering.
+    announcement_hoc_scaling: OBS! På grunn av svært mye trafikk fra millioner av
+      elever i løpet av Kodetimen (uke 49), vil ikke Code Studio lagre eller rapportere
+      elevfremgang i de øvrige kursene. Vi anbefaler å gjennomføre et Kodetime-opplegg
+      med klassen din i løpet av denne uka i stedet. Selv om heller ikke Kodetimen-kursene
+      kommer til å lagre noen fremgang, kan elevene likevel fullføre dem og få et
+      diplom etter fullført Kodetime.
+    announcement_mc_launch: Et av våre mest populære opplegg har fått en oppfølger!
+      Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
+      De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
+      spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime.
   move_students:
     new_section_dne: Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn
       en annen seksjonskode.
@@ -529,9 +546,9 @@
   slow_loading: Dette tar lengre tid enn vanlig...
   try_reloading: Last siden på nytt
   next_stage: Ferdig! Fortsett til neste nivå
-  download_pdf: "Åpne oppgavelisten"
-  lesson_plan: Leksjonsplan
-  view_lesson_plan: Vis leksjonsplan
+  download_pdf: "Åpne oppgaveplanen"
+  lesson_plan: Oppgaveplan
+  view_lesson_plan: Vis oppgaveplan
   pdf_download: Last ned PDF
   download_coming_soon: Nedlastbare aktiviteter kommer snart.
   video_coming_soon: Video kommer snart!
@@ -601,6 +618,9 @@
     minecraft:
       title: Minecraft
       body: Utforsk en Minecraft-verden gjennom kode.
+    minecraft2016:
+      title: Minecraft
+      body: Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft.
     unplugged:
       title: Analoge leksjoner
       audience: Passer for de som er 6 år og eldre
@@ -733,7 +753,6 @@
       og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>
     accept: Godta
     print: Skriv ut
-    later: Senere
     reminder_desc: Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestebetingelser</a>
       og <a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.
       Vær snill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å
@@ -741,16 +760,16 @@
       betingelsene aksepteres.
     review_terms: Les våre oppdaterte betingelser
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet
+      innen programmering'
+    message: Oppgi din etnisitet (kryss av alle som passer)
     races:
     - white: Hvit
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
+    - black: Afrikansk
+    - hispanic: Latinamerikansk
     - asian: Asiatisk
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - hawaiian: Hawaii eller stillehavsøyene
+    - american_indian: Amerikansk urbefolkning
     - other: Andre
     - opt_out: "Ønsker ikke å si"
     submit: Send
@@ -787,7 +806,7 @@
       å vise prosjektet på en nettside.
     share_u13_warning: Spør læreren din før du deler. Del bare med andre på skolen
       din.
-    embed: Embed
+    embed: Bygg inn
     advanced_share: Vis avanserte alternativer
     close: Lukk
     more: Mer
@@ -851,10 +870,10 @@
       description: "<strong>Nei</strong>, dette bidraget <strong>oppfyller ikke</strong>
         kravene"
     escalated:
-      name: Escalated
+      name: Eskalert
       description: Jeg vil gjerne at en instruktør skal vurdere dette bidraget
     instructor_feedback: Tilbakemelding fra instruktør
-    peer_feedback: Peer Feedback
+    peer_feedback: Gi tilbakemelding
     outdated: Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget
     review_in_progress: Ready to review
     link_to_submitted_review: Link to submitted review
@@ -868,7 +887,7 @@
   components:
     icon_library:
       search_placeholder_text: Søk etter et ikon...
-      no_icons_found: Ingen ikon funnet
+      no_icons_found: Ingen ikoner funnet
     playzone:
       artist_description: Tegn kule bilder og tegninger med Kunstneren!
       artist_title: Ny tegning
@@ -876,16 +895,16 @@
       playlab_description: Lag en historie eller spill med Spill-labben!
       playlab_title: Ny app
       primary_header: Gratulerer! Du fullførte %{stageName}!
-      projects_description: Revisit one of your existing projects.
+      projects_description: Gå tilbake til et tidligere prosjekt.
       projects_title: "Åpne et prosjekt"
       secondary_header: Spør læreren din hva du skal gjøre nå
   flex_category:
     required: Oversikt
     content: Innhold
-    practice: Teacher Practices
-    peer_review: Peer Review
+    practice: Undervisningspraksis
+    peer_review: Tilbakemelding
   external_links:
-    disclaimer: Disclaimer
+    disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives
       av code.org.
     disclaimer_text: Dette nettstedet kan ha andre retningslinjer for personvern enn
@@ -896,18 +915,18 @@
   hoc_download:
     title: Kodetimen nedlastninger
     capsule_title: Har du internett?
-    capsule_desc: Use the online, web-based <a href="%{url}">%{app_name}</a>.
+    capsule_desc: Bruk online, web-basert <a href="%{url}">%{app_name}</a>.
     instructions_headline: Ingen internett?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these
-      Hour of Code tutorials are available to download and install for offline use.
-      Choose your language and platform, download and install it on all the computers
-      in your classroom. You may want to use a USB drive to download once and install
-      on all computers. Note: students will not be able to log into Code Studio, save
-      progress, or print certificates. Teachers may print certificates ahead of time
-      <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    instructions: 'Instruksjon for lærere: hvis du har lav internetthastighet kan
+      du laste ned disse opplæringsprogrammene til kodetime og installere dem for
+      å bruke dem i frakoblet modus. Velg språk og plattform, last ned og installer
+      det på alle datamaskinene i klasserommet. Det kan være lurt å laste ned til
+      en USB-pinne og så installere det derfra over på maskinene. Merk: elevene vil
+      ikke kunne logge inn på Code Studio, lagre fremgangen eller skrive ut diplomer.
+      Lærere kan skrive ut diplomene på forhånd <a href="%{url}">her</a>.'
+    minecraft_name: Kodetimen med Minecraft
+    starwars_blocks_name: 'Star Wars: Bygg en galakse med kode (blokker)'
+    starwars_javascript_name: 'Star Wars: Bygg en galakse med kode (JavaScript)'
     download_message: Last ned %{app_name} for frakoblet bruk (136MB)
     download_in_english: 'Last ned på engelsk:'
     download_in_spanish: 'Last ned på spansk:'
@@ -926,9 +945,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
+  locked_stage: Innholdet i dette nivået er ikke synlig fordi det er låst. Læreren
+    din kan låse opp nivået når det er på tide å arbeide med det eller se over svarene
+    dine.
   hidden_stage: Læreren din hadde ikke ventet at du skulle være her nå. Spør læreren
     hvilken leksjon du skal gå i gang med.
   return_course_overview: Gå til kursoversikten

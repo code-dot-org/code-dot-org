@@ -161,28 +161,25 @@
         maze_3_2: "写一个程序，让我能够到达那只猪。"
         maze_3_3: "我怎样才能抓住那只猪？小心别让我撞上TNT炸弹！"
         maze_3_4: "写个程序，让我绕过那些TNT炸药，抓住那只猪。"
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: "在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键移动手来到达终点目标。"
+        bounce_2_basketball: 在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行"。移动手到达两边的目标。
+        bounce_5_basketball: 我们要将球发向手。将一个模块附加到"当球击中手"模块以确保球能到达旗帜。
+        bounce_6_basketball: 现在旗帜是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
+        bounce_7_basketball: 将模块附加到每个"当"模块。弹起球，直到它击中旗帜。
+        bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
+        bounce_11_basketball: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
+        bounce_12_basketball: "创建您自己的篮球游戏。您可以更改所有规则。单击完成，让朋友在手机上试试你的游戏。"
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: 现在旗帜是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
+        bounce_7_sports: 将模块附加到每个"当"模块。弹起球，直到它击中旗帜。
+        bounce_10_sports: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"模块来制作游戏。看看在对手获得两分前，你可以获得多少分。
+        bounce_11_sports: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
+        bounce_12_sports: "创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，要有新意！当你完成时，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。"
         bounce_1: "在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。"
         bounce_2: 在"当按左方向键时"块和“当按右方向键时”块下面添加块，然后按"运行程序"。移动球拍到达两边的目标。
         bounce_3: 现在，尝试类似的做法用"当按上方向键时"块，来移动球拍到顶部目标。
@@ -190,7 +187,7 @@
         bounce_5: 我们要将球发向球拍。将一个模块附加到"当球击中桨"模块以确保球能到达目标。
         bounce_6: 现在完成的目标是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
         bounce_7: 将模块附加到每个"当"模块。弹起球，直到它击中目标。
-        bounce_10: 现在有一个目标在顶部。附加上"得分点"和"对手得分"块到“当进球得分”和"当球未命中桨"块去做一场游戏。看看在对手获得两分时，你可以获得多少分。
+        bounce_10: 现在有一个目标在顶部。将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中球拍"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
         bounce_11: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"启动新球"模块. 此外，试着改变场景或球拍和球的速度，看看在你对手得两分之前你能得多少分.
         bounce_12: "创建您自己的弹跳游戏。您可以更改所有的视觉效果和规则。单击完成，让朋友在手机上试试你的游戏。"
         Custom_builder: 将模块从工具箱中拖动到工作区来绘制你想创建的关卡。当你准备好时, 按"运行"。
@@ -268,7 +265,7 @@
         studio_playlab_9: "为这次外星人入侵事件设置背景画面，并通过加快空间机器人的速度来使到达外星人。通过方向键来移动太空机器人，并警告其它人。"
         studio_playlab_10: "创建你自己的游戏。当你完成后时，单击完成，让朋友在他们手机上试试你的游戏。"
         studio_iceage_hello1: 喜得想要召集大家一起去探险。你可以帮助他跟大家打招呼吗？把“说”模块拖放到工作区，然后在里面输入"你好"。
-        studio_iceage_hello2: 喜得(角色1) 发现了曼尼(角色2)，并想邀请他一同冒险。帮助他们彼此打个招呼吧，使用"角色 说"块两次。
+        studio_iceage_hello2: 曼尼(角色1) 发现了喜得(角色2)，并想邀请他一同冒险。使用"角色 说"块两次，帮助他们彼此打招呼吧。
         studio_iceage_move_to_flag: 斯奎特正在找他的橡子！使用"移动"模块帮他移动到最后200像素位置。
         studio_iceage_move_to_actor: |-
           迪亚哥 (演员 1) 正寻找曼尼 (演员 2)。请帮助迪亚哥使用"移动演员"块 ，向曼尼移动200 个像素。
@@ -502,6 +499,11 @@
         iceage_intro: "冰河世纪编程一小时 - 介绍"
         iceage_events: "冰河世纪编程一小时 - 事件"
         iceage_repeat: "冰河世纪编程一小时 - 重复语句"
+        mc_2016_intro: "《我的世界》编程一小时——介绍"
+        mc_2016_loops: "《我的世界》编程一小时——循环"
+        mc_2016_events: "《我的世界》编程一小时——事件"
+        mc_2016_spawn: "《我的世界》编程一小时——生成"
+        mc_2016_congrats: "《我的世界》编程一小时——祝贺"
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

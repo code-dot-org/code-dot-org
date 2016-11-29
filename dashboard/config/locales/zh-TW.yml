@@ -2,15 +2,10 @@
   errors:
     messages:
       not_saved: "請修正下列錯誤："
-      too_young: "這是大哥哥用的，小朋友不許偷用"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: "這內容有適當年齡限制，而且年輕學生不可以看。"
+      teacher_must_accept_terms: 這內容有適當年齡限制，而且年輕學生不可以看。請尋求你老師的認可來更新服務條款給你訪問的權限。你的老師可以透過登入Code
+        Studio並且點擊Code Studio主頁上方附近的"Review updated terms"按鈕。
+      pair_programmer: "你現在與一位沒有訪問此內容的學生進行結對程式設計。若要訪問此內容，請停止結對程式設計並再試一次。"
   activerecord:
     errors:
       messages:
@@ -87,11 +82,14 @@
   signup_form:
     student_count: "%{count} 學生已經註冊。"
     teacher_count: "%{count} 教師已經註冊。"
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: 註冊一個帳號來追蹤你的進度或管理你的教室。 <a href="/">你可以瀏覽許多階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。
+    hoc_already_signed_up_heading: "使用但不登錄"
+    hoc_already_signed_up_content: 您已經登錄參加了一個Hour of Code的課程教學! 您與您的學生可以在參與這個課程時不需登入在Code
+      Studio。要開始課程的時候，在您的課堂上<a href="https://code.org/learn">選擇一個課程</a>並和您的學生們分享這個連結。<br/><br/>如果您覺得
+      Hour of Code 的內容很棒，想要更進一步使用時，您可以設定您的密碼並且在 Code Studio 建立一個帳號來為您的學生們註冊使用任何一個
+      <a href="https://code.org/educate">較長的課程</a>.
     teacher_educator_guide: "請參閱教師指南"
-    title: Sign up for Code.org
+    title: "在Code.org上註冊"
     school_name: "學校名稱 （選填）"
     school_address: "學校地址 （選填）"
     address_placeholder: "地址、 城市、 州、 郵遞區號"
@@ -107,15 +105,15 @@
     valid_password: "有效的密碼 ！"
     invalid_password: "密碼必須要 6 個字元以上"
     mismatch_password: "您輸入的兩次密碼不一樣"
-    student_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。如果我年齡是
-      13 歲以下的，我通過提交這份表格確認，我有我的父母或法定監護人的許可，使用 Code.org 服務。 <br/>對於使用者 13歲以下，電子郵件地址將不會被存起來，因此我們將不會與他們聯繫。"
-    teacher_terms: "我同意 Code.org <a href='http://code.org/tos'> 的服務條款</a> 的約束。"
+    student_terms: "我同意接受Code.org<a href='http://code.org/tos'>服務條款</a>的約束。如果我未滿13歲，我透過這份文件，保證我有取得我的父母或是法律監護人的同意使用Code.org。<br/><br/>Code.org不會利用電子郵件主動與學生聯繫接觸，除了忘記密碼的時候。更多的詳細資訊，請見<a
+      href='http://code.org/privacy'>隱私權政策</a>。"
+    teacher_terms: "我同意接受Code.org服務條款的約束。關於更多的隱私資訊，請參閱我們的<a href='http://code.org/privacy'>隱私權政策</a>。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊"
     user_type_label: "帳戶類型"
     user_type_teacher: "教師"
     user_type_student: "學生 "
     field_is_required: "必要的"
-    accept_terms: You must agree to create an account
+    accept_terms: "你必須同意以建立一個帳戶"
   signin_form:
     title: "你已經有一個帳號了嗎？請登入"
     login: "電子郵件"
@@ -137,8 +135,7 @@
   password:
     reset_form:
       title: "忘記了您的密碼嗎？"
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: "請在下方輸入您的電子郵件，我們發送重設密碼的指引給您"
       email: "電子郵件地址"
       submit: "送出"
     change_form:
@@ -263,7 +260,7 @@
       prizes: "獎項"
       logout: "登出"
       signin: "登入"
-      signup: "註冊帳號"
+      signup: "建立一個帳戶"
       already_registered: "已經註冊了嗎？"
       pair_programming: "配對程式設計"
       team: "團隊"
@@ -304,8 +301,8 @@
       submitted_on: "提交時間："
       unsubmit: "不提交"
       worked_with: "共事"
-      update_lock_settings: Update lock settings here.
-      clear_response: Clear response
+      update_lock_settings: "在此更新設置"
+      clear_response: "清楚的回應"
   user:
     email_confirm_needed: "電子郵件地址尚未被確認："
     email_confirm_needed_required: "您的電子位址 %{email} 尚未被確認："
@@ -374,17 +371,19 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "瞭解更多資訊"
     announcement_try_now_button: "快來試試"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: "舉辦一小時"
     announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、
       28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
     announcement_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
       看過去的公告。</a>"
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: "數以千計的180多個國家教育者將開始在12月5-11日透過Hour of Code教導電腦科學。我們指望你去幫我們達到比以往更多的學生。.
+      <a href='%{signup_url}' target='_blank'>註冊你的Hour of Code事件</a>，並且讓其他老師知道所有人都可以開始教導電腦科學。"
+    announcement_hoc_scaling: "給課程1-4及快速課程教師的重要提示: 因為數以百萬計的學員在同時間使用 Hour of Code 課程造成的高流量，<b>Code
+      Studio在12月3-11號期間將無法儲存或統計使用這些課程的學員進度</b>，我們建議您的學生們可以在電腦科學教育周時參與慶祝Hour of Code的活動時來使用這些課程。因為在活動當周我們的
+      Hour of Code 導覽課程同樣也不會紀錄進度，您的學生仍然可以完成完整的導覽並獲取認證。"
+    announcement_mc_launch: "我們最熱門的一個導覽課程現在有續集了! 全新的Minecraft設計器可以讓學生們自己定出Minecraft世界的規則。他們可以創造出一個獨一無二的Minecraft遊戲體驗，並在手機上與朋友分享。您可以在您的課堂上使用這個Hour
+      of Code課程。"
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
@@ -526,10 +525,13 @@
       title: "星際大戰"
     infinity:
       title: Infinity Play Lab
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      body: "用遊戲實驗室來創造一個由《迪士尼無限世界》的角色所主演的故事或遊戲。"
     minecraft:
       title: "當個創世神"
       body: "使用程式來探索創世神的世界"
+    minecraft2016:
+      title: "當個創世神"
+      body: "在您自己的Minecraft程式遊戲版本中編寫動物和其他生物的程式。"
     unplugged:
       title: "離線課程"
       audience: 4歲以上
@@ -626,46 +628,33 @@
     message: "為了讓使用者有更好的體驗，以及更好的隱私權保護。我們需要現有的使用者在這裡輸入他們的年齡。<br/>和往常一樣，code.org將永遠不會將這些資料以任何形式與其它夥伴共享。"
     sign_out: 如果您不願意提供您的年齡，您可以選擇<a href="%{url}">登出</a>。
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: "更新的服務條款和隱私政策"
+    intro_desc: "我們更新我們的服務條款和隱私政策，如下所示。這些變化是自 2016 年 8 月 24 日起生效。 最大的改變︰ 我們將 <i>不再將學生帳戶的電子郵件地址儲存在Code
+      Studio。</i>這對我們來說是一個大處理，我們希望它在教育技術中設置學生隱私的新標準。我們已經透過電子郵件寄送其他改變的摘要。"
+    intro_instructions: "若你要小於13歲的學生們有完全使用Code Studio最新功能的權限，則需要接受這些新的條款。若為一個小於13歲的學生註冊一個帳號，則需要確認你的學校是否有其父母的同意，去收集學生的個人資訊使用與對學校的效益，包括像Code
+      Studio的教育方案。"
     tos: "服務條款"
     privacy: "隱私權政策"
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: "隱私權聲明"
+    accept_label: 我同意更新<a href="%{tos_url}" target="_blank">服務條款</a>和<a href="%{privacy_url}"
+      target="_blank">隱私政策</a>
+    accept: "接受"
     print: "列印"
-    later: Later
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    reminder_desc: 我們更新了我們的 <a href="%{tos_url}"target="_blank"> 服務條款</a> 和 <a href="%{privacy_url}"target="_blank">
+      隱私政策</a>。同意前請仔細閱讀。請注意，在你的學生接受更新的條款之前，學生可能無法使用我們教學JavaScript的工具。
+    review_terms: "查看更新後的條款"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: "選擇性：幫助我們追蹤我們的進展以改進在電腦科學的多樣性"
+    message: "請告訴我們您的種族(請選擇所有適用的選項)"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: "白人"
+    - black: "黑人/非裔美國人"
+    - hispanic: "西裔或拉丁裔"
+    - asian: "亞裔"
+    - hawaiian: "夏威夷原住民或其他太平洋群島原住民"
+    - american_indian: "美國印地安人/阿拉斯加原住民"
     - other: "其他"
-    - opt_out: Prefer not to say
+    - opt_out: "較不想說"
     submit: "送出"
     decline: "退出"
   zendesk_too_young_message: 對不起，過度年輕的使用者無法登入到我們支援的網站。您可以瀏覽無須登入的網頁 <a href="HTTP://support.code.org">
@@ -800,7 +789,7 @@
     download_message: "下載 %{app_name}，供離線使用 (136MB)"
     download_in_english: "下載英文版"
     download_in_spanish: "下載西班牙文版"
-    windows: Windows
+    windows: Windows 作業系統 (64位元)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -815,12 +804,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: "因為這一關卡目前是鎖住的，所以這一關卡的內容不可以看。你的老師可以解鎖這個關卡當需要工作或審查你的答案時。"
+  hidden_stage: "你的老師不希望你在這裡。請問你的老師你應該上哪個課程。"
+  return_course_overview: "轉至單元總覽"
   pd:
     survey:
       number_teachers: Number of attending teachers

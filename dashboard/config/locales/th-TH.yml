@@ -2,15 +2,14 @@
   errors:
     messages:
       not_saved: "โปรดแก้ไขข้อผิดพลาดต่อไปนี้:"
-      too_young: "เนื้อหานี้อาจไม่เหมาะสมกับกับผู้ที่มีอายุน้อยเกินไป"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: "เนื้อหานี้มีข้อจำกัดด้านอายุและไม่เหมาะสำหรับผู้เรียนที่มีอานุน้อย"
+      teacher_must_accept_terms: เนื้อหานี้มีข้อจำกัดด้านอายุและไม่เหมาะสำหรับผู้เรียนที่มีอานุน้อย
+        หากต้องการใช้ ต่องขอให้คุณครูของนักเรียยอมรับเงื่อนไขการใช้บริการที่มีการอัพเดทเพื่อให้นักเรียนสามารถเข้าถึงเนื้อหานี้ได้
+        คุณครูสามารถทำได้ โดยการเข้าไปใส่วนของ Code Studio และคลิกปุ่ม "Review updated
+        terms - ทบทวนเงื่อนไขที่มีการอัพเดท" ที่อยู่บริเวณด้านบนของหน้าแรกของหน้า
+        Code Studio
+      pair_programmer: "ตอนนี้คุณกำลังจับคู่เขียนโปรแกรมกับนักเรียนที่ไม่สามารถเข้าถึงเนื้อหานี้ได้
+        ถ้าคุณต้องการเข้าถึงเนื้อหานี้ ให้หยุดจับคู่เขียนโปรแกรม แล้วลองใหม่อีกครั้ง"
   activerecord:
     errors:
       messages:
@@ -37,7 +36,7 @@
   unsubmit: "ไม่ส่ง"
   previous_page: "หน้าที่แล้ว"
   next_page: "หน้าถัดไป"
-  next_resource: Next resource
+  next_resource: "ทรัพยากรที่มีให้ใช้ถัดไป"
   done_with_module: Done with this Learning Module
   cancel: "ยกเลิก"
   okay: "ตกลง"
@@ -88,9 +87,15 @@
   signup_form:
     student_count: "%{count} นักเรียนได้ลงทะเบียนไว้แล้ว"
     teacher_count: "ครู %{count} ได้ลงทะเบียนไว้แล้ว"
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: ลงทะเบียนเพื่อที่จะได้มีบัญชีเพื่อติดตามความคืบหน้า หรือจัดการชั้นเรียนของคุณ
+      <a href="/">คุณสามารถเรียกดูขั้นตอนและปริศนาต่าง ๆ</a> โดยที่ไม่ต้องมีบัญชีผู้ใช้
+      แต่คุณจะต้องลงทะเบียนหากต้องการบันทึกความคืบหน้าและโครงการของคุณ
+    hoc_already_signed_up_heading: "เริ่มใช้งานโดยไม่ต้องลงชื่อเข้าใช้"
+    hoc_already_signed_up_content: คุณลงทะเบียนเพื่อสอน Hour of Code! คุณและนักเรียนของคุณไม่จำเป็นต้องลงชื่อเข้าใช้ในส่วนของ
+      Code Studio เพื่อเข้าร่วมในปฏิบัติการนี้ คุณสามารถเริ่มต้นโดย <a href="https://code.org/learn">เลือกหลักสูตรการอบรม</a>สำหรับชั้นเรียนของคุณและแบ่งปันลิงค์กับนักเรียนเหล่านี้
+      <br/> <br/> ถ้าคุณชอบ Hour of Code และต้องการจะก้าวต่อไป คุณสามารถตั้งค่ารหัสผ่าน
+      และสร้างบัญชีผู้ใช้สำหรับ Code Studio เพื่อลงทะเบียนนักเรียน--ของคุณต่อไปได้ที่<a
+      href="https://code.org/educate">สำหรับหลักสูตรเพิ่มเติม</a>ของเรา
     teacher_educator_guide: "ดูคำแนะนำสำหรับผู้ฝึกสอน"
     title: Sign up for Code.org
     school_name: "ชื่อโรงเรียน (ถ้ามี)"
@@ -422,6 +427,18 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
+      Due to high traffic from millions of students doing the Hour of Code, <b>Code
+      Studio will not save or report student progress on these courses from December
+      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
+      celebrate the Hour of Code during Computer Science Education Week. While our
+      own Hour of Code tutorials will also not save progress that week, students can
+      still do the full tutorials and earn a certificate.'
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -579,6 +596,10 @@
     minecraft:
       title: Minecraft
       body: Explore a Minecraft world through code.
+    minecraft2016:
+      title: Minecraft
+      body: "เขียนโปรแกรมให้กับบรรดาเหล่าสัตว์ต่างๆและตัวละครอื่นๆเพื่อสร้างเกม Minecraft
+        ในแบบฉบับของคุณเอง"
     unplugged:
       title: Unplugged Lessons
       audience: Ages 6+
@@ -715,7 +736,6 @@
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
     accept: Accept
     print: "พิมพ์"
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching

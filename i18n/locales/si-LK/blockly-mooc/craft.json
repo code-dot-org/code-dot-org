@@ -189,12 +189,12 @@
   "soundTypeZombieBrains":"zombie moan",
   "soundTypeZombieGroan":"zombie growl",
   "soundTypeZombieHurt":"zombie hurt",
-  "timeLong":"long",
-  "timeMedium":"medium",
+  "timeLong":"දිගු කාලයක්",
+  "timeMedium":"මධ්‍යස්ත",
   "timeRandom":"අහඹු",
-  "timeShort":"short",
-  "timeVeryLong":"very long",
-  "timeVeryShort":"very short",
+  "timeShort":"කෙටි කාලයක්",
+  "timeVeryLong":"ඉතා දිගු කාලයක්",
+  "timeVeryShort":"ඉතා කෙටි කාලයක්",
   "tooManyBlocksFail":"{puzzleNumber} වැනි ප්‍රේහෙලිකාව සම්පූර්ණයි. සුභ පැතුම්! {numBlocks, plural, one {1 block} other {# blocks}} සමඟ ද එය සම්පූර්ණ කිරීමට හැකියාව ඇත.",
   "turnRandom":"turn random"
 }

@@ -25,8 +25,8 @@ gl-ES:
   submit: "Enviar"
   twentyhours_heading: "Proba o noso curso de Introducción á Informática"
   twentyhours_text: "Remataches a túa primeira Hora do Código? Coñece máis sobre a informática e os conceptos de programación neste curso de seguimento."
-  og_title: "Todos os rapaces merecen unha oportunidade"
-  og_description: "Technology is changing everything. Every student in every school deserves the opportunity to study computer science."
+  og_title: Todos os rapaces merecen unha oportunidade
+  og_description: "Every student in every school deserves the opportunity to study computer science."
   csedweek_og_title: "The Hour of Code is coming"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Únete a <a href=\"http://hourofcode.com\">Hora do Código</a><br/>Decembro 8 - 14, 2014<br/>"
@@ -727,6 +727,7 @@ gl-ES:
   dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "A Hora do Código chegou: de 8 a 14 de decembro!"
   code_sign_up: "Inscríbete para participar durante a Semana da Educación en informática"
   host_an_hour: "Host an hour"
@@ -869,6 +870,8 @@ gl-ES:
   starwarsblocks_name: "Star Wars (Blocks)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Matemáticas"
   hoc_category_name: "Hora de Código"
   csf_category_name: "CS Fundamentals"
