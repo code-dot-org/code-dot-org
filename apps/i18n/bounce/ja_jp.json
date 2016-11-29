@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "ボールが壁に当たった場合、下記のアクションを実行",
   "whileMsg": "以下の間",
   "whileTooltip": "終点に到着するまで、封じられた行動を繰り返してください",
-  "yes": "はい"
+  "yes": "はい",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

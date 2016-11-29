@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Täida allolevad käsud, kui pall läheb vastu seina.",
   "whileMsg": "tingimusel",
   "whileTooltip": "Korrake lisatud tegevusi kuni lõpppunkt on saavutatud.",
-  "yes": "Jah"
+  "yes": "Jah",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Execute the actions below when a ball collides with a wall.",
   "whileMsg": "while",
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

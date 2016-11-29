@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Végrehajtja az alábbi parancsokat, ha a labda nekimegy a falnak.",
   "whileMsg": "amíg",
   "whileTooltip": "Ismételjük a közbülső műveleteket amíg végponthoz nem ér.",
-  "yes": "Igen"
+  "yes": "Igen",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν η μπάλα συγκρουσθεί με έναν τοίχο.",
   "whileMsg": "όσο",
   "whileTooltip": "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο.",
-  "yes": "Ναι"
+  "yes": "Ναι",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

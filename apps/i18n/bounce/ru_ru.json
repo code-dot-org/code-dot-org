@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Выполнить указанные ниже действия, когда шар ударяется о стену.",
   "whileMsg": "пока",
   "whileTooltip": "Повторяет действия до достижения конечной точки.",
-  "yes": "Да"
+  "yes": "Да",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

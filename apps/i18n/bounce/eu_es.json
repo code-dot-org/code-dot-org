@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Exekutatu ekintza hauek pilota batek hormaren bat jotzean.",
   "whileMsg": "bitartean",
   "whileTooltip": "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu.",
-  "yes": "Bai"
+  "yes": "Bai",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }
