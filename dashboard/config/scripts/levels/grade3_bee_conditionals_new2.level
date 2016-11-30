@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Can you help the bee collect the nectar from the flowers? You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "instructions": "Collect all of the nectar using as few blocks as possible",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "2",
@@ -15,7 +15,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
-    "ideal": "13",
+    "ideal": "7",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -32,6 +32,7 @@
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":1,\"value\":1,\"flowerColor\":0,\"range\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "nectar_goal": "7",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -51,90 +52,46 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
+        <block type="bee_ifFlower">
+          <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_untilBlocked"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
-        </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="maze_nectar"/>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
-        </block>
-      </xml>
-    </required_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">6</title>
+              <title name="TIMES">4</title>
               <statement name="DO">
-                <block type="maze_move">
-                  <title name="DIR">moveForward</title>
+                <block type="maze_untilBlocked">
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="bee_ifFlower">
+                          <title name="LOC">atFlower</title>
+                          <statement name="DO">
+                            <block type="maze_nectar"/>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
                   <next>
-                    <block type="bee_ifFlower">
-                      <title name="LOC">atFlower</title>
-                      <statement name="DO">
-                        <block type="maze_nectar"/>
-                      </statement>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
                     </block>
                   </next>
                 </block>
               </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
-                  <next>
-                    <block type="maze_move">
-                      <title name="DIR">moveForward</title>
-                      <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
-                              <next>
-                                <block type="controls_repeat">
-                                  <title name="TIMES">6</title>
-                                  <statement name="DO">
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                      <next>
-                                        <block type="bee_ifFlower">
-                                          <title name="LOC">atFlower</title>
-                                          <statement name="DO">
-                                            <block type="maze_nectar"/>
-                                          </statement>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </statement>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>

@@ -26,8 +26,9 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "This is Laurel the Adventurer!  Can you move her around and get gold?",
-    "contained_level_names": null
+    "instructions": "This is Laurel the Adventurer.  Mover her around and get as much gold as you can!",
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

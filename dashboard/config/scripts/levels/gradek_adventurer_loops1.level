@@ -27,7 +27,9 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Three piles of gold!  Collect all three.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "min_collected": "3"
   },
   "published": true,
   "notes": "",
