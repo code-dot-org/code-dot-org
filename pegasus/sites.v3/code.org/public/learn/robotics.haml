@@ -86,7 +86,7 @@ social:
       locale: "#{request.locale}",
       robotics: true,
       backButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      showSortBy: true,
       disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));

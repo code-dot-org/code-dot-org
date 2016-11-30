@@ -72,13 +72,12 @@
 
             -else
               = raw current_user.teachers.map{|t| t[:name]}.join(",")
-
-  - if current_user && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+  - if current_user
     %br/
     %br/
     %br/
     = render partial: 'home/projects'
-    - unless @gallery_activities.empty?
+    - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
       = render partial: 'home/gallery'
 
 %br/

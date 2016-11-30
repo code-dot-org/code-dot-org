@@ -1882,3 +1882,9 @@
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
+  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
