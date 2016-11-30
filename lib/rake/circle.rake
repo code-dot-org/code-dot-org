@@ -66,6 +66,7 @@ namespace :circle do
     use_saucelabs = !ui_test_browsers.empty?
     start_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
+    RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
