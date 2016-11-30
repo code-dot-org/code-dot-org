@@ -71,7 +71,7 @@ group :development, :test do
 
   # for ui testing
   gem 'cucumber', '~> 2.0.2'
-  gem 'selenium-webdriver', '~> 3.0.2'
+  gem 'selenium-webdriver', '~> 3.0.3'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'

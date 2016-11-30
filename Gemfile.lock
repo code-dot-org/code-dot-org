@@ -719,7 +719,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool!
   selectize-rails
-  selenium-webdriver (~> 3.0.2)
+  selenium-webdriver (~> 3.0.3)
   sequel (~> 4.10)
   shotgun
   simplecov (~> 0.9)
