@@ -4344,6 +4344,10 @@ Studio.setSpriteEmotion = function (opts) {
   Studio.sprite[opts.spriteIndex].emotion = opts.value;
 };
 
+Studio.getSpriteEmotion = function (spriteIndex) {
+  return Studio.sprite[spriteIndex].emotion;
+};
+
 Studio.setSpriteSpeed = function (opts) {
   var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
       constants.SpriteSpeed.VERY_FAST);
@@ -4727,6 +4731,14 @@ Studio.setSprite = function (opts) {
 
   // call display right away since the frame number may have changed:
   Studio.displaySprite(spriteIndex);
+};
+
+Studio.getSpriteVisibility = function (spriteIndex) {
+  return Studio.sprite[spriteIndex].visible;
+};
+
+Studio.getSpriteValue = function (spriteIndex) {
+  return Studio.sprite[spriteIndex].value;
 };
 
 var moveAudioState = false;
@@ -5278,6 +5290,14 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+Studio.getSpriteXY = function (spriteIndex) {
+  const sprite = Studio.sprite[spriteIndex];
+  return {
+    x: sprite.x,
+    y: sprite.y
+  };
 };
 
 function getSpritesByName(name) {
