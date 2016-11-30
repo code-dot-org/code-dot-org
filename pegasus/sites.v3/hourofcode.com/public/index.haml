@@ -27,6 +27,13 @@ social:
 
 -facebook = {:u=>"http://#{request.host}/us"}
 
+:ruby
+  HIGHLIGHTS_CONSTANTS = [16, 19, 45].freeze
+  def highlights_data
+    DB[:cdo_highlights].where(id: HIGHLIGHTS_CONSTANTS)
+  end
+
+
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
 
@@ -148,9 +155,9 @@ social:
       .col-md-3.highlights-column
         %h2.white-text Highlights from previous years
         %div.highlight-tiles
-          - DB[:cdo_highlights].limit(100).reverse_each do |item|
-            - if item[:id] == 16 || item[:id] == 19 || item[:id] == 45
-              = view :highlight_item, item: item
+          -# Call to the database to get highlights data.
+          - highlights_data.reverse_each do |item|
+            = view :highlight_item, item: item
         .clear
         %a{href: "/highlights"}
           %button See more highlights
