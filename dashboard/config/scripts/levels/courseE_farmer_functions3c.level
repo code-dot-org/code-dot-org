@@ -29,7 +29,7 @@
     "instructions": "Let's make this easier by building a function to check for produce and pick it when it is available.  Make sure you call your function from inside the `while path ahead` loops.",
     "instructions_important": "false",
     "ideal": "18",
-    "markdown_instructions": "*\"I feel so functional!\"*\r\n\r\nLet's make this easier by building a function to check for produce and pick it when it is available.  Make sure you call your function from inside the `while path ahead` loops.",
+    "markdown_instructions": "*\"I feel so functional!\"*\r\n\r\nIt seems silly to write so much code twice.  Let's make this easier by building a function to check for produce and pick it when it is available.  \r\n\r\nMake sure you call your function from inside the `while path ahead` loops.",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
