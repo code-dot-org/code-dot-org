@@ -2,12 +2,15 @@
 title: "<%= I18n.t(:sports_page_title) %>"
 theme: responsive
 social:
-  "twitter:card": photo
+  "twitter:card": "player"
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/sports"
   "twitter:image:src" : "https://code.org/images/sports/basketball.png"
   "twitter:title": "<%= I18n.t(:sports_og_title) %>"
   "twitter:description": "<%= I18n.t(:sports_og_description) %>"
+  "twitter:player": "https://youtube.com/v/QvyTEx1wyOY"
+  "twitter:player:width": "640"
+  "twitter:player:height": "360"
   "og:title": "<%= I18n.t(:sports_og_title) %>"
   "og:description": "<%= I18n.t(:sports_og_description) %>"
   "og:image" : "https://code.org/images/sports/basketball.png"
@@ -24,19 +27,16 @@ video_player: true
 
 %div{style: "clear:both"}
 
-%h1.header= I18n.t(:sports_title)
 .tutorial-video-container
-  %h2= I18n.t(:sports_watch_video)
-  - videos = []
-  - videos << { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', text: I18n.t(:sports_video_title), duration: I18n.t(:video_5min), download: '//videos.code.org/social/cs-is-everything.mp4'}
-  - videos.each do |video|
-    - url = "https://www.youtube.com/watch?v=#{video[:code]}"
-    - facebook = {u: url}
-    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
-    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
+  %h2= I18n.t(:sports_video_title)
+  - video = { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', duration: I18n.t(:video_1min), download: '//videos.code.org/social/cs-is-everything.mp4'}
+  - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+  - facebook = {u: url}
+  - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
+  =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
 .tutorials-container
   %div.image-collection
-    %h2= I18n.t(:sports_select_theme)
+    %h2= I18n.t(:sports_title)
     %a.white-link{href: "/api/hour/begin/basketball"}
       %div.choice
         %div.choice-container
