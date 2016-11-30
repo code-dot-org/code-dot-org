@@ -32,9 +32,9 @@
     "x": "50",
     "y": "100",
     "ideal": "9",
-    "contained_level_names": null,
     "markdown_instructions": "Now that you can draw a star, try drawing four stars!\r\n\r\n- Each branch of the star is 25 pixels long\r\n- Turn 45 degrees between branches\r\n- Jump 100 pixels between each star",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

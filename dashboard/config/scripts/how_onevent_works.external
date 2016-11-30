@@ -14,7 +14,7 @@ In App Lab all event handling starts by adding a special block of code called `o
 
 <br><br>
 
-<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+<div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
 
 <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
 Switch into Code Mode</p>

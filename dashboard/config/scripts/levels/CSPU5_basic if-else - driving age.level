@@ -67,10 +67,7 @@
     ],
     "palette_category_at_start": "control",
     "teacher_markdown": "Note this level cannot be validated.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
