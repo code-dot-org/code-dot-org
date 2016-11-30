@@ -2,6 +2,9 @@ import $ from 'jquery';
 import processMarkdown from 'marked';
 import renderer from "./util/StylelessRenderer";
 import FeedbackBlocks from './feedbackBlocks';
+
+import { trySetLocalStorage } from './utils';
+
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
 
@@ -114,15 +117,15 @@ authoredHintUtils.getLastAttemptRecord_ = function () {
 authoredHintUtils.recordFinishedHints_ = function (hints) {
   var finishedHintViews = authoredHintUtils.getFinishedHints_();
   finishedHintViews = finishedHintViews.concat(hints);
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify(finishedHintViews));
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify(finishedHintViews));
 };
 
 authoredHintUtils.clearUnfinishedHints = function () {
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify([]));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify([]));
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify([]));
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
 /**
@@ -168,7 +171,7 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
   }
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   unfinishedHintViews.push(hint);
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
 };
 
 /**
@@ -178,7 +181,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   if (!nextAttemptRecord) {
     return;
   }
-  localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
+  trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
   var finishedHintViews = unfinishedHintViews.map(function (hint){
