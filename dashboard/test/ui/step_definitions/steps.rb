@@ -47,6 +47,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
   refute_bad_gateway
+  refute_site_unreachable
   install_js_error_recorder
 end
 
@@ -1059,4 +1060,10 @@ end
 def refute_bad_gateway
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to eq('Bad Gateway')
+end
+
+def refute_site_unreachable
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  # This error message is specific to Chrome
+  expect(first_header_text).not_to eq('This site can’t be reached')
 end
