@@ -1,9 +1,12 @@
 :ruby
   dont_cache
 
-  def form_control(control, name, label, options = {}, required = false)
-    view "pd_form_controls/#{control}", {name: name, label: label, options: options, required: required}
+  def form_control(control, name, label, options = {})
+    view "pd_form_controls/#{control}", {name: name, label: label, options: options}
   end
+
+  k_through_12 = %w(Kindergarten 1 2 3 4 5 6 7 8 9 10 11 12)
+  subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'History', 'English', 'Music', 'Art', 'Multimedia', 'Foreign Language', 'Other']
 
 .heading
   %h1
@@ -33,11 +36,45 @@
     %h2
       Section 2: Teacher Information
 
-    = form_control 'input_field', 'first_name_s', 'First name', required: true
+    = form_control 'input_field', 'first_name_s', 'First name', {required: true}
     = form_control 'input_field', 'preferred_first_name_s', 'Preferred first name'
-    = form_control 'input_field', 'last_name_s', 'Last name', required: true
-    = form_control 'input_field', 'email_s', 'Your school email address', required: true
-    = form_control 'input_field', 'personal_email_s', 'Your personal email address (we may need to contact you during the summer)', required: true
-    = form_control 'input_field', 'phone_number_s', 'Preferred phone number', required: true
-    = form_control 'select', 'gender_identity_s', 'Gender Identity', options: {items: ['Female', 'Male', 'Prefer not to answer']}, required: true
-    = form_control 'select', 'grades_teaching', 'What grades are you teaching in the current 2016-17 school year? (select all that apply)', options: {items: %w(K 1 2 3 4 5 6 7 8 9 10 11 12), multi: true}, required: true
+    = form_control 'input_field', 'last_name_s', 'Last name', {required: true}
+    = form_control 'input_field', 'email_s', 'Your school email address', {required: true}
+    = form_control 'input_field', 'personal_email_s',
+      'Your personal email address (we may need to contact you during the summer)', {required: true}
+    = form_control 'input_field', 'phone_number_s', 'Preferred phone number', {required: true}
+    = form_control 'select', 'gender_identity_s', 'Gender Identity',
+      {items: ['Female', 'Male', 'Other', 'Prefer not to answer'], required: true}
+    = form_control 'select', 'grades_teaching',
+      'What grades are you teaching in the current 2016-17 school year? (select all that apply)',
+      {items: k_through_12, multi: true, required: true}
+    = form_control 'select', 'subjects_teaching',
+      'What subjects are you teaching in the current 2016-17 school year? (select all that apply)',
+      {items: subjects, multi: true, required: true}
+    = form_control 'select', 'next_year_grades',
+      'Based on current plans for the 2017-18 school year, what grades will you be teaching? (select all that apply)',
+      {items: k_through_12, multi: true, required: true}
+    = form_control 'select', 'next_year_subjects_teaching',
+      'Based on current plans for the 2017-18 school year, what subjects will you be teaching? (select all that apply)',
+      {items: subjects, multi: true, required: true}
+    = form_control 'input_field', 'principal_first_name_s', "Principal's first name", {required: true}
+    = form_control 'input_field', 'principal_last_name_s', "Principal's last name", {required: true}
+    = form_control 'select', 'principal_prefix_s', "Principal's prefix", {items: %w{Dr. Miss. Mr. Mrs. Ms.}, required: true}
+    = form_control 'input_field', 'principal_email_s', "Principal's email address", {required: true}
+    = form_control 'select', 'course_teaching_application_s',
+      "Which professional learning program are you applying to join in the 2017-18 school year? Click on each curriculum for more information. Note: this application is only for Computer Science Discoveries and Computer Science Principles. If you are interested in <a href=''>Computer Science Fundamentals,</a> please visit <a href=''>this page for information about workshops in your area. (Select one)",
+      {items: ["<a href=''>Computer Science Discoveries</a> (designed for 7th - 9th grade)", "<a href=''>Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)"], required: true}
+
+    #csDiscoveriesGrades
+      = form_control 'select', 'cs_discoveries_grades', 'To which grades do you plan to teach CS Discoveries? Please note that hte CS Ciscoveries Professional Learning Program is not available for grades K-5. (select all that apply)',
+        {items: %w{6 7 8 9 10 11 12}, required: true}
+
+    #csPrinciplesDetails
+      = form_control 'select', 'cs_principles_taught_as_length_s', 'I will be teaching Computer Science Principles as a (select one):',
+        {items: ['Year-long course (~180 contact hours', 'Semester-long course(~90 contact hours)', 'Semester-long course on block scheduling (~180 contact hours)', 'Other']}
+      = form_control 'select', 'cs_principles_ap_s', 'I will be teaching Computer Science Principles as an (select one):',
+        {items: ['Introductory course', 'AP course'], required: true}
+      = form_control 'select', 'cs_principles_ap_goal_s',
+        'Is it your goal for your students to take the AP CSP exam in the spring of 2018? Note: even if CS Principles is taught as an introductory course, students are still eligible to take the AP CSP exam. (select one)',
+        {items: %w{Yes No}, required: true}
+

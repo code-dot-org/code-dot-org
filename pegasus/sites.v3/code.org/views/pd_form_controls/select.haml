@@ -1,7 +1,5 @@
 -# Expected params: name, label, options, required
 
-= puts "######################{options}"
-
 %div.form-group{for: options[:name]}
   %label.control-label{for: options[:name]}
     = label
@@ -17,3 +15,4 @@
         .radio
           %label
             %input{name: name, type: 'radio', value: option}
+            = option
