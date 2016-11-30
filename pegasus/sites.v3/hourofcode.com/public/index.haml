@@ -139,20 +139,79 @@ social:
 
   %br/
 
-  .row
-    .col-md-8
-      %a.twitter-moment{:href => "https://twitter.com/i/moments/803745761305296896?limit=4"} The Hour of Code 2016
-      %script{:async => "", :charset => "utf-8", :src => "//platform.twitter.com/widgets.js"}
+  -if @language == 'en'
+    .row
+      .col-md-8
+        %a.twitter-moment{:href => "https://twitter.com/i/moments/803745761305296896?limit=4"} The Hour of Code 2016
+        %script{:async => "", :charset => "utf-8", :src => "//platform.twitter.com/widgets.js"}
 
-    .col-md-3.highlights-column
-      %h2.white-text Highlights from previous years
-      %div.highlight-tiles
-        - DB[:cdo_highlights].limit(100).reverse_each do |item|
-          - if item[:id] == 16 || item[:id] == 19 || item[:id] == 45
-            = view :highlight_item, item: item
-      .clear
-      %a{href: "/highlights"}
-        %button See more highlights
+      .col-md-3.highlights-column
+        %h2.white-text Highlights from previous years
+        %div.highlight-tiles
+          - DB[:cdo_highlights].limit(100).reverse_each do |item|
+            - if item[:id] == 16 || item[:id] == 19 || item[:id] == 45
+              = view :highlight_item, item: item
+        .clear
+        %a{href: "/highlights"}
+          %button See more highlights
+  - else
+    -# Highlights
+    %br/
+
+    .row
+      .col-xs-6.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-girl-hawaii.jpg", style: "width: 100%;"}
+
+      .col-xs-6.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%;"}
+
+      .hidden-xs.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-girl-purple.jpg", style: "width: 100%;"}
+
+    .gap{style: "height:30px"}
+
+    .row
+      .col-xs-6.col-sm-4
+        .hidden-xs
+          %img{src: "/images/fill-600x400/highlight-india.jpg", style: "width: 100%; padding-bottom:30px"}
+        %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%;"}
+
+      .col-xs-6.col-sm-8
+        %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
+
+    .gap{style: "height:30px"}
+
+    .row
+      .col-xs-6.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-stickers.jpg", style: "width: 100%;"}
+
+      .hidden-xs.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-girl-star-wars.jpg", style: "width: 100%;"}
+
+      .col-xs-6.col-sm-4
+        %img{src: "/images/fill-600x400/highlight-kids-certificates.jpg", style: "width: 100%;"}
+
+
+    -# Stats
+
+    .row
+      .col-xs-12
+        %div{style: 'text-align: center; margin: 3em 0;'}
+          %h2=hoc_s(:stats_hoc_2013_heading)
+
+    .row#infotop{style: "font-weight: 500; font-size: 16px; color: rgb(26, 172, 186);"}
+      .col-xs-6.col-sm-4{style: "text-align:center;"}
+        %p=hoc_s(:stats_i18n)
+        %img{src: "/images/fit-300/stats-languages.jpg", style: "width: 100%;"}
+
+      .col-xs-6.col-sm-4{style: "text-align:center"}
+        %p=hoc_s(:stats_global)
+        %img{src: "/images/fit-300/stats-map.jpg", style: "width: 100%;"}
+
+      .hidden-xs.col-sm-4{style: "text-align:center"}
+        %p=hoc_s(:stats_girls_more)
+        %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
+          %p{style:"color: #ea7717;"}=hoc_s(:stats_girls_million)
 
 
   -# Signup
