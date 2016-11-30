@@ -13,12 +13,10 @@
       = f.text_field :name
   - else
     = f.hidden_field :name
-  :javascript
-    window.betaScriptEditor = #{params[:beta].present?};
-
   .edit_container
   - scriptData = {script: @script ? @script.summarize : {},
                   i18n: @script ? @script.summarize_i18n : {},
+                  beta: params[:beta].present?,
                   levelKeyList: Level.key_list}
   %script{src: minifiable_asset_path('js/levelbuilder_edit_script'),
           data: {levelBuilderEditScript: scriptData.to_json}}
