@@ -98,13 +98,13 @@ database:
 test:
   override:
     - bundle exec rake lint:javascript
-#    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; *) bundle exec rake circle:run_ui_tests ;; esac:
-#        parallel: true
-#        timeout:
-#            7200
-#    - ./test.sh:
-#        pwd:
-#            cookbooks
+    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake circle:run_tests ;; *) bundle exec rake circle:run_ui_tests ;; esac:
+        parallel: true
+        timeout:
+            7200
+    - ./test.sh:
+        pwd:
+            cookbooks
 experimental:
   notify:
     branches:
@@ -112,7 +112,7 @@ experimental:
         - staging
 deployment:
   storybook:
-    branch: [staging, pcardune-react-storybook-improvements]
+    branch: staging
     commands:
       - 'echo "sync_assets: false" >> locals.yml'
       - 'cd apps && npm run storybook:deploy'
