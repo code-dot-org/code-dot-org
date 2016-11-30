@@ -36,6 +36,7 @@ const store = createStore(reducer, {
 ReactDOM.render(
   <Provider store={store}>
     <ScriptEditor
+      beta={scriptEditorData.beta}
       i18nData={scriptEditorData.i18n}
       hidden={scriptData.hidden}
       loginRequired={scriptData.loginRequired}
