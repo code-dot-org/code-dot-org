@@ -29,6 +29,14 @@ exports.setSprite = function (id, spriteIndex, value) {
   });
 };
 
+exports.getSpriteVisibility = function (id, spriteIndex) {
+  return Studio.getSpriteVisibility(spriteIndex);
+};
+
+exports.getSpriteValue = function (id, spriteIndex) {
+  return Studio.getSpriteValue(spriteIndex);
+};
+
 exports.saySprite = function (id, spriteIndex, text, seconds) {
   if (seconds === undefined) {
     seconds = SPEECH_BUBBLE_TIME;
@@ -52,6 +60,10 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
     'spriteIndex': spriteIndex,
     'value': value
   });
+};
+
+exports.getSpriteEmotion = function (id, spriteIndex) {
+  return Studio.getSpriteEmotion(spriteIndex);
 };
 
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
@@ -97,6 +109,10 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
     'x': Number(xpos),
     'y': Number(ypos)
   });
+};
+
+exports.getSpriteXY = function (id, spriteIndex) {
+  return Studio.getSpriteXY(spriteIndex);
 };
 
 exports.setSpritesWander = function (id, spriteName) {
