@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Top divarla toqquşanda aşağıdakı əmrləri icra et.",
   "whileMsg": "hələ ki,",
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

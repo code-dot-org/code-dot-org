@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "當球打在牆上時，執行以下的行動。",
   "whileMsg": "當",
   "whileTooltip": "重覆程式積木內的動作，直到完成為止。",
-  "yes": "是"
+  "yes": "是",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

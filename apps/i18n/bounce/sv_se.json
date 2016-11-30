@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Utför åtgärderna nedan när en boll krockar med en vägg.",
   "whileMsg": "medan",
   "whileTooltip": "Upprepa de omslutna åtgärderna tills målet nåtts.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

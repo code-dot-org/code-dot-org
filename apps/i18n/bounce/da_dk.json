@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Udfør handlingerne herunder når bolden rammer en mur.",
   "whileMsg": "mens",
   "whileTooltip": "Gentag de lukkede handlinger indtil målet er nået.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

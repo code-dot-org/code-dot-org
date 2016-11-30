@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "کارهای زیر را انجام بده وقتی که یک توپ به دیوار میخورد.",
   "whileMsg": "هنگامیکه",
   "whileTooltip": "اقدامات محصور را تا زمانیکه به نقطه آخر برسی تکرار کن.",
-  "yes": "بله"
+  "yes": "بله",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

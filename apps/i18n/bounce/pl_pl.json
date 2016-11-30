@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Wykonaj poniższe czynności, kiedy piłka uderza w ścianę.",
   "whileMsg": "dopóki",
   "whileTooltip": "Powtarzaj załączone czynności, aż do osiągnięcia końca.",
-  "yes": "Tak"
+  "yes": "Tak",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

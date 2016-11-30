@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Execută acţiunile de mai jos când o bilă se ciocneşte cu un perete.",
   "whileMsg": "în timp ce",
   "whileTooltip": "Repetă acţiunile cuprinse până când punctul final este atins.",
-  "yes": "Da"
+  "yes": "Da",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }
