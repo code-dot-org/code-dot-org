@@ -127,9 +127,26 @@ should_i "integrate staging into staging-next" do
 end
 
 should_i "start a morning test run" do
-  # TODO: More detail on this process.
-  puts "TBD: SSH to staging-next machine, pull latest changes, run tests"
-  wait_for "morning test run to complete, re-run/investigate failures, and update staging-next room topic to that commit # green"
+  puts <<-EOS.unindent
+    #{bold 'Steps to update adhoc'}
+      Join adhoc-staging-next to watch progress
+      Note: There are a few local changes on this machine to get things working
+
+      > ssh -t gateway ssh -i ~/.ssh/server_access_key ubuntu@adhoc-staging-next.cdn-code.org
+
+      > rake build
+      > sudo service varnish stop
+      > sudo service varnish start
+
+      > cd dashboard/test/ui
+      > sudo bundle install --without ''
+      > bundle exec ./runner.rb --db -c ChromeLatestWin7,iPhone -d dashboard-adhoc-staging-next.cdn-code.org -p adhoc-staging-next.cdn-code.org --eyes --html -f features/initialPageViews.feature,features/teacherOnlyMarkdown.feature,features/hourOfCodeDotCom.feature,features/footer.feature,features/stageLockEyes.feature,features/pd/facilitatorSurveyResultsView.feature,features/teacherStudentToggle.feature,features/topInstructions.feature,features/hiddenStages_eyes.feature,features/unusedBlocks.feature,features/angleHelper.feature,features/publicKeyCryptography/eyes.feature,features/gamelab/eyes.feature,features/contractEditor.feature,features/applab/tooltips.feature,features/applab/eyes.feature,features/eyes.feature,features/containedLevels.feature,features/raceInterstitial.feature,features/submittableEyes.feature,features/craft/dialogs.feature --parallel 2 --with-status-page
+      > bundle exec ./runner.rb --db -d dashboard-adhoc-staging-next.cdn-code.org -p adhoc-staging-next.cdn-code.org --html --fail_fast --parallel 2 --with-status-page --magic_retry -c ChromeLatestWin7
+
+    If things go well with ChromeLatestWin7 you could try running against other browsers as well
+  EOS
+
+  wait_for "morning test run to complete, re-run/investigate failures, and update adhoc-staging-next room topic to that commit # green"
 end
 
 should_i "commit content changes from levelbuilder" do
