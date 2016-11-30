@@ -3,9 +3,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from '@cdo/apps/redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import reducer from '@cdo/apps/lib/script-editor/editorRedux';
+import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
 import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
 const scriptEditorData = getScriptData('levelBuilderEditScript');
@@ -28,10 +28,9 @@ const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
   }))
 }));
 
-const store = createStore(reducer, {
-  levelKeyList: scriptEditorData.levelKeyList,
-  stages
-});
+registerReducers(reducers);
+const store = getStore();
+store.dispatch(init(stages, scriptEditorData.levelKeyList));
 
 ReactDOM.render(
   <Provider store={store}>
