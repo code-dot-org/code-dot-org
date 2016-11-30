@@ -27,11 +27,7 @@ social:
 
 -facebook = {:u=>"http://#{request.host}/us"}
 
-:ruby
-  HIGHLIGHTS_CONSTANTS = [16, 19, 45].freeze
-  def highlights_data
-    DB[:cdo_highlights].where(id: HIGHLIGHTS_CONSTANTS)
-  end
+-HIGHLIGHTS_CONSTANTS = [{:id=>16, :heading_s=>"President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.", :short_heading_s=>"Coder in Chief", :image_url_s=>"obama-fistbump.jpg", :link_text_s=>"Watch the video", :url_s=>"https://youtu.be/AI_dayIQWV4"}, {:id=>19, :heading_s=>"From Shanghai to Sydney to Brussels to New York City.", :short_heading_s=>"Apple hosts Hour of Code workshops in every store worldwide", :image_url_s=>"apple-store-celebrate.jpg", :link_text_s=>nil, :url_s=>nil}, {:id=>45, :heading_s=>"The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company", :short_heading_s=>"Jessica Alba learns an Hour of Code", :image_url_s=>"jessica.jpg", :link_text_s=>"Share on Facebook", :url_s=>"https://www.facebook.com/Code.org/photos/pb.309754825787494.-2207520000.1453330310./795469473882691/"}]
 
 
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
@@ -155,8 +151,7 @@ social:
       .col-md-3.highlights-column
         %h2.white-text Highlights from previous years
         %div.highlight-tiles
-          -# Call to the database to get highlights data.
-          - highlights_data.reverse_each do |item|
+          - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
             = view :highlight_item, item: item
         .clear
         %a{href: "/highlights"}
