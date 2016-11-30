@@ -68,7 +68,7 @@ def saucelabs_browser
 
   # let's allow much longer timeouts when searching for an element
   browser.manage.timeouts.implicit_wait = 2 * 60
-  browser.send(:bridge).setScriptTimeout(1 * 60 * 1000)
+  browser.manage.timeouts.script_timeout = 1 * 60
 
   browser
 end
