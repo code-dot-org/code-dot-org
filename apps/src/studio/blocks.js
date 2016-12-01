@@ -1683,7 +1683,8 @@ exports.install = function (blockly, blockInstallOptions) {
       const spriteName = stripQuotes(opt[1]);
       return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
     });
-    const dropdown = new blockly.FieldDropdown(values, changeCallback);
+    const dropdown = new blockly.FieldDropdown(values, changeCallback,
+        true /* opt_alwaysCallChangeHandler */);
     dropdown.setValue(values[0][1]);
     return dropdown;
   }
