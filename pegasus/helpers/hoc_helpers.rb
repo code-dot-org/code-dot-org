@@ -156,11 +156,11 @@ def launch_tutorial(tutorial, params={})
     )
   end
 
+  # TODO: (elijah) this pathway (formerly used by /api/hour/begin_learn)
+  # is currently unused. Either reenable the pathway in a more-scalable
+  # way or remove this block.
   if params[:track_learn] && !settings.read_only
     learn_weight = DCDO.get('hoc_learn_activity_sample_weight', 1).to_i
-    dont_cache
-
-    # track_learn is called by an api and shouldn't redirect
     if learn_weight > 0 && Kernel.rand < (1.0 / learn_weight)
       DB[:hoc_learn_activity].insert(
         referer: request.referer_site_with_port,
@@ -169,9 +169,6 @@ def launch_tutorial(tutorial, params={})
         tutorial: tutorial[:code],
         created_at: DateTime.now,
       )
-      return 201
-    else
-      return 200
     end
   end
 
