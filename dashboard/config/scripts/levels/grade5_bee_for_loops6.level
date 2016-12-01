@@ -34,9 +34,9 @@
     "never_autoplay_video": "false",
     "step_speed": "1",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use a `counter` variable inside your `repeat` loop.\",\"hint_id\":\"grade5_bee_for_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/476f38ef9f2401d489dd50b98379336d/grade5_bee_for_loops6.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use a `counter` variable inside your `repeat` loop.\",\"hint_id\":\"grade5_bee_for_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/476f38ef9f2401d489dd50b98379336d/grade5_bee_for_loops6.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

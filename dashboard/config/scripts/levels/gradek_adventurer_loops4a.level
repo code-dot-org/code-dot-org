@@ -30,9 +30,8 @@
     "ideal": "7",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out what's wrong? Try running the code to see what happens.\",\r\n  \"hint_id\": \"gradek_adventurer_loops4a_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "maze_data": null,
-    "min_collected": "7"
+    "min_collected": "7",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

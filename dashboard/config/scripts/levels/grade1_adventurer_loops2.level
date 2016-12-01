@@ -31,9 +31,9 @@
     "ideal": "4",
     "markdown_instructions": "How can Laurel collect all five piles of gold using only one `E -->` block?",
     "instructions_important": "false",
-    "contained_level_names": null,
     "video_key": "C1_zuck_repeat_loop",
-    "min_collected": "5"
+    "min_collected": "5",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

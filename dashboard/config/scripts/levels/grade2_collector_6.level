@@ -29,9 +29,9 @@
     "instructions": "Reorder the blocks to collect all of the treasure.",
     "markdown_instructions": "\"Help me collect all of the treasure!\"\r\n\r\nThese blocks are in the wrong order. Reorder them to collect all of the treasure.",
     "ideal": "11",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "min_collected": "3"
+    "min_collected": "3",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",

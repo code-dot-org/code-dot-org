@@ -5,3 +5,24 @@ markdown <<MARKDOWN
 
 Please stop and wait for instructions from your teacher before moving on.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Review: Image Attributes
+
+**Transition:** Have students transition off the computer.
+
+**Group:** Partner up.
+
+**Prompt:** 
+You are going to turn and talk about the difference between the two attributes, src and alt.
+
+1. Get together with your partner and decide who is taller.  
+2. The taller person will go first and explain the element information that src contains. 
+3. The shorter person will go second and explain the extra information that alt contains.
+
+## Web Lab: About Me Page
+
+&fa-desktop; **Transition:** Have students return to Code Studio Bubble 6 Lesson 6.
+
+**Circulate:** Students should be picking 3 images and formulating an About Me page. Students may want to find their own images but encourage them for now to stick to the ones included in the page. Keep an eye for students who might be sharing too much personal information.
+MARKDOWN

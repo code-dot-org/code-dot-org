@@ -30,8 +30,8 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\r\n  \"hint_id\": \"grade1_adventurer_loops5_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "ideal": "10",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "min_collected": "12"
+    "min_collected": "12",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
