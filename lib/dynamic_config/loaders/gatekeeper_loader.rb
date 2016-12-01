@@ -51,7 +51,7 @@ module GatekeeperLoader
 
     obj.each do |feature, rules|
       rules.each do |rule|
-        self.validate_rule(feature, rule)
+        validate_rule(feature, rule)
         commands << {
           feature: feature,
           where: rule['where'] || {},
@@ -78,7 +78,7 @@ module GatekeeperLoader
   # @param filepath [String]
   def self.load(filepath)
     yaml = File.open(filepath, 'r').read
-    commands = self.yaml_to_commands(yaml)
-    self.apply_commands(commands)
+    commands = yaml_to_commands(yaml)
+    apply_commands(commands)
   end
 end

@@ -21,8 +21,8 @@ require 'cdo/properties'
 # *_DB_READONLY constants.
 require_relative '../../lib/analyze_hoc_activity_helper'
 
-# This default number of lines of code is from 2016-01-04.
-DEFAULT_LINES_OF_CODE = 11_151_730_618
+# This default number of lines of code is from 2016-11-23.
+DEFAULT_LINES_OF_CODE = 20_886_942_901
 
 def main
   return unless only_one_running?(__FILE__)
@@ -135,16 +135,13 @@ def main
   existing_lines_of_code = Properties.get(:metrics)['lines_of_code']
   lines_of_code = [lines_of_code, existing_lines_of_code].max
 
+  petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
+
   time = DateTime.now
   Properties.set :metrics, {
     created_at:               time,
     created_on:               time.to_date,
-    csedweek_organizers:      38236,
-    csedweek_teachers:        24025,
-    csedweek_entire_schools:  12754,
-    csedweek_students:        4_875_091,
-    csedweek_countries:       356,
-    petition_signatures:      PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').count,
+    petition_signatures:      petition_signatures,
     lines_of_code:            lines_of_code,
   }
 

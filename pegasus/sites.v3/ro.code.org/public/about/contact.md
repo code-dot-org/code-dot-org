@@ -15,7 +15,7 @@ social:
 
 # Contact
 
-Suntem aici să vă oferim tot suportul de care aveți nevoie pentru un eveniment de succes.
+<a href="http://www.adfaber.org">ADFABER.org</a> este coordonatorul acestui efort comun si este aici să vă ofere tot suportul de care aveți nevoie pentru un eveniment de succes.
 Suntem bucuroși să vă raspundem la orice întrebare aveti.
 
 ## Trimiteți un email cu solicitarea dumneavoastră și vom raspunde în cel mai scurt timp.

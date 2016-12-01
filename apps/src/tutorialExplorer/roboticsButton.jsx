@@ -6,9 +6,29 @@ import { getResponsiveValue } from './responsive';
 import i18n from './locale';
 
 const styles = {
+  button: {
+    float: "left",
+    width: "100%",
+    paddingLeft: 10,
+    paddingRight: 40
+  },
+  container: {
+    position: "relative"
+  },
   roboticsButtonImage: {
     marginTop: 10,
-    marginBottom: 20
+    marginBottom: 20,
+    width: "100%"
+  },
+  roboticsButtonText: {
+    fontFamily: "'Gotham 4r', sans-serif",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    margin: "25px 15px 15px 15px",
+    color: "white",
+    textAlign: "center",
+    fontSize: 16
   },
   roboticsText: {
     float: "left",
@@ -21,6 +41,10 @@ const styles = {
 };
 
 const RoboticsButton = React.createClass({
+  propTypes: {
+    url: React.PropTypes.string
+  },
+
   render() {
     const roboticsTextStyle = {
       ...styles.roboticsText,
@@ -28,14 +52,26 @@ const RoboticsButton = React.createClass({
     };
 
     return (
-      <div style={{float:"left"}}>
+      <div>
         <div style={{display: getResponsiveValue({md: "block", xs: "none"})}}>
-          <a href="/learn/robotics">
-            <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
-          </a>
+          <div style={styles.button}>
+            <a href={this.props.url}>
+              <div style={styles.container}>
+                <img src="/images/learn/robotics-link.png" style={styles.roboticsButtonImage}/>
+                <div style={styles.roboticsButtonText}>
+                  {i18n.roboticsButtonText()}
+                  &nbsp;
+                  <i className="fa fa-arrow-right" aria-hidden={true}/>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
+
         <div style={roboticsTextStyle}>
-          {i18n.roboticsButtonText({robotics_url: "/learn/robotics"})}
+          <a href={this.props.url}>
+            {i18n.roboticsText()}
+          </a>
         </div>
       </div>
     );

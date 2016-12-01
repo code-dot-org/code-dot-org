@@ -48,6 +48,7 @@ social:
 | Maryland | Math, Technology Education |
 | Michigan | Math |
 | Minnesota | Math |
+| New Hampshire | Math |
 | New Jersey | Math, Science |
 | New York | Math |
 | North Carolina | Math |

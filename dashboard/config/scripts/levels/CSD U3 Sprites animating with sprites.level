@@ -59,7 +59,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "video_key": "csd_gamelab_sprites_2",
     "instructions_important": "false",

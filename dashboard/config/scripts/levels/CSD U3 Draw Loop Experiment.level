@@ -62,7 +62,7 @@
     "show_d_pad": "false",
     "encrypted_examples": "vd+7Jm3lKQbOGaxmyPkWcdWc40ujkkTsXuabXwE2wBNlR4PH9pOOCevDC38F\nPFb2\n",
     "instructions_important": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "show_debug_watch": "false",

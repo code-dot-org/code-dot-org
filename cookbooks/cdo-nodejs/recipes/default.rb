@@ -16,3 +16,6 @@ nodejs_npm 'npm' do
 end
 
 nodejs_npm 'grunt-cli'
+nodejs_npm 'yarn' do
+  version node['cdo-nodejs']['yarn_version']
+end

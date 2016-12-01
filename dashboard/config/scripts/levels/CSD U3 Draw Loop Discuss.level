@@ -59,7 +59,7 @@
       "randomNumber_min_max": null,
       "console.log": null
     },
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",

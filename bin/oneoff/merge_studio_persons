@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+# This script reads a CSV of data, connecting users via studio_persons using the
+# email address links in the CSV. The CSV is expected to contain at least two
+# columns (later columns are ignored) of emails and alternate emails.
+
+require_relative '../../dashboard/config/environment'
+require 'csv'
+
+FILENAME = ARGV[0].freeze
+
+data = []
+CSV.foreach(FILENAME) do |line|
+  next unless line[0] && line[1]
+  email = line[0].downcase.strip
+  alternate_email = line[1].downcase.strip
+  data << [email, alternate_email]
+end
+
+data.each do |email, alternate_email|
+  # Try to add alternate_email to the StudioPerson associated with email.
+  user = User.find_by_email_or_hashed_email(email)
+  if user
+    studio_person = user.studio_person
+    studio_person.add_email(alternate_email)
+    next
+  end
+
+  # Otherwise, try to add email to the StudioPerson associated with alternate_email.
+  user = User.find_by_email_or_hashed_email(alternate_email)
+  if user
+    studio_person = user.studio_person if user
+    studio_person.add_email(email) if studio_person
+    next
+  end
+
+  raise "Not Found: #{email}, #{alternate_email}"
+end

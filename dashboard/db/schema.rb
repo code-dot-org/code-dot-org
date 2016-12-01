@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109195217) do
+ActiveRecord::Schema.define(version: 20161114020106) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -287,6 +287,14 @@ ActiveRecord::Schema.define(version: 20161109195217) do
     t.string  "rate_type",                                  null: false
     t.decimal "rate",               precision: 8, scale: 2, null: false
     t.index ["school_district_id", "course"], name: "index_pd_district_payment_terms_school_district_course", using: :btree
+  end
+
+  create_table "pd_enrollment_notifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "pd_enrollment_id", null: false
+    t.string   "name"
+    t.index ["pd_enrollment_id"], name: "index_pd_enrollment_notifications_on_pd_enrollment_id", using: :btree
   end
 
   create_table "pd_enrollments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -793,20 +801,6 @@ ActiveRecord::Schema.define(version: 20161109195217) do
     t.integer  "conditionals_d5_count",          default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", using: :btree
-  end
-
-  create_table "user_profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                      null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.integer  "updated_by"
-    t.string   "other_user_ids"
-    t.string   "other_emails"
-    t.string   "course"
-    t.string   "pd"
-    t.string   "pd_manual"
-    t.text     "properties",     limit: 65535
-    t.index ["user_id"], name: "index_user_profiles_on_user_id", using: :btree
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

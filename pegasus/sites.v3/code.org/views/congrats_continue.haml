@@ -1,5 +1,5 @@
 %link{href: "/css/congrats-continue.css", rel: "stylesheet"}
-- page_mode = PageMode.get(request)
+
 %h2=I18n.t :continue_learning_header
 %div.image-collection
   %a.white-link{:href=>'http://studio.code.org'}
@@ -18,7 +18,7 @@
         %div.choice-container
           %div.choice-label.purple=I18n.t :learn_classes
           %img.character-img{src: "/images/map_local_classes.png"}
-  - if page_mode == 'feature-minecraft2016' && (script == 'mc' || script == 'minecraft')
+  - if script == 'mc' || script == 'minecraft'
     %a.white-link{:href=>'https://education.minecraft.net/hour-of-code'}
       %div.choice
         %div.choice-container

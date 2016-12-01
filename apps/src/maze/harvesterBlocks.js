@@ -60,6 +60,30 @@ function addIfAtSpecificCropElseBlock(blockly, generator, crop) {
   };
 }
 
+function addUntilAtSpecificCropBlock(blockly, generator, crop) {
+  blockly.Blocks[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle([msg.repeatUntil(), msg.at(), msg[crop]()].join(' '));
+      this.setInputsInline(true);
+      this.appendStatementInput('DO')
+          .appendTitle(msg.doCode());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function () {
+    var pathForward = `Maze.isPathForward('block_id_${this.id}')`;
+    var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
+    var branch = generator.statementToCode(this, 'DO');
+    var code = `while (!${atCrop} && ${pathForward}) {\n${branch}}\n`;
+    return code;
+  };
+}
+
 function addIfSpecificCropHasBlock(blockly, generator, crop) {
   blockly.Blocks[`harvester_ifHas${capitalizeFirstLetter(crop)}`] = {
     helpUrl: '',
@@ -126,6 +150,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
     addIfAtSpecificCropBlock(blockly, generator, crop);
     addIfAtSpecificCropElseBlock(blockly, generator, crop);
+    addUntilAtSpecificCropBlock(blockly, generator, crop);
     addIfSpecificCropHasBlock(blockly, generator, crop);
     addWhileSpecificCropHasBlock(blockly, generator, crop);
   });
@@ -179,6 +204,30 @@ exports.install = function (blockly, blockInstallOptions) {
     var doCode = generator.statementToCode(this, 'DO');
     var elseCode = generator.statementToCode(this, 'ELSE');
     var code = `if (${argument}) {\n${doCode}} else {\n${elseCode}}\n`;
+    return code;
+  };
+
+  blockly.Blocks.harvester_untilAtCrop = {
+    helpUrl: '',
+    init: function () {
+      this.setHSV(322, 0.90, 0.95);
+      this.appendDummyInput()
+          .appendTitle([msg.repeatUntil(), msg.at()].join(' '));
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldDropdown(AT_OPTIONS), 'LOC');
+      this.setInputsInline(true);
+      this.appendStatementInput('DO')
+          .appendTitle(msg.doCode());
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+    }
+  };
+
+  generator.harvester_untilAtCrop = function () {
+    var pathForward = `Maze.isPathForward('block_id_${this.id}')`;
+    var atCrop = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
+    var branch = generator.statementToCode(this, 'DO');
+    var code = `while (!${atCrop} && ${pathForward}) {\n${branch}}\n`;
     return code;
   };
 

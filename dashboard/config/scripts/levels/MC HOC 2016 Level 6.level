@@ -42,6 +42,8 @@
     "use_player": "true",
     "use_score": "false",
     "failure_message_override": "Use the `spawn zombie` command under `when night` to spawn at least three zombies. Then, add `move a step toward player` to their `when spawned` event with a loop to help them chase you. If they’re too fast, add a `wait` command to slow them down.",
+    "instructions_important": "true",
+    "video_key": "mc_2016_spawn",
     "contained_level_names": null
   },
   "published": true,
@@ -52,7 +54,8 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" x="250px" y="15px">
+        <block type="craft_whenNight" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" x="15px" y="140px">
           <statement name="WHEN_TOUCHED">
             <block type="craft_wait">
               <title name="TYPE">2.0</title>
@@ -72,7 +75,6 @@
             <block type="craft_destroyEntity"/>
           </statement>
         </block>
-        <block type="craft_whenNight" deletable="false" x="15px" y="15px"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

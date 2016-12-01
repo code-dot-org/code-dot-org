@@ -30,7 +30,6 @@ import Sprite from './Sprite';
 import StudioVisualizationColumn from './StudioVisualizationColumn';
 import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
-import annotationList from '../acemode/annotationList';
 import api from './api';
 import blocks from './blocks';
 import codegen from '../codegen';
@@ -44,6 +43,11 @@ import studioMsg from './locale';
 import { GridMove, GridMoveAndCancel } from './spriteActions';
 import { Provider } from 'react-redux';
 import { singleton as studioApp } from '../StudioApp';
+import {
+  outputError,
+  injectErrorHandler
+} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -1764,6 +1768,12 @@ Studio.init = function (config) {
   level = config.level;
 
   consoleLogger = new JsInterpreterLogger(window.console);
+  // Set up an error handler for student errors and warnings
+  // in JavaScript/Droplet mode.
+  injectErrorHandler(new JavaScriptModeErrorHandler(
+    () => Studio.JSInterpreter,
+    consoleLogger
+  ));
 
   // Allow any studioMsg string to be re-mapped on a per-level basis:
   for (var prop in level.msgStringOverrides) {
@@ -1839,16 +1849,13 @@ Studio.init = function (config) {
     Studio.musicController.preload();
   };
 
-  // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsShown', playOnce);
+  // Add a post-video hook to start the background music, if available.
+  config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     if (studioApp.cdoSounds) {
-      studioApp.cdoSounds.whenAudioUnlocked(function () {
-        Studio.musicController.play();
-      });
+      studioApp.cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
     }
+    showInstructions();
   };
-  document.addEventListener('instructionsShown', playOnce);
 
   config.afterInject = function () {
     // Connect up arrow button event handlers
@@ -1938,7 +1945,6 @@ Studio.init = function (config) {
   }
 
   config.appMsg = studioMsg;
-  config.showInstructionsInTopPane = true;
 
   Studio.initSprites();
 
@@ -2399,6 +2405,10 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
  */
 // XXX This is the only method used by the templates!
 Studio.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Studio.onPuzzleComplete();
+    return;
+  }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -2792,34 +2802,8 @@ Studio.hasUnexpectedLocalFunction_ = function () {
   }
 };
 
-var ErrorLevel = {
-  WARNING: 'WARNING',
-  ERROR: 'ERROR'
-};
-
-/**
- * Output error to console and gutter as appropriate
- * @param {string} warning Text for warning
- * @param {ErrorLevel} level
- * @param {number} lineNum One indexed line number
- */
-function outputError(warning, level, lineNum) {
-  var text = level + ': ';
-  if (lineNum !== undefined) {
-    text += 'Line: ' + lineNum + ': ';
-  }
-  text += warning;
-  // TODO: consider how to notify the user without a debug console output area
-  if (consoleLogger) {
-    consoleLogger.log(text);
-  }
-  if (lineNum !== undefined) {
-    annotationList.addRuntimeAnnotation(level, lineNum, warning);
-  }
-}
-
 function handleExecutionError(err, lineNumber) {
-  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  outputError(String(err), lineNumber);
   Studio.executionError = { err: err, lineNumber: lineNumber };
 
   // Call onPuzzleComplete() if syntax error or any time we're not on a freeplay level:

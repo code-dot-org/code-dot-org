@@ -39,7 +39,7 @@ class Concept < ActiveRecord::Base
   CONCEPT_NAMES_BY_INDEX = %w(sequence if if_else loop_times loop_until loop_while loop_for function parameters)
 
   def self.setup
-    self.setup_with_concepts(CONCEPT_NAMES_BY_INDEX)
+    setup_with_concepts(CONCEPT_NAMES_BY_INDEX)
   end
 
   def self.setup_with_concepts(concepts_by_index)

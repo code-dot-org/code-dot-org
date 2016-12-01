@@ -8,7 +8,7 @@ Feature: App Lab Data Blocks
     # when run, and prints success if the data storage APIs are working properly.
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8?noautoplay=true&noUseFirebase=1"
     And I rotate to landscape
-    And I wait to see "#runButton"
+    And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is disabled
     Then I press "runButton"
@@ -19,7 +19,7 @@ Feature: App Lab Data Blocks
     # the create/update/deleteRecord blocks are evaluated, then prints success.
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/13?noautoplay=true&noUseFirebase=1"
     And I rotate to landscape
-    And I wait to see "#runButton"
+    And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is disabled
     Then I press "runButton"
@@ -30,7 +30,7 @@ Feature: App Lab Data Blocks
 # when run, and prints success if the data storage APIs are working properly.
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8?noautoplay=true"
     And I rotate to landscape
-    And I wait to see "#runButton"
+    And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is enabled
     Then I press "runButton"
@@ -41,7 +41,7 @@ Feature: App Lab Data Blocks
     # the create/update/deleteRecord blocks are evaluated, then prints success.
     Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/13?noautoplay=true"
     And I rotate to landscape
-    And I wait to see "#runButton"
+    And I wait for the page to fully load
     And element "#runButton" is visible
     And Firebase is enabled
     Then I press "runButton"

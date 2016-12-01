@@ -12,3 +12,4 @@ Feature: Race Interstitial
     When I click selector "#later-link"
     And I wait until element "#race-modal" is not visible
     Then I see no difference for "race interstitial closed"
+    Then I close my eyes

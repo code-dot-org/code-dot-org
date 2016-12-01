@@ -128,6 +128,20 @@ level 'U5L08 - Student Intro If statements'
 named_level 'Big Picture: If-statements'
 named_level 'Worked Example: If-statements and Robot'
 
+stage 'If statements'
+level 'U5 video Booleans'
+named_level 'Boolean Expressions and Comparison Operators'
+level 'CSPU5_U3L18 comparison operators'
+level 'If and If-Else part 1'
+named_level 'How If Statements Work pt 1'
+level 'CSPU5_basic if - check driving age'
+level 'CSPU5_basic if - DIY secret number'
+named_level 'How If-Else Statements Work'
+named_level 'How Dropdown Menus Work'
+level 'U5 Video if-else-if'
+named_level 'How "if-else-if" Works'
+level 'U5 Video compound booleans'
+
 stage 'Introduction to Digital Assistants'
 level 'CSPU5_U3L23 Student Lesson Introduction'
 level 'CSPU5_U3L23 Free Response Getting Started'
@@ -263,6 +277,9 @@ level 'CSPU5_U3 - Keys - Add Image URLs'
 level 'CSPU5_U3 - Keys - Final Image Scroller'
 level 'CSPU5_U3- Keys - Code Refactoring Exit Ticket'
 
+stage 'Unit 3 Assessment 3', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 3 MC'
+
 stage 'Processing Arrays'
 level 'CSPU5_U3L32 Student Lesson Introduction'
 level 'CSPU5_U3 - Loops And Arrays - Intro For Loop'
@@ -310,6 +327,9 @@ level 'CSPU5_U3 - Canvas - One Dot sprayPaint'
 level 'CSPU5_U3 - Canvas - sprayPaint'
 level 'CSPU5_U3 - Canvas - sketch'
 level 'CSPU5_U3 - Canvas - freePlay'
+
+stage 'Unit 3 Assessment 4', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
 
 stage 'Practice PT: Create'
 level 'CSPU5_U3L34 Student Lesson Introduction'

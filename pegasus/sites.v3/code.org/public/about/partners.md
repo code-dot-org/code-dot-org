@@ -8,7 +8,7 @@ nav: about_nav
 
 <HR>
 
-# Professional Learning Partners
+# Regional Partners
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(codeorg_b:true).and(kind_s:'pl-partner') %>
 

@@ -1,0 +1,62 @@
+---
+title: Beyond an Hour of Code
+layout: wide
+---
+
+%link{href: "/css/beyond.css", rel: "stylesheet"}
+
+%h1 Beyond an Hour of Code
+
+.scroll-nav
+  %span Go beyond an Hour of Code!
+  &nbsp;&nbsp;
+  %a{href: "#teacher-section"}
+    %button.teal-button For teachers
+  %a{href: "#student-section"}
+    %button.teal-button For students
+
+.clear
+
+%h1#student-section For students
+%h2 Find a local class
+.full-resource-block{style: "margin-top: 20px;"}
+  %img.side-image.left{src: "/images/beyond-local-map.png"}
+  .side-description-area.right
+    .description
+      %h2.resource-title{style: "padding-bottom: 10px;"} Local classes
+      Find a local workshop, school, or summer camp to learn in a classroom.
+    %a{href: "https://code.org/learn/local"}
+      %button.gray-button Find a class
+
+.clear
+
+%h2 Online tutorials
+%div
+  = view :learn_carousels, variation:'beyond'
+
+.clear
+
+%h1#teacher-section For teachers
+.half-resource-block{style: "margin-right: 20px;"}
+  %img.top-image{src: "/images/beyond-teacher.jpg"}
+  .description-area
+    .description 
+      %h2.resource-title Teach courses by Code.org
+      Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge.
+    %a{href: "https://code.org/educate/curriculum/elementary-school"}
+      %button.gray-button Elementary
+    &nbsp;&nbsp;
+    %a{href: "https://code.org/educate/curriculum/middle-school"}
+      %button.gray-button Middle
+    &nbsp;&nbsp;
+    %a{href: "https://code.org/educate/curriculum/high-school"}
+      %button.gray-button High
+
+.half-resource-block
+  %img.top-image{src: "/images/beyond-courses.png"}
+  .description-area
+    .description 
+      %h2.resource-title Teach courses by other providers
+      Compare options by different partners, organized by grade band.
+    %a{href: "https://code.org/educate/curriculum/3rd-party"}
+      %button.gray-button Explore

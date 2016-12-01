@@ -4,7 +4,9 @@
 import React from 'react';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
+import Image from './image';
 import i18n from './locale';
+/* global ga */
 
 const styles = {
   tutorialDetailModalHeader: {
@@ -26,9 +28,30 @@ const styles = {
     top: 0,
     width: '100%'
   },
-  tutorialDetailImageContainer: {
+  tutorialDetailImageOuterContainer: {
     float: "left",
     paddingBottom: 10
+  },
+  tutorialDetailImageContainer: {
+    position: "relative",
+    width: "100%",
+    height: 0,
+    paddingTop: "75%"
+  },
+  tutorialDetailImageBackground: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: "#f1f1f1",
+    border: "solid 1px #cecece"
+  },
+  tutorialDetailImage: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%"
   },
   tutorialDetailInfoContainer: {
     float: "left",
@@ -52,6 +75,14 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     fontSize: 14
   },
+  tutorialDetailDisabled: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 16,
+    paddingTop: 40
+  },
+  tutorialDetailDisabledIcon: {
+    color: "#d9534f"
+  },
   tutorialDetailsTable: {
     marginTop: 20,
     width: '100%'
@@ -69,16 +100,40 @@ const styles = {
   tutorialDetailsTableBodyNoWrap: {
     padding: 5,
     border: '1px solid lightgrey',
-    whiteSpace: "pre"
+    whiteSpace: "pre-wrap"
   }
 };
 
 const TutorialDetail = React.createClass({
   propTypes: {
     showing: React.PropTypes.bool.isRequired,
-    item: shapes.tutorial.isRequired,
+    item: shapes.tutorial,
     closeClicked: React.PropTypes.func.isRequired,
-    localeEnglish: React.PropTypes.bool.isRequired
+    changeTutorial: React.PropTypes.func.isRequired,
+    localeEnglish: React.PropTypes.bool.isRequired,
+    disabledTutorial: React.PropTypes.bool.isRequired
+  },
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  },
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  },
+
+  onKeyDown({keyCode}) {
+    if (keyCode === 27) {
+      this.props.closeClicked();
+    } else if (keyCode === 37) {
+      this.props.changeTutorial(-1);
+    } else if (keyCode === 39) {
+      this.props.changeTutorial(1);
+    }
+  },
+
+  startTutorialClicked(shortCode) {
+    ga('send', 'event', 'learn', 'start', shortCode);
   },
 
   render() {
@@ -103,6 +158,17 @@ const TutorialDetail = React.createClass({
       {key: 8, title: i18n.tutorialDetailInternationalLanguages(), body: this.props.item.language},
       // Reserve key 9 for the optional standards.
     ];
+
+    const imageSrc = this.props.item.image.replace("/images/", "/images/fill-480x360/").replace(".png", ".jpg");
+
+    var imageComponent = (
+      <div style={styles.tutorialDetailImageOuterContainer} className="col-xs-12 col-sm-6">
+        <div style={styles.tutorialDetailImageContainer}>
+          <div style={styles.tutorialDetailImageBackground}/>
+          <Image style={styles.tutorialDetailImage} src={imageSrc}/>
+        </div>
+      </div>
+    );
 
     return (
       <div
@@ -145,12 +211,19 @@ const TutorialDetail = React.createClass({
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                <div style={styles.tutorialDetailImageContainer} className="col-xs-12 col-sm-6">
-                  <img
-                    src={this.props.item.image.replace(".png", ".jpg")}
-                    style={{width: '100%'}}
-                  />
-                </div>
+                {!this.props.disabledTutorial && (
+                  <a
+                    href={this.props.item.launch_url}
+                    target="_blank"
+                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                  >
+                    {imageComponent}
+                  </a>
+                )}
+                {this.props.disabledTutorial &&
+                  imageComponent
+                }
+
                 <div style={styles.tutorialDetailInfoContainer} className="col-xs-12 col-sm-6">
                   <div style={styles.tutorialDetailName}>
                     {this.props.item.name}
@@ -165,14 +238,27 @@ const TutorialDetail = React.createClass({
                   <div style={styles.tutorialDetailDescription}>
                     {this.props.item.longdescription}
                   </div>
-                  <a href={this.props.item.launch_url} target="_blank">
-                    <button style={{marginTop: 20}}>Start</button>
-                  </a>
+                  {this.props.disabledTutorial && (
+                    <div style={styles.tutorialDetailDisabled}>
+                      <i className="fa fa-warning warning-sign" style={styles.tutorialDetailDisabledIcon}/>
+                      &nbsp;
+                      {i18n.tutorialDetailDisabled()}
+                    </div>
+                  )}
+                  {!this.props.disabledTutorial && (
+                    <a
+                      href={this.props.item.launch_url}
+                      target="_blank"
+                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                    >
+                      <button style={{marginTop: 20}}>Start</button>
+                    </a>
+                  )}
                 </div>
                 <div style={{clear: 'both'}}/>
                 <table style={styles.tutorialDetailsTable}>
                   <tbody>
-                    {this.props.item.teachers_notes &&
+                    {this.props.item.teachers_notes && (
                       <tr key={0}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           More resources
@@ -184,8 +270,10 @@ const TutorialDetail = React.createClass({
                             {i18n.tutorialDetailsTeacherNotes()}
                           </a>
                         </td>
-                      </tr>}
-                    {this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 &&
+                      </tr>
+                    )}
+                    {!this.props.disabledTutorial &&
+                     this.props.item.tags_activity_type.split(',').indexOf("online-tutorial") !== -1 && (
                       <tr key={1}>
                         <td style={styles.tutorialDetailsTableTitle}>
                           {i18n.tutorialDetailsShortLink()}
@@ -195,7 +283,8 @@ const TutorialDetail = React.createClass({
                             {`https://hourofcode.com/${this.props.item.short_code}`}
                           </a>
                         </td>
-                      </tr>}
+                      </tr>
+                    )}
                     {tableEntries.map(item =>
                       <tr key={item.key}>
                         <td style={styles.tutorialDetailsTableTitle}>

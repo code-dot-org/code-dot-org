@@ -5,7 +5,7 @@
 
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   = render partial: 'layouts/terms_interstitial'
-- if (current_user && current_user.show_race_interstitial?(@request_ip)) || @force_race_interstitial
+- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'home/survey'
@@ -72,13 +72,12 @@
 
             -else
               = raw current_user.teachers.map{|t| t[:name]}.join(",")
-
-  - if current_user && Gatekeeper.allows('logged_in_studio_homepage', default: true)
+  - if current_user
     %br/
     %br/
     %br/
     = render partial: 'home/projects'
-    - unless @gallery_activities.empty?
+    - if Gatekeeper.allows('logged_in_studio_homepage', default: true) && !@gallery_activities.empty?
       = render partial: 'home/gallery'
 
 %br/

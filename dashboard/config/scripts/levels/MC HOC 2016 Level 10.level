@@ -41,9 +41,9 @@
     "use_player": "true",
     "level_verification_timeout": "0",
     "use_score": "true",
-    "contained_level_names": null,
     "video_key": "mc_2016_congrats",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",
@@ -74,7 +74,6 @@
         <block type="craft_repeatDropdown">
           <title name="TIMES">2</title>
         </block>
-        <block type="craft_repeatRandom"/>
         <block type="craft_moveForward"/>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
@@ -85,20 +84,22 @@
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
-        <block type="craft_playSound">
-          <title name="TYPE">dig_wood1</title>
-        </block>
         <block type="craft_drop">
           <title name="TYPE">dirt</title>
         </block>
-        <block type="craft_wait">
-          <title name="TYPE">random</title>
+        <block type="craft_playSound">
+          <title name="TYPE">dig_wood1</title>
         </block>
-        <block type="craft_addScore"/>
+        <block type="craft_addScore">
+          <title name="SCORE">1</title>
+        </block>
         <block type="craft_attack"/>
         <block type="craft_destroyEntity"/>
         <block type="craft_explodeEntity"/>
         <block type="craft_flashEntity"/>
+        <block type="craft_wait">
+          <title name="TYPE">random</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

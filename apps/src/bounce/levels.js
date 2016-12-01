@@ -46,6 +46,9 @@ levels['1_basketball'] = extend(levels['1'], {
     [8, 0, 0,16, 0, 0, 0, 0]
   ]
 });
+levels['1_sports'] = extend(levels['1_basketball'], {
+  theme: 'soccer',
+});
 levels['2'] = {
   'ideal': 5,
   'requiredBlocks': [
@@ -88,6 +91,9 @@ levels['2_basketball'] = extend(levels['2'], {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [8, 0, 0,16, 0, 0, 0, 8]
   ],
+});
+levels['2_sports'] = extend(levels['2_basketball'], {
+  theme: 'soccer',
 });
 levels['3'] = {
   'requiredBlocks': [
@@ -183,6 +189,9 @@ levels['5_basketball'] = extend(levels['5'], {
   'useFlagGoal': true,
   'toolbox': tb('<block type="bounce_bounceBall"></block>')
 });
+levels['5_sports'] = extend(levels['5_basketball'], {
+  theme: 'hockey'
+});
 levels['6'] = {
   'timeoutFailureTick': 140,
   'requiredBlocks': [
@@ -212,6 +221,9 @@ levels['6'] = {
 levels['6_basketball'] = extend(levels['6'], {
   'useFlagGoal': true,
   'toolbox': tb('<block type="bounce_bounceBall"></block>')
+});
+levels['6_sports'] = extend(levels['6_basketball'], {
+  theme: 'hockey'
 });
 levels['7'] = {
   'timeoutFailureTick': 900,
@@ -251,10 +263,9 @@ levels['7'] = {
 };
 levels['7_basketball'] = extend(levels['7'], {
   'useFlagGoal': true,
-  'toolbox':
-    tb('<block type="bounce_moveLeft"></block> \
-        <block type="bounce_moveRight"></block> \
-        <block type="bounce_bounceBall"></block>')
+});
+levels['7_sports'] = extend(levels['7_basketball'], {
+  theme: 'football',
 });
 /*
   '8': {
@@ -379,12 +390,19 @@ levels['10_basketball'] = extend(levels['10'], {
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0,16, 0, 0, 0, 0, 1]
   ],
-  'toolbox':
-    tb('<block type="bounce_moveLeft"></block> \
-        <block type="bounce_moveRight"></block> \
-        <block type="bounce_bounceBall"></block> \
-        <block type="bounce_incrementPlayerScore"></block> \
-        <block type="bounce_incrementOpponentScore"></block>')
+});
+levels['10_sports'] = extend(levels['10_basketball'], {
+  'map': [
+    [1, 1, 2, 2, 2, 2, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 4, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0,16, 0, 0, 0, 0, 1]
+  ],
+  theme: 'football',
 });
 levels['11'] = {
   'requiredBlocks': [
@@ -455,6 +473,7 @@ levels['11_basketball'] = extend(levels['11'], {
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
         <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \
@@ -462,6 +481,28 @@ levels['11_basketball'] = extend(levels['11'], {
         <block type="bounce_setBallSpeed"></block> \
         <block type="bounce_setPaddleDropdown"></block>'),
 });
+levels['11_sports'] = extend(levels['11_basketball'], {
+});
+var topGoalLarge = [
+  [1, 1, 2, 2, 2, 2, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0,16, 0, 0, 0, 0, 1]
+];
+var topGoalSmall = [
+  [1, 1, 1, 2, 2, 1, 1, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0, 0, 0, 0, 0, 0, 1],
+  [1, 0,16, 0, 0, 0, 0, 1]
+];
 levels['12'] = {
   'requiredBlocks': [
   ],
@@ -474,16 +515,7 @@ levels['12'] = {
   ],
   'minWorkspaceHeight': 800,
   'freePlay': true,
-  'map': [
-    [1, 1, 2, 2, 2, 2, 1, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0,16, 0, 0, 0, 0, 1]
-  ],
+  'map': topGoalLarge,
   'toolbox':
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
@@ -518,20 +550,12 @@ levels['12_basketball'] = {
   ],
   'minWorkspaceHeight': 800,
   'freePlay': true,
-  'map': [
-    [1, 1, 1, 2, 2, 1, 1, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0,16, 0, 0, 0, 0, 1]
-  ],
+  'map': topGoalSmall,
   'toolbox':
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
         <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \
@@ -548,5 +572,26 @@ levels['12_basketball'] = {
     <block type="bounce_whenBallInGoal" deletable="false" x="20" y="510"></block> \
     <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="630"></block>'
 };
+levels['12_sports'] = extend(levels['12_basketball'], {
+  'toolbox':
+    tb('<block type="bounce_moveLeft"></block> \
+        <block type="bounce_moveRight"></block> \
+        <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
+        <block type="bounce_incrementPlayerScore"></block> \
+        <block type="bounce_incrementOpponentScore"></block> \
+        <block type="bounce_launchBall"></block> \
+        <block type="bounce_setBackground"></block> \
+        <block type="bounce_setPaddleDropdown"></block> \
+        <block type="bounce_setBall"></block> \
+        <block type="bounce_setPaddleSpeed"></block> \
+        <block type="bounce_setBallSpeed"></block>'),
+  'maps': {
+    'basketball': topGoalSmall,
+    'football': topGoalLarge,
+    'hockey': topGoalSmall,
+    'soccer': topGoalLarge,
+  },
+});
 
 module.exports = levels;

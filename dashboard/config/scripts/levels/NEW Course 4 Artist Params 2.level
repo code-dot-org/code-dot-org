@@ -24,7 +24,7 @@
     "ideal": "9",
     "callout_json": "[{\r\n  \"localization_key\": \"create_function\",\r\n  \"element_id\": \".blocklyTreeLabel:contains(Functions)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"left center\", \"at\": \"right center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"name_function\",\r\n  \"element_id\": \"#functionNameText\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"right center\", \"at\": \"left center\"}\r\n  }\r\n}, {\r\n  \"on\": \"function_editor_opened\",\r\n  \"localization_key\": \"write_draw_triangle_function\",\r\n  \"element_id\": \"#modalContainer [block-id]:eq(0)\",\r\n  \"qtip_config\": {\r\n    \"position\": {\"my\": \"top left\", \"at\": \"top left\", \"adjust\": {\"x\": 44, \"y\": 37}}\r\n  }\r\n}]",
     "video_key": "C4_function_create",
-    "markdown_instructions": "Create a `draw a triangle` function from scratch that makes a triangle with  50 pixel sides.",
+    "markdown_instructions": "Create a `draw triangle` function from scratch that makes a triangle with  50 pixel sides.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -35,6 +35,7 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,

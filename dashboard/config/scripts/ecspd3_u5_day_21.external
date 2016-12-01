@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 21'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 21
+# Unit 5 Lessons > Day 21
 
 ## Concepts Covered
 
@@ -20,7 +20,4 @@ In this lessons students will apply their new knowledge of statistical analysis 
 - <a href="http://www.virtualnerd.com/middle-math/probability-statistics/mean-median-mode-range/" target=_blank>Mean, Median, Mode, and Range</a>
 - <a href="http://mamateaches.com/wp-content/uploads/2014/08/Mean-Median-Mode-Range-Poster.pdf" target=_blank>Riddle to help remember mean, median, mode, and range </a>
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

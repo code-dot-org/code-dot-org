@@ -30,9 +30,9 @@
     "step_speed": "2",
     "ideal": "7",
     "instructions_important": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The best way to do this is to nest `if` statements by placing one inside of the other.  \",\"hint_id\":\"grade3_RunningFarm_2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4f40ac106002e5809c1a045829b4e87/grade3_RunningFarm_2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"For this puzzle, you should have one `if/else` statement and one plain `if` statement.\",\"hint_id\":\"grade3_RunningFarm_2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/573697d93ac78d291876bf71dd0593b6/grade3_RunningFarm_2.mp3\"}]",
-    "markdown_instructions": "*\"Lettuce collect both crops from this row!\"*\r\n\r\nHelp the farmer collect both corn and lettuce from the field."
+    "markdown_instructions": "*\"Lettuce collect both crops from this row!\"*\r\n\r\nHelp the farmer collect both corn and lettuce from the field.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Collect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",

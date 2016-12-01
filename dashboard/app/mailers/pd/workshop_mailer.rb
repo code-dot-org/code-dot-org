@@ -30,6 +30,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
   }
 
+  after_action :save_timestamp
+
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -39,7 +41,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(enrollment),
+      subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -82,9 +84,32 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: teacher_enrollment_subject(enrollment),
+      subject: teacher_enrollment_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def facilitator_enrollment_reminder(user, workshop)
+    @user = user
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: teacher_enrollment_subject(@workshop),
+         to: email_address(@user.name, @user.email),
+         reply_to: email_address(@user.name, @user.email)
+  end
+
+  def organizer_enrollment_reminder(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: teacher_enrollment_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def detail_change_notification(enrollment)
@@ -94,9 +119,32 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: detail_change_notification_subject(enrollment),
+      subject: detail_change_notification_subject(@workshop),
       to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def facilitator_detail_change_notification(user, workshop)
+    @user = user
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@user.name, @user.email),
+         reply_to: email_address(@user.name, @user.email)
+  end
+
+  def organizer_detail_change_notification(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   # Exit survey email
@@ -126,10 +174,15 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: content_type,
       from: from_hadi,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@enrollment.full_name || @teacher.name, @teacher.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   private
+
+  def save_timestamp
+    return unless @enrollment && @enrollment.persisted?
+    Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
+  end
 
   def first_workshop_for_teacher?(teacher)
     Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
@@ -138,7 +191,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def generate_csf_certificate
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @teacher.name || @teacher.email,
+      @enrollment.full_name,
       y: 444,
       height: 100,
     )
@@ -170,17 +223,17 @@ class Pd::WorkshopMailer < ActionMailer::Base
     nil
   end
 
-  def teacher_enrollment_subject(enrollment)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
-      "Your upcoming #{enrollment.workshop.course_name} workshop"
+  def teacher_enrollment_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Your upcoming #{workshop.course_name} workshop"
     else
       'Your upcoming Code.org workshop and next steps'
     end
   end
 
-  def detail_change_notification_subject(enrollment)
-    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? enrollment.workshop.course
-      "Details for your upcoming #{enrollment.workshop.course_name} workshop have changed"
+  def detail_change_notification_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
       'Details for your upcoming Code.org workshop have changed'
     end
