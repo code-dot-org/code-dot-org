@@ -92,10 +92,10 @@
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
 
-  # report memory and disk space utilization to CloudWatch every five minutes
+  # report memory and disk space utilization to CloudWatch every minute
   # we do not use the cronjob helper method because this should not execute with
   # bundle.
-  $crontab << "*/5 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron --auto-scaling"
+  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron --auto-scaling"
 %>
 #
 # node: <%= node.name %>
