@@ -1,7 +1,3 @@
-hidden false
-login_required true
-hideable_stages true
-
 stage 'Quality Websites'
 named_level 'Unit 2 Lesson 1 Overview'
 named_level 'Rating Websites'
@@ -62,7 +58,7 @@ level 'CSDU2 - About Me Page Styling'
 
 stage 'Multi-Page Websites'
 named_level 'Unit 2 Lesson 8 Overview'
-level 'CSDU2 - Starting Personal Home Page'
+named_level 'CSDU2 - Starting Personal Home Page'
 named_level 'Stop: Personal Home Page Warm Up'
 level 'CSDU2 - New Html Files'
 level 'CSDU2 - Link and Nav'
@@ -90,15 +86,7 @@ named_level 'Peer Review: Personal Website'
 
 stage 'Digital Footprint'
 named_level 'Unit 2 Lesson 12 Overview'
-named_level 'Facespace: Lizzie Dell'
-named_level 'Facespace: Soleil M'
-named_level 'Facespace: John T'
-named_level 'Chirpr: @johnsnow'
-named_level 'Chirpr: @solmoon'
-named_level 'Chirpr: @lillizard'
-named_level 'instantframe: johnsnow'
-named_level 'instaframe: photolizzie'
-named_level 'instantframe: moonbeam'
+named_level 'Social Sleuth'
 
 stage 'Publishing a Website'
 named_level 'Unit 2 Lesson 13 Overview'

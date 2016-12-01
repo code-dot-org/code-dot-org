@@ -29,9 +29,9 @@
     "instructions": "These blocks are in the wrong order. Can you fix them?",
     "markdown_instructions": "*\"Help me collect each gold coin!\"*\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
     "ideal": "10",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "min_collected": "2"
+    "min_collected": "2",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",

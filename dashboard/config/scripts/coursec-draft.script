@@ -38,6 +38,8 @@ level 'grade2_collector_6'
 level 'grade2_collector_7'
 level 'grade2_collector_8'
 level 'grade2_collector_9'
+level 'grade2_collector_9a'
+level 'grade2_collector_A'
 level 'grade2_collector_10'
 
 stage 'Programming in Artist'

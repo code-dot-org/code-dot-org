@@ -1,0 +1,66 @@
+name 'U5 color sleuth check correct'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+
+Okay great we can produce random game boards.
+
+What next?
+
+I think the next thing would be to add click-functionality to the buttons.
+
+Yeah, where if you click on a button we check whether it's the right one or not.
+
+
+
+So we're going to need 4 event handlers, one for each button.
+
+Right. Actually I'm thinking this would be a great time for another function.  
+
+The function checks whether they hit the right button or not, and then we just call it from each event handler.  That will save us from writing the same code over and over again in each event handler.
+
+Here's what I'm thinking.
+
+[pseudocode diagram with arrows]
+
+I see.  How will the function know which button is correct?
+
+Hmm.  Good question. 
+
+Oh, what if we added a global variable that stored the id of the button we randomly choose in the setBoard() function.  Here, let me add to the sketch...
+
+[add global var to sketch, with arrows from setBoard]
+
+So checkCorrect() needs a way to know both which button was hit and what the correct button is.  The correct button is now a global variable.  What if we gave checkCorrect a parameter.  So if you call checkCorrect(3) for example, it checks whether button3 is correct and updates the score. 
+
+I see, good idea.
+
+So the whole thing looks like this now.
+
+[diagram]
+
+
+Whew that's a lot to change.  But let's do it.  
+
+Yeah, it's a lot to change so we shouldn't do it all at once.  We should do it in steps, and at each step verify that the change is working.
+
+Right, and we can do that with console.log messages.  At each step will just add console.log messages to verify that things are working, and we can remove them later if they want.
+
+Good. There's enough to add that I think our first step should be to stub everything out first - add the variables, add the event handlers, add an empty checkCorrect function.  And *then* go through and start to plug things in.
+
+Okay, sounds like a plan, let's do it.
+
+
+
+
+---NEXT----
+
+* Add global var for correct Square
+* Add 4 event handlers
+* Add checkCorrect(num)
+* Add global score var
+
+
+MARKDOWN

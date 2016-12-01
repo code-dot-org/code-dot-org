@@ -31,7 +31,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Be careful to pull out the full block of \\\"code from the toolbar each time you try a new one.\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"If your code becomes too confusing, you can always click \\\"Start Over\\\" and try again!\",\r\n  \"hint_id\": \"4-5_Artist_Patterns_3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Be careful to pull out the full block of \\\"code from the toolbar each time you try a new one.\",\"hint_id\":\"4-5_Artist_Patterns_3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cf790dae84673a962098d7eced84fb3d/courseE_farmer_concept4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If your code becomes too confusing, you can always click \\\"Start Over\\\" and try again!\",\"hint_id\":\"4-5_Artist_Patterns_3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7ea3c2291cc3a4a6331577ef01de5326/courseE_farmer_concept4.mp3\"}]",
     "never_autoplay_video": "false",
     "contained_level_names": null
   },

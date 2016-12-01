@@ -30,9 +30,9 @@
     "markdown_instructions": "*\"Let's get all of the coins!\"*",
     "callout_json": "[]",
     "ideal": "9",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "min_collected": "3"
+    "min_collected": "3",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",

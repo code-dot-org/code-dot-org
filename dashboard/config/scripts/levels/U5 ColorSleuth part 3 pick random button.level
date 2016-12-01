@@ -41,7 +41,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "instructions": "# make one slightly different\r\n\r\n* add two lines to the bottom of the code you have so far.\r\n* 1. make a new variable called `diffColor` and make each of its RGB values slightly different.\r\n* Suggestion: add 10 to each of the values.\r\n\r\n`var diffColor = \"rgb(250, 174, 10)\";`\r\n\r\n2. make a call to setProperty for one of the buttons using `diffColor`  -- this will override \r\n\r\nNOTE: your code will set the background color of one of the buttons twice, but it will happen so fast you won't notice.\r\n\r\nThe idea is that the first 5 lines will still set each button to the same color.  The next 2 will create the diffColor and setProperty for one of them.",
+    "instructions": "# make a random button a different color.\r\n\r\nThe last lines of your code should look something like this:\r\n\r\n```\r\nvar diffColor = \"rgb(\"250, 174, 10)\";\r\nvar randButtonID = \"button\"+randomNumber(1,4); \r\nsetProperty(randButtonID, \"background-color\", diffColor);\r\n```\r\n\r\nTry it out.  \r\n\r\nSuggestion:\r\nAdd `console.log(randButtonID)` so you can see which button is supposed to have the different color.  It's probably hard to spot!",
     "log_conditions": [
       {
         "entries": [
@@ -55,7 +55,9 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": ""
+  "notes": "Add log conditions for randomNumber",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

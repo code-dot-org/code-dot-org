@@ -34,8 +34,8 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "true",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If your loop is counting up, the increment is added to your counter variable each time through. \\n\\nWhat do you need to add to each number to get the next amount of nectar?\",\"hint_id\":\"NEW_Course_4_Bee_For_Loops_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/946332a998931578519663ee4ee97e51/grade5_bee_for_loops8.mp3\"}]",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

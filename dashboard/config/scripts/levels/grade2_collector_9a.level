@@ -29,11 +29,10 @@
     "instructions": "**Challenge:** Grab all of the coins.",
     "markdown_instructions": "**Challenge:** Grab all of the coins.",
     "callout_json": "[]",
-    "ideal": "9",
+    "ideal": "27",
     "instructions_important": "false",
     "min_collected": "12",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",
@@ -72,21 +71,102 @@
               <next>
                 <block type="collector_collect">
                   <next>
-                    <block type="maze_turn">
-                      <title name="DIR">turnLeft</title>
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
                       <next>
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="collector_collect">
                           <next>
-                            <block type="collector_collect">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                <block type="collector_collect">
                                   <next>
                                     <block type="maze_move">
                                       <title name="DIR">moveForward</title>
                                       <next>
-                                        <block type="collector_collect"/>
+                                        <block type="collector_collect">
+                                          <next>
+                                            <block type="maze_turn">
+                                              <title name="DIR">turnLeft</title>
+                                              <next>
+                                                <block type="maze_move">
+                                                  <title name="DIR">moveForward</title>
+                                                  <next>
+                                                    <block type="collector_collect">
+                                                      <next>
+                                                        <block type="maze_move">
+                                                          <title name="DIR">moveForward</title>
+                                                          <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_turn">
+                                                            <title name="DIR">turnLeft</title>
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect">
+                                                            <next>
+                                                            <block type="maze_move">
+                                                            <title name="DIR">moveForward</title>
+                                                            <next>
+                                                            <block type="collector_collect"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
                                       </next>
                                     </block>
                                   </next>
