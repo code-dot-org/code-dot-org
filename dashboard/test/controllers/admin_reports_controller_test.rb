@@ -32,8 +32,6 @@ class AdminReportsControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :directory
   generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :level_answers
-  generate_admin_only_tests_for :retention
-  generate_admin_only_tests_for :retention_stages
 
   test 'should get admin progress page' do
     get :admin_progress
