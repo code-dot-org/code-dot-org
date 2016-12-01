@@ -53,8 +53,8 @@ Feature: Using the Internet Simulator Lobby
     Then element ".modal" is not visible
 
     # Join a router and click the side instructions to re-open the dialog
-#    When I enter the netsim name "Greg"
-#    And I press the first ".join-button" element
-#    And I wait until element "#tab_instructions" is visible
-#    And I press the first "#tab_instructions" element
-#    Then element ".modal" is visible
+    When I enter the netsim name "Greg"
+    And I press the first ".join-button" element
+    And I wait until element "#tab_instructions" is visible
+    And I press the first "#tab_instructions" element
+    Then element ".modal" is visible
