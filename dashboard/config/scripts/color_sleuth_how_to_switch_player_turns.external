@@ -1,0 +1,10 @@
+name 'Color Sleuth - How to switch player turns'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Whose turn is it?
+
+
+to update the score we need to know which player did it.  That means we need a way to indicate whose turn it is, and then update things based on that. acknowledge that each click triggers -> check correct -> setBoard  should also change turns as part of set correct.  Let's start by just getting turns alternating.  Let's use another global variable to keep track. it will just be a number 1 or 2. This feels like something we should put into a function called endTurn
+MARKDOWN

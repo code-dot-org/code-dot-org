@@ -30,9 +30,9 @@
     "markdown_instructions": "*\"Keep up the good work! Help me collect all of the coins.\"*",
     "callout_json": "[]",
     "ideal": "8",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "min_collected": "3"
+    "min_collected": "3",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "P8: Efficacy Repairing Puzzle",

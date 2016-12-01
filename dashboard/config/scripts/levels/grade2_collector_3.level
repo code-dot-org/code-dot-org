@@ -28,9 +28,9 @@
     "fast_get_nectar_animation": "false",
     "instructions": "Put these blocks in order to collect all of the gold and solve the puzzle.",
     "markdown_instructions": "*\"Sequence matters!\"*\r\n\r\nThe blocks you need are already in the workspace, but not connected.  Put these blocks in order to collect all of the gold and solve the puzzle.",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "min_collected": "2"
+    "min_collected": "2",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",

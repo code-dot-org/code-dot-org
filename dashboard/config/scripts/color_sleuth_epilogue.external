@@ -1,0 +1,13 @@
+name 'Color Sleuth - Epilogue'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Color Sleuth - Epilogue
+
+There are a million ways to do this.
+
+This is not "correct" in the sense that there are many many ways you could go about writing this app.  The solution that Michael and Alexis ended up with is one path.  It may have looked totally different if they made decisions in a different order.  For example, what if they wanted to get turn switching to work first?  It would have been fine, but totally different code.  And that's what's so cool about programming.  There is no one right way to do it.
+
+![](https://images.code.org/e285a4fe386acf3be5e99b868e0cfc12-image-1480625705806.png)
+MARKDOWN

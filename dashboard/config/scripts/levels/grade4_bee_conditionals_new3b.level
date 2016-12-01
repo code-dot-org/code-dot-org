@@ -34,9 +34,9 @@
     "nectar_goal": "12",
     "honey_goal": "9",
     "step_speed": "1",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `if/else` statement could really help you out here.\",\"hint_id\":\"grade4_bee_conditionals_new3b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f1367bb034b83deac7a7ebedd9990752/grade4_bee_conditionals_new3b.mp3\"}]",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

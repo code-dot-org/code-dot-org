@@ -7,10 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -55,7 +51,8 @@
         "minTimes": 4,
         "message": "There should be at least 4 calls to setProperty - one for each of the 4 buttons to set the background color."
       }
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Add callout to setProperty\r\n\r\nAdd log conditions to make sure setProperty is called 4 times.",

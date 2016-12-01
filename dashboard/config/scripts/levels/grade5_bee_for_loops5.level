@@ -32,8 +32,8 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops.\",\"hint_id\":\"grade5_bee_for_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19127a2dffaa2ed5e1a63e58e67973a5/grade5_bee_for_loops5.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops.\",\"hint_id\":\"grade5_bee_for_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19127a2dffaa2ed5e1a63e58e67973a5/grade5_bee_for_loops5.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
