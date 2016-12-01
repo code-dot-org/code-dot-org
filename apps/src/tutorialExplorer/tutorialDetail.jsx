@@ -132,8 +132,9 @@ const TutorialDetail = React.createClass({
     }
   },
 
-  startTutorialClicked(shortCode) {
+  startTutorialClicked(shortCode, launchUrl) {
     ga('send', 'event', 'learn', 'start', shortCode);
+    $.ajax({ url: launchUrl });
   },
 
   render() {
@@ -213,9 +214,9 @@ const TutorialDetail = React.createClass({
               >
                 {!this.props.disabledTutorial && (
                   <a
-                    href={this.props.item.launch_url}
+                    href={this.props.item.url}
                     target="_blank"
-                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                    onClick={this.startTutorialClicked.bind(this, this.props.item.short_code, this.props.item.launch_url)}
                   >
                     {imageComponent}
                   </a>
@@ -247,9 +248,9 @@ const TutorialDetail = React.createClass({
                   )}
                   {!this.props.disabledTutorial && (
                     <a
-                      href={this.props.item.launch_url}
+                      href={this.props.item.url}
                       target="_blank"
-                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
+                      onClick={this.startTutorialClicked.bind(this, this.props.item.short_code, this.props.item.launch_url)}
                     >
                       <button style={{marginTop: 20}}>Start</button>
                     </a>
