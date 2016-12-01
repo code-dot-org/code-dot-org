@@ -7,6 +7,13 @@ Dashboard::Application.configure do
   config.cache_classes = false
   config.cache_store = :null_store
 
+  # Cache assets in memory instead of on disk
+  if CDO.with_default(true).cache_assets_in_memory
+    config.assets.configure do |env|
+      env.cache = Sprockets::Cache::MemoryStore.new(1000)
+    end
+  end
+
   # Do not eager load code on boot.
   config.eager_load = false
 

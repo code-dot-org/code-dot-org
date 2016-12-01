@@ -23,9 +23,15 @@ Cu Hour of Code în România și Moldova, Code.org iși propune să ajute la dem
 
 Începând cu acest an, în România si Moldova echipa Hour of Code este condusă de <a href="http://www.linkedin.com/in/alinchiriac">Alin Chiriac</a>, fondatorul asociației <a href="http://www.adfaber.org">ADFABER - Technlology for Social Change.</a> 
 
-<a href="http://www.adfaber.org">ADFABER</a> urmareste sustinerea în România si Moldova a obiectivelor pe care Code.org le are in lume si anume introducerea în cat mai multe scoli, a cursurilor de programare adecvate, pentru a apropia și mai mult profesorii si copii de programare.
+<a href="http://www.adfaber.org">ADFABER</a> urmareste sustinerea în România si Moldova a obiectivelor pe care Code.org le are in lume si anume introducerea în cât mai multe scoli, a cursurilor de programare adecvate, pentru a apropia și mai mult profesorii si copii de programare.
 
 In cadrul evenimentului Hour of Code (http://ro.code.org) ADFABER are rolul de a reuni companii, organizații, instituții, profesori pentru a da șansa câtor mai mulți români să beneficieze de o introducere în programare.
+
+## Hour of Code România
+
+Te rugăm ajută la promovarea tehnologiei computerelor în comunitatea ta. 
+
+- [Facebook Hour of Code Romania](http://facebook.com/HourofCodeRo/) 
 
 ## Urmăriți-ne 
 Urmăriți Code.org pe rețelele de socializare: 
@@ -34,22 +40,3 @@ Urmăriți Code.org pe rețelele de socializare:
 - [Twitter](http://twitter.com/codeorg) 
 - [Google Plus](https://plus.google.com/113408212816493509628) 
 - [LinkedIn](http://www.linkedin.com/company/code-org) 
-
-## Tricouri și alte elemente 
-
-Te rugăm ajută la promovarea tehnologiei computerelor în comunitatea ta. 5% din venituri vor fi utilizate de către Code.org pentru a aduce Tehnologia Computerelor în mai multe școli. 
-
-<a href="http://store.code.org/">
-<img src="https://www.code.org/images/swag1.jpg" width=150/>
-<img src="https://www.code.org/images/swag4.jpg" width=150/>
-<img src="https://www.code.org/images/swag2.jpg" width=150/>
-<img src="https://www.code.org/images/swag6.jpg" width=150/>
-<img src="https://www.code.org/images/swag3.jpg" width=150/>
-</a>
-
-
-
-
-<br /><a href="http://www.guidestar.org/organizations/46-0858543/code-org.aspx" target="_blank">
-    <img src="https://widgets.guidestar.org/gximage2?o=9218725&l=v3" />
-</a>

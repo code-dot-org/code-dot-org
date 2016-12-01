@@ -5,6 +5,11 @@ import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
 import experiments from '../util/experiments';
+import {
+  outputError,
+  injectErrorHandler
+} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
@@ -19,10 +24,8 @@ var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-var errorHandler = require('../errorHandler');
-var outputError = errorHandler.outputError;
-var ErrorLevel = errorHandler.ErrorLevel;
 var dom = require('../dom');
+import { initFirebaseStorage } from '../storage/firebaseStorage';
 
 import {
   setInitialAnimationList,
@@ -57,6 +60,8 @@ var ArrowIds = {
 
 /**
  * An instantiable GameLab class
+ * @constructor
+ * @implements LogTarget
  */
 var GameLab = function () {
   this.skin = null;
@@ -92,8 +97,11 @@ var GameLab = function () {
 
   dropletConfig.injectGameLab(this);
 
+  injectErrorHandler(new JavaScriptModeErrorHandler(
+    () => this.JSInterpreter,
+    this
+  ));
   consoleApi.setLogMethod(this.log.bind(this));
-  errorHandler.setLogMethod(this.log.bind(this));
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
@@ -166,6 +174,15 @@ GameLab.prototype.init = function (config) {
 
   gameLabSprite.injectLevel(this.level);
 
+  this.studioApp_.labUserId = config.labUserId;
+  this.studioApp_.storage = initFirebaseStorage({
+    channelId: config.channel,
+    firebaseName: config.firebaseName,
+    firebaseAuthToken: config.firebaseAuthToken,
+    firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
+    showRateLimitAlert: this.studioApp_.showRateLimitAlert
+  });
+
   this.gameLabP5.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
@@ -200,7 +217,6 @@ GameLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   // TODO (caleybrock): re-enable based on !config.level.debuggerDisabled when debug
@@ -1037,7 +1053,7 @@ GameLab.prototype.completeRedrawIfDrawComplete = function () {
 };
 
 GameLab.prototype.handleExecutionError = function (err, lineNumber) {
-  outputError(String(err), ErrorLevel.ERROR, lineNumber);
+  outputError(String(err), lineNumber);
   this.executionError = { err: err, lineNumber: lineNumber };
   this.haltExecution_();
   // TODO: Call onPuzzleComplete?

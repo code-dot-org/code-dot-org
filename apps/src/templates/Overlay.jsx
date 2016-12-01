@@ -1,5 +1,5 @@
 import React from 'react';
-import dom from '../dom';
+import Radium from 'radium';
 
 import { hideOverlay } from '../redux/instructions';
 
@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 // video modal backdrop (at 1040)
 export const Z_INDEX = 1020;
 
-const visible_style = {
+const style = {
   position: 'fixed',
   top: 0,
   left: 0,
@@ -20,31 +20,35 @@ const visible_style = {
   zIndex: Z_INDEX
 };
 
-const hidden_style = {
-  display: 'none'
+const craftStyle = {
+  opacity: 0.8
 };
 
 const Overlay = React.createClass({
   propTypes: {
     visible: React.PropTypes.bool,
-    hide: React.PropTypes.func
-  },
-
-  componentDidMount() {
-    var unbind = dom.addClickTouchEvent(document.body, function () {
-      this.props.hide();
-      unbind();
-    }.bind(this));
+    hide: React.PropTypes.func,
+    isMinecraft: React.PropTypes.bool,
   },
 
   render() {
-    return (<div style={this.props.visible ? visible_style : hidden_style} />);
+    return (this.props.visible ?
+      <div
+        id="overlay"
+        onClick={this.props.hide}
+        style={[
+          style,
+          this.props.isMinecraft && craftStyle
+        ]}
+      /> :
+      null);
   },
 });
 
 export default connect(function propsFromStore(state) {
   return {
-    visible: state.instructions.overlayVisible
+    visible: state.instructions.overlayVisible,
+    isMinecraft: !!state.pageConstants.isMinecraft,
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -52,4 +56,4 @@ export default connect(function propsFromStore(state) {
       dispatch(hideOverlay());
     },
   };
-})(Overlay);
+})(Radium(Overlay));

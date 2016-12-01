@@ -19,8 +19,6 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-- page_mode = PageMode.get(request)
-
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -29,6 +27,13 @@ social:
   .banner {
     color: white;
     text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .banner a {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
   }
   .bannerHeading {
     font-family: 'Gotham 5r', sans-serif;
@@ -36,8 +41,18 @@ social:
     line-height: 56px;
     padding: 20px 0px 20px 0px;
   }
-  .bannerButtons {
-    padding: 20px 0px 20px 0px;
+  .bannerBeyond {
+    padding-top: 15px;
+  }
+  .bannerTeachers {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    opacity: 0;
+  }
+  .bannerTeacherIcon {
+    height: 26px;
+    padding-right: 5px;
+    vertical-align: top;
   }
   #studentImage {
     height: 278px;
@@ -56,11 +71,11 @@ social:
     .col-50
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
-      .bannerButtons
-        %a{href: "https://hourofcode.com/#join", target: "_blank"}
-          %button= hoc_s(:learn_banner_host)
-        %a{href: "https://hourofcode.com/how-to", target: "_blank", style: "padding-left: 20px"}
-          %button= hoc_s(:learn_banner_teacherguide)
+      .bannerBeyond
+        = hoc_s(:learn_banner_beyond)
+      .bannerTeachers
+        %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
+        = hoc_s(:learn_banner_teachers)
     #studentImage.col-50.tablet-feature
 
 -# Not ideal but we can pull the undigested files from /blockly.
@@ -81,8 +96,6 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
-  - if tutorial[:short_code] == "mchoc" && page_mode == "feature-minecraft2016"
-    - tutorial[:image] = "/images/tutorials/new/minecraft2016.png"
 
 #tutorials
 
@@ -93,8 +106,9 @@ social:
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
-      roboticsButton: true,
-      showSortBy: window.location.search.indexOf("showsort") !== -1
+      roboticsButtonUrl: "/learn/robotics",
+      showSortBy: true,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
@@ -109,4 +123,16 @@ social:
     img.on('load', function() {
       img.fadeTo('normal', 1);
     });
+
+    // Set up beyond hyperlink.
+    $("#learn_banner_beyond").attr({href: "https://hourofcode.com/beyond", target: "_blank"});
+
+    // Set up teacher hyperlinks.
+    $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
+    });
+    $("#teacher_banner_howto").attr({href: "https://hourofcode.com/how-to", target: "_blank"}).click(function() {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
+    });
+    $(".bannerTeachers").fadeTo('slow', 1);
   });

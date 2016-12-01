@@ -251,6 +251,10 @@
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllSeaGrass`\r\n* Called `drawSeaGrass(radius, numWaves)` at least 30 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

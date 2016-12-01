@@ -1,0 +1,9 @@
+name 'coursef_powerofwords'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Power of Words
+
+## What should you do when someone uses mean or scary language on the Internet?
+MARKDOWN

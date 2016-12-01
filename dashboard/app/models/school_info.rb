@@ -45,6 +45,26 @@ class SchoolInfo < ActiveRecord::Base
     self.state = input
   end
 
+  ATTRIBUTES = %w(
+    country
+    school_type
+    state
+    zip
+    school_district_id
+    school_district_other
+    school_district_name
+    school_id
+    school_other
+    school_name
+    full_address
+  )
+
+  before_validation do
+    ATTRIBUTES.each do |attr|
+      self[attr] = nil if self[attr].blank?
+    end
+  end
+
   validate :validate_with_country
   validate :validate_without_country
 
@@ -52,13 +72,13 @@ class SchoolInfo < ActiveRecord::Base
   # The following states are valid (from the spec at https://goo.gl/Gw57rL):
   #
   # Country “USA” + charter + State + District + School name [selected]
-  # Country “USA” + charter + State + District + School name “other” [typed]
-  # Country “USA” + charter + State + District “other” [typed] + School name [typed]
-  # Country “USA” + private + zip + School name [typed]
+  # Country “USA” + charter + State + District + zip + School name “other” [typed]
+  # Country “USA” + charter + State + District “other” [typed] + zip + School name [typed]
+  # Country “USA” + private + State + zip + School name [typed]
   # Country “USA” + public + State + District + School name [selected]
-  # Country “USA” + public + State + District + School name “other” [typed]
-  # Country “USA” + public + State + District “other” [typed] + School name [typed]
-  # Country “USA” + other + zip + School name [typed]
+  # Country “USA” + public + State + District + zip + School name “other” [typed]
+  # Country “USA” + public + State + District “other” [typed] + zip + School name [typed]
+  # Country “USA” + other + State + zip + School name [typed]
   # Non-USA Country + any school type + address + school name
   #
   # This method reports errors if the record has a country and is invalid.
@@ -88,10 +108,10 @@ class SchoolInfo < ActiveRecord::Base
   end
 
   def validate_private_other
+    errors.add(:state, "is required") unless state
     errors.add(:zip, "is required") unless zip
     errors.add(:school_name, "is required") unless school_name
 
-    errors.add(:state, "is forbidden") if state
     errors.add(:school_district, "is forbidden") if school_district
     errors.add(:school_district_other, "is forbidden") if school_district_other
     errors.add(:school_district_name, "is forbidden") if school_district_name
@@ -102,7 +122,6 @@ class SchoolInfo < ActiveRecord::Base
 
   def validate_public_charter
     errors.add(:state, "is required") unless state
-    errors.add(:zip, "is forbidden") if zip
     errors.add(:full_address, "is forbidden") if full_address
     validate_district
     validate_school
@@ -120,14 +139,17 @@ class SchoolInfo < ActiveRecord::Base
 
   def validate_school
     if school_district_other
+      errors.add(:zip, "is required") unless zip
       errors.add(:school_name, "is required") unless school_name
       errors.add(:school, "is forbidden") if school
       errors.add(:school_other, "is forbidden") if school_other
     elsif school_other
       errors.add(:school_name, "is required") unless school_name
+      errors.add(:zip, "is required") unless zip
       errors.add(:school, "is forbidden") if school
     else
       errors.add(:school, "is required") unless school
+      errors.add(:zip, "is forbidden") if zip
       errors.add(:school_name, "is forbidden") if school_name
     end
   end

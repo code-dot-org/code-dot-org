@@ -6,6 +6,7 @@ Feature: Callouts
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
     And I rotate to landscape
+    And I wait for the page to fully load
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I send click events to selector "<close_target>"
@@ -26,6 +27,8 @@ Feature: Callouts
   Scenario Outline: Callouts having correct content and being dismissable via the x-button
     Given I am on "<url>"
     And I rotate to landscape
+    And I wait for the page to fully load
+    And I close the instructions overlay if it exists
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I close callout "<callout_id>"
@@ -38,14 +41,14 @@ Feature: Callouts
   Scenario: Modal ordering
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#runButton" is visible
+    And I wait for the page to fully load
     And I close the instructions overlay if it exists
     And callout "0" is visible
 
   Scenario: Closing using "x" button
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#runButton" is visible
+    And I wait for the page to fully load
     And I close the instructions overlay if it exists
     And element ".tooltip-x-close" is visible
     And callout "0" is visible
@@ -69,7 +72,7 @@ Feature: Callouts
   Scenario: Opening the Show Code dialog
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
-    And I wait until element "#runButton" is visible
+    And I wait for the page to fully load
     And I close the instructions overlay if it exists
     When I press "show-code-header"
     Then ".modal-backdrop" should be in front of "#qtip-0"

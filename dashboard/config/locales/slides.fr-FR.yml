@@ -3419,3 +3419,122 @@
           un travail en continu. Apprendre comment toutes les commandes « Répéter
           » fonctionnent te permettra d'économiser énormément de temps plus tard lorsque
           tu développeras ton propre jeu.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Bonjour, je suis Jens, concepteur créatif en chef de Minecraft. Dans
+          l'heure à venir, vous allez créer votre propre jeu Minecraft. Cet écran
+          ressemble à Minecraft, mais le monde s'est arrêté. Les moutons sont immobiles,
+          les poulets ne pondent pas et les zombies restent sur place. À vous d'ajouter
+          le code qui anime le monde de Minecraft.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: la façon dont les gens pensent et se comportent.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Votre écran est divisé en trois grandes sections. 1) À gauche, l'aire
+          de jeu Minecraft. Pour l'instant, le monde est immobile, mais on va arranger
+          ça avec du code.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Au milieu, la boîte à outils. Chacun de ces blocs est une commande
+          que les poulets, moutons, etc. comprennent.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: '3) À droite, l''espace de travail : c''est là que nous allons créer
+          notre programme.'
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Si vous oubliez quoi faire, les instructions de chaque niveau sont en
+          haut.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Commençons par programmer un poulet. On glisse la commande « avancer »
+          dans l'espace de travail. Quand je choisis « Exécuter », le poulet avance
+          d'un pas. Pour aller plus loin, je glisse un autre bloc « avancer » sous
+          le premier jusqu'à ce qu'il apparaisse en surbrillance. Je le lâche et les
+          deux blocs s'ancrent l'un à l'autre. Si je choisis à nouveau « Exécuter »,
+          le poulet avance de deux pas.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Si vous avez besoin de supprimer un bloc, retirez-le de la pile et remettez-le
+          dans la boîte à outils.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Après avoir choisi « Exécuter », le bouton « Réinitialiser » vous permet
+          de tout recommencer. À vous de créer votre version de Minecraft. Amusez-vous
+          bien !
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Bonjour, je m'appelle Lisa. Je suis développeuse logicielle pour Minecraft
+          et je m'occupe de certains animaux et ennemis du jeu. J'ai notamment travaillé
+          sur l'ocelot et sur le mécanisme qui permet de l'apprivoiser en lui donnant
+          du poisson.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Nous les humains, on s'ennuie quand il faut faire la même chose encore
+          et encore. L'avantage des ordinateurs, c'est qu'ils peuvent faire la même
+          chose des millions voire des milliards de fois sans se lasser. Cette répétition
+          est appelée boucle ; chaque créature de Minecraft en utilise.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Avant ça, notre poulet a avancé et puis s'est arrêté. Dans Minecraft,
+          ils se promènent tout le temps. Utilisons une boucle « faire à l'infini »
+          de notre boîte à outils pour que là aussi, les poulets se déplacent tout
+          le temps. Les boucles font gagner énormément de temps et ouvrent plein de
+          possibilités pour créer votre version de Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Dans le prochain niveau, vous pouvez incarner Steve ou Alex. Appuyez
+          sur les flèches du clavier pour aller vers le haut, le bas, la gauche ou
+          la droite. Vous pouvez ainsi aller où vous voulez dans le niveau. Pour utiliser
+          une créature, marchez vers elle, tournez-vous face à elle et appuyez sur
+          la barre d'espace.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Avec un écran tactile, balayez vers le haut, le bas, la gauche ou la
+          droite pour vous déplacer, puis touchez l'aire de jeu pour utiliser l'objet
+          devant vous.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Mais que se passe-t-il ensuite ? Les moutons lâchent de la laine quand
+          on les tond, les vaches fuient quand on les frappe et les creepers explosent
+          quand on s'approche. Ces réactions sont dues à ce qu'on appelle des événements,
+          qui disent au programme d'écouter (attendre) que quelque chose se passe
+          et d'effectuer une certaine action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Jusqu'ici, vous avez utilisé un événement. Le code de la case « après
+          génération » se lance quand votre créature est créée ou au début de la partie.
+          Dans les prochains niveaux, vous aurez d'autres cases pour des événements
+          comme « si touché » quand vous touchez la créature, ou « après utilisation »
+          quand vous l'utilisez. Si vous voulez que votre zombie disparaisse au lever
+          du Soleil, indiquez-le dans la case « de jour ».
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Dans un jeu, générer veut dire ajouter quelque chose. Dans ce niveau,
+          nous allons générer des zombies au coucher du Soleil. Pour cela, utilisons
+          le bloc « de nuit ».
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Pour générer les zombies de nuit, nous ajoutons « générer zombie » sous
+          la case « de nuit ». Dès qu'un zombie est généré, il exécute le code de
+          sa case « après génération ». Amusez-vous bien à générer des zombies !
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Félicitations ! Vous savez utiliser les commandes informatiques pour
+          donner vie au monde de Minecraft. À présent, c'est vous le développeur.
+          Vous avez déverrouillé toutes les commandes et créatures. À vous de choisir
+          ce qui va arriver.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Une fois votre création terminée, choisissez Share (Partager) et envoyez
+          le lien à vos amis ou utilisez-le pour jouer sur votre téléphone. Amusez-vous
+          bien ! Je suis impatient de tester votre version de Minecraft.

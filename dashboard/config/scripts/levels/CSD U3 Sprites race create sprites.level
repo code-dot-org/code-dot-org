@@ -67,7 +67,7 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "project_template_level_name": "CSD U3 Sprites Template Race",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",

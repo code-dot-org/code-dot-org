@@ -1,11 +1,12 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
+import {injectErrorHandler} from '@cdo/apps/javascriptMode';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
 
 var Applab = require('@cdo/apps/applab/applab');
 var applabCommands = require('@cdo/apps/applab/commands');
-var errorHandler = require('@cdo/apps/errorHandler');
 var AppStorage = require('@cdo/apps/applab/appStorage');
 
 
@@ -85,15 +86,19 @@ describe('createRecord callbacks', function () {
 
   it('logs an error on 403 if no onError provided', function () {
     var myRecord = { name: 'Alice' };
+
+    var applabLogger = sinon.spy();
+    injectErrorHandler(new JavaScriptModeErrorHandler(
+      () => window.Applab.JSInterpreter,
+      {log: applabLogger}
+    ));
+
     applabCommands.createRecord({
       table: 'mytable',
       record: myRecord,
       onSuccess: function () {
       }
     });
-
-    var applabLogger = sinon.spy(Applab.log);
-    errorHandler.setLogMethod(applabLogger);
 
     lastRequest.respond(403, {}, 'A table may have at most 1000 rows');
 

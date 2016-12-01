@@ -22,30 +22,36 @@ class StudioPerson < ActiveRecord::Base
   # @param email_to_add [String] The email address to associate with this
   #   studio_person.
   def add_email(email_to_add)
+    return if email_to_add.blank?
+
     add_email_to_emails(email_to_add)
 
     # Look for whether there is (are) a User and a StudioPerson for the email
     # address. By using hashed_email, we handle the many teachers missing a
     # plaintext email.
     hashed_email_to_add = User.hash_email(email_to_add)
-    User.where(hashed_email: hashed_email_to_add).each do |matching_user|
+    User.with_deleted.
+      where(user_type: User::TYPE_TEACHER).
+      where(hashed_email: hashed_email_to_add).
+      each do |matching_user|
       matching_studio_person = matching_user.studio_person
       begin
-        matching_user.update!(studio_person_id: self.id)
+        matching_user.update!(studio_person_id: id)
       rescue
-        matching_user.update!(studio_person_id: self.id, email: email_to_add)
+        matching_user.update!(studio_person_id: id, email: email_to_add)
       end
 
       # Merge the matching studio_person (also all associated users), if any,
       # with this studio_person.
-      if self != matching_studio_person
+      if matching_studio_person && self != matching_studio_person
         matching_studio_person.emails_as_array.each do |existing_email|
           add_email_to_emails(existing_email)
         end
-        User.where(studio_person_id: matching_studio_person.id).each do |user|
-          # TODO(asher): If necessary, bypass validations as many of our users do
-          # not pass our own validations.
-          user.update!(studio_person_id: self.id)
+        User.with_deleted.
+          where(studio_person_id: matching_studio_person.id).
+          each do |user|
+          # Bypass validations, as the user (teacher) may be missing an email.
+          user.update_column(:studio_person_id, id)
           add_email_to_emails(user.email)
         end
       end
@@ -54,13 +60,13 @@ class StudioPerson < ActiveRecord::Base
       matching_studio_person.delete if matching_studio_person
     end
 
-    self.save!
+    save!
   end
 
   # @returns [Array[String]] An array of emails associated with the studio_person.
   def emails_as_array
     return [] if emails.nil?
-    self.emails.split(',')
+    emails.split(',')
   end
 
   private

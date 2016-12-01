@@ -18,6 +18,30 @@ class AdminSearchControllerTest < ActionController::TestCase
   generate_admin_only_tests_for :lookup_section
   generate_admin_only_tests_for :search_for_teachers
 
+  test "undelete_section is admin only" do
+    sign_in(@not_admin)
+    post :undelete_section, {:section_code => @teacher_section.code}
+    assert_response :forbidden
+  end
+
+  test "undelete_section should undelete deleted section" do
+    @teacher_section.update(deleted_at: DateTime.now)
+    post :undelete_section, {section_code: @teacher_section.code}
+    assert_response :redirect
+    assert_nil @teacher_section.reload.deleted_at
+    assert_equal "Section (CODE: #{@teacher_section.code}) undeleted!",
+      flash[:alert]
+  end
+
+  test "undelete_section should noop for non-deleted section" do
+    code = @teacher_section.code
+    post :undelete_section, {section_code: code}
+    assert_response :redirect
+    assert_nil @teacher_section.reload.deleted_at
+    assert_equal "Section (CODE: #{code}) not found or undeleted.",
+      flash[:alert]
+  end
+
   #
   # lookup_section tests
   #

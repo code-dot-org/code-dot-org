@@ -69,7 +69,7 @@
     "encrypted_examples": "E1+Ot03GEZ35vm3xfwCxJ64P0zTUhHJXQm0GIsMpiy2my7X2SRLTtwUQyS0R\no9m8\n",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",

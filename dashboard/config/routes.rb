@@ -226,6 +226,7 @@ Dashboard::Application.routes.draw do
   get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
+  post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
 
   # internal engineering dashboards
   get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
@@ -313,10 +314,15 @@ Dashboard::Application.routes.draw do
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
+          get  :summary
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
-        get :attendance, action: 'show', controller: 'workshop_attendance'
-        patch :attendance, action: 'update', controller: 'workshop_attendance'
+
+        get :attendance, action: 'index', controller: 'workshop_attendance'
+        get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
+        put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -394,4 +400,5 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
 end

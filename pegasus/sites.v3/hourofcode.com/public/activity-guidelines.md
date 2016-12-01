@@ -13,7 +13,7 @@ layout: wide
 
 # Lesson guidelines for the Hour of Code™ and Computer Science Education Week
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, tutorials, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>).
+Code.org hosts a variety of Hour of Code™ activities, lessons, tutorials, and videos on the Code.org, Hour of Code, and CSEdWeek website(s). The current list is at [hourofcode.com/learn](<%= resolve_url('/learn') %>).
 
 Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities. 
 

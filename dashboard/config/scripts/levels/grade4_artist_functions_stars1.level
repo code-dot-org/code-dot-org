@@ -8,7 +8,7 @@
     "skin": "artist_zombie",
     "embed": "false",
     "instructions": "Now that you can draw a star, try drawing four stars!",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Don't give up!\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function!\",\"hint_id\":\"grade4_artist_functions_stars1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ad24244882c8766e05843cefd9a0ad5/grade4_artist_functions_stars1.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -31,8 +31,10 @@
     "start_direction": "90",
     "x": "50",
     "y": "100",
-    "ideal": "7",
-    "contained_level_names": null
+    "ideal": "9",
+    "contained_level_names": null,
+    "markdown_instructions": "Now that you can draw a star, try drawing four stars!\r\n\r\n- Each branch of the star is 25 pixels long\r\n- Turn 45 degrees between branches\r\n- Jump 100 pixels between each star",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
@@ -113,24 +115,13 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">do something</title>
+          <title name="NAME">draw a star</title>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
+          <mutation name="draw a star"/>
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">100</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">4</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

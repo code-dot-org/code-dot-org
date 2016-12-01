@@ -9,7 +9,7 @@
         ලැබෙනු ඇත."
     failure:
       already_authenticated: "ඔබ දැනටමත් පිවිස ඇත."
-      inactive: "ඔබගේ ගිණුම තවම යාවත්කාලීන කර නැත."
+      inactive: "ඔබගේ ගිණුම තවමත් ක්‍රියාත්මක කර නැත."
       invalid: "වලංගු නොවන ඊ-තැපෑලක් හෝ මුරපදයක්."
       invalid_token: "වලංගු නොවන අනන්යතාවය තහවුරු කරගැනීමේ කේතයක්."
       locked: "ඔබටගේ ගිණුම ලොක් වී ඇත."
@@ -78,8 +78,8 @@
       no_invitations_remaining: "ආරාධනා ඉතිරිව නැත"
       invitation_removed: "ඔබගේ ආරාධනය ඉවත් කර ඇත."
       new:
-        header: "ආරාධනය යවන්න"
-        submit_button: "ආරාධනය යවන්න"
+        header: "ආරාධනා කරන්න"
+        submit_button: "ආරාධනා කරන්න"
       edit:
         header: "ඔබේ මුරපදය සකසන්න"
         submit_button: "මගේ මුරපදය සකසන්න"

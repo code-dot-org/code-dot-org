@@ -50,17 +50,17 @@ class CS4AllTestCase < MailQueryTestCase
     assert non_pd_teachers.keys.include? 'no_pd_section_teacher@schools.nyc.gov'
   end
 
-  def test_query_hoc_organizers_no_code_studio
-    # mock solr query
-    def query_subscribed_contacts(query)
-      {
-        'hoc_organizer@schools.nyc.gov' => {},
-        'hoc_organizer@another.domain.net' => {},
-        'non_code_studio_user@schools.nyc.gov' => {},
-        'non_code_studio_user@another.domain.net' => {}
-      }
-    end
+  # mock solr query
+  def query_subscribed_contacts(query)
+    {
+      'hoc_organizer@schools.nyc.gov' => {},
+      'hoc_organizer@another.domain.net' => {},
+      'non_code_studio_user@schools.nyc.gov' => {},
+      'non_code_studio_user@another.domain.net' => {}
+    }
+  end
 
+  def test_query_hoc_organizers_no_code_studio
     create_teacher 'hoc_organizer@schools.nyc.gov'
     create_teacher 'hoc_organizer@another.domain.net'
 

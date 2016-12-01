@@ -578,22 +578,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'end of HoC for a user is HOC endpoint' do
-    self.stubs(:current_user).returns(@student)
+    stubs(:current_user).returns(@student)
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
   test 'post script redirect is HOC endpoint' do
-    self.stubs(:current_user).returns(nil)
+    stubs(:current_user).returns(nil)
     assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Script.find_by_name(Script::HOC_NAME)))
   end
 
   test 'post script redirect is frozen endpoint' do
-    self.stubs(:current_user).returns(nil)
+    stubs(:current_user).returns(nil)
     assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Script.find_by_name(Script::FROZEN_NAME)))
   end
 
   test 'post script redirect is starwars endpoint' do
-    self.stubs(:current_user).returns(nil)
+    stubs(:current_user).returns(nil)
     assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Script.find_by_name(Script::STARWARS_NAME)))
   end
 

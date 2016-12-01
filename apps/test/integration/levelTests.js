@@ -11,10 +11,11 @@
 
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
+import {stubRedux, restoreRedux} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -106,6 +107,9 @@ describe('Level tests', function () {
   });
 
   beforeEach(function () {
+    // Recreate our redux store so that we have a fresh copy
+    stubRedux();
+
     tickInterval = window.setInterval(function () {
       if (clock) {
         clock.tick(100); // fake 1000 ms for every real 1ms
@@ -132,9 +136,6 @@ describe('Level tests', function () {
       Object.defineProperty(Studio, 'Globals', {value: {}, writable: true, configurable: true});
     }
 
-    // Recreate our redux store so that we have a fresh copy
-    studioApp.createReduxStore_();
-
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
@@ -152,6 +153,7 @@ describe('Level tests', function () {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;

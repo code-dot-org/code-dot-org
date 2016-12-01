@@ -43,7 +43,8 @@
     "use_verification_function_for_failure": "false",
     "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag.",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return verificationAPI.getEntityCount(\"ironGolem\") === 0;\r\n}",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "true"
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
@@ -87,12 +88,13 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">down</title>
+        </block>
         <block type="craft_forever"/>
         <block type="craft_addScore">
           <title name="SCORE">1</title>
-        </block>
-        <block type="craft_playSound">
-          <title name="TYPE">sheepBaa</title>
         </block>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>
@@ -103,12 +105,12 @@
         <block type="craft_entityTurn">
           <title name="DIR">left</title>
         </block>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_playSound">
+          <title name="TYPE">sheepBaa</title>
+        </block>
         <block type="craft_wait">
           <title name="TYPE">0.4</title>
-        </block>
-        <block type="craft_spawnEntity">
-          <title name="TYPE">sheep</title>
-          <title name="DIRECTION">down</title>
         </block>
       </xml>
     </toolbox_blocks>

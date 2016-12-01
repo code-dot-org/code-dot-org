@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Gefeliciteerd! Je heb alle {count} spullen verzameld!",
   "collectorCollectedNothing": "Blijf programmeren! Je moet zoveel spullen verzamelen als je kan.",
   "collectorCollectedSome": "Goed gedaan! Je hebt {count} spullen verzameld!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Deze ruimte heeft niet genoeg items voor mij om te verzamelen.",
   "collectorTooManyBlocks": "Je kan maar {blockLimit} blokken gebruiken. Kijk naar je code en probeer het opnieuw!",
   "continue": "Doorgaan",
@@ -111,6 +112,5 @@
   "word": "Zoek het woord",
   "wrongCropError": "Ik kan dat gewas vanaf hier niet oogsten.",
   "yes": "Ja",
-  "youSpelled": "Jij spelde",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Jij spelde"
 }

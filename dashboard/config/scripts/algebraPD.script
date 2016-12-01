@@ -1,5 +1,5 @@
-professional_learning_course 'CS in Algebra Support'
-login_required 'true'
+professional_learning_course 'CS in Algebra Legacy'
+login_required true
 
 stage 'Introduction to PD'
 level 'PDAlg Intro'
@@ -12,8 +12,8 @@ level 'PDAlg Teacher Introduction'
 stage 'Course Overview'
 level 'PDAlg Curriculum Overview'
 level 'PDAlg Scope'
-level 'PDAlg Implementation'
-level 'PDAlg Course Goals'
+level 'PDAlg implementation'
+level 'PDAlg course goals'
 level 'PDAlg Attitude Survey'
 level 'AlgPD Break'
 

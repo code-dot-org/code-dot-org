@@ -30,7 +30,7 @@
           title: "課程 2"
           description: "課程 2 給已有閱讀能力、但沒有任何寫程式經驗的學生。在這個課程裡，學生將編寫程式來解決問題，並且開發有互動的遊戲或故事分享給任何人。建議給二至五年級的學生參加。"
           description_short: "有閱讀能力的學生可以進入課程 2"
-          description_audience: "適合年齡 6 至 18 歲"
+          description_audience: "六歲以上 (需閱讀能力)"
           stage:
             'Artist: Debugging': "小畫家: 除錯"
             'Artist: Loops': "小畫家: 迴圈"
@@ -53,8 +53,7 @@
             Your Digital Footprint: "你的數位足跡"
         course3:
           title: "課程 3"
-          description: "課程3是為已經完成課程2的學生設計的。學生將深入前面介紹的程式設計主題到靈活的解法和更複雜的問題。這門課程結束時，學生將創建互動式故事和遊戲並可以與任何人分享。建議
-            4-5 年級。"
+          description: "課程3是為了已完成課程2的學生設計的。學生將更深入理解到前面所學的程式主題，進而能夠用更靈活的方式來解決更複雜的問題。此課程完成時，學生將會創造出可互動性的故事或遊戲，且可和任何人分享。建議4～5年級的學生學習。"
           description_short: "課程 3 是課程 2 的延續課程"
           description_audience: "適合年齡 8 至 18 歲"
           stage:
@@ -76,7 +75,7 @@
             Internet: "互聯網"
             Maze: "迷宮"
             'Maze: Conditionals': "迷宮： 條件"
-            Songwriting: "寫歌"
+            Songwriting: "用參數作曲"
             'Studio: Create a Game': "播放實驗室: 設計一個遊戲"
             'Studio: Create a Story': "播放實驗室: 創造一個故事"
         playlab:
@@ -130,8 +129,7 @@
             'Unplugged: Envelope Variables': "不用電器設備活動：信封中的變數"
             'Unplugged: For Loop Fun': "真人分享: For 迴圈的樂趣"
             'Unplugged: Madlibs': "不用電器設備活動：接字遊戲"
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with
-              Parameters'
+            'Unplugged: Songwriting with Parameters': "不插電：利用參數創作歌曲"
             'Unplugged: Tangrams': "不用電器設備活動：七巧版"
         Course4pre:
           title: "課程四 先決條件"
@@ -188,8 +186,8 @@
           description_audience: ''
         infinity:
           title: "迪士尼無限播放實驗室"
-          description: "創建一個故事或做遊戲玩實驗室！"
-          description_short: "創建一個故事或做遊戲玩實驗室！"
+          description: "用遊戲實驗室來創造一個由《迪士尼無限世界》的角色所主演的故事或遊戲。"
+          description_short: "用遊戲實驗室來創造一個由《迪士尼無限世界》的角色所主演的故事或遊戲。"
           stage:
             Infinity: "無限大"
         algebrademo:
@@ -253,8 +251,7 @@
         20-hour:
           title: 20小時 課程簡介
           description: "這 20 小時課程將介紹電腦科學和程式設計的核心概念。本課程是設計給 K-8 年級的學生在教室內使用，但對所有年齡的人來說，也能把本課程當成興趣來學習。"
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
+          description_short: "在課程2-4的這20小時課程中，將可學習到電腦科學與程式撰寫的核心概念"
           description_audience: "適合年齡 10 至 18 歲"
           stage:
             Abstraction: "摘要"
@@ -294,32 +291,32 @@
           description_short: "事件類別"
           stage:
             Bounce: "彈跳"
-            Calc: Calc
+            Calc: "計算"
             Eval: Eval
-            Studio: Studio
+            Studio: "工作室"
         flappy:
           title: Flappy遊戲設計
           description: 寫出一個你自己的遊戲只要不到十分鐘!? 試試我們的"Flappy程式設計"教學
-          description_short: Write your own Flappy game in less than 10 minutes!
+          description_short: "在10分鐘以內寫出你自己的Flappy遊戲!"
           stage:
             Flappy Code: Flappy遊戲設計
         jigsaw:
           title: "拼圖"
-          description: ''
-          description_short: Try our Jigsaw tutorial
+          description: "試試拼圖課程"
+          description_short: "試試拼圖課程"
           stage:
             Jigsaw: "拼圖"
           description_audience: ''
         step:
           title: "步驟"
-          description: ''
-          description_short: Step tutorial
+          description: "步驟教學"
+          description_short: "步驟教學"
           stage:
             Step: "步驟"
           description_audience: ''
         Hour of Code:
           title: "一小時Code 2013"
-          description: ''
+          description: "跟著憤怒鳥、植物大戰殭屍的角色們一起，進入電腦科學的世界吧！"
           description_short: "嘗試計算機科學的基礎知識與許多好玩的人物！"
           stage:
             Hour of Code 2013: "一小時Code 2013"
@@ -329,14 +326,14 @@
           description: "試試這些有趣的編碼拼圖。盡力 ！"
           description_short: "挑戰自己 ！"
           stage:
-            Puzzles: Puzzles
+            Puzzles: "關卡"
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: "試試這些有趣的編碼拼圖。盡力 ！"
           description_short: "挑戰自己 ！"
           stage:
-            Puzzles: Puzzles
+            Puzzles: "關卡"
           description_audience: ''
         cspunit1:
           title: CSP Unit 1
@@ -397,6 +394,7 @@
           description_short: Compress text by identifying repeated patterns.
           stage:
             Text Compression: Text Compression
+          description_audience: ''
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -548,6 +546,7 @@
             Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -561,6 +560,7 @@
             Teacher Dashboard: "教師用儀錶盤"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -582,6 +582,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -603,6 +604,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD2:
           title: Computer Science in Science PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -717,7 +719,7 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: "工作室"
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -832,6 +834,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "歡迎！"
             Wrap-Up: "總結"
+          description_audience: ''
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -878,6 +881,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: "歡迎！"
             Wrap-Up: "總結"
+          description_audience: ''
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -972,7 +976,7 @@
             Happy Maps: "快樂地圖"
             Move it, Move it: "移動它，移動它"
             'Real-life Algorithms: Plant a Seed': "生活中的演算法: 種一棵種子"
-            Songwriting: "寫歌"
+            Songwriting: "用參數作曲"
             The Big Event: "大事件"
         afterschool1:
           title: Afterschool 1
@@ -1179,11 +1183,11 @@
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: "冰原歷險記遊戲實驗室"
+          description: "用冰原歷險記遊戲實驗室來創作一個故事或遊戲!"
+          description_short: "用冰原歷險記遊戲實驗室來創作一個故事或遊戲!"
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: "冰原歷險記遊戲實驗室"
           description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1232,31 +1236,31 @@
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: "陶阿甘遊戲實驗室"
+          description: "用陶阿甘遊戲實驗室來創作一個故事或遊戲!"
+          description_short: "用陶阿甘遊戲實驗室來創作一個故事或遊戲!"
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: "陶阿甘遊戲實驗室"
         starwars:
           title: "星際大戰: 用程式建立一個銀河系"
           description: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           description_short: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           stage:
-            Hour of Code 2015: Hour of Code 2015
+            Hour of Code 2015: "「一小時玩程式」2015"
           description_audience: ''
         starwarsblocks:
           title: "星際大戰: 用程式建立一個銀河系"
           description: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           description_short: "學習用程式控制機器人，並在遙遠的銀河系中創造你自己的星際大戰遊戲"
           stage:
-            Hour of Code 2015: Hour of Code 2015
+            Hour of Code 2015: "「一小時玩程式」2015"
           description_audience: ''
         mc:
           title: Minecraft 程式碼時間
           description: "請利用程式碼方塊帶領 Steve 或 Alex 在這個 Minecraft 世界當中遊歷一番"
           description_short: "從程式碼的角度探索 Minecraft 的世界"
           stage:
-            Hour of Code 2015: Hour of Code 2015
+            Hour of Code 2015: "「一小時玩程式」2015"
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -1516,6 +1520,8 @@
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey:
+              Taking the AP exam'
           description_audience: ''
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
@@ -1577,6 +1583,13 @@
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
             Unit 5 Assessment 1: Unit 5 Assessment 1
             Unit 5 Assessment 2: Unit 5 Assessment 2
+            "'If' Statements Unplugged": "'If' Statements Unplugged"
+            '"If" Statements Unplugged': '"If" Statements Unplugged'
+            Getting started with If Statements: Getting started with If Statements
+            Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
+            If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1613,6 +1626,8 @@
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
             Velocity: Velocity
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
           description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
@@ -1982,7 +1997,7 @@
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
               Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: "寫歌"
+            Songwriting: "用參數作曲"
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -2029,8 +2044,7 @@
             Try programming with Khan Academy: Try programming with Khan Academy
             'Unplugged: Envelope Variables': "不用電器設備活動：信封中的變數"
             'Unplugged: For Loop Fun': "真人分享: For 迴圈的樂趣"
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with
-              Parameters'
+            'Unplugged: Songwriting with Parameters': "不插電：利用參數創作歌曲"
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -2104,6 +2118,8 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+            Unit 5 Challenge: Unit 5 Challenge
+            Close & Next Steps: Close & Next Steps
           description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
@@ -2116,6 +2132,8 @@
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+            Close & Next Steps: Close & Next Steps
+          description_audience: ''
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -2173,6 +2191,15 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: "函式類別"
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Build a Game': 'Project: Build a Game'
+            'Project: Design a Game': 'Project: Design a Game'
           description_audience: ''
         grade2:
           title: Grade 2
@@ -2246,6 +2273,8 @@
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
             Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey:
+              Taking the AP exam'
           description_audience: ''
           description_short: ''
           description: ''
@@ -2311,6 +2340,12 @@
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
               5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons
+              4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
+              7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2359,6 +2394,7 @@
             Binary Images: "二進位圖形"
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
+            Processing with Bits: Processing with Bits
           title: "二進位"
           description_audience: ''
           description_short: ''
@@ -2434,4 +2470,257 @@
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
+          description: ''
+        minecraft:
+          stage:
+            Minecraft Hour of Code Designer: Minecraft 一小時玩程式設計師
+          title: Minecraft 一小時玩程式設計師
+          description_audience: ''
+          description_short: "在您自己的Minecraft程式遊戲版本中編寫動物和其他生物的程式。"
+          description: "組建 Minecraft 遊戲。創造屬於您自己版本的雞、綿羊、苦力怕、殭屍及其他事物。"
+        flappy-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Flappy Code: Flappy遊戲設計
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Flappy Code with Survey
+          description_audience: ''
+          description_short: 'Write your own Flappy game in less than 10 minutes! '
+          description: Want to write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial! This version includes pre and post surveys to help
+            us continue to improve Hour of Code. Ask your class to skip ahead to the
+            post survey 10 minutes before class ends.
+        coursea-draft:
+          stage:
+            'Debugging: Bugs in Codeville': 'Debugging: Bugs in Codeville'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration:
+              Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed': "生活中的演算法: 種一棵種子"
+            Learn to Drag and Drop: Learn to Drag and Drop
+            'Programming: Happy Maps': 'Programming: Happy Maps'
+            Programming in Maze: Programming in Maze
+            Being Safe Online: Being Safe Online
+            'Loops: Happy Loops': 'Loops: Happy Loops'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            Fuzz Fiesta: Fuzz Fiesta
+            Going Places Safely: "安全的到達地點"
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+          title: 'CS Fundamentals: Course A'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
+            Recommended for grade K.
+        courseb-draft:
+          stage:
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration:
+              Stevie and the Marbles'
+            Sequence & Algorithms: Sequence & Algorithms
+            Learn to Drag and Drop: Learn to Drag and Drop
+            Being Safe Online: Being Safe Online
+            'Programming: My Robotic Friends': 'Programming: My Robotic Friends'
+            Programming in Maze: Programming in Maze
+            'Loops: My Loopy Robotic Friends': 'Loops: My Loopy Robotic Friends'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            More Computer Science: More Computer Science
+            Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': "生活中的演算法: 種一棵種子"
+            Your Digital Footprint: "你的數位足跡"
+          title: 'CS Fundamentals: Course B'
+          description_audience: ''
+          description_short: ''
+          description: Course B is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. Recommended for 1st grade.
+        coursec-draft:
+          stage:
+            Programming in Maze: Programming in Maze
+            'Real-life Algorithms: Paper Planes': "真實生活裡的演算法: 紙飛機"
+            Programming in Collector: Programming in Collector
+            Programming in Artist: Programming in Artist
+            'Loops: Getting Loopy': 'Loops: Getting Loopy'
+            Loops in Maze: Loops in Maze
+            'Events: The Big Event': 'Events: The Big Event'
+            Puppy Introduction: Puppy Introduction
+            Online Internet Safety: Online Internet Safety
+            Build a Flappy Game: Build a Flappy Game
+            More CS with Run Marco: More CS with Run Marco
+            Binary Bracelets: "二進位的手環"
+            Events in Play Lab: Events in Play Lab
+            Your Digital Footprint: "你的數位足跡"
+            Building a Foundation: "建立基礎"
+            Screen Out the Mean: Screen Out the Mean
+          title: 'CS Fundamentals: Course C'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. Recommended for
+            2nd grade.
+        coursed-draft:
+          stage:
+            'Algorithms: Graph Paper Programming': 'Algorithms: Graph Paper Programming'
+            Events in Bounce: Events in Bounce
+            Nested Loops in Maze: Nested Loops in Maze
+            Nested Loops in Artist: Nested Loops in Artist
+            'Algorithms: Relay Programming': 'Algorithms: Relay Programming'
+            Debugging in Bee: Debugging in Bee
+            While Loops in Farmer: While Loops in Farmer
+            Conditionals with Cards: "使用卡片的條件"
+            Conditionals with Bee: Conditionals with Bee
+            Conditionals & Loops in Maze: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer: Conditionals & Loops in Farmer
+            Impacts of Computing: Impacts of Computing
+            More Programming with CS4FN: More Programming with CS4FN
+            Build a Play Lab Game: Build a Play Lab Game
+            Conditionals in Bee: Conditionals in Bee
+            Digital Citizenship: "數位公民(對於信息技術使用有適當且負責任的行為規範與參與）"
+            'Unplugged: Binary': "真人分享: 二進位"
+            Artist Binary: "小畫家 二進位"
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. Recommended for
+            3rd grade.
+        coursee-draft:
+          stage:
+            Digital Citizenship: "數位公民(對於信息技術使用有適當且負責任的行為規範與參與）"
+            Build a Star Wars Game: Build a Star Wars Game
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept in Bee: Determine the Concept in Bee
+            Build a Play Lab Game: Build a Play Lab Game
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Present Your Project: Present Your Project
+            More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: "互聯網"
+            Crowdsourcing: "互聯網的資源"
+          title: 'CS Fundamentals: Course E'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. The course culminates
+            in a multi-day project. Recommended for 4th grade.
+        coursef-draft:
+          stage:
+            Digital Citizenship: "數位公民(對於信息技術使用有適當且負責任的行為規範與參與）"
+            Envelope Variables: "信封變數"
+            Variables in Play Lab: Variables in Play Lab
+            Variables in Artist: Variables in Artist
+            For Loop Fun: For迴圈的樂趣
+            For Loops in Bee: For Loops in Bee
+            For Loops in Artist: For Loops in Artist
+            'Functions with Parameters: Songwriting with Parameters': 'Functions with
+              Parameters: Songwriting with Parameters'
+            Functions with Parameters in Artist: Functions with Parameters in Artist
+            Functions with Parameters in Bee: Functions with Parameters in Bee
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Revise Your Project: Revise Your Project
+            Presentation Your Project: Presentation Your Project
+            Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: "用參數作曲"
+          title: 'CS Fundamentals: Course F'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. The course culminates
+            in a multi-day project. Recommended for 5th grade.
+        classic-hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: "一小時Code 2013"
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Hour of Code with Survey
+          description_audience: ''
+          description_short: "嘗試計算機科學的基礎知識與許多好玩的人物！"
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies! This version includes pre and post surveys
+            to help us continue to improve Hour of Code. Ask your class to skip ahead
+            to the post survey 10 minutes before class ends.
+        hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: "一小時Code 2013"
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Classic Maze with Survey
+          description_audience: ''
+          description_short: "嘗試計算機科學的基礎知識與許多好玩的人物！"
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies! This version includes pre and post surveys
+            to help us continue to improve Hour of Code. Ask your class to skip ahead
+            to the post survey 10 minutes before class ends.
+        sports:
+          stage:
+            Sports: Sports
+          title: Sports
+          description_audience: ''
+          description_short: Code your own sport
+          description: ''
+        2016_sciencePD-phase2b:
+          stage:
+            Welcome!: "歡迎！"
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: "總結"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2016_sciencePD_phase2b:
+          stage:
+            Welcome!: "歡迎！"
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: "總結"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd3-2016:
+          stage:
+            Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons
+              4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
+              7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
+          description_audience: ''
+          description_short: ''
           description: ''

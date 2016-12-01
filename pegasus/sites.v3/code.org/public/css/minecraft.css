@@ -5,8 +5,13 @@
 
 .mc-tutorial-info {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 250px;
+  width: 260px;
   padding: 10px;
+}
+
+.mc-new-tag {
+  float: right;
+  margin-bottom: 30px;
 }
 
 .new-mc {
@@ -16,6 +21,14 @@
   margin: -10px;
   padding: 5px;
   text-align: center;
+}
+
+.mc-img {
+  width: 478px;
+}
+
+.mc-new-tag {
+  width: 100px;
 }
 
 .white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
@@ -40,7 +53,7 @@
 .mc-host-event {
   width: 478px;
   height: 230px;
-  background-color: #b9bf15;
+  background-color: #00adbc;
   color: white;
   float: right;
   padding: 0 20px;
@@ -55,12 +68,20 @@
   font-size: 14px;
 }
 
+.padded-button {
+  margin-top: 22px;
+}
+
 @media screen and (min-width: 971px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 228px;
+    left: 218px;
     top: 0;
     height: 307px;
+  }
+
+  .mc-tutorial-details {
+    margin-top: 100px;
   }
 }
 
@@ -90,13 +111,17 @@
 @media screen and (min-width: 513px) and (max-width: 970px) {
   .mc-tutorial-info {
     position: absolute;
-    left: 238px;
+    left: 228px;
     top: 0;
     height: 307px;
   }
 
   .tutorial-box {
     padding-left: 10px;
+  }
+
+  .mc-tutorial-details {
+    margin-top: 100px;
   }
 }
 
@@ -121,5 +146,14 @@
 
   .mc-img {
     display: none;
+  }
+
+  .mc-new-tag {
+    margin-bottom: 10px;
+    width: 60px;
+  }
+
+  .padded-button {
+    margin-top: 0px;
   }
 }

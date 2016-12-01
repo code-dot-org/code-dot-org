@@ -1,5 +1,5 @@
-stage 'Digital Citizenship'
-level 'grade5_link_commonSense_powerOfWords'
+stage 'The Power of Words'
+level 'coursef_powerofwords'
 
 stage 'Envelope Variables'
 level 'EnvelopeVariables'
@@ -45,6 +45,9 @@ level 'grade5_bee_for_loops9'
 level 'grade5_bee_for_loops10'
 level 'grade5_bee_for_loops11'
 
+stage 'Songwriting with Parameters'
+level 'SongwritingWithParameters'
+
 stage 'For Loops in Artist'
 level 'courseF_video_forArtist'
 level 'grade5_artist_for_loops1b'
@@ -57,9 +60,6 @@ level 'grade5_artist_for_loops7'
 level 'grade5_artist_for_loops7a'
 level 'grade5_artist_for_loops7b'
 level 'grade5_artist_for_loopsfreeplay12'
-
-stage 'Functions with Parameters: Songwriting with Parameters'
-level 'SongwritingWithParameters'
 
 stage 'Functions with Parameters in Artist'
 level 'gradeF_video_artistFunctions'
@@ -94,21 +94,17 @@ named_level 'Rock Paper Scissors'
 
 stage 'The Design Process'
 named_level 'Begin planning your project'
-named_level 'The Design Process (Teacher Lesson Plan)'
 
 stage 'Build Your Project'
 named_level 'Course F: Artist Project'
 named_level 'Course F: Play Lab Project'
-named_level 'Project Building (Teacher Lesson Plan)'
 
 stage 'Revise Your Project'
 named_level 'Course F: Artist Project - Revise'
 named_level 'Course F: Play Lab Project - Revise'
-named_level 'Project Iteration (Teacher Lesson Plan)'
 
 stage 'Presentation Your Project'
 named_level 'Prepare for your presentation'
-named_level 'Project Presentations (Teacher Lesson Plan)'
 
 stage 'Try programming with Khan Academy'
 named_level 'Learn Javascript with Khan Academy!'

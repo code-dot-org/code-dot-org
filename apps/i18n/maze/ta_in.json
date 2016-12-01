@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "வாழ்த்துகள்! நீங்கள் {count} உருப்படிகளையும் சேகரித்துவிட்டீர்கள்!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
   "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "continue": "தொடர்ந்து",
@@ -111,6 +112,5 @@
   "word": "சொல்லை கண்டறி",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "ஆம்",
-  "youSpelled": "நீங்கள் உச்சரித்தது",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "நீங்கள் உச்சரித்தது"
 }

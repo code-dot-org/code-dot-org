@@ -310,28 +310,52 @@
           с ящиком со взрывчаткой!"
         maze_3_4: "А-а-а-а! Напиши мне программу, чтобы я обошел взрывчатку и добрался
           до свиньи."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+        bounce_1_basketball: Прикрепить блок к блоку," когда стрелка влево" нажмите
+          кнопку "выполнить". Двигаем рукой, используя левую стрелку, чтобы достичь
+          финишной цели
+        bounce_2_basketball: Прикрепить блок к блоку," когда стрелка влево" нажмите
+          кнопку "выполнить". Двигаем рукой, используя левую стрелку, чтобы достичь
+          финишной цели.
+        bounce_5_basketball: Мы собираемся кинуть мяч в руки. Прикрепите блок "когда
+          мяч ударяется о руку", чтобы убедиться, что мяч достигает своей цели.
+        bounce_6_basketball: "Сейчас флаг находится наверху. Чтобы решить эту головоломку,
+          тебе нужно присоединить блоки к обоим блокам «когда мяч стукнется»."
+        bounce_7_basketball: "Прикрепите блоки к каждому из блоков. Отскок мяча, пока
+          он не попадает в флаг"
+        bounce_10_basketball: Теперь есть цель на высоте! Закрепите "результат" и
+          "результат соперник пункт" блоки", когда мяч в цель" и "когда мяч попадает
+          руку" блоки, чтобы сделать игру. Увидеть, сколько очков вы можете забить
+          до Вашего соперника дважды
+        bounce_11_basketball: Теперь вы можете прикрепить блоки к "при запуске" блок.
+          Вы должны приложить новый "бросить мяч" в более чем одном месте. Также,
+          попробуйте изменить место или скорость рука и мяч и посмотреть, сколько
+          очков вы можете забить до Вашего соперника дважды
+        bounce_12_basketball: Теперь вы можете прикрепить блоки к "при запуске" блок.
+          Вы должны приложить новый "бросить мяч" в более чем одном месте. Также,
+          попробуйте изменить место или скорость рука и мяч и посмотреть, сколько
+          очков вы можете забить до Вашего соперника дважды
+        bounce_1_sports: Доберись до флага! Используй блок "когда стрелка влево" и
+          нажми кнопку "Выполнить", чтобы запустить программу. Твой герой начнет двигаться
+          к флагу.
+        bounce_2_sports: Теперь у нас сразу два флага! Используй блоки "вправо" и
+          "влево" чтобы твой игрок двигался в разных направлениях.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: "Сейчас флаг находится наверху. Чтобы решить эту головоломку,
+          тебе нужно присоединить блоки к обоим блокам «когда мяч стукнется»."
+        bounce_7_sports: "Прикрепите блоки к каждому из блоков. Отскок мяча, пока
+          он не попадает в флаг"
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
           and "score opponent point" blocks to the "when ball in goal" and "when ball
           misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+          your opponent scores twice!
+        bounce_11_sports: Теперь вы можете прикрепить блоки к "при запуске" блок.
+          Вы должны приложить новый "бросить мяч" в более чем одном месте. Также,
+          попробуйте изменить место или скорость рука и мяч и посмотреть, сколько
+          очков вы можете забить до Вашего соперника дважды
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: "Присоедини блок к блоку «при нажатии левой стрелки» и нажми «Выполнить».
           Для достижения конечной цели двигай платформу с помощью левой стрелки."
         bounce_2: "Присоедини блок к блокам «при нажатии правой стрелки» и «при нажатии
@@ -806,6 +830,11 @@
         iceage_intro: "Час кода. Ледниковый период. Введение"
         iceage_events: "Час кода. Ледниковый период. События"
         iceage_repeat: "Час кода. Ледниковый период. Операторы цикла"
+        mc_2016_intro: Minecraft Hour of Code - Introduction
+        mc_2016_loops: Minecraft Hour of Code - Loops
+        mc_2016_events: Minecraft Hour of Code - Events
+        mc_2016_spawn: Minecraft Hour of Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - Congratulations
     callout:
       text:
         drag_blocks: "Перетащите блок «переместить» и поставьте его ниже другого блока"
@@ -915,8 +944,7 @@
         Infinity_move_directions_callout: "Какой блок поможет Баймакс двигаться вверх
           при нажатии стрелки вверх?"
         Infinity_move_directions_callout_arrow: "Используй эти стрелки для управления"
-        Infinity_move_collide_callout: "Воспроизведение звука, когда происходит данное
-          событие."
+        Infinity_move_collide_callout: "Воспроизведение звука, когда это событие происходит"
         Infinity_repeat_callout: "Размести блоки «переместить» внутри"
         craft_run_button_callout: "Нажмите «Выполнить», чтобы протестировать свою
           программу"

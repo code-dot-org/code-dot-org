@@ -25,8 +25,10 @@ bs-BA:
   submit: "Potvrdi"
   twentyhours_heading: "Probaj naš uvod u Kurs računarskih nauka"
   twentyhours_text: "Završio si prvi Hour of Code? Nauci još o računarskim naukama i programskim konceptima u sledećem kursu."
-  og_title: "The Hour of Code is coming"
-  og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
+  og_title: 'Code.org: Anybody can Learn'
+  og_description: "Every student in every school deserves the opportunity to study computer science."
+  csedweek_og_title: "The Hour of Code is coming"
+  csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
   hoc2014_heading: "Pridruži se<a href=\"http://hourofcode.com\">Satu Kodiranja</a><br/>Decembar 8 - 14, 2014<br/>"
   hoc2014_students: "Učenici"
   hoc2014_try: "Isprobaj"
@@ -181,9 +183,11 @@ bs-BA:
   petition_thankyou: "Hvala vam na potpisivanju peticije"
   continue_learning_header: "Nastavi učiti \"Više nego u One Hour\""
   continue_learning_body: "Imaš puno mogućnosti. Možeš učiti na Internetu, u vlastitoj školi, ili čak u ljetnom kampu."
+  learn_code_studio: "Try Code Studio courses"
   learn_next_level: "Pređi na sljedeći nivo"
   learn_online: "Isprobaj druge online kurseve"
   learn_classes: "Pronađi lokalne nastave"
+  learn_back_to_minecraft: "Keep learning with Minecraft"
   hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Upravo sam završio #HourOfCode - provjeri! @codeorg'
   just_did_course1: "I just finished Course 1 - check it out! @codeorg"
@@ -359,7 +363,8 @@ bs-BA:
   class_submission_level_college: "Fakultet"
   class_submission_level_vocational: "Strukovni"
   class_submission_languages_other: "Drugi jezik/jezici"
-  inspirational_videos_more: "Više <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP\"> inspirativnih videa </a> sa uzorima i poznatima"
+  videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
+  careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
   playlab_choose_theme: "Izaberite vaše ime za Play Lab temu"
   playlab_classic_title: "Klasični"
   playlab_gumball_title: "The Amazing World of Gumball"
@@ -379,6 +384,26 @@ bs-BA:
   mc_gradelevel: "Dob 4-104"
   mc_platformtext: "Savremeni browser-i, mobiteli, tableti"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
+  minecraft_designer: "Minecraft Designer"
+  minecraft_adventurer: "Minecraft Adventurer"
+  minecraft_tutorials: "Minecraft Hour of Code Tutorials"
+  minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_designer_button: "Počni"
+  minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
+  minecraft_adventurer_button: "Počni"
+  minecraft_no_internet: "Don't have Internet?"
+  minecraft_download_adventurer: "Download the offline version of Minecraft Adventurer."
+  minecraft_store_camps: "Microsoft Store Hour of Code Camps"
+  minecraft_host_event: "Host a Minecraft Hour of Code Event"
+  minecraft_youthspark_continue_learning: "Continue learning with Microsoft YouthSpark"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\">Sign up</a> for free Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the U.S. Learn how to combine your creativity with coding."
+  minecraft_teach_resources: "Teacher resources and lesson plan."
+  minecraft_leader_guide: "Download resources to help you plan and lead an event."
+  minecraft_facilitating_event: "Facilitating an event?"
+  minecraft_join_online_training: "Join Microsoft and Minecraft for an online training (in English only) on Nov 22 or Nov 29"
+  minecraft_youthspark_create_your_future: "Whatever you’re passionate about, you can use computer science to imagine, create, and make a future that’s yours."
+  minecraft_youthspark_tools: "<a href=\"%{youthspark_link}\">Microsoft YouthSpark</a> provides free tools and resources to pursue your passion."
   minecraft_subtitle: "Sata Kodiranja Minecraft-a"
   watch_inspirational_videos: "Before you get started, watch one of these inspirational videos"
   speak_another_language: "Speak another language?"
@@ -577,7 +602,7 @@ bs-BA:
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
   dashboard_sections_move_students: "Move students"
   dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 5-11, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to go further, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
+  dashboard_sections_assign_hoc_script_msg: "Please note that we will not be able to save progress in this course from December 3 - 11 due to the amount of traffic our site will receive for the Hour of Code.  Everything else in this tutorial will continue to work as expected.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)  We will save and report student progress for every other week of the year."
   dashboard_sections_assign_activity: "Assign Course"
   dashboard_error_none_selected: "You didn't select any students to move. Please select at least one student."
   dashboard_error_other_section: "If you're moving students between your own sections, select your section from the dropdown. Only select 'Other Section' to move your students to a different teacher's section."
@@ -690,6 +715,9 @@ bs-BA:
   dashboard_announce_petition_button: "Add your name"
   dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
   dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
+  dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "Sat Kodiranja je ovdje - 8. - 14. Decembra!"
   code_sign_up: "Prijavite se za sudjelovanje u Sedmici Edukacije o Računarstvu"
   host_an_hour: "Host an hour"
@@ -808,6 +836,10 @@ bs-BA:
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -826,12 +858,18 @@ bs-BA:
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocks)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Matematika"
   hoc_category_name: "Sat Kodiranja"
   csf_category_name: "CS Fundamentals"
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
+  research_studies_category_name: "Research Studies"
   applab_name: "Laboratorij za Aplikacije"
   applab_gradelevel: "Ages 13+"
   applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"

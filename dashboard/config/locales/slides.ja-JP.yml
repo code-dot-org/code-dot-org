@@ -2768,3 +2768,82 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: "こんにちは、Minecraft のリード クリエイティブ デザイナーの Jens です。これから 1 時間、あなたの Minecraft
+          を作ってもらいます。これは Minecraft のようですが、世界は停止しています。羊は動いていませんし、ニワトリはタマゴを生みません。ゾンビは動かずにじっとしています。あなたがコードを追加して
+          Minecraft の世界を動かしましょう。"
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: 人々の考え方と行動を学びます。'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: "ゲームの画面は大きく 3 つにわかれています。1) 左には Minecraft のゲームがあります。今は世界が停止しています。これをコードで直しましょう。"
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) 真ん中はツールボックスです。各ブロックはニワトリ、羊、他の Minecraft の生き物たちが理解できるコマンドです。
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) 右側は作業スペースです。ここでプログラムを作ります。
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: "何をすべきかを忘れたら、上にあるレベルの説明を見ましょう。"
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: "まず始めに、ニワトリのプログラムを作ります。「前進」コマンドを作業スペースにドラッグしましょう。「実行」を押すと、ニワトリが一歩前に進みます。さらに進ませるために、「前進」ブロックの下に「前進」ブロックをもう
+          1 つドラッグします。するとブロックが強調表示されます。その状態でドロップすると 2 つのブロックがくっつきます。そして「実行」を押すと、ニワトリが
+          2 歩進みます。"
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: "ブロックを削除するには、重なっている場所からツールボックスまでドラッグします。"
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: "「実行」を押した後でも、「リセット」ボタンを押せば、いつでもゲームを元に戻してやり直せます。さあ、今度はあなたの番です。自分だけの Minecraft
+          を作りましょう。お楽しみください!"
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: "こんにちは、Lisa です。Minecraft のソフトウェア デベロッパーです。ゲーム内の動物や敵を担当しました。担当した動物の 1
+          つはヤマネコです。ヤマネコに魚をあげて手なずけて、自分のペットにする部分を担当しました。"
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: "人間は、何度も何度も同じことをくり返していると、飽きてしまいます。でも、コンピューターのいいところは、同じことを何百万回あるいは何十億回連続でくり返しても、飽きないところです。このくり返しはループと呼ばれ、Minecraft
+          のあらゆる生き物に使われています。"
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: "先ほどは、ニワトリを画面の端まで動かしたのに、ニワトリは止まってしまいました。Minecraft では、ニワトリはずっと動き続けています。ツールボックスにある「恒久的に実行」のループを使って、あなたのニワトリもずっと動かしてみましょう。ループを使えば時間を節約できるので、自分の
+          Minecraft を作る時に、他のことができるようになります。"
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: "このレベルではスティーブかアレックスを選択します。キーボードの矢印キーを押して上、下、左、右に動かします。これでレベル内を自由に動けます。生き物を使うには近くまで歩いていって、その方を向いてスペースキーを押します。"
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: "タッチ画面なら上、下、左、右にスワイプして動かしましょう。自分の前にあるアイテムを使うには、画面をタップしましょう。"
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: "使うと何が起きるのでしょうか?Minecraft では、羊を刈るとウールを落とし、牛は叩くと逃げていき、クリーパーは近づくと爆発します。このような反応が起こるのは、イベントが存在するからです。イベントはプログラムに命令を聞かせたり、何かが起こるまで待たせます。そして何かが起こると、アクションを行います。"
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: "ここまでは、1 つのイベントだけを使いました。「出現した時」に入れたコードが実行されるのは、生き物が出現した時か、ゲーム開始時です。この先のレベルでは、新たなイベント
+          スロットが登場します。「触れられた時」は生き物が触られると実行され、「使用された時」は生き物を使用した時に実行されます。太陽が出てきた時にゾンビを消したいなら、「日中になった時」のスロットに入れましょう。"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: "ゲームでは、スポーン (出現) とは作成を意味します。このレベルでは、太陽が沈んだらゾンビを出現させましょう。まずは、「夜になった時」のブロックを使いましょう。"
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: "夜になったらゾンビを出現させたいので、「ゾンビを出現させる」のブロックを「夜になった時」のブロックに追加します。出現するとすぐに、ゾンビたちは「出現した時」のイベント
+          スロットに入れたコードを実行します。ゾンビで遊びましょう!"
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: "おめでとうございます!コンピューター サイエンスのコマンドを学んで、Minecraft の世界を動かせるようになりました。これからは、あなたが開発者です。すべてのコマンドと生き物をアンロックしました。何が起きるかはあなた次第です。"
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: "ゲームが完成したら、シェアを選択してリンクを友達とシェアしたり、自分のゲームを自分のスマホで遊びましょう。お楽しみください!あなたが作った
+          Minecraft をプレイするのを楽しみにしています。"

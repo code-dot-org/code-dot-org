@@ -58,7 +58,7 @@ const WorkshopSummaryReport = React.createClass({
     }
   },
 
-  formatQueryParams(props) {
+  formatQueryParams(props = this.props) {
     const {startDate, endDate, queryBy, course} = props;
     const course_param = course ? `&course=${course}` : "";
     return `start=${startDate}&end=${endDate}&query_by=${queryBy}${course_param}`;

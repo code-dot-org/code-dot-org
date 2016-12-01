@@ -30,6 +30,7 @@ var UNWATCH_COMMAND_PREFIX = "$unwatch ";
  *        by the "Step In" button when the app isn't running.
  * @param {!Store} reduxStore
  * @constructor
+ * @implements LogTarget
  */
 var JsDebuggerUi = module.exports = function (runApp, reduxStore) {
   /**

@@ -4,6 +4,19 @@ class PasswordsController < Devise::PasswordsController
 
   append_after_action :show_reset_url_if_admin, only: :create
 
+  def create
+    email = request.parameters['user']['email']
+    if email_in_hoc_2016_signups?(email)
+      # If the user has a full account as well, don't use the HOC flow
+      user = User.find_by_email_or_hashed_email(email)
+      unless user
+        redirect_to "#{new_user_registration_path}?already_hoc_registered=true"
+        return
+      end
+    end
+    super
+  end
+
   protected
 
   def after_sending_reset_password_instructions_path_for(resource_name)
@@ -15,6 +28,11 @@ class PasswordsController < Devise::PasswordsController
   end
 
   private
+
+  def email_in_hoc_2016_signups?(email)
+    normalized_email = email.strip.downcase
+    PEGASUS_DB[:forms].where(email: normalized_email, kind: 'HocSignup2016').any?
+  end
 
   def show_reset_url_if_admin
     return unless current_user.try(:admin?)

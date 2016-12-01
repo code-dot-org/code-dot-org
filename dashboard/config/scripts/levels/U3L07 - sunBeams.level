@@ -175,11 +175,9 @@
       },
       {
         "entries": [
-          "[forTest]",
-          "drawSunbeam:1",
-          "[forUpdate]"
+          "drawSunbeam:1"
         ],
-        "matchType": "inexact",
+        "matchType": "exact",
         "minTimes": 75,
         "message": "drawAllSunbeams: App lab is expecting that drawSunbeams(size) will be called 'about' 100 times (min 75), presumably in a loop. It appears as though drawSunbeams is not being called at least 75 times."
       },
@@ -272,6 +270,10 @@
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* Added a loop to the `drawAllSumbeams`\r\n* Called `drawSunbeam` at least 75 times.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "contained_level_names": null
   },
   "published": true,

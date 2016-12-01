@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 4-5'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 4-5
+# Unit 5 Lessons > Days 4 - 5
 
 ## Concepts Covered
 
@@ -27,7 +27,4 @@ Students will need to keep in mind the complexities of creating appropriate surv
 > ## Hints from an ECS Teacher:
 > - As you examine data sets for the final project topics and answer the “Data Analysis questions” listed with each topic, you may want to remember that in Excel you can use a pivot table to summarize counts of each category. A pivot table is a useful tool for discovering trends and patterns in the data. 
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

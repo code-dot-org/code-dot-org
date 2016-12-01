@@ -1,0 +1,14 @@
+name 'What is "Big" Data and Why Should we Protect or Data?'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# What is "Big" Data and Why Should we Protect our Data? 
+
+
+As students begin unit 4, they should feel as if they are returning to familiar ground.  Students have already talked about data and data visualization.  In unit 4 however, we’re looking at it on a much larger scale.  Instead of thinking about the implications and connections that can be made based on the content of data sets, students will be discussing the larger Global Impact (big idea 7) of big data.  In this set of lessons students will talk about the massive amounts of data that companies collect. (In some cases without you even knowing about it!)  They will look at how that data is collected, how it is used.  Just like you can draw conclusions from data sets, you can draw conclusions about people from big data.  Students will begin to discover what their data says about them, and as a result may decide they want more agency in deciding who gets what information.
+
+
+Below is an article to help you consider why it may be important to protect your data.
+
+<a href = “http://lifehacker.com/5904966/why-you-should-care-about-and-defend-your-privacy” target=_blank> Why You Should Care About and Defend Your Privacy <i class="fa fa-external-link-square"/></a>
+MARKDOWN

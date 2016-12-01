@@ -37,7 +37,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -93,11 +93,8 @@
       "console.log": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "palette_category_at_start": "sprites"
+    "palette_category_at_start": "sprites",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

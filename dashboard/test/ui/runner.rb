@@ -405,6 +405,15 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     end
   end
 
+  # returns the first line of the first selenium error in the html output file.
+  def first_selenium_error(filename)
+    html = File.read(filename)
+    error_regex = %r{<div class="message"><pre>(.*?)</pre>}m
+    match = error_regex.match(html)
+    full_error = match && match[1]
+    full_error ? full_error.strip.split("\n").first : 'no selenium error found'
+  end
+
   arguments = ''
 #  arguments += "#{$options.feature}" if $options.feature
   arguments += feature
@@ -503,6 +512,10 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
       attempt: reruns.to_s,
       duration: test_duration.to_s
   })
+
+  if !succeeded && $options.html
+    HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}"
+  end
 
   while !succeeded && (reruns < max_reruns)
     reruns += 1

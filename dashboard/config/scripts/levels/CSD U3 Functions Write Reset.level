@@ -62,7 +62,7 @@
     "show_debug_watch": "false",
     "teacher_markdown": "**Functions in Context** \r\n\r\nIn this and the next two lessons, students will use functions to organize code within a simple game. While it is not identical to the side scroller, many of the skills and uses of functions in these levels can and should be used when they complete their side scroller.",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "contained_level_names": null
   },
   "published": true,

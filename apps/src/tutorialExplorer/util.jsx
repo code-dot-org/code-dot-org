@@ -41,7 +41,8 @@ export function getTagString(prefix, tagString) {
     student_experience_comfortable:   i18n.filterStudentExperienceComfortable(),
 
     "activity_type_online-tutorial":  i18n.filterActivityTypeOnlineTutorial(),
-    "activity_type_lesson-plan":      i18n.filterActivityTypeLessonPlan()
+    "activity_type_lesson-plan":      i18n.filterActivityTypeLessonPlan(),
+    "activity_type_robotics":         i18n.filterActivityTypeRobotics()
   };
 
   return tagString.split(',').map(tag => tagToString[`${prefix}_${tag}`]).filter(str => !!str).join(', ');
