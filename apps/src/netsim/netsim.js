@@ -245,11 +245,7 @@ NetSim.prototype.init = function (config) {
     const originalShowInstructionsWrapper = config.showInstructionsWrapper.bind(config);
     config.showInstructionsWrapper = (originalShowInstructions) => {
       originalShowInstructionsWrapper(() => {
-        this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
-          autoClose: false,
-          aniGifOnly: false,
-          hintsOnly: false
-        }));
+        this.showInstructionsDialog();
         if (typeof originalShowInstructions === 'function') {
           originalShowInstructions();
         }
@@ -389,6 +385,7 @@ NetSim.prototype.initWithUser_ = function (user) {
         $('#netsim-tabs'),
         this.runLoop_,
         {
+          showInstructionsDialogCallback: this.showInstructionsDialog.bind(this),
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
           myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
@@ -1352,4 +1349,15 @@ NetSim.prototype.resetShard = function () {
       }
     }.bind(this));
   }
+};
+
+/**
+ * Show the instrutions modal dialog on top of the NetSim interface.
+ */
+NetSim.prototype.showInstructionsDialog = function () {
+  this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
+    autoClose: false,
+    aniGifOnly: false,
+    hintsOnly: false
+  }));
 };
