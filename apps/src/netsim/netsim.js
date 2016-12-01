@@ -8,6 +8,7 @@ var utils = require('../utils');
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
@@ -237,6 +238,23 @@ NetSim.prototype.init = function (config) {
     // itself, because of its nonstandard layout.
     this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
     this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
+
+    // Wrap showInstructionsWrapper to actually show instructions, which core
+    // studioApp no longer does.  This must happen before studioApp_.init()
+    // which will actually call this wrapper.
+    const originalShowInstructionsWrapper = config.showInstructionsWrapper.bind(config);
+    config.showInstructionsWrapper = (originalShowInstructions) => {
+      originalShowInstructionsWrapper(() => {
+        this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
+          autoClose: false,
+          aniGifOnly: false,
+          hintsOnly: false
+        }));
+        if (typeof originalShowInstructions === 'function') {
+          originalShowInstructions();
+        }
+      });
+    };
 
     this.studioApp_.init(config);
 
