@@ -134,6 +134,8 @@ should_i "start a morning test run" do
 
       > ssh -t gateway ssh -i ~/.ssh/server_access_key ubuntu@adhoc-staging-next.cdn-code.org
 
+      > cd adhoc
+      > git pull
       > rake build
       > sudo service varnish stop
       > sudo service varnish start
