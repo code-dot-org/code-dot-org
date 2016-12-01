@@ -71,7 +71,7 @@ group :development, :test do
 
   # for ui testing
   gem 'cucumber', '~> 2.0.2'
-  gem 'selenium-webdriver', '~> 2.53.0'
+  gem 'selenium-webdriver', '~> 3.0.3'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -80,6 +80,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
+  gem 'net-http-persistent'
   gem 'eyes_selenium', '~> 2.38.0'
 
   # for pegasus PDF generation / merging testing

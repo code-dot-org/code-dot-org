@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-11-28T20:37:24.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Header Sizes\r\n\r\nPlay around with some different sized headers. \r\n\r\n# Do This\r\n\r\n* Add the names of your favorite animals above the sentence they go with. Make the names of the animals smaller headers than the \"Animals\" title for the page.",
+    "project_template_level_name": "CSDU2 - Paragraphs and headers Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

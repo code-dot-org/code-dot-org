@@ -820,11 +820,15 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Color Sleuth - Planning the App:
+        description here: description here
+        title: title
       Common Misconceptions about Functions: {}
       Conditions and Logic: {}
       Correlation vs Causation: {}
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
+      Debugging Variables: {}
       Debugging with Console.log:
         description here: description here
         title: title
@@ -1265,6 +1269,9 @@ en:
       How "if-else-if" Works:
         description here: description here
         title: title
+      How Compound Boolean Expressions Work:
+        description here: description here
+        title: title
       How Dropdown Menus Work:
         description here: description here
         title: title
@@ -1281,11 +1288,20 @@ en:
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How Set Property Works:
+        description here: description here
+        title: title
       How are Images Encoded?: {}
       How onEvent Works:
         description here: description here
         title: title
       How setPosition and screen dimensions work:
+        description here: description here
+        title: title
+      How the Boolean &&, || and ! Operators Work:
+        description here: description here
+        title: title
+      How to pick a random button:
         description here: description here
         title: title
       'How to: Make Charts from your Data': {}
@@ -2641,6 +2657,9 @@ en:
         Details and Logistics: Details and Logistics
       sciPD3 mods:
         Reviewing the Modules: Reviewing the Modules
+      sciPD3 mods2:
+        description here: description here
+        title: title
       sciPD3 reflection:
         Reflection on Phase 3: Reflection on Phase 3
       sciPD3 resource module1:

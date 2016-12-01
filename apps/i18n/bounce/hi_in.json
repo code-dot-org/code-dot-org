@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "जब गेंद दीवार सेे टकराये तब नीचे दिये गएे कार्यों का संचालन करे।",
   "whileMsg": "जबकि",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "हाँ"
+  "yes": "हाँ",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

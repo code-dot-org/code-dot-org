@@ -356,9 +356,7 @@ module.exports = function (grunt) {
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
-  }).concat(
-    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
-  ));
+  }));
   var codeStudioEntries = {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
@@ -407,6 +405,8 @@ module.exports = function (grunt) {
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
+
+    'applab-api': './src/applab/api-entry.js',
   };
 
   // Create a config for each of our bundles

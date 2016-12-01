@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į sieną.",
   "whileMsg": "kol",
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
-  "yes": "Taip"
+  "yes": "Taip",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

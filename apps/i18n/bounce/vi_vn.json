@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Thực hiện các lệnh dưới đây khi một quả bóng va chạm với một bức tường.",
   "whileMsg": "Lặp khi",
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

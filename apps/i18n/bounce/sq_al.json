@@ -143,5 +143,11 @@
   "whenWallCollidedTooltip": "Kryej veprimet si më poshtë kur një top të përplaset në mur.",
   "whileMsg": "ndërsa",
   "whileTooltip": "Përsërit veprimet e brendshme derisa të arrihet pika  e mbarimit.",
-  "yes": "Po"
+  "yes": "Po",
+  "playSoundBounce": "play bounce sound",
+  "playSoundCheer": "play cheering sound",
+  "playSoundKick": "play kick sound",
+  "playSoundSlapshot": "play slapshot sound",
+  "playSoundSwish": "play net swish sound",
+  "playSoundWhistle": "play whistle sound"
 }

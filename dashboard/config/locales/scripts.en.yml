@@ -1067,6 +1067,7 @@ en:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1206,6 +1207,7 @@ en:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1471,6 +1473,7 @@ en:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2184,10 +2187,10 @@ en:
         basketball:
           stage:
             Bounce: Bounce
-          title: Basketball
+          title: Make a basketball game
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Choose your team and make a basketball game
+          description: Choose your team and make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2353,6 +2356,7 @@ en:
             Your Digital Footprint: Your Digital Footprint
             Building a Foundation: Building a Foundation
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2448,10 +2452,10 @@ en:
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: Code your own sports game
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Mix and match across sports
+          description: Mix and match across sports
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Welcome!
