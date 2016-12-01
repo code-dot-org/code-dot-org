@@ -23,9 +23,13 @@ experiments.getQueryString_ = function () {
 };
 
 experiments.getEnabledExperiments = function () {
-  const jsonList = localStorage.getItem(STORAGE_KEY);
-  const enabled = jsonList ? JSON.parse(jsonList) : [];
-  return enabled;
+  try {
+    const jsonList = localStorage.getItem(STORAGE_KEY);
+    const enabled = jsonList ? JSON.parse(jsonList) : [];
+    return enabled;
+  } catch (e) {
+    return [];
+  }
 };
 
 experiments.setEnabled = function (key, shouldEnable) {
@@ -39,7 +43,10 @@ experiments.setEnabled = function (key, shouldEnable) {
   } else {
     return;
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(allEnabled));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(allEnabled));
+  } catch (e) {
+  }
 };
 
 /**
