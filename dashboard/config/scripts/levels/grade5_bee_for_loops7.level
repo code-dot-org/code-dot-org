@@ -32,9 +32,9 @@
     "examples_required": "false",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "true",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your `for` loop will need to count from 1 to 7 by 2.\",\"hint_id\":\"grade5_bee_for_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c3feb981e5dda61735103c5f1868e4a/grade5_bee_for_loops7.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your `for` loop will need to count from 1 to 7 by 2.\",\"hint_id\":\"grade5_bee_for_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4c3feb981e5dda61735103c5f1868e4a/grade5_bee_for_loops7.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

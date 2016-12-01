@@ -66,10 +66,6 @@
       "comment": null
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions_important": "false",
     "start_blocks": "var color = \"rgb(240, 164, 0)\";\r\nsetProperty(\"button1\", \"background-color\", color);",
@@ -105,7 +101,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "callout_json": "[]"
+    "callout_json": "[]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -820,6 +820,18 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Color Sleuth - Epilogue:
+        description here: description here
+        title: title
+      Color Sleuth - How does it end?:
+        description here: description here
+        title: title
+      Color Sleuth - How to switch player turns:
+        description here: description here
+        title: title
+      Color Sleuth - Keeping score:
+        description here: description here
+        title: title
       Color Sleuth - Planning the App:
         description here: description here
         title: title
@@ -1651,6 +1663,7 @@ en:
         description here: description here
         title: title
       'Sending Numbers: The Big Picture': {}
+      Social Sleuth: {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
@@ -2140,6 +2153,9 @@ en:
         description here: description here
         title: title
       U5 - Explore PT Prep - Student Introduction:
+        description here: description here
+        title: title
+      U5 color sleuth check correct:
         description here: description here
         title: title
       U5L08 - Student Intro If statements:
@@ -2738,6 +2754,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -3049,6 +3068,14 @@ en:
         dog.x &gt; cat.x: dog.x &gt; cat.x
         dog.x &lt; cat.x: dog.x &lt; cat.x
         dog.x == cat.x: dog.x == cat.x
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
+        CSS: CSS
+        CSS Vocabulary Match: CSS Vocabulary Match
+        Stylesheet: Stylesheet
+        description here: description here
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3768,9 +3795,15 @@ en:
         blue: blue
         salt: salt
       unique level name here:
+        '1': '1'
+        '2': '2'
         Answer 1: Answer 1
+        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
         CSD U3 keyinput match: CSD U3 keyinput match
+        CSS: CSS
         Question: Question
+        Stylesheet: Stylesheet
+        description here: description here
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"

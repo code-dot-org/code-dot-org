@@ -1,0 +1,10 @@
+name 'Color Sleuth - Keeping score'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Updating the Score
+
+
+okay, now let's think about our if statement. We need to know two things: 1. if the correct button was pressed or not and 2. update the score of the correct player.  That if statement sounds like:  "if correct && player 1 then update player 1 score, else if correct && player2 then update player 2 score.  We could also nest the if-statements.  So first if it's correct then figure out which player's score to update.  Or the inverse, first ask whose turn it is, then figure out if it's correct or not.  There is a 3rd option which is to make another function called somethign like updateScore(amt).  And this function's job is to figure out whose turn it is and change that player's score by the given amount.  Then in checkCorrect we can keep our existing if statement and just say If correct then updateScore(1) else updateScore(-5).
+MARKDOWN
