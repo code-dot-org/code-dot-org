@@ -66,9 +66,6 @@ def saucelabs_browser
     browser.manage.window.resize_to(max_width, max_height)
   end
 
-  # let's allow much longer timeouts when searching for an element
-  browser.manage.timeouts.implicit_wait = 2 * 60
-
   browser
 end
 
