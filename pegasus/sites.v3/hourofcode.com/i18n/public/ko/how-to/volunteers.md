@@ -10,35 +10,35 @@ nav: how_to_nav
 
 # 자원봉사자를 위한 How-to 가이드
 
-## Why volunteer?
+## 자원봉사를 왜 해야 하나요?
 
-Check out some testimony from past volunteers:
+과거에 자원봉사한 사람들의 이야기를 확인해 보세요:
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+  * "내 최고의 경험은 전체 학급이 여성과 유색인종으로 구성된 경우였습니다. 그것은 우리 산업에게 이 아이들에게 다가가 재미있게 해 줄 기회가 생긴다는 좋은 징조였죠"
+  * "특히 어린 소녀들을 격려해 과학기술로 이끈다는 점이 기뻤습니다. 내가 지역의 다음 세대를 돕는 것 같았거든요."
+  * "나는 아이들이 즐거워하는 것을 보는게 아주 즐겁습니다. 하나 놀라운 것은 학업이 우수하지 않았던 학생들이 갑자기 개발자처럼 생각하고 다른 아이들을 도우는 경우를 선생님들이 알려왔다는 겁니다. - 그들에게 자신감을 가질 수 있도록 한 거죠."
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+컴퓨터과학을 계속해서 학습하도록 학생들을 격려하기 위해 지역의 학교를 방문하세요. [지금 등록!](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## 자원봉사를 할 동료를 모집하세요.
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+여러분의 친구나 동료에게 Hour of Code에 대해 얘기해 주세요. 이미 가입한 수 천명의 선생님들이 자원봉사자들을 찾고 있습니다. 그러니 꼭 [자원봉사자로 등록해주세요.](https://code.org/volunteer) 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요. 여러분의 상사 또는 CEO에게 [이 이메일을 보내세요.](https://hourofcode.com/promote/resources#email)
 
-## How you get selected:
+## 자원봉사자로 선택되기
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+  * 선생님들은 우리의 [자원봉사자 지도](/volunteer/local)에서 자원봉사자를 검색하게 됩니다. 
+  * 선생님들은 지도상에서 당신의 프로필을 보게 됩니다, 그러니 선생님이 당신을 선택할 가능성을 높이도록 가능하면 당신의 프로필을 완벽하게 입력하세요.
+  * 선생님은 이 양식을 통해서 당신과 접촉하게 됩니다.(당신의 이메일 주소는 선생님께 알려지지 않습니다.) 
+      * 만약 선생님의 요청이 너무 많은 경우, 선생님의 이메일 하단에있는 링크를 클릭하여 정보를 수정하거나 수신 거부하면 언제든지 환경 설정을 업데이트 할 수 있습니다. 
 
-## How to prepare:
+## 자원봉사 준비하기
 
-Try out tutorials before heading to the classroom by going to https://code.org/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! 수업에 집중하는데 도움을 주고 학생들이 Hour of Code에 재미를 느낄 수 있도록 보여줄 비디오를 고르세요.
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+  * 올해의 자원봉사자 훈련[ 웹 세미나](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk)와 [슬라이드 데크](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)를 시청하세요
+  * 확인하세요 [Hour of Code 자원봉사자 툴킷](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
+      * 개요, 일정, 준비 자료 그리고 마케팅 자료가 포함되어 있습니다. 자원봉사자 활동에 대한 모든 것이 준비되어 있습니다!
+  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
   * If you're visiting a school, complete any background checks or required paperwork
   * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
   * Prepare an intro: 

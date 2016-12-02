@@ -60,8 +60,8 @@ Usuzibandakanye nonyakazo weHora loKufingqwa. Xoxela izihlobo zakho nge**#Horalo
 
 Khetha umsebenzi weHora loKufingqwa uphinde [ubuyekeze lendlela yokuqondisa](<%= resolve_url('/how-to') %>).
 
-## 8. Go beyond an Hour of Code
+## 8. Dlulela ngale kweHora loKufingqwa
 
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Ukulungele ukudlulela ngale kwehora? Hlola lokhu [izifundiso zethu ezigcwele kanye nezinsiza zothisha](<%= resolve_url('https://code.org/teach')%>) okubala amathuba okufunda anobungcweti enzelwe othisha besiikole sabaqalayo, sabaphakathi, kanye nabebanga eliphezulu.
 
 <%= view 'popup_window.js' %>
