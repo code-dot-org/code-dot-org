@@ -19,11 +19,11 @@ nav: promote_nav
 
 ## 1. Spre budskapet
 
-Tell your friends about the **#HourOfCode**!
+Fortell dine venner om **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Spør hele skolen din om å tilby en Kodetime
+## 2. Be skolen din om å arrangere Kodetime
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
@@ -31,7 +31,7 @@ Tell your friends about the **#HourOfCode**!
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
-## 4. Promote Hour of Code in your community
+## 4. Promoter Kodetimen i ditt lokalsamfunn
 
 [Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
 

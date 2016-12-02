@@ -3,68 +3,74 @@
   hello: Tēnā koe e te ao
   'yes': "Āe"
   'no': Kāore
-  select_language: Please select your language
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  select_language: Tēnā kōwhiritia tō reo
+  upgrade_ie_message: Kāore e roa ka poroa e Code.org te āheinga mō Internet Explorer
+    8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
+  upgrade_ie_message_csedweek: Kāore e roa ka poroa e CSEdWeek.org te āheinga mō Internet
+    Explorer 8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
   upgrade_ie_link: Me ako tonu
-  en: Computer Science
-  computer_science_edweek: Computer Science Education Week
-  csedweek_dates: December 8-14, 2014
-  csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
-    <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
-    font-weight:bold">plan your Hour of Code</a>'
+  en: Pūtaiao Rorohiko
+  computer_science_edweek: Te Wiki o te Pūtaiao Rorohiko
+  csedweek_dates: 8-14 Hakihea, 2014
+  csedweek_banner_hoc: 'E tata mai ana te <a href="http://hourofcode.com" style="color:
+    white; text-decoration:underline; font-weight:bold">Hour of Code</a>. Kei te karangahia
+    ngā pouako, me ngā kaiwhakarite<a href="http://hourofcode.com" style="color: white;
+    text-decoration:underline; font-weight:bold">ki te whakamahere i tō Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
-    none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
-  anybody_can_learn: Anybody can learn.
-  learn_now: Learn Now
-  petition_message: Every student in every school should have the opportunity to learn
-    computer science
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
-  name: Name
+    none; font-weight: 400">He pouako PR (Pūtaiao Rorohiko) koe? Tirohia ētahi atu
+    rauemi CSEdWeek </a>'
+  n_have_learned_an_hoc: "<h1>Whakamātau i tētahi</h1><h2>Hour of Code</h2><h3>#tāngata
+    kua whakamāutau kē</h3>"
+  anybody_can_learn: E taea ana e wai rānei te ako.
+  learn_now: E Ako
+  petition_message: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
+    rorohiko
+  petition_sign_message: Mēnā e whakaae ana koe i te mātou, waitohungia. Whakapiri
+    mai ki te hia tāngata kua piri kē mai.
+  petition_sign_message_support: Mēnā e tautoko ana koe i te mātou, waitohungia. Whakapiri
+    mai ki te hia tāngata kua piri kē mai.
+  petition_join_others: Whakapiri mai ki te hia tāngata kua piri kē mai
+  name: Ingoa
   email: "Īmēra"
-  zipcode: ZIP code or country
-  submit: Submit
-  twentyhours_heading: Try our Intro to Computer Science Course
+  zipcode: ZIP rohenga, Whenua rānei
+  submit: Tāpaetia
+  twentyhours_heading: Whakamātauria tā mātou Akoranga Whakarāpopotonga o te Pūtaiao
+    Rorohiko
   twentyhours_text: Finished your first Hour of Code? Learn more core computer science
     and programming concepts in this follow-up course.
   og_title: Coding is foundational
-  og_description: Technology is changing everything. Every student in every school
-    deserves the opportunity to study computer science.
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  og_description: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
+    rorohiko.
+  csedweek_og_title: E tata mai ana te Hour of Code
+  csedweek_og_description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona
+    pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki
+    ngā reo e 45 neke atu.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
+  hoc2014_try: Whakamātauria
+  hoc2014_teachers: Ngā Pouako
+  hoc2014_host: Taurimatia
+  hoc2014_everyone: Te Marea
   hoc2014_support: Support it &#x25BE;
-  hoc2014_whatishoc: What is the Hour of Code?
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
+  hoc2014_whatishoc: He aha te Hour of Code?
+  csedweek_map_header: "# ngā takunetanga CSEdWeek /Hour of Code puta noa i te ao"
+  csedweek_map_signup: Waitohungia tō takunetanga
+  csedweek_map_search_placeholder: Rapu i ngā takunetanga Hour of Code
+  csedweek_map_search_search: Rapua
   csedweek_map_search_reset: Tautuhi Anō
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
-  csedweek_map_legend_cs_tech_jam: Special Event
-  cded_sign_up: Waitohu
-  cded_try_it: Try it
-  try_now: Whakamātauria ināianei
+  csedweek_map_legend_title: Poutohu
+  csedweek_map_legend_event: Takunetanga Hour of Code
+  csedweek_map_legend_cs_tech_jam: Takunetanga Mīharo
+  cded_sign_up: Waitohu Mai
+  cded_try_it: Whakamātauria
+  try_now: Ngana ināianei
   california_heading: Ask your school to teach computer science
   california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
     courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
     computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
     with us.
-  california_button: Learn More
+  california_button: Ako Tonu
   flappy_heading: Flappy Birthday to Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
@@ -342,11 +348,12 @@
   homepage_action_text_hoc: Hour of Code mā ngā ākonga katoa.
   homepage_action_text_num_served: "# served"
   homepage_action_text_join_us: Whakapiri mai
-  homepage_action_text_sign_up: Waitohu
-  homepage_action_text_try_it: Try it
+  homepage_action_text_sign_up: Waitohu Mai
+  homepage_action_text_try_it: Whakamātauria
   homepage_action_text_volunteers: He tūao pouako kei te hiahiatia
   homepage_action_text_codevideo: Mātakina te ataata
   homepage_action_text_teachervideo: Mātakina te ataata
+  homepage_action_text_watchvideo: Mātakina te ataata
   homepage_action_text_girlvideo: Whakaohooho i tētahi kōtiro
   homepage_action_text_learn: Me tīmata te ako
   homepage_action_text_signpetition: Waitohungia te puka inoi
@@ -500,8 +507,32 @@
     kore hoki kei Microsoft YouthSpark</a>hei tautoko i tō whai i tāu e kaingākautia
     ana.
   minecraft_subtitle: Hour of Code Mahimaina
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Mātakina te ataata
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Hangaia tētahi kēmu poitūkohu
+  sports_all_sports_title: Tuhia te waehere o tō ake hākinakina
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Whakaohooho i tētahi kōtiro
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: Speak another language?
   help_translate: Help us translate.
   no_internet: Don't have Internet?
@@ -531,7 +562,7 @@
   volunteer_engineer_submission_update_information: Update your information
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
-  volunteer_engineer_submission_field_name: Name
+  volunteer_engineer_submission_field_name: Ingoa
   volunteer_engineer_submission_field_name_placeholder: Full Name
   volunteer_engineer_submission_field_company: Company (or University)
   volunteer_engineer_submission_field_company_placeholder: Company (or University)
@@ -571,7 +602,7 @@
     (including approximate location) will be publicly viewable by local teachers.
   volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
     me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_submit: Submit
+  volunteer_engineer_submission_submit: Tāpaetia
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
     like you.
@@ -807,7 +838,7 @@
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
   dashboard_students_placeholder_name: Student Name
-  dashboard_students_name: Name
+  dashboard_students_name: Ingoa
   dashboard_students_progress: Progress
   dashboard_students_age: Pakeke
   dashboard_students_gender: Ira
@@ -933,8 +964,9 @@
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Me ako tonu
-  dashboard_announce_try_now_button: Whakamātauria ināianei
-  dashboard_announce_host_an_hour_button: Hāpaitia tētahi Hour
+  dashboard_announce_try_now_button: Ngana ināianei
+  dashboard_announce_host_an_hour_button: Taurimatia tētahi Hour
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai
     wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
     eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
@@ -969,6 +1001,11 @@
     receives for the Hour of Code during this time.  You can still view student progress
     from before December 3.  We will go back to saving progress as usual after this
     week.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -979,10 +1016,10 @@
     Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
     for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
     target='_blank'>these videos</a>.
-  learn_more: Whakamātauria ināianei
+  learn_more: Ngana ināianei
   learn_sign_up_description: Sign up to participate in the Hour of Code during CS
     Education Week
-  learn_sign_up_button: Waitohu
+  learn_sign_up_button: Waitohu Mai
   learn_videos_watch: Watch this inspirational video with your classroom
   learn_videos_show: Show this inspirational video to your class
   learn_videos_before_hoc: Watch an inspirational video before your Hour of Code
@@ -1086,7 +1123,7 @@
   projguts_name: Rock, Paper, Scissors
   hourofcode_name: Rīrapa Tauhira
   playlab_name: Taiwhanga Tākaro
-  infinity_name: Infinity Play Lab
+  infinity_name: Taiwhanga Tākaro Disney Infinity
   artist_name: Rehetoi
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
@@ -1130,7 +1167,7 @@
   gumball_name: Gumball
   classicmaze_name: Rīrapa Tauhira
   iceage_name: Ice Age
-  minecraft_name: Minecraft
+  minecraft_name: Mahimaina
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
@@ -1826,32 +1863,9 @@
   mc_shortcode: mc
   frozen_shortcode: frzn
   hourofcode_shortcode: code
-  flappy_shortcode: pakipaki
+  flappy_shortcode: paki
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game

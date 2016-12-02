@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# "Кодтау Сағатын" өзіңіздің қоғам-қауымыңызға қалай таратуға болады?
 
 [col-33]
 
@@ -20,7 +20,7 @@ nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## Барлық мектептер белсенділік танытсын, барлық оқушылар үйренсін!
 
   1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
 

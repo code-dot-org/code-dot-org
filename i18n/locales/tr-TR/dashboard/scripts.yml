@@ -2166,10 +2166,10 @@ tr:
         basketball:
           stage:
             Bounce: Sıçrama
-          title: Basketball
+          title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Make a basketball game
+          description: Make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2433,7 +2433,7 @@ tr:
           title: Spor
           description_audience: ''
           description_short: Kendi sporunu kodla
-          description: ''
+          description: Kendi sporunu kodla
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Hoşgeldiniz!

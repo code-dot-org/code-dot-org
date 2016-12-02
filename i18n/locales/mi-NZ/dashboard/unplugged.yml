@@ -2,7 +2,7 @@ mi:
   data:
     unplugged:
       'Unplug1':
-        title: 'Whakatakinga ki te Mātauranga Rorohiko'
+        title: 'Whakatakinga ki te Pūtaiao Rorohiko'
         desc: 'Ka whakatakina i tēnei whakaakoranga ngā ariā o te Pūtaiao Rorohiko, ka whakamārama hoki i ngā mahi a te Kaipūtaiao Rorohiko. Mā tēnei ka whai wāhi ngā ākonga ki te tū hei kaipūtaiao rorohiko. Hei te mutunga o te ngohe, ka whakawhiwhia ki ia ākonga tētahi tohu whakamaumahara i a rātou ki ngā mea kua akona. Tērā pea kāore koe i te hiahia ki te whakaako i te reo, i ngā kupu hoki e tika ana hei hāpai i ngā akoranga ka whai atu, heoi anō, ki te ngahau te tuku ka tino whai hua.'
         pdfs:
           - unplug1
@@ -163,7 +163,7 @@ mi:
         desc: 'E mōhio ana tātou ko tā te koromeke mahi he tōai, he tōai, he tōai, heoi anō, i konei ka ako tātou ki te whakamahi i ngā koromeke kua whakakahangia.'
         video: 'C4_unplugged_forloops'
       'SongwritingWithParameters':
-        title: 'Songwriting With Parameters'
+        title: 'Te Titowaiata me ngā Tawhā'
         desc: 'Ko tētahi o ngā tino whakamīharotanga o te pūtaiao rorohiko ko te taumahi. He papatono moroiti ngā taumahi (he hātepe i ētahi wā) he rite tonu te whakamahinga o ēnei taumahi i roto i tō papatono matua. Mā tēnei whakaakoranga ka māori noa te mārama ki te pai o te kōmitimiti i ngā kohinga waehere ki ngā taumahi.  '
         video: 'C4_unplugged_parameters'
       'BinaryImages':
@@ -183,7 +183,7 @@ mi:
         desc: 'I te wāhanga o mua i tuhia e ngā ākonga ētahi taumahi tino māmā, heoi anō, me whakaaro nui ina koe ka aro ki ngā taumahi matatini. Ko te Tohutohu Hoahoa tētahi huarahi tuhituhi taumahi kua āta whakaritea, ā, e whai wāhi ana i tētahi huarahi ki te tuhituhi whakamātautau ki te whakaū kei te tika te taumahi.'
         video: 'alg_8_design_recipe'
       'Booleans':
-        title: 'Te Pono, Te Tika me Te Ararau'
+        title: 'Te Pono, Te Hē me Te Ararau'
         desc: 'Ko te Booleans te tuawhā, ka mutu, te whakamutunga o ngā momo raraunga hei ako māu i tēnei akoranga. I tēnei o ngā ngohe ka ako he aha tēnei mea te Boolean, ā, he aha hoki te wāhi ki a rātou e āhei ai tātou ki te tuhi taumahi ararau'
         video: 'alg_9_booleans'
       'ConditionalsPiecewiseFunctions':

@@ -22,8 +22,8 @@
             Getting Loopy: Duke u Çmëndur
             Going Places Safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
             Happy Maps: Hartat e Gëzuara
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa
-              andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh
+              mjete'
             'Maze: Debugging': 'Maze: Rregullimi'
             'Maze: Loops': 'Maze: Ciklet'
             'Maze: Sequence': 'Labirinti: Sekuencë'
@@ -84,7 +84,7 @@
             Bounce: Hidhu
             Computational Thinking: Të menduarit kompjuterik
             Crowdsourcing: Crowdsourcing
-            Dice Race: Gara Dice
+            Dice Race: Gara me zar
             Digital Citizenship: Shtetësi Dixhitale
             'Farmer: While Loops': 'Fermeri: Ciklet While'
             Functional Suncatchers: Suncatchers-at Funksionalë
@@ -144,15 +144,15 @@
             'Artist: Variables': 'Artist: Variablat'
             'Bee: For Loops': 'Bletë: Ciklet For'
             'Bee: Functions with Parameters': 'Bletë: Funksionet me Parametra'
-            Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+            Extreme Challenge - Comprehensive: Sfidë Ekstreme- Gjithëpërfshirëse
             Maze and Bee: Maze dhe Bletë
             'Play Lab: For Loops': 'Play Lab: Ciklet For'
             'Play Lab: Functions with Parameters': 'Play Lab: Funksionet me Parametra'
             'Play Lab: Variables': 'Play Lab: Variablat'
-            Super Challenge - For Loops: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters: Super Challenge - Functions
-              and Parameters
-            Super Challenge - Variables: Super Challenge - Variables
+            Super Challenge - For Loops: Super sfidë- Për cikle
+            Super Challenge - Functions and Parameters: Super sfidë-Funksione dhe
+              Parametra
+            Super Challenge - Variables: Super sfidë- Variabla
             'Unplugged: Binary': 'Unplugged: Binare'
             'Unplugged: Envelope Variables': 'Unplugged: Variablat Zarf'
             'Unplugged: For Loop Fun': 'Unplugged: Argëtimi Ciklit For'
@@ -312,7 +312,7 @@
             The Farmer 2: Fermeri 2
             The Farmer 3: Fermeri 3
             The Internet: Interneti
-            The Maze: The Maze
+            The Maze: Labirinti
             Wrap-up: Mbështjell
         edit-code:
           title: Ndrysho kodin
@@ -323,7 +323,7 @@
             Hoc2015 Blockly: Hoc2015 Blockly
             Play Lab: Play Lab
             The Artist: Artisti
-            The Maze: The Maze
+            The Maze: Labirinti
           description_audience: ''
         events:
           title: Ngjarje
@@ -331,8 +331,8 @@
           description_short: Ngjarje
           stage:
             Bounce: Hidhu
-            Calc: Calc
-            Eval: Eval
+            Calc: Llogarit
+            Eval: Vlerëso
             Studio: Studio
         flappy:
           title: Kodi Flappy
@@ -369,14 +369,14 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle
           description_audience: ''
         cspunit1:
           title: CSP Unit 1
@@ -1227,11 +1227,12 @@
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: Laboratori i lojës Epoka e Akullnajave
+          description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
+          description_short: Krijo një histori ose një lojë me laboratorin e Epokës
+            së Akullnajave!
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: Laboratori i lojës Epoka e Akullnajave
           description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1280,34 +1281,34 @@
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: Laboratori i Lojës Gumball
+          description: Krijo një histori ose një lojë me laboratorin e Gumball!
+          description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: Laboratori i Lojës Gumball
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
+          description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
+            në një galaksi shumë, shumë larg.
+          description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star
+            Wars në një galaksi shumë, shumë larg.
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
           description_audience: ''
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
+          description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
+            në një galaksi shumë, shumë larg.
+          description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star
+            Wars në një galaksi shumë, shumë larg.
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
           description_audience: ''
         mc:
           title: Ora e Kodimit Minecraft
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          description_short: Explore a Minecraft world through code
+          description: Përdorini blloqe kodi për të dërguar Steve ose Alex në një
+            aventurë përmes botës Minecraft
+          description_short: Eksploro botën e Minecraft përmes kodit
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
         CSPPD3-Unit3-pt2:
@@ -2017,8 +2018,8 @@
             Events: Ngjarje
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa
-              andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh
+              mjete'
             Loops: cikle
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2062,8 +2063,8 @@
             Debugging: Debugging
             Events: Ngjarje
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa
-              andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh
+              mjete'
             Loops: cikle
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2428,10 +2429,10 @@
         basketball:
           stage:
             Bounce: Hidhu
-          title: Basketball
+          title: Realizo një lojë basketbolli
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Realizo një lojë basketbolli
+          description: Realizo një lojë basketbolli
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2529,8 +2530,8 @@
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Dizenjo Minecraft-in e Orës së Kodimit
+          title: Dizenjo Minecraft-in e Orës së Kodimit
           description_audience: ''
           description_short: Kafshët e programit dhe krijesa të tjera Minecraft në
             versionin tuaj të Minecraft.
@@ -2732,10 +2733,10 @@
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: Përziej dhe përshtat sportet
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Përziej dhe përshtat sportet
+          description: Përziej dhe përshtat sportet
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Mirë se vini!

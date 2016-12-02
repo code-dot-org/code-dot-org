@@ -354,12 +354,14 @@ zh-TW:
     announcement_learn_more_button: "瞭解更多資訊"
     announcement_try_now_button: "快來試試"
     announcement_host_an_hour_button: "舉辦一小時"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、 28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
     announcement_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看過去的公告。</a>"
     announcement_hoc_launch: "數以千計的180多個國家教育者將開始在12月5-11日透過Hour of Code教導電腦科學。我們指望你去幫我們達到比以往更多的學生。. <a href='%{signup_url}' target='_blank'>註冊你的Hour of Code事件</a>，並且讓其他老師知道所有人都可以開始教導電腦科學。"
     announcement_hoc_scaling: '給課程1-4及快速課程教師的重要提示: 因為數以百萬計的學員在同時間使用 Hour of Code 課程造成的高流量，<b>Code Studio在12月3-11號期間將無法儲存或統計使用這些課程的學員進度</b>，我們建議您的學生們可以在電腦科學教育周時參與慶祝Hour of Code的活動時來使用這些課程。因為在活動當周我們的 Hour of Code 導覽課程同樣也不會紀錄進度，您的學生仍然可以完成完整的導覽並獲取認證。'
     announcement_mc_launch: "我們最熱門的一個導覽課程現在有續集了! 全新的Minecraft設計器可以讓學生們自己定出Minecraft世界的規則。他們可以創造出一個獨一無二的Minecraft遊戲體驗，並在手機上與朋友分享。您可以在您的課堂上使用這個Hour of Code課程。"
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
@@ -740,8 +742,48 @@ zh-TW:
     starwars_blocks_name: '星球大戰: 用代碼構建一個星系-JavaScript'
     starwars_javascript_name: '星球大戰: 用程式代碼(JavaScript) 建立一個銀河系'
     download_message: '下載 %{app_name}，供離線使用 (136MB)'
-    download_in_english: '下載英文版'
-    download_in_spanish: '下載西班牙文版'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows 作業系統 (64位元)'
     mac: 'Mac OS X'
   plc:

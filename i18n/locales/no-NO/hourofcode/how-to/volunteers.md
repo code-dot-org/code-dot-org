@@ -6,37 +6,37 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How-to Guide for Volunteers
+# Veiledning for frivillige
 
-## Why volunteer?
+## Hvorfor frivillig?
 
-Check out some testimony from past volunteers:
+Sjekk ut noen uttalelser fra tidligere frivillige:
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+  * "Den beste erfaringen var at hele klassen var kvinner og fargete. Det lover godt for fremtiden når vi nå har en mulighet til å nå og engasjere disse barna."
+  * "Likte spesielt får å oppmuntre unge jenter i teknologi. Føltes som jeg hjalp den neste generasjonen i mitt nærmiljø."
+  * "Jeg ELSKET å se hvor glade barna var. En fantastisk ting var at lærerne la merke til at noen av elevene som ikke var så akademiske var svært gode til å tenke som en utvikler og til å hjelpe andre - dette gav dem selvtillit."
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+Besøk et klasserom i nærmiljøet for å oppmuntre elevene til å fortsette med å lære informatikk. [Registrer deg nå!](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## 4. Verv kollegene dine som frivillige
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+Fortell venner og kolleger om Kodetimen. Tusenvis av lærere har meldt seg på og ser etter frivillige, så be dem [melde seg som frivillig](https://code.org/volunteer). Spør din arbeidsgiver om de ønsker å bidra. [Send denne eposten ](https://hourofcode.com/promote/resources#email)til din leder, eller administrerende direktør.
 
-## How you get selected:
+## Hvordan blir du valgt:
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+  * Lærere vil lete etter frivillige på våre [frivillige kart](/volunteer/local) 
+  * Lærere vil gå gjennom profiler på kartet, så prøv å gjøre din profil så komplett som mulig for å øke sjansen for at en lærer velger deg.
+  * En lærer vil kontakte deg gjennom dette skjemaet (din epostadresse vil aldri bli delt med læreren). 
+      * Hvis du får for mange forespørsler fra lærere, kan du oppdatere dine preferanser ved å klikke på koblingen for å redigere informasjonen eller melde deg av nederst på alle epostene fra en lærer. 
 
-## How to prepare:
+## Hvordan forberede:
 
-Try out tutorials before heading to the classroom by going to https://code.org/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Velg en video du kan vise klassen og få de til å bli positive til å gjennomføre en Kodetime.
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
+  * Se årets trening for frivillige [webseminar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) og [fremvisning](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
+  * Sjekk ut [Kodetimen frivilliges Verktøykasse](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
+      * Inneholder en oversikt, tidsplan, forberedelsemateriale og markedsføringsmateriell. Alt du trenger å være klar for din frivillig erfaring!
+  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](%= resolve_url('/learn') %)
   * If you're visiting a school, complete any background checks or required paperwork
   * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
   * Prepare an intro: 

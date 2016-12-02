@@ -13,19 +13,19 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) изберете настойнически за вашия час:
 
-Ние ще качим разнообразие от [ забавни, дълги около час уроци](%= resolve_url('https://code.org/learn') %) за ученици от всички възрасти, създадени от различни партньори.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Самонасочващи Hour of Code уроци:](%= resolve_url("https://code.org/learn") %)**
+**[Самонасочващи Hour of Code уроци:](%= resolve_url('/learn') %)**
 
   * Изискват минимална подготовка на учителите
   * Предвиждат смостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-**[Учителско ръководство за Hour of Code уроците:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Учителско ръководство за Hour of Code уроците:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Това са планове за уроци, които не изискват някаква предварителна подготовка на учителя
   * Ккатегоризирани са по класове *and* по предметна област(напр. математика, английски и др.)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## Промотирайте своя Hour of Code
 
@@ -55,7 +55,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
   * Оригиналният стартиращ Code.org клип, с участието на Бил Гейтс, Марк Зукерберг и НБА звезда Крис Бош (има версии за [ 1 минута](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5 минути](https://www.youtube.com/watch?v=nKIu9yen5nc) и [ 9 минути](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Видео[ клипът на първия Hour of Code от 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), или <% if @country == 'uk' %> [ клипът за часът на кода 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ Hour of Code 2015 видео](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Намери още вдъхновяващи [ ресурси](%= resolve_url('https://code.org/inspire') %) и [ видеа](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Не е лошо ако Вие и Вашите ученици сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:**
 
@@ -71,7 +71,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Въвеждане на учениците в дейността**
 
-  * Напишете линка към урока на бялата дъска. Намерете връзката в списъка на [ и информация за избраните уроци](%= resolve_url('https://code.org/learn') %) под броя на участниците.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 **Какво да направя ако ученик завърши по-рано?**
 
-  * Учениците могат да видят всички уроци и да опитат друга дейност от Hour of Code на [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Или помолете учениците, които са завършили по- рано да помогнат на съучениците си, които имат проблеми с дейността.
 
 [col-33]

@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# 如何組織規劃一場「一小時的程式設計課程」活動
 
 ## 1) 活動準備工作
 

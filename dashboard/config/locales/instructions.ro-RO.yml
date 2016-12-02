@@ -4765,9 +4765,9 @@
         the functions you used in this stage or try this new function that will automatically
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!
-      grade4_artist_functions1_instruction: |-
-        Salut! Eu zombie artist. Eu iubesc desenul!
-        Ajută-mă să desenez ochelarii pătraţi. Sugestie: puntea dintre lentile este cu 25 de pixeli mai scurtă decât latura pătratului.
+      grade4_artist_functions1_instruction: Ajuta zombieul sa deseneze ochelarii folosind
+        patrate cu laturi de 100 de pixeli. \r Spatiul dintre ochelari este de 75
+        de pixeli.
       grade4_artist_functions2_instruction: |-
         Functions let you define new blocks!
         \r
@@ -6136,28 +6136,28 @@
         or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: E timpul sa realizezi propriul Minecraft!
         Da viata creaturilor si fa-le sa faca orice vrei tu. Distractie placuta!
-      MC HOC 2016 Level 2-2_instruction: Gaina este imobila. Aseaza blocul "misca"
-        si "intoarce" la blocul "cand da viata" pentru a-i face sa se miste.
+      MC HOC 2016 Level 2-2_instruction: Gaina este imobila. Aseaza blocul "muta inainte"
+        si "ia-o la stanga" la blocul "cand prinde viata" pentru a o face sa se miste.
       MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
         moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
         slot. "
       MC HOC 2016 Level 3_instruction: |
-        Bun, acum gaina se misca! Dar s-a oprit. In jocuri, gainile merg pentru totdeauna! Utilizeaza o bucla "pentru totdeauna" pentru a tine gainile in miscare.\r
+        Bun, acum gaina se misca! Dar s-a oprit. In jocuri, gainile merg pentru totdeauna! Utilizeaza o bucla "pentru totdeauna" pentru a tine gainile in miscare
       MC HOC 2016 Level 4_instruction: Acum gainile arata caraghios miscandu-se in
         acelasi loc. Jocurile utilizeaza miscari intamplatoare pentru a face lucrurile
         sa para reale. Fa ca gainile sa se "intoarca aleator".
       MC HOC 2016 Level 5_instruction: Aceste vaci sunt pierdute! Ghideaza-le catre
-        iarba cu blocul "muta un pas inainte" pus intr-o bucla "fa pentru totdeauna".
-      MC HOC 2016 Level 6_instruction: Acum faci zombi. Foloseste blocul "da nastere"
-        pentru a face 3 zombie cand noaptea se lasa. Fa-i sa se miste spre tine. Trebuia
+        iarba cu blocul "muta un pas inainte" pus intr-o bucla "pentru totdeauna".
+      MC HOC 2016 Level 6_instruction: Acum generezi zombi. Foloseste blocul "genereaza"
+        pentru a face 3 zombie cand se lasa noaptea. Fa-i sa se miste spre tine. Trebuia
         sa supravietuiesti pana dimineata.
       MC HOC 2016 Level 7_instruction: |-
         Now let’s combine what you've learned and
         create a new mob! Make a cow, lead it to the pasture, and get it to give you
         milk.
       MC HOC 2016 Level 8_instruction: Calea catre oaia ta este blocata de un zid
-        de piatra. Din fericire, exista un vierme aici. Ei explodeaza daca ii atingi.
-        Fa-l pe vierme sa explodeze zidul astfel incat sa ajungi la oaie!
+        de piatra. Din fericire, exista un Creeper aici. Ei explodeaza daca ii atingi.
+        Fa-l pe Creeper sa explodeze zidul astfel incat sa ajungi la oaia ta!
       MC HOC 2016 Level 9_instruction: |
         Zombies are attacking the village! Code the
         Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
@@ -6166,23 +6166,23 @@
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: In Minecraft, oile fac lana. Pune blocul "drop"
-        in "atunci cand este utilizat" apoi mergi spre ea pentru a lasa un item.
+        in "cand este utilizat" apoi mergi spre ea pentru a lua lana.
       MC HOC 2016 New pn_instruction: |-
         Now let's explore our world! Use the arrows
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
-      MC HOC 2016 New Spawn_instruction: Acum aveţi posibilitatea să umpli lumea cu
-        ceea ce vrei! Punde blocul 'da nastere' sub "atunci când rulaţi' ca să ruleze
+      MC HOC 2016 New Spawn_instruction: Acum aveţi posibilitatea să umpleti lumea
+        cu ceea ce vreti! Pune blocul 'genereaza' sub 'atunci când rulaţi' ca să generati
         lucruri atunci când începe jocul.
-      MC HOC 2016 New Walk_instruction: Să explorăm lumea noastră! Muta cu săgeţi,
-        şi apăsaţi bara de spaţiu sau atingeţi tabla de joc pentru a utiliza elemente.
-        Utilizaţi uşa pentru a merge în interiorul casei.
+      MC HOC 2016 New Walk_instruction: Să explorăm lumea noastră! Muta cu ajutorul
+        săgeţilor şi apăsaţi tasta spaţiu sau atingeţi tabla de joc pentru a utiliza
+        elemente. Utilizaţi uşa pentru a merge în interiorul casei.
       MC HOC 2016 SCORE LEVEL_instruction: Unele jocuri va lasa sa tineti scorul.
         Joaca-te cu aceste Iron Golems si utilizati blocul "adauga 1 la scor" pentru
-        a va da cate un punct de care ori le atingeti. Trebuie sa ai 5 puncte pentru
+        a primi cate un punct de care ori le atingeti. Trebuie sa ai 5 puncte pentru
         a castiga!
-      MC HOC 2016 Village Test_instruction: Oh nu! Zombi teau prin în interior! Programeaza
-        Iron Golem pentru a urmări şi ataca zombi!
+      MC HOC 2016 Village Test_instruction: Oh nu! Zombi te-aus prin în interior!
+        Programeaza Iron Golem pentru a urmări şi ataca zombi!
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions

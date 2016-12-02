@@ -12,7 +12,7 @@
           description_short: Začít s kurzem 1 pro mladé čtenáře.
           description_audience: Stáří 4+ (před čtenáři)
           stage:
-            'Artist: Loops': 'Umělec: Smyčky'
+            'Artist: Loops': 'Umělec: Cykly'
             'Artist: Sequence': 'Umělec: posloupnost'
             'Artist: Shapes': 'Umělec: tvary'
             'Bee: Loops': 'Včela: cykly'
@@ -40,7 +40,7 @@
           description_audience: Věk 6-18
           stage:
             'Artist: Debugging': 'Umělec: ladění'
-            'Artist: Loops': 'Umělec: Smyčky'
+            'Artist: Loops': 'Umělec: Cykly'
             'Artist: Nested Loops': 'Umělec: Vnořené smyčky'
             'Artist: Sequence': 'Umělec: posloupnost'
             'Bee: Conditionals': 'Včela: podmínky'
@@ -158,7 +158,7 @@
             2 a 3.
           stage:
             'Artist: Functions': 'Malíř: Funkce'
-            'Artist: Loops': 'Umělec: Smyčky'
+            'Artist: Loops': 'Umělec: Cykly'
             'Artist: Nested Loops': 'Umělec: Vnořené smyčky'
             'Artist: Sequence': 'Umělec: posloupnost'
             'Bee: Conditionals': 'Včela: podmínky'
@@ -1290,7 +1290,7 @@
             Hour of Code 2015: Hodina kódu 2013
           description_audience: ''
         mc:
-          title: Hodina kódu Minecraftu
+          title: Hodina kódu s Minecraftem
           description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství
             ve světě Minecraftu
           description_short: Prozkoumej svět Minecraftu pomocí kódu
@@ -1926,7 +1926,7 @@
             Classes: Classes
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
-            Peer Review: Peer Review
+            Peer Review: Nezávislý posudek
             Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
@@ -2450,7 +2450,7 @@
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
-            Peer Review: Peer Review
+            Peer Review: Nezávislý posudek
             Box Model and Page Layout: Box Model and Page Layout
             Digital Footprint: Digital Footprint
             Publishing a Website: Publishing a Website
@@ -2511,13 +2511,13 @@
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Hodina kódu Minecraft Designer
+          title: Hodina kódu Minecraft Designer
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
+          description_short: Naprogramuj zvířata a další postavy, vytvoř si svojí
+            vlastní verzi Minecraftu.
+          description: Naprogramuj zvířata a další postavy, vytvoř si svojí vlastní
+            verzi Minecraftu.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
