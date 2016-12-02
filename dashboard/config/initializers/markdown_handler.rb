@@ -36,7 +36,9 @@ module MarkdownHandler
   end
 
   def self.call(template)
-    @markdown ||= Redcarpet::Markdown.new(CustomRewriter, MARKDOWN_OPTIONS)
+    if !@markdown || ENV['CIRCLE_BUILD_NUM']
+      @markdown = Redcarpet::Markdown.new(CustomRewriter, MARKDOWN_OPTIONS)
+    end
     "#{@markdown.render(template.source).inspect}.html_safe"
   end
 end
