@@ -85,6 +85,7 @@ export var blocks = [
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
+  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
