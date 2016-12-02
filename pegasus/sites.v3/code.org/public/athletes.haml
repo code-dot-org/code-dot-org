@@ -24,17 +24,20 @@ social:
 video_player: true
 ---
 
+- page_mode     = PageMode.get(request)
+- yt_code       = page_mode == 'feature-athletes' ? 'athletesvideocode' : 'QvyTEx1wyOY'
+- download_link = page_mode == 'feature-athletes' ? 'athletesdownloadlink' : '//videos.code.org/social/cs-is-everything.mp4'
+
 %link{href: "/css/sports.css", rel: "stylesheet"}
 
 %div{style: "clear:both"}
 
 .tutorial-video-container
   %h2= I18n.t(:sports_video_title)
-  - video = { id: 'cs_changing_everything', code: 'QvyTEx1wyOY', duration: I18n.t(:video_1min), download: '//videos.code.org/social/cs-is-everything.mp4'}
-  - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+  - url = "https://www.youtube.com/watch?v=#{yt_code}"
   - facebook = {u: url}
-  - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
-  =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]
+  - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} @codeorg"}
+  =view :display_video_thumbnail, id: 'athletes_video', video_code: yt_code, caption: I18n.t(:video_1min), play_button: 'center', facebook: facebook, twitter: twitter, download_path: download_link
 .tutorials-container
   %div.image-collection
     %h2= I18n.t(:sports_title)
