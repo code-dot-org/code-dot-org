@@ -6250,7 +6250,7 @@ en:
         image of both squares, this time using parameters. (Click to see full instructions)"
       U3L08 - Enchantment Under the Sea_instruction: "You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
-        one each for the starfish, sea grass, and fish. Create versions of these functions
+        one each for the starfish, seagrass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance."
       U3L08 - fish_instruction: "Add a parameter to drawFish that changes the size
@@ -6260,7 +6260,7 @@ en:
       U3L08 - individualCode_instruction: "Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)"
       U3L08 - introUnderTheSea_instruction: "Add an extra fish, starfish, and piece
-        of sea grass to the image. Look at, but don't change, the functions that
+        of seagrass to the image. Look at, but don't change, the functions that
         create them. (Click to see full instructions)"
       U3L08 - multiParamFish_instruction: "Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
@@ -6275,8 +6275,8 @@ en:
         the size of the piece of seagrass drawn. (Click to see full instructions)"
       U3L08 - squareTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"
-      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of sea
-        grass to the image. Look at, but don't change, the functions that create
+      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of
+        seagrass to the image. Look at, but don't change, the functions that create
         them. (Click to see full instructions)"
       U3L08 - triangleTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"

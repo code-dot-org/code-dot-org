@@ -1,300 +1,432 @@
 Hour of Code:
   id: 2
   name: Hour of Code
-  created_at: 2015-10-16 22:36:38.000000000 Z
-  updated_at: 2015-10-16 22:36:38.000000000 Z
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-10-31 23:56:29.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &2 2016-10-31 23:56:29.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *2
   wrapup_video_id: 13
   hidden: true
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 edit-code:
   id: 3
   name: edit-code
-  created_at: 2015-10-16 22:36:40.000000000 Z
-  updated_at: 2015-10-16 22:36:40.000000000 Z
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-10-31 23:56:30.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *3
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-10-31 23:56:30.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *4
   wrapup_video_id: 13
   hidden: true
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 events:
   id: 4
   name: events
-  created_at: 2015-10-16 22:36:41.000000000 Z
-  updated_at: 2015-10-16 22:36:41.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-10-31 23:56:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *5
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-10-31 23:56:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *6
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 jigsaw:
   id: 7
   name: jigsaw
-  created_at: 2015-10-16 22:36:43.000000000 Z
-  updated_at: 2015-10-16 22:36:43.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-10-31 23:56:32.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *7
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-10-31 23:56:32.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *8
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 hourofcode:
-  id: 63
+  id: 133
   name: hourofcode
-  created_at: 2015-10-16 22:39:26.000000000 Z
-  updated_at: 2015-10-16 22:39:26.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-10-31 23:58:39.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *9
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2016-10-31 23:58:39.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *10
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 starwars:
-  id: 62
+  id: 154
   name: starwars
-  created_at: 2015-10-16 22:39:24.000000000 Z
-  updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id: 137
-  hidden: true
-  user_id:
-  login_required: true
-  properties: '{}'
-starwarsblocks:
-  id: 69
-  name: starwarsblocks
-  created_at: 2015-10-16 22:39:24.000000000 Z
-  updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id: 137
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2016-10-31 23:58:50.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *11
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2016-10-31 23:58:50.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *12
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
-mc:
-  id: 70
-  name: mc
-  created_at: 2015-10-16 22:39:24.000000000 Z
-  updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id: 137
-  hidden: true
-  user_id:
-  login_required: false
-  properties: '{}'
-minecraft:
-  id: 71
-  name: minecraft
-  created_at: 2015-10-16 22:39:24.000000000 Z
-  updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id:
-  hidden: true
-  user_id:
-  login_required: false
-  properties: '{}'
+  properties: "{}"
 frozen:
-  id: 61
+  id: 123
   name: frozen
-  created_at: 2015-10-16 22:39:23.000000000 Z
-  updated_at: 2015-10-16 22:39:24.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2016-10-31 23:58:27.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *13
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2016-10-31 23:58:27.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *14
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 playlab:
-  id: 68
+  id: 142
   name: playlab
-  created_at: 2015-10-16 22:39:29.000000000 Z
-  updated_at: 2015-10-16 22:39:29.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2016-10-31 23:58:42.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *15
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2016-10-31 23:58:42.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *16
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 infinity:
-  id: 64
+  id: 135
   name: infinity
-  created_at: 2015-10-16 22:39:27.000000000 Z
-  updated_at: 2015-10-16 22:39:27.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2016-10-31 23:58:40.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *17
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2016-10-31 23:58:40.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *18
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 artist:
-  id: 46
+  id: 73
   name: artist
-  created_at: 2015-10-16 22:38:11.000000000 Z
-  updated_at: 2015-10-16 22:38:11.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2016-10-31 23:57:27.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *19
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2016-10-31 23:57:27.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *20
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 algebra:
-  id: 34
+  id: 55
   name: algebra
-  created_at: 2015-10-16 22:37:33.000000000 Z
-  updated_at: 2015-10-16 22:37:33.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2016-10-31 23:57:08.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *21
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2016-10-31 23:57:08.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *22
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: true
-  properties: '{}'
+  properties: "{}"
 algebraPD:
-  id: 37
+  id: 59
   name: algebraPD
-  created_at: 2015-10-16 22:37:44.000000000 Z
-  updated_at: 2015-10-16 22:37:44.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2016-10-31 23:57:13.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *23
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2016-11-22 22:18:24.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *24
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: true
-  properties: '{"professional_learning_course":"CS in Algebra Support"}'
+  properties: '{"professional_learning_course":"CS in Algebra Legacy"}'
 flappy:
   id: 6
   name: flappy
-  created_at: 2015-10-16 22:36:43.000000000 Z
-  updated_at: 2015-10-16 22:36:43.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2016-10-31 23:56:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *25
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2016-10-31 23:56:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *26
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 20-hour:
   id: 1
   name: 20-hour
-  created_at: 2015-10-16 22:36:26.000000000 Z
-  updated_at: 2015-10-16 22:36:26.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2016-10-31 23:56:25.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *27
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2016-10-31 23:56:25.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *28
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 course1:
-  id: 48
+  id: 77
   name: course1
-  created_at: 2015-10-16 22:38:12.000000000 Z
-  updated_at: 2015-10-16 22:38:13.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2016-10-31 23:57:28.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *29
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2016-10-31 23:57:28.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *30
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 course2:
-  id: 49
+  id: 78
   name: course2
-  created_at: 2015-10-16 22:38:21.000000000 Z
-  updated_at: 2015-10-16 22:38:21.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2016-10-31 23:57:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *31
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2016-10-31 23:57:31.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *32
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 course3:
-  id: 50
+  id: 79
   name: course3
-  created_at: 2015-10-16 22:38:31.000000000 Z
-  updated_at: 2015-10-16 22:38:31.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2016-10-31 23:57:35.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *33
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2016-10-31 23:57:35.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *34
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 course4:
-  id: 51
+  id: 80
   name: course4
-  created_at: 2015-10-16 22:38:41.000000000 Z
-  updated_at: 2015-10-16 22:38:41.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2016-10-31 23:57:38.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *35
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2016-10-31 23:57:38.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *36
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: "{}"
 cspunit1:
-  id: 53
+  id: 103
   name: cspunit1
-  created_at: 2015-10-16 22:38:51.000000000 Z
-  updated_at: 2015-10-16 22:38:51.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2016-10-31 23:58:03.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *37
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2016-10-31 23:58:03.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *38
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: true
-  properties: '{}'
+  properties: "{}"
 cspunit2:
-  id: 54
+  id: 104
   name: cspunit2
-  created_at: 2015-10-16 22:38:55.000000000 Z
-  updated_at: 2015-10-16 22:38:55.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2016-10-31 23:58:05.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *39
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2016-10-31 23:58:05.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *40
+  wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: true
-  properties: '{}'
+  properties: "{}"
 cspunit3:
-  id: 55
+  id: 105
   name: cspunit3
-  created_at: 2015-10-16 22:39:01.000000000 Z
-  updated_at: 2015-10-16 22:39:01.000000000 Z
-  wrapup_video_id:
-  hidden: false
-  user_id:
-  login_required: true
-  properties: '{}'
-cspunit4:
-  id: 95
-  name: cspunit4
-  created_at: 2016-01-28 19:12:01.000000000 Z
-  updated_at: 2016-05-12 19:37:08.000000000 Z
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2016-10-31 23:58:07.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *41
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &42 2016-10-31 23:58:07.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *42
   wrapup_video_id: 
   hidden: false
-  user_id:
+  user_id: 
   login_required: true
-  properties: '{}'
-cspunit5:
-  id: 96
-  name: cspunit5
-  created_at: 2016-01-28 19:12:03.000000000 Z
-  updated_at: 2016-05-12 19:37:09.000000000 Z
-  wrapup_video_id: 
-  hidden: false
-  user_id:
-  login_required: true
-  properties: '{}'
-cspunit6:
-  id: 100
-  name: cspunit6
-  created_at: 2016-02-26 20:56:25.000000000 Z
-  updated_at: 2016-05-12 19:37:09.000000000 Z
-  wrapup_video_id: 
-  hidden: false
-  user_id:
-  login_required: true
-  properties: '{}'
+  properties: "{}"
 ECSPD:
-  id: 16
+  id: 32
   name: ECSPD
-  created_at: 2015-10-16 22:37:01.000000000 Z
-  updated_at: 2015-10-16 22:37:01.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &43 2016-10-31 23:56:53.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *43
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &44 2016-10-31 23:56:53.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *44
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: true
   properties: '{"professional_learning_course":"ECS Support"}'
 ECSPD-NexTech:
-  id: 14
+  id: 30
   name: ECSPD-NexTech
-  created_at: 2015-10-16 22:36:58.000000000 Z
-  updated_at: 2015-10-16 22:36:58.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &45 2016-10-31 23:56:52.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *45
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &46 2016-10-31 23:56:52.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *46
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: true
   properties: '{"professional_learning_course":"ECS Support"}'
 allthethings:
-  id: 45
+  id: 72
   name: allthethings
-  created_at: 2015-10-16 22:38:08.000000000 Z
-  updated_at: 2015-10-16 22:38:08.000000000 Z
-  wrapup_video_id:
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &47 2016-10-31 23:57:25.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *47
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &48 2016-10-31 23:57:25.000000000 Z
+    zone: !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *48
+  wrapup_video_id: 
   hidden: true
-  user_id:
+  user_id: 
   login_required: false
-  properties: '{}'
+  properties: '{"hideable_stages":true}'
