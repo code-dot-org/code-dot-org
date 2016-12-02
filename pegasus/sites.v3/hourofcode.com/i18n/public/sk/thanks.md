@@ -60,8 +60,8 @@ Práve ste sa zapojili do hnutia Hodina kódu. Povedzte o tom svojim priateľom 
 
 Vyberte si svoju aktivitu z Hodiny kódu a [pozrite si návod Ako na to](<%= resolve_url('/how-to') %>).
 
-## 8. Go beyond an Hour of Code
+## 8. A čo ďalej s Hodinou kódu?
 
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Pripravení pokračovať? Pozrite sa na [naše kurzy a zdroje pre učiteľov](<%= resolve_url('https://code.org/teach')%>) vrátane možností pre profesionálny rozvoj pre učiteľov základnej, strednej a vysokej školy.
 
 <%= view 'popup_window.js' %>

@@ -36,13 +36,13 @@ nav: how_to_nav
 
 ## 이벤트 계획 예시
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**이벤트:** 학교 전체 컴퓨터 과학 교육 주간 시작 모임
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**날짜:** 12 월 5 일 (컴퓨터 과학 교육 주간 시작일)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**시간:** 수업일중. 아침-점심사이 대략 1시간.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**장소:** 학교 강당 (예: 극장, 체육관, 식당)   
   
 
 

@@ -8,7 +8,7 @@ nav: promote_nav
 
 <%= view :signup_button %>
 
-### Below is a sample op-ed supportive of Computer Science Education Week and its goals that could be used by state, local legislators, business leaders etc.
+### Dövlət adamları, yerli rəsmilər, işgüzar müəssisə rəhbərləri və digər şəxslər tərəfindən istifadə edilə biləcək, İnformatika Təhsili Həftəsi və onun məqsədlərinə dəstək olan məqalə nümunəsi aşağıda verilib.
 
   
 
@@ -43,7 +43,7 @@ We should also work with students at a young age to spark their interest in comp
 
 We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Uşaqlarımıza ehtiyac duyulan bacarıqları əldə etmək imkanı verilməzsə, bu iş yerlərini kimlər tutacaq?
 
 This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
 
