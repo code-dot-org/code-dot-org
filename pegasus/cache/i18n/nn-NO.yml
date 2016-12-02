@@ -275,8 +275,7 @@
   lines_of_code_alt: "<b>#</b> KODELINER SKRIVE AV ELEVAR"
   who_has_done_hoc: 'Hvem har fullført #kodetimen? #HourOfCode? @codeorg'
   hoc_leaderboards: Resultatliste for Kodetimen
-  students_and_lines: "%{students} elevar har gjort Kodentimen og skreiv %{lines}
-    kodeliner."
+  students_and_lines: "%{students} elevar har gjort Kodetimen og skreiv %{lines} kodeliner."
   start_hoc: Start  Kodetimen no
   contact_form_topic_press: Media (Intervju eller talar)
   stats_nina: "«Kvar dag gav det same resultatet &mdash; 100 % engasjement.» – Nina
@@ -355,6 +354,7 @@
   homepage_action_text_volunteers: Tekniske frivillige er ønska
   homepage_action_text_codevideo: Sjå videoen
   homepage_action_text_teachervideo: Sjå videoen
+  homepage_action_text_watchvideo: Sjå videoen
   homepage_action_text_girlvideo: Inspirer ei jente
   homepage_action_text_learn: Begynn å læra
   homepage_action_text_signpetition: Signer underskrivtskampanjen
@@ -502,8 +502,32 @@
   minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoft YouthSpark</a>
     tilbyr gratis verktøy og ressurser for å følge dine interesser.
   minecraft_subtitle: Kodetimen med Minecraft
+  sports_page_title: Kodetimen med sport
+  sports_og_title: Kodetimen Sport-oppgaver
+  sports_og_description: Velg mellom kodeoppgaver i basketball eller andre idretter.
+  sports_title: Kode ditt eget sportsspill
+  sports_watch_video: Sjå videoen
+  sports_video_title: Alle kan lære.
+  sports_select_theme: Velg ditt opplæringstema
+  sports_basketball_title: Lag eit basketballspel
+  sports_all_sports_title: Kode din eigen sport
   watch_inspirational_videos: Før du begynner kan du sjå ein av desse inspirerande
     filmane
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspirer ei jente
+  video_title_cs_intro: informatikk-introduksjon
+  video_title_schools_dont_teach: Det skoler flest ikke underviser
+  video_title_obama: President Obama om informatikk
+  video_title_hoc_is_here: Kodetimen er her - alle kan lære
+  video_title_anybody_can_learn: Alle kan lære
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: Snakkar du eit anna språk?
   help_translate: Hjelp oss med å oversetja.
   no_internet: Har du ikkje internett?
@@ -825,7 +849,7 @@
   dashboard_students_username: 'Brukernamn: %{student_username}'
   dashboard_students_email: 'Epost: %{student_email}'
   dashboard_students_completed_levels: Fullførte nivå
-  dashboard_students_total_lines: Liner med kode
+  dashboard_students_total_lines: Kodelinjer
   dashboard_students_show_secret: Vis løyndom
   dashboard_students_auto_generated: Automatisk generert
   dashboard_students_reset_secret: Tilbakestille løyndom
@@ -937,6 +961,7 @@
   dashboard_announce_learn_more_button: Lær meir
   dashboard_announce_try_now_button: Prøv no
   dashboard_announce_host_an_hour_button: Ver vert for ein Kodetime
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: Som lærar, er du del av ei rørsle som ynskjer å gje
     alle elevar, i alle skular, høve til å lære programmering. No er det på tide å
     la myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar
@@ -960,11 +985,15 @@
     Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft.
     Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller
     spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime.
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
+  dashboard_announce_hoc_scaling_progress: Merk at vi ikke lagrer elevenes progresjon
+    i dette kurset fra 3. - 11. desember på grunn av mengden trafikk på våre sider
+    under Kodetimen-uka. Du kan fortsatt se elevenes progresjon fra før 3. desember.
+    Etter denne uka kommer vi til å gå tilbake til å lagre progresjon som normalt.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: Kodetimen er her - 8.- 14. desember!
   code_sign_up: Registrer deg for å delta i Kodeveka (CS Education Week)
   host_an_hour: Hold en Kodetime
@@ -1795,12 +1824,12 @@
     for å kontrollere heltene dine, navigere labyrinter, beseire troll, lure fiender,
     og rednings allierte! Lær Javascript i dette HTML 5 web spillet for nybegynnere.
   codea_beyond_longdescription: Codea for iPad lar deg lage spill og simuleringer
-    & ndash; eller bare noen visuelle begrep som du har. Gjør dine tanker til interaktive
-    kreasjoner som gjør bruk av iPad funksjoner som Multi-Touch og akselerometer.
-    Vi tror Codea er den vakreste kode editor du vil bruke, og det er enkelt. Codea
-    er laget for å la deg berøre koden din. Ønsker du å endre et nummer? Bare trykk
-    og dra den. Hva med en farge, eller et bilde? Tapping vil bringe opp visuelle
-    redaktører som lar deg velge akkurat hva du vil.
+    &mdash; eller bare visualisere ideer du har. Gjør dine tanker til interaktive
+    kreasjoner som gjør bruk av iPad-funksjoner som Multi-Touch og akselerometer.
+    Vi synes Codea er den vakreste måten man kan lage kode på, samtidig som det er
+    enkelt. Codea er laget slik at du kan ta på koden din. Vil du du forandre på et
+    tall? Bare trykk og dra det. Hva med en farge, eller et bilde? Pek på dem for
+    å hente frem visuelle redigeringsfunksjoner som lar deg velge akkurat hva du vil.
   lego_beyond_longdescription: Lag små, tilpassede og programmerbare roboter ved hjelp
     LEGO deler.
   finch_beyond_longdescription: The Finch er en ny robot for informatikk utdanning.
@@ -1840,28 +1869,5 @@
   infinity_shortcode: inf
   playlab_shortcode: spel av
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game
