@@ -38,8 +38,9 @@ video_player: true
   - facebook = {u: url}
   - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} @codeorg"}
   =view :display_video_thumbnail, id: 'athletes_video', video_code: yt_code, play_button: 'center', facebook: facebook, twitter: twitter, download_path: download_link, letterbox: 'false'
-  %a{href: "#featured-athletes"}
-    See featured athletes
+  - if page_mode == "feature-athletes"
+    %a{href: "#featured-athletes"}
+      See featured athletes
 .tutorials-container
   %div.image-collection
     %h2= I18n.t(:sports_title)
