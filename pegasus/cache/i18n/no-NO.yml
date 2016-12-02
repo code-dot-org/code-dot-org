@@ -33,7 +33,7 @@
   twentyhours_heading: Prøv vår introduksjon til koding
   twentyhours_text: Fullført din første kodetime? Lær mer grunnleggende koding og
     programmering i dette oppfølgingskurset.
-  og_title: Hvert eneste barn fortjener en mulighet
+  og_title: Alle kan lære
   og_description: Alle elever i alle skoler fortjener mulighet til å lære seg å programmere.
     Det forandrer alt.
   csedweek_og_title: Kodetimen kommer
@@ -56,7 +56,7 @@
   csedweek_map_search_reset: Nullstill
   csedweek_map_legend_title: Legende
   csedweek_map_legend_event: Kodetimen-arrangement
-  csedweek_map_legend_cs_tech_jam: CS Tech Jam
+  csedweek_map_legend_cs_tech_jam: Spesialarrangement
   cded_sign_up: Meld deg på
   cded_try_it: Prøv
   try_now: Prøv nå
@@ -358,6 +358,7 @@
   homepage_action_text_volunteers: Tekniske frivillig søkes
   homepage_action_text_codevideo: Se videoen
   homepage_action_text_teachervideo: Se videoen
+  homepage_action_text_watchvideo: Se videoen
   homepage_action_text_girlvideo: Inspirere en jente
   homepage_action_text_learn: Begynne å lære
   homepage_action_text_signpetition: Signér oppropet
@@ -505,7 +506,31 @@
   minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoft YouthSpark</a>
     tilbyr gratis verktøy og ressurser for å følge dine interesser.
   minecraft_subtitle: Kodetimen med Minecraft
+  sports_page_title: Kodetimen med sport
+  sports_og_title: Kodetimen Sport-oppgaver
+  sports_og_description: Velg mellom kodeoppgaver i basketball eller andre idretter.
+  sports_title: Kode ditt eget sportsspill
+  sports_watch_video: Se videoen
+  sports_video_title: Alle kan lære.
+  sports_select_theme: Velg ditt opplæringstema
+  sports_basketball_title: Lag et basketball-spill
+  sports_all_sports_title: Kode dim egen sport
   watch_inspirational_videos: Før du begynner, se en av disse videoene og la deg inspirere
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspirere en jente
+  video_title_cs_intro: informatikk-introduksjon
+  video_title_schools_dont_teach: Det skoler flest ikke underviser
+  video_title_obama: President Obama om informatikk
+  video_title_hoc_is_here: Kodetimen er her - alle kan lære
+  video_title_anybody_can_learn: Alle kan lære
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: Snakker du et annet språk?
   help_translate: Hjelp oss å oversette.
   no_internet: Har du ikke internett?
@@ -935,6 +960,7 @@
   dashboard_announce_learn_more_button: Lær mer
   dashboard_announce_try_now_button: Prøv nå
   dashboard_announce_host_an_hour_button: Inviter til en kodetime
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: Som lærer, er du del av en bevegelse som ønsker å gi
     alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på
     tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning,
@@ -959,11 +985,15 @@
     Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
     De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
     spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime.
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
+  dashboard_announce_hoc_scaling_progress: Merk at vi ikke lagrer elevenes progresjon
+    i dette kurset fra 3. - 11. desember på grunn av mengden trafikk på våre sider
+    under Kodetimen-uka. Du kan fortsatt se elevenes progresjon fra før 3. desember.
+    Etter denne uka kommer vi til å gå tilbake til å lagre progresjon som normalt.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
   host_an_hour: Hold en Kodetime
@@ -1782,12 +1812,12 @@
     for å kontrollere heltene dine, navigere labyrinter, beseire troll, lure fiender,
     og rednings allierte! Lær Javascript i dette HTML 5 web spillet for nybegynnere.
   codea_beyond_longdescription: Codea for iPad lar deg lage spill og simuleringer
-    & ndash; eller bare noen visuelle begrep som du har. Gjør dine tanker til interaktive
-    kreasjoner som gjør bruk av iPad funksjoner som Multi-Touch og akselerometer.
-    Vi tror Codea er den vakreste kode editor du vil bruke, og det er enkelt. Codea
-    er laget for å la deg berøre koden din. Ønsker du å endre et nummer? Bare trykk
-    og dra den. Hva med en farge, eller et bilde? Tapping vil bringe opp visuelle
-    redaktører som lar deg velge akkurat hva du vil.
+    &mdash; eller bare visualisere ideer du har. Gjør dine tanker til interaktive
+    kreasjoner som gjør bruk av iPad-funksjoner som Multi-Touch og akselerometer.
+    Vi synes Codea er den vakreste måten man kan lage kode på, samtidig som det er
+    enkelt. Codea er laget slik at du kan ta på koden din. Vil du du forandre på et
+    tall? Bare trykk og dra det. Hva med en farge, eller et bilde? Pek på dem for
+    å hente frem visuelle redigeringsfunksjoner som lar deg velge akkurat hva du vil.
   lego_beyond_longdescription: Lag små, tilpassede og programmerbare roboter ved hjelp
     LEGO deler.
   finch_beyond_longdescription: The Finch er en ny robot for informatikk utdanning.
@@ -1827,28 +1857,5 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game

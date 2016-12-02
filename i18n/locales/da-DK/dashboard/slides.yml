@@ -417,7 +417,7 @@ da:
         text: "I computerspil er der en begivenhed som hedder \"Opdater\", og det sker 30 eller 60 gange i sekundet. For computerspilprogrammører, er det en begivenhed, som næsten er vigtigere som end knapperne eller joysticket."
       6:
         image: 'notes/C1_bigevent_unplugged_6.png'
-        text: "The main event we're watching for is that \"Update\" tick happening. And then we check the joystick in the tick. So we say, \"Oh, has somebody pushed the button this frame? Yes or no?\" Without events, the player couldn't move, you couldn't jump, you wouldn't be able to control what's going on. The videogame wouldn't be able to animate anything."
+        text: "Den vigtige hændelse vi venter på er at \"Update\" ticket finder sted. Og derefter tjekker vi joysticket i ticket. Så vi siger, \"Hov, har nogle trykket på knappen i dette frame? Ja eller nej?\" Uden hændelser, kan spilleren ikke bevæge sig, han kunne ikke hoppe, han ville ikk være i stand til at styre, hvad der sker. Spillet ville ikke være i stand til at animere noget som helst."
     C1_building_foundation:
       1:
         image: 'notes/C1_building_foundation_1.jpg'

@@ -589,7 +589,7 @@ es:
       Course 4 Artist For Loops 8a_instruction: "La línea mas pequeña de este espiral cuadrado es 10, el mas largo es 200, y cada línea es 10 píxeles mas larga que la anterior. ¿Puedes llenar los bloques faltantes para completar este sorprendente dibujo?"
       Course 4 Artist For Loops 9_instruction: "¿Puedes hacer un espiral? avanza de 1 a 75 píxeles, incrementando de  1 a 1 píxeles."
       Course 4 Artist For Loops Challenge_instruction: "Con todas las cosas que ha aprendido, podrías decir como se hizo esta imagen?\\r\n\\r\nNecesita una ayuda? Presione aquí."
-      Course 4 Artist For Loops Challenge_a_instruction: "Can you figure out how\nto use all of the things you've learned to create this image?\\r\n\\r\nNeed\na hint? Click here."
+      Course 4 Artist For Loops Challenge_a_instruction: "Puedes descubrir como utilizar las cosas que has aprendido para crear esta imagen\\r\n\\r\nNecesitas una pista? Presiona aquí."
       Course 4 Artist For Loops inspire_instruction: 'Inspiración de juego libre: Ahora has aprendido todo lo que necesitas saber para hacer un patrón como este! Si te inspira esta imagen, tratar de hacer algo similar. De lo contrario, crea algo por tu cuenta. \r \r quieres saber cómo se hizo nuestro patron de inspiración? Visita https://studio.code.org/c/106387604 para la solución.'
       Course 4 Artist Functions 1_instruction: "¿Puedes dibujar en cuadrado que tiene 100 píxeles de longitud, utilizando un circuito?"
       Course 4 Artist Functions 10_instruction: "¿Cúal bloque necesitas agregar para conseguir que el triángulo se ubique en la cima del cuadrado?"
