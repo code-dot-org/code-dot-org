@@ -213,7 +213,7 @@ const TutorialDetail = React.createClass({
               >
                 {!this.props.disabledTutorial && (
                   <a
-                    href={this.props.item.launch_url}
+                    href={this.props.item.url}
                     target="_blank"
                     onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
                   >
@@ -247,7 +247,7 @@ const TutorialDetail = React.createClass({
                   )}
                   {!this.props.disabledTutorial && (
                     <a
-                      href={this.props.item.launch_url}
+                      href={this.props.item.url}
                       target="_blank"
                       onClick={this.startTutorialClicked.bind(this, this.props.item.short_code)}
                     >
