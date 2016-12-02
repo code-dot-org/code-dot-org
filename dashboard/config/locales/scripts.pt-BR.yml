@@ -1,4 +1,4 @@
-"pt-BR":
+"pt":
   data:
     script:
       name:
@@ -2452,10 +2452,10 @@
         basketball:
           stage:
             Bounce: Pingue-pongue
-          title: Basketball
+          title: Fazer um jogo de basquete
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Fazer um jogo de basquete
+          description: Fazer um jogo de basquete
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2758,8 +2758,8 @@
             Sports: Esportes
           title: Esportes
           description_audience: ''
-          description_short: Codifique o seu próprio esporte
-          description: ''
+          description_short: Esportes
+          description: Esportes
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Bem-vindo!

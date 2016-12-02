@@ -15,21 +15,21 @@
       2-3 Artist 7_instruction: "Fullfør å tegne den høyre siden av det siste vinduet. Hver firkant i vinduet er 25 piksler. "
       2-3 Artist 8_instruction: "Fullfør rommene for alle dyrene ved å dele rektangelet inn i 2 like firkanter. Rektangelet er 200 piksler brede, og 100 piksler høye."
       2-3 Artist 9 NEW_instruction: "Fullfør denne dragen"
-      2-3 Artist 9 REPLACEMENT_instruction: "Ferdiggjør tegningene av disse trappene!"
+      2-3 Artist 9 REPLACEMENT_instruction: "Tegn ferdig disse trappene!"
       2-3 Artist 9_instruction: "Fullfør denne dragen"
       2-3 Artist Assessment 1_instruction: 'Lekse: Fullfør å tegne den siste tannen, 25 piksler bred og 25 piksler høy.'
       2-3 Artist Debugging 1_instruction: "Kan du lage denne luen med en topp lengde 100?"
-      2-3 Artist Debugging 10_instruction: "Retnings kontrolleren er for smal. Hint: Gjør den bredere med 10 piksler"
-      2-3 Artist Debugging 11_instruction: "Hjelp meg å fullføre det vidunderlige snøflaket mitt. Hvor mange ganger må jeg repetere for å fullføre det?"
+      2-3 Artist Debugging 10_instruction: "Retnings-kontrolleren er for smal.\\r\n\\r\nHint: Gjør den bredere med 10 piksler.\\r"
+      2-3 Artist Debugging 11_instruction: "Snøfnugget mitt faller fra hverandre!\\r\n\\r\nKan du finne ut hva som går galt?"
       2-3 Artist Debugging 12_instruction: "Jeg skal legge til en bølge i denne scenen. Kan du hjelpe meg?"
-      2-3 Artist Debugging 2_instruction: "Koden for tre kinnskjeggsom du ser er feil. Hint: Hvert kinnskjegg er 75 piksler langt. Fiks koden som tegner kinnskjegget."
+      2-3 Artist Debugging 2_instruction: "Koden for kattens værhår er feil.\n\\r\n\\r\nHint: Fiks koden slik at alle værhårene har samme lengde."
       2-3 Artist Debugging 3_instruction: "Båten min har ett hull! Kan du fikse det ved å endre vinkelen til linjen? Hint: Den siste vinkelen er feil med 15 grader."
       2-3 Artist Debugging 4_instruction: "Hva er bildet som vi prøver å tegne? Fullfør å koble prikkene sammen med riktige linjer og vinkler."
       2-3 Artist Debugging 5_instruction: "Denne koden for benet og foten som du ser er feil. Hint: Foten er for lang. Vi må kansje slette et steg (ordspill ment)"
       2-3 Artist Debugging 6_instruction: "Ser ut som om jeg sitter på en stol som mangler ett ben. Refiger blokker fpr å få benet."
       2-3 Artist Debugging 7_instruction: "Ser ut som om C-en i \"Code\" er tegnet feil vei. Kan du får den til å se ut som en C?"
       2-3 Artist Debugging 8_instruction: "Hjulet mitt er ikke fullført. Hvor mange ganger må jeg repetere for å fullføre det?"
-      2-3 Artist Debugging 9_instruction: "Koden for denne stammen er feil. Hint: Vinkelen er feil med 60 grader"
+      2-3 Artist Debugging 9_instruction: "Noe er feil!\\r\n\\r\nKan du fikse koden slik at kunstneren tegner stammen riktig?"
       2-3 Artist Debugging Assessment 1_instruction: 'Denne formen er for liten. Kan du gjøre den større? Hint: Den skal være 75 piksler større på hver side.'
       2-3 Artist Free Play_instruction: "Åpent brett! Tegn det du vil."
       2-3 Artist Functions 1_instruction: "Hallo. Meg zombie artist. Meg tegne elsker! Hjelp meg med å tegne de firkantete brillene. Hint: mellomrommet mellom brilleglassene er 25 piksler kortere enn lengden på firkantene."
@@ -43,7 +43,7 @@
       2-3 Artist Functions 3_instruction: "Rediger funksjonen for å tegne en firkant med sider som er 115 piksler lange og tegn i stedet større ruter. Rutene er nå 45 piksler fra hverandre."
       2-3 Artist Functions 4_instruction: "Bruk \"gjenta\" blokken til å tegne disse 3 rutene."
       2-3 Artist Functions 7_instruction: 'Bruk funksjonen "tegn et hus" for å tegne to hus med to forskjellige parametere. (Hint: det første huset er 100 piksler).'
-      2-3 Artist Functions 9_instruction: Her er funksjon for snøflak. Prøv deg frem med den for å lage en vinterscene. Dette er et åpent nivå så det er ingen oppgaver å løse. Ha det gøy!
+      2-3 Artist Functions 9_instruction: Her er en funksjon for snøflak. Bruk den til å lage en vinterscene. Her er det fritt frem, så det er ingen oppgaver å løse. Ha det gøy!
       2-3 Artist Loops 1_instruction: "Kan du lage en sekskant med sider som er 100 piksler lange for å fullføre cellen. Husk at det betyr at du da kun trenger å snu 60 grader."
       2-3 Artist Loops 10_instruction: "Hva skjer med designet dersom vi halverer lengden av det siste steget?"
       2-3 Artist Loops 11_instruction: "Nå skal vi lage *enda en* løkke rundt hele skapelsen! Ikke glem å legge til en vinkel på slutten av den ytre sløyfen."
@@ -75,7 +75,7 @@
       2-3 Artist Nested Loops 3_instruction: "For å tegne dette mønsteret må du repetere triangelet 12 ganger. Del antall grader i en sirkel (360)"
       2-3 Artist Nested Loops 4_instruction: 'Repeter denne diamanten 12 ganger for å tegne en blomst. Tips: 12 diamanter er akkurat likt de 12 triangelen du laget sist. Hvor mye må du snu etter hver figur?'
       2-3 Artist Nested Loops 5_instruction: "Tegn inn vinduene i denne bygningen med løkke i løkke. Vinduene er 20 pixler brede og med 20 pixler mellom hvert vindu."
-      2-3 Artist Nested Loops 6_instruction: "Dinosauren har 8 tagger langs halen sin; hver tagg er 30 pixler lang. Gjenta triangelet 8 ganger men pass på å beveg deg fremover etter hver."
+      2-3 Artist Nested Loops 6_instruction: "Dinosauren har 8 tagger langs halen sin; hver tagg er 30 pixler lang. Gjenta triangelet 8 ganger men pass på å bevege deg fremover etter hver tagg!"
       2-3 Artist Nested Loops 7_instruction: "Gjenta dette triangelet 10 ganger for å tegne solen. Du må bevege deg og snu deg etter hvert triangel.  Du finner ut hvor mye du må snu deg ved å dele antall grader i en sirkel på antallet figurer som den består av."
       2-3 Artist Nested Loops 8_instruction: "Nå skal vi legge til litt gress på bildet.  Det er 50 pixler mellom hver gresstust."
       2-3 Artist Nested Loops 9_instruction: "Vi avslutter dette bildet ved å legge til en blomst. Repeter diamanten 12 ganger for å tegne blomsten."
@@ -1408,7 +1408,7 @@
       grade2_PuppyLoops_5_instruction: "Få meg til grisen."
       grade2_PuppyLoops_6_instruction: "Loops even work with more than one block\ninside!  Can you loop this sequence to get me to the pig?"
       grade2_PuppyLoops_7_instruction: "Få meg til solsikken!"
-      grade2_PuppyLoops_8_instruction: "Koden for tre kinnskjeggsom du ser er feil. Hint: Hvert kinnskjegg er 75 piksler langt. Fiks koden som tegner kinnskjegget."
+      grade2_PuppyLoops_8_instruction: "Koden for kattens værhår er feil.\n\\r\n\\r\nHint: Fiks koden slik at alle værhårene har samme lengde."
       grade2_PuppyLoops_9_instruction: "Ser ut som om C-en i \"Code\" er tegnet feil vei. Kan du får den til å se ut som en C?"
       grade3_AboutMyRobot_1_instruction: "Make your robot say \"Hello!\" when the\nbutton is clicked."
       grade3_AboutMyRobot_2_instruction: "Edit the code so that when the second bird\nis clicked, your program plays a sound!"
@@ -2080,7 +2080,7 @@
       NEW Course 4 Artist Params 9_instruction: Klikk "Rediger" for å fylle ut funksjonen til "tegn en firkant" og legg til en parameter. Det vil kreve en lengdeparameter, akkurat som i trekanten. Tegn nå 3 kvadrat med 25, 50 og 75 piksler i lengde, alle 100 piksler fra hverandre.
       NEW Course 4 Artist Params inspire_instruction: 'Inspirasjon til fritt spill: Du har nå lært alt du trenger å vite for å lage et mønster som dette! Hvis dette bildet inspirerer deg, kan du prøve å lage noe lignende, ellers du kan skape noe helt eget. \r \r Vil du vite hvordan vårt inspirasjonsmønster ble laget? '
       NEW Course 4 Artist Vars 1.5_instruction: "Ta en titt på koden. Ser du hvordan \"Angi lengde\"-blokka og \"lengde\"-blokkere fungerer sammen? Klikk \"Kjør\" for å se hva som skjer. "
-      NEW Course 4 Artist Vars 12_instruction: "Endre denne algoritmen bruker variabelen \"sider\" i stedet for et for å tegne en trekant. Erstatt nummer 5 med variabelen \"sider\", og bruk \"Angi sider\"-blokk."
+      NEW Course 4 Artist Vars 12_instruction: "Nå kan du lage samme algoritme som i forrige nivå og lage en femkant der sidene har lengde 150."
       NEW Course 4 Artist Vars 2.5_instruction: "Ta en titt på koden. Ser du hvordan \"Angi lengde\"-blokka og \"lengde\"-blokkere fungerer sammen? Klikk \"Kjør\" for å se hva som skjer. "
       NEW Course 4 Artist Vars 2_instruction: "Dra en nummer blokk til \"Angi lengde\" blokken får å tegne et sett med 50 pixel store trekanter. "
       NEW Course 4 Artist Vars 4 5_instruction: "Fantastisk jobb på den forrige oppgaven! La oss lage dette kule designet på sekskanter med 60 piksler lange sider."

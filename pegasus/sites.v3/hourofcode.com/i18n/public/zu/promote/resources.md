@@ -64,7 +64,7 @@ nav: promote_nav
 
 ## Cela isikole sakho, umcashi okanye izihlobo ukuba zibhalise:
 
-Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wonke jikelele. But fewer than half of all schools teach computer science. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu. Uma uzwile ngeHora loKufingqwa ngaphambilini, kungenzeka uyazi ukuthi yenza umlando. Badlulele kukhulu lezigidi abafundi abasebezame iHora loKufingqwa.
+Amakhompyutha atholakala kuyo yonke indawo, ekushintsheni imboni zonke mhlaba wonke jikelele. Kodwa zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu. Uma uzwile ngeHora loKufingqwa ngaphambilini, kungenzeka uyazi ukuthi yenza umlando. Badlulele kukhulu lezigidi abafundi abasebezame iHora loKufingqwa.
 
 NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
 
@@ -80,7 +80,7 @@ Qalisa ku http://hourofcode.com/<%= @country %>
 
 **Umugqa kuncike:** Isokole sendawo sizibandakanya kumsebenzi wokwenziwa ukwazisa abafundi kukhompyutha sayensi
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Amantombazane kanye nabangamelwanga abamelwanga kumakilasi ekhompyutha sayensi ngendlela efanele, kanye nakumbhoni yethekhi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
+Amakhompyutha akhona kuyonke indawo, ashinstha kumabhizinisi umhlaba wonke, kodwa ayicosana kusigamu sezikole ezifundisa ikhompwutha sayensi. Amantombazane kanye nabangamelwanga abamelwanga kumakilasi ekhompyutha sayensi ngendlela efanele, kanye nakumbhoni yethekhi. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
 
 NgeHora loKufingqwa, ikhompyutha sayensi ibivele kukhasikhaya akwa Google, MSN, Yahoo! Kanye neDisney. Badlulele kukhulu abahlanganyeli abese bazibandakanya ukuzosingatha lomnyakazo. Izitolo zonke zaka apula emhlabeni zibambe umcimbi weHora loKufingqwa. Umongameli u-Obama ubhale umugqa wakhe wokufingqwa kokuqala njengengxenye yomkhankaso.
 
@@ -104,9 +104,9 @@ Ngithokozela ukuxhumana njalo.
 
 Bazali abathandekayo,
 
-Sihlala kumhlaba ozungezwe yithekhinoloji. Kanti siyazi ukuba noma kuyiphi inkambu abafundi yethu abazokhetha ukuya kuyo ebudaleni babo, ikhono lwabo lokuphumelela lizonqika kakhulu ekuqondeni kwabo ukuba ithekhinoloji isebenza kanjani.
+Sihlala kumhlaba ozungezwe yithekhinoloji. Kanti siyazi ukuba noma kuyiphi inkambu abafundi bethu abazokhetha ukuya kuyo ebudaleni babo, ikhono lwabo lokuphumelela lizonqika kakhulu ekuqondeni kwabo ukuba ithekhinoloji isebenza kanjani.
 
-But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
+Kodwa kungabambalwa kithi abafundayo **indlela** ithekhinoloji iyasebenza. Kungesodwa isikole kwezine esifundisa ikhompyutha thekhinoloji. Zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi.
 
 Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
 
@@ -128,7 +128,7 @@ Othandekayo [Mphathi Dolobha/Umkhulumeli/Umbusi ISIBONGO]:
 
 Uthi bewazi ukuba ezekhompyutha #1 umthombo wezenkokhelo eU.S.? Idlulele ku 500,000 imisebenzi yezekhompyutha evulekile izwe lonke, kodwa unyaka odlule abafundi abatheswe iziqu zokuba basebenze bangu 42,969 kuphela.
 
-Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Ikhompyutha sayensi iyisisekelo yawo *wonke* umkhakha namhlanje. Kodwa 75% yezikole ziyayifundisa. Ku [IGAMA LESIKOLE], sizama ukushintsha lokho.
 
 Yingakho isikole sethu sonke bazibandakanya kumcimbi wokufunda omkhulu kumlandu: IHora loKufingqwa, ngeViki leMfundiso yeKhompyutha Sayensi (%=usuku_umkhankaso('olugcwele') %>). Badlulele kusigidi samakhulu abafundi umhlaba wonke abase bezame iHora loKufingqwa.
 

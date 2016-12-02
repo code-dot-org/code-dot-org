@@ -369,6 +369,7 @@
   homepage_action_text_volunteers: Teastaíonn saorálaithe teicniúla uainn
   homepage_action_text_codevideo: Féach ar an bhfíseán
   homepage_action_text_teachervideo: Féach ar an bhfíseán
+  homepage_action_text_watchvideo: Féach ar an bhfíseán
   homepage_action_text_girlvideo: Cuir misneach ar chailín
   homepage_action_text_learn: Tosaigh ag foghlaim
   homepage_action_text_signpetition: Sínigh an achainí
@@ -516,8 +517,32 @@
   minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
     provides free tools and resources to pursue your passion.
   minecraft_subtitle: An Uair Chódála Minecraft
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Féach ar an bhfíseán
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
   watch_inspirational_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
     seo
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Cuir misneach ar chailín
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: An bhfuil teanga eile agat?
   help_translate: Cabhraigh leis an aistriúchán.
   no_internet: Gan cheangal Idirlín?
@@ -977,6 +1002,7 @@
   dashboard_announce_learn_more_button: Tuilleadh eolais
   dashboard_announce_try_now_button: Bain triail as anois
   dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
     chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
     Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
@@ -1009,6 +1035,11 @@
     receives for the Hour of Code during this time.  You can still view student progress
     from before December 3.  We will go back to saving progress as usual after this
     week.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: Tá an Uair Chódála anseo - 8-14 Nollaig!
   code_sign_up: Cláraigh chun páirt a ghlacadh le linn Sheachtain an Oideachais Ríomheolaíochta
   host_an_hour: Host an hour
@@ -1934,28 +1965,5 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game

@@ -2166,10 +2166,10 @@ nn:
         basketball:
           stage:
             Bounce: Sprett
-          title: Basketball
+          title: Lag eit basketballspel
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Lag eit basketballspel
+          description: Lag eit basketballspel
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2430,10 +2430,10 @@ nn:
         sports:
           stage:
             Sports: Sport
-          title: Sport
+          title: Kode din eigen sport
           description_audience: ''
           description_short: Kode din eigen sport
-          description: ''
+          description: Kode din eigen sport
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Velkomen!

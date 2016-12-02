@@ -169,12 +169,9 @@
         bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
         bounce_11_basketball: 现在，你可以在"运行时"模块下附加模块了. 你必须在多个地方附加新的"扔新球"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分.
         bounce_12_basketball: "创建您自己的篮球游戏。您可以更改所有规则。单击完成，让朋友在手机上试试你的游戏。"
-        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
-          block and press "Run" to move the player to the flag.
-        bounce_2_sports: There are two flags now! Attach a block to the "when left
-          arrow" and "when right arrow" blocks to make your player move in two directions.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
+        bounce_1_sports: "到旗帜那儿！将一个模块附加到“当按左方向键时”模块，并点按“运行”以将玩家移动到旗帜那里。"
+        bounce_2_sports: "现在有两个旗帜了！将一个模块附加到“当按左方向键时”模块和“当按右方向键时”模块来让你的玩家向两个方向移动。"
+        bounce_5_sports: "冰球将至上而下地飞到玩家！将一个模块附加到“当球击中玩家”模块后来击打旗帜。"
         bounce_6_sports: 现在旗帜是在顶上。您需要将模块附加到这两个"当球击中"模块中以通过这关。
         bounce_7_sports: 将模块附加到每个"当"模块。弹起球，直到它击中旗帜。
         bounce_10_sports: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"模块来制作游戏。看看在对手获得两分前，你可以获得多少分。

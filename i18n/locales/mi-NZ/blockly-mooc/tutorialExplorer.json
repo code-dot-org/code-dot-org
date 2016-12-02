@@ -39,8 +39,8 @@
   "filterHeaderFilterBy":"Tātari Mā",
   "filterHeaderShowFilters":"Ngā Tātari",
   "filterHeaderHideFilters":"Hoatu",
-  "filterHeaderTutorialCountSingle":"1 te hua",
-  "filterHeaderTutorialCountPlural":"{tutorial_count} ngā hua",
+  "filterHeaderTutorialCountSingle":"1 te huanga",
+  "filterHeaderTutorialCountPlural":"{tutorial_count} ngā huanga",
   "filterHeaderDefault":"Kōmaka",
   "filterHeaderDisplayWeight":"Ngā mea e tino whakatauira ana",
   "filterHeaderPopularityRank":"Ngā mea e tino kaingākautia ana",
@@ -48,7 +48,7 @@
   "roboticsText":"He karetao āu? Whakamahia ēnei ngohe, ā, hangaia i tētahi Hour of Code mā ngā ākonga ahakoa te pakeke!",
   "tutorialSetNoTutorials":"Kāore tō rapunga i whai hua.\nTēnā, tangohia ētahi o ngā tātaringa kia kitea ētahi atu ngohe.",
   "tutorialDetailsTeacherNotes":"Ngā tuhipoka pouako",
-  "tutorialDetailsShortLink":"Hono poto",
+  "tutorialDetailsShortLink":"Honongaitua poto",
   "tutorialDetailInternationalLanguages":"Ngā Reo",
   "tutorialDetailStandards":"Standards",
   "tutorialDetailDisabled":"Kāore tēnei whakaakoranga i te wātea i tēnei wā.",
@@ -56,6 +56,6 @@
   "showAllTutorialsButton":"Whakaatu i ngā ngohe mō ngā reo maha",
   "hideAllTutorialsButton":"Huna i ngā ngohe mō ngā reo maha",
   "noTutorialsYourLanguage":"Karekau noa iho ētahi ngohe kua tuhia ki tō reo. Whakamātau i ngā ngohe i tētahi atu reo mā te pāwhiri i te pātene kei raro nei.",
-  "bottomGuidelinesLink":"Pāwhiri i konei kia kitea ā mātou paeru me ā mātou aratohu tāpaetanga mō ngā whakaakoranga Hour of Code.",
+  "bottomGuidelinesLink":"Pāwhiri i konei kia kitea ā mātou paearu me ā mātou aratohu tāpaetanga mō ngā whakaakoranga Hour of Code.",
   "bottomSpecialNeedsLink":"Pāwhiri i konei kia kitea he mōhiohio anō e pā ana ki te tautoko i ngā ākonga motuhake."
 }

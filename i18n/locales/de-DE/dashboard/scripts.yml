@@ -2166,10 +2166,10 @@ de:
         basketball:
           stage:
             Bounce: Bounce
-          title: Basketball
+          title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Make a basketball game
+          description: Make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2430,10 +2430,10 @@ de:
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: MCode your own sports game
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Mix and match across sports
+          description: Mix and match across sports
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Willkommen!

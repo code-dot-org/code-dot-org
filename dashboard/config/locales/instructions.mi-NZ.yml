@@ -5,185 +5,143 @@
         tāngia e au te aha rānei. Whakamahia ētahi paraka kia tā ahau ki runga i ngā
         rārangi kiwikiwi kei te pikitia. (100 pika te roa o ia rārangi)
       2-3 Artist 11_instruction: |
-        Give the stop sign a border by making an octagon
-        with 100 pixels sides. \r
+        Me whai taitapa te tohu tū, mā te hanga tapawaru 100 pika te roa o ia tapa. \r
         \r
       2-3 Artist 12_instruction: |-
-        Create a circle to finish the eyeball!\r
+        Waihangahia tētahi porohita hei whakaoti i te karu!\r
         \r
-        If
-        the artist turns 1 degree with each loop, how many times do you need to repeat
-        the code to draw a circle? 180? 360? 500?
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis
-        100, but the half-finished wall is only 50. Complete the wall. "
+        Mēnā ka huri 1 putu te rehetoi i ia koromeke, e hia anō ngā wā hei tōai i te waehere ki te tā porohita? 180? 360? 500?
+      2-3 Artist 2 new_instruction: 'Kua oti noa te huarua o tētahi o ngā pakitara
+        o tēnei whare. E 100 ia taha, engari e 50 te pakitara kāore anō i oti. Whakaotia
+        te pakitara. '
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100,
         but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 3.4_instruction: |-
-        The jump block moves the artist without drawing.
-        Draw the dashed line using both the `jump forward` and `move forward` blocks.
-        Each line is 50 pixels long.
-      2-3 Artist 3_instruction: |-
-        This hat is 100 pixels high. Draw a hat that is
-        70 pixels less.
+        Ka neke te paraka peke i te rehetoi me te kore tā.
+        Tāngia tētahi rārangi pīhono, e whakamahi ana i ngā paraka ‘peke whakamua’ me te ‘neke whakamua’.
+        50 pika te roa o ia rārangi.
+      2-3 Artist 3_instruction: E 100 pika te teitei o tēnei pōtae. Tāngia tētahi
+        pōtae e 70 pika iti iho i tēnā.
       2-3 Artist 3new_instruction: |-
-        The red hat is 100 pixels tall. Finish drawing
-        a black hat that is 70 pixels shorter. \r
-        (Note: The width of each hat is
-        50 pixels.)
-      2-3 Artist 4_instruction: Help me complete the house for this cat.
-      2-3 Artist 5_instruction: |-
-        Replace this code with a "repeat times" block
-        to draw the same house using only 3 blocks.
-      2-3 Artist 6_instruction: |-
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
-      2-3 Artist 7_instruction: "Finish drawing the last set of windows on the school\nso
-        that everyone in class can see outside. The sides of each square window\npane
-        are 25 pixels long. "
-      2-3 Artist 8_instruction: |-
-        Complete the rooms for each of the animals by splitting
-        the rectangle into 2 equal-sized squares. The rectangle is 200 pixels wide
-        and 100 pixels tall. There are many different ways to solve this puzzle, so
-        have some fun!
-      2-3 Artist 9 NEW_instruction: Finish this kite
-      2-3 Artist 9 REPLACEMENT_instruction: Finish drawing these stairs!
-      2-3 Artist 9_instruction: Finish this kite
-      2-3 Artist Assessment 1_instruction: |-
-        Assessment: Finish drawing the last tooth.
-        It is 25 pixels wide and 25 pixels tall.
-      2-3 Artist Debugging 1_instruction: |-
-        This hat should only be 50 pixels wide.  Can
-        you fix it?
+        E 100 pika te teitei o te pōtae whero. Whakaoti i te tānga o tētahi pōtae pango e 70 pika te poto iho i tēnā. \r
+        (Kia mataara: e 50 pika te whānui o ia pōtae)
+      2-3 Artist 4_instruction: "Āwhinatia mai te hanganga o te whare mō tēnei ngeru."
+      2-3 Artist 5_instruction: Whakakapia te waehere nei me tētahi paraka ‘ngā wā
+        tōai” ki te tā i te whare ōrite ki ngā paraka e 3.
+      2-3 Artist 6_instruction: 'Me whai tuanui tēnei whare! Tāngia tētahi tapatoru.
+        Hei tīwhiri: e ōrite ana ia tapa te roana o ngā tapa e toru.'
+      2-3 Artist 7_instruction: 'Tāngia kia oti te huinga matapihi whakamutunga kei
+        runga i te kura e āhei pai ai te katoa i te akomanga te titiro ki waho. 25
+        pika te roa o ia tapa matapihi tapawhā. '
+      2-3 Artist 8_instruction: Whakaotia ngā rūma o ia kararehe mā te wāwāhinga o
+        te tapawhā roa ki ngā tapawhā ōrite e 2. E 200 pika te whānui, ā, e 100 pika
+        te teitei i te tapawhā roa. He nui ngā ara e oti pai ai te panga nei, kia
+        nui te harikoa!
+      2-3 Artist 9 NEW_instruction: Whakaotia tēnei manu aute
+      2-3 Artist 9 REPLACEMENT_instruction: Tāngia ēnei arapiki kia oti!
+      2-3 Artist 9_instruction: Whakaotia tēnei manu aute
+      2-3 Artist Assessment 1_instruction: 'Aromatawai: Tāngia te niho whakamutunga
+        kia oti. E 25 pika te whānui, ā, e 25 pika te teitei.'
+      2-3 Artist Debugging 1_instruction: Tōna tikanga e 50 pika noa iho te whānui
+        o tēnei pōtae.  E taea rānei e koe te whakatika?
       2-3 Artist Debugging 10_instruction: |-
-        The direction pad on my game controller
-        is too narrow. \r
+        He tino whāiti te papa aronga o taku pūwhakahaere kēmu. \r
         \r
-        Can you make it wider by 10 pixels?\r
+        E taea rānei e koe te whakawhānui kia 10 pika nui ake?\r
         \r
-        Try running
-        the code first to see what's wrong.
+        Whakamātauhia te waehere e tika ai.
       2-3 Artist Debugging 11_instruction: |-
-        My snowflake is falling apart!\r
+        E ngahoro ana taku tarahī huka!\r
         \r
-        Can
-        you figure out what's going wrong?
-      2-3 Artist Debugging 12_instruction: |-
-        I'm supposed to add an ocean wave to
-        this scene.  Can you help me?
+        Ka taea rānei e koe te kite i te mate?
+      2-3 Artist Debugging 12_instruction: Ko te tikanga me tāpiri au i tētahi ngaru
+        moana ki tēnei tirohanga. E taea rānei e koe te āwhina mai?
       2-3 Artist Debugging 2_instruction: |-
-        This code for the cat's whiskers is wrong.
+        Kei te hē te waehere mō ngā kumikumi o te ngeru.
         \r
         \r
-        Fix this code to draw whiskers that are all the same length.
+        Whakatikahia tēnei waehere, tāngia ētahi kumikumi e ōrite ana te roa.
       2-3 Artist Debugging 3_instruction: |-
-        My boat has a hole! \r
+        He rua i tōku poti! \r
         \r
-        What do you
-        need to fix to make the ends meet?
+        He aha hei whakatika e hono anō ai ngā pito?
       2-3 Artist Debugging 4_instruction: |-
         What is the image that we're trying to
         draw? Finish connecting the dots using the proper lines and angles.
       2-3 Artist Debugging 5_instruction: |-
-        The code that we have for the leg and
-        foot is wrong. \r
+        E hē ana te waehere mō te waewae. \r
         \r
-        Can you fix it?
+        Ka taea rānei e koe te whakatika?
       2-3 Artist Debugging 6_instruction: |-
-        Looks like I'm sitting on a chair that’s
-        missing a leg!\r
+        Te āhua nei e noho ana au i tētahi tūru e mahue nei tētahi o ōna waewae!\r
         \r
-        Edit the code to draw the last leg.
+        Whakatikahia te waehere ka tāngia ai te waewae whakamutunga.
       2-3 Artist Debugging 7_instruction: |-
-        Looks like the C in code is drawn backwards!\r
+        Te āhua nei kua tāngia kōarohia te C i te waehere!\r
         \r
-        Can
-        you make it look like a C again?
+        Māu e whakatika kia C anō tōna hanga?
       2-3 Artist Debugging 8_instruction: |-
-        My teacher says that I should finish what
-        I start!\r
+        Ka kī mai taku kaiako, ki te tīmata me oti!\r
         \r
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Āwhinatia ahau ki te whakaoti i taku pinewīra. He aha pea te mate?
       2-3 Artist Debugging 9_instruction: |-
-        Something is off!\r
+        Kua hē katoa tētahi mea!\r
         \r
-        The code for
-        this stem is wrong. Can you figure out how to get the artist to trace the
-        stem the right way?
+        E hē ana waehere o tēnei rautō. Māu e whiriwhiri me pēhea te rehetoi e tuhi tika mai i te rautō?
       2-3 Artist Debugging Assessment 1_instruction: |-
-        Assessment: Why does this square
-        end up being 75 pixels too small on each side?  \r
+        Aromatawai: He aha rā te take ka mutu te tapawhā rite e 75 pika poto rawa i ia taha? \r
         \r
-        Where does the code
-        go wrong?
-      2-3 Artist Free Play_instruction: Free-play! Draw anything you'd like.
+        Kei hea kē te hē i te waehere?
+      2-3 Artist Free Play_instruction: He tākaro-herekore! Tāngia tāu e pai ai.
       2-3 Artist Functions 1_instruction: |-
-        "Me zombie artist. Me love drawing!"  \r
+        “He rehetoi kairoro au.  Pai ki a au te tā!”  \r
         \r
-        Help
-        the zombie draw square glasses.  \r
+        Āwhinatia te kairoro ki te tā mōhiti tapawhā.  \r
         \r
-        The bridge between the glasses is
-        25 pixels shorter than the width of the squares, which is 100 pixels.
-      2-3 Artist Functions 10_instruction: |-
-        Freeplay: Here are two functions, one
-        to draw a big gear and one to draw a small gear. Use them to draw the inside
-        of a machine!
+        E 25 pika iti iho te paeihu i te whānui o ngā tapawhā, arā, e 100 pika.
+      2-3 Artist Functions 10_instruction: 'Tākaro-herekore: Anei ētahi taumahi e
+        rua, kotahi hei tā niho rahi, ā, kotahi hei tā niho iti. Whakamahia hei tā
+        i te puku o tētahi pūrere!'
       2-3 Artist Functions 11.5_instruction: |-
-        Here's that same `draw a hexagon`
-        function. \r
+        Anei anō taua taumahi ‘tāngia he tapawaru’ ōrite. \r
         \r
-        What happens if you loop the main program 6 times, turning
-        60 degrees each time you loop?
+        Ka ahatia ina koromeketia te papatono matua e ono ngā wā, ka huri mā te 60 putu ia wā e koromeke ana?
       2-3 Artist Functions 11_instruction: |-
-        We've renamed the `draw a square` function
-        to `draw a hexagon`, but it's still giving us squares! Can you modify the
-        `draw a hexagon` function to draw a hexagon with 50 pixel sides? \r
+        Kua whakaingoatia anō te taumahi ‘tāngia he tapawhā ōrite’ ki te ‘tāngia he tapawaru’, engari, e tā tapawhā tonu ana! Ka taea rānei e koe te taumahi ‘ tāngia he tapawaru’ te whakahou e tā mai ai e ia tētahi tapawaru e 50 pika ia taha? \r
         \r
-        Draw
-        the image using the new function!
+        Tāngia tētahi atahanga e whakamahi ana i te taumahi hou!
       2-3 Artist Functions 12 Mike_instruction: |-
-        Functions are really great for drawing
-        complex things multiple times. \r
+        He rawe katoa ngā taumahi mō te tā āhuatanga matatini e maha ngā wā. \r
         \r
-        Can you use the `draw a flower` function
-        to fill the rest of the planter box?\r
-        The plants are all 100 pixels apart.
+        Ka taea rānei e koe te taumahi ‘tāngia he putiputi’ te whakamahi ki te whakakī i te toenga o te pouaka tipu?\r
+        100 pika kei waenga i ia tipu.
       2-3 Artist Functions 12_instruction: |-
-        Functions are really great for drawing
-        complex things multiple times. \r
+        He rawe katoa ngā taumahi mō te tā āhuatanga matatini e maha ngā wā. \r
         \r
-        Can you use the `draw a flower` function
-        to fill the rest of the planter box?\r
-        The plants are all 100 pixels apart.
-      2-3 Artist Functions 13_instruction: |-
-        We've provided you with four functions.
-        Use them any way you like inside of one or more loops to make pictures that
-        you can share with your friends. Press run to see an example.
+        Ka taea rānei e koe te taumahi ‘tāngia he putiputi’ te whakamahi ki te whakakī i te toenga o te pouaka tipu?\r
+        100 pika kei waenga i ia tipu.
+      2-3 Artist Functions 13_instruction: Anei, e hora ana ngā taumahi e whā māu.
+        Whakamahia ki tāu e rata ai, ki roto i ngā koromeke kotahi neke atu kia waihanga
+        mai he whakaahua hei tuari atu ki ō hoa. Pāwhiritia te "Whakahaere" kia kitea
+        mai tētahi tauira.
       2-3 Artist Functions 2_instruction: |-
-        Functions let you define new blocks! \r
+        Ko tā te taumahi he whakamahuki i ngā paraka hou! \r
         \r
-        We've
-        moved the blocks needed for drawing a square into a function called `draw
-        a square`. This time, use the `draw a square` function to create the glasses.
+        Kua nekehia e mātou ētahi paraka tā tapawhā hei taumahi ‘tāngia he tapawhā’. I konei, whakamahia te taumahi ‘tāngia he tapawhā’ ki te tā mōhiti. \r
         \r
-        \r
-        The squares are 75 pixels apart.
+        E 75 pika kei waenga i ia tapawhā.
       2-3 Artist Functions 3_instruction: |-
-        Edit the function to draw a square with
-        a side length of 115 to draw the bigger glasses. \r
-        \r
-        The squares are now
-        45 pixels apart.
-      2-3 Artist Functions 4_instruction: |-
-        Now, put the function inside of a loop
-        to draw these three squares.
+        Whakatika i te taumahi ki te tā i tētahi tapawhā he 115 te roa o tētahi taha kia nui ake ai ngā mōwhiti. \r.
+        \r.
+        E 45 pika kei waenga i ia tapawhā.
+      2-3 Artist Functions 4_instruction: Nā, meatia atu te taumahi ki roto i tētehi
+        koromeke hei tā i ngā tapawhā e toru nei.
       2-3 Artist Functions 7_instruction: |-
         Use the "draw a house" function to draw
         two houses using two different parameters. (Hint: the first house is 100 pixels).
       2-3 Artist Functions 9_instruction: |-
-        Freeplay: Here is a snowflake function.
-        Experiment with it to create a winter scene! This is a free play level, so
-        there is no puzzle to solve. Have fun!
+        Tākaro here-kore: Anei tētahi taumahi tarahī huka.
+        Rawekehia kia waihanga mai i tētahi tirohanga hōtoke! He taumata tākaro here-kore tēnei, kāore kau he panga hei whakaoti māu. Kia ngahau mai!
       2-3 Artist Loops 1_instruction: |-
         Can you make a hexagon with sides that are
         100 pixels long to finish the cell? Remember, that means that you will only
@@ -191,15 +149,14 @@
       2-3 Artist Loops 10_instruction: |-
         What happens to the design when we make our
         final step forward half as long?
-      2-3 Artist Loops 11_instruction: |-
-        Now let's put *another* loop around our
-        whole creation!  Don't forget to add an angle at the end of the outer loop.
+      2-3 Artist Loops 11_instruction: Meatia atu tētahi koromeke *anō* ki te katoa
+        o te tāu i hanga mai ai! Kaua e wareware ki te tāpiri i tētahi koki ki te
+        otinga o te koromeke o waho.
       2-3 Artist Loops 2_instruction: |-
         Now use a repeat block to make the cell a
         shell.
-      2-3 Artist Loops 4_instruction: |-
-        Want to see what happens when we repeat that
-        shape over and over again using a loop?
+      2-3 Artist Loops 4_instruction: E hiahia ana koe ki te mōhio ka aha mēnā ka
+        tōaitia rawatia tērā āhua mā te whakamahi koromeke?
       2-3 Artist Loops 5_instruction: |-
         Now let's make a small change to the loop
         and see how different our picture becomes.
@@ -209,412 +166,322 @@
       2-3 Artist Loops 7_instruction: |-
         We can use loops to make all kinds of polygons.  Can
         you create a rhombus inside this hexagon?
-      2-3 Artist Loops 8_instruction: Let's put both elements inside a loop.
+      2-3 Artist Loops 8_instruction: Kia meatia atu ngā pūmotu e rua ki roto i te
+        koromeke.
       2-3 Artist Loops 9_instruction: |-
         We're going to loop the same elements, but
         now we're going to add some distance between them.\r
         Use the same code as
         before, but add a step forward at the end of the outer loop.
-      2-3 Artist Loops New 1_instruction: |-
-        Let's draw this robot's head! Can you
-        make a square with sides that are 100 pixels?
-      2-3 Artist Loops New 10_instruction: |-
-        Now let's connect a bunch of V's together
-        in a loop.
-      2-3 Artist Loops New 11_instruction: |-
-        Rebuild the code from the last puzzle,
-        but this time, add a left turn of 30 degrees inside the loop. Now, repeat
-        it 24 times instead of 8.
+      2-3 Artist Loops New 1_instruction: Tāngia mai te upoko o te karetao nei! E
+        āhei ana koe ki te hanga mai i tētahi tapawhā he 100 pika ngā taha?
+      2-3 Artist Loops New 10_instruction: Me rauhī i tētahi huinga V hei koromeke
+        ināianei.
+      2-3 Artist Loops New 11_instruction: Hangaia anō te waehere i te panga whakamutunga,
+        engari i tēnei wā, tāpirihia te huri 30 putu kei roto i te koromeke. Ināianei,
+        tōaitia kia 24 ngā wā, kaua ko ngā wā e 8.
       2-3 Artist Loops New 12_instruction: |
-        Draw a diamond with sides of 100 pixels.
+        Tāngia tētahi taimana e 100 pika ōna taha.
       2-3 Artist Loops New 13_instruction: |-
-        We are going to start you with some code
-        (in grey) to make one diamond. \r
+        Ka tīmatahia koe ki ētahi waehere (he kiwikiwi) ki hanga i te taimana kotahi. \r
         \r
-        Loop the grey code to create a fun
-        pattern!
-      2-3 Artist Loops New 14_instruction: |-
-        Play around with the code for the diamond
-        and see what other patterns you can make. Try changing how many degrees you
-        turn and how many times you loop.
-      2-3 Artist Loops New 15_instruction: Draw something fun.
+        Koromekehia te waehere kiwikiwi ki te hanga i tētahi tauira ngahau!
+      2-3 Artist Loops New 14_instruction: Rāwekewekehia te waehere mō te taimana,
+        ā, whakamātauhia ētahi atu tauira. Tēnā, panonihia te nui o ngā putu hei huri,
+        ā, te maha o ngā wā hei koromeke.
+      2-3 Artist Loops New 15_instruction: Na, tāngia tāu i hiahia ai!
       2-3 Artist Loops New 2_instruction: |-
-        Here is the same puzzle that we just solved,
-        but this time, we can only use one `move forward` block and one `turn` block
-        this time.\r
+        Anei te panga ōrite kātahi anō ka oti i a tātou, engari i tēnei wā, e whakaaea noatia te paraka kotahi 'neke whakamua' me te paraka 'huri'.\r
         \r
-        Can you use a `repeat` to solve this puzzle?
-      2-3 Artist Loops New 9_instruction: |-
-        Draw a simple V (where both sides are
-        50 pixels) to complete the arrow.
-      2-3 Artist Match Hex Pic_instruction: 'Match:  Help finish the Hexagon.'
-      2-3 Artist Match Rho Pic_instruction: 'Match:  Finish the missing code.'
-      2-3 Artist Match Sq Pic_instruction: 'Match: Complete the missing code'
-      2-3 Artist Match Tri pic_instruction: 'Matching:  Fill in the missing code.'
-      2-3 Artist Nested Loops 1_instruction: |-
-        Put a `repeat` block around this whole
-        stack of code to draw the pattern.
-      2-3 Artist Nested Loops 10_instruction: |-
-        Loop this code 12 times to complete
-        the pattern.
-      2-3 Artist Nested Loops 11_instruction: |-
-        Loop this code 4 times to complete
-        the pattern, turn 90 degrees after each circle.
-      2-3 Artist Nested Loops 12_instruction: |-
-        Loop this code 12 times to complete
-        the curls.
+        E taea rānei e koe te paraka 'tōai' ki te whakaoti i te rapanga?
+      2-3 Artist Loops New 9_instruction: Tāngia tētahi V noa (e 50 pika ia taha)
+        hei whakaoti i te pere.
+      2-3 Artist Match Hex Pic_instruction: 'Whakataurite: Āwhinatia te whakaoti i
+        te tapaono.'
+      2-3 Artist Match Rho Pic_instruction: 'Whakataurite: Whakamutua te waehere e
+        ngaro ana.'
+      2-3 Artist Match Sq Pic_instruction: 'Whakataurite: Whakaotia te waehere e ngaro
+        ana'
+      2-3 Artist Match Tri pic_instruction: 'Whakataurite: Whakakīia te waehere e
+        ngaro ana.'
+      2-3 Artist Nested Loops 1_instruction: Meatia tētahi paraka 'tōai' e karapoti
+        ana i tēnei putunga waehere hei tā i te tauira.
+      2-3 Artist Nested Loops 10_instruction: Koromekehia tēnei waehere kia 12 ngā
+        e oti pai ai te tauira.
+      2-3 Artist Nested Loops 11_instruction: Koromekehia tēnei waehere kia 4 ngā
+        wā e oti pai ai te tauira, ka huri 90 putu i muri i ia porowhita.
+      2-3 Artist Nested Loops 12_instruction: Koromekehia tēnei waehere kia 12 ngā
+        wā e oti pai ai ngā tōrinorino.
       2-3 Artist Nested Loops 2_instruction: |-
-        Now loop the triangle 6 times. \r
+        Koromekehia ināianei te tapatoru kia 6 ngā wā. \r
         \r
-        After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
+        Hei muri i ia tapatoru, i mua i tānga o muri atu, me huri 60 putu.
       2-3 Artist Nested Loops 3_instruction: |-
-        You'll need to loop the triangle 12
-        times to draw this pattern. \r
+        Me koromeke koe i te tapatoru kia 12 ngā wā hei tā i te tauira. \r
         \r
-        Divide the number of degrees in a circle
-        (360) by the number of shapes you're drawing (12) to figure out how far to
-        turn after each shape.
+        Whakawehea ngā putu o te porowhita (360) ki te maha o ngā āhua e tā ana (12) e mōhio ai koe te nui o te huri hei muri i ia āhua.
       2-3 Artist Nested Loops 4_instruction: |-
-        Loop this diamond 12 times to draw
-        a flower!\r
+        Koromekehia tēnei taimana kia 12 ngā wā hei tā i tētehi putiputi. \r
         \r
-        Note: We'll use the same angle to loop 12 diamonds as we
-        did for 12 triangles.  \r
-        How much do you need to turn after each shape?
+        Kia mataara: Ka whakamahia e tātou ngā putu ki te koromeke i ngā taimana 12 pēnā i ngā tapatoru 12. \r
+        He pēhea te nui o te huri hei muri i ia āhua?
       2-3 Artist Nested Loops 5_instruction: |-
-        Fill in this building's windows using
-        a nested loop. \r
+        Whakakīia ngā matapihi o tēnei whare ki tētahi koromeke tauroto. \r
         \r
-        The windows are 20 pixels long and 20 pixels apart.
+        E 20 pika te roa o ia matapihi, ā, e 20 pika kei waenganui i ia matapihi.
       2-3 Artist Nested Loops 6_instruction: |-
-        This dinosaur has 8 spikes running
-        up its tail.\r
-        Each spike is 30 pixels long. Loop the triangle 8 times, but
-        make sure to jump forward after each one!
+        E 8 ngā koi i waero o te mokoweri. \r
+        E 30 pika te roa o ia waero. Koromekehia te tapatoru kia 8 ngā wā, engari me peke whakamua i muri i ia koi!
       2-3 Artist Nested Loops 7_instruction: |-
-        Loop this triangle 10 times to draw
-        the sun. \r
+        Koromekehia tēnei tapatoru kia 10 ngā wā hei tā i te rā. \r
         \r
-        You'll need to move and turn after each triangle. \r
+        Me neke, me huri hoki hei muri i ia tapatoru. \r
         \r
-        You
-        can figure out how much to turn by dividing the number of degrees in a circle
-        by the number of triangles that make it up.
+        Māu anō e wānanga ka pēhea te nui o te huri mā te whakawehe ki te rahi o ngā putu o te porohita, mā te maha o ngā tapatoru hei hanga.
       2-3 Artist Nested Loops 8_instruction: |-
-        Now let's add some grass to our picture.
+        Ināianei me tāpiri i te pātītī ki tō whakaahua.
         \r
         \r
-        Each tuft of grass is 50 pixels apart.
+        E 50 pika te tawhiti o tētehi rake i tētahi.
       2-3 Artist Nested Loops 9_instruction: |-
-        We'll finish this picture by adding
-        our flower. \r
+        Ka mutu tā tātou whakaahua i te tāpiritanga o tā tātou putiputi. \r
         \r
-        Loop the diamond 12 times to draw the flower.
-      2-3 Artist Nested Loops Free Play_instruction: |-
-        Free play, draw something cool
-        with nested loops.
-      2-3 Bee Conditionals 1_instruction: |-
-        Hi! I'm a bee. Help me get nectar from
-        the flower.
+        Koromekehia te taimana kia 12 ngā wā hei tā i te putiputi.
+      2-3 Artist Nested Loops Free Play_instruction: He tākaro here-kore, tāngia tētahi
+        mea rawe ki ētahi koromeke tauroto.
+      2-3 Bee Conditionals 1_instruction: Kia ora! He pī ahau. Āwhina mai i ahau ki
+        te tiki waihonga i te putiputi.
       2-3 Bee Conditionals 10_instruction: |
         Purple flowers may have either 1 or 0
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
         have any.\r
-      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
-        fly around the yard and collect nectar only from the flowers that have\nsome. "
-      2-3 Bee Conditionals 12_instruction: |-
-        Help me find all of the nectar using
-        as few blocks as possible!
+      2-3 Bee Conditionals 11_instruction: "He aha kei waho rā? \\r\n\\r\nĀwhinatia
+        mai taku rere i te iari ki te kohi waihonga i ngā putiputi whai waihonga. "
+      2-3 Bee Conditionals 12_instruction: "Āwhinatia mai taku rapu i ngā waihonga
+        katoa mā te whakamahinga o ngā paraka iti rawa e taea!"
       2-3 Bee Conditionals 13_instruction: |-
-        There's a lot happening here!\r
+        Te huhua hoki o ngā kaupapa e haere ana! \r
         \r
-        Use
-        what you've learned to collect all of the nectar and then make the honey.
+        Whakamātauhia tāu i ako ai ki te kohi i te katoa o te waihonga, kātahi nā ka mahi miere.
       2-3 Bee Conditionals 14_instruction: |-
-        Let's put everything together!\r
+        Kāti rā, kāpuia! \r
         \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  Don't forget to make honey at the end.
+        Whakamātauhia tāu i ako ai ki te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea. Kei wareware ki te mahi miere i te mutunga.
       2-3 Bee Conditionals 15_instruction: |-
-        This stair step pattern should look familiar.  \r
+        Ko te tikanga e mōhio whānui ana te tauira o te whata arapiki nei. \r
         \r
-        Can
-        you collect nectar only from the flowers that have some, using as few blocks
-        as possible?
+        Ka taea rānei e koe te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea?
       2-3 Bee Conditionals 2_instruction: |-
-        I'm a hungry bee! \r
-        Help me collect
-        all of the nectar from the flowers using the fewest number of blocks.
-      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
-        collect the nectar and make the honey using as few blocks as you can.  "
-      2-3 Bee Conditionals 4_instruction: |-
-        Help me collect all of the nectar from
-        the flowers and make all the honey.
-      2-3 Bee Conditionals 5_instruction: |-
-        Be careful not to collect nectar from
-        a purple flower if it doesn't have any. \r
-        You must first check if the nectar
-        is equal to 1 using the `if nectar` block.
-      2-3 Bee Conditionals 6_instruction: |-
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |-
-        Collect nectar from each flower only if
-        it has any.
-      2-3 Bee Conditionals 8_instruction: |-
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |-
-        Assessment: Collect all of
-        the nectar. Be careful not to try to collect nectar from a purple flower if
-        it doesn't have any.
-      2-3 Bee Debugging 1_instruction: |-
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+        He pī matekai ahau! \r
+        Āwhinatia mai taku kohi waihonga ki ngā paraka iti rawa e taea.
+      2-3 Bee Conditionals 3_instruction: "Tirohia te nui o te waihonga!\\r\n\\r\nĀwhinatia
+        mai taku kohi waihonga me te mahi mīere ki ngā paraka iti rawa e taea.  "
+      2-3 Bee Conditionals 4_instruction: "Āwhinatia mai taku kohi i te waihonga katoa
+        i ngā putiputi, ā, ka mahia katoatia te mīere."
+      2-3 Bee Conditionals 5_instruction: "Kia tūpato ki te kohi waihonga i ngā putiputi
+        waiporoporo ina karekau. \\r \nMe titiro tuatahi ina e ōrite ana te waihonga
+        ki te 1 mā te whakamahinga o te paraka 'ina waihonga'."
+      2-3 Bee Conditionals 6_instruction: Tirohia tēnei putiputi ki te paraka 'ki
+        te' e kite ai ina he waihonga tōna.
+      2-3 Bee Conditionals 7_instruction: Kohia te waihonga i ia putiputi ina whai
+        waihonga.
+      2-3 Bee Conditionals 8_instruction: "He putiputi whero, he putiputi waiporoporo
+        o tēnei pātiki. \nE mōhiotia ana te rahi o te waihonga i ngā putiputi whero,
+        kāore i te mōhio ki te rahi o te waihonga i ngā putiputi waiporoporo. \nKohia
+        katoatia te waihonga."
+      2-3 Bee Conditionals 9_instruction: Kohia te waihonga i ia putiputi.
+      2-3 Bee Conditionals Assessment 1_instruction: 'He aromatawai: Kohia katoatia
+        te waihonga. Kia tūpato i te kohi waihonga i tētahi putiputi waiporoporo waihonga
+        kore.'
+      2-3 Bee Debugging 1_instruction: Kei te mate katoa ahau i ēnei paraka. Whakatikahia
+        te/ngā hapa kia kohia katoatia te waihonga.
       2-3 Bee Debugging 10_instruction: |-
-        This puzzle is making me loopy! \r
-        Fix
-        the error(s) to collect all of the nectar and make all of the honey.
+        Kei te rorirori katoa ahau i tēnei panga! \r
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga, ā, ka mahi i te mīere katoa.
       2-3 Bee Debugging 2_instruction: |-
-        Can you find the problem here?\r
-        Fix the
-        error(s) to collect all of the nectar.
+        E kite rānei ana koe i te raru i konei?\r
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
       2-3 Bee Debugging 3_instruction: |-
-        Ooh, this one stings!\r
+        Auē, he mea wero tēnei! \r
         \r
-        Fix the error(s)
-        to collect all of the nectar.
-      2-3 Bee Debugging 4_instruction: |-
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
+      2-3 Bee Debugging 4_instruction: Kei te mate katoa ahau i ēnei paraka. Whakatikahia
+        te/ngā hapa kia kohia katoatia te waihonga, ā, ka mahi ai te mīere katoa.
       2-3 Bee Debugging 5_instruction: |-
-        That flower looks tasty! \r
+        Te reka hoki o te āhua o tērā putiputi! \r
         \r
-        Fix the
-        error(s) to collect all of the nectar.  You can now use both run and step.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.  Ka taea e koe te whakamahi i te whakahaere me te hipanga.
       2-3 Bee Debugging 6_instruction: |-
-        What a sweet challenge!\r
+        Kātahi te taki ko tēnei!\r
         \r
-        Fix the error(s)
-        to collect all of the nectar.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
       2-3 Bee Debugging 7_instruction: |-
-        Fix the error(s) to collect all of the nectar
-        and make all of the honey.
+        Fix the error(s) to collect all of the nectar and make all of the honey.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga, ā, ka mahi ai te mīere katoa.
       2-3 Bee Debugging 8_instruction: |-
-        So many beautiful flowers!\r
+        Te nui hoki o ngā putiputi rerehua!\r
         \r
-        Fix the
-        error(s) to collect all of the nectar.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
       2-3 Bee Debugging 9_instruction: |-
-        "Bee" patient with this one!\r
+        “Pī” kia manawanui i tēnei!\r
         \r
-        You
-        will need to fix a couple of things in this program to collect all of the
-        nectar and make all of the honey.
+        Me whakatikahia e tātou ētahi mea i tēnei papatono ki te kohi i te waihonga katoa me te mahi i te mīere katoa.
       2-3 Bee Debugging Assessment 1_instruction: |-
-        Assessment:  Now it's time to
-        show what you know!\r
+        He aromatawai: Ināianei he wā ki te whakaatu i tāu e mōhio ai!\r
         \r
-        Fix the error(s) to collect all of the nectar and
-        make all of the honey.
-      2-3 Bee Functions 1_instruction: |-
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga, ā, ka hangā ai te mīere katoa.
+      2-3 Bee Functions 1_instruction: Ko te taumahi tētahi paraka waehere whakatutuki
+        mahi. Whakamahia te taumahi “tiki i ngā waihonga e 2” ki te kohi i te waihonga
+        i ia putiputi.
       2-3 Bee Functions 10_instruction: |-
-        Purple flowers change between either 1 or
-        0 nectar each time you run the puzzle.   \r
+        Huri ai ngā putiputi waiporoporo i waenga rānei i te 1, i te 0 i ia wā whakahaere i te panga.  \r
         \r
-        Create a function that collects
-        nectar only from purple flowers that have nectar.
+        Waihangahia tētahi taumahi e kohi waihonga i ngā putiputi pāpura whai waihonga anake.
       2-3 Bee Functions 2_instruction: |-
-        Functions are blocks of code that perform
-        a task.  \r
+        Ko te taumahi tētahi paraka waehere whakatutuki mahi.  \r
         \r
-        Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+        Whakamahia te taumahi ‘tiki e 5’ ki te tiki i ngā waihonga e 5 i ia wā.
+      2-3 Bee Functions 3_instruction: Kohia te waihonga i ia putiputi.
       2-3 Bee Functions 4_instruction: |-
-        The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r
+        Ko tā te taumahi ‘neke me te tiki waihonga’ he huri i te pī, he kohi waihonga, ā, he whakahoki i te pī ki tōna timatanga.  \r
         \r
-        Use
-        the function to collect all of the nectar.
+        Whakamahia te taumahi ki te kohi i te waihonga katoa.
       2-3 Bee Functions 5_instruction: |-
-        There is now more nectar at the flowers.
-        Edit the given function so that it collects 4 nectars and use it to collect
-        all of the nectar from the flowers.
-      2-3 Bee Functions 6_instruction: |-
-        Now use the same function to collect nectar
-        from the three flowers.
-      2-3 Bee Functions 7_instruction: |-
-        The flowers are now further away. Edit the
-        given function and use it to collect all of the nectar from the flowers.
-      2-3 Bee Functions 8_instruction: |-
-        Create your own function that gets 7 nectar,
-        moves forward, and makes 7 honey. Use the function to collect nectar at each
-        flower and make honey at each honeycomb.
-      2-3 Bee Functions 9_instruction: |-
-        Create your own function that goes down a
-        path, gets nectar, makes honey, and then returns the bee to the top of the
-        path.
-      2-3 Bee Functions Assessment 1_instruction: |-
-        Assessment: Use the given function
-        to collect nectar from each flower.
-      2-3 Bee Functions Assessment 2_instruction: |-
-        Assessment: Create a function
-        to turn, move forward and make 3 honey, then return the bee to where it started
-        and turn back.
+        He waihonga anō kei ngā putiputi.
+        Whakatikahia te taumahi, e kohi ai i ngā waihonga e 4, ā, ka whakamahi ki te kohi i te waihonga katoa i ngā putiputi.
+      2-3 Bee Functions 6_instruction: Ināianei, whakamahia taua taumahi anō rā ki
+        te kohi waihonga i ngā putiputi e 3.
+      2-3 Bee Functions 7_instruction: E tawhiti kē ana ngā putiputi i nāianei. Whakatikahia
+        te taumahi nā, ka whakamahi ai ki te kohi te te waihonga katoa i ngā putiputi.
+      2-3 Bee Functions 8_instruction: Waihangahia tāu ake taumahi hei tiki i ngā
+        waihonga e 7, ka neke whakamua, ā, ka mahi i ngā mīere e 7. Whakamahia te
+        taumahi ki te kohi waihonga i ia putiputi, ka mahi mīere i ia honikoma.
+      2-3 Bee Functions 9_instruction: Waihangahia tāu ake taumahi e anga ana ki tētahi
+        ara, he tiki waihonga, he mahi mīere, ā, he mea whakahoki i te pī ki te otinga
+        o te ara.
+      2-3 Bee Functions Assessment 1_instruction: 'He aromatawai: Whakamahia te taumahi
+        nei hei kohi waihonga i ia putiputi.'
+      2-3 Bee Functions Assessment 2_instruction: 'He aromatawai: Waihangahia tētahi
+        taumahi hei huri, ka neke whakamua, ā, ka mahi i ngā mīere e 3, kātahi ka
+        whakahoki i te pī ki te wāhi i tīmata ai ia, ka hoki atu.'
       2-3 Bee Loops 1_instruction: |-
-        Those flowers look tasty!\r
+        Inā ngā putiputi reka rā! \r
         \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
-      2-3 Bee Loops 10_instruction: |-
-        Can you use a while loop inside of two other
-        loops to collect all of the nectar?
-      2-3 Bee Loops 11_instruction: |-
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 12_instruction: |-
-        Use while loops to collect all of the nectar
-        from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |-
-        Assessment: Collect all of the nectar using
-        the fewest blocks possible.
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? "
-      2-3 Bee Loops 2_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
-      2-3 Bee Loops 2A_instruction: |
-        Can you do the same task more easily with a
-        loop?
-      2-3 Bee Loops 3_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
-      2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |-
-        Now use the `repeat` block to collect all of
-        the nectar and make all of the honey.
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.
+      2-3 Bee Loops 10_instruction: E taea rānei e koe te whakamahi i te koromeke
+        ‘i te’ i waenganui tonu i ētahi koromeke e rua hei kohi i te waihonga katoa?
+      2-3 Bee Loops 11_instruction: Whakamahia ngā koromeke ‘i te’ ki te kohi i te
+        waihonga katoa i ngā putiputi kei te pātiki.
+      2-3 Bee Loops 12_instruction: Whakamahia ngā koromeke ‘i te’ ki te kohi i te
+        waihonga katoa i ngā putiputi kei te pātiki.
+      2-3 Bee Loops 13_instruction: 'He aromatawai: Kohia katoatia mai te waihonga
+        mā ngā paraka rua rua noa iho.'
+      2-3 Bee Loops 1A_instruction: 'Kia ora, he pī ahau. Māu ahau e āwhina ki te
+        kohi waihonga i ēnei putiputi? '
+      2-3 Bee Loops 2_instruction: Kohia katoatia te waihonga ka mahia mai te mīere
+        mā ngā paraka rua rua noa iho.
+      2-3 Bee Loops 2A_instruction: Ināianei, whakamahia tētahi koromeke kia kohia
+        katoatia te waihonga.
+      2-3 Bee Loops 3_instruction: Kohia te waihonga i ia putiputi ka mahi mīere i
+        ia honikoma mā ngā paraka rua rua noa iho.
+      2-3 Bee Loops 3A_instruction: Whakamahia tētahi koromeke ‘tōai’ hei kohi i te
+        katoa o te waihonga.
+      2-3 Bee Loops 3B_instruction: Ināianei whakamahia te paraka ‘tōai’ kia kohia
+        katoatia te waihonga ka mahi mai i te katoa o te mīere.
       2-3 Bee Loops 4_instruction: |-
-        Such a busy bee!\r
+        Kātahi te pī pukumahi!\r
         \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
+        Āwhina i a pī ki te kohi i te katoa o te waihonga, ā, ka mahi i te katoa o te mīere mā ngā paraka rua rua noa iho.
       2-3 Bee Loops 4A_instruction: |-
-        How many times can loops help you in this puzzle?  \r
+        Kia hia koromeke hei āwhina i a koe i tēnei panga nei? \r
         \r
-        Loops
-        are your friend! Use a few of them to complete this puzzle with the fewest
-        blocks possible.
+        He hoa ngā koromeke ki a koe! Whakamahia kia okuoku noa iho hei whakaoti i te panga nei mā ngā paraka rua rua noa iho.
       2-3 Bee Loops 5_instruction: |-
-        The shape of this path is different than the
-        others. \r
+        He rerekē te āhua o te ara nei i ērā atu. \r
         \r
-        Can you collect all of the nectar using as few blocks as possible?
-      2-3 Bee Loops 6_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
-      2-3 Bee Loops 7_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+        Ka taea e koe te katoa o te waihonga te kohi mā ngā paraka rua rua noa iho?
+      2-3 Bee Loops 6_instruction: Kei te kite koe i te huarahi tere rawa e kohia
+        katoatia ai te waihonga e te pī kia mahi katoa mai te mīere?
+      2-3 Bee Loops 7_instruction: Inā te pātiki putiputi rerehua! Āwhinatia te pī
+        kia toro ki ia putiputi.  Ka taea rānei e koe te pērā mā ngā paraka e 7 iti
+        iho?
       2-3 Bee Loops 8_instruction: |-
-        These purple flowers have different amount of
-        nectar each time you run the puzzle. \r
+        Ka rerekē te rahi o te waihonga i ngā putiputi waiporoporo nei i ia wā e whakahaere ana i te panga. \r
         \r
-        Use the `while nectar` loop to
-        collect all of the nectar. \r
+        Whakamahia te koromeke ‘waihonga mā’ ki te kohi i te waihonga katoa. \r
         \r
-        This loop will run as long as the condition
-        is true, in this case `nectar > 0`.
+        Ka whakahaerehia tēnei koromeke inā pono ana te here, arā ‘waihonga >0’.
       2-3 Bee Loops 9_instruction: |-
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same
         task.
-      2-3 Bee Loops Assessment 1_instruction: |-
-        Assessment: Use a `while` loop to
-        collect all of the nectar from these flowers.
-      2-3 Maze 1_instruction: "Can you help me catch the naughty pig? Stack a couple\nof
-        `move forward` blocks below the `when run` block and press \"Run\". "
+      2-3 Bee Loops Assessment 1_instruction: 'He aromatawai: Whakamahia te koromeke
+        ‘i te’ ki te kohi i te waihonga katoa i ngā putiputi nei.'
+      2-3 Maze 1_instruction: 'E taea tēnei e koe te āwhina ki te hopu i te poaka
+        hīanga. Putuhia ētahi paraka ‘neke whakamua’ i raro i te paraka ‘ka oma ana’
+        me te paraka ‘whakahaere’. '
       2-3 Maze 10_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
-      2-3 Maze 11_instruction: |-
-        Get me to the flower I'm hungry! How many times
-        do you have to repeat a block?
+      2-3 Maze 11_instruction: Aratakina ahau ki te putiputi, kei te tino matekai
+        ahau! Kia hia ngā wā me tōai i tētahi paraka?
       2-3 Maze 12 (copy 1)_instruction: |-
         Can you replace the previous answer with
         only two blocks? (Hint: Create a loop using a "repeat times" block.)
       2-3 Maze 12 (copy 2)_instruction: |-
         Can you replace the previous answer with
         only two blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze 12 (old)_instruction: |-
-        Get me to the pig, now with the Repeat times
-        block!
-      2-3 Maze 12 - One Move Block_instruction: |-
-        Get to the pig! But this time, you
-        can only use one `move forward` block. Do you see any other blocks that could
-        help you?
-      2-3 Maze 12_instruction: |-
-        Can you get to the pig by creating a loop that uses
-        only one `move forward` block inside of a `repeat`?
-      2-3 Maze 13 (old)_instruction: |-
-        Get me to the pig, now with the Repeat until
-        block!
-      2-3 Maze 13_instruction: |-
-        Get me to the pig! You can only use one move forward
-        block this time
-      2-3 Maze 14 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 14_instruction: |-
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
-      2-3 Maze 15 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 15_instruction: |-
-        In this puzzle, two `repeat` loops will help you
-        get to the pig with the fewest number of blocks!
-      2-3 Maze 16 (old)_instruction: Get me to the pig with the Repeat until block!
-      2-3 Maze 16 before_instruction: |-
-        Can you figure out the fastest way to get
-        me to the pig?
-      2-3 Maze 16_instruction: |-
-        Loops even work with more than one block inside!  Can
-        you loop this sequence to get the zombie to the sunflower?
-      2-3 Maze 2_instruction: This pig is ruffling my feathers. Help me get to him!
-      2-3 Maze 3_instruction: |-
-        Trace the path and lead me to the silly pig. Avoid
-        TNT or feathers will fly!
+      2-3 Maze 12 (old)_instruction: Aratakina ahau ki te poaka, whakamahia paraka
+        ‘tōai kia’!
+      2-3 Maze 12 - One Move Block_instruction: Hoake ki te poaka! I tēnei wā, ka
+        whakamahi noa koe i te paraka ‘neke whakamua’. He paraka anō e kite ana koe
+        hei āwhina?
+      2-3 Maze 12_instruction: Ka tae atu rānei koe ki te poaka mā te waihanga koromeke
+        kotahi anake te paraka ‘neke whakamua’ ki roto i tētahi ‘tōai’?
+      2-3 Maze 13 (old)_instruction: Aratakina ahau ki te poaka, ināianei mā te paraka
+        Tōaitia kia!
+      2-3 Maze 13_instruction: Aratakina ahau ki te poaka! Kotahi anake te paraka
+        neke ki mua e whakaaetia ana i tēnei wā
+      2-3 Maze 14 (old)_instruction: Aratakina ahau ki te poaka, ināianei mā te paraka
+        Tōaitia kia!
+      2-3 Maze 14_instruction: Aratakina ahau ki te poaka! (Kei hea rā te paraka "tōai
+        i ngā wā" ina hiahiatia ana?)
+      2-3 Maze 15 (old)_instruction: Aratakina ahau ki te poaka, ināianei mā te paraka
+        Tōaitia kia!
+      2-3 Maze 15_instruction: I tēnei panga, mā te whakamahi i ngā koromeke “tōai”
+        e rua e tae atu ai koe ki te poaka mā ngā paraka rua rua noa iho!
+      2-3 Maze 16 (old)_instruction: Aratakina ahau ki te poaka, ināianei mā te paraka
+        Tōaitia kia!
+      2-3 Maze 16 before_instruction: Māu rānei e rapu i tētahi ara e tae tere atu
+        ai au ki te poaka?
+      2-3 Maze 16_instruction: Ka tika hoki mēnā he nui atu ngā paraka i te mea kotahi
+        ki roto i ngā koromeke! E taea ana e koe tēnei tū raupapa te koromeke e tae
+        atu ai te kairoro ki te putiputirā?
+      2-3 Maze 2_instruction: E whakahōhā pai ana te poaka nei i aku raukura. Āwhinatia
+        ahau kia tae atu ki a ia!
+      2-3 Maze 3_instruction: Whāia te ara ka aratakina ahau ki te poaka rorirori.
+        Kauparehia atu te TNT, kei rere ngā raukura!
       2-3 Maze 4_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
       2-3 Maze 5_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
-      2-3 Maze 6_instruction: |-
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze 6_instruction: Kia tau te mauri ka aratakina ahau ki te whai i te poaka
+        kino. Kei mau rānei taku ito!
       2-3 Maze 7_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
-      2-3 Maze 8_instruction: Get me to the pig!
+      2-3 Maze 8_instruction: Aratakina ahau ki te poaka!
       2-3 Maze 9_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
-      2-3 Maze Loops 1_instruction: |-
-        Can you get me to the pig using 5 of the same
-        kind of blocks?
-      2-3 Maze Loops 17_instruction: Get me to the sunflower!
+      2-3 Maze Loops 1_instruction: E taea ana e koe ahau te arahi ki te poaka mā
+        te whakamahi i ngā paraka ōrite e 5?
+      2-3 Maze Loops 17_instruction: Kawea tāu i ako ai kia arataki i au ki te putiputirā!
       2-3 Maze Loops 18_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!  \r
+        Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \r
         \r
-        Try using one `repeat` loop inside of another to cut down
-        on the amount of code you need.
+        Whakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana.
       2-3 Maze Loops 19_instruction: |-
-        Let's take this to another level! \r
-        Use
-        loops to get me to the sunflower with the fewest loops possible.
-      2-3 Maze Loops 20_instruction: |-
-        Get me to the sunflower using the fewest number
-        of blocks possible!
-      2-3 Maze Loops 21_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
-      2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
-        only 5 blocks! "
+        Me tae atu ki tētahi taumata kē atu! \r
+        Whakamahi koromeke kia tae atu ai au ki te putiputirā mā ngā koromeke ruarua noa iho.
+      2-3 Maze Loops 20_instruction: Aratakina ahau ki te putiputirā mā te whakamahi
+        i ngā nama paraka rua rua noa iho!
+      2-3 Maze Loops 21_instruction: Aratakina ahau ki te putiputirā me ngā paraka
+        iti rawa e taea!
+      2-3 Maze Loops Assessment 1_instruction: 'He aromatawai: Haria ahau ki te putiputirā
+        ki/me ngā paraka e 5! '
       2-3 Maze sq1_instruction: |-
         This pig is ruffling my feathers.  Help me find
         him!
@@ -624,37 +491,36 @@
       2-3 maze sq12_instruction: |-
         Can you replace the previous answer with a loop
         by using a "repeat times" block?
-      2-3 maze sq13_instruction: |-
-        Dear person. Me zombie. Must... get... to sunflower.
-        Create loop with "repeat until" block.
-      2-3 maze sq14_instruction: Can you get to the sunflower using only four blocks?
-      2-3 maze sq15_instruction: Can you get to the sunflower using only five blocks?
-      2-3 maze sq16_instruction: |-
-        Ok, this is similar, but slightly different. Can
-        you do it in only five blocks?
-      2-3 Maze sq2_instruction: |-
-        Trace the path and lead me to the silly pig.  Avoid
-        the TNT or the feathers will fly!
+      2-3 maze sq13_instruction: Tēnā koe. Ko Kairoro au. Me...haere...ki te putiputirā.
+        Waihangahia te paraka koromeke me te "tōaitia kia" .
+      2-3 maze sq14_instruction: E taea rānei e koe te haere ki te putiputirā me ngā
+        paraka e whā?
+      2-3 maze sq15_instruction: E taea rānei e koe ahau te arataki ki te putiputirā
+        me ngā paraka e rima?
+      2-3 maze sq16_instruction: Na, he āhua rite hoki tēnei, heoi anō, he paku rerekē.
+        Ka tutuki i a koe me ngā paraka e 5 noa iho?
+      2-3 Maze sq2_instruction: Whakatakina te ara kia tae atu ai au ki te poaka rorirori
+        rā. Karohia te TNT kei rere ngā raukura!
       2-3 Maze sq3_instruction: Homai ki ahau te kino kākāriki! (Kia mataara i te
         TNT)
-      2-3 Maze sq4_instruction: |-
-        Keep calm and help me find the bad pig. Otherwise
-        I might get angry!
+      2-3 Maze sq4_instruction: Kia tau te mauri ka aratakina ahau ki te whai i te
+        poaka kino. Kei mau rānei taku ito!
       2-3 Maze sq5_instruction: |-
         Get me to the pig! How many times do you have to
         repeat a block?
       2-3 Maze sq6_instruction: |-
         Can you replace the previous answer with only two
         blocks? (Hint: Create a loop using a "repeat times" block.)
-      2-3 Maze sq7_instruction: Get me to the green intruder using only three blocks.
-      2-3 Maze sq8_instruction: |-
-        Get me to the pig! (Where is that "repeat times"
-        block when I need it?)
+      2-3 Maze sq7_instruction: Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki
+        me ngā paraka e toru noa iho.
+      2-3 Maze sq8_instruction: Aratakina ahau ki te poaka! (Kei hea rā te paraka
+        "tōai i ngā wā" ina hiahiatia ana?)
       2-3 Maze sq9_instruction: Create loops to get to the pig using less blocks.
       2-3_instruction: |-
         Purple flowers may have either 1 or 0 nectar. Be careful
         not to collect nectar from a purple flower if it doesn't have any.
-      2-3level1_instruction: Help the bird catch the naughty pig by moving it forward
+      2-3level1_instruction: "Āwhinatia te manu ki te mau i te poaka hianga mā te
+        neke whakamua"
       20hr_farmer_stage9_1_instruction: |-
         Hi, I'm a farmer. I need your help to flatten
         the field on my farm so it's ready for planting. Move me to the pile of dirt
@@ -760,104 +626,80 @@
         When a block is grey, that means you can't
         delete it. Solve this puzzle using the "repeat" block that repeats 3 times.
         Try putting these 3 blocks inside the grey "repeat" block: move, move, turn.
-      4-5 Artist 1_instruction: "Help me finish drawing my box. (Each line is 300\npixels
-        long) "
-      4-5 Artist 10_instruction: |-
-        Press "Run" to try the code. Then, repeat it
-        enough times to complete the drawing. The colors will be different every time.
-      4-5 Artist 11_instruction: |-
-        Complete the green lines. The lines are 300 pixels
-        long and 15 pixels apart.
-      4-5 Artist 2_instruction: |-
-        Loop this code using the `repeat` block to complete
-        the square.
-      4-5 Artist 3.5_instruction: |-
-        Try to figure out what happens if you run this
-        code (or just press "Run" and try it). Next, repeat the code enough times
-        to complete the drawing!
-      4-5 Artist 3_instruction: |-
-        This rectangular flower bed has a perimeter of 600.
-        The long side has a length of 200. Draw the rectangle using as few blocks
-        as possible.
-      4-5 Artist 4_instruction: |-
-        How many degrees are in a circle?  Loop the blocks
-        to create a circle of colors.
-      4-5 Artist 5_instruction: |-
-        What can we replace "???" with to make sure that
-        the zombie completes this drawing using the loop provided?
-      4-5 Artist 6_instruction: |-
-        This equilateral triangle has angles of 60, 60,
-        and 60 degrees. Each side is 200 pixels. Complete the drawing.
-      4-5 Artist 7_instruction: |-
-        This right triangle has angles of 30, 60, and 90
-        degrees. The slanted side's length (length of the hypotenuse) is 200 pixels.
-        Complete the drawing.
+      4-5 Artist 1_instruction: "Āwhina mai kia oti i au taku pouaka te tā. (He 300
+        pika te roa o ia rārangi) "
+      4-5 Artist 10_instruction: Pāwhiringia te "whakahaere" hei whakamātau i te waehere.
+        Kātahi ka tōaitia kia oti rā anō te tānga. Ka rerekē ngā tae ia te wā.
+      4-5 Artist 11_instruction: Whakaotia ngā rārangi kākāriki. He 300 pika te roa
+        o ngā rārangi, he 15 pika te tawhiti.
+      4-5 Artist 2_instruction: Koromekehia tēnei waehere mā te paraka 'tōai' kia
+        oti te tapawhā.
+      4-5 Artist 3.5_instruction: Ka pēhea mēnā ka whakahaerehia tēnei waehere (ka
+        pēhi rānei i te "Whakahaere" ka whakamātau ai). Nā, ka tōaitia te waehere
+        kia oti te tānga!
+      4-5 Artist 3_instruction: "He 600 te paenga o te māra putiputi tapawhāroa nei.
+        \nHe 200 te roa o te taha roa. Tāngia mai te tapawhāroa mā te whakamahi i
+        ngā paraka rua rua noa iho."
+      4-5 Artist 4_instruction: E hia putu i te porowhita nei? Koromekehia ngā paraka
+        e waihanga mai ai tētehi porowhita tae.
+      4-5 Artist 5_instruction: Me whakahou i te "???" ki te aha kia oti pū i te kairoro
+        te tānga nei mā te koromeke e wātea ana ki a koe?
+      4-5 Artist 6_instruction: He koki 60, 60, me te 60 putu ōrite tā te tapatoru
+        nei. He 200 pika ia taha. Whakaotia te tānga.
+      4-5 Artist 7_instruction: He koki 30, 60, me te 90 putu tā te tapatoru matau
+        nei. He 200 pika te taha tītaha (te roatanga o te taha roa). Whakaotia te
+        tānga.
       4-5 Artist 8_instruction: |-
-        The halfway line on a soccer field is perpendicular
-        to the sidelines.   \r
-        This rectangle has a perimeter of 800 pixels total,
-        and it is 240 pixels long. How tall is it?   \r
+        E hāngai ana te rārangi haurua o te papa poiwhana ki ngā tahataha. \r
+        E 800 pika katoa te paenga o tēnei tapawhā roa, ā, e 240 pika tōna roa. \r
         \r
-        Draw the bounds and the
-        halfway line.
-      4-5 Artist 9_instruction: |-
-        Draw the right half of this image so that the design
-        is symmetrical. The triangles are equilateral and have sides that are 50 pixels
-        long.
-      4-5 Artist Assessment 1_instruction: |-
-        Assessment: Use a loop to draw the equilateral
-        triangle. Each side is 300 pixels.
-      4-5 Artist For Loops 1_instruction: |-
-        Put the numbers 1 through 10 into the
-        width blocks and run the code.
-      4-5 Artist For Loops 11_instruction: |-
-        Complete the "for" block so that it
-        counts 0, 20, 40, 60, 80... 200.
-      4-5 Artist For Loops 12_instruction: "What happens if you reverse the \"from\"\nand
-        \"to\" numbers? Complete the \"for\" block so that it counts 200, 180,\n160,
-        140, 120...0. "
-      4-5 Artist For Loops 13_instruction: |-
-        This design got started without a "for"
-        loop and is taking too many blocks!  Use a "for" block to complete the spiral.  Hint:
-        the last line length is 250 pixels.
-      4-5 Artist For Loops 14_instruction: |-
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the triangular spiral. (Hint: the last line length is 300 pixels.)
-      4-5 Artist For Loops 15_instruction: |-
-        Someone started the code, but then realized
-        there must be a quicker way! Use a "for" block to replace the blocks and
-        complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)
-      4-5 Artist For Loops 2_instruction: |-
-        This is a "for" block. Instead of typing
-        1,2,3... 10, the "for" block can repeat the blocks inside it and count the
-        numbers for you. Place the number 10 into the "to" section of the "for"
-        block.
-      4-5 Artist For Loops 3_instruction: |-
-        How can we count from 1 to 50? Edit the
-        "for" block.
-      4-5 Artist For Loops 4_instruction: |-
-        Complete the "for" block so that it
-        counts from 1 to 10 by 1.
-      4-5 Artist For Loops 6_instruction: |-
-        Draw squares with sides of 50, 60, 70,
-        80, and 90 pixels. You'll need to use the "draw a square" function five
-        times.
+        Tāngia ngā paetaha me te haurua.
+      4-5 Artist 9_instruction: Tāngia mai te taha matau o te atahanga kia ōrite rawa
+        te hoahoatanga. He tapatoru ōrite, ā, he 50 pika te roa.
+      4-5 Artist Assessment 1_instruction: 'He aromatawai: Whakamahia tētehi koromeke
+        hei tuhi i te tapatoru ōrite. He 300 pika ngā taha.'
+      4-5 Artist For Loops 1_instruction: Meatia ngā tau 1 ki te 10 ki ngā paraka
+        whānui, ā, ka whakahaerehia te waehere.
+      4-5 Artist For Loops 11_instruction: Whakaotia te paraka "mō" kia tautauria
+        ai te 0, 20, 40, 60, 80... 200.
+      4-5 Artist For Loops 12_instruction: 'Ka aha mēnā ka whakahokia ngā tau "mai"
+        me te "ki"? Whakaotia te paraka "mō" kia tatauria ai te 200, 180 160, 140,
+        120...0. '
+      4-5 Artist For Loops 13_instruction: "I mahue i te hoahoatanga nei te koromeke
+        \"mō\" i te tīmatanga, ā, he rahi rawa ngā paraka! Whakamahia tētehi paraka
+        \"mō\" kia oti ai te tōrinorino. He tuwhiri: \nhe 250 pika te roa o te rārangi
+        whakamutunga."
+      4-5 Artist For Loops 14_instruction: 'I tīmataria te waehere e tētehi, kātahi
+        ka toko ake te whakaaro tērā tētehi huarahi tere ake! Whakamahia he paraka
+        "mō" ki te whakahou i ngā paraka me te whakaoti i te tōrinorino tapatoru.
+        (He tuwhiri: He 300 pika te roa o te rārangi whakamutunga.)'
+      4-5 Artist For Loops 15_instruction: 'I tīmataria te waehere e tētehi, kātahi
+        ka toko ake te whakaaro tērā tētehi huarahi tere ake! Whakamahia he paraka"mō"
+        ki te whakahou i ngā paraka me whakaoti i te tōrinorino tapaono. (He tuwhiri:
+        he 200 pika te roa o te rārangi whakamutunga.)'
+      4-5 Artist For Loops 2_instruction: He paraka "mō" tēnei. Kei pato i te 1,2,3...
+        10, mā te paraka "mō" kē e tōai ai ngā paraka ki roto, ā, ka tatauria. Meatia
+        te tau 10 ki te wāhanga "ki" o te paraka "mō".
+      4-5 Artist For Loops 3_instruction: Ka pēhea te tatau i te 1 ki te 50? Whakatika
+        i te paraka "mō".
+      4-5 Artist For Loops 4_instruction: Whakaotia te paraka "mō" kia tatau mai i
+        te 1 ki te 10 mā te tahi.
+      4-5 Artist For Loops 6_instruction: Tāngia ētahi tapawhā e 50, 60, 70, 80, me
+        te 90 pika te nui o ngā tapa. Me whakamahi koe i te taumahi "tāngia he tapawhā"
+        kia rima ngā wā.
       4-5 Artist For Loops 7_instruction: |-
         Draw the same squares but use a "count
         with" block to change the sizes. Place the "counter" block in the "draw
         a square" function. Hint: It's in the Variables category.
-      4-5 Artist For Loops 8_instruction: |-
-        Can you complete the program by placing
-        the blocks inside a "for" block that counts from 10 to 200 by 10? You can
-        find the "for" block in the Loops category.
+      4-5 Artist For Loops 8_instruction: Ka taea rānei e koe te papatono te whakaoti
+        mā te rau i ngā paraka ki roto i tētehi paraka "mō" e tatau ana mai i te 10
+        ki te 200 mā te 10? E kitea ana ngā paraka "mō" i te wāhanga Koromeke.
       4-5 Artist For Loops 9_instruction: |-
         These circles are size 5, 10, 15, 20,
         25, 30, and 35. Draw the circles using a "for" block.
-      4-5 Artist Free Draw 1_instruction: |-
-        Free Draw!  Draw whatever you are inspired
-        to create.
-      4-5 Artist Functions 1_instruction: Use a repeat loop to draw this triangle.
+      4-5 Artist Free Draw 1_instruction: Tā kore here! Tāngia tāu e wawatahia nei.
+      4-5 Artist Functions 1_instruction: Whakamahia te koromeke tōai hei tā i tēnei
+        tapatoru.
       4-5 Artist Functions 10a_instruction: |-
         Put this code into the 'draw a snowflake'
         function and replace the 50 with the parameter 'size'. The function is already
@@ -878,21 +720,19 @@
         Here are some functions to
         draw planets, stars, rockets, and robots. Use them any way you like to make
         pictures that you can share with your friends.
-      4-5 Artist Functions 14 Free play_instruction: |-
-        Here, we've provided you with
-        several functions.  Use them any way you like inside of one or more loops
-        to make pictures that you can share with your friends. Click 'Run' to see
-        an example.
-      4-5 Artist Functions 15 Assessment_instruction: |-
-        Assessment:  Use the "draw
-        a square" function to create the squares.  The squares are 50, 100, and 150
-        pixels.
-      4-5 Artist Functions 2a_instruction: |-
-        Now put these blocks into a new function
-        called "draw a small triangle" and call on it.
-      4-5 Artist Functions 2b_instruction: |-
-        Now create a function called "draw a
-        small triangle" using the provided blocks.
+      4-5 Artist Functions 14 Free play_instruction: Anei, e hora ana ngā taumahi
+        huhua māu. Whakamahia ki tāu e rata ai, ki roto i ngā koromeke kotahi neke
+        atu kia waihanga mai he whakaahua hei tuari atu ki ō hoa. Pāwhiringia te "Whakahaere"
+        kia kitea mai tētehi tauira.
+      4-5 Artist Functions 15 Assessment_instruction: 'He aromatawai: Whakmahia te
+        taumahi "tāngia he tapawhā" kia waihanga mai ngā tapawhā. He 50, 100 me te
+        150 pika ngā tapawhā.'
+      4-5 Artist Functions 2a_instruction: Ināianei meatia atu ngā paraka nei ki ētehi
+        taumahi hou kua tapa ki te ingoa "tāngia tētehi tapatoru paku" ā, ka karangatia
+        atu.
+      4-5 Artist Functions 2b_instruction: Ināianei waihangahia mai tētehi taumahi
+        kua tapa ki te ingoa "tāngia tētehi tapatoru paku" mā ngā paraka kua wātea
+        ki a koe.
       4-5 Artist Functions 3_instruction: "Now create the functions \"draw a medium\ntriangle\"
         and \"draw a large triangle\". The \"draw a small triangle\" function\nis
         done for you. The triangles have side lengths of 50 (small), 100 (medium),\nand
@@ -901,9 +741,8 @@
         This new "draw a triangle" function
         has a parameter and can do the work of all three functions before. Draw the
         same triangles using this new function.
-      4-5 Artist Functions 5_instruction: |-
-        Can you modify the "draw a triangle"
-        function into a "draw a square" function to change the drawing?
+      4-5 Artist Functions 5_instruction: E ahei ana te whakahou i te taumahi "tāngia
+        he tapatoru" ki te taumahi "tāngia he tapawhā" hei panoni i te tānga?
       4-5 Artist Functions 6_instruction: |-
         Use the "draw a square" and "draw a
         triangle functions" to draw a house. (Hint: The square's sides are 200 pixels)
@@ -915,85 +754,67 @@
         Use the "draw a house" function to draw
         houses that are 100 pixels and 50 pixels. The two houses are separated by
         50 pixels.
-      4-5 Artist Functions 8_instruction: |-
-        The "draw a flower" function has a parameter
-        that allows you to set the stem height.  Set it to 200 and see what happens.
+      4-5 Artist Functions 8_instruction: He paenga tā te taumahi "tāngia he putiputi'
+        e ahei ana ki te tautuhi i te teitei o te rautō. Tautuhia ki te 200 kia kite
+        ka aha.
       4-5 Artist Functions 9_instruction: |-
         Draw these 3 flowers. The first one's
         height is 100 and the next flower is always 50 pixels more than the height
         of the previous one. The flowers are also 100 pixels apart.
       4-5 Artist Patterns 1_instruction: |-
-        Draw this square using a loop.\r
+        Tāngia tēnei tapawhā mā te whakamahi koromeke.\r
         \r
-        Each
-        side is 20 pixels long.
+        He 20 pika ia tapa.
       4-5 Artist Patterns 10_instruction: |
-        This code draws two rows of hexagons -
-        loop the whole thing 4 times to draw the whole honeycomb. \r
+        Ka tāngia e tēnei waehere ētahi rārangi tapono e rua - koromekehia te waehere katoa kia whā ngā wā hei tā i te honikoma katoa. \r
         \r
-        You'll
-        need to jump back 120 pixels in your outermost loop to make sure the artist
-        doesn't draw off the screen.\r
-      4-5 Artist Patterns 11_instruction: "How many times do you need to loop this\nto
-        draw a half circle? "
+        Me peke whakamuri 120 pika i tō koromeke o waho rawa kia kaua rawa te rehetoi i tā i waho atu o te mata. \r
+      4-5 Artist Patterns 11_instruction: 'Kia hia ngā wā e koromekehia ai tēnei hei
+        tā i tētahi haurua porohita? '
       4-5 Artist Patterns 12_instruction: |-
-        If you create another loop like this one,
-        but turn left instead of right, what happens? \r
+        Mēnā ka waihangahia e koe tētahi koromeke pēnei i tēnei, engari ka huri mauī kē, kaua e huri katau, ka ahatia? \r
         \r
-        Can you repeat all of
-        that to draw this wave?
-      4-5 Artist Patterns 13_instruction: |-
-        Now let's loop that whole thing four
-        times to create this picture frame. Watch out for the corners - you can't
-        just turn 90 degrees! \r
-        \r
-        If looping a 3 degree turn 60 times makes a
-        half circle, which of these blocks of code will make an additional quarter
-        circle for the corners?
-      4-5 Artist Patterns 2_instruction: |-
-        If you place your square loop inside another
-        loop, we call that a nested loop. What do you need to add as an outer loop
-        to make sure all 15 squares line up next to each other?
-      4-5 Artist Patterns 3_instruction: |-
-        Now let's go one level deeper! We've
-        nested that whole block of code into another loop, but you need to get the
-        artist back in place to draw the next line. Which of these code blocks can
-        you place at the end of the outermost loop to draw the whole grid?
-      4-5 Artist Patterns 4_instruction: |-
-        This diamond has 50 pixel sides and angles
-        of 120 and 60 degrees. Use a loop to draw it.
-      4-5 Artist Patterns 5.5_instruction: |-
-        How many times do you need to repeat
-        this block to draw the full grid of diamonds?
+        E taea rānei e koe te tōai i te katoa o tēnā mahi hei tā i tēnei ngaru?
+      4-5 Artist Patterns 13_instruction: "Nā, koromekehia tāu kia whā ngā wā hei
+        waihanga i tēnei tapanga whakaahua. Kia mataara ki ngā kokonga - e kore e
+        taea te huri kia 90 putu! /r\n/r \nKi te puta tētehi haurua porowhita i te
+        koromeke i tētehi huringa 3 putu e 60 ngā wā, mā ēwhea paraka waehere e whakaputa
+        i te hauwhā porowhita mō ngā kokonga?"
+      4-5 Artist Patterns 2_instruction: Ki te rau i tō koromeke tapawhā ki roto i
+        tētehi atu koromeke, ka karangahia he koromeke tauroto. Me tāpiri i te aha
+        hei koromeke o waho kia tika ai te whakarārangi i ngā pouaka 15 katoa?
+      4-5 Artist Patterns 3_instruction: Ināianei ka ruku atu ki tētehi taumata hohonu
+        kē! E noho ana te katoa o te paraka waehere ki roto i tētehi atu koromeke
+        heoi anō tāu he tono i te rehetoi kia hoki ki te tā rārangi anō. Me whakarau
+        i ēwhea paraka waehere ki te otinga rawatanga o te koromeke hei tuhi i te
+        mātiti katoa?
+      4-5 Artist Patterns 4_instruction: E 50 pika ngā tapa o tēnei taimana he koki
+        120 me te 60 putu. Whakamahia tētahi koromeke hei tuhi mai.
+      4-5 Artist Patterns 5.5_instruction: E hia ngā tōaitanga o te paraka hei tuhi
+        mai i te katoa o te mātiti taimana?
       4-5 Artist Patterns 5_instruction: |
-        Repeat this code to make a row of 6 diamonds.
+        Tōaitia tēnei waehere kia hanga rārangi he 6 taimana.
         \r
         \r
-        Notice that we changed our diamond code to repeat 3 times instead
-        of 2 - why do you think that is?\r
-      4-5 Artist Patterns 6_instruction: |-
-        How many times do you need to repeat this
-        block to draw the full grid of diamonds?
-      4-5 Artist Patterns 7_instruction: |-
-        Let's modify the code from the last puzzle
-        to make this more complex pattern. Notice how the diamonds overlap now, try
-        changing the first "jump backwards" from 100 to 50 (half as far) - now how
-        far should the artist go in the second "jump backwards"?
-      4-5 Artist Patterns 8_instruction: |-
-        Use a loop to draw this hexagon with 40
-        pixel sides and 60 degree angles.
-      4-5 Artist Patterns 9.5_instruction: |-
-        Let's loop this code to draw two rows
-        of hexagons. Notice how our second row is shifted to the right.
+        Tirohia ake ngā panonitanga o te waehere taimana kia tōaitia e 3 ngā wā kaua ko ngā wā e 2 - he aha i pēnei ai?\r
+      4-5 Artist Patterns 6_instruction: Kia hia ngā tōaitanga hei tā i te katoa o
+        te mātiti taimana?
+      4-5 Artist Patterns 7_instruction: Me whakarerekē i te waehere nō tērā atu panga
+        kia waihanga mai i tēnei tauira uaua ake. Tirohia ināianei ngā wāhi e inaki
+        ana ngā taimana, whakamātauria te "peke whakamuri" tuatahi mai i te 100 ki
+        te 50 (haurua noa iho) - he pēhea ināianei te tawhiti o tā te rehetoi "peke
+        whakamuri" tuarua?
+      4-5 Artist Patterns 8_instruction: Whakamahia tētahi koromeke hei tuhi i tēnei
+        tapaono he 40 pika ngā tapa, ā, he koki 60 putu.
+      4-5 Artist Patterns 9.5_instruction: Me koromeke tēnei waehere hei tuhi i ngā
+        rārangi tapaono e rua. Āta tirohia te nekehanga o te rārangi tuarua ki te
+        taha matau.
       4-5 Artist Patterns 9_instruction: |-
-        Now repeat this code 3 times and draw the
-        whole row. \r
+        Tōaitia ināianei tēnei waehere e 3 ngā wā ka tā mai i te rārangi katoa. \r
         \r
-        Each hexagon is 80 pixels wide from the furthest points
-        left to right.
-      4-5 Artist Patterns Free Play_instruction: |-
-        Free play - try your hand at making
-        a pattern of your own!
+        He 80 pika te whānui o ia tapaono mai te pito tawhiti rawa mauī ki te matau.
+      4-5 Artist Patterns Free Play_instruction: Tākaro here kore - māu anō tāu ake
+        tauira e waihanga!
       4-5 Bee Conditionals - FC Test_instruction: |-
         The bee only wants nectar right
         now. Not all objects are flowers, so check underneath EVERY CLOUD to see if
@@ -1002,98 +823,80 @@
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |-
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      4-5 Bee Conditionals 1_instruction: E ārai ana te kapua nei i taku aro. Tirohia
+        mēnā he putiputi kei raro i te kapua, ā, mēnā he putiputi ka tiki waihonga
+        anake!
       4-5 Bee Conditionals 2 (copy 1)_instruction: |-
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: |-
-        More clouds! \r
+        He kapua anō! \r
         \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
+        Titiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \r
         \r
-        Remember:
-        Not all clouds hide the same thing!
-      4-5 Bee Conditionals 3_instruction: |-
-        Now I just want to make honey. Some of
-        these clouds might have honeycombs under them. Be sure to check each cloud!
+        Kia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!
+      4-5 Bee Conditionals 3_instruction: Ināianei kei te hiahia mahi miere noa iho.
+        He honikoma pea kei raro i ētahi o ēnei kapua. Tirohia ia kapua!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |-
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |-
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: I ētahi wā ka uhi tēnei kapua i te putiputi,
+        ā, i ētahi wā ka uhi i te honikoma! Whakamahia te paraka mēnā/kē ki te kohi
+        waihonga, mēnā he putiputi, ki te mahi miere kē (nā te mea he honikoma).
       4-5 Bee Conditionals 5_instruction: |-
-        There will be either a flower or a honeycomb
-        under each of those clouds!\r
+        He putiputi, he honikoma i raro i ērā kapua!\r
         \r
-        Use the `if/else` block to collect nectar
-        if there is a flower.\r
-        Otherwise, make honey (because there is a honeycomb).
+        Whakamahia te paraka 'mēnā/kē' ki te kohi waihonga, mēnā he putiputi.\r
+        Me mahi miere rānei (nā te mea he honikoma).
       4-5 Bee Conditionals 6 (copy 1)_instruction: |-
         This purple flower may have either
         3, 2, or 1 nectar. Here an if-else block is combined with another if-else
         block to create an if, else-if, else block. Complete the solution to collect
         the unknown amount of nectar.
       4-5 Bee Conditionals 6_instruction: |-
-        I am not sure how much nectar this flower
-        has, but I know it has either 1, 2, or 3 nectar. \r
+        Kāore au i te mōhio pēhea te nui o te waihonga i tēnei putiputi, engari e mōhio ana kotahi rānei, e rua rānei, e toru rānei te waihonga. \r
         \r
-        Combine the conditional
-        blocks (`if` and/or `if/else`) to only get as much nectar as the flower has.
+        Whakatōpūhia ngā paraka whai here ('mēnā' me te/rānei 'mēnā/kē') ki te kohi anake i te nui o te waihonga tērā kei te putiputi. \r
         \r
-        \r
-        Remember, the amount of nectar can change each time you run the puzzle!
+        Kia maumahara, ka panonihia te nui o te waihonga i te panga e haere ana!
       4-5 Bee Conditionals 7_instruction: |-
-        These flowers can have 3, 2, or 1 nectar.
+        Ko ēnei putiputi e 3, e 2, 1 rānei te waihonga. \r
         \r
-        \r
-        Complete the `check purple flower` function and use it to collect
-        all of the nectar at the flowers.
+        Whakaotia te taumahi 'tirohia te putiputi pāpura', ā, ka whakamahi ki te kohi te te katoa o te waihonga i ngā putiputi.
       4-5 Bee Conditionals 8_instruction: |-
-        Write the function for `check flower make
-        honey`. \r
+        Tuhia te taumahi mō te 'taki putiputi hanga miere'.\r
         \r
-        Your function should check if the purple flower has 3, 2,
-        or 1 nectar and get all of the nectar. \r
-        Then, move forward and make honey.
+        Me taki tō taumahi mēnā e 3, e 2, 1 rānei te waihonga o te putiputi pāpura, ā, ka kohia katoatia te waihonga. \r
+        Kātahi ka neke whakamua, ā, ka mahi miere.
       4-5 Bee Conditionals Assessment 1_instruction: |
-        **Assessment:** This cloud
-        is either hiding a flower with one nectar or a honeycomb that needs one honey.  \r
+        **He aromatawai:**  E huna ana i te kapua nei tētahi putiputi me tētahi waihonga rānei, tētahi honikoma me whiwhi i tētahi waihonga. \r
         \r
-        Complete
-        the `get nectar or make honey` function, then call it to collect the nectar
-        or honey. \r
+        Whakaotia te taumahi 'kohi waihonga mahi miere rānei', kātahi ka karanga kia kohi waihonga, kohi mīere rānei. \r
       4-5 Bee Debugging 1_instruction: |-
-        These blocks are really bugging me. \r
+        Kei te mate au i ngā paraka whakahōhā nei. \r
         \r
-        Can
-        you fix them?
-      4-5 Bee Debugging 10_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 11_instruction: Does this count correctly?
-      4-5 Bee Debugging 2_instruction: Help the bee get the nectar and make honey.
-      4-5 Bee Debugging 3_instruction: Find the errors and fix them.
-      4-5 Bee Debugging 4_instruction: These blocks don't work. What's the pattern?
-      4-5 Bee Debugging 5_instruction: Something isn't right here...
+        Ka taea e koe te whakatika?
+      4-5 Bee Debugging 10_instruction: Rapua ngā hapa ka whakatika ai.
+      4-5 Bee Debugging 11_instruction: Ka tika te tatauranga nei?
+      4-5 Bee Debugging 2_instruction: "Āwhinatia te pī ki te kohi waihonga, mahi
+        mīere hoki."
+      4-5 Bee Debugging 3_instruction: Rapua ngā hapa ka whakatika ai.
+      4-5 Bee Debugging 4_instruction: Kāore ēnei paraka e haere. He aha te tauira?
+      4-5 Bee Debugging 5_instruction: Kei te hē rawa tētahi mea...
       4-5 Bee Debugging 6_instruction: |-
-        The purple flower has a different amount
-        of nectar each time you run the puzzle. \r
+        Ka rerekē te rahi o te waihonga i ngā putiputi pāpura nei ia wā ka whakahaere i te panga.\r
         \r
-        Fix the blocks to get all
-        of the nectar from the flower each time.
-      4-5 Bee Debugging 7_instruction: The function is missing something...
-      4-5 Bee Debugging 8_instruction: |-
-        This function is fine, but it isn't used
-        properly.
-      4-5 Bee Debugging 9_instruction: Why isn't the bee making enough honey?
-      4-5 Bee Debugging Assessment 1_instruction: 'Assessment: Fix the code.'
-      4-5 Bee Nested Loops 1_instruction: Use a loop to collect all of the nectar.
+        Whakatikahia ngā paraka ki te kohi i te katoa o te waihonga i ngā putiputi i ia wā.
+      4-5 Bee Debugging 7_instruction: E ngaro ana tētahi mea i te taumahi...
+      4-5 Bee Debugging 8_instruction: Kei te pai noa iho tēnei taumahi, engari kāore
+        e whakamahia tikangia ana.
+      4-5 Bee Debugging 9_instruction: He aha te pī e kore ai e mahi mīere nui rawa?
+      4-5 Bee Debugging Assessment 1_instruction: 'He aromatawai: Whakatikahia te
+        waehere.'
+      4-5 Bee Nested Loops 1_instruction: Whakamahia te koromeke hei kohi i te katoao
+        te waihonga.
       4-5 Bee Nested Loops 2_instruction: "Collect all of the nectar from each flower.\nUse
         a nested loop. "
       4-5 Bee Nested Loops 3_instruction: |-
@@ -1123,19 +926,20 @@
         Dear person. Me zombie. Must... get... to
         sunflower.
       4-5 Maze 1_instruction: Dear person. Me zombie. Must... get... to sunflower.
-      4-5 Maze 10_instruction: Can you get to the sunflower using only four blocks?
+      4-5 Maze 10_instruction: E taea rānei e koe te haere ki te putiputirā me ngā
+        paraka e whā?
       4-5 Maze 11_instruction: Can you get to the sunflower using only six blocks?
       4-5 Maze 12_instruction: |-
         Ok, this is slightly different. Can you do it in
         only six blocks?
-      4-5 Maze 13_instruction: Get me to the pig!
+      4-5 Maze 13_instruction: Aratakina ahau ki te poaka!
       4-5 Maze 14_instruction: Get me to the pig! Use the Repeat until block.
       4-5 Maze 2 (copy 1)_instruction: |-
         Get the zombie to the sunflower, but avoid
         the chomper!
       4-5 Maze 2_instruction: Get the zombie to the sunflower, but avoid the chomper!
-      4-5 Maze 3 (copy 1)_instruction: Must... get... to sunflower.
-      4-5 Maze 3_instruction: Must... get... to sunflower.
+      4-5 Maze 3 (copy 1)_instruction: Me... haere... ki te putiputirā.
+      4-5 Maze 3_instruction: Me... haere... ki te putiputirā.
       4-5 Maze 4 (copy 1)_instruction: Try the "repeat" block to use fewer blocks...
       4-5 Maze 4_instruction: Try the "repeat" block to use fewer blocks...
       4-5 Maze 5 (copy 1)_instruction: |-
@@ -1182,40 +986,31 @@
       4-5 Maze Conditionals 3_instruction: |
         Use the `if` block to help me decide
         when to turn. \r
-      4-5 Maze Conditionals 4_instruction: |-
-        Ok, solve this one just like the last
-        puzzle, but you need to remember how you used the `if` and `repeat until`
-        blocks together.
+      4-5 Maze Conditionals 4_instruction: Nā, me ōrite te whakautu i tēnei i tā te
+        panga o mua, heoi me maumahara ake i kawea pēheatia ngā paraka 'kia' me te
+        'tōai kia'.
       4-5 Maze Conditionals 5_instruction: |-
-        "Me want sunflower!"  \r
+        "E hiahia putiputirā ana ahau!' \r
         \r
-        Use an
-        `if` statement to get the zombie to the sunflower with the fewest number of
-        blocks.
+        Whakamahia tētahi kīanga 'kia' hei arataki i te kairoro ki te putiputirā mā ngā paraka rua rua noa iho.
       4-5 Maze Conditionals 6_instruction: |-
-        "Eat sunflower!"\r
+        "Kai putiputirā!"\r
         \r
-        Use an `if`
-        statement to get the zombie to the sunflower with the fewest number of blocks.
+        Whakamahia tētahi kīanga 'kia' hei arataki i te kairoro ki te putiputirā mā ngā paraka rua rua noa iho.
       4-5 Maze Conditionals 7_instruction: |-
         The solution to this puzzle isn't very
         different, but watch out for the chompers!
       4-5 Maze Conditionals 8_instruction: |-
-        The `if/else` block checks a condition,
-        and then does one thing OR another. \r
+        He mea taki te paraka 'kē/ki te' i te āhuatanga, ka pēnei ka pēnā. \r
         \r
-        Use this new block to get me to
-        the sunflower.
+        Whakamahia tēnei paraka hou nei hei arataki i au ki te putiputirā.
       4-5 Maze Conditionals 9_instruction: |-
-        One more practice puzzle with the `if/else`
-        block!\r
+        Kotahi anake te panga whakawai i te paraka 'kē/ki te'!\r
         \r
-        Trace it with your finger to see if you can figure it out on
-        your first try.
-      4-5 Maze Conditionals Assessment 1_instruction: |-
-        **Assessment:** Use a `repeat
-        until` and an `if/else` block to get me to the sunflower in as few blocks
-        as possible.
+        Whāia ki tō matimati kia mau i a koe i tō ngana tuatahi.
+      4-5 Maze Conditionals Assessment 1_instruction: '**He aromatawai"** Whakamahia
+        ngā paraka ''tōaitia kia'' me te ''kē/ki te'' hei arataki i au ki te putiputirā
+        mā ngā paraka rua rua noa iho.'
       4-5 Nested Loops 1_instruction: |-
         Complete the code to draw these triangles.  The
         first one is done for you.  Hint:  3 triangles in a 360 degree rotation.
@@ -1223,59 +1018,48 @@
         Draw the last row of stars on this flag by
         looping the provided blocks. The stars are 50 pixels apart, but remember that
         the stars themselves are 30 pixels wide.
-      4-5 Nested Loops 11_instruction: |-
-        Can you draw these 10 squares of this sidewalk
-        using a nested loop? Each square is 30 pixels.
-      4-5 Nested Loops 12_instruction: |-
-        Can you draw these 36 triangles using a nested
-        loop?
-      4-5 Nested Loops 2_instruction: "Now nest this loop inside another loop to\ndraw
-        10 triangles.  This is called a \"nested\" loop.  "
+      4-5 Nested Loops 11_instruction: Ka taea rānei e koe ngā tapawhā 10 o te ara
+        hikoi nei te tā mā te koromeke tauroto? He 30 pika ia tapawhā.
+      4-5 Nested Loops 12_instruction: Ka taea rānei e koe ngā tapatoru nei te tā
+        mā te koromeke tauroto?
+      4-5 Nested Loops 2_instruction: 'Ināianei ka whakanohoia tēnei koromeke ki roto
+        i tētahi atu koromeke hei tā i ngā tapatoru 10. He koromeke "tauroto" tēnei.  '
       4-5 Nested Loops 3_instruction: |-
-        Create a sun by nesting the starter code in
-        another loop.\r
+        Waihangahia tētahi rā mā te whakanoho i te waehere whakataki ki roto i tētahi atu koromeke. \r
         \r
-        To get this cool design with a hollow center, you'll
-        need to jump forward by the length of the triangle before turning.
+        Kia riro i a koe tēnei hoahoatanga pokapū kore rawe rawa atu, me peke whakamua mā te roanga o te tapatoru i mua i te huri.
       4-5 Nested Loops 5_instruction: Loop the given code to create a windmill.
-      4-5 Nested Loops 6_instruction: |-
-        Can you draw a hexagon by looping the triangle
-        code?
+      4-5 Nested Loops 6_instruction: Ka taea rānei e koe te tā tapaono mā te koromeke
+        i te waehere tapatoru?
       4-5 Nested Loops 7_instruction: |-
-        Loop this design 10 times. \r
+        Koromekehia tēnei hoahoatanga kia 10 ngā wā. \r
         \r
-        How much
-        do you have to turn each time you loop?
-      4-5 Nested Loops 8_instruction: "Loop this shape 6 times. \\r\n\\r\nHow much\ndo
-        you have to turn each time you loop? "
+        Kia hia ngā huri i ia wā e koromekehia ana?
+      4-5 Nested Loops 8_instruction: "Koromekehia tēnei āhua kia 6 ngā wā. \\r\n\\r\nKia
+        hia ngā huri i ia wā e koromekehia ana? "
       4-5 Nested Loops 9_instruction: Draw the teeth in the alligator's mouth!
-      4-5 Nested Loops Assessment 1_instruction: |-
-        Assessment: Use a nested loop to
-        complete the design.
-      4-5 While Loops 1_instruction: |-
-        Move me to the hole and fill it with two shovelfuls
-        of dirt, using the `fill` block.
-      4-5 While Loops 2_instruction: |-
-        Move me to the pile of dirt and remove it with
-        5 shovel scoops, using the `remove 1` block.
+      4-5 Nested Loops Assessment 1_instruction: 'He aromatawai: Whakamahia tētahi
+        koromeke tauroto hei whakaoti i te hoahoatanga.'
+      4-5 While Loops 1_instruction: Nekehia ahau ki te rua ka whakakīia ki ngā kāheru
+        oneone e rua, mā te paraka 'whakakī'.
+      4-5 While Loops 2_instruction: Nekehia ahau ki te putu oneone ka tangohia ki
+        ngā okooko e 5, mā te paraka 'tango1'.
       4-5 While Loops 3_instruction: |-
-        Use as few blocks as possible to complete this
-        puzzle!  \r
+        Whakamahia ngā paraka rua rua noa iho hei whakaoti i tēnei panga! \r
         \r
-        Move me to the pile and remove all the dirt, then move to
-        the hole and fill it completely.
-      4-5 While Loops 4_instruction: "Wow, look at that! \\r\n\\r\nI don't know how\nmany
-        shovelfuls of dirt this hole needs.  \\r\nCan you write a program that\nkeeps
-        using the `fill` block until the ground is even?  "
-      4-5 While Loops 5_instruction: |-
-        Wow, now there are two deep holes! Can you
-        write a program that fills them both until the ground is even?
-      4-5 While Loops 6_instruction: |-
-        Wow, now there is a large pile of dirt! Can
-        you write a program that removes all of it so the ground is even?
-      4-5 While Loops 7_instruction: |-
-        Wow, now there are three piles of dirt! Can
-        you write a program that removes each of them until the ground is even?
+        Nekehia ahau ki te putuka ka tangohia katoatia te oneone, ka neke ki te rua ka whakakīia katoatia.
+      4-5 While Loops 4_instruction: "Anana! Tirohia atu! \\r\n\\r\nKāore au i te
+        mōhio e hia okooko oneone mō te rua nei. \\r\nKa taea rānei e koe tētahi papatono
+        e whakamahi tonu ana i te paraka 'whakakī' te tā kia papatahi te papa?  "
+      4-5 While Loops 5_instruction: Anana, e rua ngā rua hohonu ināianei! Ka taea
+        rānei e koe tētahi papatono te tā e whakakī ana i ngā mea e rua kia papatahi
+        te papa?
+      4-5 While Loops 6_instruction: Anana, he putu oneone rarahi ināianei! Ka taea
+        rānei e koe tētahi papatono te tā e tangohia katoatia ana kia papatahi te
+        papa?
+      4-5 While Loops 7_instruction: "Anana, E toru ngā putu oneone ināianei! \nKa
+        taea rānei e koe tētahi papatono te tā e tango ana i ia putu kia papatahi
+        te papa?"
       4-5 While Loops 8_instruction: |2-
          There is a really deep hole and a really large
         pile of dirt.  How many shovelfuls of dirt need to be moved around to make
@@ -1932,15 +1716,12 @@
       Course 4 Artist 7_instruction: "Now nest this loop inside another loop to draw\n10
         triangles. This is called a nested loop. Hint: All 10 triangles complete\na
         360 degree rotation.  "
-      Course 4 Artist 8_instruction: |-
-        Draw this sun by looping this whole block of
-        code multiple times.
-      Course 4 Artist 8a_instruction: |-
-        Remember this shape?  Now we're going to
-        let you build it without giving you any blocks to start!
+      Course 4 Artist 8_instruction: Tāngia tēnei rā mā te koromeke i te paraka waehere
+        ki tini ngā wā.
+      Course 4 Artist 8a_instruction: Maumaharatia te āhua nei?  Ināianei e wātea
+        ana koe ki te waihanga i te kore o ētahi paraka timatanga!
       Course 4 Artist 9_instruction: |
-        Loop this design 10 times and make sure to
-        turn between each shape that's drawn. \r
+        Koromekehia tēnei hoahoatanga kia 10 ngā wā, ā, me mātua huri i te tānga o ia āhua. \r
       Course 4 Artist Binary 1_instruction: |-
         Here's a function that takes a binary
         string of 1's and 0's and instructs the artist to follow them from left
@@ -2877,7 +2658,8 @@
         when Waddles runs into Octavia (actor 3)? \r
         Play the game and move Waddles
         with the arrows until you score!
-      course3_playlab_stage16_1_instruction: Can you make this dog say "hello world"?
+      course3_playlab_stage16_1_instruction: Māu rānei tēnei kurī e whakakōrero kia
+        pēnei tana mihi "kia ora e te ao"?
       course3_playlab_stage16_2_instruction: |-
         Can you make the dog say something
         and then have the cat say something afterwards?
@@ -2912,9 +2694,9 @@
         Can you add a block to score a point
         when Waddles runs into the octopus, and then move him with the arrows until
         you score?
-      course3_playlab_stage17_6_instruction: |-
-        Can you add blocks to change the background
-        and the speed of Waddles, and then move him with the arrows until you score?
+      course3_playlab_stage17_6_instruction: "E taea ana e koe ētahi paraka te tāpiri
+        ki te panoni i te papamuri \nme te tere o Waddles kātahi, ka whakaneke i a
+        ia me ngā pere tae noa ki te wā ka riro i ētahi piro?"
       course3_playlab_stage17_7_instruction: |-
         Create your own story. When you're
         done, click Finish to let friends try your story on their phones.
@@ -4568,9 +4350,8 @@
       frozen circle function_instruction: |-
         Use the new “Create a circle” block to
         create 10 overlapping circles. Don't forget to jump forward between circles.
-      frozen circle_instruction: |-
-        A circle is a special shape. Can you figure out
-        what number to replace the question marks with to draw a circle?
+      frozen circle_instruction: "He āhua mīharo te porohita. Ka āhei koe te matapae
+        \nko tēhea tau ka tuhia hei whakakapi i ngā tohu pātai ki te tā porohita?"
       frozen cross rotate dense_instruction: |-
         Let's repeat it 90 times! How many
         times does 90 go into 360? Hint: It's a really small number.
@@ -4787,7 +4568,7 @@
       grade2_CaringForNewPet_1_instruction: |-
         Drag an extra `move forward` block out
         of the toolbox to finish your code.
-      grade2_CaringForNewPet_10_instruction: Get me to the pig!
+      grade2_CaringForNewPet_10_instruction: Aratakina ahau ki te poaka!
       grade2_CaringForNewPet_11_instruction: |-
         "Keep calm and help me find the bad
         pig."
@@ -4806,7 +4587,7 @@
       grade2_CaringForNewPet_4_instruction: |-
         "Keep calm and help me find the bad
         pig. Otherwise I might get angry!"
-      grade2_CaringForNewPet_5_instruction: Get me to the pig!
+      grade2_CaringForNewPet_5_instruction: Aratakina ahau ki te poaka!
       grade2_CaringForNewPet_6_instruction: |-
         Challenge: Guide me to the green evilness!
         (Watch out for TNT)
@@ -4853,7 +4634,7 @@
       grade2_MakeDogTag_1_instruction: |-
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
-      grade2_MakeDogTag_10_instruction: Now, draw anything you like!
+      grade2_MakeDogTag_10_instruction: Na, tāngia tāu i hiahia ai!
       grade2_MakeDogTag_2_instruction: |-
         This spaceship needs a window!\r
         \r
@@ -4882,9 +4663,7 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
-      grade2_MakeDogTag_8_instruction: |-
-        Now let's connect a bunch of V's together
-        in a loop.
+      grade2_MakeDogTag_8_instruction: Me rauhī i tētahi huinga V hei koromeke ināianei.
       grade2_MakeDogTag_9_instruction: |-
         Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
@@ -4979,10 +4758,9 @@
         Can you get me to the pig using 5 of the
         same kind of blocks?
       grade2_PuppyLoops_10_instruction: |-
-        My teacher says that I should finish what
-        I start!\r
+        Ka kī mai taku kaiako, ki te tīmata me oti!\r
         \r
-        Help me finish my pinwheel. Can you figure out what's wrong?
+        Āwhinatia ahau ki te whakaoti i taku pinewīra. He aha pea te mate?
       grade2_PuppyLoops_2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
@@ -4992,23 +4770,21 @@
       grade2_PuppyLoops_4_instruction: |-
         In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!
-      grade2_PuppyLoops_5_instruction: |-
-        Can you figure out the fastest way to get
-        me to the pig?
+      grade2_PuppyLoops_5_instruction: Māu rānei e rapu i tētahi ara e tae tere atu
+        ai au ki te poaka?
       grade2_PuppyLoops_6_instruction: |-
         Loops even work with more than one block
         inside!  Can you loop this sequence to get me to the pig?
-      grade2_PuppyLoops_7_instruction: Use what you learned to get me to the sunflower!
+      grade2_PuppyLoops_7_instruction: Kawea tāu i ako ai kia arataki i au ki te putiputirā!
       grade2_PuppyLoops_8_instruction: |-
-        This code for the cat's whiskers is wrong.
+        Kei te hē te waehere mō ngā kumikumi o te ngeru.
         \r
         \r
-        Fix this code to draw whiskers that are all the same length.
+        Whakatikahia tēnei waehere, tāngia ētahi kumikumi e ōrite ana te roa.
       grade2_PuppyLoops_9_instruction: |-
-        Looks like the C in code is drawn backwards!\r
+        Te āhua nei kua tāngia kōarohia te C i te waehere!\r
         \r
-        Can
-        you make it look like a C again?
+        Māu e whakatika kia C anō tōna hanga?
       grade3_AboutMyRobot_1_instruction: |-
         Make your robot say "Hello!" when the
         button is clicked.
@@ -5065,13 +4841,11 @@
         Check to see if there's a flower under the cloud, and only get nectar if
         there's a flower. Be careful, it can change!
       grade3_bee_conditionals_quantum2_instruction: |-
-        More clouds! \r
+        He kapua anō! \r
         \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
+        Titiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \r
         \r
-        Remember:
-        Not all clouds hide the same thing!
+        Kia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!
       grade3_bee_conditionals_quantum3_instruction: |-
         Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
@@ -5089,83 +4863,71 @@
         to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Conditionals_1 BAD_instruction: Use a loop to collect all of the nectar.
+      grade3_Conditionals_1 BAD_instruction: Whakamahia te koromeke hei kohi i te
+        katoao te waihonga.
       grade3_Conditionals_1_instruction: |-
-        I'm a hungry bee! \r
-        Help me collect
-        all of the nectar from the flowers using the fewest number of blocks.
+        He pī matekai ahau! \r
+        Āwhinatia mai taku kohi waihonga ki ngā paraka iti rawa e taea.
       grade3_Conditionals_10 BAD_instruction: |-
         Gather nectar from the rows of flowers!
         Use a nested loop.
       grade3_Conditionals_10_instruction: |-
-        There's a lot happening here!\r
+        Te huhua hoki o ngā kaupapa e haere ana! \r
         \r
-        Use
-        what you've learned to collect all of the nectar and then make the honey.
-      grade3_Conditionals_11 BAD_instruction: |-
-        Assessment: Use a `while` loop to
-        collect all of the nectar from these flowers.
+        Whakamātauhia tāu i ako ai ki te kohi i te katoa o te waihonga, kātahi nā ka mahi miere.
+      grade3_Conditionals_11 BAD_instruction: 'He aromatawai: Whakamahia te koromeke
+        ‘i te’ ki te kohi i te waihonga katoa i ngā putiputi nei.'
       grade3_Conditionals_11_instruction: |-
-        Let's put everything together!\r
+        Kāti rā, kāpuia! \r
         \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  Don't forget to make honey at the end.
+        Whakamātauhia tāu i ako ai ki te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea. Kei wareware ki te mahi miere i te mutunga.
       grade3_Conditionals_12_instruction: |-
-        This stair step pattern should look familiar.  \r
+        Ko te tikanga e mōhio whānui ana te tauira o te whata arapiki nei. \r
         \r
-        Can
-        you collect nectar only from the flowers that have some, using as few blocks
-        as possible?
+        Ka taea rānei e koe te kohi waihonga i ngā putiputi whai waihonga, mā te whakamahinga o ngā paraka iti rawa e taea?
       grade3_Conditionals_13_instruction: |-
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
-        collect the nectar and make the honey using as few blocks as you can.  "
+      grade3_Conditionals_2_instruction: "Tirohia te nui o te waihonga!\\r\n\\r\nĀwhinatia
+        mai taku kohi waihonga me te mahi mīere ki ngā paraka iti rawa e taea.  "
       grade3_Conditionals_3_instruction: |-
         Be careful not to collect nectar from a
         purple flower if it doesn't have any. \r
         You must first check if the nectar
         is equal to 1 using the `if nectar` block.
-      grade3_Conditionals_4_instruction: |-
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      grade3_Conditionals_5_instruction: |-
-        Collect nectar from each flower only if
-        it has any.
-      grade3_Conditionals_6_instruction: |-
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      grade3_Conditionals_7_instruction: Collect all the nectar from each flower.
-      grade3_Conditionals_8_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
-        fly around the yard and collect nectar only from the flowers that have\nsome. "
+      grade3_Conditionals_4_instruction: Tirohia tēnei putiputi ki te paraka 'ki te'
+        e kite ai ina he waihonga tōna.
+      grade3_Conditionals_5_instruction: Kohia te waihonga i ia putiputi ina whai
+        waihonga.
+      grade3_Conditionals_6_instruction: "He putiputi whero, he putiputi waiporoporo
+        o tēnei pātiki. \nE mōhiotia ana te rahi o te waihonga i ngā putiputi whero,
+        kāore i te mōhio ki te rahi o te waihonga i ngā putiputi waiporoporo. \nKohia
+        katoatia te waihonga."
+      grade3_Conditionals_7_instruction: Kohia te waihonga i ia putiputi.
+      grade3_Conditionals_8_instruction: "He aha kei waho rā? \\r\n\\r\nĀwhinatia
+        mai taku rere i te iari ki te kohi waihonga i ngā putiputi whai waihonga. "
       grade3_Conditionals_9_instruction: |-
         Help me find all of the nectar using as
         few blocks as possible!
       grade3_Conditionals_TeacherIDo_instruction: |-
         Check this flower with an "if"
         block to see if there is any nectar available.
-      grade3_ConditionalsElse_1_instruction: |-
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      grade3_ConditionalsElse_1_instruction: E ārai ana te kapua nei i taku aro. Tirohia
+        mēnā he putiputi kei raro i te kapua, ā, mēnā he putiputi ka tiki waihonga
+        anake!
       grade3_ConditionalsElse_2_instruction: |-
-        More clouds! \r
+        He kapua anō! \r
         \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
+        Titiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \r
         \r
-        Remember:
-        Not all clouds hide the same thing!
+        Kia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!
       grade3_ConditionalsElse_3_instruction: |-
         Now I just want to make honey. Some
         of these clouds might have honeycombs under them. Be sure to check each cloud!
-      grade3_ConditionalsElse_4_instruction: |-
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      grade3_ConditionalsElse_4_instruction: I ētahi wā ka uhi tēnei kapua i te putiputi,
+        ā, i ētahi wā ka uhi i te honikoma! Whakamahia te paraka mēnā/kē ki te kohi
+        waihonga, mēnā he putiputi, ki te mahi miere kē (nā te mea he honikoma).
       grade3_ConditionalsElse_5_instruction: |-
         There will be either a flower or a
         honeycomb under each of those clouds!\r
@@ -5185,11 +4947,9 @@
         Remember, the amount of nectar can change each time you
         run the puzzle!
       grade3_ConditionalsElse_7_instruction: |-
-        These flowers can have 3, 2, or 1 nectar.
+        Ko ēnei putiputi e 3, e 2, 1 rānei te waihonga. \r
         \r
-        \r
-        Complete the `check purple flower` function and use it to collect
-        all of the nectar at the flowers.
+        Whakaotia te taumahi 'tirohia te putiputi pāpura', ā, ka whakamahi ki te kohi te te katoa o te waihonga i ngā putiputi.
       grade3_ConditionalsElse_8_instruction: |-
         Write the function for `check flower
         make honey`. \r
@@ -5213,70 +4973,60 @@
         to collect nectar if there is a flower.\r
         Otherwise, make honey (because
         there is a honeycomb).
-      grade3_Debugging_1_instruction: |-
-        These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar.
+      grade3_Debugging_1_instruction: Kei te mate katoa ahau i ēnei paraka. Whakatikahia
+        te/ngā hapa kia kohia katoatia te waihonga.
       grade3_Debugging_5_instruction: |-
         That flower looks tasty! \r
         \r
         Fix the error(s)
         to collect all of the nectar.  You can now use both run and step.
       grade3_Debugging_6_instruction: |-
-        What a sweet challenge!\r
+        Kātahi te taki ko tēnei!\r
         \r
-        Fix the error(s)
-        to collect all of the nectar.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga.
       grade3_Debugging_7_instruction: |-
-        Fix the error(s) to collect all of the nectar
-        and make all of the honey.
+        Fix the error(s) to collect all of the nectar and make all of the honey.
+        Whakatikahia te/ngā hapa kia kohia katoatia te waihonga, ā, ka mahi ai te mīere katoa.
       grade3_Debugging_9_instruction: |-
-        "Bee" patient with this one!\r
+        “Pī” kia manawanui i tēnei!\r
         \r
-        You
-        will need to fix a couple of things in this program to collect all of the
-        nectar and make all of the honey.
+        Me whakatikahia e tātou ētahi mea i tēnei papatono ki te kohi i te waihonga katoa me te mahi i te mīere katoa.
       grade3_Debugging_TeacherIDo_instruction: |-
         These blocks are really bugging me.
         Fix the error(s) to collect all of the nectar and make all of the honey.
       grade3_Loops_1_instruction: "Can you help me collect the nectar from these\nflowers? "
       grade3_Loops_10_instruction: |-
-        Such a busy bee!\r
+        Kātahi te pī pukumahi!\r
         \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
+        Āwhina i a pī ki te kohi i te katoa o te waihonga, ā, ka mahi i te katoa o te mīere mā ngā paraka rua rua noa iho.
       grade3_Loops_11_instruction: |-
-        The shape of this path is different than the
-        others. \r
+        He rerekē te āhua o te ara nei i ērā atu. \r
         \r
-        Can you collect all of the nectar using as few blocks as possible?
-      grade3_Loops_12_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
-      grade3_Loops_2_instruction: This time, use a loop to gather all of the nectar.
-      grade3_Loops_3_instruction: Use a `repeat` loop to collect all of the nectar.
+        Ka taea e koe te katoa o te waihonga te kohi mā ngā paraka rua rua noa iho?
+      grade3_Loops_12_instruction: Kei te kite koe i te huarahi tere rawa e kohia
+        katoatia ai te waihonga e te pī kia mahi katoa mai te mīere?
+      grade3_Loops_2_instruction: Ināianei, whakamahia tētahi koromeke kia kohia katoatia
+        te waihonga.
+      grade3_Loops_3_instruction: Whakamahia tētahi koromeke ‘tōai’ hei kohi i te
+        katoa o te waihonga.
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
-      grade3_Loops_5_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+      grade3_Loops_5_instruction: Inā te pātiki putiputi rerehua! Āwhinatia te pī
+        kia toro ki ia putiputi.  Ka taea rānei e koe te pērā mā ngā paraka e 7 iti
+        iho?
       grade3_Loops_6_instruction: |-
-        How many times can loops help you in this puzzle?  \r
+        Kia hia koromeke hei āwhina i a koe i tēnei panga nei? \r
         \r
-        Loops
-        are your friend! Use a few of them to complete this puzzle with the fewest
-        blocks possible.
+        He hoa ngā koromeke ki a koe! Whakamahia kia okuoku noa iho hei whakaoti i te panga nei mā ngā paraka rua rua noa iho.
       grade3_Loops_7_instruction: |-
-        Those flowers look tasty!\r
+        Inā ngā putiputi reka rā! \r
         \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
-      grade3_Loops_8_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
-      grade3_Loops_9_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+        Kohia te waihonga i ia putiputi mā ngā putiputi rua rua noa iho.
+      grade3_Loops_8_instruction: Kohia katoatia te waihonga ka mahia mai te mīere
+        mā ngā paraka rua rua noa iho.
+      grade3_Loops_9_instruction: Kohia te waihonga i ia putiputi ka mahi mīere i
+        ia honikoma mā ngā paraka rua rua noa iho.
       grade3_Loops_TeacherIDo_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -5285,21 +5035,16 @@
       grade3_maze_Loop1_instruction: "Assessment:  Get me to the sunflower using\nonly
         5 blocks! "
       grade3_maze_loops2_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!  \r
+        Aratakina au ki putiputirā mā ngā paraka rua rua noa iho. \r
         \r
-        Try using one `repeat` loop inside of another to cut down
-        on the amount of code you need.
+        Whakamātauria tētahi koromeke ‘tōai’ ki roto i tētahi atu kia heke iho mai te nui o te waehere e whakamahia ana.
       grade3_maze_loops3_instruction: |-
-        Let's take this to another level! \r
-        Use
-        loops to get me to the sunflower with the fewest loops possible.
-      grade3_maze_loops4_instruction: |-
-        Get me to the sunflower using the fewest number
-        of blocks possible!
-      grade3_maze_loops5_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
+        Me tae atu ki tētahi taumata kē atu! \r
+        Whakamahi koromeke kia tae atu ai au ki te putiputirā mā ngā koromeke ruarua noa iho.
+      grade3_maze_loops4_instruction: Aratakina ahau ki te putiputirā mā te whakamahi
+        i ngā nama paraka rua rua noa iho!
+      grade3_maze_loops5_instruction: Aratakina ahau ki te putiputirā me ngā paraka
+        iti rawa e taea!
       grade3_maze_nestedLoops1_instruction: |-
         Can you get me to the pig using 5 of
         the same kind of blocks?
@@ -5673,13 +5418,11 @@
         Check to see if there's a flower under the cloud, and only get nectar if
         there's a flower. Be careful, it can change!
       grade4_bee_conditionals_quantum2_instruction: |-
-        More clouds! \r
+        He kapua anō! \r
         \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
+        Titiro ki raro i te kapua mēnā he putiputi e huna ana hei tiki waihonga. \r
         \r
-        Remember:
-        Not all clouds hide the same thing!
+        Kia maumahara: Ehara i te mea e ōrite ana ngā mea e huna  ana i ia kapua!
       grade4_bee_conditionals_quantum3_instruction: |-
         Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
@@ -5700,7 +5443,7 @@
       grade4_bee_functions_instruction: |-
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
-      grade4_bee_functions1_instruction: Collect all the nectar from each flower.
+      grade4_bee_functions1_instruction: Kohia te waihonga i ia putiputi.
       grade4_bee_functions10_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
@@ -5708,10 +5451,9 @@
         Solve this function by creating a function
         to turn, move forward and make all of the honey, then return the bee to where
         it started and turn back.
-      grade4_bee_functions2_instruction: |-
-        Functions are blocks of code that perform
-        a task. Use the "get 2 nectar" function to collect the nectar from each
-        flower.
+      grade4_bee_functions2_instruction: Ko te taumahi tētahi paraka waehere whakatutuki
+        mahi. Whakamahia te taumahi “tiki i ngā waihonga e 2” ki te kohi i te waihonga
+        i ia putiputi.
       grade4_bee_functions3_instruction: |-
         Build the `get 5` function to use in this
         puzzle.
@@ -5732,7 +5474,8 @@
       grade4_bee_functions9_instruction: |-
         Create a function that collects all of
         the nectar from each flower.
-      grade4_bee_nestedLoops0_instruction: Use a loop to collect all of the nectar.
+      grade4_bee_nestedLoops0_instruction: Whakamahia te koromeke hei kohi i te katoao
+        te waihonga.
       grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.\nUse
         a nested loop. "
       grade4_bee_nestedLoops2_instruction: Can you determine the missing blocks?
@@ -5858,9 +5601,8 @@
         Hi, I'm an artist. You can write code
         to make me draw almost anything. Use a few blocks to make me draw over the
         grey lines in the picture. (Each line is 100 pixels long)
-      grade4_review_artist2_instruction: |-
-        This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length.
+      grade4_review_artist2_instruction: 'Me whai tuanui tēnei whare! Tāngia tētahi
+        tapatoru. Hei tīwhiri: e ōrite ana ia tapa te roana o ngā tapa e toru.'
       grade4_review_artist3_instruction: |-
         The jump block moves the artist without
         drawing. Draw the dashed line using both the `jump forward` and `move forward`
@@ -5868,14 +5610,12 @@
       grade4_review_bee1_instruction: |-
         Now use the `repeat` block to collect all
         of the nectar and make all of the honey.
-      grade4_review_bee2_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      grade4_review_bee2_instruction: Kohia te waihonga i ia putiputi ka mahi mīere
+        i ia honikoma mā ngā paraka rua rua noa iho.
       grade4_review_bee3_instruction: |-
-        Such a busy bee!\r
+        Kātahi te pī pukumahi!\r
         \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
+        Āwhina i a pī ki te kohi i te katoa o te waihonga, ā, ka mahi i te katoa o te mīere mā ngā paraka rua rua noa iho.
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
@@ -6768,7 +6508,7 @@
       K-1 Maze debug Assessment 1_instruction: |-
         Assessment -- Debug this level by
         rearranging and adding blocks to get me to the pig!
-      K-1 Maze Loops 1_instruction: Get me to the pig!
+      K-1 Maze Loops 1_instruction: Aratakina ahau ki te poaka!
       K-1 Maze Loops 10_instruction: |-
         Get me to the pig! Using the `repeat` loop
         will make it much easier.
@@ -6781,12 +6521,12 @@
         this easier.
       K-1 Maze Loops 2_instruction: Use the `repeat` block to get me to the pig!
       K-1 Maze Loops 3_instruction: Get me to the pig! Be sure to use `repeat` loops.
-      K-1 Maze Loops 4_instruction: Get me to the pig!
+      K-1 Maze Loops 4_instruction: Aratakina ahau ki te poaka!
       K-1 Maze Loops 5_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 6_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 7_instruction: Get me to the pig! Be sure to use `repeat` loops.
       K-1 Maze Loops 8_instruction: Use `repeat` loops to get me to the pig.
-      K-1 Maze Loops 9_instruction: Get me to the pig!
+      K-1 Maze Loops 9_instruction: Aratakina ahau ki te poaka!
       K-1 Maze Loops Assessment 1_instruction: |-
         Look at all we've learned! Use a
         `repeat` loop to get me to the pig!
@@ -6960,7 +6700,7 @@
         Hūrō, kua neke te heihei! Kātahi ia ka tū. I roto i ngā kēmu kua kore te heihei e tū, ka hīkoi tonu āke, āke. Whakamahia tētahi koromeke 'mahia atu āke, āke' kia neke tonu ngā heihei.\r
       MC HOC 2016 Level 4_instruction: Hanga rerekē ngā heihei ināianei i te āhua
         ōrite o ngā nekehanga. Ka whakamahia i ngā kēmu ngā nekehanga matapōkere kia
-        motuhenga te hanga o ngā mea. Meatia kia 'hurihia matapōkeretia' ngā heihei.
+        motuhenga te hanga o ngā mea. Meatia kia 'huri matapōkere' ngā heihei.
       MC HOC 2016 Level 5_instruction: Kua hē te ara o ngā kau! Ārahina rātou ki te
         pātītī me te paraka 'e neke kia kotahi hipanga ki te' ki roto i tētahi koromeke
         'mahia atu āke, āke'.
@@ -6984,17 +6724,17 @@
         Try getting inside the house by using the door to continue.
       MC HOC 2016 New Drop_instruction: I te ao Mahimaina ka tuku wūru ngā hipi. Hoatu
         te paraka 'tuku' ki roto i 'ina whakamahia' kātahi me hīkoi atu ki te hipi
-        ki te whakamahi i a ia ki te tuku i tētahi pūkei.
+        ki te whakamahi i a ia ki te tuku i tētahi tuemi.
       MC HOC 2016 New pn_instruction: |-
         Now let's explore our world! Use the arrows
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
       MC HOC 2016 New Spawn_instruction: Kua wātea ināianei te ao kia whakakīia e
         koe ki ngā mea e hiahiatia ana! Hoatu ngā paraka 'whakaputa' ki raro i 'ina
-        whakahaerehia' ki te auaha i ētahi koiora i te ina tīmata te kēmu.
+        whakahaerehia' ki te whakaputa i ētahi koiora i te tīmatanga o te kēmu.
       MC HOC 2016 New Walk_instruction: Tēnā, kia torohia e tātou tō tātou ao. Whakamahia
         ngā pere ki te neke haere, pēhi hoki i te paemokowā, patohia rānei te papa
-        kēmu ki te whakamahi pūkei. E kuhu ki te whare mā te tatau.
+        kēmu ki te whakamahi tuemi. E kuhu ki te whare mā te tatau.
       MC HOC 2016 SCORE LEVEL_instruction: E āhei ana i ētahi kēmu te tapeke piro
         te tiaki. Me tākaro pā ki ēnei Taipō Rino ka whakamahia ai te paraka 'tāpiritia
         te 1 ki te tapeke piro' ki te hoatu piro ki a koe ina koe ka pā ki a rātou.
