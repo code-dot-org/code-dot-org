@@ -82,8 +82,8 @@ zh-CN:
     student_count: '%{count} 位学生已经注册。'
     teacher_count: '%{count} 位教师已经注册。'
     overview: '注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: '使用客人身份开始'
+    hoc_already_signed_up_content: '你已经注册教授“小时代码”！你和你的学生不需要登陆到 Code Studio 来参加该活动。想要开始，为你的班级 <a href="https://code.org/learn">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢“小时代码”并希望更深入地了解，你可以在下面设置一个密码并创建一个 Code Studio 账号，以为你的学生在我们任何的 <a href="https://code.org/educate">大型课程</a>注册。'
     teacher_educator_guide: '请参阅教师指南'
     title: "注册 Code.org"
     school_name: '学校名称 （可选）'
@@ -355,8 +355,8 @@ zh-CN:
     announcement_petition_button: "添加您的姓名"
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看以前的公告。</a>"
     announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_hoc_scaling: 课程 1-4 和加速课程老师警告：由于数以万计的学生对于“一小时代码”的巨大访问量， <b>至 11 年 12 月 3 日起，Code Studio 将不会保存或汇报学生在这些课程中的进度</b>。我们建议在“计算机科学教育周” 期间与你的班级做一个“一小时代码”的活动来庆祝“一小时代码”。虽然我们自己的“一小时代码”教程在其间也无法保存进度，但是学生仍然可以使用完整的教程并获得认证。
+    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的时间》“编程一小时”设计师让学生们为《我的时间》里的世界设置规则。他们可以获得一个完全独一无二的《我的时间》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -487,7 +487,7 @@ zh-CN:
       body: "用代码来探索《我的世界》。"
     minecraft2016:
       title: "我的世界"
-      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
+      body: "利用编程，在你自己的《我的世界》里创建动物和其他生活在《我的世界》里的生物。"
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"

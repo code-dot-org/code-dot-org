@@ -47,6 +47,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   @browser.navigate.to url
   refute_bad_gateway
+  refute_site_unreachable
   install_js_error_recorder
 end
 
@@ -323,8 +324,21 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == true }
+  wait_with_timeout.until do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+  end
   @browser.execute_script("$(\"#{selector}\")[0].click();")
+end
+
+When /^I click selector "([^"]*)" if I see it$/ do |selector|
+  begin
+    wait_with_timeout(5).until do
+      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    end
+    @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
+  rescue Selenium::WebDriver::Error::TimeOutError
+    # Element never appeared, ignore it
+  end
 end
 
 When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
@@ -617,8 +631,10 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
-Then /^I wait until I see selector "(.*)"$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
+  wait_with_timeout.until do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
+  end
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
@@ -675,15 +691,13 @@ def wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
 end
 
-Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
   wait_with_short_timeout.until {
-    @child_item = @browser.find_element(:css, child)
+    @child_item = @browser.find_element(:id, child_id)
   }
-  wait_with_short_timeout.until {
-    @parent_item = @browser.find_element(:css, parent)
-  }
-  @actual_parent_item = @child_item.find_element(:xpath, "..")
-  expect(@parent_item).to eq(@actual_parent_item)
+  actual_parent_item = @child_item.find_element(:xpath, "..")
+  actual_parent_id = actual_parent_item.attribute('id')
+  expect(actual_parent_id).to eq(parent_id)
 end
 
 And(/^I set the language cookie$/) do
@@ -767,6 +781,7 @@ def generate_teacher_student(name, teacher_authorized)
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
+    And I dismiss the language selector
     And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
@@ -783,6 +798,13 @@ def generate_teacher_student(name, teacher_authorized)
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]"
     And I wait until I am on "http://studio.code.org/"
+  }
+end
+
+And /^I dismiss the language selector$/ do
+  steps %Q{
+    And I click selector ".close" if I see it
+    And I wait until I don't see selector ".close"
   }
 end
 
@@ -1061,4 +1083,10 @@ end
 def refute_bad_gateway
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
   expect(first_header_text).not_to eq('Bad Gateway')
+end
+
+def refute_site_unreachable
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  # This error message is specific to Chrome
+  expect(first_header_text).not_to eq('This site can’t be reached')
 end

@@ -302,28 +302,50 @@
           borti boksen med TNT!
         maze_3_4: Argh! Skriv eit program som får meg rundt sprengstoffet og heilt
           fram til grisen.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr».
+          Flytt handa ved å bruke venstre pil for å nå målet.
+        bounce_2_basketball: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene.
+          Flytt handa for å nå begge måla.
+        bounce_5_basketball: Me skal sende ein ball flygande ned mot handa. Fest ei
+          blokk til «når ein ball treffer handa»-blokka for å vere sikker på at ballen
+          når flagget.
+        bounce_6_basketball: No er flagget på toppen. Du må feste blokker til begge
+          «når ein ball treffer»-blokkene for å løyse denne oppgåva.
+        bounce_7_basketball: Fest blokker til alle «når» blokkene. Sprett ballen heilt
+          til den treff flagget.
+        bounce_10_basketball: Det er no eit mål på toppen! Fest «skår eit poeng» og
+          «skår motstanderen et poeng» blokkene til «når ein ball i mål» og «når ein
+          ball bommar på handa»-blokkene for å lage eit spel. Sjå kor mange poeng
+          du greier å skåre før motstandaren din skårer to gonger.
+        bounce_11_basketball: 'Du kan no feste blokker til «når starta»-blokka. Du
+          må feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg:
+          prøv å endre scena eller farta på handa og ballen og sjå kor mange poeng
+          du kan skåre før motstandaren din har skåra to gonger!'
+        bounce_12_basketball: Opprett ditt eget basketball-spel. Du kan endre alle
+          reglane. Når du er ferdig, klikk Fullfør for å la vener prøve spelet på
+          sine telefonar.
+        bounce_1_sports: Kom deg til flagget! Kople ei blokk til "når venstre pil"-blokka
+          og trykk "Køyr" for å flytte spelfiguren til flagget.
+        bounce_2_sports: No er det to flagg! Kople ei blokk til "når venstre pil"-
+          og "når høgre pil"-blokkene for å kunne flytte spelfiguren i to retningar.
+        bounce_5_sports: Hockey-pucken kjem til å flyge ned mot spelfiguren! Kople
+          en blokk til "når ball treff spelaren"-blokka for å treffe flagget.
+        bounce_6_sports: No er flagget på toppen. Du må feste blokker til begge «når
+          ein ball treffer»-blokkene for å løyse denne oppgåva.
+        bounce_7_sports: Fest blokker til alle «når» blokkene. Sprett ballen heilt
+          til den treff flagget.
+        bounce_10_sports: Nå er det eit mål på toppen! Fest blokkene "auk poeng" og
+          "auk motstandaren sine poeng" til blokkene "når ballen er i mål" og "når
+          ballen ikkje treff handa" for å lage eit spel. Sjå kor mange poeng du greier
+          å få før motstandaren din får to poeng!
+        bounce_11_sports: 'Du kan no feste blokker til «når starta»-blokka. Du må
+          feste den nye «send ny ball»- blokka på meir enn ein plass. I tillegg: prøv
+          å endre scena eller farta på handa og ballen og sjå kor mange poeng du kan
+          skåre før motstandaren din har skåra to gonger!'
+        bounce_12_sports: 'Lag ditt eige spel! Du bestemmer: Du kan endre på alle
+          reglar, blande og setje saman ulike sportar. Ver kreativ! Når du er ferdig,
+          trykk "Fullført" for å dele spelet med venene dine, så dei kan prøve det
+          på sine telefonar!'
         bounce_1: Fest ei blokk til «når venstre pil»-blokka og trykk «Køyr». Flytt
           rekkerten ved å bruke venstre pil for å nå målet.
         bounce_2: Fest ei blokk til «når høgre pil»- og «når venstre pil»-blokkene.
@@ -481,9 +503,9 @@
         studio_iceage_hello1: Sid vil samle alle for eit nytt eventyr. Kan du hjelpe
           han med å seie "hallo" ved å dra "sei"-blokka inn i arbeidsområdet og skrive
           "hallo" inni den?
-        studio_iceage_hello2: Sid (spelar 1) fann Manny (spelar 2) og vil invitere
-          han på eit eventyr. Hjelpe dei å helse på kvarandre ved å bruke "skodespelar
-          sei"-blokka to gonger.
+        studio_iceage_hello2: Manny (spelar 1) fann Sid (spelar 2) og vil invitere
+          han på eit eventyr. Hjelp dei å helse på kvarandre ved å bruke "figur sei"-blokka
+          to gonger.
         studio_iceage_move_to_flag: Scrat er på jakt etter eikenøtta! Hjelp ham å
           gå dei siste 200 pikslane ved å bruke "Flytt"-blokken.
         studio_iceage_move_to_actor: Diego (spelar 1) leitar etter Manny (spelar 2).
@@ -678,7 +700,7 @@
         C4_unplugged_madlibs: Sprøtt Bibliotek
         C4_unplugged_variables: Variablar i Konvoluttar
         C4_unplugged_forloops: For-løkker
-        C4_unplugged_parameters: Låtskriving med parametere
+        C4_unplugged_parameters: Låtskriving med parameter
         C4_unplugged_binary: Binær
         frozen_intro: Kodetimen Intro
         frozen_loops: Introduksjon til løkker
@@ -772,6 +794,11 @@
         iceage_intro: Kodetimen Istid - Introduksjon
         iceage_events: Kodetimen Istid - Hendingar
         iceage_repeat: Kodetimen Istid - Gjenta-kommandoer
+        mc_2016_intro: Minecraft Kodetimen - Introduksjon
+        mc_2016_loops: Minecraft Kodetimen - Løkker
+        mc_2016_events: Minecraft Kodetimen - Hendingar
+        mc_2016_spawn: Minecraft Kodetimen - Sett ut
+        mc_2016_congrats: Minecraft Kodetimen - Gratulerer!
     callout:
       text:
         drag_blocks: Dra ei "flytt"-blokk og fest den under den andre blokka

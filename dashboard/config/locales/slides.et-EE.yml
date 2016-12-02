@@ -2995,3 +2995,115 @@
         text: Järgmises mängus pead aitama tegelasel teha ühte tööd korduvalt. Kui
           õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega
           kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Tere, minu nimi on Jens ja ma olen Minecrafti loominguline juht. Järgmise
+          tunni jooksul saate teha oma Minecrafti mängu. See siin näeb välja nagu
+          Minecraft, kuid maailm on siin peatunud. Lambad ei liigu, kanad ei mune,
+          ja zombid seisavad lihtsalt paigal. Sinu ülesanne on lisada kood, et Minecrafti
+          maailm tööle hakkaks.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Minu nimi on Melissa ja ma teen Minecrafti kasutajauuringuid. Mind
+          huvitab tegelikult, kuidas inimesed mõtlevad ja tehnoloogiaga suhestuvad,
+          ja seega on see töö minu jaoks ideaalne, sest saan ühendada arvutiteaduse
+          ja psühholoogia: kuidas inimesed mõtlevad ja käituvad.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Sa näed oma ekraani kolmes põhiosas. 1) Vasakul on Minecrafti mäng.
+          Praegu seisab see maailm paigal, kuid me teeme selle koodi abil korda.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) See keskmine osa on tööristakast. Iga sellinne plokk on käsklus,
+          mida kanad, lambad ja teised Minecrafti olendid mõistavad.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Paremal olev ala on tööala ja siin hakkame me programmi ehitama.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Alustuseks programmeerime ühe kana. Tirime "liigu edasi" käskluse tööalale.
+          Kui ma vajutan "Käivita" liigub kana ühe sammu võrra edasi. Et edasi minna,
+          tirin ma veel ühe "liigu edasi" ploki esimese "liigu edasi" ploki alla kuni
+          see aktiivseks muutub. Siis lasen ma sellest lahti ja kaks plokki haakuvad
+          üksteisega. Kui ma vajutan uuesti "Käivita", siis astub kana kaks sammu.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Kui sa tahad mõnda plokki kustutada, eemalda see lihtsalt käskluste
+          hulgast ja tiri tagasi tööriista kasti.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Peale nupu "Käivita" vajutamist on sul alati võimalik vajutada nuppu
+          "Taaskäivita", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord
+          teha täitsa oma Minecrafti versioon. Lõbutse hästi!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Tere, mina olen Lisa. Ma olen Minecrafti tarkvaraarendaja ja ma töötan
+          mängus mõnede loomade ja nende vaenlastega. Üks loom, kellega ma töötasin
+          on otselot. Töötasin selle osaga, kus sa saad otselotile kala sööta, et
+          teda endale kassiks taltsutada.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Inimestena hakkab meil igav kui me peame ühte ja sama asja ikka uuesti
+          ja uuesti tegema. Arvutite puhul on lahe see, et nad võivad teha ühte asja
+          miljoneid või isegi trilioneid kordi järjest ja neil ei hakka igav. Seda
+          nimetatakse tsükliks ja iga olend Minecraftis kasutab tsükleid.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Varem panime me kana üle ekraani liikuma, kuid siis jäi ta seisma. Minecraftis
+          liiguvad kanad kogu aeg ringi. Kasutame "Korda lõpmatuseni" tsüklit meie
+          tööriistakastist, et panna kanad kogu aeg ringi liikuma. Tsüklid säästavad
+          palju aega ja avavad sulle palju võimalusi kui sa enda Minecrafti versiooni
+          ehitad.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Järgmisel tasemel võid sa valida, kas olla Steve või Alex. Vajuta nooleklahve
+          oma klaviatuuril, et liikuda ülesse, alla, vasakule ja paremale. Nüüd saad
+          sa tasandil ringi liikuda seal, kus soovid.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Kui sa kasutad puuteekraani liigu näpuga ülesse, alla, vasakule ja paremale.
+          Siis puuduta mängu, et enda ees olevaid esemeid kasutada.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Aga mis seda kasutades juhtub? Minecraftis kukub lammastelt vill kui
+          sa neid pügad, lehmad jooksevad ära kui sa neid lööd ja kreeperid plahvatavad
+          kui sa neile lähened. Sellised reaktsioonid leiavad aset "sündmuste" tõttu.
+          Sündmused paluvad sinu programmil oodata, et midagi juhtuks. Ja viia läbi
+          mingi tegevus kui see juhtub.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

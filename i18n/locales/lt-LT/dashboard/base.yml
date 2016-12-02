@@ -252,7 +252,7 @@ lt:
       already_registered: 'Jau užsiregistravote?'
       pair_programming: 'Programavimas poroje'
       team: 'Komanda'
-      driver: 'Driver'
+      driver: 'Tvarkyklė'
       navigator: 'Navigator'
     popup:
       progress_for_user: "%{name} pažanga"

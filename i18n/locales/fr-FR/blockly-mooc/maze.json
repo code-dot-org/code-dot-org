@@ -9,7 +9,7 @@
   "collectorCollectedEverything":"Bravo! Tu as collecté les {count} objets!",
   "collectorCollectedNothing":"Continue le codage! Tu as besoin de collecter autant d'objets que tu peux.",
   "collectorCollectedSome":"Beau boulot! Tu as collecté les {count} objets!",
-  "collectorCollectedNotEnough":"Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
+  "collectorCollectedNotEnough":"Continuez à coder! Vous devez encore collecter {goal, plural, one {1 objet} other {# objets}}.",
   "collectorCollectedTooMany":"Cet espace ne dispose pas d'assez d'objets à collecter.",
   "collectorTooManyBlocks":"Tu peux n'utiliser que {blockLimit} blocs. Regarde à nouveau ton code et réessaye !",
   "continue":"Continuer",

@@ -20,7 +20,7 @@ pl:
             'Jigsaw: Learn to drag and drop': 'Układanka: poznaj metodę "przeciągnij i upuść"'
             'Maze: Debugging': 'Labirynt: debugowanie'
             'Maze: Loops': 'Labirynt: Pętle'
-            'Maze: Sequence': 'Labirynt: Ciąg'
+            'Maze: Sequence': 'Labirynt: Sekwencja'
             Move it, Move it: Przenieś go, Przenieś go
             'Real-life Algorithms: Plant a Seed': 'Algorytmy z życia wzięte: sadź nasiona'
             Spelling Bee: Literująca Pszczółka
@@ -30,7 +30,7 @@ pl:
           title: Kurs 2
           description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
           description_short: Kurs 2 jest przeznaczony dla uczniów, którzy potrafią czytać.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
           stage:
             'Artist: Debugging': 'Artysta: debugowanie'
             'Artist: Loops': 'Artysta: Pętle'
@@ -45,7 +45,7 @@ pl:
             Getting Loopy: Poznając pętle
             Graph Paper Programming: Programowanie na papierze milimetrowym
             'Maze: Loops': 'Labirynt: Pętle'
-            'Maze: Sequence': 'Labirynt: Ciąg'
+            'Maze: Sequence': 'Labirynt: Sekwencja'
             'Real-life Algorithms: Paper Planes': 'Rzeczywiste algorytmy: Papierowe samoloty'
             Relay programming: Sztafeta programowania
             'Studio: Create a Story': 'Play Lab: Utwórz opowieść'
@@ -53,7 +53,7 @@ pl:
             Your Digital Footprint: Twój cyfrowy ślad
         course3:
           title: Kurs 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
           description_short: Kurs 3 jest kontynuacją Kursu 2.
           description_audience: W wieku 8-18
           stage:
@@ -75,7 +75,7 @@ pl:
             Internet: Internet
             Maze: Labirynt
             'Maze: Conditionals': 'Labirynt: Wyrażenia warunkowe'
-            Songwriting: Pisanie piosenek z parametrami
+            Songwriting: Pisanie piosenek
             'Studio: Create a Game': 'Play Lab: Utwórz grę'
             'Studio: Create a Story': 'Play Lab: Utwórz opowieść'
         playlab:
@@ -104,7 +104,7 @@ pl:
             Artist: Artysta
         course4:
           title: Kurs 4
-          description: Kurs 4 przeznaczony jest dla uczniów, którzy ukończyli Kursy 2 i 3. Uczniowie nauczą się jak rozwiązywać bardziej złożone zagadki, nauczą się jak połączyć kilka pomysłów przy rozwiązywaniu każdego wyzwania. Do czasu ukończenia tego Kursu, uczniowie stworzą programy, które pozwolą im pokazać wiele umiejętności, w tym dla pętli i funkcji z parametrami. Zalecane dla klas 4-8.
+          description: Kurs 4 przeznaczony jest dla uczniów, którzy ukończyli Kursy 2 i 3. Uczniowie nauczą się jak rozwiązywać bardziej złożone łamigłówki, nauczą się jak łączyć kilka pojęć przy rozwiązywaniu każdego wyzwania. Do czasu ukończenia tego Kursu, uczniowie utworzą programy, w których zademonstrują wiele umiejętności, w tym z wykorzystaniem pętli i funkcji z parametrami. Zalecany dla klas 4-8.
           description_short: Uczniowie uczestniczący w Kursie 4 powinni wcześniej ukończyć Kursy 2 i 3.
           description_audience: W wieku 10-18
           stage:
@@ -143,7 +143,7 @@ pl:
             'Bee: Debugging': 'Pszczółka: debugowanie'
             'Bee: Nested Loops': 'Pszczółka: Pętle zagnieżdżone'
             'Farmer: While Loops': 'Farmer: Pętle "dopóki" (whilei)'
-            'Maze: Sequence': 'Labirynt: Ciąg'
+            'Maze: Sequence': 'Labirynt: Sekwencja'
           description_audience: ''
         usability:
           title: Usability Testing
@@ -255,7 +255,7 @@ pl:
             Conditionals: Warunkowe
             Functions: Funkcje
             Graph Paper Programming: Programowanie na papierze milimetrowym
-            Introduction to Computer Science: Wprowadzenie do informatyki
+            Introduction to Computer Science: Wprowadzenie do Informatyki
             Relay Programming: Programowanie przekaźnika
             Song Writing: Pisanie piosenek
             The Artist: Artysta
@@ -321,14 +321,14 @@ pl:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Zagadki
+            Puzzles: Łamigłówki
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Zagadki
+            Puzzles: Łamigłówki
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -908,7 +908,7 @@ pl:
             Happy Maps: Szczęśliwe Mapy (Happy Maps)
             Move it, Move it: Przenieś go, Przenieś go
             'Real-life Algorithms: Plant a Seed': 'Algorytmy z życia wzięte: sadź nasiona'
-            Songwriting: Pisanie piosenek z parametrami
+            Songwriting: Pisanie piosenek
             The Big Event: Wielkie Wydarzenie
         afterschool1:
           title: Afterschool 1
@@ -1455,6 +1455,8 @@ pl:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1827,7 +1829,7 @@ pl:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Pisanie piosenek z parametrami
+            Songwriting: Pisanie piosenek
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -2139,6 +2141,10 @@ pl:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2254,11 +2260,11 @@ pl:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Minecraft w Godzinie Kodowania - Projektant
+          title: Minecraft w Godzinie Kodowania - Projektant
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ pl:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Bezpiecznie dotrzeć na miejsce
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ pl:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Algorytmy z życia wzięte: sadź nasiona'
+            Your Digital Footprint: Twój cyfrowy ślad
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ pl:
             Binary Bracelets: Binarne bransoletki
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Twój cyfrowy ślad
+            Building a Foundation: Kładąc podwaliny (Building a Foundation)
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ pl:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Cyfrowe obywatelstwo
+            'Unplugged: Binary': 'Bez komputera: Binarny'
+            Artist Binary: 'Artysta: Binarny'
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ pl:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Praca w grupie (Crowdsourcing)
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ pl:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Pisanie piosenek z parametrami
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,10 +2429,10 @@ pl:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Zawody
+          title: Zawody
           description_audience: ''
-          description_short: Code your own sport
+          description_short: Zakoduj własny zawody
           description: ''
         2016_sciencePD-phase2b:
           stage:
@@ -2448,6 +2466,20 @@ pl:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

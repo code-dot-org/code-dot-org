@@ -25,7 +25,7 @@ it-IT:
   submit: "Invia"
   twentyhours_heading: "Prova la nostra introduzione all'Informatica"
   twentyhours_text: "Hai terminato la tua prima Ora del Codice? Impara un altro po' di concetti di informatica e di programmazione in quest'altro corso."
-  og_title: "Ogni bambino merita un'opportunità"
+  og_title: Ogni bambino merita un'opportunità
   og_description: "Ogni stupende in ogni scuola merita l'opportunità di studiare l'informatica. Essa sta cambiando tutto."
   csedweek_og_title: "The Hour of Code is coming"
   csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
@@ -295,9 +295,9 @@ it-IT:
   homepage_banner_text_link: "Ulteriori informazioni"
   homepage_banner_privacy_main: 'Aug 3: We''ve updated our privacy policy to include tools used in our new high school CS Principles course.'
   homepage_banner_privacy_link: "Ulteriori informazioni"
-  homepage_banner_20k_teachers: "20.000 insegnanti addestrati che ora insegnamento informatica nelle loro classi."
+  homepage_banner_20k_teachers: "20.000 insegnanti addestrati negli USA, che ora insegnano informatica nelle loro classi."
   homepage_banner_20k_teachers_link: "Ulteriori informazioni"
-  homepage_banner_congress: "Alcuni personaggi di spicco americani chiedono al Congresso di finanziare il programma d'informatica K-12."
+  homepage_banner_congress: "Alcune personalità americane di rilievo chiedono al Congresso di finanziare il programma di formazione sull'informatica per tutti gli studenti (K-12: dalla prima elementare all'ultima classe delle superiori)."
   homepage_banner_congress_link: "Aggiungi il tuo sostegno"
   homepage_banner_emailprivacy: "Stiamo facendo un cambiamento importante per tutelare ancora di più la privacy degli studenti."
   homepage_banner_emailprivacy_link: "Ulteriori informazioni…"
@@ -317,7 +317,7 @@ it-IT:
   homepage_slot_text_link_othercourses: "Altri corsi online"
   homepage_slot_text_title_educators: "Insegnanti"
   homepage_slot_text_blurb_educators: "Insegna ai tuoi studenti"
-  homepage_slot_text_link_elementary: "Scuola elementare"
+  homepage_slot_text_link_elementary: "Scuola primaria"
   homepage_slot_text_link_middle: "Scuola media"
   homepage_slot_text_link_high: "Scuola superiore"
   homepage_slot_text_link_k5: "Corsi per studenti della scuola elementare"
@@ -328,7 +328,7 @@ it-IT:
   homepage_slot_text_link_stats: "Guarda le statistiche"
   homepage_slot_text_link_buy: "Fatti coinvolgere"
   homepage_slot_text_link_donate: "Fai una donazione"
-  homepage_slot_text_link_shop: "T-shirts, cappelli & altro"
+  homepage_slot_text_link_shop: "T-shirts, cappellini & altro"
   homepage_header_codestudio: "Creazioni degli studenti di Code Studio"
   homepage_header_donors: "Code.org ringrazia i suoi sostenitori"
   homepage_donors_seall: "Mostra tutto"
@@ -395,7 +395,7 @@ it-IT:
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
-  minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  minecraft_designer_description: "Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco."
   minecraft_designer_button: "Inizia"
   minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
   minecraft_adventurer_button: "Inizia"
@@ -722,8 +722,9 @@ it-IT:
   dashboard_announce_petition_button: "Aggiungi il tuo nome"
   dashboard_announce_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
   dashboard_announce_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 5-11 dicembre. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti mai prima verificatosi. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio will not save or report student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials will also not save progress that week, students can still do the full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+  dashboard_announce_hoc_scaling: 'AVVISO per gli insegnanti che usano i Corsi 1-2-3-4 e il Corso Rapido: a causa dell''elevato traffico causato da milioni di studenti, la piattaforma <b>studio. code. org non salverà né segnalerà i progressi degli studenti relativi a questi Corsi nel periodo tra il 3 e l''11 dicembre</b>. Vi raccomandiamo comunque di svolgere una delle Ore del Codice con le vostre classi per festeggiare l''Ora del Codice durante la Settimana Internazionale di Educazione all''Informatica. Al termine dell''Ora del Codice gli studenti possono ottenere l''attestato di completamento. Se sei un insegnante in Italia usa gli attestati personalizzati di <a href="http://www. programmailfuturo. it/come/attestati-personalizzati" target="_blank">Programma il Futuro</a>.'
+  dashboard_announce_mc_launch: "Uno delle nostre esercitazioni dell'Ora del Codice più popolari adesso ha un seguito! Il nuovissimo <b>Progetta il tuo Minecraft</b> permette allo studente di definire le sue regole del mondo di Minecraft. Potrà così creare un'esperienza con Minecraft del tutto unica, e condividerla con i suoi amici e giocarci insieme a loro. Svolgila nella tua classe come Ora del Codice."
+  dashboard_announce_hoc_scaling_progress: "Please note that we are not saving student progress in this course from December 3 - 11 due to the level of traffic our site receives for the Hour of Code during this time.  You can still view student progress from before December 3.  We will go back to saving progress as usual after this week."
   code_hoc_coming: "L'Ora del Codice è qui: 8-14 Dicembre!"
   code_sign_up: "Iscriviti per partecipare durante la Settimana di Educazione all'Informatica"
   host_an_hour: "Ospita un'ora"
@@ -866,6 +867,8 @@ it-IT:
   starwarsblocks_name: "Guerre Stellari (Blocchi)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Matematica"
   hoc_category_name: "L'Ora del Codice"
   csf_category_name: "Fondamenti d'informatica"

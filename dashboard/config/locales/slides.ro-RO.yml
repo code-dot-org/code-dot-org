@@ -3214,3 +3214,123 @@
         text: In urmator puzzel, misiunea noastra este sa ajutam actorul sa faca un
           lucru constant. Invatand cum functioneaza comanda repeta vei salva o gramada
           de timp mai tarziu cand iti vei construi propiul joc.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Buna, numele meu este Jane si sunt designerul creativ al Minecraft.
+          In urmatoarea ora, iti vei face propriul joc Minecraft. Acesta arata ca
+          un Minecraft insa lumea s-a oprit. Oile nu se misca, gainile nu fac oua
+          iar zombi doar stau nemiscati. Ramane ca tu sa adaugi codul pentru a realiza
+          lumea Minecraft.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Numele meu este Melissa si sunt cercetator la Minecraft. Sunt foarte
+          interesata dece gandesc oamenii si cum interactioneaza acestia cu tehnologia
+          asa ca acesta este job-ul perfect pentru mine de a pune laolalta ingineria
+          computerului si psihologia: cum oamenii gandesc si cum se comporta.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Veţi vedea ca ecranul este împărţit în trei părţi principale. 1) Pe
+          partea stângă este jocul Minecraft. Acum lumea este îngheţata, dar vom repara
+          asta cu blocurile de cod.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Zona acest mijloc este setul de instrumente. Fiecare dintre aceste
+          blocuri este o comandă catre gaini, oi şi alte creaturi Minecraft pot înţelege.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Spaţiul alb din dreapta se numeşte pe spaţiul de lucru şi aici vom
+          construi programul nostru.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Daca ati uitat ce trebuie sa faceti, instructiunile pentru fiecare nivel
+          sunt in partea de sus.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: 'Pentru a incepe, vom programa o gaina. Haideti sa mutam blocul "mergi
+          inainte" in spatiul de lucru. Cand apas "Ruleaza" gaina merge inainte un
+          pas. Pentru a merge mai departe, voi lua un alt bloc "mergi inainte: si
+          il voi atasa la blocul existent pana apare o linie evidentiatoare. Apoi
+          il las jos si cele doua blocuri de unesc. Daca apas "Ruleaza" din nou, gaina
+          merge doi pasi.'
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Daca vei vrea sa stergi un bloc, scoate-l din stiva si trage-l inapoi
+          in toolbox.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: După ce le-aţi apasat "Run" puteţi apasa întotdeauna butonul "Reset"
+          pentru a reseta jocul şi începe din nou. Acum, este rândul tău să faci propria
+          ta versiune de Minecraft. Distracţie plăcută!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Buna, eu sunt Lisa. Sunt programator software pentru Minecraft si lucrez
+          cu unele dintre enimalele si inamicii din joc. Unul dintre animalele la
+          care am lucrat este ocelotul. Am lucrat la partea in care poti da ocelotului
+          un peste pentru a-l imblanzi si a-l transforma in pisica ta.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Ca oameni, devenim plictisiti cand avem de facut acelasi lucru din nou
+          si din nou. Dar lucrul cool despre computere este ca pot face acelasi lucru
+          de milioane de ori fara a se plictisi. Aceasta repetitie se numeste bucla
+          si fiecare creatura din Minecraft foloseste bucle.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Mai devreme, am facut o gaina să se misce pe ecran dar apoi s-a oprit.
+          În Minecraft, puii rătăcesc tot timpul. Să folosim o bucta "pentru totdeauna"
+          din bara noastra de instrumente pentru a menţine miscarea gainilor noastre
+          pentru totdeuna. Puterea buclelor va economisi tone de timp şi va deschide
+          tot felul de opţiuni de pentru a vă construi propria voastră versiune a
+          Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: In acest nivel, puteţi alege să fiti Steve sau Alex. Apăsați săgeatile
+          de pe tastatură pentru a muta sus, jos, stânga, și dreapta. Acum aveţi posibilitatea
+          să va mutaţi de-l lungul nivelului. Pentru a utiliza o creatură, doar mergi
+          pe jos spre ea, stai fata in fata şi apăsaţi bara de spaţiu.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Dacă utilizaţi un ecran tactil, glisati sus, jos, stânga şi la dreapta
+          pentru a muta împrejur. Apoi atingeţi jocul pentru a utiliza elementul în
+          faţa ta.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Dar ce se întâmplă când îl folosiţi? În Minecraft, oile lasa lână atunci
+          când le tundeti, vacile fug când le lovesti şi lianele explodeaza atunci
+          când ajungi langa ele. Aceste reacţii se întâmplă datorită a ceva numit
+          evenimente. Evenimente spun programului tău să asculte sau să aştepte pentru
+          atunci când ceva se întâmplă. Şi când se intampla, se efectueaza o acţiune.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Până în prezent, ai folosit un singur eveniment. Codul pus în slotul
+          "atunci când apare" se execută atunci când creatura ta este creata sau atunci
+          când începe jocul. Peste următoarele câteva niveluri veţi avea sloturi noi
+          pentru evenimente cum ar fi "atunci când atins" care se execută atunci când
+          vă atingeţi creatura sau "cand e folosit" pentru atunci când utilizaţi creatura.
+          Sau, dacă doriţi ca zombieul să dispară când soarele apare, puneti comanda
+          in blocul "atunci cand zi"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: În jocuri, "a aparea" înseamnă acelaşi lucru ca a crea. La acest nivel,
+          facem Zombieul sa apara atunci cand apune soarele. Pentru aceasta, vom folosi
+          blocul "atunci când noapte".
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Deoarece vrem ca zombiul sa apara noaptea, vom adauga blocul "cand apare"
+          sub cel "cand noapte". De îndată ce acestia apar, fiecare zombie va rula
+          codul pe care l-aţi pus în blocul "atunci când apare". Distreaza-te dand
+          nastere la zombi!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Felicitări! Ai învăţat să utilizezi comenzi de tehnologia computerelor
+          pentru a aduce lumea Minecraft la viaţă. Sunteţi dezvoltator web acum. Ai
+          deblocat toate comenzile şi toate creaturile. Tu alegi ceea ce se întâmplă.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Cand ai terminat sa-ti realizezi jocul, alegi sa distribui un link pe
+          care il poti da prietenilor sau sa joci tu propriul joc pe telefon. Distractie
+          placuta! De abia astept sa joc versiunea ta de Minecraft.

@@ -1164,12 +1164,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
       this.editor.aceEditor.focus();
     }
 
-    // Fire a custom event on the document so that other code can respond
-    // to instructions being closed.
-    var event = document.createEvent('Event');
-    event.initEvent('instructionsHidden', true, true);
-    document.dispatchEvent(event);
-
     // update redux
     this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
@@ -1211,12 +1205,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  // Fire a custom event on the document so that other code can respond
-  // to instructions being shown.
-  var event = document.createEvent('Event');
-  event.initEvent('instructionsShown', true, true);
-  document.dispatchEvent(event);
 };
 
 /**

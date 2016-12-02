@@ -33,6 +33,7 @@
   "copy": "Αντιγραφή",
   "copyright": "Πνευματικά δικαιώματα",
   "currentVersion": "Τρέχουσα έκδοση",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Όνομα πίνακα",
   "dataWorkspaceHeader": "Περιηγητής δεδομένων",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Αναζήτηση για ένα εικονίδιο...",
   "ignore": "Αγνόησε",
   "infinity": "Άπειρο",
+  "joinText": "εγγραφή/συμμετοχή",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "πήδα",
   "keepPlaying": "Συνέχισε το Παιχνίδι",
   "keyValuePairLink": "Ζεύγη κλειδιού/τιμής",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "στην επάνω εξωτερική αριστερή θέση",
   "positionTopOutRight": "στην επάνω εξωτερική δεξιά θέση",
   "positionTopRight": "στην επάνω δεξιά θέση",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Εκτύπωσε",
   "privacyPolicy": "Πολιτική Aπορρήτου",
   "projectWarning": "Σημείωση: Βρίσκεστε σε ένα επίπεδο που είναι τμήμα ενός μεγαλύτερου έργου. Οι αλλαγές που γίνονται σε αυτό το επίπεδο εμφανίζονται επίσης σε άλλα επίπεδα του έργου.",
@@ -314,9 +318,5 @@
   "when": "όταν",
   "whenRun": "όταν εκτελείται",
   "workspaceHeaderShort": "Χώρος εργασίας: ",
-  "yes": "Ναι",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Ναι"
 }

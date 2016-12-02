@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Blahopřejeme! Sesbíral jsi všech {count} předmětů!",
   "collectorCollectedNothing": "Pokračuj! Musíš sesbírat tolik předmětů, kolik dokážeš.",
   "collectorCollectedSome": "Skvělá práce! Sesbíral jsi {count} předmětů!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Tento prostor nemá pro mě dostatek položek ke sbírání.",
   "collectorTooManyBlocks": "Můžeš použít pouze {blockLimit} bloků. Tak se podívej na tvůj kód a zkus to znovu!",
   "continue": "Pokračovat",
@@ -111,6 +112,5 @@
   "word": "Najdi slovo",
   "wrongCropError": "Nemůžu zde sklidit tuto plodinu.",
   "yes": "Ano",
-  "youSpelled": "Vyhláskoval(a) jsi",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Vyhláskoval(a) jsi"
 }

@@ -170,9 +170,9 @@ zh-CN:
         'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
         'bounce_6_sports': "现在旗帜是在顶上。您需要将模块附加到这两个\"当球击中\"模块中以通过这关。"
         'bounce_7_sports': "将模块附加到每个\"当\"模块。弹起球，直到它击中旗帜。"
-        'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
+        'bounce_10_sports': "现在，目标在顶部！将\"得分\"和\"对手得分\"模块附加到到“当进球得分”和\"当球未命中手\"模块来制作游戏。看看在对手获得两分前，你可以获得多少分。"
         'bounce_11_sports': "现在，你可以在\"运行时\"模块下附加模块了. 你必须在多个地方附加新的\"扔新球\"模块. 此外，试着改变场景或手和球的速度，看看在你对手得两分之前你能得多少分."
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+        'bounce_12_sports': "创建你自己的游戏！这里一切由你做主：你可以改变所有的规则，混合搭配运动，要有新意！当你完成时，点击“完成”来让你的朋友在他们的手机上尝试你的游戏。"
         'bounce_1': "在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。"
         'bounce_2': "在\"当按左方向键时\"块和“当按右方向键时”块下面添加块，然后按\"运行程序\"。移动球拍到达两边的目标。"
         'bounce_3': "现在，尝试类似的做法用\"当按上方向键时\"块，来移动球拍到顶部目标。"
@@ -486,11 +486,11 @@ zh-CN:
         'iceage_intro': '冰河世纪编程一小时 - 介绍'
         'iceage_events': '冰河世纪编程一小时 - 事件'
         'iceage_repeat': '冰河世纪编程一小时 - 重复语句'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': '《我的世界》编程一小时——介绍'
+        'mc_2016_loops': '《我的世界》编程一小时——循环'
+        'mc_2016_events': '《我的世界》编程一小时——事件'
+        'mc_2016_spawn': '《我的世界》编程一小时——生成'
+        'mc_2016_congrats': '《我的世界》编程一小时——祝贺'
     callout:
       text:
         drag_blocks: '拖动一个"移动"的块，并将它吸到别的模块下面'

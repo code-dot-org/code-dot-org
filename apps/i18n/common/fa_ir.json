@@ -1,6 +1,6 @@
 {
-  "allowEditing": "Allow editing",
-  "allowEditingInstructions": "\"Allow editing\" while students should be taking the assessment.",
+  "allowEditing": "اجازه‌ی ویرایش",
+  "allowEditingInstructions": "«اجازه‌ی ویرایش بدهید» در حالی که دانش‌آموزان باید ارزیابی شوند.",
   "and": "و",
   "animationMode": "کارتون",
   "answersVisible": "Answers visible (read-only)",
@@ -33,6 +33,7 @@
   "copy": "رونوشت‌",
   "copyright": "حق کپی برداری و نشر",
   "currentVersion": "نسخه فعلی",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "نام جدول",
   "dataWorkspaceHeader": "مرورگر داده",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "جستجوی یک شمایل...",
   "ignore": "صرف نظر کن",
   "infinity": "بی نهایت",
+  "joinText": "عضویت",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "پرش",
   "keepPlaying": "به بازی کردن ادامه دهید",
   "keyValuePairLink": "جفت کلید/مقدار",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "به جهت بالا و چپ بیرونی",
   "positionTopOutRight": "به جهت بالا و راست بیرونی",
   "positionTopRight": "به موقعیت بالا سمت راست",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "چاپ کن",
   "privacyPolicy": "قوانین حفظ حریم خصوصی",
   "projectWarning": "توجه: شما در سطحی هستید که خود بخشی از یک پروژه بزرگتراست. تغییراتی که در این سطح ایجاد میشود در سطوح دیگر پروژه نیز ظاهر خواهند شد.",
@@ -314,9 +318,5 @@
   "when": "وقتی",
   "whenRun": "زمان اجرا",
   "workspaceHeaderShort": "محیط کار: ",
-  "yes": "بله",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "بله"
 }

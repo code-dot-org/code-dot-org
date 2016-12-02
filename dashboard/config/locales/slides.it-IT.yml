@@ -3406,3 +3406,120 @@
           a fare un lavoro in continuazione. Imparare come funzionano i comandi di
           ripetizione ti farà risparmiare un sacco di tempo più tardi quando costruirai
           il tuo gioco.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Ciao, mi chiamo Jens e sono il capo progettista creativo di Minecraft.
+          Nella prossima ora svilupperai un gioco con Minecraft. In questo mondo di
+          Minecraft il tempo sembra essersi fermato. Le pecore non si muovono, le
+          galline non depongono uova e gli zombi sono immobili. Sarai tu a scrivere
+          il codice che metterà in moto il mondo di Minecraft.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: come le persone pensano e agiscono.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: La schermata è suddivisa in tre aree principali. 1) Sulla sinistra abbiamo
+          il gioco di Minecraft. Ora il mondo è immobile, ma lo animeremo con il codice.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) La zona centrale contiene i tuoi strumenti. Ciascun blocco corrisponde
+          a un comando che i polli, le pecore e le altre creature di Minecraft possono
+          comprendere.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Il riquadro sulla destra è lo spazio di lavoro ed è qui che compileremo
+          il nostro programma.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Se non ricordi cosa fare, le istruzioni per ogni livello sono mostrate
+          in alto.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Per iniziare, programmeremo un pollo. Trascina il comando "muovi avanti"
+          nello spazio di lavoro. Quando premi "Esegui", il pollo avanza di un passo.
+          Per farlo procedere, trascina un altro blocco "muovi avanti" sotto il primo
+          finché non viene evidenziato. Se lo rilasci, i due blocchi si uniscono.
+          Premendo di nuovo "Esegui", il pollo avanza di due passi.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Per eliminare un blocco, rimuovilo dalla colonna e riponilo tra gli
+          strumenti.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Dopo aver premuto "Esegui" puoi sempre selezionare il pulsante "Ripristina"
+          per azzerare il gioco e ripartire da capo. Ora tocca a te creare la tua
+          versione di Minecraft. Buon divertimento!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Ciao, sono Lisa. Sono una programmatrice di Minecraft e mi occupo di
+          alcuni animali e nemici del gioco. Uno degli animali su cui ho lavorato
+          è il gattopardo. Ho realizzato la scena in cui offri un pesce al gattopardo
+          per addomesticarlo.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Noi umani ci annoiamo a ripetere le stesse azioni più e più volte. Ma
+          il bello dei computer è che possono ripetere le stesse operazioni milioni
+          o persino miliardi di volte senza mai stancarsi. Queste ripetizioni si chiamano
+          cicli e ogni creatura di Minecraft ne fa uso.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Prima abbiamo fatto muovere un pollo sullo schermo, ma dopo un po’ si
+          è fermato. In Minecraft i polli si spostano continuamente. Creiamo un ciclo
+          "esegui per sempre" con gli strumenti affinché anche i nostri polli non
+          si fermino mai. I cicli ti faranno risparmiare parecchio tempo e si riveleranno
+          un alleato prezioso nella creazione della tua versione di Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Nel prossimo livello potrai scegliere se controllare Steve o Alex. Premi
+          i tasti di direzione sulla tastiera per muoverti su, giù, a sinistra e a
+          destra. Ora puoi spostarti dove vuoi all’interno del livello. Per usare
+          una creatura, avvicinati, voltati verso di essa e premi la barra spaziatrice.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Se utilizzi un touchscreen, puoi muoverti scorrendo verso l’alto, il
+          basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare l’oggetto
+          che hai di fronte.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Cosa succede quando lo usi? In Minecraft, le pecore producono lana quando
+          le tosi, le mucche scappano se le colpisci e i Creeper esplodono quando
+          ti avvicini. Queste reazioni sono rese possibili dai cosiddetti eventi.
+          Gli eventi istruiscono il programma ad attendere e riconoscere determinate
+          circostanze. Se si verificano, attivano un’azione.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Per ora abbiamo utilizzato un solo evento. Il codice che hai inserito
+          nello slot "quando generato" si attiva quando la tua creatura viene generata
+          o all’avvio del gioco. Nei prossimi livelli disporrai di altri slot per
+          eventi. Per esempio "quando toccato", che si attiva se tocchi la creatura,
+          o "quando utilizzato", che richiede di usarla. Se invece vuoi che il tuo
+          zombi scompaia al sorgere del sole, inseriscilo nello slot "di giorno".
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Nei giochi, generare significa creare qualcosa. In questo livello genereremo
+          degli zombi al calare del sole. A questo scopo ci servirà il blocco "di
+          notte".
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Visto che gli zombi devono comparire di notte, inseriamo il blocco "genera
+          zombi" sotto il blocco "di notte". Appena viene generato, ciascuno zombi
+          eseguirà il codice che hai inserito nello slot evento "quando generato".
+          Buon divertimento con gli zombi!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulazioni! Hai imparato a utilizzare la programmazione per dare
+          vita a mondi di Minecraft. Ora sei tu lo sviluppatore. Hai sbloccato tutti
+          i comandi e le creature. Sarai tu a stabilire cosa accadrà.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Quando avrai completato il tuo gioco, seleziona il collegamento per
+          condividerlo con gli amici o provare il tuo gioco su smartphone. Buon divertimento!
+          Non vedo l’ora di giocare la tua versione di Minecraft.

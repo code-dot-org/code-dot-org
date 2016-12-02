@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Parabéns! Você coletou todos os {count} itens!",
   "collectorCollectedNothing": "Continue programando! Você precisa coletar o máximo de itens que puder.",
   "collectorCollectedSome": "Bom trabalho! Você coletou {count} itens!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Esse espaço não tem itens suficientes para eu coletar.",
   "collectorTooManyBlocks": "Você só pode usar {blockLimit} blocos. Dê uma olhada no seu código e tente novamente!",
   "continue": "Continuar",
@@ -111,6 +112,5 @@
   "word": "Encontre a palavra",
   "wrongCropError": "Não posso colher aqui.",
   "yes": "Sim",
-  "youSpelled": "Você escreveu",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Você escreveu"
 }
