@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# 如何把「一小時的程式設計課程」介紹給你的學區
 
 ## 讓每個學校參予，每個學生學習！
 

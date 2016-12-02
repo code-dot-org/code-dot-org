@@ -112,6 +112,6 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Flere ressurser kommer snart!
+# Fleire ressurar kjem snart!
 
 <% end %>

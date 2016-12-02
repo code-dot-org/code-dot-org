@@ -15,19 +15,19 @@ Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră d
 ## 1) Priviți acest tutorial video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Alegeți un tutorial pentru ora dumneavoastră:
 
-Găzduim o varietate de [tutoriale distractive, de o oră,](<%= resolve_url('https://code.org/learn') %>) pentru participanţii de toate vârstele, create de o varietate de parteneri.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Tutoriale Hour of Code ghidate de catre elev:](<%= resolve_url("https://code.org/learn") %>)**
+**[Tutoriale Hour of Code ghidate de catre elev:](<%= resolve_url('/learn') %>)**
 
   * Necesită timp minim de pregatire pentru profesori
   * Sunt auto-ghidate - permit elevilor să lucreze individual, în ritmul şi nivelul de pregatire propriu
 
-**[Tutoriale Hour of Code ghidate pentru profesori:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Tutoriale Hour of Code ghidate pentru profesori:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Sunt planuri de lecție care necesită ceva pregătire în avans pentru profesori
   * Sunt clasificate pe nivel de clasă *și* pe domeniu (ex. Matematică, Engleză, etc)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Promoveaza evenimentul tău Hour of Code
 
@@ -57,7 +57,7 @@ Cea mai buna experienta Hour of Code include calculatoare care au conexiune la I
   * Videoclipul original al lansării Hour of Code, care îi înfățișează pe Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh ( există versiuni de [1](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5](https://www.youtube.com/watch?v=nKIu9yen5nc) sau [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Video-ul de lansare[Hour of Code 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw), sau<% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Găseşte mai multe [resurse inspirationale](<%= resolve_url('https://code.org/inspire') %>) şi [clipuri video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Este in regula dacă atât tu cât şi elevii sunteti incepatori in domeniul tehnologiei computerului si programarii. Aici sunt unele idei ce te vor ajuta in activitatea ta Hour of Code:**
 
@@ -73,7 +73,7 @@ Cea mai buna experienta Hour of Code include calculatoare care au conexiune la I
 
 **Indruma elevii catre activitate**
 
-  * Scrieti link-ul tutorialului pe tabla. Gasiti link-ul scris in sectiunea [informatii pentru tutorialul selectat](<%= resolve_url('https://code.org/learn') %>)sub numarul de participanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ Cea mai buna experienta Hour of Code include calculatoare care au conexiune la I
 
 **Ce sa fac in cazul in care un elev termina mai devreme?**
 
-  * Elevii pot vedea toate tutorialele si incerca o alta activitate Hour of Code la [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Sau îi puteți îndemna pe elevii ce au terminat prea devreme să îi ajute pe cei ce întâmpină probleme cu activitatea.
 
 [col-33]

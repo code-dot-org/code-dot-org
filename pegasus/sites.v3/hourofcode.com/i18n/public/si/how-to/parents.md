@@ -8,18 +8,18 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# ඔබේ දරුවා සමග Hour of Code වැඩසටහනක් සම්පුර්ණ කරන්නේ කෙසේද
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
 ## 1) කෙසේද යන්න විඩියෝ දර්ශන වලින් <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) නිබන්ධන තෝරන්න:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('https://code.org/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Plan your technology needs
 
