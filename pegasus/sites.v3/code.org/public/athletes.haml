@@ -60,4 +60,24 @@ video_player: true
 
 .inspire-videos{style: "clear: both;"}
   %h2.header= I18n.t(:watch_inspirational_videos)
-  =view :inspirational_videos
+  - videos = []
+  - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min)}
+  - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min)}
+  - videos << { id: 'real_madrid',     code: 'EmJQKAR-78g', text: I18n.t(:video_title_real_madrid),     duration: I18n.t(:video_1min)}
+  - videos << { id: 'marco_belinelli', code: 'Zh6E99aySI4', text: I18n.t(:video_title_marco_belinelli), duration: I18n.t(:video_2min)}
+  - videos << { id: 'chris_bosh',      code: '5oHe0ozN7Oc', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min)}
+
+  - videos.each do |video|
+    .col-50{style: "float:left; padding:10px"}
+      - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+      - facebook = {u: url}
+      - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} @codeorg"}
+      =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
+
+  %div{style: 'clear: both'}
+
+  .video-smalltext
+    %ul
+      %li= I18n.t(:videos_more, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP')
+      %li= I18n.t(:careers_page_more, careers_url: CDO.code_org_url('/careers'))
+
