@@ -15,6 +15,7 @@ unless dry_run
 end
 
 frontends = %i(production adhoc).include?(rack_env)
+hoc = !rack_env?(:production, :adhoc)
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -74,10 +75,15 @@ Resources:
   %>
 <% end -%>
   # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
-  LoadBalancer:
+<%
+  elbs = {'' => certificate_arn}
+  elbs['HourOfCode'] = hoc_cert if hoc
+  elbs.each do |elb, cert|
+-%>
+  LoadBalancer<%=elb%>:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
-      LoadBalancerName: <%=stack_name%>
+      LoadBalancerName: <%="#{stack_name}#{"-#{elb.downcase}" unless elb.empty?}"%>
       CrossZone: true
       SecurityGroups: ['Fn::GetAtt': [VPC, ELBSecurityGroup]]
       Subnets: <%=public_subnets%>
@@ -92,7 +98,7 @@ Resources:
         - LoadBalancerPort: 443
           InstancePort: 80
           Protocol: HTTPS
-          SSLCertificateId: <%=certificate_arn%>
+          SSLCertificateId: <%=cert%>
           PolicyNames: [CookieBasedPolicy]
       HealthCheck:
         Target: HTTP:80/health_check
@@ -103,7 +109,7 @@ Resources:
       ConnectionDrainingPolicy:
         Enabled: true
         Timeout: 300
-
+<% end -%>
 <% if frontends -%>
   Frontends:
     DependsOn: [ASGCount]
@@ -153,7 +159,6 @@ Resources:
           node_name: 'fe-${INSTANCE_ID}',
           commit: commit)%>
 # Create associated resources for old and new Auto Scaling Groups.
-# TODO remove old resources after migration complete.
   ScaleUpPolicyNew:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
@@ -273,9 +278,11 @@ Resources:
 <%   end -%>
 <% end -%>
 # Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+# TODO csedweek.org DNS/CDN resources should be added to this template.
 <%
-  %w(Dashboard Pegasus).each do |app|
+  apps = %w(Dashboard Pegasus)
+  apps << 'HourOfCode' if hoc
+  apps.each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
 -%>
   <%=app%>DNS:
@@ -300,11 +307,11 @@ Resources:
       DistributionConfig: <%= AWS::CloudFront.config_cloudformation(
         app.downcase.to_sym,
         "origin-#{subdomain}",
-        app == 'Dashboard' ?
-          [studio_subdomain] :
-          [subdomain] + (['i18n'] + CDO.partners).map{|x| "#{cname}-#{x}.#{domain}"},
+        app == 'Pegasus' ?
+          [subdomain] + (['i18n'] + CDO.partners).map{|x| "#{cname}-#{x}.#{domain}"} :
+          app == 'Dashboard' ? [studio_subdomain] : [CDO.hourofcode_hostname],
         {
-          AcmCertificateArn: certificate_arn,
+          AcmCertificateArn: app == 'HourOfCode' ? hoc_cert : certificate_arn,
           MinimumProtocolVersion: 'TLSv1',
           SslSupportMethod: 'sni-only'
         }
