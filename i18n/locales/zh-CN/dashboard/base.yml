@@ -351,12 +351,14 @@ zh-CN:
     announcement_learn_more_button: "了解详情"
     announcement_try_now_button: "现在就试试"
     announcement_host_an_hour_button: "主办一小时"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看以前的公告。</a>"
     announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
     announcement_hoc_scaling: 课程 1-4 和加速课程老师警告：由于数以万计的学生对于“一小时代码”的巨大访问量， <b>至 11 年 12 月 3 日起，Code Studio 将不会保存或汇报学生在这些课程中的进度</b>。我们建议在“计算机科学教育周” 期间与你的班级做一个“一小时代码”的活动来庆祝“一小时代码”。虽然我们自己的“一小时代码”教程在其间也无法保存进度，但是学生仍然可以使用完整的教程并获得认证。
     announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的时间》“编程一小时”设计师让学生们为《我的时间》里的世界设置规则。他们可以获得一个完全独一无二的《我的时间》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -737,8 +739,48 @@ zh-CN:
     starwars_blocks_name: '星球大战: 用代码构建一个星系（块）'
     starwars_javascript_name: '星球大战: 用代码构建一个星系-JavaScript'
     download_message: '下载 %{app_name}，供离线使用 (136MB)'
-    download_in_english: '下载英语版本：'
-    download_in_spanish: '下载西班牙语版本：'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows （64位）'
     mac: 'Mac OS X'
   plc:

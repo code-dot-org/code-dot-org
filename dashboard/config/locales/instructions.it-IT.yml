@@ -6497,30 +6497,36 @@
         This sheep is coded to 'drop wool' when
         it is 'used.' Use the arrows to walk to the sheep, and press the space bar
         or tap the game space to 'use' it. Collect the wool to win!
-      MC HOC 2016 Level 10_instruction: Ora puoi creare il tuo Minecraft! Genera creature
-        e programma le loro azioni. Buon divertimento!
-      MC HOC 2016 Level 2-2_instruction: Il pollo è bloccato. Aggiungi i blocchi `vai
-        avanti` e `gira a ...` nel blocco `quando viene creato` per farlo muovere.
+      MC HOC 2016 Level 10_instruction: Ora puoi creare il tuo Minecraft! Inserisci
+        le creature nello scenario del gioco e programma le loro azioni. Buon divertimento!
+      MC HOC 2016 Level 2-2_instruction: Il pollo è immobile. Per farlo muovere, metti
+        i blocchi `vai avanti` e `gira a ...` all'interno del gestore di evento`quando
+        viene creato`.
       MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
         moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
         slot. "
-      MC HOC 2016 Level 3_instruction: |
-        Perfetto, il pollo si è mosso! Ma si è fermato subito. Nei giochi, i polli si muovono senza sosta. Usa il blocco di ripetizione (detto anche "ciclo") `ripeti per sempre` per far muovere i polli in continuazione.\r
+      MC HOC 2016 Level 3_instruction: Perfetto, il pollo si è mosso! Ma si è fermato
+        subito. Nei giochi, i polli si muovono senza sosta. Usa il blocco di ripetizione
+        (detto anche "ciclo") `ripeti per sempre` per far muovere i polli in continuazione.
       MC HOC 2016 Level 4_instruction: "È un po' strano vedere i polli muoversi tutti
         allo stesso modo. I giochi utilizzano movimenti casuali per apparire realistici.
-        Usa il comando `gira a caso`per farli muovere in modo casuale."
+        Usa il blocco`gira a caso`per farli muovere in modo casuale."
       MC HOC 2016 Level 5_instruction: Queste mucche si sono smarrite! Conducile verso
-        l’erba con il blocco `muovi un passo verso` in un ciclo `esegui per sempre`.
-      MC HOC 2016 Level 6_instruction: Ora creiamo gli zombi. Usa il blocco `genera`
-        per creare tre zombi al calare della notte. Ordina loro di muoversi verso
-        di te. Sopravvivi fino al mattino.
+        l’erba mettendo il blocco `fai un passo verso ...` all'interno del ciclo `ripeti
+        per sempre`. Dopo che hai cliccato su "Esegui" non dimenticarti di usare le
+        frecce per muovere il tuo personaggio.
+      MC HOC 2016 Level 6_instruction: Ora tocca a te creare gli zombie. Usa il blocco
+        `crea` per creare tre zombi al calare della notte. Ordina loro di muoversi
+        verso di te. Clicca su "Esegui" e sopravvivi fino al mattino.
       MC HOC 2016 Level 7_instruction: |-
         Now let’s combine what you've learned and
         create a new mob! Make a cow, lead it to the pasture, and get it to give you
         milk.
       MC HOC 2016 Level 8_instruction: Il percorso che conduce alle pecore è ostruito
-        da un muro. Per tua fortuna c’è un Creeper. I Creeper esplodono quando li
-        tocchi. Fai esplodere il Creeper per abbattere il muro e raggiungere la pecora!
+        da un muro. Per tua fortuna c’è un <i>Creeper</i>. I <i>Creeper</i> esplodono
+        quando li tocchi. Fai esplodere il <i>Creeper</i> per abbattere il muro e
+        raggiungere la pecora! Attenzione, devi far sì che il <i>Creeper</i> sia accanto
+        al muro se vuoi che l'esplosione abbia effetto.
       MC HOC 2016 Level 9_instruction: |
         Zombies are attacking the village! Code the
         Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
@@ -6528,25 +6534,26 @@
         Now let's explore our world! Use the arrows
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
-      MC HOC 2016 New Drop_instruction: In Minecraft, le pecore producono lana. Posiziona
-        il blocco `rilascia` in `quando utilizzato`, quindi avvicinati e interagisci
-        con la pecora per rilasciare un oggetto.
+      MC HOC 2016 New Drop_instruction: In Minecraft, le pecore producono lana. Metti
+        il blocco `rilascia` all'interno del blocco`quando viene usato`, poi clicca
+        su "Esegui" ed usa le frecce per avvicinarti alla pecora. Usa la barra spaziatrice
+        per produrre un po' di lana.
       MC HOC 2016 New pn_instruction: |-
         Now let's explore our world! Use the arrows
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
-      MC HOC 2016 New Spawn_instruction: Nei giochi, generare significa inserire qualcosa
-        nello scenario. Posiziona un blocco `genera` sotto `quando esegui` per creare
-        qualcosa all’avvio del gioco.
-      MC HOC 2016 New Walk_instruction: Esploriamo il nostro mondo! Muoviti con i
-        tasti di direzione e premi la barra spaziatrice o tocca il piano di gioco
+      MC HOC 2016 New Spawn_instruction: Adesso puoi riempire il mondo di Minecraft
+        con quello che vuoi! Nei giochi, "creare" significa inserire qualcosa nello
+        scenario. Aggiungi un blocco `crea` sotto il blocco`quando si clicca su "Esegui"`
+        per creare qualcosa all’avvio del gioco.
+      MC HOC 2016 New Walk_instruction: Esploriamo il nostro mondo! Dopo aver cliccato
+        su "Esegui" muoviti con le frecce. Premi la barra spaziatrice o tocca lo schermo
         per usare gli oggetti. Usa la porta per entrare in casa.
-      MC HOC 2016 SCORE LEVEL_instruction: Alcuni giochi includono un punteggio. Gioca
-        ad acchiapparello con i golem di ferro e utilizza il blocco `aggiungi 1 al
-        punteggio` per ottenere un punto quando li catturi. Ottieni cinque punti per
-        vincere!
-      MC HOC 2016 Village Test_instruction: Oh, no! Gli zombi ti hanno intrappolato!
-        Programma il golem di ferro affinché insegua e attacchi gli zombi!
+      MC HOC 2016 SCORE LEVEL_instruction: In alcuni giochi si segnano i punti. Gioca
+        ad acchiapparella con i Golem di Ferro ed usa il blocco `aggiungi 1 al punteggio`
+        per ottenere un punto quando li catturi. Arriva a cinque punti per vincere!
+      MC HOC 2016 Village Test_instruction: Oh, no! Gli zombie ti hanno intrappolato!
+        Programma il Golem di Ferro affinché insegua e attacchi gli zombie!
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions

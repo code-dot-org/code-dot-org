@@ -5850,7 +5850,7 @@
         it is 'used.' Use the arrows to walk to the sheep, and press the space bar
         or tap the game space to 'use' it. Collect the wool to win!
       MC HOC 2016 Level 10_instruction: "自分だけの Minecraft を作ろう！羊やクリーパーをスポーンさせて、思い通りの動きさせよう！"
-      MC HOC 2016 Level 2-2_instruction: "ニワトリが凍っているよ。「動く」と「向きを変える」のブロックを「出現した時」のスロットに追加して、動かそう。"
+      MC HOC 2016 Level 2-2_instruction: "ニワトリが凍っています。「まえにすすむ」と「まがる」ブロックを「出現した時」のスロットに追加して、動かしましょう。"
       MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
         moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
         slot. "

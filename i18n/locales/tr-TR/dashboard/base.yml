@@ -83,7 +83,7 @@ tr:
     teacher_count: '%{count}öğrenciler zaten giriş yaptı.'
     overview: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.'
     hoc_already_signed_up_heading: 'Giriş yaparak başla'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_content: 'Kodlama Saatinde öğretmek için kaydoldunuz! Siz ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha uzun </a> kurslara kaydedebilirsiniz.'
     teacher_educator_guide: 'Eğitim rehberine bakın'
     title: "Code.org için kayıt ol"
     school_name: 'Okul Adı (isteğe bağlı)'
@@ -351,12 +351,14 @@ tr:
     announcement_learn_more_button: "Daha fazlasını öğren"
     announcement_try_now_button: "Şimdi dene"
     announcement_host_an_hour_button: "Kodlama Saatine ev sahipliği yap"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi için bir açık mektup verdi."
     announcement_petition_button: "Adınızı Ekleyin"
     announcement_all: "Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>"
     announcement_hoc_launch: "180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde, ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini öğretmeye başlayabileceğini söyleyin."
     announcement_hoc_scaling: 'DİKKAT, Ders 1-4 ve hızlandırılmış kurs için öğretmenlere uyarı: milyonlarca öğrenci Kod Saati  etkinliğinde çalıştığından aşırı trafik oluşmaktadır, bu nedenle <b>3-11 aralık tarihlerinde öğrenci çalışmaları kayıt edilmeyecektir.</b>  Sınıfınızda Kod Saati etkinlikleri yaparak Bilgisayar Bilimleri Eğitimi Haftası'' nı kutlamanızı öneririz. Kod Saati etkinlikleri bu hafta kayıt yapmamasına rağmen, öğrenciler etkinlikler yapabilir ve sertifika kazanmaya devam edebilirler.'
     announcement_mc_launch: "En popüler eğitimlerimizden birinin şimdi devamı var! Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde sınıfınla birlikte yap."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_not_entered: "Lütfen current_section_code giriniz."
@@ -737,8 +739,48 @@ tr:
     starwars_blocks_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
     download_message: 'Çevrimdışı kullanım  için %{app_name} (136 MB) indir'
-    download_in_english: 'İngilizce olarak indir:'
-    download_in_spanish: 'İspanyolca olarak indir:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:
