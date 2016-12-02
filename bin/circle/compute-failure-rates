@@ -68,7 +68,7 @@ build_infos = @project.get_builds(build_range).map do |build|
     queued_at: DateTime.parse(build['queued_at']),
     branch: build['branch'],
     # Possible build outcomes: :canceled, :infrastructure_fail, :timedout, :failed, :no_tests or :success
-    succeeded: build['outcome'] == 'success' || build['outcome'] == 'no_tests',
+    succeeded: build['outcome'] == 'success',
     failed: build['outcome'] == 'failed' || build['outcome'] == 'timedout'
   }
 end
