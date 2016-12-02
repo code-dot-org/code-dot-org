@@ -91,7 +91,6 @@ const MINIBLOCKS_TO_DISPLAY_TEXT = {
   milk: i18n.miniBlockMilk(),
   egg: i18n.miniBlockEgg(),
   poppy: i18n.miniBlockPoppy(),
-  sheep: i18n.miniBlockSheep(),
 };
 
 const MINIBLOCKS = Object.keys(MINIBLOCKS_TO_DISPLAY_TEXT).sort();
