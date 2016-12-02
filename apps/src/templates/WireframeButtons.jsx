@@ -40,8 +40,8 @@ const APP_TYPES_WITH_VIEW_CODE = [
  * currently displayed app, and whether or not it is the legacy version.
  */
 const APP_TYPE_TO_NEW_PROJECT_URL = {
-  applab: '/projects/applab/new',
-  applab_legacy: '/projects/applab/new',
+  applab: 'https://code.org/educate/applab',
+  applab_legacy: 'https://code.org/educate/applab',
   artist: '/p/artist',
   artist_legacy: '/s/artist',
   gamelab: '/projects/gamelab/new',
@@ -145,7 +145,12 @@ let WireframeButtons = React.createClass({
   },
 
   renderNewProjectButton: function () {
-    var appTypeAndLegacy = this.props.appType + (this.props.isLegacyShare ? '_legacy' : '');
+    // Unfortunately, isLegacyShare currently has the wrong value (is true for non-legacy artist
+    // and playlab). So instead, we check the first letter (after the /) in the path name of the
+    // url, as legacy shares all start with /c
+    // var isLegacyShare = this.props.isLegacyShare;
+    var isLegacyShare = window.location.pathname[1] == 'c';
+    var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
       return (
