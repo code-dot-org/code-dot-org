@@ -37,6 +37,8 @@ module ScriptConstants
       ARTIST_NAME = 'artist'.freeze,
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
+      BASKETBALL_NAME = 'basketball'.freeze,
+      SPORTS_NAME = 'sports'.freeze,
     ],
     csf: [
       TWENTY_HOUR_NAME = '20-hour'.freeze,
