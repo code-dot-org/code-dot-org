@@ -172,7 +172,7 @@ cs:
         'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
         'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
         'bounce_11_sports': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+        'bounce_12_sports': "Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys nechal přátele zkusit tvou hru na svých telefonech."
         'bounce_1': "Připoj blok k bloku \"šipka vlevo\" a stiskni tlačítko \"Run\". Přesuň pálku pomocí levé šipky k dosažení cíle."
         'bounce_2': "Připoj blok k blokům \"šipka vpravo\" a \"šipka vpravo\". Přesunuj pálku k dosažení obou cílů."
         'bounce_3': "Teď zkus něco podobného s blokem \"šipka nahoru\". Přesunuj pálku k dokončení úkolu nahoře."
@@ -486,11 +486,11 @@ cs:
         'iceage_intro': 'Dobá ledová hodinového kódu - Instrukce'
         'iceage_events': 'Doba ledová Hodinového kódu - události'
         'iceage_repeat': 'Doba ledová hodinového kódu - Opakovaní příkazů'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Hodina kódu s Minecraftem - Úvod'
+        'mc_2016_loops': 'Hodina kódu s Minecraftem - Cykly'
+        'mc_2016_events': 'Hodina kódu s Minecraftem - Události'
+        'mc_2016_spawn': 'Hodina kódu s Minecraftem - Tvoření'
+        'mc_2016_congrats': 'Hodina kódu s Minecraftem - Gratulujeme'
     callout:
       text:
         drag_blocks: 'Přetáhni blok "posunout vpřed" pod ten druhý blok'

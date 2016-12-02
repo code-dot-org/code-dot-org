@@ -1975,7 +1975,7 @@ ja:
       Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost\nfunction even more useful?"
       MC HOC 2016 Level 1_instruction: "This sheep is coded to 'drop wool' when\nit is 'used.' Use the arrows to walk to the sheep, and press the space bar\nor tap the game space to 'use' it. Collect the wool to win!"
       MC HOC 2016 Level 10_instruction: "自分だけの Minecraft を作ろう！羊やクリーパーをスポーンさせて、思い通りの動きさせよう！"
-      MC HOC 2016 Level 2-2_instruction: "ニワトリが凍っているよ。「動く」と「向きを変える」のブロックを「出現した時」のスロットに追加して、動かそう。"
+      MC HOC 2016 Level 2-2_instruction: "ニワトリが凍っています。「まえにすすむ」と「まがる」ブロックを「出現した時」のスロットに追加して、動かしましょう。"
       MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned” slot. "
       MC HOC 2016 Level 3_instruction: "素晴らしい! ニワトリが動いたね!でも、動きが止まってしまったね。Minecraftのゲーム内だと、ニワトリはずっと歩き続けるのにおかしいね。「ずっとくりかえす」ループを使ってニワトリを動かし続けよう。"
       MC HOC 2016 Level 4_instruction: "ニワトリがすべて同じ方向に動いているのは変だね。Minecraftのゲームの中では、ニワトリはランダムに動くことで本物のように見せているね。「ランダムに向きを変える」ブロックを使って、ニワトリをランダムに動かそう。"

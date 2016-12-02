@@ -346,7 +346,7 @@ ar:
       4-5 Maze Conditionals 4_instruction: "حسنا, قم بحل هذا اللغز مثل اللغز السابق, لكن سوف تحتاج ان تتذكر كيف استخدمت قطعة \"اذا\" (`if`) وقطعة \"أكرر\" (`repeat until`) مع بعض."
       4-5 Maze Conditionals 5_instruction: "\"Me want sunflower!\"  \\r\n\\r\nUse an\n`if` statement to get the zombie to the sunflower with the fewest number of\nblocks."
       4-5 Maze Conditionals 6_instruction: "\"Eat sunflower!\"\\r\n\\r\nUse an `if`\nstatement to get the zombie to the sunflower with the fewest number of blocks."
-      4-5 Maze Conditionals 7_instruction: "The solution to this puzzle isn't very\ndifferent, but watch out for the chompers!"
+      4-5 Maze Conditionals 7_instruction: "حل هذه الاحجية ليس بامر صعب، لكن انتبه الى المسننات!"
       4-5 Maze Conditionals 8_instruction: "قطعة \"إذا والا\" تقوم  بالتأكد من شرط، ثم تقوم بعمل شيء أو شيء آخر . من اجل الوصول إلى زهرة عباد الشمس حاول إستخدام  هذا المقطع البرمجي الجديد."
       4-5 Maze Conditionals 9_instruction: "تمرين اخر على قطعة \" اذا - والا \", هل تقدر اعطاء اجابة صحيحة من أول محاولة ؟"
       4-5 Maze Conditionals Assessment 1_instruction: "**Assessment:** Use a `repeat\nuntil` and an `if/else` block to get me to the sunflower in as few blocks\nas possible."

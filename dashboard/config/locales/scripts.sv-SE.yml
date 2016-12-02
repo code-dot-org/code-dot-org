@@ -2425,10 +2425,10 @@
         basketball:
           stage:
             Bounce: Studsa
-          title: Basketball
+          title: Göra en basketmatch
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Göra en basketmatch
+          description: Göra en basketmatch
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2727,7 +2727,7 @@
           title: Sport
           description_audience: ''
           description_short: Koda din egen sport
-          description: ''
+          description: Koda din egen sport
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Välkommen!

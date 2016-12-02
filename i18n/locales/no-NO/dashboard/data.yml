@@ -25,7 +25,7 @@
         'Unplug11': 'Oppsummering'
         'MazeEC': 'Labyrinten'
         'Bounce': 'sprett'
-        'Flappy': 'Flappy Bird'
+        'Flappy': 'Fuglen Flakse'
         'Jigsaw': 'Puslespill'
         'MazeStep': 'Labyrint trinn modus'
         'Wordsearch': 'Tekstsøk'
@@ -191,7 +191,7 @@
         'flappy_5': "La oss legge til en resultattavle og telle poeng når Flappy kommer seg forbi hindringer. Utvid blokken \"når passert hindring\" og se at du får poeng når du flyr Flappy forbi de første rørene."
         'flappy_6': "Se om du fortsatt kan få poeng hvis Flappy flakser mer eller mindre."
         'flappy_7': "Prøv å endre scenen ved å feste en annen blokk til \"når den kjører\"-blokken."
-        'flappy_8': "Du kan angi visuelle effekter når som helst, ikke bare når spillet starter. Prøv å angi en tilfeldig scene når andre hendelser skjer, for eksempel når du passerer en hindring."
+        'flappy_8': "Du kan angi visuelle effekter når som helst, ikke bare når spillet starter. Prøv å sette en tilfeldig scene når andre hendelser skjer, for eksempel når du passerer en hindring."
         'flappy_9': "For å blande ting, når du treffer et hinder, i stedet for å avslutte spillet Prøv innstillingen score tilbake til 0."
         'flappy_11': "Lag ditt eget Flappy-spill! Du kan endre alle bilder og alle regler, selv tyngdekraften. Når du er ferdig, klikk Fullfør og du kan la vennene dine prøve spillet på sine telefoner."
         'flappy_k1_1': "Spill Flappy"
@@ -274,7 +274,7 @@
         'studio_gumball_click_hello': "Kan du hjelpe Anton kunngjøre starten av et løp ved å si \"Klar, ferdig, gå!\"? For å teste programmet, ikke glem å klikke Anton når du klikker Kjør!"
         'studio_gumball_move_events': "Darwin er i flagg samle konkurransen! Hjelpe ham løpe rundt ved å feste \"Flytt\" blokken til hver hendelse. Når du er ferdig, klikk Kjør, og prøv å samle alle flaggene."
         'studio_gumball_sound_and_points': "Vi har lagt ved mesteparten av koden som holder Anton (figur 2) i bevegelse til venstre og høyre, og koden for å flytte Banana Joe (figur 1) rundt på skjermen.  Kan du fullføre koden og legge blokker til hendelsen \"når figur berører\" å gjøre det slik at du både spiller av en lyd og scorer poeng når Banana Joe og Anton kolliderer?  Trykk Kjør spillet."
-        'studio_gumball_warn_food_fight': "Darwin rømte nettopp fra en mat kamp! Endre bakgrunnen til \"karakterer\" og angi hastigheten til Darwin til rask. Trykk Kjør og flytte ham til Penny for å advare henne."
+        'studio_gumball_warn_food_fight': "Darwin rømte nettopp fra en mat-kamp! Endre bakgrunnen til \"figur\" og sett hastigheten til Darwin til rask. Trykk Kjør og flytt ham bort til Penny for å advare henne."
         'studio_gumball_join_food_fight': "Delta i mat kampen! Bruk kommandoen \"figur kast element høyre\" for at Banana Joe (figur 1) skal kaste mat på Anton (figur 2)! Angi humøret til Anton til sint når han blir truffet."
         'studio_gumball_free_play': "Lag ditt eget spill eller historie. Når du er ferdig, klikk Fullfør for å la venner prøve spillet på telefoner, tablets eller datamaskiner!"
         'studio_full_sandbox': "Lag ditt eget spill. Når du er ferdig, trykk Fullør for å la vennene dine prøve spillet på sine mobiler."
@@ -538,9 +538,9 @@
         playlab_add_move: "Legg til \"flytt\"-blokker i denne gjenta-blokken"
         playlab_add_score: "Legg til poeng-blokker her"
         playlab_add_blocks: "Legg til dine blokker her"
-        set_variable: "Dra en nummer-blokk hit for å angi variabelen"
+        set_variable: "Dra en tall-blokk hit for å angi variabelverdien"
         place_variable: "Dra variabelen din inn i denne blokken"
-        bee_for_loop: "Dra det største nummeret av nektar som du ønsker at bien skal samle hit"
+        bee_for_loop: "Dra det største antallet nektar som du ønsker at bien skal samle hit"
         place_counter_variable: "Dra teller-variabelen din inn i denne blokken"
         function_editor_draw_square: "Dette er din funksjonsdefinisjon. Disse blokkene kjører hver gang du bruker \"tegn en firkant\"-blokken"
         change_here: "Gjør din endring her"
