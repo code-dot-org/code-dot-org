@@ -108,26 +108,19 @@ Resources:
   Frontends:
     DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
-    CreationPolicy:
-      ResourceSignal:
-        Timeout: PT50M
-        Count: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
-      AutoScalingCreationPolicy:
-        MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: 20
         MinInstancesInService: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
         MinSuccessfulInstancesPercent: 80
         PauseTime: PT50M
-        SuspendProcesses: [ScheduledActions]
+        SuspendProcesses: [HealthCheck, ReplaceUnhealthy, AZRebalance, AlarmNotification, ScheduledActions]
         WaitOnResourceSignals: true
+      AutoScalingScheduledAction:
+        IgnoreUnmodifiedGroupSizeProperties: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: FrontendLaunchConfig}
-      MinSize: {'Fn::GetAtt': [ASGCount, MinSize]}
-      MaxSize: {'Fn::GetAtt': [ASGCount, MaxSize]}
-      DesiredCapacity: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
       HealthCheckType: ELB
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
