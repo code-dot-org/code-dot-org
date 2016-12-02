@@ -7,8 +7,8 @@ social:
   "og:image" : "<%= 'https://code.org/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
   "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1200' %>"
   "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '630' %>"
-  "og:video": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'athletevideocode' : 'QvyTEx1wyOY') %>"
-  "og:video:secure_url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'athletevideocode' : 'QvyTEx1wyOY') %>"
+  "og:video": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
+  "og:video:secure_url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -18,15 +18,15 @@ social:
   "twitter:title": "<%= I18n.t(:sports_og_title) %>"
   "twitter:description": "<%= I18n.t(:sports_og_description) %>"
   "twitter:image:src" : "<%= 'https://code.org/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
-  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'athletevideocode' : 'QvyTEx1wyOY') %>"
+  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
 ---
 
 - page_mode     = PageMode.get(request)
-- yt_code       = page_mode == 'feature-athletes' ? 'athletesvideocode' : 'QvyTEx1wyOY'
-- download_link = page_mode == 'feature-athletes' ? 'athletesdownloadlink' : '//videos.code.org/social/cs-is-everything.mp4'
+- yt_code       = page_mode == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY'
+- download_link = page_mode == 'feature-athletes' ? '//videos.code.org/social/athletes-hour-of-code.mp4' : '//videos.code.org/social/cs-is-everything.mp4'
 
 %link{href: "/css/sports.css", rel: "stylesheet"}
 
@@ -62,11 +62,11 @@ video_player: true
   %h2.header= I18n.t(:watch_inspirational_videos)
   - if page_mode == "feature-athletes"  
     - videos = []
-    - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min)}
-    - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min)}
+    - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min), download_path: "//videos.code.org/social/athlete-draymond-green.mp4"}
+    - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min), download_path: "//videos.code.org/social/athlete-russell-okung.mp4"}
     - videos << { id: 'real_madrid',     code: 'EmJQKAR-78g', text: I18n.t(:video_title_real_madrid),     duration: I18n.t(:video_1min)}
     - videos << { id: 'marco_belinelli', code: 'Zh6E99aySI4', text: I18n.t(:video_title_marco_belinelli), duration: I18n.t(:video_2min)}
-    - videos << { id: 'chris_bosh',      code: '5oHe0ozN7Oc', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min)}
+    - videos << { id: 'chris_bosh',      code: 'kx3DxBbweGY', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min), download_path: "//videos.code.org/social/athlete-chris-bosh.mp4"}
 
     - videos.each do |video|
       .col-50{style: "float:left; padding:10px"}
