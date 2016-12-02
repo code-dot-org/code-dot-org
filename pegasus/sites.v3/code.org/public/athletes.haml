@@ -40,7 +40,7 @@ video_player: true
   =view :display_video_thumbnail, id: 'athletes_video', video_code: yt_code, play_button: 'center', facebook: facebook, twitter: twitter, download_path: download_link, letterbox: 'false'
   - if page_mode == "feature-athletes"
     %a{href: "#featured-athletes"}
-      See featured athletes
+      = I18n.t(:sports_featured_athletes)
 .tutorials-container
   %div.image-collection
     %h2= I18n.t(:sports_title)
@@ -89,22 +89,22 @@ video_player: true
 
 - if page_mode == "feature-athletes"
   %div#featured-athletes
-    %h2 Featured athletes
+    %h2= I18n.t(:sports_athletes_title)
     %ul
-      %li Draymond Green - NBA Champion, Golden State Warriors
-      %li Serena Williams - Tennis Champion
-      %li Russell Okung - NFL Champion, Denver Broncos
-      %li Sergio Ramos - Futbol Champion, Real Madrid
-      %li Sue Bird - WNBA Champion and 4 Time Olympic Gold Medalist, Seattle Storm
-      %li Alana Beard - WNBA All-Star, Los Angeles Sparks
-      %li Angelo Matthews - Captain of the Sri Lankan Cricket Team
-      %li Nneka Ogwumike - WNBA Champion and 2016 MVP, Los Angeles Sparks
-      %li Carmelo Anthony - NBA All-Star, New York Knicks
-      %li Marco Belinelli - NBA Champion, Charolette Hornets
-      %li Neymar Jr. - Fubtol Champion, FC Barcelona
-      %li Sarah Quita Offringa - Windsurfing Champion,
-      %li Marcelo - Futbol Champion, Real Madrid
-      %li Erika Olivera - Champion Marathon Runner
-      %li John Wall - NBA All-Star, Washington Wizards
-      %li Chris Bosh - NBA Champion, Miami Heat
-      %li Harrison Barnes - NBA Champion, Dallas Mavericks
+      %li= I18n.t(:sports_athlete_Draymond)
+      %li= I18n.t(:sports_athlete_Serena)
+      %li= I18n.t(:sports_athlete_Russell)
+      %li= I18n.t(:sports_athlete_Sergio)
+      %li= I18n.t(:sports_athlete_Sue)
+      %li= I18n.t(:sports_athlete_Alana)
+      %li= I18n.t(:sports_athlete_Angelo)
+      %li= I18n.t(:sports_athlete_Nneka)
+      %li= I18n.t(:sports_athlete_Carmelo)
+      %li= I18n.t(:sports_athlete_Marco)
+      %li= I18n.t(:sports_athlete_Neymar)
+      %li= I18n.t(:sports_athlete_Sarah)
+      %li= I18n.t(:sports_athlete_Marcelo)
+      %li= I18n.t(:sports_athlete_Erika)
+      %li= I18n.t(:sports_athlete_John)
+      %li= I18n.t(:sports_athlete_Chris)
+      %li= I18n.t(:sports_athlete_Harrison)
