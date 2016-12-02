@@ -40,12 +40,12 @@ group :development do
   gem 'annotate'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar', require: false
-  gem 'thin'
   gem 'web-console'
   gem 'memoist'
 end
 
 group :development, :test do
+  gem 'thin'
   gem 'rerun', '~> 0.10.0'
   gem 'shotgun'
   gem 'rack-cache'
