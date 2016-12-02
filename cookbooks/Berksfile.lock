@@ -98,7 +98,7 @@ GRAPH
   cdo-nginx (0.0.9)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
-  cdo-nodejs (0.2.11)
+  cdo-nodejs (0.2.12)
     nodejs (>= 0.0.0)
   cdo-postfix (0.2.6)
     apt (>= 0.0.0)
