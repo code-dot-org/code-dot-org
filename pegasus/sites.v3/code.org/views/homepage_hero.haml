@@ -104,8 +104,6 @@
             #subtitle.students-served= I18n.t(entry[:text1_s]).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
           - elsif entry[:param1_s] == "hoc_buttons"
             .buttongroup
-              %a{href: "https://hourofcode.com"}
-                %button.herohocbutton= I18n.t(entry[:text1_s])
               %a{href: "/learn"}
                 %button.herohocbutton= I18n.t(entry[:param2_s])
             %div{style: "clear: both;"}
