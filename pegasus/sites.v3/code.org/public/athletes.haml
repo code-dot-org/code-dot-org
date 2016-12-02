@@ -38,6 +38,8 @@ video_player: true
   - facebook = {u: url}
   - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} @codeorg"}
   =view :display_video_thumbnail, id: 'athletes_video', video_code: yt_code, play_button: 'center', facebook: facebook, twitter: twitter, download_path: download_link, letterbox: 'false'
+  %a{href: "#featured-athletes"}
+    See featured athletes
 .tutorials-container
   %div.image-collection
     %h2= I18n.t(:sports_title)
@@ -83,3 +85,25 @@ video_player: true
         %li= I18n.t(:careers_page_more, careers_url: CDO.code_org_url('/careers'))
   - else
     =view :inspirational_videos
+
+- if page_mode == "feature-athletes"
+  %div#featured-athletes
+    %h2 Featured athletes
+    %ul
+      %li Draymond Green - NBA Champion, Golden State Warriors
+      %li Serena Williams - Tennis Champion
+      %li Russell Okung - NFL Champion, Denver Broncos
+      %li Sergio Ramos - Futbol Champion, Real Madrid
+      %li Sue Bird - WNBA Champion and 4 Time Olympic Gold Medalist, Seattle Storm
+      %li Alana Beard - WNBA All-Star, Los Angeles Sparks
+      %li Angelo Matthews - Captain of the Sri Lankan Cricket Team
+      %li Nneka Ogwumike - WNBA Champion and 2016 MVP, Los Angeles Sparks
+      %li Carmelo Anthony - NBA All-Star, New York Knicks
+      %li Marco Belinelli - NBA Champion, Charolette Hornets
+      %li Neymar Jr. - Fubtol Champion, FC Barcelona
+      %li Sarah Quita Offringa - Windsurfing Champion,
+      %li Marcelo - Futbol Champion, Real Madrid
+      %li Erika Olivera - Champion Marathon Runner
+      %li John Wall - NBA All-Star, Washington Wizards
+      %li Chris Bosh - NBA Champion, Miami Heat
+      %li Harrison Barnes - NBA Champion, Dallas Mavericks
