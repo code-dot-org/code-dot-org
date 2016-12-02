@@ -210,7 +210,7 @@ function installJoinBlock(blockly) {
       var lastConnectionIndex = 0;
       var oldConnectionIndex = -1;
       var newConnectionIndex = -1;
-      for (var i = 0; i < this.inputCount; i++) {
+      for (var i = 0; i < this.inputList.length; i++) {
         var connection = this.inputList[i].connection;
         if (connection.targetConnection) {
           lastConnectionIndex = i;
@@ -233,9 +233,8 @@ function installJoinBlock(blockly) {
       if (toEnd && !fromEnd) {
         this.setInputCount(lastConnectionIndex + 2);
       } else if (fromEnd && !toEnd) {
-        this.delayedResize = window.setTimeout(function () {
-          this.setInputCount(lastConnectionIndex + 1);
-        }.bind(this), 100);
+        this.delayedResize = window.setTimeout(
+            () => this.setInputCount(lastConnectionIndex + 1), 100);
       }
     },
   };
