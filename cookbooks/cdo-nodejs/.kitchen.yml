@@ -1,8 +1,6 @@
 ---
 transport:
-  name: sftp
-  connection_timeout: 10
-  connection_retries: 5
+  name: ssh_tgz
 driver:
   name: docker
   use_sudo: false
