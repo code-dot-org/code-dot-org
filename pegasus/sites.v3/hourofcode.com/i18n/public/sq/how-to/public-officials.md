@@ -1,9 +1,7 @@
 ---
-
-titulli: <%= hoc_s(:title_how_to_officials) %>
-paraqitja: e plotë
-navigimi: si të navigojmë
-
+title: <%= hoc_s(:title_how_to_officials) %>
+layout: wide
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>

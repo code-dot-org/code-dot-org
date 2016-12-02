@@ -1,7 +1,7 @@
 ---
-
-Titulli: <%= hoc_s(:title_how_to) %> Paraqitje:E plotë Navigim: Si të navigojmë
-
+title: <%= hoc_s(:title_how_to_companies) %>
+layout: wide
+nav: how_to_nav
 ---
 
 <%= view :signup_button %>
