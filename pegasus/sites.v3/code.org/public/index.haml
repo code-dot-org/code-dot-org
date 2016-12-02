@@ -6,11 +6,11 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://code.org/images/code-video-thumbnail.jpg"
-  "og:image:width": "1440"
-  "og:image:height": "810"
-  "og:video:url": "http://youtube.com/v/nKIu9yen5nc"
-  "og:video:secure_url": "https://youtube.com/v/nKIu9yen5nc"
+  "og:image": "<%= 'https://code.org/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
+  "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1440' %>"
+  "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '810' %>"
+  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'athletevideocode' : 'nKIu9yen5nc') %>"
+  "og:video:secure_url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'athletevideocode' : 'nKIu9yen5nc') %>"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -19,17 +19,17 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://code.org/images/code-video-thumbnail.jpg"
+  "twitter:image:src": "<%= 'https://code.org/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
 ---
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
 
+- page_mode = PageMode.get(request)
+
 -# The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
-
-- page_mode = PageMode.get(request)
 
 #homepage.supreme-container
   = view :homepage_hero, languageFilter: languageFilter, page_mode: page_mode
