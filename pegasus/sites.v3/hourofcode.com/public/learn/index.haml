@@ -18,6 +18,7 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+- page_mode = PageMode.get(request)
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
   @media (min-width: 992px)
@@ -100,6 +101,8 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - if tutorial[:short_code] == "athlete" && page_mode == "feature-athletes"
+    - tutorial[:tags] = "2016-tutorial"
 
 #tutorials
 

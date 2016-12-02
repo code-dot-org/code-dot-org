@@ -15,19 +15,19 @@ Junte-se ao movimento e proporcione a um grupo de alunos sua primeira hora de ci
 ## 1) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Escolha um tutorial para sua hora:
 
-Oferecemos uma grande variedade de [tutoriais divertidos de uma hora de duração](<%= resolve_url('https://code.org/learn') %>), criados por diversos parceiros, para alunos de todas as idades.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Tutoriais autoexplicativos da Hora do Código:](<%= resolve_url("https://code.org/learn") %>)**
+**[Tutoriais autoexplicativos da Hora do Código:](<%= resolve_url('/learn') %>)**
 
   * Exigem um tempo mínimo de preparação dos professores
   * São autoexplicativos, o que permite que os alunos trabalhem em seu próprio ritmo e nível de habilidade
 
-**[Tutoriais para professores da Hora do Código:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Tutoriais para professores da Hora do Código:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * São planos de aula que exigem uma preparação mais avançada do professor
   * São classificados por nível *e* por disciplina (por exemplo, matemática, inglês, etc.)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Promova sua Hora do Código
 
@@ -57,7 +57,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
   * O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * O [vídeo de lançamento da Hora do Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [O vídeo do presidente Obama convidando todos os alunos a aprender ciência da computação](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Encontre mais [recursos](<%= resolve_url('https://code.org/inspire') %>) e [vídeos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
 
 **Não tem problema se você e seus alunos não têm experiência com ciência da computação. Apresentamos aqui algumas ideias para começar sua atividade da Hora do Código:**
 
@@ -73,7 +73,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
 
 **Direcione os alunos para a atividade**
 
-  * Escreva o link para o tutorial em uma lousa. Encontre o link apresentado nas [informações para seu tutorial selecionado](<%= resolve_url('https://code.org/learn') %>) abaixo do número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ A melhor experiência da Hora do Código inclui computadores conectados à Inter
 
 **O que fazer se um aluno terminar mais cedo?**
 
-  * Os alunos podem ver todos os tutoriais e participar de outra atividade da Hora do Código em [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ou, peça aos alunos que terminarem mais cedo para que ajudem os colegas que estão tendo problemas com a atividade.
 
 [col-33]
