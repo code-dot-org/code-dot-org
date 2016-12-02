@@ -21,9 +21,13 @@ module.exports = {
       xml:
         'button("my_button", "text");' +
         'setProperty("my_button", "text", "newtext");' +
+        'console.log("text: " + getProperty("my_button", "text"));' +
         'setProperty("my_button", "text-color", "red");' +
+        'console.log("text-color: " + getProperty("my_button", "text-color"));' +
         'setProperty("my_button", "background-color", "green");' +
+        'console.log("background-color: " + getProperty("my_button", "background-color"));' +
         'setProperty("my_button", "font-size", 21);' +
+        'console.log("font-size: " + getProperty("my_button", "font-size"));' +
         'setProperty("my_button", "image", "' + facebookImage + '");',
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
@@ -41,9 +45,12 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, `text: newtext
+text-color: red
+background-color: green
+font-size: 21px`);
+
         return true;
       },
       expected: {

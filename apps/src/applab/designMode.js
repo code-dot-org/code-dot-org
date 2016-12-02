@@ -441,6 +441,65 @@ designMode.updateProperty = function (element, name, value) {
   }
 };
 
+designMode.readProperty = function (element, name) {
+  switch (name) {
+    case 'id':
+      return elementUtils.getId(element);
+    case 'left':
+      return element.style.left;
+    case 'top':
+      return element.style.top;
+    case 'width':
+      return element.getAttribute('width');
+    case 'height':
+      return element.getAttribute('height');
+    case 'style-width':
+      return element.style.width;
+    case 'style-height':
+      return element.style.height;
+    case 'text':
+      return utils.escapeText(element.innerHTML);
+    case 'textColor':
+      return element.style.color;
+    case 'backgroundColor':
+      return element.style.backgroundColor;
+    case 'fontSize':
+      return element.style.fontSize;
+    case 'textAlign':
+      return element.style.textAlign;
+    case 'icon-color':
+      return element.getAttribute('data-icon-color');
+    case 'image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'screen-image':
+      return element.setAttribute('data-canonical-image-url');
+    case 'picture':
+      return element.getAttribute('data-canonical-image-url');
+    case 'hidden':
+      return $(element).hasClass('design-mode-hidden');
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      return !!element.checked;
+    case 'options':
+      return $(element).children().map((i, child) => child.text);
+    case 'groupId':
+      return element.getAttribute('name');
+    case 'placeholder':
+      return element.getAttribute('placeholder');
+    case 'rows':
+      return element.getAttribute('rows');
+    case 'cols':
+      return element.getAttribute('rows');
+    case 'readonly':
+      return element.getAttribute('contenteditable');
+    case 'is-default':
+      return elementUtils.getId(element) === elementUtils.getDefaultScreenId();
+    default:
+      throw "unknown property name " + name;
+  }
+};
+
 designMode.onDuplicate = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {
