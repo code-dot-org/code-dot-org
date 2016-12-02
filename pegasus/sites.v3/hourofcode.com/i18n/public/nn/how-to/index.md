@@ -12,22 +12,22 @@ nav: how_to_nav
 
 Bli med i røyrsla og introduser ei gruppe elevar til deira fyrste time i koding med disse trinna:
 
-## 2) Sjå denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Sjå denne Korleis gjer ein det videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Velge ei rettleiing for timen din:
 
-Vi tilbyr ei rekkje [morosame, timelange oppgåver](<%= resolve_url('https://code.org/learn') %>) for deltakarar i alle aldrar, laga av ei rekkje partnarar.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Elevstyrte kodetimeoppgåver:](<%= resolve_url("https://code.org/learn") %>)**
+**[Elevstyrte kodetimeoppgåver:](<%= resolve_url('/learn') %>)**
 
   * Krev minimalt med tid til førebuing frå læraren
   * Er tilrettelagt for at elevane skal arbeide på eiga hand, i eige tempo og tilpasset eige ferdigheitsnivå
 
-**[Lærarstyrte kodetimeoppgåver:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Lærarstyrte kodetimeoppgåver:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Er oppgåver som krev at læraren gjer noen førebuingar
   * Er kategorisert etter klassetrinn *og*fag (t. d. matte, engelsk etc.)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Marknadsfør Kodetimen din
 
@@ -41,39 +41,39 @@ Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men d
 
   * Prøv ut leksjonane på elevane sine datamaskiner eller nettbrett. Ver viss på at dei fungerer sikkeleg med lyd og video.
   * Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgåva du vel fungerer best med lyd.
-  * **Har du ikke nok enheter?** Bruk [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og krevje mindre av læraren. Dei vil også oppleve at programmering er sosialt og handlar om samarbeid.
+  * **Manglar du datamaskiner eller einingar?** Bruk [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og krevje mindre av læraren. Dei vil også oppleve at programmering er sosialt og handlar om samarbeid.
   * **Er internettlinja treg?** Planlegg å vise videoane for heile klassa samla, slik at alle elev ikkje lastar ned kvar sin video. Eller prøv dei leksjonene som ikkje treng tilgang til nettet.
 
 ![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Start Kodetimen med ein inspirerande førelesar eller video
 
-**Inviter en[lokal frivillig](https://code.org/volunteer/local)til å inspirere elevene med å fortelle om bredden og mulighetene innen informatikk.**Det er tusenvis av frivillge verden over som er klare for å hjelpe til med Kodetimen deres. [Bruk dette kartet ](https://code.org/volunteer/local)for å finne lokale frivillige som kan besøke klasserommet deres eller bli med på en video-chat med deres elever.
+**Inviter ein[lokal frivillig](https://code.org/volunteer/local)til å inspirere elevane med å fortelje om bredda og kva som er mogleg innan informatikk.**Det er tusenvis av frivillige verda over som er klare for å hjelpe til med Kodetimen dykkar. [Bruk dette kartet ](https://code.org/volunteer/local)for å finne lokale frivillige som kan besøke klasserommet dykkar eller bli med på ein video-chat med deira elevar.
 
 [![](/images/fit-300/volunteer-map.png)](<%= resolve_url('https://code.org/volunteer/local') %>)
 
 **Vis en inspirerande video:**
 
   * Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Lanseringsvideoen til Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Finn meir inspirasjon i [ressursar](<%= resolve_url('https://code.org/inspire') %>) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det er helt greit om du og elevene dine ikke er kjent med datavitenskap fra før. Her er noen ideer til hvordan du kan introdusere kodetimen din:**
+**Det er heilt greit om du og elevane dine ikkje er kjend med datavitskap frå før. Her er nokre idear til korleis du kan introdusere kodetimen din:**
 
-  * Forklar hvordan teknologi påvirker livene våre. Bruk gjerne eksempler somo både jenter og gutter kan kjenne seg igjen i. (Snakk om å redde liv, hjelpe andre eller om sosiale medier f. eks.).
-  * Lag en liste over dagligdagse ting som er laget gjennom koding.
+  * Forklar korleis teknologi påverkar liva våre. Bruk gjerne døme som både jenter og gutar kan kjenne seg igjen i. (Snakk om å redde liv, hjelpe andre eller om sosiale medie).
+  * Lag ei liste over daglegdagse ting som er koda.
   * Sjå tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-**Trenger du mer veiledning?**Last ned en [undervisningsmal](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**Treng du meir rettleiing?**Last ned ein [undervisningsmal](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
 **Ynskjer du fleire idear til undervisninga?** Sjekk ut dei [beste tipsa](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) frå erfarne lærerar.
 
 ## 6) Koding!
 
-**Sett i gang elevene med aktiviteten**
+**Sett i gong elevane med aktiviteten**
 
-  * Skriv oppgavelenka på ei tavle. Finn lenka under [informasjon for den valde oppgåva](<%= resolve_url('https://code.org/learn') %>) under antal deltakarar.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -81,7 +81,7 @@ Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men d
 
 [/col-33]
 
-**Når elevene har spørsmål eller synes noe er vanskelig, er det greit å svare:**
+**Når elevane har spørsmål eller synast noko er vanskeleg, er det greit å svare:**
 
   * "Eg veit ikkje. Lat oss finne det ut i lag."
   * «Det er ikkje alltid teknologien gjer seg slik vi vil.»
@@ -89,9 +89,9 @@ Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men d
 
 **[Undervisningstips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**Hva kan jeg gjøre hvis en elev blir tidlig ferdig?**
+**Kva kan eg gjere om ein elev blir tidleg ferdig?**
 
-  * Elevene kan gå finne flere aktiviteter her: <%= resolve_url('code.org/learn') %>[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Eller du kan be dei elevane som blir fort ferdige om å hjelpe dei som slit med å få det til.
 
 [col-33]
@@ -113,8 +113,8 @@ Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men d
 [/col-33]
 
   * [Skriv ut diplomar](<%= resolve_url('https://code.org/certificates') %>) til elevane.
-  * [Print ut "Jeg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>) klistremerker til elevene dine.
-  * [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skolen din.
+  * [Skriv ut "Eg gjennomførte Kodetimen!"](<%= resolve_url('/promote/resources#stickers') %>) klistremerke til elevane dine.
+  * [Bestill t-skjorter ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)til skulen din.
   * Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 
 [col-33]
@@ -127,13 +127,13 @@ Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men d
   &nbsp;
 </p>
 
-## Andre ressursar til Kodetimenfor for lærarar:
+## Andre ressursar til Kodetimen for for lærarar:
 
   * Bruk [denne](/files/EducatorHourofCodeLessonPlanOutline.docx) malen for å organisere din Kodetime.
-  * Se hva andre lærere har [lykkes med](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) i tidligere kodetimer. 
+  * Sjå kva andre lærarar har [lykkast med](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) i tidlegare kodetimar. 
   * Se på opptak av webinaret ["Lærarens guide til Kodetimen"](https://youtu.be/EJeMeSW2-Mw).
   * [Bli med på direktesendt spørsmålsrunde](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) med grunnleggjaren vår, Hadi Partovi, for å førebu Kodetimen.
-  * Besøk [Kodetimens lærerforum](http://forum.code.org/c/plc/hour-of-code) for å få råd, innsikt og støtte fra andre lærere. <% if @country == 'us' %>
+  * Besøk [Kodetimen sitt lærarforum](http://forum.code.org/c/plc/hour-of-code) for å få råd, innsikt og støtte frå andre lærarar. <% if @country == 'us' %>
   * Sjå på [ofte stilte spørsmål om Kodetimen](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Kva kjem etter Kodetimen?
