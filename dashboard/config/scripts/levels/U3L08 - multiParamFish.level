@@ -174,11 +174,11 @@
       },
       {
         "entries": [
-          "drawSeaGrass:1"
+          "drawSeagrass:1"
         ],
         "matchType": "exact",
         "minTimes": 2,
-        "message": "The task asks you to add a parameter to drawSeaGrass, and to call it at least twice to create two strands of seagrass of different sizes."
+        "message": "The task asks you to add a parameter to drawSeagrass, and to call it at least twice to create two strands of seagrass of different sizes."
       },
       {
         "entries": [

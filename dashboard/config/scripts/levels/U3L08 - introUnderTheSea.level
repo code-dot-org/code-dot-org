@@ -182,11 +182,11 @@
       },
       {
         "entries": [
-          "drawSeaGrass:0"
+          "drawSeagrass:0"
         ],
         "matchType": "exact",
         "minTimes": 2,
-        "message": "The task asks you to call drawSeaGrass() at least twice to create two strands of seagrass"
+        "message": "The task asks you to call drawSeagrass() at least twice to create two strands of seagrass"
       }
     ],
     "contained_level_names": null
