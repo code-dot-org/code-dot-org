@@ -15,11 +15,7 @@ nodejs_npm 'npm' do
   version node['cdo-nodejs']['npm_version']
 end
 
-# git is required for using git repos with npm
-apt_package 'git'
-
 nodejs_npm 'grunt-cli'
 nodejs_npm 'yarn' do
-  url 'github code-dot-org/yarn#v0_16_1'
   version node['cdo-nodejs']['yarn_version']
 end
