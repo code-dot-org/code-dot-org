@@ -62,9 +62,11 @@ Feature: Callouts
   Scenario: Only showing seen callouts once
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
+    And I wait for the page to fully load
     And callout "0" exists
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
+    And I wait for the page to fully load
     And callout "0" does not exist
 
   # Show Code button is hidden on small screens.

@@ -30,9 +30,8 @@
   twentyhours_text: "初めてのHour of Codeを修了しましたか？フォローアップコースでコンピュータサイエンスやプログラミング概念をさらに学びましょう。"
   og_title: "全ての子供に機会を得る権利があります"
   og_description: "すべての学校のすべての学生が、コンピュータ サイエンスを学ぶ機会を得られる。それはすべてを変えるでしょう。"
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_title: Hour of Code がやってくる
+  csedweek_og_description: Hour of Codeは、すでに180 以上の国々と45 以上の言語で、数千万人の生徒を対象に行われた、世界的な運動です。
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a> に挑戦しよう <br/> 2014年12月8日から14
     日まで<br/>
   hoc2014_students: "生徒の皆さん"
@@ -205,11 +204,11 @@
   petition_thankyou: "請願書に署名していただきありがとうございます"
   continue_learning_header: 1 時間以上の学習を継続する
   continue_learning_body: "オプションがたくさんあります。オンライン、または地元の学校や夏のキャンプで学ぶことができます"
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: "コード スタジオのコースを試す"
   learn_next_level: "次のレベルへ進む"
   learn_online: "他のオンラインのコースを試してください"
   learn_classes: "近くのクラスを見つける"
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Minecraftで続けて学ぶ
   hoc_is_here: "コンピュータ サイエンスを学ぶ。それはすべてを変えます。 https://youtu.be/xJqSu1IbcHg 。"
   just_did_hoc: "私は #HourOfCode に挑戦しました。あなたもやってみて！ @codeorg"
   just_did_course1: "コース 1 完了 - やったー！@codeorg"
@@ -383,10 +382,8 @@
   class_submission_level_college: "大学"
   class_submission_level_vocational: "専門学校"
   class_submission_languages_other: "その他の言語"
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: "その他の、模範となる人々や有名人による <a href='%{inspiring_videos_playlist}'> 心に訴えるビデオ</a>"
+  careers_page_more: "その他の、技術分野の専門家による <a href='%{careers_url}' target='_blank'> 心に訴えるビデオ</a>"
   playlab_choose_theme: Play Lab のテーマを選択する
   playlab_classic_title: "クラシック"
   playlab_gumball_title: "おかしなガムボール"
@@ -406,33 +403,28 @@
   mc_gradelevel: 6歳以上
   mc_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6-106 歳向け"
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer: "マインクラフト デザイナー"
+  minecraft_adventurer: "マインクラフト アドベンチャー"
+  minecraft_tutorials: "マインクラフト Hour of Code チュートリアル"
+  minecraft_specs: "多言語対応 | 最新ブウザ、タブレット | 小学校2年生以上"
+  minecraft_designer_description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
   minecraft_designer_button: "始める"
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: "スティーブかアレックスに、プログラムで冒険させよう！"
   minecraft_adventurer_button: "始める"
   minecraft_no_internet: "インターネットが無い？"
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
-  minecraft_subtitle: Minecraftプログラミング入門
+  minecraft_download_adventurer: "マインクラフト アドベンチャーのオフライン版をダウンロード。"
+  minecraft_store_camps: "マイクロソフト ストア Hour of Code キャンプ"
+  minecraft_host_event: "マインクラフト Hour of Codeイベントを開催"
+  minecraft_youthspark_continue_learning: Microsoft YouthSpark で継続的に学ぶ
+  minecraft_signup_store_camps: コーディングで、あなたの創造性を生かすため、オーストラリア、カナダ、プエルトリコ、アメリカのマイクロソフト
+    ストアで無料の Hour of Codeキャンプに <a href="%{signup_store_camp}"> サインアップ</a> します。
+  minecraft_teach_resources: "先生向けの資料と授業プラン。"
+  minecraft_leader_guide: "イベント開催に役立つ資料をダウンロード。"
+  minecraft_facilitating_event: "イベントを開催する？"
+  minecraft_join_online_training: 11/22と11/29に行われる、マイクロソフトとマインクラフトが行う、オンライントレーニング（英語）に参加する。
+  minecraft_youthspark_create_your_future: "これからどこに向かって行くとしても、コンピュータサイエンスは、想像と創造、あなたの未来に、きっと役立つでしょう。"
+  minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoftの YouthSpark</a>では、無料のツールと資料を提供しています。
+  minecraft_subtitle: Minecraft Hour of Code プログラミング入門
   watch_inspirational_videos: "始める前に、以下のビデオのうち1つを見てみましょう"
   speak_another_language: "別の言語を話しますか？"
   help_translate: "翻訳をお手伝いください。"
@@ -794,6 +786,11 @@
     Minecraft world. They can create a totally unique Minecraft experience, and then
     share it with friends or play it on their phones. Do it with your class for the
     Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
   code_sign_up: "コンピュタサイエンス教育週間の間に参加する"
   host_an_hour: "開催する"
@@ -955,6 +952,8 @@
   starwarsblocks_name: "スター ・ ウォーズ (ブロック)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "数値"
   hoc_category_name: Hour of Code（コーディングを学ぶ時間）
   csf_category_name: "コンピューター・サイエンスの基礎"
@@ -1410,10 +1409,28 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
+  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!

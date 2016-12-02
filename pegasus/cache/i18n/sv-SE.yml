@@ -475,8 +475,8 @@
   minecraft_adventurer: Minecraft Adventurer
   minecraft_tutorials: Minecraft Hour of Code Tutorials
   minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer_description: Programmet djur och andra Minecraft varelser i din
+    egen version av Minecraft.
   minecraft_designer_button: Start
   minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
   minecraft_adventurer_button: Start
@@ -737,7 +737,7 @@
   dashboard_progress_completed_too_many_blocks: Avklarad med för många block
   dashboard_progress_completed_perfect: Avklarad perfekt
   dashboard_progress_furthest_level_attempted: försökt nå bortersta nivån
-  dashboard_progress_submitted: submitted
+  dashboard_progress_submitted: inlämnat
   dashboard_progress_view: 'View progress in:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
@@ -942,18 +942,23 @@
     kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'>
     registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon
     kan börja undervisningen i datavetenskap.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
+  dashboard_announce_hoc_scaling: 'VARNING för kurs 1-4 och den korta lärarkursen:
+    På grund av hög last från miljontals studenter under the Hour of Code, <b>kommer
+    inte Code Studio att spara eller rapportera elevernas framsteg på dessa kurser
+    från den 3-11 December </b>. Vi rekommenderar att du genomför the Hour of Code
+    med dina klasser under den 3-11 December. Det är Science Education Week i USA.
+    Medan vår egen Hour of Code kurs inte kommer också spara elevers framsteg denna
+    vecka, kan studenter fortfarande göra andra kurser och få certifikat för dem.'
+  dashboard_announce_mc_launch: En av våra mest populära tutorials nu har nu fått
+    en uppföljare! Den helt nya Minecraft Hour of Code Designer låter elever sätta
+    reglerna för Minecraft världen. De kan skapa en helt unik Minecraftupplevelse,
+    och sedan dela den med vänner och spela i den på sina telefoner. Gör det med dina
+    elever under Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: Hour of Code är här 5-11 december!
   code_sign_up: Registrera dig för att kunna delta i CS utbildnings- vecka
   host_an_hour: Host an hour
@@ -1117,6 +1122,8 @@
   starwarsblocks_name: Star Wars (Blocks)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text komprimering
   math_category_name: Matte
   hoc_category_name: Timmen med Kod
   csf_category_name: CS Fundamentals
@@ -1819,10 +1826,28 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
+  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!

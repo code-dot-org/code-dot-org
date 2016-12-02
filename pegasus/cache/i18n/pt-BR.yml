@@ -38,9 +38,10 @@
   og_title: A Hora do Código está chegando
   og_description: Cada aluno em cada escola merece a oportunidade de estudar ciência
     da computação. Isso muda tudo.
-  csedweek_og_title: The Hour of Code is coming
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_title: A Hora do Código está chegando
+  csedweek_og_description: A Hora do Código é um movimento global que atinge dezenas
+    de milhões de alunos de todas as idades em mais de 180 países e em mais de 45
+    idiomas.
   hoc2014_heading: Participe da <a href="http://hourofcode.com">Hora do código</a><br/>de
     8 a 14 de dezembro de 2014<br/>
   hoc2014_students: Alunos
@@ -272,7 +273,7 @@
   learn_next_level: Experimentar outro curso do Code Studio
   learn_online: Experimente outros cursos online
   learn_classes: Encontre aulas locais
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Continue aprendendo com Minecraft
   hoc_is_here: 'A Hora do Código #HourOfCode estará de volta nos dias 5 a 11 de dezembro.
     https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
@@ -506,32 +507,34 @@
   mc_gradelevel: De 6 a 106 anos de idade
   mc_platformtext: Navegadores modernos, smartphones, tablets
   mc_specs: Muitos idiomas | Navegadores modernos e tablets | De 6 a 106 anos de idade
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer: Designer de Minecraft
+  minecraft_adventurer: Aventureiro de Minecraft
+  minecraft_tutorials: Tutoriais da Hora do Código Minecraft
+  minecraft_specs: Muitos idiomas | Navegadores modernos e tablets | A partir do 2º
+    ano
+  minecraft_designer_description: Crie animais e outras criaturas de Minecraft em
+    sua própria versão do Minecraft.
   minecraft_designer_button: Começar
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Use códigos para levar Alex ou Steve a uma aventura.
   minecraft_adventurer_button: Começar
   minecraft_no_internet: Não tem Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
+  minecraft_download_adventurer: Baixe a versão offline do Aventureiro de Minecraft.
+  minecraft_store_camps: Hour of Code Camps da Microsoft Store
+  minecraft_host_event: Organize um evento da Hora do Código Minecraft
+  minecraft_youthspark_continue_learning: Continue aprendendo com Microsoft YouthSpark
+  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Inscreva-se</a> no
+    Hour of Code Camps gratuito em uma loja Microsoft da Austrália, Canadá, Porto
+    Rico ou EUA. Aprenda como combinar criatividade e programação.
+  minecraft_teach_resources: Recursos e planos de aula para professores.
+  minecraft_leader_guide: Baixe recursos para ajudá-lo a planejar e conduzir um evento.
+  minecraft_facilitating_event: Você está organizando um evento?
+  minecraft_join_online_training: Junte-se à Microsoft e ao Minecraft para um treinamento
+    on-line (apenas em inglês), em 22 ou 29 de novembro.
+  minecraft_youthspark_create_your_future: Independentemente de quais sejam suas paixões,
+    você pode usar a ciência da computação para imaginar, criar e fazer um futuro
+    que é seu.
   minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
+    fornece ferramentas e recursos gratuitos para você seguir sua paixão.
   minecraft_subtitle: Hora do Código Minecraft
   watch_inspirational_videos: Antes de começar, assista a um desses vídeos inspiradores
   speak_another_language: Você fala outra língua?
@@ -1021,6 +1024,11 @@
     Minecraft world. They can create a totally unique Minecraft experience, and then
     share it with friends or play it on their phones. Do it with your class for the
     Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1190,6 +1198,8 @@
   starwarsblocks_name: Star Wars (Blocos)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Compressão de texto
   math_category_name: Matemática
   hoc_category_name: Hora do Código
   csf_category_name: Conceitos básicos da CC
@@ -1938,10 +1948,28 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  hoc-encryption_name: Simple Encryption
-  text-compression_name: Text Compression
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: Watch the video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspire a girl
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
+  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!

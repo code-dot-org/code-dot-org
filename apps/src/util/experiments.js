@@ -5,6 +5,8 @@
  *   disable: http://foo.com/?disableExperiments=experimentOne,experimentTwo
  * Experiment state is persisted across page loads using local storage.
  */
+import { trySetLocalStorage } from '../utils';
+
 // trackEvent is provided by _analytics.html.haml in most cases. In those where
 // it isn't, we still want experiments to work.
 const trackEvent = window.trackEvent || (() => {});
@@ -23,9 +25,13 @@ experiments.getQueryString_ = function () {
 };
 
 experiments.getEnabledExperiments = function () {
-  const jsonList = localStorage.getItem(STORAGE_KEY);
-  const enabled = jsonList ? JSON.parse(jsonList) : [];
-  return enabled;
+  try {
+    const jsonList = localStorage.getItem(STORAGE_KEY);
+    const enabled = jsonList ? JSON.parse(jsonList) : [];
+    return enabled;
+  } catch (e) {
+    return [];
+  }
 };
 
 experiments.setEnabled = function (key, shouldEnable) {
@@ -39,7 +45,7 @@ experiments.setEnabled = function (key, shouldEnable) {
   } else {
     return;
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(allEnabled));
+  trySetLocalStorage(STORAGE_KEY, JSON.stringify(allEnabled));
 };
 
 /**

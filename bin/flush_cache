@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'cdo/aws/cloudfront'
+
+require 'sshkit'
+require 'sshkit/dsl'
+include SSHKit::DSL
+
+CDO.log.info 'Flushing Varnish caches on frontends...'
+on CDO.app_servers.values do
+  execute "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
+end
+CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
+AWS::CloudFront.invalidate_caches

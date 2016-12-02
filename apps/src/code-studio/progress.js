@@ -42,8 +42,8 @@ function showDisabledBubblesModal() {
  */
 progress.showDisabledBubblesAlert = function () {
   const store = getStore();
-  const { isHocScript, disablePostMilestone } = store.getState().progress;
-  const showAlert = disablePostMilestone || experiments.isEnabled('postMilestoneDisabledUI');
+  const { isHocScript, postMilestoneDisabled } = store.getState().progress;
+  const showAlert = postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
   if (!showAlert) {
     return;
   }
