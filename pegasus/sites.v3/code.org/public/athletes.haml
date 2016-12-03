@@ -4,7 +4,7 @@ theme: responsive
 social:
   "og:title": "<%= I18n.t(:sports_og_title) %>"
   "og:description": "<%= I18n.t(:sports_og_description) %>"
-  "og:image" : "<%= 'https://<%=request.host%>/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
+  "og:image" : "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
   "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1200' %>"
   "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '630' %>"
   "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
@@ -17,7 +17,7 @@ social:
   "twitter:url": "https://code.org/athletes"
   "twitter:title": "<%= I18n.t(:sports_og_title) %>"
   "twitter:description": "<%= I18n.t(:sports_og_description) %>"
-  "twitter:image:src" : "<%= 'https://<%=request.host%>/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
+  "twitter:image:src" : "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
   "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
