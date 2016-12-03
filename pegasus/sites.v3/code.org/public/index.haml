@@ -6,7 +6,7 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "<%= 'https://<%=request.host%>/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
+  "og:image": "<%= 'https://' + request.host + '/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
   "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1440' %>"
   "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '810' %>"
   "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'nKIu9yen5nc') %>"
@@ -19,7 +19,7 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "<%= 'https://<%=request.host%>/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
 ---
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
