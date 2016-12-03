@@ -60,7 +60,11 @@
             Your Digital Footprint: Virtualūs pirštų antspaudai
         course3:
           title: Kursas 3
-          description: Kursas 3 skirtas tiems, kas pabaigė Kursą 2.
+          description: 3 kursas yra skirtas mokiniams, kurie įveikė 2 kursą. Mokiniai
+            pasiners giliau į programavimo temas, pristatytas praėjusiuose kursuose,
+            ir sudarys lankstesnius sprendimus sudėtingesnėms problemoms. Iki kol
+            kursas bus baigtas, mokiniai kurs interaktyvias istorijas ir žaidimus,
+            kuriuos galės pasidalinti su visais. Rekomenduojama 4-5 klasių mokiniams.
           description_short: 3 kursas yra antrojo kurso tęsinys.
           description_audience: Amžius 8-18 metų
           stage:
@@ -115,8 +119,11 @@
             Artist: Menininkas
         course4:
           title: Kursas 4
-          description: Kursas 4 skirtas tiems, kas jau išbandė 2 ir 3. Užduotėlės
-            bus sudėtingesnės, orientuota 4-8 kl. moksleiviams.
+          description: 4 kursas yra skirtas mokiniams, kurie įveikė 2 ir 3 kursus.
+            Mokiniai mokysis spręsti sudėtingesnius galvosūkius, pritaikyti keletą
+            idėjų sprendžiant kiekvieną uždavinį. Iki kol kursas bus baigtas, mokiniai
+            kurs programas, kurios leis jiems pademonstruoti keletą įgūdžių, įskaitant
+            ciklus, ir funkcijas su parametrais. Rekomenduojama 4-8 klasių mokiniams.
           description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
           description_audience: Amžius 9-18
           stage:
@@ -2408,10 +2415,10 @@
         basketball:
           stage:
             Bounce: Tenisas
-          title: Basketball
+          title: Sukurk kreipšinio žaidimą
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Sukurk kreipšinio žaidimą
+          description: Sukurk kreipšinio žaidimą
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2714,7 +2721,7 @@
           title: Sportas
           description_audience: ''
           description_short: Sukurk savo sportą
-          description: ''
+          description: Sukurk savo sportą
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Sveiki atvykę!

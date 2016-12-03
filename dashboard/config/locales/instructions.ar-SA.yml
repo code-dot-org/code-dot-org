@@ -813,9 +813,8 @@
         \r
         Use an `if`
         statement to get the zombie to the sunflower with the fewest number of blocks.
-      4-5 Maze Conditionals 7_instruction: |-
-        The solution to this puzzle isn't very
-        different, but watch out for the chompers!
+      4-5 Maze Conditionals 7_instruction: "حل هذه الاحجية ليس بامر صعب، لكن انتبه
+        الى المسننات!"
       4-5 Maze Conditionals 8_instruction: قطعة "إذا والا" تقوم  بالتأكد من شرط، ثم
         تقوم بعمل شيء أو شيء آخر . من اجل الوصول إلى زهرة عباد الشمس حاول إستخدام  هذا
         المقطع البرمجي الجديد.

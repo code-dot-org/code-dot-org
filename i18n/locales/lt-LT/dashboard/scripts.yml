@@ -53,7 +53,7 @@ lt:
             Your Digital Footprint: Virtualūs pirštų antspaudai
         course3:
           title: Kursas 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: 3 kursas yra skirtas mokiniams, kurie įveikė 2 kursą. Mokiniai pasiners giliau į programavimo temas, pristatytas praėjusiuose kursuose, ir sudarys lankstesnius sprendimus sudėtingesnėms problemoms. Iki kol kursas bus baigtas, mokiniai kurs interaktyvias istorijas ir žaidimus, kuriuos galės pasidalinti su visais. Rekomenduojama 4-5 klasių mokiniams.
           description_short: 3 kursas yra antrojo kurso tęsinys.
           description_audience: Amžius 8-18 metų
           stage:
@@ -104,7 +104,7 @@ lt:
             Artist: Menininkas
         course4:
           title: Kursas 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: 4 kursas yra skirtas mokiniams, kurie įveikė 2 ir 3 kursus. Mokiniai mokysis spręsti sudėtingesnius galvosūkius, pritaikyti keletą idėjų sprendžiant kiekvieną uždavinį. Iki kol kursas bus baigtas, mokiniai kurs programas, kurios leis jiems pademonstruoti keletą įgūdžių, įskaitant ciklus, ir funkcijas su parametrais. Rekomenduojama 4-8 klasių mokiniams.
           description_short: Mokiniai turėtų pradėti 4 kursą tik užbaigę 2 ir 3 kursus.
           description_audience: Amžius 9-18
           stage:
@@ -2166,10 +2166,10 @@ lt:
         basketball:
           stage:
             Bounce: Tenisas
-          title: Basketball
+          title: Sukurk kreipšinio žaidimą
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Sukurk kreipšinio žaidimą
+          description: Sukurk kreipšinio žaidimą
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2433,7 +2433,7 @@ lt:
           title: Sportas
           description_audience: ''
           description_short: Sukurk savo sportą
-          description: ''
+          description: Sukurk savo sportą
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Sveiki atvykę!

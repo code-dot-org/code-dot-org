@@ -2166,10 +2166,10 @@ zh-CN:
         basketball:
           stage:
             Bounce: 弹跳
-          title: Basketball
+          title: 创建一场篮球赛
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: 创建一场篮球赛
+          description: 创建一场篮球赛
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2433,7 +2433,7 @@ zh-CN:
           title: 运动
           description_audience: ''
           description_short: 为你自己的运动编写代码
-          description: ''
+          description: 为你自己的运动编写代码
         2016_sciencePD-phase2b:
           stage:
             Welcome!: 欢迎！

@@ -28,74 +28,103 @@
         for å teikne det same huset med berre tre blokker.
       2-3 Artist 6_instruction: 'Dette huset treng eit tak! Teikn trekanten. Hint:
         alle dei tre sidene skal være like lange.'
-      2-3 Artist 7_instruction: 'Gjer ferdig den høgre helvta av det siste vindauget.
-        Kvart kvadratiske glas er 25 pikslar breidt. '
+      2-3 Artist 7_instruction: 'Gjer ferdig den høgre helvta av det siste vindauget
+        så alle elevane kan sjå ut. Kvart kvadratiske glas er 25 pikslar breidt. '
       2-3 Artist 8_instruction: Gjer ferdig romma for alle dyra ved å dele rektangelet
         i to like store firkantar. Rektangelet er 200 pikslar breidt og 100 pikslar
-        høgt.
+        høgt. Det er fleire måtar å løyse dette på, ha det gøy!
       2-3 Artist 9 NEW_instruction: Gjer ferdig denne dragen
       2-3 Artist 9 REPLACEMENT_instruction: Gjer ferdig teikninga av desse trappene!
       2-3 Artist 9_instruction: Gjer ferdig denne dragen
       2-3 Artist Assessment 1_instruction: 'Oppgåve: Teikne ferdig den siste tanna,
         25 pikslar brei og 25 pikslar høg.'
-      2-3 Artist Debugging 1_instruction: Kan du lage denne lua med ein topp som er
-        100 lang?
-      2-3 Artist Debugging 10_instruction: 'Retningskontrolleren på spillkontrollen
-        er for smal. Hint: Lag den 10 piksler breiere'
-      2-3 Artist Debugging 11_instruction: Hjelp meg å gjøre det nydelege snøfnugget
-        mitt ferdig. Kor mange gonger må eg "gjenta" for å gjere det ferdig?
+      2-3 Artist Debugging 1_instruction: Kan du lage denne lua slik at den er 50
+        pikslar brei?
+      2-3 Artist Debugging 10_instruction: |-
+        Retningskontrolleren på spillkontrollen er for smal. \r
+        \r
+        Kan du lage den 10 piksler breiare?\r
+        \r
+        Prøv å køyre koden først for å sjå kva som er gale.
+      2-3 Artist Debugging 11_instruction: |-
+        Snøfnugget mitt dett frå kvarandre!\r
+        \r
+        Kan du skjønne kva som går gale?
       2-3 Artist Debugging 12_instruction: Eg skal legge til ei bølge i denne scena.
         Kan du hjelpe meg?
-      2-3 Artist Debugging 2_instruction: 'Koden for tre værhår som du ser, er feil.
-        Hint: kvart værhår er 75 pikslar lang. Reparer koden som tegner værhåra.'
-      2-3 Artist Debugging 3_instruction: 'Båten min har eit hol! Kan du fikse den
-        ved å endre vinkelen til lina? Hint: den siste vinkelen er 15 grader feil.'
+      2-3 Artist Debugging 2_instruction: "Koden for kattens værhår som du ser, er
+        feil. \n\\r\n\\r\nReparer koden slik at alle værhåra er like lange."
+      2-3 Artist Debugging 3_instruction: |-
+        Båten min har eit hol!\r
+        \r
+        Kva treng du for å fikse den?
       2-3 Artist Debugging 4_instruction: Kva for bilete er det vi prøver å teikne?
         Fullfør ved å binde saman prikkane med rette linjer og vinklar.
-      2-3 Artist Debugging 5_instruction: 'Koden for beinet og foten du ser er feil.
-        Hint: Foten er for lang, me må kan hende slette eit steg (haha)'
-      2-3 Artist Debugging 6_instruction: Det ser ut til at stolen eg sit på manglar
-        eit bein. Rydd i blokkene for å tegne beinet.
-      2-3 Artist Debugging 7_instruction: Det ser ut som C i koden er teikna feil
-        veg. Kan du få han til å sjå ut som ein C?
-      2-3 Artist Debugging 8_instruction: Hjulet mitt er ikkje ferdig. Kor mange gonger
-        må eg gjenta for å gjera det ferdig?
-      2-3 Artist Debugging 9_instruction: 'Koden for denne stamma er feil. Hint: Vinkelen
-        er 60 grader feil'
-      2-3 Artist Debugging Assessment 1_instruction: 'Denne forma er for lita. Kan
-        du lage ho større? Hint: den skal være 75 pikslar lengre på kvar side.'
+      2-3 Artist Debugging 5_instruction: |-
+        Koden for beinet og foten du ser er feil. \r
+        \r
+        Kan du fikse han?
+      2-3 Artist Debugging 6_instruction: |-
+        Det ser ut til at stolen eg sit på manglar eit bein. \r
+        \r
+        Rydd i blokkene for å tegne beinet.
+      2-3 Artist Debugging 7_instruction: |-
+        Det ser ut som C i koden er teikna feil veg.\r
+        \r
+        Kan du få han til å sjå ut som ein C?
+      2-3 Artist Debugging 8_instruction: |-
+        Læraren seier eg må gjere meg ferdig!\r
+        \r
+        Hjulet mitt er ikkje ferdig. Kva er gale?
+      2-3 Artist Debugging 9_instruction: |-
+        Noko er gale!\r
+        \r
+        Koden for denne stamma er feil. Korleis kan kunstnaren tegne stamma riktig veg?
+      2-3 Artist Debugging Assessment 1_instruction: |-
+        Kvifor ender denne forma med sider som er 75 pikslar for korte på kvar side?\r
+        \r
+        Kvar er koden feil?
       2-3 Artist Free Play_instruction: "Åpent brett! Teikn kva du vil."
-      2-3 Artist Functions 1_instruction: 'Hallo. Meg zombiekunstner. Meg elske tegning!
-        Hjelp meg tegne de firkanta brillene. Hint: mellomrommet mellom brilleglasa
-        er 25 pikslar kortare enn lengda på firkantane.'
+      2-3 Artist Functions 1_instruction: |-
+        Hallo. Meg zombiekunstner. Meg elske tegning!\r
+        \r
+        Hjelp zombien med å teikne firkanta briller.\r
+        \r
+        Firkantane er 100 pikslar breie, og brua i mellom er 25 pikslar lang.
       2-3 Artist Functions 10_instruction: Her er to funksjonar, ein som teiknar eit
         stort tannhjul og ein som teiknar eit lite tannhjul. Bruk dei til å teikne
         innsida av ei maskin!
-      2-3 Artist Functions 11.5_instruction: Her er den samme "Tegn ein sekskant"-funksjonen.
-        Kva skjer om du bare snur 60 grader kvar gong du repeterer?
-      2-3 Artist Functions 11_instruction: Me har gitt funksjonen "teikn eit kvadrat"
-        nytt namn, no heiter den "teikn ein seksskant", men den teiknar framleis berre
-        kvadrat! Kan du endre "teikn ein sekskant"-funksjonen slik at den teiknar
-        ein sekskant med 50 pikslar lange sider, og så teikne bildet ferdig med funksjonen?
-      2-3 Artist Functions 12 Mike_instruction: 'Funksjonar er verkeleg gode for å
-        teikne komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til
-        å fylla resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars
-        avstand)  '
-      2-3 Artist Functions 12_instruction: 'Funksjonar er verkeleg gode for å teikne
-        komplekse ting fleire gonger. Kan du bruka ein «teikn ein blome» til å fylla
-        resten av plankteboksen? (Hint: Planter er åtskilde med 100 pikslars avstand)  '
+      2-3 Artist Functions 11.5_instruction: |-
+        Her er den samme "Tegn ein sekskant"-funksjonen.\r
+        \r
+        Kva skjer om du repeterer 6 gonger og berre snur 60 grader kvar gong?
+      2-3 Artist Functions 11_instruction: |-
+        Me har gitt funksjonen "teikn eit kvadrat" nytt namn, no heiter den "teikn ein seksskant", men den teiknar framleis berre kvadrat! Kan du endre "teikn ein sekskant"-funksjonen slik at den teiknar ein sekskant med 50 pikslar lange sider?\r
+        \r
+        Teikne bildet ferdig med den nye funksjonen!
+      2-3 Artist Functions 12 Mike_instruction: |-
+        Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \r
+        \r
+        Kan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen?\r
+        Plantene er åtskilde med 100 pikslars avstand.
+      2-3 Artist Functions 12_instruction: |-
+        Funksjonar er verkeleg gode for å teikne komplekse ting fleire gonger. \r
+        \r
+        Kan du bruka ein «teikn ein blome» til å fylla resten av plankteboksen?\r
+        Plantene er åtskilde med 100 pikslars avstand.
       2-3 Artist Functions 13_instruction: Vi har gitt deg fire funksjonar, Bruk dei
         slik du vil i ein eller fleire løkker for å lage bilete du kan dele med vennane
         dine. Trykk kjør for å sjå eit døme.
-      2-3 Artist Functions 2_instruction: Funksjonar lar deg definere nye blokkar!
-        Vi har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter
-        "teikn eit kvadrat". Kan du bruke funksjonen "teikn eit kvadrat" til å lage
-        vindaugsglasa? Kvadrata er 75 pikslar frå kvarandre.
-      2-3 Artist Functions 3_instruction: Rediger kvadratteiknefunksjonen slik at
-        sidelengda er 115. Teikn dei større glassa. Kvadrata er no 45 pikslar frå
-        kvarandre.
-      2-3 Artist Functions 4_instruction: Bruk "gjenta"-blokka til å teikne desse
-        tre kvadrata.
+      2-3 Artist Functions 2_instruction: "Funksjonar lar deg definere nye blokkar!\\r\n\\r\nVi
+        har flytta blokkar som teiknar eit kvadrat inn i ein funksjon som heiter \"teikn
+        eit kvadrat\". Kan du bruke funksjonen \"teikn eit kvadrat\" til å lage vindaugsglasa?
+        \n\\r\n\\r\nKvadrata er 75 pikslar frå kvarandre."
+      2-3 Artist Functions 3_instruction: |-
+        Rediger kvadratteiknefunksjonen slik at sidelengda er 115. Teikn dei større brillene.\r
+        \r
+        Kvadrata er no 45 pikslar frå kvarandre.
+      2-3 Artist Functions 4_instruction: Sett funksjonen inni ei løkke for å teikne
+        desse tre kvadrata.
       2-3 Artist Functions 7_instruction: 'Bruk "teikn eit hus"-funksjonen til å teikne
         to hus med to ulike parameter. (Hint: det første huset er 100 pikslar).'
       2-3 Artist Functions 9_instruction: Her er ein snøfnugg-funksjon. Prøv deg fram
@@ -126,76 +155,95 @@
         Kan du lage eit kvadrat der sidene er 100 pikslar lange?
       2-3 Artist Loops New 10_instruction: Nå skal me koble saman ein haug med V'ar
         ved å teikne dei med ei løkke.
-      2-3 Artist Loops New 11_instruction: Denne gongen skal vi tegne den 24 gonger.
-        Legg til ein 30 graders venstresving og legg alt inn i ei gjenta-blokk.
+      2-3 Artist Loops New 11_instruction: Bygg koden frå forrige oppgåve igjen, men
+        legg til ein 30 graders venstresving inne i løkka. Gjenta 24 gonger i staden
+        for 8.
       2-3 Artist Loops New 12_instruction: |
         Tegn ein diamant der kvar av sidene er 100 piksel.
-      2-3 Artist Loops New 13_instruction: Nå teiknar du diamanten 3 gongar inni ei
-        løkke.
-      2-3 Artist Loops New 14_instruction: Nå skal vi teikne diamanten 10 gongar,
-        men rotere 90 grader mellom kvar diamant.
-      2-3 Artist Loops New 15_instruction: Teikn noko morosamt.
-      2-3 Artist Loops New 2_instruction: Her er noko av koden du brukte for å teikne
-        kvadratet. Kva skjer om du bruker ei gjenta-blokk til å køyre denne koden
-        4 gongar?
+      2-3 Artist Loops New 13_instruction: |-
+        Vi skal starte med litt kode(i grått) som lagar ein diamant!\r
+        \r
+        Kjør koden i ei løkke for å lage eit artig mønster!
+      2-3 Artist Loops New 14_instruction: Leik litt med diamantkoden og sjå kva for
+        andre mønster du kan lage. Prøv å endre kor mange grader du snur og kor mange
+        gonger du gjentek løkka.
+      2-3 Artist Loops New 15_instruction: Teikn noko morosamt!
+      2-3 Artist Loops New 2_instruction: |-
+        Her er den same oppgåva som vi akkurat løyste, men denne gongen kan me berre bruke ei "flytt framover"-blokk og ei "snu"-blokk.\r
+        \r
+        Kan du bruke ei "gjenta"-blokk for å løyse oppgåva?
       2-3 Artist Loops New 9_instruction: Teikn ein enkel V der begge sider er 50
         pikslar for å fullføre pila.
       2-3 Artist Match Hex Pic_instruction: 'Match: Hjelp til med å fullføre sekskanten.'
       2-3 Artist Match Rho Pic_instruction: 'Match: Avslutt koden.'
       2-3 Artist Match Sq Pic_instruction: 'Match: Fullfør koden'
       2-3 Artist Match Tri pic_instruction: 'Match: Fyll inn manglande kode.'
-      2-3 Artist Nested Loops 1_instruction: |-
-        Du har brukt løkker til å teikne figurar før, men visste du at du kan sette ei løkke inni ei anna løkke?
-        \r
-        Repeter denne løkka 3 gongar for å teikne figuren.
+      2-3 Artist Nested Loops 1_instruction: Sett ei "gjenta"-blokk rundt all koden
+        for å teikne mønsteret.
       2-3 Artist Nested Loops 10_instruction: Gjenta denne koden 12 gongar for å gjere
         ferdig mønsteret.
       2-3 Artist Nested Loops 11_instruction: Gjenta denne koden 4 gongar for å fullføre
         mønsteret. Snu 90 grader etter kvar sirkel.
       2-3 Artist Nested Loops 12_instruction: Gjenta denne koden 12 gongar for å fullføre
         krøllane.
-      2-3 Artist Nested Loops 2_instruction: No skal vi køyre trekantblokka gjennom
-        løkka 6 gongar. Etter kvar trekant må du snu 60 grader før du teiknar det
-        neste.
-      2-3 Artist Nested Loops 3_instruction: For å teikna dette mønsteret må du gjenta
-        trekanten 12 gongar. Del talet på grader i ein sirkel (360) med talet på figurar
-        du teiknar (12), for å rekna ut kor mykje du må snu etter kvar figur.
-      2-3 Artist Nested Loops 4_instruction: 'Gjenta denne diamanten 12 gongar for
-        å teikna ein blom. Tips: 12 diamanter er akkurat likt dei 12 trekantane du
-        laga sist. Kor mykje må du snu etter kvar figur?'
-      2-3 Artist Nested Loops 5_instruction: Teikn inn vindauga i denne bygninga med
-        løkke i løkke. Vindauga er 20 pikslar breie og har 20 pikslar mellom kvart
-        vindauge.
-      2-3 Artist Nested Loops 6_instruction: Dinosauren har 8 taggar langs halen sin;
-        kvar tagg er 30 pikslar lang. Teikn trekanten 8 gongar, men pass på å flytte
-        deg framover etter kvar.
-      2-3 Artist Nested Loops 7_instruction: Gjenta denne trekanten 10 gongar for
-        å teikne sola. Du må flytte deg og snu deg etter kvar trekant. Du finn ut
-        kor mykje du må snu deg ved å dele talet på grader i ein sirkel med talet
-        på figurar sirkelen skal lagast av.
-      2-3 Artist Nested Loops 8_instruction: No skal me legge til gras på biletet.
-        Det er 50 pikslar mellom kvar grastust.
-      2-3 Artist Nested Loops 9_instruction: Me skal avslutte biletet med å legge
-        til ein blome. Teikn diamanten 12 gongar for å teikne blomen.
+      2-3 Artist Nested Loops 2_instruction: |-
+        No skal vi køyre trekantblokka gjennom løkka 6 gongar.\r
+        \r
+        Etter kvar trekant må du snu 60 grader før du teiknar det neste.
+      2-3 Artist Nested Loops 3_instruction: |-
+        For å teikna dette mønsteret må du gjenta trekanten 12 gongar.\r
+        \r
+        Del talet på grader i ein sirkel (360) med talet på figurar du teiknar (12), for å rekna ut kor mykje du må snu etter kvar figur.
+      2-3 Artist Nested Loops 4_instruction: |-
+        Gjenta denne diamanten 12 gongar for å teikna ein blom.\r
+        \r
+        Tips: 12 diamanter er akkurat likt dei 12 trekantane du laga sist.\r
+        Kor mykje må du snu etter kvar figur?
+      2-3 Artist Nested Loops 5_instruction: |-
+        Teikn inn vindauga i denne bygninga med løkke i løkke.\r
+        \r
+        Vindauga er 20 pikslar breie og har 20 pikslar mellom kvart vindauge.
+      2-3 Artist Nested Loops 6_instruction: |-
+        Dinosauren har 8 taggar langs halen sin.\r
+        Kvar tagg er 30 pikslar lang. Teikn trekanten 8 gongar, men pass på å flytte deg framover etter kvar!
+      2-3 Artist Nested Loops 7_instruction: |-
+        Gjenta denne trekanten 10 gongar for å teikne sola.\r
+        \r
+        Du må flytte deg og snu deg etter kvar trekant.\r
+        \r
+        Du finn ut kor mykje du må snu deg ved å dele talet på grader i ein sirkel med talet på figurar sirkelen skal lagast av.
+      2-3 Artist Nested Loops 8_instruction: "No skal me legge til gras på biletet.\n\\r\\r
+        \nDet er 50 pikslar mellom kvar grastust."
+      2-3 Artist Nested Loops 9_instruction: |-
+        Me skal avslutte biletet med å legge til ein blome.\r
+        \r
+        Teikn diamanten 12 gongar for å teikne blomen.
       2-3 Artist Nested Loops Free Play_instruction: 'Frileik: teikn noko kult med
         løkker i løkker.'
       2-3 Bee Conditionals 1_instruction: Hallo! Eg er ei bie. Hjelp meg å samla nektar
         frå blomen.
       2-3 Bee Conditionals 10_instruction: |
         Lilla blomer kan ha 1 eller 0 nektar. Pass på at du ikkje samlar inn nektar frå ein lilla blome som ikkje har nektar.\r
-      2-3 Bee Conditionals 11_instruction: Samle inn nektar dersom blomane har nektar.
-      2-3 Bee Conditionals 12_instruction: Bruk ein løkke for å sjekke og samle inn
-        nektar frå alle desse blomane.
-      2-3 Bee Conditionals 13_instruction: 'Samle nektar og lag honning. Hint: kva
-        skjer om du bruker "viss nektar" på ein raud blome? Kan du gjere ferdig dette
-        med ei løkke?'
-      2-3 Bee Conditionals 14_instruction: Samle nektar og lag honning. Ver forsiktig
-        så du ikkje samlar inn nektar frå dei lilla blomane om dei ikkje har noko.
-      2-3 Bee Conditionals 15_instruction: Samle nektar frå alle dei fire blomane.
-      2-3 Bee Conditionals 2_instruction: Hei, eg er ei bie! Hjelp meg å samle all
-        nektaren frå blomane. Bruk ei løkke.
-      2-3 Bee Conditionals 3_instruction: Hjelp meg å samle all nektaren frå blomane
-        og lage honning. Bruk ei løkke.
+      2-3 Bee Conditionals 11_instruction: "Eg lurer på kva som er der ute?\\r\n\\r\nHjelp
+        meg å fly rundt gården og samle nektar frå dei blomane som har nektar. "
+      2-3 Bee Conditionals 12_instruction: Hjelp meg å finne all nektaren med så få
+        blokker som mogleg!
+      2-3 Bee Conditionals 13_instruction: |-
+        Her skjer det mykje!\r
+        \r
+        Bruk kva du har lært til å samle all nektaren og lage honning.
+      2-3 Bee Conditionals 14_instruction: |-
+        Lat oss sette alt saman!\r
+        \r
+        Bruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har, med så få blokker som mogleg. Ikkje gløym å lage honning på slutten.
+      2-3 Bee Conditionals 15_instruction: |-
+        Trappemønsteret bør sjå kjend ut.\r
+        \r
+        Kan du samle nektar frå dei blomane som har, med så få blokker som mogleg?
+      2-3 Bee Conditionals 2_instruction: Hei, eg er ei bie!\r Hjelp meg å samle all
+        nektaren frå blomane. Bruk færrest mogleg blokker.
+      2-3 Bee Conditionals 3_instruction: "Sjå all den nektaren!\\r\n\\r\nHjelp meg
+        å samle nektar og lage honning med så få blokker som mogleg.  "
       2-3 Bee Conditionals 4_instruction: Hjelp meg å samle all nektaren frå blomane
         og lag all honningen.
       2-3 Bee Conditionals 5_instruction: Lilla blomer har enten 1 eller 0 nektar,
@@ -226,8 +274,8 @@
         inn nektaren for å lage all honningen. No kan du bruke "køyr" og "steg".
       2-3 Bee Debugging 6_instruction: Desse blokkane er verkeleg irriterande. Fiks
         det som er feil for å samle all nektaren.
-      2-3 Bee Debugging 7_instruction: Desse blokkane plagar meg. Reparer feila og
-        samle inn all nektaren for å lage all honningen.
+      2-3 Bee Debugging 7_instruction: Reparer feila og samle inn all nektaren for
+        å lage all honningen.
       2-3 Bee Debugging 8_instruction: Desse blokkane plagar meg. Reparer feila og
         samle inn all nektaren for å lage all honningen.
       2-3 Bee Debugging 9_instruction: Desse blokkane plagar meg. Reparer feila og
@@ -278,7 +326,7 @@
       2-3 Bee Loops 2A_instruction: Kan du løyse same oppgåve enklare ved å bruke
         ei løkke?
       2-3 Bee Loops 3_instruction: Samle inn nektar frå alle blomane og lag honning
-        i kvar av bikubane.
+        i kvar av bikubane. Bruk så få blokker som mogleg.
       2-3 Bee Loops 3A_instruction: Kan du bruke ei løkke for å samle inn all nektaren?
       2-3 Bee Loops 3B_instruction: Nå kan du bruke den nye gjenta-blokken for å samle
         inn nektar og lage honning.
@@ -552,7 +600,7 @@
         trekanten.
       4-5 Artist Functions 10a_instruction: Sett denne koden inn i "teikn eit snøfnugg"
         funksjonen og erstatt 50 med parameteren "storleik". Funksjonen er allereie
-        kalla på for å opprette snæfnugg på 100 pikslar.
+        kalla på for å opprette snøfnugg på 100 pikslar.
       4-5 Artist Functions 10b_instruction: 'Bruk "teikn eit snøfnugg" funksjonen
         for å opprette snøfnugg av ulik storleik. Hint: lengda på det første snøflaket
         er 25 og kvart snøfnugg er dobbelt så stort som det førre.'
@@ -565,7 +613,7 @@
         teikne planetar, stjerner, rakettar og robotar. Bruk dei slik du sjølv ønskjer
         til å lage bilete du kan dele med vennene dine.
       4-5 Artist Functions 14 Free play_instruction: Her har vi gitt deg fleire funksjonar.
-        Bruk dem slik du sjølv vil inni ei eller fleire løkker for å lage bilete som
+        Bruk dei slik du sjølv vil inni ei eller fleire løkker for å lage bilete som
         du kan dele med vennene dine. Klikk "Køyr" for å sjå eit døme.
       4-5 Artist Functions 15 Assessment_instruction: 'Oppgåve: Bruk "teikn eit kvadrat"
         funksjonen til å opprette kvadrata. Kvadrata er 50, 100 og 150 pikslar.'
@@ -595,16 +643,16 @@
       4-5 Artist Functions 9_instruction: Teikn desse 3 blomene. Høgda på den første
         er 100, og den neste blomen har alltid 50 pikslar meir enn høgda på den førre.
         Blomene er òg 100 pikslar frå kvarandre.
-      4-5 Artist Patterns 1_instruction: "Klarer du å teikne dette kvadratet ved bruk
-        av ei løkke? \nKvar side er 20 pikslar lang."
+      4-5 Artist Patterns 1_instruction: |-
+        Klarer du å teikne dette kvadratet ved bruk av ei løkke? \r
+        \r
+        Kvar side er 20 pikslar lang.
       4-5 Artist Patterns 10_instruction: "Denne koden teikner to rader med sekskantar
         – \nrepeter heile kodeblokka 4 gonger for å teikne heile bikubemønsteret.
         Tips: Du må hoppe tilbake 120 pikslar i den ytste løkka for å passe på at
         artisten ikkje teiknar utanfor skjermen."
       4-5 Artist Patterns 11_instruction: 'Kor mange gonger må du repetere denne koden
-        for å teikne ein halvsirkel? Tips: Om det er 360 grader i ein heil sirkel
-        og kvar repetisjon flyttar seg 3 grader, kor mange gonger må du repetere koden
-        for å teikne ein heil sirkel?'
+        for å teikne ein halvsirkel? '
       4-5 Artist Patterns 12_instruction: Kva skjer om du kopierer løkka og snur mot
         venstre i staden for mot høgre? Kan du du bruke ein gjenta-blokk til å teikne
         denne bølga?
@@ -792,8 +840,7 @@
       4-5 Nested Loops 12_instruction: Klarar du å teikne desse 36 trekantane ved
         hjelp av ei løkke i ei løkke?
       4-5 Nested Loops 2_instruction: 'Nå skal du sette denne løkka inn i ei anna
-        løkke for å teikne 10 trekantar. Dette blir kalla ei nestet løkke. Tips: Alle
-        trekantane utgjer til saman ein rotasjon på 360 grader.  '
+        løkke for å teikne 10 trekantar. Dette blir kalla ei løkke i løkke.  '
       4-5 Nested Loops 3_instruction: |
         Teink ei sol ved å sette koden frå startkoden inn i ei anna løkke. Dette blir kalla ei nestet løkke. \r
       4-5 Nested Loops 5_instruction: Gjenta koden som er gitt til å lage ei vindmølle.
@@ -826,8 +873,7 @@
         til å skrive eit program som fjernar alle saman slik at bakken blir heilt
         jamn?
       4-5 While Loops 8_instruction: " Det er eit verkeleg djupt hol og ein verkeleg
-        stor haug med jord. Kor mange spadetak må tas for å gjere bakken heilt flat.
-        Tips: bruk ei medan-løkke for begge to."
+        stor haug med jord. Kor mange spadetak må tas for å gjere bakken heilt flat?"
       4-5 While Loops Assessment 1_instruction: Det er mange hol og haugar. Hjelp
         meg å fylle og fjerne dei slik at bakken blir heilt jamn.
       aE1_instruction: "You chose to make a square napkin! \\r\n\\r\nTo finish, draw\na
@@ -1442,26 +1488,26 @@
         Vent eit augneblink og ta ein titt på mønsteret eller tipsa. Klikk her!\r
         \r
         Om du vil, kan du lage eit mønster heilt på eigen hand!
-      Course 4 Artist 13_instruction: Spiller du framleis? Her er eit blankt lerret
-        kor du kan designe det du vil!
+      Course 4 Artist 13_instruction: Spelar du framleis? Her er eit blankt lerret
+        der du kan designe det du vil!
       Course 4 Artist 2_instruction: Kan du gjenta denne koden slik at den teiknar
-        det tona ned kvadratet?
-      Course 4 Artist 20_instruction: Spiller du framleis? Her eit blant lerret kor
+        det tona ned kvadratet? (Kvar side er 300 pikslar lang)
+      Course 4 Artist 20_instruction: Spelar du framleis? Her eit blankt lerret der
         du kan designe det du vil!
       Course 4 Artist 3_instruction: Prøv å sjå kva som kjem til å skje om du køyrer
         denne koden (eller køyr den ved å trykke "Køyr"). Deretter, gjentar du dette
         heilt til biletet er ferdig.
       Course 4 Artist 4_instruction: Kor mange grader er det i ein sirkel? Fyll dette
         talet inn i gjenta-blokken for å lage ein sirkel av fargar.
-      Course 4 Artist 5_instruction: Teikn den andre halvparten av dette designet
+      Course 4 Artist 5_instruction: 'Teikn den andre halvparten av dette designet
         slik at det blir symmetrisk. Trekantane er likesida med sider på 50 pikslar.
-      Course 4 Artist 6_instruction: 'Fullfør koden for å teikne desse trekantane.
-        Tips: det er 3 trekantar innan ein 360 grader rotasjon... kor mange gongar
-        går 3 opp i 360?'
+        Tips: Kan hende må du køyre koden fleire gonger for å skjøne kva for blokker
+        som må leggast til.'
+      Course 4 Artist 6_instruction: Fullfør koden for å teikne desse likesida trekantane.
       Course 4 Artist 7_instruction: 'Nå skal du sette denne løkka inn i ei anna løkke
         for å teikne 10 trekantar. Dette blir kalla ei løkke i løkke. Tips: Alle 10
         trekantane utgjer ein rotasjon på 360 grader.  '
-      Course 4 Artist 8_instruction: Teikn sola ved å gjenta denne kodeblokken 12
+      Course 4 Artist 8_instruction: Teikn sola ved å gjenta denne kodeblokka fleire
         gongar.
       Course 4 Artist 8a_instruction: 'Hugsar du denne figuren? Når skal du byggje
         den utan at vi gjer deg nokre blokkar å starte med!\r Tips: Det er 3 trekantar
@@ -1556,7 +1602,7 @@
         har lengde på 300 pikslar, og kvart kvadrat er 15 pikslar større enn det forrige. '
       Course 4 Artist For Loops 5_instruction: 'Godt jobba på den siste oppgåva! La
         oss bruke "teljer" variabelen igjen til å teikne dette kule biletet. '
-      Course 4 Artist For Loops 6_instruction: Frileik! Prøv å bruke en for-løkke
+      Course 4 Artist For Loops 6_instruction: Frileik! Prøv å bruke ei for-løkke
         til å teikne eit vaksande figurmønster som du designar sjølv.
       Course 4 Artist For Loops 6a_instruction: Gjer tre små endringar i koden frå
         forrige nivå for å få dette til!
@@ -1588,8 +1634,8 @@
       Course 4 Artist Functions 11_instruction: SJekk ut denne koden som teiknar ein
         kube - kan du flytte den inn i ein funksjon kalla "Teikn ein kube"
       Course 4 Artist Functions 12.1_instruction: La oss lage ein funksjon som heiter
-        "teikn ein åttekant 20 gongar" og som teiknar ein åttekant der kvar side er
-        20 pikslar lange.
+        "teikn ein åttekant 20" som teiknar ein åttekant der kvar side er 20 pikslar
+        lange.
       Course 4 Artist Functions 12_instruction: Kjør ei løkke over kvadratfunksjonen
         for å teikne ei linje
       Course 4 Artist Functions 13.1_instruction: |-
@@ -4099,7 +4145,7 @@
       grade2_MakeDogTag_1_instruction: |-
         Drag blocks onto the screen to have the artist
         draw over the grey lines in the picture. (Each line is 100 pixels long)
-      grade2_MakeDogTag_10_instruction: Teikn noko morosamt.
+      grade2_MakeDogTag_10_instruction: Teikn noko morosamt!
       grade2_MakeDogTag_2_instruction: |-
         This spaceship needs a window!\r
         \r
@@ -4209,8 +4255,10 @@
       grade2_PuppyLoops_1_instruction: |-
         Can you get me to the pig using 5 of the
         same kind of blocks?
-      grade2_PuppyLoops_10_instruction: Hjulet mitt er ikkje ferdig. Kor mange gonger
-        må eg gjenta for å gjera det ferdig?
+      grade2_PuppyLoops_10_instruction: |-
+        Læraren seier eg må gjere meg ferdig!\r
+        \r
+        Hjulet mitt er ikkje ferdig. Kva er gale?
       grade2_PuppyLoops_2_instruction: |-
         Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?
@@ -4225,9 +4273,11 @@
         Loops even work with more than one block
         inside!  Can you loop this sequence to get me to the pig?
       grade2_PuppyLoops_7_instruction: Få meg til solsikka!
-      grade2_PuppyLoops_8_instruction: 'Koden for tre værhår som du ser, er feil.
-        Hint: kvart værhår er 75 pikslar lang. Reparer koden som tegner værhåra.'
-      grade2_PuppyLoops_9_instruction: Det ser ut som C i koden er teikna feil veg.
+      grade2_PuppyLoops_8_instruction: "Koden for kattens værhår som du ser, er feil.
+        \n\\r\n\\r\nReparer koden slik at alle værhåra er like lange."
+      grade2_PuppyLoops_9_instruction: |-
+        Det ser ut som C i koden er teikna feil veg.\r
+        \r
         Kan du få han til å sjå ut som ein C?
       grade3_AboutMyRobot_1_instruction: |-
         Make your robot say "Hello!" when the
@@ -4305,24 +4355,30 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_Conditionals_1 BAD_instruction: Bruk ei løkke til å samle inn all nektaren.
-      grade3_Conditionals_1_instruction: Hei, eg er ei bie! Hjelp meg å samle all
-        nektaren frå blomane. Bruk ei løkke.
+      grade3_Conditionals_1_instruction: Hei, eg er ei bie!\r Hjelp meg å samle all
+        nektaren frå blomane. Bruk færrest mogleg blokker.
       grade3_Conditionals_10 BAD_instruction: Samle nektar frå radene med blomar!
         Bruk løkke i løkke.
-      grade3_Conditionals_10_instruction: 'Samle nektar og lag honning. Hint: kva
-        skjer om du bruker "viss nektar" på ein raud blome? Kan du gjere ferdig dette
-        med ei løkke?'
+      grade3_Conditionals_10_instruction: |-
+        Her skjer det mykje!\r
+        \r
+        Bruk kva du har lært til å samle all nektaren og lage honning.
       grade3_Conditionals_11 BAD_instruction: 'Oppgåve: Bruk ein medan-løkke til å
         samle inn all nektaren frå denne blomen.'
-      grade3_Conditionals_11_instruction: Samle nektar og lag honning. Ver forsiktig
-        så du ikkje samlar inn nektar frå dei lilla blomane om dei ikkje har noko.
-      grade3_Conditionals_12_instruction: Samle nektar frå alle dei fire blomane.
+      grade3_Conditionals_11_instruction: |-
+        Lat oss sette alt saman!\r
+        \r
+        Bruk alt du har lært til å hjelpe meg med å samle inn all nektaren frå blomar som har, med så få blokker som mogleg. Ikkje gløym å lage honning på slutten.
+      grade3_Conditionals_12_instruction: |-
+        Trappemønsteret bør sjå kjend ut.\r
+        \r
+        Kan du samle nektar frå dei blomane som har, med så få blokker som mogleg?
       grade3_Conditionals_13_instruction: |-
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: Hjelp meg å samle all nektaren frå blomane
-        og lage honning. Bruk ei løkke.
+      grade3_Conditionals_2_instruction: "Sjå all den nektaren!\\r\n\\r\nHjelp meg
+        å samle nektar og lage honning med så få blokker som mogleg.  "
       grade3_Conditionals_3_instruction: |-
         Be careful not to collect nectar from a
         purple flower if it doesn't have any. \r
@@ -4336,7 +4392,8 @@
         blomar har ei gitt mengde nektar, medan lilla har ei ukjend mengde nektar.
         Samle inn all nektaren.
       grade3_Conditionals_7_instruction: Samla inn all nektar frå kvar blome.
-      grade3_Conditionals_8_instruction: Samle inn nektar dersom blomane har nektar.
+      grade3_Conditionals_8_instruction: "Eg lurer på kva som er der ute?\\r\n\\r\nHjelp
+        meg å fly rundt gården og samle nektar frå dei blomane som har nektar. "
       grade3_Conditionals_9_instruction: |-
         Help me find all of the nectar using as
         few blocks as possible!
@@ -4406,8 +4463,8 @@
         to collect all of the nectar.  You can now use both run and step.
       grade3_Debugging_6_instruction: Desse blokkane er verkeleg irriterande. Fiks
         det som er feil for å samle all nektaren.
-      grade3_Debugging_7_instruction: Desse blokkane plagar meg. Reparer feila og
-        samle inn all nektaren for å lage all honningen.
+      grade3_Debugging_7_instruction: Reparer feila og samle inn all nektaren for
+        å lage all honningen.
       grade3_Debugging_9_instruction: Desse blokkane plagar meg. Reparer feila og
         samle inn all nektaren for å lage all honningen.
       grade3_Debugging_TeacherIDo_instruction: |-
@@ -4433,7 +4490,7 @@
         frå alle blomane. '
       grade3_Loops_8_instruction: Bruk ei løkke for å samle all nektaren og lage honningen.
       grade3_Loops_9_instruction: Samle inn nektar frå alle blomane og lag honning
-        i kvar av bikubane.
+        i kvar av bikubane. Bruk så få blokker som mogleg.
       grade3_Loops_TeacherIDo_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -4995,7 +5052,7 @@
         Now use the `repeat` block to collect all
         of the nectar and make all of the honey.
       grade4_review_bee2_instruction: Samle inn nektar frå alle blomane og lag honning
-        i kvar av bikubane.
+        i kvar av bikubane. Bruk så få blokker som mogleg.
       grade4_review_bee3_instruction: Bruk ei lik løkke som i førre oppgåve, men ta
         med ein "snu"-blokk.
       grade4_scaffolded_project1_instruction: |-
@@ -6039,12 +6096,12 @@
         to walk around and press the space bar or tap the game space to 'use' items.
         Try getting inside the house by using the door to continue.
       MC HOC 2016 New Spawn_instruction: No kan du fylle verda med det du vil! Plasser
-        ei "sett ut"-blokk undr "når den køyrer" for å sette ut ting når spelet byrjer.
+        ei "sett ut"-blokk under "når den køyrer" for å sette ut ting når spelet byrjer.
       MC HOC 2016 New Walk_instruction: Lat oss utforske verda! Flytt med piltastane
         og trykk mellomrom eller trykk i spelfeltet for å bruke element. Bruk døra
         for å kome inn i huset.
       MC HOC 2016 SCORE LEVEL_instruction: I nokre spel har du ein poengsum. Spel
-        "sisten" med desse jerngolemane og bruk 'Legg til 1 til poengsum'-blokka for
+        "sisten" med desse jerngolemane og bruk "Legg til 1 til poengsum"-blokka for
         å gje deg sjølv eit poeng når du tek dei. Få fem poeng for å vinne!
       MC HOC 2016 Village Test_instruction: "Å nei! Zombiane har stengt deg inne!
         \nProgrammer ein jerngolem for angripe og jage vekk zombiane!"
@@ -6282,15 +6339,15 @@
       NEW Course 4 Artist Params 10_instruction: 'Lag ein "tegn sekskant"-funksjonsblokk
         med eit lengde-parameter. Denne sekskanten har sider som er 100 pikslar lange. '
       NEW Course 4 Artist Params 11_instruction: Kan du finne ut korleis du tegner
-        denne forma? Endre funksjonen for å bruke "side"-parametret.
+        denne forma? Endre funksjonen til å bruke "side"-parametret.
       NEW Course 4 Artist Params 12_instruction: |-
-        Kan du gjøre ferdig denne teikninga?
+        Kan du gjere ferdig denne teikninga?
         Sidene på alle figurane er 100 pikslar lange.
       NEW Course 4 Artist Params 12a_instruction: |-
         Dette bildet er likt det forrige.
         Kan du bruke ei for-løkke i funksjonen din for å lage dette designet?
       NEW Course 4 Artist Params 13_instruction: |-
-        La oss endre "tegn ein mangekant"-funksjonen. Den har allereie eit "lengde"-parameter. La oss legge til eit "sider"-parameter. \r
+        La oss endre "tegn ein mangekant"-funksjonen. Den har allereie eit "sider"-parameter. La oss legge til eit "lengde"-parameter. \r
         Omkretsen av kvar figur er 200 piksler lang. Hugsar du ligninga for å lage figurar like store når dei har eit ulikt antall sider?
       NEW Course 4 Artist Params 14_instruction: Endre "tegn ein spiralkant" til å
         bruke "lengde" og sider"-parametre, og lag formene på nytt.
@@ -6345,17 +6402,17 @@
         \r
         Ser du at du berre treng å setje verdien for «lenge» ein gong, og så blir den rette verdien brukt alle stader?
       NEW Course 4 Bee For Loops 1_instruction: |-
-        Bruk ei lykkje for å samle nektaren
+        Bruk ei løkke for å samle nektaren
         frå alle blomane.
       NEW Course 4 Bee For Loops 10_instruction: Bruk for-løkkas teller-variabel til
         å kontrollere hvor langt du beveger deg vannrett.
       NEW Course 4 Bee For Loops 10a_instruction: |-
         Er du klar for ei utfordring? Ta det
-        du har lært om lykkjer og prøv å løyse dette problemet. Hugs: Du må kanskje
+        du har lært om løkker og prøv å løyse dette problemet. Hugs: Du må kanskje
         prøvekøyre løysinga di fleire gongar før du klarer å finne alle dei naudsynte
         stega.
       NEW Course 4 Bee For Loops 11_instruction: |-
-        Kan du bruke lykkjevariabelen for å
+        Kan du bruke løkkevariabelen for å
         kontrollere rørsla og nektarinnsamlinga?
       NEW Course 4 Bee For Loops 2_instruction: Legg til kode slik at bia samlar all
         nektaren. Sjå kor mykje kode du treng i denne oppgåva! (Me skal lære ein enklare
@@ -6370,8 +6427,8 @@
         største mengda nektar bia må samle. '
       NEW Course 4 Bee For Loops 5 5_instruction: Går det greit å bruke for-løkka
         nå? La oss hjelpe bia å samle resten av nektaren.
-      NEW Course 4 Bee For Loops 5_instruction: Du kan og bruke ei for. løkke til
-        å telje ned. Prøv å samle denne nektaren ved å telje ned frå fem til ein med
+      NEW Course 4 Bee For Loops 5_instruction: Du kan og bruke ei for-løkke til å
+        telje ned. Prøv å samle denne nektaren ved å telje ned frå fem til ein med
         steg på ein.
       NEW Course 4 Bee For Loops 6_instruction: Det siste nummeret i for-løkka kallast
         "auke". Kvar gong løkka køyrer endrast teljar-variabelen med verdian av auka.

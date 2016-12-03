@@ -331,9 +331,9 @@
           to attach the new "throw new ball" block in more than one place. Also, try
           changing the scene or the speed of the hand and the ball and see how many
           points you can score before your opponent scores twice!
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
+        bounce_12_sports: "Өз ойыныңды жаса. Барлық вережелерді өзгерте аласын, спорттарды
+          араластыра аласын, шығармашылығың ассын!. Аяқтаған соң, достарыңның өз телефондарында
+          ойнап көрулері үшін Аяқтау батырмасына бас."
         bounce_1: Блокке "солға бұру бағдары" блогін және "Жіберуді" тіркеңіз. Нысанға
           жету үшін, ескекті сол жақ бағдарды пайдаланып қозғалтыңыз.
         bounce_2: Блокке "оңға бұру бағдары" және "солға бұру бағдары" блоктарын тіркеңіз.
@@ -790,11 +790,11 @@
         iceage_intro: "Мұз дәуірі Кодтау Сағаты - Кіріспе"
         iceage_events: "Мұз дәуірі Кодтау Сағаты - Іс-шаралар"
         iceage_repeat: "Мұз дәуірі Кодтау Сағаты - Қайталау блоктары"
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_intro: Minecraft Кодтау Сағаты - Кіріспе
+        mc_2016_loops: Minecraft Кодтау Сағаты - Циклдер
+        mc_2016_events: Minecraft Кодтау Сағаты - Іс-шаралар
+        mc_2016_spawn: Minecraft Кодтау Сағаты - Уылдырық
+        mc_2016_congrats: Minecraft Кодтау Сағаты - Құттықтау
     callout:
       text:
         drag_blocks: '"Жылжыту" блогын алып оны төмендегі басқа блокке тіркеңіз'

@@ -354,12 +354,14 @@ fr:
     announcement_learn_more_button: "Pour en savoir plus"
     announcement_try_now_button: "Essaie maintenant"
     announcement_host_an_hour_button: "Héberger une heure"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "Comme enseignant, vous ouvrez la voie à un mouvement visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique. Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine, les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès américain de financer l’enseignement de l'informatiques du K-12."
     announcement_petition_button: "Ajoutez votre nom"
     announcement_all: "Tenu à jour avec de nouvelles fonctionnalités et mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir les anciennes annonces.</a>"
     announcement_hoc_launch: "Des milliers d’enseignants de plus de 180 pays commenceront à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous comptons sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant. <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de Code</a> pour faire savoir aux autres enseignants que n’importe qui peut commencer à enseigner l'informatique."
     announcement_hoc_scaling: 'ALERTE pour les cours 1-4 et les professeurs de cours accélérés: En raison du fort trafic de millions d''élèves qui font l''heure du code, <b> Code Studio n''économisera pas ni ne signalera les progrès des élèves sur ces cours du 3 au 11 décembre </ b>. Nous recommandons de faire une activité Hora of Code avec votre salle de classe pour célébrer l''Heure du code pendant la Semaine de l''éducation en informatique. Alors que nos propres didacticiels Hour of Code ne permettront pas non plus d''enregistrer des progrès cette semaine, les étudiants peuvent encore faire les tutoriels complets et obtenir un certificat.'
     announcement_mc_launch: "Un de nos didacticiels les plus populaires a maintenant une suite! Le tout nouveau Minecraft Hour of Code Designer permet aux étudiants de faire les règles du monde Minecraft. Ils peuvent créer une expérience unique de Minecraft, puis le partager avec des amis ou le jouer sur leurs téléphones. Faites-le avec votre classe pour l'heure du code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un nom de section différent."
     section_code_not_entered: "Entrez les informations sous la forme courant_section_code."
@@ -740,8 +742,48 @@ fr:
     starwars_blocks_name: 'Star Wars : Construire une Galaxie avec du Code (Blocks)'
     starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
     download_message: 'Téléchargement %{app_name} pour l''utilisation hors ligne (136 Mo)'
-    download_in_english: 'Télécharger en anglais :'
-    download_in_spanish: 'Télécharger en espagnol :'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:

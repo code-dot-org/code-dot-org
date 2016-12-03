@@ -13,11 +13,11 @@ Complete an Hour of Code at home, or volunteer to bring it to your child’s cla
 ## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Vyber si návod:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('https://code.org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Plan your technology needs
 
@@ -40,7 +40,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- Menuj veci, ktoré používame v každodennom živote a používajú kód, program.
 - See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -55,7 +55,7 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- “Neviem. Príďme na to spoločne.”
+- “Neviem. Skúsme to spoločne.”
 - “Technológie nefungujú vždy tak, ako by sme práve chceli.”
 - “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
 
@@ -63,13 +63,13 @@ It’s okay to respond:
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
-Zdieľaj fotky a videá z vašej Hodiny Kódovania na sociálnych médiách. Použi #HourOfCode a @codeorg, aby sme aj mi mohli vyzdvihnúť váš úspech!
+Zdieľaj fotky a videá z vašej Hodiny kódu na sociálnych sieťach. Použi #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť váš úspech!
 
 **Other Hour of Code resources:**
 
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**Čo príde po Hodine Kódu?**
+**Čo nasleduje po Hodine kódu?**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 

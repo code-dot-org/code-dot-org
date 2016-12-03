@@ -10,14 +10,14 @@ title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Visualitza aquest vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Esculli un tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('https://code.org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Plan your technology needs
 
@@ -40,7 +40,7 @@ Kick off your Hour of Code by inspiring your child and discussing how computer s
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- List things that use code in everyday life.
+- Faci una llista sobre els aparells de la vida quotidiana que utilitzen codi.
 - See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
@@ -55,15 +55,15 @@ When you've chosen the tutorial you would like to do, you can bookmark the tutor
 
 It’s okay to respond:
 
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- "No ho sé. Esbrinem-ho junts."
+- "La tecnologia no sempre funciona com volem."
+- Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida!
 
 ## 6) Celebrate
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
-Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+Comparteixi fotos i vídeos del seu esdeveniment de l'Hora del Codi a les xarxes socials utilitzant les etiquetes #HourOfCode i @codeorg per poder destacar el seu èxit!
 
 **Other Hour of Code resources:**
 
