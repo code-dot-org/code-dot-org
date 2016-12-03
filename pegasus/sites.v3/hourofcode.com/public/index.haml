@@ -7,8 +7,8 @@ social:
   "og:image": "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'hourofcode-2015-video-thumbnail.png') %>"
   "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1440' %>"
   "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '900' %>"
-  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'KsOIlDT145A') %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'KsOIlDT145A') %>"
+  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'KsOIlDT145A') %>"
+  "og:video:secure_url": "<%= 'https://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'KsOIlDT145A') %>"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -18,7 +18,7 @@ social:
   "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
   "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
   "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'hourofcode-2015-video-thumbnail.png') %>"
-  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'KsOIlDT145A') %>"
+  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'KsOIlDT145A') %>"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 ---
@@ -280,7 +280,7 @@ social:
       return;
 
     if ("#{page_mode}" == "feature-athletes") {
-      $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/ip051U7Rvds?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
+      $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/erI24-eHlz8?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");
     }
     else {
       $("<iframe allowfullscreen frameborder='0' src='https://www.youtube.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;autoplay=1&cc_load_policy=1' style='position:absolute; top: 0; left: 0; width: 100%; height: 100%; background-color:black;'></iframe>").appendTo("#videodiv");

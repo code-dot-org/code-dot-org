@@ -7,8 +7,8 @@ social:
   "og:image" : "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
   "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1200' %>"
   "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '630' %>"
-  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
+  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'QvyTEx1wyOY') %>"
+  "og:video:secure_url": "<%= 'https://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'QvyTEx1wyOY') %>"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -18,15 +18,15 @@ social:
   "twitter:title": "<%= I18n.t(:sports_og_title) %>"
   "twitter:description": "<%= I18n.t(:sports_og_description) %>"
   "twitter:image:src" : "<%= 'https://' + request.host + '/images/social-media/' + (PageMode.get(request) == 'feature-athletes' ? 'athletes-thumbnail.jpg' : 'sports.jpg') %>"
-  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY') %>"
+  "twitter:player": "<%= 'http://youtube.com/embed/' + (PageMode.get(request) == 'feature-athletes' ? 'erI24-eHlz8' : 'QvyTEx1wyOY') %>"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
 ---
 
 - page_mode     = PageMode.get(request)
-- yt_code       = page_mode == 'feature-athletes' ? 'ip051U7Rvds' : 'QvyTEx1wyOY'
-- download_link = page_mode == 'feature-athletes' ? '//videos.code.org/social/athletes-hour-of-code.mp4' : '//videos.code.org/social/cs-is-everything.mp4'
+- yt_code       = page_mode == 'feature-athletes' ? 'erI24-eHlz8' : 'QvyTEx1wyOY'
+- download_link = page_mode == 'feature-athletes' ? '//videos.code.org/social/athletes-push-yourself.mp4' : '//videos.code.org/social/cs-is-everything.mp4'
 
 %link{href: "/css/sports.css", rel: "stylesheet"}
 
