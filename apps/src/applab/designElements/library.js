@@ -179,5 +179,21 @@ export default {
       return elements[elementType].onPropertyChange(element, name, value);
     }
     return false;
+  },
+
+  /**
+   * Handle a read of an element-specific property type. Throw an error if the
+   * property type is not recognized or there is no handler for reading
+   * element-specific properties.
+   * @param {Element} element
+   * @param {String} name Property name.
+   * @returns {*}
+   */
+  typeSpecificPropertyRead: function (element, name) {
+    var elementType = this.getElementType(element);
+    if (elements[elementType].readProperty) {
+      return elements[elementType].readProperty(element, name);
+    }
+    throw `unknown property type ${name}`;
   }
 };

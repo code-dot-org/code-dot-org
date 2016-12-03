@@ -446,17 +446,18 @@ designMode.readProperty = function (element, name) {
     case 'id':
       return elementUtils.getId(element);
     case 'left':
-      return element.style.left;
+      // Ignore 'px' suffix
+      return parseFloat(element.style.left);
     case 'top':
-      return element.style.top;
+      return parseFloat(element.style.top);
     case 'width':
-      return element.getAttribute('width');
+      return parseFloat(element.getAttribute('width'));
     case 'height':
-      return element.getAttribute('height');
+      return parseFloat(element.getAttribute('height'));
     case 'style-width':
-      return element.style.width;
+      return parseFloat(element.style.width);
     case 'style-height':
-      return element.style.height;
+      return parseFloat(element.style.height);
     case 'text':
       return utils.escapeText(element.innerHTML);
     case 'textColor':
@@ -464,7 +465,7 @@ designMode.readProperty = function (element, name) {
     case 'backgroundColor':
       return element.style.backgroundColor;
     case 'fontSize':
-      return element.style.fontSize;
+      return parseFloat(element.style.fontSize);
     case 'textAlign':
       return element.style.textAlign;
     case 'icon-color':
@@ -496,7 +497,10 @@ designMode.readProperty = function (element, name) {
     case 'is-default':
       return elementUtils.getId(element) === elementUtils.getDefaultScreenId();
     default:
-      throw "unknown property name " + name;
+      // The property was not found in the list of properties which apply to all elements.
+      // Check to see if the element-specific handler knows how to read the property,
+      // which will raise an error if the property or handler is not found.
+      return elementLibrary.typeSpecificPropertyRead(element, name);
   }
 };
 
