@@ -104,7 +104,7 @@ module AWS
           invalidation_batch: {
             paths: {
               quantity: 1,
-              items: ['/'],
+              items: ['/*'],
             },
             caller_reference: SecureRandom.hex,
           },
