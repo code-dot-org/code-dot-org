@@ -1,15 +1,24 @@
 #!/usr/bin/env ruby
 
 require_relative '../deployment'
+require 'cdo/rake_utils'
 require 'cdo/aws/cloudfront'
 
 require 'sshkit'
-require 'sshkit/dsl'
-include SSHKit::DSL
+SSHKit::Backend::Netssh.configure{|ssh| ssh.ssh_options = {paranoid: false}}
 
-CDO.log.info 'Flushing Varnish caches on frontends...'
-on CDO.app_servers.values do
-  execute "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
+varnish_ban_cmd = "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
+CDO.log.info 'Flushing Varnish cache on daemon...'
+RakeUtils.system varnish_ban_cmd
+
+app_servers = CDO.app_servers.values
+
+unless app_servers.empty?
+  CDO.log.info 'Flushing Varnish caches on frontends...'
+  SSHKit::Coordinator.new(app_servers).each do
+    execute varnish_ban_cmd, raise_on_non_zero_exit: false
+  end
 end
 CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
 AWS::CloudFront.invalidate_caches
+CDO.log.info 'All done!'
