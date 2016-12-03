@@ -9,7 +9,7 @@
   - video_code = page_mode == "feature-athletes" ? "ip051U7Rvds" : entry[:param2_s]
   - download_path = page_mode == "feature-athletes" ? "//videos.code.org/social/athletes-hour-of-code.mp4" : entry[:param3_s]
   - facebook = {:u=>"http://#{request.site}/"}
-  - twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:og_description)}
+  - twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>"Join @serenawilliams, @neymarjr @kobebryant and global champions in #HourOfCode https://www.youtube.com/watch?v=erI24-eHlz8 https://code.org/athletes"}
 
   #videofullwidth{style: "position:absolute; left: 0; top: 0; width: 100%"}
     = view :display_video_lightbox, id: "mainvideo", video_code: video_code, download_filename: download_filename, download_path: download_path, facebook:facebook, twitter:twitter
