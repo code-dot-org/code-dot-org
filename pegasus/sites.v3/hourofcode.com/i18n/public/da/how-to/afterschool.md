@@ -13,14 +13,14 @@ nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alle Hour of Code øvelser:**
 
   * Kræver minimal forberedelsestid for arrangører
   * Er selvforklarende og giver eleverne mulighed for at arbejde i deres eget tempo og færdighedsniveau
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -66,7 +66,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Led deltagere til aktiviteten**
 
-  * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](<%= resolve_url('https://code.org/learn') %>) under antallet af deltagere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -76,7 +76,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Hvad gør jeg hvis nogen bliver hurtigt færdige?**
 
-  * Opmuntre til at prøve en ny Hour of Code aktivitet.[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Eller, beder dem hjælpe dem der måtte have svært ved det.
 
 [col-33]

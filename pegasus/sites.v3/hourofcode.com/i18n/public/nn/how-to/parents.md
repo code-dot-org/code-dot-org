@@ -8,74 +8,74 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Korleis du fullfører ein Hour of Code med barnet ditt
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Fullføre ein Hour of Code heime, eller viderføre dette til ditt barns klasserom! Her er korleis:
 
-## 2) Sjå denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 3) Vel ein lærevideo:
+## 2) Sjå denne Korleis gjer ein det videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 3) Vel ein videoguide:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('https://code.org/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Alle timar av kodetimen er sjølvinstruerande- slik at barnet ditt kan lære i si eiga takt og på sitt eige kunnskapsnivå**
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Plan your technology needs
+## 3) Planlegg dine teknologibehov
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
+Den beste opplevinga av Kodetimen vil vere med datamaskinar kobla til internett. Men du **treng ikkje** ein datamaskin. Det er mange aktivitetar som kan bli gjort utan oppkobling, og kan gjerast utan nokon teknologi.
 
-- Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
-- **Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+- Prøv å gå gjennom eit av undervisningsopplegga frå ein elevdatamaskin på førehand. Sjekk at både lyd og video fungerar optimalt.
+- **Vil lære saman med barnet?** Prøv [par programmering.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Koding er sosialt og egna for samarbeid.
 
-## 4) Start your Hour of Code off with an inspiring video
+## 4) Start Kodetimen med ein inspirerande video
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Start Kodetimen med å diskutere korleis informasjonsteknologi påverkar oss i dagleglivet.
 
 **Vis en inspirerande video:**
 
 - Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [Lanseringsvideoen til Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
 - [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-- Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Finn fleire inspirerande [ressursar](<%= resolve_url('https://code.org/inspire') %>) og [videoar](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Det er heilt greit om du og ditt barn ikkje har datakompetanse frå før. Her er nokre idear til korleis du kan introdusere Kodetimen din:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- Forklar korleis teknologi påverkar liva våre, gjerne med døme som både jenter og gutar kan kjenne seg igjen i (snakk til dømes om å redde liv, hjelpe andre eller knytte menneske saman).
 - Snakk om ting i kvardagen som har kode i seg.
-- See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+- Sjå tips for å få jenter interessert i informatikk [her](<%= resolve_url('https://code.org/girls') %>).
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Ønskjer du fleire idear? Sjekk ut vår [døme på undervisningsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) for å sjå døme på praksis frå erfarne lærarar.
 
-## 5) Code!
+## 5) Kod!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Når du har valt innføringa du ønskjer, kan du bokmerke innføringa si lenke.
 
-**When your child come across difficulties**
+**Når barnet møter på problem**
 
-It’s okay to respond:
+Det er greit å svare:
 
 - "Eg veit ikkje. Lat oss finne det ut i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
-## 6) Celebrate
+## 6) Feire
 
-[Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your child (and yourself!).
+[Skriv ut diplom](<%= resolve_url('https://code.org/certificates') %>) for barnet ditt (og deg!).
 
 Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 
-**Other Hour of Code resources:**
+**Andre Kodetime-ressursar:**
 
 - Sjå på [ofte stilte spørsmål om Kodetimen](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 **Kva kjem etter Kodetimen?**
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Kodetimen er berre første steget på ei reise for å lære seg meir om korleis teknologi fungerer og korleis du lager dine eigne program. For å fortsette på denne reisa:
 
-- Encourage your child to continue [to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
-- Help [promote](<%= resolve_url('/promote') %>) computer science education in your child’s school district.
+- Oppmuntre barnet til å fortsette [å lære online](<%= resolve_url('https://code.org/learn/beyond') %>).
+- Hjelp [fremme](<%= resolve_url('/promote') %>) informasjonsteknologi i ditt barn sin skulekrins.
 
 <%= view :signup_button %>

@@ -15,19 +15,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Mira este vídeo explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
 
   * Requieren un tiempo de preparación mínimo para los profesores
   * Son autoguiados, lo que permite a los estudiantes trabajar a su propio ritmo y habilidad
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Son planes de lección que requieren de cierta preparación del docente
   * Se clasifican por grado *y* por materia (por ejemplo, matemáticas, inglés, etc.)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 3) Promociona tu Hora de Código
 
@@ -73,7 +73,7 @@ La mejor experiencia de Hora de Código incluye ordenadores conectados a Interne
 
 **Direct students to the activity**
 
-  * Escriba el enlace del tutorial en la pizarra. Encuentra el enlace que aparece en la [información de tu tutorial seleccionado](<%= resolve_url('https://code.org/learn') %>) debajo del número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -83,7 +83,7 @@ La mejor experiencia de Hora de Código incluye ordenadores conectados a Interne
 
 **When your students come across difficulties it's okay to respond:**
 
-  * "No sé. Vamos a resolver esto juntos."
+  * "No sé. Vamos a averiguarlo juntos."
   * "La tecnología no siempre funciona de la manera que queremos."
   * "Aprender a programar es como aprender un nuevo idioma; usted no tendrá fluidez inmediatamente."
 
@@ -91,7 +91,7 @@ La mejor experiencia de Hora de Código incluye ordenadores conectados a Interne
 
 **What to do if a student finishes early?**
 
-  * Los estudiantes pueden ver todos los tutoriales y probar otra actividad de la Hora de Código en [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * O pida a los estudiantes que terminen primero, que ayuden a los que tengan problemas con la actividad.
 
 [col-33]
