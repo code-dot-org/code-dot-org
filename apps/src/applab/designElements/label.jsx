@@ -213,5 +213,16 @@ export default {
         return false;
     }
     return true;
+  },
+
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'lock-width':
+        return !!$(element).data('lock-width');
+      case 'lock-height':
+        return !!$(element).data('lock-height');
+      default:
+        return `unknown property type ${name}`;
+    }
   }
 };
