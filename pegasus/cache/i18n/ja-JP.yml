@@ -170,7 +170,7 @@
   personalize_certificate: "証明書のカスタマイズする"
   share_achievement: "あなたの成果を共有する"
   beyond_hour_message: "<a href='http://studio.code.org'>他のコース</a>を継続するか、<a href='/learn/beyond'>１時間を超えてさらに学ぶ</a>をご覧ください。"
-  leaderboards_for_hoc: Hour of Codeのリーダー会議
+  leaderboards_for_hoc: Hour of Codeが行われている場所
   support_url: http://support.code.org/
   country: "国"
   city: "都市"
@@ -228,7 +228,7 @@
   lines_of_code: "<b># 行</b> 上の日付に書き込まれます。"
   lines_of_code_alt: "<b>#</b>学生によって書かれたコードの行"
   who_has_done_hoc: "#HourOfCode に挑戦したのは誰？ @codeorg"
-  hoc_leaderboards: Hour of Codeリーダー会議
+  hoc_leaderboards: Hour of Codeが行われている場所
   students_and_lines: "学生%{students} がHour of Code を行い、%{lines}行のコードを書きました"
   start_hoc: Hour of Codeに今すぐ挑戦する
   contact_form_topic_press: "プレス/メディア(インタビュー 又は講演)"
@@ -295,6 +295,7 @@
   homepage_action_text_volunteers: "技術ボランティア募集"
   homepage_action_text_codevideo: "ビデオを見る"
   homepage_action_text_teachervideo: "ビデオを見る"
+  homepage_action_text_watchvideo: "ビデオを見る"
   homepage_action_text_girlvideo: "女子生徒を応援する"
   homepage_action_text_learn: "学習開始"
   homepage_action_text_signpetition: "請願書に署名します。"
@@ -403,29 +404,53 @@
   mc_gradelevel: 6歳以上
   mc_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6-106 歳向け"
-  minecraft_designer: "マインクラフト デザイナー"
-  minecraft_adventurer: "マインクラフト アドベンチャー"
-  minecraft_tutorials: "マインクラフト Hour of Code チュートリアル"
-  minecraft_specs: "多言語対応 | 最新ブウザ、タブレット | 小学校2年生以上"
+  minecraft_designer: Minecraftデザイナー
+  minecraft_adventurer: Minecraftアドベンチャー
+  minecraft_tutorials: MinecraftのHour of Codeチュートリアル
+  minecraft_specs: "多言語対応 | 最新ブラウザ、タブレット | 小学校2年生以上"
   minecraft_designer_description: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
   minecraft_designer_button: "始める"
-  minecraft_adventurer_description: "スティーブかアレックスに、プログラムで冒険させよう！"
+  minecraft_adventurer_description: "プログラムをして、スティーブかアレックスにMinecraftの世界を冒険させよう！"
   minecraft_adventurer_button: "始める"
   minecraft_no_internet: "インターネットが無い？"
-  minecraft_download_adventurer: "マインクラフト アドベンチャーのオフライン版をダウンロード。"
+  minecraft_download_adventurer: Minecraftアドベンチャーのオフライン版をダウンロード。
   minecraft_store_camps: "マイクロソフト ストア Hour of Code キャンプ"
-  minecraft_host_event: "マインクラフト Hour of Codeイベントを開催"
+  minecraft_host_event: Minecraft Hour of Codeイベントを開催
   minecraft_youthspark_continue_learning: Microsoft YouthSpark で継続的に学ぶ
   minecraft_signup_store_camps: コーディングで、あなたの創造性を生かすため、オーストラリア、カナダ、プエルトリコ、アメリカのマイクロソフト
     ストアで無料の Hour of Codeキャンプに <a href="%{signup_store_camp}"> サインアップ</a> します。
-  minecraft_teach_resources: "先生向けの資料と授業プラン。"
+  minecraft_teach_resources: "教師向けのリソース及び授業プラン。"
   minecraft_leader_guide: "イベント開催に役立つ資料をダウンロード。"
   minecraft_facilitating_event: "イベントを開催する？"
-  minecraft_join_online_training: 11/22と11/29に行われる、マイクロソフトとマインクラフトが行う、オンライントレーニング（英語）に参加する。
-  minecraft_youthspark_create_your_future: "これからどこに向かって行くとしても、コンピュータサイエンスは、想像と創造、あなたの未来に、きっと役立つでしょう。"
+  minecraft_join_online_training: MicrosoftとMinecraftが行うオンライントレーニング（英語）に参加する。
+  minecraft_youthspark_create_your_future: "コンピュータサイエンスは、あなたが情熱を持つどんな物にも関係しています。未来を一緒に作りましょう。"
   minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoftの YouthSpark</a>では、無料のツールと資料を提供しています。
   minecraft_subtitle: Minecraft Hour of Code プログラミング入門
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Sports Hour of Code Tutorials
+  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_title: Code your own sports game
+  sports_watch_video: "ビデオを見る"
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
   watch_inspirational_videos: "始める前に、以下のビデオのうち1つを見てみましょう"
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: "女子生徒を応援する"
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: "別の言語を話しますか？"
   help_translate: "翻訳をお手伝いください。"
   no_internet: "インターネットが無い？"
@@ -486,7 +511,7 @@
   volunteer_engineer_submission_commitment_annually: "年に2〜3回"
   volunteer_engineer_submission_commitment_monthly: "月額数時間"
   volunteer_engineer_submission_commitment_weekly: "週に数時間"
-  volunteer_engineer_submission_commitment_more: "それ以上"
+  volunteer_engineer_submission_commitment_more: "表示"
   volunteer_engineer_submission_location_flexibility_onsite: "学校で"
   volunteer_engineer_submission_location_flexibility_remote: "遠隔から指導している（先生もしくは生徒）"
   volunteer_engineer_submission_location_flexibility_curriculum: "オープンソース カリキュラム プロジェクトに貢献したい"
@@ -761,6 +786,7 @@
   dashboard_announce_learn_more_button: "もっと詳しく知る"
   dashboard_announce_try_now_button: "今すぐ試す"
   dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
@@ -791,6 +817,11 @@
     receives for the Hour of Code during this time.  You can still view student progress
     from before December 3.  We will go back to saving progress as usual after this
     week.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
   code_sign_up: "コンピュタサイエンス教育週間の間に参加する"
   host_an_hour: "開催する"
@@ -1409,22 +1440,5 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game

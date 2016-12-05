@@ -1,0 +1,23 @@
+name 'Color Sleuth - How does it end?'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The End Game
+
+Need to decide rule to end the game.
+
+End game discussion
+
+* First to 10
+* Stop when one player's score differs by 3 or more?
+* First to get 3 wrong
+
+Pick one and do it.
+
+Note that like with swtiching turns
+
+You not only need to know that game is over, but who won.
+
+We've added a screen you can switch to, and congratulate the winner.
+MARKDOWN

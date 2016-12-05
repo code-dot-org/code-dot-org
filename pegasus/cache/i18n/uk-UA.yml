@@ -366,6 +366,7 @@
   homepage_action_text_volunteers: "Потрібні технічні волонтери"
   homepage_action_text_codevideo: "Переглянути відео"
   homepage_action_text_teachervideo: "Переглянути відео"
+  homepage_action_text_watchvideo: "Переглянути відео"
   homepage_action_text_girlvideo: "Залучайте дівчат"
   homepage_action_text_learn: "Початок навчання"
   homepage_action_text_signpetition: "Підписати петицію"
@@ -515,7 +516,31 @@
   minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
     надає безкоштовні інструменти та ресурси для слідування своїм вподобанням.
   minecraft_subtitle: "Година коду від Майнкрафт"
+  sports_page_title: "Спортивна Година коду"
+  sports_og_title: "Підручник зі спортивної Години коду"
+  sports_og_description: "Обери між підручниками NBA, WNBA чи інших спортивних заходів."
+  sports_title: "Закодуй власну спортивну гру"
+  sports_watch_video: "Переглянути відео"
+  sports_video_title: "Постарайся! Навчитись може кожен."
+  sports_select_theme: "Обери тему підручника"
+  sports_basketball_title: "Зроби гру в баскетбол"
+  sports_all_sports_title: "Закодуй власний спорт"
   watch_inspirational_videos: "Перед початком роботи перегляньте ці відео для натхнення"
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: "Залучайте дівчат"
+  video_title_cs_intro: "Вступ до інформатики"
+  video_title_schools_dont_teach: "Те, чого не навчають у більшості шкіл"
+  video_title_obama: "Президент Обама про інформатику"
+  video_title_hoc_is_here: "Година коду вже тут - навчитись може кожен"
+  video_title_anybody_can_learn: "Навчитись може кожен"
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 хв
+  video_2min: 2 хв
+  video_5min: 5 хв
   speak_another_language: "Інша мова?"
   help_translate: "Допоможіть нам з перекладом."
   no_internet: "Немає Інтернету?"
@@ -949,6 +974,7 @@
   dashboard_announce_learn_more_button: "Дізнайтеся більше"
   dashboard_announce_try_now_button: "Спробувати"
   dashboard_announce_host_an_hour_button: "Провести Годину коду"
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного
     учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися
     із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори
@@ -974,11 +1000,15 @@
     власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт,
     а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі
     своїм класом на Годині коду."
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
+  dashboard_announce_hoc_scaling_progress: "Будь ласка, зверніть увагу, що ми не зберігаємо
+    прогрес учнів у цьому курсі з 3 по 11 грудня через високий рівень трафіку на нашому
+    сайті протягом Години коду. Ви можете переглядати прогрес учнів до 3 грудня. Ми
+    повернемось до звичного збереження прогресу за тиждень."
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
   code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
   code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
   host_an_hour: "Проведіть Годину коду"
@@ -1846,22 +1876,5 @@
   infinity_shortcode: inf
   playlab_shortcode: "грати"
   artist_shortcode: art
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
-  sports_watch_video: Watch the video
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
-  sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
-  video_title_cs_is_everything: Computer Science is Changing Everything
-  video_title_inspire_girl: Inspire a girl
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game

@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Let's take this to another level! \r\nUse loops to get me to the sunflower with the fewest loops possible.",
+    "instructions": "Get the zombie to the sunflower using only the blocks available.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -27,8 +27,9 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's take this to another level! \r\n\r\nUse loops to get me to the sunflower with the fewest loops possible.",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you are stuck, try writing out the code without loops first and looking for patterns.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_19_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Putting one repeat loop inside of another can help decrease the number of blocks used.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_19_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "*\"Must eat sunflower!\"*\r\n\r\nGet the zombie to the sunflower using only the blocks available.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are stuck, try writing out the code out on paper without loops first and look for patterns.\",\"hint_id\":\"2-3_Maze_Loops_19_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a504f8bd02af09a1a25b6dd03716966/grade3_maze_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Nesting `repeat` loops can help decrease the number of blocks used.\",\"hint_id\":\"2-3_Maze_Loops_19_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd62d80b6bf7b68b9c84e3f04402057c/grade3_maze_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It will take two sets of nested `repeat` loops to solve this puzzle.\",\"hint_id\":\"2-3_Maze_Loops_19_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc0fc9f058c019c99fbda24b8e009d40/grade3_maze_loops3.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -39,25 +40,18 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward"/>
+        <block type="maze_moveForward" limit="2"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="controls_repeat">
+        <block type="controls_repeat" limit="4">
           <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">3</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

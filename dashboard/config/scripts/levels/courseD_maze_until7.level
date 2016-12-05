@@ -1,0 +1,82 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2016-11-29T07:17:09.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "pvz",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[4,1,0,0,0,0,1,0],[0,1,0,4,1,0,1,4],[0,1,0,0,3,0,1,0],[0,1,0,0,1,0,1,0],[0,1,1,1,1,0,2,0],[0,0,0,0,0,0,0,0]]",
+    "instructions": "Help the zombie get to the sunflower.",
+    "markdown_instructions": "Help the zombie get to the sunflower.",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "step_speed": "3",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "start_direction": "0",
+    "step_mode": "1",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need your code to be any longer, just because the maze is!\",\"hint_id\":\"courseD_maze_until7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c707fda19401c4212fd31ea93847c93/courseD_maze_until7.mp3\"}]",
+    "ideal": "5",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_if">
+          <title name="DIR">isPathLeft</title>
+        </block>
+        <block type="maze_forever"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_forever">
+              <statement name="DO">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
+                  <next>
+                    <block type="maze_if">
+                      <title name="DIR">isPathLeft</title>
+                      <statement name="DO">
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>
