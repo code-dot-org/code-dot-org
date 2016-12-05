@@ -2166,10 +2166,10 @@ uk:
         basketball:
           stage:
             Bounce: Арканоід
-          title: Basketball
+          title: Зроби гру в баскетбол
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Зроби гру в баскетбол
+          description: Зроби гру в баскетбол
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2433,7 +2433,7 @@ uk:
           title: Спорт
           description_audience: ''
           description_short: Закодуй власний спорт
-          description: ''
+          description: Закодуй власний спорт
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Ласкаво просимо!

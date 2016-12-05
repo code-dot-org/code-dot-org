@@ -1701,28 +1701,28 @@ kk:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "Сәлем, менің есімім Jens және мен Minecraft-тың креативті дизайнер басшысымын. Келесі сағатта сен өзіңнің Minecraft ойынын жазасың. Бұл Minecraft-қа ұқсайды, бірақ әлем тоқтап қалған. Қойлар қозғалып жатқан жокқ, тауқытар жұмыртқалап жатқан жоқ және зомбиоер әлі тек тұр. Minecraft ойынын іске қосу үшін кодты жазу саған байланысты."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: 'Менің атым Мелисса және мен - Minecraft-тағы қолданушыны зерттеушімін. Маған бәрінен де адамдарың қалай ойланып, технологиялармен қарым-қатынас жасайтындығы қызық. Сондықтан бұл жұмыс мен үшін компьютер инженерлігі мен адам психологиясын қатар қою жөнінде керемет болып табылады: адамдар қалай ойланады және өз-өздерін ұстайды.'
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "Сенің экраның негізгі үш бөлікке бөлінгенін көріп тұрсың. 1) Сол жақта Minecraft ойыны. Дәл қазір әлем қатып қалған, бірақ біз оны код арқылы жөндейміз."
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2) Ортада - құралдар орны. Әрбір блок - тауықтар, қойлар және басқа да Minecraft жаратылыстары түсіне алатын коммандалар."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3) Оң жақтағы ақ алаң - жұмыс орны. Бұнда біз бағдарламамызды жазамыз."
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "Егер не істеу керек екенін ұмытқан болсаң, әрбір деңгей үшін ережелері жоғарыда."
       7:
         image: 'notes/mc_2016_intro_7.jpg'
         text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "Егер де сіздің блокты жойғыңыз келсе, бар болғаны оны қайта командалар жиымына көшірсеңіз жеткілікті."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
         text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
@@ -1742,7 +1742,7 @@ kk:
         text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
+        text: "Егер экраныңызға қолмен тигізуге болса, қозғалу үшін саусағыңызбен жоғары, төмен, солға және оңға қозғалтыңыз. Кейін алдыңыздағы ойын тармағын қолдану үшін ойынға басыңыз."
       3:
         image: 'notes/mc_2016_events_3.jpg'
         text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
@@ -1762,4 +1762,4 @@ kk:
         text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "Өз ойыныңызды жасауды бітірген соң, достарыңызбен бөлісетін сілтемені алу үшін немесе ойынды телефоныңызда ойнау үшін бөлісуді таңдаңыз. Қызықты ойын тілейміз! Minecraft-ты сенің нұсқаңмен ойнауды асыға күтудемін."

@@ -1,6 +1,10 @@
 class HocDownloadController < ApplicationController
   def index
     @product_name = params[:product]
+    @hoc_url = CDO.code_org_url("/#{@product_name}")
+    @download_urls = {}
+
+    languages = ['Albanian', 'Arabic', 'Azerbaijani', 'Basque', 'Bosnian', 'Bulgarian', 'Catalan', 'Chinese-Taiwan', 'Chinese', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hebrew', 'Hungarian', 'Icelandic', 'Indonesian', 'Irish', 'Italian', 'Japanese', 'Korean', 'Latvian', 'Lithuanian', 'Norwegian', 'Norwegian-Nynorsk', 'Polish', 'Portuguese-Brazil', 'Portuguese', 'Romanian', 'Russian', 'Serbian', 'Slovenian', 'Spanish', 'Swedish', 'Turkish', 'Ukrainian', 'Vietnamese']
 
     case @product_name
       when Script::MINECRAFT_NAME
@@ -21,18 +25,16 @@ class HocDownloadController < ApplicationController
         return
     end
 
-    @hoc_url = CDO.code_org_url("/#{@product_name}")
-
-    @english_windows_url = download_url(@product_name, @file_prefix, "EnglishSetup.exe")
-    @english_mac_url = download_url(@product_name, @file_prefix, "English.dmg")
-    @spanish_windows_url = download_url(@product_name, @file_prefix, "SpanishSetup.exe")
-    @spanish_mac_url = download_url(@product_name, @file_prefix, "Spanish.dmg")
+    languages.each do |lang|
+      @download_urls[:"#{lang}_windows_url"] = download_url(@product_name, @file_prefix, "#{lang}Setup.exe")
+      @download_urls[:"#{lang}_mac_url"] = download_url(@product_name, @file_prefix, "#{lang}.dmg")
+    end
 
     if @show_js_links
-      @english_windows_url_js = download_url(@product_name, @file_prefix_js, "EnglishSetup.exe")
-      @english_mac_url_js = download_url(@product_name, @file_prefix_js, "English.dmg")
-      @spanish_windows_url_js = download_url(@product_name, @file_prefix_js, "SpanishSetup.exe")
-      @spanish_mac_url_js = download_url(@product_name, @file_prefix_js, "Spanish.dmg")
+      languages.each do |lang|
+        @download_urls[:"#{lang}_windows_url_js"] = download_url(@product_name, @file_prefix_js, "#{lang}Setup.exe")
+        @download_urls[:"#{lang}_mac_url_js"] = download_url(@product_name, @file_prefix_js, "#{lang}.dmg")
+      end
     end
   end
 

@@ -1,10 +1,20 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
 - scaling_url = 'http://teacherblog.code.org/post/152968866984/an-important-note-about-computer-science'
-- mc_url = 'https://code.org/minecraft'
+- code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
+- video_download_url = 'https://videos.code.org/teacher/start-teaching-code-studio-SD.mp4'
 
 .teacher-announce
   .announce-heading{style: 'height: 20px;'}
     = t('home.announcement_title')
+  .announce-content
+    %a{href: code_studio_video_url, target: '_blank'}
+      .content-img-container
+        = image_tag(CDO.shared_image_url('/teacher-announcement/how-code-studio.png'), width: '200px')
+    .content-text
+      != t('home.announcement_how_code_studio', video_download_url: video_download_url)
+    .announce-learn-more
+      %a{href: code_studio_video_url, target: '_blank'}
+        %button.primary= t('home.announcement_watch_video_button')
   .announce-content
     %a{href: scaling_url, target: '_blank'}
       .content-img-container
@@ -13,15 +23,6 @@
       != t('home.announcement_hoc_scaling')
     .announce-learn-more
       %a{href: scaling_url, target: '_blank'}
-        %button.primary= t('home.announcement_learn_more_button')
-  .announce-content
-    %a{href: mc_url, target: '_blank'}
-      .content-img-container
-        = image_tag(CDO.shared_image_url('/teacher-announcement/mc-2016-launch.jpg'), width: '200px')
-    .content-text
-      != t('home.announcement_mc_launch')
-    .announce-learn-more
-      %a{href: mc_url, target: '_blank'}
         %button.primary= t('home.announcement_learn_more_button')
   .mini-announcement
     .content-text

@@ -1292,9 +1292,9 @@
           description_audience: ''
         mc:
           title: "ساعة البرمجة ماين كرافت"
-          description: "استخدم كتل التعليمات البرمجية لاصطحاب Steve أو Alex في مغامرة
-            من خلال عالم Minecraft"
-          description_short: "اكتشف عالم Minecraft من خلال التعليمات البرمجية"
+          description: "استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
+            ماين كرافت"
+          description_short: "إكتشف عالم ماين كرافت من خلال البرمجة."
           stage:
             Hour of Code 2015: "ساعة من البرمجة 2015"
         CSPPD3-Unit3-pt2:
@@ -2514,13 +2514,13 @@
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: "ساعة من البرمجة مع ماينكرافت نسخة المصمم"
+          title: "ساعة من البرمجة مع ماينكرافت نسخة المصمم"
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
+          description_short: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار
+            الخاص بك من ماينكرافت."
+          description: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص
+            بك من ماينكرافت."
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey

@@ -36,12 +36,12 @@ Ask the user to enter their age and save it in a variable.<br>
 If we reach this condition it means that the previous condition was *false*.  So now let's check if the age is 13 or over and display a message.<br>
 
 <span style="color: #00adbc; font-weight: bold; font-size: 120%">4.</span>
-To reach this statement means that *all* the previous conditions we've checked have come up *false* so far.  So now let's check if the age is 5 or over and display a message.<br>
+To reach this statement means that, so far, the previous conditions we've checked have come up *false*.  So now let's check if the age is 5 or over and display a message.<br>
 
 <div style="clear: both; column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
 <span style="color: #00adbc; font-weight: bold; font-size: 120%">5.</span>
-If we reach the final <em>else</em> clause it means all the conditions came up <em>false</em>. So this is what get's displayed.</p>
+If we reach the final <em>else</em> clause it means all the previous conditions came up <em>false</em>. So this is what gets displayed.</p>
 <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="color: #00adbc; font-weight: bold; font-size: 120%">6.</span>
 Execution picks up on the first line after the <code>if-else-if</code> block. This "thank you" message at the end will display no matter what.</p>
 <p>

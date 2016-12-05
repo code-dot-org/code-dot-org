@@ -214,7 +214,7 @@
   "no": "Nei",
   "noIconsFound": "Ingen ikon funne",
   "numBlocksNeeded": "Gratulerer! Du har fullført oppgåve {puzzleNumber}. (Men, du kunne ha brukt berre {numBlocks, plural, one {1 block} other {# blocks}}.)",
-  "numLinesOfCodeWritten": "Du har akkurat skrive {numLines, plural, one {1 line} other {# lines}} med kode!",
+  "numLinesOfCodeWritten": "Du har akkurat skrive {numLines, plural, one {1 line} other {# liner}} med kode!",
   "openWorkspace": "Slik fungerer det",
   "orientationLock": "Skru av roteringslåsen på enheten din.",
   "pairingNavigatorWarning": "Dette puslespelet blei fullført under samankopling med {driver}. Sjå på dette puslespelet på kontoen deira for å vise løysinga de oppretta som eit team.",

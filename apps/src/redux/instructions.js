@@ -4,6 +4,9 @@
  * that are required for this feature, and the reducer that sets state based
  * off of those actions.
  */
+
+import { trySetLocalStorage } from '../utils';
+
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
 const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
@@ -307,7 +310,7 @@ export const determineInstructionsConstants = config => {
   let shouldShowOverlay = hasInstructionsToShow &&
       (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
   if (shouldShowOverlay) {
-    localStorage.setItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
+    trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
   }
 
   return {

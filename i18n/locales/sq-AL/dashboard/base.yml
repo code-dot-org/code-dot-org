@@ -354,12 +354,14 @@ sq:
     announcement_learn_more_button: "Mëso më shumë"
     announcement_try_now_button: "Provo tani"
     announcement_host_an_hour_button: "Të organizojë një Orën"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "Si mësues, ju jeni duke udhëhequr në mënyrë që t'i jepni çdo nxënësi në çdo shkollë mundësi për të mësuar shkencën kompjuterike. Tani, është koha që përfaqësuesit tuaj të dëgjojmë nga ju. Këtë javë, liderët e arsimit, 28 qeveritarët dhe CEOs të kompanive më të mëdha të Amerikës u bashkuan së bashku në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12 shkolla të shkencave kompjuterike."
     announcement_petition_button: "Shto emrin tuaj"
     announcement_all: "Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>\n "
     announcement_hoc_launch: "Mijëra mësues në më shumë se 180 vende do të fillojnë mësimin e shkencës kompjuterike gjatë Orës së Kodit, nga5-11 dhjetor. Ne jemi duke u mbështetur te ju për të na ndihmuar që të kemi më shumë studentë se kurrë më parë. <a href='%{signup_url}' target='_blank'> Regjistrohu në eventin tuaj të Orës së Kodimit </a> dhe bëjini të ditur një tjetër mësuesi se cdo kush mund të filloj të shpjegoj shkenca kompjuterike."
     announcement_hoc_scaling: 'KUJDES për Kursin 1-4 dhe mësuesit e përshpejtuar të kursit: Për shkak të trafikut të lartë nga miliona e nxënësve që janë duke bërë Orën e Kodimit, <b> Code Studio nuk do të të ruaj ose raportoj progresin e studentëve në këto kurse nga dhjetori 3-11 </ b>. Ne ju rekomandojmë të bëni aktivitetin Ora e Kodimit me klasën tuaj për të festuar Orën e Kodit gjatë Javës së Edukimit të Shkencave Kompjuterike. Ndërsa vetë tutorialet tona të Orës së Kodimit gjithashtu nuk do të ruajnë progresin atë javë, studentët ende mund të bëjnë mësime të plota dhe të fitojnë një certifikatë.'
     announcement_mc_launch: "Një nga mësime tona më të njohura tani ka një vazhdim! Të gjithë dizenjuesit e rinj të Orës së Kodimit Minecraft lejojnë nxënësit të bëjnë rregullat e botës Minecraft. Ata mund të krijojnë një përvojë krejtësisht unike Minecraft, dhe pastaj të ndajnë atë me miqtë ose ta luajnë atë në telefonat e tyre. Bëjeni atë me klasën tuaj për Orën e Kodimit.\n ."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
     section_code_not_entered: "Ju lutem jepni kodin e seksionit aktual."
@@ -740,8 +742,48 @@ sq:
     starwars_blocks_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
     starwars_javascript_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
     download_message: 'Shkarko%{app_name} përdorim offline (136MB)'
-    download_in_english: 'Shkarko në Anglisht:'
-    download_in_spanish: 'Shkarko në Spanjisht:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   plc:

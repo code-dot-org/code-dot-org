@@ -1,0 +1,37 @@
+name 'How to pick a random button'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to pick a random button
+
+To pick a random button we're going to use a bit of a trick.
+
+The technique is to write code that combines the use of random numbers to build a string of one of the button ids.
+
+We've strategically named the buttons so that we can use this technique:
+
+* button1
+* button2
+* button3
+* button4
+
+If you look at the button ids the only thing that's different is the number.  They all fit the pattern of *"button**X**"*  where x is a number 1-4.  Well we can use `randomNumber` to generate a number and then tack it on to a string to generate one of the button ids randomly.
+
+`var randButtonID = "button"+randomNumber(1,4);`
+
+The variable `randButtonID` should now have one the 4 button ids as a string, and we can use it in setProperty, along with `diffColor` to randomly make one of buttons have a different color.
+
+The last lines of your program should look something like this:
+
+```
+var diffColor = "rgb("250, 174, 10)"
+var randButtonID = "button"+randomNumber(1,4);
+setProperty(randButtonID, "background-color", diffColor);
+```
+
+Big picture: what we're doing here is writing code to generate important strings like the IDs of elements and the values we want to set properties to.  It's a common technique for making programs more dynamic than if you "hard coded" all the values.
+
+You'll try this next.
+MARKDOWN
