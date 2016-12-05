@@ -1,17 +1,16 @@
-When /^I load netsim in DNS mode$/ do
-  steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/4?noautoplay=true"
-    And I wait to see "#netsim-lobby-name"
-  STEPS
-  steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
-end
+# NetSim-specific Cucumber step definitions
 
-When /^I load netsim in bit-sending mode$/ do
+# Which stage of allthethings.script contains the netsim levels; this way we
+# only have to update in one place if this changes.
+NETSIM_ALLTHETHINGS_STAGE = 14
+
+# Given I am on the 1st NetSim test level
+# Navigates to the requested level in the AllTheThings script.
+Given /^I am on the (\d+)(?:st|nd|rd|th)? (?:Net ?Sim|Internet Simulator) test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/14/puzzle/1?noautoplay=true"
-    And I wait to see "#netsim-lobby-name"
+    And I am on "http://studio.code.org/s/allthethings/stage/#{NETSIM_ALLTHETHINGS_STAGE}/puzzle/#{level_index}?noautoplay=true"
+    And I rotate to landscape
   STEPS
-  steps "And I close the dialog" if @browser.find_element(:id => 'x-close') rescue false
 end
 
 When /^I enter the netsim name "([^"]*)"$/ do |username|
