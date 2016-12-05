@@ -1,12 +1,5 @@
 # Docs Directory
 
-## Technical Specifications
-* [Account Management API](account-management-api.md)
-* [Client API](client-api.md)
-* [How Sharing And Feedback Work](how-sharing-and-feedback-work.md) - A diagram describing how sharing works
-* [Projects Data Model](projects-data-model.md)
-* [Youtube Fallback](youtube-fallback.md)
-
 ## How-Tos
 * [Dev Of The Week Zendesk](dev-of-the-week-zendesk.md) - How to find stuff in zendesk if you are dev of the week
 * [Dropbox Share Guide](dropbox-share-guide.md) - How to add new dropbox shares to staging
@@ -22,6 +15,13 @@
 * [Testing With Applitools Eyes](testing-with-applitools-eyes.md) - how to write and run ui tests that will have their screenshots compared
 * [Update Levelbuilder](update-levelbuilder.md) - how to update levelbuilder
 * [Varnish](varnish.md) - info on our use of varnish and how to work with it
+
+## Technical Specifications
+* [Account Management API](account-management-api.md)
+* [Client API](client-api.md)
+* [How Sharing And Feedback Work](how-sharing-and-feedback-work.md) - A diagram describing how sharing works
+* [Projects Data Model](projects-data-model.md)
+* [Youtube Fallback](youtube-fallback.md)
 
 ## Old and probably not _that_ useful?
 * [EC2 AMI Setup](ec2-ami-setup.md)
