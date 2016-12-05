@@ -131,9 +131,20 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
-When /^I wait until element "([^"]*)" is visible$/ do |selector|
+def jquery_is_element_visible(selector)
+  "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
+When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
   wait_for_jquery
-  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+  wait_with_timeout.until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
+end
+
+Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to be visible$/ do |seconds, selector|
+  wait_for_jquery
+  Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
+    @browser.execute_script(jquery_is_element_visible(selector))
+  end
 end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
@@ -144,10 +155,6 @@ end
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
-end
-
-Then /^I wait until element "([^"]*)" is not visible/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") }
 end
 
 # Required for inspecting elements within an iframe
@@ -551,20 +558,28 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
   element_has_id(selector, id)
 end
 
+def jquery_element_exists(selector)
+  "return $(#{selector.dump}).length > 0"
+end
+
+def element_exists?(selector)
+  @browser.execute_script(jquery_element_exists(selector))
+end
+
+def element_visible?(selector)
+  @browser.execute_script(jquery_is_element_visible(selector))
+end
+
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  expect(visible).to eq(negation.nil?)
+  expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
+  expect(element_exists?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  expect(visible).to eq(false)
+  expect(element_visible?(selector)).to eq(false)
 end
 
 def has_class?(selector, class_name)
