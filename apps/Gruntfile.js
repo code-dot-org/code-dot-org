@@ -333,11 +333,6 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
-    codeStudio: {
-      files: [
-        {src: ['test/code-studio-tests.js'], watched: false},
-      ],
-    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -708,12 +703,6 @@ module.exports = function (grunt) {
   ]);
 
   // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('codeStudioTest', [
-    'preconcat',
-    'concat',
-    'karma:codeStudio'
-  ]);
-
   grunt.registerTask('test', [
     'preconcat',
     'concat',
