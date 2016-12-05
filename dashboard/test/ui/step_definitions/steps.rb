@@ -156,6 +156,14 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
 end
 
+Then /^I make all links open in the current tab$/ do
+  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
+end
+
+Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
+  @browser.execute_script("$('a[target=_blank', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
+end
+
 Then /^check that I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
   expect(@browser.current_url).to eq(url)
@@ -982,11 +990,6 @@ end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
   wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
-end
-
-Then /^I make all links open in the current tab$/ do
-  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
-  @browser.execute_script("$('a[target=_blank', $('iframe').contents()).attr('target', '_parent');")
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
