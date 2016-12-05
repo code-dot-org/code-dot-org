@@ -1,3 +1,4 @@
+# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
@@ -981,6 +982,11 @@ end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
   wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
+end
+
+Then /^I make all links open in the current tab$/ do
+  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
+  @browser.execute_script("$('a[target=_blank', $('iframe').contents()).attr('target', '_parent');")
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
