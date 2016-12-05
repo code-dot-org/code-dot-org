@@ -1147,6 +1147,10 @@ Bounce.displayBall = function (i, x, y, rotation) {
                         y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
   ballIcon.style.transform = `rotate(${rotation}deg)`;
 
+  // Disable rotation in firefox, transform-origin works differently
+  // TODO(ram): fix firefox properly after HoC
+  ballIcon.style.MozTransform = '';
+
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);

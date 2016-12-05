@@ -46,8 +46,8 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Изберете Hour of Code дейност и [ Прегледайте това практическо ръководство](%= resolve_url('/how-to') %).
 
-## 8. Go beyond an Hour of Code
+## След Hour of Code
 
-Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
+Готови ли сте да отидете отвъд "часът на кода"? Вижте [ нашите пълни курсове и учителски ресурси](%= resolve_url('https://code.org/teach')%) включително възможности за професионално обучение за учители.
 
 <%= view 'popup_window.js' %>

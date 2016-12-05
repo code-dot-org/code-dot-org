@@ -13,11 +13,11 @@ Complete an Hour of Code at home, or volunteer to bring it to your child’s cla
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 2) Choose a tutorial:
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('https://code.org/learn') %>)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('/learn') %>)
 
 ## 3) Plan your technology needs
 The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all.
