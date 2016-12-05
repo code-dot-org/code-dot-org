@@ -60,8 +60,8 @@ Doar ce te-ai alaturat miscarii Hour of Code. Spune-le si prietenilor cu **#Hour
 
 Alege o activitate Hour of Code şi [vizualizeaza acest ghid de organizare](<%= resolve_url('/how-to') %>).
 
-## 8. Go beyond an Hour of Code
+## Dincolo de Hour of Code
 
-Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
+Sunteti gata sa mergeti dincolo de o ora? Iata [cursurile noastre in intregime si resursele pentru profesori](<%= resolve_url('https://code.org/teach')%>)inclusiv oportunitati de invatare profesionala pentru profesorii din ciclul primar, gimnazial sau liceal.
 
 <%= view 'popup_window.js' %>
