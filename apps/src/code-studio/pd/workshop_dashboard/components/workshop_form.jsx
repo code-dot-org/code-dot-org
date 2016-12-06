@@ -39,8 +39,10 @@ const styles = {
   }
 };
 
+// Default to today, 9am-5pm.
 const placeholderSession = {
   placeholderId: '_0',
+  date: moment().format(DATE_FORMAT),
   startTime: '9:00am',
   endTime: '5:00pm'
 };
