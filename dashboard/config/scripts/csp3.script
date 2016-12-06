@@ -1,7 +1,3 @@
-hidden false
-login_required true
-hideable_stages true
-
 stage 'The Need For Programming Languages'
 level 'v2 U3L01 Student Lesson Introduction'
 assessment 'U3L01 Assessment1'
@@ -94,6 +90,7 @@ assessment 'U3L07 Free Response Reflection'
 stage 'Practice PT - Design a Digital Scene'
 level 'v2 U3L10 Student Lesson Introduction'
 level 'U3L08 - individualCode'
+named_level 'How To: Share Code with Teammates'
 level 'U3L08 - digitalScene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true

@@ -5,7 +5,8 @@ markdown <<MARKDOWN
 # Rating Website
 
 ## Overview:
-You and a partner will work together to rate seven additional websites on how “good” they are.  The challenge this time, however, is to identify with your partner some specific features of each website that collectively make it “good” or “bad”.  For this activity, you and your partner will share one computer while analyzing each website’s features.  
+You and your family are trying to decide what place to get dinner from. You are looking at restuarants online to help you make your decision. How well do these restuarants help you make this decision? 
+
 ## Directions:
 For each of the websites below, you and your partner will together do the following:
 
@@ -29,26 +30,30 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 ## Rating the Quality of Websites
 
-**Goal:** Students think about why they believe some websites are better than others.
-
-**Group:** Put students in pairs. 
-
-**Distribute:** Give one copy of [r rating-the-quality-of-websites] to each student.
+**Goal:** Students identify features that they believe make some websites better than others.
 
 !!!say
 
-     Rather than classify a website as being “good” or “bad,” it is more helpful to decide whether or not a website meets its purpose. A website is most useful when its meets the purpose which was meant to serve.
+	 We just shared the last websites we visited. More importantly you shared why you went to those websites. All websites are created to serve a certain purpose. Some of the websites you go to meet your needs better than others. When websites don't meet your needs it may be because they were designed for a different purpose or maybe they don't do a good job of achieving their intended purpose. You are going look at a set of websites to see how well they meet their intend purpose. All of the websites you will be looking at were designed for the same purpose, to share information about a restuarant.
 
-**Transition:** Have students go to the “Rating Websites” level on Code Studio
+**Setting:** Think about this, you and your family are trying to decide what place to get dinner from. You are looking at restuarants online to help you make your decision. For each website you will think about how well it helps with your decision of what place to get dinner from. Before we look at the websites lets think about what kind of information we will be looking for.
 
-Students will be deciding if a set of websites meets their intended purpose on a worksheet with a partner. Links to all of the websites can be found in Code Studio. For each website they will:
+**Prompt:** When you are trying to decide where to get dinner what kind of information are you looking for?
+
+**Discuss:** Have students share out the types of information they might look for when trying to make this decision. 
+
+**Group:** Put students in pairs.
+
+**Distribute:** Give one copy of [r rating-the-quality-of-websites] to each student.
+
+&fa-desktop; **Transition:** Have students go to the “Rating Websites” level on Code Studio to begin looking at the websites. Links to all of the websites can be found in Code Studio. Using the worksheet as a guide, students will:
 
 * Open each website one at a time.
 * Decide with your partner if and how well the website achieves its purpose. 
 * Identify at least three features of the website that support your rating, and record those features.
 * Repeat until you have gone through all the websites.
 
-If students do not agree with their partner that is ok but they should discuss the differences in opinion.
+If students do not agree with their partner that is okay but they should discuss the differences in opinion.
 
 !!!content <content-0>
 

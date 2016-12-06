@@ -41,17 +41,17 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "instructions": "# use setProperty\r\n\r\n* use setProperty to set the color of the other 3 buttons so all 4 are orange.\r\n\r\nThis is a small step it shouldn't take long.",
     "log_conditions": [
       {
         "entries": [
-          "setProptery"
+          "setProperty"
         ],
         "matchType": "exact",
         "minTimes": 4,
         "message": "There should be at least 4 calls to setProperty - one for each of the 4 buttons to set the background color."
       }
     ],
+    "markdown_instructions": "# You try it -- use setProperty\r\n\r\nTime to get coding!  This is the starting point for a whole new project. \r\n\r\n* We've started you out with some code that sets the color of one of the buttons.\r\n* Use setProperty 3 more times to set the color of the other 3 buttons so all 4 are orange.\r\n    * We've chosen an orange color `rgb(230,155,0)` for now, but this will change later.\r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

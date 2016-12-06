@@ -59,9 +59,17 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
+    "video_key": "csp_applab_processing_lists",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
