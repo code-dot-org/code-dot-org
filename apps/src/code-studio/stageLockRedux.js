@@ -237,7 +237,17 @@ export const closeLockDialog = () => ({
 });
 
 // Helpers
+/**
+ * Generate an array of lock status info for each student in th provided section
+ * or an empty array if no section/students.
+ * @param {object} section
+ * @param {string} stageId
+ * @returns {object[]}
+ */
 const lockStatusForStage = (section, stageId) => {
+  if (section === undefined) {
+    return [];
+  }
   const students = section[stageId];
   return students.map(student => ({
     userLevelData: student.user_level_data,
