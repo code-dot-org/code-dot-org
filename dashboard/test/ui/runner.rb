@@ -563,6 +563,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   elsif succeeded
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
+    HipChat.log "#{log_prefix} Success log link #{test_run_string} #{log_link}"
   else
     HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
     HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
