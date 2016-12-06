@@ -146,7 +146,7 @@
     "react-addons-test-utils": "15.3.0",
     "react-bootstrap": "0.30.1",
     "react-color": "2.2.5",
-    "react-datepicker": "0.32.0",
+    "react-datepicker": "0.37.0",
     "react-dom": "15.3.0",
     "react-idle-timer": "1.3.3",
     "react-lazy-load": "3.0.10",

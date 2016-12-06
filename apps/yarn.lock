@@ -8697,13 +8697,13 @@ react-color@2.2.5:
     reactcss "^1.0.6"
     tinycolor2 "^1.1.2"
 
-react-datepicker@0.32.0:
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.32.0.tgz#32dfff128ee359359c67572253cafa06ab581156"
+react-datepicker@0.37.0:
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/react-datepicker/-/react-datepicker-0.37.0.tgz#94eef12ae508d733c74fbf9e0f996609a9dd9b89"
   dependencies:
     classnames "^2.2.5"
     moment "^2.13.0"
-    react-onclickoutside "^4.8.0"
+    react-onclickoutside "^5.7.1"
     tether "^1.3.2"
 
 react-dnd@^2.1.4:
@@ -8790,12 +8790,6 @@ react-motion@0.4.5:
   dependencies:
     performance-now "^0.2.0"
     raf "^3.1.0"
-
-react-onclickoutside@^4.8.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-4.9.0.tgz#2908c3136e244102bea5e5437a838a528d5d2995"
-  dependencies:
-    object-assign "^4.0.1"
 
 react-onclickoutside@^5.7.1:
   version "5.7.1"
