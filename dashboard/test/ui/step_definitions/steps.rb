@@ -1,3 +1,4 @@
+# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
@@ -160,6 +161,14 @@ end
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+end
+
+Then /^I make all links open in the current tab$/ do
+  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
+end
+
+Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
+  @browser.execute_script("$('a[target=_blank', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
