@@ -2,9 +2,9 @@ import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {add, update, remove} from '../redux/watchedExpressions';
+import {add, update, remove} from '../../redux/watchedExpressions';
 import TetherComponent from 'react-tether';
-import onClickOutside from 'react-onclickoutside';
+import AutocompleteSelector from './AutocompleteSelector';
 
 const WATCH_VALUE_NOT_RUNNING = "undefined";
 const DEFAULT_AUTOCOMPLETE_OPTIONS = [
@@ -24,28 +24,12 @@ const DEFAULT_AUTOCOMPLETE_OPTIONS = [
 
 const buttonSize = '34px';
 const inputValueWidth = 159;
-const autocompletePanelWidth = 163;
 const inputElementHeight = 29;
 
 const styles = {
   watchContainer: {
     width: '100%',
     height: '100%'
-  },
-  autocompletePanel: {
-    width: autocompletePanelWidth,
-    height: 'initial',
-    background: 'white',
-    color: '#808080',
-    border: '1px gray solid',
-    padding: 0,
-    marginTop: -2,
-    marginLeft: -1
-  },
-  autocompleteOption: {
-    cursor: 'pointer',
-    margin: 0,
-    padding: 4
   },
   watchRemoveButton: {
     fontSize: 23,
@@ -92,57 +76,6 @@ const styles = {
     fontSize: '12px'
   }
 };
-
-const AutocompleteSelector = onClickOutside(React.createClass({
-  getInitialState() {
-    return {
-      selectedOption: this.props.options.length - 1
-    };
-  },
-
-  handleClickOutside() {
-    this.props.onClickOutside();
-  },
-
-  render() {
-    // If we ever want to highlight range of matches:
-    // http://stackoverflow.com/a/2295681
-
-    return (
-      <div
-        id="autocomplete-panel"
-        style={styles.autocompletePanel}
-      >
-        {this.props.options.map((option, index) => {
-          const isSelected = index === this.props.currentIndex;
-          const selectedStyle = {
-            backgroundColor: '#cad6fa',
-            color: 'black'
-            };
-          return (
-            <div
-              key={option}
-              onClick={(e) => this.props.onOptionClicked(option, e)}
-              onMouseOver={() => this.props.onOptionHovered(index)}
-              style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
-            >
-              {option}
-            </div>
-          );
-        })}
-      </div>
-    );
-  },
-
-  propTypes: {
-    currentText: React.PropTypes.string,
-    currentIndex: React.PropTypes.number,
-    options: React.PropTypes.arrayOf(React.PropTypes.string),
-    onOptionClicked: React.PropTypes.func,
-    onOptionHovered: React.PropTypes.func,
-    onClickOutside: React.PropTypes.func
-  }
-}));
 
 /**
  * A "watchers" window for our debugger.
@@ -363,9 +296,6 @@ const DebugWatch = React.createClass({
   },
 
   componentDidUpdate(_, prevState) {
-    if (prevState.text !== this.state.text) {
-      //this.filterOptions();
-    }
     if (prevState.autocompleteOpen && !this.state.autocompleteOpen) {
       this.resetAutocomplete();
     }
