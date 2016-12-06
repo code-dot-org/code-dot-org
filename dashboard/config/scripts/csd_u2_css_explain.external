@@ -1,0 +1,11 @@
+name 'CSD U2 CSS explain'
+title 'Stop'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+* Look at different CSS color names
+* 
+
+MARKDOWN

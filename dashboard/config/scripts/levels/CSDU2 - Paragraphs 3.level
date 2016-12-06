@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Header Sizes\r\n\r\nPlay around with some different sized headers. \r\n\r\n# Do This\r\n\r\n* Add the names of your favorite animals above the sentence they go with. Make the names of the animals smaller headers than the \"Animals\" title for the page.",
+    "markdown_instructions": "# Header Sizes\r\n\r\nAdd the names of your favorite animals above the sentence they go with. Make the names of the animals smaller headers than the \"Animals\" title for the page.\r\n\r\nFor more on headers checkout <a href=\"http://www.w3schools.com/html/html_headings.asp\">W3 Schools - Headers</a> .",
     "project_template_level_name": "CSDU2 - Paragraphs and headers Template",
     "instructions_important": "false"
   },

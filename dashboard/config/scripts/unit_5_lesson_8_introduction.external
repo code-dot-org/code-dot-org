@@ -1,0 +1,27 @@
+name 'Unit 5 Lesson 8 Introduction'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 8 - *if* statements
+
+## Background
+
+
+## Vocabulary
+
+* **Vocab**
+* **Vocab**
+
+## Lesson
+
+* Intro
+* Activity
+* Wrap
+
+## Resources
+
+* Video: Introduction to Design Mode (embedded in code studio)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
