@@ -183,7 +183,6 @@ Bounce.createBallElements = function (i) {
   ballIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
   ballIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballIcon.setAttribute('clip-path', 'url(#ballClipPath' + i + ')');
-  ballIcon.style.transformOrigin = 'center';
   svg.appendChild(ballIcon);
 };
 
@@ -1145,12 +1144,10 @@ Bounce.displayBall = function (i, x, y, rotation) {
                         x * Bounce.SQUARE_SIZE);
   ballIcon.setAttribute('y',
                         y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
-  ballIcon.style.transform = `rotate(${rotation}deg)`;
 
-  // Disable rotation in firefox, transform-origin works differently
-  // TODO(ram): fix firefox properly after HoC
-  ballIcon.style.MozTransform = '';
-
+  var xCenter = (x * Bounce.SQUARE_SIZE) + (Bounce.PEGMAN_WIDTH / 2);
+  var yCenter = (y * Bounce.SQUARE_SIZE) + Bounce.BALL_Y_OFFSET + (Bounce.PEGMAN_HEIGHT / 2);
+  ballIcon.setAttribute('transform', `rotate(${rotation} ${xCenter} ${yCenter})`);
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);
