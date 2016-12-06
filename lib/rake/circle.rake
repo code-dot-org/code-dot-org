@@ -61,7 +61,10 @@ namespace :circle do
       next
     end
 
-    RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
+    Dir.chdir('dashboard') do
+      HipChat.log 'unicorn -c config/unicorn.rb -E test'
+      RakeUtils.exec_in_background 'unicorn -c config/unicorn.rb -E test'
+    end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
