@@ -7,6 +7,7 @@
 import $ from 'jquery';
 import React from 'react';
 import SessionTime from '../components/session_time';
+import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
 import color from '@cdo/apps/util/color';
 import {
@@ -168,7 +169,7 @@ const WorkshopAttendance = React.createClass({
 
   render() {
     if (this.state.loadingSummary) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
 
     const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
