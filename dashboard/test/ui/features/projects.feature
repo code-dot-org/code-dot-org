@@ -45,6 +45,7 @@ Scenario: Applab Flow
   Then I should see title "Code Ninja - App Lab"
   And element "#codeWorkspace" is hidden
   And I press the first "#footerDiv .more-link" element
+  And I make all links open in the current tab
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # We'll originally go to /view, then get pushStated to /edit
@@ -59,6 +60,7 @@ Scenario: Applab Flow
   And element "#codeWorkspace" is hidden
   And I should see title "Code Ninja - App Lab"
   And I press the first "#footerDiv .more-link" element
+  And I make all links open in the current tab
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # Don't actually get redirect this time (stay on /view)
