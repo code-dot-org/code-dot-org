@@ -69,7 +69,7 @@ module ProxyHelper
   # Unlike render_proxied_url, this does not attempt to render the URL, but instead
   # just follows it to figure out what the redirected URL is. It's also the case
   # that we'll stop as soon as we've been redirected to a URL on this site.
-  def resolve_redirect_url(location, redirect_limit: 5)
+  def resolve_redirect_url(location, allowed_hostname_suffixes:, redirect_limit: 5)
     if redirect_limit == 0
       return 500, 'Redirect loop'
     end
@@ -79,6 +79,11 @@ module ProxyHelper
 
     # If we've resolved to a path on this host/port, stop trying to redirect
     if url.host === request.host && url.port === request.port
+      return 200, location
+    end
+
+    # If hostname isn't in our white list, don't attempt a redirect
+    unless allowed_hostname?(url, allowed_hostname_suffixes)
       return 200, location
     end
 
@@ -95,7 +100,7 @@ module ProxyHelper
     media = http.request_get(path + '?' + query)
 
     if media.is_a? Net::HTTPRedirection
-      resolve_redirect_url(media['location'], redirect_limit: redirect_limit - 1)
+      resolve_redirect_url(media['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
     else
       return media.code, media['location']
     end
