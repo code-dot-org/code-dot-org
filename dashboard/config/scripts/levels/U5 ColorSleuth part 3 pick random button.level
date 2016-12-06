@@ -41,18 +41,30 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "instructions": "# make a random button a different color.\r\n\r\nThe last lines of your code should look something like this:\r\n\r\n```\r\nvar diffColor = \"rgb(\"250, 174, 10)\";\r\nvar randButtonID = \"button\"+randomNumber(1,4); \r\nsetProperty(randButtonID, \"background-color\", diffColor);\r\n```\r\n\r\nTry it out.  \r\n\r\nSuggestion:\r\nAdd `console.log(randButtonID)` so you can see which button is supposed to have the different color.  It's probably hard to spot!",
     "log_conditions": [
       {
         "entries": [
-          "setProptery"
+          "setProperty"
         ],
         "matchType": "exact",
         "minTimes": 5,
         "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
+      },
+      {
+        "entries": [
+          "randomNumber"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "There should be a call to randomNumber(min,max) in the code as part of generating a random button ID like \"button\"+some number"
       }
     ],
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "**Common Mistake**\r\n\r\n* It's likely that some students will forget to remove the quotation marks and accidentally try to use `\"randButtonID\"` as the id in setProperty like this:\r\n\r\n`setProperty(\"randButtonID\", \"background-color\", diffColor);`\r\n\r\nThere should be no quotation marks *because you want to use the value stored in randButtonID not the string \"randButtonID\".*  It should look like the example in the instructions:\r\n\r\n`setProperty(randButtonID, \"background-color\", diffColor);`\r\n",
+    "markdown_instructions": "# You try it - Pick a button at random to make a different color\r\n\r\nWe've included the code discussed on the previous page below. \r\n\r\nThe last lines of your code should look something like this:\r\n\r\n```\r\nvar diffColor = \"rgb(\"250, 175, 20)\";\r\nvar randButtonID = \"button\"+randomNumber(1,4);   // create a random button ID\r\nsetProperty(randButtonID, \"background-color\", diffColor);  // set its color to diffColor\r\n```\r\n\r\nNotice that there is really only one new line - to make the `randButtonID` variable.  \r\nThe other change to is replace *\"button3\"* as the id in setProperty with *randButtonID*.\r\n\r\nSuggestion:\r\nAdd `console.log(randButtonID)` somewhere after you generate the button ID so you can see which button is supposed to have the different color.  It might be hard to spot!"
   },
   "published": true,
   "notes": "Add log conditions for randomNumber",
