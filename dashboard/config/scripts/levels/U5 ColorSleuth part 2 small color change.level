@@ -41,17 +41,17 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "instructions": "# make one slightly different\r\n\r\n* add two lines to the bottom of the code you have so far.\r\n* 1. make a new variable called `diffColor` and make each of its RGB values slightly different.\r\n* Suggestion: add 10 to each of the values.\r\n\r\n`var diffColor = \"rgb(250, 174, 10)\";`\r\n\r\n2. make a call to setProperty for one of the buttons using `diffColor`  -- this will override \r\n\r\nNOTE: your code will set the background color of one of the buttons twice, but it will happen so fast you won't notice.\r\n\r\nThe idea is that the first 5 lines will still set each button to the same color.  The next 2 will create the diffColor and setProperty for one of them.",
     "log_conditions": [
       {
         "entries": [
-          "setProptery"
+          "setProperty"
         ],
         "matchType": "exact",
         "minTimes": 5,
         "message": "There should be at least 5 calls to setProperty - one for each of the 4 buttons to set the background color initially, then a final call that sets the background-color of one of the buttons to something else."
       }
     ],
+    "markdown_instructions": "# Let's make one square slightly different\r\n\r\nAdd two lines to the bottom of the code you have that look like something like this.\r\n\r\n![](https://images.code.org/67e6a97cfeeada7ec9facfdafc7853c1-image-1480873865156.png)\r\n\r\nWhat does this do? We're doing two things...\r\n\r\n1. Creating a variable to hold the RGB string of a different color, and \r\n2. overwriting the background color of one of the buttons after having just set it a few lines earlier\r\n\r\nYes, this means your code will change the background color of one of the buttons a few lines after you just set the color in the first place but it will happen so fast you won't notice, and doing it this way will be useful later on.\r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

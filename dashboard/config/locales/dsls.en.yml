@@ -393,6 +393,9 @@ en:
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
       Balancing Teacher and Tools in Unit 1: {}
+      Basic mechanics of variables:
+        description here: description here
+        title: title
       Begin planning your project:
         description here: description here
         title: title
@@ -427,6 +430,12 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U2 CSS explain:
+        Stop: Stop
+        description here: description here
+      CSD U2 text style review:
+        CSS: CSS
+        description here: description here
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -837,6 +846,9 @@ en:
         title: title
       Common Misconceptions about Functions: {}
       Conditions and Logic: {}
+      Controlling Memory - Other ways to assign values:
+        description here: description here
+        title: title
       Correlation vs Causation: {}
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
@@ -1303,6 +1315,7 @@ en:
       How Set Property Works:
         description here: description here
         title: title
+      'How To: Share Code with Teammates': {}
       How are Images Encoded?: {}
       How onEvent Works:
         description here: description here
@@ -1311,6 +1324,9 @@ en:
         description here: description here
         title: title
       How the Boolean &&, || and ! Operators Work:
+        description here: description here
+        title: title
+      How to make a random color:
         description here: description here
         title: title
       How to pick a random button:
@@ -1663,6 +1679,9 @@ en:
         description here: description here
         title: title
       'Sending Numbers: The Big Picture': {}
+      Simple Decisions with if-statements:
+        description here: description here
+        title: title
       Social Sleuth: {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
@@ -1695,6 +1714,10 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      The &#39;return&#39; Command test:
+        description here: description here
+        title: title
+      The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
@@ -2228,6 +2251,48 @@ en:
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
       Unit 4 Lesson 9 Introduction: {}
+      Unit 5 Lesson 1:
+        description here: description here
+        title: title
+      Unit 5 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 10 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 2 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 3 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 4 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 7 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 8 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 9 Introduction:
+        description here: description here
+        title: title
+      'Variable Scope: Local vs. Global':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -4255,9 +4320,21 @@ en:
       CSD Header Size Prediction:
         ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">
         <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
       CSD Headers Prediction:
         ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "

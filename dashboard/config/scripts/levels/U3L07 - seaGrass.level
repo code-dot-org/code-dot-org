@@ -51,7 +51,7 @@
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "App lab is expecting that the drawSeaGrass function will have two parameters - one for the radius of the arc and another for the number of 'waves' it will draw.  Is it possible you modified the function definition, but didn't actually call the 2-parameter version?  Check out drawAllSeaGrass to make sure that you CALL drawSeaGrass with  values for the two parameters."
+        "message": "App lab is expecting that the drawSeagrass function will have two parameters - one for the radius of the arc and another for the number of 'waves' it will draw.  Is it possible you modified the function definition, but didn't actually call the 2-parameter version?  Check out drawAllSeagrass to make sure that you CALL drawSeagrass with  values for the two parameters."
       },
       {
         "entries": [
@@ -127,7 +127,7 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "makerlab_enabled": "false",
-    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* made a call to a 2-param version of `drawSeaGrass(radius, numWaves)`.  The order of the parameters does not matter for our check - only that a 2-param version was *called*.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* made a call to a 2-param version of `drawSeagrass(radius, numWaves)`.  The order of the parameters does not matter for our check - only that a 2-param version was *called*.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "contained_level_names": null
   },
   "published": true,
