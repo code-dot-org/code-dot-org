@@ -731,7 +731,15 @@ class User < ActiveRecord::Base
   def in_progress_and_completed_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    user_scripts.compact
+    user_scripts.compact.reject do |user_script|
+      begin
+        user_script.script.nil?
+      rescue
+        # Getting user_script.script can raise if the script does not exist
+        # In that case we should also reject this user_script.
+        true
+      end
+    end
   end
 
   def all_advertised_scripts_completed?
