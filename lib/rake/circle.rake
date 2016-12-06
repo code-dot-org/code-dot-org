@@ -61,7 +61,9 @@ namespace :circle do
       next
     end
 
-    RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
+    Dir.chdir('dashboard') do
+      RakeUtils.exec_in_background "RAILS_ENV=test bundle exec unicorn -c config/unicorn.rb -E test -l #{CDO.dashboard_port}"
+    end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
