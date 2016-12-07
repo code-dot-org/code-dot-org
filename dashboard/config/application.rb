@@ -86,9 +86,6 @@ module Dashboard
       g.template_engine :haml
     end
 
-    $stderr.puts "misc config 1 in #{Time.now - last_time}"
-    last_time = Time.now
-
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -116,9 +113,6 @@ module Dashboard
       end
     end
 
-    $stderr.puts "configured i18n in #{Time.now - last_time}"
-    last_time = Time.now
-
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
@@ -138,9 +132,6 @@ module Dashboard
     )
     config.autoload_paths << Rails.root.join('lib')
 
-    $stderr.puts "configured asset precompile in #{Time.now - last_time}"
-    last_time = Time.now
-
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 
@@ -152,9 +143,6 @@ module Dashboard
     else
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
-
-    $stderr.puts "configured active mailer and memcache in #{Time.now - last_time}"
-    last_time = Time.now
 
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
@@ -168,7 +156,7 @@ module Dashboard
       require 'newrelic_ignore_downlevel_browsers'
     end
 
-    $stderr.puts "configured newrelic in #{Time.now - last_time}"
+    $stderr.puts "misc config 2 in #{Time.now - last_time}"
   end
 end
 $stderr.puts "application.rb elapsed time #{Time.now - start_time} seconds"

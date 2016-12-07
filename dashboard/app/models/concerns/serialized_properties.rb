@@ -98,6 +98,8 @@ module SerializedProperties
   private
 
   def init_properties
+    last_time = Time.now
     write_attribute('properties', {}) unless read_attribute('properties')
+    $stderr.puts "init_properties completed in #{(Time.now - last_time).to_i} seconds"
   end
 end
