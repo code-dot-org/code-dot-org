@@ -145,7 +145,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with age that's not a number" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -155,7 +155,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with negative age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: -15, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -165,7 +165,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with too large age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -234,13 +234,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create self-managed user without email or hashed email" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
@@ -260,7 +260,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create admin without email" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
