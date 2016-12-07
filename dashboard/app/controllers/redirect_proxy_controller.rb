@@ -18,9 +18,9 @@ class RedirectProxyController < ApplicationController
     status, result = resolve_redirect_url(url, allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES)
 
     if status == 200
-      render json: result, status: status
+      render plain: result, status: status
     else
-      render status: status
+      render plain: '', status: status
     end
   end
 end
