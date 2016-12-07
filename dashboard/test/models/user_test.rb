@@ -124,7 +124,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
@@ -135,7 +135,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age 21+" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
@@ -228,7 +228,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can create user without email" do
-    assert_difference('User.count') do
+    assert_creates(User) do
       User.create!(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
