@@ -30,7 +30,7 @@ const GameLabVisualizationHeader = React.createClass({
     const {interfaceMode, allowAnimationMode,
         onInterfaceModeChange} = this.props;
     return (
-      <div style={styles.main}>
+      <div style={styles.main} id="playSpaceHeader">
         <ToggleGroup
           selected={interfaceMode}
           onChange={onInterfaceModeChange}
