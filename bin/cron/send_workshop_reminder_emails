@@ -38,7 +38,8 @@ def main
       where(kind: 'ProfessionalDevelopmentWorkshopSignup').
       where(parent_id: workshop[:id]).
       each do |signup|
-      next if signup[:data]['status_s'] == 'cancelled'
+      parsed_signup_data = JSON.parse(signup[:data])
+      next if parsed_signup_data['status_s'] == 'cancelled'
       send_reminder_email(signup[:id], signup[:email])
     end
   end
