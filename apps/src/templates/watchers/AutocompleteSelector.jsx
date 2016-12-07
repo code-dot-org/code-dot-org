@@ -22,12 +22,6 @@ const styles = {
 };
 
 const AutocompleteSelector = onClickOutside(React.createClass({
-  getInitialState() {
-    return {
-      selectedOption: this.props.options.length - 1
-    };
-  },
-
   handleClickOutside() {
     this.props.onClickOutside();
   },
@@ -39,6 +33,7 @@ const AutocompleteSelector = onClickOutside(React.createClass({
     return (
       <div
         id="autocomplete-panel"
+        className="autocomplete-panel"
         style={styles.autocompletePanel}
       >
         {this.props.options.map((option, index) => {
@@ -50,7 +45,11 @@ const AutocompleteSelector = onClickOutside(React.createClass({
           return (
           <div
             key={option}
-            onClick={(e) => this.props.onOptionClicked(option, e)}
+            className="autocomplete-option"
+            onClick={(e) => {
+              this.props.onOptionClicked(option);
+              e.preventDefault();
+            }}
             onMouseOver={() => this.props.onOptionHovered(index)}
             style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
           >
@@ -63,12 +62,11 @@ const AutocompleteSelector = onClickOutside(React.createClass({
   },
 
   propTypes: {
-    currentText: React.PropTypes.string,
-    currentIndex: React.PropTypes.number,
-    options: React.PropTypes.arrayOf(React.PropTypes.string),
-    onOptionClicked: React.PropTypes.func,
-    onOptionHovered: React.PropTypes.func,
-    onClickOutside: React.PropTypes.func
+    currentIndex: React.PropTypes.number.isRequired,
+    options: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+    onOptionClicked: React.PropTypes.func.isRequired,
+    onOptionHovered: React.PropTypes.func.isRequired,
+    onClickOutside: React.PropTypes.func.isRequired
   }
 }));
 
