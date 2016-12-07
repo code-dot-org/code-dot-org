@@ -587,8 +587,8 @@ class UserTest < ActiveSupport::TestCase
     # Preconditions for test: The script is gone, but the associated UserScript still exists.
     # If we start failing this setup assertion (that is, we do automated cleanup
     # when deleting a script) then we can probably delete this test.
-    refute Script.exists? fake_script.id
-    assert UserScript.exists? user_script_2.id
+    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
+    assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
 
     # Test: We only get back the userscript for the script that still exists
     scripts = user.in_progress_and_completed_scripts
