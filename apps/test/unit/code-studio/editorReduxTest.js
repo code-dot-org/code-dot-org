@@ -1,6 +1,6 @@
 import { assert } from 'chai';
-import { createStore } from '@cdo/apps/redux';
-import reducer, {
+import {combineReducers} from 'redux';
+import reducers, {
   reorderLevel,
   addGroup,
   addStage,
@@ -35,6 +35,8 @@ const initialState = {
     }]
   }]
 };
+
+const reducer = combineReducers(reducers);
 
 describe('editorRedux reducer tests', () => {
   it('reorder levels', () => {
