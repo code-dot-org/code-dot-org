@@ -1,3 +1,6 @@
+start_time = Time.now
+last_time = Time.now
+
 require File.expand_path('../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -16,15 +19,18 @@ require 'animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 
+$stderr.puts "loaded other requires in #{Time.now - last_time} seconds"
+last_time = Time.now
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+$stderr.puts "loaded gems in #{Time.now - last_time} seconds"
+
 module Dashboard
   class Application < Rails::Application
-    start_time = Time.now
     last_time = Time.now
-
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -59,14 +65,14 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
 
-    puts "configured middleware in #{Time.now - last_time}"
+    $stderr.puts "configured middleware in #{Time.now - last_time}"
     last_time = Time.now
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 
-    puts "configured pegasus in #{Time.now - last_time}"
+    $stderr.puts "configured pegasus in #{Time.now - last_time}"
     last_time = Time.now
 
     require 'cdo/rack/upgrade_insecure_requests'
@@ -80,7 +86,7 @@ module Dashboard
       g.template_engine :haml
     end
 
-    puts "misc config 1 in #{Time.now - last_time}"
+    $stderr.puts "misc config 1 in #{Time.now - last_time}"
     last_time = Time.now
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -110,7 +116,7 @@ module Dashboard
       end
     end
 
-    puts "configured i18n in #{Time.now - last_time}"
+    $stderr.puts "configured i18n in #{Time.now - last_time}"
     last_time = Time.now
 
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
@@ -132,7 +138,7 @@ module Dashboard
     )
     config.autoload_paths << Rails.root.join('lib')
 
-    puts "configured asset precompile in #{Time.now - last_time}"
+    $stderr.puts "configured asset precompile in #{Time.now - last_time}"
     last_time = Time.now
 
     # use https://(*-)studio.code.org urls in mails
@@ -147,7 +153,7 @@ module Dashboard
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
 
-    puts "configured active mailer and memcache in #{Time.now - last_time}"
+    $stderr.puts "configured active mailer and memcache in #{Time.now - last_time}"
     last_time = Time.now
 
     # turn off ActionMailer logging to avoid logging email addresses
@@ -162,7 +168,7 @@ module Dashboard
       require 'newrelic_ignore_downlevel_browsers'
     end
 
-    puts "configured newrelic in #{Time.now - last_time}"
-    puts "application init elapsed time #{Time.now - start_time} seconds"
+    $stderr.puts "configured newrelic in #{Time.now - last_time}"
   end
 end
+$stderr.puts "application.rb elapsed time #{Time.now - start_time} seconds"
