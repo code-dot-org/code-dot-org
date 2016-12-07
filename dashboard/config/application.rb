@@ -22,6 +22,9 @@ Bundler.require(:default, Rails.env)
 
 module Dashboard
   class Application < Rails::Application
+    start_time = Time.now
+    last_time = Time.now
+
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -55,10 +58,16 @@ module Dashboard
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
+
+    puts "configured middleware in #{Time.now - last_time}"
+    last_time = Time.now
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
+
+    puts "configured pegasus in #{Time.now - last_time}"
+    last_time = Time.now
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -70,6 +79,10 @@ module Dashboard
     config.generators do |g|
       g.template_engine :haml
     end
+
+    puts "misc config 1 in #{Time.now - last_time}"
+    last_time = Time.now
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -97,6 +110,9 @@ module Dashboard
       end
     end
 
+    puts "configured i18n in #{Time.now - last_time}"
+    last_time = Time.now
+
     config.prize_providers = YAML.load_file("#{Rails.root}/config/prize_providers.yml")
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
@@ -116,6 +132,9 @@ module Dashboard
     )
     config.autoload_paths << Rails.root.join('lib')
 
+    puts "configured asset precompile in #{Time.now - last_time}"
+    last_time = Time.now
+
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = { host: CDO.canonical_hostname('studio.code.org'), protocol: 'https' }
 
@@ -128,6 +147,9 @@ module Dashboard
       config.cache_store = :memory_store, { size: MAX_CACHED_BYTES }
     end
 
+    puts "configured active mailer and memcache in #{Time.now - last_time}"
+    last_time = Time.now
+
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
 
@@ -139,5 +161,8 @@ module Dashboard
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end
+
+    puts "configured newrelic in #{Time.now - last_time}"
+    puts "application init elapsed time #{Time.now - start_time} seconds"
   end
 end
