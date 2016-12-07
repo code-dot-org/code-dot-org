@@ -1814,6 +1814,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setHSV(140, 1.00, 0.74);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var endLabel = new Blockly.FieldLabel();
       var dropdown2 = createSpriteGroupDropdown(
           msg.collidesWithAnySpriteName,
           value => endLabel.setText(msg.toTouchedSpriteName(
@@ -1825,8 +1826,6 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendValueInput('GROUPMEMBER')
           .setInline(true)
           .appendTitle(msg.set());
-      var endLabel = new Blockly.FieldLabel(msg.toTouchedSpriteName(
-              {spriteName: stripQuotes(dropdown2.getValue())}));
       this.appendDummyInput()
           .setInline(true)
           .appendTitle(endLabel);
