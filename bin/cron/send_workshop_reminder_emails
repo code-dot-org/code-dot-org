@@ -16,10 +16,13 @@ rescue ArgumentError
 end
 
 # Sends a workshop reminder email to the recipient specified by form.
-# @param form [Form] a ProfessionalDvelopmentWorkshopSignup form
-def send_reminder_email(form)
-  recipient = Poste2.ensure_recipient(form['email_s'], ip_address: '127.0.0.1')
-  Poste2.send_message('workshop_signup_reminder', recipient, form_id: form['id'])
+# @param form_id [Integer] the form ID for the
+#   ProfessionalDevelopmentWorkshopSignup
+# @param form_email [String] the form email for the
+#   ProfessionalDevelopmentWorkshopSignup
+def send_reminder_email(form_id, form_email)
+  recipient = Poste2.ensure_recipient(form_email, ip_address: '127.0.0.1')
+  Poste2.send_message('workshop_signup_reminder', recipient, form_id: form_id)
 end
 
 def main
@@ -36,7 +39,7 @@ def main
       where(parent_id: workshop[:id]).
       each do |signup|
       next if signup[:data]['status_s'] == 'cancelled'
-      send_reminder_email(signup)
+      send_reminder_email(signup[:id], signup[:email])
     end
   end
 end
