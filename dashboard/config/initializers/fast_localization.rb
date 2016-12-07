@@ -13,11 +13,17 @@ end
 
 # Preload translations (before application fork, after i18n_railtie initializer)
 Dashboard::Application.config.after_initialize do |_|
-  last_time = Time.now
-  $stderr.puts "skipping I18n.backend.init_translations" if ENV['SKIP_I18N_INIT']
-  I18n.backend.init_translations if (I18n.backend.respond_to? :init_translations) && !ENV['SKIP_I18N_INIT']
-  I18n.t 'hello'
-  $stderr.puts "I18n.backend.init_translations completed in #{(Time.now - last_time).to_i} seconds"
+  if ENV['SKIP_I18N_INIT']
+    $stderr.puts "skipping I18n.backend.init_translations"
+  else
+    last_time = Time.now
+    I18n.backend.init_translations if I18n.backend.respond_to? :init_translations
+    $stderr.puts "I18n.backend.init_translations completed in #{(Time.now - last_time).to_i} seconds"
+    last_time = Time.now
+    I18n.t 'hello'
+    $stderr.puts "I18n.t 'hello' completed in #{(Time.now - last_time).to_i} seconds"
+
+  end
 end
 
 # Patch the I18n FileUpdateChecker to only load changed i18n files when updated.
