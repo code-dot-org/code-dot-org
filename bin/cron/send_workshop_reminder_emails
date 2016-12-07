@@ -16,12 +16,12 @@ rescue ArgumentError
 end
 
 # Sends a workshop reminder email to the recipient specified by form.
-# @param form_id [Integer] the form ID for the
-#   ProfessionalDevelopmentWorkshopSignup
-# @param form_email [String] the form email for the
-#   ProfessionalDevelopmentWorkshopSignup
-def send_reminder_email(form_id, form_email)
-  recipient = Poste2.ensure_recipient(form_email, ip_address: '127.0.0.1')
+# @param form_id [Integer] the ID for the ProfessionalDevelopmentWorkshopSignup
+#   form
+# @param email [String] the email for the ProfessionalDevelopmentWorkshopSignup
+#   form
+def send_reminder_email(form_id, email)
+  recipient = Poste2.ensure_recipient(email, ip_address: '127.0.0.1')
   Poste2.send_message('workshop_signup_reminder', recipient, form_id: form_id)
 end
 
