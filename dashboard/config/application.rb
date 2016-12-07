@@ -67,7 +67,7 @@ module Dashboard
 
     $stderr.puts "configured middleware in #{(Time.now - last_time).to_i} seconds"
     last_time = Time.now
-    if CDO.dashboard_enable_pegasus
+    if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
