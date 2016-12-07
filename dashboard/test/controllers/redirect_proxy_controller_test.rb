@@ -1,6 +1,5 @@
 require 'webmock/minitest'
 WebMock.disable_net_connect!(:allow_localhost => true)
-require_relative '../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 
 class RedirectProxyControllerTest < ActionController::TestCase
@@ -8,7 +7,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
 
   test "should successfully get a redirect for url in whitelist" do
     short_uri = 'http://bit.ly/2gPJmTQ'
-    stub_request(:get, short_uri).to_return(
+    stub_request(:head, short_uri).to_return(
       :status => 301,
       :headers => {Location: LONG_URI})
 
@@ -45,7 +44,7 @@ class RedirectProxyControllerTest < ActionController::TestCase
     short_uri = 'http://bit.ly/2gPJmTQ'
 
     response = {body: 'Redirect', status: 302, headers: {location: short_uri}}
-    stub_request(:get, short_uri).to_return(
+    stub_request(:head, short_uri).to_return(
       response,
       response,
       response,

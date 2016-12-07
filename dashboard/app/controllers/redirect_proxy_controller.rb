@@ -8,7 +8,7 @@ class RedirectProxyController < ApplicationController
     ow.ly
     t.co
     tinyurl.com
-    Tr.im
+    tr.im
     goo.gl
   )
 
