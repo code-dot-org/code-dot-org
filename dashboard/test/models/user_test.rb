@@ -229,31 +229,31 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create user without email" do
     assert_difference('User.count') do
-      User.create!(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
+      User.create!(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
 
   test "cannot create self-managed user without email or hashed email" do
     assert_no_difference('User.count') do
-      User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
+      User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
     assert_no_difference('User.count') do
-      User.create(user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
   test "cannot make an account without email a teacher" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
-    user.user_type = 'teacher'
+    user.user_type = User::TYPE_TEACHER
     assert !user.save
   end
 
   test "cannot make an account without email an admin" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
     assert !user.save
@@ -261,7 +261,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "cannot create admin without email" do
     assert_no_difference('User.count') do
-      User.create(user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
@@ -448,7 +448,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.present?
     assert user.hashed_email.present?
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.email.blank?
@@ -459,7 +459,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(full_address: 'fake address')
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
@@ -470,7 +470,7 @@ class UserTest < ActiveSupport::TestCase
     user.update(email: 'unconfirmed_email@example.com')
 
     assert user.unconfirmed_email.present?
-    user.update(user_type: 'student')
+    user.update(user_type: User::TYPE_STUDENT)
 
     assert_nil user.unconfirmed_email
   end
@@ -481,7 +481,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@old.xx')
     user.save!
 
     assert_equal 'email@old.xx', user.email
