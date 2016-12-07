@@ -465,6 +465,16 @@ class UserTest < ActiveSupport::TestCase
     assert user.full_address.nil?
   end
 
+  test 'changing user from teacher to student removed unconfirmed_email' do
+    user = create :teacher
+    user.update(email: 'unconfirmed_email@example.com')
+
+    assert user.unconfirmed_email.present?
+    user.update(user_type: 'student')
+
+    assert_nil user.unconfirmed_email
+  end
+
   test 'changing user from student to teacher saves email' do
     user = create :student, email: 'email@old.xx'
 

@@ -330,6 +330,7 @@ class User < ActiveRecord::Base
   def hide_email_and_full_address_for_students
     if student?
       self.email = ''
+      self.unconfirmed_email = nil
       self.full_address = nil
     end
   end
