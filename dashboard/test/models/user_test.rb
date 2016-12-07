@@ -574,6 +574,28 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.encrypted_password != old_password
   end
 
+  test 'user in_progress_and_completed_scripts does not include deleted scripts' do
+    user = create :user
+    real_script = Script.starwars_script
+    fake_script = create :script
+
+    user_script_1 = create :user_script, user: user, script: real_script
+    user_script_2 = create :user_script, user: user, script: fake_script
+
+    fake_script.destroy!
+
+    # Preconditions for test: The script is gone, but the associated UserScript still exists.
+    # If we start failing this setup assertion (that is, we do automated cleanup
+    # when deleting a script) then we can probably delete this test.
+    refute Script.exists? fake_script.id
+    assert UserScript.exists? user_script_2.id
+
+    # Test: We only get back the userscript for the script that still exists
+    scripts = user.in_progress_and_completed_scripts
+    assert_equal scripts.size, 1
+    assert scripts.include?(user_script_1)
+  end
+
   test 'user is working on script' do
     user = create :user
     s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
