@@ -25,7 +25,7 @@ module ProxyHelper
     path = (url.path.empty?) ? '/' : url.path
     query = url.query || ''
 
-    # Limit how long we're willing to wait.
+    # Limit how long in seconds we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
@@ -92,17 +92,17 @@ module ProxyHelper
     path = (url.path.empty?) ? '/' : url.path
     query = url.query || ''
 
-    # Limit how long we're willing to wait.
+    # Limit how long in seconds we're willing to wait.
     http.open_timeout = 3
     http.read_timeout = 3
 
-    # Get the media.
-    media = http.request_get(path + '?' + query)
+    # Get the response.
+    response = http.request_head(path + '?' + query)
 
-    if media.is_a? Net::HTTPRedirection
-      resolve_redirect_url(media['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
+    if response.is_a? Net::HTTPRedirection
+      resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
     else
-      return media.code, media['location']
+      return response.code, response['location']
     end
 
   rescue URI::InvalidURIError
