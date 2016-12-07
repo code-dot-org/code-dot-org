@@ -314,9 +314,8 @@ const DebugWatch = React.createClass({
     });
   },
 
-  onAutocompleteOptionClicked(text, e) {
+  onAutocompleteOptionClicked(text) {
     this.addFromInput(text);
-    e.preventDefault();
   },
 
   onChange(e) {
@@ -384,7 +383,6 @@ const DebugWatch = React.createClass({
               <AutocompleteSelector
                 options={this.state.autocompleteOptions}
                 currentIndex={this.state.autocompleteSelecting ? this.state.autocompleteIndex : -1}
-                currentText={this.state.text}
                 onOptionClicked={this.onAutocompleteOptionClicked}
                 onOptionHovered={(index) => this.setState({
                   autocompleteSelecting: true,
