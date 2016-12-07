@@ -19,14 +19,14 @@ require 'animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 
-$stderr.puts "loaded other requires in #{Time.now - last_time} seconds"
+$stderr.puts "loaded other requires in #{(Time.now - last_time).to_i} seconds"
 last_time = Time.now
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-$stderr.puts "loaded gems in #{Time.now - last_time} seconds"
+$stderr.puts "loaded gems in #{(Time.now - last_time).to_i} seconds"
 
 module Dashboard
   class Application < Rails::Application
@@ -65,14 +65,14 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
 
-    $stderr.puts "configured middleware in #{Time.now - last_time}"
+    $stderr.puts "configured middleware in #{(Time.now - last_time).to_i} seconds"
     last_time = Time.now
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
 
-    $stderr.puts "configured pegasus in #{Time.now - last_time}"
+    $stderr.puts "configured pegasus in #{(Time.now - last_time).to_i} seconds"
     last_time = Time.now
 
     require 'cdo/rack/upgrade_insecure_requests'
@@ -85,7 +85,6 @@ module Dashboard
     config.generators do |g|
       g.template_engine :haml
     end
-
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -156,7 +155,7 @@ module Dashboard
       require 'newrelic_ignore_downlevel_browsers'
     end
 
-    $stderr.puts "misc config 2 in #{Time.now - last_time}"
+    $stderr.puts "misc config 2 in #{(Time.now - last_time).to_i} seconds"
   end
 end
-$stderr.puts "application.rb elapsed time #{Time.now - start_time} seconds"
+$stderr.puts "application.rb elapsed time #{(Time.now - start_time).to_i} seconds"
