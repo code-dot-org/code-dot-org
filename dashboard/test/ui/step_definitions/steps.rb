@@ -761,23 +761,11 @@ Given(/^I am a (student|teacher)$/) do |user_type|
 end
 
 def enroll_in_plc_course(user_email)
-  start_time = Time.now
-  last_time = Time.now
   require_rails_env
-  puts "time to require rails env: #{Time.now - last_time}"
-  last_time = Time.now
   user = User.find_by_email_or_hashed_email(user_email)
-  puts "time to find user: #{Time.now - last_time}"
-  last_time = Time.now
   course = Plc::Course.find_by(name: 'All The PLC Things')
-  puts "time to find course: #{Time.now - last_time}"
-  last_time = Time.now
   enrollment = Plc::UserCourseEnrollment.create(user: user, plc_course: course)
-  puts "time to create enrollment: #{Time.now - last_time}"
-  last_time = Time.now
   enrollment.plc_unit_assignments.update_all(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
-  puts "time to update unit assignments: #{Time.now - last_time}"
-  puts "enroll_in_plc_course start time: #{start_time} end time: #{Time.now} elapsed time: #{Time.now - start_time}"
 end
 
 Given(/^I am enrolled in a plc course$/) do
