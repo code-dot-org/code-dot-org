@@ -473,7 +473,7 @@ designMode.readProperty = function (element, name) {
     case 'image':
       return element.getAttribute('data-canonical-image-url');
     case 'screen-image':
-      return element.setAttribute('data-canonical-image-url');
+      return element.getAttribute('data-canonical-image-url');
     case 'picture':
       return element.getAttribute('data-canonical-image-url');
     case 'hidden':
@@ -483,7 +483,7 @@ designMode.readProperty = function (element, name) {
       // the serialized state
       return !!element.checked;
     case 'options':
-      return $(element).children().map((i, child) => child.text);
+      return $(element).children().map((i, child) => child.text).get();
     case 'groupId':
       return element.getAttribute('name');
     case 'placeholder':
@@ -493,7 +493,7 @@ designMode.readProperty = function (element, name) {
     case 'cols':
       return element.getAttribute('rows');
     case 'readonly':
-      return element.getAttribute('contenteditable');
+      return element.getAttribute('contenteditable') !== 'true';
     case 'is-default':
       return elementUtils.getId(element) === elementUtils.getDefaultScreenId();
     default:

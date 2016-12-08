@@ -299,8 +299,9 @@ step: 3`);
       description: "setProperty on API created dropdown",
       editCode: true,
       xml:
-        'dropdown("my_drop", "option1", "option2", "option3", "option4", "option5");' +
-        'setProperty("my_drop", "options", ["one", "two", "three"]);',
+        `dropdown("my_drop", "option1", "option2", "option3", "option4", "option5");
+        setProperty("my_drop", "options", ["one", "two", "three"]);
+        console.log("options: " + getProperty("my_drop", "options"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -315,9 +316,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, 'options: one,two,three');
         return true;
       },
       expected: {
@@ -332,7 +332,8 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><select id="my_drop" style="width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); position: absolute; left: 35px; top: 75px; background-color: rgb(26, 188, 156);"><option>Option 1</option><option>Option 2</option></select></div></div>',
       xml:
-        'setProperty("my_drop", "options", ["one", "two", "three"]);',
+        `setProperty("my_drop", "options", ["one", "two", "three"]);
+        console.log("options: " + getProperty("my_drop", "options"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -347,9 +348,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "options: one,two,three");
         return true;
       },
       expected: {
@@ -364,8 +364,10 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><canvas width="100px" height="100px" id="canvas1" style="position: absolute; left: 65px; top: 40px; margin: 0px;"></canvas></div></div>',
       xml:
-        'setProperty("canvas1", "width", 12);' +
-        'setProperty("canvas1", "height", 13);',
+        `setProperty("canvas1", "width", 12);
+        console.log("width: " + getProperty("canvas1", "width"));
+        setProperty("canvas1", "height", 13);
+        console.log("height: " + getProperty("canvas1", "height"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -381,9 +383,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "width: 12\nheight: 13");
         return true;
       },
       expected: {
@@ -398,7 +399,8 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="display: none; width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',
       xml:
-        'setProperty("screen1", "image", "' + flappyImage + '");',
+        `setProperty("screen1", "image", "${flappyImage}");
+        console.log("image: " + getProperty("screen1", "image"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -412,9 +414,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        expect(debugOutput.textContent).to.match(/image: .*flappy_promo.png$/);
         return true;
       },
       expected: {
@@ -429,7 +430,8 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="image1" style="height: 100px; width: 100px; position: absolute; left: 125px; top: 235px; margin: 0px;" /></div></div>',
       xml:
-        'setProperty("image1", "picture", "' + flappyImage + '");',
+        `setProperty("image1", "picture", "${flappyImage}");
+        console.log("picture: " + getProperty("image1", "picture"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -441,9 +443,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        expect(debugOutput.textContent).to.match(/picture: .*flappy_promo.png$/);
         return true;
       },
       expected: {
@@ -458,8 +459,10 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="radio" id="radio_button1" style="width: 12px; height: 12px; margin: 0px; position: absolute; left: 85px; top: 75px;" /></div></div>',
       xml:
-        'setProperty("radio_button1", "group-id", "gid1");' +
-        'setProperty("radio_button1", "checked", true);',
+        `setProperty("radio_button1", "group-id", "gid1");
+        console.log("group-id: " + getProperty("radio_button1", "group-id"));
+        setProperty("radio_button1", "checked", true);
+        console.log("checked: " + getProperty("radio_button1", "checked"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -471,9 +474,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "group-id: gid1\nchecked: true");
         return true;
       },
       expected: {
@@ -488,7 +490,11 @@ step: 3`);
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><div contenteditable="true" class="textArea" id="text_area1" style="width: 200px; height: 100px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 55px; top: 90px; margin: 0px; background-color: rgb(255, 255, 255);"></div></div></div>',
       xml:
-        'setProperty("text_area1", "readonly", true);',
+        `console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "readonly", false);
+        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "readonly", true);
+        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -499,9 +505,8 @@ step: 3`);
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "readonly: false\nreadonly: false\nreadonly: true");
         return true;
       },
       expected: {
