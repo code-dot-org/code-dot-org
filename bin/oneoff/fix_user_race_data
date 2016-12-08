@@ -23,10 +23,10 @@ User.where(user_type: User::TYPE_STUDENT).
   if race_data.length > 1 && (race_data.include? CLOSED_DIALOG)
     user.races = %w(closed_dialog)
   end
-  # Per the document, we eliminate any race data included in any response
-  # specifying more than five races.
+  # Per the document, we replace any race data specifying (strictly) more than
+  # five races with "nonsense".
   if race_data.length > 5
-    user.races = %w(closed_dialog)
+    user.races = %w(nonsense)
   end
 
   if user.changed?

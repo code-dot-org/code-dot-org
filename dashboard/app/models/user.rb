@@ -80,17 +80,20 @@ require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  # races: array of strings, the races that a student has selected, or nil if no selection was made
+  # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
-  # white: "White"
-  # black: "Black or African American"
-  # hispanic: "Hispanic or Latino"
-  # asian: "Asian"
-  # hawaiian: "Native Hawaiian or other Pacific Islander"
-  # american_indian: "American Indian/Alaska Native"
-  # other: "Other"
-  # opt_out: "Prefer not to say" (but selected this value and hit "Submit")
-  # closed_dialog: This is a special value indicating that the user closed the dialog rather than selecting a race
+  #   white: "White"
+  #   black: "Black or African American"
+  #   hispanic: "Hispanic or Latino"
+  #   asian: "Asian"
+  #   hawaiian: "Native Hawaiian or other Pacific Islander"
+  #   american_indian: "American Indian/Alaska Native"
+  #   other: "Other"
+  #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  #   closed_dialog: This is a special value indicating that the user closed the
+  #     dialog rather than selecting a race.
+  #   nonsense: This is a special value indicating that the user chose
+  #     (strictly) more than five races.
   serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
 
   # Include default devise modules. Others available are:
