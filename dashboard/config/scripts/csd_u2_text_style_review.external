@@ -3,5 +3,7 @@ title 'CSS'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-review information here
+# STOP: CSS Properties
+
+
 MARKDOWN
