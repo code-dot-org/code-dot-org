@@ -11,7 +11,7 @@ teacher_markdown <<MARKDOWN
 
 !!!say
 
-    In the past couple of lessons you have spent some time exploring different web pages and have taken the first steps of the problem solving process in designing your own ideal website. But how does your computer know how to display the page that you've designed on paper? Today you’re going to start thinking about the instructions you might need to give to someone else in order to communicate what your webpage looks like
+    In the past couple of lessons you have spent some time exploring different web pages and have taken the first steps of the problem solving process in designing part of your website. But how will your computer know how to display the page that you've designed on paper? Today you’re going to start thinking about the instructions you might need to give to someone else in order to communicate what your webpage looks like
 
 &fa-desktop; **Transition:** Have students go to Code Studio.
 
@@ -29,24 +29,19 @@ tip!!!tip-1
 
 #### Sharing Website Instructions
 
-* Pick one student to verbally share their instructions with you. 
+* Pick one student to verbally share one of their instructions with you.
 * The teacher should act as the client on the phone trying to draw.
-* Publicly “draw” the website exactly as the student gives it, but don’t make assumptions about styling. For example, if told to draw a title, purposely justify the title to the left and write in very small letters.
-* As the student gives you instructions have them tell you if you have drawn it correctly. If you have not drawn it correctly, have them make their directions more specific until you can draw it correctly.  
-* Write the improved instructions somewhere for all students to see.
-* Repeat this process until you have recreated most of the web page. You could also hear instructions from other students during this process.
+* Publicly “draw” the website exactly as the students instructions say, but don’t make assumptions about styling. For example, if told to draw a title, purposely justify the title to the left and write in very small letters.
+* As the student gives you instructions have them tell you if you have drawn it correctly. If you have not drawn it correctly, have them make their directions more specific until you can draw it correctly.
+* Change students after a couple instructions to get more students involved.
+* Keep track of the instructions students give and the improvements they make to the instructions somewhere visible as well.
+* Repeat this process until you have recreated most of the web page.
 
 [/guide]
-
-discussion!!!discussion-0
-
-!!!discussion <discussion-0>
-
-    Students should realize how difficult it is to make specific instructions that explain all parts of a page.
 
 **Discuss:** Once you have finished drawing the site, have students identify the common things they needed to express to someone how to represent the site (text on screen, centering, buttons, images, boxes, backgrounds, etc). 
 
 !!!say
 
-    Creating instructions to explain a website is difficult because there are lots of different things going on at once. First we have the actual text and images we want to be on the page. This is the **content** of the page. Second we have things like paragraphs, titles, lists and grids which group together content of the page. This is the **structure** of the page. Lastly there is the color, font, and sizing of things. This is the **style** of the page. These three things are being communicated at once in these instructions. Today we are going to focus in on how to communicate content and structure.
+    Creating instructions to explain a website is difficult because there are lots of different things going on at once. First we have the actual text and images we want to be on the page. This is the **content** of the page. Second we have things like paragraphs, titles, lists and grids which group together content of the page. This is the **structure** of the page. Lastly there is the color, font, and sizing of things. This is the **style** of the page. These three things are being communicated at once in these instructions. Today we are going to focus in on how to communicate content and structure by creating our own languages.
 MARKDOWN
