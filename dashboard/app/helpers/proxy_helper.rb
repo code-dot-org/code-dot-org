@@ -30,7 +30,8 @@ module ProxyHelper
     http.read_timeout = 3
 
     # Get the media.
-    media = http.request_get(path + '?' + query)
+    query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
+    media = http.request_get(path + query_string)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
