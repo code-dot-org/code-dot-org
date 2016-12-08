@@ -6,7 +6,6 @@ require 'sinatra/verbs'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
-require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
 require 'cdo/properties'
 require 'cdo/languages'
@@ -65,7 +64,6 @@ class Documents < Sinatra::Base
   end
 
   use Rack::Locale
-  use Rack::CdoDeflater
   use Rack::UpgradeInsecureRequests
 
   # Use dynamic config for max_age settings, with the provided default as fallback.
