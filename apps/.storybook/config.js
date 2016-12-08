@@ -82,12 +82,12 @@ function loadStories() {
     var module;
     try {
       module = sidecarContext(key);
+      module(storybookWrapper);
     } catch (e) {
       console.error("failed to load", key, e);
       console.error(e.stack);
       return;
     }
-    module(storybookWrapper);
   });
 
   var context = require.context("../src/", true, /\.jsx$/);
