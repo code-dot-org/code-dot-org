@@ -492,13 +492,12 @@ StudioApp.prototype.init = function (config) {
   // so it can decide whether or not to show a warning.
   this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
 
-  if (this.share && config.shareWarningInfo) {
-    if (!config.level.iframeEmbed) {
-      // shared apps that are embedded in an iframe handle warnings in
-      // startIFrameEmbeddedApp since they don't become "active" until the user
-      // clicks on them.
-      showWarnings(config);
-    }
+  // config.shareWarningInfo is set on a per app basis (in applab and gamelab)
+  // shared apps that are embedded in an iframe handle warnings in
+  // startIFrameEmbeddedApp since they don't become "active" until the user
+  // clicks on them.
+  if (config.shareWarningInfo && !config.level.iframeEmbed) {
+    showWarnings(config);
   }
 
   if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
