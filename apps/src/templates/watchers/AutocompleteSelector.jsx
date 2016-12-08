@@ -19,6 +19,10 @@ const styles = {
     margin: 0,
     padding: 4
   },
+  selectedStyle: {
+    backgroundColor: '#cad6fa',
+    color: 'black'
+  },
 };
 
 const AutocompleteSelector = onClickOutside(React.createClass({
@@ -38,10 +42,6 @@ const AutocompleteSelector = onClickOutside(React.createClass({
       >
         {this.props.options.map((option, index) => {
           const isSelected = index === this.props.currentIndex;
-          const selectedStyle = {
-            backgroundColor: '#cad6fa',
-            color: 'black'
-            };
           return (
           <div
             key={option}
@@ -51,12 +51,15 @@ const AutocompleteSelector = onClickOutside(React.createClass({
               e.preventDefault();
             }}
             onMouseOver={() => this.props.onOptionHovered(index)}
-            style={Object.assign({}, styles.autocompleteOption, isSelected ? selectedStyle : {})}
+            style={{
+              ...styles.autocompleteOption,
+              ...isSelected ? styles.selectedStyle : {}
+            }}
           >
             {option}
           </div>
-            );
-          })}
+          );
+        })}
       </div>
     );
   },
