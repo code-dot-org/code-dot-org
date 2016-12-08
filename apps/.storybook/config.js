@@ -77,6 +77,19 @@ function loadStories() {
   require('./about');
   require('./colors');
 
+  var sidecarContext = require.context("../src/", true, /\.story\.jsx$/);
+  sidecarContext.keys().forEach(key => {
+    var module;
+    try {
+      module = sidecarContext(key);
+    } catch (e) {
+      console.error("failed to load", key, e);
+      console.error(e.stack);
+      return;
+    }
+    module(storybookWrapper);
+  });
+
   var context = require.context("../src/", true, /\.jsx$/);
   context.keys().forEach(key => {
     var component;
