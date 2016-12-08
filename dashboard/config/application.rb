@@ -1,3 +1,6 @@
+start_time = Time.now
+last_time = Time.now
+
 require File.expand_path('../deployment', __FILE__)
 require 'cdo/poste'
 require 'rails/all'
@@ -16,12 +19,18 @@ require 'animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 
+$stderr.puts "loaded other requires in #{(Time.now - last_time).to_i} seconds"
+last_time = Time.now
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+$stderr.puts "loaded gems in #{(Time.now - last_time).to_i} seconds"
+
 module Dashboard
   class Application < Rails::Application
+    last_time = Time.now
     if Rails.env.development?
       require 'cdo/rack/whitelist'
       require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
@@ -55,10 +64,16 @@ module Dashboard
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
+
+    $stderr.puts "configured middleware in #{(Time.now - last_time).to_i} seconds"
+    last_time = Time.now
     if CDO.dashboard_enable_pegasus
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end
+
+    $stderr.puts "configured pegasus in #{(Time.now - last_time).to_i} seconds"
+    last_time = Time.now
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -139,5 +154,8 @@ module Dashboard
       require 'newrelic_rpm'
       require 'newrelic_ignore_downlevel_browsers'
     end
+
+    $stderr.puts "misc config 2 in #{(Time.now - last_time).to_i} seconds"
   end
 end
+$stderr.puts "application.rb elapsed time #{(Time.now - start_time).to_i} seconds"
