@@ -3,13 +3,15 @@
 # but the defaults should usually be used (or tweaked/fixed).
 
 # Approximate max Dashboard memory usage per process
-DASHBOARD_USAGE = 800 * 1024
+DASHBOARD_USAGE = 1400 * 1024
 
 # Approximate max Pegasus memory usage per process
-PEGASUS_USAGE = 400 * 1024
+PEGASUS_USAGE = 450 * 1024
 
 # Ratio of Pegasus to Dashboard worker processes
 PEGASUS_DASHBOARD_RATIO = 0.5.to_f
+
+# How much of our total memory we want these processes to take up
 MEMORY_RATIO = 0.8.to_f
 
 # Parse Varnish storage backend allocation from existing Chef attribute.

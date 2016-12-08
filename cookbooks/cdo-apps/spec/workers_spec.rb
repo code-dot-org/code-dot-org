@@ -28,22 +28,22 @@ describe 'cdo-apps::workers' do
   # Test various cpu/ram/varnish configurations and the number of workers calculated
   #        context          cpu mem dash peg varn
   run_test 'cpu-bound',     32, 64, 32,  16
-  run_test 'memory-bound',  32,  8,  6,   3
+  run_test 'memory-bound',  32,  8,  4,   2
   run_test 'varnish-bound', 32,  8,  1,   1, 4
   # staging server
-  run_test 'c3.2xlarge',     8, 15,  8,   4, 0.5
+  run_test 'c3.2xlarge',     8, 15,  6,   3, 0.5
   # ccpu-bound front-end
-  run_test 'c3.8xlarge',    32, 60, 32,  16, 4
+  run_test 'c3.8xlarge',    32, 60, 21,  10, 4
   # memory-bound next-gen front-end (with current conservative calculations)
-  run_test 'c4.8xlarge',    36, 60, 33,  16, 4
+  run_test 'c4.8xlarge',    36, 60, 22,  11, 4
 
   context 'varnish mebibyte suffix' do
     let(:varnish_suffix){'M'}
-    run_test 'varnish using mebibytes', 32, 8, 4, 2, 1024
+    run_test 'varnish using mebibytes', 32, 8, 2, 1, 1024
   end
 
   context 'varnish no suffix' do
     let(:varnish_suffix){''}
-    run_test 'varnish using bytes', 32, 8, 4, 2, 1024 * 1024 * 1024
+    run_test 'varnish using bytes', 32, 8, 2, 1, 1024 * 1024 * 1024
   end
 end
