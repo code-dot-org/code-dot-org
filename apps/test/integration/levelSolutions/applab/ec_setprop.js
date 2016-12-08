@@ -494,7 +494,9 @@ step: 3`);
         setProperty("text_area1", "readonly", false);
         console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
         setProperty("text_area1", "readonly", true);
-        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));`,
+        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "text-align", "right");
+        console.log("text-align: " + getProperty("text_area1", "text-align"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -506,7 +508,9 @@ step: 3`);
       },
       customValidator: function (assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "readonly: false\nreadonly: false\nreadonly: true");
+        assert.equal(
+          debugOutput.textContent,
+          "readonly: false\nreadonly: false\nreadonly: true\ntext-align: right");
         return true;
       },
       expected: {
