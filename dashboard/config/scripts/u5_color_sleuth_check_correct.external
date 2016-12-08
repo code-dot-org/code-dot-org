@@ -4,63 +4,84 @@ css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
+# Next Step - Activating buttons
 
-Okay great we can produce random game boards.
+M: 
+Okay great we can produce random game boards!
 
 What next?
 
+A: 
 I think the next thing would be to add click-functionality to the buttons.
 
+M:
 Yeah, where if you click on a button we check whether it's the right one or not.
-
-
-
 So we're going to need 4 event handlers, one for each button.
 
-Right. Actually I'm thinking this would be a great time for another function.  
+A:
+Right. Actually I'm thinking this would be a great time for another function. That will save us from writing the same code over and over again in each event handler.
 
-The function checks whether they hit the right button or not, and then we just call it from each event handler.  That will save us from writing the same code over and over again in each event handler.
+The function should:
+* check whether they hit the right button or not
+* update the score
 
-Here's what I'm thinking.
+M:
 
-[pseudocode diagram with arrows]
+Ooh, and we should also change the game board every time a button is clicked, too.
 
-I see.  How will the function know which button is correct?
+A:
 
+Good thinking.  We put that in this function too since it's called on every button click.  Let me sketch out what I'm thinking...
+
+![](https://images.code.org/69ec2ec89d37fea6848f09f58c2acab4-image-1481147311283.png)
+
+M: 
+I get it. Cool. So now my question is: How will the function know which button is correct?
+
+A: 
 Hmm.  Good question. 
 
-Oh, what if we added a global variable that stored the id of the button we randomly choose in the setBoard() function.  Here, let me add to the sketch...
+M: 
+Oh, what if we just made the variable that stored the id of the button we randomly choose, to be a global variable.  That way every time `setBoard()` is called, it generates a new random id and it becomes a global variable that any other function can look at.  
 
-[add global var to sketch, with arrows from setBoard]
+Here, let me add to the sketch...
 
-So checkCorrect() needs a way to know both which button was hit and what the correct button is.  The correct button is now a global variable.  What if we gave checkCorrect a parameter.  So if you call checkCorrect(3) for example, it checks whether button3 is correct and updates the score. 
+![](https://images.code.org/d94abc943c85f601b1feb36fb1a1bd9b-image-1481147483446.png)
 
-I see, good idea.
+A:
+Ok, good.  `randButtonId` is actually the "correct" button to click in the game, and it's now a global variable. But now checkCorrect() needs a way to know both *which button was hit* so we can compare it to `randButtonId`.    
 
-So the whole thing looks like this now.
+M:
+What if we gave checkCorrect a parameter.  So if you call checkCorrect("button3") for example, it checks whether "button3" is correct and updates the score. 
 
-[diagram]
+A: 
+I see, good idea.  And if the function parameter contains the Id of the button that was clicked, *and* now that `randButtonId` is global, we can write our if-statement to check if they clicked on the "correct" button.
 
+Here, I'll sketch it out...
 
-Whew that's a lot to change.  But let's do it.  
+![](https://images.code.org/9fd1647302cafd550b0b0ea52ebf9736-image-1481147552836.png)
 
-Yeah, it's a lot to change so we shouldn't do it all at once.  We should do it in steps, and at each step verify that the change is working.
+M:
+Nice. But, wow, that's a lot to change.  
 
-Right, and we can do that with console.log messages.  At each step will just add console.log messages to verify that things are working, and we can remove them later if they want.
+A:
+True, but I'm glad we thought this out on paper first. I think we can do it. We shouldn't do it all at once, though.  We should do it in steps, and at each step verify that the change is working.
 
-Good. There's enough to add that I think our first step should be to stub everything out first - add the variables, add the event handlers, add an empty checkCorrect function.  And *then* go through and start to plug things in.
+M:
+Let's just do that with `console.log` messages.  At each step will just add `console.log` messages to verify that things are working, and we can remove them later if we want.
 
-Okay, sounds like a plan, let's do it.
+A:
+Yeah. Let's take in pieces. I suggest:
 
+1. Add global var for correct button
+2. Add 4 event handlers
+3. Add function checkCorrect(id)
+4. Add if-statement to verify correctness.
 
+M: 
+Let's do it.
 
-
----NEXT----
-
-* Add global var for correct Square
-* Add 4 event handlers
-* Add checkCorrect(num)
-* Add global score var
+## Click continue to do the first step
 
 
 MARKDOWN
