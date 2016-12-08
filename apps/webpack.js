@@ -168,7 +168,7 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
-      publicPath: '/assets/js/',
+      publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
