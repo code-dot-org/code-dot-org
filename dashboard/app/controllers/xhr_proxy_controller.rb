@@ -34,6 +34,7 @@ class XhrProxyController < ApplicationController
     code.org
     data.cityofchicago.org
     data.gv.at
+    dtweet.io
     githubusercontent.com
     googleapis.com
     herokuapp.com
