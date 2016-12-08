@@ -184,8 +184,7 @@ var projects = module.exports = {
   },
 
   /**
-   * @returns {boolean} true if project has been reported enough times to
-   *   exceed our threshold
+   * @returns {boolean} true if project has a profanity or privacy violation
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
