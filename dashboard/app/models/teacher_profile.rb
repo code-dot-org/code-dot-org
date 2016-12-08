@@ -49,7 +49,7 @@ class TeacherProfile < ActiveRecord::Base
     PILOT = 'pilot'.freeze,  # Pilot teacher.
     TC_ATL = 'teachercon-atl'.freeze,  # TeacherCon Atlanta.
     TC_CHI = 'teachercon-chi'.freeze,  # TeacherCon Chicago.
-    TC_SLC = 'teachercon-slc'.freeze  # TeacherCon Salt Lake City.
+    TC_SLC = 'teachercon-slc'.freeze,  # TeacherCon Salt Lake City.
     QUARTERLY = 'quarterly'.freeze  # Attended at least three of the quarterly PDs.
   ].freeze
   validates_inclusion_of :pd, in: PD, allow_nil: true
