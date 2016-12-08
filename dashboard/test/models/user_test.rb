@@ -503,7 +503,7 @@ class UserTest < ActiveSupport::TestCase
   test 'sanitize_race_data sanitizes non-races' do
     user = create :student
     user.update!(races: %w(not_a_race white))
-    assert_equal %(nonsense), user.reload.races
+    assert_equal %w(nonsense), user.reload.races
   end
 
   test 'sanitize_race_data noops valid responses' do
