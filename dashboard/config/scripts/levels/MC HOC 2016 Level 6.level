@@ -42,13 +42,21 @@
     "use_player": "true",
     "use_score": "false",
     "failure_message_override": "Use the `spawn zombie` command under `when night` to spawn at least three zombies. Then, add `move a step toward player` to their `when spawned` event with a loop to help them chase you. If they’re too fast, add a `wait` command to slow them down.",
-    "instructions_important": "true",
-    "video_key": "mc_2016_spawn",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 2,
+    "events": 0,
+    "variables": 5,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

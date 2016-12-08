@@ -43,12 +43,21 @@
     "use_score": "false",
     "use_verification_function_for_failure": "false",
     "video_key": "mc_2016_loops",
-    "instructions_important": "true",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 3:\r\n\r\nGreat, the chicken is moving! But he stopped. In games entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\n§  When Clicked\r\nNo code necessary\r\n\r\n·       Teaches: Spawning. Loops.",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 3,
+    "events": 0,
+    "variables": 3,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

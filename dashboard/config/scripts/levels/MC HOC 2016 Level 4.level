@@ -41,12 +41,20 @@
     "failure_message_override": "If the chickens are all moving in the same direction, use `turn random` to make the chickens turn randomly left or right.",
     "use_player": "false",
     "use_score": "false",
-    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 4:\r\nThey’re moving now, but they look weird. Randomness helps multiple entities to move differently. Use a Repeat Random, a Turn Random or both to make your chickens look more natural. \r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever \r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n\r\n·       Teaches: Randomness, repeats loops with less scaffolding/instruction\r\n\r\nWhen Used:\r\nNo code required here\r\n\r\nSolution: only requires using random in turn or repeat - nothing in particular. Ok  if it doesn’t repeat forever.",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 3,
+    "events": 0,
+    "variables": 3,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

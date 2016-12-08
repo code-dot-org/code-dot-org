@@ -48,6 +48,15 @@
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",
   "level_concept_difficulty": {
+    "sequencing": 0,
+    "debugging": 0,
+    "repeat_loops": 1,
+    "repeat_until_while": 1,
+    "for_loops": 0,
+    "events": 1,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

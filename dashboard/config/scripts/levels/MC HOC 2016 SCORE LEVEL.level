@@ -43,12 +43,20 @@
     "use_verification_function_for_failure": "false",
     "failure_message_override": "If you're having trouble tagging 5 Golems, try changing the score to 2 per tag.",
     "failure_check_function": "function (verificationAPI) {\r\n  // Fail instantly\r\n  return verificationAPI.getEntityCount(\"ironGolem\") === 0;\r\n}",
-    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This level will introduce a scoring system.",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 3,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

@@ -41,7 +41,20 @@
     "timeout_failure_tick": "500",
     "timeout_after_when_run": "false",
     "success_condition": "function () {\r\n   return Studio.playerScore >= 6;\r\n}",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 3,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

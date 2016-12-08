@@ -42,12 +42,20 @@
     "failure_message_override": "Use the arrow keys to walk to the sheep and press space bar or click the game board to use the sheep. And, don’t forget to add the 'Drop' block to your code.",
     "use_player": "true",
     "use_score": "false",
-    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
   "notes": "UPDATE:\r\n\r\nThis level teaches Dropping Items",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 3,
+    "events": 0,
+    "variables": 2,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>
@@ -59,6 +67,10 @@
     <toolbox_blocks>
       <xml>
         <block type="craft_forever"/>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">up</title>
+        </block>
         <block type="craft_drop">
           <title name="TYPE">wool</title>
         </block>
