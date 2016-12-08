@@ -443,8 +443,6 @@ designMode.updateProperty = function (element, name, value) {
 
 designMode.readProperty = function (element, name) {
   switch (name) {
-    case 'id':
-      return elementUtils.getId(element);
     case 'left':
       // Ignore 'px' suffix
       return parseFloat(element.style.left);
@@ -468,8 +466,6 @@ designMode.readProperty = function (element, name) {
       return parseFloat(element.style.fontSize);
     case 'textAlign':
       return element.style.textAlign;
-    case 'icon-color':
-      return element.getAttribute('data-icon-color');
     case 'image':
       return element.getAttribute('data-canonical-image-url');
     case 'screen-image':
@@ -488,14 +484,8 @@ designMode.readProperty = function (element, name) {
       return element.getAttribute('name');
     case 'placeholder':
       return element.getAttribute('placeholder');
-    case 'rows':
-      return element.getAttribute('rows');
-    case 'cols':
-      return element.getAttribute('rows');
     case 'readonly':
       return element.getAttribute('contenteditable') !== 'true';
-    case 'is-default':
-      return elementUtils.getId(element) === elementUtils.getDefaultScreenId();
     default:
       // The property was not found in the list of properties which apply to all elements.
       // Check to see if the element-specific handler knows how to read the property,
