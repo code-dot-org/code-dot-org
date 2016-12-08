@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-07T00:37:58.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "<div style=\"float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;\">\r\n<details>\r\n<summary>**What colors can I choose?**</summary>\r\nBlah blah answer\r\n</details>\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n</div>\r\n# Float\r\n\r\n* Look at the `float` property inside your `img` rule-set\r\n* Discuss with your partner what you think the property does.\r\n* Change the value from `left` to `right`.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
