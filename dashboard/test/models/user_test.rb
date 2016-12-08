@@ -488,6 +488,30 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
+  test 'sanitize_race_data sanitizes closed_dialog' do
+    user = create :student
+    user.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes too many races' do
+    user = create :student
+    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes non-races' do
+    user = create :student
+    user.update!(races: %w(not_a_race white))
+    assert_equal %(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data noops valid responses' do
+    user = create :student
+    user.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), user.reload.races
+  end
+
   test 'under 13' do
     user = create :user
     assert !user.under_13?
