@@ -80,11 +80,11 @@ const styles = {
 /**
  * A "watchers" window for our debugger.
  */
-const DebugWatch = React.createClass({
+const Watchers = React.createClass({
   propTypes: {
-    debugButtons: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool,
-    watchedExpressions: React.PropTypes.instanceOf(Immutable.List),
+    debugButtons: React.PropTypes.bool.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
+    watchedExpressions: React.PropTypes.instanceOf(Immutable.List).isRequired,
     add: React.PropTypes.func.isRequired,
     update: React.PropTypes.func.isRequired,
     remove: React.PropTypes.func.isRequired,
@@ -415,4 +415,36 @@ export default connect(state => {
       dispatch(remove(expression));
     },
   };
-})(DebugWatch);
+})(Watchers);
+
+if (BUILD_STYLEGUIDE) {
+  Watchers.styleGuideExamples = storybook => {
+    storybook
+      .storiesOf('Watchers', module)
+      .addStoryTable([
+        {
+          name: 'with no watchers',
+          story: () => (
+            // TODO(bjordan): get rid of/inline the .debug-watch style
+            <div style={{width: 100, height: 100}}>
+              <Watchers
+                watchedExpressions={[]}
+                isRunning={true}
+              />
+            </div>
+          )
+        },
+        {
+          name: 'with one watcher',
+          story: () => (
+            <div style={{width: 100, height: 100}}>
+              <Watchers
+                watchedExpressions={Immutable.fromJS([{expression: 'cool', uuid: 1234}])}
+                isRunning={true}
+              />
+            </div>
+          )
+        },
+      ]);
+  };
+}
