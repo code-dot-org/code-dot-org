@@ -13,6 +13,7 @@ end
 Then /^I listen to the (\d+)(?:st|nd|rd|th) inline audio element$/ do |n|
   steps <<-STEPS
     Then I click selector ".csf-top-instructions .inline-audio:eq(#{n}) button"
+    And I wait for 2 seconds
     And element ".csf-top-instructions .inline-audio:eq(#{n}) button img" is visible
   STEPS
 end
