@@ -55,6 +55,7 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  * @param {!Object} options
  * @param {!string} options.channelId - service side channel.
  * @param {!boolean} options.isSignedIn - login state of current user.
+ * @param {boolean} options.isOwner - is signed in user the channel owner
  * @param {function} options.hasDataAPIs - Function to call to determine if
  *        the current program uses any data APIs.
  * @param {function} options.onWarningsComplete - Callback will be called after
@@ -67,7 +68,7 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
 exports.checkSharedAppWarnings = function (options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
   const promptForAge = hasDataAPIs && !options.isSignedIn && localStorage.getItem('is13Plus') !== "true";
-  const showStoreDataAlert = hasDataAPIs && !hasSeenDataAlert(options.channelId);
+  const showStoreDataAlert = hasDataAPIs && options.isOwner !== true && !hasSeenDataAlert(options.channelId);
 
   const handleShareWarningsTooYoung = () => {
     utils.trySetLocalStorage('is13Plus', 'false');
