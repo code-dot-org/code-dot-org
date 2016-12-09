@@ -166,6 +166,56 @@ return (hash);
 # beresp == Back-end response from the web server.
 sub vcl_backend_response {
 
+# Enable gzip compression for compressible assets.
+# List of mime-types matches CloudFront.
+# Ref: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html#compressed-content-cloudfront-file-types
+if (beresp.http.content-type ~ "^(<%=%w(
+application/eot
+application/x-otf
+application/font
+application/x-perl
+application/font-sfnt
+application/x-ttf
+application/javascript
+font/eot
+application/json
+font/ttf
+application/opentype
+font/otf
+application/otf
+font/opentype
+application/pkcs7-mime
+image/svg+xml
+application/truetype
+text/css
+application/ttf
+text/csv
+application/vnd.ms-fontobject
+text/html
+application/xhtml+xml
+text/javascript
+application/xml
+text/js
+application/xml+rss
+text/plain
+application/x-font-opentype
+text/richtext
+application/x-font-truetype
+text/tab-separated-values
+application/x-font-ttf
+text/xml
+application/x-httpd-cgi
+text/x-script
+application/x-javascript
+text/x-component
+application/x-mpegurl
+text/x-java-source
+application/x-opentype
+).join('|')%>)") {
+  set beresp.do_gzip = true;
+  set beresp.do_stream = false;
+}
+
 ### RESPONSE COOKIE FILTER
 # Only apply cookie filter to cached HTTP methods.
 if(bereq.method == "GET" || bereq.method == "HEAD") {
