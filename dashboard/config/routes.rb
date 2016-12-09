@@ -344,7 +344,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
-    get 'teacher_application', to: 'teacher_application#teacher_application'
+    get 'teacher_application', to: 'teacher_application#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'

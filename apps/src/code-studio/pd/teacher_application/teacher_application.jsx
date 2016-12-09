@@ -59,7 +59,7 @@ const TeacherApplication = React.createClass({
           groupName="gradesAtSchool"
           answers={grades}
           onChange={this.handleCheckboxChange}
-          stateKey={this.state.gradesAtSchool}
+          selectedItems={this.state.gradesAtSchool}
         />
         <h2>
           Section 2: Teacher Information
@@ -106,7 +106,7 @@ const TeacherApplication = React.createClass({
           groupName="genderIdentity"
           answers={["Female", "Male", "Other", "Prefer not to answer"]}
           onChange={this.handleRadioButtonListChange}
-          stateKey={this.state.genderIdentity}
+          selectedItems={this.state.genderIdentity}
         />
         <ButtonList
           type="check"
@@ -115,7 +115,7 @@ const TeacherApplication = React.createClass({
           answers={grades}
           includeOther={true}
           onChange={this.handleCheckboxChange}
-          stateKey={this.state.grades2016}
+          selectedItems={this.state.grades2016}
         />
         <ButtonList
           type="check"
@@ -124,7 +124,7 @@ const TeacherApplication = React.createClass({
           answers={subjects}
           includeOther={true}
           onChange={this.handleCheckboxChange}
-          stateKey={this.state.subjects2016}
+          selectedItems={this.state.subjects2016}
         />
         <ButtonList
           type="check"
@@ -133,7 +133,7 @@ const TeacherApplication = React.createClass({
           answers={grades}
           includeOther={true}
           onChange={this.handleCheckboxChange}
-          stateKey={this.state.grades2017}
+          selectedItems={this.state.grades2017}
         />
         <ButtonList
           type="check"
@@ -142,7 +142,7 @@ const TeacherApplication = React.createClass({
           answers={subjects}
           includeOther={true}
           onChange={this.handleCheckboxChange}
-          stateKey={this.state.subjects2017}
+          selectedItems={this.state.subjects2017}
         />
         <FieldGroup
           id="principalFirstName"
