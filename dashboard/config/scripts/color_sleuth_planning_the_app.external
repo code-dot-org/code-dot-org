@@ -66,7 +66,7 @@ Okay, you're probably right. I had an idea for how to do that when I noticed the
 <p style="text-align: center">MICHAEL</p>
 
 <p>
-You know how in Design Mode you can set properties of a button, for example, like its color, width, height, and so on?<br><br>
+You know how in Design Mode you can set properties of a button, like its color, width, height, and so on?<br><br>
 
 Well with <strong>setProperty</strong> you can do the same thing with code! 
 </p>
