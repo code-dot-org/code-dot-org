@@ -74,12 +74,12 @@ function getProjectUrl() {
  */
 export function appendUrl(url, fragment) {
   var hashIndex = url.indexOf('#');
-  if (hashIndex != -1) {
+  if (hashIndex !== -1) {
     url = url.substring(0, hashIndex);
   }
   var queryString = '';
   var queryIndex = url.indexOf('?');
-  if (queryIndex != -1) {
+  if (queryIndex !== -1) {
     queryString = url.substring(queryIndex);
     url = url.substring(0, queryIndex);
   }
@@ -149,7 +149,7 @@ let WireframeButtons = React.createClass({
     // and playlab). So instead, we check the first letter (after the /) in the path name of the
     // url, as legacy shares all start with /c
     // var isLegacyShare = this.props.isLegacyShare;
-    var isLegacyShare = window.location.pathname[1] == 'c';
+    var isLegacyShare = window.location.pathname[1] === 'c';
     var appTypeAndLegacy = this.props.appType + (isLegacyShare ? '_legacy' : '');
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
