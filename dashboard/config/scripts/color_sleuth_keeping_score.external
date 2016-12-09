@@ -4,106 +4,131 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Updating the Score
+<div style="width: 400px; margin: auto">
 
-A:
+<p style="text-align: center"> ALEXIS </p>
 
-Okay, now let's think about our if statement in checkCorrect and how to update the score properly. How do you want scoring to work.
+<p>Okay, now let's think about our if statement in checkCorrect and how to update the score properly. How do you want scoring to work?</p>
 
-M:
+<p style="text-align: center"> MICHAEL </p>
 
-I think I want to make it so that if you guess correctly you get 1 point, but if you get it wrong you lose 3 points!
+<p>I think I want to make it so that if you guess correctly you get 1 point, but if you get it wrong you lose 3 points!</p>
 
-A:
+<p style="text-align: center"> ALEXIS </p>
 
-Okay cool. To do that though we need to know which player's score to update.
+<p>Okay cool. To do that though we need to know which player's score to update.</p>
 
+<p style="text-align: center"> MICHAEL  </p>
 
-M: 
+<p>Right. To update the score we actually need to know two things: </p>
 
-Right. To update the score we actually need to know two things: 
+<ol>
+<li>If the correct button was pressed or not and </li>
 
-1. If the correct button was pressed or not and 
-2. Which player's score we need to update
+<li>Which player's score we need to update</li>
+</ol>
 
-A:
+<p style="text-align: center"> ALEXIS </p>
 
-Well, first of all, that sounds like we need new global variables.  One to keep track of each player's score.
+<p>Well, first of all, it sounds like we need new global variables to keep track of each player's score.</p>
 
-M:
+<p style="text-align: center"> MICHAEL </p>
 
-Right.  Let me make a note of it.
+<p>Right.  Let me make a note of it.</p>
 
-![](https://images.code.org/12ab031e9fad353284b91673e6ff7889-image-1481216393992.png)
+</div>
+<img src="https://images.code.org/12ab031e9fad353284b91673e6ff7889-image-1481216393992.png" alt="" style="display: block; margin: auto;">
 
-A:
+<div style="width: 400px; margin: auto">
 
-And to know which player's score to update we can just nest some if-statements inside our current one.  Let me hack out some pseudocode:
+<p style="text-align: center"> ALEXIS </p>
 
-![](https://images.code.org/b0bc443fc879241600121f7b51a47157-image-1481218418095.png)
+<p>And to know which player's score to update we can just nest some if-statements inside our current one.  Let me hack out some pseudocode:</p>
 
-Ugh.  Just writing that down felt like a lot.
+</div>
 
-M: 
+<img src="https://images.code.org/b0bc443fc879241600121f7b51a47157-image-1481218418095.png" alt="" style="display: block; margin: auto;">
 
-Yeah, I was thinking we could use a series of compound expressions like this.  
+<div style="width: 400px; margin: auto">
 
-![](https://images.code.org/f54131bd28b0477fd5fc2b7ed6440fb8-image-1481218431055.png)    
-Blech.  Not much better. 
+<p>Ugh.  Just writing that down felt like a lot.</p>
 
-A:
+<p style="text-align: center"> MICHAEL  </p>
 
-I just thought of a 3rd option...and don't hate me for suggesting this, but...we could make another function called something like `updateScoreBy(amountToAdd)`.
+<p>Yeah, I was thinking we could use a series of compound expressions like this.  </p>
 
-And this function's whole job is to figure out whose turn it is and then add the amount given in the parameter to that player's score.
+</div>
 
-M:
+<img src="https://images.code.org/f54131bd28b0477fd5fc2b7ed6440fb8-image-1481218431055.png" alt="" style="display: block; margin: auto;"/> 
 
-Mmmmm. Interesting.  But what if we need to subtract from the score? Do we need a new function?
+<div style="width: 400px; margin: auto">
 
-A:
+<p style="text-align: center"> MICHAEL  </p>
 
-Actually, No! We can just give a negative number to the parameter if we want to subtract! If we *add* `-3` to the score that's the same as subtracting.
+<p>Blech.  Not much better. </p>
 
-M:
+<p style="text-align: center"> ALEXIS </p>
 
-Oh, that's clever!  Will it save us code?
+<p>I just thought of a 3rd option...and don't hate me for suggesting this, but...we could make another function called something like <code>updateScoreBy(amountToAdd)</code>.</p>
 
-A:
-Maybe, let me sketch it out. 
+<p>And this function's whole job is to figure out whose turn it is and add the amount given in the parameter to the correct player's score.</p>
 
-![](https://images.code.org/a8061b4a372ec03942543179961e0c25-image-1481218129488.png)
+<p style="text-align: center"> MICHAEL </p>
 
-M:
+<p>Mmmmm. Interesting.  But what if we need to subtract from the score? Do we need a new function?</p>
 
-So, the *total* amount of code is about the same as the if-statements, but I think this is *SO much easier to read*.
+<p style="text-align: center"> ALEXIS </p>
 
-A:
+<p>Actually, No! We can just give a negative number to the parameter if we want to subtract! If we <em>add</em> <code>-3</code> to the score that's the same as subtracting.</p>
 
-I agree. Look how clean and easy to read checkCorrect is this way.
+<p style="text-align: center"> MICHAEL </p>
 
-M:
+<p>Oh, that's clever!  Will it save us code?</p>
 
-So, you convinced me, we need to add another function.  I'm sensing a pattern.
+<p style="text-align: center"> ALEXIS </p>
+<p> Maybe, let me sketch it out. </p>
 
-A:
+</div>
+<img src="https://images.code.org/a8061b4a372ec03942543179961e0c25-image-1481218129488.png" alt="" style="display: block; margin: auto;">
+<div style="width: 400px; margin: auto">
 
-Yeah, we're going to need to do the same kind of thing we did before:
+<p style="text-align: center"> MICHAEL </p>
 
-1. Add global variables for player1 and player2 scores
-2. Add a new function to update the score
-3. Call that function from the appropriate places.
+<p>So, the <em>total</em> amount of code is about the same as the if-statements, but I think this is <em>SO much easier to read</em>.</p>
 
-M:
+<p style="text-align: center"> ALEXIS </p>
 
-That's basically what we had to do last time.
+<p>I agree. Look how clean and easy to read checkCorrect is this way.</p>
 
-A:
+<p style="text-align: center"> MICHAEL </p>
 
-Yup. Let's do it again but for this new problem.
+<p>So, you convinced me, we need to add another function.  I'm sensing a pattern.</p>
 
-M:
+<p style="text-align: center"> ALEXIS </p>
 
-Let's get coding!
+<p>Yeah, we're going to need to do the same kind of thing we did before:</p>
+
+<ol>
+<li>Add global variables for player1 and player2 scores</li>
+
+<li>Add a new function to update the score</li>
+
+<li>Call that function from the appropriate places.</li>
+</ol>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>That's basically what we had to do last time.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Yup. Let's do it again but for this new problem.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Let's get coding!</p>
+
+</div>
 
 ## Click continue to do it
 
