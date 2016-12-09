@@ -5,6 +5,108 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Updating the Score
 
+A:
 
-okay, now let's think about our if statement. We need to know two things: 1. if the correct button was pressed or not and 2. update the score of the correct player.  That if statement sounds like:  "if correct && player 1 then update player 1 score, else if correct && player2 then update player 2 score.  We could also nest the if-statements.  So first if it's correct then figure out which player's score to update.  Or the inverse, first ask whose turn it is, then figure out if it's correct or not.  There is a 3rd option which is to make another function called somethign like updateScore(amt).  And this function's job is to figure out whose turn it is and change that player's score by the given amount.  Then in checkCorrect we can keep our existing if statement and just say If correct then updateScore(1) else updateScore(-5).
+Okay, now let's think about our if statement in checkCorrect and how to update the score properly. How do you want scoring to work.
+
+M:
+
+I think I want to make it so that if you guess correctly you get 1 point, but if you get it wrong you lose 3 points!
+
+A:
+
+Okay cool. To do that though we need to know which player's score to update.
+
+
+M: 
+
+Right. To update the score we actually need to know two things: 
+
+1. If the correct button was pressed or not and 
+2. Which player's score we need to update
+
+A:
+
+Well, first of all, that sounds like we need new global variables.  One to keep track of each player's score.
+
+M:
+
+Right.  Let me make a note of it.
+
+![](https://images.code.org/12ab031e9fad353284b91673e6ff7889-image-1481216393992.png)
+
+A:
+
+And to know which player's score to update we can just nest some if-statements inside our current one.  Let me hack out some pseudocode:
+
+![](https://images.code.org/b0bc443fc879241600121f7b51a47157-image-1481218418095.png)
+
+Ugh.  Just writing that down felt like a lot.
+
+M: 
+
+Yeah, I was thinking we could use a series of compound expressions like this.  
+
+![](https://images.code.org/f54131bd28b0477fd5fc2b7ed6440fb8-image-1481218431055.png)    
+Blech.  Not much better. 
+
+A:
+
+I just thought of a 3rd option...and don't hate me for suggesting this, but...we could make another function called something like `updateScoreBy(amountToAdd)`.
+
+And this function's whole job is to figure out whose turn it is and then add the amount given in the parameter to that player's score.
+
+M:
+
+Mmmmm. Interesting.  But what if we need to subtract from the score? Do we need a new function?
+
+A:
+
+Actually, No! We can just give a negative number to the parameter if we want to subtract! If we *add* `-3` to the score that's the same as subtracting.
+
+M:
+
+Oh, that's clever!  Will it save us code?
+
+A:
+Maybe, let me sketch it out. 
+
+![](https://images.code.org/a8061b4a372ec03942543179961e0c25-image-1481218129488.png)
+
+M:
+
+So, the *total* amount of code is about the same as the if-statements, but I think this is *SO much easier to read*.
+
+A:
+
+I agree. Look how clean and easy to read checkCorrect is this way.
+
+M:
+
+So, you convinced me, we need to add another function.  I'm sensing a pattern.
+
+A:
+
+Yeah, we're going to need to do the same kind of thing we did before:
+
+1. Add global variables for player1 and player2 scores
+2. Add a new function to update the score
+3. Call that function from the appropriate places.
+
+M:
+
+That's basically what we had to do last time.
+
+A:
+
+Yup. Let's do it again but for this new problem.
+
+M:
+
+Let's get coding!
+
+## Click continue to do it
+
+
+
 MARKDOWN

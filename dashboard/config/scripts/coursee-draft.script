@@ -65,7 +65,7 @@ level 'courseE_farmer_functions8b'
 level 'courseE_farmer_functions9b'
 level 'courseE_farmer_functions10b'
 
-stage 'Determine the Concept in Bee'
+stage 'Determine the Concept'
 level 'grade4_bee_nestedLoops1'
 level 'courseE_farmer_concept1'
 level 'grade4_bee_conditionals_new1a'
