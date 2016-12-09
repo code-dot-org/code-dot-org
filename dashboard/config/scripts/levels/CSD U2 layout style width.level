@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-07T00:52:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "markdown_instructions": "<div style=\"float: right; height: 150px; width: 400px; overflow-y: scroll; margin-left: 20px;\">\r\n<details>\r\n<summary>**What colors can I choose?**</summary>\r\nBlah blah answer\r\n</details>\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n<details>\r\n<summary>**Why is the \"style.css\" file in a different language?**</summary>\r\nblah blah answer\r\n</details>\r\n</div>\r\n# Width and Height\r\n\r\n* Find the property in \"style.css\" that controls the width of the images.\r\n* Change the width of the images to be larger or smaller.\r\n* Create a new rule with a `height` property to control the height of the images.\r\n* Use the `width` property in the `p` rule-set to change the width of your paragraphs.",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

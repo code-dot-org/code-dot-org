@@ -5,19 +5,93 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # The End Game
 
-Need to decide rule to end the game.
+A: 
 
-End game discussion
+All right! This is fun.
 
-* First to 10
-* Stop when one player's score differs by 3 or more?
-* First to get 3 wrong
+M: 
 
-Pick one and do it.
+Okay, the last thing we need to do is have a way for the game to end.
 
-Note that like with swtiching turns
+A:
 
-You not only need to know that game is over, but who won.
+What are you thinking?
 
-We've added a screen you can switch to, and congratulate the winner.
+M:
+
+Well, I don't know. I can see a lot of possibilities. I do know that I want there to be a winner, and when the came is over it switches a different screen that says "Game Over" and says who won.  Like this:
+
+[Diagram]
+
+A:
+
+Sounds do-able. So, how do you want to determine the winner?
+
+M: 
+
+I was thinking something simple, just based on the score.
+
+A:
+
+Let's come up with a few ideas...
+
+M:
+
+I was thinking about the rule being: **First to 10 wins**. Keep playing until one person's score reaches 10.
+
+A:
+
+Interesting.  What about **First to get 3 wrong loses?**  That's tougher because you'd have to add a variable to count incorrect clicks for each player and add additional if-statements.
+
+M: 
+
+Maybe, I'll look into that.  How about: **Play until the difference in scores is greater than 5?**
+
+A:
+
+They might play forever that way!  How about making it a team game: **play until the combined score score is 20** or something like that?
+
+M:
+
+Or **play until, combined, they get 3 wrong?**.  That would be easier to count since we'd just need a single variable.
+
+A:
+
+Well that's a lot of ideas.  Whatever you choose, I think *how* you should add the code will basically be the same and we can follow the same pattern -- add a function.
+
+M:
+
+I agree. I think in `checkCorrect`, right after we update the score, we should check if the game is over before setting the board or switching players.  Like this:
+
+![](https://images.code.org/9bf8b4260d473f95bb16b20cf6603741-image-1481225665447.png)
+
+A:
+
+Yeah, I see. So in `checkGameOver()` if the game is over you'll just switch screens right there, and set some labels. Otherwise do nothing.
+
+M:
+
+Right.
+
+A: 
+
+So if you add that it's just a matter of choosing your condition.
+
+M:
+
+Okay, well. I think I can handle it from here.  Thanks for all your help, Alexis.
+
+A:
+
+Don't mention it!  It was fun.  I'm looking forward to playing your game.
+
+M:
+
+Me too. Just need to finish it...
+
+
+## Click continue to finish the game
+
+
+
 MARKDOWN

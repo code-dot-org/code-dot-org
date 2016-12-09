@@ -1,10 +1,79 @@
 name 'Color Sleuth - How to switch player turns'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Whose turn is it?
 
+A:
 
-to update the score we need to know which player did it.  That means we need a way to indicate whose turn it is, and then update things based on that. acknowledge that each click triggers -> check correct -> setBoard  should also change turns as part of set correct.  Let's start by just getting turns alternating.  Let's use another global variable to keep track. it will just be a number 1 or 2. This feels like something we should put into a function called endTurn
+Wow, it's really beginning to feel like a game!
+
+M:
+
+I know. So now let's think about scoring.
+
+It's not so simple because what we want is for the players to take turns.
+
+A:
+
+Right, to update the score we need to know which player clicked a button.  That means we need a way to indicate whose turn it is, and then update things based on that.
+
+M:
+
+I think we can just make another globabl variable to keep track.  We can just store a number: `1` for player 1 and `2` for player 2. Then every time a button is clicked, when we make a new game board, we can also switch the player - from 1 to 2, or 2 to 1.
+
+A:
+
+Okay, so there are actually two major things we need to do:
+
+1. Alternate turns between player1 and player2 each time a button is clicked
+2. Update player1's score if it was her turn or player2's score if hers.
+
+M:
+
+Probably yeah. Also, I wanted to indicate on the screen whose turn it is, but showing and hiding a simple gray box behind the player's score, like this:
+
+![](https://images.code.org/51b19966ec2e669a6c886a4d4d123243-image-1481213790493.png)
+
+So, part of alternating turns is update the screen to show whose turn it is.  What should we do first?
+
+A:
+
+Well, I think we should start by getting the alternating player action working first. Because we can't really test whether we're updating the correct player's score unless we have it. 
+
+M:
+
+Mhm.  Good thinking. So let's start with get alternating turns working. 
+
+A: 
+
+It seems like we're going to need a small if statement that says something like "if it's player1's turn right now, then make it player2's turn, otherwise (it must be player2's turn so) make it player1's turn."
+
+M:
+
+Maybe we should put the code into another function that handles just the switching of the player and updating the screen. Call it something like `switchPlayer()`.  
+
+A:
+
+I think I follow. let's make sure we're both thinking the same thing.  Let me add to the pseudocode here...
+
+![](https://images.code.org/cc71045b789784c5dcb24c254f95a1eb-image-1481213098130.png)
+
+M:
+
+I like it.
+
+A:
+
+Okay, let's add it with just console.log statements to verify for now.  We'll update the UI once we know we have the variable changing correctly.
+
+M:
+
+Sounds good.  Let's do it.
+
+## Click to try it
+
+
 MARKDOWN
