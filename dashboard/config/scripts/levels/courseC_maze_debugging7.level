@@ -56,9 +56,6 @@
                                   <next>
                                     <block type="maze_turn">
                                       <title name="DIR">turnRight</title>
-                                      <next>
-                                        <block type="maze_moveForward"/>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>
