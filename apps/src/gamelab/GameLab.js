@@ -214,7 +214,9 @@ GameLab.prototype.init = function (config) {
       return this.hasDataStoreAPIs(this.studioApp_.getCode());
     }.bind(this),
     onWarningsComplete: function () {
-      window.setTimeout(this.studioApp_.runButtonClick, 0);
+      if (config.share) {
+        window.setTimeout(this.studioApp_.runButtonClick, 0);
+      }
     }.bind(this)
   };
 

@@ -129,6 +129,10 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
+  window.dashboard.project.isOwner = function () {
+    return true;
+  };
+
   loadApp({
     skinId: skinId,
     level: level,
@@ -140,6 +144,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    isSignedIn: true,
     isAdmin: true,
     onFeedback: finished.bind(this),
     onInitialize: function () {
