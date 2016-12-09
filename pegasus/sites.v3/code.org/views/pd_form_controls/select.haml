@@ -1,0 +1,18 @@
+-# Expected params: name, label, options, required
+
+%div.form-group{for: options[:name]}
+  %label.control-label{for: options[:name]}
+    = label
+    - if options[:required]
+      %span.form-required-field *
+    - options[:items].map do |option|
+      - if options[:multi]
+        .checkbox
+          %label
+            %input{name: name, type: 'checkbox', value: option}
+            = option
+      - else
+        .radio
+          %label
+            %input{name: name, type: 'radio', value: option}
+            = option
