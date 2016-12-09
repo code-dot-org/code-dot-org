@@ -89,6 +89,7 @@
 
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
+    options['suppressScrolling'] = #{suppress_scrolling}
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);
