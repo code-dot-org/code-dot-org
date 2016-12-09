@@ -1,25 +1,32 @@
-/* global window */
-
 /**
  * Teacher Application questionaire
  */
 
 import React from 'react';
+import $ from 'jquery';
 import _ from 'lodash';
-import {Radio, Checkbox, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
+import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
+import ButtonList from '../form_components/button_list.jsx';
 
 function FieldGroup({ id, label, ...props }) {
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
       <FormControl {...props} />
+      <br/>
     </FormGroup>
   );
 }
 
-const grades = ['Kindergarten'].concat(_.range(1,13));
+FieldGroup.propTypes = {
+  id: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string.isRequired
+};
+
+const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
 const subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'History', 'English', 'Music', 'Art', 'Multimedia', 'Foreign Language'];
-const yesNoResposes = ['Yes', 'No'];
+const yesNoResponses = ['Yes', 'No'];
+const beliefPoll = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
 
 const TeacherApplication = React.createClass({
 
@@ -29,78 +36,31 @@ const TeacherApplication = React.createClass({
     };
   },
 
-  buttonList(type, label, groupName, answers, allowOther = false) {
-    const options = answers.map( (answer, i) => {
-      if (type === 'radio') {
-        return (
-          <Radio
-            value={answer}
-            label={answer}
-            key={i}
-            name={groupName}
-          >
-            {answer}
-          </Radio>
-        );
-      } else if (type === 'check') {
-        return (
-          <Checkbox
-            value={answer}
-            label={answer}
-            key={i}
-            name={groupName}
-          >
-            {answer}
-          </Checkbox>
-        );
-      }
-    });
+  handleTextChange(event) {
+    this.setState({[event.target.id]: event.target.value});
+  },
 
-    if (allowOther) {
-      const otherDiv = (
-        <div style={{display: 'inline'}}>
-          <span style={{marginRight: '5px'}}>
-            Other:
-          </span>
-          <input type="text" id={groupName + 'Other'}/>
-        </div>
-      );
+  handleRadioButtonListChange(event) {
+    console.log(event.target.value);
+    this.setState({[event.target.name]: event.target.value});
+  },
 
-      if (type === 'radio') {
-        options.push((
-          <Radio
-            key={answers.length + 1}
-            name={groupName}
-          >
-            {otherDiv}
-          </Radio>
-        ));
-      } else if (type === 'check') {
-        options.push((
-          <Checkbox
-            key={answers.length + 1}
-            name={groupName}
-          >
-            {otherDiv}
-          </Checkbox>
-        ));
-      }
-    }
-
-    return (
-      <div>
-        <ControlLabel>
-          {label}
-        </ControlLabel>
-        {options}
-      </div>
-    );
+  handleCheckboxChange(event) {
+    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
+    this.setState({[event.target.name]: selectedButtons});
   },
 
   generateTeacherInformationSection() {
     return (
       <div>
-        {this.buttonList('check', 'Grades served at your school', 'gradesAtSchool', grades)}
+        <ButtonList
+          type="check"
+          label="Grades served at your school"
+          groupName="gradesAtSchool"
+          answers={grades}
+          onChange={this.handleCheckboxChange}
+          stateKey={this.state.gradesAtSchool}
+        />
         <h2>
           Section 2: Teacher Information
         </h2>
@@ -108,52 +68,105 @@ const TeacherApplication = React.createClass({
           id="firstName"
           label="First name"
           type="text"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="preferredFirstName"
           label="Preferred First Name"
           type="text"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="lastName"
           label="Last Name"
           type="text"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="schoolEmail"
           label="Your school email address"
           type="email"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="schoolEmail"
           label="Your personal email address (we may need to contact you during the summer)"
           type="email"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="phoneNumber"
           label="Preferred phone number"
           type="text"
+          onChange={this.handleTextChange}
         />
-        {this.buttonList('radio', 'Gender Identity', 'genderIdentity', ['Female', 'Male', 'Other', 'Prefer not to answer'])}
-        {this.buttonList('check', 'What grades are you teaching in the current 2016-17 school year? (select all that apply)', 'grades2016', grades)}
-        {this.buttonList('check', 'What subjects are you teaching in the current 2016-17 school year? (select all that apply)', 'subjects2016', subjects, true)}
-        {this.buttonList('check', 'What grades are you teaching in the current 2017-18 school year? (select all that apply)', 'grades2017', grades)}
-        {this.buttonList('check', 'What subjects are you teaching in the current 2016-17 school year? (select all that apply)', 'subjects2017', subjects, true)}
+        <ButtonList
+          type="radio"
+          label="Gender Identity"
+          groupName="genderIdentity"
+          answers={["Female", "Male", "Other", "Prefer not to answer"]}
+          onChange={this.handleRadioButtonListChange}
+          stateKey={this.state.genderIdentity}
+        />
+        <ButtonList
+          type="check"
+          label="What grades are you teaching in the current 2016-17 school year? (select all that apply)"
+          groupName="grades2016"
+          answers={grades}
+          includeOther={true}
+          onChange={this.handleCheckboxChange}
+          stateKey={this.state.grades2016}
+        />
+        <ButtonList
+          type="check"
+          label="What subjects are you teaching in the current 2016-17 school year? (select all that apply)"
+          groupName="subjects2016"
+          answers={subjects}
+          includeOther={true}
+          onChange={this.handleCheckboxChange}
+          stateKey={this.state.subjects2016}
+        />
+        <ButtonList
+          type="check"
+          label="What grades are you teaching in the current 2017-18 school year? (select all that apply)"
+          groupName="grades2017"
+          answers={grades}
+          includeOther={true}
+          onChange={this.handleCheckboxChange}
+          stateKey={this.state.grades2017}
+        />
+        <ButtonList
+          type="check"
+          label="What subjects are you teaching in the current 2017-18 school year? (select all that apply)"
+          groupName="subjects2017"
+          answers={subjects}
+          includeOther={true}
+          onChange={this.handleCheckboxChange}
+          stateKey={this.state.subjects2017}
+        />
         <FieldGroup
           id="principalFirstName"
           label="Principal's first name"
           type="text"
+          onChange={this.handleTextChange}
         />
         <FieldGroup
           id="principalLastName"
           label="Principal's last name"
           type="text"
+          onChange={this.handleTextChange}
         />
         <FormGroup>
           <ControlLabel>
             Principal's prefix
           </ControlLabel>
-          <FormControl componentClass="select" id="principalPrefix">
+          <FormControl
+            componentClass="select"
+            id="principalPrefix"
+            onChange={this.handleTextChange}
+            defaultValue="select one"
+          >
+            <option value="select one" disabled>select one</option>
             <option value="Dr.">Dr.</option>
             <option value="Miss.">Miss.</option>
             <option value="Mr.">Mr.</option>
@@ -164,7 +177,8 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="principalEmail"
           label="Principal's Email Address"
-          type="text"
+          type="email"
+          onChange={this.handleTextChange}
         />
       </div>
     );
@@ -205,13 +219,12 @@ const TeacherApplication = React.createClass({
     if (this.state.selectedCourse === 'csd') {
       return (
         <div id="csdSpecificContent">
-          {this.buttonList(
-            'check',
-            'To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional ' +
-            'Learning Program is not available for grades K-5. (select all that apply)',
-            'csdGrades',
-            _.range(6,13)
-          )}
+          <ButtonList
+            type="check"
+            label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
+            groupName="csdGrades"
+            answers={grades.slice(grades.indexOf('6'))}
+          />
         </div>
       );
     }
@@ -221,49 +234,41 @@ const TeacherApplication = React.createClass({
     if (this.state.selectedCourse === 'csp') {
       return (
         <div id="cspSpecificContent">
-          {
-            this.buttonList(
-              'radio',
-              'I will be teaching Computer Science Principles as a (select one):',
-              'cspTeachingDuration',
-              [
-                'Year-long course (~180 contact hours)',
-                'Semester-long course (~90 contact hours)',
-                'Semester-long course on block scheduling (~180 contact hours)',
-              ],
-              true
-            )
-          }
-          {
-            this.buttonList(
-              'radio',
-              'I will be teaching Computer Science Principles as an (select one)',
-              'cspTeachingAP',
-              [
-                'Introductory course',
-                'AP course'
-              ]
-            )
-          }
-          {
-            this.buttonList(
-              'check',
-              'To which grades do you plan to teach CS Principles? Please note that the CS Principles Professional ' +
-              'Learning Program is not available for grades K-8. (select all that apply)',
-              'cspGrades',
-              _.range(9,13)
-            )
-          }
-          {
-            this.buttonList(
-              'radio',
-              'Is it your goal for your students to take the AP CSP exam in the spring of 2018? Note: even if CS ' +
-              'Principles is taught as an introductory course, students are still eligible to take the AP CSP exam. ' +
-              '(select one)',
-              'cspAPIntent',
-              yesNoResposes
-            )
-          }
+          <ButtonList
+            type="radio"
+            label="I will be teaching Computer Science Principles as a (select one):"
+            answers={[
+              'Year-long course (~180 contact hours)',
+              'Semester-long course (~90 contact hours)',
+              'Semester-long course on block scheduling (~180 contact hours)',
+            ]}
+            includeOther={true}
+            groupName="cspDuration"
+          />
+          <ButtonList
+            type="radio"
+            label="I will be teaching Computer Science Principles as an (select one)"
+            answers={[
+              'Introductory course',
+              'AP course',
+            ]}
+            groupName="cspAPcourse"
+          />
+          <ButtonList
+            type="check"
+            label="To which grades do you plan to teach CS Principles? Please note that the CS Principles Professional
+            Learning Program is not available for grades K-8. (select all that apply)"
+            answers={grades.slice(grades.indexOf('9'))}
+            groupName="cspGrades"
+          />
+          <ButtonList
+            type="radio"
+            label="Is it your goal for your students to take the AP CSP exam in the spring of 2018? Note: even if CS
+            Principles is taught as an introductory course, students are still eligible to take the AP CSP exam.
+            (select one)"
+            groupName="cspAPExamIntent"
+            answers={yesNoResponses}
+          />
         </div>
       );
     }
@@ -283,15 +288,13 @@ const TeacherApplication = React.createClass({
           <li>
             20 hours of online professional development during the 2017 - 18 school year
           </li>
-          {
-            this.buttonList(
-              'radio',
-              'Are you committed to participating in the entire program?',
-              'commitedToSummer',
-              yesNoResposes,
-              true
-            )
-          }
+          <ButtonList
+            type="radio"
+            label="Are you committed to participating in the entire program?"
+            groupName="committedToSummer"
+            answers={yesNoResponses}
+            includeOther={true}
+          />
           {this.renderSummerWorkshopSchedule()}
         </div>
       </div>
@@ -341,7 +344,12 @@ const TeacherApplication = React.createClass({
                       _.times(4, (j) => {
                         return (
                           <td key={j}>
-                            <Radio name={question} value={question + '_' + i}/>
+                            <Radio
+                              name={question}
+                              value={beliefPoll[j]}
+                              checked={this.state[question] === beliefPoll[j]}
+                              onChange={this.handleRadioButtonListChange}
+                            />
                           </td>
                         );
                       })
@@ -356,19 +364,37 @@ const TeacherApplication = React.createClass({
     );
   },
 
+  onSubmitButtonClick() {
+    console.log(this.state);
+  },
+
+  renderSubmitButton() {
+    return (
+      <div>
+        <Button type="submit" onClick={this.onSubmitButtonClick}>
+          Submit application
+        </Button>
+      </div>
+    );
+  },
+
   render() {
     return (
       <div>
         {this.generateTeacherInformationSection()}
+        <hr/>
         {this.renderCourseSelection()}
+        <hr/>
         {this.state.selectedCourse === 'csd' && this.renderCSDSpecificContent()}
         {this.state.selectedCourse === 'csp' && this.renderCSPSpecificContent()}
-        {this.state.course && this.renderSummerProgramContent()}
+        {this.state.selectedCourse && (<hr/>)}
+        {this.state.selectedCourse && this.renderSummerProgramContent()}
+        {this.state.selectedCourse && (<hr/>)}
         {this.renderComputerScienceBeliefsPoll()}
+        {this.renderSubmitButton()}
       </div>
     );
   }
 });
 
 export default TeacherApplication;
-window.TeacherApplication = TeacherApplication;

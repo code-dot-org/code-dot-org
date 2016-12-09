@@ -2,14 +2,10 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 -# We have to render the top outside react. It would be nice to move the school dropdown to a react component
-%script{src: minifiable_asset_path('js/teacherApplication.js')}
-
 %h2
   Section 1: Which Program is Right for you?
 
 = render partial: 'shared/school_info', locals: {form_name: "school_info"}
 
 %div#application-container
-
-:javascript
-  window.ReactDOM.render(React.createElement(window.TeacherApplication), document.getElementById('application-container'))
+%script{src: minifiable_asset_path('js/teacherApplication.js')}
