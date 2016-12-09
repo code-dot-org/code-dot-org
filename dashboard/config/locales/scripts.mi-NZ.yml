@@ -30,7 +30,7 @@
             'Real-life Algorithms: Plant a Seed': 'Hātepe Motuhenga: Whakatōkia he
               Kano'
             Spelling Bee: Ohu Takikupu
-            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
+            'Studio: Create a Story': Taiwhanga Tākaro - Waihangahia tētahi Paki
             The Big Event: Te Takahanga Nui
         course2:
           title: Akoranga 2
@@ -60,7 +60,7 @@
             'Real-life Algorithms: Paper Planes': 'Hātepe Motuhenga: Waka Rererangi
               Pepa'
             Relay programming: Papatonotanga ā-Tānga
-            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
+            'Studio: Create a Story': Taiwhanga Tākaro - Waihangahia tētahi Paki
             The Big Event: Te Takahanga Nui
             Your Digital Footprint: Tō Tapuwae Matihiko
         course3:
@@ -85,7 +85,7 @@
             Bounce: Tupana
             Computational Thinking: Whakaaro ā-Rorohiko
             Crowdsourcing: Te Mahi ā-Ohu
-            Dice Race: Dice Race
+            Dice Race: Whakataetae Mataono
             Digital Citizenship: Te Kirirarautanga Matihiko
             'Farmer: While Loops': 'Kaiahuwhenua: Ngā Koromeke I Te'
             Functional Suncatchers: Ngā Hopu Rā Taumahinga
@@ -94,7 +94,7 @@
             'Maze: Conditionals': 'Rīrapa: Ngā Here'
             Songwriting: Te Tito Waiata
             'Studio: Create a Game': 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
-            'Studio: Create a Story': 'Taiwhanga Tākaro: Waihangahia tētahi Pūrākau'
+            'Studio: Create a Story': Taiwhanga Tākaro - Waihangahia tētahi Paki
         playlab:
           title: Taiwhanga Tākaro
           description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
@@ -185,8 +185,8 @@
           description: A selection of Course 4 levels for usability testing.
           description_short: ''
           stage:
-            Binary: Binary
-            For Loops: For Loops
+            Binary: Tāhūrua
+            For Loops: Mō Ngā Koromeke
             Functions and Functions with Parameters: Ngā Taumahi me Ngā Taumahi whai
               Tawhā
             Intro: Whakataki
@@ -303,7 +303,7 @@
             Conditionals: Ngā Here
             Functions: Ngā Taumahi
             Graph Paper Programming: Papatono Pepa Kauwhata
-            Introduction to Computer Science: Whakatakinga ki te Mātauranga Rorohiko
+            Introduction to Computer Science: Whakatakinga ki te Pūtaiao Rorohiko
             Relay Programming: Papatonotanga ā-Tānga
             Song Writing: Tito Waiata
             The Artist: Te Rehetoi
@@ -352,11 +352,11 @@
             Jigsaw: Pangahono
           description_audience: ''
         step:
-          title: Tohutohu
+          title: Hipanga
           description: Akoranga Hātepe
           description_short: Akoranga Hātepe
           stage:
-            Step: Tohutohu
+            Step: Hipanga
           description_audience: ''
         Hour of Code:
           title: Hour of Code 2013
@@ -522,7 +522,7 @@
             Canvas and Arrays in Apps: Canvas and Arrays in Apps
             Compound Conditional Logic: Compound Conditional Logic
             Controlling Memory with Variables: Controlling Memory with Variables
-            Creating Functions: Creating Functions
+            Creating Functions: Te Waihanga Taumahi
             Creating functions with Parameters: Creating Functions with Parameters
             Digital Assistant Project: Digital Assistant Project
             Event-Driven Programming and Debugging: Event-Driven Programming and Debugging
@@ -545,7 +545,7 @@
             User Input and Strings: User Input and Strings
             Using Simple Commands: Using Simple Commands
             Using Variables in Apps: Using Variables in Apps
-            While Loops: While Loops
+            While Loops: Ngā Koromeke I Te
           description_audience: ''
         algebraPD3:
           title: Phase 3 PD
@@ -759,7 +759,7 @@
             Markdown Details: Markdown Details
             Match: Match
             Maze: Rīrapa
-            Minecraft: Minecraft
+            Minecraft: Mahimaina
             Multi: Multi
             Multi2: Multi2
             Netsim: Netsim
@@ -1284,7 +1284,7 @@
             Loops and Simulations: Loops and Simulations
             'Practice PT: Create': 'Practice PT: Create'
             Processing Arrays: Processing Arrays
-            While Loops: While Loops
+            While Loops: Ngā Koromeke I Te
           description_audience: ''
         CSP-Unit3-Support:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1582,7 +1582,7 @@
           description_short: Programming
           stage:
             APIs and Function Parameters: APIs and Function Parameters
-            Creating Functions: Creating Functions
+            Creating Functions: Te Waihanga Taumahi
             Creating functions with Parameters: Creating functions with Parameters
             Creativity in Algorithms: Creativity in Algorithms
             Functions and Top-Down Design: Functions and Top-Down Design
@@ -1649,7 +1649,7 @@
             Understanding Program Flow and Logic: Understanding Program Flow and Logic
             User Input and Strings: User Input and Strings
             Using Variables in Apps: Using Variables in Apps
-            While Loops: While Loops
+            While Loops: Ngā Koromeke I Te
             Edited lessons ABOVE this line: Edited lessons ABOVE this line
             Buttons and Events: Buttons and Events
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
@@ -1987,7 +1987,7 @@
           description_short: Just a script for playing around
           description_audience: Ages 8-98
           stage:
-            Artist Functions: Artist Functions
+            Artist Functions: Ngā Taumahi Rehetoi
             Sample Stage: Sample Stage
             The same thing with named levels: The same thing with named levels
             You are a coding STAR: You are a coding STAR
@@ -2215,7 +2215,7 @@
           stage:
             " Bee: Conditionals": " Bee: Conditionals"
             'Artist: Nested Loops': 'Rehetoi: Ngā Koromeke Tauroto'
-            Bee Debugging: Bee Debugging
+            Bee Debugging: Patuirotanga Pī
             Bounce: Tupana
             Build a Game: Build a Game
             Farmer Conditional with Cards: Farmer Conditional with Cards
@@ -2314,16 +2314,16 @@
         k5concepts:
           title: K5 Concepts
           stage:
-            Binary: Binary
+            Binary: Tāhūrua
             Conditionals: Ngā Here
             Events: Ngā Takunetanga
-            For Loops: For Loops
+            For Loops: Mō Ngā Koromeke
             Functions: Ngā Taumahi
-            Functions with Parameters: Functions with Parameters
+            Functions with Parameters: Ngā Taumahi Whai Tawhā
             Loops: Ngā Koromeke
-            Nested Loops: Nested Loops
+            Nested Loops: Ngā Koromeke Tauroto
             Variables: Ngā Taurangi
-            While Loops: While Loops
+            While Loops: Ngā Koromeke I Te
           description_audience: ''
           description_short: ''
           description: ''
@@ -2446,10 +2446,10 @@
         basketball:
           stage:
             Bounce: Tupana
-          title: Basketball
+          title: Hangaia tētahi kēmu poitūkohu
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Hangaia tētahi kēmu poitūkohu
+          description: Hangaia tētahi kēmu poitūkohu
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2469,7 +2469,7 @@
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
             Processing with Bits: Processing with Bits
-          title: Binary
+          title: Tāhūrua
           description_audience: ''
           description_short: ''
           description: ''
@@ -2714,7 +2714,7 @@
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
             The Power of Words: The Power of Words
-            Songwriting with Parameters: Songwriting with Parameters
+            Songwriting with Parameters: Te Titowaiata me ngā Tawhā
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2753,7 +2753,7 @@
           title: Ngā Hākinakina
           description_audience: ''
           description_short: Tuhia te waehere o tō ake hākinakina
-          description: ''
+          description: Tuhia te waehere o tō ake hākinakina
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Welcome!

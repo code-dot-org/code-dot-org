@@ -11,18 +11,18 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Khetha isifundiso:
 
-Sinikeza ngenzinhlobonhlobo ze[okudlala, ihora lonke lemfundiso](%= resolve_url('https://code.org/learn') %) kungenelela yonke iminyaka, kusungulwe izinhlobonhlobo zabahlanganyeli. [Zizamele wona!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Zonke izifundiso zeHora loKufingqwa:**
 
   * Require minimal prep-time for organizers
   * Iziluleko eziqondisiwe zivumela izingane ukuba zisebenze ngesikhathi nangolwazi lwabo
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Udinga uhlelo lwesifundiso sakho seHora loKufingqwa ekuphumeni kwesikole?** Buka lokhu [ithempulethi](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3) Khuthaza iHora loKufingqwa lakho
+## 3) Khuthaza elakho iHora loKufingqwa
 
 Khuthaza iHora loKufingqwa lwakho [ngalawa mathulusi](%= resolve_url('/promote') %) uphinde ukhuthaze obanye ukuba bahlele eyabo imicimbi.
 
@@ -30,18 +30,18 @@ Khuthaza iHora loKufingqwa lwakho [ngalawa mathulusi](%= resolve_url('/promote')
 
 Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. Kodwa wena **awu** dingi ikhompyutha eyodwa kungane, kanti futhi ungaze wenze iHora loKufingqwa ngaphandle kwekhompyutha.
 
-** Lungiselela Phambilini!** Yenza lokhu ngaphambi kokucala komcimbi wakho:
+** Lungiselela Phambili!** Yenza loku ngaphambi kokuqala komcimbi wakho:
 
   * Vivinya izifundiso kuma khompyutha abafundi okanye kumadivaysi. Yenza isiqinisekiso sokuba asebenza ngedlela efanele kusi phequluli nakumavidiyo.
   * Nika ikilasi lakho ama-efoni, okanye ucele abafundi baziphathele awabo, uma imfundiso oyikhethile isebenza kahle ngomsindo.
-  * **Awunamadivayisi anganela?** Sebenzisa [ ukuklama ngamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
+  * **Izinto zokusebenza azilingani? ** Khetha uhlelo [ lwamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ![](/images/fit-350/group_ipad.jpg)
 
 ## 5) Qala iHora loKufingqwa lakho ngevidiyo egqugquzelayo
 
-Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha ichaza kanye noku xoxa ngendlela ikhompyutha sayensi inemithelela ngayo kumpilo zethu mihla nemihla.
+Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha iqhaza kanye noku xoxa ngendlela ikhompyutha sayensi inemithelela ngayo ezimpilweni zethu mihla nemihla.
 
 **Bonisa ngevidiyo ekhuthazayo:**
 
@@ -50,13 +50,13 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha ichaza kanye noku xoxa ng
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Thola amavidiyo akhuthazayo [lapho](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Kulungile umuma umushasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:**
 
   * Chaza izindlela ithekhinoloji enomthelela ngayo empilweni zethu, ngezibonelo amantombazane nabafana abazokhathala ngayo (Xoxa ngama epu kanye ngethekhinoloji esetshenziswa ukusindisa izimpilo, ukusiza abantu, ukuxhumana kwabantu njll).
   * Bala izinto ezisebenzisa ukufingqwa kumpilo yemihla ngemihla.
   * Bona amathiphu okuthola amantombazane ukuba alangazelele ikhompyutha sayensi [lapha](%= resolve_url('https://code.org/girls') %).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Udinga isiqondiso esiningana?** Thwebula lokhu [ ithempulethi yehlelo lesifundo](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 **Ufunu amibono yokufundisa?** Hlola [imikhuba emihle](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) avela kothushala abanesipiliyoni.
 
@@ -64,9 +64,9 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha ichaza kanye noku xoxa ng
 
 **Khombisa abahlanganyeli kumsebenzi**
 
-  * Bhala isixhumanisi sesifundiso kubhodi. Thola isixhumaniso sibhaliwe ku [ulwazi ngemfundiso yakho oyikhethile](%= resolve_url('https://code.org/learn') %) ngaphansi kwenani lwabazinikelayo.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Uma kukhona ohlangabezana nobunzima kwamukelekile ukuphendula:**
 
   * "Angazi. Asisebenzisane ukuthola isicazululo."
   * "Ithekhiniloji ayisebenzi ngendlela esithandangayo njalonjalo."
@@ -74,7 +74,7 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha ichaza kanye noku xoxa ng
 
 **Ungenzani uma kukhona oqeda masinya?**
 
-  * Khuthaza ababamba iqhaza ukuba bazame umsebenzi ohlukile weHora loKufingqwa ku [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Okanye, cela labo abaqeda kuqala ukuba basize labo abahlangabezana nezinkinga.
 
 [col-33]
@@ -118,10 +118,10 @@ Qala iHora loKufingqwa lwakho ngoku khuthaza abathatha ichaza kanye noku xoxa ng
 
 ## Izinsiza ezinye zeHora loKufingqwa ezothisha:
 
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+  * Hlola [imikhuba emihle](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) evela kothisha beHora loKufingqwa eselidlule. 
   * Bukela ukuqoshwa kwe [Ululeko loThisha lwewebhina yeHora loKufingqwa](https://youtu.be/EJeMeSW2-Mw).
   * [ Yiza esithangameni sochungechunge lwemibuzo](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911), nomsungululi wethu, uHadi Partovi ukuze silungiselele iHora loKufingqwa.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+  * Vakashela [Iforamu leHora loKufingqwa](http://forum.code.org/c/plc/hour-of-code) ukuthola izeluleko, ukuqondisisa kanye nokusekelwa okuvela kwabanye abahleli. <% if @country == 'us' %>
   * Buyekeza i[ IMIBUZO EBUZWA NJALO kuHora loKufingqwa](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Kuyini okuza ngemva kweHora loKufingqwa?

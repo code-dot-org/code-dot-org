@@ -94,7 +94,7 @@
       svoju triedu. <a href="/">Môžeš prechádzať jednotlivé stupne a skladačky</a>
       aj bez účtu, ale ak budeš chcieť uložiť svoje pokroky alebo projekty, musíš
       sa Zaregistrovať.
-    hoc_already_signed_up_heading: Začať bez prihlasovania sa
+    hoc_already_signed_up_heading: Začať bez prihlásenia
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
       event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
@@ -429,6 +429,7 @@
     announcement_learn_more_button: Dozvedieť sa viac
     announcement_try_now_button: Skús teraz
     announcement_host_an_hour_button: Hosťuj Hodinu kódu
+    announcement_watch_video_button: Watch video
     announcement_petition: Ako učiteľ patríte medzi propagátorov hnutia za to, aby
       každý študent v každej škole dostal príležitosť učiť sa informatiku. A teraz
       je čas, aby si vaši zástupcovia vypočuli Váš názor. Tento týždeň sa zástupcovia
@@ -451,11 +452,16 @@
       celebrate the Hour of Code during Computer Science Education Week. While our
       own Hour of Code tutorials will also not save progress that week, students can
       still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
-      all-new Minecraft Hour of Code Designer lets students make the rules of the
-      Minecraft world. They can create a totally unique Minecraft experience, and
-      then share it with friends or play it on their phones. Do it with your class
-      for the Hour of Code.
+    announcement_mc_launch: Jeden z našich najpopulárnejších návodov má teraz pokračovanie!
+      Celkom nový Minecraft Dizajnér Hodiny Kódu umožňuje študentom vytvoriť si pravidlá
+      pre svet Minecraft-u. Môžu stvoriť totálne unikátne Minecraft-ové zážitky, následne
+      ich zdieľať s priateľmi, či zahrať si ich na telefónoch. Vytvorte si ich vo
+      svojej triede na Hodine Kódu.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
   move_students:
     new_section_dne: Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje.
       Zadajte kód inej sekcie.
@@ -929,8 +935,48 @@
     starwars_blocks_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (bloky)'
     starwars_javascript_name: 'Hviezdne vojny: Budovanie galaxie pomocou kódu (JavaScript)'
     download_message: Stiahnuť %{app_name} na použitie v offline móde (136MB)
-    download_in_english: 'Stiahnúť v angličtine:'
-    download_in_spanish: 'Stiahnuť s španielštine:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows (64-bitová verzia)
     mac: Mac OS X
   plc:

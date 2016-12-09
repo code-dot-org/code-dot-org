@@ -21,7 +21,7 @@
             Getting Loopy: "Ілмектерді үйрену"
             Going Places Safely: "Қауіпсіз Жерді Табу"
             Happy Maps: "Көңілді Карталар"
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             'Maze: Debugging': "Лабиринт: Бағдарламаны ретке келтіру"
             'Maze: Loops': "Лабиринт: Ілмектер"
             'Maze: Sequence': "Лабиринт: Тізбектер"
@@ -38,7 +38,7 @@
             ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға
             кеңес береміз."
           description_short: "Жазу танитын оқушылар Курс 2 - ден бастаңыздар."
-          description_audience: 6-18 жастағылар үшін
+          description_audience: "Жас 6-дан бастап (оқу міндетті)"
           stage:
             'Artist: Debugging': "Кейіпкер: Бағдарламаны ретке келтіру"
             'Artist: Loops': "Кейіпкер: Ілмектер"
@@ -122,11 +122,12 @@
             Artist: "Кейіпкер"
         course4:
           title: "Курс 4"
-          description: "Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған. Оқушылар
-            алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып,
-            аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. Курс соңында
-            оқушылар достарымен бөлісе алатын интерактивті оқиғалар мен ойындар жасайды.
-            4-8 сынып оқушыларына пайдалануға кеңес береміз."
+          description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар
+            әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды
+            шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер
+            мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік
+            бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға
+            кеңес береміз."
           description_short: "Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған."
           description_audience: 10-18 жастағылар үшін
           stage:
@@ -322,9 +323,9 @@
           description_short: "Шаралар"
           stage:
             Bounce: "Секіру"
-            Calc: Calc
+            Calc: "Қақ"
             Eval: Eval
-            Studio: Studio
+            Studio: "Студия"
         flappy:
           title: "Қанат Қағу Коды"
           description: "Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
@@ -360,14 +361,14 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "Басқатырғыштар"
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "Басқатырғыштар"
           description_audience: ''
         cspunit1:
           title: CSP Unit 1 - Digital Information
@@ -759,7 +760,7 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: "Студия"
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -2027,7 +2028,7 @@
             Events: "Шаралар"
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: "Ілмек"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2071,7 +2072,7 @@
             Debugging: Debugging
             Events: "Шаралар"
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: "Ілмек"
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2436,10 +2437,10 @@
         basketball:
           stage:
             Bounce: "Секіру"
-          title: Basketball
+          title: "Баскетбол ойынды жасау"
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: "Баскетбол ойынды жасау"
+          description: "Баскетбол ойынды жасау"
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2540,10 +2541,10 @@
             Minecraft Hour of Code Designer: Minecraft кодтау сағатының дизайнеры
           title: Minecraft кодтау сағатының дизайнеры
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
+          description_short: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында."
+          description: "Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында."
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2739,11 +2740,11 @@
             to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: "Спорттар"
+          title: "Спорттар"
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: "Өзіңнің жеке спорт ойынын жаз"
+          description: "Өзіңнің жеке спорт ойынын жаз"
         2016_sciencePD-phase2b:
           stage:
             Welcome!: "Қош келдіңіз!"

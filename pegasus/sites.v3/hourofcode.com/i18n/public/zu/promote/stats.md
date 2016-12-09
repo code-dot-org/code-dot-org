@@ -16,7 +16,7 @@ nav: promote_nav
 
 ### Letha ikhompyutha sayensi esikoleni sakho. Qala ngeHora loKufingqwa
 
-Njengoba ubuchwepheshe bezekhompyutha bushintsha imikhakha yonke kunozungezilanga, ulwazi lokukhompyutha libe yilunga lekhono eliqinile. But fewer than half of all schools teach computer science! Izindaba ezimnandi ukuthi, sisendleleni yethu yokushintsha lokhu. Uma uzwile ngeHora loKufingqwa ngonyaka ophelile, kungenzeka uyazi ukuthi yenza umlando. Ikhulu lesigidi sabafundi selithole ukuthi iwubumnandi kanti futhi ifinyeleleka kalula kanjani ikhompyutha sayensi ngokwenza ihora ililodwa lweHora loKufingqwa.
+Njengoba ubuchwepheshe bezekhompyutha bushintsha imikhakha yonke kunozungezilanga, ulwazi lokukhompyutha libe yilunga lekhono eliqinile. Kodwa zingaphansi kwengxenye izikole ezifundisa ikhompyutha sayensi! Izindaba ezimnandi ukuthi, sisendleleni yethu yokushintsha lokhu. Uma uzwile ngeHora loKufingqwa ngonyaka ophelile, kungenzeka uyazi ukuthi yenza umlando. Ikhulu lesigidi sabafundi selithole ukuthi iwubumnandi kanti futhi ifinyeleleka kalula kanjani ikhompyutha sayensi ngokwenza ihora ililodwa lweHora loKufingqwa.
 
 Ihora loKufingqwa liyihora lokwazisa ikhompyutha sayensi, elisongozele ukwenza ukufingqwa kubelula kanye ukubonakalisa ukuthi ngunoma ngubani ongafunda isisekelo. Funda ngokudlulele ku [http://Hourofcode.com](http://HourofCode.com), zama ihora ngokwakho, okanye uhlele umcimbi weHora loKufingqwa ukwazisa abanye kumhlaba woku khompyutha!
 

@@ -40,7 +40,7 @@
     code:
       label: 'Legg til en lærer:'
       placeholder: "Seksjonskode (ABCDEF)"
-      instructions: "Angi koden delt med deg av din lærer. Det er en kode med 6 bokstaver som \"ABCDEF\"."
+      instructions: "Skriv inn koden som læreren din har gitt deg. Det er en kode med 6 bokstaver, som \"ABCDEF\"."
     submit: 'Legg til lærer'
   add_hint_form:
     placeholder: 'Skriv inn et hint her'
@@ -354,12 +354,14 @@
     announcement_learn_more_button: "Lær mer"
     announcement_try_now_button: "Prøv nå"
     announcement_host_an_hour_button: "Inviter til en kodetime"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "Som lærer, er du del av en bevegelse som ønsker å gi alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning, 28 guvernører og administrerende direktører i de største selskapene i USA sammen og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning."
     announcement_petition_button: "Legg til navnet ditt"
     announcement_all: "Hold deg oppdatert med oppdateringer og ny funksjonalitet på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere kunngjøringer.</a>"
     announcement_hoc_launch: "Tusener av lærere i mer enn 180 land vil undervise programmering under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise programmering."
     announcement_hoc_scaling: OBS! På grunn av svært mye trafikk fra millioner av elever i løpet av Kodetimen (uke 49), vil ikke Code Studio lagre eller rapportere elevfremgang i de øvrige kursene. Vi anbefaler å gjennomføre et Kodetime-opplegg med klassen din i løpet av denne uka i stedet. Selv om heller ikke Kodetimen-kursene kommer til å lagre noen fremgang, kan elevene likevel fullføre dem og få et diplom etter fullført Kodetime.
     announcement_mc_launch: "Et av våre mest populære opplegg har fått en oppfølger! Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft. De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
     section_code_not_entered: "Legg inn gjeldende_seksjons_kode."
@@ -740,8 +742,48 @@
     starwars_blocks_name: 'Star Wars: Bygg en galakse med kode (blokker)'
     starwars_javascript_name: 'Star Wars: Bygg en galakse med kode (JavaScript)'
     download_message: 'Last ned %{app_name} for frakoblet bruk (136MB)'
-    download_in_english: 'Last ned på engelsk:'
-    download_in_spanish: 'Last ned på spansk:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:

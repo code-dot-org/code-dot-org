@@ -6,18 +6,18 @@ title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# Kod Saatını öz uşağınızla necə keçirə bilərsiniz
 
-Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
+Kod Saatını evdə başa vurun və ya uşağınızın sinfində keçirmək üçün könüllü olun! "Necə"si burada:
 
 ## 1) Bu təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Bir dərslik seçin:
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('https://code.org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Plan your technology needs
 
@@ -45,7 +45,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
 
-## 5) Code!
+## 5) Kod!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
@@ -59,7 +59,7 @@ It’s okay to respond:
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-## 6) Celebrate
+## 6) Bayram etmək
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 

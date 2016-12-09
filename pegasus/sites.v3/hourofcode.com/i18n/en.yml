@@ -275,9 +275,9 @@
   map_legend_hoc_events: 'Hour of Code Event'
   map_legend_cs_tech_jam: 'Special Event'
 
-  meta_tag_og_title: 'The Hour of Code is coming'
+  meta_tag_og_title: 'The Hour of Code is here'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-  meta_tag_twitter_title: 'The Hour of Code is coming'
+  meta_tag_twitter_title: 'The Hour of Code is here'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
@@ -433,6 +433,7 @@
   learn_robotics_banner_heading: 'ROBOTICS'
   learn_robotics_banner_blurb: 'Got robots? Use them with the activities below and make a tangible Hour of Code for students of any age!'
 
+  tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
   tutorial_star-wars_name: "Star Wars: Building a Galaxy with Code"
   tutorial_gumadventure_name: "Gumball's Coding Adventure"
@@ -706,6 +707,7 @@
   tutorial_khandata_name: "Khan Academy: Databases"
   tutorial_robomeshiq_name: "Program VEX IQ Robots with Blockly"
 
+  tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
   tutorial_star-wars_shortdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_shortdescription: "Use code to continue an episode of The Amazing World of Gumball."
@@ -979,6 +981,7 @@
   tutorial_khandata_shortdescription: "Like playing with data? Learn how to manipulate data in a database and make your own custom store"
   tutorial_robomeshiq_shortdescription: "Program either a virtual online robot, or a real VEX IQ robot."
 
+  tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
   tutorial_star-wars_longdescription: "Learn to program droids, and create your own Star Wars game in a galaxy far, far away."
   tutorial_gumadventure_longdescription: "In the Amazing World of Gumball episode “The Signal,” a glitch affects how the characters relate to each other. In this activity, continue the story by making your own glitch and imagining how Gumball and his friends would react to it."
@@ -1252,6 +1255,7 @@
   tutorial_khandata_longdescription: "Khan Academy: Databases teaches you to manipulate data in a database and make your own custom store."
   tutorial_robomeshiq_longdescription: "Students write Google Blockly code to control popular VEX IQ robots. They can choose to write code for either a virtual robot, or a real VEX IQ robot that they built themselves, and both options are available in the same web-based development interface. Students learn about basic robot movement, and how to use a sensor and an output device. It is easy and fun."
 
+  tutorial_athlete_language: "English, French, Spanish, Italian, Portuguese (Brazil)"
   tutorial_moana_language: "English, Arabic, Chinese (Simplified), Chinese (Traditional) Danish, Dutch, Finnish, French, German, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Polynesian (Samoan), Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese"
   tutorial_star-wars_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_gumadventure_language: "English only"
@@ -1525,6 +1529,7 @@
   tutorial_khandata_language: "English, Portuguese (Brazil), Spanish"
   tutorial_robomeshiq_language: "English only"
 
+  tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
   tutorial_star-wars_string_detail_grades: "Grades 2+"
   tutorial_gumadventure_string_detail_grades: "Grades 6-8"
@@ -1798,6 +1803,7 @@
   tutorial_khandata_string_detail_grades: "Grades 6+"
   tutorial_robomeshiq_string_detail_grades: "Grades 2+"
 
+  tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_star-wars_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_gumadventure_string_platforms: "All modern browsers"
@@ -2071,6 +2077,7 @@
   tutorial_khandata_string_platforms: "All modern browsers"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, Vex IQ Robots"
 
+  tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
   tutorial_star-wars_string_detail_platforms: ""
   tutorial_gumadventure_string_detail_platforms: ""
@@ -2344,6 +2351,7 @@
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ Robots"
 
+  tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
   tutorial_star-wars_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gumadventure_string_detail_programming_languages: "Blocks, Scratch"

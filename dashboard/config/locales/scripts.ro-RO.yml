@@ -2429,10 +2429,10 @@
         basketball:
           stage:
             Bounce: Săritură
-          title: Basketball
+          title: Realizeaza un joc de baschet
           description_audience: "[șir gol]"
-          description_short: Code your own basketball game
-          description: "[șir gol]"
+          description_short: Realizeaza un joc de baschet
+          description: Realizeaza un joc de baschet
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2535,7 +2535,7 @@
           description_audience: "[șir gol]"
           description_short: Programeaza animale şi alte creaturi Minecraft în propria
             ta versiune a jocului.
-          description: Programeaza animale şi alte creaturi Minecraft în propria voastră
+          description: Programeaza animale şi alte creaturi Minecraft în propria ta
             versiune a jocului.
         flappy-impact-study:
           stage:
@@ -2735,8 +2735,8 @@
             Sports: Sporturi
           title: Sporturi
           description_audience: "[șir gol]"
-          description_short: Propgrameaza propriul sport
-          description: "[șir gol]"
+          description_short: Amesteca si potriveste sporturile
+          description: Amesteca si potriveste sporturile
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Bine ai venit!

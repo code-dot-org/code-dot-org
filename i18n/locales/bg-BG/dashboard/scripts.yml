@@ -75,7 +75,7 @@ bg:
             Internet: Интернет
             Maze: Лабиринт
             'Maze: Conditionals': 'Лабиринт: услоия'
-            Songwriting: Композиране на песен с параметри
+            Songwriting: Композиране на песен
             'Studio: Create a Game': 'Театрална лаборатория - Създаване на игра'
             'Studio: Create a Story': 'Театрална лаборатория: Създаване на история'
         playlab:
@@ -908,7 +908,7 @@ bg:
             Happy Maps: Щастливи карти
             Move it, Move it: Преместете го, Преместете го
             'Real-life Algorithms: Plant a Seed': 'Реални алгоритми: Засадете семената'
-            Songwriting: Композиране на песен с параметри
+            Songwriting: Композиране на песен
             The Big Event: Голямото събитие
         afterschool1:
           title: Afterschool 1
@@ -1829,7 +1829,7 @@ bg:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Композиране на песен с параметри
+            Songwriting: Композиране на песен
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -2166,10 +2166,10 @@ bg:
         basketball:
           stage:
             Bounce: Bounce
-          title: Basketball
+          title: Направете баскетболна игра
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Направете баскетболна игра
+          description: Направете баскетболна игра
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2433,7 +2433,7 @@ bg:
           title: Спорт
           description_audience: ''
           description_short: Програмирай свой собствен спорт
-          description: ''
+          description: Програмирай свой собствен спорт
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Добре дошли!

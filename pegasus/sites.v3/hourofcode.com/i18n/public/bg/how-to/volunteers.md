@@ -10,65 +10,65 @@ nav: how_to_nav
 
 # Практически пътеводител за доброволци
 
-## Why volunteer?
+## Защо доброволец?
 
-Check out some testimony from past volunteers:
+Вижте някои мнения от минали доброволци:
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-  * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-  * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
+  * "Най-добрата част от моя опит беше, че целия клас беше от момичета и цветнокожи. Това вещае добри неща за бъдещето на нашата индустрия ако има шанс да развълнуваме тези деца."
+  * "Особено се радвах да насърча младите момичета в технологиите. Чувствах се, като че ли помагам на следващото поколение в местната област."
+  * "ХАРЕСА ми да виждам колко развълнувани са децата. Невероятно нещо е, че учителите забелязваха, че някои от учениците, които не са се изявявали академично са се отличили с логическо мислене като разработчици и са помагали на другите- така са се почувствали по-уверени."
 
-Visit a local classroom to inspire students to keep learning computer science. [Sign up now!](https://code.org/volunteer/engineer).
+Посетете местни класни стаи, за да вдъхновите учениците да продължават да учат компютърни науки. [ Доброволец за един час](https://code.org/volunteer/engineer).
 
-## Recruit your co-workers to volunteer
+## 4. Превърнете Вашите колеги в доброволци
 
-Tell your friends and co-workers about the Hour of Code. We have thousands of teachers signing up and looking for volunteers, so ask them to [sign up as a volunteer](https://code.org/volunteer). Ask your employer to get involved. [Send this email](https://hourofcode.com/promote/resources#email) to your manager, or the CEO.
+Кажете на приятели и колеги за Hour of Code. Ние имаме хиляди учители, записали се, че търсят доброволци, помолете им като [ се регистрирате като доброволец](https://code.org/volunteer). 3. Посъветвайте се с вашия работодател за възможно включване. [ Изпратете този имейл](https://hourofcode.com/promote/resources#email) на Вашия ръководител или изпълнителен директор.
 
-## How you get selected:
+## Как да бъдете избрани:
 
-  * Teachers will be searching for volunteers on our [volunteer map](/volunteer/local) 
-  * Teachers will be reviewing your profiles on the map, so try to make your profile as complete as possible to increase the chance that a teacher will select you.
-  * A teacher will contact you through this form (your email address will never be shared with the teacher). 
-      * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
+  * Учителите ще търсят доброволци на нашата [ доброволческа карта](/volunteer/local) 
+  * Учителите ще прегледат вашите профили на картата, опитайте се да направите вашия профил по-инпормативен, така ще увеличите шанса си учител да изберете вас.
+  * Учителят ще се свърже с вас чрез тази форма (вашия имейл адрес няма да се споделя с учителя). 
+      * Ако получавате много заявки от учители, винаги можете да актуализирате вашите предпочитания като щракнете върху връзката, за да редактирате информацията си или откажете, възможността епредоставена в дъното на всеки имейл от учител. 
 
-## How to prepare:
+## Как да се подготвите:
 
-Try out tutorials before heading to the classroom by going to https://code.org/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
+Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Използвайте видео, за фокусиране на класа, развълнувайте ги, за да направят своя един час на кода.
 
-  * Watch this year's Volunteer Training [webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) and [slide deck](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
-  * Check out the [Hour of Code Volunteer Toolkit](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
-      * Includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
-  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](/learn)
-  * If you're visiting a school, complete any background checks or required paperwork
-  * [Review these tips](https://code.org/files/CSTT_Volunteers.pdf) about how to interact with students
-  * Prepare an intro: 
-      * Share an inspirational story: How you got involved in a career in tech or why tech is important to you
-      * Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
-  * Join the conversation on FB, Twitter, Instagram, Tumblr with #Hourofcode
-  * Connect with the teacher to discuss what you plan to speak about during your session
-  * If you are a virtual volunteer, test A/V and screen sharing capabilities beforehand
+  * Гледайте тазгодишното доброволчедко обучение [ webinar](https://plus.google.com/events/ct1vlm9btosksrvlt7kggdoo0mk) и [ слайд презентация](https://docs.google.com/presentation/d/1-SRpceNbw3c-BtGYXKC3tTw3JSJ-5OZg6Ay4XFh7h50/edit?usp=sharing)
+  * Вижте [Hour of Code доброволчески инструментариум](https://docs.google.com/document/d/1PcrOW44tq_leRIAUWeUDy-gdrLJGIUNBB_feXF8b9w0/edit?usp=sharing) 
+      * Включва преглед, дати, подготовка на материалите и маркетингови материали. Всичко, което трябва да бъде готово за вашия доброволчески опит!
+  * If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial](<%= resolve_url('/learn') %>)
+  * Ако ще посетите училище, попълнете всички фон проверки или необходимите документи
+  * [ прегледайте тези съвети](https://code.org/files/CSTT_Volunteers.pdf) за това как да общувате с учениците
+  * Подготвяне на интро: 
+      * Споделете вдъхновяваща история: Как сте започнали кариера в технологиите или защо те ся важни за вас
+      * Използвайте видео, за фокусиране на класа, развълнувайте ги, за да направят своя един час на кода.
+  * Присъединете се към разговор във FB, Twitter, Instagram, Tumblr с #Hourofcode
+  * Свържете се с учител, за да обсъдите какво планирате да говорите по време на сесията
+  * Ако сте виртуален доброволец, тествайте захранването и възможностите за споделяне на екрана предварително
 
-### **Day-of Hour of Code Event:**
+### **В деня-час на код събитие:**
 
-  * Sign into the school and greet the teacher. Confirm the agreed schedule for the day and discuss any talking points.
-  * Spend 5 minutes talking about yourself, who inspired you to pursue a career in tech and/or computer science. 
-      * Introduce yourself: who you are and what you do
-      * Choose one inspirational video and show it to the entire classroom together. Answer any questions from students.
-      * Share a short story about how you got interested in computer science. What or who inspired you? What do you love most about your job? Keep it short! ;) The point is to let the kids do the coding, leave time for more questions at the end.
-      * Share how computer science has broad, worldwide impact.
-  * Let the students dive into the tutorials. Walk around the classroom answering any questions and guiding them through tough puzzles. Try not to give students the solution outright, instead try asking them questions so they can answer themselves what went wrong.
-  * Encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity. Often kids can solve the problems themselves and through teamwork. 
-  * At the completion of their Hour of Code, hand out your company swag (stickers are awesome) and answer any remaining questions.
-  * Also important to mention that if you do take pictures/videos during the event -- especially with students -- that you get teacher/parent permission if you would like to post your stories on social media.
+  * 1. Влезте в училището и поздравете обучаващият. Потвърдете определения график и обсъдете всички гледни точки.
+  * Отделете 5 минути, за да разкажете за себе си, какво ви вдъхнови да преследвате кариера в технологиите и/или компютърните науки. 
+      * Представете се: кой сте и какво правите
+      * Изберете едно вдъхновяващо видео и го покажете на целия клас заедно. Отговорете на всички въпроси от ученици.
+      * Споделете кратък разказ за това как сте се заинтересували от компютърните науки. Какво или кой ви вдъхнови? Какво обичате най-много във вашата работа? Говорете кратко и стегнато! ;) Въпросът е да оставите децата да кодират, оставете време за повече въпроси в края.
+      * Споделете как компютърните науки въздействат на, света.
+  * Нека учениците сами пробват уроците. Разходете се из класната стая, отговаряйки на въпросите им и ги насочвайте през трудните пъзели. Опитайте се да не давате на учениците готови решения, вместо това задавайте въпроси, така че те да могат да си отговорят сами какво се е объркало.
+  * Насърчете учениците да си задават въпроси помежду си. Ученето един от друг е от голямо значение. Често децата може да решат сами проблемите и чрез работа в екип. 
+  * При завършване на Hour of Code, раздайте подаръци от вашата компания (стикери е добре) и отговорете на всички останали въпроси.
+  * Също така е важно да се спомене, че ако се правят снимки/клипове по време на събитието - особено със ученици-- е нужно да получите разрешение от учител/родител, ако искате да публикувате вашите истории в социалните медии.
 
-### **Sample agenda:**
+### **Примерен дневен ред:**
 
-Introduce yourself: </ul>
+Представете се: </ul>
 
-  * What do you work, what do you do, and what do you love most about your job?
-  * What or who inspired you
-  * Did you have a mentor?
-  * Share a story about how tech affects everyone</ul></td> </tr> 
+  * Какво работите, какво ще правите и какво обичате най-много във вашата работа?
+  * Какво или кой ви вдъхнови
+  * Имахте ли наставник?
+  * Споделяне на история за това как технологиите влияят на всички</ul></td> </tr> 
     Ask the students questions and leave time for Q&A </ul>
     
       * WHat jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? 
