@@ -1,5 +1,9 @@
 <Gamelab>
   <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-06-15T15:08:06.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -52,10 +56,6 @@
     "encrypted_examples": "J0PUStOvBig7KqS+bz+7qkfGvGj2ajj7f13NsDIh5UUmVSFkKYxhGajmS0kJ\nNssW\n",
     "contained_level_names": null
   },
-  "game_id": 50,
-  "created_at": "2016-06-15T15:08:06.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "published": true,
   "notes": "",
   "level_concept_difficulty": {

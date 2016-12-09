@@ -47,13 +47,19 @@ const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
 // Minecraft-specific styles
 const craftStyles = {
-  main: {
-    marginTop: 20,
-    marginBottom: 10
-  },
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
+  },
+  collapserButton: {
+    padding: 5,
+    marginBottom: 0
+  },
+  scrollButtons: {
+    left: 38
+  },
+  scrollButtonsRtl: {
+    right: 38
   },
 };
 
@@ -261,7 +267,7 @@ var TopInstructions = React.createClass({
       this.setState({
         promptForHint: false
       });
-      if (!this.props.isMinecraft && nextProps.collapsed) {
+      if (nextProps.collapsed) {
         this.handleClickCollapser();
       }
     }
@@ -320,7 +326,7 @@ var TopInstructions = React.createClass({
   getMinHeight(collapsed=this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
-        this.refs.scrollButtons.getMinHeight() : 0;
+        this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
 
     const minIconHeight = this.refs.icon ?
       getOuterHeight(this.refs.icon, true) : 0;
@@ -447,11 +453,6 @@ var TopInstructions = React.createClass({
   },
 
   shouldDisplayCollapserButton() {
-    // Minecraft should never show the button
-    if (this.props.isMinecraft) {
-      return false;
-    }
-
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (this.props.hints.length || this.shouldDisplayHintPrompt() || this.props.feedback) {
@@ -464,6 +465,15 @@ var TopInstructions = React.createClass({
   },
 
   shouldIgnoreShortInstructions() {
+    // if we have no long instructions, never ignore the short ones.
+    // Note that we would only decide to ignore short instructions in
+    // the absense of long instructions when the short instructions
+    // themselves were less than 10 characters, which can easily happen
+    // in ideo- or logographic languages.
+    if (!this.props.longInstructions) {
+      return false;
+    }
+
     // if short instructions and long instructions have a Levenshtein
     // Edit Distance of less than or equal to 10, ignore short
     // instructions and only show long.
@@ -491,7 +501,6 @@ var TopInstructions = React.createClass({
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.isMinecraft && craftStyles.main,
       this.props.overlayVisible && styles.withOverlay
     ];
 
@@ -519,7 +528,6 @@ var TopInstructions = React.createClass({
           leftColWidth={leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - resizerHeight}
-          allowScrolling={!this.props.isMinecraft}
         >
           <div
             style={[
@@ -580,14 +588,13 @@ var TopInstructions = React.createClass({
                 block={hint.block}
               />
             )}
-            {this.props.feedback && (this.props.isMinecraft || !this.props.collapsed) &&
+            {this.props.feedback && !this.props.collapsed &&
               <InlineFeedback
                 borderColor={this.props.isMinecraft ? color.white : color.charcoal}
                 message={this.props.feedback.message}
               />}
             {this.shouldDisplayHintPrompt() &&
               <HintPrompt
-                isMinecraft={this.props.isMinecraft}
                 borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
@@ -596,13 +603,20 @@ var TopInstructions = React.createClass({
           <div>
             <CollapserButton
               ref="collapser"
-              style={[styles.collapserButton, !this.shouldDisplayCollapserButton() && commonStyles.hidden]}
+              style={[
+                styles.collapserButton,
+                this.props.isMinecraft && craftStyles.collapserButton,
+                !this.shouldDisplayCollapserButton() && commonStyles.hidden
+              ]}
               collapsed={this.props.collapsed}
               onClick={this.handleClickCollapser}
             />
             {!this.props.collapsed &&
               <ScrollButtons
-                style={this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons}
+                style={[
+                  this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
+                  this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
+                ]}
                 ref="scrollButtons"
                 getScrollTarget={this.getScrollTarget}
                 visible={this.state.displayScrollButtons}

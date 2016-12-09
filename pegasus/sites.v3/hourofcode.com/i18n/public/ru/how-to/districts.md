@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# Как рассказать о Часе Кода вашей школе
 
 ## Пускай все школы участвуют, все ученики учат!
 

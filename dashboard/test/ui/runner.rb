@@ -393,6 +393,11 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
 
+  # disable some stuff to make require_rails_env run faster within cucumber.
+  # These things won't be disabled in the dashboard instance we're testing against.
+  run_environment['SKIP_I18N_INIT'] = 'true'
+  run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
+
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
@@ -513,13 +518,10 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
       duration: test_duration.to_s
   })
 
-  if !succeeded && $options.html
-    HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}"
-  end
-
   while !succeeded && (reruns < max_reruns)
     reruns += 1
 
+    HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
     HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
     # Since output_stderr is empty, we do not log it to HipChat.
     HipChat.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{TestFlakiness.test_flakiness[test_run_string] || '?'})..."
@@ -567,6 +569,7 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
     # Don't log individual successes because we hit HipChat rate limits
     # HipChat.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
+    HipChat.log "#{test_run_string} first selenium error: #{first_selenium_error(html_output_filename)}" if $options.html
     HipChat.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'}
     HipChat.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info})#{log_link}"

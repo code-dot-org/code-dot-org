@@ -1,0 +1,8 @@
+name 'coursee-privateandpersonalinformation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Private and Personal Information
+## How can you protect yourself from online identity theft?
+MARKDOWN

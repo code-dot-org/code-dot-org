@@ -379,6 +379,38 @@
         "table-name": "user_geos",
         "column-name": "longitude"
       }
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "33",
+      "rule-name": "33",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "teacher_profiles"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection",
+      "rule-id": "34",
+      "rule-name": "34",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "studio_people"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "35",
+      "rule-name": "35",
+      "rule-action": "remove-column",
+      "rule-target": "column",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "studio_people",
+        "column-name": "emails"
+      }
     }
   ]
 }

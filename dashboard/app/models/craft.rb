@@ -147,8 +147,7 @@ class Craft < Blockly
       carrots: true,
       milk: true,
       egg: true,
-      poppy: true,
-      sheep: true,
+      poppy: true
   }
 
   ALL_SOUNDS = {
@@ -387,11 +386,11 @@ class Craft < Blockly
   end
 
   def get_width
-    self.grid_width || 10
+    grid_width || 10
   end
 
   def get_height
-    self.grid_height || 10
+    grid_height || 10
   end
 
   def self.create_from_level_builder(params, level_params)

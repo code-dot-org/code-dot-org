@@ -102,6 +102,8 @@ var loadLevel = function () {
   // Height and width of the goal and obstacles.
   Bounce.MARKER_HEIGHT = skin.markerHeight;
   Bounce.MARKER_WIDTH = skin.markerWidth;
+  Bounce.GOAL_HEIGHT = level.useFlagGoal ? skin.flagHeight : skin.markerHeight;
+  Bounce.GOAL_WIDTH = level.useFlagGoal ? skin.flagWidth : skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
@@ -183,7 +185,6 @@ Bounce.createBallElements = function (i) {
   ballIcon.setAttribute('height', Bounce.PEGMAN_HEIGHT);
   ballIcon.setAttribute('width', Bounce.PEGMAN_WIDTH);
   ballIcon.setAttribute('clip-path', 'url(#ballClipPath' + i + ')');
-  ballIcon.style.transformOrigin = 'center';
   svg.appendChild(ballIcon);
 };
 
@@ -339,8 +340,8 @@ var drawMap = function () {
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
                                         Bounce.goal);
-      paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-      paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+      paddleFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+      paddleFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
       svg.appendChild(paddleFinishMarker);
     }
   }
@@ -352,8 +353,8 @@ var drawMap = function () {
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
                                     Bounce.goal);
-    ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-    ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+    ballFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+    ballFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
     svg.appendChild(ballFinishMarker);
   }
 
@@ -653,26 +654,13 @@ Bounce.init = function (config) {
   window.addEventListener("keyup", Bounce.onKey, false);
 
   config.loadAudio = function () {
-    if (skin.disableAudio) {
-      return;
-    }
     studioApp.loadAudio(skin.winSound, 'win');
     studioApp.loadAudio(skin.startSound, 'start');
-    studioApp.loadAudio(skin.ballStartSound, 'ballstart');
     studioApp.loadAudio(skin.failureSound, 'failure');
-    studioApp.loadAudio(skin.rubberSound, 'rubber');
-    studioApp.loadAudio(skin.crunchSound, 'crunch');
-    studioApp.loadAudio(skin.flagSound, 'flag');
-    studioApp.loadAudio(skin.winPointSound, 'winpoint');
-    studioApp.loadAudio(skin.winPoint2Sound, 'winpoint2');
-    studioApp.loadAudio(skin.losePointSound, 'losepoint');
-    studioApp.loadAudio(skin.losePoint2Sound, 'losepoint2');
-    studioApp.loadAudio(skin.goal1Sound, 'goal1');
-    studioApp.loadAudio(skin.goal2Sound, 'goal2');
-    studioApp.loadAudio(skin.woodSound, 'wood');
-    studioApp.loadAudio(skin.retroSound, 'retro');
-    studioApp.loadAudio(skin.slapSound, 'slap');
-    studioApp.loadAudio(skin.hitSound, 'hit');
+
+    for (var sound in skin.customSounds) {
+      studioApp.loadAudio(skin.customSounds[sound].urls, sound);
+    }
   };
 
   config.afterInject = function () {
@@ -1158,8 +1146,10 @@ Bounce.displayBall = function (i, x, y, rotation) {
                         x * Bounce.SQUARE_SIZE);
   ballIcon.setAttribute('y',
                         y * Bounce.SQUARE_SIZE + Bounce.BALL_Y_OFFSET);
-  ballIcon.style.transform = `rotate(${rotation}deg)`;
 
+  var xCenter = (x * Bounce.SQUARE_SIZE) + (Bounce.PEGMAN_WIDTH / 2);
+  var yCenter = (y * Bounce.SQUARE_SIZE) + Bounce.BALL_Y_OFFSET + (Bounce.PEGMAN_HEIGHT / 2);
+  ballIcon.setAttribute('transform', `rotate(${rotation} ${xCenter} ${yCenter})`);
 
   var ballClipRect = document.getElementById('ballClipRect' + i);
   ballClipRect.setAttribute('x', x * Bounce.SQUARE_SIZE);

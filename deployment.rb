@@ -121,7 +121,7 @@ def load_configuration
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret',
     'stub_school_data'            => [:adhoc, :development, :test].include?(rack_env),
-    'stack_name'                  => rack_env.to_s,
+    'stack_name'                  => rack_env == :production ? 'autoscale-prod' : rack_env.to_s,
     'videos_s3_bucket'            => 'videos.code.org',
     'videos_url'                  => '//videos.code.org'
   }.tap do |config|
@@ -170,14 +170,14 @@ class CDOImpl < OpenStruct
     return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
     return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
 
-    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
     return domain if rack_env?(:production)
 
     # our HTTPS wildcard certificate only supports *.code.org
     # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
     sep = (domain.include?('.code.org')) ? '-' : '.'
     return "localhost#{sep}#{domain}" if rack_env?(:development)
-    return "translate#{sep}#{domain}" if self.name == 'crowdin'
+    return "translate#{sep}#{domain}" if name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
   end
 
@@ -316,12 +316,11 @@ class CDOImpl < OpenStruct
   # When running on Chef Server, use EC2 API to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    stack_name = rack_env?(:production) ? 'autoscale-prod' : CDO.stack_name
     return super unless CDO.chef_managed
     require 'aws-sdk'
     servers = Aws::EC2::Client.new.describe_instances(filters: [
-        { name: 'tag:aws:cloudformation:stack-name', values: [stack_name]},
-        { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
+        { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
+        { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
         { name: 'instance-state-name', values: ['running']}
     ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)

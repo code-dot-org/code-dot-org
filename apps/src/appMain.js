@@ -1,3 +1,4 @@
+import {getStore} from './redux';
 var utils = require('./utils');
 var _ = require('lodash');
 var requiredBlockUtils = require('./required_block_utils');
@@ -16,7 +17,8 @@ window.__TestInterface = {
     return studioApp.editor;
   },
   // Set to true to ignore onBeforeUnload events
-  ignoreOnBeforeUnload: false
+  ignoreOnBeforeUnload: false,
+  getStore,
 };
 
 var addReadyListener = require('./dom').addReadyListener;

@@ -1,0 +1,8 @@
+name 'Unit 3 Tool Talk' 
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 3 Tool Talk
+In this unit, students will learn the fundamentals of programming using a tool called `App Lab` by following a series of prebuilt Code Studio levels for each lesson. These levels include student-facing instructions for completing each of the activities that appear on the top of the workspace. The toolbox in App Lab is scoped to only include the commands needed to complete the activity. See below for an example of how App Lab is set up for Unit 3, including the instructions for students and the contents of the toolbox. 
+
+![](https://images.code.org/ae096a1b1ebf3254964a25389f30800c-image-1479829504591.png)
+MARKDOWN

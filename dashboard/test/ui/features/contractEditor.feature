@@ -78,6 +78,8 @@ Scenario: Changing Parameter names
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   And I press "modalEditorClose"
   And I resize top instructions to "100" pixels tall
 

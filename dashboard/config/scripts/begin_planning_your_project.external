@@ -5,9 +5,5 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # The Design Process
 
-The design process is a list of steps students will follow to work on their final projects. Sometimes developing a solution involves designing a product, such as a machine or game, that will meet a certain criteria for accomplishing a task. It’s important to think of the design process as a “wheel” with no set beginning or end, and as an ongoing process. In this lesson students will navigate through the steps of the design process to build their interactive games.
-
-![](https://images.code.org/fc517cd41c1a15ca6a985e18511ad297-image-1471040447529.png)
-
-Source: https://www.teachengineering.org/k12engineering/designprocess
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true" style="width: 800px; height: 600px"></iframe>
 MARKDOWN

@@ -76,6 +76,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     head :no_content
   end
 
+  # GET /api/v1/pd/workshops/1/summary
+  def summary
+    render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+  end
+
   private
 
   def should_notify?
@@ -86,6 +91,10 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
     end
+    @workshop.facilitators.each do |facilitator|
+      Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
+    end
+    Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
   end
 
   def process_location(force: false)

@@ -17,10 +17,6 @@ Lint/AmbiguousRegexpLiteral:
 Lint/InheritException:
   Enabled: false
 
-# Offense count: 24
-Lint/NestedMethodDefinition:
-  Enabled: false
-
 # Offense count: 21
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -221,11 +217,6 @@ Style/Proc:
 # Offense count: 49
 # Cop supports --auto-correct.
 Style/RedundantParentheses:
-  Enabled: false
-
-# Offense count: 297
-# Cop supports --auto-correct.
-Style/RedundantSelf:
   Enabled: false
 
 # Offense count: 69

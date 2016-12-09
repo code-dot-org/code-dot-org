@@ -1,14 +1,8 @@
 name 'CSD U4L15 SFLP'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 15 - Event Driven Programming
+# Problem Solving - The Design Process: Lesson 15 - Testing the App
 
-## New Blocks
+# Resources
 
-* **console.log** - `console.log(message)`
-* **onEvent** - `onEvent(id, type, function(event) {
-  // Code to execute
-});`
-* **setScreen** - `setScreen(id)`
-* **setText** - `setText(id, text)`
-
+* [App User Testing](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=doc))
 MARKDOWN

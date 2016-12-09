@@ -41,6 +41,7 @@
     "failure_message_override": "If the chickens are all moving in the same direction, use `turn random` to make the chickens turn randomly left or right.",
     "use_player": "false",
     "use_score": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,

@@ -4,7 +4,7 @@ title: <%= hoc_s(:title_partners) %>
 
 ---
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+「一小時的程式設計課程」是由「一小時的程式設計課程與電腦科學教育週」諮詢與審查委員會所推動。
 
 The [Advisory Committee](<%= resolve_url('/advisory-committee') %>) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
 

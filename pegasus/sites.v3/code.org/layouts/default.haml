@@ -11,12 +11,6 @@
     = view :header
 
   -if header['theme'] == 'responsive'
-    -# Pages such as /learn/legacy, /learn/local, /learn/beyond get the tabs.
-    -# But newer pages such as /learn, /learn/robotics don't get the tabs.
-    - if request.path_info =~ /^\/learn/ && !["/learn", "/learn/robotics"].include?(request.path_info)
-      = view :learn_tabs
-
-  -if header['theme'] == 'responsive'
     -if header['responsivePadMobile']
       -containerClass = "container_responsive mobile-pad-edge"
     -else

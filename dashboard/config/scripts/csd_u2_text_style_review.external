@@ -1,0 +1,9 @@
+name 'CSD U2 text style review'
+title 'CSS'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# STOP: CSS Properties
+
+
+MARKDOWN

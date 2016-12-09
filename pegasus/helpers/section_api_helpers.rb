@@ -245,11 +245,21 @@ class DashboardSection
           {
             id: course[:id],
             name: name,
+            script_name: course[:name],
             category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
           }
         end
+  end
+
+  # Gets a list of valid courses in which progress tracking has been disabled via
+  # the gatekeeper key postMilestone.
+  def self.progress_disabled_courses(user_id = nil)
+    disabled_courses = valid_courses(user_id).select do |course|
+      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
+    end
+    disabled_courses.map{|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)
@@ -324,7 +334,7 @@ class DashboardSection
       select(*fields).
       first
 
-    section = self.new(row)
+    section = new(row)
     return section if section.member?(user_id) || Dashboard.admin?(user_id)
     nil
   end
@@ -336,7 +346,7 @@ class DashboardSection
       where(sections__id: id, sections__deleted_at: nil).
       first
 
-    section = self.new(row)
+    section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
   end
@@ -348,7 +358,7 @@ class DashboardSection
       join(:users, :id => :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
-      map{|row| self.new(row).to_owner_hash}
+      map{|row| new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -360,7 +370,7 @@ class DashboardSection
       join(:users, :id => :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map{|row| self.new(row).to_member_hash}
+      map{|row| new(row).to_member_hash}
   end
 
   def add_student(student)

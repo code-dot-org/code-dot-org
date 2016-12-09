@@ -13,16 +13,16 @@ nav: how_to_nav
 ## Regardez cette vidéo qui explique comment faire. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## Choisissez un didacticiel :
 
-Nous proposons une grande quantité de [didacticiels attractifs, d'une durée d'une heure](<%= resolve_url('https://code.org/learn') %>), pour tous les âges, créés pas divers partenaires. [Essayez-les !](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tous les tutoriels de l'Heure de Code:**
 
   * Nécessitent un minimum de préparation
   * Sont auto-dirigés, pour permettre aux étudiants de travailler seuls, à leur rythme, en fonction de leur niveau.
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+Besoin d'un plan de cours pour votre Heure de Code après l'école ? regardez cet exemple!
 
 ## Faites la promotion de votre Heure de Code
 
@@ -66,9 +66,9 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 **Guider les participants pendant l'activité**
 
-  * Notez le lien du tutoriel sur un papier. Le lien d'[information pour le tutoriel sélectionné](<%= resolve_url('https://code.org/learn') %>) se trouve au-dessous du nombre de participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Quand quelqu'un rencontre des difficultés, il est normal de répondre :**
 
   * « Je n'en sais rien. Étudions le problème ensemble. »
   * « Les nouvelles technologies ne marchent pas toujours comme on le voudrait. »
@@ -76,7 +76,7 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 **Que faire si quelqu'un termine en avance ?**
 
-  * Encouragez les participants à essayer une autre activité de l'Heure de Code sur [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ou encore, demander à ceux qui terminent plus tôt d'aider ceux qui sont en difficulté.
 
 [col-33]

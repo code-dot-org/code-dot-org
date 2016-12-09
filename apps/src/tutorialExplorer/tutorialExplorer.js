@@ -10,19 +10,25 @@ import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
-
 import { TutorialsSortBy, mobileCheck } from './util';
 import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
 import i18n from './locale';
 import _ from 'lodash';
 import queryString from 'query-string';
+import { StickyContainer } from 'react-sticky';
 
 const styles = {
-  bottomLinks: {
+  bottomLinksContainer: {
     padding: '10px 7px 40px 7px',
     fontSize: 13,
     lineHeight: "17px",
     clear: "both"
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
   }
 };
 
@@ -38,6 +44,8 @@ const TutorialExplorer = React.createClass({
     showSortBy: React.PropTypes.bool.isRequired,
     disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
+
+  shouldScrollToTop: false,
 
   getInitialState() {
     let filters = {};
@@ -112,6 +120,36 @@ const TutorialExplorer = React.createClass({
       filteredTutorialsCount: filteredTutorials.length,
       sortBy: value
     });
+
+    this.scrollToTop();
+  },
+
+  /*
+   * Now that we've re-rendered changes, check to see if there's a pending
+   * scroll to the top of all tutorials.
+   * jQuery is used to do the scrolling, which is a little unusual, but
+   * ensures a smooth, well-eased movement.
+   */
+  componentDidUpdate() {
+    if (this.shouldScrollToTop) {
+      $('html, body').animate({scrollTop: $(this.allTutorials).offset().top});
+      this.shouldScrollToTop = false;
+    }
+  },
+
+  /**
+   * Set up a smooth scroll to the top of all tutorials once we've re-rendered the
+   * relevant changes.
+   * Note that if that next render never comes, we won't actually do the scroll.
+   *
+   * Also note that this is currently disabled unless URL parameter "scrolltotop" is
+   * provided, due to flicker and mispositioning of the sticky header after scrolling
+   * on iOS devices.
+   */
+  scrollToTop() {
+    if (window.location.search.indexOf("scrolltotop") !== -1) {
+      this.shouldScrollToTop = true;
+    }
   },
 
   /*
@@ -158,10 +196,18 @@ const TutorialExplorer = React.createClass({
 
   showModalFilters() {
     this.setState({showingModalFilters: true});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   hideModalFilters() {
     this.setState({showingModalFilters: false});
+
+    if (this.state.mobileLayout) {
+      this.scrollToTop();
+    }
   },
 
   showAllTutorials() {
@@ -328,96 +374,98 @@ const TutorialExplorer = React.createClass({
   },
 
   render() {
-    const bottomLinksStyle = {
-      ...styles.bottomLinks,
-      textAlign: getResponsiveValue({xs: "left", md: "right"})
+    const bottomLinksContainerStyle = {
+      ...styles.bottomLinksContainer,
+      textAlign: getResponsiveValue({xs: "left", md: "right"}),
+      visibility: this.shouldShowTutorials() ? "visible" : "hidden"
     };
 
     return (
-      <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
+      <StickyContainer>
+        <div style={{width: getResponsiveContainerWidth(), margin: "0 auto", paddingBottom: 0}}>
 
-        {this.shouldShowTutorialsForLocale() && (
-          <div>
-            <h1>{i18n.headingTutorialsYourLanguage()}</h1>
-            {this.state.filteredTutorialsForLocale.length === 0 &&
-              i18n.noTutorialsYourLanguage()
-            }
+          {this.shouldShowTutorialsForLocale() && (
+            <div>
+              <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+              {this.state.filteredTutorialsForLocale.length === 0 &&
+                i18n.noTutorialsYourLanguage()
+              }
 
-            {this.state.filteredTutorialsForLocale.length > 0 && (
-              <TutorialSet
-                tutorials={this.state.filteredTutorialsForLocale}
-                filters={this.state.filters}
-                locale={this.props.locale}
-                specificLocale={true}
-                localeEnglish={this.isLocaleEnglish()}
-                disabledTutorials={this.props.disabledTutorials}
-              />
-            )}
-          </div>
-        )}
-
-        {this.shouldShowAllTutorialsToggleButton() && (
-          <ToggleAllTutorialsButton
-            showAllTutorials={this.showAllTutorials}
-            hideAllTutorials={this.hideAllTutorials}
-            showingAllTutorials={this.state.showingAllTutorials}
-          />
-        )}
-
-        {this.state.showingAllTutorials && (
-          <div>
-            <FilterHeader
-              onUserInput={this.handleUserInputSortBy}
-              sortBy={this.state.sortBy}
-              backButton={this.props.backButton}
-              filteredTutorialsCount={this.state.filteredTutorialsCount}
-              mobileLayout={this.state.mobileLayout}
-              showingModalFilters={this.state.showingModalFilters}
-              showModalFilters={this.showModalFilters}
-              hideModalFilters={this.hideModalFilters}
-              showSortBy={this.props.showSortBy}
-            />
-            <div style={{clear: "both"}}/>
-
-            {this.shouldShowFilters() && (
-              <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
-                <FilterSet
-                  filterGroups={this.props.filterGroups}
-                  onUserInput={this.handleUserInputFilter}
-                  selection={this.state.filters}
-                  roboticsButtonUrl={this.props.roboticsButtonUrl}
-                />
-              </div>
-            )}
-
-            <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
-              {this.shouldShowTutorials() && (
+              {this.state.filteredTutorialsForLocale.length > 0 && (
                 <TutorialSet
-                  tutorials={this.state.filteredTutorials}
+                  tutorials={this.state.filteredTutorialsForLocale}
                   filters={this.state.filters}
                   locale={this.props.locale}
+                  specificLocale={true}
                   localeEnglish={this.isLocaleEnglish()}
                   disabledTutorials={this.props.disabledTutorials}
                 />
               )}
             </div>
+          )}
 
-            <div style={bottomLinksStyle}>
-              <div>
-                <a href="https://hourofcode.com/activity-guidelines">
-                  {i18n.bottomGuidelinesLink()}
-                </a>
+          {this.shouldShowAllTutorialsToggleButton() && (
+            <ToggleAllTutorialsButton
+              showAllTutorials={this.showAllTutorials}
+              hideAllTutorials={this.hideAllTutorials}
+              showingAllTutorials={this.state.showingAllTutorials}
+            />
+          )}
+
+          {this.state.showingAllTutorials && (
+            <div ref={allTutorials => this.allTutorials = allTutorials}>
+              <FilterHeader
+                onUserInput={this.handleUserInputSortBy}
+                sortBy={this.state.sortBy}
+                backButton={this.props.backButton}
+                filteredTutorialsCount={this.state.filteredTutorialsCount}
+                mobileLayout={this.state.mobileLayout}
+                showingModalFilters={this.state.showingModalFilters}
+                showModalFilters={this.showModalFilters}
+                hideModalFilters={this.hideModalFilters}
+                showSortBy={this.props.showSortBy}
+              />
+              <div style={{clear: "both"}}/>
+
+              {this.shouldShowFilters() && (
+                <div style={{float: "left", width: getResponsiveValue({xs: 100, md: 20})}}>
+                  <FilterSet
+                    filterGroups={this.props.filterGroups}
+                    onUserInput={this.handleUserInputFilter}
+                    selection={this.state.filters}
+                    roboticsButtonUrl={this.props.roboticsButtonUrl}
+                  />
+                </div>
+              )}
+
+              <div style={{float: 'left', width: getResponsiveValue({xs: 100, md: 80})}}>
+                {this.shouldShowTutorials() && (
+                  <TutorialSet
+                    tutorials={this.state.filteredTutorials}
+                    filters={this.state.filters}
+                    locale={this.props.locale}
+                    localeEnglish={this.isLocaleEnglish()}
+                    disabledTutorials={this.props.disabledTutorials}
+                  />
+                )}
               </div>
-              <br/>
-              <div>
-                <a href="https://hourofcode.com/supporting-special-needs-students">
-                  {i18n.bottomSpecialNeedsLink()}
-                </a>
+
+              <div style={bottomLinksContainerStyle}>
+                <div style={styles.bottomLinksLinkFirst}>
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/activity-guidelines">
+                    {i18n.bottomGuidelinesLink()}
+                  </a>
+                </div>
+                <div>
+                  <a style={styles.bottomLinksLink} href="https://hourofcode.com/supporting-special-needs-students">
+                    {i18n.bottomSpecialNeedsLink()}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      </StickyContainer>
     );
   }
 });

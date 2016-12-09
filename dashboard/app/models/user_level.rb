@@ -84,7 +84,12 @@ class UserLevel < ActiveRecord::Base
 
   def self.most_recent_driver(script, level, user)
     most_recent = find_by(script: script, level: level, user: user).try(:driver_user_levels).try(:last)
-    most_recent ? most_recent.user.name : nil
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user
+    return I18n.t('user.deleted_user') unless most_recent_user
+
+    return most_recent_user.name
   end
 
   def paired?
@@ -99,13 +104,13 @@ class UserLevel < ActiveRecord::Base
 
   def has_autolocked?(stage)
     return false unless stage.lockable?
-    self.unlocked_at && self.unlocked_at < AUTOLOCK_PERIOD.ago
+    unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
   def locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
-    self.submitted? && !self.readonly_answers? || self.has_autolocked?(stage)
+    submitted? && !readonly_answers? || has_autolocked?(stage)
   end
 
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)

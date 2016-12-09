@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-11-22T16:50:21.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "<br><br>\r\n> **NOTE: before you start this task, make sure you’ve reviewed the resources in this module, and have a good sense of the connections to unit 3. If you haven’t already reviewed the materials, do that now and come back to this task later.**\r\n\r\n# Unit 3 Teaching Practice Plan: Discovery Learning\r\n\r\nFor this task, you’re going to develop and submit a Teaching Practice Plan, which details your plan for building and supporting a culture of discovery learning in your classroom throughout unit 3. Your plan should address the following: \r\n\r\n- For lessons that call for students to discover a key computer science concept, how do you plan to balance your time frontloading content instruction with students’ time completing the activity and constructing their own knowledge? \r\n- What is your strategy for supporting students who struggle with this model of teaching and learning, and look to you to ‘just give them the answer’?\r\n- How do you plan to make sure students leave a lesson having discovered the underlying concept(s)? \r\n\r\nYou can type out your teaching practice plan in the box below, or you can upload a word doc or pdf file. \r\n\r\n## Getting Credit for Completing this Task\r\n\r\n#### Task Review Details\r\n\r\nIf this module is listed as  your “focus area”, then your response to the prompt above will be shared anonymously and reviewed by your peers, and you will review the work done by other teachers. Reviewers will be looking for thoughtful and thorough answers that demonstrate that you have spent time considering how this practice will fit into your own classroom. Reviewers will have an opportunity to give feedback on your submission, and you can respond to that feedback and resubmit. \r\n\r\nIn order to get credit for completing this task, two reviewers need to agree that you have responded to the prompts fully. If reviewers don’t feel comfortable making a decision about your task submission, they can elevate to a facilitator to review. You will always have a chance to address feedback from your reviewers and resubmit your task! Reviewer feedback will show up at the bottom of this page, once it’s available. \r\n\r\n\r\n\r\n",
+    "instructions_important": "false",
+    "height": "300",
+    "allow_user_uploads": "true",
+    "submittable": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

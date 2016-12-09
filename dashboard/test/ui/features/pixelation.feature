@@ -7,6 +7,7 @@ Feature: Pixelation levels
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/1?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle 1"
     And I close the dialog
+    And I wait until pixelation data loads
     And pixelation data has text "0000 0011 0000 0010 0 1 0"
 
     When I press keys "1" for element "#pixel_data"
@@ -24,6 +25,7 @@ Feature: Pixelation levels
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/2?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle 2"
     And I close the dialog
+    And I wait until pixelation data loads
     And pixelation data has text "0000 0100 0000 0010 0000 0011 000 111 100 010 001 110"
 
     When I press keys "111" for element "#pixel_data"
@@ -41,6 +43,7 @@ Feature: Pixelation levels
     Given I am on "http://studio.code.org/s/allthethings/stage/17/puzzle/3?noautoplay=true"
     And I wait to see a visible dialog with title containing "Puzzle 3"
     And I close the dialog
+    And I wait until pixelation data loads
     And pixelation data has text "04 04 18 FF0000 00AAAA"
 
     When I press keys "999999" for element "#pixel_data"

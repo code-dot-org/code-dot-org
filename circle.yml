@@ -21,8 +21,6 @@ checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
         parallel: true
-    - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
-        parallel: true
 dependencies:
   pre:
     # update google chrome; Selenium requires that Chrome version must
@@ -31,10 +29,7 @@ dependencies:
     - ./bin/circle/upgrade-google-chrome.sh
     - google-chrome --version
     # Install Yarn
-    - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
-    - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    - sudo apt-get update -qq
-    - sudo apt-get install -y -qq yarn
+    - npm install -g yarn@0.16.1
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
@@ -94,6 +89,9 @@ dependencies:
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
     - rake firebase:ci
+    # Make sure building did not introduce unexpected changes.  If it did, fail
+    # here before we start running any test steps.
+    - bundle exec rake circle:check_for_unexpected_apps_changes
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
@@ -112,3 +110,9 @@ experimental:
     branches:
       only:
         - staging
+deployment:
+  storybook:
+    branch: staging
+    commands:
+      - 'echo "sync_assets: false" >> locals.yml'
+      - 'cd apps && npm run storybook:deploy'

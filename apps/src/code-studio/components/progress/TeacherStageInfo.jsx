@@ -85,22 +85,19 @@ const TeacherStageInfo = Radium(React.createClass({
       );
     }
 
-    if (sectionId) {
-      if (lockable) {
-        children.push(<StageLock key="stageLock" stage={stage}/>);
-      }
+    if (lockable) {
+      children.push(<StageLock key="stageLock" stage={stage}/>);
+    }
 
-      if (hiddenStagesInitialized &&
-          !hasNoSections) {
-        children.push(
-          <div key="hiddenStageToggle">
-            <HiddenStageToggle
-              hidden={!!isHidden}
-              onChange={this.onClickHiddenToggle}
-            />
-          </div>
-        );
-      }
+    if (sectionId && hiddenStagesInitialized && !hasNoSections) {
+      children.push(
+        <div key="hiddenStageToggle">
+          <HiddenStageToggle
+            hidden={!!isHidden}
+            onChange={this.onClickHiddenToggle}
+          />
+        </div>
+      );
     }
 
     if (children.length === 0) {

@@ -36,7 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-var redux = require('./redux');
+import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
   determineInstructionsConstants,
@@ -48,7 +48,6 @@ import {
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
-var combineReducers = require('redux').combineReducers;
 
 var copyrightStrings;
 
@@ -228,11 +227,6 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-// TODO: once code-studio and apps share common modules in the same bundle,
-// get rid of this window nonsense.
-module.exports = window.StudioApp = window.StudioApp || {
-  singleton: new StudioApp()
-};
 
 /**
  * Configure StudioApp options
@@ -281,8 +275,9 @@ StudioApp.prototype.configureRedux = function (reducers) {
  * runs).
  */
 StudioApp.prototype.createReduxStore_ = function () {
-  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
-  this.reduxStore = redux.createStore(combined);
+  registerReducers(_.assign({}, commonReducers, this.reducers_));
+
+  this.reduxStore = getStore();
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
@@ -306,7 +301,6 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
-    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -514,7 +508,8 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
+      !config.readonlyWorkspace) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -1170,12 +1165,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
       this.editor.aceEditor.focus();
     }
 
-    // Fire a custom event on the document so that other code can respond
-    // to instructions being closed.
-    var event = document.createEvent('Event');
-    event.initEvent('instructionsHidden', true, true);
-    document.dispatchEvent(event);
-
     // update redux
     this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
@@ -1217,12 +1206,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  // Fire a custom event on the document so that other code can respond
-  // to instructions being shown.
-  var event = document.createEvent('Event');
-  event.initEvent('instructionsShown', true, true);
-  document.dispatchEvent(event);
 };
 
 /**
@@ -2910,3 +2893,5 @@ StudioApp.prototype.showRateLimitAlert = function () {
     share: !!this.share,
   });
 };
+
+export const singleton = new StudioApp();

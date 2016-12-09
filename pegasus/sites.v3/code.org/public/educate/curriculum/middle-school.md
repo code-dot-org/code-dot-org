@@ -3,10 +3,19 @@ title: CS Curriculum for grades 6-8
 nav: educate_nav
 ---
 
-# Middle School
+[solid-block-header]
+
+Middle School
+
+[/solid-block-header]
+
 Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
-# Computer Science Discoveries
+[solid-block-header]
+
+Computer Science Discoveries
+
+[/solid-block-header]
 
 <img src="/images/csdiscoveries-montage.jpg" width="500px">
 
@@ -23,7 +32,11 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
-# Computer Science Fundamentals - Accelerated
+[solid-block-header]
+
+Computer Science Fundamentals - Accelerated
+
+[/solid-block-header]
 
 <img src="/images/code20hr.jpg">
 
@@ -31,7 +44,11 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
-# Computer Science in Science
+[solid-block-header]
+
+Computer Science in Science
+
+[/solid-block-header]
 
 <img src="<%= CDO.shared_image_url("courses/logo_science.png") %>">
 
@@ -52,14 +69,22 @@ Code.org offers a four course [Computer Science Fundamentals](https://studio.cod
 
 [<button>Learn more about curriculum</button>](<%= CDO.code_org_url('/curriculum/science') %>)
 
+[solid-block-header]
 
-# For Algebra Classrooms
+For Algebra Classrooms
+
+[/solid-block-header]
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool. 
 <br>
 
+[solid-block-header]
 
-# 3rd Party resources for middle school CS
+Other Resources
+
+[/solid-block-header]
+
+## 3rd Party resources for middle school CS
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -70,7 +95,7 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 | [Codesters](https://www.codesters.com/) |  5-lesson intro and project platform, FREE, 2 40-hr Intro to Python courses and 20-hr Intro to Game Design course, $20/student or a la carte pricing | Half day, 1-day, and 3-day workshops available, $500-$2,000 per teacher depending on length and location. |
 | [Globaloria](http://globaloria.com/intro) | 6 game design courses, $75/student | 3-day, in-person training and ongoing online PD, fee included in student price|
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-gateway-curriculum) | 2 intro courses, $750/school | Online, in-person PD at 60 universities, average $1200/teacher |
-| [Pythonroom](https://pythonroom.com) | 40-hour Learn Python course, FREE | Online or in-person, $5000/school for all teachers at site|
+| [Pythonroom](https://pythonroom.com) | 40-hour Learn Python course, FREE | Online or in-person, $2000/school for all teachers at site|
 | [Scalable Game Design](http://scalablegamedesign.cs.colorado.edu) | Introduction to Game Design, Advanced Game Design (3D), and Introduction to Simulation Design, FREE | In-person summer institute, FREE to schools participating in NSF research. Otherwise, $1900/teacher and travel not included |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide/) | 6-unit course, FREE | In-person educator meet-ups and online MOOC, FREE|
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
@@ -79,12 +104,12 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
 
-# Additional Resources and Videos
+## Inspire students
 We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
 [<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-# Find a guest speaker for your classroom
+## Find a guest speaker for your classroom
 Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)
