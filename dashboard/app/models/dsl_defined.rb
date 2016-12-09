@@ -37,7 +37,7 @@ class DSLDefined < Level
     level = find_or_create_by({ name: data[:name] })
     level.send(:write_attribute, 'properties', {})
 
-    level.update!(name: data[:name], game_id: Game.find_by(name: self.to_s).id, properties: data[:properties])
+    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties])
 
     level
   end
@@ -73,7 +73,7 @@ class DSLDefined < Level
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
         File.write(level.file_path, (level.encrypted ? level.encrypted_dsl_text(text) : text))
-        self.rewrite_i18n_file(i18n)
+        rewrite_i18n_file(i18n)
       end
 
       level

@@ -16,6 +16,9 @@ class HttpCache
     mc
     frozen
     gumball
+    minecraft
+    sports
+    basketball
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/stage/*"]
@@ -100,6 +103,7 @@ class HttpCache
               /minecraft
               /starwars
               /playlab
+              /athletes
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,

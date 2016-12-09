@@ -49,12 +49,12 @@ class Pd::Enrollment < ActiveRecord::Base
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
-    self.persisted? && self.created_at < '2016-11-10'
+    persisted? && created_at < '2016-11-10'
   end
 
   # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
   def created_before_school_info?
-    self.persisted? && self.created_at < '2016-08-30'
+    persisted? && created_at < '2016-08-30'
   end
 
   # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
@@ -68,11 +68,11 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def self.for_school_district(school_district)
-    self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
+    joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
   def has_user?
-    self.user_id
+    user_id
   end
 
   before_create :assign_code
@@ -86,29 +86,29 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(self.email)
+    user || User.find_by_email_or_hashed_email(email)
   end
 
   def in_section?
     user = resolve_user
-    return false unless user && self.workshop.section
+    return false unless user && workshop.section
 
     # Teachers enrolled in the workshop are "students" in the section.
-    self.workshop.section.students.exists?(user.id)
+    workshop.section.students.exists?(user.id)
   end
 
   def send_exit_survey
-    return unless self.user
+    return unless user
 
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{self.id}"
+      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
       return
     end
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
-    self.update!(survey_sent_at: Time.zone.now)
+    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,

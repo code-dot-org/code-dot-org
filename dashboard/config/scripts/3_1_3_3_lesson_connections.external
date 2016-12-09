@@ -1,0 +1,67 @@
+name '3.1 - 3.3 Lesson Connections'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 3 Lessons 1 - 3 Connections
+
+
+Although this unit is considered our “Introduction to Programming”, the title is actually “Algorithms and Programming”.  While programming is its own Big Idea, it is deeply connected to the other Big Ideas, and as we introduce it to students we want them to understand how bound these concepts are.  For this reason, we begin this unit with unplugged activities to introduce algorithms and highlight the need for a programming language to implement those algorithms. These activities call for students to work in small groups to solve problems using simple manipulatives like playing cards or blocks. Here, students should draw connections between the rules of Internet protocols developed earlier in the course, in which students acted as the computer processing the information. Much of the structured and systematic thinking that students put into developing their communication protocols will feel similar to the work they do here designing algorithms.
+
+
+> We want to establish the dual enduring understandings that algorithms are precise sequences of instructions for processes that can be executed by a computer and are implemented using programming languages (4.1) and people write programs to execute algorithms (5.2)
+
+
+
+
+## Lesson 1: The need for Programming Languages
+
+**Lesson Type:** Unplugged | Kinesthetic Tools | Individual and Group Discovery
+
+<a href = “https://curriculum.code.org/csp/unit3/1/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+<img src="https://images.code.org/fa66b01e6364dd60d3b6a8bff0ba5838-image-1479750527499.png" style="float:right; margin-left:30px; width:200px">
+
+
+The main activity in this lesson is a derivative of a classic strategy for beginning to learn about programming - writing precise instructions for another person to do just about anything - making a peanut butter and jelly sandwich, a simple line drawing, an arrangement of objects - is challenging. Human language is fraught with ambiguities and assumptions that machines (computers) simply cannot handle. Thus, the first step we take is to establish the need for programming languages. Writing down a precise set of instructions to build a small lego structure, as we do in this lesson, is nearly impossible…unless you can agree on certain language constructs ahead of time, and how they will be interpreted. The main purpose of the lesson is to expose why programming languages are necessary, and how they are developed.
+
+
+When you formalize language or commands that describe actions, you are making a kind of code. This is also necessary for computers, which are simply machines that can perform a number of different tasks. In order to write instructions for them to do something you must agree on the “code” and each action must have a precise, unambiguous meaning. This is a programming language. Novices might think that a programming language looks like an archaic, impenetrable mass of abstract word groupings, but all programming languages are derived from the human need to concisely give instructions to a machine.
+
+
+<br><br>
+<hr />
+
+
+## Lesson 2: The Need for Algorithms
+
+**Lesson Type:** Unplugged | Kinesthetic Tools | Individual and Group Discovery
+
+<a href = “https://curriculum.code.org/csp/unit3/2/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+<img src="https://images.code.org/6acc7f4efd6c34e96b074fa6c18cb877-image-1479750529962.png" style="float:right; margin-left:30px; width:200px">
+
+The main point of this lesson is to connect the acts of writing “code” and designing algorithms, and to take some steps towards programming with code. To do this we imagine trying to write instructions for a “Human Machine” to complete a tightly defined task with playing cards. We want to introduce the term <span class="vocab" title="Algorithm: A precise sequence of instructions for processes that can be executed by a computer">algorithm</span> and what designing an algorithm means in computer science (i.e. programming). We then want to take a few steps to build up to writing an algorithm with “code”.  (We will discuss the value of the “Human Machine Language” later in this module.
+The art of programming is to solve computational problems using a provided language that controls the machine. In the activity we provide a simple, low-level, language for acting on playing cards. The point is to show that even when you know what the commands are, you still need to be creative to use them to solve a problem.
+
+
+<br><br><br>
+<hr />
+
+
+## Lesson 3: Creativity in Algorithms
+
+<img src="https://images.code.org/459e42e91849411312ec94544854b21f-image-1479750536420.png" style="float:right; margin-left:30px; width:200px">
+
+**Lesson Type:** Unplugged | Kinesthetic Tools | Individual and Group Discovery
+
+
+<a href = “https://curriculum.code.org/csp/unit3/3/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+This lesson gives students a place to experiment with the idea of “creativity in algorithms”. Creativity has to do with both the process you invent (an algorithm) to solve a new problem in a given context and how you implement that algorithm in a given language. Creativity often means combining or using algorithms you know as part of a solution to a new problem. Thus, the “Min To Front” problem is interesting because students already solved part of it (the find min part) in the previous lesson.
+
+
+
+
+
+MARKDOWN

@@ -15,7 +15,7 @@ const styles = {
     justifyContent: 'center',
   },
   storyTable: {
-    table: {backgroundColor: 'white', tableLayout: 'fixed'},
+    table: {backgroundColor: 'white', tableLayout: 'fixed', width: '100%'},
     row: {border: '1px solid #ccc'},
     cell: {width:'50%', padding: 20},
   },

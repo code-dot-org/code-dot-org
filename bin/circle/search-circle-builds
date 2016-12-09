@@ -55,6 +55,9 @@ OptionParser.new do |opts|
     options[:grep_step] = grep_step
   end
   options[:grep_step] ||= RUN_UI_TESTS_STEP_STRING
+  opts.on('--branch BranchName', String, 'Limit results to builds for one branch') do |branch_name|
+    options[:branch_name] = branch_name
+  end
   opts.on_tail('-h', '--help', 'Show this message') do
     puts opts
     exit
@@ -80,9 +83,13 @@ end
 
 fail_types_list = fail_types_to_check.map { |f| describe_fail_type(f) }.join "\n"
 puts "Checking builds #{build_range} for output:\n#{fail_types_list}"
+puts "Limiting to branch #{options[:branch_name]}" unless options[:branch_name].nil?
 
 Parallel.each(build_range, in_processes: MAX_THREADS) do |build|
   fail_types_to_check.each do |known_fail|
+    # Skip this build if it's not on the requested branch
+    next unless options[:branch_name].nil? || (@project.get_build(build)['branch'] == options[:branch_name])
+
     output = @project.get_log(build, known_fail[:container], known_fail[:step_string])
 
     begin

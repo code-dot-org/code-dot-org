@@ -63,7 +63,7 @@ module RakeUtils
         HipChat.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
           "log into the server and manually stop the process. The build will resume automatically "\
           "once the #{id} has stopped."
-        self.stop_service(id)
+        stop_service(id)
       end
     end
   end
@@ -274,7 +274,7 @@ module RakeUtils
 
   # Uploads local file to S3, leaving a .fetch file pointing to it at the given path, and removes original file
   def self.replace_file_with_s3_backed_fetch_file(local_file, destination_local_path, params={})
-    new_fetchable_url = self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params)
+    new_fetchable_url = upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params)
     FileUtils.remove_file(local_file)
     new_fetchable_url
   end

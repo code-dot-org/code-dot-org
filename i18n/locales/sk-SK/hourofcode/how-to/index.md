@@ -13,25 +13,25 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Pozri si video "ako na to" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Require minimal prep-time for teachers
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Spropaguj svoju Hodinu Kódovania
+## 3) Spropaguj svoju Hodinu kódu
 
 Spropaguj svoju Hodinu Kódovania [s týmito nástrojmi](%= resolve_url('/promote') %) a povzbuď ďalších, aby vytvorili svoje vlastné podujatia.
 
-## 4) Potrebné technické vybavenie - v optimálnom prípade počítače
+## 4) Potrebné technické vybavenie - v ideálnom prípade počítače
 
 Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pripojením na internet. Avšak **nepotrebuješ** mať počítač pre každé dieťa, dokonca môžeš spraviť Hodinu Kódovania celkom bez počítača.
 
@@ -61,7 +61,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
   * Explain ways that technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
   * As a class, list things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+  * Pozri si nápady na to, ako získať záujem dievčat o informatiku [tu](%= resolve_url('https://code.org/girls') %).
 
 **Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
 
@@ -71,7 +71,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
 **Direct students to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -81,7 +81,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
 **When your students come across difficulties it's okay to respond:**
 
-  * “Neviem. Príďme na to spoločne.”
+  * “Neviem. Skúsme to spoločne.”
   * “Technológie nefungujú vždy tak, ako by sme práve chceli.”
   * “Učiť sa programovať je ako učiť sa nový jazyk; nedokážeš ihneď hovoriť plynulo.”
 
@@ -89,7 +89,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
 
 **What to do if a student finishes early?**
 
-  * Students can see all tutorials and try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Or, ask students who finish early to help classmates who are having trouble with the activity.
 
 [col-33]
@@ -113,7 +113,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
   * [Vytlač certifikáty](%= resolve_url('https://code.org/certificates') %) pre svojich študentov.
   * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Zdieľaj fotky a videá z vašej Hodiny Kódovania na sociálnych médiách. Použi #HourOfCode a @codeorg, aby sme aj mi mohli vyzdvihnúť váš úspech!
+  * Zdieľaj fotky a videá z vašej Hodiny kódu na sociálnych sieťach. Použi #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť váš úspech!
 
 [col-33]
 
@@ -125,7 +125,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
   &nbsp;
 </p>
 
-## Ďalšie zdroje k Hodine Kódu pre vyučujúcich:
+## Ďalšie zdroje k Hodine kódu pre vyučujúcich:
 
   * Use this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code teachers. 
@@ -134,7 +134,7 @@ Pre čo najlepší zážitok s Hodinou Kódovania sú potrebné počítače s pr
   * Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators. <% if @country == 'us' %>
   * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
-## Čo príde po Hodine Kódu?
+## Čo nasleduje po Hodine kódu?
 
 Hodina Kódu je len prvým krokom na ceste učenia sa o tom, ako fungujú technológie a ako vytvárať softvérové aplikácie. Pre pokračovanie po tejto ceste:
 

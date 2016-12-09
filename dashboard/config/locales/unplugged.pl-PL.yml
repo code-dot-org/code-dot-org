@@ -202,10 +202,9 @@
           przy użyciu łańcuszka i koralików.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Pisanie piosenek z parametrami
-        desc: Uczniowie używają pojęcia refren w piosence, aby zapoznać się z przekazywaniem
-          parametrów (dzięki czemu można dostosować funkcję bez konieczności przepisywania
-          jej).
+        title: Pisanie piosenek
+        desc: Uczniowie używają pojęcia refrenu w piosence, aby nauczyć się, jak definiować
+          i wywoływać funkcje.
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algorytmy z życia wzięte: Gra w kości'

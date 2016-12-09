@@ -1698,3 +1698,68 @@ tr:
       3:
         image: 'notes/iceage_repeat_3.JPG'
         text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
+    mc_2016_intro:
+      1:
+        image: 'notes/mc_2016_intro_1.jpg'
+        text: "Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım. Önümüzdeki bir saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının çalışmasını sağlamak sana bağlı."
+      2:
+        image: 'notes/mc_2016_intro_2.jpg'
+        text: Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım. Benim asıl ilgimi çeken insanların teknolojiyle nasıl etkileşim kurdukları, bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek için benim için harika bir meslek.
+      3:
+        image: 'notes/mc_2016_intro_3.jpg'
+        text: "Ekranınızın üç ana kısıma ayrıldığını göreceksiniz. 1) Sol tarafta Minecraft oyunu var. Şu anda dünya donmuş durumda ama biz bunu kod yazarak düzelteceğiz."
+      4:
+        image: 'notes/mc_2016_intro_4.jpg'
+        text: "2) Bu orta alan araç kutusudur. Bu bloklardan her biri tavuklar, koyunlar ve diğer Minecraft yaratıklarının anlayabileceği birer komuttur."
+      5:
+        image: 'notes/mc_2016_intro_5.jpg'
+        text: "3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız."
+      6:
+        image: 'notes/mc_2016_intro_6.jpg'
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+      7:
+        image: 'notes/mc_2016_intro_7.jpg'
+        text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
+      8:
+        image: 'notes/mc_2016_intro_8.jpg'
+        text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+      9:
+        image: 'notes/mc_2016_intro_9.jpg'
+        text: "\"Çalıştır\"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak için \"Sıfırla\" düğmesini tıklayabilirsin. Şimdi Minecraft'ın kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!"
+    mc_2016_loops:
+      1:
+        image: 'notes/mc_2016_loops_1.jpg'
+        text: "Merhaba, ben Lisa. Minecraft'ta yazılım geliştiriciyim ve oyun içindeki bazı hayvanlar ve düşmanlar üzerinde çalışıyorum. Üzerinde çalıştığım hayvanlardan birisi oselot. Oselot'a balık vererek onu kendi kedin kısım üzeinde çalıştım."
+      2:
+        image: 'notes/mc_2016_loops_2.jpg'
+        text: "Biz insanlar tekrar tekrar aynı şeyi yapmak zorunda kalırsak gerçekten çok sıkılıyoruz. Ama bilgisayarlar hakkında en müthiş şeylerden biri onların aynı şeyi milyonlarca hatta milyarlarca kez sıkılmadan art arda yapabilmeleridir. Bu tekrara döngü denir ve Minecraft'ta her yaratık döngüleri kullanır."
+      3:
+        image: 'notes/mc_2016_loops_3.jpg'
+        text: "Daha önce ekranda hareket ettirmemiz için bir tavuk vardı, ama sonra durdu. Minecraft'ta tavuklar sonsuza dek dolanırlar. Tavuklarımızın sonsuza dek ortalıkta dolanması için \"sonsuza dek yap\" döngüsünü kullanalım. Döngülerin gücü size çok zaman kazandırıp siz Minecraft'ın kendi versiyonunu oluştururken pek çok faydalı özelliklere kapı aralayacaktır."
+    mc_2016_events:
+      1:
+        image: 'notes/mc_2016_events_1.jpg'
+        text: "Bu seviyede kendinizi Alex veya Steve olarak seçebilirsiniz. Klavyenizdeki ok tuşlarına basarak yukarı, aşağı ve sağa sola hareket edebilirsiniz. Artık bir seviyede istediğiniz gibi dolaşabilirsiniz. Herhangi bir yaratığı kullanmak için ona doğru yürüyün, yüzünüzü ona dönün ve boşluk tuşuna basın."
+      2:
+        image: 'notes/mc_2016_events_2.jpg'
+        text: "Dokunmatik bir ekran kullanıyorsanız, parmağınızı sağa, sola, yukarı, aşağı sürükleyip ortalıkta gezinebilirsiniz. Daha sonra da oyun alanına dokunarak önünüzdeki nesneyi kullanabilirsiniz."
+      3:
+        image: 'notes/mc_2016_events_3.jpg'
+        text: "Ama sen onu kullanınca ne olur? Minecraft'ta, koyunlar onları kırpınca yünlerini bırakır, inekler sen onlara vurunca kaçar ve creeperlar da sen onların yanına yaklaşınca patlarlar. Bütün bu reaksiyonlar olaylar dediğimiz şeyler sayesinde gerçekleşir. Olaylar programınıza bir şeyin olmasını beklemeyi ya da dinlemeyi söyler. Ve o olay olduğunda da bir eylem gerçekleştirmelerini söyler."
+      4:
+        image: 'notes/mc_2016_events_4.jpg'
+        text: "Şu ana kadar tek bir olay kullandınız. \"spawn olduğunda\" yuvasına koydunuz kod yaratık oluştuğunda ya da oyun başladığında çalışmaya başlar. Önümüzdeki bir kaç seviyede dokunulduğunda çalışan \"dokunulduğu zaman\" yuvası veya yaratığı kullandığınızda çalışmaya başlatacak \"kullanıldığında\" komutlarını öğreneceksiniz. Ya da güneş doğduğunda zombinin yok olmasını istiyorsanız \"gün olduğunda\" yuvasını kullanın"
+    mc_2016_spawn:
+      1:
+        image: 'notes/mc_2016_spawn_1.jpg'
+        text: "Oyunlarda spawn demek yaratmak demekle aynı anlama gelir. Bu seviyede gelin zombilerin güneş battığında spawn olmalarını sağlayalım. Bunu yapmak için \"gece olduğunda\" bloğunu kullanacağız."
+      2:
+        image: 'notes/mc_2016_spawn_2.jpg'
+        text: "Zombilerin gece spawn olmalarını istediğimizden \"spawn zombi\" bloğunu \"gece olduğunda\" bloğunun altına koy. Zombiler oluşur oluşmaz \"spawn olduğunda\" bloğunun altındaki kodu çalıştırır. Zombileri oluştururken iyi eğlenceler!"
+    mc_2016_congrats:
+      1:
+        image: 'notes/mc_2016_congrats_1.jpg'
+        text: "Tebrikler! Bilgisayar bilimi komutlarını öğrenerek Minecraft dünyasını hayata getirmeyi öğrendin. Artık bir yazılımcısın. Bütün komutları ve yaratıkları kullandın. Ne olacağına sen karar vereceksin."
+      2:
+        image: 'notes/mc_2016_congrats_2.jpg'
+        text: "Oyunu yapmayı bitirdiğinde, link paylaşmak için ya da telefonunda oynamak için paylaş linkini seç. İyi eğlenceler. Senin oluşturduğun Minecraft sürümünü oynamak için sabırsızlanıyorum."

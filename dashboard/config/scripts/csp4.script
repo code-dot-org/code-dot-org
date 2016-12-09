@@ -4,18 +4,24 @@ hideable_stages true
 
 stage 'What is Big Data?'
 named_level 'Unit 4 Lesson 1 Introduction'
+assessment 'U4L1 - MC moores law'
+assessment 'U4L1 - MC big data def'
 
 stage 'Rapid Research - Data Innovations'
 named_level 'Unit 4 Lesson 2 Introduction'
 named_level 'Video - Data and Medicine'
 named_level 'Video - CS is Changing Everything'
+assessment 'U4L2 - FR Practice AP response about data'
 
 stage 'Identifying People with Data'
 named_level 'Unit 4 Lesson 3 Introduction'
+assessment 'U4L3 - FR Identifying people'
 
 stage 'The Cost of Free'
 named_level 'Unit 4 Lesson 4 Introduction'
 named_level 'Video - The Future of Big Data'
+assessment 'U4L4 - MC cost of free'
+assessment 'U4L4 - FR cost of free'
 
 stage 'Simple Encryption'
 named_level 'Unit 4 Lesson 5 Introduction'

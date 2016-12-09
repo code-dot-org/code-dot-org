@@ -118,7 +118,7 @@
           en figur gjennom en labyrint med én kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Flytte den, flytte den
+        title: Flytt den, flytt den
         desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
           en figur gjennom en labyrint med én kommando.
         video: C1_moveitmoveit_unplugged

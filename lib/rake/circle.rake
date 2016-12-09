@@ -34,6 +34,11 @@ TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
 # Run UI tests against SafariYosemite
 TEST_SAFARI_TAG = 'test safari'.freeze
 
+# Run UI tests against iPad, iPhone or both
+TEST_IPAD_TAG = 'test ipad'.freeze
+TEST_IPHONE_TAG = 'test iphone'.freeze
+TEST_IOS_TAG = 'test ios'.freeze
+
 # Overrides for whether to run Applitools eyes tests
 TEST_EYES = 'test eyes'.freeze
 SKIP_EYES = 'skip eyes'.freeze
@@ -56,10 +61,15 @@ namespace :circle do
       next
     end
 
-    RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
+    Dir.chdir('dashboard') do
+      RakeUtils.exec_in_background "RAILS_ENV=test bundle exec unicorn -c config/unicorn.rb -E test -l #{CDO.dashboard_port}"
+    end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
-    start_sauce_connect if use_saucelabs || test_eyes?
+    if use_saucelabs || test_eyes?
+      start_sauce_connect
+      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+    end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
@@ -91,6 +101,16 @@ namespace :circle do
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
   end
+
+  desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
+  task :check_for_unexpected_apps_changes do
+    # Changes to yarn.lock is a particularly common case; catch it early and
+    # provide a helpful error message.
+    raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.' if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+
+    # More generally, we shouldn't have _any_ staged changes in the apps directory.
+    raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
@@ -100,6 +120,8 @@ def browsers_to_run
   browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
   browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
   browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
+  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
+  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
   browsers
 end
 
@@ -108,8 +130,8 @@ def test_eyes?
 end
 
 def start_sauce_connect
-  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.0-rc2-linux.tar.gz'
-  RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
+  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.2-linux.tar.gz'
+  RakeUtils.system_stream_output 'tar -xzf sc-4.4.2-linux.tar.gz'
   Dir.chdir(Dir.glob('sc-*-linux')[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
     RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"

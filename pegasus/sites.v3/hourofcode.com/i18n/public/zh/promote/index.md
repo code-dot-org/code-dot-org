@@ -19,7 +19,7 @@ nav: promote_nav
 
 ## 1.廣為宣傳
 
-Tell your friends about the **#HourOfCode**!
+讓你的朋友們知道**#HourOfCode**活動!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 

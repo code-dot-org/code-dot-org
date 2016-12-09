@@ -128,8 +128,8 @@ ja:
         desc: 'Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.'
         video: 'C3_functional_suncatchers'
       'SongwritingParameters':
-        title: 'Songwriting with Parameters'
-        desc: 'Students use the concept of the chorus in a song to learn about passing parameters (which customize a function without having to rewrite the entire function).'
+        title: 'Songwriting'
+        desc: 'Students use the concept of the chorus in a song to learn about defining and calling functions.'
         video: 'C3_songwriting_with_parameters'
       'DiceRace':
         title: 'Real life algorithms: Dice Race'

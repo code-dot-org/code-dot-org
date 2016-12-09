@@ -7,11 +7,11 @@ module RaceInterstitialHelper
     # If there is race information at all, that means we shouldn't show the dialog
     return false if user.races && !user.races.empty?
 
-    # Restrict to US, if we have an IP
-    unless request_ip.nil?
-      location = Geocoder.search(request_ip).first
-      return false if location && location.country_code.to_s.downcase != 'us'
-    end
+    # Restrict to cases where we can successfully geolocate to the US
+    return false if request_ip.nil?
+    location = Geocoder.search(request_ip).first
+    return false unless location
+    return false if location.country_code.to_s.downcase != 'us'
 
     return true
   end

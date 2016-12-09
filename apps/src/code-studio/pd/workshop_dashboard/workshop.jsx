@@ -22,6 +22,7 @@ import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
+import Spinner from './components/spinner';
 
 const styles = {
   linkButton: {
@@ -188,14 +189,14 @@ const Workshop = React.createClass({
     });
   },
 
-  getAttendanceUrl(index) {
-    return `/workshops/${this.props.params.workshopId}/attendance/${index}`;
+  getAttendanceUrl(sessionId) {
+    return `/workshops/${this.props.params.workshopId}/attendance/${sessionId}`;
   },
 
   handleTakeAttendanceClick(event) {
     event.preventDefault();
-    const index = event.currentTarget.dataset.index;
-    this.context.router.push(this.getAttendanceUrl(index));
+    const sessionId = event.currentTarget.dataset.session_id;
+    this.context.router.push(this.getAttendanceUrl(sessionId));
   },
 
   handleEditClick() {
@@ -361,13 +362,13 @@ const Workshop = React.createClass({
       </div>
     );
 
-    const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
+    const attendanceButtons = this.state.workshop.sessions.map(session => {
       const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
         <Button
-          key={i}
-          data-index={i}
-          href={this.context.router.createHref(this.getAttendanceUrl(i))}
+          key={session.id}
+          data-session_id={session.id}
+          href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
           onClick={this.handleTakeAttendanceClick}
         >
           {date}
@@ -496,7 +497,7 @@ const Workshop = React.createClass({
 
     let contents = null;
     if (this.state.loadingEnrollments) {
-      contents = this.renderSpinner();
+      contents = <Spinner/>;
     } else {
       contents = (
         <WorkshopEnrollment
@@ -522,13 +523,9 @@ const Workshop = React.createClass({
     );
   },
 
-  renderSpinner() {
-    return <i className="fa fa-spinner fa-pulse fa-3x" />;
-  },
-
   render() {
     if (this.state.loadingWorkshop) {
-      return this.renderSpinner();
+      return <Spinner/>;
     }
     return (
       <Grid>

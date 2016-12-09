@@ -78,9 +78,10 @@ include_recipe 'cdo-varnish'
 include_recipe 'cdo-cloudwatch-extra-metrics'
 
 include_recipe 'cdo-apps::bundle_bootstrap'
+include_recipe 'cdo-apps::build'
 
-# Install optional package build targets if specified in attributes.
-include_recipe "cdo-apps::apps" if node['cdo-secrets'] && node['cdo-secrets']["build_apps"]
+# Install nodejs if apps build specified in attributes.
+include_recipe 'cdo-nodejs' if node['cdo-secrets'] && node['cdo-secrets']["build_apps"]
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'

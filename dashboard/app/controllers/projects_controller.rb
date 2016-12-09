@@ -82,7 +82,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    if params[:nosource]
+    if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
       # regular project page, we encode the channel id using a simple

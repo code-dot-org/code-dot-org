@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Grattis! Du har samlat in alla {count} objekt!",
   "collectorCollectedNothing": "Fortsätt koda! Du behöver samla in så många av objekten som du kan.",
   "collectorCollectedSome": "Bra jobbat! Du har samlat in {count} objekt!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Det utrymmet har inte tillräckligt objekt för mig att samla in.",
   "collectorTooManyBlocks": "Du kan bara använda {blockLimit} block. Ta en titt på koden och försök igen!",
   "continue": "Fortsätt",
@@ -111,6 +112,5 @@
   "word": "Hitta ordet",
   "wrongCropError": "Jag kan inte skörda denna gröda härifrån.",
   "yes": "Ja",
-  "youSpelled": "Du stavade",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Du stavade"
 }

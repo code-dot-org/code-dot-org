@@ -1,5 +1,6 @@
 import _ from 'lodash';
 
+const INIT = 'scriptEditor/INIT';
 const ADD_GROUP = 'scriptEditor/ADD_GROUP';
 const ADD_STAGE = 'scriptEditor/ADD_STAGE';
 const TOGGLE_EXPAND = 'scriptEditor/TOGGLE_EXPAND';
@@ -16,6 +17,12 @@ const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
 const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
+
+export const init = (stages, levelKeyList) => ({
+  type: INIT,
+  stages,
+  levelKeyList,
+});
 
 export const addGroup = (stageName, groupName) => ({
   type: ADD_GROUP,
@@ -124,10 +131,12 @@ function updatePositions(node) {
 
 export const NEW_LEVEL_ID = -1;
 
-export default function reducer(state, action) {
-  let newState = _.cloneDeep(state.stages);
+function stages(state=[], action) {
+  let newState = _.cloneDeep(state);
 
   switch (action.type) {
+    case INIT:
+      return action.stages;
     case REORDER_LEVEL: {
       const levels = newState[action.stage - 1].levels;
       const temp = levels.splice(action.originalPosition - 1, 1);
@@ -244,5 +253,18 @@ export default function reducer(state, action) {
     }
   }
 
-  return {stages: newState, levelKeyList: state.levelKeyList};
+  return newState;
 }
+
+function levelKeyList(state=[], action) {
+  switch (action.type) {
+    case INIT:
+      return action.levelKeyList;
+  }
+  return state;
+}
+
+export default {
+  stages,
+  levelKeyList,
+};

@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Gratulálunk! Begyűjtötted mind a(z) {count} elemet!",
   "collectorCollectedNothing": "Kódolj tovább! Gyűjts össze annyi elemet, amennyit csak tudsz, szükség lesz rá.",
   "collectorCollectedSome": "Szép munka! {count} elemet sikerült összegyűjtened!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "Csak {blockLimit} blokkot használhatsz. Vess egy pillantást a kódodra és próbáld meg újra!",
   "continue": "Tovább",
@@ -111,6 +112,5 @@
   "word": "Ezt a szót keresd",
   "wrongCropError": "Nem tudom innen a termést betakarítani.",
   "yes": "Igen",
-  "youSpelled": "Amit találtál",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Amit találtál"
 }

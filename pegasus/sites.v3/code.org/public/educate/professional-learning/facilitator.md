@@ -27,4 +27,3 @@ In 2017-2018, Code.org will prepare facilitators in two areas. The focus areas s
 Please carefully review the requirements and commitments for the curriculum focus area of your choice before applying.<br/>
  
 **Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on February 1, 2017. *This program is currently only operated in the US.*<br/>
-

@@ -41,6 +41,7 @@
     "use_player": "true",
     "failure_message_override": "You need to use the exploding Creeper to blow up the wall so you can reach your sheep.",
     "use_score": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,
