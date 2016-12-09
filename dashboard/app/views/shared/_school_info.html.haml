@@ -13,7 +13,7 @@
 
 #pl-application-form
   #pl-application-facets.form-section
-    .form-group
+    .form-group#school-country-group
       .question School Country
       %select#school-country.form-control{name: "#{form_name}[country]", type: "select", required: false}
         %option{value: "", selected: true, disabled: true}
@@ -90,6 +90,11 @@
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
     options['suppressScrolling'] = #{suppress_scrolling}
+
+    if (#{assume_usa}) {
+      $('#school-country-group').hide();
+      $('#school-country').val('United States');
+    }
 
     // Send through some values that the JavaScript will need.
     window.schoolInfoManager = new SchoolInfoManager(options);
