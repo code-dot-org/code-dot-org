@@ -53,8 +53,10 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update if admin" do
-    sign_in @admin
+  test "should update if we have block share permission" do
+    user = create(:user)
+    user.permission = UserPermission::BLOCK_SHARE
+    sign_in user
     patch :update, level_source: {hidden: true}, id: @level_source
 
     assert_redirected_to @level_source
@@ -76,7 +78,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert @level_source.reload.hidden?
   end
 
-  test "should not update if not admin" do
+  test "should not update if we do not have block share permission" do
     sign_in create(:user)
     patch :update, level_source: {hidden: true}, id: @level_source
 
