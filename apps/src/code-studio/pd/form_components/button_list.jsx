@@ -9,13 +9,14 @@ const ButtonList = React.createClass({
     answers: React.PropTypes.array.isRequired,
     includeOther: React.PropTypes.bool,
     onChange: React.PropTypes.func,
-    stateKey: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string])
+    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string])
   },
 
-  renderButtons() {
+  renderInputCompontents() {
+    const InputComponent = {radio: Radio, check: Checkbox}[this.props.type];
+
     const options = this.props.answers.map ( (answer, i) => {
-      const InputComponent = {radio: Radio, check: Checkbox}[this.props.type];
-      const checked = this.props.type === 'radio' ? (this.props.stateKey === answer) : !!(this.props.stateKey && this.props.stateKey.indexOf(answer) >= 0);
+      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer) : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
       return (
         <InputComponent
           value={answer}
@@ -40,7 +41,7 @@ const ButtonList = React.createClass({
           {this.props.label}
         </ControlLabel>
         <FormGroup id={this.props.groupName}>
-          {this.renderButtons()}
+          {this.renderInputCompontents()}
         </FormGroup>
         <br/>
       </div>

@@ -1,8 +1,0 @@
--# Expected params: name, label, options
-
-%div.form-group{for: name}
-  %label.control-label{for: name}
-    = label
-    - if options[:required]
-      %span.form-required-field *
-    %input{name: name}
