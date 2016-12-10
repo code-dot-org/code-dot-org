@@ -21,9 +21,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### OS X Mavericks / Yosemite / El Capitan / Sierra
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
+1. Run `brew install enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
   1. (El Capitan) If you see permissions issues, run `sudo chown -R $(whoami):admin /usr/local/`. More info [here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md).
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+1. Intall PDFtk from [here](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg)
 1. Set up MySQL
   1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
   1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
