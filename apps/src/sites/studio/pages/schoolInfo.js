@@ -7,7 +7,9 @@ window.SchoolInfoManager = function (existingOptions) {
   var districtElement = $('#school-district-id');
 
   function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
+    if (!existingOptions['suppressScrolling']) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
 
   function setupDistrictDropdown(stateCode) {
