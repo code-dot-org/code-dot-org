@@ -28,7 +28,7 @@ Resources:
         Count: 1
     Properties:
       ImageId: <%=image_id%>
-      InstanceType: m4.10xlarge
+      InstanceType: c4.8xlarge
       IamInstanceProfile: {'Fn::GetAtt': [IAM, FrontendInstanceProfile]}
       SecurityGroupIds: ['Fn::GetAtt': [VPC, FrontendSecurityGroup]]
       SubnetId: {'Fn::GetAtt': [VPC, Subnet<%=azs.first%>]}
