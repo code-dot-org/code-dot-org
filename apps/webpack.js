@@ -30,7 +30,7 @@ var baseConfig = {
         include: [
           path.resolve(__dirname, 'static'),
         ],
-        loader: "url-loader?limit=10000",
+        loader: "url-loader?limit=1024",
       }
     ],
     preLoaders: [
