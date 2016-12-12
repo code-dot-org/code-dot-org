@@ -242,60 +242,6 @@ class AdminReportsController < ApplicationController
     end
   end
 
-  def retention
-    require 'cdo/properties'
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @all_scripts_names_ids = Script.order(:id).pluck(:name, :id).to_h
-      selected_scripts_names = params[:selected_scripts_names] ||
-        ["20-hour", "course1", "course2", "course3", "course4"]
-      @selected_scripts_names_ids = @all_scripts_names_ids.select{|name, _id| selected_scripts_names.include? name}
-
-      # Get the cached retention_stats from the DB, trimming those stats to only the selected
-      # scripts, exiting early if the stats are blank.
-      raw_retention_stats = Properties.get(:retention_stats)
-      if raw_retention_stats.blank?
-        render(text: 'Properties.get(:retention_stats) not found. Please contact an engineer.') &&
-          return
-      end
-      # Remove the stage_level_counts data, which is not used in this view.
-      raw_retention_stats.delete('stage_level_counts')
-
-      @retention_stats = {}
-      raw_retention_stats.each_pair do |key, key_data|
-        @retention_stats[key] = key_data.select do |script_id, _script_data|
-          @selected_scripts_names_ids.values.include? script_id.to_i
-        end
-      end
-      # Transform the count stats into row format to facilitate being added to charts and tables.
-      ['script_level_counts', 'script_stage_counts'].each do |key|
-        @retention_stats[key] = build_row_arrays(@retention_stats[key])
-      end
-    end
-  end
-
-  def retention_stages
-    require 'cdo/properties'
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @stage_ids = params[:stage_ids].present? ?
-        params[:stage_ids].split(',').map(&:to_i) :
-        [2, 6, 25, 105, 107, 108]  # Default to popular HOC stages.
-      # Grab the data from the database, keeping data only for the requested stages.
-      raw_retention_stats = Properties.get(:retention_stats)
-      if raw_retention_stats.blank? || !raw_retention_stats.key?('stage_level_counts')
-        render(text: 'Properties.get(:retention_stats) or '\
-          "Properties.get(:retention_stats)['stage_level_counts'] not found. Please contact an "\
-          'engineer.') && return
-      end
-      raw_retention_stats = raw_retention_stats['stage_level_counts'].
-        select{|stage_id, _stage_data| @stage_ids.include? stage_id.to_i}
-      if raw_retention_stats.blank?
-        render(text: 'No data could be found for the specified stages. Please check the IDs, '\
-          'contacting an engineer as necessary.') && return
-      end
-      @retention_stats = build_row_arrays(raw_retention_stats)
-    end
-  end
-
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]

@@ -6,12 +6,12 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Get me to the sunflower using the fewest number of blocks possible!",
+    "instructions": "Get the zombe to the sunflower using the fewest number of blocks possible!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "start_direction": "3",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,4,1,1,2,0],[0,0,0,0,1,0,0,0],[0,4,1,1,1,0,0,0],[0,0,1,0,4,0,0,0],[0,0,3,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,4,1,1,1,2],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[4,1,1,1,1,0,0,0],[0,1,0,0,4,0,0,0],[0,1,0,0,0,0,0,0],[0,3,0,0,0,0,0,0]]",
     "ideal": "8",
     "step_speed": "2",
     "never_autoplay_video": "false",
@@ -27,7 +27,8 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Look for a stair-step pattern in this maze to find where a loop can be used.\",\r\n  \"hint_id\": \"2-3_Maze_Loops_20_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a stair-step pattern in this maze to find where a nested loop can be used.\",\"hint_id\":\"2-3_Maze_Loops_20_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535ba90030522858e57e315b3fe6a33/grade3_maze_loops4.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -45,7 +46,7 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="controls_repeat">
+        <block type="controls_repeat" limit="3">
           <title name="TIMES">???</title>
         </block>
       </xml>
@@ -60,23 +61,23 @@
             <block type="controls_repeat">
               <title name="TIMES">2</title>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="controls_repeat">
+                  <title name="TIMES">3</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
                       <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
+                        <block type="controls_repeat">
+                          <title name="TIMES">3</title>
+                          <statement name="DO">
+                            <block type="maze_moveForward"/>
+                          </statement>
                           <next>
-                            <block type="maze_moveForward">
-                              <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnRight</title>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
                             </block>
                           </next>
                         </block>

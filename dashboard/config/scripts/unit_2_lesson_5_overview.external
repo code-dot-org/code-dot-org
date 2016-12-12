@@ -22,5 +22,11 @@ Students will work through levels where they add images to a pre-built site. The
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+
+[key]
+
 * [Trivia Game](https://drive.google.com/open?id=1o4FLtPzlV4mWcEEgHo8-57AC6g0KEVqgGbMMWlUBEBc) - Answer Key
+
+[/key]
+
 MARKDOWN

@@ -382,6 +382,7 @@ function renderFooterInSharedGame() {
     window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
+      newWindow: true,
     },
     {
       text: commonMsg.copyright(),
