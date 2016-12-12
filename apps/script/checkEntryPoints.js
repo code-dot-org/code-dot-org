@@ -95,6 +95,7 @@ const SILENCED = [
   'tutorialExplorer',
   'weblab',
   'learn/index',
+  'teacherApplication'
 ];
 const SITES_CONFIG = {
   'studio': {

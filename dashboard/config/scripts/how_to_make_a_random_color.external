@@ -33,7 +33,7 @@ var color = "rgb("+R+", "+G+", "+B+")";
 
 <p style="text-align: center"> ALEXIS </p>
 
-<p>Genius!  But wait a second.  How will we handle our slightly different color?  For testing with the orange we just added 20 to each of the R, G, and B values.</p>
+<p>Genius!  But wait a second. Now I'm worried about making our slightly different color. For testing with the orange we just added 20 to each of the R, G, and B values.</p>
 
 <p style="text-align: center"> MICHAEL</p>
 

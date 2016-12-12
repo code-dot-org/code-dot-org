@@ -42,26 +42,19 @@
           <next>
             <block type="maze_moveForward">
               <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
+                <block type="maze_moveForward">
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                       <next>
                         <block type="maze_moveForward">
                           <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnLeft</title>
+                            <block type="maze_moveForward">
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                <block type="maze_moveForward">
                                   <next>
                                     <block type="maze_turn">
                                       <title name="DIR">turnLeft</title>
-                                      <next>
-                                        <block type="maze_turn">
-                                          <title name="DIR">turnLeft</title>
-                                        </block>
-                                      </next>
                                     </block>
                                   </next>
                                 </block>

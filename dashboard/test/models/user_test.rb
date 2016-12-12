@@ -124,7 +124,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
@@ -135,7 +135,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age 21+" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
@@ -145,7 +145,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with age that's not a number" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -155,7 +155,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with negative age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: -15, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -165,7 +165,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with too large age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -228,40 +228,40 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can create user without email" do
-    assert_difference('User.count') do
-      User.create!(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
+    assert_creates(User) do
+      User.create!(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
 
   test "cannot create self-managed user without email or hashed email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
   test "cannot make an account without email a teacher" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
-    user.user_type = 'teacher'
+    user.user_type = User::TYPE_TEACHER
     assert !user.save
   end
 
   test "cannot make an account without email an admin" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
     assert !user.save
   end
 
   test "cannot create admin without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
@@ -448,7 +448,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.present?
     assert user.hashed_email.present?
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.email.blank?
@@ -459,7 +459,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(full_address: 'fake address')
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
@@ -470,7 +470,7 @@ class UserTest < ActiveSupport::TestCase
     user.update(email: 'unconfirmed_email@example.com')
 
     assert user.unconfirmed_email.present?
-    user.update(user_type: 'student')
+    user.update(user_type: User::TYPE_STUDENT)
 
     assert_nil user.unconfirmed_email
   end
@@ -481,11 +481,35 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@old.xx')
     user.save!
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
+  end
+
+  test 'sanitize_race_data sanitizes closed_dialog' do
+    user = create :student
+    user.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes too many races' do
+    user = create :student
+    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes non-races' do
+    user = create :student
+    user.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data noops valid responses' do
+    user = create :student
+    user.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), user.reload.races
   end
 
   test 'under 13' do

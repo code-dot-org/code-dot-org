@@ -117,36 +117,36 @@
       "name": "bunny2",
       "frameCount": 2,
       "frameSize": {
-        "x": 122,
-        "y": 209
+        "x": 152,
+        "y": 193
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 20:12:34 UTC",
-      "pngLastModified": "2016-12-01 20:12:35 UTC",
-      "version": "QkeDsZbe1HClFfe6MTWdGeWUOjx3SApY",
-      "sourceUrl": "/api/v1/animation-library/QkeDsZbe1HClFfe6MTWdGeWUOjx3SApY/category_animals/bunny2.png",
+      "jsonLastModified": "2016-12-08 18:44:45 UTC",
+      "pngLastModified": "2016-12-08 18:44:46 UTC",
+      "version": "oawSosuk0_qAhPe2SzaubBwXPH9RM73F",
+      "sourceUrl": "/api/v1/animation-library/oawSosuk0_qAhPe2SzaubBwXPH9RM73F/category_animals/bunny2.png",
       "sourceSize": {
-        "x": 244,
-        "y": 209
+        "x": 304,
+        "y": 193
       }
     },
     "category_animals/bunny2_walk1": {
       "name": "bunny2_walk1",
-      "frameCount": 1,
+      "frameCount": 2,
       "frameSize": {
-        "x": 121,
-        "y": 201
+        "x": 152,
+        "y": 193
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 20:32:53 UTC",
-      "pngLastModified": "2016-12-01 20:32:54 UTC",
-      "version": "Gnt01RJ41u6ZijbexeYI6hoxNa2UmAYq",
-      "sourceUrl": "/api/v1/animation-library/Gnt01RJ41u6ZijbexeYI6hoxNa2UmAYq/category_animals/bunny2_walk1.png",
+      "jsonLastModified": "2016-12-08 18:44:44 UTC",
+      "pngLastModified": "2016-12-08 18:44:44 UTC",
+      "version": "mYR1z3PuobWrBTvyrLiJpm6MH_t4u9WX",
+      "sourceUrl": "/api/v1/animation-library/mYR1z3PuobWrBTvyrLiJpm6MH_t4u9WX/category_animals/bunny2_walk1.png",
       "sourceSize": {
-        "x": 121,
-        "y": 201
+        "x": 304,
+        "y": 193
       }
     },
     "category_animals/elephant": {
@@ -1287,15 +1287,15 @@
       "name": "springMan",
       "frameCount": 2,
       "frameSize": {
-        "x": 122,
+        "x": 112,
         "y": 143
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:15:25 UTC",
-      "pngLastModified": "2016-12-01 21:15:26 UTC",
-      "version": "_R.rF38XJWSZw0RxIzkjK0eZiZvP680z",
-      "sourceUrl": "/api/v1/animation-library/_R.rF38XJWSZw0RxIzkjK0eZiZvP680z/category_characters/springMan.png",
+      "jsonLastModified": "2016-12-08 18:45:46 UTC",
+      "pngLastModified": "2016-12-08 18:45:47 UTC",
+      "version": "1xDLu5b.9OTZ_7W8Rovk14RCnzMEvcY6",
+      "sourceUrl": "/api/v1/animation-library/1xDLu5b.9OTZ_7W8Rovk14RCnzMEvcY6/category_characters/springMan.png",
       "sourceSize": {
         "x": 224,
         "y": 143
@@ -7139,6 +7139,8 @@
       "category_characters/alienPink_walk"
     ],
     "aliens": [
+      "category_animals/bunny2",
+      "category_animals/bunny2_walk1",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
@@ -7215,7 +7217,8 @@
       "category_animals/snail",
       "category_animals/snake",
       "category_animals/snake_square",
-      "category_animals/snake_token"
+      "category_animals/snake_token",
+      "category_characters/springMan"
     ],
     "apple": [
       "category_food/apple"
@@ -7479,9 +7482,12 @@
       "category_animals/snail",
       "category_animals/snake",
       "category_animals/snake_square",
-      "category_animals/snake_token"
+      "category_animals/snake_token",
+      "category_characters/springMan"
     ],
     "category_characters": [
+      "category_animals/bunny2",
+      "category_animals/bunny2_walk1",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
@@ -7846,6 +7852,8 @@
       "category_generic_items/cd"
     ],
     "characters": [
+      "category_animals/bunny2",
+      "category_animals/bunny2_walk1",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
@@ -8725,8 +8733,7 @@
       "category_animals/bunny1_go",
       "category_animals/bunny1_hurt",
       "category_animals/bunny1_jump",
-      "category_animals/bunny1_ready",
-      "category_animals/bunny2_walk1"
+      "category_animals/bunny1_ready"
     ],
     "key": [
       "category_generic_items/key"
@@ -9243,8 +9250,7 @@
       "category_animals/bunny1_go",
       "category_animals/bunny1_hurt",
       "category_animals/bunny1_jump",
-      "category_animals/bunny1_ready",
-      "category_animals/bunny2_walk1"
+      "category_animals/bunny1_ready"
     ],
     "pliers": [
       "category_generic_items/pliers",
@@ -9277,9 +9283,6 @@
     ],
     "powerup_wings": [
       "category_gameplay/powerup_wings"
-    ],
-    "purple": [
-      "category_animals/bunny2_walk1"
     ],
     "purse": [
       "category_generic_items/purse"

@@ -141,10 +141,7 @@ social:
     #maparea.full-width
       %a{href: resolve_url('/map')}
         %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
-      .footnote
-        The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on
-        %a{href: resolve_url('/events')}
-          the events page.
+      .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, events_url: resolve_url('/events'))
 
   -# Highlights
 
@@ -170,21 +167,21 @@ social:
 
     .row
       .col-xs-6.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-girl-hawaii.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-girl-hawaii.jpg"), style: "width: 100%;"}
 
       .col-xs-6.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-robot.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-robot.jpg"), style: "width: 100%;"}
 
       .hidden-xs.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-girl-purple.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-girl-purple.jpg"), style: "width: 100%;"}
 
     .gap{style: "height:30px"}
 
     .row
       .col-xs-6.col-sm-4
         .hidden-xs
-          %img{src: "/images/fill-600x400/highlight-india.jpg", style: "width: 100%; padding-bottom:30px"}
-        %img{src: "/images/fill-600x400/highlight-celebrate.jpg", style: "width: 100%;"}
+          %img{src: localized_image("/images/fill-600x400/highlight-india.jpg"), style: "width: 100%; padding-bottom:30px"}
+        %img{src: localized_image("/images/fill-600x400/highlight-celebrate.jpg"), style: "width: 100%;"}
 
       .col-xs-6.col-sm-8
         %img{src: localized_image("/images/fill-800x543/highlight-nba.jpg"), style: "width: 100%;"}
@@ -193,13 +190,13 @@ social:
 
     .row
       .col-xs-6.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-stickers.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-stickers.jpg"), style: "width: 100%;"}
 
       .hidden-xs.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-girl-star-wars.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-girl-star-wars.jpg"), style: "width: 100%;"}
 
       .col-xs-6.col-sm-4
-        %img{src: "/images/fill-600x400/highlight-kids-certificates.jpg", style: "width: 100%;"}
+        %img{src: localized_image("/images/fill-600x400/highlight-kids-certificates.jpg"), style: "width: 100%;"}
 
 
     -# Stats
