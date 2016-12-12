@@ -358,5 +358,7 @@ exports.load = function (assetUrl, id) {
   skin.paddleYOffset = config.paddleYOffset || 0;
   skin.markerHeight = config.markerHeight || 50;
   skin.markerWidth = config.markerWidth || 50;
+  skin.flagHeight = 43;
+  skin.flagWidth = 50;
   return skin;
 };
