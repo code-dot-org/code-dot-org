@@ -16,7 +16,7 @@ As you saw in the video there are a bunch of terms that generally are all talkin
 
 **Boolean, Boolean values, Boolean expressions:**
 
-* a **Boolean value** simply a computer science-y term that means **a true/false value**.
+* A **Boolean value** is simply a computer science-y term that means **a true/false value**.
 * A **Boolean expression** is a statement that *evaluates* to a Boolean value (a single true/false).
 
 **Condition, Conditionals, Conditional Statements**:
