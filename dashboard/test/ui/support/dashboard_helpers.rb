@@ -14,8 +14,16 @@ module DashboardHelpers
     require File.expand_path('../../../../config/environment.rb', __FILE__)
   end
 
-  # Loads the i18n translations.
   def load_i18n_translations
+    start = Time.now
+    _load_i18n_translations
+    puts
+    puts "load_i18n_translations loaded in #{Time.now - start} seconds."
+    puts
+  end
+
+  # Loads the i18n translations.
+  def _load_i18n_translations
     require 'i18n'
     require 'yaml'
     require 'active_support'
@@ -35,6 +43,14 @@ module DashboardHelpers
 
   # Requires Rails models without loading the entire Rails environment (much faster).
   def require_rails_models
+    start = Time.now
+    _require_rails_models
+    puts
+    puts "require_rails_models loaded in #{Time.now - start} seconds."
+    puts
+  end
+
+  def _require_rails_models
     prepend_load_paths 'dashboard', 'dashboard/lib', 'lib'
 
     # Require basic Rails support without loading Rails itself.
