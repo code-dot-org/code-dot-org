@@ -6,10 +6,10 @@ require_relative '../mailing-common/mailing-list-utils'
 query = 'kind_s: HocSignup2016'
 
 US_VALUES = {
-  location_country_s: 'United States',
-  location_country_code_s: 'US',
-  hoc_country_s: 'us',
-  create_ip_country_s: 'United States',
+  location_country_s: ['United States'],
+  location_country_code_s: ['US'],
+  hoc_country_s: ['us'],
+  create_ip_country_s: ['United States'],
 
   # This is a free-form text field with many variations. Comparisons will be case-insensitive,
   # so only lower case versions are needed here.
@@ -50,12 +50,7 @@ US_VALUES = {
 def us?(row)
   US_VALUES.each do |key, values|
     row_value = row[key.to_s]
-    next unless row_value
-
-    values = *values if values.is_a? String
-    values.each do |value|
-      return true if value.casecmp(row_value).zero?
-    end
+    return true if row_value && values.any? {|v| v.casecmp(row_value).zero? }
   end
 
   false
