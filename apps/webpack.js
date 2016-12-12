@@ -20,6 +20,9 @@ var baseConfig = {
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
+  },
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
@@ -31,7 +34,8 @@ var baseConfig = {
           path.resolve(__dirname, 'static'),
         ],
         loader: "url-loader?limit=1024",
-      }
+      },
+      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
     ],
     preLoaders: [
       {
