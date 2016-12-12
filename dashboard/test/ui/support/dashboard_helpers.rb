@@ -8,18 +8,15 @@ module DashboardHelpers
   #
   # Requires the full rails environment. Use sparingly, known to take several minutes in certain contexts.
   def require_rails_env
-    #TODO: remove before committing final version.
-    rails "Don't use this anymore."
-
+    start = Time.now
     require File.expand_path('../../../../config/environment.rb', __FILE__)
+    puts
+    puts "require_rails_env loaded in #{Time.now - start} seconds."
+    puts
   end
 
   def load_i18n_translations
-    start = Time.now
-    _load_i18n_translations
-    puts
-    puts "load_i18n_translations loaded in #{Time.now - start} seconds."
-    puts
+    require_rails_env
   end
 
   # Loads the i18n translations.
@@ -43,11 +40,7 @@ module DashboardHelpers
 
   # Requires Rails models without loading the entire Rails environment (much faster).
   def require_rails_models
-    start = Time.now
-    _require_rails_models
-    puts
-    puts "require_rails_models loaded in #{Time.now - start} seconds."
-    puts
+    require_rails_env
   end
 
   def _require_rails_models
