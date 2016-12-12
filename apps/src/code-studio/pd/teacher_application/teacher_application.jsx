@@ -371,6 +371,45 @@ const TeacherApplication = React.createClass({
             }
           </tbody>
         </table>
+        <hr/>
+      </div>
+    );
+  },
+
+  renderComputerScienceAtYourSchool() {
+    return (
+      <div>
+        <p style={{fontWeight: 'bold'}}>
+          We would like to learn more about your school, and why you want to participate in our Professional Learning
+          Program. Please share your responses to the following questions:
+        </p>
+        <ButtonList
+          type="radio"
+          label="What computer science opportunities currently exist at your school? (select all that apply)"
+          groupName="currentCsOpportunities"
+          answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
+            'No computer science opportunities are currently available at my school']}
+          includeOther={true}
+          onChange={this.handleRadioButtonListChange}
+          selectedItems={this.state.currentCsOpportunities}
+        />
+        <FieldGroup
+          id="whyCsIsImportant"
+          label="Why do you believe access to computer science education is important for your students?"
+          componentClass="textarea"
+          onChange={this.handleTextChange}
+          style={{width: '100%'}}
+          rows={4}
+        />
+        <FieldGroup
+          id="whatTeachingSteps"
+          label="What steps will you and your school need to take to ensure that enough students enroll in your computer
+           science course(s) to keep the course(s) on the master schedule?"
+          componentClass="textarea"
+          onChange={this.handleTextChange}
+          style={{width: '100%'}}
+          rows={4}
+        />
       </div>
     );
   },
@@ -405,20 +444,31 @@ const TeacherApplication = React.createClass({
     );
   },
 
+  renderAfterCourseSelectionSection() {
+    return (
+      <div>
+        {this.state.selectedCourse === 'csd' && this.renderCSDSpecificContent()}
+        {this.state.selectedCourse === 'csp' && this.renderCSPSpecificContent()}
+        <hr/>
+        {this.renderSummerProgramContent()}
+        <hr/>
+        {this.renderComputerScienceBeliefsPoll()}
+        {this.renderComputerScienceAtYourSchool()}
+      </div>
+    );
+  },
+
   render() {
     return (
       <div>
-        {this.generateTeacherInformationSection()}
-        <hr/>
-        {this.renderCourseSelection()}
-        <hr/>
-        {this.state.selectedCourse === 'csd' && this.renderCSDSpecificContent()}
-        {this.state.selectedCourse === 'csp' && this.renderCSPSpecificContent()}
-        {this.state.selectedCourse && (<hr/>)}
-        {this.state.selectedCourse && this.renderSummerProgramContent()}
-        {this.state.selectedCourse && (<hr/>)}
-        {this.renderComputerScienceBeliefsPoll()}
-        {this.renderSubmitButton()}
+        <form>
+          {this.generateTeacherInformationSection()}
+          <hr/>
+          {this.renderCourseSelection()}
+          <hr/>
+          {this.state.selectedCourse && this.renderAfterCourseSelectionSection()}
+          {this.renderSubmitButton()}
+        </form>
       </div>
     );
   }
