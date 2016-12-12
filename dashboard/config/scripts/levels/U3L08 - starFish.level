@@ -123,13 +123,14 @@
       "functionParams_n": null,
       "callMyFunction": null,
       "callMyFunction_n": null,
-      "return": null
+      "return": null,
+      "comment": null
     },
     "edit_code": true,
     "encrypted_examples": "3EcNOIphNLcB+2PODo2/YG2pNpwBxtAeGTuFvrVxAmyE0gb2EApVq/W6h8uY\ngCtH\n",
     "embed": "false",
-    "instructions": "Add an extra fish, starfish, and piece of sea grass to the image. Look at, but don't change, the functions that create them. (Click to see full instructions)",
-    "markdown_instructions": "# Under the Sea\r\n\r\nIn the next several levels you will be working to improve the **same program** that draws an under the sea image. Your code will be pulled forward as you receive new instructions.\r\n\r\n**Read through ** the program here to understand what it does.\r\n\r\n**Add function calls ** to the top of the program so that there are now **two fish, two starfish, and two pieces of sea grass** in the image. Place them wherever you like.\r\n\r\n**Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
+    "instructions": "Add an extra fish, starfish, and piece of seagrass to the image. Look at, but don't change, the functions that create them. (Click to see full instructions)",
+    "markdown_instructions": "# Under the Sea\r\n\r\nIn the next several levels you will be working to improve the **same program** that draws an under the sea image. Your code will be pulled forward as you receive new instructions.\r\n\r\n**Read through ** the program here to understand what it does.\r\n\r\n**Add function calls ** to the top of the program so that there are now **two fish, two starfish, and two pieces of seagrass** in the image. Place them wherever you like.\r\n\r\n**Continue ** to the next level, **where your code will be waiting for you.**\r\n\r\n![](https://images.code.org/a53accb7edf7ed4e09d56bab903e1af9-image-1442604192660.22.35 PM.png)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -154,7 +155,22 @@
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
-    "beginner_mode": "false"
+    "beginner_mode": "false",
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks/>

@@ -20,6 +20,7 @@ const styles = {
  */
 const ScriptEditor = React.createClass({
   propTypes: {
+    beta: React.PropTypes.bool,
     i18nData: React.PropTypes.object.isRequired,
     hidden: React.PropTypes.bool,
     loginRequired: React.PropTypes.bool,
@@ -131,7 +132,7 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <h2>Stages and Levels</h2>
-        {window.betaScriptEditor && <FlexGroup />}
+        {this.props.beta && <FlexGroup />}
       </div>
     );
   }

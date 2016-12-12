@@ -9,11 +9,11 @@
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
-    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,1,0,0,0],[0,0,2,1,1,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,4,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
-    "ideal": "5",
-    "step_speed": "2",
-    "markdown_instructions": "Get me to the sunflower using only 5 blocks! ",
+    "ideal": "9",
+    "step_speed": "3",
+    "markdown_instructions": "*\"Must...eat...sunflower!\"*\r\n\r\nGet the zombie to the sunflower.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,6 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try using the \\\"Step\\\" button to find errors.\",\"hint_id\":\"grade3_maze_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f21d2acb307da3eea310786017a7dbc7/grade3_maze_loops1.mp3\"}]",
     "instructions_important": "false",
+    "instructions": "Get the zombie to the sunflower.",
     "contained_level_names": null
   },
   "published": true,
@@ -56,20 +57,36 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">2</title>
+              <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_moveForward"/>
+              </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnLeft</title>
                   <next>
-                    <block type="maze_moveForward">
+                    <block type="controls_repeat">
+                      <title name="TIMES">3</title>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
                       <next>
                         <block type="maze_turn">
                           <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">3</title>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                            </block>
+                          </next>
                         </block>
                       </next>
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>
