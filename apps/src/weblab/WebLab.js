@@ -393,7 +393,11 @@ WebLab.prototype.onProjectChanged = function () {
   dashboard.project.projectChanged();
 };
 
-// Called by Bramble host to set our reference to its interfaces
+/*
+ * Called by Bramble host to set our reference to its interfaces
+ * @param {!Object} bramble host interfaces
+ * @return {String} current project id
+ */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
@@ -402,6 +406,7 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  return dashboard.project.getCurrentId();
 };
 
 /**
