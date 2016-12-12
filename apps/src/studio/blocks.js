@@ -1845,6 +1845,29 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
 
+  blockly.Blocks.studio_whenSpriteAndGroupCollideSimple = {
+    // Block to handle event when the Left arrow button is pressed.
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(msg.collidesWithAnySpriteName);
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollideSimple = function () {
+    return '';
+  };
+
+
   /**
    * setBackground
    */
