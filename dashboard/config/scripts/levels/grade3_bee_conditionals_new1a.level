@@ -6,11 +6,11 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help the bee collect all of the nectar. You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "instructions": "Help the bee collect all of the nectar. \r\n\r\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
-    "flower_type": "purpleNectarHidden",
+    "flower_type": "redWithNectar",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,1,\"P\",\"P\",\"P\",1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
@@ -30,7 +30,10 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1},{\"tileType\":1,\"featureType\":1,\"value\":0,\"flowerColor\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "markdown_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Be sure to use an `if` statement to check each space to see if it has a flower or nothing.\",\"hint_id\":\"grade3_bee_conditionals_new1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d8c3efee177a6e41ec39f86734b2e5c8/grade3_bee_conditionals_new1a.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -50,24 +53,17 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
         <block type="bee_ifFlower">
           <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="bee_ifFlower">
-          <title name="LOC">atFlower</title>
-        </block>
-        <block type="maze_nectar"/>
-        <block type="controls_repeat">
-          <title name="TIMES">7</title>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

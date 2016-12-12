@@ -520,10 +520,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     securecompare (1.0.0)
-    selectize-rails (0.12.2)
-    selenium-webdriver (2.45.0)
+    selectize-rails (0.12.4)
+    selenium-webdriver (3.0.3)
       childprocess (~> 0.5)
-      multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sequel (4.10.0)
@@ -720,7 +719,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool!
   selectize-rails
-  selenium-webdriver (~> 2.45.0)
+  selenium-webdriver (~> 3.0.3)
   sequel (~> 4.10)
   shotgun
   simplecov (~> 0.9)
