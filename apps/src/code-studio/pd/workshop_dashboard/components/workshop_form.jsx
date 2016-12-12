@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
+import Spinner from '../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import {
@@ -38,8 +39,10 @@ const styles = {
   }
 };
 
+// Default to today, 9am-5pm.
 const placeholderSession = {
   placeholderId: '_0',
+  date: moment().format(DATE_FORMAT),
   startTime: '9:00am',
   endTime: '5:00pm'
 };
@@ -480,7 +483,7 @@ const WorkshopForm = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
     return this.renderForm();
   },

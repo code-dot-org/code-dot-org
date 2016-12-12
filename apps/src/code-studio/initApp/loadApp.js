@@ -9,6 +9,7 @@ var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
 var color = require("../../util/color");
+import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
 var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
@@ -438,11 +439,9 @@ export function getAppOptions() {
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
-    const script = document.querySelector(`script[data-appoptions]`);
     try {
-      setAppOptions(JSON.parse(script.dataset.appoptions));
+      setAppOptions(getScriptData('appoptions'));
     } catch (e) {
-      console.error("failed to parse appoptions from script tag", e);
       reject(e);
       return;
     }

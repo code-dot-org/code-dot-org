@@ -6,6 +6,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
 import VisibilitySensor from '../components/visibility_sensor';
+import Spinner from '../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 
@@ -127,7 +128,7 @@ const SessionAttendance = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
 
     const tableRows = this.state.attendance.map((attendanceRow, i) => {
