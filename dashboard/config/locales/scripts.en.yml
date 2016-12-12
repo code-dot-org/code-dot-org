@@ -1067,6 +1067,7 @@ en:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1206,6 +1207,7 @@ en:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1471,6 +1473,9 @@ en:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -2186,8 +2191,8 @@ en:
             Bounce: Bounce
           title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Make a basketball game
-          description: Make a basketball game
+          description_short: Choose your team and make a basketball game
+          description: Choose your team and make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2231,6 +2236,8 @@ en:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2272,6 +2279,10 @@ en:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2353,6 +2364,7 @@ en:
             Your Digital Footprint: Your Digital Footprint
             Building a Foundation: Building a Foundation
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2377,6 +2389,8 @@ en:
             Digital Citizenship: Digital Citizenship
             'Unplugged: Binary': 'Unplugged: Binary'
             Artist Binary: Artist Binary
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Nested Loops
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2399,6 +2413,7 @@ en:
             Private and Personal Information: Private and Personal Information
             Internet: Internet
             Crowdsourcing: Crowdsourcing
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''

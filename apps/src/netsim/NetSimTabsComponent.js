@@ -20,6 +20,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {jQuery} rootDiv
  * @param {RunLoop} runLoop
  * @param {Object} callbacks
+ * @param {function} callbacks.showInstructionsDialogCallback
  * @param {function} callbacks.chunkSizeSliderChangeCallback
  * @param {function} callbacks.myDeviceBitRateChangeCallback
  * @param {function} callbacks.encodingChangeCallback
@@ -45,6 +46,12 @@ var NetSimTabsComponent = module.exports = function (rootDiv, runLoop, callbacks
    * @private
    */
   this.runLoop_ = runLoop;
+
+  /**
+   * @type {Function}
+   * @private
+   */
+  this.showInstructionsDialogCallback_ = callbacks.showInstructionsDialogCallback;
 
   /**
    * @type {function}
@@ -151,6 +158,8 @@ NetSimTabsComponent.prototype.render = function () {
 
   // Remove the instructions area, to reattach in a minute.
   var instructionsArea = $('#bubble').first().detach();
+  instructionsArea.unbind('click');
+  instructionsArea.bind('click', this.showInstructionsDialogCallback_);
 
   var rawMarkup = buildMarkup({
     level: levelConfig
