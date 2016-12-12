@@ -6783,6 +6783,8 @@ en:
         result: result
       cspu5_assess2_appLabError:
         Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: "time"': 'Line 1 - time should be written in quotation marks like this: "time"'
+        'Line 1 - time should be written in quotation marks like this: "time".': 'Line 1 - time should be written in quotation marks like this: "time".'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6803,6 +6805,7 @@ en:
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings cannot include numerical digits.: Strings cannot include numerical digits.
         Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
@@ -6817,6 +6820,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will always display the value stored in variable a: The code will always display the value stored in variable a
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
@@ -6829,10 +6833,15 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
+        ' "Time to start studying again!" ': ' "Time to start studying again!" '
+        ' "You passed!" ': ' "You passed!" '
+        ' "You passed!" and  "Time to start studying again!" ': ' "You passed!" and  "Time to start studying again!" '
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        An error will occur on line 7; you cannot have an if inside an else statement: An error will occur on line 7; you cannot have an if inside an else statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
@@ -6841,6 +6850,11 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
+        console.log("Hello! \bHow are you?");: console.log("Hello! \bHow are you?");
+        console.log("Hello! \nHow are you?");: console.log("Hello! \nHow are you?");
+        console.log("Hello! \newLineHow are you?");: console.log("Hello! \newLineHow are you?");
+        console.log("Hello! \nlHow are you?");: console.log("Hello! \nlHow are you?");
+        console.log("Hello! \tHow are you?");: console.log("Hello! \tHow are you?");
         console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
         console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
         console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
@@ -7006,9 +7020,11 @@ en:
         The procedure returns the number of times adjacent items are in ascending order: The procedure returns the number of times adjacent items are in ascending order
         The procedure returns true when data is in ascending order: The procedure returns true when data is in ascending order
       cspu5_assess4_playGame:
+        DISPLAY ("game over"): DISPLAY ("game over")
         DISPLAY (count): DISPLAY (count)
         DISPLAY (“game over”): DISPLAY (“game over”)
         Nothing. Procedure works as is.: Nothing. Procedure works as is.
+        RETURN ("game over"): RETURN ("game over")
         RETURN (count): RETURN (count)
         RETURN (“game over”): RETURN (“game over”)
       cspu5_assess4_robot:
