@@ -2901,6 +2901,12 @@ Studio.execute = function () {
                                      'SPRITE2');
     registerHandlersWithSpriteAndGroupParams(
         handlers,
+        'studio_whenSpriteAndGroupCollideSimple',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
         'studio_whenSpriteAndGroupCollide',
         'whenSpriteCollided',
         'SPRITE',
