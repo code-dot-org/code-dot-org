@@ -35,19 +35,19 @@
   welcome_back: Hoki mai rā, %{name}
   your_professional_learning_plan: Tō Mahere Ako Ngaio
   see_your_learning_plan: Tirohia tō mahere ako
-  submit: Submit
+  submit: Tāpaetia
   unsubmit: Wetetāpae
   previous_page: Whārangi tōmua
   next_page: Whārangi tōmuri
   next_resource: Rauemi tōmuri
   done_with_module: Done with this Learning Module
   cancel: Whakakore
-  okay: Pai noa
+  okay: "Āe"
   heading_x_of_y: "%{heading} (whārangi %{x} o %{y})"
   add_teacher_form:
     code:
       label: 'Tāpiritia he pouako:'
-      placeholder: Wāhanga Waehere (AEIOUU)
+      placeholder: Wāhanga Waehere (ABCDEF)
       instructions: Tēnā tāurutia te waehere nā tō pouako i tiri ki a koe. He waehere
         e 6 ōna pū pēnei i "AEIOUU".
     submit: Tāpiri pouako
@@ -75,8 +75,8 @@
   prize: whakawhiwhinga
   more_info: Mōhiohio Anō
   auth:
-    sign_in_with: Waitohu me %{provider}
-    signed_in: Kua waitohua!
+    sign_in_with: Takiuru me %{provider}
+    signed_in: Kua takiuru atu!
     signed_out: Kua puta koe i <a <a href="%{url}">Code.org</a>.
     sign_out_of: I uru atu koe mā %{provider}.<a href="%{url}">Pāwhiritia i konei</a>ki
       te puta i %{provider}.
@@ -104,7 +104,7 @@
       te haere tonu, e whakaae ana kia tautuhia e koe tētahi kupuhipa me te whakarite
       i tētahi pūkete ki raro iho nei kia pai ai tō whakauru i ō ākonga ki tētahi
       o ā mātou <a href="https://code.org/educate"> whakaakoanga roa</a>.
-    teacher_educator_guide: Tirohia te ārahi mātauranga
+    teacher_educator_guide: Tirohia te aratohu kaiwhakaako
     title: Waitohu mō Core.org
     school_name: Ingoa Kura (kei a koe te kōwhiringa)
     school_address: Wāhinoho Kura (kei a koe te kōwhiringa)
@@ -113,7 +113,7 @@
     birthday: Rā whānau (kei a koe te kōwhiringa)
     age: Pakeke
     user_type: He ākonga, he pouako rānei koe?
-    submit: Waitohu
+    submit: Waitohu Mai
     teacher: He pouako rānei koe?
     valid_username: Wātea!
     invalid_username: Me kaua tō ingoa kaiwhakamahi e iti ake i te 5 pūāhua
@@ -153,18 +153,18 @@
   signinsection:
     welcome: Nau mai ki %{section_name}
     name: Kōwhiria tō ingoa
-    picture: Na, kimihia tō pikitia muna
-    words: Na, tāurutia ō kupu muna
+    picture: Nā, kimihia tō pikitia muna
+    words: Nā, tāurutia ō kupu muna
     login: Takiuru
     invalid_login: Takiuru muhu, me ngana tonu
     pair_programming: He hoa tōku i taku taha
   password:
     reset_form:
       title: Kua wareware i a koe tō kupuhipa?
-      instructions: Tāurutia tō wāhitau īmēra ki raro kātahi mātou ka tuku i ngā tohutohu
-        tautuhi kupuhipa ki a koe.
+      instructions: Tāurutia tō wāhitau īmēra ki raro, kātahi mātou ka tuku i ngā
+        tohutohu tautuhi kupuhipa ki a koe.
       email: Wāhitau īmēra
-      submit: Send me reset password instructions
+      submit: Tāpaetia
     change_form:
       title: Panonihia tō kupuhipa
       new_password: Kupuhipa hou
@@ -293,7 +293,7 @@
     update: Whakahou
     destroy: Whakangaro
     back: Ki Muri
-    confirm: "Āe rānei?"
+    confirm: Koinā tō hiahia?
     created: I angitu te hanga i te %{model}.
     updated: I angitu te whakahou i te %{model}.
     destroyed: I angitu te muku i te %{model}.
@@ -301,12 +301,12 @@
   nav:
     header:
       finished_hoc: Kua oti i au taku Hour of Code
-      sign_in_to_save: Waitohungia ki te tiaki i aku mahi
+      sign_in_to_save: Takiuru atu ki te tiaki i aku mahi
       free_play:
-        playlab: Hangaia tētahi taupānga Play Lab
-        artist: Tātuhia tētahi mea
+        playlab: Hangaia tētahi taupānga Taiwhanga Tākaro
+        artist: Tāngia tētahi mea
         calculate: Calculate Something
-        applab: Hangaia tētahi taupānga App Lab
+        applab: Hangaia tētahi taupānga Taiwhanga Taupānga
     user:
       classroom: Teacher Home Page
       district_dashboard: Paemana ā-Rohe
@@ -318,7 +318,7 @@
       signin: Takiuru
       signup: Waihangahia tētahi pūkete
       already_registered: Kua rēhita kē?
-      pair_programming: Pair Programming
+      pair_programming: Papatonotanga ā-Tānga
       team: Tīma
       driver: Kaiurungi
       navigator: Kaiwhakatere
@@ -345,7 +345,7 @@
       remove: "Āe rānei e hiahia ana koe ki te tango i tēnei pouako?"
     students:
       dashboard: Haere ki Paemana Pouako
-    user_not_found: Kāore te poauko i kitea.
+    user_not_found: Kāore te pouako i kitea.
     student_teacher_disassociated: Kua tangohia a %{teacher_name} hei pouako mōu.
     panel:
       answer_viewer: Pae Pouako
@@ -370,8 +370,8 @@
       i ō panonitanga)"
     delete: Mukua tō pūkete
     delete_text: Mā te pāwhiri i te pātene o raro nei ka muku i tō pūkete.
-    delete_text_teacher_note: 'Kia mārama mai koe: e kore ngā pūkete o ngā ākonga
-      e mukua ina mukua tō ake pūkete.'
+    delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
+      mukua ina mukua tō ake pūkete.'
     delete_confirm: "Āe rānei e hiahia ana koe ki te muku i tō pūkete?"
   user_level:
     completed: Kua oti
@@ -412,12 +412,13 @@
     prize_info: 'Ngā whakawhiwhinga mō te whaiwāhitanga (Mā ngā pouako ki ngā kura
       tūmatanui U.S. anake): Tae atu ki te $1000 whakawhiwhinga ā-akomanga.'
     tryfirst: 'Māna, ka whakamātauria i te tuatahi, kātahi ka waitohu ā tōna wā:'
-    trynow: Whakamātauria ināianei
+    trynow: Ngana ināianei
     add_hint_help: Tēnā āwhinatia mātou ki te tāpiri i ngā tīwhiri hāpai ki ngā whakaakoranga
       Code.org
-    20hour_overview: Ka whakatakina tēnei whakaakoranga 20 haora te roa ngā ariā pūtake
-      o te pūtaiao rorohiko me te papatono. E hāngai ana mō te hunga e ako ana i te
-      koeke K-8 i te akomanga, heoi anō, he ngahau mā te katoa ahakoa te pakeke.
+    20hour_overview: Ka whakatakina e tēnei whakaakoranga 20 haora te roa, ngā ariā
+      pūtake o te pūtaiao rorohiko me te papatono. E hāngai ana mō te hunga e ako
+      ana i te koeke K-8 i te akomanga, heoi anō, he ngahau mā te katoa ahakoa te
+      pakeke.
     test_videos_help: Whakamātauria tā mātou pūrere ataata hou ki tō kura
     try_beta_courses: Hou! Whakamātauria ā mātou whakaaronga peta mā ngā ākonga K-5
     use_as_teacher: Whakamahia tēnei pae hei pouako
@@ -447,8 +448,9 @@
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Me ako tonu
-    announcement_try_now_button: Whakamātauria ināianei
-    announcement_host_an_hour_button: Hāpaitia tētahi Hour
+    announcement_try_now_button: Ngana ināianei
+    announcement_host_an_hour_button: Taurimatia tētahi Hour
+    announcement_watch_video_button: Watch video
     announcement_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi
       ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
       eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
@@ -479,6 +481,11 @@
       Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou
       ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou
       hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
   move_students:
     new_section_dne: Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā
       whakaurua he waehere wāhanga rerekē.
@@ -591,7 +598,7 @@
     title: Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana
     bounce_og_title: Tirohia taku Kēmu Bounce
     flappy_og_title: Tirohia taku Kēmu Flappy
-    studio_og_title: Tirohia taku Taupānga Play Lab
+    studio_og_title: Tirohia taku Taupānga Taiwhanga Tākaro
     check_out_what_i_made: Tirohia tāku i hanga ai
     og_description: Nāku anō te waehere i tuhi me Code.org
     phone_number_not_allowed: Te āhua nei he tau waea kei roto. Me ngana ki te panoni
@@ -616,9 +623,9 @@
   upsell:
     applab:
       title: Taiwhanga Taupānga
-      body: He taiao papatono te App Lab e hangaia ai ngā taupānga māmā. Waihangahia
-        he taupānga me ngā paraka waehere, me JavaScript rānei kia mahi ai, ā, tiria
-        tō taupānga i te wā poto noa iho.
+      body: He taiao papatono te Taiwhanga Taupānga e hangaia ai ngā taupānga māmā.
+        Waihangahia he taupānga me ngā paraka waehere, me JavaScript rānei kia mahi
+        ai, ā, tiria tō taupānga i te wā poto noa iho.
       body_short: Waihangahia he taupānga me ngā paraka waehere, me JavaScript rānei
         kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho.
       audience: Pakeke 13+
@@ -651,14 +658,14 @@
     starwars:
       title: Star Wars
     infinity:
-      title: Infinity Play Lab
+      title: Taiwhanga Tākaro Disney Infinity
       body: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau, kēmu rānei
         e whakaatu ana i ngā pūāhua Disney Infinity.
     minecraft:
-      title: Minecraft
-      body: Tūhuratia tētahi ao Minecraft mā roto mai i te waehere.
+      title: Mahimaina
+      body: Tūhuratia tētahi ao Mahimaina mā roto mai i te waehere.
     minecraft2016:
-      title: Minecraft
+      title: Mahimaina
       body: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga
         Mahimaina.
     unplugged:
@@ -671,7 +678,7 @@
         kīnaki rānei mō ngā whakaakoranga pūtaiao rorohiko ahakoa te momo.
       body_short: Mena kāore ō rorohiko, whakamātauria ēnei akoranga momotu i tō akomanga.
   gallery:
-    students_drew_these_with_code: Nā ngā ākonga ēnei i tuhi me te waehere!
+    students_drew_these_with_code: Nā ngā ākonga ēnei i tā me te waehere!
     students_made_these_with_code: Nā ngā ākonga ēnei i hanga me te waehere!
     picture_count: I ngā rangi <b>%{days}</b> kua hipa, kua tuhia e ngā ākonga ngā
       pikitia <b>%{count}</b> mā te tuhi i o rātou ake papatono rorohiko. Pāwhiritia
@@ -710,24 +717,24 @@
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   multi-submittable:
-    wrong_title: Tena Koe
+    wrong_title: Tēnā koe
     wrong_body: Tēnā koe i tāpae i tō whakautu.
-    correct_title: Tena Koe
+    correct_title: Tēnā koe
     correct_body: Tēnā koe i tāpae i tō whakautu.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
-    wrong_title: Tena Koe
+    wrong_title: Tēnā koe
     wrong_body: Tēnā koe i tāpae i ō whakautu.
-    correct_title: Tena Koe
+    correct_title: Tēnā koe
     correct_body: Tēnā koe i tāpae i ō whakautu.
     hide_survey_last_answer: He ingoamuna tēnei rangahau. Tēnā toro atu ki te paemana
       pouako ka kitea ai te huinga hua. Kia mōhio ai koe, ka kitea noa iho ngā hua
       mēnā i oti i te tokorima ākonga te rangahau te tāpae.
   level_group-submittable:
-    wrong_title: Tena Koe
+    wrong_title: Tēnā koe
     wrong_body: Tēnā koe i tāpae i ō whakautu.
-    correct_title: Tena Koe
+    correct_title: Tēnā koe
     correct_body: Tēnā koe i tāpae i ō whakautu.
     unsubmit-title: Wetetāpae i tō aromatawai
     unsubmit-body: Mā te wetetāpae i tō aromatawai ka tautuhi anō te wā, me te rā
@@ -736,8 +743,8 @@
     submit-incomplete-body: I mahue i a koe ētahi pātai te whakautu. Tē taea e koe
       tō aromatawai te whakatika ina tāpaetia. Āe rānei koinei tō hiahia?
     submit-complete-title: Tāpaetia tō aromatawai
-    submit-complete-body: Tē taea e koe tō aromatawai te whakatika ina tāpaetia. Āe
-      rānei koinei tō hiahia?
+    submit-complete-body: Tē taea e koe tō aromatawai te whakatika ina tāpaetia. Koinā
+      tō hiahia?
   match:
     wrong_title: Urupare hē
     wrong_body: E hē ana te urupare nāu i whakauru. Tēnā whakamātau anō!
@@ -821,7 +828,7 @@
     - american_indian: American Indian/Alaska Native
     - other: Other
     - opt_out: Kāore i te hiahia kia uruparetia
-    submit: Submit
+    submit: Tāpaetia
     decline: Kati
   zendesk_too_young_message: Kia manawanui mai, kāore e whakaae ana mā te tamaiti
     nohinohi tā mātou pae e tautoko. E whakaae ana kia tirohia te <a href="http://support.code.org">support.code.org</a>
@@ -860,7 +867,7 @@
     advanced_share: Whakaaturia ngā kōwhiringa atu anō
     close: Kati
     more: More
-    name: Name
+    name: Ingoa
     updated: Kua Whakahoutia
     project_type: Momo Tūmahi
     help_text: Pāwhiritia te <strong> Hanga Taupānga </strong>rānei, te <strong> Tā
@@ -893,7 +900,7 @@
         whakapā mai.</a>
       go_to_code_studio: Haere ki Code Studio
       report_abuse_form:
-        intro: Mena kua tūpono atu koe ki ētahi ihirangi weriweri, ki te whakatumatuma,
+        intro: Mēnā kua tūpono atu koe ki ētahi ihirangi weriweri, ki te whakatumatuma,
           te whakaweti, te whakatīwheta, ki tētahi āhuatanga takahi mōtika me āu ake
           mahi i a koe e mahi ana me ngā taupānga kei Code Studio, tēnā whakakīia
           te puka kei raro iho nei. He mea nui ki a mātou tō pūrongo, ka tūhuratia,
@@ -990,8 +997,48 @@
     starwars_blocks_name: 'Star Wars: Te Hanga Ikarangi me te Waehere (Paraka)'
     starwars_javascript_name: 'Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)'
     download_message: Tikiake i te %{app_name} kia whakamahi ā-tuimotu (136MB)
-    download_in_english: 'Tikiake i te reo Ingarihi:'
-    download_in_spanish: 'Tikiake i te reo Pāniora:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:

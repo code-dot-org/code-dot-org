@@ -62,7 +62,7 @@
         course3:
           title: Kurs 3
           description: Kurs 3 er ment for elever som har tatt Kurs 2. Elevene vil
-            gå dypere inn i temaer temaer fra de forrige kursene for å lage mer fleksible
+            gå dypere inn i temaer fra de forrige kursene for å lage mer fleksible
             løsninger på mer komplekse problemer. I slutten av dette kurset vil elevene
             lage interaktive historier og spill som de kan dele med andre. Anbefalt
             for klassetrinnene 4.-7.
@@ -2415,10 +2415,10 @@
         basketball:
           stage:
             Bounce: sprett
-          title: Basketball
+          title: Lag et basketball-spill
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Lag et basketball-spill
+          description: Lag et basketball-spill
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2719,7 +2719,7 @@
           title: Sport
           description_audience: ''
           description_short: Kode dim egen sport
-          description: ''
+          description: Kode dim egen sport
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Velkommen!

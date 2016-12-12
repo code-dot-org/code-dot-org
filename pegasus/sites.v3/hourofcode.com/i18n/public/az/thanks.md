@@ -26,9 +26,9 @@ social:
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# "Kod Saatı" təşkili üçün qeydiyyatınıza görə təşəkkür edirik!
+# Kod Saatı təşkil etmək üçün qeydiyyatdan keçdiyinizə görə təşəkkür!
 
-You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. What can you do now?
+You're making it possible for students all around the world to learn one Hour of Code that can *change the rest of their lives*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. İndi nə edə bilərsən?
 
 ## 1. Hamıya xəbər ver
 

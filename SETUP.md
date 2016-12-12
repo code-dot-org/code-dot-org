@@ -21,6 +21,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### OS X Mavericks / Yosemite / El Capitan / Sierra
 
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
   1. (El Capitan) If you see permissions issues, run `sudo chown -R $(whoami):admin /usr/local/`. More info [here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md).
   1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
@@ -63,7 +64,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 14.04
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
   * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Upgrade npm to 3.10.8 If `npm -v` says less than 3.10.8 then
   * `sudo add-apt-repository ppa:chris-lea/node.js`

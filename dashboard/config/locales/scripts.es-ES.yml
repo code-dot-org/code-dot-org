@@ -2447,10 +2447,10 @@
         basketball:
           stage:
             Bounce: Rebotar
-          title: Basketball
+          title: Crear un juego de baloncesto
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Crear un juego de baloncesto
+          description: Crear un juego de baloncesto
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2751,10 +2751,10 @@
         sports:
           stage:
             Sports: "Спорт"
-          title: "Спорт"
+          title: Multideporte
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Multideporte
+          description: Multideporte
         2016_sciencePD-phase2b:
           stage:
             Welcome!: "¡Bienvenido!"

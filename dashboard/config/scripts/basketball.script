@@ -1,3 +1,4 @@
+hidden 'false'
 stage 'Bounce'
 skin 'basketball'
 level 'blockly:Bounce:1_basketball'

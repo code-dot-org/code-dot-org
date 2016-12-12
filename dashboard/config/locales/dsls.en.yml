@@ -432,7 +432,6 @@ en:
         title: title
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
-        Stop: Stop
         description here: description here
       CSD U2 layout style review:
         description here: description here
@@ -1724,9 +1723,6 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      The &#39;return&#39; Command test:
-        description here: description here
-        title: title
       The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
@@ -3165,11 +3161,9 @@ en:
       CSD U3 CSS Vocab Match:
         '1': '1'
         '2': '2'
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
         CSS: CSS
         CSS Vocabulary Match: CSS Vocabulary Match
         Stylesheet: Stylesheet
-        description here: description here
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3889,15 +3883,9 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        '1': '1'
-        '2': '2'
         Answer 1: Answer 1
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
         CSD U3 keyinput match: CSD U3 keyinput match
-        CSS: CSS
         Question: Question
-        Stylesheet: Stylesheet
-        description here: description here
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4349,22 +4337,10 @@ en:
       CSD Header Size Prediction:
         ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">
         <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
       CSD Headers Prediction:
         ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
         : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
@@ -7497,11 +7473,12 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        " Press the _w_ key ": " Press the _w_ key "
-        'Press the _space_ bar  ': 'Press the _space_ bar  '
-        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
-        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
-        title: title
+        '1': '1'
+        '2': '2'
+        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
+        CSS: CSS
+        Stylesheet: Stylesheet
+        description here: description here
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

@@ -1,4 +1,4 @@
-professional_learning_course 'ECS Support'
+professional_learning_course 'ECS Support Legacy'
 login_required 'true'
 
 stage 'Welcome!'

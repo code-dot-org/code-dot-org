@@ -279,7 +279,7 @@ sv:
     user_not_found: 'Läraren kunde inte hittas.'
     student_teacher_disassociated: 'Du har tagit bort %{teacher_name} som din lärare.'
     panel:
-      answer_viewer: 'Teacher Panel'
+      answer_viewer: 'Lärarpanel'
       student: 'Student'
       viewing_solution: 'Visa lösning'
       try_it_yourself: 'Prova det själv'
@@ -354,12 +354,14 @@ sv:
     announcement_learn_more_button: "Lär dig mer"
     announcement_try_now_button: "Prova nu"
     announcement_host_an_hour_button: "Var värd för en Hour of Code"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "Som lärare är du en del av en rörelse som syftar till att ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap."
     announcement_petition_button: "Ange ditt namn"
     announcement_all: "Håll dig uppdaterad med nya funktioner och uppdateringar på vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>"
     announcement_hoc_launch: "Tusentals lärare i mer än 180 länder börjar undervisningen i datavetenskap under Hour of Code de5-11 December. Vi räknar med dig för att kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'> registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon kan börja undervisningen i datavetenskap."
     announcement_hoc_scaling: 'VARNING för kurs 1-4 och den korta lärarkursen: På grund av hög last från miljontals studenter under the Hour of Code, <b>kommer inte Code Studio att spara eller rapportera elevernas framsteg på dessa kurser från den 3-11 December </b>. Vi rekommenderar att du genomför the Hour of Code med dina klasser under den 3-11 December. Det är Science Education Week i USA. Medan vår egen Hour of Code kurs inte kommer också spara elevers framsteg denna vecka, kan studenter fortfarande göra andra kurser och få certifikat för dem.'
     announcement_mc_launch: "En av våra mest populära tutorials nu har nu fått en uppföljare! Den helt nya Minecraft Hour of Code Designer låter elever sätta reglerna för Minecraft världen. De kan skapa en helt unik Minecraftupplevelse, och sedan dela den med vänner och spela i den på sina telefoner. Gör det med dina elever under Hour of Code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
     section_code_not_entered: "Ange koden för önskat avsnitt."
@@ -740,8 +742,48 @@ sv:
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Bygg en galax med kod i JavaScript'
     download_message: 'Hämta %{app_name} för offlineanvändning (136MB)'
-    download_in_english: 'Hämta på engelska:'
-    download_in_spanish: 'Hämta på spanska:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: 'Windows (64-bitars)'
     mac: 'Mac OS X'
   plc:

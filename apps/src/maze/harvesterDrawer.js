@@ -77,7 +77,9 @@ export default class HarvesterDrawer extends Drawer {
 
   hide(prefix, row, col) {
     const element = this.getOrCreateImage_(prefix, row, col);
-    element.setAttribute('visibility', 'hidden');
+    if (element) {
+      element.setAttribute('visibility', 'hidden');
+    }
   }
 
   show(prefix, row, col) {

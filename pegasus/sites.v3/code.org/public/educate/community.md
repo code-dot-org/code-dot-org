@@ -33,7 +33,7 @@ Celebrate the teachers and students in your school by nominating them for a Code
 <br/>
 - [Student of the month](/sotm)
 
-**Computer Science Teacher's Association:** The [CSTA](http://csta.acm.org/index.html) is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
+**Computer Science Teacher's Association:** The [CSTA](http://www.csteachers.org/) is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.
 
 **Advocating for computer science**: We have a (small) team that focuses on advocating through state governments to bring computer science into K-12 classrooms. We have [fact sheets](/promote) telling the state of computer science in each of these states — and you can access and download your state’s information. 
 
@@ -48,7 +48,7 @@ Code.org is interested in partnering with experienced [computer science educator
 ## Other Community Resources
 Looking for other ways to get connected to computer science teachers around the world? Check out these great resources from our partners:
 
-- **[CS10K](http://cs10kcommunity.org):** A nationwide virtual community for CS educators, [CS10K](http://cs10kcommunity.org) offers opportunities for sharing resources, developing leadership and connecting with peers.
+- **[CS for all Teachers](https://csforallteachers.org/):** A nationwide virtual community for CS educators offering opportunities for sharing resources, developing leadership and connecting with peers.
 - **[NCWIT](http://ncwit.org):** Find your local NCWIT chapter - an organization working to correct the imbalance of gender diversity in technology.
 
 *Don't see your local CS community listed? Connect with [@TeachCode](http://twitter.com/TeachCode) on Twitter so we can get to know you!*

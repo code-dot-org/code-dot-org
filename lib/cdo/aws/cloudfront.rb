@@ -104,7 +104,7 @@ module AWS
           invalidation_batch: {
             paths: {
               quantity: 1,
-              items: ['/'],
+              items: ['/*'],
             },
             caller_reference: SecureRandom.hex,
           },
@@ -114,7 +114,7 @@ module AWS
       puts 'Invalidations created.'
       invalidations.map do |app, id, invalidation|
         cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
-          waiter.max_attempts = 60 # wait up to 20 minutes for invalidations
+          waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
           waiter.before_wait { |_| puts "Waiting for #{app} cache invalidation.." }
         end
         puts "#{app} cache invalidated!"
