@@ -5,8 +5,8 @@
 // (see test_logs_controller.rb) which in turn gets its information from the
 // uploaded S3 logs and their metadata.
 
-// Lodash gets provided on test_status.html
-/* global _ */
+// Lodash and Clipboard provided on test_status.html
+/* global _, Clipboard */
 
 // Gather metadata for the run
 const COMMIT_HASH = document.querySelector('#commit-hash').dataset.hash;
@@ -144,6 +144,9 @@ Test.prototype.s3Key = function () {
 Test.prototype.publicLogUrl = function () {
   return `https://${S3_BUCKET}.s3.amazonaws.com/${this.s3Key()}?versionId=${this.versionId}`;
 };
+
+// Connect up "Copy Rerun Command" buttons
+new Clipboard('button.copy-button');
 
 // Build a cache of tests for this run.
 var tests = {};

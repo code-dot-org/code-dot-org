@@ -68,4 +68,15 @@ class Plc::CourseUnit < ActiveRecord::Base
 
     default_module_assignments
   end
+
+  # Use this command to unblock a course unit and enable enrolled teachers to start making progress in it
+  def launch
+    update(started: true)
+
+    #All users who are enrolled in the course for this course unit need to be enrolled in it
+    plc_course.plc_enrollments.each do |enrollment|
+      assignment = Plc::EnrollmentUnitAssignment.find_or_create_by(user: enrollment.user, plc_user_course_enrollment: enrollment, plc_course_unit: self)
+      assignment.update(status: Plc::EnrollmentUnitAssignment::IN_PROGRESS)
+    end
+  end
 end
