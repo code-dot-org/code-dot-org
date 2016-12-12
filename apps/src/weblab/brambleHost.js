@@ -28,15 +28,14 @@ let _recentBrambleChanges;
 let _lastSyncedVersionId;
 
 // Project root in file system
-const projectRoot = "/codedotorg/weblab";
-const removeProjectRootRegex = /^\/codedotorg\/weblab\//g;
+const weblabRoot = "/codedotorg/weblab";
 
 function ensureProjectRootDirExists(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
 
   // create project root directory
-  sh.mkdirp(projectRoot, err => {
+  sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
     if (err && err.code === "EEXIST") {
       // If it already exists, treat that as a success case
       err = null;
@@ -50,12 +49,12 @@ function putFilesInBramble(sources, callback) {
   const sh = new fs.Shell();
   const Path = bramble_.Filer.Path;
 
-  sh.rm(projectRoot, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(projectRoot, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
 
       function writeFileDataAndContinue(filename, data, currentIndex) {
-        var path = Path.join(projectRoot, filename);
+        var path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
         // write the data
         function onWriteComplete(err) {
           if (err) {
@@ -126,9 +125,9 @@ function removeAllFilesInBramble(callback) {
   const fs = bramble_.getFileSystem();
   const sh = new fs.Shell();
 
-  sh.rm(projectRoot, {recursive: true}, err => {
+  sh.rm(`${weblabRoot}/${currentProjectId}`, {recursive: true}, err => {
     // create project root directory
-    sh.mkdirp(projectRoot, err => {
+    sh.mkdirp(`${weblabRoot}/${currentProjectId}`, err => {
       if (err && err.code === "EEXIST") {
         err = null;
       }
@@ -145,7 +144,7 @@ function removeAllFilesInBramble(callback) {
 function getFileData(filename, callback) {
   const fs = bramble_.getFileSystem();
   const Path = bramble_.Filer.Path;
-  const path = Path.join(projectRoot, filename);
+  const path = Path.join(`${weblabRoot}/${currentProjectId}`, filename);
   fs.readFile(path, { encoding: null }, callback);
 }
 
@@ -171,7 +170,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
       dataType: 'binary',
       responseType: 'arraybuffer'
     }).done(data => {
-      var path = Path.join(projectRoot, fileEntry.name);
+      var path = Path.join(`${weblabRoot}/${currentProjectId}`, fileEntry.name);
       // write the data
       fs.writeFile(path, new Buffer(data), { encoding: null }, callback);
     }).fail((jqXHR, textStatus, errorThrown) => {
@@ -302,7 +301,7 @@ function uploadAllFilesFromBramble(callback) {
   const sh = new fs.Shell();
 
   // enumerate files in the file system off the project root
-  sh.ls(projectRoot, function (err, entries) {
+  sh.ls(`${weblabRoot}/${currentProjectId}`, function (err, entries) {
     // async-chained enumeration: get the file data for i-th file
     function getEntryFileData(i, callback) {
       if (i < entries.length) {
@@ -483,22 +482,25 @@ const brambleHost = {
 };
 
 // Give our interface to our parent
-webLab_.setBrambleHost(brambleHost);
+var currentProjectId = webLab_.setBrambleHost(brambleHost);
+var removeProjectRootRegex = new RegExp(`^\\/codedotorg\/weblab\/${currentProjectId}\/`, 'g');
 
 function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
     url: "//downloads.computinginthecore.org/bramble/index.html?disableExtensions=bramble-move-file",
-    // DEVMODE: url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
-    useLocationSearch: true
+    // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
+    // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
+    useLocationSearch: true,
+    disableUIState: true
   });
 
   // Event listeners
   Bramble.once("ready", function (bramble) {
 
     function handleFileChange(path) {
-      // Remove leading slash
+      // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
       _recentBrambleChanges.fileChange[cleanedPath] = true;
       if (onProjectChangedCallback_) {
@@ -507,7 +509,7 @@ function load(Bramble) {
     }
 
     function handleFileDelete(path) {
-      // Remove leading slash
+      // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
       _recentBrambleChanges.fileDelete[cleanedPath] = true;
       if (onProjectChangedCallback_) {
@@ -516,7 +518,7 @@ function load(Bramble) {
     }
 
     function handleFileRename(oldFilename, newFilename) {
-      // Remove leading slashes
+      // Remove leading project root paths
       var cleanedOldFilename = oldFilename.replace(removeProjectRootRegex, '');
       var cleanedNewFilename = newFilename.replace(removeProjectRootRegex, '');
       _recentBrambleChanges.fileRename[cleanedOldFilename] = cleanedNewFilename;
@@ -554,7 +556,7 @@ function load(Bramble) {
 
   startInitialFileSync(function () {
     // tell Bramble which root dir to mount
-    Bramble.mount(projectRoot);
+    Bramble.mount(`${weblabRoot}/${currentProjectId}`);
   });
 }
 
