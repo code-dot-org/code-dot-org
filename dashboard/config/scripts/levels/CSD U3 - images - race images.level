@@ -53,7 +53,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Race Cars\r\n\r\nYou made a racing game in the last lesson. You can now make those rectangles look like race cars!\r\n\r\n# Do This\r\n\r\n* Use the race car images in the animations tab to update your racing animation",
+    "markdown_instructions": "# Race Cars\r\n\r\nYou made a racing game in the last lesson. You can now make those rectangles look like race cars!\r\n\r\n# Do This\r\n\r\n* Use the race car images in the animations tab to update your racing animation.",
     "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n\t// Update Properties\r\n\t \r\n\t// Drawing\r\n\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -84,7 +84,8 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "N0Un8GNoRjoi1Bf+thkj+Q9CLfOI4UaaT3vh/483Ri6jQa1wpy8BojoI3T6+\nZ6vM\n"
   },
   "published": true,
   "notes": "",

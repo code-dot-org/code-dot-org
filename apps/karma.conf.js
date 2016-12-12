@@ -8,6 +8,8 @@ var PORT = 9876;
 var reporters = ['mocha'];
 if (envConstants.CIRCLECI) {
   reporters.push('junit');
+  reporters.push('coverage');
+  reporters.push('coveralls');
 }
 if (envConstants.COVERAGE) {
   reporters.push('coverage');

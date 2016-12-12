@@ -67,7 +67,9 @@ build_infos = @project.get_builds(build_range).map do |build|
     build_num: build['build_num'],
     queued_at: DateTime.parse(build['queued_at']),
     branch: build['branch'],
-    succeeded: build['outcome'] == 'success'
+    # Possible build outcomes: :canceled, :infrastructure_fail, :timedout, :failed, :no_tests or :success
+    succeeded: build['outcome'] == 'success',
+    failed: build['outcome'] == 'failed' || build['outcome'] == 'timedout'
   }
 end
 
@@ -90,11 +92,12 @@ end
 stats_by_date = builds_by_date.hmap do |date, build_infos_for_date|
   [date, columns.hmap do |name, column|
     builds = column.call build_infos_for_date
-    failed_builds = builds.reject {|i| i[:succeeded]}
+    succeeded_builds = builds.select {|i| i[:succeeded]}.count
+    failed_builds = builds.select {|i| i[:failed]}.count
     [name, {
-        total_builds: builds.size,
-        failed_builds: failed_builds.size,
-        failure_rate: Float(failed_builds.size) / builds.size
+        total_builds: succeeded_builds + failed_builds,
+        failed_builds: failed_builds,
+        failure_rate: Float(failed_builds) / (succeeded_builds + failed_builds)
     }]
   end]
 end

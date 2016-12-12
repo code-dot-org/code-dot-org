@@ -54,8 +54,15 @@ describe("Applab Screens Reducer", function () {
   });
 
   describe("the fetchProject action", () => {
+    let xhr;
+    let lastRequest;
 
     beforeEach(() => {
+      xhr = sinon.useFakeXMLHttpRequest();
+      xhr.onCreate = req => {
+        lastRequest = req;
+      };
+
       sinon.stub(sourcesApi, 'ajax');
       sinon.stub(sourcesApi, 'withProjectId').returnsThis();
       sinon.stub(channelsApi, 'ajax');
@@ -71,11 +78,15 @@ describe("Applab Screens Reducer", function () {
       channelsApi.withProjectId.restore();
       assetsApi.getFiles.restore();
       assetsApi.withProjectId.restore();
+
+      xhr.restore();
     });
 
     describe("when given an invalid url", () => {
       it("will set the errorFetchingProject state", () => {
         store.dispatch(fetchProject('invalid url'));
+        lastRequest.respond(404);
+
         var state = store.getState();
         expect(state.importProject.isFetchingProject).to.be.false;
         expect(state.importProject.errorFetchingProject).to.be.true;
@@ -83,7 +94,6 @@ describe("Applab Screens Reducer", function () {
     });
 
     describe("when given a valid url", () => {
-
       beforeEach(() => {
         store.dispatch(fetchProject('http://studio.code.org:3000/projects/applab/GmBgH7e811sZP7-5bALAxQ/edit'));
       });

@@ -16,7 +16,7 @@
     "free_play": "false",
     "impressive": "false",
     "slider_speed": ".7",
-    "ideal": "13",
+    "ideal": "11",
     "use_modal_function_editor": "false",
     "instructions": "Make three small changes to the code from the last level to get this!",
     "use_contract_editor": "false",
@@ -34,7 +34,8 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"The pen is thinner in this puzzle. You will need to set it to `1` before you start.\",\r\n  \"hint_id\": \"grade5_artist_for_loops7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Notice that this spiral turns right instead of left!\",\r\n  \"hint_id\": \"grade5_artist_for_loops7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",

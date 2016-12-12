@@ -31,6 +31,8 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"In this puzzle, you know that each square has either a flower or a honeycomb.  That means you can repeat your `if/else` conditional at each square.\",\"hint_id\":\"grade3_bee_conditionals_new3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42c5f40dbb1a470f90d50a7c68093819/grade3_bee_conditionals_new3a.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -50,31 +52,23 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifElseFlower">
-              <title name="LOC">atFlower</title>
-            </block>
-          </statement>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">7</title>
+            <block type="maze_untilBlocked">
               <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
