@@ -1808,7 +1808,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenSpriteAndGroupCollide = {
-    // Block to handle event when the Left arrow button is pressed.
+    // Block to handle event when a sprite collides with any sprite in a group,
+    // and sets a variable to the sprite in the group that was touched
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
@@ -1846,7 +1847,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
 
   blockly.Blocks.studio_whenSpriteAndGroupCollideSimple = {
-    // Block to handle event when the Left arrow button is pressed.
+    // Block to handle event when a sprite collides with any sprite in a group
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
