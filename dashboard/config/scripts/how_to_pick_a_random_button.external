@@ -47,14 +47,14 @@ markdown <<MARKDOWN
 
 <p style="text-align: center"> MICHAEL </p>
 
-<p>Right.  We can do something like this: <code>var randButtonID = "button"+randomNumber(1,4);</code></p>
+<p>Right.  We can do something like this: <code>var randButtonId = "button"+randomNumber(1,4);</code></p>
 
 <p>Then we can add that into our existing code like this:</p>
 </div>
 
 	    var diffColor = "rgb(250, 175, 20)";					  // make different color
-	--> var randButtonID = "button"+randomNumber(1,4);  		  // make a random button ID
-	    setProperty(randButtonID, "background-color", diffColor); // set bgcolor of randomButtonId to diffColor
+	--> var randButtonId = "button"+randomNumber(1,4);  		  // make a random button ID
+	    setProperty(randButtonId, "background-color", diffColor); // set bgcolor of randomButtonId to diffColor
 
 <br><br>
 <div style="width: 400px; margin: auto">
