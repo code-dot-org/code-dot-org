@@ -1,15 +1,16 @@
 name 'CSD U4L04 SFLP'
 markdown <<MARKDOWN
-# Problem Solving - The Design Process: Lesson 4 - User-Centered Design Micro Activity
+# Problem Solving - The Design Process: Lesson 4 - User Interface and Prototype Testing
 
 # Vocabulary
 
-* **User Experience** - The overall experience of a user using a product, such as a website or app, including how easy and pleasurable it is to use. Often abbreviated as UX.
+* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.
+* **User Interface** - The visual elements of an program through which a user controls or communications the application. Often abbreviated UI.
 
 
 # Resources
 
-
-* [Brainstorming](https://vimeo.com/29708419) - Video
-* [Affinity Grouping](https://www.youtube.com/watch?v=UynxDyr0lAo) - Video
+* [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=doc))
+* [User Testing (Computer)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=doc))
+* [User Testing (User)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=doc))
 MARKDOWN
