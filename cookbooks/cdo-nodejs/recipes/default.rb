@@ -18,8 +18,9 @@ end
 nodejs_npm 'grunt-cli'
 
 apt_repository "yarn" do
-  uri "http://dl.yarnpkg.com/debian/"
-  distribution 'trusty'
+  uri "https://dl.yarnpkg.com/debian/"
+  distribution 'stable'
+  components ['main']
   key "https://dl.yarnpkg.com/debian/pubkey.gpg"
 end
 
