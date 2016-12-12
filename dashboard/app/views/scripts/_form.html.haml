@@ -13,16 +13,13 @@
       = f.text_field :name
   - else
     = f.hidden_field :name
-  :javascript
-    const scriptEditorData = {
-      script: #{(@script ? @script.summarize : {}).to_json},
-      i18n: #{(@script ? @script.summarize_i18n : {}).to_json},
-      levelKeyList: #{Level.key_list.to_json}
-    };
-    window.betaScriptEditor = #{params[:beta].present?};
-
   .edit_container
-  = javascript_include_tag 'js/levelbuilder_edit_script'
+  - scriptData = {script: @script ? @script.summarize : {},
+                  i18n: @script ? @script.summarize_i18n : {},
+                  beta: params[:beta].present?,
+                  levelKeyList: Level.key_list}
+  %script{src: minifiable_asset_path('js/levelbuilder_edit_script'),
+          data: {levelBuilderEditScript: scriptData.to_json}}
 
   - if !params[:beta].present?
     = link_to 'Try the beta Script Editor (will reload the page without saving)', beta: true

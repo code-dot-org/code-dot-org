@@ -46,10 +46,13 @@ get '/api/hour/begin/:code' do |code|
 end
 
 # Specially track links from our /learn page
+# TODO: (elijah) this route is currently unused, we are instead linking
+# directly to tutorials and relying entirely on GA for tracking. Either
+# reenable this in a scalable way or remove it entirely.
 get '/api/hour/begin_learn/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   pass unless tutorial = DB[:tutorials].where(code: code).first
-  launch_tutorial(tutorial, track_learn: true)
+  redirect tutorial[:url], 302
 end
 
 get '/api/hour/begin_:code.png' do |code|

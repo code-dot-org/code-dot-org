@@ -1,3 +1,6 @@
+professional_learning_course 'CS in Science Legacy'
+login_required 'true'
+
 stage 'Welcome!'
 level 'sciPD3OLP32 intro'
 level 'sciPD2 timeline'

@@ -94,7 +94,7 @@ export default {
         zipPath: appName + '/applab_locale.js'
       }, {
         url: '/blockly/js/applab-api.js' + cacheBust,
-        zipPath: appName + '/applab.js'
+        zipPath: appName + '/applab-api.js'
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
         zipPath: appName + '/applab.css'
@@ -129,7 +129,7 @@ export default {
       return download(assetToDownload.url, assetToDownload.dataType || 'text');
     })).then(
       function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
-        zip.file(appName + "/applab.js",
+        zip.file(appName + "/applab-api.js",
                  [commonLocale, applabLocale, applabApi].join('\n'));
         zip.file(appName + "/applab.css", applabCSS);
 

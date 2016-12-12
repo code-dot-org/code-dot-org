@@ -1,0 +1,96 @@
+#!/usr/bin/env ruby
+
+# This script prompts the user for a script ID. If the script does not exist,
+# this script writes all progress in the DB associated with that script ID to a
+# file and offers to delete this progress in the DB.
+
+require_relative '../../dashboard/config/environment'
+
+# Prompts the user for a script ID.
+# @returns [Integer] The script ID from the user input.
+def get_script_id
+  print 'What is the script ID to backup and remove progress for? '
+  gets.chomp.to_i
+end
+
+# Build a hash of all progress associated with the script ID.
+# @param script_id [Integer] the script_id.
+# @returns [Hash] with keys :user_scripts, :user_levels, and :activities, whose
+#   values our arrays containing all progress associated with script ID.
+def get_all_progress(script_id)
+  data = {
+    user_scripts: [],
+    user_levels: [],
+    activities: []
+  }
+
+  data[:user_scripts] = UserScript.
+    where(script_id: script_id).
+    to_a.
+    map(&:serializable_hash)
+  data[:user_levels] = UserLevel.
+    where(script_id: script_id).
+    where(user_id:
+      data[:user_scripts].map do |user_script|
+        user_script['user_id']
+      end.compact
+    ).
+    to_a.
+    map(&:serializable_hash)
+  data[:user_levels].each do |user_level|
+    data[:activities] << Activity.
+      where(level_id: user_level['level_id']).
+      where(user_id: user_level['user_id']).
+      to_a.
+      map(&:serializable_hash)
+    data[:activities].flatten!
+  end
+
+  data
+end
+
+# Deletes all the data from the DB in data.
+# @param data [Hash] the data to delete from the DB.
+def delete_all_progress(data)
+  data[:activities].each do |activity|
+    Activity.find_by_id(activity['id']).destroy
+  end
+  data[:user_levels].each do |user_level|
+    UserLevel.find_by_id(user_level['id']).destroy
+  end
+  data[:user_scripts].each do |user_script|
+    UserScript.find_by_id(user_script['id']).destroy
+  end
+end
+
+# The control logic for the script.
+def main
+  script_id = get_script_id
+
+  # Confirm the script does not exist.
+  script = Script.find_by_id(script_id)
+  if script
+    puts "ERROR: Script Found (ID: #{script.id}, name: #{script.name})"
+    raise ArgumentError
+  end
+
+  # Grab all the data.
+  data = get_all_progress(script_id)
+
+  # Write the data to a JSON file.
+  File.open("/tmp/all_progress_#{script_id}.json", 'w') do |f|
+    f.write(JSON.pretty_generate(data))
+  end
+
+  # Delete the data (if requested).
+  print "Should all user progress (" \
+    "UserScripts: #{data[:user_scripts].length}, " \
+    "UserLevels: #{data[:user_levels].length}, " \
+    "Activity: #{data[:activities].length}) be deleted? (Y/N) "
+  delete = gets.chomp
+  if delete == 'Y'
+    delete_all_progress(data)
+  end
+end
+
+main

@@ -3,9 +3,9 @@
  */
 import React from "react";
 import ReportTable from "./report_table";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {Button} from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
+import Spinner from '../components/spinner';
 
 const QUERY_URL = "/api/v1/pd/teacher_attendance_report";
 
@@ -201,7 +201,7 @@ const TeacherAttendanceReport = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
+      return <Spinner/>;
     }
 
     return (

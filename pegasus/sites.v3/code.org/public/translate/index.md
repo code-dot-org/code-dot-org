@@ -10,8 +10,10 @@ nav: translate_nav
   * [Minecraft Designer](/translate/minecraft)
   * [Minecraft Adventurer](/translate/mc)
   * [Star Wars](/translate/starwars)
+  * [Sports and Basketball](/translate/sports)
   * [All Code Studio courses](/translate/tutorials)
 1. Translate our video captions.
+  * [Push Yourself (Athletes video)](https://www.amara.org/en/videos/SxHuH7lZDxIs/info/push-yourself-anybody-can-learn/)
 	* [Computer Science is Changing Everything](https://www.amara.org/en/videos/atEXdPApYAO8/info/computer-science-is-changing-everything/)
 	* [The Hour of Code Worldwide (2016)](https://www.amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)
 	* [All videos](/translate/videos)
