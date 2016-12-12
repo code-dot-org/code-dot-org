@@ -1,24 +1,52 @@
-var React = require('react');
-var color = require("../util/color");
-var ShareWarnings = require('./ShareWarnings');
+import React from 'react';
+import color from "../util/color";
+import ShareWarnings from './ShareWarnings';
+
+const styles = {
+  main: {
+    position: 'absolute',
+    top: 50,
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+    WebkitTransform: 'translate(-50%, 0)',
+    border: '1px solid #ccc',
+    background: '#fff',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    borderRadius: '4px',
+    outline: 'none',
+    padding: '20px',
+    zIndex: 1050, // based off of behavior in dashboard's dialog.js
+    // width handle in render
+  },
+  overlay: {
+    position: 'fixed',
+    opacity: 0.8,
+    backgroundColor: color.black,
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    zIndex: 1040 // based off of behavior in dashboard's dialog.js
+  }
+};
 
 /**
  * Modal for our SharingWarnings.
  */
-module.exports = React.createClass({
-  displayName: 'SharingWarningsDialog',
+const ShareWarningsDialog = React.createClass({
   propTypes: {
-    is13Plus: React.PropTypes.bool.isRequired,
+    promptForAge: React.PropTypes.bool.isRequired,
     showStoreDataAlert: React.PropTypes.bool.isRequired,
     handleClose: React.PropTypes.func.isRequired,
     handleTooYoung: React.PropTypes.func.isRequired
   },
 
-  getInitialState: function () {
-    return { modalIsOpen: !this.props.is13Plus || this.props.showStoreDataAlert };
+  getInitialState() {
+    return { modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert };
   },
 
-  componentDidMount: function () {
+  componentDidMount() {
     // We didn't need to show our modal. Go through the close process so that
     // app becomes unblocked
     if (!this.state.modalIsOpen) {
@@ -31,51 +59,27 @@ module.exports = React.createClass({
     this.props.handleTooYoung();
   },
 
-  handleClose: function () {
+  handleClose() {
     this.setState({modalIsOpen: false});
     this.props.handleClose();
   },
 
-  render: function () {
+  render() {
     if (!this.state.modalIsOpen) {
       return <div/>;
     }
 
-    var styles = {
-      main: {
-        position: 'absolute',
-        top: 50,
-        left: '50%',
-        transform: 'translate(-50%, 0)',
-        WebkitTransform: 'translate(-50%, 0)',
-        border: '1px solid #ccc',
-        background: '#fff',
-        overflow: 'auto',
-        WebkitOverflowScrolling: 'touch',
-        borderRadius: '4px',
-        outline: 'none',
-        padding: '20px',
-        zIndex: 1050, // based off of behavior in dashboard's dialog.js
-        width: window.screen.width < 500 ? '80%' : undefined
-      },
-      overlay: {
-        position: 'fixed',
-        opacity: 0.8,
-        backgroundColor: color.black,
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        zIndex: 1040 // based off of behavior in dashboard's dialog.js
-      }
+    const mainStyle = {
+      ...styles.main,
+      width: window.screen.width < 500 ? '80%' : undefined
     };
 
     return (
       <div>
         <div style={styles.overlay}/>
-        <div style={styles.main}>
+        <div style={mainStyle}>
           <ShareWarnings
-            is13Plus={this.props.is13Plus}
+            promptForAge={this.props.promptForAge}
             showStoreDataAlert={this.props.showStoreDataAlert}
             handleTooYoung={this.handleTooYoung}
             handleClose={this.handleClose}
@@ -85,3 +89,5 @@ module.exports = React.createClass({
     );
   }
 });
+
+export default ShareWarningsDialog;
