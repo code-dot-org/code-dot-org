@@ -164,11 +164,11 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
 end
 
 Then /^I make all links open in the current tab$/ do
-  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
+  @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
 end
 
 Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
-  @browser.execute_script("$('a[target=_blank', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
+  @browser.execute_script("$('a[target=_blank]', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
