@@ -29,12 +29,18 @@ exports.setSprite = function (id, spriteIndex, value) {
   });
 };
 
-exports.getSpriteVisibility = function (id, spriteIndex) {
-  return Studio.getSpriteVisibility(spriteIndex);
+exports.getSpriteVisibility = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteVisibility', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
 };
 
-exports.getSpriteValue = function (id, spriteIndex) {
-  return Studio.getSpriteValue(spriteIndex);
+exports.getSpriteValue = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteValue', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
 };
 
 exports.saySprite = function (id, spriteIndex, text, seconds) {
@@ -62,8 +68,11 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
   });
 };
 
-exports.getSpriteEmotion = function (id, spriteIndex) {
-  return Studio.getSpriteEmotion(spriteIndex);
+exports.getSpriteEmotion = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
 };
 
 exports.setSpriteSpeed = function (id, spriteIndex, value) {
@@ -111,8 +120,11 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
   });
 };
 
-exports.getSpriteXY = function (id, spriteIndex) {
-  return Studio.getSpriteXY(spriteIndex);
+exports.getSpriteXY = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
 };
 
 exports.setSpritesWander = function (id, spriteName) {
