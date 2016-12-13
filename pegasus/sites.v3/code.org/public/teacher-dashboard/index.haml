@@ -273,7 +273,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
-    $scope.section.$promise.catch($scope.genericError);
+
+    $scope.section.$promise.catch(function(result) {
+      if (result.status == 403 || result.status == 404) {
+        $window.alert("You are not the owner of this section or this section doesn’t exist.");
+      } else {
+        $scope.genericError(result);
+      }
+    });
     $scope.sections.$promise.catch($scope.genericError);
 
     $scope.tab = $routeParams.tab;

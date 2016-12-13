@@ -397,6 +397,8 @@ module.exports = function (grunt) {
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
+    teacherApplication: './src/sites/studio/pages/pd/teacher_application/teacher_application.js',
+
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
