@@ -92,7 +92,6 @@ function loadStories() {
       console.error(e.stack);
       return;
     }
-    var path = key.slice(2);
     addStyleguideExamples(component);
     Object.keys(component).forEach(componentKey => {
       var subcomponent = component[componentKey];
