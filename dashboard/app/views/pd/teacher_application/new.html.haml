@@ -5,7 +5,7 @@
 %h2
   Section 1: Which Program is Right for you?
 
-.form-group
+.form-group#usOrInternational
   .question School Country
   %select#us-or-international.form-control{ name: "school_info[country]", type: "select", required: true, onchange: "if (this.value === 'International') {window.location = '/pd/teacher_application/international_teachers'}"}
     %option{value: "", selected: true, disabled: true}
@@ -15,4 +15,4 @@
 = render partial: 'shared/school_info', locals: {form_name: "school_info", suppress_scrolling: true, assume_usa: true}
 
 %div#application-container
-%script{src: minifiable_asset_path('js/teacherApplication.js')}
+%script{src: minifiable_asset_path('js/pd/teacher_application/new.js')}
