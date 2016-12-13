@@ -9,7 +9,7 @@ class CreatePdTeacherApplications < ActiveRecord::Migration[5.0]
 
       t.string :personal_email, null: false, index: true
       t.string :school_email, null: false, index: true
-      t.json :application, null: false
+      t.text :application, null: false
     end
   end
 end

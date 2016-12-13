@@ -556,6 +556,25 @@ const TeacherApplication = React.createClass({
       document.getElementById(topInvalidElementId).parentElement.scrollIntoView();
     }
     console.log(formData);
+    this.save(formData);
+  },
+
+  save(formData) {
+    this.startRequest = $.ajax({
+      method: "POST",
+      url: "/api/v1/pd/teacher_applications",
+      contentType: 'application/json',
+      dataType: "json",
+      data: JSON.stringify({application: formData})
+    }).done(() => {
+      // TODO: modify state, render submitted on client side.
+      window.location.reload(true);
+      //alert('success :)');
+
+    }).fail(data => {
+      // TODO: render error message(s) nicely on client.
+      alert(`error: ${data.responseJSON}`);
+    });
   },
 
   renderSubmitButton() {

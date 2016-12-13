@@ -1,20 +1,24 @@
 class Api::V1::Pd::TeacherApplicationsController < ApplicationController
-  authorize_resource class: 'Pd::TeacherApplication'
+  # authorize_resource class: 'Pd::TeacherApplication'
 
   def index
-    @teacher_applications = Pd::TeacherApplication.all
-    render json: @teacher_applications.pluck(:application)
+    @teacher_applications = ::Pd::TeacherApplication.all
+    render json: @teacher_applications.map{|a| JSON.parse(a.application).merge({user_id: a.user_id})}
   end
 
   def create
+    application_params = params.require(:application)
+    application_json = application_params.to_unsafe_h.to_json
+
     # Set user, and extract the personal and school emails.
     # Otherwise the teacher application JSON is saved as provided.
-    @teacher_application = Pd::TeacherApplication.new(
+    @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      personal_email: params[:personalEmail],
-      school_email: params[:schoolEmail],
-      application: params
+      personal_email: application_params.require(:personalEmail),
+      school_email: application_params.require(:schoolEmail),
+      application: application_json
     )
+
     if @teacher_application.save
       head :no_content
     else

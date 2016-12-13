@@ -8,7 +8,7 @@
 #  user_id        :integer          not null
 #  personal_email :string(255)      not null
 #  school_email   :string(255)      not null
-#  application    :json             not null
+#  application    :text(65535)      not null
 #
 # Indexes
 #
