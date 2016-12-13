@@ -44,6 +44,7 @@ describe('The Exporter,', function () {
 
   afterEach(function () {
     server.restore();
+    assetPrefix.init({});
     dashboard.assets.listStore.list.restore();
   });
 
@@ -56,7 +57,7 @@ describe('The Exporter,', function () {
    * them.
    */
 
-  xdescribe("when assets can't be fetched,", function () {
+  describe("when assets can't be fetched,", function () {
     beforeEach(function () {
       server.respondWith(/\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/, [500, {}, ""]);
     });
@@ -83,7 +84,7 @@ describe('The Exporter,', function () {
     });
   });
 
-  xdescribe("when exporting,", function () {
+  describe("when exporting,", function () {
     var zipFiles = {};
     beforeEach(function (done) {
       zipPromise = Exporter.exportAppToZip(
@@ -122,10 +123,10 @@ describe('The Exporter,', function () {
     });
 
     describe("will produce a zip file, which", function () {
-      it("should contain an applab.js file", function () {
-        assert.property(zipFiles, 'my-app/applab.js');
+      it("should contain an applab-api.js file", function () {
+        assert.property(zipFiles, 'my-app/applab-api.js');
         assert.equal(
-          zipFiles['my-app/applab.js'],
+          zipFiles['my-app/applab-api.js'],
           'common_locale.js content\napplab_locale.js content\napplab-api.js content'
         );
       });

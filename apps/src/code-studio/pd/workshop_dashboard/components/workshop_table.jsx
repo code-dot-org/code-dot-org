@@ -19,7 +19,8 @@ const WorkshopTable = React.createClass({
     onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
     showOrganizer: React.PropTypes.bool,
-    surveyBaseUrl: React.PropTypes.string
+    surveyBaseUrl: React.PropTypes.string,
+    tableId: React.PropTypes.string
   },
 
   getDefaultProps() {
@@ -206,6 +207,7 @@ const WorkshopTable = React.createClass({
 
     return (
       <Table.Provider
+        id={this.props.tableId}
         className="table table-striped table-condensed"
         columns={columns}
       >

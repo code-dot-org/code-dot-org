@@ -53,6 +53,7 @@ const WorkshopIndex = React.createClass({
           canDelete
         >
           <WorkshopTable
+            tableId="inProgressWorkshopsTable"
             showOrganizer={showOrganizer}
           />
         </WorkshopTableLoader>
@@ -62,6 +63,7 @@ const WorkshopIndex = React.createClass({
           canDelete
         >
           <WorkshopTable
+            tableId="notStartedWorkshopsTable"
             canEdit
             showSignupUrl
             showOrganizer={showOrganizer}
@@ -70,6 +72,7 @@ const WorkshopIndex = React.createClass({
         <h2>Past</h2>
         <WorkshopTableLoader queryUrl="/api/v1/pd/workshops/?state=Ended">
           <WorkshopTable
+            tableId="endedWorkshopsTable"
             showOrganizer={showOrganizer}
             surveyBaseUrl={isPlp ? "/organizer_survey_results" : "/survey_results"}
           />

@@ -607,19 +607,19 @@ describe('GameLabSprite', function () {
       expect(sprite.position.x).to.equal(281);
       expect(spriteTarget.position.x).to.equal(301);
       expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
 
       sprite.update();
       spriteTarget.update();
 
       expect(sprite.position.x).to.equal(284);
-      expect(spriteTarget.position.x).to.equal(304);
+      expect(spriteTarget.position.x).to.equal(301);
       expect(sprite.velocity.x).to.equal(3);
-      expect(spriteTarget.velocity.x).to.equal(3);
+      expect(spriteTarget.velocity.x).to.equal(0);
 
-      // Displace is false this time, since they're already moving together.
+      // Displace is true again, since sprite keeps moving into spriteTarget
       const displace2 = sprite.displace(spriteTarget);
-      expect(displace2).to.be.false;
+      expect(displace2).to.be.true;
     });
 
     it('reverses direction of colliding sprite when sprites bounceOff', function () {
@@ -1210,14 +1210,14 @@ describe('GameLabSprite', function () {
       expectVectorsAreClose(spriteB.velocity, initialVelocityB);
     });
 
-    describe('matches callee velocity to caller velocity when sprites do overlap', function () {
+    describe('does not change callee velocity', function () {
       it('when caller velocity is zero', function () {
         spriteA.position.x = spriteB.position.x - 1;
         spriteA.velocity.x = 0;
         spriteB.velocity.x = 2;
 
         var expectedVelocityA = spriteA.velocity.copy();
-        var expectedVelocityB = spriteA.velocity.copy();
+        var expectedVelocityB = spriteB.velocity.copy();
 
         spriteA.displace(spriteB);
 
@@ -1231,7 +1231,7 @@ describe('GameLabSprite', function () {
         spriteB.velocity.x = -1;
 
         var expectedVelocityA = spriteA.velocity.copy();
-        var expectedVelocityB = spriteA.velocity.copy();
+        var expectedVelocityB = spriteB.velocity.copy();
 
         spriteA.displace(spriteB);
 
@@ -1239,17 +1239,15 @@ describe('GameLabSprite', function () {
         expectVectorsAreClose(spriteB.velocity, expectedVelocityB);
       });
 
-      it('only along x axis when only displaced along x axis', function () {
+      it('when only displaced along x axis', function () {
         spriteA.position.x = spriteB.position.x - 1;
         spriteA.velocity.x = 2;
         spriteA.velocity.y = 0.5;
         spriteB.velocity.x = -1;
         spriteB.velocity.y = 3;
 
-        // Expect to change velocity only along X
         var expectedVelocityA = spriteA.velocity.copy();
         var expectedVelocityB = spriteB.velocity.copy();
-        expectedVelocityB.x = spriteA.velocity.x;
 
         spriteA.displace(spriteB);
 
@@ -1257,7 +1255,7 @@ describe('GameLabSprite', function () {
         expectVectorsAreClose(spriteB.velocity, expectedVelocityB);
       });
 
-      it('only along y axis when only displaced along y axis', function () {
+      it('when only displaced along y axis', function () {
         spriteA.position.x = spriteB.position.x;
         spriteA.position.y = spriteB.position.y + 1;
         spriteA.velocity.x = 2;
@@ -1265,10 +1263,8 @@ describe('GameLabSprite', function () {
         spriteB.velocity.x = -1;
         spriteB.velocity.y = 1.5;
 
-        // Expect to change velocity only along Y
         var expectedVelocityA = spriteA.velocity.copy();
         var expectedVelocityB = spriteB.velocity.copy();
-        expectedVelocityB.y = spriteA.velocity.y;
 
         spriteA.displace(spriteB);
 
@@ -1281,7 +1277,7 @@ describe('GameLabSprite', function () {
         spriteA.velocity.x = 2;
         spriteB.velocity.x = -1;
 
-        var expectedVelocityA = spriteB.velocity.copy();
+        var expectedVelocityA = spriteA.velocity.copy();
         var expectedVelocityB = spriteB.velocity.copy();
 
         spriteB.displace(spriteA);
