@@ -551,9 +551,9 @@ FactoryGirl.define do
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
     association :user, factory: :teacher
-    sequence(:personal_email) { |n| "teacher#{n}@example.net" }
-    sequence(:school_email) { |n| "teacher#{n}@a_school.edu" }
-    application {{personalEmail: personal_email, schoolEmail: school_email}}
+    sequence(:primary_email) { |n| "teacher#{n}@example.net" }
+    sequence(:secondary_email) { |n| "teacher#{n}@my.school.edu" }
+    application {{}}
   end
 
   # school info

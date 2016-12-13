@@ -6,16 +6,19 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
 
     assert_creates Pd::TeacherApplication do
       put :create, params: test_params
-    end
 
-    assert_response :success
+      assert_response :success
+    end
   end
 
-  test 'students cannot create teacher applications' do
+  # For now. Perhaps we'll render a different view explaining how to upgrade to teacher account in the future.
+  test 'students can create teacher applications' do
     sign_in create(:student)
 
-    put :create, params: test_params
-    assert_response :forbidden
+    assert_creates Pd::TeacherApplication do
+      put :create, params: test_params
+      assert_response :success
+    end
   end
 
   test 'not logged in users are redirected to sign in' do
@@ -49,10 +52,12 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
   def test_params
     last_name = SecureRandom.hex(10)
     {
-      personalEmail: "teacher#{SecureRandom.hex(5)}@example.net",
-      schoolEmail: "teacher_#{last_name}@a_school.edu",
-      firstName: 'Teacher',
-      lastName: last_name
+      application: {
+        primaryEmail: "teacher#{last_name}@example.net",
+        secondaryEmail: "teacher#{last_name}@my.school.edu",
+        firstName: 'Teacher',
+        lastName: last_name
+      }
     }
   end
 end

@@ -22,6 +22,7 @@ import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
+import Spinner from './components/spinner';
 
 const styles = {
   linkButton: {
@@ -496,7 +497,7 @@ const Workshop = React.createClass({
 
     let contents = null;
     if (this.state.loadingEnrollments) {
-      contents = this.renderSpinner();
+      contents = <Spinner/>;
     } else {
       contents = (
         <WorkshopEnrollment
@@ -522,13 +523,9 @@ const Workshop = React.createClass({
     );
   },
 
-  renderSpinner() {
-    return <i className="fa fa-spinner fa-pulse fa-3x" />;
-  },
-
   render() {
     if (this.state.loadingWorkshop) {
-      return this.renderSpinner();
+      return <Spinner/>;
     }
     return (
       <Grid>

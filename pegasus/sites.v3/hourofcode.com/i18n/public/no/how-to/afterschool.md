@@ -13,14 +13,14 @@ nav: how_to_nav
 ## 1) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Velg en oppgave:
 
-Vi tilbyr en rekke [morsomme, timelange oppgaver](<%= resolve_url('https://code.org/learn') %>) for deltakerne alle aldre, laget av en rekke partnere. [Prøv dem her!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alle Kodetimen oppgavene:**
 
   * Require minimal prep-time for organizers
   * Er tilrettelagt for at studentene skal arbeide på egen hånd i eget tempo og tilpasset deres ferdighetsnivå
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -66,7 +66,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 **Led elevene til aktiviteten**
 
-  * Skriv oppgavelenken på en tavle. Finn lenken under [informasjon for den valgte oppgaven](<%= resolve_url('https://code.org/learn') %>) under antall deltakere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -76,7 +76,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 **Hva gjør jeg hvis noen er ferdig tidlig?**
 
-  * Oppmuntre elevene til å prøve en annen Kodetime aktivitet på [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Eller, spør dem som ble tidlig ferdig med å hjelpe andre som har problemer.
 
 [col-33]

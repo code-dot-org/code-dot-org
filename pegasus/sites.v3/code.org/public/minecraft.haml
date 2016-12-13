@@ -28,9 +28,9 @@ video_player: true
   .mc-tutorials
     .tutorial-box{style: "margin-right: 14px;"}
       .img-container
-        %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2016.jpg'}
+        %img.mc-img{:src => '/images/mc/mc_landing_2016.jpg'}
       .mc-tutorial-info
-        %img.mc-new-tag{:src => '/images/fit-100/mc/new_tag.png'}
+        %img.mc-new-tag{:src => '/images/mc/new_tag.png'}
         .mc-tutorial-details
           %h2.mc-h1-second-box= I18n.t(:minecraft_designer)
           %p.mc-tutorial-description= I18n.t(:minecraft_designer_description)
@@ -38,7 +38,7 @@ video_player: true
             %button.primary= I18n.t(:minecraft_designer_button)
     .tutorial-box
       .img-container
-        %img.mc-img{:src => '/images/fit-478/mc/mc_landing_2015.png'}
+        %img.mc-img{:src => '/images/mc/mc_landing_2015.png'}
       .mc-tutorial-info
         .mc-tutorial-details
           %h2.mc-h1-second-box= I18n.t(:minecraft_adventurer)
@@ -50,27 +50,6 @@ video_player: true
 %h2.mc-header2.responsive-padding
   =I18n.t(:minecraft_no_internet)
   %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
-
-.color-block.mc-store
-  %h2.white-text= I18n.t(:minecraft_store_camps)
-  = I18n.t(:minecraft_signup_store_camps).gsub('%{signup_store_camp}', 'https://www.microsoft.com/youthsparkprograms')
-
-.color-block.mc-host-event
-  %h2.white-text= I18n.t(:minecraft_host_event)
-  %a{href: '/hourofcode/mc'}= I18n.t(:minecraft_teach_resources)
-  %br
-  %a{href: 'https://docs.com/hourofcode2016'}= I18n.t(:minecraft_leader_guide)
-  %br
-  %br
-  %span= I18n.t(:minecraft_facilitating_event)
-  %a.white-link{href: 'https://aka.ms/hourofcode-register'}= I18n.t(:minecraft_join_online_training)
-
-.clear
-
-.color-block.mc-youth-spark
-  %h2.white-text= I18n.t(:minecraft_youthspark_continue_learning)
-  = I18n.t(:minecraft_youthspark_create_your_future)
-  %span= I18n.t(:minecraft_youthspark_tools).gsub('%{youthspark_link}', 'https://www.microsoft.com/about/philanthropies/youthspark/youthsparkhub')
 
 .mc-videos{style: "clear: both;"}
   %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)

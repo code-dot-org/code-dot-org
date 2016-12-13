@@ -9,7 +9,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Spinner from '../components/spinner';
 
 const WorkshopTableLoader = React.createClass({
   propTypes: {
@@ -61,7 +61,7 @@ const WorkshopTableLoader = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
+      return <Spinner/>;
     }
 
     if (this.state.workshops.length === 0) {

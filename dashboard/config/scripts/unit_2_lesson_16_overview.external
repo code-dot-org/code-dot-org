@@ -1,25 +1,17 @@
 name 'Unit 2 Lesson 16 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 16 - Intellectual Property
+# The Internet - Web Development: Lesson 16 - Project: Personal Portfolio Website
 
 ## Background
 
-Starting with an exploration of the song “Happy Birthday”, and its history of copyright protection despite being a common American cultural staple, the class will explore the purpose and role of copyright for both creators and users of creative content. After a brief discussion about the purpose of copyright, we move on to an activity exploring the various Creative Commons licences as a solution to the difficulty in dealing with copywrite.
-# Vocabulary
+Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
 
-* **Citation** - A quotation from or reference to a book, paper, or author, especially in a scholarly work.
-* **Copyright** - the exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same.
-* **Creative Commons** - A public copyright licenses that enable the free distribution of an otherwise copyrighted work. A CC license is used when an author wants to give people the right to share, use, and build upon a work that they have created.
-* **Intellectual Property** - A work or invention that is the result of creativity, such as a manuscript or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.
-
-# New Blocks
-
-* **Hyperlink** - `<a href=""></a>`
 
 # Resources
 
-* [Should "Happy Birthday" be Protected by Copyright?](https://www.youtube.com/watch?v=fzbSt0QG7mY) - Video
-* [Creative Commons Overview](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
-* [Licensing Your Work](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=doc))
+* [Final Personal Website](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/edit?usp=sharing) - Peer Review ([PDF](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=doc))
+* [Personal Website](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/edit?usp=sharing) - Planning Guide ([PDF](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf) | [DOCX](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=doc))
+* [Final Personal Website](https://docs.google.com/document/d/1a8sHTRgOiNq3BpYz-f8Odu_JqtxFDFh9CT3RiPa_C8c/edit?usp=sharing) - Rubric ([PDF](https://docs.google.com/document/d/1a8sHTRgOiNq3BpYz-f8Odu_JqtxFDFh9CT3RiPa_C8c/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1a8sHTRgOiNq3BpYz-f8Odu_JqtxFDFh9CT3RiPa_C8c/export?format=doc))
+* [Personal Website](https://docs.google.com/document/d/1f5UZ8LdqrrnZDY6MA4Aw75YZFVvHAnWDGnz9TEskTQI/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1f5UZ8LdqrrnZDY6MA4Aw75YZFVvHAnWDGnz9TEskTQI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1f5UZ8LdqrrnZDY6MA4Aw75YZFVvHAnWDGnz9TEskTQI/export?format=doc))
 MARKDOWN

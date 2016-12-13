@@ -56,6 +56,7 @@ class Ability
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :read, SectionHiddenStage
+      can :create, Pd::TeacherApplication, user_id: user.id
 
       if user.teacher?
         can :read, Section, user_id: user.id
@@ -89,7 +90,7 @@ class Ability
         can :manage, Workshop do |workshop|
           workshop.facilitators.include? user
         end
-        can [:read, :start, :end, :workshop_survey_report], Pd::Workshop, facilitators: {id: user.id}
+        can [:read, :start, :end, :workshop_survey_report, :summary], Pd::Workshop, facilitators: {id: user.id}
         can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}, ended_at: nil
       end
 
@@ -108,7 +109,7 @@ class Ability
 
       if user.workshop_organizer?
         can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy], Pd::Workshop, organizer_id: user.id
+        can [:read, :start, :end, :update, :destroy, :summary], Pd::Workshop, organizer_id: user.id
         can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
         can :read, Pd::CourseFacilitator
         can :read, :workshop_organizer_survey_report
@@ -157,6 +158,11 @@ class Ability
       cannot [:update, :destroy], Level do |level|
         !level.custom?
       end
+    end
+
+    if user.persisted? && user.permission?(UserPermission::BLOCK_SHARE)
+      # let them change the hidden state
+      can :manage, LevelSource
     end
 
     if user.admin?

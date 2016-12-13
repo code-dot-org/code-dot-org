@@ -1,6 +1,5 @@
 @no_ie
 @no_mobile
-@no_circle
 @dashboard_db_access
 @pegasus_db_access
 Feature: Using the teacher dashboard

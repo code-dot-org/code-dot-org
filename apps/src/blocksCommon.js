@@ -146,7 +146,7 @@ function installWhenRun(blockly, skin, isK1) {
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.whenRun())
-          .appendTitle(new blockly.FieldImage(skin.runArrow));
+          .appendTitle(new blockly.FieldImage(skin.runArrow, 22, 26));
       } else {
         this.appendDummyInput().appendTitle(commonMsg.whenRun());
       }
@@ -190,7 +190,7 @@ function installJoinBlock(blockly) {
     },
 
     setInputCount: function (inputCount) {
-      var newInputCount = parseInt(inputCount);
+      var newInputCount = Math.max(parseInt(inputCount), 2);
       if (inputCount > this.inputCount) {
         for (var i = this.inputCount; i < newInputCount; i++) {
           var input = this.appendValueInput('ADD' + i);
@@ -204,6 +204,38 @@ function installJoinBlock(blockly) {
         }
       }
       this.inputCount = newInputCount;
+    },
+
+    pendingConnection: function (oldConnection, newConnection) {
+      var lastConnectionIndex = 0;
+      var oldConnectionIndex = -1;
+      var newConnectionIndex = -1;
+      for (var i = 0; i < this.inputList.length; i++) {
+        var connection = this.inputList[i].connection;
+        if (connection.targetConnection) {
+          lastConnectionIndex = i;
+        }
+        if (connection === oldConnection) {
+          oldConnectionIndex = i;
+        }
+        if (connection === newConnection) {
+          newConnectionIndex = i;
+        }
+      }
+
+      var toEnd = newConnectionIndex >= lastConnectionIndex;
+      var fromEnd = oldConnectionIndex >= lastConnectionIndex;
+
+      if (this.delayedResize && toEnd ^ fromEnd) {
+        window.clearTimeout(this.delayedResize);
+        this.delayedResize = null;
+      }
+      if (toEnd && !fromEnd) {
+        this.setInputCount(lastConnectionIndex + 2);
+      } else if (fromEnd && !toEnd) {
+        this.delayedResize = window.setTimeout(
+            () => this.setInputCount(lastConnectionIndex + 1), 100);
+      }
     },
   };
 

@@ -7,7 +7,6 @@
   "properties": {
     "skin": "birds",
     "maze": "[[4,3,1,1,1,1,0,0],[4,4,4,0,0,1,4,0],[0,0,0,0,0,1,4,0],[0,0,0,0,0,1,4,0],[4,2,1,1,1,1,0,0],[4,4,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "video_key": "loop_until",
     "instructions": "Get the angry bird to the pig.",
     "instructions_important": "false",
     "is_k1": "false",
@@ -51,7 +50,6 @@
         <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
-        <block type="maze_forever"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

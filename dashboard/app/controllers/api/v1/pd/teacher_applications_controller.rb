@@ -1,5 +1,5 @@
 class Api::V1::Pd::TeacherApplicationsController < ApplicationController
-  # authorize_resource class: 'Pd::TeacherApplication'
+  authorize_resource class: 'Pd::TeacherApplication'
 
   def index
     @teacher_applications = ::Pd::TeacherApplication.all
@@ -14,8 +14,8 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
     # Otherwise the teacher application JSON is saved as provided.
     @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      personal_email: application_params.require(:personalEmail),
-      school_email: application_params.require(:schoolEmail),
+      primary_email: application_params.require(:primaryEmail),
+      secondary_email: application_params.require(:secondaryEmail),
       application: application_json
     )
 
