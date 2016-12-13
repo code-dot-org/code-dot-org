@@ -487,7 +487,7 @@ const TeacherApplication = React.createClass({
     );
   },
 
-  validateDistrictDropdown() {
+  getDistrictDropdownValues() {
     //The district dropdown is not a react component like the rest of this form's components.
     //That's why we're doing it separately here
     const districtValues = {
@@ -512,16 +512,15 @@ const TeacherApplication = React.createClass({
       });
     }
 
-    console.log('Getting from the district');
-    console.log(districtValues);
-
-    this.setState(districtValues);
+    return districtValues;
   },
 
   onSubmitButtonClick() {
-    this.validateDistrictDropdown();
+    const districtValues = this.getDistrictDropdownValues();
 
     const formData = _.cloneDeep(this.state);
+    _.assign(formData, districtValues);
+
     let topInvalidElementId;
 
     let fieldsToValidate = _.compact(_.concat(requiredFields,
@@ -557,7 +556,6 @@ const TeacherApplication = React.createClass({
       document.getElementById(topInvalidElementId).parentElement.scrollIntoView();
     }
     console.log(formData);
-    console.log(this.state);
   },
 
   renderSubmitButton() {
