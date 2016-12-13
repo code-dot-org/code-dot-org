@@ -22,7 +22,7 @@
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -54,9 +54,16 @@
     "slider_speed": "1",
     "encrypted_examples": "IcvK0SwrkSOrHsNcBbzhnrsaYRo3fWPU7N36uFJAYU1WNHSWPc1wO3iJoUGW\nvx3L\n",
     "video_key": "csp_applab_lists_3",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
