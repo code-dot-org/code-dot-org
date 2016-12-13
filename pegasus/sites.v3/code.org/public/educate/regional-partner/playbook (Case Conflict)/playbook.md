@@ -26,7 +26,7 @@ title: Regional Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Regional Partner Directory', description_t: "Browse the list of Regional Partners supporting the K-12 CS Education movement", url_s: CDO.code_org_url("/educate/regional-partner/playbook/directory"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "* Regional Partner Roadmap<br> * Annual Report Requirements<br> * Post Workshop Feedback Form<br> * 2016-2017 Data Collection Information", url_s: CDO.code_org_url("/educate/regional-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "* /Regional Partner Roadmap<br> * Annual Report Requirements<br> * Post Workshop Feedback Form<br> * 2016-2017 Data Collection Information", url_s: CDO.code_org_url("/educate/regional-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher and District Recruitment', description_t: "Infromation on how to recruit teachers and districts.", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-recruitment"), button_s: "Learn more"} %>
 
