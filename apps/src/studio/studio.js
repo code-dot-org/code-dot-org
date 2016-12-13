@@ -312,6 +312,14 @@ var drawMap = function () {
     backgroundLayer.appendChild(tile);
   }
 
+  var wallOverlay = document.createElementNS(SVG_NS, 'image');
+  wallOverlay.setAttribute('id', 'wallOverlay');
+  wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
+  wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
+  wallOverlay.setAttribute('x', 0);
+  wallOverlay.setAttribute('y', 0);
+  backgroundLayer.appendChild(wallOverlay);
+
   if (level.coordinateGridBackground) {
     studioApp.createCoordinateGridBackground({
       svg: 'backgroundLayer',
@@ -3349,7 +3357,14 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('backgroundLayer');
+  var backgroundLayer = document.getElementById('backgroundLayer');
+
+  var overlayURI = Studio.walls.getWallOverlayURI();
+  if (overlayURI) {
+    var wallOverlay = document.getElementById('wallOverlay');
+    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
+  }
+
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3369,7 +3384,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(spriteLayer, wallVal, row, col);
+        Studio.drawWallTile(backgroundLayer, wallVal, row, col);
       }
     }
   }
