@@ -433,7 +433,7 @@ const TeacherApplication = React.createClass({
                       </FormGroup>
                     </td>
                     {
-                      _.times(likertAnswers.length, (j) => {
+                      likertAnswers.map( (answer, j) => {
                         return (
                           <td key={j} style={likertSurveyCell}>
                             <Radio
