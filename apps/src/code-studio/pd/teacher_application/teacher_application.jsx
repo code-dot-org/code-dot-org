@@ -2,11 +2,13 @@
  * Teacher Application questionaire
  */
 
-import {React, ReactDOM} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import _ from 'lodash';
 import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
+import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -489,7 +491,7 @@ const TeacherApplication = React.createClass({
       </div>
     );
   },
-
+/*
   getDistrictDropdownValues() {
     //The district dropdown is not a react component like the rest of this form's components.
     //That's why we're doing it separately here
@@ -541,9 +543,10 @@ const TeacherApplication = React.createClass({
     }
 
   },
+  */
 
   onSubmitButtonClick() {
-    const districtValues = this.getDistrictDropdownValues();
+    const districtValues = getDistrictDropdownValues();
 
     const formData = _.cloneDeep(this.state);
     _.assign(formData, districtValues);
@@ -579,7 +582,7 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    if (this.validateDistrictData(districtValues)) {
+    if (validateDistrictData(districtValues)) {
       document.getElementById('district-error-placeholder').innerHTML = '';
     } else {
       topInvalidElementId = 'district-error-placeholder';
