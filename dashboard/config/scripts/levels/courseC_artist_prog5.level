@@ -35,8 +35,8 @@
     "discard_background": "false",
     "images": "[{\"filename\": \"https://images.code.org/8c4ddb11bc4115eea1757917c1f4b98f-image-1475789587541.png\", \"position\": [77, 120]}]",
     "ideal": "8",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

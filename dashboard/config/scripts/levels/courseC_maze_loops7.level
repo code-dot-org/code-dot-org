@@ -29,9 +29,8 @@
     "disable_examples": "false",
     "step_speed": "1",
     "markdown_instructions": "*\"Get me to the pig!\"*\r\n\r\nUse what you learned in other puzzles!",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

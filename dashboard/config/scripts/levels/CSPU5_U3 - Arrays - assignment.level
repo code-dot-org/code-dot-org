@@ -49,12 +49,12 @@
     "start_blocks": "var arrayOfBits = [1,0,0,1,0,0,0,0,1,0];\r\nconsole.log(\"The array before changes: \" + arrayOfBits);\r\n\r\n//Place your assignment commands here\r\n\r\n\r\nconsole.log(\"The array after changes: \" + arrayOfBits);",
     "slider_speed": "1",
     "encrypted_examples": "YA29d3w2BCy06+qSRBaaq0Em53n/hJviV3GE/h3K8rmgZRVWDQkVFzEoareG\njlwk\n",
-    "contained_level_names": null,
     "video_key": "csp_applab_lists_3",
     "instructions_important": "false",
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
