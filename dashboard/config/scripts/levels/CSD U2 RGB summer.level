@@ -176,11 +176,8 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Summer Color\r\n\r\nFind the RGB values for a summery yellow color.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you match the summery yellow at the bottom of the widget.\r\n* Write the RGB values on your worksheet.  You will need them in the next activity.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "markdown_instructions": "# Summer Color\r\n\r\nFind the RGB values for a summery yellow color.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you match the summery yellow at the bottom of the widget.\r\n* Write the RGB values on your activity guide.  You will need them in the next activity.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
