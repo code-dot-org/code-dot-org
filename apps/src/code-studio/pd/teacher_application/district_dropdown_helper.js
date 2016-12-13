@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 export function getDistrictDropdownValues() {
   const districtValues = {
     ['us-or-international']: document.getElementById('us-or-international').value,
@@ -10,14 +8,14 @@ export function getDistrictDropdownValues() {
   };
 
   if (document.getElementById('school-district-other').checked) {
-    _.assign(districtValues, {
+    Object.assign(districtValues, {
       ['school-district-name']: document.getElementById('school-district-name').value
     });
   }
 
   if (document.getElementById('school-district-other').checked ||
     document.getElementById('school-other').checked) {
-    _.assign(districtValues, {
+    Object.assign(districtValues, {
       ['school-name']: document.getElementById('school-name').value,
       ['school-zipcode']: document.getElementById('school-zipcode').value
     });
