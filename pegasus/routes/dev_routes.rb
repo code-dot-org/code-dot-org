@@ -1,5 +1,3 @@
-require 'cdo/hip_chat'
-
 BUILD_STARTED_PATH = deploy_dir('build-started')
 
 # Used to restart builds on staging/test via Slack /start-build slash command.
@@ -10,13 +8,20 @@ post '/api/dev/start-build' do
 
   dont_cache
 
-  # Don't create build-started if it already exists, but do notify of extra requests.
+  forbidden! unless params[:token] == CDO.slack_start_build_token
+
+  # Don't create build-started if it already exists; let the requester know.
   if File.file?(BUILD_STARTED_PATH)
-    HipChat.log 'Build restart requested via /api/dev/start-build was ignored - a build is already queued'
-    return
+    return "I can't do that #{params[:user_name]} - a build is already queued"
   end
 
   # Create the build-started file so a new build will start within one minute
   system "touch #{BUILD_STARTED_PATH}"
-  HipChat.log 'Build restarted via /api/dev/start-build'
+
+  # Notify the room
+  content_type :json
+  JSON.pretty_generate({
+    text: "#{rack_env.to_s.capitalize} build restarted by #{params[:user_name]}",
+    response_type: 'in_channel'
+  })
 end
