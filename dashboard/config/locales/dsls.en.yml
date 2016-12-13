@@ -433,6 +433,12 @@ en:
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
         description here: description here
+      CSD U2 Classes Introduction:
+        Classes Introduction: Classes Introduction
+        description here: description here
+      CSD U2 RGB Colors:
+        'STOP: RGB Colors': 'STOP: RGB Colors'
+        description here: description here
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -3145,6 +3151,12 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U2 RGB match:
+        "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
+        ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        RGB Colors: RGB Colors
+        rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
@@ -3193,6 +3205,13 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      CSDU2 Match RGB Colors:
+        Question: Question
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
       CSDU4 Screens Predict Match:
         The "About" Button: The "About" Button
         The "About" Page: The "About" Page
@@ -3886,6 +3905,13 @@ en:
         Answer 1: Answer 1
         CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
+        description here: description here
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
+        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -6724,6 +6750,7 @@ en:
         ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
@@ -6732,6 +6759,7 @@ en:
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
       cspu5_assess1_fivemore:
@@ -6745,6 +6773,7 @@ en:
         '5': '5'
         Nothing will be displayed: Nothing will be displayed
         a: a
+        a is bigger: a is bigger
         b: b
       cspu5_assess1_increase:
         '10': '10'
@@ -6782,7 +6811,7 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: “time”': 'Line 1 - time should be written in quotation marks like this: “time”'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6802,8 +6831,9 @@ en:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings cannot include numerical digits.: Strings cannot include numerical digits.
-        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
+        Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
@@ -6817,7 +6847,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
-        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
@@ -6832,26 +6862,32 @@ en:
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
-        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
+        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
+        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
+        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
+        day == "Saturday": day == "Saturday"
+        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
-        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
-        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
-        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
-        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+        console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
+        console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
+        console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
+        console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
+        console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
       cspu5_assess2_weight:
         '125': '125'
         '200': '200'
         '30': '30'
         '50': '50'
         '75': '75'
+        weight: weight
       cspu5_assess2_wrongLogic:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19

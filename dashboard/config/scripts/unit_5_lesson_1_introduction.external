@@ -12,7 +12,7 @@ Modern programming is often event-driven rather than sequential. Sequential prog
 
 Event-driven programs do not progress in a predictable order. User-generated events (e.g. mouse clicks, button press, key presses, etc.) are each handled individually by pieces of code, one per event.  For example, you want to write code so that when a user clicks button1 something different happens from when they click button2. 
 
-Event=driven programs like these are dynamic but also bring challenges since you don't know what order user-events might happen in.  It can lead to unpredictable program execution and an associated set of challenges.
+Event-driven programs like these are dynamic but also bring challenges since you don't know what order user-events might happen in.  It can lead to unpredictable program execution and an associated set of challenges.
 
 ## Vocabulary
 

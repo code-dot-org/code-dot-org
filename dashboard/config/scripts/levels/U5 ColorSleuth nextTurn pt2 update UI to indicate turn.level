@@ -60,10 +60,7 @@
         "message": "You should be using hideElement to hide the appropriate gray box (\"player1_highlight\" or \"player2_highlight\") behind the player score whose turn it is not."
       }
     ],
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

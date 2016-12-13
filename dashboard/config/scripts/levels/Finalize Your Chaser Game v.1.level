@@ -58,6 +58,8 @@
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "instructions_important": "false",
+    "encrypted_examples": "zN1xwc8H2m+RRkJ4KouOPNVzMFx92d3n/J9nGZp6UNTJF4DMAs8khF3i3hNY\nMlpF\n",
+    "show_debug_watch": "false",
     "contained_level_names": null
   },
   "published": true,
