@@ -3,11 +3,21 @@ title 'Introduction to CSS'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Stop: Introduction to CSS and Style Sheets
+# Stop: Introduction to CSS and Style sheets
 
 Up until this lesson, you have been adding content to your pages without any instructions on how to style it.  Web Developers intentionally separate content and style to make their code easier to maintain. HTML is the language used to structure the content of a web page. CSS is a language that adds style to a web page.
 
-In CSS, style rules are used to style certain elements of HTML. Style rules explicitly call out certain properties of the element to be styled. To add CSS style rules to an HTML page, you need to create a style sheet document and link to your stylesheet.  The link goes inside the `head` tag and looks like this:
+In CSS, style rules are used to style certain elements of HTML. Style rules explicitly call out certain properties of the element to be styled. 
+
+## Adding A Style sheet
+
+<img src="https://images.code.org/d2af7e6516e2bde50dda70cd56bf3738-image-1481577038801.png" style="width:600px">
+
+1) To add CSS style rules to an HTML page, you need to create a style sheet document.
+
+2) This is the style sheet.
+
+3) Link to your style sheet.  The link goes inside the `head` tag and looks like this:
 
 	<link rel="stylesheet" href="style.css">
 

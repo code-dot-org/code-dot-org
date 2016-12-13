@@ -5,8 +5,7 @@ markdown <<MARKDOWN
 
 ## Background
 
-Students will investigate the common language used to communicate content with browsers: HTML. They will explore basic HTML properties by using Web Lab to work with headers and lists elements. They will create two personal web pages: a Hobbies page and a Recipe page.
-
+Students will investigate the common language used to communicate content with browsers: HTML. They will explore basic HTML properties by using Web Lab to work with header and list elements. They will create two personal web pages: a Hobbies page and a Recipe page.
 # Vocabulary
 
 * **HTML** - Stands for Hypertext Markup Language and is used to create the content of a web page.
@@ -16,17 +15,16 @@ Students will investigate the common language used to communicate content with b
 
 # New Blocks
 
-* **Header** - `<h1></h1>`
-* **List Item** - `<li></li>`
-* **Ordered List** - `<ol></ol>`
-* **Paragraph** - `<p></p>`
-* **Unordered List** - `<ul></ul>`
+*  **[Unordered List](//curriculum.code.org/documentation/weblab/ul/)** - `<ul></ul>`
+*  **[List Item](//curriculum.code.org/documentation/weblab/li/)** - `<li></li>`
+*  **[Paragraph](//curriculum.code.org/documentation/weblab/P/)** - `<p></p>`
+*  **[Header](//curriculum.code.org/documentation/weblab/h/)** - `<h1></h1>`
+*  **[Ordered List](//curriculum.code.org/documentation/weblab/ol/)** - `<ol></ol>`
 
 # Resources
 
 * [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
-* [W3 Schools Headers](http://www.w3schools.com/html/html_headings.asp) - Documentation
-* [W3 Schools Lists](http://www.w3schools.com/html/html_lists.asp) - Documentation
+* [Hobbies and Recipe](https://docs.google.com/document/d/12We3-Lh0lJf_dVh6QbOWcnFevoEZEYrssZ58SISBfzc/edit) - Rubric ([PDF](https://docs.google.com/document/d/12We3-Lh0lJf_dVh6QbOWcnFevoEZEYrssZ58SISBfzc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/12We3-Lh0lJf_dVh6QbOWcnFevoEZEYrssZ58SISBfzc/export?format=doc))
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
