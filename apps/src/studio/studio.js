@@ -4752,7 +4752,6 @@ Studio.setSprite = function (opts) {
 
 Studio.getSpriteVisibility = function (opts) {
   let visibility = Studio.sprite[opts.spriteIndex].visible;
-  console.log(visibility);
   Studio.queueCallback(opts.callback, [visibility]);
 };
 
@@ -4916,6 +4915,15 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
   return foundCmd;
 };
 
+/**
+ * Helper for Studio methods which read state. Because they must
+ * implement callbacks to correctly read and handle that state in the
+ * user's program, they need to be able to schedule the execution of
+ * those callbacks at the appropriate time.
+ *
+ * @param {function} the method to be queued
+ * @param {Array} the arguments to be passed to that method
+ */
 Studio.queueCallback = function (callback, args) {
   let handlerName = `callbackQueue${Studio.callbackQueueIndex}`;
   Studio.callbackQueueIndex++;
