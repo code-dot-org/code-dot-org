@@ -1,5 +1,6 @@
 name 'Unit 5 Lesson 9 Introduction'
 title 'title'
+css 'unplugged'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
@@ -7,22 +8,32 @@ markdown <<MARKDOWN
 
 ## Background
 
-Lesson Intro
+Having explored the basics of simple `if-else` statements this lesson gets into how to express more complex logic using `if-else-if` statements and the Boolean operators `&&` (and) and `||` (or).  Again, you'll be presented with a number of small problems and scenarios to practice and solve related to more complex conditionals.
 
 ## Vocabulary
 
-* **Vocab**
-* **Vocab**
+*   **Boolean** - A single value of either TRUE or FALSE
+*   **Boolean Expression** - in programming, an expression that evaluates to True or False.
+*   **Conditionals** - Statements that only run under certain conditions.
+*   **If-Statement** - The common programming structure that implements "conditional statements".
+*   **Selection** - A generic term for a type of programming statement (usually an if-statement) that uses a Boolean condition to determine, or select, whether or not to run a certain block of statements.
 
 ## Lesson
 
-* Intro
-* Activity
-* Wrap
+* How `if-else-if` works
+* How the Boolean operators `&&` and `||` work
+* Compound Boolean Expressions
 
 ## Resources
 
-* Video: Introduction to Design Mode (embedded in code studio)
+* All in code studio
+* (Optional) Worksheet - [Compound Conditionals](https://docs.google.com/document/d/1hQay7DviSRYaVQr54ijMFgNhJNrnPt4-ASzHOxic5zM)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Answer Key:**
+
+[Worksheet KEY - Compound Conditionals](https://docs.google.com/document/d/1gRIUcz-g9pnZ-68cfmtgXa9V0mFIwLOVxNTNBSn5fLU)
 MARKDOWN

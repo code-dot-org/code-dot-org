@@ -1,3 +1,7 @@
+hidden false
+login_required true
+hideable_stages true
+
 stage 'Analysis of Design'
 level 'CSD U4L01 SFLP'
 

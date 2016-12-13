@@ -11,7 +11,8 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "**Short answer:** When should a programmer create a global variable instead of a local variable?"
+    "markdown_instructions": "**Short answer:** When might a programmer create a global variable instead of a local variable?",
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
