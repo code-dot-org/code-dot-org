@@ -62,7 +62,7 @@ const isEmail = (value) => {
 };
 const isPhoneNumber = (value) => {
   if (value.replace(/[^0-9]/g, '').length < 10) {
-    return 'Phone numbers must have at least 10 digits';
+    return 'Phone numbers must have at least 10 digits, like (123) 456-7890';
   }
 };
 
