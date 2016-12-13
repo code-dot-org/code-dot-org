@@ -17,14 +17,11 @@ machine:
     DISABLE_SPRING: 1
   services:
     - docker
-checkout:
-  post:
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
-        parallel: true
 dependencies:
   pre:
     # update google chrome; Selenium requires that Chrome version must
     # be >= 52.0.2743.0
+    - ./bin/circle/merge-eyes-baselines
     - google-chrome --version
     - ./bin/circle/upgrade-google-chrome.sh
     - google-chrome --version
