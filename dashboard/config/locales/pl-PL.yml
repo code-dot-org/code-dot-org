@@ -4,14 +4,14 @@
       not_saved: 'Proszę poprawić następujące błędy:'
       too_young: Ta zawartość ma przypisane ograniczenia wiekowe i nie jest dostępna
         dla młodszych uczniów.
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      teacher_must_accept_terms: Ta zawartość jest objęta ograniczeniem wiekowym i
+        nie jest dostępna dla młodszych uczniów. Poproś nauczyciela, aby zaakceptował
+        zaktualizowane Warunki korzystania, dając ci dostęp do tej zawartości. Nauczyciel
+        może to zrobić logując się na do Studio Kodowania i klikając przycisk "Wyświetl
+        zaktualizowane warunki korzystania" w górnej części strony głównej Studio
+        Kodowania.
+      pair_programmer: Programujesz w parze z uczniem, który nie ma tutaj dostępu.
+        Aby mieć dostęp, przerwij programowanie w parze i spróbuj ponownie.
   activerecord:
     errors:
       messages:
@@ -90,9 +90,17 @@
   signup_form:
     student_count: "%{count} uczniów już się zarejestrowało."
     teacher_count: "%{count} nauczycieli już się zarejestrowało."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Zarejestruj się na konto, aby śledzić swoje postępy lub zarządzać swoją
+      klasą. <a href="/"> Możesz przeglądać różne etapy i łamigłówki</a> bez konta,
+      ale będziesz musiał zarejestrować się, aby zapisać swoje postępy i projekty.
+    hoc_already_signed_up_heading: Rozpocznij bez logowania się
+    hoc_already_signed_up_content: Jesteś zarejestrowany, aby uczestniczyć w Godzinie
+      Kodowania! Ty i Twoi uczniowie nie musicie być zalogowani do Code Studio, aby
+      uczestniczyć w tym wydarzeniu. Aby rozpocząć, <a href="https://code.org/learn">
+      wybierz samouczek</a> dla swojej klasy i udostępnij link uczniom. <br/> <br/>
+      Jeśli spodobała Ci się Godzina Kodowania i chcesz kontynuować, możesz ustalić
+      hasło i poniżej utworzyć konto na Code Studio, aby zapisać swoich uczniów na
+      jakikolwiek nasz <a href="https://code.org/educate"> dłuższy kurs</a>.
     teacher_educator_guide: Patrz podręcznik nauczyciela
     title: Zarejestruj się w Code.org
     school_name: Nazwa szkoły (opcjonalnie)
@@ -110,20 +118,23 @@
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
-    student_terms: Zobowiązuję się do przestrzegania <a href='http://code.org/tos'>
-      warunków korzystania z serwisu</a> Code.org. Jeśli mam poniżej 13 lat, to wysyłając
-      ten formularz potwierdzam, że mam pozwolenie moich rodziców lub opiekunów prawnych
-      do korzystania z Code.org. <br/>Dla użytkowników w wieku poniżej 13 lat, adresy
-      e-mail nie są przechowywane w postaci, która umożliwia nam kontaktowanie się
-      z nimi.
-    teacher_terms: Zobowiązuję się do przestrzegania <a href='http://code.org/tos'>
-      warunków korzystania z serwisu</a> Code.org.
+    student_terms: Zgadzam się na ograniczenia wynikające <a href='http://code.org/tos'>
+      z warunków korzystania z usług </a> oferowanych przez Code.org. Jeśli mam mniej
+      niż 13 lat, to potwierdzam przesyłając ten formularz, że mam zgodę moich rodziców
+      lub prawnego opiekuna na korzystanie z usług Code.org. <br/> <br/> Adresy mailowe
+      nie są przechowywane w postaci, która umożliwiałaby kontakt z uczniami. Uczniowie
+      nie otrzymają maili z Code.org, z wyjątkiem służących do odzyskania hasła. Zobacz
+      nasze <a href='http://code.org/privacy'> zasady ochrony prywatności</a>, aby
+      uzyskać więcej informacji.
+    teacher_terms: Zgadzam się na ograniczenia wynikające z warunków korzystania z
+      usług oferowanych przez Code.org. Aby uzyskać więcej informacji na temat prywatności,
+      zobacz naszą <a href='http://code.org/privacy'> politykę prywatności</a>.
     additional_information: Potrzebujemy dodatkowych informacji, aby móc Ciebie zarejestrować.
     user_type_label: Typ konta
     user_type_teacher: Nauczyciel
     user_type_student: Uczeń
     field_is_required: jest wymagane
-    accept_terms: Musisz wyrazić zgodę aby utworzyć konto
+    accept_terms: Musisz wyrazić zgodę, aby utworzyć konto
   signin_form:
     title: Masz już konto? Zaloguj się
     login: E-mail lub nazwa użytkownika
@@ -140,8 +151,8 @@
     picture: Teraz znajdź swój tajny obrazek
     words: Teraz wpisz swoje tajne słowa
     login: Zaloguj się
-    invalid_login: Zły login, proszę spróbować ponownie
-    pair_programming: Mam partnera na moim komputerze
+    invalid_login: Nieprawidłowy login, proszę spróbować ponownie
+    pair_programming: Mam partnera przy moim komputerze
   password:
     reset_form:
       title: Nie pamiętasz hasła?
@@ -300,7 +311,7 @@
       pair_programming: Programowanie w parach
       team: Zespół
       driver: Kierowca
-      navigator: Nawigacja
+      navigator: Nawigator
     popup:
       progress_for_user: "%{name} w toku"
       progress: Twoje postępy
@@ -326,7 +337,7 @@
     user_not_found: Nie można odnaleźć nauczyciela.
     student_teacher_disassociated: Usunąłeś %{teacher_name} jako swojego nauczyciela.
     panel:
-      answer_viewer: Podgląd odpowiedzi
+      answer_viewer: Panel nauczyciela
       student: Uczeń
       viewing_solution: Podgląd rozwiązania
       try_it_yourself: Wypróbuj
@@ -337,7 +348,7 @@
       unsubmit: Nieprzesłane
       worked_with: Pracował/a z
       update_lock_settings: Tutaj zaktualizujesz ustawienia blokady.
-      clear_response: Clear response
+      clear_response: Wyczyść odpowiedź
   user:
     email_confirm_needed: 'Adres e-mail nie został potwierdzony:'
     email_confirm_needed_required: 'Twój e-mail adres %{email} nie został potwierdzony:'
@@ -423,7 +434,8 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Ucz się więcej
     announcement_try_now_button: Spróbuj teraz
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Przeprowadź Godzinę Kodowania
+    announcement_watch_video_button: Watch video
     announcement_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
       uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
       swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
@@ -433,11 +445,29 @@
     announcement_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
       nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
       ogłoszenia.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Tysiące nauczycieli w ponad 180 krajach rozpocznie nauczanie
+      informatyki w czasie Godziny Kodowania w dniach 5-11 grudnia, 2016. Liczymy
+      na was, że pomożecie nam przyciągnąć więcej uczniów niż kiedykolwiek dotychczas.
+      <a href='%{signup_url}' target='_blank'> Zarejestruj swoje zdarzenie w ramach
+      Godziny Kodowania</a> i powiadom innego nauczyciela, że każdy może rozpocząć
+      nauczanie informatyki.
+    announcement_hoc_scaling: 'ALERT dla nauczycieli Kursów 1-4 i Przyspieszonego
+      Kursu: z powodu dużej aktywności milionów uczniów w czasie Godziny Kodowania,
+      <b>Code Studio nie będzie zapisywać lub raportować postępów uczniów na tych
+      kursach w dniach 3-11 grudnia 2016</b>. Zalecamy w tym czasie wykonanie z uczniami
+      w klasie godzinnych samouczków, by świętować Tydzień Edukacji Informatycznej.
+      Chociaż nasze samouczki również nie będą zapisywać wyników w tym tygodniu, uczniowie
+      mogą wykonać pełne samouczki i zdobyć certyfikat.'
+    announcement_mc_launch: Jeden z naszych najbardziej popularnych samouczków ma
+      teraz dalszy ciąg! Całkowicie nowy samouczek Minecraft Designer pozwala uczniom
+      tworzyć własne zasady dla świata Minecrafta. Mogą zdobyć unikatowe doświadczenia
+      w świecie Minecrafta a następnie podzielić się nim z przyjaciółmi lub grać na
+      swoich telefonach. Zróbcie to ze swoją klasą w ramach Godziny Kodowania.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
   move_students:
     new_section_dne: Przepraszamy, sekcja %{new_section_code} nie istnieje. Wprowadź
       inny kod sekcji.
@@ -609,6 +639,10 @@
     minecraft:
       title: Minecraft
       body: Odkrywaj świat Minecraft poprzez kodowanie.
+    minecraft2016:
+      title: Minecraft
+      body: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry
+        Minecraft.
     unplugged:
       title: Lekcje niewymagające komputera
       audience: Wiek 6+
@@ -725,45 +759,44 @@
       wylogować</a>.
   terms_interstitial:
     title: Zaktualizowano warunki usług i politykę prywatności
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    intro_desc: 'Zaktualizowaliśmy nasze Warunki Użytkowania i Politykę Prywatności,
+      jak pokazano poniżej. Zmiany wchodzą w życie z dniem 24 sierpnia 2016 r.  Największa
+      zmiana: nie będziemy <i>przechowywać adresów e-mail dla kont uczniowskich na
+      Code Studio.</i> Jest to wielka sprawa dla nas, i mamy nadzieję, że to wyznacza
+      nowy standard dla prywatność uczniów w technologii kształcenia. Wysłaliśmy Ci
+      podsumowanie inne zmiany za pośrednictwem poczty elektronicznej.'
+    intro_instructions: Najpierw musisz zaakceptować te nowe warunki dla uczniów w
+      wieku poniżej 13 lat w swojej klasie, aby mieć pełny dostęp do wszystkich najnowszych
+      funkcji w Code Studio.  Podczas rejestracji konta dla uczniów poniżej 13 roku
+      życia, będzie poproszony o potwierdzenie, że Twoja szkoła ma zgodę rodzicielską
+      na zbieranie danych osobowych uczniów do korzystania z nich w szkole i dla korzyści
+      edukacyjnych, w tym do korzystania z takich programów, jak Code Studio.
     tos: Regulamin
     privacy: Polityka prywatności
     privacy_notice: Polityka poprawności
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: Akceptuję zaktualizowane <a href="%{tos_url}" target="_blank"> Warunki
+      użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>
     accept: Akceptuj
     print: Drukuj
-    later: Poźniej
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    reminder_desc: Zaktualizowaliśmy nasze <a href="%{tos_url}" target="_blank"> Warunki
+      użytkowania</a> i <a href="%{privacy_url}" target="_blank"> Politykę prywatności</a>.
+      Prosimy przeczytać je uważnie przed ich zaakceptowaniem. Należy zauważyć, że
+      nasze narzędzia do nauki języka JavaScript mogą być niedostępny dla Twoich uczniów
+      przed zaakceptowaniem zaktualizowanych postanowień.
+    review_terms: Wyświetl zaktualizowane Warunki korzystania
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Opcjonalnie: Pomóż nam śledzić nasze postępy na drodze do poprawy różnorodności
+      w informatyce'
+    message: Opisz nam swój wyścig (zaznacz wszystko, co odpowiada)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Biały
+    - black: Czarny lub Afroamerykanin
+    - hispanic: Hiszpanie lub Latynosi
+    - asian: Azjatycki
+    - hawaiian: Rodowity Hawajczyk lub mieszkaniec innych wysp na Pacyfiku
+    - american_indian: Native American Indian/Alaska
     - other: Inni/inne
-    - opt_out: Prefer not to say
+    - opt_out: Wolę nie mówić
     submit: Wyślij
     decline: Zamknij
   zendesk_too_young_message: Przepraszamy, młodsi użytkownicy nie mogą logować się
@@ -923,9 +956,49 @@
     starwars_blocks_name: 'Star Wars: Budowanie galaktyki z kodem (bloki)'
     starwars_javascript_name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu - JavaScript'
     download_message: Pobierz %{app_name} do użycia w trybie offline (136MB)
-    download_in_english: 'Pobierz w języku angielskim:'
-    download_in_spanish: 'Pobierz w języku hiszpańskim:'
-    windows: Windows
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
+    windows: Windows (64-bitowy)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -940,12 +1013,12 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: Zawartość tego etapu nie jest widoczna, ponieważ ten etap jest obecnie
+    zablokowany. Nauczyciela można odblokować ten etap, kiedy jest czas, aby pracować
+    na nim, lub przejrzeć swoje odpowiedzi.
+  hidden_stage: Twój nauczyciel nie oczekiwał Ciebie tutaj. Zapytaj swojego nauczyciela,
+    na której powinieneś być lekcji.
+  return_course_overview: Przejdź na jednostkę omówienia
   pd:
     survey:
       number_teachers: Number of attending teachers

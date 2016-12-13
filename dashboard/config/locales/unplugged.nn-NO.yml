@@ -91,44 +91,42 @@
         video: Unplug8
       Unplug9:
         title: Programmeringsstafett
-        desc: 'Denne leksjonen vil ta en ide fra en tidligere aktivitet (4. Millimeterpapir
-          programmering) og bruke disse ferdighetene til å understreke alvoret av
-          å fullføre programmer som kjøres i sekvenser og ofte sjekke programmer for
-          "bugs". '
+        desc: Denne oppgåva vil ta ein idé frå ein tidlegare aktivitet (4. Millimeterpapirprogrammering)
+          og bruke desse ferdigheitane til å understreke alvaret i å gjere ferdig
+          program som kjørast i sekvensar og å ofte sjekke programmet for "bugs".
         pdfs:
         - unplug9
         video: Unplug9
       Unplug10:
         title: Internett
-        desc: I denne leksjonen vil elevene late som de strømmer gjennom Internett,
-          og samtidig lære om web-adresser, IP-adresser og DNS.
+        desc: I denne oppgåva vil elevane late som dei flyt gjennom internett samtidig
+          som dei lærar om web-adresser, IP-adressar og DNS.
         pdfs:
         - unplug10
         video: Unplug10
       Unplug11:
         title: Oppsummering
-        desc: 'Den endelige Wrap-up i den første 20-timers-serien vil hjelpe klassen
-          til å gjenoppleve alle sine favoritt øyeblikk, samtidig som det gir dem
-          neste trinn som de kan ta sin egen vei hvis de er interessert i å fortsette
-          sin informatikk reise. '
+        desc: I avslutninga i den første 20-timers-serien skal klassen gjenoppleva
+          favorittøyeblikka sine samtidig som dei får sjå kva som er dei neste stega
+          i programmeringsreisa om dei vel å fortsette han.
         pdfs:
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
         title: Glade Kart
-        desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
-          en figur gjennom en labyrint med én kommando.
+        desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte
+          ein figur gjennom ein labyrint med berre ein kommando.
         video: C1_happy_maps_unplugged
       MoveIt:
         title: Flytt, flytt
-        desc: Elevene lage enkle algoritmer (sett med instruksjoner) for å flytte
-          en figur gjennom en labyrint med én kommando.
+        desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte
+          ein figur gjennom ein labyrint med berre ein kommando.
         video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Verkelege algoritmar: Plante eit frø'
-        desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
-          ved hjelp av plante et frø som et eksempel. Det fokuserer også på det store
-          bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
+        desc: Denne oppgåva viser korleis me bruker algoritmer i dagliglivet, her
+          med det å plante eit frø som eksempel. Den fokuserer og på det store større
+          bildet av informatikk og korleis algoritmer er ein viktig del av det.
         video: C1_planting_seed
       BuildingAFoundation:
         title: Bygge eit fundament

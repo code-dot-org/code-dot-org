@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. \r\n\r\nUse a nested loop. ",
+    "instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -18,7 +18,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,-4,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "8",
-    "markdown_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. \r\n\r\nUse a nested loop. ",
+    "markdown_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -34,6 +34,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try building your code line by line and see if you can spot the places where a repeat will make the code shorter!\",\"hint_id\":\"grade4_bee_nestedLoops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3b4ac7cd33258ad285650f86713f2934/grade4_bee_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need a nested loop to move forward and get nectar, but only a single loop to collect honey at the end.\\n\\nAltogether, you should be using 3 loops.\",\"hint_id\":\"grade4_bee_nestedLoops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/626d966449a348fc7652858e0e0443a5/grade4_bee_nestedLoops4.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -58,13 +60,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

@@ -39,7 +39,7 @@
   unsubmit: Ne pas envoyer
   previous_page: Page précédente
   next_page: Page suivante
-  next_resource: Love
+  next_resource: Ressource suivante
   done_with_module: Done with this Learning Module
   cancel: Annuler
   okay: OK
@@ -95,6 +95,15 @@
     overview: Inscrivez-vous pour suivre vos progrès ou gérer votre classe. <a href="/">Vous
       pouvez parcourir les différentes étapes et les puzzles</a> sans compte, mais
       vous devez vous inscrire pour sauvegarder votre progression et vos projets.
+    hoc_already_signed_up_heading: Commencez sans vous connecter
+    hoc_already_signed_up_content: Vous êtes inscrit pour enseigner une heure de code!
+      Vous et vos élèves n'ont pas besoin de vous connecter à Code Studio pour participer
+      à cet événement. Pour commencer, <a href="https://code.org/learn"> choisissez
+      un didacticiel </a> pour votre classe et partagez le lien avec eux. <br/> <br/>
+      Si vous avez apprécié l'heure De Code et souhaitez aller plus loin, vous pouvez
+      configurer un mot de passe et créer un compte Code Studio ci-dessous pour inscrire
+      vos étudiants dans l'un de nos <a href="https://code.org/educate"> cours plus
+      longs </ a >.
     teacher_educator_guide: Consultez le guide de l'enseignant
     title: S'inscrire sur Code.org
     school_name: Nom de l'école (facultatif)
@@ -339,7 +348,7 @@
     student_teacher_disassociated: Tu as supprimé % {teacher_name} en tant que ton
       professeur.
     panel:
-      answer_viewer: Visualisation des réponses
+      answer_viewer: "Écran de l'enseignant"
       student: "Élève"
       viewing_solution: Voir la solution
       try_it_yourself: Essaie-le toi-même
@@ -350,7 +359,7 @@
       unsubmit: Ne pas envoyer
       worked_with: Travaille avec
       update_lock_settings: Actualiser les paramètres de verrouillage ici.
-      clear_response: Clear response
+      clear_response: Effacer la réponse
   user:
     email_confirm_needed: 'L''adresse e-mail n''a pas été confirmée:'
     email_confirm_needed_required: 'Votre adresse e-mail %{email} n''a pas été confirmée
@@ -439,7 +448,8 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Pour en savoir plus
     announcement_try_now_button: Essaie maintenant
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Héberger une heure
+    announcement_watch_video_button: Watch video
     announcement_petition: Comme enseignant, vous ouvrez la voie à un mouvement visant
       à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
       Maintenant, il est temps de vous faire entendre par vos représentants. Cette
@@ -451,11 +461,30 @@
     announcement_all: Tenu à jour avec de nouvelles fonctionnalités et mises à jour
       sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
       les anciennes annonces.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: Des milliers d’enseignants de plus de 180 pays commenceront
+      à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous
+      comptons sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant.
+      <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de
+      Code</a> pour faire savoir aux autres enseignants que n’importe qui peut commencer
+      à enseigner l'informatique.
+    announcement_hoc_scaling: 'ALERTE pour les cours 1-4 et les professeurs de cours
+      accélérés: En raison du fort trafic de millions d''élèves qui font l''heure
+      du code, <b> Code Studio n''économisera pas ni ne signalera les progrès des
+      élèves sur ces cours du 3 au 11 décembre </ b>. Nous recommandons de faire une
+      activité Hora of Code avec votre salle de classe pour célébrer l''Heure du code
+      pendant la Semaine de l''éducation en informatique. Alors que nos propres didacticiels
+      Hour of Code ne permettront pas non plus d''enregistrer des progrès cette semaine,
+      les étudiants peuvent encore faire les tutoriels complets et obtenir un certificat.'
+    announcement_mc_launch: Un de nos didacticiels les plus populaires a maintenant
+      une suite! Le tout nouveau Minecraft Hour of Code Designer permet aux étudiants
+      de faire les règles du monde Minecraft. Ils peuvent créer une expérience unique
+      de Minecraft, puis le partager avec des amis ou le jouer sur leurs téléphones.
+      Faites-le avec votre classe pour l'heure du code.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
   move_students:
     new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
       saisir un nom de section différent.
@@ -632,6 +661,10 @@
     minecraft:
       title: Minecraft
       body: Explore un monde Minecraft à travers son code.
+    minecraft2016:
+      title: Minecraft
+      body: Programmez des animaux et d'autres créatures Minecraft dans votre propre
+        version de Minecraft.
     unplugged:
       title: Leçons en mode "déconnecté"
       audience: 6 ans et plus
@@ -775,7 +808,6 @@
       Politique de confidentialité</a>
     accept: Accepter 
     print: Imprimer
-    later: Plus tard
     reminder_desc: Nous avons actualisé nos <a href="%{tos_url}" target="_blank">
       Conditions d’utilisation</a> et notre<a href="%{privacy_url}" target="_blank">
       Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les
@@ -783,18 +815,18 @@
       pour vos élèves avant votre acceptation expresse des conditions mises à jour.
     review_terms: Consulter les éléments modifiés
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'En option : Aidez-nous à évaluer les progrès de nos actions en faveur
+      de la diversité en informatique'
+    message: Veuillez renseigner votre origine (plusieurs choix possibles)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Blanc
+    - black: Noir ou afro-américain
+    - hispanic: Hispanique ou latino
+    - asian: Asiatique
+    - hawaiian: Hawaïen indigène ou autres îles du Pacifique
+    - american_indian: Indien d'Amérique ou Alaska
     - other: Autres
-    - opt_out: Prefer not to say
+    - opt_out: Préfère ne pas dire
     submit: Envoyer
     decline: Fermer
   zendesk_too_young_message: Désolé, les plus jeunes utilisateurs ne peuvent pas accéder
@@ -918,7 +950,7 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Chercher pour une icône...
+      search_placeholder_text: Recherchez pour une icône...
       no_icons_found: Aucune icône trouvée
     playzone:
       artist_description: Dessine des super images et dessins avec l'Artiste!
@@ -963,8 +995,48 @@
     starwars_javascript_name: 'Star Wars : Construire une Galaxie avec du Code (JavaScript)'
     download_message: Téléchargement %{app_name} pour l'utilisation hors ligne (136
       Mo)
-    download_in_english: 'Télécharger en anglais :'
-    download_in_spanish: 'Télécharger en espagnol :'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:

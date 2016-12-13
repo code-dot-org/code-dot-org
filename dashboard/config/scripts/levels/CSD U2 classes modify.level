@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-13T02:22:40.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Adding Rules\r\n\r\nYour winter words should all have the same color and font.\r\n\r\n* Add the remaining word to the winter class\r\n* Find the CSS rule-set in the style sheet that gives the winter words their style.\r\n* Add a rule that changes the font of the winter words.  It can be any font, but it will need to be different from that of the other three seasons.\r\n* Add any other rules you'd like for your winter words.",
+    "project_template_level_name": "CSDU2 - Seasons Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

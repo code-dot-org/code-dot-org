@@ -110,7 +110,7 @@
         ],
         "matchType": "exact",
         "minTimes": 3,
-        "message": "Setting the pen color at least 3 times is a requireent"
+        "message": "Setting the pen color at least 3 times is a requirement"
       },
       {
         "entries": [

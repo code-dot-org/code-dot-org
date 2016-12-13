@@ -56,7 +56,7 @@
   "CONTROLS_IF_TOOLTIP_3":"最初の値が true の場合、命令文の最初のブロックを実行します。それ以外の場合、もし2番目の値が true なら、2番目のブロックを実行します。",
   "CONTROLS_IF_TOOLTIP_4":"第一ブロックが真なら、構文の第一ブロックを実行。そうでなく、第二の値が真なら、構文の第二ブロックを実行。真の値がないなら、構文の最終ブロックを実行。",
   "CONTROLS_REPEAT_HELPURL":"http://en.wikipedia.org/wiki/For_loop",
-  "CONTROLS_REPEAT_INPUT_DO":"してください",
+  "CONTROLS_REPEAT_INPUT_DO":"やること",
   "CONTROLS_REPEAT_TITLE":"%1 回、繰り返します",
   "CONTROLS_REPEAT_TITLE_REPEAT":"繰り返し",
   "CONTROLS_REPEAT_TITLE_TIMES":"回",

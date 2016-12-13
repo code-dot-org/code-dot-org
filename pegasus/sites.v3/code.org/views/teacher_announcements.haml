@@ -1,28 +1,29 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
-- scaling_url = 'http://teacherblog.code.org/post/152968866984/an-important-note-about-computer-science'
-- mc_url = 'https://code.org/minecraft'
+- code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
+- video_download_url = 'https://videos.code.org/teacher/start-teaching-code-studio-SD.mp4'
+- beyond_url = 'https://code.org/educate'
 
 .teacher-announce
   .announce-heading
     = I18n.t(:dashboard_announcements)
   .announce-content
-    %a{href: scaling_url, target: '_blank'}
+    %a{href: beyond_url, target: '_blank'}
       .content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/hoc-scaling.png'), width: '200px'}
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/go-beyond.jpg'), width: '200px'}
     .content-text
-      = I18n.t(:dashboard_announce_hoc_scaling)
+      = I18n.t(:dashboard_announce_go_beyond)
     .announce-learn-more
-      %a{href: scaling_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
+      %a{href: beyond_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_go_beyond_button)
   .announce-content
-    %a{href: mc_url, target: '_blank'}
+    %a{href: code_studio_video_url, target: '_blank'}
       .content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/mc-2016-launch.jpg'), width: '200px'}
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/how-code-studio.png'), width: '200px'}
     .content-text
-      = I18n.t(:dashboard_announce_mc_launch)
+      = I18n.t(:dashboard_announce_how_code_studio, video_download_url: video_download_url)
     .announce-learn-more
-      %a{href: mc_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
+      %a{href: code_studio_video_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_watch_video_button)
   .mini-announcement
     .content-text
       %i.fa.fa-hand-o-right

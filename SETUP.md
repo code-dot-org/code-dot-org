@@ -50,7 +50,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Node 6.9.0
   1. We want to be on node 6.9.0 and npm 3.10.8 and yarn 0.16.1
   1. `nvm install 6.9.0 && nvm alias default 6.9` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
-  1. `npm install -g yarn`
+  1. `npm install -g yarn@0.16.1`
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 1. Check that you have the correct versions of everything:
