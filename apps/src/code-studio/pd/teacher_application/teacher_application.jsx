@@ -552,11 +552,13 @@ const TeacherApplication = React.createClass({
       }
     });
 
+    console.log(formData);
+
     if (topInvalidElementId) {
       document.getElementById(topInvalidElementId).parentElement.scrollIntoView();
+    } else {
+      this.save(formData);
     }
-    console.log(formData);
-    this.save(formData);
   },
 
   save(formData) {
