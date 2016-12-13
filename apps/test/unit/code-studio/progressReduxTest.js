@@ -112,8 +112,7 @@ const initialScriptOverviewProgress = {
   professionalLearningCourse: false,
   saveAnswersBeforeNavigation: false,
   stages: stageData,
-  scriptName: 'course3',
-  peerReviewsRequired: 0
+  scriptName: 'course3'
 };
 
 // The initial progress passed to the puzzle page
@@ -123,8 +122,7 @@ const initialPuzzlePageProgress = {
   saveAnswersBeforeNavigation: false, // TODO : when used?
   // We're on a puzzle in stage 2. That is the only provided stage
   stages: [stageData[1]],
-  scriptName: 'course3',
-  peerReviewsRequired: undefined
+  scriptName: 'course3'
 };
 
 describe('progressReduxTest', () => {

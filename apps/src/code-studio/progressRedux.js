@@ -27,8 +27,6 @@ const initialState = {
   professionalLearningCourse: null,
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
-  // TODO - this appears to be unused
-  peerReviewsRequired: {},
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
@@ -161,14 +159,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  scriptName,
-  peerReviewsRequired
+  scriptName
 });
 
 export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
