@@ -493,7 +493,10 @@ function load(Bramble) {
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,
-    disableUIState: true
+    disableUIState: true,
+    initialUIState: {
+      readOnly: webLab_.getPageConstants().isReadOnlyWorkspace
+    }
   });
 
   // Event listeners
