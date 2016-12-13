@@ -52,6 +52,8 @@ const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExam
 const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
   'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
   'whatTeachingSteps'];
+const likertSurveyCell = {textAlign: 'center', width: '10%'};
+const likertAnswers = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
 
 const EMAIL_RE = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -109,6 +111,12 @@ const TeacherApplication = React.createClass({
   getRequiredValidationState(key) {
     if (this.state[key] !== undefined) {
       return this.getRequiredValidationErrorMessage(key) ? 'error' : 'success';
+    }
+  },
+
+  getLikertValidationState(key) {
+    if (this.state[key] !== undefined && this.state[key].length === 0) {
+      return 'error';
     }
   },
 
@@ -430,27 +438,30 @@ const TeacherApplication = React.createClass({
 
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
-      allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school',
-      allStudentsCanLearn: 'All students can learn computer science',
-      newApproaches: 'I am willing to learn new approaches to teaching in order to engage my students',
-      allAboutContent: 'Effective teaching of computer science is all about knowing the content',
-      allAboutProgramming: 'Computer science is all about programming',
-      csCreativity: 'Computer science has a lot to do with problem solving and creativity'
+      allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
+      allStudentsCanLearn: 'All students can learn computer science.',
+      newApproaches: 'I am willing to learn new approaches to teaching in order to engage my students.',
+      allAboutContent: 'Effective teaching of computer science is all about knowing the content.',
+      allAboutProgramming: 'Computer science is all about programming.',
+      csCreativity: 'Computer science has a lot to do with problem solving and creativity.'
     };
 
     return (
       <div>
         <ControlLabel>
-          Please rate the following questions
+          Please rate the following questions:
         </ControlLabel>
         <table>
           <thead>
             <tr>
               <th/>
-              <th>Strongly Disagree</th>
-              <th>Disagree</th>
-              <th>Agree</th>
-              <th>Strongly Agree</th>
+              {
+                likertAnswers.map( (answer, i) => {
+                  return (
+                    <th style={likertSurveyCell} key={i}>{answer}</th>
+                  );
+                })
+              }
             </tr>
           </thead>
           <tbody>
@@ -459,16 +470,16 @@ const TeacherApplication = React.createClass({
                 return (
                   <tr key={i}>
                     <td>
-                      <FormGroup validationState={this.getRequiredValidationState(question)}>
+                      <FormGroup validationState={this.getLikertValidationState(question)}>
                         <ControlLabel>
                           {csBeliefsQuestions[question]}
                         </ControlLabel>
                       </FormGroup>
                     </td>
                     {
-                      _.times(4, (j) => {
+                      likertAnswers.map( (answer, j) => {
                         return (
-                          <td key={j}>
+                          <td key={j} style={likertSurveyCell}>
                             <Radio
                               name={question}
                               value={beliefPoll[j]}
@@ -504,7 +515,7 @@ const TeacherApplication = React.createClass({
           answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
             'No computer science opportunities are currently available at my school']}
           includeOther={true}
-          onChange={this.handleRadioButtonListChange}
+          onChange={this.handleCheckboxChange}
           selectedItems={this.state.currentCsOpportunities}
           required={true}
           validationState={this.getRequiredValidationState('currentCsOpportunities')}
