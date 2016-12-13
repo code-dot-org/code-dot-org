@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-13T04:49:46.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Spring Class\r\n\r\nNow that your winter class is ready, you can start on the other seasons.\r\n\r\n* Find the empty CSS rule-set in the style sheet that gives the spring words their style.\r\n* Add two rules, one to give the text your spring color for earlier in the lesson, and another to give the text a different font, font size, or decoration.\r\n* Add the spring class to the spring elements in the HTML page.",
+    "project_template_level_name": "CSDU2 - Seasons Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

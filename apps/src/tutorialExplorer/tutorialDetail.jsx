@@ -123,6 +123,10 @@ const TutorialDetail = React.createClass({
   },
 
   onKeyDown({keyCode}) {
+    if (!this.props.showing) {
+      return;
+    }
+
     if (keyCode === 27) {
       this.props.closeClicked();
     } else if (keyCode === 37) {

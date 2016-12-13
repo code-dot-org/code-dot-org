@@ -5,10 +5,15 @@ require_https: true
 
 # Donate to Code.org
 
-<img src="/images/donate-wide.jpg" alt="Kids at computers" width="851" height="315"/>
+<img src="/images/fit-800/donate-wide.jpg" alt="Kids at computers"/>
 
 <br/>
-[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>&nbsp;Donate by PayPal&nbsp;</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
+[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL) 
+
+<br/>
+To make a donation by check, wire-transfer, or stock-transfer, [contact us](/contact).
+
+<hr/>
 
 ## For every dollar you give, one child will learn computer science
 
@@ -33,14 +38,6 @@ Our donors include Microsoft, Google, Ballmer Family Giving, Omidyar Network and
 <div style="width:450px">
 <script type="text/javascript" src="https://secure.jotform.us/jsform/40637061509149"></script>
 </div>
-<br/>
-<hr/>
-
-<br/>
-[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)
-
-
-To make a donation by check, wire-transfer, or stock-transfer, [contact us](/contact).
 
 <hr/>
 **Amazon.com customers:**

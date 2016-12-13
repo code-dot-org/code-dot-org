@@ -1,27 +1,27 @@
 name 'Unit 2 Lesson 15 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 15 - Sources and Search Engines
+# The Internet - Web Development: Lesson 15 - Intellectual Property
 
 ## Background
 
-This lesson give students a deeper understanding of how search engines work by having them take some time to design their own algorithms for determining the relevance and trustworthiness of a website. A video about how search works will help students see how some of the real world algorithms for searching work. Motivated by want to have their website found students will finally make some updates to their websites to make them easier to find in searching.
+Starting with an exploration of the song “Happy Birthday”, and its history of copyright protection despite being a common American cultural staple, the class will explore the purpose and role of copyright for both creators and users of creative content. After a brief discussion about the purpose of copyright, we move on to an activity exploring the various Creative Commons licences as a solution to the difficulty in dealing with copywrite.
 # Vocabulary
 
-* **Algorithm** - A precise sequence of instructions for processes that can be executed by a computer
-* **Relevant** - closely connected or appropriate to the matter at hand.
-* **Search Engine** - A program that searches for and identifies items in a database that correspond to keywords or characters specified by the user, used especially for finding particular sites on the World Wide Web.
-* **Search Engine Optimization** - The process of maximizing the number of visitors to a particular website by ensuring that the site appears high on the list of results returned by a search engine.
-* **Search Engine Optimizer** -  A tool that analyzes a website on different qualities that lead to a higher rank on different search engines.
-* **Trustworthy** - able to be relied on as honest or truthful.
+* **Citation** - A quotation from or reference to a book, paper, or author, especially in a scholarly work.
+* **Copyright** - the exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same.
+* **Creative Commons** - A public copyright licenses that enable the free distribution of an otherwise copyrighted work. A CC license is used when an author wants to give people the right to share, use, and build upon a work that they have created.
+* **Intellectual Property** - A work or invention that is the result of creativity, such as a manuscript or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.
 
 # New Blocks
 
-* **Meta** - `<meta>`
-* **Title** - `<title></title>`
+*  **[Hyperlink](//docs.code.org/weblab/A/)** - `<a></a>`
 
 # Resources
 
-* [Internet Scavenger Hunt](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=doc))
-* [Search Engine Design](https://docs.google.com/document/d/12vCfg4sVOi34I-LtR0vqUk94YJF7OW5ZaheYqFva8TY/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/12vCfg4sVOi34I-LtR0vqUk94YJF7OW5ZaheYqFva8TY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/12vCfg4sVOi34I-LtR0vqUk94YJF7OW5ZaheYqFva8TY/export?format=doc))
+* [Should "Happy Birthday" be Protected by Copyright?](https://www.youtube.com/watch?v=fzbSt0QG7mY) - Video
+
+* [Creative Commons Overview](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
+* [Licensing Your Work](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=doc))
+* [Cause Web Page](https://docs.google.com/document/d/1J9hlpCi--yJBkgCxBvBQn2AT8uzz1mKwvdOUGc3On34/edit) - Rubric  ([PDF](https://docs.google.com/document/d/1J9hlpCi--yJBkgCxBvBQn2AT8uzz1mKwvdOUGc3On34/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1J9hlpCi--yJBkgCxBvBQn2AT8uzz1mKwvdOUGc3On34/export?format=doc))
 MARKDOWN

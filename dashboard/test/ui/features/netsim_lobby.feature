@@ -56,5 +56,5 @@ Feature: Using the Internet Simulator Lobby
     When I enter the netsim name "Greg"
     And I press the first ".join-button" element
     And I wait until element "#tab_instructions" is visible
-    And I press the first "#tab_instructions" element
+    And I press the first ".netsim-bubble" element
     Then element ".modal" is visible
