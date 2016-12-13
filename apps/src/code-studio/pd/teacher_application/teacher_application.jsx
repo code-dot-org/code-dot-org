@@ -6,7 +6,7 @@ import React from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
-import ButtonList from '../form_components/button_list.jsx';
+import {otherString, ButtonList} from '../form_components/button_list.jsx';
 
 function FieldGroup({ id, label, ...props }) {
   return (
@@ -41,7 +41,6 @@ const TeacherApplication = React.createClass({
   },
 
   handleRadioButtonListChange(event) {
-    console.log(event.target.value);
     this.setState({[event.target.name]: event.target.value});
   },
 
@@ -89,7 +88,7 @@ const TeacherApplication = React.createClass({
           onChange={this.handleTextChange}
         />
         <FieldGroup
-          id="schoolEmail"
+          id="personalEmail"
           label="Your personal email address (we may need to contact you during the summer)"
           type="email"
           onChange={this.handleTextChange}
@@ -224,6 +223,8 @@ const TeacherApplication = React.createClass({
             label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
             groupName="csdGrades"
             answers={grades.slice(grades.indexOf('6'))}
+            onChange={this.handleCheckboxChange}
+            selectedItems={this.state.csdGrades}
           />
         </div>
       );
@@ -244,6 +245,8 @@ const TeacherApplication = React.createClass({
             ]}
             includeOther={true}
             groupName="cspDuration"
+            onChange={this.handleRadioButtonListChange}
+            selectedItems={this.state.cspDuration}
           />
           <ButtonList
             type="radio"
@@ -253,6 +256,8 @@ const TeacherApplication = React.createClass({
               'AP course',
             ]}
             groupName="cspAPcourse"
+            onChange={this.handleRadioButtonListChange}
+            selectedItems={this.state.cspAPcourse}
           />
           <ButtonList
             type="check"
@@ -260,6 +265,8 @@ const TeacherApplication = React.createClass({
             Learning Program is not available for grades K-8. (select all that apply)"
             answers={grades.slice(grades.indexOf('9'))}
             groupName="cspGrades"
+            onChange={this.handleCheckboxChange}
+            selectedItems={this.state.cspGrades}
           />
           <ButtonList
             type="radio"
@@ -268,6 +275,8 @@ const TeacherApplication = React.createClass({
             (select one)"
             groupName="cspAPExamIntent"
             answers={yesNoResponses}
+            onChange={this.handleRadioButtonListChange}
+            selectedItems={this.state.cspAPExamIntent}
           />
         </div>
       );
@@ -294,6 +303,8 @@ const TeacherApplication = React.createClass({
             groupName="committedToSummer"
             answers={yesNoResponses}
             includeOther={true}
+            onChange={this.handleRadioButtonListChange}
+            selectedItems={this.state.committedToSummer}
           />
           {this.renderSummerWorkshopSchedule()}
         </div>
@@ -365,7 +376,23 @@ const TeacherApplication = React.createClass({
   },
 
   onSubmitButtonClick() {
-    console.log(this.state);
+    /*
+    If we see Other String, then replace it with the value of the input control in the script
+     */
+    const formData = _.cloneDeep(this.state);
+
+    _.forEach(formData, (value, key) => {
+      if (value && value.indexOf(otherString) >= 0) {
+        const valueToReplaceWith = $(`#${key}_other`).val();
+
+        if (typeof(value) === 'string') {
+          formData[key] = valueToReplaceWith;
+        }  else {
+          value[value.indexOf(otherString)] = valueToReplaceWith;
+          formData[key] = value;
+        }
+      }
+    });
   },
 
   renderSubmitButton() {
