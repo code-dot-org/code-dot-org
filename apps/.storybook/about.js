@@ -40,24 +40,23 @@ storybook
       </p>
       <ol>
         <li>
-          Create an empty react component. For example:
+          Create an empty react component. For example in <strong>MyComponent.jsx</strong>:
           <pre>{`export function MyComponent() {
   return <div>MyComponent</div>;
 }`}</pre>
         </li>
         <li>
-          Add a story for this component with a single example:
-          <pre>{`if (BUILD_STYLEGUIDE) {
-  MyComponent.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('MyComponent', module)
-      .addWithInfo(
-        'default props',
-        'This is how MyComponent will look with the default props',
-        () => <MyComponent/>
-      );
-  };
-}`}</pre>
+          Add a story file named <strong>MyComponent.story.jsx</strong> for
+          this component with a single example:
+          <pre>{`export default storybook => {
+  storybook
+    .storiesOf('MyComponent', module)
+    .addWithInfo(
+      'default props',
+      'This is how MyComponent will look with the default props',
+      () => <MyComponent/>
+    );
+};`}</pre>
         </li>
         <li>
           Browse to the story for this component in the left-hand bar
@@ -71,22 +70,20 @@ storybook
           When you are ready to add prop-based customization to your component,
           add another story with an example of what the different props might look
           like. For example:
-          <pre>{`if (BUILD_STYLEGUIDE) {
-  MyComponent.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('MyComponent', module)
-      .addWithInfo(
-        'default props',
-        'This is how MyComponent will look with the default props',
-        () => <MyComponent/>
-      )
-      .addWithInfo(
-        'default props',
-        'This is how MyComponent will look with the awesome=true',
-        () => <MyComponent awesome={true}/>
-      );
-  };
-}`}</pre>
+          <pre>{`storybook => {
+  storybook
+    .storiesOf('MyComponent', module)
+    .addWithInfo(
+      'default props',
+      'This is how MyComponent will look with the default props',
+      () => <MyComponent/>
+    )
+    .addWithInfo(
+      'default props',
+      'This is how MyComponent will look with the awesome=true',
+      () => <MyComponent awesome={true}/>
+    );
+};`}</pre>
         </li>
         <li>
           Keep doing this until you've programmed all the different important states
@@ -158,6 +155,8 @@ storybook
         This will automatically create a new deprecated story for
         the component that contains a link to the stories for "NewHotness"
       </p>
+      <h1>Publishing The Storybook</h1>
+      This storybook is automatically published to <a href="https://code-dot-org.github.io/cdo-styleguide/">https://code-dot-org.github.io/cdo-styleguide/</a> when staging is built. So just check your changes into staging, and they will be published online shortly!
       <h1>Links</h1>
       <ul>
         <li>
