@@ -31,7 +31,7 @@ class HocSurvey2015
     result
   end
 
-  def self.process(data)
+  def self.process(_data)
     {}
   end
 

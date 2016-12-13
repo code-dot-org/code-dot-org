@@ -28,7 +28,7 @@ def get_solr_id_from_db_id(type, db_id)
   return nil
 end
 
-def update_document_type_form(db_id, solr_id)
+def update_document_type_form(db_id, _solr_id)
   # TODO(asher): Refactor this and the code in bin/cron/process_forms to a
   # shared method.
   db_form = DB[:forms].where(id: db_id).first

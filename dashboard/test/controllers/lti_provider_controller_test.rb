@@ -33,7 +33,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
 
   # For MiniTest need to have params passed through both query params and
   # request body
-  def lti_post(action, params)
+  def lti_post(_action, params)
     post auth_lti_path, params: params.to_param, headers: {'Content-Type' => 'application/x-www-form-urlencoded'}
   end
 

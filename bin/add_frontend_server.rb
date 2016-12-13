@@ -186,7 +186,7 @@ end
 # param {string} ssh_username: The ssh username to use for connecting to the gateway.
 # param {frontend_name}: The base frontend name, or nil to use an automatically generated name.
 # (If the base name is not unique, a unique suffix will be added to it to provide uniqueness)
-def generate_instance_zone_and_name(ec2client, ssh_username, frontend_name = nil)
+def generate_instance_zone_and_name(_ec2client, ssh_username, frontend_name = nil)
   instance_distribution = determine_frontend_instance_distribution
   determined_instance_zone, instance_count = instance_distribution.min_by{|_, v| v}
   return determined_instance_zone, determine_unique_name_for_instance_zone(ssh_username, frontend_name,

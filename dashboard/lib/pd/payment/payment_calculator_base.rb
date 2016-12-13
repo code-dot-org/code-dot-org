@@ -84,14 +84,14 @@ module Pd::Payment
     # Return true/false for a given teacher, whether the teacher is qualified.
     # @param teacher [User]
     # @return [Boolean] whether or not the teacher is qualified for payment.
-    def teacher_qualified?(teacher)
+    def teacher_qualified?(_teacher)
       true
     end
 
     # Calculates payment amounts. Override in derived classes.
     # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(workshop_summary)
+    def calculate_payment_amounts(_workshop_summary)
       {}
     end
 

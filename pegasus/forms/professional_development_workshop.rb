@@ -111,7 +111,7 @@ class ProfessionalDevelopmentWorkshop
     data
   end
 
-  def self.solr_query(params)
+  def self.solr_query(_params)
     fq = {
       kind_s: name,
       type_s: 'Public',

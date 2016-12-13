@@ -887,7 +887,7 @@ class User < ActiveRecord::Base
 
   # Increases the level counts for the concept-difficulties associated with the
   # completed level.
-  def self.track_proficiency(user_id, script_id, level_id)
+  def self.track_proficiency(user_id, _script_id, level_id)
     level_concept_difficulty = Script.cache_find_level(level_id).level_concept_difficulty
     return unless level_concept_difficulty
 

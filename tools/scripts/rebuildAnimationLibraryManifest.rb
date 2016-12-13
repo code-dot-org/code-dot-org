@@ -30,7 +30,7 @@ DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
-  def hmap(&block)
+  def hmap
     Hash[map {|k, v| yield k, v }]
   end
 

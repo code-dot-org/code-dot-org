@@ -5,7 +5,7 @@
 # eats the -t and --trace options
 
 module Minitest
-  def self.plugin_trace_options(opts, options)
+  def self.plugin_trace_options(opts, _options)
     opts.on "--trace", "Just ignore this so rake --trace works" do
       # nothing
     end
@@ -15,7 +15,7 @@ module Minitest
     end
   end
 
-  def self.plugin_trace_init(options)
+  def self.plugin_trace_init(_options)
     # don't actually do anything
   end
 end

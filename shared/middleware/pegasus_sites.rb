@@ -1,7 +1,7 @@
 require pegasus_dir('router')
 
 class PegasusSites
-  def initialize(app=nil, params={})
+  def initialize(app=nil, _params={})
     @app = app
 
     config_ru = File.absolute_path(File.dirname(__FILE__) + '/../../pegasus/config.ru')

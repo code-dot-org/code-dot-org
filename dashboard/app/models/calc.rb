@@ -67,7 +67,7 @@ class Calc < Blockly
     XML
   end
 
-  def toolbox(type)
+  def toolbox(_type)
     Calc.toolbox
   end
 end

@@ -25,12 +25,6 @@ Lint/ParenthesesAsGroupedExpression:
 Lint/RescueException:
   Enabled: false
 
-# Offense count: 50
-# Cop supports --auto-correct.
-# Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
-Lint/UnusedMethodArgument:
-  Enabled: false
-
 # Manually added due to internal error in the rubocop rule that needs to be investigated further.
 # To repro and see stack trace, enable this and run: bundle exec rubocop bin/cron/deliver_poste_messages -d
 Lint/ShadowedException:

@@ -39,7 +39,7 @@ module Solr
         @start, @count, @docs = fetch(params[:start] || 0)
       end
 
-      def each(&block)
+      def each
         while @start < @count
           @start, @count, @docs = fetch(@start) if @docs.empty?
           yield(@docs.shift)

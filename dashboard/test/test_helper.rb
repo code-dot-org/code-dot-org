@@ -369,7 +369,7 @@ $stub_channel_id = 44
 # allows storage_decrypt_channel_id to throw the right
 # errors if the input is malformed and keeps us from
 # having to access the Pegasus DB from Dashboard tests.
-def storage_decrypt(encrypted)
+def storage_decrypt(_encrypted)
   "#{$stub_channel_owner}:#{$stub_channel_id}"
 end
 

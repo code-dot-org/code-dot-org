@@ -3,7 +3,7 @@ require_relative '../../router'
 # Wrapper for the Pegasus "Documents" app that sets necessary environment
 # variables for testing requests against it.
 class MockPegasus
-  def initialize(app=nil, params={})
+  def initialize(app=nil, _params={})
     $log.level = Logger::ERROR # Pegasus spams debug logging, unneeded for tests
     @app = Documents.new(app)
   end

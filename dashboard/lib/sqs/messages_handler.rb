@@ -4,7 +4,7 @@ module SQS
     # Handles an array of queue messages. If this method raises an exception, the
     # queue may retry it depending on its configuration.
     # @param <Array<SQS::Message>> messages
-    def handle(messages)
+    def handle(_messages)
       raise 'Handle must be implemented by subclasses'
     end
   end
