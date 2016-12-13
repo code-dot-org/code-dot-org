@@ -330,7 +330,7 @@ const TeacherApplication = React.createClass({
             label="Is it your goal for your students to take the AP CSP exam in the spring of 2018? Note: even if CS
             Principles is taught as an introductory course, students are still eligible to take the AP CSP exam.
             (select one)"
-            groupName="cspAPExamIntent"
+            groupName="cspApExamIntent"
             answers={yesNoResponses}
             onChange={this.handleRadioButtonListChange}
             selectedItems={this.state.cspApExamIntent}
