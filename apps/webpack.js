@@ -25,6 +25,13 @@ var baseConfig = {
       {test: /\.json$/, loader: 'json'},
       {test: /\.ejs$/, loader: 'ejs-compiled'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {
+        test:/.png|.jpg|.jpeg|.gif|.svg/,
+        include: [
+          path.resolve(__dirname, 'static'),
+        ],
+        loader: "url-loader?limit=1024",
+      }
     ],
     preLoaders: [
       {
@@ -161,6 +168,7 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
+      publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
