@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import {Radio, Checkbox, ControlLabel, FormGroup} from 'react-bootstrap';
+import {Radio, Checkbox, ControlLabel, FormGroup, HelpBlock} from 'react-bootstrap';
 
 const otherString = 'Other: ';
 
@@ -14,7 +14,8 @@ const ButtonList = React.createClass({
     onChange: React.PropTypes.func,
     selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string]),
     required: React.PropTypes.bool,
-    validationState: React.PropTypes.string
+    validationState: React.PropTypes.string,
+    errorText: React.PropTypes.string,
   },
 
   renderInputComponents() {
@@ -56,8 +57,12 @@ const ButtonList = React.createClass({
   },
 
   render() {
+    let validationState = this.props.validationState;
+    if (this.props.errorText) {
+      validationState = 'error';
+    }
     return (
-      <FormGroup id={this.props.groupName} validationState={this.props.validationState}>
+      <FormGroup id={this.props.groupName} validationState={validationState}>
         <ControlLabel>
           {this.props.label}
           {this.props.required && (<span style={{color: 'red'}}> *</span>)}
@@ -65,6 +70,7 @@ const ButtonList = React.createClass({
         <FormGroup>
           {this.renderInputComponents()}
         </FormGroup>
+        {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
         <br/>
       </FormGroup>
     );
