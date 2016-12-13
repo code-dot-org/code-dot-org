@@ -313,6 +313,11 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     var lastState = state;
     state = store.getState();
 
+    if (state.interfaceMode !== lastState.interfaceMode && state.interfaceMode === GameLabInterfaceMode.ANIMATION
+      && !this.studioApp_.hasContainedLevels) {
+      this.studioApp_.resetButtonClick();
+    }
+
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
     }
