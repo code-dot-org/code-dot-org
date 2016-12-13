@@ -1,6 +1,6 @@
 BUILD_STARTED_PATH = deploy_dir('build-started')
 
-# Used to restart builds on staging/test via Slack /start-build slash command.
+# Used to restart builds on staging/test via Slack slash commands.
 post '/api/dev/start-build' do
   # Forbidden in production because it's a dev route
   # Forbidden in development because it won't work anyway
