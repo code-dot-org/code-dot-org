@@ -38,7 +38,8 @@ class Ability
       Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
-      Pd::CourseFacilitator
+      Pd::CourseFacilitator,
+      Pd::TeacherApplication
     ]
 
     if user.persisted?
@@ -73,6 +74,7 @@ class Ability
         can :manage, SectionHiddenStage do |hidden_stage|
           userid == hidden_stage.section.user_id
         end
+        can :create, Pd::TeacherApplication, user_id: user.id
       end
 
       if user.facilitator?
