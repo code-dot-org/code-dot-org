@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts.",
+    "instructions": "In games, spawning means adding something to the world. Place a `spawn` block under `when run` to spawn something when the game starts.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -42,12 +42,22 @@
     "failure_message_override": "Place `spawn sheep` under `when run`.",
     "use_player": "true",
     "use_score": "false",
-    "instructions_important": "true",
+    "video_key": "mc_2016_spawn",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "UPDATE:\r\n\r\nThis level teaches Spawning an Entity",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 2,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

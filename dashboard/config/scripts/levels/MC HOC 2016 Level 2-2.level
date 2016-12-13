@@ -50,6 +50,15 @@
   "published": true,
   "notes": "This chicken has forgotten how to move! Get it moving around by putting “moveWalk fForward” and “tTurn” commands in the “When sSpawned” slot. When an mobentity is created it is called ‘“spawning’,”, so the chicken will move as soon as it is created.\r\n\r\nSolution:               \r\nChicken\r\nWhen spawned\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n    When Clicked\r\n\r\n\r\nSuccess criteria: Spawned chicken walks and turns at least once.\r\nHow to check? At least one Turn and Move Forward. (possibly check based on chicken location)\r\nSuccess check function:\r\n\r\n\r\nverificationAPI.getCommandExecutedCount(“moveForward”) >= 1 && verificationAPI.getCommandExecutedCount(“turn”) >= 1\r\nTimer: No timer\r\n\r\n·       Teaches: The player how to make a creature move, and how to use the When Spawned.\r\n\r\nError message: Add at least one move and turn command to your chicken’s When Spawned event to make your chicken move.",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 3,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

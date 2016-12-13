@@ -36,7 +36,20 @@
     "player_start_direction": "0",
     "special_level_type": "freeplay",
     "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
-    "video_key": "mc_congrats_no_share"
+    "video_key": "mc_congrats_no_share",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 0,
+    "repeat_loops": 1,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

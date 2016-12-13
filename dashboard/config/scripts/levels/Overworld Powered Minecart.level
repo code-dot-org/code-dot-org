@@ -36,7 +36,20 @@
     "place_block_options": "[\"rail\"]",
     "ideal": "9",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 4,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

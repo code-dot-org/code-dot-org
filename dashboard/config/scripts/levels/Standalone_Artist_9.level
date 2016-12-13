@@ -29,7 +29,20 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "impressive": "false",
-    "disable_sharing": "false"
+    "disable_sharing": "false",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 0,
+    "repeat_loops": 1,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 0,
+    "functions": 1,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

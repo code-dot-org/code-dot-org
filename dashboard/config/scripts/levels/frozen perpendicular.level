@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "elsa",
-    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the “Turn” block as well as the “Move” block.",
     "x": "150",
     "y": "180",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
+    "markdown_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the “Turn” block as well as the “Move” block.\r\n\r\n<h5>**Help me with angles**</h5>\r\n![](https://images.code.org/083d4888f1fe97a7e8645924bf01a336-image-1442593512858.png)",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -33,7 +33,20 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 2,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

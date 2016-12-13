@@ -42,12 +42,21 @@
     "use_player": "true",
     "use_score": "false",
     "use_verification_function_for_failure": "false",
-    "instructions_important": "true",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 5: Restore the Sheep\r\nNow that we can make entities move and drop items, let’s go back and finish our sheep. Make the sheep wander, around, drop wool when you use it, and follow you if you touch it by using a move toward player command in the when touched slot.\r\n\r\nSolution:               \r\nSheep\r\n§  When spawned: Give them this code\r\n·       Repeat Forever\r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n§  When Touched\r\nRepeat forever\r\n·       Move Toward Player\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nSuccess criteria: Sheep follows player; Wool drops when sheared.\r\n\r\nTeaches: Building a full entity, Events, reinforce loops",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 2,
+    "events": 0,
+    "variables": 3,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

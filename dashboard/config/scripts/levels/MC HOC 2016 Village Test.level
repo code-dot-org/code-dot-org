@@ -41,12 +41,21 @@
     "failure_message_override": "You need to make the Iron Golem chase and attack the zombies to win.",
     "level_verification_timeout": "0",
     "use_score": "false",
-    "instructions_important": "true",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This was a test to see if we could get mobs to interact successfully. This will now be level 8.",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 2,
+    "events": 0,
+    "variables": 5,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

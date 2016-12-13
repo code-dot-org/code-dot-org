@@ -35,7 +35,20 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "timeout_failure_tick": "100"
+    "timeout_failure_tick": "100",
+    "contained_level_names": null
+  },
+  "published": false,
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 0,
+    "repeat_loops": 0,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 4,
+    "variables": 0,
+    "functions": 0,
+    "functions_with_params": 0
   }
 }]]></config>
   <blocks>

@@ -39,6 +39,15 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 0,
+    "repeat_loops": 2,
+    "repeat_until_while": 0,
+    "for_loops": 0,
+    "events": 0,
+    "variables": 1,
+    "functions": 1,
+    "functions_with_params": 1
   }
 }]]></config>
   <blocks>
