@@ -21,11 +21,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user
-  validate :validate_user_type_teacher
-  def validate_user_type_teacher
-    errors.add(:user, 'must be a teacher') if user && !user.teacher?
-  end
-
   validates_presence_of :primary_email
   validates_presence_of :secondary_email
   validates_email_format_of :primary_email, allow_blank: true

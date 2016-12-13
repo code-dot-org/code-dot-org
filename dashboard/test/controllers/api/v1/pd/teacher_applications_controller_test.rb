@@ -10,11 +10,14 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     end
   end
 
-  test 'students cannot create teacher applications' do
+  # For now. Perhaps we'll render a different view explaining how to upgrade to teacher account in the future.
+  test 'students can create teacher applications' do
     sign_in create(:student)
 
-    put :create, params: test_params
-    assert_response :forbidden
+    assert_creates Pd::TeacherApplication do
+      put :create, params: test_params
+      assert_response :success
+    end
   end
 
   test 'not logged in users are redirected to sign in' do
