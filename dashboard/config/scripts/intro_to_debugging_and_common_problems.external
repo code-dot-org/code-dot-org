@@ -31,15 +31,15 @@ In the next few levels we'll practice debugging a few common types of errors.  T
 
 **Syntax errors**
 
- * things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say
- * usually the computer spits out an error message of some kind that is a clue about what it can't understand
- * fix these with careful reading of the lines that have errors
+ * Things you misspelled or wrote in such a way the computer doesn't understand what you're trying to say
+ * Usually the computer spits out an error message of some kind that is a clue about what it can't understand
+ * Fix these with careful reading of the lines that have errors
  
 **Logic errors** 
 
- * the program runs but doesn't do what you think it should.
- * can be tricky to fix because there might not be an error message
- * fix by retracing your steps, being humble, and trying to understand why the computer is interpretting what you wrote the way it is.
+ * The program runs but doesn't do what you think it should.
+ * Can be tricky to fix because there might not be an error message
+ * Fix by retracing your steps, being humble, and trying to understand why the computer is interpretting what you wrote the way it is.
  
 ### Click Continue to start practicing
 MARKDOWN
@@ -55,15 +55,15 @@ You may want to pause at this point to go over and provide encouragement related
 **Learning How to Debug Programs**
 !!!content "Try This"
 
-	Here's an off-the-wall metaphor you might consider trying with your students: **programming and debugging is like getting dressed up to go out.** (stay with me).  
+Here's an off-the-wall metaphor you might consider trying with your students: **programming and debugging is like getting dressed up to go out.** (stay with me).
 
-    * You put on some clothes that you think will look good but then you have to look in the mirror, make some adjustments and decisions, maybe even realize you need to go a different direction entirely, and so on -- you are debugging your outfit.
+* You put on some clothes that you think will look good but then you have to look in the mirror, make some adjustments and decisions, maybe even realize you need to go a different direction entirely, and so on -- you are debugging your outfit.
 
-    * Writing a program is initially is like throwing on some clothes, and running the program is like looking in the mirror for the first time. You do it to see what it looks like, knowing that you're going to have to make some adjustments.  
-    
-    * But looking in the mirror frequently to see what everything looks like together actually *speeds up the process*. Getting ready to go out, putting on makeup or combing your hair *without* looking in the mirror would not only slow things down, it's foolish.
+* Writing a program is initially is like throwing on some clothes, and running the program is like looking in the mirror for the first time. You do it to see what it looks like, knowing that you're going to have to make some adjustments.  
 
-    * The **Run. Test. Debug.** pattern of behavior is part of the programming process, just like using a mirror is part of making yourself presentable.
+* But looking in the mirror frequently to see what everything looks like together actually *speeds up the process*. Getting ready to go out, putting on makeup or combing your hair *without* looking in the mirror would not only slow things down, it's foolish.
+
+* The **Run. Test. Debug.** pattern of behavior is part of the programming process, just like using a mirror is part of making yourself presentable.
     
 Understanding that debugging is part of the problem solving process is a **key understanding and behavior** we want to see from students. Many early programmers express frustration when code they write doesn't work the first time, or report that the "computer hates me!".  Or that if they write a program that doesn't work or has problems that they are "dumb" or that they'll never get it.  This is *exactly the wrong attitude to have*.  
 

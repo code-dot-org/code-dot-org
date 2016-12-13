@@ -28,6 +28,13 @@ const ViewAsToggle = React.createClass({
     setViewType: React.PropTypes.func.isRequired
   },
 
+  componentDidMount() {
+    // Upon loading, toggle hide-as-student appropriately (this is so that if we
+    // load a page with ?viewAs=Student we still hide stuff)
+    const { viewAs } = this.props;
+    $(".hide-as-student").toggle(viewAs === ViewType.Teacher);
+  },
+
   onChange(viewType) {
     const { setViewType } = this.props;
 

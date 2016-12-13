@@ -2,6 +2,7 @@ Feature: Blocks can be dragged
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/5?noautoplay=true"
+  And I wait for the page to fully load
 
 Scenario: Connect two blocks from toolbox in landscape mode
   When I rotate to landscape

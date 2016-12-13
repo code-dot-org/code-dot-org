@@ -12,11 +12,11 @@ markdown <<MARKDOWN
 <li> Boolean Algebra is math that operates using only true/false values. 
 <li> This is important work for computer science because true/false maps very easily to binary.
 </div>
-As you saw in the video there a bunch of terms that generally are all talking about the same thing.
+As you saw in the video there are a bunch of terms that generally are all talking about the same thing.
 
 **Boolean, Boolean values, Boolean expressions:**
 
-* a **Boolean value** simply a computer science-y term that means **a true/false value**.
+* A **Boolean value** is simply a computer science-y term that means **a true/false value**.
 * A **Boolean expression** is a statement that *evaluates* to a Boolean value (a single true/false).
 
 **Condition, Conditionals, Conditional Statements**:
@@ -40,11 +40,9 @@ A common type of condition to check is a comparison of two values.  Here are 6 c
 
 <div style="clear: both">&nbsp;</div>
 
-## Examples
+## Reference: Examples
 
-Below are a bunch of example of how you might see comparisons in code.
-
-Review them if you like or continue on and come back if you need reference.
+Below are a bunch of examples of how you might see comparisons in code. Review them if you like or continue on and come back if you need reference.
 
 <hr>
 
@@ -52,10 +50,10 @@ Review them if you like or continue on and come back if you need reference.
 
 Compares two values - numbers, strings, or other booleans - and returns *true*  if they are equal, otherwise *false*.
 
-* `"Hello" == "hello"` returns *false* because the strings are slightly different.
-* `"3" == 3` returns *true*  == tries to be forgiving. If it can "coerce" a string into a number it will do so to compare. <sup>1</sup> 
-* `(2+1) == 3` returns *true*  because the arithmetic expression evaluates to 3.
-* `x == 7` returns *true*  when the variable x has the value 7.
+* `"Hello" == "hello"` returns *false* -- because the strings are slightly different.
+* `"3" == 3` returns *true*  -- `==` tries to be forgiving. If it can "coerce" a string into a number it will do so to compare. <sup>1</sup> 
+* `(2+1) == 3` returns *true*  -- because the arithmetic expression evaluates to 3.
+* `x == 7` returns *true*  -- when the variable x has the value 7.
 
 <sup>1.</sup> While it is a useful feature that == will coerce a string into a number, it is considered **TRICKY** since string "3" is not the same as the integer 3 underneath the hood.  There are circumstances when you would consider these not equal.   There is a "strict" equality operator - the "tripple equal" `===` which makes sure that the both the type of data and value are equal.  So ` "3" === 3 ` is false.
 
@@ -66,10 +64,10 @@ Compares two values - numbers, strings, or other booleans - and returns *true*  
 
 Compares two values - numbers, strings, or other booleans - and returns `true` if they are **not equal**, otherwise `false`.
 
-* `"Hello" != "hello"` returns *true* because the strings are slightly different.
-* `"3" != 3` returns *false* because the string 3 can be coerced into a number before comparing with 3. (see notes above about the forgiving ==).
-* `(2+1) != 3` returns *false* because the arithmetic expression evaluates to 3.
-* `x != 7` returns *true* when...the variable x *is any value other than* 7.
+* `"Hello" != "hello"` returns *true* -- because the strings are slightly different.
+* `"3" != 3` returns *false* -- because the string 3 can be coerced into a number before comparing with 3. (see notes above about the forgiving ==).
+* `(2+1) != 3` returns *false* -- because the arithmetic expression evaluates to 3.
+* `x != 7` returns *true* -- when...the variable x *is any value other than* 7.
 
 <div style="clear:both"> </div>
 <hr>
@@ -80,7 +78,7 @@ Compares two values to see if the number on the left is <em>greater than</em> th
 
 * `4 > 3` returns *true*
 * `3 > 7` returns *false*
-* `age > 17` returns *true* when the value of the variable "age" is strictly greater than 17, otherwise false.
+* `age > 17` returns *true* -- when the value of the variable "age" is strictly greater than 17, otherwise false.
 
 <div style="clear:both"> </div>
 <hr>
@@ -90,7 +88,7 @@ Compares two values to see if the number on the left is <em>less than</em> the n
 
 * `4 < 3` returns *false*
 * `3 < 7` returns *true*
-* `age < 17` returns *true* when the value of the variable "age" is strictly less than 17, otherwise false.
+* `age < 17` returns *true* -- when the value of the variable "age" is strictly less than 17, otherwise false.
 
 <div style="clear:both"> </div>
 <hr>
@@ -101,7 +99,7 @@ Compares two values to see if the number on the left is *less than or equal to* 
 
 * `3 <= 4` returns *true*
 * `4 <= 3` returns *false*
-* `age <= 18` returns *true* when the value of the variable "age" is 18 or less.
+* `age <= 18` returns *true* -- when the value of the variable "age" is 18 or less.
 
 
 <div style="clear:both"> </div>
@@ -112,7 +110,7 @@ Compares two values to see if the number on the left is *greater than or equal t
 
 * `3 >= 4` returns *false*
 * `4 >= 3` returns *true*
-* `age >= 18` returns *true* when the value of the variable "age" is 18 or greater.
+* `age >= 18` returns *true* -- when the value of the variable "age" is 18 or greater.
 
 <div style="clear:both"> </div>
 
