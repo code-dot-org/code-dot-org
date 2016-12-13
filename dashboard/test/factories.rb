@@ -549,6 +549,13 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
+  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
+    association :user, factory: :teacher
+    sequence(:primary_email) { |n| "teacher#{n}@example.net" }
+    sequence(:secondary_email) { |n| "teacher#{n}@my.school.edu" }
+    application {{}}
+  end
+
   # school info
 
   # this is the only factory used for testing the deprecated data formats (without country).
