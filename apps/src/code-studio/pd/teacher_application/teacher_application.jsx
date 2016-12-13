@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import _ from 'lodash';
 import {
@@ -14,6 +15,7 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
+import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -545,36 +547,8 @@ const TeacherApplication = React.createClass({
     );
   },
 
-  getDistrictDropdownValues() {
-    //The district dropdown is not a react component like the rest of this form's components.
-    //That's why we're doing it separately here
-    const districtValues = {
-      ['us-or-international']: document.getElementById('us-or-international').value,
-      ['school-type']: document.getElementById('school-type').value,
-      ['school-state']: document.getElementById('school-state').value,
-      ['school-district']: document.querySelector('#school-district input').value,
-      ['school']: document.querySelector('#school input').value
-    };
-
-    if (document.getElementById('school-district-other').checked) {
-      _.assign(districtValues, {
-        ['school-district-name']: document.getElementById('school-district-name').value
-      });
-    }
-
-    if (document.getElementById('school-district-other').checked ||
-      document.getElementById('school-other').checked) {
-      _.assign(districtValues, {
-        ['school-name']: document.getElementById('school-name').value,
-        ['school-zipcode']: document.getElementById('school-zipcode').value
-      });
-    }
-
-    return districtValues;
-  },
-
   onSubmitButtonClick() {
-    const districtValues = this.getDistrictDropdownValues();
+    const districtValues = getDistrictDropdownValues();
 
     const formData = _.cloneDeep(this.state);
     _.assign(formData, districtValues);
@@ -609,6 +583,18 @@ const TeacherApplication = React.createClass({
         topInvalidElementId = topInvalidElementId || field;
       }
     });
+
+    if (validateDistrictData(districtValues)) {
+      document.getElementById('district-error-placeholder').innerHTML = '';
+    } else {
+      topInvalidElementId = 'district-error-placeholder';
+      ReactDOM.render(
+        <p style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
+          Please complete this section with your school's information
+        </p>,
+        document.getElementById(topInvalidElementId)
+      );
+    }
 
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
