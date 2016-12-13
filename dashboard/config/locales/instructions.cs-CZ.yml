@@ -5977,70 +5977,52 @@
       Luigi's Pizza 4_instruction: |-
         Free Play: What can you do to make Luigi's cost
         function even more useful?
-      MC HOC 2016 Level 1_instruction: |-
-        This sheep is coded to 'drop wool' when
-        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
-        or tap the game space to 'use' it. Collect the wool to win!
-      MC HOC 2016 Level 10_instruction: |-
-        It's time to make your own Minecraft! Spawn
-        creatures and then make them do whatever you want. Have fun!
-      MC HOC 2016 Level 2-2_instruction: |-
-        The chicken is frozen. Place `move` and
-        `turn` blocks in the `when spawned` slot to get it to move.
-      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
-        moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
-        slot. "
+      MC HOC 2016 Level 1_instruction: Tato ovce je naprogramovaná na "upustit vlnu"
+        a "při použití". Pomocí šipek dojdi až k ovci a mezerníkem nebo poklikem posbírej
+        vlnu. Posbírej ji všechnu a vyhraješ!
+      MC HOC 2016 Level 10_instruction: Je čas vytvořit si vlastní verzi Minecraftu!
+        Vytvářej postavy a ovládej je pomocí kódu. Bav se!
+      MC HOC 2016 Level 2-2_instruction: Slepice je zmrazená. Přetáhni bloky "posun"
+        a "otoč" do bloku "Při stvoření" a rozhýbej ji.
+      MC HOC 2016 Level 2_instruction: 'Ta slepice zapomněla jak se hýbat! Pomůžeš
+        jí, když přidáš blok "posun vpřed" a "otoč" do bloku "při stvoření". '
       MC HOC 2016 Level 3_instruction: |
-        Great, the chicken moved! But then she stopped.
-        In games, chickens walk forever. Use a `forever do` loop to keep these chickens
-        moving.\r
-      MC HOC 2016 Level 4_instruction: |-
-        Now the chickens look weird moving the same
-        way. Games use random moves to make things look real. Make the chickens `turn
-        random`.
-      MC HOC 2016 Level 5_instruction: |-
-        These cows are lost! Lead them to the grass
-        with the `move a step toward` block in a `forever do` loop.
-      MC HOC 2016 Level 6_instruction: |-
-        Now you make the zombies. Use the `spawn`
-        block to make 3 zombies when night falls. Get them to move towards you. Survive
-        until morning.
-      MC HOC 2016 Level 7_instruction: |-
-        Now let’s combine what you've learned and
-        create a new mob! Make a cow, lead it to the pasture, and get it to give you
-        milk.
-      MC HOC 2016 Level 8_instruction: |-
-        The path to your sheep is blocked by a stone
-        wall. Luckily there is a Creeper here. Creepers explode after you touch them.
-        Get the Creeper to explode the wall so you can reach your sheep!
+        Výborně, slepice se začala hýbat! Ale pak se zastavila. V hrách se slepice hýbou bez přestání. Použij smyčku "navždy opakovat", aby slepice stále pokyn opakovala. \r
+      MC HOC 2016 Level 4_instruction: Teď to nevypadá dobře, jak se slepice hýbou
+        jen jedním směrem. Hry používají náhodné pohyby, aby postavy vypadaly opravdově.
+        Použij blok "otoč náhodně".
+      MC HOC 2016 Level 5_instruction: Tyto krávy jsou ztracené! Doveď je na trávu
+        pomocí smyčky "navždy opakovat" a bloku "posun směrem k".
+      MC HOC 2016 Level 6_instruction: Teď vytváříš zombíky. Použij blok "vytvoř"
+        pro 3 zombíky s podmínkou po západu slunce. Nauč je, aby se hýbali směrem
+        k tobě. Tvým úkolem je přežít do rána.
+      MC HOC 2016 Level 7_instruction: Nyní použijeme, co už umíme a naučíme něco
+        nového. Pošli pomocí kódu krávu na trávu a podoj ji.
+      MC HOC 2016 Level 8_instruction: Cesta k tvé ovečce je zablokovaná kamennou
+        stěnou. Naštěstí je tu "popínavá rostlina". Popínavky explodují hned po tom,
+        co se jich dotkneš. Nechej je explodovat tak, aby zničily stěnu a ty se dostaneš
+        ke svojí ovečce!
       MC HOC 2016 Level 9_instruction: |
-        Zombies are attacking the village! Code the
-        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
-      MC HOC 2016 Nerop_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
-      MC HOC 2016 New Drop_instruction: |-
-        In Minecraft, sheep drop wool. Place the
-        `drop` block in `when used`, then walk over and use the sheep to drop an item.
-      MC HOC 2016 New pn_instruction: |-
-        Now let's explore our world! Use the arrows
-        to walk around and press the space bar or tap the game space to 'use' items.
-        Try getting inside the house by using the door to continue.
-      MC HOC 2016 New Spawn_instruction: |-
-        Now you can fill the world with what you
-        want! Place`spawn` blocks under `when run` to spawn things when the game starts.
-      MC HOC 2016 New Walk_instruction: |-
-        Let's explore our world! Move with the
-        arrows, and press the space bar or tap the game board to use items. Use the
-        door to get inside the house.
-      MC HOC 2016 SCORE LEVEL_instruction: |-
-        Some games let you keep score. Play tag
-        with these Iron Golems and use the `add 1 to score` block to give yourself
-        a point when you tag them. Reach five points to win!
-      MC HOC 2016 Village Test_instruction: |-
-        Oh no! Zombies have trapped you inside!
-        Code the Iron Golem to chase and attack the zombies!
+        Zombíci útočí na vesnici! Naprogramuj železného golema, aby ji bránil. Musíš porazit všechny zombíky, aby jsi zachránil vesnici! \r
+      MC HOC 2016 Nerop_instruction: Pojďme prozkoumat náš svět! Pomocí šipek a mezerníku
+        nebo poklepání do hry můžeš použít předměty. Vyzkoušej si to a zkus se dostat
+        do domu.
+      MC HOC 2016 New Drop_instruction: I v Minecraftu z ovcí získáváme vlnu. Umísti
+        blok "upustit" do bloku "při použití" a potom je obejdi a posbírej vlnu.
+      MC HOC 2016 New pn_instruction: Pojďme prozkoumat náš svět! Pomocí šipek a mezerníku
+        nebo poklepání do hry můžeš použít předměty. Vyzkoušej si to a zkus se dostat
+        do domu.
+      MC HOC 2016 New Spawn_instruction: Teď už můžes vyplnit svět tak, jak chceš!
+        Použij blok "vytvořit pod "při spuštění", aby jsi vytvořil věci na začátku
+        hry.
+      MC HOC 2016 New Walk_instruction: Pojď prozkoumat náš svět! Pohybuj se pomocí
+        šipek a mezerníku na tvé klávesnici anebo dotykem prstu po tvé dotykové obrazovce.
+        Najdi dveře a vstup do domu.
+      MC HOC 2016 SCORE LEVEL_instruction: Některé hry počítají skóre. Zahraj si na
+        to a použij blok "přidej 1bod" kdykoli, když se jich dotneš. Vyhraješ až získáš
+        5 bodů!
+      MC HOC 2016 Village Test_instruction: Ale né! Zombíci tě oblíčili! Pošli železného
+        golema, aby je následoval a útočil na ně!
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: Here are the instructions

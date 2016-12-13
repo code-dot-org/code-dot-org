@@ -2,12 +2,13 @@
  * @overview A helper class for all actions associated with Puzzle
  * Ratings, aka the Fun-O-Meter.
  */
-var puzzleRatingUtils = {};
-
-module.exports = puzzleRatingUtils;
 
 import $ from 'jquery';
+import { trySetLocalStorage } from './utils';
 var dom = require('./dom');
+
+var puzzleRatingUtils = {};
+module.exports = puzzleRatingUtils;
 
 /**
  * Construct the puzzle rating buttons themselves
@@ -63,7 +64,7 @@ puzzleRatingUtils.getPuzzleRatings_ = function () {
  * @param {PuzzleRating[]} ratings
  */
 puzzleRatingUtils.setPuzzleRatings_ = function (ratings) {
-  localStorage.setItem('puzzleRatings', JSON.stringify(ratings));
+  trySetLocalStorage('puzzleRatings', JSON.stringify(ratings));
 };
 
 /**

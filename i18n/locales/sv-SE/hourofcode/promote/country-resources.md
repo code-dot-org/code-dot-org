@@ -110,6 +110,6 @@ Visa elever en inspirerande video till starta Hour of Code. Exempel:
 
 <% else %>
 
-# Fler övningar kommer snart!
+# Se fler övningar och material för Sverige på <edvira.com/hoc>!
 
 <% end %>

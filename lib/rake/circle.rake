@@ -61,10 +61,15 @@ namespace :circle do
       next
     end
 
-    RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
+    Dir.chdir('dashboard') do
+      RakeUtils.exec_in_background "RAILS_ENV=test bundle exec unicorn -c config/unicorn.rb -E test -l #{CDO.dashboard_port}"
+    end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
-    start_sauce_connect if use_saucelabs || test_eyes?
+    if use_saucelabs || test_eyes?
+      start_sauce_connect
+      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
+    end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
@@ -125,8 +130,8 @@ def test_eyes?
 end
 
 def start_sauce_connect
-  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.0-rc2-linux.tar.gz'
-  RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
+  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.2-linux.tar.gz'
+  RakeUtils.system_stream_output 'tar -xzf sc-4.4.2-linux.tar.gz'
   Dir.chdir(Dir.glob('sc-*-linux')[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
     RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"

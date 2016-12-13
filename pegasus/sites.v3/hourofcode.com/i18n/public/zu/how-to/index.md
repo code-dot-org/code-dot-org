@@ -15,21 +15,21 @@ Zibandakanye nomnyakazo ubese wazisa iqembu labafundi kuhora labo lokuqala lwekh
 ## 1) Bukela levidiyo yendlela yokwenza <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Khetha imfundiso yelakho ihora:
 
-Sinikezela ngezinhlobonhlobo ezo [kudlala, ihora lonke lemfundiso](<%= resolve_url('https://code.org/learn') %>) ezabafundi beminyaka yonke, edalwe inhlobonhlobo yababambisene.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Izihlahlandlela zabafundi zokufunda iHora loKufingqwa:](<%= resolve_url("https://code.org/learn") %>)**
+**[Izihlahlandlela zabafundi zokufunda iHora loKufingqwa:](<%= resolve_url('/learn') %>)**
 
   * Zindinga isikhathi sokulungiselela eshifushane kothishala
   * Are self-guided - allowing students to work at their own pace and skill-level
 
-**[Izihlahlandlela zothisha zokufundisa iHora loKufingqwa:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Izihlahlandlela zothisha zokufundisa iHora loKufingqwa:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Yizifundiso ezilungiselelwe ezidinga ukufundisa okulungiselewe ngaphambilini
   * Zikhona ngononina ngamazinga ebanga *kanye* ngesihloko sesifundo (isib. Izibalo, Isingisi, njll)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Khuthaza iHora loKufingqwa lakho
+## 3) Khuthaza elakho iHora loKufingqwa
 
 Khuthaza iHora loKufingqwa lwakho [ngalawa mathulusi](<%= resolve_url('/promote') %>) uphinde ukhuthaze obanye ukuba bahlele eyabo imicimbi.
 
@@ -37,11 +37,11 @@ Khuthaza iHora loKufingqwa lwakho [ngalawa mathulusi](<%= resolve_url('/promote'
 
 Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhumana ngakhompyutha aneinternet. Kodwa wena **awu** dingi ikhompyutha eyodwa kungane, kanti futhi ungaze wenze iHora loKufingqwa ngaphandle kwekhompyutha.
 
-** Lungiselela Phambilini!** Yenza lokhu ngaphambi kokucala komcimbi wakho:
+** Lungiselela Phambili!** Yenza loku ngaphambi kokuqala komcimbi wakho:
 
   * Vivinya izifundiso kuma khompyutha abafundi okanye kumadivaysi. Yenza isiqinisekiso sokuba asebenza ngedlela efanele kusi phequluli nakumavidiyo.
   * Nika ikilasi lakho ama-efoni, okanye ucele abafundi baziphathele awabo, uma imfundiso oyikhethile isebenza kahle ngomsindo.
-  * **Awunamadivayisi anganela?** Sebenzisa [ ukuklama ngamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
+  * **Izinto zokusebenza azilingani? ** Khetha uhlelo [ lwamaqembu](https://www.youtube.com/watch?v=vgkahOzFH2Q). Uma abafundi bebambisana, bathola ithuba lokusizana kanti futhi abathembeli kakhulu kuthisha. Bazobona futhi ukuba ikhompyutha sayensi iyabambisana futhi iyahlanganisa.
   * **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 ![](/images/fit-350/group_ipad.jpg)
@@ -55,9 +55,9 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 **Bonisa ngevidiyo ekhuthazayo:**
 
   * The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions)
-  * I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% uma @izwe== 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% okanye %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * I [Ividiyo yokwethulwa kweHora loKufingqwa 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), okanye i <% if @country == 'uk' %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Ividiyo yeHora loKufingqwa 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Thola kabanzi okukhuthazayo [izinsiza](<%= resolve_url('https://code.org/inspire') %>) kanye [amavidiyo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Kulungile uma wena nabafundi bakho nibasha kukhompyutha sayensi. Lapha kukhona amanye amasu okwazisa umsebenzi wakho weHora loKufingqwa:**
 
@@ -73,7 +73,7 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 
 **Khombisa abahlanganyeli kumsebenzi**
 
-  * Bhala isixhumanisi sesifundiso kubhodi. Thola isixhumaniso sibhaliwe ku [ulwazi ngemfundiso yakho oyikhethile](<%= resolve_url('https://code.org/learn') %>) ngaphansi kwenani lwabazinikelayo.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ Eyonandlela enhle kakhulu yokuthokozela iHora loKufingqwa ibandakanya nokuxhuman
 
 **Ungenzani uma kukhona umfundi oqeda masinya?**
 
-  * Abafundi bangakhona ukubona zonke izifundiso baphinde bazame omunye umsebensi weHora loKufingqwa ku [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Okanye, cela abafundi abaqeda kuqala ukuba basize labo bafunda abanekinga ngomsebenzi.
 
 [col-33]

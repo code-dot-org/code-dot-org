@@ -2428,10 +2428,10 @@
         basketball:
           stage:
             Bounce: Odbicie
-          title: Basketball
+          title: Utwórz grę w koszykówkę
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Utwórz grę w koszykówkę
+          description: Utwórz grę w koszykówkę
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2532,8 +2532,8 @@
             Minecraft Hour of Code Designer: Minecraft w Godzinie Kodowania - Projektant
           title: Minecraft w Godzinie Kodowania - Projektant
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
+          description_short: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we
+            własnej wersji gry Minecraft.
           description: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej
             wersji gry Minecraft.
         flappy-impact-study:
@@ -2732,8 +2732,8 @@
             Sports: Zawody
           title: Zawody
           description_audience: ''
-          description_short: Zakoduj własny zawody
-          description: ''
+          description_short: Zakoduj własne zawody
+          description: Zakoduj własne zawody
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Witamy!

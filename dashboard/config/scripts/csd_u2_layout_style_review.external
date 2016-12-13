@@ -1,0 +1,9 @@
+name 'CSD U2 layout style review'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# STOP
+
+Stop and wait for your teacher.  In the meantime, you can go back to previous levels and try some new ways to use styles.
+MARKDOWN

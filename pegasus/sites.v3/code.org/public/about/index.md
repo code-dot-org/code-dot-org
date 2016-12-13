@@ -46,7 +46,7 @@ See all past [news and announcements](/about/news).
 
 <div style="float: left; width: 50%; padding-left: 10px;">
 
-<%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=Vgn_YbSmHnw'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
+<%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=W5QGo_Yb_Pc&list=PLzdnOPI1iJNfygSF8gKBUq7fT4Y61_h2I'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
 
 </div>
 

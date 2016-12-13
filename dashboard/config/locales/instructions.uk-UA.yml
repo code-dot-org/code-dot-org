@@ -4635,9 +4635,8 @@
         the functions you used in this stage or try this new function that will automatically
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!
-      grade4_artist_functions1_instruction: "Вітаю. Я - зомбі художник. Мені подобається
-        малювати! Допоможи мені намалювати квадратні окуляри. Підказка: місток між
-        скельцями на 25 пікселів коротший, ніж довжина квадрата."
+      grade4_artist_functions1_instruction: "Допоможи зомбі намалювати квадратні окуляри
+        сторонами у 100 пікселів. \\r Місток між скельцями має 75 пікселів."
       grade4_artist_functions2_instruction: |-
         Functions let you define new blocks!
         \r
@@ -5983,18 +5982,18 @@
       MC HOC 2016 Level 10_instruction: "Час створити власний Майнкрафт! Створюй істот
         та програмуй їх на виконання дій. Розважайся!"
       MC HOC 2016 Level 2-2_instruction: Курка заморожена. Розмісти блоки "рухатись"
-        та "повертати" у розділ "коли створено", щоб вона рухалась.
+        та "повернути" у розділ "коли створено", щоб вона рухалась.
       MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get\nit
         moving around by putting “Move Forward” and “Turn” commands in the “When\nSpawned”
         slot. "
       MC HOC 2016 Level 3_instruction: |
         Чудово, курка рухається! Але вона зупинилась.
-        В іграх курки, зазвичай, рухаються постійно. Використай цикл "робити постійно", щоб курки рухались безперервно.\r
+        В іграх курки, зазвичай, рухаються постійно. Використай цикл "постійно робити".\r
       MC HOC 2016 Level 4_instruction: Тепер всі курки рухаються однаково, що є дуже
         дивно. В іграх використовується випадковий рух, щоб все виглядало реалістичніше.
         Використай команду "повернути випадково".
       MC HOC 2016 Level 5_instruction: Корови заблукали! Проведи їх до трави за допомогою
-        блоку "зробити крок до" у циклі "робити постійно".
+        блоку "зробити крок до" у циклі "постійно робити".
       MC HOC 2016 Level 6_instruction: Тепер ти вмієш робити зомбі. Використай блок
         "створити", щоб створити 3 зомбі, коли настає ніч. Нехай вони рухаються у
         твоєму напрямку. І спробуй вижити до ранку.
@@ -6003,8 +6002,8 @@
         create a new mob! Make a cow, lead it to the pasture, and get it to give you
         milk.
       MC HOC 2016 Level 8_instruction: "Шлях до вівці заблоковано кам'яною стіною.
-        На щастя тут є Кріпер. Кріпери вибухають, якщо до них торкнутися. Зроби так,
-        щоб Кріпер вибухнув біля стіни, тоді зможеш дістатись до своєї овечки!"
+        На щастя тут є кріпер. Кріпери вибухають, якщо до них торкнутися. Зроби так,
+        щоб кріпер вибухнув біля стіни, тоді зможеш дістатись до своєї овечки!"
       MC HOC 2016 Level 9_instruction: |
         Zombies are attacking the village! Code the
         Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r
@@ -6027,7 +6026,7 @@
         об'єкти. Скористайся дверима, щоб зайти всередину будинку."
       MC HOC 2016 SCORE LEVEL_instruction: Деякі ігри зберігають рахунок. Доганяй
         цих залізних големів та використай блок "додати 1 до балу", щоб давати собі
-        бал, коли торкаєшся їх. Збери 5 очок, щоб виграти!
+        бал, коли торкаєшся їх. Збери 5 балів, щоб виграти!
       MC HOC 2016 Village Test_instruction: |-
         О, ні! Зомбі замкнули тебе всередині!
         Закодуй залізних големів, щоб вони переслідували та атакували зомбі!
@@ -6420,8 +6419,8 @@
         Use loops and the "random integer" block
         to fill the night sky with stars of different shapes and sizes.
       Overworld Avoid Monsters_instruction: |-
-        Налетіти на Кріпера - погана ідея.
-        Обережно пробирайся повз Кріперів та доберись до безпеки свого дому.
+        Налетіти на кріпера - погана ідея.
+        Обережно пробирайся повз кріперів та доберись до безпеки свого дому.
       Overworld Chop Tree - allthethings_instruction: |-
         Wood is a very important resource.
         Many things are made from it. Walk to the tree and use the “destroy block”

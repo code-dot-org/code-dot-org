@@ -19,6 +19,7 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+- page_mode = PageMode.get(request)
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -96,6 +97,8 @@ social:
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+  - if tutorial[:short_code] == "athlete" && page_mode == "feature-athletes"
+    - tutorial[:tags] = "2016-tutorial"
 
 #tutorials
 
@@ -107,7 +110,7 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
-      showSortBy: window.location.search.indexOf("showsort") !== -1,
+      showSortBy: true,
       disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));

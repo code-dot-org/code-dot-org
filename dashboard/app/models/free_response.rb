@@ -44,4 +44,8 @@ class FreeResponse < Level
   def self.create_from_level_builder(params, level_params)
     create!(level_params.merge(user: params[:user], game: Game.free_response, level_num: 'custom'))
   end
+
+  def peer_reviewable?
+    try(:peer_reviewable).to_bool
+  end
 end

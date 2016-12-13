@@ -245,12 +245,9 @@
       2-3 Bee Functions 2_instruction: Hàm là khối lệnh thực hiện một nhiệm vụ.  \r
         \r sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần.
       2-3 Bee Functions 3_instruction: Thu thập tất cả phấn hoa từ từng bông.
-      2-3 Bee Functions 4_instruction: |-
-        The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r
-        \r
-        Use
-        the function to collect all of the nectar.
+      2-3 Bee Functions 4_instruction: Chức năng 'di chuyển và lấy mật hoa' xoay chuyển
+        con ong, thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \r \r
+        sử dụng các chức năng để thu thập tất cả mật hoa.
       2-3 Bee Functions 5_instruction: Bây giờ hoa có nhiều phấn hơn. Chỉnh sửa hàm
         đã cho để nó có thể thu thập 4 phấn hoa và sử dụng nó để thu thập tất cả phấn
         hoa từ các bông hoa.
@@ -317,14 +314,11 @@
         What a beautiful field of flowers!   Help the
         bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
       2-3 Bee Loops 8_instruction: |-
-        These purple flowers have different amount of
-        nectar each time you run the puzzle. \r
+        Các bông hoa màu tím này co số lượng mật hoa khác nhau mỗi khi bạn chạy câu đố.\r
         \r
-        Use the `while nectar` loop to
-        collect all of the nectar. \r
+        Sử dụng vòng lặp 'mật hoa trắng' để thu thập tất cả mật hoa.\r
         \r
-        This loop will run as long as the condition
-        is true, in this case `nectar > 0`.
+        Vòng lặp này sẽ tiếp tục chạy miễn là điều kiện được thỏa mãn, trong trường hợp này 'mật hoa > 0'.
       2-3 Bee Loops 9_instruction: |-
         The while loop can perform the same action as
         an if statement in a loop. Add a while loop to this code to perform the same

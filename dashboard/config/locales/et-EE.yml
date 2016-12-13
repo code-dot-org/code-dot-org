@@ -38,7 +38,7 @@
   unsubmit: Võta vastus tagasi
   previous_page: Eelmine leht
   next_page: Järgmine leht
-  next_resource: Next resource
+  next_resource: Järgmised materjalid
   done_with_module: Done with this Learning Module
   cancel: Tühista
   okay: Olgu
@@ -90,9 +90,9 @@
   signup_form:
     student_count: "%{count} õpilast on juba registreerunud."
     teacher_count: "%{count} õpetajat on juba registreerunud."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida.
+      <a href="/">Mõistatusi ja nende erinevaid etappe on võimalik</a> ilma kasutajakontota
+      sirvida, kuid projektide edusammude salvestamiseks on vaja kasutajat.
     hoc_already_signed_up_heading: Get started without logging in
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
@@ -129,7 +129,7 @@
     user_type_teacher: "Õpetaja"
     user_type_student: "Õpilane"
     field_is_required: on nõutud
-    accept_terms: You must agree to create an account
+    accept_terms: Pead konto loomisega nõustuma
   signin_form:
     title: Sul juba on konto? Logi sisse
     login: E-post
@@ -146,8 +146,8 @@
     picture: Nüüd leia oma salajane pilt
     words: Nüüd sisestage oma salajased sõnad
     login: Logi sisse
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Vale parool, proovi uuesti
+    pair_programming: Mul on paariline arvuti juures
   password:
     reset_form:
       title: Unustasid oma salasõna?
@@ -291,8 +291,8 @@
       already_registered: Oled juba liitunud?
       pair_programming: Paarisprogrammeerimine
       team: Meeskond
-      driver: Driver
-      navigator: Navigator
+      driver: Juht
+      navigator: Kaardilugeja
     popup:
       progress_for_user: "%{name} edusammud"
       progress: Sinu progress
@@ -328,8 +328,8 @@
       example_with_number: Näidislahend %{solution_number}
       submitted_on: 'Esitatud:'
       unsubmit: Võta vastus tagasi
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
+      worked_with: Töötas koos
+      update_lock_settings: Uuenda lukustatud seadeid siin.
       clear_response: Clear response
   user:
     email_confirm_needed: 'E posti aadress on kinnitamata:'
@@ -416,7 +416,8 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Lisateave
     announcement_try_now_button: Proovi nüüd
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Vii läbi KoodiTund
+    announcement_watch_video_button: Watch video
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
@@ -442,6 +443,11 @@
       Minecraft world. They can create a totally unique Minecraft experience, and
       then share it with friends or play it on their phones. Do it with your class
       for the Hour of Code.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -680,10 +686,10 @@
     unsubmit-title: Unsubmit your assessment
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
-    submit-incomplete-title: Submit your assessment
+    submit-incomplete-title: Esitada oma hinnang
     submit-incomplete-body: You left some questions incomplete.  You cannot edit your
       assessment after submitting it.  Are you sure?
-    submit-complete-title: Submit your assessment
+    submit-complete-title: Esitada oma hinnang
     submit-complete-body: You cannot edit your assessment after submitting it.  Are
       you sure?
   match:
@@ -923,8 +929,48 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:
