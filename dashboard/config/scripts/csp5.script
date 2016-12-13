@@ -305,9 +305,6 @@ level 'CSPU5_U3 - Return Values - debuggingConstrain'
 level 'CSPU5_U3 - Return Values - constrainTurtle'
 level 'CSPU5_U3 - Return Values - wrapTurtle'
 
-stage 'Unit 5 Assessment 4', lockable: true
-assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
-
 stage 'Canvas and Arrays in Apps'
 named_level 'Unit 5 Lesson 17 Introduction'
 level 'CSPU5_U3 - Canvas - introCanvas'
@@ -329,6 +326,9 @@ level 'CSPU5_U3 - Canvas - One Dot sprayPaint'
 level 'CSPU5_U3 - Canvas - sprayPaint'
 level 'CSPU5_U3 - Canvas - sketch'
 level 'CSPU5_U3 - Canvas - freePlay'
+
+stage 'Unit 5 Assessment 4', lockable: true
+assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
 
 stage 'Practice PT: Create'
 named_level 'Unit 5 Lesson 18 Introduction'
