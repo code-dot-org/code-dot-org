@@ -177,10 +177,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# Spring and Autumn Colors\r\n\r\nChoose RGB values for spring and autumn colors.\r\n\r\n* Click \"Run\" to start the widget.\r\n* Adjust the levels until you find a spring color you like, then write down the values on your activity guide.\r\n* Do the same for an autumn color.   You will need the RGB values for the next activity.",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

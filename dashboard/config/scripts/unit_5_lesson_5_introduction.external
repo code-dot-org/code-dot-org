@@ -15,9 +15,12 @@ We examine the difference between the `=` operator and a new one `==`
 
 ## Vocab
 
-* Global Variables vs. Local Variables (Variable Scope)
-* The `==` (equal-equal) comparison operator
-* If statements
+*   **Variable Scope** - dictates what portions of the code can "see" or use a variable, typically derived from where the variable was first created. (See Global v. Local)
+    *   **Global Variable** - A variable whose scope is "global" to the program, it can be used and updated by any part of the code. Its global scope is typically derived from the variable being declared (created) outside of any function, object, or method.
+    *   **Local Variable** - A variable with local scope is one that can only be seen, used and updated by code within the same scope. Typically this means the variable was declared (created) inside a function -- includes function parameter variables.
+*   **==** - The equality operator (sometimes read: "equal equal") is used to compare two values, and returns a Boolean (true/false). Avoid confusion with the assignment operator "=",
+*   **If-Statement** - The common programming structure that implements "conditional statements".
+
 
 ## Lesson
 * Simple Counter App uses a variable
