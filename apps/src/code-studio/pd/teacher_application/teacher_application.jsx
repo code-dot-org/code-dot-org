@@ -2,7 +2,7 @@
  * Teacher Application questionaire
  */
 
-import React from 'react';
+import {React, ReactDOM} from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
 import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
@@ -518,6 +518,30 @@ const TeacherApplication = React.createClass({
     return districtValues;
   },
 
+  validateDistrictData(formData) {
+    //Because the district dropdown isn't in react, we have to validate it differently. We can do this by looking at the
+    //form data that we pulled in getDistrictDropdowns and seeing if all of it has been filled out.
+
+    //These three must always be filled out
+    const baseDistrictDataCompleted = !!(formData['us-or-international'] && formData['school-type'] && formData['school-state']);
+
+    if (!baseDistrictDataCompleted) {
+      return false;
+    }
+
+    if (document.getElementById('school-district-other').checked) {
+      //If you clicked "other district" then expect these three to be filled out
+      return !!(formData['school-district-name'] && formData['school-name'] && formData['school-zipcode']);
+    } else if (document.getElementById('school-other').checked) {
+      //If you clicked "other school in this district" then expect these three to be filled out
+      return !!(formData['school-district'] && formData['school-name'] && formData['school-zipcode']);
+    } else {
+      //If you clicked neither, then expect these two to be filled out
+      return !!(formData['school-district'] && formData['school']);
+    }
+
+  },
+
   onSubmitButtonClick() {
     const districtValues = this.getDistrictDropdownValues();
 
@@ -554,6 +578,18 @@ const TeacherApplication = React.createClass({
         topInvalidElementId = topInvalidElementId || field;
       }
     });
+
+    if (this.validateDistrictData(formData)) {
+      document.getElementById('district-error-placeholder').innerHTML = '';
+    } else {
+      topInvalidElementId = 'district-error-placeholder';
+      ReactDOM.render(
+        <p style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
+          Please complete this section with your school's information
+        </p>,
+        document.getElementById(topInvalidElementId)
+      );
+    }
 
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
