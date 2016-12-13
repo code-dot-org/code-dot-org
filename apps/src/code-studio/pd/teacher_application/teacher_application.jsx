@@ -29,7 +29,7 @@ FieldGroup.propTypes = {
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
 const subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'History', 'English', 'Music', 'Art',
-  'Multimedia', 'Foreign Language'];
+  'Multimedia', 'Foreign Language', 'Business'];
 const yesNoResponses = ['Yes', 'No'];
 const beliefPoll = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
 const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'schoolEmail', 'personalEmail',
@@ -164,9 +164,9 @@ const TeacherApplication = React.createClass({
         />
         <ButtonList
           type="check"
-          label="What grades are you teaching in the current 2017-18 school year? (select all that apply)"
+          label="What grades will you be teaching in the 2017-18 school year? (select all that apply)"
           groupName="grades2017"
-          answers={grades}
+          answers={grades.concat("I don't know")}
           includeOther={true}
           onChange={this.handleCheckboxChange}
           selectedItems={this.state.grades2017}
@@ -175,9 +175,9 @@ const TeacherApplication = React.createClass({
         />
         <ButtonList
           type="check"
-          label="What subjects are you teaching in the current 2017-18 school year? (select all that apply)"
+          label="What subjects will you be teaching in the 2017-18 school year? (select all that apply)"
           groupName="subjects2017"
-          answers={subjects}
+          answers={subjects.concat("I don't know")}
           includeOther={true}
           onChange={this.handleCheckboxChange}
           selectedItems={this.state.subjects2017}
@@ -236,9 +236,12 @@ const TeacherApplication = React.createClass({
       <FormGroup id="selectedCourse" validationState={this.getRequiredValidationState('selectedCourse')}>
         <ControlLabel>
           Which professional learning program are you applying to join for the 2017-18 school year? Click on each
-          curriculum for more information. Note: this application is only for Computer Science Discoveries and Computer
-          Science Principles. If you are interested in <a href="">Computer Science Fundamentals</a>, please
-          visit <a href="">this</a> page for information about workshops in your area. (Select one)
+          curriculum for more information. Note: this application is only for
+          <a href="https://code.org/educate/professional-learning/cs-discoveries"> Computer Science Discoveries</a> and
+          <a href="https://code.org/educate/professional-learning/cs-principles"> Computer Science Principles.</a> If
+          you are interested in <a href="https://code.org/educate/curriculum/elementary-school">Computer Science
+          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school">this page </a>
+          for information about workshops in your area. (Select one)
           {requiredStar}
         </ControlLabel>
         <Radio
@@ -246,14 +249,14 @@ const TeacherApplication = React.createClass({
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="">Computer Science Discoveries</a> (designed for 7th - 9th grade)
+          <a href="https://code.org/educate/professional-learning/cs-discoveries">Computer Science Discoveries</a> (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
+          <a href="https://code.org/educate/professional-learning/cs-principles">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
@@ -451,7 +454,7 @@ const TeacherApplication = React.createClass({
           Program. Please share your responses to the following questions:
         </p>
         <ButtonList
-          type="radio"
+          type="check"
           label="What computer science opportunities currently exist at your school? (select all that apply)"
           groupName="currentCsOpportunities"
           answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
@@ -551,9 +554,6 @@ const TeacherApplication = React.createClass({
         topInvalidElementId = topInvalidElementId || field;
       }
     });
-
-    console.log(formData);
-    console.log(topInvalidElementId);
 
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
