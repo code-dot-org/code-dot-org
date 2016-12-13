@@ -433,6 +433,9 @@ en:
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
         description here: description here
+      CSD U2 RGB Colors:
+        'STOP: RGB Colors': 'STOP: RGB Colors'
+        description here: description here
       CSD U2 layout style review:
         description here: description here
         title: title
@@ -3145,6 +3148,12 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U2 RGB match:
+        "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
+        ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        RGB Colors: RGB Colors
+        rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
@@ -6782,7 +6791,7 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: “time”': 'Line 1 - time should be written in quotation marks like this: “time”'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6802,7 +6811,7 @@ en:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings cannot include numerical digits.: Strings cannot include numerical digits.
-        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
@@ -6817,7 +6826,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
-        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
@@ -6832,7 +6841,7 @@ en:
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
-        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
@@ -6841,11 +6850,11 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
-        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
-        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
-        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
-        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+        console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
+        console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
+        console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
+        console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
+        console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
       cspu5_assess2_weight:
         '125': '125'
         '200': '200'
