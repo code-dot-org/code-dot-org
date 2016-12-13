@@ -9,5 +9,12 @@ stdout_path pegasus_dir('log/unicorn_stdout.log')
 working_directory pegasus_dir
 #logger $log
 
+after_fork do |_server, _worker|
+  require 'dynamic_config/gatekeeper'
+  require 'dynamic_config/dcdo'
+  Gatekeeper.after_fork
+  DCDO.after_fork
+end
+
 require 'cdo/unicorn'
 before_fork $unicorn_upgrade
