@@ -7,6 +7,10 @@ var utils = require('../utils');
 
 var flapBlock = '<block type="flappy_flap"></block>';
 var flapHeightBlock = '<block type="flappy_flap_height"></block>';
+var flapLargeHeightBlock =
+    '<block type="flappy_flap_height">' +
+      '<title name="VALUE">Flappy.FlapHeight.LARGE</title>' +
+    '</block>';
 var endGameBlock = '<block type="flappy_endGame"></block>';
 var playSoundBlock =  '<block type="flappy_playSound"></block>';
 var incrementScoreBlock = '<block type="flappy_incrementPlayerScore"></block>';
@@ -113,6 +117,7 @@ module.exports = {
     'toolbox':
       tb(flapBlock + endGameBlock + playSoundBlock),
     'startBlocks':
+      eventBlock('when_run') +
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('flappy_whenCollideGround')
   },
@@ -191,7 +196,8 @@ module.exports = {
     'startBlocks':
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('when_run', setSpeedBlock) +
-      eventBlock('flappy_whenCollideObstacle')
+      eventBlock('flappy_whenCollideObstacle') +
+      eventBlock('flappy_whenCollideGround', endGameBlock)
   },
 
   '5': {
@@ -231,9 +237,11 @@ module.exports = {
     'toolbox':
       tb(flapBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
     'startBlocks':
-      eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('flappy_whenEnterObstacle') +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('flappy_whenClick', flapBlock) +
+      eventBlock('when_run', setSpeedBlock) +
+      eventBlock('flappy_whenCollideObstacle', endGameBlock) +
+      eventBlock('flappy_whenCollideGround', endGameBlock)
   },
 
   '6': {
@@ -268,11 +276,11 @@ module.exports = {
       'snapRadius': 2
     },
     'toolbox':
-      tb(flapHeightBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
+      tb(flapLargeHeightBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
     'startBlocks':
       eventBlock('flappy_whenClick') +
-      // eventBlock('flappy_whenCollideGround', endGameBlock) +
-      // eventBlock('flappy_whenCollideObstacle', endGameBlock) +
+      eventBlock('flappy_whenCollideGround', endGameBlock) +
+      eventBlock('flappy_whenCollideObstacle', endGameBlock) +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
       eventBlock('when_run', setSpeedBlock)
   },
