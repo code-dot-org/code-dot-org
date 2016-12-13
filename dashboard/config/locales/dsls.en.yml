@@ -3902,8 +3902,6 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        Answer 1: Answer 1
-        CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
         description here: description here
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
@@ -6747,15 +6745,12 @@ en:
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
-        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
-        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
         Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
       cspu5_assess1_eventprograms:
-        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
@@ -6772,7 +6767,6 @@ en:
         '10': '10'
         '5': '5'
         Nothing will be displayed: Nothing will be displayed
-        a: a
         a is bigger: a is bigger
         b: b
       cspu5_assess1_increase:
@@ -6830,7 +6824,6 @@ en:
       cspu5_assess2_false:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
-        Strings cannot include numerical digits.: Strings cannot include numerical digits.
         Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
         Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
@@ -6865,14 +6858,9 @@ en:
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
-        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
-        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
-        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
-        day == "Saturday": day == "Saturday"
-        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
