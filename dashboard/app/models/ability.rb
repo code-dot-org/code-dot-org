@@ -157,6 +157,11 @@ class Ability
       end
     end
 
+    if user.persisted? && user.permission?(UserPermission::BLOCK_SHARE)
+      # let them change the hidden state
+      can :manage, LevelSource
+    end
+
     if user.admin?
       can :manage, :all
 
