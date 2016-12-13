@@ -29,6 +29,7 @@
     "step_mode": "1",
     "ideal": "6",
     "step_speed": "2",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What does your code do?\\n- What is it supposed to do?\\n- What does that tell you?\",\"hint_id\":\"courseD_maze_until3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cbfcd5e708cf4e1d0d8bda4a4741aeaf/courseD_maze_until3.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -39,7 +40,7 @@
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_move">
+        <block type="maze_move" limit="2">
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_turn">

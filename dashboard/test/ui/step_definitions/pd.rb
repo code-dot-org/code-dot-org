@@ -1,20 +1,40 @@
-Given(/^I am a facilitator with completed courses$/) do
-  random_name = "TestFacilitator" + SecureRandom.hex
+Given(/^I am a facilitator with started and completed courses$/) do
+  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}"
-    And I enroll 5 people in the workshop facilitated by "#{random_name}" and end it
+    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people
+  }
+end
+
+Given(/^I am an organizer with started and completed courses$/) do
+  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
+  steps %Q{
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a workshop organizer
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+  }
+end
+
+Given(/^I am a facilitator with completed courses$/) do
+  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
+  steps %Q{
+    And I create a teacher named "#{random_name}"
+    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
+    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it and answer surveys
   }
 end
 
 Given(/^I am an organizer with completed courses$/) do
-  random_name = "TestOrganizer" + SecureRandom.hex
+  random_name = "TestOrganizer" + SecureRandom.hex[0..9]
   steps %Q{
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}"
-    And I enroll 5 people in the workshop organized by "#{random_name}" and end it
+    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it and answer surveys
   }
 end
 
@@ -33,16 +53,16 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
-And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)"$/) do |course, role, name|
+And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) people(.*)$/) do |course, role, name, number, post_create_actions|
   if role == 'organized'
     organizer = User.find_by(name: name)
     facilitator = User.find_or_create_teacher(
-      {name: 'Facilitator', email: "organizer#{SecureRandom.hex}@code.org"}, nil, 'facilitator'
+      {name: 'Facilitator', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
     )
     Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
   else
     organizer = User.find_or_create_teacher(
-      {name: 'Organizer', email: "organizer#{SecureRandom.hex}@code.org"}, nil, 'workshop_organizer'
+      {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
     )
     facilitator = User.find_by(name: name)
   end
@@ -51,17 +71,17 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)"$/) do |cour
     workshop_type: 'Public',
     course: course,
     organizer_id: organizer.id,
-    capacity: 5
+    capacity: number.to_i,
+    location_name: 'Buffalo'
   )
 
   workshop.facilitators << facilitator
-end
 
-And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/) do |number, role, name|
-  include Api::V1::Pd::WorkshopScoreSummarizer
-
-  user = User.find_by(name: name)
-  workshop = role == 'organized' ? Pd::Workshop.organized_by(user).first : Pd::Workshop.facilitated_by(user).first
+  Pd::Session.create!(
+    pd_workshop_id: workshop.id,
+    start: DateTime.new(2016, 3, 15) + 3.hours,
+    end: DateTime.new(2016, 3, 15) + 9.hours
+  )
 
   number.to_i.times do |x|
     enrollment = Pd::Enrollment.create(
@@ -79,34 +99,43 @@ And (/^I enroll (\d+) people in the workshop ([a-z]+) by "([^"]*)" and end it$/)
     )
     PEGASUS_DB[:forms].where(kind: 'PdWorkshopSurvey', source_id: enrollment.id).delete
   end
-  workshop.update(started_at: Time.now)
-  workshop.update(ended_at: Time.now)
 
-  responses = {}
+  if post_create_actions.include?('and end it')
+    workshop.update!(started_at: DateTime.new(2016, 3, 15))
+    workshop.update!(ended_at: DateTime.new(2016, 3, 15))
 
-  [
-    Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
-    Api::V1::Pd::WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
-  ].flatten.each do |question|
-    responses[question] = PdWorkshopSurvey::OPTIONS[question].last
-  end
+    if post_create_actions.include?('and answer surveys')
+      responses = {}
 
-  Api::V1::Pd::WorkshopScoreSummarizer::OVERALL_SUCCESS_QUESTIONS.each do |question|
-    responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
-  end
+      [
+          Api::V1::Pd::WorkshopScoreSummarizer::FACILITATOR_EFFECTIVENESS_QUESTIONS,
+          Api::V1::Pd::WorkshopScoreSummarizer::TEACHER_ENGAGEMENT_QUESTIONS,
+      ].flatten.each do |question|
+        responses[question] = PdWorkshopSurvey::OPTIONS[question].last
+      end
 
-  workshop.enrollments.each do |enrollment|
-    puts "Enrollment ID - #{enrollment.id}"
-    PEGASUS_DB[:forms].insert(
-      secret: SecureRandom.hex,
-      source_id: enrollment.id,
-      kind: 'PdWorkshopSurvey',
-      email: enrollment.email,
-      data: responses.to_json,
-      created_at: Time.now,
-      created_ip: '',
-      updated_at: Time.now,
-      updated_ip: ''
-    )
+      Api::V1::Pd::WorkshopScoreSummarizer::OVERALL_SUCCESS_QUESTIONS.each do |question|
+        responses[question] = PdWorkshopSurvey::AGREE_SCALE_OPTIONS.last
+      end
+
+      workshop.enrollments.each do |enrollment|
+        puts "Enrollment ID - #{enrollment.id}"
+        PEGASUS_DB[:forms].insert(
+          secret: SecureRandom.hex,
+          source_id: enrollment.id,
+          kind: 'PdWorkshopSurvey',
+          email: enrollment.email,
+          data: responses.to_json,
+          created_at: Time.now,
+          created_ip: '',
+          updated_at: Time.now,
+          updated_ip: ''
+        )
+      end
+    end
+  elsif post_create_actions.include?('and start it')
+    workshop.update!(started_at: DateTime.new(2016, 3, 15))
+  else
+    workshop.update!(started_at: nil, ended_at: nil)
   end
 end

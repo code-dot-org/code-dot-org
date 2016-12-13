@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! Use the if/else block to collect nectar if it is a flower, else to make honey (because it is a honeycomb).",
+    "instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -31,8 +31,9 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"featureType\":2,\"value\":1,\"cloudType\":1,\"range\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "markdown_instructions": "Sometimes this cloud covers a flower, and sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block to collect nectar only if it is a flower.  \r\nElse, make honey (because it is a honeycomb).",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**Remember:** This puzzle changes each time it's run.  \\n\\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge.\",\r\n  \"hint_id\": \"remember_quantum\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "markdown_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \r\n\r\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**Remember:** This puzzle changes each time it's run.  \\n\\nYou'll want to use a conditional block (`if/else`) to solve the challenge.\",\"hint_id\":\"remember_quantum\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a0c1a3be070bd8bd64d3a9315141edce/grade3_bee_conditionals_quantum4.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -52,36 +53,24 @@
         </block>
         <block type="maze_nectar"/>
         <block type="maze_honey"/>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
         </block>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="bee_ifElseFlower">
-              <title name="LOC">atFlower</title>
-              <next>
-                <block type="bee_ifElseFlower">
-                  <title name="LOC">atHoneycomb</title>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_moveForward">
-              <next>
+            <block type="maze_untilBlocked">
+              <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
                     <block type="bee_ifElseFlower">
@@ -95,7 +84,7 @@
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

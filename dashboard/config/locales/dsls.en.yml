@@ -393,6 +393,9 @@ en:
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
       Balancing Teacher and Tools in Unit 1: {}
+      Basic mechanics of variables:
+        description here: description here
+        title: title
       Begin planning your project:
         description here: description here
         title: title
@@ -427,6 +430,21 @@ en:
       CSD U1 Input Output Intro:
         description here: description here
         title: title
+      CSD U2 CSS explain:
+        Introduction to CSS: Introduction to CSS
+        description here: description here
+      CSD U2 RGB Colors:
+        'STOP: RGB Colors': 'STOP: RGB Colors'
+        description here: description here
+      CSD U2 layout style review:
+        description here: description here
+        title: title
+      CSD U2 more CSS:
+        description here: description here
+        title: title
+      CSD U2 text style review:
+        CSS: CSS
+        description here: description here
       CSD U3 - Booleans - 1: {}
       CSD U3 - Sprites - Stop: {}
       CSD U3 - complex conditionals - SFLP: {}
@@ -820,11 +838,30 @@ en:
       Cleaning Data: {}
       'Collection A: Good and Bad Visualizations': {}
       'Collection B: Good and Bad Visualizations': {}
+      Color Sleuth - Epilogue:
+        description here: description here
+        title: title
+      Color Sleuth - How does it end?:
+        description here: description here
+        title: title
+      Color Sleuth - How to switch player turns:
+        description here: description here
+        title: title
+      Color Sleuth - Keeping score:
+        description here: description here
+        title: title
+      Color Sleuth - Planning the App:
+        description here: description here
+        title: title
       Common Misconceptions about Functions: {}
       Conditions and Logic: {}
+      Controlling Memory - Other ways to assign values:
+        description here: description here
+        title: title
       Correlation vs Causation: {}
       Curriculum Framework Connections in Unit 2: {}
       Data Tools in Unit 2 Chapter 2: {}
+      Debugging Variables: {}
       Debugging with Console.log:
         description here: description here
         title: title
@@ -1265,6 +1302,9 @@ en:
       How "if-else-if" Works:
         description here: description here
         title: title
+      How Compound Boolean Expressions Work:
+        description here: description here
+        title: title
       How Dropdown Menus Work:
         description here: description here
         title: title
@@ -1281,11 +1321,24 @@ en:
       How Secure Is Your Password?:
         description here: description here
         title: title
+      How Set Property Works:
+        description here: description here
+        title: title
+      'How To: Share Code with Teammates': {}
       How are Images Encoded?: {}
       How onEvent Works:
         description here: description here
         title: title
       How setPosition and screen dimensions work:
+        description here: description here
+        title: title
+      How the Boolean &&, || and ! Operators Work:
+        description here: description here
+        title: title
+      How to make a random color:
+        description here: description here
+        title: title
+      How to pick a random button:
         description here: description here
         title: title
       'How to: Make Charts from your Data': {}
@@ -1305,6 +1358,7 @@ en:
         description here: description here
         title: title
       Introduction to Functions with Parameters: {}
+      Introduction to HTML: {}
       Introduction to Loops: {}
       Introduction to Lossless Compression and the Text Compression Widget: {}
       Introduction to Lossy Compression: {}
@@ -1327,6 +1381,7 @@ en:
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
       Lossy vs. Lossless Compression: {}
+      Make a Hypothesis: {}
       Making Multiple Screens:
         description here: description here
         title: title
@@ -1619,6 +1674,7 @@ en:
         description here: description here
         title: title
       Rating Websites: {}
+      Recipe Page Example: {}
       Responding to User Input: {}
       Rules About Choosing Good IDs:
         description here: description here
@@ -1635,6 +1691,10 @@ en:
         description here: description here
         title: title
       'Sending Numbers: The Big Picture': {}
+      Simple Decisions with if-statements:
+        description here: description here
+        title: title
+      Social Sleuth: {}
       StevieMarbles:
         Stevie and the Marbles: Stevie and the Marbles
         Story for K Level about Frustration: Story for K Level about Frustration
@@ -1666,6 +1726,7 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
+      The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
         Debugging Story for K Level: Debugging Story for K Level
@@ -2126,6 +2187,9 @@ en:
       U5 - Explore PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5 color sleuth check correct:
+        description here: description here
+        title: title
       U5L08 - Student Intro If statements:
         description here: description here
         title: title
@@ -2196,6 +2260,67 @@ en:
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
       Unit 4 Lesson 9 Introduction: {}
+      Unit 5 Lesson 1:
+        description here: description here
+        title: title
+      Unit 5 Lesson 1 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 10 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 11 Introduction:
+        While Loop Basics: While Loop Basics
+      Unit 5 Lesson 12 Introduction:
+        While Loops and Counting: While Loops and Counting
+      Unit 5 Lesson 13 Introduction:
+        An Introduction to Arrays: An Introduction to Arrays
+      Unit 5 Lesson 14 Introduction:
+        Arrays - Photo Album: Arrays - Photo Album
+      Unit 5 Lesson 15 Introduction:
+        Images are Arrays: Images are Arrays
+      Unit 5 Lesson 16 Introduction:
+        Digital Assistant Challenge: Digital Assistant Challenge
+      Unit 5 Lesson 17 Introduction:
+        'Arrays and Loops: Altering Images': 'Arrays and Loops: Altering Images'
+      Unit 5 Lesson 18 Introduction:
+        'Arrays and Loops: Hidden Images': 'Arrays and Loops: Hidden Images'
+      Unit 5 Lesson 2 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 3 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 4 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5:
+        description here: description here
+        title: title
+      Unit 5 Lesson 5 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6:
+        description here: description here
+        title: title
+      Unit 5 Lesson 6 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 7 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 8 Introduction:
+        description here: description here
+        title: title
+      Unit 5 Lesson 9 Introduction:
+        description here: description here
+        title: title
+      Update your Hypothesis - Part 1: {}
+      Update your Hypothesis - Part 2: {}
+      'Using Output from Functions: The return Command': {}
+      'Variable Scope: Local vs. Global':
+        U3L19 - variable scope explanation pt2: U3L19 - variable scope explanation pt2
+        description here: description here
       Video - The Future of Big Data: {}
       'Warm Up: Categories of Styles': {}
       Welcome to TeacherCon!: {}
@@ -2641,6 +2766,9 @@ en:
         Details and Logistics: Details and Logistics
       sciPD3 mods:
         Reviewing the Modules: Reviewing the Modules
+      sciPD3 mods2:
+        description here: description here
+        title: title
       sciPD3 reflection:
         Reflection on Phase 3: Reflection on Phase 3
       sciPD3 resource module1:
@@ -2719,6 +2847,9 @@ en:
       text compression lesson plan: {}
       u3L04 Student Lesson Introduction:
         Creating Procedures Part 2: Creating Procedures Part 2
+      unique level name here:
+        description here: description here
+        title: title
       v1 U1L13 Student Lesson Introduction:
         The Need for DNS: The Need for DNS
       v2 U1 Internet is for Everyone Student Lesson Introduction:
@@ -3017,6 +3148,12 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U2 RGB match:
+        "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
+        ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        RGB Colors: RGB Colors
+        rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
@@ -3030,6 +3167,12 @@ en:
         dog.x &gt; cat.x: dog.x &gt; cat.x
         dog.x &lt; cat.x: dog.x &lt; cat.x
         dog.x == cat.x: dog.x == cat.x
+      CSD U3 CSS Vocab Match:
+        '1': '1'
+        '2': '2'
+        CSS: CSS
+        CSS Vocabulary Match: CSS Vocabulary Match
+        Stylesheet: Stylesheet
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -4203,10 +4346,10 @@ en:
       CSD Header Size Prediction:
         ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
+        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
+        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
+        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
+        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
       CSD Headers Prediction:
         ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
         : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
@@ -6648,7 +6791,7 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: “time”': 'Line 1 - time should be written in quotation marks like this: “time”'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6668,7 +6811,7 @@ en:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
         Strings cannot include numerical digits.: Strings cannot include numerical digits.
-        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
@@ -6683,7 +6826,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
-        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
@@ -6698,7 +6841,7 @@ en:
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
-        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
@@ -6707,11 +6850,11 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
-        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
-        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
-        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
-        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+        console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
+        console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
+        console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
+        console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
+        console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
       cspu5_assess2_weight:
         '125': '125'
         '200': '200'
@@ -7339,11 +7482,12 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        " Press the _w_ key ": " Press the _w_ key "
-        'Press the _space_ bar  ': 'Press the _space_ bar  '
-        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
-        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
-        title: title
+        '1': '1'
+        '2': '2'
+        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
+        CSS: CSS
+        Stylesheet: Stylesheet
+        description here: description here
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts
