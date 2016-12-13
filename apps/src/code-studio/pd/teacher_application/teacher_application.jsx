@@ -521,7 +521,7 @@ const TeacherApplication = React.createClass({
     const formData = _.cloneDeep(this.state);
     _.assign(formData, districtValues);
 
-    let topInvalidElementId;
+    let topInvalidElementId = undefined;
 
     let fieldsToValidate = _.compact(_.concat(requiredFields,
       this.state.selectedCourse === 'csd' && requiredCsdFields,
@@ -553,9 +553,16 @@ const TeacherApplication = React.createClass({
     });
 
     console.log(formData);
+    console.log(topInvalidElementId);
 
     if (topInvalidElementId) {
-      document.getElementById(topInvalidElementId).parentElement.scrollIntoView();
+      let topInvalidElement = document.getElementById(topInvalidElementId);
+
+      if (topInvalidElement.className.indexOf('form-group') >= 0) {
+        topInvalidElement.scrollIntoView();
+      } else {
+        topInvalidElement.parentElement.scrollIntoView();
+      }
     } else {
       this.save(formData);
     }
