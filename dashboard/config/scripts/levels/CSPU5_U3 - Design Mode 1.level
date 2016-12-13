@@ -55,8 +55,8 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel",
-    "contained_level_names": null,
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Baker 10.17.16 Remove embed video from here?",

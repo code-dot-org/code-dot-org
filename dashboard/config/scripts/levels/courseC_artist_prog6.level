@@ -36,8 +36,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The artist is already facing the correct way to draw his first line.\",\"hint_id\":\"courseC_artist_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1114876eff48d91e54ac32413f82472/courseC_artist_prog6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This diamond is really just a square that's standing on its corner.\",\"hint_id\":\"courseC_artist_prog6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc2d7b5bbcce7aa091c2b384b2b9b75d/courseC_artist_prog6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Since this diamond is also a square, be sure to turn 90 degrees at the corners.\",\"hint_id\":\"courseC_artist_prog6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6ca835be99945d8c5b260a743ebfc801/courseC_artist_prog6.mp3\"}]",
     "discard_background": "false",
     "ideal": "8",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -35,8 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To create this window, just draw a square with 100 pixel sides.\\n\\n- move forward\\n- turn\\n- move forward\\n- turn\\n- move forward\\n- turn\\n- move forward\",\"hint_id\":\"courseC_artist_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5bdad2a8b3ff48e2fc7d97e8ad8c49b/courseC_artist_prog3.mp3\"}]",
     "discard_background": "false",
     "images": "[{\"filename\":\"https://images.code.org/ae2988f82299dd799aa3d9b9c21b5416-image-1475779799097.png\",\"position\":[155,153]}]\r\n\r\n",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

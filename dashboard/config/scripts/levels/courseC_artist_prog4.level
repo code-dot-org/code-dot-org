@@ -35,8 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To finish the rocket, just draw the triangle on top!\",\"hint_id\":\"courseC_artist_prog4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/34e62f2ffd3b8cddc8343102b537ca72/courseC_artist_prog4.mp3\"}]",
     "discard_background": "false",
     "ideal": "6",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

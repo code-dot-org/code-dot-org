@@ -28,9 +28,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle is very similar to the last one.\",\"hint_id\":\"courseC_maze_loops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/49914b1a6377ab80886499de4f3801f1/courseC_maze_loops3.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use a `repeat 5 times` block to create the loop.\",\"hint_id\":\"courseC_maze_loops3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/04e5da5c39b4d823b261964c94987f90/courseC_maze_loops3.mp3\"}]",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "[Ryan, 6/28] Updated to remove \"undeletable\" move forward and replace it with a limited # of move forwards in the toolbox\r\n[Mike, 9/26] Changed instructions, added hints, renamed",

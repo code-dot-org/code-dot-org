@@ -35,8 +35,8 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/7aff3b778eeb9c7845e094292a48eab4-image-1475814545170.png\", \"position\": [0,0]}\r\n]\r\n\r\n",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Seems a little out of the blue after the last one back to shapes with no scaffolding. ",
