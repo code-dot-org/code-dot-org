@@ -102,6 +102,8 @@ var loadLevel = function () {
   // Height and width of the goal and obstacles.
   Bounce.MARKER_HEIGHT = skin.markerHeight;
   Bounce.MARKER_WIDTH = skin.markerWidth;
+  Bounce.GOAL_HEIGHT = level.useFlagGoal ? skin.flagHeight : skin.markerHeight;
+  Bounce.GOAL_WIDTH = level.useFlagGoal ? skin.flagWidth : skin.markerWidth;
 
   Bounce.MAZE_WIDTH = Bounce.SQUARE_SIZE * Bounce.COLS;
   Bounce.MAZE_HEIGHT = Bounce.SQUARE_SIZE * Bounce.ROWS;
@@ -338,8 +340,8 @@ var drawMap = function () {
       paddleFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                         'xlink:href',
                                         Bounce.goal);
-      paddleFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-      paddleFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+      paddleFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+      paddleFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
       svg.appendChild(paddleFinishMarker);
     }
   }
@@ -351,8 +353,8 @@ var drawMap = function () {
     ballFinishMarker.setAttributeNS('http://www.w3.org/1999/xlink',
                                     'xlink:href',
                                     Bounce.goal);
-    ballFinishMarker.setAttribute('height', Bounce.MARKER_HEIGHT);
-    ballFinishMarker.setAttribute('width', Bounce.MARKER_WIDTH);
+    ballFinishMarker.setAttribute('height', Bounce.GOAL_HEIGHT);
+    ballFinishMarker.setAttribute('width', Bounce.GOAL_WIDTH);
     svg.appendChild(ballFinishMarker);
   }
 

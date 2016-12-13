@@ -15,6 +15,7 @@ end
 
 When /^I enter the netsim name "([^"]*)"$/ do |username|
   steps %{
+    And I wait until element "#netsim-lobby-name" is visible
     And I type "#{username}" into "#netsim-lobby-name"
     And I press the "Set Name" button
   }
