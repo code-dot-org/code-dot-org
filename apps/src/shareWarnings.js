@@ -83,7 +83,7 @@ exports.checkSharedAppWarnings = function (options) {
   return ReactDOM.render(
     <ShareWarningsDialog
       showStoreDataAlert={!!showStoreDataAlert}
-      promptForAge={promptForAge}
+      promptForAge={!!promptForAge}
       handleClose={handleClose}
       handleTooYoung={handleShareWarningsTooYoung}
     />,
