@@ -5,16 +5,27 @@
 import React from 'react';
 import $ from 'jquery';
 import _ from 'lodash';
-import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
+import {
+  HelpBlock,
+  Button,
+  Radio,
+  FormControl,
+  FormGroup,
+  ControlLabel
+} from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
-function FieldGroup({ id, label, validationState, required, ...props }) {
+function FieldGroup({ id, label, validationState, required, errorText, ...props }) {
+  if (errorText) {
+    validationState = 'error';
+  }
   return (
     <FormGroup controlId={id} validationState={validationState}>
       <ControlLabel>{label}{required && requiredStar}</ControlLabel>
       <FormControl {...props} />
+      {errorText && <HelpBlock>{errorText}</HelpBlock>}
       <br/>
     </FormGroup>
   );
@@ -24,6 +35,7 @@ FieldGroup.propTypes = {
   id: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   validationState: React.PropTypes.string,
+  errorText: React.PropTypes.string,
   required: React.PropTypes.bool
 };
 
@@ -40,6 +52,26 @@ const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExam
 const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
   'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
   'whatTeachingSteps'];
+
+const EMAIL_RE = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+const isEmail = (value) => {
+  if (!value.match(EMAIL_RE)) {
+    return 'Please enter a valid email address, like name@example.com';
+  }
+};
+const isPhoneNumber = (value) => {
+  if (value.replace(/[^0-9]/g, '').length < 10) {
+    return 'Phone numbers must have at least 10 digits, like (123) 456-7890';
+  }
+};
+
+const fieldValidationErrors = {
+  schoolEmail: isEmail,
+  personalEmail: isEmail,
+  principalEmail: isEmail,
+  phoneNumber: isPhoneNumber,
+};
 
 const TeacherApplication = React.createClass({
 
@@ -62,9 +94,21 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.name]: selectedButtons});
   },
 
+  getRequiredValidationErrorMessage(key) {
+    if (this.state[key] !== undefined) {
+      if (this.state[key].length > 0) {
+        if (fieldValidationErrors[key]) {
+          return fieldValidationErrors[key](this.state[key]);
+        }
+      } else {
+        return 'This field is required';
+      }
+    }
+  },
+
   getRequiredValidationState(key) {
     if (this.state[key] !== undefined) {
-      return this.state[key].length > 0 ? 'success' : 'error';
+      return this.getRequiredValidationErrorMessage(key) ? 'error' : 'success';
     }
   },
 
@@ -90,7 +134,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('firstName')}
+          errorText={this.getRequiredValidationErrorMessage('firstName')}
         />
         <FieldGroup
           id="preferredFirstName"
@@ -104,7 +148,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('lastName')}
+          errorText={this.getRequiredValidationErrorMessage('lastName')}
         />
         <FieldGroup
           id="schoolEmail"
@@ -112,7 +156,7 @@ const TeacherApplication = React.createClass({
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('schoolEmail')}
+          errorText={this.getRequiredValidationErrorMessage('schoolEmail')}
         />
         <FieldGroup
           id="personalEmail"
@@ -120,7 +164,7 @@ const TeacherApplication = React.createClass({
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('personalEmail')}
+          errorText={this.getRequiredValidationErrorMessage('personalEmail')}
         />
         <FieldGroup
           id="phoneNumber"
@@ -128,7 +172,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('phoneNumber')}
+          errorText={this.getRequiredValidationErrorMessage('phoneNumber')}
         />
         <ButtonList
           type="radio"
@@ -190,7 +234,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalFirstName')}
+          errorText={this.getRequiredValidationErrorMessage('principalFirstName')}
         />
         <FieldGroup
           id="principalLastName"
@@ -198,7 +242,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalLastName')}
+          errorText={this.getRequiredValidationErrorMessage('principalLastName')}
         />
         <FormGroup validationState={this.getRequiredValidationState('principalPrefix')}>
           <ControlLabel>
@@ -225,7 +269,7 @@ const TeacherApplication = React.createClass({
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalEmail')}
+          errorText={this.getRequiredValidationErrorMessage('principalEmail')}
         />
       </div>
     );
