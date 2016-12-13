@@ -108,39 +108,3 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
-
-
-if (BUILD_STYLEGUIDE) {
-  RunButton.displayName = 'RunButton';
-  ResetButton.displayName = 'ResetButton';
-  module.exports.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('RunButton', module)
-      .addStoryTable([
-        {
-          name: 'default',
-          description: 'The way the button is rendered with only default props',
-          story: () => <RunButton />,
-        },
-        {
-          name: 'minecraft version',
-          description: 'this is special for some reason',
-          story: () => <RunButton isMinecraft/>,
-        },
-      ]);
-    storybook
-      .storiesOf('ResetButton', module)
-      .addStoryTable([
-        {
-          name: 'default',
-          description: 'You have to explicitly set display: block to make this show up. It is hidden by default?!',
-          story: () => <ResetButton style={{display: 'block'}} />
-        },
-        {
-          name: 'text hidden',
-          description: 'You can hide the text with the hideText prop',
-          story: () => <ResetButton style={{display: 'block'}} hideText />
-        }
-      ]);
-  };
-}
