@@ -2827,69 +2827,80 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     }
   }
 
-  // Actor Emotion
-  blockly.Blocks.studio_getActorHasEmotion = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, true);
+  function addRegularAndParamsVersions(name, initFunc, generatorFunc) {
+    let regular = `studio_${name}`;
+    let params = `studio_${name}Params`;
 
-      if (blockInstallOptions.isK1) {
-        const fieldImageDropdown = new blockly.FieldImageDropdown(this.K1_VALUES, 34, 34);
-        fieldImageDropdown.setValue(this.K1_VALUES[0][1]); // default to normal
-        this.appendDummyInput()
-          .appendTitle(msg.emotion())
-          .appendTitle(fieldImageDropdown, 'VALUE');
-      } else {
-        const dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[1][1]);  // default to normal
-        this.appendDummyInput()
-          .appendTitle(dropdown, 'VALUE');
+    Blockly.Blocks[regular] = {
+      init: function () {
+        initFunc.call(this, true);
       }
+    };
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
+    Blockly.Blocks[params] = {
+      init: function () {
+        initFunc.call(this, false);
+      }
+    };
 
-  blockly.Blocks.studio_getActorHasEmotionParams = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, false);
+    generator[regular] = function () {
+      return generatorFunc.call(this, true);
+    };
+    generator[params] = function () {
+      return generatorFunc.call(this, false);
+    };
+  }
 
-      const dropdown = new blockly.FieldDropdown(this.VALUES);
-      dropdown.setValue(this.VALUES[1][1]);  // default to normal
-      this.appendDummyInput()
-          .appendTitle(dropdown, 'VALUE');
+  // Actor Emotion
+  const EMOTION_VALUES = [
+    [msg.getActorHasEmotionNormal(), Emotions.NORMAL.toString()],
+    [msg.getActorHasEmotionHappy(), Emotions.HAPPY.toString()],
+    [msg.getActorHasEmotionAngry(), Emotions.ANGRY.toString()],
+    [msg.getActorHasEmotionSad(), Emotions.SAD.toString()]
+  ];
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
-
-  generator.studio_getActorHasEmotion = function () {
-   return [`Studio.getSpriteEmotion('block_id_${this.id}', ${this.getTitleValue('SPRITE')}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
-
-  generator.studio_getActorHasEmotionParams = function () {
-   return [`Studio.getSpriteEmotion('block_id_${this.id}', ${getSpriteIndex(this)}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
-
-  blockly.Blocks.studio_getActorHasEmotion.VALUES =
-      blockly.Blocks.studio_getActorHasEmotionParams.VALUES = [
-        [msg.getActorHasEmotionNormal(), Emotions.NORMAL.toString()],
-        [msg.getActorHasEmotionHappy(), Emotions.HAPPY.toString()],
-        [msg.getActorHasEmotionAngry(), Emotions.ANGRY.toString()],
-        [msg.getActorHasEmotionSad(), Emotions.SAD.toString()]
-      ];
-
-  blockly.Blocks.studio_getActorHasEmotion.K1_VALUES = [
+  const K1_EMOTION_VALUES = [
     [blockInstallOptions.skin.emotionNormal, Emotions.NORMAL.toString()],
     [blockInstallOptions.skin.emotionHappy, Emotions.HAPPY.toString()],
     [blockInstallOptions.skin.emotionAngry, Emotions.ANGRY.toString()],
     [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
   ];
+
+  addRegularAndParamsVersions('ifActorHasEmotion', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
+
+    appendActorSelect(this, actorSelectDropdown);
+
+    if (blockInstallOptions.isK1) {
+      const fieldImageDropdown = new blockly.FieldImageDropdown(K1_EMOTION_VALUES, 34, 34);
+      fieldImageDropdown.setValue(K1_EMOTION_VALUES[0][1]); // default to normal
+      this.appendDummyInput()
+        .appendTitle(msg.emotion())
+        .appendTitle(fieldImageDropdown, 'EMOTION');
+    } else {
+      const dropdown = new blockly.FieldDropdown(EMOTION_VALUES);
+      dropdown.setValue(EMOTION_VALUES[1][1]);  // default to normal
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'EMOTION');
+    }
+
+    this.appendStatementInput('DO');
+
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let emotion = this.getTitleValue('EMOTION');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (emotion) {\n  if (emotion === ${emotion}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteEmotion('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
 
   // Actor Position
   const POSITION_VALUES = [
@@ -2897,51 +2908,72 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorYPosition(), 'y'],
   ];
 
-  blockly.Blocks.studio_getActorPosition = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(258, 0.35, 0.62);
-      appendActorSelect(this, true);
+  addRegularAndParamsVersions('ifActorPosition', function (actorSelectDropdown) {
+    const OPERATORS = Blockly.RTL ? [
+      ['=', 'EQ'],
+      ['\u2260', 'NEQ'],
+      ['>', 'LT'],
+      ['\u2265', 'LTE'],
+      ['<', 'GT'],
+      ['\u2264', 'GTE']
+    ] : [
+      ['=', 'EQ'],
+      ['\u2260', 'NEQ'],
+      ['<', 'LT'],
+      ['\u2264', 'LTE'],
+      ['>', 'GT'],
+      ['\u2265', 'GTE']
+    ];
 
-      this.appendDummyInput()
-        .appendTitle(' ');
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
 
-      const dropdown = new blockly.FieldDropdown(POSITION_VALUES);
-      dropdown.setValue(POSITION_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    appendActorSelect(this, actorSelectDropdown);
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.NUMBER);
-    }
-  };
+    this.appendDummyInput()
+      .appendTitle(' ');
 
-  blockly.Blocks.studio_getActorPositionParams = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(258, 0.35, 0.62);
-      appendActorSelect(this, false);
+    const positionDropdown = new blockly.FieldDropdown(POSITION_VALUES);
+    positionDropdown.setValue(POSITION_VALUES[0][1]);
 
-      this.appendDummyInput()
-        .appendTitle(' ');
+    this.appendDummyInput()
+      .appendTitle(positionDropdown, 'POSITION');
 
-      const dropdown = new blockly.FieldDropdown(POSITION_VALUES);
-      dropdown.setValue(POSITION_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    const operatorDropdown = new Blockly.FieldDropdown(OPERATORS);
+    this.appendDummyInput()
+      .appendTitle(operatorDropdown, 'OPERATOR');
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.NUMBER);
-    }
-  };
+    this.appendValueInput('COMPARED_VALUE');
 
-  generator.studio_getActorPosition = function () {
-   return [`Studio.getSpriteXY('block_id_${this.id}', ${this.getTitleValue('SPRITE')}).${this.getTitleValue('VALUE')}`, 0];
-  };
+    this.appendStatementInput('DO');
 
-  generator.studio_getActorPositionParams = function () {
-   return [`Studio.getSpriteXY('block_id_${this.id}', ${getSpriteIndex(this)}).${this.getTitleValue('VALUE')}`, 0];
-  };
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    const OPERATORS = {
+      EQ: '==',
+      NEQ: '!=',
+      LT: '<',
+      LTE: '<=',
+      GT: '>',
+      GTE: '>='
+    };
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let position = this.getTitleValue('POSITION');
+    let operator = this.getTitleValue('OPERATOR');
+    let order = (operator === 'EQ' || operator === 'NEQ') ?
+        Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
+    let comparedValue = Blockly.JavaScript.valueToCode(this, 'COMPARED_VALUE', order) || '0';
+    let branch = generator.statementToCode(this, 'DO');
+    let comparison = `${position} ${OPERATORS[operator]} ${comparedValue}`;
+    let callback = `function (x, y) {\n  if (${comparison}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteXY('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
 
   // Actor Visibility
   const VISIBILITY_VALUES = [
@@ -2949,90 +2981,69 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorVisible(), 'true']
   ];
 
-  blockly.Blocks.studio_getActorIsVisible = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, true);
+  addRegularAndParamsVersions('ifActorIsVisible', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
 
-      const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
-      dropdown.setValue(VISIBILITY_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    appendActorSelect(this, actorSelectDropdown);
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
+    const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
+    dropdown.setValue(VISIBILITY_VALUES[0][1]);
 
-  blockly.Blocks.studio_getActorIsVisibleParams = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, false);
+    this.appendDummyInput()
+      .appendTitle(dropdown, 'VALUE');
 
-      const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
-      dropdown.setValue(VISIBILITY_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    this.appendStatementInput('DO');
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
-  generator.studio_getActorIsVisible = function () {
-   return [`Studio.getSpriteVisibility('block_id_${this.id}', ${this.getTitleValue('SPRITE')}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let value = this.getTitleValue('VALUE');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  }\n}`;
 
-  generator.studio_getActorIsVisibleParams = function () {
-   return [`Studio.getSpriteVisibility('block_id_${this.id}', ${getSpriteIndex(this)}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
+    return `Studio.getSpriteVisibility('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
 
   // Actor Sprite
-  const SPRITE_VALUES = blockInstallOptions.skin.spriteChoices.map(choice => {
+  const SPRITE_VALUES = blockInstallOptions.skin.spriteChoices.filter(choice => {
+    // don't include "random"
+    return choice[1] !== RANDOM_VALUE;
+  }).map(choice => {
     return [msg.isSet() + ' ' + choice[0], choice[1]];
   });
 
-  blockly.Blocks.studio_getActorIsSprite = {
-    helpUrl: '',
-    init: function () {
+  addRegularAndParamsVersions('ifActorIsSprite', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
 
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, true);
+    appendActorSelect(this, actorSelectDropdown);
 
-      const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
-      dropdown.setValue(SPRITE_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
+    dropdown.setValue(SPRITE_VALUES[0][1]);
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
+    this.appendDummyInput()
+      .appendTitle(dropdown, 'VALUE');
 
-  blockly.Blocks.studio_getActorIsSpriteParams = {
-    helpUrl: '',
-    init: function () {
-      this.setHSV(196, 1.0, 0.79);
-      appendActorSelect(this, false);
+    this.appendStatementInput('DO');
 
-      const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
-      dropdown.setValue(SPRITE_VALUES[0][1]);
-      this.appendDummyInput()
-        .appendTitle(dropdown, 'VALUE');
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
-      this.setInputsInline(true);
-      this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
-    }
-  };
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let value = this.getTitleValue('VALUE');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  }\n}`;
 
-  generator.studio_getActorIsSprite = function () {
-   return [`Studio.getSpriteValue('block_id_${this.id}', ${this.getTitleValue('SPRITE')}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
-
-  generator.studio_getActorIsSpriteParams = function () {
-   return [`Studio.getSpriteValue('block_id_${this.id}', ${getSpriteIndex(this)}) === ${this.getTitleValue('VALUE')}`, 0];
-  };
-
+    return `Studio.getSpriteValue('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
 }
