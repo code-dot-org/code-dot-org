@@ -12,7 +12,9 @@ const ButtonList = React.createClass({
     answers: React.PropTypes.array.isRequired,
     includeOther: React.PropTypes.bool,
     onChange: React.PropTypes.func,
-    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string])
+    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string]),
+    required: React.PropTypes.bool,
+    validationState: React.PropTypes.string
   },
 
   renderInputComponents() {
@@ -34,7 +36,8 @@ const ButtonList = React.createClass({
     }
 
     const options = answers.map ( (answer, i) => {
-      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer) : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer)
+        : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
       return (
         <InputComponent
           value={answer}
@@ -54,15 +57,16 @@ const ButtonList = React.createClass({
 
   render() {
     return (
-      <div>
+      <FormGroup id={this.props.groupName} validationState={this.props.validationState}>
         <ControlLabel>
           {this.props.label}
+          {this.props.required && (<span style={{color: 'red'}}> *</span>)}
         </ControlLabel>
-        <FormGroup id={this.props.groupName}>
+        <FormGroup>
           {this.renderInputComponents()}
         </FormGroup>
         <br/>
-      </div>
+      </FormGroup>
     );
   }
 });
