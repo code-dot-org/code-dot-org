@@ -504,12 +504,16 @@ const TeacherApplication = React.createClass({
       });
     }
 
-    if (document.getElementById('school-district-other').checked || document.getElementBYId('school-other').checked) {
+    if (document.getElementById('school-district-other').checked ||
+      document.getElementById('school-other').checked) {
       _.assign(districtValues, {
         ['school-name']: document.getElementById('school-name').value,
-        ['school-zipcode']: document.getElementById('school-zipcode')
+        ['school-zipcode']: document.getElementById('school-zipcode').value
       });
     }
+
+    console.log('Getting from the district');
+    console.log(districtValues);
 
     this.setState(districtValues);
   },
