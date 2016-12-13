@@ -32,8 +32,8 @@ const subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'H
   'Multimedia', 'Foreign Language'];
 const yesNoResponses = ['Yes', 'No'];
 const beliefPoll = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
-const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'schoolEmail', 'personalEmail', 'phoneNumber',
-  'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
+const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'schoolEmail', 'personalEmail',
+  'phoneNumber', 'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
 const requiredCsdFields = ['csdGrades'];
 const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExamIntent'];
@@ -487,10 +487,36 @@ const TeacherApplication = React.createClass({
     );
   },
 
+  validateDistrictDropdown() {
+    //The district dropdown is not a react component like the rest of this form's components.
+    //That's why we're doing it separately here
+    const districtValues = {
+      ['us-or-international']: document.getElementById('us-or-international').value,
+      ['school-type']: document.getElementById('school-type').value,
+      ['school-state']: document.getElementById('school-state').value,
+      ['school-district']: document.querySelector('#school-district input').value,
+      ['school']: document.querySelector('#school input').value
+    };
+
+    if (document.getElementById('school-district-other').checked) {
+      _.assign(districtValues, {
+        ['school-district-name']: document.getElementById('school-district-name').value
+      });
+    }
+
+    if (document.getElementById('school-district-other').checked || document.getElementBYId('school-other').checked) {
+      _.assign(districtValues, {
+        ['school-name']: document.getElementById('school-name').value,
+        ['school-zipcode']: document.getElementById('school-zipcode')
+      });
+    }
+
+    this.setState(districtValues);
+  },
+
   onSubmitButtonClick() {
-    /*
-    If we see Other String, then replace it with the value of the input control in the script
-     */
+    this.validateDistrictDropdown();
+
     const formData = _.cloneDeep(this.state);
     let topInvalidElementId;
 
@@ -500,6 +526,9 @@ const TeacherApplication = React.createClass({
       requiredSurveyFields
     ));
 
+    /*
+     If we see Other String, then replace it with the value of the input control in the script
+     */
     _.forEach(formData, (value, key) => {
       if (value && value.indexOf(otherString) >= 0) {
         const valueToReplaceWith = $(`#${key}_other`).val();
