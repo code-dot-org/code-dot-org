@@ -579,7 +579,7 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    if (this.validateDistrictData(formData)) {
+    if (this.validateDistrictData(districtValues)) {
       document.getElementById('district-error-placeholder').innerHTML = '';
     } else {
       topInvalidElementId = 'district-error-placeholder';
