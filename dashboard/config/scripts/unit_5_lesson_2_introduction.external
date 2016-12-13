@@ -11,6 +11,10 @@ In the last lesson we looked at Design Mode, an easy way to add UI elements to o
 
 ## Vocabulary
 
+* **Debugging** - Finding and fixing problems in your code or algorithm
+* **User Interface (UI)** - The "User Interface" or UI of an app refers to how a person (user) interacts with the computer or app.
+* **Event-driven program** -  a program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
+* **Event handling** - an overarching term for the coding tasks involved in making your app respond to events by triggering functions.
 
 
 ## Lesson
