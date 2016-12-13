@@ -324,6 +324,9 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+
+      get :teacher_applications, to: 'teacher_applications#index'
+      post :teacher_applications, to: 'teacher_applications#create'
     end
   end
 
