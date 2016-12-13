@@ -7,7 +7,9 @@ window.SchoolInfoManager = function (existingOptions) {
   var districtElement = $('#school-district-id');
 
   function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
+    if (!existingOptions['suppressScrolling']) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
 
   function setupDistrictDropdown(stateCode) {
@@ -42,10 +44,10 @@ window.SchoolInfoManager = function (existingOptions) {
           callback();
           districtListFirstLoad = false;
         },
-        success: function (res) {
+        success: function (response) {
           var districts = [];
-          for (var i = 0; i < res.object.length; i++) {
-            var entry = res.object[i];
+          for (var i = 0; i < response.length; i++) {
+            var entry = response[i];
             districts.push({value: entry.id, text: entry.name});
           }
           callback(districts);

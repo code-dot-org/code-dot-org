@@ -19,7 +19,6 @@ export const cell = {
   fontSize: 14,
   maxWidth: maxCellWidth,
   overflow: 'hidden',
-  whiteSpace: 'nowrap',
 };
 
 export const addButtonCell = {
@@ -38,6 +37,7 @@ export const headerCell = {
   border: '1px solid gray',
   maxWidth: maxCellWidth,
   padding: '6px 10px',
+  whiteSpace: 'nowrap',
 };
 
 export const link = {

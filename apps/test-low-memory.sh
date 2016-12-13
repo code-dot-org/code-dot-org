@@ -4,5 +4,4 @@
 # We break them up here to support more granular retries.
 npm run lint && \
 for i in 1 2; do npm run test:unit && break; done && \
-for i in 1 2; do npm run test:integration && break; done && \
-for i in 1 2; do npm run test:code-studio && break; done
+for i in 1 2; do npm run test:integration && break; done

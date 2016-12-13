@@ -269,7 +269,7 @@ export const ImportScreensDialog = React.createClass({
 
 export default connect(
   state => ({
-    isOpen: state.screens.isImportingScreen && state.screens.importProject.fetchedProject,
+    isOpen: !!(state.screens.isImportingScreen && state.screens.importProject.fetchedProject),
     project: state.screens.importProject.importableProject,
   }),
   dispatch => ({

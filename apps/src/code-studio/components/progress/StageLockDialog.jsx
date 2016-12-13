@@ -59,6 +59,9 @@ const styles = {
   buttonContainer: {
     textAlign: 'right',
     marginRight: 15
+  },
+  hidden: {
+    display: 'none'
   }
 };
 
@@ -144,6 +147,8 @@ const StageLockDialog = React.createClass({
     const responsiveHeight = {
       maxHeight: window.innerHeight * 0.8 - 100
     };
+    const hasSelectedSection = this.props.selectedSectionId !== "";
+    const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
@@ -152,9 +157,9 @@ const StageLockDialog = React.createClass({
         <div style={[styles.main, responsiveHeight]}>
           <div>
             <span style={styles.title}>{commonMsg.assessmentSteps()}</span>
-            <SectionSelector requireSelection={true}/>
+            <SectionSelector requireSelection={hasSelectedSection}/>
           </div>
-          <table>
+          <table style={hiddenUnlessSelectedSection}>
             <tbody>
               <tr>
                 <td>1. {commonMsg.allowEditingInstructions()}</td>
@@ -213,12 +218,12 @@ const StageLockDialog = React.createClass({
               </tr>
             </tbody>
           </table>
-          <div style={styles.descriptionText}>{commonMsg.autolock()}</div>
-          <div style={styles.title}>{commonMsg.studentControl()}</div>
-          <div style={styles.descriptionText}>
+          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>{commonMsg.autolock()}</div>
+          <div style={[styles.title, hiddenUnlessSelectedSection]}>{commonMsg.studentControl()}</div>
+          <div style={[styles.descriptionText, hiddenUnlessSelectedSection]}>
             {commonMsg.studentLockStateInstructions()}
           </div>
-          <table style={styles.studentTable}>
+          <table style={[styles.studentTable, hiddenUnlessSelectedSection]}>
             <thead>
               <tr>
                 <th style={styles.headerRow}>{commonMsg.student()}</th>
@@ -289,7 +294,7 @@ const StageLockDialog = React.createClass({
             {commonMsg.dialogCancel()}
           </button>
           <button
-            style={progressStyles.blueButton}
+            style={[progressStyles.blueButton, hiddenUnlessSelectedSection]}
             onClick={this.handleSave}
             disabled={this.props.saving}
           >
