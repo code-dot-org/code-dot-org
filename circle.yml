@@ -29,7 +29,8 @@ dependencies:
     - ./bin/circle/upgrade-google-chrome.sh
     - google-chrome --version
     # Install Yarn
-    - npm install -g yarn@0.16.1
+    - ./bin/circle/install-yarn.sh
+    - yarn --version
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
