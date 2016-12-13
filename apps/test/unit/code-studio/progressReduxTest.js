@@ -60,11 +60,11 @@ const stageData = [
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher",
     lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf"
   },
-  // stage 2
+  // stage 2 (hacked to have 3 levels)
   {
     script_id: 36,
     script_name: "course3",
-    script_stages: 21,
+    script_stages: 3,
     freeplay_links: ["playlab", "artist"],
     id: 265,
     position: 2,
@@ -116,6 +116,17 @@ const initialScriptOverviewProgress = {
   peerReviewsRequired: 0
 };
 
+// The initial progress passed to the puzzle page
+const initialPuzzlePageProgress = {
+  currentLevelId: "341",
+  professionalLearningCourse: false,
+  saveAnswersBeforeNavigation: false, // TODO : when used?
+  // We're on a puzzle in stage 2. That is the only provided stage
+  stages: [stageData[1]],
+  scriptName: 'course3',
+  peerReviewsRequired: undefined
+};
+
 describe('progressReduxTest', () => {
   describe('reducer', () => {
     const initialState = reducer(undefined, {});
@@ -123,15 +134,26 @@ describe('progressReduxTest', () => {
     it('can initialize progress on script overview page', () => {
       // Simulate progress initialization from script overview page
       const action = initProgress(initialScriptOverviewProgress);
-      const nextState = reducer(initialState, action);
+      const nextState = reducer(undefined, action);
 
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, false);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, stageData);
+      assert.deepEqual(nextState.stages, initialScriptOverviewProgress.stages);
       assert.equal(nextState.scriptName, 'course3');
-      // TODO - this only matters for non-overview version
-      // assert.equal(nextState.currentStageId, 264, 'Current stage becomes first stage');
+      assert.equal(nextState.currentStageId, undefined);
+    });
+
+    it('can initialize progress on puzzle page', () => {
+      const action = initProgress(initialPuzzlePageProgress);
+      const nextState = reducer(undefined, action);
+
+      assert.equal(nextState.currentLevelId, "341");
+      assert.equal(nextState.professionalLearningCourse, false);
+      assert.equal(nextState.saveAnswersBeforeNavigation, false);
+      assert.deepEqual(nextState.stages, initialPuzzlePageProgress.stages);
+      assert.equal(nextState.scriptName, 'course3');
+      assert.equal(nextState.currentStageId, 265);
     });
 
     it ('can merge in fresh progress', () => {
@@ -180,6 +202,8 @@ describe('progressReduxTest', () => {
     });
 
     it('can update progress', () => {
+      // Construct state with a single stage/level that has progress, but is
+      // not perfect
       const state = {
         levelProgress: {
           341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
@@ -198,6 +222,7 @@ describe('progressReduxTest', () => {
         ],
       };
 
+      // update progress to perfect
       const action = mergeProgress({ 341: TestResults.ALL_PASS });
       const nextState = reducer(state, action);
       assert.equal(nextState.stages[0].levels[0].status, LevelStatus.perfect);
@@ -205,6 +230,8 @@ describe('progressReduxTest', () => {
     });
 
     it('cannot move progress backwards', () => {
+      // Construct state with a single stage/level that has progress, which is
+      // perfect
       const state = {
         levelProgress: {
           339: TestResults.ALL_PASS
@@ -223,6 +250,7 @@ describe('progressReduxTest', () => {
         ],
       };
 
+      // try to update progress to a worse result
       const action = mergeProgress({ 341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED });
       const nextState = reducer(state, action);
       // TODO - I'm writing tests for current behavior, but this seems like non-

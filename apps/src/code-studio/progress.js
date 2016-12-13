@@ -188,6 +188,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
         return level.result;
       });
+      // TODO (brent): can i have a separate action for performin peer reviews
       store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));
     }
   });
