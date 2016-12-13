@@ -11,7 +11,7 @@ Once we have stored a list of information in an array, we will want to process t
 
 ## Vocabulary
 
-**`for` loop:** a loop which facilitates running a block of code a predetermined number of times through use of a counter variable.
+**`for` loop:** A typical looping construct designed to make it easy to repeat a section of code using a counter variable.  The for loop combines the creation of a variable, a boolean looping condition, and an update to the variable in one statement.
 
 ## Lesson
 
