@@ -1,10 +1,20 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
 - code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
 - video_download_url = 'https://videos.code.org/teacher/start-teaching-code-studio-SD.mp4'
+- beyond_url = 'https://code.org/educate'
 
 .teacher-announce
   .announce-heading
     = I18n.t(:dashboard_announcements)
+  .announce-content
+    %a{href: beyond_url, target: '_blank'}
+      .content-img-container
+        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/go-beyond.jpg'), width: '200px'}
+    .content-text
+      = I18n.t(:dashboard_announce_go_beyond)
+    .announce-learn-more
+      %a{href: beyond_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_go_beyond_button)
   .announce-content
     %a{href: code_studio_video_url, target: '_blank'}
       .content-img-container
