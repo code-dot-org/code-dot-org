@@ -13,17 +13,10 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
 
     teacher_application.user = create :teacher
     teacher_application.primary_email = 'teacher@example.net'
-    teacher_application.secondary_email = 'teacher@my.school.edu'
+    teacher_application.secondary_email = 'teacher+tag@my.school.edu'
     teacher_application.application = {}
 
     assert teacher_application.valid?
-  end
-
-  test 'teacher validation' do
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :pd_teacher_application, user: create(:student)
-    end
-    assert_equal 'Validation failed: User must be a teacher', e.message
   end
 
   test 'user unique constraint' do
