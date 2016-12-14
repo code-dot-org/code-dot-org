@@ -45,9 +45,8 @@ const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
 const subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'History', 'English', 'Music', 'Art',
   'Multimedia', 'Foreign Language', 'Business'];
 const yesNoResponses = ['Yes', 'No'];
-const beliefPoll = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
-const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'schoolEmail', 'personalEmail',
-  'phoneNumber', 'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
+const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail', 'secondaryEmail', 'phoneNumber',
+  'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
 const requiredCsdFields = ['csdGrades'];
 const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExamIntent'];
@@ -71,8 +70,8 @@ const isPhoneNumber = (value) => {
 };
 
 const fieldValidationErrors = {
-  schoolEmail: isEmail,
-  personalEmail: isEmail,
+  primaryEmail: isEmail,
+  secondaryEmail: isEmail,
   principalEmail: isEmail,
   phoneNumber: isPhoneNumber,
 };
@@ -112,7 +111,7 @@ const TeacherApplication = React.createClass({
 
   getRequiredValidationState(key) {
     if (this.state[key] !== undefined) {
-      return this.getRequiredValidationErrorMessage(key) ? 'error' : 'success';
+      return this.getRequiredValidationErrorMessage(key) ? 'error' : null;
     }
   },
 
@@ -162,19 +161,19 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="schoolEmail"
-          label="Your school email address"
+          label="Primary email address"
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          errorText={this.getRequiredValidationErrorMessage('schoolEmail')}
+          errorText={this.getRequiredValidationErrorMessage('primaryEmail')}
         />
         <FieldGroup
-          id="personalEmail"
+          id="secondaryEmail"
           label="Your personal email address (we may need to contact you during the summer)"
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          errorText={this.getRequiredValidationErrorMessage('personalEmail')}
+          errorText={this.getRequiredValidationErrorMessage('secondaryEmail')}
         />
         <FieldGroup
           id="phoneNumber"
@@ -362,8 +361,10 @@ const TeacherApplication = React.createClass({
             type="radio"
             label="I will be teaching Computer Science Principles as an (select one)"
             answers={[
-              'Introductory course',
-              'AP course',
+              "AP course only",
+              "Introductory course only",
+              "AP course and introductory course",
+              "I don't know yet"
             ]}
             groupName="cspApCourse"
             onChange={this.handleRadioButtonListChange}
@@ -405,7 +406,7 @@ const TeacherApplication = React.createClass({
         <div style={{fontWeight: 'bold'}}>
           As a reminder, teachers in this program are required to participate in:
           <li>
-            One five-day summer workshop in 2017
+            One five-day summer workshop in 2017 (may require travel with expenses paid)
           </li>
           <li>
             Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
@@ -484,8 +485,8 @@ const TeacherApplication = React.createClass({
                           <td key={j} style={likertSurveyCell}>
                             <Radio
                               name={question}
-                              value={beliefPoll[j]}
-                              checked={this.state[question] === beliefPoll[j]}
+                              value={j + 1}
+                              checked={parseInt(this.state[question]) === j + 1}
                               onChange={this.handleRadioButtonListChange}
                             />
                           </td>
@@ -506,7 +507,7 @@ const TeacherApplication = React.createClass({
   renderComputerScienceAtYourSchool() {
     return (
       <div>
-        <p style={{fontWeight: 'bold'}}>
+        <p style={{fontWeight: 'bold', fontSize: '16px'}}>
           We would like to learn more about your school, and why you want to participate in our Professional Learning
           Program. Please share your responses to the following questions:
         </p>
@@ -595,7 +596,7 @@ const TeacherApplication = React.createClass({
         document.getElementById(topInvalidElementId)
       );
     }
-
+    console.log(formData);
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
@@ -619,7 +620,6 @@ const TeacherApplication = React.createClass({
     }).done(() => {
       // TODO: modify state, render submitted on client side.
       window.location.reload(true);
-      //alert('success :)');
 
     }).fail(data => {
       // TODO: render error message(s) nicely on client.
@@ -630,8 +630,13 @@ const TeacherApplication = React.createClass({
   renderSubmitButton() {
     return (
       <div>
+        <p style={{fontSize: '16px', fontWeight: 'bold'}}>
+          Code.org works closely with local Regional Partners to organize and deliver the Professional LearningProgram.
+          By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
+          survey with your assigned Regional Partner and your school district.
+        </p>
         <Button onClick={this.onSubmitButtonClick}>
-          Submit application
+          Complete and Send
         </Button>
       </div>
     );
