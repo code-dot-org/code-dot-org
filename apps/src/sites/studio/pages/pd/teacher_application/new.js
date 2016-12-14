@@ -12,11 +12,13 @@ $('#school-district').change(function () {
       method: "GET",
       url: `/api/v1/regional-partners/${districtValue}.json`
     }).done(data => {
-      let regionalPartnerGroup = data['group']
+      let regionalPartnerGroup = data ? data['group'] : undefined;
       ReactDOM.render(<TeacherApplication regionalPartnerGroup={regionalPartnerGroup}/>, document.getElementById('application-container'));
     }).fail(data => {
-      console.log(`error: ${data}`)
-    })
+      console.log(`error: ${data}`);
+    });
+  } else {
+    ReactDOM.render(<TeacherApplication/>, document.getElementById('application-container'));
   }
-})
+});
 
