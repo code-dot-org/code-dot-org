@@ -542,8 +542,9 @@
     fornisce strumenti gratuiti e risorse per perseguire la tua passione.
   minecraft_subtitle: L'Ora del Codice con Minecraft
   sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_og_title: Hour of Code Sports Tutorials
+  sports_og_description: Choose between making a basketball game or mix and match
+    across sports.
   sports_title: Code your own sports game
   sports_watch_video: Guarda il video
   sports_video_title: Push yourself. Anybody can learn.
@@ -2039,5 +2040,11 @@
     Heat
   sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
     Dallas Mavericks
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. We designed our curriculum so any educator
+    can teach computer science, from Kindergarten to 12th grade&mdash;and it's all
+    free. :) <b>Find the next step that's right for your classroom.</b>
+  csp5_name: 'Unit 5: Building Apps'
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
