@@ -1,12 +1,4 @@
 :ruby
-  page_mode = PageMode.get(request)
-  if page_mode == "feature-starwars"
-    first_tutorial = "starwars"
-    second_tutorial = "mc"
-  else
-    first_tutorial = "mc"
-    second_tutorial = "starwars"
-  end
   if request.locale != "en-US"
     launch_path = "/api/hour/begin/starwarsblocks"
   else
@@ -22,10 +14,10 @@
     .carousel-inner
       .item.active
         .col-md-4.col-sm-6.col-xs-12
-          = view :learn_carousel_block, id: first_tutorial
+          = view :learn_carousel_block, id: "mc"
       .item
         .col-md-4.col-sm-6.col-xs-12
-          = view :learn_carousel_block, id: second_tutorial
+          = view :learn_carousel_block, id: "starwars"
       .item
         .col-md-4.col-sm-6.col-xs-12
           = view :learn_carousel_block, id: "frozen"

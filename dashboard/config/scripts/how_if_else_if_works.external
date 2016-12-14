@@ -21,9 +21,6 @@ Not all conditions you want to check have only two possible outcomes. However a 
 
 Here is an example that is similar to the one presented in the video.  We've added an extra condition to illustrate how if-else-if statements work.
 
-![]()
-
-
 <span style="color: #00adbc; font-weight: bold; font-size: 120%">1.</span>
 Ask the user to enter their age and save it in a variable.<br>
 
