@@ -1,11 +1,9 @@
 # coding: utf-8
 class Pd::TeacherApplicationMailer < ActionMailer::Base
-  # application receipt email
-  # @param application {name:, email:}
+  default content_type 'text/html'
+
   def application_receipt(teacher_name, teacher_email)
-    content_type = 'text/html'
-    mail content_type: content_type,
-      from: from_teacher,
+    mail from: from_teacher,
       subject: 'Your application has been received',
       to: email_address(teacher_name, teacher_email)
   end
@@ -17,18 +15,14 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
     @teacher_name = teacher_name
     @program_name = program_name
     @program_url = program_url
-    content_type = 'text/html'
-    mail content_type: content_type,
-      from: from_teacher,
+    mail from: from_teacher,
       subject: "Approval requested: #{@teacher_name}’s participation in Code.org Professional Learning Program",
       to: email_address("#{principal_first_name} #{principal_last_name}", principal_email)
   end
 
   def principal_approval_receipt(teacher_first_name, teacher_last_name, teacher_email)
     @teacher_first_name = teacher_first_name
-    content_type = 'text/html'
-    mail content_type: content_type,
-      from: from_teacher,
+    mail from: from_teacher,
       subject: "We've received your principal's approval form",
       to: email_address("#{teacher_first_name} #{teacher_last_name}", teacher_email)
   end
