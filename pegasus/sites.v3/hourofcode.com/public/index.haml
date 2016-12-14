@@ -216,7 +216,7 @@ social:
         .col-md-5
           =view :join_us_description 
         .col-md-1
-        .col-md-6
+        .col-md-6.highlights-column
           %h2.join-us-header=hoc_s(:highlights_title)
           - HIGHLIGHTS_CONSTANTS.reverse_each do |item|
             = view :highlight_item, item: item
