@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class RegionalPartnersSchoolDistrictTest < ActiveSupport::TestCase
-  # This data for this test is initialized in seed.rake
   test "regional partners school districts initialized from tsv" do
+    # populate school_districts and regional_partners, which we depend on as foreign keys
+    RegionalPartner.find_or_create_all_from_tsv('test/fixtures/regional_partners.tsv')
+    SchoolDistrict.find_or_create_all_from_tsv('test/fixtures/school_districts.tsv')
+
+    RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv('test/fixtures/regional_partners_school_districts.tsv')
+
     district = SchoolDistrict.find(100002)
     partner = district.regional_partner
     assert_not_nil partner
