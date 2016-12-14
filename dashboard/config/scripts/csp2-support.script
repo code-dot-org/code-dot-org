@@ -10,6 +10,10 @@ named_level 'Unit 2 Tool Talk'
 named_level 'Practice Performance Tasks in Unit 2'
 named_level 'Unit 2 Self-Assessment'
 
+stage 'AP Preparation and Support', flex_category: 'required'
+named_level 'Unit 2 Vocab and Concept Review Activity'
+named_level 'AP Test Prep Guidance'
+
 stage 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression', flex_category: 'content'
 named_level '2.1 and 2.2 Lesson Connections'
 named_level 'Overview of File Sizes and Metrics'

@@ -1,0 +1,29 @@
+name 'Introduction to Unit 4'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 4: Big Data and Privacy
+
+## Concepts and Topics
+
+<img src="https://images.code.org/ab90ef33f68b4954d5583cb1be306048-image-1481669265787.png" style="width:400px; float:right; margin-left:20px">
+
+The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time.  The major goals of the unit are 1) for students to develop a well-rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.
+
+
+
+## Unit Flow and Breakdown
+
+During the first two weeks of the unit students will research and discuss **innovations enabled by computing in a wide variety of fields (7.2).** During this time views about the benefits - “Big Data is great!” - and drawbacks -  “Big Data is scary!”  will swing quickly.  We primarily want to build toward the dual enduring understandings that **Computing facilitates exploration and the discovery of connections in information (3.2)** and that **Computing innovations influence and are influenced by the economic, social, and cultural contexts in which they are designed and used (7.4)** while the **beneficial and harmful effects (7.3)** of these things must be weighed and kept in balance.
+<br><br>
+
+<img src="https://images.code.org/34a8cac51f6051639e6800934924b03d-image-1481669775598.gif" style="width:400px; float:right; margin-left:20px">
+The activities in the third week around data encryption follow a pattern: introduce an encryption concept through an unplugged activity or thinking prompt, and then “plug it in” by using a Code.org widget to explore the concept further. The purpose of the widgets is to allow students time to play with some of the ideas - often mathematical in nature - underlying different methods of encryption and why they might be susceptible to being “cracked.”  These explorations lead towards an understanding of computationally hard problems and the fact that **algorithms can solve many but not all computational problems (4.2).** In particular students should come away with a high level understanding of how asymmetric encryption works and why it makes certain things possible (sending encrypted data without a shared key) and certain things basically impossible (cracking a key). By investigating some of the mathematical foundations of encryption we build toward the enduring understanding that **cybersecurity is an important concern for the Internet and the systems built on it (6.3) and as always There are trade offs when representing information as digital data (3.3).**
+
+## Building Toward the Explore Task
+Many of the lessons in this unit are designed as practice for elements of the Explore Performance Task. In particular lesson 2 “Rapid Research” is good practice for the kind of relatively quick research and writing students will have to do for the Explore PT. The goal is for students to become facile with looking up sources, reading/skimming articles for their main points, and being able to explain both sides of an argument or dilemma related to big data, security and privacy.
+
+During this unit the teacher should remind students about the Explore PT and its various elements - and keep the focus on the PT throughout the unit since really that’s the ultimate goal. Since many of the areas of investigation are open to student choice, the teacher can help by making sure students are making appropriate choices, helping them get “unstuck”, and pushing them to think more deeply and more specifically about the kinds of things they are interested in. In particular you can always ask, how does this use data to do something innovative? Rather than trying to explain a very broad topic, find a small corner of it that you can explain and demonstrate the innovation involved.
+
+
+
+MARKDOWN
