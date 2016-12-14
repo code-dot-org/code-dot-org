@@ -48,8 +48,8 @@ const yesNoResponses = ['Yes', 'No'];
 const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail', 'secondaryEmail', 'phoneNumber',
   'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
-const requiredCsdFields = ['csdGrades'];
-const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExamIntent'];
+const requiredCsdFields = ['gradesPlanningToTeach'];
+const requiredCspFields = ['cspDuration', 'cspApCourse', 'gradesPlanningToTeach', 'cspApExamIntent'];
 const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
   'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
   'whatTeachingSteps'];
@@ -160,7 +160,7 @@ const TeacherApplication = React.createClass({
           errorText={this.getRequiredValidationErrorMessage('lastName')}
         />
         <FieldGroup
-          id="schoolEmail"
+          id="primaryEmail"
           label="Primary email address"
           type="email"
           onChange={this.handleTextChange}
