@@ -90,4 +90,35 @@ class Pd::TeacherApplication < ActiveRecord::Base
       return 'https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?entry.1124819666=TEACHER+NAME&entry.1772278630=SCHOOL+NAME&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=APPLICATION+ID'
     end
   end
+
+  def school
+    application_json['school'].present? ? School.find(application_json['school']) : nil
+  end
+
+  def school_name
+    school.try(:name) || application_json['school-name']
+  end
+
+  def school_district
+    application_json['school-district'].present? ? SchoolDistrict.find(application_json['school-district']) : nil
+  end
+
+  def school_district_name
+    school_district.try(:name) || application_json['school-district-name']
+  end
+
+  def regional_partner_name
+    school_district.try(:regional_partner).try(:name)
+  end
+
+  def to_expanded_json
+    application_json.merge({
+      id: id,
+      userId: user_id,
+      timestamp: created_at,
+      schoolName: school_name,
+      schoolDistrictName: school_district_name,
+      regionalPartner: regional_partner_name
+    }).stringify_keys
+  end
 end
