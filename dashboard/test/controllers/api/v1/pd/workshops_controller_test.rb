@@ -413,7 +413,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     get :summary, id: workshop.id
     assert_response :success
     response = JSON.parse(@response.body)
-    puts response
 
     assert_equal workshop.state, response['state']
     assert_equal workshop.section.code, response['section_code']

@@ -55,24 +55,5 @@ const ConfirmDeleteButton = React.createClass({
     );
   }
 });
-export default Radium(ConfirmDeleteButton);
 
-if (BUILD_STYLEGUIDE) {
-  ConfirmDeleteButton.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('ConfirmDeleteButton', module)
-      .addStoryTable([
-        {
-          name: 'basic example',
-          description: ``,
-          story: () => (
-            <ConfirmDeleteButton
-              title="Delete table?"
-              body="Are you sure you want to delete the table?"
-              buttonText="Delete table"
-              onConfirm={storybook.action("delete table")}
-            />
-          )
-        }]);
-  };
-}
+export default Radium(ConfirmDeleteButton);

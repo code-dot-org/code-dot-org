@@ -7,6 +7,9 @@ import classNames from 'classnames';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 
+import backgroundImg from '../../static/common_images/shared-sprites-26x26.png';
+import blankImg from '../../static/common_images/1x1.gif';
+
 const styles = {
   main: {
     // common.scss provides an :after selector that ends up adding 18px of height
@@ -16,12 +19,12 @@ const styles = {
   runImage: {
     width: 26,
     height: 26,
-    background: 'url("/blockly/media/common_images/shared-sprites-26x26.png") 0 0'
+    background: `url("${backgroundImg}") 0 0`
   },
   resetImage: {
     width: 26,
     height: 26,
-    background: 'url("/blockly/media/common_images/shared-sprites-26x26.png") 0 26px'
+    background: `url("${backgroundImg}") 0 26px`
   }
 };
 
@@ -35,7 +38,7 @@ export const RunButton = Radium(props => (
       {msg.runProgram()}
     </div>
     <img
-      src="/blockly/media/1x1.gif"
+      src={blankImg}
       style={[!props.isMinecraft && styles.runImage]}
       className={classNames([props.isMinecraft && "run26"])}
     />
@@ -58,7 +61,7 @@ export const ResetButton = Radium(props => (
       {!props.hideText && msg.resetProgram()}
     </div>
     <img
-      src="/blockly/media/1x1.gif"
+      src={blankImg}
       style={[!props.isMinecraft && styles.resetImage, props.imageStyle]}
       className={classNames([props.isMinecraft && "reset26"])}
     />
@@ -66,6 +69,7 @@ export const ResetButton = Radium(props => (
 ));
 ResetButton.propTypes = {
   style: React.PropTypes.object,
+  hideText: React.PropTypes.bool,
   // minecraft depends on styles sheets in some cases, instead of inlined
   isMinecraft: React.PropTypes.bool
 };
@@ -104,25 +108,3 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
 }))(GameButtons);
-
-
-if (BUILD_STYLEGUIDE) {
-  RunButton.displayName = 'RunButton';
-  ResetButton.displayName = 'ResetButton';
-  module.exports.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('RunButton', module)
-      .addWithInfo(
-        'The run button',
-        'This button is used for running programs',
-        () => <RunButton/>
-      );
-    storybook
-      .storiesOf('ResetButton', module)
-      .addWithInfo(
-        'The reset button',
-        'You have to explicitly set display: block to make this show up. It is hidden by default?!',
-        () => <ResetButton style={{display: 'block'}}/>
-      );
-  };
-}
