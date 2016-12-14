@@ -35,7 +35,7 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
 
 FieldGroup.propTypes = {
   id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string,
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
   required: React.PropTypes.bool
@@ -78,6 +78,10 @@ const fieldValidationErrors = {
 
 const TeacherApplication = React.createClass({
 
+  propTypes: {
+    regionalPartnerGroup: React.PropTypes.number
+  },
+
   getInitialState() {
     return {
 
@@ -85,6 +89,7 @@ const TeacherApplication = React.createClass({
   },
 
   handleTextChange(event) {
+    console.log(event);
     this.setState({[event.target.id]: event.target.value});
   },
 
@@ -124,6 +129,13 @@ const TeacherApplication = React.createClass({
   generateTeacherInformationSection() {
     return (
       <div>
+        <FieldGroup
+          id="regionalPartnerGroup"
+          label="regionalPartner"
+          type="text"
+          value={this.state.regionalPartnerGroup}
+          onChange={this.handleTextChange}
+        />
         <ButtonList
           type="check"
           label="Grades served at your school"
@@ -433,9 +445,13 @@ const TeacherApplication = React.createClass({
 
   renderSummerWorkshopSchedule() {
     return (
-      <h2>
-        This section is huge. Putting it off for now.
-      </h2>
+      <div>
+        <SummerWorkshopSchedule
+          regionalPartnerGroup={this.props.regionalPartnerGroup}
+          selectedCourse={this.state.selectedCourse}
+          selectedState={document.getElementById('school-state').value}
+        />
+      </div>
     );
   },
 
@@ -657,6 +673,8 @@ const TeacherApplication = React.createClass({
   },
 
   render() {
+    console.log(this.props.regionalPartnerGroup);
+
     return (
       <div>
         {this.generateTeacherInformationSection()}

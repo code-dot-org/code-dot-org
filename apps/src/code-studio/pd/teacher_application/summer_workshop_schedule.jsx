@@ -49,8 +49,8 @@ const SummerWorkshopSchedule = React.createClass({
   },
 
   renderAssignedWorkshopGroup2OrGroup1Csd() {
-    if (this.props.regionalPartnerGroup === '2' ||
-      (this.props.regionalPartnerGroup === '1' && this.props.selectedCourse == 'csd')) {
+    if (this.props.regionalPartnerGroup === 2 ||
+      (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse == 'csd')) {
       return (
         <div>
           <p>
@@ -64,13 +64,24 @@ const SummerWorkshopSchedule = React.createClass({
   },
 
   renderAssignedWorkshopGroup1Csp() {
-    
+    if (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse === 'csp') {
+      return (
+        <div>
+          <p>
+            We strongly encourage participants to attend their assigned summer workshop (based on the district in which
+            you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
+            you will work in 2017 - 18. Your assigned region and summer workshop date is below.
+          </p>
+        </div>
+      )
+    }
   },
 
   render() {
     return (
       <div>
         {this.renderAssignedWorkshopGroup2OrGroup1Csd()}
+        {this.renderAssignedWorkshopGroup1Csp()}
       </div>
     )
   }
