@@ -26,6 +26,10 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @course)
     @unit_assignment = @enrollment.plc_unit_assignments.first
+
+    sleep(0.1)
+
+    assert_equal [@module_required], @unit_assignment.plc_module_assignments.map(&:plc_learning_module)
   end
 
   test "previewing evaluation already triggers enrollments" do

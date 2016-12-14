@@ -20,6 +20,8 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
 
     @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
     @unit_enrollment = @enrollment.plc_unit_assignments.first
+
+    sleep(0.1)
   end
 
   test 'Enrolling user in a course creates other assignment objects' do
