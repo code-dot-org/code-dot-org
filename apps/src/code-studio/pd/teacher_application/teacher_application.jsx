@@ -326,12 +326,12 @@ const TeacherApplication = React.createClass({
           <ButtonList
             type="check"
             label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
-            groupName="csdGrades"
+            groupName="gradesPlanningToTeach"
             answers={grades.slice(grades.indexOf('6'))}
             onChange={this.handleCheckboxChange}
-            selectedItems={this.state.csdGrades}
+            selectedItems={this.state.gradesPlanningToTeach}
             required={true}
-            validationState={this.getRequiredValidationState('csdGrades')}
+            validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
           />
         </div>
       );
@@ -377,11 +377,11 @@ const TeacherApplication = React.createClass({
             label="To which grades do you plan to teach CS Principles? Please note that the CS Principles Professional
             Learning Program is not available for grades K-8. (select all that apply)"
             answers={grades.slice(grades.indexOf('9'))}
-            groupName="cspGrades"
+            groupName="gradesPlanningToTeach"
             onChange={this.handleCheckboxChange}
-            selectedItems={this.state.cspGrades}
+            selectedItems={this.state.gradesPlanningToTeach}
             required={true}
-            validationState={this.getRequiredValidationState('cspGrades')}
+            validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
           />
           <ButtonList
             type="radio"
