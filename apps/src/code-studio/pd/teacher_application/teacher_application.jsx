@@ -16,6 +16,7 @@ import {
 } from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
 import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
+import SummerProgramContent from './SummerProgramContent';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -84,6 +85,10 @@ const TeacherApplication = React.createClass({
     };
   },
 
+  handleSubformDataChange(changedData) {
+    this.setState(changedData);
+  },
+
   handleTextChange(event) {
     this.setState({[event.target.id]: event.target.value});
   },
@@ -119,6 +124,20 @@ const TeacherApplication = React.createClass({
     if (this.state[key] !== undefined && this.state[key].length === 0) {
       return 'error';
     }
+  },
+
+  componentWillUpdate() {
+    this._errorData = null;
+  },
+
+  get errorData() {
+    if (!this._errorData) {
+      this._errorData = {};
+      for (const key in this.state) {
+        this._errorData[key] = this.getRequiredValidationErrorMessage(key);
+      }
+    }
+    return this._errorData;
   },
 
   generateTeacherInformationSection() {
@@ -400,45 +419,6 @@ const TeacherApplication = React.createClass({
     }
   },
 
-  renderSummerProgramContent() {
-    return (
-      <div id="summerProgramContent">
-        <div style={{fontWeight: 'bold'}}>
-          As a reminder, teachers in this program are required to participate in:
-          <li>
-            One five-day summer workshop in 2017 (may require travel with expenses paid)
-          </li>
-          <li>
-            Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
-          </li>
-          <li>
-            20 hours of online professional development during the 2017 - 18 school year
-          </li>
-          <ButtonList
-            type="radio"
-            label="Are you committed to participating in the entire program?"
-            groupName="committedToSummer"
-            answers={yesNoResponses}
-            includeOther={true}
-            onChange={this.handleRadioButtonListChange}
-            selectedItems={this.state.committedToSummer}
-            required={true}
-            validationState={this.getRequiredValidationState('committedToSummer')}
-          />
-          {this.renderSummerWorkshopSchedule()}
-        </div>
-      </div>
-    );
-  },
-
-  renderSummerWorkshopSchedule() {
-    return (
-      <h2>
-        This section is huge. Putting it off for now.
-      </h2>
-    );
-  },
-
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
       allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
@@ -648,7 +628,11 @@ const TeacherApplication = React.createClass({
         {this.state.selectedCourse === 'csd' && this.renderCSDSpecificContent()}
         {this.state.selectedCourse === 'csp' && this.renderCSPSpecificContent()}
         <hr/>
-        {this.renderSummerProgramContent()}
+        <SummerProgramContent
+          onChange={this.handleSubformDataChange}
+          formData={this.state}
+          errorData={this.errorData}
+        />
         <hr/>
         {this.renderComputerScienceBeliefsPoll()}
         {this.renderComputerScienceAtYourSchool()}
