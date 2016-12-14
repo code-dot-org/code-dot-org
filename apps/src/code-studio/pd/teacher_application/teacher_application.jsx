@@ -148,13 +148,6 @@ const TeacherApplication = React.createClass({
   generateTeacherInformationSection() {
     return (
       <div>
-        <FieldGroup
-          id="regionalPartnerGroup"
-          label="regionalPartner"
-          type="text"
-          value={this.state.regionalPartnerGroup}
-          onChange={this.handleTextChange}
-        />
         <ButtonList
           type="check"
           label="Grades served at your school"
@@ -462,18 +455,6 @@ const TeacherApplication = React.createClass({
     );
   },
 
-  renderSummerWorkshopSchedule() {
-    return (
-      <div>
-        <SummerWorkshopSchedule
-          regionalPartnerGroup={this.props.regionalPartnerGroup}
-          selectedCourse={this.state.selectedCourse}
-          selectedState={document.getElementById('school-state').value}
-        />
-      </div>
-    );
-  },
-
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
       allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
@@ -687,6 +668,9 @@ const TeacherApplication = React.createClass({
           onChange={this.handleSubformDataChange}
           formData={this.state}
           errorData={this.errorData}
+          regionalPartnerGroup={this.props.regionalPartnerGroup}
+          selectedCourse={this.state.selectedCourse}
+          selectedState={document.getElementById('school-state').value}
         />
         <hr/>
         {this.renderComputerScienceBeliefsPoll()}
@@ -696,8 +680,6 @@ const TeacherApplication = React.createClass({
   },
 
   render() {
-    console.log(this.props.regionalPartnerGroup);
-
     return (
       <div>
         {this.generateTeacherInformationSection()}

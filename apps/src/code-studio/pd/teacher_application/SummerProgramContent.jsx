@@ -11,10 +11,15 @@ export default React.createClass({
     onChange: PropTypes.func.isRequired,
     formData: PropTypes.shape({
       committedToSummer: PropTypes.string,
+      ableToAttendAssignedSummerWorkshop: PropTypes.string
     }).isRequired,
     errorData: PropTypes.shape({
       committedToSummer: PropTypes.string,
+      ableToAttendAssignedSummerWorkshop: PropTypes.string
     }).isRequired,
+    regionalPartnerGroup: PropTypes.string,
+    selectedCourse: PropTypes.string,
+    selectedState: PropTypes.string
   },
 
   getInitialState() {
@@ -78,7 +83,22 @@ export default React.createClass({
               </Button>
             </Modal.Footer>
           </Modal>
-          <SummerWorkshopSchedule />
+          <SummerWorkshopSchedule
+            regionalPartnerGroup={this.props.regionalPartnerGroup}
+            selectedCourse={this.props.selectedCourse}
+            selectedState={this.props.selectedState}
+          />
+          <ButtonList
+            type="radio"
+            label="Are you able to attend your assigned summer workshop?"
+            groupName="ableToAttendAssignedSummerWorkshop"
+            answers={['Yes', 'No']}
+            includeOther
+            onChange={this.radioButtonListChange}
+            selectedItems={this.props.formData.ableToAttendAssignedSummerWorkshop}
+            required
+            errorText={this.props.errorData.ableToAttendAssignedSummerWorkshop}
+          />
         </div>
       </div>
     );
