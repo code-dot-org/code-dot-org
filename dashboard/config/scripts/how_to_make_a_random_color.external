@@ -24,9 +24,9 @@ markdown <<MARKDOWN
 
 <p>Yup.  I think the code should look something like this:</p>
 
-<pre><code>var R = randomNubmer(0,255);
-var G = randomNubmer(0,255);
-var B = randomNubmer(0,255);
+<pre><code>var R = randomNumber(0,255);
+var G = randomNumber(0,255);
+var B = randomNumber(0,255);
 
 var color = "rgb("+R+", "+G+", "+B+")";
 </code></pre>
@@ -72,9 +72,9 @@ var diffColor = "rgb("+R+", "+G+", "+B+")";
 
 <p>Brilliant!  Okay so back when we generate the random color in the first place we should do this:</p>
 
-<pre><code>var R = randomNubmer(0,235);
-var G = randomNubmer(0,235);
-var B = randomNubmer(0,235);
+<pre><code>var R = randomNumber(0,235);
+var G = randomNumber(0,235);
+var B = randomNumber(0,235);
 
 var color = "rgb("+R+", "+G+", "+B+")";
 </code></pre>
