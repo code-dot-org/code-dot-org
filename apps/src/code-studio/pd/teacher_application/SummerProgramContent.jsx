@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList} from '../form_components/button_list.jsx';
-import SummerWorkshopSchedule from './SummerWorkshopSchedule';
+import {SummerWorkshopSchedule, group2OrGroup1CsdWorkshops} from './SummerWorkshopSchedule';
 
 export default React.createClass({
 
@@ -17,7 +17,7 @@ export default React.createClass({
       committedToSummer: PropTypes.string,
       ableToAttendAssignedSummerWorkshop: PropTypes.string
     }).isRequired,
-    regionalPartnerGroup: PropTypes.string,
+    regionalPartnerGroup: PropTypes.number,
     selectedCourse: PropTypes.string,
     selectedState: PropTypes.string
   },
@@ -30,6 +30,10 @@ export default React.createClass({
 
   radioButtonListChange(event) {
     this.props.onChange({[event.target.name]: event.target.value});
+  },
+
+  checkListChange(event) {
+
   },
 
   dismissDialog() {
