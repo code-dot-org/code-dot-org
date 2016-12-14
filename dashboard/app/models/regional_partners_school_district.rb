@@ -31,6 +31,7 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
       school_district_id = row[CSV_HEADERS[:school_district_id]]
 
       regional_partner = RegionalPartner.where(name: regional_partner_name).first
+      raise "regional partner name not found: #{regional_partner_name}" unless regional_partner
       school_district = SchoolDistrict.find(school_district_id)
 
       school_district.regional_partner = regional_partner
