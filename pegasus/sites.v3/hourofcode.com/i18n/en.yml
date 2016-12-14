@@ -276,9 +276,9 @@
   map_legend_cs_tech_jam: 'Special Event'
   map_warning: "The Hour of Code map only shows the first 200,000 registered events. All registered events with a valid address can be viewed on <a href='%{events_url}'>the events page.</a>" 
 
-  meta_tag_og_title: 'The Hour of Code is here'
+  meta_tag_og_title: 'Hour of Code: Anybody can learn'
   meta_tag_og_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
-  meta_tag_twitter_title: 'The Hour of Code is here'
+  meta_tag_twitter_title: 'Hour of Code: Anybody can learn'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
 
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
