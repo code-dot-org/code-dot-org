@@ -91,6 +91,7 @@
     var options = #{existing_school_info.to_json};
     var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
     options['suppressScrolling'] = suppressScrolling;
+
     var assumeUsa = #{!!(local_assigns[:assume_usa])};
 
     if (assumeUsa) {

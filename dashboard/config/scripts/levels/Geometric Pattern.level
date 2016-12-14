@@ -52,8 +52,14 @@
                   <mutation name="flower ring"/>
                   <next>
                     <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">120</title>
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                      <next>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">100</title>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>
@@ -69,7 +75,7 @@
               <title name="TIMES">6</title>
               <statement name="DO">
                 <block type="draw_width_inline">
-                  <title name="WIDTH">6</title>
+                  <title name="WIDTH">4</title>
                   <next>
                     <block type="draw_colour" inline="true" id="draw-color">
                       <value name="COLOUR">
@@ -86,7 +92,7 @@
                           <next>
                             <block type="jump_by_constant">
                               <title name="DIR">jumpForward</title>
-                              <title name="VALUE">85</title>
+                              <title name="VALUE">75</title>
                             </block>
                           </next>
                         </block>
@@ -103,11 +109,11 @@
           <title name="NAME">triangle</title>
           <statement name="STACK">
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">3</title>
               <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">35</title>
+                  <title name="VALUE">50</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
@@ -128,18 +134,30 @@
               <next>
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">10</title>
+                  <title name="VALUE">50</title>
                   <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="square"/>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">120</title>
                       <next>
                         <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">10</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">45</title>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="square"/>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">10</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">45</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -162,7 +180,7 @@
               <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">35</title>
+                  <title name="VALUE">50</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
@@ -209,35 +227,35 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat_ext" inline="true">
+                <block type="controls_repeat_ext" inline="true" uservisible="false">
                   <value name="TIMES">
-                    <block type="math_number">
+                    <block type="math_number" uservisible="false">
                       <title name="NUM">180</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_move" inline="true">
+                    <block type="draw_move" inline="true" uservisible="false">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
-                        <block type="math_arithmetic" inline="true">
+                        <block type="math_arithmetic" inline="true" uservisible="false">
                           <title name="OP">DIVIDE</title>
                           <value name="A">
-                            <block type="variables_get">
+                            <block type="variables_get" uservisible="false">
                               <title name="VAR">circ</title>
                             </block>
                           </value>
                           <value name="B">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">180</title>
                             </block>
                           </value>
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn" inline="true" uservisible="false">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
-                            <block type="math_number">
+                            <block type="math_number" uservisible="false">
                               <title name="NUM">2</title>
                             </block>
                           </value>

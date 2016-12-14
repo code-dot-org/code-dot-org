@@ -31,8 +31,17 @@ export function imageDataFromURI(uri) {
     canvas.height = image.height;
     const context = canvas.getContext('2d');
     context.drawImage(image, 0, 0);
-    return context.getImageData(0, 0, canvas.width, canvas.height).data;
+    return context.getImageData(0, 0, canvas.width, canvas.height);
   });
+}
+
+export function URIFromImageData(imageData) {
+  const canvas = document.createElement('canvas');
+  canvas.width = imageData.width;
+  canvas.height = imageData.height;
+  const context = canvas.getContext('2d');
+  context.putImageData(imageData, 0, 0);
+  return canvas.toDataURL();
 }
 
 function imageFromURI(uri) {
