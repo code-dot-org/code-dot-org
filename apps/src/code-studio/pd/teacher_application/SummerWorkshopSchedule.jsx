@@ -51,7 +51,7 @@ const SummerWorkshopSchedule = React.createClass({
 
   renderAssignedWorkshopGroup2OrGroup1Csd() {
     if (this.props.regionalPartnerGroup === 2 ||
-      (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse == 'csd')) {
+      (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse === 'csd')) {
       let assignedSummerWorkshop = `Summer 2017 (exact date to be determined) in ${this.props.selectedState}`;
 
 
@@ -76,7 +76,7 @@ const SummerWorkshopSchedule = React.createClass({
 
   renderAssignedWorkshopGroup1Csp() {
     if (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse === 'csp') {
-      let regionalWorkshops = group1CspWorkshops[this.props.selectedState] || {};
+      let regionalWorkshops = group1CspWorkshops[this.props.selectedState] || [{region: this.props.selectedState, workshopDates: 'Summer 2017 (exact date to be determined)'}];
 
       return (
         <div>
@@ -95,7 +95,7 @@ const SummerWorkshopSchedule = React.createClass({
             }
           </p>
         </div>
-      )
+      );
     }
   },
 
@@ -105,7 +105,7 @@ const SummerWorkshopSchedule = React.createClass({
         {this.renderAssignedWorkshopGroup2OrGroup1Csd()}
         {this.renderAssignedWorkshopGroup1Csp()}
       </div>
-    )
+    );
   }
 });
 

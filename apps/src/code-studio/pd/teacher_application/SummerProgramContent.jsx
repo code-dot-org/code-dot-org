@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList} from '../form_components/button_list.jsx';
-import {SummerWorkshopSchedule, group2OrGroup1CsdWorkshops} from './SummerWorkshopSchedule';
+import {SummerWorkshopSchedule} from './SummerWorkshopSchedule';
 
 export default React.createClass({
 
