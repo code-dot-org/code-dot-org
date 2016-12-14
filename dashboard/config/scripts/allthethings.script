@@ -135,8 +135,8 @@ level 'Test External Markdown'
 stage 'Studio'
 level 'Resizing Test'
 
-stage 'Long assessment'
-assessment 'Test longassessment levelgroup new'
+stage 'Multi page assessment'
+level 'k-1 maze 11'
 assessment 'Test longassessment levelgroup split new'
 
 stage 'Star wars'
@@ -210,3 +210,6 @@ level 'AllTheThings Public Key Cryptography'
 
 stage 'Web Lab'
 level 'Web Lab 1'
+
+stage 'Single page assessment'
+assessment 'Test longassessment levelgroup new'

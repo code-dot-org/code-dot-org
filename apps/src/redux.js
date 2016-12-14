@@ -81,7 +81,8 @@ export function getStore() {
  */
 export function registerReducers(reducers) {
   for (let key in reducers) {
-    if (hasReducer(key)) {
+    const existingReducer = globalReducers[key];
+    if (existingReducer && existingReducer !== reducers[key]) {
       throw new Error(`reducer with key "${key}" already registered!`);
     }
   }

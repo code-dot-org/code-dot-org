@@ -10,6 +10,14 @@ markdown <<MARKDOWN
 
 In the last two lessons we looked at Design Mode and Event-Driven Programming in App Lab. This lesson is all about you getting a chance to use those new skills to make a multi-screen app. Use your creativity and personal interests to make your app unique.
 
+## Vocabulary
+
+Review 
+
+* **User Interface (UI)** - The "User Interface" or UI of an app refers to how a person (user) interacts with the computer or app.
+* **Event-driven program** -  a program designed to run blocks of code or functions in response to specified events (e.g. a mouse click)
+* **Event handling** - an overarching term for the coding tasks involved in making your app respond to events by triggering functions.
+
 ## Lesson
 
 * Choose the theme of your app.

@@ -12,7 +12,7 @@ const ToggleButton = React.createClass({
     last: React.PropTypes.bool,
     activeColor: React.PropTypes.string,
     title: React.PropTypes.string,
-    onClick: React.PropTypes.func.isRequired,
+    onClick: React.PropTypes.func,
     children: React.PropTypes.node,
   },
 
