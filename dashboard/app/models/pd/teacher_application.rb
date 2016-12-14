@@ -26,4 +26,64 @@ class Pd::TeacherApplication < ActiveRecord::Base
   validates_email_format_of :primary_email, allow_blank: true
   validates_email_format_of :secondary_email, allow_blank: true
   validates_presence_of :application
+
+  def application_json
+    JSON.parse(application)
+  end
+
+  def teacher_first_name
+    application_json['preferredFirstName'] || application_json['firstName']
+  end
+
+  def teacher_last_name
+    application_json['lastName']
+  end
+
+  def teacher_name
+    "#{teacher_first_name} #{teacher_last_name}"
+  end
+
+  def teacher_email
+    application_json['primaryEmail']
+  end
+
+  def principal_prefix
+    application_json['principalPrefix']
+  end
+
+  def principal_first_name
+    application_json['principalFirstName']
+  end
+
+  def principal_last_name
+    application_json['principalLastName']
+  end
+
+  def principal_email
+    application_json['principalEmail']
+  end
+
+  def program_name
+    if application_json['courseSelection'] == 'csd'
+      return 'CS Discoveries'
+    elsif application_json['courseSelection'] == 'csp'
+      return 'CS Principals'
+    end
+  end
+
+  def program_url
+    if application_json['courseSelection'] == 'csd'
+      return 'https://code.org/educate/professional-learning/cs-discoveries'
+    elsif application_json['courseSelection'] == 'csp'
+      return 'https://code.org/educate/professinoal-learning/cs-principles'
+    end
+  end
+
+  def approval_form_url
+    if application_json['courseSelection'] == 'csd'
+      return 'https://docs.google.com/forms/d/e/1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A/viewform?entry.1124819666=TEACHER+NAME&entry.1772278630=SCHOOL+NAME&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=APPLICATION+ID'
+    elsif application_json['courseSelection'] == 'csp'
+      return 'https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?entry.1124819666=TEACHER+NAME&entry.1772278630=SCHOOL+NAME&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=APPLICATION+ID'
+    end
+  end
 end
