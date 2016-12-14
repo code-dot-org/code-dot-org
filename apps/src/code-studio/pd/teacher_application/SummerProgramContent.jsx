@@ -45,7 +45,7 @@ export default React.createClass({
   },
 
   render() {
-    const showDialog = this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed;
+    const showDialog = !!(this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed);
 
     return (
       <div id="summerProgramContent">

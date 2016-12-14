@@ -51,9 +51,9 @@ const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
 const requiredCsdFields = ['gradesPlanningToTeach'];
 const requiredCspFields = ['cspDuration', 'cspApCourse', 'gradesPlanningToTeach', 'cspApExamIntent'];
-const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
-  'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
-  'whatTeachingSteps'];
+const requiredSurveyFields = ['committedToSummer', 'ableToAttendAssignedSummerWorkshop', 'allStudentsShouldLearn',
+  'allStudentsCanLearn', 'newApproaches', 'allAboutContent', 'allAboutProgramming', 'csCreativity',
+  'currentCsOpportunities', 'whyCsIsImportant', 'whatTeachingSteps'];
 const likertSurveyCell = {textAlign: 'center', width: '10%'};
 const likertAnswers = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
 
@@ -94,7 +94,6 @@ const TeacherApplication = React.createClass({
   },
 
   handleTextChange(event) {
-    console.log(event);
     this.setState({[event.target.id]: event.target.value});
   },
 
