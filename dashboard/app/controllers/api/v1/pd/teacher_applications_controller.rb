@@ -24,6 +24,20 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
     )
 
     if @teacher_application.save
+      Pd::TeacherApplicationMailer.application_receipt(
+        teacher_name: @teacher_application.teacher_name,
+        teacher_email: @teacher_application.teacher_email
+      ).deliver_now
+      Pd::TeacherApplicationMailer.principal_approval_request(
+        principal_prefix: @teacher_application.principal_prefix,
+        principal_first_name: @teacher_application.principal_first_name,
+        principal_last_name: @teacher_application.principal_last_name,
+        principal_email: @teacher_application.principal_email,
+        approval_form_url: @teacher_application.approval_form_url,
+        teacher_name: @teacher_application.teacher_name,
+        program_name: @teacher_application.program_name,
+        program_url: @teacher_application.program_url,
+      ).deliver_now
       head :no_content
     else
       render json: {errors: @teacher_application.errors.full_messages}, status: :bad_request
