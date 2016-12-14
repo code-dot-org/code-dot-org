@@ -135,7 +135,9 @@ namespace :seed do
   end
 
   task regional_partners: :environment do
-    RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
+    RegionalPartner.transaction do
+      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
+    end
   end
 
   task regional_partners_school_districts: :environment do
