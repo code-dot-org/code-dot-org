@@ -89,10 +89,10 @@
 
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
-    var suppressScrolling = #{!!(local_assigns.try(:suppress_scrolling))};
+    var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
     options['suppressScrolling'] = suppressScrolling;
 
-    var assumeUsa = #{!!(local_assigns.try(:assume_usa))};
+    var assumeUsa = #{!!(local_assigns[:assume_usa])};
 
     if (assumeUsa) {
       $('#school-country-group').hide();
