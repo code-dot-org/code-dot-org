@@ -32,7 +32,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def teacher_first_name
-    application_json['preferredFirstName'] || application_json['firstName']
+    application_json['preferredFirstName'].presence || application_json['firstName']
   end
 
   def teacher_last_name
@@ -57,6 +57,10 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   def principal_last_name
     application_json['principalLastName']
+  end
+
+  def principal_name
+    return "#{principal_first_name} #{principal_last_name}"
   end
 
   def principal_email

@@ -2,45 +2,29 @@
 class Pd::TeacherApplicationMailer < ActionMailer::Base
   default content_type: 'text/html'
 
-  def application_receipt(
-    teacher_name:,
-    teacher_email:
-  )
+  def application_receipt(teacher_application)
     mail from: from_teacher,
       subject: 'Your application has been received',
-      to: email_address(teacher_name, teacher_email)
+      to: email_address(teacher_application.teacher_name, teacher_application.teacher_email)
   end
 
-  def principal_approval_request(
-    principal_prefix:,
-    principal_first_name:,
-    principal_last_name:,
-    principal_email:,
-    approval_form_url:,
-    teacher_name:,
-    program_name:,
-    program_url:
-  )
-    @principal_prefix = principal_prefix
-    @principal_last_name = principal_last_name
-    @approval_form_url = approval_form_url
-    @teacher_name = teacher_name
-    @program_name = program_name
-    @program_url = program_url
+  def principal_approval_request(teacher_application)
+    @principal_prefix = teacher_application.principal_prefix
+    @principal_last_name = teacher_application.principal_last_name
+    @approval_form_url = teacher_application.approval_form_url
+    @teacher_name = teacher_application.teacher_name
+    @program_name = teacher_application.program_name
+    @program_url = teacher_application.program_url
     mail from: from_teacher,
       subject: "Approval requested: #{@teacher_name}’s participation in Code.org Professional Learning Program",
-      to: email_address("#{principal_first_name} #{principal_last_name}", principal_email)
+      to: email_address(teacher_application.principal_name, teacher_application.principal_email)
   end
 
-  def principal_approval_receipt(
-    teacher_first_name:,
-    teacher_last_name:,
-    teacher_email:
-  )
-    @teacher_first_name = teacher_first_name
+  def principal_approval_receipt(teacher_application)
+    @teacher_first_name = teacher_application.teacher_first_name
     mail from: from_teacher,
       subject: "We've received your principal's approval form",
-      to: email_address("#{teacher_first_name} #{teacher_last_name}", teacher_email)
+      to: email_address(teacher_application.teacher_name, teacher_application.teacher_email)
   end
 
   private
