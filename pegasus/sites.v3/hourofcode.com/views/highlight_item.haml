@@ -2,7 +2,7 @@
 - image_path = "/images/highlights/fill-260x260/#{item[:image_url_s]}"
 - unless item[:image_url_s].blank?
   .highlight-item
-    %a.learnmore-link{href: url}
+    %a.learnmore-link{href: url, target: '_blank'}
       .highlight-img{style: "background-image:url(#{image_path})"}
       .highlight-caption
         %h4.caption-headline= item[:short_heading_s]
