@@ -1,28 +1,25 @@
 require 'test_helper'
 
 class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestCase
-  # Temporarily disable these tests to unblock DTT. The mailers are blowing up because the fixtures are incomplete.
-  # TODO: Fix tests and re-enable.
+  test 'logged in teachers can create teacher applications' do
+    sign_in create(:teacher)
 
-  # test 'logged in teachers can create teacher applications' do
-  #   sign_in create(:teacher)
-  #
-  #   assert_creates Pd::TeacherApplication do
-  #     put :create, params: test_params
-  #
-  #     assert_response :success
-  #   end
-  # end
+    assert_creates Pd::TeacherApplication do
+      put :create, params: test_params
+
+      assert_response :success
+    end
+  end
 
   # For now. Perhaps we'll render a different view explaining how to upgrade to teacher account in the future.
-  # test 'students can create teacher applications' do
-  #   sign_in create(:student)
-  #
-  #   assert_creates Pd::TeacherApplication do
-  #     put :create, params: test_params
-  #     assert_response :success
-  #   end
-  # end
+  test 'students can create teacher applications' do
+    sign_in create(:student)
+
+    assert_creates Pd::TeacherApplication do
+      put :create, params: test_params
+      assert_response :success
+    end
+  end
 
   test 'not logged in users are redirected to sign in' do
     put :create, params: test_params
