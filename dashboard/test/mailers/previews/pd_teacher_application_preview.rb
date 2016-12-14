@@ -1,7 +1,5 @@
 # This can be viewed on non-production environments at /rails/mailers/pd/teacher_application_mailer
 class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
-
   def application_receipt
     Pd::TeacherApplicationMailer.send(
       :application_receipt,
@@ -31,11 +29,5 @@ class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
       "Hagrid",
       "rubeus@hogwarts.co.uk",
     )
-  end
-
-  private
-
-  def mail(method, application)
-    Pd::TeacherApplicationMailer.send(method, application)
   end
 end
