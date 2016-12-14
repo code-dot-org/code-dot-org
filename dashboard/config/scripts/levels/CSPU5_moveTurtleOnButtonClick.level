@@ -33,7 +33,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# onEvent\r\n\r\n**You try it!** - Make the turtle move forward when the button is clicked.\r\n\r\n* **Add an `onEvent` block** \r\n* Set the **id** and **type** you want.\r\n* Add `moveForward` to the function definition\r\n\r\n* **Run the program** to make sure it works.\r\n* **Try changing the event type** to something like *\"mouseover\"* and see what happens.  Not all event types will work with buttons but it's fun to play a little bit.\r\n\r\nOnce you've got the program responding to some event, congratulations! You've just made your first interactive app. \r\n\r\n**Click Finish** to move on to the next problem.\r\n\r\n",
+    "markdown_instructions": "# onEvent\r\n\r\n**You try it!** - Make the turtle move forward when the button is clicked.\r\n\r\n* **Add an `onEvent` block** \r\n* Set the **id** of your button\r\n* Add `moveForward` to the function definition\r\n\r\n* **Run the program** to make sure it works.\r\n* **Try changing the event type** to something like *\"mouseover\"* and see what happens.  Not all event types will work with buttons but it's fun to play a little bit.\r\n\r\nOnce you've got the program responding to some event, congratulations! You've just made your first interactive app. \r\n\r\n**Click Finish** to move on to the next problem.\r\n\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "true",
@@ -54,7 +54,8 @@
     "makerlab_enabled": "false",
     "instructions_important": "false",
     "project_template_level_name": "CSPU5_twoButtonTurtleDriver_templateLevel",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",
