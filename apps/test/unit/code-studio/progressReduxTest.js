@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import { assert } from '../../util/configuredChai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
 
@@ -119,7 +119,7 @@ const initialScriptOverviewProgress = {
 const initialPuzzlePageProgress = {
   currentLevelId: "341",
   professionalLearningCourse: false,
-  saveAnswersBeforeNavigation: false, // TODO : when used?
+  saveAnswersBeforeNavigation: false,
   // We're on a puzzle in stage 2. That is the only provided stage
   stages: [stageData[1]],
   scriptName: 'course3'
@@ -289,6 +289,126 @@ describe('progressReduxTest', () => {
 
       const isNotHocScript = reducer(initialState, setIsHocScript(false));
       assert.equal(isNotHocScript.isHocScript, false);
+    });
+  });
+
+  describe('with peer reviews', () => {
+    // Sample stage of peer review
+    const peerReviewStage = {
+      name: "You must complete 2 reviews for this unit",
+      flex_category: "Peer Review",
+      levels: [
+        {
+          ids: [0],
+          kind: "peer_review",
+          title: "",
+          url: "",
+          name: "Reviews unavailable at this time",
+          icon: "fa-lock",
+          locked: true
+        },
+        {
+          ids: [1],
+          kind: "peer_review",
+          title: "",
+          url: "",
+          name: "Reviews unavailable at this time",
+          icon: "fa-lock",
+          locked: true
+        }
+      ],
+      lockable: false
+    };
+
+    const intialOverviewProgressWithPeerReview = {
+      currentLevelId: undefined,
+      professionalLearningCourse: true,
+      saveAnswersBeforeNavigation: false,
+      stages: [stageData[1], peerReviewStage],
+      scriptName: 'alltheplcthings'
+    };
+
+    it('can initialize progress with peer reviews on overview page', () => {
+      const action = initProgress(intialOverviewProgressWithPeerReview);
+      const nextState = reducer(undefined, action);
+
+      assert.equal(nextState.currentLevelId, undefined);
+      assert.equal(nextState.professionalLearningCourse, true);
+      assert.equal(nextState.saveAnswersBeforeNavigation, false);
+      assert.deepEqual(nextState.stages, intialOverviewProgressWithPeerReview.stages);
+      assert.equal(nextState.scriptName, 'alltheplcthings');
+      assert.equal(nextState.currentStageId, undefined);
+    });
+
+    it('can provide progress for peer reviews', () => {
+      // construct an initial state where we have 1 stage of non-peer reviews
+      // with some progress, and 1 stage of peer reviews
+      const state = {
+        levelProgress: {
+          341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
+        },
+        stages: [stageData[1], peerReviewStage]
+      };
+      assert.equal(state.stages[0].levels[2].ids[0], 341);
+      state.stages[0].levels[2].status = LevelStatus.attempted;
+
+      assert.deepEqual(state.stages[1].levels[0], {
+        ids: [0],
+        kind: "peer_review",
+        title: "",
+        url: "",
+        name: "Reviews unavailable at this time",
+        icon: "fa-lock",
+        locked: true
+      });
+
+      // Right now peer reviews use mergeProgress. Ultimately, I think they should
+      // have their own action.
+      const action = mergeProgress({}, [{
+        id: 13,
+        locked: false,
+        name: 'Ready to review',
+        result: TestResults.UNSUBMITTED_ATTEMPT,
+        status: 'not_started',
+        url: '/peer_reviews/13'
+      }]);
+
+      const nextState = reducer(state, action);
+
+      assert.deepEqual(nextState.levelProgress, state.levelProgress,
+        'no change to levelProgress');
+      const peerReviewLevels = nextState.stages[1].levels;
+      assert.equal(peerReviewLevels.length, state.stages[1].levels.length,
+        'same number of peer review levels in stage');
+
+      // compare changed stage
+      // TODO: This is the same as the earlier assert, but now fails. This implies
+      // we're mutating state in this reducer, which is a no-no. This should be
+      // fixed
+      // assert.deepEqual(state.stages[1].levels[0], {
+      //   ids: [0],
+      //   kind: "peer_review",
+      //   title: "",
+      //   url: "",
+      //   name: "Reviews unavailable at this time",
+      //   icon: "fa-lock",
+      //   locked: true
+      // });
+
+      assert.deepEqual(nextState.stages[1].levels[0], {
+        // Seems strange to have both an id and ids
+        id: 13,
+        ids: [0],
+        // Seems strange to have an fa-lock icon even tho we're not locked
+        icon: 'fa-lock',
+        locked: false,
+        kind: "peer_review",
+        result: TestResults.UNSUBMITTED_ATTEMPT,
+        title: "",
+        url: '/peer_reviews/13',
+        name: "Ready to review",
+        status: 'not_started',
+      });
     });
   });
 });
