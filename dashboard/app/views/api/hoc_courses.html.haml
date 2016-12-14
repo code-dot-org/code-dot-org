@@ -1,14 +1,6 @@
-- page_mode = PageMode.get(request)
-- if page_mode == "feature-minecraft2016"
-  - first_tutorial = Script::MINECRAFT_DESIGNER_NAME
-  - second_tutorial = Script::STARWARS_NAME
-- else
-  - first_tutorial = Script::STARWARS_NAME
-  - second_tutorial = Script::MINECRAFT_DESIGNER_NAME
-
 .row{style: 'margin: 0px;'}
-  = render partial: 'shared/course_tall_block', locals: { id: first_tutorial, showState: false }
-  = render partial: 'shared/course_tall_block', locals: { id: second_tutorial, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: false }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: false }
   = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: false }
 %br/
