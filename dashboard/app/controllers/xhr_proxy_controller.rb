@@ -38,6 +38,7 @@ class XhrProxyController < ApplicationController
     githubusercontent.com
     googleapis.com
     herokuapp.com
+    isenseproject.org
     lakeside-cs.org
     query.yahooapis.com
     noaa.gov
