@@ -324,6 +324,9 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+
+      get :teacher_applications, to: 'teacher_applications#index'
+      post :teacher_applications, to: 'teacher_applications#create'
     end
   end
 
@@ -389,6 +392,7 @@ Dashboard::Application.routes.draw do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
+      get 'regional-partners/:school_district_id', to: 'regional_partners#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
@@ -398,4 +402,5 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
 end

@@ -1,5 +1,8 @@
 import React from 'react';
+import _ from 'lodash';
 import {Radio, Checkbox, ControlLabel, FormGroup} from 'react-bootstrap';
+
+const otherString = 'Other: ';
 
 const ButtonList = React.createClass({
   propTypes: {
@@ -9,14 +12,32 @@ const ButtonList = React.createClass({
     answers: React.PropTypes.array.isRequired,
     includeOther: React.PropTypes.bool,
     onChange: React.PropTypes.func,
-    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string])
+    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string]),
+    required: React.PropTypes.bool,
+    validationState: React.PropTypes.string
   },
 
-  renderInputCompontents() {
+  renderInputComponents() {
     const InputComponent = {radio: Radio, check: Checkbox}[this.props.type];
+    let otherDiv;
 
-    const options = this.props.answers.map ( (answer, i) => {
-      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer) : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+    let answers = this.props.answers;
+
+    if (this.props.includeOther) {
+      answers = _.concat(answers, [otherString]);
+      otherDiv = (
+        <div>
+          <span style={{verticalAlign: 'top'}}>
+            {otherString}
+          </span>
+          <input type="text" id={this.props.groupName + '_other'}/>
+        </div>
+      );
+    }
+
+    const options = answers.map ( (answer, i) => {
+      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer)
+        : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
       return (
         <InputComponent
           value={answer}
@@ -26,7 +47,7 @@ const ButtonList = React.createClass({
           onChange={this.props.onChange}
           checked={checked}
         >
-          {answer}
+          {answer === otherString ? otherDiv : answer}
         </InputComponent>
       );
     });
@@ -36,17 +57,18 @@ const ButtonList = React.createClass({
 
   render() {
     return (
-      <div>
+      <FormGroup id={this.props.groupName} validationState={this.props.validationState}>
         <ControlLabel>
           {this.props.label}
+          {this.props.required && (<span style={{color: 'red'}}> *</span>)}
         </ControlLabel>
-        <FormGroup id={this.props.groupName}>
-          {this.renderInputCompontents()}
+        <FormGroup>
+          {this.renderInputComponents()}
         </FormGroup>
         <br/>
-      </div>
+      </FormGroup>
     );
   }
 });
 
-export default ButtonList;
+export {ButtonList, otherString};
