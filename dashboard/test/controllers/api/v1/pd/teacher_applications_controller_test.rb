@@ -6,6 +6,7 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
 
     assert_creates Pd::TeacherApplication do
       put :create, params: test_params
+
       assert_response :success
     end
   end
@@ -36,8 +37,6 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
 
     response = JSON.parse(@response.body)
     assert_equal 5, response.count
-
-    puts response
   end
 
   test 'non admins cannot index teacher applications' do

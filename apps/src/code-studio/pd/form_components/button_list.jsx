@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import {Radio, Checkbox, ControlLabel, FormGroup} from 'react-bootstrap';
+import {Radio, Checkbox, ControlLabel, FormGroup, HelpBlock} from 'react-bootstrap';
 
 const otherString = 'Other: ';
 
@@ -12,7 +12,10 @@ const ButtonList = React.createClass({
     answers: React.PropTypes.array.isRequired,
     includeOther: React.PropTypes.bool,
     onChange: React.PropTypes.func,
-    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string])
+    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string]),
+    required: React.PropTypes.bool,
+    validationState: React.PropTypes.string,
+    errorText: React.PropTypes.string,
   },
 
   renderInputComponents() {
@@ -34,7 +37,8 @@ const ButtonList = React.createClass({
     }
 
     const options = answers.map ( (answer, i) => {
-      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer) : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer)
+        : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
       return (
         <InputComponent
           value={answer}
@@ -53,16 +57,22 @@ const ButtonList = React.createClass({
   },
 
   render() {
+    let validationState = this.props.validationState;
+    if (this.props.errorText) {
+      validationState = 'error';
+    }
     return (
-      <div>
+      <FormGroup id={this.props.groupName} validationState={validationState}>
         <ControlLabel>
           {this.props.label}
+          {this.props.required && (<span style={{color: 'red'}}> *</span>)}
         </ControlLabel>
-        <FormGroup id={this.props.groupName}>
+        <FormGroup>
           {this.renderInputComponents()}
         </FormGroup>
+        {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
         <br/>
-      </div>
+      </FormGroup>
     );
   }
 });

@@ -343,6 +343,7 @@ Dashboard::Application.routes.draw do
 
     get 'teacher_application', to: 'teacher_application#new'
     get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
+    get 'teacher_application/thanks', to: 'teacher_application#thanks'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
@@ -392,6 +393,7 @@ Dashboard::Application.routes.draw do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
+      get 'regional-partners/:school_district_id', to: 'regional_partners#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
@@ -401,4 +403,5 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
 end
