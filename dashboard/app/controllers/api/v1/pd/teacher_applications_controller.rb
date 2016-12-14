@@ -1,7 +1,16 @@
 class Api::V1::Pd::TeacherApplicationsController < ApplicationController
-  authorize_resource class: 'Pd::TeacherApplication'
+  authorize_resource class: 'Pd::TeacherApplication', only: :create
 
   def index
+    # Require admin or a matching secret_key param
+    unless current_user.try(:admin?)
+      secret_key = CDO.pd_teacher_application_list_secret_key
+      unless secret_key && secret_key == params[:secret_key]
+        render_404
+        return
+      end
+    end
+
     @teacher_applications = ::Pd::TeacherApplication
     if params[:after_id]
       @teacher_applications = @teacher_applications.where('id > ?', params[:after_id])
