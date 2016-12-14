@@ -3,18 +3,31 @@
  */
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import _ from 'lodash';
-import {Button, Radio, FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
+import {
+  HelpBlock,
+  Button,
+  Radio,
+  FormControl,
+  FormGroup,
+  ControlLabel
+} from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
+import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
-function FieldGroup({ id, label, validationState, required, ...props }) {
+function FieldGroup({ id, label, validationState, required, errorText, ...props }) {
+  if (errorText) {
+    validationState = 'error';
+  }
   return (
     <FormGroup controlId={id} validationState={validationState}>
       <ControlLabel>{label}{required && requiredStar}</ControlLabel>
       <FormControl {...props} />
+      {errorText && <HelpBlock>{errorText}</HelpBlock>}
       <br/>
     </FormGroup>
   );
@@ -24,22 +37,44 @@ FieldGroup.propTypes = {
   id: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   validationState: React.PropTypes.string,
+  errorText: React.PropTypes.string,
   required: React.PropTypes.bool
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
 const subjects = ['Computer Science', 'Computer Literacy', 'Math', 'Science', 'History', 'English', 'Music', 'Art',
-  'Multimedia', 'Foreign Language'];
+  'Multimedia', 'Foreign Language', 'Business'];
 const yesNoResponses = ['Yes', 'No'];
-const beliefPoll = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
-const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'schoolEmail', 'personalEmail',
-  'phoneNumber', 'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
+const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail', 'secondaryEmail', 'phoneNumber',
+  'genderIdentity', 'grades2016', 'subjects2016','grades2017', 'subjects2017', 'principalFirstName',
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
-const requiredCsdFields = ['csdGrades'];
-const requiredCspFields = ['cspDuration', 'cspApCourse', 'cspGrades', 'cspApExamIntent'];
+const requiredCsdFields = ['gradesPlanningToTeach'];
+const requiredCspFields = ['cspDuration', 'cspApCourse', 'gradesPlanningToTeach', 'cspApExamIntent'];
 const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
   'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
   'whatTeachingSteps'];
+const likertSurveyCell = {textAlign: 'center', width: '10%'};
+const likertAnswers = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
+
+const EMAIL_RE = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+const isEmail = (value) => {
+  if (!value.match(EMAIL_RE)) {
+    return 'Please enter a valid email address, like name@example.com';
+  }
+};
+const isPhoneNumber = (value) => {
+  if (value.replace(/[^0-9]/g, '').length < 10) {
+    return 'Phone numbers must have at least 10 digits, like (123) 456-7890';
+  }
+};
+
+const fieldValidationErrors = {
+  primaryEmail: isEmail,
+  secondaryEmail: isEmail,
+  principalEmail: isEmail,
+  phoneNumber: isPhoneNumber,
+};
 
 const TeacherApplication = React.createClass({
 
@@ -62,9 +97,27 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.name]: selectedButtons});
   },
 
+  getRequiredValidationErrorMessage(key) {
+    if (this.state[key] !== undefined) {
+      if (this.state[key].length > 0) {
+        if (fieldValidationErrors[key]) {
+          return fieldValidationErrors[key](this.state[key]);
+        }
+      } else {
+        return 'This field is required';
+      }
+    }
+  },
+
   getRequiredValidationState(key) {
     if (this.state[key] !== undefined) {
-      return this.state[key].length > 0 ? 'success' : 'error';
+      return this.getRequiredValidationErrorMessage(key) ? 'error' : null;
+    }
+  },
+
+  getLikertValidationState(key) {
+    if (this.state[key] !== undefined && this.state[key].length === 0) {
+      return 'error';
     }
   },
 
@@ -90,7 +143,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('firstName')}
+          errorText={this.getRequiredValidationErrorMessage('firstName')}
         />
         <FieldGroup
           id="preferredFirstName"
@@ -104,23 +157,23 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('lastName')}
+          errorText={this.getRequiredValidationErrorMessage('lastName')}
         />
         <FieldGroup
-          id="schoolEmail"
-          label="Your school email address"
+          id="primaryEmail"
+          label="Primary email address"
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('schoolEmail')}
+          errorText={this.getRequiredValidationErrorMessage('primaryEmail')}
         />
         <FieldGroup
-          id="personalEmail"
+          id="secondaryEmail"
           label="Your personal email address (we may need to contact you during the summer)"
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('personalEmail')}
+          errorText={this.getRequiredValidationErrorMessage('secondaryEmail')}
         />
         <FieldGroup
           id="phoneNumber"
@@ -128,7 +181,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('phoneNumber')}
+          errorText={this.getRequiredValidationErrorMessage('phoneNumber')}
         />
         <ButtonList
           type="radio"
@@ -164,9 +217,9 @@ const TeacherApplication = React.createClass({
         />
         <ButtonList
           type="check"
-          label="What grades are you teaching in the current 2017-18 school year? (select all that apply)"
+          label="What grades will you be teaching in the 2017-18 school year? (select all that apply)"
           groupName="grades2017"
-          answers={grades}
+          answers={grades.concat("I don't know")}
           includeOther={true}
           onChange={this.handleCheckboxChange}
           selectedItems={this.state.grades2017}
@@ -175,9 +228,9 @@ const TeacherApplication = React.createClass({
         />
         <ButtonList
           type="check"
-          label="What subjects are you teaching in the current 2017-18 school year? (select all that apply)"
+          label="What subjects will you be teaching in the 2017-18 school year? (select all that apply)"
           groupName="subjects2017"
-          answers={subjects}
+          answers={subjects.concat("I don't know")}
           includeOther={true}
           onChange={this.handleCheckboxChange}
           selectedItems={this.state.subjects2017}
@@ -190,7 +243,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalFirstName')}
+          errorText={this.getRequiredValidationErrorMessage('principalFirstName')}
         />
         <FieldGroup
           id="principalLastName"
@@ -198,7 +251,7 @@ const TeacherApplication = React.createClass({
           type="text"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalLastName')}
+          errorText={this.getRequiredValidationErrorMessage('principalLastName')}
         />
         <FormGroup validationState={this.getRequiredValidationState('principalPrefix')}>
           <ControlLabel>
@@ -225,7 +278,7 @@ const TeacherApplication = React.createClass({
           type="email"
           onChange={this.handleTextChange}
           required={true}
-          validationState={this.getRequiredValidationState('principalEmail')}
+          errorText={this.getRequiredValidationErrorMessage('principalEmail')}
         />
       </div>
     );
@@ -236,9 +289,12 @@ const TeacherApplication = React.createClass({
       <FormGroup id="selectedCourse" validationState={this.getRequiredValidationState('selectedCourse')}>
         <ControlLabel>
           Which professional learning program are you applying to join for the 2017-18 school year? Click on each
-          curriculum for more information. Note: this application is only for Computer Science Discoveries and Computer
-          Science Principles. If you are interested in <a href="">Computer Science Fundamentals</a>, please
-          visit <a href="">this</a> page for information about workshops in your area. (Select one)
+          curriculum for more information. Note: this application is only for
+          <a href="https://code.org/educate/professional-learning/cs-discoveries"> Computer Science Discoveries</a> and
+          <a href="https://code.org/educate/professional-learning/cs-principles"> Computer Science Principles.</a> If
+          you are interested in <a href="https://code.org/educate/curriculum/elementary-school">Computer Science
+          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school">this page </a>
+          for information about workshops in your area. (Select one)
           {requiredStar}
         </ControlLabel>
         <Radio
@@ -246,14 +302,14 @@ const TeacherApplication = React.createClass({
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="">Computer Science Discoveries</a> (designed for 7th - 9th grade)
+          <a href="https://code.org/educate/professional-learning/cs-discoveries">Computer Science Discoveries</a> (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
+          <a href="https://code.org/educate/professional-learning/cs-principles">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
@@ -270,12 +326,12 @@ const TeacherApplication = React.createClass({
           <ButtonList
             type="check"
             label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
-            groupName="csdGrades"
+            groupName="gradesPlanningToTeach"
             answers={grades.slice(grades.indexOf('6'))}
             onChange={this.handleCheckboxChange}
-            selectedItems={this.state.csdGrades}
+            selectedItems={this.state.gradesPlanningToTeach}
             required={true}
-            validationState={this.getRequiredValidationState('csdGrades')}
+            validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
           />
         </div>
       );
@@ -305,8 +361,10 @@ const TeacherApplication = React.createClass({
             type="radio"
             label="I will be teaching Computer Science Principles as an (select one)"
             answers={[
-              'Introductory course',
-              'AP course',
+              "AP course only",
+              "Introductory course only",
+              "AP course and introductory course",
+              "I don't know yet"
             ]}
             groupName="cspApCourse"
             onChange={this.handleRadioButtonListChange}
@@ -319,11 +377,11 @@ const TeacherApplication = React.createClass({
             label="To which grades do you plan to teach CS Principles? Please note that the CS Principles Professional
             Learning Program is not available for grades K-8. (select all that apply)"
             answers={grades.slice(grades.indexOf('9'))}
-            groupName="cspGrades"
+            groupName="gradesPlanningToTeach"
             onChange={this.handleCheckboxChange}
-            selectedItems={this.state.cspGrades}
+            selectedItems={this.state.gradesPlanningToTeach}
             required={true}
-            validationState={this.getRequiredValidationState('cspGrades')}
+            validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
           />
           <ButtonList
             type="radio"
@@ -348,7 +406,7 @@ const TeacherApplication = React.createClass({
         <div style={{fontWeight: 'bold'}}>
           As a reminder, teachers in this program are required to participate in:
           <li>
-            One five-day summer workshop in 2017
+            One five-day summer workshop in 2017 (may require travel with expenses paid)
           </li>
           <li>
             Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
@@ -383,27 +441,30 @@ const TeacherApplication = React.createClass({
 
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
-      allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school',
-      allStudentsCanLearn: 'All students can learn computer science',
-      newApproaches: 'I am willing to learn new approaches to teaching in order to engage my students',
-      allAboutContent: 'Effective teaching of computer science is all about knowing the content',
-      allAboutProgramming: 'Computer science is all about programming',
-      csCreativity: 'Computer science has a lot to do with problem solving and creativity'
+      allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
+      allStudentsCanLearn: 'All students can learn computer science.',
+      newApproaches: 'I am willing to learn new approaches to teaching in order to engage my students.',
+      allAboutContent: 'Effective teaching of computer science is all about knowing the content.',
+      allAboutProgramming: 'Computer science is all about programming.',
+      csCreativity: 'Computer science has a lot to do with problem solving and creativity.'
     };
 
     return (
       <div>
         <ControlLabel>
-          Please rate the following questions
+          Please rate the following questions:
         </ControlLabel>
         <table>
           <thead>
             <tr>
               <th/>
-              <th>Strongly Disagree</th>
-              <th>Disagree</th>
-              <th>Agree</th>
-              <th>Strongly Agree</th>
+              {
+                likertAnswers.map( (answer, i) => {
+                  return (
+                    <th style={likertSurveyCell} key={i}>{answer}</th>
+                  );
+                })
+              }
             </tr>
           </thead>
           <tbody>
@@ -412,20 +473,20 @@ const TeacherApplication = React.createClass({
                 return (
                   <tr key={i}>
                     <td>
-                      <FormGroup validationState={this.getRequiredValidationState(question)}>
+                      <FormGroup validationState={this.getLikertValidationState(question)}>
                         <ControlLabel>
                           {csBeliefsQuestions[question]}
                         </ControlLabel>
                       </FormGroup>
                     </td>
                     {
-                      _.times(4, (j) => {
+                      likertAnswers.map( (answer, j) => {
                         return (
-                          <td key={j}>
+                          <td key={j} style={likertSurveyCell}>
                             <Radio
                               name={question}
-                              value={beliefPoll[j]}
-                              checked={this.state[question] === beliefPoll[j]}
+                              value={j + 1}
+                              checked={parseInt(this.state[question], 10) === j + 1}
                               onChange={this.handleRadioButtonListChange}
                             />
                           </td>
@@ -446,18 +507,18 @@ const TeacherApplication = React.createClass({
   renderComputerScienceAtYourSchool() {
     return (
       <div>
-        <p style={{fontWeight: 'bold'}}>
+        <p style={{fontWeight: 'bold', fontSize: '16px'}}>
           We would like to learn more about your school, and why you want to participate in our Professional Learning
           Program. Please share your responses to the following questions:
         </p>
         <ButtonList
-          type="radio"
+          type="check"
           label="What computer science opportunities currently exist at your school? (select all that apply)"
           groupName="currentCsOpportunities"
           answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
             'No computer science opportunities are currently available at my school']}
           includeOther={true}
-          onChange={this.handleRadioButtonListChange}
+          onChange={this.handleCheckboxChange}
           selectedItems={this.state.currentCsOpportunities}
           required={true}
           validationState={this.getRequiredValidationState('currentCsOpportunities')}
@@ -487,36 +548,8 @@ const TeacherApplication = React.createClass({
     );
   },
 
-  getDistrictDropdownValues() {
-    //The district dropdown is not a react component like the rest of this form's components.
-    //That's why we're doing it separately here
-    const districtValues = {
-      ['us-or-international']: document.getElementById('us-or-international').value,
-      ['school-type']: document.getElementById('school-type').value,
-      ['school-state']: document.getElementById('school-state').value,
-      ['school-district']: document.querySelector('#school-district input').value,
-      ['school']: document.querySelector('#school input').value
-    };
-
-    if (document.getElementById('school-district-other').checked) {
-      _.assign(districtValues, {
-        ['school-district-name']: document.getElementById('school-district-name').value
-      });
-    }
-
-    if (document.getElementById('school-district-other').checked ||
-      document.getElementById('school-other').checked) {
-      _.assign(districtValues, {
-        ['school-name']: document.getElementById('school-name').value,
-        ['school-zipcode']: document.getElementById('school-zipcode').value
-      });
-    }
-
-    return districtValues;
-  },
-
   onSubmitButtonClick() {
-    const districtValues = this.getDistrictDropdownValues();
+    const districtValues = getDistrictDropdownValues();
 
     const formData = _.cloneDeep(this.state);
     _.assign(formData, districtValues);
@@ -552,8 +585,17 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    console.log(formData);
-    console.log(topInvalidElementId);
+    if (validateDistrictData(districtValues)) {
+      document.getElementById('district-error-placeholder').innerHTML = '';
+    } else {
+      topInvalidElementId = 'district-error-placeholder';
+      ReactDOM.render(
+        <p style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
+          Please complete this section with your school's information
+        </p>,
+        document.getElementById(topInvalidElementId)
+      );
+    }
 
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
@@ -578,7 +620,6 @@ const TeacherApplication = React.createClass({
     }).done(() => {
       // TODO: modify state, render submitted on client side.
       window.location.reload(true);
-      //alert('success :)');
 
     }).fail(data => {
       // TODO: render error message(s) nicely on client.
@@ -589,8 +630,13 @@ const TeacherApplication = React.createClass({
   renderSubmitButton() {
     return (
       <div>
+        <p style={{fontSize: '16px', fontWeight: 'bold'}}>
+          Code.org works closely with local Regional Partners to organize and deliver the Professional LearningProgram.
+          By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
+          survey with your assigned Regional Partner and your school district.
+        </p>
         <Button onClick={this.onSubmitButtonClick}>
-          Submit application
+          Complete and Send
         </Button>
       </div>
     );

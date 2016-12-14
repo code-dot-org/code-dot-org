@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-13T02:09:58.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Classes\r\n\r\nIn this page, the web developer has used classes to give some of the words our winter color.\r\n\r\n* Look at the HTML code for the winter words.  Why is \"snowy\" the only winter word without the winter color?\r\n* Add code to the HTML that will give \"snowy\" the same winter blue as the other words.\r\n* Look inside the style sheet to find the rule that makes all the words in the winter class blue, and check whether your RGB numbers are close to the ones in the style sheet.  \r\n* Discuss with your partner how the code works.",
+    "project_template_level_name": "CSDU2 - Seasons Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

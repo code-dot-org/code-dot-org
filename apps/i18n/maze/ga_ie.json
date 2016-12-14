@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "Comhghairdeas! Bhailigh tú na {count} rud a bhí ann!",
   "collectorCollectedNothing": "Lean ort! Bailigh an líon is mó rudaí agus is féidir leat.",
   "collectorCollectedSome": "Maith thú! Bhailigh tú {count} rud!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Níl a dóthain rudaí le bailiú san áit seo.",
   "collectorTooManyBlocks": "Ní féidir níos mó na {blockLimit} bloc a úsáid. Féach ar do chód agus bain triail eile as!",
   "continue": "Ar aghaidh",
@@ -111,6 +112,5 @@
   "word": "Aimsigh an focal",
   "wrongCropError": "Ní féidir liom an barr sin a bhaint anseo.",
   "yes": "Tá",
-  "youSpelled": "Litrigh tú",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Litrigh tú"
 }

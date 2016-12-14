@@ -381,6 +381,30 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
+  test 'facilitators can get summary for their workshops' do
+    sign_in @facilitator
+    get :summary, id: @workshop.id
+    assert_response :success
+  end
+
+  test 'facilitators cannot get summary for other workshops' do
+    sign_in @facilitator
+    get :summary, id: @standalone_workshop.id
+    assert_response :forbidden
+  end
+
+  test 'organizers can get summary for their workshops' do
+    sign_in @organizer
+    get :summary, id: @workshop.id
+    assert_response :success
+  end
+
+  test 'organizers cannot get summary for other workshops' do
+    sign_in @organizer
+    get :summary, id: @standalone_workshop.id
+    assert_response :forbidden
+  end
+
   test 'summary' do
     sign_in @admin
     workshop = create :pd_workshop, num_sessions: 3
@@ -389,7 +413,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     get :summary, id: workshop.id
     assert_response :success
     response = JSON.parse(@response.body)
-    puts response
 
     assert_equal workshop.state, response['state']
     assert_equal workshop.section.code, response['section_code']

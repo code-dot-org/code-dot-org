@@ -1,0 +1,9 @@
+name 'CSD U2 RGB Colors'
+title 'STOP: RGB Colors'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Stop and wait for instructions from your teacher before moving on.
+MARKDOWN

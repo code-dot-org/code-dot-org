@@ -29,6 +29,10 @@ Educators: [Request a visit to your school assembly](/visit)
 
 <br/><br/>
 
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FNASDAQ%2Fvideos%2F10154693804912429%2F&show_text=0&width=640" width="640" height="360" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+
+<br/><br/>
+
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/m-U9wzC9xLk" frameborder="0" allowfullscreen></iframe>
 

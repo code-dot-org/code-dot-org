@@ -44,6 +44,8 @@ Dashboard::Application.routes.draw do
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
 
+  get 'redirected_url', to: 'redirect_proxy#get', format: false
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -209,17 +211,9 @@ Dashboard::Application.routes.draw do
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
-  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
-  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
-
-  # Fun-O-Meter dashboards.
-  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
 
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'

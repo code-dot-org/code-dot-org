@@ -23,9 +23,13 @@ window.Applab.callCmd = function (cmd) {
   return retVal;
 };
 
-// Expose api functions globally
+// Expose api functions globally, unless they already exist
+// in which case they are probably browser apis that we should
+// not overwrite.
 for (let key in api) {
-  window[key] = api[key];
+  if (!window[key]) {
+    window[key] = api[key];
+  }
 }
 
 // disable appStorage

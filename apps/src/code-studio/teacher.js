@@ -180,6 +180,10 @@ function renderTeacherPanelSections(element) {
  */
 function renderContentToggle() {
   if (experiments.isEnabled('viewAsToggle')) {
+    if (typeof(window.appOptions) === 'undefined') {
+      // This can happen if student hasn't attempted level
+      return;
+    }
     // We can remove this element once we get rid of the experiment
     $("#try-it-yourself").hide();
 

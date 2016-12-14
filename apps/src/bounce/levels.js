@@ -263,10 +263,6 @@ levels['7'] = {
 };
 levels['7_basketball'] = extend(levels['7'], {
   'useFlagGoal': true,
-  'toolbox':
-    tb('<block type="bounce_moveLeft"></block> \
-        <block type="bounce_moveRight"></block> \
-        <block type="bounce_bounceBall"></block>')
 });
 levels['7_sports'] = extend(levels['7_basketball'], {
   theme: 'football',
@@ -394,14 +390,18 @@ levels['10_basketball'] = extend(levels['10'], {
     [1, 0, 0, 0, 0, 0, 0, 1],
     [1, 0,16, 0, 0, 0, 0, 1]
   ],
-  'toolbox':
-    tb('<block type="bounce_moveLeft"></block> \
-        <block type="bounce_moveRight"></block> \
-        <block type="bounce_bounceBall"></block> \
-        <block type="bounce_incrementPlayerScore"></block> \
-        <block type="bounce_incrementOpponentScore"></block>')
 });
 levels['10_sports'] = extend(levels['10_basketball'], {
+  'map': [
+    [1, 1, 2, 2, 2, 2, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 4, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0,16, 0, 0, 0, 0, 1]
+  ],
   theme: 'football',
 });
 levels['11'] = {
@@ -473,6 +473,7 @@ levels['11_basketball'] = extend(levels['11'], {
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
         <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \
@@ -554,6 +555,7 @@ levels['12_basketball'] = {
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
         <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \
@@ -575,6 +577,7 @@ levels['12_sports'] = extend(levels['12_basketball'], {
     tb('<block type="bounce_moveLeft"></block> \
         <block type="bounce_moveRight"></block> \
         <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
         <block type="bounce_incrementPlayerScore"></block> \
         <block type="bounce_incrementOpponentScore"></block> \
         <block type="bounce_launchBall"></block> \

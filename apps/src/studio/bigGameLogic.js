@@ -221,11 +221,12 @@ BigGameLogic.prototype.update_danger = function (x) {
 
 /**
  * Calls the user provided update_player function, or no-op if none was provided.
- * @param {number} key KeyCode of key that is down
+ * @param {number|string} key KeyCode of key that is down
  * @param {number} y Current y location of player. (is this in an inverted coordinate space?)
  * @returns {number} New y location of the player
  */
 BigGameLogic.prototype.update_player = function (key, y) {
+  key = parseInt(key, 10);
   return this.getFunc_('update-player')(key, y);
 };
 

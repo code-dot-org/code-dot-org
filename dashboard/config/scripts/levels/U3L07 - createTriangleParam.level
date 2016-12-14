@@ -80,8 +80,8 @@
       {
         "entries": [
           "drawTriangle:1",
-          "penUp:0",
-          "penDown:0"
+          "penDown:0",
+          "penUp:0"
         ],
         "matchType": "inexact",
         "minTimes": 2,
@@ -99,7 +99,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 2,
-        "message": "App Lab is expecting that you will define drawTrinagle to moveFoward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started."
+        "message": "App Lab is expecting that you will define drawTriangle to moveForward and turnLeft 3 times, with the turtle ending up back where it started facing the direction it started."
       }
     ],
     "instructions_important": "false",

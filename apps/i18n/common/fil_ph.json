@@ -33,6 +33,7 @@
   "copy": "Kopyahin",
   "copyright": "Copyright",
   "currentVersion": "Kasalukuyang version",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Table name",
   "dataWorkspaceHeader": "Data Browser",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Search for an icon...",
   "ignore": "I-ignore",
   "infinity": "Walang katapusan",
+  "joinText": "sumali",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "talon",
   "keepPlaying": "I-play lang",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "sa tuktok na kaliwa sa labas na posisyon",
   "positionTopOutRight": "sa tuktok labas mismo na posisyon",
   "positionTopRight": "sa kanang tuktok na posisyon",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "I-print",
   "privacyPolicy": "Privacy Policy",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
@@ -314,9 +318,5 @@
   "when": "kelan",
   "whenRun": "kapag tumakbo",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Oo",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Oo"
 }

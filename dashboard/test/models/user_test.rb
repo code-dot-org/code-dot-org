@@ -124,7 +124,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
@@ -135,7 +135,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age 21+" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
@@ -145,7 +145,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with age that's not a number" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -155,7 +155,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with negative age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: -15, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -165,7 +165,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with too large age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -228,40 +228,40 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can create user without email" do
-    assert_difference('User.count') do
-      User.create!(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
+    assert_creates(User) do
+      User.create!(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
 
   test "cannot create self-managed user without email or hashed email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
   test "cannot make an account without email a teacher" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
-    user.user_type = 'teacher'
+    user.user_type = User::TYPE_TEACHER
     assert !user.save
   end
 
   test "cannot make an account without email an admin" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
     assert !user.save
   end
 
   test "cannot create admin without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
@@ -448,7 +448,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.present?
     assert user.hashed_email.present?
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.email.blank?
@@ -459,10 +459,20 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(full_address: 'fake address')
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
+  end
+
+  test 'changing user from teacher to student removed unconfirmed_email' do
+    user = create :teacher
+    user.update(email: 'unconfirmed_email@example.com')
+
+    assert user.unconfirmed_email.present?
+    user.update(user_type: User::TYPE_STUDENT)
+
+    assert_nil user.unconfirmed_email
   end
 
   test 'changing user from student to teacher saves email' do
@@ -471,11 +481,35 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@old.xx')
     user.save!
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
+  end
+
+  test 'sanitize_race_data sanitizes closed_dialog' do
+    user = create :student
+    user.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes too many races' do
+    user = create :student
+    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes non-races' do
+    user = create :student
+    user.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data noops valid responses' do
+    user = create :student
+    user.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), user.reload.races
   end
 
   test 'under 13' do
@@ -572,6 +606,28 @@ class UserTest < ActiveSupport::TestCase
 
     # changed password
     assert student.reload.encrypted_password != old_password
+  end
+
+  test 'user in_progress_and_completed_scripts does not include deleted scripts' do
+    user = create :user
+    real_script = Script.starwars_script
+    fake_script = create :script
+
+    user_script_1 = create :user_script, user: user, script: real_script
+    user_script_2 = create :user_script, user: user, script: fake_script
+
+    fake_script.destroy!
+
+    # Preconditions for test: The script is gone, but the associated UserScript still exists.
+    # If we start failing this setup assertion (that is, we do automated cleanup
+    # when deleting a script) then we can probably delete this test.
+    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
+    assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
+
+    # Test: We only get back the userscript for the script that still exists
+    scripts = user.in_progress_and_completed_scripts
+    assert_equal scripts.size, 1
+    assert scripts.include?(user_script_1)
   end
 
   test 'user is working on script' do

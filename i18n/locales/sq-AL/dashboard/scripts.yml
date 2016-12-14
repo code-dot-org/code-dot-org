@@ -13,11 +13,11 @@ sq:
             'Artist: Shapes': 'Artist: Format'
             'Bee: Loops': 'Bletë: Ciklet'
             'Bee: Sequence': 'Bletë: Sekuencë'
-            Building a Foundation: Krijimi i një Baze
+            Building a Foundation: Krijimi i një fondacioni
             Getting Loopy: Duke u Çmëndur
             Going Places Safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
             Happy Maps: Hartat e Gëzuara
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
             'Maze: Debugging': 'Maze: Rregullimi'
             'Maze: Loops': 'Maze: Ciklet'
             'Maze: Sequence': 'Labirinti: Sekuencë'
@@ -30,7 +30,7 @@ sq:
           title: Kursi 2
           description: Kursi 2 është dizenjuar për studentët që mund të lexojnë dhe nuk kanë si prioritet programimin. Në këtë kurs, studentët do të krijojnë programe për të zgjidhur problemet dhe të zhvillojnë lojëra interaktive ose ngjarje që ata të mund ti shpërndajnë. Rekomanduar për klasat 2-5.
           description_short: Kursi 2 është dizenjuar për studentët, që mund të lexojnë.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Moshat 6+ (lexim i kërkuar )
           stage:
             'Artist: Debugging': 'Artist: Rregullimi'
             'Artist: Loops': 'Artist: Ciklet'
@@ -53,7 +53,7 @@ sq:
             Your Digital Footprint: Gjurmët e Tua Dixhitale
         course3:
           title: Kursi 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kursi 3 është dizenjuar për studentët, të cilët kanë marrë Kursin 2. Studentët do futen më thellë në temat e programimit, që janë prezantuar në kurset e mëparshme, për të krijuar zgjidhje fleksibile për problemet më të ndërlikuara. Në fund të këtij kursi, studentët krijojnë histori interaktive dhe lojëra që mund ti shpërndajnë me këdo. Rekomanduar për klasën 4-5.
           description_short: Kursi 3 është një përforcim njohurish i Kursit 2.
           description_audience: Moshat 8-18
           stage:
@@ -68,14 +68,14 @@ sq:
             Bounce: Hidhu
             Computational Thinking: Të menduarit kompjuterik
             Crowdsourcing: Crowdsourcing
-            Dice Race: Gara Dice
+            Dice Race: Gara me zar
             Digital Citizenship: Shtetësi Dixhitale
             'Farmer: While Loops': 'Fermeri: Ciklet While'
             Functional Suncatchers: Suncatchers-at Funksionalë
             Internet: Internet
             Maze: Labirint
             'Maze: Conditionals': 'Maze: Kushtet'
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             'Studio: Create a Game': 'Play Lab - Krijo një Lojë'
             'Studio: Create a Story': 'Play Lab: Krijo një Histori'
         playlab:
@@ -91,7 +91,7 @@ sq:
           stage:
             Artist: Artisti
         hourofcode:
-          title: Classic Maze
+          title: Labirint Klasik
           description: Provo bazat e shkencës kompjuterike me karaktere nga Angry Birds, Plants vs. Zombies dhe Ketrit nga Ice Age!
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
           stage:
@@ -104,7 +104,7 @@ sq:
             Artist: Artisti
         course4:
           title: Kursi 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: Kursi 4 është dizejnuar për studentët të cilët kanë marrë Kursin 2 dhe 3. Nxënësit do të mësojnë se si të merren me puzzles me rritjen e kompleksitetit që ata të mësojnë si të kombinojnë disa koncepte, kur bëjnë çdo sfidë. Në kohën kur ky kurs është përfunduar, studentët do të  krijojnë programe që lejojnë ata të shfaqin aftësi të shumta,  përfshirë ciklet dhe funksionet me parametra. Rekomandohet për klasat 4-8.
           description_short: Studentët që marrin Kursin 4 duhet të kenë marrë tashmë Kursin 2 dhe 3.
           description_audience: Moshat 10-18
           stage:
@@ -116,14 +116,14 @@ sq:
             'Artist: Variables': 'Artist: Variablat'
             'Bee: For Loops': 'Bletë: Ciklet For'
             'Bee: Functions with Parameters': 'Bletë: Funksionet me Parametra'
-            Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
+            Extreme Challenge - Comprehensive: Sfidë Ekstreme- Gjithëpërfshirëse
             Maze and Bee: Maze dhe Bletë
             'Play Lab: For Loops': 'Play Lab: Ciklet For'
             'Play Lab: Functions with Parameters': 'Play Lab: Funksionet me Parametra'
             'Play Lab: Variables': 'Play Lab: Variablat'
-            Super Challenge - For Loops: Super Challenge - For Loops
-            Super Challenge - Functions and Parameters: Super Challenge - Functions and Parameters
-            Super Challenge - Variables: Super Challenge - Variables
+            Super Challenge - For Loops: Super sfidë- Për cikle
+            Super Challenge - Functions and Parameters: Super sfidë-Funksione dhe Parametra
+            Super Challenge - Variables: Super sfidë- Variabla
             'Unplugged: Binary': 'Unplugged: Binare'
             'Unplugged: Envelope Variables': 'Unplugged: Variablat Zarf'
             'Unplugged: For Loop Fun': 'Unplugged: Argëtimi Ciklit For'
@@ -267,7 +267,7 @@ sq:
             The Farmer 2: Fermeri 2
             The Farmer 3: Fermeri 3
             The Internet: Interneti
-            The Maze: The Maze
+            The Maze: Labirinti
             Wrap-up: Mbështjell
         edit-code:
           title: Ndrysho kodin
@@ -278,7 +278,7 @@ sq:
             Hoc2015 Blockly: Hoc2015 Blockly
             Play Lab: Play Lab
             The Artist: Artisti
-            The Maze: The Maze
+            The Maze: Labirinti
           description_audience: ''
         events:
           title: Ngjarje
@@ -286,8 +286,8 @@ sq:
           description_short: Ngjarje
           stage:
             Bounce: Hidhu
-            Calc: Calc
-            Eval: Eval
+            Calc: Llogarit
+            Eval: Vlerëso
             Studio: Studio
         flappy:
           title: Flappy Code
@@ -321,14 +321,14 @@ sq:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Puzzle
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -902,13 +902,13 @@ sq:
           description_audience: Ages 6-13
           stage:
             Binary Bracelets: Byzylykët Binarë
-            Building a Foundation: Krijimi i një Baze
+            Building a Foundation: Krijimi i një fondacioni
             Getting Loopy: Duke u Çmëndur
             Graph Paper Programming: Programimi me grafikë
             Happy Maps: Hartat e Gëzuara
             Move it, Move it: Lëvize, Lëvize
             'Real-life Algorithms: Plant a Seed': 'Algoritmet e jetës-Reale: Mbill një Farë'
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             The Big Event: Eventi i Madh
         afterschool1:
           title: Afterschool 1
@@ -1101,11 +1101,11 @@ sq:
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
         iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
+          title: Laboratori i lojës Epoka e Akullnajave
+          description: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
+          description_short: Krijo një histori ose një lojë me laboratorin e Epokës së Akullnajave!
           stage:
-            Ice Age Play Lab: Ice Age Play Lab
+            Ice Age Play Lab: Laboratori i lojës Epoka e Akullnajave
           description_audience: ''
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
@@ -1150,29 +1150,29 @@ sq:
             Practice Performance Task: Practice Performance Task
             Unit 3 Overview: Unit 3 Overview
         gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
+          title: Laboratori i Lojës Gumball
+          description: Krijo një histori ose një lojë me laboratorin e Gumball!
+          description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
           stage:
-            Gumball Play Lab: Gumball Play Lab
+            Gumball Play Lab: Laboratori i Lojës Gumball
         starwars:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
+          description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
+          description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
           description_audience: ''
         starwarsblocks:
-          title: 'Star Wars: Building a Galaxy With Code'
-          description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
+          description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
+          description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
           description_audience: ''
         mc:
           title: Ora e Kodimit Minecraft
-          description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
-          description_short: Explore a Minecraft world through code
+          description: Përdorini blloqe kodi për të dërguar Steve ose Alex në një aventurë përmes botës Minecraft
+          description_short: Eksploro botën e Minecraft përmes kodit
           stage:
             Hour of Code 2015: Ora e Kodimit 2015
         CSPPD3-Unit3-pt2:
@@ -1455,6 +1455,8 @@ sq:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1724,7 +1726,7 @@ sq:
             Classes: Classes
             External Style Sheets: External Style Sheets
             Usability and Accessibility: Usability and Accessibility
-            Peer Review: Peer Review
+            Peer Review: Rishikimi i ndërsjellë
             Describing Web Pages: Describing Web Pages
           description_audience: ''
         CSDU5-Draft:
@@ -1799,7 +1801,7 @@ sq:
             Events: Ngjarje
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
             Loops: cikle 
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1827,7 +1829,7 @@ sq:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Të shkruarit këngë me Parametra
+            Songwriting: kompozim
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1839,7 +1841,7 @@ sq:
             Debugging: Debugging
             Events: Ngjarje
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'jigsaw: Mëso të lëvizësh mouse-in sa andej këtej'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Mëso të tërheqësh dhe lëshosh mjete'
             Loops: cikle 
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2139,6 +2141,10 @@ sq:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2160,10 +2166,10 @@ sq:
         basketball:
           stage:
             Bounce: Hidhu
-          title: Basketball
+          title: Realizo një lojë basketbolli
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Realizo një lojë basketbolli
+          description: Realizo një lojë basketbolli
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2198,7 +2204,7 @@ sq:
             Multi-Page Websites: Multi-Page Websites
             Classes: Classes
             External Style Sheets: External Style Sheets
-            Peer Review: Peer Review
+            Peer Review: Rishikimi i ndërsjellë
             Box Model and Page Layout: Box Model and Page Layout
             Digital Footprint: Digital Footprint
             Publishing a Website: Publishing a Website
@@ -2254,11 +2260,11 @@ sq:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Dizenjo Minecraft-in e Orës së Kodimit
+          title: Dizenjo Minecraft-in e Orës së Kodimit
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
+          description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ sq:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Të shkuarit nëpër Vende në mënyrë të Sigurtë
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ sq:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Algoritmet e jetës-Reale: Mbill një Farë'
+            Your Digital Footprint: Gjurmët e Tua Dixhitale
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ sq:
             Binary Bracelets: Byzylykët Binarë
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Gjurmët e Tua Dixhitale
+            Building a Foundation: Krijimi i një fondacioni
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ sq:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Shtetësi Dixhitale
+            'Unplugged: Binary': 'Unplugged: Binare'
+            Artist Binary: Artist Binar
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ sq:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Crowdsourcing
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ sq:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Të shkruarit këngë me Parametra
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2412,10 +2430,10 @@ sq:
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: Përziej dhe përshtat sportet
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Përziej dhe përshtat sportet
+          description: Përziej dhe përshtat sportet
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Mirë se vini!
@@ -2448,6 +2466,20 @@ sq:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
