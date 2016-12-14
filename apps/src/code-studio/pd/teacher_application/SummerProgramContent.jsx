@@ -32,10 +32,6 @@ export default React.createClass({
     this.props.onChange({[event.target.name]: event.target.value});
   },
 
-  checkListChange(event) {
-
-  },
-
   dismissDialog() {
     this.setState({dialogWasDismissed: true});
   },

@@ -49,7 +49,7 @@ const SummerWorkshopSchedule = React.createClass({
     selectedState: React.PropTypes.string
   },
 
-  renderAssignedWorkshopGroup2OrGroup1Csd() {
+  renderGroup1CsdOrGroup2AssignedWorkshop() {
     if (this.props.regionalPartnerGroup === 2 ||
       (this.props.regionalPartnerGroup === 1 && this.props.selectedCourse === 'csd')) {
       let assignedSummerWorkshop = `Summer 2017 (exact date to be determined) in ${this.props.selectedState}`;
@@ -102,7 +102,7 @@ const SummerWorkshopSchedule = React.createClass({
   render() {
     return (
       <div>
-        {this.renderAssignedWorkshopGroup2OrGroup1Csd()}
+        {this.renderGroup1CsdOrGroup2AssignedWorkshop()}
         {this.renderAssignedWorkshopGroup1Csp()}
       </div>
     );
