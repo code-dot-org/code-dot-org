@@ -16,6 +16,7 @@ import {
 } from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
 import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
+import SummerProgramContent from './SummerProgramContent';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -88,6 +89,10 @@ const TeacherApplication = React.createClass({
     };
   },
 
+  handleSubformDataChange(changedData) {
+    this.setState(changedData);
+  },
+
   handleTextChange(event) {
     console.log(event);
     this.setState({[event.target.id]: event.target.value});
@@ -124,6 +129,20 @@ const TeacherApplication = React.createClass({
     if (this.state[key] !== undefined && this.state[key].length === 0) {
       return 'error';
     }
+  },
+
+  componentWillUpdate() {
+    this._errorData = null;
+  },
+
+  get errorData() {
+    if (!this._errorData) {
+      this._errorData = {};
+      for (const key in this.state) {
+        this._errorData[key] = this.getRequiredValidationErrorMessage(key);
+      }
+    }
+    return this._errorData;
   },
 
   generateTeacherInformationSection() {
@@ -664,7 +683,11 @@ const TeacherApplication = React.createClass({
         {this.state.selectedCourse === 'csd' && this.renderCSDSpecificContent()}
         {this.state.selectedCourse === 'csp' && this.renderCSPSpecificContent()}
         <hr/>
-        {this.renderSummerProgramContent()}
+        <SummerProgramContent
+          onChange={this.handleSubformDataChange}
+          formData={this.state}
+          errorData={this.errorData}
+        />
         <hr/>
         {this.renderComputerScienceBeliefsPoll()}
         {this.renderComputerScienceAtYourSchool()}

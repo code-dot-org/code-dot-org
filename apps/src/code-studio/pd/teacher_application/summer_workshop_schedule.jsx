@@ -4,7 +4,7 @@ const group2OrGroup1CsdWorkshops = {
   'June 18 - 24, 2017: Houston': ['AL', 'FL', 'GA', 'IN', 'IA', 'KY', 'OH', 'OK', 'SC', 'TN', 'TX'],
   'July 16 - 21, 2017: Phoenix': ['AR', 'AZ', 'CA', 'CO', 'ID', 'MT', 'NV', 'UT', 'WA'],
   'July 30 - August 4, 2017: Philadelphia': ['IL', 'ME', 'MD', 'MI', 'NJ', 'NY', 'NC', 'PA', 'WI', 'VA']
-}
+};
 
 const group1CspWorkshops = {
   'AL': [{region: 'Alabama', workshopDates: ''}],
@@ -39,7 +39,7 @@ const group1CspWorkshops = {
     {region: 'Washington (Puget Sound)', workshopDates: 'July 10 - 14, 2017'},
     {region: 'Washington (Spokane)', workshopDates: 'July 10 - 14, 2017'}
   ]
-}
+};
 
 const SummerWorkshopSchedule = React.createClass({
   propTypes: {
