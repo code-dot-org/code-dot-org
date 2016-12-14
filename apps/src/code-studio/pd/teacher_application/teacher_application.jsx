@@ -419,48 +419,6 @@ const TeacherApplication = React.createClass({
     }
   },
 
-<<<<<<< d669f447365cd9741a37f74dd7e4694555bfb393
-  renderSummerProgramContent() {
-    return (
-      <div id="summerProgramContent">
-        <div style={{fontWeight: 'bold'}}>
-          As a reminder, teachers in this program are required to participate in:
-          <li>
-            One five-day summer workshop in 2017 (may require travel with expenses paid)
-          </li>
-          <li>
-            Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
-          </li>
-          <li>
-            20 hours of online professional development during the 2017 - 18 school year
-          </li>
-          <ButtonList
-            type="radio"
-            label="Are you committed to participating in the entire program?"
-            groupName="committedToSummer"
-            answers={yesNoResponses}
-            includeOther={true}
-            onChange={this.handleRadioButtonListChange}
-            selectedItems={this.state.committedToSummer}
-            required={true}
-            validationState={this.getRequiredValidationState('committedToSummer')}
-          />
-          {this.renderSummerWorkshopSchedule()}
-        </div>
-      </div>
-    );
-  },
-
-  renderSummerWorkshopSchedule() {
-    return (
-      <h2>
-        This section is huge. Putting it off for now.
-      </h2>
-    );
-  },
-
-=======
->>>>>>> Show modal warning when people don't commit to the full program
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
       allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
