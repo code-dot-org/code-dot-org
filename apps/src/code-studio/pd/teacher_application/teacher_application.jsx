@@ -486,7 +486,7 @@ const TeacherApplication = React.createClass({
                             <Radio
                               name={question}
                               value={j + 1}
-                              checked={parseInt(this.state[question]) === j + 1}
+                              checked={parseInt(this.state[question], 10) === j + 1}
                               onChange={this.handleRadioButtonListChange}
                             />
                           </td>
@@ -596,7 +596,7 @@ const TeacherApplication = React.createClass({
         document.getElementById(topInvalidElementId)
       );
     }
-    console.log(formData);
+
     if (topInvalidElementId) {
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
