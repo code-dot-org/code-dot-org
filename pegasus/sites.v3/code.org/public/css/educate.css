@@ -14,6 +14,7 @@
 .educate-box {
   position: absolute;
   min-height: 255px;
+  width: 305px;
   color: white;
   padding: 20px;
   border-radius: 5px;
