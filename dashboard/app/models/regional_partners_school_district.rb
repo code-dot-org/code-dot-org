@@ -7,8 +7,8 @@
 #
 # Indexes
 #
-#  index_regional_partners_school_districts_on_regional_partner_id  (regional_partner_id)
-#  index_regional_partners_school_districts_on_school_district_id   (school_district_id)
+#  index_regional_partners_school_districts_on_partner_id          (regional_partner_id)
+#  index_regional_partners_school_districts_on_school_district_id  (school_district_id)
 #
 
 class RegionalPartnersSchoolDistrict < ActiveRecord::Base
