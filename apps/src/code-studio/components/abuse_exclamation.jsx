@@ -63,7 +63,7 @@ export default React.createClass({
       finalLink = 'edit';
       finalLinkText = this.props.i18n.edit_project;
     } else {
-      finalLink = 'https:/studio.code.org';
+      finalLink = 'https://studio.code.org';
       finalLinkText = this.props.i18n.go_to_code_studio;
     }
 

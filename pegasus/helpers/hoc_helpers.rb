@@ -156,6 +156,9 @@ def launch_tutorial(tutorial, params={})
     )
   end
 
+  # TODO: (elijah) this pathway (formerly used by /api/hour/begin_learn)
+  # is currently unused. Either reenable the pathway in a more-scalable
+  # way or remove this block.
   if params[:track_learn] && !settings.read_only
     learn_weight = DCDO.get('hoc_learn_activity_sample_weight', 1).to_i
     if learn_weight > 0 && Kernel.rand < (1.0 / learn_weight)

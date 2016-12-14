@@ -3,15 +3,14 @@ title 'Introduction to Phase 2'
 css 'unplugged'
 skip_dialog true
 markdown <<MARKDOWN
-# Welcome to the Phase 3 Online Challenges
+# Welcome to CS in Science: Part 4
 
 <img src="https://csedweek.org/images/fit-260/chris-poster.png" class="level-image">
 
-## Phase 3 Post In-Person - Online
+## Academic Year Development
 
-Welcome to the online challenges portion of your Phase 3 PD! Here you will continue to learn from the community of CS in Science teachers and spend more time with the curriculum to prepare for teaching the course in your classroom. These online activities should take no more than 8 hours, and we recommend splitting that time between the weeks following each of your two Phase 3 In-Person sessions.
+Welcome back to the online follow-up portion of your Academic Year professional learning! Here you will continue to learn from the community of CS in Science teachers and spend more time with the curriculum to prepare for teaching the course in your classroom. These online activities should take no more than 2 hours and will help you plan your implementation and refresh your understanding of Complex Adaptive Systems.
 
-> Note: In order for this PD to be considered complete, you must finish this online PD by June 6th, 2016
 
-To complete these challenges you'll need to use your Project GUTS curriculum, which contains each of the various modules that you visited over the past year.
+To complete these activities you'll need to use your Project GUTS curriculum notebook which can also be accessed digitally <a href="http://www.projectguts.org/CSinScienceCurriculum"> here</a>.  
 MARKDOWN

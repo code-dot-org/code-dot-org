@@ -551,9 +551,14 @@ FactoryGirl.define do
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
     association :user, factory: :teacher
-    sequence(:personal_email) { |n| "teacher#{n}@example.net" }
-    sequence(:school_email) { |n| "teacher#{n}@a_school.edu" }
-    application {{personalEmail: personal_email, schoolEmail: school_email}}
+    sequence(:primary_email) { |n| "teacher#{n}@example.net" }
+    sequence(:secondary_email) { |n| "teacher#{n}@my.school.edu" }
+    application do
+      {
+        'school' => create(:public_school).id,
+        'school-district' => create(:school_district).id
+      }.to_json
+    end
   end
 
   # school info
@@ -666,7 +671,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id 333
+    sequence(:id, 333)
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -677,7 +682,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id 333
+    sequence(:id, 333)
     name "A seattle charter school"
     city "Seattle"
     state "WA"

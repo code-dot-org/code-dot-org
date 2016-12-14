@@ -2,7 +2,7 @@ namespace :stack do
   task :environment do
     require_relative '../../deployment'
     CDO.chef_local_mode = rack_env?(:adhoc) ? !ENV['CHEF_SERVER'] : false
-    ENV['INSTANCE_TYPE'] ||= rack_env?(:production) ? 'c4.8xlarge' : 't2.large'
+    ENV['INSTANCE_TYPE'] ||= rack_env?(:production) ? 'm4.10xlarge' : 't2.large'
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1'
     ENV['DOMAIN'] ||= rack_env?(:adhoc) ? 'cdn-code.org' : 'code.org'

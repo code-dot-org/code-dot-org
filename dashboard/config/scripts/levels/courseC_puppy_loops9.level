@@ -13,7 +13,7 @@
     "start_direction": "0",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,1,4,1,0,0,0],[0,0,2,0,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "5",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If you repeat the first few actions, you can get me to the pig with just four more blocks!\",\r\n  \"hint_id\": \"courseC_puppy_loops9_1\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you repeat the first few actions, you can get me to the pig with just four more blocks!\",\"hint_id\":\"courseC_puppy_loops9_1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8fad8ca95f5e15a75cc255bd5fe12e25/courseC_puppy_loops9.mp3\"}]",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

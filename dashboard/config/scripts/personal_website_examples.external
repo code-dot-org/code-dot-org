@@ -4,17 +4,59 @@ markdown <<MARKDOWN
 # Personal Home Page Examples
 
 ## Prompt
-Explore __*at least 4 websites*__ and answer the following questions on your worksheet.
+Explore __*at least 4 websites*__ and answer the following questions in your journal.
 
 * What new content and style features do you notice that could be added to high quality feature list from last class?
 * What common elements do you notice across all the websites? For example does every page have a title?
 
 ## Links
-1. <a href="http://www.arch4blind.com/index.html"> Personal Website 1</a>
-1. <a href="http://www.danawoodwriter.com/"> Personal Website 2</a>
-1. <a href="http://www.strangelove.me/"> Personal Website 3</a>
-1. <a href="http://chris-steib.squarespace.com/"> Personal Website 4</a>
-1. <a href="http://www.krisblack.com/"> Personal Website 5</a>
-1. <a href="http://davidpogue.com/"> Personal Website 6</a>
-1. <a href="http://www.brittanywitkin.com/"> Personal Website 7</a>
+1. <a href="http://www.danawoodwriter.com/"> Personal Website 1</a>
+1. <a href="http://chris-steib.squarespace.com/"> Personal Website 2</a>
+1. <a href="http://www.krisblack.com/"> Personal Website 3</a>
+1. <a href="http://www.oliviacleansgreen.com/"> Personal Website 4</a>
+1. <a href="http://www.brittanywitkin.com/"> Personal Website 5</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Identifying Essential Elements of a Personal Website
+
+**Goal:** Students will look at several examples of personal websites to identify common essential elements of personal websites.
+
+**Distribute:** Give each student a copy of [r home-page-design].
+
+**Setup:**   Students should have out their Quality Website Features list (in [r web-development-practices]). 
+
+!!!say
+
+    In this Unit you are going to make websites to share information and projects you create in this class. This is called a personal website. Today you’re going to be web designers and start thinking about designing your website.  You’re going to be sketching a design on paper for the home page of your personal website first we will be looking at some pre-existing personal websites. 
+
+&fa-desktop; **Transition:** Move students to Code Studio Bubble 2 of Lesson 2.
+
+Students will answer the following prompt in their journal:
+
+**Prompt:**  Explore at least 4 websites and answer the following questions:
+
+* What new features do you notice that could be added to Quality Website Features list from last class?
+* What common elements do you notice across all the websites? For example does every page have a title?
+
+**Discuss:** Have students share the features they noticed especially any new observations. Have students add any newly found features to their list in [r web-development-practices]. 
+
+**Display:** Display a copy of the Quality Website Features list that was created in Lesson 1 and update it.
+
+discussion!!!discussion-0
+
+!!!discussion <discussion-0>
+
+    The list of common elements should include things such as:
+
+    * Title
+    * Name
+    * Navigation Bar
+    * Image
+    * Small text areas
+    * Areas which are boxed and bordered
+
+**Discuss:** In addition have students share common elements. Create a list.
+
+**Display:** Create a list of suggested elements of a personal website where the whole class can see it for the following activity.
 MARKDOWN

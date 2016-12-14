@@ -6,7 +6,7 @@
   "user_id": 532,
   "properties": {
     "markdown_instructions": "A _pseudocode_ program is started below that asks the user for input and stores the value in a variable.  Continue writing pseudocode to accomplish this task: \r\n\r\nIf the hour is within the school day (8 to 15) then display  “Nice to see you!”, Otherwise, display “It’s time to go home!\r\n\r\n    DISPLAY (“Enter the hour of day (0-23)”)\r\n    hour <- INPUT ()",
-    "encrypted_solution": "hAZcLNLe9zBLS3bl8rRb7TP5vX3dh+hG4bGOvcKzl5ju/Zsj+6R3eGgG1jtX\nRyzrZbjZDU9iN5g/+r/Iqt4P9VgThSl1XbG1rALxYa1H671CpCmLJyFgxKag\nadG7sNpzX8mtb6QJ0971Iw3y6vXTOBs9lvNmzqmLMr3mYqjy0bA=\n",
+    "encrypted_solution": "vXiiAkL2LemDOHxuGWJ9/0HSqZ+E++k/oqZvOJZJzFiZFz8FHL6AdNEu6W58\nRczp8na896Hit4V8K3RKExiFDqPiXll+kyEJONZ0w2I47H1pGDq4g3X68yzh\nis6oOSNQ93RJZnROk4ZlLWGD3gu0tVMt/hUJBvluDeq//9eORMM7tBXIdLtt\nDybP2NA/kLXvy+ores4vRyWZV4mTBYg7A0YkmPjShNgqNyX8tINY3fVE4G7M\nEnpUzNz1ctJGgYt5IjY/oGhqBGModpuWExgEG52FPIMUDOLBHwOnq0nwl0+V\nlCAhPKqPY0GNMScggvXQhCxHET0/hEkYGglinH+nmesj68bw16GGG5KQFqBx\nlAF0yp3MHH/o3FHnXFyNO3DezrVfrb8IUzfwLi9JRxfXlneUPhNEatQKSYn1\nUF3tWKkhE9x3uyz/hulhLCZhYRFOtwNSqHMesndNnPfUqPckLEjPKvu10VlI\nUOLVcVpDX8VO5mfeFiaey7mlcTutSMZouGtqaJ9PXNhY7Qm2VJXCqGEZZhg+\nYaEC7c7XW9mzQURFQOtdoOi+YpJI0Gf1uXGC4bIb5n6hLfa7jf0y5lb7meKa\n73Syqaq8MGPxW4Ddzss21hjFT44i4QgbM9EZkGA/MzJXl2YnYQS0FVdEBDjY\npZ1zqrX2zU0Jg0JpbhiUMI99Cd6T2/6bQjhrb+53lU0a8fHfwqOqwZENqOeq\nHk1L54+xA0rdCvLDbu+u0oT7MA4b/okkSE20sQjT4v29wgEKyQEJ/zUPgSAP\nwW6trUBXPZ2ojcnAVo7kEOrKT71llHZbgw4ViS+De3Ggu62fBNlXXWNlR1LK\noSMzoxeGYJaPoWQitbGqulfUPWMY+raJLgQ=\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

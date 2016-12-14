@@ -27,7 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This puzzle is very similar to the last one.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use a `repeat 5 times` block to create the loop.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Place a `move forward` block inside the `repeat block`.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle is very similar to the last one.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/49914b1a6377ab80886499de4f3801f1/grade2_puppy_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat 5 times` block to create the loop.\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/04e5da5c39b4d823b261964c94987f90/grade2_puppy_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Place a `move forward` block inside the `repeat block`.\",\"hint_id\":\"hint3\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e2f9684e19cb65b508903de4cdfcda74/grade2_puppy_loops3.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

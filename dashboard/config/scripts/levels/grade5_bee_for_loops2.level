@@ -17,7 +17,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "nectar_goal": "15",
-    "ideal": "19",
+    "ideal": "18",
     "instructions": "Add the code necessary to make sure the bee collects all the nectar. Look at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -33,6 +33,7 @@
     "fast_get_nectar_animation": "false",
     "markdown_instructions": "Add the code necessary to make sure the bee collects all the nectar.\r\n\r\nLook at how much code you need for this puzzle! (We'll learn a simpler way in the next puzzle.)",
     "step_speed": "1",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -43,51 +44,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_nectar">
-                  <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="controls_repeat_ext" inline="true">
-                          <value name="TIMES">
-                            <block type="math_number">
-                              <title name="NUM">2</title>
-                            </block>
-                          </value>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                          <next>
-                            <block type="maze_moveForward">
-                              <next>
-                                <block type="controls_repeat_ext" inline="true">
-                                  <value name="TIMES">
-                                    <block type="math_number">
-                                      <title name="NUM">3</title>
-                                    </block>
-                                  </value>
-                                  <statement name="DO">
-                                    <block type="maze_nectar"/>
-                                  </statement>
-                                  <next>
-                                    <block type="maze_moveForward"/>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -110,15 +67,7 @@
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-            <block type="math_number">
-              <title name="NUM">???</title>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

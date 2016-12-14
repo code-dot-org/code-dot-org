@@ -465,6 +465,15 @@ var TopInstructions = React.createClass({
   },
 
   shouldIgnoreShortInstructions() {
+    // if we have no long instructions, never ignore the short ones.
+    // Note that we would only decide to ignore short instructions in
+    // the absense of long instructions when the short instructions
+    // themselves were less than 10 characters, which can easily happen
+    // in ideo- or logographic languages.
+    if (!this.props.longInstructions) {
+      return false;
+    }
+
     // if short instructions and long instructions have a Levenshtein
     // Edit Distance of less than or equal to 10, ignore short
     // instructions and only show long.

@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
   * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [ یہ ای-میل دیکھیں](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## آور-آف-کوڈ کا ایک ایونٹ کیسے ھوسٹ کریں۔
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) یہ ھاؤ-ٹو ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) ٹیٹوریئل منتخب کریں:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [انہیں آزمائیں!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
   * تیاری کے لیے کم از کم درکار وقت
   * یہ سیلف-گائیڈڈ ہوتے ہیں جو شرکاء (پارٹیسیپنٹس) کو ان کی اپنی رفتار اور صلاحیت کے درجہ کے مطابق کام کرنے کا موقع دیتے ہیں۔
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
 
@@ -79,7 +79,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -90,7 +90,7 @@ We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://co
 
 **اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]

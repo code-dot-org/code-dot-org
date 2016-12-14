@@ -51,9 +51,16 @@ export let VisualizationOverlay = React.createClass({
   },
 
   recalculateTransform() {
-    var svg = this.refs.root;
-    var clientRect = svg.getBoundingClientRect();
-    var screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
+    const svg = this.refs.root;
+    const clientRect = svg.getBoundingClientRect();
+
+    // If the svg has no width or no height, we can't trust it; skip
+    // recalculating the transform.  This can happen when it's display:none.
+    if (clientRect.width === 0 || clientRect.height === 0) {
+      return;
+    }
+
+    const screenSpaceToAppSpaceTransform = svg.createSVGMatrix()
         .scale(this.props.width / clientRect.width)
         .translate(-clientRect.left, -clientRect.top);
     this.setState({ screenSpaceToAppSpaceTransform });
