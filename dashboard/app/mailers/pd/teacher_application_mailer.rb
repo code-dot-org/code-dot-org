@@ -10,11 +10,13 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
       to: email_address(teacher_name, teacher_email)
   end
 
-  def principal_approval_request(principal_prefix, principal_first_name, principal_last_name, principal_email, teacher_name, program_name)
+  def principal_approval_request(principal_prefix, principal_first_name, principal_last_name, principal_email, approval_form_url, teacher_name, program_name, program_url)
     @principal_prefix = principal_prefix
     @principal_last_name = principal_last_name
+    @approval_form_url = approval_form_url
     @teacher_name = teacher_name
     @program_name = program_name
+    @program_url = program_url
     content_type = 'text/html'
     mail content_type: content_type,
       from: from_teacher,
