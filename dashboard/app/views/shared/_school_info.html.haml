@@ -7,7 +7,6 @@
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - existing_school_info ||= {}
 - existing_school_info[:country] ||= 'US' if us_ip
-- regional_partner_hidden_field ||= ''
 
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/schoolInfo.js')}
@@ -91,7 +90,6 @@
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
     options['suppressScrolling'] = #{!!(defined? suppress_scrolling && suppress_scrolling)}
-    options['regionalPartnerHiddenField'] = '#{regional_partner_hidden_field}'
 
     if (#{!!(defined? assume_usa && assume_usa)}) {
       $('#school-country-group').hide();
