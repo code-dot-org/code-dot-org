@@ -21,32 +21,18 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
 
   def create
     application_params = params.require(:application)
-    application_json = application_params.to_unsafe_h.to_json
+    application_json = application_params.to_unsafe_h.to_json.strip_utf8mb4
 
-    # Set user, and extract the personal and school emails.
-    # Otherwise the teacher application JSON is saved as provided.
+    # The teacher application JSON is saved as provided.
+    # The model parses it, extracts and validates required fields.
     @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      primary_email: application_params.require(:primaryEmail),
-      secondary_email: application_params.require(:secondaryEmail),
-      application: application_json
+      application_json: application_json
     )
 
     if @teacher_application.save
-      Pd::TeacherApplicationMailer.application_receipt(
-        teacher_name: @teacher_application.teacher_name,
-        teacher_email: @teacher_application.teacher_email
-      ).deliver_now
-      Pd::TeacherApplicationMailer.principal_approval_request(
-        principal_prefix: @teacher_application.principal_prefix,
-        principal_first_name: @teacher_application.principal_first_name,
-        principal_last_name: @teacher_application.principal_last_name,
-        principal_email: @teacher_application.principal_email,
-        approval_form_url: @teacher_application.approval_form_url,
-        teacher_name: @teacher_application.teacher_name,
-        program_name: @teacher_application.program_name,
-        program_url: @teacher_application.program_url,
-      ).deliver_now
+      Pd::TeacherApplicationMailer.application_receipt(@teacher_application).deliver_now
+      Pd::TeacherApplicationMailer.principal_approval_request(@teacher_application).deliver_now
       head :no_content
     else
       render json: {errors: @teacher_application.errors.full_messages}, status: :bad_request

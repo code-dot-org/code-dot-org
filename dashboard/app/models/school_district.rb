@@ -10,6 +10,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_school_districts_on_state  (state)
+#
 
 class SchoolDistrict < ActiveRecord::Base
   include Seeded

@@ -18,6 +18,51 @@
 #
 
 class Pd::TeacherApplication < ActiveRecord::Base
+  PROGRAM_DETAILS_BY_COURSE = {
+    'csd' => {
+      name: 'CS Discoveries',
+      url: 'https://code.org/educate/professional-learning/cs-discoveries',
+      approval_form_id: '1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A'
+    },
+    'csp' => {
+      name: 'CS Principles',
+      url: 'https://code.org/educate/professional-learning/cs-principles',
+      approval_form_id: '1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ'
+    }
+  }
+
+  REQUIRED_APPLICATION_FIELDS = %w[
+    school
+    school-district
+    firstName
+    lastName
+    primaryEmail
+    secondaryEmail
+    phoneNumber
+    principalPrefix
+    principalFirstName
+    principalLastName
+    principalEmail
+    selectedCourse
+    gradesAtSchool
+    genderIdentity
+    grades2016
+    subjects2016
+    grades2017
+    subjects2017
+    committedToSummer
+    ableToAttendAssignedSummerWorkshop
+    allStudentsShouldLearn
+    allStudentsCanLearn
+    newApproaches
+    allAboutContent
+    allAboutProgramming
+    csCreativity
+    currentCsOpportunities
+    whyCsIsImportant
+    whatTeachingSteps
+  ]
+
   belongs_to :user
 
   validates_presence_of :user
@@ -26,85 +71,114 @@ class Pd::TeacherApplication < ActiveRecord::Base
   validates_email_format_of :primary_email, allow_blank: true
   validates_email_format_of :secondary_email, allow_blank: true
   validates_presence_of :application
+  validates_inclusion_of :selected_course, in: PROGRAM_DETAILS_BY_COURSE.keys, unless: -> {!(application && selected_course)}
+
+  validate :validate_required_application_fields
+  def validate_required_application_fields
+    return unless application
+    hash = application_hash
+
+    REQUIRED_APPLICATION_FIELDS.each do |key|
+      errors.add(:application, "must contain #{key}") unless hash.key? key
+    end
+  end
+
+  def application_json=(json)
+    write_attribute :application, json
+
+    # Also set the primary and secondary email fields.
+    hash = JSON.parse(json)
+    write_attribute :primary_email, hash['primaryEmail']
+    write_attribute :secondary_email, hash['secondaryEmail']
+  end
 
   def application_json
+    application
+  end
+
+  def application_hash=(hash)
+    write_attribute :application, hash.to_json
+
+    # Also set the primary and secondary email fields.
+    hash = hash.stringify_keys
+    write_attribute :primary_email, hash['primaryEmail']
+    write_attribute :secondary_email, hash['secondaryEmail']
+  end
+
+  def application_hash
     JSON.parse(application)
   end
 
   def teacher_first_name
-    application_json['preferredFirstName'].presence || application_json['firstName']
+    application_hash['preferredFirstName'].presence || application_hash['firstName']
   end
 
   def teacher_last_name
-    application_json['lastName']
+    application_hash['lastName']
   end
 
   def teacher_name
     "#{teacher_first_name} #{teacher_last_name}"
   end
 
-  def teacher_email
-    application_json['primaryEmail']
-  end
-
   def principal_prefix
-    application_json['principalPrefix']
+    application_hash['principalPrefix']
   end
 
   def principal_first_name
-    application_json['principalFirstName']
+    application_hash['principalFirstName']
   end
 
   def principal_last_name
-    application_json['principalLastName']
+    application_hash['principalLastName']
   end
 
   def principal_name
-    return "#{principal_first_name} #{principal_last_name}"
+    "#{principal_first_name} #{principal_last_name}"
   end
 
   def principal_email
-    application_json['principalEmail']
+    application_hash['principalEmail']
+  end
+
+  def selected_course
+    application_hash['selectedCourse']
+  end
+
+  def program_details
+    PROGRAM_DETAILS_BY_COURSE[selected_course]
   end
 
   def program_name
-    if application_json['courseSelection'] == 'csd'
-      return 'CS Discoveries'
-    elsif application_json['courseSelection'] == 'csp'
-      return 'CS Principals'
-    end
+    program_details[:name]
   end
 
   def program_url
-    if application_json['courseSelection'] == 'csd'
-      return 'https://code.org/educate/professional-learning/cs-discoveries'
-    elsif application_json['courseSelection'] == 'csp'
-      return 'https://code.org/educate/professinoal-learning/cs-principles'
-    end
+    program_details[:url]
   end
 
   def approval_form_url
-    if application_json['courseSelection'] == 'csd'
-      return 'https://docs.google.com/forms/d/e/1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A/viewform?entry.1124819666=TEACHER+NAME&entry.1772278630=SCHOOL+NAME&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=APPLICATION+ID'
-    elsif application_json['courseSelection'] == 'csp'
-      return 'https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?entry.1124819666=TEACHER+NAME&entry.1772278630=SCHOOL+NAME&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=APPLICATION+ID'
-    end
+    form_id = program_details[:approval_form_id]
+    return nil unless form_id
+
+    params = "entry.1124819666=#{teacher_name}&entry.1772278630=#{school_name}&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=#{id}"
+    "https://docs.google.com/forms/d/e/#{form_id}/viewform?#{params}"
   end
 
   def school
-    application_json['school'].present? ? School.find(application_json['school']) : nil
+    application_hash['school'].present? ? School.find(application_hash['school']) : nil
   end
 
   def school_name
-    school.try(:name) || application_json['school-name']
+    school.try(:name) || application_hash['school-name']
   end
 
   def school_district
-    application_json['school-district'].present? ? SchoolDistrict.find(application_json['school-district']) : nil
+    application_hash['school-district'].present? ? SchoolDistrict.find(application_hash['school-district']) : nil
   end
 
   def school_district_name
-    school_district.try(:name) || application_json['school-district-name']
+    school_district.try(:name) || application_hash['school-district-name']
   end
 
   def regional_partner_name
@@ -112,7 +186,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def to_expanded_json
-    application_json.merge({
+    application_hash.merge({
       id: id,
       userId: user_id,
       timestamp: created_at,

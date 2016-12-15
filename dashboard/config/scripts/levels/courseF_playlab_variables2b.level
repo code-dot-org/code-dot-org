@@ -87,7 +87,7 @@
             </block>
           </next>
         </block>
-        <block type="variables_get" y="50px" x="100px">
+        <block type="variables_get" y="20px" x="250px">
           <title name="VAR">color</title>
         </block>
       </xml>
