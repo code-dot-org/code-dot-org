@@ -325,7 +325,8 @@ describe('progressReduxTest', () => {
       currentLevelId: undefined,
       professionalLearningCourse: true,
       saveAnswersBeforeNavigation: false,
-      stages: [stageData[1], peerReviewStage],
+      stages: [stageData[1]],
+      peerReviews: peerReviewStage,
       scriptName: 'alltheplcthings'
     };
 
@@ -336,7 +337,10 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.currentLevelId, undefined);
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
-      assert.deepEqual(nextState.stages, intialOverviewProgressWithPeerReview.stages);
+      assert.deepEqual(nextState.stages, [
+        ...intialOverviewProgressWithPeerReview.stages,
+        peerReviewStage
+      ]);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
     });
