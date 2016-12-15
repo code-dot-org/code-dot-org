@@ -417,6 +417,22 @@
   highlights_title: Highlights
   highlights_header: Hour of Code Highlights
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
+  higlights_see_more: See more highlights
+  highlights_readmore: Read more
+  highlights_watchvideo: Watch the video
+  highlights_facebook: Share on Facebook
+  highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company.
+  highlights_constant_alba_short_heading: Jessica Alba learns an Hour of Code
+  highlights_constant_obama_heading: President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.
+  highlights_constant_obama_short_heading: Coder in Chief
+  highlights_constant_malala_heading: "\"Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.\""
+  highlights_constant_malala_short_heading: Nobel Peace Prize winner Malala
+  highlights_constant_trudeau_heading: Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.
+  highlights_constant_trudeau_short_heading: Prime Minister Justin Trudeau codes a game
+  highlights_constant_ny_heading: After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!
+  highlights_constant_ny_short_heading: Brooklyn beats Chicago
+  highlights_constant_athletes_heading: Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
+  highlights_constant_athletes_short_heading: Push yourself
 
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
   footer_trademark_message: 'Hour of Code™ is a trademark of Code.org.'
@@ -1264,7 +1280,7 @@
   tutorial_vidnews_language: "English only"
   tutorial_kodable-pre_language: "English, Arabic, Azerbaijani, German, Greek, Spanish, Persian, French, Indonesian, Icelandic, Italian, Korean, Dutch, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, Ukrainian, Chinese"
   tutorial_highseas_language: "English only"
-  tutorial_capython_language: "English only"
+  tutorial_capython_language: "English, Dutch, Spanish"
   tutorial_frzn_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
   tutorial_cocom_language: "English, Arabic, Bulgarian, Chinese, Czech, Danish, Dutch, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 9 more"
   tutorial_play-lab_language: "English, Arabic, Bulgarian, Chinese, Croatian, Danish, Dutch, Finnish, French, German, Greek, Icelandic, Indonesian, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian and 19 more"
@@ -1306,14 +1322,14 @@
   tutorial_livecode_language: "English only"
   tutorial_cocomgame_language: "English, Arabic, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, Finnish, French, German, Greek, Hebrew, Italian, Japanese, Korean, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, Ukrainian, Vietnamese and 8 more"
   tutorial_tynkerspin_language: "English only"
-  tutorial_code-avengers_language: "English, Spanish, Bulgarian, Danish, Greek, Finnish, Japanese and more"
+  tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
   tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
   tutorial_texas-instruments_language: "English only"
-  tutorial_cajava_language: "English only"
+  tutorial_cajava_language: "English, Dutch, Spanish"
   tutorial_codehs_language: "English only"
   tutorial_hopemo_language: "English only"
   tutorial_tynkercm_language: "English only"
@@ -1335,7 +1351,7 @@
   tutorial_tynkerdrones_language: "English only"
   tutorial_carla_language: "English only"
   tutorial_globaloria_language: "English, Spanish"
-  tutorial_capost_language: "English only"
+  tutorial_capost_language: "English, Dutch, Spanish, Russian"
   tutorial_marco_language: "Multiple"
   tutorial_codestersflappybike_language: "English, Spanish"
   tutorial_kanopong_language: "English only"
@@ -1364,7 +1380,7 @@
   tutorial_coders_language: "English, French"
   tutorial_tynkerhw_language: "English only"
   tutorial_tynkermh_language: "English only"
-  tutorial_caphoto_language: "English only"
+  tutorial_caphoto_language: "English, Dutch, Spanish"
   tutorial_mozillahw_language: "English only"
   tutorial_ticklep_language: "Chinese (Traditional), Danish, English, French, Japanese"
   tutorial_bbot_language: "Dutch, Suomi, English"
@@ -1824,7 +1840,7 @@
   tutorial_tynkerdd_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkerana_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_vidcard_string_platforms: "Chrome"
-  tutorial_spritebox_string_platforms: "All modern browsers"
+  tutorial_spritebox_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_tynkerch_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_lightbot_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_hoc_string_platforms: "do-not-show"
@@ -1838,7 +1854,7 @@
   tutorial_inf_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"
   tutorial_tynkersol_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_itchg_string_platforms: "Chrome, Firefox, Android Tablet"
-  tutorial_como_string_platforms: "All modern browsers"
+  tutorial_como_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_processfound_string_platforms: "Chrome, Firefox, Safari"
   tutorial_tynkerhomo_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_art_string_platforms: "All modern browsers, Android tablet, iPad, Android phone, iPhone"

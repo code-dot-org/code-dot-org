@@ -26,8 +26,6 @@ The program has two components:
   - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploring the curriculum.
 
 
-[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
-
 ## <a name="commitments"></a>What are the program commitments?
 
 Five-Day Summer Workshop: (Summer 2017)

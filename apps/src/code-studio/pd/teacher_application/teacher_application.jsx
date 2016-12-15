@@ -36,7 +36,7 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
 
 FieldGroup.propTypes = {
   id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string,
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
   required: React.PropTypes.bool
@@ -51,9 +51,9 @@ const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
 const requiredCsdFields = ['gradesPlanningToTeach'];
 const requiredCspFields = ['cspDuration', 'cspApCourse', 'gradesPlanningToTeach', 'cspApExamIntent'];
-const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn', 'allStudentsCanLearn', 'newApproaches',
-  'allAboutContent', 'allAboutProgramming', 'csCreativity', 'currentCsOpportunities', 'whyCsIsImportant',
-  'whatTeachingSteps'];
+const requiredSurveyFields = ['committedToSummer', 'ableToAttendAssignedSummerWorkshop', 'allStudentsShouldLearn',
+  'allStudentsCanLearn', 'newApproaches', 'allAboutContent', 'allAboutProgramming', 'csCreativity',
+  'currentCsOpportunities', 'whyCsIsImportant', 'whatTeachingSteps'];
 const likertSurveyCell = {textAlign: 'center', width: '10%'};
 const likertAnswers = ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'];
 
@@ -78,6 +78,10 @@ const fieldValidationErrors = {
 };
 
 const TeacherApplication = React.createClass({
+
+  propTypes: {
+    regionalPartnerGroup: React.PropTypes.number
+  },
 
   getInitialState() {
     return {
@@ -143,6 +147,14 @@ const TeacherApplication = React.createClass({
   generateTeacherInformationSection() {
     return (
       <div>
+        {!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value && (
+          <label style={{color: 'red'}}>
+            Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our program,
+            most spots are reserved for teachers in regions where we have a Regional Partner. If you would like to
+            continue this application, please note that we will consider it for review if spaces remain at the end of
+            our application period.
+          </label>
+        )}
         <ButtonList
           type="check"
           label="Grades served at your school"
@@ -419,6 +431,37 @@ const TeacherApplication = React.createClass({
     }
   },
 
+  renderSummerProgramContent() {
+    return (
+      <div id="summerProgramContent">
+        <div style={{fontWeight: 'bold'}}>
+          As a reminder, teachers in this program are required to participate in:
+          <li>
+            One five-day summer workshop in 2017 (may require travel with expenses paid)
+          </li>
+          <li>
+            Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
+          </li>
+          <li>
+            20 hours of online professional development during the 2017 - 18 school year
+          </li>
+          <ButtonList
+            type="radio"
+            label="Are you committed to participating in the entire program?"
+            groupName="committedToSummer"
+            answers={yesNoResponses}
+            includeOther={true}
+            onChange={this.handleRadioButtonListChange}
+            selectedItems={this.state.committedToSummer}
+            required={true}
+            validationState={this.getRequiredValidationState('committedToSummer')}
+          />
+          {this.renderSummerWorkshopSchedule()}
+        </div>
+      </div>
+    );
+  },
+
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
       allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
@@ -632,6 +675,9 @@ const TeacherApplication = React.createClass({
           onChange={this.handleSubformDataChange}
           formData={this.state}
           errorData={this.errorData}
+          regionalPartnerGroup={this.props.regionalPartnerGroup}
+          selectedCourse={this.state.selectedCourse}
+          selectedState={document.getElementById('school-state').value}
         />
         <hr/>
         {this.renderComputerScienceBeliefsPoll()}
