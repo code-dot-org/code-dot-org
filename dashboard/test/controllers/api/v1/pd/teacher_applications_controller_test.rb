@@ -67,6 +67,21 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     assert_response 404
   end
 
+  test 'strip_utf8mb4' do
+    sign_in create(:teacher)
+
+    application_hash = build(:pd_teacher_application_hash)
+    application_hash['whyCsIsImportant'] = "My favorite emoji, the #{panda_panda}, would not be possible without CS"
+
+    assert_creates Pd::TeacherApplication do
+      put :create, params: {application: application_hash}
+      assert_response :success
+    end
+
+    value = Pd::TeacherApplication.last.application_hash['whyCsIsImportant']
+    assert_equal 'My favorite emoji, the Panda, would not be possible without CS', value
+  end
+
   private
 
   def test_params
