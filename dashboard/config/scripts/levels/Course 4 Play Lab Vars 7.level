@@ -43,12 +43,14 @@
     "min_workspace_height": "900",
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "contained_level_names": null,
+    "instructions_important": "false"
   },
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
-    "sequencing": 3,
+    "sequencing": 1,
     "events": 2,
     "variables": 2
   }
