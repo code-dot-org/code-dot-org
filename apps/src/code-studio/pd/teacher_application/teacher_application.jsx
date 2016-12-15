@@ -25,6 +25,11 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
   if (errorText) {
     validationState = 'error';
   }
+
+  if (!(props['maxLength'])) {
+    props['maxLength'] = '1000';
+  }
+
   return (
     <FormGroup controlId={id} validationState={validationState}>
       <ControlLabel>{label}{required && requiredStar}</ControlLabel>
@@ -40,7 +45,8 @@ FieldGroup.propTypes = {
   label: React.PropTypes.string,
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
-  required: React.PropTypes.bool
+  required: React.PropTypes.bool,
+  maxLength: React.PropTypes.string
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
