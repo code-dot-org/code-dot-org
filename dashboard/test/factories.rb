@@ -550,14 +550,36 @@ FactoryGirl.define do
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
-    association :user, factory: :teacher
-    sequence(:primary_email) { |n| "teacher#{n}@example.net" }
-    sequence(:secondary_email) { |n| "teacher#{n}@my.school.edu" }
-    application do
+    transient do
+      application_hash {build(:pd_teacher_application_hash)}
+    end
+    association :user, factory: :teacher, strategy: :build
+    application {application_hash.to_json}
+    primary_email {application_hash['primaryEmail']}
+    secondary_email {application_hash['secondaryEmail']}
+  end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
+  factory :pd_teacher_application_hash, class: 'Hash' do
+    transient do
+      association :school, factory: :public_school
+      association :school_district
+    end
+
+    initialize_with do
       {
-        'school' => create(:public_school).id,
-        'school-district' => create(:school_district).id
-      }.to_json
+        school: school.id,
+        'school-district' => school_district.id,
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        primaryEmail: 'rubeus@hogwarts.co.uk',
+        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
+        principalPrefix: 'Mrs.',
+        principalFirstName: 'Minerva',
+        principalLastName: 'McGonagall',
+        principalEmail: 'minerva@hogwarts.co.uk',
+        selectedCourse: 'csd'
+      }.stringify_keys
     end
   end
 
