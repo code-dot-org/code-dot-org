@@ -1864,9 +1864,7 @@ exports.install = function (blockly, blockInstallOptions) {
     },
   };
 
-  generator.studio_whenSpriteAndGroupCollideSimple = function () {
-    return '';
-  };
+  generator.studio_whenSpriteAndGroupCollideSimple = generator.studio_eventHandlerPrologue;
 
 
   /**
