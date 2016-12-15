@@ -46,7 +46,7 @@ FieldGroup.propTypes = {
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
   required: React.PropTypes.bool,
-  maxLength: React.PropTypes.string
+  maxLength: React.PropTypes.number
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
