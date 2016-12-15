@@ -639,8 +639,6 @@ class Script < ActiveRecord::Base
   end
 
   def summarize
-    summarized_stages = stages.map(&:summarize)
-
     if has_peer_reviews?
       levels = []
       peer_reviews_to_complete.times do |x|
@@ -655,14 +653,12 @@ class Script < ActiveRecord::Base
         }
       end
 
-      peer_review_section = {
+      peer_review_stage = {
         name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
         flex_category: 'Peer Review',
         levels: levels,
         lockable: false
       }
-
-      summarized_stages << peer_review_section
     end
 
     summary = {
@@ -674,8 +670,9 @@ class Script < ActiveRecord::Base
       hideable_stages: hideable_stages?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
-      stages: summarized_stages,
-      peerReviewsRequired: peer_reviews_to_complete || 0
+      stages: stages.map(&:summarize),
+      peerReviewsRequired: peer_reviews_to_complete || 0,
+      peerReviewStage: peer_review_stage
     }
 
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
