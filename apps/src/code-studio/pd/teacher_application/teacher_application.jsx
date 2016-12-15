@@ -70,11 +70,19 @@ const isPhoneNumber = (value) => {
   }
 };
 
+const isUnder1000Chars = (value) => {
+  if (value.length > 1000) {
+    return 'Please limit your response to 1000 characters';
+  }
+};
+
 const fieldValidationErrors = {
   primaryEmail: isEmail,
   secondaryEmail: isEmail,
   principalEmail: isEmail,
   phoneNumber: isPhoneNumber,
+  whyCsIsImportant: isUnder1000Chars,
+  whatTeachingSteps: isUnder1000Chars,
 };
 
 const TeacherApplication = React.createClass({
@@ -554,7 +562,7 @@ const TeacherApplication = React.createClass({
           style={{width: '100%'}}
           rows={4}
           required={true}
-          validationState={this.getRequiredValidationState('whyCsIsImportant')}
+          errorText={this.getRequiredValidationErrorMessage('whyCsIsImportant')}
         />
         <FieldGroup
           id="whatTeachingSteps"
@@ -565,7 +573,7 @@ const TeacherApplication = React.createClass({
           style={{width: '100%'}}
           rows={4}
           required={true}
-          validationState={this.getRequiredValidationState('whatTeachingSteps')}
+          errorText={this.getRequiredValidationErrorMessage('whatTeachingSteps')}
         />
       </div>
     );
