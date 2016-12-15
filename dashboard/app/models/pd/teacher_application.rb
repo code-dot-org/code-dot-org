@@ -26,7 +26,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     },
     'csp' => {
       name: 'CS Principles',
-      url: 'https://code.org/educate/professinoal-learning/cs-principles',
+      url: 'https://code.org/educate/professional-learning/cs-principles',
       approval_form_id: '1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ'
     }
   }
@@ -38,11 +38,29 @@ class Pd::TeacherApplication < ActiveRecord::Base
     lastName
     primaryEmail
     secondaryEmail
+    phoneNumber
     principalPrefix
     principalFirstName
     principalLastName
     principalEmail
     selectedCourse
+    gradesAtSchool
+    genderIdentity
+    grades2016
+    subjects2016
+    grades2017
+    subjects2017
+    committedToSummer
+    ableToAttendAssignedSummerWorkshop
+    allStudentsShouldLearn
+    allStudentsCanLearn
+    newApproaches
+    allAboutContent
+    allAboutProgramming
+    csCreativity
+    currentCsOpportunities
+    whyCsIsImportant
+    whatTeachingSteps
   ]
 
   belongs_to :user
@@ -53,6 +71,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   validates_email_format_of :primary_email, allow_blank: true
   validates_email_format_of :secondary_email, allow_blank: true
   validates_presence_of :application
+  validates_inclusion_of :selected_course, in: PROGRAM_DETAILS_BY_COURSE.keys, unless: -> {!(application && selected_course)}
 
   validate :validate_required_application_fields
   def validate_required_application_fields
@@ -122,9 +141,12 @@ class Pd::TeacherApplication < ActiveRecord::Base
     application_hash['principalEmail']
   end
 
+  def selected_course
+    application_hash['selectedCourse']
+  end
+
   def program_details
-    selected_course = application_hash['selectedCourse']
-    PROGRAM_DETAILS_BY_COURSE[selected_course] || {}
+    PROGRAM_DETAILS_BY_COURSE[selected_course]
   end
 
   def program_name
