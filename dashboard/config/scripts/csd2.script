@@ -1,3 +1,5 @@
+hidden false
+login_required true
 hideable_stages true
 
 stage 'Quality Websites'
