@@ -75,12 +75,12 @@ const SummerWorkshopSchedule = React.createClass({
           <p>
             We strongly encourage participants to attend their assigned summer workshop (based on the district in which
             you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
-            you will work in 2017 - 18. Your regions and summer workshop dates are below.
+            you will work in 2017 - 18. Your region and summer workshop dates are below.
             {
               regionalWorkshops.map((workshop, i) => {
                 return (
                   <li key={i}>
-                    {`${this.props.regionalPartnerName}: ${group1CspWorkshops[this.props.regionalPartnerName] || 'Summer 2017 (exact date to be determined)'}`}
+                    {`${this.props.regionalPartnerName || this.props.selectedState}: ${group1CspWorkshops[this.props.regionalPartnerName] || 'Summer 2017 (exact date to be determined)'}`}
                   </li>
                 );
               })
