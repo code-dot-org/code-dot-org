@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const group2OrGroup1CsdWorkshops = {
+const groupTwoOrGroupOneCsdWorkshops = {
   'June 18 - 23, 2017: Houston': ['AL', 'FL', 'GA', 'IN', 'IA', 'KY', 'OH', 'OK', 'SC', 'TN', 'TX'],
   'July 16 - 21, 2017: Phoenix': ['AR', 'AZ', 'CA', 'CO', 'ID', 'MT', 'NV', 'UT', 'WA'],
   'July 30 - August 4, 2017: Philadelphia': ['IL', 'ME', 'MD', 'MI', 'NJ', 'NY', 'NC', 'PA', 'WI', 'VA']
@@ -36,7 +36,7 @@ export function getWorkshopForState(regionalPartnerGroup, regionalPartnerName, s
   let workshopName = '2017 Workshop TBD';
 
   if (regionalPartnerGroup === 2 || (regionalPartnerGroup === 1 && selectedCourse === 'csd')) {
-    _.forEach(group2OrGroup1CsdWorkshops, (value, key) => {
+    _.forEach(groupTwoOrGroupOneCsdWorkshops, (value, key) => {
       if (value.includes(state)) {
         workshopName = key;
       }
@@ -51,6 +51,6 @@ export function getWorkshopForState(regionalPartnerGroup, regionalPartnerName, s
 }
 
 export {
-  group2OrGroup1CsdWorkshops,
+  groupTwoOrGroupOneCsdWorkshops,
   group1CspWorkshops
 };
