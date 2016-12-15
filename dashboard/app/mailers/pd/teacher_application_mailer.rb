@@ -5,7 +5,7 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
   def application_receipt(teacher_application)
     mail from: from_teacher,
       subject: 'Your application has been received',
-      to: email_address(teacher_application.teacher_name, teacher_application.teacher_email)
+      to: email_address(teacher_application.teacher_name, teacher_application.primary_email)
   end
 
   def principal_approval_request(teacher_application)
@@ -24,7 +24,7 @@ class Pd::TeacherApplicationMailer < ActionMailer::Base
     @teacher_first_name = teacher_application.teacher_first_name
     mail from: from_teacher,
       subject: "We've received your principal's approval form",
-      to: email_address(teacher_application.teacher_name, teacher_application.teacher_email)
+      to: email_address(teacher_application.teacher_name, teacher_application.primary_email)
   end
 
   private
