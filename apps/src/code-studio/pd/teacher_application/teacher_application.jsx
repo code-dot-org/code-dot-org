@@ -46,7 +46,8 @@ FieldGroup.propTypes = {
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
   required: React.PropTypes.bool,
-  maxLength: React.PropTypes.number
+  maxLength: React.PropTypes.number,
+  value: React.PropTypes.string
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
@@ -100,7 +101,42 @@ const TeacherApplication = React.createClass({
   },
 
   getInitialState() {
-    return {};
+    if (window.location.search.indexOf('?sampleData=1') >= 0) {
+      return {
+        gradesAtSchool: ['Kindergarten', '1', '2', '3', '4'],
+        firstName: 'Benjamin',
+        preferredFirstName: 'Ben',
+        lastName: 'Franklin',
+        primaryEmail: 'ben+primary@upenn.edu',
+        secondaryEmail: 'ben+secondary@upenn.edu',
+        phoneNumber: '1-800-867-5309',
+        genderIdentity: 'Male',
+        grades2016: ['5', '6', '7'],
+        subjects2016: ['Computer Science', 'Math'],
+        grades2017: ['8', '9', '10'],
+        subjects2017: ['Computer Science', 'Math', 'Music'],
+        principalFirstName: 'George',
+        principalLastName: 'Washington',
+        principalPrefix: 'Dr.',
+        principalEmail: 'george@whitehouse.gov',
+        selectedCourse: '',
+        gradesPlanningToTeach: grades,
+        cspDuration: 'Year-long course (~180 contact hours)',
+        cspApCourse: 'AP course only',
+        cspApExamIntent: 'Yes',
+        allStudentsShouldLearn: '4',
+        allStudentsCanLearn: '4',
+        newApproaches: '3',
+        allAboutContent: '2',
+        allAboutProgramming: '2',
+        csCreativity: '4',
+        currentCsOpportunities: ['Courses for credit', 'After school clubs'],
+        whyCsIsImportant: 'Life is pain - anyone who says differently is selling something',
+        whatTeachingSteps: 'Sharks with  laser beams'
+      };
+    } else {
+      return {};
+    }
   },
 
   handleSubformDataChange(changedData) {
@@ -193,6 +229,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="firstName"
           label="First name"
+          value={this.state.firstName}
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -203,10 +240,12 @@ const TeacherApplication = React.createClass({
           label="Preferred First Name"
           type="text"
           onChange={this.handleTextChange}
+          value={this.state.preferredFirstName}
         />
         <FieldGroup
           id="lastName"
           label="Last Name"
+          value={this.state.lastName}
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -215,6 +254,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="primaryEmail"
           label="Primary email address"
+          value={this.state.primaryEmail}
           type="email"
           onChange={this.handleTextChange}
           required={true}
@@ -223,6 +263,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="secondaryEmail"
           label="Secondary email address (we may need to contact you during the summer)"
+          value={this.state.secondaryEmail}
           type="email"
           onChange={this.handleTextChange}
           required={true}
@@ -231,6 +272,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="phoneNumber"
           label="Phone Number (Please provide a phone number that we can use to reach you year-round)"
+          value={this.state.phoneNumber}
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -293,6 +335,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="principalFirstName"
           label="Principal's first name"
+          value={this.state.principalFirstName}
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -301,6 +344,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="principalLastName"
           label="Principal's last name"
+          value={this.state.principalLastName}
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -328,6 +372,7 @@ const TeacherApplication = React.createClass({
         <FieldGroup
           id="principalEmail"
           label="Principal's Email Address"
+          value={this.state.principalEmail}
           type="email"
           onChange={this.handleTextChange}
           required={true}
@@ -541,6 +586,7 @@ const TeacherApplication = React.createClass({
           id="whyCsIsImportant"
           label="Why do you believe access to computer science education is important for your students?"
           componentClass="textarea"
+          value={this.state.whyCsIsImportant}
           onChange={this.handleTextChange}
           style={{width: '100%'}}
           rows={4}
@@ -552,6 +598,7 @@ const TeacherApplication = React.createClass({
           label="What steps will you and your school need to take to ensure that enough students enroll in your computer
            science course(s) to keep the course(s) on the master schedule?"
           componentClass="textarea"
+          value={this.state.whatTeachingSteps}
           onChange={this.handleTextChange}
           style={{width: '100%'}}
           rows={4}
