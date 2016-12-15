@@ -4,7 +4,7 @@ import TeacherApplication from '@cdo/apps/code-studio/pd/teacher_application/tea
 
 ReactDOM.render(<TeacherApplication/>, document.getElementById('application-container'));
 
-$('#school-district').change(function () {
+$('#school-district,#school-type').change(function () {
   let districtValue = $('#school-district input').val();
 
   if (districtValue) {
