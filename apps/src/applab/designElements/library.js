@@ -190,7 +190,7 @@ export default {
    * @returns {*}
    */
   typeSpecificPropertyRead: function (element, name) {
-    var elementType = this.getElementType(element);
+    const elementType = this.getElementType(element);
     if (elements[elementType].readProperty) {
       return elements[elementType].readProperty(element, name);
     }

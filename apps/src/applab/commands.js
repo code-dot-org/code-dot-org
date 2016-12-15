@@ -1144,17 +1144,17 @@ applabCommands.getProperty = function (opts) {
   apiValidateDomIdExistence(opts, 'getProperty', 'id', opts.elementId, true);
   apiValidateType(opts, 'getProperty', 'property', opts.property, 'string');
 
-  var elementId = opts.elementId;
-  var property = opts.property;
+  const elementId = opts.elementId;
+  const property = opts.property;
 
-  var element = document.getElementById(elementId);
+  const element = document.getElementById(elementId);
   if (!element) {
     return;
   }
 
-  var info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  const info = setPropertyDropdown.getInternalPropertyInfo(element, property);
   if (!info) {
-    outputError('Cannot get property "' + property + '" on element "' + elementId + '".');
+    outputError(`Cannot get property "${property}" on element "${elementId}".`);
     return;
   }
 

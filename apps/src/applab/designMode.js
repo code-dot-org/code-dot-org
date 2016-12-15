@@ -441,6 +441,15 @@ designMode.updateProperty = function (element, name, value) {
   }
 };
 
+/**
+ * Reads property 'name' of html element 'element'.
+ * @param {Element} element The html element to read the property from. The element could
+ *   have been created in design mode or code mode.
+ * @param {string} name The internal name of the property to read. This is not always
+ *   the name of an html attribute or css style. Valid names are different for each
+ *   element as defined in PROP_INFO in setPropertyDropdown.js.
+ * @returns {*}
+ */
 designMode.readProperty = function (element, name) {
   switch (name) {
     case 'left':
