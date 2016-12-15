@@ -21,13 +21,13 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
 
   def create
     application_params = params.require(:application)
-    application_hash = application_params.to_unsafe_h
+    application_json = application_params.to_unsafe_h.to_json.strip_utf8mb4
 
     # The teacher application JSON is saved as provided.
     # The model parses it, extracts and validates required fields.
     @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      application_hash: application_hash.transform_values(&:strip_utf8mb4)
+      application_json: application_json
     )
 
     if @teacher_application.save
