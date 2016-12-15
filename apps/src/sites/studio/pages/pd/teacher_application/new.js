@@ -13,7 +13,15 @@ $('#school-district').change(function () {
       url: `/api/v1/regional-partners/${districtValue}.json`
     }).done(data => {
       let regionalPartnerGroup = data ? data['group'] : undefined;
-      ReactDOM.render(<TeacherApplication regionalPartnerGroup={regionalPartnerGroup}/>, document.getElementById('application-container'));
+      let regionalPartnerName = data ? data['name'] : undefined;
+
+      ReactDOM.render(
+        <TeacherApplication
+          regionalPartnerGroup={regionalPartnerGroup}
+          regionalPartnerName={regionalPartnerName}
+        />,
+        document.getElementById('application-container')
+      );
     }).fail(data => {
       console.log(`error: ${data}`);
     });
