@@ -90,6 +90,7 @@ module.exports = {
   },
 
   '2': {
+    'levelIncompleteError': flappyMsg.incompleteError2(),
     'requiredBlocks': [
       [{'test': 'endGame', 'type': 'flappy_endGame'}]
     ],
@@ -123,6 +124,7 @@ module.exports = {
   },
 
   '3': {
+    'levelIncompleteError': flappyMsg.incompleteError3(),
     'requiredBlocks': [
       [{'test': 'setSpeed', 'type': 'flappy_setSpeed'}]
     ],
@@ -166,6 +168,7 @@ module.exports = {
   },
 
   '4': {
+    'levelIncompleteError': flappyMsg.incompleteError4(),
     'requiredBlocks': [
       [{'test': 'endGame', 'type': 'flappy_endGame'}]
     ],
@@ -245,6 +248,7 @@ module.exports = {
   },
 
   '6': {
+    'levelIncompleteError': flappyMsg.incompleteError6(),
     'requiredBlocks': [
       [{'test': 'flap', 'type': 'flappy_flap_height'}]
     ],
@@ -286,6 +290,7 @@ module.exports = {
   },
 
   '7': {
+    'levelIncompleteError': flappyMsg.incompleteError7(),
     'requiredBlocks': [
       [{'test': 'setBackground', 'type': 'flappy_setBackground'}]
     ],
@@ -313,6 +318,7 @@ module.exports = {
   },
 
   '8': {
+    'levelIncompleteError': flappyMsg.incompleteError8(),
     'requiredBlocks': [
       [{
         test: function (block) {
@@ -350,6 +356,7 @@ module.exports = {
   },
 
   '9': {
+    'levelIncompleteError': flappyMsg.incompleteError9(),
     'requiredBlocks': [
       [{
         test: function (block) {
