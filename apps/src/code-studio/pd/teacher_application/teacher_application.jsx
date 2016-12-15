@@ -86,9 +86,7 @@ const TeacherApplication = React.createClass({
   },
 
   getInitialState() {
-    return {
 
-    };
   },
 
   handleSubformDataChange(changedData) {
@@ -572,6 +570,13 @@ const TeacherApplication = React.createClass({
         }
       }
     });
+
+    formData['assignedWorkshop'] = getWorkshopForState(
+      this.props.regionalPartnerGroup,
+      this.props.regionalPartnerName,
+      this.state.selectedCourse,
+      document.getElementById('school-state').value
+    );
 
     if (formData.ableToAttendAssignedSummerWorkshop !== 'Yes') {
       formData.fallbackSummerWorkshops = this.state.fallbackSummerWorkshops;
