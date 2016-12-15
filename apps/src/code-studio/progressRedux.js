@@ -64,31 +64,22 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === MERGE_PROGRESS) {
-    // TODO: _.mergeWith after upgrading to Lodash 4+
     let newLevelProgress = {};
     const combinedLevels = Object.keys(Object.assign({}, state.levelProgress, action.levelProgress));
     combinedLevels.forEach(key => {
       newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
     });
 
-    return Object.assign({}, state, {
+    return {
+      ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
-          return Object.assign({}, level, { status: LevelStatus.locked });
-        }
-
-        const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-        let nextLevel = level;
-        if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-          nextLevel = Object.assign({}, level, action.peerReviewsPerformed[index]);
-        }
-
-        return Object.assign({}, nextLevel, level.kind !== 'peer_review' && {
-          status: activityCssClass(newLevelProgress[id])
-        });
-      })}))
-    });
+      stages: state.stages.map(stage => ({
+        ...stage,
+        levels: stage.levels.map((level, index) => {
+          return updateLevel(stage, level, index, action.peerReviewsPerformed, newLevelProgress);
+        })
+      }))
+    };
   }
 
   if (action.type === UPDATE_FOCUS_AREAS) {
@@ -159,6 +150,34 @@ function bestResultLevelId(levelIds, progressData) {
     }
   });
   return bestId;
+}
+
+/**
+ * Update a level (inside of state.progress.stages) according to newLevelProgress
+ * TODO: add some tests
+ */
+function updateLevel(stage, level, index, peerReviewsPerformed, newLevelProgress) {
+  if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
+    return {
+      ...level,
+      status: LevelStatus.locked
+    };
+  }
+
+  let nextLevel = level;
+  if (peerReviewsPerformed && stage.flex_category === 'Peer Review') {
+    nextLevel = {
+      ...level,
+      ...peerReviewsPerformed[index]
+    };
+  }
+  const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+  return {
+    ...nextLevel,
+    ...(level.kind !== 'peer_review' && {
+      status: activityCssClass(newLevelProgress[id])
+    })
+  };
 }
 
 
