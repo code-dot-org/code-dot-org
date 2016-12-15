@@ -188,11 +188,10 @@
     showQuote(lastImage, currentImage);
   }
 
-  $.ready()
-  {
+  $(document).ready(function() {
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
       timerId = setInterval(cycleImage, #{hero_display_time});
     }
-  }
+  });
