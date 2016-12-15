@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList} from '../form_components/button_list.jsx';
-import {group2OrGroup1CsdWorkshops} from './applicationConstants';
+import {groupTwoOrGroupOneCsdWorkshops} from './applicationConstants';
 export default React.createClass({
 
   displayName: 'SummerProgramContent',
@@ -117,7 +117,7 @@ export default React.createClass({
                   are you available to attend? Please note that we are not able to guarantee a space for you in a
                   different location."
                 groupName="fallbackSummerWorkshops"
-                answers={Object.keys(group2OrGroup1CsdWorkshops)}
+                answers={Object.keys(groupTwoOrGroupOneCsdWorkshops)}
                 onChange={this.checkListChange}
                 selectedItems={this.props.formData.fallbackSummerWorkshops}
                 required
