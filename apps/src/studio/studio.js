@@ -159,11 +159,9 @@ var SPEECH_BUBBLE_H_OFFSET = 50;
 var SPEECH_BUBBLE_PADDING = 5;
 var SPEECH_BUBBLE_SIDE_MARGIN = 10;
 var SPEECH_BUBBLE_LINE_HEIGHT = 20;
-var SPEECH_BUBBLE_MAX_LINES = 4;
 var SPEECH_BUBBLE_TOP_MARGIN = 5;
-var SPEECH_BUBBLE_WIDTH = 180;
-var SPEECH_BUBBLE_HEIGHT = 20 +
-      (SPEECH_BUBBLE_MAX_LINES * SPEECH_BUBBLE_LINE_HEIGHT);
+var SPEECH_BUBBLE_MIN_WIDTH = 180;
+var SPEECH_BUBBLE_MAX_WIDTH = 380;
 
 var SCORE_TEXT_Y_POSITION = 30; // bottom of text
 var VICTORY_TEXT_Y_POSITION = 130;
@@ -748,6 +746,7 @@ var performQueuedMoves = function (i) {
 // opts.svgText: existing svg 'text' element
 // opts.text: full-length text string
 // opts.width: total width
+// opts.maxWidth: max width to try, if the text doesn't fit in width
 // opts.fullHeight: total height (fits maxLines of text)
 // opts.maxLines: max number of text lines
 // opts.lineHeight: height per line of text
@@ -755,7 +754,7 @@ var performQueuedMoves = function (i) {
 // opts.sideMargin: left & right margin (deducted from total width)
 //
 
-var setSvgText = function (opts) {
+var setSvgText = Studio.setSvgText = function (opts) {
   // Remove any children from the svgText node:
   while (opts.svgText.firstChild) {
     opts.svgText.removeChild(opts.svgText.firstChild);
@@ -787,7 +786,16 @@ var setSvgText = function (opts) {
       tspan.firstChild.data = tspan.firstChild.data.slice(0, len);
 
       if (opts.maxLines === tSpansAdded) {
-        return opts.fullHeight;
+        if (opts.width < opts.maxWidth) {
+          // Try again with a wider speech bubble
+          return setSvgText(Object.assign({}, opts, {
+            width: Math.min(opts.width * words.length / i, opts.maxWidth),
+          }));
+        }
+        return {
+          height: opts.fullHeight,
+          width: opts.width,
+        };
       }
       // Create new tspan element
       tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
@@ -800,7 +808,10 @@ var setSvgText = function (opts) {
     }
   }
   var linesLessThanMax = opts.maxLines - Math.max(1, tSpansAdded);
-  return opts.fullHeight - linesLessThanMax * opts.lineHeight;
+  return {
+    height: opts.fullHeight - linesLessThanMax * opts.lineHeight,
+    width: opts.width,
+  };
 };
 
 /**
@@ -3401,16 +3412,19 @@ Studio.drawMapTiles = function (svg) {
 
 var updateSpeechBubblePath = function (element) {
   var height = +element.getAttribute('height');
+  var width = +element.getAttribute('width');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
+  var tipOffset = +element.getAttribute('tipOffset') || 0;
   element.setAttribute('d',
                        createSpeechBubblePath(0,
                                               0,
-                                              SPEECH_BUBBLE_WIDTH,
+                                              width,
                                               height,
                                               SPEECH_BUBBLE_RADIUS,
                                               onTop,
-                                              onRight));
+                                              onRight,
+                                              tipOffset));
 };
 
 Studio.displaySprite = function (i) {
@@ -3467,33 +3481,49 @@ Studio.displaySprite = function (i) {
   // in onTick loop)
   sprite.display();
 
-  var speechBubble = document.getElementById('speechBubble' + i);
-  var speechBubblePath = document.getElementById('speechBubblePath' + i);
-  var bblHeight = +speechBubblePath.getAttribute('height');
-  var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
-  var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
-  var nowOnTop = true;
-  var nowOnRight = true;
-  var ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);
-  if (ySpeech < 0) {
-    ySpeech = sprite.y + sprite.height + SPEECH_BUBBLE_PADDING;
-    nowOnTop = false;
-  }
-  var xSpeech = sprite.x + SPEECH_BUBBLE_H_OFFSET;
-  if (xSpeech > Studio.MAZE_WIDTH - SPEECH_BUBBLE_WIDTH) {
-    xSpeech = sprite.x + sprite.width -
-                (SPEECH_BUBBLE_WIDTH + SPEECH_BUBBLE_H_OFFSET);
-    nowOnRight = false;
-  }
-  speechBubblePath.setAttribute('onTop', nowOnTop);
-  speechBubblePath.setAttribute('onRight', nowOnRight);
+  if (sprite.bubbleVisible) {
+    var speechBubble = document.getElementById('speechBubble' + i);
+    var speechBubblePath = document.getElementById('speechBubblePath' + i);
+    var bblHeight = +speechBubblePath.getAttribute('height');
+    var bblWidth = +speechBubblePath.getAttribute('width');
+    var oldTipOffset = +speechBubblePath.getAttribute('tipOffset');
+    var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
+    var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
+    var nowOnTop = true;
+    var nowOnRight = true;
+    var ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);
+    if (ySpeech < SPEECH_BUBBLE_TOP_MARGIN) {
+      ySpeech = sprite.y + sprite.height + SPEECH_BUBBLE_PADDING;
+      nowOnTop = false;
+    }
+    var xSpeech = sprite.x + SPEECH_BUBBLE_H_OFFSET;
+    var tipOffset = 0;
+    if (xSpeech > Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN) {
+      tipOffset = xSpeech - (Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN);
+      xSpeech = Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN;
+      if (sprite.x > (Studio.MAZE_WIDTH - sprite.width) / 2) {
+        tipOffset = 0;
+        nowOnRight = false;
+        xSpeech = sprite.x + sprite.width -
+                    (bblWidth + SPEECH_BUBBLE_H_OFFSET);
 
-  if (wasOnTop !== nowOnTop || wasOnRight !== nowOnRight) {
-    updateSpeechBubblePath(speechBubblePath);
-  }
+        if (xSpeech < SPEECH_BUBBLE_SIDE_MARGIN) {
+          tipOffset = SPEECH_BUBBLE_SIDE_MARGIN - xSpeech;
+          xSpeech = SPEECH_BUBBLE_SIDE_MARGIN;
+        }
+      }
+    }
+    speechBubblePath.setAttribute('onTop', nowOnTop);
+    speechBubblePath.setAttribute('onRight', nowOnRight);
+    speechBubblePath.setAttribute('tipOffset', tipOffset);
 
-  speechBubble.setAttribute('transform', 'translate(' + xSpeech + ',' +
-    ySpeech + ')');
+    if (wasOnTop !== nowOnTop || wasOnRight !== nowOnRight || oldTipOffset !== tipOffset) {
+      updateSpeechBubblePath(speechBubblePath);
+    }
+
+    speechBubble.setAttribute('transform', 'translate(' + xSpeech + ',' +
+      ySpeech + ')');
+  }
 };
 
 Studio.displayScore = function () {
@@ -4767,13 +4797,15 @@ var TIP_X_SHIFT = 10;
 http://www.remy-mellet.com/blog/179-draw-rectangle-with-123-or-4-rounded-corner/
 */
 
-var createSpeechBubblePath = function (x, y, w, h, r, onTop, onRight) {
+var createSpeechBubblePath = function (x, y, w, h, r, onTop, onRight, tipOffset) {
   var strPath = "M"+p(x+r,y); //A
   if (!onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r-TIP_X_SHIFT,y-TIP_HEIGHT)+"L"+p(x+r+TIP_WIDTH,y);
+      strPath+="L"+p(x+r+tipOffset,y);
+      strPath+="L"+p(x+r-TIP_X_SHIFT+tipOffset,y-TIP_HEIGHT)+"L"+p(x+r+TIP_WIDTH+tipOffset,y);
     } else {
-      strPath+="L"+p(x+w-r-TIP_WIDTH,y)+"L"+p(x+w-TIP_X_SHIFT,y-TIP_HEIGHT);
+      strPath+="L"+p(x+w-r-TIP_WIDTH-tipOffset,y)+"L"+p(x+w-TIP_X_SHIFT-tipOffset,y-TIP_HEIGHT);
+      strPath+="L"+p(x+w-r-tipOffset,y);
     }
   }
   strPath+="L"+p(x+w-r,y);
@@ -4781,9 +4813,11 @@ var createSpeechBubblePath = function (x, y, w, h, r, onTop, onRight) {
   strPath+="L"+p(x+w,y+h-r)+"Q"+p(x+w,y+h)+p(x+w-r,y+h); //C
   if (onTop) {
     if (onRight) {
-      strPath+="L"+p(x+r+TIP_WIDTH,y+h)+"L"+p(x+r-TIP_X_SHIFT,y+h+TIP_HEIGHT);
+      strPath+="L"+p(x+r+TIP_WIDTH+tipOffset,y+h)+"L"+p(x+r-TIP_X_SHIFT+tipOffset,y+h+TIP_HEIGHT);
+      strPath+="L"+p(x+r+tipOffset,y+h);
     } else {
-      strPath+="L"+p(x+w-TIP_X_SHIFT,y+h+TIP_HEIGHT)+"L"+p(x+w-r-TIP_WIDTH,y+h);
+      strPath+="L"+p(x+w-r-tipOffset,y+h);
+      strPath+="L"+p(x+w-TIP_X_SHIFT-tipOffset,y+h+TIP_HEIGHT)+"L"+p(x+w-r-TIP_WIDTH-tipOffset,y+h);
     }
   }
   strPath+="L"+p(x+r,y+h);
@@ -4841,14 +4875,15 @@ Studio.showTitleScreen = function (opts) {
       'svgText': tsText,
       'text': opts.text,
       'width': TITLE_SCREEN_TEXT_WIDTH,
+      'maxWidth': TITLE_SCREEN_TEXT_WIDTH,
       'lineHeight': TITLE_SCREEN_TEXT_LINE_HEIGHT,
       'topMargin': TITLE_SCREEN_TEXT_TOP_MARGIN,
       'sideMargin': TITLE_SCREEN_TEXT_SIDE_MARGIN,
       'maxLines': TITLE_SCREEN_TEXT_MAX_LINES,
       'fullHeight': TITLE_SCREEN_TEXT_HEIGHT
     };
-    var tsTextHeight = setSvgText(svgTextOpts);
-    tsTextRect.setAttribute('height', tsTextHeight);
+    var tsTextSize = setSvgText(svgTextOpts);
+    tsTextRect.setAttribute('height', tsTextSize.height);
 
     tsTitle.setAttribute('visibility', 'visible');
     tsTextGroup.setAttribute('visibility', 'visible');
@@ -4956,6 +4991,7 @@ Studio.hideSpeechBubble = function (opts) {
   speechBubble.removeAttribute('onRight');
   speechBubble.removeAttribute('height');
   opts.complete = true;
+  Studio.sprite[opts.spriteIndex].bubbleVisible = false;
   delete Studio.sprite[opts.spriteIndex].bubbleTimeoutFunc;
   Studio.sayComplete++;
 };
@@ -4987,27 +5023,33 @@ Studio.saySprite = function (opts) {
   // Start creating the new speech bubble:
   var bblText = document.getElementById('speechBubbleText' + spriteIndex);
 
+  var maxLines = Math.floor(
+      (Studio.MAZE_HEIGHT - sprite.height - 2 * SPEECH_BUBBLE_RADIUS - 2 * SPEECH_BUBBLE_TOP_MARGIN) /
+      (2 * SPEECH_BUBBLE_LINE_HEIGHT));
   var svgTextOpts = {
     'svgText': bblText,
     'text': opts.text,
-    'width': SPEECH_BUBBLE_WIDTH,
+    'width': SPEECH_BUBBLE_MIN_WIDTH,
+    'maxWidth': SPEECH_BUBBLE_MAX_WIDTH,
     'lineHeight': SPEECH_BUBBLE_LINE_HEIGHT,
     'topMargin': SPEECH_BUBBLE_TOP_MARGIN,
     'sideMargin': SPEECH_BUBBLE_SIDE_MARGIN,
-    'maxLines': SPEECH_BUBBLE_MAX_LINES,
-    'fullHeight': SPEECH_BUBBLE_HEIGHT
+    'maxLines': maxLines,
+    'fullHeight': maxLines * SPEECH_BUBBLE_LINE_HEIGHT + SPEECH_BUBBLE_RADIUS,
   };
-  var bblHeight = setSvgText(svgTextOpts);
+  var bblSize = setSvgText(svgTextOpts);
   var speechBubblePath = document.getElementById('speechBubblePath' + spriteIndex);
   var speechBubble = document.getElementById('speechBubble' + spriteIndex);
 
-  speechBubblePath.setAttribute('height', bblHeight);
+  speechBubblePath.setAttribute('height', bblSize.height);
+  speechBubblePath.setAttribute('width', bblSize.width);
   updateSpeechBubblePath(speechBubblePath);
 
   // displaySprite will reposition the bubble
   Studio.displaySprite(opts.spriteIndex);
   speechBubble.setAttribute('visibility', 'visible');
 
+  sprite.bubbleVisible = true;
   sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
   sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
     opts.seconds * 1000);
