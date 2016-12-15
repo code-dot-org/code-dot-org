@@ -358,6 +358,55 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q1:
+        Have you ever investigated how digital security and encryption work?: Have you ever investigated how digital security and encryption work?
+        I know these terms and generally know why they exist, but I am not sure about how encryption work: I know these terms and generally know why they exist, but I am not sure about how encryption work
+        Nope--- I'm not familiar with encryption: Nope--- I'm not familiar with encryption
+        Yes! I am super familiar with security and encryption: Yes! I am super familiar with security and encryption
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U4 evaluation q2:
+        Have you practiced or looked closely at the Explore Performance Task?: Have you practiced or looked closely at the Explore Performance Task?
+        I haven't really looked at the Explore Task yet: I haven't really looked at the Explore Task yet
+        I've looked at it once or twice, but haven't spent much time understanding it yet: I've looked at it once or twice, but haven't spent much time understanding it yet
+        Yes! I'm very familiar with the Explore Task: Yes! I'm very familiar with the Explore Task
+      U4 evaluation q3:
+        Do you have a sense of how companies use the data and information they collect about you and other app and website users?: Do you have a sense of how companies use the data and information they collect about you and other app and website users?
+        I don't know much about this and would really like to know more: I don't know much about this and would really like to know more
+        I have some sense, but could stand to learn more: I have some sense, but could stand to learn more
+        Yes! I read my privacy policies closely and understand what's being collected and how it could be used: Yes! I read my privacy policies closely and understand what's being collected and how it could be used
+      U4 evaluation q4:
+        Have you ever heard of modulo, or "clock" arithmetic?: Have you ever heard of modulo, or "clock" arithmetic?
+        Never heard of it: Never heard of it
+        Yes! I'm familiar with clock arithmetic: Yes! I'm familiar with clock arithmetic
+      U4 evaluation q5:
+        Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?: Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?
+        I checked out the old version, but haven't seen the updates: I checked out the old version, but haven't seen the updates
+        I haven't looked at any Explore Task Rubrics: I haven't looked at any Explore Task Rubrics
+        Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines: Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U4 evaluation q8:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q9:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -371,7 +420,9 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
+      AP Test Prep Guidance: {}
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -392,13 +443,16 @@ en:
         description here: description here
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
+      Assessing Student Learning in Unit 4: {}
       Balancing Teacher and Tools in Unit 1: {}
+      Balancing Teacher and Tools in Unit 4: {}
       Basic mechanics of variables:
         description here: description here
         title: title
       Begin planning your project:
         description here: description here
         title: title
+      Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
         title: title
@@ -1368,6 +1422,7 @@ en:
       Introduction to Unit 1: {}
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
+      Introduction to Unit 4: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1383,6 +1438,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Looking at More Encryption Algorithms: {}
       Lossy vs. Lossless Compression: {}
       Make a Hypothesis: {}
       Making Multiple Screens:
@@ -2227,6 +2283,7 @@ en:
       Unit 1 Lesson 9 Overview: {}
       Unit 1 Overview: {}
       Unit 1 Teaching Philosophy and Commentary: {}
+      Unit 1 Vocab and Concept Review Activity: {}
       Unit 2 Lesson 1 Overview: {}
       Unit 2 Lesson 10 Overview: {}
       Unit 2 Lesson 11 Overview: {}
@@ -2245,8 +2302,10 @@ en:
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
       Unit 2 Tool Talk: {}
+      Unit 2 Vocab and Concept Review Activity: {}
       Unit 3 Survey 2: {}
       Unit 3 Tool Talk: {}
+      Unit 3 Vocab and Concept Review Activity: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
         title: title
@@ -2263,6 +2322,8 @@ en:
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
       Unit 4 Lesson 9 Introduction: {}
+      Unit 4 Tool Talk: {}
+      'Unit 4: Practice PT highlights': {}
       Unit 5 Lesson 1:
         description here: description here
         title: title
@@ -2329,6 +2390,7 @@ en:
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
       What is "Big" Data and Why Should we Protect or Data?: {}
+      What is "Big" Data?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
@@ -2993,6 +3055,7 @@ en:
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
+        Unit 4 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -6579,6 +6642,18 @@ en:
         wrong1: wrong1
         wrong3: wrong3
         wrong4: wrong4
+      U5 assess compound boolean conditions:
+        "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
+        "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
+        "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
+        "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
+        "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
+      U5 assess_weight_v2:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -6875,7 +6950,6 @@ en:
         '30': '30'
         '50': '50'
         '75': '75'
-        weight: weight
       cspu5_assess2_wrongLogic:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
@@ -6932,9 +7006,9 @@ en:
       cspu5_assess3_impossibleOutput:
         0, 0: 0, 0
         1, 1: 1, 1
+        2, 1: 2, 1
+        2, 2: 2, 2
         2, 4: 2, 4
-        3, 1: 3, 1
-        3, 3: 3, 3
       cspu5_assess3_listAppend:
         '1': '1'
         '2': '2'

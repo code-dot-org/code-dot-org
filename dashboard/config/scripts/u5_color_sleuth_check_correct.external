@@ -55,7 +55,7 @@ So we're going to need 4 event handlers, one for each button.</p>
 <p>Here, let me add to the sketch...</p>
 
 </div>
-<img src="https://images.code.org/d94abc943c85f601b1feb36fb1a1bd9b-image-1481147483446.png" alt="" style="display: block; margin: auto;">
+<img src="https://images.code.org/f58a4e1e12ff676948c45eac3cfc42d3-image-1481695210092.png" alt="" style="display: block; margin: auto;">
 <div style="width: 400px; margin: auto">
 
 <p style="text-align: center"> ALEXIS </p>
@@ -71,7 +71,7 @@ Ok, good.  <code>randButtonId</code> is actually the "correct" button to click i
 <p>Here, I'll sketch it out...</p>
 
 </div>
-<img src="https://images.code.org/9fd1647302cafd550b0b0ea52ebf9736-image-1481147552836.png" alt="" style="display: block; margin: auto;">
+<img src="https://images.code.org/c4fb61e94d04481fd7487f92b31af32f-image-1481695543998.png" alt="" style="display: block; margin: auto;">
 <div style="width: 400px; margin: auto">
 
 <p style="text-align: center"> MICHAEL </p>
@@ -102,6 +102,4 @@ Ok, good.  <code>randButtonId</code> is actually the "correct" button to click i
 </div>
 
 ## Click continue to do the first step
-
-
 MARKDOWN
