@@ -153,10 +153,17 @@ const TeacherApplication = React.createClass({
     return this._errorData;
   },
 
+  shouldShowRegionalPartnersOnlyWarning() {
+    return !!(
+      ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase()) ||
+      (!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value)
+    );
+  },
+
   generateTeacherInformationSection() {
     return (
       <div>
-        {!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value && (
+        {this.shouldShowRegionalPartnersOnlyWarning() && (
           <label style={{color: 'red'}}>
             Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our program,
             most spots are reserved for teachers in regions where we have a Regional Partner. If you would like to
