@@ -40,13 +40,13 @@ See all past [news and announcements](/about/news).
 
 <div style="float: left; width: 50%; padding-right: 10px;">
 
-<%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
+<%=view :display_video_thumbnail, id: "Nasdaq", video_code: "zxcBZg7jYlc", caption: "Nasdaq interviews Code.org founder Hadi Partovi", play_button: "center", letterbox: "false" %>
 
 </div>
 
 <div style="float: left; width: 50%; padding-left: 10px;">
 
-<%=view :display_video_thumbnail, id: "obama_hour_of_code", video_code: "AI_dayIQWV4", caption: "President Obama does the Hour of Code. Hour of Code has won the support of both <a href='https://www.youtube.com/watch?v=W5QGo_Yb_Pc&list=PLzdnOPI1iJNfygSF8gKBUq7fT4Y61_h2I'>Republicans and Democrats</a>, and <a href='https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_'>many celebrities</a>", play_button: "center", letterbox: "false" %>
+<%=view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false" %>
 
 </div>
 

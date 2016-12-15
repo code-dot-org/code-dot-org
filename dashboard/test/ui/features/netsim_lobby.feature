@@ -17,9 +17,9 @@ Feature: Using the Internet Simulator Lobby
     Given I am on the 4th NetSim test level
     And I wait up to 5 seconds for element ".modal" to be visible
     And I close the dialog
+    And I wait until element "#netsim-lobby-name" is visible
 
-    Then element "#netsim-lobby-name" is visible
-    And element "#netsim-lobby-name" is enabled
+    Then element "#netsim-lobby-name" is enabled
     And element "#netsim-lobby-set-name-button" is visible
     And element "#netsim-lobby-set-name-button" is disabled
     And element "#netsim-shard-select" is hidden

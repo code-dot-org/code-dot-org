@@ -4,6 +4,8 @@ subject: "Thank you for volunteering"
 ---
 <% survey_url = "https://form.jotform.com/63467351304958" %>
 
+Hi <%= user_name %>,
+
 Thank you for signing up to volunteer for the Hour of Code! 
 
 **Can you please take this [5 minute survey](<%= survey_url %>) about your volunteer experience to help us improve the Hour of Code?**
@@ -35,4 +37,3 @@ Product Manager, Code.org
 </p>
 
 [](<%= tracking_pixel %>)
-
