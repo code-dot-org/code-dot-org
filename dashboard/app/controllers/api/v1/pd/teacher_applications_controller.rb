@@ -27,7 +27,7 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
     # The model parses it, extracts and validates required fields.
     @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      application_hash: application_hash
+      application_hash: application_hash.transform_values(&:strip_utf8mb4)
     )
 
     if @teacher_application.save
