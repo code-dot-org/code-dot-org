@@ -200,7 +200,7 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="secondaryEmail"
-          label="Your personal email address (we may need to contact you during the summer)"
+          label="Secondary email address (we may need to contact you during the summer)"
           type="email"
           onChange={this.handleTextChange}
           required={true}
@@ -208,7 +208,7 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="phoneNumber"
-          label="Preferred phone number"
+          label="Phone Number (Please provide a phone number that we can use to reach you year-round)"
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -321,10 +321,10 @@ const TeacherApplication = React.createClass({
         <ControlLabel>
           Which professional learning program are you applying to join for the 2017-18 school year? Click on each
           curriculum for more information. Note: this application is only for
-          <a href="https://code.org/educate/professional-learning/cs-discoveries"> Computer Science Discoveries</a> and
-          <a href="https://code.org/educate/professional-learning/cs-principles"> Computer Science Principles.</a> If
-          you are interested in <a href="https://code.org/educate/curriculum/elementary-school">Computer Science
-          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school">this page </a>
+          <a href="https://code.org/educate/professional-learning/cs-discoveries" target="_blank"> Computer Science Discoveries</a> and
+          <a href="https://code.org/educate/professional-learning/cs-principles" target="_blank"> Computer Science Principles.</a> If
+          you are a K-5 teacher interested in <a href="https://code.org/educate/curriculum/elementary-school" target="_blank">Computer Science
+          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school" target="_blank">this page </a>
           for information about workshops in your area. (Select one)
           {requiredStar}
         </ControlLabel>
@@ -333,14 +333,14 @@ const TeacherApplication = React.createClass({
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="https://code.org/educate/professional-learning/cs-discoveries">Computer Science Discoveries</a> (designed for 7th - 9th grade)
+          Computer Science Discoveries (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="https://code.org/educate/professional-learning/cs-principles">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
+          Computer Science Principles (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
@@ -654,7 +654,7 @@ const TeacherApplication = React.createClass({
     return (
       <div>
         <p style={{fontSize: '16px', fontWeight: 'bold'}}>
-          Code.org works closely with local Regional Partners to organize and deliver the Professional LearningProgram.
+          Code.org works closely with local Regional Partners to organize and deliver the Professional Learning Program.
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
         </p>
