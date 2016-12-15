@@ -562,8 +562,8 @@ FactoryGirl.define do
   # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
   factory :pd_teacher_application_hash, class: 'Hash' do
     transient do
-      association :school, factory: :public_school
-      association :school_district
+      association :school, factory: :public_school, strategy: :build
+      association :school_district, strategy: :build
     end
 
     initialize_with do
@@ -578,7 +578,25 @@ FactoryGirl.define do
         principalFirstName: 'Minerva',
         principalLastName: 'McGonagall',
         principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: 'csd'
+        selectedCourse: 'csd',
+        phoneNumber: '555-555-5555',
+        gradesAtSchool: '10',
+        genderIdentity: 'male',
+        grades2016: '10,11',
+        subjects2016: 'Math,Care of Magical Creatures',
+        grades2017: '10,11',
+        subjects2017: 'Computer Science,Care of Magical Creatures',
+        committedToSummer: 'yes',
+        ableToAttendAssignedSummerWorkshop: 'yes',
+        allStudentsShouldLearn: '4',
+        allStudentsCanLearn: '4',
+        newApproaches: '4',
+        allAboutContent: '4',
+        allAboutProgramming: '4',
+        csCreativity: '4',
+        currentCsOpportunities: '4',
+        whyCsIsImportant: 'robots',
+        whatTeachingSteps: 'learn and practice'
       }.stringify_keys
     end
   end

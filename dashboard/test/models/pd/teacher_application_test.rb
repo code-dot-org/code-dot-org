@@ -111,4 +111,14 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert_nil teacher_application.school_district
     assert_equal school_district_name, teacher_application.school_district_name
   end
+
+  test 'validate selected course' do
+    application_hash = build :pd_teacher_application_hash
+    application_hash['selectedCourse'] = 'invalid'
+    teacher_application = build :pd_teacher_application, application_hash: application_hash
+
+    refute teacher_application.valid?
+    assert_equal 1, teacher_application.errors.count
+    assert_equal 'Selected course is not included in the list', teacher_application.errors.full_messages.first
+  end
 end
