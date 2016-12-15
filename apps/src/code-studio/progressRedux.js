@@ -75,11 +75,12 @@ export default function reducer(state = initialState, action) {
         }
 
         const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+        let nextLevel = level;
         if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-          Object.assign(level, action.peerReviewsPerformed[index]);
+          nextLevel = Object.assign({}, level, action.peerReviewsPerformed[index]);
         }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {
+        return Object.assign({}, nextLevel, level.kind !== 'peer_review' && {
           status: activityCssClass(newLevelProgress[id])
         });
       })}))
