@@ -45,15 +45,19 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
+    let stages = action.stages;
+    if (action.peerReviews) {
+      // Tack on peer reviews as final stage
+      stages = stages.concat(action.peerReviews);
+    }
     // Re-initializing with full set of stages shouldn't blow away currentStageId
     const currentStageId = state.currentStageId ||
-      (action.stages.length === 1 ? action.stages[0].id : undefined);
-    // extract fields we care about from action
+      (stages.length === 1 ? stages[0].id : undefined);
     return Object.assign({}, state, {
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages.map(stage => _.omit(stage, 'hidden')),
+      stages: stages.map(stage => _.omit(stage, 'hidden')),
       scriptName: action.scriptName,
       currentStageId
     });
@@ -160,12 +164,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, scriptName}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviews, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  peerReviews,
   scriptName
 });
 
