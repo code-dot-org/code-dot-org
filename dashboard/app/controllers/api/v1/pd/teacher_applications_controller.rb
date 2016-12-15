@@ -21,15 +21,13 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
 
   def create
     application_params = params.require(:application)
-    application_json = application_params.to_unsafe_h.to_json
+    application_json = application_params.to_unsafe_h.to_json.strip_utf8mb4
 
-    # Set user, and extract the personal and school emails.
-    # Otherwise the teacher application JSON is saved as provided.
+    # The teacher application JSON is saved as provided.
+    # The model parses it, extracts and validates required fields.
     @teacher_application = ::Pd::TeacherApplication.new(
       user: current_user,
-      primary_email: application_params.require(:primaryEmail),
-      secondary_email: application_params.require(:secondaryEmail),
-      application: application_json
+      application_json: application_json
     )
 
     if @teacher_application.save
