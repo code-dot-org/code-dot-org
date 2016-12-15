@@ -1,3 +1,5 @@
+hideable_stages true
+
 stage 'Quality Websites'
 named_level 'Unit 2 Lesson 1 Overview'
 named_level 'Rating Websites'
