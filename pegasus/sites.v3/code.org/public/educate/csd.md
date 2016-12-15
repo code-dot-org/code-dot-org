@@ -100,7 +100,7 @@ Where the first semester centers on the immediately observable and personally ap
 
 <h4> Unit 4 - Problem Solving: The Design Process </h4>
 
-By following the design process and working with structured group roles, student groups will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, students will then develop and interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+With the Problem Solving Process as a basis, students will start to look at how user-centered design places _others_ first in approaching the solution to a problem, whether through design of a physical object or a software application. Through several small projects, students will experience an iterative design and testing process that will then be applied to a multi-week group project. In this final project, student teams will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, teams will then develop an interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
 
 </div>
 
@@ -169,7 +169,9 @@ We are releasing drafts of CS Discoveries units as they are finished, and would 
 | Unit | Lesson Plans | Code Studio |
 | :------------------:|-----------|------|
 |**Unit 1 - Problem Solving: Computers and Logic**| [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1)|
+|**Unit 2 - The Internet: Web Development**| [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2)|
 |**Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
+|**Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4)|
 
 
 
