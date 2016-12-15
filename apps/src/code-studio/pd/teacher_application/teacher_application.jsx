@@ -538,10 +538,10 @@ const TeacherApplication = React.createClass({
   renderComputerScienceAtYourSchool() {
     return (
       <div>
-        <p style={{fontWeight: 'bold', fontSize: '16px'}}>
+        <label style={{fontWeight: 'bold', fontSize: '16px'}}>
           We would like to learn more about your school, and why you want to participate in our Professional Learning
           Program. Please share your responses to the following questions:
-        </p>
+        </label>
         <ButtonList
           type="check"
           label="What computer science opportunities currently exist at your school? (select all that apply)"
@@ -621,9 +621,9 @@ const TeacherApplication = React.createClass({
     } else {
       topInvalidElementId = 'district-error-placeholder';
       ReactDOM.render(
-        <p style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
+        <label style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
           Please complete this section with your school's information
-        </p>,
+        </label>,
         document.getElementById(topInvalidElementId)
       );
     }
@@ -661,11 +661,11 @@ const TeacherApplication = React.createClass({
   renderSubmitButton() {
     return (
       <div>
-        <p style={{fontSize: '16px', fontWeight: 'bold'}}>
+        <label style={{fontSize: '16px', fontWeight: 'bold'}}>
           Code.org works closely with local Regional Partners to organize and deliver the Professional Learning Program.
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
-        </p>
+        </label>
         <Button onClick={this.onSubmitButtonClick}>
           Complete and Send
         </Button>

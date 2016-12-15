@@ -63,12 +63,14 @@ const SummerWorkshopSchedule = React.createClass({
 
       return (
         <div>
-          We strongly encourage participants to attend their assigned summer workshop (based on the region in which
-          you teach), so that you can meet the other teachers, facilitators, and Regional Partners with whom you will
-          work in 2017-18. Your region's assigned summer workshop is:
-          <p style={{fontSize: '18px', fontWeight: 'bold'}}>
+          <label>
+            We strongly encourage participants to attend their assigned summer workshop (based on the region in which
+            you teach), so that you can meet the other teachers, facilitators, and Regional Partners with whom you will
+            work in 2017-18. Your region's assigned summer workshop is:
+          </label>
+          <label style={{margin: '10px', fontSize: '18px', fontWeight: 'bold'}}>
             {assignedSummerWorkshop}
-          </p>
+          </label>
         </div>
       );
     }
@@ -80,7 +82,7 @@ const SummerWorkshopSchedule = React.createClass({
 
       return (
         <div>
-          <p>
+          <label>
             We strongly encourage participants to attend their assigned summer workshop (based on the district in which
             you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
             you will work in 2017 - 18. Your regions and summer workshop dates are below.
@@ -93,7 +95,7 @@ const SummerWorkshopSchedule = React.createClass({
                 );
               })
             }
-          </p>
+          </label>
         </div>
       );
     }
