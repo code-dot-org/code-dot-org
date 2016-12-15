@@ -11,7 +11,7 @@ export default React.createClass({
     formData: PropTypes.shape({
       committedToSummer: PropTypes.string,
       ableToAttendAssignedSummerWorkshop: PropTypes.string,
-      fallbackSummerWorkshops: PropTypes.arrayOf(PropTypes.string),
+      fallbackSummerWorkshops: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     }).isRequired,
     errorData: PropTypes.shape({
       committedToSummer: PropTypes.string,
@@ -45,7 +45,6 @@ export default React.createClass({
   },
 
   render() {
-    console.log(this.props.formData);
     const showDialog = !!(this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed);
 
     return (
