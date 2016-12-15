@@ -86,7 +86,7 @@ const TeacherApplication = React.createClass({
   },
 
   getInitialState() {
-
+    return {};
   },
 
   handleSubformDataChange(changedData) {
