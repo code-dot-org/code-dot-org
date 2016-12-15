@@ -4,11 +4,11 @@ banner: null
 social:
   "og:title": "<%= I18n.t(:csedweek_og_title) %>"
   "og:description": "<%= I18n.t(:csedweek_og_description)%>"
-  "og:image": "https://<%=request.host%>/images/social-media/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": "1440"
-  "og:image:height": "900"
-  "og:video:url": "http://youtube.com/v/KsOIlDT145A"
-  "og:video:secure_url": "https://youtube.com/v/KsOIlDT145A"
+  "og:image": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
+  "og:image:width": "1200"
+  "og:image:height": "627"
+  "og:video:url": "http://youtube.com/v/QvyTEx1wyOY"
+  "og:video:secure_url": "https://youtube.com/v/QvyTEx1wyOY"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -17,8 +17,8 @@ social:
   "twitter:url": "https://csedweek.org/"
   "twitter:title": "<%= I18n.t(:csedweek_og_title) %>"
   "twitter:description": "<%= I18n.t(:csedweek_og_description)%>"
-  "twitter:image:src": "https://<%=request.host%>/images/social-media/hourofcode-2015-video-thumbnail.png"
-  "twitter:player": "https://youtube.com/embed/KsOIlDT145A"
+  "twitter:image:src": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
+  "twitter:player": "https://youtube.com/embed/QvyTEx1wyOY"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
@@ -39,7 +39,7 @@ video_player: true
 
   #top
     #video.col-63.desktop-pad-right
-      = view :display_video_thumbnail, id: "hoc_2016", video_code: "KsOIlDT145A", play_button: 'center', download_path: "//videos.code.org/social/hour-of-code-2016.mp4"
+      = view :display_video_thumbnail, id: "main_video", video_code: "QvyTEx1wyOY", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -58,7 +58,7 @@ video_player: true
         %div{:style=>'margin-bottom: 8px'}
           %a#try-button{:href=>'/learn'}
             %button.optionbutton{:style=>'min-width: 100px;'}
-              =I18n.t :get_started
+              =I18n.t :homepage_action_text_learn
 
     -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}
