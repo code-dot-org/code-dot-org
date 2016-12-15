@@ -27,7 +27,7 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
   }
 
   if (!(props['maxLength'])) {
-    props['maxLength'] = '1000';
+    props['maxLength'] = 1000;
   }
 
   return (
