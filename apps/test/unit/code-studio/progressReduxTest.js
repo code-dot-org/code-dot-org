@@ -1,6 +1,7 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import _ from 'lodash';
 
 import reducer, {
   initProgress,
@@ -381,20 +382,18 @@ describe('progressReduxTest', () => {
       assert.equal(peerReviewLevels.length, state.stages[1].levels.length,
         'same number of peer review levels in stage');
 
-      // compare changed stage
-      // TODO: This is the same as the earlier assert, but now fails. This implies
-      // we're mutating state in this reducer, which is a no-no. This should be
-      // fixed
-      // assert.deepEqual(state.stages[1].levels[0], {
-      //   ids: [0],
-      //   kind: "peer_review",
-      //   title: "",
-      //   url: "",
-      //   name: "Reviews unavailable at this time",
-      //   icon: "fa-lock",
-      //   locked: true
-      // });
+      // First assert about previous state, to make sure that we didn't mutate it
+      assert.deepEqual(state.stages[1].levels[0], {
+        ids: [0],
+        kind: "peer_review",
+        title: "",
+        url: "",
+        name: "Reviews unavailable at this time",
+        icon: "fa-lock",
+        locked: true
+      });
 
+      // Now assert for our new state
       assert.deepEqual(nextState.stages[1].levels[0], {
         // TODO: Seems strange to have both an id and ids. Can we make this better?
         id: 13,
