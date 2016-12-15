@@ -8,43 +8,35 @@ const group2OrGroup1CsdWorkshops = {
 };
 
 const group1CspWorkshops = {
-  'AL': [{region: 'Alabama', workshopDates: ''}],
-  'AZ': [{region: 'Arizona (Phoenix)', workshopDates: ''}],
-  'CA': [
-    {region: 'California (Inland Empire)', workshopDates: 'June 19 - 23, 2017'},
-    {region: 'California (Los Angeles/Orange County)', workshopDates: ''},
-    {region: 'California (Oakland)', workshopDates: ''}
-  ],
-  'FL': [
-    {region: 'Florida (Broward)', workshopDates: ''},
-    {region: 'Florida (Miami)', workshopDates: ''},
-    {region: 'Florida (Northeast)', workshopDates: ''},
-    {region: 'Florida (Orlando)', workshopDates: ''}
-  ],
-  'GA': [{region: 'Georgia', workshopDates: ''}],
-  'ID': [{region: 'Idaho', workshopDates: 'June 19 - 23, 2017'}],
-  'IL': [{region: 'Illinois (Chicago)', workshopDates: ''}],
-  'IN': [{region: 'Indiana', workshopDates: ''}],
-  'MD': [
-    {region: 'Maryland (Northern)', workshopDates: 'August 7 - 11, 2017'},
-    {region: 'Maryland (Southern)', workshopDates: 'August 7 - 11, 2017'}
-  ],
-  'NV': [{region: 'Nevada', workshopDates: ''}],
-  'NY': [{region: 'New York', workshopDates: 'July 10 - 14, 2017'}],
-  'NC': [{region: 'North Carolina (Durham)', workshopDates: 'July 10 - 14, 2017'}],
-  'OH': [{region: 'Ohio', workshopDates: ''}],
-  'TX': [{region: 'Texas (Houston)', workshopDates: 'June 26 - 30, 2017'}],
-  'UT': [{region: 'Utah', workshopDates: ''}],
-  'VA': [{region: 'Virginia (Richmond)', workshopDates: 'July 17 - 21, 2017'}],
-  'WA': [
-    {region: 'Washington (Puget Sound)', workshopDates: 'July 10 - 14, 2017'},
-    {region: 'Washington (Spokane)', workshopDates: 'July 10 - 14, 2017'}
-  ]
+  'A+ College Ready': '',
+  'Grand Canyon University & Science Foundation Arizona': '',
+  'Riverside County Office of Education': 'June 19 - 23, 2017',
+  '9 Dots Community Learning Center': '',
+  'Alameda County Office of Education': '',
+  'Contra Costa County Office of Education': '',
+  'Broward County Public Schools': '',
+  'Florida State College Jacksonville': '',
+  'Orlando Science Center': '',
+  'Georgia Tech Center for Education Integrating Science, Mathematics, and Computing': '',
+  'Idaho Digital Learning Academy': 'June 19 - 23, 2017',
+  'Lumity': '',
+  'Nextech': 'July 18 - 22, 2017',
+  'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)': 'August 7 - 11, 2017',
+  'Southern Nevada Regional Professional Development Program': '',
+  'Code/Interactive': 'July 10 - 14, 2017',
+  'The Friday Institute': 'July 10 - 14, 2017',
+  'Battelle Education': '',
+  'Rice University': 'June 26 - 30, 2017',
+  'Utah STEM Action Center and Utah Board of Education': '',
+  'CodeVA': 'July 17 - 21, 2017',
+  'Puget Sound Educational Service District': 'July 10 - 14, 2017',
+  'NorthEast Washington Educational Service District 101': 'July 10 - 14, 2017'
 };
 
 const SummerWorkshopSchedule = React.createClass({
   propTypes: {
     regionalPartnerGroup: React.PropTypes.number,
+    regionalPartnerName: React.PropTypes.string,
     selectedCourse: React.PropTypes.string,
     selectedState: React.PropTypes.string
   },
@@ -83,12 +75,12 @@ const SummerWorkshopSchedule = React.createClass({
           <p>
             We strongly encourage participants to attend their assigned summer workshop (based on the district in which
             you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
-            you will work in 2017 - 18. Your regions and summer workshop dates are below.
+            you will work in 2017 - 18. Your region and summer workshop dates are below.
             {
               regionalWorkshops.map((workshop, i) => {
                 return (
                   <li key={i}>
-                    {`${workshop['region']}: ${workshop['workshopDates'] || 'Summer 2017 (exact date to be determined)'}`}
+                    {`${this.props.regionalPartnerName || this.props.selectedState}: ${group1CspWorkshops[this.props.regionalPartnerName] || 'Summer 2017 (exact date to be determined)'}`}
                   </li>
                 );
               })

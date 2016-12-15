@@ -18,6 +18,7 @@ export default React.createClass({
       ableToAttendAssignedSummerWorkshop: PropTypes.string
     }).isRequired,
     regionalPartnerGroup: PropTypes.number,
+    regionalPartnerName: PropTypes.string,
     selectedCourse: PropTypes.string,
     selectedState: PropTypes.string
   },
@@ -85,6 +86,7 @@ export default React.createClass({
           </Modal>
           <SummerWorkshopSchedule
             regionalPartnerGroup={this.props.regionalPartnerGroup}
+            regionalPartnerName={this.props.regionalPartnerName}
             selectedCourse={this.props.selectedCourse}
             selectedState={this.props.selectedState}
           />

@@ -80,6 +80,7 @@ const fieldValidationErrors = {
 const TeacherApplication = React.createClass({
 
   propTypes: {
+    regionalPartnerName: React.PropTypes.string,
     regionalPartnerGroup: React.PropTypes.number
   },
 
@@ -676,6 +677,7 @@ const TeacherApplication = React.createClass({
           formData={this.state}
           errorData={this.errorData}
           regionalPartnerGroup={this.props.regionalPartnerGroup}
+          regionalPartnerName={this.props.regionalPartnerName}
           selectedCourse={this.state.selectedCourse}
           selectedState={document.getElementById('school-state').value}
         />
