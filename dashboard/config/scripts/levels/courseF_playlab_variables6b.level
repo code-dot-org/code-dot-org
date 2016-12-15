@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Actors cannot fit much text in each speech bubble.  Let's try building some text using the `title screen` block.\r\n\r\nWe have provided some starter questions and variables for you. Join them together and put them in the title screen to make a fun story.",
+    "markdown_instructions": "You cannot fit much text in an actor's speech bubble.  Let's try building some text using the `show title screen` block.\r\n\r\nWe have provided some starter questions and variables for you. Join them together and put them in the title screen to make a fun story.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -71,7 +71,7 @@
                       <title name="VAR">A3</title>
                       <next>
                         <block type="studio_ask">
-                          <title name="TEXT">Enter a noun</title>
+                          <title name="TEXT">Enter a plural noun</title>
                           <title name="VAR">A4</title>
                           <next>
                             <block type="studio_showTitleScreenParams" inline="false">
@@ -343,28 +343,27 @@
         <block type="when_run">
           <next>
             <block type="studio_ask">
-              <title name="TEXT">What be yer name?</title>
+              <title name="TEXT">Name a sport</title>
               <title name="VAR">A1</title>
               <next>
                 <block type="studio_ask">
-                  <title name="TEXT">What be yer age?</title>
+                  <title name="TEXT">Name a type of flower</title>
                   <title name="VAR">A2</title>
                   <next>
                     <block type="studio_ask">
-                      <title name="TEXT">What be yer favorite color?</title>
+                      <title name="TEXT">Enter a verb</title>
                       <title name="VAR">A3</title>
                       <next>
                         <block type="studio_ask">
-                          <title name="TEXT">What be yer favorite animal?</title>
+                          <title name="TEXT">Enter a plural noun</title>
                           <title name="VAR">A4</title>
                           <next>
-                            <block type="studio_saySpriteParams" inline="true">
-                              <title name="SPRITE">0</title>
-                              <value name="TEXT">
-                                <block type="text_join_simple" inline="false" inputcount="9">
+                            <block type="studio_showTitleScreenParams" inline="false">
+                              <value name="TITLE">
+                                <block type="text_join_simple" inline="false" inputcount="2">
                                   <value name="ADD0">
                                     <block type="text">
-                                      <title name="TEXT">I be  thinkin' </title>
+                                      <title name="TEXT">The story of </title>
                                     </block>
                                   </value>
                                   <value name="ADD1">
@@ -372,9 +371,23 @@
                                       <title name="VAR">A1</title>
                                     </block>
                                   </value>
+                                </block>
+                              </value>
+                              <value name="TEXT">
+                                <block type="text_join_simple" inline="false" inputcount="11">
+                                  <value name="ADD0">
+                                    <block type="variables_get">
+                                      <title name="VAR">A1</title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD1">
+                                    <block type="text">
+                                      <title name="TEXT"> is the best.</title>
+                                    </block>
+                                  </value>
                                   <value name="ADD2">
                                     <block type="text">
-                                      <title name="TEXT"> be a great name for a </title>
+                                      <title name="TEXT"> Even a </title>
                                     </block>
                                   </value>
                                   <value name="ADD3">
@@ -384,27 +397,37 @@
                                   </value>
                                   <value name="ADD4">
                                     <block type="text">
-                                      <title name="TEXT"> year old </title>
+                                      <title name="TEXT"> watches it. </title>
                                     </block>
                                   </value>
                                   <value name="ADD5">
+                                    <block type="text">
+                                      <title name="TEXT"> I like to </title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD6">
                                     <block type="variables_get">
                                       <title name="VAR">A3</title>
                                     </block>
                                   </value>
-                                  <value name="ADD6">
-                                    <block type="text">
-                                      <title name="TEXT"> </title>
-                                    </block>
-                                  </value>
                                   <value name="ADD7">
-                                    <block type="variables_get">
-                                      <title name="VAR">A4</title>
+                                    <block type="text">
+                                      <title name="TEXT"> home and watch it on tv.</title>
                                     </block>
                                   </value>
                                   <value name="ADD8">
                                     <block type="text">
-                                      <title name="TEXT">.</title>
+                                      <title name="TEXT"> It's even better than </title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD9">
+                                    <block type="variables_get">
+                                      <title name="VAR">A4</title>
+                                    </block>
+                                  </value>
+                                  <value name="ADD10">
+                                    <block type="text">
+                                      <title name="TEXT">!</title>
                                     </block>
                                   </value>
                                 </block>

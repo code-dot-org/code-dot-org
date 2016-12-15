@@ -187,7 +187,7 @@
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "So all of the starter code has `drawSeaGrass` but persnickety marine enthusiasts complain that it should be `drawSeagrass`  At some point we can change, but you'd have to change \r\n\r\n1. all intstructions\r\n2. starter code\r\n3. all log conditions.",
   "level_concept_difficulty": {
   }
 }]]></config>
