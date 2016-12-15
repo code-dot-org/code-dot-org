@@ -69,7 +69,7 @@ social:
     #fullwidth0{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{obama_slide}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 1; background-position: 70% 20%"}
 
     #fullwidth1{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_1.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
- 
+
   #fullwidth2{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
   #fullwidth3{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_3.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 20%"}
@@ -233,7 +233,7 @@ social:
             =view :signup_form
           .col-md-1
         .col-md-5
-          =view :join_us_description        
+          =view :join_us_description
 
   -# FAQ
 
@@ -242,7 +242,7 @@ social:
     .col-xs-12
       =view :faq
 
-  =view :signup_button     
+  =view :signup_button
 
   = view 'popup_window.js'
 
@@ -267,10 +267,9 @@ social:
     currentImage = nextImage;
   }
 
-  $.ready()
-  {
+  $(document).ready(function() {
     timerId = setInterval(cycleImage, 6000);
-  }
+  });
 
   function startVideo()
   {
