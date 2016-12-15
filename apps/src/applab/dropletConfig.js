@@ -175,8 +175,8 @@ export var blocks = [
   {func: 'innerHTML', parent: api, category: 'Advanced', params: ['"id"', '"html"'] },
   {func: 'setParent', parent: api, category: 'Advanced', params: ['"id"', '"parentId"'] },
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
-  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
-  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
+  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
+  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
 ];
 
 export var categories = {
