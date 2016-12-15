@@ -27,8 +27,8 @@
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
   og_title: 'Code.org: Anybody can Learn'
   og_description: "Every student in every school deserves the opportunity to study computer science."
-  csedweek_og_title: "The Hour of Code is here"
-  csedweek_og_description: "The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages."
+  csedweek_og_title: "Computer Science Education Week"
+  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Students"
   hoc2014_try: "Try it"
@@ -196,6 +196,7 @@
   just_did_course4: "I just finished Course 4 - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
+  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Learn an Hour of Code"
   beyond_hoc: "Beyond an Hour"
   what_gender: "What gender are you?"

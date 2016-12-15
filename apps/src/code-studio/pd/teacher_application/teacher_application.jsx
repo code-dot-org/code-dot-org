@@ -17,6 +17,7 @@ import {
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
 import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
 import SummerProgramContent from './SummerProgramContent';
+import {getWorkshopForState} from './applicationConstants.js';
 
 const requiredStar = (<span style={{color: 'red'}}> *</span>);
 
@@ -24,6 +25,11 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
   if (errorText) {
     validationState = 'error';
   }
+
+  if (!(props['maxLength'])) {
+    props['maxLength'] = 1000;
+  }
+
   return (
     <FormGroup controlId={id} validationState={validationState}>
       <ControlLabel>{label}{required && requiredStar}</ControlLabel>
@@ -39,7 +45,8 @@ FieldGroup.propTypes = {
   label: React.PropTypes.string,
   validationState: React.PropTypes.string,
   errorText: React.PropTypes.string,
-  required: React.PropTypes.bool
+  required: React.PropTypes.bool,
+  maxLength: React.PropTypes.number
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
@@ -70,23 +77,30 @@ const isPhoneNumber = (value) => {
   }
 };
 
+const isUnder1000Chars = (value) => {
+  if (value.length > 1000) {
+    return 'Please limit your response to 1000 characters';
+  }
+};
+
 const fieldValidationErrors = {
   primaryEmail: isEmail,
   secondaryEmail: isEmail,
   principalEmail: isEmail,
   phoneNumber: isPhoneNumber,
+  whyCsIsImportant: isUnder1000Chars,
+  whatTeachingSteps: isUnder1000Chars,
 };
 
 const TeacherApplication = React.createClass({
 
   propTypes: {
-    regionalPartnerGroup: React.PropTypes.number
+    regionalPartnerGroup: React.PropTypes.number,
+    regionalPartnerName: React.PropTypes.string
   },
 
   getInitialState() {
-    return {
-
-    };
+    return {};
   },
 
   handleSubformDataChange(changedData) {
@@ -141,13 +155,21 @@ const TeacherApplication = React.createClass({
         this._errorData[key] = this.getRequiredValidationErrorMessage(key);
       }
     }
+
     return this._errorData;
+  },
+
+  shouldShowRegionalPartnersOnlyWarning() {
+    return !!(
+      ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase()) ||
+      (!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value)
+    );
   },
 
   generateTeacherInformationSection() {
     return (
       <div>
-        {!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value && (
+        {this.shouldShowRegionalPartnersOnlyWarning() && (
           <label style={{color: 'red'}}>
             Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our program,
             most spots are reserved for teachers in regions where we have a Regional Partner. If you would like to
@@ -200,7 +222,7 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="secondaryEmail"
-          label="Your personal email address (we may need to contact you during the summer)"
+          label="Secondary email address (we may need to contact you during the summer)"
           type="email"
           onChange={this.handleTextChange}
           required={true}
@@ -208,7 +230,7 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="phoneNumber"
-          label="Preferred phone number"
+          label="Phone Number (Please provide a phone number that we can use to reach you year-round)"
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -321,10 +343,10 @@ const TeacherApplication = React.createClass({
         <ControlLabel>
           Which professional learning program are you applying to join for the 2017-18 school year? Click on each
           curriculum for more information. Note: this application is only for
-          <a href="https://code.org/educate/professional-learning/cs-discoveries"> Computer Science Discoveries</a> and
-          <a href="https://code.org/educate/professional-learning/cs-principles"> Computer Science Principles.</a> If
-          you are interested in <a href="https://code.org/educate/curriculum/elementary-school">Computer Science
-          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school">this page </a>
+          <a href="https://code.org/educate/professional-learning/cs-discoveries" target="_blank"> Computer Science Discoveries</a> and
+          <a href="https://code.org/educate/professional-learning/cs-principles" target="_blank"> Computer Science Principles.</a> If
+          you are a K-5 teacher interested in <a href="https://code.org/educate/curriculum/elementary-school" target="_blank">Computer Science
+          Fundamentals</a>, please visit <a href="https://code.org/educate/curriculum/elementary-school" target="_blank">this page </a>
           for information about workshops in your area. (Select one)
           {requiredStar}
         </ControlLabel>
@@ -333,14 +355,14 @@ const TeacherApplication = React.createClass({
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="https://code.org/educate/professional-learning/cs-discoveries">Computer Science Discoveries</a> (designed for 7th - 9th grade)
+          Computer Science Discoveries (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
           name="courseSelection"
           onChange={this.handleCourseChange}
         >
-          <a href="https://code.org/educate/professional-learning/cs-principles">Computer Science Principles</a> (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
+          Computer Science Principles (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
@@ -431,37 +453,6 @@ const TeacherApplication = React.createClass({
     }
   },
 
-  renderSummerProgramContent() {
-    return (
-      <div id="summerProgramContent">
-        <div style={{fontWeight: 'bold'}}>
-          As a reminder, teachers in this program are required to participate in:
-          <li>
-            One five-day summer workshop in 2017 (may require travel with expenses paid)
-          </li>
-          <li>
-            Four one-day local workshops during the 2017 - 18 school year (typically held on Saturdays)
-          </li>
-          <li>
-            20 hours of online professional development during the 2017 - 18 school year
-          </li>
-          <ButtonList
-            type="radio"
-            label="Are you committed to participating in the entire program?"
-            groupName="committedToSummer"
-            answers={yesNoResponses}
-            includeOther={true}
-            onChange={this.handleRadioButtonListChange}
-            selectedItems={this.state.committedToSummer}
-            required={true}
-            validationState={this.getRequiredValidationState('committedToSummer')}
-          />
-          {this.renderSummerWorkshopSchedule()}
-        </div>
-      </div>
-    );
-  },
-
   renderComputerScienceBeliefsPoll() {
     const csBeliefsQuestions = {
       allStudentsShouldLearn: 'All students should have the opportunity to learn computer science in school.',
@@ -530,10 +521,10 @@ const TeacherApplication = React.createClass({
   renderComputerScienceAtYourSchool() {
     return (
       <div>
-        <p style={{fontWeight: 'bold', fontSize: '16px'}}>
+        <label style={{fontWeight: 'bold', fontSize: '16px'}}>
           We would like to learn more about your school, and why you want to participate in our Professional Learning
           Program. Please share your responses to the following questions:
-        </p>
+        </label>
         <ButtonList
           type="check"
           label="What computer science opportunities currently exist at your school? (select all that apply)"
@@ -554,7 +545,7 @@ const TeacherApplication = React.createClass({
           style={{width: '100%'}}
           rows={4}
           required={true}
-          validationState={this.getRequiredValidationState('whyCsIsImportant')}
+          errorText={this.getRequiredValidationErrorMessage('whyCsIsImportant')}
         />
         <FieldGroup
           id="whatTeachingSteps"
@@ -565,7 +556,7 @@ const TeacherApplication = React.createClass({
           style={{width: '100%'}}
           rows={4}
           required={true}
-          validationState={this.getRequiredValidationState('whatTeachingSteps')}
+          errorText={this.getRequiredValidationErrorMessage('whatTeachingSteps')}
         />
       </div>
     );
@@ -601,6 +592,19 @@ const TeacherApplication = React.createClass({
       }
     });
 
+    formData['assignedWorkshop'] = getWorkshopForState(
+      this.props.regionalPartnerGroup,
+      this.props.regionalPartnerName,
+      this.state.selectedCourse,
+      document.getElementById('school-state').value
+    );
+
+    if (formData.ableToAttendAssignedSummerWorkshop !== 'Yes') {
+      formData.fallbackSummerWorkshops = this.state.fallbackSummerWorkshops;
+
+      fieldsToValidate.splice(fieldsToValidate.indexOf('ableToAttendAssignedSummerWorkshop') + 1, 0, 'fallbackSummerWorkshops');
+    }
+
     _.forEach(fieldsToValidate, (field) => {
       if (this.state[field] === undefined || this.state[field].length === 0) {
         this.setState({[field]: ''});
@@ -613,9 +617,9 @@ const TeacherApplication = React.createClass({
     } else {
       topInvalidElementId = 'district-error-placeholder';
       ReactDOM.render(
-        <p style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
+        <label style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
           Please complete this section with your school's information
-        </p>,
+        </label>,
         document.getElementById(topInvalidElementId)
       );
     }
@@ -653,11 +657,11 @@ const TeacherApplication = React.createClass({
   renderSubmitButton() {
     return (
       <div>
-        <p style={{fontSize: '16px', fontWeight: 'bold'}}>
-          Code.org works closely with local Regional Partners to organize and deliver the Professional LearningProgram.
+        <label style={{fontSize: '16px', fontWeight: 'bold'}}>
+          Code.org works closely with local Regional Partners to organize and deliver the Professional Learning Program.
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
-        </p>
+        </label>
         <Button onClick={this.onSubmitButtonClick}>
           Complete and Send
         </Button>
@@ -675,9 +679,12 @@ const TeacherApplication = React.createClass({
           onChange={this.handleSubformDataChange}
           formData={this.state}
           errorData={this.errorData}
-          regionalPartnerGroup={this.props.regionalPartnerGroup}
-          selectedCourse={this.state.selectedCourse}
-          selectedState={document.getElementById('school-state').value}
+          selectedWorkshop={getWorkshopForState(
+            this.props.regionalPartnerGroup,
+            this.props.regionalPartnerName,
+            this.state.selectedCourse,
+            document.getElementById('school-state').value
+          )}
         />
         <hr/>
         {this.renderComputerScienceBeliefsPoll()}

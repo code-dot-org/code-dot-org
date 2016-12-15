@@ -34,7 +34,7 @@
     기초개념들을 학습해 보세요.
   og_title: "모든 아이들에게 기회가 주어져야 합니다."
   og_description: "모든 학교의 모든 학생은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다. 이것은 모든 것을 변화시킬 것입니다."
-  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_title: The Hour of Code is here
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: <a href="http://hourofcode.com">Hour of Code</a><br/>를 해보세요. December
@@ -1619,6 +1619,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "실행"
   artist_shortcode: art
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   sports_featured_athletes: See featured athletes
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
@@ -1650,9 +1652,11 @@
     Dallas Mavericks
   dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. We designed our curriculum so any educator
-    can teach computer science, from Kindergarten to 12th grade&mdash;and it's all
-    free. :) <b>Find the next step that's right for your classroom.</b>
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   csp5_name: 'Unit 5: Building Apps'
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
