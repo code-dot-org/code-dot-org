@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestCase
+  setup do
+    @school_district = create :school_district
+    SchoolDistrict.stubs(find: @school_district)
+
+    @school = create :public_school
+    School.stubs(find: @school)
+  end
+
   test 'logged in teachers can create teacher applications' do
     sign_in create(:teacher)
 
@@ -62,14 +70,8 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
   private
 
   def test_params
-    last_name = SecureRandom.hex(10)
     {
-      application: {
-        primaryEmail: "teacher#{last_name}@example.net",
-        secondaryEmail: "teacher#{last_name}@my.school.edu",
-        firstName: 'Teacher',
-        lastName: last_name
-      }
+      application: build(:pd_teacher_application_hash)
     }
   end
 end
