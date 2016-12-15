@@ -213,11 +213,15 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  */
 function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation = false) {
+  let stages = scriptData.stages;
+  if (scriptData.peerReviewStage) {
+    stages = stages.concat(scriptData.peerReviewStage);
+  }
   store.dispatch(initProgress({
     currentLevelId: currentLevelId,
     professionalLearningCourse: scriptData.plc,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
-    stages: scriptData.stages,
+    stages: stages,
     scriptName: scriptData.name,
   }));
 
