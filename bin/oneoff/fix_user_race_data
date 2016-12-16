@@ -12,7 +12,8 @@ require_relative '../../dashboard/config/environment'
 
 CLOSED_DIALOG = 'closed_dialog'.freeze
 
-User.where(user_type: User::TYPE_STUDENT).
+User.with_deleted.
+  where(user_type: User::TYPE_STUDENT).
   where("properties LIKE '%races%'").
   find_each do |user|
   # The race data is stored as a comma-separated list of strings in an array

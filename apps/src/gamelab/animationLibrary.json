@@ -905,58 +905,400 @@
         "y": 285
       }
     },
+    "category_characters/alienBeige": {
+      "name": "alienBeige",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 22:01:12 UTC",
+      "pngLastModified": "2016-12-13 21:02:59 UTC",
+      "version": "fmHP2U6GJas72N3wx1wOxJCOJ0igjaoh",
+      "sourceUrl": "/api/v1/animation-library/fmHP2U6GJas72N3wx1wOxJCOJ0igjaoh/category_characters/alienBeige.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 92
+      }
+    },
+    "category_characters/alienBeige_badge": {
+      "name": "alienBeige_badge",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 49,
+        "y": 49
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:02:49 UTC",
+      "pngLastModified": "2016-12-13 21:02:51 UTC",
+      "version": "Cg.3ALc9IR0L5IkyBQWIQBc.krxWPbQV",
+      "sourceUrl": "/api/v1/animation-library/Cg.3ALc9IR0L5IkyBQWIQBc.krxWPbQV/category_characters/alienBeige_badge.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    "category_characters/alienBeige_climb": {
+      "name": "alienBeige_climb",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 68,
+        "y": 97
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:02:52 UTC",
+      "pngLastModified": "2016-12-13 21:02:53 UTC",
+      "version": "lE0CdVSMuf0S3Mese3.GIOuwPa1p4cCE",
+      "sourceUrl": "/api/v1/animation-library/lE0CdVSMuf0S3Mese3.GIOuwPa1p4cCE/category_characters/alienBeige_climb.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 97
+      }
+    },
+    "category_characters/alienBeige_duck": {
+      "name": "alienBeige_duck",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 67,
+        "y": 72
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:02:54 UTC",
+      "pngLastModified": "2016-12-13 21:02:54 UTC",
+      "version": "O.iiYQ63e8Kj8DsSWAeyYxURgoAzQCt3",
+      "sourceUrl": "/api/v1/animation-library/O.iiYQ63e8Kj8DsSWAeyYxURgoAzQCt3/category_characters/alienBeige_duck.png",
+      "sourceSize": {
+        "x": 67,
+        "y": 72
+      }
+    },
+    "category_characters/alienBeige_jump": {
+      "name": "alienBeige_jump",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 93
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:02:55 UTC",
+      "pngLastModified": "2016-12-13 21:02:56 UTC",
+      "version": "bSyK4HwZ7ja0gB08NLg23tkPWmv2aFbg",
+      "sourceUrl": "/api/v1/animation-library/bSyK4HwZ7ja0gB08NLg23tkPWmv2aFbg/category_characters/alienBeige_jump.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 93
+      }
+    },
+    "category_characters/alienBeige_walk": {
+      "name": "alienBeige_walk",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 72,
+        "y": 98
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:02:57 UTC",
+      "pngLastModified": "2016-12-13 21:02:57 UTC",
+      "version": "EtPtM0rIGvIMYPNW.bC1uVwiWJgm2Kbj",
+      "sourceUrl": "/api/v1/animation-library/EtPtM0rIGvIMYPNW.bC1uVwiWJgm2Kbj/category_characters/alienBeige_walk.png",
+      "sourceSize": {
+        "x": 144,
+        "y": 98
+      }
+    },
+    "category_characters/alienBlue": {
+      "name": "alienBlue",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:12 UTC",
+      "pngLastModified": "2016-12-13 21:03:13 UTC",
+      "version": "zd4LEPr15yvJQrHm7yi7obo_N9RTudLE",
+      "sourceUrl": "/api/v1/animation-library/zd4LEPr15yvJQrHm7yi7obo_N9RTudLE/category_characters/alienBlue.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 92
+      }
+    },
+    "category_characters/alienBlue_badge": {
+      "name": "alienBlue_badge",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 49,
+        "y": 49
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:00 UTC",
+      "pngLastModified": "2016-12-13 21:03:01 UTC",
+      "version": "ZcIQw0JGBUToZOAPp7oINBkoy002x4UH",
+      "sourceUrl": "/api/v1/animation-library/ZcIQw0JGBUToZOAPp7oINBkoy002x4UH/category_characters/alienBlue_badge.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    "category_characters/alienBlue_climb": {
+      "name": "alienBlue_climb",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 68,
+        "y": 94
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:01 UTC",
+      "pngLastModified": "2016-12-13 21:03:02 UTC",
+      "version": "nzw1BhYsINnaxqf8e8a7_9GEFaeyI.VX",
+      "sourceUrl": "/api/v1/animation-library/nzw1BhYsINnaxqf8e8a7_9GEFaeyI.VX/category_characters/alienBlue_climb.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 94
+      }
+    },
+    "category_characters/alienBlue_duck": {
+      "name": "alienBlue_duck",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 67,
+        "y": 72
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:02 UTC",
+      "pngLastModified": "2016-12-13 21:05:30 UTC",
+      "version": "cXLOGA0PJZGUwJz8T8u6TgG58YWXuJ6p",
+      "sourceUrl": "/api/v1/animation-library/cXLOGA0PJZGUwJz8T8u6TgG58YWXuJ6p/category_characters/alienBlue_duck.png",
+      "sourceSize": {
+        "x": 67,
+        "y": 72
+      }
+    },
+    "category_characters/alienBlue_jump": {
+      "name": "alienBlue_jump",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 93
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:09 UTC",
+      "pngLastModified": "2016-12-13 21:03:09 UTC",
+      "version": "hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j",
+      "sourceUrl": "/api/v1/animation-library/hKtqhtmV38vpAxNyUaBy4GIjDARxlt1j/category_characters/alienBlue_jump.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 93
+      }
+    },
+    "category_characters/alienBlue_walk": {
+      "name": "alienBlue_walk",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 69,
+        "y": 98
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:11 UTC",
+      "pngLastModified": "2016-12-13 21:03:12 UTC",
+      "version": "DkKULzVkxJfv_KiPhGPZX0ZZ7sdiHXzL",
+      "sourceUrl": "/api/v1/animation-library/DkKULzVkxJfv_KiPhGPZX0ZZ7sdiHXzL/category_characters/alienBlue_walk.png",
+      "sourceSize": {
+        "x": 138,
+        "y": 98
+      }
+    },
+    "category_characters/alienGreen": {
+      "name": "alienGreen",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:19 UTC",
+      "pngLastModified": "2016-12-13 21:03:20 UTC",
+      "version": "3qqVaslWPlTDDg6Po4GHWLcgIWE7qh2J",
+      "sourceUrl": "/api/v1/animation-library/3qqVaslWPlTDDg6Po4GHWLcgIWE7qh2J/category_characters/alienGreen.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 92
+      }
+    },
+    "category_characters/alienGreen_badge": {
+      "name": "alienGreen_badge",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 49,
+        "y": 49
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:14 UTC",
+      "pngLastModified": "2016-12-13 21:03:14 UTC",
+      "version": "qS.WwmxGU.eNgUN0CjuAI1vIsxalTi9x",
+      "sourceUrl": "/api/v1/animation-library/qS.WwmxGU.eNgUN0CjuAI1vIsxalTi9x/category_characters/alienGreen_badge.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    "category_characters/alienGreen_climb": {
+      "name": "alienGreen_climb",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 68,
+        "y": 94
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:15 UTC",
+      "pngLastModified": "2016-12-13 21:03:15 UTC",
+      "version": "XeRbQdFk7i5UcMOhX_xgN.Au3kzDjUsL",
+      "sourceUrl": "/api/v1/animation-library/XeRbQdFk7i5UcMOhX_xgN.Au3kzDjUsL/category_characters/alienGreen_climb.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 94
+      }
+    },
     "category_characters/alienGreen_duck": {
       "name": "alienGreen_duck",
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 256
+        "x": 69,
+        "y": 71
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:49 UTC",
-      "pngLastModified": "2016-12-01 21:14:51 UTC",
-      "version": "9LfvqfB7qg9NC6Szk3KQaUtRE_BDa8Rh",
-      "sourceUrl": "/api/v1/animation-library/9LfvqfB7qg9NC6Szk3KQaUtRE_BDa8Rh/category_characters/alienGreen_duck.png",
+      "jsonLastModified": "2016-12-13 21:03:16 UTC",
+      "pngLastModified": "2016-12-13 21:03:16 UTC",
+      "version": "0AxvUd5CtbHCG7krTzi861q.OBHXiooc",
+      "sourceUrl": "/api/v1/animation-library/0AxvUd5CtbHCG7krTzi861q.OBHXiooc/category_characters/alienGreen_duck.png",
       "sourceSize": {
-        "x": 128,
-        "y": 256
+        "x": 69,
+        "y": 71
       }
     },
     "category_characters/alienGreen_jump": {
       "name": "alienGreen_jump",
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 256
+        "x": 67,
+        "y": 93
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:51 UTC",
-      "pngLastModified": "2016-12-01 21:14:52 UTC",
-      "version": "eebyORB7r0224qyzdO_Ar7w9KABk8aff",
-      "sourceUrl": "/api/v1/animation-library/eebyORB7r0224qyzdO_Ar7w9KABk8aff/category_characters/alienGreen_jump.png",
+      "jsonLastModified": "2016-12-13 21:03:18 UTC",
+      "pngLastModified": "2016-12-13 21:03:18 UTC",
+      "version": "0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh",
+      "sourceUrl": "/api/v1/animation-library/0ZA2mU0GDgAh.ZL5FMn7lTLtsNFkLlwh/category_characters/alienGreen_jump.png",
       "sourceSize": {
-        "x": 128,
-        "y": 256
+        "x": 67,
+        "y": 93
       }
     },
     "category_characters/alienGreen_walk": {
       "name": "alienGreen_walk",
       "frameCount": 2,
       "frameSize": {
-        "x": 130,
-        "y": 258
+        "x": 72,
+        "y": 98
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:54 UTC",
-      "pngLastModified": "2016-12-01 21:14:55 UTC",
-      "version": "Rf4iTJ_fkjlzQjL8BHrbrBvKMDaBtdCV",
-      "sourceUrl": "/api/v1/animation-library/Rf4iTJ_fkjlzQjL8BHrbrBvKMDaBtdCV/category_characters/alienGreen_walk.png",
+      "jsonLastModified": "2016-12-13 21:03:18 UTC",
+      "pngLastModified": "2016-12-13 21:03:19 UTC",
+      "version": "2QmbIHREjj_kMAn76wyxzKNXZT9dTHUw",
+      "sourceUrl": "/api/v1/animation-library/2QmbIHREjj_kMAn76wyxzKNXZT9dTHUw/category_characters/alienGreen_walk.png",
       "sourceSize": {
-        "x": 260,
-        "y": 258
+        "x": 144,
+        "y": 98
+      }
+    },
+    "category_characters/alienPink": {
+      "name": "alienPink",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:27 UTC",
+      "pngLastModified": "2016-12-13 21:03:27 UTC",
+      "version": "ecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu",
+      "sourceUrl": "/api/v1/animation-library/ecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu/category_characters/alienPink.png",
+      "sourceSize": {
+        "x": 66,
+        "y": 92
+      }
+    },
+    "category_characters/alienPink_badge": {
+      "name": "alienPink_badge",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 49,
+        "y": 49
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:21 UTC",
+      "pngLastModified": "2016-12-13 21:03:21 UTC",
+      "version": "72cLHYVYrogwZYWgz3xy3ViG6YQsIqxC",
+      "sourceUrl": "/api/v1/animation-library/72cLHYVYrogwZYWgz3xy3ViG6YQsIqxC/category_characters/alienPink_badge.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    "category_characters/alienPink_climb": {
+      "name": "alienPink_climb",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 68,
+        "y": 94
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:22 UTC",
+      "pngLastModified": "2016-12-13 21:03:23 UTC",
+      "version": "2WX0MiPJuoq4s_ga0CS3j1XZSTwZNkhh",
+      "sourceUrl": "/api/v1/animation-library/2WX0MiPJuoq4s_ga0CS3j1XZSTwZNkhh/category_characters/alienPink_climb.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 94
+      }
+    },
+    "category_characters/alienPink_duck": {
+      "name": "alienPink_duck",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 69,
+        "y": 71
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:24 UTC",
+      "pngLastModified": "2016-12-13 21:03:24 UTC",
+      "version": "ghk_8xySqlJIapQgcuqK93jZstk6OG4B",
+      "sourceUrl": "/api/v1/animation-library/ghk_8xySqlJIapQgcuqK93jZstk6OG4B/category_characters/alienPink_duck.png",
+      "sourceSize": {
+        "x": 69,
+        "y": 71
       }
     },
     "category_characters/alienPink_hit": {
@@ -981,54 +1323,144 @@
       "name": "alienPink_jump",
       "frameCount": 1,
       "frameSize": {
-        "x": 128,
-        "y": 256
+        "x": 67,
+        "y": 93
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:58 UTC",
-      "pngLastModified": "2016-12-01 21:14:58 UTC",
-      "version": "anlLNtJ26hTSZmWbjilsbD2QKIRYJasl",
-      "sourceUrl": "/api/v1/animation-library/anlLNtJ26hTSZmWbjilsbD2QKIRYJasl/category_characters/alienPink_jump.png",
+      "jsonLastModified": "2016-12-13 21:03:25 UTC",
+      "pngLastModified": "2016-12-13 21:03:25 UTC",
+      "version": "NX9O1MlvZUshSInyEKjAZkAfk2To4zVM",
+      "sourceUrl": "/api/v1/animation-library/NX9O1MlvZUshSInyEKjAZkAfk2To4zVM/category_characters/alienPink_jump.png",
       "sourceSize": {
-        "x": 128,
-        "y": 256
+        "x": 67,
+        "y": 93
       }
     },
     "category_characters/alienPink_walk": {
       "name": "alienPink_walk",
       "frameCount": 2,
       "frameSize": {
-        "x": 130,
-        "y": 258
+        "x": 72,
+        "y": 98
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:59 UTC",
-      "pngLastModified": "2016-12-01 21:15:00 UTC",
-      "version": "_OW1LPVfaTqLeNUIQUS8SHwMxi52udy3",
-      "sourceUrl": "/api/v1/animation-library/_OW1LPVfaTqLeNUIQUS8SHwMxi52udy3/category_characters/alienPink_walk.png",
+      "jsonLastModified": "2016-12-13 21:03:26 UTC",
+      "pngLastModified": "2016-12-13 21:03:26 UTC",
+      "version": "pT3HXf0Z6OGDyXABbZRYO95fLr9brbLT",
+      "sourceUrl": "/api/v1/animation-library/pT3HXf0Z6OGDyXABbZRYO95fLr9brbLT/category_characters/alienPink_walk.png",
       "sourceSize": {
-        "x": 260,
-        "y": 258
+        "x": 144,
+        "y": 98
       }
     },
-    "category_characters/alien_green_pink": {
-      "name": "alien_green_pink",
-      "frameCount": 2,
+    "category_characters/alienYellow": {
+      "name": "alienYellow",
+      "frameCount": 1,
       "frameSize": {
-        "x": 130,
-        "y": 258
+        "x": 66,
+        "y": 82
       },
       "looping": true,
       "frameDelay": 2,
-      "jsonLastModified": "2016-12-01 21:14:47 UTC",
-      "pngLastModified": "2016-12-01 21:14:48 UTC",
-      "version": "92lHYFbyaa86Jz48ct3Jpj3Ev_4evX64",
-      "sourceUrl": "/api/v1/animation-library/92lHYFbyaa86Jz48ct3Jpj3Ev_4evX64/category_characters/alien_green_pink.png",
+      "jsonLastModified": "2016-12-13 21:03:38 UTC",
+      "pngLastModified": "2016-12-13 21:03:38 UTC",
+      "version": "vX.4aiKiQ5g4hujfBaVmRlOe0M2UHiys",
+      "sourceUrl": "/api/v1/animation-library/vX.4aiKiQ5g4hujfBaVmRlOe0M2UHiys/category_characters/alienYellow.png",
       "sourceSize": {
-        "x": 260,
-        "y": 258
+        "x": 66,
+        "y": 82
+      }
+    },
+    "category_characters/alienYellow_badge": {
+      "name": "alienYellow_badge",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 49,
+        "y": 49
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:28 UTC",
+      "pngLastModified": "2016-12-13 21:03:29 UTC",
+      "version": "E1BM9pUOv7QqQHKk2WbfX8ZoEKfXXSAx",
+      "sourceUrl": "/api/v1/animation-library/E1BM9pUOv7QqQHKk2WbfX8ZoEKfXXSAx/category_characters/alienYellow_badge.png",
+      "sourceSize": {
+        "x": 98,
+        "y": 49
+      }
+    },
+    "category_characters/alienYellow_climb": {
+      "name": "alienYellow_climb",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 68,
+        "y": 84
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:30 UTC",
+      "pngLastModified": "2016-12-13 21:03:30 UTC",
+      "version": "9lGORQPY0bFSMF_4YNcz1tUd2YWqNnDn",
+      "sourceUrl": "/api/v1/animation-library/9lGORQPY0bFSMF_4YNcz1tUd2YWqNnDn/category_characters/alienYellow_climb.png",
+      "sourceSize": {
+        "x": 136,
+        "y": 84
+      }
+    },
+    "category_characters/alienYellow_duck": {
+      "name": "alienYellow_duck",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 68,
+        "y": 67
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:31 UTC",
+      "pngLastModified": "2016-12-13 21:03:31 UTC",
+      "version": "1dG.g9yVEY.Ehfe9QDffLMw_2SkJb6jj",
+      "sourceUrl": "/api/v1/animation-library/1dG.g9yVEY.Ehfe9QDffLMw_2SkJb6jj/category_characters/alienYellow_duck.png",
+      "sourceSize": {
+        "x": 68,
+        "y": 67
+      }
+    },
+    "category_characters/alienYellow_jump": {
+      "name": "alienYellow_jump",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 67,
+        "y": 83
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 21:03:32 UTC",
+      "pngLastModified": "2016-12-13 21:03:36 UTC",
+      "version": "FK2NWb3QUn19Mbq6lZ3nEXju48l7DMzG",
+      "sourceUrl": "/api/v1/animation-library/FK2NWb3QUn19Mbq6lZ3nEXju48l7DMzG/category_characters/alienYellow_jump.png",
+      "sourceSize": {
+        "x": 67,
+        "y": 83
+      }
+    },
+    "category_characters/alienYellow_walk": {
+      "name": "alienYellow_walk",
+      "frameCount": 2,
+      "frameSize": {
+        "x": 72,
+        "y": 88
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2016-12-13 22:16:49 UTC",
+      "pngLastModified": "2016-12-13 22:16:50 UTC",
+      "version": "NW9pKKmDQS5DIrbfFq02mlZ0K8Fwn5WG",
+      "sourceUrl": "/api/v1/animation-library/NW9pKKmDQS5DIrbfFq02mlZ0K8Fwn5WG/category_characters/alienYellow_walk.png",
+      "sourceSize": {
+        "x": 144,
+        "y": 88
       }
     },
     "category_characters/asterisk_circle": {
@@ -7117,8 +7549,53 @@
     }
   },
   "aliases": {
-    "alien_green_pink": [
-      "category_characters/alien_green_pink"
+    "alien": [
+      "category_characters/alienYellow_walk"
+    ],
+    "alienbeige": [
+      "category_characters/alienBeige"
+    ],
+    "alienbeige_badge": [
+      "category_characters/alienBeige_badge"
+    ],
+    "alienbeige_climb": [
+      "category_characters/alienBeige_climb"
+    ],
+    "alienbeige_duck": [
+      "category_characters/alienBeige_duck"
+    ],
+    "alienbeige_jump": [
+      "category_characters/alienBeige_jump"
+    ],
+    "alienbeige_walk": [
+      "category_characters/alienBeige_walk"
+    ],
+    "alienblue": [
+      "category_characters/alienBlue"
+    ],
+    "alienblue_badge": [
+      "category_characters/alienBlue_badge"
+    ],
+    "alienblue_climb": [
+      "category_characters/alienBlue_climb"
+    ],
+    "alienblue_duck": [
+      "category_characters/alienBlue_duck"
+    ],
+    "alienblue_jump": [
+      "category_characters/alienBlue_jump"
+    ],
+    "alienblue_walk": [
+      "category_characters/alienBlue_walk"
+    ],
+    "aliengreen": [
+      "category_characters/alienGreen"
+    ],
+    "aliengreen_badge": [
+      "category_characters/alienGreen_badge"
+    ],
+    "aliengreen_climb": [
+      "category_characters/alienGreen_climb"
     ],
     "aliengreen_duck": [
       "category_characters/alienGreen_duck"
@@ -7128,6 +7605,18 @@
     ],
     "aliengreen_walk": [
       "category_characters/alienGreen_walk"
+    ],
+    "alienpink": [
+      "category_characters/alienPink"
+    ],
+    "alienpink_badge": [
+      "category_characters/alienPink_badge"
+    ],
+    "alienpink_climb": [
+      "category_characters/alienPink_climb"
+    ],
+    "alienpink_duck": [
+      "category_characters/alienPink_duck"
     ],
     "alienpink_hit": [
       "category_characters/alienPink_hit"
@@ -7141,13 +7630,37 @@
     "aliens": [
       "category_animals/bunny2",
       "category_animals/bunny2_walk1",
+      "category_characters/alienBeige",
+      "category_characters/alienBeige_badge",
+      "category_characters/alienBeige_climb",
+      "category_characters/alienBeige_duck",
+      "category_characters/alienBeige_jump",
+      "category_characters/alienBeige_walk",
+      "category_characters/alienBlue",
+      "category_characters/alienBlue_badge",
+      "category_characters/alienBlue_climb",
+      "category_characters/alienBlue_duck",
+      "category_characters/alienBlue_jump",
+      "category_characters/alienBlue_walk",
+      "category_characters/alienGreen",
+      "category_characters/alienGreen_badge",
+      "category_characters/alienGreen_climb",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
+      "category_characters/alienPink",
+      "category_characters/alienPink_badge",
+      "category_characters/alienPink_climb",
+      "category_characters/alienPink_duck",
       "category_characters/alienPink_hit",
       "category_characters/alienPink_jump",
       "category_characters/alienPink_walk",
-      "category_characters/alien_green_pink",
+      "category_characters/alienYellow",
+      "category_characters/alienYellow_badge",
+      "category_characters/alienYellow_climb",
+      "category_characters/alienYellow_duck",
+      "category_characters/alienYellow_jump",
+      "category_characters/alienYellow_walk",
       "category_characters/asterisk_circle",
       "category_characters/asterisk_explode",
       "category_characters/asterisk_normal",
@@ -7166,6 +7679,24 @@
       "category_characters/sun",
       "category_characters/sun2",
       "category_characters/wingMan"
+    ],
+    "alienyellow": [
+      "category_characters/alienYellow"
+    ],
+    "alienyellow_badge": [
+      "category_characters/alienYellow_badge"
+    ],
+    "alienyellow_climb": [
+      "category_characters/alienYellow_climb"
+    ],
+    "alienyellow_duck": [
+      "category_characters/alienYellow_duck"
+    ],
+    "alienyellow_jump": [
+      "category_characters/alienYellow_jump"
+    ],
+    "alienyellow_walk": [
+      "category_characters/alienYellow_walk"
     ],
     "animals": [
       "category_animals/bee",
@@ -7488,13 +8019,37 @@
     "category_characters": [
       "category_animals/bunny2",
       "category_animals/bunny2_walk1",
+      "category_characters/alienBeige",
+      "category_characters/alienBeige_badge",
+      "category_characters/alienBeige_climb",
+      "category_characters/alienBeige_duck",
+      "category_characters/alienBeige_jump",
+      "category_characters/alienBeige_walk",
+      "category_characters/alienBlue",
+      "category_characters/alienBlue_badge",
+      "category_characters/alienBlue_climb",
+      "category_characters/alienBlue_duck",
+      "category_characters/alienBlue_jump",
+      "category_characters/alienBlue_walk",
+      "category_characters/alienGreen",
+      "category_characters/alienGreen_badge",
+      "category_characters/alienGreen_climb",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
+      "category_characters/alienPink",
+      "category_characters/alienPink_badge",
+      "category_characters/alienPink_climb",
+      "category_characters/alienPink_duck",
       "category_characters/alienPink_hit",
       "category_characters/alienPink_jump",
       "category_characters/alienPink_walk",
-      "category_characters/alien_green_pink",
+      "category_characters/alienYellow",
+      "category_characters/alienYellow_badge",
+      "category_characters/alienYellow_climb",
+      "category_characters/alienYellow_duck",
+      "category_characters/alienYellow_jump",
+      "category_characters/alienYellow_walk",
       "category_characters/asterisk_circle",
       "category_characters/asterisk_explode",
       "category_characters/asterisk_normal",
@@ -7854,13 +8409,37 @@
     "characters": [
       "category_animals/bunny2",
       "category_animals/bunny2_walk1",
+      "category_characters/alienBeige",
+      "category_characters/alienBeige_badge",
+      "category_characters/alienBeige_climb",
+      "category_characters/alienBeige_duck",
+      "category_characters/alienBeige_jump",
+      "category_characters/alienBeige_walk",
+      "category_characters/alienBlue",
+      "category_characters/alienBlue_badge",
+      "category_characters/alienBlue_climb",
+      "category_characters/alienBlue_duck",
+      "category_characters/alienBlue_jump",
+      "category_characters/alienBlue_walk",
+      "category_characters/alienGreen",
+      "category_characters/alienGreen_badge",
+      "category_characters/alienGreen_climb",
       "category_characters/alienGreen_duck",
       "category_characters/alienGreen_jump",
       "category_characters/alienGreen_walk",
+      "category_characters/alienPink",
+      "category_characters/alienPink_badge",
+      "category_characters/alienPink_climb",
+      "category_characters/alienPink_duck",
       "category_characters/alienPink_hit",
       "category_characters/alienPink_jump",
       "category_characters/alienPink_walk",
-      "category_characters/alien_green_pink",
+      "category_characters/alienYellow",
+      "category_characters/alienYellow_badge",
+      "category_characters/alienYellow_climb",
+      "category_characters/alienYellow_duck",
+      "category_characters/alienYellow_jump",
+      "category_characters/alienYellow_walk",
       "category_characters/asterisk_circle",
       "category_characters/asterisk_explode",
       "category_characters/asterisk_normal",
