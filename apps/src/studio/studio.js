@@ -3481,31 +3481,33 @@ Studio.displaySprite = function (i) {
   // in onTick loop)
   sprite.display();
 
-  if (sprite.bubbleVisible) {
-    var speechBubble = document.getElementById('speechBubble' + i);
-    var speechBubblePath = document.getElementById('speechBubblePath' + i);
-    var oldTipOffset = +speechBubblePath.getAttribute('tipOffset');
-    var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
-    var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
-    var bblHeight = +speechBubblePath.getAttribute('height');
-    var bblWidth = +speechBubblePath.getAttribute('width');
-
-    var newBubblePosition = Studio.calculateBubblePosition(
-        sprite, bblHeight, bblWidth, Studio.MAZE_WIDTH);
-
-    speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
-    speechBubblePath.setAttribute('onRight', newBubblePosition.onRight);
-    speechBubblePath.setAttribute('tipOffset', newBubblePosition.tipOffset);
-
-    if (wasOnTop !== newBubblePosition.onTop ||
-        wasOnRight !== newBubblePosition.onRight ||
-        oldTipOffset !== newBubblePosition.tipOffset) {
-      updateSpeechBubblePath(speechBubblePath);
-    }
-
-    speechBubble.setAttribute('transform',
-        `translate(${newBubblePosition.xSpeech}, ${newBubblePosition.ySpeech})`);
+  if (!sprite.bubbleVisible) {
+    return;
   }
+
+  var speechBubble = document.getElementById('speechBubble' + i);
+  var speechBubblePath = document.getElementById('speechBubblePath' + i);
+  var oldTipOffset = +speechBubblePath.getAttribute('tipOffset');
+  var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
+  var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
+  var bblHeight = +speechBubblePath.getAttribute('height');
+  var bblWidth = +speechBubblePath.getAttribute('width');
+
+  var newBubblePosition = Studio.calculateBubblePosition(
+      sprite, bblHeight, bblWidth, Studio.MAZE_WIDTH);
+
+  speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
+  speechBubblePath.setAttribute('onRight', newBubblePosition.onRight);
+  speechBubblePath.setAttribute('tipOffset', newBubblePosition.tipOffset);
+
+  if (wasOnTop !== newBubblePosition.onTop ||
+      wasOnRight !== newBubblePosition.onRight ||
+      oldTipOffset !== newBubblePosition.tipOffset) {
+    updateSpeechBubblePath(speechBubblePath);
+  }
+
+  speechBubble.setAttribute('transform',
+      `translate(${newBubblePosition.xSpeech}, ${newBubblePosition.ySpeech})`);
 };
 
 Studio.calculateBubblePosition = function (
