@@ -116,6 +116,7 @@ export default class BoardController {
       CapTouch: PlaygroundIO.CapTouch,
       Tap: PlaygroundIO.Tap,
       Accelerometer: five.Accelerometer,
+      Animation: five.Animation,
       /**
        * @link https://en.wikipedia.org/wiki/Three_Laws_of_Robotics
        * 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.

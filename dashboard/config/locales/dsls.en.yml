@@ -361,7 +361,6 @@ en:
       U4 evaluation q1:
         Have you ever investigated how digital security and encryption work?: Have you ever investigated how digital security and encryption work?
         I know these terms and generally know why they exist, but I am not sure about how encryption work: I know these terms and generally know why they exist, but I am not sure about how encryption work
-        I know these terms and generally know why they exist, but I am not sure about how encryption works.: I know these terms and generally know why they exist, but I am not sure about how encryption works.
         Nope--- I'm not familiar with encryption: Nope--- I'm not familiar with encryption
         Yes! I am super familiar with security and encryption: Yes! I am super familiar with security and encryption
       U4 evaluation q10:
@@ -376,20 +375,16 @@ en:
         Have you practiced or looked closely at the Explore Performance Task?: Have you practiced or looked closely at the Explore Performance Task?
         I haven't really looked at the Explore Task yet: I haven't really looked at the Explore Task yet
         I've looked at it once or twice, but haven't spent much time understanding it yet: I've looked at it once or twice, but haven't spent much time understanding it yet
-        I've looked at it once or twice, but haven't spent much time understanding it yet.: I've looked at it once or twice, but haven't spent much time understanding it yet.
         Yes! I'm very familiar with the Explore Task: Yes! I'm very familiar with the Explore Task
       U4 evaluation q3:
         Do you have a sense of how companies use the data and information they collect about you and other app and website users?: Do you have a sense of how companies use the data and information they collect about you and other app and website users?
         I don't know much about this and would really like to know more: I don't know much about this and would really like to know more
-        I don't know much about this and would really like to know more.: I don't know much about this and would really like to know more.
         I have some sense, but could stand to learn more: I have some sense, but could stand to learn more
         Yes! I read my privacy policies closely and understand what's being collected and how it could be used: Yes! I read my privacy policies closely and understand what's being collected and how it could be used
       U4 evaluation q4:
         Have you ever heard of modulo, or "clock" arithmetic?: Have you ever heard of modulo, or "clock" arithmetic?
         Never heard of it: Never heard of it
-        Never heard of it.: Never heard of it.
         Yes! I'm familiar with clock arithmetic: Yes! I'm familiar with clock arithmetic
-        Yes! I'm familiar with clock arithmetic.: Yes! I'm familiar with clock arithmetic.
       U4 evaluation q5:
         Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?: Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?
         I checked out the old version, but haven't seen the updates: I checked out the old version, but haven't seen the updates
@@ -3970,8 +3965,6 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        Answer 1: Answer 1
-        CSD U3 keyinput match: CSD U3 keyinput match
         Question: Question
         description here: description here
         'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
@@ -6655,10 +6648,6 @@ en:
         "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
         "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
         "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
-        "(temperature > 0) || (temperature < 32)": "(temperature > 0) || (temperature < 32)"
-        Question: Question
-        description here: description here
-        title: title
       U5 assess_weight_v2:
         Question: Question
         description here: description here
@@ -6831,15 +6820,12 @@ en:
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
-        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
-        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
         Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
       cspu5_assess1_eventprograms:
-        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
@@ -6856,7 +6842,6 @@ en:
         '10': '10'
         '5': '5'
         Nothing will be displayed: Nothing will be displayed
-        a: a
         a is bigger: a is bigger
         b: b
       cspu5_assess1_increase:
@@ -6914,7 +6899,6 @@ en:
       cspu5_assess2_false:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
-        Strings cannot include numerical digits.: Strings cannot include numerical digits.
         Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
         Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
@@ -6943,31 +6927,18 @@ en:
         'false': 'false'
         'true': 'true'
       cspu5_assess2_pseudoCode:
-        ' "Time to start studying again!" ': ' "Time to start studying again!" '
-        ' "You passed!" ': ' "You passed!" '
-        ' "You passed!" and  "Time to start studying again!" ': ' "You passed!" and  "Time to start studying again!" '
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
         An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
-        (day == "Saturday") && (day == "Sunday"): (day == "Saturday") && (day == "Sunday")
-        (day == "Saturday") || (day == "Sunday"): (day == "Saturday") || (day == "Sunday")
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
         "(day == “Saturday”) || (day == “Sunday”)": "(day == “Saturday”) || (day == “Sunday”)"
-        day != "Monday": day != "Monday"
         day != “Monday”: day != “Monday”
-        day == "Saturday": day == "Saturday"
-        day == "Sunday": day == "Sunday"
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log("Hello! \bHow are you?");: console.log("Hello! \bHow are you?");
-        console.log("Hello! \nHow are you?");: console.log("Hello! \nHow are you?");
-        console.log("Hello! \newLineHow are you?");: console.log("Hello! \newLineHow are you?");
-        console.log("Hello! \nlHow are you?");: console.log("Hello! \nlHow are you?");
-        console.log("Hello! \tHow are you?");: console.log("Hello! \tHow are you?");
         console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
         console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
         console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
@@ -6979,13 +6950,11 @@ en:
         '30': '30'
         '50': '50'
         '75': '75'
-        weight: weight
       cspu5_assess2_wrongLogic:
         Any time between 0 and 20: Any time between 0 and 20
         Any time between 10 and 19: Any time between 10 and 19
         Any time between 6 and 9: Any time between 6 and 9
         The logic error will cause the program to stop running at line 7.: The logic error will cause the program to stop running at line 7.
-        There is no value of time that will result in "Good Morning" being displayed: There is no value of time that will result in "Good Morning" being displayed
         There is no value of time that will result in “Good Morning” being displayed: There is no value of time that will result in “Good Morning” being displayed
       cspu5_assess3_ageList:
         INSERT the value 13 at the index of 2: INSERT the value 13 at the index of 2
@@ -7027,7 +6996,6 @@ en:
         'Add after line 4:     numItems = 0;': 'Add after line 4:     numItems = 0;'
         'Change Line 1 to:  var total = -1;': 'Change Line 1 to:  var total = -1;'
         'Change Line 2 to:  while (itemsInCart >= 0){': 'Change Line 2 to:  while (itemsInCart >= 0){'
-        'Change Line 3 to:  total = promptNum("Enter next item price");': 'Change Line 3 to:  total = promptNum("Enter next item price");'
         'Change Line 3 to:  total = promptNum(“Enter next item price”);': 'Change Line 3 to:  total = promptNum(“Enter next item price”);'
       cspu5_assess3_counter:
         '0': '0'
@@ -7041,8 +7009,6 @@ en:
         2, 1: 2, 1
         2, 2: 2, 2
         2, 4: 2, 4
-        3, 1: 3, 1
-        3, 3: 3, 3
       cspu5_assess3_listAppend:
         '1': '1'
         '2': '2'
@@ -7091,7 +7057,6 @@ en:
         <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">: <img src="https://images.code.org/e06c6c27755223ed61ba9358f0786544-image-1477188285727.png">
         <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">: <img src="https://images.code.org/e819661a76e3c76c4a06e0fdbac7c6c0-image-1477188297443.png">
       cspu5_assess3_whileTrue:
-        While loops are known as "forever loops" and never stop until the program is halted by the user.: While loops are known as "forever loops" and never stop until the program is halted by the user.
         While loops are known as “forever loops” and never stop until the program is halted by the user.: While loops are known as “forever loops” and never stop until the program is halted by the user.
         While loops run as long as a given boolean condition is false.: While loops run as long as a given boolean condition is false.
         While loops run as long as a given boolean condition is true.: While loops run as long as a given boolean condition is true.
