@@ -33,12 +33,12 @@ const group1CspWorkshops = {
 };
 
 export function getWorkshopForState(regionalPartnerGroup, regionalPartnerName, selectedCourse, state ) {
-  let workshopName = '2017 Workshop TBD';
+  let workshopName = `2017 Workshop (exact date to be determined) ${regionalPartnerName ? `by ${regionalPartnerName}` : ''}`;
 
   if (regionalPartnerGroup === 2 || (regionalPartnerGroup === 1 && selectedCourse === 'csd')) {
     _.forEach(groupTwoOrGroupOneCsdWorkshops, (value, key) => {
       if (value.includes(state)) {
-        workshopName = key;
+        workshopName = `${key} (travel expenses paid)`;
       }
     });
   }

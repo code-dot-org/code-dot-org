@@ -93,7 +93,7 @@ export default React.createClass({
           <label>
             We strongly encourage participants to attend their assigned summer workshop (based on the district in which
             you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
-            you will work in 2017 - 18. Your regions and summer workshop dates are below.
+            you will work in 2017 - 18. Your assigned region and summer workshop date is below.
           </label>
           <label style={{margin: '5px 0px 10px 15px', fontSize: '18px'}}>
             {this.props.selectedWorkshop}
@@ -114,8 +114,8 @@ export default React.createClass({
               <ButtonList
                 type="check"
                 label="If you are not able to attend your assigned summer workshop, which of the following workshops
-                  are you available to attend? Please note that we are not able to guarantee a space for you in a
-                  different location."
+                  are you available to attend? Travel expenses are paid. Please note that we are not able to guarantee
+                  a space for you in a different location."
                 groupName="fallbackSummerWorkshops"
                 answers={Object.keys(groupTwoOrGroupOneCsdWorkshops)}
                 onChange={this.checkListChange}
