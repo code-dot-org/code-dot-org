@@ -59,6 +59,7 @@ namespace :ci do
   end
 
   task :deploy_stack do
+    RakeUtils.check_build_started
     HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
   end
 

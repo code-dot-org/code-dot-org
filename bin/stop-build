@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require_relative '../deployment.rb'
+require 'cdo/hip_chat'
+
+# stops the build on daemon servers by removing [CDO]/build-started,
+# which the deploy process checks at certain points before continuing.
+
+raise "#{$0} does not work in development mode" if rack_env?(:development)
+
+Dir.chdir(deploy_dir) do
+  raise "file 'build-started' does not exist" unless File.file?('build-started')
+  puts "rm #{Dir.pwd.chomp}/build-started"
+  system 'rm ./build-started'
+  HipChat.log "attempting to stop build via #{$0}"
+end

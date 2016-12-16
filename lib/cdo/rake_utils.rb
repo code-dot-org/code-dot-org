@@ -373,4 +373,12 @@ module RakeUtils
 
     threads.each(&:join)
   end
+
+  STARTED = 'build-started'
+
+  def self.check_build_started
+    Dir.chdir(deploy_dir) do
+      raise "build aborted because [CDO]/build-started has been removed" unless File.file?(STARTED)
+    end
+  end
 end
