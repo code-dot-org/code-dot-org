@@ -4424,12 +4424,13 @@ Studio.setDroidSpeed = function (opts) {
 };
 
 Studio.setSpriteSize = function (opts) {
-  if (Studio.sprite[opts.spriteIndex].size === opts.value) {
+  var sprite = Studio.sprite[opts.spriteIndex];
+  if (sprite.size === opts.value) {
     return;
   }
 
-  Studio.sprite[opts.spriteIndex].size = opts.value;
-  var curSpriteValue = Studio.sprite[opts.spriteIndex].value;
+  sprite.size = opts.value;
+  var curSpriteValue = sprite.value;
 
   if (curSpriteValue !== 'hidden') {
     // Unset .image and .legacyImage so that setSprite's calls to
@@ -4445,13 +4446,17 @@ Studio.setSpriteSize = function (opts) {
     // Since setSpriteSize and 'visible' are currently never in the same
     // level, this is not a problem right now, but it would be good to
     // eventually address.
-    Studio.sprite[opts.spriteIndex].image = undefined;
-    Studio.sprite[opts.spriteIndex].legacyImage = undefined;
+    sprite.image = undefined;
+    sprite.legacyImage = undefined;
     // call setSprite with existing index/value now that we changed the size
     Studio.setSprite({
       spriteIndex: opts.spriteIndex,
       value: curSpriteValue
     });
+
+    if (sprite.bubbleVisible) {
+      createSpeechBubble(opts.spriteIndex, sprite.bubbleText);
+    }
   }
 };
 
@@ -5041,8 +5046,26 @@ Studio.saySprite = function (opts) {
     return opts.complete;
   }
 
+  createSpeechBubble(spriteIndex, opts.text);
+
+  // displaySprite will reposition the bubble
+  Studio.displaySprite(opts.spriteIndex);
+  var speechBubble = document.getElementById('speechBubble' + spriteIndex);
+  speechBubble.setAttribute('visibility', 'visible');
+
+  sprite.bubbleVisible = true;
+  sprite.bubbleText = opts.text;
+  sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
+  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
+    opts.seconds * 1000);
+
+  return opts.complete;
+};
+
+var createSpeechBubble = function (spriteIndex, text) {
   // Start creating the new speech bubble:
   var bblText = document.getElementById('speechBubbleText' + spriteIndex);
+  var sprite = Studio.sprite[spriteIndex];
 
   var availableHeight = (Studio.MAZE_HEIGHT - sprite.height) / 2;
   var maxLines = Math.floor(
@@ -5050,7 +5073,7 @@ Studio.saySprite = function (opts) {
       SPEECH_BUBBLE_LINE_HEIGHT);
   var svgTextOpts = {
     'svgText': bblText,
-    'text': opts.text,
+    'text': text,
     'width': SPEECH_BUBBLE_MIN_WIDTH,
     'maxWidth': SPEECH_BUBBLE_MAX_WIDTH,
     'lineHeight': SPEECH_BUBBLE_LINE_HEIGHT,
@@ -5062,22 +5085,10 @@ Studio.saySprite = function (opts) {
   };
   var bblSize = setSvgText(svgTextOpts);
   var speechBubblePath = document.getElementById('speechBubblePath' + spriteIndex);
-  var speechBubble = document.getElementById('speechBubble' + spriteIndex);
 
   speechBubblePath.setAttribute('height', bblSize.height);
   speechBubblePath.setAttribute('width', bblSize.width);
   updateSpeechBubblePath(speechBubblePath);
-
-  // displaySprite will reposition the bubble
-  Studio.displaySprite(opts.spriteIndex);
-  speechBubble.setAttribute('visibility', 'visible');
-
-  sprite.bubbleVisible = true;
-  sprite.bubbleTimeoutFunc = delegate(this, Studio.hideSpeechBubble, opts);
-  sprite.bubbleTimeout = window.setTimeout(sprite.bubbleTimeoutFunc,
-    opts.seconds * 1000);
-
-  return opts.complete;
 };
 
 Studio.stop = function (opts) {
