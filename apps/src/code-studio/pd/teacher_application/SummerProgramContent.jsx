@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList} from '../form_components/button_list.jsx';
-import {groupTwoOrGroupOneCsdWorkshops} from './applicationConstants';
+import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
 export default React.createClass({
 
   displayName: 'SummerProgramContent',
@@ -90,25 +90,29 @@ export default React.createClass({
               </Button>
             </Modal.Footer>
           </Modal>
-          <label>
-            We strongly encourage participants to attend their assigned summer workshop (based on the district in which
-            you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
-            you will work in 2017 - 18. Your assigned region and summer workshop date is below.
-          </label>
-          <label style={{margin: '5px 0px 10px 15px', fontSize: '18px'}}>
-            {this.props.selectedWorkshop}
-          </label>
-          <ButtonList
-            type="radio"
-            label="Are you able to attend your assigned summer workshop?"
-            groupName="ableToAttendAssignedSummerWorkshop"
-            answers={['Yes', 'No']}
-            includeOther
-            onChange={this.radioButtonListChange}
-            selectedItems={this.props.formData.ableToAttendAssignedSummerWorkshop}
-            required
-            errorText={this.props.errorData.ableToAttendAssignedSummerWorkshop}
-          />
+          {this.props.selectedWorkshop !== workshopNamePlaceholder &&
+            <div>
+              <label>
+                We strongly encourage participants to attend their assigned summer workshop (based on the district in which
+                you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
+                you will work in 2017 - 18. Your assigned region and summer workshop date is below.
+              </label>
+              <label style={{margin: '5px 0px 10px 15px', fontSize: '18px'}}>
+                {this.props.selectedWorkshop}
+              </label>
+              <ButtonList
+                type="radio"
+                label="Are you able to attend your assigned summer workshop?"
+                groupName="ableToAttendAssignedSummerWorkshop"
+                answers={['Yes', 'No']}
+                includeOther
+                onChange={this.radioButtonListChange}
+                selectedItems={this.props.formData.ableToAttendAssignedSummerWorkshop}
+                required
+                errorText={this.props.errorData.ableToAttendAssignedSummerWorkshop}
+              />
+            </div>
+          }
           {
             this.props.formData.ableToAttendAssignedSummerWorkshop === 'No' && (
               <ButtonList

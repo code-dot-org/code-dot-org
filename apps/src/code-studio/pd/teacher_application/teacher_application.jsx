@@ -58,7 +58,7 @@ const requiredFields = ['gradesAtSchool', 'firstName', 'lastName', 'primaryEmail
   'principalLastName', 'principalPrefix', 'principalEmail', 'selectedCourse'];
 const requiredCsdFields = ['gradesPlanningToTeach'];
 const requiredCspFields = ['cspDuration', 'cspApCourse', 'gradesPlanningToTeach', 'cspApExamIntent'];
-const requiredSurveyFields = ['committedToSummer', 'ableToAttendAssignedSummerWorkshop', 'allStudentsShouldLearn',
+const requiredSurveyFields = ['committedToSummer', 'allStudentsShouldLearn',
   'allStudentsCanLearn', 'newApproaches', 'allAboutContent', 'allAboutProgramming', 'csCreativity',
   'currentCsOpportunities', 'whyCsIsImportant', 'whatTeachingSteps'];
 const likertSurveyCell = {textAlign: 'center', width: '10%'};
@@ -598,6 +598,10 @@ const TeacherApplication = React.createClass({
       this.state.selectedCourse,
       document.getElementById('school-state').value
     );
+
+    if (!this.shouldShowRegionalPartnersOnlyWarning()) {
+      fieldsToValidate.splice(fieldsToValidate.indexOf('committedToSummer') + 1, 0, 'ableToAttendAssignedSummerWorkshop');
+    }
 
     if (formData.ableToAttendAssignedSummerWorkshop !== 'Yes') {
       formData.fallbackSummerWorkshops = this.state.fallbackSummerWorkshops;
