@@ -249,6 +249,7 @@ Style/Proc:
 Style/RedundantParentheses:
   Enabled: false
 
+# TODO: (Asher) fix these
 # Offense count: 6
 # Cop supports --auto-correct.
 Style/RedundantSelf:
