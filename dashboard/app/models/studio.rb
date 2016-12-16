@@ -126,6 +126,7 @@ class Studio < Grid
   <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
+  <block type="studio_whenSpriteAndGroupCollideSimple" />
   <block type="studio_whenSpriteAndGroupCollide">
     <value name="GROUPMEMBER">
       <block type="variables_get">
