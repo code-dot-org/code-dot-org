@@ -4,6 +4,11 @@ import {SVG_NS} from '@cdo/apps/constants';
 import {setSvgText, positionSpeechBubble} from '@cdo/apps/studio/studio';
 
 const STUDIO_WIDTH = 400;
+const SPEECH_BUBBLE_RADIUS = 20;
+const SPEECH_BUBBLE_H_OFFSET = 50;
+const SPEECH_BUBBLE_PADDING = 5;
+const SPEECH_BUBBLE_SIDE_MARGIN = 10;
+const SPEECH_BUBBLE_LINE_HEIGHT = 20;
 
 describe('studio', function () {
 
@@ -63,14 +68,14 @@ describe('studio', function () {
   describe('positionSpeechBubble', function () {
     it('positions a small bubble on the top right', function () {
       const position = positionSpeechBubble({
-        x: 150,
-        y: 100,
-        height: 50,
-        width: 50,
-      },
-      40 /* bubbleHeight */,
-      180 /* bubbleWidth */,
-      STUDIO_WIDTH);
+          x: 150,
+          y: 100,
+          height: 50,
+          width: 50,
+        },
+        40 /* bubbleHeight */,
+        180 /* bubbleWidth */,
+        STUDIO_WIDTH);
 
       expect(position.onTop).to.be.true;
       expect(position.onRight).to.be.true;
@@ -99,14 +104,14 @@ describe('studio', function () {
 
     it('positions a small bubble on the botom right', function () {
       const position = positionSpeechBubble({
-        x: 150,
-        y: 0,
-        height: 50,
-        width: 50,
-      },
-      40 /* bubbleHeight */,
-      180 /* bubbleWidth */,
-      STUDIO_WIDTH);
+          x: 150,
+          y: 0,
+          height: 50,
+          width: 50,
+        },
+        40 /* bubbleHeight */,
+        180 /* bubbleWidth */,
+        STUDIO_WIDTH);
 
       expect(position.onTop).to.be.false;
       expect(position.onRight).to.be.true;
@@ -117,14 +122,14 @@ describe('studio', function () {
 
     it('positions a small bubble on the botom left', function () {
       const position = positionSpeechBubble({
-        x: 250,
-        y: 0,
-        height: 50,
-        width: 50,
-      },
-      40 /* bubbleHeight */,
-      180 /* bubbleWidth */,
-      STUDIO_WIDTH);
+          x: 250,
+          y: 0,
+          height: 50,
+          width: 50,
+        },
+        40 /* bubbleHeight */,
+        180 /* bubbleWidth */,
+        STUDIO_WIDTH);
 
       expect(position.onTop).to.be.false;
       expect(position.onRight).to.be.false;
@@ -134,37 +139,39 @@ describe('studio', function () {
     });
 
     it('adjusts the bubble tip on a large bubble below to the right', function () {
-      const position = positionSpeechBubble({
+      const sprite = {
         x: 0,
         y: 0,
         height: 50,
         width: 50,
-      },
-      120 /* bubbleHeight */,
-      380 /* bubbleWidth */,
-      STUDIO_WIDTH);
+      };
+      const position = positionSpeechBubble(
+        sprite,
+        120 /* bubbleHeight */,
+        380 /* bubbleWidth */,
+        STUDIO_WIDTH);
 
-      // The left margin plus tip offset should equal sprite.x + the bubble
-      // horizontal offset
-      expect(position.tipOffset + 10).to.equal(0 + 50);
+      expect(SPEECH_BUBBLE_SIDE_MARGIN + position.tipOffset).to.equal(
+          sprite.x + SPEECH_BUBBLE_H_OFFSET);
       expect(position.xSpeech).to.equal(10);
       expect(position.ySpeech).to.be.above(0);
     });
 
     it('adjusts the bubble tip on a large bubble above to the left', function () {
-      const position = positionSpeechBubble({
+      const sprite = {
         x: 250,
         y: 250,
         height: 50,
         width: 50,
-      },
-      120 /* bubbleHeight */,
-      380 /* bubbleWidth */,
-      STUDIO_WIDTH);
+      };
+      const position = positionSpeechBubble(
+        sprite,
+        120 /* bubbleHeight */,
+        380 /* bubbleWidth */,
+        STUDIO_WIDTH);
 
-      // The right margin plus tip offset should equal
-      // (STUDIO_WIDTH - sprite.width - sprite.x) + the bubble horizontal offset
-      expect(position.tipOffset + 10).to.equal(400 - 50 - 250 + 50);
+      expect(SPEECH_BUBBLE_SIDE_MARGIN + position.tipOffset).to.equal(
+          STUDIO_WIDTH - sprite.width - sprite.x + SPEECH_BUBBLE_H_OFFSET);
       expect(position.xSpeech).to.equal(10);
       expect(position.ySpeech).to.be.below(250);
     });
