@@ -3484,46 +3484,66 @@ Studio.displaySprite = function (i) {
   if (sprite.bubbleVisible) {
     var speechBubble = document.getElementById('speechBubble' + i);
     var speechBubblePath = document.getElementById('speechBubblePath' + i);
-    var bblHeight = +speechBubblePath.getAttribute('height');
-    var bblWidth = +speechBubblePath.getAttribute('width');
     var oldTipOffset = +speechBubblePath.getAttribute('tipOffset');
     var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
     var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
-    var nowOnTop = true;
-    var nowOnRight = true;
-    var ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);
-    if (ySpeech < SPEECH_BUBBLE_TOP_MARGIN) {
-      ySpeech = sprite.y + sprite.height + SPEECH_BUBBLE_PADDING;
-      nowOnTop = false;
-    }
-    var xSpeech = sprite.x + SPEECH_BUBBLE_H_OFFSET;
-    var tipOffset = 0;
-    if (xSpeech > Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN) {
-      tipOffset = xSpeech - (Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN);
-      xSpeech = Studio.MAZE_WIDTH - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN;
-      if (sprite.x > (Studio.MAZE_WIDTH - sprite.width) / 2) {
-        tipOffset = 0;
-        nowOnRight = false;
-        xSpeech = sprite.x + sprite.width -
-                    (bblWidth + SPEECH_BUBBLE_H_OFFSET);
+    var bblHeight = +speechBubblePath.getAttribute('height');
+    var bblWidth = +speechBubblePath.getAttribute('width');
 
-        if (xSpeech < SPEECH_BUBBLE_SIDE_MARGIN) {
-          tipOffset = SPEECH_BUBBLE_SIDE_MARGIN - xSpeech;
-          xSpeech = SPEECH_BUBBLE_SIDE_MARGIN;
-        }
-      }
-    }
-    speechBubblePath.setAttribute('onTop', nowOnTop);
-    speechBubblePath.setAttribute('onRight', nowOnRight);
-    speechBubblePath.setAttribute('tipOffset', tipOffset);
+    var newBubblePosition = Studio.positionSpeechBubble(
+        sprite, bblHeight, bblWidth, Studio.MAZE_WIDTH);
 
-    if (wasOnTop !== nowOnTop || wasOnRight !== nowOnRight || oldTipOffset !== tipOffset) {
+    speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
+    speechBubblePath.setAttribute('onRight', newBubblePosition.onRight);
+    speechBubblePath.setAttribute('tipOffset', newBubblePosition.tipOffset);
+
+    if (wasOnTop !== newBubblePosition.onTop ||
+        wasOnRight !== newBubblePosition.onRight ||
+        oldTipOffset !== newBubblePosition.tipOffset) {
       updateSpeechBubblePath(speechBubblePath);
     }
 
-    speechBubble.setAttribute('transform', 'translate(' + xSpeech + ',' +
-      ySpeech + ')');
+    speechBubble.setAttribute('transform',
+        `translate(${newBubblePosition.xSpeech}, ${newBubblePosition.ySpeech})`);
   }
+};
+
+Studio.positionSpeechBubble = function (
+    sprite, bblHeight, bblWidth, studioWidth) {
+  let onTop = true;
+  let ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);
+  if (ySpeech < SPEECH_BUBBLE_TOP_MARGIN) {
+    ySpeech = sprite.y + sprite.height + SPEECH_BUBBLE_PADDING;
+    onTop = false;
+  }
+
+  let onRight;
+  let xSpeech;
+  let tipOffset = 0;
+  if (sprite.x > (studioWidth- sprite.width) / 2) {
+    onRight = false;
+    xSpeech = sprite.x + sprite.width - (bblWidth + SPEECH_BUBBLE_H_OFFSET);
+    if (xSpeech < SPEECH_BUBBLE_SIDE_MARGIN) {
+      tipOffset = SPEECH_BUBBLE_SIDE_MARGIN - xSpeech;
+      xSpeech = SPEECH_BUBBLE_SIDE_MARGIN;
+    }
+  } else {
+    onRight = true;
+    xSpeech = sprite.x + SPEECH_BUBBLE_H_OFFSET;
+    const maxXSpeech = studioWidth - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN;
+    if (xSpeech > maxXSpeech) {
+      tipOffset = xSpeech - maxXSpeech;
+      xSpeech = maxXSpeech;
+    }
+  }
+
+  return {
+    onTop,
+    onRight,
+    tipOffset,
+    xSpeech,
+    ySpeech,
+  };
 };
 
 Studio.displayScore = function () {
@@ -4790,7 +4810,8 @@ var TIP_X_SHIFT = 10;
 //
 // x, y is the top left position. w, h, r are width/height/radius (for corners)
 // onTop, onRight are booleans that are used to tell this function if the
-//     bubble is appearing on top and on the right of the sprite.
+// bubble is appearing on top and on the right of the sprite, tipOffset is how
+// far in from the corner to draw the tip.
 //
 // Thanks to Remy for the original rounded rect path function
 /*
