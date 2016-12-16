@@ -840,7 +840,7 @@ function makeDraggable(jqueryElements) {
         });
 
         // Dim the element if it's dragged out of bounds
-        if (!isMouseInBounds(newLeft, newTop)) {
+        if (!isMouseInBounds(newLeft + event.offsetX, newTop + event.offsetY)) {
           elm.addClass("toDelete");
         } else {
           elm.removeClass("toDelete");
@@ -856,7 +856,7 @@ function makeDraggable(jqueryElements) {
         // there's no need to transform ui.position coordinates again here.
 
         // Check the drop location to determine whether we delete this element
-        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+        if (!isMouseInBounds(ui.position.left + event.offsetX, ui.position.top + event.offsetY)) {
 
           // It's dropped out of bounds, animate and delete
           ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
