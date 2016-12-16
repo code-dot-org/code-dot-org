@@ -50,8 +50,8 @@ class NetSimApi < Sinatra::Base
   end
 
   # Return a new RedisTable instance for the given shard_id and table_name.
-  def get_table(shard_id, table_name)
-    RedisTable.new(get_redis_client, get_pub_sub_api, shard_id, table_name,
+  def get_table(redis_client, shard_id, table_name)
+    RedisTable.new(redis_client, get_pub_sub_api, shard_id, table_name,
       CDO.netsim_shard_expiry_seconds)
   end
 
@@ -63,7 +63,9 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)$} do |shard_id, table_name|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).to_a.to_json
+    with_redis do |redis_client|
+      get_table(redis_client, shard_id, table_name).to_a.to_json
+    end
   end
 
   # GET /v3/netsim/<shard-id>/<table-name>@<min_id>
@@ -73,7 +75,9 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)@([0-9]+)$} do |shard_id, table_name, min_id|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).to_a_from_min_id(min_id.to_i).to_json
+    with_redis do |redis_client|
+      get_table(redis_client, shard_id, table_name).to_a_from_min_id(min_id.to_i).to_json
+    end
   end
 
   #
@@ -84,7 +88,9 @@ class NetSimApi < Sinatra::Base
   get %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    get_table(shard_id, table_name).fetch(id.to_i).to_json
+    with_redis do |redis_client|
+      get_table(redis_client, shard_id, table_name).fetch(id.to_i).to_json
+    end
   end
 
   # GET /v3/netsim/<shard-id>?t[]=<table1>@<id1>&t[]=<table2>@<id2>&...
@@ -96,7 +102,9 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     table_map = parse_table_map_from_query_string(CGI.unescape(request.query_string))
-    RedisTable.get_tables(get_redis_client, shard_id, table_map).to_json
+    with_redis do |redis_client|
+      RedisTable.get_tables(redis_client, shard_id, table_map).to_json
+    end
   end
 
   #
@@ -107,7 +115,9 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)/(\w+)/(\d+)$} do |shard_id, table_name, id|
     dont_cache
     content_type :json
-    delete_many(shard_id, table_name, [id.to_i])
+    with_redis do |redis_client|
+      delete_many(redis_client, shard_id, table_name, [id.to_i])
+    end
     no_content
   end
 
@@ -129,7 +139,9 @@ class NetSimApi < Sinatra::Base
     dont_cache
     content_type :json
     ids = parse_ids_from_query_string(CGI.unescape(request.query_string))
-    delete_many(shard_id, table_name, ids)
+    with_redis do |redis_client|
+      delete_many(redis_client, shard_id, table_name, ids)
+    end
     no_content
   end
 
@@ -150,7 +162,9 @@ class NetSimApi < Sinatra::Base
   delete %r{/v3/netsim/([^/]+)$} do |shard_id|
     dont_cache
     not_authorized unless allowed_to_delete_shard? shard_id
-    RedisTable.reset_shard(shard_id, get_redis_client, get_pub_sub_api)
+    with_redis do |redis_client|
+      RedisTable.reset_shard(shard_id, redis_client, get_pub_sub_api)
+    end
     no_content
   end
 
@@ -212,59 +226,63 @@ class NetSimApi < Sinatra::Base
       json_bad_request(VALIDATION_ERRORS[:malformed])
     end
 
-    # Determine whether or not we are performing a multi-insert and
-    # normalize our request body into an array of values
-    multi_insert = body.is_a?(Array)
-    values = multi_insert ? body : [body]
+    with_redis do |redis_client|
+      # Determine whether or not we are performing a multi-insert and
+      # normalize our request body into an array of values
+      multi_insert = body.is_a?(Array)
+      values = multi_insert ? body : [body]
 
-    validation_errors = validate_all(shard_id, table_name, values)
-    unless validation_errors.none?
-      error_details = multi_insert ? validation_errors : validation_errors.first
-      json_bad_request(error_details)
+      validation_errors = validate_all(redis_client, shard_id, table_name, values)
+      unless validation_errors.none?
+        error_details = multi_insert ? validation_errors : validation_errors.first
+        json_bad_request(error_details)
+      end
+
+      # If we get all the way down here without errors, insert everything
+      table = get_table(redis_client, shard_id, table_name)
+      result = values.map { |value| table.insert(value, request.ip) }
+
+      # Finally, if we are not performing a multi-insert, denormalize our
+      # return value to a single item
+      result = result[0] unless multi_insert
+
+      dont_cache
+      content_type :json
+      status 201
+      result.to_json
     end
-
-    # If we get all the way down here without errors, insert everything
-    table = get_table(shard_id, table_name)
-    result = values.map { |value| table.insert(value, request.ip) }
-
-    # Finally, if we are not performing a multi-insert, denormalize our
-    # return value to a single item
-    result = result[0] unless multi_insert
-
-    dont_cache
-    content_type :json
-    status 201
-    result.to_json
   end
 
-  def validate_all(shard_id, table_name, values)
-    values.map { |value| validate_one(shard_id, table_name, value) }
+  def validate_all(redis_client, shard_id, table_name, values)
+    values.map { |value| validate_one(redis_client, shard_id, table_name, value) }
   end
 
+  # @param [Redis] redis_client
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [String] table_name - The table we're validating for
   # @param [Hash] value - The value we're validating
   # @return [String] a validation error, or nil if no problems were found
-  def validate_one(shard_id, table_name, value)
+  def validate_one(redis_client, shard_id, table_name, value)
     return VALIDATION_ERRORS[:malformed] unless value.is_a? Hash
     case table_name
       when TABLE_NAMES[:node]
-        validate_node(shard_id, value)
+        validate_node(redis_client, shard_id, value)
       when TABLE_NAMES[:message]
-        validate_message(shard_id, value)
+        validate_message(redis_client, shard_id, value)
       when TABLE_NAMES[:wire]
-        validate_wire(shard_id, value)
+        validate_wire(redis_client, shard_id, value)
       else
         nil
     end
   end
 
+  # @param [Redis] redis_client
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [Hash] node - The new node we are validating
   # @return [String] a validation error, or nil if no problems were found
-  def validate_node(shard_id, node)
+  def validate_node(redis_client, shard_id, node)
     case node['type']
-      when NODE_TYPES[:router] then validate_router(shard_id, node)
+      when NODE_TYPES[:router] then validate_router(redis_client, shard_id, node)
       when NODE_TYPES[:client] then nil
       else VALIDATION_ERRORS[:malformed]
     end
@@ -272,12 +290,13 @@ class NetSimApi < Sinatra::Base
 
   # Makes sure the router has a routerNumber and will not cause the shard
   # to exceed the router limit.
+  # @param [Redis] redis_client
   # @param [String] shard_id - The shard we're checking validation on
   # @param [Hash] router - The new router we are validating
   # @return [String] a validation error, or nil if no problems were found
-  def validate_router(shard_id, router)
+  def validate_router(redis_client, shard_id, router)
     return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
-    existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
+    existing_routers = get_table(redis_client, shard_id, TABLE_NAMES[:node]).
         to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
     # Check for routerNumber collisions and router limits
@@ -287,14 +306,15 @@ class NetSimApi < Sinatra::Base
   end
 
   # Makes sure the message owner node exists.
+  # @param [Redis] redis_client
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [Hash] message - The message we're validating
   # @return [String] a validation error, or nil if no problems were found
-  def validate_message(shard_id, message)
+  def validate_message(redis_client, shard_id, message)
     # TODO: Validate the base64.
     # TODO: This is wildly inefficient, particularly when validating.
     # multi-insert messages
-    node_exists = get_table(shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
+    node_exists = get_table(redis_client, shard_id, TABLE_NAMES[:node]).to_a.any? do |node|
       node['id'] == message['simulatedBy']
     end
 
@@ -303,12 +323,13 @@ class NetSimApi < Sinatra::Base
   end
 
   # Makes sure an existing wire does not already define the same directed connection.
+  # @param [Redis] redis_client
   # @param [String] shard_id - The shard we're checking validation on.
   # @param [Hash] wire - The wire we're validating.
   # @return [String] a validation error, or nil if no problems were found
-  def validate_wire(shard_id, wire)
+  def validate_wire(redis_client, shard_id, wire)
     # Check for another wire between the same nodes in the same direction.
-    wire_already_exists = get_table(shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
+    wire_already_exists = get_table(redis_client, shard_id, TABLE_NAMES[:wire]).to_a.any? do |stored_wire|
       stored_wire['localNodeID'] == wire['localNodeID'] && stored_wire['remoteNodeID'] == wire['remoteNodeID']
     end
     return VALIDATION_ERRORS[:conflict] if wire_already_exists
@@ -324,12 +345,14 @@ class NetSimApi < Sinatra::Base
     dont_cache
     unsupported_media_type unless has_json_utf8_headers?(request)
 
-    begin
-      table = get_table(shard_id, table_name)
-      int_id = id.to_i
-      value = table.update(int_id, JSON.parse(request.body.read), request.ip)
-    rescue JSON::ParserError
-      json_bad_request
+    value = with_redis do |redis_client|
+      begin
+        table = get_table(redis_client, shard_id, table_name)
+        int_id = id.to_i
+        table.update(int_id, JSON.parse(request.body.read), request.ip)
+      rescue JSON::ParserError
+        json_bad_request
+      end
     end
 
     dont_cache
@@ -360,6 +383,14 @@ class NetSimApi < Sinatra::Base
   end
 
   private
+
+  # Takes a block, providing a Redis client, and automates cleanup
+  def with_redis
+    client = get_redis_client
+    yield client
+  ensure
+    client.disconnect unless client.nil?
+  end
 
   # Returns a new Redis client for the current configuration.
   #
@@ -419,26 +450,28 @@ class NetSimApi < Sinatra::Base
   # as possible.
   #
   # @private
+  # @param [Redis] redis_client
   # @param [String] shard_id
   # @param [String] table_name
   # @param [Array<String>] ids
-  def delete_many(shard_id, table_name, ids)
+  def delete_many(redis_client, shard_id, table_name, ids)
     if table_name == TABLE_NAMES[:node]
       # Cascade deletions
-      delete_wires_for_nodes(shard_id, ids)
-      delete_messages_for_nodes(shard_id, ids)
+      delete_wires_for_nodes(redis_client, shard_id, ids)
+      delete_messages_for_nodes(redis_client, shard_id, ids)
     end
-    table = get_table(shard_id, table_name)
+    table = get_table(redis_client, shard_id, table_name)
     table.delete(ids)
   end
 
   # Delete all wires associated with (locally or remotely) a given node_id
   #
   # @private
+  # @param [Redis] redis_client
   # @param [String] shard_id
   # @param [Array<Integer>] node_ids
-  def delete_wires_for_nodes(shard_id, node_ids)
-    wire_table = get_table(shard_id, TABLE_NAMES[:wire])
+  def delete_wires_for_nodes(redis_client, shard_id, node_ids)
+    wire_table = get_table(redis_client, shard_id, TABLE_NAMES[:wire])
     wires = wire_table.to_a.select {|wire|
       node_ids.any? { |node_id|
         wire['localNodeID'] == node_id || wire['remoteNodeID'] == node_id
@@ -451,10 +484,11 @@ class NetSimApi < Sinatra::Base
   # Delete all messages simulated by a given node_id
   #
   # @private
+  # @param [Redis] redis_client
   # @param [String] shard_id
   # @param [Array<Integer>] node_ids
-  def delete_messages_for_nodes(shard_id, node_ids)
-    message_table = get_table(shard_id, TABLE_NAMES[:message])
+  def delete_messages_for_nodes(redis_client, shard_id, node_ids)
+    message_table = get_table(redis_client, shard_id, TABLE_NAMES[:message])
     messages = message_table.to_a.select {|message|
       node_ids.member? message['simulatedBy']
     }
