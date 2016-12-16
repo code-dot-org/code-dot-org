@@ -1477,7 +1477,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_setScoreText = function () {
     // Generate JavaScript for setting the score text.
     var arg = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || '""';
     return 'Studio.setScoreText(\'block_id_' + this.id + '\', ' + arg + ');\n';
   };
 
@@ -2017,9 +2017,9 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_showTitleScreenParams = function () {
     // Generate JavaScript for showing title screen (param version).
     var titleParam = Blockly.JavaScript.valueToCode(this, 'TITLE',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || '""';
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || '""';
     return 'Studio.showTitleScreen(\'block_id_' + this.id +
                '\', ' + titleParam + ', ' + textParam + ');\n';
   };
@@ -2320,7 +2320,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_saySpriteParams = function () {
     // Generate JavaScript for saying (param version).
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || '""';
     return 'Studio.saySprite(\'block_id_' + this.id +
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
@@ -2331,7 +2331,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Generate JavaScript for saying (param version).
     var spriteParam = getSpriteIndex(this);
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || '""';
     var secondsParam = Blockly.JavaScript.valueToCode(this, 'TIME',
         Blockly.JavaScript.ORDER_NONE) || 1;
     return 'Studio.saySprite(\'block_id_' + this.id + '\', ' +
