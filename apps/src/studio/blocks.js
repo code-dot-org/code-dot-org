@@ -2262,10 +2262,14 @@ exports.install = function (blockly, blockInstallOptions) {
       }
       if (options.restrictedDialog) {
         var functionArray = [];
-        var numRestrictedSayChoices = 59;
+        var numRestrictedSayChoices = 60;
         for (var i = 0; i < numRestrictedSayChoices; i++) {
+          var sayOption = msg[`saySpriteChoices_${i}`];
+          if (!sayOption) {
+            continue;
+          }
           var functionElement = functionArray[i] = [];
-          var string = msg["saySpriteChoices_" + i]();
+          var string = sayOption();
           functionElement[0] = functionElement[1] = string;
         }
         var dropdown = new blockly.FieldDropdown(functionArray);
