@@ -172,9 +172,9 @@ const TeacherApplication = React.createClass({
         {this.shouldShowRegionalPartnersOnlyWarning() && (
           <label style={{color: 'red'}}>
             Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our program,
-            most spots are reserved for teachers in regions where we have a Regional Partner. If you would like to
-            continue this application, please note that we will consider it for review if spaces remain at the end of
-            our application period.
+            most spots are reserved for teachers in regions where we have a Regional Partner. Your area does not yet
+            have a Code.org Regional Partner. If you would like to continue this application, please note that we will
+            consider it for review if spaces remain at the end of our application period.
           </label>
         )}
         <ButtonList
