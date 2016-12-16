@@ -84,6 +84,13 @@ export function setProperty(elementId, property, value) {
                            'value': value });
 }
 
+export function getProperty(elementId, property) {
+  return Applab.executeCmd(null,
+    'getProperty',
+    {'elementId': elementId,
+      'property': property });
+}
+
 export function getXPosition(elementId) {
   return Applab.executeCmd(null,
                           'getXPosition',
