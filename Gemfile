@@ -189,7 +189,7 @@ gem 'aws-sdk', '~> 2'
 
 # Lint tools
 group :development, :staging do
-  gem 'rubocop', '0.42.0', require: false
+  gem 'rubocop', '0.45.0', require: false
   gem 'haml_lint', require: false
   gem 'scss_lint', require: false
 end
