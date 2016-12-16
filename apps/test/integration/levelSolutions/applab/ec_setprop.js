@@ -3,6 +3,7 @@ var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants').TestResults;
 var _ = require('lodash');
+import {expect} from '../../../util/configuredChai';
 
 // take advantage of the fact that we expose the filesystem via
 // localhost
@@ -19,12 +20,18 @@ module.exports = {
       description: "setProperty on API created button",
       editCode: true,
       xml:
-        'button("my_button", "text");' +
-        'setProperty("my_button", "text", "newtext");' +
-        'setProperty("my_button", "text-color", "red");' +
-        'setProperty("my_button", "background-color", "green");' +
-        'setProperty("my_button", "font-size", 21);' +
-        'setProperty("my_button", "image", "' + facebookImage + '");',
+        `button("my_button", "text");
+        setProperty("my_button", "text", "newtext");
+        console.log("text: " + getProperty("my_button", "text"));
+        setProperty("my_button", "text-color", "red");
+        console.log("text-color: " + getProperty("my_button", "text-color"));
+        setProperty("my_button", "background-color", "green");
+        console.log("background-color: " + getProperty("my_button", "background-color"));
+        setProperty("my_button", "font-size", 21);
+        console.log("font-size: " + getProperty("my_button", "font-size"));
+        setProperty("my_button", "image", "${facebookImage}");
+        console.log("image: " + getProperty("my_button", "image"));
+`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -41,9 +48,14 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+
+        expect(debugOutput.textContent).to.contain('text: newtext\n');
+        expect(debugOutput.textContent).to.contain('text-color: red\n');
+        expect(debugOutput.textContent).to.contain('background-color: green\n');
+        expect(debugOutput.textContent).to.contain('font-size: 21\n');
+        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png$/);
+
         return true;
       },
       expected: {
@@ -57,11 +69,16 @@ module.exports = {
       editCode: true,
       levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><button id="my_button" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 85px; background-color: rgb(26, 188, 156);">Button</button></div></div>',
       xml:
-        'setProperty("my_button", "text", "newtext");' +
-        'setProperty("my_button", "text-color", "red");' +
-        'setProperty("my_button", "background-color", "green");' +
-        'setProperty("my_button", "font-size", 21);' +
-        'setProperty("my_button", "image", "' + facebookImage + '");',
+        `setProperty("my_button", "text", "newtext");
+        console.log("text: " + getProperty("my_button", "text"));
+        setProperty("my_button", "text-color", "red");
+        console.log("text-color: " + getProperty("my_button", "text-color"));
+        setProperty("my_button", "background-color", "green");
+        console.log("background-color: " + getProperty("my_button", "background-color"));
+        setProperty("my_button", "font-size", 21);
+        console.log("font-size: " + getProperty("my_button", "font-size"));
+        setProperty("my_button", "image", "${facebookImage}");
+        console.log("image: " + getProperty("my_button", "image"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -78,9 +95,14 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+
+        expect(debugOutput.textContent).to.contain('text: newtext\n');
+        expect(debugOutput.textContent).to.contain('text-color: red\n');
+        expect(debugOutput.textContent).to.contain('background-color: green\n');
+        expect(debugOutput.textContent).to.contain('font-size: 21\n');
+        expect(debugOutput.textContent).to.match(/image: .*facebook_purple.png$/);
+
         return true;
       },
       expected: {
@@ -93,8 +115,9 @@ module.exports = {
       description: "setProperty on API created text input",
       editCode: true,
       xml:
-        'textInput("my_text_input", "text");' +
-        'setProperty("my_text_input", "placeholder", "placeholdertext");',
+        `textInput("my_text_input", "text");
+        setProperty("my_text_input", "placeholder", "placeholdertext");
+        console.log("placeholder: " + getProperty("my_text_input", "placeholder"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -105,9 +128,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, 'placeholder: placeholdertext');
         return true;
       },
       expected: {
@@ -121,10 +143,15 @@ module.exports = {
       editCode: true,
       levelHtml: '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="range" value="50" min="0" max="100" step="1" id="my_slider" style="margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 75px; top: 95px;" /></div></div>',
       xml:
-        'setProperty("my_slider", "value", 51);' +
-        'setProperty("my_slider", "min", 1);' +
-        'setProperty("my_slider", "max", 101);' +
-        'setProperty("my_slider", "step", 3);',
+        `setProperty("my_slider", "value", 51);
+        console.log("value: " + getProperty("my_slider", "value"));
+        setProperty("my_slider", "min", 1);
+        console.log("min: " + getProperty("my_slider", "min"));
+        setProperty("my_slider", "max", 101);
+        console.log("max: " + getProperty("my_slider", "max"));
+        setProperty("my_slider", "step", 3);
+        console.log("step: " + getProperty("my_slider", "step"));`
+      ,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -138,9 +165,11 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, `value: 51
+min: 1
+max: 101
+step: 3`);
         return true;
       },
       expected: {
@@ -153,13 +182,19 @@ module.exports = {
       description: "setProperty on API created Image",
       editCode: true,
       xml:
-        'image("my_image", "' + flappyImage + '");' +
-        'setProperty("my_image", "width", 11);' +
-        'setProperty("my_image", "height", 12);' +
-        'setProperty("my_image", "x", 13);' +
-        'setProperty("my_image", "y", 14);' +
-        'setProperty("my_image", "picture", "' + facebookImage + '");' +
-        'setProperty("my_image", "hidden", true);',
+        `image("my_image", "${flappyImage}");
+        setProperty("my_image", "width", 11);
+        console.log("width: " + getProperty("my_image", "width"));
+        setProperty("my_image", "height", 12);
+        console.log("height: " + getProperty("my_image", "height"));
+        setProperty("my_image", "x", 13);
+        console.log("x: " + getProperty("my_image", "x"));
+        setProperty("my_image", "y", 14);
+        console.log("y: " + getProperty("my_image", "y"));
+        setProperty("my_image", "picture", "${facebookImage}");
+        console.log("picture: " + getProperty("my_image", "picture"));
+        setProperty("my_image", "hidden", true);
+        console.log("hidden: " + getProperty("my_image", "hidden"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -185,7 +220,14 @@ module.exports = {
       customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+
+        expect(debugOutput.textContent).to.contain('width: 11\n');
+        expect(debugOutput.textContent).to.contain('height: 12\n');
+        expect(debugOutput.textContent).to.contain('x: 13\n');
+        expect(debugOutput.textContent).to.contain('y: 14\n');
+        expect(debugOutput.textContent).to.match(/picture: .*facebook_purple.png\n/);
+        expect(debugOutput.textContent).to.contain('hidden: true');
+
         return true;
       },
       expected: {
@@ -195,17 +237,23 @@ module.exports = {
     },
 
     {
-      description: "setProperty on design mode created Image",
+      description: "setProperty on design mode created Image 1",
       editCode: true,
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="my_image" style="height: 100px; width: 100px; position: absolute; left: 80px; top: 75px; margin: 0px;" /></div></div>',
       xml:
-        'setProperty("my_image", "width", 11);' +
-        'setProperty("my_image", "height", 12);' +
-        'setProperty("my_image", "x", 13);' +
-        'setProperty("my_image", "y", 14);' +
-        'setProperty("my_image", "picture", "' + facebookImage + '");' +
-        'setProperty("my_image", "hidden", true);',
+        `setProperty("my_image", "width", 11);
+        console.log("width: " + getProperty("my_image", "width"));
+        setProperty("my_image", "height", 12);
+        console.log("height: " + getProperty("my_image", "height"));
+        setProperty("my_image", "x", 13);
+        console.log("x: " + getProperty("my_image", "x"));
+        setProperty("my_image", "y", 14);
+        console.log("y: " + getProperty("my_image", "y"));
+        setProperty("my_image", "picture", "${facebookImage}");
+        console.log("picture: " + getProperty("my_image", "picture"));
+        setProperty("my_image", "hidden", true);
+        console.log("hidden: " + getProperty("my_image", "hidden"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -231,7 +279,14 @@ module.exports = {
       customValidator: function (assert) {
         // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+
+        expect(debugOutput.textContent).to.contain('width: 11\n');
+        expect(debugOutput.textContent).to.contain('height: 12\n');
+        expect(debugOutput.textContent).to.contain('x: 13\n');
+        expect(debugOutput.textContent).to.contain('y: 14\n');
+        expect(debugOutput.textContent).to.match(/picture: .*facebook_purple.png\n/);
+        expect(debugOutput.textContent).to.contain('hidden: true');
+
         return true;
       },
       expected: {
@@ -244,8 +299,9 @@ module.exports = {
       description: "setProperty on API created dropdown",
       editCode: true,
       xml:
-        'dropdown("my_drop", "option1", "option2", "option3", "option4", "option5");' +
-        'setProperty("my_drop", "options", ["one", "two", "three"]);',
+        `dropdown("my_drop", "option1", "option2", "option3", "option4", "option5");
+        setProperty("my_drop", "options", ["one", "two", "three"]);
+        console.log("options: " + getProperty("my_drop", "options"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -260,9 +316,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, 'options: one,two,three');
         return true;
       },
       expected: {
@@ -277,7 +332,8 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><select id="my_drop" style="width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); position: absolute; left: 35px; top: 75px; background-color: rgb(26, 188, 156);"><option>Option 1</option><option>Option 2</option></select></div></div>',
       xml:
-        'setProperty("my_drop", "options", ["one", "two", "three"]);',
+        `setProperty("my_drop", "options", ["one", "two", "three"]);
+        console.log("options: " + getProperty("my_drop", "options"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -292,9 +348,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "options: one,two,three");
         return true;
       },
       expected: {
@@ -309,8 +364,10 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><canvas width="100px" height="100px" id="canvas1" style="position: absolute; left: 65px; top: 40px; margin: 0px;"></canvas></div></div>',
       xml:
-        'setProperty("canvas1", "width", 12);' +
-        'setProperty("canvas1", "height", 13);',
+        `setProperty("canvas1", "width", 12);
+        console.log("width: " + getProperty("canvas1", "width"));
+        setProperty("canvas1", "height", 13);
+        console.log("height: " + getProperty("canvas1", "height"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -326,9 +383,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "width: 12\nheight: 13");
         return true;
       },
       expected: {
@@ -343,7 +399,8 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern" style="display: none; width: 320px; height: 450px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',
       xml:
-        'setProperty("screen1", "image", "' + flappyImage + '");',
+        `setProperty("screen1", "image", "${flappyImage}");
+        console.log("image: " + getProperty("screen1", "image"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -357,9 +414,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        expect(debugOutput.textContent).to.match(/image: .*flappy_promo.png$/);
         return true;
       },
       expected: {
@@ -369,12 +425,13 @@ module.exports = {
     },
 
     {
-      description: "setProperty on design mode created image",
+      description: "setProperty on design mode created image 2",
       editCode: true,
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="image1" style="height: 100px; width: 100px; position: absolute; left: 125px; top: 235px; margin: 0px;" /></div></div>',
       xml:
-        'setProperty("image1", "picture", "' + flappyImage + '");',
+        `setProperty("image1", "picture", "${flappyImage}");
+        console.log("picture: " + getProperty("image1", "picture"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -386,9 +443,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        expect(debugOutput.textContent).to.match(/picture: .*flappy_promo.png$/);
         return true;
       },
       expected: {
@@ -403,8 +459,10 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><input type="radio" id="radio_button1" style="width: 12px; height: 12px; margin: 0px; position: absolute; left: 85px; top: 75px;" /></div></div>',
       xml:
-        'setProperty("radio_button1", "group-id", "gid1");' +
-        'setProperty("radio_button1", "checked", true);',
+        `setProperty("radio_button1", "group-id", "gid1");
+        console.log("group-id: " + getProperty("radio_button1", "group-id"));
+        setProperty("radio_button1", "checked", true);
+        console.log("checked: " + getProperty("radio_button1", "checked"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -416,9 +474,8 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(debugOutput.textContent, "group-id: gid1\nchecked: true");
         return true;
       },
       expected: {
@@ -433,7 +490,13 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><div contenteditable="true" class="textArea" id="text_area1" style="width: 200px; height: 100px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 55px; top: 90px; margin: 0px; background-color: rgb(255, 255, 255);"></div></div></div>',
       xml:
-        'setProperty("text_area1", "readonly", true);',
+        `console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "readonly", false);
+        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "readonly", true);
+        console.log("readonly: " + JSON.stringify(getProperty("text_area1", "readonly")));
+        setProperty("text_area1", "text-align", "right");
+        console.log("text-align: " + getProperty("text_area1", "text-align"));`,
       runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
@@ -444,9 +507,10 @@ module.exports = {
         });
       },
       customValidator: function (assert) {
-        // No errors in output console
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(debugOutput.textContent, "");
+        assert.equal(
+          debugOutput.textContent,
+          "readonly: false\nreadonly: false\nreadonly: true\ntext-align: right");
         return true;
       },
       expected: {
@@ -518,17 +582,78 @@ module.exports = {
         assert.equal($(".ace_autocomplete").is(":visible"), false,
           'no autocomplete to start');
 
-        testUtils.typeAceText('setProperty(');
+        testUtils.typeAceText('setProp');
         assert.equal($(".ace_autocomplete").is(":visible"), true,
-          'we have autocomplete options after typing');
-        assert.equal($(".ace_autocomplete .ace_content").text(), '"screen1"');
+          'setProperty shows up in autocomplete');
+        expect($(".ace_autocomplete").text()).to.match(/setProperty/);
 
-        testUtils.typeAceText('"screen1",');
-        assert.equal($(".ace_autocomplete .ace_content").text(), '"background-color""image"',
-          'autocompletes filtered list of properties');
+        // For some reason, testUtils.typeAceText triggers the autocomplete menu
+        // when typing a partial command name (e.g. above), but does now show arguments
+        // when typing the opening paren after typing a valid command name as it does
+        // when running the app in a real browser. If this is resolved, the following
+        // commented-out test code should be enabled, here and in getProperty autocomplete.
 
+        // testUtils.typeAceText('erty(');
+        // assert.equal($(".ace_autocomplete").is(":visible"), true,
+        //   'we have autocomplete options after typing');
+        // assert.equal($(".ace_autocomplete .ace_content").text(), '"screen1"');
+
+        // testUtils.typeAceText('"screen1",');
+        // assert.equal($(".ace_autocomplete").is(":visible"), true,
+        //   'we have autocomplete options after typing');
+        // assert.equal($(".ace_autocomplete .ace_content").text(), '"background-color""image"',
+        //   'autocompletes filtered list of properties');
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
       }
+    },
 
+    {
+      description: "getProperty autocomplete",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#show-code-header").click();
+        assert.equal($(".ace_autocomplete").is(":visible"), false,
+          'no autocomplete to start');
+
+        testUtils.typeAceText('getProp');
+        assert.equal($(".ace_autocomplete").is(":visible"), true,
+          'getProperty shows up in autocomplete');
+        expect($(".ace_autocomplete").text()).to.match(/getProperty/);
+
+        // clear contents before run
+        testUtils.setAceText('');
+
+        tickWrapper.runOnAppTick(Applab, 2, function () {
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     }
   ]
 };
