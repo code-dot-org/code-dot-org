@@ -51,7 +51,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
     grades2017
     subjects2017
     committedToSummer
-    ableToAttendAssignedSummerWorkshop
     allStudentsShouldLearn
     allStudentsCanLearn
     newApproaches
@@ -94,6 +93,11 @@ class Pd::TeacherApplication < ActiveRecord::Base
 
   def application_json
     application
+  end
+
+  # Convenience method to set value(s) on the application JSON
+  def update_application_hash(update_hash)
+    self.application_hash = (application_hash || {}).merge update_hash
   end
 
   def application_hash=(hash)
@@ -161,7 +165,11 @@ class Pd::TeacherApplication < ActiveRecord::Base
     form_id = program_details[:approval_form_id]
     return nil unless form_id
 
-    params = "entry.1124819666=#{teacher_name}&entry.1772278630=#{school_name}&entry.1885703098&entry.1693544&entry.164045958&entry.2063346846=#{id}"
+    params = {
+      'entry.1124819666': teacher_name,
+      'entry.1772278630': school_name,
+      'entry.2063346846': id
+    }.to_query
     "https://docs.google.com/forms/d/e/#{form_id}/viewform?#{params}"
   end
 
