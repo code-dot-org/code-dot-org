@@ -3490,7 +3490,7 @@ Studio.displaySprite = function (i) {
     var bblHeight = +speechBubblePath.getAttribute('height');
     var bblWidth = +speechBubblePath.getAttribute('width');
 
-    var newBubblePosition = Studio.positionSpeechBubble(
+    var newBubblePosition = Studio.calculateBubblePosition(
         sprite, bblHeight, bblWidth, Studio.MAZE_WIDTH);
 
     speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
@@ -3508,7 +3508,7 @@ Studio.displaySprite = function (i) {
   }
 };
 
-Studio.positionSpeechBubble = function (
+Studio.calculateBubblePosition = function (
     sprite, bblHeight, bblWidth, studioWidth) {
   let onTop = true;
   let ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);

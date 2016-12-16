@@ -1,7 +1,7 @@
 import {expect} from '../../util/configuredChai';
 import {testUtils} from '../../util/testUtils';
 import {SVG_NS} from '@cdo/apps/constants';
-import {setSvgText, positionSpeechBubble} from '@cdo/apps/studio/studio';
+import {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
 
 const STUDIO_WIDTH = 400;
 const SPEECH_BUBBLE_RADIUS = 20;
@@ -65,9 +65,9 @@ describe('studio', function () {
     });
   });
 
-  describe('positionSpeechBubble', function () {
+  describe('calculateBubblePosition', function () {
     it('positions a small bubble on the top right', function () {
-      const position = positionSpeechBubble({
+      const position = calculateBubblePosition({
           x: 150,
           y: 100,
           height: 50,
@@ -85,7 +85,7 @@ describe('studio', function () {
     });
 
     it('positions a small bubble on the top left', function () {
-      const position = positionSpeechBubble({
+      const position = calculateBubblePosition({
         x: 300,
         y: 100,
         height: 50,
@@ -103,7 +103,7 @@ describe('studio', function () {
     });
 
     it('positions a small bubble on the botom right', function () {
-      const position = positionSpeechBubble({
+      const position = calculateBubblePosition({
           x: 150,
           y: 0,
           height: 50,
@@ -121,7 +121,7 @@ describe('studio', function () {
     });
 
     it('positions a small bubble on the botom left', function () {
-      const position = positionSpeechBubble({
+      const position = calculateBubblePosition({
           x: 250,
           y: 0,
           height: 50,
@@ -145,7 +145,7 @@ describe('studio', function () {
         height: 50,
         width: 50,
       };
-      const position = positionSpeechBubble(
+      const position = calculateBubblePosition(
         sprite,
         120 /* bubbleHeight */,
         380 /* bubbleWidth */,
@@ -164,7 +164,7 @@ describe('studio', function () {
         height: 50,
         width: 50,
       };
-      const position = positionSpeechBubble(
+      const position = calculateBubblePosition(
         sprite,
         120 /* bubbleHeight */,
         380 /* bubbleWidth */,
