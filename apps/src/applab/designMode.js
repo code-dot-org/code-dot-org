@@ -864,10 +864,6 @@ function makeDraggable(jqueryElements) {
           });
 
         } else {
-
-          // Otherwise, make sure that the element is contained within the app space
-          moveElementIntoBounds(elm);
-
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         }
