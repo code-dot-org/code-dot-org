@@ -487,7 +487,7 @@ const TeacherApplication = React.createClass({
                 return (
                   <tr key={i}>
                     <td>
-                      <FormGroup validationState={this.getLikertValidationState(question)}>
+                      <FormGroup id={question} validationState={this.getLikertValidationState(question)}>
                         <ControlLabel>
                           {csBeliefsQuestions[question]}
                         </ControlLabel>
@@ -603,7 +603,7 @@ const TeacherApplication = React.createClass({
       fieldsToValidate.splice(fieldsToValidate.indexOf('committedToSummer') + 1, 0, 'ableToAttendAssignedSummerWorkshop');
     }
 
-    if (formData.ableToAttendAssignedSummerWorkshop !== 'Yes') {
+    if (formData.ableToAttendAssignedSummerWorkshop && formData.ableToAttendAssignedSummerWorkshop !== 'Yes') {
       formData.fallbackSummerWorkshops = this.state.fallbackSummerWorkshops;
 
       fieldsToValidate.splice(fieldsToValidate.indexOf('ableToAttendAssignedSummerWorkshop') + 1, 0, 'fallbackSummerWorkshops');
