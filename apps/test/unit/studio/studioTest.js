@@ -4,11 +4,8 @@ import {SVG_NS} from '@cdo/apps/constants';
 import {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
 
 const STUDIO_WIDTH = 400;
-const SPEECH_BUBBLE_RADIUS = 20;
 const SPEECH_BUBBLE_H_OFFSET = 50;
-const SPEECH_BUBBLE_PADDING = 5;
 const SPEECH_BUBBLE_SIDE_MARGIN = 10;
-const SPEECH_BUBBLE_LINE_HEIGHT = 20;
 
 describe('studio', function () {
 
