@@ -4908,8 +4908,8 @@ Studio.showTitleScreen = function (opts) {
       'maxLines': TITLE_SCREEN_TEXT_MAX_LINES,
       'fullHeight': TITLE_SCREEN_TEXT_HEIGHT
     };
-    var tsTextSize = setSvgText(svgTextOpts);
-    tsTextRect.setAttribute('height', tsTextSize.height);
+    var tsTextHeight = setSvgText(svgTextOpts).height;
+    tsTextRect.setAttribute('height', tsTextHeight);
 
     tsTitle.setAttribute('visibility', 'visible');
     tsTextGroup.setAttribute('visibility', 'visible');
