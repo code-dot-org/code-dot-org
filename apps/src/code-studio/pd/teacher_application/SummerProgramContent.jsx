@@ -1,8 +1,9 @@
 import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-import {ButtonList} from '../form_components/button_list.jsx';
+import {ButtonList, otherString} from '../form_components/button_list.jsx';
 import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
+
 export default React.createClass({
 
   displayName: 'SummerProgramContent',
@@ -114,7 +115,7 @@ export default React.createClass({
             </div>
           }
           {
-            this.props.formData.ableToAttendAssignedSummerWorkshop === 'No' && (
+            ['No', otherString].includes(this.props.formData.ableToAttendAssignedSummerWorkshop) && (
               <ButtonList
                 type="check"
                 label="If you are not able to attend your assigned summer workshop, which of the following workshops
