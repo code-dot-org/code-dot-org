@@ -45,11 +45,13 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" id="when_run">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">3</title>
-              <statement name="DO">
-                <block type="procedures_callnoreturn">
-                  <mutation name="flower ring"/>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE">90</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">100</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnLeft</title>
@@ -58,41 +60,55 @@
                         <block type="jump_by_constant">
                           <title name="DIR">jumpForward</title>
                           <title name="VALUE">100</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">flower ring</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">6</title>
-              <statement name="DO">
-                <block type="draw_width_inline">
-                  <title name="WIDTH">4</title>
-                  <next>
-                    <block type="draw_colour" inline="true" id="draw-color">
-                      <value name="COLOUR">
-                        <block type="colour_random"/>
-                      </value>
-                      <next>
-                        <block type="controls_repeat">
-                          <title name="TIMES">20</title>
-                          <statement name="DO">
-                            <block type="procedures_callnoreturn">
-                              <mutation name="flower petal"/>
-                            </block>
-                          </statement>
                           <next>
-                            <block type="jump_by_constant">
-                              <title name="DIR">jumpForward</title>
-                              <title name="VALUE">75</title>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="sun"/>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">60</title>
+                                  <next>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpForward</title>
+                                      <title name="VALUE">300</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="controls_repeat">
+                                              <title name="TIMES">3</title>
+                                              <statement name="DO">
+                                                <block type="procedures_callnoreturn">
+                                                  <mutation name="flower"/>
+                                                  <next>
+                                                    <block type="jump_by_constant">
+                                                      <title name="DIR">jumpForward</title>
+                                                      <title name="VALUE">110</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">60</title>
+                                                          <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpForward</title>
+                                                            <title name="VALUE">50</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -100,7 +116,79 @@
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">flower</title>
+          <statement name="STACK">
+            <block type="draw_width_inline">
+              <title name="WIDTH">4</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">20</title>
+                              <statement name="DO">
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="flower petal"/>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">90</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">sun</title>
+          <statement name="STACK">
+            <block type="draw_width_inline">
+              <title name="WIDTH">7</title>
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ffff00</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">10</title>
+                      <statement name="DO">
+                        <block type="procedures_callnoreturn">
+                          <mutation name="flower petal"/>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </statement>
         </block>
@@ -166,6 +254,43 @@
                   </next>
                 </block>
               </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">flower ring</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="draw_width_inline">
+                  <title name="WIDTH">4</title>
+                  <next>
+                    <block type="draw_colour" inline="true" id="draw-color">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">20</title>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn">
+                              <mutation name="flower petal"/>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">75</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
             </block>
           </statement>
         </block>
