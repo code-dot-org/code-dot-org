@@ -97,7 +97,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   # Convenience method to set value(s) on the application JSON
-  def update(update_hash)
+  def update_application_hash(update_hash)
     self.application_hash = (application_hash || {}).merge update_hash
   end
 
