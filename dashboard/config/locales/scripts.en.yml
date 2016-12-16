@@ -2375,6 +2375,7 @@ en:
             Building a Foundation: Building a Foundation
             Screen Out the Mean: Screen Out the Mean
             Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2553,3 +2554,13 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Welcome!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Wrap-Up
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
