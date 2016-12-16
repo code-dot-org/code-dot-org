@@ -121,4 +121,37 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     assert_equal 1, teacher_application.errors.count
     assert_equal 'Selected course is not included in the list', teacher_application.errors.full_messages.first
   end
+
+  test 'program name' do
+    teacher_application = build :pd_teacher_application
+
+    teacher_application.update_application_hash 'selectedCourse' => 'csd'
+    assert_equal 'CS Discoveries', teacher_application.program_name
+
+    teacher_application.update_application_hash 'selectedCourse' => 'csp'
+    assert_equal 'CS Principles', teacher_application.program_name
+  end
+
+  test 'approval form url parameters' do
+    application_hash = build :pd_teacher_application_hash
+    application_hash['firstName'] = 'ignore'
+    application_hash['preferredFirstName'] = 'Severus'
+    application_hash['lastName'] = 'Snape'
+    teacher_application = build :pd_teacher_application, application_hash: application_hash, id: 123
+
+    School.expects(find: build(:public_school, name: 'Hogwarts School of Witchcraft & Wizardry')).times(2)
+
+    # The spaces and '&' should be properly url_encoded
+    expected_params = 'entry.1124819666=Severus+Snape&entry.1772278630=Hogwarts+School+of+Witchcraft+%26+Wizardry&entry.2063346846=123'
+
+    # CSD
+    teacher_application.update_application_hash 'selectedCourse' => 'csd'
+    expected_url = "https://docs.google.com/forms/d/e/1FAIpQLSdcR6oK-JZCtJ7LR92MmNsRheZjODu_Qb-MVc97jEgxyPk24A/viewform?#{expected_params}"
+    assert_equal expected_url, teacher_application.approval_form_url
+
+    # CSP
+    teacher_application.update_application_hash 'selectedCourse' => 'csp'
+    expected_url = "https://docs.google.com/forms/d/e/1FAIpQLScVReYg18EYXvOFN2mQkDpDFgoVqKVv0bWOSE1LFSY34kyEHQ/viewform?#{expected_params}"
+    assert_equal expected_url, teacher_application.approval_form_url
+  end
 end
