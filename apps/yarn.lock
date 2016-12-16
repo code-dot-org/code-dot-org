@@ -7,9 +7,9 @@
   version "1.6.0-next.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.0-next.1.tgz#6ceb67266b6ecf3983be64c4c6811fa11dd69b85"
 
-"@code-dot-org/bramble@0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.6.tgz#8462cde5eec48b220c0960dae45fbf3f9ceca3ed"
+"@code-dot-org/bramble@0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/bramble/-/bramble-0.1.10.tgz#bb36b6c234af0d9aafc15550c30fb41a7ff58370"
   dependencies:
     autoprefixer-core "5.1.8"
     aws-sdk "^2.2.9"
@@ -2194,7 +2194,7 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codemirror-spell-checker@^1.1.2:
+codemirror-spell-checker:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/codemirror-spell-checker/-/codemirror-spell-checker-1.1.2.tgz#1c660f9089483ccb5113b9ba9ca19c3f4993371e"
   dependencies:
@@ -10932,8 +10932,8 @@ typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 typo-js@*:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/typo-js/-/typo-js-1.0.1.tgz#1b15749fdea49ca6227665aed89545ec2eb1ea25"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/typo-js/-/typo-js-1.0.2.tgz#a7299b3e23e8b6765205d9b634367bab5887d1d9"
 
 ua-parser-js@^0.7.9:
   version "0.7.11"

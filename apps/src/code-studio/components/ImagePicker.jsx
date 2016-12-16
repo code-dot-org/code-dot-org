@@ -109,21 +109,3 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
-
-
-
-
-if (BUILD_STYLEGUIDE) {
-  ImagePicker.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('ImagePicker', module)
-      .addStoryTable([
-        {
-          name: 'with warning',
-          story: () => (
-            <ImagePicker showWarning uploadsEnabled />
-          )
-        },
-      ]);
-  };
-}
