@@ -5044,9 +5044,10 @@ Studio.saySprite = function (opts) {
   // Start creating the new speech bubble:
   var bblText = document.getElementById('speechBubbleText' + spriteIndex);
 
+  var availableHeight = (Studio.MAZE_HEIGHT - sprite.height) / 2;
   var maxLines = Math.floor(
-      (Studio.MAZE_HEIGHT - sprite.height - 2 * SPEECH_BUBBLE_RADIUS - 2 * SPEECH_BUBBLE_TOP_MARGIN) /
-      (2 * SPEECH_BUBBLE_LINE_HEIGHT));
+      (availableHeight - 2 * SPEECH_BUBBLE_PADDING - 2 * SPEECH_BUBBLE_TOP_MARGIN) /
+      SPEECH_BUBBLE_LINE_HEIGHT);
   var svgTextOpts = {
     'svgText': bblText,
     'text': opts.text,
@@ -5056,7 +5057,8 @@ Studio.saySprite = function (opts) {
     'topMargin': SPEECH_BUBBLE_TOP_MARGIN,
     'sideMargin': SPEECH_BUBBLE_SIDE_MARGIN,
     'maxLines': maxLines,
-    'fullHeight': maxLines * SPEECH_BUBBLE_LINE_HEIGHT + SPEECH_BUBBLE_RADIUS,
+    'fullHeight': maxLines * SPEECH_BUBBLE_LINE_HEIGHT +
+      2 * SPEECH_BUBBLE_PADDING + 2 * SPEECH_BUBBLE_TOP_MARGIN,
   };
   var bblSize = setSvgText(svgTextOpts);
   var speechBubblePath = document.getElementById('speechBubblePath' + spriteIndex);
