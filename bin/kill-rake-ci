@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+# kill a deploy, allowing the currently running step to complete but then not starting any other steps.
+
+require_relative '../deployment'
+require 'cdo/hip_chat'
+
+HipChat.log "killing rake ci via `#{$0}`..."
+
+def kill_rake_ci
+  `pkill -f 'rake ci'`
+end
+
+def get_ci_processes
+  # use 'pgrep' to exclude the process this command creates.
+  # use 'grep ruby' to exclude unicorn processes.
+  `pgrep -l -a 'ruby.*' | grep ruby | grep -v cucumber | grep -v runner.rb | grep -v cron | grep -v solr | grep -v bin/`
+end
+
+kill_rake_ci
+sleep 2
+ci_processes = get_ci_processes
+if ci_processes && !ci_processes.empty?
+  HipChat.log "The following ruby processes (excluding cron, ui tests, solr and bin/) are still running: \n```\n#{ci_processes}\n```"
+else
+  HipChat.log "No ruby processes (excluding cron, tests, solr and bin/) detected."
+end
+
+HipChat.log "if tests were running, you can kill them with bin/kill-tests."
