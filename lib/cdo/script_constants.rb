@@ -66,6 +66,7 @@ module ScriptConstants
       CSP17_UNIT2_NAME = 'csp2'.freeze,
       CSP17_UNIT3_NAME = 'csp3'.freeze,
       CSP17_UNIT4_NAME = 'csp4'.freeze,
+      CSP17_UNIT5_NAME = 'csp5'.freeze,
     ],
     cspexams: [
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,

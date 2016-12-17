@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 In the last lesson you created a language to explain content and structure. This is a complex problem which computer scientist in the past have grappled with just like you. They came up with and agreed upon a language which they called **H**yper**t**ext **M**arkup **L**anguage, which is often referred to as **HTML**.
 
-HTML uses a groupings of uncommon sequences of characters to explain the structure of a web page. These groups of characters are called **tags**.  Most elements use an opening and closing tag in order show where a certain structure starts and ends. Together the opening tag, closing tag, and content inside the tag make up an **HTML element**.
+HTML uses groupings of uncommon sequences of characters to explain the structure of a web page. These groups of characters are called **tags**.  Most elements use an opening and closing tag in order show where a certain structure starts and ends. Together the opening tag, closing tag, and content inside the tag make up an **HTML element**.
 
 For example:
 
@@ -13,8 +13,8 @@ For example:
 
 | HTML Tag | What does it mean? |
 | -------- | ------------------ |
-| `<p>` | Start of a paragraph. Paragraphs are sets of characters that go together with space around the paragraph to separate it from other parts of the page. |
-| `</p>` | Marks the end of a paragraph. An end tag is always just the opening tag with a `/` at the beginning. |
+| `<h1>` | Start of a big header. Big headers are sets of characters that go together with space around the header to separate it from other parts of the page. Big headers are also larger than other text on the page to make them stand out. |
+| `</h1>` | Marks the end of a big header. An end tag is always just the opening tag with a `/` at the beginning. |
 
 
 MARKDOWN

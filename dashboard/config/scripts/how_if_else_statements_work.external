@@ -12,7 +12,7 @@ With an *if-else* statement you are giving an **either-or** command:
 
 **either** the lines of code inside the *if* will execute **or** the lines inside the *else* will execute. Those are the options.
 
-As you saw in the video how to add an *else* clause to an if-statement -- hit the little `+` symbol on the tail of if the *if* statement.  
+You saw in the video how to add an *else* clause to an if-statement -- hit the little `+` symbol on the tail of if the *if* statement.
 
 Inside the curly braces for the *else* clause you put lines of code that you want to run if the Boolean condition from the *if* statement is *false*.
 

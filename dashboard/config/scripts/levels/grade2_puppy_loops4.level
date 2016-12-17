@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "markdown_instructions": "In this puzzle, two `repeat` loops will help you get to the pig with the fewest number of blocks!",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Not all command blocks should be repeated.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use two `repeat` blocks set to different numbers.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"`Turn right` once between the two loops.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Not all command blocks should be repeated.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/30e57306666c9fc9fb80cdad1cbdd89b/grade2_puppy_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use two `repeat` blocks set to different numbers.\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/55008c2805172c1b73ef411db1facd6e/grade2_puppy_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"`Turn right` once between the two loops.\",\"hint_id\":\"hint3\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/adb330f313dde352a01ebd650882f49d/grade2_puppy_loops4.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

@@ -18,7 +18,7 @@
                   i18n: @script ? @script.summarize_i18n : {},
                   beta: params[:beta].present?,
                   levelKeyList: Level.key_list}
-  %script{src: minifiable_asset_path('js/levelbuilder_edit_script'),
+  %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),
           data: {levelBuilderEditScript: scriptData.to_json}}
 
   - if !params[:beta].present?

@@ -39,7 +39,7 @@ dashboard_enable_pegasus: true
 #skip_seed_all: true
 
 
-# Whether to store sprocket asset cach on disk or in memory. Setting this to
+# Whether to store sprocket asset cache on disk or in memory. Setting this to
 # false reduces memory usage, but significantly slows down dev server startup.
 #cache_assets_in_memory: false
 

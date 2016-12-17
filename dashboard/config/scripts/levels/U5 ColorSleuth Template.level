@@ -102,10 +102,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "callout_json": "[]",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
