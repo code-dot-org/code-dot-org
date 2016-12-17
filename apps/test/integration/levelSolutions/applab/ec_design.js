@@ -1180,14 +1180,14 @@ module.exports = {
         text_input = designModeViz.find('#design_text_input1');
         assert.equal(text_input.length, 1, "text input was not deleted");
 
-         // Drag the text input slightly outside of the app and verify element is pushed back in
+        // Drag the text input slightly outside of the app and verify element is not pushed back in
         dragElement(text_input[0], 50, 230);
         text_input = designModeViz.find('#design_text_input1');
         assert.equal(text_input.length, 1, "text input was not deleted");
-        assert.equal(text_input.parent().position().left, 120, "text input element left position is 120");
-        assert.equal(text_input.parent().position().top, 420, "text input element top position is 210");
-        assertPropertyRowValue(4, 'x position (px)', 120, assert, "text input x pos property value is 120");
-        assertPropertyRowValue(5, 'y position (px)', 420, assert, "text input y pos property value is 420");
+        assert.equal(text_input.parent().position().left, 160, "text input element left position is 160");
+        assert.equal(text_input.parent().position().top, 440, "text input element top position is 440");
+        assertPropertyRowValue(4, 'x position (px)', 160, assert, "text input x pos property value is 160");
+        assertPropertyRowValue(5, 'y position (px)', 440, assert, "text input y pos property value is 440");
 
         // Drag the text input outside of the app and verify it got deleted
         dragElement(text_input[0], 210, 50);
