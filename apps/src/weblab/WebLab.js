@@ -166,6 +166,8 @@ WebLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  this.readOnly = config.readonlyWorkspace;
+
   function onAddFileHTML() {
     this.brambleHost.addFileHTML();
   }
@@ -175,9 +177,11 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
-      showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
-      useFilesApi: config.useFilesApi
+    window.dashboard.project.autosave(() => {
+      dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
+        showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
+        useFilesApi: config.useFilesApi
+      });
     });
   }
 
@@ -190,7 +194,9 @@ WebLab.prototype.init = function (config) {
   }
 
   function onRefreshPreview() {
-    this.brambleHost.refreshPreview();
+    window.dashboard.project.autosave(() => {
+      this.brambleHost.refreshPreview();
+    });
   }
 
   let inspectorOn = false;
@@ -389,11 +395,17 @@ WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
 
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
-  // let dashboard project object know project has changed, which will trigger autosave
-  dashboard.project.projectChanged();
+  if (!this.readOnly) {
+    // let dashboard project object know project has changed, which will trigger autosave
+    dashboard.project.projectChanged();
+  }
 };
 
-// Called by Bramble host to set our reference to its interfaces
+/*
+ * Called by Bramble host to set our reference to its interfaces
+ * @param {!Object} bramble host interfaces
+ * @return {String} current project id
+ */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
@@ -402,6 +414,12 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  return dashboard.project.getCurrentId();
+};
+
+// Called by Bramble host to get page constants
+WebLab.prototype.getPageConstants = function () {
+  return this.studioApp_.reduxStore.getState().pageConstants;
 };
 
 /**

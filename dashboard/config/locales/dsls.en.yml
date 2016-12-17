@@ -358,6 +358,55 @@ en:
         Answer it yourself: Answer it yourself
         Put the question to the other students in the classroom: Put the question to the other students in the classroom
         When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q1:
+        Have you ever investigated how digital security and encryption work?: Have you ever investigated how digital security and encryption work?
+        I know these terms and generally know why they exist, but I am not sure about how encryption work: I know these terms and generally know why they exist, but I am not sure about how encryption work
+        Nope--- I'm not familiar with encryption: Nope--- I'm not familiar with encryption
+        Yes! I am super familiar with security and encryption: Yes! I am super familiar with security and encryption
+      U4 evaluation q10:
+        Having students do hands on activities to build knowledge and understanding of key concepts: Having students do hands on activities to build knowledge and understanding of key concepts
+        'Having students work in small groups ': 'Having students work in small groups '
+        What type of student grouping or activities are you most comfortable facilitating in your classroom?: What type of student grouping or activities are you most comfortable facilitating in your classroom?
+      U4 evaluation q11:
+        How comfortable would you say you are with gauging when to re-teach material with your students?: How comfortable would you say you are with gauging when to re-teach material with your students?
+        Not comfortable: Not comfortable
+        Very comfortable: Very comfortable
+      U4 evaluation q2:
+        Have you practiced or looked closely at the Explore Performance Task?: Have you practiced or looked closely at the Explore Performance Task?
+        I haven't really looked at the Explore Task yet: I haven't really looked at the Explore Task yet
+        I've looked at it once or twice, but haven't spent much time understanding it yet: I've looked at it once or twice, but haven't spent much time understanding it yet
+        Yes! I'm very familiar with the Explore Task: Yes! I'm very familiar with the Explore Task
+      U4 evaluation q3:
+        Do you have a sense of how companies use the data and information they collect about you and other app and website users?: Do you have a sense of how companies use the data and information they collect about you and other app and website users?
+        I don't know much about this and would really like to know more: I don't know much about this and would really like to know more
+        I have some sense, but could stand to learn more: I have some sense, but could stand to learn more
+        Yes! I read my privacy policies closely and understand what's being collected and how it could be used: Yes! I read my privacy policies closely and understand what's being collected and how it could be used
+      U4 evaluation q4:
+        Have you ever heard of modulo, or "clock" arithmetic?: Have you ever heard of modulo, or "clock" arithmetic?
+        Never heard of it: Never heard of it
+        Yes! I'm familiar with clock arithmetic: Yes! I'm familiar with clock arithmetic
+      U4 evaluation q5:
+        Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?: Have you had a chance to see the Explore Performance Task scoring guidelines that were released in November 2016?
+        I checked out the old version, but haven't seen the updates: I checked out the old version, but haven't seen the updates
+        I haven't looked at any Explore Task Rubrics: I haven't looked at any Explore Task Rubrics
+        Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines: Yes! I'm very familiar with the new Explore Task Rubric/scoring guidelines
+      U4 evaluation q6:
+        How comfortable are you with teaching lessons where students do a majority of activities on computers?: How comfortable are you with teaching lessons where students do a majority of activities on computers?
+        Not Comfortable: Not Comfortable
+        Very Comfortable: Very Comfortable
+      U4 evaluation q7:
+        Students working in small groups to build knowledge: Students working in small groups to build knowledge
+        Students working on projects of their own interest that have clear rubrics and guidelines: Students working on projects of their own interest that have clear rubrics and guidelines
+        The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups: The Demo-Do process, where you demonstrate something to the group, and then they do that thing on their own or in groups
+        Which of the following scenarios is most similar to the types of activities you commonly run in your classes?: Which of the following scenarios is most similar to the types of activities you commonly run in your classes?
+      U4 evaluation q8:
+        Answer it yourself: Answer it yourself
+        Put the question to the other students in the classroom: Put the question to the other students in the classroom
+        When students have questions in class, what strategy do you generally use to answer it?: When students have questions in class, what strategy do you generally use to answer it?
+      U4 evaluation q9:
+        How do you typically organize students in your classes?: How do you typically organize students in your classes?
+        Students usually work in small groups: Students usually work in small groups
+        Students usually work independently: Students usually work independently
     external:
       2.1 and 2.2 Lesson Connections: {}
       2.11 - 15 Lesson Connections: {}
@@ -371,7 +420,9 @@ en:
       4.1 - 4.4 Lesson Connections: {}
       4.5 - 4.7 Lesson Connections: {}
       4.8 - 4.9 Lesson Connections: {}
+      A Closer Look at the Final Practice for the Explore PT: {}
       A Note On Metadata in the Curriculum Framework: {}
+      AP Test Prep Guidance: {}
       Adding Functionality to your App: {}
       'Addressing in the Game of Battleship ': {}
       AlgPD Break:
@@ -392,13 +443,16 @@ en:
         description here: description here
       Assessing Student Learning in Unit 1: {}
       Assessing Student Learning in Unit 2: {}
+      Assessing Student Learning in Unit 4: {}
       Balancing Teacher and Tools in Unit 1: {}
+      Balancing Teacher and Tools in Unit 4: {}
       Basic mechanics of variables:
         description here: description here
         title: title
       Begin planning your project:
         description here: description here
         title: title
+      Big Data in the CSP Framework: {}
       'Big Picture: If-statements':
         description here: description here
         title: title
@@ -432,7 +486,12 @@ en:
         title: title
       CSD U2 CSS explain:
         Introduction to CSS: Introduction to CSS
-        Stop: Stop
+        description here: description here
+      CSD U2 Classes Introduction:
+        Classes Introduction: Classes Introduction
+        description here: description here
+      CSD U2 RGB Colors:
+        'STOP: RGB Colors': 'STOP: RGB Colors'
         description here: description here
       CSD U2 layout style review:
         description here: description here
@@ -1363,6 +1422,7 @@ en:
       Introduction to Unit 1: {}
       Introduction to Unit 2: {}
       Introduction to Unit 3: {}
+      Introduction to Unit 4: {}
       K5PD tour:
         Tour of PD Space: Tour of PD Space
         tour of the PD space: tour of the PD space
@@ -1378,6 +1438,7 @@ en:
       Lesson 1.7 Overview: {}
       Lesson 1.9 Overview: {}
       Lesson Prep Final: {}
+      Looking at More Encryption Algorithms: {}
       Lossy vs. Lossless Compression: {}
       Make a Hypothesis: {}
       Making Multiple Screens:
@@ -1724,9 +1785,6 @@ en:
       Test discourse forum-comment level:
         Degree of Difficulty: Degree of Difficulty
         Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?: Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?
-      The &#39;return&#39; Command test:
-        description here: description here
-        title: title
       The Mental Model for Variables: {}
       The Philosophy Behind the Four Primitive Programming Commands: {}
       TheGreatBugBash:
@@ -2225,6 +2283,7 @@ en:
       Unit 1 Lesson 9 Overview: {}
       Unit 1 Overview: {}
       Unit 1 Teaching Philosophy and Commentary: {}
+      Unit 1 Vocab and Concept Review Activity: {}
       Unit 2 Lesson 1 Overview: {}
       Unit 2 Lesson 10 Overview: {}
       Unit 2 Lesson 11 Overview: {}
@@ -2243,8 +2302,10 @@ en:
       Unit 2 Lesson 8 Overview: {}
       Unit 2 Lesson 9 Overview: {}
       Unit 2 Tool Talk: {}
+      Unit 2 Vocab and Concept Review Activity: {}
       Unit 3 Survey 2: {}
       Unit 3 Tool Talk: {}
+      Unit 3 Vocab and Concept Review Activity: {}
       Unit 4 Lesson 1 Introduction:
         description here: description here
         title: title
@@ -2261,6 +2322,8 @@ en:
       Unit 4 Lesson 7 Introduction: {}
       Unit 4 Lesson 8 Introduction: {}
       Unit 4 Lesson 9 Introduction: {}
+      Unit 4 Tool Talk: {}
+      'Unit 4: Practice PT highlights': {}
       Unit 5 Lesson 1:
         description here: description here
         title: title
@@ -2327,6 +2390,7 @@ en:
       Welcome to TeacherCon!: {}
       What Makes an Effective Visualization?: {}
       What is "Big" Data and Why Should we Protect or Data?: {}
+      What is "Big" Data?: {}
       What is ASCII?: {}
       What is HTML?: {}
       What's inside and how is it organized?: {}
@@ -2991,6 +3055,7 @@ en:
         Unit 1 Self-Assessment: {}
         Unit 2 Self-Assessment: {}
         Unit 3 Self-Assessment: {}
+        Unit 4 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
     match:
@@ -3149,6 +3214,12 @@ en:
         Instructions: Instructions
         Match the puzzles to the blocks: Match the puzzles to the blocks
         Maze Match: Maze Match
+      CSD U2 RGB match:
+        "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> ": "<p style='width:220px; height:40px;background-color:thistle;font-size:15px; font-weight: bold;line-height:40px;'>thistle</p> "
+        ? In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        : In the previous lessons, you used CSS color names to specify the colors of your text, background, and borders.  In this lesson, you'll learn how to use colors that don't have names in CSS by mixing different levels of red, green, and blue.
+        RGB Colors: RGB Colors
+        rgb(216,191,216) <br />red:216, green:191, blue:216: rgb(216,191,216) <br />red:216, green:191, blue:216
       CSD U3 - conditionals - Matching:
         Is the width of dog sprite greater than the width of cat sprite?: Is the width of dog sprite greater than the width of cat sprite?
         Is the width of dog sprite less than the width of cat sprite?: Is the width of dog sprite less than the width of cat sprite?
@@ -3165,11 +3236,9 @@ en:
       CSD U3 CSS Vocab Match:
         '1': '1'
         '2': '2'
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
         CSS: CSS
         CSS Vocabulary Match: CSS Vocabulary Match
         Stylesheet: Stylesheet
-        description here: description here
       CSD U3 Counters match trial:
         ? "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
         : "\tvar position = 0;\n    \n    function draw(){\n    \tposition = position + 1;\n    \tbackground(\"white\");\n        fill(\"red\");\n        rect(position, 20, 50, 50);\n    }"
@@ -3199,6 +3268,13 @@ en:
         Shows the name of the page in a new tab: Shows the name of the page in a new tab
         Starts and ends the HTML document: Starts and ends the HTML document
         Tells the computer that this document is an HTML file: Tells the computer that this document is an HTML file
+      CSDU2 Match RGB Colors:
+        Question: Question
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
       CSDU4 Screens Predict Match:
         The "About" Button: The "About" Button
         The "About" Page: The "About" Page
@@ -3889,15 +3965,14 @@ en:
         blue: blue
         salt: salt
       unique level name here:
-        '1': '1'
-        '2': '2'
-        Answer 1: Answer 1
-        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
-        CSD U3 keyinput match: CSD U3 keyinput match
-        CSS: CSS
         Question: Question
-        Stylesheet: Stylesheet
         description here: description here
+        'red: 107, green: 142, blue: 35 - rgb(107,142,35)': 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
+        'red: 123, green: 104, blue: 238 - rgb(123,104,238)': 'red: 123, green: 104, blue: 238 - rgb(123,104,238)'
+        'red: 216, green: 191, blue: 216 - rgb(216,191,216)': 'red: 216, green: 191, blue: 216 - rgb(216,191,216)'
+        'red: 255, green: 140, blue: 105 - rgb(255,140,105)': 'red: 255, green: 140, blue: 105 - rgb(255,140,105)'
+        'red: 255, green: 239, blue: 213 - rgb(255,239,213)': 'red: 255, green: 239, blue: 213 - rgb(255,239,213)'
+        title: title
     multi:
       2-3 Algorithms Multi 1:
         "/script_assets/2-3_images/unplugged/algorithms_1_q.png": "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
@@ -4349,22 +4424,10 @@ en:
       CSD Header Size Prediction:
         ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:100px">
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:150px">
-        <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:200px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:100px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:150px">
-        <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:200px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:100px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:150px">
-        <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:200px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:100px">
         <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:150px">
-        <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">: <img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:200px">
       CSD Headers Prediction:
         ? " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
         : " Try to predict what the code below will look like.\n\n<pre>\n&lt;h3&gt; Eggs &lt;/h3&gt;\n&lt;h6&gt; Bacon &lt;/h6&gt;\n&lt;h1&gt; Waffles &lt;/h1&gt;\n</pre> "
@@ -6579,6 +6642,18 @@ en:
         wrong1: wrong1
         wrong3: wrong3
         wrong4: wrong4
+      U5 assess compound boolean conditions:
+        "(temperature != 0) && (temperature < 32)": "(temperature != 0) && (temperature < 32)"
+        "(temperature < 0) || (temperature > 32)": "(temperature < 0) || (temperature > 32)"
+        "(temperature == 0) || (temperature < 32)": "(temperature == 0) || (temperature < 32)"
+        "(temperature == 0) || (temperature > 32)": "(temperature == 0) || (temperature > 32)"
+        "(temperature > 0) && (temperature < 32)": "(temperature > 0) && (temperature < 32)"
+      U5 assess_weight_v2:
+        Question: Question
+        description here: description here
+        right answer: right answer
+        title: title
+        wrong answer: wrong answer
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
@@ -6745,17 +6820,16 @@ en:
         <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">: <img src="https://images.code.org/a3028c43bba2d33caff8c9ea5b96006f-image-1475971509472.png">
         <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">: <img src="https://images.code.org/b5bf16602c1368923a588d6784ace2e7-image-1475971524720.png">
       cspu5_assess1_elementid:
-        ? All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
-        : All elements that can have an ID must have a unique ID so that the computer knows how to distinguish between them when onEvent is called.
         An element with a unique ID must always have an event handler associated with it.: An element with a unique ID must always have an event handler associated with it.
+        Any element that needs to be triggered by onEvent must have a unique ID.: Any element that needs to be triggered by onEvent must have a unique ID.
         IDs allow a programmer to reference interface elements within their code.: IDs allow a programmer to reference interface elements within their code.
         Two or more onEvent calls may reference the same ID.: Two or more onEvent calls may reference the same ID.
         While not a requirement, IDs should be meaningful and descriptive.: While not a requirement, IDs should be meaningful and descriptive.
       cspu5_assess1_eventprograms:
-        An event-driven program cannot implement an algorithm.: An event-driven program cannot implement an algorithm.
         ? An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         : An event-driven program is written to respond to specified events by executing a block of code or function associated with the event.
         Event-driven programs can be run multiple times with different outcomes, based on user interactions.: Event-driven programs can be run multiple times with different outcomes, based on user interactions.
+        Event-driven programs do not implement algorithms.: Event-driven programs do not implement algorithms.
         Some portions of an event-driven program may never execute while the program is running.: Some portions of an event-driven program may never execute while the program is running.
         The order in which an event-driven program will run cannot always be known ahead of time.: The order in which an event-driven program will run cannot always be known ahead of time.
       cspu5_assess1_fivemore:
@@ -6768,7 +6842,7 @@ en:
         '10': '10'
         '5': '5'
         Nothing will be displayed: Nothing will be displayed
-        a: a
+        a is bigger: a is bigger
         b: b
       cspu5_assess1_increase:
         '10': '10'
@@ -6806,7 +6880,7 @@ en:
         'error on num + str: type mismatch': 'error on num + str: type mismatch'
         result: result
       cspu5_assess2_appLabError:
-        Line 1 - time should be written in quotation marks like this “time”.: Line 1 - time should be written in quotation marks like this “time”.
+        'Line 1 - time should be written in quotation marks like this: “time”': 'Line 1 - time should be written in quotation marks like this: “time”'
         Line 2 - The symbol used should be > instead of <: Line 2 - The symbol used should be > instead of <
         Line 4 - else must always be followed by another conditional statement: Line 4 - else must always be followed by another conditional statement
         Line 5 - It is after 10pm must be written in quotations.: Line 5 - It is after 10pm must be written in quotations.
@@ -6825,9 +6899,9 @@ en:
       cspu5_assess2_false:
         A string can be empty, meaning that it contains nothing.: A string can be empty, meaning that it contains nothing.
         Strings are indicated by quotation marks.: Strings are indicated by quotation marks.
-        Strings cannot include numerical digits.: Strings cannot include numerical digits.
-        Strings consist of a sequence of concatenated ASCII characters.: Strings consist of a sequence of concatenated ASCII characters.
+        Strings consist of a sequence of concatenated characters.: Strings consist of a sequence of concatenated characters.
         Strings sometimes include spaces.: Strings sometimes include spaces.
+        Strings with numerical digits in them are invalid.: Strings with numerical digits in them are invalid.
       cspu5_assess2_goodbye:
         Did you say something? That was so short.: Did you say something? That was so short.
         I have never heard that before.: I have never heard that before.
@@ -6841,7 +6915,7 @@ en:
         Use that word on the SAT.: Use that word on the SAT.
         Wow, big word.: Wow, big word.
       cspu5_assess2_numValues:
-        The code will always display the value stored in variable a: The code will always display the value stored in variable a
+        The code will always display the value stored in variable <code>a</code>: The code will always display the value stored in variable <code>a</code>
         The code will display the largest of the three values: The code will display the largest of the three values
         The code will display the middle of all three values: The code will display the middle of all three values
         The code will display the smallest of the three values: The code will display the smallest of the three values
@@ -6856,7 +6930,7 @@ en:
         " “Time to start studying again!” ": " “Time to start studying again!” "
         " “You passed!” ": " “You passed!” "
         " “You passed!” and  “Time to start studying again!” ": " “You passed!” and  “Time to start studying again!” "
-        An error will occur on line 7; you cannot have an else inside an if statement: An error will occur on line 7; you cannot have an else inside an if statement
+        An error will occur on line 7; you cannot have an IF inside an ELSE statement: An error will occur on line 7; you cannot have an IF inside an ELSE statement
         Nothing will be displayed: Nothing will be displayed
       cspu5_assess2_setAlarm:
         "(day == “Saturday”) && (day == “Sunday”)": "(day == “Saturday”) && (day == “Sunday”)"
@@ -6865,11 +6939,11 @@ en:
         day == “Saturday”: day == “Saturday”
         day == “Sunday”: day == “Sunday”
       cspu5_assess2_statementOutput:
-        console.log(“Hello! \b How are you?”);: console.log(“Hello! \b How are you?”);
-        console.log(“Hello! \n How are you?”);: console.log(“Hello! \n How are you?”);
-        console.log(“Hello! \newLine How are you?”);: console.log(“Hello! \newLine How are you?”);
-        console.log(“Hello! \nl How are you?”);: console.log(“Hello! \nl How are you?”);
-        console.log(“Hello! \t How are you?”);: console.log(“Hello! \t How are you?”);
+        console.log(“Hello! \bHow are you?”);: console.log(“Hello! \bHow are you?”);
+        console.log(“Hello! \nHow are you?”);: console.log(“Hello! \nHow are you?”);
+        console.log(“Hello! \newLineHow are you?”);: console.log(“Hello! \newLineHow are you?”);
+        console.log(“Hello! \nlHow are you?”);: console.log(“Hello! \nlHow are you?”);
+        console.log(“Hello! \tHow are you?”);: console.log(“Hello! \tHow are you?”);
       cspu5_assess2_weight:
         '125': '125'
         '200': '200'
@@ -6932,9 +7006,9 @@ en:
       cspu5_assess3_impossibleOutput:
         0, 0: 0, 0
         1, 1: 1, 1
+        2, 1: 2, 1
+        2, 2: 2, 2
         2, 4: 2, 4
-        3, 1: 3, 1
-        3, 3: 3, 3
       cspu5_assess3_listAppend:
         '1': '1'
         '2': '2'
@@ -7497,11 +7571,12 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        " Press the _w_ key ": " Press the _w_ key "
-        'Press the _space_ bar  ': 'Press the _space_ bar  '
-        'red_sprite gets bigger and blue_sprite gets smaller ': 'red_sprite gets bigger and blue_sprite gets smaller '
-        'red_sprite moves up and blue_sprite moves down ': 'red_sprite moves up and blue_sprite moves down '
-        title: title
+        '1': '1'
+        '2': '2'
+        CSD U3 CSS Vocab Match: CSD U3 CSS Vocab Match
+        CSS: CSS
+        Stylesheet: Stylesheet
+        description here: description here
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

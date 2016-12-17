@@ -1,5 +1,6 @@
 general:
   artifacts:
+    - apps/yarn-error.log
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
@@ -23,13 +24,9 @@ checkout:
         parallel: true
 dependencies:
   pre:
-    # update google chrome; Selenium requires that Chrome version must
-    # be >= 52.0.2743.0
+    - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
-    - ./bin/circle/upgrade-google-chrome.sh
-    - google-chrome --version
-    # Install Yarn
-    - npm install -g yarn@0.16.1
+    - yarn --version
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
