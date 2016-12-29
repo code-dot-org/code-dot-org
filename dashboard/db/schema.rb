@@ -638,14 +638,8 @@ ActiveRecord::Schema.define(version: 20161214190338) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id", using: :btree
   end
 
-<<<<<<< 08417550d20f008fc0c54c181252540d52ae8fcc
-  create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                        null: false
-    t.string   "name"
-=======
   create_table "sections", force: :cascade do |t|
     t.string   "name",         limit: 255
->>>>>>> Using has_many_through to support coteachers.
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code"
@@ -660,17 +654,9 @@ ActiveRecord::Schema.define(version: 20161214190338) do
     t.index ["user_id"], name: "index_sections_on_user_id", using: :btree
   end
 
-<<<<<<< 08417550d20f008fc0c54c181252540d52ae8fcc
   create_table "segments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "workshop_id", null: false
     t.datetime "start",       null: false
-=======
-  add_index "sections", ["code"], name: "index_sections_on_code", unique: true, using: :btree
-
-  create_table "segments", force: :cascade do |t|
-    t.integer  "workshop_id", limit: 4, null: false
-    t.datetime "start",                 null: false
->>>>>>> Using has_many_through to support coteachers.
     t.datetime "end"
     t.datetime "created_at"
     t.datetime "updated_at"

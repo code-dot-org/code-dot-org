@@ -638,12 +638,8 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
-<<<<<<< 3e468e7abc03f23679716b516c4a1ca219e7a891
   cancancan (~> 1.15.0)
-=======
   byebug
-  cancancan (~> 1.10)
->>>>>>> Adding Coteacher tests.
   chromedriver-helper (~> 0.0.7)
   chronic (~> 0.10.2)
   codemirror-rails

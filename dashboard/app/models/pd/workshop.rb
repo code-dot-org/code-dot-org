@@ -248,9 +248,9 @@ class Pd::Workshop < ActiveRecord::Base
       # user_id: self.organizer_id,
       section_type: Section::TYPE_PD_WORKSHOP
     )
-    self.save!
-    self.section.users << User.find(self.organizer_id)
-    self.section
+    save!
+    section.users << User.find(self.organizer_id)
+    section
   end
 
   # Ends the workshop, or no-op if it's already ended.
