@@ -77,7 +77,7 @@ class Section < ActiveRecord::Base
   def add_student(student, move_for_same_teacher: true)
     # TODO: Find out where this return value is being used
     # TODO: Argh, self.user_id doesn't exist now because of coteachers
-    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: self.user_id))
+    if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
       # new one
@@ -85,7 +85,7 @@ class Section < ActiveRecord::Base
       [follower]
     else
       followers = []
-      self.users.each do |user|
+      users.each do |user|
         followers << Follower.create!(user_id: user.id, student_user: student, section: self)
       end
       followers
@@ -98,11 +98,11 @@ class Section < ActiveRecord::Base
   end
 
   def has_coteacher?(user)
-    !user.nil? && self.users.include?(user)
+    !user.nil? && users.include?(user)
   end
 
   def add_teacher(user)
-    self.users << user
+    users << user
   end
 
   private
