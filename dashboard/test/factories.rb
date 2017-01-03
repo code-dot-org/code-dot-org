@@ -1,4 +1,4 @@
-# TODO (Asher): lint error
+# TODO(asher): lint error
 # dashboard/test/factories.rb:2:1: C: Metrics/BlockLength: Block has too many lines. [614/605]
 
 FactoryGirl.allow_class_lookup = false
