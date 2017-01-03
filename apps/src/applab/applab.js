@@ -1638,6 +1638,11 @@ Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
 };
 
+// Wrap design mode function so that we can call from commands
+Applab.readProperty = function (element, property) {
+  return designMode.readProperty(element, property);
+};
+
 Applab.getAppReducers = function () {
   return reducers;
 };
