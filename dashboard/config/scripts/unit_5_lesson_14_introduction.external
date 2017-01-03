@@ -24,3 +24,23 @@ When designing programs, you will often discover new pieces of functionality you
   
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Notes about this lesson
+
+There are two major things happening in this lesson
+
+1. Using the `event` parameter from `onEvent` to determine which key was pressed.  
+2. Modifying the "My Favority Things" Apps made in the last lesson
+
+**Helping Students with Incomplete “My Favorite Things” Apps**: 
+   
+It is quite possible that some of your students will not have succeeded in creating the text version of the **My Favorite Things** app. Since this lesson asks students to extend that project, it might be a challenge for those students to participate. Some strategies are below.
+
+* Let students continue working on the text version of their app. While this lesson introduces new event types, it falls in a sequence focused on arrays. Students can still participate in discussions about refactoring code and will be exposed to the new key events.
+
+* Provide students the **exemplar version** of the text-based **My Favorite Things** app. They can Remix the project and work on it in Free Play mode (i.e., outside of the curriculum). This way, they have a clean starting point and focus on the content of the lesson. If they wish, students can copy the code into Code Studio and will only need to create the UI elements themselves. 
+    * [My Favorite Things Exemplar](https://levelbuilder-studio.code.org/projects/applab/crEIVQmJhiqUgJOEPmy8Eg/view)
+
+
+MARKDOWN
