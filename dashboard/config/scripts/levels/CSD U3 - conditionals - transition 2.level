@@ -92,7 +92,8 @@
       "console.log": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "rYqzKs723vcC6ypUdn/3q3qPqyO9ha2100YZOACfE3OblsTKh1vrDNLztuct\nNmE4\n"
   },
   "published": true,
   "notes": "",
