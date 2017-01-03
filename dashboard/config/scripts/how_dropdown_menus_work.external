@@ -36,7 +36,7 @@ Add the list of options that you want here, each one on its own line. By default
 
 ## How to get what the user chose
 
-To get the value the user selected from dropdown menu is very similar to getting the text out of a text input.
+To get the value the user selected from the dropdown menu is very similar to getting the text out of a text input.
 
 <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
@@ -59,7 +59,7 @@ Here is an example that uses an *if* statement with a dropdown.
 
 * The program lets the user pick a day of the week and display a message.
 * Study the code and read through the commentary on the right side.
-* An image of the app is shown at left after the user has selected Wednesday.
+* An image of the app is shown at the left after the user has selected Wednesday.
 
 <img src="https://images.code.org/bcc8601a9008645cd86ec00c15c678db-image-1479588076093.png" style="float: left; margin-right: 20px;">
 <br>
