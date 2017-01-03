@@ -5,7 +5,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 ## Boolean operators && and || and !
 
-The logical operators -- also known as the *Boolean Operators* -- AND (`&&`), OR (`||`) and NOT (`!`) allow you to compare the results of more than Boolean operation at a time.
+The logical operators -- also known as the *Boolean Operators* -- AND (`&&`), OR (`||`) and NOT (`!`) allow you to compare the results of more than one Boolean operation at a time.
 
 **NOTE:** the OR is made with two vertical "pipe" characters.  The "pipe" is on the keyboard with same button as `\\` -- it's right next to the key with `}]` on it, just above the `Return/enter` key.
 
@@ -140,9 +140,9 @@ The correct expression is the one with <em>OR</em> because we want one of two th
 
 </div>
 <br><br>
-This example shows that English may mislead you if you're not careful.  So after you write an expression, clear your mind, imagine that you are dumb logical computer and test it, apply the truth tables to make sure.
+This example shows that English may mislead you if you're not careful.  So after you write an expression, clear your mind, imagine that you are a dumb logical computer and test it, apply the truth tables to make sure.
 
-## Use in an *if* statement
+## Using an *if* statement
 
 Since compound boolean expressions eventually evaluate down to a *single true/false value* you can use them in an `if` statement.  The whole expression evaluates to determine whether or not execute a section of code.  Here is a simple example:
 
