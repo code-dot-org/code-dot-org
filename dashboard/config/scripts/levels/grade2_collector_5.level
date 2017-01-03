@@ -26,9 +26,11 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "\"Help me collect each gold coin!\"\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
+    "instructions": "These blocks are in the wrong order. Can you fix them?",
     "markdown_instructions": "*\"Help me collect each gold coin!\"*\r\n\r\nThese blocks are in the wrong order. Can you fix them?",
     "ideal": "10",
+    "instructions_important": "false",
+    "min_collected": "2",
     "contained_level_names": null
   },
   "published": true,

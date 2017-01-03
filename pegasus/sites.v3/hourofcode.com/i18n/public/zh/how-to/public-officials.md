@@ -8,7 +8,7 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# 如何把Hour of Code 活動介紹給你的整個社區。
 
 [col-33]
 

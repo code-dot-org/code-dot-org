@@ -1,6 +1,7 @@
 - display = entry[:active_s] == "hide" ? "none" : "block"
 .quarterslot-links.div.col-25.col-mobile-50{style: "display: #{display}"}
   %a{id: "#{entry[:id_s]}_link", href: entry[:param4_s]}
+    - entry[:image_t] = entry[:image_t].gsub("/images/", "/images/fit-400/")
     .slotbox{style: "background-image: url(#{entry[:image_t]})"}
       .headerbox{style: "background-color: rgb(#{entry[:param2_s]}); background-color: rgba(#{entry[:param2_s]}, 0.92)"}
         .header.underscorehover

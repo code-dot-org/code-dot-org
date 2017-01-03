@@ -1,0 +1,17 @@
+name 'sciPD3 mods2'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Let's get started!
+
+**In the next stages, you will refresh your knowledge of Complex Adaptive Systems (CAS) and identify new ways to approach your current curriculum.  You will also get to develop and/or refine an implementation plan, as well as peek at some of the exciting ways other teachers are using Project GUTS and CAS in their classrooms!**
+
+So let's move to the next stage and get started!
+
+
+
+<img src="https://images.code.org/ca09903425f71571fa873ce54a7a92bb-image-1435685962649.gif" width="200px">
+
+
+MARKDOWN

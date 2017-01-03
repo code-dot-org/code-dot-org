@@ -94,7 +94,7 @@ const SILENCED = [
   'turtle',
   'tutorialExplorer',
   'weblab',
-  'learn/index',
+  'learn/index'
 ];
 const SITES_CONFIG = {
   'studio': {

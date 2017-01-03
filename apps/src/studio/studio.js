@@ -36,6 +36,7 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
+import experiments from '../util/experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
 import studioCell from './cell';
@@ -310,6 +311,16 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     backgroundLayer.appendChild(tile);
+  }
+
+  if (experiments.isEnabled('playlabWallColor')) {
+    var wallOverlay = document.createElementNS(SVG_NS, 'image');
+    wallOverlay.setAttribute('id', 'wallOverlay');
+    wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
+    wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
+    wallOverlay.setAttribute('x', 0);
+    wallOverlay.setAttribute('y', 0);
+    backgroundLayer.appendChild(wallOverlay);
   }
 
   if (level.coordinateGridBackground) {
@@ -1849,16 +1860,13 @@ Studio.init = function (config) {
     Studio.musicController.preload();
   };
 
-  // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsShown', playOnce);
+  // Add a post-video hook to start the background music, if available.
+  config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     if (studioApp.cdoSounds) {
-      studioApp.cdoSounds.whenAudioUnlocked(function () {
-        Studio.musicController.play();
-      });
+      studioApp.cdoSounds.whenAudioUnlocked(() => Studio.musicController.play());
     }
+    showInstructions();
   };
-  document.addEventListener('instructionsShown', playOnce);
 
   config.afterInject = function () {
     // Connect up arrow button event handlers
@@ -2181,6 +2189,10 @@ Studio.reset = function (first) {
   Studio.wallMapRequested = null;
   Studio.walls.setWallMapRequested(null);
   Studio.setBackground({value: getDefaultBackgroundName()});
+  var wallOverlay = document.getElementById('wallOverlay');
+  if (wallOverlay) {
+    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '');
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -2410,7 +2422,6 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
 Studio.runButtonClick = function () {
   if (level.edit_blocks) {
     Studio.onPuzzleComplete();
-    return;
   }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
@@ -2904,6 +2915,12 @@ Studio.execute = function () {
                                      'SPRITE2');
     registerHandlersWithSpriteAndGroupParams(
         handlers,
+        'studio_whenSpriteAndGroupCollideSimple',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
         'studio_whenSpriteAndGroupCollide',
         'whenSpriteCollided',
         'SPRITE',
@@ -3352,7 +3369,16 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('backgroundLayer');
+  var backgroundLayer = document.getElementById('backgroundLayer');
+
+  if (experiments.isEnabled('playlabWallColor')) {
+    var overlayURI = Studio.walls.getWallOverlayURI();
+    if (overlayURI) {
+      var wallOverlay = document.getElementById('wallOverlay');
+      wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
+    }
+  }
+
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3372,7 +3398,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(spriteLayer, wallVal, row, col);
+        Studio.drawWallTile(backgroundLayer, wallVal, row, col);
       }
     }
   }

@@ -16,7 +16,7 @@ $(document).ready(function () {
       url: $(this).attr('action'),
       data: $(this).serialize(),
       dataType: 'json',
-      success: function (data) {$("#terms-modal").modal('hide'); location.reload();}
+      complete: function (data) {$("#terms-modal").modal('hide'); location.reload();}
     });
   });
 

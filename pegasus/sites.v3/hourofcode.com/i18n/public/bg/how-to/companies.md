@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Използвайте нашия [ маркетинг инструментариум,](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) за да създадете график със съобщения и споделите промоционално съдържание.
   * Попитайте изпълнителния директор за възможност да изпратите имейл до цялата компания, подчертаващ значението на компютърните науки и насърчаващ служителите да пробват. [ Вижте този имейл](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Станете домакин на Hour of Code с колеги и опитайте [ уроците](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Станете домакин на Hour of Code събитие в местна класната стая или направете Hour of Code в офиса на фирмата. Вижте ръководството по-долу.
 
 ## Как да бъде домакин на Hour of Code събитие
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Гледай видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-Ние ще качим разнообразие от [ забавни, дълги около час уроци](<%= resolve_url('https://code.org/learn') %>) за ученици от всички възрасти, създадени от различни партньори. [ Изпробвайте ги!](%= resolve_url()
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Всички уроци на Hour of Code:**
 
   * Изискват минимално време за подготовка
   * Предвиждат самостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) планирай нужните ти технологии - компютрите не са задължителни
 
@@ -79,7 +79,7 @@ nav: how_to_nav
 
 **Пряко участие в дейността**
 
-  * Напишете линка към урока на бялата дъска. Намерете връзката в списъка на [ и информация за избраните уроци](<%= resolve_url('https://code.org/learn') %>) под броя на участниците.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * За по-малките ученици заредете урок от страницата предварително или го запишете в избрани.
 
 **Когато участниците имат трудности е добре да се помогне:**
@@ -90,7 +90,7 @@ nav: how_to_nav
 
 **Какво да направя ако някой завършва по-рано?**
 
-  * Те могат да опитат друга Hour of Code дейност в code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Или ги помолете да помогнат на приятели, които имат проблеми с дейността.
 
 [col-33]

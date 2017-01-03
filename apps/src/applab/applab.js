@@ -382,6 +382,7 @@ function renderFooterInSharedGame() {
     window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: getProjectUrl() + '/view',
+      newWindow: true,
     },
     {
       text: commonMsg.copyright(),
@@ -1635,6 +1636,11 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+// Wrap design mode function so that we can call from commands
+Applab.readProperty = function (element, property) {
+  return designMode.readProperty(element, property);
 };
 
 Applab.getAppReducers = function () {

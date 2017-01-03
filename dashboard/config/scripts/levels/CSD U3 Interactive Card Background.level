@@ -205,7 +205,8 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "rDxA0J74EKa2mTQ7f+YYiavdcqCbs9s58qSqLA5bcc1x6N0HxQhv8mrcQHgV\n9LgB\n"
   },
   "published": true,
   "notes": "",

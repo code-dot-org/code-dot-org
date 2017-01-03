@@ -65,96 +65,55 @@
                 </block>
               </value>
               <value name="TEXT">
-                <block type="text_join" inline="false">
-                  <mutation items="2"/>
+                <block type="text_join_simple" inline="false" inputcount="10">
                   <value name="ADD0">
-                    <block type="text_join" inline="false">
-                      <mutation items="2"/>
-                      <value name="ADD0">
-                        <block type="text">
-                          <title name="TEXT">arrg</title>
-                        </block>
-                      </value>
-                      <value name="ADD1">
-                        <block type="text">
-                          <title name="TEXT">ye</title>
-                        </block>
-                      </value>
+                    <block type="text">
+                      <title name="TEXT">arrg</title>
                     </block>
                   </value>
                   <value name="ADD1">
-                    <block type="text_join" inline="false">
-                      <mutation items="2"/>
-                      <value name="ADD0">
-                        <block type="text_join" inline="false">
-                          <mutation items="2"/>
-                          <value name="ADD0">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ady to </title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">arrg</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ye</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">ad pi</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <value name="ADD1">
-                        <block type="text_join" inline="false">
-                          <mutation items="2"/>
-                          <value name="ADD0">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">arrg</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">at</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <value name="ADD1">
-                            <block type="text_join" inline="false">
-                              <mutation items="2"/>
-                              <value name="ADD0">
-                                <block type="text">
-                                  <title name="TEXT">ye</title>
-                                </block>
-                              </value>
-                              <value name="ADD1">
-                                <block type="text">
-                                  <title name="TEXT">?</title>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
+                    <block type="text">
+                      <title name="TEXT">ye</title>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="text">
+                      <title name="TEXT">ady to </title>
+                    </block>
+                  </value>
+                  <value name="ADD3">
+                    <block type="text">
+                      <title name="TEXT">arrg</title>
+                    </block>
+                  </value>
+                  <value name="ADD4">
+                    <block type="text">
+                      <title name="TEXT">ye</title>
+                    </block>
+                  </value>
+                  <value name="ADD5">
+                    <block type="text">
+                      <title name="TEXT">ad pi</title>
+                    </block>
+                  </value>
+                  <value name="ADD6">
+                    <block type="text">
+                      <title name="TEXT">arrg</title>
+                    </block>
+                  </value>
+                  <value name="ADD7">
+                    <block type="text">
+                      <title name="TEXT">at</title>
+                    </block>
+                  </value>
+                  <value name="ADD8">
+                    <block type="text">
+                      <title name="TEXT">ye</title>
+                    </block>
+                  </value>
+                  <value name="ADD9">
+                    <block type="text">
+                      <title name="TEXT">?</title>
                     </block>
                   </value>
                 </block>

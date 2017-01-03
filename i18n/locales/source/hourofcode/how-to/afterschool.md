@@ -12,14 +12,14 @@ nav: how_to_nav
 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 2) Choose a tutorial:
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **All Hour of Code tutorials:**
 
 - Require minimal prep-time for organizers
 - Are self-guided - allowing kids to work at their own pace and skill-level
 
-[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('https://code.org/learn') %>)
+[<img src="/images/fit-700/tutorials.png">](<%= resolve_url('/learn') %>)
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
@@ -65,7 +65,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **Direct participants to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -76,7 +76,7 @@ Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best
 
 **What to do if someone finishes early?**
 
-- Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+- Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
 - Or, ask those who finish early to help others who are having trouble.
 
 [col-33]
