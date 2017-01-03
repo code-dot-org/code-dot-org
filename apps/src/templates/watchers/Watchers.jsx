@@ -62,7 +62,7 @@ const styles = {
     height: buttonSize,
     lineHeight: buttonSize,
     marginLeft: 3,
-    overflow: 'scroll',
+    overflow: 'hidden',
     width: inputValueWidth,
   },
   watchInputSection: {
