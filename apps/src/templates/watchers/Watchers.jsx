@@ -398,7 +398,7 @@ const Watchers = React.createClass({
   }
 });
 
-export default connect(state => {
+const ConnectedWatchers = connect(state => {
   return {
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning
@@ -417,34 +417,4 @@ export default connect(state => {
   };
 })(Watchers);
 
-if (BUILD_STYLEGUIDE) {
-  Watchers.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('Watchers', module)
-      .addStoryTable([
-        {
-          name: 'with no watchers',
-          story: () => (
-            // TODO(bjordan): get rid of/inline the .debug-watch style
-            <div style={{width: 100, height: 100}}>
-              <Watchers
-                watchedExpressions={[]}
-                isRunning={true}
-              />
-            </div>
-          )
-        },
-        {
-          name: 'with one watcher',
-          story: () => (
-            <div style={{width: 100, height: 100}}>
-              <Watchers
-                watchedExpressions={Immutable.fromJS([{expression: 'cool', uuid: 1234}])}
-                isRunning={true}
-              />
-            </div>
-          )
-        },
-      ]);
-  };
-}
+export {ConnectedWatchers as Default, Watchers};
