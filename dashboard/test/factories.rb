@@ -1,9 +1,16 @@
+# TODO (Asher): lint error
+# dashboard/test/factories.rb:2:1: C: Metrics/BlockLength: Block has too many lines. [614/605]
+
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
     section nil
     stage nil
   end
+
+  factory :coteacher do
+  end
+
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
@@ -98,6 +105,14 @@ FactoryGirl.define do
       birthday Time.zone.today - 10.years
     end
 
+    factory :student_of_admin do
+      after(:create) do |user|
+        section = create :section
+        section.users << create(:admin_teacher)
+        create(:follower, section: section, student_user: user)
+      end
+    end
+
     factory :young_student_with_tos_teacher do
       after(:create) do |user|
         section = create(:section, user: create(:terms_of_service_teacher))
@@ -113,7 +128,7 @@ FactoryGirl.define do
 
   factory :section do
     sequence(:name) { |n| "Section #{n}"}
-    user { create :teacher }
+    users {[create(:teacher)]}
   end
 
   factory :game do
@@ -364,7 +379,7 @@ FactoryGirl.define do
 
   factory :follower do
     section
-    user { section.user }
+    user {section.users.first}
     student_user { create :student }
   end
 

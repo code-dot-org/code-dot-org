@@ -148,10 +148,23 @@ ActiveRecord::Schema.define(version: 20170103170401) do
     t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
   end
 
-  create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "name",       null: false
-    t.string   "location"
-    t.integer  "contact_id"
+  add_index "concepts_levels", ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
+  add_index "concepts_levels", ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
+
+  create_table "coteachers", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "section_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "coteachers", ["section_id"], name: "index_coteachers_on_section_id", using: :btree
+  add_index "coteachers", ["user_id"], name: "index_coteachers_on_user_id", using: :btree
+
+  create_table "districts", force: :cascade do |t|
+    t.string   "name",       limit: 255, null: false
+    t.string   "location",   limit: 255
+    t.integer  "contact_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["contact_id"], name: "index_districts_on_contact_id", using: :btree
@@ -658,9 +671,8 @@ ActiveRecord::Schema.define(version: 20170103170401) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id", using: :btree
   end
 
-  create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_id",                        null: false
-    t.string   "name"
+  create_table "sections", force: :cascade do |t|
+    t.string   "name",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "code"
