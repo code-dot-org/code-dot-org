@@ -36,7 +36,7 @@
   og_title: Coding is foundational
   og_description: Technology is changing everything. Every student in every school
     deserves the opportunity to study computer science.
-  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_title: The Hour of Code is here
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
@@ -508,8 +508,9 @@
     provides free tools and resources to pursue your passion.
   minecraft_subtitle: Minecraft Hour of Code
   sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_og_title: Hour of Code Sports Tutorials
+  sports_og_description: Choose between making a basketball game or mix and match
+    across sports.
   sports_title: Code your own sports game
   sports_watch_video: Watch the video
   sports_video_title: Push yourself. Anybody can learn.
@@ -981,10 +982,10 @@
     that anyone can start teaching computer science.
   dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
     Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
+    Studio is not saving or reporting student progress on these courses from December
     3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
     the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
+    Code tutorials are also not saving progress this week, students can still do the
     full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
     The all-new Minecraft Hour of Code Designer lets students make the rules of the
@@ -1859,6 +1860,8 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   sports_featured_athletes: See featured athletes
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
@@ -1888,5 +1891,13 @@
     Heat
   sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
     Dallas Mavericks
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
+  csp5_name: 'Unit 5: Building Apps'
   basketball_name: Make a basketball game
   sports_name: Code your own sports game
