@@ -29,13 +29,10 @@ const SessionListFormPart = React.createClass({
       // Placeholder Ids are needed to generate unique keys in the React list.
       // Prefix with _ so they don't conflict with actual Ids on sessions that have been saved.
       placeholderId: '_' + (this.nextPlaceholderId++),
-      date: null,
+      date: moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT),
       startTime: lastSession.startTime,
       endTime: lastSession.endTime
     };
-    if (lastSession.date) {
-      newSession.date = moment(lastSession.date, DATE_FORMAT).add(1,'days').format(DATE_FORMAT);
-    }
 
     sessions.push(newSession);
     this.props.onChange(sessions);

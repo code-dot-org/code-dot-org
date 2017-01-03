@@ -1,0 +1,47 @@
+name 'CSD U2 CSS explain'
+title 'Introduction to CSS'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop: Introduction to CSS and Style sheets
+
+Up until this lesson, you have been adding content to your pages without any instructions on how to style it.  Web Developers intentionally separate content and style to make their code easier to maintain. HTML is the language used to structure the content of a web page. CSS is a language that adds style to a web page.
+
+In CSS, style rules are used to style certain elements of HTML. Style rules explicitly call out certain properties of the element to be styled. 
+
+## Adding A Style sheet
+
+<img src="https://images.code.org/d2af7e6516e2bde50dda70cd56bf3738-image-1481577038801.png" style="width:600px">
+
+1) To add CSS style rules to an HTML page, you need to create a style sheet document.
+
+2) This is the style sheet.
+
+3) Link to your style sheet.  The link goes inside the `head` tag and looks like this:
+
+	<link rel="stylesheet" href="style.css">
+
+## CSS Rule-sets
+CSS rule-sets consist of two main parts: the selector and the rules. 
+
+### Selector
+
+The selectors can be any part of the web page you want to style. One way you can identify parts of the web page is using the names of the element type. Selecting an element type will make all elements of that type have the given styling. The selector name for HTML element types is the name of the tag with the brackets removed. In the below example the selector is h1 and it will style all the h1 elements with the rules inside the curly braces (`{ }`).
+
+### Rules
+
+The rules describe how the elements identified by the selector should change. Each rule consists of a property name and a value, separated by a colon (`:`).  The property name describes what the rule is about, such as color or size, and the value how the property should change.  For example, the rule-set below will make all the h1 headers on the page have blue text that is underlined.
+
+    h1{
+      color:blue;
+      text-decoration: underline;
+    }
+
+The punctuation in the rule-set is very important, because that's the way the computer knows where each rule starts and stops.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Review: CSS Rule-Sets
+
+Bring the class back together to review the basics of CSS rule-sets.
+MARKDOWN

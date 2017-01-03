@@ -1,22 +1,23 @@
 name 'Unit 2 Lesson 10 Overview'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Internet - Web Development: Lesson 10 - External Style Sheets
+# The Internet - Web Development: Lesson 10 - RGB Colors and Classes
 
 ## Background
 
-Students will design their own personal style set or brand for their website by picking consistent colors and fonts to use across all pages of their website. Once they have decided on fonts and colors they create style rules that go across all the pages.  These get applied to the website using an external style sheet and students are forced to use classes to keep some of the unique style exceptions on their pages. Student finish class by designing a logo for their web page and making it a link to the home page.
+In this lesson, students first learn how to specify custom colors using their RGB (red, green, blue) values.  They then apply these colors to a new Four Seasons web page, which uses CSS classes.  CSS classes allow web developers great groups of elements they want styled differently than other elements of the same type. Using classes, students add more styles to the Four Seasons web page, then use them to style their personal websites.
 # Vocabulary
 
-* **Brand** - A set of marketing and communication methods that help to distinguish a company from competitors and create a lasting impression in the minds of customers.
-* **External Style Sheet** - A CSS or cascading style sheets style that is written in an external document and can be referenced by multiple documents. 
+* **HTML Class** - Makes it possible to define equal styles for elements by giving them all the same class name.
 
-# New Blocks
+# New Code
 
-* **Link** - `<link>`
+*  rgb(red-value, green-value, blue-value)
 
 # Resources
 
 * [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
-* [Guess the Brand](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/export?format=pdf) | [DOCX](https://docs.google.com/document/d/16roFJyQqQg8GZS2DNfZ1xVWTPPwM8Z9RkA0JUqRox70/export?format=doc))
+
+* [Matching Review](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/edit) - Activity Guide ([PDF](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1snE1LA5CrErQxwdAhF9oi509bzyA_thUTDeNQ09lzp8/export?format=doc))
+* [Classes](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/edit) - Rubric ([PDF](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OuIzvizEwFYUsJZnbiRUG-zhz57wGcogWsnGAquQECI/export?format=doc))
 MARKDOWN

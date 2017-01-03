@@ -441,6 +441,68 @@ designMode.updateProperty = function (element, name, value) {
   }
 };
 
+/**
+ * Reads property 'name' of html element 'element'.
+ * @param {Element} element The html element to read the property from. The element could
+ *   have been created in design mode or code mode.
+ * @param {string} name The internal name of the property to read. This is not always
+ *   the name of an html attribute or css style. Valid names are different for each
+ *   element as defined in PROP_INFO in setPropertyDropdown.js.
+ * @returns {*}
+ */
+designMode.readProperty = function (element, name) {
+  switch (name) {
+    case 'left':
+      // Ignore 'px' suffix
+      return parseFloat(element.style.left);
+    case 'top':
+      return parseFloat(element.style.top);
+    case 'width':
+      return parseFloat(element.getAttribute('width'));
+    case 'height':
+      return parseFloat(element.getAttribute('height'));
+    case 'style-width':
+      return parseFloat(element.style.width);
+    case 'style-height':
+      return parseFloat(element.style.height);
+    case 'text':
+      return utils.escapeText(element.innerHTML);
+    case 'textColor':
+      return element.style.color;
+    case 'backgroundColor':
+      return element.style.backgroundColor;
+    case 'fontSize':
+      return parseFloat(element.style.fontSize);
+    case 'textAlign':
+      return element.style.textAlign;
+    case 'image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'screen-image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'picture':
+      return element.getAttribute('data-canonical-image-url');
+    case 'hidden':
+      return $(element).hasClass('design-mode-hidden');
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      return !!element.checked;
+    case 'options':
+      return $(element).children().map((i, child) => child.text).get();
+    case 'groupId':
+      return element.getAttribute('name');
+    case 'placeholder':
+      return element.getAttribute('placeholder');
+    case 'readonly':
+      return element.getAttribute('contenteditable') !== 'true';
+    default:
+      // The property was not found in the list of properties which apply to all elements.
+      // Check to see if the element-specific handler knows how to read the property,
+      // which will raise an error if the property or handler is not found.
+      return elementLibrary.typeSpecificPropertyRead(element, name);
+  }
+};
+
 designMode.onDuplicate = function (element, event) {
   var isScreen = $(element).hasClass('screen');
   if (isScreen) {

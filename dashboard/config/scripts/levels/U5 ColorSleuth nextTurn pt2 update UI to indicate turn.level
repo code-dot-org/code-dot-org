@@ -41,8 +41,29 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "Fun part - hide/show player highlight in app.\r\n\r\nDO THIS:\r\n\r\n* in nextTurn() hide both player highlights\r\n* in if statement show the correct one in \r\n\r\n[anigif showing functionality]\r\n\r\n",
-    "contained_level_names": null
+    "markdown_instructions": "## Update the UI to indicate whose turn it is\r\n\r\n<img src=\"https://images.code.org/214101a637c0100af7dd17ff9ec5250e-image-1481211801440.gif\" style=\"float: right\">\r\n\r\nA choice has been made for you in the design of the app to indicate whose turn it is in the UI.\r\n\r\n* Notice in the design that there are two gray rectangles behind the player scores with ids `player1_highlight` and `player2_highlight`\r\n* We're going to update the if-statement in `switchPlayer` to show and hide these rectangles as a way of indicating whose turn it is.\r\n\r\nWhen you're done you should see the player highlight alternate like the graphic above.\r\n\r\n**TIP**: Make the `player2_highlight` start out hidden by checking the \"hidden\" box for it in design mode.\r\n\r\n\r\n\r\n",
+    "log_conditions": [
+      {
+        "entries": [
+          "showElement"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You should be using showElement to show the appropriate gray box (\"player1_highlight\" or \"player2_highlight\") behind the player score on screen whose turn it is."
+      },
+      {
+        "entries": [
+          "hideElement"
+        ],
+        "matchType": "exact",
+        "minTimes": 1,
+        "message": "You should be using hideElement to hide the appropriate gray box (\"player1_highlight\" or \"player2_highlight\") behind the player score whose turn it is not."
+      }
+    ],
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

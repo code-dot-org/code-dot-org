@@ -393,6 +393,11 @@ run_results = Parallel.map(next_feature, parallel_config) do |browser, feature|
   run_environment['FAIL_FAST'] = $options.fail_fast ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
 
+  # disable some stuff to make require_rails_env run faster within cucumber.
+  # These things won't be disabled in the dashboard instance we're testing against.
+  run_environment['SKIP_I18N_INIT'] = 'true'
+  run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
+
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
   run_environment['APPLITOOLS_HOST_OS'] = 'Windows 6x' unless browser['mobile']
