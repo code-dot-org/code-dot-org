@@ -51,12 +51,11 @@ social:
 
 :javascript
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $("#petitionexpand").css({display: "block", opacity: 0});
-  }
+  });
 
   $(document).ready(function() {
     $.ajax({
@@ -76,4 +75,3 @@ social:
       }
     });
   });
-

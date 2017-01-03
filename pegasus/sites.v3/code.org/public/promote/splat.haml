@@ -92,12 +92,11 @@ social:
 
 :javascript
   var petition;
-  $(document).ready()
-  {
+  $(document).ready(function() {
     petition = new Petition();
     if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").show();
       $("#petition-section").hide();
     }
-  }
+  });
 
