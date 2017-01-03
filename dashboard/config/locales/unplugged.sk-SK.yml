@@ -3,72 +3,70 @@
     unplugged:
       Unplug1:
         title: "Úvod do vedy o počítačoch (informatiky)"
-        desc: This lesson will introduce the concept of Computer Science and explain
-          what a Computer Scientist does.  It will also give students an opportunity
-          to assume the role of a computer scientist.  By the end of the activity,
-          each student will have a take-home reminder of what he or she learned.  You
-          may be tempted to skip teaching young children the vocabulary words that
-          are associated with the lessons that follow, but presenting them in a fun
-          and playful light now is far more productive than waiting for more advanced
-          opportunities.
+        desc: Táto hodina predstaví koncept informatiky a vysvetlí, čo informatik
+          robí. Zároveň v tejto lekcii budú mať študenti možnosť vžiť sa do role informatika.
+          Na konci aktivity každž študentu získa upomienkový predmet s tým, čo sa
+          naučil. Možno budete mať tendenciu preskočiť osvojenie si slovnej zásoby
+          slov, ktoré nasledujú, avšak skúste ich deťom odprezentovať v zábavnej či
+          hravej forme, čo je omnoho viac produktívne ako čakanie na pokročilejšie
+          možnosti.
         pdfs:
         - unplug1
         video: Unplug1
       Unplug2:
-        title: Aritmetické myslenie
-        desc: With nothing but paper and markers, students will learn the four steps
-          of computational thinking. After a brief introduction, students should be
-          split into groups where they will have to create directions for other students
-          to draw a specific monster (from a catalog of pre-selected monsters). The
-          entire task must be decomposed, then teams will analyze all monsters in
-          the catalog for patterns, abstract different details from the monsters,
-          then use that information to create an algorithm (directions) for another
-          team to draw a certain monster. Teams will then switch algorithms with another
-          group and draw the monster based on what that algorithm indicates. Is the
-          drawing what the original team intended?
+        title: Algoritmické myslenie
+        desc: Stačia papiere a fixky na to, aby sa študenti naučili štyri kroky algoritmického
+          myslenia. Po krátkom úvode, študenti sa rozdelia do skupín, kde majú vyvoriť
+          návod pre ostatných študentov, ktorí majú nakresliť konkrétnu príšerku (zo
+          zoznamu vybraných príšeriek). Celú úlohu si tímy musia rozložiť, následne
+          analyzovať všetky príšerky zo zoznamu, predstaviť si rôzne detaily príšeriek
+          a potom použiť všetky tieto informácie pri vytvorení algoritmu (inštrukcií)
+          pre iný tím, ktorý má nakresliť konkrétnu príšerku. Tímy si navzájom vymenia
+          návody a pokúsia sa nakresliť príšerku podľa uvedeného návodu. Je kresba
+          tomu, čo si pôvodný tím vybral?
         pdfs:
         - unplug2
         video: Unplug2
       Unplug3:
         title: Programovanie na milimetrovom papieri
-        desc: By programming one another to draw pictures, students will begin to
-          understand what programming is really about. The class will begin by students
-          instructing each other to color squares in on graph paper in an effort to
-          reproduce an existing picture.  If there's time, the lesson can conclude
-          with images that the students create themselves.
+        desc: '"Naprogramovaním" jeden druhého, aby kreslili obrázky, študenti začnú
+          chápať, o čom je skutočne programovanie. Hodina začne tým, že študenti si
+          budú navzájom hovoriť inštrukcie ako vyfarbiť štvorčeky na milimetrovom
+          papieri za účelom reprodukovania existujúceho obrázka. Ak nemáte dostatok
+          času, hodina sa môže skončiť obrázkami, ktoré študenti vytvorili sami.'
         pdfs:
         - unplug3
         video: Unplug3
       Unplug4:
         title: Algoritmy
-        desc: This lesson covers algorithms.  Using tangram shapes and graph paper,
-          the first exercise will show how important it is to make each instruction
-          as clear and unambiguous as possible.  Afterward, the class will explore
-          how many ways you can fold paper into a rectangle, noting how some methods
-          can take more or fewer folds than others.
+        desc: Táto lekcia zahŕňa algoritmy. Pomocou tangramov a štvorčekového papiera
+          vám prvá úloha ukáže, aké je dôležité vytvoriť jednotlivé inštrukcie jasné
+          a jednoznačné. Následne trieda bude skúmať, koľkými možnými spôsobmi môžeme
+          zložiť papier do obdĺžnika s tým, že si zaznačia koľko záhybov bolo potrebné
+          urobiť, aby sa dostali k cieľu.
         pdfs:
         - unplug4
         video: Unplug4
       Unplug5:
         title: Funkcie
-        desc: In this lesson, students will make a suncatcher out of string, beads,
-          and a special charm. The students will follow a series of repetitive steps,
-          then be asked to identify certain sets of "skills" that are duplicated several
-          times. Once those skills are defined, they will be called from a main program
-          and the whole beautiful process of creation will be recorded on a single
-          sheet of paper. The final program will be geared toward the entire class,
-          whatever their type of string, beads, and charms. To effectively allow for
-          this, students will need to "abstract out" the details of their specific
-          materials and create vague terms for an individual's supplies.  This use
-          of generic placeholders is a wonderful introduction to variables.
+        desc: Na tejto hodine si študenti vytvoria hramonickú závesnú dekoráciu z
+          retiazk, korálok a zvláštneho čara tak, že budú opakovať sériu krokov, potom
+          majú pomenovať konkrétne "zručnosti", ktoré sa opakujú niekoľkokrát. Akonáhle
+          tieto zručnosti sú pomenované, budú volané z hlavného programu a celý tento
+          nádherný proces zaznamenajú na jeden hárok papiera. Hotový program poskytneme
+          celej triede bez ohľadu na to aké retiazky korálky a prívesky majú. Študenti
+          si z neho majú "vyabstrahovať", ktoré detaily a pojmy z programu patria
+          k im špecifickým materiálom a musia si tak vytvoriť skupinu pojmov pre jednotlivé
+          pomôcky. Toto použitie generovaných zístupných symbolov je krásny úvod do
+          problematiky premenných.
         pdfs:
         - unplug5
         video: Unplug5
       Unplug6:
         title: Podmienky
-        desc: This is a class game.  After introducing the idea of conditionals, if-statements,
-          and loops, the class can practice together using a pre-written program,
-          a deck of cards, and luck of the draw.
+        desc: Toto je triedna hra. Po predstavení čo sú podmienky, výrazy ak a cykly,
+          trieda môže jednotlivé termíny precvičiť využitím predpripraveného programu,
+          balíčka kariet a stávkou do lotérie.
         pdfs:
         - unplug6
         video: Unplug6
@@ -84,9 +82,8 @@
         video: Unplug7
       Unplug8:
         title: Abstrakcia
-        desc: This activity combines your students' everyday routine and a Mad-Lib
-          style thinking game to help your class learn about the effectiveness of
-          abstraction.
+        desc: Táto aktivita kombinuje každodennú rutinu vašich študentov a Mad-Lib
+          herný štýl myslenia, aby pomohlo vašej triede dozvedieť sa o účinnosti abstrakcie.
         pdfs:
         - unplug8
         video: Unplug8
@@ -106,7 +103,7 @@
         - unplug10
         video: Unplug10
       Unplug11:
-        title: Zbaliť
+        title: Zhrnutie
         desc: The final wrap-up in the first 20-hour series will help the class relive
           all of their favorite moments, while giving them next steps that they can
           take on their own if they are interested in continuing their computer science
@@ -115,12 +112,12 @@
         - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Happy Maps
+        title: Veselé mapy
         desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko použitím jednoduchých príkazov."
         video: C1_happy_maps_unplugged
       MoveIt:
-        title: Move it, Move it
+        title: Posúvaj, Posúvaj
         desc: "Študenti vytvoria jednoduché algoritmy (sady inštrukcií), aby presunuli
           postavu cez bludisko použitím jednoduchých príkazov."
         video: C1_moveitmoveit_unplugged
@@ -137,13 +134,13 @@
           and students discuss the idea of being persistent when things get complicated.
         video: C1_building_foundation
       GettingLoopy:
-        title: Getting Loopy
-        desc: This lesson introduces the programming concept of loops (repeated instructions)
-          through a dance activity. Students will learn simple choreography, then
-          be instructed to repeat it.
+        title: Neustále opakovanie
+        desc: Táto lekcia je úvodom do programovacieho konceptu slučiek (opakujúcich
+          sa inštrukcií) prostredníctvom tanca. Študenti sa naučia jednoduchú choreografiu,
+          ktorú budú na základe inštrukcíí opakovať.
         video: C1_getting_loopy
       RelayProgramming:
-        title: Relay programming
+        title: "Štafetové programovanie"
         desc: Students run a relay race, where they dash across the yard to write
           an algorithm based on a "Graph Paper Programming" image. They can only write
           one instruction at a time and if there's an error somewhere, they have to
@@ -157,15 +154,15 @@
         video: C2_conditionals_with_cards
       BigEvent:
         title: Veľká udalosť
-        desc: Students are introduced to the programming concept of "events," which
-          are actions that a computer constantly monitors for. The teacher will press
-          buttons on a paper remote and students will react depending on which button
-          is pressed.
+        desc: Študenti sú oboznámený s úvodným konceptom programovania "events" udalostí,
+          ktoré počítač neustále monitoruje. Učiteľ bude stláčať tlačidlá na papierovom
+          diaľkovom ovládači, pričom študenti budú reagovať podľa toho, ktoré tlačidlo
+          je práve stlačené.
         video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Bezpečné premiestňovanie
-        desc: The Internet is a powerful, but sometimes dangerous place. Teachers
-          introduce how to stay safe while navigating the Internet.
+        desc: Internet je mocným, ale zavše nebezpečným miestom. Učitelia vysvetlia,
+          ako bezpečne surfovať po Internete.
         video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programovanie na milimetrovom papieri
@@ -173,30 +170,31 @@
           commands to direct their classmates to reproduce a drawing.
         video: C2_graph_paper
       PaperPlanes:
-        title: 'Real-life Algorithms: Paper Planes'
+        title: 'Algoritmus z reálneho života: Papierové lietadielka'
         desc: This lesson calls out ways we use algorithms in our daily lives, specifically
           making paper airplanes. This lesson also focuses on the bigger picture of
           computer science and how algorithms play an essential part.
         video: C2_paper_airplanes
       BinaryBracelets:
-        title: Binary Bracelets
+        title: Binárne náramky
         desc: Students create bracelets as a binary representations of the first letter
           of their name. Students learn that data can be represented and stored in
           more than one way.
         video: C2_binary_bracelets
       DigitalFootprint:
-        title: Your Digital Footprint
-        desc: Teachers introduce to students the idea that putting information about
-          themselves online creates a digital footprint or "trail" that has consequences.
+        title: Tvoj digitálny otlačok
+        desc: Učitelia predstavia študentom myšlienku, že ak dávajú informácie o sebe
+          "online" vytvorí sa digitálny otlačok, alebo "stopa", čo môže mať svoje
+          následky.
         video: C2_digital_footprint
       ComputationalThinking:
-        title: Aritmetické myslenie
+        title: Algoritmické myslenie
         desc: Students use the steps of computational thinking (decompose, pattern
           match, abstract, algorithm) to figure out how to play a game that comes
           with no instructions.
         video: C3_computational_thinking
       FunctionalSuncatchers:
-        title: Functional Suncatchers
+        title: Dekorácie
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
@@ -215,19 +213,19 @@
         video: C3_dice_race
       Internet:
         title: Internet
-        desc: Students send messages representing various Internet transmission methods
-          using pieces of paper.
+        desc: "Študenti posielajú správy predstavujúce rôzne metódy internetového
+          prenosu za pomoci kúskov papiera."
         video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
-        desc: Students use crowdsourcing, a problem-solving technique common in computer
-          science, to complete a task together as a classroom more efficiently than
-          if a student attempted it alone.
+        desc: "Študenti využívajú crowdsourcing, čo je bežne používaná technika riešenia
+          problémov v oblasti počítačových technológií, je oveľa efektívnejšie riešiť
+          úlohu spoločne ako trieda, než ako keď sa o to pokúša študent sám."
         video: C3_crowdsourcing
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal
-          information, distinguishing what is safe and unsafe to share online.
+        title: Digitálne Občianstvo
+        desc: "Študenti preskúmajú rozdiely medzi súkromnou informáciu a osobnou informáciou,
+          naučia sa rozlíšiť, čo je bezpečné a nebezpečné zdielať online."
       TangramAlgorithms:
         title: Tangram algoritmy
         desc: This lesson shows us something important about algorithms. If you keep
@@ -250,7 +248,7 @@
           become templates for fun and crazy new ones.
         video: C4_unplugged_madlibs
       ForLoopFun:
-        title: For Loop Fun
+        title: Zábavné opakovanie
         desc: We know that loops allow us to do things over and over again, but now
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
@@ -275,20 +273,26 @@
         desc: Video Games and Coordinate Planes lesson description
         video: alg_11_coordinate_plane
       Contracts:
-        title: Contracts
+        title: Zmluvy, doména a rozsah
         desc: Contracts unplugged lesson description
         video: alg_5_contracts
       DesignRecipe:
-        title: The Design Recipe
+        title: Vytvor recept
         desc: Design Recipe lesson description
         video: alg_8_design_recipe
       Booleans:
-        title: Booleans
-        desc: Booleans lesson description
+        title: Pravdivostné hodnoty a logika
+        desc: Pravdivostné hodnoty sú štvrtým a posledným typom údajov, z ktorými
+          sa v tomto kurze oboznámime. V nasledujúce aktivity sa naučíte čo sú pravdivostné
+          hodnoty a ako nám môžu pomôcť pri písaní funkcií, ktoré majú myslieť logicky
         video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: Conditionals and Piecewise Functions lesson description
+        title: Podmienky a čiastkové funkcie
+        desc: Parametre, ktoré pridáme k funkciám môžu spôsobiť to, že sa výstupy
+          budú líšiť na základe konkrétnych vzorov. Predpokladajme, že chceme, aby
+          parametre s niektorými hodnotami vytvárali výstupy na základe jedného vzoru,
+          ale parametre s ostatnými hodnotami používali iné vzory. Preto potrebujeme
+          podmieňovacie príkazy...
         video: alg_10_conditionals
       CollisionDetection:
         title: Kolízna detekcia a Pytagorova veta

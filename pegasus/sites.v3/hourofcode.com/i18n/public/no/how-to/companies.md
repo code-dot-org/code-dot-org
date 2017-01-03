@@ -21,7 +21,7 @@ nav: how_to_nav
 
   * Bruk vårt [markedsføringsverktøy](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) for å lage en kommunikasjonslinje og dele markedsføringsmateriell.
   * Be din sjef sende ut en epost til hele selskapet og fremheve viktigheten av datavitenskap og for å oppmuntre ansatte til å spre ordet videre. [For eksempel denne eposten](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Vær vert for en Kodetime Happy Hour med kollegaer for å prøve ut [oppgavene](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Vær en vert for ett Kodetime arrangement i ett lokalt klasserom eller ideell forening i ditt selskaps lokaler. Se arrangementguide under.
 
 ## Hvordan organisere en Kodetime
@@ -34,14 +34,14 @@ nav: how_to_nav
 ## 2) Se denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Velg en oppgave:
 
-Vi tilbyr en rekke [morsomme, timelange oppgaver](<%= resolve_url('https://code.org/learn') %>) for deltakere i alle aldre, laget av en rekke partnere. [Prøv dem her!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alle Kodetimen oppgavene:**
 
   * Krever minimal forberedelsestid
   * Er selvinstruerende slik at alle kan jobbe i sitt eget tempo og på sitt eget nivå
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Planlegg hva du har bruk for av utstyr - datamaskiner er valgfrie
 
@@ -79,7 +79,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 **Led elevene til aktiviteten**
 
-  * Skriv oppgavelenken på en tavle. Finn lenken under [informasjon for den valgte oppgaven](<%= resolve_url('https://code.org/learn') %>) under antall deltakere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For yngre elever, last inn siden før timen eller lagre den som ett bokmerke.
 
 **Når elevene dine har spørsmål eller synes noe er vanskelig er det greit å svare:**
@@ -90,7 +90,7 @@ Start Kodetimen med å diskutere hvordan informasjonsteknologi påvirker oss i d
 
 **Hva gjør jeg hvis noen er ferdig tidlig?**
 
-  * De kan prøve en annen Kodetime oppgave på code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Eller be dem hjelpe en venn som har problemer med oppgaven.
 
 [col-33]

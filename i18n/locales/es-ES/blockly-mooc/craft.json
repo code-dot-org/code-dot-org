@@ -86,7 +86,7 @@
   "eventTypeWhenAttacked":"al ser atacado",
   "eventTypeWhenDay":"de día",
   "eventTypeWhenNight":"de noche",
-  "eventTypeWhenRun":"cuando se ejecuta",
+  "eventTypeWhenRun":"al ejecutar",
   "eventTypeWhenSpawned":"al generarse",
   "eventTypeWhenTouched":"al ser tocado",
   "eventTypeWhenUsed":"al usarse",

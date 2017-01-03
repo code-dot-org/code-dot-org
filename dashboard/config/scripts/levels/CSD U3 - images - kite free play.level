@@ -57,7 +57,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Kite Free Play\r\n\r\nHere is the flying kite you have been working on. Continute to improve the animation!\r\n\r\n# Do This\r\n\r\n* At least 1 other sprite\r\n* Make the sprite move\r\n* Improve the background by adding clouds or other objects\r\n* Add more ideas of your own!",
+    "markdown_instructions": "# Kite Free Play\r\n\r\nHere is the flying kite you have been working on. Continue to improve the animation!\r\n\r\n# Do This\r\n\r\n* Add at least 1 other sprite.\r\n* Make the sprite move.\r\n* Improve the background by adding clouds or other objects.\r\n* Add more ideas of your own!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -87,7 +87,8 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "EprrcaPg+5xOUUqsQYwNKmu87qDYSxS3Iev/NSUMzbW4LV9rS86T/VDOVRKC\nO7yV\n"
   },
   "published": true,
   "notes": "",

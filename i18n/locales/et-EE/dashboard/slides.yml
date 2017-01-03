@@ -1701,51 +1701,51 @@ et:
     mc_2016_intro:
       1:
         image: 'notes/mc_2016_intro_1.jpg'
-        text: "Hi, my name is Jens and I'm the lead creative designer of Minecraft. In the next hour, you'll make your own Minecraft game. This looks like Minecraft but the world has stopped. The sheep aren't moving, the chickens aren't laying eggs, and zombies are just standing still. It's up to you to add the code to make the Minecraft world work."
+        text: "Tere, minu nimi on Jens ja ma olen Minecrafti loominguline juht. Järgmise tunni jooksul saate teha oma Minecrafti mängu. See siin näeb välja nagu Minecraft, kuid maailm on siin peatunud. Lambad ei liigu, kanad ei mune, ja zombid seisavad lihtsalt paigal. Sinu ülesanne on lisada kood, et Minecrafti maailm tööle hakkaks."
       2:
         image: 'notes/mc_2016_intro_2.jpg'
-        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m really interested in is how people think and interact with technology and so this job is the perfect job for me to put together the computer engineering with the psychology: how people think and behave.'
+        text: 'Minu nimi on Melissa ja ma teen Minecrafti kasutajauuringuid. Mind huvitab tegelikult, kuidas inimesed mõtlevad ja tehnoloogiaga suhestuvad, ja seega on see töö minu jaoks ideaalne, sest saan ühendada arvutiteaduse ja psühholoogia: kuidas inimesed mõtlevad ja käituvad.'
       3:
         image: 'notes/mc_2016_intro_3.jpg'
-        text: "You'll see your screen is split into three main parts. 1) On the left is the Minecraft game. Right now the world is frozen but we're going to fix that with code."
+        text: "Sa näed oma ekraani kolmes põhiosas. 1) Vasakul on Minecrafti mäng. Praegu seisab see maailm paigal, kuid me teeme selle koodi abil korda."
       4:
         image: 'notes/mc_2016_intro_4.jpg'
-        text: "2) This middle area is the toolbox. Each of these blocks is a command that chickens, sheep, and other Minecraft creatures can understand."
+        text: "2) See keskmine osa on tööristakast. Iga sellinne plokk on käsklus, mida kanad, lambad ja teised Minecrafti olendid mõistavad."
       5:
         image: 'notes/mc_2016_intro_5.jpg'
-        text: "3) The space on the right is called the workspace and this is where we'll build our program."
+        text: "3) Paremal olev ala on tööala ja siin hakkame me programmi ehitama."
       6:
         image: 'notes/mc_2016_intro_6.jpg'
-        text: "If you forget what to do, the instructions for each level are at the top."
+        text: "Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval."
       7:
         image: 'notes/mc_2016_intro_7.jpg'
-        text: "To start off, we're going to program a chicken. Let's drag the \"move forward\" command to the workspace. When I hit \"Run\" the chicken moves forward one step. To go further, I'll drag another \"move forward\" block underneath the first \"move forward\" block until the highlight appears. Then I'll drop it and the two blocks snap together. If I hit \"Run\" again, the chicken walks two steps."
+        text: "Alustuseks programmeerime ühe kana. Tirime \"liigu edasi\" käskluse tööalale. Kui ma vajutan \"Käivita\" liigub kana ühe sammu võrra edasi. Et edasi minna, tirin ma veel ühe \"liigu edasi\" ploki esimese \"liigu edasi\" ploki alla kuni see aktiivseks muutub. Siis lasen ma sellest lahti ja kaks plokki haakuvad üksteisega. Kui ma vajutan uuesti \"Käivita\", siis astub kana kaks sammu."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "If you ever want to delete a block, just remove it from the stack and drag it back to the toolbox."
+        text: "Kui sa tahad mõnda plokki kustutada, eemalda see lihtsalt käskluste hulgast ja tiri tagasi tööriista kasti."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "After you've hit \"Run\" you can always hit the \"Reset\" button to reset the game and start over. Now, it's your turn to make your very own version of Minecraft. Have fun!"
+        text: "Peale nupu \"Käivita\" vajutamist on sul alati võimalik vajutada nuppu \"Taaskäivita\", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord teha täitsa oma Minecrafti versioon. Lõbutse hästi!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
-        text: "Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some of the animals and enemies in the game. One of the animals that I worked on is the ocelot. I worked on the part where you can feed an ocelot a fish to tame it into your own cat."
+        text: "Tere, mina olen Lisa. Ma olen Minecrafti tarkvaraarendaja ja ma töötan mängus mõnede loomade ja nende vaenlastega. Üks loom, kellega ma töötasin on otselot. Töötasin selle osaga, kus sa saad otselotile kala sööta, et teda endale kassiks taltsutada."
       2:
         image: 'notes/mc_2016_loops_2.jpg'
-        text: "As humans, we get really bored if we have to do the same thing over and over and over again. But the cool thing about computers is that they can do the same thing millions or even billions of times in a row without getting bored. This repetition is called a loop and every creature in Minecraft uses loops."
+        text: "Inimestena hakkab meil igav kui me peame ühte ja sama asja ikka uuesti ja uuesti tegema. Arvutite puhul on lahe see, et nad võivad teha ühte asja miljoneid või isegi trilioneid kordi järjest ja neil ei hakka igav. Seda nimetatakse tsükliks ja iga olend Minecraftis kasutab tsükleid."
       3:
         image: 'notes/mc_2016_loops_3.jpg'
-        text: "Earlier, we got a chicken to move across the screen but then she stopped. In Minecraft, the chickens wander around forever and ever. Let's use a \"forever do\" loop from our toolbox to keep our chickens moving around forever too. The power of loops will save you tons of time and open up all kinds of neat options as you build your own version of Minecraft."
+        text: "Varem panime me kana üle ekraani liikuma, kuid siis jäi ta seisma. Minecraftis liiguvad kanad kogu aeg ringi. Kasutame \"Korda lõpmatuseni\" tsüklit meie tööriistakastist, et panna kanad kogu aeg ringi liikuma. Tsüklid säästavad palju aega ja avavad sulle palju võimalusi kui sa enda Minecrafti versiooni ehitad."
     mc_2016_events:
       1:
         image: 'notes/mc_2016_events_1.jpg'
-        text: "On this next level, you can pick to be either Steve or Alex. Press the arrow buttons on your keyboard to move up, down, left, and right. Now you can move around a level wherever you want. To use a creature, just walk towards it, turn to face it, and press the spacebar."
+        text: "Järgmisel tasemel võid sa valida, kas olla Steve või Alex. Vajuta nooleklahve oma klaviatuuril, et liikuda ülesse, alla, vasakule ja paremale. Nüüd saad sa tasandil ringi liikuda seal, kus soovid."
       2:
         image: 'notes/mc_2016_events_2.jpg'
-        text: "If you're using a touch screen, swipe up, down, left, and right to move around. Then tap the game to use the item in front of you."
+        text: "Kui sa kasutad puuteekraani liigu näpuga ülesse, alla, vasakule ja paremale. Siis puuduta mängu, et enda ees olevaid esemeid kasutada."
       3:
         image: 'notes/mc_2016_events_3.jpg'
-        text: "But what happens when you use it? In Minecraft, sheep drop wool when you shear them, cows run away when you hit them, and creepers explode when you get near them. These reactions happen thanks to something called events. Events tell your program to listen or wait for when something happens. And when it does, perform an action."
+        text: "Aga mis seda kasutades juhtub? Minecraftis kukub lammastelt vill kui sa neid pügad, lehmad jooksevad ära kui sa neid lööd ja kreeperid plahvatavad kui sa neile lähened. Sellised reaktsioonid leiavad aset \"sündmuste\" tõttu. Sündmused paluvad sinu programmil oodata, et midagi juhtuks. Ja viia läbi mingi tegevus kui see juhtub."
       4:
         image: 'notes/mc_2016_events_4.jpg'
         text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"

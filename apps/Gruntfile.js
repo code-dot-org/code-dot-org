@@ -333,11 +333,6 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
-    codeStudio: {
-      files: [
-        {src: ['test/code-studio-tests.js'], watched: false},
-      ],
-    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -356,9 +351,7 @@ module.exports = function (grunt) {
 
   var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
     return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
-  }).concat(
-    appsToBuild.indexOf('applab') === -1 ? [] : [['applab-api', './src/applab/api-entry.js']]
-  ));
+  }));
   var codeStudioEntries = {
     'code-studio':                  './src/sites/studio/pages/code-studio.js',
     'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
@@ -404,9 +397,13 @@ module.exports = function (grunt) {
 
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
+    'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',
+
+    'applab-api': './src/applab/api-entry.js',
   };
 
   // Create a config for each of our bundles
@@ -708,12 +705,6 @@ module.exports = function (grunt) {
   ]);
 
   // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('codeStudioTest', [
-    'preconcat',
-    'concat',
-    'karma:codeStudio'
-  ]);
-
   grunt.registerTask('test', [
     'preconcat',
     'concat',

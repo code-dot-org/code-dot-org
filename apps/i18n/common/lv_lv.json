@@ -33,6 +33,7 @@
   "copy": "Kopija",
   "copyright": "Copyright",
   "currentVersion": "Pašreizējā versija",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Tabulas nosaukums",
   "dataWorkspaceHeader": "Datu pārlūks",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Meklēt ikonas...",
   "ignore": "Izlaist",
   "infinity": "Bezgalība",
+  "joinText": "apvienot",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "lēkt",
   "keepPlaying": "Turpināt spēlēt",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "ārpus augšējās kreisās pozīcijas",
   "positionTopOutRight": "augšējā labā pozīcija ārpusē",
   "positionTopRight": "uz labo augšējo pozīciju",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Drukāt",
   "privacyPolicy": "Privātuma politika",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
@@ -314,9 +318,5 @@
   "when": "kad",
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
-  "yes": "Jā",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "Jā"
 }

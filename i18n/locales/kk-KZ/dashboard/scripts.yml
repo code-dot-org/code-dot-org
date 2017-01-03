@@ -17,7 +17,7 @@ kk:
             Getting Loopy: Ілмектерді үйрену
             Going Places Safely: Қауіпсіз Жерді Табу
             Happy Maps: Көңілді Карталар
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             'Maze: Debugging': 'Лабиринт: Бағдарламаны ретке келтіру'
             'Maze: Loops': 'Лабиринт: Ілмектер'
             'Maze: Sequence': 'Лабиринт: Тізбектер'
@@ -30,7 +30,7 @@ kk:
           title: Курс 2
           description: Курс 2 оқи алатын және бағдарламалаудан тәжірибелері жоқ оқушыларға арналған. Бұл курста оқушылар бөлісе алатын, мәселерді шешетін және интерактивті ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға кеңес береміз.
           description_short: Жазу танитын оқушылар Курс 2 - ден бастаңыздар.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Жас 6-дан бастап (оқу міндетті)
           stage:
             'Artist: Debugging': 'Кейіпкер: Бағдарламаны ретке келтіру'
             'Artist: Loops': 'Кейіпкер: Ілмектер'
@@ -53,7 +53,7 @@ kk:
             Your Digital Footprint: Сіздің сандық іздеріңіз
         course3:
           title: Курс 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Курс 3 Курс 2-ні бітірген оқушыларға арналған. Оқушылар алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып, аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. 4-5 сынып оқушыларына пайдалануға кеңес береміз.
           description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
           description_audience: 8-18 жастағылар үшін
           stage:
@@ -104,7 +104,7 @@ kk:
             Artist: Кейіпкер
         course4:
           title: Курс 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
+          description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға кеңес береміз."
           description_short: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған.
           description_audience: 10-18 жастағылар үшін
           stage:
@@ -286,9 +286,9 @@ kk:
           description_short: Шаралар
           stage:
             Bounce: Секіру
-            Calc: Calc
+            Calc: Қақ
             Eval: Eval
-            Studio: Studio
+            Studio: Студия
         flappy:
           title: Қанат Қағу Коды
           description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің Қанат Қағу Коды сабағын байқап көріңіз!
@@ -321,14 +321,14 @@ kk:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Басқатырғыштар
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Басқатырғыштар
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -696,7 +696,7 @@ kk:
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Студия
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -1455,6 +1455,8 @@ kk:
             Getting started with If Statements: Getting started with If Statements
             Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
             If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1799,7 +1801,7 @@ kk:
             Events: Шаралар
             Events Unplugged: Events Unplugged
             Fuzz Fiesta: Fuzz Fiesta
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: Ілмек
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -1839,7 +1841,7 @@ kk:
             Debugging: Debugging
             Events: Шаралар
             Events Unplugged: Events Unplugged
-            'Jigsaw: Learn to drag and drop': 'Jigsaw: Learn to drag and drop'
+            'Jigsaw: Learn to drag and drop': 'Jigsaw: Жылжытуды үйрену'
             Loops: Ілмек
             Loops Intro: Loops Intro
             Loops Unplugged: Loops Unplugged
@@ -2139,6 +2141,10 @@ kk:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2160,10 +2166,10 @@ kk:
         basketball:
           stage:
             Bounce: Секіру
-          title: Basketball
+          title: Баскетбол ойынды жасау
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Баскетбол ойынды жасау
+          description: Баскетбол ойынды жасау
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2254,11 +2260,11 @@ kk:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Minecraft кодтау сағатының дизайнеры
+          title: Minecraft кодтау сағатының дизайнеры
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз Minecraft ойынының нұсқасында.
+          description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары сенің өз Minecraft ойынының нұсқасында.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2284,6 +2290,7 @@ kk:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Қауіпсіз Жерді Табу
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2304,6 +2311,8 @@ kk:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Қолданыстағы Алгоритмдер: Тұқым Себу'
+            Your Digital Footprint: Сіздің сандық іздеріңіз
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2324,6 +2333,8 @@ kk:
             Binary Bracelets: Екілік Білезіктер
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Сіздің сандық іздеріңіз
+            Building a Foundation: Ғимарат Салу
+            Screen Out the Mean: Screen Out the Mean
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2346,6 +2357,8 @@ kk:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Сандық Азаматтық
+            'Unplugged: Binary': 'Kомпьютерсіз: Екілік жүйе'
+            Artist Binary: Кейіпкер Екілік жүйе
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2365,6 +2378,9 @@ kk:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Ғаламтор
+            Crowdsourcing: Кроудсорсинг
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2387,6 +2403,8 @@ kk:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Параметрлермен ән жазу
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2411,11 +2429,11 @@ kk:
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
         sports:
           stage:
-            Sports: Sports
-          title: Sports
+            Sports: Спорттар
+          title: Спорттар
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: Өзіңнің жеке спорт ойынын жаз
+          description: Өзіңнің жеке спорт ойынын жаз
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Қош келдіңіз!
@@ -2448,6 +2466,20 @@ kk:
             The TLO: The TLO
             Prep With Your Modules: Prep With Your Modules
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+          title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''

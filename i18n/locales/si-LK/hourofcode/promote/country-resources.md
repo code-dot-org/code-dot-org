@@ -110,6 +110,6 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
 
 <% else %>
 
-# Additional resources coming soon!
+# අමතර සම්පත් ලඟදීම!
 
 <% end %>

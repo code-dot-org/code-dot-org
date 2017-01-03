@@ -33,6 +33,7 @@
   "copy": "העתק",
   "copyright": "זכויות יוצרים",
   "currentVersion": "גרסה נוכחית",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "שם הטבלה",
   "dataWorkspaceHeader": "דפדפן נתונים",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "מחפש את האייקון...",
   "ignore": "התעלם",
   "infinity": "אינסוף",
+  "joinText": "הצטרף",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "קפוץ",
   "keepPlaying": "המשך לשחק",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "במיקום העליון החיצוני משמאל",
   "positionTopOutRight": "במיקום העליון ימני חיצוני",
   "positionTopRight": "במיקום העליון מימין",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "הדפס",
   "privacyPolicy": "הצהרת פרטיות",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
@@ -314,9 +318,5 @@
   "when": "מתי",
   "whenRun": "התחל ריצה",
   "workspaceHeaderShort": "סביבת העבודה: ",
-  "yes": "כן",
-  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
-  "joinText": "join",
-  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "yes": "כן"
 }

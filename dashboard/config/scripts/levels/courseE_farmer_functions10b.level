@@ -165,6 +165,9 @@
           <block type="harvester_untilAtCrop">
             <title name="LOC">Pumpkin</title>
           </block>
+          <block type="controls_repeat">
+            <title name="TIMES">5</title>
+          </block>
         </category>
         <category name="Conditionals">
           <block type="maze_if">

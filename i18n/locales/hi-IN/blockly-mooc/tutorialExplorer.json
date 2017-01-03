@@ -42,7 +42,7 @@
   "filterHeaderTutorialCountSingle":"1 result",
   "filterHeaderTutorialCountPlural":"{tutorial_count} results",
   "filterHeaderDefault":"Sort",
-  "filterHeaderDisplayWeight":"Top rated",
+  "filterHeaderDisplayWeight":"Recommended",
   "filterHeaderPopularityRank":"Most popular",
   "roboticsButtonText":"View robotics activities",
   "roboticsText":"Got robots? Use these activities and make a tangible Hour of Code for students of any age!",

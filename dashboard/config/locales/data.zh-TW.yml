@@ -162,28 +162,22 @@
         maze_3_2: "給我寫一個程式，所以我可以用它抓到那頭豬。"
         maze_3_3: "我應該如何抓到那頭豬？確保我不會碰到那 TNT 的盒子！"
         maze_3_4: "阿！給我一個程式讓我可以繞過那些TNT炸藥，然後抓到那隻豬。"
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: "在“當左箭頭...“程式積木上附加一個程式積木並按下”執行“。用左箭頭移動手來完成目標。"
+        bounce_2_basketball: 在"當右箭頭..."程式積木以及"當左箭頭..."上附加一個程式積木。移動手到達兩個目標區。
+        bounce_5_basketball: 我們將要發送一顆球到手上。 附加一個程式積木到"當球集中手"的程式積木以確保球能到達旗幟。
+        bounce_6_basketball: 現在要完成的目標在最上方。你需要附加程式積木到"當球擊中"程式積木上來解決這個關卡。
+        bounce_7_basketball: 新增程式積木到每一個"when"程式積木。試著將球反彈直到擊中旗幟。
+        bounce_10_basketball: 現在畫面上方有一個目標！將"得分數"以及"對手得分數"程式積木附加在"當球命中目標"以及"當手沒有碰到球"之程式積木上來創建一個遊戲。試看看當對手得到兩倍分數以前你能得到幾分。
+        bounce_11_basketball: 你現在可以新增一個 "when run" 程式積木。你必須一處以上的地方新增“throw new" 程式積木。除此之外，試著改變場景或是手與球的速度，並且看看在你的對手得兩分前，你可以得幾分！
+        bounce_12_basketball: "創作你自己的籃球遊戲。你可以改變所有的遊戲規則。當你完成時，按一下“完成”，讓朋友可以在他們的手機上試玩你的遊戲。"
+        bounce_1_sports: 移動到旗幟！附加一個程式積木至“when left arrow”程式積木並且按"執行"以將玩家移至旗幟
+        bounce_2_sports: 現在有兩個旗幟！附加一個程式積木到"當左箭頭..."以及"當右箭頭..."使得球員可以在兩個方向上移動。
+        bounce_5_sports: 冰球即將飛下來擊中球員！附加一個程式積木在"當球擊中球員"之程式積木上擊中旗幟。
+        bounce_6_sports: 現在要完成的目標在最上方。你需要附加程式積木到"當球擊中"程式積木上來解決這個關卡。
+        bounce_7_sports: 新增程式積木到每一個"when"程式積木。試著將球反彈直到擊中旗幟。
+        bounce_10_sports: 現在畫面上方有個目標區。把"得分點數"及"對手得分點數"程式模塊加到"當球命中目標"及"當手沒有碰到球"程式模塊中來完成一個新遊戲。試看看在對手得到兩倍分數前，你能得到幾分!
+        bounce_11_sports: 你現在可以新增一個 "when run" 程式積木。你必須一處以上的地方新增“throw new" 程式積木。除此之外，試著改變場景或是手與球的速度，並且看看在你的對手得兩分前，你可以得幾分！
+        bounce_12_sports: "創建你自己的遊戲 ！這裡你說了算︰ 你可以更改所有的規則、把不同的運動重新排列組合，來點創意 ！當你完成之後，按下完成就可以讓你的朋友在手機上試試看你創造的遊戲。"
         bounce_1: 在 "當左箭頭時..." 積木上增加一個積木，然後按下"執行"。使用左方向鍵移動槳來完成目標。
         bounce_2: 新增一個程式積木到"當右箭頭按下"以及"當左箭頭按下"程式積木。接著使用左右鍵頭將球拍移動到達兩個目標區。
         bounce_3: 現在，嘗試與"當向上箭頭"程式積木類似的東西。將槳移動到頂部以完成目標。
@@ -502,6 +496,11 @@
         iceage_intro: "冰原歷險記一小時程式設計-介紹"
         iceage_events: "冰原歷險記一小時程式設計-活動"
         iceage_repeat: "冰原歷險記一小時程式設計-重複語句"
+        mc_2016_intro: Minecraft的一小時編程課 - 介紹
+        mc_2016_loops: Minecraft的一小時編程課 - 迴圈
+        mc_2016_events: Minecraft的一小時編程課 - 事件
+        mc_2016_spawn: Minecraft的一小時編程課 - 如何生怪
+        mc_2016_congrats: Minecraft的一小時編程課 - 慶祝完成
     callout:
       text:
         drag_blocks: 拖住一個"移動"積木，把它黏到其他積木下面

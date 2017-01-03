@@ -91,6 +91,14 @@
       },
       {
         "entries": [
+          "drawTriangle:2"
+        ],
+        "matchType": "inexact",
+        "minTimes": 2,
+        "message": "To complete the task you need to define a function called drawTriangle with two parameters.  The function should make sure to set the given penWidth and then draw a triangle by moving forward however many pixels are passed into through the size paramater and turning left."
+      },
+      {
+        "entries": [
           "drawTriangle:2",
           "penWidth:1",
           "moveForward:1",
@@ -102,7 +110,7 @@
         ],
         "matchType": "inexact",
         "minTimes": 2,
-        "message": "To complete the task you need to define a function called drawTriangle with two parameters.  The function should make sure to set the given penWidth and then draw a triangle by moving forward however many pixels are passed into through the size paramater and turning left."
+        "message": "The order of turtle commands in the drawTriangle functions is not what we were expecting. Do you have a final turnLeft - so the turtle is facing the same direction it was when it started? are you moving forward before turning each time?"
       }
     ],
     "instructions_important": "false",

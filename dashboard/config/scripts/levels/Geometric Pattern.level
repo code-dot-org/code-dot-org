@@ -45,24 +45,70 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" id="when_run">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">90</title>
-              <statement name="DO">
-                <block type="draw_colour" inline="true" id="draw-color">
-                  <value name="COLOUR">
-                    <block type="colour_random"/>
-                  </value>
+            <block type="draw_turn_by_constant">
+              <title name="DIR">turnLeft</title>
+              <title name="VALUE">90</title>
+              <next>
+                <block type="jump_by_constant">
+                  <title name="DIR">jumpForward</title>
+                  <title name="VALUE">100</title>
                   <next>
-                    <block type="procedures_callnoreturn">
-                      <mutation name="draw a square"/>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
                       <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">2</title>
+                        <block type="jump_by_constant">
+                          <title name="DIR">jumpForward</title>
+                          <title name="VALUE">100</title>
                           <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnLeft</title>
-                              <title name="VALUE">4</title>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="sun"/>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">60</title>
+                                  <next>
+                                    <block type="jump_by_constant">
+                                      <title name="DIR">jumpForward</title>
+                                      <title name="VALUE">300</title>
+                                      <next>
+                                        <block type="draw_turn_by_constant">
+                                          <title name="DIR">turnLeft</title>
+                                          <title name="VALUE">90</title>
+                                          <next>
+                                            <block type="controls_repeat">
+                                              <title name="TIMES">3</title>
+                                              <statement name="DO">
+                                                <block type="procedures_callnoreturn">
+                                                  <mutation name="flower"/>
+                                                  <next>
+                                                    <block type="jump_by_constant">
+                                                      <title name="DIR">jumpForward</title>
+                                                      <title name="VALUE">110</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">60</title>
+                                                          <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpForward</title>
+                                                            <title name="VALUE">50</title>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -70,26 +116,96 @@
                     </block>
                   </next>
                 </block>
-              </statement>
+              </next>
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn" usercreated="true">
-          <mutation>
-            <description>lol</description>
-          </mutation>
-          <title name="NAME">draw a square</title>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">flower</title>
+          <statement name="STACK">
+            <block type="draw_width_inline">
+              <title name="WIDTH">4</title>
+              <next>
+                <block type="draw_turn_by_constant">
+                  <title name="DIR">turnLeft</title>
+                  <title name="VALUE">90</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">100</title>
+                      <next>
+                        <block type="draw_colour" inline="true" id="draw-color">
+                          <value name="COLOUR">
+                            <block type="colour_random"/>
+                          </value>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">20</title>
+                              <statement name="DO">
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="flower petal"/>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnRight</title>
+                                  <title name="VALUE">90</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">sun</title>
+          <statement name="STACK">
+            <block type="draw_width_inline">
+              <title name="WIDTH">7</title>
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ffff00</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">10</title>
+                      <statement name="DO">
+                        <block type="procedures_callnoreturn">
+                          <mutation name="flower petal"/>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">triangle</title>
           <statement name="STACK">
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">3</title>
               <statement name="DO">
                 <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <title name="VALUE">100</title>
+                  <title name="VALUE">50</title>
                   <next>
                     <block type="draw_turn_by_constant">
                       <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
+                      <title name="VALUE">120</title>
                     </block>
                   </next>
                 </block>
@@ -97,76 +213,103 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" uservisible="false">
-          <mutation>
-            <arg name="points"/>
-            <arg name="length"/>
-            <description>draw a star with given points and sides of given length</description>
-          </mutation>
-          <title name="NAME">draw a star</title>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">flower petal</title>
           <statement name="STACK">
-            <block type="controls_repeat_ext" inline="true">
-              <value name="TIMES">
-                <block type="parameters_get">
-                  <title name="VAR">points</title>
-                </block>
-              </value>
-              <statement name="DO">
-                <block type="draw_move" inline="true">
+            <block type="procedures_callnoreturn">
+              <mutation name="triangle"/>
+              <next>
+                <block type="draw_move_by_constant">
                   <title name="DIR">moveForward</title>
-                  <value name="VALUE">
-                    <block type="parameters_get">
-                      <title name="VAR">length</title>
-                    </block>
-                  </value>
+                  <title name="VALUE">50</title>
                   <next>
-                    <block type="draw_turn" inline="true">
-                      <title name="DIR">turnLeft</title>
-                      <value name="VALUE">
-                        <block type="math_arithmetic" inline="true">
-                          <title name="OP">DIVIDE</title>
-                          <value name="A">
-                            <block type="math_number">
-                              <title name="NUM">360</title>
-                            </block>
-                          </value>
-                          <value name="B">
-                            <block type="parameters_get">
-                              <title name="VAR">points</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">120</title>
                       <next>
-                        <block type="draw_move" inline="true">
+                        <block type="draw_move_by_constant">
                           <title name="DIR">moveForward</title>
-                          <value name="VALUE">
-                            <block type="parameters_get">
-                              <title name="VAR">length</title>
-                            </block>
-                          </value>
+                          <title name="VALUE">10</title>
                           <next>
-                            <block type="draw_turn" inline="true">
-                              <title name="DIR">turnRight</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">DIVIDE</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">720</title>
+                            <block type="procedures_callnoreturn">
+                              <mutation name="square"/>
+                              <next>
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">10</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">45</title>
                                     </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="parameters_get">
-                                      <title name="VAR">points</title>
-                                    </block>
-                                  </value>
+                                  </next>
                                 </block>
-                              </value>
+                              </next>
                             </block>
                           </next>
                         </block>
                       </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">flower ring</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="draw_width_inline">
+                  <title name="WIDTH">4</title>
+                  <next>
+                    <block type="draw_colour" inline="true" id="draw-color">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="controls_repeat">
+                          <title name="TIMES">20</title>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn">
+                              <mutation name="flower petal"/>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">75</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" usercreated="true">
+          <mutation>
+            <description>lol</description>
+          </mutation>
+          <title name="NAME">square</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
                     </block>
                   </next>
                 </block>

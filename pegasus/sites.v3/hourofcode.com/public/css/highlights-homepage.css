@@ -1,0 +1,93 @@
+.white-text {
+  color: white;
+}
+
+.highlights-content {
+  width: 100%;
+}
+
+.highlight-item {
+  width: 210px;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  position: relative;
+}
+
+.highlight-img {
+  border-radius: 5px;
+  background-size: cover;
+  background-position: 50%;
+  width: 210px;
+  height: 210px;
+  background-color: #f0f0f0;
+}
+
+.highlight-caption {
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  line-height: 20px;
+  top: 0px;
+  left: 0px;
+  height: 210px;
+  width: 210px;
+  display: none;
+}
+
+.learnmore-link {
+  color: white;
+  font-family: 'Gotham 5r', sans-serif;
+}
+
+.caption-headline {
+  color: white;
+  padding: 10px 15px 0px 15px;
+  text-transform: uppercase;
+}
+
+.highlight-description {
+  padding: 5px 15px;
+}
+
+.learn-button {
+  width: 100%;
+  background-color: #7665a0;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 3px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+}
+
+@media only screen and (max-width: 990px) {
+  .highlight-caption {
+    display: inline;
+    width: 210px;
+    background-color: transparent;
+  }
+
+  .caption-headline {
+    display: none;
+  }
+
+  .highlight-description {
+    display: none;
+  }
+
+  .highlights-column {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .highlights-column {
+    display: none;
+  }
+}

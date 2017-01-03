@@ -2,7 +2,7 @@
   data:
     game:
       name:
-        Unplug1: Wprowadzenie do informatyki
+        Unplug1: Wprowadzenie do Informatyki
         Maze: Labirynt
         Multi: Wieloraki Wybór Rzeczy
         Unplug2: Myślenie komputacyjne
@@ -301,28 +301,51 @@
           na pole z TNT!
         maze_3_4: Argh! Napisz mi program, który poprowadzi mnie wokół pól z TNT i
           doprowadzi mnie do świnki.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij
+          "Uruchom". Przesuwaj paletkę używając strzałki w lewo, aby osiągnąć cel.
+        bounce_2_basketball: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy
+          strzałka w lewo". Przesuwaj paletkę, aby osiągnąć oba cele.
+        bounce_5_basketball: Mamy zamiar skierować piłkę lecącą w dół w kierunku paletki.
+          Dołącz blok do bloku "kiedy piłka uderza paletkę", aby upewnić się, że piłka
+          doleci do flagi.
+        bounce_6_basketball: Teraz flaga jest na górze. Musisz dołączyć bloki do obu
+          bloków "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
+        bounce_7_basketball: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę,
+          aż dosięgnie flagę.
+        bounce_10_basketball: Teraz cel jest u góry. Dołącz bloki "punkt wyniku" i
+          "punkt wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy
+          piłka mija paletkę", aby utworzyć grę. Zobacz, ile zdobędziesz punktów,
+          zanim Twój przeciwnik zdobędzie dwa punkty.
+        bounce_11_basketball: Możesz teraz dołączyć bloki do bloku "po uruchomieniu".
+          Musisz dołączyć nowy blok "wyrzuć nową piłkę" w więcej niż w jednym miejscu.
+          Również spróbuj zmienić scenerię lub szybkość paletki oraz piłki i zobacz,
+          ile zdobędziesz punktów, zanim Twój przeciwnik zdobędzie dwa punkty!
+        bounce_12_basketball: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
+          zasady. Kiedy skończysz, kliknij przycisk "Zakończ", aby Twoi znajomi mogli
+          zagrać w Twoją grę na swoich telefonach.
+        bounce_1_sports: Osiągnij flagę! Dołącz blok do bloku "kiedy strzałka w lewo"
+          i naciśnij "Uruchom", aby przesunąć gracza ku fladze.
+        bounce_2_sports: Teraz są dwie flagi! Dołącz blok do bloków "kiedy strzałka
+          w lewo" i "kiedy strzałka w prawo", aby Twój gracz poruszał się w dwóch
+          kierunkach.
+        bounce_5_sports: Krążek hokejowy leci do dołu w kierunku gracza! Dołącz blok
+          do bloku "kiedy piłka uderza gracza", aby dosięgnąć flagi.
+        bounce_6_sports: Teraz flaga jest na górze. Musisz dołączyć bloki do obu bloków
+          "kiedy piłka uderza", aby rozwiązać tę łamigłówkę.
+        bounce_7_sports: Dołącz bloki do każdego z bloków "kiedy". Odbijaj piłeczkę,
+          aż dosięgnie flagę.
+        bounce_10_sports: Teraz cel jest u góry. Dołącz bloki "punkt wyniku" i "punkt
+          wyniku przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka
+          mija paletkę", aby utworzyć grę. Zobacz, ile zdobędziesz punktów, zanim
+          Twój przeciwnik zdobędzie dwa punkty!
+        bounce_11_sports: Możesz teraz dołączyć bloki do bloku "po uruchomieniu".
+          Musisz dołączyć nowy blok "wyrzuć nową piłkę" w więcej niż w jednym miejscu.
+          Również spróbuj zmienić scenerię lub szybkość paletki oraz piłki i zobacz,
+          ile zdobędziesz punktów, zanim Twój przeciwnik zdobędzie dwa punkty!
+        bounce_12_sports: Utwórz własną grę w odbijanie. Możesz zmienić wszystkie
+          zasady i pomieszać różne zawody - bądź kreatywny. Kiedy skończysz, kliknij
+          przycisk "Zakończ", aby Twoi znajomi mogli zagrać w Twoją grę na swoich
+          telefonach.
         bounce_1: Dołącz blok do bloku "kiedy strzałka w lewo" i naciśnij "Uruchom".
           Przesuń paletkę używając lewej strzałki, aby osiągnąć ostateczny cel.
         bounce_2: Dołącz blok do bloków "kiedy strzałka w prawo" i "kiedy strzałka
@@ -340,7 +363,7 @@
           ostateczny cel.
         bounce_10: Cel teraz jest u góry. Dołącz bloki "punkt wyniku" i "punkt wyniku
           przeciwnika" do bloków "kiedy piłka jest w bramce" i "kiedy piłka mija rakietkę",
-          aby utworzyć grę. Zobacz, ile punktów zdobędziesz, zanim Twój przeciwnik
+          aby utworzyć grę. Zobacz, ile zdobędziesz punktów, zanim Twój przeciwnik
           zdobędzie dwa punkty.
         bounce_11: Możesz teraz dołączyć bloki do bloku "po uruchomieniu". Musisz
           dołączyć nowy blok "wypuść nową piłkę" w więcej niż w jednym miejscu. Również,
@@ -501,7 +524,7 @@
         studio_iceage_hello1: Sid chce zabrać wszystkich za nową przygodę. Pomóż mu
           powiedzieć "Cześć!" przeciągając blok "powiedz" do obszaru roboczego i wpisując
           w nim "Cześć!"?
-        studio_iceage_hello2: Sid (postać 1) znalazł Manny'ego (postać 2) i chce zaprosić
+        studio_iceage_hello2: Manny (postać 1) znalazł Sida (postać 2) i chce zaprosić
           go na przygodę. Pomóż im się przywitać, dwukrotnie używając bloku "postać
           mówi".
         studio_iceage_move_to_flag: Wiewiórka Scrat szuka żołędzia!  Pomóż jej przejść
@@ -803,6 +826,11 @@
         iceage_intro: Ice Age w Godzinie Kodowania - Wprowadzenie
         iceage_events: Ice Age w Godzinie Kodowania - Zdarzenia
         iceage_repeat: Ice Age w Godzinie Kodowania - Instrukcje powtarzania
+        mc_2016_intro: Minecraft w Godzinie Kodowania - Wprowadzenie
+        mc_2016_loops: Minecraft w Godzinie Kodowania - Pętle
+        mc_2016_events: Minecraft w Godzinie Kodowania - Zdarzenia
+        mc_2016_spawn: Minecraft w Godzinie Kodowania - Spawn
+        mc_2016_congrats: Minecraft w Godzinie Kodowania - Gratulacje
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

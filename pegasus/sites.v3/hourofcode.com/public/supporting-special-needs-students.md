@@ -21,7 +21,7 @@ For example, do your students have reduced mobility or dexterity? If all your st
 
 ### Blind or visually impaired students
 
-For students who need a screen reader, the [Quorum tutorial](https://quorumlanguage.com/documents/hourofcode/part1.php) is a great place to start. It started as an interpreted language originally designed to be easier to hear through screen readers for blind or visually impaired users. Eventually, Quorum became a general purpose programming language designed for any user. You can use this Hour of Code tutorial with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+For students who need a screen reader, the [Quorum tutorial](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. It started as an interpreted language originally designed to be easier to hear through screen readers for blind or visually impaired users. Eventually, Quorum became a general purpose programming language designed for any user. You can use this Hour of Code tutorial with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
 
 
 Students can have a range of vision impairments. If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.

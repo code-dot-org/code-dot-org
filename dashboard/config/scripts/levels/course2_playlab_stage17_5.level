@@ -54,13 +54,28 @@
     <toolbox_blocks>
       <xml>
         <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
           <title name="DIR">2</title>
           <title name="DISTANCE">25</title>
         </block>
-        <block type="studio_saySprite">
-          <title name="TEXT">type here</title>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
         </block>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+          <next>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">What&#x2019;s new?</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Studio>

@@ -301,7 +301,6 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
-    is13Plus: config.is13Plus,
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -509,7 +508,8 @@ StudioApp.prototype.init = function (config) {
     }
   }
 
-  if (!!config.level.projectTemplateLevelName && !config.level.isK1) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
+      !config.readonlyWorkspace) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -1165,12 +1165,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
       this.editor.aceEditor.focus();
     }
 
-    // Fire a custom event on the document so that other code can respond
-    // to instructions being closed.
-    var event = document.createEvent('Event');
-    event.initEvent('instructionsHidden', true, true);
-    document.dispatchEvent(event);
-
     // update redux
     this.reduxStore.dispatch(closeInstructionsDialog());
   }, this);
@@ -1212,12 +1206,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  // Fire a custom event on the document so that other code can respond
-  // to instructions being shown.
-  var event = document.createEvent('Event');
-  event.initEvent('instructionsShown', true, true);
-  document.dispatchEvent(event);
 };
 
 /**

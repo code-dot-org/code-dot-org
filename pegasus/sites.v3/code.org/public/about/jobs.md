@@ -28,12 +28,13 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
+
+- **Advocacy and Government Affairs**
+	- [Director of State Government Affairs](#govaffairs)
 - **Outreach**
 	- [Regional Manager, Southwest](#outreach)
 - **Product**
 	- [Data Scientist](#data)
-	- [Senior Software Engineer](#senior)
-	- [Software Engineer](#eng)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
 
@@ -41,16 +42,67 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (Seattle, WA; location flexible)</a>
+
+**Job Summary:**
+
+Code.org is a leading voice in the national dialogue on expanding access to K12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
+
+Our team is working with policymakers and education leaders in dozens of states to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally change existing education policy.
+
+The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) and developing overall strategy for engagement in the assigned states while leading and carrying out the tactics associated with the strategy. 
+
+The person in this role will be responsible for: 
+
+- Developing and updating policy positions
+- Public speaking at events, including testimony before state authorities, interviews with the media
+- Communicate policy agenda to various audiences (stakeholder groups, legislators, - Governors and staff, educators, media, etc.) and tailor messaging for each
+Guiding the team in defining a legislative strategy and/or administrative strategy (rules and regulations) around answering three questions:
+	- What are the goals for our legislative or administrative strategy approach?
+	- How will these goals affect implementation of K-12 computer science?
+	- What’s the plan to achieve these goals?
+- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
+- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
+- Managing Code.org’s Governors Partnership for K-12 Computer Science
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Managing and building Code.org’s Advocacy Coalition
+	- Forming and leading local coalition of supporters/advocates
+	- Leveraging local targeted support (industry partnerships, local education nonprofits, school districts)
+- Creating and managing grassroots support for policy-related efforts
+- Coordinate state and federal policy efforts internally and with partners
+
+Some of the responsibilities may shift depending on a candidate’s skill set for this position, but the primary responsibility of owning end-to-end engagement in a state will not.
+
+**Experience and Qualifications:**
+
+A successful candidate’s main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. Candidates should have experience with and working knowledge of the legislative process or policy development process within state education authorities. 
+
+We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
+
+We are a non-partisan organization and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. Candidates should be have a demonstrated ability to work across political parties and ideologies.
+
+Candidates must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
+
+
+Additionally, the ideal candidate has:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree required; Master’s degree desired
+- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
+- Experience in developing K-12 computer science education policy (nice to have, but not required) 
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 ## <a name="outreach"href="#outreach">Regional Manager, Southwest (California preferred)</a>
 
 **Job Summary:**
 
-Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with [Professional Learning Partners](https://code.org/educate/professional-learning-partner). This position is highly focused on developing relationships and building sustainability of Computer Science in California and throughout the southwest.
+Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with [Regional Partners](https://code.org/educate/regional-partner). This position is highly focused on developing relationships and building sustainability of Computer Science in California and throughout the southwest.
 
 Responsibilities of the position include:
 
 - Outreach
-	- Recruit Professional Learning Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
+	- Recruit Regional Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
 	- Present Code.org partnership model
 	- Track partnership status
 - Manage and support implementation for all partners in region at K-12 grade levels
@@ -128,53 +180,6 @@ The ideal candidate has a breadth of experience and qualifications:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Senior Software Engineer at Code.org, you’ll be a key contributor in delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree with a major in Computer Science
-- 5+ years as a software engineer
-- Ability to make senior level engineering contributions including a high level of output, tackling the hardest problems, and being a guiding voice on the team 
-- Experience shipping significant features in commercial software products 
-- Expertise in some of these technologies preferred: 
-	- JavaScript
-	- React
-	- Ruby / Rails
-	- SQL/Databases/MySQL
-	
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="eng"href="#eng">Software Engineer (Seattle, WA)</a>
-
-**Job Summary:**
-
-Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
-
-As Software Engineer at Code.org, you’ll be delivering features in Code Studio, used by tens of millions students and teachers in K-12 classrooms around the world. You’ll be part of an agile, fast-moving team where you get to deliver features to customers quickly and frequently. You’ll get to work on hard computer science problems and use some of the latest web technologies.
-
-**Experience and Qualifications:**
-
-The ideal candidate has the following qualifications:
-
-- Passion for our mission of #CSForAll
-- Bachelor’s degree with a major in Computer Science
-- 3+ years as a software engineer 
-- Expertise in some of these technologies preferred: 
-	- JavaScript
-	- React
-	- Ruby / Rails
-	- SQL/Databases/MySQL
-
-To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
