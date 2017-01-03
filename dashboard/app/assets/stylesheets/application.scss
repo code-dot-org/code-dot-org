@@ -1063,11 +1063,14 @@ input.header_input {
   color: $purple;
   font-family: $gotham-bold;
   font-weight: normal;
+  padding-right: 25px;
 }
 
 html[dir=rtl] .qtip-content {
   direction: rtl;
   text-align: right;
+  padding-right: 9px;
+  padding-left: 25px;
 }
 
 .qtip-default {
