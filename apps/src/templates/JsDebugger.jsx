@@ -9,7 +9,7 @@ var connect = require('react-redux').connect;
 var i18n = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
-var DebugWatch = require('./watchers/Watchers');
+import {ConnectedWatchers} from './watchers/Watchers';
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
@@ -217,7 +217,7 @@ var JsDebugger = React.createClass({
         </PaneHeader>
         {this.props.debugButtons && <DebugButtons/>}
         {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
-        {showWatchPane && <DebugWatch debugButtons={this.props.debugButtons}/>}
+        {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
       </div>
     );
   }

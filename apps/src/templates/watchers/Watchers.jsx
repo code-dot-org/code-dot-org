@@ -417,4 +417,4 @@ const ConnectedWatchers = connect(state => {
   };
 })(Watchers);
 
-export {ConnectedWatchers as Default, Watchers};
+export {ConnectedWatchers, Watchers};
