@@ -72,7 +72,7 @@ const FilterHeader = React.createClass({
 
   shouldShowSortButton() {
     return this.props.showSortBy &&
-      (!this.props.mobileLayout || !this.props.showingModalFilters);
+      !(this.props.mobileLayout && this.props.showingModalFilters);
   },
 
   handleChangeSort(event) {
