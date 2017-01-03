@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170103164735) do
+ActiveRecord::Schema.define(version: 20170103170401) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -253,6 +253,15 @@ ActiveRecord::Schema.define(version: 20170103164735) do
     t.datetime "updated_at"
     t.boolean  "hidden",                   default: false
     t.index ["level_id", "md5"], name: "index_level_sources_on_level_id_and_md5", using: :btree
+  end
+
+  create_table "level_sources_multi_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "level_source_id",               null: false
+    t.integer "level_id",                      null: false
+    t.text    "data",            limit: 65535
+    t.string  "md5",                           null: false
+    t.boolean "hidden"
+    t.index ["level_source_id"], name: "index_level_sources_multi_types_on_level_source_id", using: :btree
   end
 
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
