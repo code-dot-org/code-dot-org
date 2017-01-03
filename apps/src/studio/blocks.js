@@ -1808,7 +1808,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenSpriteAndGroupCollide = {
-    // Block to handle event when the Left arrow button is pressed.
+    // Block to handle event when a sprite collides with any sprite in a group,
+    // and sets a variable to the sprite in the group that was touched
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
@@ -1843,6 +1844,27 @@ exports.install = function (blockly, blockInstallOptions) {
     // 0-indexed, so add 1.
     return `${varName} = touchedSpriteIndex + 1;\n`;
   };
+
+
+  blockly.Blocks.studio_whenSpriteAndGroupCollideSimple = {
+    // Block to handle event when a sprite collides with any sprite in a group
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(msg.collidesWithAnySpriteName);
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollideSimple = generator.studio_eventHandlerPrologue;
 
 
   /**

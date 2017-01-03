@@ -1,0 +1,21 @@
+name 'Unit 4: Practice PT highlights'
+css 'unplugged'
+markdown <<MARKDOWN
+# Unit 4: Practice PT highlights
+
+## Practice PT: The Big Data Dilemma
+<div style="width:100% padding: 10px">
+<div style="float:left; padding: 10px; width:40%; background-color: #d9f3f5">
+Students will complete a research project on a current issue or event related to Big Data, security and encryption. Students will need to identify appropriate online resources to learn about the issues and find good artifacts to include with their findings. The written components and audio / visual artifact students will identify are similar to those students will see in the AP Performance Tasks.<br></div>
+<div style="float:left; margin-left:2px; padding: 10px; width:40%; background-color: #d9f3f5"><strong>Learning Objectives Addressed:</strong><br>
+<strong>Data:</strong> 3.3.1 [P4]<br>
+<strong>Internet:</strong>6.1.1 [P3],  6.2.1 [P5],  6.2.2 [P4],  6.3.1 [P1]<br>
+<strong>Global Impacts:</strong> 7.1.1 [P4], 7.3.1 [P4], 7.5.1[P1], 7.5.2 [P5]<br>
+<br>
+<strong>Computational Thinking Practices Emphasized:</strong><br>
+<strong>P1:</strong> Connecting Computing<br>
+<strong>P5:</strong> Communicating<br></div>
+<br><br><br><br>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+MARKDOWN

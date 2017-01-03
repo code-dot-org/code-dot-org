@@ -48,7 +48,7 @@ const ButtonList = React.createClass({
           <span style={{verticalAlign: 'top'}}>
             {otherString}
           </span>
-          <input type="text" id={this.props.groupName + '_other'}/>
+          <input type="text" id={this.props.groupName + '_other'} maxLength="1000"/>
         </div>
       );
     }

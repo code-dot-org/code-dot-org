@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-import {ButtonList} from '../form_components/button_list.jsx';
-import SummerWorkshopSchedule from './SummerWorkshopSchedule';
+import {ButtonList, otherString} from '../form_components/button_list.jsx';
+import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
 
 export default React.createClass({
 
@@ -11,16 +11,26 @@ export default React.createClass({
     onChange: PropTypes.func.isRequired,
     formData: PropTypes.shape({
       committedToSummer: PropTypes.string,
+      ableToAttendAssignedSummerWorkshop: PropTypes.string,
+      fallbackSummerWorkshops: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     }).isRequired,
     errorData: PropTypes.shape({
       committedToSummer: PropTypes.string,
+      ableToAttendAssignedSummerWorkshop: PropTypes.string,
+      fallbackSummerWorkshops: PropTypes.string
     }).isRequired,
+    selectedWorkshop: PropTypes.string
   },
 
   getInitialState() {
     return {
       dialogWasDismissed: false,
     };
+  },
+
+  checkListChange(event) {
+    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
+    this.props.onChange({[event.target.name]: selectedButtons});
   },
 
   radioButtonListChange(event) {
@@ -36,7 +46,7 @@ export default React.createClass({
   },
 
   render() {
-    const showDialog = this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed;
+    const showDialog = !!(this.props.formData.committedToSummer && this.props.formData.committedToSummer !== 'Yes' && !this.state.dialogWasDismissed);
 
     return (
       <div id="summerProgramContent">
@@ -64,7 +74,10 @@ export default React.createClass({
           />
           <Modal show={showDialog} onHide={this.dismissDialog} style={{width: 560}}>
             <Modal.Body>
-              We are currently only able to offer spaces to applicants who are able to participate in the entire professional learning program. Please note that if you would like to continue this application in case your availability changes, we will add you to our waitlist and consider your application at the end of our review period.
+              We are currently only able to offer spaces to applicants who are able to participate in the entire
+              professional learning program. Please note that if you would like to continue this application in case
+              your availability changes, we will add you to our waitlist and consider your application at the end of
+              our review period.
               <br />
               <br />
               Would you like to continue your application?
@@ -78,7 +91,45 @@ export default React.createClass({
               </Button>
             </Modal.Footer>
           </Modal>
-          <SummerWorkshopSchedule />
+          {this.props.selectedWorkshop !== workshopNamePlaceholder &&
+            <div>
+              <label>
+                We strongly encourage participants to attend their assigned summer workshop (based on the district in which
+                you currently teach), so that you can meet the other teachers, facilitators and Regional Partners with whom
+                you will work in 2017 - 18. Your assigned region and summer workshop date is below.
+              </label>
+              <label style={{margin: '5px 0px 10px 15px', fontSize: '18px'}}>
+                {this.props.selectedWorkshop}
+              </label>
+              <ButtonList
+                type="radio"
+                label="Are you able to attend your assigned summer workshop?"
+                groupName="ableToAttendAssignedSummerWorkshop"
+                answers={['Yes', 'No']}
+                includeOther
+                onChange={this.radioButtonListChange}
+                selectedItems={this.props.formData.ableToAttendAssignedSummerWorkshop}
+                required
+                errorText={this.props.errorData.ableToAttendAssignedSummerWorkshop}
+              />
+            </div>
+          }
+          {
+            ['No', otherString].includes(this.props.formData.ableToAttendAssignedSummerWorkshop) && (
+              <ButtonList
+                type="check"
+                label="If you are not able to attend your assigned summer workshop, which of the following workshops
+                  are you available to attend? Travel expenses are paid. Please note that we are not able to guarantee
+                  a space for you in a different location."
+                groupName="fallbackSummerWorkshops"
+                answers={Object.keys(groupTwoOrGroupOneCsdWorkshops)}
+                onChange={this.checkListChange}
+                selectedItems={this.props.formData.fallbackSummerWorkshops}
+                required
+                errorText={this.props.errorData.fallbackSummerWorkshops}
+              />
+            )
+          }
         </div>
       </div>
     );

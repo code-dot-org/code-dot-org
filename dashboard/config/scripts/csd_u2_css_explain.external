@@ -39,3 +39,9 @@ The rules describe how the elements identified by the selector should change. Ea
 
 The punctuation in the rule-set is very important, because that's the way the computer knows where each rule starts and stops.
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Review: CSS Rule-Sets
+
+Bring the class back together to review the basics of CSS rule-sets.
+MARKDOWN
