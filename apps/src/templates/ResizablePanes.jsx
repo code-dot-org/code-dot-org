@@ -7,11 +7,35 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');
+import Radium from 'radium';
+
+const styles = {
+  resizer: {
+    flex: '0 0 0',
+    boxSizing: 'border-box',
+    background: '#000',
+    opacity: 0.2,
+    zIndex: 1,
+    backgroundClip: 'padding-box',
+    userSelect: 'text',
+    width: 11,
+    margin: '0 -5px',
+    borderLeft: '5px solid',
+    borderRight: '5px solid',
+    borderColor: 'rgba(255, 255, 255, 0)',
+    cursor: 'col-resize',
+    height: '100%',
+    ':hover': {
+      transition: 'all 2s ease',
+      borderColor: 'rgba(0, 0, 0, 0.5)',
+    }
+  }
+};
 
 /**
  * Wraps its children to display them in a flexbox layout.
  */
-var ResizablePanes = React.createClass({
+var ResizablePanes = Radium(React.createClass({
   propTypes: {
     style: React.PropTypes.object,
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
@@ -100,7 +124,7 @@ var ResizablePanes = React.createClass({
       <div
         key={"resizer-" + index}
         data-resizer-index={index}
-        className="resizer"
+        style={styles.resizer}
         onMouseDown={this.onResizerMouseDown}
       />
     );
@@ -133,5 +157,5 @@ var ResizablePanes = React.createClass({
       </div>
     );
   }
-});
+}));
 module.exports = ResizablePanes;
