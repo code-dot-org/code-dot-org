@@ -261,6 +261,7 @@ ActiveRecord::Schema.define(version: 20170103170401) do
     t.text    "data",            limit: 65535
     t.string  "md5",                           null: false
     t.boolean "hidden"
+    t.index ["level_id"], name: "index_level_sources_multi_types_on_level_id", using: :btree
     t.index ["level_source_id"], name: "index_level_sources_multi_types_on_level_source_id", using: :btree
   end
 
