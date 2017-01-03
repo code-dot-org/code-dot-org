@@ -13,8 +13,11 @@ export function getDistrictDropdownValues() {
     });
   }
 
-  if (document.getElementById('school-district-other').checked ||
-    document.getElementById('school-other').checked) {
+  if (
+    ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase()) ||
+    document.getElementById('school-district-other').checked ||
+    document.getElementById('school-other').checked
+  ) {
     Object.assign(districtValues, {
       ['school-name']: document.getElementById('school-name').value,
       ['school-zipcode']: document.getElementById('school-zipcode').value
@@ -32,7 +35,10 @@ export function validateDistrictData(formData) {
     return false;
   }
 
-  if (document.getElementById('school-district-other').checked) {
+  if (['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase())) {
+    //Private schools need to fill out name and zipcode
+   return !!(formData['school-name'] && formData['school-zipcode']);
+  } else if (document.getElementById('school-district-other').checked) {
     //If you clicked "other district" then expect these three to be filled out
     return !!(formData['school-district-name'] && formData['school-name'] && formData['school-zipcode']);
   } else if (document.getElementById('school-other').checked) {
