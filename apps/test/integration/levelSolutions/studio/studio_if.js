@@ -1,4 +1,5 @@
 var testUtils = require('../../../util/testUtils');
+var tickWrapper = require('../../util/tickWrapper');
 var TestResults = require('@cdo/apps/constants.js').TestResults;
 
 var levelDef = {
@@ -12,6 +13,7 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
+  freePlay: true,
 };
 
 module.exports = {
@@ -55,9 +57,9 @@ module.exports = {
           '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout
-        setTimeout(function () {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
-        }, 3000);
+        });
       },
       customValidator: function (assert) {
         assert.equal(Studio.playerScore, 1);
@@ -65,7 +67,7 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.FREE_PLAY
       },
     },
     {
@@ -104,9 +106,9 @@ module.exports = {
           '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout
-        setTimeout(function () {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
-        }, 3000);
+        });
       },
       customValidator: function (assert) {
         assert.equal(Studio.playerScore, 1);
@@ -114,7 +116,7 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.FREE_PLAY
       },
     },
     {
@@ -178,17 +180,17 @@ module.exports = {
           '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout
-        setTimeout(function () {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
-        }, 3000);
+        });
       },
       customValidator: function (assert) {
-        assert.equal(Studio.playerScore, 1);
+        assert.equal(Studio.playerScore, 2);
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.FREE_PLAY
       },
     },
     {
@@ -226,9 +228,9 @@ module.exports = {
           '</xml>',
       runBeforeClick: function (assert) {
         // add a completion on timeout
-        setTimeout(function () {
+        tickWrapper.runOnAppTick(Studio, 50, function () {
           Studio.onPuzzleComplete();
-        }, 3000);
+        });
       },
       customValidator: function (assert) {
         assert.equal(Studio.playerScore, 1);
@@ -236,7 +238,7 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.FREE_PLAY
       },
     },
   ]
