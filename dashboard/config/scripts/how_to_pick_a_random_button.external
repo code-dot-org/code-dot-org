@@ -6,32 +6,66 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # How to pick a random button
 
-To pick a random button we're going to use a bit of a trick.
+<div style="width: 400px; margin: auto">
 
-The technique is to write code that combines the use of random numbers to build a string of one of the button ids.
+<p style="text-align: center"> ALEXIS </p>
 
-We've strategically named the buttons so that we can use this technique:
+<p>Okay, great. <code>setProperty</code> works.  What's next?</p>
 
-* button1
-* button2
-* button3
-* button4
+</div>
 
-If you look at the button ids the only thing that's different is the number.  They all fit the pattern of *"button**X**"*  where x is a number 1-4.  Well we can use `randomNumber` to generate a number and then tack it on to a string to generate one of the button ids randomly.
+<img src="https://images.code.org/cfa13bbc3d8e09f4ed6ccd38d46558be-image-1481036468174.png" style="float: right">
 
-`var randButtonID = "button"+randomNumber(1,4);`
+<div style="width: 400px; margin: auto">
 
-The variable `randButtonID` should now have one the 4 button ids as a string, and we can use it in setProperty, along with `diffColor` to randomly make one of buttons have a different color.
+<p style="text-align: center"> MICHAEL </p>
 
-The last lines of your program should look something like this:
 
-```
-var diffColor = "rgb("250, 174, 10)"
-var randButtonID = "button"+randomNumber(1,4);
-setProperty(randButtonID, "background-color", diffColor);
-```
+<p>Well, I wanted to pick one of the squares at random to make the different colored one. Also, I want the color to be random, not just orange, every time.</p>
 
-Big picture: what we're doing here is writing code to generate important strings like the IDs of elements and the values we want to set properties to.  It's a common technique for making programs more dynamic than if you "hard coded" all the values.
+<p style="text-align: center"> ALEXIS </p>
 
-You'll try this next.
+<p>Okay, well I'm not sure about the colors yet, but I do have an idea for how to choose one of the buttons randomly.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>I'm all ears.</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Okay, notice how all the buttons have IDs that are pretty much the same? <em>"button1", "button2", "button3", "button4"</em>.  There's a pattern.  It's always: <em>"button" + some number</em></p>
+
+<p>So I think we can use a trick we learned a while ago to build a string...</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Ah, I think I see where you're going...</p>
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>We can use <code>randomNumber</code> as the number, and then just tack it on to the string "button" and Presto!, we'd have generated one of the button IDs.</p>
+
+<p style="text-align: center"> MICHAEL </p>
+
+<p>Right.  We can do something like this: <code>var randButtonId = "button"+randomNumber(1,4);</code></p>
+
+<p>Then we can add that into our existing code like this:</p>
+</div>
+
+	    var diffColor = "rgb(250, 175, 20)";					  // make different color
+	--> var randButtonId = "button"+randomNumber(1,4);  		  // make a random button ID
+	    setProperty(randButtonId, "background-color", diffColor); // set bgcolor of randomButtonId to diffColor
+
+<br><br>
+<div style="width: 400px; margin: auto">
+
+<p style="text-align: center"> ALEXIS </p>
+
+<p>Cool.  Let's try it.</p>
+</div>
+
+## Click continue to try it
+
+
+
 MARKDOWN

@@ -168,5 +168,20 @@ export default {
         return false;
     }
     return true;
+  },
+
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'defaultValue':
+        return element.defaultValue;
+      case 'min':
+        return element.min;
+      case 'max':
+        return element.max;
+      case 'step':
+        return element.step;
+      default:
+        throw `unknown property name ${name}`;
+    }
   }
 };

@@ -1,7 +1,6 @@
 - teacher_blog_url = 'http://teacherblog.code.org/'
-- scaling_url = 'http://teacherblog.code.org/post/152968866984/an-important-note-about-computer-science'
 - code_studio_video_url = 'https://www.youtube.com/watch?v=ZRNRVu4DFcs'
-- video_download_url = 'https://videos.code.org/teacher/start-teaching-code-studio-SD.mp4'
+- beyond_url = 'https://code.org/educate'
 
 .teacher-announce
   .announce-heading
@@ -11,19 +10,10 @@
       .content-img-container
         %img.content-img{src: CDO.shared_image_url('/teacher-announcement/how-code-studio.png'), width: '200px'}
     .content-text
-      = I18n.t(:dashboard_announce_how_code_studio, video_download_url: video_download_url)
+      = I18n.t(:dashboard_announce_go_beyond)
     .announce-learn-more
-      %a{href: code_studio_video_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_watch_video_button)
-  .announce-content
-    %a{href: scaling_url, target: '_blank'}
-      .content-img-container
-        %img.content-img{src: CDO.shared_image_url('/teacher-announcement/hoc-scaling.png'), width: '200px'}
-    .content-text
-      = I18n.t(:dashboard_announce_hoc_scaling)
-    .announce-learn-more
-      %a{href: scaling_url, target: '_blank'}
-        %button.primary= I18n.t(:dashboard_announce_learn_more_button)
+      %a{href: beyond_url, target: '_blank'}
+        %button.primary= I18n.t(:dashboard_announce_go_beyond_button)
   .mini-announcement
     .content-text
       %i.fa.fa-hand-o-right

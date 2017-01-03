@@ -44,6 +44,8 @@ Dashboard::Application.routes.draw do
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
 
+  get 'redirected_url', to: 'redirect_proxy#get', format: false
+
   resources :sections, only: [:show] do
     member do
       post 'log_in'
@@ -322,6 +324,9 @@ Dashboard::Application.routes.draw do
       resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+
+      get :teacher_applications, to: 'teacher_applications#index'
+      post :teacher_applications, to: 'teacher_applications#create'
     end
   end
 
@@ -335,6 +340,10 @@ Dashboard::Application.routes.draw do
     # React-router will handle sub-routes on the client.
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
+
+    get 'teacher_application', to: 'teacher_application#new'
+    get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
+    get 'teacher_application/thanks', to: 'teacher_application#thanks'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
@@ -384,6 +393,7 @@ Dashboard::Application.routes.draw do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
+      get 'regional-partners/:school_district_id', to: 'regional_partners#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
@@ -393,4 +403,5 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
 end

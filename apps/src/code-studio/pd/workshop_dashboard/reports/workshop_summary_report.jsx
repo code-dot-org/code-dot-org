@@ -2,12 +2,13 @@
  * Workshop Summary Report
  */
 import React from "react";
-import ReportTable from "./report_table";import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReportTable from "./report_table";
 import {
   Checkbox,
   Button
 } from 'react-bootstrap';
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
+import Spinner from '../components/spinner';
 
 const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;
@@ -222,7 +223,7 @@ const WorkshopSummaryReport = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
+      return <Spinner/>;
     }
 
     return (

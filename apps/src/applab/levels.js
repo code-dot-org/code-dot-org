@@ -63,6 +63,7 @@ levels.custom = {
     "setPosition": null,
     "setSize": null,
     "setProperty": null,
+    "getProperty": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,

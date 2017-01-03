@@ -23,7 +23,6 @@ The program has two components:
      - The online activities are focused on building the online professional learning community, providing continued support with tools and content, introducing new and helpful resources for teaching the course, and further exploring the curriculum.
 
 
-[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## <a name="commitments"></a>What are the program commitments?
 
@@ -53,6 +52,6 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-We're so excited that you're interested in applying for our CS Discoveries Professional Learning Program! Applications for the program will be available in early January 2017. Please [fill out our interest form](https://goo.gl/forms/jBWAHg5jvEV8lSV52) to find out when next year's application is live.
+We're so excited that you're interested in applying for our CS Discoveries Professional Learning Program! Applications for the program open on January 5, 2017. Please [fill out our interest form](https://goo.gl/forms/jBWAHg5jvEV8lSV52) to be notified when the application is live.
 
 [<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
