@@ -89,9 +89,12 @@
 
   $(document).ready(function() {
     var options = #{existing_school_info.to_json};
-    options['suppressScrolling'] = #{defined? suppress_scrolling && suppress_scrolling}
+    var suppressScrolling = #{!!(local_assigns[:suppress_scrolling])};
+    options['suppressScrolling'] = suppressScrolling;
 
-    if (#{defined? assume_usa && assume_usa}) {
+    var assumeUsa = #{!!(local_assigns[:assume_usa])};
+
+    if (assumeUsa) {
       $('#school-country-group').hide();
       $('#school-country').val('United States');
     }

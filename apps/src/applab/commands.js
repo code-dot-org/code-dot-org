@@ -1140,6 +1140,27 @@ applabCommands.setProperty = function (opts) {
   Applab.updateProperty(element, info.internalName, value);
 };
 
+applabCommands.getProperty = function (opts) {
+  apiValidateDomIdExistence(opts, 'getProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'getProperty', 'property', opts.property, 'string');
+
+  const elementId = opts.elementId;
+  const property = opts.property;
+
+  const element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  const info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    outputError(`Cannot get property "${property}" on element "${elementId}".`);
+    return;
+  }
+
+  return Applab.readProperty(element, info.internalName);
+};
+
 applabCommands.getXPosition = function (opts) {
   var divApplab = document.getElementById('divApplab');
   apiValidateDomIdExistence(opts, 'getXPosition', 'id', opts.elementId, true);

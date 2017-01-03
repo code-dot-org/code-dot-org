@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161114020106) do
+ActiveRecord::Schema.define(version: 20170103162230) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -123,6 +123,19 @@ ActiveRecord::Schema.define(version: 20161114020106) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id", using: :btree
     t.index ["level_id"], name: "index_concepts_levels_on_level_id", using: :btree
+  end
+
+  create_table "contained_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "level_group_level_id",                   null: false
+    t.integer  "contained_level_id",                     null: false
+    t.string   "contained_level_type",                   null: false
+    t.integer  "contained_level_page",                   null: false
+    t.integer  "contained_level_position",               null: false
+    t.text     "contained_level_text",     limit: 65535
+    t.index ["contained_level_id"], name: "index_contained_levels_on_contained_level_id", using: :btree
+    t.index ["level_group_level_id"], name: "index_contained_levels_on_level_group_level_id", using: :btree
   end
 
   create_table "districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -326,6 +339,18 @@ ActiveRecord::Schema.define(version: 20161114020106) do
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id", using: :btree
   end
 
+  create_table "pd_teacher_applications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "user_id",                       null: false
+    t.string   "primary_email",                 null: false
+    t.string   "secondary_email",               null: false
+    t.text     "application",     limit: 65535, null: false
+    t.index ["primary_email"], name: "index_pd_teacher_applications_on_primary_email", using: :btree
+    t.index ["secondary_email"], name: "index_pd_teacher_applications_on_secondary_email", using: :btree
+    t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
+  end
+
   create_table "pd_workshops", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "workshop_type",                    null: false
     t.integer  "organizer_id",                     null: false
@@ -507,6 +532,18 @@ ActiveRecord::Schema.define(version: 20161114020106) do
     t.index ["user_id", "script_id", "level_id"], name: "index_puzzle_ratings_on_user_id_and_script_id_and_level_id", unique: true, using: :btree
   end
 
+  create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string  "name",  null: false
+    t.integer "group", null: false
+  end
+
+  create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer "regional_partner_id", null: false
+    t.integer "school_district_id",  null: false
+    t.index ["regional_partner_id"], name: "index_regional_partners_school_districts_on_partner_id", using: :btree
+    t.index ["school_district_id"], name: "index_regional_partners_school_districts_on_school_district_id", using: :btree
+  end
+
   create_table "school_districts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",       null: false
     t.string   "city",       null: false
@@ -514,6 +551,7 @@ ActiveRecord::Schema.define(version: 20161114020106) do
     t.string   "zip",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["state"], name: "index_school_districts_on_state", using: :btree
   end
 
   create_table "school_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
