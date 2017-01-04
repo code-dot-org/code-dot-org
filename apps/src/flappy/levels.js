@@ -7,6 +7,10 @@ var utils = require('../utils');
 
 var flapBlock = '<block type="flappy_flap"></block>';
 var flapHeightBlock = '<block type="flappy_flap_height"></block>';
+var flapLargeHeightBlock =
+    '<block type="flappy_flap_height">' +
+      '<title name="VALUE">Flappy.FlapHeight.LARGE</title>' +
+    '</block>';
 var endGameBlock = '<block type="flappy_endGame"></block>';
 var playSoundBlock =  '<block type="flappy_playSound"></block>';
 var incrementScoreBlock = '<block type="flappy_incrementPlayerScore"></block>';
@@ -86,6 +90,7 @@ module.exports = {
   },
 
   '2': {
+    'levelIncompleteError': flappyMsg.incompleteError2(),
     'requiredBlocks': [
       [{'test': 'endGame', 'type': 'flappy_endGame'}]
     ],
@@ -113,11 +118,13 @@ module.exports = {
     'toolbox':
       tb(flapBlock + endGameBlock + playSoundBlock),
     'startBlocks':
+      eventBlock('when_run') +
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('flappy_whenCollideGround')
   },
 
   '3': {
+    'levelIncompleteError': flappyMsg.incompleteError3(),
     'requiredBlocks': [
       [{'test': 'setSpeed', 'type': 'flappy_setSpeed'}]
     ],
@@ -161,6 +168,7 @@ module.exports = {
   },
 
   '4': {
+    'levelIncompleteError': flappyMsg.incompleteError4(),
     'requiredBlocks': [
       [{'test': 'endGame', 'type': 'flappy_endGame'}]
     ],
@@ -191,7 +199,8 @@ module.exports = {
     'startBlocks':
       eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('when_run', setSpeedBlock) +
-      eventBlock('flappy_whenCollideObstacle')
+      eventBlock('flappy_whenCollideObstacle') +
+      eventBlock('flappy_whenCollideGround', endGameBlock)
   },
 
   '5': {
@@ -231,12 +240,15 @@ module.exports = {
     'toolbox':
       tb(flapBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
     'startBlocks':
-      eventBlock('flappy_whenClick', flapBlock) +
       eventBlock('flappy_whenEnterObstacle') +
-      eventBlock('when_run', setSpeedBlock)
+      eventBlock('flappy_whenClick', flapBlock) +
+      eventBlock('when_run', setSpeedBlock) +
+      eventBlock('flappy_whenCollideObstacle', endGameBlock) +
+      eventBlock('flappy_whenCollideGround', endGameBlock)
   },
 
   '6': {
+    'levelIncompleteError': flappyMsg.incompleteError6(),
     'requiredBlocks': [
       [{'test': 'flap', 'type': 'flappy_flap_height'}]
     ],
@@ -268,16 +280,17 @@ module.exports = {
       'snapRadius': 2
     },
     'toolbox':
-      tb(flapHeightBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
+      tb(flapLargeHeightBlock + endGameBlock + incrementScoreBlock + playSoundBlock + setSpeedBlock),
     'startBlocks':
       eventBlock('flappy_whenClick') +
-      // eventBlock('flappy_whenCollideGround', endGameBlock) +
-      // eventBlock('flappy_whenCollideObstacle', endGameBlock) +
+      eventBlock('flappy_whenCollideGround', endGameBlock) +
+      eventBlock('flappy_whenCollideObstacle', endGameBlock) +
       eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
       eventBlock('when_run', setSpeedBlock)
   },
 
   '7': {
+    'levelIncompleteError': flappyMsg.incompleteError7(),
     'requiredBlocks': [
       [{'test': 'setBackground', 'type': 'flappy_setBackground'}]
     ],
@@ -305,6 +318,7 @@ module.exports = {
   },
 
   '8': {
+    'levelIncompleteError': flappyMsg.incompleteError8(),
     'requiredBlocks': [
       [{
         test: function (block) {
@@ -342,6 +356,7 @@ module.exports = {
   },
 
   '9': {
+    'levelIncompleteError': flappyMsg.incompleteError9(),
     'requiredBlocks': [
       [{
         test: function (block) {

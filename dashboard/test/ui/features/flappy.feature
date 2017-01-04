@@ -11,8 +11,8 @@ Scenario: Solving puzzle 1
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1"
 
-Scenario: Solving puzzle 2
-  Given I am on "http://studio.code.org/flappy/2?noautoplay=true"
+Scenario: Solving puzzle 3
+  Given I am on "http://studio.code.org/flappy/3?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
@@ -20,11 +20,11 @@ Scenario: Solving puzzle 2
   And I press "runButton"
   Then evaluate JavaScript expression "Flappy.onMouseDown(), true;"
   Then I wait to see ".modal"
-  And element ".modal .congrats" contains text "You completed Puzzle 2"
+  And element ".modal .congrats" contains text "You completed Puzzle 3"
 
 @no_mobile
-Scenario: Failing puzzle 2
-  Given I am on "http://studio.code.org/flappy/2?noautoplay=true"
+Scenario: Failing puzzle 3
+  Given I am on "http://studio.code.org/flappy/3?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
