@@ -2,7 +2,7 @@
 
 :javascript
 
-  var loginType = "#{j @section.login_type}";
+  var loginType = "#{escape_javascript @section.login_type}";
   var loginTypePicture = "#{Section::LOGIN_TYPE_PICTURE}";
   var loginTypeWord = "#{Section::LOGIN_TYPE_WORD}";
 
