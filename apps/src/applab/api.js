@@ -385,6 +385,12 @@ export function playSound(url) {
                           {'url': url});
 }
 
+export function stopSound(url) {
+  return Applab.executeCmd(null,
+    'stopSound',
+    {'url': url});
+}
+
 export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',
