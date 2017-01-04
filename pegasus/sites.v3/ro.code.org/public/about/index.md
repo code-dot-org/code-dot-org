@@ -17,7 +17,7 @@ social:
 
 Code.org este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a elevilor minorități. Viziunea noastră este că fiecare elev, din fiecare școală ar trebui să aibă posibilitatea de a învăța tehnologia computerelor. Noi credem că tehnologia computerelor și programarea ar trebui să fie parte a curriculum-ului de bază în educație, alături de alte științe, inginerie și cursuri de matematică (STEM), cum ar fi biologie, fizică, chimie și algebră. 
 
-## Hour of Code România
+## Hour of Code in România
 
 Cu Hour of Code în România și Moldova, Code.org iși propune să ajute la demistificarea conceptului că programarea sau tehnologia computerelor este dificilă și oferă părinților, profesorilor și elevilor din întreaga țară, posibilitatea să participe la o introducere distractivă în tainele programării. Sperăm că acest demers va ajuta la creșterea conștientizării și încrederii în schimbările pozitive care le poate produce însușirea unor noțiuni de tehnologia computerelor. 
 

@@ -67,6 +67,10 @@ export let VisualizationOverlay = React.createClass({
   },
 
   onMouseMove(event) {
+    if (!this.state.screenSpaceToAppSpaceTransform) {
+      return;
+    }
+
     this.mousePos_.x = event.clientX;
     this.mousePos_.y = event.clientY;
     this.mousePos_ = this.mousePos_.matrixTransform(
