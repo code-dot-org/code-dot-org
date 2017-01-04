@@ -11,8 +11,10 @@ class RegistrationsController < Devise::RegistrationsController
     params.permit!
 
     # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
-    @user.skip_reconfirmation! if params[:user][:email].present? && !@user.confirmation_required?
-    @user.confirmed_at = nil if params[:user][:email].present? && !@user.confirmation_required?
+    if params[:user][:email].present? && !@user.confirmation_required?
+      @user.skip_reconfirmation!
+      @user.confirmed_at = nil
+    end
 
     successfully_updated =
       if needs_password?(@user, params)
