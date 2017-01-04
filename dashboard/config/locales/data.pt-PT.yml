@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   data:
     game:
       name:
@@ -198,18 +198,18 @@
           mesmos quadrados da última vez. Queres que o quadrado tenha o mesmo tamanho
           que o contador, então usa o bloco de "contador". Dica: É na categoria de
           variáveis.'
-        turtle_2_7: Aqui está um programa para desenhar uma espiral, mas os blocos
-          estão desativados e como tal não vão correr. Faz um novo programa usando
-          um bloco de "contar com" (na categoria Ciclos) e o bloco "contador" (na
+        turtle_2_7: Aqui temos um programa para desenhar uma espiral, mas os blocos
+          estão desativados para que eles não sejam executados. Faça um novo programa
+          usando um bloco "conte com" (na categoria Laços) e um bloco "contador" (na
           categoria Variáveis) para desenhar a mesma espiral.
         turtle_2_7_5: Há uma nova função "desenhar um boneco de neve" (na categoria
           de Funções). Desenha dois bonecos de neve, de 250 e 100 de altura.
         turtle_2_8: Este é um pouco complicado. Usa a função "desenhar um boneco de
           neve" e o bloco novo "salto para a frente" (na categoria de Ações). Desenha
           3 bonecos de neve com cores diferentes, separados por 100 pixeis.
-        turtle_2_9: Usa um ciclo "contar com" para desenhar uma família de bonecos
-          de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem
-          estar separados por 60 pixeis.
+        turtle_2_9: Use um laço "conte com" para desenhar uma família de bonecos de
+          neve, com alturas de 110, 100, 90, 80 e 70. Os bonecos de neve devem ser
+          separados por 60 pixels.
         turtle_2_10: Aqui está algum código experimentar com diferentes espirais.  O
           que acontece se alterares a quantidade de vezes? Ou definir uma cor aleatória
           no ciclo? Desenha o que quiseres.
@@ -764,6 +764,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

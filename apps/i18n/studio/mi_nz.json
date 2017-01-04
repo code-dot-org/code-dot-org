@@ -712,7 +712,7 @@
   "waitFor1Second": "tatari ki te hēkona 1",
   "waitFor2Seconds": "tatari kia 2 ngā hēkona",
   "waitFor5Seconds": "taihoa kia 5 ngā hēkona",
-  "waitFor10Seconds": "taihoa kia 10 hēkona",
+  "waitFor10Seconds": "taihoa kia 10 ngā hēkona",
   "waitParamsTooltip": "Taihoa mō ngā hēkona kua whakaritea, whakauru te 0 kia tatari mō te pāwhiri.",
   "waitTooltip": "Taihoa mō te wā kua whakaritea, whakauru te 0 kia tatari mō te pāwhiri.",
   "whenArrowDown": "tohu raro",

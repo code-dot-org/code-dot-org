@@ -163,7 +163,7 @@ tr:
         desc: 'Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı öğreneceğiz.'
         video: 'C4_bağımsız_looplar_için'
       'SongwritingWithParameters':
-        title: 'Değiştirgenlerle Şarkı Yazma'
+        title: 'Parametrelerle Şarkı Yazmak'
         desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır. Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu kavramalarına yardımcı olacaktır.  '
         video: 'C4_tıkanmamış_parametreler'
       'BinaryImages':

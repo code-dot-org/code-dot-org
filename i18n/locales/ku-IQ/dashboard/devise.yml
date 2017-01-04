@@ -2,8 +2,8 @@ ku:
   devise:
     confirmations:
       confirmed: "ناونیسانی ئیمێڵەكەت بە سەرەوتوویی پشتڕاست كرا."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
+      send_instructions: "Tu dê vê gavê E-Mailek wergirî, kîjan dê alîkarî ya te bo Erêkirin ya Konto yê te kit"
+      send_paranoid_instructions: "Heker Adres ya E-Mail ya te nik me hebit, tu dê vê gavê berîdek wergirî, kîjan dê alîkarî ya te bo Erêkirin ya Konto yê te kit"
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account was not activated yet."

@@ -84,6 +84,7 @@
     overview: 'Registrer deg for å følge fremdriften din eller administrere klasserommet. <a href="/">Du kan bla gjennom de ulike scenene og oppgavene</a> uten en konto, men du må registrere deg for å lagre fremgang og prosjekter.'
     hoc_already_signed_up_heading: 'Kom i gang uten å logge inn'
     hoc_already_signed_up_content: 'Du er meldt på til Kodetimen! Dere trenger ikke å logge inn i Code Studio for å delta. For å komme i gang, <a href="https://code.org/learn">velg et oppgavesett</a> til klasserommet ditt, og del lenken med elevene.<br/><br/>Om dere likte Kodetimen og ønsker å kode mer, kan dere opprette kontoer i Code Studio og la elevene jobbe med de <a href="https://code.org/educate">lengre kursene</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Se lærerveiledningen'
     title: "Registrer deg på Code.org"
     school_name: 'Skolens navn (valgfritt)'
@@ -302,6 +303,7 @@
     delete_text: "Klikk på knappen under for å slette kontoen din."
     delete_text_teacher_note: 'NB: Hvis du sletter din konto, slettes ikke dine elevers kontoer.'
     delete_confirm: 'Er du sikker på at du vil slette denne kontoen?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -309,7 +311,7 @@
     title: "Kodestudio"
     description: 'Code Studio er hjemmet til nettbaserte kurs av Code.org'
     lines_of_code: "%{lines_count} LINJER MED KODE SKREVET AV ELEVER"
-    lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count} MILLIONER STUDENTER"
+    lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count} MILLIONER ELEVER"
     all_courses: "Oversikt over kurs 1, 2 og 3"
     lesson_plans: "Oppgaveplaner"
     signin_message: "Allerede registrert? %{link}"
@@ -357,20 +359,21 @@
     announcement_watch_video_button: "Watch video"
     announcement_petition: "Som lærer, er du del av en bevegelse som ønsker å gi alle elever, i alle skoler, muligheten til å lære programmering. Nå er det på tide å la myndighetene høre fra deg. Denne uken gikk ledere innenfor utdanning, 28 guvernører og administrerende direktører i de største selskapene i USA sammen og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning."
     announcement_petition_button: "Legg til navnet ditt"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Hold deg oppdatert med oppdateringer og ny funksjonalitet på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere kunngjøringer.</a>"
     announcement_hoc_launch: "Tusener av lærere i mer enn 180 land vil undervise programmering under Kodetimen, 5-11 desember. Vi regner med at du vil hjelpe oss å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise programmering."
-    announcement_hoc_scaling: OBS! På grunn av svært mye trafikk fra millioner av elever i løpet av Kodetimen (uke 49), vil ikke Code Studio lagre eller rapportere elevfremgang i de øvrige kursene. Vi anbefaler å gjennomføre et Kodetime-opplegg med klassen din i løpet av denne uka i stedet. Selv om heller ikke Kodetimen-kursene kommer til å lagre noen fremgang, kan elevene likevel fullføre dem og få et diplom etter fullført Kodetime.
     announcement_mc_launch: "Et av våre mest populære opplegg har fått en oppfølger! Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft. De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller spille det på telefonen sin. Gjennomfør opplegget med klassen din i årets Kodetime."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
     section_code_not_entered: "Legg inn gjeldende_seksjons_kode."
     section_code_cant_be_current_section: "Gjeldende seksjon kan ikke være den samme som den nye seksjonen."
     current_section_dne: "Beklager, men seksjon %{current_section_code} finnes ikke. Legg inn en annen seksjonskode."
-    students_not_yours: "Du kan ikke flytte studenter fra en seksjon som ikke tilhører deg."
+    students_not_yours: "Du kan ikke flytte elever fra en seksjon som ikke tilhører deg."
     stay_enrolled_not_entered: "Vennligst oppgi stay_enrolled_in_current_section."
     student_ids_not_entered: "Vennligst oppgi student_ids."
-    student_not_found: "Kunne ikke finne en eller flere elever."
+    student_not_found: "En eller flere elever ble ikke funnet."
     all_students_must_be_in_current_section: "Alle elever må være innrullert i din avdeling."
     already_enrolled_in_new_section: "Du kan ikke flytte disse elevene fordi denne læreren allerede har dem i en annen avdeling."
   share:

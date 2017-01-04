@@ -1504,16 +1504,16 @@ sq:
         text: "My name is Jens Bergensten but I'm better known as Jeb. I'm the lead developer on Minecraft, here at Mojang in Stockholm. I think I was eleven or maybe twelve and I started programming because I wanted to make games. One of my father's friends told me that in order to make games, you need to learn how to program. That's how I got started. I like designing and figuring out the architecture of games. That's what I really like about Minecraft."
       2:
         image: 'notes/mc_intro_2.JPG'
-        text: "Over the next hour, you're going to learn the basics of computer science by programming Alex or Steve to move through a simulated piece of a Minecraft world."
+        text: "Në orën në vazhdim do të msojmë bazat e shkencave kompjuterike duke programuar Alex ose Steve që të lëvizin përmes një pjese të simuluar të botës Minecraft."
       3:
         image: 'notes/mc_intro_3.JPG'
-        text: "Traditional programming is usually in text but today we'll use Blockly, a system which uses visual blocks that you can drag and drop to write programs. Under the hood, you're creating Javascript code."
+        text: "Programimi tradicional është zakonisht në tekst por ne do të përdorim atë me bbloqe, një sistem i cili përdor blloqet vizuale që mund të tërhiqen dhe lëshohen për të shkruar programe. Në brendësi po shkruajmë kod Javascript."
       4:
         image: 'notes/mc_intro_4.JPG'
-        text: "The concepts you'll be learning are what computer programmers use every day and are the foundation to computer science. Here at Mojang, we use these same concepts to make Minecraft work."
+        text: "Konceptet që do të mësojmë janë çfarë përdorin çdo ditë programuesit e kompjuterit dhe që janë bazat e shkencës kompjuterike. Këtu në Mojang, ne përdorim të njëjtat koncepte për të bërë të funksonojë botën e Minecraft."
       5:
         image: 'notes/mc_intro_5.JPG'
-        text: "Before you start, you'll pick your character. I'm going to choose Alex. Let's build code for a program that will help her move around the screen."
+        text: "Përpara se të filloni duhet të zgjidhni personazhin tuaj. Unë do të zgjedh Alex. Le të ndërtojmë një kod për një program që do na shërbejë për të lëvizur përreth ekranit."
       6:
         image: 'notes/mc_intro_6.JPG'
         text: "Ekrani jot është ndarë në 3 pjesë kryesore. Në të majtë është hapsira e lojës ku do ekzekutohet programi. Udhëzimet për çdo nivel janë shkruar poshtë."
@@ -1525,55 +1525,55 @@ sq:
         text: "Pjesa e bardhë në të djathtë është hapësira e punës dhe aty do të ndërtojmë programin."
       9:
         image: 'notes/mc_intro_9.JPG'
-        text: "If we drag the moveForward(); block to our workspace and then click run, what happens? Alex moves forward one space on the grid."
+        text: "Nëse zhvendosim bllokun \"lëviz përpara\" në hapësirën e punës dhe më pas klikojmë ekzekuto, çfarë ndodh? Alex lëviz përpara në rrjetë me një hapësirë."
       10:
         image: 'notes/mc_intro_10.JPG'
-        text: "And what if we want to do something after she has moved forward one space? We can add another block to our program. I'm going to choose the turnRight(); block and I'll drag it underneath my moveForward(); block until this orange line appears. Then I'll drop it and the two blocks will snap together. When we press run again, Alex will perform the commands that are stacked from top to bottom in our workspace."
+        text: "Dhe çfarë mund të bëjmë në qoftë se duam që Alex të bëjë diçka pasi të përparojë me një hapësirë? Mund t'i shtojmë programitnjë bllok tjetër. Do të përzgjedh bllokun \"kthehu djathtas\" dhe do ta vendos poshtë bllokut \"lëviz përpara\" derisa të shfaqet vija portokalli. Më pas do t'i ngjisim të dy blloqet. Do të klikojmë sërish ekzekuto dhe Alex do të realizojë të gjitha komandat që ndodhen në hapësirën tonë të punës."
       11:
         image: 'notes/mc_intro_11.JPG'
         text: "Nëse ndonjëherë të dëshironi të fshini një bllok, vetëm hiqeni atë nga grumbulli dhe tërhiqeni pas në mjetet ndihmëse."
       12:
         image: 'notes/mc_intro_12.JPG'
-        text: 'To undo your changes and get back to how the level started, use the Start Over button in the top right corner of the workspace. One more thing: you see the little triangle on the turn blocks? Anytime you see these triangles, it means that you can pick a different option. Let''s start coding!'
+        text: 'Për të kthyer mbrapsht ndryshimet dhe për tu kthyer në nivelin fillestar, përdorim butonin start në cepin e djathtë të hapësirës së punës. Edhe diçka tjetër: e shikoni trekëndëshin e vogël tek blloqet e kthimit? Sa herë që shikoni këto trekëndësha, do të thotë që mund të ndryshoni opsionet. Le të fillojmë kodimin!'
     mc_repeat:
       1:
         image: 'notes/mc_repeat_1.JPG'
-        text: "I'm Lydia Winters, Mojang's brand director and we made a little game called Minecraft."
+        text: "Unë jam Lydia Winters, drejtoreshë e markës Mojang dhe kemi bërë një lojë të vogël të quajtur Minecraft."
       2:
         image: 'notes/mc_repeat_2.JPG'
-        text: "My favorite thing to do in Minecraft is explore. I love adventuring in caves and seeing what I can find. As someone who isn't a programmer, I'm really excited to go through the Minecraft lesson and actually learn some coding myself."
+        text: "Gjëja që më pëlqen më shumë në Minecraft është eksplorimi. Më pëlqejnë shumë aventurat në shpella duke parë atë që mund të gjej. Si dikush që nuk është programues, jam shumë i gëzuar të luaj lojën Minecraft dhe të mësoj kodim vetëm."
       3:
         image: 'notes/mc_repeat_3.JPG'
-        text: "The last level needed lots of moveForward(); blocks. It would be easier if we could just tell the computer to perform the moveForward(); command four or five times. Luckily for us, computers are really good at repeating commands with repeat loops."
+        text: "Niveli i fundit kërkonte shumë blloqe \"lëviz përpara\". Do të ishte më e lehtë në qoftë se kompjuteri do të mund të ekzekutonte këtë komandë katër apo pesë herë. Fatmirësisht për ne, kompjuterat janë shumë të mirë në përsëritjen e veprimeve përmes cikleve."
       4:
         image: 'notes/mc_repeat_4.JPG'
-        text: "When building Minecraft, we use repeat loops to place all the initial materials for creating a new world. That's thousands and thousands of blocks. We also use loops in little ways, for example to make Alex's feet move back and forth as she walks. Repeat loops are a powerful part of programming."
+        text: "Kur ndërtojmë Minecraft, përdorim ciklet për të vendosur të gjitha materialet fillestare për krijimin e një bote të re. Ato përbëhen nga mijëra blloqe. Gjithashtu i përdorim ciklet dhe për veprime më të vogla si: të bëjmë që këmbët e Alex të lëvizin para dhe prapa kur ajo ecën. Ciklet janë një mjet shumë i fuqishëm i programimit."
       5:
         image: 'notes/mc_repeat_5.JPG'
-        text: "Night is coming so in the next couple of levels, we're going to build a house to stay safe. We're going to use the repeat block to do this very easily."
+        text: "Nata po afrohet kështu që në nivelet e ardhshme do të ndërtojmë një shtëpi që të jemi të sigurt. Do të përdorim blloqet që përsëriten për ta bërë këtë sa më thjeshtë."
       6:
         image: 'notes/mc_repeat_6.JPG'
-        text: "To build a wall of our house, we can either tell Alex to moveForward(); and place planks four times or we can tell her to moveForward(); and place one plank, then take this command and use the repeat block to have her perform the action multiple times. Now we'll click on the repeat block and tell her how many times we want her to perform this action. Now let's build our house before night falls! Have fun."
+        text: "Për të ndërtuar murin e shtëpisë mund ti themi Alex të \"lëvizë përpara\" dhe të vendosë katër pika ose mund ti themi të \"lëvizë përpara\" dhe të vendosë një pikë, e më pas ta marrë këtë komandë dhe ta përsërisë disa herë. Tashmë do të klikojmë në bllokun përsëritës dhe ti themi sa herë duhet ta përsërisë këtë veprim. Tani le të ndërtojmë shtëpinë përpara se të bjerë nata! Bëfshi qef."
     mc_if_statements:
       1:
         image: 'notes/mc_if_statements_1.JPG'
-        text: "Now we're going to learn about if statements. If statements are a fundamental part of learning to program. They help a computer make decisions."
+        text: "Tashmë do të mësëjmë rreth kushteve if. Kushtet if janë një pjesë thelbësore e të mësuarit si të programojmë. Ata i ndihmojnë kompjuterat të marrin vendime."
       2:
         image: 'notes/mc_if_statements_2.JPG'
-        text: "All computers use if statements, including my phone. For example, when I unlock my phone, it runs some code that says if I enter the password correctly, then unlock the phone. Otherwise, it shows an error message."
+        text: "Të gjithë kompjuterat përdorin kushtet if, duke përfshirë edhe telefonin tuaj. Për shembull, kur unë shkyç telefonin, ekzekutohet kodi i cili thotë në qoftë se fjalëkalimi është i saktë, atëherë shkyç telefonin. Në të kundërt shfaq një mesazh gabimi."
       3:
         image: 'notes/mc_if_statements_3.JPG'
-        text: "You can use if statements in your code to make Steve and Alice react to what they see in the world. For example, if there is a rock in front of them, they can turn left. Or turn right if they run into a tree."
+        text: "Mund ti përdorim kushtet if në kod për të bërë që Steve dhe Alice të regojnë në lidhje me gjërat që shohin në botë. Për shembull, në qoftë se përpara tyre gjendet një shkëmb, ata mund të kthehen majtas. Ose mund të kthehen djathtas në qoftë se hasin në një pemë."
       4:
         image: 'notes/mc_if_statements_4.JPG'
-        text: "In this case, we don't want to fall in the lava. It's easy to plan for the lava. We can see it on the screen. But what about the lava that we can't under the stone?"
+        text: "Në këtë rast ne nuk duam të biem në llavë. Është e thjeshtë të planifikojmë për llavën. Ne mund ta shohim atë në ekran. Po për llavën që nuk mund ta shohim që ndodhet poshtë gurëve?"
       5:
         image: 'notes/mc_if_statements_5.JPG'
-        text: "After we mine the stone, we'll need to check if there's any lava in that place before moving forward. If there is lava there, we want to place a stone in front of our character before we can move forward. That way we can safely move on. Time for more mining! And remember to use the if statement to watch your step."
+        text: "Pasi e hedhim në erë gurin, duhet të kontrollojmë në qoftë se ka llavë apo jo përpara se të lëvizim përpara. Në qoftë se ka llavë, duhet të vendosim një gur përpara personazhit tonë nv mënyrë që ai të mund të ecë. Në këtë mënyrë mund të ecim përpara në mënyrë të sigurt. Koha për të hedhur në erë! Dhe kujtohuni të përdorni kushtin if për tu kujdesur kur ecni."
     mc_congrats_share:
       1:
         image: 'notes/mc_congrats_share_1.JPG'
-        text: "Congratulations! You just learned the basic building blocks of computer science."
+        text: "Urime! Ju sapo mësuat blloqet kryesore të programimit në shkenca kompjuterike."
       2:
         image: 'notes/mc_congrats_share_2.JPG'
         text: "Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose."
@@ -1586,7 +1586,7 @@ sq:
     mc_congrats_no_share:
       1:
         image: 'notes/mc_congrats_no_share_1.JPG'
-        text: "Congratulations! You just learned the basic building blocks of computer science."
+        text: "Urime! Ju sapo mësuat blloqet kryesore të programimit në shkenca kompjuterike."
       2:
         image: 'notes/mc_congrats_no_share_2.JPG'
         text: "Now you can use these blocks to build your own creation. There are no more instructions and no puzzles to solve. You can build anything you want. You get to choose."

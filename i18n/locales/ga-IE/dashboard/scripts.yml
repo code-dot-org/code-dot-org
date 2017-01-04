@@ -30,7 +30,7 @@ ga:
           title: Cúrsa 2
           description: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu, ach nach bhfuil aon taithí acu ar an ríomhchlárú. Sa chúrsa seo, cruthóidh na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí idirghníomhacha is féidir a chomhroinnt. Dírithe ar aois 7-10.
           description_short: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Aois 6+ (cumas léitheoireachta de dhíth)
           stage:
             'Artist: Debugging': 'Ealaíontóir: Dífhabhtú'
             'Artist: Loops': 'Ealaíontóir: Lúba'
@@ -53,7 +53,7 @@ ga:
             Your Digital Footprint: Do Lorg Digiteach
         course3:
           title: Cúrsa 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Tá Cúrsa 3 dírithe ar dhaltaí a rinne Cúrsa 2 cheana. Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gCúrsaí 1 agus 2, chun réitigh níos solúbtha a thabhairt ar fadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí scéalta agus cluichí idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10.
           description_short: Leanann Cúrsa 3 go díreach tar éis Cúrsa 2.
           description_audience: Aois 8-18
           stage:
@@ -75,7 +75,7 @@ ga:
             Internet: An tIdirlíon
             Maze: Cathair Ghríobháin
             'Maze: Conditionals': 'Cathair Ghríobháin: Coinníollacha'
-            Songwriting: Ceapadh Ceoil le Paraiméadair
+            Songwriting: Ceapadh Ceoil
             'Studio: Create a Game': 'Spraotharlann: Cruthaigh Cluiche'
             'Studio: Create a Story': 'Spraotharlann: Cruthaigh Scéal'
         playlab:
@@ -212,7 +212,7 @@ ga:
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Unplugged lessons: Unplugged lessons
             Writing computer programs: Writing computer programs
           description_audience: ''
@@ -286,9 +286,9 @@ ga:
           description_short: Teagmhais
           stage:
             Bounce: Preabadh
-            Calc: Calc
-            Eval: Eval
-            Studio: Studio
+            Calc: Áireamh
+            Eval: Luacháil
+            Studio: Stiúideo
         flappy:
           title: Cód Flappy
           description: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail as ár gcúrsa Flappy Code!
@@ -321,14 +321,14 @@ ga:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Dúshláin
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Dúshláin
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -361,7 +361,7 @@ ga:
             Evaluation Blocks: Blocanna Luachála
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algPDmiami:
@@ -495,7 +495,7 @@ ga:
             Evaluation Blocks: Blocanna Luachála
             Next Steps: Next Steps
             Strings and Images: Teaghráin agus Íomhánna
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             The Big Game: The Big Game
             The Design Recipe: Oideas Dearaidh
           description_audience: ''
@@ -533,7 +533,7 @@ ga:
             Evaluation Blocks: Blocanna Luachála
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD-iZone:
@@ -546,7 +546,7 @@ ga:
             Evaluation Blocks: Blocanna Luachála
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD-NexTech:
@@ -696,11 +696,13 @@ ga:
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Stiúideo
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -717,7 +719,7 @@ ga:
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: Teaghráin agus Íomhánna
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -759,8 +761,12 @@ ga:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -780,7 +786,7 @@ ga:
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Oideas Dearaidh
@@ -852,8 +858,12 @@ ga:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +878,12 @@ ga:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -908,7 +922,7 @@ ga:
             Happy Maps: Mapaí Meidhreacha
             Move it, Move it: Bog é, Bog é
             'Real-life Algorithms: Plant a Seed': 'Algartaim Fhíorshaoil: Síol a Chur'
-            Songwriting: Ceapadh Ceoil le Paraiméadair
+            Songwriting: Ceapadh Ceoil
             The Big Event: An Teagmhas Mór
         afterschool1:
           title: Afterschool 1
@@ -1053,6 +1067,7 @@ ga:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Fáilte!
             Wrap-Up: Clabhsúr
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1192,6 +1207,7 @@ ga:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Fáilte!
             Wrap-Up: Clabhsúr
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1323,7 +1339,7 @@ ga:
             Evaluation Blocks: Blocanna Luachála
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD3c:
@@ -1421,7 +1437,7 @@ ga:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,6 +1473,17 @@ ga:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1545,7 +1572,7 @@ ga:
           stage:
             Evaluation Blocks: Blocanna Luachála
             Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD1:
@@ -1829,7 +1856,7 @@ ga:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Ceapadh Ceoil le Paraiméadair
+            Songwriting: Ceapadh Ceoil
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1884,8 +1911,12 @@ ga:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -2076,7 +2107,7 @@ ga:
           description_short: '\tPhase 3: School Year Support'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Painéal na Múinteoirí
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Oideas Dearaidh
@@ -2162,14 +2193,15 @@ ga:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Preabadh
-          title: Choose your team and make a basketball game
+          title: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           description_audience: ''
-          description_short: Make a basketball game
-          description: Make a basketball game
+          description_short: Déan do chluiche cispheile féin
+          description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2213,6 +2245,8 @@ ga:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,6 +2263,7 @@ ga:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2254,17 +2289,21 @@ ga:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Uair Chódála Minecraft - Dearthóir
+          title: Uair Chódála Minecraft - Dearthóir
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+          description: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2335,6 +2374,8 @@ ga:
             Your Digital Footprint: Do Lorg Digiteach
             Building a Foundation: Dúshraith a Leagan
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2359,6 +2400,8 @@ ga:
             Digital Citizenship: Saoránacht Dhigiteach
             'Unplugged: Binary': 'Díphlugáilte: Dénártha'
             Artist Binary: 'Ealaíontóir: Dénártha'
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Lúba Neadaithe
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2381,6 +2424,7 @@ ga:
             Private and Personal Information: Private and Personal Information
             Internet: An tIdirlíon
             Crowdsourcing: Sluafhoinsiú
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2430,10 +2474,10 @@ ga:
         sports:
           stage:
             Sports: Sports
-          title: MCode your own sports game
+          title: Códáil do chluiche spóirt féin
           description_audience: ''
-          description_short: Mix and match across sports
-          description: Mix and match across sports
+          description_short: Cumaisc na rialacha ó spóirt éagsúla
+          description: Cumaisc na rialacha ó spóirt éagsúla
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Fáilte!
@@ -2479,7 +2523,73 @@ ga:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Fáilte!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Clabhsúr
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Fáilte!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Clabhsúr
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

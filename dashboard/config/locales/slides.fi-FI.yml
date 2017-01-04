@@ -769,40 +769,39 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Mutta hymynaama on surullinen ja vain yksi henkilö tietää miten sinne
+          pääsee. Aloitetaan tämä ohjelma.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: Ohjelma on algoritmi, joka on koodattu joksikin, joka voidaan suorittaa
+          laitteella. Useimmat meistä ajattelee että ohjelmat kirjoitetaan tietokoneille.
+          Ohjelmat ovat todella hyviä siihenkin, mutta ne ovat myös hyödyllisiä muissakin
+          paikoissa. Voit tehdä oman pelin tai jopa robootin tekemään asioita sinulle.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Nimeni on Jeremia. Moikka! Olen seitsemän vuotta vanha. Rakastan pelata
+          äiti tietokoneella, mutta joudun aina kysymään lupaa ensin. "Äiti, saanko
+          pelata tietokoneella? Kyllä saat, rakas!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Rakastan äitini tietokonetta koska voin mennä nettiin. Netti on tavallaan
+          niin kuin naapurustosi. Voit käydä katsomassa siistejä paikkoja, voit puhua
+          perheelle ja kavereille ja voit oppia paljon uusia juttuja.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Eilen kävin eläintarhassa, joka on lähellä kotiini. Näin vauva seepran.
+          Otin siitä kuvan ja vaihdoin sen raitojen värin, sitten lisäsin sille hatun
+          ja tallensin sen minun kokoelmaan hauskoista eläimistä. Mahtavaa! Myöhemmin
+          menin paikkaan kauas pois. Kävin Keniassa. Se on maa Afrikassa. Paljon seeproja
+          asuu siellä.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
-          talk to people I know.
+        text: Joskus netissä juttelen ihmisten kanssa jotka tunnen, esimerkiksi mummini
+          joka asuu toisessa kaupungissa. Hei mummi! Hän tekee minulle keksejä jotka
+          hän lähettää minulle syntymäpäivänäni. "Nam, haluaisin että netin välityksellä
+          pystyisi lähettää tuoksuja!" Puhun eri ihmisille netissä, niin kuin serkulleni,
+          mutta puhun vain ihmisille joita tunnen.
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score!

@@ -2146,9 +2146,9 @@
         text: Informatikk er grunnlaget for det mange studenter og fagfolk vil drive
           med de neste tjue eller tretti år. Jeg liker programmering fordi jeg liker
           å hjelpe folk. Jeg får muligheten til å bygge noe som gjør folks liv enklere.
-          Jeg tror det er det nærmeste vi kommer til å ha en superkraft. Komme i gang
-          er den viktigste delen. Jeg er en nybegynner selv, og jeg ønsker at du skal
-          lære sammen med meg.
+          Jeg tror det er det nærmeste vi kommer til å ha en superkraft. Å komme i
+          gang er den viktigste delen. Jeg er en nybegynner selv, og jeg ønsker at
+          du skal lære sammen med meg.
       3:
         image: notes/infinity_playlab_intro_3.png
         text: Jeg heter John Vechey, og er en av grunnleggerne av PopCap Games. Vi
@@ -2300,9 +2300,10 @@
           en linje som sier at monster har "blank" øyne.
       4:
         image: notes/unplug2_4.png
-        text: Studenter vil kunne skrive et sett av instrukser, også kalt en algoritme,
-          som lister opp monstrenes kroppsdeler, med tomme typebeskrivelser. Studentene
-          sender settet av instrukser til andre studenter som gjenskaper deres monster.
+        text: Elevene vil kunne skrive et sett av instrukser, også kalt en algoritme,
+          som lister opp monstrenes kroppsdeler, med tomme typebeskrivelser. Elevene
+          sender settet av instrukser til andre studenter som gjenskaper sitt eget
+          monster.
     unplug3:
       1:
         image: notes/unplug3_1.png

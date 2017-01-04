@@ -83,7 +83,8 @@ si:
     teacher_count: 'ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     overview: 'ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.'
     hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'අධ්‍යාපක මඟපෙන්වීම දකින්න'
     title: "Code.org සඳහා ලියාපදිංචි වන්න"
     school_name: 'පාසලේ නම (විකල්ප)'
@@ -302,6 +303,7 @@ si:
     delete_text: "පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත."
     delete_text_teacher_note: 'සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ.'
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -357,11 +359,12 @@ si:
     announcement_watch_video_button: "Watch video"
     announcement_petition: "ඔබ ගුරුවරයෙකු වශයෙන් ඔබේ පාසලේ සෑම සිසුවෙකුටම පරිගණක විද්‍යාව පිලිබඳ අධ්‍යාපනය ලබා දෙන වැඩ පිලිවෙලක කොටස් කරුවෙකි. දැන් ඔබේ නියෝජිතයින්ට කතා කිරීමට කාලයයි. මෙම සතියේදි අධ්‍යාපනය පිලිබඳ ක්‍රියාධරයින්, ආණ්ඩුකාරවරු 28 දෙනෙක් සහ ඇමරිකාවේ ප්‍රධාන සමාගම් වල ප්‍රධානීන් පිරිසක් පෙර පාසලේ සිට අවුරුදු 12 දක්වා ළමුන්ගේ පරිගණක අධ්‍යාපනය වෙනුවෙන් මූල්‍ය පහසුකම් සපයන ලෙස එක්සත් ජනපදයේ කොන්ග්‍රසයට විවෘත ලිපියක් යැවීමට ගිවිස ගත්හ."
     announcement_petition_button: "ඔබේ නම එක් කරන්න"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "teacher blog හි, නව අංග හා යාවත්කාලීන කිරීම් ගැන දැනගැනීමට <a href='%{teacher_blog_url}' target='_blank'>පසුගිය නිවේදන බලන්න.</a>"
     announcement_hoc_launch: "ලොවපුරා 180කට වැඩි රටවල් ගණනකින්, අධ්‍යපකයින් දහස් ගණනක් මෙම දෙසම්බර් මස 5-11 සතිය තුළ Hour of Code වැඩසටහන ඔස්සේ පරිගණක විද්‍යාව ඉගැන්වීම අරඹනු ඇත. පෙර වතාවන් වලට වැඩි සිසුන් ගණනක් මෙවර සහභාගී කරගැනීමට අප ඔබගේ දායකත්වය අවශ්‍ය වන අතර තවත් ගුරුවරුන් මේ සඳහා සම්බන්ධ වීමට පොළඹවමින් දැන්ම <a href='%{signup_url}' target='_blank'>ඔබේ Hour of Code වැඩසටහන ලියාපදිංචි කරන්න</a>."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio is not saving or reporting student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials are also not saving progress this week, students can still do the full tutorials and earn a certificate.'
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "සමාවෙන්න!, %{new_section_code} අංශය නොපවතී. කරුණාකර වෙනස් අංශ කේතයක් ඇතුල් කරන්න."
     section_code_not_entered: "කරුණාකර වර්තමාන_කොටසේ_කේතය යොමු කරන්න."

@@ -166,7 +166,7 @@
   "extraTopBlocks": "つながっていないブロックがあります。",
   "extraTopBlocksWhenRun": "つながっていないブロックがあります。\"実行した時\" のブロックに、それらをつなげてください。",
   "finalStage": "おめでとうございます ！最終（さいしゅう）ステージをクリアしました。",
-  "finalStageTrophies": "おめでとうございます ！最終ステージをクリアしたので  {numTrophies, plural, one {トロフィー} other {# トロフィー}}を獲得しました。",
+  "finalStageTrophies": "おめでとうございます ！最終（さいしゅう）ステージをクリアしたので  {numTrophies, plural, one {トロフィー} other {# トロフィー}}を獲得（かくとく）しました。",
   "finish": "完了",
   "forTeachersOnly": "先生のみ",
   "generatedCodeInfo": "アメリカのトップの大学(例えば、{berkeleyLink} {harvardLink})でもブロック ベースのプログラミングを教えています 。あなたが組み合わせたブロックは実際のプログラム言語でどのようになっているか確認できるようにJavaScriptで表示できます。JavaScriptは世界中で最も広く使われているプログラム言語です。",

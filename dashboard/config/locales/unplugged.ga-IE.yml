@@ -211,9 +211,9 @@
           dhéanamh as sreangáin agus coirníní.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Ceapadh Ceoil le Paraiméadair
+        title: Ceapadh Ceoil
         desc: "Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi
-          pharaiméadair (luachanna a athraíonn feidhm gan gá an fheidhm a athscríobh)."
+          fheidhmeanna."
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algartaim Fhíorshaoil: An Rás Díslí'
