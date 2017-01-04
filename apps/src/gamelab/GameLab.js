@@ -43,6 +43,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -312,6 +313,15 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
   store.subscribe(() => {
     var lastState = state;
     state = store.getState();
+
+    const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
+      !hasValidContainedLevelResult();
+
+    if (state.interfaceMode !== lastState.interfaceMode &&
+        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        !awaitingContainedLevel) {
+      this.studioApp_.resetButtonClick();
+    }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);
