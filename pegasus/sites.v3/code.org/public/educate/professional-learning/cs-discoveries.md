@@ -4,7 +4,7 @@ nav: plc_csd_nav
 ---
 # CS Discoveries Professional Learning Program
 
-The Code.org Computer Science Discoveries Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms.
+The Code.org Computer Science Discoveries Professional Learning Program is an intensive professional learning program for middle school educators who are interested in teaching Code.org’s CS Discoveries course either as a semester or full-year offering. This program is designed to prepare educators to provide high quality instruction based on the [CS Discoveries curriculum](/educate/csd), tools and approach to students in their classrooms. **We are now accepting applications for the 2017-18 Professional Learning Program! Please read below for more information.** 
 
 ## What does a Code.org CS Discoveries educator do?
 If accepted into the Code.org CS Discoveries Professional Learning Program, you will:
@@ -43,7 +43,7 @@ The CS Discoveries Professional Learning Program is open to teachers who are int
 * Commit to participating in the full, year-long professional development program
 * Work with their school administration to ensure that this course will be offered on the school's 2017-18 master schedule
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population
-* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/professional-learning-partner/partners).
+* Teach the course in a school served by one of Code.org's Regional Partners. To find out if your area is served by one of our Regional Partners, please visit our [Regional Partner Map](https://code.org/educate/regional-partner/partners).
 
 
 ## <a name="locations"></a>Where is the program offered?
@@ -52,6 +52,10 @@ We currently offer the CS Discoveries Professional Learning Program in locations
 
 ## <a name="apply"></a>How to apply?
 
-We're so excited that you're interested in applying for our CS Discoveries Professional Learning Program! Applications for the program open on January 5, 2017. Please [fill out our interest form](https://goo.gl/forms/jBWAHg5jvEV8lSV52) to be notified when the application is live.
+Applications for the 2017-18 CS Discoveries Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+
+[<button>Apply now!</button>](/educate/professional-learning/cs-discoveries-apply)
+
+Not ready to apply, but interested in joining in 2018-19? Sign up to be added to our contact list. 
 
 [<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

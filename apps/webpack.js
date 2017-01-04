@@ -20,11 +20,15 @@ var baseConfig = {
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
+  },
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
       {test: /\.ejs$/, loader: 'ejs-compiled'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
       {
         test:/.png|.jpg|.jpeg|.gif|.svg/,
         include: [

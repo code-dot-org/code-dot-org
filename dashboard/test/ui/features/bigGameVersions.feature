@@ -41,4 +41,5 @@ Feature: Big Game Versions
     And element "button.version-preview" is visible
     And I click selector "button:contains(Restore this Version):eq(0)"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for jquery to load
     And I wait until element "g#game_title > .blocklyText:eq(0)" contains text "VERSION_TEST"
