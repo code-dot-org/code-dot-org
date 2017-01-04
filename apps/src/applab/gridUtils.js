@@ -3,7 +3,7 @@
  */
 
 import $ from 'jquery';
-import {isMouseInBounds} from '../util/grid';
+import {isPointInBounds} from '../util/grid';
 
 const GRID_SIZE = 5;
 
@@ -74,4 +74,4 @@ export function snapToGridSize(coordinate) {
   return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
 }
 
-export {isMouseInBounds};
+export {isPointInBounds};
