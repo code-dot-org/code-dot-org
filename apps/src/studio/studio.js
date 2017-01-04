@@ -3481,9 +3481,13 @@ Studio.displaySprite = function (i) {
   // in onTick loop)
   sprite.display();
 
-  if (!sprite.bubbleVisible) {
-    return;
+  if (sprite.bubbleVisible) {
+    Studio.renderSpeechBubble(i);
   }
+};
+
+Studio.renderSpeechBubble = function (i) {
+  var sprite = Studio.sprite[i];
 
   var speechBubble = document.getElementById('speechBubble' + i);
   var speechBubblePath = document.getElementById('speechBubblePath' + i);
