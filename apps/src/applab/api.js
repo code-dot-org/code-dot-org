@@ -379,18 +379,6 @@ export function clearInterval(intervalId) {
                            {'intervalId': intervalId });
 }
 
-export function playSound(url) {
-  return Applab.executeCmd(null,
-                          'playSound',
-                          {'url': url});
-}
-
-export function stopSound(url) {
-  return Applab.executeCmd(null,
-    'stopSound',
-    {'url': url});
-}
-
 export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null,
                            'getKeyValue',

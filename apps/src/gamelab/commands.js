@@ -1,6 +1,6 @@
 /** @file Non-p5 GameLab commands */
 import {singleton as studioApp} from '../StudioApp';
-import addAudioCommands from '@cdo/apps/lib/util/audioCommands';
+import {addAudioCommands} from '@cdo/apps/lib/util/audioApi';
 
 /*
   The 'commands' file assembles a set of calls that student code can make
