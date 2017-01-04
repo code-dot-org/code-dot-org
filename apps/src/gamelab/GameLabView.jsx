@@ -16,39 +16,12 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import {ResetButton} from '../templates/GameButtons';
-import * as color from "../util/color";
 
-var styles = {
-  resetButtonWrapper: {
-    position: 'absolute',
-    bottom: 5,
-    textAlign: 'center',
-    width: '100%',
-  },
-  resetButton: {
-    display: 'inline-block',
-    width: 42,
-    minWidth: 0,
-    backgroundColor: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    padding: 7,
-    height: 42,
-    marginLeft: 5,
-    position: 'relative',
-    left: 2,
-    bottom: 2,
-  },
-  resetButtonImage: {
-    marginLeft: 2,
-    marginTop: -2,
-  },
-};
 
 /**
  * Top-level React wrapper for GameLab
  */
-export const GameLabView = React.createClass({
+const GameLabView = React.createClass({
   propTypes: {
     // Provided manually
     showFinishButton: React.PropTypes.bool.isRequired,
@@ -76,13 +49,8 @@ export const GameLabView = React.createClass({
   },
 
   renderCodeMode() {
-    const {
-      interfaceMode,
-      isResponsive,
-      hideSource,
-      pinWorkspaceToBottom,
-      showFinishButton
-    } = this.props;
+    const {interfaceMode, isResponsive, hideSource, pinWorkspaceToBottom,
+           showFinishButton} = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
@@ -117,11 +85,6 @@ export const GameLabView = React.createClass({
            style={{top: 79, left: 17}}
            playButtonStyle={{top: 620, left: 179}}
          />}
-        <ResetButton
-          hideText
-          style={styles.resetButton}
-          imageStyle={styles.resetButtonImage}
-        />
         <ProtectedStatefulDiv
           id="visualizationResizeBar"
           className="fa fa-ellipsis-v"
@@ -151,13 +114,12 @@ export const GameLabView = React.createClass({
     );
   }
 });
-
-export default connect(state => ({
+module.exports = connect(state => ({
   hideSource: state.pageConstants.hideSource,
   interfaceMode: state.interfaceMode,
   isResponsive: isResponsiveFromState(state),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  allowAnimationMode: !!allowAnimationMode(state),
+  allowAnimationMode: allowAnimationMode(state),
   showVisualizationHeader: showVisualizationHeader(state),
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
