@@ -13,6 +13,7 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
+import * as dom from '../dom';
 
 var styles = {
   completion: {
@@ -98,10 +99,18 @@ const ApplabVisualizationColumn = React.createClass({
         </PhoneFrame>
       );
     }
+    const chromelessShare = dom.isMobile() && !dom.isIPad();
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
+
+      // the below replicates some logic in StudioApp.handleHideSource_ which
+      // imperatively changes the css classes depending on various share
+      // parameters. This logic really shouldn't live in StudioApp, so I don't
+      // feel too bad about copying it here, where it should really live...
+      chromelessShare: chromelessShare && this.props.isShareView,
+      wireframeShare: !chromelessShare && this.props.isShareView,
     });
 
     return (
