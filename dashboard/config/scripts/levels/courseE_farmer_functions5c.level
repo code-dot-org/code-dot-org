@@ -33,8 +33,7 @@
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
