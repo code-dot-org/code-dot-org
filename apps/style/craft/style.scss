@@ -806,6 +806,16 @@ $height-to-width: 434 / 477;
   &#resetButton {
     min-width: 139px;
 
+    &.hideText {
+      min-width: 0px;
+      width: 62px;
+      height: 62px;
+      img {
+        margin-left: 0px;
+        margin-top: -5px;
+      }
+    }
+
     & > div {
       font-size: 24px;
       color: white !important;
