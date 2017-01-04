@@ -33,20 +33,12 @@ var styles = {
   },
   resetButton: {
     display: 'inline-block',
-    width: 42,
-    minWidth: 0,
     backgroundColor: color.dark_charcoal,
     borderColor: color.dark_charcoal,
-    padding: 7,
-    height: 42,
     marginLeft: 5,
     position: 'relative',
     left: 2,
     bottom: 2,
-  },
-  resetButtonImage: {
-    marginLeft: 2,
-    marginTop: -2,
   },
   containedInstructions: {
     marginTop: 10
@@ -57,7 +49,7 @@ var styles = {
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-var ApplabVisualizationColumn = React.createClass({
+const ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
@@ -66,7 +58,6 @@ var ApplabVisualizationColumn = React.createClass({
     nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
@@ -130,9 +121,8 @@ var ApplabVisualizationColumn = React.createClass({
         {this.props.isIframeEmbed &&
           <div style={styles.resetButtonWrapper}>
             <ResetButton
-              hideText={true}
+              hideText
               style={styles.resetButton}
-              imageStyle={styles.resetButtonImage}
             />
           </div>
         }
@@ -170,7 +160,6 @@ export default connect(function propsFromStore(state) {
     isRunning: state.runState.isRunning,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
-    interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };

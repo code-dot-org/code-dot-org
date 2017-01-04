@@ -48,11 +48,7 @@ export const ResetButton = Radium(props => (
     <div>
       {!props.hideText && msg.resetProgram()}
     </div>
-    <img
-      src={blankImg}
-      style={props.imageStyle}
-      className="reset26"
-    />
+    <img src={blankImg} className="reset26" />
   </button>
 ));
 ResetButton.propTypes = {
