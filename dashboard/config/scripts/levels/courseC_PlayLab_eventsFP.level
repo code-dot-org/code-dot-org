@@ -44,8 +44,8 @@
     ],
     "first_sprite_index": "0",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"*Need an idea?*\\n\\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\\n\\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)\",\r\n  \"hint_id\": \"idea1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"*Need an idea?*\\n\\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\\n\\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)\",\r\n  \"hint_id\": \"idea2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"*Need an idea?*\\n\\n**Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.\",\r\n  \"hint_id\": \"idea3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

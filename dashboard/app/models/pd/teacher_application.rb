@@ -51,7 +51,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
     grades2017
     subjects2017
     committedToSummer
-    ableToAttendAssignedSummerWorkshop
     allStudentsShouldLearn
     allStudentsCanLearn
     newApproaches
