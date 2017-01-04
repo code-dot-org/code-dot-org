@@ -32,8 +32,10 @@ const group1CspWorkshops = {
   'NorthEast Washington Educational Service District 101': 'July 10 - 14, 2017'
 };
 
+const workshopNamePlaceholder = '2017 Workshop (exact date to be determined)';
+
 export function getWorkshopForState(regionalPartnerGroup, regionalPartnerName, selectedCourse, state ) {
-  let workshopName = `2017 Workshop (exact date to be determined) ${regionalPartnerName ? `by ${regionalPartnerName}` : ''}`;
+  let workshopName = `${workshopNamePlaceholder}${regionalPartnerName ? ` by ${regionalPartnerName}` : ''}`;
 
   if (regionalPartnerGroup === 2 || (regionalPartnerGroup === 1 && selectedCourse === 'csd')) {
     _.forEach(groupTwoOrGroupOneCsdWorkshops, (value, key) => {
@@ -52,5 +54,6 @@ export function getWorkshopForState(regionalPartnerGroup, regionalPartnerName, s
 
 export {
   groupTwoOrGroupOneCsdWorkshops,
-  group1CspWorkshops
+  group1CspWorkshops,
+  workshopNamePlaceholder
 };

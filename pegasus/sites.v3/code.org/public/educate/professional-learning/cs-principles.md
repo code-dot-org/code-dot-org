@@ -50,7 +50,7 @@ The CS Principles Professional Learning Program is open to educators who are int
 
 ## <a name="locations"></a>Where is the program offered?
 
-The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our [Regional Partner Map](https://code.org/educate/professional-learning-partner/partners) to see if there is a partner in your area.
+The CS Principles Professional Learning Program is available in regions served by Code.org's Regional Partners. Please check our [Regional Partner Map](https://code.org/educate/regional-partner/partners) to see if there is a partner in your area.
 
 ## <a name="apply"></a>How to apply?
 

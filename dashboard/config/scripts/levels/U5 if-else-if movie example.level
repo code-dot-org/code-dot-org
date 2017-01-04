@@ -63,7 +63,8 @@
     "show_debug_watch": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "RuCxAioErp45Q2JZmxlgAQT7u4hNkvWz1SjGr2MseWPBmgCj5WSFyo5gBGA1\nctKY\n"
   },
   "published": true,
   "notes": "",

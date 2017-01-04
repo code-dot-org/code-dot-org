@@ -35,7 +35,7 @@ In the future you might see a task that asks you to do something like, "Write a 
 </div>
 Printing messages to the console is just about the **fastest and easiest** way to immediately see output from a running program.  
 
-Many profressionals **get started building programs** with very simple inputs and outputs, using the console initially to just display a plain-text transcript of activity.  It helps you see what's happening early on.  You can update graphical displays and remove print statements later on.
+Many professionals **get started building programs** with very simple inputs and outputs, using the console initially to just display a plain-text transcript of activity.  It helps you see what's happening early on.  You can update graphical displays and remove print statements later on.
 
 As you program more and more you realize that it's nice to **get immediate feedback from the computer** that your program is doing *something*.
 
