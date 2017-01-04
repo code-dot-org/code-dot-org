@@ -770,16 +770,16 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_setSpritePosition = {
-    // Block for jumping a sprite to different position.
+    // Block for jumping a sprite (selected by dropdown) to different position.
     helpUrl: '',
     init: function () {
       var dropdown;
       if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
-        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
+        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[1][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       }
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
@@ -798,13 +798,44 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
-  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
-
   generator.studio_setSpritePosition = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: (this.getTitleValue('SPRITE') || '0'),
+      name: 'setSpritePosition'});
+  };
+
+  blockly.Blocks.studio_setSpritePositionParams = {
+    // Block for jumping a sprite (selected by block param) to different position.
+    helpUrl: '',
+    init: function () {
+      var dropdown;
+      if (allowSpritesOutsidePlayspace) {
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
+        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
+      } else {
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
+      }
+      this.setHSV(184, 1.00, 0.74);
+
+     this.appendValueInput('SPRITE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.setSpriteN({spriteIndex: ''}));
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritePositionTooltip());
+    }
+  };
+
+  generator.studio_setSpritePositionParams = function () {
+    return generateSetterCode({
+      ctx: this,
+      extraParams: (getSpriteIndex(this) || '0'),
       name: 'setSpritePosition'});
   };
 
