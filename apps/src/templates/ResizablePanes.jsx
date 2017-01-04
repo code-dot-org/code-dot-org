@@ -13,9 +13,9 @@ const styles = {
   resizer: {
     flex: '0 0 0',
     boxSizing: 'border-box',
-    background: '#000',
     opacity: 0.2,
     zIndex: 1,
+    backgroundColor: '#000',
     backgroundClip: 'padding-box',
     userSelect: 'text',
     width: 11,
@@ -41,6 +41,7 @@ var ResizablePanes = Radium(React.createClass({
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     onChange: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
+    lockedColumns: React.PropTypes.arrayOf(React.PropTypes.number)
   },
 
   getInitialState: function () {
@@ -130,12 +131,25 @@ var ResizablePanes = Radium(React.createClass({
     );
   },
 
+  isColumnLocked: function (index) {
+    if (!this.props.lockedColumns) {
+      return false;
+    }
+
+    return this.props.lockedColumns.indexOf(index) >= 0;
+  },
+
   getChildren: function () {
     var childCount = React.Children.count(this.props.children);
     var computedChildren = [];
     React.Children.forEach(this.props.children, function (child, index) {
+      if (!child) {
+        return;
+      }
       computedChildren.push(this.getClonedChild(child, index));
-      if (index !== childCount - 1) {
+      const isLockedColumn = this.isColumnLocked(index);
+      const isFinalColumn = index === childCount - 1;
+      if (!isFinalColumn && !isLockedColumn) {
         computedChildren.push(this.getResizer(index));
       }
     }, this);
@@ -158,4 +172,5 @@ var ResizablePanes = Radium(React.createClass({
     );
   }
 }));
-module.exports = ResizablePanes;
+
+export default ResizablePanes;
