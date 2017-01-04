@@ -807,11 +807,11 @@ $height-to-width: 434 / 477;
     min-width: 139px;
 
     &.hideText {
-      min-width: 0px;
+      min-width: 0;
       width: 62px;
       height: 62px;
       img {
-        margin-left: 0px;
+        margin-left: 0;
         margin-top: -5px;
       }
     }
