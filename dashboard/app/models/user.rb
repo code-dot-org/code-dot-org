@@ -1070,14 +1070,12 @@ class User < ActiveRecord::Base
 
   # can this user edit their own account?
   def can_edit_account?
-    return true if teacher? || encrypted_password.present? || oauth?
-
-    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
-    sections_as_student = followeds.collect(&:section)
-    return true if sections_as_student.empty?
-
-    # if you log in only through picture passwords you can't edit your account
-    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
+    teacher? ||
+      encrypted_password.present? ||
+      oauth? ||
+      sections_as_student.empty? ||
+      # if you log in only through picture passwords you can't edit your account
+      !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
   def section_for_script(script)
