@@ -4967,44 +4967,19 @@ en:
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
       Commute Assess - comp 1 - block:
         This program causes an error: This program causes an error
-        This program does not do anything: This program does not do anything
         a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
-        description here: description here
         makes a and b equal to each other: makes a and b equal to each other
         rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
         swaps the values of a and b: swaps the values of a and b
         this code doesn't do anything: this code doesn't do anything
-        title: title
       Commute Assess - comp 2 - block:
         Randomly returns on of the three numbers: Randomly returns on of the three numbers
         'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
         Returns the largest of the three numbers: Returns the largest of the three numbers
         Set all three inputs to a temporary value: Set all three inputs to a temporary value
-        The function op4 takes in 3 numbers, what does this function do?: The function op4 takes in 3 numbers, what does this function do?
-        The procedure <code>op4</code> takes in 3 numbers, what does this procedure do?: The procedure <code>op4</code> takes in 3 numbers, what does this procedure do?
         'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
         This code will cause an error: This code will cause an error
       Commute Assess - comp 4 - block:
-        Displays "false" repeatedly until 100 is found in the list and then displays "true": Displays "false" repeatedly until 100 is found in the list and then displays "true"
-        Displays "false" repeatedly until the 100 is found in the list and then displays "true": Displays "false" repeatedly until the 100 is found in the list and then displays "true"
-        Displays "flag": Displays "flag"
-        Displays "true" if the value 100 was found in the list, and "false" if it was not: Displays "true" if the value 100 was found in the list, and "false" if it was not
-        Displays "true" only if the last value in the list is 100: Displays "true" only if the last value in the list is 100
-        Displays "true" repeatedly until 100 is found in the list: Displays "true" repeatedly until 100 is found in the list
-        Displays "true" repeatedly until the 100 is found in the list: Displays "true" repeatedly until the 100 is found in the list
-        This code will cause an error: This code will cause an error
-        This code will cause an infinite loop if 100 is not in the list: This code will cause an infinite loop if 100 is not in the list
-        What does this code do?: What does this code do?
-        checks to see if the first number in the list is 100: checks to see if the first number in the list is 100
-        checks to see if the last number in the list is 100: checks to see if the last number in the list is 100
-        checks to see if the number 100 is in the list: checks to see if the number 100 is in the list
-        checks to see if there are 100 numbers in the list: checks to see if there are 100 numbers in the list
-        displays "true" or "false" 100 times: displays "true" or "false" 100 times
-        displays <code>true</code> if the first number in the list is 100: displays <code>true</code> if the first number in the list is 100
-        displays <code>true</code> if the last number in the list is 100: displays <code>true</code> if the last number in the list is 100
-        displays <code>true</code> if the number 100 is in the list: displays <code>true</code> if the number 100 is in the list
-        displays <code>true</code> if there are 100 numbers in the list: displays <code>true</code> if there are 100 numbers in the list
-        displays <code>true</code> or <code>false</code> 100 times: displays <code>true</code> or <code>false</code> 100 times
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
@@ -5015,7 +4990,6 @@ en:
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
         ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
         : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
-        this script will cause an error: this script will cause an error
       Commute Assess - comp 5 - block:
         It always sets x equal to 5: It always sets x equal to 5
         Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
@@ -5024,154 +4998,67 @@ en:
         This code will cause an error: This code will cause an error
         What does this code do?: What does this code do?
       Commute Assess - cond 3 - block:
-        '" and 30 or over"': '" and 30 or over"'
-        '" and under 21"': '" and under 21"'
-        '"Under 40 and 30 or over"': '"Under 40 and 30 or over"'
-        '"Under 40 and under 21 and 30 or over"': '"Under 40 and under 21 and 30 or over"'
-        '"Under 40 and under 21"': '"Under 40 and under 21"'
-        '"Under 40"': '"Under 40"'
-        "<pre>And 30 or over</pre>": "<pre>And 30 or over</pre>"
         "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
         "<pre>And under 21</pre>": "<pre>And under 21</pre>"
         "<pre>Under 40</pre>": "<pre>Under 40</pre>"
-        "<pre>Under 40<br>And 30 or over</pre>": "<pre>Under 40<br>And 30 or over</pre>"
         "<pre>Under 40<br>And contains a 3</pre>": "<pre>Under 40<br>And contains a 3</pre>"
-        "<pre>Under 40<br>And under 21</pre>": "<pre>Under 40<br>And under 21</pre>"
-        "<pre>Under 40<br>And under 21<br>And 30 or over</pre>": "<pre>Under 40<br>And under 21<br>And 30 or over</pre>"
         "<pre>Under 40<br>And under 21<br>And contains a 3</pre>": "<pre>Under 40<br>And under 21<br>And contains a 3</pre>"
         Nothing will be displayed: Nothing will be displayed
         What will be displayed after running this code?: What will be displayed after running this code?
       Commute Assess - func 1 - block:
-        '"" [nothing will be printed]': '"" [nothing will be printed]'
-        '"hi and  and bye and"': '"hi and  and bye and"'
-        '"hi and bye and"': '"hi and bye and"'
-        '"hi and bye"': '"hi and bye"'
-        '"hi bye and"': '"hi bye and"'
-        "<pre>hi<br>and<br><br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br><br>and<br>bye<br>and</pre>"
         "<pre>hi<br>and<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>and<br>bye<br>and</pre>"
         "<pre>hi<br>and<br>bye</pre>": "<pre>hi<br>and<br>bye</pre>"
         "<pre>hi<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>bye<br>and</pre>"
         "<pre>hi<br>bye<br>and</pre>": "<pre>hi<br>bye<br>and</pre>"
         Nothing will be printed: Nothing will be printed
-        What will be printed when this script is run?: What will be printed when this script is run?
-        "[nothing will be printed]": "[nothing will be printed]"
-        right answer: right answer
       Commute Assess - func 2a - block:
-        '': ''
-        '"" [nothing is printed]': '"" [nothing is printed]'
-        '"10"': '"10"'
-        '"5"': '"5"'
-        '"55"': '"55"'
         "<pre>10</pre>": "<pre>10</pre>"
         "<pre>55</pre>": "<pre>55</pre>"
         "<pre>5</pre>": "<pre>5</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
-        What will be printed when this script is run?: What will be printed when this script is run?
-        "[nothing is printed]": "[nothing is printed]"
-        this script would cause an error: this script would cause an error
       Commute Assess - func 2b - block:
-        '"" [nothing is printed]': '"" [nothing is printed]'
-        '"21"': '"21"'
-        '"81"': '"81"'
-        '"9"': '"9"'
         "<pre>21</pre>": "<pre>21</pre>"
         "<pre>81</pre>": "<pre>81</pre>"
         "<pre>9</pre>": "<pre>9</pre>"
-        What will be displayed when this code is run?: What will be displayed when this code is run?
-        What will be printed when this script is run?: What will be printed when this script is run?
-        "[nothing is printed]": "[nothing is printed]"
         nothing is printed: nothing is printed
         this script would cause an error: this script would cause an error
       Commute Assess - func 3a - block:
-        '"func1 func2 func1"': '"func1 func2 func1"'
-        '"func1 func2"': '"func1 func2"'
-        '"write func1 write func2"': '"write func1 write func2"'
-        "<pre>DISPLAY func1<br>DISPLAY func2</pre>": "<pre>DISPLAY func1<br>DISPLAY func2</pre>"
         "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
-        "<pre>func 1<br>func2</pre>": "<pre>func 1<br>func2</pre>"
         "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
-        "<pre>func1<br>func2<br>func1</pre>": "<pre>func1<br>func2<br>func1</pre>"
         "<pre>in func1<br>in func2</pre>": "<pre>in func1<br>in func2</pre>"
         "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
         Nothing is printed: Nothing is printed
         This script would cause an error: This script would cause an error
-        "[nothing is printed]": "[nothing is printed]"
-        this script would cause an error: this script would cause an error
       Commute Assess - func 3b - block:
-        '""  [nothing is printed]': '""  [nothing is printed]'
-        '"func3 func1 func3"': '"func3 func1 func3"'
-        '"func3 func1"': '"func3 func1"'
-        '"func3 func3 func1"': '"func3 func3 func1"'
-        '"func3" will be printed over and over until the code is stopped manually': '"func3" will be printed over and over until the code is stopped manually'
-        '"func3" will be printed over and over until the script is stopped': '"func3" will be printed over and over until the script is stopped'
-        "<pre>func3</pre> will be printed over and over until the code is stopped manually": "<pre>func3</pre> will be printed over and over until the code is stopped manually"
         "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
-        "<pre>func3<br>func1<br>func3</pre>": "<pre>func3<br>func1<br>func3</pre>"
-        "<pre>func3<br>func3<br>func1</pre>": "<pre>func3<br>func3<br>func1</pre>"
         "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
         "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
         "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
         ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
         : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd;">in func3</span> will be printed over and over until the code is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd;">in func3</span> will be printed over and over until the code is stopped manually'
         Nothing is displayed: Nothing is displayed
-        This script would cause an error: This script would cause an error
         What will be displayed when this code is run?: What will be displayed when this code is run?
-        "[nothing is displayed]": "[nothing is displayed]"
-        this script would cause an error: this script would cause an error
       CommuteAssess - Cond 1 - block:
-        '"Inside first if Inside second if"': '"Inside first if Inside second if"'
-        '"Inside first if"': '"Inside first if"'
-        '"Inside first ifInside second if"': '"Inside first ifInside second if"'
-        '"Inside second if"': '"Inside second if"'
-        '"It will be different each time"': '"It will be different each time"'
-        "<pre>Inside first if Inside second if</pre>": "<pre>Inside first if Inside second if</pre>"
         "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
         "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
         "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
-        Inside first if: Inside first if
         It will be different each time: It will be different each time
         Nothing will be printed: Nothing will be printed
         What will be displayed after running this code?: What will be displayed after running this code?
-        nothing will be printed: nothing will be printed
       CommuteAssess - Cond 2 - block:
-        '"All done."': '"All done."'
-        '"Inside the else all done"': '"Inside the else all done"'
-        '"Inside the if. "': '"Inside the if. "'
-        '"Inside the if. <br>All done."': '"Inside the if. <br>All done."'
-        '"Inside the if. Inside the else all done"': '"Inside the if. Inside the else all done"'
-        '"all done"': '"all done"'
-        '"inside the else all done"': '"inside the else all done"'
-        '"inside the if all done"': '"inside the if all done"'
-        '"inside the if inside the else all done"': '"inside the if inside the else all done"'
-        '"inside the if"': '"inside the if"'
         "<pre>All done.</pre>": "<pre>All done.</pre>"
         "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
         "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
         "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
         "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
-        "<pre>Inside the if. Inside the else. All done.</pre>": "<pre>Inside the if. Inside the else. All done.</pre>"
         What will be displayed after running this code?: What will be displayed after running this code?
-        What will be printed after running this script?: What will be printed after running this script?
       CommuteAssess - Cond 4a - block:
-        '"The word is just right"': '"The word is just right"'
-        '"The word is just rightThe word is still too short!"': '"The word is just rightThe word is still too short!"'
-        '"The word is just rightthe word is still too short!"': '"The word is just rightthe word is still too short!"'
-        '"The word is still too short!"': '"The word is still too short!"'
-        '"The word is too short!"': '"The word is too short!"'
-        '"The word it too long!"': '"The word it too long!"'
         "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
         "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
         "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
         "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
         "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
-        If <code>word</code> was set to "Hello", what will be displayed after the code has run?: If <code>word</code> was set to "Hello", what will be displayed after the code has run?
-        If <code>word</code> was set to "Hello", what would be printed?: If <code>word</code> was set to "Hello", what would be printed?
-        If <pre>word</pre> was set to "Hello", what would be printed?: If <pre>word</pre> was set to "Hello", what would be printed?
-        If the variable <code>word</code> was set to "Hello", what will be displayed after the code has run?: If the variable <code>word</code> was set to "Hello", what will be displayed after the code has run?
-        If word was set to "Hello", what would be printed?: If word was set to "Hello", what would be printed?
         Nothing will be displayed: Nothing will be displayed
         What will be displayed after this code has run?: What will be displayed after this code has run?
       CommuteAssess - Cond 4b - block:
@@ -5181,23 +5068,6 @@ en:
         '"The word is too short!"': '"The word is too short!"'
         '"The word it too long!"': '"The word it too long!"'
         If word was set to "Hi", what would be printed?: If word was set to "Hi", what would be printed?
-      CommuteAssess - Cond. 1 - block:
-        '"Inside first if"': '"Inside first if"'
-        '"Inside first ifInside second if"': '"Inside first ifInside second if"'
-        '"Inside second if"': '"Inside second if"'
-        '"It will be different each time"': '"It will be different each time"'
-        Inside first if: Inside first if
-        What will be printed after running this script?: What will be printed after running this script?
-      CommuteAssess - Cond. 2 - block:
-        '"all done"': '"all done"'
-        '"inside the else all done"': '"inside the else all done"'
-        '"inside the if all done"': '"inside the if all done"'
-        '"inside the if inside the else all done"': '"inside the if inside the else all done"'
-        '"inside the if"': '"inside the if"'
-        What will be printed after running this script: What will be printed after running this script
-        What will be printed after running this script?: What will be printed after running this script?
-        blah: blah
-        foo: foo
       CommuteAssess - Var 3 - block:
         What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
         x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
@@ -5213,67 +5083,37 @@ en:
         x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
         x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
       CommuteAssess - Var 5 - block:
-        '"" [Nothing will be printed]': '"" [Nothing will be printed]'
-        '"11" then  "11" then "11"': '"11" then  "11" then "11"'
-        '"11" then  "13" then  "18"': '"11" then  "13" then  "18"'
-        '"18" then "18" then "18"': '"18" then "18" then "18"'
-        '"x" then "x" then "x + 5"': '"x" then "x" then "x + 5"'
         "<pre>11<br>11<br>11</pre>": "<pre>11<br>11<br>11</pre>"
         "<pre>11<br>13<br>18</pre>": "<pre>11<br>13<br>18</pre>"
-        "<pre>11<br>13<br><br>18</pre>": "<pre>11<br>13<br><br>18</pre>"
         "<pre>18<br>18<br>18</pre>": "<pre>18<br>18<br>18</pre>"
         "<pre>x<br>x<br>x + 5</pre>": "<pre>x<br>x<br>x + 5</pre>"
         Nothing will be printed: Nothing will be printed
         This code will cause on error: This code will cause on error
-        This script will cause on error: This script will cause on error
         What is displayed when this code is run?: What is displayed when this code is run?
-        What is displayed when this script is run?: What is displayed when this script is run?
-        What is printed when this script is run?: What is printed when this script is run?
-        "[Nothing will be printed]": "[Nothing will be printed]"
       CommuteAssess - loops 1 - block:
         '10': '10'
         '18': '18'
         '3': '3'
         '6': '6'
         How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
-        How many times will the word "here" be printed when this script is run?: How many times will the word "here" be printed when this script is run?
         It will be different each time you run it: It will be different each time you run it
       CommuteAssess - loops 2 - block:
-        '"here" will be continuously displayed until the program is stopped manually': '"here" will be continuously displayed until the program is stopped manually'
-        '"here" will be continuously printed until the program is stopped': '"here" will be continuously printed until the program is stopped'
-        '"here" will be continuously printed until the script is stopped': '"here" will be continuously printed until the script is stopped'
         '0': '0'
         '1': '1'
         '10': '10'
         '5': '5'
-        '<span style="font-family: monospace">here</span><br>will be continuously displayed until the program is stopped manually': '<span style="font-family: monospace">here</span><br>will be continuously displayed until the program is stopped manually'
-        ? '<span style="font-family: monospace; background-color: rgba(0,0,0,0.25)">here</span><br>will be continuously displayed until the program is stopped manually'
-        : '<span style="font-family: monospace; background-color: rgba(0,0,0,0.25)">here</span><br>will be continuously displayed until the program is stopped manually'
         ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
         : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span><br>will be continuously displayed until the program is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span><br>will be continuously displayed until the program is stopped manually'
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px;">here</span><br>will be continuously displayed until the program is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px;">here</span><br>will be continuously displayed until the program is stopped manually'
-        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
-        How many times will the word "here" be printed when this script is run?: How many times will the word "here" be printed when this script is run?
         ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
-        'How many times will the word <span style="font-family: monospace;">here</span> be displayed when this code is run?': 'How many times will the word <span style="font-family: monospace;">here</span> be displayed when this code is run?'
         it will be different each time you run it: it will be different each time you run it
       CommuteAssess - loops 5 - block:
-        '"3"': '"3"'
-        '"31"': '"31"'
-        '"31-1"': '"31-1"'
-        '"531"': '"531"'
-        '"543210"': '"543210"'
         "<pre>3</pre>": "<pre>3</pre>"
         "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
         "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
         "<pre>5<br>3<br>1</pre>": "<pre>5<br>3<br>1</pre>"
         "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>": "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>"
         What will be displayed when this code is run?: What will be displayed when this code is run?
-        What will be printed when this script is run?: What will be printed when this script is run?
         it will be different each time you run it: it will be different each time you run it
       Coordinates Multi 1:
         ? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
@@ -5293,20 +5133,12 @@ en:
         x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
         x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
       CumulAssess - Var 2 - block:
-        '"BoysHello Girls"': '"BoysHello Girls"'
-        '"Hello Boys and Girls"': '"Hello Boys and Girls"'
-        "\"Hello Girls and Boys": "\"Hello Girls and Boys"
-        '"Hello Girls and Boys"': '"Hello Girls and Boys"'
-        '"sentence"': '"sentence"'
-        '"y + z + " and " + x"': '"y + z + " and " + x"'
         "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
         "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
         "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
         "<pre>sentence</pre>": "<pre>sentence</pre>"
         <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
         What will be displayed after running this code?: What will be displayed after running this code?
-        What will be printed after running this code?: What will be printed after running this code?
-        What will be printed after running this script?: What will be printed after running this script?
       ECSPD Online U1D1-2 Assessment 2:
         A and B: A and B
         A, B, C, F, and G: A, B, C, F, and G
@@ -7007,19 +6839,8 @@ en:
         Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times
         Displays "Hello" once: Displays "Hello" once
         Displays "Hello" once after 60 seconds has elapsed: Displays "Hello" once after 60 seconds has elapsed
-        Prints "Hello" continuously for 60 seconds: Prints "Hello" continuously for 60 seconds
-        Prints "Hello" exactly 60 times: Prints "Hello" exactly 60 times
-        Prints "Hello" once: Prints "Hello" once
-        Prints "Hello" once after 60 seconds has elapsed: Prints "Hello" once after 60 seconds has elapsed
         This code will cause an error: This code will cause an error
-        description here: description here
-        title: title
       commute assess - loops 3 - block:
-        " it will be different each time you run it": " it will be different each time you run it"
-        '"" [nothing with be printed]': '"" [nothing with be printed]'
-        '"apple apple apple orange orange orange "': '"apple apple apple orange orange orange "'
-        '"apple orange "': '"apple orange "'
-        '"apple orange apple orange apple orange "': '"apple orange apple orange apple orange "'
         "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
         "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
         "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
