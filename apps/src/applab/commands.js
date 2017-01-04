@@ -18,7 +18,7 @@ import {
   outputError,
   outputWarning,
 } from '../javascriptMode';
-import addAudioCommands from '@cdo/apps/lib/util/audioCommands';
+import {addAudioCommands} from '@cdo/apps/lib/util/audioApi';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';

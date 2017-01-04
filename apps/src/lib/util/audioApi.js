@@ -7,13 +7,24 @@ import {
 } from '@cdo/apps/javascriptMode';
 
 /**
+ * Inject an executeCmd method so this mini-library can be used in both
+ * App Lab and Game Lab
+ */
+let executeCmd;
+export function injectExecuteCmd(fn) {
+  executeCmd = fn;
+}
+
+let audioCommands = {};
+
+/**
  *
  * @param {Object} commands Object holding the set of commands for a droplet
  *        toolkit, which is mutated when passed into this function to add
  *        a set of audio commands.
  * @returns {Object} the mutated commands object
  */
-export default function addAudioCommands(commands) {
+export function addAudioCommands(commands) {
   for (const commandName in audioCommands) {
     if (!audioCommands.hasOwnProperty(commandName)) {
       continue;
@@ -28,7 +39,9 @@ export default function addAudioCommands(commands) {
   return commands;
 }
 
-let audioCommands = {};
+export function playSound(url) {
+  return executeCmd(null, 'playSound', {'url': url});
+}
 
 audioCommands.playSound = function (opts) {
   apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
@@ -73,6 +86,14 @@ audioCommands.playSound = function (opts) {
 };
 
 /**
+ * Stop playing sounds.
+ * @param {string} [url] - optional.  If omitted, stops all sounds.
+ */
+export function stopSound(url) {
+  return executeCmd(null, 'stopSound', {'url': url});
+}
+
+/**
  * Stop playing a sound, or all sounds.
  * @param {string} [opts.url] The sound to stop.  Stops all sounds if omitted.
  */
@@ -81,7 +102,7 @@ audioCommands.stopSound = function (opts) {
 
   if (studioApp.cdoSounds) {
     if (opts.url) {
-      var url = assetPrefix.fixPath(opts.url);
+      const url = assetPrefix.fixPath(opts.url);
       if (studioApp.cdoSounds.isPlayingURL(url)) {
         studioApp.cdoSounds.stopLoopingAudio(url);
       }
