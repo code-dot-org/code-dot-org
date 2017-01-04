@@ -13,17 +13,24 @@ If they are not completed, go ahead and Add a New Language and complete translat
 * [The Hour of Code Worldwide (2016)](https://www.amara.org/en/videos/mbBjcLLwypIT/info/hour-of-code-worldwide/)
 * [Computer Science Principles videos](#cspvideos)
 
-## Star Wars: Building a Galaxy with Code
-* [Introduction](https://amara.org/en/videos/MAPGRpEu3h0k/info/star-wars-with-blockly-hour-of-code-introduction/)
-* [Events](https://amara.org/en/videos/BUt4bT1vkTwZ/info/star-wars-with-blockly-hour-of-code-events/)
-* [Congrats](https://amara.org/en/videos/MTpUmI9XcUUW/info/star-wars-with-blockly-hour-of-code-closing/)
+## Minecraft Designer
+* [Introduction](https://www.amara.org/en/videos/5fkU0gFODp70/info/minecraft-hour-of-code-introduction/)
+* [Loops](https://www.amara.org/en/videos/OoZrErE5kUl1/info/minecraft-hour-of-code-loops/)
+* [Events](https://www.amara.org/en/videos/hxYdN6C1btWM/info/minecraft-hour-of-code-events/)
+* [Spawning](https://www.amara.org/en/videos/C39R4IDzVqgL/info/minecraft-hour-of-code-spawn/)
+* [Congratulations](https://www.amara.org/en/videos/QAwclz2DTh3J/info/minecraft-hour-of-code-congratulations/)
 
-## Minecraft Hour of Code
+## Minecraft Adventurer
 * [Introduction](https://amara.org/en/videos/hM6XN1YgrcnZ/info/minecraft-hour-of-code-intro/)
 * [Repeat loops](https://amara.org/en/videos/9db4OJsugkRs/info/minecraft-hour-of-code-repeat-loops/)
 * [If statements](https://amara.org/en/videos/CQ2Pl9U4YGzH/info/minecraft-hour-of-code-if-statements/)
 * [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
 * [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
+
+## Star Wars: Building a Galaxy with Code
+* [Introduction](https://amara.org/en/videos/MAPGRpEu3h0k/info/star-wars-with-blockly-hour-of-code-introduction/)
+* [Events](https://amara.org/en/videos/BUt4bT1vkTwZ/info/star-wars-with-blockly-hour-of-code-events/)
+* [Congrats](https://amara.org/en/videos/MTpUmI9XcUUW/info/star-wars-with-blockly-hour-of-code-closing/)
 
 ## Frozen (w/ Anna and Elsa)
 * [Introduction](http://amara.org/en/videos/WXMIcXbsmkXJ/info/frozen-hour-of-code-introduction/)
@@ -95,22 +102,87 @@ If they are not completed, go ahead and Add a New Language and complete translat
 * [Trina Roy teaches counter loops](http://amara.org/en/videos/yDs0YaE9cv2D/info/trina-roy-teaches-counter-loops/)
 
 ## Course 1
+* [Happy Maps](https://www.amara.org/en/videos/rmLdNv98ZMXJ/info/course-1-unplugged-happy-maps/)
+* [Move it, Move it](https://www.amara.org/en/videos/6zqhGmG2Xgqb/info/course-1-unplugged-activity-move-it-move-it/)
 * [The Big Event](https://www.amara.org/en/videos/tvzFUWGBWfW8/info/unplugged-the-big-event/)
 * [Getting Loopy](https://www.amara.org/en/videos/8dwb0VbRQLw1/info/unplugged-getting-loopy/)
 * [Pair Programming](https://www.amara.org/en/videos/yeaCmHtOwKYu/info/pair-programming/)
-* [Maze Intro](https://www.amara.org/en/videos/w8eaxwpeOM1W/info/maze-intro-hd/)
-* [Bee Intro](https://www.amara.org/en/videos/klc17f7H8umN/info/course-1-bee-level-intro/)
-* [Spelling Bee Intro](https://www.amara.org/en/videos/tFzHrKgg62OD/info/course-1-spelling-bee-intro/)
-* [Real Life Algorithms: Planting a Seed](https://www.amara.org/en/videos/Z0KUDgBuZz9J/info/real-life-algorithms-unplugged-activity-planting-a-seed/)
+* [Maze Introduction](https://www.amara.org/en/videos/w8eaxwpeOM1W/info/maze-intro-hd/)
+* [Maze Debugging](https://www.amara.org/en/videos/xYrSpXhpT5Lk/info/debugging-intro/)
+* [Bee Introduction](https://www.amara.org/en/videos/klc17f7H8umN/info/course-1-bee-level-intro/)
+* [Artist Introduction](https://www.amara.org/en/videos/g7TJh6x80epW/info/the-artist-in-code-studio/)
+* [Spelling Bee Introduction](https://www.amara.org/en/videos/tFzHrKgg62OD/info/course-1-spelling-bee-intro/)
+* [Bee Loops](https://www.amara.org/en/videos/w1H7Tkz2Tsaa/info/course-1-bee-level-loops/)
+* [Maze Loops (version 1)](https://www.amara.org/en/videos/CBCau4R5pMgg/info/course-1-maze-loops/)
+* [Maze Loops (version 2)](https://www.amara.org/en/videos/NlhWRBshK35N/info/course-1-maze-loops/)
+* [Play Lab Storytelling](https://www.amara.org/en/videos/os3C5XRzzhly/info/course-1-playlab-create-a-story/)
+* [Planting a Seed](https://www.amara.org/en/videos/Z0KUDgBuZz9J/info/real-life-algorithms-unplugged-activity-planting-a-seed/)
 * [Building a Foundation](https://www.amara.org/en/videos/iXRXFh7e4936/info/unplugged-building-a-foundation/)
 
 ## Course 2
+* [Maze Introduction](https://www.amara.org/en/videos/UbHa7ameCegE/info/course-2-maze-intro/)
+* [Artist Introduction](https://www.amara.org/en/videos/al7ipph2vaYQ/info/artist-intro-video-presented-by-jr-hildebrand/)
+* [Repeat Loops](https://www.amara.org/en/videos/vKJqKVtk9Zti/info/hour-of-code-mark-zuckerburg-teaches-repeat-loops/)
+* [Bee Conditionals](https://www.amara.org/en/videos/XiBmB5yTlgfl/info/conditionals-with-the-bee/)
+* [Play Lab Create a Story](https://www.amara.org/en/videos/eNXTWQRL3ElI/info/course-2-play-lab-create-a-story/)
+* [Artist Loops](https://www.amara.org/en/videos/7tUCffu3kqJq/info/loops-with-the-artist-in-course-2/)
+* [Bee Loops](https://www.amara.org/en/videos/z7D41N6ssCoq/info/course-2-loops-with-the-bee/)
+* [Bee Debugging](https://www.amara.org/en/videos/pZgTvLRw0E2u/info/course-2-debugging-with-the-bee/)
+* [Artist Debugging](https://www.amara.org/en/videos/NvFk8h2lkVQL/info/debugging-with-the-artist-in-code-studio/)
 * [Graph Paper Programming](https://www.amara.org/en/videos/lIYrHyyg3Spi/info/unplugged-graph-paper-programming/)
-* [Real Life Algorithms, Paper Airplanes](https://www.amara.org/en/videos/IokizxjOLao0/info/unplugged-real-life-algorithms-paper-airplanes/)
+* [Conditionals with Cards](https://www.amara.org/en/videos/wnRegor9NeSy/info/unplugged-conditionals-with-cards/)
+* [Binary Bracelets](https://www.amara.org/en/videos/iNumUFNJcRDa/info/unplugged-binary-bracelets/)
+* [Paper Airplanes](https://www.amara.org/en/videos/IokizxjOLao0/info/unplugged-real-life-algorithms-paper-airplanes/)
 * [Relay Programming](https://www.amara.org/en/videos/PvACgvxSlXQ5/info/unplugged-relay-programming/)
 
 ## Course 3
+* [Play Lab Create a Story](https://www.amara.org/en/videos/eNXTWQRL3ElI/info/course-2-play-lab-create-a-story/)
+* [Bounce Game](https://www.amara.org/en/videos/vIoYXVWKEkkc/info/the-bounce-game/)
+* [Bee Debugging](https://www.amara.org/en/videos/pZgTvLRw0E2u/info/course-2-debugging-with-the-bee/)
+* [Bee Nested Loops](https://www.amara.org/en/videos/y4KijKqYKrlU/info/course-3-nested-loops-with-the-bee/)
+* [Farmer While Loops](https://www.amara.org/en/videos/ojDu3tZfHlHN/info/makinde-adeagbo-teaches-while-loops/)
+* [Artist Nested Loops](https://www.amara.org/en/videos/sMa8zPGedcdk/info/nested-loops-with-the-artist-in-course-4/)
+* [Maze Conditionals](https://www.amara.org/en/videos/dHRkYK1yaFOt/info/hour-of-code-bill-gates-explains-if-statements/)
+* [Bee Conditionals](https://www.amara.org/en/videos/XiBmB5yTlgfl/info/conditionals-with-the-bee/)
+* [Bee Functions](https://www.amara.org/en/videos/upDMLRvtq9Lh/info/course-3-bee-functions-explained-by-chris-bosh/)
+* [Artist Functions](https://www.amara.org/en/videos/KMI6o2NdXa9u/info/course-3-artist-functions-explained-by-bill-gates/)
+* [Arist Introduction](https://www.amara.org/en/videos/al7ipph2vaYQ/info/artist-intro-video-presented-by-jr-hildebrand/)
+* [Repeat Block](https://www.amara.org/en/videos/YZlVm1ahNMx0/info/repeat-block-with-the-zombie/)
+* [Computational Thinking](https://www.amara.org/en/videos/t93vryk3z5M2/info/unplugged-computational-thinking/)
+* [Dice Game](https://www.amara.org/en/videos/HtuYq8fJTXDk/info/unplugged-real-life-algorithms-dice-game/)
+* [The Internet](https://www.amara.org/en/videos/BdBNmNpcEica/info/unplugged-activity-the-internet/)
 * [Crowdsourcing](https://www.amara.org/en/videos/vYAtklKB56Cd/info/uplugged-crowdsourcing/)
+* [Functional Suncatchers](https://www.amara.org/en/videos/gETtDhRFl6qB/info/unplugged-functional-suncatchers/)
+* [Songwriting with Parameters](https://www.amara.org/en/videos/06aM5vgZW1Y5/info/unplugged-songwriting-with-parameters/)
+
+## Course 4
+* [Maze Introduction](https://www.amara.org/en/videos/UbHa7ameCegE/info/course-2-maze-intro/)
+* [Bee Conditionals (version 1)](https://www.amara.org/en/videos/rBHNsHPrJe5Z/info/bee-conditionals-the-if-flowerhoneycomb-block/)
+* [Bee Conditionals (version 2)](https://www.amara.org/en/videos/irvRQjiVnoe1/info/ifelse-with-the-bee-in-code-studio/)
+* [Artist Variables](https://www.amara.org/en/videos/iOdKBjq5lopD/info/course-4-artist-variables/)
+* [Play Lab Variables](https://www.amara.org/en/videos/jflILqhmrrbT/info/variables-in-play-lab/)
+* [For Loops (version 1)](https://www.amara.org/en/videos/nsyKqnusW2jA/info/jie-jin-introduces-for-loops/)
+* [For Loops (version 2)](https://www.amara.org/en/videos/5TxRxDI5Ajbx/info/for-loops-in-the-bee-puzzle-of-course-4/)
+* [For Loops (version 3)](https://www.amara.org/en/videos/59YbZ37OX1wl/info/course-4-intro-to-for-loops/)
+* [Artist Math](https://www.amara.org/en/videos/SNQy0DQBTrM0/info/karlie-kloss-explains-how-to-use-math-with-the-artist-in-code-studio/)
+* [Functions](https://www.amara.org/en/videos/rSBCNKsmu3i1/info/creating-functions-in-code-studio-by-bill-gates-and-saloni/)
+* [Create a Function](https://www.amara.org/en/videos/IEe23d5UJyQQ/info/saloni-explains-how-to-create-a-function-in-code-studio/)
+* [Functions with Parameters](https://www.amara.org/en/videos/CW0gs4mB9IGM/info/functions-with-parameters/)
+* [Tangram Algorithms](https://www.amara.org/en/videos/HMErBZdyKciI/info/unplugged-tangram-algorithms/)
+* [Mad Libs](https://www.amara.org/en/videos/vCbJiuYKCC7E/info/unplugged-activity-mad-libs/)
+* [Variables in Envelopes](https://www.amara.org/en/videos/Lv4vjTBYipZb/info/unplugged-variables-in-envelopes/)
+* [For Loop Fun](https://www.amara.org/en/videos/RCA5hrI1BKee/info/unplugged-for-loop-fun/)
+* [Songwriting with Parameters](https://www.amara.org/en/videos/a4CjFgfyd7La/info/unplugged-activity-songwriting-with-parameters/)
+* [Binary Images](https://www.amara.org/en/videos/kSTpVs0XeefW/info/unplugged-activity-binary-images/)
+* [Repeat Block](https://www.amara.org/en/videos/YZlVm1ahNMx0/info/repeat-block-with-the-zombie/)
+
+## Videos used in Code.org courses but are not owned by Code.org
+
+Please contact [Common Sense Media](https://www.commonsensemedia.org/contact) about translations for the following videos.
+
+* [Course 1: Going Places Safely](https://www.amara.org/en/videos/ygCqX2tVdwbK/info/my-online-neighborhood/)
+* [Course 2: Pause and Think Online](https://www.amara.org/en/videos/df102YCZNAqN/info/pause-think-online/)
+* [Course 2: Digital Footprint](https://www.amara.org/en/videos/d73SrZabBJV5/info/whats-in-your-digital-footprint/)
 
 ## How to Use Amara
 
