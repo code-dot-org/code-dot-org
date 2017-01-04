@@ -291,12 +291,14 @@ en:
             Calc: Calc
             Eval: Eval
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
           description_short: Write your own Flappy game in less than 10 minutes!
           stage:
             Flappy Code: Flappy Code
+          description_audience: ''
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial
