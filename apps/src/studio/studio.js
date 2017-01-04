@@ -2422,7 +2422,6 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
 Studio.runButtonClick = function () {
   if (level.edit_blocks) {
     Studio.onPuzzleComplete();
-    return;
   }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
