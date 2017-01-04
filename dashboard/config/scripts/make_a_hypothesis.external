@@ -16,3 +16,14 @@ It's not important whether you're right (you'll have the answer soon enough anyw
 <br><br>
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Pause Point - Make a Hypothesis
+
+* Use this level to describe the fact that students will be making a simulation of flipping coins.
+* Ask them to make a prediction for the outcomes of the experiments they will run. 
+
+Make sure students make this prediction before moving on.
+
+* **Students should record their predictions in the space provided on their worksheets.**
+MARKDOWN
