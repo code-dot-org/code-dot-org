@@ -70,6 +70,11 @@ const FilterHeader = React.createClass({
     return this.props.mobileLayout && this.props.showingModalFilters;
   },
 
+  shouldShowSortButton() {
+    return this.props.showSortBy &&
+      !(this.props.mobileLayout && this.props.showingModalFilters);
+  },
+
   handleChangeSort(event) {
     this.props.onUserInput(
       event.target.value
@@ -112,7 +117,7 @@ const FilterHeader = React.createClass({
               &nbsp;
               &nbsp;
 
-              {this.props.showSortBy && (
+              {this.shouldShowSortButton() && (
                 <select
                   value={this.props.sortBy}
                   onChange={this.handleChangeSort}

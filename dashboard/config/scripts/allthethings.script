@@ -49,12 +49,12 @@ level 'Farmer for TTS testing'
 
 stage 'Flappy'
 skin 'flappy'
-level_concept_difficulty '{"sequencing":4,"events":2}'
+level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Flappy:1'
 
 stage 'Bounce'
 skin 'bounce'
-level_concept_difficulty '{"sequencing":4,"events":2}'
+level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Bounce:1'
 
 stage 'Multi'
@@ -136,7 +136,7 @@ stage 'Studio'
 level 'Resizing Test'
 
 stage 'Multi page assessment'
-level 'k-1 maze 11'
+level 'K-1 Maze 11'
 assessment 'Test longassessment levelgroup split new'
 
 stage 'Star wars'

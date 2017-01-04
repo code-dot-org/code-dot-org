@@ -1,13 +1,15 @@
 name 'CSD U3 Using the Game Design Process SLFP'
 css 'unplugged'
 markdown <<MARKDOWN
-# Programming - Interactive Games and Animations: Lesson 17 - Using the Game Design Process
+# Programming - Interactive Games and Animations: Lesson 17 - Platform Jumper
 
 ## Background
 
-In this lesson you'll get practice building an entirely new game, this time a platform jumper. You'll be responsible for filling in your own project guide using the same template you saw in the last lesson. Then it's time to put it into action and get the game working yourself.
+In this multi-day lesson, students will use the problem solving process from Unit 1 to create a platform jumper game.  They will start by looking at an example of a platform jumper, then define what their games will look like.  Next, they will use a structured process to plan the backgrounds, variables, sprites, and functions they will need to implement their game.  After writing the code for the game, students will reflect on how the game could be improved, and implement those changes.
+
 
 # Resources
 
-* [Platform Game](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/edit?usp=sharing) - Project Guide ([PDF](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=doc))
+* [Planning Your Platform Game](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=doc))
+* [Platform Game](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit) - Project Guide ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))
 MARKDOWN
