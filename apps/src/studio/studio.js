@@ -3415,7 +3415,7 @@ var updateSpeechBubblePath = function (element) {
   var width = +element.getAttribute('width');
   var onTop = 'true' === element.getAttribute('onTop');
   var onRight = 'true' === element.getAttribute('onRight');
-  var tipOffset = +element.getAttribute('tipOffset') || 0;
+  var tipOffset = +element.getAttribute('tipOffset');
   element.setAttribute('d',
                        createSpeechBubblePath(0,
                                               0,
@@ -3490,11 +3490,11 @@ Studio.displaySprite = function (i) {
   var oldTipOffset = +speechBubblePath.getAttribute('tipOffset');
   var wasOnTop = 'true' === speechBubblePath.getAttribute('onTop');
   var wasOnRight = 'true' === speechBubblePath.getAttribute('onRight');
-  var bblHeight = +speechBubblePath.getAttribute('height');
-  var bblWidth = +speechBubblePath.getAttribute('width');
+  var bubbleHeight = +speechBubblePath.getAttribute('height');
+  var bubbleWidth = +speechBubblePath.getAttribute('width');
 
   var newBubblePosition = Studio.calculateBubblePosition(
-      sprite, bblHeight, bblWidth, Studio.MAZE_WIDTH);
+      sprite, bubbleHeight, bubbleWidth, Studio.MAZE_WIDTH);
 
   speechBubblePath.setAttribute('onTop', newBubblePosition.onTop);
   speechBubblePath.setAttribute('onRight', newBubblePosition.onRight);
@@ -3511,9 +3511,9 @@ Studio.displaySprite = function (i) {
 };
 
 Studio.calculateBubblePosition = function (
-    sprite, bblHeight, bblWidth, studioWidth) {
+    sprite, bubbleHeight, bubbleWidth, studioWidth) {
   let onTop = true;
-  let ySpeech = sprite.y - (bblHeight + SPEECH_BUBBLE_PADDING);
+  let ySpeech = sprite.y - (bubbleHeight + SPEECH_BUBBLE_PADDING);
   if (ySpeech < SPEECH_BUBBLE_TOP_MARGIN) {
     ySpeech = sprite.y + sprite.height + SPEECH_BUBBLE_PADDING;
     onTop = false;
@@ -3524,7 +3524,7 @@ Studio.calculateBubblePosition = function (
   let tipOffset = 0;
   if (sprite.x > (studioWidth- sprite.width) / 2) {
     onRight = false;
-    xSpeech = sprite.x + sprite.width - (bblWidth + SPEECH_BUBBLE_H_OFFSET);
+    xSpeech = sprite.x + sprite.width - (bubbleWidth + SPEECH_BUBBLE_H_OFFSET);
     if (xSpeech < SPEECH_BUBBLE_SIDE_MARGIN) {
       tipOffset = SPEECH_BUBBLE_SIDE_MARGIN - xSpeech;
       xSpeech = SPEECH_BUBBLE_SIDE_MARGIN;
@@ -3532,7 +3532,7 @@ Studio.calculateBubblePosition = function (
   } else {
     onRight = true;
     xSpeech = sprite.x + SPEECH_BUBBLE_H_OFFSET;
-    const maxXSpeech = studioWidth - bblWidth - SPEECH_BUBBLE_SIDE_MARGIN;
+    const maxXSpeech = studioWidth - bubbleWidth - SPEECH_BUBBLE_SIDE_MARGIN;
     if (xSpeech > maxXSpeech) {
       tipOffset = xSpeech - maxXSpeech;
       xSpeech = maxXSpeech;
