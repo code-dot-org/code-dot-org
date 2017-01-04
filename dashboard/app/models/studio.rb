@@ -251,6 +251,13 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpritePositionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_addGoal" />
   <block type="studio_addGoalXY" />
   <block type="studio_setSpriteXY" inline="true">
