@@ -92,8 +92,8 @@
       "console.log": null
     },
     "show_debug_watch": "true",
-    "contained_level_names": null,
-    "encrypted_examples": "I1DAR1BMXjpehzsR6JSwBmOv6Y50vGYiLPNnR9ki/Hbi78C6qso9CFlInon4\naEIZ\n"
+    "encrypted_examples": "I1DAR1BMXjpehzsR6JSwBmOv6Y50vGYiLPNnR9ki/Hbi78C6qso9CFlInon4\naEIZ\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
