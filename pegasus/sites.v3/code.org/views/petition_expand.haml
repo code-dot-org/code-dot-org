@@ -75,7 +75,7 @@
 
   function expandPetition()
   {
-    $('#petitioninfo').fadeOut(); 
+    $('#petitioninfo').fadeOut();
     $('#signpetitionclick').fadeOut();
     $('#form').slideDown('slow').animate({ opacity: 1 }, { queue: false, duration: 'slow' });
   }
@@ -163,16 +163,13 @@
       if (console && console.log)
         console.log("Recording petition click", "#{request.path}");
 
-      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});   
+      ga('send', 'event', 'petition', 'click', {'page': "#{request.path}"});
       petitionClickReported = true;
     }
 
     return false;
   }
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     petition = new Petition();
-  }
-
- 
+  });

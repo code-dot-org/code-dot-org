@@ -55,7 +55,8 @@
     "makerlab_enabled": "false",
     "start_blocks": "var age = promptNum(\"What is your age?\");\r\n//add an if-else statement below",
     "palette_category_at_start": "control",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "2DWJkJ6hYwoXCR+1bmsFNoLW8KVwpQmgngPQvI07vgL6GCLRIWw+ltje9QnH\n6bko\n"
   },
   "published": true,
   "notes": "",
