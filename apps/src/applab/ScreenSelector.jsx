@@ -1,5 +1,4 @@
 /** @file Dropdown for selecting design mode screens */
-/* global Applab */
 import React from 'react';
 import Radium from 'radium';
 import color from "../util/color";
@@ -34,6 +33,7 @@ var ScreenSelector = React.createClass({
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onImport: React.PropTypes.func.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
 
     // passed explicitly
     screenIds: React.PropTypes.array.isRequired,
@@ -80,7 +80,7 @@ var ScreenSelector = React.createClass({
         ]}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
-        disabled={Applab.isRunning()}
+        disabled={this.props.isRunning}
       >
         {options}
         {canAddScreen &&
@@ -96,7 +96,8 @@ export default connect(function propsFromStore(state) {
     currentScreenId: state.screens.currentScreenId,
     interfaceMode: state.interfaceMode,
     hasDesignMode: state.pageConstants.hasDesignMode,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: state.runState.isRunning,
   };
 }, function propsFromDispatch(dispatch) {
   return {
