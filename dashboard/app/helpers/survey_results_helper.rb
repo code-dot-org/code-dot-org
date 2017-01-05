@@ -4,9 +4,6 @@ module SurveyResultsHelper
     unless current_user
       return false
     end
-    unless current_user.teacher?
-      return false
-    end
     if current_user.under_13?
       return false
     end
