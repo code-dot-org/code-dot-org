@@ -4,13 +4,15 @@
 # contained_level_answers, and the level_sources_multi_type tables.
 
 require_relative '../../dashboard/config/environment'
+require 'cdo/only_one'
 
-TIME_NOW = DateTime.now.freeze
+TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
 # @param unsanitized [String] the unsanitized string
 # @returns [String] the sanitized version of the string, with newlines stripped
+#   and double quotations escaped
 def sanitize_string_for_db(unsanitized)
-  unsanitized.gsub(/[\r\n]+/, '')
+  unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
 end
 
 def main
@@ -18,10 +20,10 @@ def main
   %w(
     contained_levels
     contained_level_answers
-    level_sources_multi_type
+    level_sources_multi_types
   ).each do |table_name|
     ActiveRecord::Base.connection.execute(
-      "TRUNCATE #{table_name} RESTART IDENTITY"
+      "TRUNCATE #{table_name}"
     )
   end
 
@@ -77,7 +79,7 @@ def main
   # Verify that the data size is sensible.
   raise 'contained_levels too big' if contained_levels.size > 1_000
   raise 'contained_level_answers too big' if contained_level_answers.size > 10_000
-  raise 'level_sources too big' if level_sources_multi_type > 10_000
+  raise 'level_sources too big' if level_sources_multi_types.size > 10_000
 
   # Write the data to the DB tables.
   contained_levels.each do |contained_level_row|
@@ -94,14 +96,14 @@ def main
           contained_level_text
         )
         VALUES (
-          #{TIME_NOW},
-          #{TIME_NOW},
+          "#{TIME_NOW}",
+          "#{TIME_NOW}",
           #{contained_level_row[:level_id]},
           #{contained_level_row[:contained_level_id]},
-          #{contained_level_row[:contained_level_type]},
+          "#{contained_level_row[:contained_level_type]}",
           #{contained_level_row[:contained_level_page]},
           #{contained_level_row[:contained_level_position]},
-          #{contained_level_row[:contained_level_text]}
+          "#{contained_level_row[:contained_level_text]}"
         )
 SQL
     )
@@ -118,17 +120,17 @@ SQL
           correct
         )
         VALUES (
-          #{TIME_NOW},
-          #{TIME_NOW},
+          "#{TIME_NOW}",
+          "#{TIME_NOW}",
           #{contained_level_answer_row[:contained_level_id]},
           #{contained_level_answer_row[:answer_number]},
-          #{contained_level_answer_row[:answer_text]},
+          "#{contained_level_answer_row[:answer_text]}",
           #{contained_level_answer_row[:correct]}
         )
 SQL
     )
   end
-  level_sources_multi_type.each do |level_source_multi_type_row|
+  level_sources_multi_types.each do |level_sources_multi_types_row|
     ActiveRecord::Base.connection.execute(
       <<SQL
         INSERT INTO level_sources_multi_types (
@@ -139,11 +141,11 @@ SQL
           hidden
         )
         VALUES (
-          #{level_source_multi_type_row[:level_source_id]},
-          #{level_source_multi_type_row[:level_id]},
-          #{level_source_multi_type_row[:data]},
-          #{level_source_multi_type_row[:md5]},
-          #{level_source_multi_type_row[:hidden]}
+          #{level_sources_multi_types_row[:level_source_id]},
+          #{level_sources_multi_types_row[:level_id]},
+          "#{level_sources_multi_types_row[:data]}",
+          "#{level_sources_multi_types_row[:md5]}",
+          #{level_sources_multi_types_row[:hidden]}
         )
 SQL
     )
