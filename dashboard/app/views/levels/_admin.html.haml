@@ -6,7 +6,7 @@
     %strong= @level.name
     - if current_user.permission?(UserPermission::LEVELBUILDER)
       %ul
-        %li= link_to level_path(@level), @level
+        %li= link_to level_path(@level), level_path(@level)
         %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
         - if @level.is_a? Gamelab
           %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
@@ -24,7 +24,7 @@
                   %li= link_to "initialization (#{Blockly.count_xml_blocks(@level.initialization_blocks)})", level_edit_blocks_path(@level, :initialization_blocks)
                   - if @level.is_a? Artist
                     %li= link_to 'pre-draw', level_edit_blocks_path(@level, :predraw_blocks)
-            %li= link_to 'delete', @level, method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
+            %li= link_to 'delete', level_path(@level), method: :delete, data: { confirm: t('crud.confirm') }, style: 'color: red'
             %li
               = link_to 'clone', '', onclick: "$('#clone_#{@level.id}').toggle(); return false;"
               %div{class: 'clone_level', id: "clone_#{@level.id}", style: 'display: none;'}
