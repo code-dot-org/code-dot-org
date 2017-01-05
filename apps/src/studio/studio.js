@@ -757,6 +757,7 @@ var performQueuedMoves = function (i) {
 var setSvgText = Studio.setSvgText = function (opts) {
   var width = opts.width;
   var words = opts.text.toString().split(' ');
+  var longWord = false;
 
   while (width <= opts.maxWidth) {
     // Remove any children from the svgText node:
@@ -764,58 +765,61 @@ var setSvgText = Studio.setSvgText = function (opts) {
       opts.svgText.removeChild(opts.svgText.firstChild);
     }
 
-    // Create first tspan element
-    var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-    tspan.setAttribute("x", width / 2);
-    tspan.setAttribute("dy", opts.lineHeight + opts.topMargin);
-    // Create text in tspan element
-    var text_node = document.createTextNode(words[0]);
+    var wordIndex = 0;
+    for (var line = 1; line <= opts.maxLines; line++) {
+      // Create new tspan element
+      var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+      tspan.setAttribute("x", width / 2);
+      tspan.setAttribute("dy", opts.lineHeight + (line === 1 ? opts.topMargin : 0));
+      // Create text in tspan element
+      var text_node = document.createTextNode(words[wordIndex]);
+      wordIndex++;
 
-    // Add text to tspan element
-    tspan.appendChild(text_node);
-    // Add tspan element to DOM
-    opts.svgText.appendChild(tspan);
-    var tSpansAdded = 1;
-
-    for (var i = 1; i < words.length; i++) {
-      // Find number of letters in string
-      var len = tspan.firstChild.data.length;
-      // Add next word
-      tspan.firstChild.data += " " + words[i];
+      // Add text to tspan element
+      tspan.appendChild(text_node);
+      // Add tspan element to DOM
+      opts.svgText.appendChild(tspan);
 
       if (tspan.getComputedTextLength &&
-        tspan.getComputedTextLength() > width - 2 * opts.sideMargin) {
-        // Remove added word
-        tspan.firstChild.data = tspan.firstChild.data.slice(0, len);
+          tspan.getComputedTextLength() > width - 2 * opts.sideMargin && width < opts.maxWidth) {
+        // We have a really long word, try to expand to fit it.
+        width = Math.min(tspan.getComputedTextLength() + 2 * opts.sideMargin, opts.maxWidth);
+        longWord = true;
+        break;
+      }
 
-        if (opts.maxLines === tSpansAdded) {
-          if (width < opts.maxWidth) {
-            // Try again with a wider speech bubble
-            width = Math.min(width * words.length / i, opts.maxWidth);
-            break;
-          }
+      var previousLength;
+      do {
+        if (wordIndex === words.length) {
           return {
-            height: opts.fullHeight,
+            height: opts.fullHeight - (opts.maxLines - line) * opts.lineHeight,
             width: width,
           };
         }
-        // Create new tspan element
-        tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-        tspan.setAttribute("x", width / 2);
-        tspan.setAttribute("dy", opts.lineHeight);
-        text_node = document.createTextNode(words[i]);
-        tspan.appendChild(text_node);
-        opts.svgText.appendChild(tspan);
-        tSpansAdded++;
-      }
-      if (i === words.length - 1) {
-        // All the words fit, return
-        var linesLessThanMax = opts.maxLines - tSpansAdded;
-        return {
-          height: opts.fullHeight - linesLessThanMax * opts.lineHeight,
-          width: width,
-        };
-      }
+
+        // Find number of letters in string
+        previousLength = tspan.firstChild.data.length;
+        // Add next word
+        tspan.firstChild.data += " " + words[wordIndex];
+        wordIndex++;
+      } while (tspan.getComputedTextLength &&
+          tspan.getComputedTextLength() <= width - 2 * opts.sideMargin);
+
+      // The last added word made the line too long, remove it
+      tspan.firstChild.data = tspan.firstChild.data.slice(0, previousLength);
+      wordIndex--;
+    }
+
+    if (longWord) {
+      longWord = false;
+    } else if (width < opts.maxWidth) {
+      // Try again with a wider speech bubble
+      width = Math.min(width * words.length / wordIndex, opts.maxWidth);
+    } else {
+      return {
+        height: opts.fullHeight,
+        width: width,
+      };
     }
   }
 };
