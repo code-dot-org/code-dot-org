@@ -17,7 +17,9 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     successfully_updated =
-      if needs_password?(@user, params)
+      if forbidden_change?(@user, params)
+        false
+      elsif needs_password?(@user, params)
         @user.update_with_password(params[:user])
       else
         # remove the virtual current_password attribute update_without_password
@@ -55,6 +57,12 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
+  # Reject certain changes for certain users outright
+  def forbidden_change?(user, params)
+    # Passwordless users (oauth, picutre passwords) may not update password or email
+    user.encrypted_password.blank? && (params[:user][:password].present? || params[:user][:email].present?)
+  end
 
   # check if we need password to update user data
   # ie if password or email was changed
