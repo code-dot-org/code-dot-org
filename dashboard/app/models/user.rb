@@ -1078,6 +1078,20 @@ class User < ActiveRecord::Base
       !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
   end
 
+  # We restrict certain users from editing their email address, because we
+  # require a current password confirmation to edit email and some users don't
+  # have passwords
+  def can_edit_email?
+    encrypted_password.present?
+  end
+
+  # We restrict certain users from editing their password; in particular, those
+  # users that don't have a password because they authenticate via oauth, secret
+  # picture, or some other unusual method
+  def can_edit_password?
+    encrypted_password.present?
+  end
+
   def section_for_script(script)
     followeds.collect(&:section).find { |section| section.script_id == script.id }
   end
