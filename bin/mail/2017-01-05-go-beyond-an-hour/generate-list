@@ -1,21 +1,31 @@
 #!/usr/bin/env ruby
 require_relative '../mailing-common/mailing-list-utils'
 
-# To be sent ~ 2pm on Thurs, 2017-01-05
+# Use reporting DBs
+PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
+DASHBOARD_REPORTING_DB = sequel_connect CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader
+
+# To be sent ~ 2pm PST on Thurs, 2017-01-05
 
 # 3 categories:
-# 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
-# 2) international_hoc_no_account - international 2016 Hour of Code organizers who do not have Code Studio accounts
-# 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
+CATEGORIES = [
+  # 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
+  CATEGORY_US_HOC = 'us_hoc_no_account',
+
+  # 2) international_hoc_no_account - international 2016 Hour of Code organizers who do not have Code Studio accounts
+  CATEGORY_INTERNATIONAL_HOC = 'international_hoc_no_account',
+
+  # 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
+  CATEGORY_TEACHERS_NO_PD = 'teachers_no_pd'
+].freeze
 
 # In all cases, skip all @schools.nyc.gov, @strongschools.nyc, and @cps.edu emails.
 # These will be sent separate emails later.
 
 @results = {}
-@category_counts = Hash.new(0)
 
 def create_temp_teachers_table
-  PEGASUS_DB.run "
+  PEGASUS_REPORTING_DB.run "
     CREATE TEMPORARY TABLE IF NOT EXISTS
       temp_teachers (INDEX(email))
     AS (
@@ -24,12 +34,6 @@ def create_temp_teachers_table
       WHERE user_type = 'teacher'
     );
   "
-end
-
-def drop_temp_teachers_table
-  PEGASUS_DB.run '
-    DROP TABLE IF EXISTS temp_teachers
-  '
 end
 
 # 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
@@ -54,23 +58,20 @@ def query_hoc_no_account
     ORDER BY forms.id DESC
   "
 
-  PEGASUS_DB.fetch(pegasus_query).each do |row|
+  PEGASUS_REPORTING_DB.fetch(pegasus_query).each do |row|
     email = row[:email]
     next if UNSUBSCRIBERS.include? email
 
     data = JSON.parse(row[:data])
     hoc_country = data['hoc_country_s']
-    category = hoc_country == 'us' ? 'us_hoc_no_account' : 'international_hoc_no_account'
+    category = hoc_country == 'us' ? CATEGORY_US_HOC : CATEGORY_INTERNATIONAL_HOC
 
-    @category_counts[category] += 1
     @results[email] = {
       category: category,
       email: email,
       name: row[:name]
     }
   end
-
-  drop_temp_teachers_table
 end
 
 # 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
@@ -99,14 +100,12 @@ def query_teachers_no_pd
       )
   "
 
-  category = 'teachers_no_pd'
-  DASHBOARD_DB.fetch(dashboard_query).each do |row|
+  DASHBOARD_REPORTING_DB.fetch(dashboard_query).each do |row|
     email = row[:email]
     next if UNSUBSCRIBERS.include? email
 
-    @category_counts[category] += 1
     @results[email] = {
-      category: category,
+      category: CATEGORY_TEACHERS_NO_PD,
       email: email,
       name: row[:name]
     }
@@ -116,6 +115,9 @@ end
 query_hoc_no_account
 query_teachers_no_pd
 
-puts "#{@results.count} total contacts"
-puts @category_counts.inspect
+puts "#{@results.count} total contacts:"
+CATEGORIES.each do |category|
+  puts "  #{category}: #{@results.values.count{|v| v[:category] == category}}"
+end
+
 export_contacts_to_csv @results, 'contacts.csv'
