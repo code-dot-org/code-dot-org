@@ -2264,12 +2264,8 @@ exports.install = function (blockly, blockInstallOptions) {
         var functionArray = [];
         var numRestrictedSayChoices = 60;
         for (var i = 0; i < numRestrictedSayChoices; i++) {
-          var sayOption = msg[`saySpriteChoices_${i}`];
-          if (!sayOption) {
-            continue;
-          }
           var functionElement = functionArray[i] = [];
-          var string = sayOption();
+          var string = msg["saySpriteChoices_" + i]();
           functionElement[0] = functionElement[1] = string;
         }
         var dropdown = new blockly.FieldDropdown(functionArray);
