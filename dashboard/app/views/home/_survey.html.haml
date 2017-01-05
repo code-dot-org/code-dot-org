@@ -5,6 +5,9 @@
     color: white !important;
   }
 
+  button:disabled {
+    opacity: 0.6;
+  }
 
 - if show_survey?
 
@@ -32,8 +35,9 @@
           %input{type: "text", style: "width:600px; height:35px", name: "survey[nps_comment]"}
           %input{type: "hidden", name: "survey[kind]", value: "NetPromoterScore2017"}
         #submit
-          %button#submitSurvey{type: "submit", disabled: true} Submit
-          %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
+          %button.primary#submitSurvey{type: "submit", disabled: true, style: "font-size: 18px"} Submit
+          &nbsp;
+          %span{onclick: "return submitSurvey(false)", style: "cursor: pointer; font-size: 18px"} No thanks
   %br/
 
 :javascript
