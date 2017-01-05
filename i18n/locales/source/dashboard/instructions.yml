@@ -2031,11 +2031,148 @@ en:
         to make this game more fun?"
       courseB_playlab_eventsToolbox_instruction: "Finish by playing a sound and making
         the knight vanish when he runs into the dragon!"
+      courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
+        what they do!"
+      courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
+        artist draw over the grey lines in the picture. (Each line is 100 pixels long)"
+      courseC_artist_prog3_instruction: "Each side of the inner square is 100 pixels
+        and all of the angles are 90 degrees."
+      courseC_artist_prog4_instruction: "Finish Starla's rocket so she can chase
+        her pet."
+      courseC_artist_prog5_instruction: "Finish this tag by drawing a rectangle around
+        the outside.\r\n(The long sides are 200 pixels each and the short sides are
+        each 100 pixels)"
+      courseC_artist_prog6_instruction: "Draw this diamond with 200 pixel sides."
+      courseC_artist_prog7_instruction: "**Challenge:** This tag is a special one!  Can
+        you figure out how to draw the outline?"
+      courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
+        side is 150 pixels)"
+      courseC_collector_prog1_instruction: "Play around with the blocks to see if
+        you can help Laurel collect some gold."
+      courseC_collector_prog2_instruction: "Move Laurel to the gold, then use `collect`
+        to pick it up."
+      courseC_collector_prog3_instruction: "Order these blocks to collect the coins
+        and solve the puzzle."
+      courseC_collector_prog4_instruction: "Put these blocks in order to collect
+        all of the gold and solve the puzzle."
+      courseC_collector_prog5_instruction: "These blocks are in the wrong order.
+        Can you fix them?"
+      courseC_collector_prog6_instruction: "Reorder the blocks to collect all of
+        the treasure."
+      courseC_collector_prog7_instruction: "Use blocks from the toolbox to collect
+        all of the treasure."
+      courseC_collector_prog8_instruction: "*\"Keep up the good work! Help me collect
+        all of the coins.\"*"
+      courseC_collector_prog9_instruction: "*\"Let's get all of the coins!\"*"
+      courseC_collector_progA_instruction: "Help Laurel collect all of the treasure."
+      courseC_collector_progB_instruction: "Collect as many coins as you can to finish
+        the stage!"
+      courseC_harvester_loops1_instruction: "Use loops to pick all of the pumpkins."
+      courseC_harvester_loops10_instruction: "Collect all of the corn and all of
+        the pumpkins."
+      courseC_harvester_loops11_instruction: "Collect all of the corn and all of
+        the pumpkins."
+      courseC_harvester_loops2_instruction: "Can you combine two different loops
+        to move toward the pumpkins, then collect them all?"
+      courseC_harvester_loops3_instruction: "Collect all of the pumpkins."
+      courseC_harvester_loops4_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops5_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops6_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops7_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops8_instruction: "**Challenge:** Collect all of the corn
+        and all of the pumpkins."
+      courseC_harvester_loops9_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_maze_debugging1_instruction: "Fix the code to help get Skrat get to
+        the acorn."
+      courseC_maze_debugging10_instruction: "Debug this level by rearranging and
+        changing blocks to get me to the pig!"
+      courseC_maze_debugging2_instruction: "Use your debugging skills to get Skrat
+        to the acorn."
+      courseC_maze_debugging3_instruction: "Remove blocks to get Skrat to the acorn!"
+      courseC_maze_debugging4_instruction: "Someone has their directions mixed up!
+        Can you help?"
+      courseC_maze_debugging5_instruction: "Debug this level by rearranging and changing
+        blocks."
+      courseC_maze_debugging6_instruction: "Figure out what is wrong and get Skrat
+        to the acorn."
+      courseC_maze_debugging7_instruction: "**Challenge:** Debug this level by rearranging,
+        adding, and deleting blocks."
+      courseC_maze_debugging8_instruction: "Debug this level to get Skrat to the
+        acorn."
+      courseC_maze_debugging9_instruction: "Debug this level to get Skrat to the
+        acorn."
+      courseC_maze_loops1_instruction: "Can you get the bird to the pig using 5 of
+        the same kind of blocks?"
+      courseC_maze_loops10_instruction: "You are doing great! Keep it up!"
+      courseC_maze_loops11_instruction: "You are almost there! This time, choose
+        any path you like!"
+      courseC_maze_loops2_instruction: "Can you get the bird to the pig by creating
+        a loop that uses only one `move forward` block inside of a `repeat`?"
+      courseC_maze_loops3_instruction: "Solve this puzzle by creating a loop!"
+      courseC_maze_loops4_instruction: "In this puzzle, two `repeat` loops will help
+        you get the bird to the pig with the fewest number of blocks!"
+      courseC_maze_loops5_instruction: "*\"Get me to the pig as quickly as possible!\"*"
+      courseC_maze_loops6_instruction: "Loops even work with more than one block
+        inside!  Can you loop this sequence?"
+      courseC_maze_loops7_instruction: "Use what you learned in other puzzles!"
+      courseC_maze_loops8_instruction: "Challenge: Combine ideas from the last few
+        puzzles to complete this level."
+      courseC_maze_loops9_instruction: "You are doing great! Keep it up!"
+      courseC_maze_programming1_instruction: "For this puzzle, drag all of the blocks
+        together and click \"Run\" to watch it go!"
+      courseC_maze_programming2_instruction: "Drag an extra `move forward` block
+        out of the toolbox to finish your code."
+      courseC_maze_programming3_instruction: "There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox."
+      courseC_maze_programming4_instruction: "Avoid TNT or feathers will fly!"
+      courseC_maze_programming5_instruction: "Avoid the TNT."
+      courseC_maze_programming6_instruction: "\"Keep calm and help me find the bad
+        pig. Otherwise I might get angry!\""
+      courseC_maze_programming7_instruction: "**Challenge:** This code has a lot
+        of bugs. You'll need to remove some blocks and add others."
+      courseC_maze_programming8_instruction: "*\"Keep calm and help me find the bad
+        pig.\"*"
+      courseC_maze_programming9_instruction: "*\"Now, help me sneak up on the pig
+        any way you want to!\"*"
+      courseC_PlayLab_events1_instruction: "Make Jorge the Dog (actor 1) say \"Hi
+        there.\""
+      courseC_PlayLab_events2_instruction: "Can you make Jorge (actor 1) say something,
+        then have Olive the Cat (actor 2) say something afterward?"
+      courseC_PlayLab_events3_instruction: "Can you write a program to make Jorge
+        (actor 1) move toward Olive the Cat?"
+      courseC_PlayLab_events4_instruction: "Can you write a program that makes Jorge
+        (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge
+        reaches her?"
+      courseC_PlayLab_events5_instruction: "Can you write a program to make Octavia
+        say \"What's new?\" when she is clicked?"
+      courseC_PlayLab_events6_instruction: "Now, write a program to make Waddles
+        move around using the up / down / left / right keys to hit all of the targets!"
+      courseC_PlayLab_events7_instruction: "The `repeat forever` block allows you
+        to run code over and over forever.  Use this block to move Chomp the Dino
+        (actor 2) up and down by 400 pixels forever."
+      courseC_PlayLab_events8_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"
+        and play a \"hit\" sound if he runs into Chomp? \r\nWhen you're done, play
+        the game to make that happen."
+      courseC_PlayLab_events9_instruction: "Can you add a block to score a point
+        when Waddles (actor1) runs into Octavia (actor 3)? \r\nPlay the game and move
+        Waddles with the arrows until you score!"
+      courseC_PlayLab_eventsA_instruction: "Add blocks to the `when run` event to
+        change the background scene and the speed of Waddles.\r\n\r\nPlay the game
+        and move Waddles with the arrows until you score."
+      courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
+        done, click \"Finish\" to share with friends."
       courseC_puppy_loops10_instruction: "You are doing great! Keep it up!"
       courseC_puppy_loops11_instruction: "You are almost there! This time, choose
         any path you like!"
       courseC_puppy_loops8_instruction: "Challenge: Combine ideas from the last few
         puzzles to complete this level."
+      courseC_puppy_loops8courseC_maze_loops8_instruction: "Challenge: Combine ideas
+        from the last few puzzles to complete this level."
       courseC_puppy_loops9_instruction: "You are doing great! Keep it up!"
       courseD_artist_nestedLoops1_instruction: "Draw a triangle to kickstart this
         stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees
@@ -2065,10 +2202,40 @@ en:
         you have learned and make something that you love!"
       courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart
         this stage."
+      courseD_bee_nestedLoops1_instruction: "Help the bee collect all of the nectar."
+      courseD_bee_nestedLoops2_instruction: "Help the bee collect all of the nectar
+        using as few blocks as possible."
+      courseD_bee_nestedLoops3_instruction: "Collect all of the nectar from each
+        flower."
+      courseD_bee_nestedLoops5_instruction: "Collect all of the nectar from each
+        flower and make honey at the honeycomb. "
+      courseD_bee_nestedLoops6_instruction: "Make all of the nectar."
       courseD_maze_until1_instruction: "Get the angry bird to the pig."
+      courseD_maze_until10_instruction: "Help the zombie get to the sunflower."
       courseD_maze_until2_instruction: "Now, use the `repeat until` loop to do the
         same thing without specifying how many times to move forward and turn."
       courseD_maze_until3_instruction: "Get the bird to the pig."
+      courseD_maze_until4_instruction: "Can you get the zombie to the sunflower using
+        only the blocks that are available?"
+      courseD_maze_until5_instruction: "Use the `if` block to help the zombie decide
+        when to turn, then get the zombie to the sunflower."
+      courseD_maze_until6_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until7_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until8_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until9_instruction: "**Challenge:** Avoid the chompers and help
+        the zombie get to the sunflower."
+      courseE_artist_concept1_instruction: "Recreate this image. "
+      courseE_artist_concept4_instruction: "Recreate this drawing using 13 blocks
+        or fewer."
+      courseE_farmer_concept1_instruction: "Can you write a program that fills these
+        holes until the ground is even?"
+      courseE_farmer_concept2_instruction: "Collect all of the pumpkins."
+      courseE_farmer_concept3_instruction: "Fill in the hole at the end of each of
+        these paths."
+      courseE_farmer_concept4_instruction: "Now let's go one level deeper! We've
+        nested that whole block of code into another loop, but you need to get the
+        artist back in place to draw the next line. Which of these code blocks can
+        you place at the end of the outermost loop to draw the whole grid?"
       courseE_farmer_functions1_instruction: "Help the farmer get to the pumpkin
         and pick it."
       courseE_farmer_functions10_instruction: "No one knows what these sprouts will
@@ -2093,25 +2260,29 @@ en:
         as possible."
       courseE_farmer_functions3b_instruction: "Now help the farmer pick the corn,
         lettuce, **and** pumpkin."
-      courseE_farmer_functions3c_instruction: "Let's make this easier by building
-        a function to check for produce and pick it when it is available.  Make sure
-        you call your function from inside the `while path ahead` loops."
+      courseE_farmer_functions3c_instruction: "Which set of blocks helps the farmer
+        check for produce and pick it when it is available? Drag that code into a
+        function, then call your function from inside the `while path ahead` loops
+        (after the `move forward` block)."
       courseE_farmer_functions4_instruction: "Great!  Now you have code that will
         work to get pumpkins from any size path.\r\n\r\nLet's drag that code into
         a function so we can use it in lots of ways...but first use it to solve this
         puzzle again."
-      courseE_farmer_functions4b_instruction: "Now use your new function to solve
-        this puzzle."
+      courseE_farmer_functions4b_instruction: "Use your new function to solve this
+        puzzle."
       courseE_farmer_functions5_instruction: "How can you change your program to
         get this function to work for each of these paths?"
       courseE_farmer_functions5a_instruction: "How can you change your program to
         get this function to work for each of these paths?"
       courseE_farmer_functions5b_instruction: "The crops are now growing in clusters.  Add
         some new `while` loops to your function to make sure you get all of the produce."
+      courseE_farmer_functions5c_instruction: "Your function will come in handy here."
       courseE_farmer_functions6_instruction: "*\"Lettuce try something new!\"*\r\n\r\nHere's
         some code to collect all of the lettuce.  Move it into a function so we can
         use it later."
       courseE_farmer_functions6b_instruction: "Pick all of the produce."
+      courseE_farmer_functions6c_instruction: "What do you need to add this program
+        to collect all of the produce?"
       courseE_farmer_functions7_instruction: "Use your functions to solve this puzzle."
       courseE_farmer_functions7b_instruction: "Make a second function that lets the
         farmer get all of the produce down a path, then brings her back to where she
@@ -2141,18 +2312,45 @@ en:
       courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned
         and make your own drawing. \r\n\r\nHow can you use variables with squares,
         pentagons, or hexagons?"
+      coursef_explore_CYOA_Witch_instruction: "You can do whatever you want in play
+        lab! Here's an example of story in play lab."
+      coursef_explore_playlab2_instruction: "You can do whatever you want in play
+        lab! Here's an example of story in play lab."
+      coursef_explore_playlab_cat_game_instruction: "You can do whatever you want
+        in play lab! Here's an example of game you can make."
+      courseF_playlab_variables0_instruction: "This is Pirate Pegleg.  He's awfully
+        hard to understand these days!"
       courseF_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
         hard to understand these days!"
+      courseF_playlab_variables1a_instruction: "Variables can be used to store text
+        that you want to use later.  Have Kiki, the soccer player,  scream \"Goal!\"
+        by assigning that text to the `shout` variable."
       courseF_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r\n"
       courseF_playlab_variables2a_instruction: "Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r\n"
+      courseF_playlab_variables2b_instruction: "Insert the variable `color` into
+        the middle of a sentence by putting it into the empty slot in the `join` block."
       courseF_playlab_variables3_instruction: "The `ask` block will automatically
         store whatever the user answers into the variable of your choice."
+      courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with
+        Brian by using the variable `A1` in all of the places where age `12` should
+        be used. "
       courseF_playlab_variables4_instruction: "Can you find the correct variable
         in the toolbox to fill in the slot?"
+      courseF_playlab_variables4b_instruction: "Put the variables in the correct
+        places to create this conversation."
       courseF_playlab_variables5_instruction: "Can you find the correct variable
         in the toolbox to fill in the slot?"
+      courseF_playlab_variables5b_instruction: "Put all of the variables in the correct
+        place so that Pegleg's story makes sense."
+      courseF_playlab_variables6b_instruction: "We have provided some starter questions
+        and variables for you. Join them together and put them in the title screen
+        to make a fun story."
+      courseF_playlab_variables7b_instruction: "Create some questions and weave the
+        answers together into your very own story."
+      courseF_playlab_variables8b_instruction: "Use what you've learned to create
+        an improv scene between the actors."
       Crack a Caesar Cipher_instruction: "Instructions"
       Crack Random Substitution_instruction: "Instructions"
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
@@ -3163,11 +3361,8 @@ en:
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
         example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3
         to move to the next puzzle. "
-      Food Fight_instruction: "We've added one last function for you. \r\n\r\nUse
-        an \"if\" statement to program your game to call the \"level_up\" function
-        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
-        example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3
-        to move to the next puzzle. "
+      Food Fight_instruction: "You can make whatever you want in play lab! This is
+        an example of a game you can make in play lab."
       Frequency Analysis_instruction: "Test"
       frozen circle function in circle_instruction: "Now let's create 20 overlapping
         circles, turning 18 degrees between each circle."
@@ -3236,8 +3431,8 @@ en:
       grade1_adventurer_loops5_instruction: "What should you add to this code to
         get all of the gold?"
       grade1_adventurer_loops6_instruction: "Write the code to get all of this gold."
-      grade1_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
-        the way down these stairs!  Write the code to help me get it all."
+      grade1_adventurer_loops7_challenge_instruction: "**Challenge: ** The gold goes
+        all the way down these stairs!  Write the code to help me get it all."
       grade1_adventurer_loops8_challenge_instruction: "Challenge: Try this staircase
         now! It has an extra spike at the end you'll have to climb."
       grade1_adventurer_loops9_instruction: "Help me get the gold from this deep
@@ -3335,6 +3530,9 @@ en:
       grade2_CaringForNewPet_2_instruction: "\"This pig is ruffling my feathers.\"\r\n\r\nThere
         is one extra block that is going to cause the bird to crash. Throw it away
         by dragging it back to the toolbox."
+      grade2_CaringForNewPet_2courseC_maze_programming3_instruction: "There is one
+        extra block that is going to cause the bird to crash. Throw it away by dragging
+        it back to the toolbox."
       grade2_CaringForNewPet_3_instruction: "\"Trace the path and lead me to the
         silly pig. Avoid TNT or feathers will fly!\""
       grade2_CaringForNewPet_3D_instruction: "\"Follow this path to get me to the
@@ -3350,21 +3548,21 @@ en:
         as you can to finish the stage!"
       grade2_collector_2_instruction: "Move Laurel to the gold, then use `collect`
         to pick it up."
-      grade2_collector_3_instruction: "Sequence matters! The blocks you need are
-        already in the workspace, but not connected.  Order these blocks to solve
-        the puzzle."
+      grade2_collector_3_instruction: "Put these blocks in order to collect all of
+        the gold and solve the puzzle."
       grade2_collector_4_instruction: "Sequence matters! The blocks you need are
         already in the workspace, but not connected.  Order these blocks to solve
         the puzzle."
-      grade2_collector_5_instruction: "\"Help me collect each gold coin!\"\r\n\r\nThese
-        blocks are in the wrong order. Can you fix them?"
-      grade2_collector_6_instruction: "\"Help me collect each gold coin!\"\r\n\r\nThese
-        blocks are in the wrong order."
+      grade2_collector_5_instruction: "These blocks are in the wrong order. Can you
+        fix them?"
+      grade2_collector_6_instruction: "Reorder the blocks to collect all of the treasure."
       grade2_collector_7_instruction: "Challenge puzzle! Use blocks from the toolbox
-        to complete this puzzle."
+        to collect all of the treasure."
       grade2_collector_8_instruction: "\"Keep up the good work! Help me collect all
         of the coins.\""
-      grade2_collector_9_instruction: "\"Let's get the coins!\""
+      grade2_collector_9_instruction: "*\"Let's get all of the coins!\"*"
+      grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
+      grade2_collector_A_instruction: "Help Laurel collect all of the treasure."
       grade2_collector_pre1_instruction: "\"Hi, I'm Laurel. Today I'm searching
         for treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see
         if you can help Laurel collect some gold."
@@ -3474,47 +3672,40 @@ en:
       grade3_AboutMyRobot_TeacherIDo_instruction: "Run this puzzle and click on the
         robot to see what happens!"
       grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the
-        nectar. You can only collect nectar from flowers, but you can check any space
-        to see if there is a flower."
+        nectar. \r\n\r\nYou can only collect nectar from flowers, but you can check
+        any space to see if there is a flower."
       grade3_bee_conditionals_new1b_instruction: "Help the bee collect all of the
         nectar. You can only collect nectar from flowers, but you can check any space
         to see if there is a flower."
-      grade3_bee_conditionals_new2_instruction: "Can you help the bee collect the
-        nectar from the flowers? You can only collect nectar from flowers, but you
-        can check any space to see if there is a flower."
-      grade3_bee_conditionals_new2a_instruction: "Now we know that every flower has
-        exactly one nectar. Use the blocks provided to check each space and only get
-        nectar when there's a flower. "
+      grade3_bee_conditionals_new2_instruction: "Collect all of the nectar using
+        as few blocks as possible"
+      grade3_bee_conditionals_new2a_instruction: "Get all of the nectar using as
+        few blocks as possible."
       grade3_bee_conditionals_new2b_instruction: "Collect all of the nectar. You
         can only collect nectar from flowers, but you can check any space to see if
         there is a flower."
       grade3_bee_conditionals_new3a_instruction: "Collect all of the nectar or make
         all the honey. You can only collect nectar from flowers and make honey from
         honeycombs. Check any space to see if there is a flower or honeycomb."
-      grade3_bee_conditionals_new3b_instruction: "Uh oh! The bee is not sure if he
-        should collect nectar or make honey. Can you help him out?"
+      grade3_bee_conditionals_new3b_instruction: "Collect all of the nectar and make
+        all of the honey."
       grade3_bee_conditionals_new3c_instruction: "Help the bee collect all of the
         nectar and make all of the honey! Hint: Try using one loop inside of another
         loop."
       grade3_bee_Conditionals_new4_instruction: "Now try checking all of these flowers
         with \"if\" blocks to see if there is any nectar available."
-      grade3_bee_conditionals_quantum1_instruction: "This cloud is blocking my view!
-        Check to see if there's a flower under the cloud, and only get nectar if
-        there's a flower. Be careful, it can change!"
-      grade3_bee_conditionals_quantum2_instruction: "More clouds! \r\n\r\nCheck underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r\n\r\nRemember:
-        Not all clouds hide the same thing!"
-      grade3_bee_conditionals_quantum3_instruction: "Now I just want to make honey.
-        Some of these clouds might have honeycombs under them. The way we've been
-        going about things won't work here. Be sure to check if a honeycomb is hiding
-        behind each cloud!"
-      grade3_bee_conditionals_quantum4_instruction: "Sometimes this cloud covers
-        a flower, and sometimes it covers a honeycomb! Use the if/else block to collect
-        nectar if it is a flower, else to make honey (because it is a honeycomb)."
-      grade3_bee_conditionals_quantum5_instruction: "There will be either a flower
-        or a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block
-        to collect nectar if there is a flower.\r\nOtherwise, make honey (because
-        there is a honeycomb)."
+      grade3_bee_conditionals_quantum1_instruction: "Check to see if there's a flower
+        under the cloud. If there's a flower, get nectar."
+      grade3_bee_conditionals_quantum2_instruction: "Check underneath every cloud
+        to see if it is hiding a flower before you get nectar.  \r\n"
+      grade3_bee_conditionals_quantum3_instruction: "Some of these clouds might have
+        honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
+        cloud!"
+      grade3_bee_conditionals_quantum4_instruction: "Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb."
+      grade3_bee_conditionals_quantum5_instruction: "Use the `if/else` block to collect
+        nectar if there is a flower.\r\nOtherwise, make honey (because there is a
+        honeycomb)."
       grade3_Conditionals_1 BAD_instruction: "Use a loop to collect all of the nectar."
       grade3_Conditionals_1_instruction: "I'm a hungry bee! \r\nHelp me collect
         all of the nectar from the flowers using the fewest number of blocks."
@@ -3628,13 +3819,15 @@ en:
         nectar from each of the flowers using the fewest blocks possible."
       grade3_maze_Loop1_instruction: "Assessment:  Get me to the sunflower using
         only 5 blocks! "
-      grade3_maze_loops2_instruction: "Get me to the sunflower using the fewest blocks
-        possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down
-        on the amount of code you need."
-      grade3_maze_loops3_instruction: "Let's take this to another level! \r\nUse
-        loops to get me to the sunflower with the fewest loops possible."
-      grade3_maze_loops4_instruction: "Get me to the sunflower using the fewest number
-        of blocks possible!"
+      grade3_maze_loops1_instruction: "Get the zombie to the sunflower."
+      grade3_maze_loops2_instruction: "Get the zombie to the sunflower using the
+        fewest blocks possible!  "
+      grade3_maze_loops2a_instruction: "Get the zombie to the sunflower using the
+        fewest number of blocks possible."
+      grade3_maze_loops3_instruction: "Get the zombie to the sunflower using only
+        the blocks available."
+      grade3_maze_loops4_instruction: "Get the zombe to the sunflower using the fewest
+        number of blocks possible!"
       grade3_maze_loops5_instruction: "Get me to the sunflower using the fewest blocks
         possible!"
       grade3_maze_nestedLoops1_instruction: "Can you get me to the pig using 5 of
@@ -3786,6 +3979,12 @@ en:
         \r\n\r\nWe've moved the blocks needed for drawing a square into a function
         called `draw a square`. This time, use the `draw a square` function to create
         the glasses. \r\n\r\nThe squares are 75 pixels apart."
+      grade4_artist_functions2a_instruction: "Create this image using only the blocks
+        provided."
+      grade4_artist_functions3a_instruction: "Create this image using only the blocks
+        provided."
+      grade4_artist_functions3b_instruction: "This time, use lines of 8 hexagons
+        with 25 pixel sides."
       grade4_artist_functions_challenge_instruction: "Use the suggested functions
         to draw four rows of hexagons. Notice how our even numbered rows are shifted
         to the right?"
@@ -3811,8 +4010,12 @@ en:
       grade4_artist_functions_windows1_instruction: "If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
         Don't forget the jump block!"
-      grade4_artist_functions_windows2_instruction: "Can you figure out how to add
-        these windows? Watch out for the door!"
+      grade4_artist_functions_windows2_instruction: "Try solving this puzzle by creating
+        `draw a window` and calling it five times. Watch out for the door!\r\n\r\n-
+        The top windows are 50 pixels away from each other.  \r\n- The bottom windows
+        are 100 pixels below the top set."
+      grade4_artist_functionsChallenge0_instruction: "**Challenge:** Create as many
+        functions as you think you need to make this drawing of 50 pixel squares."
       grade4_artist_nested_loop_circles1_instruction: "Assessment: Use a nested loop
         to complete the design."
       grade4_artist_nested_loop_flags1_instruction: "Loop the given code to create
@@ -3878,8 +4081,8 @@ en:
         only collect nectar from flowers, but you can check any space to see if there
         is a flower."
       grade4_bee_conditionals_new1a_instruction: "Help the bee make all of the honey.
-        You can only make honey at a honey comb, but you can check any space to see
-        if there is a honey comb."
+        You can only make honey at a honeycomb, but you can check any space to see
+        if there is a honeycomb."
       grade4_bee_conditionals_new2_instruction: "Can you help the bee collect the
         nectar from the flowers? You can only collect nectar from flowers, but you
         can check any space to see if there is a flower."
@@ -3937,15 +4140,15 @@ en:
       grade4_bee_functions9_instruction: "Create a function that collects all of
         the nectar from each flower."
       grade4_bee_nestedLoops0_instruction: "Use a loop to collect all of the nectar."
-      grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.
-        Use a nested loop. "
-      grade4_bee_nestedLoops2_instruction: "Can you determine the missing blocks?"
-      grade4_bee_nestedLoops2a_instruction: "Can you create a nested loop to collect
-        all of the nectar?"
+      grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower."
+      grade4_bee_nestedLoops2_instruction: "**Challenge:** Figure out how to get
+        all of the nectar using only the blocks available."
+      grade4_bee_nestedLoops2a_instruction: "Collect all of the nectar using  as
+        few blocks as possible."
       grade4_bee_nestedLoops3_instruction: "Collect all of the nectar by creating
         a nested loop."
       grade4_bee_nestedLoops4_instruction: "Collect all of the nectar from each flower
-        and make honey at the honeycomb. \r\n\r\nUse a nested loop. "
+        and make honey at the honeycomb. "
       grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of
         the nectar and make all of the honey using loops.\r\n\r\nHint: There are several
         possible solutions!"
@@ -4265,37 +4468,24 @@ en:
         pixel triangles. "
       grade5_bee_for_loops1_instruction: "Use a loop to collect the nectar from each
         flower."
-      grade5_bee_for_loops10_instruction: "If your loop is counting down, the increment
-        is subtracted from your counter variable each loop. What should your increment
-        be to collect 15, then 12, then 9, 6, 3 nectar?"
-      grade5_bee_for_loops11_instruction: "Ready for a challenge?  Take what you've
-        learned about loops and try to solve this problem. Remember: You may have
-        to run through solutions multiple times before you figure out all of the steps."
+      grade5_bee_for_loops10_instruction: "What should your increment be to collect
+        15, then 12, then 9, 6, 3 nectar?"
+      grade5_bee_for_loops11_instruction: "**Challenge:** Take what you've learned
+        about `for` loops and try to solve this problem. "
       grade5_bee_for_loops2_instruction: "Add the code necessary to make sure the
         bee collects all the nectar. Look at how much code you need for this puzzle!
         (We'll learn a simpler way in the next puzzle.)"
-      grade5_bee_for_loops3_instruction: "Ah, the \"for loop\" makes this much easier!
-        All the code you need is here, take a look at how it is put together then
-        click \"Run\" to see how it works. "
-      grade5_bee_for_loops4_instruction: "Replace the ??? in the \"for loop\" with
-        the largest amount of nectar the bee has to collect. "
-      grade5_bee_for_loops5_instruction: "Now we need to move forward \"counter\"
-        times, then get nectar \"counter\" times.  Can you use two \"repeat\" loops
-        to solve this challenge?"
+      grade5_bee_for_loops3_instruction: "Try this puzzle using the `for` loop with
+        `counter` variable and see how much shorter your code becomes."
+      grade5_bee_for_loops4_instruction: "Help the bee collect all of the nectar."
       grade5_bee_for_loops6_instruction: "You can also use a \"for loop\" to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1."
-      grade5_bee_for_loops7_instruction: "The last number in your for loop is called
-        the \"increment\". Each time the loop is run, the counter variable changes
-        by the value of the increment. Try collecting these flowers using an increment
+      grade5_bee_for_loops7_instruction: "Try collecting these flowers using an increment
         of 2."
       grade5_bee_for_loops8_instruction: "You've got this! What should your increment
         be to collect 3, 6, 9, 12, 15 nectar?"
-      grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable
-        with a math block! How can you use the \"counter\" variable to navigate this
-        garden with the fewest number of blocks possible? What do you need to do to
-        collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"
-        variable!\r\n\r\nRemember: If your loop is counting up, the increment is added
-        to your \"counter\" variable each time through."
+      grade5_bee_for_loops9_instruction: "Use the `counter` variable to navigate
+        this garden with the fewest number of blocks possible."
       grade5_bee_parameters_new8_instruction: "That's a great function you've created!
         You are officially on your own now. Collect all the nectar. Make all the honey."
       grade5_bee_parameters_new9_instruction: "Bonus Challenge! If you are feeling
@@ -4396,7 +4586,7 @@ en:
       gradek_adventurer_loops10_instruction: "Help me get all of the gold from this
         cave."
       gradek_adventurer_loops2_instruction: "How can Laurel collect all five piles
-        of gold using only one --> block?"
+        of gold using only one `[E-->]` block?"
       gradek_adventurer_loops3_instruction: "Can you fix Laurel's path to get all
         of this gold?"
       gradek_adventurer_loops4_instruction: "Use what you learned to get all of the
@@ -4407,16 +4597,16 @@ en:
         get all of the gold?"
       gradek_adventurer_loops6_instruction: "Write the code to get all of this gold."
       gradek_adventurer_loops7_instruction: "Write the code to get all of this gold."
-      gradek_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
-        the way up these stairs!  Write the code to help me get it all."
-      gradek_adventurer_loops8_instruction: "Help me get the gold from this deep
-        valley."
+      gradek_adventurer_loops7_challenge_instruction: "**Challenge:** The gold goes
+        all the way up these stairs!  Write the code to help me get it all."
+      gradek_adventurer_loops8_instruction: "Help me get all of the gold from this
+        deep valley."
       gradek_adventurer_loops9_instruction: "Help me get all of the gold from this
         cave."
       gradek_adventurer_loopsFP_instruction: "Eureka!  Collect as much gold as you
         can!"
-      gradek_adventurer_loopsPre_instruction: "This is Laurel the Adventurer!  Can
-        you move her around and get gold?"
+      gradek_adventurer_loopsPre_instruction: "This is Laurel the Adventurer.  Mover
+        her around and get as much gold as you can!"
       gradek_artist_loops1_instruction: "Help the artist draw this line two times
         forward."
       gradek_artist_loops2_instruction: "Our artist is trying to draw a line five
@@ -5390,6 +5580,8 @@ en:
         and to the left of the turtle's starting position. Click to see full instructions."
       Poorva-test_instruction: "Here are regular instructions for a level. There
         is nothing fancy going on here."
+      Practice Create Performance Task_instruction: "Design and implement your practice
+        Create Performance Task. (Click to see full instructions)"
       Project - Your Own Multi Screen App_instruction: "Create your multi-screen
         app. (Click to see full instructions.)"
       Prompt Test_instruction: "Build whatever you want. This is an example of a
@@ -6250,7 +6442,7 @@ en:
         image of both squares, this time using parameters. (Click to see full instructions)"
       U3L08 - Enchantment Under the Sea_instruction: "You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
-        one each for the starfish, sea grass, and fish. Create versions of these functions
+        one each for the starfish, seagrass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance."
       U3L08 - fish_instruction: "Add a parameter to drawFish that changes the size
@@ -6260,8 +6452,8 @@ en:
       U3L08 - individualCode_instruction: "Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)"
       U3L08 - introUnderTheSea_instruction: "Add an extra fish, starfish, and piece
-        of sea grass to the image. Look at, but don't change, the functions that
-        create them. (Click to see full instructions)"
+        of seagrass to the image. Look at, but don't change, the functions that create
+        them. (Click to see full instructions)"
       U3L08 - multiParamFish_instruction: "Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)"
@@ -6275,9 +6467,9 @@ en:
         the size of the piece of seagrass drawn. (Click to see full instructions)"
       U3L08 - squareTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"
-      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of sea
-        grass to the image. Look at, but don't change, the functions that create
-        them. (Click to see full instructions)"
+      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of seagrass
+        to the image. Look at, but don't change, the functions that create them.
+        (Click to see full instructions)"
       U3L08 - triangleTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"
       U3L1 - Simulation - Template_instruction: "Use a while loop to \"flip 10 coins\"
@@ -6884,6 +7076,9 @@ en:
         in the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records
         to display your sentence."
+      U5 if-else-if movie example_instruction: "Add an else-if statement in order
+        to tell the user if their guess is high or low instead of just wrong. (Click
+        to see full instructions)"
       U6 - Final Project - Project Level_instruction: "Build your final project here.
         (Click to see full instructions)"
       U6 - updateRecord - Callback Success Parameter_instruction: "Add an if-else

@@ -4,10 +4,10 @@
   'yes': Da
   'no': Ne
   select_language: Prosimo izberite vaš jezik
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org bo kmalu odstranila podporo za Internet Explorer 8,
+    9 in 10. Prosimo, nadgradite s sodobnim brskalnikom.
+  upgrade_ie_message_csedweek: CSEdWeek.org bo kmalu odstranila podporo za Internet
+    Explorer 8, 9 in 10. Prosimo, nadgradite s sodobnim brskalnikom.
   upgrade_ie_link: Več o tem
   en: računalniška znanost, računalništvo
   computer_science_edweek: Computer Science Education Week
@@ -35,11 +35,11 @@
   twentyhours_text: Ste končali prvo Uro za kodo? Preberite več računalništvu in konceptih
     programiranja v tem spremljanjem tečaju.
   og_title: Vsak otrok si zasluži priložnost
-  og_description: Technology is changing everything. Every student in every school
-    deserves the opportunity to study computer science.
-  csedweek_og_title: The Hour of Code is here
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  og_description: Vsak učenec v vsaki šoli si zasluži priložnost, da se uči računalništva.
+  csedweek_og_title: Ura za kodo je tu
+  csedweek_og_description: Ura za koda je globalno gibanje, ki je doseglo desetine
+    milijonov učencev, dijakov in študentov, v vseh starostnih skupinah, v več kot
+    180 državah in več kot 45 jezikih.
   hoc2014_heading: Pridružite se <a href="http://hourofcode.com"> Uri za kodo</a>
     <br/> 8. do 14. decembra, 2014 <br/>
   hoc2014_students: Učenci
@@ -86,19 +86,19 @@
   congratulations_volunteer: 'Čestitamo: Sedaj, ko si preizkusil Uro kode, <a href="https://code.org/volunteer">se
     lahko vpišeš med prostovoljce v razredu</a> in pomagaš drugim,dase učijo na svoji
     Uri kode!'
-  congratulations_on_completing_course1: Congratulations on completing Course 1
-  congratulations_on_completing_course2: Congratulations on completing Course 2
-  congratulations_on_completing_course3: Congratulations on completing Course 3
-  congratulations_on_completing_course4: Congratulations on completing Course 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_course1: "Čestitke za dokončan Tečaj 1"
+  congratulations_on_completing_course2: "Čestitke za dokončan Tečaj 2"
+  congratulations_on_completing_course3: "Čestitke za dokončan Tečaj 3"
+  congratulations_on_completing_course4: "Čestitke za dokončan Tečaj 4"
+  congratulations_on_completing_accelerated: "Čestitamo za dokončanje Pospešenega
+    Tečaja"
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
   congrats_next_tutorials_desc: Preizkusi te krajše, 1 urne tutoriale ali pa poskusi
     <a href="%{current_path}/next"> podoben tutorial</a>.
   get_a_certificate_of_achievement: Dobite potrdilo o dosežku
-  view_course: View course
-  view_unit: View unit
-  make_app: Make an app
+  view_course: Ogled predmeta
+  view_unit: Ogled enote
+  make_app: Izdelaj aplikacijo
   congrats_guest_speaker_title: Find a guest speaker for your classroom
   congrats_guest_speaker_desc: Now that your students have finished a computer science
     course, consider celebrating and connecting it to things they can build in the
@@ -107,19 +107,20 @@
     any city to find computer science students or technical professionals who are
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
+  congrats_third_party_title: Uporabite svoje nove spretnosti pri teh aplikacijah
+    in spletnih straneh
+  third_party_gradelevel_kto8: 8. razred
+  third_party_gradelevel_kto2: 2. razred
+  third_party_gradelevel_2to8: 2. - 8. razred
   third_party_gradelevel_4to12: Grades 4-12
   third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
+  third_party_gradelevel_6plus: 6. razred in višje
+  third_party_gradelevel_8plus: 8. razred in višje
+  third_party_platform_all: 'Platforma: Splet, iPad & Android'
+  third_party_platform_mobile: 'Platforma: iPad & Android'
+  third_party_platform_web: 'Platforma: Splet'
   third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
+  third_party_price_free: 'Cena: Zastonj'
   third_party_price_299: 'Price: $2.99/download'
   third_party_price_individual: 'Individual Price: Free Trial & $25/month'
   third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
@@ -178,9 +179,9 @@
     native education.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_organization: Organizacija
   third_party_curriculum: kurikulum
-  third_party_pricing: Pricing
+  third_party_pricing: Cenik
   third_party_cost_free: Free
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: "$2.99/download"
@@ -191,9 +192,9 @@
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
   third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
+  third_party_desc_10to12_kto5: Približno 10 do 12 lekcij, namenjenih učencem petega
+    razreda.
+  third_party_desc_40_4to8: Več kot 40 predavanj, namenjenih učencem od 4. do 5. razreda.
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
   third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
@@ -218,7 +219,7 @@
   leaderboards_for_hoc: Lestvica vodilnih za Uro za kodo.
   support_url: http://support.code.org/
   country: Država
-  city: mesto
+  city: Mesto
   gender: Spol
   boys: Fantje
   girls: Dekleta
@@ -250,20 +251,22 @@
   continue_learning_header: Nadaljujte z Učenjem tudi po Uri za kodo
   continue_learning_body: Obstaja veliko možnosti.  Lahko se učite na spletu, v lokalni
     šoli ali na poletnem taboru.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Poskusi Code Studio tečaj
   learn_next_level: Nadaljujte na naslednjo stopnjo
   learn_online: Poskusite druge spletne tečaje
   learn_classes: Poišči lokalne tečaje
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Nadaljuj učenje z Minecraftom
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
+  just_did_course2: Pravkar sem končal Tečaj 2! @codeorg
+  just_did_course3: Pravkar sem končal Tečaj 3! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_accelerated: Pravkar sem končal Pospešeni Tečaj! @codeorg
   twitter_teach_cs: "Zakaj več šol ne poučuje računalništva? To lahko spremenimo.
     \ \nhttp://youtu.be/nKIu9yen5nc. Obiščite http://code.org/ in izvedeli boste več.\n"
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Več o Uri za kodo
   beyond_hoc: Po Uri za kodo
   what_gender: Izberite vaš spol
@@ -454,10 +457,10 @@
   class_submission_level_college: Fakulteta
   class_submission_level_vocational: Poklicno izobraževanje
   class_submission_languages_other: Drugi jezik(-i)
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: Več <a href='%{inspiring_videos_playlist}'>navdihujočih video posnetkov</a>
+    v katerih nastopajo vzorniki in znane osebnosti
+  careers_page_more: Več <a href='%{careers_url}'>navdihujočih video posnetkov</a>
+    v katerih nastopajo strokovnjaki iz tehničnih področij
   playlab_choose_theme: Izberi svojo temo za Play Lab
   playlab_classic_title: Klasika
   playlab_gumball_title: Gumballov fantastični svet
@@ -480,32 +483,18 @@
   mc_gradelevel: Starost 4-104
   mc_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   mc_specs: Več jezikov / Sodobni brskalniki in tablice / Starost 6-106
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer: Minecraft Oblikovalec
+  minecraft_adventurer: Minecraft Pustolovec
+  minecraft_tutorials: Minecraft Ura za kodo vadnice
+  minecraft_specs: Več jezikov | Sodobni brskalniki in tablice | Starost 2+
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
   minecraft_designer_button: Začni
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Uporabi kodo, da popelješ Alexa ali Steva na pustolovščino.
   minecraft_adventurer_button: Začni
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
+  minecraft_no_internet: Brez internetne povezave?
+  minecraft_download_adventurer: Prenesi različico Minecraft Pustolovca, ki deluje
+    tudi brez internetne povezave.
   minecraft_subtitle: Minecraft Ura za kodo
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
@@ -517,8 +506,37 @@
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
   sports_all_sports_title: Mix and match across sports
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
+  watch_inspirational_videos: Preden začneš, si oglej enega izmed teh navdihujočih
+    video posnetkov
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Navduši dekle
   video_title_cs_intro: Computer Science intro
@@ -534,9 +552,9 @@
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
+  speak_another_language: Govoriš drug jezik?
+  help_translate: Pomagaj pri prevodu.
+  no_internet: Brez internetne povezave?
   download_offline: Download the offline version.
   are_you_teacher: Ste učitelj/ica?
   review_lesson_plan: Review the lesson plan and other teacher resources.
@@ -571,14 +589,16 @@
   volunteer_engineer_submission_field_company_placeholder: Podjetje (ali Univerza)
   volunteer_engineer_submission_field_experience_level: Raven izkušenj
   volunteer_engineer_submission_field_location: Lokacija
-  volunteer_engineer_submission_field_location_desc: If you enter your exact address
-    we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
-  volunteer_engineer_submission_field_location_flexibility: I can help during the
-    Hour of Code by... (select all that apply)
-  volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
-    after the Hour of Code
+  volunteer_engineer_submission_field_location_desc: Lokacija se bo uporabija zato,
+    da lahko učitelji iščejo prostovoljce v bližini in bo prikazana kot bucka na zemljevidu.
+    Če vas skrbi vaša zasebnost, prosimo, uporabite naslov vaše šole/službe ali le
+    vašega mesta.
+  volunteer_engineer_submission_field_location_placeholder: Poštna številka, kraj
+    ali ulica
+  volunteer_engineer_submission_field_location_flexibility: Jaz lahko promagam z...
+    (izberite vse ustrezne odgovore)
+  volunteer_engineer_submission_checkbox_after_hoc: Zanima me prostovoljno delo skozi
+    vse leto
   volunteer_engineer_submission_field_time_commitment: Time commitment after the Hour
     of Code
   volunteer_engineer_submission_field_linkedin: LinkedIn profil
@@ -588,8 +608,9 @@
   volunteer_engineer_submission_field_description: Opis
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
+  volunteer_engineer_submission_field_description_placeholder: Opis izkušenj in/ali
+    sodelovanja. Če govorite jezik(e) poleg angleščine, se prepričajte, da ste to
+    vključili.
   volunteer_engineer_submission_header_private: Information kept private and never
     shared
   volunteer_engineer_submission_field_email: Elektronska pošta
@@ -741,8 +762,8 @@
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
   dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_by_stage: 'Filtriraj po stopnji:'
+  dashboard_filter_all: Vse
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Učiteljeva domača stran
   dashboard_navigation_section_student_progress: "Študentski računi in napredek"
@@ -805,7 +826,7 @@
     teacher. Your students will be added to this new section and leave their old section.
   dashboard_sections_move_to_section: 'Move to section:'
   dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
+  dashboard_sections_code_placeholder: Koda s 6 znaki (ABCDEF)
   dashboard_sections_other_section: Other Section
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
@@ -922,9 +943,9 @@
   dashboard_submission_submitted: Submitted
   dashboard_submission_in_progress: In progress
   dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
+  dashboard_multi_correct: "# izbirno vprašanje pravilno"
+  dashboard_multi_count: "# izbirno vprašanje"
+  dashboard_multi_correct_percent: "% izbirno vprašanje pravilno"
   dashboard_submission_timestamp: Submission timestamp
   stats_hoc_2013_heading: 'Neverjetne statistike iz lanskoletne Ure za kodo. Samo
     v enem tednu:'
@@ -961,32 +982,27 @@
   dashboard_announce_learn_more_button: Več o tem
   dashboard_announce_try_now_button: Poskusite zdaj
   dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_watch_video_button: Oglej si video
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
-  dashboard_announce_all: Keep up to date with new features and updates on our teacher
-    blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_petition_button: Dodaj svoje ime
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_all: Bodite na tekočem z novimi funkcijami in posodobitvami na
+    našem blogu za učitelje. <a href='%{teacher_blog_url}' target='_blank'>Poglejte
+    pretekle objave.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
     will start teaching computer science during the Hour of Code this December 5-11.
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio is not saving or reporting student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials are also not saving progress this week, students can still do the
-    full tutorials and earn a certificate.'
-  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
-    The all-new Minecraft Hour of Code Designer lets students make the rules of the
-    Minecraft world. They can create a totally unique Minecraft experience, and then
-    share it with friends or play it on their phones. Do it with your class for the
-    Hour of Code.
+  dashboard_announce_mc_launch: Edena od naših najbolj priljubljenih vadnic ima sedaj
+    nadaljevanje! Popolnoma nov Minecraft Ura za kodo Oblikovalec omogoča učencem,
+    da dajo pravila svet v Minecrafta. Ustvarijo lahko popolnoma edinstveno doživetje
+    v svetu Minecrafta in nato delijo s prijatelji ali igrajo na svojih telefone.
+    Naredite to svojim razredom v času Ure za kodo.
   dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
     progress in this course from December 3 - 11 due to the level of traffic our site
     receives for the Hour of Code during this time.  You can still view student progress
@@ -997,6 +1013,12 @@
     high quality professional learning programs, and tons of great tools for all grade
     levels&mdash;everything you need, all at no cost. Wondering where to get started?
     Download <a href='%{video_download_url}'>this video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Ura za kodo je tu - 8. do 14. december!
   code_sign_up: Prijavite se za sodelovanje med Tednom poučevanja računalništva
   host_an_hour: Host an hour
@@ -1042,8 +1064,8 @@
   carousel_heading_beyond_beginners: Tutorials for Beginners
   carousel_heading_javascript: Vodiči, ki učijo JavaScript
   carousel_heading_beyond_javascript: Tutorials that teach JavaScript
-  carousel_heading_unplugged: Nimate naprave ali interneta? Poskusite "izštekano"
-    računalništvo
+  carousel_heading_unplugged: Nimate naprave ali interneta? Poskusite računalništvo
+    "brez prijave"
   carousel_heading_devices: Aplikacije z vajami za telefone in tablice
   carousel_heading_beyond_devices: Tutorial apps for phones and tablets
   carousel_heading_languages: Vaje v drugih programskih jezikih
@@ -1061,8 +1083,8 @@
     here.</a>
   how_to_teach_hoc: Kako poučevati Uro za kodo
   more_resources_educators: Več virov za učitelje in vzgojitelje
-  beyond_submission: Want to submit a tutorial for Beyond an Hour? See the criteria
-    and submission form.
+  beyond_submission: "Želiš prispevati vadnico za Po Uri za kodo? Pogej kriterije
+    in prispevni obrazec."
   participants: udeleženci
   teachers_notes: Zapiski učitelja
   teachers_notes_hoc: 'Učitelji: Preberite pomembne opombe za pedagoge tukaj'
@@ -1115,7 +1137,7 @@
   hourofcode_name: Klasičen labirint
   playlab_name: Play Lab
   infinity_name: Neskončen igralni laboratorij
-  artist_name: Artist
+  artist_name: Umetnik
   monstercoding_name: Mystery Island Coding Quest
   allcancode_name: Run Marco!
   csfirst_name: CS First
@@ -1124,10 +1146,10 @@
   texasinstruments_name: 10 Minutes of Code
   teacherled_name: Teacher Led Lesson Plans
   course1_name: Tečaj 1
-  course2_name: Course 2
-  course3_name: 3. tečaj
+  course2_name: Tečaj 2
+  course3_name: Tečaj 3
   course4_name: Course 4
-  accelerated_name: Pospešena smer
+  accelerated_name: Pospešeni Tečaj
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Unit 3: Programming'
@@ -1142,6 +1164,7 @@
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1151,7 +1174,7 @@
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
-  20-hour_name: Pospešena smer
+  20-hour_name: Pospešeni Tečaj
   algebra_name: CS in Algebra
   AlgebraA_name: CS in Algebra Course A
   AlgebraB_name: CS in Algebra Course B
@@ -1173,10 +1196,12 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: App Lab
-  applab_gradelevel: Ages 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game
+  applab_gradelevel: Starost 13+
+  applab_shortdescription_congrats: App Lab je okolje za programiranje, kjer lahko
+    narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali
+    JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah
   codeorg_gradelevel: Starost 4-104
   codeintl_gradelevel: Starost 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1221,20 +1246,20 @@
   infinity_gradelevel: Starost 4-104
   artist_gradelevel: Starost 8 +
   monstercoding_gradelevel: Starost 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
+  allcancode_gradelevel: Starost 5-10
+  csfirst_gradelevel: Starost 9-14
   boxisland_gradelevel: Osnovna šola
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
-  course1_gradelevel: Ages 4-6
+  codesters_gradelevel: Starost 12-14
+  texasinstruments_gradelevel: Starost 13-16
+  teacherled_gradelevel: Starost 5+
+  course1_gradelevel: Starost 4-6
   course2_gradelevel: Starost 6-18
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  accelerated_gradelevel: Ages 10-18
+  course3_gradelevel: Starost 8-18
+  course4_gradelevel: Starost 10-18
+  accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
-  thinkersmithspanish_platformtext: Izštekano
+  thinkersmithspanish_platformtext: Brez prijave
   khan_platformtext: Sodobni brskalniki
   khanes_platformtext: Sodobni brskalniki
   khanpt_platformtext: Sodobni brskalniki
@@ -1244,7 +1269,7 @@
   tynker_platformtext: Sodobni brskalniki
   scratch_platformtext: Samo namizni spletni brskalniki (ne tablice)
   lightbot_platformtext: VSI brskalniki in iOS, Android ali igralne konzole
-  thinkersmith_platformtext: Izštekano
+  thinkersmith_platformtext: Brez prijave
   condcards_platformtext: Izštekano
   lightbotintl_platformtext: iOS, Android (ali spletni brskalnik)
   codehs_platformtext: Sodobni brskalniki. (Nadaljevalni tečaj zahteva $$)
@@ -1266,19 +1291,19 @@
   touchdevelop_platformtext: Sodobni brskalniki, pametni telefoni, vse naprave
   appinventor_platformtext: Sodobni brskalniki + Android
   blockly_platformtext: Le sodobni brskalniki
-  thinkersmith2_platformtext: Izštekano
-  kodableunplugged_platformtext: Izštekano
-  projguts_platformtext: Izštekano
+  thinkersmith2_platformtext: Brez prijave
+  kodableunplugged_platformtext: Brez prijave
+  projguts_platformtext: Brez prijave
   hourofcode_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   frozen_platformtext: Sodobni brskalniki + tablica
   starwars_platformtext: Sodobni brskalniki + tablica
   playlab_platformtext: Sodobni brskalniki, pametni telefoni, tablice
-  monstercoding_platformtext: Modern web browsers, iOS, Android
-  allcancode_platformtext: Modern web browsers, iOS
+  monstercoding_platformtext: Sodobni spletni brskalniki, iOS, Android
+  allcancode_platformtext: Sodobni brskalniki, iOS
   csfirst_platformtext: Sodobni brskalniki
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Sodobni brskalniki
-  texasinstruments_platformtext: TI Calculators
+  texasinstruments_platformtext: TI Kalkulatorji
   teacherled_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeorg_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi ptiči!
   codeintl_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi
@@ -1295,7 +1320,7 @@
   scratch_shortdescription: Ustvari interaktivne igre, zgodbe in animacije.
   lightbot_shortdescription: Lightbot program za reševanje ugank z uporabo procedur
     in zank!
-  thinkersmith_shortdescription: Izštekane vaje za skupine brez naprav
+  thinkersmith_shortdescription: Vaje brez prijave za skupine brez naprav
   condcards_shortdescription: Učenje algoritmov s kupčkom kart
   lightbotintl_shortdescription: Igra za poučevanje konceptov kodiranja
   codehs_shortdescription: Začnite kodiranje s psom Karlom, zabaven in vizualen uvod
@@ -1327,7 +1352,7 @@
   blockly_shortdescription: Naloži ZIP datoteko in se uči brez internetne povezave
   thinkersmith2_shortdescription: Nauči se, kako računalniki uporabljajo 1ke in 0le,
     da predstavijo informacije
-  kodableunplugged_shortdescription: Zabavna izštekana vaja
+  kodableunplugged_shortdescription: Zabavna vaja brez prijave
   projguts_shortdescription: Poskusite modeliranje in simulacijo z igro kamen/papir/škarje
   hourofcode_shortdescription: Naučite se kodirati z Markom Zuckerbergom in Jeznimi
     ptiči!
@@ -1338,7 +1363,7 @@
   playlab_shortdescription: Create a story or make a game with Play Lab!
   infinity_shortdescription: Use Play Lab to create a story or game starring Disney
     Infinity characters.
-  artist_shortdescription: Draw cool pictures and designs with the Artist!
+  artist_shortdescription: Nariši kul slike in oblike z Umetnikom!
   monsterocding_shortdescription: A colorful self-guided programming adventure for
     children.
   allcancode_shortdescription: An immersive game to guide Marco with a visual programming
@@ -1352,9 +1377,10 @@
     calculator.
   teacherled_shortdescription: Be inspired to design your own Hour of Code event with
     these lesson plans.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
+  course2_shortdescription_congrats: Za učence z osnovnimi bralnimi znanji, ta tečaj
+    gradi na Tečaju 1. Učenci bodo ustvarili programe, ki bodo reševali probleme ter
+    razvijali interaktivne igre ali zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo
+    za učence od 2. do 5. razreda osnovne šole.
   course3_shortdescription_congrats: Ready for the next level? Students will delve
     deeper into programming topics introduced in previous courses to find flexible
     solutions to more complex problems. By the end of this course, students create
@@ -1506,11 +1532,11 @@
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
     colorful animated graphics, audio instructions.
-  allcancode_longdescription: Students play an adventure game based on an original
-    story. They guide Marco - the main character - through each level by giving him
-    step-by-step instructions in the form of the visual programming language used
-    by the Hour of Code. They get introduced to sequencing commands, iteration and
-    conditions without even noticing it.
+  allcancode_longdescription: "Študenti igrajo pustolovsko igro, ki temelji na izvirni
+    zgodbi. Marca - glavnega lika - usmerjajo skozi vsako stopnjo s pomočjo navodil
+    korak-za-korakom v obliki vizualnega programskega jezika, ki ga uporablja Ura
+    za kodo. Spoznajo se z zaporedji ukazov, ponovitev in pogojev, brez da bi to sploh
+    opazili."
   csfirst_longdescription: Create a story about two characters at sea. Animate the
     water, and customize the scenery to add your own flare. Use code to tell the story
     you want to tell!
@@ -1856,44 +1882,3 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  dashboard_announce_go_beyond_button: Go beyond
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  csp5_name: 'Unit 5: Building Apps'
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game

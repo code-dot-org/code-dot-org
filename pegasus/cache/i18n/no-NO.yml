@@ -266,6 +266,8 @@
     ut! @codeorg
   twitter_teach_cs: 9 av 10 personer enig, skoler bør lære informatikk. http://youtu.be/nKIu9yen5nc.
     Besøk https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Lær en Time med Kode
   beyond_hoc: Utover en time
   what_gender: Er du jente eller gutt?
@@ -489,22 +491,6 @@
   minecraft_adventurer_button: Start
   minecraft_no_internet: Har du ikke internett?
   minecraft_download_adventurer: Last ned Minecraft-eventyrer for bruk uten internett.
-  minecraft_store_camps: Microsoft Store Kodetimen leire
-  minecraft_host_event: Hold Kodetimen med Minecraft
-  minecraft_youthspark_continue_learning: Fortsett læring med Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Registrer deg</a> for
-    en gratis Kodetimen leir i en Microsoft butikk i Australia, Canada, Puerto Rico
-    eller USA. Lær hvordan du kan kombinere din kreativitet med koding.
-  minecraft_teach_resources: Lærerressurser og oppgaveplan.
-  minecraft_leader_guide: Last ned ressurser for å få hjelp til å planlegge og holde
-    en Kodetime.
-  minecraft_facilitating_event: Holde en Kodetime?
-  minecraft_join_online_training: Bli med Microsoft og Minecraft for en treningssesjon
-    på nett (kun på engelsk) den 22. eler 29, november
-  minecraft_youthspark_create_your_future: Hva enn du er opptatt av, kan du bruke
-    informatikk til å forestille, opprette og lage en fremtid som er din.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}"> Microsoft YouthSpark</a>
-    tilbyr gratis verktøy og ressurser for å følge dine interesser.
   minecraft_subtitle: Kodetimen med Minecraft
   sports_page_title: Kodetimen med sport
   sports_og_title: Kodetimen Sport-oppgaver
@@ -515,6 +501,35 @@
   sports_select_theme: Velg ditt opplæringstema
   sports_basketball_title: Lag et basketball-spill
   sports_all_sports_title: Kode dim egen sport
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Før du begynner, se en av disse videoene og la deg inspirere
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspirere en jente
@@ -774,10 +789,10 @@
   dashboard_progress_pair_programming: parprogrammering
   dashboard_responses_view: 'Vis tekstsvar i:'
   dashboard_responses_none: De fleste av våre kurs er utformet for yngre aldersgrupper
-    og krever ikke at studenter skriver tekstsvar på spørsmål, så du vil ikke se noen
-    tekstsvar her. For eldre elever i ungdomsskolen og videregående skole, kan du
-    se elevenes innleveringer på åpent tekstsvar-spørsmål ved å velge tilordnede kurs
-    fra rullegardinmenyen ovenfor.
+    og krever ikke at elevene skriver tekstsvar på spørsmål, derfor vil du ikke se
+    noen tekstsvar her. For eldre elever i ungdomsskolen og videregående skole, kan
+    du se elevenes innleveringer på åpent tekstsvar-spørsmål ved å velge tilordnede
+    kurs fra rullegardinmenyen ovenfor.
   dashboard_sections_new_section: Ny seksjon
   dashboard_sections_jumbotron_instruction: Lag nye seksjoner og legg til elever.
     Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore
@@ -967,6 +982,7 @@
     28 guvernører og administrerende direktører i de største selskapene i USA sammen
     og leverte et åpent brev, hvor de ba kongressen finansiere K-12 programmeringsutdanning.
   dashboard_announce_petition_button: Legg til navnet ditt
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Hold deg oppdatert med oppdateringer og ny funksjonalitet
     på lærerbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Se tidligere
     kunngjøringer.</a>
@@ -975,12 +991,6 @@
     å nå flere elever enn noen sinne. <a href='%{signup_url}' target='_blank'>Registrer
     din kodetime</a> og la andre lærere vite at hvem som helst kan begynne å undervise
     programmering.
-  dashboard_announce_hoc_scaling: OBS! På grunn av svært mye trafikk fra millioner
-    av elever i løpet av Kodetimen (uke 49), vil ikke Code Studio lagre eller rapportere
-    elevfremgang i de øvrige kursene. Vi anbefaler å gjennomføre et Kodetime-opplegg
-    med klassen din i løpet av denne uka i stedet. Selv om heller ikke Kodetimen-kursene
-    kommer til å lagre noen fremgang, kan elevene likevel fullføre dem og få et diplom
-    etter fullført Kodetime.
   dashboard_announce_mc_launch: Et av våre mest populære opplegg har fått en oppfølger!
     Helt nye Minecraft Hour of Code Designer lar elevene bestemme reglene i Minecraft.
     De kan skape sin helt unike Minecraft-verden, og dele den med vennene sine eller
@@ -994,6 +1004,12 @@
     high quality professional learning programs, and tons of great tools for all grade
     levels&mdash;everything you need, all at no cost. Wondering where to get started?
     Download <a href='%{video_download_url}'>this video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Kodetimen er her - 8. til 14. desember!
   code_sign_up: Registrer deg for å delta under CS Education Week
   host_an_hour: Hold en Kodetime
@@ -1137,6 +1153,7 @@
   csp2_name: 'Enhet 2: Digital informasjon'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 spørsmål
   cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
   cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
@@ -1168,6 +1185,8 @@
   cspexams_category_name: Prinsipper i informatikk teoriprøve
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  basketball_name: Lag et basketball-spill
+  sports_name: Sport
   applab_gradelevel: Minstealder 13 år
   applab_shortdescription_congrats: App Lab er et programmeringsmiljø hvor du kan
     lage enkle apper. Design en app, programmer med blokker eller JavaScript for å
@@ -1297,7 +1316,7 @@
   codecademy_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   codecombat_shortdescription: Overvinn uhyrer til å lære Python eller JavaScript
     i dette episke programmeringsspillet!
-  codemonkey_shortdescription: Studenter programmerer en ape til å fange bananer.
+  codemonkey_shortdescription: Elevene programmerer en ape til å fange bananer.
   codeavengers_shortdescription: Lær JavaScript-programmering, i ein nettlesar
   processing_shortdescription: Eintimes rettleiing i behandlingsspråk
   robomind_shortdescription: Skriv kode for ein virtuell robot
@@ -1857,44 +1876,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spill
   artist_shortcode: art
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  dashboard_announce_go_beyond_button: Go beyond
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  csp5_name: 'Unit 5: Building Apps'
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game
