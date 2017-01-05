@@ -1,11 +1,12 @@
 import onClickOutside from 'react-onclickoutside';
 import React from 'react';
 
-const autocompletePanelWidth = 163;
+const PANEL_MIN_WIDTH = 163;
 
 const styles = {
   autocompletePanel: {
-    width: autocompletePanelWidth,
+    width: '100%',
+    minWidth: PANEL_MIN_WIDTH,
     height: 'initial',
     background: 'white',
     color: '#808080',

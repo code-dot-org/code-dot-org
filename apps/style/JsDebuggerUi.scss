@@ -81,6 +81,16 @@ $debug-header-border-width: 1px;
   border-left: $debug-header-border-width solid gray;
 }
 
+#watchersResizeBar {
+  height: 100%;
+  width: $resize-bar-width;
+  cursor: ew-resize;
+  position: absolute;
+  right: $debug-watch-max-column-width - .5 * $resize-bar-width;
+  z-index: 1;
+  top: $resize-bar-width;
+}
+
 .debug-commands, .debug-console, .debug-watch {
   display: block;
   background-color: $white;
