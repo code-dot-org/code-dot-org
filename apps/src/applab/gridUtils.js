@@ -52,8 +52,6 @@ export function isMouseEventInBounds(mouseEvent, container) {
   const {clientX, clientY} = mouseEvent;
   const clientRect = container[0].getBoundingClientRect();
 
-  console.log(`clientX: ${clientX} clientY: ${clientY} clientRect: ${JSON.stringify(clientRect)}`);
-
   return (
     clientX > clientRect.left && clientX < clientRect.right &&
     clientY > clientRect.top && clientY < clientRect.bottom
