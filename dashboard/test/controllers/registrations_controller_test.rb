@@ -358,11 +358,21 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert can_edit_password_with_password student_with_password, 'oldpassword'
   end
 
-  test "editing password of teacher requires current password" do
-    teacher = create :teacher, password: 'oldpassword'
-    refute can_edit_password_without_password teacher
-    refute can_edit_password_with_password teacher, 'wrongpassword'
-    assert can_edit_password_with_password teacher, 'oldpassword'
+  test "editing password of teacher-without-password does not require current password" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    assert can_edit_password_without_password teacher_without_password
+    assert can_edit_password_with_password teacher_without_password, 'wrongpassword'
+    assert can_edit_password_with_password teacher_without_password, ''
+  end
+
+  test "editing password of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_password_without_password teacher_with_password
+    refute can_edit_password_with_password teacher_with_password, 'wrongpassword'
+    assert can_edit_password_with_password teacher_with_password, 'oldpassword'
   end
 
   test "editing email of student-without-password does not require current password" do
@@ -382,11 +392,21 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert can_edit_email_with_password student_with_password, 'oldpassword'
   end
 
-  test "editing email of teacher requires current password" do
-    teacher = create :teacher, password: 'oldpassword'
-    refute can_edit_email_without_password teacher
-    refute can_edit_email_with_password teacher, 'wrongpassword'
-    assert can_edit_email_with_password teacher, 'oldpassword'
+  test "editing email of teacher-without-password does not require current password" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    assert can_edit_email_without_password teacher_without_password
+    assert can_edit_email_with_password teacher_without_password, 'wrongpassword'
+    assert can_edit_email_with_password teacher_without_password, ''
+  end
+
+  test "editing email of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_email_without_password teacher_with_password
+    refute can_edit_email_with_password teacher_with_password, 'wrongpassword'
+    assert can_edit_email_with_password teacher_with_password, 'oldpassword'
   end
 
   def can_edit_password_without_password(user)
