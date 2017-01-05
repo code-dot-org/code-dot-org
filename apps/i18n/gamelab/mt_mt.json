@@ -1,6 +1,4 @@
 {
-  "foo": "foo",
-  "fooTooltip": "do foo",
   "animationPicker_drawYourOwn": "Draw your own",
   "animationPicker_error": "Error: {message}",
   "animationPicker_failedToParseImage": "The image could not be parsed",

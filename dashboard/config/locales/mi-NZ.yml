@@ -104,6 +104,12 @@
       te haere tonu, e whakaae ana kia tautuhia e koe tētahi kupuhipa me te whakarite
       i tētahi pūkete ki raro iho nei kia pai ai tō whakauru i ō ākonga ki tētahi
       o ā mātou <a href="https://code.org/educate"> whakaakoanga roa</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Tirohia te aratohu kaiwhakaako
     title: Waitohu mō Core.org
     school_name: Ingoa Kura (kei a koe te kōwhiringa)
@@ -373,6 +379,7 @@
     delete_text_teacher_note: 'Kia mōhio ai koe: e kore ngā pūkete o ngā ākonga e
       mukua ina mukua tō ake pūkete.'
     delete_confirm: "Āe rānei e hiahia ana koe ki te muku i tō pūkete?"
+    deleted_user: deleted user
   user_level:
     completed: Kua oti
     tried: Kua ngana
@@ -450,7 +457,7 @@
     announcement_learn_more_button: Me ako tonu
     announcement_try_now_button: Ngana ināianei
     announcement_host_an_hour_button: Taurimatia tētahi Hour
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: Mātakina te ataata
     announcement_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi
       ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
       eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
@@ -458,6 +465,7 @@
       mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki
       te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko.
     announcement_petition_button: Tāpiritia tō ingoa
+    announcement_go_beyond_button: Go beyond
     announcement_all: Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira
       me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā
       whakapāohotanga o mua.</a>
@@ -467,25 +475,23 @@
       ngā tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga
       Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako
       mātauranga rorohiko te tangata ahakoa ko wai.
-    announcement_hoc_scaling: 'WHAKAMATAARA mā ngā pouako e whai ana i ngā Whakaakoranga
-      1-4 me te Whakaakoranga Whakatere: Nā te miriona ākonga e mahi ana i Hour of
-      Code i tēnei wā kua kore te <b>Code Studio e āhei ki te tiaki, ki te pūrongo
-      rānei i te kauneketanga ākonga i aua whakaakoranga mai i te 3-11 o Hakihea</b>.
-      E tūtohi ana mātou kia whai koutou i tētahi o ngā ngohe Hour of Code i tō akomanga
-      hei whakanui i te Hour of Code i Te Wiki o te Mātaruranga Pūtaiao Rorohiko.
-      Ahakoa kāore ā mātou whakaakoranga Hour of Code e tiaki i ngā kōrero kauneke
-      i taua wiki, e wātea tonu ana ngā whakaakoranga matua ki a rātou, ā, ka whiwhi
-      tiwhikete tonu.'
     announcement_mc_launch: Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i
       tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa
       Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou
       ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou
       hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
+    announcement_how_code_studio: Ehara i te mea me tangata mōhio koe ki te pūtaiao
+      rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako,
+      he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā
+      taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E
+      whakaaro ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei
+      ataata</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
       high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā
       whakaurua he waehere wāhanga rerekē.
@@ -997,48 +1003,48 @@
     starwars_blocks_name: 'Star Wars: Te Hanga Ikarangi me te Waehere (Paraka)'
     starwars_javascript_name: 'Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)'
     download_message: Tikiake i te %{app_name} kia whakamahi ā-tuimotu (136MB)
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'Tikiake i te reo Albanian:'
+    download_in_Arabic: 'Tikiake i te reo Arabic:'
+    download_in_Azerbaijani: 'Tikiake i te reo Azerbaijani:'
+    download_in_Basque: 'Tikiake i te reo Basque:'
+    download_in_Bosnian: 'Tikiake i te reo Bosnian:'
+    download_in_Bulgarian: 'Tikiake i te reo Bulgarian:'
+    download_in_Catalan: 'Tikiake i te reo Catalan:'
+    download_in_Chinese-Taiwan: 'Tikiake i te reo Chinese-Taiwan:'
+    download_in_Chinese: 'Tikiake i te reo Chinese:'
+    download_in_Croatian: 'Tikiake i te reo Croatian:'
+    download_in_Czech: 'Tikiake i te reo Czech:'
+    download_in_Danish: 'Tikiake i te reo Danish:'
+    download_in_Dutch: 'Tikiake i te reo Dutch:'
+    download_in_English: 'Tikiake i te reo Ingarihi:'
+    download_in_Finnish: 'Tikiake i te reo Finnish:'
+    download_in_French: 'Tikiake i te reo Wiwī:'
+    download_in_German: 'Tikiake i te reo Tiamana:'
+    download_in_Greek: 'Tikiake i te reo Greek:'
+    download_in_Hebrew: 'Tikiake i te reo Hewbrew:'
+    download_in_Hungarian: 'Tikiake i te reo Hungarian:'
+    download_in_Icelandic: 'Tikiake i te reo Icelandic:'
+    download_in_Indonesian: 'Tikiake i te reo Indonesian:'
+    download_in_Irish: 'Tikiake i te reo Airihi:'
+    download_in_Italian: 'Tikiake i te reo Itāria:'
+    download_in_Japanese: 'Tikiake i te reo Hapanī:'
+    download_in_Korean: 'Tikiake i te reo Kōria:'
+    download_in_Latvian: 'Tikiake i te reo Latvian:'
+    download_in_Lithuanian: 'Tikiake i te reo Lithuanian:'
+    download_in_Norwegian: 'Tikiake i te reo Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Tikiake i te reo Norwegian-Nynorsk:'
+    download_in_Polish: 'Tikiake i te reo Polish:'
+    download_in_Portuguese-Brazil: 'Tikiake i te reo Portuguese-Brazil:'
+    download_in_Portuguese: 'Tikiake i te reo Portuguese:'
+    download_in_Romanian: 'Tikiake i te reo Romanian:'
+    download_in_Russian: 'Tikiake i te reo Russian:'
+    download_in_Serbian: 'Tikiake i te reo Serbian:'
+    download_in_Slovenian: 'Tikiake i te reo Slovenian:'
+    download_in_Spanish: 'Tikiake i te reo Pāniora:'
+    download_in_Swedish: 'Tikiake i te reo Swedish:'
+    download_in_Turkish: 'Tikiake i te reo Turkish:'
+    download_in_Ukrainian: 'Tikiake i te reo Ukrainian:'
+    download_in_Vietnamese: 'Tikiake i te reo Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:

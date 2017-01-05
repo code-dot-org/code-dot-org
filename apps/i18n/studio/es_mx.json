@@ -1,7 +1,7 @@
 {
   "actor": "actor",
-  "add": "agrega",
-  "ask": "pregunta",
+  "add": "agregar",
+  "ask": "preguntar",
   "addCharacter": "Añadir",
   "addCharacterTooltip": "Agrega un personaje a la escena.",
   "addGoal": "agregar meta",

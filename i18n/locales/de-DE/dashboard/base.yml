@@ -82,8 +82,9 @@ de:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
     overview: 'Erstellen Sie eine Benutzerkennung um Ihre Fortschritte nachzuvollziehen und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Aufgaben</a> können sie auch ohne Benutzerkennung ansehen, aber zum Speichern Ihrer Projekte und Fortschritte brauchen Sie eine Benutzerkennung.'
-    hoc_already_signed_up_heading: 'Get started without logging in'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_heading: 'Starte ohne dich einzuloggen'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Siehe Lehrer-Handbuch'
     title: "Melden Sie sich bei Code.org an"
     school_name: 'Name der Schule (optional)'
@@ -302,6 +303,7 @@ de:
     delete_text: "Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen."
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht die Accounts Ihrer Schüler.'
     delete_confirm: 'Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Abgeschlossen'
     tried: 'Versucht'
@@ -354,14 +356,15 @@ de:
     announcement_learn_more_button: "Mehr erfahren"
     announcement_try_now_button: "Probiere es jetzt aus"
     announcement_host_an_hour_button: "Veranstalten Sie eine Stunde"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Schaue ein video"
     announcement_petition: "Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von \"K-12 computer science education\" zu erbitten."
     announcement_petition_button: "Fügen Sie Ihren Namen ein"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Informieren Sie sich über neue Funktionen und Aktualisierungen in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene Meldungen anzeigen.</a>"
     announcement_hoc_launch: "Tausende von Pädagogen in mehr als 180 Ländern lehren Informatik während der Hour-of-Code vom 5. bis zum 11. Dezember. Wir zählen auf Ihre Hilfe, mehr Studierende als je zuvor zu erreichen. <a href='%{signup_url}' target='_blank'> Registrieren Sie Ihre Hour-of-Code- Veranstaltung</a> und sagen Sie Ihren Lehrerkollegen, dass jeder Informatik lehren kann."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio is not saving or reporting student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials are also not saving progress this week, students can still do the full tutorials and earn a certificate.'
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Entschuldigung, aber die Sektion %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Sektionscode ein."
     section_code_not_entered: "Bitte current_section_code angeben."

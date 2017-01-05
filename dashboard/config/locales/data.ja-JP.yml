@@ -451,7 +451,7 @@
         C3_computational_thinking: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
         C3_dice_race: "言うレース"
         C3_internet: "インターネット"
-        C3_crowdsourcing: Crowdsourcing
+        C3_crowdsourcing: "クラウドソーシング"
         C3_functional_suncatchers: Functional Suncatchers
         C3_songwriting_with_parameters: "パラメーターで作詞作曲"
         C4_intro: "はじめに"
@@ -498,6 +498,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
