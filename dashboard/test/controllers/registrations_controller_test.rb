@@ -341,14 +341,18 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select '.alert', 0
   end
 
-  test "editing password of student-without-password does not require current password" do
+  # The next several tests explore profile changes for users with or without
+  # passwords.  Examples of users without passwords are users that authenticate
+  # via oauth (a third-party account), or students with a picture password.
+
+  test "editing password of student-without-password is not allowed" do
     student_without_password = create :student
     student_without_password.update_attribute(:encrypted_password, '')
     assert student_without_password.encrypted_password.blank?
 
-    assert can_edit_password_without_password student_without_password
-    assert can_edit_password_with_password student_without_password, 'wrongpassword'
-    assert can_edit_password_with_password student_without_password, ''
+    refute can_edit_password_without_password student_without_password
+    refute can_edit_password_with_password student_without_password, 'wrongpassword'
+    refute can_edit_password_with_password student_without_password, ''
   end
 
   test "editing password of student-with-password requires current password" do
@@ -358,14 +362,14 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert can_edit_password_with_password student_with_password, 'oldpassword'
   end
 
-  test "editing password of teacher-without-password does not require current password" do
+  test "editing password of teacher-without-password is not allowed" do
     teacher_without_password = create :teacher
     teacher_without_password.update_attribute(:encrypted_password, '')
     assert teacher_without_password.encrypted_password.blank?
 
-    assert can_edit_password_without_password teacher_without_password
-    assert can_edit_password_with_password teacher_without_password, 'wrongpassword'
-    assert can_edit_password_with_password teacher_without_password, ''
+    refute can_edit_password_without_password teacher_without_password
+    refute can_edit_password_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_password_with_password teacher_without_password, ''
   end
 
   test "editing password of teacher-with-password requires current password" do
@@ -375,14 +379,14 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert can_edit_password_with_password teacher_with_password, 'oldpassword'
   end
 
-  test "editing email of student-without-password does not require current password" do
+  test "editing email of student-without-password is not allowed" do
     student_without_password = create :student
     student_without_password.update_attribute(:encrypted_password, '')
     assert student_without_password.encrypted_password.blank?
 
-    assert can_edit_email_without_password student_without_password
-    assert can_edit_email_with_password student_without_password, 'wrongpassword'
-    assert can_edit_email_with_password student_without_password, ''
+    refute can_edit_email_without_password student_without_password
+    refute can_edit_email_with_password student_without_password, 'wrongpassword'
+    refute can_edit_email_with_password student_without_password, ''
   end
 
   test "editing email of student-with-password requires current password" do
@@ -392,14 +396,14 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert can_edit_email_with_password student_with_password, 'oldpassword'
   end
 
-  test "editing email of teacher-without-password does not require current password" do
+  test "editing email of teacher-without-password is not allowed" do
     teacher_without_password = create :teacher
     teacher_without_password.update_attribute(:encrypted_password, '')
     assert teacher_without_password.encrypted_password.blank?
 
-    assert can_edit_email_without_password teacher_without_password
-    assert can_edit_email_with_password teacher_without_password, 'wrongpassword'
-    assert can_edit_email_with_password teacher_without_password, ''
+    refute can_edit_email_without_password teacher_without_password
+    refute can_edit_email_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_email_with_password teacher_without_password, ''
   end
 
   test "editing email of teacher-with-password requires current password" do
