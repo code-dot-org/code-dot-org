@@ -341,71 +341,67 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_select '.alert', 0
   end
 
-  test "editing student password requires current password" do
-    student = create :student, password: 'pbefore'
-    editing_user_password_fails_without_current_password student
-    editing_user_password_fails_with_incorrect_current_password student
-    editing_user_password_succeeds_with_correct_current_password student, 'pbefore'
+  test "editing password of student-without-password does not require current password" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    assert can_edit_password_without_password student_without_password
+    assert can_edit_password_with_password student_without_password, 'wrongpassword'
+    assert can_edit_password_with_password student_without_password, ''
   end
 
-  test "editing teacher password requires current password" do
-    teacher = create :teacher, password: 'pbefore'
-    editing_user_password_fails_without_current_password teacher
-    editing_user_password_fails_with_incorrect_current_password teacher
-    editing_user_password_succeeds_with_correct_current_password teacher, 'pbefore'
+  test "editing password of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_password_without_password student_with_password
+    refute can_edit_password_with_password student_with_password, 'wrongpassword'
+    assert can_edit_password_with_password student_with_password, 'oldpassword'
   end
 
-  test "editing student email requires current password" do
-    student = create :student, password: 'truepass'
-    editing_user_email_fails_without_current_password student
-    editing_user_email_fails_with_incorrect_current_password student
-    editing_user_email_succeeds_with_correct_current_password student, 'truepass'
+  test "editing password of teacher requires current password" do
+    teacher = create :teacher, password: 'oldpassword'
+    refute can_edit_password_without_password teacher
+    refute can_edit_password_with_password teacher, 'wrongpassword'
+    assert can_edit_password_with_password teacher, 'oldpassword'
   end
 
-  test "editing teacher email requires current password" do
-    teacher = create :teacher, password: 'truepass'
-    editing_user_email_fails_without_current_password teacher
-    editing_user_email_fails_with_incorrect_current_password teacher
-    editing_user_email_succeeds_with_correct_current_password teacher, 'truepass'
+  test "editing email of student-without-password does not require current password" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    assert can_edit_email_without_password student_without_password
+    assert can_edit_email_with_password student_without_password, 'wrongpassword'
+    assert can_edit_email_with_password student_without_password, ''
   end
 
-  def editing_user_password_fails_without_current_password(user)
-    new_password = 'pafter'
+  test "editing email of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_email_without_password student_with_password
+    refute can_edit_email_with_password student_with_password, 'wrongpassword'
+    assert can_edit_email_with_password student_with_password, 'oldpassword'
+  end
+
+  test "editing email of teacher requires current password" do
+    teacher = create :teacher, password: 'oldpassword'
+    refute can_edit_email_without_password teacher
+    refute can_edit_email_with_password teacher, 'wrongpassword'
+    assert can_edit_email_with_password teacher, 'oldpassword'
+  end
+
+  def can_edit_password_without_password(user)
+    new_password = 'newpassword'
 
     sign_in user
     post :update, user: {password: new_password,
                          password_confirmation: new_password}
 
-    assert_response :success # which actually means an error...
-    assert_equal ['Current password is required'], assigns(:user).errors.full_messages
-    assert_select 'div#error_explanation', /Current password is required/ # ... is rendered on the page
-
     user = user.reload
-    refute user.valid_password? new_password
+    user.valid_password? new_password
   end
 
-  def editing_user_password_fails_with_incorrect_current_password(user)
-    new_password = 'pafter'
-    wrong_current_password = 'pnever'
-    refute user.valid_password? wrong_current_password
-
-    sign_in user
-    post :update, user: {password: new_password,
-                         password_confirmation: new_password,
-                         current_password: wrong_current_password}
-
-    assert_response :success # which actually means an error...
-    assert_equal ['Current password is invalid'], assigns(:user).errors.full_messages
-    assert_select 'div#error_explanation', /Current password is invalid/ # ... is rendered on the page
-
-    user = user.reload
-    refute user.valid_password? new_password
-    refute user.valid_password? wrong_current_password
-  end
-
-  def editing_user_password_succeeds_with_correct_current_password(user, current_password)
-    new_password = 'pafter'
-    assert user.valid_password? current_password
+  def can_edit_password_with_password(user, current_password)
+    new_password = 'newpassword'
 
     sign_in user
     post :update, user: {password: new_password,
@@ -413,50 +409,27 @@ class RegistrationsControllerTest < ActionController::TestCase
                          current_password: current_password}
 
     user = user.reload
-    refute user.valid_password? current_password
-    assert user.valid_password? new_password
+    user.valid_password? new_password
   end
 
-  def editing_user_email_fails_without_current_password(user)
+  def can_edit_email_without_password(user)
     new_email = 'new@example.com'
 
     sign_in user
     post :update, user: {email: new_email}
 
-    assert_response :success # which actually means an error...
-    assert_equal ['Current password is required'], assigns(:user).errors.full_messages
-    assert_select 'div#error_explanation', /Current password is required/ # ... is rendered on the page
-
     user = user.reload
-    refute user.email == new_email || user.hashed_email == User.hash_email(new_email)
+    user.email == new_email || user.hashed_email == User.hash_email(new_email)
   end
 
-  def editing_user_email_fails_with_incorrect_current_password(user)
+  def can_edit_email_with_password(user, current_password)
     new_email = 'new@example.com'
-    wrong_current_password = 'pnever'
-    refute user.valid_password? wrong_current_password
-
-    sign_in user
-    post :update, user: {email: new_email,
-                         current_password: wrong_current_password}
-
-    assert_response :success # which actually means an error...
-    assert_equal ['Current password is invalid'], assigns(:user).errors.full_messages
-    assert_select 'div#error_explanation', /Current password is invalid/ # ... is rendered on the page
-
-    user = user.reload
-    refute user.email == new_email || user.hashed_email == User.hash_email(new_email)
-  end
-
-  def editing_user_email_succeeds_with_correct_current_password(user, current_password)
-    new_email = 'new@example.com'
-    assert user.valid_password? current_password
 
     sign_in user
     post :update, user: {email: new_email,
                          current_password: current_password}
 
     user = user.reload
-    assert user.email == new_email || user.hashed_email == User.hash_email(new_email)
+    user.email == new_email || user.hashed_email == User.hash_email(new_email)
   end
 end
