@@ -30,12 +30,18 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
       application_json: application_json
     )
 
-    if @teacher_application.save
-      Pd::TeacherApplicationMailer.application_receipt(@teacher_application).deliver_now
-      Pd::TeacherApplicationMailer.principal_approval_request(@teacher_application).deliver_now
+    begin
+      if @teacher_application.save
+        Pd::TeacherApplicationMailer.application_receipt(@teacher_application).deliver_now
+        Pd::TeacherApplicationMailer.principal_approval_request(@teacher_application).deliver_now
+        head :no_content
+      else
+        render json: {errors: @teacher_application.errors.full_messages}, status: :bad_request
+      end
+    rescue ActiveRecord::RecordNotUnique
+      # Fail silently - this happens in the event of multiple submission
+      CDO.log.warn "Duplicate pd teacher application submission for user #{current_user.id} - ignoring the second one"
       head :no_content
-    else
-      render json: {errors: @teacher_application.errors.full_messages}, status: :bad_request
     end
   end
 end

@@ -563,6 +563,8 @@ const TeacherApplication = React.createClass({
   },
 
   onSubmitButtonClick() {
+    document.getElementById('submitButton').disabled = true;
+
     const districtValues = getDistrictDropdownValues();
 
     const formData = _.cloneDeep(this.state);
@@ -629,6 +631,7 @@ const TeacherApplication = React.createClass({
     }
 
     if (topInvalidElementId) {
+      document.getElementById('submitButton').disabled = false;
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
       if (topInvalidElement.className.indexOf('form-group') >= 0) {
@@ -666,7 +669,7 @@ const TeacherApplication = React.createClass({
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
         </label>
-        <Button onClick={this.onSubmitButtonClick}>
+        <Button id="submitButton" onClick={this.onSubmitButtonClick}>
           Complete and Send
         </Button>
       </div>
