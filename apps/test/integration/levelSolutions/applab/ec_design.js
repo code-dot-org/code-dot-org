@@ -1168,7 +1168,7 @@ module.exports = {
         assert.equal(designModeViz.find('#design_button1').length, 0, "button was deleted");
 
         // Drag image out of the app towards the bottom and verify element got deleted
-        dragElement(image[0], 0, 510);
+        dragElement(image[0], 0, 550);
         assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
 
         // Drag label out of the app towards the right and bottom and verify element got deleted
