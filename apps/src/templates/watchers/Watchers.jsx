@@ -23,8 +23,7 @@ const DEFAULT_AUTOCOMPLETE_OPTIONS = [
 ];
 
 const buttonSize = '34px';
-const outputValueWidth = `calc(100% - ${buttonSize})`;
-const inputValueWidth = 'calc(100% - 41px)';
+const valueAndInputWidth = 'calc(100% - 41px)';
 const inputElementHeight = 29;
 
 const styles = {
@@ -64,13 +63,13 @@ const styles = {
     lineHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
-    width: outputValueWidth,
+    width: valueAndInputWidth,
   },
   watchInputSection: {
     clear: 'both'
   },
   watchInput: {
-    width: inputValueWidth,
+    width: valueAndInputWidth,
     marginTop: 0,
     height: inputElementHeight,
     fontFamily: 'monospace',
