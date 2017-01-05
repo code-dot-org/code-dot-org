@@ -16,4 +16,4 @@ sudo apt-get update
 sudo apt-get --only-upgrade install google-chrome-stable
 
 # Install yarn
-sudo apt-get install yarn=0.16.1-1
+sudo apt-get install yarn=0.18.1-1
