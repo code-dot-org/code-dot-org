@@ -136,9 +136,8 @@ const AnimationListItem = React.createClass({
     evt.stopPropagation();
   },
 
-  deleteAnimation(evt) {
+  deleteAnimation() {
     this.props.deleteAnimation(this.props.animationKey);
-    evt.stopPropagation();
   },
 
   setAnimationLooping(looping) {

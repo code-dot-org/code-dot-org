@@ -1,3 +1,4 @@
+@no_firefox
 @dashboard_db_access
 @as_student
 Feature: Big Game Remix
