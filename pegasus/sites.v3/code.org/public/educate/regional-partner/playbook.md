@@ -28,7 +28,7 @@ title: Regional Partner Virtual Playbook
 
 <%= view :educate_box, item: {title_s: 'Reporting and Evaluations', description_t: "* Regional Partner Roadmap<br> * Annual Report Requirements<br> * Post Workshop Feedback Form<br> * 2016-2017 Data Collection Info", url_s: CDO.code_org_url("/educate/regional-partner/playbook/reporting-and-evaluations"), button_s: "Learn more"} %>
 
-<%= view :educate_box, item: {title_s: 'Teacher and District Recruitment', description_t: "Information on how to recruit teachers and districts", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-recruitment"), button_s: "Learn more"} %>
+<%= view :educate_box, item: {title_s: 'Teacher and District Recruitment', description_t: "* How to recruit teachers and districts<br/> * Teacher applications", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-recruitment"), button_s: "Learn more"} %>
 
 <%= view :educate_box, item: {title_s: 'Teacher Support', description_t: "* About the Code.org Courses
 <br> * Examples for Online Support<br> * Privacy Policy", url_s: CDO.code_org_url("/educate/regional-partner/playbook/teacher-support"), button_s: "Learn more"} %>
