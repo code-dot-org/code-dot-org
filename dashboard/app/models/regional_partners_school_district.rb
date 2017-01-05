@@ -15,6 +15,8 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
   belongs_to :regional_partner
   belongs_to :school_district
 
+  self.primary_keys = :school_district_id, :regional_partner_id
+
   CSV_HEADERS = {
     school_district_id: 'LEAID',
     regional_partner_name: 'RegionalPartner',
@@ -30,10 +32,11 @@ class RegionalPartnersSchoolDistrict < ActiveRecord::Base
       next if regional_partner_name == NO_PARTNER
       school_district_id = row[CSV_HEADERS[:school_district_id]]
 
-      regional_partner = RegionalPartner.where(name: regional_partner_name).first
+      regional_partner = RegionalPartner.find_by(name: regional_partner_name)
       raise "regional partner name not found: #{regional_partner_name}" unless regional_partner
       school_district = SchoolDistrict.find(school_district_id)
 
+      # create the new association
       school_district.regional_partner = regional_partner
     end
   end
