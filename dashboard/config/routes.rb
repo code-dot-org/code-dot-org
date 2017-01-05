@@ -393,7 +393,7 @@ Dashboard::Application.routes.draw do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
       get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
-      get 'regional-partners/:school_district_id', to: 'regional_partners#index', defaults: { format: 'json' }
+      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
