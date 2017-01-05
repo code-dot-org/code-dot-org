@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 <p style="text-align: center"> ALEXIS</p>
 
-<p>Right, so rather than hard-coding the string like <code>var color = "rgb(230, 155, 0);"</code> we can make 3 random numbers between 0-255, put each in a variable, and then string them all together to make the string for <code>color</code>.  </p>
+<p>Right, so rather than hard-coding the string like <code>var color = "rgb(230, 155, 0)";</code> we can make 3 random numbers between 0-255, put each in a variable, and then string them all together to make the string for <code>color</code>.  </p>
 
 <p style="text-align: center"> MICHAEL</p>
 
