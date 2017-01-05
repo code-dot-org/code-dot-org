@@ -1,3 +1,4 @@
+@no_firefox
 @no_mobile
 @no_circle
 @as_taught_student
