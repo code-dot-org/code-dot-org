@@ -15,13 +15,13 @@
       %p{style: "padding-top: 10px; font-size:18px"}
         How likely are you to recommend Code.org to a friend or colleague?
       = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)", style: "margin-bottom:0px"}) do |f|
-        #dots{style: "padding-top: 10px; padding-bottom: 5px; padding-left: 0px"}
+        #dots{style: "padding-top: 10px; padding-bottom: 5px; padding-left: 50px"}
           - -1.upto(10) do |i|
             - display = i == -1 ? "none" : "inline-block"
             %input{style: "margin-right:3px; vertical-align:top; display: none", id: "radio_#{i}", type: "radio", name: "survey[nps_value]", value: i, onclick: "enableSurveySubmit()"}
             %label{style: "display: #{display}; font-size: 14px; width: 32px; height: 32px; margin-right: 24px; background-color: white; border-radius: 32px; text-align: center; line-height: 32px", for: "radio_#{i}"}
               = i
-        #scale{style: "font-size: 12px; width: 650px; padding-left: 0px; overflow: hidden; padding-bottom: 20px"}
+        #scale{style: "font-size: 12px; width: 710px; padding-left: 20px; overflow: hidden; padding-bottom: 20px"}
           #left{style: "float: left"}
             Not at all likely
           #right{style: "float: right"}
