@@ -10,13 +10,13 @@ DASHBOARD_REPORTING_DB = sequel_connect CDO.dashboard_reporting_db_writer, CDO.d
 # 3 categories:
 CATEGORIES = [
   # 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
-  CATEGORY_US_HOC = 'us_hoc_no_account',
+  CATEGORY_US_HOC = 'us_hoc_no_account'.freeze,
 
   # 2) international_hoc_no_account - international 2016 Hour of Code organizers who do not have Code Studio accounts
-  CATEGORY_INTERNATIONAL_HOC = 'international_hoc_no_account',
+  CATEGORY_INTERNATIONAL_HOC = 'international_hoc_no_account'.freeze,
 
   # 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
-  CATEGORY_TEACHERS_NO_PD = 'teachers_no_pd'
+  CATEGORY_TEACHERS_NO_PD = 'teachers_no_pd'.freeze
 ].freeze
 
 # In all cases, skip all @schools.nyc.gov, @strongschools.nyc, and @cps.edu emails.
