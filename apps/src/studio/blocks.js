@@ -2263,7 +2263,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
       if (options.restrictedDialog) {
         var functionArray = [];
-        var numRestrictedSayChoices = 59;
+        var numRestrictedSayChoices = 60;
         for (var i = 0; i < numRestrictedSayChoices; i++) {
           var functionElement = functionArray[i] = [];
           var string = msg["saySpriteChoices_" + i]();
