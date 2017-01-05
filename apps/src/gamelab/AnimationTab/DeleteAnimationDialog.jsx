@@ -1,7 +1,6 @@
 /** @file controls below a dialog to delete animations */
 import React from 'react';
-import Radium from 'radium';
-import BaseDialog from '../../templates/BaseDialog';
+import Dialog, {Body, Buttons, Cancel, Confirm} from '../../templates/Dialog';
 
 const DeleteAnimationDialog = React.createClass({
   propTypes: {
@@ -12,18 +11,20 @@ const DeleteAnimationDialog = React.createClass({
 
   render() {
     return (
-      <div>
-        <BaseDialog
-          isOpen={this.props.isOpen}
-          handleClose={this.props.onCancel}
-        >
-          <h1>Delete animation</h1>
-          <p style={{color: "black"}}>Are you sure you want to delete this animation? You cannot undo this action.</p>
-          <button onClick={this.props.onCancel}>Cancel</button>
-          <button onClick={this.props.onDelete}>Delete</button>
-        </BaseDialog>
-      </div>
+      <Dialog
+        isOpen={this.props.isOpen}
+        handleClose={this.props.onCancel}
+        title="Delete animation"
+      >
+        <Body>
+          <div>Are you sure you want to delete this animation? You cannot undo this action.</div>
+        </Body>
+        <Buttons>
+          <Cancel onClick={this.props.onCancel}>Cancel</Cancel>
+          <Confirm onClick={this.props.onDelete} type="danger">Delete</Confirm>
+        </Buttons>
+      </Dialog>
     );
   }
 });
-export default Radium(DeleteAnimationDialog);
+export default DeleteAnimationDialog;
