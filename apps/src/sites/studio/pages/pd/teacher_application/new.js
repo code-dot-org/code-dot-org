@@ -4,16 +4,19 @@ import TeacherApplication from '@cdo/apps/code-studio/pd/teacher_application/tea
 
 ReactDOM.render(<TeacherApplication/>, document.getElementById('application-container'));
 
-$('#school-district,#school-type').change(function () {
-  let districtValue = $('#school-district input').val();
+$('#school-district,#school-type,#selectedCourse input').change(function () {
+  const districtValue = $('#school-district input').val();
 
   if (districtValue) {
+    const selectedCourseButton = document.querySelector('input[name="courseSelection"]:checked');
+    const selectedCourse = selectedCourseButton ? selectedCourseButton.value : 'unselected';
+
     $.ajax({
       method: "GET",
-      url: `/api/v1/regional-partners/${districtValue}.json`
+      url: `/api/v1/regional-partners/${districtValue}/${selectedCourse}.json`
     }).done(data => {
-      let regionalPartnerGroup = data ? data['group'] : undefined;
-      let regionalPartnerName = data ? data['name'] : undefined;
+      const regionalPartnerGroup = data ? data['group'] : undefined;
+      const regionalPartnerName = data ? data['name'] : undefined;
 
       ReactDOM.render(
         <TeacherApplication
