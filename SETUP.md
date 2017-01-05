@@ -47,19 +47,19 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```
 
   1. Pick up those changes: `source ~/.bash_profile`
-1. Install Node 6.9.0
-  1. We want to be on node 6.9.0 and npm 3.10.8 and yarn 0.16.1
+1. Install Node 6.9.0, npm 3.10.8, and yarn 0.16.1
   1. `nvm install 6.9.0 && nvm alias default 6.9` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
   1. `npm install -g yarn@0.16.1`
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 1. Check that you have the correct versions of everything:
-  1. Open a new Terminal window
-  1. `ruby --version  # --> ruby 2.2.3`
-  1. `nvm ls          # --> v6.9.0`
-  1. `node --version  # --> v6.9.0`
-  1. `npm --version   # --> 3.10.8`
-  1. `yarn -V         # --> 0.16.1`
+   ```
+   ruby --version  # --> ruby 2.2.3
+   nvm ls          # --> v6.9.0
+   node --version  # --> v6.9.0
+   npm --version   # --> 3.10.8
+   yarn -V         # --> 0.16.1
+   ```
 
 ### Ubuntu 14.04
 
@@ -85,7 +85,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         1. Install rvm from https://rvm.io/
         1. `rvm install 2.2.3`
         1. `rvm use 2.2.3 --default`
-1. Install Node.js 6.9.0 and npm 3.10.8
+1. Install Node.js 6.9.0, npm 3.10.8 and yarn 0.16.1
   1. Option A - [nvm](https://github.com/creationix/nvm)
     1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
       - After completion, close your current terminal window and open a new one.
@@ -95,12 +95,14 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `sudo apt-get install -y nodejs`
   1. Option C - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
+  1. Install yarn: `npm install -g yarn@0.16.1`
 1. Check that you have the correct versions of everything:
-  1. open a new Terminal window
-  1. `ruby --version  # --> ruby 2.2.3`
-  1. `node --version  # --> v6.9.0`
-  1. `npm --version   # --> 3.10.8`
-  1. `yarn -V         # --> 0.16.1`
+   ```
+   ruby --version  # --> ruby 2.2.3
+   node --version  # --> v6.9.0
+   npm --version   # --> 3.10.8
+   yarn -V         # --> 0.16.1
+   ```
 1. When running `bundle install`, you may need to run
 
    `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
