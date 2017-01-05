@@ -82,30 +82,32 @@ const ListItemButtons = React.createClass({
     const cloneTooltip = (<Tooltip id={0}>Duplicate</Tooltip>);
     let props = this.props;
     return (
-      <div style={styles.root}>
-        {!props.singleFrameAnimation &&
-          <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
-        }
-        <div style={styles.previewControls}>
+      <div>
+        <div style={styles.root}>
           {!props.singleFrameAnimation &&
-            <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+            <SpeedSlider style={sliderStyle} hasFocus={true} value={props.frameDelay} lineWidth={120} onChange={props.onFrameDelayChanged}/>
           }
-          <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
-            <i
-              key="trash"
-              className="fa fa-trash-o"
-              style={[styles.icon, styles.trash]}
-              onClick={this.openDeleteDialog}
-            />
-          </OverlayTrigger>
-          <OverlayTrigger overlay={cloneTooltip} placement="bottom" delayShow={500}>
-            <i
-              key="clone"
-              className="fa fa-clone"
-              style={styles.icon}
-              onClick={props.onCloneClick}
-            />
-          </OverlayTrigger>
+          <div style={styles.previewControls}>
+            {!props.singleFrameAnimation &&
+              <ItemLoopToggle style={styles.looping} onToggleChange={props.onLoopingChanged} looping={props.looping} />
+            }
+            <OverlayTrigger overlay={trashTooltip} placement="bottom" delayShow={500}>
+              <i
+                key="trash"
+                className="fa fa-trash-o"
+                style={[styles.icon, styles.trash]}
+                onClick={this.openDeleteDialog}
+              />
+            </OverlayTrigger>
+            <OverlayTrigger overlay={cloneTooltip} placement="bottom" delayShow={500}>
+              <i
+                key="clone"
+                className="fa fa-clone"
+                style={styles.icon}
+                onClick={props.onCloneClick}
+              />
+            </OverlayTrigger>
+          </div>
         </div>
         <DeleteAnimationDialog
           onDelete={this.onDeleteItem}
