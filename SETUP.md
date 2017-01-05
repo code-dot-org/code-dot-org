@@ -7,7 +7,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. Install OS-specific prerequisites
    - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan), [Ubuntu](#ubuntu-1404), [Windows](#windows-note-use-an-ubuntu-vm)
-   - When done, check for correct versions:
+   - When done, check for correct versions of these dependencies:
+   
      ```
      ruby --version  # --> ruby 2.2.3
      node --version  # --> v6.9.0
@@ -95,7 +96,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `sudo apt-get install -y nodejs`
   1. Option C - Manual install
     1. [Nodejs.org](https://nodejs.org/download/)
-  1. Install yarn: `npm install -g yarn@0.16.1`
+  1. Finally, install yarn: `npm install -g yarn@0.16.1`
 1. When running `bundle install`, you may need to run
 
    `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
