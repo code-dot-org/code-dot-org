@@ -60,8 +60,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   # Reject certain changes for certain users outright
   def forbidden_change?(user, params)
-    # Passwordless users (oauth, picutre passwords) may not update password or email
-    user.encrypted_password.blank? && (params[:user][:password].present? || params[:user][:email].present?)
+    return true if params[:user][:password].present? && !user.can_edit_password?
+    return true if params[:user][:email].present? && !user.can_edit_email?
+    false
   end
 
   # check if we need password to update user data
