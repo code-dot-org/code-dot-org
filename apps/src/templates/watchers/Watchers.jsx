@@ -23,7 +23,8 @@ const DEFAULT_AUTOCOMPLETE_OPTIONS = [
 ];
 
 const buttonSize = '34px';
-const inputValueWidth = 159;
+const outputValueWidth = `calc(100% - ${buttonSize})`;
+const inputValueWidth = 'calc(100% - 41px)';
 const inputElementHeight = 29;
 
 const styles = {
@@ -63,7 +64,7 @@ const styles = {
     lineHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
-    width: inputValueWidth,
+    width: outputValueWidth,
   },
   watchInputSection: {
     clear: 'both'
@@ -364,7 +365,8 @@ const Watchers = React.createClass({
               +
             </div>
             <TetherComponent
-              attachment="top center"
+              attachment="bottom left"
+              targetAttachment="top left"
               constraints={[{
                 to: 'scrollParent',
                 attachment: 'together'

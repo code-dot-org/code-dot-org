@@ -15,6 +15,7 @@ var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('./SpeedSlider');
 import {setStepSpeed} from '../redux/runState';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 var styles = {
   debugAreaHeader: {
@@ -187,6 +188,14 @@ var UnconnectedJsDebugger = React.createClass({
             id="debug-watch-header"
             onClick={() => {
               this.setState({watchersHidden: !this.state.watchersHidden});
+
+              // Remove styles properties set by JsDebuggerUi.js.
+              const watchersResizeBar = document.getElementById('watchersResizeBar');
+              const watchersHeaderDiv = document.getElementById('debug-watch-header');
+              const debugConsoleDiv = document.getElementById('debug-console');
+              debugConsoleDiv.style.removeProperty('right');
+              watchersResizeBar.style.removeProperty('right');
+              watchersHeaderDiv.style.removeProperty('width');
             }}
             style={this.state.watchersHidden ? {
               borderLeft: 'none',
@@ -218,6 +227,11 @@ var UnconnectedJsDebugger = React.createClass({
         </PaneHeader>
         {this.props.debugButtons && <DebugButtons/>}
         {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
+        <div style={{display: showWatchPane ? 'initial' : 'none'}}>
+          <ProtectedStatefulDiv>
+            <div id="watchersResizeBar"></div>
+          </ProtectedStatefulDiv>
+          </div>
         {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
       </div>
     );

@@ -35,4 +35,4 @@ var ProtectedStatefulDiv = React.createClass({
     return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
 });
-module.exports = Radium(ProtectedStatefulDiv);
+export default Radium(ProtectedStatefulDiv);
