@@ -755,63 +755,69 @@ var performQueuedMoves = function (i) {
 //
 
 var setSvgText = Studio.setSvgText = function (opts) {
-  // Remove any children from the svgText node:
-  while (opts.svgText.firstChild) {
-    opts.svgText.removeChild(opts.svgText.firstChild);
-  }
-
+  var width = opts.width;
   var words = opts.text.toString().split(' ');
-  // Create first tspan element
-  var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-  tspan.setAttribute("x", opts.width / 2);
-  tspan.setAttribute("dy", opts.lineHeight + opts.topMargin);
-  // Create text in tspan element
-  var text_node = document.createTextNode(words[0]);
 
-  // Add text to tspan element
-  tspan.appendChild(text_node);
-  // Add tspan element to DOM
-  opts.svgText.appendChild(tspan);
-  var tSpansAdded = 1;
+  while (width <= opts.maxWidth) {
+    // Remove any children from the svgText node:
+    while (opts.svgText.firstChild) {
+      opts.svgText.removeChild(opts.svgText.firstChild);
+    }
 
-  for (var i = 1; i < words.length; i++) {
-    // Find number of letters in string
-    var len = tspan.firstChild.data.length;
-    // Add next word
-    tspan.firstChild.data += " " + words[i];
+    // Create first tspan element
+    var tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+    tspan.setAttribute("x", width / 2);
+    tspan.setAttribute("dy", opts.lineHeight + opts.topMargin);
+    // Create text in tspan element
+    var text_node = document.createTextNode(words[0]);
 
-    if (tspan.getComputedTextLength &&
-      tspan.getComputedTextLength() > opts.width - 2 * opts.sideMargin) {
-      // Remove added word
-      tspan.firstChild.data = tspan.firstChild.data.slice(0, len);
+    // Add text to tspan element
+    tspan.appendChild(text_node);
+    // Add tspan element to DOM
+    opts.svgText.appendChild(tspan);
+    var tSpansAdded = 1;
 
-      if (opts.maxLines === tSpansAdded) {
-        if (opts.width < opts.maxWidth) {
-          // Try again with a wider speech bubble
-          return setSvgText(Object.assign({}, opts, {
-            width: Math.min(opts.width * words.length / i, opts.maxWidth),
-          }));
+    for (var i = 1; i < words.length; i++) {
+      // Find number of letters in string
+      var len = tspan.firstChild.data.length;
+      // Add next word
+      tspan.firstChild.data += " " + words[i];
+
+      if (tspan.getComputedTextLength &&
+        tspan.getComputedTextLength() > width - 2 * opts.sideMargin) {
+        // Remove added word
+        tspan.firstChild.data = tspan.firstChild.data.slice(0, len);
+
+        if (opts.maxLines === tSpansAdded) {
+          if (width < opts.maxWidth) {
+            // Try again with a wider speech bubble
+            width = Math.min(width * words.length / i, opts.maxWidth);
+            break;
+          }
+          return {
+            height: opts.fullHeight,
+            width: width,
+          };
         }
+        // Create new tspan element
+        tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+        tspan.setAttribute("x", width / 2);
+        tspan.setAttribute("dy", opts.lineHeight);
+        text_node = document.createTextNode(words[i]);
+        tspan.appendChild(text_node);
+        opts.svgText.appendChild(tspan);
+        tSpansAdded++;
+      }
+      if (i === words.length - 1) {
+        // All the words fit, return
+        var linesLessThanMax = opts.maxLines - tSpansAdded;
         return {
-          height: opts.fullHeight,
-          width: opts.width,
+          height: opts.fullHeight - linesLessThanMax * opts.lineHeight,
+          width: width,
         };
       }
-      // Create new tspan element
-      tspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
-      tspan.setAttribute("x", opts.width / 2);
-      tspan.setAttribute("dy", opts.lineHeight);
-      text_node = document.createTextNode(words[i]);
-      tspan.appendChild(text_node);
-      opts.svgText.appendChild(tspan);
-      tSpansAdded++;
     }
   }
-  var linesLessThanMax = opts.maxLines - Math.max(1, tSpansAdded);
-  return {
-    height: opts.fullHeight - linesLessThanMax * opts.lineHeight,
-    width: opts.width,
-  };
 };
 
 /**
