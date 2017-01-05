@@ -141,15 +141,23 @@ namespace :seed do
   end
 
   task regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(false)
+  end
+
+  task force_regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(true)
+  end
+
+  def seed_regional_partners_school_districts(force)
     # use a much smaller dataset in environments that reseed data frequently.
     mapping_tsv = CDO.stub_school_data ?
-      'test/fixtures/regional_partners_school_districts.tsv' :
-      'config/regional_partners_school_districts.tsv'
-    NO_PARTNER = 'NO PARTNER'
-    expected_count = `grep -v '#{NO_PARTNER}' #{mapping_tsv} | wc -l`.to_i - 1
+        'test/fixtures/regional_partners_school_districts.tsv' :
+        'config/regional_partners_school_districts.tsv'
+
+    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
     raise "#{mapping_tsv} contains no data" unless expected_count > 0
     RegionalPartnersSchoolDistrict.transaction do
-      if RegionalPartnersSchoolDistrict.count <= expected_count
+      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
         # This step can take up to 1 minute to complete when not using stubbed data.
         RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
       end
