@@ -122,8 +122,6 @@ EOS
 
 user_name = ask_for_name
 
-wait_for "between 10AM and 11:30AM (Pacific) to morning DTT"
-
 should_i "morning DTT" do
   open_pull_request 'test', 'staging', 'DTT (Staging > Test)'
   wait_for "morning DTT to complete, re-run/investigate failures, and update test room topic to that commit # green"
