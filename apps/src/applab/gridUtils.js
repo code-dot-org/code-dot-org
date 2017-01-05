@@ -42,6 +42,26 @@ export function scaledDropPoint(draggedElement) {
 }
 
 /**
+ * Tests whether the coordinates of the mouse event are inside the container,
+ * taking into account any scaling transforms that may be applied to the container.
+ * @param {jQuery.Event} mouseEvent
+ * @param {jQuery} container
+ * @returns {boolean}
+ */
+export function isMouseEventInBounds(mouseEvent, container) {
+  // The actual rectangle on the screen occupied by the container.
+  const boundingRect = container[0].getBoundingClientRect();
+
+  const xScale = boundingRect.width / container.width();
+  const yScale = boundingRect.height / container.height();
+
+  const mouseX = (mouseEvent.clientX - container.offset().left) / xScale;
+  const mouseY = (mouseEvent.clientY - container.offset().top) / yScale;
+
+  return (mouseX > 0 && mouseX < container.width() && mouseY > 0 && mouseY < container.height());
+}
+
+/**
  * Get jQuery object for the element(s) currently being dragged. Will be empty
  * if no drag is currently underway.
  * @returns {jQuery}
