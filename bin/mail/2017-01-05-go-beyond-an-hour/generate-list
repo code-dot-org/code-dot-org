@@ -1,0 +1,121 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+# To be sent ~ 2pm on Thurs, 2017-01-05
+
+# 3 categories:
+# 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
+# 2) international_hoc_no_account - international 2016 Hour of Code organizers who do not have Code Studio accounts
+# 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
+
+# In all cases, skip all @schools.nyc.gov, @strongschools.nyc, and @cps.edu emails.
+# These will be sent separate emails later.
+
+@results = {}
+@category_counts = Hash.new(0)
+
+def create_temp_teachers_table
+  PEGASUS_DB.run "
+    CREATE TEMPORARY TABLE IF NOT EXISTS
+      temp_teachers (INDEX(email))
+    AS (
+      SELECT id, email COLLATE utf8_general_ci AS email
+      FROM dashboard_production.users
+      WHERE user_type = 'teacher'
+    );
+  "
+end
+
+def drop_temp_teachers_table
+  PEGASUS_DB.run '
+    DROP TABLE IF EXISTS temp_teachers
+  '
+end
+
+# 1) us_hoc_no_account - US 2016 Hour of Code organizers who do not have Code Studio accounts
+# and
+# 2) international_hoc_no_account - international 2016 Hour of Code organizers who do not have Code Studio accounts
+def query_hoc_no_account
+  create_temp_teachers_table
+
+  pegasus_query = "
+    SELECT forms.email, forms.name, forms.data
+    FROM forms
+    LEFT OUTER JOIN temp_teachers AS teachers
+      ON forms.email = teachers.email
+    WHERE
+      forms.kind = 'HocSignup2016'
+      AND teachers.id IS NULL
+      AND NOT (
+        forms.email LIKE '%@schools.nyc.gov'
+        OR forms.email LIKE '%@strongschools.nyc'
+        OR forms.email LIKE '%@cps.edu'
+      )
+    ORDER BY forms.id DESC
+  "
+
+  PEGASUS_DB.fetch(pegasus_query).each do |row|
+    email = row[:email]
+    next if UNSUBSCRIBERS.include? email
+
+    data = JSON.parse(row[:data])
+    hoc_country = data['hoc_country_s']
+    category = hoc_country == 'us' ? 'us_hoc_no_account' : 'international_hoc_no_account'
+
+    @category_counts[category] += 1
+    @results[email] = {
+      category: category,
+      email: email,
+      name: row[:name]
+    }
+  end
+
+  drop_temp_teachers_table
+end
+
+# 3) teachers_no_pd - US Teachers with Code Studio accounts that have not gone through our PD
+def query_teachers_no_pd
+  dashboard_query = "
+    SELECT users.email, users.name
+    FROM users
+    INNER JOIN user_geos ON user_geos.user_id = users.id
+
+    # section-based workshops
+    LEFT JOIN followers ON followers.student_user_id = users.id
+    LEFT JOIN sections
+      ON sections.id = followers.section_id AND sections.section_type LIKE '%_workshop'
+
+    # old ops workshops
+    LEFT JOIN workshop_attendance ON workshop_attendance.teacher_id = users.id
+
+    WHERE user_geos.country = 'United States'
+      AND sections.id IS NULL
+      AND workshop_attendance.id IS NULL
+      AND user_type = 'teacher'
+      AND NOT (
+        email LIKE '%@schools.nyc.gov'
+        OR email LIKE '%@strongschools.nyc'
+        OR email LIKE '%@cps.edu'
+      )
+  "
+
+  category = 'teachers_no_pd'
+  DASHBOARD_DB.fetch(dashboard_query).each do |row|
+    email = row[:email]
+    next if UNSUBSCRIBERS.include? email
+
+    @category_counts[category] += 1
+    @results[email] = {
+      category: category,
+      email: email,
+      name: row[:name]
+    }
+  end
+end
+
+query_hoc_no_account
+query_teachers_no_pd
+
+puts "#{@results.count} total contacts"
+puts @category_counts.inspect
+export_contacts_to_csv @results, 'contacts.csv'
