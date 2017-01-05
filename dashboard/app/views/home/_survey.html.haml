@@ -30,6 +30,7 @@
           %p{style: "font-size:18px"}
             Optional: Any other comments?
           %input{type: "text", style: "width:600px; height:35px", name: "survey[nps_comment]"}
+          %input{type: "hidden", name: "survey[kind]", value: "NetPromoterScore2017"}
         #submit
           %button#submitSurvey{type: "submit", disabled: true} Submit
           %span{onclick: "return submitSurvey(false)", style: "cursor: pointer"} No thanks
