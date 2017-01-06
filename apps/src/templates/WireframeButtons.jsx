@@ -103,7 +103,7 @@ let WireframeButtons = React.createClass({
   },
 
   getInitialState: function () {
-    //  "Send to phone" button is a toggle that shows and hides send to phone form.
+    // "Send to phone" button is a toggle that shows and hides send to phone form.
     return {
       clickedSendToPhone: false
     };

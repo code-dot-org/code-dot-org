@@ -93,6 +93,11 @@ function unpackSources(data) {
   };
 }
 
+/**
+ * Used by getProjectUrl() to extract the project URL.
+ */
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+
 var projects = module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
@@ -114,6 +119,18 @@ var projects = module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * @returns the absolute url to the root of this project without a trailing slash.
+   *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
+   */
+  getProjectUrl() {
+    const match = location.href.match(PROJECT_URL_PATTERN);
+    if (match) {
+      return match[1];
+    }
+    return location.href; // i give up. Let's try this?
   },
 
   getCurrentTimestamp() {
