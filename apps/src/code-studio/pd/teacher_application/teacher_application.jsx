@@ -162,7 +162,8 @@ const TeacherApplication = React.createClass({
   shouldShowRegionalPartnersOnlyWarning() {
     return !!(
       ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase()) ||
-      (!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value)
+      (!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value) ||
+      document.getElementById('school-district-other').checked
     );
   },
 
