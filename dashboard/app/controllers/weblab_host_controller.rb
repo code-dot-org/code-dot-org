@@ -1,4 +1,4 @@
-class WeblabHostController < ActionController::Base
+class WeblabHostController < ApplicationController
   def index
   end
 end
