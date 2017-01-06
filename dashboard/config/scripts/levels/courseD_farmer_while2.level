@@ -1,13 +1,13 @@
 <Karel>
   <config><![CDATA[{
   "game_id": 25,
-  "created_at": "2016-08-02T18:05:14.000Z",
+  "created_at": "2016-08-02T18:05:02.000Z",
   "level_num": "custom",
   "user_id": 302,
   "properties": {
     "skin": "farmer",
-    "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":10,\"range\":10},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Use as few blocks as possible to solve this puzzle.",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":-6,\"range\":-6},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1}]]",
+    "instructions": "Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -23,13 +23,11 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "2",
-    "step_mode": "1",
+    "start_direction": "1",
+    "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "ideal": "4",
-    "markdown_instructions": "*\"Move to the pile of dirt and tell me how many shovelfuls to remove.\"*\r\n\r\nUse as few blocks as possible to solve this puzzle.",
     "contained_level_names": null
   },
   "published": true,
@@ -59,9 +57,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml/>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
@@ -69,9 +64,9 @@
             <block type="maze_moveForward">
               <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">10</title>
+                  <title name="TIMES">6</title>
                   <statement name="DO">
-                    <block type="maze_dig"/>
+                    <block type="maze_fill"/>
                   </statement>
                 </block>
               </next>
