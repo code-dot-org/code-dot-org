@@ -47,7 +47,7 @@ def saucelabs_browser
     begin
       http_client = Selenium::WebDriver::Remote::Http::Persistent.new
 
-      # Longer overall timeout, because iOS takes more time
+      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
       http_client.timeout = 5.minutes
 
       browser = Selenium::WebDriver.for(:remote,
