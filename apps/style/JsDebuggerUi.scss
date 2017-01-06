@@ -76,7 +76,6 @@ $debug-header-border-width: 1px;
 
 #debug-watch-header {
   width: $debug-watch-max-column-width + $debug-header-border-width;
-  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width} + #{$debug-header-border-width});
   float: right;
   border-left: $debug-header-border-width solid gray;
 }
@@ -112,7 +111,6 @@ $debug-header-border-width: 1px;
   }
   right: 0;
   width: $debug-watch-max-column-width;
-  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
   font-family: monospace;
   font-size: 12px;
   overflow-y: scroll;
