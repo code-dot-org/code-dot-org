@@ -17,11 +17,11 @@ var MIN_DEBUG_AREA_HEIGHT = 120;
 /** @const {number} */
 var MAX_DEBUG_AREA_HEIGHT = 400;
 /** @const {number} */
-var MIN_WATCHERS_AREA_WIDTH = 120;
+const MIN_WATCHERS_AREA_WIDTH = 120;
 /** @const {number} */
-var MAX_WATCHERS_AREA_WIDTH = 400;
+const MAX_WATCHERS_AREA_WIDTH = 400;
 /** @const {number} (in milliseconds) */
-var WATCH_TIMER_PERIOD = 250;
+const WATCH_TIMER_PERIOD = 250;
 /** @const {string} */
 var WATCH_COMMAND_PREFIX = "$watch ";
 /** @const {string} */
@@ -168,7 +168,7 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
     debugOutput.addEventListener('mouseup', this.onDebugOutputMouseUp.bind(this));
   }
 
-  var mouseUpTouchEventName = dom.getTouchEventName('mouseup');
+  const mouseUpTouchEventName = dom.getTouchEventName('mouseup');
 
   // Attach handlers for the debug area resize control
   var resizeBar = this.getElement_('#debugResizeBar');
@@ -185,7 +185,7 @@ JsDebuggerUi.prototype.initializeAfterDomCreated = function (options) {
     }
   }
   // Attach handlers for the debug area resize control
-  var watchersResizeBar = this.getElement_('#watchersResizeBar');
+  const watchersResizeBar = this.getElement_('#watchersResizeBar');
   if (watchersResizeBar) {
     dom.addMouseDownTouchEvent(watchersResizeBar, this.onMouseDownWatchersResizeBar.bind(this));
 
@@ -357,10 +357,10 @@ var boundMouseMoveHandler;
 var mouseMoveTouchEventName;
 
 /** @type {boolean} */
-var draggingDebugResizeBarWatchers = false;
+let draggingWatchersResizeBar = false;
 
 /** @type {function} */
-var boundMouseMoveHandlerWatchers;
+let boundMouseMoveHandlerWatchers;
 
 JsDebuggerUi.prototype.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
@@ -383,7 +383,7 @@ JsDebuggerUi.prototype.onMouseDownWatchersResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
   var eventSourceElm = event.srcElement || event.target;
   if (eventSourceElm.id === 'watchersResizeBar') {
-    draggingDebugResizeBarWatchers = true;
+    draggingWatchersResizeBar = true;
     boundMouseMoveHandlerWatchers = this.onMouseMoveWatchersResizeBar.bind(this);
     document.body.addEventListener('mousemove', boundMouseMoveHandlerWatchers);
     mouseMoveTouchEventName = dom.getTouchEventName('mousemove');
@@ -472,13 +472,13 @@ JsDebuggerUi.prototype.onMouseUpDebugResizeBar = function () {
 
 JsDebuggerUi.prototype.onMouseUpWatchersResizeBar = function () {
   // If we have been tracking mouse moves, remove the handler now:
-  if (draggingDebugResizeBarWatchers) {
+  if (draggingWatchersResizeBar) {
     document.body.removeEventListener('mousemove', boundMouseMoveHandlerWatchers);
     if (mouseMoveTouchEventName) {
       document.body.removeEventListener(mouseMoveTouchEventName,
           boundMouseMoveHandlerWatchers);
     }
-    draggingDebugResizeBarWatchers = false;
+    draggingWatchersResizeBar = false;
   }
 };
 
