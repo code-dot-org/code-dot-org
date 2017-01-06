@@ -10,7 +10,7 @@ module SurveyResultsHelper
     if language != "en"
       return false
     end
-    if SurveyResult.where({user_id: current_user.id, kind: "NetPromoterScore2017"}).exists?
+    if SurveyResult.where({user_id: current_user.id, kind: SurveyResult::NET_PROMOTER_SCORE_2017}).exists?
       return false
     end
 
