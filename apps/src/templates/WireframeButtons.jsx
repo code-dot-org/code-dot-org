@@ -123,9 +123,11 @@ let WireframeButtons = React.createClass({
         <div style={styles.main}>
           {this.renderViewCodeButton()}
           {this.renderNewProjectButton()}
-          <a className={this.getSendToPhoneButtonClass()} onClick={this.handleClickSendToPhone}>
-            <i className="fa fa-mobile"/> Send to phone
-          </a>
+          <span  style={{display: 'inline-block'}}>
+            <a className={this.getSendToPhoneButtonClass()} onClick={this.handleClickSendToPhone}>
+              <i className="fa fa-mobile"/> Send to phone
+            </a>
+          </span>
           <br />
           {this.renderSendToPhone()}
         </div>
@@ -135,7 +137,7 @@ let WireframeButtons = React.createClass({
   renderViewCodeButton: function () {
     if (APP_TYPES_WITH_VIEW_CODE.includes(this.props.appType)) {
       return (
-          <span>
+          <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={appendUrl(getProjectUrl(), '/view')}>
               <i className="fa fa-code"/> View code
             </a><sp/>
@@ -154,7 +156,7 @@ let WireframeButtons = React.createClass({
     var url = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     if (url) {
       return (
-          <span>
+          <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={url}>
               <i className="fa fa-pencil-square-o"/> Make my own
             </a><sp/>

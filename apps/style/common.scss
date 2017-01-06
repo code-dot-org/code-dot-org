@@ -1571,6 +1571,7 @@ $see-examples-thick-underline-color: $yellow;
 
 .wrapper.withWireframeButtons {
   flex: 0 0 auto;
+  margin-bottom: 0px;
 }
 
 .WireframeButtons_containerRight {
@@ -1579,6 +1580,16 @@ $see-examples-thick-underline-color: $yellow;
   padding-top: 20px;
   padding-right: 20px;
   text-align: right;
+}
+
+@media (max-width: 845px) {
+  .WireframeButtons_containerRight {
+    flex: 1 1 372px;
+  }
+
+  .WireframeButtons_containerLeft {
+    flex: 1 1 auto;
+  }
 }
 
 a.WireframeButtons_button {
