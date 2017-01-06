@@ -1,11 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import {combineReducers, createStore} from 'redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {registerReducers, getStore} from '@cdo/apps/redux';
 import {default as JsDebugger, UnconnectedJsDebugger} from './JsDebugger';
-
-registerReducers(commonReducers);
 
 export default storybook => {
   const storyTable = [];
@@ -48,17 +46,18 @@ export default storybook => {
       )
     });
 
+  const emptyStore = createStore(combineReducers(commonReducers));
   storyTable.push(
     {
       name: 'connected to redux stores with nothing enabled',
       story: () => (
-        <Provider store={getStore()}>
+        <Provider store={emptyStore}>
           <JsDebugger style={storybookStyle}/>
         </Provider>
       )
     });
 
-  const showAllStore = getStore();
+  const showAllStore = createStore(combineReducers(commonReducers));
   showAllStore.dispatch(setPageConstants({
     showDebugButtons: true,
     showDebugConsole: true,

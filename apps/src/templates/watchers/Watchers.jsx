@@ -80,7 +80,7 @@ const styles = {
 /**
  * A "watchers" window for our debugger.
  */
-const Watchers = React.createClass({
+export const Watchers = React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
@@ -399,7 +399,7 @@ const Watchers = React.createClass({
   }
 });
 
-const ConnectedWatchers = connect(state => {
+export const ConnectedWatchers = connect(state => {
   return {
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning
@@ -417,5 +417,3 @@ const ConnectedWatchers = connect(state => {
     },
   };
 })(Watchers);
-
-export {ConnectedWatchers, Watchers};
