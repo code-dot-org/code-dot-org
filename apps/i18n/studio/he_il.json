@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "כל הכבוד, הוספתם קוד על מנת לייצר דרואידים עכבריים. כעת תוכלו לעבור לשלב הבא, או לנסות שוב על מנת להשיג 20 דרואידים עכבריים. יהיה לכם קל יותר אם תוסיפו יותר מהם! (הקישו והחזיקו את מקשי החצים במקלדת או המסך שלכם על מנת לנוע מהר יותר)",
   "failedChangeSettingTimeout": "השיגו שלושה טייסי מחתרת על מנת להמשיך הלאה.",
   "failedChangeSettingSettings": "הפכו את המשחק לשלכם. על מנת לעבור את השלב הזה עליכם לשנות את הדרואיד ואת מהירותו.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "සුභපැතුම්, ඔබ Mouse Droids සැකසීමේ කේතයන් සාර්ථකවඑකත් කර ඇත. ඔබට නැවත උත්සහ කර Mouse Droids 20ක් ලබා ගැනීමට හෝ ඊළග ප්‍රේහෙලිකවට යා හැකිය. ඔවුන්ගෙන් වැඩි ප්‍රමාණයක් භාවිතා කර මෙය පහසුවෙන් කිරීමට උත්සහ කරන්න!(වේගයෙන් යාමට යතුරු පුවරුවේ (හෝ තිරයේ) ඇති යතුරු ඔබගෙන සිටින්න.)",
   "failedChangeSettingTimeout": " Rebel Pilot ලා තුන්දෙනෙක් ලබාගෙන එහාට වෙන්න.",
   "failedChangeSettingSettings": "Game ඔබ ම කරන්න. ඔබට සිද්ධ වෙනවා ඔබගේ droid ව සහ droid එකේ වේගය වෙනස් කරන්න, මෙම puzzle එක සමත් වෙන්න.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

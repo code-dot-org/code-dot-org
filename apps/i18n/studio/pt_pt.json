@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, adicionaste código para fazer Mouse Droids. Podes continuar para o próximo puzzle ou tentar novamente obter 20 Mouse Droids. Tenta torná-lo mais fácil adicionando mais deles! (Pressiona e segura as teclas do teu teclado (ou ecrã) para te moveres mais rápido.)",
   "failedChangeSettingTimeout": "Consegue três Pilotos Rebeldes para seguires em frente.",
   "failedChangeSettingSettings": "Faz o teu próprio jogo. Para passares este enigma, precisas mudar o teu droid e definir a sua velocidade.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Tubli töö! Lisasid hiirte loomiseks koodi. Võid liikuda järgmise mõistatuse juurde või proovida uuesti saada 20 hiirt. Et asi oleks lihtsam, lisa neid juurde! (Kiiremaks liikumiseks vajuta pikalt klaviatuuril (või ekraanil) olevaid klahve.)",
   "failedChangeSettingTimeout": "Edasiliikumiseks hangi kolm pilooti.",
   "failedChangeSettingSettings": "Tee oma mäng. Mõistatuse lahendamiseks pead muutma oma droidi ja määrama selle kiiruse.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

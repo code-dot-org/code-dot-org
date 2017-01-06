@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulujem, pridal si kód na vytvorenie Mouse Droida. Môžeš ísť na ďalší rébus alebo znova skúsiť dostať 20 Mouse Droidov. Skús si to uľahčiť pridaním viacerých! (Stlač a drž klávesy na svojej klávesnici (alebo obrazovke) aby si sa posúval rýchlejšie.)",
   "failedChangeSettingTimeout": "Dostaň sa k trom Pilotom Rebelov, aby si išiel ďalej.",
   "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

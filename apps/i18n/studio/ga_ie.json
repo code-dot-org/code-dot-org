@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Comhghairdeas, chuir tú cód leis an gclár a dhéanann Dróidigh Luiche nua. Anois is féidir leat dul ar aghaidh go dtí an chéad dúshlán eile, nó fill ar an gceann seo agus déan iarracht 20 Dróideach Luiche a fháil. Déan an dúshlán níos éasca trí níos mó acu a chruthú! (Brúigh agus coinnigh síos na saighde ar do mhéarchlár (nó ar an scáileán) chun dlús a chur leis.)",
   "failedChangeSettingTimeout": "Faigh trí Phíolóta Ceannairceach le dul ar aghaidh.",
   "failedChangeSettingSettings": "Is leatsa an cluiche seo. Chun an dúshlán a chríochnú, ní mór duit do dhróideach a athrú agus a luas a shocrú.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

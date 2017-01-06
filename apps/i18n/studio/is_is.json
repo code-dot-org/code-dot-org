@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Til hamingju, þú bættir við kóða sem býr til vélmýs. Þú getur farið áfram í næstu þraut eða reynt aftur að ná 20 vélmúsum. Prófaðu að auðvelda það með því að hafa fleiri! (Ýttu á og haltu niðri lyklunum á lyklaborðinu (eða skjánum) til að hreyfast hraðar.)",
   "failedChangeSettingTimeout": "Náðu þremur flugmönnum til að halda áfram.",
   "failedChangeSettingSettings": "Gerðu þetta að þínum leik. Til að ljúka þrautinni þarft þú að breyta vélmenninu og stilla hraða þess.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }
