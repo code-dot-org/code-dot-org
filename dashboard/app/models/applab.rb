@@ -125,6 +125,7 @@ class Applab < Blockly
         "getImageURL": null,
         "setImageURL": null,
         "playSound": null,
+        "stopSound": null,
         "showElement": null,
         "hideElement": null,
         "deleteElement": null,

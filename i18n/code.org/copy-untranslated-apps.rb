@@ -28,6 +28,7 @@ locales = {
   'Georgian' => 'ka-GE',
   'German' => 'de-DE',
   'Greek' => 'el-GR',
+  'Hawaiian' => 'haw-HI',
   'Hebrew' => 'he-IL',
   'Hindi' => 'hi-IN',
   'Hungarian' => 'hu-HU',
@@ -66,6 +67,7 @@ locales = {
   'Spanish, Argentina' => 'es-AR',
   'Spanish, Mexico' => 'es-MX',
   'Swedish' => 'sv-SE',
+  'Tajik' => 'tg-TJ',
   'Tamil' => 'ta-IN',
   'Thai' => 'th-TH',
   'Turkish' => 'tr-TR',
@@ -80,7 +82,9 @@ untranslated_apps = %w(
   applab
   calc
   eval
+  gamelab
   netsim
+  weblab
 )
 
 locales.each_value do |locale|
