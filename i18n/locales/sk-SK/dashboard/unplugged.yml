@@ -57,7 +57,7 @@ sk:
         video: 'Unplug9'
       'Unplug10':
         title: 'Internet'
-        desc: 'In this lesson, students will pretend to flow through the Internet, all the while learning about web addresses, IPs and the DNS.'
+        desc: 'V tejto lekcii budú študenti predstierať, že putujú internetom, počas čoho sa budú učiť o internetových adresách, protokoloch a DNS.'
         pdfs:
           - unplug10
         video: 'Unplug10'

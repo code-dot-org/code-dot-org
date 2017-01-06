@@ -225,3 +225,5 @@ gem 'bcrypt'
 gem 'addressable'
 gem 'validates_email_format_of'
 gem 'sshkit'
+
+gem 'composite_primary_keys'

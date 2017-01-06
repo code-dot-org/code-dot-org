@@ -1,7 +1,7 @@
 {
   "blockActionAdd":"aggiungi",
   "blockActionAttack":"attacca",
-  "blockActionDestroyEntity":"con sparizione",
+  "blockActionDestroyEntity":"scompari",
   "blockActionDrop":"produci",
   "blockActionExplodeEntity":"esplodi",
   "blockActionFlashEntity":"lampeggia",

@@ -312,7 +312,7 @@
           ekki hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
           skorar tvisvar.
         bounce_11_basketball: Þú getur núna tengt kubba við kubbinn "þegar keyrt".
-          Þú verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað.
+          Þú verður að tengja nýja "senda nýjan bolta" kubbinn á fleiri en einum stað.
           Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
           hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
         bounce_12_basketball: Búðu til þinn eigin körfuboltaleik. Þú getur breytt
@@ -333,7 +333,7 @@
           hönd" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn
           skorar tvisvar!
         bounce_11_sports: Þú getur núna tengt kubba við kubbinn "þegar keyrt". Þú
-          verður að tengja nýja "varpa nýjum bolta" kubbinn á fleiri en einum stað.
+          verður að tengja nýja "senda nýjan bolta" kubbinn á fleiri en einum stað.
           Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu
           hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!
         bounce_12_sports: 'Búðu til leik eftir þínu höfði! Þú stjórnar hér: þú getur
@@ -502,8 +502,8 @@
         studio_iceage_hello1: Sid vill fá alla með í nýtt ævintýri. Getur þú hjálpað
           honum að segja "hello" með því að draga "segja" kubbinn út á vinnusvæðið
           og skrifa orðið "hello" í hann?
-        studio_iceage_hello2: Sid (leikari 1) fann Manny (leikara 2) og vill bjóða
-          honum með í ævintýrið. Hjálpaðu þeim að heilsast með því að nota "leikari
+        studio_iceage_hello2: Sid (leikmaður 1) fann Manny (leikmann 2) og vill bjóða
+          honum með í ævintýrið. Hjálpaðu þeim að heilsast með því að nota "leikmaður
           segir" kubbinn tvisvar.
         studio_iceage_move_to_flag: Scrat leitar að akarninu sínu! Komdu honum síðustu
           200 dílana með "færa" kubbnum.
@@ -724,6 +724,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -795,7 +798,7 @@
         mc_2016_intro: Klukkustund kóðunar með Minecraft - Kynning
         mc_2016_loops: Klukkustund kóðunar með Minecraft - Lykkjur
         mc_2016_events: Klukkustund kóðunar með Minecraft - Atvik
-        mc_2016_spawn: Klukkustund kóðunar með Minecraft - Kveikjur
+        mc_2016_spawn: Klukkustund kóðunar með Minecraft - Kviknun
         mc_2016_congrats: Klukkustund kóðunar með Minecraft - Hamingjuóskir
     callout:
       text:

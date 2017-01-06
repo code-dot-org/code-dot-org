@@ -64,7 +64,7 @@ social:
   #fullwidth1{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_trudeau.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
   #fullwidth2{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{slide1}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
- 
+
   #fullwidth3{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{localized_image('/images/fit-1500/homepage_2.jpg')}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 50%"}
 
   #fullwidth4{style: "z-index: -5; position: absolute; left: 0; top: 0; background-image: url(#{slide3}); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; opacity: 0; background-position: 50% 20%"}
@@ -208,7 +208,7 @@ social:
           .col-md-6
             =view :signup_form
         .col-md-5
-          =view :join_us_description 
+          =view :join_us_description
         .col-md-1
         .col-md-6.highlights-column
           %h2.join-us-header=hoc_s(:highlights_title)
@@ -225,7 +225,7 @@ social:
     .col-xs-12
       =view :faq
 
-  =view :signup_button     
+  =view :signup_button
 
   = view 'popup_window.js'
 
@@ -250,10 +250,9 @@ social:
     currentImage = nextImage;
   }
 
-  $.ready()
-  {
+  $(document).ready(function() {
     timerId = setInterval(cycleImage, 6000);
-  }
+  });
 
   function startVideo()
   {

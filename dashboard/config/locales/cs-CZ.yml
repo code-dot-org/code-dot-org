@@ -2,13 +2,13 @@
   errors:
     messages:
       not_saved: 'Opravte prosím následující chyby:'
-      too_young: Tento content je věkově omezen a není dostupný pro mladší studenty.
+      too_young: Tento obsah je věkově omezen a není dostupný pro mladší studenty.
       teacher_must_accept_terms: Tento obsah je omezen věkem a není dostupný pro mladší
-        studenty. Požádejte učitele o přístup v aktualizaci podmínek. Stačí se přihlásit
-        do Studia kódu a kliknout na "Kontrola aktualizovaných podmínek" v horní části
-        výchozí stránky Studa kódu.
+        studenty. Požádejte učitele o skválení aktualizovaných podmínek služby. Stačí
+        se přihlásit do Studia kódu a kliknout na "Zkontrolujte aktualizované podmínky"
+        v horní části výchozí stránky Studa kódu.
       pair_programmer: Právě pracuješ v páru se studentem, který nemá přístup k tomuto
-        obsahu. Aby se sem mohl dostat, zruš programování v páru a začni znovu.
+        obsahu. Aby ses mohl sem dostat, zruš programování v páru a začni znovu.
   activerecord:
     errors:
       messages:
@@ -97,6 +97,12 @@
       s nimi odkaz.<br/><br/>Pokud se vám Hodina kódu líbila a chcete pokračovat,
       můžete si nastavit heslo a vytvořit Studio kódu niže k přihlášení vašich studentů
       do kterékoli z našičh<a href="https://code.org/educate">delších kurzů</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Viz přiručka pedagoga
     title: Registrace na Code.org
     school_name: Název školy (volitelné)
@@ -346,6 +352,7 @@
     delete_text_teacher_note: 'Upozornění: smazáním účtu nebudou vymazané vaše studentské
       účty.'
     delete_confirm: Jste si jisti, že chcete vymazat tento účet?
+    deleted_user: deleted user
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
@@ -421,7 +428,7 @@
     announcement_learn_more_button: Zjisti více
     announcement_try_now_button: Vyzkoušej hned
     announcement_host_an_hour_button: Hostit hodinu
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: Přehrát Video
     announcement_petition: Jako učitel patříte mezi propagátory hnutí za to, aby každý
       student v každé škole dostal příležitost učit se informatiku. A teď je čas,
       aby vaši zástupci vyslechli Váš názor. Tento týden se zástupci učitelů, 28 guvernérů
@@ -429,6 +436,7 @@
       kde žádají, aby americký kongres financoval výuku informatiky v rámci celé školní
       docházky na základních i středních školách.
     announcement_petition_button: Přidej své jméno
+    announcement_go_beyond_button: Go beyond
     announcement_all: Udržuj krok s novými funkcemi a aktualizacemi na našem blogu
       učitele. <a href='%{teacher_blog_url}' target='_blank'>Podívej se na minulé
       oznámení.</a>
@@ -437,23 +445,22 @@
       se dostat k ještě více studentům než kdy předtím. <a href='%{signup_url}' target='_blank'>
       Zaregistrujt vaši Hodinu kódu </a> a upozněte i ostatní pedagogy, že i oni mohou
       začít vyučovat informatiku.
-    announcement_hoc_scaling: 'UPOZORNĚNÍ pro učitele Kurzu 1-4 a Zrychleného kurzu:
-      z důvodu vysoké návštěvnosti až milionu studentů zapojených do Hodiny kódu,
-      <b> Studio kódu nebude ukládat nebo zaznamenávat pokroky studentů během Týdne
-      hodiny kódu</b>. Doporučujeme připojit se k Hodině kódu i s vaší třídou a podpořit
-      Hodinu kódu během Týdne výpočetní techniky. Zatímco naše vlastní kurzy Hodiny
-      kódu nebudou uloženy během tohoto týdne, studenti stále mohou absolvovat celé
-      kurzy a získat certifikát.'
     announcement_mc_launch: Jeden z našich nejpopulárnějších kurzů má nyní pokračování!
       Zcela nová Hodina kódu Minecraft Designer umožňuje studentům ovlivňovat pravidla
       světu Minecraft. Mohou vytvořit naprosto unikátní verzi Minecraftu a pak ji
       sdílet s přáteli nebo hrát na svých telefonech. Vytvořte si je ve své třídě
       na Hodině kódu.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
+    announcement_how_code_studio: Nepotřebujete žádné zkušenosti začít učit informatiku
+      ve své třídě. Code.org nabízí učební osnovy, učební plány, vysoce kvalitní profesionální
+      vzdělávací programy a tuny skvělých nástrojů pro všechny stupně úrovně &mdash;
+      vše, co potřebujete, bez příplatku. Nevíte, kde začít? Stáhněte <a href='%{video_download_url}'>
+      Toto video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
       high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: Omlouváme se, ale sekce %{new_section_code} neexistuje. Zadejte
       jiný kód sekce.
@@ -760,7 +767,7 @@
       </a>. Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti
       neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou
       být nedostupné.
-    review_terms: Přehodnoťte aktualizované podmínky
+    review_terms: Zkontrolujte aktualizované podmínky
   race_interstitial:
     title: 'Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity'
     message: Prosím vyberte vaši rasovou příslušnost (označte všechna platná políčka)
@@ -926,48 +933,48 @@
     starwars_blocks_name: 'Hvězdné války: Budování galaxie pomocí kódu (skládačka)'
     starwars_javascript_name: 'Hvězdné války: Budování galaxie pomocí kódu (JavaScript)'
     download_message: Stáhnout aplikaci %{app_name} pro použití v režimu offline (136MB)
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'Stáhněte v albánštině:'
+    download_in_Arabic: 'Stáhněte v arabštině:'
+    download_in_Azerbaijani: 'Stáhněte v ázerbájdžánštině:'
+    download_in_Basque: 'Stáhněte v baskičtině:'
+    download_in_Bosnian: 'Stáhněte v bosenštině:'
+    download_in_Bulgarian: 'Stáhněte v bulharštině:'
+    download_in_Catalan: 'Stáhněte v katalánštině:'
+    download_in_Chinese-Taiwan: 'Stáhněte v tajwanské čínštině:'
+    download_in_Chinese: 'Stáhněte v čínštině:'
+    download_in_Croatian: 'Stáhněte v chorvatštině:'
+    download_in_Czech: 'Stáhněte v češtině:'
+    download_in_Danish: 'Stáhněte v dánštině:'
+    download_in_Dutch: 'Stáhněte v holandštině:'
+    download_in_English: 'Stáhnout v angličtině:'
+    download_in_Finnish: 'Stáhněte ve finštině:'
+    download_in_French: 'Stáhněte ve francouzštině:'
+    download_in_German: 'Stáhněte v němčině:'
+    download_in_Greek: 'Stáhněte v řečtině:'
+    download_in_Hebrew: 'Stáhněte v hebrejštině:'
+    download_in_Hungarian: 'Stáhněte v maďarštině:'
+    download_in_Icelandic: 'Stáhněte v islandštině:'
+    download_in_Indonesian: 'Stáhněte v indonéštině:'
+    download_in_Irish: 'Stáhněte v irštině:'
+    download_in_Italian: 'Stáhněte v italštině:'
+    download_in_Japanese: 'Stáhněte v japonštině:'
+    download_in_Korean: 'Stáhněte v korejštině:'
+    download_in_Latvian: 'Stáhněte v lotyštině:'
+    download_in_Lithuanian: 'Stáhněte v litevštině:'
+    download_in_Norwegian: 'Stáhněte v norštině:'
+    download_in_Norwegian-Nynorsk: 'Stáhněte v norštině (Nynorsk):'
+    download_in_Polish: 'Stáhněte v polštině:'
+    download_in_Portuguese-Brazil: 'Stáhněte v brazilské portugalštině:'
+    download_in_Portuguese: 'Stáhněte v portugalštině:'
+    download_in_Romanian: 'Stáhněte v rumunštině:'
+    download_in_Russian: 'Stáhněte v ruštině:'
+    download_in_Serbian: 'Stáhněte v srbštině:'
+    download_in_Slovenian: 'Stáhněte ve slovinštině:'
+    download_in_Spanish: 'Stáhnout ve španělštině:'
+    download_in_Swedish: 'Stáhněte ve švédštině:'
+    download_in_Turkish: 'Stáhněte v turečtině:'
+    download_in_Ukrainian: 'Stáhněte v ukrajinštině:'
+    download_in_Vietnamese: 'Stáhněte ve vietnamštině:'
     windows: Windows (64bitová verze)
     mac: Mac OS X
   plc:

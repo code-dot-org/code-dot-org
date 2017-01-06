@@ -166,7 +166,7 @@
   "extraTopBlocks": "つながっていないブロックがあります。",
   "extraTopBlocksWhenRun": "つながっていないブロックがあります。\"実行した時\" のブロックに、それらをつなげてください。",
   "finalStage": "おめでとうございます ！最終（さいしゅう）ステージをクリアしました。",
-  "finalStageTrophies": "おめでとうございます ！最終ステージをクリアしたので  {numTrophies, plural, one {トロフィー} other {# トロフィー}}を獲得しました。",
+  "finalStageTrophies": "おめでとうございます ！最終（さいしゅう）ステージをクリアしたので  {numTrophies, plural, one {トロフィー} other {# トロフィー}}を獲得（かくとく）しました。",
   "finish": "完了",
   "forTeachersOnly": "先生のみ",
   "generatedCodeInfo": "アメリカのトップの大学(例えば、{berkeleyLink} {harvardLink})でもブロック ベースのプログラミングを教えています 。あなたが組み合わせたブロックは実際のプログラム言語でどのようになっているか確認できるようにJavaScriptで表示できます。JavaScriptは世界中で最も広く使われているプログラム言語です。",
@@ -318,5 +318,9 @@
   "when": "とき",
   "whenRun": "実行した時",
   "workspaceHeaderShort": "ワークスペース：",
-  "yes": "はい"
+  "yes": "はい",
+  "dropletBlock_playSound_description": "Plays the MP3 sound file from the specified URL.",
+  "dropletBlock_playSound_param0_description": "The URL to a sound file. Can be a project asset name or external URL.",
+  "dropletBlock_stopSound_description": "Stops playing the sound file from the specified URL, or all sounds if no URL is given.",
+  "dropletBlock_stopSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL."
 }

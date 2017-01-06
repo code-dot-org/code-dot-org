@@ -1,17 +1,18 @@
-"pt-PT":
+"pt":
   errors:
     messages:
       not_saved: 'Por favor, corrige os seguintes erros:'
       too_young: Este conteúdo tem restrições de idade e não está disponível para
-        os estudantes mais jovens
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+        os estudantes mais jovens.
+      teacher_must_accept_terms: Este conteúdo tem restrições de idade e não está
+        disponível para os alunos mais jovens. Peça ao seu professor para aceitar
+        os termos de serviço atualizado para lhe dar acesso a esse conteúdo. O seu
+        professor pode fazer isso, entrando em estúdio de código e clicando no botão
+        "Revisão actualizada termos" perto do topo da página inicial do estúdio de
+        código.
+      pair_programmer: Você está atualmente a par de programação com um estudante
+        que não tem acesso a esse conteúdo. Para acessar este conteúdo, parar a programação
+        parada e tente novamente.
   activerecord:
     errors:
       messages:
@@ -92,19 +93,26 @@
   signup_form:
     student_count: "%{count} alunos já criaram uma conta."
     teacher_count: "%{count} professores já criaram uma conta."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
-    hoc_already_signed_up_heading: Get started without logging in
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
+    overview: Cadastre-se para uma conta para acompanhar o seu progresso ou gerenciar
+      a sua sala de aula. <a href="/"> você pode consultar as várias fases e quebra-cabeças</a>
+      sem uma conta, mas você precisará inscrever-se para salvar o seu progresso e
+      projetos.
+    hoc_already_signed_up_heading: Começar sem se registar
+    hoc_already_signed_up_content: Você inscreveu-se para ensinar uma hora de código!
+      Você e seus alunos não precisam de entrar no estúdio de código para participar
+      neste evento. Para começar, <a href="https://code.org/learn"> escolha um tutorial</a>
+      para sua sala de aula e compartilhar a ligação com eles. <br/> <br/> Se você
+      gostou da hora de código e quer ir mais longe, você pode definir se uma senha
+      e criar uma conta de Studio código abaixo para inscrever seus alunos em qualquer
+      um dos nossos <a href="https://code.org/educate"> cursos mais longos</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Consultar o guia do professor
-    title: Sign up for Code.org
+    title: Cria uma conta no Code.org
     school_name: Nome da escola (opcional)
     school_address: Endereço da escola (opcional)
     address_placeholder: Morada, cidade e código postal
@@ -120,20 +128,24 @@
     valid_password: Palavra-passe válida!
     invalid_password: A palavra-passe tem de ter, pelo menos, 6 caracteres
     mismatch_password: As duas palavras-passe que digitaste não correspondem
-    student_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
-      do Code.org. Se tiver menos de 13 anos, declaro, ao submeter este formulário,
-      que tenho autorização dos meus pais para usar os serviços do Code.org.<br/>No
-      caso dos alunos com menos de 13 anos, os respetivos endereços de e-mail não
-      são registados, o que nos impede de entrar em contacto com eles.
-    teacher_terms: Concordo com os <a href='http://code.org/tos'>Termos de utilização</a>
-      do Code.org.
+    student_terms: Concordo em ficar vinculado pelos <a href='http://code.org/tos'>
+      termos de serviço</a> Code.org. Se eu sou menor de 13 anos de idade, confirmo
+      ao enviar este formulário que eu tenho dos meus pais ou autorização do tutor
+      legal para usar os serviços de Code.org. <br/> <br/> Endereços de e-mail não
+      são armazenados num formulário que nos permita entrar em contato com os alunos.
+      Os alunos nunca irão receber e-mails de Code.org exceto para recuperação de
+      senha. Consulte nossa <a href='http://code.org/privacy'> política de privacidade</a>
+      para obter mais informações.
+    teacher_terms: Eu concordo em respeitar os termos de Code.org de serviço. Para
+      obter mais informações sobre privacidade, consulte nossa <a href='http://code.org/privacy'>
+      política de privacidade</a>.
     additional_information: Precisamos de mais informações para continuarmos o processo
       de criação da conta.
     user_type_label: Tipo de conta
     user_type_teacher: Professor
     user_type_student: Aluno
     field_is_required: "é obrigatório"
-    accept_terms: You must agree to create an account
+    accept_terms: Você deve concordar em criar uma conta
   signin_form:
     title: Já tens uma conta? Inicia sessão
     login: E-mail
@@ -151,13 +163,13 @@
     picture: Agora localize a sua foto secreta
     words: Agora digite as palavras secretas
     login: Iniciar sessão
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    invalid_login: Login inválido, por favor tente novamente
+    pair_programming: Eu tenho um parceiro no meu computador
   password:
     reset_form:
       title: Esqueceste-te da palavra-passe?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Digite seu endereço de e-mail abaixo e enviaremos instruções de
+        redefinição de senha.
       email: Endereço de e-mail
       submit: OK
     change_form:
@@ -305,12 +317,12 @@
       prizes: Prémios
       logout: Terminar sessão
       signin: Iniciar sessão
-      signup: Criar conta
+      signup: Crie uma conta
       already_registered: Já criaste uma conta?
       pair_programming: Programação em duplas
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: Equipa
+      driver: Controlador
+      navigator: Navegador
     popup:
       progress_for_user: progresso de %{name}'s
       progress: O teu progresso
@@ -345,9 +357,9 @@
       example_with_number: Solução exemplo %{solution_number}
       submitted_on: Enviado em %{date}
       unsubmit: Remover submissão
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
-      clear_response: Clear response
+      worked_with: Colaborou com
+      update_lock_settings: Atualize as configurações de bloqueio aqui.
+      clear_response: Resposta clara
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -361,6 +373,7 @@
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir
       as contas dos seus alunos.'
     delete_confirm: Tens a certeza de que pretendes apagar a tua conta?
+    deleted_user: deleted user
   user_level:
     completed: Concluído
     tried: Tentado
@@ -435,55 +448,57 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Saber mais
     announcement_try_now_button: Experimentar agora
-    announcement_host_an_hour_button: Host an Hour
-    announcement_watch_video_button: Watch video
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
+    announcement_host_an_hour_button: Hospedar uma hora
+    announcement_watch_video_button: Ver vídeo
+    announcement_petition: Como professor, você está a liderar o caminho num movimento
+      para dar a cada aluno em todas as escolas a oportunidade de aprender informática.
+      Agora, é hora de deixar aos seus representantes notícias suas. Esta semana,
+      líderes de educação, 28 governadores e maiores empresas de CEOs da América uniram-se
+      numa carta aberta pedindo ao Congresso dos EUA para financiar a educação de
+      ciência de computador K-12.
     announcement_petition_button: Adicionar o teu nome
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-      Due to high traffic from millions of students doing the Hour of Code, <b>Code
-      Studio will not save or report student progress on these courses from December
-      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
-      celebrate the Hour of Code during Computer Science Education Week. While our
-      own Hour of Code tutorials will also not save progress that week, students can
-      still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
-      all-new Minecraft Hour of Code Designer lets students make the rules of the
-      Minecraft world. They can create a totally unique Minecraft experience, and
-      then share it with friends or play it on their phones. Do it with your class
-      for the Hour of Code.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
+    announcement_go_beyond_button: Go beyond
+    announcement_all: Mantenha-se atualizado com novos recursos e atualizações em
+      nosso blog de professor. <a href='%{teacher_blog_url}' target='_blank'> Ver
+      passado anúncios.</a>
+    announcement_hoc_launch: Milhares de educadores em mais de 180 países começarão
+      a ensinar ciência da computação durante a hora de código este 5-11 de dezembro.
+      Estamos contando com você para nos ajudar a atingir mais alunos do que nunca.
+      <a href='%{signup_url}' target='_blank'> Registe o seu evento da hora de código</a>
+      e outro professor avisa que qualquer um pode começar a ensinar ciência da computação.
+    announcement_mc_launch: Um de nossos tutoriais mais populares agora tem uma sequela!
+      O novo hora de Minecraft do Designer do código permite que os alunos fazem as
+      regras do mundo Minecraft. Eles podem criar uma experiência completamente única
+      de Minecraft e compartilhar com amigos ou reproduzi-lo em seus telefones. Fazê-lo
+      com a sua turma para a hora do código.
+    announcement_how_code_studio: Você não precisa ter experiência para começar a
+      ensinar ciência da computação em sua sala de aula. Code.org oferece currículo,
+      planos de aula, programas de aprendizagem profissional de alta qualidade e toneladas
+      de ótimas ferramentas para todos da classe níveis &mdash; tudo que você precisa,
+      tudo, sem qualquer custo. Quer saber onde começar? Baixe <a href='%{video_download_url}'>
+      este vídeo</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
       high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
-    new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
-      enter a different section code.
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as
-      the new section.
-    current_section_dne: Sorry, but section %{current_section_code} does not exist.
-      Please enter a different section code.
-    students_not_yours: You cannot move students from a section that does not belong
-      to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled
-      in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher
-      already has them in another section.
+    new_section_dne: Desculpe, mas não existe secção %{new_section_code}. Por favor
+      insira um código de seção diferente.
+    section_code_not_entered: Por favor forneça current_section_code.
+    section_code_cant_be_current_section: A secção atual não pode ser a mesma que
+      a nova seção.
+    current_section_dne: Desculpe, mas não existe secção %{current_section_code}.
+      Por favor insira um código de seção diferente.
+    students_not_yours: Você não pode mover os alunos de uma seção que não lhe pertença.
+    stay_enrolled_not_entered: Forneça por favor stay_enrolled_in_current_section.
+    student_ids_not_entered: Por favor forneça student_ids.
+    student_not_found: Um ou mais alunos não podem ser encontrados.
+    all_students_must_be_in_current_section: Todos os alunos, actualmente, devem estar
+      inscritos na sua seção.
+    already_enrolled_in_new_section: Você não pode mover estes estudantes porque este
+      professor já os tem noutra seção.
   share:
     title: Aprende no Code Studio
     description: Todos podem aprender a programar. Constrói jogos, aplicações e desenhos
@@ -513,11 +528,17 @@
       Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
       &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br
       />The Amazing World of Gumball é uma marca registada. &copy; 2015 Cartoon Network.
-    art_from_html_old: Angry Birds&#8482; &amp; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482;
-      &amp; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados
-    code_from_html: Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
-      GNU LGPL 2.1</a>.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os
+      Direitos Reservados. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Todos os Direitos Reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos
+      os Direitos Reservados. Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Todos os Direitos Reservados. Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Todos os Direitos Reservados. Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Todos os Direitos Reservados. O
+      Incrível Mundo de Gumball é uma Marca Registada &copy; %{current_year} Cartoon
+      Network.
+    code_from_html: Code.org usa p5.play, que é licenciado sob <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      a GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logótipo do CODE
       e a Hora de Código&reg; são marcas registadas do Code.org."
@@ -551,10 +572,10 @@
     download: Descarregar o vídeo
   compatibility:
     upgrade:
-      unsupported_message: Your browser is not supported. Please upgrade your browser
-        to <a href='%{supported_browsers_url}', target='_blank'>one of our supported
-        browsers</a>. You can try viewing the page, but expect functionality to be
-        broken.
+      unsupported_message: O seu navegador não é suportado. Por favor atualize o seu
+        navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos
+        nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas
+        algumas funcionalidade podem não estar disponíveis.
       link: Saber mais
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Tente recarregar a página
@@ -592,13 +613,13 @@
   upsell:
     applab:
       title: Laboratório de aplicações
-      body: App Lab is a programming environment where you can make simple apps. Design
-        an app, code with blocks or JavaScript to make it work, then share your app
-        in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then
-        share your app in seconds.
+      body: O laboratório de app é um ambiente de programação, onde você pode fazer
+        apps simples. Design de um app, o código com blocos ou JavaScript para fazer
+        o trabalho, em seguida, compartilhar seu app em segundos.
+      body_short: Design de uma app, o código com blocos ou JavaScript para fazer
+        o trabalho, em seguida, compartilhar seu app em segundos.
       audience: Maiores de 13 anos
-      cta: Learn how
+      cta: Saber mais
     hoc:
       title: Labirinto clássico
       body: Explora as noções básicas da Ciência da Computação. Milhões de pessoas
@@ -635,16 +656,18 @@
       body: Explora um mundo Minecraft através do código.
     minecraft2016:
       title: Minecraft
-      body: Program animals and other Minecraft creatures in your own version of Minecraft.
+      body: Programe animais e outras criaturas Minecraft na sua própria versão do
+        Minecraft.
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 6+
-      body: We've compiled a list of unplugged lessons for you to use in your classroom.
-        Now you can teach the fundamentals of computer science, whether you have computers
-        in your classroom or not! Try using these lessons as a stand-alone course
-        or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      title: Aulas desligado
+      audience: Maiores de 4 anos
+      body: Nós compilamos uma lista de lições desconectadas para você usar na sua
+        sala de aula. Agora você pode ensinar os fundamentos da ciência da computação,
+        se você tiver computadores em sua sala de aula ou não! Tente usar essas lições
+        como um curso de stand-alone ou como aulas complementares para qualquer curso
+        de ciência da computação.
+      body_short: Se você não tem computadores, tente essas lições desligadas em sua
+        sala de aula.
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
     students_made_these_with_code: Os alunos criaram isso com programação!
@@ -655,8 +678,8 @@
       aplicativos e figuras escrevendo seus próprios programas de computador. Clique
       nas figuras e capturas de tela para ver cada programa em funcionamento.
     want_to_make_your_own: Queres criar o teu próprio programa?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
+    how_to_save: No último nível destes tutoriais, clique em "Concluir" e "Salvar"
+      para salvar o seu trabalho na galeria.
     more: Mais &rarr;
     caption_by_name_age: por %{name}, com %{age}
     caption_time_ago: há %{time_ago}
@@ -684,9 +707,9 @@
     toofew_body: Please select two answers before submitting.
   multi-submittable:
     wrong_title: Obrigado
-    wrong_body: Thank you for submitting an answer.
+    wrong_body: Obrigado por publicar a sua resposta.
     correct_title: Obrigado
-    correct_body: Thank you for submitting an answer.
+    correct_body: Obrigado por publicar a sua resposta.
     toofew_title: Too few answers.
     toofew_body: Please select two answers before submitting.
   level_group:
@@ -955,25 +978,25 @@
     download_in_Albanian: 'Download in Albanian:'
     download_in_Arabic: 'Download in Arabic:'
     download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Basque: 'Faça o Download em Basco:'
+    download_in_Bosnian: 'Faça o Download em Bósnio:'
+    download_in_Bulgarian: 'Faça o Download em Búlgaro:'
+    download_in_Catalan: 'Faça o Download em Catalão:'
+    download_in_Chinese-Taiwan: 'Faça o download em Chinês-Taiwan:'
+    download_in_Chinese: 'Faça o download em Chinês:'
+    download_in_Croatian: 'Faça o Download em Croata:'
+    download_in_Czech: 'Faça o Download em Checo:'
+    download_in_Danish: 'Faça o Download em Dinamarquês:'
+    download_in_Dutch: 'Faça o Download em Holandês:'
+    download_in_English: 'Faça o Download em Inglês:'
+    download_in_Finnish: 'Faça o Download em Finlandês (Suomi):'
+    download_in_French: 'Faça o Download em Francês:'
+    download_in_German: 'Faça o Download em Alemão:'
+    download_in_Greek: 'Faça o Download em Grego:'
+    download_in_Hebrew: 'Faça o Download em Hebraico:'
+    download_in_Hungarian: 'Faça o Download em Húngaro:'
+    download_in_Icelandic: 'Faça o Download em Islandês:'
+    download_in_Indonesian: 'Faça o Download em Indonésio:'
     download_in_Irish: 'Download in Irish:'
     download_in_Italian: 'Download in Italian:'
     download_in_Japanese: 'Download in Japanese:'

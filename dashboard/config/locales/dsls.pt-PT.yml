@@ -1,4 +1,4 @@
-"pt-PT":
+"pt":
   data:
     match:
       2-3 Big Event Match 1:
@@ -139,9 +139,9 @@
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           1</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
-          1</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
-          1</h3>"
+          6</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lado: 3 <br/>janelas/lado:
+          2</h3>"
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada
           um desses veículos foi decomposto em partes menores. Associe cada veículo
           com sua lista de partes correta.

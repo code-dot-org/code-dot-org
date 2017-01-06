@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now loop the triangle 6 times. \r\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.",
+    "instructions": "Now loop the triangle 6 times. ",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -34,7 +34,7 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to draw a total of 6 triangles, each rotated 60 degrees.  \",\"hint_id\":\"courseD_artist_nestedLoops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d53bb58d52c6c862a8502330bc387f3d/courseD_artist_nestedLoops1a.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -82,13 +82,6 @@
     <required_blocks>
       <xml/>
     </required_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="controls_repeat">
-          <title name="TIMES">6</title>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

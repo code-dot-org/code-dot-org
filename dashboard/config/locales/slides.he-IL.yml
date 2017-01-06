@@ -388,27 +388,23 @@
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: "היי, אני פאולה! מחשבים ממש טובים בחלחזור על פעולות. אתם יכולים לספור
+          עד 10, 20 או 100. אבל מחשב יכול לספור עד מיליארד או טריליון. זה לא נהיה
+          משעמם, אלא לוקח מספר שניות בלבד. ציור, בין אם ספירה, או ציור או כל דבר -
+          מחשבים מסוגלים לחזור על דברים מאות או אפילו מיליוני פעמים."
       2:
         image: notes/frozen2_2.jpg
-        text: In programming, we call this a loop. A loop is how you repeat your code
-          over and over again. For the next puzzle, your goal is to help Anna create
-          a square with the "Repeat" block.
+        text: "בתכנות, אנו קוראים לזה לולאה. לולאה היא איך שאתה חוזר על הקוד שלך שוב
+          ושוב. בפאזל הבא, המטרה שלך היא לאזור לאנה ליצור ריבוע עם בלוק הRepeat (חזרה)."
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: כל הבלוקים של הקוד ששמת בתוך בלוק ה"חזור" יחזרו ברצף, כמה פעמים שתרצה.
       4:
         image: notes/frozen2_4.jpg
-        text: To draw a square, you can use the "Move Forward" and "Turn Right" block
-          4 times. But the easier way is to tell the computer to "Move Forward" and
-          "Turn Right by 90 degrees" once, and then tell it to repeat this pair of
-          actions 4 times. To do that, you need to put the "Move Forward" and "Turn
-          Right" block inside a "Repeat" block.
+        text: כדי לצייר ריבוע, אתם יכולים להשתמש ב"לזוז קדימה" ו "פנה ימינה" ארבעים
+          פעמים. אבל דרך קלה יותר היא להגיד למחשב "לך קדימה" ו"פנה ימינה ב-90 מעלות"
+          פעם אחת, ואז להגיד לו לחזור על זוג הפעולות האלה 4 פעמים. כדי לעשות את זה
+          אתה צריך לשים את הבלוקים "זוז קדימה" ו "פנה ימינה" בתוך בלוק ה"חזור" (Repeat).
       5:
         image: notes/frozen2_5.jpg
         text: זכור, אתה יכול לשנות את המספר בבלוק "חזור שוב" לכל מספר שתרצה, והפעולה
@@ -416,20 +412,17 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: "היי, אני כריס בוש. אני שחקן כדורסל מקצועי, ואני הייתי מתכנת במכללה."
       2:
         image: notes/frozen3_2.jpg
-        text: One of the most important concepts in computer science is how to define
-          new commands. Most computer languages have only about 100 words or commands.
-          And really, the art and magic is in defining your own new words out of these
-          building blocks.
+        text: "אחד מהקונספטים הכי חשובים במדעי המחשב הוא להגדיר פקודות חדשות. לרוב
+          שפות המחשב יש בערל 100 מילים או פקודות. ובאמת, האומנות והקסם היא להגדיר
+          את המילים החדשות שלך מבלי הבלוקים האלה."
       3:
         image: notes/frozen3_3.jpg
-        text: Once you've taught a computer how to do an action once using this sequence
-          of commands, you can make up your own name for that action so it's easy
-          to repeat it later. When you define your own command and give it a name,
-          that's called a function.
+        text: "ברגע שאתה לימדת מחשב איך לעשות פעולה אחת באמצעות רצף זה של פקודות,
+          אתה יכול להכין שם משלך לפעולה הזאת כדי שיהיה כל יותר לחזור עליה מאוחר יותר.
+          ברגע שהגדרת את הפקודה שלך ונתת לה שם, זה נקרא פונקציה."
       4:
         image: notes/frozen3_4.jpg
         text: Hi, I’m Jess. When programming with blocks, you would use functions

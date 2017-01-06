@@ -614,19 +614,19 @@
       name:
         maze_intro: 'Labirent: Tanıtım'
         artist_intro: 'Ressam: Giriş'
-        farmer_intro: "Çiftçi girişi"
+        farmer_intro: "Çiftçi tanıtım"
         flappy_intro: Flappy Tanıtım
         loop_times: Bloğu tekrarlayın
         loop_until: Blok kadar tekrarlayın
-        if: if bloğu
-        if_else: "İf/else bloğu"
-        if_else_scrat: "İf/else bloğu"
+        if: Eğer bloğu
+        if_else: Eğer/değilse bloğu
+        if_else_scrat: Eğer/değilse bloğu
         function: Fonksiyonlar
         loop_while: while bloğu
         loop_for: Sayaç bloğu
         parameters: Fonksiyon parametreleri
         hoc_wrapup: Kod saatini tamamla
-        Unplug1: CS nedir?
+        Unplug1: CS (Bilgisayar Bilimleri) nedir?
         Unplug2: Sayısal Düşünme
         Unplug3: Grafikli Kağıdıyla Programlama
         Unplug4: Algoritmalar
@@ -687,7 +687,7 @@
         C3_internet: "İnternet"
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
-        C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
+        C3_songwriting_with_parameters: Parametrelerle Şarkı Yazmak
         C4_intro: Giriş
         C4_loops_zombie: Döngüler
         C4_bee_conditional: Arı Koşullandırmaları
@@ -697,8 +697,8 @@
         C4_for_loops_bee: For Döngüleri
         C4_for_loops_no_bee: For Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
-        C4_function_edit: Düzenleme fonksiyonları
-        C4_function_create: Oluşturma Fonksiyonları
+        C4_function_edit: Fonksiyonları düzenleme
+        C4_function_create: Fonksiyonları Oluşturma
         C4_function_parameters: Fonksiyon parametreleri
         C4_conditionals: Koşullar
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
@@ -732,6 +732,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -812,8 +815,8 @@
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
         run: Programınızı denemek için "Çalıştır" düğmesine basın
         watch_again: Videoyu tekrar izlemek için burayı tıklayın
-        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebildiniz
-          mi?
+        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebilir
+          misin?
         show_code_explanation: Hazırladığınız programın kodlarını görmek için buraya
           tıklayın
         instructions_repeat_explanation: Her bulmaca için gerekli talimatlar burada
@@ -824,7 +827,7 @@
           ata" bloğunu "hikaye başladığında" bloğuna ekleyin
         studio_say_text: Karakterinin ne söylemesini istiyorsan tırnak işaretleri
           arasına yaz
-        jigsaw_click: Bu bloğu tıklayın!
+        jigsaw_click: Bu bloğa tıklayın!
         move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
           "Çalıştığında" bloğunun altına ekleyin
         turn_elsa: '"Dön" bloğunu kullanarak Elsa''yı döndürün. Açılan menüden Elsa''nın

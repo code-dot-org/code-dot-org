@@ -1725,7 +1725,7 @@ et:
         text: "Kui sa tahad mõnda plokki kustutada, eemalda see lihtsalt käskluste hulgast ja tiri tagasi tööriista kasti."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
-        text: "Peale nupu \"Käivita\" vajutamist on sul alati võimalik vajutada nuppu \"Taaskäivita\", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord teha täitsa oma Minecrafti versioon. Lõbutse hästi!"
+        text: "Peale nupu \"Käivita\" vajutamist on sul alati võimalik vajutada nuppu \"Taasta\", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord teha täitsa oma Minecrafti versioon. Lõbutse hästi!"
     mc_2016_loops:
       1:
         image: 'notes/mc_2016_loops_1.jpg'
@@ -1748,18 +1748,18 @@ et:
         text: "Aga mis seda kasutades juhtub? Minecraftis kukub lammastelt vill kui sa neid pügad, lehmad jooksevad ära kui sa neid lööd ja kreeperid plahvatavad kui sa neile lähened. Sellised reaktsioonid leiavad aset \"sündmuste\" tõttu. Sündmused paluvad sinu programmil oodata, et midagi juhtuks. Ja viia läbi mingi tegevus kui see juhtub."
       4:
         image: 'notes/mc_2016_events_4.jpg'
-        text: "So far, you've used one event. Code you put in the \"when spawned\" slot runs when your creature is created or when the game starts. Over the next few levels you'll have new slots for events such as \"when touched\" that runs when you touch the creature, or \"when used\" for when you use the creature. Or, if you want your zombie to disappear when the sun comes up, put that in the \"when day\" slot"
+        text: "Siiani oled kasutanud ühte sündmust. Kood, mille sa sisestad \"kui loodud\" pessa, käivitub siis kui oled oma olendi loonud või kui mäng algab. Järgmisel paaril tasemel on sul uued pesad selliste sündmuste jaoks nagu \"kui puudutatakse\", mis käivitub kui olendit puudutatakse, või \"kui kasutatakse\" olendi kasutamise jaoks. Või kui sa soovid, et zombi kaoks ära kui päev tuleb, siis tueb see panna \"kui on päev\" pesasse"
     mc_2016_spawn:
       1:
         image: 'notes/mc_2016_spawn_1.jpg'
-        text: "In games, spawn means the same thing as create. In this level, let's make zombies spawn when the sun goes down. To do this, we'll use the \"when night\" block."
+        text: "Mängudes tähendab 'spawn' midagi looma või tegema. Sellel tasemel teeme zombisid siis kui päike loojub. Selleks kasutame \"kui öö\" plokki."
       2:
         image: 'notes/mc_2016_spawn_2.jpg'
-        text: "Since we want the zombies to spawn at night we'll add the \"spawn zombie\" block under the \"when night\" block. As soon as they're spawned, each zombie will run the code that you put in their \"when spawned\" event slot. Have fun spawning zombies!"
+        text: "Kuna soovime zombisid teha öösel lisame \"loo zombie\" plokk \"kui on öö\" plokki. Kui nad on tekkinud, kasutab iga zombi koodi, mis sa paned tema \"kui loodud\" sündmuse pessa. Lõbutsege zombisid luues!"
     mc_2016_congrats:
       1:
         image: 'notes/mc_2016_congrats_1.jpg'
-        text: "Congratulations! You've learned to use computer science commands to bring the Minecraft world to life. You are the developer now. You've unlocked all the commands and all the creatures. You choose what happens."
+        text: "Palju õnne! Olete õppinud arvutikäskude abil Minecraft maailmas tegutsema. Oled programmeerija. Oled lukust lahti teinud kõik käsud ja kõik olendid. Sa valida, mis juhtub."
       2:
         image: 'notes/mc_2016_congrats_2.jpg'
-        text: "When you're done making your game, choose share to get a link that you can share with your friends or to play your game on your phone. Have fun! I'm looking forward to playing your version of Minecraft."
+        text: "Kui oled mängu valmis teinud vali \"jaga\" ning saad lingi, mida oma sõpradega jagada. Mängu saad ka oma telefonis mängida. Lõbutse! Mina tahaksin samuti sinu Minecrafti mängida."

@@ -1,5 +1,5 @@
 professional_learning_course 'CS in Science Legacy'
-login_required 'true'
+login_required true
 
 stage 'Welcome!'
 level 'sciPD3OLP32 intro'
@@ -7,7 +7,7 @@ level 'sciPD2 timeline'
 level 'PD check your progress'
 level 'sciPD3 mods2'
 
-stage 'Earth Science Challenges'
+stage 'Revisiting Complex Adaptive Systems'
 level 'sciPD33 refresh'
 level 'sciPD33 refresh2'
 
