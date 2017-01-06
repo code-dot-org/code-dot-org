@@ -8,7 +8,6 @@ import WireframeButtons, {
 describe('WireframeButtons.appendUrl', function () {
 
   it('typical url', function () {
-    console.log(appendUrl);
     expect(appendUrl('http://url', '/view')).to.equal('http://url/view');
   });
 
