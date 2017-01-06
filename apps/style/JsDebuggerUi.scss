@@ -85,7 +85,7 @@ $debug-header-border-width: 1px;
   width: $resize-bar-width;
   cursor: ew-resize;
   position: absolute;
-  right: $debug-watch-max-column-width - .5 * $resize-bar-width;
+  right: $debug-watch-max-column-width - 0.5 * $resize-bar-width;
   z-index: 1;
   top: $resize-bar-width;
 }
