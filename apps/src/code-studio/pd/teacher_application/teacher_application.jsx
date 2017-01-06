@@ -676,7 +676,7 @@ const TeacherApplication = React.createClass({
         </label>
         <Button
           onClick={this.onSubmitButtonClick}
-
+          disabled={this.state.submitting}
         >
           Complete and Send
         </Button>
