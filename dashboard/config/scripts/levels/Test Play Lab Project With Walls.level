@@ -88,7 +88,7 @@
                       </value>
                       <value name="ADD3">
                         <block type="text">
-                          <title name="TEXT">rld</title>
+                          <title name="TEXT">rld!</title>
                         </block>
                       </value>
                     </block>
@@ -489,5 +489,17 @@
         </category>
       </xml>
     </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSprite">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">"witch"</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Studio>
