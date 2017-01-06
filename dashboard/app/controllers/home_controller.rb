@@ -16,6 +16,8 @@ class HomeController < ApplicationController
     else
       redirect_to '/'
     end
+  rescue URI::InvalidURIError
+    redirect_to '/'
   end
 
   def home_insert
