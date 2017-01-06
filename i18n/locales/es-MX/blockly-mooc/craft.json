@@ -1,5 +1,5 @@
 {
-  "blockActionAdd":"agrega",
+  "blockActionAdd":"agregar",
   "blockActionAttack":"atacar",
   "blockActionDestroyEntity":"desaparecer",
   "blockActionDrop":"soltar",
@@ -23,8 +23,8 @@
   "blockMoveForward":"avanzar",
   "blockPlaceTorch":"colocar antorcha",
   "blockPlaceXAheadAhead":"delante",
-  "blockPlaceXAheadPlace":"colocar",
-  "blockPlaceXPlace":"colocar",
+  "blockPlaceXAheadPlace":"coloca",
+  "blockPlaceXPlace":"coloca",
   "blockPlantCrop":"plantar cultivo",
   "blockShear":"esquilar",
   "blockTillSoil":"arar suelo",

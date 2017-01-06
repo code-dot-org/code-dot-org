@@ -4,80 +4,80 @@ sl:
       name:
         course1:
           title: Tečaj 1
-          description: Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
-          description_audience: Ages 4-6
+          description: Začnite s Tečajom 1 za otroke, ki se še učijo brati. Učenci bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati z drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti pri zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke prvega razreda osnovne šole.
+          description_short: Začnite pri Tečaju 1, če se otrok še uči brati.
+          description_audience: Starost 4-6
           stage:
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Artist: Shapes': 'Artist: Shapes'
-            'Bee: Loops': 'Bee: Loops'
-            'Bee: Sequence': 'Bee: Sequence'
+            'Artist: Loops': 'Umetnik: Zanke'
+            'Artist: Sequence': 'Umetnik: Zaporedje'
+            'Artist: Shapes': 'Umetnik: Oblike'
+            'Bee: Loops': 'Čebelica: Zanke'
+            'Bee: Sequence': 'Čebelica: Zaporedje'
             Building a Foundation: Graditi temelje
             Getting Loopy: Getting Loopy
             Going Places Safely: Kako varno potovati
             Happy Maps: Veseli zemljevidi
             'Jigsaw: Learn to drag and drop': 'Sestavljanka: Naučiti se programirati na način "povleci in spusti"'
             'Maze: Debugging': 'Labirint: odpravljanje napak'
-            'Maze: Loops': 'Maze: Loops'
+            'Maze: Loops': 'Labirint: Zanke'
             'Maze: Sequence': 'Labirint: zaporedje'
             Move it, Move it: Dajmo, dajmo
             'Real-life Algorithms: Plant a Seed': 'Življenjski algoritmi: Zasadi seme'
             Spelling Bee: Čebelica črkuje besede
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Studio: Create a Story': 'Play Lab: ustvari zgodbo'
             The Big Event: Veliki dogodek
         course2:
-          title: Course 2
-          description: Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.
+          title: Tečaj 2
+          description: Učenci, ki znajo brati in nimajo nobenih predhodnjih izkušen s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci naredili programe, ki bodo reševali probleme in razvijali interaktivne igre ali zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za učence od 2. do 5. razreda osnovne šole.
           description_short: Z učenci, ki že znajo brati, začnite pri 2. tečaju.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Starost 6+ (potrebno je znanje branja)
           stage:
-            'Artist: Debugging': 'Artist: Debugging'
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Loops': 'Bee: Loops'
+            'Artist: Debugging': 'Umetnik: Razhroščevanje'
+            'Artist: Loops': 'Umetnik: Zanke'
+            'Artist: Nested Loops': 'Umetnik: Ugnezdene zanke'
+            'Artist: Sequence': 'Umetnik: Zaporedje'
+            'Bee: Conditionals': 'Čebelica: Pogoji'
+            'Bee: Debugging': 'Čebelica: Razhroščevanje'
+            'Bee: Loops': 'Čebelica: Zanke'
             Binary Bracelets: Binary Bracelets
             Conditionals: Pogoji
             Flappy: Flappy
             Getting Loopy: Getting Loopy
             Graph Paper Programming: Obarvajmo kvadratke
-            'Maze: Loops': 'Maze: Loops'
+            'Maze: Loops': 'Labirint: Zanke'
             'Maze: Sequence': 'Labirint: zaporedje'
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
-            Relay programming: Relay programming
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Real-life Algorithms: Paper Planes': 'Življenjski algoritmi: Papirnata letala'
+            Relay programming: Relejsko programiranje
+            'Studio: Create a Story': 'Play Lab: ustvari zgodbo'
             The Big Event: Veliki dogodek
             Your Digital Footprint: Your Digital Footprint
         course3:
-          title: 3. tečaj
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
-          description_audience: Ages 8-18
+          title: Tečaj 3
+          description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2. Učenci se bodo poglobili v programerske teme, predstavljene v prejšnjih tečajih, tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne probleme. Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe in igre, ki jih bodo lahko delili s komerkoli. Priporočljivo za učence 4. in 5. razreda osnovne šole.
+          description_short: Tečaj 3 je nadaljevanje Tečaja 2.
+          description_audience: Starost 8-18
           stage:
-            Artist: Artist
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Patterns': 'Artist: Patterns'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Functions': 'Bee: Functions'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
+            Artist: Umetnik
+            'Artist: Functions': 'Umetnik: Funkcije'
+            'Artist: Nested Loops': 'Umetnik: Ugnezdene zanke'
+            'Artist: Patterns': 'Umetnik: Vzorci'
+            'Bee: Conditionals': 'Čebelica: Pogoji'
+            'Bee: Debugging': 'Čebelica: Razhroščevanje'
+            'Bee: Functions': 'Čebelica: Funkcije'
+            'Bee: Nested Loops': 'Čebelica: Ugnezdene zanke'
             Bounce: Skokica
             Computational Thinking: Računalniško razmišljanje
             Crowdsourcing: Crowdsourcing
             Dice Race: Dice Race
-            Digital Citizenship: Digital Citizenship
-            'Farmer: While Loops': 'Farmer: While Loops'
-            Functional Suncatchers: Functional Suncatchers
+            Digital Citizenship: Digitalno državljanstvo
+            'Farmer: While Loops': 'Kmet: Zanka dokler velja'
+            Functional Suncatchers: Funkcionalni lovilci svetlobe
             Internet: Internet
-            Maze: Maze
-            'Maze: Conditionals': 'Maze: Conditionals'
+            Maze: Labirint
+            'Maze: Conditionals': 'Labirint: Pogoji'
             Songwriting: Songwriting
-            'Studio: Create a Game': 'Play Lab: Create a Game'
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Studio: Create a Game': 'Play Lab: ustvari igrico'
+            'Studio: Create a Story': 'Play Lab: ustvari zgodbo'
         playlab:
           title: Play Lab
           description: Create a story or make a game with Play Lab!
@@ -85,64 +85,64 @@ sl:
           stage:
             Play Lab: Play Lab
         artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
+          title: Umetnik
+          description: Nariši kul slike in oblike z Umetnikom!
+          description_short: Nariši kul slike in oblike z Umetnikom!
           stage:
-            Artist: Artist
+            Artist: Umetnik
         hourofcode:
           title: Klasičen labirint
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
           description_short: Try the basics of computer science with many fun characters!
           stage:
-            Maze: Maze
+            Maze: Labirint
         frozen:
           title: Frozen (Ledeno kraljestvo) z Ano in Elso
           description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
           description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
           stage:
-            Artist: Artist
+            Artist: Umetnik
         course4:
           title: Course 4
-          description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses 2 and 3.
-          description_audience: Ages 9-18
+          description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2 in 3. Učenci se bodo naučili, kako se spopasti z ugankami, ki so bolj kompleksne medtem ko se bodo naučili kako združiti več konceptov med reševanjem vsakega iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki bodo pokazali več znanj, vključno z zankami in funkcijamki s parametri. Priporočljivo za učence med 4. in 8. razredom osnovne šole.
+          description_short: Učenci, ki delajo Tečaj 4 bi morali že narediti Tečaj 2 in 3.
+          description_audience: Starost 9-18
           stage:
-            Artist: Artist
-            Artist Binary: Artist Binary
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+            Artist: Umetnik
+            Artist Binary: Umetnik Binarno
+            'Artist: For Loops': 'Umetnik: "For" zanke'
+            'Artist: Functions': 'Umetnik: Funkcije'
+            'Artist: Functions with Parameters': 'Umetnik: Funkcije s parametri'
+            'Artist: Variables': 'Umetnik: spremenljivke'
+            'Bee: For Loops': 'Čebelica: "For" zanke'
+            'Bee: Functions with Parameters': 'Čebelica: Funkcije s parametri'
             Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
-            Maze and Bee: Maze and Bee
-            'Play Lab: For Loops': 'Play Lab: For Loops'
-            'Play Lab: Functions with Parameters': 'Play Lab: Functions with Parameters'
-            'Play Lab: Variables': 'Play Lab: Variables'
+            Maze and Bee: Labirint in čebelica
+            'Play Lab: For Loops': 'Play Lab: "for" zanke'
+            'Play Lab: Functions with Parameters': 'Play Lab: funkcije s parametri'
+            'Play Lab: Variables': 'Play Lab: spremenljivke'
             Super Challenge - For Loops: Super Challenge - For Loops
             Super Challenge - Functions and Parameters: Super Challenge - Functions and Parameters
             Super Challenge - Variables: Super Challenge - Variables
-            'Unplugged: Binary': 'Unplugged: Binary'
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
+            'Unplugged: Binary': 'Brez prijave: Binarno'
+            'Unplugged: Envelope Variables': 'Brez prijave: Spremenljivke v ovojnicah'
+            'Unplugged: For Loop Fun': 'Brez prijave: Zabava s "For" zankami '
             'Unplugged: Madlibs': 'Unplugged: Madlibs'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
-            'Unplugged: Tangrams': 'Unplugged: Tangrams'
+            'Unplugged: Songwriting with Parameters': 'Brez prijave: Pisanje pesmi s parametri'
+            'Unplugged: Tangrams': 'Brez prijave: Tangrami'
         Course4pre:
           title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not taken Course 2 and 3.
+          description: Kratek povzetek konceptov za študente, ki niso končali Tečaja 2 in 3.
+          description_short: Kratek povzetek konceptov za študente, ki niso končali Tečaja 2 in 3.
           stage:
-            'Artist: Functions': 'Artist: Functions'
-            'Artist: Loops': 'Artist: Loops'
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            'Artist: Sequence': 'Artist: Sequence'
-            'Bee: Conditionals': 'Bee: Conditionals'
-            'Bee: Debugging': 'Bee: Debugging'
-            'Bee: Nested Loops': 'Bee: Nested Loops'
-            'Farmer: While Loops': 'Farmer: While Loops'
+            'Artist: Functions': 'Umetnik: Funkcije'
+            'Artist: Loops': 'Umetnik: Zanke'
+            'Artist: Nested Loops': 'Umetnik: Ugnezdene zanke'
+            'Artist: Sequence': 'Umetnik: Zaporedje'
+            'Bee: Conditionals': 'Čebelica: Pogoji'
+            'Bee: Debugging': 'Čebelica: Razhroščevanje'
+            'Bee: Nested Loops': 'Čebelica: Ugnezdene zanke'
+            'Farmer: While Loops': 'Kmet: Zanka dokler velja'
             'Maze: Sequence': 'Labirint: zaporedje'
           description_audience: ''
         usability:
@@ -150,7 +150,7 @@ sl:
           description: A selection of Course 4 levels for usability testing.
           description_short: ''
           stage:
-            Binary: Binary
+            Binary: Binarno
             For Loops: For Loops
             Functions and Functions with Parameters: Functions and Functions with Parameters
             Intro: Intro
@@ -246,8 +246,8 @@ sl:
         20-hour:
           title: Accelerated Intro to CS Course
           description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
-          description_short: This 20-hour course covers the core computer science and programming concepts in courses 2-4.
-          description_audience: Ages 10-18
+          description_short: Ta 20-urni tečaj zajema bistvo računalnitšva in programerskih konceptov v tečajih 2-4.
+          description_audience: Starost 10-18
           stage:
             Abstraction: Abstrakcija
             Algorithms: Algoritmi
@@ -671,7 +671,7 @@ sl:
             Anonymous student survey: Anonymous student survey
             Anonymous student survey 2: Anonymous student survey 2
             AppLab: AppLab
-            Artist: Artist
+            Artist: Umetnik
             Bee: Bee
             Bounce: Skokica
             CSinA: CSinA
@@ -683,7 +683,7 @@ sl:
             Long assessment: Long assessment
             Markdown Details: Markdown Details
             Match: Match
-            Maze: Maze
+            Maze: Labirint
             Minecraft: Minecraft
             Multi: Multi
             Multi2: Multi2
@@ -701,6 +701,8 @@ sl:
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -759,8 +761,12 @@ sl:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -852,8 +858,12 @@ sl:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +878,12 @@ sl:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -1053,6 +1067,7 @@ sl:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
             Wrap-Up: Zaključek
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1088,7 +1103,7 @@ sl:
         Special Fun:
           title: Special Fun
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Starost 10-18
           stage:
             Halloween 2015: Halloween 2015
           description: ''
@@ -1096,7 +1111,7 @@ sl:
           title: Special Levels
           description: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
           description_short: Something special for those who know it exists. These puzzles might not be around long, so enjoy them while you can!
-          description_audience: Ages 10-18
+          description_audience: Starost 10-18
           stage:
             Spring 2016: Spring 2016
             Halloween 2015: Halloween 2015
@@ -1192,6 +1207,7 @@ sl:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
             Wrap-Up: Zaključek
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1421,7 +1437,7 @@ sl:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,6 +1473,17 @@ sl:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1524,7 +1551,7 @@ sl:
           title: Secret Sample
           description: Test of new educational philosophy
           description_short: This is a secret...shhhhh
-          description_audience: Ages 8-18
+          description_audience: Starost 8-18
           stage:
             Sample Stage: Sample Stage
         ECSPD1:
@@ -1752,7 +1779,7 @@ sl:
           description_short: Just a script for playing around
           description_audience: Ages 8-98
           stage:
-            Artist Functions: Artist Functions
+            Artist Functions: Umetnik Funkcije
             Sample Stage: Sample Stage
             The same thing with named levels: The same thing with named levels
             You are a coding STAR: You are a coding STAR
@@ -1760,7 +1787,7 @@ sl:
           title: Artist Exemplar
           description: These artist levels will knock the socks off of third graders
           description_short: How can we make the artist levels really hum?
-          description_audience: Ages 8-18
+          description_audience: Starost 8-18
           stage:
             Artist Exemplar: Artist Exemplar
         teachercon:
@@ -1784,7 +1811,7 @@ sl:
           description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': 'Bee: Conditionals'
+            'Bee: Conditionals': 'Čebelica: Pogoji'
             Kindergarten Stage 1: Kindergarten Stage 1
           title: ''
           description_audience: ''
@@ -1820,7 +1847,7 @@ sl:
             'Bee: Determine the Concept': 'Bee: Determine the Concept'
             'Bee: Functions (Course 3)': 'Bee: Functions (Course 3)'
             Build a Star Wars Game!: Build a Star Wars Game!
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: Digitalno državljanstvo
             Explore project ideas: Explore project ideas
             'Farmer: Functions (New)': 'Farmer: Functions (New)'
             Final Project - Presentation Day: Final Project - Presentation Day
@@ -1859,22 +1886,22 @@ sl:
           description_short: Planning Script for CSF 2.0
           description_audience: Ages 10-110
           stage:
-            'Artist: For Loops': 'Artist: For Loops'
-            'Artist: Functions with Parameters': 'Artist: Functions with Parameters'
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
-            Digital Citizenship: Digital Citizenship
+            'Artist: For Loops': 'Umetnik: "For" zanke'
+            'Artist: Functions with Parameters': 'Umetnik: Funkcije s parametri'
+            'Artist: Variables': 'Umetnik: spremenljivke'
+            'Bee: For Loops': 'Čebelica: "For" zanke'
+            'Bee: Functions with Parameters': 'Čebelica: Funkcije s parametri'
+            Digital Citizenship: Digitalno državljanstvo
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: Final Project - Presentation Day
             Final Project - Review/Revise Day: Final Project - Review/Revise Day
             'Final Project - Unplugged: Design Process': 'Final Project - Unplugged: Design Process'
             'Final Project - Work Day: Build Project Online': 'Final Project - Work Day: Build Project Online'
-            'Play Lab: Variables': 'Play Lab: Variables'
+            'Play Lab: Variables': 'Play Lab: spremenljivke'
             Try programming with Khan Academy: Try programming with Khan Academy
-            'Unplugged: Envelope Variables': 'Unplugged: Envelope Variables'
-            'Unplugged: For Loop Fun': 'Unplugged: For Loop Fun'
-            'Unplugged: Songwriting with Parameters': 'Unplugged: Songwriting with Parameters'
+            'Unplugged: Envelope Variables': 'Brez prijave: Spremenljivke v ovojnicah'
+            'Unplugged: For Loop Fun': 'Brez prijave: Zabava s "For" zankami '
+            'Unplugged: Songwriting with Parameters': 'Brez prijave: Pisanje pesmi s parametri'
         ecs-unit1:
           title: ECS Unit 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -1884,8 +1911,12 @@ sl:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -1962,15 +1993,15 @@ sl:
           description_audience: Ages 5-18
           stage:
             " Bee: Conditionals": " Bee: Conditionals"
-            'Artist: Nested Loops': 'Artist: Nested Loops'
-            Bee Debugging: Bee Debugging
+            'Artist: Nested Loops': 'Umetnik: Ugnezdene zanke'
+            Bee Debugging: Čebelica razhroščevanje
             Bounce: Skokica
             Build a Game: Build a Game
             Farmer Conditional with Cards: Farmer Conditional with Cards
             Farmer Debug Relay Programming: Farmer Debug Relay Programming
             Farmer Graph Paper Programming: Farmer Graph Paper Programming
             Farmer Impacts of Computing: Farmer Impacts of Computing
-            'Farmer: While Loops': 'Farmer: While Loops'
+            'Farmer: While Loops': 'Kmet: Zanka dokler velja'
             'Maze: Conditionals with Loops': 'Maze: Conditionals with Loops'
             'Maze: Nested Loops': 'Maze: Nested Loops'
             More Programming with CS4FN: More Programming with CS4FN
@@ -2041,7 +2072,7 @@ sl:
             How to behave in the lab_How to use Code_org puzzles: How to behave in the lab/How to use Code.org puzzles
             Programming at home with my pet: Programming at home with my pet
             Binary Bracelets: Binary Bracelets
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+            'Real-life Algorithms: Paper Planes': 'Življenjski algoritmi: Papirnata letala'
             The Big Event: Veliki dogodek
         transferring-over:
           stage:
@@ -2057,7 +2088,7 @@ sl:
         k5concepts:
           title: K5 Concepts
           stage:
-            Binary: Binary
+            Binary: Binarno
             Conditionals: Pogoji
             Events: Dogodki
             For Loops: For Loops
@@ -2162,14 +2193,15 @@ sl:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Skokica
           title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Make a basketball game
-          description: Make a basketball game
+          description_short: Choose your team and make a basketball game
+          description: Choose your team and make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2187,7 +2219,7 @@ sl:
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
             Processing with Bits: Processing with Bits
-          title: Binary
+          title: Binarno
           description_audience: Falmouth Middle School
           description_short: ''
           description: ''
@@ -2213,6 +2245,8 @@ sl:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,6 +2263,7 @@ sl:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2254,17 +2289,21 @@ sl:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Minecraft Ura za kodo Oblikovalec
+          title: Minecraft Ura za kodo Oblikovalec
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici Minecrafta.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2320,7 +2359,7 @@ sl:
         coursec-draft:
           stage:
             Programming in Maze: Programming in Maze
-            'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
+            'Real-life Algorithms: Paper Planes': 'Življenjski algoritmi: Papirnata letala'
             Programming in Collector: Programming in Collector
             Programming in Artist: Programming in Artist
             'Loops: Getting Loopy': 'Loops: Getting Loopy'
@@ -2335,6 +2374,8 @@ sl:
             Your Digital Footprint: Your Digital Footprint
             Building a Foundation: Graditi temelje
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2356,16 +2397,18 @@ sl:
             More Programming with CS4FN: More Programming with CS4FN
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
-            Digital Citizenship: Digital Citizenship
-            'Unplugged: Binary': 'Unplugged: Binary'
-            Artist Binary: Artist Binary
+            Digital Citizenship: Digitalno državljanstvo
+            'Unplugged: Binary': 'Brez prijave: Binarno'
+            Artist Binary: Umetnik Binarno
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Gnezdenje zank
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 3rd grade.
         coursee-draft:
           stage:
-            Digital Citizenship: Digital Citizenship
+            Digital Citizenship: Digitalno državljanstvo
             Build a Star Wars Game: Build a Star Wars Game
             'Functions: Songwriting': 'Functions: Songwriting'
             Functions in Artist: Functions in Artist
@@ -2381,17 +2424,18 @@ sl:
             Private and Personal Information: Private and Personal Information
             Internet: Internet
             Crowdsourcing: Crowdsourcing
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 4th grade.
         coursef-draft:
           stage:
-            Digital Citizenship: Digital Citizenship
-            Envelope Variables: Envelope Variables
+            Digital Citizenship: Digitalno državljanstvo
+            Envelope Variables: Spremeljivke v ovojnicah
             Variables in Play Lab: Variables in Play Lab
             Variables in Artist: Variables in Artist
-            For Loop Fun: For Loop Fun
+            For Loop Fun: Zabava s "for" zankami
             For Loops in Bee: For Loops in Bee
             For Loops in Artist: For Loops in Artist
             'Functions with Parameters: Songwriting with Parameters': 'Functions with Parameters: Songwriting with Parameters'
@@ -2404,7 +2448,7 @@ sl:
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
             The Power of Words: The Power of Words
-            Songwriting with Parameters: Songwriting with Parameters
+            Songwriting with Parameters: Pisanje pesmi s parametri
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2430,7 +2474,7 @@ sl:
         sports:
           stage:
             Sports: Sports
-          title: MCode your own sports game
+          title: Code your own sports game
           description_audience: ''
           description_short: Mix and match across sports
           description: Mix and match across sports
@@ -2479,7 +2523,73 @@ sl:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Welcome!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Zaključek
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Welcome!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Zaključek
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

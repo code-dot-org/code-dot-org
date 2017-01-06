@@ -72,9 +72,10 @@
         maze_2_7: Mənə kömək edin ki, ən az sayda blokdan istifadə edərək pis donuzcuğun
           dərsini verim. Birdən çox "təkrar et, neçə dəfə" blokundan istifadə etməyə
           çalışın.
-        maze_2_8: 'When a block is grey, that means you can''t delete it. Solve this
-          puzzle using the "repeat" block that repeats 3 times. Try putting these
-          3 blocks inside the grey "repeat" block: move, move, turn.'
+        maze_2_8: 'Blok boz rəngdədirsə, deməli onu poza bilməzsiniz. Bu tapmacanı
+          3 dəfə icra olunan "təkrar et" blokundan istifadə etməklə həll edin. Növbəti
+          3 bloku boz "təkrar et" blokunun içinə yerləşdirməklə cəhd edin: get, get,
+          dön.'
         maze_2_9: Yaxşı, yeni "təkrar et, ta ki" blokunu sınaqdan keçirin - o mən
           ta zəhlətökən donuza çatana qədər təkrarlanacaq.
         maze_2_10: Yaxşı, sonuncu çalışma - bunu yalnız 4 blok istifadə edərək həll
@@ -144,8 +145,8 @@
           olunan kodu görə bilərsiz. Siz bu prosesi təkrarlamaqla, 10 bir-birinə qonşu
           olan və nərdivanı xatırladan kvadratları çəkə bilərsiniz mi? İpucu: Sizə
           yalnız 2 əlavə blok lazımdır.'
-        turtle_4_8: Burada əvvəlki tapmacanın həllini görə bilərsiniz. Siz 2 blok
-          əlavə etməklə çəkmə prosesini tamamlaya bilərsiniz mi?
+        turtle_4_8: Burada əvvəlki tapmacanın həlli göstərilib. Sadəcə 2 blok əlavə
+          etməklə şəkli tamamlaya bilərsiniz?
         turtle_4_9: Burada əvvəlki tapmacanın həllini görə bilərsiniz. Çəkmə prosesini
           tamamlamaq üçün neçə dərəcə dönməlisiniz? (Çox güman siz bir neçə dəfə təxmin
           etməlisiniz)
@@ -520,8 +521,8 @@
         studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
           him on the adventure.  Help them greet each other by using the the "actor
           say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
+        studio_iceage_move_to_flag: Cırmaq öz palıd qozasını axtarır! "Get" bloku
+          vasitəsi ilə ona son 200 pikseli keçməkdə kömək edin.
         studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
           2). Help Diego get 200 pixels down to Manny using the "move actor" block.
           Next, connect a block to the "when actor touches" event to play a sound
@@ -737,6 +738,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

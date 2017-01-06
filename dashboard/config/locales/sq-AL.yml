@@ -98,6 +98,12 @@
     hoc_already_signed_up_content: |2-
 
       Ju jeni rregjistruar për të mësuar një Orë Kodimi! Ju dhe nxënësit tuaj nuk duhet të rregjistroheni në Code Studio për të marrë pjesë në këtë ngjarje. Për të filluar, <a href="https://code.org/learn"> zgjidhni një tutorial </a> për klasën tuaj dhe shperndani lidhjen me ta. <br/> <br/> Nëse ju ka pëlqyer Ora e Kodimit dhe dëshironi  të shkoni më tej, ju mund të vendosni një fjalëkalim dhe për të krijuar një llogari në Code Studio për të regjistruar më poshtë  studentët tuaj në ndonjë nga <a  href="https://code.org/educate"> kurset tona më të gjata </ a >.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Shiko guidën e edukimit
     title: Regjistrohuni për Code.org
     school_name: Emri i shkollës (jo i domosdoshëm)
@@ -351,6 +357,7 @@
     delete_text_teacher_note: 'Ju lutem vini re: duke fshirë llogarinë tuaj nuk do
       të fshihen llogaritë e studentëve të tjerë.'
     delete_confirm: A je i sigurtë që do të fshish llogarinë tënde?
+    deleted_user: deleted user
   user_level:
     completed: E përfunduar
     tried: U përpoqe
@@ -433,6 +440,7 @@
       në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12
       shkolla të shkencave kompjuterike.
     announcement_petition_button: Shto emrin tuaj
+    announcement_go_beyond_button: Go beyond
     announcement_all: |-
       Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>
        
@@ -442,14 +450,6 @@
       më parë. <a href='%{signup_url}' target='_blank'> Regjistrohu në eventin tuaj
       të Orës së Kodimit </a> dhe bëjini të ditur një tjetër mësuesi se cdo kush mund
       të filloj të shpjegoj shkenca kompjuterike.
-    announcement_hoc_scaling: 'KUJDES për Kursin 1-4 dhe mësuesit e përshpejtuar të
-      kursit: Për shkak të trafikut të lartë nga miliona e nxënësve që janë duke bërë
-      Orën e Kodimit, <b> Code Studio nuk do të të ruaj ose raportoj progresin e studentëve
-      në këto kurse nga dhjetori 3-11 </ b>. Ne ju rekomandojmë të bëni aktivitetin
-      Ora e Kodimit me klasën tuaj për të festuar Orën e Kodit gjatë Javës së Edukimit
-      të Shkencave Kompjuterike. Ndërsa vetë tutorialet tona të Orës së Kodimit gjithashtu
-      nuk do të ruajnë progresin atë javë, studentët ende mund të bëjnë mësime të
-      plota dhe të fitojnë një certifikatë.'
     announcement_mc_launch: |-
       Një nga mësime tona më të njohura tani ka një vazhdim! Të gjithë dizenjuesit e rinj të Orës së Kodimit Minecraft lejojnë nxënësit të bëjnë rregullat e botës Minecraft. Ata mund të krijojnë një përvojë krejtësisht unike Minecraft, dhe pastaj të ndajnë atë me miqtë ose ta luajnë atë në telefonat e tyre. Bëjeni atë me klasën tuaj për Orën e Kodimit.
        .
@@ -458,6 +458,12 @@
       high quality professional learning programs, and tons of great tools for all
       grade levels&mdash;everything you need, all at no cost. Wondering where to get
       started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju
       lutem, jepni një tjetër kod seksioni.

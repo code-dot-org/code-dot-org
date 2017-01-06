@@ -841,5 +841,17 @@
   "failedMultiplyCharactersTimeoutBlockly": "Du musst insgesamt 20 Maus-Droiden fangen. Benutze den Befehl \"Maus-Droid hinzufügen\" im Ereignis \"Wenn Maus-Droid erreicht\", um zwei oder mehr Maus-Droiden erscheinen zu lassen, immer wenn Du einen erreichst.",
   "failedMultiplyCharactersTimeoutGotSome": "Glückwunsch, du hast mit deinem Code Maus-Droiden hinzugefügt. Gehe zur nächsten Aufgabe, oder versuche noch mal, 20 von ihnen zu fangen. Je mehr du hinzufügst, desto einfacher wird es! (Drücke und halte die Pfeiltasten auf deinem Keyboard (oder Bildschirm)gedrückt, um dich schneller zu bewegen.)",
   "failedChangeSettingTimeout": "Erreiche drei Rebellenpiloten, um weiter zu kommen.",
-  "failedChangeSettingSettings": "Mache es zu deinem Spiel. Um dieses Level zu schaffen, musst Du dein Droide ändern und seine Geschwindigkeit einstellen."
+  "failedChangeSettingSettings": "Mache es zu deinem Spiel. Um dieses Level zu schaffen, musst Du dein Droide ändern und seine Geschwindigkeit einstellen.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
+  "saySpriteChoices_59": "Ouch!"
 }

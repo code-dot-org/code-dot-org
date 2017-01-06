@@ -1722,7 +1722,7 @@ cs:
         text: "Začneme programováním slepice. Přetáhni blok \"Posun vpřed\" do pracovního prostoru. Když stiskneš \"Spustit\" slepice udělá jeden krok vpřed. Pokud chceš, aby šla slepice ještě dál, přetáhni další blok \"Posun vpřed\" hned pod ten první. Blok se označí žlutě a hned poté se bloky spojí dohromady. Když znovu stiskneš \"Spustit\", slepice udělá dva kroky vpřed."
       8:
         image: 'notes/mc_2016_intro_8.jpg'
-        text: "Pokud chceš smazat blok, přetáhni ho zpátky do prostřední části do prostoru pro bloky."
+        text: "Pokud chceš blok smazat, přetáhni ho zpátky do prostřední části do prostoru pro bloky."
       9:
         image: 'notes/mc_2016_intro_9.jpg'
         text: "Po stisknutí \"Spustit\" vždy můžeš stisknout stejné tlačítko, tentokrát se jmenuje \"Obnovit\" a začneš znovu. A teď už je to jen na tobě, jak si Minecraft poskládáš. Hezkou zábavu!"

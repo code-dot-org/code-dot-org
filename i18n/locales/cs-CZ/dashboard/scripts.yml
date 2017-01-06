@@ -4,13 +4,13 @@ cs:
       name:
         course1:
           title: Kurz 1
-          description: Kurz 1 je navržen tak, aby umožnil brzkým čtenářům vytvářet počítačové programy, které mu pomohou se naučit jak spolupracovat s ostatními, rozvinout dovednosti potřebné k řešení problémů  a jak překonávat obtížné úkoly. Na konci tohoto kurzu studenti vytvoří jejich vlastní vlastní hru nebo příběh, který mohou sdílet. Doporučeno pro třídy K-1 (3–6 let).
-          description_short: Začít s kurzem 1 pro mladé čtenáře.
-          description_audience: Stáří 4+ (před čtenáři)
+          description: Kurz 1 je navržen tak, aby umožnil čerstvým čtenářům vytvářet počítačové programy, které jim pomohou se naučit spolupráci s ostatními, rozvinout dovednosti potřebné k řešení problémů a překonávání obtížných úkolů. Na konci tohoto kurzu studenti vytvoří jejich vlastní hru nebo příběh, který mohou sdílet. Doporučeno pro první třídu základní školy.
+          description_short: Začít s kurzem 1 pro čerstvé čtenáře.
+          description_audience: Věk 4-6
           stage:
             'Artist: Loops': 'Umělec: Cykly'
             'Artist: Sequence': 'Umělec: posloupnost'
-            'Artist: Shapes': 'Umělec: tvary'
+            'Artist: Shapes': 'Umělec: Tvary'
             'Bee: Loops': 'Včela: cykly'
             'Bee: Sequence': 'Včela: posloupnost'
             Building a Foundation: Budování nadace
@@ -30,7 +30,7 @@ cs:
           title: Kurz 2
           description: Začni s 2 kurzy pro studenty, kteří mohou číst bez předchozí zkušenosti z programování. V tomto kurzu studenti vytváří programy k řešení problémů a rozvíjí interaktivní hry nebo příběhy, které mohou sdílet. Vhodné pro 2.-5. třídu.
           description_short: Začni s 2 kurzy pro studenty, kteří mohou číst.
-          description_audience: Ages 6+ (reading required)
+          description_audience: Věk 6+ (požadováno čtení)
           stage:
             'Artist: Debugging': 'Umělec: ladění'
             'Artist: Loops': 'Umělec: Cykly'
@@ -43,7 +43,7 @@ cs:
             Conditionals: Podmínky
             Flappy: Flappy
             Getting Loopy: Bláznit
-            Graph Paper Programming: Programování Na Milimetrovém Papíru
+            Graph Paper Programming: Programování na milimetrovém papíru
             'Maze: Loops': 'Bludiště: cykly'
             'Maze: Sequence': 'Bludiště: posloupnost'
             'Real-life Algorithms: Paper Planes': 'Algoritmy ze života: Papírová letadla'
@@ -53,7 +53,7 @@ cs:
             Your Digital Footprint: Tvé digitální stopy
         course3:
           title: Kurz 3
-          description: Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
+          description: Kurz 3 je určen pro studenty, kteří prošli kurzem 3. Studenti se hlouběji ponoří do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které mohou s kýmkoli sdílet. Vhodné pro 4.-5. ročník ZŠ.
           description_short: Kurz 3 navazuje na kurz 2.
           description_audience: Ve věku 8-18
           stage:
@@ -212,7 +212,7 @@ cs:
             'Programming Concept: Functions': 'Programming Concept: Functions'
             'Programming Concept: Loops': 'Programming Concept: Loops'
             Reflection: Reflection
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Unplugged lessons: Unplugged lessons
             Writing computer programs: Writing computer programs
           description_audience: ''
@@ -254,7 +254,7 @@ cs:
             Computational Thinking: Aritmetické Myšlení
             Conditionals: Podmínky
             Functions: Funkce
-            Graph Paper Programming: Programování Na Milimetrovém Papíru
+            Graph Paper Programming: Programování na milimetrovém papíru
             Introduction to Computer Science: Úvod do počítačové vědy
             Relay Programming: Štafetové programování
             Song Writing: Psaní Písně
@@ -263,7 +263,7 @@ cs:
             The Artist 3: Umělec 3
             The Artist 4: Malíř 4
             The Artist 5: Umělec 5
-            The Farmer: Farmářka
+            The Farmer: Farmář
             The Farmer 2: Farmářka 2
             The Farmer 3: Farmář 3
             The Internet: Internet
@@ -321,14 +321,14 @@ cs:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Hádanky
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Hádanky
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -361,7 +361,7 @@ cs:
             Evaluation Blocks: Bloky vyhodnocení
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algPDmiami:
@@ -495,7 +495,7 @@ cs:
             Evaluation Blocks: Bloky vyhodnocení
             Next Steps: Next Steps
             Strings and Images: Řetězce a obrázky
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             The Big Game: The Big Game
             The Design Recipe: Návrhový předpis
           description_audience: ''
@@ -533,7 +533,7 @@ cs:
             Evaluation Blocks: Bloky vyhodnocení
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD-iZone:
@@ -546,7 +546,7 @@ cs:
             Evaluation Blocks: Bloky vyhodnocení
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD-NexTech:
@@ -701,6 +701,8 @@ cs:
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -717,7 +719,7 @@ cs:
             Next Steps: Next Steps
             Rocket-Height: Rocket-Height
             Strings and Images: Řetězce a obrázky
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Writing Contracts: Writing Contracts
           description_audience: ''
         cspfacilitator:
@@ -759,8 +761,12 @@ cs:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -780,7 +786,7 @@ cs:
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Návrhový předpis
@@ -852,8 +858,12 @@ cs:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +878,12 @@ cs:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -904,7 +918,7 @@ cs:
             Binary Bracelets: Binární náramky
             Building a Foundation: Budování nadace
             Getting Loopy: Bláznit
-            Graph Paper Programming: Programování Na Milimetrovém Papíru
+            Graph Paper Programming: Programování na milimetrovém papíru
             Happy Maps: Šťastné mapy
             Move it, Move it: Přesuň to, Přesuň to
             'Real-life Algorithms: Plant a Seed': 'Algoritmy ze života: Zasadit semínko'
@@ -1053,6 +1067,7 @@ cs:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Vítejte!
             Wrap-Up: Rekapitulace
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1192,6 +1207,7 @@ cs:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Vítejte!
             Wrap-Up: Rekapitulace
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1323,7 +1339,7 @@ cs:
             Evaluation Blocks: Bloky vyhodnocení
             Introduction to PD: Introduction to PD
             Preparing for in-person PD: Preparing for in-person PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         algebraPD3c:
@@ -1421,7 +1437,7 @@ cs:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,6 +1473,17 @@ cs:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1545,7 +1572,7 @@ cs:
           stage:
             Evaluation Blocks: Bloky vyhodnocení
             Introduction to PD: Introduction to PD
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
           description_audience: ''
         sciencePD1:
@@ -1884,8 +1911,12 @@ cs:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -2076,7 +2107,7 @@ cs:
           description_short: '\tPhase 3: School Year Support'
           stage:
             Lesson Prep: Lesson Prep
-            Teacher Dashboard: Teacher Dashboard
+            Teacher Dashboard: Katedra učitele
             Teaching with Puzzles: Teaching with Puzzles
             Teaching with the Design Recipe: Teaching with the Design Recipe
             The Design Recipe: Návrhový předpis
@@ -2162,14 +2193,15 @@ cs:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Odraz
-          title: Choose your team and make a basketball game
+          title: Vyberte si svůj tým a vytvořte basketbalovou hru
           description_audience: ''
-          description_short: Make a basketball game
-          description: Make a basketball game
+          description_short: Vytvoř basketbalovou hru
+          description: Vyberte si svůj tým a vytvořte basketbalovou hru
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2213,6 +2245,8 @@ cs:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,6 +2263,7 @@ cs:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2254,6 +2289,10 @@ cs:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2335,6 +2374,8 @@ cs:
             Your Digital Footprint: Tvé digitální stopy
             Building a Foundation: Budování nadace
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2359,6 +2400,8 @@ cs:
             Digital Citizenship: Digitální občanství
             'Unplugged: Binary': 'Nezapojené: binární'
             Artist Binary: Umělecké binární
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Vnořené cykly
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2381,6 +2424,7 @@ cs:
             Private and Personal Information: Private and Personal Information
             Internet: Internet
             Crowdsourcing: Crowdsourcing
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2430,7 +2474,7 @@ cs:
         sports:
           stage:
             Sports: Sports
-          title: MCode your own sports game
+          title: Code your own sports game
           description_audience: ''
           description_short: Mix and match across sports
           description: Mix and match across sports
@@ -2479,7 +2523,73 @@ cs:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Vítejte!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Rekapitulace
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Vítejte!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Rekapitulace
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

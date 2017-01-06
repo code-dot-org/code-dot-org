@@ -9,7 +9,7 @@ require 'fileutils'
 
 def push_out_translated_files
   rename_from_crowdin_name_to_locale
-  exec "bin/i18n-codeorg/out.sh"
+  puts `sh bin/i18n-codeorg/out.sh`
   copy_untranslated_apps
   cleanup_portuguese_codes
   rebuild_blockly_js_files
@@ -59,7 +59,10 @@ def cleanup_portuguese_codes
 end
 
 def rebuild_blockly_js_files
-  exec "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
+  puts `sh apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+  Dir.chdir('apps'){
+    puts `yarn build`
+  }
 end
 
 push_out_translated_files
