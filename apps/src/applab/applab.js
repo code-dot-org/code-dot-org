@@ -643,8 +643,10 @@ Applab.init = function (config) {
     // Ignore the user's levelHtml for levels without design mode. levelHtml
     // should never be present on such levels, however some levels do
     // have levelHtml stored due to a previous bug. HTML set by levelbuilder
-    // is stored in startHtml, not levelHtml.
-    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode) {
+    // is stored in startHtml, not levelHtml. Also ignore levelHtml for embedded
+    // levels so that updates made to startHtml by levelbuilders are shown.
+    if (!studioApp.reduxStore.getState().pageConstants.hasDesignMode ||
+        studioApp.reduxStore.getState().pageConstants.isEmbedView) {
       config.level.levelHtml = '';
     }
 
