@@ -1197,9 +1197,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal expected_usernames, users.collect(&:username)
   end
 
-  test 'email confirmation required for teachers' do
+  test 'email confirmation not required for teachers' do
     user = create :teacher, email: 'my_email@test.xx', confirmed_at: nil
-    assert user.confirmation_required?
+    assert !user.confirmation_required?
     assert !user.confirmed_at
   end
 
