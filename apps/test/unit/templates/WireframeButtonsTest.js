@@ -1,9 +1,6 @@
 import {expect} from '../../util/configuredChai';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
-import WireframeButtons, {
-    appendUrl
-} from '@cdo/apps/templates/WireframeButtons';
+import { appendUrl } from '@cdo/apps/templates/WireframeButtons';
 
 describe('WireframeButtons.appendUrl', function () {
 
@@ -26,4 +23,4 @@ describe('WireframeButtons.appendUrl', function () {
   it('with ending slashes, query, and hash', function () {
     expect(appendUrl('http://url/?query#hash', '/view')).to.equal('http://url/view?query');
   });
- });
+});
