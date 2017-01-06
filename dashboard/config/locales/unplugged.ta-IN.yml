@@ -202,7 +202,7 @@
           string and beads.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Songwriting with Parameters
+        title: "பாடல் எழுதுதல்"
         desc: Students use the concept of the chorus in a song to learn about passing
           parameters (which customize a function without having to rewrite the entire
           function).

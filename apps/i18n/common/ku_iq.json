@@ -1,5 +1,5 @@
 {
-  "allowEditing": "Allow editing",
+  "allowEditing": "Rê bide Xebitinê",
   "allowEditingInstructions": "\"Allow editing\" while students should be taking the assessment.",
   "and": "و",
   "animationMode": "كارتۆن",
@@ -318,5 +318,9 @@
   "when": "when",
   "whenRun": "when run",
   "workspaceHeaderShort": "Workspace: ",
-  "yes": "Yes"
+  "yes": "Yes",
+  "dropletBlock_playSound_description": "Plays the MP3 sound file from the specified URL.",
+  "dropletBlock_playSound_param0_description": "The URL to a sound file. Can be a project asset name or external URL.",
+  "dropletBlock_stopSound_description": "Stops playing the sound file from the specified URL, or all sounds if no URL is given.",
+  "dropletBlock_stopSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL."
 }

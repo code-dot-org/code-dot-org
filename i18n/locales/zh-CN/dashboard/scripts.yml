@@ -75,7 +75,7 @@ zh-CN:
             Internet: 互联网
             Maze: 迷宫
             'Maze: Conditionals': '迷宫：条件'
-            Songwriting: 通过输入参数来作曲。
+            Songwriting: 写歌
             'Studio: Create a Game': '游戏实验室： 创建一个游戏'
             'Studio: Create a Story': '游戏实验室: 创建一个故事'
         playlab:
@@ -701,6 +701,8 @@ zh-CN:
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -759,8 +761,12 @@ zh-CN:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -852,8 +858,12 @@ zh-CN:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -868,8 +878,12 @@ zh-CN:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -908,7 +922,7 @@ zh-CN:
             Happy Maps: 快乐地图
             Move it, Move it: 移动它，移动它
             'Real-life Algorithms: Plant a Seed': '真实算法： 播种一颗种子'
-            Songwriting: 通过输入参数来作曲。
+            Songwriting: 写歌
             The Big Event: 大事件
         afterschool1:
           title: Afterschool 1
@@ -1053,6 +1067,7 @@ zh-CN:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: 欢迎！
             Wrap-Up: 总结
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1192,6 +1207,7 @@ zh-CN:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: 欢迎！
             Wrap-Up: 总结
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1421,7 +1437,7 @@ zh-CN:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1457,6 +1473,17 @@ zh-CN:
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1829,7 +1856,7 @@ zh-CN:
             More Programming with Scratch: More Programming with Scratch
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: 通过输入参数来作曲。
+            Songwriting: 写歌
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -1884,8 +1911,12 @@ zh-CN:
             Unit 1, Day 11-14 Data Modeling and Design: Unit 1, Day 11-14 Data Modeling and Design
             Unit 1, Day 15-16 Computer Programs and Following Directions: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?: Unit 1, Day 17-19 What Is Intelligence?
-            0: "Unit 1, Days 1-2\nWhat Is a Computer?"
-            1: "Unit 1, Days 1-2\nWhat Is a Computer?"
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2: Unit 1, Days 5-7 Searching and Web 2
             Unit 1, Days 8-9 Impact of Computers and Communication: Unit 1, Days 8-9 Impact of Computers and Communication
@@ -2162,14 +2193,15 @@ zh-CN:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: 弹跳
-          title: 创建一场篮球赛
+          title: 选择你的球队进行一场篮球比赛
           description_audience: ''
-          description_short: 创建一场篮球赛
-          description: 创建一场篮球赛
+          description_short: 进行一场篮球赛
+          description: 选择你的球队进行一场篮球比赛
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2213,6 +2245,8 @@ zh-CN:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2229,6 +2263,7 @@ zh-CN:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2254,6 +2289,10 @@ zh-CN:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2263,7 +2302,7 @@ zh-CN:
             Minecraft Hour of Code Designer: 我的世界 编码时间设计师
           title: 我的世界 编码时间设计师
           description_audience: ''
-          description_short: 利用编程，在你自己的《我的世界》里创建动物和其他生活在《我的世界》里的生物。
+          description_short: 在你自己的《我的世界》中编写各种动物和其他生物。
           description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
         flappy-impact-study:
           stage:
@@ -2335,6 +2374,8 @@ zh-CN:
             Your Digital Footprint: 你的数字足迹
             Building a Foundation: 打基础
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2359,6 +2400,8 @@ zh-CN:
             Digital Citizenship: 数字公民
             'Unplugged: Binary': '离线：二进制'
             Artist Binary: 小艺术家：二进制
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: 循环嵌套
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2381,6 +2424,7 @@ zh-CN:
             Private and Personal Information: Private and Personal Information
             Internet: 互联网
             Crowdsourcing: 众包
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2430,7 +2474,7 @@ zh-CN:
         sports:
           stage:
             Sports: 运动
-          title: 运动
+          title: 用代码编写你自己的体育比赛
           description_audience: ''
           description_short: 为你自己的运动编写代码
           description: 为你自己的运动编写代码
@@ -2479,7 +2523,73 @@ zh-CN:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: 欢迎！
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: 总结
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: 欢迎！
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: 总结
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

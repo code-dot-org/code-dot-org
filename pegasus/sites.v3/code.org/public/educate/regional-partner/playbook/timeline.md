@@ -2,7 +2,6 @@
 title: Timeline
 nav: regional_partner_playbook_nav
 ---
-
 <style>
 table {width: 100%;}
 </style>	
@@ -11,20 +10,6 @@ table {width: 100%;}
 
 # Implementation Timeline
 
-## November Areas of Focus
-
-- Run Administrator & Counselor PD<br/> 
-- Recruit new faciliators<br/> 
-- Promote Hour of Code<br/>
-- Key Roadmap Categories: Facilitator Capacity & Regional CS Expansion<br/>
-
-| **Date** | **Event** |
-|------|-------|
-| November 1, 2016 | Facilitator Applications Open |
-| November 4, 2016 <br/> 10:00 am - 10:30 am PT| Virtual Meeting: Facilitator Selection Process **(Required)** |
-| November 11, 2016 <br/> 12:00 pm - 1:00 pm PT | Virtual Meeting: How to Run a Virtual Administrator & Counselor PD *(Optional)* <br/> Click [here](https://code.zoom.us/j/510341435) to join the Zoom Meeting.|
-| November 17, 2016 <br/> 10:00 am - 11:00 am PT | Virtual Meeting: K-12 CS Framework *(Optional)* <br/> Click [here](https://code.zoom.us/j/827230209) to join the Zoom Meeting. |
-| November 29, 2016 <br/> 8:30 am - 9:30 am PT | Virtual Meeting: Diving into CS Discoveries *(Optional)*<br/> *You are welcome to invite district personnel who are interested in adding this course to this webinar.* <br/> Click [here](https://code.zoom.us/j/510341435) to join the Zoom Meeting.|
 
 ## December Areas of Focus
 
@@ -35,7 +20,7 @@ table {width: 100%;}
 - Key Roadmap Categories: Community Building and Reputation / Funding<br/>
 
 | **Date** | **Event** |
-|------|-------|
+|-----------------|--------------------------------------------------|
 | December 1, 2016 <br/> 8:00 am - 9:00 am PT | Virtual Training: Teacher Application Process & Rubric **(Required)** |
 | December 5th-11th 2016 | CS Education Week |
 
@@ -46,10 +31,15 @@ table {width: 100%;}
 - Key Roadmap Categories: Regional CS Expansion<br/>
 
 | **January** ||
-|------|-------|
+|-----------------|--------------------------------------------------|
+| January 5, 2017 | Teacher Applications Open |
 | January 9, 2017 | Round 1 Facilitator Applications Due |
-| January 9, 2017 | Teacher Applications Open |
-| January 10, 2017<br/> 10:00 am - 11:00 am PT<br/> | Virtual Meeting: How to Review Teacher Applications **(Required)** |
+| January 10, 2017<br/> 10:00 am - 11:00 am PT<br/> | Virtual Meeting: How to Review Teacher Applications<br/> Click [here](https://code.zoom.us/j/190845819) to join the Zoom Meeting. **(Required)** |
+| January 16th - 27th, 2017 | Teacher Appplication Review Cycle #1 |
+| January 20, 2017 | Regional Partner Cycle #1 application reviews due |
+| January 27, 2017 | Code.org notifies Cycle #1 applicants of decisions |
+| January 30, 2017 - February 10, 2017 | Teacher Appplication Review Cycle #2 |
+
 
 ## February Areas of Focus
 
@@ -58,8 +48,16 @@ table {width: 100%;}
 - Key Roadmap Categories: Regional CS Expansion / Community Building and Reputation<br/>
 
 | **February** ||
-|------|-------|
-| Week of February 8th - 10th, 2017 <br/> *Sessions will start at 8am on Wednesday and end at noon on Friday*| Program Manager Summit (location TBD) |
+|-----------------|--------------------------------------------------|
+| February 3, 2017 | Regional Partner Cycle #2 application reviews due |
+| February 8th - 10th, 2017 <br/> *Sessions will start at 8am on Wednesday and end at noon on Friday*| Program Manager Summit (Scottsdale, AZ) |
+| February 10, 2017 | Code.org notifies Cycle #1 applicants of decisions |
+| February 13th - 24th, 2017 | Teacher Appplication Review Cycle #3 |
+| February 17, 2017 | Regional Partner Cycle #3 application reviews due |
+| February 24, 2017 | Code.org notifies Cycle #3 applicants of decisions |
+| February 27, 2017 - March 10, 2017 | Teacher Appplication Review Cycle #4 |
+
+
 
 ## March Areas of Focus
 
@@ -69,8 +67,12 @@ table {width: 100%;}
 - Key Roadmap Categories: Regional CS Expansion<br/>
 
 | **March** ||
-|------|-------|
-| --- | --- |
+|-----------------|--------------------------------------------------|
+| March 3, 2017 | Regional Partner Cycle #4 application reviews due |
+| March 10, 2017 | Code.org notifies Cycle #4 applicants of decisions |
+| March 13th - 24th, 2017 | Teacher Appplication Review Cycle #5 |
+| March 17, 2017 | Regional Partner Cycle #5 application reviews due |
+| March 24, 2017 | Code.org notifies Cycle #5 applicants of decisions |
 
 ## April Areas of Focus
 
@@ -79,8 +81,11 @@ table {width: 100%;}
 - Key Roadmap Categories: Teacher Implementation / Community Building and Reputation<br/>
 
 | **April** ||
-|------|-------|
-| --- | --- |
+|-----------------------|----------------------------------------|
+| April 3, 2017 | Remaining pending and waitlisted applicants receive status update|
+| April 21, 2017 | Claim Your Seat responses due from all accepted applicants |
+| April 24, 2017 | (Group 1 Regional Partners only) Minimum number of CS Principles applicants must be selected in order to move forward with local summer workshop |
+| April 24, 2017 | Unclaimed seats for TeacherCon 1 released to waitlisted applicants |
 
 ## May Areas of Focus
 
@@ -91,8 +96,11 @@ table {width: 100%;}
 - Key Roadmap Categories: Teacher Implementation
 
 | **May** ||
-|------|-------|
+|-----------------|--------------------------------------------------|
 | All Month | Group 1 Budget Reviews |
+| May 15, 2017 | Unclaimed seats for TeacherCon 2 released to waitlisted applicants |
+| May 30, 2017 | Unclaimed seats for TeacherCon 3 released to waitlisted applicants |
+| May 31, 2017 | Group 1 Annual Reports due |
 
 ## June Areas of Focus
 
@@ -101,18 +109,19 @@ table {width: 100%;}
 - Key Roadmap Categories: Teacher Implementation / Facilitator Capacity (quality)
 
 | **June** ||
-|------|-------|
-| June 19, 2017 | First day of TeacherCon #1 (teachers staying at the hotel should arrive on Sunday)|
+|-----------------|--------------------------------------------------|
+| June 19, 2017 | First day of TeacherCon #1 in Houston, TX (teachers staying at the hotel should arrive on Sunday)|
 
 ## July Areas of Focus
 
 - Successfully host local summer workshops<br/>
+- Plan logistics for any early Fall workshops<br/>
 - Key Roadmap Categories: Teacher Implementation / Facilitator Capacity (quality)
 
 | **July** ||
-|------|-------|
-| July 17, 2017 | First day of TeacherCon #2 (teachers staying at the hotel should arrive on Sunday)|
-| July 31, 2017 | First day of TeacherCon #3 (teachers staying at the hotel should arrive on Sunday)|
+|-----------------|--------------------------------------------------|
+| July 17, 2017 | First day of TeacherCon #2 in Phoenix, AZ (teachers staying at the hotel should arrive on Sunday)|
+| July 31, 2017 | First day of TeacherCon #3 in Philadelphia, PA (teachers staying at the hotel should arrive on Sunday)|
 
 <br/>
 [**Back to the top**](#top)

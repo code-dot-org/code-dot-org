@@ -13,6 +13,7 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
+import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
@@ -43,6 +44,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -102,6 +104,7 @@ var GameLab = function () {
     this
   ));
   consoleApi.setLogMethod(this.log.bind(this));
+  audioApi.injectExecuteCmd(this.executeCmd.bind(this));
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
@@ -313,7 +316,12 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
     var lastState = state;
     state = store.getState();
 
-    if (state.interfaceMode !== lastState.interfaceMode) {
+    const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
+      !hasValidContainedLevelResult();
+
+    if (state.interfaceMode !== lastState.interfaceMode &&
+        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        !awaitingContainedLevel) {
       this.studioApp_.resetButtonClick();
     }
 

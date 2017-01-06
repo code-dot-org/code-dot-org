@@ -6,7 +6,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # How setProperty Works
 
-`setProperty` is the code that let's you set properties of UI elements like color, width, font size, etc.  Any property you can set in Design Mode can also be set in code using `setProperty`
+`setProperty` is the code that lets you set properties of UI elements like color, width, font size, etc.  Any property you can set in Design Mode can also be set in code using `setProperty`
 
 <br><br>
 

@@ -20,11 +20,22 @@ var baseConfig = {
       repl: path.resolve(__dirname, 'src/noop'),
     }
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, '..', 'shared', 'css')]
+  },
   module: {
     loaders: [
       {test: /\.json$/, loader: 'json'},
       {test: /\.ejs$/, loader: 'ejs-compiled'},
       {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+      {
+        test:/.png|.jpg|.jpeg|.gif|.svg/,
+        include: [
+          path.resolve(__dirname, 'static'),
+        ],
+        loader: "url-loader?limit=1024",
+      }
     ],
     preLoaders: [
       {
@@ -44,9 +55,6 @@ var baseConfig = {
         }
       },
     ],
-  },
-  node: {
-    fs: 'empty',
   },
 };
 
@@ -99,7 +107,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: 'cheap-module-source-map',
+  devtool: 'inline-source-map',
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
@@ -161,6 +169,7 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
+      publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',

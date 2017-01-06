@@ -6,11 +6,11 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "<%= 'https://' + request.host + '/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
-  "og:image:width": "<%= PageMode.get(request) == 'feature-athletes' ? '1920' : '1440' %>"
-  "og:image:height": "<%= PageMode.get(request) == 'feature-athletes' ? '1080' : '810' %>"
-  "og:video:url": "<%= 'http://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'nKIu9yen5nc') %>"
-  "og:video:secure_url": "<%= 'https://youtube.com/v/' + (PageMode.get(request) == 'feature-athletes' ? 'ip051U7Rvds' : 'nKIu9yen5nc') %>"
+  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
+  "og:image:width": '1920'
+  "og:image:height": '1080'
+  "og:video:url": "<%= 'http://youtube.com/v/ip051U7Rvds' %>"
+  "og:video:secure_url": "<%= 'https://youtube.com/v/ip051U7Rvds' %>"
   "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
@@ -19,20 +19,18 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/' + (PageMode.get(request) == 'feature-athletes' ? 'social-media/athletes-thumbnail.jpg' : 'code-video-thumbnail.jpg') %>"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
 ---
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
 %link{:href=>"/shared/css/buttons.css", :rel=>"stylesheet"}
 
-- page_mode = PageMode.get(request)
-
 -# The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
 
 #homepage.supreme-container
-  = view :homepage_hero, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_hero, languageFilter: languageFilter
 
   #petitionexpand{style: "display: none"}
     %script{:src=>"/js/jquery.placeholder.js"}
@@ -43,22 +41,21 @@ social:
     .container_responsive
       #user_hero
 
-  = view :homepage_sections, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_sections, languageFilter: languageFilter
 
   = view :homepage_gallery
   = view :donor_slider
 
-= view :homepage_video, page_mode: page_mode
+= view :homepage_video
 
 
 :javascript
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $("#petitionexpand").css({display: "block", opacity: 0});
-  }
+  });
 
   $(document).ready(function() {
     $.ajax({
@@ -78,4 +75,3 @@ social:
       }
     });
   });
-

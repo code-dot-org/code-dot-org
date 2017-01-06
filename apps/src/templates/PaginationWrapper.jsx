@@ -55,32 +55,3 @@ var PaginationWrapper = React.createClass({
 });
 PaginationWrapper = Radium(PaginationWrapper);
 module.exports = PaginationWrapper;
-
-if (BUILD_STYLEGUIDE) {
-  const StorybookHarness = React.createClass({
-    getInitialState() {
-      return {
-        currentPage: 1
-      };
-    },
-
-    onValueChange(newValue) {
-      this.setState({currentPage: newValue});
-    },
-
-    render() {
-      return (
-        <PaginationWrapper totalPages={3} currentPage={this.state.currentPage} onChangePage={this.onValueChange} />
-      );
-    }
-  });
-
-  PaginationWrapper.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('PaginationWrapper', module)
-      .addWithInfo(
-        'Default',
-        '',
-        () => <StorybookHarness/>);
-  };
-}

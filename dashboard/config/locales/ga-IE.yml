@@ -3,14 +3,14 @@
     messages:
       not_saved: 'Ceartaigh na hearráidí seo a leanas:'
       too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga.
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      teacher_must_accept_terms: Teorainn aoise ar an ábhar seo; níl sé ar fáil do
+        dhaltaí óga. Iarr ar do mhúinteoir glacadh leis na Téarmaí Seirbhíse nua chun
+        teacht ar an ábhar seo. Is féidir le do mhúinteoir é seo a dhéanamh trí logáil
+        isteach sa Stiúideo Códála agus an cnaipe "Léigh na téarmaí seirbhíse nua"
+        a chliceáil i ngar do bharr leathanach baile an Stiúideo Códála.
+      pair_programmer: Tá tú ag déanamh códáil sealaíochta in éineacht le dalta nach
+        bhfuil rochtain aige/aici ar an ábhar seo. Stop an chódáil sealaíochta ar
+        dtús, ansin déan iarracht eile teacht ar an ábhar seo.
   activerecord:
     errors:
       messages:
@@ -91,17 +91,24 @@
   signup_form:
     student_count: Tá %{count} dalta cláraithe cheana.
     teacher_count: Tá %{count} múinteoir cláraithe cheana.
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
-    hoc_already_signed_up_heading: Get started without logging in
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
+    overview: Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn
+      a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a>
+      a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do
+      dhul chun cinn a shábháil.
+    hoc_already_signed_up_heading: Tosú gan logáil isteach
+    hoc_already_signed_up_content: Chláraigh tú chun Uair Chódála a mhúineadh! Ní
+      gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh
+      san ócáid seo. Ar dtús, <a href="https://code.org/learn">roghnaigh cúrsa teagaisc</a>
+      don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair
+      Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas
+      ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon
+      cheann de na <a href="https://code.org/educate">cúrsaí níos faide</a> atá againn.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
     title: Cláraigh le Code.org
     school_name: Ainm do Scoile (roghnach)
@@ -156,8 +163,8 @@
   password:
     reset_form:
       title: Focal faire dearmadta?
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: Cuir isteach do sheoladh ríomhphoist thíos agus seolfaimid treoracha
+        duit chun d'fhocal faire a athshocrú.
       email: Seoladh ríomhphoist
       submit: Seol
     change_form:
@@ -348,7 +355,7 @@
       unsubmit: Dísheol
       worked_with: In éineacht le
       update_lock_settings: Athraigh na socruithe glasála anseo.
-      clear_response: Clear response
+      clear_response: Bánaigh an freagra
   user:
     email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
     email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
@@ -362,6 +369,7 @@
     delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais
       do chuid daltaí.'
     delete_confirm: An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?
+    deleted_user: deleted user
   user_level:
     completed: Críochnaithe
     tried: Iarracht déanta
@@ -420,22 +428,23 @@
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
     print_certificate: Priontáil Teastas
     announcement_title: Fógraí
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: Chaitheamar an samhradh seo caite ag déanamh
+      gnéithe nua, bunaithe ar an aiseolas a thug sibh dúinn. Mar shampla, anois is
+      féidir leat dul chun cinn <a href="%{pp_url}" target="_blank">níos mó ná dalta
+      amháin</a> a leanúint, fiú má tá siad ag obair le chéile ar ghléas amháin. Is
+      féidir leat <a href="%{csp_widgets_url}" target="_blank">na huirlisí idirghníomhacha
+      is fearr</a> ónár mBunchúrsa Ríomheolaíochta a úsáid i seomra ranga <i>ar bith</i>.
+      Agus beidh do chuid daltaí in ann <a href="%{unused_code_url}" target="_blank">cód
+      neamhúsáidte a choinneáil</a> ina spás oibre chun triail is earráid a spreagadh!
+      Bain triail as na gnéithe nua go léir agus nocht do thuairim.
     announcement_csp_widgets_message: Looking for some fun ways to teach your class
       how the Internet works, how cryptography keeps data secure, and other concepts?
       We’ve taken the best interactive tools from our Computer Science Principles
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: Tuilleadh eolais
     announcement_try_now_button: Bain triail as anois
-    announcement_host_an_hour_button: Host an Hour
-    announcement_watch_video_button: Watch video
+    announcement_host_an_hour_button: Bí i d'óstach
+    announcement_watch_video_button: Féach ar an bhfíseán
     announcement_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
       chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
       Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
@@ -443,31 +452,33 @@
       is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
       na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
     announcement_petition_button: Cuir d'ainm leis
+    announcement_go_beyond_button: Go beyond
     announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
       le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
       ar fhógraí roimhe seo.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-      Due to high traffic from millions of students doing the Hour of Code, <b>Code
-      Studio will not save or report student progress on these courses from December
-      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
-      celebrate the Hour of Code during Computer Science Education Week. While our
-      own Hour of Code tutorials will also not save progress that week, students can
-      still do the full tutorials and earn a certificate.'
-    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
-      all-new Minecraft Hour of Code Designer lets students make the rules of the
-      Minecraft world. They can create a totally unique Minecraft experience, and
-      then share it with friends or play it on their phones. Do it with your class
-      for the Hour of Code.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
+    announcement_hoc_launch: Tosóidh na mílte múinteoir i níos mó ná 180 tír ar fud
+      an domhain ag múineadh na ríomheolaíochta mar chuid den Uair Chódála idir an
+      5ú lá agus an 11ú lá de mhí na Nollag. Táimid ag brath ort chun cabhrú linn
+      níos mó daltaí ná riamh a shroicheadh. <a href='%{signup_url}' target='_blank'>Cláraigh
+      d'ócáid féin don Uair Chódála</a> agus cuir in iúl do mhúinteoir eile gur féidir
+      le héinne an ríomheolaíocht a mhúineadh.
+    announcement_mc_launch: Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó
+      a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála,
+      is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas
+      go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt
+      le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!
+    announcement_how_code_studio: Is féidir leat an ríomheolaíocht a mhúineadh i do
+      sheomra ranga fiú mura bhfuil aon taithí agat. Gheobhaidh tú curaclam iomlán,
+      pleananna ceachta, cláracha foghlamtha den chéad scoth, agus neart uirlisí iontacha
+      le haghaidh gach leibhéil &mdash; gach a dteastaíonn uait, saor in aisce. Níl
+      tú cinnte cá dtosóidh tú? Íoslódáil <a href='%{video_download_url}'>an físeán
+      seo</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
       high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.
@@ -643,7 +654,7 @@
       body: Taiscéal domhan Minecraft le cód.
     minecraft2016:
       title: Minecraft
-      body: Program animals and other Minecraft creatures in your own version of Minecraft.
+      body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
     unplugged:
       title: Ceachtanna Díphlugáilte
       audience: Aois 4+
@@ -761,18 +772,18 @@
       amach</a> anois.
   terms_interstitial:
     title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    intro_desc: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
+      a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa
+      2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de
+      chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn
+      go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht
+      an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
+    intro_instructions: Caithfidh tú glacadh leis na téarmaí nua a bhaineann le daltaí
+      i do sheomra ranga atá níos óige ná 13 bliana d'aois chun teacht ar na gnéithe
+      nua sa Stiúideo Códála. Nuair a chláróidh tú cuntas le haghaidh dalta atá níos
+      óige ná 13, iarrfar ort deimhniú gur thug tuismitheoir cead do do scoil faisnéis
+      phearsanta a bhailiú ón dalta ar mhaithe leis an scoil, cláracha oideachasúla
+      cosúil leis an Stiúideo Códála san áireamh.
     tos: Téarmaí Seirbhíse
     privacy: Polasaí Príobháideachais
     privacy_notice: Polasaí Príobháideachais
@@ -781,25 +792,25 @@
       nua
     accept: Glacaim Leo
     print: Priontáil
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
+    reminder_desc: Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí
+      Seirbhíse</a> agus ar <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>.
+      Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh
+      tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint
+      as na hacmhainní atá againn a mhúineann JavaScript.
     review_terms: Léigh na téarmaí seirbhíse nua
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht
+      a rianú'
+    message: Cad é do chine (cuir tic le gach a mbaineann leatsa)
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Den chine geal
+    - black: Den chine gorm nó Afra-Mheiriceánach
+    - hispanic: Easpáinneach nó Latinx
+    - asian: "Áiseach"
+    - hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
+    - american_indian: Bundúchasach Meiriceánach/Alascach
     - other: Eile
-    - opt_out: Prefer not to say
+    - opt_out: B'fhearr liom gan freagra a thabhairt
     submit: Seol
     decline: Dún
   zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
@@ -959,49 +970,49 @@
     starwars_blocks_name: 'Star Wars: Tóg do Réaltra Féin le Cód (Blocanna)'
     starwars_javascript_name: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
     download_message: "Íoslódáil %{app_name} lena úsáid as líne (136MB)"
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
-    windows: Windows
+    download_in_Albanian: "Íoslódáil in Albáinis:"
+    download_in_Arabic: "Íoslódáil in Araibis:"
+    download_in_Azerbaijani: "Íoslódáil in Asarbaiseáinis:"
+    download_in_Basque: "Íoslódáil i mBascais:"
+    download_in_Bosnian: "Íoslódáil i mBoisnis:"
+    download_in_Bulgarian: "Íoslódáil i mBulgáiris:"
+    download_in_Catalan: "Íoslódáil i gCatalóinis:"
+    download_in_Chinese-Taiwan: "Íoslódáil i Sínis na Téaváine:"
+    download_in_Chinese: "Íoslódáil i Sínis:"
+    download_in_Croatian: "Íoslódáil i gCróitis:"
+    download_in_Czech: "Íoslódáil i Seicis:"
+    download_in_Danish: "Íoslódáil i nDanmhairgis:"
+    download_in_Dutch: "Íoslódáil in Ollainnis:"
+    download_in_English: "Íoslódáil i mBéarla:"
+    download_in_Finnish: "Íoslódáil i bhFionlainnis:"
+    download_in_French: "Íoslódáil i bhFraincis:"
+    download_in_German: "Íoslódáil i nGearmáinis:"
+    download_in_Greek: "Íoslódáil i nGréigis:"
+    download_in_Hebrew: "Íoslódáil in Eabhrais:"
+    download_in_Hungarian: "Íoslódáil in Ungáiris:"
+    download_in_Icelandic: "Íoslódáil in Íoslainnis:"
+    download_in_Indonesian: "Íoslódáil in Indinéisis:"
+    download_in_Irish: "Íoslódáil i nGaeilge:"
+    download_in_Italian: "Íoslódáil in Iodáilis:"
+    download_in_Japanese: "Íoslódáil i Seapáinis:"
+    download_in_Korean: "Íoslódáil i gCóiréis:"
+    download_in_Latvian: "Íoslódáil i Laitvis:"
+    download_in_Lithuanian: "Íoslódáil i Liotuáinis:"
+    download_in_Norwegian: "Íoslódáil in Ioruais:"
+    download_in_Norwegian-Nynorsk: "Íoslódáil in Ioruais-Nynorsk:"
+    download_in_Polish: "Íoslódáil i bPolainnis:"
+    download_in_Portuguese-Brazil: "Íoslódáil i bPortaingéilis na Brasaíle:"
+    download_in_Portuguese: "Íoslódáil i bPortaingéilis:"
+    download_in_Romanian: "Íoslódáil i Rómáinis:"
+    download_in_Russian: "Íoslódáil i Rúisis:"
+    download_in_Serbian: "Íoslódáil i Seirbis:"
+    download_in_Slovenian: "Íoslódáil i Slóivéinis:"
+    download_in_Spanish: "Íoslódáil i Spáinnis:"
+    download_in_Swedish: "Íoslódáil i Sualainnis:"
+    download_in_Turkish: "Íoslódáil i dTuircis:"
+    download_in_Ukrainian: "Íoslódáil in Úcráinis:"
+    download_in_Vietnamese: "Íoslódáil i Vítneaimis:"
+    windows: Windows (64-giotán)
     mac: Mac OS X
   plc:
     preview_assignments:
@@ -1016,12 +1027,12 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: Níl cead agat an t-ábhar sa gcéim seo a fheiceáil faoi láthair toisc
+    bhfuil an chéim faoi ghlas. Beidh do mhúinteoir in ann an chéim seo a dhíghlasáil
+    nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.
+  hidden_stage: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
+    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
+  return_course_overview: Féach ar fhoramharc an aonaid
   pd:
     survey:
       number_teachers: Number of attending teachers

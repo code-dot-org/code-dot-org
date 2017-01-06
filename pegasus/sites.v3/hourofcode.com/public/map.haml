@@ -9,4 +9,4 @@ layout: wide_index
 = view :header
 = view :hoc_events_counter
 = view :hoc_events_map, max_height_percentage: 1
-.footnote=hoc_s(:map_warning).gsub(/%{events_url}/, events_url: resolve_url('/events'))
+.footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))

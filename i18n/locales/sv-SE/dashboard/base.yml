@@ -84,6 +84,7 @@ sv:
     overview: 'Registrera ett konto för att spåra dina framsteg eller hantera ditt klassrum. <a href="/"> Du kan bläddra mellan de olika stadierna och pussel</a> som finns utan ett konto, men du kommer att behöva registrera dig för att spara dina framsteg och projekt.'
     hoc_already_signed_up_heading: 'Kom igång utan att logga in'
     hoc_already_signed_up_content: "Du ska ansvara för att undervisa i Hour of Code! Du och dina elever behöver inte logga in i Code Studio för att kunna delta.\nFör att komma igång, <a href=\"https://code.org/learn\">välj en kurs</a> att använda i ditt klassrum och dela länken med eleverna.<br/><br/>Om du uppskattade the Hour of Code och vill fortsätta, kan du skapa ett konto på Code Studio med ett eget lösenord. Det ger dig möjlighet att lägga in dina elever i våra längre, och mer omfattande kurser. <a href=\"https://code.org/educate\">longer courses</a>."
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Se pedagogguiden'
     title: "Skapa konto på Code.org"
     school_name: 'Skolans namn (valfritt)'
@@ -302,6 +303,7 @@ sv:
     delete_text: "Ett klick på knappen nedan kommer att ta bort ditt konto."
     delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas konton bort.'
     delete_confirm: 'Är du säker du vill ta bort ditt konto?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -357,11 +359,12 @@ sv:
     announcement_watch_video_button: "Watch video"
     announcement_petition: "Som lärare är du en del av en rörelse som syftar till att ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap."
     announcement_petition_button: "Ange ditt namn"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Håll dig uppdaterad med nya funktioner och uppdateringar på vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>"
     announcement_hoc_launch: "Tusentals lärare i mer än 180 länder börjar undervisningen i datavetenskap under Hour of Code de5-11 December. Vi räknar med dig för att kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'> registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon kan börja undervisningen i datavetenskap."
-    announcement_hoc_scaling: 'VARNING för kurs 1-4 och den korta lärarkursen: På grund av hög last från miljontals studenter under the Hour of Code, <b>kommer inte Code Studio att spara eller rapportera elevernas framsteg på dessa kurser från den 3-11 December </b>. Vi rekommenderar att du genomför the Hour of Code med dina klasser under den 3-11 December. Det är Science Education Week i USA. Medan vår egen Hour of Code kurs inte kommer också spara elevers framsteg denna vecka, kan studenter fortfarande göra andra kurser och få certifikat för dem.'
     announcement_mc_launch: "En av våra mest populära tutorials nu har nu fått en uppföljare! Den helt nya Minecraft Hour of Code Designer låter elever sätta reglerna för Minecraft världen. De kan skapa en helt unik Minecraftupplevelse, och sedan dela den med vänner och spela i den på sina telefoner. Gör det med dina elever under Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
     section_code_not_entered: "Ange koden för önskat avsnitt."

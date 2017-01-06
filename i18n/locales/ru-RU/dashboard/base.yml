@@ -83,7 +83,8 @@ ru:
     teacher_count: 'Зарегистрировано учителей: %{count}.'
     overview: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. <a href="/"> Вы можете просматривать различные задачи и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов вы должны будете зарегистрироваться.'
     hoc_already_signed_up_heading: 'Начало работы без входа в систему'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="https://code.org/learn">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer courses</a>.'
+    hoc_already_signed_up_content: 'Вы зарегистрированы для прохождения Часа Кода! Вы и ваши учащиеся не должны входить в Студию Кода для участия в этом мероприятии. Чтобы начать работу, <a href="https://code.org/learn"> выберите задние</a> для вашего класса и поделитесь с ним ссылкой. <br/> <br/> Если вам понравился Час Кода и вы хотите идти дальше, то вы можете установить пароль и создать учетную запись в Студии Кода, чтобы регистрировать учащихся в одном из наших <a href="https://code.org/educate"> развёрнутых курсов</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Смотрите руководство для учителя'
     title: "Зарегистрироваться на Code.org"
     school_name: 'Название школы (не обязательно)'
@@ -302,6 +303,7 @@ ru:
     delete_text: "Нажатие на кнопку ниже удалит вашу учетную запись."
     delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников.'
     delete_confirm: 'Вы действительно хотите удалить свою учетную запись?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Завершено'
     tried: 'Пытался'
@@ -354,14 +356,15 @@ ru:
     announcement_learn_more_button: "Узнать больше"
     announcement_try_now_button: "Попробуйте сейчас"
     announcement_host_an_hour_button: "Хозяин часов"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Смотреть видео"
     announcement_petition: "Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Будьте в курсе новых функций и обновлений нашего блога учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
     announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут урок информатики с помощью Часа Кода 5-11 декабря. Мы рассчитываем на вас, чтобы помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}' target='_blank'> зарегистрируйте ваш Час Кода</a> и поделитесь с другими учителями, что бы любой жалеющий мог начать преподавание информатики."
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers: Due to high traffic from millions of students doing the Hour of Code, <b>Code Studio is not saving or reporting student progress on these courses from December 3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate the Hour of Code during Computer Science Education Week. While our own Hour of Code tutorials are also not saving progress this week, students can still do the full tutorials and earn a certificate.'
     announcement_mc_launch: "Один из самых популярных учебников теперь имеет продолжение! Все новые Minecraft Час Кода Дизайнер позволяет студентам создать правила мира Minecraft. Они могут создать совершенно уникальный опыт Minecraft, а затем поделиться им с друзьями или играть на своих телефонах. Делайте это с классом в Час Кода."
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_how_code_studio: "Вам не нужен опыт для начала преподавания информатики в вашем классе. Code.org предлагает учебные курсы, планы уроков, высококачественные программы профессионального обучения и большой набор отличных инструментов под любыхеспособностей &mdash; все, что нужно, все бесплатно. Хотите знать, как начать? Скачайте <a href='%{video_download_url}'> это видео</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста, введите другой код группы."
     section_code_not_entered: "Просьба представить current_section_code."
@@ -742,48 +745,48 @@ ru:
     starwars_blocks_name: 'Звездные войны: Создание галактики с помощью кода (блоки)'
     starwars_javascript_name: 'Звездные войны: Создание галактики с помощью кода (JavaScript)'
     download_message: 'Загрузить %{app_name} для использования оффлайн (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'Скачать на албанском:'
+    download_in_Arabic: 'Скачать на арабском:'
+    download_in_Azerbaijani: 'Скачать на азербайджанском:'
+    download_in_Basque: 'Скачать на баскском:'
+    download_in_Bosnian: 'Скачать на боснийском:'
+    download_in_Bulgarian: 'Скачать на болгарском:'
+    download_in_Catalan: 'Скачать на каталанском:'
+    download_in_Chinese-Taiwan: 'Скачать на Китайском (Тайвань):'
+    download_in_Chinese: 'Скачать на китайском:'
+    download_in_Croatian: 'Скачать на хорватском:'
+    download_in_Czech: 'Скачать на Чешском:'
+    download_in_Danish: 'Скачать на датском:'
+    download_in_Dutch: 'Скачать на Голландском:'
+    download_in_English: 'Скачать на английском:'
+    download_in_Finnish: 'Скачать на финском:'
+    download_in_French: 'Скачать на французском:'
+    download_in_German: 'Скачать на немецком:'
+    download_in_Greek: 'Скачать на греческом:'
+    download_in_Hebrew: 'Скачать на иврите:'
+    download_in_Hungarian: 'Скачать на венгерском:'
+    download_in_Icelandic: 'Скачать на исландском:'
+    download_in_Indonesian: 'Скачать на индонезийском:'
+    download_in_Irish: 'Скачать на Ирландском:'
+    download_in_Italian: 'Скачать на итальянском:'
+    download_in_Japanese: 'Скачать на японском:'
+    download_in_Korean: 'Скачать на корейском:'
+    download_in_Latvian: 'Скачать на латышском:'
+    download_in_Lithuanian: 'Скачать на литовском:'
+    download_in_Norwegian: 'Скачать на норвежском:'
+    download_in_Norwegian-Nynorsk: 'Скачать на норвежском (Нюнорск):'
+    download_in_Polish: 'Скачать на польском:'
+    download_in_Portuguese-Brazil: 'Скачать на Португальском (Бразилия):'
+    download_in_Portuguese: 'Скачать на португальском:'
+    download_in_Romanian: 'Скачать на румынском:'
+    download_in_Russian: 'Скачать на русском:'
+    download_in_Serbian: 'Скачать на сербском:'
+    download_in_Slovenian: 'Скачайте на словенском:'
+    download_in_Spanish: 'Скачать на испанском:'
+    download_in_Swedish: 'Скачать на Шведском:'
+    download_in_Turkish: 'Скачать на турецком:'
+    download_in_Ukrainian: 'Скачать на украинском:'
+    download_in_Vietnamese: 'Скачать на вьетнамском:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:

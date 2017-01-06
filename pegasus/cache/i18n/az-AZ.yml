@@ -39,7 +39,7 @@
   og_title: Hər bir uşaq fürsətə layiqdir
   og_description: Technology is changing everything. Every student in every school
     deserves the opportunity to study computer science.
-  csedweek_og_title: The Hour of Code is coming
+  csedweek_og_title: "İnformatika təhsili həftəsi"
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: <a href="http://hourofcode.com">Kod Saatı</a>na qoşulun<br/>8 -
@@ -84,7 +84,8 @@
   go: Getdik
   thank_you_: Sağ olun!
   congratulations: Təbriklər!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_on_completing_hoc: Bir Kod Saatını başa vurmağınız münasibəti ilə
+    təbrik edirik
   congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
     <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
     help students learn an Hour of Code!'
@@ -251,7 +252,7 @@
   continue_learning_header: Bir saatdan daha çox öyrənməyə davam edin
   continue_learning_body: Variantlar çoxdur. Ya onlayn, ya yerli bir məktəbdə və yaxud
     da yay düşərgəsində öyrənə bilərsiniz.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Kod Studiyasını sınaqdan keçirin
   learn_next_level: Növbəti mərhələyə keçin
   learn_online: Digər onlayn kursları sınaqdan keçirin
   learn_classes: Yerli siniflər tapın
@@ -265,6 +266,8 @@
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/nKIu9yen5nc. Visit http://code.org/ to learn more.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Bir Kod Saatı öyrənin
   beyond_hoc: Kod Saatı bitəndən sonra
   what_gender: Cinsiniz nədir?
@@ -433,7 +436,8 @@
   class_submission_in_school: Məktəbdə
   class_submission_in_school_daily_programming_course: Gündəlik proqramlaşdırma kursu
   class_submission_in_school_ap_computer_science: AP computer science
-  class_submission_in_school_full_university_cs_curriculum: Full university CS curriculum
+  class_submission_in_school_full_university_cs_curriculum: "İnformatika üzrə tam
+    universitet kurrikulumu"
   class_submission_in_school_robotics_club: Robotika klubu
   class_submission_in_school_programming_integrated_in_other_classes: Digər dərslərə
     (riyaziyyat, təbiət fənləri və s.) daxil edilmiş proqramlaşdırma kursları
@@ -494,31 +498,46 @@
   minecraft_adventurer_button: Başlayın
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Maynkraft Kod Saatı
   sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
+  sports_og_title: Hour of Code Sports Tutorials
+  sports_og_description: Choose between making a basketball game or mix and match
+    across sports.
   sports_title: Code your own sports game
   sports_watch_video: Videoya baxın
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
   sports_all_sports_title: Mix and match across sports
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
@@ -570,8 +589,8 @@
     volunteer map
   volunteer_engineer_submission_field_name: Ad
   volunteer_engineer_submission_field_name_placeholder: Tam Ad
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
+  volunteer_engineer_submission_field_company: "Şirkət (və ya universitet)"
+  volunteer_engineer_submission_field_company_placeholder: "Şirkət (və ya universitet)"
   volunteer_engineer_submission_field_experience_level: Experience level
   volunteer_engineer_submission_field_location: Yer
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
@@ -625,8 +644,8 @@
     to open-source curriculum projects
   volunteer_engineer_submission_experience_unspecified: Unspecified
   volunteer_engineer_submission_experience_tech_company: Non-engineer at a tech company
-  volunteer_engineer_submission_experience_university_student_or_researcher: Current
-    university student (or researcher)
+  volunteer_engineer_submission_experience_university_student_or_researcher: "İnformatika
+    üzrə universitet tələbəsi"
   volunteer_engineer_submission_experience_software_professional: Proqramçı-mühəndis
   volunteer_engineer_submission_distance_8: 8 km
   volunteer_engineer_submission_distance_16: 16 km
@@ -786,7 +805,7 @@
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Şagirdlər"
   dashboard_sections_table_code: Bölmə kodu
-  dashboard_sections_name: Section Name
+  dashboard_sections_name: Bölmənin adı
   dashboard_sections_choose_secret: If you would like to provide accounts to your
     students, choose a secret type of <b>word</b> or <b>picture</b> for that section.
   dashboard_sections_secret_word: A <b>word</b> allows you to set a secret word for
@@ -837,7 +856,7 @@
     yazın və ya əlavə edin:"
   dashboard_students_new_section: You've created a new section! Now add your students
     using the <b>Add student</b> and <b>Add multiple students</b> buttons above.
-  dashboard_students_placeholder_name: Student Name
+  dashboard_students_placeholder_name: "Şagirdin adı"
   dashboard_students_name: Ad
   dashboard_students_progress: Nəticə
   dashboard_students_age: Yaşınız
@@ -846,7 +865,7 @@
   dashboard_students_female: Qadın
   dashboard_students_secret: Gizli
   dashboard_students_password: parol
-  dashboard_students_username: 'Username: %{student_username}'
+  dashboard_students_username: "İstifadəçi adı: %{student_username}"
   dashboard_students_email: 'Email: %{student_email}'
   dashboard_students_completed_levels: Tamamlanmış mərhələlər
   dashboard_students_total_lines: Lines of Code
@@ -966,7 +985,8 @@
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Adınızı əlavə edin
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
@@ -974,13 +994,6 @@
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on these courses from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
   dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
     The all-new Minecraft Hour of Code Designer lets students make the rules of the
     Minecraft world. They can create a totally unique Minecraft experience, and then
@@ -996,6 +1009,12 @@
     high quality professional learning programs, and tons of great tools for all grade
     levels&mdash;everything you need, all at no cost. Wondering where to get started?
     Download <a href='%{video_download_url}'>this video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Kod Saatı artıq buradadır - 8-14 dekabr!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1047,7 +1066,7 @@
   carousel_heading_languages: Tutorials in other programming languages
   carousel_heading_beyond_languages: Tutorials in other programming languages
   carousel_heading_apps_games: Make your own apps or games
-  carousel_heading_university: University courses online
+  carousel_heading_university: Onlayn universitet kursları
   carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: Platforms popular among teachers
@@ -1140,6 +1159,7 @@
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1171,6 +1191,8 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Proqram Labı
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game
   applab_gradelevel: 13+ yaş
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
@@ -1551,7 +1573,7 @@
   edx_beyond_name: Harvard CS50 class
   coursera_beyond_name: Stanford CS 101 class
   udacity_beyond_name: CS 101
-  teachingtree_beyond_name: University courses online
+  teachingtree_beyond_name: Onlayn universitet kursları
   kodu_beyond_name: Kodu
   cargobot_beyond_name: Cargobot
   kidsruby_beyond_name: KidsRuby
@@ -1585,10 +1607,10 @@
   codehs_beyond_gradelevel: High school
   udemy_beyond_gradelevel: High school +
   lynda_beyond_gradelevel: High school +
-  edx_beyond_gradelevel: University
-  coursera_beyond_gradelevel: University
-  udacity_beyond_gradelevel: University
-  teachingtree_beyond_gradelevel: University
+  edx_beyond_gradelevel: Universitet
+  coursera_beyond_gradelevel: Universitet
+  udacity_beyond_gradelevel: Universitet
+  teachingtree_beyond_gradelevel: Universitet
   kodu_beyond_gradelevel: 8+ yaş
   cargobot_beyond_gradelevel: 8+ yaş
   kidsruby_beyond_gradelevel: 12+ yaş
@@ -1856,34 +1878,3 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game

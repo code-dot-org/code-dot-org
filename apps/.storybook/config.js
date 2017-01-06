@@ -46,8 +46,10 @@ storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
         <h1 style={styles.deprecatedStoryHeader}>
           !! THIS COMPONENT HAS BEEN DEPRECATED !!
         </h1>
-        <img style={styles.deprecatedImg}
-             src="https://cdn.meme.am/instances/500x/62160477.jpg"/>
+        <img
+          style={styles.deprecatedImg}
+          src="https://cdn.meme.am/instances/500x/62160477.jpg"
+        />
         <dl>
           <dt><strong>reason:</strong></dt>
           <dd>{options && options.reason || defaultDeprecationReason}</dd>
@@ -63,52 +65,34 @@ storybookWrapper.deprecatedStoriesOf = (name, module, options) => {
     ));
 };
 
-function addStyleguideExamples(subcomponent) {
-  if (subcomponent && subcomponent.styleGuideExamples) {
-    subcomponent.styleGuideExamples(storybookWrapper);
-  }
-}
-
-const BLACKLIST = [
-  "code-studio/levels/contract_match.jsx",
-];
-
 function loadStories() {
   require('./about');
   require('./colors');
 
-  var context = require.context("../src/", true, /\.jsx$/);
-  context.keys().forEach(key => {
-    var component;
-    for (const path of BLACKLIST) {
-      if (key.indexOf(path) >=0) {
-        return;
-      }
-    }
+  var sidecarContext = require.context("../src/", true, /\.story\.jsx$/);
+  sidecarContext.keys().forEach(key => {
+    var module;
     try {
-      component = context(key);
+      module = sidecarContext(key);
+      module(storybookWrapper);
     } catch (e) {
       console.error("failed to load", key, e);
       console.error(e.stack);
       return;
     }
-    var path = key.slice(2);
-    addStyleguideExamples(component);
-    Object.keys(component).forEach(componentKey => {
-      var subcomponent = component[componentKey];
-      addStyleguideExamples(subcomponent);
-    });
   });
+
 }
 
 function Centered({children}) {
   return <div style={styles.centeredStory}>{children}</div>;
 }
+Centered.propTypes = {
+  children: React.PropTypes.node,
+};
 
 storybook.setAddon({
   addStoryTable(items) {
-    let hasDescription = false;
-    items.forEach(item => hasDescription = hasDescription || !!item.description);
     this.add(
       'Overview',
       () => (
@@ -134,7 +118,12 @@ storybook.setAddon({
                        <Node depth={0} node={item.story()}/>
                      </Pre>
                    </td>
-                   <td style={styles.storyTable.cell}>{item.story()}</td>
+                   <td
+                     className={item.storyCellClass}
+                     style={styles.storyTable.cell}
+                   >
+                     {item.story()}
+                   </td>
                  </tr>
                ))}
             </tbody>

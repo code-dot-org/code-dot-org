@@ -36,6 +36,7 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
+import experiments from '../util/experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
 import studioCell from './cell';
@@ -310,6 +311,16 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     backgroundLayer.appendChild(tile);
+  }
+
+  if (experiments.isEnabled('playlabWallColor')) {
+    var wallOverlay = document.createElementNS(SVG_NS, 'image');
+    wallOverlay.setAttribute('id', 'wallOverlay');
+    wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
+    wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
+    wallOverlay.setAttribute('x', 0);
+    wallOverlay.setAttribute('y', 0);
+    backgroundLayer.appendChild(wallOverlay);
   }
 
   if (level.coordinateGridBackground) {
@@ -1093,10 +1104,10 @@ Studio.onTick = function () {
     Studio.executeQueue('when-right');
     Studio.executeQueue('when-down');
 
-    // Run any callbacks from "ask" blocks. These get queued after the user
-    // provides input.
-    for (let i = 0; i < Studio.askCallbackIndex; i++) {
-      Studio.executeQueue(`askCallback${i}`);
+    // Run any callbacks from blocks, including "ask" blocks and "if"
+    // blocks
+    for (let i = 0; i < Studio.callbackQueueIndex; i++) {
+      Studio.executeQueue(`callbackQueue${i}`);
     }
 
     updateItems();
@@ -2071,7 +2082,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.pauseExecution();
   Studio.perExecutionTimeouts = [];
   Studio.tickCount = 0;
-  Studio.askCallbackIndex = 0;
+  Studio.callbackQueueIndex = 0;
   for (var i = 0; i < Studio.spriteCount; i++) {
     if (Studio.sprite[i] && Studio.sprite[i].bubbleTimeout) {
       window.clearTimeout(Studio.sprite[i].bubbleTimeout);
@@ -2178,6 +2189,10 @@ Studio.reset = function (first) {
   Studio.wallMapRequested = null;
   Studio.walls.setWallMapRequested(null);
   Studio.setBackground({value: getDefaultBackgroundName()});
+  var wallOverlay = document.getElementById('wallOverlay');
+  if (wallOverlay) {
+    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '');
+  }
 
   // Reset currentCmdQueue and various counts:
   Studio.gesturesObserved = {};
@@ -2407,7 +2422,6 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
 Studio.runButtonClick = function () {
   if (level.edit_blocks) {
     Studio.onPuzzleComplete();
-    return;
   }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
@@ -2901,6 +2915,12 @@ Studio.execute = function () {
                                      'SPRITE2');
     registerHandlersWithSpriteAndGroupParams(
         handlers,
+        'studio_whenSpriteAndGroupCollideSimple',
+        'whenSpriteCollided',
+        'SPRITE',
+        'SPRITENAME');
+    registerHandlersWithSpriteAndGroupParams(
+        handlers,
         'studio_whenSpriteAndGroupCollide',
         'whenSpriteCollided',
         'SPRITE',
@@ -3349,7 +3369,16 @@ Studio.drawMapTiles = function (svg) {
     }
   }
 
-  var spriteLayer = document.getElementById('backgroundLayer');
+  var backgroundLayer = document.getElementById('backgroundLayer');
+
+  if (experiments.isEnabled('playlabWallColor')) {
+    var overlayURI = Studio.walls.getWallOverlayURI();
+    if (overlayURI) {
+      var wallOverlay = document.getElementById('wallOverlay');
+      wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
+    }
+  }
+
 
   for (row = 0; row < Studio.ROWS; row++) {
     for (col = 0; col < Studio.COLS; col++) {
@@ -3369,7 +3398,7 @@ Studio.drawMapTiles = function (svg) {
           tilesDrawn[row+1][col+1] = true;
         }
 
-        Studio.drawWallTile(spriteLayer, wallVal, row, col);
+        Studio.drawWallTile(backgroundLayer, wallVal, row, col);
       }
     }
   }
@@ -3770,6 +3799,14 @@ Studio.callCmd = function (cmd) {
       Studio.setSprite(cmd.opts);
       Studio.trackedBehavior.hasSetSprite = true;
       break;
+    case 'getSpriteValue':
+      studioApp.highlight(cmd.id);
+      Studio.getSpriteValue(cmd.opts);
+      break;
+    case 'getSpriteVisibility':
+      studioApp.highlight(cmd.id);
+      Studio.getSpriteVisibility(cmd.opts);
+      break;
     case 'saySprite':
       if (!cmd.opts.started) {
         studioApp.highlight(cmd.id);
@@ -3779,6 +3816,10 @@ Studio.callCmd = function (cmd) {
       studioApp.highlight(cmd.id);
       Studio.setSpriteEmotion(cmd.opts);
       Studio.trackedBehavior.hasSetEmotion = true;
+      break;
+    case 'getSpriteEmotion':
+      studioApp.highlight(cmd.id);
+      Studio.getSpriteEmotion(cmd.opts);
       break;
     case 'setSpriteSpeed':
       studioApp.highlight(cmd.id);
@@ -3800,6 +3841,10 @@ Studio.callCmd = function (cmd) {
     case 'setSpriteXY':
       studioApp.highlight(cmd.id);
       Studio.setSpriteXY(cmd.opts);
+      break;
+    case 'getSpriteXY':
+      studioApp.highlight(cmd.id);
+      Studio.getSpriteXY(cmd.opts);
       break;
     case 'setSpritesWander':
       studioApp.highlight(cmd.id);
@@ -4315,6 +4360,11 @@ Studio.setSpriteEmotion = function (opts) {
   Studio.sprite[opts.spriteIndex].emotion = opts.value;
 };
 
+Studio.getSpriteEmotion = function (opts) {
+  let emotion = Studio.sprite[opts.spriteIndex].emotion;
+  Studio.queueCallback(opts.callback, [emotion]);
+};
+
 Studio.setSpriteSpeed = function (opts) {
   var speed = Math.min(Math.max(opts.value, constants.SpriteSpeed.SLOW),
       constants.SpriteSpeed.VERY_FAST);
@@ -4700,6 +4750,16 @@ Studio.setSprite = function (opts) {
   Studio.displaySprite(spriteIndex);
 };
 
+Studio.getSpriteVisibility = function (opts) {
+  let visibility = Studio.sprite[opts.spriteIndex].visible;
+  Studio.queueCallback(opts.callback, [visibility]);
+};
+
+Studio.getSpriteValue = function (opts) {
+  let value = Studio.sprite[opts.spriteIndex].value;
+  Studio.queueCallback(opts.callback, [value]);
+};
+
 var moveAudioState = false;
 Studio.isMovementAudioOn = function () {
   return moveAudioState;
@@ -4856,6 +4916,45 @@ Studio.isCmdCurrentInQueue = function (cmdName, queueName) {
 };
 
 /**
+ * Helper for Studio methods which read state. Because they must
+ * implement callbacks to correctly read and handle that state in the
+ * user's program, they need to be able to schedule the execution of
+ * those callbacks at the appropriate time.
+ *
+ * @param {function} the method to be queued
+ * @param {Array} the arguments to be passed to that method
+ */
+Studio.queueCallback = function (callback, args) {
+  let handlerName = `callbackQueue${Studio.callbackQueueIndex}`;
+  Studio.callbackQueueIndex++;
+
+  // Shift a CallExpression node on the stack that already has its func_,
+  // arguments, and other state populated:
+  args = args || [''];
+  const intArgs = args.map(arg => codegen.interpreter.createPrimitive(arg));
+  var state = {
+    node: {
+      type: 'CallExpression',
+      arguments: intArgs /* this just needs to be an array of the same size */
+    },
+    doneCallee_: true,
+    func_: callback,
+    arguments: intArgs,
+    n_: intArgs.length
+  };
+
+  registerEventHandler(Studio.eventHandlers, handlerName, () => {
+    const depth = codegen.interpreter.stateStack.unshift(state);
+    codegen.interpreter.paused_ = false;
+    while (codegen.interpreter.stateStack.length >= depth) {
+      codegen.interpreter.step();
+    }
+    codegen.interpreter.paused_ = true;
+  });
+  callHandler(handlerName);
+};
+
+/**
  * Pause execution and display a prompt for user input. When the user presses
  * enter or clicks "Submit", resume execution.
  * @param question
@@ -4881,32 +4980,7 @@ Studio.askForInput = function (question, callback) {
   function onInputReceived(value) {
     Studio.resumeExecution();
     Studio.hideInputPrompt();
-
-    let handlerName = `askCallback${Studio.askCallbackIndex}`;
-    Studio.askCallbackIndex++;
-    // Shift a CallExpression node on the stack that already has its func_,
-    // arguments, and other state populated:
-    const intArgs = [codegen.interpreter.createPrimitive(value || '')];
-    var state = {
-      node: {
-        type: 'CallExpression',
-        arguments: intArgs /* this just needs to be an array of the same size */
-      },
-      doneCallee_: true,
-      func_: callback,
-      arguments: intArgs,
-      n_: intArgs.length
-    };
-
-    registerEventHandler(Studio.eventHandlers, handlerName, () => {
-      const depth = codegen.interpreter.stateStack.unshift(state);
-      codegen.interpreter.paused_ = false;
-      while (codegen.interpreter.stateStack.length >= depth) {
-        codegen.interpreter.step();
-      }
-      codegen.interpreter.paused_ = true;
-    });
-    callHandler(handlerName);
+    Studio.queueCallback(callback, [value]);
   }
 
   ReactDOM.render(
@@ -5249,6 +5323,11 @@ Studio.setSpriteXY = function (opts) {
   sprite.displayY = sprite.y = y;
   // Reset to "no direction" so no turn animation will take place
   sprite.setDirection(Direction.NONE);
+};
+
+Studio.getSpriteXY = function (opts) {
+  let sprite = Studio.sprite[opts.spriteIndex];
+  Studio.queueCallback(opts.callback, [sprite.x, sprite.y]);
 };
 
 function getSpritesByName(name) {

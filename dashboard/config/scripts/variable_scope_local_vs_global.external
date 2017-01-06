@@ -157,3 +157,11 @@ For our programs coming up we're particularly interested in global variables sin
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This level is a lengthy (but necessary) description of **variable scope**.
+
+While variable scope isn’t explicitly mentioned in the CSP framework, it is basically impossible to program in any programming language without understanding this concept. 
+
+**Please make sure that students read this, or that you review it as a class**
+MARKDOWN

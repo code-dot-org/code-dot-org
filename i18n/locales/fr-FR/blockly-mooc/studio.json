@@ -758,7 +758,7 @@
   "whenSpriteCollidedWithAnyEdge":"touche n'importe quel bord",
   "whenSpriteCollidedWithAnyProjectile":"touche n'importe quel projectile",
   "whenSpriteCollidedWithAnything":"touche n'importe quoi",
-  "whenSpriteCollidedWithN":"touche un acteur {spriteIndex}",
+  "whenSpriteCollidedWithN":"touche l'acteur {spriteIndex}",
   "whenSpriteCollidedWithAirplane":"touche l'avion",
   "whenSpriteCollidedWithBasketball":"touche le ballon de basket",
   "whenSpriteCollidedWithDisc":"touche le disque",

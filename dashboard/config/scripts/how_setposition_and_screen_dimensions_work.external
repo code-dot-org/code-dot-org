@@ -29,8 +29,8 @@ You (perhaps obviously) need to plug actual numbers into these parameters of `se
 
 **Remember:**
 
-* 0,0 is the top left corner
-* specify a location by how many pixels from the **left and down** from the top of the screen it is.  
+* 0,0 is the top left corner.
+* Specify a location by how many pixels from the **left and down** from the top of the screen it is.  
 * The screen is **320 by 450 pixels**.  
 * You can **hover over the screen** to see the x,y coordinate of any point.
 

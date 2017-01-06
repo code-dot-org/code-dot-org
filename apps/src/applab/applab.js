@@ -44,6 +44,7 @@ var changeInterfaceMode = actions.changeInterfaceMode;
 import * as applabConstants from './constants';
 const { ApplabInterfaceMode } = applabConstants;
 import { DataView } from '../storage/constants';
+import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import consoleApi from '../consoleApi';
 import BoardController from '../makerlab/BoardController';
 import { addTableName, deleteTableName, updateTableColumns, updateTableRecords, updateKeyValueData } from '../storage/redux/data';
@@ -1427,6 +1428,7 @@ Applab.executeCmd = function (id, name, opts) {
   };
   return Applab.callCmd(cmd);
 };
+audioApi.injectExecuteCmd(Applab.executeCmd);
 
 //
 // Execute an API command
@@ -1614,6 +1616,11 @@ Applab.getScreens = function () {
 // Wrap design mode function so that we can call from commands
 Applab.updateProperty = function (element, property, value) {
   return designMode.updateProperty(element, property, value);
+};
+
+// Wrap design mode function so that we can call from commands
+Applab.readProperty = function (element, property) {
+  return designMode.readProperty(element, property);
 };
 
 Applab.getAppReducers = function () {
