@@ -80,10 +80,6 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
     mail :exit_survey
   end
 
-  def exit_survey__general_first_workshop
-    mail :exit_survey, options: {is_first_workshop: true}
-  end
-
   def exit_survey__csf
     mail :exit_survey, Pd::Workshop::COURSE_CSF
   end
