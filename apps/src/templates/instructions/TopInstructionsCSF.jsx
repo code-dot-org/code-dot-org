@@ -13,6 +13,7 @@ import { openDialog } from '../../redux/instructionsDialog';
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
+import ContainedLevel from '../ContainedLevel';
 
 
 var Instructions = require('./Instructions');
@@ -159,6 +160,7 @@ var TopInstructions = React.createClass({
     })).isRequired,
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
+    hasContainedLevels: React.PropTypes.bool.isRequired,
     isEmbedView: React.PropTypes.bool.isRequired,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
@@ -225,7 +227,7 @@ var TopInstructions = React.createClass({
 
     this.adjustMaxNeededHeight();
 
-    if (this.refs && this.refs.instructions) {
+    if (this.refs && this.refs.instructions && this.refs.instructions.parentElement) {
       const contentContainer = this.refs.instructions.parentElement;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
@@ -520,110 +522,113 @@ var TopInstructions = React.createClass({
 
     return (
       <div style={mainStyle} className="editor-column">
-        <ThreeColumns
-          styles={{
-            container: [styles.body, this.props.isMinecraft && craftStyles.body],
-            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
-          }}
-          leftColWidth={leftColWidth}
-          rightColWidth={this.state.rightColWidth}
-          height={this.props.height - resizerHeight}
-        >
-          <div
-            style={[
-              commonStyles.bubble,
-              this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
-            ]}
+        {!this.props.hasContainedLevels &&
+          <ThreeColumns
+            styles={{
+              container: [styles.body, this.props.isMinecraft && craftStyles.body],
+              left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
+            }}
+            leftColWidth={leftColWidth}
+            rightColWidth={this.state.rightColWidth}
+            height={this.props.height - resizerHeight}
           >
             <div
-              className={classNames({
-                  "prompt-icon-cell": true,
-                  "authored_hints": this.props.hasAuthoredHints
-                })}
-              onClick={this.handleClickBubble}
-            >
-              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
-              {this.getAvatar() &&
-                <PromptIcon src={this.getAvatar()} ref="icon"/>
-              }
-            </div>
-          </div>
-          <div
-            ref="instructions"
-            className="csf-top-instructions"
-            style={[
-              styles.instructions,
-              shouldDisplayChatTips(this.props.skinId) &&
-                (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
-            ]}
-          >
-            <ChatBubble ttsUrl={ttsUrl}>
-              <Instructions
-                ref="instructions"
-                renderedMarkdown={renderedMarkdown}
-                onResize={this.adjustMaxNeededHeight}
-                inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                aniGifURL={this.props.aniGifURL}
-                inTopPane
-              />
-              {instructions2 &&
-                <div
-                  className="secondary-instructions"
-                  dangerouslySetInnerHTML={{ __html: instructions2 }}
-                />
-              }
-              {this.props.overlayVisible &&
-                <Button type="primary" onClick={this.props.hideOverlay}>
-                  {msg.dialogOK()}
-                </Button>
-              }
-            </ChatBubble>
-            {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
-              <InlineHint
-                key={hint.hintId}
-                borderColor={color.yellow}
-                content={hint.content}
-                ttsUrl={hint.ttsUrl}
-                ttsMessage={hint.ttsMessage}
-                block={hint.block}
-              />
-            )}
-            {this.props.feedback && !this.props.collapsed &&
-              <InlineFeedback
-                borderColor={this.props.isMinecraft ? color.white : color.charcoal}
-                message={this.props.feedback.message}
-              />}
-            {this.shouldDisplayHintPrompt() &&
-              <HintPrompt
-                borderColor={color.yellow}
-                onConfirm={this.showHint}
-                onDismiss={this.dismissHintPrompt}
-              />}
-          </div>
-          <div>
-            <CollapserButton
-              ref="collapser"
               style={[
-                styles.collapserButton,
-                this.props.isMinecraft && craftStyles.collapserButton,
-                !this.shouldDisplayCollapserButton() && commonStyles.hidden
+                commonStyles.bubble,
+                this.props.hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
               ]}
-              collapsed={this.props.collapsed}
-              onClick={this.handleClickCollapser}
-            />
-            {!this.props.collapsed &&
-              <ScrollButtons
+            >
+              <div
+                className={classNames({
+                    "prompt-icon-cell": true,
+                    "authored_hints": this.props.hasAuthoredHints
+                  })}
+                onClick={this.handleClickBubble}
+              >
+                {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
+                {this.getAvatar() &&
+                  <PromptIcon src={this.getAvatar()} ref="icon"/>
+                }
+              </div>
+            </div>
+            <div
+              ref="instructions"
+              className="csf-top-instructions"
+              style={[
+                styles.instructions,
+                shouldDisplayChatTips(this.props.skinId) &&
+                  (this.props.isRtl ? styles.instructionsWithTipsRtl : styles.instructionsWithTips)
+              ]}
+            >
+              <ChatBubble ttsUrl={ttsUrl}>
+                <Instructions
+                  ref="instructions"
+                  renderedMarkdown={renderedMarkdown}
+                  onResize={this.adjustMaxNeededHeight}
+                  inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
+                  aniGifURL={this.props.aniGifURL}
+                  inTopPane
+                />
+                {instructions2 &&
+                  <div
+                    className="secondary-instructions"
+                    dangerouslySetInnerHTML={{ __html: instructions2 }}
+                  />
+                }
+                {this.props.overlayVisible &&
+                  <Button type="primary" onClick={this.props.hideOverlay}>
+                    {msg.dialogOK()}
+                  </Button>
+                }
+              </ChatBubble>
+              {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>
+                <InlineHint
+                  key={hint.hintId}
+                  borderColor={color.yellow}
+                  content={hint.content}
+                  ttsUrl={hint.ttsUrl}
+                  ttsMessage={hint.ttsMessage}
+                  block={hint.block}
+                />
+              )}
+              {this.props.feedback && !this.props.collapsed &&
+                <InlineFeedback
+                  borderColor={this.props.isMinecraft ? color.white : color.charcoal}
+                  message={this.props.feedback.message}
+                />}
+              {this.shouldDisplayHintPrompt() &&
+                <HintPrompt
+                  borderColor={color.yellow}
+                  onConfirm={this.showHint}
+                  onDismiss={this.dismissHintPrompt}
+                />}
+            </div>
+            <div>
+              <CollapserButton
+                ref="collapser"
                 style={[
-                  this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
-                  this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
+                  styles.collapserButton,
+                  this.props.isMinecraft && craftStyles.collapserButton,
+                  !this.shouldDisplayCollapserButton() && commonStyles.hidden
                 ]}
-                ref="scrollButtons"
-                getScrollTarget={this.getScrollTarget}
-                visible={this.state.displayScrollButtons}
-                height={this.props.height - styles.scrollButtons.top - resizerHeight}
-              />}
-          </div>
-        </ThreeColumns>
+                collapsed={this.props.collapsed}
+                onClick={this.handleClickCollapser}
+              />
+              {!this.props.collapsed &&
+                <ScrollButtons
+                  style={[
+                    this.props.isRtl ? styles.scrollButtonsRtl : styles.scrollButtons,
+                    this.props.isMinecraft && (this.props.isRtl ? craftStyles.scrollButtonsRtl : craftStyles.scrollButtons),
+                  ]}
+                  ref="scrollButtons"
+                  getScrollTarget={this.getScrollTarget}
+                  visible={this.state.displayScrollButtons}
+                  height={this.props.height - styles.scrollButtons.top - resizerHeight}
+                />}
+            </div>
+          </ThreeColumns>
+        }
+        {this.props.hasContainedLevels && <ContainedLevel ref="instructions" disableRunUntilAnswer={!this.props.editBlocks} />}
         {!this.props.collapsed && !this.props.isEmbedView &&
           <HeightResizer
             position={this.props.height}
@@ -638,6 +643,7 @@ module.exports = connect(function propsFromStore(state) {
     overlayVisible: state.instructions.overlayVisible,
     ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl,
+    hasContainedLevels: state.pageConstants.hasContainedLevels,
     hints: state.authoredHints.seenHints,
     hasUnseenHint: state.authoredHints.unseenHints.length > 0,
     skinId: state.pageConstants.skinId,
