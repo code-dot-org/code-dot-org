@@ -149,13 +149,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Exit survey email
   # @param enrollment [Pd::Enrollment]
-  # @param is_first_workshop: [Boolean]
-  #   Optionally override whether this is treated as the teacher's first workshop.
-  def exit_survey(enrollment, is_first_workshop: nil)
+  def exit_survey(enrollment)
     @workshop = enrollment.workshop
     @teacher = enrollment.user
     @enrollment = enrollment
-    @is_first_workshop = is_first_workshop.nil? ? first_workshop_for_teacher?(@teacher) : is_first_workshop
 
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
       @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
@@ -172,7 +169,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
 
     mail content_type: content_type,
-      from: from_hadi,
+      from: from_survey,
       subject: 'How was your Code.org workshop?',
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
@@ -182,10 +179,6 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def save_timestamp
     return unless @enrollment && @enrollment.persisted?
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
-  end
-
-  def first_workshop_for_teacher?(teacher)
-    Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
   end
 
   def generate_csf_certificate
@@ -213,8 +206,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     email_address('Code.org', 'noreply@code.org')
   end
 
-  def from_hadi
-    email_address('Hadi Partovi', 'hadi_partovi@code.org')
+  def from_survey
+    email_address('Code.org', 'survey@code.org')
   end
 
   def get_details_partial(course, subject)
