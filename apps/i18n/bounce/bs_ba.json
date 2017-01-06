@@ -1,7 +1,7 @@
 {
-  "basketballLaunchBall": "throw new ball",
-  "basketballLaunchBallTooltip": "Throw a ball into play.",
-  "basketballSetPaddle": "set hand",
+  "basketballLaunchBall": "baci novu loptu",
+  "basketballLaunchBallTooltip": "Baci loptu u igru.",
+  "basketballSetPaddle": "postavi ruku",
   "basketballSetPaddleSpeedFast": "set fast hand speed",
   "basketballSetPaddleSpeedNormal": "set normal hand speed",
   "basketballSetPaddleSpeedRandom": "set random hand speed",

@@ -163,7 +163,7 @@ is:
         'bounce_6_basketball': "Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við báða \"þegar bolti hittir\" kubbana til að leysa þrautina."
         'bounce_7_basketball': "Tengdu kubba við hvern \"þegar\" kubb. Láttu boltann skoppa þar til hann hittir í endamarkið."
         'bounce_10_basketball': "Nú er mark efst! Tengdu kubbana \"skora stig\" og \"skora stig andstæðings\" við kubbana \"þegar bolti í marki\" og \"þegar bolti hittir ekki hönd\" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn skorar tvisvar."
-        'bounce_11_basketball': "Þú getur núna tengt kubba við kubbinn \"þegar keyrt\". Þú verður að tengja nýja \"varpa nýjum bolta\" kubbinn á fleiri en einum stað. Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!"
+        'bounce_11_basketball': "Þú getur núna tengt kubba við kubbinn \"þegar keyrt\". Þú verður að tengja nýja \"senda nýjan bolta\" kubbinn á fleiri en einum stað. Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!"
         'bounce_12_basketball': "Búðu til þinn eigin körfuboltaleik. Þú getur breytt öllum reglunum. Þegar leikurinn er tilbúinn getur þú smellt á Ljúka til að vinir geti prófað leikinn í símunum sínum."
         'bounce_1_sports': "Náðu til flaggsins! Festu kubb við \"þegar vinstri ör\" kubbinn og ýttu á \"Keyra\" til að færa leikmanninn að flagginu."
         'bounce_2_sports': "Nú eru tvö flögg! Festu kubb við \"þegar vinstri ör\" og \"þegar hægri ör\" kubbana til að láta leikmanninn færast í tvær áttir."
@@ -171,7 +171,7 @@ is:
         'bounce_6_sports': "Nú er endamarkið að ofanverðu. Þú þarft að tengja kubba við báða \"þegar bolti hittir\" kubbana til að leysa þrautina."
         'bounce_7_sports': "Tengdu kubba við hvern \"þegar\" kubb. Láttu boltann skoppa þar til hann hittir í endamarkið."
         'bounce_10_sports': "Nú er mark efst! Tengdu kubbana \"skora stig\" og \"skora stig andstæðings\" við kubbana \"þegar bolti í marki\" og \"þegar bolti hittir ekki hönd\" til að búa til leik. Reyndu að skora sem flest stig áður en andstæðingurinn skorar tvisvar!"
-        'bounce_11_sports': "Þú getur núna tengt kubba við kubbinn \"þegar keyrt\". Þú verður að tengja nýja \"varpa nýjum bolta\" kubbinn á fleiri en einum stað. Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!"
+        'bounce_11_sports': "Þú getur núna tengt kubba við kubbinn \"þegar keyrt\". Þú verður að tengja nýja \"senda nýjan bolta\" kubbinn á fleiri en einum stað. Prófaðu líka að breyta sviðinu eða hraða handarinnar og boltans og gáðu hvað þú getur skorað mörg stig áður en andstæðingurinn hefur skorað tvisvar!"
         'bounce_12_sports': "Búðu til leik eftir þínu höfði! Þú stjórnar hér: þú getur breytt öllum reglunum, blandað saman íþróttum, notað ímyndunaraflið! Smelltu á Ljúka þegar leikurinn er tilbúinn svo að vinir þínir geti prófað hann í símunum sínum."
         'bounce_1': "Tengdu kubb við \"þegar vinstri ör\" kubbinn og ýttu á \"Keyra forrit\". Færðu spaðann með vinstri ör til að komast að endamarkinu."
         'bounce_2': "Tengdu kubb við \"þegar til hægri\" og \"þegar til vinstri\" kubbana. Færðu spaðann til að ná báðum endamörkum."
@@ -256,7 +256,7 @@ is:
         'studio_playlab_9': "Settu bakgrunn fyrir innrás geimvera og auktu hraða Geimróbóta svo hann komist fljótar til geimverunnar. Færðu hann svo með örvarlyklunum til geimverunnar svo hann geti varað alla við innrásinni"
         'studio_playlab_10': "Búðu til þinn eigin leik. Smelltu á Ljúka þegar hann er tilbúinn svo vinir þínir geti prófað hann á sínum símum."
         'studio_iceage_hello1': "Sid vill fá alla með í nýtt ævintýri. Getur þú hjálpað honum að segja \"hello\" með því að draga \"segja\" kubbinn út á vinnusvæðið og skrifa orðið \"hello\" í hann?"
-        'studio_iceage_hello2': "Sid (leikari 1) fann Manny (leikara 2) og vill bjóða honum með í ævintýrið. Hjálpaðu þeim að heilsast með því að nota \"leikari segir\" kubbinn tvisvar."
+        'studio_iceage_hello2': "Sid (leikmaður 1) fann Manny (leikmann 2) og vill bjóða honum með í ævintýrið. Hjálpaðu þeim að heilsast með því að nota \"leikmaður segir\" kubbinn tvisvar."
         'studio_iceage_move_to_flag': "Scrat leitar að akarninu sínu! Komdu honum síðustu 200 dílana með \"færa\" kubbnum."
         'studio_iceage_move_to_actor': "Diego (leikari 1) er að leita að Manny (leikara 2). Hjálpaðu Diego að komast 200 díla niður til Manny með \"færa leikara\" kubbnum. Tengdu svo kubb við \"þegar leikari snertir\" atvikið svo að hljóð sé spilað þegar þeir hittast."
         'studio_iceage_repeat': "Kubburinn \"endurtaka endalaust\" getur keyrt kóða stanslaust. Getur þú tengt kubba við hann til að hjálpa Granny að hreyfa sig endurtekið til vinstri og hægri?"
@@ -420,6 +420,9 @@ is:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'
@@ -489,7 +492,7 @@ is:
         'mc_2016_intro': 'Klukkustund kóðunar með Minecraft - Kynning'
         'mc_2016_loops': 'Klukkustund kóðunar með Minecraft - Lykkjur'
         'mc_2016_events': 'Klukkustund kóðunar með Minecraft - Atvik'
-        'mc_2016_spawn': 'Klukkustund kóðunar með Minecraft - Kveikjur'
+        'mc_2016_spawn': 'Klukkustund kóðunar með Minecraft - Kviknun'
         'mc_2016_congrats': 'Klukkustund kóðunar með Minecraft - Hamingjuóskir'
     callout:
       text:
