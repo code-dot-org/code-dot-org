@@ -63,10 +63,6 @@ class Pd::TeacherApplication < ActiveRecord::Base
     whatTeachingSteps
   ]
 
-  EMAIL_FORMAT_FIELDS = %w[
-    principalEmail
-  ]
-
   belongs_to :user
 
   validates_presence_of :user
