@@ -7,10 +7,10 @@ nav: regional_partner_playbook_nav
 ________________
 
 ## Table of Contents
-- [Teacher Workshops](workshops)
-- [Facilitators](facilitators)
-- [Administrator and Counselor Workshops](admin)
-- [Community Events](community)
+- [Teacher Workshops](#workshops)<br/>
+- [Facilitators](#facilitators)<br/>
+- [Administrator and Counselor Workshops](#ac)<br/>
+- [Community Events](#community)<br/>
 
 ________________
 <a id="workshops"></a>
@@ -44,7 +44,7 @@ ________________
 
 
 ________________
-<a id="admin"></a>
+<a id="ac"></a>
 <br/>
 ## Administrator and Counselor Workshops
 **What will Code.org pay for?**
