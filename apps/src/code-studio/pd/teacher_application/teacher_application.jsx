@@ -579,9 +579,12 @@ const TeacherApplication = React.createClass({
   },
 
   onSubmitButtonClick() {
+    this.setState({submitting: true});
+
     const districtValues = getDistrictDropdownValues();
 
-    const formData = _.cloneDeep(this.state);
+    const formData = _.omit(_.cloneDeep(this.state), ['submitting']);
+
     _.assign(formData, districtValues);
 
     let topInvalidElementId = undefined;
@@ -626,7 +629,11 @@ const TeacherApplication = React.createClass({
     }
 
     _.forEach(fieldsToValidate, (field) => {
-      if (this.state[field] === undefined || this.state[field].length === 0) {
+      if (fieldValidationErrors[field] && this.state[field]) {
+        if (fieldValidationErrors[field](this.state[field])) {
+          topInvalidElementId = topInvalidElementId || field;
+        }
+      } else if (this.state[field] === undefined || this.state[field].length === 0) {
         this.setState({[field]: ''});
         topInvalidElementId = topInvalidElementId || field;
       }
@@ -645,6 +652,7 @@ const TeacherApplication = React.createClass({
     }
 
     if (topInvalidElementId) {
+      this.setState({submitting: false});
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
       if (topInvalidElement.className.indexOf('form-group') >= 0) {
@@ -682,7 +690,10 @@ const TeacherApplication = React.createClass({
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
         </label>
-        <Button onClick={this.onSubmitButtonClick}>
+        <Button
+          onClick={this.onSubmitButtonClick}
+          disabled={this.state.submitting}
+        >
           Complete and Send
         </Button>
       </div>
