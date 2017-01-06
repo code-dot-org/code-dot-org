@@ -55,10 +55,11 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     end
     assert_equal 'Validation failed: Secondary email does not appear to be a valid e-mail address', e.message
 
+    application = create :pd_teacher_application
+    hash = application.application_hash
+    hash['principalEmail'] = 'invalid@ example.net'
+
     e = assert_raises ActiveRecord::RecordInvalid do
-      application = create :pd_teacher_application
-      hash = application.application_hash
-      hash['principalEmail'] = 'invalid@ example.net'
       application.update!(application: hash.to_json)
     end
     assert_equal 'Validation failed: Principal email does not appear to be a valid e-mail address', e.message

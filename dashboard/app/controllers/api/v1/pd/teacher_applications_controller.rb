@@ -36,6 +36,7 @@ class Api::V1::Pd::TeacherApplicationsController < ApplicationController
       # Fail silently - this happens in the event of multiple submission
       CDO.log.warn "Duplicate pd teacher application submission for user #{current_user.id} - ignoring the second one"
       head :no_content
+      return
     end
 
     if @teacher_application.persisted?
