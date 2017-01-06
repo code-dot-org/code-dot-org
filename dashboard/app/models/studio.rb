@@ -126,6 +126,7 @@ class Studio < Grid
   <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
+  <block type="studio_whenSpriteAndGroupCollideSimple" />
   <block type="studio_whenSpriteAndGroupCollide">
     <value name="GROUPMEMBER">
       <block type="variables_get">
@@ -149,6 +150,9 @@ class Studio < Grid
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
     <title name="TEXT">type text here</title>
+  </block>
+  <block type="studio_setMap">
+    <title name="VALUE">random</title>
   </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
@@ -247,6 +251,13 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpritePositionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_addGoal" />
   <block type="studio_addGoalXY" />
   <block type="studio_setSpriteXY" inline="true">

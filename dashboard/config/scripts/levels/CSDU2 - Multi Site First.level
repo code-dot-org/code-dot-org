@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-12-13T15:36:53.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Making a Multi-page Site\r\n\r\nA web site should include more than one web page, and they should connect to each other.  The first multi-page site you make will be a site of Odd Stuff.  Most of the site is already here, but you will need to add your Guinness Book of World Records page.\r\n\r\n* In the list of project files, find index.html and click on it.   **index.html is used in Web Lab to mark the home page of a website**, the first page that your visitors will see.\r\n* Click on some of the other HTML files.  These are also web pages, but they have different names.  **Every file needs a unique name that will help you know what it is.**\r\n* Look around through all the files provided. Can you figure out which style sheets go with which web pages?",
+    "project_template_level_name": "CSDU2 - Odd Stuff Site Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

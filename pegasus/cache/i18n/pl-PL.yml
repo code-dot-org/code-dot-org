@@ -103,23 +103,24 @@
   view_course: Zobacz kurs
   view_unit: Zobacz jednostkę
   make_app: Utwórz aplikację
-  congrats_guest_speaker_title: Znajdź język w swojej klasie
-  congrats_guest_speaker_desc: Teraz, kiedy twoi uczniowie zakończyli kurs Informatyki
-    , należy rozważyć  o podłączeniu go do realnego świata, zapraszając gościa do
-    klasy. Można skorzystać z naszej mapy wolontariuszy i skontaktować się z  lokalnych
-    wolontariuszy, aby odwiedzili twoją klasę, lub poszukać w dowolnym mieście, aby
-    znaleźć studentów informatyki lub specjalistów technicznych, którzy są gotowi,
-    aby zainspirować twoich uczniów zdalnie, za pośrednictwem czatu wideo.
-  congrats_guest_speaker_cta: Znajdź tłumacza
+  congrats_guest_speaker_title: Zaproś gościnnego mówcę do swojej klasy
+  congrats_guest_speaker_desc: Teraz, kiedy Twoi uczniowie zakończyli kurs Informatyki,
+    rozważ uroczyste zakończenie i powiązanie go z obiektami, jakie mogą zbudować
+    w rzeczywistym świecie, zapraszając prelegenta do swojej klasy. Możesz skorzystać
+    z naszej mapy wolontariuszy, by skontaktować się z lokalnymi wolontariuszami,
+    aby odwiedzili twoją klasę, lub poszukaj w innym mieście studentów informatyki
+    lub techników, którzy są gotowi zainspirować Twoich uczniów zdalnie za pośrednictwem
+    czatu wideo.
+  congrats_guest_speaker_cta: Znajdź gościnnego mówcę
   congrats_third_party_title: |-
-    Używaj nowych funkcji  tych aplikacji i stron internetowych
+    Wykorzystaj swoje nowe umiejętności z tymi aplikacjami i stronami internetowymi
      
-  third_party_gradelevel_kto8: Klasa K-8
-  third_party_gradelevel_kto2: Klasa K-2
+  third_party_gradelevel_kto8: Klasy K-8
+  third_party_gradelevel_kto2: Klasy K-2
   third_party_gradelevel_2to8: Klasy 2-8
-  third_party_gradelevel_4to12: klasa 4-12
-  third_party_gradelevel_5to12: Klasa 5-12
-  third_party_gradelevel_6plus: Klasa 6+
+  third_party_gradelevel_4to12: Klasy 4-12
+  third_party_gradelevel_5to12: Klasy 5-12
+  third_party_gradelevel_6plus: Klasy 6+
   third_party_gradelevel_8plus: Klasa 8+
   third_party_platform_all: 'Platforma: Web, iPad oraz Android'
   third_party_platform_mobile: 'Platforma: iPad i Android'
@@ -130,61 +131,63 @@
   third_party_price_individual: 'Cena indywidualna: Bezpłatna wersja próbna i $25
     miesięcznie'
   third_party_price_school: 'Cena dla szkół: Darmowe plany i wersja pro za $2500 +'
-  third_party_tynker_desc: 'Szkolna cena: Darmowe Plany & Pro w $ 2500 + kreatywne
-    platformy Tynker do wykonywania obliczeń pomaga dzieciom rozwijać obliczeniowej
-    myślenia i umiejętności programowania w przyjemny i intuicyjny i z użyciem wyobraźni
-    sposób. Nasza innowacyjny język wizualny programowania, interaktywne kursy samokształcenia
-    oraz działania. Programowanie do gier opartych umożliwiają łatwe wprowadzenie
-    do programowania i umożliwić dzieciom do innowacji i tworzenia.'
-  third_party_tynker_btn_curriculum: Wypróbuj Tynker program nauczania dla początkujących
+  third_party_tynker_desc: Platforma Tynkera pomaga dzieciom rozwijać myślenie komputacyjne
+    i umiejętności programowania w sposób intuicyjny, pobudzający wyobraźnię, w formie
+    zabaw. Nasz innowacyjny język programowania wizualnego, interaktywne kursy do
+    samodzielnej pracy, i oparte na grach aktywności w programowaniu stanowią łatwe
+    wprowadzenie do programowania i umożliwiają dzieciom innowacyjność i kreatywność.
+  third_party_tynker_btn_curriculum: Wypróbuj program nauczania z Tynker dla początkujących
   third_party_tynker_btn_site: Odwiedź Tynkera
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Jr. jest językiem programowania dla początkujących,
+    który umożliwia małym dzieciom (5-7 lat) tworzyć własne interaktywne historyjki
+    i gry. Dzieci łączą graficzne bloki programowania, aby postacie mogły poruszać
+    się, skakać, tańczyć i śpiewać. Dzieci mogą modyfikować postacie w edytorze graficznym,
+    dodawać własne głosy i dźwięki, a nawet wstawiać własne zdjęcia - a następnie
+    korzystać z bloków programowania, by ożywiać swoje postacie.
   third_party_scratchjr_btn_curriculum: Pobierz Scratch Jr. Curriculum
   third_party_scratchjr_btn_site: Odwiedź Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
+  third_party_scratch_desc: W Scratchu możesz zaprogramować własne interaktywne historyjki,
+    gry oraz animacje i dzielić się swoimi wytworami z innymi osobami w społeczności
+    internetowej. Scratch pomaga młodym ludziom kształcić twórcze myślenie, systematyczne
+    rozumowanie i umiejętność współpracy - podstawowe umiejętności niezbędne do życia
+    w Xxi wieku.
   third_party_scratch_btn_curriculum: Pobierz Scratch Curriculum
   third_party_scratch_btn_forum: Forum Nauczycieli Scratcha
   third_party_scratch_btn_site: Odwiedź Scratcha
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
+  third_party_lightbot_desc: W Lightbot, uczniowie programują robota za pomocą poleceń,
+    aby rozwiązywać łamigłówki. Uczniowie mogą grać w przeglądarce (wymagany jest
+    Flash Player), lub na urządzeniach z systemem Android lub iOS. Na początku uczniowie
+    grają na podstawowym (Basic) poziomie. Nauczą się, jak sprawić, by komputer wykonał
+    ciąg podstawowych poleceń i uzyskają ogólny pogląd na to, jak pisze się programy
+    komputerowe.
   third_party_lightbot_btn_curriculum: Pobierz program nauczania z Lightbot
   third_party_lightbot_btn_site: Odwiedź Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
+  third_party_khan_desc: Dowiedz się, jak programować rysunki, animacje i gry przy
+    użyciu JavaScript & ProcessingJS, lub dowiedz się, jak tworzyć strony internetowe
+    w HTML & CSS. Możesz udostępniać cokolwiek tworzysz, odkrywać to, co stworzyli
+    inni i uczyć się od siebie!
   third_party_khan_btn_learn: Ucz się informatyki z Akademią Khana
   third_party_khan_btn_forum: Forum informatyki Akademii Khana
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
+  third_party_appinv_desc: MIT App Inventor wykorzystuje programowanie wizualno-blokowe
+    i umożliwia każdemu, nawet nowicjuszom, rozpoczęcie programowania i tworzenie
+    w pełni funkcjonalnych aplikacji dla urządzeń z systemem Android. Początkujący
+    mogą tworzyć w App Inventor pierwsze aplikacje i sprawdzić ich działanie w ciągu
+    godziny lub szybciej, i mogą programować bardziej złożone aplikacje w znacznie
+    krótszym czasie, niż tradycyjnie, w językach bazujących na tekście.
+  third_party_appinv_btn_curriculum: Pobierz currriculm dla App Inventor 2
+  third_party_appinv_btn_forum: Forum App Inventor 2
+  third_party_appinv_btn_site: Odwiedź App Inventor 2
+  third_party_codehs_desc: CodeHS wprowadza bloki do budowy programów w krótkich filmach,
+    przykładowych kodach i w wielu ćwiczeniach z programowania, które powodują, że
+    kodowanie staje się ciekawe i dostępne dla początkujących. Dla szkół i nauczycieli
+    CodeHS proponuje program nauczania, narzędzia dla nauczyciela i jego profesjonalnego
+    rozwoju. Uczniowie zaś mogą uzyskać wsparcie w sieci tutorów.
+  third_party_codehs_btn_try: Wstęp do rozszerzonej informatyki dla szkół
+  third_party_codecademy_desc: Myślimy o edukacji od dołu. Sieci spowodowały przemyślenie
+    prawie wszystkiego - handlu, sieci społecznościowych, opieki zdrowotnej i wielu
+    innych dziedzin. Budujemy edukację, której potrzebuje świat - tak naprawdę pierwszą
+    sieciową edukację tubylców.
+  third_party_codecademy_btn_curriculum: Pobierz curriculum Codecademy
   third_party_codecademy_btn_site: Odwiedź Codeacademy
   third_party_organization: Organizacja
   third_party_curriculum: Program nauczania
@@ -192,22 +195,20 @@
   third_party_cost_free: Bezpłatne dla uczniów i nauczycieli
   third_party_cost_5permonth: "$5 miesięcznie na klasę"
   third_party_cost_299: "$2.99/pobierz"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_cost_free_399: Darmowy na próbę. $399 za klasę
+  third_party_cost_free_2: Darmowy na próbę. $2 za ucznia
+  third_party_cost_free_10: Darmowy na próbę. $9.99 za miesiąc
+  third_party_desc_5_4to8: Około 5 lekcji, przeznaczonych dla klas 4-8
+  third_party_desc_10to12_kto3: Około 10-15 lekcji, przeznaczonych dla klas K-3
+  third_party_desc_11_kto5: Około 11 lekcji, przeznaczonych dla klas K-5
+  third_party_desc_10to12_kto5: Około 10-12 lekcji, przeznaczonych dla klas K-5
+  third_party_desc_40_4to8: Ponad 40 lekcji, przeznaczonych dla klas 4-8
+  third_party_desc_dozens_kto8: Tuziny lekcji przeznaczonych dla wszystkich klas 4-8
+  third_party_desc_10to15_3to12: Między 10 a 15 lekcji, przeznaczonych dla klas 3-12
+  third_party_desc_25to40_3to12: Około 25-40 lekcji, przeznaczonych dla klas 3-12
+  third_party_desc_20_2to8: Około 20 lekcji, przeznaczonych dla klas 2-8
+  third_party_desc_7to22_5to12: Między 7 a 22 lekcje, przeznaczone dla klas 5-12
+  third_party_desc_20_4to12: Więcej niż 20 lekcji, przeznaczonych do klas 4-12
   enter_valid_age: Proszę wybrać prawidłowy wiek
   enter_valid_email: Podaj poprawny adres e-mail
   get_a_certificate_message: Wyślemy Ci certyfikat oraz informację, jak <a href='/learn/beyond'>kontynuować
@@ -259,12 +260,12 @@
   continue_learning_header: Kontynuuj naukę poza Godziną Kodowania
   continue_learning_body: Jest wiele opcji; możesz się uczyć online, w lokalnej szkole
     albo na obozie letnim.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Spróbuj kursy w Code Studio
   learn_next_level: Wypróbuj inny kurs w Code Studio
   learn_online: Wypróbuj inne kursy online
   learn_classes: Znajdź grupę w swoim otoczeniu
   learn_back_to_minecraft: Ucz się z Minecraftem
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
+  hoc_is_here: "#HourOfCode nadchodzi ponownie 5-11 grudnia 2016. https://youtu.be/KsOIlDT145A."
   just_did_hoc: 'Właśnie wykonałem #HourOfCode - Sprawdź to! @codeorg'
   just_did_course1: Właśnie skończyłem Kurs 1 - sprawdź to! @codeorg
   just_did_course2: Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg
@@ -273,6 +274,8 @@
   just_did_accelerated: Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg
   twitter_teach_cs: 9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki.
     http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Ucz się Hour of Code
   beyond_hoc: Poza Godziną Kodowania
   what_gender: Jakiej jesteś płci?
@@ -377,11 +380,11 @@
   homepage_banner_20k_teachers: Wyszkolonych jest 20,000 nauczycieli i teraz uczą
     informatyki w klasach.
   homepage_banner_20k_teachers_link: Ucz się więcej
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
+  homepage_banner_congress: Amerykańscy przywódcy wzywają Kongres do finansowania
+    informatyki w klasach K-12.
   homepage_banner_congress_link: Dodaj swoje wsparcie
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
+  homepage_banner_emailprivacy: Wprowadzamy ważną zmianę w tym, jak zapewniamy uczniom
+    prywatność.
   homepage_banner_emailprivacy_link: Dowiedz się więcej
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Ucz się więcej
@@ -454,10 +457,10 @@
   class_submission_level_college: Kolegium (College)
   class_submission_level_vocational: Zawodowy
   class_submission_languages_other: Inne języki
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
+  videos_more: Więcej <a href='%{inspiring_videos_playlist}'> inspirujących filmów</a>
+    pokazujących modele ról i gwiazdy
+  careers_page_more: Więcej <a href='%{careers_url}' target='_blank'> inspirujących
+    filmów</a>, w których występują specjaliści z obszarów technologii
   playlab_choose_theme: Wybierz własny motyw Play Lab
   playlab_classic_title: Klasyczny
   playlab_gumball_title: Niesamowity świat Gumball
@@ -493,45 +496,60 @@
   minecraft_adventurer_button: Start
   minecraft_no_internet: Nie masz internetu?
   minecraft_download_adventurer: Pobierz wersję offline Poszukiwacza Przygód z Minecraftem.
-  minecraft_store_camps: Microsoft Store Hour of Code Camps
-  minecraft_host_event: Host a Minecraft Hour of Code Event
-  minecraft_youthspark_continue_learning: Continue learning with Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Sign up</a> for free
-    Hour of Code Camps at a Microsoft Store in Australia, Canada, Puerto Rico or the
-    U.S. Learn how to combine your creativity with coding.
-  minecraft_teach_resources: Teacher resources and lesson plan.
-  minecraft_leader_guide: Download resources to help you plan and lead an event.
-  minecraft_facilitating_event: Facilitating an event?
-  minecraft_join_online_training: Join Microsoft and Minecraft for an online training
-    (in English only) on Nov 22 or Nov 29
-  minecraft_youthspark_create_your_future: Whatever you’re passionate about, you can
-    use computer science to imagine, create, and make a future that’s yours.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">Microsoft YouthSpark</a>
-    provides free tools and resources to pursue your passion.
   minecraft_subtitle: Godzina Kodowania z Minecraft
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Sports Hour of Code Tutorials
-  sports_og_description: Select between NBA and WNBA or all sports coding tutorials.
-  sports_title: Code your own sports game
+  sports_page_title: Sporty Godziny Kodowania
+  sports_og_title: Samouczki dla Sportów Godziny Kodowania
+  sports_og_description: Wybierz między tworzeniem meczu koszykówki lub mieszaj i
+    graj w różne sporty.
+  sports_title: Zakoduj własną grę sportową
   sports_watch_video: Obejrzyj wideo
-  sports_video_title: Push yourself. Anybody can learn.
-  sports_select_theme: Select your tutorial theme
+  sports_video_title: Zmuś się. Każdy może się uczyć.
+  sports_select_theme: Wybierz temat swoich samouczków
   sports_basketball_title: Utwórz grę w koszykówkę
   sports_all_sports_title: Zakoduj własne zawody
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Zanim zaczniesz, obejrzyj jeden z tych inspirujących
     filmów
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Zainspiruj dziewczynę
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_title_cs_intro: Wstęp do informatyki
+  video_title_schools_dont_teach: Czego nie uczy większość szkół
+  video_title_obama: Prezydent Obama o informatyce
+  video_title_hoc_is_here: Godzina Kodowania jest tutaj - każdy może się uczyć
+  video_title_anybody_can_learn: Każdy może się uczyć
+  video_title_draymond_green: Godzina Kodowania z Draymond Green
+  video_title_russell_okung: Godzina Kodowania z Russell Okung
+  video_title_real_madrid: Godzina Kodowania z Realem Madryt
+  video_title_marco_belinelli: Godzina Kodowania z Marco Belinellim
+  video_title_chris_bosh: Chris Bosh o informatyce
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
@@ -605,9 +623,10 @@
   volunteer_engineer_submission_checkbox_contact: 'Zgadzam się, by nauczyciele kontaktowali
     się ze mną z prośbą o wsparcie (Uwaga: Twój adres e-mail nie będzie udostępniony)'
   volunteer_engineer_submission_submit: Wyślij
-  volunteer_engineer_submission_thankyou: Dziękujemy za zarejestrowanie się jako wolontariusz.
-    Nauczyciele, używając <a href="%{url}"> tej mapy,</a> będą wyszukiwać i kontaktować
-    się z wolontariuszami, jak Ty.
+  volunteer_engineer_submission_thankyou: Dziękujemy! Twoje dane wolontariusza zostały
+    pomyślnie przesłany. Nauczyciele będą używać <a href="%{url}"> tej mapy</a> do
+    wyszukiwania i kontaktu z wolontariuszami takimi, jak Ty. Twoje dane zostaną wyświetlone
+    na mapie w ciągu 48 godzin.
   volunteer_engineer_submission_commitment_uncertain: Niepewny
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 godzina tygodniowo
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 godziny tygodniowo
@@ -676,10 +695,9 @@
     strony w sieci, utwórz własną aplikację, poznaj inne języki programowania, jak
     C++, Ruby i Python!
   dashboard_landing_inspire: Zainspiruj swoich uczniów plakatami, filmami i innymi.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Poddaj pomysł lub zgłoś błąd.
-  dashboard_landing_teacher_forum: Dołącz do społeczności profesjonalnego nauczania.
+  dashboard_landing_video_library: Użyj wideo z biblioteki (Video Library) pojęć informatycznych.
+  dashboard_landing_report_bug: Poproś o wyjaśnienie lub zgłoś błąd.
+  dashboard_landing_teacher_forum: Dołącz do społeczności profesjonalnego kształcenia.
   dashboard_hoc_courses: Godzina Kodowania dla wszystkich grup wiekowych
   dashboard_hoc_courses_desc: Wypróbuj ze swoimi uczniami którykolwiek z jednogodzinnych
     samouczków!
@@ -716,7 +734,7 @@
   dashboard_course_ecs_desc: 'Poznawanie informatyki jest całoroczny kursem, na który
     składa się z 6 jednostek: interakcja człowieka z komputerem, rozwiązywanie problemów,
     projektowanie stron www, programowanie, analiza danych i robotyka.'
-  dashboard_course_csp: AP ® Prawa Informatyki
+  dashboard_course_csp: AP ® Podstawy Informatyki
   dashboard_course_csp_desc: Code.org zaprojektował rygorystyczny, angażujący i przystępny
     kurs, służący poznaniu podstawowych idei informatyki.
   dashboard_landing_loading: Trwa pobieranie ...
@@ -734,18 +752,21 @@
   dashboard_action_required: wymagane
   dashboard_action_print_certificates: Drukuj certyfikaty
   dashboard_assessments_view: 'Zobacz oceny w:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
+  dashboard_assessments_none: Większość nauczycieli mierzy postępy swoich uczniów
+    korzystając z zakładki "Zobacz Postępy". Jeśli jesteś zainteresowany dodatkowym
+    sprawdzianem uczniów, polecane pytania możesz znaleźć w planach lekcji. Odbywa
+    się to poza Code Studio.
+  dashboard_assessments_none_part2: Jeśli uczysz w gimnazjum lub w szkole średniej,
+    mamy pytania na sprawdzian, które są dostępne jako część Code Studio i mogą pomóc
+    Twoim uczniom przygotować się do testu AP. Aby skorzystać z tych sprawdzianów,
+    najpierw przypisz kurs swojej klasie, następnie wybierz kurs z rozwijanego menu
+    powyżej i będziesz tam widział odpowiedzi uczniów.
+  dashboard_assessments_summaries: Podsumowanie ocen
+  dashboard_assessments_answers: Wszystkie odpowiedzi ze sprawdzianów
   dashboard_surveys_answers: Ankiety
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_percent: Procent
+  dashboard_filter_by_stage: 'Filtruj według etapu:'
+  dashboard_filter_all: Wszystko
   dashboard_download_csv: Pobierz CSV
   dashboard_navigation_home_page: Domowa strona nauczyciela
   dashboard_navigation_section_student_progress: Konta i postępy ucznia
@@ -775,11 +796,12 @@
   dashboard_progress_view: 'Zobacz postęp w:'
   dashboard_progress_student_in_script: Informacje o postępie %{student_name} w %{script_name}
   dashboard_progress_pair_programming: programowanie w parach
-  dashboard_responses_view: 'Wyświetl odpowiedź dla:'
+  dashboard_responses_view: 'Wyświetl odpowiedzi w:'
   dashboard_responses_none: Większość naszych lekcji jest przeznaczona dla młodszych
     dzieci i nie wymaga od nich wpisywania odpowiedzi tekstowych, zatem nie znajdziesz
     ich tutaj. W przypadku kursów dla gimnazjalistów i licealistów, ich odpowiedzi
-    na zadania otwarte znajdziesz wybierając odpowiedni kurs z rozwijanej listy powyżej.
+    na tekstowe pytania otwarte znajdziesz wybierając odpowiedni kurs z rozwijanej
+    listy powyżej.
   dashboard_sections_new_section: Nowa sekcja
   dashboard_sections_jumbotron_instruction: Utwórz nowe sekcje i dodaj do nich uczniów.
     Sekcje umożliwiają podział uczniów na mniejsze grupy, dzięki czemu łatwiej jest
@@ -788,7 +810,7 @@
   dashboard_sections_table_secret: Typ logowania
   dashboard_sections_table_grade: Poziom/Ocena
   dashboard_sections_table_course: Kurs (lekcja)
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Ekstra aktywności
   dashboard_sections_table_students: Uczniowie
   dashboard_sections_table_code: Kod Sekcji
   dashboard_sections_name: Nazwa Sekcji
@@ -815,28 +837,25 @@
   dashboard_sections_code_placeholder: 6-znakowy kod (ABCDEF)
   dashboard_sections_other_section: Inny nauczyciel
   dashboard_sections_both_sections: Czy chcesz, aby uczeń/uczniowie byli w obu sekcjach?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_yes_both: Tak, chcę skopiować ucznia/uczniów w tej sekcji i w
+    nowej sekcji
+  dashboard_sections_no_move: Nie, chcę przenieść ucznia/uczniów, aby był/byli tylko
+    w nowej sekcji.
+  dashboard_sections_move_students: Przenieś uczniów
+  dashboard_sections_assign_hoc_script_desc: Czy uczestniczysz w Godzinie Kodowania?
+  dashboard_sections_assign_hoc_script_msg: Należy pamiętać, że nie będziemy w stanie
+    zapisywać postępów uczniów w tym kursie w dniach 3-11 grudnia 2016 ze względu
+    na olbrzymi ruchu na naszej stronie w związku z Godziną Kodowania. Poza tym wszystko
+    inne w tym samouczku będzie działać zgodnie z oczekiwaniami.  Nadal będziesz mógł
+    przypisać kurs uczniom i wydać certyfikaty wszystkim uczestnikom.  (Większość
+    nauczycieli <a href='%{certificate_url}'> drukuje je wcześniej</a>.)  Będziemy
+    zapisywać i udostępniać postępy uczniów w pozostałych tygodniach tego roku.
+  dashboard_sections_assign_activity: Przypisz kurs
+  dashboard_error_none_selected: Nie wybrałeś żadnego ucznia do przeniesienia. Proszę
+    wybrać przynajmniej jednego uczenia.
+  dashboard_error_other_section: Jeśli przenosisz uczniów między swoimi własnymi sekcjami,
+    wybierz swoją sekcję z listy rozwijanej. Wybierz "Inna Sekcja" tylko, aby przenieść
+    Twoich uczniów do sekcji innego nauczyciela.
   dashboard_students_add_student: Dodaj ucznia
   dashboard_students_add_students: Dodawaj wielu uczniów
   dashboard_students_add_multiple: 'Wpisz lub wklej imiona swoich uczniów, po jednym
@@ -901,8 +920,8 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4: '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_unplugged: Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj
+    tych lekcji bez komputera</a> w klasie.
   dashboard_curriculum: Program nauczania
   dashboard_curriculum_overview: Streszczenie programu (curriculum) dla K-5
   dashboard_overview: Streszczenie
@@ -918,7 +937,7 @@
   dashboard_teacher_worksheet: arkusz nauczyciela
   dashboard_curriculum_csina: 'Informatyka w algebrze:'
   dashboard_curriculum_csins: 'Informatyka w przyrodzie:'
-  dashboard_curriculum_csp: 'AP ® Prawa Informatyki:'
+  dashboard_curriculum_csp: 'AP ® Podstawy Informatyki:'
   dashboard_curriculum_ecs: 'Poznawanie informatyki:'
   dashboard_grade_k: K
   dashboard_grade_other: Inni/inne
@@ -931,17 +950,17 @@
   dashboard_question: Pytanie
   dashboard_response: Odpowiedź
   dashboard_correctness: Poprawność
-  dashboard_correctness_free_response: Free response
+  dashboard_correctness_free_response: Jakakolwiek odpowiedź
   dashboard_correctness_unsubmitted: Nieprzesłane
   dashboard_correctness_correct: Poprawnie
   dashboard_correctness_incorrect: Nieprawidłowe
   dashboard_submission_submitted: Przesłane
   dashboard_submission_in_progress: W trakcie
   dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
+  dashboard_multi_correct: "# wielokrotny wybór poprawny"
   dashboard_multi_count: "# wielokrotny wybór"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_multi_correct_percent: "# wielokrotny wybór poprawny"
+  dashboard_submission_timestamp: Czas przesłania
   stats_hoc_2013_heading: 'Nieprawdopodobne statystyki z ubiegłorocznej Godziny Kodowania.
     W ciągu zaledwie jednego tygodnia:'
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
@@ -966,14 +985,14 @@
   dashboard_faq: Najczęściej zadawane pytania (FAQ)
   dashboard_faq_k5: K-5 Najczęściej Zadawane Pytania
   dashboard_announcements: Ogłoszenia
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Spędziliśmy lato zamieniając Wasze
+    opinie na nowe możliwości. Teraz możesz <a href="%{pp_url}" target="_blank"> śledzić
+    postępy wielu uczniów</a>, nawet jeśli programuj w parach na jednym urządzeniu.
+    Możesz użyć <a href="%{csp_widgets_url}" target="_blank"> najlepszych narzędzi
+    interaktywnych</a> z kursu CS Prinicples (Podstawy Informatyki) w <i>każdej</i>
+    klasie. I Twoi uczniowie mogą <a href="%{unused_code_url}" target="_blank"> zachować
+    niewykorzystany kod</a> w swojej roboczej przestrzeni, aby zachęcić ich do eksperymentowania!
+    Sprawdź nasze nowe propozycje i daj nam znać, co o nich myślisz.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
@@ -981,15 +1000,16 @@
   dashboard_announce_learn_more_button: Ucz się więcej
   dashboard_announce_try_now_button: Spróbuj teraz
   dashboard_announce_host_an_hour_button: Przeprowadź Godzinę Kodowania
-  dashboard_announce_watch_video_button: Watch video
-  dashboard_announce_petition: Jako nauczyciel prowadzisz drogę w ruchu, aby dać każdemu
-    uczniowi w każdej szkole możliwość nauki informatyki. Nadszedł czas, aby poinformować
-    swoich przedstawicieli żeby usłyszeli od Ciebie. W tym tygodniu liderów edukacji,
-    28 Prezesów i dyrektorów w Ameryce największych firm połączonych ze sobą w liście
-    otwartym pytaniem, Kongres USA do funduszu Edukacja informatyczna k-12.
+  dashboard_announce_watch_video_button: Obejrzyj Film
+  dashboard_announce_petition: Jako nauczyciel przewodzisz ruchowi, który umożliwia
+    każdemu uczniowi w każdej szkole naukę informatyki. Nadszedł czas, abyś skontaktował
+    się ze swoimi przedstawicielami. W tym tygodniu, liderzy edukacji, 28 Naczelników
+    i dyrektorów największych firm w Ameryce we wspólnym liście otwartym zwróci się
+    do Kongresu USA o sfinansowanie edukacji informatycznej w K-12.
   dashboard_announce_petition_button: Dodaj swoje imię
-  dashboard_announce_all: Na bieżąco z nowymi funkcjami i aktualizacje na naszym blogu
-    nauczycieli. <a href='%{teacher_blog_url}' target='_blank'> Zobacz poprzednie
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_all: Bądź na bieżąco z nowymi funkcjami i aktualizacjami na naszym
+    blogu dla nauczycieli. <a href='%{teacher_blog_url}' target='_blank'>Zobacz poprzednie
     ogłoszenia.</a>
   dashboard_announce_hoc_launch: Tysiące nauczycieli w ponad 180 krajach rozpocznie
     nauczanie informatyki w czasie Godziny Kodowania w dniach 5-11 grudnia, 2016.
@@ -997,39 +1017,38 @@
     <a href='%{signup_url}' target='_blank'> Zarejestruj swoje zdarzenie w ramach
     Godziny Kodowania</a> i powiadom innego nauczyciela, że każdy może rozpocząć nauczanie
     informatyki.
-  dashboard_announce_hoc_scaling: 'ALERT dla nauczycieli Kursów 1-4 i Przyspieszonego
-    Kursu: z powodu dużej aktywności milionów uczniów w czasie Godziny Kodowania,
-    <b>Code Studio nie będzie zapisywać lub raportować postępów uczniów na tych kursach
-    w dniach 3-11 grudnia 2016</b>. Zalecamy w tym czasie wykonanie z uczniami w klasie
-    godzinnych samouczków, by świętować Tydzień Edukacji Informatycznej. Chociaż nasze
-    samouczki również nie będą zapisywać wyników w tym tygodniu, uczniowie mogą wykonać
-    pełne samouczki i zdobyć certyfikat.'
   dashboard_announce_mc_launch: Jeden z naszych najbardziej popularnych samouczków
     ma teraz dalszy ciąg! Całkowicie nowy samouczek Minecraft Designer pozwala uczniom
     tworzyć własne zasady dla świata Minecrafta. Mogą zdobyć unikatowe doświadczenia
     w świecie Minecrafta a następnie podzielić się nim z przyjaciółmi lub grać na
     swoich telefonach. Zróbcie to ze swoją klasą w ramach Godziny Kodowania.
-  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
-    progress in this course from December 3 - 11 due to the level of traffic our site
-    receives for the Hour of Code during this time.  You can still view student progress
-    from before December 3.  We will go back to saving progress as usual after this
-    week.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
+  dashboard_announce_hoc_scaling_progress: Należy pamiętać, że nie będziemy w stanie
+    zapisywać postępów uczniów w tym kursie w dniach 3-11 grudnia 2016 ze względu
+    na olbrzymi ruchu na naszej stronie w związku z Godziną Kodowania. Nadal możesz
+    oglądać postępy uczniów sprzed 3 grudnia.  Będziesz mógł wrócić do zapisywania
+    postępów po tym tygodniu.
+  dashboard_announce_how_code_studio: Nie potrzebujesz żadnego doświadczenia, aby
+    zacząć uczyć informatyki w swojej klasie. Code.org oferuje curriculum, plany lekcji,
+    wysokiej jakości programy nauczania i tony wspaniałych narzędzi dla wszystkich
+    poziomów nauczania&mdash;wszystko, czego potrzebujesz, za darmo. Ciekaw jesteś,
+    gdzie zacząć? Pobierz <a href='%{video_download_url}'>to wideo</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
     high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Godzina Kodowania jest tutaj - 8-14 grudnia!
   code_sign_up: Zarejestruj się, aby uczestniczyć w tygodniu edukacji informatycznej
     (CS Education Week)
-  host_an_hour: Host an hour
+  host_an_hour: Przeprowadź Godzinę Kodowania
   learn_banner_title: Dołącz do nas na Godzinę Kodowania
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  learn_banner_desc: Godzina Kodowania jest globalną inicjatywą i ruchem, który dotarł
+    do ponad 100 milionów uczniów w ponad 180 krajach. Każdy i wszędzie może zorganizować
+    wydarzenie związanie z Godziną Kodowania. Pomóż nam, by każdemu uczniowi umożliwić
+    naukę informatyki! Organizatorzy mogą posłużyć się naszym <a href='%{how_to_url}'
+    target='_blank'> przewodnikiem</a>, a jaki sposób uczyć w ramach Godziny Kodowania
+    i zainspirować uczniów <a href='%{videos_url}' target='_blank'>tymi filmami</a>.
   learn_more: Spróbuj teraz
   learn_sign_up_description: Zarejestruj się, by uczestniczyć w Godzinie Kodowania
     w czasie Tygodnia Nauczania Informatyki
@@ -1170,6 +1189,7 @@
   csp2_name: 'Unit 2: Cyfrowe informacje'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Pełen test - 50 pytań
   cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
   cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
@@ -1196,15 +1216,18 @@
   hoc_category_name: Godzina Kodowania
   csf_category_name: Podstawy Informatyki
   csd_category_name: 'Under Development: CS Discoveries'
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csp_category_name: Podstawy Informatyki '15-'16
+  csp17_category_name: Podstawy Informatyki '16-'17
+  cspexams_category_name: Praktyczny Test Podstaw Informatyki
   research_studies_category_name: Research Studies
   applab_name: App Lab
+  basketball_name: Utwórz grę w koszykówkę
+  sports_name: Zakoduj własne zawody
   applab_gradelevel: Wiek 13+
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab jest środowiskiem programistycznym, w
+    którym możesz tworzyć proste aplikacje. Zaprojektuj aplikację, zakoduj ją za pomocą
+    bloków lub w JavaScript, aby ją zrealizować, a następnie udostępnij swoją aplikację
+    natychmiast
   codeorg_gradelevel: W wieku 4-104
   codeintl_gradelevel: W wieku 4-104
   thinkersmithspanish_gradelevel: Por todos
@@ -1390,18 +1413,20 @@
     TI-84 &#8482; Plus.
   teacherled_shortdescription: Poczuj się zainspirowany do zaprojektowania własnego
     wydarzenia w ramach Godziny Kodowania z pomocą tych planów lekcji.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  course2_shortdescription_congrats: Dla uczniów z podstawową umiejętnością czytania,
+    ten kurs jest oparty na Kursie 1. Uczniowie będą tworzyli programy, by rozwiązywać
+    problemy i rozwijać interaktywne gry lub historyjki, którymi mogą się dzielić.
+    Zalecane dla klas 2-5.
+  course3_shortdescription_congrats: Czy jesteście gotowi na następny poziom? Uczniowie
+    będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując
+    elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie
+    tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane
+    dla klas 4-5.
+  course4_shortdescription_congrats: Czy jesteście gotowi iść dalej? Uczniowie będą
+    zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując
+    elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie
+    tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane
+    dla klas 4-8.
   codeorg_longdescription: Poznaj podstawowe pojęcia informatyki programując metodą
     przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo
     Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies
@@ -1921,9 +1946,9 @@
     matematyczne i przyrodnicze.
   compatibility_hide_this_warning: Ukryj to ostrzeżenie
   compatibility_unsupported_browser: Twoja przeglądarka nie jest obsługiwana. Prosimy
-    uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>
-    jednego z naszych obsługiwanych przeglądarek</a>. Możesz wyświetlić stronę, ale
-    nie oczekuj w pełni działającej.
+    uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej
+    z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może
+    nie działać właściwie.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1932,34 +1957,3 @@
   infinity_shortcode: inf
   playlab_shortcode: zagraj
   artist_shortcode: art
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game

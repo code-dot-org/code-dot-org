@@ -29,6 +29,20 @@ exports.setSprite = function (id, spriteIndex, value) {
   });
 };
 
+exports.getSpriteVisibility = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteVisibility', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
+};
+
+exports.getSpriteValue = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteValue', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
+  });
+};
+
 exports.saySprite = function (id, spriteIndex, text, seconds) {
   if (seconds === undefined) {
     seconds = SPEECH_BUBBLE_TIME;
@@ -51,6 +65,13 @@ exports.setSpriteEmotion = function (id, spriteIndex, value) {
   Studio.queueCmd(id, 'setSpriteEmotion', {
     'spriteIndex': spriteIndex,
     'value': value
+  });
+};
+
+exports.getSpriteEmotion = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteEmotion', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
   });
 };
 
@@ -96,6 +117,13 @@ exports.setSpriteXY = function (id, spriteIndex, xpos, ypos) {
     'spriteIndex': spriteIndex,
     'x': Number(xpos),
     'y': Number(ypos)
+  });
+};
+
+exports.getSpriteXY = function (id, spriteIndex, callback) {
+  Studio.queueCmd(id, 'getSpriteXY', {
+    'spriteIndex': spriteIndex,
+    'callback': callback
   });
 };
 

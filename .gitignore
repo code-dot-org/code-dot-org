@@ -11,6 +11,7 @@
 .tmputils
 .idea/
 crowdin.yaml
+npm-debug.log
 /.dropbox.cache
 /.gdrive_session
 /.ruby-version
@@ -25,6 +26,7 @@ crowdin.yaml
 /apps/src/util/color.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
+/apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
 /aws/.shared-built

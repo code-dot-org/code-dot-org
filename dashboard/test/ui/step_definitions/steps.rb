@@ -164,11 +164,11 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
 end
 
 Then /^I make all links open in the current tab$/ do
-  @browser.execute_script("$('a[target=_blank').attr('target', '_parent');")
+  @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
 end
 
 Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
-  @browser.execute_script("$('a[target=_blank', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
+  @browser.execute_script("$('a[target=_blank]', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -715,6 +715,10 @@ def wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
 end
 
+Then /^I wait for jquery to load$/ do
+  wait_for_jquery
+end
+
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
   wait_with_short_timeout.until {
     @child_item = @browser.find_element(:id, child_id)
@@ -809,7 +813,7 @@ def generate_teacher_student(name, teacher_authorized)
     And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
-    And I click selector ".btn-primary:contains('Save')"
+    And I click selector ".btn-primary:contains('Save')" once I see it
     And I click selector "a:contains('Manage Students')" once I see it
     And I save the section url
     Then I sign out
@@ -820,7 +824,7 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
-    And I click selector "input[type=submit]"
+    And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/"
   }
 end
