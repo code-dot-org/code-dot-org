@@ -46,13 +46,16 @@ def saucelabs_browser
     retries = 0
     begin
       http_client = Selenium::WebDriver::Remote::Http::Persistent.new
+
+      # Longer overall timeout, because iOS takes more time
+      http_client.timeout = 5.minutes
+
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
         http_client: http_client
       )
-      # Longer overall timeout, because iOS takes more time
-      http_client.timeout = 5.minutes
+
       # Shorter idle_timeout to avoid "too many connection resets" error
       # and generally increases stability, reduces re-runs.
       # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
