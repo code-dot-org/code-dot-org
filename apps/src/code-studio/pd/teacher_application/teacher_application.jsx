@@ -612,7 +612,11 @@ const TeacherApplication = React.createClass({
     }
 
     _.forEach(fieldsToValidate, (field) => {
-      if (this.state[field] === undefined || this.state[field].length === 0) {
+      if (fieldValidationErrors[field] && this.state[field]) {
+        if (fieldValidationErrors[field](this.state[field])) {
+          topInvalidElementId = topInvalidElementId || field;
+        }
+      } else if (this.state[field] === undefined || this.state[field].length === 0) {
         this.setState({[field]: ''});
         topInvalidElementId = topInvalidElementId || field;
       }

@@ -6,9 +6,9 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     refute teacher_application.valid?
     assert_equal [
       'User is required',
+      'Application is required',
       'Primary email is required',
-      'Secondary email is required',
-      'Application is required'
+      'Secondary email is required'
     ], teacher_application.errors.full_messages
 
     teacher_application.user = create :teacher
@@ -23,6 +23,7 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
     teacher_application = build :pd_teacher_application, application: {}
 
     refute teacher_application.valid?
+    # Three fields are validated outside the list of validated fields
     assert_equal Pd::TeacherApplication::REQUIRED_APPLICATION_FIELDS.count, teacher_application.errors.count
     assert teacher_application.errors.full_messages.all?{|m| m.include? 'Application must contain'}
 
@@ -53,6 +54,14 @@ class Pd::TeacherApplicationTest < ActiveSupport::TestCase
       create :pd_teacher_application, secondary_email: 'invalid@ example.net'
     end
     assert_equal 'Validation failed: Secondary email does not appear to be a valid e-mail address', e.message
+
+    e = assert_raises ActiveRecord::RecordInvalid do
+      application = create :pd_teacher_application
+      hash = application.application_hash
+      hash['principalEmail'] = 'invalid@ example.net'
+      application.update!(application: hash.to_json)
+    end
+    assert_equal 'Validation failed: Principal email does not appear to be a valid e-mail address', e.message
   end
 
   test 'setting application hash sets email fields' do
