@@ -369,6 +369,8 @@ export const HIDDEN_VALUE = '"hidden"';
 export const CLICK_VALUE = '"click"';
 export const VISIBLE_VALUE = '"visible"';
 
+export const EMPTY_QUOTES = '""';
+
 // Number of extra ticks between the last time the sprite moved and when we
 // reset them to face south.
 export const IDLE_TICKS_BEFORE_FACE_SOUTH = 4;
