@@ -201,22 +201,41 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
+    text_response_levels = []
+    @script.script_levels.map do |script_level|
+      script_level.levels.map do |level|
+        unless level.contained_levels.empty?
+          text_response_levels << {
+            script_level: script_level,
+            levels: [level.contained_levels.first]
+          }
+        end
+      end
+    end
+
+    text_response_levels.concat(@script.script_levels.includes(:levels).
+        where('levels.type' => [TextMatch, FreeResponse]).
+        map do |script_level|
+          {
+            script_level: script_level,
+            levels: script_level.levels
+          }
+        end)
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt_for_any(script_level.levels)
+      text_response_levels.map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
+          stage: level_hash[:script_level].stage.localized_title,
+          puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: @section.id, user_id: student.id)
         }
       end.compact
     end.flatten
