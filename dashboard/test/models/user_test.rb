@@ -830,6 +830,28 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
+  test 'can_edit_password? is true for user with password' do
+    user = create :student
+    assert user.can_edit_password?
+  end
+
+  test 'can_edit_password? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_password?
+  end
+
+  test 'can_edit_email? is true for user with password' do
+    user = create :student
+    assert user.can_edit_email?
+  end
+
+  test 'can_edit_email? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_email?
+  end
+
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
