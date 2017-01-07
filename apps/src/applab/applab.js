@@ -59,6 +59,7 @@ import {
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -352,15 +353,6 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
 function renderFooterInSharedGame() {
   const divApplab = document.getElementById('divApplab');
   const footerDiv = document.createElement('div');
@@ -381,7 +373,7 @@ function renderFooterInSharedGame() {
     },
     isIframeEmbed && window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
+      link: project.getProjectUrl('/view'),
       newWindow: true,
     },
     {
