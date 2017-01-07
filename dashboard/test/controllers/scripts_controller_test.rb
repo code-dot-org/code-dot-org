@@ -244,4 +244,18 @@ class ScriptsControllerTest < ActionController::TestCase
 
     File.unstub(:write)
   end
+
+  test 'destroy raises exception for evil filenames' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+
+    # Note that these script names (intentionally) fail model validation.
+    ['../evil_script_name', 'subdir/../../../evil_script_name'].each do |name|
+      evil_script = Script.new(name: name)
+      evil_script.save(validate: false)
+      assert_raise ArgumentError do
+        delete :destroy, id: evil_script.id
+      end
+    end
+  end
 end
