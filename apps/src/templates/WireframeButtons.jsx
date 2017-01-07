@@ -1,5 +1,7 @@
 var React = require('react');
 
+var project = require('@cdo/apps/code-studio/initApp/project');
+
 var SendToPhone = window.dashboard ? window.dashboard.SendToPhone : undefined;
 
 var styles = {
@@ -18,9 +20,6 @@ var styles = {
     },
   }
 };
-
-
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 
 /**
@@ -49,47 +48,6 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   playlab: '/p/playlab',
   playlab_legacy: '/s/playlab',
 };
-
-
-
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
-
-/**
- * Appends the given fragment to the given url. Query string is retained, but hash string is removed.
- * Also ensures that string join does not end up duplicating '/' char.
- * @param url complete url
- * @param fragment text to add to url path, before query string if any
- * @returns new url
- */
-export function appendUrl(url, fragment) {
-  var hashIndex = url.indexOf('#');
-  if (hashIndex !== -1) {
-    url = url.substring(0, hashIndex);
-  }
-  var queryString = '';
-  var queryIndex = url.indexOf('?');
-  if (queryIndex !== -1) {
-    queryString = url.substring(queryIndex);
-    url = url.substring(0, queryIndex);
-  }
-  if (fragment.startsWith('/')) {
-    while (url.endsWith('/')) {
-      url = url.substring(0, url.length - 1);
-    }
-  }
-  return url + fragment + queryString;
-}
 
 
 /**
@@ -136,7 +94,7 @@ let WireframeButtons = React.createClass({
     if (APP_TYPES_WITH_VIEW_CODE.includes(this.props.appType)) {
       return (
           <span>
-            <a className="WireframeButtons_button" href={appendUrl(getProjectUrl(), '/view')}>
+            <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
               <i className="fa fa-code"/> View code
             </a><sp/>
           </span>
