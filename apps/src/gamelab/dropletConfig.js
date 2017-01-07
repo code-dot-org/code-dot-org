@@ -2,7 +2,7 @@
 
 var api = require('./apiJavascript.js');
 var consoleApi = require('../consoleApi');
-import {dropletConfig as audioApi} from '@cdo/apps/lib/util/audioApi';
+import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var getAssetDropdown = require('../assetManagement/getAssetDropdown');
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -30,6 +30,7 @@ var getAnimationDropdown;
 exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
+  audioApi.injectExecuteCmd(gameLab.executeCmd.bind(gameLab));
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -54,8 +55,8 @@ module.exports.blocks = [
   {func: 'Game.mouseY', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/mouseY" },
   {func: 'Game.frameRate', category: 'Game Lab', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/frameRate" },
   {func: 'Game.frameCount', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/frameCount" },
-  Object.assign({}, audioApi.playSound, {category: 'Game Lab'}),
-  Object.assign({}, audioApi.stopSound, {category: 'Game Lab'}),
+  Object.assign({}, audioApi.dropletConfig.playSound, {category: 'Game Lab'}),
+  Object.assign({}, audioApi.dropletConfig.stopSound, {category: 'Game Lab'}),
   {func: 'keyIsPressed', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyIsPressed" },
   {func: 'key', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/key" },
   {func: 'keyCode', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyCode" },
