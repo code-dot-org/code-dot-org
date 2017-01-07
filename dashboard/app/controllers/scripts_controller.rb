@@ -33,8 +33,8 @@ class ScriptsController < ApplicationController
   end
 
   def destroy
-    # Though script.name is restricted to containing lower case characters,
-    # dashes, and numbers only, we do these security checks for safety.
+    # Though @script.name is restricted to containing lower case characters,
+    # dashes, and numbers only, we do this (security) check for safety.
     if (@script.name.start_with? '../') ||
       (@script.name.include? '/../')
       raise ArgumentError, "evil script name (#{@script.name})"
