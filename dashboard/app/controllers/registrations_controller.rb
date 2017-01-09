@@ -11,11 +11,15 @@ class RegistrationsController < Devise::RegistrationsController
     params.permit!
 
     # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
-    @user.skip_reconfirmation! if params[:user][:email].present? && !@user.confirmation_required?
-    @user.confirmed_at = nil if params[:user][:email].present? && !@user.confirmation_required?
+    if params[:user][:email].present? && !@user.confirmation_required?
+      @user.skip_reconfirmation!
+      @user.confirmed_at = nil
+    end
 
     successfully_updated =
-      if needs_password?(@user, params)
+      if forbidden_change?(@user, params)
+        false
+      elsif needs_password?(@user, params)
         @user.update_with_password(params[:user])
       else
         # remove the virtual current_password attribute update_without_password
@@ -53,6 +57,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
+  # Reject certain changes for certain users outright
+  def forbidden_change?(user, params)
+    return true if params[:user][:password].present? && !user.can_edit_password?
+    return true if params[:user][:email].present? && !user.can_edit_email?
+    false
+  end
 
   # check if we need password to update user data
   # ie if password or email was changed
