@@ -3,7 +3,7 @@ name 'Commute Assess - func 3b - block'
 question 'What will be displayed when this code is run?'
 wrong'<pre>in func3<br>in func3<br>in func1</pre>'
 wrong'<pre>in func3<br>in func1<br>in func3</pre>'
-right'<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually’
+right'<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually’
 wrong '<pre>in func3<br>in func1</pre>'
 wrong '<pre>func3<br>func1</pre>'
 wrong ‘Nothing is displayed'
