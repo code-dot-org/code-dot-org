@@ -28,11 +28,17 @@ var ProtectedStatefulDiv = React.createClass({
   },
 
   componentWillUnmount: function () {
-    throw new Error("Unmounting a ProtectedStatefulDiv is not allowed.");
+    // when using the storybook styleguide, we don't really need to protect
+    // anything, and actually we want to unmount/remount stuff all the time
+    // when the page is hot-reloaded
+    if (!BUILD_STYLEGUIDE) {
+      throw new Error("Unmounting a ProtectedStatefulDiv is not allowed.");
+    }
   },
 
   render: function () {
     return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
 });
-module.exports = Radium(ProtectedStatefulDiv);
+
+export default Radium(ProtectedStatefulDiv);
