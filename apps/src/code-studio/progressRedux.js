@@ -22,14 +22,17 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
 const initialState = {
+  // These first fields never change after initialization
   currentLevelId: null,
   professionalLearningCourse: null,
+  // used on multi-page assessments
+  saveAnswersBeforeNavigation: null,
+
+  // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
   focusAreaPositions: [],
-  saveAnswersBeforeNavigation: null,
   stages: null,
-  peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
@@ -156,14 +159,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  scriptName,
-  peerReviewsRequired
+  scriptName
 });
 
 export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
