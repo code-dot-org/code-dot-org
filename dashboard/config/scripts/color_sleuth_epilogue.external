@@ -10,14 +10,14 @@ markdown <<MARKDOWN
 
 We hope that following the conversation between Alexis and Michael helped to demonstrate both that:
 
-* writing any program requires making a lot of decisions
-* those decisions often require creativity and problem-solving
+* Writing any program requires making a lot of decisions
+* Those decisions often require creativity and problem-solving
 
 But Alexis and Michael came up with *just one way* to write the program out of many many possibilities.  If they had started a different way, or made different decisions along the way, the actual code may have come out much differently, even if the program worked the same.
 
 ## Writing code is a form of personal expression
 
-This fact - that are so many ways to go about writing the code for an app - is what people find so cool, fun and engaging about programming.
+This fact - there are so many ways to go about writing the code for an app - is what people find so cool, fun, and engaging about programming.
 
 It's surprising to many people who haven't programmed before that, like any piece of writing, writing code is not like solving a math problem.  It's a creative undertaking and the resulting code provides view into the mind of the author.
 
@@ -25,7 +25,7 @@ As evidence, just look at your classmates' solutions for how to end the Color Sl
 
 ## Is Alexis and Michael's conversation actually realistic?
 
-The conversation between Alexis and Michael has been optimized for this lesson - it's shorter than is probably realistic, and also Alexis and Michael didn't really make any bad decisions.  They made decisions and came up with ideas that people with a *bit* more experience might.  Most of the time the things you try out, solutions you come up with, don't all work.  Many times you start down one path and realize you might want to start over.  That's ok.  
+The conversation between Alexis and Michael has been optimized for this lesson - it's shorter than what is probably realistic, and also Alexis and Michael didn't really make any bad decisions.  They made decisions and came up with ideas that people with a *bit* more experience might.  Most of the time the things you try out, solutions you come up with, don't all work.  Many times you start down one path and realize you might want to start over.  That's ok.  
 
 While you might not always have as smooth a path to a solution as Alexis and Michael, the way that they are portrayed talking to each other *is realistic*. In fact, it captures many of the elements of the *actual conversations* between the authors of Color Sleuth app as they developed it for this lesson.
 
