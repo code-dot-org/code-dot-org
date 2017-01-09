@@ -9,7 +9,7 @@ testUtils.setExternalGlobals();
 var Exporter = require('@cdo/apps/applab/Exporter');
 
 describe('The Exporter,', function () {
-  var zipPromise, server;
+  var server, listStub;
 
   beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
@@ -37,6 +37,7 @@ describe('The Exporter,', function () {
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
     ]);
+    listStub = dashboard.assets.listStore.list;
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
     server.respondWith('/v3/assets/some-channel-id/zoo.mp3', 'zoo.mp3 content');
@@ -45,17 +46,8 @@ describe('The Exporter,', function () {
   afterEach(function () {
     server.restore();
     assetPrefix.init({});
-    dashboard.assets.listStore.list.restore();
+    listStub.restore();
   });
-
-  // TODO(pcardune): remove x'd out tests.
-  /**
-   * These tests are currently x'd out because they don't pass with the new webpack build system.
-   * Since this feature hasn't launched yet and still has a lot of changes that need to be made,
-   * I think this is OK. We will reenable these tests in the process of completing the export
-   * feature. I'm leaving them here so I don't have to go hunting through git history to find
-   * them.
-   */
 
   describe("when assets can't be fetched,", function () {
     beforeEach(function () {
@@ -63,7 +55,7 @@ describe('The Exporter,', function () {
     });
 
     it("should reject the promise with an error", function (done) {
-      zipPromise = Exporter.exportAppToZip(
+      let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");',
         `<div>
@@ -87,7 +79,7 @@ describe('The Exporter,', function () {
   describe("when exporting,", function () {
     var zipFiles = {};
     beforeEach(function (done) {
-      zipPromise = Exporter.exportAppToZip(
+      let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");\nplaySound("zoo.mp3");',
         `<div>
@@ -188,6 +180,53 @@ describe('The Exporter,', function () {
 
     });
 
+  });
+
+  function runExportedApp(code, html, done) {
+    let zipPromise = Exporter.exportAppToZip('my-app', code, html);
+    server.respond();
+
+    const relativePaths = [];
+    return zipPromise.then(zip => {
+      zip.forEach((relativePath, file) => relativePaths.push(relativePath));
+      return Promise.all(relativePaths.map(path => {
+        var zipObject = zip.file(path);
+        if (zipObject) {
+          return zipObject.async("string");
+        }
+      })).then(fileContents => {
+        const zipFiles = {};
+        relativePaths.forEach((path, index) => {
+          zipFiles[path] = fileContents[index];
+        });
+        const htmlFile = zipFiles['my-app/index.html'];
+        document.body.innerHTML = htmlFile.slice(
+          htmlFile.indexOf('<body>') + '<body>'.length,
+          htmlFile.indexOf('</body>')
+        );
+        window.$ = require('jquery');
+        require('../../../build/package/js/applab-api.js');
+        new Function(zipFiles['my-app/code.js'])();
+        done();
+      }).catch(e => {
+        done(e);
+      });
+    });
+  }
+
+  describe("Regression tests", () => {
+    it("should allow screens to be switched programmatically", (done) => {
+      runExportedApp(
+        `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,
+        `<div>
+          <div class="screen" tabindex="1" id="screen1">
+          </div>
+          <div class="screen" tabindex="1" id="screen2">
+          </div>
+        </div>`,
+        done
+      );
+    });
   });
 
 });

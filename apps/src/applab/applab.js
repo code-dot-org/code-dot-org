@@ -592,7 +592,10 @@ Applab.init = function (config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  const containerEl = document.getElementById(config.containerId);
+  if (containerEl) {
+    adjustAppSizeStyles(containerEl);
+  }
 
   var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
