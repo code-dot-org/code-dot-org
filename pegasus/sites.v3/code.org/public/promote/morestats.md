@@ -30,6 +30,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Seeing our impact: A [record year](http://blog.code.org/post/91961669383/ap-computer-science) for computer science (2013-2014)
 * The Hour of Code [reached](http://blog.code.org/post/70175643054/stats) 15 million users in 7 days (2014)
 * [15,000](http://blog.code.org/post/128786388333/15000-new-computer-science-teachers) new computer science teachers (2015)
+* [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
 
