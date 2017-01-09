@@ -34,11 +34,11 @@ export const commands = {
    *        stop other instances of the same sound from playing.  If true,
    *        multiple instances of the sound may be played simultaneously.
    */
-  playSound: function playSound(opts) {
+  playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
 
     if (studioApp.cdoSounds) {
-      let url = assetPrefix.fixPath(opts.url);
+      const url = assetPrefix.fixPath(opts.url);
       if (studioApp.cdoSounds.isPlayingURL(url)) {
         return;
       }
@@ -80,7 +80,7 @@ export const commands = {
    * Stop playing a sound, or all sounds.
    * @param {string} [opts.url] The sound to stop.  Stops all sounds if omitted.
    */
-  stopSound: function stopSound(opts) {
+  stopSound(opts) {
     apiValidateType(opts, 'stopSound', 'url', opts.url, 'string', OPTIONAL);
 
     if (studioApp.cdoSounds) {
