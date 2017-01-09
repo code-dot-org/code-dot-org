@@ -5035,8 +5035,8 @@ en:
         "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
         "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
         "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be printed over and over until the code is stopped manually'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
         Nothing is displayed: Nothing is displayed
         What will be displayed when this code is run?: What will be displayed when this code is run?
       CommuteAssess - Cond 1 - block:
@@ -5102,8 +5102,8 @@ en:
         '1': '1'
         '10': '10'
         '5': '5'
-        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
-        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
         ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
         it will be different each time you run it: it will be different each time you run it

@@ -4,7 +4,7 @@ wrong '0'
 wrong '1'
 wrong '5' 
 wrong '10'
-right '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will be continuously displayed until the program is stopped manually'
+right '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
 wrong 'it will be different each time you run it'
 
 markdown <<MARKDOWN
