@@ -250,7 +250,11 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
 
     # Note that these script names (intentionally) fail model validation.
-    ['../evil_script_name', 'subdir/../../../evil_script_name'].each do |name|
+    [
+      '~/evil_script_name',
+      '../evil_script_name',
+      'subdir/../../../evil_script_name'
+    ].each do |name|
       evil_script = Script.new(name: name)
       evil_script.save(validate: false)
       assert_raise ArgumentError do
