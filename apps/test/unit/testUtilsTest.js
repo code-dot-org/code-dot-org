@@ -1,6 +1,5 @@
 /** @file Who watches the watchers? */
 import React from 'react';
-import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {
   forEveryBooleanPermutation,
@@ -73,13 +72,11 @@ describe('throwOnConsoleErrors', function () {
   describe('with it', function () {
     throwOnConsoleErrors();
     it('console.error does throw an exception', function () {
-      // Suppress excessive logging during test
-      sinon.stub(console, 'log');
-
-      expect(() => console.error('should throw'))
-          .to.throw(Error, 'should throw');
-
-      console.log.restore();
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.error('should throw');
     });
   });
 });
@@ -95,13 +92,11 @@ describe('throwOnConsoleWarnings', function () {
   describe('with it', function () {
     throwOnConsoleWarnings();
     it('console.warn does throw an exception', function () {
-      // Suppress excessive logging during test
-      sinon.stub(console, 'log');
-
-      expect(() => console.warn('should throw'))
-        .to.throw(Error, 'should throw');
-
-      console.log.restore();
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.warn('should throw');
     });
   });
 });
