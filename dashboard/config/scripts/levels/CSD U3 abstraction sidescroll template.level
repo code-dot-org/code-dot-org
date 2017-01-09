@@ -38,6 +38,7 @@
       "ellipse": null,
       "line": null,
       "rect": null,
+      "text": null,
       "comment_Drawing": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
@@ -77,7 +78,10 @@
     "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
