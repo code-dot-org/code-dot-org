@@ -1,4 +1,4 @@
-import { assert } from '../../util/configuredChai';
+import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
 
@@ -396,10 +396,10 @@ describe('progressReduxTest', () => {
       // });
 
       assert.deepEqual(nextState.stages[1].levels[0], {
-        // Seems strange to have both an id and ids
+        // TODO: Seems strange to have both an id and ids. Can we make this better?
         id: 13,
         ids: [0],
-        // Seems strange to have an fa-lock icon even tho we're not locked
+        // TODO: Seems strange to have an fa-lock icon even tho we're not locked.
         icon: 'fa-lock',
         locked: false,
         kind: "peer_review",
