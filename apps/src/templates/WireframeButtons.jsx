@@ -81,7 +81,7 @@ let WireframeButtons = React.createClass({
         <div style={styles.main}>
           {this.renderViewCodeButton()}
           {this.renderNewProjectButton()}
-          <span  style={{display: 'inline-block'}}>
+          <span style={{display: 'inline-block'}}>
             <a className={this.getSendToPhoneButtonClass()} onClick={this.handleClickSendToPhone}>
               <i className="fa fa-mobile"/> Send to phone
             </a>
