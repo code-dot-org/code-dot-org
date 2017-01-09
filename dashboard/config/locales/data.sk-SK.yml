@@ -263,42 +263,41 @@
           pole?
         maze_karel_debug_function_3: 'Uprav tento program tak, aby z poľa odstránil
           všetky kôpky. '
-        turtle_5_1: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_2: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_3: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_4: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_5: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        turtle_5_6: Try running this program, and make changes to see what happens.
-          Can you figure out how it works? (Or delete it and replace it with something
-          totally different)
-        maze_3_1: I need to get to that pig! Type in a couple of calls to move();
-          so I can get my eggs back.
-        maze_3_2: Write me a program, so I can make it all the way to the pig.
-        maze_3_3: How should I get to the pig? Make sure I don't run into the box
-          of TNT!
-        maze_3_4: Argh! Write me a program that gets me around the TNT and to the
-          pig.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
+        turtle_5_1: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        turtle_5_2: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        turtle_5_3: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        turtle_5_4: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        turtle_5_5: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        turtle_5_6: Skús spustiť tento program a spraviť v ňom zmeny a pozri, čo sa
+          stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž a nahraď niečim
+          úplne iným)
+        maze_3_1: Potrebujem sa dostať k tomu prasaťu! Napíš niekoľko volaní pohybu
+          - move(); - aby som získal svoje vajíčka späť.
+        maze_3_2: Napíš pre mňa program, aby som sa dostal až k tomu prasaťu.
+        maze_3_3: Ako by som sa len dostal k tomu prasaťu? Dávaj pozor aby som neskočil
+          na škatuľu s TNT!
+        maze_3_4: Grr! Napíš mi program, ktorý ma dostane okolo TNT k tomu prasaťu.
+        bounce_1_basketball: Pripoj blok k bloku "ak ľavá šípka" a stlač "Spustiť".
+          Pohni rukou pomocou ľavej šípky a dojdi až do cieľu.
+        bounce_2_basketball: Pripoj blok k blokom "ak pravá šípka" a "ak ľavá šípka".
+          Pohni rukou a dojdi do oboch cieľov.
         bounce_5_basketball: We're going to send a ball flying down towards the hand.
           Attach a block to the "when ball hits hand" block to ensure the ball reaches
           the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
+        bounce_6_basketball: Teraz je vlajka hore. Musíš pripojiť bloky k obom "ak
+          sa lopta dotke" blokom, aby si vyriešil úlohu.
+        bounce_7_basketball: Pripoj bloky ku každému z "ak" blokov. Skáč s loptou
+          až kým sa nedotkne vlajky.
         bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
           and "score opponent point" blocks to the "when ball in goal" and "when ball
           misses hand" blocks to make a game. See how many points you can score before
@@ -316,10 +315,10 @@
           arrow" and "when right arrow" blocks to make your player move in two directions.
         bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
           a block to the "when ball hits player" block to hit the flag.
-        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
-          both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
-          until it hits the flag.
+        bounce_6_sports: Teraz je vlajka hore. Musíš pripojiť bloky k obom "ak sa
+          lopta dotke" blokom, aby si vyriešil úlohu.
+        bounce_7_sports: Pripoj bloky ku každému z "ak" blokov. Skáč s loptou až kým
+          sa nedotkne vlajky.
         bounce_10_sports: Now there is a goal at the top! Attach the "score point"
           and "score opponent point" blocks to the "when ball in goal" and "when ball
           misses hand" blocks to make a game. See how many points you can score before
@@ -590,8 +589,8 @@
         maze_intro: Maze Intro
         artist_intro: Artist Intro
         farmer_intro: Farmer Intro
-        flappy_intro: Flappy Intro
-        loop_times: Repeat Times Block
+        flappy_intro: "Úvod do Flappy"
+        loop_times: Blok Opakovať x-krát
         loop_until: Repeat Until Block
         if: If Block
         if_else: If/else Block
@@ -625,8 +624,8 @@
         C1_zuck_repeat_loop: Maze Loops
         C1_bee_loops: Bee Loops
         C1_maze_loops: Maze Loops
-        C1_playlab_storytelling: Play Lab - Create a Story
-        C1_planting_seed: Výsadba osiva
+        C1_playlab_storytelling: 'Hravé laboratórium: Vytvor príbeh'
+        C1_planting_seed: Sadenie semiačka
         C1_building_foundation: Stavanie základov
         C1_going_places_safely: Bezpečné premiestňovanie
         C2_maze_intro: Maze Intro
@@ -637,7 +636,7 @@
         C2_bee_loops: Bee Loops
         C2_bee_debugging: Bee Debugging
         C2_bee_conditionals: Bee Conditionals
-        C2_playlab_createstory: Play Lab - Create a Story
+        C2_playlab_createstory: 'Hravé laboratórium: Vytvor príbeh'
         C2_graph_paper: Programovanie na milimetrovom papieri
         C2_conditionals_with_cards: Podmienky
         C2_binary_bracelets: Binárne náramky
@@ -672,8 +671,8 @@
         C4_for_loops_bee: For Loops
         C4_for_loops_no_bee: For Loops
         C4_math_artist: Programming the Artist with Math
-        C4_function_edit: "Úprava Funkcií"
-        C4_function_create: Tvorba Funkcií
+        C4_function_edit: "Úprava funkcií"
+        C4_function_create: Tvorba funkcií
         C4_function_parameters: Functions with Parameters
         C4_conditionals: Podmienky
         C4_unplugged_algorithms: Algorithms with Tangrams
@@ -707,6 +706,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -846,7 +848,7 @@
         playlab_add_move: Add "move" blocks inside this repeat block
         playlab_add_score: Tu pridaj blok skóre
         playlab_add_blocks: Tu pridaj svoje bloky
-        set_variable: Tu pritiahni blok čísel, aby si mohol nastaviť svoju premennú
+        set_variable: Sem pritiahni blok čísel, aby si mohol nastaviť svoju premennú
         place_variable: Drag your variable inside this block
         bee_for_loop: Drag the largest number of nectar you want the bee to collect
           here
@@ -864,12 +866,12 @@
           and then drag it into your function definition
         fill_in_actor: Vyplň ??? číslami, ktoré zodpovedajú každej postave (1, 2,
           a 3)
-        repeat: Pre opakovanie príkazov, vlož bloky do slučky
+        repeat: Pre opakovanie príkazov, vlož bloky do cyklu
         if_bee_nectar: Use the "if" block to decide if the bee should get nectar
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower,
           and makes honey if it's not a flower
-        repeat_full_circle: Zadaj číslo, koľko krát sa má zombie posunúť tak, aby
-          spravil celý kruh
+        repeat_full_circle: Zadaj číslo, koľkokrát sa má zombie posunúť tak, aby spravil
+          celý kruh
         place_length_variable: Drag the length variable here to replace the question
           marks
         arrows_move_actor: Pre pohyb postavy použi šípky
@@ -880,7 +882,7 @@
           the up arrow is pressed?
         Infinity_move_directions_callout_arrow: Tieto šípky použi na riadenie
         Infinity_move_collide_callout: Keď nastane táto udalosť prehraj zvuk.
-        Infinity_repeat_callout: Sem umiestni blok Posunúť
+        Infinity_repeat_callout: Sem umiestni bloky Posunúť
         craft_run_button_callout: Stlačte "Spustiť" pre vyskúšanie programu
         craft_drag_block_callout: Potiahni "posunúť vpred()" blok a zapoj ho pod iný
           blok

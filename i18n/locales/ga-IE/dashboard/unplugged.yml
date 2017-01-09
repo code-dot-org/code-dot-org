@@ -128,8 +128,8 @@ ga:
         desc: 'Sa cheacht seo, cruthóidh na daltaí algartam le hathróga agus le feidhmeanna (blúirí cóid is féidir a úsáid arís is arís eile) chun móibílí gréine a dhéanamh as sreangáin agus coirníní.'
         video: 'C3_functional_suncatchers'
       'SongwritingParameters':
-        title: 'Ceapadh Ceoil le Paraiméadair'
-        desc: 'Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi pharaiméadair (luachanna a athraíonn feidhm gan gá an fheidhm a athscríobh).'
+        title: 'Ceapadh Ceoil'
+        desc: 'Úsáideann na daltaí coincheap an churfá in amhrán chun foghlaim faoi fheidhmeanna.'
         video: 'C3_songwriting_with_parameters'
       'DiceRace':
         title: 'Algartaim Fhíorshaoil: An Rás Díslí'

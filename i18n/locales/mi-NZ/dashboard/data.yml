@@ -47,7 +47,7 @@ mi:
         'sequence': 'Raupapa'
         'if': 'paraka Mēnā'
         'if_else': 'paraka Mēnā-kē'
-        'loop_times': 'Repeat times block'
+        'loop_times': 'Paraka Tōai ngā wā'
         'loop_until': 'paraka Tōaitia kia'
         'loop_while': 'paraka I te'
         'loop_for': 'paraka Pūtatau'
@@ -62,7 +62,7 @@ mi:
         'maze_2_4': "Kia mauri tau, ā, āwhinatia ahau ki te rapu i te poaka kino. Kei riri ahau!"
         'maze_2_5': "He ara e tae atu ai au ki te poaka mā te whakamahi i ngā paraka e rua noa iho. E āhei ana koe te kite?"
         'maze_2_6': "Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki me ngā paraka e toru noa iho."
-        'maze_2_7': "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block."
+        'maze_2_7': "Āwhinatia ahau ki te pei i tēnei poaka kino mā te whakamahi i te itinga o ngā paraka e taea ana. Tēnā, whakamahia kia neke atu i te kotahi paraka \"tōaitia ngā wā\"."
         'maze_2_8': "Me he kiwikiwi te paraka, he tohu tēnā kāore e āhei taua paraka te muku. Whakaotihia tēnei panga mā te whakamahi i te paraka \"tōai\" ka tōai i ngā wā e toru. Me ngana ki te hoatu i ēnei paraka e toru ki roto i te paraka \"tōai\": neke, neke, huri."
         'maze_2_9': "Ka pai, tēnā whakamātauria te paraka hou \"tōaitia i te\" - ka tōai tonu kia tae rawa atu au ki te poaka whakapōrearea."
         'maze_2_10': "Ka pai, kotahi anō te wā whakaharatau - ka taea e koe tēnei te whakaoti mā te whakamahi i ngā paraka e 4 noa iho?"
@@ -420,6 +420,9 @@ mi:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'

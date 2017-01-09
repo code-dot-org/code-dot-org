@@ -1,10 +1,10 @@
 {
   "actor":"aktör",
-  "add":"add",
-  "ask":"ask",
+  "add":"lägg till",
+  "ask":"fråga",
   "addCharacter":"lägg till en",
   "addCharacterTooltip":"Lägga till en karaktär till scenen.",
-  "addGoal":"add goal",
+  "addGoal":"lägg till mål",
   "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"lägg till 10 poäng",
   "addPoints50":"lägg till 50 poäng",

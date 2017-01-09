@@ -195,8 +195,8 @@
           så bruk "teller"-blokken. Tips: den finnes i kategorien Variabler.'
         turtle_2_7: Her er et program som tegner en spiral, men blokkene er deaktivert
           slik at de ikke kan kjøre. Lag et nytt program som bruker en "tell med"
-          blokk (i kategorien løkker) og en "gjenta med teller" blokk (i kategorien
-          variabler) for å tegne den samme spiralen.
+          blokk (i kategorien løkker) og en "teller" blokk (i kategorien variabler)
+          for å tegne den samme spiralen.
         turtle_2_7_5: Det finnes en ny funksjon for "tegn en snømann" (i kategorien
           funksjoner). Tegn to snømenn, med høyde 250 og 100.
         turtle_2_8: Denne er litt vanskelig. Bruk "tegn en snømann"-funksjonen og
@@ -723,6 +723,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

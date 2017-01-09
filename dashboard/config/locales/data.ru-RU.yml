@@ -339,23 +339,24 @@
           к флагу.
         bounce_2_sports: Теперь у нас сразу два флага! Используй блоки "вправо" и
           "влево" чтобы твой игрок двигался в разных направлениях.
-        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
-          a block to the "when ball hits player" block to hit the flag.
+        bounce_5_sports: Хоккейная шайба будет лететь вниз к игроку! Присоедини блок
+          "когда шар ударяет игрока" что бы попасть в флаг.
         bounce_6_sports: "Сейчас флаг находится наверху. Чтобы решить эту головоломку,
           тебе нужно присоединить блоки к обоим блокам «когда мяч стукнется»."
         bounce_7_sports: "Прикрепите блоки к каждому из блоков. Отскок мяча, пока
           он не попадает в флаг"
-        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice!
+        bounce_10_sports: "Теперь появилась цель наверху. Чтобы создать игру, присоедини
+          блоки «заработать очко» и «добавить очко противнику» к блокам «когда мяч
+          достиг цели» и «когда мяч не сталкивается с платформой». Посмотри, сколько
+          очков ты сможешь заработать, прежде чем твой противник заработает вдвое
+          больше!"
         bounce_11_sports: Теперь вы можете прикрепить блоки к "при запуске" блок.
           Вы должны приложить новый "бросить мяч" в более чем одном месте. Также,
           попробуйте изменить место или скорость рука и мяч и посмотреть, сколько
           очков вы можете забить до Вашего соперника дважды
-        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
-          all the rules, mix and match sports, get creative! When you''re done, click
-          Finish to let friends try your game on their phones.'
+        bounce_12_sports: "Создайте свою игру! Здесь вы можете что угодно: можете
+          менять правила, смешивать виды спорта, творить! Когда вы закончите, нажмите
+          кнопку Готово, чтобы дать друзьям попробовать вашу игру на своих телефонах."
         bounce_1: "Присоедини блок к блоку «при нажатии левой стрелки» и нажми «Выполнить».
           Для достижения конечной цели двигай платформу с помощью левой стрелки."
         bounce_2: "Присоедини блок к блокам «при нажатии правой стрелки» и «при нажатии
@@ -755,6 +756,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -830,11 +834,11 @@
         iceage_intro: "Час кода. Ледниковый период. Введение"
         iceage_events: "Час кода. Ледниковый период. События"
         iceage_repeat: "Час кода. Ледниковый период. Операторы цикла"
-        mc_2016_intro: Minecraft Hour of Code - Introduction
-        mc_2016_loops: Minecraft Hour of Code - Loops
-        mc_2016_events: Minecraft Hour of Code - Events
-        mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_intro: Minecraft Час Кода - Введение
+        mc_2016_loops: Minecraft Час Кода - Циклы
+        mc_2016_events: "Час Кода Minecraft - События"
+        mc_2016_spawn: Minecraft Час Кода - Вариации
+        mc_2016_congrats: "Час Кода Minecraft - Поздравления"
     callout:
       text:
         drag_blocks: "Перетащите блок «переместить» и поставьте его ниже другого блока"
