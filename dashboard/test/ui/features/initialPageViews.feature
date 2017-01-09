@@ -50,6 +50,7 @@ Feature: Looking at a few things with Applitools Eyes
       | http://studio.code.org/s/course4/stage/1/puzzle/1                  | unplugged video level |
       | http://studio.code.org/s/mc/stage/1/puzzle/6                       | minecraft house dialog     |
       | http://studio.code.org/s/allthethings/stage/18/puzzle/14           | embed video |
+      | http://studio.code.org/s/allthethings/stage/27/puzzle/1            | free response |
 
   @no_circle
   @dashboard_db_access

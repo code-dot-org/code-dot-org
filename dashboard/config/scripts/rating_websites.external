@@ -2,10 +2,10 @@ name 'Rating Websites'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Rating Website
+# Rating Websites
 
 ## Overview:
-You and your family are trying to decide what place to get dinner from. You are looking at restuarants online to help you make your decision. How well do these restuarants help you make this decision? 
+You and your family are trying to decide what place to get dinner from. You are looking at restaurants online to help you make your decision. How well do these restaurants help you make this decision? 
 
 ## Directions:
 For each of the websites below, you and your partner will together do the following:
@@ -32,7 +32,7 @@ teacher_markdown <<MARKDOWN
 
 !!!say
 
-	 We just shared the last websites we visited. More importantly you shared why you went to those websites. All websites are created to serve a certain purpose. Some of the websites you go to meet your needs better than others. When websites don't meet your needs it may be because they were designed for a different purpose or maybe they don't do a good job of achieving their intended purpose. You are going look at a set of websites to see how well they meet their intended purpose. All of the websites you will be looking at were designed for the same purpose, to share information about a restuarant.
+	 We just shared the last websites we visited. More importantly you shared why you went to those websites. All websites are created to serve a certain purpose. Some of the websites you go to meet your needs better than others. When websites don't meet your needs it may be because they were designed for a different purpose or maybe they don't do a good job of achieving their intended purpose. You are going look at a set of websites to see how well they meet their intended purpose. All of the websites you will be looking at were designed for the same purpose, to share information about a restaurant.
 
 **Setting:** Think about this, you and your family are trying to decide what place to get dinner from. You are looking at restaurants online to help you make your decision. For each website, you will think about how well it helps with your decision of what place to get dinner from. Before we look at the websites, let's think about what kind of information we will be looking for.
 
