@@ -27,7 +27,8 @@ export const commands = {
   /**
    * Start playing a sound.
    * @param {string} opts.url The sound to play.
-   * TODO:
+   * TODO: Implement additional arguments as part of Sound Library Work
+   *       Spec: https://docs.google.com/document/d/11mpYgmomALyAr53BQl2Ufx0ZYXoMAswqlQBA0aRuNag/edit#heading=h.6uzt0nqaaco
    * _@param {boolean} [opts.loop] Whether to repeat the sound forever
    * _@param {boolean} [opts.allowMultiple] If false (default) this call will
    *        stop other instances of the same sound from playing.  If true,
