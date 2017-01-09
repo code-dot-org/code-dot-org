@@ -645,21 +645,21 @@ class Script < ActiveRecord::Base
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
-            ids: [x],
-            kind: 'peer_review',
-            title: '',
-            url: '',
-            name: I18n.t('peer_review.reviews_unavailable'),
-            icon: 'fa-lock',
-            locked: true
+          ids: [x],
+          kind: 'peer_review',
+          title: '',
+          url: '',
+          name: I18n.t('peer_review.reviews_unavailable'),
+          icon: 'fa-lock',
+          locked: true
         }
       end
 
       peer_review_section = {
-          name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-          flex_category: 'Peer Review',
-          levels: levels,
-          lockable: false
+        name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+        flex_category: 'Peer Review',
+        levels: levels,
+        lockable: false
       }
 
       summarized_stages << peer_review_section
