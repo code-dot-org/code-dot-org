@@ -365,18 +365,14 @@ let boundMouseMoveHandlerWatchers;
 let watchersReferences = {};
 
 function getWatchersElements() {
-  if (!watchersReferences.watchersResizeBar) {
-    watchersReferences.watchersResizeBar = document.getElementById('watchersResizeBar');
-  }
-  if (!watchersReferences.watchersDiv) {
-    watchersReferences.watchersDiv = document.getElementById('debug-watch');
-  }
-  if (!watchersReferences.watchersHeaderDiv) {
-    watchersReferences.watchersHeaderDiv = document.getElementById('debug-watch-header');
-  }
-  if (!watchersReferences.debugConsoleDiv) {
-    watchersReferences.debugConsoleDiv = document.getElementById('debug-console');
-  }
+  watchersReferences.watchersResizeBar = watchersReferences.watchersResizeBar ||
+    document.getElementById('watchersResizeBar');
+  watchersReferences.watchersDiv = watchersReferences.watchersDiv ||
+    document.getElementById('debug-watch');
+  watchersReferences.watchersHeaderDiv = watchersReferences.watchersHeaderDiv ||
+    document.getElementById('debug-watch-header');
+  watchersReferences.debugConsoleDiv = watchersReferences.debugConsoleDiv ||
+    document.getElementById('debug-console');
   return watchersReferences;
 }
 
