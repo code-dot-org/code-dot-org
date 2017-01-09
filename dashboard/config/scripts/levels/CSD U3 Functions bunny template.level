@@ -34,6 +34,8 @@
       "line": null,
       "point": null,
       "rect": null,
+      "ifBlock": null,
+      "ifElseBlock": null,
       "text": null,
       "textAlign": null,
       "textSize": null,
@@ -43,6 +45,7 @@
       "var sprite = createSprite": null,
       "velocityX": null,
       "velocityY": null,
+      "isTouching": null,
       "x": null,
       "y": null,
       "setAnimation": null
