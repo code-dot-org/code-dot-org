@@ -1742,6 +1742,13 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+
+  // Ignore user's code on embedded levels, so that changes made
+  // to starting code by levelbuilders will be shown.
+  if (config.embed) {
+    config.level.lastAttempt = '';
+  }
+
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
