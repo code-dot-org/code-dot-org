@@ -830,6 +830,28 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
+  test 'can_edit_password? is true for user with password' do
+    user = create :student
+    assert user.can_edit_password?
+  end
+
+  test 'can_edit_password? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_password?
+  end
+
+  test 'can_edit_email? is true for user with password' do
+    user = create :student
+    assert user.can_edit_email?
+  end
+
+  test 'can_edit_email? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_email?
+  end
+
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
@@ -1315,12 +1337,12 @@ class UserTest < ActiveSupport::TestCase
     # join picture section
     create(:follower, student_user: student_without_password, section: picture_section)
     student_without_password.reload
-    assert !student_without_password.can_edit_account? # only in a picture section
+    refute student_without_password.can_edit_account? # only in a picture section
 
     # join word section
     create(:follower, student_user: student_without_password, section: word_section)
     student_without_password.reload
-    assert student_without_password.can_edit_account? # only in a picture section
+    assert student_without_password.can_edit_account? # also in a word section
 
     student_with_password = create(:student, encrypted_password: 'xxxxxx')
 
@@ -1332,7 +1354,7 @@ class UserTest < ActiveSupport::TestCase
     # join word section
     create(:follower, student_user: student_with_password, section: word_section)
     student_with_password.reload
-    assert student_with_password.can_edit_account? # only in a picture section
+    assert student_with_password.can_edit_account? # also in a word section
 
     student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
 
@@ -1344,7 +1366,7 @@ class UserTest < ActiveSupport::TestCase
     # join word section
     create(:follower, student_user: student_with_oauth, section: word_section)
     student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # only in a picture section
+    assert student_with_oauth.can_edit_account? # also in a word section
   end
 
   test 'terms_of_service_version for teacher without version' do

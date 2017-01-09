@@ -212,9 +212,9 @@
           de neige» et le nouveau bloc «Bond en avant» bloc (dans la catégorie «Actions»).
           Dessine 3 bonhommes de neige de différentes couleurs, et séparés de 100
           pixels les uns des autres.
-        turtle_2_9: Utilise une boucle «Compter avec» pour dessiner une famille de
-          bonhommes de neige de 110, 100, 90, 80, et 70 pixels de hauteur. Les bonhommes
-          de neige doivent tous être séparés de 60 pixels les uns des autres.
+        turtle_2_9: Utilise une boucle « compter avec » pour dessiner une famille
+          de bonhommes de neige de hauteurs 110, 100, 90, 80, et 70 pixels. Les bonhommes
+          de neige doivent tous être séparés par 60 pixels.
         turtle_2_10: Voici un code pour essayer d'expérimenter avec différentes spirales.  Que
           se passe-t-il si tu modifies la quantité de virages ? Ou définis une couleur
           aléatoire dans la boucle ?  Dessine tout ce que tu veux.
@@ -349,7 +349,7 @@
           de la main et de la balle pour voir combien de points tu peux marquer avant
           que ton adversaire marque deux fois!
         bounce_12_basketball: Crée ton propre jeu de basketball. Tu peux changer toutes
-          les règles. Quand tu as fini, clique « Terminer » pour que tes amis puissent
+          les règles. Quand tu as fini, clique «Terminer» pour que tes amis puissent
           essayer ton jeu sur leur téléphone.
         bounce_1_sports: Rendez-vous au drapeau! Attachez un bloc au bloc "Quand la
           flèche gauche" et appuyez sur "Exécuter" pour déplacer le joueur au drapeau.
@@ -409,7 +409,7 @@
         Custom_builder: Fais glisser les blocs depuis la boîte à outils jusqu'à l'espace
           de travail pour dessiner le niveau que tu souhaites créer. Clique sur « Exécuter »
           quand tu es prêt.
-        flappy_1: Attache un bloc au bloc «Quand clic», puis appuie sur « Exécuter
+        flappy_1: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
           ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
         flappy_2: Maintenant, nous avons rajouté un sol.  Attache un bloc au bloc
           «Quand touche le sol».  Ton code doit présenter «FIN DU JEU» lorsque Flappy
@@ -438,9 +438,8 @@
           toutes les règles, même la gravité. Lorsque tu as fini, clique sur «Terminer»
           pour laisser tes amis essayer ton jeu sur leur téléphone.
         flappy_k1_1: Jouer à Flappy l’oiseau
-        flappy_k1_2: Attaches un bloc au bloc « lors d'un clic », puis cliques sur
-          « Lancer ». Cliques sur l'écran ou tapotes-le pour déplacer Flappy vers
-          la cible.
+        flappy_k1_2: Attache un bloc au bloc «Lors d'un clic», puis appuie sur « Exécuter
+          ». Clique ou tapote sur l'écran pour déplacer Flappy vers la cible.
         flappy_k1_3: "À présent, nous avons ajouté du sol. Attachez un bloc au bloc
           « lorsque le sol est touché ». Votre code doit « terminer le jeu » lorsque
           Flappy s'écrase."
@@ -492,11 +491,11 @@
           toucher toutes les cibles, en utilisant les touches vers le haut / vers
           le bas / vers la gauche / vers la droite ?
         studio_c2_7: Le bloc «Répéter à l’infini» te permet d’exécuter le code en
-          continue. Peux-tu attacher des blocs pour faire monter et descendre ce dinosaure
-          plusieurs fois ?
-        studio_c2_8: Peux-tu faire dire «Aïe!» à Waddles et jouer le son de «Heurter»
-          lorsqu'il percute le dinosaure, puis le déplacer avec les flèches pour que
-          cela se produise?
+          continu. Peux-tu attacher des blocs pour faire monter et descendre le dinosaure
+          sans arrêt ?
+        studio_c2_8: Peux-tu faire dire «Aïe!» à Waddles et jouer le son «Coup» lorsqu'il
+          percute le dinosaure, puis le déplacer avec les flèches pour que cela se
+          produise?
         studio_c2_9: Peux-tu ajouter un bloc qui marque un point lorsque Waddles croise
           la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
           un point?
@@ -513,19 +512,19 @@
         studio_c3_story_4: Peux-tu écrire un programme qui déplace le chien jusqu'au
           chat, et qui fait dire « Bonjour » au chat lorsque le chien l'atteint ?
         studio_c3_story_5: Peux-tu ajouter un bloc pour rendre la pieuvre heureuse ?
-        studio_c3_story_6: Crée ta propre histoire! Quand tu as fini, clique sur Terminer
-          pour que tes amis puissent essayer ton histoire sur leurs téléphones.
+        studio_c3_story_6: Crée ta propre histoire. Quand tu as fini, clique sur «Terminer»
+          pour laisser tes amis essayer ton histoire sur leur téléphone.
         studio_c3_game_1: Peux-tu écrire un programme pour faire dire « Bonjour »
           à la pieuvre lorsque l'on clique dessus ?
         studio_c3_game_2: Peux-tu écrire un programme qui déplace ce manchot sur chacun
           des drapeaux d'arrivée, en utilisant les touches fléchées du clavier haut
           ↑, bas ↓, gauche ← et droite → ?
-        studio_c3_game_3: Le bloc « répéter à l'infini » permet d'exécuter du code
-          en continu. Peux-tu assembler les blocs qui vont permettre à ce dinosaure
-          de se déplacer vers le haut et vers le bas sans qu'il s'arrête jamais ?
-        studio_c3_game_4: Peux-tu faire dire « Aïe ! » au manchot et jouer le son
-          de « heurt » lorsqu'il rentre dans le dinosaure, puis le déplacer avec les
-          flèches pour que cela se produise ?
+        studio_c3_game_3: Le bloc «Répéter à l’infini» te permet d’exécuter le code
+          en continu. Peux-tu attacher des blocs pour faire monter et descendre le
+          dinosaure sans arrêt ?
+        studio_c3_game_4: Peux-tu faire dire «Aïe!» à Waddles et jouer le son «Coup»
+          lorsqu'il percute le dinosaure, puis le déplacer avec les flèches pour que
+          cela se produise?
         studio_c3_game_5: Peux-tu ajouter un bloc qui marque un point lorsque le manchot
           croise la pieuvre, puis le déplacer avec les flèches jusqu'à ce que tu marques
           un point ?
@@ -548,8 +547,8 @@
         studio_playlab_6: Peux-tu aider la Sorcière à se déplacer avec les flèches
           haut/bas/droite/gauche pour récupérer toutes les boules de feu magiques?
         studio_playlab_7: Le bloc «Répéter à l’infini» te permet d’exécuter le code
-          en continue. Peux-tu attacher des blocs pour permettre au magicien de se
-          déplacer à droite et à gauche à plusieurs reprises ?
+          en continu. Peux-tu attacher des blocs pour faire aider le magicien à bouger
+          à gauche et à droite sans arrêt ?
         studio_playlab_8: Peux-tu ajouter un bloc pour marquer un point et un autre
           pour jouer un son quand la licorne percute le magicien, et ensuite la déplacer
           à l’aide des flèches jusqu’à ce que tu marques un point ?
@@ -572,8 +571,8 @@
           le bloc «Déplacer acteur». Ensuite, connecte un bloc à l'événement «Quand
           acteur touche» pour jouer un son, lorsqu’ils se retrouvent.
         studio_iceage_repeat: Le bloc «Répéter à l’infini» te permet d’exécuter le
-          code en continue. Peux-tu attacher des blocs pour aider Mémé à faire de
-          l'exercice en se déplaçant à gauche et à droite à plusieurs reprises?
+          code en continu. Peux-tu attacher des blocs pour aider Mémé à faire de l'exercice
+          en se déplaçant à gauche et à droite sans arrêt ?
         studio_iceage_click_hello: Peux-tu aider Sid à faire un dernier appel en direction
           de ses amis lorsqu’on clique dessus ? N'oublie pas de cliquer dessus après
           avoir cliqué sur « Exécuter ».
@@ -613,8 +612,8 @@
           un bloc à l'événement «Quand acteur touche» pour jouer un son, lorsqu’ils
           se retrouvent.
         studio_gumball_repeat: Le bloc «Répéter à l’infini» te permet d’exécuter le
-          code en continue.  Peux-tu attacher des blocs pour aider Gumball à s’échauffer
-          pour la course en se déplaçant à gauche et à droite à plusieurs reprises?
+          code en continu. Peux-tu attacher des blocs pour aider Gumball à s’échauffer
+          pour la course en se déplaçant à gauche et à droite sans arrêt?
         studio_gumball_click_hello: Peux-tu aider Anton à annoncer le départ d'une
           course en disant «À vos marques, prêt, partez !» ? Pour tester ton programme,
           n'oublie pas de cliquer sur Anton après avoir cliqué sur « Exécuter » !
@@ -798,6 +797,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

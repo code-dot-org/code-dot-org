@@ -84,6 +84,7 @@ uk:
     overview: 'Створіть обліковий запис для відстеження власного прогресу чи керування своїм класом. <a href="/">Ви можете переглядати різні етапи та завдання</a> без облікового запису, але потрібно зареєструватися, щоб зберігати свій прогрес та проекти.'
     hoc_already_signed_up_heading: 'Розпочати роботу без входу'
     hoc_already_signed_up_content: 'Ви зареєструвались для проведення Години коду! Вам і Вашим учням не потрібно реєструватись у Студії коду, щоб провести цей захід. Щоб розпочати, <a href="https://code.org/learn">оберіть підручник</a> для свого класу та поділіться посиланням на нього.<br/><br/>Якщо вам сподобається Година коду, і захочете продовжити навчання, можна створити пароль та обліковий запис для Студії коду, щоб зареєструвати своїх учнів на наші <a href="https://code.org/educate">триваліші курси</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Переглянути посібник для вчителя'
     title: "Реєстрація на Code.org"
     school_name: 'Назва навчального закладу (необов''язково)'
@@ -302,6 +303,7 @@ uk:
     delete_text: "Клацання розташованої нижче кнопки призведе до видалення облікового запису."
     delete_text_teacher_note: 'Будь ласка, зверніть увагу: видалення облікового запису не видалить облікових записів ваших учнів.'
     delete_confirm: 'Ви впевнені, що бажаєте видалити обліковий запис?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Завершено'
     tried: 'Спробував'
@@ -354,14 +356,15 @@ uk:
     announcement_learn_more_button: "Дізнайтеся більше"
     announcement_try_now_button: "Спробувати"
     announcement_host_an_hour_button: "Провести Годину коду"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Переглянути відео"
     announcement_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
     announcement_petition_button: "Додайте своє ім'я"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
     announcement_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть викладати інформатику протягом Години коду 5-11 грудня цього року. Ми розраховуємо на вашу допомогу в охопленні більше учнів, ніж раніше. <a href='%{signup_url}' target='_blank'>Зареєструйте свою подію Години коду</a> та покажіть іншим вчителям, що кожен може почати викладати інформатику."
-    announcement_hoc_scaling: 'ОГОЛОШЕННЯ для вчителів курсів 1-4 та прискореного курсу: через великий обсяг трафіку від мільйонів учнів під час Години коду, <b>Студія коду не зберігатиме і не звітуватиме про прогрес учнів на цих курсах від 3 по 11 грудня</b>. Ми рекомендуємо виконати завдання Години коду зі своїм класом для відзначення Години коду протягом тижня інформатики. Тоді як наші власні підручники Години коду теж не зберігатимуть прогрес того тижня, учні все-ж можуть виконати завдання та отримати сертифікат.'
     announcement_mc_launch: "Один із наших найпопулярніших підручників отримав продовження! Зовсім нова Година коду від Майнкрафт - Розробник дозволяє створити власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт, а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі своїм класом на Годині коду."
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_how_code_studio: "Для того, щоб почати використовувати інформатику на своїх уроках, не потрібен попередній досвід. Code.org пропонує навчальні програми, плани уроків, високоякісні програми підвищення кваліфікації та море чудових інструментів для всіх класів &mdash; все, що потрібно, і безкоштовно. Думаєте звідки починати? Завантажте <a href='%{video_download_url}'>цей ролик</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи."
     section_code_not_entered: "Будь ласка, вкажіть current_section_code."
@@ -742,48 +745,48 @@ uk:
     starwars_blocks_name: 'Зоряні війни: Закодуємо далеку Галактику (блоки)'
     starwars_javascript_name: 'Зоряні війни: Закодуємо далеку Галактику (JavaScript)'
     download_message: 'Завантажити %{app_name} для оффлайнового використання (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: 'Завантажити албанською:'
+    download_in_Arabic: 'Завантажити арабською:'
+    download_in_Azerbaijani: 'Завантажити азербайджанською:'
+    download_in_Basque: 'Завантажити баскською:'
+    download_in_Bosnian: 'Завантажити боснійської:'
+    download_in_Bulgarian: 'Завантажити болгарською:'
+    download_in_Catalan: 'Завантажити каталонською:'
+    download_in_Chinese-Taiwan: 'Завантажити китайською (Тайвань):'
+    download_in_Chinese: 'Завантажити китайською:'
+    download_in_Croatian: 'Завантажити хорватською:'
+    download_in_Czech: 'Завантажити чеською:'
+    download_in_Danish: 'Завантажити данською:'
+    download_in_Dutch: 'Завантажити голландською:'
+    download_in_English: 'Завантажити англійською:'
+    download_in_Finnish: 'Завантажити фінською:'
+    download_in_French: 'Завантажити французькою:'
+    download_in_German: 'Завантажити німецькою:'
+    download_in_Greek: 'Завантажити грецькою:'
+    download_in_Hebrew: 'Завантажити на івриті:'
+    download_in_Hungarian: 'Завантажити угорською:'
+    download_in_Icelandic: 'Завантажити ісландською:'
+    download_in_Indonesian: 'Завантажити індонезійською:'
+    download_in_Irish: 'Завантажити ірландською:'
+    download_in_Italian: 'Завантажити італійською:'
+    download_in_Japanese: 'Завантажити японською:'
+    download_in_Korean: 'Завантажити корейською:'
+    download_in_Latvian: 'Завантажити латвійською:'
+    download_in_Lithuanian: 'Завантажити литовською:'
+    download_in_Norwegian: 'Завантажити норвезькою:'
+    download_in_Norwegian-Nynorsk: 'Завантажити норвезькою (нюношк):'
+    download_in_Polish: 'Завантажити польською:'
+    download_in_Portuguese-Brazil: 'Завантажити португальською (Бразилія):'
+    download_in_Portuguese: 'Завантажити португальською:'
+    download_in_Romanian: 'Завантажити румунською:'
+    download_in_Russian: 'Завантажити російською:'
+    download_in_Serbian: 'Завантажити сербською:'
+    download_in_Slovenian: 'Завантажити словенською:'
+    download_in_Spanish: 'Завантажити іспанською:'
+    download_in_Swedish: 'Завантажити шведською:'
+    download_in_Turkish: 'Завантажити турецькою:'
+    download_in_Ukrainian: 'Завантажити українською:'
+    download_in_Vietnamese: 'Завантажити в''єтнамською:'
     windows: 'Windows (64-розрядна версія)'
     mac: 'Mac OS X'
   plc:

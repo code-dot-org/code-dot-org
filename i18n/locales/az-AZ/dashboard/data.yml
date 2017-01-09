@@ -63,7 +63,7 @@ az:
         'maze_2_5': "Mənim yaşıl donuza 2 blokdan istifadə edərək çatmağım üçün bir yol var. Siz onu tapa bilərsinizmi?"
         'maze_2_6': "Məni ancaq üç blokdan istifadə edərək yaşıl cinayətkara çatıdrmağa çalışın."
         'maze_2_7': "Mənə kömək edin ki, ən az sayda blokdan istifadə edərək pis donuzcuğun dərsini verim. Birdən çox \"təkrar et, neçə dəfə\" blokundan istifadə etməyə çalışın."
-        'maze_2_8': "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn."
+        'maze_2_8': "Blok boz rəngdədirsə, deməli onu poza bilməzsiniz. Bu tapmacanı 3 dəfə icra olunan \"təkrar et\" blokundan istifadə etməklə həll edin. Növbəti 3 bloku boz \"təkrar et\" blokunun içinə yerləşdirməklə cəhd edin: get, get, dön."
         'maze_2_9': "Yaxşı, yeni \"təkrar et, ta ki\" blokunu sınaqdan keçirin - o mən ta zəhlətökən donuza çatana qədər təkrarlanacaq."
         'maze_2_10': "Yaxşı, sonuncu çalışma - bunu yalnız 4 blok istifadə edərək həll edə bilərsinizmi?"
         'maze_2_11': "Hörmətli insan. Mən zombiyəm. Mən acam. Günəbaxana ... çatmalıyam ... Məni yalnız 5 blok istifadə edərək ora çatdıra bilərsən?"
@@ -92,7 +92,7 @@ az:
         'turtle_4_5': "Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada 36 dəfə dönülür. Hər dəfə neçə dərəcə dönülməlidir? (İpucu: 360 dərəcə dönüşdən sonra çəkmə prosesi bir tam dövrə edəcəkdir)"
         'turtle_4_6': "3 blokdan istifadə etməklə, tərəfləri 20 piksel olan kvadrat çəkə bilərsiniz mi?"
         'turtle_4_7': "Burada, keçən tapmacadan, kvadratların çəkilməsi üçün istifadə olunan kodu görə bilərsiz. Siz bu prosesi təkrarlamaqla, 10 bir-birinə qonşu olan və nərdivanı xatırladan kvadratları çəkə bilərsiniz mi? İpucu: Sizə yalnız 2 əlavə blok lazımdır."
-        'turtle_4_8': "Burada əvvəlki tapmacanın həllini görə bilərsiniz. Siz 2 blok əlavə etməklə çəkmə prosesini tamamlaya bilərsiniz mi?"
+        'turtle_4_8': "Burada əvvəlki tapmacanın həlli göstərilib. Sadəcə 2 blok əlavə etməklə şəkli tamamlaya bilərsiniz?"
         'turtle_4_9': "Burada əvvəlki tapmacanın həllini görə bilərsiniz. Çəkmə prosesini tamamlamaq üçün neçə dərəcə dönməlisiniz? (Çox güman siz bir neçə dəfə təxmin etməlisiniz)"
         'turtle_4_10': "Burada əvvəlki tapmacanın həllidir. Bunu neçə dəfə təkrarlamaqla şəkili tamamlaya bilərsiniz?"
         'turtle_4_11': "\"Dönmə\" və \"Təkrar et\" bloklarındaki ədədləri dəyişməklə digər nümunələr yaratmağa çalışın. Və ya, kodun qalan hissəsini dəyişməklə istədiyiniz şeyi çəkməyi sınaya bilərsiniz."
@@ -257,7 +257,7 @@ az:
         'studio_playlab_10': "Create your own game. When you're done, click Finish to let friends try your game on their phones."
         'studio_iceage_hello1': "Sid wants to gather everyone for a new adventure. Can you help him say \"hello\" by dragging the \"say\" block out into the work area and typing the word \"hello\" inside?"
         'studio_iceage_hello2': "Manny (actor 1) found Sid (actor 2) and wants to invite him on the adventure. Help them greet each other by using the the \"actor say\" block twice."
-        'studio_iceage_move_to_flag': "Scrat is looking for his acorn!  Help him go the last 200 pixels using the \"move\" block."
+        'studio_iceage_move_to_flag': "Cırmaq öz palıd qozasını axtarır! \"Get\" bloku vasitəsi ilə ona son 200 pikseli keçməkdə kömək edin."
         'studio_iceage_move_to_actor': "Diego (actor 1) is searching for Manny (actor 2). Help Diego move 200 pixels down to Manny using the \"move actor\" block. Next, connect a block to the \"when actor touches\" event to play a sound when they find each other."
         'studio_iceage_repeat': "The \"repeat forever\" block allows you to run code continuously. Can you attach blocks to it to help Granny get some exercise by moving left and right repeatedly?"
         'studio_iceage_click_hello': "Can you help Sid do a final call for friends when clicked? Don’t forget to click on him after you hit Run."
@@ -420,6 +420,9 @@ az:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'

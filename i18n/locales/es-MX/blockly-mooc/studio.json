@@ -1,7 +1,7 @@
 {
   "actor":"actor",
-  "add":"agrega",
-  "ask":"pregunta",
+  "add":"agregar",
+  "ask":"preguntar",
   "addCharacter":"Añadir",
   "addCharacterTooltip":"Agrega un personaje a la escena.",
   "addGoal":"agregar meta",
@@ -12,7 +12,7 @@
   "addPoints300":"agregar 300 puntos",
   "addPoints1000":"agregar 1000 puntos",
   "addPointsTooltip":"Agregar o quitar un punto a la puntuación.",
-  "alien":"alienígena",
+  "alien":"alien",
   "alienInvasion":"¡Invasión extraterrestre!",
   "backgroundBlack":"negro",
   "backgroundCave":"cueva",

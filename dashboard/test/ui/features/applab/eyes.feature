@@ -168,7 +168,7 @@ Scenario: Drag to delete
   Then I see no difference for "dragging in app doesn't delete button"
 
   When I drag element "#design_button1" 250 horizontally and 100 vertically
-  Then I see no difference for "dragging slightly out of app pushes button back into bounds"
+  Then I see no difference for "dragging slightly out of app leaves element partially out of bounds"
 
   When I drag element "#design_button1" 100 horizontally and 100 vertically
   And I wait until element "#design_button1" is gone

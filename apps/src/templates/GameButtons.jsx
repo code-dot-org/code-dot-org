@@ -36,27 +36,26 @@ RunButton.propTypes = {
   hidden: React.PropTypes.bool,
   style: React.PropTypes.object,
 };
+RunButton.displayName = 'RunButton';
 
 export const ResetButton = Radium(props => (
   <button
     id="resetButton"
-    className="launch blocklyLaunch"
+    // See apps/style/common.scss for these class definitions
+    className={classNames(["launch", "blocklyLaunch", props.hideText && 'hideText'])}
     style={[commonStyles.hidden, props.style]}
   >
     <div>
       {!props.hideText && msg.resetProgram()}
     </div>
-    <img
-      src={blankImg}
-      style={props.imageStyle}
-      className="reset26"
-    />
+    <img src={blankImg} className="reset26" />
   </button>
 ));
 ResetButton.propTypes = {
   style: React.PropTypes.object,
   hideText: React.PropTypes.bool,
 };
+ResetButton.displayName = 'ResetButton';
 
 /**
  * A set of game buttons that consist of a run/reset button, and potentially a
@@ -82,6 +81,7 @@ UnconnectedGameButtons.propTypes = {
   playspacePhoneFrame: React.PropTypes.bool,
   children: React.PropTypes.node,
 };
+UnconnectedGameButtons.displayName = 'GameButtons';
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,

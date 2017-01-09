@@ -544,19 +544,19 @@ zh-TW:
     C1_planting_seed:
       1:
         image: 'notes/C1_planting_seed_1.png'
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: "「種顆種子」這個課程可以幫助我們了解演算法（Algorithm），演算法的定義是「在有限步驟內解決事情的程序」，即便是像吃早餐、刷牙這樣的小事，都需要一定的步驟才會完成。"
       2:
         image: 'notes/C1_planting_seed_2.png'
         text: "電腦可以非常聰明，但你得精準地一步一步的告訴他們你的想法， 他們才能明白。演算法偉大地方, 是如果你按順序跟從指示, 你可以做到一些你不知道如何提前處理的事。就像使用一個配方似的。"
       3:
         image: 'notes/C1_planting_seed_3.png'
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: "今天我們來完成種顆種子的任務，把圖片分割後自己開始演練一下，排列出正確的種植流程。"
       4:
         image: 'notes/C1_planting_seed_4.png'
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: "現在來看看你的演算法是否有效。仔細地按照演算法中的步驟，想想它們的順序正確嗎？照著這個步驟真能種出植物嗎？這就像用圖片編程一樣！"
       5:
         image: 'notes/C1_planting_seed_5.png'
-        text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
+        text: "當我們製作巧克力時，會有很多的關鍵步驟，而每個關鍵步驟都各自有不同的烹調的小程序，隨著我們想製造出的味道不同，程序就會調整。即便是一個小程序都扮演舉足輕重的角色，缺一不可。同時，要建立一個別人都看得懂的程序也是相當重要的，把它們紀錄下來，如此一來不管是誰來做，得到的結果都會相同。"
     C1_playlab_storytelling:
       1:
         image: 'notes/C1_playlab_storytelling_1.png'
@@ -576,7 +576,7 @@ zh-TW:
         text: "這關是蜜蜂拼字。用這些拼圖讓蜜蜂移動。當蜜蜂移動時，他會收集拼單字的字母。"
       2:
         image: 'notes/C1_spelling_bee_intro_2.png'
-        text: "See if you can spell the word they give you in the box below the stage. But bee careful! Moving the wrong direction will add letters you don't want."
+        text: "看看你能不能拼出英文單字（單字在下方舞台的文字方塊裡）。小心蜜蜂！如果移錯方向會添加更多你不想要的字母。"
     C1_zuck_repeat_loop:
       1:
         image: 'notes/C1_zuck_repeat_loop_1.png'
@@ -622,32 +622,32 @@ zh-TW:
     C2_binary_bracelets:
       1:
         image: 'notes/C2_binary_bracelets_1.png'
-        text: "This is the binary bracelets lesson. We are going to code our initials on a bracelet we can wear and show all our friends!"
+        text: "這個課程叫「密碼手環」，我們要將自己的英文姓名用二進制編碼，並製作成手環。做完後戴上它讓朋友猜猜你的密碼是什麼！"
       2:
         image: 'notes/C2_binary_bracelets_2.png'
         text: "二進制是使用兩個選項來對資料表達的一種方式。有些人以為它只是”1”或是”0”。其實你可以運用一些組合來表達, 例如: 開、關; 上、下; 進、出; 又或者其他一些相對的組合。"
       3:
         image: 'notes/C2_binary_bracelets_3.png'
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: "嗨，我是 Orion，我在 Play-im 編寫機器人程式，所有電腦和機器人的腦袋是一堆小小的電子闡道所組成。當闡道打開，電流可以通過；當闡道關上，電流就無法通過。"
       4:
         image: 'notes/C2_binary_bracelets_4.png'
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: "機器人的眼睛就是個二進制（binary）的例子，它們的眼睛是 LED（發光二極體），是可以打開或關閉的。它就是個二進位系統，我們可以用燈光來表示二進位數，假設我們有一堆機器人，第一機器人就可以說是 1s、第二個叫它 2s，第三個是 4s…以此類推（第四個就是 8s）…這是我們表示二進位數的方法，機器人會用它們的二進制的眼睛計數給你看。"
     C2_conditionals_with_cards:
       1:
         image: 'notes/C2_conditionals_with_cards_1.png'
-        text: "This lesson is called conditionals with cards. Every day you make decisions based on what you see and hear."
+        text: "這個課程叫「條件判斷撲克牌」，每一天，你都會依著自己看到的、聽到的來決定些事情。"
       2:
         image: 'notes/C2_conditionals_with_cards_2.png'
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: "我想到公園散散步，但要先考慮是不是該帶把傘，所以我往窗外看，如果天空很多雲，就帶傘出門；如果沒有，就戴太陽眼鏡。好吧，我想我會帶雨傘的。我會照自己的所見所聞，決定去公園時要帶些什麼在身上。"
       3:
         image: 'notes/C2_conditionals_with_cards_3.png'
-        text: "Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says \"awww.\" Let's try it! \"Awww\" \"cheers\""
+        text: "在遊戲裡頭也用上了很多的條件判斷。今天我們就把它用在撲克牌遊戲上，這個遊戲中，我的朋友要依照我拿的牌做反應。比方說我的牌子是數字 7，每個人就歡呼大叫；若不是，每個人就說「喔」。我們來試試吧！（喔…）（歡呼聲）"
       4:
         image: 'notes/C2_conditionals_with_cards_4.png'
-        text: "I bet you can make up games that are even more fun with conditionals. Give it a try! Conditionals are what make computers seem smart. A computer program that includes conditionals can react to the user and change its course of action."
+        text: "你絕對可以訂出一個更有趣的條件判斷卡的玩法，試試吧！我們就是利用條件判斷來讓電腦變得聰明的。電腦會依據使用者的操作來決定要回應的方式，就是因為程式中包含了無數的條件判斷。"
       5:
         image: 'notes/C2_conditionals_with_cards_5.png'
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: "拿你最愛的電視遊戲來說吧，當你執行某些操作時可以獲得比較高的分數，原因是？因為電腦用了條件判斷，這就是電腦做決定的方式，比方說，如果你擊中目標可以加 10 分，不然，你就減 3 分…當你知道了條件判斷如果運作的，你就可以利用它來製作各種刺激的遊戲。"
     C2_artist_debugging:
       1:
         image: 'notes/C2_artist_debugging_1.png'
@@ -671,7 +671,7 @@ zh-TW:
     C2_digital_footprint:
       1:
         image: 'notes/C2_digital_footprint_1.png'
-        text: "On your head you hold your hat and your smarts will tell you where you're at and to think about the zoo, and to nod hello to you and you! Use your head when you're online to keep what's yours inside your mind and to know how to be safe, how to give your life some private space! From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
+        text: "你的頭可以戴著帽，還有你聰明的腦袋會告訴你現在在哪裡。想像一下你現在在動物園裡面，跟每一個遇到的動物點頭打聲招呼吧!\n在上網的時候，要隨時動動你的腦袋，還有要保持平穩的心，你要知道怎麼去保護你在網路上的安全和私人空間(網路上面不要透露你太多資料 不然會很危險喔)\n從頭到腳想一想吧! 停一停 想一想 從頭到腳想一想吧! 停一停 想一想"
       2:
         image: 'notes/C2_digital_footprint_2.png'
         text: "Use your heart to grow and grow, and to give yourself a healthy glow, and to make a valentine, tell someone that you'll be mine! Use your heart when you're online, feel what's right and always kind, and show your friends respect, to be fair and nice on the Internet. From your head down to your toes, pause, think about it. From your feet up to your nose, pause and think online!"
@@ -703,14 +703,14 @@ zh-TW:
         text: "若你要給電腦演算法，你就要把事情切割成小小的步驟。先做這一步，然後到下一步，再來這一步等，最後完成它。"
       4:
         image: 'notes/C2_graph_paper_4.png'
-        text: "I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done."
+        text: "我在我的工作中使用演算法。如果我寫下所有步驟，我可以用這個程序完成同樣的事情，或者，我可以告訴別人該怎麼做…把玻璃放到窯裡…將它熔在一起…按部就班的做就可以做出個碗來。演算法就像地圖，讓你順利到達目的地。"
     C2_artist_loops:
       1:
         image: 'notes/C2_artist_loops_1.png'
-        text: "Here we are going to use the repeat block to help us save steps when we are programming our artist. We already have some blocks out on our stage but they are just there to get us started."
+        text: "這裡我們使用循環積木來替代程序中重複的部分，這可以讓編寫的程式更精簡。舞台上已經有些積木，除非我們開始執行，不然這些積木不會運作的。"
       2:
         image: 'notes/C2_artist_loops_2.png'
-        text: "To loop those blocks four times to draw the whole square, we just drag out the repeat block and put the moveforward and turn right blocks inside the repeat block. When we hit run, the artist will repeat those steps four times to complete the square."
+        text: "讓這些積木重複執行四次就可以畫出一個四邊形，我們只要用一個重複執行積木把移動和右轉積木給包住就可以了。當我們點擊執行按鈕，就會看到它重複做了四次的動作並完成了四邊形。"
     C2_bee_loops:
       1:
         image: 'notes/C2_bee_loops_1.png'
@@ -721,13 +721,13 @@ zh-TW:
     C2_maze_intro:
       1:
         image: 'notes/C2_maze_intro_1.png'
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: "程式設計通常是用純文字所寫，但 Blocky 讓我們可以用圖像來寫程式，我們只要將積木拖曳排列就可以完成程式，非常直覺。這些積木的背後還是 code。現在我們用它來建立個程式，幫助憤怒鳥通過迷宮，抓到那群偷蛋的邪惡豬。"
       2:
         image: 'notes/C2_maze_intro_2.png'
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Blocky 有三個主要部分，在左側是迷宮，你的程式要實作的地方。而上方則是每階段關卡的過關指示。中間區域的左邊則是指令工具箱，裡頭的積木是用來指揮憤怒鳥的命令，右邊就是工作區域，你要你需要用的指令拖曳到這裡，並建立一個程序。"
       3:
         image: 'notes/C2_maze_intro_3.png'
-        text: "If I drag the move block to our work space and press \"Run\", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program."
+        text: "如果把程式積木按著不放拖到我們的工作區，然後按下\"執行\"的按鈕，會發生什麼事情呢? 那隻鳥會往前移動一格。\n如果我想要讓鳥往前之後再做其他的事情，要怎麼做呢? 我們可以再多拉一個程式積木到我們的程式裡面喔。"
       4:
         image: 'notes/C2_maze_intro_4.png'
         text: "I'm going to choose the \"turn right\" block and I'll drag it under my move block until the yellow arrow appears. Then I'll drop it and the two blocks will snap together. When I press \"Run\" again,  the bird will perform the commands that are stacked from top to bottom on our work space."
@@ -737,13 +737,13 @@ zh-TW:
     C2_paper_airplanes:
       1:
         image: 'notes/C2_paper_airplanes_1.png'
-        text: "This lesson is called Real Life Algorithms. Algorithms describe things that people do everyday. Cookie recipes and directions for building a birdhouse are both everyday algorithms."
+        text: "這個課程叫做「真實生活演算法」。演算法描述人們每天做的事情。餅乾食譜和築鳥巢的方向是兩個日常的演算法。"
       2:
         image: 'notes/C2_paper_airplanes_2.png'
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: "今天我們將要製造，創造和測試一個紙飛機的演算法。但是首先，我們需要將這個大專案化成簡單上手的小步驟。要製造一架紙飛機，我們需要知道步驟以及它們的順序。"
       3:
         image: 'notes/C2_paper_airplanes_3.png'
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: "您將會以第一次分割的圖片創造你的演算法。接下來，你要選擇 6 張展示做一架紙飛機的步驟的圖片，並按正確順序的步驟來決定如何擺這些圖片。當確認完每個步驟是佛正確，你將與另一個學生團隊交換你的演算法來測試該演算法是否運作順暢。要製作最棒的紙飛機，精心設計的演算法是非常重要的。"
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
@@ -882,7 +882,7 @@ zh-TW:
         text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
       2:
         image: 'notes/C3_crowdsourcing_2.png'
-        text: "In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications."
+        text: "在電腦科學中，我們利用群眾的力量(群眾外包, crowdsourcing)。\n成千上萬的業餘愛好者和專業人士將連結他們自己的電腦用網路連結在一起，一起搜索 數十億條資訊。\n尋找下一個梅森質數(梅森質數Mersenne prime number )或甚至有可能還可以跟外星人通訊呢!"
       3:
         image: 'notes/C3_crowdsourcing_3.png'
         text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
@@ -1064,10 +1064,10 @@ zh-TW:
     C4_intro:
       1:
         image: 'notes/C4_intro_1.png'
-        text: "Usually programming is all in text but we'll use Blockly which uses visual blocks that you drag and drop to write programs. Under the hood, you're still creating code. To start off, we're going to build code for a program that will help this Angry Bird move through a maze to get to the evil pigs that stole its eggs."
+        text: "程式設計通常是用純文字所寫，但 Blocky 讓我們可以用圖像來寫程式，我們只要將積木拖曳排列就可以完成程式，非常直覺。這些積木的背後還是 code。現在我們用它來建立個程式，幫助憤怒鳥通過迷宮，抓到那群偷蛋的邪惡豬。"
       2:
         image: 'notes/C4_intro_2.png'
-        text: "Blockly is split into three main parts. On the left is the bird's maze, where your program will run. The instructions for each level are written below the maze. This middle area is the toolbox and each of these blocks is a command that the bird can understand. The white space on the right is called the workspace and this is where we'll build our program."
+        text: "Blocky 有三個主要部分，在左側是迷宮，你的程式要實作的地方。而上方則是每階段關卡的過關指示。中間區域的左邊則是指令工具箱，裡頭的積木是用來指揮憤怒鳥的命令，右邊就是工作區域，你要你需要用的指令拖曳到這裡，並建立一個程序。"
       3:
         image: 'notes/C4_intro_3.png'
         text: "If I drag the move block to our work space and press \"run\", what happens? The bird moves forward one box on the grid. And what if I want the bird to do something after it moves forward one box? I can add another block to our program."

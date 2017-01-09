@@ -841,5 +841,17 @@
   "failedMultiplyCharactersTimeoutBlockly": "Sen 20 Fare Droids almak gerekir. İki veya daha fazla Fare Droids tek olsun her zaman eklemek için \"Fare Droid olsun\" olayı içinde \"bir fare Droid ekle\" komutunu kullanın.\n",
   "failedMultiplyCharactersTimeoutGotSome": "Tebrikler, fare Droids yapmak için kod eklendi. Bir sonraki bulmaca gitmek ya da 20 Fare Droids almak için tekrar deneyebilirsiniz. Onları daha ekleyerek kolaylaştırıyoruz deneyin! (Basın ve hızlı hareket etmek için klavye (veya ekran) tuşları basılı tutun.)",
   "failedChangeSettingTimeout": "Taşımak için üç Rebel Pilotlar alın.",
-  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım."
+  "failedChangeSettingSettings": "Bunu kendi oyunun haline getir. Bu bulmacayı geçmek için droidini değiştirmen ve onun süresini düzenlemen lazım.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
+  "saySpriteChoices_59": "Ouch!"
 }
