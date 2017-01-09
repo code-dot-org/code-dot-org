@@ -23,7 +23,7 @@ Appends the item to the end of the array.
 
 [/short_description]
 
-In real life you sometimes need add items to the end of the list, and make the list larger. *appendItem(list, item)* makes the "list" one larger and inserts the "item" at the end of the list. If the append is successful, *appendItem()* returns true, otherwsie it returns false.
+In real life you sometimes need add items to the end of the list, and make the list larger. *appendItem(list, item)* makes the "list" one larger and inserts the "item" at the end of the list. If the append is successful, *appendItem()* returns true, otherwise it returns false.
 
 [/description]
 

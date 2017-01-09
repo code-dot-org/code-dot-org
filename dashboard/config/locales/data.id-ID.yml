@@ -774,6 +774,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -846,11 +849,11 @@
         iceage_intro: Jam Mengkode Ice Age - Introduksi
         iceage_events: Jam Mengkode Ice Age - Kejadian
         iceage_repeat: Jam Mengkode Ice Age - Pernyataan yang diulang
-        mc_2016_intro: Minecraft Hour of Code - Introduction
+        mc_2016_intro: Jam Mengkode Minecraft- Introduksi
         mc_2016_loops: Minecraft Hour of Code - Loops
         mc_2016_events: Minecraft Hour of Code - Events
         mc_2016_spawn: Minecraft Hour of Code - Spawn
-        mc_2016_congrats: Minecraft Hour of Code - Congratulations
+        mc_2016_congrats: Jam Mengkode Minecraft - Selamat
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

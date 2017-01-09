@@ -11,18 +11,6 @@ table {width: 100%;}
 # Implementation Timeline
 
 
-## December Areas of Focus
-
-- Promote Hour of Code<br/>
-- Run Administrator & Counselor PD<br/> 
-- Recruit Teachers<br/> 
-- Set dates for Local Summer Workshops with facilitators<br/>
-- Key Roadmap Categories: Community Building and Reputation / Funding<br/>
-
-| **Date** | **Event** |
-|-----------------|--------------------------------------------------|
-| December 1, 2016 <br/> 8:00 am - 9:00 am PT | Virtual Training: Teacher Application Process & Rubric **(Required)** |
-| December 5th-11th 2016 | CS Education Week |
 
 ## January Areas of Focus
 
@@ -36,7 +24,9 @@ table {width: 100%;}
 | January 9, 2017 | Round 1 Facilitator Applications Due |
 | January 10, 2017<br/> 10:00 am - 11:00 am PT<br/> | Virtual Meeting: How to Review Teacher Applications<br/> Click [here](https://code.zoom.us/j/190845819) to join the Zoom Meeting. **(Required)** |
 | January 16th - 27th, 2017 | Teacher Appplication Review Cycle #1 |
+| January 17, 2017<br/> 11:00 am - 11:30 am PT<br/> | Virtual Meeting: CS Principles Teacher Application Process for local workshops<br/> Click [here](https://code.zoom.us/j/129950468) to join the Zoom Meeting. **(Required for Group 1)** |
 | January 20, 2017 | Regional Partner Cycle #1 application reviews due |
+| January 24, 2017<br/> 10:00 am - 11:00 am PT<br/> | Guest Speaker Series: Ten80 Education<br/> Click [here](https://code.zoom.us/j/776875785) to join the Zoom Meeting. (Optional) |
 | January 27, 2017 | Code.org notifies Cycle #1 applicants of decisions |
 | January 30, 2017 - February 10, 2017 | Teacher Appplication Review Cycle #2 |
 

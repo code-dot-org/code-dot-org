@@ -9,7 +9,7 @@ cs:
         video: 'Unplug1'
       'Unplug2':
         title: 'Aritmetické Myšlení'
-        desc: 'S ničím jiným než s papírem a zvýrazňovači se studenti naučí čtyři kroky počítačového myšlení. Po krátkém úvodu by měli být studenti rozděleni do skupin, kde budou muset vytvářet návody pro ostatní studenty k nakreslení konkrétního monstra (výběr z katalogu monster). Celý úkol si musí rozložit tak, aby týmy analyzovaly všechny příšery v katalogu podle vzorů, abstrahovaly různé detaily z Monster, informace pak použily k vytvoření algoritmu (pokyny) pro další tým k nakreslení daného monstra. Týmy pak si vymění algoritmy s jiným skupinami a nakreslí monstrum, založené na tom co označuje algoritmus. Je kresba to, co původní tým zamýšlel?'
+        desc: 'S ničím jiným než s papírem a zvýrazňovači se studenti naučí čtyři kroky aritmetického myšlení. Po krátkém úvodu by měli být studenti rozděleni do skupin, kde budou muset vytvářet pokyny pro ostatní studenty k nakreslení konkrétního monstra (výběr z katalogu monster). Celý úkol si musí dekomponovat, pak týmy budou analyzovat všechny monstra v katalogu podle vzorů, abstrahovat různé jejich detaily a informace pak použít k vytvoření algoritmu (pokynů) pro další tým k nakreslení daného monstra. Týmy pak si vymění algoritmy s jiným skupinami a nakreslí monstrum, založené na tom co algoritmus popisuje. Je kresba to, co původní tým zamýšlel?'
         pdfs:
           - unplug2
         video: 'Unplug2'

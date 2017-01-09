@@ -37,7 +37,7 @@
             'Artist: Loops': "アーティスト：ループ"
             'Artist: Nested Loops': "アーティスト：入れ子のループ"
             'Artist: Sequence': "アーティスト: シーケンス"
-            'Bee: Conditionals': "ビー：条件文"
+            'Bee: Conditionals': "みつばち：条件文（じょうけんぶん）"
             'Bee: Debugging': "みつばち: デバッグ"
             'Bee: Loops': "みつばち: ループ"
             Binary Bracelets: "バイナリブレスレット"
@@ -59,20 +59,20 @@
             courses to flexible solutions to more complex problems. By the end of
             this course, students create interactive stories and games they can share
             with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
+          description_short: "コース3はコース２をがくしゅうした人のためのコースです。"
           description_audience: 8-18 才
           stage:
             Artist: "アーティスト"
             'Artist: Functions': "アーティスト：関数"
             'Artist: Nested Loops': "アーティスト：入れ子のループ"
-            'Artist: Patterns': 'Artist: Patterns'
-            'Bee: Conditionals': "ビー：条件文"
+            'Artist: Patterns': "アーティスト：法則（ほうそく）"
+            'Bee: Conditionals': "みつばち：条件文（じょうけんぶん）"
             'Bee: Debugging': "みつばち: デバッグ"
             'Bee: Functions': "みつばち: 関数"
-            'Bee: Nested Loops': 'Bee: Nested Loops'
+            'Bee: Nested Loops': "みつばち：入れ子のループ"
             Bounce: "はずむ"
             Computational Thinking: "コンピュテーショナル・シンキング（コンピューターの様に考える）"
-            Crowdsourcing: Crowdsourcing
+            Crowdsourcing: "クラウドソーシング"
             Dice Race: "言うレース"
             Digital Citizenship: Digital Citizenship
             'Farmer: While Loops': 'Farmer: While Loops'
@@ -122,9 +122,9 @@
             'Artist: For Loops': "芸術家：ループ用"
             'Artist: Functions': "アーティスト：関数"
             'Artist: Functions with Parameters': "芸術家：　変数装置（パラメータ）をつけた関数"
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+            'Artist: Variables': "アーティスト：変数（へんすう）"
+            'Bee: For Loops': "みつばち：ループ"
+            'Bee: Functions with Parameters': "みつばち：パラメーター（引数）付きの関数"
             Extreme Challenge - Comprehensive: Extreme Challenge - Comprehensive
             Maze and Bee: "迷路とみつばち"
             'Play Lab: For Loops': 'Play Lab: For Loops'
@@ -152,9 +152,9 @@
             'Artist: Loops': "アーティスト：ループ"
             'Artist: Nested Loops': "アーティスト：入れ子のループ"
             'Artist: Sequence': "アーティスト: シーケンス"
-            'Bee: Conditionals': "ビー：条件文"
+            'Bee: Conditionals': "みつばち：条件文（じょうけんぶん）"
             'Bee: Debugging': "みつばち: デバッグ"
-            'Bee: Nested Loops': 'Bee: Nested Loops'
+            'Bee: Nested Loops': "みつばち：入れ子のループ"
             'Farmer: While Loops': 'Farmer: While Loops'
             'Maze: Sequence': "迷路: シーケンス"
           description_audience: ''
@@ -741,6 +741,8 @@
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1149,6 +1151,7 @@
             Thinking About Implementation: Thinking About Implementation
             Welcome!: "ようこそ!"
             Wrap-Up: "まとめ"
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: CS in Algebra mid year lesson support
@@ -1296,6 +1299,7 @@
             Assessing Computer Models: Assessing Computer Models
             Welcome!: "ようこそ!"
             Wrap-Up: "まとめ"
+          description_audience: ''
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -1609,6 +1613,18 @@
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If"
+              Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1968,7 +1984,7 @@
           description_audience: ''
         kinderTest:
           stage:
-            'Bee: Conditionals': "ビー：条件文"
+            'Bee: Conditionals': "みつばち：条件文（じょうけんぶん）"
             Kindergarten Stage 1: Kindergarten Stage 1
           title: ''
           description_audience: ''
@@ -2048,9 +2064,9 @@
           stage:
             'Artist: For Loops': "芸術家：ループ用"
             'Artist: Functions with Parameters': "芸術家：　変数装置（パラメータ）をつけた関数"
-            'Artist: Variables': 'Artist: Variables'
-            'Bee: For Loops': 'Bee: For Loops'
-            'Bee: Functions with Parameters': 'Bee: Functions with Parameters'
+            'Artist: Variables': "アーティスト：変数（へんすう）"
+            'Bee: For Loops': "みつばち：ループ"
+            'Bee: Functions with Parameters': "みつばち：パラメーター（引数）付きの関数"
             Digital Citizenship: Digital Citizenship
             Explore project ideas: Explore project ideas
             Final Project - Presentation Day: Final Project - Presentation Day
@@ -2388,14 +2404,15 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: "はずむ"
-          title: Basketball
+          title: "チームをえらんで、バスケットボールのゲームを作る"
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: "チームをえらんで、バスケットボールのゲームを作る"
+          description: "チームをえらんで、バスケットボールのゲームを作る"
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2441,6 +2458,8 @@
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2461,6 +2480,7 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2487,6 +2507,10 @@
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2579,6 +2603,8 @@
             Your Digital Footprint: "あなたのデジタルフットプリント"
             Building a Foundation: "ピラミッドをたてよう"
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2605,6 +2631,8 @@
             Digital Citizenship: Digital Citizenship
             'Unplugged: Binary': 'Unplugged: Binary'
             Artist Binary: "芸術家　２進法"
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: "入れ子のループ"
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2628,7 +2656,8 @@
             More Programming with Scratch: More Programming with Scratch
             Private and Personal Information: Private and Personal Information
             Internet: "インターネット"
-            Crowdsourcing: Crowdsourcing
+            Crowdsourcing: "クラウドソーシング"
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2740,7 +2769,77 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS
+              (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real
+              World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real
+              World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons
+              5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: "ようこそ!"
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: "まとめ"
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: "ようこそ!"
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: "まとめ"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

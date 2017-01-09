@@ -1,10 +1,10 @@
 {
   "actor":"aktieris",
-  "add":"add",
+  "add":"pievienot",
   "ask":"ask",
-  "addCharacter":"add a",
+  "addCharacter":"pievienot",
   "addCharacterTooltip":"Pievienot tēlu scēnai.",
-  "addGoal":"add goal",
+  "addGoal":"pievienot mērķi",
   "addGoalTooltip":"Add a goal to the scene at the specified location.",
   "addPoints10":"add 10 points",
   "addPoints50":"add 50 points",

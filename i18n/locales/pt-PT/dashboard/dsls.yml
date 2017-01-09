@@ -128,8 +128,8 @@ pt:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
         "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Rodas/lado: 2 <br/>janelas/lado: 0</h3>'
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>'
+        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Rodas/lado: 2 <br/>janelas/lado: 6</h3>'
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Rodas/lado: 3 <br/>janelas/lado: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada um desses veículos foi decomposto em partes menores. Associe cada veículo com sua lista de partes correta.
         Matching: Correspondência
       4-5 Suncatchers Match 1:

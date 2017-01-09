@@ -196,9 +196,8 @@
           użyj więc bloku "counter" (licznik). Wskazówka: Znajdziesz go w kategorii
           "Variables" (Zmienne).'
         turtle_2_7: Oto program do rysowania spirali, ale bloki są wyłączone, więc
-          nie będą działać. Utwórz nowy program używając bloku "licz" z (z kategorii
-          "Loops" (Pętle)) i bloku "counter" (licznik) (z kategorii "Variables" (Zmienne)),
-          aby narysować taką samą spiralę.
+          nie będą działać. Utwórz nowy program używając bloku licz z (z kategorii
+          Pętle) i bloku licznik (z kategorii Zmienne), aby narysować taką samą spiralę.
         turtle_2_7_5: Jest nowa funkcja narysuj bałwana (w kategorii Funkcje). Narysuj
           dwa bałwany o wysokość 250 i 100.
         turtle_2_8: To jest trochę podstępne. Użyj funkcji narysuj bałwana i nowego
@@ -752,6 +751,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

@@ -67,7 +67,7 @@ Compares two values - numbers, strings, or other booleans - and returns `true` i
 * `"Hello" != "hello"` returns *true* -- because the strings are slightly different.
 * `"3" != 3` returns *false* -- because the string 3 can be coerced into a number before comparing with 3. (see notes above about the forgiving ==).
 * `(2+1) != 3` returns *false* -- because the arithmetic expression evaluates to 3.
-* `x != 7` returns *true* -- when...the variable x *is any value other than* 7.
+* `x != 7` returns *true* -- when the variable x *is any value other than* 7.
 
 <div style="clear:both"> </div>
 <hr>

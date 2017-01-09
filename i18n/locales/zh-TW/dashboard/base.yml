@@ -84,6 +84,7 @@ zh-TW:
     overview: '註冊一個帳號來追蹤你的進度或管理你的教室。 <a href="/">你可以瀏覽許多階段與關卡</a>而不用註冊，但需要註冊帳號來儲存你的專案與進度。'
     hoc_already_signed_up_heading: '使用但不登錄'
     hoc_already_signed_up_content: '您已經登錄參加了一個Hour of Code的課程教學! 您與您的學生可以在參與這個課程時不需登入在Code Studio。要開始課程的時候，在您的課堂上<a href="https://code.org/learn">選擇一個課程</a>並和您的學生們分享這個連結。<br/><br/>如果您覺得 Hour of Code 的內容很棒，想要更進一步使用時，您可以設定您的密碼並且在 Code Studio 建立一個帳號來為您的學生們註冊使用任何一個 <a href="https://code.org/educate">較長的課程</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: '請參閱教師指南'
     title: "在Code.org上註冊"
     school_name: '學校名稱 （選填）'
@@ -302,6 +303,7 @@ zh-TW:
     delete_text: "按一下下面的按鈕將刪除您的帳號。"
     delete_text_teacher_note: 請注意： 刪除您的帳號並不會刪除您的學生的帳號。
     delete_confirm: '是否確定要刪除您的帳號？'
+    deleted_user: 'deleted user'
   user_level:
     completed: '已完成'
     tried: '已試過'
@@ -354,14 +356,15 @@ zh-TW:
     announcement_learn_more_button: "瞭解更多資訊"
     announcement_try_now_button: "快來試試"
     announcement_host_an_hour_button: "舉辦一小時"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "觀看影片"
     announcement_petition: "作為一名教師，你在這項活動中以領先的方式給在每一個學校的每個學生機會，學習計算機科學。現在，是時候讓你的代表們聽到你的消息了。本週，教育領導人、 28 州長和美國地球觀測衛星委員會大公司一起在一封公開信要求美國國會資助 K-12 計算機科學教育。"
     announcement_petition_button: "新增你的名字"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "持續關注我們老師的部落格以追蹤最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看過去的公告。</a>"
     announcement_hoc_launch: "數以千計的180多個國家教育者將開始在12月5-11日透過Hour of Code教導電腦科學。我們指望你去幫我們達到比以往更多的學生。. <a href='%{signup_url}' target='_blank'>註冊你的Hour of Code事件</a>，並且讓其他老師知道所有人都可以開始教導電腦科學。"
-    announcement_hoc_scaling: '給課程1-4及快速課程教師的重要提示: 因為數以百萬計的學員在同時間使用 Hour of Code 課程造成的高流量，<b>Code Studio在12月3-11號期間將無法儲存或統計使用這些課程的學員進度</b>，我們建議您的學生們可以在電腦科學教育周時參與慶祝Hour of Code的活動時來使用這些課程。因為在活動當周我們的 Hour of Code 導覽課程同樣也不會紀錄進度，您的學生仍然可以完成完整的導覽並獲取認證。'
     announcement_mc_launch: "我們最熱門的一個導覽課程現在有續集了! 全新的Minecraft設計器可以讓學生們自己定出Minecraft世界的規則。他們可以創造出一個獨一無二的Minecraft遊戲體驗，並在手機上與朋友分享。您可以在您的課堂上使用這個Hour of Code課程。"
-    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_how_code_studio: "你不需要有任何教授計算機科學的經驗。Code.org 裡提供了所有學習階段需要的東西，包含了課程、單元計畫、專業有品質的學習程序以及一堆的免費工具。不知道要從哪開始？下載<a href='%{video_download_url}'>這個影片吧</a>！"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "抱歉，但 %{new_section_code} 區間並不存在。請輸入一個不同的區間代碼。"
     section_code_not_entered: "請提供現在的區間代碼"
@@ -742,33 +745,33 @@ zh-TW:
     starwars_blocks_name: '星球大戰: 用代碼構建一個星系-JavaScript'
     starwars_javascript_name: '星球大戰: 用程式代碼(JavaScript) 建立一個銀河系'
     download_message: '下載 %{app_name}，供離線使用 (136MB)'
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Albanian: '下載阿爾巴尼雅文版：'
+    download_in_Arabic: '下載阿拉伯文版：'
+    download_in_Azerbaijani: '下載亞塞拜然語版：'
+    download_in_Basque: '下載巴斯克文版：'
+    download_in_Bosnian: '下載波士尼亞文版：'
+    download_in_Bulgarian: '下載保加利亞文版：'
+    download_in_Catalan: '下載卡達隆尼亞文版：'
+    download_in_Chinese-Taiwan: '下載繁體中文版：'
+    download_in_Chinese: '下載簡體中文版：'
+    download_in_Croatian: '下載克羅地亞文版：'
+    download_in_Czech: '下載捷克文版：'
+    download_in_Danish: '下載丹麥文版本：'
+    download_in_Dutch: '下載荷蘭文版本：'
+    download_in_English: '下載英文版：'
+    download_in_Finnish: '下載芬蘭文版：'
+    download_in_French: '下載法文版：'
+    download_in_German: '下載德文版：'
+    download_in_Greek: '下載希臘文版：'
+    download_in_Hebrew: '下載希伯來文版：'
+    download_in_Hungarian: '下載匈牙利文版：'
     download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
+    download_in_Indonesian: '下載印尼語版：'
+    download_in_Irish: '下載愛爾蘭文版：'
+    download_in_Italian: '下載義大利文版：'
+    download_in_Japanese: '下載日文版：'
+    download_in_Korean: '下載韓文版：'
+    download_in_Latvian: '下載拉脫維亞文版：'
     download_in_Lithuanian: 'Download in Lithuanian:'
     download_in_Norwegian: 'Download in Norwegian:'
     download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
@@ -780,10 +783,10 @@ zh-TW:
     download_in_Serbian: 'Download in Serbian:'
     download_in_Slovenian: 'Download in Slovenian:'
     download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Swedish: '下載瑞典文版：'
+    download_in_Turkish: '下載土耳其文版：'
+    download_in_Ukrainian: '下載烏克蘭文版：'
+    download_in_Vietnamese: '下載越南文版：'
     windows: 'Windows 作業系統 (64位元)'
     mac: 'Mac OS X'
   plc:

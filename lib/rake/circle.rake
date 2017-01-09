@@ -84,6 +84,7 @@ namespace :circle do
           " --parallel #{use_saucelabs ? 16 : 8}" \
           " --abort_when_failures_exceed 10" \
           " --retry_count 2" \
+          " --output-synopsis" \
           " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
