@@ -44,6 +44,10 @@ module.exports = function (testCollection, testData, dataItem, done) {
     level.scale.stepSpeed = 33;
   }
 
+  if (testData.lastAttempt) {
+    level.lastAttempt = testData.lastAttempt;
+  }
+
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
 

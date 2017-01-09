@@ -1298,5 +1298,80 @@ module.exports = {
         testResult: TestResults.FREE_PLAY
       }
     },
+
+    {
+      description: "start code visible when user code is absent",
+      editCode: true,
+      xml: "textLabel('id', 'start code');",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 5, () => {
+          assert.equal($('#divApplab label').text(), 'start code', 'start code is visible');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // No errors in output console
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "user code overrides start code for normal levels",
+      editCode: true,
+      xml: "textLabel('id', 'start code');",
+      lastAttempt: "textLabel('id', 'user code');",
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 5, () => {
+          assert.equal($('#divApplab label').text(), 'user code', 'user code is visible');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // No errors in output console
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+
+    {
+      description: "user code does not override start code for embedded levels",
+      editCode: true,
+      xml: "textLabel('id', 'start code');",
+      lastAttempt: "textLabel('id', 'user code');",
+      embed: true,
+      runBeforeClick: function (assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 5, () => {
+          assert.equal($('#divApplab label').text(), 'start code', 'start code is visible');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      customValidator(assert) {
+        // No errors in output console
+        const debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
   ]
 };
