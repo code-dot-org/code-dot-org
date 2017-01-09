@@ -31,6 +31,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     }
   }
 
+  # principalEmail is not included
   REQUIRED_APPLICATION_FIELDS = %w[
     school
     school-district
@@ -65,11 +66,12 @@ class Pd::TeacherApplication < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user
+  validates_presence_of :application
   validates_presence_of :primary_email
   validates_presence_of :secondary_email
   validates_email_format_of :primary_email, allow_blank: true
   validates_email_format_of :secondary_email, allow_blank: true
-  validates_presence_of :application
+  validates_email_format_of :principal_email, allow_blank: true
   validates_inclusion_of :selected_course, in: PROGRAM_DETAILS_BY_COURSE.keys, unless: -> {!(application && selected_course)}
 
   validate :validate_required_application_fields
@@ -110,7 +112,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
   end
 
   def application_hash
-    JSON.parse(application)
+    application ? JSON.parse(application) : {}
   end
 
   def teacher_first_name

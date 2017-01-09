@@ -160,23 +160,39 @@ const TeacherApplication = React.createClass({
   },
 
   shouldShowRegionalPartnersOnlyWarning() {
+    return ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase());
+  },
+
+  shouldShowWorkingToIdentifyRegionalPartnerWarning() {
     return !!(
-      ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase()) ||
-      (!(this.props.regionalPartnerGroup) && document.querySelector('#school-district input').value)
+      ['public', 'charter'].includes(document.getElementById('school-type').value.toLowerCase()) &&
+      !(this.props.regionalPartnerGroup) &&
+      (document.querySelector('#school-district input').value || document.getElementById('school-district-other').checked)
     );
   },
 
   generateTeacherInformationSection() {
     return (
       <div>
-        {this.shouldShowRegionalPartnersOnlyWarning() && (
+        {
+          this.shouldShowRegionalPartnersOnlyWarning() && (
           <label style={{color: 'red'}}>
-            Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our program,
-            most spots are reserved for teachers in regions where we have a Regional Partner. Your area does not yet
-            have a Code.org Regional Partner. If you would like to continue this application, please note that we will
-            consider it for review if spaces remain at the end of our application period.
+            Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our
+            program, most spots are reserved for public school teachers in regions where we have a Regional Partner.
+            You are a private school teacher and/or your area does not yet have a Code.org Regional Partner. If you
+            would like to continue this application, please note that we will consider it for review if spaces
+            remain at the end of our application period.
           </label>
         )}
+        {
+          this.shouldShowWorkingToIdentifyRegionalPartnerWarning() && (
+            <label style={{color: 'red'}}>
+              Thank you for your interest in Code.org’s Professional Learning Program! We are working to identify the
+              Regional Partner that will serve your school, and the dates of your five-day summer workshop. We will
+              update you with more details on your assigned partner and the date of your summer workshop soon.
+            </label>
+          )
+        }
         <ButtonList
           type="check"
           label="Grades served at your school"
@@ -563,9 +579,12 @@ const TeacherApplication = React.createClass({
   },
 
   onSubmitButtonClick() {
+    this.setState({submitting: true});
+
     const districtValues = getDistrictDropdownValues();
 
-    const formData = _.cloneDeep(this.state);
+    const formData = _.omit(_.cloneDeep(this.state), ['submitting']);
+
     _.assign(formData, districtValues);
 
     let topInvalidElementId = undefined;
@@ -599,7 +618,7 @@ const TeacherApplication = React.createClass({
       document.getElementById('school-state').value
     );
 
-    if (!this.shouldShowRegionalPartnersOnlyWarning()) {
+    if (!this.shouldShowRegionalPartnersOnlyWarning() && !this.shouldShowWorkingToIdentifyRegionalPartnerWarning()) {
       fieldsToValidate.splice(fieldsToValidate.indexOf('committedToSummer') + 1, 0, 'ableToAttendAssignedSummerWorkshop');
     }
 
@@ -610,7 +629,11 @@ const TeacherApplication = React.createClass({
     }
 
     _.forEach(fieldsToValidate, (field) => {
-      if (this.state[field] === undefined || this.state[field].length === 0) {
+      if (fieldValidationErrors[field] && this.state[field]) {
+        if (fieldValidationErrors[field](this.state[field])) {
+          topInvalidElementId = topInvalidElementId || field;
+        }
+      } else if (this.state[field] === undefined || this.state[field].length === 0) {
         this.setState({[field]: ''});
         topInvalidElementId = topInvalidElementId || field;
       }
@@ -629,6 +652,7 @@ const TeacherApplication = React.createClass({
     }
 
     if (topInvalidElementId) {
+      this.setState({submitting: false});
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
       if (topInvalidElement.className.indexOf('form-group') >= 0) {
@@ -666,7 +690,10 @@ const TeacherApplication = React.createClass({
           By clicking “Complete and Send,” you are agreeing to allow Code.org to share the information provided in this
           survey with your assigned Regional Partner and your school district.
         </label>
-        <Button onClick={this.onSubmitButtonClick}>
+        <Button
+          onClick={this.onSubmitButtonClick}
+          disabled={this.state.submitting}
+        >
           Complete and Send
         </Button>
       </div>

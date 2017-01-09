@@ -1110,7 +1110,7 @@ end
 
 def refute_bad_gateway
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
-  expect(first_header_text).not_to eq('Bad Gateway')
+  expect(first_header_text).not_to end_with('Bad Gateway')
 end
 
 def refute_site_unreachable

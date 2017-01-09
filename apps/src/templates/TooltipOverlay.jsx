@@ -1,7 +1,7 @@
 /** @file Crosshair and guides over visualization */
 var React = require('react');
 
-import { isMouseInBounds } from '../applab/gridUtils';
+import { isPointInBounds } from '../applab/gridUtils';
 
 const TOOLTIP_MARGIN = 6;
 const EDGE_MARGIN = 5;
@@ -118,7 +118,7 @@ let TooltipOverlay = React.createClass({
   },
 
   render() {
-    if (!isMouseInBounds(this.props.mouseX, this.props.mouseY,
+    if (!isPointInBounds(this.props.mouseX, this.props.mouseY,
         this.props.width, this.props.height) ||
       !this.props.providers || !this.props.providers.length) {
       return null;
