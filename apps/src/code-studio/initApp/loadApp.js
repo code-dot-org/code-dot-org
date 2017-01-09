@@ -412,7 +412,7 @@ window.apps = {
 };
 
 let APP_OPTIONS;
-function setAppOptions(appOptions) {
+export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
   window.appOptions = appOptions;
