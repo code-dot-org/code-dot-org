@@ -120,7 +120,6 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
  * @param {boolean} scriptData.plc
  * @param {object[]} scriptData.stages
  * @param {string} scriptData.name
- * @param {boolean} scriptData.peerReviewsRequired
  * @param {boolean} scriptData.hideable_stages
  * @param {boolean} scriptData.isHocScript
 
@@ -209,7 +208,6 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} [scriptData.plc]
  * @param {object[]} [scriptData.stages]
- * @param {boolean} [scriptData.peerReviewsRequired]
  * @param {string} currentLevelId
  * @param {boolean} [saveAnswersBeforeNavigation]
  */
@@ -221,7 +219,6 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
     scriptName: scriptData.name,
-    peerReviewsRequired: scriptData.peerReviewsRequired,
   }));
 
   const postMilestoneDisabled = scriptData.disablePostMilestone ||
