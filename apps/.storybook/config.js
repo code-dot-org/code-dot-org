@@ -5,6 +5,10 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 
+import '../style/common.scss';
+import '../style/netsim/style.scss';
+import '../style/applab/style.scss';
+
 const styles = {
   centeredStory: {
     position: 'absolute',

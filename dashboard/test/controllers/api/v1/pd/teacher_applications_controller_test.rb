@@ -84,6 +84,22 @@ class Api::V1::Pd::TeacherApplicationsControllerTest < ::ActionController::TestC
     assert_equal ['Math', 'Panda training'], result_hash['subjects2017']
   end
 
+  test 'multiple submissions ignores the first ones' do
+    sign_in create(:teacher)
+
+    assert_creates Pd::TeacherApplication do
+      put :create, params: test_params
+
+      assert_response :success
+    end
+
+    assert_no_difference 'Pd::TeacherApplication.count' do
+      put :create, params: test_params
+
+      assert_response :success
+    end
+  end
+
   private
 
   def test_params

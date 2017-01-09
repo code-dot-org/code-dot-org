@@ -307,5 +307,5 @@ namespace :seed do
   task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
 end

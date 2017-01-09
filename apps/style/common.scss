@@ -608,7 +608,21 @@ button.blocklyLaunch {
     border: 1px solid $cyan;
     background-color: $cyan;
   }
+
+  &.hideText {
+    width: 42px;
+    height: 42px;
+    min-width: 0;
+    padding: 7px;
+
+    img {
+      margin-left: 2px;
+      margin-top: -2px;
+    }
+  }
+
 }
+
 button.share {
   border: 1px solid #FFA000;
   background-color: #FFA000;
@@ -1641,7 +1655,7 @@ a.WireframeSendToPhone_send-to-phone-link {
   }
 }
 
-body.embedded_iframe {
+.embedded_iframe {
   #visualizationColumn.wireframeShare {
     padding: 0;
   }
