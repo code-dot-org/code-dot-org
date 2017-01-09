@@ -82,28 +82,7 @@ export default function reducer(state = initialState, action) {
       stages: state.stages.map(stage => ({
         ...stage,
         levels: stage.levels.map((level, index) => {
-          if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
-            return {
-              ...level,
-              status: LevelStatus.locked
-            };
-          }
-
-          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-          let nextLevel = level;
-          if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-            nextLevel = {
-              ...level,
-              ...action.peerReviewsPerformed[index]
-            };
-          }
-
-          return {
-            ...nextLevel,
-            ...(level.kind !== 'peer_review' && {
-              status: activityCssClass(newLevelProgress[id])
-            })
-          };
+          return updateLevel(stage, level, index, action.peerReviewsPerformed, newLevelProgress);
         })
       }))
     };
@@ -149,6 +128,34 @@ export default function reducer(state = initialState, action) {
 }
 
 // Helpers
+/**
+ * Update a level (inside of state.progress.stages) according to newLevelProgress
+ * TODO: add some tests
+ */
+function updateLevel(stage, level, index, peerReviewsPerformed, newLevelProgress) {
+  if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
+    return {
+      ...level,
+      status: LevelStatus.locked
+    };
+  }
+
+  let nextLevel = level;
+  if (peerReviewsPerformed && stage.flex_category === 'Peer Review') {
+    nextLevel = {
+      ...level,
+      ...peerReviewsPerformed[index]
+    };
+  }
+  const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+  return {
+    ...nextLevel,
+    ...(level.kind !== 'peer_review' && {
+      status: activityCssClass(newLevelProgress[id])
+    })
+  };
+}
+
 
 /**
  * Return the level with the highest progress, or the first level if none have
