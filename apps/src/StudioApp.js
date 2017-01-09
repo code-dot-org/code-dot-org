@@ -1743,9 +1743,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
 
-  // Ignore user's code on embedded levels, so that changes made
-  // to starting code by levelbuilders will be shown.
-  if (config.embed) {
+  if (config.ignoreLastAttempt) {
     config.level.lastAttempt = '';
   }
 

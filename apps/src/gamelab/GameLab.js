@@ -247,6 +247,10 @@ GameLab.prototype.init = function (config) {
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
+    // Ignore user's code on embedded levels, so that changes made
+    // to starting code by levelbuilders will be shown.
+    config.ignoreLastAttempt = config.embed;
+
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');

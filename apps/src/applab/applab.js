@@ -714,6 +714,10 @@ Applab.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
+  // Ignore user's code on embedded levels, so that changes made
+  // to starting code by levelbuilders will be shown.
+  config.ignoreLastAttempt = config.embed;
+
   Applab.storage.populateTable(level.dataTables, false); // overwrite = false
   Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
