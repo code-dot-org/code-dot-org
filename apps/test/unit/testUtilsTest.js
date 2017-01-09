@@ -1,5 +1,6 @@
 /** @file Who watches the watchers? */
 import React from 'react';
+import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {
     forEveryBooleanPermutation,
@@ -63,16 +64,21 @@ describe('forEveryBooleanPermutation', function () {
 describe('throwOnConsoleErrors', function () {
   describe('without it', function () {
     it('console.error does not throw an exception', function () {
-        expect(() => console.error('This console.error call is intentional.'))
-            .not.to.throw();
+      expect(() => console.error('This console.error call is intentional.'))
+          .not.to.throw();
     });
   });
 
   describe('with it', function () {
     throwOnConsoleErrors();
     it('console.error does throw an exception', function () {
+      // Suppress excessive logging during test
+      sinon.stub(console, 'log');
+
       expect(() => console.error('should throw'))
           .to.throw(Error, 'should throw');
+
+      console.log.restore();
     });
   });
 });
