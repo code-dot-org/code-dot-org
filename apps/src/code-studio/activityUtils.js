@@ -40,10 +40,10 @@ export const activityCssClass = result => {
     return LevelStatus.not_tried;
   }
   if (result === REVIEW_ACCEPTED_RESULT) {
-    return 'review_accepted';
+    return LevelStatus.review_accepted;
   }
   if (result === REVIEW_REJECTED_RESULT) {
-    return 'review_rejected';
+    return LevelStatus.review_rejected;
   }
   if (result === SUBMITTED_RESULT) {
     return LevelStatus.submitted;
