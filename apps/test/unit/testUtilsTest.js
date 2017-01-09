@@ -76,8 +76,11 @@ describe('throwOnConsoleErrors', function () {
       // Suppress excessive logging during test
       sinon.stub(console, 'log');
 
-      expect(() => console.error('should throw'))
-          .to.throw(Error, 'should throw');
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.error('should throw');
 
       console.log.restore();
     });
@@ -98,8 +101,11 @@ describe('throwOnConsoleWarnings', function () {
       // Suppress excessive logging during test
       sinon.stub(console, 'log');
 
-      expect(() => console.warn('should throw'))
-        .to.throw(Error, 'should throw');
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.warn('should throw');
 
       console.log.restore();
     });
