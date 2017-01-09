@@ -13,7 +13,6 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
-import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
@@ -104,7 +103,6 @@ var GameLab = function () {
     this
   ));
   consoleApi.setLogMethod(this.log.bind(this));
-  audioApi.injectExecuteCmd(this.executeCmd.bind(this));
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
