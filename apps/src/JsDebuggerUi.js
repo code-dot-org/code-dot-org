@@ -362,6 +362,28 @@ let draggingWatchersResizeBar = false;
 /** @type {function} */
 let boundMouseMoveHandlerWatchers;
 
+let watchersReferences = {};
+
+function getWatchersElements() {
+  if (!watchersReferences.watchersResizeBar) {
+    watchersReferences.watchersResizeBar = document.getElementById('watchersResizeBar');
+  }
+  if (!watchersReferences.watchersDiv) {
+    watchersReferences.watchersDiv = document.getElementById('debug-watch');
+  }
+  if (!watchersReferences.watchersHeaderDiv) {
+    watchersReferences.watchersHeaderDiv = document.getElementById('debug-watch-header');
+  }
+  if (!watchersReferences.debugConsoleDiv) {
+    watchersReferences.debugConsoleDiv = document.getElementById('debug-console');
+  }
+  return watchersReferences;
+}
+
+function resetWatchersElements() {
+  watchersReferences = {};
+}
+
 JsDebuggerUi.prototype.onMouseDownDebugResizeBar = function (event) {
   // When we see a mouse down in the resize bar, start tracking mouse moves:
   var eventSourceElm = event.srcElement || event.target;
@@ -396,17 +418,14 @@ JsDebuggerUi.prototype.onMouseDownWatchersResizeBar = function (event) {
   }
 };
 
-window.onResetWatchersResizeBar = function () {
-  const watchersResizeBar = document.getElementById('watchersResizeBar');
-  const watchersDiv = document.getElementById('debug-watch');
-  const watchersHeaderDiv = document.getElementById('debug-watch-header');
-  const debugConsoleDiv = document.getElementById('debug-console');
-
+document.addEventListener('resetWatchersResizableElements', function () {
+  const {watchersDiv, debugConsoleDiv, watchersResizeBar, watchersHeaderDiv} = getWatchersElements();
   watchersDiv.style.removeProperty('width');
   debugConsoleDiv.style.removeProperty('right');
   watchersResizeBar.style.removeProperty('right');
   watchersHeaderDiv.style.removeProperty('width');
-};
+  resetWatchersElements();
+}.bind(this));
 
 /**
  *  Handle mouse moves while dragging the debug resize bar.
@@ -438,11 +457,7 @@ JsDebuggerUi.prototype.onMouseMoveDebugResizeBar = function (event) {
  *  Handle mouse moves while dragging the debug resize bar.
  */
 JsDebuggerUi.prototype.onMouseMoveWatchersResizeBar = function (event) {
-  const watchersResizeBar = document.getElementById('watchersResizeBar');
-  const watchersDiv = document.getElementById('debug-watch');
-  const watchersHeaderDiv = document.getElementById('debug-watch-header');
-  const debugConsoleDiv = document.getElementById('debug-console');
-
+  const {watchersDiv, debugConsoleDiv, watchersResizeBar, watchersHeaderDiv} = getWatchersElements();
   const watchersRect = watchersDiv.getBoundingClientRect();
   const movement = watchersRect.left - event.clientX;
   const newDesiredWidth = watchersRect.width + movement;

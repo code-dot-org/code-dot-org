@@ -187,15 +187,15 @@ var UnconnectedJsDebugger = React.createClass({
           <PaneSection
             id="debug-watch-header"
             onClick={() => {
-              this.setState({watchersHidden: !this.state.watchersHidden});
+              // call JsDebuggerUi.js logic to reset resizer-overridden styles
+              // (remove once JsDebuggerUi.js resize logic migrated to React)
+              if (!this.state.watchersHidden) {
+                const resetResizeEvent = document.createEvent('Event');
+                resetResizeEvent.initEvent('resetWatchersResizableElements', true, true);
+                document.dispatchEvent(resetResizeEvent);
+              }
 
-              // Remove styles properties set by JsDebuggerUi.js.
-              const watchersResizeBar = document.getElementById('watchersResizeBar');
-              const watchersHeaderDiv = document.getElementById('debug-watch-header');
-              const debugConsoleDiv = document.getElementById('debug-console');
-              debugConsoleDiv.style.removeProperty('right');
-              watchersResizeBar.style.removeProperty('right');
-              watchersHeaderDiv.style.removeProperty('width');
+              this.setState({watchersHidden: !this.state.watchersHidden});
             }}
             style={this.state.watchersHidden ? {
               borderLeft: 'none',
@@ -231,7 +231,7 @@ var UnconnectedJsDebugger = React.createClass({
           <ProtectedStatefulDiv>
             <div id="watchersResizeBar"></div>
           </ProtectedStatefulDiv>
-          </div>
+        </div>
         {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
       </div>
     );
