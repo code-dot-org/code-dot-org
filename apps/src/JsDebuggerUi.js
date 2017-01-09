@@ -470,7 +470,11 @@ JsDebuggerUi.prototype.onMouseMoveWatchersResizeBar = function (event) {
   watchersDiv.style.width = newWatchersWidth + 'px';
   debugConsoleDiv.style.right = newWatchersWidth + 'px';
   watchersResizeBar.style.right = watchersResizeRight + 'px';
-  watchersHeaderDiv.style.width = newWatchersWidth + 1 + 'px';
+
+  const headerLBorderWidth = 1;
+  const watchersLRBorderWidth = 2;
+  const extraWidthForHeader = watchersLRBorderWidth - headerLBorderWidth;
+  watchersHeaderDiv.style.width = newWatchersWidth + extraWidthForHeader + 'px';
 };
 
 JsDebuggerUi.prototype.onMouseUpDebugResizeBar = function () {
