@@ -1,3 +1,4 @@
+@no_firefox
 @dashboard_db_access
 @as_student
 @no_circle

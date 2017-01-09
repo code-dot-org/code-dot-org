@@ -102,6 +102,7 @@
     "all_animations_single_frame": "true",
     "show_debug_watch": "true",
     "pause_animations_by_default": "false",
+    "encrypted_examples": "p2HyMPVBrhwJX55iUS2lvbAboBSrPHgtqmBlu7DphCnNK9v9YXXHD5OyQs5h\nNcpy\n",
     "contained_level_names": null
   },
   "published": true,
