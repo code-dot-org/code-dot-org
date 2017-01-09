@@ -3,8 +3,9 @@ import React from 'react';
 import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {
-    forEveryBooleanPermutation,
-    throwOnConsoleErrors
+  forEveryBooleanPermutation,
+  throwOnConsoleErrors,
+  throwOnConsoleWarnings
 } from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function () {
@@ -77,6 +78,28 @@ describe('throwOnConsoleErrors', function () {
 
       expect(() => console.error('should throw'))
           .to.throw(Error, 'should throw');
+
+      console.log.restore();
+    });
+  });
+});
+
+describe('throwOnConsoleWarnings', function () {
+  describe('without it', function () {
+    it('console.warn does not throw an exception', function () {
+      expect(() => console.warn('This console.warn call is intentional.'))
+        .not.to.throw();
+    });
+  });
+
+  describe('with it', function () {
+    throwOnConsoleWarnings();
+    it('console.warn does throw an exception', function () {
+      // Suppress excessive logging during test
+      sinon.stub(console, 'log');
+
+      expect(() => console.warn('should throw'))
+        .to.throw(Error, 'should throw');
 
       console.log.restore();
     });
