@@ -11,7 +11,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "slider_speed": ".7",
+    "slider_speed": "1.0",
     "free_play": "false",
     "instructions": "Great!  Do the same thing with these circles.\r\n",
     "embed": "false",
@@ -33,7 +33,8 @@
     "instructions_important": "true",
     "discard_background": "false",
     "markdown_instructions": "Great!  Do the same thing with these circles. \r\n\r\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\r\n- Each circle begins just 50 pixels from where the last one ended",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To make a circle:\\n- Repeat 360 times\\n  - Move forward 1 pixel\\n  - Turn left 1 degree\",\"hint_id\":\"courseD_artist_nestedLoops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69ee6cdb66509a8a76c08c0973edd15b/courseD_artist_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to jump forward by 50 pixels between circles.\",\"hint_id\":\"courseD_artist_nestedLoops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de32a2755a29a5d538fc120062ce4668/courseD_artist_nestedLoops4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To make a circle:\\n- Repeat 360 times\\n  - Move forward 1 pixel\\n  - Turn left 1 degree\",\"hint_id\":\"courseD_artist_nestedLoops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69ee6cdb66509a8a76c08c0973edd15b/courseD_artist_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to jump forward by 50 pixels between circles.\",\"hint_id\":\"courseD_artist_nestedLoops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de32a2755a29a5d538fc120062ce4668/courseD_artist_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a nested loop to draw your circles 4 times.\",\"hint_id\":\"courseD_artist_nestedLoops4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1aecf47ce1071ab9ce83e9c5d7826dad/courseD_artist_nestedLoops4.mp3\"}]",
+    "step_speed": "0",
     "contained_level_names": null
   },
   "published": true,
@@ -57,13 +58,13 @@
           <title name="DIR">jumpForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="1,60,90,120">1</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant_dropdown">
           <title name="DIR">turnLeft</title>
-          <title name="VALUE">90</title>
+          <title name="VALUE" config="1,60,90,120">1</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -101,9 +102,9 @@
                           <title name="DIR">moveForward</title>
                           <title name="VALUE">1</title>
                           <next>
-                            <block type="draw_turn_by_constant">
+                            <block type="draw_turn_by_constant_dropdown">
                               <title name="DIR">turnLeft</title>
-                              <title name="VALUE">1</title>
+                              <title name="VALUE" config="1,60,90,120">1</title>
                             </block>
                           </next>
                         </block>

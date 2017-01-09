@@ -1,4 +1,3 @@
-import {singleton as studioApp} from '../StudioApp';
 import apiTimeoutList from '../timeoutList';
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
@@ -19,6 +18,7 @@ import {
   outputError,
   outputWarning,
 } from '../javascriptMode';
+import {addAudioCommands} from '@cdo/apps/lib/util/audioApi';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -958,48 +958,6 @@ applabCommands.setImageURL = function (opts) {
   return false;
 };
 
-applabCommands.playSound = function (opts) {
-  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
-
-  if (studioApp.cdoSounds) {
-    var url = assetPrefix.fixPath(opts.url);
-    if (studioApp.cdoSounds.isPlayingURL(url)) {
-      return;
-    }
-
-    // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
-    //       See Pivotal #108279582
-    //
-    //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
-    //       Varnish 4.0 with certain forms of the Range request header.
-    //
-    //       By commenting this line out, we re-enable Web Audio API in App
-    //       Lab, which has the following effects:
-    //       GOOD: Web Audio should not use the Range header so it won't hit
-    //             the bug.
-    //       BAD: This disables cross-domain audio loading (hotlinking from an
-    //            App Lab app to an audio asset on another site) so it might
-    //            break some existing apps.  This should be less problematic
-    //            since we now allow students to upload and serve audio assets
-    //            from our domain via the Assets API now.
-    //
-    var forceHTML5 = false;
-    if (window.location.protocol === 'file:') {
-      // There is no way to make ajax requests from html on the filesystem.  So
-      // the only way to play sounds is using HTML5. This scenario happens when
-      // students export their apps and run them offline. At this point, their
-      // uploaded sound files are exported as well, which means varnish is not
-      // an issue.
-      forceHTML5 = true;
-    }
-    studioApp.cdoSounds.playURL(url, {
-      volume: 1.0,
-      forceHTML5: forceHTML5,
-      allowHTML5Mobile: true
-    });
-  }
-};
-
 applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
@@ -1801,3 +1759,6 @@ function stopLoadingSpinnerFor(elementId) {
     return !(/loading/i.test(x));
   }).join(' ');
 }
+
+// Include playSound, stopSound, etc.
+addAudioCommands(applabCommands);

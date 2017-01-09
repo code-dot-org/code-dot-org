@@ -189,12 +189,12 @@
   "soundTypeZombieBrains": "zombie sténání",
   "soundTypeZombieGroan": "zombie zavrčení",
   "soundTypeZombieHurt": "zombie výkřik",
-  "timeLong": "dlouhý",
-  "timeMedium": "střední",
+  "timeLong": "dlouho",
+  "timeMedium": "středně",
   "timeRandom": "náhodně",
-  "timeShort": "krátký",
-  "timeVeryLong": "velice dlouhý",
-  "timeVeryShort": "velice krátký",
+  "timeShort": "krátce",
+  "timeVeryLong": "velice dlouho",
+  "timeVeryShort": "velice krátce",
   "tooManyBlocksFail": "Hádanka {puzzleNumber} dokončena. Blahopřejeme! Je možné ji dokončit s {numBlocks, plural, one {1 blokem} other {# bloky}}.",
   "turnRandom": "otoč náhodně"
 }

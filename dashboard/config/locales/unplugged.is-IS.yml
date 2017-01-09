@@ -198,10 +198,9 @@
           og aftur) til að búa til sólarskraut (suncatcher) úr perlum og bandi.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Lagasmíð með stikum
-        desc: Nemendur nota hugmyndina um viðlag í söng til að læra um að yfirfæra
-          stika (sem sérsníða fall án þess að það þurfi að skrifa allt fallið upp
-          á nýtt).
+        title: Lagasmíð
+        desc: Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu
+          og notkun falla.
         video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algrím úr raunheimi: Teningakapp'

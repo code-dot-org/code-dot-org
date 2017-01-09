@@ -110,8 +110,8 @@
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
-    "encrypted_examples": "ZbFUA5+52mAiu96wr5rVIWSm7X39+nqLO4qYujuv1SGXkLFR5km6nfBwodbC\nWBdq\n"
+    "encrypted_examples": "ZbFUA5+52mAiu96wr5rVIWSm7X39+nqLO4qYujuv1SGXkLFR5km6nfBwodbC\nWBdq\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

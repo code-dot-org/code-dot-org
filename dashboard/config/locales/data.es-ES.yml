@@ -199,7 +199,7 @@
           cuadrados que la última vez. Haz que el cuadrado sea del mismo tamaño que
           el contador, usando el bloque "contador". Sugerencia: Está en la categoría
           Variables.'
-        turtle_2_7: Éste es un programa para dibujar un espiral, pero los bloques
+        turtle_2_7: Este es un programa para dibujar un espiral, pero los bloques
           están desactivados así que no funcionan. Haz un nuevo programa utilizando
           un bloque "contar con" (en la categoría Iteraciones) y "contador" (en la
           categoría Variables) para dibujar el mismo espiral.
@@ -210,7 +210,7 @@
           Dibuja 3 muñecos de nieve en diferentes colores, separados por 100 píxeles.
         turtle_2_9: Utiliza una iteración "contar con" para dibujar una familia de
           muñecos de nieve, con alturas de 110, 100, 80, 90 y 70. Los muñecos de nieve
-          deberían estar separados por 60 píxeles.
+          deberán estar separados por 60 píxeles.
         turtle_2_10: Aquí hay un código para probar con diferentes espirales. ¿Qué
           sucede si cambias la cantidad del giro? O estableces un color al azar en
           la iteración. Dibuja cualquier cosa que quieras.
@@ -770,6 +770,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

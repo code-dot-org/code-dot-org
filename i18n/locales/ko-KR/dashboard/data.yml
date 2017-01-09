@@ -116,7 +116,7 @@ ko:
         'turtle_2_7': "이제, 달팽이 나선을 그려봅시다. 하지만 블럭이 실행되지 않도록 되어있습니다. \"카운터\" 블럭을 사용해서 달팽이 나선을 그려 보세요. 반복 분류 안에는 \"카운트 : \" 블럭이 있고, 변수 분류에는 변수 \"카운터\" 가 있습니다."
         'turtle_2_7_5': "이번에는 \"눈사람 그리기\" 함수가 있습니다.(함수 분류에 있음) 크기가 250, 100 인 눈사람 2개를 만들어 보세요."
         'turtle_2_8': "이번에는 잘 생각해야 합니다. \"눈사람 그리기\" 함수와, 동작 분류에 있는 \"앞으로 점프\" 블럭을 사용하세요. 3 개의 눈사람을 서로 다른 색으로 100 픽셀 만큼씩 띄워 그려보세요."
-        'turtle_2_9': "\"카운트 : \" 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은 60 픽셀 씩 떨어져 있어야 합니다."
+        'turtle_2_9': "\"카운트 : \" 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은 60 픽셀 씩 떨어져 있어야 합니다.'\nturtle_2_10: \"이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서 랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
         'turtle_2_10': "이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서 랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
         'maze_karel_2_1': "밭에 있는 모든 흙더미와 구덩이를 없앨 수 있게 도와 주세요. \"반복\" 블럭을 활용하면 블럭을 여러 번 사용할 필요가 없습니다. 힌트: 반복 블럭 안에 다른 반복 블럭을 넣을 수 있습니다."
         'maze_karel_2_2': "\"메우기 5번\"이라는 블럭을 새로 만들어 \"함수\" 분류에 넣어 두었습니다. 그걸 이용해서 구덩이를 메울 수 있게 도와주세요."
@@ -420,6 +420,9 @@ ko:
         'csp_applab_lists_4': 'Introduction to Lists - Part 4'
         'csp_applab_conditionals_1': 'Introduction to Conditionals - Part 1'
         'csp_applab_conditionals_2': 'Introduction to Conditionals - Part 2'
+        'csp_applab_conditionals_2A': 'Introduction to Conditionals - Part 2a'
+        'csp_applab_conditionals_2B': 'Introduction to Conditionals - Part 2b'
+        'csp_applab_conditionals_2C': 'Introduction to Conditionals - Part 2c'
         'csp_applab_conditionals_3': 'Introduction to Conditionals - Part 3'
         'csp_applab_design': 'Introduction to Design Mode'
         'csp_applab_variables_1': 'Introduction to Variables - Part 1'

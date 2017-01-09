@@ -2672,8 +2672,7 @@
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: "何かを永遠に繰り返さなくてはいけない状況を想像できますか？コンピューターは繰り返しの命令を実行することが得意なので、それを人間がやる必要はなさそうです。"
       2:
         image: notes/gumball_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
@@ -2755,8 +2754,7 @@
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: "何かを永遠に繰り返さなくてはいけない状況を想像できますか？コンピューターは繰り返しの命令を実行することが得意なので、それを人間がやる必要はなさそうです。"
       2:
         image: notes/iceage_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
