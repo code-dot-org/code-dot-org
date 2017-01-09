@@ -8,8 +8,6 @@ import {UnconnectedGameButtons, RunButton, ResetButton} from './GameButtons';
 import './GameButtons.story.scss';
 
 export default function (storybook) {
-  RunButton.displayName = 'RunButton';
-  ResetButton.displayName = 'ResetButton';
   storybook
     .storiesOf('RunButton', module)
     .addStoryTable([

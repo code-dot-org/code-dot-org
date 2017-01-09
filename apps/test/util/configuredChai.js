@@ -9,6 +9,7 @@ chai.use(sinonChai);
 chai.use(chaiEnzyme());
 chai.use(chaiSubset);
 chai.includeStack = true;
+chai.config.truncateThreshold = 0;
 export default chai;
 export const assert = chai.assert;
 export const expect = chai.expect;
