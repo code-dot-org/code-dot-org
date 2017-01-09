@@ -979,7 +979,9 @@ Maze.execute = function (stepMode) {
     postContainedLevelAttempt(studioApp);
     Maze.response = getContainedLevelResultInfo().feedback;
     Maze.testResults = TestResults.ALL_PASS;
-    runAfterPostContainedLevel(Maze.onReportComplete);
+    // Run onReportComplete only after execute() finishes
+    runAfterPostContainedLevel(
+        () => window.setTimeout(Maze.onReportComplete, 0));
   } else {
     // Report result to server.
     studioApp.report({
