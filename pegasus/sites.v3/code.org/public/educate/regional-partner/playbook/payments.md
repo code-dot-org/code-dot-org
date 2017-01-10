@@ -7,10 +7,10 @@ nav: regional_partner_playbook_nav
 ________________
 
 ## Table of Contents
-- [Teacher Workshops](workshops)
-- [Facilitators](facilitators)
-- [Administrator and Counselor Workshops](admin)
-- [Community Events](community)
+- [Teacher Workshops](#workshops)<br/>
+- [Facilitators](#facilitators)<br/>
+- [Administrator and Counselor Workshops](#ac)<br/>
+- [Community Events](#community)<br/>
 
 ________________
 <a id="workshops"></a>
@@ -44,7 +44,7 @@ ________________
 
 
 ________________
-<a id="admin"></a>
+<a id="ac"></a>
 <br/>
 ## Administrator and Counselor Workshops
 **What will Code.org pay for?**
@@ -71,13 +71,19 @@ For swag, you can order additional swag bags and pay for them yourself through M
 For printed materials, you can order additional through Mimeo and pay for them or make copies on your own.
 Food, venue and staff time would also need to be covered by your organization.
 
+**How will Code.org reimburse me for these workshops?**<br/>
+Every payment cycle (~2.5 weeks), Code.org will pull attendance data from all dashboard workshops closed within the payment period. We will cut your organization a check for the number of attendees times your per person rate.<br/>
+
+*Ex: Your organization's per person rate is $30pp. 25 idividuals register for your workshop, 20 show up and are marked attended by you in the dashboard. Code.org will send you a check for 20 * $30 = $600.*<br/>
 
 
 ________________
 <a id="community"></a>
 <br/>
 ## Community Events 
-To receive reimbursement for a community event, send an official invoice and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.
+To receive reimbursement for a community event, send an official invoice and an attendance list to invoices@code.org within 30 days of the event. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+
+Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
 
 
 
