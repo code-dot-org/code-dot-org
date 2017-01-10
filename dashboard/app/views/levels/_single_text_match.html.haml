@@ -1,4 +1,5 @@
-- data = level.properties
+-# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
+- data = brakeman_no_warn(level.properties)
 - app = 'text_match'
 
 .text-match{id: "level_#{level.id}"}
