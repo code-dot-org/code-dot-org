@@ -19,6 +19,7 @@ import {
 import {
   initProgress,
   mergeProgress,
+  mergePeerReviewProgress,
   updateFocusArea,
   showTeacherInfo,
   disablePostMilestone,
@@ -187,7 +188,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
 
         return level.result;
       });
-      store.dispatch(mergeProgress(levelProgress, data.peerReviewsPerformed));
+      store.dispatch(mergeProgress(levelProgress));
+      if (data.peerReviewsPerformed) {
+        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
     }
   });
 
