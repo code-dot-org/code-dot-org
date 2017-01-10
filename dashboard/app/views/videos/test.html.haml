@@ -80,7 +80,7 @@
       $('#survey-link').attr('href', this.fillTemplate());
     }
   };
-  var userAgent = '#{request.env['HTTP_USER_AGENT']}';
+  var userAgent = '#{escape_javascript(request.env['HTTP_USER_AGENT'])}';
   formLink.fillFieldEncoded('browser', userAgent);
 
   var videoInfo = #{Video.first.summarize.to_json};

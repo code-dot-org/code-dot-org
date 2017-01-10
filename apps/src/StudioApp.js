@@ -294,6 +294,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isOwner: dashboard.project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -492,13 +493,12 @@ StudioApp.prototype.init = function (config) {
   // so it can decide whether or not to show a warning.
   this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
 
-  if (this.share && config.shareWarningInfo) {
-    if (!config.level.iframeEmbed) {
-      // shared apps that are embedded in an iframe handle warnings in
-      // startIFrameEmbeddedApp since they don't become "active" until the user
-      // clicks on them.
-      showWarnings(config);
-    }
+  // config.shareWarningInfo is set on a per app basis (in applab and gamelab)
+  // shared apps that are embedded in an iframe handle warnings in
+  // startIFrameEmbeddedApp since they don't become "active" until the user
+  // clicks on them.
+  if (config.shareWarningInfo && !config.level.iframeEmbed) {
+    showWarnings(config);
   }
 
   if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
@@ -1735,6 +1735,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+
+  if (config.ignoreLastAttempt) {
+    config.level.lastAttempt = '';
+  }
+
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
