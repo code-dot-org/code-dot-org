@@ -626,9 +626,8 @@ var TopInstructions = React.createClass({
                   height={this.props.height - styles.scrollButtons.top - resizerHeight}
                 />}
             </div>
-          </ThreeColumns>
-        }
-        {this.props.hasContainedLevels && <ContainedLevel ref="instructions" disableRunUntilAnswer={!this.props.editBlocks} />}
+          </ThreeColumns>}
+        {this.props.hasContainedLevels && <ContainedLevel ref="instructions" />}
         {!this.props.collapsed && !this.props.isEmbedView &&
           <HeightResizer
             position={this.props.height}
