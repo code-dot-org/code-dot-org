@@ -98,7 +98,7 @@ let WireframeButtons = React.createClass({
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
               <i className="fa fa-code"/> View code
-            </a><sp/>
+            </a>
           </span>
       );
     }
@@ -117,7 +117,7 @@ let WireframeButtons = React.createClass({
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={url}>
               <i className="fa fa-pencil-square-o"/> Make my own
-            </a><sp/>
+            </a>
           </span>
       );
     }
