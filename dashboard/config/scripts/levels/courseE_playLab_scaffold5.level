@@ -1,7 +1,7 @@
 <Studio>
   <config><![CDATA[{
   "game_id": 33,
-  "created_at": "2016-08-24T21:41:13.000Z",
+  "created_at": "2016-08-24T20:56:42.000Z",
   "level_num": "custom",
   "user_id": 285,
   "properties": {
@@ -9,8 +9,8 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return (Studio.background != \"cave\") && (Studio.sprite[0].value != \"hidden\") && (Studio.sprite[0].lastMove != Infinity) && (Studio.sprite[1].value != \"hidden\") && (Studio.sprite[1].lastMove != Infinity) && (Studio.sprite[2].value != \"hidden\") && (Studio.sprite[2].lastMove != Infinity) && (Studio.tickCount > 500) && (Studio.playerScore != 0);\r\n}",
     "failure_condition": "function () {\r\n // return (((Studio.sprite[1].value == \"hidden\") || (Studio.sprite[2].value == \"hidden\")) && (Studio.tickCount > 5)) || ((Studio.playerScore == 0) && (Studio.tickCount > 450));\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}]]",
-    "embed": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}]]",
+    "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -35,10 +35,10 @@
     "disable_sharing": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "instructions": "Now spend some time making sure the game works the way you want. Try including a way to win or lose your game.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "markdown_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Try including a way to win or lose your game.\r\n<hr/>\r\n*Don't forget: Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n<hr/>\r\nYour toolbox has been re-organized to make it easier to find what you need. We've also added these blocks:\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57 PM.png)",
     "contained_level_names": null,
     "instructions_important": "false",
     "maze_data": null
