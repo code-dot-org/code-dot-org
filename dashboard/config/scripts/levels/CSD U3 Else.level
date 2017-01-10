@@ -11,6 +11,7 @@
       "drawSprites": null,
       "keyDown": null,
       "var sprite = createSprite": null,
+      "rotation": null,
       "shapeColor": null,
       "background": null,
       "ifBlock": null,
