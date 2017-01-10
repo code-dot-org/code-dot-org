@@ -25,10 +25,15 @@ const CourseProgress = React.createClass({
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
     stages: React.PropTypes.arrayOf(stageShape),
+    peerReviewStage: stageShape
   },
 
   render() {
-    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Content'));
+    let stagesWithPeerReviews = this.props.stages;
+    if (this.props.peerReviewStage) {
+      stagesWithPeerReviews = stagesWithPeerReviews.concat(this.props.peerReviewStage);
+    }
+    const groups = _.groupBy(stagesWithPeerReviews, stage => (stage.flex_category || 'Content'));
 
     let count = 1;
 
@@ -64,4 +69,5 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   focusAreaPositions: state.progress.focusAreaPositions,
   stages: state.progress.stages,
+  peerReviewStage: state.progress.peerReviewStage
 }))(Radium(CourseProgress));

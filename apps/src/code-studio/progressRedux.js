@@ -33,6 +33,7 @@ const initialState = {
   levelProgress: {},
   focusAreaPositions: [],
   stages: null,
+  peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
@@ -46,10 +47,6 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
     let stages = action.stages;
-    if (action.peerReviews) {
-      // Tack on peer reviews as final stage
-      stages = stages.concat(action.peerReviews);
-    }
     // Re-initializing with full set of stages shouldn't blow away currentStageId
     const currentStageId = state.currentStageId ||
       (stages.length === 1 ? stages[0].id : undefined);
@@ -60,13 +57,13 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: stages.map(stage => _.omit(stage, 'hidden')),
+      peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
     };
   }
 
   if (action.type === MERGE_PROGRESS) {
-    // TODO: _.mergeWith after upgrading to Lodash 4+
     let newLevelProgress = {};
     const combinedLevels = Object.keys({
       ...state.levelProgress,
@@ -82,9 +79,17 @@ export default function reducer(state = initialState, action) {
       stages: state.stages.map(stage => ({
         ...stage,
         levels: stage.levels.map((level, index) => {
-          return updateLevel(stage, level, index, action.peerReviewsPerformed, newLevelProgress);
+          return updateLevel(stage, level, index, newLevelProgress);
         })
-      }))
+      })),
+      // TODO - separate action
+      peerReviewStage: !state.peerReviewStage ? state.peerReviewStage : {
+        ...state.peerReviewStage,
+        levels: state.peerReviewStage.levels.map((level, index) => ({
+          ...level,
+          ...(action.peerReviewsPerformed && action.peerReviewsPerformed[index])
+        }))
+      }
     };
   }
 
@@ -132,7 +137,7 @@ export default function reducer(state = initialState, action) {
  * Update a level (inside of state.progress.stages) according to newLevelProgress
  * TODO: add some tests
  */
-function updateLevel(stage, level, index, peerReviewsPerformed, newLevelProgress) {
+function updateLevel(stage, level, index, newLevelProgress) {
   if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
     return {
       ...level,
@@ -140,22 +145,12 @@ function updateLevel(stage, level, index, peerReviewsPerformed, newLevelProgress
     };
   }
 
-  let nextLevel = level;
-  if (peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-    nextLevel = {
-      ...level,
-      ...peerReviewsPerformed[index]
-    };
-  }
   const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
   return {
-    ...nextLevel,
-    ...(level.kind !== 'peer_review' && {
-      status: activityCssClass(newLevelProgress[id])
-    })
+    ...level,
+    status: activityCssClass(newLevelProgress[id])
   };
 }
-
 
 /**
  * Return the level with the highest progress, or the first level if none have
@@ -190,13 +185,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviews, scriptName}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  peerReviews,
+  peerReviewStage,
   scriptName
 });
 
