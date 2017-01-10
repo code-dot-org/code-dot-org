@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Privacy Policy
 
-Date of Last Revision: August 24, 2016
+Date of Last Revision: November 17, 2016
 
 
 ## About Code.org
@@ -208,7 +208,7 @@ We may publish anonymized information about student performance on our tutorials
 
 ### We may share anonymous or aggregate data to improve our services and learn more about our Users
 
-In certain occasions, Code.org may work with third parties (such as universities and education research organizations) to improve our services or offerings. We may disclose automatically collected and other aggregate non-personal information to authorized partners to conduct research on online education or assist in understanding the usage, viewing, and demographic patterns for certain programs, content, services, promotions, and/or functionality on the Website.
+In certain occasions, Code.org may work with third parties (such as universities and education research organizations) to improve our services or offerings. We may disclose automatically collected and other aggregate non-personal information to authorized partners to conduct research on online education or assist in understanding the usage, viewing, and demographic patterns for certain programs, content, services, promotions, and/or functionality on the Website. We require any research partner that receives anonymous or de-identified data from us to agree in advance that they will not attempt to use this data to identify our Users.
 
 ### We will share data when required by law
 

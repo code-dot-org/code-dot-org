@@ -4,7 +4,13 @@
 
 ---
 
-<%= view :signup_button %>
+Часът на кода се ръководи от Hour of Code и Computer Science Education Week консултативни и ревизионни комисии.
+
+[ Консултативният комитет](<%= resolve_url('/advisory-committee') %>) се състои от представители на K-12, академичните среди, нестопански и международни организации. Този комитет изработва стратегия за кампанията на часът на кода.
+
+Този[ комитет](<%= resolve_url('/review-committee') %>) се състои от 15 преподаватели в K-12 клас, които оценяват и препоръчват дейностите в помощна рубрика на Консултативния комитет. Тези учители преглеждат уроците за ученици, ръководствата за учителите и урочните планове, представени от стотици партньори, оценяват дейностите от образователната им стойност, способността да ангажират обучаемите, както и потенциалните проблеми при различни ученици.
+
+Така тяхната работа допринася за успеха на Hour of Code и визията им за Въведение в компютърните науки за всеки ученик.
 
 <% if @country == 'la' %>
 
@@ -32,7 +38,7 @@
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Партньори от Китай
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -40,7 +46,7 @@
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Партньори от Франция
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -56,7 +62,7 @@
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Партньори от Ирландия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -80,7 +86,7 @@
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Партньори от Холандия
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 

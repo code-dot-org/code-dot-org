@@ -95,6 +95,19 @@
     overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
       <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
       ve projelerinizi saklamak için giriş yapmak gerekecektir.
+    hoc_already_signed_up_heading: Giriş yaparak başla
+    hoc_already_signed_up_content: Kodlama Saatinde öğretmek için kaydoldunuz! Siz
+      ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
+      için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla
+      paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup
+      Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha
+      uzun </a> kurslara kaydedebilirsiniz.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Eğitim rehberine bakın
     title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
@@ -178,7 +191,7 @@
         Lütfen şurayı imzalayın isteyin ve sonra onları yeniden eklemeyi deneyin
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
-      cant_join_own_section: Malesef, kendi bölgenizde katılamazsınız.
+      cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
     mail:
       invite_student:
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
@@ -334,7 +347,7 @@
       unsubmit: Gönderme
       worked_with: "İle çalıştı"
       update_lock_settings: Kilit ayarlarını burada değiştirin.
-      clear_response: Clear response
+      clear_response: Net yanıt
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -347,6 +360,7 @@
     delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
       hesaplarını silmez.'
     delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
+    deleted_user: deleted user
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -419,20 +433,39 @@
       ve kendibaşına kullanılabilen bileşenler oluşturduk!"
     announcement_learn_more_button: Daha fazlasını öğren
     announcement_try_now_button: "Şimdi dene"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
+    announcement_watch_video_button: Videoyu izle
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
       bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
       izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
       gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
       için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
+    announcement_go_beyond_button: Go beyond
     announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
       takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
+    announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
+      ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
+      organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a
+      href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
+      başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
+      öğretmeye başlayabileceğini söyleyin.
+    announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
+      Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
+      oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
+      paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
+      sınıfınla birlikte yap.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin."
@@ -584,7 +617,7 @@
     frozen:
       title: Donmuş
     starwars:
-      title: Star Wars
+      title: Yıldız Savaşları
     infinity:
       title: Sınırsız oyun laboratuarı
       body: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play
@@ -592,9 +625,13 @@
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    minecraft2016:
+      title: Minecraft
+      body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
+        programla.
     unplugged:
       title: Bağımsız dersler
-      audience: 6 yaş ve üzeri
+      audience: 4 yaş ve üzeri
       body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
         bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
         Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
@@ -726,25 +763,24 @@
       kabul ediyorum
     accept: Kabul et
     print: Yazdır
-    later: Sonra
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
       <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi.
       Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği
       güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
-    message: Please tell us your race (check all that apply)
+    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki
+      ilerlememizi izlememize yardımcı olun'
+    message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
     races:
-    - white: White
-    - black: Black or African American
-    - hispanic: Hispanic or Latino
-    - asian: Asian
-    - hawaiian: Native Hawaiian or other Pacific Islander
-    - american_indian: American Indian/Alaska Native
+    - white: Beyaz
+    - black: Siyahi veya Afrika kökenli Amerikalı
+    - hispanic: "İspanyol veya Latin"
+    - asian: Asyalı
+    - hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+    - american_indian: Amerikalı Kızılderili / Alaska Yerlisi
     - other: Diğer
-    - opt_out: Prefer not to say
+    - opt_out: Söylememek istemiyorum
     submit: Gönder
     decline: Kapat
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.
@@ -896,8 +932,48 @@
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
       (Blocks)'
     download_message: "Çevrimdışı kullanım  için %{app_name} (136 MB) indir"
-    download_in_english: "İngilizce olarak indir:"
-    download_in_spanish: "İspanyolca olarak indir:"
+    download_in_Albanian: 'Arnavutça indir:'
+    download_in_Arabic: 'Arapça indir:'
+    download_in_Azerbaijani: 'Azerice indir:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Boşnakça indir:'
+    download_in_Bulgarian: 'Bulgaristanca indir:'
+    download_in_Catalan: 'Katalanca indir:'
+    download_in_Chinese-Taiwan: 'Tayvan Çincesi indir:'
+    download_in_Chinese: "Çince indir:"
+    download_in_Croatian: 'Hırvatça indir:'
+    download_in_Czech: "Çekce indir:"
+    download_in_Danish: 'Danimarkaca indir:'
+    download_in_Dutch: 'Almanca indir:'
+    download_in_English: "İngilizce indir:"
+    download_in_Finnish: 'Fince indir:'
+    download_in_French: Fransızca indir
+    download_in_German: 'Almanca indir:'
+    download_in_Greek: 'Yunanca indir:'
+    download_in_Hebrew: "İbranice indir:"
+    download_in_Hungarian: 'Macarca indir:'
+    download_in_Icelandic: "İzlandaca indir:"
+    download_in_Indonesian: 'Endonezyaca indir:'
+    download_in_Irish: "İrlandaca indir:"
+    download_in_Italian: "İtalyanca indir:"
+    download_in_Japanese: 'Japonca indir:'
+    download_in_Korean: 'Korece indir:'
+    download_in_Latvian: 'Litvanyaca indir:'
+    download_in_Lithuanian: 'Litvanyaca indir:'
+    download_in_Norwegian: 'Norveççe indir:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Rusça indir:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: "İspanyolca indir:"
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Türkçe indir:'
+    download_in_Ukrainian: 'Ukraynaca indir:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:

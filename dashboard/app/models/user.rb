@@ -80,17 +80,32 @@ require 'cdo/race_interstitial_helper'
 
 class User < ActiveRecord::Base
   include SerializedProperties
-  # races: array of strings, the races that a student has selected, or nil if no selection was made
+  # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
-  # white: "White"
-  # black: "Black or African American"
-  # hispanic: "Hispanic or Latino"
-  # asian: "Asian"
-  # hawaiian: "Native Hawaiian or other Pacific Islander"
-  # american_indian: "American Indian/Alaska Native"
-  # other: "Other"
-  # opt_out: "Prefer not to say" (but selected this value and hit "Submit")
-  # closed_dialog: This is a special value indicating that the user closed the dialog rather than selecting a race
+  #   white: "White"
+  #   black: "Black or African American"
+  #   hispanic: "Hispanic or Latino"
+  #   asian: "Asian"
+  #   hawaiian: "Native Hawaiian or other Pacific Islander"
+  #   american_indian: "American Indian/Alaska Native"
+  #   other: "Other"
+  #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
+  #   closed_dialog: This is a special value indicating that the user closed the
+  #     dialog rather than selecting a race.
+  #   nonsense: This is a special value indicating that the user chose
+  #     (strictly) more than five races.
+  VALID_RACES = %w(
+    white
+    black
+    hispanic
+    asian
+    hawaiian
+    american_indian
+    other
+    opt_out
+    closed_dialog
+    nonsense
+  ).freeze
   serialized_attrs %w(ops_first_name ops_last_name district_id ops_school ops_gender races)
 
   # Include default devise modules. Others available are:
@@ -291,25 +306,32 @@ class User < ActiveRecord::Base
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
 
-  def dont_reconfirm_emails_that_match_hashed_email
-    # we make users "reconfirm" when they change their email
-    # addresses. Skip reconfirmation when the user is using the same
-    # email but it appears that the email is changed because it was
-    # hashed and is not now hashed
-    if email.present? && hashed_email == User.hash_email(email.downcase)
-      skip_reconfirmation!
-    end
-  end
-
   # NOTE: Order is important here.
   before_save :make_teachers_21,
+    :normalize_email,
     :dont_reconfirm_emails_that_match_hashed_email,
     :hash_email,
-    :hide_email_and_full_address_for_students
+    :hide_email_and_full_address_for_students,
+    :sanitize_race_data
 
   def make_teachers_21
     return unless teacher?
     self.age = 21
+  end
+
+  def normalize_email
+    return unless email.present?
+    self.email = email.strip.downcase
+  end
+
+  def dont_reconfirm_emails_that_match_hashed_email
+    # We make users "reconfirm" when they change their email
+    # addresses. Skip reconfirmation when the user is using the same
+    # email but it appears that the email is changed because it was
+    # hashed and is not now hashed.
+    if email.present? && hashed_email == User.hash_email(email.downcase)
+      skip_reconfirmation!
+    end
   end
 
   def self.hash_email(email)
@@ -324,13 +346,30 @@ class User < ActiveRecord::Base
   def hide_email_and_full_address_for_students
     if student?
       self.email = ''
+      self.unconfirmed_email = nil
       self.full_address = nil
+    end
+  end
+
+  def sanitize_race_data
+    return unless property_changed?('races')
+
+    if races.include? 'closed_dialog'
+      self.races = %w(closed_dialog)
+    end
+    if races.length > 5
+      self.races = %w(nonsense)
+    end
+    races.each do |race|
+      self.races = %w(nonsense) unless VALID_RACES.include? race
     end
   end
 
   def self.find_by_email_or_hashed_email(email)
     return nil if email.blank?
 
+    # TODO(asher): Change this to always (primarily?) search by hashed_email,
+    # eliminating a DB query.
     User.find_by_email(email.downcase) ||
       User.find_by(email: '', hashed_email: User.hash_email(email.downcase))
   end
@@ -382,14 +421,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.name_from_omniauth(raw_name)
+    return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
+    # clever returns a hash instead of a string for name
+    "#{raw_name['first']} #{raw_name['last']}".squish
+  end
+
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin']
   def self.from_omniauth(auth, params)
-    def self.name_from_omniauth(raw_name)
-      return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
-      # clever returns a hash instead of a string for name
-      "#{raw_name['first']} #{raw_name['last']}".squish
-    end
-
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
@@ -549,7 +588,7 @@ class User < ActiveRecord::Base
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
   def last_attempt(level)
-    UserLevel.where(user_id: self.id, level_id: level.id).
+    UserLevel.where(user_id: id, level_id: level.id).
       order('updated_at DESC').
       first
   end
@@ -559,7 +598,7 @@ class User < ActiveRecord::Base
   def last_attempt_for_any(levels, script_id: nil)
     level_ids = levels.map(&:id)
     conditions = {
-      user_id: self.id,
+      user_id: id,
       level_id: level_ids
     }
     conditions[:script_id] = script_id unless script_id.nil?
@@ -569,11 +608,11 @@ class User < ActiveRecord::Base
   end
 
   def student?
-    self.user_type == TYPE_STUDENT
+    user_type == TYPE_STUDENT
   end
 
   def teacher?
-    self.user_type == TYPE_TEACHER
+    user_type == TYPE_TEACHER
   end
 
   def authorized_teacher?
@@ -595,7 +634,7 @@ class User < ActiveRecord::Base
   end
 
   def confirmation_required?
-    self.teacher? && !self.confirmed?
+    teacher? && !confirmed?
   end
 
   # There are some shenanigans going on with this age stuff. The
@@ -661,7 +700,7 @@ class User < ActiveRecord::Base
     mild_password = ::BCrypt::Engine.hash_secret(password, bcrypt.salt)
     if Devise.secure_compare(mild_password, encrypted_password)
       # save the spicy password
-      self.update_attribute(:encrypted_password, spicy_password)
+      update_attribute(:encrypted_password, spicy_password)
       return true
     end
 
@@ -696,7 +735,7 @@ class User < ActiveRecord::Base
 
     self.reset_password_token   = enc
     self.reset_password_sent_at = Time.now.utc
-    self.save(validate: false)
+    save(validate: false)
 
     send_devise_notification(:reset_password_instructions, raw, {to: email})
     raw
@@ -723,7 +762,15 @@ class User < ActiveRecord::Base
   def in_progress_and_completed_scripts
     backfill_user_scripts if needs_to_backfill_user_scripts?
 
-    user_scripts.compact
+    user_scripts.compact.reject do |user_script|
+      begin
+        user_script.script.nil?
+      rescue
+        # Getting user_script.script can raise if the script does not exist
+        # In that case we should also reject this user_script.
+        true
+      end
+    end
   end
 
   def all_advertised_scripts_completed?
@@ -799,7 +846,7 @@ class User < ActiveRecord::Base
     # backfill progress in scripts
     Script.all.each do |script|
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-        user_script = UserScript.find_or_initialize_by(user_id: self.id, script_id: script.id)
+        user_script = UserScript.find_or_initialize_by(user_id: id, script_id: script.id)
         ul_map = user_levels_by_level(script)
         script.script_levels.each do |sl|
           ul = ul_map[sl.level_id]
@@ -871,7 +918,7 @@ class User < ActiveRecord::Base
     level_id = level.id
     script_id = script_level.script_id
     old_user_level = UserLevel.where(
-      user_id: self.id,
+      user_id: id,
       level_id: level_id,
       script_id: script_id
     ).first
@@ -879,7 +926,7 @@ class User < ActiveRecord::Base
     async_op = {
       'model' => 'User',
       'action' => 'track_level_progress',
-      'user_id' => self.id,
+      'user_id' => id,
       'level_id' => level_id,
       'script_id' => script_id,
       'new_result' => new_result,
@@ -997,7 +1044,7 @@ class User < ActiveRecord::Base
   end
 
   def recent_activities(limit = 10)
-    self.activities.order('id desc').limit(limit)
+    activities.order('id desc').limit(limit)
   end
 
   def can_pair?
@@ -1014,7 +1061,7 @@ class User < ActiveRecord::Base
   end
 
   def to_csv
-    User.csv_attributes.map{ |attr| self.send(attr) }
+    User.csv_attributes.map{ |attr| send(attr) }
   end
 
   def self.progress_queue
@@ -1023,14 +1070,33 @@ class User < ActiveRecord::Base
 
   # can this user edit their own account?
   def can_edit_account?
-    return true if teacher? || encrypted_password.present? || oauth?
-
-    # sections_as_student should be a method but I already did that in another branch so I'm avoiding conflicts for now
-    sections_as_student = followeds.collect(&:section)
+    # Teachers can always edit their account
+    return true if teacher?
+    # Users with passwords can always edit their account
+    return true if encrypted_password.present?
+    # Oauth users can always edit their account
+    return true if oauth?
+    # Users that don't belong to any sections (i.e. can't be managed by any other
+    # user) can always edit their account
     return true if sections_as_student.empty?
-
     # if you log in only through picture passwords you can't edit your account
-    return !(sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE})
+    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
+
+    false
+  end
+
+  # We restrict certain users from editing their email address, because we
+  # require a current password confirmation to edit email and some users don't
+  # have passwords
+  def can_edit_email?
+    encrypted_password.present?
+  end
+
+  # We restrict certain users from editing their password; in particular, those
+  # users that don't have a password because they authenticate via oauth, secret
+  # picture, or some other unusual method
+  def can_edit_password?
+    encrypted_password.present?
   end
 
   def section_for_script(script)
@@ -1075,6 +1141,7 @@ class User < ActiveRecord::Base
   end
 
   def show_race_interstitial?(ip = nil)
-    RaceInterstitialHelper.show_race_interstitial?(self, ip)
+    ip_to_check = ip || current_sign_in_ip
+    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
   end
 end

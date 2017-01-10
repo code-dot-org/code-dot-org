@@ -1,4 +1,4 @@
-uk-UA:
+"uk-UA":
   hour_of_code: "Година коду"
   hello: "Привіт, світ!"
   'yes': 'Так'
@@ -25,8 +25,10 @@ uk-UA:
   submit: "Надіслати"
   twentyhours_heading: "Спробуйте наш курс вступу до інформатики"
   twentyhours_text: "Завершили свою першу Годину Коду? Дізнайтеся більше про основні поняття комп'ютерних наук та програмування на подальших курсах."
-  og_title: "Кожна дитина заслуговує на можливість"
-  og_description: "Кожен учень у кожній школі заслуговує на те, щоб мати можливість вивчати інформатику. Це змінює все."
+  og_title: Програмування є основоположним
+  og_description: "Технології змінюють все. Кожен учень у кожній школі заслуговує на те, щоб мати можливість вивчати інформатику."
+  csedweek_og_title: "Година коду вже тут"
+  csedweek_og_description: "Година коду є глобальним рухом, який залучає десятки мільйони учнів різного віку із більш як 180 країн, які розмовляють 45 мовами."
   hoc2014_heading: "Приєднуйтеся до <a href=\"http://hourofcode.com\">Години коду</a> <br/> 8-14 грудня 2014 року <br/>"
   hoc2014_students: "Учні"
   hoc2014_try: "Спробувати"
@@ -181,9 +183,11 @@ uk-UA:
   petition_thankyou: "Дякуємо вам за підписання петиції"
   continue_learning_header: "Продовжити навчання поза Годиною коду"
   continue_learning_body: "Існує багато варіантів. Можна вчитись онлайн, у місцевій школі або в літньому таборі."
+  learn_code_studio: "Спробуйте курси Студії коду"
   learn_next_level: "Продовжити до наступного рівня"
   learn_online: "Спробуйте інші курси онлайн"
   learn_classes: "Знайти місцеві класи"
+  learn_back_to_minecraft: "Продовжуйте вчитися з Майнкрафт"
   hoc_is_here: 'Вивчайте інформатику. Вона змінює все.  https://youtu.be/xJqSu1IbcHg.'
   just_did_hoc: 'Я щойно завершив #HourOfCode - подивіться, що це! @codeorg'
   just_did_course1: "Щойно завершено Курс 1 - подивіться! @codeorg"
@@ -192,6 +196,7 @@ uk-UA:
   just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
   just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
   twitter_teach_cs: "9 з 10 людей погоджуються із тим, інформатику потрібно викладати у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/."
+  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Вивчати Годину Коду"
   beyond_hoc: "Поза Годиною коду"
   what_gender: "Якої ви статі?"
@@ -208,7 +213,7 @@ uk-UA:
   contact_form_topic_press: "Преса/ЗМІ (інтерв’ю або розмова)"
   stats_nina: '"Кожен день давав однаковий результат &mdash; 100% інтересу."-Ніна Ніколс Пірі, педагог'
   stats_student: '"Я знала, що це був <b> унікальний</b> шанс." - Маріана Альсате, 5 клас'
-  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Майкл Кларк, педагог'
+  stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням." - Френк Мартінез, педагог'
   studiobar_title: "Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>"
   studiobar_title_nolink: "Познайомтесь зі Студією коду"
   studiobar_elementary_title: "Базові курси"
@@ -283,6 +288,7 @@ uk-UA:
   homepage_action_text_volunteers: "Потрібні технічні волонтери"
   homepage_action_text_codevideo: "Переглянути відео"
   homepage_action_text_teachervideo: "Переглянути відео"
+  homepage_action_text_watchvideo: "Переглянути відео"
   homepage_action_text_girlvideo: "Залучайте дівчат"
   homepage_action_text_learn: "Початок навчання"
   homepage_action_text_signpetition: "Підписати петицію"
@@ -369,7 +375,8 @@ uk-UA:
   class_submission_level_college: "Коледж"
   class_submission_level_vocational: "Професійна освіта"
   class_submission_languages_other: "Інші мови"
-  inspirational_videos_more: "Більше <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP\">надихаючих відео</a> від рольових моделей та знаменитостей"
+  videos_more: "Більше <a href='%{inspiring_videos_playlist}'>надихаючих відео</a> з рольовими моделями та знаменитостями"
+  careers_page_more: "Більше <a href='%{careers_url}' target='_blank'>надихаючих відео</a> з фахівцями зі сфери технологій"
   playlab_choose_theme: "Обери тему Ігрової лабораторїі"
   playlab_classic_title: "Класична"
   playlab_gumball_title: "Гамбол"
@@ -389,8 +396,61 @@ uk-UA:
   mc_gradelevel: "Вік 6+"
   mc_platformtext: "Сучасні браузери, смартфони, планшети"
   mc_specs: "Багато мов | Сучасні браузери та планшети| Вік 6-106"
+  minecraft_designer: "Майнкрафт - Розробник"
+  minecraft_adventurer: "Майнкрафт - Пригоди"
+  minecraft_tutorials: "Підручники Години коду від Майнкрафт"
+  minecraft_specs: "Багато мов | Сучасні браузери та планшети | Класи 2+"
+  minecraft_designer_description: "Запрограмуй тварин та інших істот Майнкрафт у власній версії цієї гри."
+  minecraft_designer_button: "Початок"
+  minecraft_adventurer_description: "Скористайся кодом, щоб запросити Алекс чи Стіва на пригоду."
+  minecraft_adventurer_button: "Початок"
+  minecraft_no_internet: "Немає Інтернету?"
+  minecraft_download_adventurer: "Завантажуйте оффлайнову версію Майнкрафт - Пригод."
   minecraft_subtitle: "Година коду від Майнкрафт"
+  sports_page_title: "Спортивна Година коду"
+  sports_og_title: "Підручник зі спортивної Години коду"
+  sports_og_description: "Обери між підручниками створення гри в баскетбол чи заміксуй інші спортивні заходи."
+  sports_title: "Закодуй власну спортивну гру"
+  sports_watch_video: "Переглянути відео"
+  sports_video_title: "Постарайся! Навчитись може кожен."
+  sports_select_theme: "Обери тему підручника"
+  sports_basketball_title: "Зроби гру в баскетбол"
+  sports_all_sports_title: "Закодуй власний спорт"
+  sports_featured_athletes: "See featured athletes"
+  sports_athletes_title: "Featured athletes"
+  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
+  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
+  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
+  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
+  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
+  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
+  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
+  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
+  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
+  sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
+  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
+  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
   watch_inspirational_videos: "Перед початком роботи перегляньте ці відео для натхнення"
+  video_title_cs_is_everything: "Computer Science is Changing Everything"
+  video_title_inspire_girl: "Залучайте дівчат"
+  video_title_cs_intro: "Вступ до інформатики"
+  video_title_schools_dont_teach: "Те, чого не навчають у більшості шкіл"
+  video_title_obama: "Президент Обама про інформатику"
+  video_title_hoc_is_here: "Година коду вже тут - навчитись може кожен"
+  video_title_anybody_can_learn: "Навчитись може кожен"
+  video_title_draymond_green: "Година коду з Дреймондом Гріном"
+  video_title_russell_okung: "Година коду з Расселом Окунгом"
+  video_title_real_madrid: "Година коду з Реал Мадрид"
+  video_title_marco_belinelli: "Година коду з Марко Белінеллі"
+  video_title_chris_bosh: "Кріс Бош про інформатику"
+  video_1min: "1 хв"
+  video_2min: "2 хв"
+  video_5min: "5 хв"
   speak_another_language: "Інша мова?"
   help_translate: "Допоможіть нам з перекладом."
   no_internet: "Немає Інтернету?"
@@ -586,9 +646,9 @@ uk-UA:
   dashboard_sections_yes_both: "Так, я хочу скопіювати учнів, щоб вони були у поточній ТА новій групі"
   dashboard_sections_no_move: "Ні, я хочу перемістити учнів у нову групу."
   dashboard_sections_move_students: "Перемістити учнів"
-  dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 5-11, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to go further, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
-  dashboard_sections_assign_activity: "Assign Course"
+  dashboard_sections_assign_hoc_script_desc: "Береш участь в Годині коду?"
+  dashboard_sections_assign_hoc_script_msg: "Будь ласка, зверніть увагу, що ми збережемо ваш прогрес протягом тижня з 5 по 11 грудня, через безпрецедентний рівень трафіку на сайті Hour of Code. Ви все ще зможете призначити курс і дати всім студентам сертифікати за участь.  (Більшість викладачів <a href='%{certificate_url}'> друкуватимуть їх заздалегідь</a>.) <br/> <br/> Ми просто в захваті від кількості викладачів і студентів, які беруть участь, і ми шкодуємо, ми не зможемо зберегти все.  Якщо ваш клас хоче йти далі, може вийти за межі Hour of Code і  вивчати курс такий як Computer Science Fundamental.  Наш teacher dashboard (учитель приладової панелі) дозволить вам відслідковувати прогрес вашого студента кожні два тижні в році."
+  dashboard_sections_assign_activity: "Призначити курс"
   dashboard_error_none_selected: "Ви не обрали жодного учня для переміщення. Будь ласка, оберіть хоча б одного учня."
   dashboard_error_other_section: "Якщо ви переміщуте учнів між власними групами, оберіть групу з випадного меню. Обирайте \"Інша група\" лише якщо Ви хочете перемістити учнів у групу іншого вчителя."
   dashboard_students_add_student: "Додати учня"
@@ -695,11 +755,17 @@ uk-UA:
   dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "Дізнайтеся більше"
   dashboard_announce_try_now_button: "Спробувати"
-  dashboard_announce_host_an_hour_button: "Host an Hour"
+  dashboard_announce_host_an_hour_button: "Провести Годину коду"
+  dashboard_announce_watch_video_button: "Переглянути відео"
   dashboard_announce_petition: "Як вчитель, ви прокладаєте шлях забезпечення кожного учня у кожній школі можливістю вивчати інформатику. Зараз саме час зв'язатися із своїми представниками. Цього тижня освітянські лідери, 28 губернаторів та директори великих компаній звертаються до Конгресу США із відкритим листом у підтримку фінансування інформатичної освіти у школі."
   dashboard_announce_petition_button: "Додайте своє ім'я"
-  dashboard_announce_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
-  dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+  dashboard_announce_go_beyond_button: "Go beyond"
+  dashboard_announce_all: "Слідкуйте за новими функціями та оновленнями у нашому вчительському блозі. <a href='%{teacher_blog_url}' target='_blank'>Переглянути попередні оголошення.</a>"
+  dashboard_announce_hoc_launch: "Тисячі вчителів у більш, як 180 країнах світу розпочнуть викладати інформатику протягом Години коду 5-11 грудня цього року. Ми розраховуємо на вашу допомогу в охопленні більше учнів, ніж раніше. <a href='%{signup_url}' target='_blank'>Зареєструйте свою подію Години коду</a> та покажіть іншим вчителям, що кожен може почати викладати інформатику."
+  dashboard_announce_mc_launch: "Один із наших найпопулярніших підручників отримав продовження! Зовсім нова Година коду від Майнкрафт - Розробник дозволяє створити власні правила світу Майнкрафт. Можна створити абсолютно унікальний досвід Майнкрафт, а тоді поділитись ним із друзями, або пограти на своєму телефоні. Зробіть це зі своїм класом на Годині коду."
+  dashboard_announce_hoc_scaling_progress: "Будь ласка, зверніть увагу, що ми не зберігаємо прогрес учнів у цьому курсі з 3 по 11 грудня через високий рівень трафіку на нашому сайті протягом Години коду. Ви можете переглядати прогрес учнів до 3 грудня. Ми повернемось до звичного збереження прогресу за тиждень."
+  dashboard_announce_how_code_studio: "Для того, щоб почати використовувати інформатику на своїх уроках, не потрібен попередній досвід. Code.org пропонує навчальні програми, плани уроків, високоякісні програми підвищення кваліфікації та море чудових інструментів для всіх класів &mdash; все, що потрібно, і безкоштовно. Думаєте звідки починати? Завантажте <a href='%{video_download_url}'>цей ролик</a>!"
+  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   code_hoc_coming: "Година коду вже тут - 8-14 грудня!"
   code_sign_up: "Зареєструватися для участі протягом тижня інформатики"
   host_an_hour: "Проведіть Годину коду"
@@ -818,10 +884,15 @@ uk-UA:
   cspunit4_name: 'Розділ 4: Дані'
   cspunit5_name: 'Розділ 5: Дослідження та створення PT'
   cspunit6_name: 'Після-АР: Бази даних у програмах'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Розділ 1: Інтернет'
   csp2_name: 'Розділ 2: Цифрова інформація'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: "Повний тест - 50 запитань"
   cspexam1-mWU7ilDYM9_name: Тест, частина 1 - 25 запитань
   cspexam2-AKwgAh1ac5_name: Тест, частина 2 - 25 запитань
@@ -836,13 +907,21 @@ uk-UA:
   iceage_name: "Льодовиковий період"
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Зоряні війни (блоки)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Математика"
   hoc_category_name: "Година коду"
   csf_category_name: "Основи інформатики"
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 принципи інформатики"
   csp17_category_name: "'16-'17 принципи інформатики"
   cspexams_category_name: "Практичний тест з принципів інформатики"
+  research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
+  basketball_name: "Зроби гру в баскетбол"
+  sports_name: "Закодуй власну спортивну гру"
   applab_gradelevel: "Вік 13+"
   applab_shortdescription_congrats: "App Lab - це середовище програмування для створення простих аплікацій. Спроектуйте додаток, запрограмуйте його блоками чи JavaScript, а тоді поділіться ним за кілька секунд"
   codeorg_gradelevel: "Вік 4-104"

@@ -13,14 +13,16 @@ nav: how_to_nav
 ## 1) Гледайте видео с примери <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Избери урок:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [ Изпробвайте ги!](%= resolve_url()
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Всички уроци на Hour of Code:**
 
   * Изискват минимално време за подготовка на организаторите
   * Предвиждат самостоятелна работа, което позволява на учениците да работят по собствените си темпове и ниво на умения
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+**Нуждаете ли се от урочен план за вашия час на кода след училище?** Проверете този [ шаблон](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## Промотирайте своя Hour of Code
 
@@ -50,13 +52,13 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
   * [Президентът Обама призовава всички ученици да учат компютърни науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Намери още вдъхновяващи видео клипове [ тук](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Не е лошо ако Вие и Вашите ученици сте новаци в компютърните науки. Ето някои идеи, за да въведете дейността Hour of Code:**
 
   * Обяснете начина, по който технологията въздейства на живота ни, с примери за момчета и момичета (говорим за приложения и технология, която се използва за да спаси живота на хората, помага на хората, свързва хората, и т. н.).
   * Съставете списък с неща, които използват код в ежедневния живот.
   * Вижте съвети за въвличане на момичета в компютърните науки [тук](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Имате нужда от повече насоки?** Изтеглете този [ примерен план на урок](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 **Искате повече идеи?** Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от опитни педагози.
 
@@ -64,9 +66,9 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Пряко участие в дейността**
 
-  * Напишете линка към урока на бялата дъска. Намерете връзката в списъка на [ и информация за избраните уроци](<%= resolve_url('https://code.org/learn') %>) под броя на участниците.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Когато някой се натъкне на трудности е добре да получи един от тези отговори:**
 
   * "Аз не знам. Нека да разберем това заедно."
   * "Технологията не винаги работи по начина, по който ние искаме."
@@ -74,7 +76,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Какво да направя ако някой завършва по-рано?**
 
-  * Насърчете ги да опитат друга Hour of Code дейност в [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Или помолете тези, които завършват рано да помагат на другите, които имат проблеми.
 
 [col-33]
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## Други ресурси за педагози:
 
-  * Използвайте този [ примерен урочен план](/files/AfterschoolEducatorLessonPlanOutline.docx) за организиране на Hour of Code.
-  * Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от миналите събития, споделени от учители. 
+  * Вижте [ най-добрите практики](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от отминали събития, споделени от учители. 
   * Гледайте запис от нашето [ ръководство за преподаватели за Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [ Присъствайте на живо Q & А](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) с нашия основател, Хади Partovi да се подготвите за Hour of Code.
-  * Посетете [ Hour of Code Форум](http://forum.code.org/c/plc/hour-of-code), за да получите съвети и подкрепа от други преподаватели. <% if @country == 'us' %>
+  * Посетете [ Hour of Code Форума](http://forum.code.org/c/plc/hour-of-code), за да получите съвети и подкрепа от други преподаватели. <% if @country == 'us' %>
   * Прегледайте [ часът на кода често задавани въпроси](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Какво идва след Hour of Code?

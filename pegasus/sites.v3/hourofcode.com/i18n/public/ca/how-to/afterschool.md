@@ -8,25 +8,27 @@ nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# Com ensenyar l'Hora del Codi en horari extraescolar
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Visualitza aquest vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Esculli un tutorial
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tots els tutorials d'Hora de Codi:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Són autoguiades, permetent als alumnes treballar al seu propi ritme segons el seu nivell.
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+**Necessita una una programació per l'extraescolar de l'Hora del Codi?** Utilitzi aquesta [plantilla](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## 3) Promocioni la seva hora de codi
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
-## 4) Plan your technology needs - computers are optional
+## 4) Planifiqui quin material necessita. Els ordinadors són opcionals
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
@@ -39,7 +41,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Comenci l'Hora del Codi amb un vídeo inspirador
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
@@ -50,32 +52,32 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * [El president Obama fent una crida a tots els alumnes a aprendre informàtica](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**No hi ha cap problema si no té experiència en informàtica. Heus aquí algunes idees per introduir la seva activitat de l'Hora del Codi:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-  * List things that use code in everyday life.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Expliqui com la tecnologia influeix en les nostres vides, amb exemples interessants que tant pels nens com per les nenes (xerrada sobre apps i tecnologia que s'utilitza per salvar vides, ajudar a la gent, relacionar-se amb els altres, etc).
+  * Faci una llista sobre els aparells de la vida quotidiana que utilitzen codi.
+  * Vegi alguns consells per aconseguir que les nenes s'interessin més per la informàtica [aquí](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Necessita més ajuda?** Descarregui aquesta [plantilla](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 **Want more teaching ideas?** Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from experienced educators.
 
-## 6) Code!
+## 6) A programar!
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**Quan algun alumne tingui alguna dificultat, pot respondre:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "No ho sé. Esbrinem-ho junts."
+  * "La tecnologia no sempre funciona com volem."
+  * Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida!
 
 **What to do if someone finishes early?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
-  * Or, ask those who finish early to help others who are having trouble.
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
+  * O demani a qui acabi aviat que ajudi a altres companys.
 
 [col-33]
 
@@ -93,7 +95,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Celebri-ho!
 
 [col-33]
 
@@ -101,10 +103,10 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 [/col-33]
 
-  * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for your students.
+  * [Imprimeixi certificats](<%= resolve_url('https://code.org/certificates') %>) per als seus alumnes.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers for your students.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * Comparteixi fotos i vídeos del seu esdeveniment de l'Hora del Codi a les xarxes socials utilitzant les etiquetes #HourOfCode i @codeorg per poder destacar el seu èxit!
 
 [col-33]
 
@@ -116,13 +118,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## Other Hour of Code resources for educators:
+## Altres recursos d'hores de codi per a educadors:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
-  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
+  * Faci una ullada a [les millors pràctiques](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) dels organitzadors de les edicions passades de l'Hora del Codi. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
+  * Visiti el [fòrum de l'Hora del Codi](http://forum.code.org/c/plc/hour-of-code) per obtenir assessorament, informació i suport per part d'altres organitzadors. <% if @country == 'us' %>
   * Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Què ve després de l'Hora del Codi?

@@ -121,16 +121,11 @@
         </block>
         <block type="when_run">
           <next>
-            <block type="studio_setBackground">
-              <title name="VALUE">"black"</title>
+            <block type="studio_setMap">
+              <title name="VALUE">random</title>
               <next>
-                <block type="variables_set" inline="false">
-                  <title name="VAR">actor</title>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <title name="NUM">0</title>
-                    </block>
-                  </value>
+                <block type="studio_setBackground">
+                  <title name="VALUE">"black"</title>
                   <next>
                     <block type="studio_setSpritesSpeed" inline="true">
                       <title name="VALUE">"ninja"</title>
@@ -154,6 +149,7 @@
         <block type="studio_repeatForever">
           <statement name="DO">
             <block type="controls_if" inline="false">
+              <mutation elseif="2"/>
               <value name="IF0">
                 <block type="logic_compare" inline="true">
                   <title name="OP">LT</title>
@@ -172,55 +168,47 @@
                   <title name="VALUE">lose</title>
                 </block>
               </statement>
-              <next>
-                <block type="controls_if" inline="false">
-                  <value name="IF0">
-                    <block type="logic_compare" inline="true">
-                      <title name="OP">GTE</title>
-                      <value name="A">
-                        <block type="studio_getScore"/>
-                      </value>
-                      <value name="B">
-                        <block type="math_number">
-                          <title name="NUM">4</title>
-                        </block>
-                      </value>
+              <value name="IF1">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">GTE</title>
+                  <value name="A">
+                    <block type="studio_getScore"/>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">6</title>
                     </block>
                   </value>
-                  <statement name="DO0">
-                    <block type="studio_setSpritesSpeed" inline="true">
-                      <title name="VALUE">"ninja"</title>
-                      <value name="SPEED">
-                        <block type="math_number">
-                          <title name="NUM">3</title>
-                        </block>
-                      </value>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="controls_if" inline="false">
-                      <value name="IF0">
-                        <block type="logic_compare" inline="true">
-                          <title name="OP">GTE</title>
-                          <value name="A">
-                            <block type="studio_getScore"/>
-                          </value>
-                          <value name="B">
-                            <block type="math_number">
-                              <title name="NUM">6</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <statement name="DO0">
-                        <block type="studio_endGame">
-                          <title name="VALUE">win</title>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
                 </block>
-              </next>
+              </value>
+              <statement name="DO1">
+                <block type="studio_endGame">
+                  <title name="VALUE">win</title>
+                </block>
+              </statement>
+              <value name="IF2">
+                <block type="logic_compare" inline="true">
+                  <title name="OP">GTE</title>
+                  <value name="A">
+                    <block type="studio_getScore"/>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO2">
+                <block type="studio_setSpritesSpeed" inline="true">
+                  <title name="VALUE">"ninja"</title>
+                  <value name="SPEED">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
             </block>
           </statement>
         </block>
@@ -276,5 +264,17 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_ifActorHasEmotion"/>
+        <block type="studio_ifActorHasEmotionParams"/>
+        <block type="studio_ifActorPosition"/>
+        <block type="studio_ifActorPositionParams"/>
+        <block type="studio_ifActorIsVisible"/>
+        <block type="studio_ifActorIsVisibleParams"/>
+        <block type="studio_ifActorIsSprite"/>
+        <block type="studio_ifActorIsSpriteParams"/>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </Studio>

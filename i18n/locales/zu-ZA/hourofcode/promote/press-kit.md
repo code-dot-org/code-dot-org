@@ -6,20 +6,20 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-## Indlela yokuheha abosozindaba kuHora luKufingqwa lakho
+## Indlela yokuheha abosozindaba kumcimbi wakho weHora luKufingqwa
 
-*For all press and media inquiries, contact <press@code.org>*
+*Ngemibuzo mayelana ngabezindaba kanye nabokusakaza, thinta <press@code.org>*
 
-### Isihluthulelo soMbhanselo
+### Amathiphu Abalulekile
 
-  * Finyelela kwezokusakaza ngaphambi kwama viki amabili omcimbi wakho nge-email. Landelela nge-email nango cingo uma ungatholi impendulo.
-  * Cela omunye wothisha esikoleni okanye ivolontiya ukuthi athathe izithombe abelane ngazo kwabezindaba.
-  * Bhala ngeHora loKufingqwa kukhasi lewebhusayithi yakho kanye nakuphephandaba yesikole. Faka imininingwane yomcimbi wakho, kanye nemifanekiso yokusebenza kwabafundi.
-  * KuFacebook kanye nakuTwitter, yabelana ngezibuyekezo zohlelo lakho, memezela imicimbi yakho uphinde ufake imifanekiso yakho phakhathi kukaZiba. 5-11. Sebenzisa ihashtag **#iHoraloKufingqwa** njolo iCode.org izobona iphinde ikhuthaze umcimbi wakho.
+  * Finyelela kwezokusakaza ngaphambi kwama viki amabili omcimbi wakho nge-imeyili. Landelela nge-imeyili nango cingo uma ungatholi impendulo.
+  * Cela omunye wothisha esikoleni okanye ivolontiya ukuba athathe izithombe abelane ngazo kwabezindaba.
+  * Bhala ngeHora loKufingqwa kukhasi lewebhusayithi yakho kanye nakuphephandaba lesikole. Faka imininingwane yomcimbi wakho, kanye nemifanekiso yokusebenza kwabafundi.
+  * KuFacebook kanye nakuTwitter, yabelana ngezibuyekezo zohlelo lakho, memezela imicimbi yakho uphinde ufake imifanekiso yakho phakhathi kukaZiba. 5-11. Sebenzisa ihashtag **#iHoraloKufingqwa** ngakho iCode.org izobona iphinde ikhuthaze umcimbi wakho.
 
-### Igxathu emvakwe gxathu yokuqondisa:
+### Umhlahlandlela ngegxathu negxathu:
 
-**1. Plan your event**
+**1. Lungiselela umcimbi wakho**
 
   * Hlela umhlangano wokuqala iHora loKufingqwa.
   * Thumela [incwadi](%= resolve_url('/promote/resources#sample-emails') %) kubazali. Ubacele ukuba basakaze kwabanye.
@@ -27,37 +27,37 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
   * Hlela isiqumbi semisebenzi (njenge sibonakaliso sezinhlelo ezinqanyuliwe zomsebenzi), okanye obonise imisebenzi edalwe okanye eholwa abafundi.
   * Bonisa iCode.org's [ividiyo yeHora loKufingqwa](%= resolve_url('/') %) okanye okukodwa ku[lezi](%= resolve_url('/promote/resources#videos') %) ukugqugquzela.
 
-**2. Identify specific local reporters that cover education or local events.**
+**2. Khombisa izintatheli ezithize zendawo ezibhala ngemfundio okanye imicimbi yendawo.**
 
-Think a local newspaper, TV station, radio station or blog.
+Cabanga iphephandaba lendawo, isiteshi somabonakude, isiteshi somsakazo okanye ibhulogi.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email a general tips@PUBLICATIONNAME.com email address and ask for your message to be directed to the correct reporter.
+Buka online ukuthola imininingwane yokuthintana nentatheli. Uma ungakuyitholi, shayela inkampani yokubhala izincwadi ucingo ucele, okanye umayile ejwayelekile kukhle lemeyile etips@PUBLICATIONNAME.com uphinde ucele ukuba umlayezo wakho uthunyelwe kuntatheli efanele.
 
-**3. Contact local media**
+**3. Thinta abezindaba/abokusasaza bendawo**
 
-The best way to reach out is by email. It should be short and communicate: why should other people care about this event? Include contact information (including a cellphone number) for who will be on site at the event. **See a [sample pitch to media](%= resolve_url('/promote/resources#sample-emails') %).**
+Eyonandlela ephambili yokufinyelela kwabanye kuyi imeyili. Kufuneka ibemfushane iphinde ixoxisane: kungani abanye abantu kumele babe nesihe ngalo mcimbi? Faka nemininingwane yoku xhumana (efaka inombolo yocingo) yalowo ozebe ekhona emcimbini. ** Bheka lokhu [ isampula yesethulo kwabezindaba](%= resolve_url('/promote/resources#sample-emails') %).**
 
-**4. Prepare to field questions about your school event. Here are some examples:**
+**4. Lungiselela imibuzo ngomcimbi wakho. Nansi izibonelo:**
 
-*Why is your school doing an Hour of Code?*
+*Kungani isikole sakho singenzi iHora loKufingqwa?*
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Lapho sonke sazi ukuba kubalulekile ukuba abafundi bafunde ukusebenza kumhlaba osebenzisa ithekhi, iningi yothisha abanalwazi kukhompyutha sayensi kanti abazi ukuba bezoqalaphi na. Lomcimbi uyithuba lokuba sonke sibone ukuba ikhompyutha sayensi ingani.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages.
+Sithemba ukuba izoletha intshisakalo kubafundi ukuba beqhubeke nefundo. Ucwaningo lukhomba ukuba izingane zibamba izindlela zokuklama ngaphambi kokuba zazi ukufunda nokubhala. Empeleni, ingqondo zabo zamukela kakhudlwana izilimi zekhompyutha eminyakeni yobuntwana, njezilimi zakwamanye amazwe.
 
-*Why is this important?*
+*Kungani lokhu kubalulekile?*
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 75 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge.
+Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi eziyisikhombisa emelika bezikumisebenzi-efaka ubuciko nokusongoza-lapho ikhono lokufinqqwa kuyigugu. Kodwa izikole ezingamaphesenti angamashumi ayisikhombisa nahlanu emelika azifundisi ikhompyutha sayensi. Sifikile sikhathi sokuba sifike esikhathini samanje. Siyazi ukuthi akhathaliseki ukuba abafundi bethu benzani umabekhulile, noma baya emithini, kwezebhizinisi, kwezepolotiki okanye kwezobuciko, ulwazi lwethekhinoloji luzobanika ukuzethemba kanye nonqenqema wokuncintisana.
 
-**More details and a quote you can use in materials**
+**Imininingwane engeziwe kanye nokunikeza ongakusebenzisa ekuzilungiseleleni**
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st century computer science education crosses all borders and knows no boundaries."
+"IHora loKufingqwa lidalelwe ukwenza ukufingqwa kubelula kanye nokubonisa ukuba ikhompyutha sayensi ayinzimanga-yinoma ngubani ongafunda izisekelo," kusho uHadi Partovi, umsungululi neCEO ye Code.org. Badlulele kusigidi samakhulu abafundi umhlaba wonke abazame iHora loKufingqwa. Isidingo semfundiso yekhompyutha sayensi ehambisana nesikhathi samanje sifinyelela kuyo yonke indawo kanye futhi asinayo imigcele."
 
-**About Code.org**
+**Nge Code.org**
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school should have the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Umbono wayo ukuba wonke umfundi kuzozonke izikole kufanele athole ithuba lokufunda ukuhlela ngekhompyutha. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org isingathwe ngiminikelo yalabo abangasiza abavela kumankampani, kuzisekelo kanye nabantu abanikelayo, okufaka phakathi iMicrosoft, Infosys Foundation, USA, The Ballmer Family Giving, Omidyar Network kanye nabanye. Ngolwazi olubanzi, vakashela: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote') %).
+Thola izinsiza ezingeziwe kanye namasempula ama imeyili [lapha](%= resolve_url('/promote') %).
 
 <%= view :signup_button %>

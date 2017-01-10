@@ -14,7 +14,7 @@ end
 
 class CSV::Row
   def [](header)
-    raw_value = self.field header
+    raw_value = field header
     return nil unless raw_value
     raw_value.strip
   end

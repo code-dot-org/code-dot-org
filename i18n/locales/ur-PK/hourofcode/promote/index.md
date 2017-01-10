@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. آپنے پورے اسکول کو ایک گھنٹے کے کوڈ کی پیشکش دیں۔
 
-[ یہ ای-میل بھیجیں](%= resolve_url('/promote/resources#sample-emails') %) اپنے پرنسپل کو اور اپنے اسکول میں ہر کلاس روم کے شوق کو بڑھانے کے لیے تاکہ وہ سائن-اَپ کریں۔ <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[ یہ ای-میل بھیجیں](%= resolve_url('/promote/resources#sample-emails') %) اپنے پرنسپل کو اور اپنے اسکول میں ہر کلاس روم کے شوق کو بڑھانے کے لیے تاکہ وہ سائن-اَپ کریں۔
 
 ## 3. اپنے ایمپلائر کو ملوث/شامل ہونے کے لئے پوچھیں/کہے۔
 

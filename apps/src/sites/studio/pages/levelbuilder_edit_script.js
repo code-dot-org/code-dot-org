@@ -1,131 +1,54 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
-/* globals scriptData, i18nData */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import reducers, {init} from '@cdo/apps/lib/script-editor/editorRedux';
+import ScriptEditor from '@cdo/apps/lib/script-editor/ScriptEditor';
 
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  }
-};
+export default function initPage(scriptEditorData) {
+  const scriptData = scriptEditorData.script;
+  const stages = scriptData.stages.filter(stage => stage.id).map(stage => ({
+    position: stage.position,
+    flex_category: stage.flex_category,
+    lockable: stage.lockable,
+    name: stage.name,
+    // Only include the first level of an assessment (uid ending with "_0").
+    levels: stage.levels.filter(level => !level.uid || /_0$/.test(level.uid)).map(level => ({
+      position: level.position,
+      activeId: level.activeId,
+      ids: level.ids.slice(),
+      kind: level.kind,
+      skin: level.skin,
+      videoKey: level.videoKey,
+      concepts: level.concepts,
+      conceptDifficulty: level.conceptDifficulty
+    }))
+  }));
 
-/**
- * Component for editing course scripts.
- */
-var ScriptEditor = React.createClass({
-  propTypes: {
-    scriptData: React.PropTypes.object.isRequired,
-    i18nData: React.PropTypes.object.isRequired
-  },
+  registerReducers(reducers);
+  const store = getStore();
+  store.dispatch(init(stages, scriptEditorData.levelKeyList));
 
-  render() {
-    return (
-      <div>
-        <h2>I18n Strings</h2>
-        <label>
-          Title
-          <input
-            name="title"
-            defaultValue={this.props.i18nData.title}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Audience
-          <input
-            name="description_audience"
-            defaultValue={this.props.i18nData.descriptionAudience}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Short Description
-          <input
-            name="description_short"
-            defaultValue={this.props.i18nData.descriptionShort}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Description
-          <textarea
-            name="description"
-            defaultValue={this.props.i18nData.description}
-            rows={5}
-            style={styles.input}
-          />
-        </label>
-        <h2>Basic Settings</h2>
-        <label>
-          Visible in Teacher Dashboard
-          <input
-            name="visible_to_teachers"
-            type="checkbox"
-            defaultChecked={!this.props.scriptData.hidden}
-            style={styles.checkbox}
-          />
-          <p>If checked this script will show up in the dropdown on the Teacher Dashboard, for teachers to assign to students.</p>
-        </label>
-        <label>
-          Login Required
-          <input
-            name="login_required"
-            type="checkbox"
-            defaultChecked={this.props.scriptData.loginRequired}
-            style={styles.checkbox}
-          />
-          <p>Require users to log in before viewing this script. This should be enabled on scripts that contain App Lab or Game Lab levels.</p>
-        </label>
-        <label>
-          Hideable Stages
-          <input
-            name="hideable_stages"
-            type="checkbox"
-            defaultChecked={this.props.scriptData.hideable_stages}
-            style={styles.checkbox}
-          />
-          <p>Allow teachers to toggle whether or not specific stages in this script are visible to students in their section.</p>
-        </label>
-        <label>
-          Professional Learning Course
-          <input
-            name="professional_learning_course"
-            defaultValue={this.props.scriptData.professionalLearningCourse}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Peer Reviews to Complete
-          <input
-            name="peer_reviews_to_complete"
-            defaultValue={this.props.scriptData.peerReviewsRequired}
-            style={styles.input}
-          />
-        </label>
-        <label>
-          Wrap-up Video
-          <input
-            name="wrapup_video"
-            defaultValue={this.props.scriptData.wrapupVideo}
-            style={styles.input}
-          />
-        </label>
-        <h2>Stages and Levels</h2>
-      </div>
-    );
-  }
-});
+  ReactDOM.render(
+    <Provider store={store}>
+      <ScriptEditor
+        beta={scriptEditorData.beta}
+        i18nData={scriptEditorData.i18n}
+        hidden={scriptData.hidden}
+        loginRequired={scriptData.loginRequired}
+        hideableStages={scriptData.hideable_stages}
+        professionalLearningCourse={scriptData.professionalLearningCourse}
+        peerReviewsRequired={scriptData.peerReviewsRequired}
+        wrapupVideo={scriptData.wrapupVideo}
+      />
+    </Provider>,
+    document.querySelector('.edit_container')
+  );
+}
 
-ReactDOM.render(
-  <ScriptEditor scriptData={scriptData} i18nData={i18nData} />,
-  document.querySelector('.edit_container')
-);
+if (!IN_UNIT_TEST) {
+  initPage(getScriptData('levelBuilderEditScript'));
+}

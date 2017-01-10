@@ -16,6 +16,7 @@ var PaneButton = PaneHeader.PaneButton;
 const WebLabView = React.createClass({
   propTypes: {
     isProjectLevel: React.PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     isInspectorOn: React.PropTypes.bool.isRequired,
     hideToolbar: React.PropTypes.bool.isRequired,
     onUndo: React.PropTypes.func.isRequired,
@@ -73,57 +74,61 @@ const WebLabView = React.createClass({
           <div>
             {!this.props.hideToolbar &&
               <PaneHeader hasFocus={true} id="headers">
+                {!this.props.isReadOnlyWorkspace &&
+                  <div>
+                    <PaneButton
+                      iconClass="fa fa-plus-circle"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onAddFileHTML}
+                      label={weblabMsg.addHTMLButton()}
+                    />
+                    <PaneButton
+                      iconClass="fa fa-plus-circle"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onAddFileCSS}
+                      label={weblabMsg.addCSSButton()}
+                    />
+                    <PaneButton
+                      iconClass="fa fa-plus-circle"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onAddFileImage}
+                      label={weblabMsg.addImageButton()}
+                    />
+                  </div>
+                }
                 <div>
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileHTML}
-                  label={weblabMsg.addHTMLButton()}
-                />
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileCSS}
-                  label={weblabMsg.addCSSButton()}
-                />
-                <PaneButton
-                  iconClass="fa fa-plus-circle"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onAddFileImage}
-                  label={weblabMsg.addImageButton()}
-                />
-                <PaneButton
-                  id="versions-header"
-                  iconClass="fa fa-clock-o"
-                  leftJustified={true}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  label={msg.showVersionsHeader()}
-                />
-                <PaneButton
-                  iconClass="fa fa-repeat"
-                  leftJustified={false}
-                  headerHasFocus={true}
-                  isRtl={false}
-                  onClick={this.props.onRefreshPreview}
-                  label={weblabMsg.refreshPreview()}
-                />
-                <PaneButton
-                  iconClass="fa fa-mouse-pointer"
-                  leftJustified={false}
-                  headerHasFocus={true}
-                  isPressed={this.props.isInspectorOn}
-                  pressedLabel={weblabMsg.toggleInspectorOff()}
-                  isRtl={false}
-                  onClick={this.props.onToggleInspector}
-                  label={weblabMsg.toggleInspectorOn()}
-                />
+                  <PaneButton
+                    id="versions-header"
+                    iconClass="fa fa-clock-o"
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    label={msg.showVersionsHeader()}
+                  />
+                  <PaneButton
+                    iconClass="fa fa-repeat"
+                    leftJustified={false}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    onClick={this.props.onRefreshPreview}
+                    label={weblabMsg.refreshPreview()}
+                  />
+                  <PaneButton
+                    iconClass="fa fa-mouse-pointer"
+                    leftJustified={false}
+                    headerHasFocus={true}
+                    isPressed={this.props.isInspectorOn}
+                    pressedLabel={weblabMsg.toggleInspectorOff()}
+                    isRtl={false}
+                    onClick={this.props.onToggleInspector}
+                    label={weblabMsg.toggleInspectorOn()}
+                  />
                 </div>
               </PaneHeader>
             }
@@ -150,6 +155,7 @@ const WebLabView = React.createClass({
 export default connect(function propsFromStore(state) {
   return {
     isProjectLevel: state.pageConstants.isProjectLevel,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isInspectorOn: state.inspectorOn,
   };
 })(WebLabView);

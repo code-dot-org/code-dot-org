@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Απαιτούν ελάχιστο χρόνο προετοιμασίας από τους εκπαιδευτικούς
   * Είναι αυτο-καθοδηγούμενοι - επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Promote your Hour of Code
 
@@ -55,7 +55,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * Το [βίντεο που εξηγεί για την ώρα του Κώδικα 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ή το <% if @country == 'uk' %> [Ώρα του Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [ώρα Κώδικα 2015 βίντεο](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -71,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Γράψτε το σύνδεσμο σε ένα πίνακα. Βρείτε το σύνδεσμο που [περιλαμβάνεται στις](%= resolve_url('https://code.org/learn') %) πληροφορίες για το επιλεγμένο μάθημα κάτω από τον αριθμό των συμμετεχόντων.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Οι μαθητές μπορούν να δουν όλα τα μαθήματα και να δοκιμάσουν μια άλλη δραστηριότητα στο [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Ή, ζήτησε από τους μαθητές που έχουν τελειώσει, να βοηθήσουν του συμμαθητές τους που έχουν δυσκολίες με την δραστηριότητα.
 
 [col-33]

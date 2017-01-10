@@ -6,6 +6,7 @@ Feature: App Lab Eyes
 Scenario: Button shows up on top of canvas
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
+  And I wait for the page to fully load
   Then I see no difference for "initial load"
   And I press "show-code-header"
   And I add code for a canvas and a button
@@ -28,7 +29,7 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
   And I click selector "#runButton"
@@ -36,7 +37,7 @@ Scenario: App Lab UI elements from initial code and html
   And I wait to see "#radioid"
   Then I see no difference for "dynamically generated elements in code mode"
   And I click selector "#designModeButton"
-  And I wait until element "#runButton" is visible
+  And I wait for the page to fully load
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes
 
@@ -79,7 +80,7 @@ Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
   And I am on "http://studio.code.org/projects/applab/new"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I switch to design mode
 
   Then I drag a TEXT_AREA into the app
@@ -111,7 +112,7 @@ Scenario: Applab embedded level
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-up"
   And I see no difference for "top instructions collapsed"
@@ -121,18 +122,18 @@ Scenario: Applab Instructions in Top Pane
   And I see no difference for "toolbox collapsed"
 
   When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I see no difference for "top instructions enabled on instructionless level"
 
   When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/12"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I see no difference for "top instructions enabled on embed level"
   Then I close my eyes
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels
   And I see no difference for "small instructions"
@@ -167,7 +168,7 @@ Scenario: Drag to delete
   Then I see no difference for "dragging in app doesn't delete button"
 
   When I drag element "#design_button1" 250 horizontally and 100 vertically
-  Then I see no difference for "dragging slightly out of app pushes button back into bounds"
+  Then I see no difference for "dragging slightly out of app leaves element partially out of bounds"
 
   When I drag element "#design_button1" 100 horizontally and 100 vertically
   And I wait until element "#design_button1" is gone

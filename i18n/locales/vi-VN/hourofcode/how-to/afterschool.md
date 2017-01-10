@@ -11,14 +11,16 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Chọn bài hướng dẫn:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [ Thử ngay!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Tất cả những khóa học Hour of Code:**
 
   * Require minimal prep-time for organizers
   * Việc tự điều khiển có cho phép trẻ làm theo trình độ kỹ năng và tốc độ của chúng không?
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Quảng bá lớp Một Giờ Lập Trình của bạn
 
@@ -62,7 +64,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Chỉ dẫn những người tham gia vào các hoạt động**
 
-  * Viết link bài hướng dẫn lên bảng trắng. Tìm link được liệt kê trên [ thông tin cho bài hướng dẫn đã lựa chọn ](%= resolve_url('https://code.org/learn') %) theo số lượng người tham gia.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +74,7 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 **Phải làm gì nếu ai đó hoàn thành sớm?**
 
-  * Khuyến khích người tham gia thử hoạt động khác của Một Giờ Lập Trình tại [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Hoặc, yêu cầu những ai hoàn thành sớm giúp những người mà đang gặp khó khăn.
 
 [col-33]
@@ -116,11 +118,10 @@ Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm 
 
 ## Tài liệu Một Giờ Lập Trình khác cho người đào tạo:
 
-  * Sử dụng [ kế hoạch bài giảng mẫu này ](/files/AfterschoolEducatorLessonPlanOutline.docx) để tổ chức Một Giờ Lập Trình của bạn.
-  * Xem thử [ bài giảng thực tiễn hay nhất](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) từ những người đào tạo Một Giờ Lập Trình trước đây. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Xem bản thu [ Hướng dẫn Người đào tạo với hội thảo Một Giờ Lập Trình qua mạng](https://youtu.be/EJeMeSW2-Mw).
   * [Tham dự buổi Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) trực tiếp với người sáng lập của chúng tôi, Hadi Partovi để chuẩn bị cho sự kiện Một Giờ Lập Trình.
-  * Truy cập [ diễn đàn Một Giờ Lập Trình ](http://forum.code.org/c/plc/hour-of-code) để được nhận tư vấn, cái nhìn sâu sắc và hỗ trợ từ các tổ chức khác. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Xem lại [ câu hỏi thường gặp (FAQ) của Một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Tiếp sau Một Giờ Lập Trình sẽ là gì?

@@ -4,7 +4,13 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-<%= view :signup_button %>
+Кодтау сағаты мен Информатика Білім Беру Апталығы мен Кодтау Сағаты және Шолу Комиттері арқылы жүргізілуде.
+
+[Консультативтік комитет](%= resolve_url('/advisory-committee') %) К-12, академия, халықаралық, коммерциялық және коммерциялық емес ұйымдардың жиынтығынан құралған. Бұл комитет Кодтау Сағаты науқандарының стратегиясын басқарады.
+
+[Шолу комитеті](%= resolve_url('/review-committee') %) Консультативтік Комитеттің рубрикаларын пайдалана отырып шараларын бағалайтын және ұсыныс жасайтын K-12 сынып тобының 15 тәрбиешілерінен құралған. Бұл тәрбиешілер студент бастаған оқулықтар мен мұғалім бастаған сабақ жоспарларының жүздеген оқулық серіктестері арқылы ұсынылғанына, шаралардың білім құндылығы жағынан бағаланғанына, оқушылармен айналасу мүмкіндіктеріне және әр түрлі студенттер жиынына ықтималды үндеулерге шолу жасайды.
+
+Комитеттердің жұмысы мен адалдығы Кодтау Сағатының табысқа жетуіне және әрбір студентке информатиканың кіріспесіне деген көрінісін көрсетуде септігін тигізді.
 
 <% if @country == 'la' %>
 
@@ -110,37 +116,37 @@ title: <%= hoc_s(:title_partners) %>
 
 <% end %>
 
-# Major Partners and Corporate Supporters
+# Негізгі Серіктестер мен Корпоративтік Қолдаушылар
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Promotional Partners
+# Негізгі Жарнама Серіктестері
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# Халықаралық Серіктестері
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# Оқулық Серіктестері
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure partners and tools
+# Инфрақұрылым Серіктестері және Құралдары
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# Қосымша Серіктестер
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

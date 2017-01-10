@@ -1,23 +1,23 @@
 ---
-  title: <%= hoc_s(:title_signup_thanks) %>
-  layout: wide
-  nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
 
-  social:
-    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-    "og:image:width": 1440
-    "og:image:height": 900
-    "og:url": "http://<%=request.host%>"
+social:
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
 
-    "twitter:card": player
-    "twitter:site": "@codeorg"
-    "twitter:url": "http://<%=request.host%>"
-    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -59,5 +59,9 @@
 ## 7. 计划你的编程一小时
 
 选择一个编程一小时活动并且[回顾本操作指南](<%= resolve_url('/how-to') %>).
+
+## 编程一小时以后
+
+想要参与比一小时更多的活动？ 看看[我们的完整课程和教师资源](<%= resolve_url('https://code.org/teach')%>)。这其中有各种面向小学，中学和高中教师的专业学习机会。
 
 <%= view 'popup_window.js' %>

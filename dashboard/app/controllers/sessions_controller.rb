@@ -4,7 +4,8 @@ class SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    session[:return_to] = params[:return_to]
+    session[:return_to] ||= params[:return_to]
+    @already_hoc_registered = params[:already_hoc_registered]
     super
   end
 

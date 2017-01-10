@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Vyžadují minimum času vyučujícího na přípravu
   * Řídí se samy, což umožňuje žákům postupovat jejich vlastním tempem a podle jejich úrovně
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Jsou učící plány, které potřebují určitou přípravu předem
   * Jsou tříděni do kategoríí podle stupně *a* podle tématických oblastí (např. Matematika, Angličtina, atd.)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Propagujte vaši Hodinu kódu
 
@@ -55,7 +55,7 @@ The best Hour of Code experience includes Internet-connected computers. Ale **ne
   * Původní video od Code.org, ukazující Billa Gates, Zuckerberga a NBA hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [Hodina kódu 2013 spusťte video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or <% if @country == 'uk' %> [video Hodina kódu 2015 ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [video Hodina kódu 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama vyzývá všechny studenty, aby se učili informatiku](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -71,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. Ale **ne
 
 **Direct students to the activity**
 
-  * Napište na tabuli odkaz na výukový kurz. Najděte odkaz v seznamu na [informace pro vybraný výukový kurz](%= resolve_url('https://code.org/learn') %) pod počtem účastníků.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. Ale **ne
 
 **What to do if a student finishes early?**
 
-  * Studenti se mohou podívat na všechny výukové kurzy Hodiny kódu a zkusit jinou aktivitu Hodiny kódu na [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Nebo požádejte studenty, kteří jsou brzy hotoví, aby pomohli spolužákům, kteří mají s aktivitou potíže.
 
 [col-33]

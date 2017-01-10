@@ -32,7 +32,7 @@ class HocRoutesTest < Minitest::Test
     end
 
     it 'starts tutorial' do
-      assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+      assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
     end
 
     it 'ends tutorial' do
@@ -87,7 +87,7 @@ class HocRoutesTest < Minitest::Test
         assert_redirects_from_to '/api/hour/begin_company/testcompany',
           '/learn?company=testcompany'
         assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-          '/mc'
+          '/minecraft'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]
@@ -114,7 +114,7 @@ class HocRoutesTest < Minitest::Test
 
         @mock_session.cookie_jar['company'] = 'testcompany'
 
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]
@@ -143,7 +143,7 @@ class HocRoutesTest < Minitest::Test
         assert_redirects_from_to '/api/hour/begin_company/testcompany',
           '/learn?company=testcompany'
         assert_redirects_from_to '/api/hour/begin/mc?company=testcompany',
-          '/mc'
+          '/minecraft'
 
         after_start_row = get_session_hoc_activity_entry
         assert_equal 'testcompany', after_start_row[:company]
@@ -167,7 +167,7 @@ class HocRoutesTest < Minitest::Test
         assert_nil before_start_row
 
         before_began_time = now_in_sequel_datetime
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
         after_began_time = now_in_sequel_datetime
 
         after_start_row = get_session_hoc_activity_entry
@@ -189,7 +189,7 @@ class HocRoutesTest < Minitest::Test
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 100)  # Sample 1/100 of the sessions.
         Kernel.stubs(:rand).returns(1 / 1000.0)  # Pretend that the session is in the sample.
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
         row = get_session_hoc_activity_entry
         session = row[:session]
         assert_equal 100, get_sampling_weight(row)
@@ -235,7 +235,7 @@ class HocRoutesTest < Minitest::Test
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 2)
         Kernel.stubs(:rand).returns(0.75)  # Pretend that the session is not in the sample.
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
 
         # Make sure no row was written or session_id assigned
         row = get_session_hoc_activity_entry
@@ -254,7 +254,7 @@ class HocRoutesTest < Minitest::Test
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', 0)
         Kernel.stubs(:rand).returns(0.1)
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
 
         row = get_session_hoc_activity_entry
         assert_nil row
@@ -266,7 +266,7 @@ class HocRoutesTest < Minitest::Test
       DB.transaction(rollback: :always) do
         DCDO.set('hoc_activity_sample_weight', -1)
         Kernel.stubs(:rand).returns(0.1)
-        assert_redirects_from_to '/api/hour/begin/mc', '/mc'
+        assert_redirects_from_to '/api/hour/begin/mc', '/minecraft'
 
         row = get_session_hoc_activity_entry
         assert_nil row

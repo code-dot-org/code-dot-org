@@ -2,10 +2,11 @@ name 'Rating Websites'
 
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Website Rating
+# Rating Websites
 
 ## Overview:
-You and a partner will work together to rate seven additional websites on how “good” they are.  The challenge this time, however, is to identify with your partner some specific features of each website that collectively make it “good” or “bad”.  For this activity, you and your partner will share one computer while analyzing each website’s features.  
+You and your family are trying to decide what place to get dinner from. You are looking at restaurants online to help you make your decision. How well do these restaurants help you make this decision? 
+
 ## Directions:
 For each of the websites below, you and your partner will together do the following:
 
@@ -17,11 +18,46 @@ For each of the websites below, you and your partner will together do the follow
 
 ## Websites
 
-1. <a href="https://en.wikipedia.org/wiki/Wikipedia" target="_blank">Wikipedia</a> 
-1. <a href="http://www.creativewithak.com/" target="_blank">Creative with a K</a>
-1. <a href="http://www.apple.com/" target="_blank">Apple</a>
-1. <a href="https://seattle.craigslist.org/" target="_blank">Craigslist</a>
-1. <a href="http://www.thesecretlifeofpets.com/index.php" target="_blank">The Secret Life of Pets</a>
-1. <a href="http://www.007museum.com/" target="_blank">007 Museum</a>
-1. <a href="http://whitehouse.gov" target="_blank">White House Website</a>
+1. <a href="http://www.thaihousearlington.com" target="_blank"> Website 1</a> 
+1. <a href="http://www.voulasgoodeats.com/" target="_blank">Website 2</a>
+1. <a href="http://graciespizza.com/" target="_blank">Website 3</a>
+1. <a href="https://piroshkybakery.com/" target="_blank">Website 4</a>
+1. <a href="http://solrestaurant.net/" target="_blank">Website 5</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Rating the Quality of Websites
+
+**Goal:** Students identify features that they believe make some websites better than others.
+
+!!!say
+
+	 We just shared the last websites we visited. More importantly you shared why you went to those websites. All websites are created to serve a certain purpose. Some of the websites you go to meet your needs better than others. When websites don't meet your needs it may be because they were designed for a different purpose or maybe they don't do a good job of achieving their intended purpose. You are going look at a set of websites to see how well they meet their intended purpose. All of the websites you will be looking at were designed for the same purpose, to share information about a restaurant.
+
+**Setting:** Think about this, you and your family are trying to decide what place to get dinner from. You are looking at restaurants online to help you make your decision. For each website, you will think about how well it helps with your decision of what place to get dinner from. Before we look at the websites, let's think about what kind of information we will be looking for.
+
+**Prompt:** When you are trying to decide where to get dinner, what kind of information are you looking for?
+
+**Discuss:** Have students share out the types of information they might look for when trying to make this decision. 
+
+**Group:** Put students in pairs.
+
+**Distribute:** Give one copy of [r rating-the-quality-of-websites] to each student.
+
+&fa-desktop; **Transition:** Have students go to the “Rating Websites” level on Code Studio to begin looking at the websites. Links to all of the websites can be found in Code Studio. Using the worksheet as a guide, students will:
+
+* Open each website one at a time.
+* Decide with your partner if and how well the website achieves its purpose. 
+* Identify at least three features of the website that support your rating, and record those features.
+* Repeat until you have gone through all the websites.
+
+If students do not agree with their partner that is okay but they should discuss the differences in opinion.
+
+!!!content <content-0>
+
+    This activity is NOT about students giving “accurate ratings”.  Rather, it is about having students identify reasons for their ratings in order to identify qualities of website's that meet their purpose. In addition personal preference plays a role in everyone’s ratings.
+
+content!!!content-0
+
+**Circulate:**  As students are working to get a sense of the ratings they are giving in order to pull out key insights from students.
 MARKDOWN

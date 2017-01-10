@@ -11,14 +11,16 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Alle CodeUur handleidingen:**
 
   * Er is minimale voorbereiding vereist van de organisatoren
   * Zij zijn zelf-geleid, die studenten toelaten om op hun eigen tempo en vaardigheidsniveau te kunnen werken
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -62,7 +64,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 **Betrek de deelnemers mee aan de activiteit**
 
-  * Schrijf de tutorial link op een whiteboard. De link kunt u vinden op de [informatie voor uw geselecteerde tutorial](%= resolve_url('https://code.org/learn') %) onder het aantal deelnemers.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +74,7 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 **Wat te doen wanneer iemand snel klaar is?**
 
-  * Stimuleer deelnemers om een andere CodeUur activiteit uit te proberen op [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Of vraag degenen die snel klaar zijn om anderen met problemen te helpen.
 
 [col-33]
@@ -116,11 +118,10 @@ Begin uw CodeUur door de deelnemers te inspireren en bespreek hoe groot de invlo
 
 ## Andere CodeUur bronnen voor docenten:
 
-  * Maak gebruik van [de sjabloon van de lessen plan](/files/AfterschoolEducatorLessonPlanOutline.docx) om uw CodeUur te organiseren.
-  * Bekijk [de methoden](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) van eerdere CodeUur organisatoren. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Kijk naar de opname van onze [ opvoeders gids voor de lezing van CodeUur](https://youtu.be/EJeMeSW2-Mw).
   * [Woon een live Q & A bij ](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) met onze stichter, Hadi Partovi om CodeUur voor te bereiden.
-  * Bezoek de [CodeUur Forum](http://forum.code.org/c/plc/hour-of-code) om advies, inzicht en steun van andere organisatoren te krijgen. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Bekijk het [CodeUur FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Wat komt er na het CodeUur?

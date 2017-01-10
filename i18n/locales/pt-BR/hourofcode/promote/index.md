@@ -14,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Divulgue
 
-Tell your friends about the **#HourOfCode**!
+Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Envie esse e-mail](%= resolve_url('/promote/resources#sample-emails') %) para o seu diretor e incentive todas as salas de aula de sua escola a se cadastrarem. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Envie esse e-mail](%= resolve_url('/promote/resources#sample-emails') %) para o seu diretor e incentive todas as salas de aula de sua escola a se cadastrarem.
 
 ## 3. Peça para seu empregador para participar
 

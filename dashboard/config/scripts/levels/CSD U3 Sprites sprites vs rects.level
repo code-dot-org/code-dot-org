@@ -52,16 +52,14 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "S3wSy7HXJ24RwNbezk9zU/ij0RzavQyQDG55CDgnfB4IuuDpnnOewXME37hd\nx8TM\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

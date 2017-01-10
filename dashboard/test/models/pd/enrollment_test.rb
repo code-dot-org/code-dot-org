@@ -34,7 +34,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment_with_no_user.resolve_user
   end
 
-  test 'required field validations' do
+  test 'required field validations without country' do
     enrollment = Pd::Enrollment.new
     refute enrollment.valid?
     assert_equal [
@@ -51,6 +51,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.school = 'test school'
     enrollment.school_info = create(:school_info_without_country)
     assert enrollment.valid?
+  end
+
+  test 'required field validations with country' do
+    enrollment = Pd::Enrollment.new
+    enrollment.first_name = 'FirstName'
+    enrollment.last_name = 'LastName'
+    enrollment.email = 'teacher@example.net'
+    enrollment.school_info = build :school_info_us_public, :with_district, :with_school
+    assert enrollment.valid?
+
+    enrollment.school = 'test school'
+    refute enrollment.valid?
+    assert_equal ['School is forbidden'], enrollment.errors.full_messages
   end
 
   test 'emails are stored in lowercase and stripped' do
@@ -81,18 +94,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # in section: true
     workshop.section.add_student teacher
     assert enrollment.in_section?
-  end
-
-  test 'skip_school_validation' do
-    enrollment = create :pd_enrollment
-
-    enrollment.school = nil
-    enrollment.school_info = nil
-    refute enrollment.valid?
-    assert 2, enrollment.errors.count
-
-    enrollment.skip_school_validation = true
-    assert enrollment.valid?
   end
 
   test 'soft delete' do
@@ -150,6 +151,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     end
   end
 
+  test 'old enrollments with no school info are still valid' do
+    old_enrollment = create :pd_enrollment
+    old_enrollment.update!(created_at: '2016-08-29', school_info: nil)
+    assert old_enrollment.valid?
+  end
+
+  test 'school info is required on new enrollments, create and update' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, school_info: nil
+    end
+    assert e.message.include? 'Validation failed: School info is required'
+
+    enrollment = create :pd_enrollment
+    refute enrollment.update(school_info: nil)
+  end
+
   test 'old enrollments with no last name are still valid' do
     old_enrollment = create :pd_enrollment
     old_enrollment.update!(created_at: '2016-11-09', last_name: '')
@@ -183,5 +200,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.first_name = 'SeparateFirst'
     enrollment.last_name = 'SeparateLast'
     assert_equal 'SeparateFirst SeparateLast', enrollment.full_name
+  end
+
+  test 'email format validation' do
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :pd_enrollment, email: 'invalid@ example.net'
+    end
+    assert_equal 'Validation failed: Email does not appear to be a valid e-mail address', e.message
+
+    assert create :pd_enrollment, email: 'valid@example.net'
   end
 end

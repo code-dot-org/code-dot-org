@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Pídele a toda tu escuela que ofrezca una Hora del Código
 
-[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su director y desafíe a cada clase de su escuela para que se inscriba. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Envíe este correo electrónico](<%= resolve_url('/promote/resources#sample-emails') %>) a su director y desafíe a cada clase de su escuela para que se inscriba.
 
 ## 3. Pide a tu empresa que se involucre
 

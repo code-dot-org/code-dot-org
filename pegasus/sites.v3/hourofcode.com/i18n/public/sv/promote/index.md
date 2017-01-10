@@ -19,24 +19,24 @@ nav: promote_nav
 
 ## 1. Sprid ordet
 
-Tell your friends about the **#HourOfCode**!
+Berätta för dina vänner om **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Be din skola att arrangera En timma av kod
+## 2. Be din skola att arrangera Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Skicka detta mail](<%= resolve_url('/promote/resources#sample-emails') %>) till din huvudman och utmana varje klassrum på din skola för att registrera dig.
 
-## Fråga om din arbetsgivare vill engagera sig
+## 3. Fråga om din arbetsgivare vill engagera sig
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Skicka detta e-postmeddelande](<%= resolve_url('/promote/resources#sample-emails') %>) till din chef eller VD.
 
-## 4. Promote Hour of Code in your community
+## 5. Gör reklam för Hour of Code i din kommun
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Rekrytera en lokal grupp](<%= resolve_url('/promote/resources#sample-emails') %>) — scouter, kyrkan, universitet, veteraner, fackförening eller några vänner. Du behöver inte vara i skolan för att lära sig nya färdigheter. Använda dessa [affischer, banderoller, klistermärken, videor och mycket mer](<%= resolve_url('/promote/resources') %>) för dina evenemang.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Be dina lokala politiker stötta Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Skicka detta e-postmeddelande](<%= resolve_url('/promote/resources#sample-emails') %>) till din lokala politiker, stadsfullmäktige eller skolans ledning och bjud in dem att besöka din skola under Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
 
 <%= view :signup_button %>

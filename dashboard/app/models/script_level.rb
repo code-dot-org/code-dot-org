@@ -143,7 +143,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def long_assessment?
     return false unless assessment
-    level.properties["pages"] ? level.properties["pages"].length > 1 : false
+    !!level.properties["pages"]
   end
 
   def anonymous?
@@ -196,6 +196,7 @@ class ScriptLevel < ActiveRecord::Base
 
     summary = {
         ids: ids,
+        activeId: oldest_active_level.id,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -204,6 +205,14 @@ class ScriptLevel < ActiveRecord::Base
     }
 
     summary[:name] = level.name if kind == 'named_level'
+
+    if Rails.application.config.levelbuilder_mode
+      summary[:key] = level.key
+      summary[:skin] = level.try(:skin)
+      summary[:videoKey] = level.video_key
+      summary[:concepts] = level.summarize_concepts
+      summary[:conceptDifficulty] = level.summarize_concept_difficulty
+    end
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level

@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. 여러분 학교의 행사로 Hour of Code 를 열어달라고 요청하세요.
 
-교장선생님께 [이 이메일을 보내서](%= resolve_url('/promote/resources#sample-emails') %) 학교의 모든 학급이 참여할 수 있도록 도전해보세요. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+교장선생님께 [이 이메일을 보내서](%= resolve_url('/promote/resources#sample-emails') %) 학교의 모든 학급이 참여할 수 있도록 도전해보세요.
 
 ## 3. 여러분의 직장 상사에게 함께 참여하도록 요청해 보세요.
 

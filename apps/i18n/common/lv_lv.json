@@ -1,5 +1,5 @@
 {
-  "allowEditing": "Allow editing",
+  "allowEditing": "Atļaut rediģēšanu",
   "allowEditingInstructions": "\"Allow editing\" while students should be taking the assessment.",
   "and": "un",
   "animationMode": "Animācija",
@@ -33,6 +33,7 @@
   "copy": "Kopija",
   "copyright": "Copyright",
   "currentVersion": "Pašreizējā versija",
+  "dataLimitAlert": "The app has been reading or writing to the database too frequently, which may result in unexpected failures.  Please let the app owner know if you keep experiencing issues.",
   "dataMode": "Data",
   "dataTableNamePlaceholder": "Tabulas nosaukums",
   "dataWorkspaceHeader": "Datu pārlūks",
@@ -184,6 +185,8 @@
   "iconSearchPlaceholder": "Meklēt ikonas...",
   "ignore": "Izlaist",
   "infinity": "Bezgalība",
+  "joinText": "apvienot",
+  "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "jump": "lēkt",
   "keepPlaying": "Turpināt spēlēt",
   "keyValuePairLink": "Key/value pairs",
@@ -235,6 +238,7 @@
   "positionTopOutLeft": "ārpus augšējās kreisās pozīcijas",
   "positionTopOutRight": "augšējā labā pozīcija ārpusē",
   "positionTopRight": "uz labo augšējo pozīciju",
+  "predictionInstructions": "Make a prediction before you run the program.",
   "print": "Drukāt",
   "privacyPolicy": "Privātuma politika",
   "projectWarning": "Note: You are on a level that is part of a longer project. Changes made on this level will also appear in other levels in the project.",
@@ -315,5 +319,8 @@
   "whenRun": "kad izpilda",
   "workspaceHeaderShort": "Darba virsma: ",
   "yes": "Jā",
-  "predictionInstructions": "Make a prediction before you run the program."
+  "dropletBlock_playSound_description": "Plays the MP3 sound file from the specified URL.",
+  "dropletBlock_playSound_param0_description": "The URL to a sound file. Can be a project asset name or external URL.",
+  "dropletBlock_stopSound_description": "Stops playing the sound file from the specified URL, or all sounds if no URL is given.",
+  "dropletBlock_stopSound_param0_description": "The URL to a sound file. Can be an project asset name or external URL."
 }

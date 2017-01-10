@@ -126,6 +126,7 @@ class Studio < Grid
   <block type="studio_whenRight" />
   <block type="studio_whenSpriteClicked" />
   <block type="studio_whenSpriteCollided" />
+  <block type="studio_whenSpriteAndGroupCollideSimple" />
   <block type="studio_whenSpriteAndGroupCollide">
     <value name="GROUPMEMBER">
       <block type="variables_get">
@@ -149,6 +150,9 @@ class Studio < Grid
   <block type="studio_showTitleScreen">
     <title name="TITLE">type title here</title>
     <title name="TEXT">type text here</title>
+  </block>
+  <block type="studio_setMap">
+    <title name="VALUE">random</title>
   </block>
   <block type="studio_showTitleScreenParams">
     <value name="TITLE">
@@ -247,6 +251,13 @@ class Studio < Grid
     </value>
   </block>
   <block type="studio_setSpritePosition" />
+  <block type="studio_setSpritePositionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
   <block type="studio_addGoal" />
   <block type="studio_addGoalXY" />
   <block type="studio_setSpriteXY" inline="true">
@@ -367,6 +378,40 @@ class Studio < Grid
   <block type="logic_negate" />
   <block type="logic_boolean" />
 </category>
+<category name="Conditionals">
+  <block type="studio_ifActorHasEmotion" />
+  <block type="studio_ifActorHasEmotionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorPosition" />
+  <block type="studio_ifActorPositionParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsVisible" />
+  <block type="studio_ifActorIsVisibleParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsSprite" />
+  <block type="studio_ifActorIsSpriteParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+</category>
 <category name="Math">
   <block type="math_number" />
   <block type="math_change">
@@ -392,6 +437,7 @@ class Studio < Grid
 </category>
 <category name="Text">
   <block type="text" />
+  <block type="text_join_simple" inputcount="2"/>
   <block type="text_join" />
   <block type="text_append">
     <value name="TEXT">

@@ -7,12 +7,15 @@ const ARROW_WIDTH = 58;
 const ARROW_HEIGHT = ARROW_WIDTH * 2;
 const ARROW_BUTTON_HEIGHT = 44; // originally from common.scss .arrow-text rule
 const ARROW_BUTTON_PADDING = 10; // originally from common.scss .arrow-left .arrow-text rule
-const style = {
+export const style = {
   base: {
     borderWidth: 1,
     borderStyle: 'solid',
     minWidth: 100,
-    margin: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 0,
     ':hover': {
       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
     },
@@ -40,7 +43,6 @@ const style = {
   arrowHead: {
     base: {
       position: 'absolute',
-
       width: 0,
       height: 0,
       borderColor: 'transparent',
@@ -62,7 +64,10 @@ style.withArrow = {
   base: {
     position: 'relative',
     top: (ARROW_HEIGHT - style.base.borderWidth - ARROW_BUTTON_PADDING * 2 - ARROW_BUTTON_HEIGHT)/2,
-    margin: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 0,
     ':hover': {
       boxShadow: 'none',
     },
@@ -83,8 +88,8 @@ function buttonStyle(buttonColor, textColor=color.white) {
   };
 }
 
-const BUTTON_TYPES = {
-  "default": {
+export const BUTTON_TYPES = {
+  default: {
     style: {
       backgroundColor: color.white,
       borderColor: color.charcoal,
@@ -168,63 +173,3 @@ Button.propTypes = Object.assign({}, BaseButton.propTypes, {
 });
 
 export default Button;
-
-if (BUILD_STYLEGUIDE) {
-  const docs = {
-    "default": 'Use for actions that don\'t need to be the focus of the page',
-    cancel: 'Use to cancel an action, e.g. in a modal dialog',
-    primary: 'Use to identify primary action in a set of buttons',
-    danger: 'Use for destructive actions or actions with serious repercussions, e.g. deleting data',
-    action: 'Use to provide differentiated visual weight for secondary actions',
-  };
-
-  Button.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('Button', module)
-      .addWithInfo(
-        'overview',
-        '',
-        () => (
-          <div>
-            <h1>Intro</h1>
-            <p>
-              Buttons come in many different shapes and sizes! Some aspects of buttons
-              that are worth mentioning:
-            </p>
-            <ul>
-              <li>They have a min width of {`${style.base.minWidth}px`}</li>
-              <li>
-                They come in a number of different semantic styles:{' '}
-                {Object.keys(BUTTON_TYPES).join(', ')}
-              </li>
-            </ul>
-            <h1>Types</h1>
-            <table style={{backgroundColor: 'white', textAlign: 'center'}}>
-              <tr>
-                <th>Type</th>
-                <th style={{width: 300}}>Usage</th>
-                <th>Appearance</th>
-                <th>Large Size</th>
-                <th>Left arrow</th>
-                <th>Right arrow</th>
-              </tr>
-              {Object.keys(BUTTON_TYPES).map(type => (
-                 <tr key={type}>
-                   <td>{type}</td>
-                   <td style={{textAlign: 'left'}}>{docs[type]}</td>
-                   <td><Button type={type}>{type}</Button></td>
-                   <td><Button type={type} size="large">{type}</Button></td>
-                   <td>
-                     <Button type={type} size="large" arrow="left">{type}</Button>
-                   </td>
-                   <td>
-                     <Button type={type} size="large" arrow="right">{type}</Button>
-                   </td>
-                 </tr>
-               ))}
-            </table>
-          </div>
-        )
-      );
-  };
-}

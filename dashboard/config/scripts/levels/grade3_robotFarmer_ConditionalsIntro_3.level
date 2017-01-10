@@ -27,9 +27,9 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
-    "ideal": "4"
+    "ideal": "4",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -39,11 +39,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveForward"/>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -63,9 +59,7 @@
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <block type="controls_repeat">
-        <title name="TIMES">10</title>
-      </block>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

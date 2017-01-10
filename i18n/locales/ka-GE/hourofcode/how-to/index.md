@@ -13,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) აირჩიეთ ტუტორიალი თქვენი საათისთვის:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * მასწავლებლისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას საკუთარი ტემპისა და უნარების მიხედვით იმეცადინოს
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * გაკვეთილის გეგმები, რომლებიც მასწავლებლისგან გარკვეულ მომზადებას მოითხოვენ
   * განაწილებულია კლასებისა *და* თემების (მაგ. მათემატიკა, ინგლისური და ა.შ.) მიხედვით
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
 
@@ -55,7 +55,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
   * Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * [კოდის ერთი საათის პრომოვიდეო](https://www.youtube.com/watch?v=FC5FbmsH4fw), ან <% if @country == 'uk' %> [2015 წლის კოდის ერთი საათის ვიდეო ](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 წლის კოდის ერთი საათის ვიდეო](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს პროგრამირების სწავლას](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * მეტი შთამაგონებელი ვიდეო იხილეთ [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -71,7 +71,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 **Direct students to the activity**
 
-  * დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენი არჩეული გაკვეთილის ინფორმაციაში](%= resolve_url('https://code.org/learn') %) იხილოთ.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -89,7 +89,7 @@ We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.
 
 **What to do if a student finishes early?**
 
-  * მოსწავლეებს შეუძლიათ ყველა გაკვეთილის ნახვა და კოდის ერთი საათის სხვა აქტივობის ცდა აქ [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * ან მას შეუძლია დაეხმაროს იმ კლასელებს, ვისაც გაუჭირდა დავალებების შესრულება.
 
 [col-33]

@@ -9,9 +9,9 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# Kod Saatını təbliğ edin
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## Kod Saatı keçirirsiniz? [Təlimatla tanış olun](<%= resolve_url('/how-to') %>)
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -62,7 +62,7 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 ## Məktəbiniz, iş yeriniz və ya dostlarınızdan qeydiyyatdan keçməyi xahiş edin:
 
-Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! və "Disney" səhifələrində idi. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
@@ -78,7 +78,7 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Yaxşı xəbər odur ki, bunu dəyişmək üzrəyik.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! və "Disney" səhifələrində idi. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
@@ -86,7 +86,7 @@ That’s why every one of the [X number] students at [SCHOOL NAME] are joining i
 
 I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Bizə qoşulun.
 
 **Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
@@ -100,23 +100,23 @@ I look forward to being in touch.
 
 ## Valideynlərə məktəbdəki tədbir barədə xəbər verin:
 
-Dear Parents,
+Hörmətli Valideynlər,
 
 We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Kod Saatı ilə bəyan edirik ki, [MƏKTƏBİN ADI] 21-ci əsrin bu təməl bacarıqlarını öyrətməyə hazırdır. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Sincerely,
+Ən xoş arzularla,
 
-Your principal
+Məktəb direktorunuz
 
 <a id="politicians"></a>
 
@@ -126,7 +126,7 @@ Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
@@ -134,6 +134,6 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-Sincerely, [NAME], [TITLE]
+Ən xoş arzularla, [NAME], [TITLE]
 
 <%= view :signup_button %>

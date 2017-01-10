@@ -1,11 +1,10 @@
 @as_student
 Feature: Fun-O-Meter
 
-@no_circle
 Scenario: Rate a Puzzle
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
 
   When I drag block "4" to block "11" plus offset 35, 30
   And I press "runButton"
@@ -15,7 +14,7 @@ Scenario: Rate a Puzzle
 
   When I reload the page
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And I press "runButton"
   And I wait to see ".congrats"
 
@@ -29,10 +28,9 @@ Scenario: Rate a Puzzle
 
   Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
 
-  When I wait to see "#runButton"
-  And I press "runButton"
+  When I press "runButton"
   And I wait to see ".congrats"
 
   Then element "#puzzleRatingButtons" does not exist

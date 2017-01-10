@@ -10,23 +10,23 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#Kodetimen' %>
 
-# How to get involved
+# Korleis involvere seg
 
 ## Spre bodskapet
 
-Tell your friends about the **#HourOfCode**!
+Fortell dine venner om **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Be heile skulen din om å tilby ein Kodetime
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## 4. Be arbeidsgjevaren din om å engasjere seg
 
 [Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-## 4. Promote Hour of Code in your community
+## 4. Promoter Kodetimen i ditt lokalsamfunn
 
 [Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 

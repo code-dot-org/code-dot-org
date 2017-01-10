@@ -1,5 +1,5 @@
 {
-  "at": "at",
+  "at": "pri",
   "atFlower": "v cvetu",
   "atHoneycomb": "pri satovju",
   "avoidCowAndRemove": "izogni se kravi in odstrani 1",
@@ -9,10 +9,11 @@
   "collectorCollectedEverything": "Congratulations! You collected all {count} items!",
   "collectorCollectedNothing": "Keep coding! You need to collect as many of the items as you can.",
   "collectorCollectedSome": "Great work! You collected {count} items!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
   "continue": "Nadaljuj",
-  "corn": "corn",
+  "corn": "koruza",
   "cornTooltip": "Harvest some corn",
   "didNotCollectAllCrops": "Make sure you don't leave any crops behind!",
   "didNotCollectEverything": "Make sure you don't leave any nectar or honey behind!",
@@ -54,7 +55,7 @@
   "ifelseTooltip": "Če obstaja pot naprej v določeni smeri, potem naredi prvi blok dejanj. V nasprotnem primeru, naredi drugi blok dejanj.",
   "insufficientHoney": "Uporabil si prave bloke, vendar moraš narediti pravo količino medu.",
   "insufficientNectar": "Uporabil si prave bloke, vendar moraš nabrati pravo količino nektarja.",
-  "lettuce": "lettuce",
+  "lettuce": "solata",
   "lettuceTooltip": "Harvest some lettuce",
   "make": "naredi",
   "moveBackward": "premakni nazaj",
@@ -96,7 +97,7 @@
   "repeatUntil": "ponavljaj dokler",
   "repeatUntilBlocked": "dokler je pot naprej",
   "repeatUntilFinish": "ponavljaj do konca",
-  "soil": "soil",
+  "soil": "tla",
   "sprout": "sprout",
   "step": "Korak",
   "totalHoney": "skupaj medu",
@@ -111,6 +112,5 @@
   "word": "Poišči besedo",
   "wrongCropError": "I can't harvest that crop from here.",
   "yes": "Da",
-  "youSpelled": "Ti si črkoval",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "Ti si črkoval"
 }

@@ -291,12 +291,14 @@ en:
             Calc: Calc
             Eval: Eval
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Flappy Code
           description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
           description_short: Write your own Flappy game in less than 10 minutes!
           stage:
             Flappy Code: Flappy Code
+          description_audience: ''
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial
@@ -537,6 +539,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -549,6 +552,7 @@ en:
             Preparing for in-person PD: Preparing for in-person PD
             Teacher Dashboard: Teacher Dashboard
             Why Computer Science belongs in Algebra: Why Computer Science belongs in Algebra
+          description_audience: ''
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -567,6 +571,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -585,6 +590,7 @@ en:
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD2:
           title: 'CS in Science: Part 2'
           description: Phase 2 Online Blended Summer Study
@@ -699,6 +705,8 @@ en:
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -800,6 +808,7 @@ en:
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -843,6 +852,7 @@ en:
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1061,6 +1071,7 @@ en:
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: 'Phase 3 (Part 2): CS in Algebra mid year lesson support'
@@ -1200,6 +1211,7 @@ en:
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
             Wrap-Up: Wrap-Up
+          description_audience: ''
         cspunit5:
           title: "(old) CS Principles Unit 5 - Performance Tasks"
           description: This unit covers the preparation and completion of the Explore and Create Performance Tasks.
@@ -1405,6 +1417,7 @@ en:
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey: Taking the AP exam'
           description_audience: ''
         csp4:
           title: CSP Unit 4 - Big Data and Privacy
@@ -1428,7 +1441,7 @@ en:
           description_audience: ''
         csp5:
           title: CSP Unit 5 - Building Apps
-          description: 'PLEASE NOTE: this unit is still undergoing revisions based on pilot feedback from the 15-16 school year.  What''s below is the planned sequence of lessons.  The revision work should be done by late fall or early winter 2016.  As a result: (1) lesson plans will still be in google docs (2) unit/lesson numbers on those docs may not match what you see below. DESCRIPTION: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.'
+          description: This unit continues the introduction of foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
           description_short: Continue to learn foundational concepts of computer programming in JavaScript by making rich, interactive apps.
           stage:
             Beyond Buttons Toward Apps: Beyond Buttons Toward Apps
@@ -1459,6 +1472,22 @@ en:
             Unit 5 Assessment 2: Unit 5 Assessment 2
             "'If' Statements Unplugged": "'If' Statements Unplugged"
             '"If" Statements Unplugged': '"If" Statements Unplugged'
+            Getting started with If Statements: Getting started with If Statements
+            Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
+            If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If" Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CSP Unit 6 - Performance Tasks
@@ -1945,6 +1974,8 @@ en:
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+            Unit 5 Challenge: Unit 5 Challenge
+            Close & Next Steps: Close & Next Steps
           description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
@@ -1957,6 +1988,8 @@ en:
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+            Close & Next Steps: Close & Next Steps
+          description_audience: ''
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -2143,6 +2176,10 @@ en:
             'Lessons 11 - 15: Communicating with Visualizations': 'Lessons 11 - 15: Communicating with Visualizations'
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2160,14 +2197,15 @@ en:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Bounce
-          title: Basketball
+          title: Choose your team and make a basketball game
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Choose your team and make a basketball game
+          description: Choose your team and make a basketball game
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2184,8 +2222,9 @@ en:
             Binary Images: Binary Images
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
+            Processing with Bits: Processing with Bits
           title: Binary
-          description_audience: ''
+          description_audience: Falmouth Middle School
           description_short: ''
           description: ''
         csd2:
@@ -2210,6 +2249,8 @@ en:
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2226,6 +2267,7 @@ en:
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2251,6 +2293,10 @@ en:
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2260,8 +2306,8 @@ en:
             Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
           title: Minecraft Hour of Code Designer
           description_audience: ''
-          description_short: Build a Minecraft game.
-          description: Build a Minecraft game. Create your own versions of chicken, sheep, Creepers, zombies and more.
+          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description: Program animals and other Minecraft creatures in your own version of Minecraft.
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2287,6 +2333,7 @@ en:
             Events in Play Lab: Events in Play Lab
             Fuzz Fiesta: Fuzz Fiesta
             Going Places Safely: Going Places Safely
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: ''
@@ -2307,6 +2354,8 @@ en:
             Events in Play Lab: Events in Play Lab
             More Computer Science: More Computer Science
             Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
+            Your Digital Footprint: Your Digital Footprint
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: ''
@@ -2327,6 +2376,10 @@ en:
             Binary Bracelets: Binary Bracelets
             Events in Play Lab: Events in Play Lab
             Your Digital Footprint: Your Digital Footprint
+            Building a Foundation: Building a Foundation
+            Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2349,6 +2402,10 @@ en:
             Build a Play Lab Game: Build a Play Lab Game
             Conditionals in Bee: Conditionals in Bee
             Digital Citizenship: Digital Citizenship
+            'Unplugged: Binary': 'Unplugged: Binary'
+            Artist Binary: Artist Binary
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Nested Loops
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2368,6 +2425,10 @@ en:
             Build Your Project: Build Your Project
             Present Your Project: Present Your Project
             More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: Crowdsourcing
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2390,6 +2451,8 @@ en:
             Revise Your Project: Revise Your Project
             Presentation Your Project: Presentation Your Project
             Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Songwriting with Parameters
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: ''
@@ -2412,3 +2475,136 @@ en:
           description_audience: ''
           description_short: Try the basics of computer science with many fun characters!
           description: Try the basics of computer science with characters from Angry Birds and Plants vs. Zombies! This version includes pre and post surveys to help us continue to improve Hour of Code. Ask your class to skip ahead to the post survey 10 minutes before class ends.
+        sports:
+          stage:
+            Sports: Sports
+          title: Code your own sports game
+          description_audience: ''
+          description_short: Mix and match across sports
+          description: Mix and match across sports
+        2016_sciencePD-phase2b:
+          stage:
+            Welcome!: Welcome!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Wrap-Up
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2016_sciencePD_phase2b:
+          stage:
+            Welcome!: Welcome!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Wrap-Up
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd3-2016:
+          stage:
+            Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
+          title: CSP Unit 3 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Welcome!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Wrap-Up
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Welcome!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Wrap-Up
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Welcome!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Wrap-Up
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

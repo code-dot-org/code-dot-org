@@ -16,13 +16,13 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   3. **Distribuie pe social media.** Post la [Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) sau [Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Sau distribuiti una dintre aceste[imagini cu citate](%= resolve_url('/promote/resources#social') %) din partea unor lideri mondiali sau [sau vedete.](%= resolve_url('/promote/stats') %).
 
-  4. **Promovează pe pagina principală de web a cartierului tău.** Informează vizitatorii cu privire la participarea ta și evenimentele Ora de Cod. Pune un link către [Ora de Cod](%= resolve_url('/') %).
+  4. **Promovează pe pagina principală de web a cartierului tău.** Informează vizitatorii cu privire la participarea ta și evenimentele Ora de Programare. Pune un link către [Ora de Programare](%= resolve_url('/') %).
 
   5. **Organizeaza un eveniment Hour of Code in cartierul tau** Vezi[ghidul nostru despre cum poti organiza](%= resolve_url('/how-to/events') %) un eveniment simplu, cu kit-urile pentru media si alte materiale suport.
 
 ## Ce urmeaza dupa Hour of Code?
 
-Ora de Cod este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
+Hour of Code este doar primul pas într-o călătorie pentru a afla mai multe despre modul în care tehnologia funcționează şi cum se creează aplicațiile software. Pentru a continua această călătorie:
 
   * Încurajați elevii să continue să [înveţe online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Participați](%= resolve_url('https://code.org/professional-development-workshops') %) la un atelier de lucru de o zi, în persoană, pentru a primi instrucțiuni de la un facilitator experimentat în informatică. (Numai pentru educatori din SUA)

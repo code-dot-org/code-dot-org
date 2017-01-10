@@ -36,6 +36,9 @@
   og_title: Jokainen lapsi ansaitsee mahdollisuuden
   og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
     tietotekniikkaa. Se muuttaa kaiken.
+  csedweek_og_title: Koodaustunti on täällä
+  csedweek_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
+    kymmeniä miljoonia eri ikäisiä oppilaita yli 180:ssä maassa ja yli 45 eri kielellä.
   hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
     joulukuuta 2014<br/>
   hoc2014_students: Oppilaat
@@ -86,8 +89,7 @@
   congratulations_on_completing_course2: Onnittelut! Läpäisit kurssin 2
   congratulations_on_completing_course3: Onnittelut! Läpäisit kurssin 3
   congratulations_on_completing_course4: Onnittelut! Läpäisit kurssin 4
-  congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
-    Course
+  congratulations_on_completing_accelerated: Onnittelut nopeutetun kurssin suorittamisesta
   congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
   congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
     tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
@@ -138,64 +140,62 @@
     games, and animations and share your creations with others in the online community.
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
+  third_party_scratch_btn_curriculum: Lataa Scratch opetussuunnitelma
+  third_party_scratch_btn_forum: Scratch Kasvattaja Foorumi
+  third_party_scratch_btn_site: Vieraile Scratch -sivustolla
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
     or on Android or iOS devices. Students play the initial set of “Basic” levels
     in Lightbot. They will learn how to tell a computer what to do with a series of
     basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
+  third_party_lightbot_btn_curriculum: Lataa Lightbot opetussuunnitelma
+  third_party_lightbot_btn_site: Vieraile Lightbot -sivustolla
   third_party_khan_desc: Learn how to program drawings, animations, and games using
     JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
     can share whatever you create, explore what others have created and learn from
     each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_btn_learn: Opi CS Khan Academy:n avulla
+  third_party_khan_btn_forum: Khan Academy CS Foorumi
   third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
     allows everyone, even novices, to start programming and build fully functional
     apps for Android devices. Newcomers to App Inventor can have their first app up
     and running in an hour or less, and can program more complex apps in significantly
     less time than with more traditional, text-based languages.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
+  third_party_appinv_btn_forum: App Inventor 2 Foorumi
+  third_party_appinv_btn_site: Vieraile App Inventor 2 -sivulla
   third_party_codehs_desc: CodeHS introduces the building blocks of programming with
     short videos, example code, and lots of programming exercises that make coding
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  third_party_codehs_btn_try: Intro CS lisätietoja kouluille
+  third_party_codecademy_desc: Uudelleenajattelemme koulutuksen alhaalta ylös. Netti
+    on uudelleen opettanut melkein kaiken - kaupankäynnin, sosiaalisen verkostoitumisen,
+    terveydenhuollon, ja muuta. Me olemme rakentamassa kouluksen mitä maailma tarvitsee
+    - ensimmäinen oikeasti nettikoulutus.
+  third_party_codecademy_btn_curriculum: Lataa Codeacademy opetussuunnitelma
+  third_party_codecademy_btn_site: Vieraile Codecademy -sivulla
+  third_party_organization: Organisaatio
   third_party_curriculum: Opetussuunnitelma
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
-    K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_pricing: Hinnoittelu
+  third_party_cost_free: Ilmainen opiskelijoille ja opettajille
+  third_party_cost_5permonth: "$5 kuukaudessa per luokka"
+  third_party_cost_299: "$2.99 lataus"
+  third_party_cost_free_399: Ilmainen kokeilu, $399 yksi luokkahuone
+  third_party_cost_free_2: Ilmainen kokeilu, $2 yksi oppilas
+  third_party_cost_free_10: Ilmainen kokeilu, $9.99 kuukaudessa
+  third_party_desc_5_4to8: Noin 5 oppituntia, suunnattu luokkille 4-8
+  third_party_desc_10to12_kto3: Noin 10-12 oppituntia, suunnattu eskarilaisista 3-luokkalaisille
+  third_party_desc_11_kto5: Noin 11 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
+  third_party_desc_10to12_kto5: Noin 10-12 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
+  third_party_desc_40_4to8: Yli 40 oppituntia suunnattu luokille 4-8
+  third_party_desc_dozens_kto8: Kymmeniä oppitunteja kaikille eskarista 8-luokkalaisille
+  third_party_desc_10to15_3to12: 10 - 15 oppituntia, suunnattu luokille 3-12
+  third_party_desc_25to40_3to12: 25-40 oppituntia tarkoitettu luokille 3-12
+  third_party_desc_20_2to8: Noin 20 oppituntia, suunnattu luokkille 2-8
+  third_party_desc_7to22_5to12: 7 - 22 oppituntia, suunnattu luokille 5-12
+  third_party_desc_20_4to12: Yli 20 oppituntia suunnattu luokille 4-12
   enter_valid_age: Valitse oikea ikä
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
   get_a_certificate_message: Me lähetämme sinulle todistuksen ja lisätietoa miten
@@ -246,19 +246,22 @@
   continue_learning_header: Jatka opiskelua Koodaustunnin jälkeen
   continue_learning_body: Vaihtoehtoja on paljon. Voit opiskella verkossa tai paikallisessa
     oppilaitoksessa tai kesäleirillä.
+  learn_code_studio: Kokeile kursseja Code Studiossa
   learn_next_level: Jatka seuraavalle tasolle
   learn_online: Kokeile muita kursseja verkossa
   learn_classes: Etsi paikallisia oppitunteja
-  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
+  learn_back_to_minecraft: Opi lisää Minecraftissa
+  hoc_is_here: "#HourOfCode on tulossa jälleen joulukuussa 5-11. https://youtu.be/KsOIlDT145A."
   just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: Miksi usemmat koulut eivät opeta tietojenkäsittelytiedettä? Voimme
-    korjata tämän. http://youtu.be/2DxWIxec6yo. Vieraile osoitteessa http://code.org/
-    ja opi lisää.
+  just_did_course1: Suoritin juuri kurssin 1 - tsekkaa tämä! @codeorg
+  just_did_course2: Suoritin juuri kurssin 2 - tsekkaa tämä! @codeorg
+  just_did_course3: Suoritin juuri kurssin 3 - tsekkaa tämä! @codeorg
+  just_did_course4: Suoritin juuri kurssin 4 - tsekkaa tämä! @codeorg
+  just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
+  twitter_teach_cs: Yhdeksän kymmenestä haluaisi että kouluissa opettaisiin tietojenkäsittelyä.
+    http://youtu.be/nKIu9yen5nc. Käy katsomassa https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Opiskele Koodaustunnilla
   beyond_hoc: Koodaustunnin jälkeen
   what_gender: Mikä on sukupuolesi?
@@ -351,6 +354,7 @@
   homepage_action_text_volunteers: Teknisiä vapaaehtoistyöntekijöitä tarvitaan
   homepage_action_text_codevideo: Katso video
   homepage_action_text_teachervideo: Katso video
+  homepage_action_text_watchvideo: Katso video
   homepage_action_text_girlvideo: Inspiroi tyttö
   homepage_action_text_learn: Aloita oppiminen
   homepage_action_text_signpetition: Allekirjoita vetoomus
@@ -400,7 +404,7 @@
   homepage_slot_text_link_stats: Katso tilastot
   homepage_slot_text_link_buy: Tule mukaan
   homepage_slot_text_link_donate: Tee lahjoitus
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: T-paitoja, hattuja & muuta
   homepage_header_codestudio: Koodistudion oppilas luomukset
   homepage_header_donors: Code.org kiittää tukijoitaan
   homepage_donors_seall: Näytä kaikki
@@ -445,8 +449,10 @@
   class_submission_level_college: Yliopisto / korkeakoulu
   class_submission_level_vocational: Ammatillinen opetus
   class_submission_languages_other: Muu kieli(kielet)
-  inspirational_videos_more: Lisää <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">
-    inspiroivia videoita</a> roolimalleilta ja kuuluisuuksilta
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: Valitse Pelilabra-teemasi
   playlab_classic_title: Klassinen
   playlab_gumball_title: Gumball
@@ -469,9 +475,74 @@
   mc_gradelevel: 4-104-vuotiaille
   mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
+  minecraft_designer: Minecraft suunnittelija
+  minecraft_adventurer: Minecraft seikkailija
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Aloita
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Aloita
+  minecraft_no_internet: Don't have Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Koodaustunti
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Hour of Code Sports Tutorials
+  sports_og_description: Choose between making a basketball game or mix and match
+    across sports.
+  sports_title: Code your own sports game
+  sports_watch_video: Katso video
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspiroi tyttö
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama on computer science
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Anybody Can Learn
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
   speak_another_language: Speak another language?
   help_translate: Help us translate.
   no_internet: Don't have Internet?
@@ -898,12 +969,14 @@
   dashboard_announce_learn_more_button: Lue lisää
   dashboard_announce_try_now_button: Kokeile nyt
   dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_watch_video_button: Katso video
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
-  dashboard_announce_petition_button: Add your name
+  dashboard_announce_petition_button: Lisää sinun nimesi
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
@@ -911,6 +984,27 @@
     We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
     target='_blank'>Register your Hour of Code event</a> and let another teacher know
     that anyone can start teaching computer science.
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
   code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
   host_an_hour: Host an hour
@@ -1047,10 +1141,15 @@
   cspunit4_name: 'Unit 4: Data'
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1069,13 +1168,21 @@
   iceage_name: Jääkausi
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Matematiikka
   hoc_category_name: Koodaustunti
   csf_category_name: CS Fundamentals
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
+  research_studies_category_name: Research Studies
   applab_name: Sovelluksien laboratorio
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game
   applab_gradelevel: Ikäryhmille 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
@@ -1770,22 +1877,3 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on theses course from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies

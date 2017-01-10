@@ -133,12 +133,12 @@
           se si algoritmat luajnë një rol esencial.
         video: C1_tëmbjellësh_farë
       BuildingAFoundation:
-        title: Krijimi i një Baze
+        title: Krijimi i një fondacioni
         desc: Studentët ndërtojnë një strukturë duke përdorur vetëm pajisjet e siguruara.
           Strukturat duhet të perfundojnë një detyrë (të arrijnë një gjatësi të sigurtë
           dhe të durojnë një peshë të sigurtë), dhestudentët të diskutojnë idenë e
           të qënit këmbëngulës kur gjërat komplikohen.
-        video: C1_ndërtimi_bazës
+        video: C1_ndërtimi_fondacionit
       GettingLoopy:
         title: Duke u Çmëndur
         desc: Ky mësim ju prezanton me konceptin e programimit të cikleve (instruksione
@@ -189,18 +189,18 @@
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së
           parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen
           dhe të ruhen në më shumë se një mënyrë.
-        video: C2_binary_bracelets
+        video: C2_byrzylykë_binarë
       DigitalFootprint:
         title: Gjurmët e Tua Dixhitale
         desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online
           rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
-        video: C2_digital_footprint
+        video: C2_shënjat_dixhitale
       ComputationalThinking:
         title: Të Menduarit Kompjuterik
         desc: Studentët përdorin hapat e mendimit kompjuterik (dekompozim, lidhje
           modelesh, abstrakt, algoritëm) për të zbuluar si të luajnë një lojë që vjen
           pa udhëzime.
-        video: C3_computational_thinking
+        video: C3_Të Menduarit_Kompjuterik
       FunctionalSuncatchers:
         title: Suncatchers-at Funksionalë
         desc: Studentët krijojnë një algoritëm me variabla dhe funksione (pjesë kodi
@@ -208,7 +208,7 @@
           përdorur varg dhe rruaza.
         video: C3_functional_suncatchers
       SongwritingParameters:
-        title: Të shkruarit këngë me Parametra
+        title: kompozim
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth
           kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë
           funksionin).

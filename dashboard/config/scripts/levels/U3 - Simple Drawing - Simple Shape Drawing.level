@@ -39,7 +39,7 @@
     "instructions": "Do This",
     "show_d_pad": "false",
     "start_blocks": "fill(\"yellow\");\r\nrect(0, 0, 200, 200);\r\nellipse(300, 100, 200, 200);\r\nrect(200, 0, 200, 200);\r\nellipse(100, 100, 200, 200);\r\nrect(0, 200, 200, 200);\r\nfill(\"blue\");\r\nfill(\"red\");\r\nellipse(100, 300, 200, 200);\r\nellipse(300, 300, 200, 200);\r\nrect(200, 200, 200, 200);\r\nfill(\"green\");",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",

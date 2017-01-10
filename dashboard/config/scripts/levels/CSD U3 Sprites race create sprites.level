@@ -42,7 +42,7 @@
     "show_d_pad": "false",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Putting it All Together\r\n\r\nLet's put all of this together in a fun way. You're going to make three sprites \"race\" across the screen by combining the counter pattern, random numbers, and sprite properties.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/1ee52eac731176211c286023c87c166a-image-1466021038288.03.29 PM.png\" style=\"float:right; width:200px\">\r\n\r\nTo begin with make three different sprites and put them in a row on the left side of your screen.\r\n\r\n* **Create three sprites** and give them labels\r\n* **Add code to the \"Draw Background\" section of the draw loop that draws the background and your sprites**\r\n* Your animation should look like the example at the right.",
+    "markdown_instructions": "# Putting it All Together\r\n\r\nLet's put all of this together in a fun way. You're going to make three sprites \"race\" across the screen by combining the counter pattern, random numbers, and sprite properties.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/1ee52eac731176211c286023c87c166a-image-1466021038288.03.29 PM.png\" style=\"float:right; width:200px\">\r\n\r\nTo begin with, make three different sprites and put them in a row on the left side of your screen.\r\n\r\n* **Create three sprites** and give them labels.\r\n* **Add code to the \"Draw Background\" section of the draw loop that draws the background**.\r\n* **Add code to the \"Draw Animations\" section of the draw loop that draws your sprites**.\r\n* Your animation should look like the example at the right.",
     "start_blocks": "// Creating Sprites and Setting Starting Properties\r\n\r\nfunction draw(){\r\n  \t// Draw Background\r\n  \r\n\t// Update Properties\r\n\t \r\n\t// Draw Animations\r\n\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -67,16 +67,14 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
     "project_template_level_name": "CSD U3 Sprites Template Race",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false"
+    "all_animations_single_frame": "false",
+    "encrypted_examples": "NZVSO1rMuSB05OU+4HfKwXlyrCAPWgDFf3+vfFyYdt3AO9fGKBWhpiOCcNLO\nbChR\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

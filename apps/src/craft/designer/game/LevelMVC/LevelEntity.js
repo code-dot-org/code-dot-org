@@ -82,7 +82,9 @@ export default class LevelEntity {
                     entity = new BaseEntity(this.controller, type, identifier, x, y, facing);
 
             }
-            console.log('Create Entity type : ' + type + ' ' + x + ',' + y);
+            if (this.controller.DEBUG) {
+                console.log('Create Entity type : ' + type + ' ' + x + ',' + y);
+            }
             this.entityMap.set(identifier, entity);
         } else if (this.controller.DEBUG) {
             this.game.debug.text("Duplicate entity name : " + identifier + "\n");

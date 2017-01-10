@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "In games, spawning means adding something to the world. Place a `spawn` block under `when run` to spawn something when the game starts.",
+    "instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
@@ -42,6 +42,7 @@
     "failure_message_override": "Place `spawn sheep` under `when run`.",
     "use_player": "true",
     "use_score": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,

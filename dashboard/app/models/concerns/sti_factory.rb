@@ -9,8 +9,8 @@ module StiFactory
 
     def with_type(type)
       if self.type != type
-        self.update!(type: type)
-        self.becomes(type.constantize)
+        update!(type: type)
+        becomes(type.constantize)
       else
         self
       end
@@ -19,14 +19,14 @@ module StiFactory
 
   module ClassMethods
     def subclass_names
-      descendants.map(&:name).push(self.name)
+      descendants.map(&:name).push(name)
     end
 
     def new_with_factory(*args)
       attributes = args.first
       klass_name = identify_target_class attributes
       force_load_of_unreferenced_subclass klass_name
-      klass = self.subclass_names.include?(klass_name) ? klass_name.constantize : self
+      klass = subclass_names.include?(klass_name) ? klass_name.constantize : self
 
       instance = klass.new_without_factory(*args)
       yield instance if block_given?
@@ -36,11 +36,11 @@ module StiFactory
     private
 
     def identify_target_class(attributes)
-      return(class_name_from_column_definition || self.name) if attributes.nil?
+      return(class_name_from_column_definition || name) if attributes.nil?
 
-      class_name = attributes.delete(self.inheritance_column.to_sym)
-      class_name ||= attributes.delete(self.inheritance_column)
-      class_name || self.name
+      class_name = attributes.delete(inheritance_column.to_sym)
+      class_name ||= attributes.delete(inheritance_column)
+      class_name || name
     end
 
     def force_load_of_unreferenced_subclass(class_name)
@@ -48,7 +48,7 @@ module StiFactory
     end
 
     def class_name_from_column_definition
-      self.columns.find { |col| col.name.to_s == inheritance_column.to_s }.try(:default)
+      columns.find { |col| col.name.to_s == inheritance_column.to_s }.try(:default)
     end
   end
 end

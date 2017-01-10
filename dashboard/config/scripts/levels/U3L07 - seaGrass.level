@@ -51,7 +51,7 @@
         ],
         "matchType": "exact",
         "minTimes": 1,
-        "message": "App lab is expecting that the drawSeaGrass function will have two parameters - one for the radius of the arc and another for the number of 'waves' it will draw.  Is it possible you modified the function definition, but didn't actually call the 2-parameter version?  Check out drawAllSeaGrass to make sure that you CALL drawSeaGrass with  values for the two parameters."
+        "message": "App lab is expecting that the drawSeagrass function will have two parameters - one for the radius of the arc and another for the number of 'waves' it will draw.  Is it possible you modified the function definition, but didn't actually call the 2-parameter version?  Check out drawAllSeagrass to make sure that you CALL drawSeagrass with  values for the two parameters."
       },
       {
         "entries": [
@@ -124,10 +124,14 @@
         "message": "drawAllBubbles: App lab is expecting that you would simply 'wrap a loop around' the existing code that was inside the drawAllBubbles function - a looping of two commands: moveTo(x,y) and drawBubble(size). And that that loop would run 200 times or more.  It appears as though the sequence is slightly different or you're not running the loop 200 times."
       }
     ],
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "teacher_markdown": "Validation note -- We check to verify that the student:\r\n\r\n* made a call to a 2-param version of `drawSeagrass(radius, numWaves)`.  The order of the parameters does not matter for our check - only that a 2-param version was *called*.\r\n* That none of conditions from previous levels have been violated (number of bubbles, etc.).",
     "contained_level_names": null
   },
   "published": true,
-  "notes": "",
+  "notes": "This level should be replaced to demonstrate adding params with function param expando - which didn't exist when this level was written.",
   "level_concept_difficulty": {
   }
 }]]></config>

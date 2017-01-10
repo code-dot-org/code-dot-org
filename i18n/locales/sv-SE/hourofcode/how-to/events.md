@@ -6,53 +6,53 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Hur man organiserar en Hour of Code
 
-## 1) Prepare for your event
+## 1) Förbered ditt evenemang
 
-  * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+  * Bestäm en plats, datum och tid
+  * Skicka [ett brev](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) med inbjudan till din lokala borgmästaren, politiker, eller inflytelserika personer.
+  * Bjud in media/press. dvs. lokala nyhetstationer, tidningen, utbildnings/tech bloggare. Se vårt [presskit](%= resolve_url('/promote/press-kit') %) för hjälp.
 
-## 2) During your event
+## 2) Under ditt event
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+  * Sparka igång ditt event med en av våra [inspirerande videor](%= resolve_url('/promote/resources#videos') %).
+  * Håll en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Andra event idéer: 
+      * Bjuda in en lokal företagsledare för att diskutera hennes eller hans arbete i samband med datavetenskap
+      * Bjud in lokala politiker och ha elever som lär ut programmering till dem
+      * Har en grupp elever som visar en unplugged aktivitet
+      * Ha en grupp elever som lär rektorn eller en grupp lärare att programmera
+      * Om din skola redan lär ut datavetenskap, låt eleverna visa upp sina projekt
 
 ## 3) Dela hur det gick
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Dela bilder på evenemanget på Facebook och Twitter. 
+  * Använd hashtagen **#HourofCode**
 
-## Example Event Plan
+## Exempel på evenemang
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evenemang:** Kick-off för hela skolan och starten på Computer Science Education Week
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Datum:** 5:e december (starten för Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Tid:** Under skoldagen. Förmiddagsevenemang föredras. Cirka 1 timme.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Plats:** Skolan aulan (t.ex. teater, gym, matsalen)   
   
 
 
-## Run of Show
+## Program
 
-| Time             | Åtgärd                                                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.           |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+| Tid           | Aktivitet                                                                                                                                                             |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Sparka igång ditt event med en av våra [inspirerande videor](%= resolve_url('/promote/resources#videos') %)                                                           |
+| 10:05 - 10:15 | Rektorn håller en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %) |
+| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                                                  |
+| 10:30 - 10:40 | Studenter gör en demo för skolan. Kul twist: är att låta dem undervisa rektorn, politiker eller andra studenter.                                                      |
+| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                                                          |
+| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                                                               |
 
 <%= view :signup_button %>

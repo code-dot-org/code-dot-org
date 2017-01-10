@@ -46,4 +46,8 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 选择一个编程一小时活动并且[回顾本操作指南](%= resolve_url('/how-to') %).
 
+## 编程一小时以后
+
+想要参与比一小时更多的活动？ 看看[我们的完整课程和教师资源](%= resolve_url('https://code.org/teach')%)。这其中有各种面向小学，中学和高中教师的专业学习机会。
+
 <%= view 'popup_window.js' %>

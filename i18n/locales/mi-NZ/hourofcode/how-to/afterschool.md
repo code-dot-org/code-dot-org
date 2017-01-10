@@ -6,21 +6,23 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to teach one Hour of Code in after-school
+# Te whakaako i tētahi Hour of Code mō muri i te kura
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) Mātakinā tēnei ataata aratohu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) Kōwhiria tētahi whakaakoranga:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
-**All Hour of Code tutorials:**
+**I ngā whakaakoranga Hour of Code katoa:**
 
   * Require minimal prep-time for organizers
-  * Are self-guided - allowing kids to work at their own pace and skill-level
+  * Mā te tangata anō ia e ārahi - nā reira, e wātea ana ngā tamariki ki te mahi e ai ki ō rātou pūkenga, i te wā hoki e pai ana mō rātou
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 3) Promote your Hour of Code
+**Me whai mahere ako mō tāu Hour of Code muri i te kura?**Takitakina tēnei[tauiraira](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## 3) Whakatairangatia tō Hour of Code
 
 Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
 
@@ -62,7 +64,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +74,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **What to do if someone finishes early?**
 
-  * Encourage participants to try another Hour of Code activity at [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Or, ask those who finish early to help others who are having trouble.
 
 [col-33]
@@ -116,7 +118,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Other Hour of Code resources for educators:
 
-  * Use this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) to organize your Hour of Code.
   * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.

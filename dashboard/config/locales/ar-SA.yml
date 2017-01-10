@@ -92,6 +92,20 @@
     overview: قم بالتسجيل للحصول على حساب لتتبع التقدم المحرز الخاص بك أو إدارة الفصول
       الدراسية الخاصة بك. <a href="/"> يمكنك استعراض مختلف مراحل والالغاز</a> دون
       حساب، ولكنك ستحتاج للتسجيل لحفظ التقدم والمشاريع الخاصة بك.
+    hoc_already_signed_up_heading: "أبدأ بدون تسجيل الدخول"
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "راجع دليل المعلم"
     title: "الاشتراك في Code.org"
     school_name: "اسم المدرسة (اختياري)"
@@ -288,8 +302,8 @@
       already_registered: "هل قمت بالتسجيل من قبل؟"
       pair_programming: "البرمجة الزوجية"
       team: "فريق"
-      driver: Driver
-      navigator: Navigator
+      driver: "سائق"
+      navigator: "مستكشف"
     popup:
       progress_for_user: "تقدم %{name}"
       progress: "إنجازاتك"
@@ -325,8 +339,8 @@
       submitted_on: "تم تقديمه في:"
       unsubmit: "عدم تقديم"
       worked_with: "عملت مع"
-      update_lock_settings: Update lock settings here.
-      clear_response: Clear response
+      update_lock_settings: "حدث قفل الاعدادات هنا."
+      clear_response: "أستجابة واضحة"
   user:
     email_confirm_needed: "لم يتم تأكيد عنوان البريد الإلكتروني:"
     email_confirm_needed_required: "لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:"
@@ -339,6 +353,7 @@
     delete_text_teacher_note: "يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف
       حسابات طلابك."
     delete_confirm: "هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟"
+    deleted_user: deleted user
   user_level:
     completed: "أكمل"
     tried: "حاول"
@@ -409,13 +424,15 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "اعرف المزيد"
     announcement_try_now_button: "جرب الآن"
-    announcement_host_an_hour_button: Host an Hour
+    announcement_host_an_hour_button: "أستضافة لساعة"
+    announcement_watch_video_button: "مشاهدة الفديو"
     announcement_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة
       الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك.
       هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
       الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم
       الكمبيوتر."
     announcement_petition_button: "أضف أسمك"
+    announcement_go_beyond_button: Go beyond
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -423,6 +440,22 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال
       كود قسم مختلف."
@@ -433,7 +466,7 @@
       أدخل كود قسم مختلف."
     students_not_yours: "لا يمكنك نقل طلاب من قسم لا يتنمي إليك."
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
+    student_ids_not_entered: "الرجاء تقديم معرفات_الطالب."
     student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في
       الوقت الحالي."
@@ -585,6 +618,9 @@
     minecraft:
       title: Minecraft
       body: "استكشف عالم Minecraft عن طريق الكود."
+    minecraft2016:
+      title: Minecraft
+      body: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت."
     unplugged:
       title: "درس غير موصول"
       audience: "العمر 4+"
@@ -716,7 +752,6 @@
       و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
     accept: "اوافق"
     print: "طباعة"
-    later: "لاحقا"
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
@@ -728,10 +763,10 @@
       science'
     message: Please tell us your race (check all that apply)
     races:
-    - white: White
-    - black: Black or African American
+    - white: "أبيض"
+    - black: "أسود أو أمريكي من أصل أفريقي"
     - hispanic: Hispanic or Latino
-    - asian: Asian
+    - asian: "آسيوي"
     - hawaiian: Native Hawaiian or other Pacific Islander
     - american_indian: American Indian/Alaska Native
     - other: "أخرى"
@@ -770,7 +805,7 @@
       ويب."
     share_u13_warning: "اسأل المعلم الخاص بك قبل مشاركة. فقط تستطيع المشاركة مع الآخرين
       في المدرسة الخاصة بك."
-    embed: Embed
+    embed: "تضمين"
     advanced_share: "إظهار الخيارات المتقدمة"
     close: "إغلاق"
     more: "المزيد"
@@ -826,15 +861,14 @@
   peer_review:
     accepted:
       name: "مقبول"
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      description: "<strong>نعم</strong>، هذا الإرسال <strong>يلبي</strong> المتطلبات"
     rejected:
       name: "مرفوض"
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: "تم تصعيدها"
+      description: "أود أن يقوم مدرب بمراجعة هذا الإرسال"
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
@@ -891,8 +925,48 @@
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: "حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)"
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: "تحميل الإنجليزية:"
-    download_in_spanish: "تحميل بالإسبانية:"
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: "نظام تشغيل ماك"
   plc:

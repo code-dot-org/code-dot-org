@@ -4,6 +4,7 @@ import CallbackCommand from "../CommandQueue/CallbackCommand.js";
 export default class Player extends BaseEntity {
   constructor(controller, type, x, y, name, isOnBlock, facing) {
     super(controller, type, 'Player', x, y, facing);
+    this.offset = [-18, -32];
     this.name = name;
     this.isOnBlock = isOnBlock;
     this.inventory = {};
@@ -134,6 +135,7 @@ export default class Player extends BaseEntity {
       callbackCommand.succeeded();
       // report failure since player died
     } else {
+      this.sprite.animations.stop(null, true);
       this.controller.levelView.playFailureAnimation(this.position, this.facing, this.isOnBlock, () => {
         callbackCommand.failed();
         this.controller.handleEndState(false);

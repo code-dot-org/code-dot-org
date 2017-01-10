@@ -15,6 +15,10 @@ $main-blockspace-background: rgb(161, 161, 161);// #8B8B8B;
 $callout-fallback-border-color: $very-dark-gray;
 
 $original-background-color: #F2F2F2;
+$code-block-background-yellow: #d78c01;
+$code-block-outline-yellow: #ffb72f;
+$workspace-corner-rounding: 6px;
+$text-shadow-gray: #5a5a5a;
 
 @mixin mc-text-shadow {
   text-shadow: 2px 2px #565656 !important;
@@ -58,6 +62,10 @@ $original-background-color: #F2F2F2;
   image-rendering:crisp-edges;               /* CSS4 Proposed  */
   image-rendering:pixelated;                 /* CSS4 Proposed  */
   -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
+}
+
+.pixelated {
+  @include pixelated();
 }
 
 @mixin mc-x-close-button() {
@@ -131,9 +139,9 @@ $original-background-color: #F2F2F2;
   -ms-touch-action: none;
 }
 
-@mixin arrow-icon($direction) {
+@mixin arrow-icon($assetUrl) {
   @include no-interact();
-  background: url("#{$root}Sliced_Parts/MC_#{$direction}_Arrow_Icon.png") no-repeat !important;
+  background: url($assetUrl) no-repeat !important;
   background-position: center !important;
   // TODO: for offset on click, background-position: calc(50% - 50px) 50%;
   width: 40px !important;
@@ -143,21 +151,33 @@ $original-background-color: #F2F2F2;
 }
 
 .left-btn {
-  @include arrow-icon("Run");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   @include flip-horizontal(1);
   background-size: 16px 32px !important;
 }
 .right-btn {
-  @include arrow-icon("Run");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png");
   background-size: 16px 32px !important;
 }
 .down-btn {
-  @include arrow-icon("Down");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Down_Arrow_Icon.png");
   background-size: 28px 20px !important;
 }
 .up-btn {
-  @include arrow-icon("Up");
+  @include arrow-icon("#{$root}Sliced_Parts/MC_Up_Arrow_Icon.png");
   background-size: 28px 20px !important;
+}
+.scroll-up-btn {
+  @include arrow-icon("#{$root}CDO_MC_ScrollUp.png");
+  background-size: 21px 15px !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.scroll-down-btn {
+  @include arrow-icon("#{$root}CDO_MC_ScrollDown.png");
+  background-size: 21px 15px !important;
+  width: 30px !important;
+  height: 30px !important;
 }
 
 body {
@@ -180,6 +200,9 @@ body {
 
 .blocklySvg {
   background-color: $main-blockspace-background;
+  .csf-top-instructions & {
+    background-color: $very-dark-gray;
+  }
 }
 
 .blocklyFlyoutBackground {
@@ -280,14 +303,6 @@ body {
   width: 434px;
   height: 477px;
   background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_Logo.png");
-  background-size: 100%;
-}
-
-.minecraft-scoring #minecraft-frame {
-  //@include pixelated();
-  width: 434px;
-  height: 477px;
-  background-image: url("#{$root}Sliced_Parts/Frame_Large_Plus_LogoNew.png") !important;
   background-size: 100%;
 }
 
@@ -683,7 +698,7 @@ $height-to-width: 434 / 477;
   & > div {
     font-size: 24px;
     color: white !important;
-    text-shadow: 2px 2px #5A5A5A !important;
+    text-shadow: 2px 2px $text-shadow-gray !important;
   }
   border-style: solid !important;
   border-width: 3px 3px 5px 5px !important;
@@ -753,7 +768,36 @@ $height-to-width: 434 / 477;
       height: 34px;
       margin: 16px -3px -18px 23px;
       padding-right: 13px;
-      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon.png") no-repeat 0 0;
+      background: url("#{$root}Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png") no-repeat 0 0;
+      @include pixelated();
+    }
+
+  }
+
+  &#toggleButton {
+    min-width: 110px;
+
+    padding-top: 6px;
+    padding-bottom: 4px;
+
+    & > div {
+      margin-top: 4px;
+      margin-left: 2px;
+      margin-right: 18px;
+    }
+
+    .toggle26 {
+      &.more-btn {
+        background: url("#{$root}CDO_MC_More.png") no-repeat;
+      }
+      &.less-btn {
+        background: url("#{$root}CDO_MC_Less.png") no-repeat;
+      }
+      background-position: center !important;
+      background-size: 18px 20px !important;
+      width: 18px;
+      height: 25px;
+      margin-right: 5px;
       @include pixelated();
     }
 
@@ -762,10 +806,20 @@ $height-to-width: 434 / 477;
   &#resetButton {
     min-width: 139px;
 
+    &.hideText {
+      min-width: 0;
+      width: 62px;
+      height: 62px;
+      img {
+        margin-left: 0;
+        margin-top: -5px;
+      }
+    }
+
     & > div {
       font-size: 24px;
       color: white !important;
-      text-shadow: 2px 2px #5A5A5A !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
       margin-left: 8px;
       padding-right: 0;
       margin-right: 2px;
@@ -1045,5 +1099,67 @@ $height-to-width: 434 / 477;
 .csf-top-instructions, .instructions-markdown {
   p {
     color: $white;
+  }
+}
+
+@mixin scoreboard-background {
+  $fallback-gray: #6a6a6a;
+
+  background: $fallback-gray;
+  border-style: solid !important;
+  border-width: 1px 7px 7px 7px !important;
+  -moz-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -webkit-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  -o-border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 stretch !important;
+  border-image: url("#{$root}Events/MC_HoC_Score_9Slice.png") 7 fill stretch !important;
+  @include pixelated();
+}
+
+.minecraft-events {
+  code {
+    background-color: $code-block-background-yellow;
+    border: 1px solid $code-block-outline-yellow;
+    color: $white;
+  }
+
+  #toolbox-header {
+    border-right: none !important;
+  }
+
+  #codeWorkspace {
+    border: none !important;
+  }
+
+  #headers {
+    border-radius: $workspace-corner-rounding $workspace-corner-rounding 0 0;
+  }
+
+  #codeWorkspace > svg.blocklySvg {
+    border-radius: 0 0 $workspace-corner-rounding $workspace-corner-rounding;
+  }
+
+  .small-footer-base {
+    border-radius: 0 $workspace-corner-rounding 0 0;
+  }
+
+  #score-container {
+    float: left;
+    position: relative;
+    left: 50%;
+
+    height: 0;
+    margin-bottom: -100%;
+
+    #score-inner {
+      @include scoreboard-background();
+      top: -411px;
+      height: 17px;
+      float: left;
+      position: relative;
+      left: -50%;
+      font-size: 15px;
+      color: $white !important;
+      text-shadow: 2px 2px $text-shadow-gray !important;
+    }
   }
 }

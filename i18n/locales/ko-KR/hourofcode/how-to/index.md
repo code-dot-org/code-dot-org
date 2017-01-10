@@ -8,24 +8,24 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 # 1시간짜리 Hour of Code 교육 방법
 
-Join the movement and introduce a group of students to their first hour of computer science with these steps:
+이 운동에 참여 하시고, 학생 그룹의 첫번째 컴퓨터 과학 시간에 이 절차대로 소개해보세요.
 
 ## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) 튜토리얼을 선택하세요:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](%= resolve_url("https://code.org/learn") %)**
+**[학생 주도의 Hour of Code 튜토리얼들:](%= resolve_url('/learn') %)**
 
   * 선생님들이 수업을 준비하는데 필요한 시간이 매우 적습니다.
   * 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-**[Teacher-guided Hour of Code tutorials:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[선생님 주도의 Hour of Code 튜토리얼들:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * 일부 전문 교사들을 위해 필요한 수업 계획입니다.
   * 학년별로 *그리고* 주제별(수학, 국어, 등) 로 분류되어있습니다.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) 당신의 Hour of Code를 알려주세요.
 
@@ -46,7 +46,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 5) 격려해줄 수 있는 발표자나 비디오로 Hour of Code를 마무리하세요
 
-**Invite a [local volunteer](https://code.org/volunteer/local) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code. [Use this map](https://code.org/volunteer/local) to find local volunteers who can visit your classroom or join a video chat with your students.
+**[지역 자원봉사자들](https://code.org/volunteer/local)을 초대해서 학생들에게 컴퓨터과학의 폭넓은 가능성에 대해 이야기하면서 꿈과 희망을 심어줄 수 있도록 해주세요.** 전세계 수 천명의 자원봉사자들이 여러분의 Hour of Code 행사를 도와줄 것입니다. [이 지도를 사용해서](https://code.org/volunteer/local) 여러분의 수업에 함께 참여하거나 학생들과 온라인 비디오채팅을 할 수 있는 지역 자원봉사자들을 찾아보세요.
 
 [![](/images/fit-300/volunteer-map.png)](%= resolve_url('https://code.org/volunteer/local') %)
 
@@ -55,23 +55,23 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
   * 빌 게이츠(Bill Gates), 마크 주커버그(Mark Zuckerberg)와 NBA 농구 스타인 크리스 보쉬(Chris Bosh)의 원래 Code.org 소개 동영상이 있습니다.([ 1분 ](https://www.youtube.com/watch?v=qYZF6oIZtfc), [ 5분 ](https://www.youtube.com/watch?v=nKIu9yen5nc), [ 9분 ](https://www.youtube.com/watch?v=dU1xS07N-FA) 버전들이 있습니다.)
   * [2013 Hour of Code 동영상](https://www.youtube.com/watch?v=FC5FbmsH4fw) 또는 <% if @country == 'uk' %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [2015 Hour of Code 동영상](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * 더 많은 영감을 주는 동영상들은 [여기에서](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) 찾아보세요..
+  * 영감을 주는 더 많은 [자료](%= resolve_url('https://code.org/inspire') %)와 [비디오](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)를 찾아보세요.
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**여러분과 여러분의 학생들이 컴퓨터과학에 완전한 초보라도 괜찮습니다. 여기에는 여러분을 Hour of Code 활동으로 안내하기 위한 몇가지 아이디어가 있습니다.**
 
   * 남학생, 여학생들 모두 관심을 가질만한 예를 가지고 기술이 우리의 삶에 영향을 미치는 방식에 대해 설명하세요. (생명을 살리고, 사람들을 돕고, 사람들을 연결하는 등등에 관해 이야기하세요)
   * 수업에서, 일상생활 속에서 코드를 사용하는 것들을 나열하세요.
   * 여학생들이 컴퓨터과학에 흥미를 갖도록 하기 위한 팁이 [여기](%= resolve_url('https://code.org/girls') %) 있습니다..
 
-**Need more guidance?** Download this [template lesson plan](/files/EducatorHourofCodeLessonPlanOutline.docx).
+**더 많은 안내가 필요한가요?** [수업 계획 양식](/files/EducatorHourofCodeLessonPlanOutline.docx)을 다운로드하세요..
 
 **좀 더 많은 지도 아이디어를 원하시나요?** 경험자 선생님들의 [최고의 좋은 활동사례 예시들을](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 살펴보세요.
 
 ## 6) 코딩하기
 
-**Direct students to the activity**
+**학생들에게 활동을 안내하세요.**
 
-  * 튜토리얼 링크를 게시판에 적어주세요. [여러분이 선택한 튜토리얼에 대한 정보](%= resolve_url('https://code.org/learn') %) 목록 중에서 링크를 찾을 수 있습니다.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -79,17 +79,17 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 [/col-33]
 
-**When your students come across difficulties it's okay to respond:**
+**여러분의 학생들이 어려운 상황을 만났을 때 이렇게 응답해 주면 좋습니다:**
 
   * "나도 잘 모른단다. 우리 함께 생각해 보자."
   * "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
   * "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
 
-**[Check out these teaching tips](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
+**[가르치는 팁들을 확인하세요](http://www.code.org/files/CSTT_IntroducingCS.PDF)**
 
-**What to do if a student finishes early?**
+**누군가 일찍 완료 했을 때는 어떻게 할까요?**
 
-  * 학생들은 모든 튜토리얼을 둘러볼 수 있고, 그 튜토리얼들에서 다른 Hour of Code 활동을 해 볼 수 있습니다. [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * 또는, 일찍 완료한 학생들에게 어려워서 잘 해결하지 못하고 있는 다른 학생들을 도와달라고 이야기 해보세요.
 
 [col-33]

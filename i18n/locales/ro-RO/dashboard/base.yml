@@ -82,6 +82,9 @@ ro:
     student_count: '%{count} studenţi s-au înregistrat deja.'
     teacher_count: '%{count} profesori s-au înregistrat deja.'
     overview: 'Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.'
+    hoc_already_signed_up_heading: 'Începe fără logare'
+    hoc_already_signed_up_content: 'Esti logat pentru a preda o Oră de Programare! Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa la acest eveniment. Pentru a incepe, <a href="https://code.org/learn">alegeți un tutorial</a>pentru clasa ta si dați-le și lor link-ul.<br/><br/>Dacă v-a plăcut Hour of Code și vreți să mergeți mai departe, puteți alege o parolă pentru a crea un cont Code Studio și pentru a vă înrola elevii pentru studiu folosind <a href="https://code.org/educate">cursuri mai lungi</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Consultă ghidul educatorului'
     title: "Înregistrați-vă pentru Code.org"
     school_name: 'Numele şcolii (opţional)'
@@ -288,7 +291,7 @@ ro:
       unsubmit: 'Retrage'
       worked_with: 'A lucrat cu'
       update_lock_settings: 'Actualizează setările de blocare aici.'
-      clear_response: 'Clear response'
+      clear_response: 'Răspuns clar'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -300,6 +303,7 @@ ro:
     delete_text: "Apasă butonul de mai jos pentru a-ți șterge contul."
     delete_text_teacher_note: 'Atenție: ștergerea contului tău nu implică ștergerea conturilor elevilor tăi.'
     delete_confirm: 'Ești sigur ca vrei să-ți ștergi contul?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Finalizat'
     tried: 'Încercat'
@@ -351,11 +355,16 @@ ro:
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Află mai mult"
     announcement_try_now_button: "Încearcă acum"
-    announcement_host_an_hour_button: "Host an Hour"
+    announcement_host_an_hour_button: "Organizeaza o ora"
+    announcement_watch_video_button: "Urmăriţi videoclipul"
     announcement_petition: "Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În această săptămână, liderii de educaţie, 28 guvernatori şi Directorii celor mai mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul SUA pentru a finanta calculatorul de stiinta si educaţie k-12."
     announcement_petition_button: "Adaugă-ți numele"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Fii la curent cu noutățile si actualizarile de pe blogul cadrelor noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea anunturile vechi.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_launch: "Mii de cadre didactice în peste 180 de ţări vor începe predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11 decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare."
+    announcement_mc_launch: "Unul din tutorialele noastre cele mai populare acum are o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu clasa ta la Hour of Code."
+    announcement_how_code_studio: "Nu aveţi nevoie de nici o experienţă pentru a începe predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie, programe de învățare profesionale de înaltă calitate şi tone de instrumente excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_not_entered: "Vă rugăm să furnizaţi current_section_code."
@@ -484,6 +493,9 @@ ro:
     minecraft:
       title: "Minecraft"
       body: "Exploreaza o lume Minecraft prin cod."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
     unplugged:
       title: "Lecţii offline"
       audience: "Vârsta +4 ani"
@@ -585,29 +597,28 @@ ro:
     accept_label: 'Sunt de acord sa actualizez <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>'
     accept: "Accept"
     print: "Tipărire"
-    later: "Mai tarziu"
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'
     review_terms: "Revedeţi termenii actualizati"
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer science'
-    message: "Please tell us your race (check all that apply)"
+    title: 'Optional: Ajuta-ne sa urmarim progresul fata de imbunatatirea nivelului diversitatii in domeniu.'
+    message: "Va rog sa ne spuneti rasa dvs"
     races:
       - 
-        white: White
+        white: Alb
       - 
-        black: Black or African American
+        black: Negru sau afro-americani
       - 
-        hispanic: Hispanic or Latino
+        hispanic: Hispanic sau Latino
       - 
-        asian: Asian
+        asian: Asiatic
       - 
-        hawaiian: Native Hawaiian or other Pacific Islander
+        hawaiian: Nativ hawaian sau din zona Pacificului
       - 
-        american_indian: American Indian/Alaska Native
+        american_indian: American Indian/Nativ Alaska
       - 
         other: Alte
       - 
-        opt_out: Prefer not to say
+        opt_out: Prefer să nu răspund
     submit: "Trimite"
     decline: "Închide"
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a> fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'
@@ -734,8 +745,48 @@ ro:
     starwars_blocks_name: 'Star Wars: Programarea unei galaxii cu blocuri de cod'
     starwars_javascript_name: 'Star Wars: Programarea unei galaxii - JavaScript'
     download_message: 'Download %{app_name} pentru utilizare offline (136MB)'
-    download_in_english: 'Descărcaţi în limba engleză:'
-    download_in_spanish: 'Descărcaţi în limba spaniolă:'
+    download_in_Albanian: 'Descărcaţi în albaneză:'
+    download_in_Arabic: 'Descărcaţi în arabă:'
+    download_in_Azerbaijani: 'Descărcaţi în azeră:'
+    download_in_Basque: 'Descărcaţi în bască:'
+    download_in_Bosnian: 'Descărcaţi în bosniacă:'
+    download_in_Bulgarian: 'Descărcați în bulgară:'
+    download_in_Catalan: 'Descărcaţi în catalană:'
+    download_in_Chinese-Taiwan: 'Descărcaţi în chineză-taiwaneză:'
+    download_in_Chinese: 'Descărcaţi în chineză:'
+    download_in_Croatian: 'Descărcaţi în croată:'
+    download_in_Czech: 'Descărcaţi în cehă:'
+    download_in_Danish: 'Descărcaţi în daneză:'
+    download_in_Dutch: 'Descărcaţi în olandeză:'
+    download_in_English: 'Descărcaţi în engleză:'
+    download_in_Finnish: 'Descărcaţi în finlandeză:'
+    download_in_French: 'Descărcaţi în franceză:'
+    download_in_German: 'Descărcaţi în germană:'
+    download_in_Greek: 'Descărcaţi în greacă:'
+    download_in_Hebrew: 'Descărcaţi în ebraică:'
+    download_in_Hungarian: 'Descărcaţi în limba maghiară:'
+    download_in_Icelandic: 'Descărcaţi în islandeză:'
+    download_in_Indonesian: 'Descărcaţi în indoneziană:'
+    download_in_Irish: 'Descărcaţi în irlandeză:'
+    download_in_Italian: 'Descărcaţi în italiană:'
+    download_in_Japanese: 'Descărcaţi în japoneză:'
+    download_in_Korean: 'Descărcaţi în coreeană:'
+    download_in_Latvian: 'Descărcaţi în letonă:'
+    download_in_Lithuanian: 'Descărcaţi în lituaniană:'
+    download_in_Norwegian: 'Descărcaţi în norvegiană:'
+    download_in_Norwegian-Nynorsk: 'Descărcaţi în poloneză-norvegiană (Nynorsk):'
+    download_in_Polish: 'Descărcaţi în poloneză:'
+    download_in_Portuguese-Brazil: 'Descărcaţi în portugheză-braziliană:'
+    download_in_Portuguese: 'Descărcaţi în portugheză:'
+    download_in_Romanian: 'Descărcați în română:'
+    download_in_Russian: 'Descărcaţi în rusă:'
+    download_in_Serbian: 'Descărcaţi în sârbă:'
+    download_in_Slovenian: 'Descărcaţi în slovenă:'
+    download_in_Spanish: 'Descărcaţi în spaniolă:'
+    download_in_Swedish: 'Descărcaţi în suedeză:'
+    download_in_Turkish: 'Descărcaţi în turcă:'
+    download_in_Ukrainian: 'Descărcaţi în ucraineană:'
+    download_in_Vietnamese: 'Descărcaţi în vietnameză:'
     windows: 'Windows'
     mac: 'Mac OS X'
   plc:

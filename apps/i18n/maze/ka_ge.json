@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "გილოცავთ! თქვენ შეაგროვეთ ყველა {count} ელემენტი!",
   "collectorCollectedNothing": "გააგრძელეთ კოდის წერა! რაც შეიძლება მეტი ელემენტი უნდა შეაგროვოთ.",
   "collectorCollectedSome": "ყოჩაღ! თქვენ შეაგროვეთ {count} ელემენტები!",
+  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "ამ ადგილას არ არის შესაგროვებლად საკმარისი ელემენტი.",
   "collectorTooManyBlocks": "თქვენ მხოლოდ {blockLimit} ბლოკების გამოყენება შეგიძლიათ. შეხედეთ თქვენს კოდს და კიდევ სცადეთ!",
   "continue": "გაგრძელება",
@@ -111,6 +112,5 @@
   "word": "იპოვეთ სიტყვა",
   "wrongCropError": "არ შემიძლია აქედან სიმინდის მოსავლის აღება.",
   "yes": "დიახ",
-  "youSpelled": "თქვენ შეიყვანეთ",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "თქვენ შეიყვანეთ"
 }

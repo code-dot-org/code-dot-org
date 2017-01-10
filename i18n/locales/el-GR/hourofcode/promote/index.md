@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## Ζητήστε από όλο το σχολείο να προσφέρει μία Ώρα του Κώδικα
 
-[Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) στον Διευθυντή και προκαλέστε κάθε τάξη να εγγραφεί. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Στείλετε αυτό το μήνυμα](%= resolve_url('/promote/resources#sample-emails') %) στον Διευθυντή και προκαλέστε κάθε τάξη να εγγραφεί.
 
 ## Ζήτησε από τον εργοδότη σου να συμμετάσχει
 

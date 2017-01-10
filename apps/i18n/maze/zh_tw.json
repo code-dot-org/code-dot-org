@@ -9,6 +9,7 @@
   "collectorCollectedEverything": "祝賀你 ！你已收集所有的 {count} 物件 ！",
   "collectorCollectedNothing": "繼續編寫 ！你需要收集盡可能多的物件。",
   "collectorCollectedSome": "做得好! 你已收集到{count} 物件!",
+  "collectorCollectedNotEnough": "請繼續編碼 ！您需要至少收集 {goal, plural, one {1 item} other {# items}}。",
   "collectorCollectedTooMany": "那空間不夠項目讓我來收集",
   "collectorTooManyBlocks": "你可以使用 {blockLimit} 塊。看看你的代碼，然後重試 ！",
   "continue": "繼續",
@@ -35,7 +36,7 @@
   "flowerEmptyError": "你所在的花朵已經沒有花蜜了",
   "get": "取值",
   "has": "有",
-  "haslettuce": "there is lettuce",
+  "haslettuce": "這是萵苣",
   "hascorn": "那兒有玉米",
   "haspumpkin": "那兒有許多南瓜",
   "heightParameter": "高度",
@@ -54,8 +55,8 @@
   "ifelseTooltip": "如果在指定的方向有路的話，就執行第一個程式積木的動作，否則就執行第二個程式積木的動作。",
   "insufficientHoney": "你所使用的積木都正確，但是你需要收集正確數量的蜂蜜。",
   "insufficientNectar": "你所使用的積木都正確，但是你需要收集正確數量的花蜜。",
-  "lettuce": "lettuce",
-  "lettuceTooltip": "Harvest some lettuce",
+  "lettuce": "萵苣",
+  "lettuceTooltip": "收穫一些萵苣",
   "make": "製作",
   "moveBackward": "向後移動",
   "moveEastTooltip": "將我向東邊移動一步。",
@@ -111,6 +112,5 @@
   "word": "尋找那個字詞",
   "wrongCropError": "我不能從這兒收穫那個農作物",
   "yes": "是",
-  "youSpelled": "你併寫的",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}."
+  "youSpelled": "你併寫的"
 }

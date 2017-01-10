@@ -291,28 +291,49 @@
           қадағалаңыз!"
         maze_3_4: "Оһ! Маған жарылғыш заттарды айналып өтіп, торапайға жетудің бағдарламасын
           жазыңыз."
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Блокке "солға бұру бағдары" блогін және "Жіберуді" тіркеңіз.
+          Нысанға жету үшін, қолыңызды сол жақ бағдарды пайдаланып қозғалтыңыз.
+        bounce_2_basketball: Блокке "оңға бұру бағдары" және "солға бұру бағдары"
+          блоктарын тіркеңіз. Нысанға жету үшін, қолыңызды екі бағдарды пайдаланып
+          қозғалтыңыз.
+        bounce_5_basketball: Біз допты қол жаққа қарай жіберейін деп жатырмыз. Жалауға
+          жетуі үшін блокке "доп колыңызды тигенде" блогін тіркеңіз.
+        bounce_6_basketball: Енді жалау жоғарыда. Бұл басқатырғышты шешу үшін блокке
+          екі бірдей "доп тигенде" блогін тіркеңіз.
+        bounce_7_basketball: Әрбір блокті "қашан" блоктарына тіркеңіз. Допты жалауға
+          тимегенше кері қайтарыңыз.
+        bounce_10_basketball: Ендігі кезек жоғарғы жақты орнату. "Доп нысанаға тигенде"
+          және "доп қолыңызды тимегенде" блоктарына "ұпай саны" және "қарсыластың
+          ұпай саны" блоктарын тіркеңіз. Қарсыласыңыз екі есе ұпай жинағанда сізде
+          қанша ұпай болатынын көріңіз.
+        bounce_11_basketball: Енді "жіберу кезінде" блогына блоктарды тіркей аласыз.
+          "Жаңа шарды жіберу" блогін бірнеше жерде пайдалана аласыз. Сонымен қатар,
+          оқиғаны немесе қолыңыздың жылдамдығын және шарды өзгертіп көріңіз. Қарсыласыңыз
+          екі есе ұпай жинағанда сізде қанша ұпай болатынын көріңіз!
+        bounce_12_basketball: "Баскетбол ойынын жасаңыз. Сіз барлық ережелерді өзгерте
+          аласыз. Аяқтаған соң, достарыңыздың өз телефондарында ойнап көрулері үшін
+          Аяқтау батырмасына шертіңіз."
+        bounce_1_sports: Жалауды алыңыз. Ойыншыны жалауға қозғалту үшін блокке "солға
+          бұру бағдары" блогін және "Жіберуді" тіркеңіз.
+        bounce_2_sports: Енді бізде екі жалау бар. Ойыншыны екі бағытта қозғалту үшін
+          блокке "оңға бұру бағдары" және "солға бұру бағдары" блоктарын тіркеңіз.
+        bounce_5_sports: Хоккей шайбасы ойыншыға қарай төмен ұшады! Жалауды тиісу
+          үшін блокті "доп ойыншыны  тигенде" блогін тіркеңіз.
+        bounce_6_sports: Енді жалау жоғарыда. Бұл басқатырғышты шешу үшін блокке екі
+          бірдей "доп тигенде" блогін тіркеңіз.
+        bounce_7_sports: Әрбір блокті "қашан" блоктарына тіркеңіз. Допты жалауға тимегенше
+          кері қайтарыңыз.
+        bounce_10_sports: Ендігі кезек жоғарғы жақты орнату. "Доп нысанаға тигенде"
+          және "доп қолыңызды тимегенде" блоктарына "ұпай саны" және "қарсыластың
+          ұпай саны" блоктарын тіркеңіз. Қарсыласыңыз екі есе ұпай жинағанда сізде
+          қанша ұпай болатынын көріңіз!
+        bounce_11_sports: Енді "жіберу кезінде" блогына блоктарды тіркей аласыз. "Жаңа
+          шарды жіберу" блогін бірнеше жерде пайдалана аласыз. Сонымен қатар, оқиғаны
+          немесе қолыңыздың жылдамдығын және шарды өзгертіп көріңіз. Қарсыласыңыз
+          екі есе ұпай жинағанда сізде қанша ұпай болатынын көріңіз!
+        bounce_12_sports: "Өз ойыныңды жаса. Барлық вережелерді өзгерте аласын, спорттарды
+          араластыра аласын, шығармашылығың ассын!. Аяқтаған соң, достарыңның өз телефондарында
+          ойнап көрулері үшін Аяқтау батырмасына бас."
         bounce_1: Блокке "солға бұру бағдары" блогін және "Жіберуді" тіркеңіз. Нысанға
           жету үшін, ескекті сол жақ бағдарды пайдаланып қозғалтыңыз.
         bounce_2: Блокке "оңға бұру бағдары" және "солға бұру бағдары" блоктарын тіркеңіз.
@@ -701,6 +722,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -769,6 +793,11 @@
         iceage_intro: "Мұз дәуірі Кодтау Сағаты - Кіріспе"
         iceage_events: "Мұз дәуірі Кодтау Сағаты - Іс-шаралар"
         iceage_repeat: "Мұз дәуірі Кодтау Сағаты - Қайталау блоктары"
+        mc_2016_intro: Minecraft Кодтау Сағаты - Кіріспе
+        mc_2016_loops: Minecraft Кодтау Сағаты - Циклдер
+        mc_2016_events: Minecraft Кодтау Сағаты - Іс-шаралар
+        mc_2016_spawn: Minecraft Кодтау Сағаты - Уылдырық
+        mc_2016_congrats: Minecraft Кодтау Сағаты - Құттықтау
     callout:
       text:
         drag_blocks: '"Жылжыту" блогын алып оны төмендегі басқа блокке тіркеңіз'

@@ -301,28 +301,52 @@
         maze_3_3: Kaip man pasiekti kiaulę? Saugokis, kad nepaliesčiau TNT dėžės!
         maze_3_4: Oi! Parašyk programą, kuri mane privers apibėgti aplinkui TNT dėžę
           ir pasiekti kiaulę.
-        bounce_1_basketball: Attach a block to the "when left arrow" block and press
-          "Run". Move the hand using the left arrow to reach the finish target.
-        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
-          arrow" blocks. Move the hand to reach both finish targets.
-        bounce_5_basketball: We're going to send a ball flying down towards the hand.
-          Attach a block to the "when ball hits hand" block to ensure the ball reaches
-          the flag.
-        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
-          to both of the "when ball hits" blocks to solve this puzzle.
-        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
-          ball until it hits the flag.
-        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
-          and "score opponent point" blocks to the "when ball in goal" and "when ball
-          misses hand" blocks to make a game. See how many points you can score before
-          your opponent scores twice.
-        bounce_11_basketball: You can now attach blocks to the "when run" block. You
-          have to attach the new "throw new ball" block in more than one place. Also,
-          try changing the scene or the speed of the hand and the ball and see how
-          many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_1_basketball: Prijunk blokelį prie „kai paspausta rodyklė kairėn“ ir
+          paleisk programą. Kad pasiektum tikslą, judink ranką spausdamas rodyklę.
+        bounce_2_basketball: Prijunk po tinkantį blokelį prie „kai... rodyklė dešinėn“
+          ir „kai... rodyklė kairėn“. Judink ranką, kad pasiektum abu taikinius.
+        bounce_5_basketball: Paleistas kamuolys skries link rankos. Pridėk reikiamą
+          komandą prie bloko „kai kamuolys pataiko į ranką“, kad pasiektume savo tikslą
+          - paliesti vėliavą.
+        bounce_6_basketball: Dabar vėliava atsirado viršuje. Tau reikia prijungti
+          blokelius prie abiejų „kai kamuolys..“ blokų (įvykių), kad įveiktum šią
+          užduotį.
+        bounce_7_basketball: Prikabink blokelius prie kiekvieno „kai“ blokelio (įvykio).
+          Atmušinėk kamuolį, kol jis pasieks vėliavą.
+        bounce_10_basketball: Dabar viršuje turime taikinį! Prijunk „pridėk tašką“
+          ir „pridėk tašką priešininkui“ komandas prie „kai kamuolys pataiko į tikslą“
+          ir „kai kamuolys nepataiko į ranką“, kad sukurtum žaidimą. Išbandyk, kiek
+          taškų spėsi surinkti, kol „priešininkas“ nesurinko jų dvigubai daugiau.
+        bounce_11_basketball: Metas prijungti blokelius prie  „paleidus“ komandos.
+          Panaudok naują blokelį  „paleisk naują kamuolį“ daugiau nei vienoje vietoje.
+          Taip pat, pamėgink pakeisti scenos foną ar rankos bei kamuolio greitį. Išbandyk,
+          kiek taškų sugebėsi surinkti, kol priešininkas nesurinko jų dvigubai daugiau!
+        bounce_12_basketball: Sukurk savo krepšinio žaidimą - gali keisti visas taisykles.
+          Kai pabaigsi, spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.
+        bounce_1_sports: Nusigauk iki vėliavos! Prijunk blokelį prie „kai paspausta
+          rodyklė kairėn“ komandos ir paspausk „Paleisti“, kad nuvestum žaidėją iki
+          vėliavos.
+        bounce_2_sports: Dabar turime ja dvi vėliavas! Pridėk tinkančius blokus prie
+          „kai paspausta rodyklė kairėn" ir "kai paspausta rodyklė dešinėn" komandų,
+          kad tavo žaidėjas galėtų judėti abiem kryptimis.
+        bounce_5_sports: Ledo ritulio ritulys skries žemyn link žaidėjo! Pridėk reikiamą
+          komandą prie bloko „kai kamuolys palies žaidėją“, kad pasiektume savo tikslą
+          - paliesti vėliavą.
+        bounce_6_sports: Dabar vėliava atsirado viršuje. Tau reikia prijungti blokelius
+          prie abiejų „kai kamuolys..“ blokų (įvykių), kad įveiktum šią užduotį.
+        bounce_7_sports: Prikabink blokelius prie kiekvieno „kai“ blokelio (įvykio).
+          Atmušinėk kamuolį, kol jis pasieks vėliavą.
+        bounce_10_sports: Dabar viršuje turime taikinį! Prijunk „pridėk tašką“ ir
+          „pridėk tašką priešininkui“ komandas prie „kai kamuolys pataiko į tikslą“
+          ir „kai kamuolys nepataiko į ranką“, kad sukurtum žaidimą. Išbandyk, kiek
+          taškų spėsi surinkti, kol „priešininkas“ nesurinko jų dvigubai daugiau.
+        bounce_11_sports: Metas prijungti blokelius prie  „paleidus“ komandos. Panaudok
+          naują blokelį  „paleisk naują kamuolį“ daugiau nei vienoje vietoje. Taip
+          pat, pamėgink pakeisti scenos foną ar rankos bei kamuolio greitį. Išbandyk,
+          kiek taškų sugebėsi surinkti, kol priešininkas nesurinko jų dvigubai daugiau!
+        bounce_12_sports: 'Sukurk savo žaidimą! Dabar tu čia šeimininkas: gali pakeisti
+          visas taisykles, panaudoti kelias sporto rūšis - būk kūrybingas!. Kai pabaigsi,
+          spustelk "Finišas", ir leisk draugams jį išbandyti savo telefonuose.'
         bounce_1: Prijunk blokelį prie  „kai ... rodyklė kairėn“ ir paleisk programą.
           Kad pasiektum tikslą, judink raketę su rodykle.
         bounce_2: Prijunk blokelį prie  „kai ... rodyklė dešinėn“ ir „kai ... kairėn“
@@ -711,6 +735,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -772,12 +799,17 @@
         mc_if_statements: Minecraft - Sąlygos sakiniai
         mc_congrats_share: Minecraft - Sveikiname
         mc_congrats_no_share: Minecraft - Sveikiname
-        gumball_intro: Gumball Hour of Code - Introduction
-        gumball_events: Gumball Hour of Code - Events
-        gumball_repeat: Gumball Hour of Code - Repeat statements
+        gumball_intro: Gumball Programavimo valanda - Įvadas
+        gumball_events: Gumball Programavimo valanda - Įvykiai
+        gumball_repeat: Gumball Programavimo valanda - Pasikartojantys sakiniai
         iceage_intro: Ledynmečio programavimo valanda – Įvadas
         iceage_events: Ledynmečio programavimo valanda – renginiai
         iceage_repeat: Ledynmečio programavimo valanda – kartojimo sakiniai
+        mc_2016_intro: Minecraft Programavimo valanda - Įvadas
+        mc_2016_loops: Minecraft Programavimo valanda - Ciklai
+        mc_2016_events: Minecraft Programavimo valanda - Įvykiai
+        mc_2016_spawn: Minecraft Programavimo valanda - Šaltiniai
+        mc_2016_congrats: Minecraft Programavimo valanda - Sveikiname
     callout:
       text:
         drag_blocks: Nutempk blokelį „ženk į priekį“ ir sujunk jį su kitu tokiu pat
@@ -850,7 +882,7 @@
         place_counter_variable: Drag your counter variable inside this block
         function_editor_draw_square: This is your function definition. These blocks
           run everytime you use the "draw a square" block
-        change_here: Make your change here
+        change_here: "Štai čia įterpk savo pakeitimą"
         write_draw_square_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
           kvadratą
         write_draw_triangle_function: Iš įrankinės nutempk blokelius čia, kurie nubrėš
@@ -869,8 +901,8 @@
         place_length_variable: Drag the length variable here to replace the question
           marks
         arrows_move_actor: Naudok rodykles, kad pajudintum veikėją
-        right_arrow_fireball: Use the right arrow to shoot fireballs
-        name_function: Write the name of your function here
+        right_arrow_fireball: Naudok rodyklę į dešinę, norint šaudyti ugnies kamuolius
+        name_function: "Štai čia parašyk savo funkcijos pavadinimą"
         Infinity_move_right_runbutton: Pridėti judėjimo blokelį čia
         Infinity_move_directions_callout: Kuris blokelis privers Baymax judėti aukštyn,
           kai yra nuspausta rodyklė aukštyn?

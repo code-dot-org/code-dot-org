@@ -24,7 +24,14 @@ exports.getTouchEventName = function (eventName) {
   }
 };
 
-var addEvent = function (element, eventName, handler) {
+/**
+ * Add an event listener
+ * @param {HTMLElement} element
+ * @param {string} eventName
+ * @param {function) handler
+ * @param {boolean} suppressTouchDefault - Should we preventDefault on touch events
+ */
+var addEvent = function (element, eventName, handler, suppressTouchDefault=true) {
   // Scope bound event map to this addEvent call - we only provide for unbinding
   // what we bind right here.
   var boundEvents = {};
@@ -51,7 +58,9 @@ var addEvent = function (element, eventName, handler) {
     bindEvent('touch', touchEvent, function (e) {
       // Stop mouse events and suppress default event handler to prevent
       // unintentional double-clicking
-      e.preventDefault();
+      if (suppressTouchDefault) {
+        e.preventDefault();
+      }
       unbindEvent('click');
       handler.call(this, e);
     });
@@ -68,8 +77,8 @@ exports.addMouseDownTouchEvent = function (element, handler) {
   return addEvent(element, 'mousedown', handler);
 };
 
-exports.addMouseUpTouchEvent = function (element, handler) {
-  return addEvent(element, 'mouseup', handler);
+exports.addMouseUpTouchEvent = function (element, handler, suppressTouchDefault=true) {
+  return addEvent(element, 'mouseup', handler, suppressTouchDefault);
 };
 
 exports.addMouseMoveTouchEvent = function (element, handler) {

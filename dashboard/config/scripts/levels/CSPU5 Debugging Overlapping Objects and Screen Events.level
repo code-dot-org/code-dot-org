@@ -39,7 +39,7 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "encrypted_examples": "dHbUA3gk7VhtRBEgitVJ2G4KY6h18bhOvNAJ0+jx68nrIGq1KrFqaRrTcN45\ngr6b\n",
+    "encrypted_examples": "ycSLscXm7m+Cr1w5GAATKTAvGoH3gl4Z5EVTZdkrXoyB1PXN5RpNl+lChTq7\nXnQU\n",
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
@@ -68,6 +68,7 @@
         "message": "The task asked you to add console.log statements to each event handler, and then click on at least 4 different locations to test it out.  We do not see enough messages in the debugger console for this to be true."
       }
     ],
+    "show_debug_watch": "false",
     "contained_level_names": null
   },
   "published": true,

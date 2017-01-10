@@ -17,6 +17,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installPickOne(blockly);
   installCategory(blockly);
   installWhenRun(blockly, skin, isK1);
+  installJoinBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -145,7 +146,7 @@ function installWhenRun(blockly, skin, isK1) {
       if (isK1) {
         this.appendDummyInput()
           .appendTitle(commonMsg.whenRun())
-          .appendTitle(new blockly.FieldImage(skin.runArrow));
+          .appendTitle(new blockly.FieldImage(skin.runArrow, 22, 26));
       } else {
         this.appendDummyInput().appendTitle(commonMsg.whenRun());
       }
@@ -160,5 +161,91 @@ function installWhenRun(blockly, skin, isK1) {
   blockly.JavaScript.when_run = function () {
     // Generate JavaScript for handling click event.
     return '\n';
+  };
+}
+
+function installJoinBlock(blockly) {
+  blockly.Blocks.text_join_simple = {
+    init: function () {
+      this.helpUrl = '';
+      this.setColour(160);
+      this.setOutput(true, Blockly.BlockValueType.STRING);
+      this.setTooltip(commonMsg.joinTextTooltip());
+      this.inputCount = 0;
+    },
+
+    getCustomContextMenuItems: function () {
+      return [
+        {
+          text: `Set number of inputs (current: ${this.inputCount})`,
+          enabled: true,
+          callback: function () {
+            var ret = prompt('Number of inputs', this.inputCount);
+            if (ret !== '') {
+              this.setInputCount(parseInt(ret));
+            }
+          }.bind(this)
+        }
+      ];
+    },
+
+    setInputCount: function (inputCount) {
+      var newInputCount = Math.max(parseInt(inputCount), 2);
+      if (inputCount > this.inputCount) {
+        for (var i = this.inputCount; i < newInputCount; i++) {
+          var input = this.appendValueInput('ADD' + i);
+          if (i === 0) {
+            input.appendTitle(commonMsg.joinText());
+          }
+        }
+      } else {
+        for (i = this.inputCount - 1; i >= newInputCount; i--) {
+          this.removeInput('ADD' + i);
+        }
+      }
+      this.inputCount = newInputCount;
+    },
+
+    pendingConnection: function (oldConnection, newConnection) {
+      var lastConnectionIndex = 0;
+      var oldConnectionIndex = -1;
+      var newConnectionIndex = -1;
+      for (var i = 0; i < this.inputList.length; i++) {
+        var connection = this.inputList[i].connection;
+        if (connection.targetConnection) {
+          lastConnectionIndex = i;
+        }
+        if (connection === oldConnection) {
+          oldConnectionIndex = i;
+        }
+        if (connection === newConnection) {
+          newConnectionIndex = i;
+        }
+      }
+
+      var toEnd = newConnectionIndex >= lastConnectionIndex;
+      var fromEnd = oldConnectionIndex >= lastConnectionIndex;
+
+      if (this.delayedResize && toEnd ^ fromEnd) {
+        window.clearTimeout(this.delayedResize);
+        this.delayedResize = null;
+      }
+      if (toEnd && !fromEnd) {
+        this.setInputCount(lastConnectionIndex + 2);
+      } else if (fromEnd && !toEnd) {
+        this.delayedResize = window.setTimeout(
+            () => this.setInputCount(lastConnectionIndex + 1), 100);
+      }
+    },
+  };
+
+  blockly.JavaScript.text_join_simple = function () {
+    var parts = new Array(this.inputCount);
+    for (var n = 0; n < this.inputCount; n++) {
+      parts[n] = Blockly.JavaScript.valueToCode(this, 'ADD' + n,
+          Blockly.JavaScript.ORDER_COMMA) || '\'\'';
+    }
+    var code = `[${ parts.join(',') }].join('')`;
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 }

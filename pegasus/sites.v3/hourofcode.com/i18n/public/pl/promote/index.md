@@ -25,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i wezwij każdą klasę w swojej szkole, aby się zarejestrowała. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Wyślij tego e-maila](<%= resolve_url('/promote/resources#sample-emails') %>) swojemu dyrektorowi i wezwij każdą klasę w swojej szkole, aby się zarejestrowała.
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się
 

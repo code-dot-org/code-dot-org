@@ -100,14 +100,14 @@ theme: pdf
             high school students
           in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015.
+          took the AP Computer Science exam in 2016.
         - else
           Only
           %b
             = format_integer_with_commas(state_info[:ap_cs_exams_i])
             high school students in
           = state_info[:state_name_s]
-          took the AP Computer Science exam in 2015;
+          took the AP Computer Science exam in 2016;
           - if state_info[:percent_ap_female_i] != 0
             only
             = succeed "%" do
@@ -124,7 +124,7 @@ theme: pdf
               students were 
           - else
             no students were 
-          Hispanic;
+          Hispanic or Latino;
           - if state_info[:ap_black_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_black_i])
@@ -134,7 +134,7 @@ theme: pdf
               students were 
           - else
             no students were 
-          black;
+          Black;
           - if state_info[:ap_native_american_i] != 0
             only
             = format_integer_with_commas(state_info[:ap_native_american_i])
@@ -144,7 +144,17 @@ theme: pdf
               students were
           - else
             no students were
-          Native American.
+          Native American or Alaska Native;
+          - if state_info[:ap_hawaiian_i] != 0
+            only
+            = format_integer_with_commas(state_info[:ap_hawaiian_i])
+            - if state_info[:ap_hawaiian_i] == 1
+              student was
+            - else
+              students were
+          - else
+            no students were
+          Native Hawaiian or Pacific Islander.
       %li
         - if state_info[:schools_ap_cs_i] != 0
           Only
@@ -164,7 +174,7 @@ theme: pdf
           No schools in
           = state_info[:state_code_s]
           offered the AP Computer Science course in 2015-2016.
-        - if state_param != 'ND'
+        - if state_param != 'ND' && state_param != 'MT'
           There are fewer AP exams taken in computer science than in any other STEM subject area.
 
   .chart-text-group
@@ -275,23 +285,44 @@ theme: pdf
   %div
     %p
       %h2.together What can your state do to improve computer science education?
-      States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following eight recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies, and no state has accomplished all 8 yet. Read more about these 8 policy ideas at
+      States and local school districts need to adopt a broad policy framework to provide all students with access to computer science. The following nine recommendations are a menu of best practices that states can choose from to support and expand computer science. Not all states will be in a position to adopt all of the policies. Read more about these 9 policy ideas at
+      %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
+      and see our rubric for describing state policies at
       = succeed "." do
-        %a{href: "https://code.org/files/Making_CS_Fundamental.pdf"} https://code.org/files/Making_CS_Fundamental.pdf
+        %a{href: "http://bit.ly/9policiesrubric"} http://bit.ly/9policiesrubric
     %div.policies
+
+      %div.policy-item
+        - if state_info[:state_plan_s] == 'Yes'
+          %div
+            %i.fa.fa-check-square-o
+            = state_info[:state_name_s]
+            has created a state plan for K-12 computer science.
+        - elsif state_info[:state_plan_s] == 'No'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:state_name_s]
+            %b has not
+            yet created a state plan for K-12 computer science. A plan that articulates the goals for computer science, strategies for accomplishing the goals, and timelines for carrying out the strategies is important for making computer science a fundamental part of a state’s education system.
+        - elsif state_info[:state_plan_s] == 'Other'
+          %div
+            %i.fa.fa-square-o
+            = state_info[:policy_0_t]
 
       %div.policy-item
         - if state_info[:cs_standards_s] == 'Yes'
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            has established rigorous K-12 computer science standards.
+            has established K-12 computer science standards.
         - elsif state_info[:cs_standards_s] == 'No'
           %div
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. States could strengthen their computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. The Computer Science Teachers Association has model K-12 CS standards.
+            have rigorous computer science standards publicly available across K-12. Computer science has often been confused with broader technology education in schools. The state could strengthen its computer science programs by publicly adopting discrete standards for computer science focused on both the creation and use of software and computing technologies at all levels of K-12 education. These standards can be guided by the concepts, practices, and recommendations in the K-12 Computer Science Framework, found at
+            = succeed "." do
+              %a{href: "http://www.k12cs.org"} http://www.k12cs.org
         - elsif state_info[:cs_standards_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -336,13 +367,13 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            has established incentives at institutions of higher education to offer computer science to pre-service teachers.
+            has established programs at institutions of higher education to offer computer science to preservice teachers.
         - elsif state_info[:pre_service_s] == 'No'
           %div
             %i.fa.fa-square-o
             = state_info[:state_name_s]
-            %b currently has no
-            incentives for institutions of higher education to offer computer science to pre-service teachers. The computer science teacher shortage can be addressed by exposing more pre-service teachers to computer science during their required coursework or by creating specific pathways for computer science teachers.
+            %b has not yet
+            established programs at institutions of higher education to offer computer science to preservice teachers. The computer science teacher shortage can be addressed by exposing more preservice teachers to computer science during their required coursework or by creating specific pathways for computer science teachers.
         - elsif state_info[:pre_service_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -353,13 +384,13 @@ theme: pdf
           %div
             %i.fa.fa-check-square-o
             = state_info[:state_name_s]
-            has dedicated computer science positions in state and local education authorities.
+            has dedicated computer science positions in state and/or local education authorities.
         - elsif state_info[:state_position_s] == 'No'
           %div
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            have dedicated computer science positions in state and local education authorities. Creating a statewide computer science leadership position within the state education authority can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
+            have dedicated computer science positions in state or local education authorities. Creating a statewide computer science leadership position within the state education authority can help expand state-level implementation of computer science education initiatives. Similar positions at the local level could support districts’ expansion of course offerings and professional development.
         - elsif state_info[:state_position_s] == 'Other'
           %div
             %i.fa.fa-square-o
@@ -419,7 +450,7 @@ theme: pdf
             %i.fa.fa-square-o
             = state_info[:state_name_s]
             %b does not yet
-            allow computer science to count as a mathematics or science admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting the mathematics or science entrance requirements discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
+            allow computer science to count as a core admission requirement at institutions of higher education. Admission policies that do not include rigorous computer science courses as meeting a core entrance requirement, such as in mathematics or science, discourage students from taking such courses in secondary education. State leaders can work with institutions of higher education to ensure credit and articulation policies align with secondary school graduation requirements.
         - elsif state_info[:higher_ed_entrance_s] == 'Other'
           %div
             %i.fa.fa-square-o

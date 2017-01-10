@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Chiedi alla tua scuola di organizzare un'Ora del Codice
 
-[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi.
 
 ## 3. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione
 

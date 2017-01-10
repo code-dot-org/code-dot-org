@@ -6,14 +6,15 @@ Background:
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
-  Then I wait until element "#runButton" is visible
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   And I drag block "1" to block "5"
   And I press "runButton"
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1."
   Then I close the dialog
   And I wait until I am on "http://studio.code.org/hoc/2"
-  When element "#runButton" is visible
+  And I wait for the page to fully load
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
@@ -25,24 +26,24 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I wait until element "#runButton" is visible
+  And I wait for the page to fully load
   And block "6" is child of block "5"
   # Level source is reset
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I wait until element "#runButton" is visible
+  And I wait for the page to fully load
   And element "g[block-id=\'6\']" does not exist
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
-  Then I wait until element "#runButton" is visible
+  And I wait for the page to fully load
   And I close the instructions overlay if it exists
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
-  Then I wait until element "#runButton" is visible
+  And I wait for the page to fully load
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
@@ -56,21 +57,22 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
   Then I close the dialog
   Then I am on "http://studio.code.org/hoc/11"
   Then I wait until I am on "http://studio.code.org/hoc/11"
-  Then I wait to see "#runButton"
+  And I wait for the page to fully load
   Then I am on "http://studio.code.org/hoc/10"
   Then I wait until I am on "http://studio.code.org/hoc/10"
-  Then I wait to see "#runButton"
+  And I wait for the page to fully load
   Then I click selector ".reference_area a:last"
 
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
+  And I close the instructions overlay if it exists
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
-  Then I wait to see "#runButton"
+  And I wait for the page to fully load
   Then I am on "http://studio.code.org/hoc/9?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/9?noautoplay=true"
-  Then I wait to see "#runButton"
+  And I wait for the page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" does not exist

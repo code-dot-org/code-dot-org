@@ -1,4 +1,4 @@
-ro-RO:
+"ro-RO":
   hour_of_code: "Hour of Code"
   hello: "Salutare lume"
   'yes': 'Da'
@@ -25,8 +25,10 @@ ro-RO:
   submit: "Trimite"
   twentyhours_heading: "Încearcă Cursul nostru de Introducere în Informatică"
   twentyhours_text: "Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica de bază și conceptele programării în cadrul cursului următor."
-  og_title: "Fiecare copil merită o portunitate"
-  og_description: "Fiecare student din fiecare școală merită o șansă de a studia tehnologia computerelor si programarea. Astfel se schimbă totul."
+  og_title: Fiecare copil merită o portunitate
+  og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite."
+  csedweek_og_title: "Ora de Cod este aici"
+  csedweek_og_description: "Hour of Code este o mişcare globală care ajunge la zeci de milioane de elevi si studenţi din peste 180 de ţări şi peste 40 de limbi vorbite."
   hoc2014_heading: "Alătură-te <a href=\"http://hourofcode.com\"> Orei de cod</a> <br/> 8-14 decembrie, 2014 <br/>"
   hoc2014_students: "Elevi"
   hoc2014_try: "Încearcă"
@@ -181,10 +183,12 @@ ro-RO:
   petition_thankyou: "Îți mulțumim pentru semnarea petiției"
   continue_learning_header: "Continuă să înveți peste O Oră"
   continue_learning_body: "Există o mulţime de opţiuni.  Poţi învăța online, sau la o şcoală locală, sau în tabăra de vară."
+  learn_code_studio: "Încearcă un curs Code Studio"
   learn_next_level: "Incearca un alt curs in Studio-ul Code"
   learn_online: "Încearcă alte cursuri online"
   learn_classes: "Găsește clase local"
-  hoc_is_here: 'Invata tehnologia computerului si programarea. Se va schimba totul.  https://youtu.be/xJqSu1IbcHg.'
+  learn_back_to_minecraft: "Continuă să înveți cu Minecraft"
+  hoc_is_here: '#HourOfCode vine din nou in 5-11 decembrie. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
   just_did_course1: "Tocmai am terminat cursul 1 - vizualizeaza-l! @codeorg"
   just_did_course2: "Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg"
@@ -192,6 +196,7 @@ ro-RO:
   just_did_course4: "Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg"
   just_did_accelerated: "Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg"
   twitter_teach_cs: "9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/."
+  twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Învață o Oră de Cod"
   beyond_hoc: "Peste de O Oră"
   what_gender: "Ce gen sexual ai?"
@@ -208,7 +213,7 @@ ro-RO:
   contact_form_topic_press: "Presă/media (interviu sau angajamentul vorbit)"
   stats_nina: '"Fiecare zi a generat aceleaşi rezultate&mdash; 100% implicare."- Nina Nichols Peery, Profesor'
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana Alzate, elev de clasa a cincea'
-  stats_michael: 'Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
+  stats_michael: '"Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați să învețe."- Michael Clark, Profesor'
   studiobar_title: "Explorează <a href='http://studio.code.org'>Studio-ul Code</a>"
   studiobar_title_nolink: "Explorează Studio-ul Code"
   studiobar_elementary_title: "Cursuri elementare"
@@ -273,6 +278,7 @@ ro-RO:
   homepage_action_text_volunteers: "Cautam voluntari tehnici"
   homepage_action_text_codevideo: "Urmărește secvența video"
   homepage_action_text_teachervideo: "Urmărește secvența video"
+  homepage_action_text_watchvideo: "Urmărește secvența video"
   homepage_action_text_girlvideo: "Inspira o fata"
   homepage_action_text_learn: "Începe învăţarea"
   homepage_action_text_signpetition: "Semnează petiția"
@@ -359,7 +365,8 @@ ro-RO:
   class_submission_level_college: "Facultate"
   class_submission_level_vocational: "Profesională"
   class_submission_languages_other: "Alte limbi"
-  inspirational_videos_more: "Mai multe <a href=\"https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP\">clipuri inspirationale</a> cu modele consacrate si celebritati"
+  videos_more: "Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri inspirationale</a> cu modele şi celebrităţi"
+  careers_page_more: "Mai multe <a href='%{careers_url}' target='_blank'> clipuri video inspiraționale</a> cu profesioniști din domeniile tehnologiei"
   playlab_choose_theme: "Alege tema ta la Laboratorul de Joacă"
   playlab_classic_title: "Clasic"
   playlab_gumball_title: "Minunata lume a lui Gumball"
@@ -379,8 +386,61 @@ ro-RO:
   mc_gradelevel: "Varsta: peste 6 ani"
   mc_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   mc_specs: "Mai multe limbi |B rowsere moderne si tablete | Varstele 6+"
+  minecraft_designer: "Minecraft Designer"
+  minecraft_adventurer: "Minecraft Adventurer"
+  minecraft_tutorials: "Tutoriale Hour of Code Minecraft"
+  minecraft_specs: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
+  minecraft_designer_description: "Programeaza animale şi alte creaturi Minecraft în propria ta versiune a jocului."
+  minecraft_designer_button: "Începe"
+  minecraft_adventurer_description: "Utilizați codul pentru a-i duce pe Alex sau Steve într-o aventură."
+  minecraft_adventurer_button: "Începe"
+  minecraft_no_internet: "Nu ai Internet?"
+  minecraft_download_adventurer: "Descarcă versiunea offline a Minecraft Adventurer."
   minecraft_subtitle: "Ora de Programare Minecraft"
+  sports_page_title: "Sporturi la Ora de Cod"
+  sports_og_title: "Tutoriale de Sport la \"Ora de cod\""
+  sports_og_description: "Selectează între a face un joc de basketball sau un \"mix and match\" din toate sporturile."
+  sports_title: "Propgrameaza propriul joc sport"
+  sports_watch_video: "Urmărește secvența video"
+  sports_video_title: "Da-ti silinta. Oricine poate învăţa."
+  sports_select_theme: "Selectati tema tutorialului"
+  sports_basketball_title: "Realizeaza un joc de baschet"
+  sports_all_sports_title: "Amesteca si potriveste sporturile"
+  sports_featured_athletes: "See featured athletes"
+  sports_athletes_title: "Featured athletes"
+  sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
+  sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
+  sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
+  sports_athlete_Sergio: "Sergio Ramos, World Cup Champion and Soccer/Futbol Player, Real Madrid"
+  sports_athlete_Sue: "Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, Captain of the Sri Lankan Cricket Team"
+  sports_athlete_Nneka: "Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, Olympic Gold Medalist and NBA All-Star, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, NBA Champion, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player, FC Barcelona and Brazil National Team"
+  sports_athlete_Sarah: "Sarah Quita Offringa, Windsurfing Champion"
+  sports_athlete_Marcelo: "Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil National Team"
+  sports_athlete_Erika: "Erika Olivera, Champion Marathon Runner"
+  sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
+  sports_athlete_Chris: "Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami Heat"
+  sports_athlete_Harrison: "Harrison Barnes, Olympic Gold Medalist and NBA Champion, Dallas Mavericks"
   watch_inspirational_videos: "Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri inspirationale"
+  video_title_cs_is_everything: "Computer Science is Changing Everything"
+  video_title_inspire_girl: "Inspira o fata"
+  video_title_cs_intro: "Introducere in tehnologia computerelor"
+  video_title_schools_dont_teach: "Ceea ce multe scoli nu predau"
+  video_title_obama: "Președintele Obama despre tehnologia computerelor"
+  video_title_hoc_is_here: "Hour of Code este aici - Oricine poate învăţa"
+  video_title_anybody_can_learn: "Oricine poate învăța"
+  video_title_draymond_green: "Ora de Cod cu Draymond Green"
+  video_title_russell_okung: "Ora de Cod cu Russell Okung"
+  video_title_real_madrid: "Ora de Cod cu Real Madrid"
+  video_title_marco_belinelli: "Ora de Cod cu Marco Belinelli"
+  video_title_chris_bosh: "Chris Bosh despre Informatică"
+  video_1min: "1 min"
+  video_2min: "2 min"
+  video_5min: "5 min"
   speak_another_language: "Vorbesti o alta limba?"
   help_translate: "Ajuta-ne sa traducem."
   no_internet: "Nu ai Internet?"
@@ -576,9 +636,9 @@ ro-RO:
   dashboard_sections_yes_both: "Da, vreau să copiaţi studentul(ii) pentru a fi în această secțiune curentă şi o secţiune nouă"
   dashboard_sections_no_move: "Nu, vreau să se mute studentul(ii) să fie doar într-o secţiune nouă."
   dashboard_sections_move_students: "Muta studenţii"
-  dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
-  dashboard_sections_assign_hoc_script_msg: "Please note that we will not save progress in this course during the week of December 5-11, due to the unprecedented level of traffic our site will receive for the Hour of Code.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)<br/><br/>We are thrilled by the number of teachers and students participating and we're sorry we won't be able to save everything.  If your class wants to go further, you can go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.  Our teacher dashboard will let you track your student's progress every other week of the year."
-  dashboard_sections_assign_activity: "Assign Course"
+  dashboard_sections_assign_hoc_script_desc: "Participi la Hour of Code?"
+  dashboard_sections_assign_hoc_script_msg: "Vă rugăm să reţineţi că noi nu va vom salva progresul în acest curs în cursul săptămânii 5-11 decembrie, din cauza traficului mare pe site-ul nostru pentru Hour of Code.  Puteti realiza cursurile si darui tuturor elevilor un certificat de participare. (Majoritatea profesorilor <a href='%{certificate_url}'> imprima acestea în avans</a>.) <br/> <br/> Noi suntem incantati de numărul de cadre didactice şi studenţi ce participă şi ne pare rău, nu vom fi capabili de a salva totul.  În cazul în care clasa ta vrea să meargă mai departe, puteţi merge dincolo de o oră de programare pentru a preda un curs, cum ar fi bazele siintei computerului. Tabloul de bord pentru profesor vă va permite să urmăriţi progresul elevului dumneavoastră in fiecare alta săptămînă a anului."
+  dashboard_sections_assign_activity: "Atribuiţi un curs"
   dashboard_error_none_selected: "Nu ati selectat niciun student să se mute. Vă rugăm să selectaţi cel puţin un student."
   dashboard_error_other_section: "Dacă mutați elevii între propriile secţiuni, selectaţi secţiunea dvs. din meniul derulant. Doar selectaţi 'Altă Secţiune ' pentru a muta elevii la secțiuni diferite ale profesorilor."
   dashboard_students_add_student: "Adăugare elev"
@@ -685,11 +745,17 @@ ro-RO:
   dashboard_announce_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
   dashboard_announce_learn_more_button: "Află mai mult"
   dashboard_announce_try_now_button: "Încearcă acum"
-  dashboard_announce_host_an_hour_button: "Host an Hour"
+  dashboard_announce_host_an_hour_button: "Organizeaza o ora"
+  dashboard_announce_watch_video_button: "Urmăriţi videoclipul"
   dashboard_announce_petition: "Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În această săptămână, liderii de educaţie, 28 guvernatori şi Directorii celor mai mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul SUA pentru a finanta calculatorul de stiinta si educaţie k-12."
   dashboard_announce_petition_button: "Adaugă-ți numele"
+  dashboard_announce_go_beyond_button: "Go beyond"
   dashboard_announce_all: "Fii la curent cu noutățile si actualizarile de pe blogul cadrelor noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea anunturile vechi.</a>"
-  dashboard_announce_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+  dashboard_announce_hoc_launch: "Mii de cadre didactice în peste 180 de ţări vor începe predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11 decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare."
+  dashboard_announce_mc_launch: "Unul din tutorialele noastre cele mai populare acum are o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu clasa ta la Hour of Code."
+  dashboard_announce_hoc_scaling_progress: "Vă rugăm să reţineţi că noi nu salvam progresul studentilor intre 3 si 11 decembrie datorită nivelului de trafic al site-ului nostru. Puteţi vedea încă progresul studentului înainte de 3 decembrie.  După această săptămână, vom salva progresul ca pana acum."
+  dashboard_announce_how_code_studio: "Nu aveţi nevoie de nici o experienţă pentru a începe predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie, programe de învățare profesionale de înaltă calitate şi tone de instrumente excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest video</a>!"
+  dashboard_announce_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   code_hoc_coming: "Ora de Programare este aici: 8-14 decembrie!"
   code_sign_up: "Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna Informaticii în Educaţie”)"
   host_an_hour: "Țineți o oră"
@@ -808,10 +874,15 @@ ro-RO:
   cspunit4_name: '(vechi) Unitatea 4: date'
   cspunit5_name: '(vechi) Unitatea 5: Exploreaza şi creaza PT'
   cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unitatea 1: Internet'
   csp2_name: 'Unitatea 2: Informaţii digitale'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: "Testul complet - 50 întrebări"
   cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
   cspexam2-AKwgAh1ac5_name: Test de partea 2-25 întrebări
@@ -826,13 +897,21 @@ ro-RO:
   iceage_name: "Epoca de gheață"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (blocuri)"
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: "Matematică"
   hoc_category_name: "Oră de Programare"
   csf_category_name: "Fundamentele CS"
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "Principii de CS 15-16"
   csp17_category_name: "Principii de CS 16-17"
   cspexams_category_name: "Principiile practicilor test CS"
+  research_studies_category_name: "Research Studies"
   applab_name: "Laboratului Aplicației"
+  basketball_name: "Realizeaza un joc de baschet"
+  sports_name: "Sporturi"
   applab_gradelevel: "Vârste 13 +"
   applab_shortdescription_congrats: "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde"
   codeorg_gradelevel: "Vârste între 4-104 ani"

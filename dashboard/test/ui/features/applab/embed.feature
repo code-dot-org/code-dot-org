@@ -1,9 +1,11 @@
+@no_firefox
 @dashboard_db_access
 @as_student
 Feature: App Lab Embed
 
   Background:
     Given I start a new Applab project
+    And I wait for the page to fully load
 
   Scenario: App Lab Embed
     Given I switch to text mode
@@ -20,6 +22,7 @@ Feature: App Lab Embed
     Then I wait until element "a.more-link" is visible within element "iframe"
     And I click selector "a.more-link" within element "iframe"
     Then I wait until element "a:contains('How It Works')" is visible within element "iframe"
+    And I make all links in "iframe" open in the current tab
     And I click selector "a:contains('How It Works')" within element "iframe"
 
     And I wait to see Applab code mode

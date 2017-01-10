@@ -456,10 +456,12 @@ module LevelsHelper
     app_options[:disableSocialShare] = true if (current_user && current_user.under_13?) || app_options[:embed]
     app_options[:isLegacyShare] = true if @is_legacy_share
     app_options[:isMobile] = true if browser.mobile?
-    app_options[:applabUserId] = applab_user_id if @game == Game.applab
-    app_options[:firebaseName] = CDO.firebase_name if @game == Game.applab
-    app_options[:firebaseAuthToken] = firebase_auth_token if @game == Game.applab
-    app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix if @game == Game.applab
+    app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
+    if use_firebase
+      app_options[:firebaseName] = CDO.firebase_name
+      app_options[:firebaseAuthToken] = firebase_auth_token
+      app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
+    end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
@@ -619,8 +621,8 @@ module LevelsHelper
     current_user ? current_user.id.to_s : session_id
   end
 
-  # Unique, consistent ID for a user of an applab app.
-  def applab_user_id
+  # Unique, consistent ID for a user of an *lab app.
+  def lab_user_id
     channel_id = "1337" # Stub value, until storage for channel_id's is available.
     Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
   end

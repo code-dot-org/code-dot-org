@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Hour of Codeを主催するよう学校と交渉しましょう。
 
-[このメール](%= resolve_url('/promote/resources#sample-emails') %)を校長に送信して、あなたの学校の全てのクラスでHour of Codeのイベントを行うようにお願いしましょう。 <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[このメール](%= resolve_url('/promote/resources#sample-emails') %)を校長に送信して、あなたの学校の全てのクラスでHour of Codeのイベントを行うようにお願いしましょう。
 
 ## 3. 会社の方々にも働きかける
 

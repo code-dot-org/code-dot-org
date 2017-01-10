@@ -37,7 +37,7 @@
             probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid,
             mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
           description_short: "Õpilastega, kes suudavad lugeda, alustage kursus 2-ga."
-          description_audience: Vanustele 6-18
+          description_audience: Vanusele 6+ (lugemisoskus vajalik)
           stage:
             'Artist: Debugging': 'Kunstnik: vigade silumine'
             'Artist: Loops': 'Kunstnik: tsüklid'
@@ -61,8 +61,9 @@
         course3:
           title: Kursus 3
           description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane
-            läheb sügavamale programmeerimise teemadesse, mida eelmises kursuses tutvustati.
-            Kursuse lõpuks õpilased loovad interaktiivseid lugusid ja mänge, mida
+            läheb sügavamale programmeerimise teemadesse, mida eelmises kursuses tutvustati,
+            ning loovad paindlike lahendusi veelgi keerulisematele probleemidele.
+            Kursuse lõpuks loovad õpilased interaktiivseid lugusid ja mänge, mida
             nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
           description_short: Kursus 3 on järg kursusele 2.
           description_audience: Vanustele 8-18
@@ -85,7 +86,7 @@
             Internet: Internet
             Maze: Labürint
             'Maze: Conditionals': 'Labürint: tingimuslaused'
-            Songwriting: Laulude kirjutamine
+            Songwriting: Laulukirjutamine parameetritega
             'Studio: Create a Game': 'Play Lab: Loo mäng'
             'Studio: Create a Story': 'Play Lab: Kirjuta lugu'
         playlab:
@@ -119,12 +120,12 @@
             Artist: Kunstnik
         course4:
           title: Kursus 4
-          description: Kursus 4 on disainitud õpilastele, kes on võtnud Kursus 2 ja
-            3. Õpilased lähevad sügavamale programmeerimise teemadega, mida tutvustati
-            eelmistes kursustes, et moodustada rohkem painduvamaid lahendusi rohkem
-            komplekssemate probleemide jaoks. Selle kursuse lõpuks, õpilased moodustavad
-            interaktiivseid lugusid ja mänge, mida nad saavad jaga kõigiga. Soovitatav
-            kooliastmetele 4-8.
+          description: 4. kursus on mõeldud õpilastele, kes on läbinud kursused 2
+            ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
+            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
+            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
+            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
+            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
           description_short: "Õpilased, kes võtavad Kursus 4-ja peaksid enne olema
             läbinud Kursused 2 ja 3."
           description_audience: Vanustele 10-18
@@ -323,9 +324,9 @@
           description_short: Sündmused
           stage:
             Bounce: Põrkama
-            Calc: Calc
-            Eval: Eval
-            Studio: Studio
+            Calc: Arvuta
+            Eval: Hinda
+            Studio: Stuudio
         flappy:
           title: Flappy kood
           description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
@@ -360,14 +361,14 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Probleem
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: Probleem
           description_audience: ''
         cspunit1:
           title: CSP Unit 1
@@ -428,6 +429,7 @@
           description_short: Compress text by identifying repeated patterns.
           stage:
             Text Compression: Text Compression
+          description_audience: ''
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -579,6 +581,7 @@
             Teacher Dashboard: "Õpetaja töölaud"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -592,6 +595,7 @@
             Teacher Dashboard: "Õpetaja töölaud"
             Why Computer Science belongs in Algebra: Why Computer Science belongs
               in Algebra
+          description_audience: ''
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -613,6 +617,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD-iZone:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -634,6 +639,7 @@
             Using Computer Models in Science: Using Computer Models in Science
             Using Models in the Classroom: Using Models in the Classroom
             What to Expect: What to Expect
+          description_audience: ''
         sciencePD2:
           title: Computer Science in Science PD
           description: 'Faas 2 online: Blended Summer Study'
@@ -748,11 +754,13 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: Stuudio
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -863,6 +871,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Tere tulemast!
             Wrap-Up: Kokkuvõte
+          description_audience: ''
         equity-pd:
           title: Leading a Discussion on Equity
           description: How to lead a discussion on equity in a Code.org PD
@@ -909,6 +918,7 @@
             Thinking Ahead to Implementation: Thinking Ahead to Implementation
             Welcome!: Tere tulemast!
             Wrap-Up: Kokkuvõte
+          description_audience: ''
         ECSPD2-iZone:
           title: 'Exploring Computer Science PD: Blended Summer Study'
           description: 'Faas 2 online: Blended Summer Study'
@@ -1003,7 +1013,7 @@
             Happy Maps: Happy Maps
             Move it, Move it: Liiguta, liiguta
             'Real-life Algorithms: Plant a Seed': 'Päris elu algoritmid: Seemenda'
-            Songwriting: Laulude kirjutamine
+            Songwriting: Laulukirjutamine parameetritega
             The Big Event: Suursündmus
         afterschool1:
           title: Afterschool 1
@@ -1159,6 +1169,7 @@
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Tere tulemast!
             Wrap-Up: Kokkuvõte
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: CS in Algebra mid year lesson support
@@ -1311,6 +1322,7 @@
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Tere tulemast!
             Wrap-Up: Kokkuvõte
+          description_audience: ''
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -1554,6 +1566,8 @@
             The Need for Algorithms: The Need for Algorithms
             Using Simple Commands: Using Simple Commands
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey:
+              Taking the AP exam'
           description_audience: ''
         csp4:
           title: CS Principles Unit 4 - Big Data and Privacy
@@ -1615,6 +1629,25 @@
             Make Your Own Multi-Screen App: Make Your Own Multi-Screen App
             Unit 5 Assessment 1: Unit 5 Assessment 1
             Unit 5 Assessment 2: Unit 5 Assessment 2
+            "'If' Statements Unplugged": "'If' Statements Unplugged"
+            '"If" Statements Unplugged': '"If" Statements Unplugged'
+            Getting started with If Statements: Getting started with If Statements
+            Unit 3 Chapter 1 Assessment 3: Unit 3 Chapter 1 Assessment 3
+            If statements: If statements
+            Unit 3 Assessment 3: Unit 3 Assessment 3
+            Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If"
+              Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1651,6 +1684,8 @@
             Defender: Defender
             'Project: Build a Game': 'Project: Build a Game'
             Velocity: Velocity
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
           description_audience: ''
         2016_sciencePD_phase1:
           title: Computer Science in Science PD 2016-2017
@@ -2020,7 +2055,7 @@
             'New Artist: Functions': 'New Artist: Functions'
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions): Scaffolded
               Project Stage (Loops, Events, Conditionals, Functions)
-            Songwriting: Laulude kirjutamine
+            Songwriting: Laulukirjutamine parameetritega
             'Unplugged: Funky Functions': 'Unplugged: Funky Functions'
         grade1:
           title: Grade 1
@@ -2142,6 +2177,8 @@
             Share out and Submit: Share out and Submit
             Unit 5 Overview: Unit 5 Overview
             Unit 5 lessons: Unit 5 lessons
+            Unit 5 Challenge: Unit 5 Challenge
+            Close & Next Steps: Close & Next Steps
           description_audience: ''
         ecs-unit6:
           title: ECS Unit 6
@@ -2154,6 +2191,8 @@
             Unit 6 Challenge: Unit 6 Challenge
             Unit 6 Overview: Unit 6 Overview
             Unit 6 lessons: Unit 6 lessons
+            Close & Next Steps: Close & Next Steps
+          description_audience: ''
         grade3:
           title: Grade 3
           description: Planning Script for CSF 2.0
@@ -2211,6 +2250,15 @@
             Sprites and Properties: Sprites and Properties
             Variables Unplugged: Variables Unplugged
             Variables and Animation: Variables and Animation
+            Velocity: Velocity
+            Collision Detection: Collision Detection
+            Complex Sprite Movement: Complex Sprite Movement
+            Collisions: Collisions
+            Functions: Funktsioonid
+            The Game Design Process: The Game Design Process
+            Using the Game Design Process: Using the Game Design Process
+            'Project: Build a Game': 'Project: Build a Game'
+            'Project: Design a Game': 'Project: Design a Game'
           description_audience: ''
         grade2:
           title: Grade 2
@@ -2284,6 +2332,8 @@
             Unit 1 Chapter 1 Assessment: Unit 1 Chapter 1 Assessment
             Unit 3 Chapter 1 Assessment: Unit 3 Chapter 1 Assessment
             Unit 4 Chapter 1 Assessment: Unit 4 Chapter 1 Assessment
+            'Anonymous student survey: Taking the AP exam': 'Anonymous student survey:
+              Taking the AP exam'
           description_audience: ''
           description_short: ''
           description: ''
@@ -2349,6 +2399,12 @@
             Unit 2 Overview: Unit 2 Overview
             'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme': 'Lessons
               5 - 6: Compression Formats and Developing your own Encoding Scheme'
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons
+              4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
+              7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
           title: CSP Unit 1 Online Support
@@ -2371,14 +2427,15 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
             Bounce: Põrkama
-          title: Basketball
+          title: Vali meeskond ja tee korvpallimäng
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: Tee korvpallimäng
+          description: Vali meeskond ja tee korvpallimäng
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2397,6 +2454,7 @@
             Binary Images: Binaarsed pildid
             Binary Artist Puzzles: Binary Artist Puzzles
             RGB Color: RGB Color
+            Processing with Bits: Processing with Bits
           title: Binaarne
           description_audience: ''
           description_short: ''
@@ -2423,6 +2481,8 @@
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2443,6 +2503,7 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2469,7 +2530,343 @@
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
           description: ''
+        minecraft:
+          stage:
+            Minecraft Hour of Code Designer: KoodiTund Minecraft Designer
+          title: KoodiTund Minecraft Designer
+          description_audience: ''
+          description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
+            Minecrafti versioonis.
+          description: Programmeri loomi ja teisi Minecrafti olendeid sinu enda Minecrafti
+            versioonis.
+        flappy-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Flappy Code: Flappy kood
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Flappy Code with Survey
+          description_audience: ''
+          description_short: 'Write your own Flappy game in less than 10 minutes! '
+          description: Want to write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial! This version includes pre and post surveys to help
+            us continue to improve Hour of Code. Ask your class to skip ahead to the
+            post survey 10 minutes before class ends.
+        coursea-draft:
+          stage:
+            'Debugging: Bugs in Codeville': 'Debugging: Bugs in Codeville'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration:
+              Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed': 'Päris elu algoritmid: Seemenda'
+            Learn to Drag and Drop: Learn to Drag and Drop
+            'Programming: Happy Maps': 'Programming: Happy Maps'
+            Programming in Maze: Programming in Maze
+            Being Safe Online: Being Safe Online
+            'Loops: Happy Loops': 'Loops: Happy Loops'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            Fuzz Fiesta: Fuzz Fiesta
+            Going Places Safely: Läheb asukohta turvaliselt
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+          title: 'CS Fundamentals: Course A'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. \r
+            Recommended for grade K.
+        courseb-draft:
+          stage:
+            'Debugging: Unspotted Bugs': 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles': 'Persistence & Frustration:
+              Stevie and the Marbles'
+            Sequence & Algorithms: Sequence & Algorithms
+            Learn to Drag and Drop: Learn to Drag and Drop
+            Being Safe Online: Being Safe Online
+            'Programming: My Robotic Friends': 'Programming: My Robotic Friends'
+            Programming in Maze: Programming in Maze
+            'Loops: My Loopy Robotic Friends': 'Loops: My Loopy Robotic Friends'
+            Loops in Collector: Loops in Collector
+            Loops in Artist: Loops in Artist
+            'Events: The Big Event': 'Events: The Big Event'
+            Events in Play Lab: Events in Play Lab
+            More Computer Science: More Computer Science
+            Keep it Private: Keep it Private
+            'Real-life Algorithms: Plant a Seed': 'Päris elu algoritmid: Seemenda'
+            Your Digital Footprint: Sinu digitaalne jalajälg
+          title: 'CS Fundamentals: Course B'
+          description_audience: ''
+          description_short: ''
+          description: Course B is for early readers. Students will create computer
+            programs that will help them learn to collaborate with others, develop
+            problem-solving skills, and persist through difficult tasks. By the end
+            of this course, students create their very own custom game or story that
+            they can share. Recommended for 1st grade.
+        coursec-draft:
+          stage:
+            Programming in Maze: Programming in Maze
+            'Real-life Algorithms: Paper Planes': 'Päris elu algoritmid: paberlennukid'
+            Programming in Collector: Programming in Collector
+            Programming in Artist: Programming in Artist
+            'Loops: Getting Loopy': 'Loops: Getting Loopy'
+            Loops in Maze: Loops in Maze
+            'Events: The Big Event': 'Events: The Big Event'
+            Puppy Introduction: Puppy Introduction
+            Online Internet Safety: Online Internet Safety
+            Build a Flappy Game: Build a Flappy Game
+            More CS with Run Marco: More CS with Run Marco
+            Binary Bracelets: Binaarsed käevõrud
+            Events in Play Lab: Events in Play Lab
+            Your Digital Footprint: Sinu digitaalne jalajälg
+            Building a Foundation: Vundamendi ehitus
+            Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
+          title: 'CS Fundamentals: Course C'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. Recommended for
+            2nd grade.
+        coursed-draft:
+          stage:
+            'Algorithms: Graph Paper Programming': 'Algorithms: Graph Paper Programming'
+            Events in Bounce: Events in Bounce
+            Nested Loops in Maze: Nested Loops in Maze
+            Nested Loops in Artist: Nested Loops in Artist
+            'Algorithms: Relay Programming': 'Algorithms: Relay Programming'
+            Debugging in Bee: Debugging in Bee
+            While Loops in Farmer: While Loops in Farmer
+            Conditionals with Cards: Tingimuslaused kaartidel
+            Conditionals with Bee: Conditionals with Bee
+            Conditionals & Loops in Maze: Conditionals & Loops in Maze
+            Conditionals & Loops in Farmer: Conditionals & Loops in Farmer
+            Impacts of Computing: Impacts of Computing
+            More Programming with CS4FN: More Programming with CS4FN
+            Build a Play Lab Game: Build a Play Lab Game
+            Conditionals in Bee: Conditionals in Bee
+            Digital Citizenship: Digitaalne kodakondsus
+            'Unplugged: Binary': 'Unplugged: Binaar'
+            Artist Binary: Kunstnik Binaar
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Korduvad tsüklid
+          title: 'CS Fundamentals: Course D'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. Recommended for
+            3rd grade.
+        coursee-draft:
+          stage:
+            Digital Citizenship: Digitaalne kodakondsus
+            Build a Star Wars Game: Build a Star Wars Game
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept in Bee: Determine the Concept in Bee
+            Build a Play Lab Game: Build a Play Lab Game
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Present Your Project: Present Your Project
+            More Programming with Scratch: More Programming with Scratch
+            Private and Personal Information: Private and Personal Information
+            Internet: Internet
+            Crowdsourcing: "Ühistegevused"
+            Determine the Concept: Determine the Concept
+          title: 'CS Fundamentals: Course E'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. The course culminates
+            in a multi-day project. Recommended for 4th grade.
+        coursef-draft:
+          stage:
+            Digital Citizenship: Digitaalne kodakondsus
+            Envelope Variables: "Ümbriku muutujad"
+            Variables in Play Lab: Variables in Play Lab
+            Variables in Artist: Variables in Artist
+            For Loop Fun: For Loop Fun
+            For Loops in Bee: For Loops in Bee
+            For Loops in Artist: For Loops in Artist
+            'Functions with Parameters: Songwriting with Parameters': 'Functions with
+              Parameters: Songwriting with Parameters'
+            Functions with Parameters in Artist: Functions with Parameters in Artist
+            Functions with Parameters in Bee: Functions with Parameters in Bee
+            Explore Project Ideas: Explore Project Ideas
+            The Design Process: The Design Process
+            Build Your Project: Build Your Project
+            Revise Your Project: Revise Your Project
+            Presentation Your Project: Presentation Your Project
+            Try programming with Khan Academy: Try programming with Khan Academy
+            The Power of Words: The Power of Words
+            Songwriting with Parameters: Laulukirjutamine parameetritega
+          title: 'CS Fundamentals: Course F'
+          description_audience: ''
+          description_short: ''
+          description: In this course students will create programs to solve problems
+            and develop interactive games or stories they can share. The course culminates
+            in a multi-day project. Recommended for 5th grade.
+        classic-hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: KoodiTund 2013
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Hour of Code with Survey
+          description_audience: ''
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
+            tegelastega!
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies! This version includes pre and post surveys
+            to help us continue to improve Hour of Code. Ask your class to skip ahead
+            to the post survey 10 minutes before class ends.
+        hoc-impact-study:
+          stage:
+            Pre Hour of Code Survey: Pre Hour of Code Survey
+            Hour of Code 2013: KoodiTund 2013
+            Post Hour of Code Survey: Post Hour of Code Survey
+          title: Classic Maze with Survey
+          description_audience: ''
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
+            tegelastega!
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies! This version includes pre and post surveys
+            to help us continue to improve Hour of Code. Ask your class to skip ahead
+            to the post survey 10 minutes before class ends.
+        sports:
+          stage:
+            Sports: Sports
+          title: Tee MCode'iga oma spordimäng
+          description_audience: ''
+          description_short: Sega omavahel ja sobita kokku üle spordialade
+          description: Sega omavahel ja sobita kokku üle spordialade
+        2016_sciencePD-phase2b:
+          stage:
+            Welcome!: Tere tulemast!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Kokkuvõte
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        2016_sciencePD_phase2b:
+          stage:
+            Welcome!: Tere tulemast!
+            Review StarLogo Nova: Review StarLogo Nova
+            Reviewing the Modules: Reviewing the Modules
+            Advanced StarLogo Nova: Advanced StarLogo Nova
+            Remixing Phases 1 and 2: Remixing Phases 1 and 2
+            Thinking Ahead to Implementation: Thinking Ahead to Implementation
+            Wrap-Up: Kokkuvõte
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd3-2016:
+          stage:
+            Welcome Back!: Welcome Back!
+            The TLO: The TLO
+            Prep With Your Modules: Prep With Your Modules
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 3: Algorithms': 'Lessons 1 - 3: Algorithms'
+            'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design': 'Lessons
+              4 - 6 : Procedural Abstraction and Top-Down Design'
+            'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons
+              7 - 9: Documentation, Simple Loops, and Random Numbers'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
+          title: CSP Unit 3 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS
+              (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real
+              World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real
+              World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons
+              5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Tere tulemast!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Kokkuvõte
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Tere tulemast!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Kokkuvõte
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

@@ -26,6 +26,7 @@
       "rect": null,
       "comment_Drawing": null,
       "var sprite = createSprite": null,
+      "isTouching": null,
       "setAnimation": null,
       "rotationSpeed": null,
       "velocityX": null,
@@ -70,9 +71,14 @@
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "project_template_level_name": "CSD U3 abstraction jumping template",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

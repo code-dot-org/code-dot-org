@@ -15,19 +15,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for students of all ages, created by a variety of partners.
 
-**[Student-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/learn") %>)**
+**[Student-guided Hour of Code tutorials:](<%= resolve_url('/learn') %>)**
 
   * ٹیچرز کے لیے پریپ-ٹائم میں تیاری کرنے ضرورت ہوگی
   * یہ سیلف-گائیڈڈ ہوں گے – جو اسٹوڈینٹس کو ان کی رفتار اور اسکل-لیول کے مطابق انہیں کام کرنے کی سہولت دیں گے۔
 
-**[Teacher-guided Hour of Code tutorials:](<%= resolve_url("https://code.org/educate/teacher-led") %>)**
+**[Teacher-guided Hour of Code tutorials:](<%= resolve_url('https://code.org/educate/teacher-led') %>)**
 
   * Are lesson plans that require some advance teacher preparation
   * Are categorized by grade level *and* by subject area (eg Math, English, etc)
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
@@ -57,7 +57,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
   * Code.org کی اوریجنل ویڈیو پلے کریں، جس میں بل گیٹس، مارک زوکربرگ، اور NBA اسٹار کرس بوش نمایاں کردار ہیں۔ (اس کے [ 1 منٹ](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [ 5 منٹ](https://www.youtube.com/watch?v=nKIu9yen5nc)، اور [ 9 منٹ](https://www.youtube.com/watch?v=dU1xS07N-FA) پر مبنی ورژن ہیں)
   * د ی [آور-آف-کوڈ 2013 ](https://www.youtube.com/watch?v=FC5FbmsH4fw)، لانچ کریں، یا د ی <% if @country == 'uk' %> [ آور-آف-کوڈ 2015 ویڈیو](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> آور-آف-کوڈ 2015 ویڈیو</a> چلائیں۔ <% end %>
   * [صدر اوباما نے تمام اسٹوڈینٹس کو کمپیوٹر سائنس سیکھنے پر زور دیا](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](<%= resolve_url('https://code.org/inspire') %>) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -73,7 +73,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Direct students to the activity**
 
-  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 [col-33]
 
@@ -91,7 +91,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **What to do if a student finishes early?**
 
-  * اسٹوڈینٹس تمام ٹیٹوریئلز دیکھ سکتے ہیں اور دوسری کوئی اور آور-آف-کوڈ ایکٹیویٹی کرسکتے ہیں [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * یا، جو اسٹوڈینٹس اپنا کام جلد مکمل کرلیں، اُن سے کہیں کہ وہ اپنے کلاس-میٹس (ہم جماعت ساتھیوں) کی مدد کریں جن کو ایکٹیویٹی میں مشکلات پیش آر ہی ہیں۔
 
 [col-33]

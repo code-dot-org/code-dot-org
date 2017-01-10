@@ -3,7 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
-import errorHandler from '../errorHandler';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 import commonMsg from '@cdo/locale';
@@ -12,6 +11,7 @@ import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
@@ -30,7 +30,6 @@ const WebLab = function () {
   this.studioApp_ = null;
 
   consoleApi.setLogMethod(this.log.bind(this));
-  errorHandler.setLogMethod(this.log.bind(this));
 
   // store reference to singleton
   webLab_ = this;
@@ -125,7 +124,6 @@ WebLab.prototype.init = function (config) {
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
-  config.showInstructionsInTopPane = true;
   config.noInstructionsWhenCollapsed = true;
 
   config.pinWorkspaceToBottom = true;
@@ -168,6 +166,8 @@ WebLab.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
+  this.readOnly = config.readonlyWorkspace;
+
   function onAddFileHTML() {
     this.brambleHost.addFileHTML();
   }
@@ -177,9 +177,11 @@ WebLab.prototype.init = function (config) {
   }
 
   function onAddFileImage() {
-    dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
-      showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
-      useFilesApi: config.useFilesApi
+    window.dashboard.project.autosave(() => {
+      dashboard.assets.showAssetManager(null, 'image', this.loadFileEntries.bind(this), {
+        showUnderageWarning: !this.studioApp_.reduxStore.getState().pageConstants.is13Plus,
+        useFilesApi: config.useFilesApi
+      });
     });
   }
 
@@ -192,7 +194,9 @@ WebLab.prototype.init = function (config) {
   }
 
   function onRefreshPreview() {
-    this.brambleHost.refreshPreview();
+    window.dashboard.project.autosave(() => {
+      this.brambleHost.refreshPreview();
+    });
   }
 
   let inspectorOn = false;
@@ -288,23 +292,24 @@ WebLab.prototype.renderFooterInSharedMode = function (container, copyrightString
     });
   }
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter,{
-    i18nDropdown: '',
-    copyrightInBase: false,
-    copyrightStrings: copyrightStrings,
-    baseMoreMenuString: commonMsg.builtOnCodeStudio(),
-    rowHeight: WEBLAB_FOOTER_HEIGHT,
-    style: {
-      fontSize: 18
-    },
-    baseStyle: {
-      width: '100%',
-      paddingLeft: 0
-    },
-    className: 'dark',
-    menuItems: menuItems,
-    phoneFooter: true
-  }), footerDiv);
+  ReactDOM.render(
+    <SmallFooter
+      i18nDropdown={''}
+      privacyPolicyInBase={false}
+      copyrightInBase={false}
+      copyrightStrings={copyrightStrings}
+      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
+      rowHeight={WEBLAB_FOOTER_HEIGHT}
+      style={{fontSize:18}}
+      baseStyle={{
+        width: '100%',
+        paddingLeft: 0
+      }}
+      className="dark"
+      menuItems={menuItems}
+      phoneFooter={true}
+    />,
+    footerDiv);
 };
 
 WebLab.prototype.getCodeAsync = function () {
@@ -390,11 +395,17 @@ WebLab.prototype.registerBeforeFirstWriteHook = function (hook) {
 
 // Called by Bramble when project has changed
 WebLab.prototype.onProjectChanged = function () {
-  // let dashboard project object know project has changed, which will trigger autosave
-  dashboard.project.projectChanged();
+  if (!this.readOnly) {
+    // let dashboard project object know project has changed, which will trigger autosave
+    dashboard.project.projectChanged();
+  }
 };
 
-// Called by Bramble host to set our reference to its interfaces
+/*
+ * Called by Bramble host to set our reference to its interfaces
+ * @param {!Object} bramble host interfaces
+ * @return {String} current project id
+ */
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
@@ -403,6 +414,12 @@ WebLab.prototype.setBrambleHost = function (obj) {
     }
   });
   this.brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
+  return dashboard.project.getCurrentId();
+};
+
+// Called by Bramble host to get page constants
+WebLab.prototype.getPageConstants = function () {
+  return this.studioApp_.reduxStore.getState().pageConstants;
 };
 
 /**

@@ -46,4 +46,8 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Επιλέξτε μια δραστηριότητα για την Ώρα του Κώδικα και [ελέγξτε αυτόν τον οδηγό πώς-να](%= resolve_url('/how-to') %).
 
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
+
 <%= view 'popup_window.js' %>

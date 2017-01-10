@@ -54,8 +54,8 @@ class Grid < Blockly
     if read_attribute(:maze).present?
       properties.update(self.class.parse_maze(read_attribute(:maze)))
       write_attribute(:maze, nil)
-    elsif self.maze_data.present?
-      self.properties.update(self.class.parse_maze(maze_data))
+    elsif maze_data.present?
+      properties.update(self.class.parse_maze(maze_data))
       self.maze_data = nil
     end
   end

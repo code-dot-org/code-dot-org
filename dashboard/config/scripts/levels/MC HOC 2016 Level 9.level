@@ -39,9 +39,9 @@
     "level_verification_timeout": "60000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_message_override": "Oh No! You need to stop ALL of the zombies in order to save the village. Get the Iron Golem to help you!",
-    "contained_level_names": null,
     "use_score": "false",
-    "use_player": "false"
+    "use_player": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 9: Protect the town from Zombies\r\nYou need help killing all these zombies. Code the Iron Golem to fight them with you. Keep the village safe!\r\n\r\nWhen Run\r\nRepeat 5\r\nSpawn Zombie  North\r\nSpawn Zombie South\r\nSpawn Zombie West\r\nSpawn Zombie East\r\nWait 5 seconds\r\nSpawn Iron Golum\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked (used)\r\nDie\r\nWhen Day\r\nDie\r\n\r\nIron Golem\r\nWhen spawned\r\nRepeat Forever\r\nMove toward Zombie\r\nWhen touched\r\nAttack\r\n\r\nTeaches: Using multiple entities, practice loops",

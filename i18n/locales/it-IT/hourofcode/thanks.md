@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Grazie per esserti iscritto per organizzare un evento dell'Ora del Codice!
 
-Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Cosa puoi fare ora?
+Stai facendo sì che gli studenti di tutto il mondo possano provare un'Ora del Codice che può *cambiare il resto delle loro vite*, <%= campaign_date('full') %>. Ci sentiremo presto per i nuovi corsi ed altri aggiornamenti interessanti. Cosa puoi fare ora?
 
 ## 1. Diffondi la notizia
 
@@ -45,5 +45,9 @@ Ti sei appena unito al movimento dell'Ora del Codice. Dillo ai tuoi amici con **
 ## 7. Plan your Hour of Code
 
 Choose an Hour of Code activity and [review this how-to guide](%= resolve_url('/how-to') %).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

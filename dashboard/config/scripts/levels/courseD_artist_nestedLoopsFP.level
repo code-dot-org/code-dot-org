@@ -32,7 +32,7 @@
     "never_autoplay_video": "false",
     "instructions_important": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"courseD_artist_nestedLoopsFP_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/d9958e63ee312b0931fdd1ab1fe54a78/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using similar code to other levels in this series, but with circles (repeat 360 times: move forward 1, turn 1 degree).\\n\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/38366708f6c9bce7d409717657140817/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"<img src=\\\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/d0dec117b7b795a92e0c9a16a5eee4a1/courseD_artist_nestedLoopsFP.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a hexagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"courseD_artist_nestedLoopsFP_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d9958e63ee312b0931fdd1ab1fe54a78/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using similar code to other levels in this series, but with circles (repeat 360 times: move forward 1, turn 1 degree).\\n\",\"hint_id\":\"courseD_artist_nestedLoopsFP_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/38366708f6c9bce7d409717657140817/courseD_artist_nestedLoopsFP.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"<img src=\\\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\\\" width=\\\"200px\\\"/>\\n\\nThis image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.\",\"hint_id\":\"courseD_artist_nestedLoopsFP_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d0dec117b7b795a92e0c9a16a5eee4a1/courseD_artist_nestedLoopsFP.mp3\"}]",
     "markdown_instructions": "Now it's your turn.  Take the skills you have learned and make something that you love!\r\n\r\nNeed an idea?  Try to make one of these:\r\n\r\n<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/><img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/><img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\r\n",
     "contained_level_names": null
   },
@@ -59,6 +59,14 @@
         <block type="draw_turn_by_constant">
           <title name="DIR">turnLeft</title>
           <title name="VALUE">90</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">???</title>
         </block>
         <block type="controls_repeat">
           <title name="TIMES">???</title>

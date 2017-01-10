@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire school district
+# Как да представите Hour of Code на областно ниво
 
 ## Нека всяко училище да се включи, и всеки ученик да се научи!
 

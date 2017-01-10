@@ -63,7 +63,7 @@
     "debugger_disabled": "false",
     "show_d_pad": "false",
     "instructions_important": "false",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",

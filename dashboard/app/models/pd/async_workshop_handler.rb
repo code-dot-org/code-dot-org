@@ -19,18 +19,18 @@ class Pd::AsyncWorkshopHandler
     # and enqueue the job in SQS
     if Rails.env.production? || Rails.env.test?
       raise "CDO.pd_workshop_queue_url is required on #{Rails.env}" unless CDO.pd_workshop_queue_url
-      self.workshop_queue.enqueue(op.to_json)
+      workshop_queue.enqueue(op.to_json)
     elsif CDO.pd_workshop_queue_url
       # Other environments may have it specified (e.g. adhoc), but it's not required.
-      self.workshop_queue.enqueue(op.to_json)
+      workshop_queue.enqueue(op.to_json)
     else
       # Otherwise perform the job immediately (e.g. on development)
-      self.handle_operation(op)
+      handle_operation(op)
     end
   end
 
   def self.process_ended_workshop(workshop_id)
-    self.process_workshop(workshop_id, ACTION_END)
+    process_workshop(workshop_id, ACTION_END)
   end
 
   # Returns a thread-local SQS queue for handling asynchronous workshop operations

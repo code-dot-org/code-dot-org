@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 318,
   "properties": {
-    "skin": "collector",
-    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1}],[{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":3,\"range\":3},{\"tileType\":1,\"value\":1,\"range\":1},{\"tileType\":1,\"value\":2,\"range\":2},{\"tileType\":1,\"value\":1,\"range\":1}]]",
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":4,\"possibleFeatures\":[0,1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"value\":3,\"range\":3,\"possibleFeatures\":[0,1],\"startsHidden\":true},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[0,1],\"startsHidden\":true},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":4,\"possibleFeatures\":[0,1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,14 +22,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "1",
+    "start_direction": "3",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "This puzzle should randomly populate the entire field with wheat and potatoes. The puzzle should also start with the following event blocks: up arrow, down arrow, left arrow, right arrow, and space bar. Can we check to make sure students are using while loop?",
+    "instructions": "Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "step_speed": "2",
-    "ideal": "11",
-    "markdown_instructions": "My navigation system is still broken! Please help, I need to collect 30 potatoes.",
+    "ideal": "9",
+    "markdown_instructions": "*\"Let's take this one step further!\"*\r\n\r\nCan you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `while path ahead` loop to move the farmer down each piece of the spiral.\",\"hint_id\":\"grade3_RunningFarm_6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4724ac2825e10effef27a4e96a825273/grade3_RunningFarm_6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.\",\"hint_id\":\"grade3_RunningFarm_6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c59579b3b985fbebc622052d523c00d/grade3_RunningFarm_6.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -44,20 +46,64 @@
           <title name="DIR">moveForward</title>
         </block>
         <block type="maze_turn">
-          <title name="DIR">turnRight</title>
+          <title name="DIR">turnLeft</title>
         </block>
-        <block type="collector_collect"/>
-        <block type="maze_fill"/>
-        <block type="controls_repeat">
-          <title name="TIMES">5</title>
+        <block type="harvester_ifAtCrop">
+          <title name="LOC">Corn</title>
         </block>
-        <block type="collector_whileCollectible"/>
-        <block type="collector_ifCollectible"/>
+        <block type="harvester_ifAtCropElse">
+          <title name="LOC">Corn</title>
+        </block>
+        <block type="harvester_corn"/>
+        <block type="harvester_pumpkin"/>
+        <block type="harvester_whileHasCrop">
+          <title name="LOC">Corn</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">6</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">6</title>
+              <statement name="DO">
+                <block type="maze_untilBlocked">
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                      <next>
+                        <block type="harvester_ifAtCrop">
+                          <title name="LOC">Corn</title>
+                          <statement name="DO">
+                            <block type="harvester_whileHasCrop">
+                              <title name="LOC">Corn</title>
+                              <statement name="DO">
+                                <block type="harvester_corn"/>
+                              </statement>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnLeft</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="harvester_pumpkin"/>
+              </next>
+            </block>
+          </next>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

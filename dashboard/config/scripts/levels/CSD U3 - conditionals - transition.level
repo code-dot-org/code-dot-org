@@ -38,7 +38,7 @@
     "palette_category_at_start": "variables",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "code_functions": {
       "draw": null,
@@ -91,11 +91,9 @@
       "comment_Sprites": null,
       "console.log": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "FyQJ/JALFhLnANEylDFKTu/V47NDcD8pqxKuAWP3q0P/9deWp4hqhlmJHvYi\nzKKd\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

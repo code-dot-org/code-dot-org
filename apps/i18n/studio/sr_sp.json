@@ -113,7 +113,7 @@
   "dropletBlock_setDroidSpeed_description": "Поставља брзину дроида.",
   "dropletBlock_setDroidSpeed_param0": "брзина",
   "dropletBlock_setDroidSpeed_param0_description": "Вредности за брзину ('случајан избор', 'споро', 'нормално' или 'брзо').",
-  "dropletBlock_setSpriteEmotion_description": "Postavi glumčevo raspoloženje",
+  "dropletBlock_setSpriteEmotion_description": "Подеси расположење.",
   "dropletBlock_setSpritePosition_description": "Одмах помера играча на позицију.",
   "dropletBlock_setSpriteSpeed_description": "Sets the speed of an actor",
   "dropletBlock_setSprite_description": "Sets the actor image",
@@ -841,5 +841,17 @@
   "failedMultiplyCharactersTimeoutBlockly": "Морате да ухватите 20 Миш-дроида. Користите \"додај Миш-дроида\" наредбу у \"кад ухватиш Миш-дроида\" догађај како би додали два или више Миш-дроида када га ухватите.",
   "failedMultiplyCharactersTimeoutGotSome": "Честитамо, написали сте програм за прављење Миш-дроида. Можете да пређете на следећу игру или д апокушате поново да дођете до 20 Миш-дроида. Олакшајте себи посао тако што направите што више Миш-дроида! Притисните и држите стрелицу на вашој тастатури да се крећете брже",
   "failedChangeSettingTimeout": "Ухвати три пилота побуњеника како би наставио даље.",
-  "failedChangeSettingSettings": "Играј игру другачије. Промени дроида и подеси му брзину."
+  "failedChangeSettingSettings": "Играј игру другачије. Промени дроида и подеси му брзину.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
+  "saySpriteChoices_59": "Ouch!"
 }

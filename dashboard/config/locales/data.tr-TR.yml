@@ -316,9 +316,30 @@
           have to attach the new "throw new ball" block in more than one place. Also,
           try changing the scene or the speed of the hand and the ball and see how
           many points you can score before your opponent scores twice!
-        bounce_12_basketball: Create your own Basketball game. You can change all
-          the rules. When you're done, click Finish to let friends try your game on
-          their phones.
+        bounce_12_basketball: Kendi basketbol oyununu oluştur. Bütün kuralları değiştirebilirsin.  Oluşturduğunda,
+          bitir düğmesine tıklayarak oyununu arkadaşlarının telefonlarında oynaması
+          için paylaş.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
+          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
+          until it hits the flag.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice!
+        bounce_11_sports: You can now attach blocks to the "when run" block. You have
+          to attach the new "throw new ball" block in more than one place. Also, try
+          changing the scene or the speed of the hand and the ball and see how many
+          points you can score before your opponent scores twice!
+        bounce_12_sports: Kendi oyununu yarat! Burada sen ne dersen o olur bütün kuralları
+          değiştirebilirsin, yaratıcı ol! Tamamladığında arkadaşlarının telefonlarında
+          oyunu denemeleri için Bitir düğmesine bas.
         bounce_1: '"sol ok tıklandığında" komutuna blok ekleyin ve çalıştırın. Sol
           ok tuşunu kullanarak hedefi sola doğru hareket ettirip bitirmeye çalışın.'
         bounce_2: '"sol ok tıklandığında" ve "sağ ok tıklandığında" komutlarına bloklar
@@ -593,19 +614,19 @@
       name:
         maze_intro: 'Labirent: Tanıtım'
         artist_intro: 'Ressam: Giriş'
-        farmer_intro: "Çiftçi girişi"
+        farmer_intro: "Çiftçi tanıtım"
         flappy_intro: Flappy Tanıtım
         loop_times: Bloğu tekrarlayın
         loop_until: Blok kadar tekrarlayın
-        if: if bloğu
-        if_else: "İf/else bloğu"
-        if_else_scrat: "İf/else bloğu"
+        if: Eğer bloğu
+        if_else: Eğer/değilse bloğu
+        if_else_scrat: Eğer/değilse bloğu
         function: Fonksiyonlar
         loop_while: while bloğu
         loop_for: Sayaç bloğu
         parameters: Fonksiyon parametreleri
         hoc_wrapup: Kod saatini tamamla
-        Unplug1: CS nedir?
+        Unplug1: CS (Bilgisayar Bilimleri) nedir?
         Unplug2: Sayısal Düşünme
         Unplug3: Grafikli Kağıdıyla Programlama
         Unplug4: Algoritmalar
@@ -666,7 +687,7 @@
         C3_internet: "İnternet"
         C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
         C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
-        C3_songwriting_with_parameters: Değiştirgenlerle Şarkı Yazma
+        C3_songwriting_with_parameters: Parametrelerle Şarkı Yazmak
         C4_intro: Giriş
         C4_loops_zombie: Döngüler
         C4_bee_conditional: Arı Koşullandırmaları
@@ -676,8 +697,8 @@
         C4_for_loops_bee: For Döngüleri
         C4_for_loops_no_bee: For Döngüleri
         C4_math_artist: Matematik ile Sanatçı'yı programla
-        C4_function_edit: Düzenleme fonksiyonları
-        C4_function_create: Oluşturma Fonksiyonları
+        C4_function_edit: Fonksiyonları düzenleme
+        C4_function_create: Fonksiyonları Oluşturma
         C4_function_parameters: Fonksiyon parametreleri
         C4_conditionals: Koşullar
         C4_unplugged_algorithms: Tangramlar ile algoritmalar
@@ -711,6 +732,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -781,13 +805,18 @@
         iceage_intro: Buz Devri Kodlama Saati - Giriş
         iceage_events: Buz Devri Kodlama Saati - Olaylar
         iceage_repeat: Buz Devri Kodlama Saati - Tekrarlayan İfadeler
+        mc_2016_intro: Minecraft Kodlama Saati - Giriş
+        mc_2016_loops: Minecraft Kodlama Saati - Döngüler
+        mc_2016_events: Minecraft Kodlama Saati - Olaylar
+        mc_2016_spawn: Minecraft Kodlama Saati - Spawn
+        mc_2016_congrats: Minecraft Kodlama Saati - Tebrikler
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
         run: Programınızı denemek için "Çalıştır" düğmesine basın
         watch_again: Videoyu tekrar izlemek için burayı tıklayın
-        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebildiniz
-          mi?
+        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebilir
+          misin?
         show_code_explanation: Hazırladığınız programın kodlarını görmek için buraya
           tıklayın
         instructions_repeat_explanation: Her bulmaca için gerekli talimatlar burada
@@ -798,7 +827,7 @@
           ata" bloğunu "hikaye başladığında" bloğuna ekleyin
         studio_say_text: Karakterinin ne söylemesini istiyorsan tırnak işaretleri
           arasına yaz
-        jigsaw_click: Bu bloğu tıklayın!
+        jigsaw_click: Bu bloğa tıklayın!
         move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
           "Çalıştığında" bloğunun altına ekleyin
         turn_elsa: '"Dön" bloğunu kullanarak Elsa''yı döndürün. Açılan menüden Elsa''nın

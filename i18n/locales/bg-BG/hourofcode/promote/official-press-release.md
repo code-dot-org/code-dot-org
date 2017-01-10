@@ -8,9 +8,9 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 # Примерно съобщение за пресата за избрани длъжностни лица
 
-For Immediate Release  
+За незабавно пускане   
 [**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+контакт: [**Информация за контакт**]  
   
 
 

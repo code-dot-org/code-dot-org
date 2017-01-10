@@ -38,6 +38,10 @@
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
+  csedweek_og_title: L'heure du code arrive
+  csedweek_og_description: L’heure de Code est un mouvement mondial qui touche des
+    dizaines de millions d’étudiants de tous âges dans plus de 180 pays et plus de
+    45 langues.
   hoc2014_heading: Rejoignez l'<a href="http://hourofcode.com">Heure de Code</a><br/>Du
     8 au 14 décembre 2014<br/>
   hoc2014_students: "Élèves"
@@ -268,10 +272,12 @@
   continue_learning_header: Continuer à apprendre au delà d’une Heure
   continue_learning_body: Il y a beaucoup d'options. Tu peux apprendre en ligne, dans
     une école près de chez toi ou à l'occasion d’un stage en été.
+  learn_code_studio: Essayez les cours de Code Studio
   learn_next_level: Essaie un autre cours de Code Studio
   learn_online: Essaie d'autres cours en ligne
   learn_classes: Trouve des cours près de chez toi
-  hoc_is_here: "#HourOfCode L'Heure de Code est là — jettes-y un œil&#160;! @codeorg"
+  learn_back_to_minecraft: Continuer à apprendre avec Minecraft
+  hoc_is_here: 'L''Heure du Code #HourOfCode revient du 5 au 11 décembre. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Je viens de faire l''Heure de Code #HourOfCode — jettes-y un œil
     ! @codeorg'
   just_did_course1: Je viens de finir le Cours 1 — jettes-y un œil ! @codeorg
@@ -282,6 +288,8 @@
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
     pour en savoir plus.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Apprendre une Heure de Code
   beyond_hoc: Au delà d'une Heure
   what_gender: De quel sexe es-tu ?
@@ -365,6 +373,7 @@
   homepage_action_text_volunteers: Bénévoles techniques recherchés
   homepage_action_text_codevideo: Voir la vidéo
   homepage_action_text_teachervideo: Voir la vidéo
+  homepage_action_text_watchvideo: Voir la vidéo
   homepage_action_text_girlvideo: Encourager une fille
   homepage_action_text_learn: Commencer à apprendre
   homepage_action_text_signpetition: Signez la pétition
@@ -462,8 +471,10 @@
   class_submission_level_college: Université
   class_submission_level_vocational: Professionnelle
   class_submission_languages_other: Autre(s) langue(s)
-  inspirational_videos_more: Plus de <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">vidéos
-    inspirantes</a> par des personnes influentes et des célébrités.
+  videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos inspirantes</a>
+    qui comprennent des modèles et de célébrités
+  careers_page_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos inspirational</a>
+    mettant en vedette les professionnels dans les domaines de la technologie
   playlab_choose_theme: Choisis ton thème de Labo de jeux
   playlab_classic_title: Classique
   playlab_gumball_title: Le monde incroyable de Gumball
@@ -488,8 +499,75 @@
   mc_gradelevel: 6 ans et plus
   mc_platformtext: Navigateurs récents, smartphones, tablettes
   mc_specs: Plusieurs langages | Navigateurs modernes et tablettes | De 6 à 106 ans
+  minecraft_designer: Concepteur de Minecraft
+  minecraft_adventurer: Aventurier de Minecraft
+  minecraft_tutorials: Minecraft heure de Code tutoriels
+  minecraft_specs: Beaucoup de langues | Les navigateurs modernes et comprimés | Grades
+    2 +
+  minecraft_designer_description: Programmez des animaux et d'autres créatures Minecraft
+    dans votre propre version de Minecraft.
+  minecraft_designer_button: Commencer
+  minecraft_adventurer_description: Utiliser le code pour prendre Alex ou Steve dans
+    une aventure.
+  minecraft_adventurer_button: Commencer
+  minecraft_no_internet: Pas d'internet ?
+  minecraft_download_adventurer: Télécharger la version offline de Minecraft aventurier.
   minecraft_subtitle: Une Heure de Code Minecraft
+  sports_page_title: Heure du Code Sports
+  sports_og_title: Heure du Code tutoriels Sports
+  sports_og_description: Choisir entre jouer au basket ou mélanger et combiner les
+    autres sports.
+  sports_title: Coder ton propre jeu de sports
+  sports_watch_video: Voir la vidéo
+  sports_video_title: Persévère. Tout le monde peut apprendre.
+  sports_select_theme: Choisir le thème de ton tutoriel
+  sports_basketball_title: Faire un match de basket
+  sports_all_sports_title: Coder votre propre sport
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Avant de commencer, regarde une de ces vidéos pour t'inspirer
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Encourager une fille
+  video_title_cs_intro: Introduction à la science de l'informatique
+  video_title_schools_dont_teach: Ce que la plupart des écoles n'enseignent pas
+  video_title_obama: Le président Obama à propos de l'informatique
+  video_title_hoc_is_here: L'Heure du Code est là - Tout le monde peut apprendre
+  video_title_anybody_can_learn: Tout le monde peut apprendre
+  video_title_draymond_green: Heure du Code avec Draymond Green
+  video_title_russell_okung: Heure de Code avec Russell Okung
+  video_title_real_madrid: Heure de Code avec le Real Madrid
+  video_title_marco_belinelli: Heure de Code avec Marco Belinelli
+  video_title_chris_bosh: Chris Bosh à propos de l'informatique
+  video_1min: 1 minutes
+  video_2min: 2 minutes
+  video_5min: 5 minutes
   speak_another_language: Parles-tu d'autres langues ?
   help_translate: Aidez-nous a traduire.
   no_internet: Pas d'internet ?
@@ -798,18 +876,19 @@
   dashboard_sections_no_move: Non, je veux déplacer le/les élève(s) afin qu'ils ne
     se trouvent que dans la nouvelle section.
   dashboard_sections_move_students: Déplacer les élèves
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
-  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
-    in this course during the week of December 3-7, due to the unprecedented level
-    of traffic our site will receive for the Hour of Code.  You may still assign the
-    course and give all students certificates for participating.  (Most teachers <a
-    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
-    are thrilled by the number of teachers and students participating and we're sorry
-    we won't be able to save everything.  If your class wants to go further, you can
-    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
-     Our teacher dashboard will let you track your student's progress every other
-    week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_hoc_script_desc: Participant à l’heure du Code ?
+  dashboard_sections_assign_hoc_script_msg: Veuillez noter que nous n’enregistrerons
+    pas votre progression dans ce cours pendant la semaine du 5 au 11 décembre, en
+    raison du niveau sans précédent du trafic vers notre site recevront penant l’Heure
+    du Code.  Vous pouvez toujours affecter le cours et donner à tous les étudiants
+    des certificats de participation.  (La plupart enseignants <a href='%{certificate_url}'>impriment
+    ceux-ci à l’avance</a>). <br/> <br/> Nous sommes ravis par le nombre d’enseignants
+    et d’étudiants qui participent et nous sommes désolés de ne pas être en mesure
+    d’enregistrer tout. Si votre classe veut aller plus loin, vous pouvez poursuivre
+    au-delà de l'Heure du Code et enseigner un cours comme comme Informatique de base.  Notre
+    tableau de bord enseignant vous permettra de suivre les progrès de vos élèves
+    toutes les deux semaines toute l’année.
+  dashboard_sections_assign_activity: Assigner un cours
   dashboard_error_none_selected: Vous n'avez sélectionné aucun élève à déplacer. Veuillez
     sélectionner au moins un élève.
   dashboard_error_other_section: Si vous déplacez des élèves entre vos propres sections,
@@ -959,33 +1038,59 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Pour en savoir plus
   dashboard_announce_try_now_button: Essaie maintenant
-  dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_host_an_hour_button: Organiser une Heure du Code
+  dashboard_announce_watch_video_button: Voir la vidéo
   dashboard_announce_petition: Comme enseignant, vous ouvrez la voie à un mouvement
     visant à donner à chaque élève de chaque école la possibilité d’apprendre l’informatique.
     Maintenant, il est temps de vous faire entendre par vos représentants. Cette semaine,
     les responsables de l’éducation, 28 gouverneurs et les PDG des plus grandes entreprises
     d'Amérique se sont réunis pour rédiger une lettre ouverte demandant au Congrès
-    américain de financer l’enseignement de l'informatiques du K-12.
+    américain de financer l’enseignement de l'informatique pour les élèves jusque
+    18 ans.
   dashboard_announce_petition_button: Ajoutez votre nom
-  dashboard_announce_all: Tenu à jour avec de nouvelles fonctionnalités et mises à
-    jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_all: Tenez-vous au courant des nouvelles fonctionnalités et des
+    mises à jour sur notre blog de l’enseignant. <a href='%{teacher_blog_url}' target='_blank'>Voir
     les anciennes annonces.</a>
-  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
-    will start teaching computer science during the Hour of Code this December 5-11.
-    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-    target='_blank'>Register your Hour of Code event</a> and let another teacher know
-    that anyone can start teaching computer science.
+  dashboard_announce_hoc_launch: Des milliers d’enseignants de plus de 180 pays commenceront
+    à enseigner l'informatique pendant l’Heure du Code ce 5 décembre 2011. Nous comptons
+    sur vous pour nous permettre d’atteindre plus d'élèves que jamais auparavant.
+    <a href='%{signup_url}' target='_blank'>Enregistrer votre événement Heure de Code</a>
+    pour faire savoir aux autres enseignants que n’importe qui peut commencer à enseigner
+    l'informatique.
+  dashboard_announce_mc_launch: Un de nos didacticiels les plus populaires a maintenant
+    une suite! Le tout nouveau Designer pour l'Heure du Code Minecraft permet aux
+    étudiants de créer leurs propres règles dans le monde Minecraft. Ils peuvent créer
+    une expérience unique de Minecraft, puis le partager avec des amis ou jouer sur
+    leurs téléphones. Faites-le avec votre classe pour l'Heure du Code.
+  dashboard_announce_hoc_scaling_progress: Veuillez noter que nous n'enregistrons
+    pas les progression des étudiants dans ce cours du 3 au 11 décembre en raison
+    du niveau de traffic que notre site atteint pour l'Heure du Code à cette période.
+    Vous pourrez toujours voir les progressions des étudiants d'avant le 3 décembre.
+    Nous sauverons à nouveau les progressions comme d'habitude après cette semaine.
+  dashboard_announce_how_code_studio: Vous n’avez besoin d’aucune expérience préalable
+    pour commencer à enseigner l’informatique à votre classe. Code.org propose des
+    programmes d’études, des plans de cours, des programmes d’apprentissage professionnels
+    de haute qualité et des tonnes d’excellents outils pour touts les niveaux niveaux
+    — tout ce dont vous avez besoin, gratuitement. Vous vous demandez où commencer ?
+    Téléchargez <a href='%{video_download_url}'> cette vidéo</a> !
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
-  host_an_hour: Host an hour
+  host_an_hour: Héberger une heure
   learn_banner_title: Rejoins-nous pour l'Heure de Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.
+  learn_banner_desc: L’Heure du Code est un mouvement mondial qui atteint de plus
+    100 millions d’étudiants dans plus de 180 pays. N’importe qui, n’importe où peut
+    organiser un événement Heure du Code. Aidez-nous à donner à chaque élève la possibilité
+    d’apprendre l’informatique ! Les organisateurs peuvent suivre notre <a href='%{how_to_url}'
+    target='_blank'> guide pratique</a> pour l’enseignement d’une Heure du Code et
+    inspirer les élèves avec <a href='%{videos_url}' target='_blank'> ces vidéos</a>.
   learn_more: En savoir plus
   learn_sign_up_description: Enregistrez-vous pour participer à l'Heure de Code pendant
     la Semaine de l'enseignement de l'informatique.
@@ -1119,10 +1224,15 @@
   cspunit4_name: Principes de l'informatique, unité 4
   cspunit5_name: Principes de l'informatique, unité 5
   cspunit6_name: Principes de l'informatique, unité 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unité 1: Internet'
   csp2_name: 'Unité 2: L’Information numérique'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Test complet - 50 questions
   cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
   cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
@@ -1141,14 +1251,22 @@
   iceage_name: L’âge de Glace
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Calculs
   hoc_category_name: Heure de Code
   csf_category_name: Fondamentaux d'informatique
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Principes de l'informatique
   csp17_category_name: Principes de CS 16-17
   cspexams_category_name: Test d'entrainement aux principes du CS
+  research_studies_category_name: Research Studies
   applab_name: Labo des applis
-  applab_gradelevel: "Âge recommandé : 13+"
+  basketball_name: Faire un match de basket
+  sports_name: Sports
+  applab_gradelevel: "Âge recommandé: 13 ans et plus"
   applab_shortdescription_congrats: App Lab est un environnement de programmation
     avec lequel vous pouvez créer des applications simples. Concevez une application,
     codez-la avec des blocs ou du JavaScript, puis partagez-la en quelques secondes
@@ -1904,9 +2022,9 @@
     tout en affûtant leurs compétences en mathématiques et en sciences.
   compatibility_hide_this_warning: Cacher l'avertissement
   compatibility_unsupported_browser: Votre navigateur n'est pas supporté. Merci de
-    mettre a jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de
-    nos explorateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
-    avoir des erreurs de fonctionnalité.
+    mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de
+    nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
+    avoir des choses qui ne fonctionnent pas.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1915,22 +2033,3 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
-    featuring role models and celebrities
-  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
-    featuring professionals in technology fields
-  dashboard_announce_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-    Due to high traffic from millions of students doing the Hour of Code, <b>Code
-    Studio will not save or report student progress on theses course from December
-    3-11</b>. We recommend doing an Hour of Code activity with your classroom to celebrate
-    the Hour of Code during Computer Science Education Week. While our own Hour of
-    Code tutorials will also not save progress that week, students can still do the
-    full tutorials and earn a certificate.'
-  csd1_name: 'Unit 1: Computers and Logic'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
-  csd4_name: 'Unit 4: The Design Process'
-  hoc-impact-study_name: Classic Maze with Survey
-  flappy-impact-study_name: Flappy Code with Survey
-  csd_category_name: 'Under Development: CS Discoveries'
-  research_studies_category_name: Research Studies

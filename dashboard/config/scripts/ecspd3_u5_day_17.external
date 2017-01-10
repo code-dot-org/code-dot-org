@@ -1,7 +1,7 @@
 name 'ECSPD3-u5 day 17'
 css 'unplugged'
 markdown <<MARKDOWN
-# Unit 5 Lessons > Days 17
+# Unit 5 Lessons > Day 17
 
 ## Concepts Covered
 
@@ -30,7 +30,4 @@ In this lessons students will apply their new knowledge of bar and mosaic charts
 
 As your students are collecting data and creating charts to analyze, how are you assessing their work produced and effort?  Consider <a href="http://edorigami.wikispaces.com/file/view/data%20analysis%20rubric.pdf/32716544/data%20analysis%20rubric.pdf" target=_blank>using a rubric like this one</a> to give feedback to your students while they're analyzing data 
 
-Click “Continue” below to learn about the next lesson. 
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

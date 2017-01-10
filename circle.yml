@@ -1,5 +1,6 @@
 general:
   artifacts:
+    - apps/yarn-error.log
     - dashboard/test/ui
     - dashboard/log
     - pegasus/log
@@ -21,21 +22,18 @@ checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
         parallel: true
-    - case $CIRCLE_NODE_INDEX in 0) echo "Skipping step." ;; *) ./bin/circle/merge-base ;; esac:
-        parallel: true
 dependencies:
   pre:
-    # update google chrome; Selenium requires that Chrome version must
-    # be >= 52.0.2743.0
+    - ./bin/circle/install-circle-predependencies.sh
     - google-chrome --version
-    - ./bin/circle/upgrade-google-chrome.sh
-    - google-chrome --version
+    - yarn --version
   cache_directories:
     - "apps/node_modules"
     - "apps/.babel-cache"
     - "dashboard/tmp/cache"
     - "~/.rvm/gems/ruby-2.2.3"
     - ".tmputils"
+    - "~/.yarn-cache"
   override:
     # Install any dependencies not covered by rake install
     # When installing moreutils, make sure it does not overwrite GNU parallel,
@@ -72,9 +70,7 @@ dependencies:
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "override_pegasus: \"localhost.code.org\"" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "dashboard_port: 3000" >> locals.yml ;; esac'
     - 'case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "pegasus_port: 3000" >> locals.yml ;; esac'
-    - npm --version
-    - npm install npm@3.10.7
-    - npm --version
+    - yarn version -V
     # For install and build, increase default 10 minute timeout to 14 minutes (840s)
     # We use ts to timestamp output lines
     # We use mispipe instead of | to exit with the first step's exit code
@@ -89,7 +85,10 @@ dependencies:
         timeout: 840
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
-    - rake firebase_task --rakefile aws/build.rake
+    - rake firebase:ci
+    # Make sure building did not introduce unexpected changes.  If it did, fail
+    # here before we start running any test steps.
+    - bundle exec rake circle:check_for_unexpected_apps_changes
 database:
   override:
     - 'echo "Skipping database phase (already ran)."'
@@ -108,3 +107,9 @@ experimental:
     branches:
       only:
         - staging
+deployment:
+  storybook:
+    branch: staging
+    commands:
+      - 'echo "sync_assets: false" >> locals.yml'
+      - 'cd apps && npm run storybook:deploy'

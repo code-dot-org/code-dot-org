@@ -3,37 +3,25 @@
  * Sets date, startTime, and endTime for the session.
  */
 
-import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import moment from 'moment';
 import {
   Row,
   Col,
   Button,
   FormGroup,
-  FormControl,
-  InputGroup,
   HelpBlock
 } from 'react-bootstrap';
 import TimeSelect from './time_select';
+import DatePicker from './date_picker';
 import {
   DATE_FORMAT,
-  TIME_FORMAT,
-  DATEPICKER_FORMAT
+  TIME_FORMAT
 } from '../workshopConstants';
 
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
-
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  }
-};
 
 const SessionFormPart = React.createClass({
   propTypes: {
@@ -49,8 +37,10 @@ const SessionFormPart = React.createClass({
     onChange: React.PropTypes.func.isRequired,
   },
 
-  handleDateChange(event) {
-    this.handleChange('date', event.target.value);
+  handleDateChange(date) {
+    // Don't allow null. If the date is cleared, default again to today.
+    date = date || moment();
+    this.handleChange('date', date.format(DATE_FORMAT));
   },
   handleStartTimeChange(time) {
     this.handleChange('startTime', time);
@@ -153,21 +143,14 @@ const SessionFormPart = React.createClass({
       <Row>
         <Col sm={4}>
           <FormGroup validationState={style.date}>
-            <InputGroup>
-              <FormControl
-                type="text"
-                ref={ref => this.dateControl = ReactDOM.findDOMNode(ref)}
-                value={this.props.session.date || ''}
-                onChange={this.handleDateChange}
-                style={this.props.readOnly && styles.readOnlyInput}
-                disabled={this.props.readOnly}
-              />
-              <InputGroup.Addon>
-                {!this.props.readOnly && <i className="fa fa-calendar" />}
-              </InputGroup.Addon>
-            </InputGroup>
+            <DatePicker
+              date={date}
+              minDate={moment()}
+              onChange={this.handleDateChange}
+              readOnly={this.props.readOnly}
+            />
+            <HelpBlock>{help.date}</HelpBlock>
           </FormGroup>
-          <HelpBlock>{help.date}</HelpBlock>
         </Col>
         <Col sm={3}>
           <FormGroup validationState={style.startTime}>
@@ -202,38 +185,5 @@ const SessionFormPart = React.createClass({
       </Row>
     );
   },
-
-  componentDidMount: function () {
-    if (this.props.readOnly) {
-      return;
-    }
-
-    this.applyDatePicker();
-  },
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.readOnly && !this.props.readOnly) {
-      this.applyDatePicker();
-    }
-  },
-
-  applyDatePicker() {
-    // Add date picker to date input.
-    if (this.dateControl) {
-      $(this.dateControl).datepicker({
-        minDate: 0,
-        dateFormat: DATEPICKER_FORMAT,
-        onSelect: (dateText) => {
-          this.props.session.date = dateText;
-          this.props.onChange(this.props.session);
-        }
-      });
-
-      // Show the date picker also when the calender icon to the right of the input is clicked.
-      $(this.dateControl).next().on("click", () => {
-        $(this.dateControl).datepicker("show");
-      });
-    }
-  }
 });
 export default SessionFormPart;

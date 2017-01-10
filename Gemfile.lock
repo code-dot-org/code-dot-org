@@ -167,6 +167,8 @@ GEM
       railties (>= 3.0, < 6.0)
     coderay (1.1.1)
     colorize (0.8.1)
+    composite_primary_keys (9.0.5)
+      activerecord (~> 5.0.0)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
     coveralls (0.8.14)
@@ -407,7 +409,7 @@ GEM
     parallel (1.9.0)
     paranoia (2.2.0.pre)
       activerecord (>= 4.0, < 5.1)
-    parser (2.3.1.2)
+    parser (2.3.3.1)
       ast (~> 2.2)
     pdf-reader (1.4.0)
       Ascii85 (~> 1.0.0)
@@ -499,7 +501,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    rubocop (0.42.0)
+    rubocop (0.45.0)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
@@ -520,10 +522,9 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     securecompare (1.0.0)
-    selectize-rails (0.12.2)
-    selenium-webdriver (2.45.0)
+    selectize-rails (0.12.4)
+    selenium-webdriver (3.0.3)
       childprocess (~> 0.5)
-      multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sequel (4.10.0)
@@ -557,6 +558,9 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
+    sshkit (1.11.4)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     stringex (2.5.2)
     sysexits (1.2.0)
     term-ansicolor (1.3.2)
@@ -587,12 +591,14 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.1.1)
+    unicode-display_width (1.1.2)
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
     url_safe_base64 (0.2.2)
     user_agent_parser (2.3.0)
+    validates_email_format_of (1.6.3)
+      i18n
     vcr (3.0.3)
     warden (1.2.6)
       rack (>= 1.0)
@@ -632,6 +638,7 @@ DEPENDENCIES
   chronic (~> 0.10.2)
   codemirror-rails
   colorize
+  composite_primary_keys
   coveralls
   crowdin-cli
   cucumber (~> 2.0.2)
@@ -707,7 +714,7 @@ DEPENDENCIES
   retryable
   rmagick
   rspec
-  rubocop (= 0.42.0)
+  rubocop (= 0.45.0)
   ruby-prof
   ruby-progressbar
   sass-rails!
@@ -715,7 +722,7 @@ DEPENDENCIES
   sdoc
   seamless_database_pool!
   selectize-rails
-  selenium-webdriver (~> 2.45.0)
+  selenium-webdriver (~> 3.0.3)
   sequel (~> 4.10)
   shotgun
   simplecov (~> 0.9)
@@ -725,6 +732,7 @@ DEPENDENCIES
   sprockets (~> 3.6.3)
   sprockets-rails (~> 3.1.1)
   sqlite3
+  sshkit
   stringex (~> 2.5.2)
   therubyracer (~> 0.12.2)
   thin
@@ -733,6 +741,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (~> 5.1.0)
   user_agent_parser
+  validates_email_format_of
   vcr
   web-console
   webmock

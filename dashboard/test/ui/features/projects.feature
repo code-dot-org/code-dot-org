@@ -4,7 +4,7 @@ Scenario: Save Artist Project
   Given I am on "http://studio.code.org/projects/artist"
   And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
@@ -13,7 +13,7 @@ Scenario: Save Artist Project
   And I wait to see "#x-close"
   And I navigate to the share URL
   And I wait until element "#visualization" is visible
-  Then element "#draw-color" is a child of element "#when_run"
+  Then element "draw-color" is a child of element "when_run"
 
 # dashboard_db_access for sign in
 # as_student to actually perform sign-in/out before/after scenario
@@ -26,10 +26,10 @@ Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I rotate to landscape
+  And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   # TODO  ideally we should probably create some code and/or design elements here
   # looks like we have add_code_to_editor
-  And I wait to see "#runButton"
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
   And I click selector ".project_edit"
@@ -45,6 +45,7 @@ Scenario: Applab Flow
   Then I should see title "Code Ninja - App Lab"
   And element "#codeWorkspace" is hidden
   And I press the first "#footerDiv .more-link" element
+  And I make all links open in the current tab
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # We'll originally go to /view, then get pushStated to /edit
@@ -59,6 +60,7 @@ Scenario: Applab Flow
   And element "#codeWorkspace" is hidden
   And I should see title "Code Ninja - App Lab"
   And I press the first "#footerDiv .more-link" element
+  And I make all links open in the current tab
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How It Works']"
 
   # Don't actually get redirect this time (stay on /view)

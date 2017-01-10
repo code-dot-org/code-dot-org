@@ -94,7 +94,11 @@ assessment 'U3L07 Free Response Reflection'
 stage 'Practice PT - Design a Digital Scene'
 level 'v2 U3L10 Student Lesson Introduction'
 level 'U3L08 - individualCode'
+named_level 'How To: Share Code with Teammates'
 level 'U3L08 - digitalScene'
 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 3 Ch1 Cumulative Assessment MC Group'
+
+stage 'Anonymous student survey: Taking the AP exam'
+assessment 'csp_ap_questions'

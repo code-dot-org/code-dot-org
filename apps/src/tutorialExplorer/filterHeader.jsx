@@ -5,6 +5,7 @@
 import React from 'react';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
+import { Sticky } from 'react-sticky';
 import i18n from './locale';
 
 const styles = {
@@ -34,17 +35,16 @@ const styles = {
   },
   filterBy: {
     float: "left",
-    lineHeight: "44px",
-    marginLeft: 10
+    lineHeight: "42px"
   },
   left: {
     float: "left",
-    lineHeight: "44px",
+    lineHeight: "42px",
     marginLeft: 10
   },
   right: {
     float: "right",
-    lineHeight: "44px",
+    lineHeight: "42px",
     marginRight: 10
   }
 };
@@ -70,6 +70,11 @@ const FilterHeader = React.createClass({
     return this.props.mobileLayout && this.props.showingModalFilters;
   },
 
+  shouldShowSortButton() {
+    return this.props.showSortBy &&
+      !(this.props.mobileLayout && this.props.showingModalFilters);
+  },
+
   handleChangeSort(event) {
     this.props.onUserInput(
       event.target.value
@@ -86,73 +91,75 @@ const FilterHeader = React.createClass({
       <div style={styles.header}>
         {this.props.backButton && <BackButton/>}
 
-        <div style={styles.bar}>
-          <div style={styles.left}>
-            {this.props.mobileLayout && (
-              <span>
-                {tutorialCountString}
-              </span>
-            )}
+        <Sticky style={{zIndex: 1}}>
+          <div style={styles.bar}>
+            <div style={styles.left}>
+              {this.props.mobileLayout && (
+                <span>
+                  {tutorialCountString}
+                </span>
+              )}
 
-            {!this.props.mobileLayout && (
-              <div style={styles.filterBy}>
-                {i18n.filterHeaderFilterBy()}
-              </div>
-            )}
-          </div>
+              {!this.props.mobileLayout && (
+                <div style={styles.filterBy}>
+                  {i18n.filterHeaderFilterBy()}
+                </div>
+              )}
+            </div>
 
-          <div style={styles.right}>
-            {!this.props.mobileLayout && (
-              <span>
-                {tutorialCountString}
-              </span>
-            )}
+            <div style={styles.right}>
+              {!this.props.mobileLayout && (
+                <span>
+                  {tutorialCountString}
+                </span>
+              )}
 
-            &nbsp;
-            &nbsp;
+              &nbsp;
+              &nbsp;
 
-            {this.props.showSortBy && (
-              <select
-                value={this.props.sortBy}
-                onChange={this.handleChangeSort}
-                style={styles.select}
-                className="noFocusButton"
-              >
-                <option disabled value="default">{i18n.filterHeaderDefault()}</option>
-                <option value="displayweight">{i18n.filterHeaderDisplayWeight()}</option>
-                <option value="popularityrank">{i18n.filterHeaderPopularityRank()}</option>
-              </select>
-            )}
-
-            {this.shouldShowOpenFiltersButton() && (
-              <span>
-                &nbsp;
-                &nbsp;
-                <button
-                  onClick={this.props.showModalFilters}
-                  style={styles.button}
+              {this.shouldShowSortButton() && (
+                <select
+                  value={this.props.sortBy}
+                  onChange={this.handleChangeSort}
+                  style={styles.select}
                   className="noFocusButton"
                 >
-                  {i18n.filterHeaderShowFilters()}
-                </button>
-              </span>
-            )}
+                  <option disabled hidden value="default">{i18n.filterHeaderDefault()}</option>
+                  <option value="displayweight">{i18n.filterHeaderDisplayWeight()}</option>
+                  <option value="popularityrank">{i18n.filterHeaderPopularityRank()}</option>
+                </select>
+              )}
 
-            {this.shouldShowCloseFiltersButton() && (
-              <span>
-                &nbsp;
-                &nbsp;
-                <button
-                  onClick={this.props.hideModalFilters}
-                  style={styles.button}
-                  className="noFocusButton"
-                >
-                  {i18n.filterHeaderHideFilters()}
-                </button>
-              </span>
-            )}
+              {this.shouldShowOpenFiltersButton() && (
+                <span>
+                  &nbsp;
+                  &nbsp;
+                  <button
+                    onClick={this.props.showModalFilters}
+                    style={styles.button}
+                    className="noFocusButton"
+                  >
+                    {i18n.filterHeaderShowFilters()}
+                  </button>
+                </span>
+              )}
+
+              {this.shouldShowCloseFiltersButton() && (
+                <span>
+                  &nbsp;
+                  &nbsp;
+                  <button
+                    onClick={this.props.hideModalFilters}
+                    style={styles.button}
+                    className="noFocusButton"
+                  >
+                    {i18n.filterHeaderHideFilters()}
+                  </button>
+                </span>
+              )}
+            </div>
           </div>
-        </div>
+        </Sticky>
       </div>
     );
   }

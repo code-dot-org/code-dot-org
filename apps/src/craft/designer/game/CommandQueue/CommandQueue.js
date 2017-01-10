@@ -40,6 +40,7 @@ export default class CommandQueue {
     if (this.whileCommandQueue) {
       this.whileCommandQueue.reset();
     }
+    this.repeatCommands = [];
     this.whileCommandQueue = null;
   }
 

@@ -27,8 +27,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "contained_level_names": null,
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -38,11 +38,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveForward"/>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

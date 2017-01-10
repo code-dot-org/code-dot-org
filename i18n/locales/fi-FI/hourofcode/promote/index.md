@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## Pyydä koko kouluasi osallistumaan Koodituntiin
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## 4. Pyydä työnantajaasi osallistumaan
 

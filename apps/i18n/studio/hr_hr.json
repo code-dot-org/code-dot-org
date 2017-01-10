@@ -1,6 +1,6 @@
 {
   "actor": "lik",
-  "add": "add",
+  "add": "dodati",
   "ask": "ask",
   "addCharacter": "dodaj",
   "addCharacterTooltip": "Dodaje lik na scenu.",
@@ -841,5 +841,17 @@
   "failedMultiplyCharactersTimeoutBlockly": "Trebaš uhvatiti 20 miš-droida. Upotrijebi naredbu \"dodaj miš-droida\" unutar događaja \"kad uhvatiš miš-droida\" kako bi dodao/la dva ili više miš-droida svaki put kad jednog uhvatiš.",
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, programirao si stvaranje droida Miševa. Možeš prijeći na iduću igru ili pokušati ponovno doći do 20 droida Miševa. Olakšaj si tako što ćeš ih napraviti više droida odjednom! (Kada držiš pritisnutom tipku sa strelicom tada se krećeš brže.)",
   "failedChangeSettingTimeout": "Uhvati tri pobunjenička pilota kako bi mogao/la nastaviti.",
-  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu."
+  "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
+  "saySpriteChoices_59": "Ouch!"
 }

@@ -3,7 +3,7 @@ Feature: Blocks can be trashed in certain circumstances
 Background:
   Given I am on "http://studio.code.org/s/course2/stage/19/puzzle/2"
   And I rotate to landscape
-  And I wait to see "#runButton"
+  And I wait for the page to fully load
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   # In this level's initial setup:

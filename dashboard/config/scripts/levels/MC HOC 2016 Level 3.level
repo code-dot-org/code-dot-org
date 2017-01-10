@@ -37,12 +37,14 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "level_verification_timeout": "5000",
-    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.isEntityTypeRunning('chicken');\r\n }",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getRepeatCommandExecutedCount('moveForward') > 0;\r\n }",
     "failure_message_override": "Use a `forever do` block and `move forward` and `turn` commands to keep your chicken wandering.",
     "use_player": "false",
-    "contained_level_names": null,
     "use_score": "false",
-    "use_verification_function_for_failure": "false"
+    "use_verification_function_for_failure": "false",
+    "video_key": "mc_2016_loops",
+    "instructions_important": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Puzzle 3:\r\n\r\nGreat, the chicken is moving! But he stopped. In games entities like chickens wander around forever. Let’s use a loop to get these chickens moving.\r\n\r\nSolution:               \r\nChicken\r\n§  When spawned\r\n·       Repeat Forever\r\n·       Move Forward\r\n·       Move Forward\r\n·       Turn Right\r\n·       Move Forward\r\n\r\n§  When Clicked\r\nNo code necessary\r\n\r\n·       Teaches: Spawning. Loops.",
@@ -52,7 +54,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="craft_chickenSpawned" deletable="false" movable="false"/>
+        <block type="craft_chickenSpawned" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

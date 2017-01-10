@@ -34,13 +34,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## Exemplo de Plano de Evento
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Evento:** abertura da Semana da Educação em Ciência da Computação para toda a escola
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Data:** 5 de dezembro (início da Semana da Educação em Ciência da Computação)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Hora:** durante o horário escolar. Preferência para o meio da manhã. Aproximadamente 1 hora de duração.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Local:** espaço de eventos da escola (por ex., teatro, ginásio, lanchonete)   
   
 
 

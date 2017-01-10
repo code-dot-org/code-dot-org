@@ -3135,3 +3135,124 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hallo, mijn naam is Jens en ik ben de lead creative Designer van Minecraft
+          In het komende uur ga jij je eigen Minecraft spel maken. Het lijkt op Minecraft
+          maar de wereld staat stil. De schapen bewegen niet, de kippen leggen geen
+          eieren en de zombies staan stil. Jij moet nu code gaan toevoegen om de Minecraft
+          wereld te laten werken.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: Mijn naam is Melissa en ik ben een eindgebruikers onderzoeker bij Minecraft.
+          Waar ik echt in ben geïnteresseerd is hoe mensen denken en omgaan met techniek
+          en zo deze baan is perfect voor mij, Hier kan ik informatica en psychologie
+          samenvoegen; hoe denken en gedragen mensen zich.
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Je ziet dat je scherm is gesplitst in drie stukken 1) links is het Minecraft
+          scherm De wereld staat nu nog stil maar dat gaan we oplossen met wat code.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) het middelste stuk is de gereedschapskist Elk blok is een commando
+          dat kippen, schapen of andere Minecraft figuren begrijpen.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) de ruimte aan de rechterkant is de werkruimte en hier ga jij je programma
+          maken.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Als je vergeten bent wat je moet doen dan staan de instructies voor
+          elk niveau boven aan de pagina.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Om te beginnen gaan we een kip programmeren Sleep het "beweeg vooruit"
+          commando naar de werkruimte als ik op "Start" klik gaat de kip 1 stap vooruit
+          Nu zetten we nog een "beweeg vooruit" blok onder eerste "beweeg vooruit"
+          blok totdat hij oplicht op dat moment laat ik het blok los en zitten ze
+          aan elkaar vast. Als ik nu op "Start" klik neemt de kip twee stappen.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de
+          gereedschapskist.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Als je op "Start" hebt gedrukt kan je altijd op "Herstellen" drukken
+          om het spel opnieuw op te starten Nu is het jouw beurt om je eigen Minecraft
+          versie te maken Veel plezier!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hallo, ik ben Lisa ben een software developer bij Minecraft en ik werk
+          aan een aantal dieren en vijanden in het spel. Een van de dieren waar ik
+          aan gewerkt heb is de ocelot and ik heb gewerkt aan het onderdeel dat als
+          je een vis vast hebt dat de ocelot naar je toe sluipt en als je hem de vis
+          te eten geeft wordt hij tam en is de ocelot jouw kat geworden.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Mensen gaan zich snel vervelen als ze heel vaak hetzelfde ding moeten
+          doen. Het mooie van computers is dat ze hetzelfde ding een miljoen keer,
+          of zelfs een biljoen keer achter elkaar kunnen doen zonder dat het ze verveelt.
+          Dit herhalen noemen we een "lus" en elk figuur in Minecraft gebruikt ze.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Eerder hebben we een kip laten lopen maar uiteindelijk stopte ze. In
+          Minecraft lopen de kippen rond zonder dat ze ooit stoppen. Wij gaan nu een
+          "Doe voor altijd" lus van de gereedschapskist gebruiken om de kippen ook
+          voor altijd te laten bewegen. De kracht van de lussen gaat je veel tijd
+          besparen en geeft je veel interessante opties als je je eigen versie van
+          Minecraft gaat bouwen.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Op dit level kan je kiezen of je Steve of Alex wil zijn. Selecteer de
+          pijltjes op je keyboard om naar boven, naar beneden, naar links of naar
+          rechts te gaan. Nu kan je waar je maar wil rondlopen op een niveau. Om een
+          schepsel te gebruiken moet je er naartoe lopen, er voor gaan staan en op
+          de spatiebalk drukken.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Als je een touch screen gebruikt kan je naar boven, beneden, links en
+          rechts vegen om rond te lopen en dan raak je het scherm aan als je het object
+          voor je wilt pakken.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Maar wat gebeurt er als je het gebruikt? In Minecraft laten schapen
+          wol vallen als je ze scheert, koeien lopen weg als je ze slaat en creepers
+          ontploffen als je vak bij ze komt. Deze acties gebeuren dankzij iets wat
+          we "events" noemen. "Events" vertellen je programma om te luisteren of te
+          wachten als er iets gebeurt en als het gebeurt dan moet er iets gebeuren.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Tot nu toe heb je 1 event gebruikt. Code die je in je "wanneer neergezet"
+          sleuf hebt neergezet doet iets als je figuur is gecreëerd bij het begin
+          van het spel. In de volgende niveaus krijg je nieuwe slots for events zoals
+          "wanneer aangeraakt" die iets doen als je een object aanraakt of "wanneer
+          gebruikt" wanneer je het figuur gebruikt of, als je je zombies wilt laten
+          verdwijnen wanneer de zon opkomt, dan stop je dat in de "overdag" sleuf
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In spellen, betekend neerzetten hetzelfde als creëren. Laten we in dit
+          level zombies maken die nieuwe zombies gaan neerzetten als de zon onder
+          gaat. Om dit te doen gaan we de "in de nacht" blokken gebruiken.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Omdat we de zombies in de nacht nieuwe zombies willen laten neerzetten
+          gaan we de "zombie neerzetten" blok onder de "in de nacht" blok neerzetten
+          Op het moment dater een nieuwe zombie is neergezet zal hij de code gebruiken
+          die je in de "wanneer neergezet" sleuf hebt gezet. Veel plezier met het
+          neerzetten van zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Gefeliciteerd! Je hebt geleerd om informatica commando's te gebruiken
+          om de Minecraft wereld tot leven te brengen. Je bent nu de developer! Je
+          hebt alle commando's en figuren ontgrendelt. Jij bepaalt wat er gebeurt.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Als je klaar bent met het maken van je spel, kies delen, dan krijg je
+          een link die je kan delen met je vrienden, of om je spel op je telefoon
+          te spelen. Veel plezier! Ik kijk er naar uit om jouw versie van Minecraft
+          te gaan spelen.

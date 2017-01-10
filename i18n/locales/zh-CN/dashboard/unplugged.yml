@@ -1,4 +1,4 @@
-zh:
+zh-CN:
   data:
     unplugged:
       'Unplug1':
@@ -128,8 +128,8 @@ zh:
         desc: '学生要用变量和函数（所谓函数，就是一系列会重复使用到的代码）来创建一个算法，这个算法能够用细绳和珠子串成一个吊饰。'
         video: 'C3_functional_suncatchers'
       'SongwritingParameters':
-        title: '通过输入参数来作曲。'
-        desc: '学生会通过合唱歌曲的理念，了解到传递参数 (即不必重写整个自定义函数实现定制功能)。'
+        title: '写歌'
+        desc: '学生会通过副歌的概念，来学习定义和调用函数。'
         video: 'C3_songwriting_with_parameters'
       'DiceRace':
         title: '现实中的算法: 掷骰子比大小'

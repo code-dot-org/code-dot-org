@@ -108,7 +108,7 @@ Show students an inspirational video to kick off the Hour of Code. Examples:
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Videoclipul în care președintele Obama îndeamnă toți elevii să învețe tehnologia computerelor și programare](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Entuziasmeaza-ti elevii - ofera-le o scurta introducere**
 
 <% else %>
 

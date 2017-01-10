@@ -14,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1.廣為宣傳
 
-Tell your friends about the **#HourOfCode**!
+讓你的朋友們知道**#HourOfCode**活動!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2.要求你的整所學校都提供一小程式設計活動
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. 詢問你的上司是否想參予
 

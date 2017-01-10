@@ -78,7 +78,7 @@ class GameController {
     this.score = 0;
     this.useScore = false;
     this.scoreText = null;
-    this.scorePanel = null;
+    this.onScoreUpdate = gameControllerConfig.onScoreUpdate;
 
     this.events = [];
 
@@ -135,6 +135,7 @@ class GameController {
 
   reset() {
     this.dayNightCycle = false;
+    this.queue.reset();
     this.levelEntity.reset();
     this.levelModel.reset();
     this.levelView.reset(this.levelModel);
@@ -156,7 +157,7 @@ class GameController {
 
     this.score = 0;
     if (this.useScore) {
-      this.scoreText.text = 'Score: ' + this.score;
+      this.updateScore();
     }
 
     this.initializeCommandRecord();
@@ -179,20 +180,9 @@ class GameController {
     this.addCheatKeys();
     this.assetLoader.loadPacks(this.levelData.assetPacks.afterLoad);
     this.game.load.image('timer', `${this.assetRoot}images/placeholderTimer.png`);
-    this.game.load.image('scorePanel', `${this.assetRoot}images/Frame_Large_Plus_LogoNub.png`);
     this.game.load.onLoadComplete.addOnce(() => {
       if (this.afterAssetsLoaded) {
         this.afterAssetsLoaded();
-      }
-      if (this.useScore) {
-        let scale = 400 / 552;
-        this.scorePanel = this.game.add.sprite(216 * scale, 0, 'scorePanel');
-        this.scorePanel.scale.setTo(scale, scale);
-        this.scorePanel.fixedToCamera = true;
-        this.scoreText = this.game.add.text(280 * scale, -2, 'Score: ' + this.score, { fontSize: '14px', fill: '#FFFFFF' });
-        this.scoreText.anchor.x = 0.5;
-        this.scoreText.fontWeight = 'bold';
-        this.scoreText.fixedToCamera = true;
       }
     });
     this.levelEntity.loadData(this.levelData);
@@ -435,8 +425,10 @@ class GameController {
       } else {
         commandMap.set(targetType, 1);
       }
-      const msgHeader = repeat ? "Repeat " : "" + "Command :";
-      console.log(msgHeader + commandName + " executed in mob type : " + targetType + " updated count : " + commandMap.get(targetType));
+      if (this.DEBUG) {
+        const msgHeader = repeat ? "Repeat " : "" + "Command :";
+        console.log(msgHeader + commandName + " executed in mob type : " + targetType + " updated count : " + commandMap.get(targetType));
+      }
     }
   }
 
@@ -873,17 +865,22 @@ class GameController {
           let entity = value[1];
           for (let i = -1; i <= 1; i++) {
             for (let j = -1; j <= 1; j++) {
+              if (i === 0 && j === 0) {
+                continue;
+              }
               let position = [targetEntity.position[0] + i, targetEntity.position[1] + j];
               this.destroyBlockWithoutPlayerInteraction(position);
               if (entity.position[0] === targetEntity.position[0] + i && entity.position[1] === targetEntity.position[1] + j) {
-                let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, entity.identifier); }, entity.identifier);
-                entity.queue.startPushHighPriorityCommands();
-                entity.addCommand(callbackCommand, commandQueueItem.repeat);
-                entity.queue.endPushHighPriorityCommands();
+                entity.blowUp(commandQueueItem, targetEntity.position);
               }
             }
           }
         }
+
+        let callbackCommand = new CallbackCommand(this, () => { }, () => { this.destroyEntity(callbackCommand, targetEntity.identifier); }, targetEntity.identifier);
+        targetEntity.queue.startPushHighPriorityCommands();
+        targetEntity.addCommand(callbackCommand, commandQueueItem.repeat);
+        targetEntity.queue.endPushHighPriorityCommands();
       }
       commandQueueItem.succeeded();
       this.updateFowPlane();
@@ -1382,12 +1379,15 @@ class GameController {
     this.addCommandRecord("addScore", undefined, commandQueueItem.repeat);
     if (this.useScore) {
       this.score += score;
-
-      if (this.scoreText) {
-        this.scoreText.text = 'Score: ' + this.score;
-      }
+      this.updateScore();
     }
     commandQueueItem.succeeded();
+  }
+
+  updateScore() {
+    if (this.onScoreUpdate) {
+      this.onScoreUpdate(this.score);
+    }
   }
 
   isPathAhead(blockType) {

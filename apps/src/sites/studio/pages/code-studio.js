@@ -23,7 +23,7 @@ window.Radium = require('radium');
 require('@cdo/apps/code-studio/components/abuse_error');
 require('@cdo/apps/code-studio/components/report_abuse_form');
 require('@cdo/apps/code-studio/components/SendToPhone');
-require('@cdo/apps/code-studio/components/small_footer');
+require('@cdo/apps/code-studio/components/SmallFooter');
 require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
 
@@ -35,7 +35,6 @@ window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
 window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts');
 window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
-window.dashboard.funometer = require('@cdo/apps/code-studio/funometerPercentagesByDay');
 window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
 window.dashboard.progress = require('@cdo/apps/code-studio/progress');
@@ -45,6 +44,7 @@ window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
+window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import { registerGetResult, registerLevel, onAnswerChanged } from '@cdo/apps/code-studio/levels/codeStudioLevels';

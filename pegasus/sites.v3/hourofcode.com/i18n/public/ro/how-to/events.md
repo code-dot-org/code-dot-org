@@ -13,13 +13,13 @@ nav: how_to_nav
 ## 1) Pregăteşte-te pentru eveniment
 
   * Stabileste un loc, o dată şi o ora
-  * Trimite-i[o scrisoare](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) prin care il inviti pe primar, un congressman, guvernator sau business man sa tina un discurs.
+  * Trimite-i [o scrisoare](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) prin care il inviti pe primar, un congressman, guvernator sau business man sa tina un discurs.
   * Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [kit-ul de presă](<%= resolve_url('/promote/press-kit') %>).
 
 ## 2) In timpul evenimentului dumneavoastra
 
-  * Transforma-ti evenimentul intr-un succes[cu unul dintre video-urile inspirationale](<%= resolve_url('/promote/resources#videos') %>).
-  * Formulati o introducere despre importanta studiului tehnologiei computerelor si programare folosind aceste[statistici si infografice](<%= resolve_url('/promote/stats') %>).   
+  * Transforma-ti evenimentul intr-un succes [cu unul dintre video-urile inspirationale](<%= resolve_url('/promote/resources#videos') %>).
+  * Formulati o introducere despre importanta studiului tehnologiei computerelor si programare folosind aceste [statistici si infografice](<%= resolve_url('/promote/stats') %>).   
       
     
   * Alte idei de eveniment: 
@@ -36,13 +36,13 @@ nav: how_to_nav
 
 ## Exemplu de plan pentru eveniment
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Eveniment:** Saptamana Informaticii in Educatie, program desfasurat la nivelul intregii scoli
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Data:** 7 decembrie (inceputul Saptamanii Mondiale a Educatiei in tehnologia computerelor)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Desfasurare:** In timpul zilelor de scoala. Evenimentele organizate dimineata sunt preferate. Desfasurarea dureaza aproximativ o ora.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Locatie:** O sala din scoala(de exemplu amfiteatrul, sala de sport, sala de mese)   
   
 
 

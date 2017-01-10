@@ -13,14 +13,16 @@ nav: how_to_nav
 ## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## ٢) ٹیٹوریئل منتخب کریں:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [انہیں آزمائیں!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
   * آرگنائزرز کے لیے تیاری کا کم از کم درکار وقت
   * یہ سیلف-گائیڈڈ ہیں – جو کہ بچوں کو انکی اپنی رفتار اور مہارت کے مطابق کام کرنے کا موقع دیتا ہیں
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
@@ -64,7 +66,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +76,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-  * شرکاء کی حوصلہ افزائی کریں کہ وہ آور-آف-کوڈ میں کسی دوسری ایکٹیویٹی پر بھی ٹرائی کریں [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * یا، جنہوں نے پہلے ہی ختم کر لیا ہے تو ان سے کہیں کہ وہ اُن دیگر کی مدد کریں جن کو مشکل پیش آ رہی ہے۔
 
 [col-33]
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## آور-آف-کوڈ کے دیگر ذرائع (ریسورسز) برائے ایجوکیٹرز:
 
-  * اپنے آور-آف-کوڈ کو آرگنائز کرنے کے لیے اس [ٹیمپلیٹ لیسن پلان](/files/AfterschoolEducatorLessonPlanOutline.docx) کو استعمال کریں۔
-  * گزشتہ آور-آف-کوڈ کے آرگنائزرز کے [بہترین طریقوں](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) کو دیکھیں۔ 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * دیگر آرگنائزرز سے مشاورت، بصیرت اور معاونت حاصل کرنے کے لیے [آور-آف-کوڈ فورم](http://forum.code.org/c/plc/hour-of-code) پر وزٹ کریں <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔ <% end %>
 
 ## آور-آف-کوڈ کے بعد کیا آتا ہے؟

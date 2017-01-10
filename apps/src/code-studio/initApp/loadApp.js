@@ -1,16 +1,15 @@
-/* global dashboard addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
-import { getStore } from '../redux';
-import { disableBubbleColors } from '../progressRedux';
-import experiments from '../../util/experiments';
-import DisabledBubblesAlert from '../DisabledBubblesAlert';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { getStore } from '../redux';
+import { setUserSignedIn, SignInState } from '../progressRedux';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
 var clientState = require('../clientState');
 var color = require("../../util/color");
+import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
 var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
@@ -56,19 +55,6 @@ function mergeProgressData(scriptName, serverProgress) {
   });
 }
 
-function showDisabledButtonsAlert(isHocScript) {
-  const div = $('<div>').css({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 45,
-    zIndex: 1000
-  });
-  $(document.body).append(div);
-
-  ReactDOM.render(<DisabledBubblesAlert isHocScript={isHocScript}/>, div[0]);
-}
-
 // Legacy Blockly initialization that was moved here from _blockly.html.haml.
 // Modifies `appOptions` with some default values in `baseOptions`.
 // TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
@@ -110,7 +96,7 @@ export function setupApp(appOptions) {
       $(document).trigger('appInitialized');
     },
     onAttempt: function (report) {
-      if (appOptions.level.isProjectLevel) {
+      if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return;
       }
       // or unless the program is actually the result for a contained level
@@ -331,11 +317,19 @@ function loadAppAsync(appOptions) {
           progress.refreshStageProgress();
         }
 
-        const signedOutUser = Object.keys(data).length === 0;
-        if (!signedOutUser && (data.disablePostMilestone ||
-                               experiments.isEnabled('postMilestoneDisabledUI'))) {
-          getStore().dispatch(disableBubbleColors());
-          showDisabledButtonsAlert(!!data.isHoc);
+        const store = getStore();
+        const signInState = store.getState().progress.signInState;
+        if (signInState === SignInState.Unknown) {
+          // if script was cached, we won't have signin state until we've made
+          // our user_progress call
+          // Depend on the fact that even if we have no levelProgress, our progress
+          // data will have other keys
+          const signedInUser = Object.keys(data).length > 0;
+          store.dispatch(setUserSignedIn(signedInUser));
+          clientState.cacheUserSignedIn(signedInUser);
+          if (signedInUser) {
+            progress.showDisabledBubblesAlert();
+          }
         }
       }).fail(loadLastAttemptFromSessionStorage);
 
@@ -343,13 +337,13 @@ function loadAppAsync(appOptions) {
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else if (window.dashboard && dashboard.project) {
-      dashboard.project.load().then(function () {
-        if (dashboard.project.hideBecauseAbusive()) {
+    } else if (window.dashboard && project) {
+      project.load().then(function () {
+        if (project.hideBecauseAbusive()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
           return $.Deferred().reject();
         }
-        if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+        if (project.hideBecausePrivacyViolationOrProfane()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
           return $.Deferred().reject();
         }
@@ -361,7 +355,6 @@ function loadAppAsync(appOptions) {
 }
 
 window.dashboard = window.dashboard || {};
-window.dashboard.project = project;
 
 window.apps = {
 
@@ -445,11 +438,9 @@ export function getAppOptions() {
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {
-    const script = document.querySelector(`script[data-appoptions]`);
     try {
-      setAppOptions(JSON.parse(script.dataset.appoptions));
+      setAppOptions(getScriptData('appoptions'));
     } catch (e) {
-      console.error("failed to parse appoptions from script tag", e);
       reject(e);
       return;
     }

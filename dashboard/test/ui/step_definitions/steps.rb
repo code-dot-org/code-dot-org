@@ -1,3 +1,4 @@
+# coding: utf-8
 DEFAULT_WAIT_TIMEOUT = 2 * 60 # 2 minutes
 SHORT_WAIT_TIMEOUT = 30 # 30 seconds
 
@@ -45,12 +46,9 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   url = replace_hostname(url)
-
-  # Make sure the old page is gone, since selenium's navigate.to does not reliably do this for us.
-  @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.to url
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
-
+  refute_bad_gateway
+  refute_site_unreachable
   install_js_error_recorder
 end
 
@@ -79,7 +77,14 @@ When /^I go to the newly opened tab$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps 'When I click selector ".csf-top-instructions button:contains(OK)" if it exists'
+  steps 'When I click selector "#overlay" if it exists'
+end
+
+When /^I wait for the page to fully load$/ do
+  steps <<-STEPS
+    When I wait to see "#runButton"
+    And I close the instructions overlay if it exists
+  STEPS
 end
 
 When /^I close the dialog$/ do
@@ -105,13 +110,16 @@ When /^I reset the puzzle to the starting version$/ do
     Then I click selector "#versions-header"
     And I wait to see a dialog titled "Version History"
     And I see "#showVersionsModal"
+    And I wait until element "button:contains(Delete Progress)" is visible
     And I close the dialog
+    And I wait until element "#showVersionsModal" is gone
     And I wait for 3 seconds
     Then I click selector "#versions-header"
     And I wait until element "button:contains(Delete Progress)" is visible
     And I click selector "button:contains(Delete Progress)"
     And I click selector "#confirm-button"
     And I wait until element "#showVersionsModal" is gone
+    And I wait for 3 seconds
   STEPS
 end
 
@@ -124,11 +132,24 @@ When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do 
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).text();").include? text }
 end
 
-When /^I wait until element "([^"]*)" is visible$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).is(':visible')") }
+def jquery_is_element_visible(selector)
+  "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
+When /^I wait until element "([^"]*)" is (not )?visible$/ do |selector, negation|
+  wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script(jquery_is_element_visible(selector)) == negation.nil? }
+end
+
+Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to be visible$/ do |seconds, selector|
+  wait_for_jquery
+  Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
+    @browser.execute_script(jquery_is_element_visible(selector))
+  end
 end
 
 When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
+  wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}).length > 0") }
 end
 
@@ -137,13 +158,17 @@ Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
 end
 
-Then /^I wait until element "([^"]*)" is not visible/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return !$(#{selector.dump}).is(':visible')") }
-end
-
 # Required for inspecting elements within an iframe
 When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |selector, parent_selector|
   wait_with_timeout.until { @browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')") }
+end
+
+Then /^I make all links open in the current tab$/ do
+  @browser.execute_script("$('a[target=_blank]').attr('target', '_parent');")
+end
+
+Then /^I make all links in "(.*)" open in the current tab$/ do |parent_selector|
+  @browser.execute_script("$('a[target=_blank]', $(#{parent_selector.dump}).contents()).attr('target', '_parent');")
 end
 
 Then /^check that I am on "([^"]*)"$/ do |url|
@@ -315,8 +340,21 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == true }
+  wait_with_timeout.until do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+  end
   @browser.execute_script("$(\"#{selector}\")[0].click();")
+end
+
+When /^I click selector "([^"]*)" if I see it$/ do |selector|
+  begin
+    wait_with_timeout(5).until do
+      @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    end
+    @browser.execute_script("$(\"#{selector}:visible\")[0].click();")
+  rescue Selenium::WebDriver::Error::TimeOutError
+    # Element never appeared, ignore it
+  end
 end
 
 When /^I click selector "([^"]*)" within element "([^"]*)"$/ do |jquery_selector, parent_selector|
@@ -362,6 +400,7 @@ end
 
 # The selector should be wrapped in appropriate quotes when passed into here.
 def type_into_selector(input_text, selector)
+  wait_for_jquery
   @browser.execute_script("$('#{selector}').val(#{input_text})")
   @browser.execute_script("$('#{selector}').keyup()")
   @browser.execute_script("$('#{selector}').change()")
@@ -528,20 +567,28 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
   element_has_id(selector, id)
 end
 
+def jquery_element_exists(selector)
+  "return $(#{selector.dump}).length > 0"
+end
+
+def element_exists?(selector)
+  @browser.execute_script(jquery_element_exists(selector))
+end
+
+def element_visible?(selector)
+  @browser.execute_script(jquery_is_element_visible(selector))
+end
+
 Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  expect(visible).to eq(negation.nil?)
+  expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
-  expect(@browser.execute_script("return $(#{selector.dump}).length")).to eq 0
+  expect(element_exists?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
-  visibility = @browser.execute_script("return $(#{selector.dump}).css('visibility')")
-  visible = @browser.execute_script("return $(#{selector.dump}).is(':visible')") && (visibility != 'hidden')
-  expect(visible).to eq(false)
+  expect(element_visible?(selector)).to eq(false)
 end
 
 def has_class?(selector, class_name)
@@ -608,8 +655,10 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
-Then /^I wait until I see selector "(.*)"$/ do |selector|
-  wait_with_timeout.until { @browser.execute_script("return $(\"#{selector}\").length != 0;") == true }
+Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
+  wait_with_timeout.until do
+    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
+  end
 end
 
 Then /^there's a div with a background image "([^"]*)"$/ do |path|
@@ -658,18 +707,25 @@ Then(/^I reload the page$/) do
   # does not reliably do this for us.
   @browser.execute_script("if (window) window.seleniumNavigationPending = true;")
   @browser.navigate.refresh
-  wait_with_short_timeout.until { !@browser.execute_script('return window && window.seleniumNavigationPending;') }
+  wait_with_short_timeout.until { @browser.execute_script('return !(window && window.seleniumNavigationPending);') }
+  wait_for_jquery
 end
 
-Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child, parent|
+def wait_for_jquery
+  wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
+end
+
+Then /^I wait for jquery to load$/ do
+  wait_for_jquery
+end
+
+Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
   wait_with_short_timeout.until {
-    @child_item = @browser.find_element(:css, child)
+    @child_item = @browser.find_element(:id, child_id)
   }
-  wait_with_short_timeout.until {
-    @parent_item = @browser.find_element(:css, parent)
-  }
-  @actual_parent_item = @child_item.find_element(:xpath, "..")
-  expect(@parent_item).to eq(@actual_parent_item)
+  actual_parent_item = @child_item.find_element(:xpath, "..")
+  actual_parent_id = actual_parent_item.attribute('id')
+  expect(actual_parent_id).to eq(parent_id)
 end
 
 And(/^I set the language cookie$/) do
@@ -753,10 +809,11 @@ def generate_teacher_student(name, teacher_authorized)
   steps %Q{
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait to see ".jumbotron"
+    And I dismiss the language selector
     And I click selector ".btn-white:contains('New section')" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
     Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
-    And I click selector ".btn-primary:contains('Save')"
+    And I click selector ".btn-primary:contains('Save')" once I see it
     And I click selector "a:contains('Manage Students')" once I see it
     And I save the section url
     Then I sign out
@@ -767,8 +824,15 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password"
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
-    And I click selector "input[type=submit]"
+    And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/"
+  }
+end
+
+And /^I dismiss the language selector$/ do
+  steps %Q{
+    And I click selector ".close" if I see it
+    And I wait until I don't see selector ".close"
   }
 end
 
@@ -876,11 +940,15 @@ end
 
 When(/^I debug element "([^"]*)" text content$/) do |selector|
   text = @browser.execute_script("return $('#{selector}').text()")
-  puts "'#{text.strip}'"
+  puts "element #{selector} text content: '#{text.to_s.strip}'"
 end
 
 When(/^I debug focus$/) do
   puts "Focused element id: #{@browser.execute_script('return document.activeElement.id')}"
+end
+
+When /^I debug channel id$/ do
+  puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
 And(/^I ctrl-([^"]*)$/) do |key|
@@ -959,10 +1027,12 @@ Then /^I navigate to the share URL$/ do
   wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I navigate to the last shared URL$/ do
   @browser.navigate.to last_shared_url
+  wait_for_jquery
 end
 
 Then /^I copy the embed code into a new document$/ do
@@ -1036,4 +1106,15 @@ Then /^I select the first section$/ do
   @browser.execute_script(
     "window.location.search = 'section_id=' + $('.content select').children().eq(1).val();"
   )
+end
+
+def refute_bad_gateway
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  expect(first_header_text).not_to end_with('Bad Gateway')
+end
+
+def refute_site_unreachable
+  first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
+  # This error message is specific to Chrome
+  expect(first_header_text).not_to eq('This site can’t be reached')
 end

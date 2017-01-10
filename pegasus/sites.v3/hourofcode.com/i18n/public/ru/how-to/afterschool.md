@@ -10,17 +10,19 @@ nav: how_to_nav
 
 # Как провести Час Кода во внеурочное время
 
-## 1) смотрете это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 1) Посмотрите это видео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Выберите учебник:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Попробуйте!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Все уроки Часа Кода:**
 
   * Требуют минимальной подготовки для организаторов
   * Независимы друг от друга, то есть с ними можно работать в любом темпе и при любом уровне подготовки учеников
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+Нужен план урока для вашего после школы Час кодекса? Проверьте этот шаблон!!
 
 ## 3) продвигайте свой час кода
 
@@ -39,7 +41,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) начните свой час кода с вдохновляющим видео
+## 5) Начните свой Час Кода с просмотра вдохновляющего ролика
 
 Сделайте Час Кода более эффективным, рассказывая о роли компьютерной науки в жизни каждого и вдохновляя учеников.
 
@@ -50,13 +52,13 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
   * [Президент Обама призывает всех учеников изучать компьютерные науки](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Найти более вдохновляющее видео[здесь](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Это хорошо, если вы все совершенно новое для компьютерной науки. Вот некоторые идеи, чтобы представить свою Час деятельности Код:**
 
   * Расскажите о том, как технология влияет на нашу жизнь, приводя примеры, которые понравятся как мальчикам, так и девочкам (Расскажите о приложениях и технологиях, используемых для того, чтобы спасти жизнь, помогать людям, находить новые знакомства и т. д).
   * Составьте список вещей, немыслимых в повседневной жизни без программирования.
   * Смотрите советы для девушек, интересующихся информатикой[здесь](<%= resolve_url('https://code.org/girls') %>).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+Нужна помощь? Загрузите этот план урока шаблон..
 
 **Хотите узнать больше идей о том, как провести занятие?** Почитайте[лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от опытных преподавателей.
 
@@ -64,7 +66,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Предложите ученикам заняться программированием**
 
-  * Напишите ссылку на Учебное пособие на доске. Найти ссылку на[информация для учебника](<%= resolve_url('https://code.org/learn') %>)под количество участников.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +76,7 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 **Что делать, если кто-то справляется раньше всех?**
 
-  * Предложите участникам попробовать другие уроки на [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Или попросите справившихся раньше учеников помочь тем, кто испытывает трудности.
 
 [col-33]
@@ -118,11 +120,10 @@ We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code
 
 ## Другие ресурсы для учителей Часа Кода:
 
-  * Воспользуйтесь этим [примером плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx) для организации Часа Кода.
-  * Просмотрите [лучшие советы](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)от прошлых организаторов Часа Кода. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Посмотрите запись[вебинара о том, как провести Час Кода](https://youtu.be/EJeMeSW2-Mw).
   * [Задавайте вопросы в режиме онлайн &](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) основателю проекта Хади Партови касаемо того, как подготовиться к проведению Часа Кода.
-  * Посетите [Форум Часа Кода](http://forum.code.org/c/plc/hour-of-code) на котором Вы получите советы и поддержку от других организаторов. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Просмотрите [Часто задаваемые вопросы по Часу Кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Час Кода: а что дальше?

@@ -1,26 +1,44 @@
 name 'cspu5_assess2_weight'
-encrypted 'U3ilw5akji3KdaLYBlojwAmVgI6JW0R2F5Tu5z4nes33Oy0HxsIsvxGAMqII
-hnKd/M8emM4qtnqORCc2HmX2cNnWZE9uy691OCZJaGhonxBF2s2PS9Jkhwgf
-0oilN9xI7sce8ejw2wwlsjFpXXg5py1hqpQUuT8/HVrwSGwzhVQCHi7Xs6BE
-O4c6S/Bz5YL25FZ8pF8jq6uTtmIif5Px9gVeVXY4H5sTXmH6F1DIfGyZTWQg
-viZdRedlKdHrQInKbk5fCZztId4FC7Cp3cGJUO2NAkKK0UcVHUliRBXVWojB
-1fiOkopmpPXaXt4Kxd1eD0OD7MesgaF0h79hinqKoIMUrT3C188R1BwTU19I
-kGzhaBFFtRPz7f4kiOcylcGLZPX1RKboEsnSMq2F2siYSqCTN33h60nsHClk
-7b6SvpxCAapm40QjNo4c3C7FUwvl9TrfFqmaqRKAM1njzS/Ec1siC1EzhZeH
-PLc9Cp974EfgCyZ1SEuXcq2rQ2J7i7/OUWNIys3y/oLginegi5hqPC/ylGwI
-8T3THpep34QhccTIMxNxDT51ZK7rndiCU3aesA3kifD/8FiqYb5RHSQyC1dd
-3LbEkHZwonjhcmCD+YgpfWH+ifAkDmF8FKocEi8sga8t6fn+/6UjBOIGAKHw
-93H6i+5QrLateHy/OytHsttiYcelauS8Ftz6/mPEfm5SrGr/Oi0RoiIdeJhZ
-mYqj85Ad+c60Y9u2LaFi7DKqlJzf4ewo+CsbDftDR2ihLYsRl4KRfRPbRqBQ
-0jvmKUotNxyia0LgM/yIoWYNjBXB93cWrxMKprzqATrNoY9d0BA/wiZbu4LP
-Q4230vCfcEcd6vRKtj0ceVMZmOKt3dYe1WDSu92U6HFBev4UThfMhlpCTnrp
-mfpm+ZRY/c37TUBm2XUiNE0aPsCNbSzilcfz5XNfKCFrdTh9RDloSKxOx2bi
-2Q8tbxZRuVA2KIuy3GHgavvRDC/xPn7ptGild51q9DIPrTeH5QtQXzJW3kj8
-+e5rAZu/iRyvxs9VLnXFIQ0v9ji6OGHDWyilydu2RoX1G1zCk/117nSLPwEz
-RQocbImr0B/cudhl0ODUzN48d70P2jugF6gui6SnupLgiyYxrojClLOt3L0u
-/W5IH22729dujCq8jZ2lr6iWi9h+mG6Cb2H8ggdFRjKXsI2WBhXy1zHn/HEN
-dEaPrsL7uId9cPN2W7H6zvYuAsam2z8f1f5HJSbho/gZFotgESa5LbbVwisc
-HICxG1BeQfXHgWLWhKhZM1GInz+Fos6bw7MzZ830/vX78a4Ss8ULK/9zh4tO
-FlzoZtELT0xtJu2sWEpQRsB86THZeGEFxle8jvAcN3Wc1nXXmWiKE1BHiqt6
-5sTI5Fpr92dErFMvoEHJJ2JgvqWQ
-'
+type 'multi2'
+
+wrong '30'
+wrong '50'
+wrong '75'
+right '125'
+right '200'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/03f7dc7457ac82d993e500a9bd8775e3-image-1475998304228.png" style="float: right">
+A programmer designed a program for an airline to determine whether there is an extra fee on a checked bag.  The logic is shown in the flow chart at right.  The code they wrote (see below) runs without error, but unfortunately it _does not_ work as intended.
+
+
+
+What is the problem? Consider the list of values below and choose two that if assigned to weight will result in the incorrect message being displayed as the response (choose 2)?
+
+	1. var weight = promptNum("How much does your luggage weigh?");
+	2. if (weight > 50){
+    3. 	setText("response", "There is a 25 dollar fee to take this luggage");
+	4. } else if (weight > 120){
+    5. 	setText("response", "Your luggage is too heavy for this flight");
+	6. } else {
+    7. 	setText("response", "Your luggage is accepted as is");
+	8. }
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lessons 7, 8, 9 (primarily 9)**
+
+This code will work if the luggage is under 50 pounds because it will go into the else statement and setText to "Your luggage is accepted as is"; however, there is an error with the if and else if statement. The if and else if statement should be switched because the code will never enter the else if statement. Any luggage over 120 pounds will set the text incorrectly because it will automatically go into the first if statement. The correct code should look like:
+
+     var weight = promptNum("How much does your luggage weigh?");
+     if (weight > 120){
+         setText("response", "Your luggage is too heavy for this flight");
+     } else if (weight > 50){
+         setText("response", "There is a 25 dollar fee to take this luggage");
+     } else {
+         setText("response", "Your luggage is accepted as is");
+     }
+
+It should check if the weight of the luggage is above 120 pounds before checking if it is above 50 pounds.
+MARKDOWN

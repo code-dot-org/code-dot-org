@@ -2,6 +2,7 @@
  * Reducer and actions for progress
  */
 import _ from 'lodash';
+import { makeEnum } from '../utils';
 import {
   LOCKED_RESULT,
   LevelStatus,
@@ -14,20 +15,29 @@ export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
-const DISABLE_BUBBLE_COLORS = 'progress/DISABLE_BUBBLE_COLORS';
+const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
+const SET_USER_SIGNED_IN = 'progress/SET_USER_SIGNED_IN';
+const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
+
+export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
 const initialState = {
+  // These first fields never change after initialization
   currentLevelId: null,
   professionalLearningCourse: null,
+  // used on multi-page assessments
+  saveAnswersBeforeNavigation: null,
+
+  // The remaining fields do change after initialization
   // a mapping of level id to result
   levelProgress: {},
   focusAreaPositions: [],
-  saveAnswersBeforeNavigation: null,
   stages: null,
-  peerReviewsRequired: {},
   peerReviewsPerformed: [],
   showTeacherInfo: false,
-  bubbleColorsDisabled: false
+  signInState: SignInState.Unknown,
+  postMilestoneDisabled: false,
+  isHocScript: null
 };
 
 /**
@@ -89,10 +99,25 @@ export default function reducer(state = initialState, action) {
     });
   }
 
-  if (action.type === DISABLE_BUBBLE_COLORS) {
+  if (action.type === DISABLE_POST_MILESTONE) {
     return {
       ...state,
-      bubbleColorsDisabled: true
+      postMilestoneDisabled: true
+    };
+  }
+
+  // TODO (brent) - write tests for new reducers
+  if (action.type === SET_USER_SIGNED_IN) {
+    return {
+      ...state,
+      signInState: action.isSignedIn ? SignInState.SignedIn : SignInState.SignedOut
+    };
+  }
+
+  if (action.type === SET_IS_HOC_SCRIPT) {
+    return {
+      ...state,
+      isHocScript: action.isHocScript
     };
   }
 
@@ -134,14 +159,13 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, scriptName, peerReviewsRequired}) => ({
+    saveAnswersBeforeNavigation, stages, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
-  scriptName,
-  peerReviewsRequired
+  scriptName
 });
 
 export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
@@ -158,7 +182,9 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaPositions) => ({
 
 export const showTeacherInfo = () => ({ type: SHOW_TEACHER_INFO });
 
-export const disableBubbleColors = () => ({ type: DISABLE_BUBBLE_COLORS });
+export const disablePostMilestone = () => ({ type: DISABLE_POST_MILESTONE });
+export const setUserSignedIn = isSignedIn => ({ type: SET_USER_SIGNED_IN, isSignedIn });
+export const setIsHocScript = isHocScript => ({ type: SET_IS_HOC_SCRIPT, isHocScript });
 
 /* start-test-block */
 // export private function(s) to expose to unit testing

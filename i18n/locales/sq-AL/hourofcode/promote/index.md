@@ -1,12 +1,12 @@
 * * *
 
-title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
+titulli: <%= hoc_s(:title_how_to_promote) %> Paraqitja: E plotë Navigim: Si të navigojmë
 
 * * *
 
 <%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
+< facebook = {:u=>"http://#{request.host}/us"}
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#OraEKodimit' %>
 
@@ -14,13 +14,13 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 ## 1. Përhap fjalën
 
-Tell your friends about the **#HourOfCode**!
+Tregoji miqëve të tu për **#OraEKodimit**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Pyesni gjithë shkollën që të ofrojë një Orë Kodimi
 
-[Dergo këtë email](%= resolve_url('/promote/resources#sample-emails') %) në drejtori dhe sfidoni të gjithat klasat ne shkollën tuaj për tu regjistruar. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Dërgo këtë email](%= resolve_url('/promote/resources#sample-emails') %) në drejtori dhe sfidoni të gjithat klasat ne shkollën tuaj për tu regjistruar.
 
 ## 3. Pyesni punëdhënsin tuaj për tu përfshirë
 

@@ -11,14 +11,16 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 ## 1) 이 설명 동영상을 시청하십시오. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) 튜토리얼을 선택하십시오.
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **모든 Hour of Code 튜토리얼들은:**
 
   * 최소한의 시간만으로 준비하고 운영할 수 있습니다.
   * 학생 자신의 진도와 수준에 맞추어 자기주도 학습이 가능합니다.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+
+**방과후 수업을 위한 Hour of Code 교육 계획이 필요하세요?**이 [서식](/files/AfterschoolEducatorLessonPlanOutline.docx)을 확인해 보세요.!
 
 ## 3) 당신의 Hour of Code를 알려주세요.
 
@@ -48,13 +50,13 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
   * [오바마 대통령은 모든 학생들이 컴퓨터과학(정보과학)을 배울 수 있도록 도와달라고 요청하고 있습니다.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * 더 많은 영감을 주는 동영상들은 [여기에서](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) 찾아보세요..
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**여러분이 컴퓨터과학에 완전한 초보라도 괜찮습니다. 여기에는 여러분을 Hour of Code 활동으로 안내하기 위한 몇가지 아이디어가 있습니다.**
 
   * 컴퓨터과학기술이 인간의 삶에 미치는 영향에 대해, 남녀학생들 모두 관심 가질 수 있는 예를 가지고 설명하세요. (생명을 살리고, 사람을 돕고, 사람들을 연결하는 데 사용되는 응용프로그램들과 기술들에 대해 이야기 하세요.)
   * 일상생활에서 코드가 사용되는 것들을 나열하세요.
   * 여학생들이 컴퓨터과학에 흥미를 갖도록 하기 위한 팁이 [여기](%= resolve_url('https://code.org/girls') %) 있습니다..
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**더 많은 안내가 필요하신가요?** 이 [수업계획안 서식](/files/AfterschoolEducatorLessonPlanOutline.docx)을 다운로드받으세요..
 
 **좀 더 많은 지도 아이디어를 원하시나요?** 경험자 선생님들의 [최고의 좋은 활동사례 예시들을](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) 살펴보세요.
 
@@ -62,9 +64,9 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **참가자들이 활동하도록 이끌어 주세요.**
 
-  * 튜토리얼 링크를 게시판에 적어주세요. [여러분이 선택한 튜토리얼에 대한 정보](%= resolve_url('https://code.org/learn') %) 목록 중에서 링크를 찾을 수 있습니다.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:**
+**여러분의 학생들이 어려운 상황을 만났을 때 이렇게 응답해 주면 좋습니다:**
 
   * "나도 잘 모른단다. 우리 함께 생각해 보자."
   * "컴퓨터과학(정보과학) 기술은 항상 우리가 원하는대로만 동작하지 않는단다."
@@ -72,7 +74,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 **누군가 일찍 완료 했을 때는 어떻게 할까요?**
 
-  * 다음에서 다른 Hour of Code 활동들을 시도해 볼 수 있도록 격려해 주세요. [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * 또는 일찍 완료한 친구들에게, 어려움을 겪고 있는 다른 친구들을 도와달라고 요청해보세요.
 
 [col-33]
@@ -116,8 +118,7 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 교육자를 위한 다른 Hour of Code 리소스들
 
-  * 여러분의 Hour of Code를 구성하기 위한 [수업계획안 서식](/files/AfterschoolEducatorLessonPlanOutline.docx)을 이용하세요.
-  * 여러분보다 먼저 Hour of Code를 교육하신 분들의 [모범 활동 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 확인하세요. 
+  * 여러분 이전에 Hour of Code를 진행하신 선생님들의 [모범 활동 사례](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 확인하세요. 
   * 다음 가이드를 살펴보세요. [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * Hour of Code 행사를 준비하기 위해, [라이브 Q&A에 참여해보세요.](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) Hour of Code 를 만든, Hadi Partovi 가 도와 줄 것입니다.
   * 다른 교육자들의 조언, 견해 그리고 지원을 얻을 수 있는 [Hour of Code 포럼](http://forum.code.org/c/plc/hour-of-code) 에 방문해 보세요. <% if @country == 'us' %>

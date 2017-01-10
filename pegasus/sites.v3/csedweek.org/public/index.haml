@@ -2,23 +2,23 @@
 theme: responsive
 banner: null
 social:
-  "og:title": "<%= I18n.t(:og_title) %>"
-  "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
+  "og:title": "<%= I18n.t(:csedweek_og_title) %>"
+  "og:description": "<%= I18n.t(:csedweek_og_description)%>"
+  "og:image": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
   "og:image:width": "1200"
   "og:image:height": "627"
-  "og:video:url": "http://youtube.com/v/KsOIlDT145A"
-  "og:video:secure_url": "https://youtube.com/v/KsOIlDT145A"
-  "og:video:type": "application/x-shockwave-flash"
+  "og:video:url": "http://youtube.com/v/QvyTEx1wyOY"
+  "og:video:secure_url": "https://youtube.com/v/QvyTEx1wyOY"
+  "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
   "twitter:card": "player"
   "twitter:site": "@codeorg"
-  "twitter:url": "https://code.org/"
-  "twitter:title": "<%= I18n.t(:og_title) %>"
-  "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://csedweek.org/images/hour-of-code-2014-video-thumbnail.jpg"
-  "twitter:player": "https://youtube.com/v/KsOIlDT145A"
+  "twitter:url": "https://csedweek.org/"
+  "twitter:title": "<%= I18n.t(:csedweek_og_title) %>"
+  "twitter:description": "<%= I18n.t(:csedweek_og_description)%>"
+  "twitter:image:src": "https://<%=request.host%>/images/cs-is-everything-thumbnail.png"
+  "twitter:player": "https://youtube.com/embed/QvyTEx1wyOY"
   "twitter:player:width": "640"
   "twitter:player:height": "360"
 video_player: true
@@ -28,7 +28,7 @@ video_player: true
   = view :index_hoc
 
 -facebook = {:u=>"https://#{request.site}/"}
--twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:hoc_is_here)}
+-twitter = {:related=>'codeorg', :hashtags=>'CSforAll', :text=>I18n.t(:twitter_cs_foundational)}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
@@ -39,7 +39,7 @@ video_player: true
 
   #top
     #video.col-63.desktop-pad-right
-      = view :display_video_thumbnail, id: "hoc_2016", video_code: "KsOIlDT145A", play_button: 'center', download_path: "//videos.code.org/social/hour-of-code-2016.mp4"
+      = view :display_video_thumbnail, id: "main_video", video_code: "QvyTEx1wyOY", play_button: 'center', download_path: "//videos.code.org/social/cs-is-everything.mp4"
 
     #start.col-36
       %div.desktop-feature{:style=>'height: 25px;'}
@@ -56,13 +56,9 @@ video_player: true
             =count_string
 
         %div{:style=>'margin-bottom: 8px'}
-          %a#signup-button{:href=>'https://hourofcode.com', style: 'text-decoration: none;'}
-            %button.optionbutton{:style=>'min-width: 100px;'}
-              =I18n.t :homepage_action_text_join_us     
-          &nbsp;
           %a#try-button{:href=>'/learn'}
             %button.optionbutton{:style=>'min-width: 100px;'}
-              =I18n.t :homepage_action_text_try_it
+              =I18n.t :homepage_action_text_learn
 
     -download_filename = 'cs-is-everything.mp4'
     #below.mobile-center{:style=>'clear:both; overflow:hidden; padding-top: 0px'}

@@ -350,6 +350,7 @@ export default class Sheep extends BaseEntity {
             }, 1500);
         } else {
             this.healthPoint--;
+            this.sprite.animations.stop(null, true);
             this.controller.levelView.playScaledSpeed(this.sprite.animations, this.getNakedSuffix() + "die" + facingName);
             setTimeout(() => {
 

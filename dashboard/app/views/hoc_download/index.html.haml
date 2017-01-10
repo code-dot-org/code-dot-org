@@ -3,6 +3,7 @@
   = tag 'meta', property: 'og:title', content: t('share.title')
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
+- languages = ['Albanian', 'Arabic', 'Azerbaijani', 'Basque', 'Bosnian', 'Bulgarian', 'Catalan', 'Chinese-Taiwan', 'Chinese', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hebrew', 'Hungarian', 'Icelandic', 'Indonesian', 'Irish', 'Italian', 'Japanese', 'Korean', 'Latvian', 'Lithuanian', 'Norwegian', 'Norwegian-Nynorsk', 'Polish', 'Portuguese-Brazil', 'Portuguese', 'Romanian', 'Russian', 'Serbian', 'Slovenian', 'Spanish', 'Swedish', 'Turkish', 'Ukrainian', 'Vietnamese']
 
 #hoc_download
   .row
@@ -32,30 +33,22 @@
         %strong
           = t('hoc_download.download_message', app_name: @app_name)
         %ul
-          %li
-            = t('hoc_download.download_in_english')
-            =link_to t('hoc_download.windows'), @english_windows_url, :class => 'hoc-download-link'
-            |
-            =link_to t('hoc_download.mac'), @english_mac_url, :class => 'hoc-download-link'
-          %li
-            = t('hoc_download.download_in_spanish')
-            =link_to t('hoc_download.windows'), @spanish_windows_url, :class => 'hoc-download-link'
-            |
-            =link_to t('hoc_download.mac'), @spanish_mac_url, :class => 'hoc-download-link'
+          - languages.each do |lang|
+            %li
+              = t("hoc_download.download_in_#{lang}")
+              =link_to t('hoc_download.windows'), @download_urls[:"#{lang}_windows_url"], :class => 'hoc-download-link'
+              |
+              =link_to t('hoc_download.mac'), @download_urls[:"#{lang}_mac_url"], :class => 'hoc-download-link'
         -if @show_js_links
           %strong
             = t('hoc_download.download_message', app_name: @app_name_js)
           %ul
-            %li
-              = t('hoc_download.download_in_english')
-              =link_to t('hoc_download.windows'), @english_windows_url_js, :class => 'hoc-download-link'
-              |
-              =link_to t('hoc_download.mac'), @english_mac_url_js, :class => 'hoc-download-link'
-            %li
-              = t('hoc_download.download_in_spanish')
-              =link_to t('hoc_download.windows'), @spanish_windows_url_js, :class => 'hoc-download-link'
-              |
-              =link_to t('hoc_download.mac'), @spanish_mac_url_js, :class => 'hoc-download-link'
+            - languages.each do |lang|
+              %li
+                = t("hoc_download.download_in_#{lang}")
+                =link_to t('hoc_download.windows'), @download_urls[:"#{lang}_windows_url_js"], :class => 'hoc-download-link'
+                |
+                =link_to t('hoc_download.mac'), @download_urls[:"#{lang}_mac_url_js"], :class => 'hoc-download-link'
 %br/
 %br/
 

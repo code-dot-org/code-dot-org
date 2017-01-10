@@ -31,15 +31,23 @@ dashboard_enable_pegasus: true
 # If false, dashboard will try to use a prepackaged version from S3.
 #use_my_code_studio: true
 
+
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
 # see changes to: videos, concepts, levels, scripts, trophies, prize providers, 
 # callouts, hints, secret words, or secret pictures.
 #skip_seed_all: true
 
+
+# Whether to store sprocket asset cache on disk or in memory. Setting this to
+# false reduces memory usage, but significantly slows down dev server startup.
+#cache_assets_in_memory: false
+
+
 # Whether to stub schools and school_districts table with much smaller data,
 # saving a total of 4 min 30 sec during rake seed. Default: true (in development).
 #stub_school_data: false
+
 
 # Encryption key required for decoding certain protected level sources.
 # Ask a Code.org dev for this if you need access to protected levels.
@@ -63,15 +71,18 @@ dashboard_enable_pegasus: true
 #pusher_application_key: ''
 #pusher_application_secret: ''
 
+
 # Configuration options for Acapela-Group.com integration
 #acapela_storage_app: ''
 #acapela_storage_password: ''
 #acapela_ephemeral_app: ''
 #acapela_ephemeral_password: ''
 
+
 # Credentials for new relic logging. Used to log apps build times.
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''
+
 
 # Credentials for connecting to Firebase to use data blocks or data browser
 # in Applab.

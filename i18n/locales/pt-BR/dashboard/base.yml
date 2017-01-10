@@ -82,6 +82,9 @@ pt-BR:
     student_count: '%{count} alunos já se registraram.'
     teacher_count: '%{count} professores já se registraram.'
     overview: 'Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar sua sala de aula. <a href="/">Você pode explorar diversas fases e desafios</a> sem uma conta, mas precisará fazer login para salvar seu progresso e seus projetos.'
+    hoc_already_signed_up_heading: 'Começar sem fazer login'
+    hoc_already_signed_up_content: 'Você se registrou para ensinar uma Hora de Código! Você e seus alunos não precisam entrar no Code Studio para participar deste evento. Para começar, <a href="https://code.org/learn">escolha um tutorial</a> para sua sala de aula e compartilhe o link com eles.<br/><br/>Se você gostou da Hora do Código e quer ir além, você pode definir uma senha e criar uma conta no Code Studio abaixo para inscrever seus alunos em qualquer dos nossos <a href="https://code.org/educate">cursos de longa duração</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Consultar o guia do professor'
     title: "Cadastre-se na Code.org"
     school_name: 'Nome da escola (opcional)'
@@ -300,6 +303,7 @@ pt-BR:
     delete_text: "Clicando no botão abaixo, você vai excluir sua conta."
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos.'
     delete_confirm: 'Tem certeza de que deseja excluir sua conta?'
+    deleted_user: 'deleted user'
   user_level:
     completed: 'Concluído'
     tried: 'Provado'
@@ -351,11 +355,16 @@ pt-BR:
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Saiba mais"
     announcement_try_now_button: "Experimente agora"
-    announcement_host_an_hour_button: "Host an Hour"
+    announcement_host_an_hour_button: "Organize um evento"
+    announcement_watch_video_button: "Ver vídeo"
     announcement_petition: "Como professor, você está abrindo as portas de um movimento que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da computação. Agora chegou a hora de seus representantes ouvirem o que você tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao Ensino médio."
     announcement_petition_button: "Adicione seu nome"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Fique por dentro dos novos recursos e atualizações em nosso blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
-    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_hoc_launch: "Milhares de professores em mais de 180 países começarão a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro. Estamos contando com você para nos ajudar a atingir mais alunos do que nunca. <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a> e avise outro professor que ele também pode começar a ensinar ciência da computação."
+    announcement_mc_launch: "Um de nossos tutoriais mais populares ganhou uma sequência! O novo Designer para a Hora do Código Minecraft permite que os alunos façam as regras do mundo Minecraft. Eles podem criar uma experiência completamente única de Minecraft e compartilhar com seus amigos ou jogar em seus aparelhos. Faça isso com sua turma na Hora do Código."
+    announcement_how_code_studio: "Você não precisa ter experiência para começar a ensinar ciência da computação em sua sala de aula. Code.org oferece currículo, planos de aula, programas de aprendizagem profissionais de alta qualidade e uma enorme quantidade de ferramentas excelentes para todos os níveis escolares&mdash;tudo de que você precisa sem custo algum. Querendo saber por onde começar? Baixe <a href='%{video_download_url}'>este vídeo</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
     new_section_dne: "A seção %{new_section_code} não existe. Insira outro código de seção."
     section_code_not_entered: "Forneça o current_section_code."
@@ -484,6 +493,9 @@ pt-BR:
     minecraft:
       title: "Minecraft"
       body: "Explore o mundo de Minecraft usando códigos."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
     unplugged:
       title: "Aulas off-line"
       audience: "A partir de 4 anos"
@@ -585,29 +597,28 @@ pt-BR:
     accept_label: 'Eu aceito os <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e a <a href="%{privacy_url}" target="_blank">Política de Privacidade</a> atualizados'
     accept: "Aceitar"
     print: "Imprimir"
-    later: "Mais tarde"
     reminder_desc: 'Atualizamos nossos <a href="%{tos_url}" target="_blank">Termos de Serviço</a> e <a href="%{privacy_url}" target="_blank">Política de Privacidade</a>. Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.'
     review_terms: "Ver os termos atualizados"
   race_interstitial:
-    title: 'Opcional: Ajude-nos a acompanhar nosso progresso através do aumento de diversidade na ciência da computação'
-    message: "Por favor diga-nos sua raça (marque todas aplicáveis)"
+    title: 'Opcional: Ajude-nos a acompanhar nosso progresso no aumento de diversidade na ciência da computação'
+    message: "Diga-nos qual é sua raça (marque todas as opções aplicáveis)"
     races:
       - 
         white: Branco
       - 
-        black: Negro ou Afro Americano
+        black: Negro ou Afro-americano
       - 
         hispanic: Hispânico ou Latino
       - 
         asian: Asiático
       - 
-        hawaiian: Havaiano Nativo ou outro Ilhéu do Pacífico
+        hawaiian: Nativo do Havaí ou de outra ilha do Pacífico
       - 
         american_indian: Índio Americano/Nativo do Alaska
       - 
         other: Outros
       - 
-        opt_out: Prefiro não dizer
+        opt_out: Prefiro não responder
     submit: "Enviar"
     decline: "Fechar"
   zendesk_too_young_message: 'Desculpe, usuários mais jovens não podem se inscrever em nosso site. Você pode acessar <a href="http://support.code.org">support.code.org</a> sem se inscrever, ou pedir aos seus pais ou a um professor para que entrem em contato conosco.'
@@ -734,9 +745,49 @@ pt-BR:
     starwars_blocks_name: 'Star Wars: Construa uma galáxia com a programação (Blocos)'
     starwars_javascript_name: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
     download_message: 'Faça o download de %{app_name} para usar off-line (136 MB)'
-    download_in_english: 'Download em inglês:'
-    download_in_spanish: 'Download em espanhol:'
-    windows: 'Janelas'
+    download_in_Albanian: 'Baixar em Albanês:'
+    download_in_Arabic: 'Baixar em Árabe:'
+    download_in_Azerbaijani: 'Baixar em Azerbaijanês:'
+    download_in_Basque: 'Baixar em Basco:'
+    download_in_Bosnian: 'Baixar em Bósnio:'
+    download_in_Bulgarian: 'Baixar em Búlgaro:'
+    download_in_Catalan: 'Baixar em Catalão:'
+    download_in_Chinese-Taiwan: 'Baixar em Chinês (Taiwan):'
+    download_in_Chinese: 'Baixar em Chinês:'
+    download_in_Croatian: 'Baixar em Croata:'
+    download_in_Czech: 'Baixar em Tcheco:'
+    download_in_Danish: 'Baixar em Dinamarquês:'
+    download_in_Dutch: 'Baixar em Neerlandês:'
+    download_in_English: 'Baixar em Inglês:'
+    download_in_Finnish: 'Baixar em Finlandês:'
+    download_in_French: 'Baixar em Francês:'
+    download_in_German: 'Baixar em Alemão:'
+    download_in_Greek: 'Baixar em Grego:'
+    download_in_Hebrew: 'Baixar em Hebraico:'
+    download_in_Hungarian: 'Baixar em Húngaro:'
+    download_in_Icelandic: 'Baixar em Islandês:'
+    download_in_Indonesian: 'Baixar em Indonésio:'
+    download_in_Irish: 'Baixar em Irlandês:'
+    download_in_Italian: 'Baixar em Italiano:'
+    download_in_Japanese: 'Baixar em Japonês:'
+    download_in_Korean: 'Baixar em Coreano:'
+    download_in_Latvian: 'Baixar em Letão:'
+    download_in_Lithuanian: 'Baixar em Lituano:'
+    download_in_Norwegian: 'Baixar em Norueguês:'
+    download_in_Norwegian-Nynorsk: 'Baixar em Norueguês (Novo):'
+    download_in_Polish: 'Baixar em Polonês:'
+    download_in_Portuguese-Brazil: 'Baixar em Português (Brasil):'
+    download_in_Portuguese: 'Baixar em Português:'
+    download_in_Romanian: 'Baixar em Romeno:'
+    download_in_Russian: 'Baixar em Russo:'
+    download_in_Serbian: 'Baixar em Sérvio:'
+    download_in_Slovenian: 'Baixar em Esloveno:'
+    download_in_Spanish: 'Baixar em Espanhol:'
+    download_in_Swedish: 'Baixar em Sueco:'
+    download_in_Turkish: 'Baixar em Turco:'
+    download_in_Ukrainian: 'Baixar em Ucraniano:'
+    download_in_Vietnamese: 'Baixar em Vietnamita:'
+    windows: 'Windows (64 bits)'
     mac: 'Mac OS X'
   plc:
     preview_assignments:

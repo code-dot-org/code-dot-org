@@ -58,7 +58,6 @@ group :development, :test do
   gem 'ruby-prof'
   gem 'active_record_query_trace'
   # for unit testing
-  gem 'factory_girl_rails'
   gem 'webmock', require: false
   gem 'vcr', require: false
 
@@ -72,8 +71,7 @@ group :development, :test do
 
   # for ui testing
   gem 'cucumber', '~> 2.0.2'
-  gem 'selenium-webdriver', '~> 2.45.0'
-  gem 'net-http-persistent'
+  gem 'selenium-webdriver', '~> 3.0.3'
   gem 'rspec'
   gem 'chromedriver-helper', '~> 0.0.7'
   gem 'colorize'
@@ -82,6 +80,7 @@ group :development, :test do
   gem "minitest", "~> 5.5"
   gem 'minitest-reporters'
   gem 'minitest-around'
+  gem 'net-http-persistent'
   gem 'eyes_selenium', '~> 2.38.0'
 
   # for pegasus PDF generation / merging testing
@@ -92,6 +91,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+# needed for unit testing, and also for /rails/mailers email previews
+gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 
 # for pegasus PDF generation
 gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
@@ -187,7 +189,7 @@ gem 'aws-sdk', '~> 2'
 
 # Lint tools
 group :development, :staging do
-  gem 'rubocop', '0.42.0', require: false
+  gem 'rubocop', '0.45.0', require: false
   gem 'haml_lint', require: false
   gem 'scss_lint', require: false
 end
@@ -221,3 +223,7 @@ gem 'firebase_token_generator'
 gem "selectize-rails"
 gem 'bcrypt'
 gem 'addressable'
+gem 'validates_email_format_of'
+gem 'sshkit'
+
+gem 'composite_primary_keys'

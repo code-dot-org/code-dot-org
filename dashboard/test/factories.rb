@@ -409,7 +409,7 @@ FactoryGirl.define do
   factory :segment do
     workshop
     start DateTime.now.utc
-    self.send(:end, DateTime.now.utc + 1.day)
+    send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
@@ -519,13 +519,6 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  factory :user_profile do
-    user { create :teacher }
-    created_at { Time.zone.now }
-    updated_at { Time.zone.now }
-    course UserProfile::CSP
-  end
-
   factory :pd_workshop, class: 'Pd::Workshop' do
     association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
@@ -556,6 +549,58 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
+  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
+    transient do
+      application_hash {build(:pd_teacher_application_hash)}
+    end
+    association :user, factory: :teacher, strategy: :build
+    application {application_hash.to_json}
+    primary_email {application_hash['primaryEmail']}
+    secondary_email {application_hash['secondaryEmail']}
+  end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
+  factory :pd_teacher_application_hash, class: 'Hash' do
+    transient do
+      association :school, factory: :public_school, strategy: :build
+      association :school_district, strategy: :build
+    end
+
+    initialize_with do
+      {
+        school: school.id,
+        'school-district' => school_district.id,
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        primaryEmail: 'rubeus@hogwarts.co.uk',
+        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
+        principalPrefix: 'Mrs.',
+        principalFirstName: 'Minerva',
+        principalLastName: 'McGonagall',
+        principalEmail: 'minerva@hogwarts.co.uk',
+        selectedCourse: 'csd',
+        phoneNumber: '555-555-5555',
+        gradesAtSchool: [10],
+        genderIdentity: 'Male',
+        grades2016: [7, 8],
+        subjects2016: ['Math', 'Care of Magical Creatures'],
+        grades2017: [10, 11],
+        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
+        committedToSummer: 'Yes',
+        ableToAttendAssignedSummerWorkshop: 'Yes',
+        allStudentsShouldLearn: '4',
+        allStudentsCanLearn: '4',
+        newApproaches: '4',
+        allAboutContent: '4',
+        allAboutProgramming: '4',
+        csCreativity: '4',
+        currentCsOpportunities: ['lunch clubs'],
+        whyCsIsImportant: 'robots',
+        whatTeachingSteps: 'learn and practice'
+      }.stringify_keys
+    end
+  end
+
   # school info
 
   # this is the only factory used for testing the deprecated data formats (without country).
@@ -582,6 +627,7 @@ FactoryGirl.define do
   factory :school_info_us_private, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -589,6 +635,7 @@ FactoryGirl.define do
   factory :school_info_us_other, class: SchoolInfo do
     country 'US'
     school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    state 'NJ'
     zip '08534'
     school_name 'Princeton Day School'
   end
@@ -630,6 +677,7 @@ FactoryGirl.define do
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
     association :school_info, factory: :school_info_without_country
     school 'Example School'
+    code {SecureRandom.hex(10)}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -663,7 +711,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id 333
+    sequence(:id, 333)
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -674,7 +722,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id 333
+    sequence(:id, 333)
     name "A seattle charter school"
     city "Seattle"
     state "WA"

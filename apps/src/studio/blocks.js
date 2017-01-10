@@ -19,6 +19,7 @@ import {
   Emotions,
   Position,
   CLICK_VALUE,
+  EMPTY_QUOTES,
   HIDDEN_VALUE,
   RANDOM_VALUE,
   VISIBLE_VALUE
@@ -120,6 +121,17 @@ function spriteNumberTextArray(stringGenerator) {
   });
 }
 
+/**
+ * Get the value of the 'SPRITE' input, converting 1->0 indexed.
+ * @param block
+ * @returns {string}
+ */
+function getSpriteIndex(block) {
+  var index = Blockly.JavaScript.valueToCode(block, 'SPRITE',
+      Blockly.JavaScript.ORDER_NONE) || '1';
+  return index + '-1';
+}
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -156,19 +168,9 @@ exports.install = function (blockly, blockInstallOptions) {
       skin.dropdownThumbnailHeight);
   }
 
-  /**
-   * Get the value of the 'SPRITE' input, converting 1->0 indexed.
-   * @param block
-   * @returns {string}
-   */
-  function getSpriteIndex(block) {
-    var index = Blockly.JavaScript.valueToCode(block, 'SPRITE',
-        Blockly.JavaScript.ORDER_NONE) || '1';
-    return index + '-1';
-  }
-
   // started separating block generation for each block into it's own function
   installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions);
+  installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions);
 
   generator.studio_eventHandlerPrologue = function () {
     return '\n';
@@ -770,16 +772,16 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_setSpritePosition = {
-    // Block for jumping a sprite to different position.
+    // Block for jumping a sprite (selected by dropdown) to different position.
     helpUrl: '',
     init: function () {
       var dropdown;
       if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
-        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
+        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
       } else {
-        dropdown = new blockly.FieldDropdown(this.VALUES);
-        dropdown.setValue(this.VALUES[1][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
       }
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
@@ -798,13 +800,44 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
-  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
-
   generator.studio_setSpritePosition = function () {
     return generateSetterCode({
       ctx: this,
       extraParams: (this.getTitleValue('SPRITE') || '0'),
+      name: 'setSpritePosition'});
+  };
+
+  blockly.Blocks.studio_setSpritePositionParams = {
+    // Block for jumping a sprite (selected by block param) to different position.
+    helpUrl: '',
+    init: function () {
+      var dropdown;
+      if (allowSpritesOutsidePlayspace) {
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
+        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
+      } else {
+        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
+      }
+      this.setHSV(184, 1.00, 0.74);
+
+     this.appendValueInput('SPRITE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.setSpriteN({spriteIndex: ''}));
+
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'VALUE');
+      this.setPreviousStatement(true);
+      this.setInputsInline(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setSpritePositionTooltip());
+    }
+  };
+
+  generator.studio_setSpritePositionParams = function () {
+    return generateSetterCode({
+      ctx: this,
+      extraParams: (getSpriteIndex(this) || '0'),
       name: 'setSpritePosition'});
   };
 
@@ -1477,7 +1510,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_setScoreText = function () {
     // Generate JavaScript for setting the score text.
     var arg = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || EMPTY_QUOTES;
     return 'Studio.setScoreText(\'block_id_' + this.id + '\', ' + arg + ');\n';
   };
 
@@ -1683,7 +1716,8 @@ exports.install = function (blockly, blockInstallOptions) {
       const spriteName = stripQuotes(opt[1]);
       return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
     });
-    const dropdown = new blockly.FieldDropdown(values, changeCallback);
+    const dropdown = new blockly.FieldDropdown(values, changeCallback,
+        true /* opt_alwaysCallChangeHandler */);
     dropdown.setValue(values[0][1]);
     return dropdown;
   }
@@ -1807,12 +1841,14 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.studio_whenSpriteAndGroupCollide = {
-    // Block to handle event when the Left arrow button is pressed.
+    // Block to handle event when a sprite collides with any sprite in a group,
+    // and sets a variable to the sprite in the group that was touched
     helpUrl: '',
     init: function () {
       this.setHSV(140, 1.00, 0.74);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var endLabel = new Blockly.FieldLabel();
       var dropdown2 = createSpriteGroupDropdown(
           msg.collidesWithAnySpriteName,
           value => endLabel.setText(msg.toTouchedSpriteName(
@@ -1824,8 +1860,6 @@ exports.install = function (blockly, blockInstallOptions) {
       this.appendValueInput('GROUPMEMBER')
           .setInline(true)
           .appendTitle(msg.set());
-      var endLabel = new Blockly.FieldLabel(msg.toTouchedSpriteName(
-              {spriteName: stripQuotes(dropdown2.getValue())}));
       this.appendDummyInput()
           .setInline(true)
           .appendTitle(endLabel);
@@ -1843,6 +1877,27 @@ exports.install = function (blockly, blockInstallOptions) {
     // 0-indexed, so add 1.
     return `${varName} = touchedSpriteIndex + 1;\n`;
   };
+
+
+  blockly.Blocks.studio_whenSpriteAndGroupCollideSimple = {
+    // Block to handle event when a sprite collides with any sprite in a group
+    helpUrl: '',
+    init: function () {
+      this.setHSV(140, 1.00, 0.74);
+
+      var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
+      var dropdown2 = createSpriteGroupDropdown(msg.collidesWithAnySpriteName);
+      this.appendDummyInput()
+          .appendTitle(dropdown1, 'SPRITE')
+          .appendTitle(dropdown2, 'SPRITENAME');
+
+      this.setPreviousStatement(false);
+      this.setNextStatement(true);
+      this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+    },
+  };
+
+  generator.studio_whenSpriteAndGroupCollideSimple = generator.studio_eventHandlerPrologue;
 
 
   /**
@@ -1995,9 +2050,9 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_showTitleScreenParams = function () {
     // Generate JavaScript for showing title screen (param version).
     var titleParam = Blockly.JavaScript.valueToCode(this, 'TITLE',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || EMPTY_QUOTES;
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || EMPTY_QUOTES;
     return 'Studio.showTitleScreen(\'block_id_' + this.id +
                '\', ' + titleParam + ', ' + textParam + ');\n';
   };
@@ -2240,7 +2295,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
       if (options.restrictedDialog) {
         var functionArray = [];
-        var numRestrictedSayChoices = 59;
+        var numRestrictedSayChoices = 60;
         for (var i = 0; i < numRestrictedSayChoices; i++) {
           var functionElement = functionArray[i] = [];
           var string = msg["saySpriteChoices_" + i]();
@@ -2298,7 +2353,7 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_saySpriteParams = function () {
     // Generate JavaScript for saying (param version).
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || EMPTY_QUOTES;
     return 'Studio.saySprite(\'block_id_' + this.id +
                '\', ' +
                (this.getTitleValue('SPRITE') || '0') + ', ' +
@@ -2309,7 +2364,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Generate JavaScript for saying (param version).
     var spriteParam = getSpriteIndex(this);
     var textParam = Blockly.JavaScript.valueToCode(this, 'TEXT',
-        Blockly.JavaScript.ORDER_NONE) || '';
+        Blockly.JavaScript.ORDER_NONE) || EMPTY_QUOTES;
     var secondsParam = Blockly.JavaScript.valueToCode(this, 'TIME',
         Blockly.JavaScript.ORDER_NONE) || 1;
     return 'Studio.saySprite(\'block_id_' + this.id + '\', ' +
@@ -2775,4 +2830,264 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
     var sprite = this.getTitleValue('SPRITE');
     return 'Studio.vanish(\'block_id_' + this.id + '\', ' + sprite + ');\n';
   };
+}
+
+/**
+ * Add conditional blocks for examining the state of sprites via
+ * callbacks.
+ */
+function installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
+
+  /**
+   * Append an Input for selecting the actor to examine. Input can be
+   * either in the form of a dropdown (with both regular and K1
+   * versions) or a value input.
+   */
+  function appendActorSelect(block, dropdown = true) {
+    if (dropdown) {
+      if (spriteCount > 1) {
+        if (blockInstallOptions.isK1) {
+          block
+            .appendDummyInput()
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          block
+            .appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
+        }
+      } else {
+        block.appendDummyInput();
+      }
+    } else {
+      block
+        .appendValueInput('SPRITE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.ifSpriteN({spriteIndex: ''}));
+    }
+  }
+
+  /**
+   * Given a block init function and a code generation function, create
+   * two versions of a block; one which uses a dropdown and one which
+   * uses a value input to select the actor.
+   */
+  function addRegularAndParamsVersions(name, initFunc, generatorFunc) {
+    let regular = `studio_${name}`;
+    let params = `studio_${name}Params`;
+
+    Blockly.Blocks[regular] = {
+      init: function () {
+        initFunc.call(this, true);
+      }
+    };
+
+    Blockly.Blocks[params] = {
+      init: function () {
+        initFunc.call(this, false);
+      }
+    };
+
+    generator[regular] = function () {
+      return generatorFunc.call(this, true);
+    };
+    generator[params] = function () {
+      return generatorFunc.call(this, false);
+    };
+  }
+
+  // Actor Emotion
+  const EMOTION_VALUES = [
+    [msg.getActorHasEmotionNormal(), Emotions.NORMAL.toString()],
+    [msg.getActorHasEmotionHappy(), Emotions.HAPPY.toString()],
+    [msg.getActorHasEmotionAngry(), Emotions.ANGRY.toString()],
+    [msg.getActorHasEmotionSad(), Emotions.SAD.toString()]
+  ];
+
+  const K1_EMOTION_VALUES = [
+    [blockInstallOptions.skin.emotionNormal, Emotions.NORMAL.toString()],
+    [blockInstallOptions.skin.emotionHappy, Emotions.HAPPY.toString()],
+    [blockInstallOptions.skin.emotionAngry, Emotions.ANGRY.toString()],
+    [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
+  ];
+
+  addRegularAndParamsVersions('ifActorHasEmotion', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
+
+    appendActorSelect(this, actorSelectDropdown);
+
+    if (blockInstallOptions.isK1) {
+      const fieldImageDropdown = new blockly.FieldImageDropdown(K1_EMOTION_VALUES, 34, 34);
+      fieldImageDropdown.setValue(K1_EMOTION_VALUES[0][1]); // default to normal
+      this.appendDummyInput()
+        .appendTitle(msg.emotion())
+        .appendTitle(fieldImageDropdown, 'EMOTION');
+    } else {
+      const dropdown = new blockly.FieldDropdown(EMOTION_VALUES);
+      dropdown.setValue(EMOTION_VALUES[1][1]);  // default to normal
+      this.appendDummyInput()
+        .appendTitle(dropdown, 'EMOTION');
+    }
+
+    this.appendStatementInput('DO');
+
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let emotion = this.getTitleValue('EMOTION');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (emotion) {\n  if (emotion === ${emotion}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteEmotion('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
+
+  // Actor Position
+  const POSITION_VALUES = [
+    [msg.getActorXPosition(), 'x'],
+    [msg.getActorYPosition(), 'y'],
+  ];
+
+  addRegularAndParamsVersions('ifActorPosition', function (actorSelectDropdown) {
+    const OPERATORS = Blockly.RTL ? [
+      ['=', 'EQ'],
+      ['\u2260', 'NEQ'],
+      ['>', 'LT'],
+      ['\u2265', 'LTE'],
+      ['<', 'GT'],
+      ['\u2264', 'GTE']
+    ] : [
+      ['=', 'EQ'],
+      ['\u2260', 'NEQ'],
+      ['<', 'LT'],
+      ['\u2264', 'LTE'],
+      ['>', 'GT'],
+      ['\u2265', 'GTE']
+    ];
+
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
+
+    appendActorSelect(this, actorSelectDropdown);
+
+    this.appendDummyInput()
+      .appendTitle(' ');
+
+    const positionDropdown = new blockly.FieldDropdown(POSITION_VALUES);
+    positionDropdown.setValue(POSITION_VALUES[0][1]);
+
+    this.appendDummyInput()
+      .appendTitle(positionDropdown, 'POSITION');
+
+    const operatorDropdown = new Blockly.FieldDropdown(OPERATORS);
+    this.appendDummyInput()
+      .appendTitle(operatorDropdown, 'OPERATOR');
+
+    this.appendValueInput('COMPARED_VALUE');
+
+    this.appendStatementInput('DO');
+
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    const OPERATORS = {
+      EQ: '==',
+      NEQ: '!=',
+      LT: '<',
+      LTE: '<=',
+      GT: '>',
+      GTE: '>='
+    };
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let position = this.getTitleValue('POSITION');
+    let operator = this.getTitleValue('OPERATOR');
+    let order = (operator === 'EQ' || operator === 'NEQ') ?
+        Blockly.JavaScript.ORDER_EQUALITY : Blockly.JavaScript.ORDER_RELATIONAL;
+    let comparedValue = Blockly.JavaScript.valueToCode(this, 'COMPARED_VALUE', order) || '0';
+    let branch = generator.statementToCode(this, 'DO');
+    let comparison = `${position} ${OPERATORS[operator]} ${comparedValue}`;
+    let callback = `function (x, y) {\n  if (${comparison}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteXY('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
+
+  // Actor Visibility
+  const VISIBILITY_VALUES = [
+    [msg.getActorHidden(), 'false'],
+    [msg.getActorVisible(), 'true']
+  ];
+
+  addRegularAndParamsVersions('ifActorIsVisible', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
+
+    appendActorSelect(this, actorSelectDropdown);
+
+    const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
+    dropdown.setValue(VISIBILITY_VALUES[0][1]);
+
+    this.appendDummyInput()
+      .appendTitle(dropdown, 'VISIBILITY');
+
+    this.appendStatementInput('DO');
+
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let visibility = this.getTitleValue('VISIBILITY');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (visibility) {\n  if (visibility === ${visibility}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteVisibility('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
+
+  // Actor Sprite
+  const SPRITE_VALUES = blockInstallOptions.skin.spriteChoices.filter(choice => {
+    // don't include "random"
+    return choice[1] !== RANDOM_VALUE;
+  }).map(choice => {
+    return [msg.isSet() + ' ' + choice[0], choice[1]];
+  });
+
+  addRegularAndParamsVersions('ifActorIsSprite', function (actorSelectDropdown) {
+    this.setHSV(196, 1.0, 0.79);
+    this.appendDummyInput()
+        .appendTitle('if');
+
+    appendActorSelect(this, actorSelectDropdown);
+
+    const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
+    dropdown.setValue(SPRITE_VALUES[0][1]);
+
+    this.appendDummyInput()
+      .appendTitle(dropdown, 'VALUE');
+
+    this.appendStatementInput('DO');
+
+    this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
+
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setInputsInline(true);
+  }, function (actorSelectDropdown) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let value = this.getTitleValue('VALUE');
+    let branch = generator.statementToCode(this, 'DO');
+    let callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  }\n}`;
+
+    return `Studio.getSpriteValue('block_id_${this.id}', ${sprite}, ${callback});`;
+  });
 }

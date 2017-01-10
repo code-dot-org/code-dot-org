@@ -6,53 +6,53 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to organize an Hour of Code event
+# Ako zorganizovať udalosť Hodina kódu
 
-## 1) Prepare for your event
+## 1) Pripravte sa na svoju udalosť
 
-  * Determine a venue, date and time
-  * Send [a letter](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) to invite your local mayor, congressman, governor, or influential business person to speak.
-  * Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit](%= resolve_url('/promote/press-kit') %) for help.
+  * Určte miesto, dátum a čas
+  * Pošlite [pozvánku](https://docs.google.com/a/code.org/document/d/1eP41sKW7y0qq_JvkRIgZK8dWYICaGRZ4CCDETXa78wY/edit) starostovi, primátorovi, poslancovi, lokálnemu politikovi alebo miestnemu podnikateľovi na otvárací prejav.
+  * Pozvite médiá/tlač, napr. lokálnu televíziu, rádio, regionálne noviny, blogera píšuceho o vzdelávaní či technológiách. Pozrite si náš [tlačový balíček](%= resolve_url('/promote/press-kit') %) ako pomocníka.
 
-## 2) During your event
+## 2) Počas udalosti
 
-  * Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-  * Give an intro overviewing the importance of computer science, using these [stats and infographics](%= resolve_url('/promote/stats') %).   
+  * Začnite svoju udalosť niektorým z [inšpirujúcich videí](%= resolve_url('/promote/resources#videos') %).
+  * Ukážte na úvod význam informatiky, použite tieto [štatistiky a infografiky](%= resolve_url('/promote/stats') %).   
       
     
-  * Other event ideas: 
-      * Invite a local industry leader to discuss his or her work involving computer science
-      * Invite a local politician and have students teach him or her how to code
-      * Have a group of students demonstrate an unplugged activity
-      * Have a group of students teach the principal or a group of teachers how to code
-      * If your school already teaches computer science, have students demo projects
+  * Iné námety: 
+      * Pozvite významného miestneho podnikateľa, aby diskutoval o svojej práci, ktorej súčasťou sú informačné technológie
+      * Pozvite miestneho politika, aby ho študenti naučili, ako sa kóduje
+      * Nech skupina študentov predvedie činnosť bez počítačov
+      * Nech skupina študentov naučí kódovať riaditeľa alebo skupinu učiteľov
+      * Ak sa vo vašej škole vyučuje informatika, nech študenti predvedú svoje projekty
 
-## 3) Share how it went
+## 3) Podeľte sa s výsledkami
 
-  * Share pictures of your event on Facebook and Twitter. 
-  * Use the hashtag **#HourofCode**
+  * Zdieľajte obrázky zo svojej udalosti na Facebooku a Twitteri. 
+  * Použite hashtag **#HourofCode**
 
-## Example Event Plan
+## Ukážka plánu udalosti
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Event:** Školský týždeň informatického vzdelávania - úvodné zhromaždenie
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Dátum:** 5. december (začína Týždeň informatického vzdelávania)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Čas:** Počas školského vyučovania. Ideálne počas predpoludnia. Trvanie približne 1 hodinu.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Miesto:** Školská aula (napr. divadlo, telocvičňa, jedáleň)   
   
 
 
-## Run of Show
+## Priebeh akcie
 
-| Time             | Action                                                                                                                                          |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %)                                                      |
-| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %) |
-| 10:15 - 10:30 am | Special guest to talk about their background and how technology and computer science plays an important role in their everyday lives.           |
-| 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
-| 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
-| 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+| Čas           | Činnosť                                                                                                                             |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Začnite niektorým z našich [inšpirujúcich videí](%= resolve_url('/promote/resources#videos') %)                                     |
+| 10:05 - 10:15 | Niekto ukáže na úvod význam informatiky, použiť môže tieto [štatistiky a infografiky](%= resolve_url('/promote/stats') %)           |
+| 10:15 - 10:30 | Zvláštny hosť porozpráva o svojom zázemí a o tom, akú dôležitú úlohu zohrávajú technológie a informatika v jeho každodennom živote. |
+| 10:30 - 10:40 | Študenti predvedú Hodinu kódu pre školy. Zábavná chvíľa: budú vyučovať riaditeľa, hostí, učiteľov alebo iných študentov.            |
+| 10:40 - 11:00 | Študenti predvedú aktivity bez počítačov a ukážu, ako sa dá informatika učiť bez použitia počítačov.                                |
+| 11:00 - 11:05 | Učiteľ, ktorý organizuje toto podujatie, prednesie záverečné slová.                                                                 |
 
 <%= view :signup_button %>

@@ -62,7 +62,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Fish With Arrows\r\n\r\nThe fish are back. Can you make the fish move left only when the left arrow key is pressed down?\r\n\r\n# Do This\r\n\r\n* Add an if statement to check when the left arrow key is pressed down\r\n* Move the statements for moving the fish inside the if statement",
+    "markdown_instructions": "# Fish With Arrows\r\n\r\nThe fish are back. Can you make the fish move left only when the left arrow key is pressed down?\r\n\r\n# Do This\r\n\r\n* Add an if statement to check when the left arrow key is pressed down.\r\n* Move the statements for moving the fish inside the if statement.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -89,13 +89,11 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "Z3XW9adosYrMPqRg10nQ6xYzYjJjnUleIuWq7oLfq16q8OCmWVT3QV4UTP3Y\nQfa5\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

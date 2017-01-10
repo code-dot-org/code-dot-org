@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Đề nghị trường của bạn tổ chức Hour of Code
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Xin phép ông chủ của bạn để tham gia
 

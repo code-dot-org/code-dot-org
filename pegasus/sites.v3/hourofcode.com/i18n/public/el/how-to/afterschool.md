@@ -13,14 +13,16 @@ nav: how_to_nav
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
   * Απαιτούν ελάχιστο χρόνο προετοιμασίας από τους διοργανωτές
   * Είναι αυτο-καθοδηγούμενοι - επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -64,7 +66,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Κατευθύνετε τους συμμετέχοντες σε αυτήν την δραστηριότητα**
 
-  * Γράψτε το σύνδεσμο σε ένα πίνακα. Βρείτε το σύνδεσμο που [περιλαμβάνεται στις](<%= resolve_url('https://code.org/learn') %>) πληροφορίες για το επιλεγμένο μάθημα κάτω από τον αριθμό των συμμετεχόντων.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -74,7 +76,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Τι να κάνετε εάν κάποιος τελειώσει νωρίτερα;**
 
-  * Ενθαρρύνετε τους συμμετέχοντες να δοκιμάσουν μια άλλη δραστηριότητα Κώδικα σε [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Ή, παρακαλέστε εκείνους οι οποίοι έχουν τελειώσει νωρίς να βοηθήσουν άλλους που έχουν πρόβλημα.
 
 [col-33]
@@ -118,11 +120,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## Άλλοι πόροι για την ώρα του Κώδικα για εκπαιδευτικούς:
 
-  * Χρησιμοποιήστε αυτό το [πρότυπο σχέδιο μαθήματος](/files/AfterschoolEducatorLessonPlanOutline.docx) για να οργανώσετε την ώρα του Κώδικά σας.
-  * Ελέγξτε έξω τις [βέλτιστες πρακτικές](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) από παλαιότερους διοργανωτές ώρας του Κώδικα. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Παρακολουθήστε την βιντεοσκόπηση του [webinar "Οδηγός Εκπαιδευτικών για την Ώρα του Κώδικα"](https://youtu.be/EJeMeSW2-Mw).
   * [Συμμετοχή σε ζωντανές "Ερωτοαπαντήσεις"](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) με τον ιδρυτή μας, Hadi Partovi, για να προετοιμαστείτε για την Ώρα του Κώδικα.
-  * Επισκεφθείτε το [ φόρουμ](http://forum.code.org/c/plc/hour-of-code) για να πάρετε συμβουλές, προτάσεις και υποστήριξη από άλλους διοργανωτές. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Δείτε την [ώρα του κώδικα FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;

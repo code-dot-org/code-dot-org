@@ -82,12 +82,8 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant" limit="1">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
           <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">

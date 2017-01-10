@@ -53,7 +53,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Images\r\n\r\nUse the animations tab to finish making all three sprites fish images.\r\n\r\n<img src=\"https://images.code.org/f947fc6800cd1abda023b08c20a2ee87-image-1477679298953.gif\" style=\"float:right\">\r\n\r\n# Do This\r\nYour goal is to finish the under water scene so all three sprites are fish like the example on the right. \r\n\r\n* There is a rectangle sprite already created for you for each fish.\r\n* Run the code to see how it works\r\n* Add a `setAnimation` command to change the look for the remaining two fish. \r\n* Run it to see that your rectangle is now an image!\r\n",
+    "markdown_instructions": "# Images\r\n\r\nUse the animations tab to finish making all three sprites fish images.\r\n\r\n<img src=\"https://images.code.org/f947fc6800cd1abda023b08c20a2ee87-image-1477679298953.gif\" style=\"float:right\">\r\n\r\n# Do This\r\nYour goal is to finish the underwater scene so all three sprites are fish like the example on the right. \r\n\r\n* There is a rectangle sprite already created for you for each fish.\r\n* Run the code to see how it works.\r\n* Add a `setAnimation` command to change the look for the remaining two fish. \r\n* Run it to see that your rectangle is now an image!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -80,13 +80,11 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "V9mk3qJlv9fIkyyGJkrJ+K4ykT/SXmw7KEBGmrpUBF5CYxajP0QX27NdKGJF\nkEmG\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

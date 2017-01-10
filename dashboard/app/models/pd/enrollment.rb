@@ -31,9 +31,6 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :school_info
   belongs_to :user
 
-  # Allow overriding the school and school_info requirements.
-  attr_accessor :skip_school_validation
-
   accepts_nested_attributes_for :school_info, reject_if: :check_school_info
   validates_associated :school_info
 
@@ -45,21 +42,37 @@ class Pd::Enrollment < ActiveRecord::Base
 
   validates_presence_of :email
   validates_confirmation_of :email
+  validates_email_format_of :email, allow_blank: true
 
-  validates_presence_of :school, unless: :skip_school_validation
-  validates_presence_of :school_info, unless: :skip_school_validation
+  validate :validate_school_name, unless: :created_before_school_info?
+  validates_presence_of :school_info, unless: :created_before_school_info?
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
   def created_before_name_split?
-    self.persisted? && self.created_at < '2016-11-10'
+    persisted? && created_at < '2016-11-10'
+  end
+
+  # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
+  def created_before_school_info?
+    persisted? && created_at < '2016-08-30'
+  end
+
+  # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
+  # To avoid breaking any existing codepaths, use the old format when school_info is absent.
+  def validate_school_name
+    if school_info.try(:country)
+      errors.add(:school, 'is forbidden') if school
+    else
+      errors.add(:school, 'is required') unless school
+    end
   end
 
   def self.for_school_district(school_district)
-    self.joins(:school_info).where(school_infos: {school_district_id: school_district.id})
+    joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
   def has_user?
-    self.user_id
+    user_id
   end
 
   before_create :assign_code
@@ -73,30 +86,29 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(self.email)
+    user || User.find_by_email_or_hashed_email(email)
   end
 
   def in_section?
     user = resolve_user
-    return false unless user && self.workshop.section
+    return false unless user && workshop.section
 
     # Teachers enrolled in the workshop are "students" in the section.
-    self.workshop.section.students.exists?(user.id)
+    workshop.section.students.exists?(user.id)
   end
 
   def send_exit_survey
-    return unless self.user
+    return unless user
 
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{self.id}"
+      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
       return
     end
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
-    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-    self.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
+    update!(survey_sent_at: Time.zone.now)
   end
 
   # TODO: Once we're satisfied with the first/last name split data,
@@ -135,11 +147,17 @@ class Pd::Enrollment < ActiveRecord::Base
   # that case.
   def check_school_info(school_info_attr)
     attr = {
+      country: school_info_attr['country'],
       school_type: school_info_attr['school_type'],
       state: school_info_attr['school_state'],
-      school_district_id: school_info_attr['school_district_id'],
       zip: school_info_attr['school_zip'],
-      school_district_other: school_info_attr['school_district_other']
+      school_district_id: school_info_attr['school_district_id'],
+      school_district_other: school_info_attr['school_district_other'],
+      school_district_name: school_info_attr['school_district_name'],
+      school_id: school_info_attr['school_id'],
+      school_other: school_info_attr['school_other'],
+      school_name: school_info_attr['school_name'],
+      full_address: school_info_attr['full_address'],
     }
 
     # Remove empty attributes.  Notably school_district_id can come through
@@ -148,6 +166,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
     # The checkbox comes through as "true" when we really want true.
     attr[:school_district_other] = true if attr[:school_district_other] == "true"
+    attr[:school_other] = true if attr[:school_other] == "true"
 
     return false unless SchoolInfo.new(attr).valid?
 

@@ -91,13 +91,11 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
+    "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "XJoQm+fF7RSkwBmlWnu/0FlEAGIymn+h73teAXjUTYNFwGsoxvjF/wBIXe9a\nVqQQ\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

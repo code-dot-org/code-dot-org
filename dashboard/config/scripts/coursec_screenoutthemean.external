@@ -1,0 +1,8 @@
+name 'courseC_screenoutthemean'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Screen Out the Mean
+## What can you do when someone is mean to you online?
+MARKDOWN

@@ -54,16 +54,15 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "hide_animation_mode": "false",
+    "hide_animation_mode": "true",
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
-    "show_debug_watch": "true"
+    "show_debug_watch": "true",
+    "encrypted_examples": "Pio8APzV4ru5Ods9oLWXMBl5fR42IvYFkDlOlvc1dI+l692xZB4AmBiuDGzj\no7DT\n",
+    "project_template_level_name": "CSD U3 Sprites make template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

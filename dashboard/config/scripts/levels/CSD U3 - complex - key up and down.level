@@ -74,7 +74,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Responding to a Single Click\r\n\r\nEarlier we learned that `keyWentDown` and `keyWentUp` can be used to responed to a keypress a single time. The blocks `mouseWentUp` and `mouseWentDown` allow you to do that for the mouse!\r\n\r\n# Do This\r\n\r\nLet's make a simple game that counts how many times you've clicked. We've already provided a variable `clicks` that you can use to track how many times the user has clicked\r\n\r\n* Add a conditional that checks if the mouse went down\r\n* Inside your conditional, add to the `clicks` variable\r\n\r\n_Challenge: can you add a sprite that responds to `mouseWentDown` as well? Add an image of your choice and increase the sprite's size each time the mouse is clicked._",
+    "markdown_instructions": "# Responding to a Single Click\r\n\r\nEarlier we learned that `keyWentDown` and `keyWentUp` can be used to respond to a keypress a single time. The blocks `mouseWentUp` and `mouseWentDown` allow you to do that for the mouse!\r\n\r\n# Do This\r\n\r\nLet's make a simple game that counts how many times you've clicked. We've already provided a variable `clicks` that you can use to track how many times the user has clicked.\r\n\r\n* Add a conditional that checks if the mouse went down.\r\n* Inside your conditional, add to the `clicks` variable.\r\n\r\n_Challenge: Can you add a sprite that responds to `mouseWentDown` as well? Add an image of your choice and increase the sprite's size each time the mouse is clicked._",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -100,15 +100,13 @@
     "callout_json": "[]",
     "start_blocks": "var clicks = 0\r\n\r\nfunction draw() {\r\n  // If mouseWentDown, add one to the clicks variable\r\n  \r\n  background(\"white\");\r\n  textSize(50);\r\n  textAlign(CENTER, CENTER);\r\n  text(clicks, 0, 0, 400, 400);\r\n}",
     "hide_animation_mode": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "show_debug_watch": "true",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "false",
-    "pause_animations_by_default": "false"
+    "all_animations_single_frame": "true",
+    "pause_animations_by_default": "false",
+    "encrypted_examples": "ZlClHbF5i/CEVY1TV8sEMlzC+HosS+IHRla5s2QEhhu2tG6zXAe71i486q3M\n3AxH\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -4,6 +4,9 @@
  * that are required for this feature, and the reducer that sets state based
  * off of those actions.
  */
+
+import { trySetLocalStorage } from '../utils';
+
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
 const TOGGLE_INSTRUCTIONS_COLLAPSED = 'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT = 'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
@@ -14,6 +17,8 @@ const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 
 const ENGLISH_LOCALE = 'en_us';
+
+const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
 /**
  * Some scenarios:
@@ -233,7 +238,6 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {array} config.level.inputOutputTable
  * @param {string} config.locale
  * @param {boolean} config.noInstructionsWhenCollapsed
- * @param {boolean} config.showInstructionsInTopPane
  * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
  * @returns {Object}
@@ -243,7 +247,6 @@ export const determineInstructionsConstants = config => {
     level,
     locale,
     noInstructionsWhenCollapsed,
-    showInstructionsInTopPane,
     hasContainedLevels,
     teacherMarkdown
   } = config;
@@ -272,10 +275,10 @@ export const determineInstructionsConstants = config => {
     shortInstructions = instructions;
     shortInstructions2 = instructions2;
 
-    // In the case that we're in the top pane, if the two sets of instructions
-    // are identical, only use the short version (such that we dont end up
-    // minimizing/expanding between two identical sets).
-    if (showInstructionsInTopPane && shortInstructions === longInstructions) {
+    // if the two sets of instructions are identical, only use the short
+    // version (such that we dont end up minimizing/expanding between
+    // two identical sets).
+    if (shortInstructions === longInstructions) {
       longInstructions = undefined;
     }
 
@@ -296,10 +299,24 @@ export const determineInstructionsConstants = config => {
     }
   }
 
+  // If the level has instructions to show, we will in some situations
+  // want to show an overlay.
+  let hasInstructionsToShow = shortInstructions || longInstructions;
+  // If the level is specifically flagged as having important
+  // instructions or if it is the first level in the stage, always show
+  // the overlay. Otherwise, show it exactly once on the very first
+  // level a user looks at.
+  let overlaySeen = localStorage.getItem(LOCALSTORAGE_OVERLAY_SEEN_FLAG);
+  let shouldShowOverlay = hasInstructionsToShow &&
+      (config.level.instructionsImportant || config.levelPosition === 1 || !overlaySeen);
+  if (shouldShowOverlay) {
+    trySetLocalStorage(LOCALSTORAGE_OVERLAY_SEEN_FLAG, true);
+  }
+
   return {
     noInstructionsWhenCollapsed: !!noInstructionsWhenCollapsed,
     hasInlineImages: !!config.skin.instructions2ImageSubstitutions,
-    overlayVisible: !!config.level.instructionsImportant,
+    overlayVisible: !!shouldShowOverlay,
     shortInstructions,
     shortInstructions2,
     longInstructions,

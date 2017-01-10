@@ -10,9 +10,16 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
+#
+#  index_school_districts_on_state  (state)
+#
 
 class SchoolDistrict < ActiveRecord::Base
   include Seeded
+
+  has_one :regional_partners_school_district
+  has_one :regional_partner, through: :regional_partners_school_district
 
   # The listing of all US school districts comes from http://nces.ed.gov/ccd/pubagency.asp
   # and is then exported into a tab-separated file.
@@ -32,7 +39,7 @@ class SchoolDistrict < ActiveRecord::Base
   def self.find_or_create_all_from_tsv(filename)
     created = []
     CSV.read(filename, CSV_IMPORT_OPTIONS).each do |row|
-      created << self.first_or_create_from_tsv_row(row)
+      created << first_or_create_from_tsv_row(row)
     end
     created
   end

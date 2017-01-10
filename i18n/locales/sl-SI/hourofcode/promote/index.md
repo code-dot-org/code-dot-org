@@ -20,7 +20,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Predlagajte celotni vaši šoli, da ponudi Uro za kodo
 
-[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
 ## Predlagajte vašemu delodajalcu, da se pridruži
 

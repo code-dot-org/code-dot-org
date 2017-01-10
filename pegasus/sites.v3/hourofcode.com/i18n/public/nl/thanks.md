@@ -1,23 +1,23 @@
 ---
-  title: <%= hoc_s(:title_signup_thanks) %>
-  layout: wide
-  nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
 
-  social:
-    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-    "og:image:width": 1440
-    "og:image:height": 900
-    "og:url": "http://<%=request.host%>"
+social:
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
 
-    "twitter:card": player
-    "twitter:site": "@codeorg"
-    "twitter:url": "http://<%=request.host%>"
-    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -59,5 +59,9 @@ U heeft zojuist deelgenomen aan de CodeUur beweging. Vertel het uw vrienden met 
 ## 7. Plan uw CodeUur
 
 Kies een CodeUur activiteit en [bekijk deze how-to guide](<%= resolve_url('/how-to') %>).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

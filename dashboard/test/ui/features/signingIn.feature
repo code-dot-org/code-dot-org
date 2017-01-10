@@ -52,6 +52,7 @@ Scenario:
   Given I am on "http://studio.code.org/"
   And I set the language cookie
   And I create a teacher named "Casey"
+  And I wait for 2 seconds
   And I sign out
   Given I am on "http://code.org/"
   And I reload the page

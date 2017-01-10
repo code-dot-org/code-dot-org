@@ -19,13 +19,13 @@ nav: promote_nav
 
 ## 1. Răspândește vestea
 
-Tell your friends about the **#HourOfCode**!
+Spune-le şi prietenilor tai despre **#HourOfCode**!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
 ## 2. Solicită întregii şcoli sa ofere o Oră de Programare
 
-[Trimiteți acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>)directorului scolii dvs si astfel provocati fiecare clasa sa se inscrie. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Trimiteți acest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>)directorului scolii dvs si astfel provocati fiecare clasa sa se inscrie.
 
 ## 3. Solicită angajatorului tău să se implice
 
@@ -33,7 +33,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 4. Promovează Hour of Code în comunitatea ta
 
-[Recruteaza un grup local](<%= resolve_url('/promote/resources#sample-emails') %>)- cluburi de fete/baieti, biserici, universitati, grupuri de veterani, sindicatele sau chiar câțiva prieteni. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Foloseşte aceste [ postere, bannere, stickere, videoclipuri si multe altele](<%= resolve_url('/promote/resources') %>) pentru evenimentul tau.
+[Recruteaza un grup local](<%= resolve_url('/promote/resources#sample-emails') %>)- cluburi de fete/baieti, biserici, universitati, grupuri de veterani, sindicate sau chiar câțiva prieteni. Nu trebuie să fii in şcoală ca să înveţi noi competenţe. Foloseşte aceste [postere, bannere, stickere, videoclipuri si multe altele](<%= resolve_url('/promote/resources') %>) pentru evenimentul tau.
 
 ## 5. Solicită unui oficial ales local sprijinul pentru organizarea Hour of Code
 

@@ -456,13 +456,13 @@ tr:
         text: "Bu derse mutlu haritalar denir. Bugün küçük tüylü arkadaşımız \"Florb\" un meyveyi almasını sağlayacağız."
       2:
         image: 'notes/C1_happy_maps_unplugged_2.png'
-        text: "Make your Flurb go to your fruit. To do this you'll need to figure out which way the Flurb needs to go and direct her with arrows. In order for the Flurb to get to the apple, what direction does the Flurb have to go? Line to make it go up."
+        text: "Flurb'ünüzün meyveye ulaşmasını sağlayın. Bunu yapabilmek için önce Flurb'ün hangi yöne gideceğine karar verip onu okları kullanarak o yöne yönlendirmeniz gerekir. Flurb'ün elmaya ulaşması için hangi yönde ilerlemesi gerekir?"
       3:
         image: 'notes/C1_happy_maps_unplugged_3.png'
         text: "Orada almak için gitmek zorunda olduğu yönü daire içine al."
       4:
         image: 'notes/C1_happy_maps_unplugged_4.png'
-        text: "Create your algorithm by gluing arrows next to the map that you're trying to solve. The second one it's the same but it's going down."
+        text: "Çözmeye çalıştığınız haritanın yanına okları yapıştırarak algorıtmanızı geliştirin. İkincisi de ilkinin aynısıdır, fakat aşağı doğru gider."
       5:
         image: 'notes/C1_happy_maps_unplugged_5.png'
         text: "Bu kağıt ile programlama gibi. Ve bu kadar!"
@@ -499,13 +499,13 @@ tr:
     C1_moveitmoveit_unplugged:
       1:
         image: 'notes/C1_moveitmoveit_unplugged_1.png'
-        text: "This lesson is called move it, move it. Together we're going to write a program to get our friends from the starting with the compass rose to the smiley face goal."
+        text: "Bu dersin adı 'yürü yürü' dür. Beraberce bir program yazıp, arkadaşlarımızı pusuladan başlayarak gülen yüz hedefine ulaştırmaya çalışacağız."
       2:
         image: 'notes/C1_moveitmoveit_unplugged_2.png'
         text: "Ama gülen yüz aşağı doğru ve oraya nasıl gidileceğini bilen sadece bir kişi. Bu programı başltalım."
       3:
         image: 'notes/C1_moveitmoveit_unplugged_3.png'
-        text: "A program is an algorithm that has been coded into something that can be run by a machine. Most of us think of a program as something that we write for a computer. Programs are really good for that but they're also helpful in other places. You can make your own game or even program a robot to do things for you."
+        text: "Bir program bir makinanın calıştırabileceği bir kodlamanın uygulandığı algoritmadır. Biz genellikle programların bilgisayarlar için yazdığımız bir şey olduğunu düşünürüz. Programlar bunun haricinde başka şeylerde de yardımcı olabilirler. Mesela siz kendinize bir oyun yazabilir veya bir robota da istediğiniz şeyleri yaptırabilirsiniz."
     C1_going_places_safely:
       1:
         image: 'notes/C1_going_places_safely_1.png'
@@ -521,7 +521,7 @@ tr:
         text: "Bazen internette tanıdığım insanlarla konuşurum, başka eyalette yaşayan büyük annem gibi. Mehaba büyükanne! Büyükannem şimdi doğum günüm için göndereceği kurabiyelerden yapıyor. ''Lezzetli, İnternet keşke smelloramaya sahip olsaydı!'' İnternette farklı insanlarla konuşabilirim, kuzenim gibi ama sadece tanıdığım insanlarla konuşurum."
       5:
         image: 'notes/C1_going_places_safely_5.png'
-        text: "What I like most on the interent is that I get to play fun games. Score! I also like to draw and create new things and share it with my friends. Cool! Sometimes I visit websites where I learn new things but I always stick to websites that are just right for me. Wow, dinosaurs!"
+        text: "Internette en çok sevdiğim şey neşeli oyunlar oynayabilmemdir. Ne güzel! Ayrıca arkadaşlarımla kendi çizip yarattığım yeni şeyleri paylaşmaktan da hoşlanırım. Şahane! Arada bir yeni birşeyler öğreneceğim siteleri ziyaret etmeme rağmen, genellikle bana uygun olan siteleri tercih ederim. Wow, dinozorlar!"
       6:
         image: 'notes/C1_going_places_safely_6.png'
         text: 'İnternet süper eğlenceli bir yer. Mahallede karşıdan karşıya geçerken olduğu gibi, ayrıca çevrimiçi olduğun zamanda çok dikkatli olmalısın. Burada hatırlaman için üç kural. Kural 1: Her zaman ilk başta anne babana sor. Kural 2: Sadece tanıdığın kişilerle konuş. Kural 3: Senin sadece doğru olan yerlerde kal.'
@@ -544,23 +544,23 @@ tr:
     C1_planting_seed:
       1:
         image: 'notes/C1_planting_seed_1.png'
-        text: "This lesson is called planting a seed and it's going to help us understand algorithms. Algorithms are specific instructions that explain the order in which to do something. Even everyday things like eating breakfast or brushing your teeth are algorithms that require small steps to get a job done."
+        text: "Bu dersin adı 'tohum ekmek'tir ve bizim algoritmaları anlamamıza yardımcı olacaktır. Algoritmalar herhangi birşeyi nasıl yapmamız gerektiğini izah eden önergelerdir. Kahvaltı etmek veya diş fırçalamak gibi hergün tekrarladığımız etkinlikler bile ufak tefek adımlar gerektirir."
       2:
         image: 'notes/C1_planting_seed_2.png'
         text: "Bilgisayarlar gerçekten akıllı olabilirler fakat sadece adım adım ne söylemek istediğini tam anlamıyla ona söylersen seni anlayabilirler. Algoritmalar hakkında harika şey eğer sırayla talimatları uyarsan zamanın ötesinde nasıl yapıldığını bilmediğin bir şeyi yapabilirsin. Tıpkı tarife uymak gibi."
       3:
         image: 'notes/C1_planting_seed_3.png'
-        text: "Today we're going to plant our own seeds using an algorithm. Create your own algorithm by cutting apart the pictures. Select the pictures that show steps in planting a seed and arrange those pictures in the correct order."
+        text: "Bugün bir algoritma kullanarak tohumlarımızı ekeceğiz. Resimleri parçalara keserek kendi algoritmanızı yaratın. Tohum ekme önlemlerini gösteren resimleri seçin ve bunları doğru bir sıraya koyun."
       4:
         image: 'notes/C1_planting_seed_4.png'
-        text: "Now, it's time for you to see if your algorithm works. Follow the steps in the algorithm very carefully. Are they in the correct order? Did you succeed in planting a seed by following the algorithm? It's like programming with pictures!"
+        text: "Şimdi algoritmanızın çalışı çalışmadığını anlamanın zamanı gelmiştir. Algoritmanın önerdiği adımları dikkatli bir şekilde takip edin. Bunlar doğru bir sıradalar mı? Algoritmayı takip ederek tohum ekmeyi başardınız mı? Sanki resimlerle programlama gibi!"
       5:
         image: 'notes/C1_planting_seed_5.png'
         text: "When we want to make chocolate, there are many big steps to that process and each of those big steps has a set of smaller steps and there are different recipes or algorithms depending on how we want the chocolate to taste. Each step is important, even the small ones, so that without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down so that no matter who does it, the result is the same."
     C1_playlab_storytelling:
       1:
         image: 'notes/C1_playlab_storytelling_1.png'
-        text: "Time to get creative and use your coding skills to tell a story. Your story will have actors and you will be able to make these actors talk and interact with each other. Start thinking of what kind of story you want to tell."
+        text: "Yaratıcı kod yazma yeteneklerinizle bir hikaye anlatma zamanı geldi. Hikayenizde aktörler olacak ve bunları konuşturup birbirleriyle etkinleştireceksiniz. Nasıl bir hikaye anlatmak istediğinizi düşünmeye başlayın."
       2:
         image: 'notes/C1_playlab_storytelling_2.png'
         text: "Kediler her zaman köpeklerden korkarlar. Kedi köpeğin iyi olmaya çalıştığını fark ettiğinde ne olacak? Çalıştığı zaman bloğu her şeyi başlatır. Hareket et bloğu karakteri ilerletir. \"Söyle\" bloğu karakterin sizin yazdığınız şeyi söylemesini sağlar."
@@ -625,29 +625,29 @@ tr:
         text: "Bu ikili bilezik dersidir. İsmimizin baş harflerini bir bileziğe kodlayacağız ve arkadaşlarımıza göstereceğiz!"
       2:
         image: 'notes/C2_binary_bracelets_2.png'
-        text: "Binary is a way of representing information using only two options. Sometimes people think of this as only 1s and 0s. But you can represent binary with combinations of on or off, up and down, in and out or really any set of opposites."
+        text: "İkili sistem elimizdeki bilgileri yalnız iki seçenekle tanımlamaktır. Genellikle insanlar bunu 0 (sıfır) ve 1 (bir) diye düşünürler. Fakat aç veya kapa, aşağı veya yukarı, içeri veya dışarı gibi birbirlerine ters herhangi bileşimler ikili sistem olarak tanımlanabilir."
       3:
         image: 'notes/C2_binary_bracelets_3.png'
-        text: "Hi, I'm Orion and I program robots here at Play-im. All computer and robot brains at their most fundamental level are little electronic gates. When the gate is open, electricity can flow through and when it's closed, electricity can't."
+        text: "Merhaba, benim adım Orion ve ben Play-im firmasında robotları programlıyorum. En temel düzeyde bilgisayar ve robot beyinleri elektronik geçitlerden oluşurlar. Geçitler açıksa elektrik akar, yoksa akmaz."
       4:
         image: 'notes/C2_binary_bracelets_4.png'
-        text: "An example of binary on the robot is the robot's eyes. The robot's eyes are LEDs and those are lights that are either on or off. It's a binary system, one or the other. We can use the lights to represent binary numbers. If we have a set of robots, we can say that the first robot is the 1s place and the second robot is the 2s place, the third robot is the 4s place and so on. That's how you represent a binary number. The robots will do it with their binary eyes and count it out for you."
+        text: "Robotların gözleri ikili sistemin bir örneğidir. Robot gözleri LED lerden oluşur ve bunlar ya açık ya da kapalıdırlar. Yani ikili olarak ya biri ya da ötekisidir. Bu ışıkları ikili sistemin rakamlarını tanımlamak için kullanabiliriz. Bizim bir robot kümemiz olduğunu sayarsak, birinci robotun birler hanesini, ikinci robotun ikiler hanesini ve üçüncü robotun dörtler hanesini tanımladığını vs düşünebiliriz. İkili sistemin sayıları böyle temsil edilir. Robotlar, gözlerini ikili sistem olarak kullanıp sayıları sayacaklardır."
     C2_conditionals_with_cards:
       1:
         image: 'notes/C2_conditionals_with_cards_1.png'
         text: "Bu derse kartlarla koşullar denir. Hergün duyfuğunuz veya gördüğünüz şeylere göre karar verirsiniz. "
       2:
         image: 'notes/C2_conditionals_with_cards_2.png'
-        text: "I want to walk to the park but first I have to decide whether I should bring an umbrella or not. So I look out the window. If it's cloudy, I'm going to take my umbrella. Else, I'll take some sunglasses. I think I'd better take the umbrella. What I see and hear determines what I take to the park."
+        text: "Parka gitmek isterim, fakat önce yanıma bir şemsiye alıp almayacağıma karar vermem lazım. Pencereden dışarıya bakarım. Eğer hava bulutluysa şemsiyemi alırım. Yoksa güneş gözlüğümü alırım. Belki de şemsiyeyi almak fena fikir değil. Ne görüp duyduğum parka giderken yanıma ne alacağımı düzenler."
       3:
         image: 'notes/C2_conditionals_with_cards_3.png'
-        text: "Conditionals are used in games too. Today we're going to practice using conditionals with a card game. In this game, the card that I draw determines what my friends are going to do. If I draw a seven, everyone claps. Else, everyone says \"awww.\" Let's try it! \"Awww\" \"cheers\""
+        text: "Koşullar oyunlarda da çok kullanılır. Bugün bir kart oyunu ile koşulları kullanmayı öğreneceğiz. Bu oyunda benim çektiğim kart arkadaşlarımın ne yapacağına karar verir. Eğer yedi alırsam herkes alkışlayacak. Yoksa herkes 'awww' diyecek. Hadi bakalım! 'Awww' 'Hoşça kalın'"
       4:
         image: 'notes/C2_conditionals_with_cards_4.png'
         text: "Bahse girerim koşulları kullanarak daha da eğlenceli oyunlar yapabilirsin. Bir dene! Koşullar bilgisayarların zeki görünmesinin sebebidir. Koşulları kullanan bir bilgisayar programı kullanıcıya tepki verip yapacagı islemi ona göre seçebilir."
       5:
         image: 'notes/C2_conditionals_with_cards_5.png'
-        text: "Think about your favorite video game. Do you earn more points for some actions than you do for others? This occurs because the computer is using conditionals. It's the way a computer makes a decision. How about, if you hit the target, you earn ten points. Else, you lose three. When you know how conditionals work, you can create all kinds of exciting games."
+        text: "En çok sevdiğiniz video oyununu düşünün. Bazı eylemler ötekilerden daha fazla puan kazandırır. Bunun sebebi bilgisayarın koşullar kullanmasıdır. Bilgisayarlar böyle karar alırlar. Mesela hedefi vurduğunda on puan kazanırsın. Yoksa üç kaybedersin. Koşulların nasıl çalıştığını öğrendiğinde çok heyecanlı oyunlar yaratabilirsin."
     C2_artist_debugging:
       1:
         image: 'notes/C2_artist_debugging_1.png'
@@ -690,11 +690,11 @@ tr:
     C2_digital_footprint_v2:
       1:
         image: 'notes/C2_digital_footprint_v2_1.png'
-        text: "Everytime you go online, you leave a footprint that can be searched, copied, shared, broadcast and is permanent. What kind of digital footprint are you leaving? What kind of digital footprint do you want to leave?"
+        text: "Çevrimiçi eylemleriniz aranabilir kopyalanabilir paylaşılabilir yayımlanabilir ve kalıcı izler bırakır. Siz acaba nasıl dijital izler bırakıyorsunuz? Nasıl dijital izler bırakmak istersiniz?"
     C2_graph_paper:
       1:
         image: 'notes/C2_graph_paper_1.png'
-        text: "This lesson is called \"Graph Paper Programming\" and it's all about algorithms. Today we're going to learn how to write programs that show each other how to recreate simple black and white images, using only hand drawn arrows."
+        text: "Bu dersin adı 'Grafik Kağıdıyla Programlama'dır ve tüm algoritmalar hakkındadır. Bugün yalnız elle çizilmiş okları kullanarak, basit siyah ve beyaz görüntüleri, birbirimize tekrar oluşturmayı gösteren programlar yazmayı öğreneceğiz."
       2:
         image: 'notes/C2_graph_paper_2.png'
         text: "Bu, algoritma oluşturma görevini tamamlamak için talimat listesi. Verilen işlemleri takip edin. Algoritmaların nasıl oluşturulacağını anlamanız için işlemler yardım edecektir."
@@ -703,7 +703,7 @@ tr:
         text: "Bilgisayar için bir algoritma yazıyorsanız ilk basamaktaki talimati yerine getirin ve aşağıdaki talimata geçin, son talimatıda uyguladığınızda bitmiş olacak."
       4:
         image: 'notes/C2_graph_paper_4.png'
-        text: "I use algorithms in my work. If I write down all of the steps I can recreate that same piece again, or I can teach someone else to do it. Put the glass in the kiln, fuse it together, follow the rest of the instructions to make the bowl. Algorithms give you a road map for getting something done."
+        text: "İşimde algoritmalar kullanırım. Eğer tüm adımları yazarsam aynı seyi tekrar oluşturabilirim veya bunu yapmasını başka birine öğretebilirim. Camı fırına koyun, eritin, ve geriye kalan talimatları takip ederek çanağı yapın. Algoritmalar size bir işin nasıl yapılacağını gösteren bir yol haritasıdır."
     C2_artist_loops:
       1:
         image: 'notes/C2_artist_loops_1.png'
@@ -740,10 +740,10 @@ tr:
         text: "Bu derse gerçek hayat algoritmaları denir. Algoritmalar insanlar her gün yaptığı şeyi açıklar. Kurabiye tarifleri ve kuş yuvası oluşturmak için yapılması gerekenler birer algoritmadır."
       2:
         image: 'notes/C2_paper_airplanes_2.png'
-        text: "Today we're gonna make, create, and test an algorithm for a paper airplane. But first, we need to break this big project into easy to follow small steps. For making a paper airplane, we need to decide what steps to take and in what order to take them."
+        text: "Bugün kağıttan bir uçağı yapıp, yaratıp, test edeceğimiz bir algoritma üzerinde çalışacağız. Ama başlamadan önce bu büyük projeyi daha kolay takip edilecek basit kademelere bölmemiz gerekir. Bu kağıt uçağı yapmak için hangi önlemleri hangi sırada almamız gerektiğine karar vermemiz lazım."
       3:
         image: 'notes/C2_paper_airplanes_3.png'
-        text: "You'll create your algorithm by first cutting apart the pictures. Next, you'll select the 6 pictures that show the steps needed to make a paper airplane and arrange those pictures in the correct order. After you have everything in order, you will trade algorithms with another student team to test out the algorithm to see if the algorithm works. A well designed algorithm is super important to making the best paper airplane."
+        text: "Algoritmanızı resimleri parçalara keserek oluşturacaksınız. İkinci olarak da uçak yapmayı gösteren altı resmi doğru sıraya düzenleyeceksiniz. Herşeyi yoluna koyduktan sonra başka bir takımla algoritmanızı takas edip nasıl çalıştığını deneyeceksiniz. En iyi uçağı yapabilmek en iyi tasarlanmış algoritmayı gerektirir."
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
@@ -757,16 +757,16 @@ tr:
     C2_relay_programming:
       1:
         image: 'notes/C2_relay_programming_1.png'
-        text: "Today we're going to do relay programming. It's all about programming under pressure and debugging the mistakes that sometimes happen when you work really quickly or in teams. We'll use graph paper programming to simulate coding, and use relay races to simulate having a deadline."
+        text: "Bugün programlama bayrak yarışı yapacağız. Amacımız baskı altında programlama yapmak ve böyle hızlı çalışırken veya takım çalışmalarında yapılan hataları ayıklamak. Grafik kağıdı programlama metodu ile kod yazmayı ve bayrak yarışları ile son tarih kapsamlarını taslayacağız."
       2:
         image: 'notes/C2_relay_programming_2.png'
         text: "In relay programming, teams will be racing to finish a graph paper program. You have to check your teammate's work, or debug it, fix it if there's a mistake, add your arrow, and run back and tag your teammate."
       3:
         image: 'notes/C2_relay_programming_3.png'
-        text: "Programmers use debugging a lot to find and fix problems in their algorithms or code. There are lots of ways to debug problems. One of the easiest is to move step by step until you find where something goes wrong, then fix it."
+        text: "Programcılar algoritmalarındaki ve kodlarındaki hataları düzeltmek için hata ayıklama tekniğini kullanırlar. Bunu uygulamanın birçok yolu vardır. En kolayı programı adım adım çalıstırıp doğru çalışmayan kısmı bulmak ve düzeltmektir."
       4:
         image: 'notes/C2_relay_programming_4.png'
-        text: "Here, I'm trying to do a back handspring, but I keep falling off. I walk through each part, step by step, and realize where my mistake was. My coach showed me I wasn't putting my hands on the beam correctly. So I tried another back handspring on the beam with my new hand position, and I stuck it! I was really glad I debugged my back  handspring. We figured it out! Debugging is finding and fixing problems. Nice, good job!"
+        text: "Şimdi geriye parende atmaya çalışıyorum fakat hep düşüyorum. Verilen tarifleri adım adım takip edip nerede yanlış yaptığımı buluyorum. Antrenörüm ellerimi kalasa doğru koymadığımı söyledi. Bu verilen bilgi ile parendeyi yeniden denedim ve şahane yaptım. Parendemin hatasını ayıkladığıma çok memnunum. Bunun yolunu bulduk. Hata ayıklamak problemleri bulup çözmektir. Aferin!"
     C2_zuck_repeat_loop:
       1:
         image: 'notes/C2_zuck_repeat_loop_1.png'
@@ -863,32 +863,32 @@ tr:
     C3_computational_thinking:
       1:
         image: 'notes/C3_computational_thinking_1.png'
-        text: "This lesson is computational thinking. Sometimes learning a new game can be tough, right? At first it might seem really confusing and sometimes, there's no one there to teach you the rules, so you have to figure it out on your own."
+        text: "Bu ders hesaplamalı düşünme üzerine. Bazen yeni bir oyun öğrenmek zor gelir, değil mi? İlk başta hem karmaşık gelebilir hem de kuralları anlatacak ve yardım edecek kimse olmayabilir. Bundan dolayı bunları senin kendin yapman gerekebilir."
       2:
         image: 'notes/C3_computational_thinking_2.png'
-        text: "The good news is that you can get better at figuring things out on your own when you know a few thinking tricks. These tricks are unique ways for looking at and solving problems. In this lesson, you'll learn about four tricks and practice them with your friends to figure out the rules to a game."
+        text: "İşin iyi tarafı birkaç düşünce tüyosu ile kendin zamanla problemleri çözmeyi daha iyi becerirsin. Bu tüyolar problemlere benzersiz bir açıdan bakıp çözmekte yardımcı olurlar. Bu derste dört tüyo öğrenip arkadaşlarınla oyunun kurallarını çözeceksiniz."
       3:
         image: 'notes/C3_computational_thinking_3.png'
-        text: "When you break down a big problem into smaller pieces, you're using your brain to decompose the big problem. Once we've decomposed the big problem into several smaller problems, we can go on to our next trick, which is called pattern match."
+        text: "Büyük bir problemi ufak parçalara böldüğünde beynini problemi ayrıştırmak için kullanıyorsun. Bir kere büyük problemi ufak parçalara ayrıştırdıktan sonra ikinci tüyomuza geçeriz: örüntü eşleme."
       4:
         image: 'notes/C3_computational_thinking_4.png'
-        text: "That's when we look for similarities between things. Once I find the things that are the same, I can figure out what things are different. When I remove those differences, that's called abstraction."
+        text: "Bu değişik şeyler arasında benzeşim bulmak demektir. Benzer şeyleri bulur bulmaz, benzemeyenleri de anlarız. Bu benzemeyenleri ayırmaya da soyutlama denir."
       5:
         image: 'notes/C3_computational_thinking_5.png'
         text: "Problemi çözme aşamalarını çözdükten sonra, bu aşamaları algoritma denilen belirli sıraya koyabilirim böylece herhangi biri problemi çözmek için benim talimatlarımı kullanabilir. Biz bu dört aşamayı kuralsız oyunun nasıl oynancağını çözmek için kullanacağız. Oyunun sonunda, buna benzer bir şeyi oynayabileceksin!"
     C3_crowdsourcing:
       1:
         image: 'notes/C3_crowdsourcing_1.png'
-        text: "This lesson is called crowdsourcing. In this lesson we'll use a deck of cards to learn about how much easier some things can be to do in groups instead of trying to do them all alone. So grab some friends and make something awesome. Crowdsourcing is getting help from a large group of people to finish something faster."
+        text: "Bu dersin adı kitle kaynak. Şimdi kartlar kullanarak bazı işleri grup halinde yapmanın tek başına uğraşmaktan ne kadar daha kolay olduğunu öğreneceğiz. Hadi bakalım, birkaç arkadaş topla ve şahane birşey yap! Kitle kaynaklama bir şeyi çabucak yapabilmek için bir sürü insandan yardım istemektir."
       2:
         image: 'notes/C3_crowdsourcing_2.png'
-        text: "In computer science, we use crowdsourcing all the time. Thousands of amateurs and professionals link their computers together to search through billions and billions of pieces of information. Looking for things like the next Marsenne prime number, or even possible alien communications."
+        text: "Bilgisayar biliminde kitle kaynak çok kullanılır. Binlerce amatör ve profesyoneller bilgisayarlarını bağlayarak milyarlarca bilgi öğelerini araştırırlar. Araştırdıkları şeyler yeni bir Marsen asal sayısından uzay yaratıklarının iletişimlerine kadar değişebilir."
       3:
         image: 'notes/C3_crowdsourcing_3.png'
-        text: "When you see a movie, each second of the movie is 24 individual pictures, we call those frames. So every one of those pictures needs to be created and rendered and put all together. My team and I, we're all software developers. We all work together to create a piece of software that actually creates an image, creates the final image that you see on screen. That's a tool that artists and other developers can use as part of their teamwork and their process to be able to create the images that they want on screen."
+        text: "Bir filim izlediğinizde filmin her saniyesi 24 resimden oluşur. Bunlara kareler deriz. Bu karelerin hepsinin teker teker düzenlenip işlenip toplanması gerekir. Ben ve takımım biz yazılım geliştiricileriyiz. Beraber çalışarak bu kareleri ve filimde görülen bitmiş ürünü yaratan bir yazılım geliştirmeye çalışıyoruz. Bu artistlerin ve diğer geliştiricilerin sahnelere çıkarmak istedikleri resimleri sonuçlandırmalarına yardımcı olacaktır."
       4:
         image: 'notes/C3_crowdsourcing_4.png'
-        text: "For example, in Finding Nemo, when Crush and Squirt and all their friends are flying through the East Australian Current. You're seeing images of water flowing by, you're seeing the colors on the back of the turtle, you're seeing the sides of the fish. All of those things are generated through math and computer programs that we write, that we then give to the artist and they take that to create that final image and tweak it and make it look beautiful and look fun."
+        text: "Örneğin Finding Nemo (Nemoyu Bulma) filminde Crush ve Squirt ve arkadaşları doğu Avustralya akıntısında yüzüyorlar. Akıntı suları geçiyor, kaplumbağanın üstündeki renkleri izliyorsun, balıkların yanları gözüküyor. Bütün bunlar yazdığımız bilgisayar programlarında matematik uygulamalarıyla yapılıyor. Sonra bunları artistlere veriyoruz ve onlar da filmin son karelerini güzel ve eğlenceli bir hale getirmek için kullanıyorlar."
     C3_dice_race:
       1:
         image: 'notes/C3_dice_race_1.png'
@@ -1698,3 +1698,68 @@ tr:
       3:
         image: 'notes/iceage_repeat_3.JPG'
         text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
+    mc_2016_intro:
+      1:
+        image: 'notes/mc_2016_intro_1.jpg'
+        text: "Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım. Önümüzdeki bir saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının çalışmasını sağlamak sana bağlı."
+      2:
+        image: 'notes/mc_2016_intro_2.jpg'
+        text: Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım. Benim asıl ilgimi çeken insanların teknolojiyle nasıl etkileşim kurdukları, bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek için benim için harika bir meslek.
+      3:
+        image: 'notes/mc_2016_intro_3.jpg'
+        text: "Ekranınızın üç ana kısıma ayrıldığını göreceksiniz. 1) Sol tarafta Minecraft oyunu var. Şu anda dünya donmuş durumda ama biz bunu kod yazarak düzelteceğiz."
+      4:
+        image: 'notes/mc_2016_intro_4.jpg'
+        text: "2) Bu orta alan araç kutusudur. Bu bloklardan her biri tavuklar, koyunlar ve diğer Minecraft yaratıklarının anlayabileceği birer komuttur."
+      5:
+        image: 'notes/mc_2016_intro_5.jpg'
+        text: "3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız."
+      6:
+        image: 'notes/mc_2016_intro_6.jpg'
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+      7:
+        image: 'notes/mc_2016_intro_7.jpg'
+        text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
+      8:
+        image: 'notes/mc_2016_intro_8.jpg'
+        text: "Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet kutusuna sürüklemeniz yeterli."
+      9:
+        image: 'notes/mc_2016_intro_9.jpg'
+        text: "\"Çalıştır\"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak için \"Sıfırla\" düğmesini tıklayabilirsin. Şimdi Minecraft'ın kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!"
+    mc_2016_loops:
+      1:
+        image: 'notes/mc_2016_loops_1.jpg'
+        text: "Merhaba, ben Lisa. Minecraft'ta yazılım geliştiriciyim ve oyun içindeki bazı hayvanlar ve düşmanlar üzerinde çalışıyorum. Üzerinde çalıştığım hayvanlardan birisi oselot. Oselot'a balık vererek onu kendi kedin kısım üzeinde çalıştım."
+      2:
+        image: 'notes/mc_2016_loops_2.jpg'
+        text: "Biz insanlar tekrar tekrar aynı şeyi yapmak zorunda kalırsak gerçekten çok sıkılıyoruz. Ama bilgisayarlar hakkında en müthiş şeylerden biri onların aynı şeyi milyonlarca hatta milyarlarca kez sıkılmadan art arda yapabilmeleridir. Bu tekrara döngü denir ve Minecraft'ta her yaratık döngüleri kullanır."
+      3:
+        image: 'notes/mc_2016_loops_3.jpg'
+        text: "Daha önce ekranda hareket ettirmemiz için bir tavuk vardı, ama sonra durdu. Minecraft'ta tavuklar sonsuza dek dolanırlar. Tavuklarımızın sonsuza dek ortalıkta dolanması için \"sonsuza dek yap\" döngüsünü kullanalım. Döngülerin gücü size çok zaman kazandırıp siz Minecraft'ın kendi versiyonunu oluştururken pek çok faydalı özelliklere kapı aralayacaktır."
+    mc_2016_events:
+      1:
+        image: 'notes/mc_2016_events_1.jpg'
+        text: "Bu seviyede kendinizi Alex veya Steve olarak seçebilirsiniz. Klavyenizdeki ok tuşlarına basarak yukarı, aşağı ve sağa sola hareket edebilirsiniz. Artık bir seviyede istediğiniz gibi dolaşabilirsiniz. Herhangi bir yaratığı kullanmak için ona doğru yürüyün, yüzünüzü ona dönün ve boşluk tuşuna basın."
+      2:
+        image: 'notes/mc_2016_events_2.jpg'
+        text: "Dokunmatik bir ekran kullanıyorsanız, parmağınızı sağa, sola, yukarı, aşağı sürükleyip ortalıkta gezinebilirsiniz. Daha sonra da oyun alanına dokunarak önünüzdeki nesneyi kullanabilirsiniz."
+      3:
+        image: 'notes/mc_2016_events_3.jpg'
+        text: "Ama sen onu kullanınca ne olur? Minecraft'ta, koyunlar onları kırpınca yünlerini bırakır, inekler sen onlara vurunca kaçar ve creeperlar da sen onların yanına yaklaşınca patlarlar. Bütün bu reaksiyonlar olaylar dediğimiz şeyler sayesinde gerçekleşir. Olaylar programınıza bir şeyin olmasını beklemeyi ya da dinlemeyi söyler. Ve o olay olduğunda da bir eylem gerçekleştirmelerini söyler."
+      4:
+        image: 'notes/mc_2016_events_4.jpg'
+        text: "Şu ana kadar tek bir olay kullandınız. \"spawn olduğunda\" yuvasına koydunuz kod yaratık oluştuğunda ya da oyun başladığında çalışmaya başlar. Önümüzdeki bir kaç seviyede dokunulduğunda çalışan \"dokunulduğu zaman\" yuvası veya yaratığı kullandığınızda çalışmaya başlatacak \"kullanıldığında\" komutlarını öğreneceksiniz. Ya da güneş doğduğunda zombinin yok olmasını istiyorsanız \"gün olduğunda\" yuvasını kullanın"
+    mc_2016_spawn:
+      1:
+        image: 'notes/mc_2016_spawn_1.jpg'
+        text: "Oyunlarda spawn demek yaratmak demekle aynı anlama gelir. Bu seviyede gelin zombilerin güneş battığında spawn olmalarını sağlayalım. Bunu yapmak için \"gece olduğunda\" bloğunu kullanacağız."
+      2:
+        image: 'notes/mc_2016_spawn_2.jpg'
+        text: "Zombilerin gece spawn olmalarını istediğimizden \"spawn zombi\" bloğunu \"gece olduğunda\" bloğunun altına koy. Zombiler oluşur oluşmaz \"spawn olduğunda\" bloğunun altındaki kodu çalıştırır. Zombileri oluştururken iyi eğlenceler!"
+    mc_2016_congrats:
+      1:
+        image: 'notes/mc_2016_congrats_1.jpg'
+        text: "Tebrikler! Bilgisayar bilimi komutlarını öğrenerek Minecraft dünyasını hayata getirmeyi öğrendin. Artık bir yazılımcısın. Bütün komutları ve yaratıkları kullandın. Ne olacağına sen karar vereceksin."
+      2:
+        image: 'notes/mc_2016_congrats_2.jpg'
+        text: "Oyunu yapmayı bitirdiğinde, link paylaşmak için ya da telefonunda oynamak için paylaş linkini seç. İyi eğlenceler. Senin oluşturduğun Minecraft sürümünü oynamak için sabırsızlanıyorum."

@@ -76,8 +76,8 @@ class Applab < Blockly
   end
 
   def update_palette
-    if self.code_functions.present? && self.code_functions.is_a?(String)
-      self.code_functions = JSON.parse(self.code_functions)
+    if code_functions.present? && code_functions.is_a?(String)
+      self.code_functions = JSON.parse(code_functions)
     end
     true
   rescue JSON::ParserError => e
@@ -86,9 +86,9 @@ class Applab < Blockly
   end
 
   def parse_json_property_field(property_field)
-    value = self.properties[property_field]
+    value = properties[property_field]
     if value.present? && value.is_a?(String)
-      self.properties[property_field] = JSON.parse value
+      properties[property_field] = JSON.parse value
     end
     true
   rescue JSON::ParserError => e
@@ -125,12 +125,14 @@ class Applab < Blockly
         "getImageURL": null,
         "setImageURL": null,
         "playSound": null,
+        "stopSound": null,
         "showElement": null,
         "hideElement": null,
         "deleteElement": null,
         "setPosition": null,
         "setSize": null,
         "setProperty": null,
+        "getProperty": null,
         "write": null,
         "getXPosition": null,
         "getYPosition": null,

@@ -6,20 +6,35 @@ nav: about_nav
 
 [col-50]
 
-**Code.org's work covered by CBS This Morning:**
+<iframe width="375" height="246" src="https://www.youtube.com/embed/zxcBZg7jYlc" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
+**Nasdaq interviews Code.org founder Hadi Partovi**
 
 [/col-50]
 
 [col-50]
 
-**President Obama does the Hour of Code:**
+<iframe width="375" height="246" src="//www.youtube.com/embed/sUXfjzzHO5g?controls=2" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="375" height="210" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
-Hour of Code has won the support of both [Republicans and Democrats](https://www.youtube.com/watch?v=Vgn_YbSmHnw), and [many celebrities](https://www.youtube.com/watch?v=h5_SsNSaJJI&list=PLzdnOPI1iJNciTeOk1ziB4pIpdPwevgv_)
+**Code.org's work covered by CBS This Morning**
 
-<br/><br/>
+[/col-50]
+
+<br><br>
+
+[col-50]
+
+<iframe width="375" height="246" src="//www.youtube.com/embed/AI_dayIQWV4" frameborder="0" allowfullscreen></iframe>
+
+**President Obama does the Hour of Code**
+
+[/col-50]
+
+[col-50]
+
+<iframe width="375" height="246" src="https://www.youtube.com/embed/W5QGo_Yb_Pc?list=PLzdnOPI1iJNfygSF8gKBUq7fT4Y61_h2I" frameborder="0" allowfullscreen></iframe>
+
+**The Hour of Code has won the support of both Republicans and Democrats**
 
 [/col-50]
 

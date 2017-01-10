@@ -9,8 +9,8 @@ cs,cs,cs,cs-CZ,Čeština,Czech,TRUE,TRUE,cs,Czech
 da,da,da,da-DK,Dansk,Danish,TRUE,TRUE,da,Danish
 de,de,de,de-DE,Deutsch,German,TRUE,TRUE,de,German
 el,el,el,el-GR,Ελληνικά,Greek,TRUE,TRUE,el,Greek
-en-GB,gb,en,en-GB,Engish (UK),Engish (UK),FALSE,TRUE,en-GB,"English, United Kingdom"
-en,en,en,en-US,English,English,TRUE,TRUE,en,"English, United States"
+en-GB,gb,en,en-GB,Engish (UK),English (UK),FALSE,TRUE,en-GB,"English, United Kingdom"
+en,en,en,en-US,English,English,TRUE,TRUE,en,English
 es,es,es,es-ES,Español,Spanish,TRUE,TRUE,es-ES,Spanish
 es-MX,la,es,es-MX,Español (México),Spanish (Mexico),FALSE,TRUE,es-MX,"Spanish, Mexico"
 et,et,et,et-EE,Eesti,Estonian,TRUE,FALSE,et,Estonian
@@ -22,6 +22,7 @@ fil,ph,fil,fil-PH,Pilipino,Filipino,FALSE,FALSE,fil,Filipino
 fr,fr,fr,fr-FR,Français,French,TRUE,TRUE,fr,French
 ga,ga,ga,ga-IE,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish
 gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician
+haw,ha,haw,haw-HI,ʻŌlelo Hawaiʻi,Hawaiian,FALSE,FALSE,haw,Hawaiian
 he,he,he,he-IL,עברית,Hebrew,TRUE,FALSE,he,Hebrew
 hi,hi,hi,hi-IN,हिन्दी,Hindi,FALSE,TRUE,hi,Hindi
 hr,hr,hr,hr-HR,Hrvatski,Croatian,TRUE,TRUE,hr,Croatian
@@ -38,7 +39,7 @@ ko,ko,ko,ko-KR,한국어,Korean,TRUE,TRUE,ko,Korean
 ku,ku,ku,ku-IQ,Kurdí,Kurdish,FALSE,FALSE,ku,Kurdish
 lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian
-mi,mi,mi,mi-NZ,Māori,Maori,FALSE,FALSE,mi,Maori
+mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori
 mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian (FYROM)
 mr,mr,mr,mr-IN,मराठी,Marathi,FALSE,FALSE,mr,Marathi
 ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay
@@ -54,13 +55,14 @@ pt-PT,po,pt,pt-PT,Português (Portugal),Portuguese (Portugal),TRUE,TRUE,pt,Portu
 ro,ro,ro,ro-RO,Română,Romanian,TRUE,TRUE,ro,Romanian
 ru,ru,ru,ru-RU,Pусский,Russian,TRUE,TRUE,ru,Russian
 se,se,se,se-FI,Davvisámegiella,Northern Sami,FALSE,FALSE,se,Northern Sami
-si,si,si,si-LK,සිංහල,Sinhalese,TRUE,FALSE,si-LK,Sinhala
+si,si,si,si-LK,සිංහල,Sinhalese,TRUE,TRUE,si-LK,Sinhala
 sk,sk,sk,sk-SK,Slovenčina,Slovak,FALSE,FALSE,sk,Slovak
 sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian
 sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic)
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish
 ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil
+tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik
 th,th,th,th-TH,ไทย,Thai,FALSE,FALSE,th,Thai
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish
 uk,uk,uk,uk-UA,Українська,Ukrainian,TRUE,TRUE,uk,Ukrainian

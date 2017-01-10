@@ -1,17 +1,45 @@
 ---
 title: CS Fundamentals for grades K-5
 nav: educate_nav
+video_player: true
 ---
 
-# Computer Science Fundamentals for elementary school
+[solid-block-header]
 
-### [No-Cost Teacher Workshops](#teach) |  [Curriculum Overview](#overview) | [Other Resources](#other)
+Computer Science Fundamentals
+
+[/solid-block-header]
+
+### [No-Cost Teacher Workshops](#teach) | [Curriculum Overview](#overview) | [Other Resources](#other)
 
 Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate.
 
-<iframe width="600" height="337" src="//www.youtube.com/embed/rNIM1fzJ8u0" frameborder="0" allowfullscreen></iframe>
+<div style="float:left; padding:10px; width:49%">
 
-## <a name="teach"></a> High quality workshops for teachers, at no cost (US only)
+<% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
+
+
+</div>
+
+<div style="float:left; padding:10px; width:49%">
+
+<% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
+<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>'Getting Started with Code Studio @codeorg'} %>
+<%=view :display_video_thumbnail, id: "GettingStarted", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
+
+</div>
+
+<div style="clear:both"></div>
+
+[solid-block-header]
+
+<a name="teach"></a> Free Teacher Workshops
+
+[/solid-block-header]
+
+## High quality workshops for teachers, at no cost (US only)
 
 Our curriculum is completely free for anyone, anywhere to teach. To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. 
 
@@ -20,110 +48,32 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 <br />
 [<button style="font-size: 22px; height: 50px">Learn more & find a local workshop</button>](/professional-development-workshops)<br />
 
-<em>Want to partner with us to train K-5 teachers in your school, district, or region? [Go here.] (/educate/professional-learning/cs-fundamentals-facilitator)</em>
-
 <img src="/images/k5teacherquotes.png" width="800"/> 
 
 ### <strong>No workshop in your area?</strong>
-[Find](/educate/k5-affiliates-directory) a K-5 Affiliate near you or consider completing one of our [online self-paced courses](/educate/professional-development-online) on your own.
+[Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
 
+[<button>View the online course</button>](/educate/professional-development-online)<br />
 
-## <a name="overview"></a>Computer Science Fundamentals: Curriculum Overview
+[solid-block-header]
+
+<a name="overview"></a>Curriculum Overview
+
+[/solid-block-header]
+
 Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This <strong>completely free</strong> curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
 
-[col-25]
+[Download complete curriculum for Courses 1 - 4](/curriculum/docs/k-5/complete.pdf)
 
-#### Course 1: Ages 4-6
-
-<img src="<%= CDO.shared_image_url('courses/logo_tall_course1.jpg') %>" width="170"/>
-
-- Early-readers
-- Sequences
-- Loops and events
-- Meaningful collaboration with others
-- Problem-solving and perseverance techniques
-- Internet safety
-
-[/col-25]
-
-[col-25]
-
-#### Course 2: Ages 6+
-
-<img src="<%= CDO.shared_image_url('courses/logo_tall_course2.jpg') %>" width="170"/>
-
-- Beginner readers
-- Conditionals
-- Algorithms
-- Binary code
-- Debugging
-- Societal impacts of computing
-
-[/col-25]
-
-[col-25]
-
-#### Course 3: Ages 8+ 
-
-<img src="<%= CDO.shared_image_url('courses/logo_tall_course3.jpg') %>" width="170"/>
-
-- Prereq Course 2 
-- Problem decomposition
-- Functions
-- Nested loops and conditionals
-- Digital citizenship
-- Internet transmission methods
-
-[/col-25]
-
-[col-25]
-
-#### Course 4: Ages 10+ 
-
-<img src="<%= CDO.shared_image_url('courses/logo_tall_course4.jpg') %>" width="170"/>
-
-- Prereq Course 3
-- Algorithmic problem solving 
-- Abstraction
-- Variables
-- For Loops
-- Functions with Parameters
-- Binary code
+| Course | Ages | Description | Teacher Resources |
+| :------------------:|-----------|-----------|-----------|
+| <a href ="https://studio.code.org/s/course1">Course 1 <img src="<%= CDO.shared_image_url('courses/logo_tall_course1.jpg') %>" width="170"/></a> <br><br>  | Ages 4-6 | <ul><li>Early-readers</li><li>Sequences</li><li>Loops and events</li><li>Meaningful collaboration with others</li><li>Problem-solving and perseverance techniques</li><li>Internet safety</li></ul>  | [Lesson Plans] (/curriculum/course1) <br><br> [Sequence](/curriculum/course1/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course1.pdf) <br><br> [Standards](curriculum/docs/k-5/framework_course1.pdf)|
+| <a href ="https://studio.code.org/s/course2">Course 2 <img src="<%= CDO.shared_image_url('courses/logo_tall_course2.jpg') %>" width="170"/></a> <br><br>  | Ages 6+ | <ul><li>Beginner readers</li><li>Conditionals</li><li>Algorithms</li><li>Binary Code</li><li>Debugging</li><li>Societal impacts of computing</li></ul>| [Lesson Plans] (/curriculum/course2) <br><br> [Sequence](/curriculum/course2/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course2.pdf) <br><br> [Standards](curriculum/docs/k-5/framework_course2.pdf)|
+| <a href ="https://studio.code.org/s/course3">Course 3 <img src="<%= CDO.shared_image_url('courses/logo_tall_course3.jpg') %>" width="170"/></a> <br><br> | Ages 8+ | <ul><li>Pre-req Course 2</li><li>Problem Decomposition</li><li>Functions</li><li>Nested loops and conditionals</li><li>Digital Citizenship</li><li>Internet transmission methods</li></ul> | [Lesson Plans] (/curriculum/course3) <br><br> [Sequence](/curriculum/course3/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course3.pdf) <br><br> [Standards](curriculum/docs/k-5/framework_course3.pdf)|
+| <a href ="https://studio.code.org/s/course4">Course 4 <img src="<%= CDO.shared_image_url('courses/logo_tall_course4.jpg') %>" width="170"/></a> <br><br> | Ages 8+ | <ul><li>Pre-req Course 3</li><li>Algorithmic problem solving</li><li>Abstraction</li><li>Variables</li><li>For loops</li><li>Functions with parameters</li><li>Binary code</li></ul> | [Lesson Plans] (/curriculum/course4) <br><br> [Sequence](/curriculum/course4/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course4.pdf) <br><br> [Standards](curriculum/docs/k-5/framework_course4.pdf)|
+| <a href ="/curriculum/unplugged">Unplugged<img src="/images/unpluggedcourse.png" width="170"/></a> <br><br> | All Ages | <ul><li>No computer required</li><li>Collaborative activities</li><li>Computational Thinking</li><li>Algorithms</li><li>Loops</li><li>Conditionals</li><li>Variables</li><li>Functions</li></ul> | [Unplugged Activities] (/curriculum/unplugged) |
 
 <br>
-<br>
-
-[/col-25]
-
-[col-25]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Try it now</button>](http://studio.code.org/s/course1)
-
-[/col-25]
-
-[col-25]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Try it now</button>](http://studio.code.org/s/course2)
-
-[/col-25]
-
-[col-25]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Try it now</button>](http://studio.code.org/s/course3)
-
-[/col-25]
-
-[col-25]
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[<button>Try it now</button>](http://studio.code.org/s/course4)
-
-[/col-25]
-
-<p style="clear:both">&nbsp;</p>
 
 By the end of each course, students create interactive games or stories that they can share with anyone.
 
@@ -159,8 +109,8 @@ All lessons align to all relevant computer science standards, as well as to the 
 
 <p style="clear:both">&nbsp;</p>
 
-### <strong>Teacher dashboard</strong>
-The Code Studio teacher dashboard makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
+### <strong>Teacher Home Page</strong>
+The Code Studio teacher home page makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
 
 [col-50]
 
@@ -176,16 +126,20 @@ The Code Studio teacher dashboard makes it easy for teachers to view lesson plan
 
 <p style="clear:both">&nbsp;</p>
 
-### <strong>Don't have computers?</strong>
-No problem. You can still teach the fundamentals of computer science without any computers or devices. Try using these [unplugged lessons](<%= CDO.code_org_url('/curriculum/unplugged') %>) in your classroom as a stand-alone course or as complementary lessons for any computer science course.
+
+[<button>Go to the Teacher Home Page</button>](https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher`)<br />
+
 
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
+[solid-block-header]
 
-## <a name="other"></a>Other resources
+<a name="other"></a>Other Resources
 
-### <strong>3rd Party resources for elementary school computer science</strong>
+[/solid-block-header]
+
+## 3rd Party resources for elementary school computer science
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -193,26 +147,24 @@ Get online assistance while using our curriculum through product FAQs, technical
 |--------------|------------|---------------|---------------|
 | [Code Monkey](https://www.playcodemonkey.com/) | Over 300 story modes & skill mode challenges. Can be taught full year, 1/2 year, or quarterly. $10/student | Free online course, $250/webinar, $3500/onsite PD | 
 | [Code Red Education](www.coderededucation.com) | 150 lessons over 7 modules, $3500/site | Online PD included with site fee | 
-| [Kodable](Kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools | 
+| [Kodable](https://www.kodable.com) | 38 lesson plans that blend online independent practice with "unplugged" activities. 8 Lessons, FREE, Full curriculum, $15/student, $1950/site | Online or in-person PD included for paying schools | 
 | [Project Lead The Way](https://www.pltw.org/our-programs/pltw-launch) | 6 10-hour computer science modules, $750/school  | Face-to-face and online, $700 for school-level lead teacher |
 | [ScratchEd](http://scratched.gse.harvard.edu/guide) | A 6-unit intro to Scratch, FREE | In-person educator meet-ups and online MOOC, FREE |
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
 
-### <strong>Inspire students to try computer science</strong>
+## Inspire students
+We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
 
-Our [Inspire a student](/educate/inspire) page has all kinds of stuff you can use to get kids excited about computer science—like posters and videos featuring musicians, celebrities, entrepreneurs, and students!
+[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
 
-Want even more videos? Check out the [Video Library](/educate/videos).
-
-### <strong>Find a guest speaker for your classroom</strong>
-
-Want your students to hear from an inspiring computer science professional? Use the button below to find a guest speaker for your class from our list of volunteers! Local guest speakers are available in select areas; guest speakers via teleconference are available to all teachers.
+## Find a guest speaker for your classroom
+Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
 
 [<button>Find a guest speaker</button>](/volunteer/local)
 
-### <strong>Spread the word!</strong> 
+## Spread the word!
 Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators. 
 
 

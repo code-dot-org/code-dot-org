@@ -49,7 +49,7 @@ var interfaceImages = {
     MEDIA_URL + "Sliced_Parts/X_Button.png",
     MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon.png",
+    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png",
     MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
     MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
     MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
@@ -123,7 +123,6 @@ Craft.init = function (config) {
   }
 
   config.level.disableFinalStageMessage = true;
-  config.showInstructionsInTopPane = true;
 
   // Return the version of Internet Explorer (8+) or undefined if not IE.
   var getIEVersion = function () {
@@ -138,12 +137,11 @@ Craft.init = function (config) {
   var bodyElement = document.body;
   bodyElement.className = bodyElement.className + " minecraft";
 
-  if (config.level.showPopupOnLoad) {
-    config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
-      var event = document.createEvent('Event');
-      event.initEvent('instructionsShown', true, true);
-      document.dispatchEvent(event);
-
+  // Always add a hook for after the video but before the level proper begins.
+  // Use this to start music, and sometimes to show an extra dialog.
+  config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+    Craft.beginBackgroundMusic();
+    if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('Minecraft', 'ChoseCharacter', selectedPlayer);
@@ -163,11 +161,20 @@ Craft.init = function (config) {
             studioApp.setStartBlocks_(config, true);
           }
           Craft.initializeAppLevel(config.level);
+
+          // Fire a custom event on the document to trigger a callout
+          // showing up.
+          var event = document.createEvent('Event');
+          event.initEvent('houseLayoutSelected', true, true);
+          document.dispatchEvent(event);
+
           showInstructions();
         });
       }
-    };
-  }
+    } else {
+      showInstructions();
+    }
+  };
 
   if (config.level.puzzle_number && levelbuilderOverrides[config.level.puzzle_number]) {
     Object.assign(config.level, levelbuilderOverrides[config.level.puzzle_number]);
@@ -198,8 +205,7 @@ Craft.init = function (config) {
   );
 
   // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsHidden', playOnce);
+  Craft.beginBackgroundMusic = function () {
     if (studioApp.cdoSounds) {
       studioApp.cdoSounds.whenAudioUnlocked(function () {
         var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
@@ -208,7 +214,6 @@ Craft.init = function (config) {
       });
     }
   };
-  document.addEventListener('instructionsHidden', playOnce);
 
   var character = characters[Craft.getCurrentCharacter()];
   config.skin.staticAvatar = character.staticAvatar;

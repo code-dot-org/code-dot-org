@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
-import { getConfigRef, getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
@@ -44,8 +44,14 @@ module.exports = function (testCollection, testData, dataItem, done) {
     level.scale.stepSpeed = 33;
   }
 
+  if (testData.lastAttempt) {
+    level.lastAttempt = testData.lastAttempt;
+  }
+
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+
+  level.startHtml = testData.startHtml;
   level.levelHtml = testData.levelHtml;
 
   level.hideViewDataButton = testData.hideViewDataButton;
@@ -137,6 +143,7 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
+    embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',

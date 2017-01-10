@@ -23,6 +23,12 @@ const TestResults = studioApp.TestResults;
 
 const MEDIA_URL = '/blockly/media/craft/';
 
+/**
+ * The first level where character selection shows up.
+ * @type {number}
+ */
+const FIRST_CHARACTER_LEVEL = 4;
+
 const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
@@ -61,40 +67,51 @@ const eventsCharacters = {
   }
 };
 
+const CHICKEN_ASSETS = [
+  eventsCharacters.Chicken.staticAvatar,
+  eventsCharacters.Chicken.smallStaticAvatar,
+  eventsCharacters.Chicken.winAvatar,
+  eventsCharacters.Chicken.failureAvatar,
+];
+const CHARACTER_ASSETS = [
+  MEDIA_URL + "Events/Steve_Character_Select.png",
+  MEDIA_URL + "Events/Alex_Character_Select.png",
+  eventsCharacters.Steve.staticAvatar,
+  eventsCharacters.Steve.smallStaticAvatar,
+  eventsCharacters.Alex.staticAvatar,
+  eventsCharacters.Alex.smallStaticAvatar,
+];
+const COMMON_UI_ASSETS = [
+  MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
+  MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
+  MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
+  MEDIA_URL + "Sliced_Parts/X_Button.png",
+  MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
+  MEDIA_URL + "Sliced_Parts/MC_Button_Pressed.png",
+  MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
+  MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
+  MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon_Smaller.png",
+  MEDIA_URL + "Sliced_Parts/MC_Up_Arrow_Icon.png",
+  MEDIA_URL + "Sliced_Parts/MC_Down_Arrow_Icon.png",
+  MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
+  MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
+  MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
+  MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
+];
 const interfaceImages = {
-  DEFAULT: [
-    MEDIA_URL + "Sliced_Parts/MC_Loading_Spinner.gif",
-    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_Logo.png",
-    MEDIA_URL + "Sliced_Parts/Frame_Large_Plus_LogoNew.png",
-    MEDIA_URL + "Sliced_Parts/Pop_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/X_Button.png",
-    MEDIA_URL + "Sliced_Parts/Button_Grey_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Run_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Run_Arrow_Icon.png",
-    MEDIA_URL + "Sliced_Parts/Run_Button_Down_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Reset_Button_Up_Slice.png",
-    MEDIA_URL + "Sliced_Parts/MC_Reset_Arrow_Icon.png",
-    MEDIA_URL + "Sliced_Parts/Reset_Button_Down_Slice.png",
-    MEDIA_URL + "Sliced_Parts/Callout_Tail.png",
-  ],
-  1: [
-    MEDIA_URL + "Sliced_Parts/Steve_Character_Select.png",
-    MEDIA_URL + "Sliced_Parts/Alex_Character_Select.png",
-    eventsCharacters.Steve.staticAvatar,
-    eventsCharacters.Steve.smallStaticAvatar,
-    eventsCharacters.Alex.staticAvatar,
-    eventsCharacters.Alex.smallStaticAvatar,
-  ],
-  2: [
-    // TODO(bjordan): find different pre-load point for feedback images,
-    // bucket by selected character
-    eventsCharacters.Alex.winAvatar,
-    eventsCharacters.Steve.winAvatar,
-    eventsCharacters.Alex.failureAvatar,
-    eventsCharacters.Steve.failureAvatar,
-  ],
-  6: [
-  ]
+  DEFAULT: COMMON_UI_ASSETS,
+  1: CHICKEN_ASSETS,
+  2: CHICKEN_ASSETS,
+  3: CHICKEN_ASSETS,
+  4: CHARACTER_ASSETS,
+  5: CHARACTER_ASSETS,
+  6: CHARACTER_ASSETS,
+  7: CHARACTER_ASSETS,
+  8: CHARACTER_ASSETS,
+  9: CHARACTER_ASSETS,
+  10: CHARACTER_ASSETS,
+  11: CHARACTER_ASSETS,
+  12: CHARACTER_ASSETS,
 };
 
 const MUSIC_METADATA = [
@@ -109,7 +126,7 @@ const MUSIC_METADATA = [
 
 const CHARACTER_STEVE = 'Steve';
 const CHARACTER_ALEX = 'Alex';
-const DEFAULT_CHARACTER = CHARACTER_STEVE;
+const DEFAULT_CHARACTER = CHARACTER_ALEX;
 
 function trySetLocalStorageItem(key, value) {
   try {
@@ -164,12 +181,11 @@ Craft.init = function (config) {
   var bodyElement = document.body;
   bodyElement.className = bodyElement.className + " minecraft";
 
-  if (config.level.showPopupOnLoad) {
-    config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
-      var event = document.createEvent('Event');
-      event.initEvent('instructionsShown', true, true);
-      document.dispatchEvent(event);
-
+  // Always add a hook for after the video but before the level proper begins.
+  // Use this to start music, and sometimes to show an extra dialog.
+  config.level.afterVideoBeforeInstructionsFn = (showInstructions) => {
+    Craft.beginBackgroundMusic();
+    if (config.level.showPopupOnLoad) {
       if (config.level.showPopupOnLoad === 'playerSelection') {
         Craft.showPlayerSelectionPopup(function (selectedPlayer) {
           trackEvent('MinecraftDesigner', 'ChoseCharacter', selectedPlayer);
@@ -180,8 +196,10 @@ Craft.init = function (config) {
           showInstructions();
         });
       }
-    };
-  }
+    } else {
+      showInstructions();
+    }
+  };
 
   if (config.level.puzzle_number && eventsLevelbuilderOverrides[config.level.puzzle_number]) {
     Object.assign(config.level, eventsLevelbuilderOverrides[config.level.puzzle_number]);
@@ -212,8 +230,7 @@ Craft.init = function (config) {
   );
 
   // Play music when the instructions are shown
-  var playOnce = function () {
-    document.removeEventListener('instructionsHidden', playOnce);
+  Craft.beginBackgroundMusic = function () {
     if (studioApp.cdoSounds) {
       studioApp.cdoSounds.whenAudioUnlocked(function () {
         var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
@@ -222,7 +239,6 @@ Craft.init = function (config) {
       });
     }
   };
-  document.addEventListener('instructionsHidden', playOnce);
 
   const character = config.level.usePlayer ? eventsCharacters[Craft.getCurrentCharacter()] : eventsCharacters['Chicken'];
 
@@ -234,18 +250,19 @@ Craft.init = function (config) {
   const onMount = function () {
     studioApp.init({
       ...config,
-      forceInsertTopBlock: config.level.isEventLevel ? null : 'when_run',
+      forceInsertTopBlock: null,
       appStrings: {
         generatedCodeDescription: craftMsg.generatedCodeDescription(),
       },
-      enableShowCode: !config.level.isEventLevel,
-      enableShowBlockCount: !config.level.isEventLevel,
+      enableShowCode: false,
+      enableShowBlockCount: false,
       loadAudio: function () {},
       afterInject: function () {
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
+          onScoreUpdate: config.level.useScore ? s => $('#score-number').text(s) : null,
           assetRoot: Craft.skin.assetUrl('designer/'),
           audioPlayer: {
             register: studioApp.registerAudio.bind(studioApp),
@@ -258,14 +275,12 @@ Craft.init = function (config) {
            * Won't matter for levels without delayed level initialization
            * (due to e.g. character popup).
            */
-          earlyLoadAssetPacks: config.level.isEventLevel ? null :
-              Craft.earlyLoadAssetsForLevel(config.level.puzzle_number),
+          earlyLoadAssetPacks: Craft.earlyLoadAssetsForLevel(config.level.puzzle_number),
           afterAssetsLoaded: function () {
             // preload music after essential game asset downloads completely finished
             Craft.musicController.preload();
           },
-          earlyLoadNiceToHaveAssetPacks: config.level.isEventLevel ? null:
-              Craft.niceToHaveAssetsForLevel(config.level.puzzle_number),
+          earlyLoadNiceToHaveAssetPacks: Craft.niceToHaveAssetsForLevel(config.level.puzzle_number),
         });
 
         if (!config.level.showPopupOnLoad) {
@@ -293,7 +308,7 @@ Craft.init = function (config) {
               }(btn));
         }
 
-        dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp);
+        dom.addMouseUpTouchEvent(document, Craft.onDocumentMouseUp, false);
         $('#soft-buttons').removeClass('soft-buttons-none').addClass('soft-buttons-' + 4);
         $('#soft-buttons').hide();
 
@@ -333,10 +348,8 @@ Craft.init = function (config) {
     interfaceImagesToLoad = interfaceImagesToLoad.concat(interfaceImages.DEFAULT);
 
     if (config.level.puzzle_number && interfaceImages[config.level.puzzle_number]) {
-      if (!config.level.isEventLevel) {
-        interfaceImagesToLoad =
-            interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
-      }
+      interfaceImagesToLoad =
+          interfaceImagesToLoad.concat(interfaceImages[config.level.puzzle_number]);
     }
 
     interfaceImagesToLoad.forEach(function (url) {
@@ -359,7 +372,9 @@ Craft.init = function (config) {
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
       <AppView
-        visualizationColumn={<CraftVisualizationColumn/>}
+        visualizationColumn={
+          <CraftVisualizationColumn showScore={!!config.level.useScore}/>
+        }
         onMount={onMount}
       />
     </Provider>,
@@ -502,15 +517,13 @@ Craft.initializeAppLevel = function (levelConfig) {
 };
 
 Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
+  const extraAssets = levelNumber >= FIRST_CHARACTER_LEVEL ?
+    [Craft.characterAssetPackName(Craft.getCurrentCharacter())] : [];
   return Craft.minAssetsForLevelNumber(levelNumber)
-      .concat([Craft.characterAssetPackName(Craft.getCurrentCharacter())]);
+      .concat(extraAssets);
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  if (Craft.initialConfig.level.isEventLevel) {
-    return ['allAssetsMinusPlayer'];
-  }
-
   switch (levelNumber) {
     case 1:
       return ['levelOneAssets'];
@@ -524,17 +537,11 @@ Craft.minAssetsForLevelNumber = function (levelNumber) {
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
-  if (Craft.initialConfig.level.isEventLevel) {
-    return ['allAssetsMinusPlayer'];
-  }
-
   // After level loads & player starts playing, kick off further asset downloads
   switch (levelNumber) {
     case 1:
       // can disable if performance issue on early level 1
       return Craft.minAssetsForLevelNumber(2);
-    case 2:
-      return Craft.minAssetsForLevelNumber(3);
     default:
       // May want to push this to occur on level with video
       return ['allAssetsMinusPlayer'];
@@ -542,21 +549,18 @@ Craft.afterLoadAssetsForLevel = function (levelNumber) {
 };
 
 Craft.earlyLoadAssetsForLevel = function (levelNumber) {
-  switch (levelNumber) {
-    case 1:
-      return Craft.minAssetsForLevelNumber(levelNumber);
-    default:
-      return Craft.minAssetsForLevelWithCharacter(levelNumber);
+  if (levelNumber <= FIRST_CHARACTER_LEVEL) {
+    return Craft.minAssetsForLevelNumber(levelNumber);
   }
+
+  return Craft.minAssetsForLevelWithCharacter(levelNumber);
 };
 
 Craft.niceToHaveAssetsForLevel = function (levelNumber) {
-  switch (levelNumber) {
-    case 1:
-      return ['playerSteve', 'playerAlex'];
-    default:
-      return ['allAssetsMinusPlayer'];
+  if (levelNumber === FIRST_CHARACTER_LEVEL) {
+    return ['playerSteve', 'playerAlex'];
   }
+  return ['allAssetsMinusPlayer'];
 };
 
 /**
@@ -798,6 +802,7 @@ Craft.executeUserCode = function () {
 
   codegen.evalWith(code, evalApiMethods, true);
   appCodeOrgAPI.startAttempt(function (success) {
+    $('#soft-buttons').hide();
     if (Craft.level.freePlay) {
       return;
     }

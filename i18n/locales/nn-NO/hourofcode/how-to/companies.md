@@ -6,90 +6,90 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your company
+# Korleis få Hour of Code til di bedrift
 
-## Inspire students and volunteer for the Hour of Code
+## Inspirere elevar og frivillige til the Hour of Code
 
-**Code.org offers company employees the opportunity to [connect](%= resolve_url('https://code.org/volunteer') %) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+**Code.org tilbyr bedrifta sine ansatte moglegheit til og [forbinde](%= resolve_url('https://code.org/volunteer') %) med lokale klasserom, der dei brukar the Hour of Code til og dele si erfaring og inspirere elevar til og studere datavitenskap.**
 
-  * [Sign up](%= resolve_url('https://code.org/volunteer') %) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
+  * [Meld deg på](%= resolve_url('https://code.org/volunteer') %) som frivillig.
+  * For meir informasjon om korleis enn kan forbinde sine ansatte med klasserom, rådfør deg med vår [ guide for bedriftspartnarar ](%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %).
 
-## Additional ways companies can support the Hour of Code:
+## Andre måtar bedrifter kan støtte Hour of Code på:
 
-  * Use our [marketing toolkit](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+  * Bruk vårt [ marknadsføringsverkty ](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) til å laga ein kommunikasjons-tidslinje og dela marknadsføringsinnhald.
+  * Forhør deg med din overordna til og sende ut ein bedrifts epost, der det vert understreka kor viktig datateknologi er og at dei ansatte må spre ordet. [Sjå denne eposten](%= resolve_url('/promote/resources#sample-emails') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
+  * Organiser eit kodetime-arrangement ved å invitera ein skuleklasse eller ideell forening til kontoret ditt. Sjå "Korleis organisera kodetime" nedanfor.
 
-## How to host an Hour of Code event
+## Korleis organisera kodetime
 
-## 1) Promote your Hour of Code
+## 1) Promotering av kodetimen din
 
-  * Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-  * Encourage **software engineers** at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= resolve_url('https://code.org/volunteer/engineer') %) to be connected with a classroom.
+  * Promoter [Hour of Code](%= resolve_url('/promote') %)-arrangementet ditt, og inspirer andre til også å vera kodetime-vertar.
+  * Inspirera **programmerarar** i selskapet ditt til å besøka ein skuleklasse for å hjelpa til med å leia ein kodetime, og derigjennom inspirera elevar til å studera datateknologi. Dei kan [registrera seg](%= resolve_url('https://code.org/volunteer/engineer') %) for å få kontakt med ein skuleklasse.
 
 ## 2) Sjå denne videoen <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Vel ein lærevideo:
 
-We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **For alle leksjonane i Kodetimen gjeld:**
 
-  * Require minimal prep-time
-  * Are self-guided - allowing participants to work at their own pace and skill-level
+  * Minimal førebuingstid trengs
+  * Leksjonane er sjølvforklarande - slik at deltakarar kan jobba i tråd med deira eige tempo og ferdigheitsnivå
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Planlegg kva du har bruk for av utstyr - datamaskiner er valfrie
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+Den beste Kodetime-opplevinga får du med datamaskiner tilkopla Internett. Men du **treng ikkje** ei datamaskin for kvar deltakar, og du kan jamvel gjera kodetimen utan datamaskin.
 
-**Plan Ahead!** Do the following before your event starts:
+**Planlegg!** Gjer følgjande før arrangementet startar:
 
-  * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
-  * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
-  * **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Dei vil også oppleve at programmering er sosialt og handlar om samarbeid.
-  * **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline tutorials.
+  * Test instruksjonsvideoar på datamaskiner og andre einingar. Forsikra deg om at lyd og bilete fungerar i nettlesarar.
+  * Ha hovudtelefonar tilgjengeleg, eller spør deltakarar om å ta med sine eigne, dersom instruksjonsvideoen fungerar best med lyd.
+  * **Manglar du datamaskiner eller einingar?** Bruk [par-programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når deltakarar vert inndelte i par, kan dei hjelpa kvarandre og vera mindre avhengige av organisatoren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
+  * **Har du låg bandbreidde?** Sjå på videoane saman i byrjinga av arrangementet, slik at kvar deltakar ikkje treng lasta ned videoane sjølve. Eller prøv dei fråkobla instruksjonsvideoane.
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) Start Kodetimen din med ein inspirerande video
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives. Share more about what inspired you to pursue computer science and your role at your company.
+Køyr i gong Kodetimen med å inspirere deltakarane og diskutere korleis informatikk påvirkar alle delar av livet vårt. Fortel meir om kva som inspirerte deg til å studera datateknikk, og kva som er rolla di på jobb.
 
-**Show an inspirational video:**
+**Vis en inspirerande video:**
 
   * Bill Gates, Mark Zuckerberg og NBA stjerna Chris Bosh var med i den opprinnelge lanseringsvideoen for Code.org (Det finns versjonar på [eit minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the <% if @country == 'uk' %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015 video](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Lanseringsvideoen til Hour of Code 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), eller <% if @country == 'uk' %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour of Code 2015-videoen](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [President Obama oppfordrar alle elevar til å lære datavitskap](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational video [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Finn fleire inspirerande videoar [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Ideas to introduce your Hour of Code activity:**
+**Idear for introduksjon av Kodetime-aktiviteten din:**
 
-  * Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about technology that’s saving lives, helping people, connecting people). 
-  * If you are a tech company, demo fun, innovative products your company is working on.
-  * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-  * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * Se tips for å få jenter interessert i informatikk [her](%= resolve_url('https://code.org/girls') %).
+  * Forklar på kva måtar teknologi påverkar liva våre, med eksempel som både gutar og jenter vil kjenna seg igjen i (Snakk t. d. om teknologi som reddar liv, hjelp menneske og koplar menneske saman). 
+  * Dersom du kjem frå eit teknologiselskap, vis gjerne demoar av morosame og innovative produkt som selskapet ditt jobbar med.
+  * Viss du ikkje representerar eit teknologiselskap, diskuter på kva måtar selskapet ditt brukar teknologi for å løysa problem og nå måla dykkar.
+  * Inviter programmerarar frå selskapet ditt for å snakka om kvifor dei valde å studera datateknologi, og kva prosjekt dei no jobbar med.
+  * Sjå tips for å få jenter interessert i informatikk [her](%= resolve_url('https://code.org/girls') %).
 
-## 6) Code!
+## 6) Koding!
 
-**Direct participants to the activity**
+**Lei deltakarane til aktiviteten**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('https://code.org/learn') %) under the number of participants.
-  * For younger students, load the tutorial page ahead of time or save it as a bookmark.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+  * For yngre studentar, lasta instruksjonssida på førehand, eller lagra den som eit bokmerke.
 
-**When participants come across difficulties it's okay to respond:**
+**Når deltakarar kjem opp i vanskar, er det greit å svara:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "Eg veit ikkje. Lat oss finne det ut i lag."
+  * «Det er ikkje alltid teknologien gjer seg slik vi vil.»
+  * "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
-**What to do if someone finishes early?**
+**Kva gjer ein om nokon vert tidleg ferdig?**
 
-  * They can try another Hour of Code activity at code.org/learn
-  * Or, ask them to help a friend who are having trouble with the activity.
+  * They can try another Hour of Code activity at hourofcode.com/learn
+  * Eller, spørja dei om å hjelpa ein ven som har vanskar med aktiviteten.
 
 [col-33]
 
@@ -107,12 +107,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Gjer stas på deltakarane
 
-  * [Print certificates](%= resolve_url('https://code.org/certificates') %) for participants.
-  * [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
-  * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * [Skriv ut diplom](%= resolve_url('https://code.org/certificates') %) til deltakarar.
+  * [Skriv ut "Eg fullførte ein Kodetime!"](%= resolve_url('/promote/resources#stickers') %)-klistremerke.
+  * [Bestill Kodetime-t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til dine medarbeidarar.
+  * Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 
 [col-33]
 
@@ -138,6 +138,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Kva kjem etter Kodetimen?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+Kodetimen er det første steget på ei reise for å læra meir om korleis teknologi fungerar, og korleis ein lagar dataprogram. For å halda fram på denne reisa, [inspirer deltakarane dine til å læra meir på Internett](%= resolve_url('https://code.org/learn/beyond') %).
 
 <%= view :signup_button %>
