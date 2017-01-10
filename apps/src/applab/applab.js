@@ -715,8 +715,12 @@ Applab.init = function (config) {
   // able to turn them on.
   config.noInstructionsWhenCollapsed = true;
 
-  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  if (level.dataTables) {
+    Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  }
+  if (level.dataProperties) {
+    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  }
 
   var onMount = function () {
     studioApp.init(config);
