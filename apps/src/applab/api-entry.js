@@ -8,7 +8,6 @@ window.React = require('react');
 window.Applab = require('./applab');
 import {injectErrorHandler} from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-//import applabCommands from './commands';
 import * as api from './api';
 import appStorage from './appStorage';
 import Sounds from '../Sounds';

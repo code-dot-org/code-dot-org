@@ -220,7 +220,7 @@ describe('The Exporter,', function () {
         assert.property(zipFiles, 'my-app/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab-api.js'],
-          `window.APP_OPTIONS = ${JSON.stringify(getAppOptions())};\ncommon_locale.js content\napplab_locale.js content\napplab-api.js content`
+          `${getAppOptionsFile()}\ncommon_locale.js content\napplab_locale.js content\napplab-api.js content`
         );
       });
 
@@ -331,4 +331,23 @@ describe('The Exporter,', function () {
     });
   });
 
+});
+
+describe("getAppOptionsFile helper function", () => {
+  it("only exposes the app options that are whitelisted", () => {
+    setAppOptions({
+      puzzleRatingsUrl: "this should not show up",
+      labUserId: "this should not show up",
+      channel: 'this should be there',
+      level: {
+        isK1: "this should not show up",
+        skin: "this should show up",
+      },
+      keyMissingFromWhitelist: 'should not show up',
+    });
+    assert.equal(
+      getAppOptionsFile(),
+      'window.APP_OPTIONS = {"level":{"skin":"this should show up"},"channel":"this should be there"};'
+    );
+  });
 });
