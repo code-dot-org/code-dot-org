@@ -621,7 +621,10 @@ Applab.init = function (config) {
       return Applab.hasDataStoreAPIs(Applab.getCode());
     },
     onWarningsComplete: function () {
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      if (config.share) {
+        // If this is a share page, autostart the app after warnings closed.
+        window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      }
     }
   };
 
