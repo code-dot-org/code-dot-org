@@ -77,138 +77,129 @@ class UserProficiency < ActiveRecord::Base
   # @return [Integer] the number of levels the user has passed with the
   #   specified concept and the specified difficulty or higher.
   def get_level_count(concept, difficulty)
-    unless CONCEPTS.include? concept
-      raise ArgumentError.new("invalid concept (#{concept})")
-    end
-    unless (1..MAXIMUM_CONCEPT_DIFFICULTY).cover? difficulty
-      raise ArgumentError.new("invalid difficulty (#{difficulty})")
-    end
-
-    num_levels = 0
-    (difficulty..MAXIMUM_CONCEPT_DIFFICULTY).each do |difficulty_level|
-      if concept == 'sequencing'
-        if difficulty_level == 1
-          num_levels += sequencing_d1_count
-        elsif difficulty_level == 2
-          num_levels += sequencing_d2_count
-        elsif difficulty_level == 3
-          num_levels += sequencing_d3_count
-        elsif difficulty_level == 4
-          num_levels += sequencing_d4_count
-        elsif difficulty_level == 5
-          num_levels += sequencing_d5_count
-        end
-      elsif concept == 'debugging'
-        if difficulty_level == 1
-          num_levels += debugging_d1_count
-        elsif difficulty_level == 2
-          num_levels += debugging_d2_count
-        elsif difficulty_level == 3
-          num_levels += debugging_d3_count
-        elsif difficulty_level == 4
-          num_levels += debugging_d4_count
-        elsif difficulty_level == 5
-          num_levels += debugging_d5_count
-        end
-      elsif concept == 'repeat_loops'
-        if difficulty_level == 1
-          num_levels += repeat_loops_d1_count
-        elsif difficulty_level == 2
-          num_levels += repeat_loops_d2_count
-        elsif difficulty_level == 3
-          num_levels += repeat_loops_d3_count
-        elsif difficulty_level == 4
-          num_levels += repeat_loops_d4_count
-        elsif difficulty_level == 5
-          num_levels += repeat_loops_d5_count
-        end
-      elsif concept == 'repeat_until_while'
-        if difficulty_level == 1
-          num_levels += repeat_until_while_d1_count
-        elsif difficulty_level == 2
-          num_levels += repeat_until_while_d2_count
-        elsif difficulty_level == 3
-          num_levels += repeat_until_while_d3_count
-        elsif difficulty_level == 4
-          num_levels += repeat_until_while_d4_count
-        elsif difficulty_level == 5
-          num_levels += repeat_until_while_d5_count
-        end
-      elsif concept == 'for_loops'
-        if difficulty_level == 1
-          num_levels += for_loops_d1_count
-        elsif difficulty_level == 2
-          num_levels += for_loops_d2_count
-        elsif difficulty_level == 3
-          num_levels += for_loops_d3_count
-        elsif difficulty_level == 4
-          num_levels += for_loops_d4_count
-        elsif difficulty_level == 5
-          num_levels += for_loops_d5_count
-        end
-      elsif concept == 'events'
-        if difficulty_level == 1
-          num_levels += events_d1_count
-        elsif difficulty_level == 2
-          num_levels += events_d2_count
-        elsif difficulty_level == 3
-          num_levels += events_d3_count
-        elsif difficulty_level == 4
-          num_levels += events_d4_count
-        elsif difficulty_level == 5
-          num_levels += events_d5_count
-        end
-      elsif concept == 'variables'
-        if difficulty_level == 1
-          num_levels += variables_d1_count
-        elsif difficulty_level == 2
-          num_levels += variables_d2_count
-        elsif difficulty_level == 3
-          num_levels += variables_d3_count
-        elsif difficulty_level == 4
-          num_levels += variables_d4_count
-        elsif difficulty_level == 5
-          num_levels += variables_d5_count
-        end
-      elsif concept == 'functions'
-        if difficulty_level == 1
-          num_levels += functions_d1_count
-        elsif difficulty_level == 2
-          num_levels += functions_d2_count
-        elsif difficulty_level == 3
-          num_levels += functions_d3_count
-        elsif difficulty_level == 4
-          num_levels += functions_d4_count
-        elsif difficulty_level == 5
-          num_levels += functions_d5_count
-        end
-      elsif concept == 'functions_with_params'
-        if difficulty_level == 1
-          num_levels += functions_with_params_d1_count
-        elsif difficulty_level == 2
-          num_levels += functions_with_params_d2_count
-        elsif difficulty_level == 3
-          num_levels += functions_with_params_d3_count
-        elsif difficulty_level == 4
-          num_levels += functions_with_params_d4_count
-        elsif difficulty_level == 5
-          num_levels += functions_with_params_d5_count
-        end
-      elsif concept == 'conditionals'
-        if difficulty_level == 1
-          num_levels += conditionals_d1_count
-        elsif difficulty_level == 2
-          num_levels += conditionals_d2_count
-        elsif difficulty_level == 3
-          num_levels += conditionals_d3_count
-        elsif difficulty_level == 4
-          num_levels += conditionals_d4_count
-        elsif difficulty_level == 5
-          num_levels += conditionals_d5_count
-        end
+    if concept == 'sequencing'
+      if difficulty == 1
+        return sequencing_d1_count + sequencing_d2_count + sequencing_d3_count + sequencing_d4_count + sequencing_d5_count
+      elsif difficulty == 2
+        return sequencing_d2_count + sequencing_d3_count + sequencing_d4_count + sequencing_d5_count
+      elsif difficulty == 3
+        return sequencing_d3_count + sequencing_d4_count + sequencing_d5_count
+      elsif difficulty == 4
+        return sequencing_d4_count + sequencing_d5_count
+      elsif difficulty == 5
+        return sequencing_d5_count
+      end
+    elsif concept == 'debugging'
+      if difficulty == 1
+        return debugging_d1_count + debugging_d2_count + debugging_d3_count + debugging_d4_count + debugging_d5_count
+      elsif difficulty == 2
+        return debugging_d2_count + debugging_d3_count + debugging_d4_count + debugging_d5_count
+      elsif difficulty == 3
+        return debugging_d3_count + debugging_d4_count + debugging_d5_count
+      elsif difficulty == 4
+        return debugging_d4_count + debugging_d5_count
+      elsif difficulty == 5
+        return debugging_d5_count
+      end
+    elsif concept == 'repeat_loops'
+      if difficulty == 1
+        return repeat_loops_d1_count + repeat_loops_d2_count + repeat_loops_d3_count + repeat_loops_d4_count + repeat_loops_d5_count
+      elsif difficulty == 2
+        return repeat_loops_d2_count + repeat_loops_d3_count + repeat_loops_d4_count + repeat_loops_d5_count
+      elsif difficulty == 3
+        return repeat_loops_d3_count + repeat_loops_d4_count + repeat_loops_d5_count
+      elsif difficulty == 4
+        return repeat_loops_d4_count + repeat_loops_d5_count
+      elsif difficulty == 5
+        return repeat_loops_d5_count
+      end
+    elsif concept == 'repeat_until_while'
+      if difficulty == 1
+        return repeat_until_while_d1_count + repeat_until_while_d2_count + repeat_until_while_d3_count + repeat_until_while_d4_count + repeat_until_while_d5_count
+      elsif difficulty == 2
+        return repeat_until_while_d2_count + repeat_until_while_d3_count + repeat_until_while_d4_count + repeat_until_while_d5_count
+      elsif difficulty == 3
+        return repeat_until_while_d3_count + repeat_until_while_d4_count + repeat_until_while_d5_count
+      elsif difficulty == 4
+        return repeat_until_while_d4_count + repeat_until_while_d5_count
+      elsif difficulty == 5
+        return repeat_until_while_d5_count
+      end
+    elsif concept == 'for_loops'
+      if difficulty == 1
+        return for_loops_d1_count + for_loops_d2_count + for_loops_d3_count + for_loops_d4_count + for_loops_d5_count
+      elsif difficulty == 2
+        return for_loops_d2_count + for_loops_d3_count + for_loops_d4_count + for_loops_d5_count
+      elsif difficulty == 3
+        return for_loops_d3_count + for_loops_d4_count + for_loops_d5_count
+      elsif difficulty == 4
+        return for_loops_d4_count + for_loops_d5_count
+      elsif difficulty == 5
+        return for_loops_d5_count
+      end
+    elsif concept == 'events'
+      if difficulty == 1
+        return events_d1_count + events_d2_count + events_d3_count + events_d4_count + events_d5_count
+      elsif difficulty == 2
+        return events_d2_count + events_d3_count + events_d4_count + events_d5_count
+      elsif difficulty == 3
+        return events_d3_count + events_d4_count + events_d5_count
+      elsif difficulty == 4
+        return events_d4_count + events_d5_count
+      elsif difficulty == 5
+        return events_d5_count
+      end
+    elsif concept == 'variables'
+      if difficulty == 1
+        return variables_d1_count + variables_d2_count + variables_d3_count + variables_d4_count + variables_d5_count
+      elsif difficulty == 2
+        return variables_d2_count + variables_d3_count + variables_d4_count + variables_d5_count
+      elsif difficulty == 3
+        return variables_d3_count + variables_d4_count + variables_d5_count
+      elsif difficulty == 4
+        return variables_d4_count + variables_d5_count
+      elsif difficulty == 5
+        return variables_d5_count
+      end
+    elsif concept == 'functions'
+      if difficulty == 1
+        return functions_d1_count + functions_d2_count + functions_d3_count + functions_d4_count + functions_d5_count
+      elsif difficulty == 2
+        return functions_d2_count + functions_d3_count + functions_d4_count + functions_d5_count
+      elsif difficulty == 3
+        return functions_d3_count + functions_d4_count + functions_d5_count
+      elsif difficulty == 4
+        return functions_d4_count + functions_d5_count
+      elsif difficulty == 5
+        return functions_d5_count
+      end
+    elsif concept == 'functions_with_params'
+      if difficulty == 1
+        return functions_with_params_d1_count + functions_with_params_d2_count + functions_with_params_d3_count + functions_with_params_d4_count + functions_with_params_d5_count
+      elsif difficulty == 2
+        return functions_with_params_d2_count + functions_with_params_d3_count + functions_with_params_d4_count + functions_with_params_d5_count
+      elsif difficulty == 3
+        return functions_with_params_d3_count + functions_with_params_d4_count + functions_with_params_d5_count
+      elsif difficulty == 4
+        return functions_with_params_d4_count + functions_with_params_d5_count
+      elsif difficulty == 5
+        return functions_with_params_d5_count
+      end
+    elsif concept == 'conditionals'
+      if difficulty == 1
+        return conditionals_d1_count + conditionals_d2_count + conditionals_d3_count + conditionals_d4_count + conditionals_d5_count
+      elsif difficulty == 2
+        return conditionals_d2_count + conditionals_d3_count + conditionals_d4_count + conditionals_d5_count
+      elsif difficulty == 3
+        return conditionals_d3_count + conditionals_d4_count + conditionals_d5_count
+      elsif difficulty == 4
+        return conditionals_d4_count + conditionals_d5_count
+      elsif difficulty == 5
+        return conditionals_d5_count
       end
     end
-    return num_levels
+
+    raise ArgumentError.new("invalid concept-difficulty (#{concept}, #{difficulty})")
   end
 
   # Increments by one the number of levels the user has shown proficiency in for
