@@ -6,7 +6,7 @@ require 'aws-sdk'
 require 'cdo/hip_chat'
 
 BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'
-S3S3MIRROR_DIR = '/home/ubuntu/s3s3mirror/'
+S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/"
 S3S3MIRROR_COMMAND = 's3s3mirror.sh'
 
 BUCKETS_TO_BACKUP = [
@@ -18,7 +18,7 @@ BUCKETS_TO_BACKUP = [
   'cdo-build-package',
   'cdo-circle-utils',
   'cdo-curriculum',
-  # 'cdo-dist', # 170k, 31gb
+  # 'cdo-dist', # 170k, 31gb, unnecessary
   # 'cdo-dynamo-backup', # 81k, 15gb
   'cdo-email-images',
   'cdo-error',
@@ -39,7 +39,7 @@ BUCKETS_TO_BACKUP = [
   'cdo-v3-files',
   'cdo-v3-prod-firebase-backups',
   'cdo-v3-sources-contributors',
-  'cdo-v3-sources', # 5M, 30gb - ???
+  'cdo-v3-sources', # 5M, 30gb
   'cdo-videos',
   'cf-templates-p9nfb0gyyrpf-us-east-1',
   'codepipeline-us-east-1-418960518203',
@@ -59,9 +59,10 @@ BUCKETS_TO_BACKUP = [
 ]
 
 def main
+  return unless only_one_running?(__FILE__)
   start_time = Time.now
   puts "Beginning S3 backup sync at #{Time.now}"
-  HipChat.log('Beginning S3 backup sync')
+  HipChat.log("Beginning S3 backup sync at #{Time.now}")
 
   # s3s3mirror does not function properly if you're not in its root directory
   Dir.chdir(S3S3MIRROR_DIR)
@@ -79,4 +80,4 @@ def main
   HipChat.log("S3 backup sync complete at #{Time.now}")
 end
 
-main #if only_one_running?(__FILE__)
+main
