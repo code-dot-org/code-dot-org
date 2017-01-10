@@ -217,7 +217,6 @@ Dashboard::Application.routes.draw do
 
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
