@@ -5,6 +5,7 @@ import DesignModeHeaders from './DesignModeHeaders';
 export default React.createClass({
   propTypes: {
     handleManageAssets: React.PropTypes.func.isRequired,
+    handleVersionHistory: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
     elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -33,6 +34,7 @@ export default React.createClass({
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
+        handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
       />

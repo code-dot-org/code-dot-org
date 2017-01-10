@@ -720,6 +720,8 @@ Applab.init = function (config) {
   Applab.storage.populateTable(level.dataTables, false); // overwrite = false
   Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
 
+  Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);
+
   var onMount = function () {
     studioApp.init(config);
 

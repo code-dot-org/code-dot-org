@@ -589,25 +589,29 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
+StudioApp.prototype.getVersionHistoryHandler = function (config) {
+  return () => {
+    var codeDiv = document.createElement('div');
+    var dialog = this.createModalDialog({
+      Dialog: this.Dialog,
+      contentDiv: codeDiv,
+      defaultBtnSelector: 'again-button',
+      id: 'showVersionsModal'
+    });
+    ReactDOM.render(React.createElement(VersionHistory, {
+      handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+      useFilesApi: !!config.useFilesApi
+    }), codeDiv);
+
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.initVersionHistoryUI = function (config) {
   // Bind listener to 'Version History' button
   var versionsHeader = document.getElementById('versions-header');
   if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function () {
-      var codeDiv = document.createElement('div');
-      var dialog = this.createModalDialog({
-        Dialog: this.Dialog,
-        contentDiv: codeDiv,
-        defaultBtnSelector: 'again-button',
-        id: 'showVersionsModal'
-      });
-      ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
-        useFilesApi: config.useFilesApi
-      }), codeDiv);
-
-      dialog.show();
-    }).bind(this));
+    dom.addClickTouchEvent(versionsHeader, this.getVersionHistoryHandler(config));
   }
 };
 
