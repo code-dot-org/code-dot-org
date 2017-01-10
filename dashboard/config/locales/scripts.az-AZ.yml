@@ -4,11 +4,11 @@
       name:
         course1:
           title: Kurs 1
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
+          description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr kompyuter
+            proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri həll
+            etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi öyrənəcəklər.
+            Bu kursu tamamladıqda, tələbələr qeyri standtart oyun yaxud hekayə düzəldib,
+            onu paylaşa bilirlər. Birinci sinif / 6 yaşlı üşaqlar üçün tövsiyyə olunur.
           description_short: Kurs 1 oxumağı təzə öyrənənlər üçü hazırlarnıb.
           description_audience: 4+ yaş (oxumağı bacarmayanlar)
           stage:
@@ -28,7 +28,7 @@
             Move it, Move it: Move it, Move it
             'Real-life Algorithms: Plant a Seed': 'Real-life Algorithms: Plant a Seed'
             Spelling Bee: Spelling Bee
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Studio: Create a Story': 'Oyun labı: Bir əhvalat düzəldin'
             The Big Event: The Big Event
         course2:
           title: Kurs 2
@@ -55,7 +55,7 @@
             'Maze: Sequence': 'Labirint: Ardıcıllıq'
             'Real-life Algorithms: Paper Planes': 'Real-life Algorithms: Paper Planes'
             Relay programming: Estafet proqramlaşdırması
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Studio: Create a Story': 'Oyun labı: Bir əhvalat düzəldin'
             The Big Event: The Big Event
             Your Digital Footprint: Your Digital Footprint
         course3:
@@ -88,7 +88,7 @@
             'Maze: Conditionals': 'Maze: Conditionals'
             Songwriting: Songwriting
             'Studio: Create a Game': 'Play Lab: Create a Game'
-            'Studio: Create a Story': 'Play Lab: Create a Story'
+            'Studio: Create a Story': 'Oyun labı: Bir əhvalat düzəldin'
         playlab:
           title: Oyun labı
           description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
@@ -757,6 +757,8 @@
             Text Compression: Text Compression
             TextMatch: TextMatch
             Web Lab: Web Lab
+            Multi page assessment: Multi page assessment
+            Single page assessment: Single page assessment
           description_audience: ''
         algebraPD2b:
           title: Computer Science in Algebra PD
@@ -1165,6 +1167,7 @@
             Thinking About Implementation: Thinking About Implementation
             Welcome!: Welcome!
             Wrap-Up: Sarımaq
+          description_audience: ''
         algebraPD3b:
           title: Computer Science in Algebra PD
           description: CS in Algebra mid year lesson support
@@ -1317,6 +1320,7 @@
             Assessing Computer Models: Assessing Computer Models
             Welcome!: Welcome!
             Wrap-Up: Sarımaq
+          description_audience: ''
         cspunit5:
           title: CSP Unit 5 - Performance Tasks
           description: This unit covers the preparation and completion of the Explore
@@ -1630,6 +1634,18 @@
             If statements: If statements
             Unit 3 Assessment 3: Unit 3 Assessment 3
             Unit 3 Assessment 4: Unit 3 Assessment 4
+            If-else-if and Conditional Logic: If-else-if and Conditional Logic
+            'Building an App: Color Sleuth': 'Building an App: Color Sleuth'
+            Possibly use later: Possibly use later
+            Unit 5 Assessment 3: Unit 5 Assessment 3
+            Unit 5 Assessment 4: Unit 5 Assessment 4
+            Boolean Expressions and "If" Statements: Boolean Expressions and "If"
+              Statements
+            '"if-else-if" and Conditional Logic': '"if-else-if" and Conditional Logic'
+            'Building an App: Multi-Screen App': 'Building an App: Multi-Screen App'
+            'Building an App: Clicker Game': 'Building an App: Clicker Game'
+            'Building an App: Image Scroller': 'Building an App: Image Scroller'
+            'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -2409,6 +2425,7 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           description_audience: ''
         basketball:
           stage:
@@ -2462,6 +2479,8 @@
             'Personal Website: Finalizing Site': 'Personal Website: Finalizing Site'
             'Project: Personal Portfolio Website': 'Project: Personal Portfolio Website'
             Images in HTML: Images in HTML
+            Styling Text with CSS: Styling Text with CSS
+            Styling Elements with CSS: Styling Elements with CSS
           title: 'CSD Unit 2 - The Internet: Web Development'
           description_audience: ''
           description_short: Web Development
@@ -2482,6 +2501,7 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 2 Online Support
           description_audience: ''
           description_short: Teacher Supports for CSP Unit 2
@@ -2508,6 +2528,10 @@
             Testing the App: Testing the App
             Improving and Iterating: Improving and Iterating
             App Presentation: App Presentation
+            User Interface and Prototype Testing: User Interface and Prototype Testing
+            Feedback and Prototypes: Feedback and Prototypes
+            Identifying User Needs: Identifying User Needs
+            Project - Paper Prototype: Project - Paper Prototype
           title: 'CSD Unit 4 - Problem Solving: The Design Process'
           description_audience: ''
           description_short: The Design Process
@@ -2602,6 +2626,8 @@
             Your Digital Footprint: Your Digital Footprint
             Building a Foundation: Building a Foundation
             Screen Out the Mean: Screen Out the Mean
+            Debugging in Maze: Debugging in Maze
+            Loops in Harvester: Loops in Harvester
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: ''
@@ -2628,6 +2654,8 @@
             Digital Citizenship: Digital Citizenship
             'Unplugged: Binary': 'Unplugged: Binary'
             Artist Binary: Artist Binary
+            Nested Loops in Bee: Nested Loops in Bee
+            Nested Loops: Nested Loops
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: ''
@@ -2652,6 +2680,7 @@
             Private and Personal Information: Private and Personal Information
             Internet: "İnternet"
             Crowdsourcing: Crowdsourcing
+            Determine the Concept: Determine the Concept
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: ''
@@ -2765,7 +2794,77 @@
             Balancing Teachers and Tools: Balancing Teachers and Tools
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
+            AP Preparation and Support: AP Preparation and Support
           title: CSP Unit 3 Online Support
           description_audience: ''
           description_short: ''
           description: ''
+        csdgraveyard:
+          stage:
+            new stage: new stage
+            Introduction to Styling with CSS (2.7): Introduction to Styling with CSS
+              (2.7)
+            Introduction to Styling with CSS: Introduction to Styling with CSS
+            External Style Sheets: External Style Sheets
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp4-support:
+          stage:
+            Unit 3 Overview: Unit 3 Overview
+            'Lessons 1 - 2: Data in the Real World': 'Lessons 1 - 2: Data in the Real
+              World'
+            'Lessons 1 - 4: Data in the Real World': 'Lessons 1 - 4: Data in the Real
+              World'
+            'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption': 'Lessons
+              5 - 7: Security, Symmetric, and Asymmetric Encryption'
+            'Lessons 8 - 9: Practice PT': 'Lessons 8 - 9: Practice PT'
+            Group Work and Peer Learning: Group Work and Peer Learning
+            Balancing Teachers and Tools: Balancing Teachers and Tools
+            Discovery Learning: Discovery Learning
+            Measuring Student Learning: Measuring Student Learning
+            Unit 4 Overview: Unit 4 Overview
+          title: CSP Unit 4 Online Support
+          description_audience: ''
+          description_short: ''
+          description: ''
+        sciencepd4:
+          stage:
+            Welcome!: Welcome!
+            Revisiting Complex Adaptive Systems: Revisiting Complex Adaptive Systems
+            Thinking About Implementation: Thinking About Implementation
+            Wrap-Up: Sarımaq
+          title: 'CS in Science: Part 4'
+          description_audience: ''
+          description_short: 'Phase 3: Reflect on semester 1 workshop'
+          description: 'Phase 3: Reflect on semester 1 workshop'
+        csp-ca-a:
+          stage:
+            Commutative Assessment A: Commutative Assessment A
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        science-pd-ol-pt-5:
+          stage:
+            Welcome!: Welcome!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Sarımaq
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csf2harvey:
+          stage:
+            'Functions: Songwriting': 'Functions: Songwriting'
+            Functions in Artist: Functions in Artist
+            Functions in Bee: Functions in Bee
+            Functions in Farmer: Functions in Farmer
+            Determine the Concept: Determine the Concept
+          title: New Functions Puzzles
+          description_audience: ''
+          description_short: ''
+          description: Testing for Mr. Harvey's class

@@ -331,7 +331,8 @@ const SurveyResultsHeader = React.createClass({
   },
 
   getCoursesForWorkshops() {
-    return _.uniq(_.flatMap(this.props.workshops, workshop => workshop.course));
+    const courses = Array.from(new Set(this.props.workshops.map(workshop => workshop.course)));
+    return courses.filter(course => !(['Admin', 'Counselor'].includes(course)));
   },
 
   render() {

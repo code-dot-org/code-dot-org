@@ -62,6 +62,7 @@ class DSLDefined < Level
       # Parse data, save updated level data to database
       data, i18n = dsl_class.parse(text, '')
       level_params.delete(:name)
+      level_params.delete(:type) if data[:properties][:type]
       data[:properties].merge! level_params
 
       if old_name && data[:name] != old_name

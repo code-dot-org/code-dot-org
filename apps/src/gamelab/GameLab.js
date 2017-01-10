@@ -43,6 +43,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import { hasValidContainedLevelResult } from '../code-studio/levels/codeStudioLevels';
 
 var MAX_INTERPRETER_STEPS_PER_TICK = 500000;
 
@@ -244,6 +245,10 @@ GameLab.prototype.init = function (config) {
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
 
+    // Ignore user's code on embedded levels, so that changes made
+    // to starting code by levelbuilders will be shown.
+    config.ignoreLastAttempt = config.embed;
+
     this.studioApp_.init(config);
 
     var finishButton = document.getElementById('finishButton');
@@ -312,6 +317,15 @@ GameLab.prototype.setupReduxSubscribers = function (store) {
   store.subscribe(() => {
     var lastState = state;
     state = store.getState();
+
+    const awaitingContainedLevel = this.studioApp_.hasContainedLevels &&
+      !hasValidContainedLevelResult();
+
+    if (state.interfaceMode !== lastState.interfaceMode &&
+        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        !awaitingContainedLevel) {
+      this.studioApp_.resetButtonClick();
+    }
 
     if (!lastState.runState || state.runState.isRunning !== lastState.runState.isRunning) {
       this.onIsRunningChange(state.runState.isRunning);

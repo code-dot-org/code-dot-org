@@ -9,7 +9,7 @@
   "collectorCollectedEverything": "Tebrikler! Tüm {count} nesneleri topladın!",
   "collectorCollectedNothing": "Kodlamaya devam et! Mümkün olduğunca çok nesne toplaman gerekir.",
   "collectorCollectedSome": "Hariha iş! {count} nesneleri topladın!",
-  "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
+  "collectorCollectedNotEnough": "Kodlamaya devam edin! En az bir tanesini bulman gerekir {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "Burada toplamam için yeterli eşya yok.",
   "collectorTooManyBlocks": "Sadece {blockLimit} bloklarını kullanabilirsin. Koduna bir göz at ve tekrar dene!",
   "continue": "Devam",

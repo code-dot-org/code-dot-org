@@ -5,6 +5,10 @@ import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
 
+import '../style/common.scss';
+import '../style/netsim/style.scss';
+import '../style/applab/style.scss';
+
 const styles = {
   centeredStory: {
     position: 'absolute',
@@ -93,8 +97,6 @@ Centered.propTypes = {
 
 storybook.setAddon({
   addStoryTable(items) {
-    let hasDescription = false;
-    items.forEach(item => hasDescription = hasDescription || !!item.description);
     this.add(
       'Overview',
       () => (
@@ -120,7 +122,12 @@ storybook.setAddon({
                        <Node depth={0} node={item.story()}/>
                      </Pre>
                    </td>
-                   <td style={styles.storyTable.cell}>{item.story()}</td>
+                   <td
+                     className={item.storyCellClass}
+                     style={styles.storyTable.cell}
+                   >
+                     {item.story()}
+                   </td>
                  </tr>
                ))}
             </tbody>

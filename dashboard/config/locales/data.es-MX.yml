@@ -317,13 +317,13 @@
           "Ejecutar". Mueve la mano usando la flecha izquierda para alcanzar el objetivo
           final.
         bounce_2_basketball: Une un bloque a los bloques "cuando flecha derecha" y
-          "cuando flecha izquierda". Mueve la mano para alcanzar ambos objetivos finales.
-        bounce_5_basketball: Vamos a enviar la pelota hacia la mano. Coloca un bloque
-          en el bloque "cuando la bola golpea la mano" para que la pelota llegue a
-          la bandera.
-        bounce_6_basketball: Ahora la bandera está en la parte superior. Tienes que
-          unir bloques a ambos bloques de "cuando la pelota choca" para resolver este
-          puzzle.
+          "cuando flecha izquierda". Mueve la mano para alcanzar los 2 objetivos finales.
+        bounce_5_basketball: Lanzaremos una pelota hacia la mano. Añade un bloque
+          al bloque "cuando la bola golpee mano" para asegurar que la pelota llegue
+          a la bandera.
+        bounce_6_basketball: Ahora la bandera está en la parte superior. Necesitas
+          añadir bloques a ambos bloques "cuando la bola golpee" para resolver este
+          acertijo.
         bounce_7_basketball: Coloca bloques cada uno de lo bloques "cuando". Bota
           la pelota hasta que toque la bandera.
         bounce_10_basketball: Ahora hay una meta en la parte superior. Une los bloques
@@ -344,8 +344,8 @@
           direcciones.
         bounce_5_sports: La pastilla de hockey se deslizará hacia el jugador. Coloque
           un bloque en "cuando la bola golpea al jugador".
-        bounce_6_sports: Ahora la bandera está en la parte superior. Tienes que unir
-          bloques a ambos bloques de "cuando la pelota choca" para resolver este puzzle.
+        bounce_6_sports: Ahora la bandera está en la parte superior. Necesitas añadir
+          bloques a ambos bloques "cuando la bola golpee" para resolver este acertijo.
         bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota
           hasta que toque la bandera.
         bounce_10_sports: Ahora hay una meta en la parte superior. Une los bloques
@@ -772,6 +772,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1

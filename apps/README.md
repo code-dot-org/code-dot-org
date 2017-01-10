@@ -16,8 +16,8 @@ and a small army of translators.
 cd apps
 
 # Machine setup (OSX with Homebrew)
-brew install node yarn
-npm install -g grunt-cli
+brew install node
+npm install -g grunt-cli yarn@0.16.1
 
 # Perform first full build
 yarn

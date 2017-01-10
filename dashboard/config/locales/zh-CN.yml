@@ -1,4 +1,4 @@
-"zh":
+"zh-CN":
   errors:
     messages:
       not_saved: "请更正以下错误:"
@@ -82,10 +82,16 @@
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
     overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
-    hoc_already_signed_up_heading: "使用客人身份开始"
-    hoc_already_signed_up_content: 你已经注册教授“小时代码”！你和你的学生不需要登陆到 Code Studio 来参加该活动。想要开始，为你的班级
-      <a href="https://code.org/learn">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢“小时代码”并希望更深入地了解，你可以在下面设置一个密码并创建一个
-      Code Studio 账号，以为你的学生在我们任何的 <a href="https://code.org/educate">大型课程</a>注册。
+    hoc_already_signed_up_heading: "使用访客身份开始"
+    hoc_already_signed_up_content: 你已经注册教授《编程一小时》！你和你的学生不需要登录到代码工作室来参加该活动。想要开始，为你的班级
+      <a href="https://code.org/learn">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢《编程一小时》并希望更深入地了解，你可以在下面设置一个密码并创建一个代码工作室账号，以为你的学生在我们所有的
+      <a href="https://code.org/educate">大型课程</a>里注册。
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "请参阅教师指南"
     title: "注册 Code.org"
     school_name: "学校名称 （可选）"
@@ -314,6 +320,7 @@
     delete_text: "点击下面的按钮将会删除你的帐号"
     delete_text_teacher_note: "请注意：删除你的帐号并不会同时删除你学生的帐号。"
     delete_confirm: "你确定删除这个帐号吗？"
+    deleted_user: deleted user
   user_level:
     completed: "已完成"
     tried: "试过了"
@@ -372,22 +379,25 @@
     announcement_learn_more_button: "了解详情"
     announcement_try_now_button: "现在就试试"
     announcement_host_an_hour_button: "主办一小时"
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: "观看视频"
     announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
       28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
+    announcement_go_beyond_button: Go beyond
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
       看以前的公告。</a>"
     announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
       href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
-    announcement_hoc_scaling: "课程 1-4 和加速课程老师警告：由于数以万计的学生对于“一小时代码”的巨大访问量， <b>至 11
-      年 12 月 3 日起，Code Studio 将不会保存或汇报学生在这些课程中的进度</b>。我们建议在“计算机科学教育周” 期间与你的班级做一个“一小时代码”的活动来庆祝“一小时代码”。虽然我们自己的“一小时代码”教程在其间也无法保存进度，但是学生仍然可以使用完整的教程并获得认证。"
-    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的时间》“编程一小时”设计师让学生们为《我的时间》里的世界设置规则。他们可以获得一个完全独一无二的《我的时间》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
+    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的世界》“编程一小时”设计师让学生们为《我的世界》里的世界设置规则。他们可以获得一个完全独一无二的《我的世界》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
+    announcement_how_code_studio: "你不需要任何经验来在你的课堂中教授计算机科学。Code.org 为所有年级提供教案、 课程计划、
+      高质量专业学习程序和很多的好工具&mdash; 一切你所需要的，都是免费的。想知道如何开始？下载 <a href='%{video_download_url}'>
+      这个视频</a> ！"
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
       high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_not_entered: "请提供 current_section_code。"
@@ -531,7 +541,7 @@
       body: "用代码来探索《我的世界》。"
     minecraft2016:
       title: "我的世界"
-      body: "利用编程，在你自己的《我的世界》里创建动物和其他生活在《我的世界》里的生物。"
+      body: "在你自己的《我的世界》中编写各种动物和其他生物。"
     unplugged:
       title: "离线课程"
       audience: "适合年龄 4 岁以上"
@@ -782,48 +792,48 @@
     starwars_blocks_name: "星球大战: 用代码构建一个星系（块）"
     starwars_javascript_name: "星球大战: 用代码构建一个星系-JavaScript"
     download_message: "下载 %{app_name}，供离线使用 (136MB)"
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
-    download_in_Serbian: 'Download in Serbian:'
-    download_in_Slovenian: 'Download in Slovenian:'
-    download_in_Spanish: 'Download in Spanish:'
-    download_in_Swedish: 'Download in Swedish:'
-    download_in_Turkish: 'Download in Turkish:'
-    download_in_Ukrainian: 'Download in Ukrainian:'
-    download_in_Vietnamese: 'Download in Vietnamese:'
+    download_in_Albanian: "下载阿尔巴尼亚语版本︰"
+    download_in_Arabic: "下载阿拉伯语版本︰"
+    download_in_Azerbaijani: "下载阿塞拜疆语版本︰"
+    download_in_Basque: "下载巴斯克语版本："
+    download_in_Bosnian: "下载波斯尼亚语版本︰"
+    download_in_Bulgarian: "下载保加利亚语版本︰"
+    download_in_Catalan: "下载加泰罗尼亚语版本︰"
+    download_in_Chinese-Taiwan: "下载繁体中文版本︰"
+    download_in_Chinese: "下载汉语版本："
+    download_in_Croatian: "下载克罗地亚语版本︰"
+    download_in_Czech: "下载捷克语版本︰"
+    download_in_Danish: "下载丹麦语版本︰"
+    download_in_Dutch: "下载荷兰语版本︰"
+    download_in_English: "下载英语版本︰"
+    download_in_Finnish: "下载芬兰语版本︰"
+    download_in_French: "下载法语版本︰"
+    download_in_German: "下载德语版本︰"
+    download_in_Greek: "下载希腊语版本︰"
+    download_in_Hebrew: "下载希伯来语版本︰"
+    download_in_Hungarian: "下载匈牙利语版本︰"
+    download_in_Icelandic: "下载冰岛语版本︰"
+    download_in_Indonesian: "下载印尼语版本︰"
+    download_in_Irish: "下载爱尔兰版本︰"
+    download_in_Italian: "下载意大利语版本︰"
+    download_in_Japanese: "下载日语版本︰"
+    download_in_Korean: "下载朝鲜语版本︰"
+    download_in_Latvian: "下载拉脱维亚语版本︰"
+    download_in_Lithuanian: "下载立陶宛语版本︰"
+    download_in_Norwegian: "下载挪威语版本︰"
+    download_in_Norwegian-Nynorsk: "下载挪威尼诺斯克语版本︰"
+    download_in_Polish: "下载波兰语版本︰"
+    download_in_Portuguese-Brazil: "下载巴西的葡萄语版本︰"
+    download_in_Portuguese: "下载葡萄牙语版本︰"
+    download_in_Romanian: "下载罗马尼亚语版本︰"
+    download_in_Russian: "下载俄罗斯语版本︰"
+    download_in_Serbian: "下载塞尔维亚语版本︰"
+    download_in_Slovenian: "下载斯洛文尼亚语版本︰"
+    download_in_Spanish: "下载西班牙语版本︰"
+    download_in_Swedish: "下载瑞典语版本︰"
+    download_in_Turkish: "下载土耳其语版本︰"
+    download_in_Ukrainian: "下载乌克兰语版本︰"
+    download_in_Vietnamese: "下载越南语版本︰"
     windows: Windows （64位）
     mac: Mac OS X
   plc:

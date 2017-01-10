@@ -66,7 +66,8 @@ if (IN_UNIT_TEST) {
  */
 export function getStore() {
   if (!reduxStore) {
-    reduxStore = createStore(redux.combineReducers(globalReducers));
+    reduxStore = createStore(Object.keys(globalReducers).length > 0 ?
+                             redux.combineReducers(globalReducers) : s => s);
   }
 
   return reduxStore;

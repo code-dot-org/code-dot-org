@@ -840,7 +840,7 @@ function makeDraggable(jqueryElements) {
         });
 
         // Dim the element if it's dragged out of bounds
-        if (!isMouseInBounds(newLeft, newTop)) {
+        if (!isMouseEventInBounds(event)) {
           elm.addClass("toDelete");
         } else {
           elm.removeClass("toDelete");
@@ -856,7 +856,7 @@ function makeDraggable(jqueryElements) {
         // there's no need to transform ui.position coordinates again here.
 
         // Check the drop location to determine whether we delete this element
-        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+        if (!isMouseEventInBounds(event)) {
 
           // It's dropped out of bounds, animate and delete
           ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
@@ -864,10 +864,6 @@ function makeDraggable(jqueryElements) {
           });
 
         } else {
-
-          // Otherwise, make sure that the element is contained within the app space
-          moveElementIntoBounds(elm);
-
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         }
@@ -921,15 +917,15 @@ function enforceContainment(left, top, width, height) {
 }
 
 /**
- * Checks if a position (relative to app space) is within the app space bounds
- * @param {number} x
- * @param {number} y
- * @returns {boolean} True if (x, y) is within the app space. False otherwise.
+ * Tests whether the coordinates of the mouse event are inside designModeViz,
+ * taking into account any scaling transforms that may be applied to designModeViz.
+ * @param {jQuery.Event} mouseEvent
+ * @returns {boolean}
  */
-function isMouseInBounds(x, y) {
-  var container = $('#designModeViz');
+function isMouseEventInBounds(mouseEvent) {
+  const container = $('#designModeViz');
 
-  return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
+  return gridUtils.isMouseEventInBounds(mouseEvent, container);
 }
 
 /**
