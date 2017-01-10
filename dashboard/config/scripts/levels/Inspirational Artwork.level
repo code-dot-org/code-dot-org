@@ -148,7 +148,7 @@
               </value>
               <next>
                 <block type="controls_repeat">
-                  <title name="TIMES">50</title>
+                  <title name="TIMES">25</title>
                   <statement name="DO">
                     <block type="draw_colour" inline="true" id="draw-color">
                       <value name="COLOUR">

@@ -15,7 +15,7 @@ The ideal Regional Partner is a U.S. based regional education unit, a non-profit
 
 [col-50]
 
-<%= view :display_video_thumbnail, id: "plp_intro", video_code: "3VYujs75eIs", play_button: 'center' %>
+<%= view :display_video_thumbnail, id: "plp_intro", video_code: "cf1KKBGK6mY", play_button: 'center' %>
 
 [/col-50]
 

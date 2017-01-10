@@ -1,0 +1,11 @@
+name 'CommuteAssess - loops 1 - block'
+question 'How many times will the word “here” be displayed when this code is run?'
+wrong '3'
+wrong '6'
+right '10'
+wrong '18'
+wrong 'It will be different each time you run it'
+
+markdown <<MARKDOWN
+![](https://images.code.org/74cea4a253817670284e871733ed0897-image-1483465892372.png)
+MARKDOWN

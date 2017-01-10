@@ -2492,6 +2492,8 @@ en:
       courseC_screenoutthemean:
         description here: description here
         title: title
+      courseD_external_binary1:
+        Binary Drawing: Binary Drawing
       courseF_external_variableConstant: {}
       coursee-privateandpersonalinformation:
         description here: description here
@@ -2846,6 +2848,12 @@ en:
         Phase 3 Module 4: Phase 3 Module 4
       sciPD3 thanks:
         Great Job!: Great Job!
+      sciPD33 earth1:
+        description here: description here
+        title: title
+      sciPD33 earth2:
+        description here: description here
+        title: title
       sciPD33 end:
         Thank youl: Thank youl
       sciPD33 implement2:
@@ -3026,6 +3034,7 @@ en:
     level_group:
       name:
         CSP Culminating Assessment: {}
+        CSP Cumulative Assess A: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group: {}
         CSP Unit 1 Ch1 Cumulative Assessment MC Group v2: {}
         CSP Unit 1 Ch2 Cumulative Assessment MC Group: {}
@@ -4422,8 +4431,6 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CSD Header Size Prediction:
-        ? " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
-        : " Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options below."
         <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">: <img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">
         <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">: <img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">
         <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">: <img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">
@@ -4958,6 +4965,156 @@ en:
         "/script_assets/msm/Unit%202/exercise_1.png": "/script_assets/msm/Unit%202/exercise_1.png"
         Code from Circle: Code from Circle
         Pick the Racket code that comes from the circle of evaluation!: Pick the Racket code that comes from the circle of evaluation!
+      Commute Assess - comp 1 - block:
+        This program causes an error: This program causes an error
+        a, b, and tmp are variables. What does this script do?: a, b, and tmp are variables. What does this script do?
+        makes a and b equal to each other: makes a and b equal to each other
+        rearranges the variables a, b, and tmp.: rearranges the variables a, b, and tmp.
+        swaps the values of a and b: swaps the values of a and b
+        this code doesn't do anything: this code doesn't do anything
+      Commute Assess - comp 2 - block:
+        Randomly returns on of the three numbers: Randomly returns on of the three numbers
+        'Return the smallest of the three numbers ': 'Return the smallest of the three numbers '
+        Returns the largest of the three numbers: Returns the largest of the three numbers
+        Set all three inputs to a temporary value: Set all three inputs to a temporary value
+        'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?': 'The procedure <span style="font-family: monospace">op4</span> takes in 3 numbers, what does this procedure do?'
+        This code will cause an error: This code will cause an error
+      Commute Assess - comp 4 - block:
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the first number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the last number in the list is 100'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if the number 100 is in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> if there are 100 numbers in the list'
+        ? 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+        : 'displays <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">true</span> or <span style="font-family: monospace; background-color: rgba(0,0,0,0.1); padding: 1px">false</span> 100 times'
+      Commute Assess - comp 5 - block:
+        It always sets x equal to 5: It always sets x equal to 5
+        Makes sure the value of  x is less than 5: Makes sure the value of  x is less than 5
+        Makes sure the value of x is between 10 and 5: Makes sure the value of x is between 10 and 5
+        Makes sure the value of x is not equal to 10: Makes sure the value of x is not equal to 10
+        This code will cause an error: This code will cause an error
+        What does this code do?: What does this code do?
+      Commute Assess - cond 3 - block:
+        "<pre>And contains a 3</pre>": "<pre>And contains a 3</pre>"
+        "<pre>And under 21</pre>": "<pre>And under 21</pre>"
+        "<pre>Under 40</pre>": "<pre>Under 40</pre>"
+        "<pre>Under 40<br>And contains a 3</pre>": "<pre>Under 40<br>And contains a 3</pre>"
+        "<pre>Under 40<br>And under 21<br>And contains a 3</pre>": "<pre>Under 40<br>And under 21<br>And contains a 3</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      Commute Assess - func 1 - block:
+        "<pre>hi<br>and<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>and<br>bye<br>and</pre>"
+        "<pre>hi<br>and<br>bye</pre>": "<pre>hi<br>and<br>bye</pre>"
+        "<pre>hi<br>and<br>bye<br>and</pre>": "<pre>hi<br>and<br>bye<br>and</pre>"
+        "<pre>hi<br>bye<br>and</pre>": "<pre>hi<br>bye<br>and</pre>"
+        Nothing will be printed: Nothing will be printed
+      Commute Assess - func 2a - block:
+        "<pre>10</pre>": "<pre>10</pre>"
+        "<pre>55</pre>": "<pre>55</pre>"
+        "<pre>5</pre>": "<pre>5</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
+      Commute Assess - func 2b - block:
+        "<pre>21</pre>": "<pre>21</pre>"
+        "<pre>81</pre>": "<pre>81</pre>"
+        "<pre>9</pre>": "<pre>9</pre>"
+        nothing is printed: nothing is printed
+        this script would cause an error: this script would cause an error
+      Commute Assess - func 3a - block:
+        "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>": "<pre>DISPLAY in func1<br>DISPLAY in func2</pre>"
+        "<pre>func1<br>func2</pre>": "<pre>func1<br>func2</pre>"
+        "<pre>in func1<br>in func2</pre>": "<pre>in func1<br>in func2</pre>"
+        "<pre>in func1<br>in func2<br>in func1</pre>": "<pre>in func1<br>in func2<br>in func1</pre>"
+        Nothing is printed: Nothing is printed
+        This script would cause an error: This script would cause an error
+      Commute Assess - func 3b - block:
+        "<pre>func3<br>func1</pre>": "<pre>func3<br>func1</pre>"
+        "<pre>in func3<br>in func1</pre>": "<pre>in func3<br>in func1</pre>"
+        "<pre>in func3<br>in func1<br>in func3</pre>": "<pre>in func3<br>in func1<br>in func3</pre>"
+        "<pre>in func3<br>in func3<br>in func1</pre>": "<pre>in func3<br>in func3<br>in func1</pre>"
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; background-color: rgba(0,0,0,0.1)">in func3</span> will be displayed over and over until the code is stopped manually'
+        Nothing is displayed: Nothing is displayed
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+      CommuteAssess - Cond 1 - block:
+        "<pre>Inside first if</pre>": "<pre>Inside first if</pre>"
+        "<pre>Inside first if<br>Inside second if</pre>": "<pre>Inside first if<br>Inside second if</pre>"
+        "<pre>Inside second if</pre>": "<pre>Inside second if</pre>"
+        It will be different each time: It will be different each time
+        Nothing will be printed: Nothing will be printed
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 2 - block:
+        "<pre>All done.</pre>": "<pre>All done.</pre>"
+        "<pre>Inside the else. <br>All done.</pre>": "<pre>Inside the else. <br>All done.</pre>"
+        "<pre>Inside the if. </pre>": "<pre>Inside the if. </pre>"
+        "<pre>Inside the if. <br>All done.</pre>": "<pre>Inside the if. <br>All done.</pre>"
+        "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>": "<pre>Inside the if. <br>Inside the else. <br>All done.</pre>"
+        What will be displayed after running this code?: What will be displayed after running this code?
+      CommuteAssess - Cond 4a - block:
+        "<pre>The word is just right!<br>The word is still too short!</pre>": "<pre>The word is just right!<br>The word is still too short!</pre>"
+        "<pre>The word is just right</pre>": "<pre>The word is just right</pre>"
+        "<pre>The word is still too short!</pre>": "<pre>The word is still too short!</pre>"
+        "<pre>The word is too short!</pre>": "<pre>The word is too short!</pre>"
+        "<pre>The word it too long!</pre>": "<pre>The word it too long!</pre>"
+        Nothing will be displayed: Nothing will be displayed
+        What will be displayed after this code has run?: What will be displayed after this code has run?
+      CommuteAssess - Cond 4b - block:
+        '"The word is just right the word is still too short!"': '"The word is just right the word is still too short!"'
+        '"The word is just right"': '"The word is just right"'
+        '"The word is still too short!"': '"The word is still too short!"'
+        '"The word is too short!"': '"The word is too short!"'
+        '"The word it too long!"': '"The word it too long!"'
+        If word was set to "Hi", what would be printed?: If word was set to "Hi", what would be printed?
+      CommuteAssess - Var 3 - block:
+        What are x, y, and z equal to after this program is run?: What are x, y, and z equal to after this program is run?
+        x is equal to "no"; y is equal to "maybe"; z is equal to "no": x is equal to "no"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "x": x is equal to "no"; y is equal to "maybe"; z is equal to "x"
+        x is equal to "no"; y is equal to "maybe"; z is equal to "yes": x is equal to "no"; y is equal to "maybe"; z is equal to "yes"
+        x is equal to "yes"; y is equal to "maybe"; z is equal to "no": x is equal to "yes"; y is equal to "maybe"; z is equal to "no"
+        x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no": x is equal to "yes, no"; y is equal to "yes, maybe"; z is equal to "yes, no"
+      CommuteAssess - Var 4 - block:
+        What are x, y and z equal to after this script is run?: What are x, y and z equal to after this script is run?
+        x is equal to 8; y is equal to 4, 8; z is equal to 12: x is equal to 8; y is equal to 4, 8; z is equal to 12
+        x is equal to 8; y is equal to 4; z is equal to 84: x is equal to 8; y is equal to 4; z is equal to 84
+        x is equal to 8; y is equal to 8; z is equal to "x + y": x is equal to 8; y is equal to 8; z is equal to "x + y"
+        x is equal to 8; y is equal to 8; z is equal to 12: x is equal to 8; y is equal to 8; z is equal to 12
+        x is equal to 8; y is equal to 8; z is equal to 16: x is equal to 8; y is equal to 8; z is equal to 16
+      CommuteAssess - Var 5 - block:
+        "<pre>11<br>11<br>11</pre>": "<pre>11<br>11<br>11</pre>"
+        "<pre>11<br>13<br>18</pre>": "<pre>11<br>13<br>18</pre>"
+        "<pre>18<br>18<br>18</pre>": "<pre>18<br>18<br>18</pre>"
+        "<pre>x<br>x<br>x + 5</pre>": "<pre>x<br>x<br>x + 5</pre>"
+        Nothing will be printed: Nothing will be printed
+        This code will cause on error: This code will cause on error
+        What is displayed when this code is run?: What is displayed when this code is run?
+      CommuteAssess - loops 1 - block:
+        '10': '10'
+        '18': '18'
+        '3': '3'
+        '6': '6'
+        How many times will the word "here" be displayed when this code is run?: How many times will the word "here" be displayed when this code is run?
+        It will be different each time you run it: It will be different each time you run it
+      CommuteAssess - loops 2 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        ? '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        : '<span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> will displayed over and over until the code is stopped manually'
+        ? 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        : 'How many times will the word <span style="font-family: monospace; border: solid 1px #dddddd; padding: 2px; background-color: rgba(0,0,0,0.1)">here</span> be displayed when this code is run?'
+        it will be different each time you run it: it will be different each time you run it
+      CommuteAssess - loops 5 - block:
+        "<pre>3</pre>": "<pre>3</pre>"
+        "<pre>3<br>1</pre>": "<pre>3<br>1</pre>"
+        "<pre>3<br>1<br>-1</pre>": "<pre>3<br>1<br>-1</pre>"
+        "<pre>5<br>3<br>1</pre>": "<pre>5<br>3<br>1</pre>"
+        "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>": "<pre>5<br>4<br>3<br>2<br>1<br>0</pre>"
+        What will be displayed when this code is run?: What will be displayed when this code is run?
+        it will be different each time you run it: it will be different each time you run it
       Coordinates Multi 1:
         ? Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
         : Given what you know about video games and the coordinate plane, which of these statements describes the unicorn's movements in the most precise way?
@@ -4967,6 +5124,21 @@ en:
         The unicorn's x value increases: The unicorn's x value increases
         The unicorn's y value changes: The unicorn's y value changes
         Video game Coordinates: Video game Coordinates
+      CumulAssess - Var 1 - block:
+        What are the values of x and y after this script runs?: What are the values of x and y after this script runs?
+        x is equal to "x + 5"; y is equal to "x": x is equal to "x + 5"; y is equal to "x"
+        x is equal to 10, 15; y is equal to 5, 10: x is equal to 10, 15; y is equal to 5, 10
+        x is equal to 10; y is equal to 5: x is equal to 10; y is equal to 5
+        x is equal to 15; y is equal to 10: x is equal to 15; y is equal to 10
+        x is equal to 15; y is equal to 15: x is equal to 15; y is equal to 15
+        x is equal to 5; y is equal to 10: x is equal to 5; y is equal to 10
+      CumulAssess - Var 2 - block:
+        "<pre>BoysHello Girls</pre>": "<pre>BoysHello Girls</pre>"
+        "<pre>Hello Boys and Girls</pre>": "<pre>Hello Boys and Girls</pre>"
+        "<pre>Hello Girls and Boys</pre>": "<pre>Hello Girls and Boys</pre>"
+        "<pre>sentence</pre>": "<pre>sentence</pre>"
+        <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
+        What will be displayed after running this code?: What will be displayed after running this code?
       ECSPD Online U1D1-2 Assessment 2:
         A and B: A and B
         A, B, C, F, and G: A, B, C, F, and G
@@ -6662,6 +6834,27 @@ en:
         left, right, top: left, right, top
         random: random
         top, left, right: top, left, right
+      commute assess - comp 3 - block:
+        Displays "Hello" continuously for 60 seconds: Displays "Hello" continuously for 60 seconds
+        Displays "Hello" exactly 60 times: Displays "Hello" exactly 60 times
+        Displays "Hello" once: Displays "Hello" once
+        Displays "Hello" once after 60 seconds has elapsed: Displays "Hello" once after 60 seconds has elapsed
+        This code will cause an error: This code will cause an error
+      commute assess - loops 3 - block:
+        "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>": "<pre>apple<br>apple<br>apple<br>orange<br>orange<br>orange </pre>"
+        "<pre>apple<br>orange </pre>": "<pre>apple<br>orange </pre>"
+        "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>": "<pre>apple<br>orange<br>apple<br>orange<br>apple<br>orange </pre>"
+        It will be different each time you run it: It will be different each time you run it
+        Nothing with be printed: Nothing with be printed
+        What will be printed when this code is run?: What will be printed when this code is run?
+      commute assess - loops 4 - block:
+        '0': '0'
+        '1': '1'
+        '10': '10'
+        '5': '5'
+        '50': '50'
+        How many times will the comparison c > 5 be tested when this code is run?: How many times will the comparison c > 5 be tested when this code is run?
+        it will be different each time you run it: it will be different each time you run it
       csp_ap_exam_signup:
         'No': 'No'
         'Yes': 'Yes'

@@ -1,0 +1,10 @@
+name 'CommuteAssess - Cond 4b - block'
+question 'If word was set to “Hi”, what would be printed?'
+right '"The word is too short!"'
+wrong '"The word it too long!"'
+wrong '"The word is just right"'
+wrong '"The word is still too short!"'
+wrong '"The word is just right the word is still too short!"'
+markdown <<MARKDOWN
+
+MARKDOWN

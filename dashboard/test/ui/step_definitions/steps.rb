@@ -715,6 +715,10 @@ def wait_for_jquery
   wait_with_timeout.until { @browser.execute_script("return (typeof jQuery !== 'undefined');") }
 end
 
+Then /^I wait for jquery to load$/ do
+  wait_for_jquery
+end
+
 Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_id|
   wait_with_short_timeout.until {
     @child_item = @browser.find_element(:id, child_id)
@@ -1106,7 +1110,7 @@ end
 
 def refute_bad_gateway
   first_header_text = @browser.execute_script("var el = document.getElementsByTagName('h1')[0]; return el && el.textContent;")
-  expect(first_header_text).not_to eq('Bad Gateway')
+  expect(first_header_text).not_to end_with('Bad Gateway')
 end
 
 def refute_site_unreachable
