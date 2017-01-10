@@ -13,7 +13,6 @@ import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
 var codegen = require('../codegen');
 var apiJavascript = require('./apiJavascript');
-import * as audioApi from '@cdo/apps/lib/util/audioApi';
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
@@ -104,7 +103,6 @@ var GameLab = function () {
     this
   ));
   consoleApi.setLogMethod(this.log.bind(this));
-  audioApi.injectExecuteCmd(this.executeCmd.bind(this));
 
   /** Expose for testing **/
   window.__mostRecentGameLabInstance = this;
@@ -246,6 +244,10 @@ GameLab.prototype.init = function (config) {
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
     config.unusedConfig = this.gameLabP5.p5specialFunctions;
+
+    // Ignore user's code on embedded levels, so that changes made
+    // to starting code by levelbuilders will be shown.
+    config.ignoreLastAttempt = config.embed;
 
     this.studioApp_.init(config);
 

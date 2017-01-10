@@ -33,7 +33,7 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function for it in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/921634d77b4474329a83fe08276bcf07/grade4_artist_functions_windows0.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e936a477a6aabc925be299efa8be9db/grade4_artist_functions_windows0.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function for it in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/921634d77b4474329a83fe08276bcf07/courseD_artist_functions6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e936a477a6aabc925be299efa8be9db/courseD_artist_functions6.mp3\"}]",
     "instructions_important": "false",
     "contained_level_names": null
   },
