@@ -7,16 +7,41 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');
+import Radium from 'radium';
+
+const styles = {
+  resizer: {
+    flex: '0 0 0',
+    boxSizing: 'border-box',
+    opacity: 0.2,
+    zIndex: 1,
+    backgroundColor: '#000',
+    backgroundClip: 'padding-box',
+    userSelect: 'text',
+    width: 11,
+    margin: '0 -5px',
+    borderLeft: '5px solid',
+    borderRight: '5px solid',
+    borderColor: 'rgba(255, 255, 255, 0)',
+    cursor: 'col-resize',
+    height: '100%',
+    ':hover': {
+      transition: 'all 2s ease',
+      borderColor: 'rgba(0, 0, 0, 0.5)',
+    }
+  }
+};
 
 /**
  * Wraps its children to display them in a flexbox layout.
  */
-var ResizablePanes = React.createClass({
+var ResizablePanes = Radium(React.createClass({
   propTypes: {
     style: React.PropTypes.object,
     columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
     onChange: React.PropTypes.func.isRequired,
     children: React.PropTypes.node,
+    lockedColumns: React.PropTypes.arrayOf(React.PropTypes.number)
   },
 
   getInitialState: function () {
@@ -100,18 +125,31 @@ var ResizablePanes = React.createClass({
       <div
         key={"resizer-" + index}
         data-resizer-index={index}
-        className="resizer"
+        style={styles.resizer}
         onMouseDown={this.onResizerMouseDown}
       />
     );
+  },
+
+  isColumnLocked: function (index) {
+    if (!this.props.lockedColumns) {
+      return false;
+    }
+
+    return this.props.lockedColumns.indexOf(index) >= 0;
   },
 
   getChildren: function () {
     var childCount = React.Children.count(this.props.children);
     var computedChildren = [];
     React.Children.forEach(this.props.children, function (child, index) {
+      if (!child) {
+        return;
+      }
       computedChildren.push(this.getClonedChild(child, index));
-      if (index !== childCount - 1) {
+      const isLockedColumn = this.isColumnLocked(index);
+      const isFinalColumn = index === childCount - 1;
+      if (!isFinalColumn && !isLockedColumn) {
         computedChildren.push(this.getResizer(index));
       }
     }, this);
@@ -133,5 +171,6 @@ var ResizablePanes = React.createClass({
       </div>
     );
   }
-});
-module.exports = ResizablePanes;
+}));
+
+export default ResizablePanes;

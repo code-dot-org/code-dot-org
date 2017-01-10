@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "مبارکه، شما کدگذاری برای درست کردن روباتهای موش را اضافه نمودید. میتوانید به پازل بعدی بروید یا دوباره برای درست کردن 20 روبات موش ادامه دهید. سعی کنید با اضافه کردن تعداد بیشتری از آنها آن را آسانتر کنید! (کلیدها روی صفحه کیبورد (یا صفحه نمایش) را فشار داده و نگه دارید تا سریعتر حرکت نمائید.)",
   "failedChangeSettingTimeout": "برای ادامه سه خلبان شورشی بگیر.",
   "failedChangeSettingSettings": "بازی را ازان خود کن. برای قبول شدن این پازل شما باید روبات خود را عوض کرده و سرعت آن را تنظیم نمائید.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

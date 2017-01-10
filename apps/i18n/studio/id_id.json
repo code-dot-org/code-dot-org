@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Selamat, kamu menambahkan kode untuk membuat Droid Tikus. Kamu bisa pergi ke teka-teki berikutnya atau mencoba lagi untuk mendapatkan 20 Droid Tikus. Cobalah buat hal tersebut menjadi lebih mudah dengan menambah jumlah mereka! (Tekan dan tahan tombol-tombol pada keyboardmu (atau layar) untuk bergerak lebih cepat.)",
   "failedChangeSettingTimeout": "Dapatkan tiga Pilot Pemberontak untuk dapat lanjut.",
   "failedChangeSettingSettings": "Buatlah game tersebut milikmu. Untuk menyelesaikan teka-teki ini, kamu harus mengganti droidmu dan menetapkan kecepatannya.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

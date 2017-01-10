@@ -3,52 +3,57 @@
     font-family: Gotham, sans-serif;
   }
 
+- code_org_link = link_to 'Code.org', 'http://code.org'
+
 %p
   Hi
-  = @teacher.name.split().first.titleize + ','
+  = @enrollment.first_name + ','
 
 %p
   Thank you for attending a Code.org
   = @workshop.course
   = @workshop.subject
-  workshop and for your commitment to bringing foundational 21st century learning to your students!
+  on
+  = @workshop.sessions.first.formatted_date + '.'
 
 %p
-  = link_to('Please take a minute to complete this 10-minute survey', @survey_url) + '.'
-  Let us know how we can improve your experience and your learning.
+  %strong
+    Please tell us about your experience at this workshop by filling out this 10 minute
+    = link_to('survey', @survey_url) + '.'
 
 %p
-  If you had a good experience, please spread the word about the
-  = link_to('Code.org Professional Learning Program', 'https://code.org/educate') + '.'
+  %i Why? Because your opinion matters!!
+  We are committed to continually improving our programs.
+  We want our teachers to have the best workshops possible.
+  Your feedback helps us build the experience that teachers have in the future!
 
-= render partial: 'share_links'
-
-- if @is_first_workshop
-  %p
-    Computer science has become the fastest-growing subject in K-12 education,
-    thanks to inspirational educators like you who spend your valuable time
-    in professional learning for the benefit of your classroom and the future of our children.
-    Thank you for joining the teacher-powered movement to give every student in every school
-    the opportunity to learn computer science.
+%p
+  Please note that the facilitator of your session will see your responses.
+  Your name and email will not be shared with your facilitator to protect your anonymity,
+  however, it’s possible your facilitator could identify you from your written responses.
 
 - if @workshop.course == Pd::Workshop::COURSE_CSF
   %h3
-    Classroom supplies, at no cost:
+    Unplugged supplies for CS Fundamentals, at no cost:
   %p
-    Completing the survey will qualify you to receive supplies at no cost for the unplugged activities.
+    Included in the survey is an order form for free supplies for the unplugged activities.
+    Consider it a thank you gift for bringing computer science into your classroom :-)
 
   %p
-    Attached to this email, you will also find a personalized certificate acknowledging your successful
-    completion of Code.org's CS Fundamentals workshop.
+    There’s also a personalized certificate attached to this email acknowledging your successful completion of
+    = code_org_link + "'s"
+    CS Fundamentals workshop.
 
   - if @dash_code
     %h3
-      For a limited time
+      Discounted robots for your classroom, for a limited time!
     %p
+      = code_org_link
       Code.org is offering $50 off
       = link_to('Dash robots', 'https://store.makewonder.com/') + '.'
-      These hands-on learning tools reinforce CS concepts taught in Code.org's CS Fundamentals curriculum,
-      like events and loops.
+      These hands-on learning tools reinforce CS concepts taught in
+      = code_org_link + "'s"
+      CS Fundamentals curriculum, like events and loops.
       = link_to('Learn more', 'https://store.makewonder.com/') + '.'
       %br
       %i
@@ -62,35 +67,10 @@
       = link_to 'Go here', 'https://help.makewonder.com/'
       for questions regarding redemption.
 
-%h3
-  Need more support?
-
-%ul
-  %li
-    Connect with other educators teaching computer science. Join our
-    = link_to('Professional Learning Community', 'http://forum.code.org/') + '.'
-  %li
-    See our
-    = link_to('FAQ', 'https://support.code.org/hc/en-us') + '.'
-  %li
-    Or
-    = link_to('contact us', 'https://support.code.org/hc/en-us/requests/new') + '.'
-
 %p
-  If there’s anything else my team or I can help you with, send us an email.
-
-%p
-  Thanks again for all you do for our students,
-
-%p
-  Hadi Partovi
+  Thank you,
   %br
-  Founder and CEO, Code.org
-
-%p
-  Follow us
-  = link_to 'on Facebook', 'http://facebook.com/code.org'
-  or
-  = link_to 'on Twitter', 'http://twitter.com/codeorg'
+  Rachel Phillips, PhD
   %br
-  Code.org is a public 501c3. Our address is 1301 5th Ave, Suite 1225, Seattle, WA 98101.
+  Director of Research & Evaluation
+  = code_org_link

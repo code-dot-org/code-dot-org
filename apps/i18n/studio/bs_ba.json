@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, dodao/la si kod koji pravi Miš Droide. Možeš ići na slijedeći zadatak ili pokušati ponovo da uzmeš 20 Miš Droida. Pokušaj si olakšati dodavanjem više njih! (Pritisni i drži tipke na tvojoj tastaturi (ili ekranu) za brže kretanje.)",
   "failedChangeSettingTimeout": "Uzmi tri Pobunjenička Pilota za nastavak.",
   "failedChangeSettingSettings": "Napravi vlastitu igru. Da bi riješio/la ovaj zadatak, trebaš promijeniti svog droida i postaviti njegovu brzinu.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

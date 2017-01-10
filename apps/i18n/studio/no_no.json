@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Gratulerer, du lagt til kode for å lage musedroider. Du kan gå til neste nivå eller prøve på nytt å få 20 musedroider. Prøve å gjøre det enklere ved å legge til flere av dem! (Trykk og hold inne tastene på tastaturet (eller skjermen) for å bevege deg raskere.)",
   "failedChangeSettingTimeout": "Ta tre opprørspiloter for å gå videre.",
   "failedChangeSettingSettings": "Gjøre spillet til ditt eget. For å klare denne oppgaven må du endre droiden din og sette hastigheten.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

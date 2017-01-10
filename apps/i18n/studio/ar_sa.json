@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "تهانينا، يمكنك إضافة التعليمات البرمجية لجعل الماوس Droids. يمكنك الذهاب للغز القادم أو حاول مرة أخرى للحصول على 20 الماوس Droids. محاولة جعله أسهل عن طريق إضافة المزيد منها! (اضغط باستمرار على مفاتيح على لوحة المفاتيح (أو الشاشة) التحرك بشكل أسرع)",
   "failedChangeSettingTimeout": "الحصول على ثلاثة \"الطيارين المتمردين\" للمضي قدما.",
   "failedChangeSettingSettings": "جعل اللعبة الخاصة بك. لتمرير هذا اللغز، تحتاج إلى تغيير الروبوت الخاص بك وتعيين سرعة.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

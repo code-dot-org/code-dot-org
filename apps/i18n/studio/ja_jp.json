@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "おめでとうございます。マウスドロイドをつくるコードが追加されました。次のパズルへすすむか、または20匹のマウスドロイドをつかまえるパズルに再ちょうせんしてください。より多くのマウスドロイドを追加すると、ゲームが簡単になります。はやく動くには、キーボード (またはスクリーン) のやじるしを押しつづけてください。",
   "failedChangeSettingTimeout": "３人の反乱軍パイロットを捕まえてください。",
   "failedChangeSettingSettings": "あなだだけのゲームをつくりましょう。この章を終わらせるには、ドロイドを変えてスピードを設定してください。",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

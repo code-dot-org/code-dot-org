@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Құттықтаймыз, сіз робо-тышқандарды жарату программасын құрдыңыз. Келесі деңгейге өтуіңізге болады немесе қайтадан ойнап 20 робо-тышқанды жинауға болады. Бірақ осы жолы ойынды оңайлат және робо-тышқандарды көбірек қос!(пернетақтадағы (экрандағы)батырманы басып тұр тез қозғалу үшін)",
   "failedChangeSettingTimeout": "Жалғастыру үшін үш көтерілісші ұшқыштарды жина.",
   "failedChangeSettingSettings": "Өз ойыныңды құр.Келесі деңгейге өту үшін сізге дройдтын келбетін өзгертіп қолғалыс жылдамдығын орналастыру қажет.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

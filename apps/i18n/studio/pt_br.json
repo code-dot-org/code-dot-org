@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, você adicionou código para criar Mouse Droids. Você pode ir para o próximo desafio ou tentar pegar 20 Mouse Droids novamente. Tente facilitar, adicionando mais deles! (Pressione e segure as teclas do seu teclado - ou tela - para se mover mais rápido).",
   "failedChangeSettingTimeout": "Pegue três Pilotos Rebeldes para seguir em frente.",
   "failedChangeSettingSettings": "Faça seu próprio jogo. Para vencer esse desafio, você precisa alterar seu androide e definir sua velocidade.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }

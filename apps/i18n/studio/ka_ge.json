@@ -842,5 +842,16 @@
   "failedMultiplyCharactersTimeoutGotSome": "გილოცავთ, თქვენ დაამათეთ კოდი და დააგროვეთ რამდენიმე თაგვი დროიდი. შეგიძლიათ ახალ თავსატეხზე გადასვლა ან თავიდან ცდა და 20 თაგვი დროიდის დაგროვება. გაიმარტივეთ საქმე - დაამატეთ მეტი! (გინდათ უფრო სწრაფად იმოძრაოთ? დააჭირეთ ღილაკებს და არ აუშვათ.)",
   "failedChangeSettingTimeout": "გასაგრძელებლად დაიჭირეთ სამი მეამბოხე პილოტი.",
   "failedChangeSettingSettings": "მოარგეთ თამაში თქვენს საჭიროებებს. ამ თავსატეხის დასასრულებლად უნდა შეცვალოთ თქვენი დროიდი და განსაზღვროთ მისი სიჩქარე.",
+  "getActorHasEmotionAngry": "is in an angry mood",
+  "getActorHasEmotionHappy": "is in a happy mood",
+  "getActorHasEmotionNormal": "is in a normal mood",
+  "getActorHasEmotionSad": "is in a sad mood",
+  "getActorHasEmotionTooltip": "Gets if the actor is in a particular mood",
+  "getActorHidden": "is hidden",
+  "getActorVisible": "is visible",
+  "getActorXPosition": "x position",
+  "getActorYPosition": "y position",
+  "ifSpriteN": "actor {spriteIndex}",
+  "isSet": "is set",
   "saySpriteChoices_59": "Ouch!"
 }
