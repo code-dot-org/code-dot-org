@@ -9,6 +9,136 @@ import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
 import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
 import logToCloud from '../logToCloud';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+
+const APP_OPTIONS_WHITELIST = {
+  "levelGameName": true,
+  "skinId": true,
+  "baseUrl": true,
+  "app": true,
+  "droplet": true,
+  "pretty": true,
+  "level": {
+    "skin": true,
+    "editCode": true,
+    "embed": true,
+    "isK1": true,
+    "isProjectLevel": true,
+    "skipInstructionsPopup": true,
+    "disableParamEditing": true,
+    "disableVariableEditing": true,
+    "useModalFunctionEditor": true,
+    "useContractEditor": true,
+    "contractHighlight": true,
+    "contractCollapse": true,
+    "examplesHighlight": true,
+    "examplesCollapse": true,
+    "definitionHighlight": true,
+    "definitionCollapse": true,
+    "freePlay": true,
+    "appWidth": true,
+    "appHeight": true,
+    "sliderSpeed": true,
+    "calloutJson": true,
+    "disableExamples": true,
+    "showTurtleBeforeRun": true,
+    "autocompletePaletteApisOnly": true,
+    "textModeAtStart": true,
+    "designModeAtStart": true,
+    "hideDesignMode": true,
+    "beginnerMode": true,
+    "levelId": true,
+    "puzzle_number": true,
+    "stage_total": true,
+    "iframeEmbed": true,
+    "lastAttempt": true,
+    "submittable": true
+  },
+  "showUnusedBlocks": true,
+  "fullWidth": true,
+  "noHeader": true,
+  "noFooter": true,
+  "smallFooter": true,
+  "codeStudioLogo": true,
+  "hasI18n": true,
+  "callouts": true,
+  "channel": true,
+  "readonlyWorkspace": true,
+  "isLegacyShare": true,
+  "postMilestone": true,
+  "postFinalMilestone": true,
+  "puzzleRatingsUrl": true,
+  "authoredHintViewRequestsUrl": true,
+  "serverLevelId": true,
+  "gameDisplayName": true,
+  "publicCaching": true,
+  "is13Plus": true,
+  "hasContainedLevels": true,
+  "hideSource": true,
+  "share": true,
+  "labUserId": true,
+  "firebaseName": true,
+  "firebaseAuthToken": true,
+  "firebaseChannelIdSuffix": true,
+  "isSignedIn": true,
+  "pinWorkspaceToBottom": true,
+  "hasVerticalScrollbars": true,
+  "showExampleTestButtons": true,
+  "rackEnv": true,
+  "report": {
+    "fallback_response": true,
+    "callback": true,
+    "sublevelCallback": true,
+  },
+  "sendToPhone": true,
+  "send_to_phone_url": true,
+  "copyrightStrings": {
+    "thank_you": true,
+    "help_from_html": true,
+    "art_from_html": true,
+    "code_from_html": true,
+    "powered_by_aws": true,
+    "trademark": true,
+  },
+  "teacherMarkdown": true,
+  "dialog": {
+    "skipSound": true,
+    "preTitle": true,
+    "fallbackResponse": true,
+    "callback": true,
+    "sublevelCallback": true,
+    "app": true,
+    "level": true,
+    "shouldShowDialog": true,
+  },
+  "locale": true,
+};
+
+export function getAppOptionsFile() {
+  function getAppOptionsAtPath(whitelist, sourceOptions) {
+    if (!whitelist) {
+      return null;
+    }
+    const options = {};
+    Object.keys(whitelist).forEach(key => {
+      if (sourceOptions[key] === undefined) {
+        return;
+      }
+      if (typeof whitelist[key] === 'object') {
+        const subOptions = getAppOptionsAtPath(whitelist[key], sourceOptions[key]);
+        if (subOptions !== null) {
+          options[key] = subOptions;
+        }
+      } else {
+        options[key] = sourceOptions[key];
+      }
+    });
+    return options;
+  }
+  const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
+  return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
+}
+
 
 /**
  * Extracts a CSS file from the given HTML dom node by traversing each node and
@@ -130,7 +260,7 @@ export default {
     })).then(
       function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
         zip.file(appName + "/applab-api.js",
-                 [commonLocale, applabLocale, applabApi].join('\n'));
+                 [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
         zip.file(appName + "/applab.css", applabCSS);
 
         Array.from(arguments).slice(4).forEach(function ([data], index) {
