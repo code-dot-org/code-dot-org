@@ -243,6 +243,12 @@ module ApplicationHelper
     end
   end
 
+  # Wrapper function used to inhibit Brakeman (security static code analysis) warnings. To inhibit a false positive warning,
+  # wrap the code in question in this function.
+  def brakeman_no_warn(obj)
+    obj
+  end
+
   private
 
   def share_failure_message(failure_type)
