@@ -1,0 +1,161 @@
+#!/usr/bin/env ruby
+
+# This script populates (after truncating) the contained_levels,
+# contained_level_answers, and the level_sources_multi_type tables.
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/only_one'
+
+TIME_NOW = DateTime.now.strftime('%F %T').freeze
+
+# @param unsanitized [String] the unsanitized string
+# @returns [String] the sanitized version of the string, with newlines stripped
+#   and double quotations escaped
+def sanitize_string_for_db(unsanitized)
+  unsanitized.gsub(/[\r\n]+/, '').gsub(/"/, '\"')
+end
+
+def main
+  # Truncate the existing tables.
+  %w(
+    contained_levels
+    contained_level_answers
+    level_sources_multi_types
+  ).each do |table_name|
+    ActiveRecord::Base.connection.execute(
+      "TRUNCATE #{table_name}"
+    )
+  end
+
+  # Build the data for the tables.
+  contained_levels = []
+  contained_level_answers = []
+  level_sources_multi_types = []
+
+  Level.where(type: 'LevelGroup').find_each do |level|
+    level.properties['pages'].each_with_index do |page, page_index|
+      page['levels'].each_with_index do |contained_level_name, position_index|
+        contained_level = Level.find_by_name(contained_level_name)
+        next unless contained_level.type == 'Multi'
+        contained_question = contained_level.properties['markdown']
+        unless contained_question
+          contained_question = contained_level.
+            properties['questions'].
+            first['text']
+        end
+        contained_levels << {
+          level_id: level.id,
+          contained_level_id: contained_level.id,
+          contained_level_type: contained_level.type,
+          contained_level_page: page_index,
+          contained_level_position: position_index,
+          contained_level_text: sanitize_string_for_db(contained_question)
+        }
+
+        answers = contained_level.properties['answers']
+        answers.each_with_index do |answer, answer_number|
+          contained_level_answers << {
+            contained_level_id: contained_level.id,
+            answer_number: answer_number,
+            answer_text: sanitize_string_for_db(answer['text']),
+            correct: answer['correct']
+          }
+        end
+      end
+    end
+  end
+
+  LevelSource.where(level_id: contained_levels.map{|row| row[1]}).
+    find_each do |level_source|
+    level_sources_multi_types << {
+      level_source_id: level_source.id,
+      level_id: level_source.level_id,
+      data: level_source.data,
+      md5: level_source.md5,
+      hidden: level_source.hidden
+    }
+  end
+
+  # Verify that the data size is sensible.
+  raise 'contained_levels too big' if contained_levels.size > 1_000
+  raise 'contained_level_answers too big' if contained_level_answers.size > 10_000
+  raise 'level_sources too big' if level_sources_multi_types.size > 10_000
+
+  # Write the data to the DB tables.
+  ActiveRecord::Base.transaction do
+    contained_levels.each do |contained_level_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO contained_levels (
+            created_at,
+            updated_at,
+            level_group_level_id,
+            contained_level_id,
+            contained_level_type,
+            contained_level_page,
+            contained_level_position,
+            contained_level_text
+          )
+          VALUES (
+            "#{TIME_NOW}",
+            "#{TIME_NOW}",
+            #{contained_level_row[:level_id]},
+            #{contained_level_row[:contained_level_id]},
+            "#{contained_level_row[:contained_level_type]}",
+            #{contained_level_row[:contained_level_page]},
+            #{contained_level_row[:contained_level_position]},
+            "#{contained_level_row[:contained_level_text]}"
+          )
+SQL
+      )
+    end
+  end
+  ActiveRecord::Base.transaction do
+    contained_level_answers.each do |contained_level_answer_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO contained_level_answers (
+            created_at,
+            updated_at,
+            level_id,
+            answer_number,
+            answer_text,
+            correct
+          )
+          VALUES (
+            "#{TIME_NOW}",
+            "#{TIME_NOW}",
+            #{contained_level_answer_row[:contained_level_id]},
+            #{contained_level_answer_row[:answer_number]},
+            "#{contained_level_answer_row[:answer_text]}",
+            #{contained_level_answer_row[:correct]}
+          )
+SQL
+      )
+    end
+  end
+  ActiveRecord::Base.transaction do
+    level_sources_multi_types.each do |level_sources_multi_types_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO level_sources_multi_types (
+            level_source_id,
+            level_id,
+            data,
+            md5,
+            hidden
+          )
+          VALUES (
+            #{level_sources_multi_types_row[:level_source_id]},
+            #{level_sources_multi_types_row[:level_id]},
+            "#{level_sources_multi_types_row[:data]}",
+            "#{level_sources_multi_types_row[:md5]}",
+            #{level_sources_multi_types_row[:hidden]}
+          )
+SQL
+      )
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)
