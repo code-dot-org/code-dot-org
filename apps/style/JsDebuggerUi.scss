@@ -76,9 +76,18 @@ $debug-header-border-width: 1px;
 
 #debug-watch-header {
   width: $debug-watch-max-column-width + $debug-header-border-width;
-  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width} + #{$debug-header-border-width});
   float: right;
   border-left: $debug-header-border-width solid gray;
+}
+
+#watchersResizeBar {
+  height: 100%;
+  width: $resize-bar-width;
+  cursor: ew-resize;
+  position: absolute;
+  right: $debug-watch-max-column-width - 0.5 * $resize-bar-width;
+  z-index: 1;
+  top: $resize-bar-width;
 }
 
 .debug-commands, .debug-console, .debug-watch {
@@ -102,7 +111,6 @@ $debug-header-border-width: 1px;
   }
   right: 0;
   width: $debug-watch-max-column-width;
-  max-width: calc(100% - #{$debug-commands-column-width} - #{$debug-console-min-column-width});
   font-family: monospace;
   font-size: 12px;
   overflow-y: scroll;
