@@ -12,7 +12,10 @@ export const style = {
     borderWidth: 1,
     borderStyle: 'solid',
     minWidth: 100,
-    margin: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 0,
     ':hover': {
       boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
     },
@@ -40,7 +43,6 @@ export const style = {
   arrowHead: {
     base: {
       position: 'absolute',
-
       width: 0,
       height: 0,
       borderColor: 'transparent',
@@ -62,7 +64,10 @@ style.withArrow = {
   base: {
     position: 'relative',
     top: (ARROW_HEIGHT - style.base.borderWidth - ARROW_BUTTON_PADDING * 2 - ARROW_BUTTON_HEIGHT)/2,
-    margin: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 0,
     ':hover': {
       boxShadow: 'none',
     },
@@ -84,7 +89,7 @@ function buttonStyle(buttonColor, textColor=color.white) {
 }
 
 export const BUTTON_TYPES = {
-  "default": {
+  default: {
     style: {
       backgroundColor: color.white,
       borderColor: color.charcoal,

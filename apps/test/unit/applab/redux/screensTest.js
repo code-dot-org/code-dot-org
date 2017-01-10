@@ -184,6 +184,7 @@ describe("Applab Screens Reducer", function () {
     });
 
     it('will call importScreensAndAssets', () => {
+      store.dispatch(importIntoProject('some-project', [], []));
       expect(importFuncs.importScreensAndAssets).to.have.been.called;
     });
 

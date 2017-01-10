@@ -30,6 +30,7 @@ var getAnimationDropdown;
 exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
+  audioApi.injectExecuteCmd(gameLab.executeCmd.bind(gameLab));
 };
 
 // Flip the argument order so we can bind `typeFilter`.
@@ -54,8 +55,8 @@ module.exports.blocks = [
   {func: 'Game.mouseY', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/mouseY" },
   {func: 'Game.frameRate', category: 'Game Lab', type: 'property', customDocURL: "http://p5js.org/reference/#/p5/frameRate" },
   {func: 'Game.frameCount', category: 'Game Lab', type: 'readonlyproperty', customDocURL: "http://p5js.org/reference/#/p5/frameCount" },
-  {func: 'playSound', parent: audioApi, category: 'Game Lab', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
-  {func: 'stopSound', parent: audioApi, category: 'Game Lab', paramButtons: { minArgs: 0, maxArgs: 1 }, paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
+  {...audioApi.dropletConfig.playSound, category: 'Game Lab'},
+  {...audioApi.dropletConfig.stopSound, category: 'Game Lab'},
   {func: 'keyIsPressed', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyIsPressed" },
   {func: 'key', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/key" },
   {func: 'keyCode', category: 'Game Lab', type: 'readonlyproperty', noAutocomplete: true, customDocURL: "http://p5js.org/reference/#/p5/keyCode" },
