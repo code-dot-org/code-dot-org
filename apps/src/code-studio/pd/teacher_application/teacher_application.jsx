@@ -3,7 +3,6 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import _ from 'lodash';
 import {
@@ -15,7 +14,7 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 import {otherString, ButtonList} from '../form_components/button_list.jsx';
-import {getDistrictDropdownValues, validateDistrictData} from './district_dropdown_helper.js';
+import {validateDistrictData} from './district_dropdown_helper.js';
 import SummerProgramContent from './SummerProgramContent';
 import {getWorkshopForState} from './applicationConstants.js';
 
@@ -96,7 +95,9 @@ const TeacherApplication = React.createClass({
 
   propTypes: {
     regionalPartnerGroup: React.PropTypes.number,
-    regionalPartnerName: React.PropTypes.string
+    regionalPartnerName: React.PropTypes.string,
+    schoolDistrictData: React.PropTypes.object.isRequired,
+    districtErrorMessageHandler: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -160,14 +161,14 @@ const TeacherApplication = React.createClass({
   },
 
   shouldShowRegionalPartnersOnlyWarning() {
-    return ['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase());
+    return ['private', 'other'].includes(this.props.schoolDistrictData['school-type'].toLowerCase());
   },
 
   shouldShowWorkingToIdentifyRegionalPartnerWarning() {
     return !!(
-      ['public', 'charter'].includes(document.getElementById('school-type').value.toLowerCase()) &&
+      ['public', 'charter'].includes(this.props.schoolDistrictData['school-type'].toLowerCase()) &&
       !(this.props.regionalPartnerGroup) &&
-      (document.querySelector('#school-district input').value || document.getElementById('school-district-other').checked)
+      (this.props.schoolDistrictData['school-district'] || this.props.schoolDistrictData['school-district-other'])
     );
   },
 
@@ -581,11 +582,7 @@ const TeacherApplication = React.createClass({
   onSubmitButtonClick() {
     this.setState({submitting: true});
 
-    const districtValues = getDistrictDropdownValues();
-
     const formData = _.omit(_.cloneDeep(this.state), ['submitting']);
-
-    _.assign(formData, districtValues);
 
     let topInvalidElementId = undefined;
 
@@ -611,11 +608,13 @@ const TeacherApplication = React.createClass({
       }
     });
 
+    _.assign(formData, this.props.schoolDistrictData);
+
     formData['assignedWorkshop'] = getWorkshopForState(
       this.props.regionalPartnerGroup,
       this.props.regionalPartnerName,
       this.state.selectedCourse,
-      document.getElementById('school-state').value
+      this.props.schoolDistrictData['school-state']
     );
 
     if (!this.shouldShowRegionalPartnersOnlyWarning() && !this.shouldShowWorkingToIdentifyRegionalPartnerWarning()) {
@@ -639,26 +638,23 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    if (validateDistrictData(districtValues)) {
-      document.getElementById('district-error-placeholder').innerHTML = '';
+    if (validateDistrictData(this.props.schoolDistrictData)) {
+      this.props.districtErrorMessageHandler('');
     } else {
       topInvalidElementId = 'district-error-placeholder';
-      ReactDOM.render(
-        <label style={{color: 'red', fontSize: '14pt', fontWeight: 'bold'}}>
-          Please complete this section with your school's information
-        </label>,
-        document.getElementById(topInvalidElementId)
-      );
+      this.props.districtErrorMessageHandler("Please complete this section with your school's information");
     }
 
     if (topInvalidElementId) {
       this.setState({submitting: false});
       let topInvalidElement = document.getElementById(topInvalidElementId);
 
-      if (topInvalidElement.className.indexOf('form-group') >= 0) {
-        topInvalidElement.scrollIntoView();
-      } else {
-        topInvalidElement.parentElement.scrollIntoView();
+      if (topInvalidElement) {
+        if (topInvalidElement.className.indexOf('form-group') >= 0) {
+          topInvalidElement.scrollIntoView();
+        } else {
+          topInvalidElement.parentElement.scrollIntoView();
+        }
       }
     } else {
       this.save(formData);
@@ -714,7 +710,7 @@ const TeacherApplication = React.createClass({
             this.props.regionalPartnerGroup,
             this.props.regionalPartnerName,
             this.state.selectedCourse,
-            document.getElementById('school-state').value
+            this.props.schoolDistrictData['school-state']
           )}
         />
         <hr/>
