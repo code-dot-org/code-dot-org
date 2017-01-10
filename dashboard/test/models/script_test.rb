@@ -443,6 +443,19 @@ class ScriptTest < ActiveSupport::TestCase
     assert_raises ActiveRecord::RecordInvalid do
       create :script, name: 'a_b_c'
     end
+
+    assert_raise ActiveRecord::RecordInvalid do
+      create :script, name: '~', skip_name_format_validation: true
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: '..', skip_name_format_validation: true
+    end
+
+    assert_raises ActiveRecord::RecordInvalid do
+      create :script, name: 'evil/directory/traversal',
+        skip_name_format_validation: true
+    end
   end
 
   test 'can edit existing script with invalid name' do

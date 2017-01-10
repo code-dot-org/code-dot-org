@@ -34,8 +34,6 @@
     - if video
       .clear
       .video-container
-    - else
-      %p.coming-soon= t('video_coming_soon')
 
   .clear
 
@@ -61,7 +59,7 @@
       fallbackResponse: '#{@fallback_response.to_json}',
       callback: '#{@callback}',
       app: 'unplug',
-      level: '#{@level.level_num}',
+      level: '#{escape_javascript(@level.level_num)}',
       result: true,
       pass: true,
       testResult: 100,

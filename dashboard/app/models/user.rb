@@ -955,17 +955,25 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      new_level_completed = true if !user_level.passing? &&
-        Activity.passing?(new_result)
-      new_csf_level_perfected = true if !user_level.perfect? &&
+      if !user_level.passing? && Activity.passing?(new_result)
+        new_level_completed = true
+      end
+      if !user_level.perfect? &&
         new_result == 100 &&
-        Script.get_from_cache(script_id).csf? &&
+        ([
+          ScriptConstants::TWENTY_HOUR_NAME,
+          ScriptConstants::COURSE2_NAME,
+          ScriptConstants::COURSE3_NAME,
+          ScriptConstants::COURSE4_NAME
+        ].include? Script.get_from_cache(script_id).name) &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
         AuthoredHintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
+        new_csf_level_perfected = true
+      end
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
@@ -1083,6 +1091,20 @@ class User < ActiveRecord::Base
     return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
 
     false
+  end
+
+  # We restrict certain users from editing their email address, because we
+  # require a current password confirmation to edit email and some users don't
+  # have passwords
+  def can_edit_email?
+    encrypted_password.present?
+  end
+
+  # We restrict certain users from editing their password; in particular, those
+  # users that don't have a password because they authenticate via oauth, secret
+  # picture, or some other unusual method
+  def can_edit_password?
+    encrypted_password.present?
   end
 
   def section_for_script(script)

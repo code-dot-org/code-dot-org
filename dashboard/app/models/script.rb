@@ -45,6 +45,15 @@ class Script < ActiveRecord::Base
       with: /\A[a-z0-9\-]+\z/,
       message: 'can only contain lowercase letters, numbers and dashes'
     }
+  # As we read and write to files with the script name, to prevent directory
+  # traversal (for security reasons), we do not allow the name to start with a
+  # tilde or dot or contain a slash.
+  validates :name,
+    presence: true,
+    format: {
+      without: /\A~|\A\.|\//,
+      message: 'cannot start with a tilde or dot or contain slashes'
+    }
 
   include SerializedProperties
 
@@ -645,21 +654,21 @@ class Script < ActiveRecord::Base
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
-            ids: [x],
-            kind: 'peer_review',
-            title: '',
-            url: '',
-            name: I18n.t('peer_review.reviews_unavailable'),
-            icon: 'fa-lock',
-            locked: true
+          ids: [x],
+          kind: 'peer_review',
+          title: '',
+          url: '',
+          name: I18n.t('peer_review.reviews_unavailable'),
+          icon: 'fa-lock',
+          locked: true
         }
       end
 
       peer_review_section = {
-          name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
-          flex_category: 'Peer Review',
-          levels: levels,
-          lockable: false
+        name: I18n.t('peer_review.review_count', {review_count: peer_reviews_to_complete}),
+        flex_category: 'Peer Review',
+        levels: levels,
+        lockable: false
       }
 
       summarized_stages << peer_review_section

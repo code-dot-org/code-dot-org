@@ -32,6 +32,11 @@ var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
 
+// Configure the audio API for App Lab
+audioApi.injectExecuteCmd(function () {
+  Applab.executeCmd.apply(Applab, arguments);
+});
+
 /**
  * Generate a list of screen ids for our setScreen dropdown
  */
@@ -79,15 +84,15 @@ export var blocks = [
   {func: 'image', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
   {func: 'getImageURL', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("img") }, type: 'value' },
   {func: 'setImageURL', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 0: idDropdownWithSelector("img"), 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
-  {func: 'playSound', parent: audioApi, category: 'UI controls', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
-  {func: 'stopSound', parent: audioApi, category: 'UI controls', paramButtons: { minArgs: 0, maxArgs: 1 }, paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
+  {...audioApi.dropletConfig.playSound, category: 'UI controls'},
+  {...audioApi.dropletConfig.stopSound, category: 'UI controls'},
   {func: 'showElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
-  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
+  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() }, type: 'value' },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },

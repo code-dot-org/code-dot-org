@@ -20,30 +20,30 @@ Learn more about our offerings for every grade band below:
 
 <h3>Computer Science Fundamentals (Grades K-5)</h3>
 <% if category == 'international_hoc_no_account' %>
-- Add computer science to your classroom once a week with fun courses that students love
-- Available in several languages
+- Add computer science to your classroom once a week with fun courses that students love.
+- Available in several languages.
 
 [Learn more about Computer Science Fundamentals](https://code.org/educate/curriculum/elementary-school) 
 <% else %>
-- Teach computer science once a week with fun courses that students love
-- We offer 1-day [workshops](https://code.org/professional-development-workshops) with experts to get you started. Teachers rave about the experience. These are open to all K-5 educators (including librarians, tech ed specialists)
+- Teach computer science once a week with fun courses that students love.
+- We offer 1-day [workshops](https://code.org/professional-development-workshops) with experts to get you started. Teachers rave about the experience. These are open to all K-5 educators (including librarians, tech ed specialists).
 
-[Learn more](https://code.org/educate/curriculum/elementary-school) and [Sign up for a workshop](https://code.org/professional-development-workshops) near you (at no cost)
+[Learn more](https://code.org/educate/curriculum/elementary-school) and [Sign up for a workshop](https://code.org/professional-development-workshops) near you (at no cost).
 <% end %>
 
 <a href="https://code.org/educate/curriculum/elementary-school"><img src="https://code.org/shared/images/courses/logo_tall_course1.jpg" width="75%"/></a>
 
-<h3>Computer Science Discoveries (7th - 9th grades)</h3>
+<h3>Computer Science Discoveries (Middle School)</h3>
 <% if category == 'international_hoc_no_account' %>
-- An introduction to computer science concepts, designed for students of all backgrounds and experience
-- Discover with students through topics such as programming, physical computing, HTML/CSS, and data
+- An introduction to computer science concepts, designed for students of all backgrounds and experiences.
+- Discover with students through topics such as programming, physical computing, HTML/CSS, and data.
 
 [Learn more about Computer Science Discoveries](https://code.org/educate/csd) - *Currently only available in English (translations coming!)*
 
 <% else %>
-- Teach a semester or year-long introduction to computer science, for students of any background or experience
-- Discover with students through topics such as programming, physical computing, HTML, and data
-- Summer workshops for 7th-9th grade teachers of all backgrounds
+- Teach a semester or year-long introduction to computer science, for students of any background or experience.
+- Discover with students through topics such as programming, physical computing, HTML, and data.
+- Summer workshops for 7th-9th grade teachers of all backgrounds.
 
 [Learn more](https://code.org/educate/csd) and [apply for no-cost professional learning](https://code.org/educate/professional-learning/cs-discoveries#apply) by **March 17th**
 
@@ -51,18 +51,18 @@ Learn more about our offerings for every grade band below:
 
 <a href="https://code.org/educate/csd"><img src="https://code.org/images/fit-500/csd/ms.jpg" width="75%"/></a>
 
-<h3>Computer Science Principles (high school)</h3>
+<h3>Computer Science Principles (High School)</h3>
 
 <% if category == 'international_hoc_no_account' %>
-- A deeper dive into computer science, designed for students of all backgrounds and experience
-- Teach year-long computer science courses that are approachable, collaborative, and relate to everyday life
+- A deeper dive into computer science, designed for students of all backgrounds and experiences.
+- Teach year-long computer science courses that are approachable, collaborative, and relate to everyday life.
 
-[Learn more about Computer Science Principles](https://code.org/educate/csp) - *Currently only available in English (translations coming!)*
+[Learn more about Computer Science Principles](https://code.org/educate/csp) - *Currently only available in English (translations coming!)*.
 
 <% else %>
-- Teach a year-long course, designed for students of any background or experience
+- Teach a year-long course, designed for students of any background or experience.
 - Explore programming, data analysis, and the Internet with an approachable course that can also be taught as an AP class.
-- Summer workshops for high school teachers of all backgrounds
+- Summer workshops for high school teachers of all backgrounds.
 
 [Learn more](https://code.org/educate/csp) and [apply for no-cost professional learning](https://code.org/educate/professional-learning/cs-principles#apply) by **March 17th**
 

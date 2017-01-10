@@ -6,7 +6,14 @@ video_player: true
 
 # Our newest course: CS Discoveries #
 
+## <a name="what"></a>Apply for Professional Learning
+
+Applications for the 2017-18 CS Discoveries Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+
+[<button>Apply now!</button>](/educate/professional-learning/cs-discoveries)
+
 ## <a name="what"></a>What is CS Discoveries?
+
 CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
 <img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
@@ -137,13 +144,13 @@ We post lesson drafts as soon as they're ready, and are eager to have teachers t
 
 <div style="float:left; padding:25px; width:33%">
 
-<h4>Get on the interest list for professional learning</h4>
+<h4>Apply now for professional learning!</h4>
 
-Are you interested in teaching CS Discoveries and want to take part in our professional learning program? While applications for our CS Discoveries professional learning program are not open yet, you can learn more about program commitments and get on the interest list.
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries! This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
 
 <br><br>
 
-<a href="/educate/professional-learning/cs-discoveries"> <button>Learn more</button> </a>
+<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
 
 </div>
 
@@ -166,12 +173,12 @@ Want to know when we've posted new lesson drafts and have tools that are ready t
 We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
 
 
-| Unit | Lesson Plans | Code Studio |
-| :------------------:|-----------|------|
-|**Unit 1 - Problem Solving: Computers and Logic**| [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1)|
-|**Unit 2 - The Internet: Web Development**| [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2)|
-|**Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3)|
-|**Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4)|
+|                   Unit                   | Lesson Plans                             | Code Studio                              |
+| :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
+| **Unit 1 - Problem Solving: Computers and Logic** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
+| **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
+| **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
+| **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
 
 
 
@@ -201,6 +208,8 @@ As lessons are completed we will also be publishing them on the website we invit
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSE course will be available for partner districts starting in Summer 2017.
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries!
+
+<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
 -->
