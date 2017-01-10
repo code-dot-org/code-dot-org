@@ -141,7 +141,7 @@ const AdvancedShareOptions = Radium(React.createClass({
           HTML/CSS/JS files, as well as any assets, for your project.
           Note that data APIs will not work outside of Code Studio.
         </p>
-        <button onClick={this.downloadExport}>
+        <button onClick={this.downloadExport} style={{marginLeft: 0}}>
           {spinner}
           Export
         </button>
