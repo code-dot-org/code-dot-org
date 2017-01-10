@@ -82,73 +82,79 @@ def main
   raise 'level_sources too big' if level_sources_multi_types.size > 10_000
 
   # Write the data to the DB tables.
-  contained_levels.each do |contained_level_row|
-    ActiveRecord::Base.connection.execute(
-      <<SQL
-        INSERT INTO contained_levels (
-          created_at,
-          updated_at,
-          level_group_level_id,
-          contained_level_id,
-          contained_level_type,
-          contained_level_page,
-          contained_level_position,
-          contained_level_text
-        )
-        VALUES (
-          "#{TIME_NOW}",
-          "#{TIME_NOW}",
-          #{contained_level_row[:level_id]},
-          #{contained_level_row[:contained_level_id]},
-          "#{contained_level_row[:contained_level_type]}",
-          #{contained_level_row[:contained_level_page]},
-          #{contained_level_row[:contained_level_position]},
-          "#{contained_level_row[:contained_level_text]}"
-        )
+  ActiveRecord::Base.transaction do
+    contained_levels.each do |contained_level_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO contained_levels (
+            created_at,
+            updated_at,
+            level_group_level_id,
+            contained_level_id,
+            contained_level_type,
+            contained_level_page,
+            contained_level_position,
+            contained_level_text
+          )
+          VALUES (
+            "#{TIME_NOW}",
+            "#{TIME_NOW}",
+            #{contained_level_row[:level_id]},
+            #{contained_level_row[:contained_level_id]},
+            "#{contained_level_row[:contained_level_type]}",
+            #{contained_level_row[:contained_level_page]},
+            #{contained_level_row[:contained_level_position]},
+            "#{contained_level_row[:contained_level_text]}"
+          )
 SQL
-    )
+      )
+    end
   end
-  contained_level_answers.each do |contained_level_answer_row|
-    ActiveRecord::Base.connection.execute(
-      <<SQL
-        INSERT INTO contained_level_answers (
-          created_at,
-          updated_at,
-          level_id,
-          answer_number,
-          answer_text,
-          correct
-        )
-        VALUES (
-          "#{TIME_NOW}",
-          "#{TIME_NOW}",
-          #{contained_level_answer_row[:contained_level_id]},
-          #{contained_level_answer_row[:answer_number]},
-          "#{contained_level_answer_row[:answer_text]}",
-          #{contained_level_answer_row[:correct]}
-        )
+  ActiveRecord::Base.transaction do
+    contained_level_answers.each do |contained_level_answer_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO contained_level_answers (
+            created_at,
+            updated_at,
+            level_id,
+            answer_number,
+            answer_text,
+            correct
+          )
+          VALUES (
+            "#{TIME_NOW}",
+            "#{TIME_NOW}",
+            #{contained_level_answer_row[:contained_level_id]},
+            #{contained_level_answer_row[:answer_number]},
+            "#{contained_level_answer_row[:answer_text]}",
+            #{contained_level_answer_row[:correct]}
+          )
 SQL
-    )
+      )
+    end
   end
-  level_sources_multi_types.each do |level_sources_multi_types_row|
-    ActiveRecord::Base.connection.execute(
-      <<SQL
-        INSERT INTO level_sources_multi_types (
-          level_source_id,
-          level_id,
-          data,
-          md5,
-          hidden
-        )
-        VALUES (
-          #{level_sources_multi_types_row[:level_source_id]},
-          #{level_sources_multi_types_row[:level_id]},
-          "#{level_sources_multi_types_row[:data]}",
-          "#{level_sources_multi_types_row[:md5]}",
-          #{level_sources_multi_types_row[:hidden]}
-        )
+  ActiveRecord::Base.transaction do
+    level_sources_multi_types.each do |level_sources_multi_types_row|
+      ActiveRecord::Base.connection.execute(
+        <<SQL
+          INSERT INTO level_sources_multi_types (
+            level_source_id,
+            level_id,
+            data,
+            md5,
+            hidden
+          )
+          VALUES (
+            #{level_sources_multi_types_row[:level_source_id]},
+            #{level_sources_multi_types_row[:level_id]},
+            "#{level_sources_multi_types_row[:data]}",
+            "#{level_sources_multi_types_row[:md5]}",
+            #{level_sources_multi_types_row[:hidden]}
+          )
 SQL
-    )
+      )
+    end
   end
 end
 
