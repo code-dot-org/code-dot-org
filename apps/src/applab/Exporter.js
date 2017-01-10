@@ -218,10 +218,10 @@ export default {
         zipPath: appName + '/applab_locale.js'
       }, {
         url: '/blockly/js/applab-api.js' + cacheBust,
-        zipPath: appName + '/applab-api.js'
+        zipPath: appName + '/applab/applab-api.js'
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
-        zipPath: appName + '/applab.css'
+        zipPath: appName + '/applab/applab.css'
       },
     ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
@@ -253,9 +253,9 @@ export default {
       return download(assetToDownload.url, assetToDownload.dataType || 'text');
     })).then(
       function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
-        zip.file(appName + "/applab-api.js",
+        zip.file(appName + "/applab/applab-api.js",
                  [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
-        zip.file(appName + "/applab.css", applabCSS);
+        zip.file(appName + "/applab/applab.css", applabCSS);
 
         Array.from(arguments).slice(4).forEach(function ([data], index) {
           zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
