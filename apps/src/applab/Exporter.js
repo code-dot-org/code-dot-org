@@ -1,8 +1,9 @@
 /* global dashboard */
 import $ from 'jquery';
-
+import _ from 'underscore';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
@@ -22,7 +23,7 @@ const APP_OPTIONS_WHITELIST = {
     "skin": true,
     "editCode": true,
     "embed": true,
-    "isK1": true,
+    "isK1": false,
     "isProjectLevel": true,
     "skipInstructionsPopup": true,
     "disableParamEditing": true,
@@ -67,24 +68,24 @@ const APP_OPTIONS_WHITELIST = {
   "isLegacyShare": true,
   "postMilestone": true,
   "postFinalMilestone": true,
-  "puzzleRatingsUrl": true,
-  "authoredHintViewRequestsUrl": true,
-  "serverLevelId": true,
+  "puzzleRatingsUrl": false,
+  "authoredHintViewRequestsUrl": false,
+  "serverLevelId": false,
   "gameDisplayName": true,
   "publicCaching": true,
   "is13Plus": true,
   "hasContainedLevels": true,
   "hideSource": true,
   "share": true,
-  "labUserId": true,
-  "firebaseName": true,
-  "firebaseAuthToken": true,
-  "firebaseChannelIdSuffix": true,
+  "labUserId": false,
+  "firebaseName": false,
+  "firebaseAuthToken": false,
+  "firebaseChannelIdSuffix": false,
   "isSignedIn": true,
   "pinWorkspaceToBottom": true,
   "hasVerticalScrollbars": true,
   "showExampleTestButtons": true,
-  "rackEnv": true,
+  "rackEnv": false,
   "report": {
     "fallback_response": true,
     "callback": true,
@@ -100,7 +101,7 @@ const APP_OPTIONS_WHITELIST = {
     "powered_by_aws": true,
     "trademark": true,
   },
-  "teacherMarkdown": true,
+  "teacherMarkdown": false,
   "dialog": {
     "skipSound": true,
     "preTitle": true,
@@ -116,24 +117,17 @@ const APP_OPTIONS_WHITELIST = {
 
 export function getAppOptionsFile() {
   function getAppOptionsAtPath(whitelist, sourceOptions) {
-    if (!whitelist) {
+    if (!whitelist || !sourceOptions) {
       return null;
     }
-    const options = {};
-    Object.keys(whitelist).forEach(key => {
-      if (sourceOptions[key] === undefined) {
-        return;
+    return _.reduce(whitelist, (memo, value, key) => {
+      if (value === true) {
+        memo[key] = sourceOptions[key];
+      } else if (typeof value === 'object' && typeof sourceOptions[key] === 'object') {
+        memo[key] = getAppOptionsAtPath(value, sourceOptions[key]);
       }
-      if (typeof whitelist[key] === 'object') {
-        const subOptions = getAppOptionsAtPath(whitelist[key], sourceOptions[key]);
-        if (subOptions !== null) {
-          options[key] = subOptions;
-        }
-      } else {
-        options[key] = sourceOptions[key];
-      }
-    });
-    return options;
+      return memo;
+    }, {});
   }
   const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
