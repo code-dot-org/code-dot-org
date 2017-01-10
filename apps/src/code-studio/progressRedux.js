@@ -49,54 +49,74 @@ export default function reducer(state = initialState, action) {
     const currentStageId = state.currentStageId ||
       (action.stages.length === 1 ? action.stages[0].id : undefined);
     // extract fields we care about from action
-    return Object.assign({}, state, {
+    return {
+      ...state,
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: action.stages.map(stage => _.omit(stage, 'hidden')),
       scriptName: action.scriptName,
       currentStageId
-    });
+    };
   }
 
   if (action.type === MERGE_PROGRESS) {
     // TODO: _.mergeWith after upgrading to Lodash 4+
     let newLevelProgress = {};
-    const combinedLevels = Object.keys(Object.assign({}, state.levelProgress, action.levelProgress));
+    const combinedLevels = Object.keys({
+      ...state.levelProgress,
+      ...action.levelProgress
+    });
     combinedLevels.forEach(key => {
       newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
     });
 
-    return Object.assign({}, state, {
+    return {
+      ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
-          return Object.assign({}, level, { status: LevelStatus.locked });
-        }
+      stages: state.stages.map(stage => ({
+        ...stage,
+        levels: stage.levels.map((level, index) => {
+          if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
+            return {
+              ...level,
+              status: LevelStatus.locked
+            };
+          }
 
-        const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-        if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-          Object.assign(level, action.peerReviewsPerformed[index]);
-        }
+          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+          let nextLevel = level;
+          if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
+            nextLevel = {
+              ...level,
+              ...action.peerReviewsPerformed[index]
+            };
+          }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {
-          status: activityCssClass(newLevelProgress[id])
-        });
-      })}))
-    });
+          return {
+            ...nextLevel,
+            ...(level.kind !== 'peer_review' && {
+              status: activityCssClass(newLevelProgress[id])
+            })
+          };
+        })
+      }))
+    };
   }
 
   if (action.type === UPDATE_FOCUS_AREAS) {
-    return Object.assign({}, state, {
+    return {
+      ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
       focusAreaPositions: action.focusAreaPositions
-    });
+    };
   }
 
   if (action.type === SHOW_TEACHER_INFO) {
-    return Object.assign({}, state, {
+    return {
+      ...state,
       showTeacherInfo: true
-    });
+    };
   }
 
   if (action.type === DISABLE_POST_MILESTONE) {
@@ -106,7 +126,6 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  // TODO (brent) - write tests for new reducers
   if (action.type === SET_USER_SIGNED_IN) {
     return {
       ...state,
