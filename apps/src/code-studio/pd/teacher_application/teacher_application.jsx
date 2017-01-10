@@ -177,7 +177,7 @@ const TeacherApplication = React.createClass({
       <div>
         {
           this.shouldShowRegionalPartnersOnlyWarning() && (
-          <label style={{color: 'red'}}>
+          <label id="regionalPartnersOnlyWarning" style={{color: 'red'}}>
             Thank you for your interest in Code.org’s Professional Learning Program! Due to high demand for our
             program, most spots are reserved for public school teachers in regions where we have a Regional Partner.
             You are a private school teacher and/or your area does not yet have a Code.org Regional Partner. If you
@@ -187,7 +187,7 @@ const TeacherApplication = React.createClass({
         )}
         {
           this.shouldShowWorkingToIdentifyRegionalPartnerWarning() && (
-            <label style={{color: 'red'}}>
+            <label id="identifyingRegionalPartnerWarning" style={{color: 'red'}}>
               Thank you for your interest in Code.org’s Professional Learning Program! We are working to identify the
               Regional Partner that will serve your school, and the dates of your five-day summer workshop. We will
               update you with more details on your assigned partner and the date of your summer workshop soon.
