@@ -13,6 +13,7 @@ import {
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
+const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
@@ -81,13 +82,18 @@ export default function reducer(state = initialState, action) {
         levels: stage.levels.map((level, index) => {
           return updateLevel(stage, level, index, newLevelProgress);
         })
-      })),
-      // TODO - separate action
-      peerReviewStage: !state.peerReviewStage ? state.peerReviewStage : {
+      }))
+    };
+  }
+
+  if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
+    return {
+      ...state,
+      peerReviewStage: {
         ...state.peerReviewStage,
         levels: state.peerReviewStage.levels.map((level, index) => ({
           ...level,
-          ...(action.peerReviewsPerformed && action.peerReviewsPerformed[index])
+          ...action.peerReviewsPerformed[index]
         }))
       }
     };
@@ -195,9 +201,13 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   scriptName
 });
 
-export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
+export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,
-  levelProgress,
+  levelProgress
+});
+
+export const mergePeerReviewProgress = peerReviewsPerformed => ({
+  type: MERGE_PEER_REVIEW_PROGRESS,
   peerReviewsPerformed
 });
 
