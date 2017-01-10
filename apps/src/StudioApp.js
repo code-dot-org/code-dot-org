@@ -209,12 +209,6 @@ function StudioApp() {
    */
   this.wireframeShare = false;
 
-  /**
-   * Redux store that will be created during configureRedux, based on a common
-   * set of reducers and a set of reducers (potentially) supplied by the app
-   */
-  this.reduxStore = null;
-
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -227,6 +221,7 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
+Object.defineProperty(StudioApp.prototype, 'reduxStore', { get: getStore });
 
 /**
  * Configure StudioApp options
@@ -277,8 +272,6 @@ StudioApp.prototype.configureRedux = function (reducers) {
 StudioApp.prototype.createReduxStore_ = function () {
   registerReducers(_.assign({}, commonReducers, this.reducers_));
 
-  this.reduxStore = getStore();
-
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
     window.reduxStore = this.reduxStore;
@@ -301,6 +294,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
+    isOwner: dashboard.project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -499,13 +493,12 @@ StudioApp.prototype.init = function (config) {
   // so it can decide whether or not to show a warning.
   this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
 
-  if (this.share && config.shareWarningInfo) {
-    if (!config.level.iframeEmbed) {
-      // shared apps that are embedded in an iframe handle warnings in
-      // startIFrameEmbeddedApp since they don't become "active" until the user
-      // clicks on them.
-      showWarnings(config);
-    }
+  // config.shareWarningInfo is set on a per app basis (in applab and gamelab)
+  // shared apps that are embedded in an iframe handle warnings in
+  // startIFrameEmbeddedApp since they don't become "active" until the user
+  // clicks on them.
+  if (config.shareWarningInfo && !config.level.iframeEmbed) {
+    showWarnings(config);
   }
 
   if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
@@ -1742,6 +1735,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+
+  if (config.ignoreLastAttempt) {
+    config.level.lastAttempt = '';
+  }
+
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;

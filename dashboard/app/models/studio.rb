@@ -378,6 +378,40 @@ class Studio < Grid
   <block type="logic_negate" />
   <block type="logic_boolean" />
 </category>
+<category name="Conditionals">
+  <block type="studio_ifActorHasEmotion" />
+  <block type="studio_ifActorHasEmotionParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorPosition" />
+  <block type="studio_ifActorPositionParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsVisible" />
+  <block type="studio_ifActorIsVisibleParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsSprite" />
+  <block type="studio_ifActorIsSpriteParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+</category>
 <category name="Math">
   <block type="math_number" />
   <block type="math_change">
