@@ -86,7 +86,7 @@ Additionally, the ideal candidate has:
 
 - Passion for our mission of #CSForAll
 - Bachelor’s degree required; Master’s degree desired
-- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
+- 5-8+ years of experience in government relations/advocacy/policy development in education (required, preferably at the state level)
 - Experience in developing K-12 computer science education policy (nice to have, but not required) 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
