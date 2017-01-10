@@ -29,11 +29,13 @@ const CourseProgress = React.createClass({
   },
 
   render() {
-    let stagesWithPeerReviews = this.props.stages;
-    if (this.props.peerReviewStage) {
-      stagesWithPeerReviews = stagesWithPeerReviews.concat(this.props.peerReviewStage);
+    const { stages, peerReviewStage, professionalLearningCourse, focusAreaPositions } = this.props;
+    const groups = _.groupBy(stages, stage => (stage.flex_category || 'Content'));
+    // Add an additional group for any peer reviews
+    if (peerReviewStage) {
+      // peerReviewStage.flex_category will always be "Peer Review" here
+      groups[peerReviewStage.flex_category] = [peerReviewStage];
     }
-    const groups = _.groupBy(stagesWithPeerReviews, stage => (stage.flex_category || 'Content'));
 
     let count = 1;
 
@@ -44,7 +46,7 @@ const CourseProgress = React.createClass({
             <h4
               id={group.toLowerCase().replace(' ', '-')}
               style={[
-                this.props.professionalLearningCourse ? styles.flexHeader : {display: 'none'},
+                professionalLearningCourse ? styles.flexHeader : {display: 'none'},
                 count === 1 && {margin: '2px 0 0 0'}
               ]}
             >
@@ -54,8 +56,8 @@ const CourseProgress = React.createClass({
               <CourseProgressRow
                 stage={stage}
                 key={stage.name}
-                isFocusArea={this.props.focusAreaPositions.indexOf(count++) > -1}
-                professionalLearningCourse={this.props.professionalLearningCourse}
+                isFocusArea={focusAreaPositions.indexOf(count++) > -1}
+                professionalLearningCourse={professionalLearningCourse}
               />
             )}
           </div>
