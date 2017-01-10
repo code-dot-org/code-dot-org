@@ -250,39 +250,43 @@ function zeroPadLeft(string, desiredWidth) {
  *   });
  */
 export function throwOnConsoleErrors() {
-  before(function () {
+  let firstError = null;
+  beforeEach(function () {
     sinon.stub(console, 'error', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.error: ' + msg);
-        console.log(e.stack);
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.error: ' + msg);
       }
-      throw new Error(msg);
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.error.restore();
+    firstError = null;
   });
 }
 
 export function throwOnConsoleWarnings() {
-  before(function () {
+  let firstError = null;
+  beforeEach(function () {
     sinon.stub(console, 'warn', msg => {
-      // Generate a stack trace
-      try {
-        throw new Error();
-      } catch (e) {
-        console.log('Unexpected call to console.warn: ' + msg);
-        console.log(e.stack);
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.warn: ' + msg);
       }
-      throw new Error(msg);
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.warn.restore();
+    firstError = null;
   });
 }
