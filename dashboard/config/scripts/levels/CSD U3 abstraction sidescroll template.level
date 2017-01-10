@@ -41,6 +41,7 @@
       "text": null,
       "comment_Drawing": null,
       "var sprite = createSprite": null,
+      "visible": null,
       "setAnimation": null,
       "rotationSpeed": null,
       "velocityX": null,
