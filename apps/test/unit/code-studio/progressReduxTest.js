@@ -6,6 +6,7 @@ import _ from 'lodash';
 import reducer, {
   initProgress,
   mergeProgress,
+  mergePeerReviewProgress,
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
@@ -164,7 +165,7 @@ describe('progressReduxTest', () => {
         339: TestResults.ALL_PASS,
         // stage 2 level 3 is incomplete
         341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
-      }, undefined);
+      });
       const nextState = reducer(initializedState, action);
 
       assert.deepEqual(nextState.levelProgress, {
@@ -366,9 +367,7 @@ describe('progressReduxTest', () => {
         locked: true
       });
 
-      // TODO: Right now peer reviews use mergeProgress. Ultimately, I think they should
-      // have their own action.
-      const action = mergeProgress({}, [{
+      const action = mergePeerReviewProgress([{
         id: 13,
         locked: false,
         name: 'Ready to review',
