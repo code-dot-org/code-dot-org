@@ -208,26 +208,7 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_levels = []
-    @script.script_levels.map do |script_level|
-      script_level.levels.map do |level|
-        unless level.contained_levels.empty?
-          text_response_levels << {
-            script_level: script_level,
-            levels: [level.contained_levels.first]
-          }
-        end
-      end
-    end
-
-    text_response_levels.concat(@script.script_levels.includes(:levels).
-        where('levels.type' => [TextMatch, FreeResponse]).
-        map do |script_level|
-          {
-            script_level: script_level,
-            levels: script_level.levels
-          }
-        end)
+    text_response_levels = @script.text_response_levels
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
