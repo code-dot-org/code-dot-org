@@ -218,6 +218,7 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     professionalLearningCourse: scriptData.plc,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
+    peerReviews: scriptData.peerReviewStage,
     scriptName: scriptData.name,
   }));
 
