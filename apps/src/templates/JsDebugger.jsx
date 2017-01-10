@@ -9,12 +9,13 @@ var connect = require('react-redux').connect;
 var i18n = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
-var DebugWatch = require('./DebugWatch');
+import {ConnectedWatchers} from './watchers/Watchers';
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
 var SpeedSlider = require('./SpeedSlider');
 import {setStepSpeed} from '../redux/runState';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 var styles = {
   debugAreaHeader: {
@@ -128,7 +129,7 @@ var DebugButtons = function () {
 /**
  * The parent JsDebugger component.
  */
-var JsDebugger = React.createClass({
+var UnconnectedJsDebugger = React.createClass({
   propTypes: {
     debugButtons: React.PropTypes.bool.isRequired,
     debugConsole: React.PropTypes.bool.isRequired,
@@ -136,7 +137,8 @@ var JsDebugger = React.createClass({
     debugSlider: React.PropTypes.bool.isRequired,
     isDebuggerPaused: React.PropTypes.bool.isRequired,
     stepSpeed: React.PropTypes.number.isRequired,
-    setStepSpeed: React.PropTypes.func.isRequired
+    setStepSpeed: React.PropTypes.func.isRequired,
+    style: React.PropTypes.object,
   },
 
   getInitialState() {
@@ -155,7 +157,7 @@ var JsDebugger = React.createClass({
 
     const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
     return (
-      <div id="debug-area">
+      <div id="debug-area" style={this.props.style || {}}>
         <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
         <PaneHeader
           id="debug-area-header"
@@ -185,6 +187,14 @@ var JsDebugger = React.createClass({
           <PaneSection
             id="debug-watch-header"
             onClick={() => {
+              // call JsDebuggerUi.js logic to reset resizer-overridden styles
+              // (remove once JsDebuggerUi.js resize logic migrated to React)
+              if (!this.state.watchersHidden) {
+                const resetResizeEvent = document.createEvent('Event');
+                resetResizeEvent.initEvent('resetWatchersResizableElements', true, true);
+                document.dispatchEvent(resetResizeEvent);
+              }
+
               this.setState({watchersHidden: !this.state.watchersHidden});
             }}
             style={this.state.watchersHidden ? {
@@ -217,13 +227,20 @@ var JsDebugger = React.createClass({
         </PaneHeader>
         {this.props.debugButtons && <DebugButtons/>}
         {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
-        {showWatchPane && <DebugWatch debugButtons={this.props.debugButtons}/>}
+        <div style={{display: showWatchPane ? 'initial' : 'none'}}>
+          <ProtectedStatefulDiv>
+            <div id="watchersResizeBar"></div>
+          </ProtectedStatefulDiv>
+        </div>
+        {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
       </div>
     );
   }
 });
 
-module.exports = connect(function propsFromStore(state) {
+export {UnconnectedJsDebugger};
+
+export default connect(function propsFromStore(state) {
   return {
     debugButtons: state.pageConstants.showDebugButtons,
     debugConsole: state.pageConstants.showDebugConsole,
@@ -238,4 +255,5 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(setStepSpeed(stepSpeed));
     }
   };
-})(JsDebugger);
+})(UnconnectedJsDebugger);
+
