@@ -32,7 +32,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\\n\\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)\",\r\n  \"hint_id\": \"2-3_Bee_Functions_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the puzzle seems challenging, try building your function a little at a time.  \\n\\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\\n\\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)\",\"hint_id\":\"2-3_Bee_Functions_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/43ab5adbae7c4b5dd5eb9c3746439283/grade4_bee_functions7.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
