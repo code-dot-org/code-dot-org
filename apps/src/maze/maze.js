@@ -976,6 +976,7 @@ Maze.execute = function (stepMode) {
   Maze.waitingForReport = true;
 
   if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    // Contained levels post progress in a special way, and always pass
     postContainedLevelAttempt(studioApp);
     Maze.response = getContainedLevelResultInfo().feedback;
     Maze.testResults = TestResults.ALL_PASS;
