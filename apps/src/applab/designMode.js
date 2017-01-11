@@ -1182,7 +1182,8 @@ designMode.renderDesignWorkspace = function (element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: dashboard.assets.showAssetManager,
     handleVersionHistory: Applab.handleVersionHistory,
-    isDimmed: Applab.running
+    isDimmed: Applab.running,
+    store: studioApp.reduxStore,
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
