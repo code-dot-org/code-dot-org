@@ -53,30 +53,26 @@ module Pd::Payment
       assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin)
     end
 
-    test 'calculate payment' do
-      # Use a standard payment for example:
-      workshop_standard = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
-        course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-
-      workshop_no_payment = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_DISTRICT,
-        course: Pd::Workshop::COURSE_CSF
-
-      standard_summary = PaymentFactory.get_payment(workshop_standard)
-      assert standard_summary
-      assert_equal PaymentCalculatorStandard, standard_summary.calculator_class
-
-      assert_nil PaymentFactory.get_payment(workshop_no_payment)
-    end
-
-    test 'no payment' do
+    test 'unpaid' do
       workshop_district_wrong_type = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_DISTRICT,
         course: Pd::Workshop::COURSE_CSF
 
       workshop_csd = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
         course: Pd::Workshop::COURSE_CSD
 
-      assert_nil PaymentFactory.get_calculator_class(workshop_district_wrong_type)
-      assert_nil PaymentFactory.get_calculator_class(workshop_csd)
+      assert_equal PaymentCalculatorUnpaid, PaymentFactory.get_calculator_class(workshop_district_wrong_type)
+      assert_equal PaymentCalculatorUnpaid, PaymentFactory.get_calculator_class(workshop_csd)
+    end
+
+    test 'calculate payment' do
+      # Use a standard payment for example:
+      workshop_standard = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
+        course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+
+      standard_summary = PaymentFactory.get_payment(workshop_standard)
+      assert_not_nil standard_summary
+      assert standard_summary.instance_of?(WorkshopSummary)
+      assert_equal PaymentCalculatorStandard, standard_summary.calculator_class
     end
 
     test 'no workshop' do
