@@ -29,7 +29,9 @@ require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
-$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+if ($.fn.modal) {
+  $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');

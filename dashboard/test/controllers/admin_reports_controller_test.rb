@@ -37,4 +37,22 @@ class AdminReportsControllerTest < ActionController::TestCase
     get :admin_progress
     assert_select 'h1', 'Admin progress'
   end
+
+  test 'pd_progress should return 404 for unfound script' do
+    get :pd_progress, script: 'bogus-nonexistent-script-name'
+    assert_response :not_found
+  end
+
+  test 'pd_progress should sanitize script.name' do
+    evil_script = Script.new(
+      name: %q(<script type="text/javascript">alert('XSS');</script>)
+    )
+    Script.stubs(:get_from_cache).returns(evil_script)
+
+    get :pd_progress,
+      script: %q(<script type="text/javascript">alert('XSS');</script>)
+
+    assert_response :not_found
+    refute @response.body.include? '<script type="text/javascript">'
+  end
 end
