@@ -1,4 +1,5 @@
-- data = level.properties
+-# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
+- data = brakeman_no_warn(level.properties)
 - contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout

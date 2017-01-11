@@ -1,5 +1,5 @@
-import {singleton as studioApp} from '../StudioApp';
 import applabCommands from './commands';
+import turtleImageSrc from '!!url-loader!../../static/applab/723-location-arrow-toolbar-48px-centered.png';
 
 var applabTurtle = {};
 export default applabTurtle;
@@ -21,7 +21,7 @@ applabTurtle.getTurtleContext = function () {
     // And create the turtle (defaults to visible):
     Applab.turtle.visible = true;
     var turtleImage = document.createElement("img");
-    turtleImage.src = studioApp.assetUrl('media/applab/723-location-arrow-toolbar-48px-centered.png');
+    turtleImage.src = turtleImageSrc;
     turtleImage.id = 'turtleImage';
     applabTurtle.updateTurtleImage(turtleImage);
     turtleImage.ondragstart = function () { return false; };
