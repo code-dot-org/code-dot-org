@@ -17,6 +17,7 @@ import { connect } from 'react-redux';
  */
 var AppLabView = React.createClass({
   propTypes: {
+    handleVersionHistory: React.PropTypes.func.isRequired,
     hasDataMode: React.PropTypes.bool.isRequired,
     hasDesignMode: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([
@@ -54,7 +55,7 @@ var AppLabView = React.createClass({
         <InstructionsWithWorkspace>
           <CodeWorkspace style={{display: codeWorkspaceVisible ? 'block' : 'none' }}/>
           {this.props.hasDesignMode && <ProtectedDesignWorkspace/>}
-          {this.props.hasDataMode && <DataWorkspace/>}
+          {this.props.hasDataMode && <DataWorkspace handleVersionHistory={this.props.handleVersionHistory}/>}
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
