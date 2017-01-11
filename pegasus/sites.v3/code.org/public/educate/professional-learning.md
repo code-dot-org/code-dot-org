@@ -19,58 +19,24 @@ These workshops will be facilitated by experienced computer science educators in
 Can't find a workshop in your area? Consider completing our free, self-paced [online workshop.](/educate/professional-development-online)
 
 ---
-## Professional learning for middle school math or science teachers
+## Professional learning for middle and high school teachers to teach computer science
 
-Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. The multi-phased professional learning programs for this curriculum are only available in the context of [a full school district partnership with Code.org](/educate/districts). 
+Our middle and high school programs help school districts offer full-year computer science classes by preparing existing teaching staff to offer the course. This multi-phased professional learning program is available in areas where Code.org has a [Regional Partner](/educate/partner).
 
-### Phase 1
 
-Online component focused on both pedagogy and computer science content in the context of middle school math and science.
-
-### Phase 2
-
-Multi-day in-person professional learning workshop.
-
-- Articulate the alignment of key computer science concepts to commonly used math and science curricula aligned to Common Core and Next Generation Science Standards.
-- Exploration of specific curricular tools.
-- Creating a professional learning community that will extend beyond the Code.org partnership.
-
-### Phase 3
-
-One day in-person and/or online professional learning workshops combined with optional participation in online support.
-
-- Provide just in time instructional supports to meet the needs of district teachers
-- Highlight possible extension activities
-
-[<button>Inquire about a district partnership</button>](/educate/districts)
-
----
-## Professional learning for high school teachers to teach computer science
-
-Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. This multi-phased professional learning program is only available in the context of [a full school district partnership with Code.org](/educate/districts).
-
-### Phase 1
-Online component focused on exploring the impact of computer science and reflecting on pedagogical techniques to broaden participation in computing.
-
-### Phase 2
+### Summer Workshop
 Summer 5 day in-person professional learning workshop, followed by online material.
 
 - Focused on quality computer science pedagogy—Teaching content through inquiry and equity
-- Explore lessons using Teacher/Learner/Observer Model
+- Explore lessons as a teacher and a learner 
 - Creating a professional learning community that will extend beyond the Code.org partnership.
 
-### Phase 3
+### Ongoing Support
 Quarterly in-person and/or online professional learning workshops combined with online support.
 
 - Provide content and pedagogical support for upcoming units
-- Continued use of the Teacher/Learner/Observer Model
 
-### Phase 4
-- Multi-day in-person professional learning workshop
-- Reflection and follow up on the academic year
-- Preparation for teachers to continue their own personal learning as the structured PL model comes to a close.
-
-[<button>Inquire about a district partnership</button>](/educate/districts)
+[<button>Inquire about a regional partnership</button>](/educate/partner)
 
 
 ---
