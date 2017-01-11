@@ -591,7 +591,10 @@ Applab.init = function (config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  const containerEl = document.getElementById(config.containerId);
+  if (containerEl) {
+    adjustAppSizeStyles(containerEl);
+  }
 
   var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
@@ -720,8 +723,12 @@ Applab.init = function (config) {
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
 
-  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  if (level.dataTables) {
+    Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  }
+  if (level.dataProperties) {
+    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  }
 
   var onMount = function () {
     studioApp.init(config);
