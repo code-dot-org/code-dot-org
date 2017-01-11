@@ -13,7 +13,7 @@ const group1CspWorkshops = {
   '9 Dots Community Learning Center': 'June 26 - 30, 2017',
   'Alameda County Office of Education': 'July 31 - August 4, 2017',
   'Contra Costa County Office of Education': '',
-  'Broward County Public Schools': '',
+  'Broward County Public Schools': 'June 12 - 16, 2017',
   'Florida State College Jacksonville': 'June 12 - 16, 2017',
   'Orlando Science Center': 'June 5 - 9, 2017',
   'Georgia Tech Center for Education Integrating Science, Mathematics, and Computing': 'July 17 - 22, 2017',

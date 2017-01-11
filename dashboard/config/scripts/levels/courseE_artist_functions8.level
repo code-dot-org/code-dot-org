@@ -15,7 +15,7 @@
     "instructions": "Challenge: Create as many functions as you think you need to make this drawing of 50 pixel squares.",
     "ideal": "0",
     "embed": "false",
-    "markdown_instructions": "**Challenge:** Create as many functions as you think you need to make this drawing of 50 pixel squares.",
+    "markdown_instructions": "**Challenge:** Did you know that you can call functions from *inside* other functions?!\r\n\r\nCreate as many functions as you think you need to make this drawing of 50 pixel squares.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
