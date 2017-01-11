@@ -591,7 +591,10 @@ Applab.init = function (config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  const containerEl = document.getElementById(config.containerId);
+  if (containerEl) {
+    adjustAppSizeStyles(containerEl);
+  }
 
   var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
@@ -621,7 +624,10 @@ Applab.init = function (config) {
       return Applab.hasDataStoreAPIs(Applab.getCode());
     },
     onWarningsComplete: function () {
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      if (config.share) {
+        // If this is a share page, autostart the app after warnings closed.
+        window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      }
     }
   };
 
@@ -717,8 +723,12 @@ Applab.init = function (config) {
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
 
-  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  if (level.dataTables) {
+    Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  }
+  if (level.dataProperties) {
+    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  }
 
   var onMount = function () {
     studioApp.init(config);
@@ -953,6 +963,16 @@ Applab.toggleDivApplab = function (isVisible) {
 };
 
 /**
+ * reset and initialize the state of the turtle object
+ */
+Applab.resetTurtle = function () {
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+};
+
+/**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
@@ -962,10 +982,7 @@ Applab.reset = function () {
   // Reset configurable variables
   Applab.message = null;
   delete Applab.activeCanvas;
-  Applab.turtle = {};
-  Applab.turtle.heading = 0;
-  Applab.turtle.x = Applab.appWidth / 2;
-  Applab.turtle.y = Applab.appHeight / 2;
+  Applab.resetTurtle();
   apiTimeoutList.clearTimeouts();
   apiTimeoutList.clearIntervals();
 

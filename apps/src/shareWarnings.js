@@ -49,12 +49,13 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
 }
 
 /**
- * When necessary, show a modal warning about data sharing (if appropriate) and
- * determining if the user is old enough.
+ * Show a modal warning about data sharing (if appropriate) and determining if
+ * the user is old enough.
  *
  * @param {!Object} options
  * @param {!string} options.channelId - service side channel.
  * @param {!boolean} options.isSignedIn - login state of current user.
+ * @param {boolean} options.isOwner - is signed in user the channel owner
  * @param {function} options.hasDataAPIs - Function to call to determine if
  *        the current program uses any data APIs.
  * @param {function} options.onWarningsComplete - Callback will be called after
@@ -63,11 +64,12 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  * @param {function} options.onTooYoung - Callback will be called if the user
  *        is deemed to be too young. If not specified, the page will be
  *        redirected to /too_young
+ * @returns {ReactElement}
  */
 exports.checkSharedAppWarnings = function (options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
   const promptForAge = hasDataAPIs && !options.isSignedIn && localStorage.getItem('is13Plus') !== "true";
-  const showStoreDataAlert = hasDataAPIs && !hasSeenDataAlert(options.channelId);
+  const showStoreDataAlert = hasDataAPIs && options.isOwner !== true && !hasSeenDataAlert(options.channelId);
 
   const handleShareWarningsTooYoung = () => {
     utils.trySetLocalStorage('is13Plus', 'false');
@@ -80,6 +82,8 @@ exports.checkSharedAppWarnings = function (options) {
 
   const handleClose = () => onCloseShareWarnings(showStoreDataAlert, options);
 
+  // If we don't end up needing to show any alerts, the dialog will just render
+  // an empty div.
   return ReactDOM.render(
     <ShareWarningsDialog
       showStoreDataAlert={!!showStoreDataAlert}
