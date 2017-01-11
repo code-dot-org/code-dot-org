@@ -217,16 +217,16 @@ describe('The Exporter,', function () {
 
     describe("will produce a zip file, which", function () {
       it("should contain an applab-api.js file", function () {
-        assert.property(zipFiles, 'my-app/applab-api.js');
+        assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
-          zipFiles['my-app/applab-api.js'],
+          zipFiles['my-app/applab/applab-api.js'],
           `${getAppOptionsFile()}\ncommon_locale.js content\napplab_locale.js content\napplab-api.js content`
         );
       });
 
       it("should contain an applab.css file", function () {
-        assert.property(zipFiles, 'my-app/applab.css');
-        assert.equal(zipFiles['my-app/applab.css'], 'applab.css content');
+        assert.property(zipFiles, 'my-app/applab/applab.css');
+        assert.equal(zipFiles['my-app/applab/applab.css'], 'applab.css content');
       });
 
       it("should contain an index.html file", function () {
