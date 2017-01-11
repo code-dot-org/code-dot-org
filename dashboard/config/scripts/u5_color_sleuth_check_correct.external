@@ -26,9 +26,9 @@ So we're going to need 4 event handlers, one for each button.</p>
 <p>The function should:</p>
 
 <ul>
-<li>check whether they hit the right button or not</li>
+<li>Check whether they hit the right button or not</li>
 
-<li>update the score</li>
+<li>Update the score</li>
 </ul>
 
 <p style="text-align: center"> MICHAEL </p>

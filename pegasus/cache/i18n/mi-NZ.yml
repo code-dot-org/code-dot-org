@@ -36,23 +36,23 @@
   submit: Tāpaetia
   twentyhours_heading: Whakamātauria tā mātou Akoranga Whakarāpopotonga o te Pūtaiao
     Rorohiko
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
-    and programming concepts in this follow-up course.
-  og_title: Coding is foundational
+  twentyhours_text: Kua oti tō Hour of Code tuatahi? Ako he pūtaiao rorohiko me ngā
+    huatau waehere anō i tei akomanga whai-ake.
+  og_title: 'Code.org: Ka taea te ako, ahakoa ko wai'
   og_description: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
     rorohiko.
   csedweek_og_title: E tata mai ana te Hour of Code
   csedweek_og_description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona
     pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki
     ngā reo e 45 neke atu.
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+  hoc2014_heading: Hono ki te <a href="http://hourofcode.com">Hour of Code</a><br/>December
     8 - 14, 2014<br/>
   hoc2014_students: Students
   hoc2014_try: Whakamātauria
   hoc2014_teachers: Ngā Pouako
   hoc2014_host: Taurimatia
   hoc2014_everyone: Te Marea
-  hoc2014_support: Support it &#x25BE;
+  hoc2014_support: Tautokona &#x25BE;
   hoc2014_whatishoc: He aha te Hour of Code?
   csedweek_map_header: "# ngā takunetanga CSEdWeek /Hour of Code puta noa i te ao"
   csedweek_map_signup: Waitohungia tō takunetanga
@@ -65,13 +65,13 @@
   cded_sign_up: Waitohu Mai
   cded_try_it: Whakamātauria
   try_now: Ngana ināianei
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
-    courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
+  california_heading: Tono atu ki tō kura ki te whakaako i te pūtaiao rorohiko
+  california_text: E āhei ana ngā kaiako katou ki te whakaako ā mātou <a href='http://studio.code.org/'>akomanga
+    kore utu</a>. Ka taea e ngā kura tuatahi katoa ki te <a href='http://code.org/educate/k5'>whakaako
+    i te pūtaiao rorohiko</a>. Tono atu ki ngā whaerekura ki <a href='http://code.org/educate/districts'>mahitahi
+    i a mātou.
   california_button: Ako Tonu
-  flappy_heading: Flappy Birthday to Code.org
+  flappy_heading: Hari Flappy-tau ki Code.org
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
   view_english_site: View English site
@@ -268,6 +268,8 @@
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Learn an Hour of Code
   beyond_hoc: Beyond an Hour
   what_gender: What gender are you?
@@ -487,36 +489,46 @@
   minecraft_adventurer_button: Start
   minecraft_no_internet: Don't have Internet?
   minecraft_download_adventurer: Tikina ake te putanga tuimotu o Kiri Māia Mahimaina.
-  minecraft_store_camps: Ngā Puninga Hour of Code ki Microsoft Store
-  minecraft_host_event: Hautūngia tētahi Takunetanga Hour of Code Mahimaina
-  minecraft_youthspark_continue_learning: Kia kaha tonu te ako me Microsoft YouthSpark
-  minecraft_signup_store_camps: <a href="%{signup_store_camp}">Waitohu mai</a>ki whai
-    wāhi ai koe ki ngā Puninga Hour of Code ki te toa Microsoft Store ka tū ki Ahitereiria,
-    ki Kānata, ki Puerto Rico, ki Amerika rānei. Ka ako me pēhea te paheko i tō auahatanga
-    ki te mahi waehere.
-  minecraft_teach_resources: Ngā rauemi pouako me te mahere ako.
-  minecraft_leader_guide: Tikina ake ngā rauemi hei tautoko i a koe ki te whakamahere
-    me te whakahaere i tētahi takunetanga.
-  minecraft_facilitating_event: Ko koe e whakahaere takunetanga ana?
-  minecraft_join_online_training: Tēnā hono atu ki Microsoft, ki Minecraft hoki mō
-    tētahi whakangungu tuihono (reo Pākehā anake) ka tū a te 22, a te 29 rānei o Whiringa-a-rangi
-  minecraft_youthspark_create_your_future: Ahakoa tāu e kaingākau ana, mā te whakamahi
-    i te pūtaiao rorohiko ka wātea kia pohewatia, kia waihangahia, kia hangaia hoki
-    e koe tō ao haere ake nei.
-  minecraft_youthspark_tools: <a href="%{youthspark_link}">He utauta, he rauemi utu
-    kore hoki kei Microsoft YouthSpark</a>hei tautoko i tō whai i tāu e kaingākautia
-    ana.
   minecraft_subtitle: Hour of Code Mahimaina
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
-  sports_title: Code your own sports game
+  sports_title: Ngā Hākinakina
   sports_watch_video: Mātakina te ataata
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Hangaia tētahi kēmu poitūkohu
   sports_all_sports_title: Tuhia te waehere o tō ake hākinakina
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Before you get started, watch one of these inspirational
     videos
   video_title_cs_is_everything: Computer Science is Changing Everything
@@ -967,7 +979,7 @@
   dashboard_announce_learn_more_button: Me ako tonu
   dashboard_announce_try_now_button: Ngana ināianei
   dashboard_announce_host_an_hour_button: Taurimatia tētahi Hour
-  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_watch_video_button: Mātakina te ataata
   dashboard_announce_petition: Ko tāu mahi hei pouako, he para i te huarahi kia whai
     wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua
     eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi
@@ -975,6 +987,7 @@
     mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki te
     tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko.
   dashboard_announce_petition_button: Tāpiritia tō ingoa
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā
     āhuahira me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia
     ngā whakapāohotanga o mua.</a>
@@ -984,14 +997,6 @@
     tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga
     Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako
     mātauranga rorohiko te tangata ahakoa ko wai.
-  dashboard_announce_hoc_scaling: 'WHAKAMATAARA mā ngā pouako e whai ana i ngā Whakaakoranga
-    1-4 me te Whakaakoranga Whakatere: Nā te miriona ākonga e mahi ana i Hour of Code
-    i tēnei wā kua kore te <b>Code Studio e āhei ki te tiaki, ki te pūrongo rānei
-    i te kauneketanga ākonga i aua whakaakoranga mai i te 3-11 o Hakihea</b>. E tūtohi
-    ana mātou kia whai koutou i tētahi o ngā ngohe Hour of Code i tō akomanga hei
-    whakanui i te Hour of Code i Te Wiki o te Mātaruranga Pūtaiao Rorohiko. Ahakoa
-    kāore ā mātou whakaakoranga Hour of Code e tiaki i ngā kōrero kauneke i taua wiki,
-    e wātea tonu ana ngā whakaakoranga matua ki a rātou, ā, ka whiwhi tiwhikete tonu.'
   dashboard_announce_mc_launch: Kua whai tānga tuarua tētahi o ā mātou whakaakoranga
     i tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa
     Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou ki
@@ -1002,11 +1007,17 @@
     receives for the Hour of Code during this time.  You can still view student progress
     from before December 3.  We will go back to saving progress as usual after this
     week.
-  dashboard_announce_how_code_studio: You don't need any experience to start teaching
-    computer science in your classroom. Code.org offers curriculum, lesson plans,
+  dashboard_announce_how_code_studio: Ehara i te mea me tangata mōhio koe ki te pūtaiao
+    rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako,
+    he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā
+    taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E whakaaro
+    ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei ataata</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
     high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;everything you need, all at no cost. Wondering where to get started?
-    Download <a href='%{video_download_url}'>this video</a>!
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: The Hour of Code is here - December 8-14!
   code_sign_up: Sign up to participate during CS Education Week
   host_an_hour: Host an hour
@@ -1152,6 +1163,7 @@
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1183,6 +1195,8 @@
   cspexams_category_name: CS Principles Practice Test
   research_studies_category_name: Research Studies
   applab_name: Taiwhanga Taupānga
+  basketball_name: Hangaia tētahi kēmu poitūkohu
+  sports_name: Ngā Hākinakina
   applab_gradelevel: Pakeke 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
@@ -1868,44 +1882,3 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
-    https://youtu.be/QvyTEx1wyOY.
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
-  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
-    Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
-    Real Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
-    Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  dashboard_announce_go_beyond_button: Go beyond
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
-  csp5_name: 'Unit 5: Building Apps'
-  basketball_name: Make a basketball game
-  sports_name: Code your own sports game

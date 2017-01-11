@@ -4,7 +4,7 @@
   "atHoneycomb":"pie meduskāres",
   "avoidCowAndRemove":"izvairies no govs un noņem 1",
   "collect":"collect",
-  "collectiblePresent":"there is some treasure",
+  "collectiblePresent":"tur ir daži dārgumi",
   "collectorCollectTooltip":"Collect an item",
   "collectorCollectedEverything":"Congratulations! You collected {count, plural, one {the item} other {all # items}}!",
   "collectorCollectedNothing":"Keep coding! You need to collect as many of the items as you can.",

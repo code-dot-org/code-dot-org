@@ -59,10 +59,21 @@ describe('shareWarnings', function () {
     });
 
     describe('options', () => {
+      it('should not show data api warning to owners', () => {
+        var dialog = checkSharedAppWarnings({
+          channelId: 'some-channel',
+          isSignedIn: false,
+          isOwner: true,
+          hasDataAPIs: () => true,
+        });
+        assert.isFalse(dialog.props.showStoreDataAlert);
+      });
+
       it('should show a data api warning if the app has data apis, but only once', () => {
         var dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
+          isOwner: false,
           hasDataAPIs: () => true,
         });
         assert.isTrue(dialog.props.showStoreDataAlert);

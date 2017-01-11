@@ -84,7 +84,7 @@
     student_count: "%{count} 人の生徒がサインアップ済みです。"
     teacher_count: "%{count} 人の教師がサインアップ済みです。"
     overview: あなたの進捗状況を追跡したり、あなたの教室を管理するには、アカウントにサインアップします。アカウント無しでも<a href="/">様々なステージとパズルを参照できます</a>が、あなたの進捗状況とプロジェクトを保存するにはサインアップが必要です。
-    hoc_already_signed_up_heading: Get started without logging in
+    hoc_already_signed_up_heading: "直ぐに始める"
     hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
       and your students do not need to sign in to Code Studio to participate in this
       event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
@@ -92,6 +92,12 @@
       Hour of Code and want to go further, you can set up a password and create a
       Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
       courses</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "教育者のガイドを参照する"
     title: Code.org にサインアップします
     school_name: "学校名 （オプション）"
@@ -134,7 +140,7 @@
     picture: "あなたの秘密の画像を見つけてください"
     words: "あなたの秘密の言葉を入力してください"
     login: "ログイン"
-    invalid_login: Invalid login, please try again
+    invalid_login: "ログインに失敗（しっぱい）しました。もう一度（いちど）入力（にゅうりょく）してください。"
     pair_programming: I have a partner at my computer
   password:
     reset_form:
@@ -268,10 +274,10 @@
       prizes: "賞品"
       logout: "サインアウト"
       signin: "ログイン"
-      signup: "入会"
+      signup: "アカウントの作成（さくせい）"
       already_registered: "既にアカウントをお持ちですか?"
       pair_programming: "ペアプログラミング"
-      team: Team
+      team: "チーム"
       driver: Driver
       navigator: Navigator
     popup:
@@ -322,6 +328,7 @@
     delete_text: "下のボタンをクリックすると、あなたのアカウントが削除されます。"
     delete_text_teacher_note: "注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。"
     delete_confirm: "このアカウントを削除しますか？"
+    deleted_user: deleted user
   user_level:
     completed: "完了"
     tried: "試してみました"
@@ -384,13 +391,14 @@
     announcement_learn_more_button: "もっと詳しく知る"
     announcement_try_now_button: "今すぐ試す"
     announcement_host_an_hour_button: Host an Hour
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: "ビデオを見る"
     announcement_petition: As a teacher, you're leading the way in a movement to give
       every student in every school the opportunity to learn computer science. Now,
       it's time to let your representatives hear from you. This week, education leaders,
       28 governors, and CEOs of America's largest companies joined together in an
       open letter asking the U.S. Congress to fund K-12 computer science education.
     announcement_petition_button: Add your name
+    announcement_go_beyond_button: Go beyond
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
     announcement_hoc_launch: Thousands of educators in more than 180 countries will
@@ -398,13 +406,6 @@
       We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
       target='_blank'>Register your Hour of Code event</a> and let another teacher
       know that anyone can start teaching computer science.
-    announcement_hoc_scaling: 'ALERT for Course 1-4 and Accelerated Course teachers:
-      Due to high traffic from millions of students doing the Hour of Code, <b>Code
-      Studio will not save or report student progress on these courses from December
-      3-11</b>. We recommend doing an Hour of Code activity with your classroom to
-      celebrate the Hour of Code during Computer Science Education Week. While our
-      own Hour of Code tutorials will also not save progress that week, students can
-      still do the full tutorials and earn a certificate.'
     announcement_mc_launch: One of our most popular tutorials now has a sequel! The
       all-new Minecraft Hour of Code Designer lets students make the rules of the
       Minecraft world. They can create a totally unique Minecraft experience, and
@@ -415,6 +416,12 @@
       high quality professional learning programs, and tons of great tools for all
       grade levels&mdash;everything you need, all at no cost. Wondering where to get
       started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -426,7 +433,7 @@
     students_not_yours: You cannot move students from a section that does not belong
       to you.
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
+    student_ids_not_entered: "学生番号を入力してください。"
     student_not_found: One or more students could not be found.
     all_students_must_be_in_current_section: All the students must currently be enrolled
       in your section.
@@ -543,7 +550,7 @@
       body: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
       body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
       audience: 13才以上対象
-      cta: Learn how
+      cta: "もっと知（し）る"
     hoc:
       title: "古典的な迷路"
       body: "コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます"
@@ -694,10 +701,10 @@
       educational programs such as Code Studio.
     tos: "利用規約"
     privacy: "プライバシー ポリシー"
-    privacy_notice: Privacy Notice
+    privacy_notice: "プライバシーについて"
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    accept: "同意する"
     print: "印刷"
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
@@ -710,7 +717,7 @@
       science'
     message: Please tell us your race (check all that apply)
     races:
-    - white: White
+    - white: "白人"
     - black: Black or African American
     - hispanic: Hispanic or Latino
     - asian: Asian
@@ -831,7 +838,7 @@
       playlab_title: New App
       primary_header: Congratulations! You finished %{stageName}!
       projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
+      projects_title: "プロジェクトを開始する"
       secondary_header: Ask your teacher what to do next
   flex_category:
     required: "概要"

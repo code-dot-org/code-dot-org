@@ -1,4 +1,4 @@
-/* global dashboard addToHome CDOSounds trackEvent Applab Blockly */
+/* global addToHome CDOSounds trackEvent Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -337,13 +337,13 @@ function loadAppAsync(appOptions) {
       // the header progress data even if the last attempt data takes too long.
       // The progress dots can fade in at any time without impacting the user.
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
-    } else if (window.dashboard && dashboard.project) {
-      dashboard.project.load().then(function () {
-        if (dashboard.project.hideBecauseAbusive()) {
+    } else if (window.dashboard && project) {
+      project.load().then(function () {
+        if (project.hideBecauseAbusive()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
           return $.Deferred().reject();
         }
-        if (dashboard.project.hideBecausePrivacyViolationOrProfane()) {
+        if (project.hideBecausePrivacyViolationOrProfane()) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.policy_violation'));
           return $.Deferred().reject();
         }
@@ -355,7 +355,6 @@ function loadAppAsync(appOptions) {
 }
 
 window.dashboard = window.dashboard || {};
-window.dashboard.project = project;
 
 window.apps = {
 
@@ -413,7 +412,7 @@ window.apps = {
 };
 
 let APP_OPTIONS;
-function setAppOptions(appOptions) {
+export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
   window.appOptions = appOptions;

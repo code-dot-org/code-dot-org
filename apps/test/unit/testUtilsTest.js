@@ -2,8 +2,9 @@
 import React from 'react';
 import {expect} from '../util/configuredChai';
 import {
-    forEveryBooleanPermutation,
-    throwOnConsoleErrors
+  forEveryBooleanPermutation,
+  throwOnConsoleErrors,
+  throwOnConsoleWarnings
 } from '../util/testUtils';
 
 describe('forEveryBooleanPermutation', function () {
@@ -63,16 +64,39 @@ describe('forEveryBooleanPermutation', function () {
 describe('throwOnConsoleErrors', function () {
   describe('without it', function () {
     it('console.error does not throw an exception', function () {
-        expect(() => console.error('This console.error call is intentional.'))
-            .not.to.throw();
+      expect(() => console.error('This console.error call is intentional.'))
+          .not.to.throw();
     });
   });
 
   describe('with it', function () {
     throwOnConsoleErrors();
     it('console.error does throw an exception', function () {
-      expect(() => console.error('should throw'))
-          .to.throw(Error, 'should throw');
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.error('should throw');
+    });
+  });
+});
+
+describe('throwOnConsoleWarnings', function () {
+  describe('without it', function () {
+    it('console.warn does not throw an exception', function () {
+      expect(() => console.warn('This console.warn call is intentional.'))
+        .not.to.throw();
+    });
+  });
+
+  describe('with it', function () {
+    throwOnConsoleWarnings();
+    it('console.warn does throw an exception', function () {
+      // We would expect this to throw an error in the after section if left
+      // in place. Though this test is largely usless at this point, you could
+      // validate expected behavior by uncommenting the following line and seeing
+      // your test fail
+      // console.warn('should throw');
     });
   });
 });
