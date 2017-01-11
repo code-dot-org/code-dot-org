@@ -61,7 +61,9 @@
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
       "lessThanOrEqualOperator": null,
-      "comment_Math": null
+      "comment_Math": null,
+      "playSound": null,
+      "isTouching": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
