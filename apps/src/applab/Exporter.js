@@ -1,6 +1,6 @@
 /* global dashboard */
 import $ from 'jquery';
-import _ from 'underscore';
+import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
 
@@ -12,6 +12,13 @@ import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
+// This whitelist determines which appOptions properties
+// will get exported with the applab app, appearing in the
+// final applab.js file. It's a recursive whitelist, so
+// each key/value pair is the name of a property and either
+// a boolean indicating whether or not that property should
+// be included or another whitelist for subproperties at that
+// location.
 const APP_OPTIONS_WHITELIST = {
   "levelGameName": true,
   "skinId": true,
