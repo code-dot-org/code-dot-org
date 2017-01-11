@@ -62,6 +62,7 @@ class RegistrationsController < Devise::RegistrationsController
   def forbidden_change?(user, params)
     return true if params[:user][:password].present? && !user.can_edit_password?
     return true if params[:user][:email].present? && !user.can_edit_email?
+    return true if params[:user][:hashed_email].present? && !user.can_edit_email?
     false
   end
 
@@ -70,6 +71,7 @@ class RegistrationsController < Devise::RegistrationsController
   # extend this as needed
   def needs_password?(user, params)
     params[:user][:email].present? && user.email != params[:user][:email] ||
+        params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
         params[:user][:password].present?
   end
 end
