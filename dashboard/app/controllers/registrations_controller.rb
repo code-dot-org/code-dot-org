@@ -8,7 +8,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     @user = User.find(current_user.id)
-    params.permit!
 
     # If email has changed for a non-teacher: clear confirmed_at but don't send notification email
     if params[:user][:email].present? && !@user.confirmation_required?
@@ -20,12 +19,12 @@ class RegistrationsController < Devise::RegistrationsController
       if forbidden_change?(@user, params)
         false
       elsif needs_password?(@user, params)
-        @user.update_with_password(params[:user])
+        @user.update_with_password(update_params(params))
       else
         # remove the virtual current_password attribute update_without_password
         # doesn't know how to ignore it
-        params[:user].delete(:current_password)
-        @user.update_without_password(params[:user])
+        params[:user].delete(:current_password) if params[:user]
+        @user.update_without_password(update_params(params))
       end
 
     respond_to do |format|
@@ -73,5 +72,26 @@ class RegistrationsController < Devise::RegistrationsController
     params[:user][:email].present? && user.email != params[:user][:email] ||
         params[:user][:hashed_email].present? && user.hashed_email != params[:user][:hashed_email] ||
         params[:user][:password].present?
+  end
+
+  # Accept only whitelisted params for update.
+  def update_params(params)
+    params.require(:user).permit(
+      :email,
+      :hashed_email,
+      :password,
+      :encrypted_password,
+      :current_password,
+      :password_confirmation,
+      :gender,
+      :name,
+      :locale,
+      :age,
+      :birthday,
+      :user_type,
+      :school,
+      :full_address,
+      :terms_of_service_version
+    )
   end
 end
