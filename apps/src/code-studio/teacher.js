@@ -16,7 +16,6 @@ import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux
 import { setSections, selectSection } from './sectionsRedux';
 import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 function resizeScrollable() {
   var newHeight = $('.teacher-panel').innerHeight() -
@@ -117,7 +116,7 @@ function renderIntoLessonTeacherPanel() {
   const stageLockedText = document.getElementById('stage-locked-text');
   const teacherPanelSections = document.getElementById('teacher-panel-sections');
 
-  if (teacherPanelViewAs && experiments.isEnabled('viewAsToggle')) {
+  if (teacherPanelViewAs) {
     renderViewAsToggle(teacherPanelViewAs);
   }
 
@@ -179,32 +178,25 @@ function renderTeacherPanelSections(element) {
  * Render a content toggle component that does this for us.
  */
 function renderContentToggle() {
-  if (experiments.isEnabled('viewAsToggle')) {
-    if (typeof(window.appOptions) === 'undefined') {
-      // This can happen if student hasn't attempted level
-      return;
-    }
-    // We can remove this element once we get rid of the experiment
-    $("#try-it-yourself").hide();
-
-    const levelContent = $('#level-body');
-    const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
-    const store = getStore();
-
-    const { scriptName } = store.getState().progress;
-
-    store.dispatch(getHiddenStages(scriptName));
-
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
-      </Provider>,
-      element
-    );
-  } else {
-    // In our haml, we set the visibility of level body to hidden with the intention
-    // of letting TeacherContentToggle whether or not it's visible. Since we're not using
-    // that here, just make it visible again
-    $('#level-body').css('visibility', '');
+  if (typeof(window.appOptions) === 'undefined') {
+    // This can happen if student hasn't attempted level
+    return;
   }
+  // We can remove this element once we get rid of the experiment
+  $("#try-it-yourself").hide();
+
+  const levelContent = $('#level-body');
+  const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
+  const store = getStore();
+
+  const { scriptName } = store.getState().progress;
+
+  store.dispatch(getHiddenStages(scriptName));
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
+    </Provider>,
+    element
+  );
 }
