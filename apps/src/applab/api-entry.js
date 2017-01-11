@@ -18,18 +18,25 @@ import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 window.CDOSounds = new Sounds();
 
-// TODO: remove the below two monkey patches.
-window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
+const noop = function () {};
 
-Applab.render = function (){};
+// TODO: remove the below monkey patches.
+window.Applab.JSInterpreter = {
+  getNearestUserCodeLine: function () {return 0;},
+  deinitialize: noop
+};
+studioApp.highlight = noop;
+Applab.render = noop;
 
 // window.APP_OPTIONS gets generated on the fly by the exporter and appended to this file.
-setAppOptions(window.APP_OPTIONS);
+setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
 setupApp(window.APP_OPTIONS);
 loadApplab(getAppOptions());
+// reset applab turtle manually (normally called when execution begins)
+// before the student's code is run.
+Applab.resetTurtle();
 getStore().dispatch(setIsRunning(true));
 
-studioApp.highlight = function () {};
 
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
