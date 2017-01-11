@@ -52,8 +52,9 @@
   - view_as = @user || current_user
   - user_progress = current_user == nil ? 'null' : summarize_user_progress(script_level.script, view_as, view_as == current_user && @public_caching).to_json
 
-  - puzzle_page = params[:puzzle_page] || ApplicationHelper::PUZZLE_PAGE_NONE
-  - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page.to_i - 1}" : script_level.level_id.to_s
+  -# don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
+  - puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
+  - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
 
   - script_data = { disablePostMilestone: script.disable_post_milestone?, isHocScript: script.hoc?, name: script.name }
   -# If caching, we don't know the sign in state, and should be nil

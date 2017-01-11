@@ -1,20 +1,20 @@
-name 'U5 - Create PT Prep - Student Introduction'
+name 'U5 - Create PT review - Student Introduction'
 title 'title'
-description 'description here'
 css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 3 - Create PT Prep - Making a Plan
+# Unit 6: Lesson 2 - Create PT Prep - Reviewing the Task
 
 ## Background
 
-Make a plan to prioritize what you will do and when in order to complete the Create PT within the allotted time.
+Review the Create PT performance task, scoring guidelines, and sample tasks.
 
 ## Lesson
 
 * Review the Practice PTs.
-* Make a plan
-* Review collaboration practices.
-* Check in on the student preparedness guidelines.
+* Review the Create Performance Task.
+* Review Create PT scoring Guidelines and Sample Tasks
 
 ## Resources
 
@@ -23,8 +23,4 @@ Make a plan to prioritize what you will do and when in order to complete the Cre
 * Guidelines: <a href="https://drive.google.com/open?id=1GMztP_ZInx-bNLZFZM-8iRkSIe1TOoZVtXjMKdQJrSA" target="_blank">Create PT - Guidelines Before Starting</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
 MARKDOWN
