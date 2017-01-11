@@ -70,6 +70,7 @@ const isEmail = (value) => {
     return 'Please enter a valid email address, like name@example.com';
   }
 };
+
 const isPhoneNumber = (value) => {
   if (value.replace(/[^0-9]/g, '').length < 10) {
     return 'Phone numbers must have at least 10 digits, like (123) 456-7890';
@@ -113,12 +114,15 @@ const TeacherApplication = React.createClass({
   },
 
   handleRadioButtonListChange(event) {
-    this.setState({[event.target.name]: event.target.value});
+    this.setState(event);
   },
 
   handleCheckboxChange(event) {
-    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
-    this.setState({[event.target.name]: selectedButtons});
+    this.setState(event);
+  },
+
+  handleButtonListChange(changedData) {
+    this.setState(changedData);
   },
 
   getRequiredValidationErrorMessage(key) {
@@ -258,7 +262,7 @@ const TeacherApplication = React.createClass({
           label="Gender Identity"
           groupName="genderIdentity"
           answers={["Female", "Male", "Other", "Prefer not to answer"]}
-          onChange={this.handleRadioButtonListChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.genderIdentity}
           required={true}
           validationState={this.getRequiredValidationState('genderIdentity')}
@@ -386,7 +390,13 @@ const TeacherApplication = React.createClass({
   },
 
   handleCourseChange(event) {
-    this.setState({selectedCourse: event.target.value});
+    //BOOOOOOOO must improve
+    if (typeof(event) === 'object') {
+      this.setState({selectedCourse: event.target.value})
+    } else
+    {
+      this.setState({selectedCourse: event});
+    }
   },
 
   renderCSDSpecificContent() {
@@ -734,4 +744,4 @@ const TeacherApplication = React.createClass({
   }
 });
 
-export default TeacherApplication;
+export {TeacherApplication, likertAnswers};
