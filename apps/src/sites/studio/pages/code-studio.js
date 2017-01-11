@@ -34,7 +34,6 @@ if ($.fn.modal) {
 }
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
 window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts');
 window.dashboard.hashEmail = require('@cdo/apps/code-studio/hashEmail');
 window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
@@ -44,7 +43,6 @@ window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
 window.dashboard.header = require('@cdo/apps/code-studio/header');
 window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
-window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -92,3 +90,8 @@ setTimeout(function () {
 activateReferenceAreaOnLoad();
 
 window.CDOSounds = new Sounds();
+
+import {trackProgress} from '@cdo/apps/code-studio/clientState';
+window.__TestInterface = {
+  trackProgress,
+};

@@ -7,7 +7,7 @@ import { setUserSignedIn, SignInState } from '../progressRedux';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
 var progress = require('../progress');
-var clientState = require('../clientState');
+import * as clientState from '../clientState';
 var color = require("../../util/color");
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';

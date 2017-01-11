@@ -3,7 +3,7 @@
 import $ from 'jquery';
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
-var clientState = require('./clientState');
+import * as clientState from './clientState';
 
 var videos = module.exports = {};
 

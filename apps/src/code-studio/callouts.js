@@ -1,5 +1,5 @@
 import $ from 'jquery';
-var clientState = require('./clientState');
+import * as clientState from './clientState';
 
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.

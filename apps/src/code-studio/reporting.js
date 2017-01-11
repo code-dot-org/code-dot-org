@@ -1,7 +1,7 @@
 /* global appOptions */
 
 import $ from 'jquery';
-var clientState = require('./clientState');
+import * as clientState from './clientState';
 
 var lastAjaxRequest;
 var lastServerResponse = {};

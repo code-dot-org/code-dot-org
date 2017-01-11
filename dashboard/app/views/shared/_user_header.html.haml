@@ -38,30 +38,5 @@
     .header_button.header_user
       %span= t('nav.user.signin')
 
-:javascript
-  function hideUserOptions() {
-    $('.user_options').hide();
-    $('.user_menu_glyph').html('&#x25BC;');
-    $(document).off('click', hideUserOptions);
-  }
-  $('.user_menu').click(function (e) {
-    if ($('.user_options').is(':hidden')) {
-      e.stopPropagation();
-      $('.user_options').show();
-      $('.user_menu_glyph').html('&#x25B2;');
-      $(document).on('click', hideUserOptions);
-    }
-  });
-  $('.user_options').click(function (e) {
-    e.stopPropagation(); // Clicks inside the popup shouldn't close it
-  });
-  $('.user_options a:last').click(function (e) {
-    // this partial can be returned in an API call so it's possible for it to be on non-dashboard pages
-    if (typeof dashboard !== 'undefined') {
-      dashboard.clientState.reset();
-    }
-  });
-
-  if (typeof dashboard !== 'undefined') {
-    dashboard.pairing.init('#{pairing_url}', hideUserOptions, #{@show_pairing_dialog});
-  }
+%script{src: minifiable_asset_path('js/shared/_user_header.js'),
+        data: {userheader: {showPairingDialog: @show_pairing_dialog, pairingUrl: pairing_url}.to_json}}
