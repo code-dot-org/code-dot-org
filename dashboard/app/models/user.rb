@@ -955,17 +955,25 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      new_level_completed = true if !user_level.passing? &&
-        Activity.passing?(new_result)
-      new_csf_level_perfected = true if !user_level.perfect? &&
+      if !user_level.passing? && Activity.passing?(new_result)
+        new_level_completed = true
+      end
+      if !user_level.perfect? &&
         new_result == 100 &&
-        Script.get_from_cache(script_id).csf? &&
+        ([
+          ScriptConstants::TWENTY_HOUR_NAME,
+          ScriptConstants::COURSE2_NAME,
+          ScriptConstants::COURSE3_NAME,
+          ScriptConstants::COURSE4_NAME
+        ].include? Script.get_from_cache(script_id).name) &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
         AuthoredHintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
+        new_csf_level_perfected = true
+      end
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?

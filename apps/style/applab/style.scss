@@ -483,8 +483,10 @@ div#visualizationResizeBar {
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
 
-img#turtleImage {
+#divApplab img#turtleImage {
+  // scss-lint:disable all
   position: absolute;
   height: 24px;
+  width: 24px;
   margin: 0px;
 }

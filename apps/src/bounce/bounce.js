@@ -541,14 +541,12 @@ Bounce.onTick = function () {
       var nowYAboveBottom = Bounce.ballY[i] <= Bounce.ROWS - 1;
 
       if (wasYOK && wasXOK && !nowXOK) {
-        //console.log("calling whenWallCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
       }
 
       if (wasXOK && wasYOK && !nowYOK) {
         if (Bounce.map[0][Math.round(Bounce.ballX[i])] & SquareType.GOAL) {
-          //console.log("calling whenBallInGoal for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenBallInGoal);
           Bounce.ballFlags[i] |= Bounce.BallFlags.IN_GOAL;
@@ -559,7 +557,6 @@ Bounce.onTick = function () {
             Bounce.launchBall(i);
           }
         } else {
-          //console.log("calling whenWallCollided for ball " + i +
           //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
           Bounce.callUserGeneratedCode(Bounce.whenWallCollided);
         }
@@ -571,12 +568,10 @@ Bounce.onTick = function () {
 
       if (distPaddleBall < tiles.PADDLE_BALL_COLLIDE_DISTANCE) {
         // paddle ball collision
-        //console.log("calling whenPaddleCollided for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenPaddleCollided);
       } else if (wasYAboveBottom && !nowYAboveBottom) {
         // ball missed paddle
-        //console.log("calling whenBallMissesPaddle for ball " + i +
         //" x=" + Bounce.ballX[i] + " y=" + Bounce.ballY[i]);
         Bounce.callUserGeneratedCode(Bounce.whenBallMissesPaddle);
         Bounce.ballFlags[i] |= Bounce.BallFlags.MISSED_PADDLE;
@@ -811,7 +806,6 @@ Bounce.moveBallOffscreen = function (i) {
  * @param {int} i Index of ball to be reset.
  */
 Bounce.playSoundAndResetBall = function (i) {
-  //console.log("playSoundAndResetBall called for ball " + i);
   Bounce.resetBall(i, { randomPosition: true } );
   studioApp.playAudio('ballstart');
 };
@@ -831,7 +825,6 @@ Bounce.launchBall = function (i) {
  * @param {options} randomPosition: random start
  */
 Bounce.resetBall = function (i, options) {
-  //console.log("resetBall called for ball " + i);
   var randStart = options.randomPosition ||
                   typeof Bounce.ballStart_[i] === 'undefined';
   Bounce.ballX[i] =  randStart ? Math.floor(Math.random() * Bounce.COLS) :

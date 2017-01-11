@@ -137,14 +137,13 @@ const AdvancedShareOptions = Radium(React.createClass({
     return (
       <div>
         <p style={style.p}>
-          Hit "Download" to export your project as a zipped file,
-          which will contain the HTML/CSS/JS files, as well as any
-          assets, for your project. Note that data APIs will not work
-          outside of Code Studio.
+          Export your project as a zipped file, which will contain the
+          HTML/CSS/JS files, as well as any assets, for your project.
+          Note that data APIs will not work outside of Code Studio.
         </p>
-        <button onClick={this.downloadExport}>
+        <button onClick={this.downloadExport} style={{marginLeft: 0}}>
           {spinner}
-          Download
+          Export
         </button>
         {alert}
       </div>
