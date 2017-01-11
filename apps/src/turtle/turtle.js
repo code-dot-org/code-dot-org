@@ -42,6 +42,11 @@ var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
 var JSInterpreter = require('../JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var CANVAS_HEIGHT = 400;
 var CANVAS_WIDTH = 400;
@@ -1412,8 +1417,10 @@ Artist.prototype.checkAnswer = function () {
 
   // Test whether the current level is a free play level, or the level has
   // been completed
-  var levelComplete = (level.freePlay || this.isCorrect_(delta, permittedErrors)) &&
-                        (!level.editCode || !this.executionError);
+  var levelComplete = (!level.editCode || !this.executionError) &&
+      (level.freePlay ||
+      this.studioApp_.hasContainedLevels ||
+      this.isCorrect_(delta, permittedErrors));
   this.testResults = this.studioApp_.getTestResults(levelComplete);
 
   var program;
@@ -1480,28 +1487,34 @@ Artist.prototype.checkAnswer = function () {
     this.studioApp_.playAudio('failure');
   }
 
-  var reportData = {
-    app: 'turtle',
-    level: level.id,
-    builder: level.builder,
-    result: levelComplete,
-    testResult: this.testResults,
-    program: encodeURIComponent(program),
-    onComplete: _.bind(this.onReportComplete, this),
-    save_to_gallery: level.impressive
-  };
+  if (this.studioApp_.hasContainedLevels && !level.edit_blocks) {
+    postContainedLevelAttempt(this.studioApp_);
+    runAfterPostContainedLevel(
+        () => this.onReportComplete(getContainedLevelResultInfo().feedback));
+  } else {
+    var reportData = {
+      app: 'turtle',
+      level: level.id,
+      builder: level.builder,
+      result: levelComplete,
+      testResult: this.testResults,
+      program: encodeURIComponent(program),
+      onComplete: _.bind(this.onReportComplete, this),
+      save_to_gallery: level.impressive
+    };
 
-  // https://www.pivotaltracker.com/story/show/84171560
-  // Never send up frozen images for now.
-  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
+    // https://www.pivotaltracker.com/story/show/84171560
+    // Never send up frozen images for now.
+    var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
-  // Get the canvas data for feedback.
-  if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
-    !isFrozen && (level.freePlay || level.impressive)) {
-    reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    // Get the canvas data for feedback.
+    if (this.testResults >= this.studioApp_.TestResults.TOO_MANY_BLOCKS_FAIL &&
+      !isFrozen && (level.freePlay || level.impressive)) {
+      reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    }
+
+    this.studioApp_.report(reportData);
   }
-
-  this.studioApp_.report(reportData);
 
   if (this.studioApp_.isUsingBlockly()) {
     // reenable toolbox
