@@ -1,13 +1,22 @@
-login_required 'true'
+login_required true
 
-stage 'Create PT Prep'
+stage 'Tech Setup - Your AP Digital Portfolio and Other Tools'
+level 'U5 - PT Prep - Digital Portfolio and tech setup'
+
+stage 'Create PT Prep - Reviewing the Task'
+level 'U5 - Create PT review - Student Introduction'
+
+stage 'Create PT Prep - Making a Plan'
 level 'U5 - Create PT Prep - Student Introduction'
 
-stage 'Create PT'
+stage 'Create PT - Complete the Task'
 level 'U5 - Create PT - Student Introduction'
 
-stage 'Explore PT Prep'
+stage 'Explore PT Prep - Reviewing the Task'
+level 'U5 - Explore PT Review - Student Introduction'
+
+stage 'Explore PT - Making a Plan'
 level 'U5 - Explore PT Prep - Student Introduction'
 
-stage 'Explore PT'
+stage 'Explore PT - Complete the Task'
 level 'U5 - Explore PT - Student Introduction'

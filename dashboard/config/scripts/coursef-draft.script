@@ -47,9 +47,6 @@ level 'grade5_bee_for_loops9'
 level 'grade5_bee_for_loops11'
 level 'grade5_bee_for_loops10'
 
-stage 'Songwriting with Parameters'
-level 'SongwritingWithParameters'
-
 stage 'For Loops in Artist'
 level 'courseF_video_forArtist'
 level 'grade5_artist_for_loops1b'
@@ -62,6 +59,9 @@ level 'grade5_artist_for_loops7'
 level 'grade5_artist_for_loops7a'
 level 'grade5_artist_for_loops7b'
 level 'grade5_artist_for_loopsfreeplay12'
+
+stage 'Songwriting with Parameters'
+level 'SongwritingWithParameters'
 
 stage 'Functions with Parameters in Artist'
 level 'gradeF_video_artistFunctions'
