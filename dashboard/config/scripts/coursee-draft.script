@@ -83,10 +83,10 @@ level 'courseE_playLab_scaffold2'
 level 'courseE_playLab_scaffold3'
 level 'courseE_playLab_scaffold4'
 level 'courseE_playLab_scaffold5'
-level 'grade4_scaffolded_project6'
+level 'courseE_playLab_scaffold6'
 
 stage 'Explore Project Ideas'
-named_level 'Geometric Pattern'
+named_level 'Geometric Sun'
 named_level 'Pizza on a Plate'
 named_level 'Unicorn Tag'
 
