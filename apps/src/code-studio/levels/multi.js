@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
-var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
+var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
   // The dashboard levelId.
   this.levelId = levelId;
@@ -262,3 +262,5 @@ Multi.prototype.validateAnswers = function () {
     return true;
   }
 };
+
+export default Multi;
