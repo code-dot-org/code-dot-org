@@ -809,7 +809,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
       },
       {
         text: window.dashboard.i18n.t('footer.how_it_works'),
-        link: location.href + "/view",
+        link: location.href + "/edit",
         newWindow: false
       },
       {
