@@ -329,6 +329,14 @@ describe('The Exporter,', function () {
         done
       );
     });
+
+    it("should allow you to use turtle operations", (done) => {
+      runExportedApp(
+        `moveForward(25);`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done
+      );
+    });
   });
 
 });
@@ -347,7 +355,7 @@ describe("getAppOptionsFile helper function", () => {
     });
     assert.equal(
       getAppOptionsFile(),
-      'window.APP_OPTIONS = {"level":{"skin":"this should show up"},"channel":"this should be there"};'
+      'window.APP_OPTIONS = {"level":{"skin":"this should show up"},"channel":"this should be there","readonlyWorkspace":true};'
     );
   });
 });

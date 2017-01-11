@@ -963,6 +963,16 @@ Applab.toggleDivApplab = function (isVisible) {
 };
 
 /**
+ * reset and initialize the state of the turtle object
+ */
+Applab.resetTurtle = function () {
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+};
+
+/**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
@@ -972,10 +982,7 @@ Applab.reset = function () {
   // Reset configurable variables
   Applab.message = null;
   delete Applab.activeCanvas;
-  Applab.turtle = {};
-  Applab.turtle.heading = 0;
-  Applab.turtle.x = Applab.appWidth / 2;
-  Applab.turtle.y = Applab.appHeight / 2;
+  Applab.resetTurtle();
   apiTimeoutList.clearTimeouts();
   apiTimeoutList.clearIntervals();
 

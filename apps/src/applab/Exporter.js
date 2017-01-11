@@ -122,6 +122,13 @@ const APP_OPTIONS_WHITELIST = {
   "locale": true,
 };
 
+// this configuration forces certain values to show up
+// in the appOptions config. These values will be assigned
+// regardless of whether or not they are in the whitelist
+const APP_OPTIONS_OVERRIDES = {
+  readonlyWorkspace: true,
+};
+
 export function getAppOptionsFile() {
   function getAppOptionsAtPath(whitelist, sourceOptions) {
     if (!whitelist || !sourceOptions) {
@@ -137,6 +144,7 @@ export function getAppOptionsFile() {
     }, {});
   }
   const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
+  _.merge(options, APP_OPTIONS_OVERRIDES);
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
