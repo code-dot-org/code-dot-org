@@ -1,5 +1,5 @@
 module Pd::Payment
-  # Calculator for unpaid workshops. This generates a summary with zero payment.
+  # Calculator for unpaid workshops. This generates a summary with no payment.
   class PaymentCalculatorUnpaid < PaymentCalculatorBase
     protected
 
