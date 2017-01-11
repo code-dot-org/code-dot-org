@@ -64,6 +64,13 @@ module Pd::Payment
       assert_equal PaymentCalculatorUnpaid, PaymentFactory.get_calculator_class(workshop_csd)
     end
 
+    test 'workshops that do not match a known payment type fall through to unpaid' do
+      # Build instead of create since this course is invalid and can't be saved
+      workshop = build :pd_ended_workshop, course: 'unexpected course'
+
+      assert_equal PaymentCalculatorUnpaid, PaymentFactory.get_calculator_class(workshop)
+    end
+
     test 'calculate payment' do
       # Use a standard payment for example:
       workshop_standard = create :pd_ended_workshop, workshop_type: Pd::Workshop::TYPE_PUBLIC,
