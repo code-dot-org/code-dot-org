@@ -390,7 +390,40 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
-    assert_equal 1, script.summarize[:stages].count
+    summary = script.summarize
+
+    assert_equal 1, summary[:stages].count
+    assert_equal nil, summary[:peerReviewStage]
+    assert_equal 0, summary[:peerReviewsRequired]
+  end
+
+  test 'should summarize script with peer reviews' do
+    script = create(:script, name: 'script-with-peer-review', peer_reviews_to_complete: 1)
+    stage = create(:stage, script: script, name: 'Stage 1')
+    create(:script_level, script: script, stage: stage)
+    stage = create(:stage, script: script, name: 'Stage 2')
+    create(:script_level, script: script, stage: stage)
+
+    summary = script.summarize
+
+    expected_peer_review_stage = {
+      name: "You must complete 1 reviews for this unit",
+      flex_category: "Peer Review",
+      levels: [{
+        ids: [0],
+        kind: "peer_review",
+        title: "",
+        url: "",
+        name: "Reviews unavailable at this time",
+        icon: "fa-lock",
+        locked: true
+      }],
+      lockable: false
+    }
+
+    assert_equal 2, summary[:stages].count
+    assert_equal expected_peer_review_stage, summary[:peerReviewStage]
+    assert_equal 1, summary[:peerReviewsRequired]
   end
 
   test 'should generate PLC objects' do
