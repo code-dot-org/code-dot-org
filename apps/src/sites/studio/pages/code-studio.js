@@ -29,7 +29,9 @@ require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
-$.fn.modal.Constructor.prototype.enforceFocus = function () {};
+if ($.fn.modal) {
+  $.fn.modal.Constructor.prototype.enforceFocus = function () {};
+}
 
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
@@ -44,6 +46,7 @@ window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.teacher = require('@cdo/apps/code-studio/teacher');
+window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import { registerGetResult, registerLevel, onAnswerChanged } from '@cdo/apps/code-studio/levels/codeStudioLevels';

@@ -1,4 +1,5 @@
 @no_mobile
+@no_circle
 @as_student
 Feature: Level Group
 
@@ -8,7 +9,6 @@ Background:
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
 
-@no_circle
 Scenario: Submit three answers.
   When element ".level-group-content:nth(1) .multi-question" contains text "The standard QWERTY keyboard has"
 

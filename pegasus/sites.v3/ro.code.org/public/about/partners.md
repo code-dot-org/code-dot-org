@@ -99,12 +99,7 @@ social:
                       <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.stiriong.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/stiriong.png"></a>
                     </div>
                   </div>
-
-<h1 class="text-align-center">PR</h1><div class="row"><div class="col-sm-3 col span_3">
-                    <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
-                      <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.mslgroup.ro/" target="_blank"><img style="max-width: 100%" src="/images/partnerlogo/FIA_negru-382x160.jpg"></a>
-                    </div>
-                  </div>
+</div>
             <h1 class="text-align-center">Suporteri</h1>
             <div class="row">
                 <div class="col-sm-3 col span_3">

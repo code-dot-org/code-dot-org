@@ -352,8 +352,7 @@ describe("The applab/import module", () => {
           project.id,
           [project.screens[0], project.screens[1]],
           [{filename: 'asset3.png'}, {filename: 'asset4.png'}]
-        );
-        promise.then(onResolve, onResolve);
+        ).then(onResolve, onReject);
       });
 
       it('will import the specified screens', () => {
@@ -372,17 +371,24 @@ describe("The applab/import module", () => {
         );
       });
 
-      it('will call the resolve/reject depending on whether the operation was successful', () => {
-        var [,, success, failure] = assetsApi.copyAssets.firstCall.args;
+      it('will call resolve if the operation was successful', () => {
+        var [,, success] = assetsApi.copyAssets.lastCall.args;
         expect(onResolve).not.to.have.been.called;
-        expect(onReject).not.to.have.been.called;
-
         success();
-        expect(onResolve).to.have.been.called;
-        expect(onReject).not.to.have.been.called;
+        return promise.then(() => {
+          expect(onResolve.called).to.be.true;
+          expect(onReject).not.to.have.been.called;
+        });
+      });
 
+      it('will call reject if the operation was not successful', () => {
+        var [,,, failure] = assetsApi.copyAssets.lastCall.args;
+        expect(onReject).not.to.have.been.called;
         failure();
-        expect(onReject).to.have.been.called;
+        return promise.then(() => {
+          expect(onResolve).not.to.have.been.called;
+          expect(onReject).to.have.been.called;
+        });
       });
 
     });

@@ -35,6 +35,10 @@ module Dashboard
         HttpCache.config(rack_env)[:dashboard]
 
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
+
+      # Autoload mailer previews in development mode so changes are picked up without restarting the server.
+      # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
+      config.autoload_paths << Rails.root.join('test/mailers/previews')
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment

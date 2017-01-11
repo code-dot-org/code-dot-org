@@ -1,4 +1,5 @@
-class WeblabHostController < ActionController::Base
+class WeblabHostController < ApplicationController
+  layout false
   def index
   end
 end

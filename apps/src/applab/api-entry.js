@@ -1,27 +1,35 @@
 // entry point for api that gets exposed.
 
+window.$ = require('jquery');
+import '@cdo/apps/sites/studio/pages/code-studio';
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
-window.$ = require('jquery');
-
+window.React = require('react');
 window.Applab = require('./applab');
-import applabCommands from './commands';
+import {injectErrorHandler} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import * as api from './api';
 import appStorage from './appStorage';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';
-studioApp.cdoSounds = new Sounds();
+import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
+import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {getStore} from '@cdo/apps/redux';
+import {setIsRunning} from '@cdo/apps/redux/runState';
+window.CDOSounds = new Sounds();
 
 // TODO: remove the below two monkey patches.
 window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
 
-window.Applab.callCmd = function (cmd) {
-  var retVal = false;
-  if (applabCommands[cmd.name] instanceof Function) {
-    retVal = applabCommands[cmd.name](cmd.opts);
-  }
-  return retVal;
-};
+Applab.render = function (){};
+
+// window.APP_OPTIONS gets generated on the fly by the exporter and appended to this file.
+setAppOptions(window.APP_OPTIONS);
+setupApp(window.APP_OPTIONS);
+loadApplab(getAppOptions());
+getStore().dispatch(setIsRunning(true));
+
+studioApp.highlight = function () {};
 
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
@@ -38,3 +46,9 @@ for (let key in appStorage) {
     console.error("Data APIs are not available outside of code studio.");
   };
 }
+
+// Set up an error handler for student errors and warnings.
+injectErrorHandler(new JavaScriptModeErrorHandler(
+  () => Applab.JSInterpreter,
+  Applab
+));
