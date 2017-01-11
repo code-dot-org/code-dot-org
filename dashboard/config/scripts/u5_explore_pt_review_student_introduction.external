@@ -1,20 +1,19 @@
-name 'U5 - Explore PT Prep - Student Introduction'
+name 'U5 - Explore PT Review - Student Introduction'
 title 'title'
 description 'description here'
-css 'unplugged'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 6: Lesson 6 - Explore PT Prep - Making a Plan
+# Unit 5: Lesson 5 - Explore PT Prep - Reviewing the Task
 
 ## Background
 
-Make a plan to prioritize what you will do and when in order to complete the Explore PT in the allotted time.
+Review the Explore PT, its scoring guidelines, and some sample tasks
 
 ## Lesson
 
 * Review Practice PTs.
-* Make a plan
-* Review Research Practices and Strategies
-* Check in on student preparedness guidelines.
+* Review the Explore Performance Task.
+* Review Scoring Guidelines and Sample task
 
 ## Resources
 
@@ -23,8 +22,4 @@ Make a plan to prioritize what you will do and when in order to complete the Exp
 * Guidelines: <a href="https://drive.google.com/open?id=1wsWVtKYVrhX4FYBAm6oxhMaMep_qQ1LKa-PrdbHNS6A" target="_blank">Explore PT - Guidlines Before Starting</a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
-MARKDOWN
-
-teacher_markdown <<MARKDOWN
-
 MARKDOWN
