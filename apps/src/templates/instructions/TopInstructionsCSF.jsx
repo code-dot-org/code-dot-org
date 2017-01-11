@@ -168,7 +168,7 @@ var TopInstructions = React.createClass({
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
-    shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions: React.PropTypes.string,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     clearFeedback: React.PropTypes.func.isRequired,
