@@ -227,7 +227,7 @@ var TopInstructions = React.createClass({
 
     this.adjustMaxNeededHeight();
 
-    if (this.refs && this.refs.instructions && this.refs.instructions.parentElement) {
+    if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
@@ -326,6 +326,9 @@ var TopInstructions = React.createClass({
    * collapsed
    */
   getMinHeight(collapsed=this.props.collapsed) {
+    if (this.refs.containedLevel) {
+      return getOuterHeight(this.refs.containedLevel);
+    }
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
         this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
@@ -373,7 +376,7 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-    const instructionsContent = this.refs.instructions;
+    const instructionsContent = this.refs.instructions || this.refs.containedLevel;
     const maxNeededHeight = getOuterHeight(instructionsContent, true) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -509,7 +512,7 @@ var TopInstructions = React.createClass({
     if (this.props.hasContainedLevels) {
       return (
         <div style={mainStyle} className="editor-column">
-          <ContainedLevel ref="instructions" />
+          <ContainedLevel ref="containedLevel" />
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}
