@@ -484,6 +484,7 @@ div#visualizationResizeBar {
 }
 
 #divApplab img#turtleImage {
+  // scss-lint:disable all
   position: absolute;
   height: 24px;
   width: 24px;
