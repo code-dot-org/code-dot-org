@@ -884,7 +884,8 @@ Applab.render = function () {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onScreenCreate: designMode.createScreen
+    onScreenCreate: designMode.createScreen,
+    handleVersionHistory: Applab.handleVersionHistory
   });
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
