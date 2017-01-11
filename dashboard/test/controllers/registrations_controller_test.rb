@@ -282,6 +282,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
   end
 
+  test 'update rejects unwanted parameters' do
+    user = create :user, name: 'non-admin'
+    sign_in user
+    post :update, user: { name: 'admin', admin: true }
+
+    user.reload
+    assert_equal 'admin', user.name
+    refute user.admin
+  end
+
   test "sign up with devise.user_attributes in session" do
     # when someone logs in with oauth and we need additional
     # information, devise saves the user attributes in the session and
