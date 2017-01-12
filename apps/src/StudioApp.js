@@ -25,7 +25,7 @@ var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
 var DialogButtons = require('./templates/DialogButtons');
-var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+import WireframeButtons from './templates/WireframeButtons';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
@@ -1909,12 +1909,30 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
+        // Set the document to use flex.
+        document.body.className += ' WireframeButtons_container';
+
+        // Create an empty div on the left for padding
         var div = document.createElement('div');
+        div.className = 'WireframeButtons_containerLeft';
+        document.body.insertBefore(div, document.body.firstChild);
+
+        // Add 'withWireframeButtons' class to top level div that wraps app.
+        // This will add necessary styles.
+        div = document.getElementsByClassName('wrapper')[0];
+        if (div) {
+          div.className = 'wrapper withWireframeButtons';
+        }
+
+        // Create div for buttons on the right
+        div = document.createElement('div');
+        div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+          ReactDOM.render(React.createElement(WireframeButtons, {
             channelId: dashboard.project.getCurrentId(),
-            appType: dashboard.project.getStandaloneApp()
+            appType: dashboard.project.getStandaloneApp(),
+            isLegacyShare: options.isLegacyShare,
           }), div);
         }
       }
