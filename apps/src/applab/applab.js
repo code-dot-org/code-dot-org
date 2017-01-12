@@ -58,6 +58,7 @@ import {
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -351,37 +352,27 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
 function renderFooterInSharedGame() {
-  var divApplab = document.getElementById('divApplab');
-  var footerDiv = document.createElement('div');
+  const divApplab = document.getElementById('divApplab');
+  const footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-  var menuItems = [
+
+  const isIframeEmbed = studioApp.reduxStore.getState().pageConstants.isIframeEmbed;
+
+  const menuItems = [
     {
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
-    !dom.isMobile() && {
+    isIframeEmbed && !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
     },
-    window.location.search.indexOf('nosource') < 0 && {
+    isIframeEmbed && window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
+      link: project.getProjectUrl('/view'),
       newWindow: true,
     },
     {
@@ -730,6 +721,8 @@ Applab.init = function (config) {
     Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
   }
 
+  Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);
+
   var onMount = function () {
     studioApp.init(config);
 
@@ -892,7 +885,8 @@ Applab.render = function () {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onScreenCreate: designMode.createScreen
+    onScreenCreate: designMode.createScreen,
+    handleVersionHistory: Applab.handleVersionHistory
   });
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>

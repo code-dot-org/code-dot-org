@@ -6,15 +6,21 @@ class UserProficiencyTest < ActiveSupport::TestCase
   end
 
   test 'get_levels_count' do
-    assert_equal 5, @proficiency.get_level_count('repeat_loops', 1)
-    assert_equal 5, @proficiency.get_level_count('repeat_loops', 2)
-    assert_equal 3, @proficiency.get_level_count('repeat_loops', 3)
-    assert_equal 3, @proficiency.get_level_count('repeat_loops', 4)
-    assert_equal 0, @proficiency.get_level_count('repeat_loops', 5)
+    assert_equal 5,
+      @proficiency.get_level_count(ConceptDifficulties::REPEAT_LOOPS, 1)
+    assert_equal 5,
+      @proficiency.get_level_count(ConceptDifficulties::REPEAT_LOOPS, 2)
+    assert_equal 3,
+      @proficiency.get_level_count(ConceptDifficulties::REPEAT_LOOPS, 3)
+    assert_equal 3,
+      @proficiency.get_level_count(ConceptDifficulties::REPEAT_LOOPS, 4)
+    assert_equal 0,
+      @proficiency.get_level_count(ConceptDifficulties::REPEAT_LOOPS, 5)
   end
 
   test 'get_levels_count_no_data' do
-    assert_equal 0, @proficiency.get_level_count('functions', 3)
+    assert_equal 0,
+      @proficiency.get_level_count(ConceptDifficulties::FUNCTIONS, 3)
   end
 
   test 'get_levels_count_invalid_concept' do
@@ -25,7 +31,7 @@ class UserProficiencyTest < ActiveSupport::TestCase
 
   test 'get_levels_count_invalid_difficulty_number' do
     assert_raises ArgumentError do
-      @proficiency.get_level_count('sequencing', 0)
+      @proficiency.get_level_count(ConceptDifficulties::SEQUENCING, 0)
     end
 
     assert_raises ArgumentError do
@@ -40,12 +46,12 @@ class UserProficiencyTest < ActiveSupport::TestCase
     # and repeat_loops_d2_count = 2;
     user_proficiency = create(:user_proficiency)
 
-    user_proficiency.increment_level_count('sequencing', 2)
+    user_proficiency.increment_level_count(ConceptDifficulties::SEQUENCING, 2)
     assert_equal 1, user_proficiency.sequencing_d2_count
 
-    user_proficiency.increment_level_count('repeat_loops', 2)
+    user_proficiency.increment_level_count(ConceptDifficulties::REPEAT_LOOPS, 2)
     assert_equal 3, user_proficiency.repeat_loops_d2_count
-    user_proficiency.increment_level_count('repeat_loops', 2)
+    user_proficiency.increment_level_count(ConceptDifficulties::REPEAT_LOOPS, 2)
     assert_equal 4, user_proficiency.repeat_loops_d2_count
   end
 
