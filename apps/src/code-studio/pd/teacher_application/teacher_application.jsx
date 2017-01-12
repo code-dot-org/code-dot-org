@@ -113,14 +113,6 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.id]: event.target.value});
   },
 
-  handleRadioButtonListChange(event) {
-    this.setState(event);
-  },
-
-  handleCheckboxChange(event) {
-    this.setState(event);
-  },
-
   handleButtonListChange(changedData) {
     this.setState(changedData);
   },
@@ -203,7 +195,7 @@ const TeacherApplication = React.createClass({
           label="Grades served at your school"
           groupName="gradesAtSchool"
           answers={grades}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.gradesAtSchool}
           required={true}
           validationState={this.getRequiredValidationState('gradesAtSchool')}
@@ -273,7 +265,7 @@ const TeacherApplication = React.createClass({
           groupName="grades2016"
           answers={grades}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.grades2016}
           required={true}
           validationState={this.getRequiredValidationState('grades2016')}
@@ -284,7 +276,7 @@ const TeacherApplication = React.createClass({
           groupName="subjects2016"
           answers={subjects}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.subjects2016}
           required={true}
           validationState={this.getRequiredValidationState('subjects2016')}
@@ -295,7 +287,7 @@ const TeacherApplication = React.createClass({
           groupName="grades2017"
           answers={grades.concat("I don't know")}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.grades2017}
           required={true}
           validationState={this.getRequiredValidationState('grades2017')}
@@ -306,7 +298,7 @@ const TeacherApplication = React.createClass({
           groupName="subjects2017"
           answers={subjects.concat("I don't know")}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.subjects2017}
           required={true}
           validationState={this.getRequiredValidationState('subjects2017')}
@@ -374,27 +366,19 @@ const TeacherApplication = React.createClass({
         <Radio
           value="csd"
           name="courseSelection"
-          onChange={this.handleCourseChange}
+          onChange={this.handleButtonListChange}
         >
           Computer Science Discoveries (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
           name="courseSelection"
-          onChange={this.handleCourseChange}
+          onChange={this.handleButtonListChange}
         >
           Computer Science Principles (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
       </FormGroup>
     );
-  },
-
-  handleCourseChange(event) {
-    if (typeof(event) === 'object') {
-      this.setState({selectedCourse: event.target.value});
-    } else {
-      this.setState({selectedCourse: event});
-    }
   },
 
   renderCSDSpecificContent() {
@@ -406,7 +390,7 @@ const TeacherApplication = React.createClass({
             label="To which grades do you plan to teach CS Discoveries? Please note that the CS Discoveries Professional Learning Program is not available for grades K-5. (select all that apply)"
             groupName="gradesPlanningToTeach"
             answers={grades.slice(grades.indexOf('6'))}
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.gradesPlanningToTeach}
             required={true}
             validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
@@ -430,7 +414,7 @@ const TeacherApplication = React.createClass({
             ]}
             includeOther={true}
             groupName="cspDuration"
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspDuration}
             required={true}
             validationState={this.getRequiredValidationState('cspDuration')}
@@ -445,7 +429,7 @@ const TeacherApplication = React.createClass({
               "I don't know yet"
             ]}
             groupName="cspApCourse"
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspApCourse}
             required={true}
             validationState={this.getRequiredValidationState('cspApCourse')}
@@ -456,7 +440,7 @@ const TeacherApplication = React.createClass({
             Learning Program is not available for grades K-8. (select all that apply)"
             answers={grades.slice(grades.indexOf('9'))}
             groupName="gradesPlanningToTeach"
-            onChange={this.handleCheckboxChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.gradesPlanningToTeach}
             required={true}
             validationState={this.getRequiredValidationState('gradesPlanningToTeach')}
@@ -468,7 +452,7 @@ const TeacherApplication = React.createClass({
             (select one)"
             groupName="cspApExamIntent"
             answers={yesNoResponses}
-            onChange={this.handleRadioButtonListChange}
+            onChange={this.handleButtonListChange}
             selectedItems={this.state.cspApExamIntent}
             required={true}
             validationState={this.getRequiredValidationState('cspApExamIntent')}
@@ -526,7 +510,7 @@ const TeacherApplication = React.createClass({
                               name={question}
                               value={j + 1}
                               checked={parseInt(this.state[question], 10) === j + 1}
-                              onChange={this.handleRadioButtonListChange}
+                              onChange={this.handleButtonListChange}
                             />
                           </td>
                         );
@@ -557,7 +541,7 @@ const TeacherApplication = React.createClass({
           answers={['Courses for credit', 'After school clubs', 'Lunch clubs', 'Hour of Code',
             'No computer science opportunities are currently available at my school']}
           includeOther={true}
-          onChange={this.handleCheckboxChange}
+          onChange={this.handleButtonListChange}
           selectedItems={this.state.currentCsOpportunities}
           required={true}
           validationState={this.getRequiredValidationState('currentCsOpportunities')}
