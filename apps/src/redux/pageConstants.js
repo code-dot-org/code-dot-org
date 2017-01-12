@@ -13,6 +13,7 @@ var ALLOWED_KEYS = new Set([
   'hasDesignMode',
   'isEmbedView',
   'isIframeEmbed',
+  'makerlabEnabled',
   'isReadOnlyWorkspace',
   'isShareView',
   'isProjectLevel',

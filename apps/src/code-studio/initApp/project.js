@@ -70,6 +70,7 @@ var isEditing = false;
 var currentSources = {
   source: null,
   html: null,
+  makerAPIsEnabled: false,
   animations: null
 };
 
@@ -84,12 +85,15 @@ function packSources() {
  * Populate our current sources API object based off of given data
  * @param {string} data.source
  * @param {string} data.html
+ * @param {SerializedAnimationList} data.animations
+ * @param {boolean} data.makerAPIsEnabled
  */
 function unpackSources(data) {
   currentSources = {
     source: data.source,
     html: data.html,
-    animations: data.animations
+    animations: data.animations,
+    makerAPIsEnabled: data.makerAPIsEnabled
   };
 }
 
@@ -325,6 +329,8 @@ var projects = module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
+   * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -335,6 +341,10 @@ var projects = module.exports = {
     if (this.isProjectLevel() || current) {
       if (currentSources.html) {
         sourceHandler.setInitialLevelHtml(currentSources.html);
+      }
+
+      if (currentSources.makerAPIsEnabled) {
+        sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
       if (currentSources.animations) {
@@ -472,7 +482,8 @@ var projects = module.exports = {
         this.sourceHandler.getLevelSource().then(response => {
           const source = response;
           const html = this.sourceHandler.getLevelHtml();
-          this.save({source, html, animations}, callback, forceNewVersion);
+          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+          this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
         });
       });
       return;
