@@ -2826,6 +2826,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
     assetUrl: this.assetUrl,
+    makerlabEnabled: level.makerlabEnabled,
     isReadOnlyWorkspace: !!config.readonlyWorkspace,
     isDroplet: !!level.editCode,
     hideSource: !!config.hideSource,
