@@ -730,6 +730,8 @@ Applab.init = function (config) {
     Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
   }
 
+  Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);
+
   var onMount = function () {
     studioApp.init(config);
 
@@ -892,7 +894,8 @@ Applab.render = function () {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onScreenCreate: designMode.createScreen
+    onScreenCreate: designMode.createScreen,
+    handleVersionHistory: Applab.handleVersionHistory
   });
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>

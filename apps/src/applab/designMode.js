@@ -1181,7 +1181,9 @@ designMode.renderDesignWorkspace = function (element) {
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: dashboard.assets.showAssetManager,
-    isDimmed: Applab.running
+    handleVersionHistory: Applab.handleVersionHistory,
+    isDimmed: Applab.running,
+    store: studioApp.reduxStore,
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
