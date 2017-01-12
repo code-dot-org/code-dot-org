@@ -30,11 +30,6 @@ Lint/RescueException:
 Lint/UnifiedInteger:
   Enabled: false
 
-# Offense count: 2
-# Cop supports --auto-correct.
-Lint/UnneededSplatExpansion:
-  Enabled: false
-
 # Offense count: 48
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
