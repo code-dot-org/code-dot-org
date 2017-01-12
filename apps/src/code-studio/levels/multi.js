@@ -41,10 +41,7 @@ var Multi = function (levelId, id, app, standalone, numAnswers, answers, answers
 
   this.submitAllowed = true;
 
-  $(document).ready($.proxy(function () {
-    this.ready();
-  }, this));
-
+  $(document).ready(() => this.ready());
 };
 
 
@@ -269,6 +266,7 @@ Multi.prototype.validateAnswers = function () {
     }
     return true;
   }
+  return false;
 };
 
 export default Multi;
