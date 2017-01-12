@@ -27,15 +27,16 @@ export const commands = {
   /**
    * Start playing a sound.
    * @param {string} opts.url The sound to play.
+   * @param {boolean} [opts.loop] Whether to repeat the sound forever
    * TODO: Implement additional arguments as part of Sound Library Work
    *       Spec: https://docs.google.com/document/d/11mpYgmomALyAr53BQl2Ufx0ZYXoMAswqlQBA0aRuNag/edit#heading=h.6uzt0nqaaco
-   * _@param {boolean} [opts.loop] Whether to repeat the sound forever
    * _@param {boolean} [opts.allowMultiple] If false (default) this call will
    *        stop other instances of the same sound from playing.  If true,
    *        multiple instances of the sound may be played simultaneously.
    */
   playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+    apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
 
     if (studioApp.cdoSounds) {
       const url = assetPrefix.fixPath(opts.url);
@@ -70,6 +71,7 @@ export const commands = {
       }
       studioApp.cdoSounds.playURL(url, {
         volume: 1.0,
+        loop: !!opts.loop,
         forceHTML5: forceHTML5,
         allowHTML5Mobile: true
       });
@@ -102,8 +104,8 @@ export const commands = {
  * Exported for testing - shouldn't be needed elsewhere.
  */
 export const executors = {
-  playSound: (url) => executeCmd(null, 'playSound', {'url': url}),
-  stopSound: (url) => executeCmd(null, 'stopSound', {'url': url})
+  playSound: (url, loop = false) => executeCmd(null, 'playSound', {url, loop}),
+  stopSound: (url) => executeCmd(null, 'stopSound', {url})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
 
@@ -115,9 +117,13 @@ export const dropletConfig = {
   playSound: {
     func: 'playSound',
     parent: executors,
-    paletteParams: ['url'],
-    params: ['"https://studio.code.org/blockly/media/example.mp3"'],
-    dropdown: { 0: function () { return getAssetDropdown('audio'); } },
+    paramButtons: { minArgs: 1, maxArgs: 2 },
+    paletteParams: ['url', 'loop'],
+    params: ['"https://studio.code.org/blockly/media/example.mp3"', 'false'],
+    dropdown: {
+      0: () => getAssetDropdown('audio'),
+      1: ["true", "false"]
+    },
     assetTooltip: { 0: chooseAsset.bind(null, 'audio') }
   },
   stopSound: {
@@ -126,7 +132,9 @@ export const dropletConfig = {
     paramButtons: { minArgs: 0, maxArgs: 1 },
     paletteParams: ['url'],
     params: ['"https://studio.code.org/blockly/media/example.mp3"'],
-    dropdown: { 0: function () { return getAssetDropdown('audio'); } },
+    dropdown: {
+      0: () => getAssetDropdown('audio')
+    },
     assetTooltip: { 0: chooseAsset.bind(null, 'audio') }
   },
 };
