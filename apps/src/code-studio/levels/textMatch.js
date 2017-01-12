@@ -80,3 +80,5 @@ TextMatch.prototype.lockAnswers = function () {
 TextMatch.prototype.getCurrentAnswerFeedback = function () {
   // Not implemented
 };
+
+export default TextMatch;
