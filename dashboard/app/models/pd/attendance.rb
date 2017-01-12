@@ -2,12 +2,13 @@
 #
 # Table name: pd_attendances
 #
-#  id            :integer          not null, primary key
-#  pd_session_id :integer          not null
-#  teacher_id    :integer          not null
-#  created_at    :datetime
-#  updated_at    :datetime
-#  deleted_at    :datetime
+#  id               :integer          not null, primary key
+#  pd_session_id    :integer          not null
+#  teacher_id       :integer
+#  created_at       :datetime
+#  updated_at       :datetime
+#  deleted_at       :datetime
+#  pd_enrollment_id :integer
 #
 # Indexes
 #
