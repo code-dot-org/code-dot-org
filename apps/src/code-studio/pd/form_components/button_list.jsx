@@ -20,6 +20,7 @@ const ButtonList = React.createClass({
 
   handleChange(event) {
     let value;
+    console.log(event);
     if (this.props.type === 'radio') {
       value = event.target.value;
     } else if (this.props.type === 'check') {
@@ -31,7 +32,7 @@ const ButtonList = React.createClass({
       }
       value = Array.from(currentSelection);
     }
-    this.props.onChange({[this.props.groupName]: value})
+    this.props.onChange({[this.props.groupName]: value});
   },
 
   renderInputComponents() {
@@ -62,7 +63,7 @@ const ButtonList = React.createClass({
           label={answer}
           key={i}
           name={this.props.groupName}
-          onChange={this.hanldeChange}
+          onChange={this.handleChange}
           checked={checked}
         >
           {answer === otherString ? otherDiv : answer}

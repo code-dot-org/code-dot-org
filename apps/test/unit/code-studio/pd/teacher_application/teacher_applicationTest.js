@@ -156,7 +156,7 @@ describe("Tests for Teacher Application", () => {
 
   const pickCourse = (course) => {
     const buttonList = form.find(`[value="${course}"]`);
-    buttonList.simulate('change', course);
+    buttonList.simulate('change', {selectedCourse: course});
   };
 
   const assertNoFormErrors = () => {
