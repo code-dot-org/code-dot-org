@@ -390,11 +390,9 @@ const TeacherApplication = React.createClass({
   },
 
   handleCourseChange(event) {
-    //BOOOOOOOO must improve
     if (typeof(event) === 'object') {
-      this.setState({selectedCourse: event.target.value})
-    } else
-    {
+      this.setState({selectedCourse: event.target.value});
+    } else {
       this.setState({selectedCourse: event});
     }
   },
@@ -679,9 +677,7 @@ const TeacherApplication = React.createClass({
       dataType: "json",
       data: JSON.stringify({application: formData})
     }).done(() => {
-      // TODO: modify state, render submitted on client side.
       window.location.reload(true);
-
     }).fail(data => {
       // TODO: render error message(s) nicely on client.
       alert(`error: ${data.responseJSON}`);

@@ -1,16 +1,20 @@
 import React from 'react';
 import _ from 'lodash';
+import sinon from 'sinon';
 import {expect} from 'chai';
 import {TeacherApplication, likertAnswers} from '@cdo/apps/code-studio/pd/teacher_application/teacher_application';
 import {shallow} from 'enzyme';
-import ButtonList from '@cdo/apps/code-studio/pd/form_components/button_list'
+import ButtonList from '@cdo/apps/code-studio/pd/form_components/button_list';
 
 describe("Tests for Teacher Application", () => {
   let form;
   let districtErrorMessage;
   let districtErrorMessageHandler = function (message) { districtErrorMessage = message;};
-  let regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'}
+  let regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'};
+
   //<editor-fold desc="sample data">
+  const warningFields = ['regionalPartnersOnlyWarning', 'identifyingRegionalPartnerWarning'];
+  const workshopNamePlaceholder = '2017 Workshop (exact date to be determined)';
   const defaultSchoolDistrictData = {
     ['us-or-international']: 'us',
     ['school-type']: '',
@@ -26,21 +30,21 @@ describe("Tests for Teacher Application", () => {
 
   const privateSchoolData = Object.assign({}, defaultSchoolDistrictData, {
     ['school-type']: 'private',
-    ['school-state']: 'California',
+    ['school-state']: 'CA',
     ['school-name']: 'Milford Academy',
     ['school-zipcode']: '10000'
   });
 
   const publicSchoolData = Object.assign({}, defaultSchoolDistrictData, {
     ['school-type']: 'public',
-    ['school-state']: 'New York',
+    ['school-state']: 'NY',
     ['school-district']: '123456',
     ['school']: 'Williamsville High School',
   });
 
   const customPublicSchoolData = Object.assign({}, defaultSchoolDistrictData, {
     ['school-type']: 'public',
-    ['school-state']: 'New York',
+    ['school-state']: 'NY',
     ['school-district-other']: true,
     ['school-district-name']: 'Some undocumented public school',
     ['school-name']: 'Stealthy school',
@@ -58,6 +62,7 @@ describe("Tests for Teacher Application", () => {
       principalFirstName: 'George',
       principalLastName: 'Washington',
       principalEmail: 'washington@whitehouse.gov',
+      principalPrefix: 'Dr.'
     },
     selectionFields: {
       gradesAtSchool: ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString())),
@@ -65,22 +70,21 @@ describe("Tests for Teacher Application", () => {
       grades2016: ['9', '10', '11', '12'],
       subjects2016: ['Computer Science', 'Math', 'History'],
       grades2017: ['8', '9', '10', '11', '12'],
-      subjects2017: ['Computer Science', 'Math', 'History', 'Business']
+      subjects2017: ['Computer Science', 'Math', 'History', 'Business'],
     }
   };
 
   function likertValueOf(answer) {
-    return likertAnswers.indexOf(answer) + 1;
+    return (likertAnswers.indexOf(answer) + 1).toString();
   }
 
-  const defaultCsdFields = {
+  const defaultSurveyFields = {
+    selectionFields: {
+      currentCsOpportunities: ['After school clubs', 'Hour of Code']
+    },
     textFields: {
       whyCsIsImportant: 'Because all life is pain, and anyone who says otherwise is selling you something.',
       whatTeachingSteps: 'Sharks with frickin\' laser beams'
-    },
-    selectionFields: {
-      gradesPlanningToTeach: ['6', '7', '8'],
-      currentCsOpportunities: ['After school clubs', 'Hour of Code']
     },
     likertList: {
       allStudentsShouldLearn: likertValueOf('Strongly Agree'),
@@ -91,23 +95,42 @@ describe("Tests for Teacher Application", () => {
       csCreativity: likertValueOf('Strongly Agree'),
     },
     summerProgramFields: {
+      committedToSummer: 'Yes',
+      ableToAttendAssignedSummerWorkshop: 'Yes'
+    }
+  };
 
+  const defaultCsdFields = {
+    selectedCourse: {
+      selectedCourse: 'csd'
+    },
+    selectionFields: {
+      gradesPlanningToTeach: ['6', '7', '8'],
+    },
+  };
+
+  const defaultCspFields = {
+    selectedCourse: {
+      selectedCourse: 'csp'
+    },
+    selectionFields: {
+      cspDuration: 'Year-long course (~180 contact hours)',
+      cspApCourse: 'AP course only',
+      gradesPlanningToTeach: ['9', '10'],
+      cspApExamIntent: 'Yes'
     }
   };
   //</editor-fold>
 
-  function write(label, value) {
+  const write = (label, value) => {
     const field = form.find(`#${label}`);
-    expect(field.is('FieldGroup')).to.be.true;
-    if (!field.prop('componentClass') === 'textarea') {
-      expect(field.prop('type')).to.be.oneOf(['text', 'email']);
-    }
+
     field.simulate('change', {target: {id: field.prop('id'), value}});
     expect(form.state(label)).to.equal(value);
-  }
+  };
 
-  function check(groupName, values) {
-    const buttonList = form.find(`[groupName="${groupName}"]`);
+  const check = (groupName, values, parentElement = form) => {
+    const buttonList = parentElement.find(`[groupName="${groupName}"]`);
     expect(buttonList.is('ButtonList')).to.be.true;
 
     if (Array.isArray(values)) {
@@ -122,113 +145,25 @@ describe("Tests for Teacher Application", () => {
 
     buttonList.simulate('change', {[buttonList.prop('groupName')]: values});
     expect(form.state(groupName)).to.equal(values);
-  }
+  };
 
-  function pickLikert(name, value) {
+  const pickLikert = (name, value) => {
     const likertButton = form.find(`[name="${name}"]`).at(value - 1);
-    expect(likertButton.prop('value')).to.equal(value);
-    likertButton.simulate('change', {[name]: value});
-    expect(form.state(name)).to.equal(value);
-  }
+    expect(likertButton.prop('value')).to.equal(parseInt(value));
+    likertButton.simulate('change', {[name]: value.toString()});
+    expect(form.state(name)).to.equal(value.toString());
+  };
 
-  function pickCourse(course) {
+  const pickCourse = (course) => {
     const buttonList = form.find(`[value="${course}"]`);
     buttonList.simulate('change', course);
-  }
+  };
 
-  it("initial state of the page", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={defaultSchoolDistrictData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-      />
-    );
-
+  const assertNoFormErrors = () => {
     expect(form.instance().errorData).to.deep.equal({});
-    expect(form.find('SummerProgramContent').isEmpty()).to.be.true;
-    expect(form.find('#regionalPartnersOnlyWarning').isEmpty()).to.be.true;
-    expect(form.find('#identifyingRegionalPartnerWarning').isEmpty()).to.be.true;
-  });
+  };
 
-  it("Warning shows up for private / other schools", () => {
-    for (var schoolType of ['private', 'other']) {
-      privateSchoolData['school-type'] = schoolType;
-
-      form = shallow(
-        <TeacherApplication
-          schoolDistrictData={privateSchoolData}
-          districtErrorMessageHandler={districtErrorMessageHandler}
-        />
-      );
-
-      expect(form.instance().errorData).to.deep.equal({});
-      expect(form.find('SummerProgramContent').isEmpty()).to.be.true;
-      expect(form.find('#regionalPartnersOnlyWarning')).to.have.length(1);
-      expect(form.find('#identifyingRegionalPartnerWarning').isEmpty()).to.be.true;
-    }
-  });
-
-  it("IDing regional partner warning shows up if other district is checked", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={customPublicSchoolData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-      />
-    );
-    expect(form.instance().errorData).to.deep.equal({});
-    expect(form.find('SummerProgramContent').isEmpty()).to.be.true;
-    expect(form.find('#regionalPartnersOnlyWarning').isEmpty()).to.be.true;
-    expect(form.find('#identifyingRegionalPartnerWarning')).to.have.length(1);
-  });
-
-  it("IDing regional partner warning shows up if we have no regional partner", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={publicSchoolData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-      />
-    );
-    expect(form.instance().errorData).to.deep.equal({});
-    expect(form.find('SummerProgramContent').isEmpty()).to.be.true;
-    expect(form.find('#regionalPartnersOnlyWarning').isEmpty()).to.be.true;
-    expect(form.find('#identifyingRegionalPartnerWarning')).to.have.length(1);
-  });
-
-  it("No warning shows up for data where we have a regional partner", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={publicSchoolData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-        {...regionalPartnerExample}
-      />
-    );
-    expect(form.instance().errorData).to.deep.equal({});
-    expect(form.find('SummerProgramContent').isEmpty()).to.be.true;
-    expect(form.find('#regionalPartnersOnlyWarning').isEmpty()).to.be.true;
-    expect(form.find('#identifyingRegionalPartnerWarning').isEmpty()).to.be.true;
-  });
-
-  it("CSD / CSP section renders depending on what course is being taught", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={publicSchoolData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-        {...regionalPartnerExample}
-      />
-    );
-  });
-
-  it("Completed CSD applications for public schools get submitted without errors", () => {
-    form = shallow(
-      <TeacherApplication
-        schoolDistrictData={publicSchoolData}
-        districtErrorMessageHandler={districtErrorMessageHandler}
-        {...regionalPartnerExample}
-      />
-    );
-
-    pickCourse('csd');
-    let application = _.merge({}, defaultUser, defaultCsdFields);
+  const completeApplication = (application, workshopString) => {
     _.forEach(application['textFields'], (value, label) => {
       write(label, value);
     });
@@ -237,18 +172,189 @@ describe("Tests for Teacher Application", () => {
     });
     _.forEach(application['likertList'], (value, name) => {
       pickLikert(name, value);
-    })
+    });
+
+    let summerProgramContent = form.find('SummerProgramContent');
+    expect(summerProgramContent.prop('selectedWorkshop')).to.equal(workshopString);
+
+    summerProgramContent = summerProgramContent.shallow();
+    _.forEach(application['summerProgramFields'], (value, name) => {
+      check(name, value, summerProgramContent);
+    });
+
+    let button = form.find('Button').filter({children: 'Complete and Send'});
+    button.simulate('click');
+  };
+
+  const createTeacherApplication = (schoolDistrictData, regionalPartnerInformation = []) => {
+    return shallow(
+      <TeacherApplication
+        schoolDistrictData={schoolDistrictData}
+        districtErrorMessageHandler={districtErrorMessageHandler}
+        {...regionalPartnerInformation}
+      />
+    );
+  };
+
+  const assertSummerContentAndWarningExistance = (summerContentExpected, expectedWarningElementId) => {
+    expect(form.find('SummerProgramContent').isEmpty()).to.equal(!summerContentExpected);
+    expectedWarningElementId && expect(form.find(`#${expectedWarningElementId}`)).to.have.length(1);
+    warningFields.forEach((field) => {
+      (expectedWarningElementId !== field) && expect(form.find(`#${field}`).isEmpty()).to.be.true;
+    });
+  };
+
+  describe("Tests related to initial page state for given school district data", () => {
+    it("initial state of the page", () => {
+      form = createTeacherApplication(defaultSchoolDistrictData);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance();
+    });
+
+    it("Regional Partners Only warning shows up if private or other is selected for school type", () => {
+      for (var schoolType of ['private', 'other']) {
+        privateSchoolData['school-type'] = schoolType;
+
+        form = createTeacherApplication(privateSchoolData);
+
+        assertNoFormErrors();
+        assertSummerContentAndWarningExistance(false, 'regionalPartnersOnlyWarning');
+      }
+    });
+
+    it("IDing regional partner warning shows up if other district is checked", () => {
+      form = createTeacherApplication(customPublicSchoolData);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(false, 'identifyingRegionalPartnerWarning');
+    });
+
+    it("IDing regional partner warning shows up if we have no regional partner", () => {
+      form = createTeacherApplication(publicSchoolData);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(false, 'identifyingRegionalPartnerWarning');
+    });
+
+    it("No warning shows up for data where we have a regional partner", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(false);
+    });
   });
 
-  it("Completed CSP applications for private schools get submitted without errors");
+  describe("Tests for completed applications", () => {
+    let server;
 
-  it("Applications missing required data are not submitted");
+    before(() => {
+      server = sinon.fakeServer.create();
+      server.respondWith("OK");
+    });
 
-  it("Applications with non emails in email fields are not submitted");
+    after(() => {
+      server.restore();
+    });
 
-  it("Applications with non phone numbers in phone number fields are not submitted");
+    it("Completed CSD applications for public schools get submitted without errors", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
 
-  it("Teachers who do not commit to attending are given a warning");
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
 
-  it("Emoji doesn't ruin everything");
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true);
+      expect(form.state()).to.deep.equal(Object.assign({}, {submitting: true}, ...Object.values(application)));
+    });
+
+    it("Completed CSP applications for public schools get submitted without errors", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csp');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCspFields);
+      completeApplication(application, 'A+ College Ready: June 26 - 30, 2017');
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true);
+      expect(form.state()).to.deep.equal(Object.assign({}, {submitting: true}, ...Object.values(application)));
+    });
+
+    it("Completed CSD applications for private schools get submitted without errors", () => {
+      form = createTeacherApplication(privateSchoolData);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['summerProgramFields']['ableToAttendAssignedSummerWorkshop'];
+      completeApplication(application, '2017 Workshop (exact date to be determined)');
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true, 'regionalPartnersOnlyWarning');
+      expect(form.state()).to.deep.equal(Object.assign({}, {submitting: true}, ...Object.values(application)));
+    });
+
+    it("IDing regional partner warning shows up if other district is checked", () => {
+      form = createTeacherApplication(customPublicSchoolData);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['summerProgramFields']['ableToAttendAssignedSummerWorkshop'];
+
+      completeApplication(application, workshopNamePlaceholder);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true, 'identifyingRegionalPartnerWarning');
+      expect(form.state()).to.deep.equal(Object.assign({}, {submitting: true}, ...Object.values(application)));
+    });
+
+    it("IDing regional partner warning shows up if we have no regional partner", () => {
+      form = createTeacherApplication(publicSchoolData);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['summerProgramFields']['ableToAttendAssignedSummerWorkshop'];
+
+      completeApplication(application, workshopNamePlaceholder);
+
+      assertNoFormErrors();
+      assertSummerContentAndWarningExistance(true, 'identifyingRegionalPartnerWarning');
+      expect(form.state()).to.deep.equal(Object.assign({}, {submitting: true}, ...Object.values(application)));
+    });
+  });
+
+  describe("Tests for expected failure cases", () => {
+    it("Applications missing required data are not submitted", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['textFields']['firstName'];
+
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      expect(form.state('submitting')).to.be.false;
+    });
+
+    it("Applications with non emails in email fields are not submitted", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      application['textFields']['primaryEmail'] = 'not an email';
+
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      expect(form.state('submitting')).to.be.false;
+    });
+
+    it("Applications with non phone numbers in phone number fields are not submitted", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      application['textFields']['phoneNumber'] = 'not a number';
+
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      expect(form.state('submitting')).to.be.false;
+    });
+  });
 });
