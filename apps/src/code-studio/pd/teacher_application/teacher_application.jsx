@@ -113,6 +113,10 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.id]: event.target.value});
   },
 
+  handleRadioListChange(event) {
+    this.setState({[event.target.name]: event.target.value});
+  },
+
   handleButtonListChange(changedData) {
     this.setState(changedData);
   },
@@ -365,15 +369,15 @@ const TeacherApplication = React.createClass({
         </ControlLabel>
         <Radio
           value="csd"
-          name="courseSelection"
-          onChange={this.handleButtonListChange}
+          name="selectedCourse"
+          onChange={this.handleRadioListChange}
         >
           Computer Science Discoveries (designed for 7th - 9th grade)
         </Radio>
         <Radio
           value="csp"
-          name="courseSelection"
-          onChange={this.handleButtonListChange}
+          name="selectedCourse"
+          onChange={this.handleRadioListChange}
         >
           Computer Science Principles (designed for 9th - 12th grade, and can be implemented as an AP or introductory course)
         </Radio>
@@ -510,7 +514,7 @@ const TeacherApplication = React.createClass({
                               name={question}
                               value={j + 1}
                               checked={parseInt(this.state[question], 10) === j + 1}
-                              onChange={this.handleButtonListChange}
+                              onChange={this.handleRadioListChange}
                             />
                           </td>
                         );

@@ -150,13 +150,13 @@ describe("Tests for Teacher Application", () => {
   const pickLikert = (name, value) => {
     const likertButton = form.find(`[name="${name}"]`).at(value - 1);
     expect(likertButton.prop('value')).to.equal(parseInt(value));
-    likertButton.simulate('change', {[name]: value.toString()});
+    likertButton.simulate('change', {target: {name: name, value: value.toString()}});
     expect(form.state(name)).to.equal(value.toString());
   };
 
   const pickCourse = (course) => {
     const buttonList = form.find(`[value="${course}"]`);
-    buttonList.simulate('change', {selectedCourse: course});
+    buttonList.simulate('change', {target: {name: 'selectedCourse', value: course}});
   };
 
   const assertNoFormErrors = () => {
