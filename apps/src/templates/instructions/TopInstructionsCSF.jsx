@@ -45,6 +45,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const CONTAINED_LEVEL_PADDING = 10;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -146,6 +147,10 @@ const styles = {
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
     float: 'left'
+  },
+  containedLevel: {
+    padding: CONTAINED_LEVEL_PADDING,
+    backgroundColor: '#f2f2f2',
   },
 };
 
@@ -327,7 +332,7 @@ var TopInstructions = React.createClass({
    */
   getMinHeight(collapsed=this.props.collapsed) {
     if (this.refs.containedLevel) {
-      return getOuterHeight(this.refs.containedLevel);
+      return $('#containedLevel0').outerHeight() + 2 * CONTAINED_LEVEL_PADDING;
     }
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
@@ -376,8 +381,10 @@ var TopInstructions = React.createClass({
    */
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
-    const instructionsContent = this.refs.instructions || this.refs.containedLevel;
-    const maxNeededHeight = getOuterHeight(instructionsContent, true) +
+    const instructionsContent = this.refs.instructions;
+    const maxNeededHeight = (this.props.hasContainedLevels ?
+        $("#containedLevel0").outerHeight() + (2 * CONTAINED_LEVEL_PADDING) :
+        getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
@@ -498,27 +505,32 @@ var TopInstructions = React.createClass({
 
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+    const paddingToDeduct = this.props.hasContainedLevels ?
+      2 * CONTAINED_LEVEL_PADDING : 0;
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
       {
-        height: this.props.height - resizerHeight
+        height: this.props.height - resizerHeight - paddingToDeduct,
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.overlayVisible && styles.withOverlay
+      this.props.overlayVisible && styles.withOverlay,
+      this.props.hasContainedLevels && styles.containedLevel,
     ];
 
     if (this.props.hasContainedLevels) {
       return (
-        <div style={mainStyle} className="editor-column">
-          <ContainedLevel ref="containedLevel" />
+        <div>
+          <div style={mainStyle} className="editor-column">
+            <ContainedLevel ref="containedLevel" />
+          </div>
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
             />}
-      </div>
+        </div>
       );
     }
 
