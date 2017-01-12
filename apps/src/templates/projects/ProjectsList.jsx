@@ -1,11 +1,24 @@
 import React from 'react';
 import {Table} from 'reactabular';
+import color from "../../util/color";
 
 const styles = {
   cell: {
     border: '1px solid gray',
-    padding: 5,
-  }
+    padding: 10,
+    fontSize: 14,
+  },
+  nameCell: {
+    border: '1px solid gray',
+    padding: 10,
+    fontSize: 14,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+  headerCell: {
+    border: '1px solid gray',
+    padding: 10,
+    backgroundColor: color.teal,
+  },
 };
 
 /**
@@ -65,16 +78,18 @@ const ProjectsList = React.createClass({
         property: 'name',
         header: {
           label: 'Project Name',
+          props: {style: styles.headerCell},
         },
         cell: {
           format: nameFormatter,
-          props: {style: styles.cell}
+          props: {style: styles.nameCell}
         }
       },
       {
         property: 'studentName',
         header: {
           label: 'Student Name',
+          props: {style: styles.headerCell},
         },
         cell: {
           props: {style: styles.cell}
@@ -84,6 +99,7 @@ const ProjectsList = React.createClass({
         property: 'type',
         header: {
           label: 'Type',
+          props: {style: styles.headerCell},
         },
         cell: {
           format: typeFormatter,
@@ -94,6 +110,7 @@ const ProjectsList = React.createClass({
         property: 'updatedAt',
         header: {
           label: 'Last Edited',
+          props: {style: styles.headerCell},
         },
         cell: {
           format: dateFormatter,
@@ -105,17 +122,14 @@ const ProjectsList = React.createClass({
 
   render() {
     return (
-      <div>
-        <h2>my projects list</h2>
-        <Table.Provider
-          className="pure-table pure-table-striped"
-          columns={this.getColumns()}
-        >
-          <Table.Header />
+      <Table.Provider
+        className="pure-table pure-table-striped"
+        columns={this.getColumns()}
+      >
+        <Table.Header />
 
-          <Table.Body rows={this.props.projectsData} rowKey="updatedAt" />
-        </Table.Provider>
-      </div>
+        <Table.Body rows={this.props.projectsData} rowKey="updatedAt" />
+      </Table.Provider>
     );
   }
 });
