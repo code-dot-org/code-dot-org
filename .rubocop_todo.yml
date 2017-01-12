@@ -25,11 +25,6 @@ Lint/ParenthesesAsGroupedExpression:
 Lint/RescueException:
   Enabled: false
 
-# Offense count: 4
-# Cop supports --auto-correct.
-Lint/UnifiedInteger:
-  Enabled: false
-
 # Offense count: 48
 # Cop supports --auto-correct.
 # Configuration parameters: AllowUnusedKeywordArguments, IgnoreEmptyMethods.
