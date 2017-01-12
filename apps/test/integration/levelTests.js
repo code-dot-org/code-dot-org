@@ -11,11 +11,12 @@
 
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
-import {stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
 import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -109,6 +110,7 @@ describe('Level tests', function () {
   beforeEach(function () {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
+    registerReducers({stageLock});
 
     tickInterval = window.setInterval(function () {
       if (clock) {
