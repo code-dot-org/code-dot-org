@@ -124,6 +124,8 @@ DATE_RANGES = [
 MONTHLY_FILENAME_PREFIX = '/tmp/proficiency'.freeze
 AGGREGATE_FILENAME = '/tmp/proficiency_20160101_20170101'.freeze
 
+SLICE_SIZE = 5_000
+
 # @param line [Array] an array giving UserProficiency values
 # @return [Boolean] a boolean indicating whether basic proficiency has been
 #   achieved.
@@ -254,14 +256,14 @@ def update_database
     mapped_row = row[0..50].map(&:to_i) << row[51] << row[52]
     user_proficiency_data << mapped_row
   end
-  puts "READ DATA FROM #{AGGREGATE_FILENAME}."
+  puts "READ DATA (#{user_proficiency_data.size} rows) FROM #{AGGREGATE_FILENAME}."
 
   slice_count = 0
   puts "UPDATING DB..."
   # Update the DB with the data in user_proficiency_hash.
   begin
-    user_proficiency_data.each_slice(1_000) do |slice|
-      puts "  SLICE_COUNT: #{slice_count}..."
+    user_proficiency_data.each_slice(SLICE_SIZE) do |slice|
+      puts "  SLICE_COUNT: #{slice_count} of #{user_proficiency_data.length / SLICE_SIZE}..."
 
       ActiveRecord::Base.transaction do
         slice.each do |proficiency|
