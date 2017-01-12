@@ -6,7 +6,7 @@ export function validateDistrictData(formData) {
     return false;
   }
 
-  if (['private', 'other'].includes(document.getElementById('school-type').value.toLowerCase())) {
+  if (['private', 'other'].includes(formData['school-type'].toLowerCase())) {
     //Private schools need to fill out name and zipcode
    return !!(formData['school-name'] && formData['school-zipcode']);
   } else if (formData['school-district-other']) {
