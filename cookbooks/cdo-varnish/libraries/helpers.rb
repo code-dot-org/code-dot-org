@@ -110,11 +110,9 @@ def process_vary(behavior, _)
   behavior[:headers].each do |header|
     out << set_vary(header, 'beresp')
   end
-  case behavior[:cookies]
-  when 'all'
+  if behavior[:cookies] == 'all'
     out << set_vary('Cookie', 'beresp')
-  when 'none'
-  else
+  elsif behavior[:cookies] != 'none'
     behavior[:cookies].each do |cookie|
       out << set_vary("X-COOKIE-#{cookie}", 'beresp')
     end
