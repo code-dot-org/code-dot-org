@@ -36,6 +36,7 @@ import { setPageConstants } from './redux/pageConstants';
 import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
+import {blocks as makerDropletBlocks} from './makerlab/dropletConfig';
 import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
@@ -1982,6 +1983,24 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     // Remove onRecordEvent from autocomplete, while still recognizing it as a command
     const block = config.dropletConfig.blocks.find(block => {
       return block.func === 'onRecordEvent';
+    });
+    if (block) {
+      block.noAutocomplete = true;
+    }
+  }
+
+  // Remove maker API blocks from palette and autocomplete, unless maker APIs are enabled.
+  // We didn't have access to window.dashboard.project.useMakerAPIs() when dropletConfig
+  // was initialized, so include it initially, and conditionally remove it here.
+  if (!window.dashboard.project.useMakerAPIs()) {
+    //// Remove maker blocks from the palette
+    makerDropletBlocks.forEach(block => {
+      delete config.level.codeFunctions[block.func];
+    });
+
+    // Remove onRecordEvent from autocomplete, while still recognizing it as a command
+    const block = config.dropletConfig.blocks.find(block => {
+      return makerDropletBlocks.find(makerBlock => makerBlock.func === block.func);
     });
     if (block) {
       block.noAutocomplete = true;

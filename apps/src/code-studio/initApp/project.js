@@ -145,6 +145,14 @@ var projects = module.exports = {
   },
 
   /**
+   * Whether this project's source has Maker APIs enabled.
+   * @returns {boolean}
+   */
+  useMakerAPIs() {
+    return currentSources.makerAPIsEnabled;
+  },
+
+  /**
    * Sets abuse score to zero, saves the project, and reloads the page
    */
   adminResetAbuseScore() {
@@ -415,7 +423,7 @@ var projects = module.exports = {
   getStandaloneApp() {
     switch (appOptions.app) {
       case 'applab':
-        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
+        return 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -570,7 +578,8 @@ var projects = module.exports = {
       this.sourceHandler.getLevelSource().then(response => {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
-        const newSources = {source, html, animations};
+        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+        const newSources = {source, html, animations, makerAPIsEnabled};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
           callCallback();
