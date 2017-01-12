@@ -20,8 +20,21 @@ class Pd::Attendance < ActiveRecord::Base
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id
   belongs_to :teacher, class_name: 'User', foreign_key: :teacher_id
+  belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
 
   has_one :workshop, class_name: 'Pd::Workshop', through: :session
+
+  validate :teacher_or_enrollment_must_be_present
+  def teacher_or_enrollment_must_be_present
+    if teacher.nil? && enrollment.nil?
+      errors.add(:base, 'Teacher or enrollment must be present.')
+    end
+  end
+
+  before_save :find_matching_enrollment
+  def find_matching_enrollment
+    self.enrollment = workshop.enrollments.find_by(user_id: teacher_id) unless enrollment
+  end
 
   def self.for_teacher(teacher)
     where(teacher_id: teacher.id)

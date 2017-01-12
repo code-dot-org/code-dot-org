@@ -326,10 +326,12 @@ class Pd::Workshop < ActiveRecord::Base
 
     # Send the emails
     enrollments.each do |enrollment|
-      next unless enrollment.user
+      if account_required_for_attendance?
+        next unless enrollment.user
 
-      # Make sure user joined the section
-      next unless section.students.exists?(enrollment.user.id)
+        # Make sure user joined the section
+        next unless section.students.exists?(enrollment.user.id)
+      end
 
       enrollment.send_exit_survey
     end
@@ -375,5 +377,15 @@ class Pd::Workshop < ActiveRecord::Base
   # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
   def professional_learning_partner
     ProfessionalLearningPartner.find_by_contact_id organizer.id
+  end
+
+  # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
+  def account_required_for_attendance?
+    case course
+      when Pd::Workshop::COURSE_COUNSELOR, COURSE_ADMIN
+        false
+      else
+        true
+    end
   end
 end

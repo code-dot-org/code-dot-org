@@ -14,6 +14,7 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
         first_name: enrollment.first_name,
         last_name: enrollment.last_name,
         email: enrollment.email,
+        enrollment_id: enrollment.id,
         user_id: id_or_nil(user),
         in_section: in_section?(user),
         attended: attended?(user)
