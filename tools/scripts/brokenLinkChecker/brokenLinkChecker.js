@@ -4,22 +4,13 @@ const blc = require('broken-link-checker');
 const https = require('https');
 const url = require('url');
 
-var whitelist = require('./whitelist.json').ignore;
+const whitelist = require('./whitelist.json').ignore;
 
-const slack_url =
-  // test room URL
-  "https://hooks.slack.com/services/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";
+const slackUrl = "https://hooks.slack.com/services/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";
 
-  // staging room URL
-  //"https://hooks.slack.com/services/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";
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-var totalLinkCount = 0;
-var brokenLinkCount = 0;
-var whitedlistedLinkCount = 0;
+let totalLinkCount = 0;
+let brokenLinkCount = 0;
+let whitedlistedLinkCount = 0;
 
 /* Returns true if the provided string contains one of the whitelisted strings.
  * Note that it doesn't need to be an exact match; rather a whitelisted string
@@ -28,8 +19,8 @@ var whitedlistedLinkCount = 0;
  * "www.testdomain.com/test/first" will match.
  */
 function stringContainsWhitelistedString(s) {
-  for (var i = 0; i < whitelist.length; i++) {
-    if (s.indexOf(whitelist[i]) !== -1) {
+  for (let i = 0; i < whitelist.length; i++) {
+    if (s.includes(whitelist[i])) {
       return true;
     }
   }
@@ -37,33 +28,33 @@ function stringContainsWhitelistedString(s) {
   return false;
 }
 
-function logText(text) {
-  const slack_req_opts = url.parse(slack_url);
-  slack_req_opts.method = 'POST';
-  slack_req_opts.headers = {
+function logTextToSlack(text) {
+  const slackReqOpts = url.parse(slackUrl);
+  slackReqOpts.method = 'POST';
+  slackReqOpts.headers = {
     'Content-Type': 'application/json'
   };
 
-  var req = https.request(slack_req_opts, function (res) {
+  let req = https.request(slackReqOpts, function (res) {
     if (res.statusCode === 200) {
     } else {
       console.log('Slack post status code: ' + res.statusCode);
     }
   });
 
-  var params = { text: text, username: "Broken Link Checker", "icon_emoji": ":koala:" };
+  let params = { text: text, username: "Broken Link Checker", "icon_emoji": ":koala:" };
   req.write(JSON.stringify(params));
   req.end();
 }
 
-var options = { honorRobotExclusions: false };
+let options = { honorRobotExclusions: false };
 
-var siteChecker = new blc.SiteChecker(options, {
+let siteChecker = new blc.SiteChecker(options, {
   link: function (result, customData) {
     if (result.broken) {
       if (!stringContainsWhitelistedString(result.url.resolved)) {
         console.log("Broken link:", result.url.resolved, "in", result.base.resolved);
-        logText("Broken link: <" + result.url.resolved + "> in <" + result.base.resolved + ">");
+        logTextToSlack("Broken link: <" + result.url.resolved + "> in <" + result.base.resolved + ">");
         brokenLinkCount++;
       } else {
         console.log("  Found whitelisted URL:", result.url.resolved);
@@ -73,17 +64,18 @@ var siteChecker = new blc.SiteChecker(options, {
     totalLinkCount++;
   },
   end: function () {
-    logText(
+    console.log("Done.");
+    logTextToSlack(
       "...end broken link check.\n_(Of " +
-      numberWithCommas(totalLinkCount) + " links, " +
-      numberWithCommas(brokenLinkCount) + " were broken, and " +
-      numberWithCommas(whitedlistedLinkCount) + " were skipped due to whitelist.)_");
+      totalLinkCount.toLocaleString() + " links, " +
+      brokenLinkCount.toLocaleString() + " were broken, and " +
+      whitedlistedLinkCount.toLocaleString() + " were skipped due to whitelist.)_");
   }
 });
 
-logText(
+logTextToSlack(
   "Beginning broken link check...\n_(Ignoring " +
-  numberWithCommas(whitelist.length) + " URLs specified in whitelist.json)_");
+  whitelist.length.toLocaleString() + " URLs specified in whitelist.json)_");
 
 siteChecker.enqueue('https://staging.code.org');
 
