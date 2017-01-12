@@ -15,7 +15,7 @@ import AppLabView from './AppLabView';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
-import makerDropletConfig from '../makerlab/dropletConfig';
+import * as makerDropletConfig from '../makerlab/dropletConfig';
 import AppStorage from './appStorage';
 import { initFirebaseStorage } from '../storage/firebaseStorage';
 import { getColumnsRef, onColumnNames, addMissingColumns } from '../storage/firebaseMetadata';
@@ -686,11 +686,7 @@ Applab.init = function (config) {
 
   config.varsInGlobals = true;
 
-  if (config.level.makerlabEnabled) {
-    config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
-  } else {
-    config.dropletConfig = dropletConfig;
-  }
+  config.dropletConfig = utils.deepMergeConcatArrays(dropletConfig, makerDropletConfig);
 
   // Set the custom set of blocks (may have had makerlab blocks merged in) so
   // we can later pass the custom set to the interpreter.
