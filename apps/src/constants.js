@@ -44,6 +44,7 @@ exports.TestResults = {
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
   EMPTY_FUNCTIONAL_BLOCK: 18,         // There's a functional block with an open input
   EXAMPLE_FAILED: 19,                 // One of our examples didn't match the definition
+  MINIMUM_PASS_RESULT: 20,
 
   // start using negative values, since we consider >= 20 to be "solved"
   NESTED_FOR_SAME_VARIABLE: -2,       // We have nested for loops each using the same counter variable
@@ -57,6 +58,7 @@ exports.TestResults = {
 
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
+  CONTAINED_LEVEL_ATTEMPT: -49,       // For contained levels, we only care about if they've attempted or not.
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.
@@ -65,11 +67,17 @@ exports.TestResults = {
 
   // The level was solved in an optimal way.
   FREE_PLAY: 30,   // The user is in free-play mode.
+  MINIMUM_OPTIMAL_RESULT: 30,
   PASS_WITH_EXTRA_TOP_BLOCKS: 31, // There was more than one top-level block.
   EDIT_BLOCKS: 70, // The user is creating/editing a new level.
 
   // The level was solved in the ideal manner.
-  ALL_PASS: 100
+  ALL_PASS: 100,
+
+  SUBMITTED_RESULT: 1000,
+  LOCKED_RESULT: 1001,
+  REVIEW_REJECTED_RESULT: 1500,
+  REVIEW_ACCEPTED_RESULT: 2000,
 };
 
 exports.BeeTerminationValue = {

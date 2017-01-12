@@ -3,16 +3,7 @@
  */
 
 import { makeEnum } from '@cdo/apps/utils';
-
-/**
- * See ActivityConstants.
- */
-const MINIMUM_PASS_RESULT = 20;
-const MINIMUM_OPTIMAL_RESULT = 30;
-export const SUBMITTED_RESULT = 1000;
-export const LOCKED_RESULT = 1001;
-const REVIEW_REJECTED_RESULT = 1500;
-const REVIEW_ACCEPTED_RESULT = 2000;
+import { TestResults } from '@cdo/apps/constants';
 
 /**
  * Different possibilites for level.status. Note, these values are also used
@@ -39,22 +30,23 @@ export const activityCssClass = result => {
   if (!result) {
     return LevelStatus.not_tried;
   }
-  if (result === REVIEW_ACCEPTED_RESULT) {
+  if (result === TestResults.REVIEW_ACCEPTED_RESULT) {
     return LevelStatus.review_accepted;
   }
-  if (result === REVIEW_REJECTED_RESULT) {
+  if (result === TestResults.REVIEW_REJECTED_RESULT) {
     return LevelStatus.review_rejected;
   }
-  if (result === SUBMITTED_RESULT) {
+  if (result === TestResults.SUBMITTED_RESULT) {
     return LevelStatus.submitted;
   }
-  if (result === LOCKED_RESULT) {
+  if (result === TestResults.LOCKED_RESULT) {
     return LevelStatus.locked;
   }
-  if (result >= MINIMUM_OPTIMAL_RESULT) {
+  if (result >= TestResults.MINIMUM_OPTIMAL_RESULT ||
+      result === TestResults.CONTAINED_LEVEL_ATTEMPT) {
     return LevelStatus.perfect;
   }
-  if (result >= MINIMUM_PASS_RESULT) {
+  if (result >= TestResults.MINIMUM_PASS_RESULT) {
     return LevelStatus.passed;
   }
   return LevelStatus.attempted;
