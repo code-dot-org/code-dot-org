@@ -3,8 +3,8 @@
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-require('@cdo/apps/code-studio/levels/multi.js');
-require('@cdo/apps/code-studio/levels/textMatch.js');
+window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
+window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
 
 window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
