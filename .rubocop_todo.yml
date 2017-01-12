@@ -11,10 +11,6 @@ Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
 # Offense count: 2
-Lint/EmptyWhen:
-  Enabled: false
-
-# Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: runtime_error, standard_error
