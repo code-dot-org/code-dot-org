@@ -41,10 +41,7 @@ var Multi = function (levelId, id, app, standalone, numAnswers, answers, answers
 
   this.submitAllowed = true;
 
-  $(document).ready($.proxy(function () {
-    this.ready();
-  }, this));
-
+  $(document).ready(() => this.ready());
 };
 
 
@@ -245,22 +242,31 @@ Multi.prototype.submitButtonClick = function () {
   // already crossed out, then mark it as answered wrong.
   if (this.numAnswers === 1 &&
       this.crossedAnswers.indexOf(this.lastSelectionIndex) === -1 &&
-      ! this.validateAnswers()) {
+      !this.validateAnswers()) {
     $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
     $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
 
+/**
+ * @returns {boolean} True if this Multi has been provided with answers, and the
+ *   selected answer(s) are the correct one(s).
+ */
 Multi.prototype.validateAnswers = function () {
+  if (!this.answers) {
+    return false;
+  }
+
   if (this.selectedAnswers.length === this.numAnswers) {
     for (var i = 0; i < this.numAnswers; i++) {
-      if (! this.answers[this.selectedAnswers[i]]) {
+      if (!this.answers[this.selectedAnswers[i]]) {
         return false;
       }
     }
     return true;
   }
+  return false;
 };
 
 export default Multi;
