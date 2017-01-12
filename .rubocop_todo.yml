@@ -65,12 +65,6 @@ Performance/CompareWithBlock:
 Performance/TimesMap:
   Enabled: false
 
-# Offense count: 43
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect.
-Security/JSONLoad:
-  Enabled: false
-
 # Offense count: 146
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.

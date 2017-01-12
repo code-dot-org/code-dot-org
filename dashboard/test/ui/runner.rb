@@ -175,7 +175,7 @@ passed_features = ARGV + ($options.feature || [])
 # Standardize: Drop leading dot-slash on feature paths
 passed_features.map! {|feature| feature.gsub(/^\.\//, '')}
 
-$browsers = JSON.load(open("browsers.json"))
+$browsers = JSON.parse(open("browsers.json"))
 
 $lock = Mutex.new
 $suite_start_time = Time.now

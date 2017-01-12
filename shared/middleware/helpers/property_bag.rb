@@ -53,7 +53,7 @@ class PropertyBag
       end
     end
 
-    JSON.load(row[:value])
+    JSON.parse(row[:value])
   end
 
   def to_hash
@@ -112,7 +112,7 @@ class DynamoPropertyBag
     ).item
 
     raise NotFound, "key '#{name}' not found" unless item
-    JSON.load(item['value'])
+    JSON.parse(item['value'])
   end
 
   def set(name, value, ip_address, time = DateTime.now)
@@ -153,7 +153,7 @@ class DynamoPropertyBag
       ).first
 
       page[:items].each do |item|
-        results[item['name']] = JSON.load(item['value'])
+        results[item['name']] = JSON.parse(item['value'])
       end
 
       last_evaluated_key = page[:last_evaluated_key]
