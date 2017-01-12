@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TeacherApplication from '@cdo/apps/code-studio/pd/teacher_application/teacher_application.jsx';
+import {TeacherApplication} from '@cdo/apps/code-studio/pd/teacher_application/teacher_application.jsx';
 
 let schoolDistrictData = {
   ['us-or-international']: '',
