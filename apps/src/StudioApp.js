@@ -591,17 +591,17 @@ StudioApp.prototype.init = function (config) {
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
-    var codeDiv = document.createElement('div');
+    var contentDiv = document.createElement('div');
     var dialog = this.createModalDialog({
       Dialog: this.Dialog,
-      contentDiv: codeDiv,
+      contentDiv: contentDiv,
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal'
     });
     ReactDOM.render(React.createElement(VersionHistory, {
       handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
       useFilesApi: !!config.useFilesApi
-    }), codeDiv);
+    }), contentDiv);
 
     dialog.show();
   };

@@ -61,7 +61,7 @@ const DataWorkspace = React.createClass({
               label={msg.showVersionsHeader()}
               headerHasFocus={!this.props.isRunning}
               isRtl={isRtl}
-              onClick={() => this.props.handleVersionHistory()}
+              onClick={this.props.handleVersionHistory}
             />
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
