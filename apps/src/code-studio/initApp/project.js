@@ -17,7 +17,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-var queryParams = require('../utils').queryParams;
+import {queryParams, hasQueryParam} from '../utils';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -351,6 +351,7 @@ var projects = module.exports = {
         sourceHandler.setInitialLevelHtml(currentSources.html);
       }
 
+      setMakerAPIsStatusFromQueryParams();
       if (currentSources.makerAPIsEnabled) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
@@ -835,6 +836,19 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
   Promise.all(deferredCallsToMake).then(function () {
     callback();
   });
+}
+
+/**
+ * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
+ */
+function setMakerAPIsStatusFromQueryParams() {
+  if (hasQueryParam('enableMaker')) {
+    currentSources.makerAPIsEnabled = true;
+  }
+
+  if (hasQueryParam('disableMaker')) {
+    currentSources.makerAPIsEnabled = false;
+  }
 }
 
 /**
