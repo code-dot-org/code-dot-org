@@ -60,7 +60,7 @@ const DesignModeHeaders = React.createClass({
       </span>
     );
 
-    var isRtl = this.props.localeDirection === 'rtl';
+    const isRtl = this.props.localeDirection === 'rtl';
     const hasFocus = !this.props.isRunning;
 
     return (
@@ -89,7 +89,7 @@ const DesignModeHeaders = React.createClass({
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
           isRtl={isRtl}
-          onClick={() => this.props.handleVersionHistory()}
+          onClick={this.props.handleVersionHistory}
         />
         <PaneSection id="design-workspace-header" className="workspace-header">
           <span>{applabMsg.designWorkspaceHeader()}</span>
