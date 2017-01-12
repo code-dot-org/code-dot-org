@@ -405,6 +405,28 @@ module.exports = {
     },
 
     {
+      description: "version history button works in design mode",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+
+        $("#designModeButton").click();
+        assert.equal($('#design-mode-versions-header').is(':visible'), true,
+          'version history button is visible');
+
+        $('#design-mode-versions-header').click();
+        assert.equal($('.dialog-title:visible').text(), "Version History",
+          'version history dialog is visible');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "exercise CHART element",
       editCode: true,
       xml: '',
