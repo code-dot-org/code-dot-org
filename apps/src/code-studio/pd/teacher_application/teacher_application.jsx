@@ -111,13 +111,12 @@ const TeacherApplication = React.createClass({
     this.setState({[event.target.id]: event.target.value});
   },
 
-  handleRadioButtonListChange(event) {
-    this.setState({[event.target.name]: event.target.value});
+  handleRadioButtonListChange(changedData) {
+    this.setState(changedData);
   },
 
-  handleCheckboxChange(event) {
-    const selectedButtons = $(`[name=${event.target.name}]:checked`).map( (index, element) => element.value).toArray();
-    this.setState({[event.target.name]: selectedButtons});
+  handleCheckboxChange(changedData) {
+    this.setState(changedData);
   },
 
   getRequiredValidationErrorMessage(key) {
@@ -216,13 +215,13 @@ const TeacherApplication = React.createClass({
         />
         <FieldGroup
           id="preferredFirstName"
-          label="Preferred First Name"
+          label="Preferred first name"
           type="text"
           onChange={this.handleTextChange}
         />
         <FieldGroup
           id="lastName"
-          label="Last Name"
+          label="Last name"
           type="text"
           onChange={this.handleTextChange}
           required={true}
@@ -254,7 +253,7 @@ const TeacherApplication = React.createClass({
         />
         <ButtonList
           type="radio"
-          label="Gender Identity"
+          label="Gender identity"
           groupName="genderIdentity"
           answers={["Female", "Male", "Other", "Prefer not to answer"]}
           onChange={this.handleRadioButtonListChange}
@@ -343,7 +342,7 @@ const TeacherApplication = React.createClass({
         </FormGroup>
         <FieldGroup
           id="principalEmail"
-          label="Principal's Email Address"
+          label="Principal's email address"
           type="email"
           onChange={this.handleTextChange}
           required={true}

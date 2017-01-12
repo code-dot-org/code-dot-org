@@ -18,6 +18,23 @@ const ButtonList = React.createClass({
     errorText: React.PropTypes.string,
   },
 
+  handleChange(event) {
+    let value;
+    if (this.props.type === 'radio') {
+      value = event.target.value;
+    } else if (this.props.type === 'check') {
+      const currentSelection = new Set(this.props.selectedItems);
+      if (event.target.checked) {
+        currentSelection.add(event.target.value);
+      } else {
+        currentSelection.delete(event.target.value);
+      }
+      value = Array.from(currentSelection);
+    }
+    console.log("on Change with", {[this.props.groupName]: value});
+    this.props.onChange({[this.props.groupName]: value});
+  },
+
   renderInputComponents() {
     const InputComponent = {radio: Radio, check: Checkbox}[this.props.type];
     let otherDiv;
@@ -36,16 +53,17 @@ const ButtonList = React.createClass({
       );
     }
 
-    const options = answers.map ( (answer, i) => {
-      const checked = this.props.type === 'radio' ? (this.props.selectedItems === answer)
-        : !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
+    const options = answers.map((answer, i) => {
+      const checked = this.props.type === 'radio' ?
+                      (this.props.selectedItems === answer) :
+                      !!(this.props.selectedItems && this.props.selectedItems.indexOf(answer) >= 0);
       return (
         <InputComponent
           value={answer}
           label={answer}
           key={i}
           name={this.props.groupName}
-          onChange={this.props.onChange}
+          onChange={this.handleChange}
           checked={checked}
         >
           {answer === otherString ? otherDiv : answer}
