@@ -409,7 +409,6 @@ module.exports = {
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
-
         $("#designModeButton").click();
         assert.equal($('#design-mode-versions-header').is(':visible'), true,
           'version history button is visible');
