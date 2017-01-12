@@ -36,6 +36,35 @@ module.exports = {
     },
 
     {
+      description: "version history button works in data mode",
+      editCode: true,
+      useFirebase: true,
+
+      runBeforeClick: function (assert) {
+        $("#dataModeButton").click();
+        assert.equal($('#dataOverview').is(':visible'), true, 'dataOverview is visible');
+        assert.equal($('#data-mode-versions-header').is(':visible'), true,
+          'version history button is visible');
+
+        $('#data-mode-versions-header').click();
+        assert.equal($('.dialog-title:visible').text(), "Version History",
+          'version history dialog is visible');
+
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "Data Browser shows records and key value pairs",
       editCode: true,
       useFirebase: true,
