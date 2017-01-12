@@ -12,6 +12,7 @@
 #
 # Indexes
 #
+#  index_pd_attendances_on_pd_enrollment_id              (pd_enrollment_id)
 #  index_pd_attendances_on_pd_session_id_and_teacher_id  (pd_session_id,teacher_id) UNIQUE
 #
 

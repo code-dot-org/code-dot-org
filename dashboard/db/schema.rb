@@ -306,6 +306,7 @@ ActiveRecord::Schema.define(version: 20170110003303) do
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.integer  "pd_enrollment_id"
+    t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
 
