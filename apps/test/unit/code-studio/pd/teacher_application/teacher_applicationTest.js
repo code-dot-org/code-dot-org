@@ -9,8 +9,8 @@ import ButtonList from '@cdo/apps/code-studio/pd/form_components/button_list';
 describe("Tests for Teacher Application", () => {
   let form;
   let districtErrorMessage;
-  let districtErrorMessageHandler = function (message) { districtErrorMessage = message;};
-  let regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'};
+  const districtErrorMessageHandler = function (message) { districtErrorMessage = message;};
+  const regionalPartnerExample = {regionalPartnerGroup: 1, regionalPartnerName: 'A+ College Ready'};
 
   //<editor-fold desc="sample data">
   const warningFields = ['regionalPartnersOnlyWarning', 'identifyingRegionalPartnerWarning'];
@@ -205,7 +205,7 @@ describe("Tests for Teacher Application", () => {
   };
 
   describe("Tests related to initial page state for given school district data", () => {
-    it("initial state of the page", () => {
+    it("initial state of the page contains no errors", () => {
       form = createTeacherApplication(defaultSchoolDistrictData);
 
       assertNoFormErrors();
@@ -333,6 +333,29 @@ describe("Tests for Teacher Application", () => {
 
       completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
       expect(form.state('submitting')).to.be.false;
+      expect(form.find('#firstName').prop('errorText')).to.equal('This field is required');
+    });
+
+    it("Applications with missing likert answers are not submitted", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['likertList']['csCreativity'];
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      expect(form.state('submitting')).to.be.false;
+      expect(form.find('#csCreativity').prop('validationState')).to.equal('error');
+    });
+
+    it("Applications with missing survey answers are not submitted", () => {
+      form = createTeacherApplication(publicSchoolData, regionalPartnerExample);
+
+      pickCourse('csd');
+      let application = _.merge({}, defaultUser, defaultSurveyFields, defaultCsdFields);
+      delete application['selectionFields']['currentCsOpportunities'];
+      completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
+      expect(form.state('submitting')).to.be.false;
+      expect(form.find('[groupName="currentCsOpportunities"]').prop('validationState')).to.equal('error');
     });
 
     it("Applications with non emails in email fields are not submitted", () => {
@@ -344,6 +367,8 @@ describe("Tests for Teacher Application", () => {
 
       completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
       expect(form.state('submitting')).to.be.false;
+      expect(form.find('#primaryEmail').prop('errorText')).to.equal(
+        'Please enter a valid email address, like name@example.com');
     });
 
     it("Applications with non phone numbers in phone number fields are not submitted", () => {
@@ -355,6 +380,8 @@ describe("Tests for Teacher Application", () => {
 
       completeApplication(application, 'July 30 - August 4, 2017: Philadelphia (travel expenses paid)');
       expect(form.state('submitting')).to.be.false;
+      expect(form.find('#phoneNumber').prop('errorText')).to.equal(
+        'Phone numbers must have at least 10 digits, like (123) 456-7890');
     });
   });
 });

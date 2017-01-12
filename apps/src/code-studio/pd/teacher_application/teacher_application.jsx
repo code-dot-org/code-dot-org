@@ -604,7 +604,7 @@ const TeacherApplication = React.createClass({
       }
     });
 
-    _.assign(formData, this.props.schoolDistrictData);
+    Object.assign(formData, this.props.schoolDistrictData);
 
     formData['assignedWorkshop'] = getWorkshopForState(
       this.props.regionalPartnerGroup,
