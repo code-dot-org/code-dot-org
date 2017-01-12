@@ -1,2 +1,1 @@
-import Multi from '@cdo/apps/code-studio/levels/multi';
-window.Multi = Multi;
+import '@cdo/apps/code-studio/levels/multi';
