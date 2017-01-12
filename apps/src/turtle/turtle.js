@@ -1415,8 +1415,9 @@ Artist.prototype.checkAnswer = function () {
   // pixel-perfect strictness
   var permittedErrors = level.permittedErrors || 0;
 
-  // Test whether the current level is a free play level, or the level has
-  // been completed
+  // Test whether the student can progress to the next level. There can be no
+  // errors, and this either needs to be a free play/preidction level, or they
+  // need to have met success conditions.
   var levelComplete = (!level.editCode || !this.executionError) &&
       (level.freePlay ||
       this.studioApp_.hasContainedLevels ||
