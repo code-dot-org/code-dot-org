@@ -4,7 +4,7 @@
 # user_levels table. The impetus is corrections in the
 # level_concept_difficulties table, causing recalculation of historical values.
 #
-# The data was generated via the query (replacing the dates appropriately)
+# The data was generated via the query
 #
 #   CREATE TABLE user_proficiencies_#{start_date}_#{end_date} AS
 #   SELECT
@@ -82,13 +82,18 @@
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
 #     AND user_levels.script_id IN (1, 18, 19, 23)
-#     AND user_levels.created_at > "2016-01-01"
-#     AND user_levels.created_at < "2016-02-01"
+#     AND user_levels.id > #{start_id}
+#     AND user_levels.id < #{end_id}
+#     AND user_levels.created_at > #{start_date}
+#     AND user_levels.created_at < #{end_date}
 #     AND authored_hint_view_requests.id IS NULL
 #     AND hint_view_requests.id IS NULL
 #   GROUP BY user_levels.user_id;
 #
-# exported via the mysqldump command
+# with the values of `start_id`, `end_id`, `start_date`, and `end_date` from
+# the spreadsheet
+#   https://docs.google.com/spreadsheets/d/12zZB003jXAivY9Dnh1VEIBdvaZXAkj0H4NU2i0bAFY8
+# and exported via the mysqldump command
 #
 #   mysqldump dashboard_production proficiencies_20160101_20160201
 #     --host=reporting.ceidnfhvpbck.us-east-1.rds.amazonaws.com
@@ -243,16 +248,19 @@ def rollup_monthly_snapshots
 end
 
 def update_database
-  user_proficiency_hash = {}
+  user_proficiency_data = []
   puts "READING DATA FROM #{AGGREGATE_FILENAME}..."
-
+  CSV.foreach(AGGREGATE_FILENAME) do |row|
+    mapped_row = row[0..50].map(&:to_i) << row[51] << row[52]
+    user_proficiency_data << mapped_row
+  end
   puts "READ DATA FROM #{AGGREGATE_FILENAME}."
 
   slice_count = 0
   puts "UPDATING DB..."
   # Update the DB with the data in user_proficiency_hash.
   begin
-    user_proficiency_hash.values.each_slice(1_000) do |slice|
+    user_proficiency_data.each_slice(1_000) do |slice|
       puts "  SLICE_COUNT: #{slice_count}..."
 
       ActiveRecord::Base.transaction do
