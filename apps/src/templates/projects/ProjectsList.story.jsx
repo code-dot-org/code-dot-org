@@ -2,8 +2,20 @@ import React from 'react';
 import ProjectsList from './ProjectsList';
 
 const STUB_PROJECTS_DATA = [
-  {studentName: 'Alice', name: 'Antelope Freeway', type: 'applab', updatedAt: '2017-01-13'},
-  {studentName: 'Bob', name: 'Batyote', type: 'gamelab', updatedAt: '2016-12-31'},
+  {
+    channel: 'ABCDEFGHIJKLM01234',
+    name: 'Antelope Freeway',
+    studentName: 'Alice',
+    type: 'applab',
+    updatedAt: '2017-01-13'
+  },
+  {
+    channel: 'NOPQRSTUVWXYZ567879',
+    name: 'Batyote',
+    studentName: 'Bob',
+    type: 'gamelab',
+    updatedAt: '2016-12-31'
+  },
 ];
 
 export default storybook => {
