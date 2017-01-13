@@ -3,7 +3,6 @@
 # Table name: sections
 #
 #  id           :integer          not null, primary key
-#  user_id      :integer          not null
 #  name         :string(255)
 #  created_at   :datetime
 #  updated_at   :datetime
@@ -15,17 +14,20 @@
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
 #  section_type :string(255)
+#  user_id      :integer
 #
 # Indexes
 #
-#  index_sections_on_code     (code) UNIQUE
-#  index_sections_on_user_id  (user_id)
+#  index_sections_on_code  (code) UNIQUE
 #
 
 require 'cdo/section_helpers'
 
 class Section < ActiveRecord::Base
-  belongs_to :user
+  has_many :coteachers
+  has_many :users, through: :coteachers
+  validates_associated :coteachers
+  # TODO: Validates !users.blank?
 
   has_many :followers, dependent: :restrict_with_error
   accepts_nested_attributes_for :followers
@@ -73,19 +75,34 @@ class Section < ActiveRecord::Base
   end
 
   def add_student(student, move_for_same_teacher: true)
+    # TODO: Find out where this return value is being used
+    # TODO: Argh, self.user_id doesn't exist now because of coteachers
     if move_for_same_teacher && (follower = student.followeds.find_by(user_id: user_id))
       # if this student is already in another section owned by the
       # same teacher, move them to this section instead of creating a
       # new one
       follower.update_attributes!(section: self)
+      [follower]
     else
-      follower = Follower.find_or_create_by!(user_id: user_id, student_user: student, section: self)
+      followers = []
+      users.each do |user|
+        followers << Follower.create!(user_id: user.id, student_user: student, section: self)
+      end
+      followers
     end
-    follower
   end
 
+  # TODO: Check this out for coteachers
   def teacher
     user
+  end
+
+  def has_coteacher?(user)
+    !user.nil? && users.include?(user)
+  end
+
+  def add_teacher(user)
+    users << user
   end
 
   private

@@ -85,6 +85,8 @@ group :development, :test do
 
   # For pegasus PDF generation / merging testing.
   gem 'pdf-reader', require: false
+
+  gem 'byebug'
 end
 
 group :doc do

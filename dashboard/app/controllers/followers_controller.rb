@@ -102,7 +102,7 @@ class FollowersController < ApplicationController
       return
     end
 
-    if current_user && current_user == @section.user
+    if @section.has_coteacher?(current_user)
       redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section')
       return
     end
