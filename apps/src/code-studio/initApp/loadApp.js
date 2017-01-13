@@ -117,7 +117,6 @@ export function setupApp(appOptions) {
         report.callback = appOptions.report.callback;
         trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
       }
-      report.scriptName = appOptions.scriptName;
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
       trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
