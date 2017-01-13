@@ -59,6 +59,10 @@
     "start_blocks": "var balloon = createSprite(200,200);\r\nballoon.setAnimation(\"balloon\");\r\nballoon.debug = false;\r\n\r\nvar tack = createSprite(350, 50);\r\ntack.setAnimation(\"tack\");\r\n\r\nfunction draw() {\r\n  background(\"gray\");\r\n  \r\n  // check if tack is touching balloon\r\n  if (balloon.isTouching(tack)) {\r\n    // replace balloon image\r\n    balloon.setAnimation(\"popped\");\r\n  }\r\n  // make tack move with arrow keys\r\n  if (keyDown(\"up\")) {\r\n    tack.y = tack.y - 1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    tack.y = tack.y + 1;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    tack.x = tack.x - 1;\r\n  }\r\n  if (keyDown(\"right\")) {\r\n    tack.x = tack.x + 1;\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
     "palette_category_at_start": "sprites",
     "all_animations_single_frame": "true",
+    "encrypted_examples": "d866C+YDShrmUkRni4E3jE9Awyrzru6xcKdEqTNZCKyH1v4it+Q58upfOVkS\nyl49\n",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "start_in_animation_tab": "false",
     "contained_level_names": null
   },
   "published": true,
