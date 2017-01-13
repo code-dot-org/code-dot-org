@@ -45,6 +45,7 @@ const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
+const CONTAINED_LEVEL_PADDING = 10;
 
 // Minecraft-specific styles
 const craftStyles = {
@@ -147,6 +148,10 @@ const styles = {
     width: 'calc(100% - 20px)',
     float: 'left'
   },
+  containedLevel: {
+    padding: CONTAINED_LEVEL_PADDING,
+    backgroundColor: '#f2f2f2',
+  },
 };
 
 var TopInstructions = React.createClass({
@@ -168,7 +173,7 @@ var TopInstructions = React.createClass({
     expandedHeight: React.PropTypes.number.isRequired,
     maxHeight: React.PropTypes.number.isRequired,
     collapsed: React.PropTypes.bool.isRequired,
-    shortInstructions: React.PropTypes.string.isRequired,
+    shortInstructions: React.PropTypes.string,
     shortInstructions2: React.PropTypes.string,
     longInstructions: React.PropTypes.string,
     clearFeedback: React.PropTypes.func.isRequired,
@@ -227,7 +232,7 @@ var TopInstructions = React.createClass({
 
     this.adjustMaxNeededHeight();
 
-    if (this.refs && this.refs.instructions && this.refs.instructions.parentElement) {
+    if (this.refs && this.refs.instructions) {
       const contentContainer = this.refs.instructions.parentElement;
       const canScroll = contentContainer.scrollHeight > contentContainer.clientHeight;
       if (canScroll !== this.state.displayScrollButtons) {
@@ -326,6 +331,9 @@ var TopInstructions = React.createClass({
    * collapsed
    */
   getMinHeight(collapsed=this.props.collapsed) {
+    if (this.refs.containedLevel) {
+      return $('#containedLevel0').outerHeight() + 2 * CONTAINED_LEVEL_PADDING;
+    }
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
         this.refs.scrollButtons.getWrappedInstance().getMinHeight() : 0;
@@ -374,7 +382,9 @@ var TopInstructions = React.createClass({
   adjustMaxNeededHeight() {
     const minHeight = this.getMinHeight();
     const instructionsContent = this.refs.instructions;
-    const maxNeededHeight = getOuterHeight(instructionsContent, true) +
+    const maxNeededHeight = (this.props.hasContainedLevels ?
+        $("#containedLevel0").outerHeight() + (2 * CONTAINED_LEVEL_PADDING) :
+        getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
     this.props.setInstructionsMaxHeightNeeded(Math.max(minHeight, maxNeededHeight));
@@ -495,27 +505,32 @@ var TopInstructions = React.createClass({
 
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
+    const paddingToDeduct = this.props.hasContainedLevels ?
+      2 * CONTAINED_LEVEL_PADDING : 0;
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
       {
-        height: this.props.height - resizerHeight
+        height: this.props.height - resizerHeight - paddingToDeduct,
       },
       this.props.isEmbedView && styles.embedView,
       this.props.noVisualization && styles.noViz,
-      this.props.overlayVisible && styles.withOverlay
+      this.props.overlayVisible && styles.withOverlay,
+      this.props.hasContainedLevels && styles.containedLevel,
     ];
 
     if (this.props.hasContainedLevels) {
       return (
-        <div style={mainStyle} className="editor-column">
-          <ContainedLevel ref="instructions" />
+        <div>
+          <div style={mainStyle} className="editor-column">
+            <ContainedLevel ref="containedLevel" />
+          </div>
           {!this.props.collapsed && !this.props.isEmbedView &&
             <HeightResizer
               position={this.props.height}
               onResize={this.handleHeightResize}
             />}
-      </div>
+        </div>
       );
     }
 
