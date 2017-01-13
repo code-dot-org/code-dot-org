@@ -315,6 +315,8 @@ Dashboard::Application.routes.draw do
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
         put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
         delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+        put 'attendance/:session_id/enrollment/:enrollment_id', action: 'create_by_enrollment', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'

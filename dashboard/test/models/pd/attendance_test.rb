@@ -65,4 +65,28 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     refute Pd::Attendance.exists? attendance.attributes
     assert Pd::Attendance.with_deleted.exists? attendance.attributes
   end
+
+  test 'teacher or enrollment must be present' do
+    attendance = build :pd_attendance, teacher: nil, enrollment: nil
+    refute attendance.valid?
+    assert_equal ['Teacher or enrollment must be present.'], attendance.errors.full_messages
+
+    attendance.teacher = create :teacher
+    assert attendance.valid?
+
+    attendance.teacher = nil
+    attendance.enrollment = create :pd_enrollment
+    assert attendance.valid?
+  end
+
+  test 'enrollment is populated on save' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id
+    attendance = build :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+
+    assert_nil attendance.enrollment
+    assert attendance.save
+    assert_not_nil attendance.reload.enrollment
+    assert_equal enrollment.id, attendance.enrollment.id
+  end
 end
