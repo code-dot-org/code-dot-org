@@ -2,13 +2,14 @@
 #
 # Table name: pd_teacher_applications
 #
-#  id              :integer          not null, primary key
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  user_id         :integer          not null
-#  primary_email   :string(255)      not null
-#  secondary_email :string(255)      not null
-#  application     :text(65535)      not null
+#  id                :integer          not null, primary key
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  user_id           :integer          not null
+#  primary_email     :string(255)      not null
+#  secondary_email   :string(255)      not null
+#  application       :text(65535)      not null
+#  accepted_workshop :string(255)
 #
 # Indexes
 #

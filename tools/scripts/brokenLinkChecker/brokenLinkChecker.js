@@ -9,6 +9,7 @@ const whitelist = require('./whitelist.json').ignore;
 const slackUrl = "https://hooks.slack.com/services/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";
 
 let totalLinkCount = 0;
+let totalPageCount = 0;
 let brokenLinkCount = 0;
 let whitedlistedLinkCount = 0;
 
@@ -63,11 +64,15 @@ let siteChecker = new blc.SiteChecker(options, {
     }
     totalLinkCount++;
   },
+  page: function (error, pageUrl, customData) {
+    totalPageCount++;
+  },
   end: function () {
     console.log("Done.");
     logTextToSlack(
       "...end broken link check.\n_(Of " +
-      totalLinkCount.toLocaleString() + " links, " +
+      totalLinkCount.toLocaleString() + " links in " +
+      totalPageCount.toLocaleString() + " pages, " +
       brokenLinkCount.toLocaleString() + " were broken, and " +
       whitedlistedLinkCount.toLocaleString() + " were skipped due to whitelist.)_");
   }
