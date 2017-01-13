@@ -9,7 +9,7 @@
     "embed": "false",
     "markdown_instructions": "# Using Multiframe Animations\r\n\r\nYou probably noticed in the last game that the sprites themselves were animated. Have some fun choosing some of the animations from the library.\r\n\r\n\r\n# Do This\r\n\r\nThis program already includes several sprites but they don't yet have any animations.\r\n\r\n* Go to the Animation tab and check out the multi-frame animations already added to your project. Choose one for each of your characters.\r\n",
     "submittable": "false",
-    "start_blocks": "var sprite1, sprite2;\r\n\r\nsprite1 = createSprite(100,100);\r\nsprite2 = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
+    "start_blocks": "var alien, ladybug;\r\n\r\nalien = createSprite(100,100);\r\nladybug = createSprite(300,300);\r\n\r\nfunction draw(){\r\n  background(\"white\");\r\n  drawSprites();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -135,7 +135,10 @@
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

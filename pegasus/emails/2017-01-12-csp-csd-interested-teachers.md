@@ -7,7 +7,7 @@ Thank you for your interest in Code.org’s Professional Learning Program! We’
 
 Code.org’s Professional Learning Program is an intensive year-long program for middle and high school educators who are interested in teaching our computer science courses. These programs give you all the resources and practice you need to provide high quality instruction. You’ll enjoy dedicated time to deliver lessons with your colleagues, dive deep into the curriculum and tools, and experiment with inquiry-based approaches to teaching.
 
-<img src="https://s3.amazonaws.com/cdo-email-images/teachercontestimony1.jpg" width="85%"/>
+<img src="https://s3.amazonaws.com/cdo-email-images/teachercontestimony1.jpg" width="90%"/>
 
  Teachers who are accepted to the program commit to:
 
@@ -19,7 +19,7 @@ Code.org’s Professional Learning Program is an intensive year-long program for
 
 You’ll also go through the program with a cohort of teachers from all kinds of backgrounds. You’ll learn from each other, make computer science allies, and become part of a huge movement that’s changing the face of education in the US and opening doors for students everywhere. 
 
-<img src="https://s3.amazonaws.com/cdo-email-images/teachercontestimony2.jpg" width="85%"/>
+<img src="https://s3.amazonaws.com/cdo-email-images/teachercontestimony2.jpg" width="90%"/>
 
 **Due to the popularity of the program, we prioritize teachers who teach in regions that are currently served by our [Regional Partners](https://code.org/educate/regional-partner/partners).**
 
