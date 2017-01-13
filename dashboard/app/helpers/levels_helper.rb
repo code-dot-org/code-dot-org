@@ -330,7 +330,7 @@ module LevelsHelper
     level_options.merge! @level.properties.camelize_keys
 
     unless current_user && (current_user.teachers.any? ||
-        (@level.try(:peer_reviewable) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
+        (@level.try(:peer_reviewable?) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
       # only students with teachers or teachers enrolled in PLC submitting for a peer reviewable level
       level_options['submittable'] = false
     end
