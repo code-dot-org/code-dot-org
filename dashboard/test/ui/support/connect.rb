@@ -104,7 +104,15 @@ Before do
   end
   @browser.manage.delete_all_cookies
 
-  debug_cookies(@browser.manage.all_cookies) if @browser
+  begin
+    cookies = @browser.manage.all_cookies
+  rescue NoMethodError => e
+    # Selenium sometimes throws an internal error
+    raise unless e.message.include? "undefined method `map' for nil:NilClass"
+    $stderr.puts "ignoring selenium internal error while reading cookies: #{e.message}"
+  end
+
+  debug_cookies(cookies) if @browser && cookies
 
   unless ENV['TEST_LOCAL'] == 'true'
     unless @sauce_session_id
@@ -134,7 +142,7 @@ end
 
 def check_for_page_errors
   js_errors = @browser.execute_script('return window.detectedJSErrors;')
-  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors
+  puts "DEBUG: JS errors: #{CGI.escapeHTML js_errors.join(' | ')}" if js_errors && js_errors.is_a?(Array)
 
   # TODO(bjordan): Test enabling "fail-on-JS error" for all browsers
   # js_errors.should eq nil
