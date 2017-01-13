@@ -42,26 +42,21 @@ reporting.getLastServerResponse = function () {
 
 /**
  * Validate that the provided field on our report object is one of the given
- * types
+ * type
  * @param {string} key
  * @param {*} value
- * @param {string[]} types
+ * @param {string} type
  */
-function validateType(key, value, types) {
+function validateType(key, value, type) {
   let typeIsValid = false;
-  if (!_.isArray(types)) {
-    types = [types];
+  if (type === 'array') {
+    typeIsValid = typeIsValid || _.isArray(value);
+  } else {
+    typeIsValid = typeIsValid || (typeof value === type);
   }
-  types.forEach(type => {
-    if (type === 'array') {
-      typeIsValid = typeIsValid || _.isArray(value);
-    } else {
-      typeIsValid = typeIsValid || (typeof value === type);
-    }
-  });
 
   if (!typeIsValid) {
-    console.error(`Expected ${key} to be of type '${types}'. Got '${typeof value}'`);
+    console.error(`Expected ${key} to be of type '${type}'. Got '${typeof value}'`);
   }
 }
 
@@ -92,8 +87,9 @@ function validateReport(report) {
         }
         break;
       case 'fallbackResponse':
-        if (report.app === 'free_response' || report.app === 'multi' ||
-            report.app === 'level_group' || report.app === 'text_match') {
+        if (['free_response', 'multi', 'level_group', 'text_match',
+            'contract_match', 'odometer', 'text_compression', 'pixelation',
+            'external'].includes(report.app)) {
           // In this case, we end up with json for an object. It seems likely
           // that we could/should just pass around the object instead.
           validateType('fallbackResponse', value, 'string');
@@ -167,14 +163,19 @@ function validateReport(report) {
         validateType('attempt', value, 'number');
         break;
       case 'image':
-        validateType('image', value, 'string');
+        if (value !== null) {
+          validateType('image', value, 'string');
+        }
         break;
       case 'containedLevelResultsInfo':
         validateType('containedLevelResultsInfo', value, 'object');
         break;
       default:
-        // TODO - may want to just console.error until we have more confidence
-        throw new Error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
+        // Eventually we'd probably prefer to throw here, but I don't have enough
+        // confidence that this validation is 100% correct to start breaking things
+        // if it isnt.
+        console.error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
+        break;
     }
   }
 }
