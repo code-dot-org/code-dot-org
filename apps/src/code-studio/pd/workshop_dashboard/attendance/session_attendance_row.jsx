@@ -22,6 +22,7 @@ const SessionAttendanceRow = React.createClass({
       first_name: React.PropTypes.string.isRequired,
       last_name: React.PropTypes.string.isRequired,
       email: React.PropTypes.string.isRequired,
+      enrollment_id: React.PropTypes.number.isRequired,
       user_id: React.PropTypes.number,
       in_section: React.PropTypes.bool.isRequired,
       attended: React.PropTypes.bool.isRequired
@@ -29,7 +30,8 @@ const SessionAttendanceRow = React.createClass({
     adminOverride: React.PropTypes.bool,
     isReadOnly: React.PropTypes.bool,
     onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired
+    onSaved: React.PropTypes.func.isRequired,
+    accountRequiredForAttendance: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -45,6 +47,10 @@ const SessionAttendanceRow = React.createClass({
   },
 
   isValid() {
+    if (!this.props.accountRequiredForAttendance) {
+      return true;
+    }
+
     // Must have an account, and either have joined the section or
     // be overridden by an admin (which will join the section on the backend).
     return this.props.attendance.user_id && (this.props.attendance.in_section || this.props.adminOverride);
@@ -62,8 +68,14 @@ const SessionAttendanceRow = React.createClass({
 
   getApiUrl() {
     const {workshopId, sessionId} = this.props;
-    const userId = this.props.attendance.user_id;
-    return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/user/${userId}`;
+
+    if (this.props.accountRequiredForAttendance) {
+      const userId = this.props.attendance.user_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/user/${userId}`;
+    } else {
+      const enrollmentId = this.props.attendance.enrollment_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/enrollment/${enrollmentId}`;
+    }
   },
 
   setAttendance() {
@@ -76,7 +88,7 @@ const SessionAttendanceRow = React.createClass({
       'PUT',
       url,
       {
-        in_section: true,
+        in_section: this.props.accountRequiredForAttendance,
         attended: true
       }
     );
@@ -166,12 +178,18 @@ const SessionAttendanceRow = React.createClass({
         <td>
           {this.props.attendance.email}
         </td>
-        <td>
-          {this.props.attendance.user_id ? "Yes" : "No"}
-        </td>
-        <td>
-          {this.props.attendance.in_section ? "Yes" : "No"}
-        </td>
+        {
+          this.props.accountRequiredForAttendance &&
+          <td>
+            {this.props.attendance.user_id ? "Yes" : "No"}
+          </td>
+        }
+        {
+          this.props.accountRequiredForAttendance &&
+          <td>
+            {this.props.attendance.in_section ? "Yes" : "No"}
+          </td>
+        }
         <td>
           {this.renderAttendedCellContents()}
         </td>
