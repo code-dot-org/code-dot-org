@@ -69,9 +69,7 @@
     "debugger_disabled": "true",
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
-    "contained_level_names": [
-      "Draw Diamond"
-    ],
+    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
