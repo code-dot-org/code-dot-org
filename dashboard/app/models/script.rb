@@ -297,7 +297,7 @@ class Script < ActiveRecord::Base
 
   def text_response_levels
     return @text_response_levels if Script.should_cache? && @text_response_levels
-    return @text_response_levels = text_response_levels_without_cache
+    @text_response_levels = text_response_levels_without_cache
   end
 
   def text_response_levels_without_cache
