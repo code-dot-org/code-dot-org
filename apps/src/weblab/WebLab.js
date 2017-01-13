@@ -11,6 +11,7 @@ import reducers from './reducers';
 import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
+var project = require('@cdo/apps/code-studio/initApp/project');
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
@@ -242,19 +243,6 @@ WebLab.prototype.init = function (config) {
   ), document.getElementById(config.containerId));
 };
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
 WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
   var footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
@@ -273,7 +261,7 @@ WebLab.prototype.renderFooterInSharedMode = function (container, copyrightString
 */
     {
       text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
+      link: project.getProjectUrl('/view'),
     },
     {
       text: commonMsg.copyright(),

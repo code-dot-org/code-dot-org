@@ -34,9 +34,8 @@
     "nectar_goal": "7",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side. \",\"hint_id\":\"courseE_bee_concept5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c6d01433759f7a4c12b7768cb55f5e1/courseE_bee_concept5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can check every square for a flower using the `if` block, even if you already know there's not one there.\",\"hint_id\":\"courseE_bee_concept5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b974e173ae73f10e6f1afd19faf8d5d5/courseE_bee_concept5.mp3\"}]",
-    "contained_level_names": null,
     "markdown_instructions": "Can you help the bee collect the nectar from the flowers? \r\n\r\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
