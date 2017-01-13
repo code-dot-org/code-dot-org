@@ -88,9 +88,6 @@ if (envConstants.COVERAGE) {
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: 'inline-source-map',
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
   },
   plugins: [
@@ -119,9 +116,6 @@ var karmaConfig = _.extend({}, baseConfig, {
     }),
   }),
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
 
     // The below are necessary for enzyme to work.
