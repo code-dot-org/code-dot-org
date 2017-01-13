@@ -25,6 +25,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "code_functions": {
+      "background": null,
       "fill": null,
       "noFill": null,
       "stroke": null,
@@ -34,6 +35,9 @@
       "line": null,
       "point": null,
       "rect": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null,
       "ifBlock": null,
       "ifElseBlock": null,
       "text": null,
@@ -46,6 +50,8 @@
       "velocityX": null,
       "velocityY": null,
       "isTouching": null,
+      "debug": null,
+      "setCollider": null,
       "x": null,
       "y": null,
       "setAnimation": null
@@ -65,7 +71,10 @@
     "instructions_important": "false",
     "show_debug_watch": "false",
     "start_in_animation_tab": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
