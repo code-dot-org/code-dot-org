@@ -49,7 +49,7 @@ end
 
 def required(value)
   return value if value.class == FieldError
-  return value if value.class == Integer
+  return value if value.is_a? Integer
   return FieldError.new(value, :required) if value.nil_or_empty?
   value
 end
