@@ -356,6 +356,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def tools_dir(*dirs)
+  deploy_dir('tools', *dirs)
+end
+
 def cookbooks_dir(*dirs)
   deploy_dir('cookbooks', *dirs)
 end
