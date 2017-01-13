@@ -13,7 +13,7 @@ Reach out to other teachers, clubs, teams, or groups of friends at your school. 
 ## 2. Inspire with examples
 Share how young women are thriving in computer science. Show them [our inspirational videos](http://code.org/educate/inspire) or [these videos](http://www.youtube.com/playlist?list=PLRuS3NbVmMIpLOha835A_uMrjPnYVevZW) featuring young women. Or invite female computer scientists a few years older than your students to share how they got into the field (Ask the local university CS department for help).
 
-[![image](/images/codevideosmall.png)](http://www.youtube.com/watch?v=nKIu9yen5nc)   [![image](/images/hocvideosmall.png)](http://www.youtube.com/watch?v=FC5FbmsH4fw)
+[![image](/images/codevideosmall.png)](http://www.youtube.com/watch?v=nKIu9yen5nc)   [![image](/images/hocvideosmall.png)](http://www.youtube.com/watch?v=FC5FbmsH4fw)   [![image](/images/fit-250/inspirational_videos_thumbnail_0.jpg)](https://www.youtube.com/watch?v=mFPg96gdPkc)   [![image](/images/fit-250/cs-is-changing-everything-thumbnail.jpg)](https://www.youtube.com/watch?v=QvyTEx1wyOY)
 
 ## 3. Fight stereotypes
 Highlight women from all walks of life who code [(See some examples)](http://www.dotdiva.org/). [Studies](http://faculty.washington.edu/scheryan/research.htm) show decor matters: instead of posters of Star Trek or 1s and 0s, decorate the classroom with [posters of role models](http://code.org/educate/inspire#posters), or diverse groups of students.
