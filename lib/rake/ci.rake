@@ -86,16 +86,17 @@ task :ci do
   HipChat.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
 end
 
-def upgrade_frontend(name, host)
-  HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
+# Returns true if upgrade succeeded, false if failed.
+def upgrade_frontend(name, hostname)
+  HipChat.log "Upgrading <b>#{name}</b> (#{hostname})..."
   command = 'sudo chef-client'
   log_path = aws_dir "deploy-#{name}.log"
   begin
-    RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{host} '#{command} 2>&1' >> #{log_path}"
-    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+    RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{hostname} '#{command} 2>&1' >> #{log_path}"
+    HipChat.log "Upgraded <b>#{name}</b> (#{hostname})."
     true
-  rescue
-    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade.", color: 'red'
+  rescue RuntimeError
+    HipChat.log "<b>#{name}</b> (#{hostname}) failed to upgrade.", color: 'red'
     HipChat.log "/quote #{File.read(log_path)}"
     false
   end
