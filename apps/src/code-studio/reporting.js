@@ -66,8 +66,11 @@ function validateType(key, value, types) {
 }
 
 /**
- * Do some validation of our report object. Log console errors if we have any unexpected
- * fields, or fields with different data than we expect.
+ * Do some validation of our report object. Log console errors if we have any
+ * unexpected fields, or fields with different data than we expect.
+ * This is meant in part to serve as documentation of the existing behavior. In
+ * cases where I believe the behavior should potentially be different going
+ * forward, I've made notes.
  */
 function validateReport(report) {
   for (var key in report) {
@@ -75,18 +78,28 @@ function validateReport(report) {
       continue;
     }
 
+    const inLevelGroup = report.allowMultipleSends === true;
+
     const value = report[key];
     switch (key) {
       case 'program':
         if (report.app === 'match') {
+          validateType('program', value, 'array');
+        } else if (report.app === 'multi' && !inLevelGroup) {
           validateType('program', value, 'array');
         } else {
           validateType('program', value, 'string');
         }
         break;
       case 'fallbackResponse':
-        // TODO - sometimes it's json. figure out when.
-        validateType('fallbackResponse', value, 'object');
+        if (report.app === 'free_response' || report.app === 'multi' ||
+            report.app === 'level_group' || report.app === 'text_match') {
+          // In this case, we end up with json for an object. It seems likely
+          // that we could/should just pass around the object instead.
+          validateType('fallbackResponse', value, 'string');
+        } else {
+          validateType('fallbackResponse', value, 'object');
+        }
         break;
       case 'callback':
         validateType('callback', value, 'string');
@@ -98,28 +111,43 @@ function validateReport(report) {
         validateType('allowMultipleSends', value, 'boolean');
         break;
       case 'level':
-        // TODO: level is sometimes null. (http://localhost-studio.code.org:3000/s/allthethings/stage/21/puzzle/1)
-        // can we make this validation stronger?
-        // TODO: level is a number here http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-        validateType('level', value, ['string', 'object', 'number']);
+        if (value !== null) {
+          if (report.app === 'level_group') {
+            // LevelGroups appear to report level as the position of this level
+            // within the script, which seems wrong.
+            validateType('level', value, 'number');
+          } else {
+            validateType('level', value, 'string');
+          }
+        }
         break;
       case 'result':
-        // TODO: this is an object in assessments?
-        // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-        validateType('result', value, ['boolean', 'object']); // maybe also string??
+        if (inLevelGroup) {
+          // A multi in an assessment seems to send an object here instead of a
+          // boolean (which may well be a bug).
+          validateType('result', value, 'object');
+        } else {
+          validateType('result', value, 'boolean');
+        }
         break;
       case 'pass':
-        // TODO: this is an object in assessments?
-        // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-        validateType('pass', value, ['boolean', 'object']); // string??
+        if (inLevelGroup) {
+          // A multi in an assessment seems to send an object here instead of a
+          // boolean (which may well be a bug).
+          validateType('pass', value, 'object');
+        } else {
+          validateType('pass', value, 'boolean');
+        }
         break;
       case 'testResult':
         validateType('testResult', value, 'number');
         break;
       case 'submitted':
-        // TODO: in sendResultsCompletion this becomes either "true" the string  or false the boolean
-        // got "true" on http://localhost-studio.code.org:3000/s/allthethings/stage/27/puzzle/1
-        validateType('submitted', value, ['string', 'boolean']);
+        // In sendResultsCompletion this becomes either "true" the string  or false the boolean
+        // Would probably be better long term if it was always a string or always a boolean
+        if (value !== "true" && value !== false) {
+          console.error('Expected submitted to be either string "true" or value false');
+        }
         break;
       case 'onComplete':
         if (value !== undefined) {
@@ -145,9 +173,8 @@ function validateReport(report) {
         validateType('containedLevelResultsInfo', value, 'object');
         break;
       default:
-        // TODO - eventually throw
-        console.error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
-        break;
+        // TODO - may want to just console.error until we have more confidence
+        throw new Error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
     }
   }
 }
@@ -178,9 +205,6 @@ reporting.sendReport = function (report) {
     if (report.hasOwnProperty(key)) {
       if (serverFields.includes(key)) {
         queryItems.push(key + '=' + report[key]);
-      } else {
-        // TODO - get rid of before merging ?
-        // console.log(`not sending key '${key}' to server`);
       }
     }
   }
