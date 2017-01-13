@@ -2,8 +2,8 @@
 #
 # Table name: regional_partners_school_districts
 #
-#  regional_partner_id :integer          not null
-#  school_district_id  :integer          not null
+#  regional_partner_id :integer          not null, primary key
+#  school_district_id  :integer          not null, primary key
 #
 # Indexes
 #
