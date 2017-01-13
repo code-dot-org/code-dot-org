@@ -39,13 +39,84 @@ reporting.getLastServerResponse = function () {
   return lastServerResponse;
 };
 
+/**
+ * Our report data contains a set of fields that the server cares about, and a
+ * set of fields that only the client cares about. This object lists all of the
+ * different fields we expect, the type we expect them to be, and whether or not
+ * we should send them to the server.
+ */
+const fieldInfo = (sendToServer, types) => ({ sendToServer, types: [].concat(types) });
+const reportFields = {
+  // TODO: program is an object (array) on Match
+  // http://localhost-studio.code.org:3000/s/allthethings/stage/11/puzzle/1
+  program: fieldInfo(true, ['string', 'object']),
+  // Sometimes this is an object, sometimes it's json
+  fallbackResponse: fieldInfo(false, ['object', 'string']),
+  callback: fieldInfo(false, 'string'),
+  app: fieldInfo(true, 'string'),
+  allowMultipleSends: fieldInfo(true, 'boolean'),
+  // TODO: level is sometimes null. (http://localhost-studio.code.org:3000/s/allthethings/stage/21/puzzle/1)
+  // can we make this validation stronger?
+  // TODO: level is a number here http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+  level: fieldInfo(true, ['string', 'object', 'number']),
+  // TODO: this is an object in assessments?
+  // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+  result: fieldInfo(true, ['boolean', 'object']), // string
+  // TODO: this is an object in assessments?
+  // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+  pass: fieldInfo(false, ['boolean', 'object']), // string
+  testResult: fieldInfo(true, 'number'),
+  // TODO: in sendResultsCompletion this becomes either "true" the string  or false the boolean
+  // got "true" on http://localhost-studio.code.org:3000/s/allthethings/stage/27/puzzle/1
+  submitted: fieldInfo(true, ['string', 'boolean']),
+  onComplete: fieldInfo(false, ['function', 'undefined']),
+  time: fieldInfo(true, 'number'),
+  lines: fieldInfo(true, 'number'),
+  save_to_gallery: fieldInfo(true, 'boolean'),
+  // TODO - figure this one out (prob LB related)
+  builder: fieldInfo(false, 'undefined'),
+  attempt: fieldInfo(true, 'number'),
+  image: fieldInfo(true, 'string'),
+  containedLevelResultsInfo: fieldInfo(false, 'object')
+};
+
+/**
+ * Using the reportFields object, validate that we don't have any unexpected fields
+ * and that the fields we do have are of the expected type.
+ */
+function validateReport(report) {
+  for (var key in report) {
+    if (report.hasOwnProperty(key)) {
+      const info = reportFields[key];
+      if (!info) {
+        // TODO - eventually throw
+        console.error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
+      } else if (!info.types.includes(typeof report[key])) {
+        // If you see this error, it means that there's somewhere that we're sending
+        // a report with a different type. Ideally we fix that caller to use the
+        // same type as elsewhere. If that's not possible for some reason, we can
+        // then add this as a new allowed type
+        console.error(`Expected key '${key}' to be of type '${info.types}'. Got '${typeof report[key]}'`);
+      }
+    }
+  }
+}
+
 reporting.sendReport = function (report) {
+  validateReport(report);
+
   // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
   // shows the result dialog immediately
   var queryItems = [];
   for (var key in report) {
-    if (report.hasOwnProperty(key) && key !== 'onComplete') {
-      queryItems.push(key + '=' + report[key]);
+    if (report.hasOwnProperty(key)) {
+      const info = reportFields[key];
+      if (info && info.sendToServer === false) {
+        // TODO - get rid of before merging
+        console.log(`not sending key '${key}' to server`);
+      } else {
+        queryItems.push(key + '=' + report[key]);
+      }
     }
   }
   var queryString = queryItems.join('&');
