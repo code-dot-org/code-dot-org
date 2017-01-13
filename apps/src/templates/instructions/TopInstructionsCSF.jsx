@@ -332,7 +332,7 @@ var TopInstructions = React.createClass({
    */
   getMinHeight(collapsed=this.props.collapsed) {
     if (this.refs.containedLevel) {
-      return $('#containedLevel0').outerHeight() + 2 * CONTAINED_LEVEL_PADDING;
+      return getOuterHeight(this.refs.containedLevel);
     }
     const collapseButtonHeight = getOuterHeight(this.refs.collapser, true);
     const scrollButtonsHeight = (!collapsed && this.refs.scrollButtons) ?
@@ -383,7 +383,7 @@ var TopInstructions = React.createClass({
     const minHeight = this.getMinHeight();
     const instructionsContent = this.refs.instructions;
     const maxNeededHeight = (this.props.hasContainedLevels ?
-        $("#containedLevel0").outerHeight() + (2 * CONTAINED_LEVEL_PADDING) :
+        getOuterHeight(this.refs.containedLevel) :
         getOuterHeight(instructionsContent, true)) +
       (this.props.collapsed ? 0 : RESIZER_HEIGHT);
 
@@ -653,7 +653,7 @@ var TopInstructions = React.createClass({
                 height={this.props.height - styles.scrollButtons.top - resizerHeight}
               />}
           </div>
-        </ThreeColumns>}
+        </ThreeColumns>
         {!this.props.collapsed && !this.props.isEmbedView &&
           <HeightResizer
             position={this.props.height}
