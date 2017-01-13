@@ -109,7 +109,8 @@ class LevelsController < ApplicationController
       @level.errors.add(:name, 'Cannot change only the capitalization of the level name (it confuses git on OSX)')
       render json: @level.errors, status: :unprocessable_entity
     elsif @level.update(level_params)
-      render json: { redirect: level_url(@level, show_callouts: 1) }
+      redirect = params["redirect"] || level_url(@level, show_callouts: 1)
+      render json: { redirect: redirect }
     else
       render json: @level.errors, status: :unprocessable_entity
     end
