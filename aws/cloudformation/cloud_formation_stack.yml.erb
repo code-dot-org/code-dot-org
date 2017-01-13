@@ -114,14 +114,6 @@ Resources:
         Count: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
-    UpdatePolicy:
-      AutoScalingRollingUpdate:
-        MaxBatchSize: 20
-        MinInstancesInService: {'Fn::GetAtt': [ASGCount, DesiredCapacity]}
-        MinSuccessfulInstancesPercent: 80
-        PauseTime: PT50M
-        SuspendProcesses: [ScheduledActions]
-        WaitOnResourceSignals: true
     Properties:
       VPCZoneIdentifier: <%=subnets%>
       LaunchConfigurationName: {Ref: FrontendLaunchConfig}

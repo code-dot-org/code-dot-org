@@ -58,14 +58,39 @@ namespace :ci do
     end
   end
 
+  # Update the existing front-end instances, in parallel, updating up to 20% of the
+  # instances at any one time.
+  MAX_FRONTEND_UPGRADE_FAILURES = 5
+  task :deploy do
+    HipChat.wrap('update existing frontends') do
+      app_servers = CDO.app_servers
+      if CDO.daemon && app_servers.any?
+        Dir.chdir(deploy_dir) do
+          num_failures = 0
+          thread_count = (app_servers.keys.length * 0.20).ceil
+          RakeUtils.threaded_each app_servers.keys, thread_count do |name|
+            succeeded = upgrade_frontend name, app_servers[name]
+            unless succeeded
+              num_failures += 1
+              raise 'too many frontend upgrade failures, aborting deploy' if num_failures > MAX_FRONTEND_UPGRADE_FAILURES
+            end
+          end
+        end
+      end
+    end
+  end
+
   task :deploy_stack do
     HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
   end
 
+  # Run frontend-deploy in parallel with stack update.
+  multitask deploy_multi: [:deploy, :deploy_stack]
+
   task all: [
     'firebase:ci',
     :build_with_cloudfront,
-    :deploy_stack
+    :deploy_multi
   ]
   task test: [
     :all,
@@ -76,4 +101,29 @@ end
 desc 'Update the server as part of continuous integration.'
 task :ci do
   HipChat.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
+end
+
+# update the user-facing front-end instances.
+def upgrade_frontend(name, host)
+  command = 'sudo chef-client'
+  HipChat.log "Upgrading <b>#{name}</b> (#{host})..."
+  log_path = aws_dir "deploy-#{name}.log"
+  success = false
+  begin
+    RakeUtils.system 'ssh', '-i', '~/.ssh/deploy-id_rsa', host, "'#{command} 2>&1'", '>>', log_path
+    success = true
+    HipChat.log "Upgraded <b>#{name}</b> (#{host})."
+  rescue
+    # The frontend is in an indeterminate state, and is not registered with the load balancer.
+    HipChat.log "<b>#{name}</b> (#{host}) failed to upgrade.\n" \
+      "Either re-deploy, or run the following command (from Gateway) to manually upgrade this instance:\n" \
+      "`ssh #{host} '#{command}'`",
+      color: 'red'
+    HipChat.log "log command: `ssh gateway.code.org ssh production-daemon cat #{log_path}`"
+    HipChat.log "/quote #{File.read(log_path)}"
+    success = false
+  end
+
+  puts IO.read log_path
+  success
 end
