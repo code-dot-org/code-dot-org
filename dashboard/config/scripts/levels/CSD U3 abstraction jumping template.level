@@ -24,14 +24,19 @@
       "ellipse": null,
       "line": null,
       "rect": null,
+      "text": null,
+      "textSize": null,
+      "textFont": null,
       "comment_Drawing": null,
       "var sprite = createSprite": null,
       "setAnimation": null,
+      "debug": null,
       "isTouching": null,
       "bounce": null,
       "bounceOff": null,
       "collide": null,
       "displace": null,
+      "setCollider": null,
       "rotationSpeed": null,
       "velocityX": null,
       "velocityY": null,
@@ -81,7 +86,10 @@
     "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
