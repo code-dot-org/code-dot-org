@@ -6,6 +6,7 @@ import marked from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import color from "../../util/color";
 import i18n from '@cdo/locale';
+import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
 const styles = {
   container: {
@@ -48,5 +49,6 @@ TeacherOnlyMarkdown.propTypes = {
 };
 
 export default connect(state => ({
-  content: state.instructions.teacherMarkdown
+  content: state.stageLock.viewAs === ViewType.Teacher ?
+    state.instructions.teacherMarkdown : ''
 }))(TeacherOnlyMarkdown);
