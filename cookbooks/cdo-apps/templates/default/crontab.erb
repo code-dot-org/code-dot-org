@@ -87,6 +87,7 @@
     cronjob at:'45 5 * * *', do:deploy_dir('bin', 'cron', 'admin_stats')
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
+    cronjob at:'0 9 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
   end
 
   # cronjobs that run on all instances in all environments go here:
