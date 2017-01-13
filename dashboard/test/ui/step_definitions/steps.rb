@@ -51,6 +51,7 @@ Given /^I am on "([^"]*)"$/ do |url|
   refute_bad_gateway
   refute_site_unreachable
   install_js_error_recorder
+  expect(@browser.current_url).to eq(url)
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
