@@ -7,14 +7,14 @@ const STUB_PROJECTS_DATA = [
     name: 'Antelope Freeway',
     studentName: 'Alice',
     type: 'applab',
-    updatedAt: '2017-01-13'
+    updatedAt: '2016-12-31T23:59:59.999-08:00'
   },
   {
     channel: 'NOPQRSTUVWXYZ567879',
     name: 'Batyote',
     studentName: 'Bob',
     type: 'gamelab',
-    updatedAt: '2016-12-31'
+    updatedAt: '2017-01-01T00:00:00.001-08:00'
   },
 ];
 

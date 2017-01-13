@@ -1,6 +1,7 @@
 import React from 'react';
 import {Table} from 'reactabular';
 import color from "../../util/color";
+import commonMsg from '@cdo/locale';
 
 const styles = {
   cell: {
@@ -26,8 +27,11 @@ const styles = {
  * @type {Object}
  */
 const PROJECT_TYPE_MAP = {
-  applab: 'App Lab',
-  gamelab: 'Game Lab',
+  artist: commonMsg.projectTypeArtist(),
+  applab: commonMsg.projectTypeApplab(),
+  gamelab: commonMsg.projectTypeGamelab(),
+  playlab: commonMsg.projectTypePlaylab(),
+  weblab: commonMsg.projectTypeWeblab(),
 };
 
 function typeFormatter(type) {
@@ -39,26 +43,21 @@ function typeFormatter(type) {
  * @param {string} date
  * @returns {string}
  */
-function dateFormatter(date) {
-  const result = date.match(/^(\d\d\d\d)-(\d\d)-(\d\d)$/);
-  if (!result) {
-    return date;
-  }
-  const [year, month, day] = result.slice(1, 4);
-  return `${month}/${day}/${year}`;
+function dateFormatter(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString();
 }
 
 /**
  * Looks up the channel id and the project type in the row data, to generate
  * a URL to decorate the project name with.
  * @param {string} name Project name.
- * @param {string} metadata.rowData.type Project type (e.g. 'applab').
- * @param {string} metadata.rowData.channel Encrypted, base64-encoded channel id.
+ * @param {Object} rowData
+ * @param {string} rowData.type Project type (e.g. 'applab').
+ * @param {string} rowData.channel Encrypted, base64-encoded channel id.
  * @returns {React} A named link to the specified project.
  */
-function nameFormatter(name, metadata) {
-  const {rowData} = metadata;
-
+function nameFormatter(name, {rowData}) {
   // Avoid generating malicious URLs in case the user somehow manipulates these inputs.
   const type = encodeURIComponent(rowData.type);
   const channel = encodeURIComponent(rowData.channel);
@@ -128,7 +127,7 @@ const ProjectsList = React.createClass({
       >
         <Table.Header />
 
-        <Table.Body rows={this.props.projectsData} rowKey="updatedAt" />
+        <Table.Body rows={this.props.projectsData} rowKey="channel" />
       </Table.Provider>
     );
   }
