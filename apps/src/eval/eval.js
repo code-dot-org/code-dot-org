@@ -472,7 +472,6 @@ Eval.execute = function () {
   var reportData = {
     app: 'eval',
     level: level.id,
-    builder: level.builder,
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),
