@@ -192,6 +192,21 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_equal EXPECTED_COMMON_FIELDS.count + EXPECTED_PAYMENT_FIELDS.count, response.first.count
   end
 
+  test 'includes unpaid workshops' do
+    unpaid_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSD
+    create :pd_workshop_participant, workshop: @workshop, enrolled: true, in_section: true, attended: true
+
+    sign_in @admin
+    get :index
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 3, response.count
+    unpaid_report = response.find{|row| row['workshop_id'] == unpaid_workshop.id}
+    assert_not_nil unpaid_report
+    refute unpaid_report['qualified']
+    assert_nil unpaid_report['payment_total']
+  end
+
   private
 
   def assert_common_fields(line)

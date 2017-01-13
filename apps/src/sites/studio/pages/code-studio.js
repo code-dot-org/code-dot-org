@@ -60,8 +60,8 @@ window.Dialog = require('@cdo/apps/code-studio/dialog');
 // would get preloaded. In webpack, they're only loaded as needed. We were
 // depending on these two modules being loaded when code-studio-common was
 // included, so force that load here.
-require('@cdo/apps/code-studio/levels/multi');
-require('@cdo/apps/code-studio/levels/textMatch');
+window.Multi = require('@cdo/apps/code-studio/levels/multi');
+window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.
