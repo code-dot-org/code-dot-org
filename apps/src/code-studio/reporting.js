@@ -1,6 +1,7 @@
 /* global appOptions */
 
 import $ from 'jquery';
+import _ from 'lodash';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -40,67 +41,134 @@ reporting.getLastServerResponse = function () {
 };
 
 /**
- * Our report data contains a set of fields that the server cares about, and a
- * set of fields that only the client cares about. This object lists all of the
- * different fields we expect, the type we expect them to be, and whether or not
- * we should send them to the server.
+ * Validate that the provided field on our report object is one of the given
+ * types
+ * @param {string} key
+ * @param {*} value
+ * @param {string[]} types
  */
-const fieldInfo = (sendToServer, types) => ({ sendToServer, types: [].concat(types) });
-const reportFields = {
-  // TODO: program is an object (array) on Match
-  // http://localhost-studio.code.org:3000/s/allthethings/stage/11/puzzle/1
-  program: fieldInfo(true, ['string', 'object']),
-  // Sometimes this is an object, sometimes it's json
-  fallbackResponse: fieldInfo(false, ['object', 'string']),
-  callback: fieldInfo(false, 'string'),
-  app: fieldInfo(true, 'string'),
-  allowMultipleSends: fieldInfo(true, 'boolean'),
-  // TODO: level is sometimes null. (http://localhost-studio.code.org:3000/s/allthethings/stage/21/puzzle/1)
-  // can we make this validation stronger?
-  // TODO: level is a number here http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-  level: fieldInfo(true, ['string', 'object', 'number']),
-  // TODO: this is an object in assessments?
-  // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-  result: fieldInfo(true, ['boolean', 'object']), // string
-  // TODO: this is an object in assessments?
-  // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
-  pass: fieldInfo(false, ['boolean', 'object']), // string
-  testResult: fieldInfo(true, 'number'),
-  // TODO: in sendResultsCompletion this becomes either "true" the string  or false the boolean
-  // got "true" on http://localhost-studio.code.org:3000/s/allthethings/stage/27/puzzle/1
-  submitted: fieldInfo(true, ['string', 'boolean']),
-  onComplete: fieldInfo(false, ['function', 'undefined']),
-  time: fieldInfo(true, 'number'),
-  lines: fieldInfo(true, 'number'),
-  save_to_gallery: fieldInfo(true, 'boolean'),
-  attempt: fieldInfo(true, 'number'),
-  image: fieldInfo(true, 'string'),
-  containedLevelResultsInfo: fieldInfo(false, 'object')
-};
+function validateType(key, value, types) {
+  let typeIsValid = false;
+  if (!_.isArray(types)) {
+    types = [types];
+  }
+  types.forEach(type => {
+    if (type === 'array') {
+      typeIsValid = typeIsValid || _.isArray(value);
+    } else {
+      typeIsValid = typeIsValid || (typeof value === type);
+    }
+  });
+
+  if (!typeIsValid) {
+    console.error(`Expected ${key} to be of type '${types}'. Got '${typeof value}'`);
+  }
+}
 
 /**
- * Using the reportFields object, validate that we don't have any unexpected fields
- * and that the fields we do have are of the expected type.
+ * Do some validation of our report object. Log console errors if we have any unexpected
+ * fields, or fields with different data than we expect.
  */
 function validateReport(report) {
   for (var key in report) {
-    if (report.hasOwnProperty(key)) {
-      const info = reportFields[key];
-      if (!info) {
+    if (!report.hasOwnProperty(key)) {
+      continue;
+    }
+
+    const value = report[key];
+    switch (key) {
+      case 'program':
+        if (report.app === 'match') {
+          validateType('program', value, 'array');
+        } else {
+          validateType('program', value, 'string');
+        }
+        break;
+      case 'fallbackResponse':
+        // TODO - sometimes it's json. figure out when.
+        validateType('fallbackResponse', value, 'object');
+        break;
+      case 'callback':
+        validateType('callback', value, 'string');
+        break;
+      case 'app':
+        validateType('app', value, 'string');
+        break;
+      case 'allowMultipleSends':
+        validateType('allowMultipleSends', value, 'boolean');
+        break;
+      case 'level':
+        // TODO: level is sometimes null. (http://localhost-studio.code.org:3000/s/allthethings/stage/21/puzzle/1)
+        // can we make this validation stronger?
+        // TODO: level is a number here http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+        validateType('level', value, ['string', 'object', 'number']);
+        break;
+      case 'result':
+        // TODO: this is an object in assessments?
+        // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+        validateType('result', value, ['boolean', 'object']); // maybe also string??
+        break;
+      case 'pass':
+        // TODO: this is an object in assessments?
+        // http://localhost-studio.code.org:3000/s/allthethings/stage/28/puzzle/1/page/1
+        validateType('pass', value, ['boolean', 'object']); // string??
+        break;
+      case 'testResult':
+        validateType('testResult', value, 'number');
+        break;
+      case 'submitted':
+        // TODO: in sendResultsCompletion this becomes either "true" the string  or false the boolean
+        // got "true" on http://localhost-studio.code.org:3000/s/allthethings/stage/27/puzzle/1
+        validateType('submitted', value, ['string', 'boolean']);
+        break;
+      case 'onComplete':
+        if (value !== undefined) {
+          validateType('onComplete', value, 'function');
+        }
+        break;
+      case 'time':
+        validateType('time', value, 'number');
+        break;
+      case 'lines':
+        validateType('lines', value, 'number');
+        break;
+      case 'save_to_gallery':
+        validateType('save_to_gallery', value, 'boolean');
+        break;
+      case 'attempt':
+        validateType('attempt', value, 'number');
+        break;
+      case 'image':
+        validateType('image', value, 'string');
+        break;
+      case 'containedLevelResultsInfo':
+        validateType('containedLevelResultsInfo', value, 'object');
+        break;
+      default:
         // TODO - eventually throw
         console.error(`Unexpected report key '${key}' of type '${typeof report[key]}'`);
-      } else if (!info.types.includes(typeof report[key])) {
-        // If you see this error, it means that there's somewhere that we're sending
-        // a report with a different type. Ideally we fix that caller to use the
-        // same type as elsewhere. If that's not possible for some reason, we can
-        // then add this as a new allowed type
-        console.error(`Expected key '${key}' to be of type '${info.types}'. Got '${typeof report[key]}'`);
-      }
+        break;
     }
   }
 }
 
 reporting.sendReport = function (report) {
+  // The list of report fields we want to send to the server
+  const serverFields = [
+    'program',
+    'app',
+    'allowMultipleSends',
+    'level',
+    'result',
+    'testResult',
+    'submitted',
+    'time',
+    'lines',
+    'save_to_gallery',
+    'attempt',
+    'image'
+  ];
+
   validateReport(report);
 
   // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
@@ -108,12 +176,11 @@ reporting.sendReport = function (report) {
   var queryItems = [];
   for (var key in report) {
     if (report.hasOwnProperty(key)) {
-      const info = reportFields[key];
-      if (info && info.sendToServer === false) {
-        // TODO - get rid of before merging
-        console.log(`not sending key '${key}' to server`);
-      } else {
+      if (serverFields.includes(key)) {
         queryItems.push(key + '=' + report[key]);
+      } else {
+        // TODO - get rid of before merging ?
+        // console.log(`not sending key '${key}' to server`);
       }
     }
   }
