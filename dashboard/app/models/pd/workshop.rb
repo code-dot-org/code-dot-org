@@ -381,11 +381,6 @@ class Pd::Workshop < ActiveRecord::Base
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
   def account_required_for_attendance?
-    case course
-      when Pd::Workshop::COURSE_COUNSELOR, COURSE_ADMIN
-        false
-      else
-        true
-    end
+    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
   end
 end
