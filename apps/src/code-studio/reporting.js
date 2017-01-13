@@ -50,7 +50,7 @@ reporting.getLastServerResponse = function () {
 function validateType(key, value, type) {
   let typeIsValid = false;
   if (type === 'array') {
-    typeIsValid = typeIsValid || _.isArray(value);
+    typeIsValid = typeIsValid || Array.isArray(value);
   } else {
     typeIsValid = typeIsValid || (typeof value === type);
   }
@@ -202,14 +202,11 @@ reporting.sendReport = function (report) {
   // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
   // shows the result dialog immediately
   var queryItems = [];
-  for (var key in report) {
-    if (report.hasOwnProperty(key)) {
-      if (serverFields.includes(key)) {
-        queryItems.push(key + '=' + report[key]);
-      }
-    }
+  const serverReport = _.pick(report, serverFields);
+  for (var key in serverReport) {
+    queryItems.push(key + '=' + report[key]);
   }
-  var queryString = queryItems.join('&');
+  const queryString = queryItems.join('&');
 
   clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
 
