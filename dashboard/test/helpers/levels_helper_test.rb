@@ -246,7 +246,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for teacher enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
 
     user = create(:teacher)
@@ -258,7 +258,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for a teacher not enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
 
     user = create(:teacher)
