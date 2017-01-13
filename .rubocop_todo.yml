@@ -11,10 +11,6 @@ Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
 # Offense count: 2
-Lint/EmptyWhen:
-  Enabled: false
-
-# Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 # SupportedStyles: runtime_error, standard_error
@@ -27,16 +23,6 @@ Lint/ParenthesesAsGroupedExpression:
 
 # Offense count: 32
 Lint/RescueException:
-  Enabled: false
-
-# Offense count: 4
-# Cop supports --auto-correct.
-Lint/UnifiedInteger:
-  Enabled: false
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Lint/UnneededSplatExpansion:
   Enabled: false
 
 # Offense count: 48

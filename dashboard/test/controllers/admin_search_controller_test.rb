@@ -16,7 +16,6 @@ class AdminSearchControllerTest < ActionController::TestCase
   # Confirm the permissioning on these pages is admin-only.
   generate_admin_only_tests_for :find_students
   generate_admin_only_tests_for :lookup_section
-  generate_admin_only_tests_for :search_for_teachers
 
   test "undelete_section is admin only" do
     sign_in(@not_admin)

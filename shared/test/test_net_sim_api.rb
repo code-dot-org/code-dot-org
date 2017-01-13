@@ -109,11 +109,11 @@ class NetSimApiTest < Minitest::Test
     NetSimApi.override_redis_for_test(test_redis)
 
     # All operations go to master node
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
 
     create_record([{name: 'alice', age: 7, male: false}])
