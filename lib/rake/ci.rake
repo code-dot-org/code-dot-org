@@ -58,14 +58,22 @@ namespace :ci do
     end
   end
 
+  multitask deploy_multi: [:deploy_console, :deploy_stack]
+
   task :deploy_stack do
     HipChat.wrap('CloudFormation stack update') { RakeUtils.rake 'stack:start' }
+  end
+
+  task :deploy_console do
+    if rack_env?(:production) && (console = CDO.app_servers['console'])
+      upgrade_frontend 'console', console
+    end
   end
 
   task all: [
     'firebase:ci',
     :build_with_cloudfront,
-    :deploy_stack
+    :deploy_multi
   ]
   task test: [
     :all,
@@ -76,4 +84,20 @@ end
 desc 'Update the server as part of continuous integration.'
 task :ci do
   HipChat.wrap('CI build') { Rake::Task[rack_env?(:test) ? 'ci:test' : 'ci:all'].invoke }
+end
+
+# Returns true if upgrade succeeded, false if failed.
+def upgrade_frontend(name, hostname)
+  HipChat.log "Upgrading <b>#{name}</b> (#{hostname})..."
+  command = 'sudo chef-client'
+  log_path = aws_dir "deploy-#{name}.log"
+  begin
+    RakeUtils.system "ssh -i ~/.ssh/deploy-id_rsa #{hostname} '#{command} 2>&1' >> #{log_path}"
+    HipChat.log "Upgraded <b>#{name}</b> (#{hostname})."
+    true
+  rescue RuntimeError
+    HipChat.log "<b>#{name}</b> (#{hostname}) failed to upgrade.", color: 'red'
+    HipChat.log "/quote #{File.read(log_path)}"
+    false
+  end
 end
