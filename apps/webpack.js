@@ -172,7 +172,11 @@ function create(options) {
       publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
+    devtool: !process.env.CI && options.minify ?
+      'source-map' :
+      process.env.CHEAP ?
+        'cheap-inline-source-map' :
+        'inline-source-map',
     entry: entries,
     externals: externals,
     plugins: [
