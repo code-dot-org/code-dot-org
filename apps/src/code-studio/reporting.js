@@ -73,8 +73,6 @@ const reportFields = {
   time: fieldInfo(true, 'number'),
   lines: fieldInfo(true, 'number'),
   save_to_gallery: fieldInfo(true, 'boolean'),
-  // TODO - figure this one out (prob LB related)
-  builder: fieldInfo(false, 'undefined'),
   attempt: fieldInfo(true, 'number'),
   image: fieldInfo(true, 'string'),
   containedLevelResultsInfo: fieldInfo(false, 'object')
