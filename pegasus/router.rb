@@ -116,7 +116,7 @@ class Documents < Sinatra::Base
 
     @dirs = []
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+    if request.site == 'hourofcode.com'
       @dirs << [File.join(request.site, 'i18n')]
     end
 

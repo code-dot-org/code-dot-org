@@ -1,0 +1,25 @@
+name 'U5 - Explore PT Review - Student Introduction'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 5 - Explore PT Prep - Reviewing the Task
+
+## Background
+
+Review the Explore PT, its scoring guidelines, and some sample tasks
+
+## Lesson
+
+* Review Practice PTs.
+* Review the Explore Performance Task.
+* Review Scoring Guidelines and Sample task
+
+## Resources
+
+* Performance Task: <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8" target="_blank">Explore Performance Task</a>
+* Rubric: Explore Performance Task Rubric
+* Guidelines: <a href="https://drive.google.com/open?id=1wsWVtKYVrhX4FYBAm6oxhMaMep_qQ1LKa-PrdbHNS6A" target="_blank">Explore PT - Guidlines Before Starting</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

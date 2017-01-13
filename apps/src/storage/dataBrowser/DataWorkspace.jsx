@@ -4,7 +4,7 @@ import DataProperties from './DataProperties';
 import DataTable from './DataTable';
 import Dialog from '../../templates/Dialog';
 import React from 'react';
-import PaneHeader, { PaneSection } from '../../templates/PaneHeader';
+import PaneHeader, { PaneSection, PaneButton } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
 import { clearWarning } from '../redux/data';
 import msg from '@cdo/locale';
@@ -30,6 +30,7 @@ const DataWorkspace = React.createClass({
   propTypes: {
     // from redux state
     localeDirection: React.PropTypes.string.isRequired,
+    handleVersionHistory: React.PropTypes.func.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     isVisible: React.PropTypes.bool.isRequired,
     warningMsg: React.PropTypes.string.isRequired,
@@ -44,6 +45,7 @@ const DataWorkspace = React.createClass({
     var style = {
       display: this.props.isVisible ? 'block' : 'none'
     };
+    var isRtl = this.props.localeDirection === 'rtl';
     return (
       <div id="dataWorkspaceWrapper" style={style}>
         <PaneHeader
@@ -53,6 +55,14 @@ const DataWorkspace = React.createClass({
           className={this.props.isRunning ? 'is-running' : ''}
         >
           <div id="dataModeHeaders">
+            <PaneButton
+              id="data-mode-versions-header"
+              iconClass="fa fa-clock-o"
+              label={msg.showVersionsHeader()}
+              headerHasFocus={!this.props.isRunning}
+              isRtl={isRtl}
+              onClick={this.props.handleVersionHistory}
+            />
             <PaneSection id="workspace-header">
               <span id="workspace-header-span">
                 {msg.dataWorkspaceHeader()}

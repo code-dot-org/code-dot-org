@@ -2,10 +2,6 @@ def hoc_dir(*dirs)
   pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
 end
 
-def trans_dir(*dirs)
-  pegasus_dir('sites.v3', 'translate.hourofcode.com', *dirs)
-end
-
 def hoc_load_countries
   JSON.parse(IO.read(hoc_dir('i18n/countries.json')))
 end
@@ -20,15 +16,6 @@ def hoc_load_i18n
 end
 HOC_I18N = hoc_load_i18n
 
-def trans_load_i18n
-  i18n = {}
-  Dir.glob(trans_dir('i18n/*.yml')).each do |string_file|
-    i18n.merge!(YAML.load_file(string_file))
-  end
-  i18n
-end
-TRANS_I18N = trans_load_i18n
-
 # Can be called by pages on hourofcode.com, code.org, or csedweek.org to retrieve
 # a string from the hourofcode.com translations.
 # When called on hourofcode.com, it uses @language.
@@ -38,7 +25,6 @@ TRANS_I18N = trans_load_i18n
 def hoc_s(id)
   id = id.to_s
   language = @language || Languages.get_hoc_unique_language_by_locale(request.locale)
-  return TRANS_I18N['en-US'][id] if request.site == 'translate.hourofcode.com'
   HOC_I18N[language][id] || HOC_I18N['en'][id]
 end
 
