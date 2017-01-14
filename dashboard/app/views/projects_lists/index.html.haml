@@ -1,0 +1,13 @@
+- content_for :head do
+  %script{src:'/assets/js/projectsList.js'}
+
+#projects-list
+
+:ruby
+  reactProps = {
+    projectsData: @projects_list_data
+  }
+
+:javascript
+  ReactDOM.render(React.createElement(window.dashboard.ProjectsList, #{reactProps.to_json}),
+    document.getElementById('projects-list'));

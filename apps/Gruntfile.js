@@ -399,6 +399,8 @@ module.exports = function (grunt) {
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
 
+    projectsList: './src/sites/studio/pages/projectsList.js',
+
     publicKeyCryptography: './src/publicKeyCryptography/main.js',
 
     brambleHost: './src/weblab/brambleHost.js',

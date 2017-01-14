@@ -115,6 +115,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :projects_lists, path: '/projects-lists/', only: [:index] do
+    collection do
+      get "/:section_id", to: 'projects_lists#index'
+    end
+  end
+
   post '/locale', to: 'home#set_locale', as: 'locale'
 
   # quick links for cartoon network arabic
