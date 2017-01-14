@@ -42,7 +42,12 @@
   .field
     = f.hidden_field :published
   .actions
-    = f.submit 'Save and publish your completed work', {:id => 'publishLevel', :style => "background-color: #f0c14b"}
+    = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px"}
+    %p Or, save, publish, and return to:
+    %ul
+      - @level.script_levels.each do |script_level|
+        %li
+          = f.submit build_script_level_path(script_level), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
@@ -53,7 +58,7 @@
       $('#level_published').val(false);
     });
 
-    $('#publishLevel').click(function() {
+    $('.publishLevel').click(function() {
       saving = true;
       $('#level_published').val(true);
     });
