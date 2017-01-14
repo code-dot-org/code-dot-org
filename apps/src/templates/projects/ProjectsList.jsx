@@ -1,3 +1,5 @@
+/* global window */
+
 import React from 'react';
 import {Table} from 'reactabular';
 import color from "../../util/color";
@@ -27,8 +29,9 @@ const styles = {
  * @type {Object}
  */
 const PROJECT_TYPE_MAP = {
-  artist: commonMsg.projectTypeArtist(),
+  algebra_game: commonMsg.projectTypeAlgebra(),
   applab: commonMsg.projectTypeApplab(),
+  artist: commonMsg.projectTypeArtist(),
   gamelab: commonMsg.projectTypeGamelab(),
   playlab: commonMsg.projectTypePlaylab(),
   weblab: commonMsg.projectTypeWeblab(),
@@ -133,3 +136,6 @@ const ProjectsList = React.createClass({
   }
 });
 export default ProjectsList;
+
+window.dashboard = window.dashboard || {};
+window.dashboard.ProjectsList = ProjectsList;

@@ -44,12 +44,6 @@ const path = require('path');
 const fs = require('fs');
 
 const SILENCED = [
-  'applab-api',
-  'tutorialExplorer',
-  'makerlab',
-  'pd',
-  'publicKeyCryptography',
-  'brambleHost',
   'applab',
   'applab-api',
   'bounce',
@@ -84,7 +78,7 @@ const SILENCED = [
   'netsim',
   'pd',
   'plc',
-  'publicKeyCryptography',
+  'projectsList',
   'publicKeyCryptography',
   'raceInterstitial',
   'schoolInfo',
