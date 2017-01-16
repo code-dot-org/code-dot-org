@@ -1,0 +1,33 @@
+name 'Importing Screens'
+markdown <<MARKDOWN
+# Importing Screens
+
+You've seen how to create an app with multiple screens by yourself, but what about working with others to collaborate on an app? Fortunately App Lab allows you to import screens from another app! From the same dropdown where you can add a screen, just select "Import Screen" and follow the instructions (you'll need the sharing code from the app you're importing screens from).
+
+![](https://images.code.org/9ca7398a9b7403dc39ec6a6b2d2b8a5e-image-1477346132059.png)
+
+# Watch Out for Conflicts!
+
+To protect against ID conflict errors (using the same ID for multiple elements) App Lab will prevent you from importing screens that use element IDs that are already in your app. A few things to check for when importing:
+
+* The screen(s) you are importing need to have unique IDs that aren't already used by screens in the app
+	* If you try to import a screen with an ID that already exists, you'll be given the option of replacing your existing screen with the new one.
+    
+<img src="https://images.code.org/d5d197be3a75eeb624e3a1312ab786ce-image-1477346707529.49.02.png" style="max-width: 300px"/>
+
+* The IDs used in the imported screen aren't already used in your app
+
+<img src="https://images.code.org/affd44c38c108ae5e3693d3187ea67e0-image-1477346796569.48.10.png" style="max-width: 300px;"/>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### Promoting Teamwork
+
+The following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:
+
+* Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls
+* Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID "screen1"
+* Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing
+
+Once teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app.
+MARKDOWN

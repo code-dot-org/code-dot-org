@@ -168,6 +168,10 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.moving_students = {editing: true};
 
+    $scope.hocAssignWarningEnabled = #{Gatekeeper.allows('hoc_assign_warning', default: false)};
+
+    $scope.hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
+
     $scope.edit = function(section) {
       section.editing = true;
     };
@@ -177,6 +181,30 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     };
 
     $scope.save = function(section) {
+      if (section.course) {
+        var course = null;
+        for (var i = 0; i < $scope.course_list.length; i++) {
+          if ($scope.course_list[i].id === section.course.id) {
+            course = $scope.course_list[i];
+            break;
+          }
+        }
+        if ($scope.hocAssignWarningEnabled &&
+            course.category === $scope.hocCategoryName) {
+          $scope.sectionToSave = $scope.sections.indexOf(section);
+          $('#assign-confirm').modal('show');
+          return;
+        }
+      }
+      $scope.send_save(section);
+    };
+
+    $scope.confirm_save = function() {
+      $scope.send_save($scope.sections[$scope.sectionToSave]);
+      $('#assign-confirm').modal('hide');
+    }
+
+    $scope.send_save = function(section) {
       if (section.id) { // update existing
         sectionsService.update({id: section.id}, section).$promise.then(
           function(result_section) {
@@ -245,7 +273,14 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.genericError = function(result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
     };
-    $scope.section.$promise.catch($scope.genericError);
+
+    $scope.section.$promise.catch(function(result) {
+      if (result.status == 403 || result.status == 404) {
+        $window.alert("You are not the owner of this section or this section doesn’t exist.");
+      } else {
+        $scope.genericError(result);
+      }
+    });
     $scope.sections.$promise.catch($scope.genericError);
 
     $scope.tab = $routeParams.tab;
@@ -426,7 +461,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
 
     $scope.moveStudents = function() {
       function isOwnSection(sectionCode) {
-        return $scope.sections.map(function(section) {return section.code}).includes(sectionCode);
+        return $scope.sections.some(function(section) {return section.code === sectionCode});
       }
 
       function displayError(errorMessage) {
@@ -557,6 +592,7 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
     $scope.progressLoaded = false;
 
     $scope.course_list = #{DashboardSection::valid_courses(request.user_id).to_json};
+    $scope.progress_disabled_courses = #{DashboardSection::progress_disabled_courses(request.user_id).to_json};
 
     // wait until we have both the students and the student progress
     $q.all([$scope.progress.$promise, $scope.section.$promise]).then(function(){
@@ -623,9 +659,21 @@ title: <%= I18n.t('dashboard_landing_title').inspect %>
       }
     };
 
+    var isInCategory = function (course_list, course_id, categoryName) {
+      for (var i = 0; i < course_list.length; i++) {
+        if (course_list[i].id === course_id) {
+          return categoryName === course_list[i].category;
+        }
+      }
+      return false;
+    };
+
     // merge the data returned by progress api into the data returned by the section students api
     $scope.mergeProgress = function() {
       $scope.course_id = $scope.progress.script.id;
+      $scope.progress_disabled = $scope.progress_disabled_courses.indexOf($scope.course_id) !== -1
+      var hocCategoryName = "#{I18n.t('hoc_category_name', default: 'hoc')}";
+      $scope.is_hoc_course = isInCategory($scope.course_list, $scope.course_id, hocCategoryName);
       // calculate width of each level in the progress bar assuming the overall width is 780 px
 
       // Takes the level's position in the script, and returns its level number in its stage

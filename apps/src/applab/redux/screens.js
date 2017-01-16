@@ -1,6 +1,5 @@
-/* eslint no-unused-vars: "error" */
-
 import Immutable from 'immutable';
+import $ from 'jquery';
 import {
   sources as sourcesApi,
   channels as channelsApi,
@@ -114,17 +113,22 @@ export const toggleImportScreen = (importing) => ({
   importing,
 });
 
+function getProjectIdFromUrl(url) {
+  const match = url.match(/projects\/applab\/([^\/]+)/);
+  if (match) {
+    return match[1];
+  }
+}
+
 export function fetchProject(url) {
   return dispatch => {
-    var sources;
-    var channel;
-    var assets;
-    var existingAssets;
-    var match = url.match(/projects\/applab\/([^\/]+)/);
-    var onError = () => {
-      dispatch({type: IMPORT.PROJECT.FAILED_FETCHING, url});
-    };
-    var onSuccess = () => {
+    let sources;
+    let channel;
+    let assets;
+    let existingAssets;
+
+    const onError = () => dispatch({type: IMPORT.PROJECT.FAILED_FETCHING, url});
+    const onSuccess = () => {
       if (sources && channel && assets && existingAssets) {
         dispatch({
           type: IMPORT.PROJECT.FINISHED_FETCHING,
@@ -138,24 +142,18 @@ export function fetchProject(url) {
         });
       }
     };
-    if (match) {
-      var projectId = match[1];
-      dispatch({type: IMPORT.PROJECT.START_FETCHING, url});
 
-      assetsApi.ajax(
-        'GET',
-        '',
-        xhr => {
-          existingAssets = JSON.parse(xhr.response);
+    const attemptFetchProject = projectId => {
+      assetsApi.getFiles(
+        result => {
+          existingAssets = result.files;
           onSuccess();
         },
         onError
       );
-      assetsApi.withProjectId(projectId).ajax(
-        'GET',
-        '',
-        xhr => {
-          assets = JSON.parse(xhr.response);
+      assetsApi.withProjectId(projectId).getFiles(
+        result => {
+          assets = result.files;
           onSuccess();
         },
         onError
@@ -178,8 +176,22 @@ export function fetchProject(url) {
         },
         onError
       );
+    };
+
+    dispatch({type: IMPORT.PROJECT.START_FETCHING, url});
+
+    const projectId = getProjectIdFromUrl(url);
+    if (projectId) {
+      attemptFetchProject(projectId);
     } else {
-      onError();
+      $.get('/redirected_url?u=' + encodeURIComponent(url), response => {
+        const projectId = getProjectIdFromUrl(response);
+        if (projectId) {
+          attemptFetchProject(projectId);
+        } else {
+          onError();
+        }
+      }).fail(onError);
     }
   };
 }

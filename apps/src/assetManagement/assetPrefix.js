@@ -6,19 +6,19 @@ var MEDIA_PROXY = '//' + location.host + '/media?u=';
 // starts with http or https
 var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
 
-var ICON_PREFIX = require('../applab/constants').ICON_PREFIX;
+export const ICON_PREFIX = 'icon://';
+export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 
-var assetPathPrefix = "/v3/assets/";
-var channelId;
+const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
+const DEFAULT_CHANNEL_ID = undefined;
 
-module.exports.init = function (config) {
-  if (config.assetPathPrefix) {
-    assetPathPrefix = config.assetPathPrefix;
-  }
-  if (config.channel) {
-    channelId = config.channel;
-  }
-};
+let assetPathPrefix = DEFAULT_ASSET_PATH_PREFIX;
+let channelId = DEFAULT_CHANNEL_ID;
+
+export function init(config) {
+  assetPathPrefix = config.assetPathPrefix || DEFAULT_ASSET_PATH_PREFIX;
+  channelId = config.channel || DEFAULT_CHANNEL_ID;
+}
 
 /**
  * If the filename is relative (contains no slashes), then prepend
@@ -28,7 +28,7 @@ module.exports.init = function (config) {
  * @param {string} filename
  * @returns {string}
  */
-module.exports.fixPath = function (filename) {
+export function fixPath(filename) {
   // Rewrite urls to pass through our media proxy. Unless of course we are in an
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
@@ -52,7 +52,7 @@ module.exports.fixPath = function (filename) {
   }
 
   return assetPathPrefix + channelId + '/' + filename;
-};
+}
 
 
 /**
@@ -61,7 +61,7 @@ module.exports.fixPath = function (filename) {
  * @param element {Element}
  * @return {string}
  */
-module.exports.renderIconToString = function (value, element) {
+export function renderIconToString(value, element) {
   var canvas = document.createElement('canvas');
   canvas.width = canvas.height = 400;
   var ctx = canvas.getContext('2d');
@@ -73,4 +73,4 @@ module.exports.renderIconToString = function (value, element) {
   var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
   ctx.fillText(String.fromCharCode(unicode), 200, 200);
   return canvas.toDataURL();
-};
+}

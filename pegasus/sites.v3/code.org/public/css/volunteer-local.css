@@ -85,3 +85,7 @@ html, body, #map-canvas {
 .no-margin {
   margin: 0;
 }
+
+.profile-detail {
+  white-space: pre-line;
+}

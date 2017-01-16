@@ -2,7 +2,7 @@ import {assert} from '../util/configuredChai';
 var testUtils = require('../util/testUtils');
 testUtils.setExternalGlobals();
 
-var experiments = require('@cdo/apps/experiments');
+var experiments = require('@cdo/apps/util/experiments');
 
 describe('experiments', function () {
   var mockedQueryString = '';

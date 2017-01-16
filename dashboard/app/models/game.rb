@@ -148,7 +148,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB
+    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB || app == WEBLAB
   end
 
   def sharing_filtered?
@@ -173,15 +173,15 @@ class Game < ActiveRecord::Base
 
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
-    app === APPLAB
+    app === APPLAB || app == WEBLAB
   end
 
   def has_i18n?
-    !(app == NETSIM || app == APPLAB || app == GAMELAB)
+    !(app == NETSIM || app == APPLAB || app == GAMELAB || app == WEBLAB)
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB && CDO.use_firebase_for_new_applab_projects
+    app == APPLAB || app == GAMELAB
   end
 
   def self.setup

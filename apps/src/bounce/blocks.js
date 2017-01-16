@@ -5,7 +5,6 @@
  *
  */
 var msg = require('./locale');
-var codegen = require('../codegen');
 
 var generateSetterCode = function (ctx, name) {
   var value = ctx.getTitleValue('VALUE');
@@ -22,6 +21,8 @@ var generateSetterCode = function (ctx, name) {
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  var skin = blockInstallOptions.skin;
+
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
@@ -139,7 +140,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenBallMissesPaddle());
+        .appendTitle(skin.blockMsgs.paddleMiss);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallMissesPaddleTooltip());
@@ -157,10 +158,10 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       this.setHSV(140, 1.00, 0.74);
       this.appendDummyInput()
-        .appendTitle(msg.whenPaddleCollided());
+        .appendTitle(skin.blockMsgs.paddleCollide);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
-      this.setTooltip(msg.whenPaddleCollidedTooltip());
+      this.setTooltip(skin.blockMsgs.paddleCollideTooltip);
     }
   };
 
@@ -254,19 +255,13 @@ exports.install = function (blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.bounce_playSound.SOUNDS =
-      [[msg.playSoundHit(), 'hit'],
-       [msg.playSoundWood(), 'wood'],
-       [msg.playSoundRetro(), 'retro'],
-       [msg.playSoundSlap(), 'slap'],
-       [msg.playSoundRubber(), 'rubber'],
-       [msg.playSoundCrunch(), 'crunch'],
-       [msg.playSoundWinPoint(), 'winpoint'],
-       [msg.playSoundWinPoint2(), 'winpoint2'],
-       [msg.playSoundLosePoint(), 'losepoint'],
-       [msg.playSoundLosePoint2(), 'losepoint2'],
-       [msg.playSoundGoal1(), 'goal1'],
-       [msg.playSoundGoal2(), 'goal2']];
+  blockly.Blocks.bounce_playSound.SOUNDS = [];
+  for (var sound in skin.customSounds) {
+    if (skin.customSounds[sound].msg) {
+      blockly.Blocks.bounce_playSound.SOUNDS.push(
+          [skin.customSounds[sound].msg, sound]);
+    }
+  }
 
   generator.bounce_playSound = function () {
     // Generate JavaScript for playing a sound.
@@ -333,11 +328,10 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.setHSV(184, 1.00, 0.74);
-      this.appendDummyInput()
-        .appendTitle(msg.launchBall());
+      this.appendDummyInput().appendTitle(skin.blockMsgs.launchBall);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.launchBallTooltip());
+      this.setTooltip(skin.blockMsgs.launchBallTooltip);
     }
   };
 
@@ -386,17 +380,17 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendTitle(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-      this.setTooltip(msg.setPaddleSpeedTooltip());
+      this.setTooltip(skin.blockMsgs.paddleSpeedTooltip);
     }
   };
 
   blockly.Blocks.bounce_setPaddleSpeed.VALUES =
-      [[msg.setPaddleSpeedRandom(), 'random'],
-       [msg.setPaddleSpeedVerySlow(), 'Bounce.PaddleSpeed.VERY_SLOW'],
-       [msg.setPaddleSpeedSlow(), 'Bounce.PaddleSpeed.SLOW'],
-       [msg.setPaddleSpeedNormal(), 'Bounce.PaddleSpeed.NORMAL'],
-       [msg.setPaddleSpeedFast(), 'Bounce.PaddleSpeed.FAST'],
-       [msg.setPaddleSpeedVeryFast(), 'Bounce.PaddleSpeed.VERY_FAST']];
+      [[skin.blockMsgs.paddleSpeedRandom, 'random'],
+       [skin.blockMsgs.paddleSpeedVerySlow, 'Bounce.PaddleSpeed.VERY_SLOW'],
+       [skin.blockMsgs.paddleSpeedSlow, 'Bounce.PaddleSpeed.SLOW'],
+       [skin.blockMsgs.paddleSpeedNormal, 'Bounce.PaddleSpeed.NORMAL'],
+       [skin.blockMsgs.paddleSpeedFast, 'Bounce.PaddleSpeed.FAST'],
+       [skin.blockMsgs.paddleSpeedVeryFast, 'Bounce.PaddleSpeed.VERY_FAST']];
 
   generator.bounce_setPaddleSpeed = function (velocity) {
     return generateSetterCode(this, 'setPaddleSpeed');
@@ -422,12 +416,39 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBackground.VALUES =
-      [[msg.setBackgroundRandom(), 'random'],
-       [msg.setBackgroundHardcourt(), '"hardcourt"'],
-       [msg.setBackgroundRetro(), '"retro"']];
+    [[msg.setBackgroundRandom(), 'random']].concat(
+      skin.backgrounds.map((background) =>
+        [msg.setBackground({background: background}), `"${background}"`]));
 
   generator.bounce_setBackground = function () {
     return generateSetterCode(this, 'setBackground');
+  };
+
+  /**
+   * setTeam
+   */
+  blockly.Blocks.bounce_setTeam = {
+    helpUrl: '',
+    init: function () {
+      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      dropdown.setValue(this.VALUES[14][1]); // default to warriors
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setTeamTooltip());
+    }
+  };
+
+  blockly.Blocks.bounce_setTeam.VALUES =
+    [[msg.setTeamRandom(), 'random']].concat(
+      skin.teams.map((team) => [msg.setTeam({team: team}), `"${team}"`]));
+
+  generator.bounce_setTeam = function () {
+    return generateSetterCode(this, 'setTeam');
   };
 
   /**
@@ -450,9 +471,8 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setBall.VALUES =
-      [[msg.setBallRandom(), 'random'],
-       [msg.setBallHardcourt(), '"hardcourt"'],
-       [msg.setBallRetro(), '"retro"']];
+    [[msg.setBallRandom(), 'random']].concat(
+      skin.balls.map((ball) => [msg.setBall({ball: ball}), `"${ball}"`]));
 
   generator.bounce_setBall = function () {
     return generateSetterCode(this, 'setBall');
@@ -483,6 +503,33 @@ exports.install = function (blockly, blockInstallOptions) {
        [msg.setPaddleRetro(), '"retro"']];
 
   generator.bounce_setPaddle = function () {
+    return generateSetterCode(this, 'setPaddle');
+  };
+
+  /**
+   * setPaddleDropdown
+   */
+  blockly.Blocks.bounce_setPaddleDropdown = {
+    helpUrl: '',
+    init: function () {
+      var dropdown = new blockly.FieldImageDropdown(this.VALUES, 54, 61);
+      dropdown.setValue(this.VALUES[1][1]);
+
+      this.setHSV(184, 1.00, 0.74);
+      this.appendDummyInput()
+          .appendTitle(skin.blockMsgs.setPaddle)
+          .appendTitle(dropdown, 'VALUE');
+      this.setInputsInline(true);
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setTooltip(msg.setPaddleTooltip());
+    }
+  };
+
+  blockly.Blocks.bounce_setPaddleDropdown.VALUES =
+      skin.paddles.map((paddle) => [skin[paddle].paddle, `"${paddle}"`]);
+
+  generator.bounce_setPaddleDropdown = function () {
     return generateSetterCode(this, 'setPaddle');
   };
 

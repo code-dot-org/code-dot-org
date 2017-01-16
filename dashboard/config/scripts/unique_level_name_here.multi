@@ -1,6 +1,13 @@
 name 'unique level name here'
-title 'title'
+title 'CSD U3 CSS Vocab Match'
 description 'description here'
-question 'Question'
-wrong 'wrong answer'
-right 'right answer'
+question 'CSS'
+answer '1'
+question 'Stylesheet'
+answer '2'
+
+markdown <<MARKDOWN
+# CSS Vocabulary Match
+
+Here are some vocabulary words you have seen in the last few levels.  Work with a partner to match the words to their definitions.
+MARKDOWN

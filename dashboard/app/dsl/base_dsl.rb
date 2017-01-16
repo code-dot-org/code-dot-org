@@ -3,9 +3,14 @@ class BaseDSL
     @hash = {}
   end
 
+  # TODO(asher): Remove the need for this disabling of rubocop. Note that this
+  # requires some amount of work, as usage would change from name('xyz') to
+  # name = 'xyz'.
+  # rubocop:disable Style/TrivialAccessors
   def name(text)
     @name = text
   end
+  # rubocop:enable Style/TrivialAccessors
 
   def encrypted(text)
     @hash['encrypted'] = '1'
@@ -29,7 +34,7 @@ class BaseDSL
   end
 
   def self.parse(str, filename, name=nil)
-    object = self.new
+    object = new
     object.name(name) if name.present?
     object.instance_eval(str.to_ascii, filename)
     [object.parse_output, object.i18n_hash]

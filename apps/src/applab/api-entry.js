@@ -1,32 +1,50 @@
 // entry point for api that gets exposed.
 
+window.$ = require('jquery');
+import '@cdo/apps/sites/studio/pages/code-studio';
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
-window.$ = require('jquery');
-
+window.React = require('react');
 window.Applab = require('./applab');
-var applabCommands = require('./commands');
-var api = require('./api');
-var appStorage = require('./appStorage');
+import {injectErrorHandler} from '../javascriptMode';
+import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import * as api from './api';
+import appStorage from './appStorage';
+import Sounds from '../Sounds';
+import {singleton as studioApp} from '../StudioApp';
+import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
+import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {getStore} from '@cdo/apps/redux';
+import {setIsRunning} from '@cdo/apps/redux/runState';
+window.CDOSounds = new Sounds();
 
-var Sounds = require('../Sounds');
-var studioApp = require('../StudioApp').singleton;
-studioApp.cdoSounds = new Sounds();
+const noop = function () {};
 
-// TODO: remove the below two monkey patches.
-window.Applab.JSInterpreter = {getNearestUserCodeLine: function () {return 0;}};
-
-window.Applab.callCmd = function (cmd) {
-  var retVal = false;
-  if (applabCommands[cmd.name] instanceof Function) {
-    retVal = applabCommands[cmd.name](cmd.opts);
-  }
-  return retVal;
+// TODO: remove the below monkey patches.
+window.Applab.JSInterpreter = {
+  getNearestUserCodeLine: function () {return 0;},
+  deinitialize: noop
 };
+studioApp.highlight = noop;
+Applab.render = noop;
 
-// Expose api functions globally
+// window.APP_OPTIONS gets generated on the fly by the exporter and appended to this file.
+setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
+setupApp(window.APP_OPTIONS);
+loadApplab(getAppOptions());
+// reset applab turtle manually (normally called when execution begins)
+// before the student's code is run.
+Applab.resetTurtle();
+getStore().dispatch(setIsRunning(true));
+
+
+// Expose api functions globally, unless they already exist
+// in which case they are probably browser apis that we should
+// not overwrite.
 for (let key in api) {
-  window[key] = api[key];
+  if (!window[key]) {
+    window[key] = api[key];
+  }
 }
 
 // disable appStorage
@@ -35,3 +53,9 @@ for (let key in appStorage) {
     console.error("Data APIs are not available outside of code studio.");
   };
 }
+
+// Set up an error handler for student errors and warnings.
+injectErrorHandler(new JavaScriptModeErrorHandler(
+  () => Applab.JSInterpreter,
+  Applab
+));

@@ -29,7 +29,8 @@ Dashboard::Application.configure do
   config.public_file_server.headers = { 'Cache-Control' => "public, max-age=86400, s-maxage=43200" }
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # webpack handles js compression for us
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -91,4 +92,8 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # Whether or not to skip script preloading. Setting this to true
+  # significantly speeds up server startup time
+  config.skip_script_preload = false
 end

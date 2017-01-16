@@ -1,0 +1,3 @@
+#!/bin/sh
+
+../send-to-mailing-list 2016-10-06-hoc-volunteer-launch ./test-params.csv

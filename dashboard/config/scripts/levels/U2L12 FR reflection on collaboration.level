@@ -1,7 +1,7 @@
 <FreeResponse>
   <config><![CDATA[{
   "game_id": 52,
-  "created_at": "2016-07-27T20:33:21.768Z",
+  "created_at": "2016-07-27T20:33:21.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -9,7 +9,7 @@
     "title": "Personal Reflection: Collaboration",
     "allow_user_uploads": "false",
     "submittable": "true",
-    "peer_reviewable": "true",
+    "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,18 +1,18 @@
 "ku":
   devise:
     confirmations:
-      confirmed: Your email address was successfully confirmed.
-      send_instructions: You will receive an email with instructions about how to
-        confirm your account in a few minutes.
-      send_paranoid_instructions: If your email address exists in our database, you
-        will receive an email with instructions about how to confirm your account
-        in a few minutes.
+      confirmed: "ناونیسانی ئیمێڵەكەت بە سەرەوتوویی پشتڕاست كرا."
+      send_instructions: Tu dê vê gavê E-Mailek wergirî, kîjan dê alîkarî ya te bo
+        Erêkirin ya Konto yê te kit
+      send_paranoid_instructions: Heker Adres ya E-Mail ya te nik me hebit, tu dê
+        vê gavê berîdek wergirî, kîjan dê alîkarî ya te bo Erêkirin ya Konto yê te
+        kit
     failure:
       already_authenticated: You are already signed in.
       inactive: Your account was not activated yet.
       invalid: "ئیمەیڵ یان تێپەڕەوشە نادروستە."
       invalid_token: Invalid authentication token.
-      locked: Your account is locked.
+      locked: "ئەكاونتەكەت قفڵ دراوە."
       not_found_in_database: "ئیمەیڵ یان تێپەڕەوشە نادروستە."
       timeout: Your session expired, please sign in again to continue.
       unauthenticated: You need to sign in or sign up before continuing.
@@ -38,8 +38,8 @@
       updated: Your password was changed successfully. You are now signed in.
       updated_not_active: Your password was changed successfully.
     registrations:
-      destroyed: Bye! Your account was successfully cancelled. We hope to see you
-        again soon.
+      destroyed: "خواحافیز! ئەكاونتەكەت بە سەركەوتوویی قەپاتكرا. هیوادارین دووبارە
+        بتبینینەوە."
       signed_up: Welcome! You have signed up successfully.
       signed_up_but_inactive: You have signed up successfully. However, we could not
         sign you in because your account is not yet activated.

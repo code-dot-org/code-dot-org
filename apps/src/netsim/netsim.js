@@ -2,14 +2,13 @@
  * @overview Internet Simulator app for Code.org.
  *           This file is the main entry point for the Internet Simulator.
  */
-/* global -Blockly */
-/* global dashboard */
 /* global confirm */
 
+var utils = require('../utils');
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var utils = require('../utils');
+import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 var _ = require('lodash');
 var i18n = require('@cdo/netsim/locale');
 var ObservableEvent = require('../ObservableEvent');
@@ -240,6 +239,19 @@ NetSim.prototype.init = function (config) {
     this.studioApp_.configureDom = NetSim.configureDomOverride_.bind(this.studioApp_);
     this.studioApp_.onResize = NetSim.onResizeOverride_.bind(this.studioApp_);
 
+    // Wrap showInstructionsWrapper to actually show instructions, which core
+    // studioApp no longer does.  This must happen before studioApp_.init()
+    // which will actually call this wrapper.
+    const originalShowInstructionsWrapper = config.showInstructionsWrapper.bind(config);
+    config.showInstructionsWrapper = (originalShowInstructions) => {
+      originalShowInstructionsWrapper(() => {
+        this.showInstructionsDialog();
+        if (typeof originalShowInstructions === 'function') {
+          originalShowInstructions();
+        }
+      });
+    };
+
     this.studioApp_.init(config);
 
     // Create netsim lobby widget in page
@@ -373,6 +385,7 @@ NetSim.prototype.initWithUser_ = function (user) {
         $('#netsim-tabs'),
         this.runLoop_,
         {
+          showInstructionsDialogCallback: this.showInstructionsDialog.bind(this),
           chunkSizeSliderChangeCallback: this.setChunkSize.bind(this),
           myDeviceBitRateChangeCallback: this.setMyDeviceBitRate.bind(this),
           encodingChangeCallback: this.changeEncodings.bind(this),
@@ -1336,4 +1349,15 @@ NetSim.prototype.resetShard = function () {
       }
     }.bind(this));
   }
+};
+
+/**
+ * Show the instrutions modal dialog on top of the NetSim interface.
+ */
+NetSim.prototype.showInstructionsDialog = function () {
+  this.studioApp_.reduxStore.dispatch(openInstructionsDialog({
+    autoClose: false,
+    aniGifOnly: false,
+    hintsOnly: false
+  }));
 };

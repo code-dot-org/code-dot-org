@@ -1,0 +1,15 @@
+name 'Lesson 1.11 Overview'
+markdown <<MARKDOWN
+## Lesson 11: Packets and Making a Reliable Internet
+<img src="https://images.code.org/44a2a7baf3dfa0719c8ed70a9f40e556-image-1474226258773.png" style="float:right; margin-left:30px; width:200px">
+
+Internet Simulator | Group Problem Solving
+
+In this lesson student develop a protocol for reliably sending a message over an unreliable internet. The Internet Simulator has been setup for this lesson to restrict messages to no more than 8 characters each, and messages get dropped messages with some probability on every hop.
+
+<h2>
+<a href= "https://curriculum.code.org/csp/unit1/11" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+</h2>
+
+<br><br><br><br>
+MARKDOWN

@@ -5,7 +5,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   def sign_in(user)
     # override the default sign_in helper because we don't actually have a request or anything here
-    self.stubs(:current_user).returns user
+    stubs(:current_user).returns user
   end
 
   setup do
@@ -18,7 +18,7 @@ class LevelsHelperTest < ActionView::TestCase
       )
     end
 
-    self.stubs(:current_user).returns nil
+    stubs(:current_user).returns nil
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
@@ -227,7 +227,7 @@ class LevelsHelperTest < ActionView::TestCase
   def stub_country(code)
     req = request
     req.location = OpenStruct.new country_code: code
-    self.stubs(:request).returns(req)
+    stubs(:request).returns(req)
   end
 
   test 'send to phone enabled for US' do
@@ -246,25 +246,25 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for teacher enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
 
     user = create(:teacher)
     sign_in user
 
-    app_options = self.question_options
+    app_options = question_options
 
     assert_equal true, app_options[:level]['submittable']
   end
 
   test 'submittable level is not submittable for a teacher not enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: true)
+    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
     Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
 
     user = create(:teacher)
     sign_in user
 
-    app_options = self.question_options
+    app_options = question_options
 
     assert_not app_options[:level]['submittable']
   end
@@ -442,5 +442,33 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+  end
+
+  test 'standalone multi should include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = true
+    assert include_multi_answers?(standalone)
+  end
+
+  test 'non-standalone multi should not include answers for student' do
+    sign_in create(:student)
+
+    @script = create(:script)
+    @level = create :multi
+    @stage = create :stage
+    @script_level = create :script_level, levels: [@level], stage: @stage
+
+    @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
+
+    standalone = false
+    assert_not include_multi_answers?(standalone)
   end
 end

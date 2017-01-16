@@ -1,8 +1,7 @@
 import $ from 'jquery';
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
-window.levelGroup = window.levelGroup || {levels: {}};
-
-var TextMatch = window.TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
+var TextMatch = function (levelId, id, app, standalone, answers, lastAttempt) {
 
   // The dashboard levelId.
   this.levelId = levelId;
@@ -30,21 +29,17 @@ TextMatch.prototype.ready = function () {
   $("#" + this.id + " textarea.response").val(this.lastAttempt);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   var textarea = $("#" + this.id + " textarea.response");
   textarea.blur(() => {
-    if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn(this.levelId, true);
-    }
+    onAnswerChanged(this.levelId, true);
   });
   textarea.on("input", null, null, () => {
-    if (window.levelGroup && window.levelGroup.answerChangedFn) {
-      window.levelGroup.answerChangedFn(this.levelId);
-    }
+    onAnswerChanged(this.levelId, false);
   });
 };
 
@@ -85,3 +80,5 @@ TextMatch.prototype.lockAnswers = function () {
 TextMatch.prototype.getCurrentAnswerFeedback = function () {
   // Not implemented
 };
+
+export default TextMatch;

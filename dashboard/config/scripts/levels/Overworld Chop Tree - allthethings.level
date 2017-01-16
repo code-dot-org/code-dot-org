@@ -34,7 +34,8 @@
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

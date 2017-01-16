@@ -1,8 +1,5 @@
-title 'CS in Science: Part 1'
-description "In Partnership with Project GUTS"
-description_short "In Partnership with Project GUTS"
-login_required 'true'
-pd 'true'
+professional_learning_course 'CS in Science Legacy'
+login_required true
 
 stage 'Introduction to PD'
 level 'sciPD Intro'

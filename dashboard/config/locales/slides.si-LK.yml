@@ -6,35 +6,36 @@
         text: hour of code වැඩසටහන සදහා ඔබව සාදරයෙන් පිළිගනිමු.
       2:
         image: notes/hoc1_2.jpg
-        text: We'll be using Blockly, a visual programming language where you drag
-          and drop blocks to write code.
+        text: "අපිට Blockly වැඩසටහන යොදාගතහැකවෙනවා, දෘශ්‍ය ක්‍රමලේකන භාෂා වල කේත ලිවීමට
+          ඇති තැන වලට අදගේනවිත් අත්හෙරිමට."
       3:
         image: notes/hoc1_3.jpg
-        text: Most code is typed, but Blockly is visual. Each blocks corresponds to
-          a line of "real" code.
+        text: "බොහෝ කේත ලියා ඇති අතර, Blockly වැඩසටහන දෘශ්‍ය වේ. සෑම අච්චුවක්ම කේතනයක
+          එක් තීරුවකට අනුරුප වේ."
       4:
         image: notes/hoc1_4.jpg
         text: "පරිගණක විද්‍යාවේ මූලිකාංග ඔස්සේ, ඔබට පරිගණක යෙදුම් නිර්මාණයේ සිට අඟහරු
           මත ඇති රෝවර් යානය පාලනය කිරීමට අවශ්‍ය සංකල්ප දක්වා ඉගෙනගත හැකියි."
       5:
         image: notes/hoc1_5.jpg
-        text: A program is a set of instructions for your computer to follow.
+        text: "කරලේකනයක් යනු ඔබගේ පරිගණකයට අනුගමනය කිරිමටදෙන උපදෙස් මාලාවක් වේ."
       6:
         image: notes/hoc1_6.jpg
-        text: The goal of your first program is to get an Angry Bird through a maze
-          to hit a Green Pig.
+        text: "ඔබගේ පළමු ක්‍රමලේකනයේ අරමුණ වන්නේ වන්කගිරියකින් Angry Bird කුරුල්ලෙක්
+          ගෙන කොළ පැහැති උරෙකුට ප්‍රහාරය එල්ල කිරීමයි."
       7:
         image: notes/hoc1_7.jpg
-        text: The left side is the maze where your program is run. The instructions
-          for each puzzle are below the maze.
+        text: "වම අත පැත්තේ ඇති වන්කගිරියෙහි ඔබගේ වැඩසටහන ක්‍රියාත්මක වේ. සැම ප්‍රෙහෙලිකාවක්
+          සදහාම උපදෙස් වන්කගිරියට යටින් පෙන්වා ඇත."
       8:
         image: notes/hoc1_8.jpg
-        text: The middle toolbox has the commands for the Angry Bird. You'll use these
-          to build your code.
+        text: "මැද ඇති උපකරණ කට්ටලයෙහි Angry Bird කුරුල්ලෙක් සැදීම සදහා උපදෙස් අඩංගු
+          වේ. ඔබට ඒවා ඔබගේ කේතය සැකසීමට යොදාගත හැක."
       9:
         image: notes/hoc1_9.jpg
-        text: On the right is your workspace where you'll drag blocks from the toolbox
-          to build your program. To delete a block, drag it to the trash in the corner.
+        text: "ඔබගේ දකුණු පසින් දිස්වන්නේ ඔබේ පරිගණක වැඩසටහන නිර්මාණයට අවශ්‍ය blocks
+          ඇද දැමිය හැකි අවකාශයයි. මෙසේ ඇද දැමූ block එකක් ඉවත් කිරීම සදහා කෙලවරේ ඇති
+          trash bin එකට ඇද දමන්න."
       10:
         image: notes/hoc1_10.jpg
         text: Each block is one instruction. If you drag a "move forward" block to
@@ -46,28 +47,27 @@
           and attach them together. The bird will do the commands from top to bottom.
       12:
         image: notes/hoc1_12.jpg
-        text: If you run a program and want to fix it and try again, press the "Reset"
-          button.
+        text: ඔබ වැඩසටහන ක්‍රියාත්මක කරන අතර එය විසින් අදාල කරුණ නිවැරදි කර නැවත උත්සාහ
+          කරන්න අවශ්‍ය නම්, "යළි පිහිටුවන්න" බොත්තම මත ඔබන්න.
       13:
         image: notes/hoc1_13.jpg
         text: "එහෙනම් ගිහින් ඌරන් අල්ලමු!"
     artist_intro:
       1:
         image: notes/stage5_1.jpg
-        text: Hi, I'm JR! Every race car team need computer scientists to win. They
-          analyze data from the car to make it go faster.
+        text: "හයි, මම JR! සැම කාර් තරග කණ්ඩායමකටම ජයග්‍රහණය කිරීමට පරිගණක විද්යාඥයන්
+          අවශ්‍ය කරනවා. ඔවුන් කාර් රථයේ දත්ත අධ්‍යනය කර එය වේගවත්ව ගමන්ව කරන සේ සකසනවා."
       2:
         image: notes/stage5_2.jpg
-        text: In these puzzles, you'll be an artist that draws a line behind them
-          everywhere they go.
+        text: "මේ ප්‍රෙහෙළිකා වලදී, ඔබ ඔවුන් යන පිටුපසින් රේඛාවක් අදින කලා කරුවෙකු
+          බවට පත් වේවි."
       3:
         image: notes/stage5_3.jpg
-        text: This block says "move forward by 100 pixels." Pixels are just really
-          tiny dots on your screen.
+        text: 'මෙම කොටස කියනවා" පික්සල 100කින් ඉදිරියට යොමුකරන්න." පික්සල යනු ඔබගේ
+          තිරය මත ඇති සැබැවින් කුඩා තිත් වේ. '
       4:
         image: notes/stage5_4.jpg
-        text: This block says "turn right by 90 degrees." This will turn your artist
-          the same amount as the "turn" blocks in the maze puzzles.
+        text: "මෙම බ්ලොක් එක මගින් දකුණු දිශාවට අංශක 90ක් හැරවීම සිදුකරයි."
       5:
         image: notes/stage5_5.jpg
         text: Click on the arrow in either of these blocks to change the amount the
@@ -76,25 +76,24 @@
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
-        text: Hi, I'm Paola! In these puzzles, you're a farmer who has to get her
-          field completely flat to start planting crops.
+        text: "හායි, මම Paola! මෙම ප්‍රේහෙලිකාවේදී දී, ඔබ ඇයගේ වගාබිම සම්පුර්ණයෙන්ම
+          සමතලා කර නැවත පැල සිටුවීමට හැකිවෙන සේ කසන ගොවියෙක්."
       2:
         image: notes/stage9_2.jpg
-        text: You have to help her remove all the piles of dirt and fill in all the
-          holes.
+        text: "ඔබ ඇයට උදව් කරන්න සියලු කුණු ගොඩවල් ඉවත් කිරීම හා සියලු සිදුරු පිරවීමට."
       3:
         image: notes/stage9_3.jpg
-        text: The new blocks remove 1 shovelful of dirt from a pile and fill in 1
-          shovelful of dirt to a hole.
+        text: "මේ අලුත් බ්ලොක් එක මගින් එක් කසළ කොටසක් කසළ ගොඩින් ඉවත් කර, වලකට දැමීම
+          සිදුකරයි."
       4:
         image: notes/stage9_4.jpg
-        text: The piles and holes are different sizes, so you have to tell the farmer
-          how many shovelfuls to use.
+        text: "කසළ ගොඩවල් සහ කසළ වලවල් ප්‍රමාණයෙන් වෙනස් වේ, එම නිසා ගොවියාට සවල කීපාරක්
+          භාවිතා කළ යුතු දැයි කියන්න."
     flappy_intro:
       1:
         image: notes/flappy01.jpg
-        text: Hi, I'm Katie! One of the most exciting things about computer science
-          is that a computer program can be interactive.
+        text: "හායි, මම Katie! පරිගණක විද්‍යාව පිළිබඳ වඩාත් ආකර්ෂණීය දේවල් එක් පරිගණක
+          වැඩසටහනක් අන්තර් විය හැකිය."
       2:
         image: notes/flappy02.jpg
         text: Any time somebody clicks or taps or types on a computer or phone, that
@@ -106,8 +105,8 @@
           is clicked, play a sound" '
       4:
         image: notes/flappy04.jpg
-        text: Have you ever heard of the game FlappyBird? By using Event handlers,
-          we're going to learn to program our own custom version of FlappyBird!
+        text: "ඔබ කවද හෝ FlappyBird ක්‍රීඩාව ගැන අසා තිබේද? තත්ව පරිපාලක බාවිතය මහින්,
+          අපි ඉගනගැනීමට යන්නේ අපේම අබිරුචිය පරිදි FlappyBird ක්‍රීඩාව කේතනය කරන ආකාරයයි!"
       5:
         image: notes/flappy05.jpg
         text: The code you'll write involves dragging and dropping blocks that represent
@@ -143,33 +142,35 @@
           times.
       2:
         image: notes/hoc2_2.jpg
-        text: In this puzzle, we want to make the bird move forward 5 spaces to get
-          to the pig.
+        text: "මෙම ප්‍රහේලිකාවේදි කුරුල්ලාට ඌරාව අල්ලාගැනීමට පියවර 5ක් ඉදිරියට යන්න
+          වෙනවා."
       3:
         image: notes/hoc2_3.jpg
-        text: We can use the new "repeat" block to help us out.
+        text: අපිට මේ සඳහා අලුත් "repeat" බ්ලොක් එක උදව් කරගන්න පුළුවන්.
       4:
         image: notes/hoc2_4.jpg
-        text: Instead of dragging out 5 "move forward" blocks...
+        text: '"move forward" කොටස් 5ක් වෙනුවට...'
       5:
         image: notes/hoc2_5.jpg
         text: We can put the "move forward" block inside the "repeat" block and write
           a number in the block to tell it how many times to repeat.
       6:
         image: notes/hoc2_6.jpg
-        text: 'And this is important: you can put more than one command inside a "repeat"
-          block.'
+        text: 'වැදගත්: ඔබට "repeat" බ්ලොක් එක ඇතුලට විධාන එකකට වැඩිය ඇතුලත් කරන්න
+          පුලුවන්.'
       7:
         image: notes/hoc2_7.jpg
-        text: Enjoy using your new "repeat" block!
+        text: ඔබේ නව "repeat" බ්ලොක් එක අත්හදා බලන්න!
     loop_until:
       1:
         image: notes/hoc3_1.jpg
-        text: Hi, I'm Chris. Before joining the Miami Heat, I went to Georgia Tech
-          to study Computer Science. Let's try our new block, the "repeat until" block.
+        text: හයි, මම Chris. Miami Heat සමග සම්බන්ද වීමට පෙර, මම පරිගණක විද්‍යාව ඉගෙනගැනීමට
+          Georgia Tech වෙත ගොස් තිබුනා. අපි නව බ්ලොක් එකක් සදහා උත්සහ කරමු, එය "repeat
+          until" බ්ලොක් එකයි.
       2:
         image: notes/hoc3_2.jpg
-        text: What if we didn't know how far the bird had to move to get to the pig?
+        text: "කුරුල්ලාට ඌරාව අල්ලගන්න කොච්චර දුරක් යන්න වෙයිද කියලා අපි දන්නේ නැතිනම්
+          මොකද කරන්නේ?"
       3:
         image: notes/hoc3_3.jpg
         text: If we put a "move forward" block inside the "repeat until" block, the
@@ -181,8 +182,8 @@
     if:
       1:
         image: notes/hoc4_1.jpg
-        text: 'Hi, I''m Bill! Let''s learn a new fundamental concept: "If" statements.
-          This is how computers make decisions.'
+        text: හායි, මම Bill! අපි දැන් තවත් අලුත් මූලික සංකල්පයක් වන "If" ප්‍රකාශනය
+          සම්බන්දයෙන් ඉගෙනගනිමු. මේ ආකාරයට තමයි පරිගණක විසින් තීරණ වලට එළඹෙන්නේ.
       2:
         image: notes/hoc4_2.jpg
         text: You use "If" statements yourself everday. Before you go outside each
@@ -193,8 +194,8 @@
           he finds a path to the left, we can have him turn in that direction.
       4:
         image: notes/hoc4_4.jpg
-        text: To write the code for this, let's drag out our "if" block and put a
-          "turn left" block inside it.
+        text: 'මෙය සදහා කේත කිරීමට  "ඊෆ්" වරණ ගෙනත් අතහරින්න්න  සහ ඒය  තුල  "වමට හැරෙන්න"
+          වරණ ඇතුල් කරන්න  '
       5:
         image: notes/hoc4_5.jpg
         text: Now, if we put a "move forward" block above it and a "repeat" block
@@ -209,13 +210,13 @@
           win.
       7:
         image: notes/hoc4_7.jpg
-        text: Have fun using the "if" block!
+        text: '"if" බ්ලොක් එක භාවිතයෙන් සතුටු වන්න!'
     if_else:
       1:
         image: notes/hoc5_1.jpg
-        text: Hi, my name is Saloni. I use computer science to help solve problems
-          in health and medicine. Let's learn about the "if else" block. It looks
-          like the "if" block, but it has an extra part at the end that says "else".
+        text: ආයුබෝවන්!, මගේ නම Saloni. මම සෞඛ්‍යය සහ වෛද්‍ය විද්‍යාවේ ප්‍රශ්න විසදීම
+          සදහා පරිගණක විද්‍යාව භාවිතා කරනවා. දැන් ඉගෙනගමු "if else" කොටස ගැන. ඒක "if
+          " කොටස වගේ. නමුත් ඒකෙ අවසානයේ "else " කියල අමතර කොටසක් තියනවා.
       2:
         image: notes/hoc5_2.jpg
         text: If I put a "move forward" block in the spot where it says "do" and a
@@ -229,7 +230,7 @@
           checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: "බූතයින්ව ඔවුන්ට අදාල තැනට ගෙනයන්න!"
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -249,7 +250,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: "අපි දැන් මේ ස්ක්‍රැට් කියන ලේනාට අර පලතුරු ගෙඩිය ගන්න උදව් කරමු!"
     function:
       1:
         image: notes/stage13_1.jpg
@@ -271,15 +272,15 @@
           until we drag out our "fill 5" function block from functions category.
       5:
         image: notes/stage13_5.jpg
-        text: 'Let''s put the "fun" back in "FUNction!" '
+        text: 'අපි නැවත "fun" යන්න "FUNction" තුලට දමමු! '
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: 'හායි, මම Makinde! අපි දැන් "while බ්ලොක්." එක සම්බන්දයෙන් ඉගෙනගනිමු '
       2:
         image: notes/stage9_6.jpg
-        text: The "while block" will do whatever you put inside it AS LONG AS the
-          statement on the top is TRUE.
+        text: '"while බ්ලොක්" එකේ ඉහත ඇති ප්‍රකාශනය සත්‍ය වනතුරු ඔබ එයට ඇතුලත් කර
+          ඇති කුමක් හෝ සිදුකරයි.'
       3:
         image: notes/stage9_7.jpg
         text: For example, if the farmer is standing on a pile, she will continue
@@ -287,8 +288,8 @@
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: "හයි, මම Trina, මම වැඩකරන්නේ Pixar ආයතනයේ, මම චිත්‍රපට සමුහයක් සම්බන්දව
+          කටයුතු කර තිබෙනවා, එයට Shrek චිත්‍රපටය ද ඇතුලත් වේ."
       2:
         image: notes/stage11_2.jpg
         text: This is our new "counter" loop. It will perform actions over and over
@@ -307,15 +308,15 @@
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: හායි, ජැනට් නම් වන මම "Zynga" හි ඉන්ජිනේරු වරයෙකි.
       2:
         image: notes/stage15_2.jpg
         text: What if we want to draw a bunch of triangles and have their lengths
           be different sizes?
       3:
         image: notes/stage15_3.jpg
-        text: We could write all that code out by hand or we can use a function with
-          parameters.
+        text: "අපිට මුලු කේතයම අතින් ලියන්න පුලුවන්. නැතිනම් පරාමිති සමග ශ්‍රිතයක්
+          භාවිත කරන්නත් පුලුවන්."
       4:
         image: notes/stage15_4.jpg
         text: To do this, click the blue star on the "draw a triangle" function definition.
@@ -362,7 +363,7 @@
     20_wrapup:
       1:
         image: notes/bird.png
-        text: Show notes coming soon!
+        text: "සටහන් පෙන්වීම ළඟදීම පැමිණේ!"
     frozen_intro:
       1:
         image: notes/frozen1_1.jpg
@@ -445,8 +446,8 @@
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: "ආයුබෝවන්! මම Chris Bosh. මම වෘත්තිමය බාස්කට්බෝල් ක්‍රීඩයෙක්. මම ඉස්කෝලේ
+          යන කාලෙදි ක්‍රමලේඛනය කර තිබෙනවා."
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -466,7 +467,8 @@
           you've written code to create a square.
       5:
         image: notes/frozen3_5.jpg
-        text: 'You can define this as a function called "create a square." '
+        text: 'ඔබට සමචතුරශ්‍රයක් සෑදීමට "create a square." නමැති අලුත් ශ්‍රිතයක් නිරවචනය
+          කල හැක '
       6:
         image: notes/frozen3_6.jpg
         text: Now you have a new block that you can use multiple times to create multiple
@@ -700,14 +702,14 @@
           Line to make it go up.
       3:
         image: notes/C1_happy_maps_unplugged_3.png
-        text: To get it there you circle the direction that it has to go.
+        text: "එම ස්ථානයට ළඟා වීමට අවශ්‍ය දිශාව රවුම් කර පෙන්වන්න."
       4:
         image: notes/C1_happy_maps_unplugged_4.png
         text: Create your algorithm by gluing arrows next to the map that you're trying
           to solve. The second one it's the same but it's going down.
       5:
         image: notes/C1_happy_maps_unplugged_5.png
-        text: It's like programming with paper. And that's it!
+        text: "මේකත් හරියට අපි කොල වලින් ඉගෙනගන්නවා වගේමයි!"
     C1_maze_debugging:
       1:
         image: notes/C1_maze_debugging_1.png
@@ -1058,8 +1060,7 @@
           goes through each block step by step.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: "ඔන්න පොඩි ගැටලුවක්. පූසාගේ රැවුල් ගස් පික්සල් 75ක් දිගයි. 25ක් නෙමෙයි."
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
@@ -2754,7 +2755,7 @@
           react to button press events that move him around the screen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: "පියවරෙන් පියවර ඔබේ ගේම් එක තව තවත් ක්‍රියාශීලී වේ."
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2915,8 +2916,8 @@
     mc_congrats_share:
       1:
         image: notes/mc_congrats_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: "සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි."
       2:
         image: notes/mc_congrats_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2934,8 +2935,8 @@
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
-        text: Congratulations! You just learned the basic building blocks of computer
-          science.
+        text: "සුබ පැතුම්! ඔබ මේ දැන් පරිගණක විද්‍යාවට අදාල මූලික කොටස් ඉගෙන ගන්නා
+          ලදි."
       2:
         image: notes/mc_congrats_no_share_2.JPG
         text: Now you can use these blocks to build your own creation. There are no
@@ -2948,7 +2949,7 @@
           a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: "දැන් ඔබට අවශ්‍ය ඕනෑම දෙයක් හදන්න පුලුවන්!"
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -2975,8 +2976,8 @@
           below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා."
       6:
         image: notes/gumball_intro_6.JPG
         text: The white space on the right is called the work space and this is where
@@ -3059,8 +3060,8 @@
           below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක්
+          කේත කොටසක් වෙනවා."
       6:
         image: notes/iceage_intro_6.JPG
         text: The white space on the right is called the work space and this is where
@@ -3117,3 +3118,121 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
+          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
+          but the world has stopped. The sheep aren't moving, the chickens aren't
+          laying eggs, and zombies are just standing still. It's up to you to add
+          the code to make the Minecraft world work.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: how people think and behave.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: You'll see your screen is split into three main parts. 1) On the left
+          is the Minecraft game. Right now the world is frozen but we're going to
+          fix that with code.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) This middle area is the toolbox. Each of these blocks is a command
+          that chickens, sheep, and other Minecraft creatures can understand.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) The space on the right is called the workspace and this is where
+          we'll build our program.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back to the toolbox.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: After you've hit "Run" you can always hit the "Reset" button to reset
+          the game and start over. Now, it's your turn to make your very own version
+          of Minecraft. Have fun!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
+          of the animals and enemies in the game. One of the animals that I worked
+          on is the ocelot. I worked on the part where you can feed an ocelot a fish
+          to tame it into your own cat.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

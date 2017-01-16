@@ -34,7 +34,9 @@
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"There should be 2 blocks inside of your loop to solve this puzzle.\",\r\n  \"hint_id\": \"artistLoopsKB_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nHelp me build steps to watch the ship sail away.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif\" width=\"300\"/>\r\n",
     "ideal": "4",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/4adb0ff9bf619119908abfe1b3fade7d-image-1477125526950.png\", \"position\": [0, 0]}\r\n]\r\n\r\n"
   },
   "published": true,
   "notes": "",

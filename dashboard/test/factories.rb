@@ -1,12 +1,20 @@
+# rubocop:disable Metrics/BlockLength
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
+  factory :section_hidden_stage do
+    section nil
+    stage nil
+  end
   factory :paired_user_level do
     driver_user_level {user_level}
     navigator_user_level {user_level}
   end
 
+  factory :studio_person do
+  end
+
   factory :user do
-    birthday Date.new(1991, 03, 14)
+    birthday Date.new(1991, 3, 14)
     sequence(:email) { |n| "testuser#{n}@example.com.xx" }
     password "00secret"
     locale 'en-US'
@@ -28,7 +36,7 @@ FactoryGirl.define do
 
     factory :teacher do
       user_type User::TYPE_TEACHER
-      birthday Date.new(1980, 03, 14)
+      birthday Date.new(1980, 3, 14)
       admin false
       factory :admin_teacher do
         admin true
@@ -40,14 +48,12 @@ FactoryGirl.define do
         name 'Facilitator Person'
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
-          facilitator.save
         end
       end
       factory :workshop_organizer do
         name 'Workshop Organizer Person'
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
-          workshop_organizer.save
         end
       end
       factory :district_contact do
@@ -57,7 +63,6 @@ FactoryGirl.define do
         admin false
         after(:create) do |district_contact|
           district_contact.permission = UserPermission::DISTRICT_CONTACT
-          district_contact.save
         end
       end
       # Creates a teacher optionally enrolled in a workshop,
@@ -72,7 +77,7 @@ FactoryGirl.define do
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, workshop: evaluator.workshop, name: teacher.name, email: teacher.email if evaluator.enrolled
+          create :pd_enrollment, workshop: evaluator.workshop, full_name: teacher.name, email: teacher.email if evaluator.enrolled
           evaluator.workshop.section.add_student teacher if evaluator.in_section
           if evaluator.attended
             attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
@@ -92,13 +97,6 @@ FactoryGirl.define do
     factory :young_student do
       user_type User::TYPE_STUDENT
       birthday Time.zone.today - 10.years
-    end
-
-    factory :student_of_admin do
-      after(:create) do |user|
-        section = create(:section, user: create(:admin_teacher))
-        create(:follower, section: section, student_user: user)
-      end
     end
 
     factory :young_student_with_tos_teacher do
@@ -371,11 +369,6 @@ FactoryGirl.define do
     student_user { create :student }
   end
 
-  factory :level_source_hint do
-    level_source
-    sequence(:hint) { |n| "Hint #{n}" }
-  end
-
   factory :user_level do
     user {create :student}
     level {create :applab}
@@ -417,7 +410,7 @@ FactoryGirl.define do
   factory :segment do
     workshop
     start DateTime.now.utc
-    self.send(:end, DateTime.now.utc + 1.day)
+    send(:end, DateTime.now.utc + 1.day)
   end
 
   factory :attendance, class: WorkshopAttendance do
@@ -528,24 +521,25 @@ FactoryGirl.define do
   end
 
   factory :pd_workshop, class: 'Pd::Workshop' do
-    organizer {create(:workshop_organizer)}
+    association :organizer, factory: :workshop_organizer
     workshop_type Pd::Workshop::TYPES.first
     course Pd::Workshop::COURSES.first
     capacity 10
     transient do
       num_sessions 0
+      sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
     end
-    after(:create) do |workshop, evaluator|
+    after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << create(:pd_session, workshop: workshop, start: Date.today + i.days)
+        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
       end
     end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    sessions {[create(:pd_session)]}
-    section {create(:section)}
+    num_sessions 1
+    association :section
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
   end
@@ -556,34 +550,156 @@ FactoryGirl.define do
     self.end {start + 6.hours}
   end
 
-  factory :school_info do
-    school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
-    state {'WA'}
-    school_district_id {create(:school_district).id}
+  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
+    transient do
+      application_hash {build(:pd_teacher_application_hash)}
+    end
+    association :user, factory: :teacher, strategy: :build
+    application {application_hash.to_json}
+    primary_email {application_hash['primaryEmail']}
+    secondary_email {application_hash['secondaryEmail']}
   end
+
+  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
+  factory :pd_teacher_application_hash, class: 'Hash' do
+    transient do
+      association :school, factory: :public_school, strategy: :build
+      association :school_district, strategy: :build
+    end
+
+    initialize_with do
+      {
+        school: school.id,
+        'school-district' => school_district.id,
+        firstName: 'Rubeus',
+        lastName: 'Hagrid',
+        primaryEmail: 'rubeus@hogwarts.co.uk',
+        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
+        principalPrefix: 'Mrs.',
+        principalFirstName: 'Minerva',
+        principalLastName: 'McGonagall',
+        principalEmail: 'minerva@hogwarts.co.uk',
+        selectedCourse: 'csd',
+        phoneNumber: '555-555-5555',
+        gradesAtSchool: [10],
+        genderIdentity: 'Male',
+        grades2016: [7, 8],
+        subjects2016: ['Math', 'Care of Magical Creatures'],
+        grades2017: [10, 11],
+        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
+        committedToSummer: 'Yes',
+        ableToAttendAssignedSummerWorkshop: 'Yes',
+        allStudentsShouldLearn: '4',
+        allStudentsCanLearn: '4',
+        newApproaches: '4',
+        allAboutContent: '4',
+        allAboutProgramming: '4',
+        csCreativity: '4',
+        currentCsOpportunities: ['lunch clubs'],
+        whyCsIsImportant: 'robots',
+        whatTeachingSteps: 'learn and practice'
+      }.stringify_keys
+    end
+  end
+
+  # school info
+
+  # this is the only factory used for testing the deprecated data formats (without country).
+  factory :school_info_without_country, class: SchoolInfo do
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
+    association :school_district
+  end
+
+  factory :school_info_non_us, class: SchoolInfo do
+    country 'GB'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    school_name 'Grazebrook'
+    full_address '31 West Bank, London, England'
+  end
+
+  factory :school_info_us, class: SchoolInfo do
+    country 'US'
+  end
+
+  # although some US school types behave identically, we keep their factories separate here
+  # because the behavior of each school type may diverge over time.
+
+  factory :school_info_us_private, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PRIVATE
+    state 'NJ'
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_other, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_OTHER
+    state 'NJ'
+    zip '08534'
+    school_name 'Princeton Day School'
+  end
+
+  factory :school_info_us_public, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :public_school
+    end
+  end
+
+  factory :school_info_us_charter, class: SchoolInfo do
+    country 'US'
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    state 'WA'
+
+    trait :with_district do
+      association :school_district
+    end
+
+    trait :with_school do
+      association :school, factory: :charter_school
+    end
+  end
+
+  # end school info
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
-    sequence(:name) { |n| "Workshop Participant #{n} " }
+    sequence(:first_name) { |n| "Participant#{n}" }
+    last_name 'Codeberg'
     sequence(:email) { |n| "participant#{n}@example.com.xx" }
-    school_info_id {create(:school_info).id}
-    school {'Example School'}
+    association :school_info, factory: :school_info_without_country
+    school 'Example School'
+    code {SecureRandom.hex(10)}
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
-    teacher {create :teacher}
+    association :teacher
+  end
+
+  factory :pd_attendance_no_account, class: 'Pd::Attendance' do
+    association :session, factory: :pd_session
+    association :enrollment, factory: :pd_enrollment
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    district {create :district}
+    association :school_district
     course Pd::Workshop::COURSES.first
     rate_type Pd::DistrictPaymentTerm::RATE_TYPES.first
     rate 10
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do
-    facilitator {create :facilitator}
+    association :facilitator
     course Pd::Workshop::COURSES.first
   end
 
@@ -598,4 +714,27 @@ FactoryGirl.define do
     state "WA"
     zip "98101"
   end
+
+  factory :public_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    sequence(:id, 333)
+    name "A seattle public school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_PUBLIC
+    association :school_district
+  end
+
+  factory :charter_school, class: School do
+    # school ids are not auto-assigned, so we have to assign one here
+    sequence(:id, 333)
+    name "A seattle charter school"
+    city "Seattle"
+    state "WA"
+    zip "98122"
+    school_type SchoolInfo::SCHOOL_TYPE_CHARTER
+    association :school_district
+  end
 end
+# rubocop:enable Metrics/BlockLength

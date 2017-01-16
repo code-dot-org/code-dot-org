@@ -2,7 +2,7 @@ import React from 'react';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
-import gamelabMsg from '../locale';
+import gamelabMsg from '@cdo/gamelab/locale';
 import styles from './styles';
 import { hide, pickNewAnimation, pickLibraryAnimation, beginUpload,
     handleUploadComplete, handleUploadError } from './animationPickerModule';
@@ -27,7 +27,7 @@ const AnimationPicker = React.createClass({
   propTypes: {
     // Provided externally
     channelId: React.PropTypes.string.isRequired,
-    typeFilter: React.PropTypes.string,
+    allowedExtensions: React.PropTypes.string,
 
     // Provided via Redux
     visible: React.PropTypes.bool.isRequired,
@@ -39,7 +39,8 @@ const AnimationPicker = React.createClass({
     onPickLibraryAnimation: React.PropTypes.func.isRequired,
     onUploadStart: React.PropTypes.func.isRequired,
     onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func.isRequired
+    onUploadError: React.PropTypes.func.isRequired,
+    playAnimations: React.PropTypes.bool.isRequired
   },
 
   onUploadClick() {
@@ -58,6 +59,7 @@ const AnimationPicker = React.createClass({
           onDrawYourOwnClick={this.props.onPickNewAnimation}
           onPickLibraryAnimation={this.props.onPickLibraryAnimation}
           onUploadClick={this.onUploadClick}
+          playAnimations={this.props.playAnimations}
         />
     );
   },
@@ -73,11 +75,12 @@ const AnimationPicker = React.createClass({
         useDeprecatedGlobalStyles
         handleClose={this.props.onClose}
         uncloseable={this.props.uploadInProgress}
+        fullWidth={true}
       >
         <HiddenUploader
           ref="uploader"
           toUrl={'/v3/animations/' + this.props.channelId + '/' + createUuid() + '.png'}
-          typeFilter={this.props.typeFilter}
+          allowedExtensions={this.props.allowedExtensions}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
@@ -92,7 +95,8 @@ export default connect(state => ({
   visible: state.animationPicker.visible,
   uploadInProgress: state.animationPicker.uploadInProgress,
   uploadError: state.animationPicker.uploadError,
-  is13Plus: state.pageConstants.is13Plus
+  is13Plus: state.pageConstants.is13Plus,
+  playAnimations: !state.pageConstants.allAnimationsSingleFrame
 }), dispatch => ({
   onClose() {
     dispatch(hide());
@@ -104,7 +108,12 @@ export default connect(state => ({
     dispatch(pickLibraryAnimation(animation));
   },
   onUploadStart(data) {
-    dispatch(beginUpload(data.files[0].name));
+    if (data.files[0].type === 'image/png' || data.files[0].type === 'image/jpeg') {
+      dispatch(beginUpload(data.files[0].name));
+      data.submit();
+    } else {
+      dispatch(handleUploadError(gamelabMsg.animationPicker_unsupportedType()));
+    }
   },
   onUploadDone(result) {
     dispatch(handleUploadComplete(result));

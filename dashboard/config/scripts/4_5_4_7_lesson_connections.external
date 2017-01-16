@@ -1,0 +1,53 @@
+name '4.5 - 4.7 Lesson Connections'
+css 'unplugged'
+markdown <<MARKDOWN
+# 4.5 - 4.7 Lesson Connections
+
+## Encryption Progression
+In this set of lessons, students are introduced to a relatively simple Caesar and a random substitution cipher to get them thinking about both the value of encryption in computing. They are then introduced to the Vigenère cipher and delve deeper into what makes a “strong” encryption and quickly introduce the idea of **computationally hard** problems - problems that would take the computer a prohibitively long time to solve.  Finally, students are introduced to asymmetric encryption algorithms that rely on modulo operations (the mathematical properties that make public key encryption possible) and are  encouraged to consider the benefits of public key cryptography.
+
+
+## Lesson 5: Simple Encryption
+**Lesson Type:**  Caesar Cipher Widget | Frequency Analysis Widget | Individual and Group Discovery
+
+
+<a href = “https://curriculum.code.org/csp/unit4/5/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+To begin this lesson, students recall some of the facts they learned in Unit 1 while using the Internet Simulator.
+
+- The Internet is not inherently secure.
+- Packets traveling across the Internet move through many routers, each of which could be owned by different people or organizations.
+- We should assume all information traveling across the Internet to be public, as if written on a postcard and sent through the mail.
+
+
+This motivates a series of lessons about cryptography and encryption. “Encryption” is a process for transforming a message so that the original is “hidden” from anyone who is not the intended recipient. Encryption is not just for the military and spies anymore. We use encryption everyday on the Internet, primarily to conduct commercial transactions, and without it our economy might grind to a halt. Students work with two different widgets that demonstrate simple encryption ciphers.
+
+
+This lesson gives students a first taste of the kind of thinking that goes into encrypting messages in the face of computational tools. Computational tools dramatically increase the strength and complexity of the algorithms we use to encrypt information, but these same tools also increase our ability to crack an encryption. Developing strong encryption relies on knowledge of problems that are “hard” for computers to solve, and using that knowledge to encrypt messages.
+
+<br>
+<hr />
+
+
+## Lesson 6: Encryption with Keys and Passwords
+**Lesson Type:** Vigenère Widget | Individual and Group Discovery
+
+
+<a href = “https://curriculum.code.org/csp/unit4/6/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+Cryptography and encryption are important and far-reaching fields within computer science. This lesson begins to get students’ feet wet with the human side of cybersecurity: choosing good passwords through an exploration of the classic Vigenère Cipher. We also learn that the Vigenère cipher is actually susceptible to frequency analysis (though at first glance it is not) and in subsequent lessons we learn that better methods are used today. In this lesson we focus on making a good key and students explain in broad terms what makes a key difficult to “crack”, while in subsequent lessons we learn more about problems and algorithms that are **computationally hard**.
+<br>
+<hr />
+
+
+## Lesson 7: Public Key Cryptography
+**Lesson Type:** Modeling | Individual and Group Discovery
+
+
+<a href = “https://curriculum.code.org/csp/unit4/7/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+Up to now, students have been working with simple ways to secure their digital data, but those methods always required both parties knowing a secret key to encrypt and decrypt. In this model a coordination problem arises: how can two parties establish a secret key without meeting ahead of time? If we can solve that problem, then we have a way for people (or computers) to establish keys over the Internet to enable secure transactions. Public key cryptography does away with this problem by introducing asymmetric keys – that is, using one key to encrypt a message and a different key to decrypt. For this to work the keys need to be mathematically related in ways we explain in the lesson. In this way, messages can be sent between people who have never met before, by making a person’s encryption key public, and their decryption key private.
+
+MARKDOWN

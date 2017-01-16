@@ -1,0 +1,6 @@
+name 'courseB_external_loopMRF'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Loops Unplugged: Looping with My Robotic Friends
+MARKDOWN

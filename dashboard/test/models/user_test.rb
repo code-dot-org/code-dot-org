@@ -8,6 +8,23 @@ class UserTest < ActiveSupport::TestCase
     @good_data_young = { email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 8}
   end
 
+  test 'make_teachers_21' do
+    teacher = create :teacher, birthday: Time.now - 18.years
+    assert_equal '21+', teacher.age
+  end
+
+  test 'normalize_email' do
+    teacher = create :teacher, email: 'CAPS@EXAMPLE.COM'
+    assert_equal 'caps@example.com', teacher.email
+  end
+
+  test 'hash_email' do
+    teacher = create :teacher
+    teacher.update!(email: 'hash_email@example.com')
+    assert_equal User.hash_email('hash_email@example.com'),
+      teacher.hashed_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -107,7 +124,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
@@ -118,7 +135,7 @@ class UserTest < ActiveSupport::TestCase
 
   test "can create a user with age 21+" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
-      assert_difference('User.count') do
+      assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
         assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
@@ -128,7 +145,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with age that's not a number" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 'old', email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -138,7 +155,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with negative age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: -15, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -148,7 +165,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "cannot create a user with too large age" do
-    assert_no_difference('User.count') do
+    assert_does_not_create(User) do
       user = User.create(@good_data.merge({age: 15_000_000, email: 'new@email.com'}))
       assert_equal ["Age is not included in the list"], user.errors.full_messages
       # we don't care about this error message that much because users
@@ -177,12 +194,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 
@@ -195,12 +209,9 @@ class UserTest < ActiveSupport::TestCase
 
     user.age = 24
     assert_equal "21+", user.age
-    assert user.age
 
     user.save!
-
-    user = User.find(user.id)
-
+    user.reload
     assert_equal "21+", user.age
   end
 
@@ -217,40 +228,40 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can create user without email" do
-    assert_difference('User.count') do
-      User.create!(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
+    assert_creates(User) do
+      User.create!(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual', age: 12)
     end
   end
 
   test "cannot create self-managed user without email or hashed email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', hashed_email: '', email: '', age: 12)
     end
   end
 
   test "cannot create teacher without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'teacher', name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_TEACHER, name: 'Bad Teacher', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
   test "cannot make an account without email a teacher" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
-    user.user_type = 'teacher'
+    user.user_type = User::TYPE_TEACHER
     assert !user.save
   end
 
   test "cannot make an account without email an admin" do
-    user = User.create(user_type: 'student', name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
+    user = User.create(user_type: User::TYPE_STUDENT, name: 'Student without email', password: 'xxxxxxxx', provider: 'manual')
 
     user.admin = true
     assert !user.save
   end
 
   test "cannot create admin without email" do
-    assert_no_difference('User.count') do
-      User.create(user_type: 'student', admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
+    assert_does_not_create(User) do
+      User.create(user_type: User::TYPE_STUDENT, admin: true, name: 'Wannabe admin', password: 'xxxxxxxx', provider: 'manual')
     end
   end
 
@@ -274,21 +285,21 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "short name" do
-    assert_equal 'Laurel', create(:user, :name => 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', create(:user, :name => 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", create(:user, :name => "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', create(:user, :name => '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', create(:user, :name => 'Laurel').short_name # just one name
-    assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
+    assert_equal 'Laurel', create(:user, name: 'Laurel Fan').short_name # first name last name
+    assert_equal 'Winnie', create(:user, name: 'Winnie the Pooh').short_name # middle name
+    assert_equal "D'Andre", create(:user, name: "D'Andre Means").short_name # punctuation ok
+    assert_equal '樊瑞', create(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
+    assert_equal 'Laurel', create(:user, name: 'Laurel').short_name # just one name
+    assert_equal 'some', create(:user, name: '  some whitespace in front  ').short_name # whitespace in front
   end
 
   test "initial" do
-    assert_equal 'L', create(:user, :name => 'Laurel Fan').initial # first name last name
-    assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
-    assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', create(:user, :name => 'Laurel').initial # just one name
-    assert_equal 'S', create(:user, :name => '  some whitespace in front  ').initial # whitespace in front
+    assert_equal 'L', create(:user, name: 'Laurel Fan').initial # first name last name
+    assert_equal 'W', create(:user, name: 'Winnie the Pooh').initial # middle name
+    assert_equal "D", create(:user, name: "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', create(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', create(:user, name: 'Laurel').initial # just one name
+    assert_equal 'S', create(:user, name: '  some whitespace in front  ').initial # whitespace in front
   end
 
   test "find_for_authentication with nonsense" do
@@ -437,7 +448,7 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.present?
     assert user.hashed_email.present?
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.email.blank?
@@ -448,10 +459,20 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     user.update(full_address: 'fake address')
 
-    user.user_type = 'student'
+    user.user_type = User::TYPE_STUDENT
     user.save!
 
     assert user.full_address.nil?
+  end
+
+  test 'changing user from teacher to student removed unconfirmed_email' do
+    user = create :teacher
+    user.update(email: 'unconfirmed_email@example.com')
+
+    assert user.unconfirmed_email.present?
+    user.update(user_type: User::TYPE_STUDENT)
+
+    assert_nil user.unconfirmed_email
   end
 
   test 'changing user from student to teacher saves email' do
@@ -460,11 +481,35 @@ class UserTest < ActiveSupport::TestCase
     assert user.email.blank?
     assert user.hashed_email
 
-    user.update_attributes(user_type: 'teacher', email: 'email@old.xx')
+    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@old.xx')
     user.save!
 
     assert_equal 'email@old.xx', user.email
     assert_equal '21+', user.age
+  end
+
+  test 'sanitize_race_data sanitizes closed_dialog' do
+    user = create :student
+    user.update!(races: %w(white closed_dialog))
+    assert_equal %w(closed_dialog), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes too many races' do
+    user = create :student
+    user.update!(races: %w(white black hispanic asian american_indian hawaiian))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data sanitizes non-races' do
+    user = create :student
+    user.update!(races: %w(not_a_race white))
+    assert_equal %w(nonsense), user.reload.races
+  end
+
+  test 'sanitize_race_data noops valid responses' do
+    user = create :student
+    user.update!(races: %w(black hispanic))
+    assert_equal %w(black hispanic), user.reload.races
   end
 
   test 'under 13' do
@@ -563,6 +608,28 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.encrypted_password != old_password
   end
 
+  test 'user in_progress_and_completed_scripts does not include deleted scripts' do
+    user = create :user
+    real_script = Script.starwars_script
+    fake_script = create :script
+
+    user_script_1 = create :user_script, user: user, script: real_script
+    user_script_2 = create :user_script, user: user, script: fake_script
+
+    fake_script.destroy!
+
+    # Preconditions for test: The script is gone, but the associated UserScript still exists.
+    # If we start failing this setup assertion (that is, we do automated cleanup
+    # when deleting a script) then we can probably delete this test.
+    refute Script.exists?(fake_script.id), "Precondition for test: Expected Script #{fake_script.id} to be deleted."
+    assert UserScript.exists?(user_script_2.id), "Precondition for test: Expected UserScript #{user_script_2.id} to still exist."
+
+    # Test: We only get back the userscript for the script that still exists
+    scripts = user.in_progress_and_completed_scripts
+    assert_equal scripts.size, 1
+    assert scripts.include?(user_script_1)
+  end
+
   test 'user is working on script' do
     user = create :user
     s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
@@ -657,34 +724,6 @@ class UserTest < ActiveSupport::TestCase
       assert_equal progress_date.to_i, user_script.last_progress_at.to_i
       assert_equal nil, user_script.assigned_at
       assert_equal nil, user_script.completed_at
-    ensure
-      UserLevel.record_timestamps = true
-    end
-  end
-
-  test "backfill user_scripts backfills assigned_at" do
-    begin
-      Follower.record_timestamps = false
-
-      assigned_date = Time.now - 20.days
-
-      student = create :student
-      section = create :section, script: Script.find_by_name('course1')
-      create :follower, student_user: student, section: section, created_at: assigned_date
-
-      # pretend we created this script before we had the callback to create user_scripts
-      UserScript.last.destroy
-
-      assert_creates(UserScript) do
-        student.backfill_user_scripts
-      end
-
-      user_script = UserScript.last
-      assert_equal nil, user_script.started_at
-      assert_equal nil, user_script.last_progress_at
-      assert_equal assigned_date.to_i, user_script.assigned_at.to_i
-      assert_equal nil, user_script.completed_at
-
     ensure
       UserLevel.record_timestamps = true
     end
@@ -791,6 +830,28 @@ class UserTest < ActiveSupport::TestCase
     assert !user.needs_to_backfill_user_scripts?
   end
 
+  test 'can_edit_password? is true for user with password' do
+    user = create :student
+    assert user.can_edit_password?
+  end
+
+  test 'can_edit_password? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_password?
+  end
+
+  test 'can_edit_email? is true for user with password' do
+    user = create :student
+    assert user.can_edit_email?
+  end
+
+  test 'can_edit_email? is false for user without password' do
+    user = create :student
+    user.update_attribute(:encrypted_password, '')
+    refute user.can_edit_email?
+  end
+
   test 'update_with_password does not require current password for users without passwords' do
     student = create(:student)
     student.update_attribute(:encrypted_password, '')
@@ -893,9 +954,9 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(student, script_level, result, pairings = nil)
+  def track_progress(user_id, script_level, result, pairings: nil)
     User.track_level_progress_sync(
-      user_id: student.id,
+      user_id: user_id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
       new_result: result,
@@ -905,62 +966,74 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'track_level_progress_sync calls track_proficiency if new perfect score' do
-    script_level = create :script_level
-    student = create :student
+  test 'track_level_progress_sync calls track_proficiency if new perfect csf score' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).once
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
+  end
+
+  test 'track_level_progress_sync does not call track_proficiency if new perfect non-csf score' do
+    user = create :user
+    non_csf_script_level = create :script_level
+
+    User.expects(:track_proficiency).never
+    track_progress(user.id, non_csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
-    script_level = create :script_level
-    student = create :student
-    create :user_level, user_id: student.id, script_id: script_level.script_id, level_id: script_level.level_id, best_result: 100
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
+    create :user_level,
+      user_id: user.id,
+      script_id: csf_script_level.script_id,
+      level_id: csf_script_level.level_id,
+      best_result: 100
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new passing score' do
-    script_level = create :script_level
-    student = create :student
+  test 'track_level_progress_sync does not call track_proficiency if new passing csf score' do
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 25)
+    track_progress(user.id, csf_script_level, 25)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if hint used' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :hint_view_request,
-      user_id: student.id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id
+      user_id: user.id,
+      level_id: csf_script_level.level_id,
+      script_id: csf_script_level.script_id
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     AuthoredHintViewRequest.create(
-      user_id: student.id,
-      level_id: script_level.level_id,
-      script_id: script_level.script_id
+      user_id: user.id,
+      level_id: csf_script_level.level_id,
+      script_id: csf_script_level.script_id
     )
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100)
+    track_progress(user.id, csf_script_level, 100)
   end
 
   test 'track_level_progress_sync does not call track_proficiency when pairing' do
-    script_level = create :script_level
-    student = create :student
+    user = create :user
+    csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
     User.expects(:track_proficiency).never
-    track_progress(student, script_level, 100, [create(:user).id])
+    track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
   test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
@@ -1048,60 +1121,99 @@ class UserTest < ActiveSupport::TestCase
     create(:user, name: 'Same Name')
   end
 
-  test 'generate username' do
-    def create_user_with_username(username)
-      user = create(:user)
-      user.update_attribute(:username, username)
-    end
-    # username regex: /\A[a-z0-9\-\_\.]+\z/
+  # TODO(asher): The create_user_with_username helper method and the
+  # subsequent tests test the method UserHelpers.generate_username in
+  # lib/cdo/user_helpers. Move these tests to a more appropriate location.
+  def create_user_with_username(username)
+    user = create(:user)
+    user.update_attribute(:username, username)
+  end
 
-    # new name
-    assert_equal 'captain_picard', UserHelpers.generate_username(User, "Captain Picard")
+  test 'generate_username for new username' do
+    # A new username should not receive a suffix.
+    assert_equal 'captain_picard',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
 
-    # first prefix
+  test 'generate_username for different usernames' do
+    # Different usernames do not generate spurious collisions.
     create_user_with_username 'captain_picard'
-    assert_equal 'captain_picard1', UserHelpers.generate_username(User, "Captain Picard")
+    assert_equal 'captain', UserHelpers.generate_username(User, 'Captain')
+    assert_equal 'captain_p', UserHelpers.generate_username(User, 'Captain   P')
+  end
 
-    # collisions are not numeric
-    assert_equal 'captain', UserHelpers.generate_username(User, "Captain")
-    assert_equal 'captain_p', UserHelpers.generate_username(User, "Captain    P")
+  test 'generate_username for existing username via dart throwing' do
+    create_user_with_username 'captain_picard'
 
-    create_user_with_username 'captain'
-    create_user_with_username 'captain1'
-    create_user_with_username 'captain2'
-    create_user_with_username 'captain55'
+    # An existing username attempts the username, fails, and receives '6'.
+    srand 0
+    assert_equal 'captain_picard6',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard6'
 
-    assert_equal 'captain56', UserHelpers.generate_username(User, "Captain")
+    # The next Captain Picard attempts '6', fails, and receives '1'
+    srand 0
+    assert_equal 'captain_picard1',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard1'
 
-    assert_equal "d_andre_means", UserHelpers.generate_username(User, "D'Andre Means")
+    # The next Captain Picard attempts '6', fails, attempts '1', fails, and
+    # receives '4'.
+    srand 0
+    assert_equal 'captain_picard4',
+      UserHelpers.generate_username(User, 'Captain Picard')
+    create_user_with_username 'captain_picard4'
 
-    create_user_with_username 'coder'
-    create_user_with_username 'coder1'
-    create_user_with_username 'coder99'
-    create_user_with_username 'coder556'
-    assert_equal "coder5561", UserHelpers.generate_username(User, 'coder556')
+    # The next Captain Picard attempts '6', fails, attempts '1', fails,
+    # attempts '4', fails, and receives '77'.
+    srand 0
+    assert_equal 'captain_picard77',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
 
-    # short names
+  test 'generate_username for existing username via fallback' do
+    ['', '6', '1', '4', '77', '19', '93', '377', '854', '904'].each do |suffix|
+      create_user_with_username "captain_picard#{suffix}"
+    end
+
+    srand 0
+    assert_equal 'captain_picard905',
+      UserHelpers.generate_username(User, 'Captain Picard')
+  end
+
+  test 'generate_username for long names' do
+    assert_equal 'this_is_a_really',
+      UserHelpers.generate_username(
+        User, 'This is a really long name' + ' blah' * 10
+      )
+  end
+
+  test 'generate_username for short names' do
     assert_equal "coder_a", UserHelpers.generate_username(User, 'a')
+  end
 
-    # long names
-    assert_equal "this_is_a_really", UserHelpers.generate_username(User, 'This is a really long name' + ' blah' * 10)
+  test 'generate_username for parentheses and apostrophes' do
+    assert_equal 'kermit_the_frog',
+      UserHelpers.generate_username(User, 'Kermit (the frog)')
+    assert_equal 'd_andre_means',
+      UserHelpers.generate_username(User, "D'Andre Means")
+  end
 
-    # parens
-    assert_equal "kermit_the_frog", UserHelpers.generate_username(User, "Kermit (the frog)")
-
-    # non-ascii names
+  test 'generate_username for non-ascii names' do
     assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, '樊瑞')
     assert /coder\d{1,10}/ =~ UserHelpers.generate_username(User, 'فاطمة بنت أسد')
   end
 
-  test 'generates usernames' do
+  test 'generate_username' do
     names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = %w(coder_a coder_b captain_picard captain_picard1 captain_picard2 this_is_a_really)
+    expected_usernames = %w(coder_a coder_b captain_picard captain_picard6 captain_picard1 this_is_a_really)
 
     i = 0
     users = names.map do |name|
-      User.create!(@good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")) # use real create method not the factory
+      srand 0
+      User.create!(
+        @good_data.merge(name: name, email: "test_email#{i += 1}@test.xx")
+      )
     end
 
     assert_equal expected_usernames, users.collect(&:username)
@@ -1182,33 +1294,6 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair_with?(student)
   end
 
-  test 'student_of_admin?' do
-    teacher = create :teacher
-    section1 = create :section, user_id: teacher.id
-
-    admin_teacher = create :admin_teacher
-    section2 = create :section, user_id: admin_teacher.id
-
-    student_of_none = create :student
-
-    student_of_normal_teacher = create :student
-    create :follower, section: section1, student_user: student_of_normal_teacher
-
-    student_of_admin_teacher = create :student
-    create :follower, section: section2, student_user: student_of_admin_teacher
-
-    student_of_both_teachers = create :student
-    create :follower, section: section1, student_user: student_of_both_teachers
-    create :follower, section: section2, student_user: student_of_both_teachers
-
-    assert !teacher.student_of_admin?
-    assert !admin_teacher.student_of_admin?
-    assert !student_of_none.student_of_admin?
-    assert !student_of_normal_teacher.student_of_admin?
-    assert student_of_admin_teacher.student_of_admin?
-    assert student_of_both_teachers.student_of_admin?
-  end
-
   test "authorized teacher" do
     # you can't just create your own authorized teacher account
     fake_teacher = create :teacher
@@ -1252,12 +1337,12 @@ class UserTest < ActiveSupport::TestCase
     # join picture section
     create(:follower, student_user: student_without_password, section: picture_section)
     student_without_password.reload
-    assert !student_without_password.can_edit_account? # only in a picture section
+    refute student_without_password.can_edit_account? # only in a picture section
 
     # join word section
     create(:follower, student_user: student_without_password, section: word_section)
     student_without_password.reload
-    assert student_without_password.can_edit_account? # only in a picture section
+    assert student_without_password.can_edit_account? # also in a word section
 
     student_with_password = create(:student, encrypted_password: 'xxxxxx')
 
@@ -1269,7 +1354,7 @@ class UserTest < ActiveSupport::TestCase
     # join word section
     create(:follower, student_user: student_with_password, section: word_section)
     student_with_password.reload
-    assert student_with_password.can_edit_account? # only in a picture section
+    assert student_with_password.can_edit_account? # also in a word section
 
     student_with_oauth = create(:student, encrypted_password: nil, provider: 'facebook', uid: '1111111')
 
@@ -1281,7 +1366,7 @@ class UserTest < ActiveSupport::TestCase
     # join word section
     create(:follower, student_user: student_with_oauth, section: word_section)
     student_with_oauth.reload
-    assert student_with_oauth.can_edit_account? # only in a picture section
+    assert student_with_oauth.can_edit_account? # also in a word section
   end
 
   test 'terms_of_service_version for teacher without version' do
@@ -1349,5 +1434,94 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.permission?(UserPermission::FACILITATOR)
     assert !user.permission?(UserPermission::LEVELBUILDER)
+  end
+
+  test 'should_see_inline_answer? returns true in levelbuilder' do
+    user = create :user
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    assert user.should_see_inline_answer?(nil)
+    assert user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns false for non teachers' do
+    user = create :student
+    assert_not user.should_see_inline_answer?(create(:script_level))
+  end
+
+  test 'should_see_inline_answer? returns true for authorized teachers in csp' do
+    user = create :teacher
+    create(:plc_user_course_enrollment, plc_course: (create :plc_course), user: user)
+    assert user.should_see_inline_answer?((create :script_level))
+  end
+
+  test 'account_age_days should return days since account creation' do
+    student = create :student, created_at: DateTime.now - 10
+    assert student.account_age_days == 10
+  end
+
+  def mock_geocoder_result(result)
+    mock_us_object = OpenStruct.new(country_code: result)
+    Geocoder.stubs(:search).returns([mock_us_object])
+  end
+
+  test 'do not show race interstitial to teacher' do
+    mock_geocoder_result('US')
+    teacher = create :teacher, created_at: DateTime.now - 8
+    refute teacher.show_race_interstitial?('ignored_ip')
+  end
+
+  test 'do not show race interstitial to user accounts under 13' do
+    mock_geocoder_result('US')
+    student = User.create(@good_data_young)
+    student.created_at = DateTime.now - 8
+    refute student.show_race_interstitial?('ignored_ip')
+  end
+
+  test 'do not show race interstitial to user accounts less than one week old' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 3
+    refute student.show_race_interstitial?('ignored_ip')
+  end
+
+  test 'do not show race interstitial to user accounts that have already entered race information' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(white black)
+    refute student.show_race_interstitial?('ignored_ip')
+  end
+
+  test 'do not show race interstitial to user accounts that have closed the dialog already' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 8
+    student.races = %w(closed_dialog)
+    refute student.show_race_interstitial?('ignored_ip')
+  end
+
+  test 'do not show race interstitial if IP address is nil' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 8
+    mock_ip = nil
+    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
+  end
+
+  test 'do not show race interstitial to non-US users' do
+    mock_geocoder_result('CA')
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = 'ignored'
+    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
+  test 'show race interstitial to US users' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 8
+    unused_ip = 'ignored'
+    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
+  end
+
+  test 'show race interstitial for student over 13 with account more than 1 week old' do
+    mock_geocoder_result('US')
+    student = create :student, created_at: DateTime.now - 8
+    assert student.show_race_interstitial?('ignored_ip')
   end
 end

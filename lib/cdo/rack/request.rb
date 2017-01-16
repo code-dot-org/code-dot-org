@@ -27,7 +27,7 @@ module Cdo
     end
 
     def referer_site_with_port
-      url = URI.parse(self.referer.to_s)
+      url = URI.parse(referer.to_s)
       host = http_host_and_port(url.host, url.port)
       return host if host.include?('csedweek.org')
       return host if host.include?('code.org')
@@ -47,7 +47,7 @@ module Cdo
       parts = host_parts.split('.')
 
       if parts.count >= 3
-        domains = (%w(studio learn i18n) + CDO.partners).map{|x| x + '.code.org'} + %w(translate.hourofcode.com)
+        domains = (%w(studio learn i18n) + CDO.partners).map{|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
@@ -72,7 +72,7 @@ module Cdo
     end
 
     def splat_path_info
-      self.env[:splat_path_info]
+      env[:splat_path_info]
     end
 
     def user_id

@@ -1,10 +1,25 @@
 import $ from 'jquery';
 import {assert} from '../../util/configuredChai';
-import { getConfigRef, getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getConfigRef, getDatabase } from '@cdo/apps/storage/firebaseUtils';
 
 var testCollectionUtils = require('./testCollectionUtils');
 
 var cb;
+
+function finished() {
+  // Level is complete and feedback dialog has appeared: exit() succesfully here
+  // (otherwise process may continue indefinitely due to timers)
+  var done = cb;
+  cb = null;
+  // Main blockspace doesn't always exist (i.e. edit-code)
+  if (Blockly.mainBlockSpace) {
+    Blockly.mainBlockSpace.clear();
+  }
+  if (done) {
+    done();
+  }
+}
+
 
 module.exports = function (testCollection, testData, dataItem, done) {
   cb = done;
@@ -29,9 +44,17 @@ module.exports = function (testCollection, testData, dataItem, done) {
     level.scale.stepSpeed = 33;
   }
 
+  if (testData.lastAttempt) {
+    level.lastAttempt = testData.lastAttempt;
+  }
+
   // Override start blocks to load the solution;
   level.startBlocks = testData.xml;
+
+  level.startHtml = testData.startHtml;
   level.levelHtml = testData.levelHtml;
+
+  level.hideViewDataButton = testData.hideViewDataButton;
 
   // Validate successful solution.
   var validateResult = function (report) {
@@ -76,24 +99,30 @@ StubDialog.prototype.show = function () {
     // Examine content of the feedback in future tests?
     // console.log(this.options.body.innerHTML);
   }
-  // Level is complete and feedback dialog has appeared: exit() succesfully here
-  // (otherwise process may continue indefinitely due to timers)
-  var done = cb;
-  cb = null;
-  // Main blockspace doesn't always exist (i.e. edit-code)
-  if (Blockly.mainBlockSpace) {
-    Blockly.mainBlockSpace.clear();
-  }
-  if (done) {
-    done();
-  }
+  finished();
 };
 
 StubDialog.prototype.hide = function () {
 };
 
+const appLoaders = {
+  applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
+  bounce: require('@cdo/apps/sites/studio/pages/init/loadBounce'),
+  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
+  craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
+  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
+  flappy: require('@cdo/apps/sites/studio/pages/init/loadFlappy'),
+  gamelab: require('@cdo/apps/sites/studio/pages/init/loadGamelab'),
+  jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
+  maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
+  netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
+  studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
+  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
+  weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
+};
 function runLevel(app, skinId, level, onAttempt, testData) {
-  require('@cdo/apps/' + app + '/main');
+
+  var loadApp = appLoaders[app];
 
   var studioApp = require('@cdo/apps/StudioApp').singleton;
 
@@ -106,8 +135,11 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     return Boolean(testData.useFirebase);
   };
 
-  var main = window[app + 'Main'];
-  main({
+  window.dashboard.project.isOwner = function () {
+    return true;
+  };
+
+  loadApp({
     skinId: skinId,
     level: level,
     baseUrl: '/base/build/package/',
@@ -115,10 +147,13 @@ function runLevel(app, skinId, level, onAttempt, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     Dialog: StubDialog,
+    embed: testData.embed,
     // Fail fast if firebase is used without testData.useFirebase being specified.
     firebaseName: testData.useFirebase ? 'test-firebase-name' : '',
     firebaseAuthToken: testData.useFirebase ? 'test-firebase-auth-token' : '',
+    isSignedIn: true,
     isAdmin: true,
+    onFeedback: finished.bind(this),
     onInitialize: function () {
       // we have a race condition for loading our editor. give it another 500ms
       // to load if it hasnt already

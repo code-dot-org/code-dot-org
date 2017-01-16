@@ -26,10 +26,11 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/08_V2.gif",
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get me to the pig!\r\n\r\n![](https://images.code.org/810d7189bcd0767d37ea82319b4c678c-image-1467932445247.gif)",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Stuck? Try tracing the bird's path with your finger.\",\r\n  \"hint_id\": \"K2.0_sequence_8_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "instructions_important": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",

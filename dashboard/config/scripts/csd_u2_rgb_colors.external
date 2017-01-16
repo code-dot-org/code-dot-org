@@ -1,0 +1,15 @@
+name 'CSD U2 RGB Colors'
+title 'STOP: RGB Colors'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Stop and wait for instructions from your teacher before moving on.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+## Stop: Check Answers
+
+**Discuss:** Review the answers from the level students just completed. Students will get to continue to play with RGB values so don't worry too much about them fully understanding RGB yet.
+MARKDOWN

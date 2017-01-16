@@ -1,9 +1,9 @@
 /** @file Redux action-creators for App Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
-var utils = require('../utils');
+import * as utils from '../utils';
 
 /** @enum {string} */
-var ActionType = module.exports.ActionType = utils.makeEnum(
+export const ActionType = utils.makeEnum(
   'CHANGE_INTERFACE_MODE'
 );
 
@@ -12,9 +12,12 @@ var ActionType = module.exports.ActionType = utils.makeEnum(
  * @param {!ApplabInterfaceMode} interfaceMode
  * @returns {{type: ActionType, interfaceMode: ApplabInterfaceMode}}
  */
-module.exports.changeInterfaceMode = function (interfaceMode) {
+export function changeInterfaceMode(interfaceMode) {
+  if (!interfaceMode) {
+    throw new Error("Expected an interace mode!");
+  }
   return {
     type: ActionType.CHANGE_INTERFACE_MODE,
     interfaceMode: interfaceMode
   };
-};
+}

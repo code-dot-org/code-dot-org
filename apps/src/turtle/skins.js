@@ -84,7 +84,6 @@ exports.load = function (assetUrl, id) {
   skin.speedModifier = 1;
 
   // Get properties from config
-  var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
   for (var prop in config) {
     skin[prop] = config[prop];
   }

@@ -5,17 +5,19 @@ class HomeController < ApplicationController
   # action from publicly cached page without a valid token. The worst case impact
   # is that an attacker could change a user's language if they fooled them into
   # clicking on a link.
-  skip_before_action :verify_authenticity_token, :only => 'set_locale'
+  skip_before_action :verify_authenticity_token, only: 'set_locale'
 
   def set_locale
     set_locale_cookie(params[:locale]) if params[:locale]
     if params[:i18npath]
       redirect_to "/#{params[:i18npath]}"
     elsif params[:return_to]
-      redirect_to params[:return_to].to_s
+      redirect_to URI.parse(params[:return_to].to_s).path
     else
       redirect_to '/'
     end
+  rescue URI::InvalidURIError
+    redirect_to '/'
   end
 
   def home_insert
@@ -35,6 +37,7 @@ class HomeController < ApplicationController
     if current_user
       @gallery_activities =
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
+      @force_race_interstitial = params[:forceRaceInterstitial]
     end
   end
 

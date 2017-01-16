@@ -33,6 +33,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 1, JSON.parse(@response.body).length
   end
 
+  test 'with the facilitated param, workshop organizers only view workshops they facilitated' do
+    workshop_2 = create(:pd_workshop, organizer: @organizer, facilitators: [@organizer])
+
+    sign_in @organizer
+    get :index, params: {facilitator_view: 1}
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal workshop_2.id, response[0]['id']
+  end
+
   test 'workshop organizers cannot list workshops they are not organizing' do
     sign_in create(:workshop_organizer)
     get :index
@@ -202,6 +213,33 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     put :update, id: @workshop.id, pd_workshop: params
   end
 
+  test 'updating with notify true sends detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    mock_mail = stub(deliver_now: nil)
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).times(5).returns(mock_mail)
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_detail_change_notification).returns(mock_mail)
+    Pd::WorkshopMailer.any_instance.expects(:organizer_detail_change_notification).returns(mock_mail)
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: true
+  end
+
+  test 'updating with notify false does not send detail change notification emails' do
+    sign_in @admin
+
+    # create some enrollments
+    5.times do
+      create :pd_enrollment, workshop: @workshop
+    end
+    Pd::WorkshopMailer.any_instance.expects(:detail_change_notification).never
+
+    put :update, id: @workshop.id, pd_workshop: workshop_params, notify: false
+  end
+
   # Update sessions via embedded attributes
 
   test 'organizers can add workshop sessions' do
@@ -341,6 +379,44 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'anyone can see the K5 public map index' do
     get :k5_public_map_index
     assert_response :success
+  end
+
+  test 'facilitators can get summary for their workshops' do
+    sign_in @facilitator
+    get :summary, id: @workshop.id
+    assert_response :success
+  end
+
+  test 'facilitators cannot get summary for other workshops' do
+    sign_in @facilitator
+    get :summary, id: @standalone_workshop.id
+    assert_response :forbidden
+  end
+
+  test 'organizers can get summary for their workshops' do
+    sign_in @organizer
+    get :summary, id: @workshop.id
+    assert_response :success
+  end
+
+  test 'organizers cannot get summary for other workshops' do
+    sign_in @organizer
+    get :summary, id: @standalone_workshop.id
+    assert_response :forbidden
+  end
+
+  test 'summary' do
+    sign_in @admin
+    workshop = create :pd_workshop, num_sessions: 3
+    workshop.start!
+
+    get :summary, id: workshop.id
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal workshop.state, response['state']
+    assert_equal workshop.section.code, response['section_code']
+    assert_equal 3, response['sessions'].count
   end
 
   private

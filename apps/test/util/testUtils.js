@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
@@ -251,25 +250,43 @@ function zeroPadLeft(string, desiredWidth) {
  *   });
  */
 export function throwOnConsoleErrors() {
-  before(function () {
+  let firstError = null;
+  beforeEach(function () {
     sinon.stub(console, 'error', msg => {
-      throw new Error(msg);
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.error: ' + msg);
+      }
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.error.restore();
+    firstError = null;
   });
 }
 
 export function throwOnConsoleWarnings() {
-  before(function () {
+  let firstError = null;
+  beforeEach(function () {
     sinon.stub(console, 'warn', msg => {
-      throw new Error(msg);
+      // Store error so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (!firstError) {
+        firstError = new Error('Unexpected call to console.warn: ' + msg);
+      }
     });
   });
 
-  after(function () {
+  afterEach(function () {
+    if (firstError) {
+      throw firstError;
+    }
     console.warn.restore();
+    firstError = null;
   });
 }

@@ -1,7 +1,7 @@
 /** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
 import React from 'react';
-import color from '../color';
+import color from "../util/color";
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
@@ -58,7 +58,8 @@ const ModuloClockWidget = React.createClass({
 
   onGoClick() {
     this.setState({animating: true});
-    this.moduloClock.animateTo(this.state.dividend, this.state.speed, null, () => {
+    const maximumDuration = 8000 / this.state.speed + 2000;
+    this.moduloClock.animateTo(this.state.dividend, maximumDuration, null, () => {
       this.setState({animating: false});
     });
   },

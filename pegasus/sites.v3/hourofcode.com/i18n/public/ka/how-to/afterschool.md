@@ -6,29 +6,33 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) უყურეთ ამ ინსტრუქციის ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) აირჩიეთ ტუტორიალი:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **კოდის ერთი საათის ყველა ტუტორიალი:**
 
   * ორგანიზატორებისგან მომზადების მინიმალურ დროს მოითხოვს
   * აძლევს მოსწავლეს საშუალებას იმეცადინოს საკუთარი ტემპისა და უნარების მიხედვით
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+## 3) გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას
+
+გაუწიეთ პოპულარიზაცია კოდის ერთი საათის თქვენს ღონისძიებას [ამ ხელსაწყოებით](<%= resolve_url('/promote') %>) და წაახალისეთ სხვები, რომ საკუთარ ღონისძიებებს უმასპინძლონ.
 
 ## 4) დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+კოდის ერთი საათის საუკეთესო გამოცდილება მოიცავს ინტერნეტთან დაკავშირებულ კომპიუტერებს. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
 
-**Plan Ahead!** Do the following before your event starts:
+**დაგეგმეთ წინასწარ!** ღონისძიების დაწყებამდე შეასრულეთ ჩამოთვლილი:
 
   * გატესტეთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან დევაისებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში.
   * არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
@@ -37,7 +41,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ![](/images/fit-350/group_ipad.jpg)
 
-## 5) Start your Hour of Code off with an inspiring video
+## 5) კოდის ერთი საათი დაიწყეთ შთამაგონებელი ვიდეოთი
 
 დაიწყეთ თქვენი ღონისძიება მონაწილეებთან ერთად იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა.
 
@@ -62,7 +66,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
 
-  * დაწერეთ გაკვეთილის ბმული დაფაზე. ლინკი შეგიძლიათ მონაწილეების რიცხვს ქვემოთ, [თქვენი არჩეული გაკვეთილის ინფორმაციაში](<%= resolve_url('https://code.org/learn') %>) იხილოთ.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +76,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
 
-  * მოუწოდეთ მონაწილეებს სცადონ კოდის ერთი საათის სხვა აქტივობა აქ: [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * ან სთოხვეთ მათ, ვინც ადრე დაამთავრა, დაეხმარონ მათ ვისაც გარკვეული სირთულეები აქვთ.
 
 [col-33]
@@ -116,11 +120,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## კოდის ერთი საათის სხვა რესურსები მასწავლებლებისთვის:
 
-  * გამოიყენეთ ეს [გაკვეთილის გეგმის ნიმუში](/files/AfterschoolEducatorLessonPlanOutline.docx) და დაგეგმეთ თქვენი კოდის ერთი საათი.
-  * მიიღეთ [საუკეთესო რჩევები](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) შარშანდელი კოდის ერთი საათის ორგანიზატორებისგან. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * უყურეთ ჩვენი [პედაგოგების კოდის ერთი საათის ვებინარის](https://youtu.be/EJeMeSW2-Mw) ჩანაწერს.
   * [დაესწარით კითხვებისა და პასუხების სესიას რეალურ დროში](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) ჩვენს დამფუძნებელთან ჰადი პატოვთან და გაიგეთ მეტი კოდის ერთი საათის შესახებ.
-  * სხვა ორგანიზატორების მხარდაჭერისა და რჩევებისთვის ესტუმრეთ [კოდის ერთი საათის ფორუმს](http://forum.code.org/c/plc/hour-of-code). <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * გადახედეთ [კოდის ერთი საათის ხშირად დასმულ კითხვებს](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
@@ -129,3 +132,5 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
   * ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [დაესწარით ](<%= resolve_url('https://code.org/professional-development-workshops') %>) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+
+<%= view :signup_button %>

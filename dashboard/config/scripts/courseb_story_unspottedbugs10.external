@@ -1,0 +1,14 @@
+name 'courseB_story_unspottedBugs10'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+“Take a walk down the street.  <br/>  
+Does everything work at the first step?  <br/>
+Does everything work at the second step?  <br/>
+How about the third?”
+</h3>
+
+![](https://images.code.org/5ce225f3c9598e8743df9fc9bbb09d3d-image-1475998707319.png)
+MARKDOWN

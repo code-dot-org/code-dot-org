@@ -52,7 +52,7 @@
               <title name="TEXT">Click me to choose a card!</title>
               <next>
                 <block type="variables_set" inline="false">
-                  <title name="VAR">j</title>
+                  <title name="VAR">chooseColor</title>
                   <value name="VALUE">
                     <block type="math_random_int" inline="true">
                       <value name="FROM">
@@ -74,7 +74,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get">
-                              <title name="VAR">j</title>
+                              <title name="VAR">chooseColor</title>
                             </block>
                           </value>
                           <value name="B">
@@ -101,7 +101,7 @@
                               <title name="OP">EQ</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">j</title>
+                                  <title name="VAR">chooseColor</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -150,7 +150,7 @@
               </value>
               <statement name="DO0">
                 <block type="variables_set" inline="false">
-                  <title name="VAR">k</title>
+                  <title name="VAR">chooseSuit</title>
                   <value name="VALUE">
                     <block type="math_random_int" inline="true">
                       <value name="FROM">
@@ -172,7 +172,7 @@
                           <title name="OP">EQ</title>
                           <value name="A">
                             <block type="variables_get">
-                              <title name="VAR">k</title>
+                              <title name="VAR">chooseSuit</title>
                             </block>
                           </value>
                           <value name="B">
@@ -199,7 +199,7 @@
                               <title name="OP">EQ</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">k</title>
+                                  <title name="VAR">chooseSuit</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -244,7 +244,7 @@
                   </value>
                   <statement name="DO0">
                     <block type="variables_set" inline="false">
-                      <title name="VAR">k</title>
+                      <title name="VAR">chooseSuit</title>
                       <value name="VALUE">
                         <block type="math_random_int" inline="true">
                           <value name="FROM">
@@ -266,7 +266,7 @@
                               <title name="OP">EQ</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">k</title>
+                                  <title name="VAR">chooseSuit</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -293,7 +293,7 @@
                                   <title name="OP">EQ</title>
                                   <value name="A">
                                     <block type="variables_get">
-                                      <title name="VAR">k</title>
+                                      <title name="VAR">chooseSuit</title>
                                     </block>
                                   </value>
                                   <value name="B">
@@ -327,7 +327,7 @@
         <block type="when_run">
           <next>
             <block type="variables_set" inline="false">
-              <title name="VAR">i</title>
+              <title name="VAR">chooseValue</title>
               <value name="VALUE">
                 <block type="math_random_int" inline="true">
                   <value name="FROM">
@@ -349,7 +349,7 @@
                       <title name="OP">EQ</title>
                       <value name="A">
                         <block type="variables_get">
-                          <title name="VAR">i</title>
+                          <title name="VAR">chooseValue</title>
                         </block>
                       </value>
                       <value name="B">
@@ -379,7 +379,7 @@
                               <title name="OP">GT</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">i</title>
+                                  <title name="VAR">chooseValue</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -394,7 +394,7 @@
                               <title name="OP">LT</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">i</title>
+                                  <title name="VAR">chooseValue</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -411,7 +411,7 @@
                           <title name="VAR">value</title>
                           <value name="VALUE">
                             <block type="variables_get">
-                              <title name="VAR">i</title>
+                              <title name="VAR">chooseValue</title>
                             </block>
                           </value>
                         </block>
@@ -423,7 +423,7 @@
                               <title name="OP">EQ</title>
                               <value name="A">
                                 <block type="variables_get">
-                                  <title name="VAR">i</title>
+                                  <title name="VAR">chooseValue</title>
                                 </block>
                               </value>
                               <value name="B">
@@ -450,7 +450,7 @@
                                   <title name="OP">EQ</title>
                                   <value name="A">
                                     <block type="variables_get">
-                                      <title name="VAR">i</title>
+                                      <title name="VAR">chooseValue</title>
                                     </block>
                                   </value>
                                   <value name="B">
@@ -477,7 +477,7 @@
                                       <title name="OP">EQ</title>
                                       <value name="A">
                                         <block type="variables_get">
-                                          <title name="VAR">i</title>
+                                          <title name="VAR">chooseValue</title>
                                         </block>
                                       </value>
                                       <value name="B">
@@ -513,7 +513,7 @@
         <block type="studio_whenSpriteClicked">
           <next>
             <block type="variables_set" inline="false">
-              <title name="VAR">k</title>
+              <title name="VAR">chooseSuit</title>
               <value name="VALUE">
                 <block type="variables_get">
                   <title name="VAR">value</title>
@@ -521,7 +521,7 @@
               </value>
               <next>
                 <block type="text_append" inline="false">
-                  <title name="VAR">k</title>
+                  <title name="VAR">chooseSuit</title>
                   <value name="TEXT">
                     <block type="text">
                       <title name="TEXT"> of </title>
@@ -529,7 +529,7 @@
                   </value>
                   <next>
                     <block type="text_append" inline="false">
-                      <title name="VAR">k</title>
+                      <title name="VAR">chooseSuit</title>
                       <value name="TEXT">
                         <block type="variables_get">
                           <title name="VAR">suit</title>
@@ -539,7 +539,7 @@
                         <block type="studio_saySpriteParams" inline="true">
                           <value name="TEXT">
                             <block type="variables_get">
-                              <title name="VAR">k</title>
+                              <title name="VAR">chooseSuit</title>
                             </block>
                           </value>
                         </block>

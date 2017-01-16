@@ -36,9 +36,12 @@
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
-  og_title: Hvert barn á skilið tækifæri
+  og_title: 'Code.org: Allir geta lært'
   og_description: Sérhver nemandi í sérhverjum skóla á skilið að fá tækifæri til að
-    læra tölvunarfræði. Hún er að breyta öllu.
+    læra tölvunarfræði.
+  csedweek_og_title: Klukkustund kóðunar er nú
+  csedweek_og_description: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til tugmiljóna
+    nemenda á öllum aldri í yfir 180 löndum og á yfir 45 tungumálum.
   hoc2014_heading: Vertu með í <a href="http://hourofcode.com">Klukkustund kóðunar</a><br/>8.
     - 14. desember 2014<br/>
   hoc2014_students: Nemendur
@@ -68,7 +71,7 @@
   flappy_heading: Afmæliskveðja til Code.org
   flappy_text: "Code.org er orðið 1 árs gamalt.<br/><br/>Fagnaðu með okkur með því
     að búa \ntil eigin(n) sérhannaðan <b>Flappy</b> leik. Kóðaðu þínar eigin(n) reglur
-    og deildu honum með vinum!\n"
+    og deildu honum með vinum!"
   view_english_site: Skoða síðuna á ensku
   non_english_tutorials: 'Kennsluefni þýtt á fjölda tungumála:'
   write_your_first_program: Skrifaðu fyrsta forritið þitt
@@ -103,7 +106,7 @@
     ættir þú að íhuga að halda upp á það og mynda tengsl við það sem er að gerast
     út í heiminum með því að fá fyrirlesara í heimsókn. Þú getur notað kort okkar
     yfir sjálfboðaliða til að finna fyrirlesara í nágrenninu eða leitað í hvaða borg
-    sem er  að tölvunarfræðinemum eða starfandi sérfræðingum sem eru reiðubúnir að
+    sem er að tölvunarfræðinemum eða starfandi sérfræðingum sem eru reiðubúnir að
     hvetja nemendur þína til dáða gegnum netspjall.
   congrats_guest_speaker_cta: Finna gestafyrirlesara
   congrats_third_party_title: Notaðu hina nýju færni þína með þessum öppum og vefsetrum
@@ -125,7 +128,7 @@
   third_party_tynker_desc: Hið skapandi tölvunarumhverfi Tynker hjálpar börnum að
     þróa tölvunarmiðaða hugsun og færni í forritun á skemmtilegan, aðgengilegan og
     hugmyndaríkan hátt. Nýstárlegt, myndrænt forritunarmál, gagnvirk námskeið á eigin
-    hraða og leikjamiðuð forritunarverkefni kynna forritun á auðveldan hátt og efla
+    hraða og leikjamiðuð forritunarverkefni kynna forritun á auðveldan hátt og hvetja
     börn til að fara nýjar leiðir og til að skapa.
   third_party_tynker_btn_curriculum: Prófaðu námsefni Tynker fyrir byrjendur í lestri
   third_party_tynker_btn_site: Heimsækja Tynker
@@ -139,7 +142,7 @@
   third_party_scratchjr_btn_site: Heimsækja Scratch Jr.
   third_party_scratch_desc: Með Scratch getur þú forritað þínar eigin gagnvirku sögur,
     leiki og hreyfimyndir og deilt sköpunarverkinu með öðrum í netsamfélaginu. Scratch
-    hjálpað ungu fólki að virkja sköpunargáfuna, draga ályktanir á kerfisbundin hátt
+    hjálpar ungu fólki að virkja sköpunargáfuna, draga ályktanir á kerfisbundin hátt
     og vinna saman - allt nauðsynleg færni fyrir líf á 21. öldinni.
   third_party_scratch_btn_curriculum: Hlaða niður Scratch námsefni
   third_party_scratch_btn_forum: Spjallsvæði Scratch leiðbeinenda
@@ -249,10 +252,12 @@
   continue_learning_header: Halda áfram að læra eftir Klukkustund kóðunar
   continue_learning_body: "Það eru margir valkostir. Þú getur lært á vefnum, í skólanum
     eða á námskeiðum."
+  learn_code_studio: Prófaðu Kóðastúdíó-námskeið
   learn_next_level: Prófa annað námskeið í Kóðastúdíóinu
   learn_online: Prófa önnur námskeið á netinu
   learn_classes: Finna námskeið nálægt þér
-  hoc_is_here: Lærðu tölvunarfræði. Hún er að breyta öllu.  https://youtu.be/xJqSu1IbcHg.
+  learn_back_to_minecraft: Haltu áfram að læra með Minecraft
+  hoc_is_here: "#HourOfCode (Klukkustund kóðunar) kemur aftur 5. - 11. desember. https://youtu.be/KsOIlDT145A."
   just_did_hoc: "Ég var að klára #HourOfCode - kíktu á það! @codeorg"
   just_did_course1: "Ég var að ljúka Námskeiði 1 - kíktu á það! @codeorg"
   just_did_course2: "Ég var að ljúka Námskeiði 2 - kíktu á það! @codeorg"
@@ -261,6 +266,8 @@
   just_did_accelerated: "Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg"
   twitter_teach_cs: 9 af hverjum 10 eru sammála því að skólar eigi að kenna tölvunarfræði.
     http://youtu.be/nKIu9yen5nc. Heimsæktu https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Lærðu í Klukkustund kóðunar
   beyond_hoc: Umfram Klukkustund
   what_gender: Ertu stelpa eða strákur?
@@ -280,8 +287,8 @@
     - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana
     Alzate, 5. bekk'
-  stats_michael: '"I hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra."
-    - Michael Clark, kennari'
+  stats_michael: '"Ég hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að
+    læra." - Frank Martinez, kennari'
   studiobar_title: Prófa <a href='http://studio.code.org'>Kóðastúdíóið</a>
   studiobar_title_nolink: Prófa Kóðastúdíóið
   studiobar_elementary_title: Grunnskólanámskeið
@@ -299,41 +306,41 @@
   studiobar_shop_title: Verslun
   studiobar_shop_body: Klæðstu merkinu okkar með stolti.
   homepage_hero_text_malala: "&ldquo;Ég skora á stúlkur í hverju einasta landi að
-    læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi\n"
-  homepage_hero_text_susan: |
+    læra Klukkustund kóðunar&rdquo; \nMalala, Nóbelsverðlaunahafi"
+  homepage_hero_text_susan: |-
     &ldquo;Getir þú breytt tækninni, getur þú breytt heiminum.&rdquo;
     Susan, aðalframkvæmdastjóri YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Láttu ekki nægja að spila á símann þinn, forritaðu hann.&rdquo;
     Barack Obama, forseti Bandaríkjanna
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Börnin okkar &mdash; líka stúlkurnar &mdash;
     þurfa að fá tækifæri til að læra tölvunarfræði.&rdquo;
     Sheryl, forstjóri Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Tölvunarfræði getur verið lykillinn að bestu tækifærunum í heiminum.&rdquo;
     Satya, aðalframkvæmdastjóri Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Ef þú kannt að kóða, hefur þú valkosti í lífinu.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Þessi færni hefur breytt framtíð minni.
     Svo ég nefni ekki hvað þetta er skemmtilegt.&rdquo;
     Luna, 7. bekk
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Ég hef aldrei nokkurn tímann séð börnin svona spennt að læra.&rdquo;
     Michael, kennari
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Tölvunarfræði er þannig að þú getur ekki vitað hvort þér líkar hún nema þú prófir hana.&rdquo;
     Jackson, 6. bekk
   homepage_hero_text_student4: "&ldquo;Þú getur gert allt sem hugur þinn vill með
-    forritun.&rdquo; \nMaya, 2. bekk\n"
+    forritun.&rdquo; \nMaya, 2. bekk"
   homepage_hero_text_student5: "&ldquo;Tölvunarfræði er ekki fyrir einhvern annan.
-    Hún er fyrir þig, hér og nú.&rdquo; \nGeraldo, kennari\n"
+    Hún er fyrir þig, hér og nú.&rdquo; \nGeraldo, kennari"
   homepage_hero_text_teacher1: "&ldquo;Forritun er kveikja sköpunar, innblásturs og
     nýbreytni &mdash; \nsem allt eru ómissandi þættir í hvaða starfsferli sem er.&rdquo;\nFloresa,
-    kennari\n"
-  homepage_hero_text_teacher2: |
+    kennari"
+  homepage_hero_text_teacher2: |-
     &ldquo;Í þessu verkefni voru 100% nemendanna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
   homepage_hero_text_stat_loc: 2,5 miljón stúlkur er skráðar til náms í Kóðastúdíóinu
@@ -354,6 +361,7 @@
   homepage_action_text_volunteers: Sjálfboðaliðar með tæknikunnáttu óskast
   homepage_action_text_codevideo: Horfa á myndbandið
   homepage_action_text_teachervideo: Horfa á myndbandið
+  homepage_action_text_watchvideo: Horfa á myndbandið
   homepage_action_text_girlvideo: Veittu stúlku innblástur
   homepage_action_text_learn: Byrjaðu að læra
   homepage_action_text_signpetition: Skrifa undir áskorunina
@@ -370,12 +378,14 @@
   homepage_banner_20k_teachers: 20.000 kennarar hafa fengið þjálfun og eru nú að kenna
     tölvunarfræði í skólum.
   homepage_banner_20k_teachers_link: Læra meira
-  homepage_banner_congress: Frammámenn í Bandaríkjunum hvetja þingið til að fjármagna
-    tölvunarfræði í grunnskólum.
+  homepage_banner_congress: Framámenn í Bandaríkjunum hvetja þingið til að fjármagna
+    tölvunarfræði í leik- og grunnskólum.
   homepage_banner_congress_link: Styddu þetta
   homepage_banner_emailprivacy: Við erum að gera mikilvæga breytingu á persónuvernd
     nemenda okkar.
   homepage_banner_emailprivacy_link: Lesa meira
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Læra meira
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
@@ -446,8 +456,10 @@
   class_submission_level_college: Háskólastig
   class_submission_level_vocational: Starfsmenntun
   class_submission_languages_other: "Önnur tungumál"
-  inspirational_videos_more: Fleiri <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">hvatningarmyndbönd</a>
-    með fyrirmyndum og frægu fólki
+  videos_more: Fleiri <a href='%{inspiring_videos_playlist}'>hvetjandi myndbönd</a>
+    með góðum fyrirmyndum og frægu fólki
+  careers_page_more: Fleiri <a href='%{careers_url}' target='_blank'>hvetjandi myndbönd</a>
+    með starfsmönnum úr tæknigeiranum
   playlab_choose_theme: Veldu þema fyrir Leikjasmiðjuna
   playlab_classic_title: Klassískt
   playlab_gumball_title: Gumball
@@ -470,9 +482,74 @@
   mc_gradelevel: Aldur 6-106
   mc_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   mc_specs: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | Aldur 6-106
+  minecraft_designer: Minecraft Hönnuður
+  minecraft_adventurer: Minecraft Könnuður
+  minecraft_tutorials: Klukkustund kóðunar með Minecraft efni
+  minecraft_specs: Mörg tungumál | Nýlegir vafrar og spjaldtölvur | 2. bekkur+
+  minecraft_designer_description: Forritaðu dýr og aðrar Minecraft verur í þinni eigin
+    útgáfu af Minecraft.
+  minecraft_designer_button: Byrja
+  minecraft_adventurer_description: Notaðu kóða til að láta Alex eða Steve fara í
+    ævintýraferð.
+  minecraft_adventurer_button: Byrja
+  minecraft_no_internet: Ertu án internettengingar?
+  minecraft_download_adventurer: Hlaða niður ónettengdu útgáfunni af Minecraft Könnuði.
   minecraft_subtitle: Klukkustund kóðunar með Minecraft
+  sports_page_title: Klukkustund kóðunar - íþróttir
+  sports_og_title: Klukkustund kóðunar - íþróttaefni
+  sports_og_description: Veldu um að búa til körfuboltaleik eða að blanda saman íþróttum.
+  sports_title: Kóðaðu þinn eigin íþróttaleik
+  sports_watch_video: Horfa á myndbandið
+  sports_video_title: Láttu reyna á þig. Það geta allir lært.
+  sports_select_theme: Veldu þema kennsluefnis
+  sports_basketball_title: Búa til körfuboltaleik
+  sports_all_sports_title: Blandaðu saman íþróttum
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
   watch_inspirational_videos: Horfðu á eitt af þessum hvatningarmyndböndum áður en
     þú byrjar
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Veittu stúlku innblástur
+  video_title_cs_intro: Inngangur að tölvunarfræði
+  video_title_schools_dont_teach: "Það sem flestir skólar kenna ekki"
+  video_title_obama: Obama forseti talar um tölvunarfræði
+  video_title_hoc_is_here: Klukkustund kóðunar er hér - Allir geta lært
+  video_title_anybody_can_learn: Allir geta lært
+  video_title_draymond_green: Klukkustund kóðunar með Draymond Green
+  video_title_russell_okung: Klukkustund kóðunar með Russell Okung
+  video_title_real_madrid: Klukkustund kóðunar með Real Madrid
+  video_title_marco_belinelli: Klukkustund kóðunar með Marco Belinelli
+  video_title_chris_bosh: Chris Bosh talar um tölvunarfræði
+  video_1min: 1 mín.
+  video_2min: 2 mín.
+  video_5min: 5 mín.
   speak_another_language: Talarðu annað tungumál?
   help_translate: Hjálpaðu að þýða.
   no_internet: Ertu án internettengingar?
@@ -546,7 +623,8 @@
   volunteer_engineer_submission_submit: Senda inn
   volunteer_engineer_submission_thankyou: Takk fyrir að bjóða liðveislu. Kennarar
     munu nota <a href="%{url}">þetta kort</a> til að leita að og hafa samband við
-    sjálfboðaliða eins og þig.
+    sjálfboðaliða eins og þig. Vinsamlegast gerðu ráð fyrir að það taki 48 klst. áður
+    en upplýsingar þínar birtast rétt á kortinu.
   volunteer_engineer_submission_commitment_uncertain: "Óvíst"
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 klst. á viku
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 klst. á viku
@@ -601,8 +679,6 @@
     þessu námskeiði
   dashboard_landing_educator_blog: Lesa um fréttir og uppfærslur á efni okkar á kennarabloggi
     okkar
-  dashboard_landing_smart_hints: Vinsamlegast hjálpaðu okkur að bæta gagnlegum vísbendingum
-    við kennsluna á Code.org
   dashboard_landing_video_player: Prófaðu nýja myndbandaspilarann okkar í skólanum
     þínum
   dashboard_landing_progress_title: Framvinda aðalhóps
@@ -690,19 +766,19 @@
   dashboard_filter_all: Allt
   dashboard_download_csv: Hlaða niður CSV
   dashboard_navigation_home_page: Heimasíða kennara
-  dashboard_navigation_section_student_progress: Reikningar og árangur nemenda
+  dashboard_navigation_section_student_progress: Reikningar og framvinda nemenda
   dashboard_navigation_section_teacher_progress: Námskeiðsframvinda þín
   dashboard_navigation_section_lesson_plans: Kennsluáætlanir og tilföng
-  dashboard_navigation_section_community: Hjálp og samfélag
+  dashboard_navigation_section_community: Stuðningur
   dashboard_navigation_section_pd: Fagmenntun
-  dashboard_navigation_section_speakers: |
+  dashboard_navigation_section_speakers: |-
     Gestafyrirlesarar<br/>
     í Tölvunarfræði
   dashboard_navigation_all_sections: Reikningar og árangur nemenda
   dashboard_navigation_view_progress: Framvinda
   dashboard_navigation_view_text_responses: Svör sem texti
   dashboard_navigation_view_assessments: Mat
-  dashboard_navigation_view_assessments_surveys: Möt/Kannanir
+  dashboard_navigation_view_assessments_surveys: Mat/Kannanir
   dashboard_navigation_add_students: Bæta við nemendum
   dashboard_navigation_manage_students: Umsjón nemenda
   dashboard_navigation_lesson_plans_resources: Kennsluáætlanir og tilföng
@@ -714,7 +790,7 @@
   dashboard_progress_not_completed: "ólokið"
   dashboard_progress_completed_too_many_blocks: lokið, of margir kubbar
   dashboard_progress_completed_perfect: lokið, fullkomið
-  dashboard_progress_furthest_level_attempted: hæsti unninn áfangi
+  dashboard_progress_furthest_level_attempted: hæsta prófað borð
   dashboard_progress_submitted: sent inn
   dashboard_progress_view: 'Sjá framvindu í:'
   dashboard_progress_student_in_script: Upplýsingar um framvindu %{student_name} í
@@ -761,13 +837,21 @@
   dashboard_sections_other_section: Annar kennari
   dashboard_sections_both_sections: Viltu að nemandinn/nemendurnir séu í báðum hópum?
   dashboard_sections_yes_both: Já, ég vil að þeir séu í núverandi hópi OG í nýja hópnum
-  dashboard_sections_no_move: 'Nei, ég vil aðeins færa þá í nýja hópinn. '
+  dashboard_sections_no_move: Nei, ég vil færa þá svo þeir séu aðeins í nýja hópnum.
   dashboard_sections_move_students: Færa nemendur
+  dashboard_sections_assign_hoc_script_desc: Tekurðu þátt í Klukkustund kóðunar?
+  dashboard_sections_assign_hoc_script_msg: Vinsamlegast athugaðu að við munum ekki
+    vista framvindu á þessu námskeiði vikuna 3. - 11. desember vegna mikils álags
+    sem mun verða vegna Klukkustundar kóðunar. Þú getur samt sett námskeiðið fyrir
+    og látið alla nemendum fá þátttökuskírteini. (Flestir kennarar <a href='%{certificate_url}'>prenta
+    þau fyrirfram</a>.) Við munum vista og greina frá framvindu nemenda allar aðrar
+    vikur ársins.
+  dashboard_sections_assign_activity: Setja námskeið fyrir
   dashboard_error_none_selected: "Þú valdir ekki neina nemendur til að færa. Vinsamlegast
     veldu a.m.k. einn nemanda."
-  dashboard_error_other_section: Ef þú ert að færa nemendur milli eigin hópa, skaltu
-    velja hópinn úr fellilistanum. Ekki velja "Annar hópur" nema þú sért að færa nemendur
-    þína í hóp annars kennara.
+  dashboard_error_other_section: Ef þú ert að færa nemendur milli þinna eigin hópa,
+    skaltu velja hópinn úr fellilistanum. Ekki velja "Annar hópur" nema þú sért að
+    færa nemendur þína í hóp annars kennara.
   dashboard_students_add_student: Bæta við nemanda
   dashboard_students_add_students: Bæta við mörgum nemendum
   dashboard_students_add_multiple: 'Ritaðu eða límdu nöfn nemenda þinna, eitt í hverja
@@ -826,13 +910,13 @@
   dashboard_curriculum_high_title: Tilföng fyrir framhaldsskólakennara
   dashboard_lesson_plans: Kennsluáætlanir
   dashboard_view_all_lesson_plans: Hlaða niður öllum kennsluáætlunum fyrir Námskeið
-    1-3
+    1-4
   dashboard_course1: 'Námskeið 1:'
   dashboard_course2: 'Námskeið 2:'
   dashboard_course3: 'Námskeið 3:'
-  dashboard_course4: 'Námskeið 4 (beta): '
-  dashboard_unplugged: "Þó þú hafir engar tölvur, <a href='%{unplugged_url}'>ættir
-    þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum."
+  dashboard_course4: 'Námskeið 4: '
+  dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
+    þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
   dashboard_curriculum: Námskrá
   dashboard_curriculum_overview: Yfirlit 5 - 10 ára (K-5) námsefnis
   dashboard_overview: Yfirlit
@@ -868,9 +952,9 @@
   dashboard_submission_submitted: Skilað
   dashboard_submission_in_progress: "Í vinnslu"
   dashboard_status: Staða
-  dashboard_multi_correct: "# valspurning rétt"
-  dashboard_multi_count: "# valspurning"
-  dashboard_multi_correct_percent: "% valspurning rétt"
+  dashboard_multi_correct: "# valspurning/ar rétt/ar"
+  dashboard_multi_count: "# valspurning/ar"
+  dashboard_multi_correct_percent: "% valspurning/ar rétt/ar"
   dashboard_submission_timestamp: Tímastimpill skila
   stats_hoc_2013_heading: "Ótrúlegar tölur frá síðasta ári um Klukkustund kóðunar.
     Á aðeins einni viku:"
@@ -881,7 +965,7 @@
   dashboard_sections_account_creation_question: Hver stofnar aðgang nemandans?
   dashboard_sections_password_question: Hvað nota nemendur sem "aðgangsorð"?
   dashboard_sections_picture_account_creation: Mynd sem er úthlutað af Code.org
-  dashboard_sections_word_account_creation: Einfalt orð sem er úthlutað af Code.org
+  dashboard_sections_word_account_creation: Einfalt orðapar sem er úthlutað af Code.org
   dashboard_sections_sign_in_question: Hvar skrá nemendur sig inn?
   dashboard_sections_sign_in_unique: Sérstök vefsíða sem birtist undir flipanum "Umsjón
     nemenda"
@@ -892,30 +976,67 @@
   dashboard_faq: Algengar spurningar
   dashboard_faq_k5: Algengar spurningar grunnskólastigs
   dashboard_announcements: Tilkynningar
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Við eyddum sumrinu í að búa til nýjungar
+    úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href="%{pp_url}" target="_blank">fylgjast
+    með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu tæki.
+    Einnig nota <a href="%{csp_widgets_url}" target="_blank">bestu gagnvirku tækin</a>
+    af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur þína geta
+    <a href="%{unused_code_url}" target="_blank">geymt ónotaðan kóða</a> á vinnusvæði
+    sínu til að ýta undir að þeir geri tilraunir! Kannaðu allar þessar nýjungar og
+    láttu okkur vita hvað þér finnst.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Læra meira
   dashboard_announce_try_now_button: Prófa núna
+  dashboard_announce_host_an_hour_button: Sjá um Klukkustund
+  dashboard_announce_watch_video_button: Horfa á myndband
   dashboard_announce_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill
     gefa öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn
     tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar,
     28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið bréf
     sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði í grunnskólum.
   dashboard_announce_petition_button: Bættu nafni þínu við
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
     kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
+  dashboard_announce_hoc_launch: "Þúsundir kennara í meira en 180 löndum munu byrja
+    að kenna tölvunarfræði í Klukkustund kóðunar dagana 5. - 11. desember. Við treystum
+    á þig að hjálpa okkur að ná til fleiri nemenda en nokkru sinni áður. <a href='%{signup_url}'
+    target='_blank'>Skráðu þinn Klukkustund kóðunar-viðburð</a> og láttu aðra kennara
+    vita að það geti hver sem er byrjað að kenna tölvunarfræði."
+  dashboard_announce_mc_launch: Eitt vinsælasta kennsluefnið okkar er nú komið með
+    framhald! Með glænýjum Minecraft Hour of Code Designer (Minecraft hönnuði) geta
+    nemendur búið til reglur fyrir Minecraft heiminn. Þeir geta skapað alveg einstaka
+    Minecraft upplifun og deilt henni síðan með vinum eða spilað hana í síma. Láttu
+    bekkinn prófa þetta fyrir Klukkustund kóðunar.
+  dashboard_announce_hoc_scaling_progress: Taktu vinsamlegast eftir að við vistum
+    ekki framvindu nemenda á þessu námskeiði frá 3. til 11. desember þar sem álagið
+    á vef okkar er mikið vegna Klukkastundar kóðunar. Þú getur samt séð framvindu
+    nemenda fram að 3. desember. Við munum fara að vista framvinduna aftur þegar þessi
+    vika er liðin.
+  dashboard_announce_how_code_studio: "Þú þarft ekki að hafa reynslu til að byrja
+    að kenna tölvunarfræði í bekknum þínum. Hjá Code.org færðu námsefni, kennsluáætlanir,
+    hágæða fræðslu fyrir kennara og fjöldann allan af góðum verkfærum fyrir alla aldurhópa
+    &mdash;allt sem þú munt þarfnast, og allt frítt. Hvar er best að byrja? Sæktu
+    \ <a href='%{video_download_url}'>þetta myndband</a>!"
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Klukkustund kóðunar er komin - 8. - 14. desember!
   code_sign_up: Skráðu þig til að taka þátt í viku menntunarátaks í tölvunarfræði
+  host_an_hour: Sjá um klukkustund
+  learn_banner_title: Vertu með í Klukkustund kóðunar
+  learn_banner_desc: Klukkustund kóðunar er alþjóðleg hreyfing sem nær til meira en
+    100 miljón nemenda í yfir 180 löndum. Hver og einn, hvar sem er, getur skipulagt
+    viðburð með Klukkustund kóðunar. Hjálpaðu okkur að gefa sérhverjum nemanda tækifæri
+    til að tölvunarfræði! Skipuleggjendur geta fylgt <a href='%{how_to_url}' target='_blank'>leiðarvísi</a>
+    okkar um það að kenna Klukkustund kóðunar og veitt nemendum hvatningu með <a href='%{videos_url}'
+    target='_blank'>þessum myndskeiðum</a>.
   learn_more: Prófaðu núna
   learn_sign_up_description: Skráðu þig til að taka þátt í Klukkustund kóðunar í Viku
     tölvufræðikennslu
@@ -1043,9 +1164,15 @@
   cspunit4_name: 'Kafli 4: Gögn'
   cspunit5_name: 'Kafli 5: Kanna og búa til fagnám'
   cspunit6_name: 'Framhald: Gagnagrunnar í öppum'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Kafli 1: Internetið'
   csp2_name: Kafli 2 - Stafrænar upplýsingar
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Fullt próf - 50 spurningar
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
   cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
@@ -1064,13 +1191,21 @@
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Kubbar)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: "Þjöppun texta"
   math_category_name: Reikningur
   hoc_category_name: Klukkustund kóðunar
   csf_category_name: TF Grunnur
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 TF Grundvöllur"
   csp17_category_name: "'16-'17 TF Grundvöllur"
-  cspexams_category_name: "Æfingapróf fyrir TF Grundvöll"
+  cspexams_category_name: "Æfingapróf fyrir Undirstöðuatriði TF"
+  research_studies_category_name: Research Studies
   applab_name: Appsmiðja
+  basketball_name: Búa til körfuboltaleik
+  sports_name: Kóðaðu íþróttaleik eftir þínu höfði
   applab_gradelevel: Aldur 13+
   applab_shortdescription_congrats: App Lab smiðjan er forritunarumhverfi þar sem
     þú getur búið til einföld öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript
@@ -1112,12 +1247,12 @@
   thinkersmith2_gradelevel: 8+ ára
   kodableunplugged_gradelevel: 8-13 ára
   projguts_gradelevel: 10-13 ára
-  hourofcode_gradelevel: 4-104 ára
+  hourofcode_gradelevel: 6-106 ára
   frozen_gradelevel: 8-108 ára
-  starwars_gradelevel: Aldur 6+
+  starwars_gradelevel: 6-106 ára
   playlab_gradelevel: 6-14 ára
   infinity_gradelevel: 4-104 ára
-  artist_gradelevel: 4-104 ára
+  artist_gradelevel: 8-108 ára
   monstercoding_gradelevel: 5-13 ára
   allcancode_gradelevel: 5-10 ára
   csfirst_gradelevel: 9-14 ára
@@ -1247,7 +1382,7 @@
   teacherled_shortdescription: Fáðu hugmyndir fyrir þinn eigin viðburð með Klukkustund
     kóðunar með þessum kennsluáætlunum.
   course2_shortdescription_congrats: "Þetta námskeið byggir á Námskeiði 1 og er ætlað
-    nemendum með byrjendakunnáttu í lestri. Nemendur búa til forrit til að leysa þrautor
+    nemendum með byrjendakunnáttu í lestri. Nemendur búa til forrit til að leysa þrautir
     og þróa gagnvirka leiki og sögur sem þeir geta deilt. Ætlað bekkjum 2-5."
   course3_shortdescription_congrats: Tilbúin að fást við næsta stig? Nemendur munu
     kafa dýpra í efni sem var kynnt á fyrri forritunarnámskeiðum til að geta beitt
@@ -1529,12 +1664,12 @@
   udemy_beyond_platformtext: Fyrir vefsíðu
   lynda_beyond_platformtext: Fyrir vefsíður (ekki frítt)
   edx_beyond_platformtext: Nýjustu vafrar
-  coursera_beyond_platformtext: Nýjustu vafrar
-  udacity_beyond_platformtext: Nýjustu vafrar
+  coursera_beyond_platformtext: Fyrir nýjustu vafra
+  udacity_beyond_platformtext: Fyrir nýjustu vafra
   teachingtree_beyond_platformtext: Fyrir vefsíðu
   kodu_beyond_platformtext: Windows, xBox
   cargobot_beyond_platformtext: iPad
-  kidsruby_beyond_platformtext: Uppsetning á skjáborðstölvu
+  kidsruby_beyond_platformtext: Uppsetning á borðtölvu
   w3schools_beyond_platformtext: Fyrir nýjustu vafra
   codeavengers_beyond_platformtext: Fyrir nýjustu vafra
   mozilla_beyond_platformtext: Fyrir nýjustu vafra
@@ -1543,7 +1678,7 @@
   lego_beyond_platformtext: Kaup á vélmenni
   finch_beyond_platformtext: Kaup á vélmenni
   arduino_beyond_platformtext: Fyrir vafra, síðan kaup á setti
-  processing_beyond_platformtext: Nýjustu vafrar
+  processing_beyond_platformtext: Fyrir nýjustu vafra
   alice_beyond_platformtext: Windows eða Mac (þarf uppsetningu)
   sphero_beyond_platformtext: Kaup á vélmenni
   codeorg_beyond_shortdescription: Lærðu að kóða með Mark Zuckerberg og Angry Birds!
@@ -1611,7 +1746,7 @@
   codecademy_beyond_longdescription: Codeacademy er gagnvirk, nemendastýrð kynning
     á grunnatriðum tölvunarfræði sem nýtir JavaScript og er notuð af tugum miljóna
     nemenda um allan heim. Við höfum gert okkar Klukkustund kóðunar að aðgengilegri
-    upplifun  ásamt meðfylgjandi spurningum, skyggnum og lokaverkefni fyrir nemendur
+    upplifun ásamt meðfylgjandi spurningum, skyggnum og lokaverkefni fyrir nemendur
     að enda á.
   kodable_beyond_longdescription: Kodable er sjálfleiðbeinandi iPad leikur sem kynnir
     grunnatriði forritunar fyrir börnum frá 5 ára aldri. Best er að hafa kennara eða
@@ -1761,13 +1896,3 @@
   infinity_shortcode: inf
   playlab_shortcode: spila
   artist_shortcode: art
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Learn more
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.

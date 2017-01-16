@@ -8,13 +8,24 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
   * Integration Tests - Used to test level solutions and some block behaviors
 * Dashboard directory
   * Ruby tests - All of the server side business logic testing is through here. 
-  * Konacha Tests - Subset of client-side functionality testing is here, we use this to test storage of client state.
   * UI tests - Used to test overall functionality. Intended to run across browsers. Runs either on Saucelabs or with a local Chromedriver
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
  * Shared directory
    * Ruby tests - Unit tests over Ruby code in the shared directory.
 * Pegasus directory
   * Ruby tests - Test server side logic, caching, graphics, etc.
+
+### When tests are run
+
+<!---- Can use http://markdowntable.com/ for reformatting help --->
+
+|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps mochaTest     | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |                    |                      |                    |                         |                    |                    |                    |
+| circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| hound CI (via github)  | :white_check_mark:        | :white_check_mark:                | :white_check_mark: |                                |                    |                      |                    |                         |                    |                    |                    |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
+| test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Running tests
 
@@ -28,11 +39,11 @@ Controlling tests:
 
 * CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
 * By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
-* UI tests (currently for Chrome only) can be run by including the message `[test ui]` in your commit message
+* UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
 * Tests can be re-run with the "Rebuild" button on CircleCI.
 * Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
 
-If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run UI tests [test ui]"`
+If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run all tests [test all]"`
 
 Contributor pull requests do not build by default, but can be triggered to build by a GitHub organization team member. Note that the given PR should be scanned to ensure there is no malicious code and that no secrets would be displayed in test output.
 
@@ -62,11 +73,6 @@ It's also possible to run a subset of tests:
 To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
 
 See [the apps readme](./apps/README.md) for more details.
-
-### Konacha Tests
-`cd dashboard && bundle exec rake konacha:server` will run konacha tests. Visit the URL it provides to see your test results.
-
-Tests run pretty quickly
 
 ### Dashboard Tests
 `cd dashboard && rake test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.

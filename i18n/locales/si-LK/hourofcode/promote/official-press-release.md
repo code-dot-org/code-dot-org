@@ -4,11 +4,13 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-# Sample press release for elected officials
+<%= view :signup_button %>
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+# පත්කරගත් නිලධාරීන් සඳහා ආදර්ශ මාධ්‍ය නිවේදනයක්
+
+ක්ෂණික නිවේදනයක් සඳහා  
+**දිනය**  
+අමතන්න: [**සබඳතා තොරතුරු**]  
   
 
 
@@ -27,16 +29,22 @@ Contact: [**CONTACT INFORMATION**]
 [**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
 “Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**අන්තර්ගතය සඳහා ආදර්ශ සටහනක්:**]  
+අද වන විට පරිගණක බහුලව දක්නට ලැබුනත්, පරිගණක විද්‍යාව උගන්වනු ලබන්නේ මීට අවුරුදු 10කර පෙර තිබූ ගණනට වඩා අඩු පාසල් ප්‍රමාණයකයි. විවිධ ජාතීන් වලට අයත් ගැහැණු ළමුන් සහ සිසුන්ගේ නියෝජනය ඉතා අඩු මට්ටමක පවතිනවා. අපි එම තත්වය ඉක්මනින්ම යහපත් අතට හැරවීමට සුදානම්. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+ලොව පුරා මිලියන 100කට අධික සිසුන් ගණනක් මේ වනවිටත් Hour of Code වැඩසටහනට සහභාගී වී ඇත. Hour of Codeවැඩසටහන නිසාවෙන් පරිගණක විද්‍යාව පිළිබඳව Google, MSN, Yahoo! මුල් පිටු වල මෙන්ම Disney නාලිකාවේ ද සඳහන් වුණා. Hour of Code වීඩියෝ සඳහා ඇමෙරිකානු ජනාධිපති Obama, බටහිර ගායිකාවක් වන Shakira සහ ජනප්‍රිය නළුවෙකු වන Ashton Kutcher ද දායක වී ඇත. මෙම වැඩසටහනට 100කට අධික සංවිධාන රැසක් අප සමග හවුල් කරුවන් ලෙස සම්බන්ධ වුණා.
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. "සෑම සිසුවෙක්ටම පරිගණක විද්‍යාව හැදෑරීම මගින් 21වන සියවසේ ඇති හොඳම රැකියා ලඟා කරගැනීමට අවස්ථාවක් ලැබිය යුතුයි."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**ඔබේ සංවිධානය සහ වැඩසටහන පිළිබඳ තවත් තොරතුරු සඳහන් කරන්න.**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**වෙනත් සංවිධානයකින් හෝ වැඩසටහනට සහභාගී වූ කෙනෙකුගේ කියමනක් සඳහන් කරන්න**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+[**වැඩසටහන**] පිළිබඳ වැඩි විස්තර සඳහා, මෙම වෙබ් අඩවිය [**වෙබ් අඩවිය ඇතුලත් කරන්න**] හෝ මෙම තොරතුරු ඔස්සේ අප හා සම්බන්ධ වන්න:[**තොරතුරු එක්කරන්න**]
+
+  
+  
+
+
+<%= view :signup_button %>

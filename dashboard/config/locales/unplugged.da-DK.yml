@@ -24,7 +24,7 @@
           oplysninger til at oprette en algoritme (retninger) til et andet team til
           at tegne en bestemt monster. Hold vil derefter skifte algoritmer med en
           anden gruppe og tegne monster baseret på hvad denne algoritme angiver. Er
-          tegningen hvad den oprindelige team er beregnet?\n"
+          tegningen hvad den oprindelige team er beregnet?"
         pdfs:
         - unplug2
         video: Unplug2

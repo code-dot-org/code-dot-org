@@ -13,7 +13,8 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Make a Flappy Game](/files/hoc-flappy-lp.pdf)
+- [Make a Flappy Game (English)](/files/hoc-flappy-lp.pdf)
+- [Make a Flappy Game (Spanish)](/files/hoc-flappy-lp-spanish.pdf)
 
 ### Extension Activities:
 

@@ -234,6 +234,10 @@ Use these activities to enhance student learning. They can be used as outside of
   - Cross out everywhere the repeating actions appear in the program and write "Chorus" instead.
 - Repeat until the class can go through this process with little direction.
 
+### Functional Suncatchers
+
+- [Functional Suncatchers](https://code.org/curriculum/course3/4/Teacher) This activity shows functions from a different perspective. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper.
+
 [/together]
 
 [standards]

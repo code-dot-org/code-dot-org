@@ -1,6 +1,6 @@
 var React = require('react');
 var AssetManager = require('./AssetManager');
-var color = require('../../color.js');
+var color = require("../../util/color");
 var IconLibrary = require('./IconLibrary');
 var ICON_PREFIX = require('@cdo/apps/applab/constants').ICON_PREFIX;
 
@@ -16,10 +16,11 @@ var extensionFilter = {
 var ImagePicker = React.createClass({
   propTypes: {
     assetChosen: React.PropTypes.func,
+    assetsChanged: React.PropTypes.func,
     typeFilter: React.PropTypes.string,
-    channelId: React.PropTypes.string.isRequired,
     uploadsEnabled: React.PropTypes.bool.isRequired,
     showUnderageWarning: React.PropTypes.bool.isRequired,
+    useFilesApi: React.PropTypes.bool.isRequired
   },
 
   getInitialState: function () {
@@ -86,9 +87,10 @@ var ImagePicker = React.createClass({
     var body = !this.props.assetChosen || this.state.mode === 'files' ?
       <AssetManager
         assetChosen={this.props.assetChosen}
+        assetsChanged={this.props.assetsChanged}
         allowedExtensions={extensionFilter[this.props.typeFilter]}
-        channelId={this.props.channelId}
         uploadsEnabled={this.props.uploadsEnabled}
+        useFilesApi={this.props.useFilesApi}
       /> :
       <IconLibrary assetChosen={this.getAssetNameWithPrefix}/>;
 
@@ -107,23 +109,3 @@ var ImagePicker = React.createClass({
   }
 });
 module.exports = ImagePicker;
-
-
-
-
-if (BUILD_STYLEGUIDE) {
-  const Dialog = require('@cdo/apps/templates/Dialog').default;
-  const Body = require('@cdo/apps/templates/Dialog').Body;
-  ImagePicker.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('ImagePicker', module)
-      .addStoryTable([
-        {
-          name: 'with warning',
-          story: () => (
-            <ImagePicker showWarning channelId="some-channel" uploadsEnabled />
-          )
-        },
-      ]);
-  };
-}

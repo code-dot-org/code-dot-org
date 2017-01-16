@@ -6,16 +6,13 @@
 // specified, otherwise, use background.png.
 
 import {
-  CLICK_VALUE,
   HIDDEN_VALUE,
   RANDOM_VALUE,
-  VISIBLE_VALUE,
   SpriteSpeed
 } from './constants';
 import msg from './locale';
 import commonMsg from '@cdo/locale';
 import skinsBase from '../skins';
-import { singleton as StudioApp } from '../StudioApp';
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.

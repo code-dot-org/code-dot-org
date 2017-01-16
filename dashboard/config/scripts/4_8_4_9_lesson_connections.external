@@ -1,0 +1,52 @@
+name '4.8 - 4.9 Lesson Connections'
+css 'unplugged'
+markdown <<MARKDOWN
+# 4.8 - 4.9 Lesson Connections
+
+
+In this pair of lessons lesson students learn about various types of cyber attacks and cyber crimes and do a small amount of research to learn more about one. Lesson 8 should cap off learning about encryption by taking a moment to look at the kinds of attacks and threats encryption (among other things) is intended to thwart. It is also intended to be a transition forward as well, preparing students for lesson 9, a Practice Performance Task about Big Data and Security more generally.
+
+
+## Lesson 8: Rapid Research - Cybercrime
+**Lesson Type:** Research
+
+
+<a href = “https://curriculum.code.org/csp/unit4/8/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+With this lesson there are two important goals: 
+
+1. review terminology about cyber security and crime that is relevant for the AP CS Principles Exam
+2. practice research skills - both finding credible sources quickly, and backing up what you say with evidence. 
+
+This lesson is intended to serve as a wrap-up to the work we’ve done with encryption by taking a look at cyber crime that happens in the real world (and in which encryption plays a huge role). This lesson should not run very long despite the potentially interesting issues and avenues you could go down. **The intent is that this is a quick-hit precursor to a larger Practice Performance Task** that follows this lesson about cybersecurity and big data in general. Students may want to take some of the research here and use it as a starting point for the Practice PT but it is not required to get into that level of depth here.
+<br>
+<hr />
+
+
+## Lesson 9: Practice PT - Big Data and Cyber Security Dilemmas
+**Lesson Type:** Research | Writing | Practice PT
+
+
+<a href = “https://curriculum.code.org/csp/unit4/9/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+
+
+To conclude their study of big data and cryptography, students will complete a small research project related to a dilemma presented by Big Data or Cybersecurity, in the form of a Practice Performance Task. This project is an opportunity to practice many of the skills students will use when completing the Explore Performance Task on the AP® Exam at the end of the year. While an open-ended research project might be intimidating, students have built all the skills they need to complete this task.
+
+
+Students will pick one of two issues to research more deeply - either an issue related to big data, or one related to cybersecurity. Students will need to identify appropriate online resources to learn about the functionality, context, and impact of the technological innovation that gave rise to the dilemma they are investigating. After completing their research, students will present their findings both in a written summary and with an audio / visual artifact they found online. The written components students must complete are similar to those students will see in the AP Performance Tasks.
+
+
+This lesson does not cover new CS content per se, though students might discover new and interesting things in their research. This lesson is an opportunity for students to synthesize their knowledge and understanding of Big Data, cybersecurity, cryptography, and computationally hard problems. The project asks students to tie their research into a topic in the news with vocabulary and concepts covered in this unit of study. For reference, vocabulary and topics from lessons in this unit include:
+
+- Big Data
+- Moore’s Law
+- Encryption and Decryption
+- Symmetric v. Asymmetric Encryption
+- Computationally Hard Problems
+- Public Key Encryption
+
+
+
+
+
+MARKDOWN

@@ -1,31 +1,32 @@
-var studioApp = require('../StudioApp').singleton;
-var apiTimeoutList = require('../timeoutList');
-var ChartApi = require('./ChartApi');
-var EventSandboxer = require('./EventSandboxer');
-var RGBColor = require('./rgbcolor.js');
-var codegen = require('../codegen');
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown');
-var assetPrefix = require('../assetManagement/assetPrefix');
-
-var errorHandler = require('../errorHandler');
-var ErrorLevel = errorHandler.ErrorLevel;
-var applabTurtle = require('./applabTurtle');
-var ChangeEventHandler = require('./ChangeEventHandler');
-var color = require('../color');
-var logToCloud = require('../logToCloud');
-
-var OPTIONAL = true;
+import apiTimeoutList from '../timeoutList';
+import ChartApi from './ChartApi';
+import EventSandboxer from './EventSandboxer';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import * as setPropertyDropdown from './setPropertyDropdown';
+import * as assetPrefix from '../assetManagement/assetPrefix';
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import color from "../util/color";
+import logToCloud from '../logToCloud';
+import {
+  OPTIONAL,
+  apiValidateType,
+  getAsyncOutputWarning,
+  outputError,
+  outputWarning,
+} from '../javascriptMode';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 
-var ICON_PREFIX_REGEX = require('./constants').ICON_PREFIX_REGEX;
+import {ICON_PREFIX_REGEX} from './constants';
 
-var applabCommands = module.exports;
+var applabCommands = {};
+export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a
@@ -41,95 +42,6 @@ var toBeCached = {};
  * @type {EventSandboxer}
  */
 var eventSandboxer = new EventSandboxer();
-
-function outputWarning(errorString) {
-  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  errorHandler.outputError(errorString, ErrorLevel.WARNING, line);
-}
-
-function outputError(errorString) {
-  var line = 1 + window.Applab.JSInterpreter.getNearestUserCodeLine();
-  errorHandler.outputError(errorString, ErrorLevel.ERROR, line);
-}
-
-
-/**
- * @param value
- * @returns {boolean} true if value is a string, number, boolean, undefined or null.
- *     returns false for other values, including instances of Number or String.
- */
-function isPrimitiveType(value) {
-  switch (typeof value) {
-    case 'string':
-    case 'number':
-    case 'boolean':
-    case 'undefined':
-      return true;
-    case 'object':
-      return (value === null);
-    default:
-      return false;
-  }
-}
-
-/**
- * Validates a user function paramer, and outputs error to the console if invalid
- * @returns {boolean} True if param passed validation.
- */
-function apiValidateType(opts, funcName, varName, varValue, expectedType, opt) {
-  var validatedTypeKey = 'validated_type_' + varName;
-  if (typeof opts[validatedTypeKey] === 'undefined') {
-    var properType;
-    switch (expectedType) {
-      case 'color':
-        // Special handling for colors, must be a string and a valid RGBColor:
-        properType = (typeof varValue === 'string');
-        if (properType) {
-          var color = new RGBColor(varValue);
-          properType = color.ok;
-        }
-        break;
-      case 'uistring':
-        properType = (typeof varValue === 'string') ||
-          (typeof varValue === 'number') || (typeof varValue === 'boolean');
-        break;
-      case 'pinid':
-        properType = (typeof varValue === 'string') ||
-          (typeof varValue === 'number');
-        break;
-      case 'number':
-        properType = (typeof varValue === 'number' ||
-          (typeof varValue === 'string' && !isNaN(varValue)));
-        break;
-      case 'primitive':
-        properType = isPrimitiveType(varValue);
-        if (!properType) {
-          // Ensure a descriptive error message is displayed.
-          expectedType = 'string, number, boolean, undefined or null';
-        }
-        break;
-      case 'array':
-        properType = Array.isArray(varValue);
-        break;
-      case 'record':
-        // Validate that we have a data record. These must be objects, and
-        // not arrays
-        properType = typeof varValue === 'object' && !Array.isArray(varValue);
-        break;
-      default:
-        properType = (typeof varValue === expectedType);
-        break;
-    }
-    properType = properType || (opt === OPTIONAL && (typeof varValue === 'undefined'));
-    if (!properType) {
-      outputWarning(funcName + "() " + varName + " parameter value (" +
-        varValue + ") is not a " + expectedType + ".");
-
-    }
-    opts[validatedTypeKey] = properType;
-  }
-  return !!opts[validatedTypeKey];
-}
 
 function apiValidateTypeAndRange(opts, funcName, varName, varValue,
                                  expectedType, minValue, maxValue, opt) {
@@ -229,7 +141,7 @@ applabCommands.container = function (opts) {
   if (typeof opts.elementId !== "undefined") {
     newDiv.id = opts.elementId;
   }
-  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+  var sanitized = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
   newDiv.innerHTML = sanitized;
   newDiv.style.position = 'relative';
 
@@ -428,17 +340,14 @@ applabCommands.arcLeft = function (opts) {
 };
 
 applabCommands.getX = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.x;
 };
 
 applabCommands.getY = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.y;
 };
 
 applabCommands.getDirection = function (opts) {
-  var ctx = applabTurtle.getTurtleContext();
   return Applab.turtle.heading;
 };
 
@@ -719,8 +628,6 @@ applabCommands.drawImage = function (opts) {
  * drawImageURL(url, x, y, width, height, [callback])
  */
 applabCommands.drawImageURL = function (opts) {
-  var divApplab = document.getElementById('divApplab');
-
   apiValidateActiveCanvas(opts, 'drawImageURL');
   apiValidateType(opts, 'drawImageURL', 'url', opts.url, 'string');
   apiValidateType(opts, 'drawImageURL', 'x', opts.x, 'number', OPTIONAL);
@@ -729,7 +636,6 @@ applabCommands.drawImageURL = function (opts) {
   apiValidateType(opts, 'drawImageURL', 'height', opts.height, 'number', OPTIONAL);
   apiValidateType(opts, 'drawImageURL', 'callback', opts.callback, 'function', OPTIONAL);
 
-  var jsInterpreter = Applab.JSInterpreter;
   var callback = function (success) {
     if (opts.callback) {
       opts.callback.call(null, success);
@@ -1052,53 +958,11 @@ applabCommands.setImageURL = function (opts) {
   return false;
 };
 
-applabCommands.playSound = function (opts) {
-  apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
-
-  if (studioApp.cdoSounds) {
-    var url = assetPrefix.fixPath(opts.url);
-    if (studioApp.cdoSounds.isPlayingURL(url)) {
-      return;
-    }
-
-    // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
-    //       See Pivotal #108279582
-    //
-    //       HTML5 audio is not working for user-uploaded MP3s due to a bug in
-    //       Varnish 4.0 with certain forms of the Range request header.
-    //
-    //       By commenting this line out, we re-enable Web Audio API in App
-    //       Lab, which has the following effects:
-    //       GOOD: Web Audio should not use the Range header so it won't hit
-    //             the bug.
-    //       BAD: This disables cross-domain audio loading (hotlinking from an
-    //            App Lab app to an audio asset on another site) so it might
-    //            break some existing apps.  This should be less problematic
-    //            since we now allow students to upload and serve audio assets
-    //            from our domain via the Assets API now.
-    //
-    var forceHTML5 = false;
-    if (window.location.protocol === 'file:') {
-      // There is no way to make ajax requests from html on the filesystem.  So
-      // the only way to play sounds is using HTML5. This scenario happens when
-      // students export their apps and run them offline. At this point, their
-      // uploaded sound files are exported as well, which means varnish is not
-      // an issue.
-      forceHTML5 = true;
-    }
-    studioApp.cdoSounds.playURL(url, {
-      volume: 1.0,
-      forceHTML5: forceHTML5,
-      allowHTML5Mobile: true
-    });
-  }
-};
-
 applabCommands.innerHTML = function (opts) {
   var divApplab = document.getElementById('divApplab');
   var div = document.getElementById(opts.elementId);
   if (divApplab.contains(div)) {
-    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, true /* rejectExistingIds */);
+    div.innerHTML = sanitizeHtml(opts.html, reportUnsafeHtml, false, true /* rejectExistingIds */);
     return true;
   }
   return false;
@@ -1232,6 +1096,27 @@ applabCommands.setProperty = function (opts) {
   }
 
   Applab.updateProperty(element, info.internalName, value);
+};
+
+applabCommands.getProperty = function (opts) {
+  apiValidateDomIdExistence(opts, 'getProperty', 'id', opts.elementId, true);
+  apiValidateType(opts, 'getProperty', 'property', opts.property, 'string');
+
+  const elementId = opts.elementId;
+  const property = opts.property;
+
+  const element = document.getElementById(elementId);
+  if (!element) {
+    return;
+  }
+
+  const info = setPropertyDropdown.getInternalPropertyInfo(element, property);
+  if (!info) {
+    outputError(`Cannot get property "${property}" on element "${elementId}".`);
+    return;
+  }
+
+  return Applab.readProperty(element, info.internalName);
 };
 
 applabCommands.getXPosition = function (opts) {
@@ -1491,7 +1376,7 @@ applabCommands.createRecord = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
 };
 
@@ -1507,7 +1392,7 @@ applabCommands.getKeyValue = function (opts) {
   apiValidateType(opts, 'getKeyValue', 'callback', opts.onSuccess, 'function');
   apiValidateType(opts, 'getKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.getKeyValue(opts.key, onSuccess, onError);
 };
 
@@ -1531,7 +1416,7 @@ var handleGetKeyValueSync = function (opts, value) {
 var handleGetKeyValueSyncError = function (opts, message) {
   // Call callback with no value parameter (sync func will return undefined)
   opts.callback();
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.setKeyValue = function (opts) {
@@ -1541,7 +1426,7 @@ applabCommands.setKeyValue = function (opts) {
   apiValidateType(opts, 'setKeyValue', 'callback', opts.onSuccess, 'function', OPTIONAL);
   apiValidateType(opts, 'setKeyValue', 'onError', opts.onError, 'function', OPTIONAL);
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
 };
 
@@ -1567,7 +1452,7 @@ var handleSetKeyValueSync = function (opts) {
 var handleSetKeyValueSyncError = function (opts, message) {
   // Return 'false' to indicate the setKeyValueSync failed
   opts.callback(false);
-  Applab.log(message);
+  outputWarning(message);
 };
 
 applabCommands.readRecords = function (opts) {
@@ -1583,7 +1468,7 @@ applabCommands.readRecords = function (opts) {
     return;
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
 };
 
@@ -1613,7 +1498,7 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1643,7 +1528,7 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = errorHandler.handleError.bind(this, opts);
+  var onError = opts.onError || getAsyncOutputWarning();
   Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
 };
 
@@ -1656,15 +1541,15 @@ applabCommands.handleDeleteRecord = function (opts, success) {
 applabCommands.onRecordEvent = function (opts) {
   apiValidateType(opts, 'onRecordEvent', 'table', opts.table, 'string');
   apiValidateType(opts, 'onRecordEvent', 'callback', opts.onRecord, 'function');
-  var onError = errorHandler.handleError.bind(this, opts);
-  Applab.storage.onRecordEvent(opts.table, opts.onRecord, onError);
+  apiValidateType(opts, 'onRecordEvent', 'includeAll', opts.includeAll, 'boolean', OPTIONAL);
+  Applab.storage.onRecordEvent(opts.table, opts.onRecord, getAsyncOutputWarning(), opts.includeAll);
 };
 
 applabCommands.getUserId = function (opts) {
-  if (!Applab.user.applabUserId) {
+  if (!Applab.user.labUserId) {
     throw new Error("User ID failed to load.");
   }
-  return Applab.user.applabUserId;
+  return Applab.user.labUserId;
 };
 
 /**
@@ -1874,3 +1759,6 @@ function stopLoadingSpinnerFor(elementId) {
     return !(/loading/i.test(x));
   }).join(' ');
 }
+
+// Include playSound, stopSound, etc.
+Object.assign(applabCommands, audioCommands);

@@ -13,7 +13,8 @@ nav: hoc_teacher_resources_nav
 
 ### Lesson Plans:
 
-- [Write your first computer program](/files/hoc-maze-lp.pdf)
+- [Write your first computer program (English)](/files/hoc-maze-lp.pdf)
+- [Write your first computer program (Spanish)](/files/hoc-maze-lp-spanish.pdf)
 
 ### Extension Activities:
 

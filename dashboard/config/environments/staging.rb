@@ -29,7 +29,8 @@ Dashboard::Application.configure do
   config.public_file_server.headers = { 'Cache-Control' => "public, max-age=3600, s-maxage=1800" }
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # webpack handles js compression for us
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -66,6 +67,10 @@ Dashboard::Application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = Poste2::DeliveryMethod
 
+  # Show mail previews (rails/mailers).
+  # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
+  config.action_mailer.show_previews = true
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
@@ -87,4 +92,8 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
+
+  # Whether or not to skip script preloading. Setting this to true
+  # significantly speeds up server startup time
+  config.skip_script_preload = false
 end

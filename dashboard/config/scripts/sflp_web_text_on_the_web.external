@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ## Background
 
-Students will investigate the common language used to communicate with browsers: HTML. They will explore basic HTML properties by using Web Lab to work with headers and lists elements. They will create two personal web pages: a Hobbies page and a Recipe page.
+Students will investigate the common language used to communicate content with browsers: HTML. They will explore basic HTML properties by using Web Lab to work with headers and lists elements. They will create two personal web pages: a Hobbies page and a Recipe page.
 
 # Vocabulary
 
@@ -20,4 +20,10 @@ Students will investigate the common language used to communicate with browsers:
 * **List Item** - `<li></li>`
 * **Ordered List** - `<ol></ol>`
 * **Unordered List** - `<ul></ul>`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+* [W3 Schools Headers](http://www.w3schools.com/html/html_headings.asp) - Documentation
+* [W3 Schools Lists](http://www.w3schools.com/html/html_lists.asp) - Documentation
 MARKDOWN

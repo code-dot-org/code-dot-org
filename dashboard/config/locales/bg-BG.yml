@@ -3,15 +3,15 @@
     messages:
       not_saved: "Коригирайте следните грешки:"
       too_young: "Това съдържание има възрастови ограничения и не е достъпно за по-малките
-        ученици"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+        ученици."
+      teacher_must_accept_terms: Това съдържание има възрастови ограничения и не е
+        достъпно за по-малките ученици. Помолете учителите си да приемат актуализираните
+        условия за ползване да ви дадат достъп до това съдържание. Вашият учител може
+        да направи това като влезе в студиото за кодиране и щракне върху бутона "Преглед
+        и актуализация на условията" в горната част на началната страница.
+      pair_programmer: "В момента сте в програмиране по двойки с друг ученик, който
+        няма достъп до това съдържание. За достъп до това съдържание, спрете програмирането
+        по двойки и опитайте отново."
   activerecord:
     errors:
       messages:
@@ -91,11 +91,25 @@
   signup_form:
     student_count: "%{count} ученици вече са се регистрирали."
     teacher_count: "%{count} учители вече са се регистрирали."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: Регистрирайте се, за да следите напредъка си или да управлявате вашата
+      класна стая. <a href="/"> Можете да разглеждате различните етапи и пъзели</a>
+      и без регистрация, но няма да запазите вашия напредък и проекти.
+    hoc_already_signed_up_heading: "Започнете без логване"
+    hoc_already_signed_up_content: Вие сте се регистрирали да учите с Hour of Code!
+      Вие и вашите ученици не е нужно да влезете в Code Studio, за да участвате в
+      това събитие. За да започнете, <a href="https://code.org/learn"> изберете ръководство</a>
+      за класната стая и споделете връзката с тях. <br/> <br/> Ако ви хареса Hour
+      of Code и искате да отидете по-далеч, можете да зададете парола и да създадете
+      акаунт в Code Studio и да запишете учениците си в някой от нашите <a href="https://code.org/educate">
+      други курсове</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "Виж ръководството за възпитатели"
-    title: Sign up for Code.org
+    title: "Регистрирайте се в Code.org"
     school_name: "Име на училище (по желание)"
     school_address: "Адрес на училището (по избор)"
     address_placeholder: "адрес, град, държава, пощенски код"
@@ -112,19 +126,23 @@
     invalid_password: "Паролата трябва да бъде поне 6 символа"
     mismatch_password: "Двете пароли, които въведохте не съвпадат"
     student_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'>
-      условията за ползване</a>. Ако аз съм на възраст под 13 години, аз потвърждавам
+      условията за ползване</a>. Ако аз съм на възраст под 13 години, потвърждавам
       с подаването на този формуляр, че имам разрешението на моя родител или законен
-      настойник за ползване на услугите на Code.org. <br/>За потребители под 13 имейл
-      адресите не се съхраняват във форма, която да ни позволява да се свържем с тях."
-    teacher_terms: "Съгласен съм да се обвържа с Code.org <a href='http://code.org/tos'>
-      условията за ползване</a>."
+      настойник за използване на услугите на Code.org. <br/> <br/> Имейл адресите
+      не се съхраняват във форма, която да позволява да се свързваме с учениците.
+      Курсистите не получават имейли от Code.org освен за възстановяване на парола.
+      Вижте нашата <a href='http://code.org/privacy'> декларация за поверителност</a>
+      за повече информация."
+    teacher_terms: "Съгласен съм да се обвържа с Code.org условията за ползване. За
+      повече информация за поверителност вижте нашата <a href='http://code.org/privacy'>
+      политика за поверителност</a>."
     additional_information: "Ние изискваме  допълнителна информация за да продължим
       \ вписването ви."
     user_type_label: "Тип акаунт"
     user_type_teacher: "Учител"
     user_type_student: "Ученик"
     field_is_required: "е задължително"
-    accept_terms: You must agree to create an account
+    accept_terms: "Вие трябва да потвърдите, за да си създадете профил"
   signin_form:
     title: "Вече имате профил? Влизане"
     login: "Имейл"
@@ -141,13 +159,13 @@
     picture: "Сега намерете вашата тайна картина"
     words: "Сега въведете вашите тайни думи"
     login: "Вход"
-    invalid_login: "Невалидна влизане, моля опитайте отново"
+    invalid_login: "Невалидно влизане, моля опитайте отново"
     pair_programming: "Имам партньор на моя компютър"
   password:
     reset_form:
       title: "Забравена парола?"
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: "Въведете своя имейл адрес по-долу и ние ще ви изпратим инструкции
+        за възстановяване на паролата."
       email: "Имейл адрес"
       submit: "Изпрати"
     change_form:
@@ -289,7 +307,7 @@
       prizes: "Награди"
       logout: "Изход"
       signin: "Вход"
-      signup: "Регистрирайте се"
+      signup: "Създаване на акаунт"
       already_registered: "Вече сте регистриран?"
       pair_programming: "Програмиране по двойки"
       team: "Екип"
@@ -320,7 +338,7 @@
     user_not_found: "Учителят не може да бъде намерен."
     student_teacher_disassociated: "Премахнали сте %{teacher_name} като ваш учител."
     panel:
-      answer_viewer: "Преглед на отговора"
+      answer_viewer: "Учителски панел"
       student: "Ученик"
       viewing_solution: "Показване на решението"
       try_it_yourself: "Опитайте сами"
@@ -330,7 +348,8 @@
       submitted_on: "Добавено на %{date}"
       unsubmit: "Не е добавено"
       worked_with: "Работи с"
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: "Актуализирайте настройките за заключване тук."
+      clear_response: "Ясен отговор"
   user:
     email_confirm_needed: "Имейл адресът не е потвърден:"
     email_confirm_needed_required: "Вашият email адрес не е потвърден %{email} :"
@@ -344,6 +363,7 @@
     delete_text_teacher_note: "Моля, обърнете внимание: изтриването на вашия акаунт
       няма да изтрие акаунтите на вашите ученици."
     delete_confirm: "Наистина ли искате да изтриете профила си?"
+    deleted_user: deleted user
   user_level:
     completed: "Завършено"
     tried: "Опитах"
@@ -403,20 +423,23 @@
     choose_next_course: "Опитайте курс като си изберете един от тези по-долу"
     print_certificate: "Печат на сертификат"
     announcement_title: "Съобщения"
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: Ние използвахме лятото за да превърнем
+      Вашата обратна връзка в нови функции. Сега можете да <a href="%{pp_url}" target="_blank">
+      следите напредъка на няколко ученици </a> дори ако те са включени в програмиране
+      по двойки на едно устройство. Можете да използвате <a href="%{csp_widgets_url}"
+      target="_blank"> най-добрите интерактивни инструменти</a> от нашия CS принципи
+      курс във <i>всяка</i> класна стая. А Вашите ученици могат да <a href="%{unused_code_url}"
+      target="_blank"> запазят неизползвания код</a> в работната област, така искаме
+      да насърчим експериментирането! Вижте всички наши нови функции и нека разберем
+      какво мислите.
     announcement_csp_widgets_message: "Търсите забавни начини да покажете на своя
       клас как работи интернет, как криптографията запазва данни и други концепции?
       Вземете най-добрите интерактивни инструменти от нашата учебна програма Принципи
       на компютърните науки и използвайте инструментите по всяко време!"
     announcement_learn_more_button: "Научете повече"
     announcement_try_now_button: "Опитайте сега"
+    announcement_host_an_hour_button: "Стани домакин на Hour of Code"
+    announcement_watch_video_button: "Гледай видео"
     announcement_petition: "Като учител, Вие трябва да намерите подход, така че да
       дадете на всеки ученик във всяко училище възможност да изучава компютърни науки.
       Сега, това е времето, за да споделите мнение с вашите представители. Тази седмица,
@@ -424,9 +447,31 @@
       зад открито писмо, в което искат Конгресът на САЩ да финансира K-12 компютърно
       образование."
     announcement_petition_button: "Добавете името си"
+    announcement_go_beyond_button: Go beyond
     announcement_all: "Получавайте информация за нови функции и актуализации на нашия
       учителски блог. <a href='%{teacher_blog_url}' target='_blank'> Вижте последните
       съобщения.</a>"
+    announcement_hoc_launch: Хиляди преподаватели в над 180 страни ще преподават компютърни
+      науки по време на часът на кода този декември 5-11. Ние разчитаме на вас да
+      ни помогнете да достигнем до повече ученици от преди. <a href='%{signup_url}'
+      target='_blank'> Регистрирайте Вашето "час на кода" събитие</a> и помогнете
+      и на друг учител да научи, че всеки може да започне обучение по компютърни науки.
+    announcement_mc_launch: "Един от нашите най-популярни уроци сега има продължение!
+      Новият Minecraft дизайнер позволява да създадете свои правила в Minecraft света.
+      Можете да създаде напълно уникален Minecraft опит, а след това да го споделите
+      с приятели или да играете на телефоните си. Направете го с класа си за Hour
+      of Code."
+    announcement_how_code_studio: "Не е нужен опит, за да започнете да изучавате компютърни
+      науки в класната стая. Code.org предлага учебни програми, учебни планове, висококачествени
+      професионални обучителни програми и тонове страхотни инструменти за всички класове&mdash;
+      всичко необходимо, безплатно. Чудите се откъде да започнете? Изтеглете <a href='%{video_download_url}'>
+      това видео</a>!"
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "Съжалявам, но %{new_section_code} раздел не съществува. Моля,
       въведете код за друг раздел."
@@ -599,6 +644,10 @@
     minecraft:
       title: Minecraft
       body: "Изследвайте Minecraft света чрез код."
+    minecraft2016:
+      title: Minecraft
+      body: "Програмирай животни и други Minecraft същества в своя собствена версия
+        на Minecraft."
     unplugged:
       title: "Уроци без компютър"
       audience: "Възраст 6 +"
@@ -714,33 +763,47 @@
     sign_out: Ако не искате да предоставите информация за вашата възраст, може да
       <a href="%{url}"> излезете</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: "Актуализираните условия за ползване и поверителност"
+    intro_desc: "Обновихме нашите условия за ползване и поверителност, както е показано
+      по-долу. Промените са в действие от 24 август 2016 г.  Най-голямата промяна:
+      ние  <i>вече не съхраняваме имейл адреси на ученическите акаунти в Студиото
+      по кодиране.</i> Това е от значение за нас, и ние се надяваме това да подпомогне
+      сигурността на учениците в образованието по Cs. Ние ще изпратим Резюме на другите
+      промени по електронна поща."
+    intro_instructions: "Трябва да приемете тези условия за ученици на възраст под
+      13 във вашия клас, за да имат пълен достъп до всички най-нови функции в Студиото
+      по кодиране.  Когато се регистрира акаунт за ученик под 13, вие ще бъдете помолени
+      да потвърдите, че вашето училище има родителско съгласие за събиране на лична
+      информация на учениците за използването от училището на образователните програми
+      в Студиото по кодиране."
     tos: "Термини"
     privacy: "Защита на личните данни"
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: "Съобщение за поверителност"
+    accept_label: Съгласен съм с актуализираните <a href="%{tos_url}" target="_blank">
+      Условия за ползване</a> и <a href="%{privacy_url}" target="_blank"> Поверителност</a>
+    accept: "Приемам"
     print: "Печат"
-    later: Later
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    reminder_desc: Ние обновихме нашите <a href="%{tos_url}" target="_blank"> Условия
+      за ползване</a> и <a href="%{privacy_url}" target="_blank"> Политика за поверителност</a>.
+      Моля, прочетете внимателно преди да ги приемете. Обърнете внимание, че нашите
+      инструменти за преподаването JavaScript може да са недостъпни за вашите ученици
+      преди изрично приемане на променените условия.
+    review_terms: "Преглед на актуализираните условия"
+  race_interstitial:
+    title: "По желание: Помогнете ни подобрим многообразието от уроци по компютърни
+      науки"
+    message: "Моля да ни кажете вашата раса (проверка на всички, които се прилагат)"
+    races:
+    - white: "Бял"
+    - black: "Черен или афро-американец"
+    - hispanic: "Испанец или латино"
+    - asian: "Азиатец"
+    - hawaiian: "Хавайец или друг тихоокеански островитянин"
+    - american_indian: "Индианец/от Аляска"
+    - other: "Друго"
+    - opt_out: "Предпочитам да не отговоря"
+    submit: "Изпрати"
+    decline: "Затваряне"
   zendesk_too_young_message: Съжаляваме, но малки потребители не може да влизат в
     нашия сайт за поддръжка. Може да разглеждате <a href="http://support.code.org">
     support.code.org</a> без регистрация или попитайте вашия родител или учител да
@@ -871,7 +934,7 @@
       playlab_description: "Създайте история или направете игра с Театрална лаборатория!"
       playlab_title: "Ново приложение"
       primary_header: "Поздравления! Вие завършихте %{stageName}!"
-      projects_description: "Вижте отново един от Вашите проекти."
+      projects_description: "Вижте отново един от вашите проекти."
       projects_title: "Отваряне на проект"
       secondary_header: "Попитай учителя си какво да правиш"
   flex_category:
@@ -904,8 +967,48 @@
     starwars_blocks_name: "Междузвездни войни: Изграждане на галактика с код (блокове)"
     starwars_javascript_name: "Междузвездни войни: Изграждане на галактика с код (JavaScript)"
     download_message: "Изтегли %{app_name} за офлайн употреба (136MB)"
-    download_in_english: "Изтегляне на английски език:"
-    download_in_spanish: "Изтегляне на испански език:"
+    download_in_Albanian: "Изтегляне на албански:"
+    download_in_Arabic: "Изтегляне на арабски език:"
+    download_in_Azerbaijani: "Изтегляне на азербайджански:"
+    download_in_Basque: "Изтегляне на баски език:"
+    download_in_Bosnian: "Изтегляне на босненски:"
+    download_in_Bulgarian: "Изтегляне на български език:"
+    download_in_Catalan: "Изтегляне на каталонски:"
+    download_in_Chinese-Taiwan: "Изтегляне в китайски-Тайван:"
+    download_in_Chinese: "Изтегляне на китайски:"
+    download_in_Croatian: "Изтегляне на хърватски:"
+    download_in_Czech: "Изтегляне на чешки:"
+    download_in_Danish: "Изтегляне на датски:"
+    download_in_Dutch: "Изтегляне на холандски:"
+    download_in_English: "Изтегляне на английски език:"
+    download_in_Finnish: "Изтегляне на финландски:"
+    download_in_French: "Изтегляне на френски език:"
+    download_in_German: "Изтегляне на немски език:"
+    download_in_Greek: "Изтегляне на гръцки език:"
+    download_in_Hebrew: "Изтегляне на иврит:"
+    download_in_Hungarian: "Изтегляне на унгарски:"
+    download_in_Icelandic: "Изтегляне на исландски:"
+    download_in_Indonesian: "Изтегляне на индонезийски:"
+    download_in_Irish: "Изтегляне на ирландски:"
+    download_in_Italian: "Изтегляне на италиански език:"
+    download_in_Japanese: "Изтегляне на японски:"
+    download_in_Korean: "Изтегляне на корейски:"
+    download_in_Latvian: "Изтегляне на латвийски:"
+    download_in_Lithuanian: "Изтегляне на литовски:"
+    download_in_Norwegian: "Изтегляне на норвежки:"
+    download_in_Norwegian-Nynorsk: "Изтегляне в норвежки Nynorsk:"
+    download_in_Polish: "Изтегляне на полски език:"
+    download_in_Portuguese-Brazil: "Изтегляне на португалски-Бразилия:"
+    download_in_Portuguese: "Изтегляне на португалски език:"
+    download_in_Romanian: "Изтегляне на румънски език:"
+    download_in_Russian: "Изтегляне на руски:"
+    download_in_Serbian: "Изтегляне на сръбски:"
+    download_in_Slovenian: "Изтегляне на словенски:"
+    download_in_Spanish: "Изтегляне на испански език:"
+    download_in_Swedish: "Изтегляне на шведски език:"
+    download_in_Turkish: "Изтегляне на турски:"
+    download_in_Ukrainian: "Изтегляне на украински:"
+    download_in_Vietnamese: "Изтегляне на виетнамски:"
     windows: Windows
     mac: Mac OS X
   plc:
@@ -921,6 +1024,57 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
+  locked_stage: "Съдържанието на този етап не е видимо, защото този етап в момента
+    е заключен. Вашият учител може да отключи този етап, когато ще работите по него
+    или за да прегледате вашите отговори."
+  hidden_stage: "Вашият учител не е позволил достъпа до този етап. Моля, попитайте
+    учителя кой урок трябва започнете."
+  return_course_overview: "Прегледайте тази част"
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

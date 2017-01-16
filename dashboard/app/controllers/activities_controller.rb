@@ -24,15 +24,18 @@ class ActivitiesController < ApplicationController
       @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
       script_name = @script_level.script.name
     elsif params[:level_id]
-      # TODO: do we need a cache_find for Level like we have for ScriptLevel?
-      @level = Level.find(params[:level_id].to_i)
+      @level = Script.cache_find_level(params[:level_id].to_i)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
-    enabled = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
-    unless enabled
+    # Check a second switch if we passed the last level of the script.
+    # Keep this logic in sync with code-studio/reporting#sendReport on the client.
+    post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
+    post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
+    solved_final_level = solved && @script_level.try(:final_level?)
+    unless post_milestone || (post_final_milestone && solved_final_level)
       head 503
       return
     end
@@ -56,7 +59,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    if current_user && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
       user_level = UserLevel.find_by(user_id: current_user.id, level_id: @script_level.level.id, script_id: @script_level.script.id)
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
@@ -104,11 +107,15 @@ class ActivitiesController < ApplicationController
                                     new_level_completed: @new_level_completed,
                                     share_failure: share_failure)
 
-    slog(:tag => 'activity_finish',
-         :script_level_id => @script_level.try(:id),
-         :level_id => @level.id,
-         :user_agent => request.user_agent,
-         :locale => locale) if solved
+    if solved
+      slog(
+        tag: 'activity_finish',
+        script_level_id: @script_level.try(:id),
+        level_id: @level.id,
+        user_agent: request.user_agent,
+        locale: locale
+      )
+    end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)
@@ -142,9 +149,11 @@ class ActivitiesController < ApplicationController
         time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
         level_source_id: @level_source.try(:id)
     }
-    # Save the activity synchronously if the level might be saved to the gallery (for which
-    # the activity.id is required). This is true for levels auto-saved to the gallery, and for
-    # free play and "impressive" levels.
+
+    # Save the activity and user_level synchronously if the level might be saved
+    # to the gallery (for which the activity.id and user_level.id is required).
+    # This is true for levels auto-saved to the gallery, free play levels, and
+    # "impressive" levels.
     synchronous_save = solved &&
         (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
             @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
@@ -153,16 +162,27 @@ class ActivitiesController < ApplicationController
     else
       @activity = Activity.create_async!(attributes)
     end
-
     if @script_level
-      @new_level_completed = current_user.track_level_progress_async(
-        script_level: @script_level,
-        new_result: test_result,
-        submitted: params[:submitted] == "true",
-        level_source_id: @level_source.try(:id),
-        level: @level,
-        pairings: pairings
-      )
+      if synchronous_save
+        @new_level_completed = User.track_level_progress_sync(
+          user_id: current_user.id,
+          level_id: @level.id,
+          script_id: @script_level.script_id,
+          new_result: test_result,
+          submitted: params[:submitted] == 'true',
+          level_source_id: @level_source.try(:id),
+          pairing_user_ids: pairing_user_ids,
+        )
+      else
+        @new_level_completed = current_user.track_level_progress_async(
+          script_level: @script_level,
+          new_result: test_result,
+          submitted: params[:submitted] == "true",
+          level_source_id: @level_source.try(:id),
+          level: @level,
+          pairing_user_ids: pairing_user_ids
+        )
+      end
     end
 
     passed = Activity.passing?(test_result)
@@ -172,9 +192,16 @@ class ActivitiesController < ApplicationController
       User.where(id: current_user.id).update_all(total_lines: current_user.total_lines)
     end
 
-    # blockly sends us 'undefined', 'false', or 'true' so we have to check as a string value
+    # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
+    # string value.
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(user: current_user, activity: @activity, autosaved: true)
+      @gallery_activity = GalleryActivity.create!(
+        user: current_user,
+        activity: @activity,
+        user_level_id: @new_level_completed.try(:id),
+        level_source_id: @level_source_image.level_source_id,
+        autosaved: true
+      )
     end
   end
 

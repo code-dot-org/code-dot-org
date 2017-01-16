@@ -24,21 +24,17 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
 var tiles = require('./tiles');
 var codegen = require('../codegen');
 var api = require('./api');
-var redux = require ('../redux');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var MazeVisualizationColumn = require('./MazeVisualizationColumn');
-var setPageConstants = require('../redux/pageConstants').setPageConstants;
 var dom = require('../dom');
 var utils = require('../utils');
 var dropletUtils = require('../dropletUtils');
 var mazeUtils = require('./mazeUtils');
 var dropletConfig = require('./dropletConfig');
-var experiments = require('../experiments');
 
 var MazeMap = require('./mazeMap');
 
@@ -49,6 +45,11 @@ import Scrat from './scrat';
 import Farmer from './farmer';
 import Harvester from './harvester';
 import Planter from './planter';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -149,7 +150,7 @@ var timeoutList = require('../timeoutList');
 
 function drawMap() {
   var svg = document.getElementById('svgMaze');
-  var x, y, k, tile;
+  var x, y, tile;
 
   // Draw the outer square.
   var square = document.createElementNS(SVG_NS, 'rect');
@@ -359,8 +360,6 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
-
   if (mazeUtils.isBeeSkin(config.skinId)) {
     Maze.subtype = new Bee(Maze, studioApp, config);
   } else if (mazeUtils.isCollectorSkin(config.skinId)) {
@@ -460,12 +459,6 @@ Maze.init = function (config) {
     // base's studioApp.resetButtonClick will be called first
     var resetButton = document.getElementById('resetButton');
     dom.addClickTouchEvent(resetButton, Maze.resetButtonClick);
-
-    const instructionsInTopPane = studioApp.reduxStore.getState()
-      .pageConstants.instructionsInTopPane;
-    if (skin.hideInstructions && !instructionsInTopPane) {
-      document.getElementById("bubble").style.display = "none";
-    }
   };
 
   // Push initial level properties into the Redux store
@@ -626,8 +619,6 @@ Maze.reset = function (first) {
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
   }
-
-  var svg = document.getElementById('svgMaze');
 
   var finishIcon = document.getElementById('finish');
   if (finishIcon) {
@@ -984,15 +975,23 @@ Maze.execute = function (stepMode) {
 
   Maze.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-    app: 'maze',
-    level: level.id,
-    result: Maze.result === ResultType.SUCCESS,
-    testResult: Maze.testResults,
-    program: encodeURIComponent(program),
-    onComplete: Maze.onReportComplete
-  });
+  if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    // Contained levels post progress in a special way, and always pass
+    postContainedLevelAttempt(studioApp);
+    Maze.response = getContainedLevelResultInfo().feedback;
+    Maze.testResults = TestResults.ALL_PASS;
+    runAfterPostContainedLevel(Maze.onReportComplete);
+  } else {
+    // Report result to server.
+    studioApp.report({
+      app: 'maze',
+      level: level.id,
+      result: Maze.result === ResultType.SUCCESS,
+      testResult: Maze.testResults,
+      program: encodeURIComponent(program),
+      onComplete: Maze.onReportComplete
+    });
+  }
 
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.
@@ -1199,8 +1198,8 @@ function animateAction(action, spotlightBlocks, timePerStep) {
     case 'get_pumpkin':
       Maze.subtype.animateGetPumpkin();
       break;
-    case 'get_bean':
-      Maze.subtype.animateGetBean();
+    case 'get_lettuce':
+      Maze.subtype.animateGetLettuce();
       break;
     case 'plant':
       Maze.subtype.animatePlant();
@@ -1479,7 +1478,6 @@ Maze.scheduleFail = function (forward) {
 
     // Remove pegman
     if (!skin.nonDisappearingPegmanHittingObstacle) {
-      var svgMaze = document.getElementById('svgMaze');
       var pegmanIcon = document.getElementById('pegman');
 
       timeoutList.setTimeout(function () {

@@ -2,142 +2,145 @@ ka:
   errors:
     messages:
       not_saved: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'
-      too_young: This content has age restrictions in place and is not available for younger students.
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
+      too_young: 'ეს მასალა შეზღუდულია ასაკის მიხედვით და მიუწვდომელია მცირეწლოვანი მოსწავლეებისთვის.'
+      teacher_must_accept_terms: 'ამ შიგთავსზე მოქმედებს ასაკის შეზღუდვა და არ არის ხელმისაწვდომი უფრო პატარა მოსწავლეებისთვის. სთხოვეთ თქვენს მასწავლებელს, დაეთანხმოს განახლებულ მომსახურების პირობებს, იმისთვის, რომ მოგცეთ წვდომა შიგთავსზე. მასწავლებელი უნდა შევიდეს კოდის სტუდიაში და დააჭიროს ღილაკს "გადახედეთ განახლებულ პირობებს", რომელიც არის კოდის სტუდიის მთავარ გვერდზე, ზევით.'
+      pair_programmer: 'თქვენ ხართ წყვილში მოსწავლესთან, რომელსაც არ აქვს ამ შიგთავსთან წვდომა. იმისთვის, რომ ამ შიგთავსზე წვდომა მიიღოთ, გათიშეთ წყვილში პროგრამირება და ხელახლა სცადეთ.'
   activerecord:
     errors:
       messages:
-        blank: სავალდებულოა
+        blank: "სავალდებულოა"
     attributes:
       user:
-        name: სახელი სისტემაში
-        email: ელექტრონული ფოსტა
-        username: მომხმარებლის სახელი
-        password: პაროლი
-        password_confirmation: პაროლის დადასტურება
-        current_password: მიმდინარე პაროლი
-        locale: ენა
-        age: ასაკი
-        gender: სქესი
-        edit_header: ანგარიშის მონაცემების შესწორება
+        name: 'სახელი სისტემაში'
+        email: 'ელექტრონული ფოსტა'
+        username: 'მომხმარებლის სახელი'
+        password: 'პაროლი'
+        password_confirmation: 'პაროლის დადასტურება'
+        current_password: 'მიმდინარე პაროლი'
+        locale: 'ენა'
+        age: 'ასაკი'
+        gender: 'სქესი'
+        edit_header: 'ანგარიშის მონაცემების შესწორება'
         error:
           future: არ შეიძლება იყოს მომავალში
-  hello: ჰეი, სამყარო
-  welcome_back: 'კარგია, რომ დაბრუნდით, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  hello: "ჰეი, სამყარო"
+  welcome_back: "კარგია, რომ დაბრუნდით, %{name}"
+  your_professional_learning_plan: "თქვენი პროფესიონალური სასწავლო გეგმა"
+  see_your_learning_plan: "იხილეთ თქვენი სასწავლო გეგმა"
   submit: გაგზავნა
   unsubmit: ჩაბარების გაუქმება
   previous_page: წინა გვერდი
   next_page: შემდეგი გვერდი
   next_resource: შემდეგი რესურსი
   done_with_module: Done with this Learning Module
-  cancel: გაუქმება
-  okay: კარგი
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  cancel: "გაუქმება"
+  okay: "კარგი"
+  heading_x_of_y: "%{heading} (გვერდი %{x} %{y}-ის)"
   add_teacher_form:
     code:
       label: 'მასწავლებლის დამატება:'
-      placeholder: სექციის კოდი (ABCDEF)
-      instructions: 'გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6–ნიშნა და გამოიყურება ასე "ABCDEF".'
-    submit: მასწავლებლის დამატება
+      placeholder: "სექციის კოდი (ABCDEF)"
+      instructions: "გთხოვთ შეიყვანეთ კოდი, რომელიც მოგაწოდათ თქვენმა მასწავლებელმა. ის არის 6–ნიშნა და გამოიყურება ასე \"ABCDEF\"."
+    submit: 'მასწავლებლის დამატება'
   add_hint_form:
-    placeholder: თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ
-    submit: მინიშნების დამატება
-  appname: Code.org
-  stage: ეტაპი
-  stage_number: 'ეტაპი %{number}'
-  puzzle: თავსატეხი
-  trophies: ჯილდოები
-  courses: კურსები
-  unplugged_activity: აქტივობა უკომპიუტეროდ
-  of: მიეკუთვნება
-  more: მეტის ნახვა
-  less: ნაკლების ნახვა
-  beta: ბეტა-ვერსია
-  try_hoc: 'ნახეთ ჩვენი "კოდის ერთი საათი", გადადით აქ >> '
-  try_k8intro: 'გაეცანით ჩვენს  K-8 შესავალ კურს ინფორმატიკაში (15-25 საათი)'
-  k8intro: K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)
-  already_started: 'უკვე დაიწყეთ? გააგრძელეთ აქ >> '
+    placeholder: 'თუ შეიძლება, თქვენი მინიშნება შეიყვანეთ აქ'
+    submit: 'მინიშნების დამატება'
+  appname: "Code.org"
+  stage: "ეტაპი"
+  stage_number: "ეტაპი %{number}"
+  puzzle: "თავსატეხი"
+  trophies: "ჯილდოები"
+  courses: 'კურსები'
+  unplugged_activity: 'აქტივობა უკომპიუტეროდ'
+  of: "მიეკუთვნება"
+  more: "მეტის ნახვა"
+  less: "ნაკლების ნახვა"
+  beta: "ბეტა-ვერსია"
+  try_hoc: "ნახეთ ჩვენი \"კოდის ერთი საათი\", გადადით აქ >> "
+  try_k8intro: "გაეცანით ჩვენს  K-8 შესავალ კურს ინფორმატიკაში (15-25 საათი)"
+  k8intro: "K-8 შესავალი კურსი ინფორმატიკაში (15-25 საათი)"
+  already_started: "უკვე დაიწყეთ? გააგრძელეთ აქ >> "
   demos: 'ადმინი: ყველა დემო-ვერსია'
-  continue: გაგრძელება
-  prize: პრიზი
-  more_info: მეტი ინფორმაცია
+  continue: 'გაგრძელება'
+  prize: 'პრიზი'
+  more_info: 'მეტი ინფორმაცია'
   auth:
     sign_in_with: 'შესვლა %{provider}-ით'
-    signed_in: აი, შემოხვედით!
+    signed_in: 'აი, შემოხვედით!'
     signed_out: 'თქვენ გამოხვედით თქვენი ანგარიშიდან <a href="%{url}">Code.org-ზე</a>.'
     sign_out_of: 'შესასვლელად თქვენ გამოიყენეთ %{provider}. <a href="%{url}">დააჭირეთ აქ </a> %{provider}-დან გასასვლელად.'
-    already_signedup: უკვე დარეგისტრირებული ხართ?
-    notyet_signedup: ჯერ არ დარეგისტრირებულხართ?
+    already_signedup: 'უკვე დარეგისტრირებული ხართ?'
+    notyet_signedup: "ჯერ არ დარეგისტრირებულხართ?"
     google_oauth2: 'Google  ანგარიში'
-    twitter: Twitter
-    facebook: Facebook
+    twitter: 'Twitter'
+    facebook: 'Facebook'
     windowslive: 'Microsoft  ანგარიში'
-    forgot_password: დაგავიწყდათ თქვენი პაროლი?
-    need_confirmation: არ მოგსვლიათ დადასტურების ინსტრუქციები?
-    need_unlock: არ მოგსვლიათ განბლოკვის ინსტრუქციები?
+    forgot_password: 'დაგავიწყდათ თქვენი პაროლი?'
+    need_confirmation: "არ მოგსვლიათ დადასტურების ინსტრუქციები?"
+    need_unlock: "არ მოგსვლიათ განბლოკვის ინსტრუქციები?"
   signup_form:
     student_count: 'უკვე დარეგისტრირდა %{count} სტუდენტი.'
     teacher_count: 'უკვე დარეგისტრირდა %{count} მასწავლებელი.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    teacher_educator_guide: ნახეთ მასწავლებლის სახელმძღვანელო
-    title: Sign up for Code.org
-    school_name: სკოლის სახელი (არასავალდებულო)
-    school_address: სკოლის მისამართი (არასავალდებულო)
-    address_placeholder: მისამართი, ქალაქი, ინდექსი
-    gender: სქესი (არასავალდებულო)
-    birthday: დაბადების თარიღი (არასავალდებულო)
-    age: ასაკი
-    user_type: მასწავლებელი ხართ თუ მოსწავლე?
-    submit: რეგისტრაცია
-    teacher: მასწავლებელი ხართ?
-    valid_username: მისაწვდომია!
-    invalid_username: მომხმარებლის სახელი მინიმუმ 5 ნიშნისგან უნდა შედგებოდეს
-    taken_username: ეს სახელი უკვე დაკავებულია
-    valid_password: პაროლი დასაშვებია!
-    invalid_password: პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს
-    mismatch_password: თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა
-    student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
-    teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
-    additional_information: რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია.
-    user_type_label: ანგარიშის ტიპი
-    user_type_teacher: მასწავლებელი
-    user_type_student: მოსწავლე
-    field_is_required: სავალდებულოა
-    accept_terms: You must agree to create an account
+    overview: 'დარეგისტრირდით, რათა თვალი ადევნოთ თქვენს პროგრესს და მართოთ თქვენი საკლასო ოთახი. <a href="/">შეგიძლიათ, დაათვალიეროთ სხვადასხვა ეტაპები და თავსატეხევი</a> საკუთარი ანგარიშის გარეშე, მაგრამ პროგრესისა და პროექტების შესანახად დაგჭირდებათ დარეგისტრირება.'
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    teacher_educator_guide: 'ნახეთ მასწავლებლის სახელმძღვანელო'
+    title: "რეგისტრაცია Code.org-ზე"
+    school_name: 'სკოლის სახელი (არასავალდებულო)'
+    school_address: 'სკოლის მისამართი (არასავალდებულო)'
+    address_placeholder: 'მისამართი, ქალაქი, ინდექსი'
+    gender: 'სქესი (არასავალდებულო)'
+    birthday: 'დაბადების თარიღი (არასავალდებულო)'
+    age: 'ასაკი'
+    user_type: 'მასწავლებელი ხართ თუ მოსწავლე?'
+    submit: 'რეგისტრაცია'
+    teacher: 'მასწავლებელი ხართ?'
+    valid_username: "მისაწვდომია!"
+    invalid_username: "მომხმარებლის სახელი მინიმუმ 5 ნიშნისგან უნდა შედგებოდეს"
+    taken_username: "ეს სახელი უკვე დაკავებულია"
+    valid_password: "პაროლი დასაშვებია!"
+    invalid_password: "პაროლი მინიმუმ 6 ნიშნისგან უნდა შედგებოდეს"
+    mismatch_password: "თქვენ მიერ შეყვანილი ორი პაროლი არ ემთხვევა"
+    student_terms: "მე ვეთანხმები Code.org-ის <a href='http://code.org/tos'>მომსახურების პირობებს</a>. თუ მე 13 წელზე ნაკლები ასაკის ვარ, ამ ფორმის გამოგზავნით ვადასტურებ, რომ მაქვს ჩემი მშობლის ან მეურვის ნებართვა Code.org-ის მომსახურების გამოყენებაზე.<br/><br/>ელექტრონული ფოსტის მისამართები არ არის შენახული ისე, რომ საშუალება გვქონდეს, დავეკონტაქტოთ მოსწავლეებს. მოსწავლე არასდროს მიიღებს წერილს Code.org-ისგან, გარდა პაროლის აღდგენის შემთხვევისა. მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
+    teacher_terms: "მე ვეთანხმები Code.org-ის მომსახურების პირობებს. კონფიდენციალურობასთან დაკავშირებით მეტი ინფორმაციისთვის ნახეთ ჩვენი <a href='http://code.org/privacy'>კონფიდენციალურობის პოლიტიკა</a>."
+    additional_information: "რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია."
+    user_type_label: "ანგარიშის ტიპი"
+    user_type_teacher: "მასწავლებელი"
+    user_type_student: "მოსწავლე"
+    field_is_required: "სავალდებულოა"
+    accept_terms: "ანგარიშის შესაქმნელად უნდა დაეთანხმოთ"
   signin_form:
-    title: უკვე გაქვთ ანგარიში? შემოდით
-    login: ელექტრონული ფოსტა
-    password: პაროლი
-    remember: დამიმახსოვრე
-    submit: შესვლა
+    title: 'უკვე გაქვთ ანგარიში? შემოდით'
+    login: 'ელექტრონული ფოსტა'
+    password: 'პაროლი'
+    remember: 'დამიმახსოვრე'
+    submit: 'შესვლა'
   signin:
-    try_heading: გინდათ, სცადოთ კოდის წერა რეგისტრაციის გარეშე?
+    try_heading: 'გინდათ, სცადოთ კოდის წერა რეგისტრაციის გარეშე?'
     try_hoc: 'ჯერ "კოდის ერთი საათი" სცადეთ'
-    try_20hours: ნახეთ ჩვენი ოცსაათიანი შესავალი ინფორმატიკაში
+    try_20hours: 'ნახეთ ჩვენი ოცსაათიანი შესავალი ინფორმატიკაში'
   signinsection:
     welcome: 'მოგესალმებით სექციაში %{section_name}'
-    name: აირჩიეთ თქვენი სახელი
-    picture: იპოვეთ თქვენი საიდუმლო სურათი
-    words: ახლა შეიყვანეთ თქვენი საიდუმლო სიტყვები
-    login: შესვლა
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    name: 'აირჩიეთ თქვენი სახელი'
+    picture: 'იპოვეთ თქვენი საიდუმლო სურათი'
+    words: 'ახლა შეიყვანეთ თქვენი საიდუმლო სიტყვები'
+    login: 'შესვლა'
+    invalid_login: 'არასწორი შესვლა, გთხოვთ, ხელახლა სცადეთ'
+    pair_programming: 'კონპიუტერთან მყავს პარტნიორი'
   password:
     reset_form:
-      title: დაგავიწყდათ თქვენი პაროლი?
-      instructions: "Enter your email address below and we'll send you password reset instructions."
-      email: ელ.ფოსტის მისამართი
-      submit: გაგზავნა
+      title: 'დაგავიწყდათ თქვენი პაროლი?'
+      instructions: "შეიყვანეთ თქვენი ელექტრონული ფოსტის მისამართი დაბლა და ჩვენ გამოგიგზავნით პაროლის ხელახლა დაყენების ინსტრუქციებს."
+      email: 'ელ.ფოსტის მისამართი'
+      submit: 'გაგზავნა'
     change_form:
-      title: პაროლის შეცვლა
-      new_password: ახალი პაროლი
-      confirm_password: ახალი პაროლის დადასტურება
-      submit: პაროლის შეცვლა
+      title: 'პაროლის შეცვლა'
+      new_password: 'ახალი პაროლი'
+      confirm_password: 'ახალი პაროლის დადასტურება'
+      submit: 'პაროლის შეცვლა'
   welcome_email:
-    subject: შეურთდით ჩემს კლასს ( Code.org-ზე)
+    subject: 'შეურთდით ჩემს კლასს ( Code.org-ზე)'
     body: |
       გადადით ქვემოთ მოცემულ ბმულზე და დარეგისტრირდით პროგრამირების კურსებზე Code.org-ზე (მე ვიქნები თქვენი "მასწავლებელი"):
       
@@ -147,65 +150,65 @@ ka:
       
       %{name}
   follower:
-    invite_sent: მოწვევა გაგზავნილია
+    invite_sent: 'მოწვევა გაგზავნილია'
     added_teacher: '%{name} გიმატებთ, როგორც მასწავლებელს'
-    registered: 'თქვენ დარეგისტრირდით სექციაში %{section_name}.'
+    registered: "თქვენ დარეგისტრირდით სექციაში %{section_name}."
     error:
-      signed_in: თუ შეიძლება გაგრძელებამდე გამოდით თქვენი ანგარიშიდან
+      signed_in: 'თუ შეიძლება გაგრძელებამდე გამოდით თქვენი ანგარიშიდან'
       username_not_found: 'მომხმარებლის სახელი %{username} არ მოიძებნა'
       username_in_use: '%{username} უკვე დაკავებულია, აირჩიეთ სხვა'
-      no_teacher: 'ამ მონაცემებით "%{teacher_email_or_code}" ვერავინ ვერ მოიძებნა. უთხარით, რომ გაიარონ რეგისტრაცია და შემდეგ თავიდან სცადეთ დამატება'
-      section_not_found: 'სექცია კოდით "%{section_code}" ვერ მოიძებნა.'
-      blank_code: შეიყვანეთ სექციის კოდი
-      cant_join_own_section: ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით.
+      no_teacher: "ამ მონაცემებით \"%{teacher_email_or_code}\" ვერავინ ვერ მოიძებნა. უთხარით, რომ გაიარონ რეგისტრაცია და შემდეგ თავიდან სცადეთ დამატება"
+      section_not_found: "სექცია კოდით \"%{section_code}\" ვერ მოიძებნა."
+      blank_code: "შეიყვანეთ სექციის კოდი"
+      cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
     mail:
       invite_student:
-        subject: 'შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!'
+        subject: "შეურთდით %{teacher_name}-ს კლასს  Code.org-ზე!"
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
   reports:
     error:
-      access_denied: თქვენ არ გაქვთ წვდომა ამ მომხმარებლის სტატისტიკაზე
+      access_denied: "თქვენ არ გაქვთ წვდომა ამ მომხმარებლის სტატისტიკაზე"
   redeem_prizes:
     title: 'პრიზების მიღება: %{name}'
     provider: 'მომწოდებელი:'
     code: 'კოდი:'
     redeem_header: 'განაღდება:'
-    donorschoose_register: დარეგისტრირდით DonorsChoose.org-ზე, როგორც მასწავლებელი
-    donorschoose_project: პროექტის გამოქვეყნება
-    donorschoose_how_to: როგორ შეიძლება თქვენი კოდის გამოყენება
-    success: თქვენი პრიზი წარმატებითაა განაღდებული, კოდი იხილეთ ქვემოთ.
-    error: თქვენი პრიზის განაღდება შუეძლებელია, სცადეთ კიდევ ერთხელ.
-    error_us_only: ეს პრიზი მხოლოდ აშშ-ის მომხმარებლებისთვის არის მისაწვდომი.
-    error_not_earned: ეს პრიზი ჯერ არ მოგიპოვებიათ.
-    error_already_redeemed: ეს პრიზი უკვე განაღდებულია.
-    no_prizes_available: ვწუხვართ, მაგრამ ახლა არ გვაქვს პრიზები.
-    teacher_info_required: 'პრიზის მისაღებად მასწავლებელმა სკოლა და მისამართი უნდა დაასახელოს:'
-    teacher_email_required: 'პრიზის მისაღებად მასწავლებელს ელ.ფოსტის დადასტურებული მისამართი სჭირდება:'
+    donorschoose_register: 'დარეგისტრირდით DonorsChoose.org-ზე, როგორც მასწავლებელი'
+    donorschoose_project: 'პროექტის გამოქვეყნება'
+    donorschoose_how_to: 'როგორ შეიძლება თქვენი კოდის გამოყენება'
+    success: 'თქვენი პრიზი წარმატებითაა განაღდებული, კოდი იხილეთ ქვემოთ.'
+    error: 'თქვენი პრიზის განაღდება შუეძლებელია, სცადეთ კიდევ ერთხელ.'
+    error_us_only: 'ეს პრიზი მხოლოდ აშშ-ის მომხმარებლებისთვის არის მისაწვდომი.'
+    error_not_earned: 'ეს პრიზი ჯერ არ მოგიპოვებიათ.'
+    error_already_redeemed: 'ეს პრიზი უკვე განაღდებულია.'
+    no_prizes_available: "ვწუხვართ, მაგრამ ახლა არ გვაქვს პრიზები."
+    teacher_info_required: "პრიზის მისაღებად მასწავლებელმა სკოლა და მისამართი უნდა დაასახელოს:"
+    teacher_email_required: "პრიზის მისაღებად მასწავლებელს ელ.ფოსტის დადასტურებული მისამართი სჭირდება:"
     confirm:
-      title: დაადასტურეთ
-      "no": არა
-      "yes": დიახ
+      title: 'დაადასტურეთ'
+      'no': 'არა'
+      'yes': 'დიახ'
       msg: 'დარწმუნებული ხართ, რომ გინდათ %{prize_name} პრიზის განაღდება?'
       msg_student: 'მინიშნება: მხოლოდ ერთი ტიპის პრიზის არჩევა შეგიძლიათ.'
-      msg_publicschool: თუ შეიძლება, დაადასტურეთ, რომ აშშ-ს საჯარო სკოლის მასწავლებელი ხართ.
-      msg_visit_website: ეწვიეთ ვებ-საიტს
+      msg_publicschool: 'თუ შეიძლება, დაადასტურეთ, რომ აშშ-ს საჯარო სკოლის მასწავლებელი ხართ.'
+      msg_visit_website: 'ეწვიეთ ვებ-საიტს'
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB Dropbox Space-ზე
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: '$10 iTunes Gift Card'
+      donors_choose: 'DonorsChoose.org $750 credit'
+      donors_choose_bonus: 'DonorsChoose.org $250 credit'
+      dropbox: '10GB Dropbox Space-ზე'
+      valve: 'Portal 2 (PC or Mac game download)'
+      ea_bejeweled: 'Bejeweled 3 (PC game download)'
+      ea_fifa: 'FIFA Soccer 13 (PC game download)'
+      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
+      ea_pvz: 'Plants vs. Zombies (PC game download)'
+      skype: '$10 Skype credit'
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: თქვენ მოიგეთ პრიზი! (მხოლოდ აშშ-ს მოსწავლეებისთვის)
-      not_earned_title: დაასრულეთ ტუტორიალი და მიიღეთ ჯილდო (მხოლოდ აშშ-ს მოსწავლეებისთვის)
+      earned: 'თქვენ მოიგეთ პრიზი! (მხოლოდ აშშ-ს მოსწავლეებისთვის)'
+      not_earned_title: 'დაასრულეთ ტუტორიალი და მიიღეთ ჯილდო (მხოლოდ აშშ-ს მოსწავლეებისთვის)'
       not_earned: 'ისწავლეთ პროგრამირების საფუძვლები, დააგორევეთ %{num_trophies}-ივე ჯილდო და მიიღეთ ნამდვილი პრიზები. შეგიძლიათ აირჩიოთ 10GB Dropbox space-ზე,  $10 Skype ანგარიშზე და თამაშების უფასო გადმოწერა. მინიშნება: ეს შეთავაზება ძალაშია მხოლოდ აშშ-ს მოსწავლეებისთვის და მხოლოდ პრიზების ამოწურვამდე.'
       teacher:
         earned: '15-მა ან მეტმა სტუდენტმა დააგროვა %{num_trophies}-ვე ჯილდო. თქვენ მოიგეთ მასწვლებლის პრიზი! (მხოლოდ აშშ-ის მასწავლებლებისთვს)'
@@ -217,375 +220,407 @@ ka:
           not_earned: 'თუ იმ მოსწავლეებიდან, ვინც %{num_trophies}-ვე ჯილდო მოიპოვა, 7 მაინც იქნება გოგო, თქვენ მიიღებთ დამატებით 250 დოლარს <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> -ის კრედიტებში. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>-ის კრედიტების გამოყენება შეუძლით მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებს.'
   crud:
     new_model: 'ახალი %{model}'
-    show: ჩვენება
-    edit: ჩასწორება
+    show: 'ჩვენება'
+    edit: 'ჩასწორება'
     edit_model: 'ჩაასწორეთ %{model}'
-    update: განახლება
-    destroy: განადგურება
-    back: უკან
-    confirm: დარწმუნებული ხართ?
+    update: 'განახლება'
+    destroy: 'განადგურება'
+    back: 'უკან'
+    confirm: 'დარწმუნებული ხართ?'
     created: '%{model} წარმატებით შეიქმნა.'
     updated: '%{model} წარმატებით განახლდა.'
     destroyed: '%{model} წარმატებით წაიშალა.'
     access_denied: 'თქვენ არ გაქვთ წვდომა ამ %{model}-ზე.'
   nav:
     header:
-      finished_hoc: 'მე დავასრულე ჩემი "კოდის ერთი საათი"'
-      sign_in_to_save: დარეგისტრირება და პროგრესის შენახვა
+      finished_hoc: "მე დავასრულე ჩემი \"კოდის ერთი საათი\""
+      sign_in_to_save: 'დარეგისტრირება და პროგრესის შენახვა'
       free_play:
-        playlab: აპლიკაციის შექმნა თამაშების ლაბორატორიაში
-        artist: დახატეთ რამე
-        calculate: Calculate something
-        applab: აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში
+        playlab: 'აპლიკაციის შექმნა თამაშების ლაბორატორიაში'
+        artist: 'დახატეთ რამე'
+        calculate: 'Calculate something'
+        applab: 'აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში'
     user:
-      classroom: მასწავლებლის მთავარი გვერდი
-      district_dashboard: განყოფილების მართვის პანელი
+      classroom: 'მასწავლებლის მთავარი გვერდი'
+      district_dashboard: 'განყოფილების მართვის პანელი'
       label: 'გამარჯობა %{username}'
-      stats: კოდის სტუდია
-      settings: ჩემი ანგარიში
-      prizes: პრიზები
-      logout: გასვლა
-      signin: შესვლა
-      signup: Create an account
-      already_registered: უკვე გაქვთ ანგარიში?
-      pair_programming: პროგრამირება წყვილებში
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      stats: 'კოდის სტუდია'
+      settings: 'ჩემი ანგარიში'
+      prizes: 'პრიზები'
+      logout: 'გასვლა'
+      signin: 'შესვლა'
+      signup: 'ანგარიშის შექმნა'
+      already_registered: 'უკვე გაქვთ ანგარიში?'
+      pair_programming: 'პროგრამირება წყვილებში'
+      team: 'გუნდი'
+      driver: 'მძღოლი'
+      navigator: 'წამყვანი'
     popup:
-      progress_for_user: '%{name}-ს პროგრესი'
-      progress: თქვენი პროგრესი
+      progress_for_user: "%{name}-ს პროგრესი"
+      progress: 'თქვენი პროგრესი'
       lines: 'სულ კოდის ხაზი: %{lines}'
-      close: დახურვა
-      mastery: ძირითადი ცნებები
-      puzzle_map: ეტაპები
+      close: 'დახურვა'
+      mastery: 'ძირითადი ცნებები'
+      puzzle_map: 'ეტაპები'
       prizes: 'დააგროვეთ %{total_trophies} ჯილდო და მოიგეთ პრიზები!'
       prize_earned: '%{total_trophies}–ივე ჯილდო დაგოროვებულია. პრიზი თქვენია!'
-      prize_us_only: (მხოლოდ აშშ-ის სტუდენტებისთვის)
-      prizes_link: მეტი ინფორმაცია
+      prize_us_only: '(მხოლოდ აშშ-ის სტუდენტებისთვის)'
+      prizes_link: 'მეტი ინფორმაცია'
   teacher:
     answer: პასუხი
     for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'
       other: 'თქვენი მასწავლებლები:'
-    remove: (მასწავლებლის წაშლა)
+    remove: '(მასწავლებლის წაშლა)'
     confirm:
-      remove: დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?
+      remove: 'დარწმუნებული ხართ, რომ ამ მასწავლებლის წაშლა გინდათ?'
     students:
-      dashboard: მასწავლებლის მართვის პანელზე გადასვლა
-    user_not_found: მასწავლებელი ვერ მოიძებნა.
+      dashboard: 'მასწავლებლის მართვის პანელზე გადასვლა'
+    user_not_found: 'მასწავლებელი ვერ მოიძებნა.'
     student_teacher_disassociated: 'თქვენ წაშალეთ %{teacher_name} მასწავლებელი.'
     panel:
-      answer_viewer: Teacher Panel
-      student: მოსწავლე
-      viewing_solution: ამონახსნის ნახვა
-      try_it_yourself: სცადეთ დამოუკიდებლად
-      section: სექცია
-      example: მაგალითის ამოხსნა
+      answer_viewer: 'მასწავლებელთა სია'
+      student: 'მოსწავლე'
+      viewing_solution: 'ამონახსნის ნახვა'
+      try_it_yourself: 'სცადეთ დამოუკიდებლად'
+      section: 'სექცია'
+      example: 'მაგალითის ამოხსნა'
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
       submitted_on: 'ჩაბარების თარიღი:'
-      unsubmit: ჩაბარების გაუქმება
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
+      unsubmit: 'ჩაბარების გაუქმება'
+      worked_with: 'იმუშავა'
+      update_lock_settings: 'დახურვის პარამეტრები განაახლეთ აქ.'
+      clear_response: 'Clear response'
   user:
     email_confirm_needed: 'ელ.ფოსტა არ არის დადასტურებული:'
     email_confirm_needed_required: 'თქვენი ელ. ფოსტა %{email} არ არის დადასტურებული:'
-    email_confirm_wrong_email: (ელ. ფოსტის მისამართი არასწორია?)
-    email_resend_confirm: დადასტურების ინსტრუქციების თავიდან გაგზავნა
-    new_password_hint: (დატოვეთ ცარიელი, თუ შეცვლა არ გინდათ)
-    current_password_hint: (ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)
-    delete: ანგარიშის წაშლა
-    delete_text: ქვემოთ ღილაკზე დაჭერა წაშლის თქვენს ანგარიშს.
+    email_confirm_wrong_email: '(ელ. ფოსტის მისამართი არასწორია?)'
+    email_resend_confirm: 'დადასტურების ინსტრუქციების თავიდან გაგზავნა'
+    new_password_hint: "(დატოვეთ ცარიელი, თუ შეცვლა არ გინდათ)"
+    current_password_hint: '(ცვლილებების შესანახად შეიყვანეთ თქვენი მიმდინარე პაროლი)'
+    delete: 'ანგარიშის წაშლა'
+    delete_text: "ქვემოთ ღილაკზე დაჭერა წაშლის თქვენს ანგარიშს."
     delete_text_teacher_note: 'გაითვალისწინეთ: თქვენი ანგარიშის წაშლა არ წაშლის თქვენი მოსწავლეების ანგარიშებს.'
-    delete_confirm: დარწმუნებული ხართ, რომ თქვენი ანგარიშის წაშლა გინდათ?
+    delete_confirm: 'დარწმუნებული ხართ, რომ თქვენი ანგარიშის წაშლა გინდათ?'
+    deleted_user: 'deleted user'
   user_level:
-    completed: დასრულებულია
-    tried: უკვე ნაცადია
+    completed: 'დასრულებულია'
+    tried: 'უკვე ნაცადია'
   home:
-    title: კოდის სტუდია
-    description: კოდის სტუდიაში ინახება Code.org-ის მიერ შექმნილი ონლაინ-კურსები
-    lines_of_code: 'მოსწავლეების მიერ დაწერილია კოდის %{lines_count}  ხაზი'
-    lines_of_code_linebreak: '%{students_count} მილიონი მოსწავლის მიერ<br/> დაწერილია კოდის %{lines_count} ხაზი'
-    all_courses: მიმოხილვა კურსებისა 1,2 და 3
-    lesson_plans: გაკვეთილების გეგმები
-    signin_message: 'უკვე გაქვთ ანგარიში? %{link}'
-    student_reg_link: მოსწავლის რეგისტრაცია
-    teacher_reg_link: მასწავლებლის რეგისტრაცია
+    title: "კოდის სტუდია"
+    description: 'კოდის სტუდიაში ინახება Code.org-ის მიერ შექმნილი ონლაინ-კურსები'
+    lines_of_code: "მოსწავლეების მიერ დაწერილია კოდის %{lines_count}  ხაზი"
+    lines_of_code_linebreak: "%{students_count} მილიონი მოსწავლის მიერ<br/> დაწერილია კოდის %{lines_count} ხაზი"
+    all_courses: "მიმოხილვა კურსებისა 1,2 და 3"
+    lesson_plans: "გაკვეთილების გეგმები"
+    signin_message: "უკვე გაქვთ ანგარიში? %{link}"
+    student_reg_link: 'მოსწავლის რეგისტრაცია'
+    teacher_reg_link: 'მასწავლებლის რეგისტრაცია'
     signin_directions: 'პროგრესისთვის თვალყურის სადევნად, გამოიყენეთ თქვენი ანგარიში.<br/> მასწავლებლებს შეუძლიათ აკონტროლონ მთელი კლასი.'
     teacher_dashboard: ნახეთ პროგრესის მართვის პანელი
-    teacher_student_count_one: 'თქვენ გყავთ %{count} მოსწავლე.'
-    teacher_student_count: 'თქვენ გყავთ %{count} მოსწავლე.'
-    teacher_averages: 'საშუალოდ  "ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან თქვენმა მოსწავლეებმა მოიპოვეს %{trophy_average}.'
-    teacher_print_certificates: ამოუბეჭდეთ სერტიფიკატები იმ მოსწავლეებს, რომლებმაც დაასრულეს ეს კურსი
+    teacher_student_count_one: თქვენ გყავთ %{count} მოსწავლე.
+    teacher_student_count: თქვენ გყავთ %{count} მოსწავლე.
+    teacher_averages: საშუალოდ  "ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან თქვენმა მოსწავლეებმა მოიპოვეს %{trophy_average}.
+    teacher_print_certificates: 'ამოუბეჭდეთ სერტიფიკატები იმ მოსწავლეებს, რომლებმაც დაასრულეს ეს კურსი'
     teacher_read_blog: ჩვენი ახალი ამბებისა და მასალის განახლების შესახებს წაიკითხეთ ბლოგში Educator
     classroom: თქვენი საკლასო ოთახი
     student_progress: თქვენი სასწავლო პროცესი
     student_stats: '"ძირითადი ცნებების გამოწვევის" %{trophy_max} ჯილდოდან თქვენ მოიპოვეთ %{trophy_count}.'
     student_left_off: 'სად გაჩერდით:'
-    student_finished: 'თქვენ დაასრულეთ ყველა ტუტორიალი. აირჩიეთ სხვა კლასი აქ %{online_link} ან აქ %{local_school_link}.'
+    student_finished: თქვენ დაასრულეთ ყველა ტუტორიალი. აირჩიეთ სხვა კლასი აქ %{online_link} ან აქ %{local_school_link}.
     local_school: ადგილობრივი სკოლა
     online: ონლაინ
     see_details: დეტალების ნახვა
     view_course: კურსის ნახვა
     prize_info: პრიზები მონაწილეობისთვის ( მხოლოდ აშშ-ის საჯარო სკოლების მასწავლებლებისთვის) 1,000 დოლარამდე თით კლასისთვის.
     tryfirst: 'ან, შეგიძლიათ ჯერ სცადოთ და მოგვიანებით დარეგისტრირდეთ:'
-    trynow: სცადეთ ახლა
-    add_hint_help: დაგვეხმარეთ Code.org-ის ტუტორიალებისთვის სასარგებლო მინიშნებების დამატებაში
-    20hour_overview: ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად ცნებებს გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი მეშვეობით სწავლა ნებისმიერ ასაკშია სახალისო.
-    test_videos_help: გატესტეთ ჩვენი ახალი ვიდეო-პლეიერი თქვენს სკოლაში
-    try_beta_courses: სიახლე! სცადეთ ჩვენი ბეტა-კურსები K-5 მოსწავლეებისთვის
-    use_as_teacher: გამოიყენეთ ეს საიტი, როგორც მასწვლებელმა
-    heading_hoc2014: '<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
-    heading_elementary: '<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>'
-    heading_apps: '<h2>გასართობი</h2><h1>ყველასთვის</h1>'
-    heading_tools: '<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>'
-    heading_legacy: '<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>'
+    trynow: 'სცადეთ ახლა'
+    add_hint_help: 'დაგვეხმარეთ Code.org-ის ტუტორიალებისთვის სასარგებლო მინიშნებების დამატებაში'
+    20hour_overview: 'ეს ოცსაათიანი კურსი ინფორმატიკისა და პროგრამირების ძირითად ცნებებს გაგაცნობთ. იგი შექმნილია K-8 კლასებში გამოსაყენებლად, თუმცა მისი მეშვეობით სწავლა ნებისმიერ ასაკშია სახალისო.'
+    test_videos_help: 'გატესტეთ ჩვენი ახალი ვიდეო-პლეიერი თქვენს სკოლაში'
+    try_beta_courses: 'სიახლე! სცადეთ ჩვენი ბეტა-კურსები K-5 მოსწავლეებისთვის'
+    use_as_teacher: 'გამოიყენეთ ეს საიტი, როგორც მასწვლებელმა'
+    heading_hoc2014: "<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
+    heading_elementary: "<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>"
+    heading_apps: "<h2>გასართობი</h2><h1>ყველასთვის</h1>"
+    heading_tools: "<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>"
+    heading_legacy: "<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
     your_gallery: გალერეა
-    no_primary_course: ნახეთ კურსი კოდის სტუდიაში
-    choose_next_course: სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი
-    print_certificate: სერტიფიკატის ამობეჭდვა
-    announcement_title: განცხადებები
-    announcement_message_fall2016_features: |-
-      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: გაიგეთ მეტი
-    announcement_try_now_button: სცადეთ ახლა
-    announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: დაამატე შენი სახელი
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    no_primary_course: "ნახეთ კურსი კოდის სტუდიაში"
+    choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
+    print_certificate: "სერტიფიკატის ამობეჭდვა"
+    announcement_title: "განცხადებები"
+    announcement_message_fall2016_features: "ზაფხულის განმავლობაში თქვენი უკუკავშირის საშუალებით ახალი ფუნქციები შევქმენით. ახლა შეგიძლიათ <a href=\"%{pp_url}\" target=\"_blank\">რამოდენიმე მოსწავლის პროგრესი შეამოწმოთ</a> იმ შემთხვევაშიც კი, თუ ისინი ერთი მოწყობილობით სარგებლობენ. შეგიძლიათ გამოიყენოთ <a href=\"%{csp_widgets_url}\" target=\"_blank\">ინტერაქტიული ინსტრუმენტები </a> კომპიუტერული მეცნიერების პრინციპების კურსიდან <i>ნებისმიერ</i> კლასში. თქვენს მოსწავლეებს შეუძლიათ <a href=\"%{unused_code_url}\" target=\"_blank\">შეინახონ გამოუყენებელი კოდი</a> თავიანთ სამუშაო სივრცეში სამომავლო ექსპერიმენტებისთვის! ნახეთ ყველა ახალი ფუნქცია და გაგვაგებინეთ თქვენი აზრი."
+    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
+    announcement_learn_more_button: "გაიგეთ მეტი"
+    announcement_try_now_button: "სცადეთ ახლა"
+    announcement_host_an_hour_button: "Host an Hour"
+    announcement_watch_video_button: "Watch video"
+    announcement_petition: "როგორც მასწავლებელი, თქვენ მიუძღვებით მოძრაობას, რათა ყველა სკოლის ყველა მოსწავლეს მიეცეს კომპიუტერული მეცნიერების სწავლის საშუალება. ახლა დროა, თქვენს წარმომადგენლებს შეეხმიანოთ. ამ კვირაში, საგანმანათლებლო ლიდერები, 28 გუბერნატორი და ამერიკის უდიდესი კომპანიების აღმასრულებელი დირექტორები გაერთიანდნენ ღია წერილში, რომლითაც ა.შ.შ-ს კონგრესს მიმართეს, რომ დააფინანსოს K-12 კომპიუტერული მეცნიერების სწავლება."
+    announcement_petition_button: "დაამატეთ თქვენი სახელი"
+    announcement_go_beyond_button: "Go beyond"
+    announcement_all: "მიიღეთ უახლესი ინფორმაცია ახალი მახასიათებლებითა და მასწავლებლის განახლებადი ბლოგით. <a href='%{teacher_blog_url}' target='_blank'>იხილეთ წინა განცხადებები.</a>"
+    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
+    section_code_not_entered: "გთხოვთ წარმოადგინოით current_section_code."
+    section_code_cant_be_current_section: "ახლანდელი სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
+    current_section_dne: "სამწუხაროდ, სექცია %{current_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
+    students_not_yours: "თქვენ არ შეგიძლიათ მოსწავლეების გადაყვანა იმ სექციიდან, რომელიც თქვენ არ გეკუთვნით."
+    stay_enrolled_not_entered: "გთხოვთ, წარმოადგინოთ stay_enrolled_in_current_section."
+    student_ids_not_entered: "გთხოვთ, წარმოადგინოთ student_ids."
+    student_not_found: "ერთი ან მეტი მოსწავლე ვერ მოიძებნა."
+    all_students_must_be_in_current_section: "ყველა სტუდენტი ამჟამად უნდა ირიცხებოდეს თქვენს სექციაში."
+    already_enrolled_in_new_section: "თქვენ არ შეგიძლიათ ამ სტუდენტების გადაადგილება, რადგან ამ მასწავლებელს უკვე ჰყავს ისინი სხვა სექციაში."
   share:
-    title: ისწავლეთ კოდის სტუდიაში
-    description: ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით.
-    try_hour_of_code: სცადეთ კოდის ერთი საათი!
+    title: "ისწავლეთ კოდის სტუდიაში"
+    description: "ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით."
+    try_hour_of_code: 'სცადეთ კოდის ერთი საათი!'
   gender:
-    male: მამრობითი
-    female: მდედრობითი
-    none: პასუხისგან თავის შეკავება
+    male: 'მამრობითი'
+    female: 'მდედრობითი'
+    none: 'პასუხისგან თავის შეკავება'
   user_type:
-    student: მოსწავლე
-    teacher: მასწავლებელი
+    student: 'მოსწავლე'
+    teacher: 'მასწავლებელი'
   footer:
     thank_you: 'ჩვენ მადლობას ვუხდით ჩვენს<a href="https://code.org/about/donors">დონორებს</a>, <a href="https://code.org/about/partners">პარტნიორებს</a>, our <a href="https://code.org/about/team">გავრცობილ ჯგუფს</a>, ვიდეოს გადამღებ ჯგუფსა და <a href="https://code.org/about/advisors">მრჩევლებს განათლების დარგში</a> კოდის სტუდიის შექმნაში დახმარებისთვის.'
     help_from_html: 'ამ ტუტორიალის შექმნაში გვეხმარებოდნენ  Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
-    help_from_html_old: ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.
+    help_from_html_old: 'ამ რესურსების შექმნაში გვეხმარებოდნენ Google, Microsoft, Facebook, დაTwitter-ის პროგრამისტები.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია.<br /> Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. <br/>Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია.<br />The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
-    code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
-    powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+    code_from_html: 'Code.org იყენებს p5.play, რომელიც ლიცენზირებულია აქ: <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
+    powered_by_aws: 'შექმნილია Amazon Web Services დახმარებით'
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
-    copyright: საავტორო უფლება
-    more: მეტი
-    feedback: უკუკავშირი
-    translate: ვთარგმნოთ Code.org თქვენს ენაზე
-    support: ტექ. მხარდაჭერა
-    support_url: http://support.code.org
-    tos_short: პირობები
-    tos: მომსახურების პირობები
-    privacy: კონფიდენციალურობის პოლიტიკა
-    secure: დაცული ვერსია
-    report_abuse: შეგვატყობინეთ დარღვევა
-    built_on_code_studio: დაწერეთ კოდი კოდის სტუდიაში
-    make_my_own_app: ჩემი საკუთარი აპლიკაციის შექმნა
-    how_it_works: როგორ მუშაობს ეს სივრცე
-    try_hour_of_code: სცადეთ კოდის ერთი საათი!
+    copyright: 'საავტორო უფლება'
+    more: 'მეტი'
+    feedback: 'უკუკავშირი'
+    translate: 'ვთარგმნოთ Code.org თქვენს ენაზე'
+    support: 'ტექ. მხარდაჭერა'
+    support_url: 'http://support.code.org'
+    tos_short: 'პირობები'
+    tos: 'მომსახურების პირობები'
+    privacy: 'კონფიდენციალურობის პოლიტიკა'
+    secure: 'დაცული ვერსია'
+    report_abuse: 'შეგვატყობინეთ დარღვევა'
+    built_on_code_studio: 'დაწერეთ კოდი კოდის სტუდიაში'
+    make_my_own_app: 'ჩემი საკუთარი აპლიკაციის შექმნა'
+    how_it_works: 'როგორ მუშაობს ეს სივრცე'
+    try_hour_of_code: 'სცადეთ კოდის ერთი საათი!'
   reference_area:
-    title: გჭირდებათ დახმარება?
-    subtitle: ნახეთ ეს ვიდეოები და მინიშნებები
-    teacher: ნახეთ ამოხსნა
-    auth_error: თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება.
-    submit: განაახლეთ მხატვრის ადგილმდებარეობა
-    direction: საწყისი მიმართულება (გრადუსებში)
+    title: 'გჭირდებათ დახმარება?'
+    subtitle: 'ნახეთ ეს ვიდეოები და მინიშნებები'
+    teacher: 'ნახეთ ამოხსნა'
+    auth_error: 'თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება.'
+    submit: 'განაახლეთ მხატვრის ადგილმდებარეობა'
+    direction: 'საწყისი მიმართულება (გრადუსებში)'
   video:
-    tab: ვიდეო.
-    notes: არ არის ვიდეო? ნახეთ ჩანაწერები.
-    notes_coming_soon: ამ ვიდეოს ჩანაწერები მალე დაიდება.
-    autoplay_option: ვიდეოების ავტომატური ჩართვა
-    download: ვიდეოს გადმოწერა
+    tab: 'ვიდეო.'
+    notes: 'არ არის ვიდეო? ნახეთ ჩანაწერები.'
+    notes_coming_soon: 'ამ ვიდეოს ჩანაწერები მალე დაიდება.'
+    autoplay_option: 'ვიდეოების ავტომატური ჩართვა'
+    download: 'ვიდეოს გადმოწერა'
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: გაიგეთ მეტი
-  slow_loading: ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს...
-  try_reloading: სცადეთ გვერდის გადატვირთვა
-  next_stage: დასრულებულია! გადადით შემდეგ ეტაპზე
-  download_pdf: გაკვეთილის გეგმის გახსნა
-  lesson_plan: გაკვეთილის გეგმა
-  view_lesson_plan: გაკვეთილის გეგმის ნახვა
-  pdf_download: გადმოიწერეთ PDF
-  download_coming_soon: მალე ჩამოტვირთვაც შესაძლებელი გახდება.
-  video_coming_soon: ვიდეო მალე დაემატება!
-  not_started: მოსწავლეს არ უცდია ამ დონის გავლა.
+      unsupported_message: "თქცენს ბრაუზერს არ აქვს მხარდაჭერა. თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა დარღვეული იქნება."
+      link: "გაიგეთ მეტი"
+  slow_loading: 'ჰმ.. პროცესს ჩვეულებრივზე მეტი დრო მიაქვს...'
+  try_reloading: 'სცადეთ გვერდის გადატვირთვა'
+  next_stage: 'დასრულებულია! გადადით შემდეგ ეტაპზე'
+  download_pdf: 'გაკვეთილის გეგმის გახსნა'
+  lesson_plan: 'გაკვეთილის გეგმა'
+  view_lesson_plan: 'გაკვეთილის გეგმის ნახვა'
+  pdf_download: 'გადმოიწერეთ PDF'
+  download_coming_soon: 'მალე ჩამოტვირთვაც შესაძლებელი გახდება.'
+  video_coming_soon: 'ვიდეო მალე დაემატება!'
+  not_started: 'მოსწავლეს არ უცდია ამ დონის გავლა.'
   share_code:
-    title: 'დააჭირეთ "გაშვებას" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა'
-    bounce_og_title: ნახეთ ჩემი Bounce თამაში
-    flappy_og_title: ნახეთ ჩემი Flappy თამაში
-    studio_og_title: ნახეთ ჩემი თამაშების ლაბორატორიის აპლიკაცია
-    check_out_what_i_made: ნახეთ, რა გავაკეთე
-    og_description: ეს კოდი Code.org-ზე დამოუკიდებლად დავწერე
-    phone_number_not_allowed: როგორც ჩანს, აქ მითითებულია ტელეფონის ნომერი. სცადეთ ტექსტის შეცვლა.
-    address_not_allowed: როგორც ჩანს, აქ მითითებულია მისამართი. სცადეთ ტექსტის შეცვლა.
-    email_not_allowed: როგორც ჩანს, აქ მითითებულია ელ.ფოსტის მისამართი. სცადეთ ტექსტის შეცვლა.
-    profanity_not_allowed: როგორც ჩანს, აქ რაღაც უზუსტობებია. სცადეთ ტექსტის შეცვლა.
+    title: "დააჭირეთ \"გაშვებას\" და ნახეთ, როგორ მუშაობს ჩემი პროგრამა"
+    bounce_og_title: "ნახეთ ჩემი Bounce თამაში"
+    flappy_og_title: "ნახეთ ჩემი Flappy თამაში"
+    studio_og_title: "ნახეთ ჩემი თამაშების ლაბორატორიის აპლიკაცია"
+    check_out_what_i_made: "ნახეთ, რა გავაკეთე"
+    og_description: "ეს კოდი Code.org-ზე დამოუკიდებლად დავწერე"
+    phone_number_not_allowed: "როგორც ჩანს, აქ მითითებულია ტელეფონის ნომერი. სცადეთ ტექსტის შეცვლა."
+    address_not_allowed: "როგორც ჩანს, აქ მითითებულია მისამართი. სცადეთ ტექსტის შეცვლა."
+    email_not_allowed: "როგორც ჩანს, აქ მითითებულია ელ.ფოსტის მისამართი. სცადეთ ტექსტის შეცვლა."
+    profanity_not_allowed: "როგორც ჩანს, აქ რაღაც უზუსტობებია. სცადეთ ტექსტის შეცვლა."
   builder:
-    created: თქვენ შექმენით ახალი სქრიპტი.
-    destroyed: თქვენ გაანადგურეთ სქრიპტი.
-    manage: დონეების შექმნა
-    view: ნახვა
-    back: დავუბრუნდეთ სქრიპტებს
-    success: თქვენ წარმატებით შეცვალეთ ბლოკები.
+    created: "თქვენ შექმენით ახალი სქრიპტი."
+    destroyed: "თქვენ გაანადგურეთ სქრიპტი."
+    manage: "დონეების შექმნა"
+    view: "ნახვა"
+    back: "დავუბრუნდეთ სქრიპტებს"
+    success: "თქვენ წარმატებით შეცვალეთ ბლოკები."
     level:
-      create: ახალი დონის შექმნა
-      current: მიმდინარე დონეები
-      unused: გამოუყენებელი დონეები
+      create: "ახალი დონის შექმნა"
+      current: "მიმდინარე დონეები"
+      unused: "გამოუყენებელი დონეები"
   upsell:
     applab:
-      title: App Lab
-      body: აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.
-      body_short: შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით, შემდეგ კი გაუზიარეთ იგი მეგობრებს.
-      audience: ასაკი 13+
-      cta: ისწავლეთ, როგორ
+      title: 'App Lab'
+      body: "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს."
+      body_short: "შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით, შემდეგ კი გაუზიარეთ იგი მეგობრებს."
+      audience: 'ასაკი 13+'
+      cta: 'ისწავლეთ, როგორ'
     hoc:
-      title: ლაბირინთი
-      body: სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.
+      title: 'ლაბირინთი'
+      body: 'სცადეთ პროგრამირების საფუძვლების სწავლა. ეს შანსი უკვე მილიონებმა გამოიყენეს.'
     flappy:
-      title: Flappy კოდი
+      title: 'Flappy კოდი'
       body: 'გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი ტუტორიალი "Flappy კოდი"!'
     20-hour:
-      title: დაჩქარებული კურსი
-      body: ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. სრული გამოცდილების მისაღებად გაეცანით კურსებს 2-4!
-      body_short: ისწავლეთ ინფორმატიკის საფუძვლები 2-4 კურსების დაჩქარებულ ვერსიაში.
+      title: 'დაჩქარებული კურსი'
+      body: 'ეს ოცსაათიანი კურსი შეიცავს კომპიუტერული მეცნიერებისა და პროგრამირების ძირითად ნაწილებს კურსებიდან 2-4. კურსი შექმნილია 10-18 წლის მოსწავლეებისთვის. სრული გამოცდილების მისაღებად გაეცანით კურსებს 2-4!'
+      body_short: 'ისწავლეთ ინფორმატიკის საფუძვლები 2-4 კურსების დაჩქარებულ ვერსიაში.'
     hoc2014:
       try_new_tutorial: 'ნახეთ "კოდის ერთი საათის" ახალი ტუტორიალის ბეტა-ვერსია'
       try_frozen: 'ხატეთ "გაყინულის" გმირებთან, ანასა და ელზასთან ერთად'
     gallery:
-      title: გალერეა
-      body: ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა
+      title: "გალერეა"
+      body: "ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა"
     frozen:
-      title: გაყინული
+      title: "გაყინული"
     starwars:
-      title: ვარსკვლავური ომები
+      title: "ვარსკვლავური ომები"
     infinity:
-      title: თამაშების ლაბორატორია Infinity
-      body: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
+      title: "თამაშების ლაბორატორია Infinity"
+      body: "გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად დისნეის Infinity-ს პერსონაჟების მონაწილეობით."
     minecraft:
-      title: მაინკრაფტი
-      body: შეისწავლეთ მაინკრაფტის სამყარო კოდით.
+      title: "მაინკრაფტი"
+      body: "შეისწავლეთ მაინკრაფტის სამყარო კოდით."
+    minecraft2016:
+      title: "მაინკრაფტი"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 4+
-      body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
-      body_short: "If you don't have computers, try these unplugged lessons in your classroom."
+      title: "გაკვეთილები კომპიუტერის გარეშე"
+      audience: "ასაკი 4+"
+      body: "ჩვენ შევქმენით სია ისეთი გაკვეთილებისა, რომლებსაც არ სჭირდებათ კომპიუტერი და მათი გამოყენება შეგიძლიათ საკლასო ოთახში. ახლა შეგიძლიათ, ასწავლოთ კომპიუტერული მეცნიერებების საფუძვლები მიუხედავად იმისა, გაქვთ თუ არა საკლასო ოთახში კომპიუტერები! სცადეთ ამ გაკვეთილების გამოყენება როგორც ცალკე, ასევე კომპიუტერული მეცნიერების კურსისთვის დამატებით მასალად."
+      body_short: "თუ არ გაქვთ კომპიუტერები, სცადეთ ეს გაკვეთილები კომპიუტერის გარეშე თქვენს საკლასო ოთახში."
   gallery:
-    students_drew_these_with_code: მოსწავლეებმა ეს კოდით დახატეს!
-    students_made_these_with_code: მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!
-    picture_count: 'გასულ <b>%{days}</b> დღეში მოსწავლეებმა დახატეს <b>%{count} </b> ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა.'
-    activity_count: 'გასულ <b>%{days}</b> დღეში მოსწავლეებმა შექმნეს <b>%{count}</b> აპლიკაცია და ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და სქრინშოტებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა.'
-    want_to_make_your_own: გინდათ, თქვენი შექმნათ?
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
-    more: 'მეტი &rarr;'
-    caption_by_name_age: 'შემქმნელი: %{name}, ასაკი %{age}'
-    caption_time_ago: '%{time_ago}ს წინ'
-    header: გალერეა
-    header_playlab: თამაშების ლაბორატორია
-    header_artist: მხატვარი
-    report_abuse: შეგვატყობინეთ დარღვევა
+    students_drew_these_with_code: "მოსწავლეებმა ეს კოდით დახატეს!"
+    students_made_these_with_code: "მოსწავლეებმა ეს კოდის მეშვეობით შექმნეს!"
+    picture_count: "გასულ <b>%{days}</b> დღეში მოსწავლეებმა დახატეს <b>%{count} </b> ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა."
+    activity_count: "გასულ <b>%{days}</b> დღეში მოსწავლეებმა შექმნეს <b>%{count}</b> აპლიკაცია და ნახატი საკუთარი კომპიუტერული პროგრამების შექმნით. დააჭირეთ ნახატებს და სქრინშოტებს და ნახეთ, როგორ მოქმედებს თითოეული პროგრამა."
+    want_to_make_your_own: "გინდათ, თქვენი შექმნათ?"
+    how_to_save: "ამ ტუტორიალების ბოლო დონეზე დააჭირეთ \"დასრულება\" და \"შენახვა\", იმისთვის, რომ შეინახოთ თქვენი ნაშრომი გალერეაში."
+    more: "მეტი &rarr;"
+    caption_by_name_age: "შემქმნელი: %{name}, ასაკი %{age}"
+    caption_time_ago: "%{time_ago}ს წინ"
+    header: "გალერეა"
+    header_playlab: "თამაშების ლაბორატორია"
+    header_artist: "მხატვარი"
+    report_abuse: "შეგვატყობინეთ დარღვევა"
   landing:
     prerelease: "ეს არის კურსის <span class='betatext'>ბეტა-ვერსია</span>. ანუ, ეს არ არის საბოლოო ვარიანტი, კურსი გაუმჯობესდება მიღებული უკუკავშირის საფუძველზე."
     prerelease_hoc2014: "ეს არის ტუტორიალის <span class='betatext'>ბეტა-ვერსია</span>. რაც იმას ნიშნავს, რომ ჩვენ მას გავაუმჯობესებთ მიღებული უკუკავშირის საფუძველზე."
-    report_bug: შეცდომის შესახებ შეტყობინება
-    support: დახმარება მჭირდება
-    support_url: //support.code.org
-    help_resources: დახმარება და რესურსები
+    report_bug: "შეცდომის შესახებ შეტყობინება"
+    support: "დახმარება მჭირდება"
+    support_url: "//support.code.org"
+    help_resources: "დახმარება და რესურსები"
   multi:
-    wrong_title: პასუხი არასწორია
-    wrong_body: ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!
-    correct_title: სწორია
-    correct_body: ეს პასუხი სწორია.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "პასუხი არასწორია"
+    wrong_body: "ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!"
+    correct_title: "სწორია"
+    correct_body: "ეს პასუხი სწორია."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: მადლობა
-    wrong_body: მადლობა პასუხისთვის.
-    correct_title: მადლობა
-    correct_body: მადლობა პასუხისთვის.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის."
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: მადლობა
-    wrong_body: მადლობა პასუხისთვის
-    correct_title: მადლობა
-    correct_body: მადლობა პასუხისთვის
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის"
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის"
+    hide_survey_last_answer: "გამოკითხვა ანონიმურია. გთხოვთ, დაგროვილი შედეგებისთვის ეწვიოთ თქვენი მასწავლებლის მართვის პანელს. ყურადღება მიაქციეთ, რომ შედეგები გამოჩნდება მხოლოდ იმ შემთხვევაში, თუ ხუთმა მოსწავლემ მაინც უპასუხა გამოკითხვას."
   level_group-submittable:
-    wrong_title: მადლობა
-    wrong_body: მადლობა პასუხისთვის
-    correct_title: მადლობა
-    correct_body: მადლობა პასუხისთვის
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
-    submit-complete-title: Submit your assessment
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    wrong_title: "მადლობა"
+    wrong_body: "მადლობა პასუხისთვის"
+    correct_title: "მადლობა"
+    correct_body: "მადლობა პასუხისთვის"
+    unsubmit-title: "თქვენი ტესტის ჩაბარების გაუქმება"
+    unsubmit-body: "შეფასების გადაცემის უკან დაბრუნება გააუქმებს გადაცემულ დროსა და თარიღს. დარწმუნებული ხართ?"
+    submit-incomplete-title: "თქვენი ტესტის ჩაბარება"
+    submit-incomplete-body: "ზოგიერთი კითხვა დ აუსრულებელი დატოვეთ. თქვენს პასუხს გაგზავნის შემდეგ ვეღარ შეასწორებთ. დარწმუნებული ხართ?"
+    submit-complete-title: "თქვენი ტესტის ჩაბარება"
+    submit-complete-body: "თქვენს პასუხს გაგზავნის შემდეგ ვეღარ შეასწორებთ. დარწმუნებული ხართ?"
   match:
-    wrong_title: არასწორი გადაწყვეტაა
-    wrong_body: პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!
-    correct_title: სწორია
-    correct_body: ეს პასუხი სწორია.
+    wrong_title: "არასწორი გადაწყვეტაა"
+    wrong_body: "პასუხი, რომელიც თქვენ შეიყვანეთ, არასწორია. სცადეთ თავიდან!"
+    correct_title: "სწორია"
+    correct_body: "ეს პასუხი სწორია."
   contract_match:
-    wrong_title: პასუხი არასწორია
-    badname: თქვენს განსაზღვრებას არასწორი სახელი აქვს.
-    badname_case: ფუნქციების სახელებში რეგისტრი მნიშვნელოვანია. სცადეთ რეგისტრის შეცვლა თქვენი განსაზღვრების სახელში.
-    badrange: თქვენს განსაზღვრებას აქვს არასწორი დიაპაზონი.
-    baddomainsize: თქვენს განსაზღვრებას დომენში ელემენტების არასწორი რაოდენობა აქვს.
-    baddomainname: თქვენს დომენში ერთ ან მეტ ელემენტს არასწორი სახელი აქვს.
-    baddomaintype: თქვენს დომენში ერთი ან მეტი ელემენტი არასწორი ტიპისაა ან არასწორი თანმიმდევრობითაა.
+    wrong_title: "პასუხი არასწორია"
+    badname: "თქვენს განსაზღვრებას არასწორი სახელი აქვს."
+    badname_case: "ფუნქციების სახელებში რეგისტრი მნიშვნელოვანია. სცადეთ რეგისტრის შეცვლა თქვენი განსაზღვრების სახელში."
+    badrange: "თქვენს განსაზღვრებას აქვს არასწორი დიაპაზონი."
+    baddomainsize: "თქვენს განსაზღვრებას დომენში ელემენტების არასწორი რაოდენობა აქვს."
+    baddomainname: "თქვენს დომენში ერთ ან მეტ ელემენტს არასწორი სახელი აქვს."
+    baddomaintype: "თქვენს დომენში ერთი ან მეტი ელემენტი არასწორი ტიპისაა ან არასწორი თანმიმდევრობითაა."
   text_match:
-    placeholder: შეიყვანეთ პასუხი აქ
-    open_response_title: მადლობა
-    open_response_body: მადლობა პასუხისთვის!
-    correct_title: სწორია
-    correct_body: ეს პასუხი სწორია.
+    placeholder: "შეიყვანეთ პასუხი აქ"
+    open_response_title: "მადლობა"
+    open_response_body: "მადლობა პასუხისთვის!"
+    correct_title: "სწორია"
+    correct_body: "ეს პასუხი სწორია."
   dialog:
-    ok: OK
-    startover_title: დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?
-    startover_body: ეს საწყის მდგომარეობაში დააბრუნებს თავსატეხს და თქვენ მიერ დამატებულ ან შეცვლილ მონაცემებს.
-    startover_ok: ხელახლა დაწყება
-    startover_cancel: გაუქმება
+    ok: "OK"
+    startover_title: "დარწმუნებული ხართ, რომ ხელახლა დაწყება გსურთ?"
+    startover_body: "ეს საწყის მდგომარეობაში დააბრუნებს თავსატეხს და თქვენ მიერ დამატებულ ან შეცვლილ მონაცემებს."
+    startover_ok: "ხელახლა დაწყება"
+    startover_cancel: "გაუქმება"
   time:
-    hour: 1 საათი
-    day: დღე
-    week: კვირა
+    hour: '1 საათი'
+    day: 'დღე'
+    week: 'კვირა'
   age_interstitial:
     age: თქვენი ასაკი
     header: ანგარიშის ინფორმაციის განახლება
-    message: 'ჩვენ ვაახლებთ საიტს, რათა დაცულობის კიდევ უფრო მაღალი დონე უზრუნველვყოთ. ამისთვის გვჭირდება, რომ მომხმარებლებმა მიუთითონ თავიანთი ასაკი აქ. <br/> როგორც ყოველთვის,  code.org არასდროს გაუზიარებს ამ ინფორმაციას მესამე პირებს.'
+    message: "ჩვენ ვაახლებთ საიტს, რათა დაცულობის კიდევ უფრო მაღალი დონე უზრუნველვყოთ. ამისთვის გვჭირდება, რომ მომხმარებლებმა მიუთითონ თავიანთი ასაკი აქ. <br/> როგორც ყოველთვის,  code.org არასდროს გაუზიარებს ამ ინფორმაციას მესამე პირებს."
     sign_out: 'თუ არ გინდათ თქვენი ასაკის დასახელება, შეგიძლიათ <a href="%{url}"> გახვიდეთ </a>.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
-    intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
-    tos: მომსახურების პირობები
-    privacy: კონფიდენციალურობის პოლიტიკა
-    privacy_notice: Privacy Notice
-    accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
-    print: დაბეჭდვა
-    later: Later
-    reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    title: "განახლებული მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა"
+    intro_desc: 'ჩვენ განვაახლეთ მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა, როგორც ქვემოთაა ნაჩვენები. ცვლილებები ძალაში შევა 2016 წლის 24 აგვისტოდან. უმთავრესი ცვლილება: ჩვენ <i>აღარ ვინახავთ მოსწავლეების ელექტრონული ფოსტის მისამართებს Code Studio-ში.</i> ეს ჩვენთვის ძალიან მნიშვნელოვანია და ვიმედოვნებთ, რომ ამით დავნერგავთ ახალ სტანდარტს მოსწავლეთა კონფიდენციალურობის კუთხით განათლების ტექნოლოგიებში. ჩვენ ელექტრონულ მისამართზე გამოგიგზავნეთ სხვა ცვლილებების მოკლე მიმოხილვა.'
+    intro_instructions: "თქვენ უნდა დაეთანხმოთ ახალ პირობებს, რომ თქვენს კლასში 13 წლამდე მოსწავლეებს სრული წვდომა ჰქონდეთ ყველა უახლეს ფუნქციაზე კოდის სტუდიაში. 13 წლამდე მოსწავლის ანგარიშის შექმნის დროს, თქვენ გთხოვენ დაადასტუროთ, რომ თქვენს სკოლას აქვს მშობლის თანხმობა მოსწავლის პერსონალური ინფორმაციის შეგროვებაზე და ამ ინფორმაციის მოსწავლისთვის სასარგებლოდ გამოყენებაზე სკოლაში, ისეთი საგანმანათლებლო პროგრამების ჩათვლის, როგორიცაა კოდის სტუდია."
+    tos: "მომსახურების პირობები"
+    privacy: "კონფიდენციალურობის პოლიტიკა"
+    privacy_notice: "კონფიდენციალურობის ცნობა"
+    accept_label: 'ვეთანხმები განახლებულ <a href="%{tos_url}" target="_blank">მომსახურების პირობებსა</a> და <a href="%{privacy_url}" target="_blank">კონფიდენციალურობის პოლიტიკას</a>'
+    accept: "დათანხმება"
+    print: "დაბეჭდვა"
+    reminder_desc: 'ჩვენ განვაახლეთ <a href="%{tos_url}" target="_blank">მომსახურების პირობები</a> ა <a href="%{privacy_url}" target="_blank">კონფიდენციალურობის პოლიტიკა</a>. გთხოვთ, დათანხმებამდე ყურადღებით წაიკითხოთ. გაითვალისწინეთ, ჩვენი ხელსაწყოები, რომლითაც ვასწავლით JavaScript-ს შეიძლება არ იყოს ხელმისაწვდომი მოსწავლეებისთვის, სანამ არ დაეთანხმებიან განახლებულ პირობებს.'
+    review_terms: "გადახედეთ განახლებულ პირობებს"
+  race_interstitial:
+    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    message: "Please tell us your race (check all that apply)"
+    races:
+      - 
+        white: White
+      - 
+        black: Black or African American
+      - 
+        hispanic: Hispanic or Latino
+      - 
+        asian: Asian
+      - 
+        hawaiian: Native Hawaiian or other Pacific Islander
+      - 
+        american_indian: American Indian/Alaska Native
+      - 
+        other: სხვა
+      - 
+        opt_out: Prefer not to say
+    submit: "გაგზავნა"
+    decline: "დახურვა"
   zendesk_too_young_message: 'სამწუხაროდ, თქვენი ასაკის მომხმარებლებისთვის ეს გვერდი მიუწვდომელია. შეგიძლიათ ეწვიოთ გვერდს <a href="http://support.code.org">support.code.org</a>  ავტორიზაციის გარეშე, ან სთხოვოთ თქვენს მშობელს ან მასწავლებელს თქვენ მაგივრად დაგვიკავშირდნენ.'
   progress:
     not_started: არ არის დაწყებული
@@ -596,131 +631,202 @@ ka:
     assessment: ტესტი
     submitted: ჩაბარებულია
   studio:
-    courses_working_on: მიმდინარე კურსები
-    completed_courses: დასრულებული კურსები
-    all_courses: ყველა კურსი
+    courses_working_on: "მიმდინარე კურსები"
+    completed_courses: "დასრულებული კურსები"
+    all_courses: "ყველა კურსი"
   project:
-    projects: პროექტები
-    create: პროექტის შექმნა
+    projects: "პროექტები"
+    create: "პროექტის შექმნა"
     create_a_project: 'ახალი პროექტის შექმნა:'
-    new: შექმენით ახალი
-    rename: სახელის შეცვლა
-    save: შენახვა
-    delete: წაშლა
-    exit: დავუბრუნდეთ კურსს
-    my_projects: ჩემი პროექტები
-    share: გაზიარება
+    new: "შექმენით ახალი"
+    rename: "სახელის შეცვლა"
+    save: "შენახვა"
+    delete: "წაშლა"
+    exit: "დავუბრუნდეთ კურსს"
+    my_projects: "ჩემი პროექტები"
+    share: "გაზიარება"
     share_title: თქვენი პროექტის გაზიარება
-    share_copy_link: 'დააკოპირეთ ლინკი:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
-    embed: Embed
-    advanced_share: Show advanced options
-    close: დახურვა
-    more: მეტი
-    name: სახელი
-    updated: განახლებულია
-    project_type: პროექტის ტიპი
-    help_text: 'აირჩიეთ <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატეთ რამე</strong> და შექმენით ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლებათ.'
-    need_help: თქვენი ახალი პროექტის დასაწყებად სცადეთ ეს კურსები – გამოგადგებათ
-    really_delete: წავშალოთ?
-    delete_yes: დიახ
-    delete_no: არა
-    saved: შენახულია
-    not_saved: არაა შენახული
-    cancel: გაუქმება
+    share_copy_link: "დააკოპირეთ ლინკი:"
+    share_embed_description: "ჩაშენებული კოდი შეგიძლიათ ჩასვათ HTML გვერდზე, რათა პროექტი წარმოადგინოს ვებგვერდზე."
+    share_u13_warning: "გაზიარებამდე ჰკითხეთ თქვენს მასწავლებელს. მხოლოდ თქვენს სკოლაში მყოფებთან გააზიარეთ."
+    embed: "ჩაშენებული"
+    advanced_share: "დამატებითი პარამეტრების ჩვენება"
+    close: "დახურვა"
+    more: "მეტი"
+    name: "სახელი"
+    updated: "განახლებულია"
+    project_type: "პროექტის ტიპი"
+    help_text: "აირჩიეთ <strong>აპლიკაციის გაკეთება</strong> ან <strong>დახატეთ რამე</strong> და შექმენით ახალი პროექტი აპლიკაციების ლაბორატორიაში ან სამხატვროში!<br/> დაბრუნება და პროექტებზე მუშაობა ნებისმიერ დროს შეგეძლებათ."
+    need_help: "თქვენი ახალი პროექტის დასაწყებად სცადეთ ეს კურსები – გამოგადგებათ"
+    really_delete: 'წავშალოთ?'
+    delete_yes: 'დიახ'
+    delete_no: 'არა'
+    saved: "შენახულია"
+    not_saved: "არაა შენახული"
+    cancel: 'გაუქმება'
     delete_confirm_title: დარწმუნებული ხართ, რომ ამ პროექტის წაშლა გინდათ?
-    delete_confirm_text: პროექტის წაშლა სამუდამოდ ამოშლის მას თქვენი პროექტების სიიდან. მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ.
-    view_all: ჩემი პროექტების ნახვა
-    remix: რემიქსი
-    click_to_remix: 'დააჭირეთ "რემიქსს" და გაუშვით საკუთარი ვერსია!'
-    edit_project: პროექტის რედაქტირება
+    delete_confirm_text: "პროექტის წაშლა სამუდამოდ ამოშლის მას თქვენი პროექტების სიიდან. მასზე წვდომა არც იმათ ექნებათ, ვისაც ეს პროექტი ადრე გაუზიარეთ."
+    view_all: 'ჩემი პროექტების ნახვა'
+    remix: 'რემიქსი'
+    click_to_remix: "დააჭირეთ \"რემიქსს\" და გაუშვით საკუთარი ვერსია!"
+    edit_project: 'პროექტის რედაქტირება'
     abuse:
       tos: "ამ პროექტს სხვებს ვერ გაუზიარებთ, იმიტომ რომ იგი აღნიშნულია, როგორც Code.org-ის<a href='http://code.org/tos'>მომსახურების პირობების</a> დამარღვეველი."
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "ეს პროექტი შეიცავს ინფორმაციას, რომლის სხვებთან გაზიარებაც არ შეიძლება. გთხოვთ, აპლიკაციის შიგთავსის ჩასასწორებლად დაუკავშირდეთ ამ აპლიკაციის მფლობელს."
       contact_us: "თუ ფიქრობთ, რომ ეს შეცდომაა, <a href='https://code.org/contact'> დაგვიკავშირდით.</a>"
-      go_to_code_studio: გადადით კოდის სტუდიაში
+      go_to_code_studio: 'გადადით კოდის სტუდიაში'
       report_abuse_form:
-        intro: თუ შეურაცხმყოფელ კონტენტს, მუქარებს, ბულინგს ან საავტორო უფლებების დამრღვევ კონტენტს გადააწყდით, შეავსეთ ქვემოთ მოცემული ფორმა. ჩვენ სერიოზულად ვეკიდებით მომხმარებლების ჩივილებს, საგულდაგულოდ ვიკვლევთ ყველა სიტუაციას და შესაბამის ზომებს მივმართავთ.
+        intro: 'თუ შეურაცხმყოფელ კონტენტს, მუქარებს, ბულინგს ან საავტორო უფლებების დამრღვევ კონტენტს გადააწყდით, შეავსეთ ქვემოთ მოცემული ფორმა. ჩვენ სერიოზულად ვეკიდებით მომხმარებლების ჩივილებს, საგულდაგულოდ ვიკვლევთ ყველა სიტუაციას და შესაბამის ზომებს მივმართავთ.'
         validation:
-          email: შეგვატყობინეთ თქვენი ელ. ფოსტა
-          age: თუ შეიძლება, მიუთითეთ ასაკი
-          abuse_type: აგვიღწერეთ, როგორ არღვევს ეს კონტენტი სერვისის პირობებს
-          abuse_detail: თუ შეიძლება, შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით
-        abusive_url: გასაჩივრებული კონტენტის URL
+          email: 'შეგვატყობინეთ თქვენი ელ. ფოსტა'
+          age: 'თუ შეიძლება, მიუთითეთ ასაკი'
+          abuse_type: 'აგვიღწერეთ, როგორ არღვევს ეს კონტენტი სერვისის პირობებს'
+          abuse_detail: 'თუ შეიძლება, შეგვატყობინეთ მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით'
+        abusive_url: 'გასაჩივრებული კონტენტის URL'
         abuse_type:
           question: 'როგორ არღვევს ეს კონტენტი %{link_start}სერვისის პირობებს%{link_end}?'
-          harassment: მუქარები, კიბერ-ბულინგი, შეწუხება
-          offensive: შეურაცხმყოფელი კონტენტი
-          infringement: საავტორო უფლებების დარღვევა
-          other: სხვა
-        detail: თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.
+          harassment: 'მუქარები, კიბერ-ბულინგი, შეწუხება'
+          offensive: 'შეურაცხმყოფელი კონტენტი'
+          infringement: 'საავტორო უფლებების დარღვევა'
+          other: 'სხვა'
+        detail: 'თუ შეიძლება შეგვატყობინეთ რაც შეიძლება მეტი დეტალი იმ კონტენტის შესახებ, რომელსაც უჩივით.'
         acknowledge: 'ამ ინფორმაციის გამოგზავნისას თქვენ აცნობიერებთ, რომ ის დამუშავდება %{link_start_privacy}კონფიდენციალურობის პოლიტიკისა%{link_end} და %{link_start_tos}სერვისის პირობების%{link_end} თანახმად'
   peer_review:
     accepted:
-      name: Accepted
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      name: 'დათანხმებული'
+      description: '<strong>დიახ</strong>, ეს გადაცემა <strong>ეთანხმება</strong> მოთხოვნებს'
     rejected:
-      name: Rejected
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      name: 'უარყოფილი'
+      description: '<strong>არა</strong>, ეს გადაცემა <strong>არ ეთანხმება</strong> მოთხოვნებს'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
+      name: 'გამწვავებული'
+      description: 'მსურს, ინსტრუქტორმა გადახედოს ამ გადაცემას'
+    instructor_feedback: 'ინსტრუქტორის უკუკავშირი'
+    peer_feedback: 'თანატოლის შეფასება'
+    outdated: 'ეს შეფასება დაემატა მანამდე გადაცემულ ვერსიას'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: 'მოძებნეთ სიმბოლო...'
+      no_icons_found: 'სიმბოლო ვერ მოიძებნა'
     playzone:
-      artist_description: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
-      playlab_description: შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!
-      playlab_title: New App
-      primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      artist_description: 'დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!'
+      artist_title: 'ახალი ნახატი'
+      continue_button: 'შემდეგ დონეზე გადასვლა'
+      playlab_description: 'შექმენით ისტორია ან თამაში თამაშების ლაბორატორიის მეშვეობით!'
+      playlab_title: 'ახალი აპლიკაცია'
+      primary_header: 'გილოცავთ! თქვენ დაასრულეთ %{stageName}!'
+      projects_description: 'კვლავ ეწვიეთ თქვენს რომელიმე არსებულ პროექტს.'
+      projects_title: 'პროექტის გახსნა'
+      secondary_header: 'ჰკითხეთ თქვენს მასწავლებელს, რა გააკეთოთ ახლა'
   flex_category:
-    required: მიმოხილვა
-    content: Content
-    practice: Teaching Practices
-    peer_review: Peer Review
+    required: 'მიმოხილვა'
+    content: 'შიგთავსი'
+    practice: 'სწავლება'
+    peer_review: 'თანატოლის კომენტარი'
   external_links:
-    disclaimer: Disclaimer
-    leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer: უარყოფა
+    leaving_domain: თქვენ ახლა ტოვებთ ამ დომენს და გადადიხართ საიტზე, რომელიც არ იმართება Code.org-ის მიერ.
+    disclaimer_text: ამ საიტს შეიძლება Code.org-ისგან განსხვავებული კონფიდენციალურობის პოლიტიკა ჰქონდეს. ჩვენ ამ მესამე მონაწილის რესურსები იმიტომ შევარჩიეთ, რომ გვგონია, ისინი თქვენთვის გამოსადეგი იქნება. თუმცა ჩვენ არ ვართ პირდაპირ პასუხისმგებლელი ამ საიტის შიგთავსზე, გთხოვთ, მიმართოთ <a href='%{support_url}'>დაუკავშირდით დახმარებას</a>, თუ შიგთავსი თქვენთვის მიუღებელია ან თუ ეს საიტი აღარ არის ხელმისაწვდომი.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
-    starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
-    download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
-    windows: Windows
-    mac: Mac OS X
+    title: 'კოდის ერთი საათის ჩამოტვირთვები'
+    capsule_title: 'გაქვთ ინტერნეტი?'
+    capsule_desc: 'გამოიყენეთ ონლაინ, ვებ-ზე დაფუძნებული <a href="%{url}">%{app_name}</a>.'
+    instructions_headline: 'ინტერნეტი არ გაქვთ?'
+    instructions: 'ინსტრუქცია მასწავლებლებისთვის: თუ ინტერნეტთან წვდომა უხარისხოა, კოდის ერთი საათის ეს ტუტორიალები ხელმისაწვდომია გადმოსაწერად და ოფლაინ გამოყენებისთვის. აირჩიეთ თქვენი ენა და პლატფორმა, გადმოწერეთ და დააყენეთ ყველა კომპიუტერზე საკლასო ოთახში. შეიძლება დაგჭირდეთ USB დრაივის გამოყენება, რათა ერთხელ გადმოწეროთ და ყველა კომპიუტერზე დააყენოთ. გაითვალისწინეთ: მოსწავლეები ვერ შევლენ კოდის სტუდიაში, ვერ შეინახავენ პროგრესს ან ამობეჭდავენ სერტიფიკატს. მასწავლებლებმა შეიძლება წინასწარ ამობეჭდონ სერტიფიკატები <a href="%{url}">here</a>.'
+    minecraft_name: 'მაინკრაფტის კოდის ერთი საათი'
+    starwars_blocks_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით (ბლოკები)'
+    starwars_javascript_name: 'ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით - (JavaScript)'
+    download_message: 'გადმოწერეთ %{app_name} ოფლაინ გამოყენებისთვის (136MB)'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   plc:
     preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'ამ დონის მასალა არ ჩანს, რადგან ეს დონე ახლა დახურულია. თქვენი მასწავლებელი გააღებს ამ დონეს, როცა მასზე მუშაობის დრო მოვა ან როცა თქვენს პასუხებს შეამოწმებს.'
+  hidden_stage: "თქვენი მასწავლებელი არ გელოდათ აქ. გთხოვთ, ჰკითხეთ მას, რომელ გაკვეთილზე უნდა იყოთ."
+  return_course_overview: 'თავის მიმოხილვაზე გადასვლა'
+  pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'

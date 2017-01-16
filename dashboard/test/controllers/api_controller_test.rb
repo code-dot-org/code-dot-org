@@ -104,18 +104,20 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with script with text response" do
-    script = create :script
+    script = create :script, name: 'text-response-script'
+    stage1 = create :stage, script: script, name: 'First Stage'
+    stage2 = create :stage, script: script, name: 'Second Stage'
 
     # create 2 text_match levels
     level1 = create :text_match
     level1.properties['title'] = 'Text Match 1'
     level1.save!
-    create :script_level, script: script, levels: [level1]
+    create :script_level, script: script, levels: [level1], stage: stage1
 
     level2 = create :text_match
     level2.properties['title'] = 'Text Match 2'
     level2.save!
-    create :script_level, script: script, levels: [level2]
+    create :script_level, script: script, levels: [level2], stage: stage2
     # create some other random levels
     5.times do
       create :script_level, script: script
@@ -144,12 +146,10 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_equal script, assigns(:script)
 
-    # all these are translation missing because we don't actually generate i18n files in tests
-
     expected_response = [
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'stage' => 'Stage 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
@@ -157,7 +157,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
-        'stage' => "Stage 2: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[1].name}",
+        'stage' => 'Stage 2: Second Stage',
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
@@ -165,7 +165,7 @@ class ApiControllerTest < ActionController::TestCase
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
-        'stage' => "Stage 1: translation missing: en-us.data.script.name.#{script.name}.#{script.stages[0].name}",
+        'stage' => 'Stage 1: First Stage',
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
@@ -340,6 +340,113 @@ class ApiControllerTest < ActionController::TestCase
             {},
             {},
             {"answer_index" => 3},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        {
+          "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]}
+        ]
+      }
+    ]
+
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
+  test "should get surveys for section with script with single page anonymous level_group assessment" do
+    # Seed the RNG deterministically so we get the same "random" shuffling of results.
+    srand 1
+
+    script = create :script
+
+    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
+    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
+    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
+    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
+    create :multi, name: 'level_multi_unattempted', type: 'Multi'
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['anonymous'] = 'true'
+    level1.properties['pages'] = [
+      {levels: %w(
+        level_free_response
+        level_multi_unsubmitted
+        level_multi_correct
+        level_multi_incorrect
+        level_multi_unattempted)}
+      ]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    updated_at = Time.now
+
+    # All students did the LevelGroup, and the free response part of the survey.
+    [@student_1, @student_2, @student_3, @student_4, @student_5].each_with_index do |student, student_index|
+      create :user_level, user: student, script: script, level: level1,
+        level_source: create(:level_source, level: level1), best_result: 100,
+        submitted: true, updated_at: updated_at
+
+      create :user_level, user: student, script: script, level: sub_level1,
+        level_source: create(:level_source, level: sub_level1, data: "Free response from student #{student_index + 3}")
+      create :user_level, user: student, script: script, level: sub_level2,
+        level_source: create(:level_source, level: sub_level2, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level3,
+        level_source: create(:level_source, level: sub_level3, data: "-1")
+      create :user_level, user: student, script: script, level: sub_level4,
+        level_source: create(:level_source, level: sub_level4, data: "-1")
+    end
+
+    get :section_surveys, section_id: @section.id, script_id: script.id
+    assert_response :success
+
+    assert_equal script, assigns(:script)
+
+    # all these are translation missing because we don't actually generate i18n files in tests
+    expected_response = [
+      { "stage" => "translation missing: en-us.data.script.name.#{script.name}.title",
+        "levelgroup_results" => [
+        { "type" => "text_match",
+          "question" => "test",
+          "results" => [
+          {"result" => "Free response from student 5"},
+          {"result" => "Free response from student 4"},
+          {"result" => "Free response from student 7"},
+          {"result" => "Free response from student 3"},
+          {"result" => "Free response from student 6"}],
+          "answer_texts" => nil},
+        { "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        { "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {},
+            {},
+            {}],
+          "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
+        {
+          "type" => "multi",
+          "question" => "question text",
+          "results" => [
+            {},
+            {},
+            {},
             {},
             {}],
           "answer_texts" => ["answer1", "answer2", "answer3", "answer4"]},
@@ -819,7 +926,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal false, body['disableSocialShare']
-    assert_equal false, body['disablePostMilestone']
     assert_equal 100, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
@@ -872,7 +978,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disableSocialShare']
-    assert_equal false, body['disablePostMilestone']
     assert_equal({}, body['progress'])
   end
 
@@ -884,8 +989,6 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, script_name: script.name, stage_position: 1, level_position: 1
     assert_response :success
-    body = JSON.parse(response.body)
-    assert_equal true, body['disablePostMilestone']
   end
 
   test "should get user progress for stage with swapped level" do

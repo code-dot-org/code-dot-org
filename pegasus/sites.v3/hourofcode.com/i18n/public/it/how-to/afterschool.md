@@ -6,19 +6,23 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Come insegnare un'Ora di Codice nel dopo-scuola
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tutte i corsi dell'Ora del Codice:**
 
   * Richiedono un tempo di preparazione minimo per gli organizzatori
   * Sono auto-guidati — consentendo ai bambini di imparare secondo il proprio ritmo e livello di abilità
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -62,7 +66,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Chi partecipa direttamente all'attività**
 
-  * Scrivi il link del corso su una lavagna. Puoi trovare il link elencato sulle [ informazioni riguardo il corso che hai selezionato](<%= resolve_url('https://code.org/learn') %>) sotto il numero dei partecipanti.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +76,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 **Cosa fare se qualcuno finisce prima del previsto?**
 
-  * Incoraggia i partecipanti a provare un'altra attività dell'Ora del Codice a [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Oppure, chiedi a chi ha finito prima di aiutare i compagni che si trovano in difficoltà.
 
 [col-33]
@@ -116,11 +120,10 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
-  * Usa questa [esempio di lezione](/files/AfterschoolEducatorLessonPlanOutline.docx) per organizzare la tua Ora del Codice.
-  * Leggi i [consigli](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) degli organizzatori delle passate edizioni de L'Ora del Codice. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Guarda la registrazione del nostro webinar [Guida per l'Educatore all'Ora del Codice](https://youtu.be/EJeMeSW2-Mw).
   * [Partecipa dal vivo a una sessione di Domande&Risposte](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) con il nostro fondatore, Hadi Partovi, per prepararti all'Ora del Codice.
-  * Visita il [Forum dell'Ora del Codice](http://forum.code.org/c/plc/hour-of-code) per ricevere consigli, opinioni e assistenza dagli altri organizzatori. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Controlla le [FAQ dell'Ora del Codice](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Cosa c'è dopo l'Ora del Codice?
@@ -129,3 +132,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

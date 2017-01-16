@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Veja abaixo um exemplo de resolução em apoio à Semana da Educação em Ciência da Computação e às suas metas, que pode ser usado pelos responsáveis pela legislação estadual e local.
 
   
@@ -13,7 +15,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 [DATA]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Dado que a tecnologia da computação é uma parte fundamental da cultura moderna e está transformando o modo como as pessoas interagem umas com as outras e com o mundo;
 
 Dado que a ciência da computação está transformando a indústria, criando novas áreas de comércio, conduzindo a inovação em todas as áreas da ciência e reforçando a produtividade nos setores econômicos estabelecidos;
 
@@ -23,7 +25,7 @@ Dado que a área da ciência da computação é uma ciência fundamental para a 
 
 Dado que o setor da tecnologia da informação está exclusivamente posicionado para ajudar na recuperação econômica por meio da pesquisa e desenvolvimento de inovações;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Dado que a perspectiva para empregos relacionados à ciência da computação é excelente, com mais de 500 mil vagas abertas para computação em todo o país;
 
 Dado que fornecer aos alunos a oportunidade de participar de atividades de ciência da computação de alta qualidade os expõe às valiosas chances que a área oferece, além de proporcionar habilidades essenciais de raciocínio que serão úteis durante toda a vida;
 
@@ -50,3 +52,5 @@ resolvido que [ASSEMBLEIA OU SENADO, ESTADO, REGIÃO, CIDADE OU CONSELHO ESCOLAR
 (4) incentiva legisladores a remover os obstáculos que impedem que as aulas de ciência da computação sejam consideradas como créditos de ciências ou matemática para os requisitos de graduação;
 
 (5) incentiva oportunidades, entre elas os programas existentes de ciência da computação para representantes do sexo feminino e das minorias sociais.
+
+<%= view :signup_button %>

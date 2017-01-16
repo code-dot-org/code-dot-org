@@ -1,5 +1,10 @@
 import $ from 'jquery';
-var processMarkdown = require('marked');
+import processMarkdown from 'marked';
+import renderer from "./util/StylelessRenderer";
+import FeedbackBlocks from './feedbackBlocks';
+
+import { trySetLocalStorage } from './utils';
+
 var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
 
@@ -35,6 +40,8 @@ var msg = require('@cdo/locale');
  * @property {string} hintId
  * @property {string} hintClass
  * @property {string} hintType
+ * @property {string} ttsUrl
+ * @property {string} ttsMessage
  *
  * @typedef {Object} UnfinishedHint
  * @augments HintData
@@ -110,15 +117,15 @@ authoredHintUtils.getLastAttemptRecord_ = function () {
 authoredHintUtils.recordFinishedHints_ = function (hints) {
   var finishedHintViews = authoredHintUtils.getFinishedHints_();
   finishedHintViews = finishedHintViews.concat(hints);
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify(finishedHintViews));
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify(finishedHintViews));
 };
 
 authoredHintUtils.clearUnfinishedHints = function () {
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify([]));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify([]));
 };
 
 authoredHintUtils.clearFinishedHints_ = function () {
-  localStorage.setItem('finished_authored_hint_views', JSON.stringify([]));
+  trySetLocalStorage('finished_authored_hint_views', JSON.stringify([]));
 };
 
 /**
@@ -164,7 +171,7 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
   }
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   unfinishedHintViews.push(hint);
-  localStorage.setItem('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
+  trySetLocalStorage('unfinished_authored_hint_views', JSON.stringify(unfinishedHintViews));
 };
 
 /**
@@ -174,7 +181,7 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   if (!nextAttemptRecord) {
     return;
   }
-  localStorage.setItem('last_attempt_record', JSON.stringify(nextAttemptRecord));
+  trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
   var finishedHintViews = unfinishedHintViews.map(function (hint){
@@ -235,10 +242,12 @@ authoredHintUtils.submitHints = function (url) {
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
   var hints = blocks.map(function (block) {
-    var xmlBlock = parseXmlElement(block.blockDisplayXML);
+    var xmlBlock = parseXmlElement(FeedbackBlocks.generateXMLForBlocks([block]));
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
-      content: processMarkdown(msg.recommendedBlockContextualHintTitle()),
+      content: processMarkdown(msg.recommendedBlockContextualHintTitle(),
+          { renderer }),
+      ttsMessage: msg.recommendedBlockContextualHintTitle(),
       block: xmlBlock,
       hintId: "recommended_block_" + blockType,
       hintClass: 'recommended',
@@ -267,6 +276,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
+      ttsUrl: hint.tts_url,
       alreadySeen: false
     };
   });

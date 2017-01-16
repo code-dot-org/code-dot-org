@@ -1,22 +1,26 @@
 * * *
 
-Tytuł: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
+title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
+
+<%= view :signup_button %>
 
 # Jak uczyć jednej Godziny Kodowania po szkole
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Wszystkie samouczki Godziny Kodowania:**
 
   * Wymagają od organizatorów niewielkiego czasu na przygotowanie
   * Są samo wyjaśniające - pozwalają uczniom pracować we własnym tempie i na własnym poziomie przygotowania
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -42,7 +46,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 **Pokaż inspirujący film:**
 
   * Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-  * [Wideo inaugurujące Godzinę Kodowania 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub < % if @country == 'uk' %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) < % else %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+  * [Wideo inaugurujące Godzinę Kodowania 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub <% if @country == 'uk' %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Wideo Godzina Kodowania 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
   * Znajdź więcej inspirujących filmów [tutaj](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
@@ -60,7 +64,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 **Skieruj uczestników na aktywności**
 
-  * Napisz link do samouczka na tablicy. Znajdź link wymieniony wśród [informacji dla Twoich wybranych samouczków](%= resolve_url('https://code.org/learn') %) pod liczbą uczestników.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -70,7 +74,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 **Co zrobić, jeśli ktoś kończy wcześniej?**
 
-  * Zachęć uczestników, by spróbowali innej aktywności w ramach Godziny Kodowania tutaj [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Lub poproś tych, którzy skończyli wcześniej, by pomogli tym, którzy mają problemy.
 
 [col-33]
@@ -114,11 +118,10 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## Inne zasoby Godziny Kodowania dla nauczycieli:
 
-  * Użyj tego [szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx) do zorganizowania swojej Godziny Kodowania.
-  * Sprawdź [najlepsze praktyki](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) organizatorów poprzednich Godzin Kodowania. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Obejrzyj nagranie naszego [Przewodnika edukatora z seminarium o Godzinie Kodowania](https://youtu.be/EJeMeSW2-Mw).
   * [Weź udział na żywo w Q & A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) z naszym założycielem, Hadi Partovi, aby przygotować się do Godziny Kodowania.
-  * Odwiedź [Forum Godziny Kodowania](http://forum.code.org/c/plc/hour-of-code), aby znaleźć porady, wyjaśnienia i wsparcie od innych organizatorów. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co będzie się działo po Godzinie Kodowania?
@@ -127,3 +130,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Zachęcaj uczniów do kontynuowania [nauki online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Weź udział](%= resolve_url('https://code.org/professional-development-workshops') %) w jednodniowych warsztatach, aby otrzymać instrukcje od moderatora doświadczonego w dziedzinie informatyki. (Tylko edukatorów z USA)
+
+<%= view :signup_button %>

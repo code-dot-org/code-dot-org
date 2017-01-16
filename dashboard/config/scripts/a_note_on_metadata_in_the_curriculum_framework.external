@@ -1,0 +1,22 @@
+name 'A Note On Metadata in the Curriculum Framework'
+markdown <<MARKDOWN
+# A Note On Metadata in the Curriculum Framework
+
+
+Although the term `metadata` is being introduced here with images, students should understand that most file types include metadata.  This is pointed out by the Framework under the big idea of Data:
+
+
+>- 3.2.1G Metadata is data about data. 
+- 3.2.1H Metadata can be descriptive data about an image, a Web page, or other complex objects. 
+- 3.2.1I Metadata can increase the effective use of data or data sets by providing additional information about various aspects of that data.
+
+
+At the end of lesson 3, we suggest asking students what other formats of metadata they’ve seen before.  These may include:
+
+- An internet packet (the packet contains the data that needs to be sent, but also other data like the “to” and “from” address, and packet number).
+- The dictionary used to encode text in unit 2 lesson 2. 
+- Students may have created metadata when sending numbers across the internet simulator (how many points they were going to send or chunks to expect).
+
+
+Metadata is also important for web pages.  In addition to the examples listed above, metadata can be used to store a description of the contents of a page or a list of keywords used to describe the page.  These keywords can be used by search engines to determine whether the page is relevant to a user’s search query.
+MARKDOWN

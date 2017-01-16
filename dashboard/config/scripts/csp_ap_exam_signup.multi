@@ -1,0 +1,8 @@
+name 'csp_ap_exam_signup'
+
+right 'Yes'
+right 'No'
+
+markdown <<MARKDOWN
+If you plan on taking the AP exam, do you know how to sign up for the exam at your school?
+MARKDOWN

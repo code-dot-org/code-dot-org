@@ -1,6 +1,6 @@
 import $ from 'jquery';
-var utils = require('../../utils');
-var elementUtils = require('./elementUtils');
+import * as utils from '../../utils';
+import * as elementUtils from './elementUtils';
 
 /**
  * A map from prefix to the next numerical suffix to try to
@@ -42,7 +42,7 @@ elements[ElementType.SCREEN] = require('./screen');
 elements[ElementType.CHART] = require('./chart');
 elements[ElementType.SLIDER] = require('./slider');
 
-module.exports = {
+export default {
   ElementType: ElementType,
   /**
    * Returns an element id with the given prefix which is unused within
@@ -179,5 +179,21 @@ module.exports = {
       return elements[elementType].onPropertyChange(element, name, value);
     }
     return false;
+  },
+
+  /**
+   * Handle a read of an element-specific property type. Throw an error if the
+   * property type is not recognized or there is no handler for reading
+   * element-specific properties.
+   * @param {Element} element
+   * @param {String} name Property name.
+   * @returns {*}
+   */
+  typeSpecificPropertyRead: function (element, name) {
+    const elementType = this.getElementType(element);
+    if (elements[elementType].readProperty) {
+      return elements[elementType].readProperty(element, name);
+    }
+    throw `unknown property type ${name}`;
   }
 };

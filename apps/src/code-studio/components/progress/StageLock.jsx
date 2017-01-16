@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium';
 import { connect } from 'react-redux';
-import color from '../../../color';
+import color from "../../../util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import StageLockDialog from './StageLockDialog';
 import progressStyles from './progressStyles';
@@ -10,18 +10,23 @@ import { openLockDialog, closeLockDialog, lockStage } from '../../stageLockRedux
 import { stageShape } from './types';
 
 const styles = {
+  lockSettings: {
+    ...progressStyles.whiteButton,
+    maxWidth: 240,
+    overflow: 'hidden'
+  },
   lockSettingsText: {
     marginLeft: 10
   },
   warning: {
-    position: 'relative',
-    top: 2
+    marginBottom: 5,
   },
   warnIcon: {
     color: color.red
   },
   warnText: {
-    marginLeft: 5
+    marginLeft: 5,
+    textAlign: 'left'
   }
 };
 
@@ -30,7 +35,8 @@ const StageLock = React.createClass({
     stage: stageShape,
 
     // redux provided
-    sectionsLoaded: React.PropTypes.bool.isRequired,
+    sectionId: React.PropTypes.string.isRequired,
+    sectionsAreLoaded: React.PropTypes.bool.isRequired,
     unlocked: React.PropTypes.bool.isRequired,
     saving: React.PropTypes.bool.isRequired,
     openLockDialog: React.PropTypes.func.isRequired,
@@ -39,45 +45,47 @@ const StageLock = React.createClass({
   },
 
   openLockDialog() {
-    this.props.openLockDialog(this.props.stage.id);
+    this.props.openLockDialog(this.props.sectionId, this.props.stage.id);
   },
 
   lockStage() {
-    this.props.lockStage(this.props.stage.id);
+    this.props.lockStage(this.props.sectionId, this.props.stage.id);
   },
 
   render() {
-    if (!this.props.sectionsLoaded) {
+    if (!this.props.sectionsAreLoaded) {
       return <div>{commonMsg.loading()}</div>;
     }
     return (
       <div style={{display: 'inline-block'}}>
+        {/* className used only for purposes of uitest */}
         <button
-          style={progressStyles.blueButton}
+          style={styles.lockSettings}
           onClick={this.openLockDialog}
           disabled={this.props.saving}
+          className="uitest-locksettings"
         >
           <FontAwesome icon="lock"/>
           <span style={styles.lockSettingsText}>
-            {this.props.saving ? commonMsg.saving() : commonMsg.lockSettings()}
+            {this.props.saving ? commonMsg.saving() : commonMsg.assessmentSettings()}
           </span>
         </button>
         {this.props.unlocked &&
-          <span>
+          <div>
             <button
               style={progressStyles.orangeButton}
               onClick={this.lockStage}
               disabled={this.props.saving}
             >
-              {commonMsg.lockStage()}
+              {commonMsg.lockAssessment()}
             </button>
-            <span style={styles.warning}>
+            <div style={styles.warning}>
               <FontAwesome icon="exclamation-triangle" style={styles.warnIcon}/>
               <span style={styles.warnText}>
                 {commonMsg.lockWhenDone()}
               </span>
-            </span>
-          </span>
+            </div>
+          </div>
         }
         <StageLockDialog handleClose={this.props.closeLockDialog}/>
       </div>
@@ -86,29 +94,31 @@ const StageLock = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { sectionsLoaded, sections, selectedSection, saving } = state.stageLock;
+  const { stagesBySectionId, saving } = state.stageLock;
+  const { sectionsAreLoaded, selectedSectionId } = state.sections;
   let unlocked = false;
-  if (sectionsLoaded) {
-    const currentSection = sections[selectedSection];
+  if (sectionsAreLoaded) {
+    const currentSection = stagesBySectionId[selectedSectionId];
     if (currentSection) {
-      const stageStudents = currentSection.stages[ownProps.stage.id];
+      const stageStudents = currentSection[ownProps.stage.id];
       unlocked = stageStudents.some(student => !student.locked);
     }
   }
 
   return {
+    sectionId: selectedSectionId,
     unlocked,
-    sectionsLoaded,
+    sectionsAreLoaded,
     saving
   };
 }, dispatch => ({
-  openLockDialog(stageId) {
-    dispatch(openLockDialog(stageId));
+  openLockDialog(sectionId, stageId) {
+    dispatch(openLockDialog(sectionId, stageId));
   },
   closeLockDialog() {
     dispatch(closeLockDialog());
   },
-  lockStage(stageId) {
-    dispatch(lockStage(stageId));
+  lockStage(sectionId, stageId) {
+    dispatch(lockStage(sectionId, stageId));
   }
 }))(Radium(StageLock));

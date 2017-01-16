@@ -1,11 +1,8 @@
 import {
   Direction,
   KeyCodes,
-  Position
 } from './constants';
 import CustomGameLogic from './customGameLogic';
-import codegen from '../codegen';
-import api from './api';
 require('../utils'); // Provides Function.prototype.inherits
 
 /**

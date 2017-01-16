@@ -11,9 +11,9 @@ class HintViewRequestsController < ApplicationController
 
     hint_view_request = HintViewRequest.new(hint_view_request_params.merge(user_id: current_user.id))
 
-    pairings.each do |paired_user|
+    pairing_user_ids.each do |paired_user_id|
       # Ignore errors here.
-      HintViewRequest.create(hint_view_request_params.merge(user_id: paired_user.id))
+      HintViewRequest.create(hint_view_request_params.merge(user_id: paired_user_id))
     end
 
     if hint_view_request.save

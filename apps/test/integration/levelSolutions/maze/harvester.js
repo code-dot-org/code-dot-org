@@ -147,9 +147,9 @@ module.exports = {
          '                   </statement>' +
          '                   <next>' +
          '                     <block type="harvester_ifAtCrop">' +
-         '                       <title name="LOC">Bean</title>' +
+         '                       <title name="LOC">Lettuce</title>' +
          '                       <statement name="DO">' +
-         '                         <block type="harvester_bean"></block>' +
+         '                         <block type="harvester_lettuce"></block>' +
          '                       </statement>' +
          '                     </block>' +
          '                   </next>' +

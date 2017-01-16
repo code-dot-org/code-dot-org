@@ -13,7 +13,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       if current_user
-        @enrollment.name = current_user.name
+        @enrollment.full_name = current_user.name
         @enrollment.email = current_user.email
         @enrollment.email_confirmation = current_user.email
       end
@@ -116,6 +116,11 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     @enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
     @enrollment.school_info_attributes = school_info_params
 
+    # enrollment.school should never be set when school_info.country is set. Fix this so that the following flow works:
+    #   1. user enrolls using the old format (setting enrollment.school but not school_info.country)
+    #   2. user joins using the new format (setting school_info.country)
+    @enrollment[:school] = nil if @enrollment.school_info.try(:country)
+
     if @enrollment.valid? && Digest::MD5.hexdigest(@enrollment.email) != current_user.hashed_email
       @enrollment.errors[:email] = "must match your login. If you want to use this email instead, \
         first update it in #{ActionController::Base.helpers.link_to('account settings', '/users/edit')}."
@@ -142,7 +147,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   private
 
   def mark_attended(user_id, session_id)
-    Pd::Attendance.create(teacher_id: user_id, pd_session_id: session_id)
+    Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)
   end
 
   def workshop_closed?
@@ -166,14 +171,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     ).first || Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
-      name: current_user.name,
+      full_name: current_user.name,
       email: current_user.email
     )
   end
 
   def enrollment_params
     params.require(:pd_enrollment).permit(
-      :name,
+      :first_name,
+      :last_name,
       :email,
       :email_confirmation,
       :school
@@ -182,11 +188,17 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   def school_info_params
     params.require(:school_info).permit(
+      :country,
       :school_type,
       :school_state,
-      :school_district_id,
       :school_zip,
-      :school_district_other
+      :school_district_id,
+      :school_district_other,
+      :school_district_name,
+      :school_id,
+      :school_other,
+      :school_name,
+      :full_address,
     )
   end
 end

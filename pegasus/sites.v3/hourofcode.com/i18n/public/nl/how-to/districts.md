@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your entire school district
 
 ## Zorg er voor dat iedere school deelneemt en elke leerling leert!
@@ -26,3 +28,5 @@ Het CodeUur is slechts de eerste stap op een reis naar meer informatie over hoe 
 
   * Moedig leerlingen aan om online te blijven [leren ](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Woon](<%= resolve_url('https://code.org/professional-development-workshops') %>) een 1-dag in-persoon workshop, om instructie te over programmeren van een ervaren programmeur. (Alleen VS opvoeders)
+
+<%= view :signup_button %>

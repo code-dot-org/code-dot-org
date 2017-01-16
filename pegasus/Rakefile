@@ -33,7 +33,7 @@ end
 def there_can_be_only_one(pidfile)
   check_pidfile(pidfile, TIMES_TO_TRY)
   File.open(pidfile, "w") { |f| f.puts $$ }
-  at_exit { File.unlink(pidfile) }
+  at_exit { File.unlink(pidfile) if File.exist?(pidfile) }
 end
 
 there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'
@@ -48,7 +48,7 @@ require src_dir 'database'
 Dir.glob(pegasus_dir('rake/*.rake')) {|path| load path}
 
 namespace :pegasus do
-  task :setup_db => ['db:ensure_created', 'db:migrate', 'seed:migrate'] do
+  task setup_db: ['db:ensure_created', 'db:migrate', 'seed:migrate'] do
   end
 end
 

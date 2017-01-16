@@ -9,8 +9,7 @@ var Radium = require('radium');
 
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
-var color = require('../color');
-var experiments = require('../experiments');
+var color = require("../util/color");
 
 var styles = {
   paneSection: {
@@ -53,6 +52,13 @@ var styles = {
   },
   headerButtonUnfocused: {
     backgroundColor: color.lightest_purple
+  },
+  headerButtonPressed: {
+    backgroundColor: color.white,
+    color: color.purple,
+    ':hover': {
+      color: color.white
+    }
   },
   headerButtonSpan: {
     paddingLeft: 12,
@@ -119,8 +125,9 @@ PaneSection.propTypes = {
 var PaneButton = function (props) {
   var divStyle = [
     styles.headerButton,
-    props.isRtl && styles.headerButtonRtl,
+    (props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
     props.isMinecraft && styles.headerButtonMinecraft,
+    props.isPressed && styles.headerButtonPressed,
     !props.headerHasFocus && styles.headerButtonUnfocused
   ];
   var iconStyle = [
@@ -128,15 +135,18 @@ var PaneButton = function (props) {
     props.isRtl && styles.headerButtonIconRtl,
   ];
 
+  var label = props.isPressed ? props.pressedLabel : props.label;
+
   return (
     <div
       id={props.id}
       style={divStyle}
+      onClick={props.onClick}
     >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
         <i className={props.iconClass} style={iconStyle}/>
-        <span style={styles.noPadding}>{props.label}</span>
+        <span style={styles.noPadding}>{label}</span>
       </span>
     </div>
   );
@@ -146,6 +156,10 @@ PaneButton.propTypes = {
   iconClass: React.PropTypes.string.isRequired,
   label: React.PropTypes.string.isRequired,
   isRtl: React.PropTypes.bool.isRequired,
+  leftJustified: React.PropTypes.bool,
+  isPressed: React.PropTypes.bool,
+  pressedLabel: React.PropTypes.string,
+  onClick: React.PropTypes.func,
   hiddenImage: React.PropTypes.element,
   isMinecraft: React.PropTypes.bool,
   id: React.PropTypes.string,

@@ -22,12 +22,50 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
+  def self.upgrade_service(id)
+    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
+  end
+
   def self.start_service(id)
     sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
   end
 
   def self.stop_service(id)
     sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
+  end
+
+  # We've been having problems with 'sudo service dashboard stop', where it
+  # gets hung waiting for the process to stop, but the signal never takes effect.
+  # This calls and retries stop-with-status, which will wait for a bit but
+  # return an error code if the service doesn't actually stop. It finishes with
+  # a call to the normal stop method, which will wait indefinitely, if the retries
+  # all fail - this allows us to manually go in and kill the process without needing
+  # to restart the build.
+  def self.stop_service_with_retry(id, retry_count)
+    if OS.linux? && CDO.chef_managed
+      success = false
+      (1..retry_count + 1).each do |i|
+        begin
+          if sudo('service', id.to_s, 'stop-with-status')
+            success = true
+            HipChat.log "Successfully stopped service #{id}"
+            break
+          end
+        rescue RuntimeError # sudo call raises a RuntimeError if it fails
+          HipChat.log "Service #{id} failed to stop, retrying (attempt #{i})"
+          next
+        end
+      end
+      unless success
+        # Alert the relevant room that the service may be hung...
+        HipChat.log "Could not stop #{id} after #{retry_count + 1} attempts"
+        # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
+        HipChat.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
+          "log into the server and manually stop the process. The build will resume automatically "\
+          "once the #{id} has stopped."
+        stop_service(id)
+      end
+    end
   end
 
   def self.restart_service(id)
@@ -73,6 +111,7 @@ module RakeUtils
       error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message
     end
+    0
   end
 
   def self.exec_in_background(command)
@@ -134,6 +173,7 @@ module RakeUtils
   end
 
   def self.git_push
+    system 'git', 'pull', '--rebase', '--autostash', 'origin', git_branch # Rebase local commit(s) if any new commits on origin.
     system 'git', 'push', 'origin', git_branch
   end
 
@@ -167,7 +207,7 @@ module RakeUtils
   def self.ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      system 'rm', '-f', target if(current || File.file?(target))
+      system 'rm', '-f', target if current || File.file?(target)
       system 'ln', '-s', source, target
     end
   end
@@ -183,14 +223,12 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
+    sudo = CDO.npm_use_sudo ? 'sudo' : ''
     commands = []
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands << 'sudo' if CDO.npm_use_sudo
-    commands << 'npm'
-    commands << 'install'
-    commands << '--quiet'
+    commands += "#{sudo} yarn".split
     commands += args
-    RakeUtils.system *commands
+    RakeUtils.system(*commands)
   end
 
   # Installs list of global npm packages if not already installed
@@ -209,10 +247,12 @@ module RakeUtils
       RakeUtils.system 'sudo ln -s -f /usr/bin/nodejs /usr/bin/node'
       RakeUtils.system 'sudo npm install -g npm@2.9.1'
       RakeUtils.npm_install_g 'grunt-cli'
+      RakeUtils.npm_install_g 'yarn'
     elsif OS.mac?
       RakeUtils.system 'brew install node'
       RakeUtils.system 'npm', 'update', '-g', 'npm'
       RakeUtils.system 'npm', 'install', '-g', 'grunt-cli'
+      RakeUtils.system 'npm', 'install', '-g', 'yarn'
     end
   end
 
@@ -227,14 +267,14 @@ module RakeUtils
   def self.sudo_ln_s(source, target)
     current = File.symlink?(target) ? File.readlink(target) : nil
     unless source == current
-      sudo 'rm', '-f', target if(current || File.file?(target))
+      sudo 'rm', '-f', target if current || File.file?(target)
       sudo 'ln', '-s', source, target
     end
   end
 
   # Uploads local file to S3, leaving a .fetch file pointing to it at the given path, and removes original file
   def self.replace_file_with_s3_backed_fetch_file(local_file, destination_local_path, params={})
-    new_fetchable_url = self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params)
+    new_fetchable_url = upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params)
     FileUtils.remove_file(local_file)
     new_fetchable_url
   end
@@ -266,6 +306,71 @@ module RakeUtils
     total_seconds = total_seconds.to_i
     minutes = (total_seconds / 60).to_i
     seconds = total_seconds - (minutes * 60)
-    "%.1d:%.2d minutes" % [minutes, seconds]
+    format("%.1d:%.2d minutes", minutes, seconds)
+  end
+
+  # Captures all stdout and stderr within a block, including subprocesses:
+  # - redirect STDOUT and STDERR streams to a pipe
+  # - have a background thread read from the pipe
+  # - store data in a StringIO
+  # - execute the block
+  # - revert streams to original pipes and return output
+  def self.capture(&block)
+    old_stdout = STDOUT.clone
+    old_stderr = STDERR.clone
+    pipe_r, pipe_w = IO.pipe
+    pipe_r.sync = true
+    output = StringIO.new('', 'w')
+    reader = Thread.new do
+      begin
+        loop do
+          output << pipe_r.readpartial(1024)
+        end
+      rescue EOFError
+      end
+    end
+    STDOUT.reopen(pipe_w)
+    STDERR.reopen(pipe_w)
+    yield
+  ensure
+    STDOUT.reopen(old_stdout)
+    STDERR.reopen(old_stderr)
+    pipe_w.close
+    reader.join
+    pipe_r.close
+    return output.string # rubocop:disable Lint/EnsureReturn
+  end
+
+  #
+  # threaded_each provide a simple way to process an array of elements using multiple threads.
+  # create_threads is a helper for threaded_each.
+  #
+  def self.create_threads(count)
+    [].tap do |threads|
+      count.times do
+        threads << Thread.new do
+          yield
+        end
+      end
+    end
+  end
+
+  def self.threaded_each(array, thread_count=2)
+    # NOTE: Queue is used here because it is threadsafe - it is the ONLY threadsafe datatype in base ruby!
+    #   Without Queue, the array would need to be protected using a Mutex.
+    queue = Queue.new.tap do |q|
+      array.each do |i|
+        q << i
+      end
+    end
+
+    threads = create_threads(thread_count) do
+      until queue.empty?
+        next unless item = queue.pop(true) rescue nil
+        yield item if block_given?
+      end
+    end
+
+    threads.each(&:join)
   end
 end

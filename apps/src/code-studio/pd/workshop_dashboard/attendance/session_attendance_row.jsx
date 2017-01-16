@@ -3,6 +3,7 @@
  * for use in SessionAttendance.
  */
 import React from "react";
+import $ from 'jquery';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
 const styles = {
@@ -15,35 +16,123 @@ const styles = {
 
 const SessionAttendanceRow = React.createClass({
   propTypes: {
-    sessionId: React.PropTypes.number,
+    workshopId: React.PropTypes.number.isRequired,
+    sessionId: React.PropTypes.number.isRequired,
     attendance: React.PropTypes.shape({
-      name: React.PropTypes.string.isRequired,
+      first_name: React.PropTypes.string.isRequired,
+      last_name: React.PropTypes.string.isRequired,
       email: React.PropTypes.string.isRequired,
-      enrolled: React.PropTypes.bool.isRequired,
+      enrollment_id: React.PropTypes.number.isRequired,
       user_id: React.PropTypes.number,
       in_section: React.PropTypes.bool.isRequired,
       attended: React.PropTypes.bool.isRequired
     }).isRequired,
     adminOverride: React.PropTypes.bool,
-    onChange: React.PropTypes.func.isRequired,
-    isReadOnly: React.PropTypes.bool
+    isReadOnly: React.PropTypes.bool,
+    onSaving: React.PropTypes.func.isRequired,
+    onSaved: React.PropTypes.func.isRequired,
+    accountRequiredForAttendance: React.PropTypes.bool.isRequired
+  },
+
+  getInitialState() {
+    return {
+      pendingRequest: null
+    };
+  },
+
+  componentWillUnmount() {
+    if (this.state.pendingRequest) {
+      this.state.pendingRequest.abort();
+    }
   },
 
   isValid() {
-    // Must have an account and have joined the section before being marked attended,
-    // unless overridden by an admin.
-    return (this.props.attendance.user_id && this.props.attendance.in_section) || this.props.adminOverride;
+    if (!this.props.accountRequiredForAttendance) {
+      return true;
+    }
+
+    // Must have an account, and either have joined the section or
+    // be overridden by an admin (which will join the section on the backend).
+    return this.props.attendance.user_id && (this.props.attendance.in_section || this.props.adminOverride);
   },
 
   handleClickAttended() {
     if (this.isValid()) {
-      this.props.onChange();
+      if (this.props.attendance.attended) {
+        this.deleteAttendance();
+      } else {
+        this.setAttendance();
+      }
     }
+  },
+
+  getApiUrl() {
+    const {workshopId, sessionId} = this.props;
+
+    if (this.props.accountRequiredForAttendance) {
+      const userId = this.props.attendance.user_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/user/${userId}`;
+    } else {
+      const enrollmentId = this.props.attendance.enrollment_id;
+      return `/api/v1/pd/workshops/${workshopId}/attendance/${sessionId}/enrollment/${enrollmentId}`;
+    }
+  },
+
+  setAttendance() {
+    let url = this.getApiUrl();
+    if (this.props.adminOverride) {
+      url += '?admin_override=1';
+    }
+
+    this.save(
+      'PUT',
+      url,
+      {
+        in_section: this.props.accountRequiredForAttendance,
+        attended: true
+      }
+    );
+  },
+
+  deleteAttendance() {
+    this.save(
+      'DELETE',
+      this.getApiUrl(),
+      {
+        attended: false
+      }
+    );
+  },
+
+  // Saves via the specified method and url, merging in the newAttendanceValues on success.
+  save(method, url, newAttendanceValues) {
+    const pendingRequest = $.ajax({
+      method,
+      url,
+      dataType: "json"
+    }).done(() => {
+      // Clone attendance, merge the new values, and send upstream.
+      this.props.onSaved({
+        ...this.props.attendance,
+        ...newAttendanceValues
+      });
+    }).fail(() => {
+      // Tell the parent we failed to save.
+      this.props.onSaved({
+        error: true
+      });
+    }).always(() => {
+      this.setState({pendingRequest: null});
+    });
+
+    // Tell the parent we are saving.
+    this.setState({pendingRequest});
+    this.props.onSaving();
   },
 
   renderAttendedCellContents: function () {
     const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
-    if (this.props.isReadOnly) {
+    if (this.props.isReadOnly || this.state.pendingRequest) {
       return (
         <div>
           <i className={checkBoxClass}/>
@@ -60,11 +149,15 @@ const SessionAttendanceRow = React.createClass({
     if (!this.isValid()) {
       const tooltip = (
         <Tooltip id={0}>
-          Teachers must have a Code Studio account and join the section before they can be marked attended.
+          {this.props.adminOverride ?
+            'Even in admin override mode, the teacher must have a Code Studio account.' :
+            'Teachers must have a Code Studio account and join the section before they can be marked attended.'
+          }
+
         </Tooltip>
       );
       return (
-        <OverlayTrigger overlay={tooltip} placement="left" delayShow={500}>
+        <OverlayTrigger overlay={tooltip} placement="left" delayShow={100}>
           {contents}
         </OverlayTrigger>
       );
@@ -77,20 +170,26 @@ const SessionAttendanceRow = React.createClass({
     return (
       <tr className={this.props.attendance.attended ? 'success' : null}>
         <td>
-          {this.props.attendance.name}
+          {this.props.attendance.first_name}
+        </td>
+        <td>
+          {this.props.attendance.last_name}
         </td>
         <td>
           {this.props.attendance.email}
         </td>
-        <td>
-          {this.props.attendance.enrolled ? "Yes" : "No"}
-        </td>
-        <td>
-          {this.props.attendance.user_id ? "Yes" : "No"}
-        </td>
-        <td>
-          {this.props.attendance.in_section ? "Yes" : "No"}
-        </td>
+        {
+          this.props.accountRequiredForAttendance &&
+          <td>
+            {this.props.attendance.user_id ? "Yes" : "No"}
+          </td>
+        }
+        {
+          this.props.accountRequiredForAttendance &&
+          <td>
+            {this.props.attendance.in_section ? "Yes" : "No"}
+          </td>
+        }
         <td>
           {this.renderAttendedCellContents()}
         </td>

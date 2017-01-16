@@ -67,7 +67,12 @@ Resources:
                   - "ec2:CreateTags"
                   - "ec2:DescribeSnapshots"
                   - "ec2:DeleteSnapshot"
+                  - "ec2:DescribeInstances"
                 Resource: "*"
+              # allow recursive calls
+              - Effect: Allow
+                Action: ['lambda:InvokeFunction']
+                Resource: '*'
   VpcClassicLink:
     Type: AWS::Lambda::Function
     Properties:
@@ -101,6 +106,36 @@ Resources:
                   - "ec2:EnableVpcClassicLink"
                   - "ec2:EnableVpcClassicLinkDnsSupport"
                   - "ec2:DisableVpcClassicLinkDnsSupport"
+                Resource: "*"
+  CountASG:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Returns the current number of InService instances in an Auto Scaling Group.'
+      FunctionName: CountASG
+      Code:
+        ZipFile: <%=js.call('count_asg.js')%>
+      Handler: index.handler
+      Runtime: nodejs
+      Timeout: 30
+      Role: {'Fn::GetAtt': [CountASGRole, Arn]}
+  CountASGRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: ['sts:AssumeRole']
+            Effect: Allow
+            Principal: {Service: [lambda.amazonaws.com]}
+      Path: '/'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"]
+                Resource: "arn:aws:logs:*:*:*"
+              - Effect: Allow
+                Action: ["autoscaling:DescribeAutoScalingGroups"]
                 Resource: "*"
 Outputs:
   LookupStackOutputs:

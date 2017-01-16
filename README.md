@@ -46,7 +46,7 @@ The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.
 * Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
 * Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
 
-### [code-studio](./code-studio)
+### [code-studio](./apps/src/code-studio)
 
 JavaScript code specific to our **Code Studio** learning platform.  This also becomes a static package served by dashboard, and is tightly coupled to dashboard code.
 
@@ -60,13 +60,11 @@ JavaScript code specific to our **Code Studio** learning platform.  This also be
 * In addition, several sections of the repository have their own documentation:
   * [apps/README](./apps/README.md)
   * [blockly-core/README](./blockly-core/README.md)
-  * [code-studio/README](./code-studio/README.md)
 
 ### Everything else
 
 * **aws**: Configuration and scripts that manage our deployments.
 * **bin**: Developer utilties.
-* **blockly-core**: Our custom version of [Google Blockly](https://developers.google.com/blockly/), the visual programming language used for many of our interactive tutorials.
 * **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.

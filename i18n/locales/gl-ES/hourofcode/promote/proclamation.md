@@ -4,49 +4,53 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Vexa abaixo un exemplo de resolución en apoio á Semana da Educación en informática e as súas metas, que pode ser usado polos responsábeis da lexislación autonómica e local.
 
   
-[RESOLUCIÓN OU PROCLAMACIÓN ### DE ASEMBLEA, ESTADO, AUTONOMÍA OU CIDADE] – Dado que a Semana da Educación en informática destaca o papel fundamental que a informática desempeña na transformación da nosa sociedade, e como a informática posibilita a inovación e crea oportunidades económicas;
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
-[### RESOLUCIÓN DE ASEMBLEA OU SENADO]
+[HOUSE OR SENATE RESOLUTION ###]
 
-[DATA]
+[DATE]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-Dado que a informática está transformando a indústria, creando novas áreas de comercio, conducindo a inovación en todas as áreas da ciencia e reforzando a produtividade nos sectores económicos estabelecidos;
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-Dado que a área da informática sustenta o sector da tecnoloxía da información da nosa economía que, pola súa vez, é un grande contribuidor para a produción econômica da Galicia;
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Dado que a área da informática é unha ciencia fundamental para a era dixital;
+Whereas the field of computer science is a foundational science for the digital age;
 
-Dado que o sector da tecnoloxía da información está exclusivamente posicionado para axudar na recuperación económica por meio da pesquisa e desenvolvimento de inovacións;
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Dado que fornecer aos alumnos a oportunidade de participar de actividades de informática de alta calidade os expón ás valiosas oportunidadees que a área ofrece, alén de proporcionar habilidades esenciais de raciocinio que serán útiles durante toda a vida;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Dado que todos os alumnos merecen unha preparación eficiente para a educación en informática, e iso inclúe o acceso a profesores cualificados, tecnoloxías e currículo adecuado á idade, necesarios para aprender a informática nos niveis fundamentais e secundarios da educación;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Dado que a informática precisa lidar con desafíos, entre eles o de facer as aulas de informática seren tidas en conta como requisitos de graduación do ensino medio e ofrecer desenvolvemento profesional para os profesores de informática;
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-Dado que participar de unha Hora do Código durante a Semana da Educação en informática pode ser útil para desmistificar a área desta ciencia e incentivar máis alumnos a levar adiante os estudos de informática;
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Dado que a área da informática debe enfrentar obstáculos significativos relacionados á desigualdade social, o que inclúe atraer maior participación de representantes do sexo feminino e das minorias sociais para todos os niveis e divisións;
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Dado que Grace Murray Hopper, unha das primeiras mulleres da área da informática, desenvolveu novas linguaxes de programación e foi a pioneira nos padróns dos sistemas computacionais que constituíron o punto de partida para moitos avances da informática; e
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Dado que a semana de <%= campaign_date('start-long') %>, en homenaxe ao aniversario de Grace Hopper, foi designada como a "Semana da Educación en informática": fica, portanto
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
-Resolvido que [ASEMBLEA OU SENADO, ESTADO, AUTONOMÍA, CIDADE OU CONSELLO ESCOLAR] --
+Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) apoia a designación da Semana da Educación en informática (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) estimula a escolas, educadores, pais e lexisladores a participar da Semana da Educación en informática, permitindo que os seus alumnos participen da Hora do Código;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) incentiva a escolas, profesores, investigadores, universidades, líderes empresariais e lexisladores a identificar mecanismos para que os profesores reciban un desenvolvemento profesional avanzado, a fin de ofrecer experiencias de aprendizaxe sustentábeis en informática para todos os niveis educacionais e estimular aos alumnos tanto na exposición aos conceptos da informática;
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) incentiva a lexisladores a remover os obstáculos que impeden que as clases de informática sexam consideradas como créditos de ciencias ou matemáticas para os requisitos de graduación;
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) incentiva oportunidades, entre elas os programas existentes de informática para representantes do sexo feminino e das minorias sociais.
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

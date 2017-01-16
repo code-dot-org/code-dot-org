@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # 感谢注册并组织编程一小时活动！
 
-你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 We'll be in touch about new tutorials and other exciting updates. 现在你能做什么？
+你在<%= campaign_date('full') %>的帮助会让全世界的学生了解编程一小时，这有可能*改变他们的一生*。 我们会保持联系，提供新的课程和其他令人兴奋的更新。 现在你能做什么？
 
 ## 1. 帮助宣传这个活动
 
@@ -45,5 +45,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 ## 7. 计划你的编程一小时
 
 选择一个编程一小时活动并且[回顾本操作指南](%= resolve_url('/how-to') %).
+
+## 编程一小时以后
+
+想要参与比一小时更多的活动？ 看看[我们的完整课程和教师资源](%= resolve_url('https://code.org/teach')%)。这其中有各种面向小学，中学和高中教师的专业学习机会。
 
 <%= view 'popup_window.js' %>

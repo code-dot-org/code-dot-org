@@ -67,7 +67,7 @@
       not_locked: ez zegoen blokeatuta
       not_saved:
         one: 'Errore batek %{resource} hau gordetzea ekidin du:'
-        other: |
+        other: |-
           %{count} errorek %{resource} hau gordetzea ekidin dute:
           :
     invitations:

@@ -132,7 +132,8 @@ module.exports = {
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
 
         // take advantage of the fact that we expose the filesystem via
-        var assetUrl = '/base/static/flappy_promo.png';
+        var assetUrl = '/base/test/integration/assets/applab-channel-id/flappy promo.png';
+        var encodedAssetUrl = '/base/test/integration/assets/applab-channel-id/flappy%20promo.png';
         var imageInput = $("#propertyRowContainer input").last()[0];
 
         var buttonElement = $("#design_button1")[0];
@@ -155,8 +156,8 @@ module.exports = {
           setTimeout(function () {
             assert.include(
               buttonElement.style.backgroundImage,
-              assetUrl,
-              'Button background image should be flappy_promo'
+              encodedAssetUrl,
+              'Button background image should be flappy promo'
             );
 
             // Validate that the button wasn't resized
@@ -394,6 +395,27 @@ module.exports = {
         $("#resetButton").click();
         assert.equal($('#design-mode-dimmed').length, 0, 'transparency layer not visible after resetting');
         assert.equal($('#screenSelector:disabled').length, 0, 'screen select enabled after');
+
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "version history button works in design mode",
+      editCode: true,
+      xml: '',
+      runBeforeClick: function (assert) {
+        $("#designModeButton").click();
+        assert.equal($('#design-mode-versions-header').is(':visible'), true,
+          'version history button is visible');
+
+        $('#design-mode-versions-header').click();
+        assert.equal($('.dialog-title:visible').text(), "Version History",
+          'version history dialog is visible');
 
         Applab.onPuzzleComplete();
       },
@@ -1167,7 +1189,7 @@ module.exports = {
         assert.equal(designModeViz.find('#design_button1').length, 0, "button was deleted");
 
         // Drag image out of the app towards the bottom and verify element got deleted
-        dragElement(image[0], 0, 500);
+        dragElement(image[0], 0, 550);
         assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
 
         // Drag label out of the app towards the right and bottom and verify element got deleted
@@ -1179,14 +1201,14 @@ module.exports = {
         text_input = designModeViz.find('#design_text_input1');
         assert.equal(text_input.length, 1, "text input was not deleted");
 
-         // Drag the text input slightly outside of the app and verify element is pushed back in
+        // Drag the text input slightly outside of the app and verify element is not pushed back in
         dragElement(text_input[0], 50, 230);
         text_input = designModeViz.find('#design_text_input1');
         assert.equal(text_input.length, 1, "text input was not deleted");
-        assert.equal(text_input.parent().position().left, 120, "text input element left position is 120");
-        assert.equal(text_input.parent().position().top, 420, "text input element top position is 210");
-        assertPropertyRowValue(4, 'x position (px)', 120, assert, "text input x pos property value is 120");
-        assertPropertyRowValue(5, 'y position (px)', 420, assert, "text input y pos property value is 420");
+        assert.equal(text_input.parent().position().left, 160, "text input element left position is 160");
+        assert.equal(text_input.parent().position().top, 440, "text input element top position is 440");
+        assertPropertyRowValue(4, 'x position (px)', 160, assert, "text input x pos property value is 160");
+        assertPropertyRowValue(5, 'y position (px)', 440, assert, "text input y pos property value is 440");
 
         // Drag the text input outside of the app and verify it got deleted
         dragElement(text_input[0], 210, 50);

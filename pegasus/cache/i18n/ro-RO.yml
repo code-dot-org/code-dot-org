@@ -4,10 +4,10 @@
   'yes': Da
   'no': Nu
   select_language: Te rugăm selectează limba ta
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Curând, Code.org va elimina suportul pentru Internet Explorer
+    8, 9 și 10. Vă rugăm să faceţi upgrade la un browser modern.
+  upgrade_ie_message_csedweek: Curând, CSEdWeek.org va elimina suportul pentru Internet
+    Explorer 8, 9 și 10. Vă rugăm să faceţi upgrade la un browser modern.
   upgrade_ie_link: Află mai mult
   en: Tehnologia computerului si programare
   computer_science_edweek: Săptămâna Educatiei in Tehnologia computerului si programare
@@ -36,8 +36,11 @@
   twentyhours_text: Ai terminat prima ta Oră de Cod? Învață mai multe despre informatica
     de bază și conceptele programării în cadrul cursului următor.
   og_title: Fiecare copil merită o portunitate
-  og_description: Fiecare student în fiecare școală merită o șansă de a studia informatica.
-    Schimba totul.
+  og_description: Hour of Code este o mişcare globală care ajunge la zeci de milioane
+    de elevi si studenţi din peste 180 de ţări şi peste 45 de limbi vorbite.
+  csedweek_og_title: Ora de Cod este aici
+  csedweek_og_description: Hour of Code este o mişcare globală care ajunge la zeci
+    de milioane de elevi si studenţi din peste 180 de ţări şi peste 40 de limbi vorbite.
   hoc2014_heading: Alătură-te <a href="http://hourofcode.com"> Orei de cod</a> <br/>
     8-14 decembrie, 2014 <br/>
   hoc2014_students: Elevi
@@ -55,7 +58,7 @@
   csedweek_map_search_reset: Resetează
   csedweek_map_legend_title: Legenda
   csedweek_map_legend_event: Evenimentul Hour of Code
-  csedweek_map_legend_cs_tech_jam: Blocaj CS Tech
+  csedweek_map_legend_cs_tech_jam: Eveniment special
   cded_sign_up: "Înregistrează-te"
   cded_try_it: "Încearcă"
   try_now: "Încearcă acum"
@@ -86,10 +89,10 @@
   congratulations_volunteer: 'Felicitari: acum, ca ai incercat Ora de Programare,
     <a href="https://code.org/volunteer">înscrie-te pentru a face voluntariat intr-o
     clasa</a> si pentru a ajuta elevii sa invete o Ora de Programare!'
-  congratulations_on_completing_course1: Felicitări pentru finalizarea %{course}
-  congratulations_on_completing_course2: Felicitări pentru finalizarea %{course}
-  congratulations_on_completing_course3: Felicitări pentru finalizarea %{course}
-  congratulations_on_completing_course4: Felicitări pentru finalizarea %{course}
+  congratulations_on_completing_course1: Felicitări pentru finalizarea cursului 1
+  congratulations_on_completing_course2: Felicitări pentru finalizarea cursului 2
+  congratulations_on_completing_course3: Felicitări pentru finalizarea cursului 3
+  congratulations_on_completing_course4: Felicitări pentru finalizarea cursului 4
   congratulations_on_completing_accelerated: Felicitări pentru finalizarea Cursului
     Accelerat
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
@@ -99,107 +102,116 @@
   view_course: Vizualizare curs
   view_unit: Vizualizare Lectie
   make_app: Creează o aplicatie
-  congrats_guest_speaker_title: Find a guest speaker for your classroom
-  congrats_guest_speaker_desc: Now that your students have finished a computer science
-    course, consider celebrating and connecting it to things they can build in the
-    real world by inviting a guest speaker to your classroom. You can use our map
-    of volunteers to contact local volunteers to visit your classroom, or search in
-    any city to find computer science students or technical professionals who are
-    ready to inspire your students remotely, via video chat.
-  congrats_guest_speaker_cta: Find a guest speaker
-  congrats_third_party_title: Use your new skills with these apps and websites
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Note K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
-  third_party_platform_all: 'Platform: Web, iPad & Android'
-  third_party_platform_mobile: 'Platform: iPad & Android'
-  third_party_platform_web: 'Platform: Web'
-  third_party_price_varies: 'Price: Plans vary'
-  third_party_price_free: 'Price: Free'
-  third_party_price_299: 'Price: $2.99/download'
-  third_party_price_individual: 'Individual Price: Free Trial & $25/month'
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
-  third_party_tynker_btn_site: Visit Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
-  third_party_scratchjr_btn_curriculum: Download Scratch Jr. Curriculum
-  third_party_scratchjr_btn_site: Visit Scratch Jr.
-  third_party_scratch_desc: With Scratch, you can program your own interactive stories,
-    games, and animations and share your creations with others in the online community.
-    Scratch helps young people learn to think creatively, reason systematically, and
-    work collaboratively — essential skills for life in the 21st century.
-  third_party_scratch_btn_curriculum: Download Scratch Curriculum
-  third_party_scratch_btn_forum: Scratch Educator Forum
-  third_party_scratch_btn_site: Visit Scratch
-  third_party_lightbot_desc: In Lightbot, students must program a robot with commands
-    to solve puzzles. Students may play the game in the Browser (requires Flash Player),
-    or on Android or iOS devices. Students play the initial set of “Basic” levels
-    in Lightbot. They will learn how to tell a computer what to do with a series of
-    basic commands and gain the general process by which computer programs are written.
-  third_party_lightbot_btn_curriculum: Download Lightbot Curriculum
-  third_party_lightbot_btn_site: Visit Lightbot
-  third_party_khan_desc: Learn how to program drawings, animations, and games using
-    JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You
-    can share whatever you create, explore what others have created and learn from
-    each other!
-  third_party_khan_btn_learn: Learn CS with Khan Academy
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  third_party_appinv_desc: MIT App Inventor is a block-based programming tool that
-    allows everyone, even novices, to start programming and build fully functional
-    apps for Android devices. Newcomers to App Inventor can have their first app up
-    and running in an hour or less, and can program more complex apps in significantly
-    less time than with more traditional, text-based languages.
-  third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
-  third_party_appinv_btn_forum: App Inventor 2 Forum
-  third_party_appinv_btn_site: Visit App Inventor 2
-  third_party_codehs_desc: CodeHS introduces the building blocks of programming with
-    short videos, example code, and lots of programming exercises that make coding
-    fun and accessible for beginners. With CodeHS, you can get the help that every
-    new programmer needs to work through problems and keep learning. Our tutors are
-    everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
-  third_party_codecademy_desc: We are rethinking education from the bottom up. The
-    web has rethought nearly everything - commerce, social networking, healthcare,
-    and more. We are building the education the world needs - the first truly net
-    native education.
-  third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
-  third_party_codecademy_btn_site: Visit Codecademy
-  third_party_organization: Organization
+  congrats_guest_speaker_title: Caută un speaker pentru clasa ta
+  congrats_guest_speaker_desc: Acum, că studenţii dumneavoastră au terminat un curs
+    de tehnologia computerelor, ia în considerare sărbătorirea şi conectarea teoriei
+    la lucrurile care se pot construi în lumea reală prin invitarea unui speaker in
+    clasa dvs. Puteţi utiliza harta noastră de voluntari pentru a contacta voluntari
+    locali să viziteze clasa dvs., sau să căutaţi în orice oraş pentru a găsi studenţi
+    la tehnologia computerelor sau profesionişti tehnici care sunt gata să ii inspire
+    pe elevii dumneavoastră la distanţă, prin intermediul video chat-ul de contact.
+  congrats_guest_speaker_cta: Cauta un speaker
+  congrats_third_party_title: Folosiţi-vă noile abilităţi cu aceste aplicaţii şi site-uri
+    web
+  third_party_gradelevel_kto8: Clasele I-VIII
+  third_party_gradelevel_kto2: Clasele I-II
+  third_party_gradelevel_2to8: Clasele II-VIII
+  third_party_gradelevel_4to12: Clasele 4-12
+  third_party_gradelevel_5to12: Gradele 5-12
+  third_party_gradelevel_6plus: Gradele 6+
+  third_party_gradelevel_8plus: Gradele 8+
+  third_party_platform_all: 'Platformă: Web, iPad & Android'
+  third_party_platform_mobile: 'Platformă: iPad & Android'
+  third_party_platform_web: 'Platformă: Web'
+  third_party_price_varies: 'Pret: Variază'
+  third_party_price_free: 'Pret: gratuit'
+  third_party_price_299: 'Pret: 2,99 $/ descărcare'
+  third_party_price_individual: 'Preț individual: Perioadă gratuită de încercare &
+    $25/lună'
+  third_party_price_school: 'Preț școlar: Gratuit & Pro la $2500+'
+  third_party_tynker_desc: Platforma Tynker pentru utilizarea calculatorului într-un
+    mod creativ ajută copiii să-și dezvolte gândirea calculativă și abilitățile de
+    programare într-un mod distractiv, intuitiv și imaginativ. Limba noastră inovativă
+    de programare vizuală, cursurile parcurse într-un ritm propriu și activitățile
+    de programare bazate pe jocuri oferă o introducere ușoară domeniul programării
+    și permit copiilor să inoveze și să creeze.
+  third_party_tynker_btn_curriculum: "Încercați Curriculum de la Tynker pentru primii
+    cititori"
+  third_party_tynker_btn_site: Vizitaţi Tynker
+  third_party_scratchjr_desc: Scratch Jr. este un limbaj de programare introductiv,
+    care permite copiilor (vârsta 5-7) Sa creeze propriile lor poveşti interactive
+    şi jocuri. Copiii pun împreună blocuri grafice de programare pentru a face personajele
+    să se mute, să sară, să danseze şi să cânte. Copiii pot modifica personajele în
+    editorul de desen, să adauge propriile lor voci şi sunete, chiar insera fotografii
+    realizate de ei înşişi - apoi să utilizeze blocuri de programare pentru a aduce
+    personajele la viață.
+  third_party_scratchjr_btn_curriculum: Descarca Scratch Jr. Curriculum
+  third_party_scratchjr_btn_site: Vizitaţi Scratch Jr.
+  third_party_scratch_desc: Cu Scratch, poți programa propriile povești, jocuri și
+    animații interactive - și să împărtăsești creațiile tale cu alte persoane din
+    comunitatea online. Scratch îi învață pe tineri să gândească creativ, să motiveze
+    sistematic, să lucreze colaborativ - abilități esențiale pentru viață în secolul
+    21. Scratch este un proiect al Lifelong Kindergarten Group din cadrul Mit Media
+    Lab, oferit gratuit.
+  third_party_scratch_btn_curriculum: Descarcă Scratch Curriculum
+  third_party_scratch_btn_forum: Forum Educator Scratch
+  third_party_scratch_btn_site: Vizitaţi Scratch
+  third_party_lightbot_desc: În Lightbot, elevii trebuie să program un robot cu comenzi
+    pentru a rezolva puzzle-uri. Elevii pot juca acest joc în browser (necesită Flash
+    Player) sau pe dispozitive Android sau iOS. Elevii bor juca setup iniţial de niveluri
+    "De bază" în Lightbot. Ei vor învăţa cum să-i spuna unui computer ce să facă cu
+    o serie de comenzi de bază şi vor învăța procesul general prin care programele
+    sunt scrise.
+  third_party_lightbot_btn_curriculum: Descarcă Lightbot Curriculum
+  third_party_lightbot_btn_site: Vizitează Lightbot
+  third_party_khan_desc: Aflaţi cum să programați desene, animatii si jocuri folosind
+    JavaScript & ProcessingJS, sau învățați cum să creați pagini web cu HTML & CSS.
+    Puteţi partaja orice creaţi, explora ceea ce alţii au creat şi să învăţați unii
+    de la alţii!
+  third_party_khan_btn_learn: "Învață CS cu Khan Academy"
+  third_party_khan_btn_forum: Forum CS Khan Academy
+  third_party_appinv_desc: MIT App Inventor este o unealtă de programare bazată pe
+    blocuri care permite oricui, chiar şi începătorilor, să înceapă să programeze
+    şi să construiască aplicaţii complet funcţionale pentru dispozitivele Android.
+    Nou-veniţii la App Inventor pot avea prima lor aplicație finalizată și funcțională
+    într-o oră sau mai puţin, şi pot programa aplicaţii mai complexe în semnificativ
+    mai puţin timp decât cu limbajele tradiţionale, bazate pe text.
+  third_party_appinv_btn_curriculum: Descărcaţi App Inventor 2 Curriculum
+  third_party_appinv_btn_forum: Forum App Inventor 2
+  third_party_appinv_btn_site: Vizitează App Inventor 2
+  third_party_codehs_desc: CodeHS introduce bazele programării cu clipuri scurte,
+    exemple de coduri, și multe exerciții de programare care fac programarea distractivă
+    și accesibilă începătorilor. Pentru școli și profesori CodeHS oferă planul de
+    învățământ, ustensile pentru profesori și PD. Pentru cei ce învață individual,
+    ajutorul poate fi obținut oricând pe drum de la o rețea de tutori.
+  third_party_codehs_btn_try: Introducere Cs Află mai mult pentru Școli
+  third_party_codecademy_desc: Noi regandim educatia de jos in sus. Internetul a regandit
+    aproape totul - comertul, retelele sociale, sanatatea si multe altele. Construim
+    educatia de care lumea are nevoie - prima educatie nativa pe internet.
+  third_party_codecademy_btn_curriculum: Descarca Curicula Codecademy
+  third_party_codecademy_btn_site: Vizitaţi Codecademy
+  third_party_organization: Organizaţie
   third_party_curriculum: Curriculum
-  third_party_pricing: Pricing
-  third_party_cost_free: Free
-  third_party_cost_5permonth: "$5/month per class"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
-  third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
-  third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
+  third_party_pricing: Prețuri
+  third_party_cost_free: Gratuit pentru studenţi şi profesori
+  third_party_cost_5permonth: 5 dolari/ luna pe clasa
+  third_party_cost_299: 2.99 dolari descarcarea
+  third_party_cost_free_399: Gratuit de încercat, $399/clasă
+  third_party_cost_free_2: Gratuit de încercat, $2/elev
+  third_party_cost_free_10: Gratuit de încercat, $9.99/ lună
+  third_party_desc_5_4to8: Aproximativ 5 lecţii, orientate spre clasele 4-8
+  third_party_desc_10to12_kto3: Aproximativ 10-12 de lecţii, orientate spre clasele
     K-3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
+  third_party_desc_11_kto5: Aproximativ 11 lectii, orientate spre clasele K-5
+  third_party_desc_10to12_kto5: Aproximativ 10-12 de lecţii, orientate spre clasele
     K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
-  third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
-  third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
-  third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
+  third_party_desc_40_4to8: Mai mult de 40 de lecţii, orientate spre clasele 4-8
+  third_party_desc_dozens_kto8: Zeci de lectii pentru toate clasele K-8
+  third_party_desc_10to15_3to12: "Între 10 & 15 lecţii, orientate spre clasele 3-12"
+  third_party_desc_25to40_3to12: La 25-40 lecţii, destinate pentru clasele 3-12
+  third_party_desc_20_2to8: Aproximativ 20 de lectii, orientate spre clasele 2-8
+  third_party_desc_7to22_5to12: "Între 7 & 22 lecţii, orientate spre clasele 5-12"
+  third_party_desc_20_4to12: Mai mult de 20 de lectii, orientate spre clasele 4-12
   enter_valid_age: Selecteaza o varsta valida
   enter_valid_email: Te rugăm să introduci o adresă de email validă
   get_a_certificate_message: "Îti vom trimite un certificat si informatii despre cum
@@ -252,19 +264,22 @@
   continue_learning_header: Continuă să înveți peste O Oră
   continue_learning_body: Există o mulţime de opţiuni.  Poţi învăța online, sau la
     o şcoală locală, sau în tabăra de vară.
+  learn_code_studio: "Încearcă un curs Code Studio"
   learn_next_level: Incearca un alt curs in Studio-ul Code
   learn_online: "Încearcă alte cursuri online"
   learn_classes: Găsește clase local
-  hoc_is_here: "#OraDeCod este aici - Hai să vezi despre ce e vorba! @codeorg"
+  learn_back_to_minecraft: Continuă să înveți cu Minecraft
+  hoc_is_here: "#HourOfCode vine din nou in 5-11 decembrie. https://youtu.be/KsOIlDT145A."
   just_did_hoc: 'Tocmai am făcut #OraDeCod - Hai să vezi despre ce e vorba! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
-  twitter_teach_cs: De ce nu se preda informatica in mai multe scoli? Putem repara
-    acest lucru. http://youtu.be/nKIu9yen5nc. Vizitati  http://code.org/ pentru a
-    invata mai mult.
+  just_did_course1: Tocmai am terminat cursul 1 - vizualizeaza-l! @codeorg
+  just_did_course2: Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg
+  just_did_course3: Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg
+  just_did_course4: Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg
+  just_did_accelerated: Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg
+  twitter_teach_cs: 9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa
+    calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: "Învață o Oră de Cod"
   beyond_hoc: Peste de O Oră
   what_gender: Ce gen sexual ai?
@@ -284,8 +299,8 @@
     Nichols Peery, Profesor'
   stats_student: '"Ştiam că acest lucru a fost o șansă <b>o dată în viața</b>."- Mariana
     Alzate, elev de clasa a cincea'
-  stats_michael: Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
-    să învețe."- Michael Clark, Profesor
+  stats_michael: '"Eu nu i-am văzut <b>niciodată</b> pe elevii mei atât de entuziasmați
+    să învețe."- Michael Clark, Profesor'
   studiobar_title: Explorează <a href='http://studio.code.org'>Studio-ul Code</a>
   studiobar_title_nolink: Explorează Studio-ul Code
   studiobar_elementary_title: Cursuri elementare
@@ -302,40 +317,40 @@
   studiobar_donate_body: Un copil învaţă pentru fiecare dolar donat
   studiobar_shop_title: Magazin
   studiobar_shop_body: Sparge stereotipurile. Poartă logo-ul nostru cu mândrie.
-  homepage_hero_text_malala: |
+  homepage_hero_text_malala: |-
     &ldquo;Provoc fetele din fiecare țară să studieze o Oră de Cod”&rdquo;
     Malala, câștigătoare a Premiului Nobel pentru Pace
   homepage_hero_text_susan: "&ldquo;Dacă puteţi schimba tehnologia, atunci puteţi
-    schimba lumea.&rdquo; \nSusan, CEO la YouTube\n"
+    schimba lumea.&rdquo; \nSusan, CEO la YouTube"
   homepage_hero_text_fistbump: "&ldquo;Nu doar vă jucați pe telefon, programați-l.&rdquo;
     Preşedintele Barack Obama"
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Copiii noștri &mdash; inclusiv fetele &mdash; au nevoie de oportunitatea de a învăța informatică.&rdquo;
     Sheryl, COO la Facebook
   homepage_hero_text_satya: "&ldquo;Informatica poate debloca cele mai bune oportunităţi
-    în lume.&rdquo; \nSatya, CEO al Microsoft\n"
-  homepage_hero_text_bosh: |
+    în lume.&rdquo; \nSatya, CEO al Microsoft"
+  homepage_hero_text_bosh: |-
     &ldquo;Dacă știi să programezi, atunci poți să decizi care este cursul vieții tale.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Aceste abilități mi-au schimbat viitorul. Și să nu mai menționăm că este și distractiv.&rdquo;
     Luna, clasa a VII-a
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Nu mi-am vazut niciodată copiii atât de entuziasmați să învețe ceva.&rdquo;
     Michael, profesor
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Informatica este un domeniu despre care nu poți știi dacă îți place sau nu înainte de a-l încerca.&rdquo;
     Jackson, clasa a VI-a
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;În programare, poți să faci orice îți trece prin minte.&rdquo;
     Maya, clasa a II-a
-  homepage_hero_text_student5: |
+  homepage_hero_text_student5: |-
     &ldquo;Informatica nu este pentru altcineva. Ea este pentru tine, aici și acum.&rdquo;
     Geraldo, profesor
-  homepage_hero_text_teacher1: |
+  homepage_hero_text_teacher1: |-
     &ldquo;Programarea stârnește creativitatea, inspirația și inovația &mdash; toate acestea sunt esențiale în orice carieră.&rdquo;
     Floresa, profesor
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;100% din elevii mei s-au înscris, implicat și participat la acest program.&rdquo;
     Adam, profesor
   homepage_hero_text_stat_loc: 2,5 milioane de fete sunt inscrise pentru a invata
@@ -344,7 +359,7 @@
   homepage_hero_text_stat_served: 'Ora de cod: #served servite'
   homepage_slot_text_hoc: Ora de Programare
   homepage_slot_text_frozen: Tărâmul de gheață cu Anna și Elsa
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Tabloul de bord al profesorilor
   homepage_slot_text_studio: Toate tutorialele noastre
   homepage_slot_text_course4: Curs 4
   homepage_slot_text_shop: Magazin
@@ -357,6 +372,7 @@
   homepage_action_text_volunteers: Cautam voluntari tehnici
   homepage_action_text_codevideo: Urmărește secvența video
   homepage_action_text_teachervideo: Urmărește secvența video
+  homepage_action_text_watchvideo: Urmărește secvența video
   homepage_action_text_girlvideo: Inspira o fata
   homepage_action_text_learn: "Începe învăţarea"
   homepage_action_text_signpetition: Semnează petiția
@@ -374,12 +390,14 @@
   homepage_banner_20k_teachers: 20000 de profesori instruiţi, şi acum predau informatică
     în sălile de clasă.
   homepage_banner_20k_teachers_link: Află mai mult
-  homepage_banner_congress: America's leaders are calling on Congress to fund K-12
-    computer science.
-  homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_congress: Liderii americani fac apel la Congres pentru a finanta
+    tehnologia computerelor si programarea in clasele k-12.
+  homepage_banner_congress_link: Adauga sprijinul tau
+  homepage_banner_emailprivacy: Facem o schimbare importantă pentru cum sprijinim
+    confidenţialitatea studentului.
+  homepage_banner_emailprivacy_link: Citeşte mai mult
+  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
+  homepage_banner_40k_teachers_link: Află mai mult
   homepage_slot_text_title_hoc: Oră de Programare
   homepage_slot_text_blurb_hoc: Oricine poate învăța. Începe astăzi
   homepage_slot_text_link_hoc: "Încearcă Ora de Programare"
@@ -394,7 +412,7 @@
   homepage_slot_text_link_othercourses: Alte cursuri online
   homepage_slot_text_title_educators: Educatori
   homepage_slot_text_blurb_educators: Predați-le elevilor dvs.
-  homepage_slot_text_link_elementary: Elementary school
+  homepage_slot_text_link_elementary: "Şcoala elementară"
   homepage_slot_text_link_middle: Gimnaziu
   homepage_slot_text_link_high: Liceu
   homepage_slot_text_link_k5: Cursuri pentru clasele I-V (primare)
@@ -405,7 +423,7 @@
   homepage_slot_text_link_stats: Vezi statistici
   homepage_slot_text_link_buy: Implică-te
   homepage_slot_text_link_donate: Fă o donație
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Tricouri, palarii & mai mult
   homepage_header_codestudio: Creațiile elevilor cu Studio-ul Code
   homepage_header_donors: Code.org mulţumește suporterilor săi
   homepage_donors_seall: Vizualizați toate
@@ -450,11 +468,13 @@
   class_submission_level_college: Facultate
   class_submission_level_vocational: Profesională
   class_submission_languages_other: Alte limbi
-  inspirational_videos_more: Mai multe <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">clipuri
-    inspirationale</a> cu modele consacrate si celebritati
+  videos_more: Mai multe <a href='%{inspiring_videos_playlist}'> videoclipuri inspirationale</a>
+    cu modele şi celebrităţi
+  careers_page_more: Mai multe <a href='%{careers_url}' target='_blank'> clipuri video
+    inspiraționale</a> cu profesioniști din domeniile tehnologiei
   playlab_choose_theme: Alege tema ta la Laboratorul de Joacă
   playlab_classic_title: Clasic
-  playlab_gumball_title: Gumball
+  playlab_gumball_title: Minunata lume a lui Gumball
   playlab_iceage_title: Epoca de gheață - În curând
   playlab_iceage_title_live: Epoca de gheață
   starwars_subtitle: Programarea unei galaxii
@@ -463,8 +483,8 @@
   starwars_javascript_specs: Doar Engleza | Browsere moderne | Varsta 11 +
   starwars_blocks_title: Blocuri
   starwars_blocks_description: Utilizează blocuri drag-drop.
-  starwars_blocks_specs: Mai multe limbi|Browsere moderne, smartphones, tablete|Varste
-    6-10
+  starwars_blocks_specs: Limbi multiple | Browsere moderne, smartphones, tablete |
+    Vârsta 6-10 ani
   starwars_platform_text: Browsere web moderne, smartphone-uri, tablete
   mc_name: Ora de Programare Minecraft
   mc_longdescription: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex intr-o
@@ -473,16 +493,82 @@
     intr-o aventura in acest univers Minecraft.
   mc_gradelevel: 'Varsta: peste 6 ani'
   mc_platformtext: Browsere web moderne, smartphone-uri, tablete
-  mc_specs: Mai multe limbi|Browsere moderne si tablete|Varstele 6+
+  mc_specs: Mai multe limbi |B rowsere moderne si tablete | Varstele 6+
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Tutoriale Hour of Code Minecraft
+  minecraft_specs: Mai multe limbi | Browsere moderne și tablete | Clasele 2+
+  minecraft_designer_description: Programeaza animale şi alte creaturi Minecraft în
+    propria ta versiune a jocului.
+  minecraft_designer_button: "Începe"
+  minecraft_adventurer_description: Utilizați codul pentru a-i duce pe Alex sau Steve
+    într-o aventură.
+  minecraft_adventurer_button: "Începe"
+  minecraft_no_internet: Nu ai Internet?
+  minecraft_download_adventurer: Descarcă versiunea offline a Minecraft Adventurer.
   minecraft_subtitle: Ora de Programare Minecraft
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  sports_page_title: Sporturi la Ora de Cod
+  sports_og_title: Tutoriale de Sport la "Ora de cod"
+  sports_og_description: Selectează între a face un joc de basketball sau un "mix
+    and match" din toate sporturile.
+  sports_title: Propgrameaza propriul joc sport
+  sports_watch_video: Urmărește secvența video
+  sports_video_title: Da-ti silinta. Oricine poate învăţa.
+  sports_select_theme: Selectati tema tutorialului
+  sports_basketball_title: Realizeaza un joc de baschet
+  sports_all_sports_title: Amesteca si potriveste sporturile
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
+  watch_inspirational_videos: Inainte sa incepi, vizioneaza unul dintre aceste videoclipuri
+    inspirationale
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspira o fata
+  video_title_cs_intro: Introducere in tehnologia computerelor
+  video_title_schools_dont_teach: Ceea ce multe scoli nu predau
+  video_title_obama: Președintele Obama despre tehnologia computerelor
+  video_title_hoc_is_here: Hour of Code este aici - Oricine poate învăţa
+  video_title_anybody_can_learn: Oricine poate învăța
+  video_title_draymond_green: Ora de Cod cu Draymond Green
+  video_title_russell_okung: Ora de Cod cu Russell Okung
+  video_title_real_madrid: Ora de Cod cu Real Madrid
+  video_title_marco_belinelli: Ora de Cod cu Marco Belinelli
+  video_title_chris_bosh: Chris Bosh despre Informatică
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
+  speak_another_language: Vorbesti o alta limba?
+  help_translate: Ajuta-ne sa traducem.
+  no_internet: Nu ai Internet?
+  download_offline: Descarca versiunea offline.
   are_you_teacher: Ești profesor?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Vizualizeazq planul de lecţie şi alte resurse pentru profesor.
   volunteer_engineer_submission_title: Inspira elevii si voluntarii pentru Ora de
     programare.
   volunteer_engineer_submission_subtitle_generic: '100.000 profesori vor gazdui o
@@ -498,18 +584,15 @@
   volunteer_engineer_submission_intro_recruit: 'Acesti profesori ar fi incantati sa
     aiba pe cineva <span style="font-family: ''Gotham 7r'', sans-serif;"> pasionati
     de informatica </span> care pot ajuta in sala de clasa sau cineva care poate <span
-    style="font-family: ''Gotham7r'', sans-serif;">inspira</span> studentii vorbindu-le
+    style="font-family: ''Gotham 7r'', sans-serif;">inspira</span> studentii vorbindu-le
     despre nenumaratele posibilitati ale informaticii(care pot fii facute prin intermediul
-    unui video chat). Daca nu esti interesat de voluntariat, <a href="%{url}">afla
-    mai multe</a> despre organizarea proprie a Orei de programare.'
+    unui video chat).'
   volunteer_engineer_submission_intro_signup: Te rugăm sa introduci următoarele informaţii,
     dacă ești un student la automatică și calculatoare sau matematică-informatică
     sau un profesionist în software. Câmpurile marcate cu un <span class="form-required-field">
     *</span> sunt obligatorii.
-  volunteer_engineer_submission_intro_links: Nu cauti sa fii voluntar?<a href="%{learn_more}">Afla
-    mai multe</a>despre cum poti organiza propriul eveniment Hour of Code si cum poti
-    gasi o scoala locala la care sa fii voluntar<a href="%{volunteer_local}">pe harta
-    noastra</a>.
+  volunteer_engineer_submission_intro_links: Esti un profesor in cautare de voluntari?
+    Gaseste un voluntar local in <a href="%{volunteer_local}">harte de voluntari</a>.
   volunteer_engineer_submission_update_information: Vă rugăm să actualizați informațiile
     dumneavoastră
   volunteer_engineer_submission_header_shared: Informatii distribuite profesorilor
@@ -529,8 +612,8 @@
   volunteer_engineer_submission_field_location_flexibility: Eu pot ajuta in timpul
     Orei de Programare prin... (selectati toate cele care se aplica)
   volunteer_engineer_submission_checkbox_after_hoc: Sunt interesat de voluntariat
-    dupa Ora de Programare
-  volunteer_engineer_submission_field_time_commitment: Angajament după Ora de Proramare
+    pentru fiecare an
+  volunteer_engineer_submission_field_time_commitment: Timpul disponibil
   volunteer_engineer_submission_field_linkedin: Profilul LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/numele_tau
   volunteer_engineer_submission_field_facebook: Profilul de Facebook
@@ -554,9 +637,9 @@
     de profesori pentru oportunitati de voluntariat (Nota: adresa ta de e-mail nu
     va fi distribuita)'
   volunteer_engineer_submission_submit: Trimite
-  volunteer_engineer_submission_thankyou: Îți mulțumim pentru actvitatea de voluntariat
-    pentru Ora de Cod. În scopul pregătirii pentru Ora de Cod și recrutării de voluntari,
-    <a href="%{url}">află mai multe aici.</a>
+  volunteer_engineer_submission_thankyou: Îți mulțumim pentru inscrierea ta ca voluntar.
+    Profesorii vor folosi <a href="%{url}">Aceasta harta</a> pentru a cauta si contacta
+    voluntari ca tine.
   volunteer_engineer_submission_commitment_uncertain: Nesigur
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 oră pe săptămână
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 ore pe săptămână
@@ -608,15 +691,13 @@
   dashboard_landing_new_k5courses: Nou! Încercaţi cursurile noastre pentru elevi din
     clasele 1-5.
   dashboard_landing_useful_links: Alte link-uri utile
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Resurse pentru clasa dvs
   dashboard_landing_office_hours: Pune personal o întrebare! Vizitează orele noastre
     video de birou lunare.
   dashboard_landing_print_certificates: Tipărește certificate pentru studenţii care
     termină acest curs
   dashboard_landing_educator_blog: Citeşte despre ştiri şi actualizări referitoare
     la materialele noastre pe Blog-ul nostru de Educator
-  dashboard_landing_smart_hints: Ajută-ne să adăugăm sugestii inteligente pentru tutorialele
-    Code.org
   dashboard_landing_video_player: "Încearcă noul nostru video player la şcoala ta"
   dashboard_landing_progress_title: Progresul clasei principale
   dashboard_landing_progress_biggest: Acesta este progresul pentru cea mai mare secţiune
@@ -631,11 +712,11 @@
     oferite de partenerii noștri.</a> Învaţă să programezi cu roboți, construiește
     pagini de web, creează propria aplicație sau explorează alte limbaje ca C++, Ruby
     sau Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_inspire: Inspiră-ți elevii cu afişe, clipuri video şi altele.
+  dashboard_landing_video_library: Utilizaţi un videoclip din libraria video a conceptelor
+    de informatica.
+  dashboard_landing_report_bug: Solicita o caracteristică sau raportează un bug.
+  dashboard_landing_teacher_forum: Alăturaţi-vă comunităţii de învăţare profesională.
   dashboard_hoc_courses: Ora De Cod pentru toate vârstele
   dashboard_hoc_courses_desc: "Încearcă oricare din aceste tutoriale, mai scurte de-o
     oră, cu elevii tăi!"
@@ -690,21 +771,24 @@
   dashboard_action_remove_confirm: "Șterge?"
   dashboard_action_done: Gata
   dashboard_action_required: necesar
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: No assessments
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
-  dashboard_assessments_summaries: Summaries
-  dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_action_print_certificates: Tipărește certificatele
+  dashboard_assessments_view: 'Vezi evaluarile in:'
+  dashboard_assessments_none: Cei mai mulţi profesori măsoara progresul elevilor lor
+    folosind tab-ul "Vezi progresul". Dacă sunteţi interesat în a da elevilor evaluări
+    suplimentare, găsiţi întrebări recomandate şi zone în planurile de lecţie. Acestea
+    sunt realizate în afara code studio.
+  dashboard_assessments_none_part2: Dacă predați un curs pentru gimnaziu sau liceu,
+    avem întrebări de evaluare disponibile ca parte a Code Studio pentru a ajuta elevii
+    să se pregătească pentru testul AP. Pentru a utiliza aceste evaluări, alocaţi
+    mai întâi cursul la clasă şi apoi alegeți cursul de sus în jos şi veţi vedea răspunsurile
+    elevilor dumneavoastră aici.
+  dashboard_assessments_summaries: Rezumate de evaluare
+  dashboard_assessments_answers: Toate răspunsurile de evaluare
+  dashboard_surveys_answers: Sondaje
+  dashboard_percent: Procent
+  dashboard_filter_by_stage: 'Filtru de scena:'
+  dashboard_filter_all: Tot
+  dashboard_download_csv: Descarca CSV
   dashboard_navigation_home_page: Pagina de pornire a profesorului
   dashboard_navigation_section_student_progress: Conturile elevilor şi progresul lor
   dashboard_navigation_section_teacher_progress: Progresul tău la curs
@@ -714,13 +798,13 @@
   dashboard_navigation_section_speakers: Informatică <br/> Invitaţi
   dashboard_navigation_all_sections: Conturile elevilor şi progresul lor
   dashboard_navigation_view_progress: Progres
-  dashboard_navigation_view_text_responses: Vizualizare text raspunsuri
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_text_responses: Răspunsuri text
+  dashboard_navigation_view_assessments: Evaluări
+  dashboard_navigation_view_assessments_surveys: Analize/studii
   dashboard_navigation_add_students: Adaugă elevi
   dashboard_navigation_manage_students: Gestionează elevi
   dashboard_navigation_lesson_plans_resources: Planuri de lecţie şi resurse
-  dashboard_navigation_view_stats: Vizualizare statistici
+  dashboard_navigation_view_stats: Statistici
   dashboard_navigation_section: 'Sectiunea: %{section_name}'
   dashboard_navigation_student: 'Elev: %{student_name}'
   dashboard_progress_not_started: Neînceput
@@ -730,12 +814,16 @@
   dashboard_progress_completed_perfect: finalizat, perfect
   dashboard_progress_furthest_level_attempted: cel mai îndepărtat nivel încercat
   dashboard_progress_submitted: transmise
-  dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: Progress information for %{student_name} in
-    %{script_name}
-  dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
-  dashboard_responses_none: No text responses
+  dashboard_progress_view: 'Vezi progresele înregistrate în:'
+  dashboard_progress_student_in_script: Progresul informaţiilor pentru %{student_name}
+    în %{script_name}
+  dashboard_progress_pair_programming: programarea pereche
+  dashboard_responses_view: 'Vizualizare raspunsuri text in:'
+  dashboard_responses_none: Cele mai multe dintre clasele noastre sunt proiectate
+    să funcţioneze pentru vârste mai mici şi nu necesită ca elevii să tasteze textul
+    ca Răspunsuri la întrebări, astfel încât nu veţi vedea raspunsuri text aici. Pentru
+    elevii mai mari şi de liceu, puteţi vedea propunerile lor la întrebări cu răspuns
+    deschis prin alegerea cursului atribuit.
   dashboard_sections_new_section: Secţiune nouă
   dashboard_sections_jumbotron_instruction: Creează secţiuni noi şi adaugă la ele
     elevi. Secțiunile te ajută să organizezi elevii în grupuri mai mici, astfel încât
@@ -744,7 +832,7 @@
   dashboard_sections_table_secret: Tip de conectare
   dashboard_sections_table_grade: Notă
   dashboard_sections_table_course: Curs
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_stage_extras: Etapa extra
   dashboard_sections_table_students: Elevi
   dashboard_sections_table_code: Cod de Secţiune
   dashboard_sections_name: Numele secţiunii
@@ -761,25 +849,38 @@
     informaţii despre cont, pentru a fi distribuite individual elevilor.
   dashboard_sections_switch_section: 'Comutare secţiune:'
   dashboard_sections_close: "Închide"
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_error_none_selected: You didn't select any students to move. Please select
-    at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_sections_move_students_desc: Selecteaza elevi pentru a trece la o nouă
+    secţiune. Mutarea studenţilor nu va sterge progresul lor.
+  dashboard_sections_one_per_teacher: Elevii pot fi numai într-o secţiune pentru fiecare
+    profesor. Elevii vor fi adăugati la această nouă secţiune şi Vor parasi secţiunea
+    lor veche.
+  dashboard_sections_move_to_section: 'Muta la secțiunea:'
+  dashboard_sections_enter_code: 'Introduceţi codul sectiunii:'
+  dashboard_sections_code_placeholder: cod de 6 caractere (ABCDEF)
+  dashboard_sections_other_section: Alt profesor
+  dashboard_sections_both_sections: Doriţi studentul(ii) să fie în ambele secţiuni?
+  dashboard_sections_yes_both: Da, vreau să copiaţi studentul(ii) pentru a fi în această
+    secțiune curentă şi o secţiune nouă
+  dashboard_sections_no_move: Nu, vreau să se mute studentul(ii) să fie doar într-o
+    secţiune nouă.
+  dashboard_sections_move_students: Muta studenţii
+  dashboard_sections_assign_hoc_script_desc: Participi la Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Vă rugăm să reţineţi că noi nu va vom
+    salva progresul în acest curs în cursul săptămânii 5-11 decembrie, din cauza traficului
+    mare pe site-ul nostru pentru Hour of Code.  Puteti realiza cursurile si darui
+    tuturor elevilor un certificat de participare. (Majoritatea profesorilor <a href='%{certificate_url}'>
+    imprima acestea în avans</a>.) <br/> <br/> Noi suntem incantati de numărul de
+    cadre didactice şi studenţi ce participă şi ne pare rău, nu vom fi capabili de
+    a salva totul.  În cazul în care clasa ta vrea să meargă mai departe, puteţi merge
+    dincolo de o oră de programare pentru a preda un curs, cum ar fi bazele siintei
+    computerului. Tabloul de bord pentru profesor vă va permite să urmăriţi progresul
+    elevului dumneavoastră in fiecare alta săptămînă a anului.
+  dashboard_sections_assign_activity: Atribuiţi un curs
+  dashboard_error_none_selected: Nu ati selectat niciun student să se mute. Vă rugăm
+    să selectaţi cel puţin un student.
+  dashboard_error_other_section: Dacă mutați elevii între propriile secţiuni, selectaţi
+    secţiunea dvs. din meniul derulant. Doar selectaţi 'Altă Secţiune ' pentru a muta
+    elevii la secțiuni diferite ale profesorilor.
   dashboard_students_add_student: Adăugare elev
   dashboard_students_add_students: Adăugare mai mulți elevi
   dashboard_students_add_multiple: 'Tastează sau adaugă cu "paste" numele elevilor
@@ -837,13 +938,13 @@
   dashboard_curriculum_high_title: Resurse pentru educatori de liceu
   dashboard_lesson_plans: Planuri de lecție
   dashboard_view_all_lesson_plans: Descarcă toate planurile de lecţie pentru Cursurile
-    1-3
+    1-4
   dashboard_course1: 'Curs 1:'
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
-  dashboard_course4: 'Curs 4 (beta): '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_course4: 'Curs 4: '
+  dashboard_unplugged: Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați
+    aceste lecţii offline</a> în clasa dvs.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: Prezentare generală Curriculum pentru clasele 1-5
   dashboard_overview: Prezentare generală
@@ -871,18 +972,18 @@
   dashboard_puzzle: Puzzle
   dashboard_question: "Întrebare"
   dashboard_response: Răspuns
-  dashboard_correctness: Correctness
-  dashboard_correctness_free_response: Free response
-  dashboard_correctness_unsubmitted: Unsubmitted
+  dashboard_correctness: Corectitudinea
+  dashboard_correctness_free_response: Răspuns gratuit
+  dashboard_correctness_unsubmitted: Retras
   dashboard_correctness_correct: Corect
-  dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
-  dashboard_status: Status
-  dashboard_multi_correct: "# multiple choice correct"
-  dashboard_multi_count: "# multiple choice"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: Submission timestamp
+  dashboard_correctness_incorrect: Incorect
+  dashboard_submission_submitted: Transmis
+  dashboard_submission_in_progress: "în curs de desfăşurare"
+  dashboard_status: Starea
+  dashboard_multi_correct: "# variante multiple corecte"
+  dashboard_multi_count: Mai multe variante de răspuns
+  dashboard_multi_correct_percent: "# variante multiple corecte"
+  dashboard_submission_timestamp: Prezentarea timestamp
   stats_hoc_2013_heading: 'Statistici incredibile de la Ora de Cod de anul trecut.
     Într-o singură săptămână:'
   stats_hoc_2013_image_alt: Statistici de la Ora de Cod din 2013
@@ -892,7 +993,8 @@
   dashboard_sections_account_creation_question: Cine creează conturile elevilor?
   dashboard_sections_password_question: Ce folosesc elevii ca "parolă"?
   dashboard_sections_picture_account_creation: O imagine atribuită de Code.org
-  dashboard_sections_word_account_creation: Un cuvânt simplu atribuit de Code.org
+  dashboard_sections_word_account_creation: O pereche de cuvinte simple atribuite
+    de Code.org
   dashboard_sections_sign_in_question: Unde se logează elevii?
   dashboard_sections_sign_in_unique: Pagină de web unică listată în tab-ul ”Gestionare
     elevi”
@@ -905,32 +1007,70 @@
   dashboard_faq: "Întrebări frecvente"
   dashboard_faq_k5: "Întrebări frecvente - clasele primare"
   dashboard_announcements: Anunțuri
-  dashboard_announce_message_fall2016_features: We spent the summer turning your feedback
-    into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-    students' progress</a> even if they're pair programming on one device. You can
-    use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-    from our CS Principles course in <i>any</i> classroom. And your students can <a
-    href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-    to encourage experimentation! Check out all our new features and let us know what
-    you think.
+  dashboard_announce_message_fall2016_features: Ne-am petrecut vara transformând feedback-ul
+    vostru în noi caracteristici. Acum, puteţi <a href="%{pp_url}" target="_blank">
+    urmări progresul Mai multor elevi </a> chiar dacă aceștia programeaza in pereche
+    pe un singur dispozitiv. Utilizaţi <a href="%{csp_widgets_url}" target="_blank">
+    cele mai bune instrumente interactive</a> la cursul nostru de CS Principles în
+    <i>orice</i> clasă. Şi elevii pot <a href="%{unused_code_url}" target="_blank">
+    păstra codul meutilizat </a> în spaţiul lor de lucru pentru a încuraja experimentarea!
+    Încearcă toate caracteristicile noastre noi şi spuneţi-ne ce credeţi.
   dashboard_announce_csp_widgets_message: CS Principles is a high school course that
     teaches several concepts including text compression, encoding images with bits
     and bytes, cryptography, and Internet protocol. Now you can use the widgets used
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Află mai mult
   dashboard_announce_try_now_button: "Încearcă acum"
-  dashboard_announce_petition: As a teacher, you're leading the way in a movement
-    to give every student in every school the opportunity to learn computer science.
-    Now, it's time to let your representatives hear from you. This week, education
-    leaders, 28 governors, and CEOs of America's largest companies joined together
-    in an open letter asking U.S. Congress to fund K-12 computer science education.
+  dashboard_announce_host_an_hour_button: Organizeaza o ora
+  dashboard_announce_watch_video_button: Urmăriţi videoclipul
+  dashboard_announce_petition: Ca profesor, sunteți liderul miscarii pentru a oferi
+    fiecarui student din fiecare şcoală oportunitatea de a învăţa informatică. Acum,
+    este timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra.
+    În această săptămână, liderii de educaţie, 28 guvernatori şi Directorii celor
+    mai mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul
+    SUA pentru a finanta calculatorul de stiinta si educaţie k-12.
   dashboard_announce_petition_button: Adaugă-ți numele
-  dashboard_announce_all: Fii la curent cu noutățile si actualizarie pe blogul cadrelor
-    noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea anunturile
-    vechi.</a>
+  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_all: Fii la curent cu noutățile si actualizarile de pe blogul
+    cadrelor noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se
+    vedea anunturile vechi.</a>
+  dashboard_announce_hoc_launch: Mii de cadre didactice în peste 180 de ţări vor începe
+    predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11
+    decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi
+    decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul
+    Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare.
+  dashboard_announce_mc_launch: Unul din tutorialele noastre cele mai populare acum
+    are o continuare! Minecraft Designer permite studenţilor sa faca regulile din
+    lumea Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o
+    împărtăşească cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest
+    tutorial cu clasa ta la Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Vă rugăm să reţineţi că noi nu salvam progresul
+    studentilor intre 3 si 11 decembrie datorită nivelului de trafic al site-ului
+    nostru. Puteţi vedea încă progresul studentului înainte de 3 decembrie.  După
+    această săptămână, vom salva progresul ca pana acum.
+  dashboard_announce_how_code_studio: Nu aveţi nevoie de nici o experienţă pentru
+    a începe predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri
+    de lecţie, programe de învățare profesionale de înaltă calitate şi tone de instrumente
+    excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate gratuit.Vă
+    întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest
+    video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: 'Ora de Programare este aici: 8-14 decembrie!'
   code_sign_up: "Înscrieţi-vă pentru a participa în timpul CS Education Week (”Săptămâna
     Informaticii în Educaţie”)"
+  host_an_hour: "Țineți o oră"
+  learn_banner_title: Alătură-te nouă pentru Ora de Programare
+  learn_banner_desc: Ora de Programare este o mişcare globală, ajungând la peste 100
+    de milioane de elevi din peste 180 de ţări. Oricine, oriunde poate organiza un
+    eveniment Ora de Programare. Ajută-ne dând fiecărui elev oportunitatea de a învăţa
+    informatică! Organizatorii pot urmări ghidul <a href='%{how_to_url}' target='_blank'>
+    nostru</a> pentru a preda Ora de Programare şi a inspira elevii cu <a href='%{videos_url}'
+    target='_blank'> aceste filme</a>.
   learn_more: Află mai mult
   learn_sign_up_description: Inscrie-te pentru a participa la ore de cod in timpul
     saptamanii de educatie CS
@@ -979,7 +1119,7 @@
   carousel_heading_robots: "Învață să programezi cu roboți"
   carousel_heading_ide: Platforme populare în rândul profesorilor
   educator_notes: Notițe pentru educatori
-  teach_led_lesson_plans: Planuri de lectie pentru Ora de cod
+  teach_led_lesson_plans: Planuri de lectie pentru Ora de Programare
   learn_footer_all_tutorials: Vezi <a href="https://code.org/educate/allhourofcode">
     lista de tutoriale de la Ora de Programare pe înțelesul tuturor</a>. Pentru a
     vedea criteriile noastre şi regulile de înscriere la tutorialele de la Ora de
@@ -1044,53 +1184,67 @@
   monstercoding_name: Misiunea programarii Insulei Misterioase
   allcancode_name: Fugi Marco!
   csfirst_name: Prima oara CS
-  boxisland_name: Insula Cutie
+  boxisland_name: Insula Cutiei
   codesters_name: Codesters
   texasinstruments_name: 10 minute de Programat
-  teacherled_name: Planuri de lectie pentru Ora de cod
+  teacherled_name: Planuri de lectie pentru Ora de Programare
   course1_name: Curs 1
   course2_name: Cursul 2
   course3_name: Cursul 3
   course4_name: Curs 4
   accelerated_name: Curs intensiv
-  cspunit1_name: 'Unit 1: Digital Information'
-  cspunit2_name: 'Unit 2: The Internet'
-  cspunit3_name: 'Unit 3: Programming'
-  cspunit4_name: 'Unit 4: Data'
-  cspunit5_name: 'Unit 5: Explore and Create PT'
-  cspunit6_name: CS Principles Unit 6
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
+  cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
+  cspunit2_name: "(vechi) Unitatea 2: Internet"
+  cspunit3_name: "(vechi) Unitate 3: programare"
+  cspunit4_name: "(vechi) Unitatea 4: date"
+  cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
+  cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
+  csp1_name: 'Unitatea 1: Internet'
+  csp2_name: 'Unitatea 2: Informaţii digitale'
   csp3_name: 'Unit 3: Algorithms and Programming'
-  cspassessment_name: Full Test - 50 questions
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
+  cspassessment_name: Testul complet - 50 întrebări
+  cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
+  cspexam2-AKwgAh1ac5_name: Test de partea 2-25 întrebări
+  cspunit3_gradelevel: Clasele 9-12
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
     environment to build apps, but the concepts learned in these lessons span all
     programming languages and tools.
   20-hour_name: Curs intensiv
-  algebra_name: CS in Algebra
-  AlgebraA_name: CS in Algebra Course A
-  AlgebraB_name: CS in Algebra Course B
+  algebra_name: CS în Algebră
+  AlgebraA_name: CS în algebră Curs A
+  AlgebraB_name: CS în algebra Curs B
   gumball_name: Gumball
   classicmaze_name: Labirint Clasic
   iceage_name: Epoca de gheață
   minecraft_name: Minecraft
-  starwarsblocks_name: Star Wars (Blocks)
+  starwarsblocks_name: Star Wars (blocuri)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: Text Compression
   math_category_name: Matematică
   hoc_category_name: Oră de Programare
-  csf_category_name: CS Fundamentals
-  csp_category_name: CS Principles
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: CS Principles Practice Test
+  csf_category_name: Fundamentele CS
+  csd_category_name: 'Under Development: CS Discoveries'
+  csp_category_name: Principii de CS 15-16
+  csp17_category_name: Principii de CS 16-17
+  cspexams_category_name: Principiile practicilor test CS
+  research_studies_category_name: Research Studies
   applab_name: Laboratului Aplicației
+  basketball_name: Realizeaza un joc de baschet
+  sports_name: Sporturi
   applab_gradelevel: Vârste 13 +
-  applab_shortdescription_congrats: App Lab is a programming environment where you
-    can make simple apps. Design an app, code with blocks or JavaScript to make it
-    work, then share your app in seconds
+  applab_shortdescription_congrats: App Lab este un mediu de programare în care poți
+    crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript
+    pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde
   codeorg_gradelevel: Vârste între 4-104 ani
   codeintl_gradelevel: Vârste între 4-104 ani
   thinkersmithspanish_gradelevel: Por todos
@@ -1192,7 +1346,7 @@
   csfirst_platformtext: Browsere web moderne
   boxisland_platformtext: Android, iOS
   codesters_platformtext: Browsere web moderne
-  texasinstruments_platformtext: TI Calculcatoare
+  texasinstruments_platformtext: Calculatoare TI
   teacherled_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeorg_shortdescription: "Învață să programezi cu Mark Zuckerberg și Angry Birds!"
   codeintl_shortdescription: "Învață să programezi cu Mark Zuckerberg și Angry Birds!"
@@ -1256,40 +1410,42 @@
   artist_shortdescription: Desenează poze şi proiecte mişto cu Artistul!
   monsterocding_shortdescription: O aventura de programare pentru copii, colorata
     si auto-ghidata.
-  allcancode_shortdescription: Un joc imersiv pentru a ghida Marco cu un limbaj de
-    programare vizual.
-  csfirst_shortdescription: Anima o poveste despre două caractere pe ocean. Adauga
+  allcancode_shortdescription: Un joc imersiv pentru a-l ghida pe Marco cu un limbaj
+    de programare vizual.
+  csfirst_shortdescription: Animeaza o poveste despre două personaje pe ocean. Adauga
     propriul stil!
   boxisland_shortdescription: Ia parte la o aventura de programat pe Insula Cutie
     cu bravul Hiro.
-  codesters_shortdescription: Creeaza propiile jocuri, animatii, si opere de arta
-    folosind Python.
+  codesters_shortdescription: Creeaza propiile jocuri, animatii si opere de arta folosind
+    Python.
   texasinstruments_shortdescription: "Învață programare de bază folosind calculatorul
     TI-84&#8482; Plus."
-  teacherled_shortdescription: Fi inspirat pentru a proiecta propriile Ore de cod
-    cu aceste planuri de lectie.
-  course2_shortdescription_congrats: For students with basic reading skills, this
-    course builds on Course 1. Students will create programs to solve problems and
-    develop interactive games or stories they can share. Recommended for grades 2-5.
-  course3_shortdescription_congrats: Ready for the next level? Students will delve
-    deeper into programming topics introduced in previous courses to find flexible
-    solutions to more complex problems. By the end of this course, students create
-    interactive stories and games they can share with anyone. Recommended for grades
-    4-5.
-  course4_shortdescription_congrats: Ready to go further? Students will delve deeper
-    into programming topics introduced in previous courses to find flexible solutions
-    to more complex problems. By the end of this course, students create interactive
-    stories and games they can share with anyone. Recommended for grades 4-8.
+  teacherled_shortdescription: Fi inspirat pentru a proiecta propriile evenimente
+    Hour of Code cu aceste planuri de lectie.
+  course2_shortdescription_congrats: Pentru elevii cu aptitudini de bază de lectură,
+    acest curs se bazează pe curs 1. Elevii vor crea programe pentru a rezolva probleme
+    şi vor dezvolta jocuri interactive sau poveşti pe care le pot împărtăşi. Recomandat
+    pentru clasele 2-5.
+  course3_shortdescription_congrats: Gata pentru urmatorul nivel? Elevii se vor infiltra
+    mai adanc in subiectele programarii introduse în cursurile anterioare pentru a
+    găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui
+    curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu
+    cineva. Recomandat pentru clasele 4-5.
+  course4_shortdescription_congrats: Gata pentru urmatorul nivel? Elevii se vor infiltra
+    mai adanc in subiectele programarii introduse în cursuri anterioare pentru a găsi
+    soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs,
+    elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva.
+    Recomandat pentru clasele 4-8.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
     Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil
-    în 34 de limbi.\n"
+    în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
     Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil
-    în 34 de limbi.\n"
+    în 34 de limbi."
   thinkersmithspanish_longdescription: Folosind un limbaj predefinit "Vocabularul
     Robotului", elevii vor descoperi; mijloace prin care care să se ghideze pentru
     a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil.
@@ -1442,32 +1598,32 @@
   playlab_longdescription: Creează o poveste sau fă un joc cu Play Lab! Creează animale,
     pirați, zombi, ninja și mute alte mișcări pentru personaje, realizează sunete,
     acumulează puncte, și chiar aruncă mingi de foc!
-  monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
-    offers a fun filled self guided adventure that teaches several key programming
-    concepts to children. Each block based activity builds on the previous, introducing
-    kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
-    colorful animated graphics, audio instructions.
+  monstercoding_longdescription: Aventura Programarii in Insula Misterioasa de Monster
+    Coding ofera o aventura neindrumata plina de distractie care ii invata pe copii
+    niste concepte cheie. Fiecare activitate bazata pe blocuri se construieste pe
+    cea precedenta, introducand copiii in Functii, Valori Boolene, Bucle, Afirmatii
+    Daca/Altfel si Vectori, folosind grafica animata colorata si instructiuni audio.
   allcancode_longdescription: Elevii rulează un joc de aventură bazat pe o poveste
     originală. Ei îl ghidează pe Marco - personajul principal - pe parcursul fiecărui
     nivel, dându-i instrucțiuni la fiecare pas sub forma limbajului de programare
     vizual folosit de Hour of Code. Elevii află despre comenzi secvențiale, iterații
     și condiții, chiar fără să realizeze.
-  csfirst_longdescription: Creează o poveste despre două caractere la mare. Animează
-    apa, şi personalizează peisajul pentru a adăuga propriul reputatie. Folosiţi codul
-    pentru a povesti ce doriţi să-i spuneţi!
-  boxisland_longdescription: Take a trip on Box Island and help Hiro collect all the
-    clocks scattered in the wilderness! In this tutorial you will learn the basics
-    of algorithms, sequences, loops and conditionals!
-  codesters_longdescription: 'Creeaza propriile tale jocuri, animatii si arta folosind
-    Python. Odata ce ati terminat impartaseste-le cu prietenii. Programeaza in Python,
-    un limbaj de programare real folosit in fiecare zi in companii- trusa noastra
-    de scule face invatatul mai usor. Incearca sa construiesti un joc de baschet,
-    sa coregrafiezi un dance sau sa creezi o carte animata! '
-  texasinstruments_longdescription: 'The 10 Minutes of Code activities can be used
-    in class as a way to spark students'' interest in coding with the TI technology
-    they carry in their backpacks everyday.  Learn the basics of coding using the
-    TI-84&#8482; Plus and get started programming in just 10 minutes – no experience
-    needed!  '
+  csfirst_longdescription: Creează o poveste despre două personaje pe mare. Animează
+    apa şi personalizează peisajul pentru a-ți adăuga propriul stil. Folosiţi codul
+    pentru a vă spune povestea!
+  boxisland_longdescription: Faceţi o excursie pe insula Box si ajuta-l pe Hiro sa
+    colecteze toate ceasurile împrăştiate în pustietate! În acest tutorial veţi învăţa
+    elementele de bază ale algoritmilor, secvenţe, bucle şi condiţionale!
+  codesters_longdescription: 'Creează-ți propriile jocuri, animații şi artă folosind
+    Python. Odată ce ai terminat, împărtăşeşte-le cu prietenii! Programează în Python,
+    un limbaj real de programare folosit zi de zi în companii - softul nostru "drag
+    and drop" face învățatul mai uşor! Încearcă să construieşti un joc de baschet,
+    să coregrafiezi un dans sau să creezi o vedere animată! '
+  texasinstruments_longdescription: 'Activitatile 10 Minute de Cod pot fi folosite
+    in clasa ca un mod de a aprinde interesul studentilor catre programare cu tehnologia
+    TI pe care ei o au in ghiozdane in fiecare zi. Invata bazele programarii folosind
+    TI-84&#8482; Plus si incepe sa programezi in doar 10 minute - nu ai nevoie de
+    experienta!  '
   teacherled_longdescription: Acum, că zeci de mii de cadre didactice au încercat
     ora de programare, multe săli de clasă sunt gata pentru alte activităţi creative,
     mai puțin generale, dar din care să se învețe elementele de bază ale informaticii.
@@ -1803,7 +1959,7 @@
     programării într-un context vizual, Processing a evoluat într-un instrument de
     dezvoltare pentru profesioniști. Astăzi există zeci de mii de studenți, artiști,
     designeri, cercetători și pasionați care folosesc Processing pentru a învăța,
-    a prototipa și în producție.\n"
+    a prototipa și în producție."
   alice_beyond_longdescription: Utilizând un mediu de programare inovativ pentru a
     sprijini crearea de animații 3D, Proiectul Alice asigură instrumentele și materialele
     necesare pentru predarea și învățarea gândirii numerice, a rezolvării de probleme
@@ -1811,11 +1967,11 @@
   sphero_beyond_longdescription: Fie că sunteţi un educator sau un părinte, lecțiile
     SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților,
     îmbunătățindu-și, în același timp, abilităţile în matematică şi ştiinţă.
-  compatibility_hide_this_warning: Hide this warning
-  compatibility_unsupported_browser: Your browser is not supported. Please upgrade
-    your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
-    supported browsers</a>. You can try viewing the page, but expect functionality
-    to be broken.
+  compatibility_hide_this_warning: Ascunde această avertizare
+  compatibility_unsupported_browser: Browser-ul nu este acceptat. Vă rugăm să faceţi
+    upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'>
+    unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii,
+    dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare.
   starwars_shortcode: sw
   mc_shortcode: mc
   frozen_shortcode: frzn
@@ -1824,13 +1980,3 @@
   infinity_shortcode: inf
   playlab_shortcode: joacă
   artist_shortcode: art
-  homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
-  homepage_banner_40k_teachers_link: Learn more
-  host_an_hour: Host an hour
-  learn_banner_title: Join us for the Hour of Code
-  learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
-    students in more than 180 countries. Anyone, anywhere can organize an Hour of
-    Code event. Help us give every student the opportunity to learn computer science!
-    Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a>
-    for teaching an Hour of Code and inspire students with <a href='%{videos_url}'
-    target='_blank'>these videos</a>.

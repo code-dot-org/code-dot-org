@@ -3,7 +3,7 @@ require 'test_helper'
 class UsersHelperTest < ActionView::TestCase
   include UsersHelper
 
-  def test_summarize_user_progress_and_percent_complete
+  def test_summarize_user_progress
     script = Script.twenty_hour_script
     user = create :user, total_lines: 42
 
@@ -58,8 +58,7 @@ class UsersHelperTest < ActionView::TestCase
      }
     }, summarize_user_progress_for_all_scripts(user))
 
-    assert_equal [0.0, 0.1] + Array.new(18, 0.0), percent_complete(script, user)
-    assert_in_delta 0.0183, percent_complete_total(script, user)
+    assert_in_delta 1.83, percent_complete_total(script, user)
 
     # Verify summarize_user_progress_for_all_scripts for multiple completed levels across multiple scripts.
     course1 = Script.course1_script
@@ -241,5 +240,59 @@ class UsersHelperTest < ActionView::TestCase
       "#{level.id}_0" => { submitted: true },
       "#{level.id}_1" => { submitted: true}
     }, summarize_user_progress(script, user)[:levels])
+  end
+
+  def test_level_with_best_progress_one_level
+    assert_equal(101, level_with_best_progress([101], {}))
+  end
+
+  def test_level_with_best_progress_submitted
+    level_progress = {
+      101 => {
+        status: 'submitted',
+        submitted: true,
+        result: ActivityConstants::BEST_PASS_RESULT,
+        pages_completed: [nil, nil]
+      },
+      "101_0" => { submitted: true },
+      "101_1" => { submitted: true },
+    }
+
+    assert_equal(101, level_with_best_progress([101, 102], level_progress))
+    assert_equal(101, level_with_best_progress([102, 101], level_progress))
+  end
+
+  def test_level_with_best_progress_pages
+    level_progress = {
+      101 => {
+        status: 'perfect',
+        result: ActivityConstants::BEST_PASS_RESULT,
+        pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]
+      },
+      "101_0" => {result: ActivityConstants::FREE_PLAY_RESULT},
+      "101_1" => {}
+    }
+
+    assert_equal(101, level_with_best_progress([101, 102], level_progress))
+    assert_equal(101, level_with_best_progress([102, 101], level_progress))
+  end
+
+  def test_level_with_best_progress_one_attempt
+    level_progress = {
+      101 => {status: 'passed', result: 20}
+    }
+
+    assert_equal(101, level_with_best_progress([101, 102], level_progress))
+    assert_equal(101, level_with_best_progress([102, 101], level_progress))
+  end
+
+  def test_level_with_best_progress_multiple_attempts
+    level_progress = {
+      101 => {status: 'perfect', result: ActivityConstants::BEST_PASS_RESULT},
+      102 => {status: 'passed', result: 20}
+    }
+
+    assert_equal(101, level_with_best_progress([101, 102], level_progress))
+    assert_equal(101, level_with_best_progress([102, 101], level_progress))
   end
 end

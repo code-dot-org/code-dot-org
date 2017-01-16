@@ -4,7 +4,9 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# როგორ უნდა გააცანოთ კოდის ერთი საათი მთელ სკოლას
 
 ## ყველა სკოლამ უნდა მიიღოს მონაწილეობა, ყველა მოსწავლემ - ისწავლოს!
 
@@ -24,3 +26,5 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   * ურჩიეთ მოსწავლეებს, რომ გააგრძელონ [ონლაინ სწავლა](%= resolve_url('https://code.org/learn/beyond') %).
   * [დაესწარით ](%= resolve_url('https://code.org/professional-development-workshops') %) ერთდღიან ვორქშოპს და გაიარეთ ინსტრუქტაჟი კომპიუტერული მეცნიერებების გამოცდილი ქომაგისგან. (მხოლოდ აშშ–ის პედაგოგებისთვის)
+
+<%= view :signup_button %>

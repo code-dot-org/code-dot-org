@@ -1,0 +1,45 @@
+name 'CSPU5_HowImagesWork'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How to Add Images in Design Mode
+
+Adding an image UI element in design mode is relatively simple. But you have three options for how to get the image you want.
+
+![](https://images.code.org/3366ed3afaa1dcabbb9039305392f03d-image-1476897019665.png)
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+Copy and paste the URL of some image that already exists on the web into this box.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+Click Choose... to upload your own image.</p>
+<p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+Or click Choose... to use a Pre-Loaded Icon</p>
+</div>
+
+<br><br>
+
+# Upload your own images
+
+If you have saved images on your computer you can upload them into app lab's **asset manager**.  Just **click Upload File** and follow the dialogs on screen.
+
+For images the file must be of type: **.jpg**, **.png**, or **.gif**
+
+Once you've uploaded the image then you need to **Choose** it to set the image to that file. If you add multiple imsges you'll see them all listed every time you upload a file and you can choose to use *any* file that you've already uploaded.
+
+![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
+
+# Use a Pre-Loaded Icon
+
+App Lab comes with a set of handy single color **icons** (black icon, white/transparent background) that you can use for buttons or graphics, whatever you like.  You can also change the color of the icon after you add it to the app.  
+
+The *trickest* part is that you need to find and **click on the "Icons" tab** once the asset manager pops up.
+
+![](https://images.code.org/c02f76e80b05c2dbdabca761635b2d21-image-1476897099806.gif)
+
+
+### Click Continue to try it!
+
+MARKDOWN

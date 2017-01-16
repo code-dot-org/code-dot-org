@@ -1,4 +1,3 @@
-import 'babel-polyfill'; // required for Symbol
 import sinon from 'sinon';
 import {expect, assert} from '../util/configuredChai';
 var clientApi = require('@cdo/apps/clientApi');

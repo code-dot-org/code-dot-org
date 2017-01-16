@@ -1,15 +1,53 @@
+require_relative '../../deployment'
 require 'cdo/rake_utils'
+require 'cdo/circle_utils'
 require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
 
-RUN_ALL_TESTS_TAG = '[test all]'
+# CircleCI Build Tags
+# We provide some limited control over CircleCI's build behavior by adding these
+# tags to the latest commit message.  A tag is a set of words in [] square
+# brackets - those words can be in any order and are case-insensitive.
+#
+# Supported Tags:
+
+# Don't run Circle at all (built-in to CircleCI)
+# 'ci skip'
+
+# Run all unit/integration tests, not just a subset based on changed files.
+RUN_ALL_TESTS_TAG = 'test all'.freeze
+
+# Don't run any UI or Eyes tests.
+SKIP_UI_TESTS_TAG = 'skip ui'.freeze
+
+# Run UI tests against ChromeLatestWin7
+SKIP_CHROME_TAG = 'skip chrome'.freeze
+
+# Run UI tests against Firefox45Win7
+TEST_FIREFOX_TAG = 'test firefox'.freeze
+
+# Run UI tests against IE11Win10
+TEST_IE_TAG = 'test ie'.freeze
+TEST_IE_VERBOSE_TAG = 'test internet explorer'.freeze
+
+# Run UI tests against SafariYosemite
+TEST_SAFARI_TAG = 'test safari'.freeze
+
+# Run UI tests against iPad, iPhone or both
+TEST_IPAD_TAG = 'test ipad'.freeze
+TEST_IPHONE_TAG = 'test iphone'.freeze
+TEST_IOS_TAG = 'test ios'.freeze
+
+# Overrides for whether to run Applitools eyes tests
+TEST_EYES = 'test eyes'.freeze
+SKIP_EYES = 'skip eyes'.freeze
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   task :run_tests do
-    if GitUtils.circle_commit_contains?(RUN_ALL_TESTS_TAG)
-      HipChat.log "Commit message: '#{GitUtils.circle_commit_message}' contains #{RUN_ALL_TESTS_TAG}, force-running all tests."
+    if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     else
       RakeUtils.rake_stream_output 'test:changed'
@@ -18,27 +56,89 @@ namespace :circle do
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
   task :run_ui_tests do
-    RakeUtils.exec_in_background 'RACK_ENV=test RAILS_ENV=test bundle exec ./bin/dashboard-server'
-    RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.0-rc2-linux.tar.gz'
-    RakeUtils.system_stream_output 'tar -xzf sc-4.4.0-rc2-linux.tar.gz'
-    Dir.chdir(Dir.glob('sc-*-linux')[0]) do
-      # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
-      RakeUtils.exec_in_background 'for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i CIRCLE-BUILD-$CIRCLE_BUILD_NUM-$CIRCLE_NODE_INDEX --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done'
+    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
+      HipChat.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+      next
+    end
+
+    Dir.chdir('dashboard') do
+      RakeUtils.exec_in_background "RAILS_ENV=test bundle exec unicorn -c config/unicorn.rb -E test -l #{CDO.dashboard_port}"
+    end
+    ui_test_browsers = browsers_to_run
+    use_saucelabs = !ui_test_browsers.empty?
+    if use_saucelabs || test_eyes?
+      start_sauce_connect
+      RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost:4445); do sleep 5; done'
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost.studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
-      is_pipeline_branch = ['staging', 'test', 'production'].include?(GitUtils.current_branch)
       container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map{|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      browsers_to_run = is_pipeline_branch ? 'ChromeLatestWin7,Firefox45Win7,IE11Win10,SafariYosemite' : 'ChromeLatestWin7'
-      RakeUtils.system_stream_output "bundle exec ./runner.rb -f #{container_features.join(',')} -c #{browsers_to_run} -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
-      if is_pipeline_branch
-        RakeUtils.system_stream_output "bundle exec ./runner.rb --eyes -f #{container_eyes_features.join(',')} -c ChromeLatestWin7,iPhone -p localhost.code.org:3000 -d localhost.studio.code.org:3000 --circle --parallel 26 --retry_count 3 --html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+          " --feature #{container_features.join(',')}" \
+          " --pegasus localhost.code.org:3000" \
+          " --dashboard localhost.studio.code.org:3000" \
+          " --circle" \
+          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
+          " --parallel #{use_saucelabs ? 16 : 8}" \
+          " --abort_when_failures_exceed 10" \
+          " --retry_count 2" \
+          " --output-synopsis" \
+          " --html"
+      if test_eyes?
+        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
+            " --eyes" \
+            " --feature #{container_eyes_features.join(',')}" \
+            " --config ChromeLatestWin7,iPhone" \
+            " --pegasus localhost.code.org:3000" \
+            " --dashboard localhost.studio.code.org:3000" \
+            " --circle" \
+            " --parallel 10" \
+            " --retry_count 1" \
+            " --html"
       end
     end
-    # Kill Sauce Connect tunnel
-    RakeUtils.system_stream_output 'killall sc'
+    close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
   end
+
+  desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
+  task :check_for_unexpected_apps_changes do
+    # Changes to yarn.lock is a particularly common case; catch it early and
+    # provide a helpful error message.
+    raise 'Unexpected change to apps/yarn.lock; if you changed package.json you should also have committed an updated yarn.lock file.' if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
+
+    # More generally, we shouldn't have _any_ staged changes in the apps directory.
+    raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
+  end
+end
+
+# @return [Array<String>] names of browser configurations for this test run
+def browsers_to_run
+  browsers = []
+  browsers << 'ChromeLatestWin7' unless CircleUtils.tagged?(SKIP_CHROME_TAG)
+  browsers << 'Firefox45Win7' if CircleUtils.tagged?(TEST_FIREFOX_TAG)
+  browsers << 'IE11Win10' if CircleUtils.tagged?(TEST_IE_TAG) || CircleUtils.tagged?(TEST_IE_VERBOSE_TAG)
+  browsers << 'SafariYosemite' if CircleUtils.tagged?(TEST_SAFARI_TAG)
+  browsers << 'iPad' if CircleUtils.tagged?(TEST_IPAD_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
+  browsers << 'iPhone' if CircleUtils.tagged?(TEST_IPHONE_TAG) || CircleUtils.tagged?(TEST_IOS_TAG)
+  browsers
+end
+
+def test_eyes?
+  CircleUtils.tagged?(TEST_EYES)
+end
+
+def start_sauce_connect
+  RakeUtils.system_stream_output 'wget https://saucelabs.com/downloads/sc-4.4.2-linux.tar.gz'
+  RakeUtils.system_stream_output 'tar -xzf sc-4.4.2-linux.tar.gz'
+  Dir.chdir(Dir.glob('sc-*-linux')[0]) do
+    # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930
+    RakeUtils.exec_in_background "for i in 1 2; do ./bin/sc -vv -l $CIRCLE_ARTIFACTS/sc.log -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -i #{CDO.circle_run_identifier} --tunnel-domains localhost-studio.code.org,localhost.code.org && break; done"
+  end
+end
+
+def close_sauce_connect
+  RakeUtils.system_stream_output 'killall sc'
 end

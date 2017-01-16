@@ -1,24 +1,35 @@
 @import 'color';
 @import 'font';
 
-#terms-modal {
+#terms-modal,
+#race-modal {
   text-align: left;
   top: 20px;
 }
-#terms-modal .modal-content {
+#terms-modal .modal-content,
+#race-modal .modal-content {
   margin: 0 20px;
   padding: 0 15px;
 }
-#terms-modal .modal-content p {
+#terms-modal .modal-content p,
+#race-modal .modal-content p {
   font-size: 12px;
   color: $default_text;
   line-height: 18px;
 }
-#terms-modal .left {
+#terms-modal .left,
+#race-modal .left {
   float: left;
 }
 #terms-modal .right {
   float: right;
+}
+#race-modal .right {
+  float: right;
+  margin-top: 20px;
+}
+#race-modal .full-width {
+  width: 100%;
 }
 #terms-modal .scroll-box {
   height: 350px;
@@ -28,10 +39,12 @@
   overflow: auto;
   overflow-y: scroll;
 }
-#terms-modal .terms-checkbox {
+#terms-modal .terms-checkbox,
+#race-modal .race-checkbox {
   margin: 0 5px 0 0;
 }
-#terms-modal .primary-button {
+#terms-modal .primary-button,
+#race-modal .primary-button {
   background-color: $orange;
   border: 1px solid $orange;
   color: $white;
@@ -42,25 +55,31 @@
   background-image: none;
   margin-top: 10px;
 }
-#terms-modal .disabled-button {
+#terms-modal .disabled-button,
+#race-modal .disabled-button {
   background-color: $lighter_gray;
   border-color: $lighter_gray;
   color: $dark_charcoal;
 }
-#terms-modal .custom-h1 {
+#terms-modal .custom-h1,
+#race-modal .custom-h1 {
   margin-top: 25px;
 }
-#terms-modal .right-margin-5 {
+#terms-modal .right-margin-5,
+#race-modal .right-margin-5 {
   margin-right: 5px;
 }
-#terms-modal .dismiss-link {
+#race-modal .dismiss-link {
   font-size: 14px;
   font-family: $gotham-regular;
   line-height: 20px;
 }
+#race-modal .disabled {
+  color: $light-gray;
+}
 
 @media (max-width: 600px) {
-  #terms-modal {
+  #terms-modal, #race-modal {
     width: 400px;
     left: 70%;
   }

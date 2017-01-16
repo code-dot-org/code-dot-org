@@ -22,7 +22,7 @@ def print_usage
 end
 
 def main
-  if ARGV.length < 1
+  if ARGV.empty?
     print_usage
     return
   end

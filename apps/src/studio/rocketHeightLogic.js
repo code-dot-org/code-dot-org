@@ -1,7 +1,5 @@
 import { Direction } from './constants';
 import CustomGameLogic from './customGameLogic';
-import codegen from '../codegen';
-import api from './api';
 require('../utils'); // Provides Function.prototype.inherits
 
 /**
@@ -55,7 +53,10 @@ RocketHeightLogic.prototype.onTick = function () {
  * @returns {number} Height of rocket after seconds
  */
 RocketHeightLogic.prototype.rocket_height = function (seconds) {
-  return this.resolveCachedBlock_('VALUE')(seconds);
+  const rocketHeight = this.resolveCachedBlock_('VALUE');
+  if (rocketHeight) {
+    return rocketHeight(seconds);
+  }
 };
 
 module.exports = RocketHeightLogic;

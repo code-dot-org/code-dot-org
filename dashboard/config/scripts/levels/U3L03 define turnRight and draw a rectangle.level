@@ -59,7 +59,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  We've started you out with a stub that **defines** a function called `right()`.  Start by adding code inside the function definition that will turn the turtle to the right (by turning left three times) when called. \r\n\r\nThen **use** this function in some code to draw a rectangle, as shown below.  Make sure the turtle ends facing the same direction and in the same location it started.\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)\r\n\r\n",
+    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  We've started you out with a stub that **defines** a function called `right()`.  Start by adding code inside the function definition that will turn the turtle to the right (by turning left three times) when called. \r\n\r\nThen **use** this function in some code to draw a rectangle, as shown below.  Make sure the turtle ends facing the same direction and in the same location it started. *Note that the rectangle below is 2 moveForwards tall and 1 moveForward wide*\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)\r\n\r\n",
     "start_blocks": "function right(){\r\n  \r\n}",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -109,31 +109,33 @@
       },
       {
         "entries": [
-          "right"
+          "turnRight:1"
         ],
         "matchType": "exact",
-        "minTimes": 1,
-        "message": "You need to define a function called \"right\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function called right()."
       },
       {
         "entries": [
-          "moveForward",
-          "moveForward",
-          "right",
-          "moveForward",
-          "right",
-          "moveForward",
-          "moveForward",
-          "right",
-          "moveForward",
           "right"
         ],
-        "matchType": "inexact",
-        "minTimes": 1,
-        "message": "It doesn't seem like you are calling right() or moving forward enough times to draw the figure and end up where you started, facing the same direction."
+        "matchType": "exact",
+        "minTimes": 3,
+        "message": "You need to define a function called \"right\" and call it. Did you spell and capitalize it the same way as the instructions? Did you call it enough times to travel around the rectangle in a clock-wise fashion?"
+      },
+      {
+        "entries": [
+          "moveForward"
+        ],
+        "matchType": "exact",
+        "minTimes": 6,
+        "message": "It doesn't seem like you are moving forward enough times to draw the figure. Note the long sides of the rectangle are 2 moveForwards long."
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

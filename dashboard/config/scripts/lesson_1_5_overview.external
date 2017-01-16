@@ -1,0 +1,16 @@
+name 'Lesson 1.5 Overview'
+markdown <<MARKDOWN
+## Lesson 5: Binary Numbers
+<img src="https://images.code.org/0ecf788963773822d54a993ead4507d6-image-1474225985693.png" style="float:right; margin-left:30px; width:200px">
+
+Unplugged | Reinforcement
+
+In this lesson, students will gain more familiarity with binary numbers. The lesson will transition away from the number systems that students created in the the circle-triangle-square activity, and begin to focus on representing numeric values using the binary number system. Though students have communicated with binary before, developing a number system is a little different. Previously, students mapped patterns of binary values to a small set of fixed messages. A number system is infinite, and also has rules for counting - or how to get from one value to the next.
+
+
+<h2>
+<a href= "https://curriculum.code.org/csp/unit1/5" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+</h2>
+
+<br><br>
+MARKDOWN

@@ -1,0 +1,18 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-19T18:16:09.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Search Engine Optimizer (SEO)\r\n\r\n**Search Engine Optimization** is the process of maximizing the number of visitors to a particular website by ensuring that the site appears high on the list of results returned by a search engine.  A **Search Engine Optimizer** is a tool that analyzes a website on different qualities that lead to a higher rank on different search engines.\r\n\r\n# Do This\r\n\r\n* Open the SEO tool linked below in another tab\r\n* Try each of the websites on your list on the SEO:\r\n\t* Look at the score each website receives\r\n    * Does your ranking generally correlate to the SEO scores?\r\n* Take a look at how the SEO is rating websites:\r\n    * Look through the different sections of the rating\r\n    ![](https://images.code.org/dc938c470e578683f788d641c22a2699-image-1476900428201.05.20 PM.png) \r\n    * What factors does the SEO use to score websites? \r\n    * Are there new factors you could use in your algorithm that you had not thought of before?",
+    "link_title": "Search Engine Optimizer",
+    "url": "http://www.seocentro.com/tools/seo/seo-analyzer.html",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

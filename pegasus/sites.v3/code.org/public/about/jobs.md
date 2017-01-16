@@ -17,7 +17,7 @@ video_player: true
 
 <div style="margin-left: 300px;">
 
-Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Our vision is that every student in every school should have the opportunity to learn computer science. We believe computer science should be part of core curriculum, alongside other courses such as biology, chemistry or algebra. Join our team to help make this vision a reality.
+Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented students of color. Code.org organizes the annual Hour of Code campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Join our team to help make this vision a reality!
 
 </div>
 
@@ -29,120 +29,117 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 **We are currently hiring for:**
 
 
-- **Fundraising**
- 	- [Major Gifts Manager](#donor)
-- **Professional Learning & Community**
-	- [Program Manager, Teacher Development](#teacherpm)
-	- [Program Coordinator](#coord)
+- **Advocacy and Government Affairs**
+	- [Director of State Government Affairs](#govaffairs)
+- **Outreach**
+	- [Regional Manager, Southwest](#outreach)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
- 	- [State Policy Intern](#advintern)	
 
-**Don't see a good fit? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
+**Don't see a good fit, but have passion for our mission? Send a resume and drop us a line to let us know why you want to work for us and what you would bring to our team.**
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-
-## <a name="donor"href="#donor">Major Gifts Manager (Seattle, WA)</a>
+## <a name="govaffairs"href="#govaffairs">Director of State Government Affairs (Seattle, WA; location flexible)</a>
 
 **Job Summary:**
 
-The Major Gifts Manager plays an important role in increasing revenue for Code.org, with a focus on stewardship of existing Foundation and Corporate partnerships and grant writing activities. The candidate selected for this role will help establish and manage long-term partnerships and strengthen existing relationships with the corporate and foundation sector, as well as developing compelling proposals that will result in funding for the immediate and long-term goals of Code.org. Full-time, salaried. 
+Code.org is a leading voice in the national dialogue on expanding access to K12 computer science education. We are looking for an experienced professional with a background in state government affairs and/or policy development to lead the transformation of the K-12 US education policy landscape as it relates to computer science. 
 
-Responsibilities of the position include:
+Our team is working with policymakers and education leaders in dozens of states to advance policy reforms that reduce barriers or boost access to K-12 computer science courses. This is a unique opportunity to harness unprecedented bipartisan support for this important issue to shape education policy at the state and local levels. You will have a chance to bring computer science policies to a state for the first time, rather than just incrementally change existing education policy.
 
-- Cultivating and growing support from existing Foundation and Corporate donors
-- Managing ongoing donor communications process
-- Developing and writing letters of inquiry, grant proposals and reports to foundations, corporations, and other grant-making organizations, persuasively communicating the organization’s mission and programs to potential funders
-- Ensuring timely reporting on grant deliverables by managing the grants calendar
-- Collaborating with VP of Finance & Administration on budgeting and cash flow planning
-- Working with the Fundraising Associate on prospect research, maintaining grant files, CRM database, fundraising materials, and donor acknowledgements
-- Other duties, as assigned
+The primary role for this position is managing existing and developing new relationships with state leaders (state departments of education, state boards of education, legislators and governors) and developing overall strategy for engagement in the assigned states while leading and carrying out the tactics associated with the strategy. 
+
+The person in this role will be responsible for: 
+
+- Developing and updating policy positions
+- Public speaking at events, including testimony before state authorities, interviews with the media
+- Communicate policy agenda to various audiences (stakeholder groups, legislators, - Governors and staff, educators, media, etc.) and tailor messaging for each
+Guiding the team in defining a legislative strategy and/or administrative strategy (rules and regulations) around answering three questions:
+	- What are the goals for our legislative or administrative strategy approach?
+	- How will these goals affect implementation of K-12 computer science?
+	- What’s the plan to achieve these goals?
+- Developing relationships with institutions of higher education that are building a K-12 computer science teacher pipeline
+- Creating, organizing and managing policy-related events with policy makers and/or partner organizations
+- Managing Code.org’s Governors Partnership for K-12 Computer Science
+- Developing and managing relationships with the computer science community including educators, leaders, corporate partners, and non-profits with shared goals
+- Managing and building Code.org’s Advocacy Coalition
+	- Forming and leading local coalition of supporters/advocates
+	- Leveraging local targeted support (industry partnerships, local education nonprofits, school districts)
+- Creating and managing grassroots support for policy-related efforts
+- Coordinate state and federal policy efforts internally and with partners
+
+Some of the responsibilities may shift depending on a candidate’s skill set for this position, but the primary responsibility of owning end-to-end engagement in a state will not. Ability and willingness to travel up to 35% of the time (depending on location)is required.
 
 **Experience and Qualifications:**
 
-A minimum of 5 years of relevant experience is required. 
+A successful candidate’s main experience should be in working directly with legislators and governors’ education advisors and/or with state boards of education and state departments of education. Candidates should have experience with and working knowledge of the legislative process or policy development process within state education authorities. 
 
-- Strong networking, presentation, and relationship building expertise 
-- An incredible passion for our mission and an ability to inspire others to get involved
-- Strategic thinker, analytical, self-motivated, detail-oriented, and highly-organized  
-- Posess a track record of securing six figure or larger gifts from corporate and foundation funders, including multi-year commitments
-- Demonstrated ability to develop funding proposals in a clear and compelling manner and have a proven track record of success in writing large foundation and/or corporate grants
-- Thrive in a collaborative, team environment and also work independently 
-- Outstanding communication and highly developed interpersonal skills with ability to be persuasive in both written and verbal communications
-- Strong and thoughtful customer service orientation
-- Experience using online databases (Foundation Center and others) and other sources to conduct research on potential funding prospects. 
-- A solid understanding of budgets as they relate to proposals and grants is required. 
+We are a small, tight-knit, fast-moving dynamic team that leverages each person’s unique backgrounds to support one another in our work with states. We are seeking a team member with expertise and experience that will enable them to contribute ideas and support in areas such as higher education policy development experience, marketing and PR, and coalition and partnership development.
 
-A high level of computer literacy is required; experience in fundraising for educational programs strongly preferred. Proficiency in working with Microsoft Office and Google Docs a must.
+We are a non-partisan organization and the position requires working with representatives from all political parties at the state, local (and possibly federal) level. Candidates should be have a demonstrated ability to work across political parties and ideologies.
 
-Please DO NOT apply for this position if you do not have experience in writing successful non-profit grant proposals. 
+Candidates must be extremely detail-oriented, possess exceptional writing and interpersonal communication ability in English, and be tech-savvy (computer science background/experience not required). Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Google Docs is required.
+
+
+Additionally, the ideal candidate has:
+
+- Passion for our mission of #CSForAll
+- Bachelor’s degree required; Master’s degree desired
+- 5-8+ years of experience in government relations/advocacy/policy development in education (required, preferably at the state level)
+- Experience in developing K-12 computer science education policy (nice to have, but not required) 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-
-## <a name="teacherpm"href="#teacherpm">Program Manager, Teacher Development (Seattle, WA)</a>
+## <a name="outreach"href="#outreach">Regional Manager, Southwest (California preferred)</a>
 
 **Job Summary:**
 
-The Teacher Development Program Manager is an important lead role on Code.org’s Professional Learning & Community team. The PLC team is responsible for training over 30,000 K-12 teachers each year directly and via a network of highly-engaged facilitators and Professional Learning Partners. The Teacher Development PM will ensure that all of the activities and services we provide to teachers meet our mark of quality and effectiveness, and allow us to meet our goals for scale to ensure that every student in every US school has the opportunity to learn Computer Science.
+Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with [Regional Partners](https://code.org/educate/regional-partner). This position is highly focused on developing relationships and building sustainability of Computer Science in California and throughout the southwest.
 
 Responsibilities of the position include:
 
-- Serve as primary project manager for all of the major events and activities that serve teachers, especially our 5-day summer TeacherCons and 1-2 day workshops during the school year; continuously track program development against vision, and make corrections where needed; set reasonable timelines and help team members meet them. 
-- Work closely with Director of Research & Evaluation and other PLC leads to collect, analyze, and respond to data. Monitor success of our efforts and gaps in our offerings and work with team members to fill those gaps and improve quality. 
-- Work with Professional Learning & Community team, Outreach team, and Product PMs to identify efficiencies in how we track teachers through our systems so we can quickly and effectively look at the full experience teachers have in working with us. 
-- Lead internal communications so team members are continuously in the loop and able to continue moving forward. Ensure effective external communications so teachers always have the information they need to be successful.
-- Develop and implement a strategy to ensure that teachers nationwide feel that they are part of a community of excellent Computer Science educators focused on promoting equity and teaching high-quality courses. 
-- Develop and run the teacher application process for all programs.
+- Outreach
+	- Recruit Regional Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
+	- Present Code.org partnership model
+	- Track partnership status
+- Manage and support implementation for all partners in region at K-12 grade levels
+	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
+	- Implement partnership model
+	- Assist regional partners in district, school, and teacher recruitment/selection/retention
+	- Troubleshoot regional partnership issues
+	- Work with Professional Learning & Community team to coordinate regional professional learning workshops for teachers
+- Market and support the program in the region
+- Represent Code.org and present the partnership model at conferences and other venues, as needed
 
 
-**Experience and Qualifications:**
-
-We are looking for an experienced educator with a solid understanding of what teachers need to be successful in working with students, and a passion for ensuring equitable access to a high-quality education for all students. Candidate must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
-The ideal candidate has the following qualifications:
-
-- Has a bachelor’s degree (Computer Science background/experience not required)
-- Minimum 4 years of experience as a teacher, teacher leader, or program manager in a school setting
-- Passion for Code.org’s mission 
-- Ability to travel 10% time 
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
-## <a name="coord"href="#coord">Program Coordinator (Seattle, WA)</a>
-
-**Job Summary:**
-Code.org is looking for an Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This is a full time, exempt position based in our Seattle office. 
-
-Duties of this role may include: 
-
-- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
-- Drafting communications to stakeholders, responding to requests for information, distributing materials externally
-- Updating and managing event attendee lists
-- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
-- Attending and participating in meetings and recording notes/follow-up items, as appropriate
-- Special projects (perform research, prepare documentation, develop templates, etc.)
+Ability and willingness to travel up to 25% of the time is required.
 
 **Experience and Qualifications:**
 
-We are looking for a self-starter, skilled in event planning, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
+The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
 
-The ideal candidate also has the following qualifications:
+- Demonstrated ability to pitch the Code.org educational model to potential partners
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
+- Advanced organizational and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
 
-- Has a bachelors degree (Computer Science background/experience not required)
-- Ability to travel 10% time 
+Additional desired strengths include:
 
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+- Experience working with school districts in a project implementation capacity
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
 ## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
 
 **Internship Summary:**
 
-We are looking for an intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
+We are looking for a Winter/Spring intern to work with and support the goals of Code.org’s Curriculum team through the development of computer science curriculum. This person will work with a variety of program leaders across multiple projects, simultaneously performing a wide range of tasks. We need someone who has quick turnaround, is responsive, and can effectively organize their priorities and task list.
 
 Responsibilities of the may position include: 
 
@@ -164,28 +161,6 @@ The candidate should also:
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="policyintern"href="#policyintern">State Policy Intern (Seattle, WA)</a>
-
-**Internship Summary:**
-
-Code.org is looking for a State Policy Intern to support our state-by-state advocacy efforts to expand K-12 access to computer science education. The State Policy Intern will gain a deep understanding of state policy in our target states and will broaden her/his networks in education policy. This position reports to the Director of State Government Affairs.
-
-Responsibilities of the role include: 
-
-- Researching state education policy and synthesizing information for the government affairs team
-- Helping execute our state policy agenda.
-
-
-**Experience and Qualifications:**
-
-We are looking for a self-starter and multi-tasker, who excels under pressure and successfully works independently with a geographically dispersed team. 
-
-The candidate should also: 
-
-- Be pursuing a degree in public policy, public administration, political science, or education (post-graduate preferred) 
-- Have prior experience in education or public policy (preferred) 
-
-To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="info" href="#info">Working at Code.org</a>
 

@@ -1,6 +1,10 @@
 /** @file Redux reducer functions for Game Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-import {CHANGE_INTERFACE_MODE} from './actions';
+import {
+  CHANGE_INTERFACE_MODE,
+  VIEW_ANIMATION_JSON,
+  HIDE_ANIMATION_JSON
+} from './actions';
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
@@ -19,10 +23,24 @@ function interfaceMode(state, action) {
   }
 }
 
+const defaultAnimationJsonViewerState = {isOpen: false, content: null};
+function animationJsonViewer(state, action) {
+  state = state || defaultAnimationJsonViewerState;
+  switch (action.type) {
+    case VIEW_ANIMATION_JSON:
+      return {isOpen: true, content: action.content};
+    case HIDE_ANIMATION_JSON:
+      return defaultAnimationJsonViewerState;
+    default:
+      return state;
+  }
+}
+
 module.exports = {
   animationPicker,
   animationTab,
   animationList,
   errorDialogStack,
-  interfaceMode
+  interfaceMode,
+  animationJsonViewer
 };

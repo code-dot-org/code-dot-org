@@ -1,5 +1,6 @@
-/* global dashboard, appOptions, trackEvent */
+/* global dashboard, appOptions */
 import $ from 'jquery';
+import {CIPHER, ALPHABET} from '../../constants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -14,7 +15,6 @@ var assets = require('./clientApi').create('/v3/assets');
 var sources = require('./clientApi').create('/v3/sources');
 var channels = require('./clientApi').create('/v3/channels');
 
-import experiments from '../../experiments';
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
 var queryParams = require('../utils').queryParams;
@@ -93,6 +93,11 @@ function unpackSources(data) {
   };
 }
 
+/**
+ * Used by getProjectUrl() to extract the project URL.
+ */
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+
 var projects = module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
@@ -114,6 +119,46 @@ var projects = module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * This method is used so that it can be mocked for unit tests.
+   */
+  getUrl() {
+    return location.href;
+  },
+
+  /**
+   * @param [fragment] optional url fragment to append to the end of the project URL.
+   * @returns the absolute url to the root of this project without a trailing slash.
+   *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK. Hash strings
+   *     are removed, but query strings are retained. If provided, fragment will be
+   *     added to the end of the URL, before the query string.
+   */
+  getProjectUrl(fragment = '') {
+    const match = this.getUrl().match(PROJECT_URL_PATTERN);
+    let url;
+    if (match) {
+      url = match[1];
+    } else {
+      url = this.getUrl(); // i give up. Let's try this?
+    }
+    var hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+      url = url.substring(0, hashIndex);
+    }
+    var queryString = '';
+    var queryIndex = url.indexOf('?');
+    if (queryIndex !== -1) {
+      queryString = url.substring(queryIndex);
+      url = url.substring(0, queryIndex);
+    }
+    if (fragment.startsWith('/')) {
+      while (url.endsWith('/')) {
+        url = url.substring(0, url.length - 1);
+      }
+    }
+    return url + fragment + queryString;
   },
 
   getCurrentTimestamp() {
@@ -246,8 +291,7 @@ var projects = module.exports = {
   },
 
   useFirebaseForNewProject() {
-    return experiments.isEnabled('useFirebaseForNewProject') &&
-      current.level === '/projects/applab';
+    return current.level === '/projects/applab';
   },
 
   //////////////////////////////////////////////////////////////////////
@@ -289,8 +333,14 @@ var projects = module.exports = {
     }
   },
 
+  // Students should not be able to easily see source for embedded applab or
+  // gamelab levels.
+  shouldHideShareAndRemix() {
+    return appOptions.embed && (appOptions.app === 'applab' || appOptions.app === 'gamelab');
+  },
+
   showHeaderForProjectBacked() {
-    if (this.shouldUpdateHeaders()) {
+    if (this.shouldUpdateHeaders() && !this.shouldHideShareAndRemix()) {
       header.showHeaderForProjectBacked();
     }
   },
@@ -359,7 +409,7 @@ var projects = module.exports = {
         $(window).on(events.workspaceChange, function () {
           hasProjectChanged = true;
         });
-        window.setInterval(this.autosave_.bind(this), AUTOSAVE_INTERVAL);
+        window.setInterval(this.autosave.bind(this), AUTOSAVE_INTERVAL);
 
         if (current.hidden) {
           if (!this.isFrozen()) {
@@ -523,20 +573,30 @@ var projects = module.exports = {
     header.updateTimestamp();
   },
   /**
-   * Autosave the code if things have changed
+   * Autosave the code if things have changed. Calls `callback` if autosave was
+   * not needed or after autosave success if a callback function was provided.
+   * @param {function} callback Function to be called after saving.
    */
-  autosave_() {
+  autosave(callback) {
+    const callCallback = () => {
+      if (callback) {
+        callback();
+      }
+    };
     // Bail if baseline code doesn't exist (app not yet initialized)
     if (currentSources.source === null) {
+      callCallback();
       return;
     }
     // `getLevelSource()` is expensive for Blockly so only call
     // after `workspaceChange` has fired
     if (!appOptions.droplet && !hasProjectChanged) {
+      callCallback();
       return;
     }
 
     if ($('#designModeViz .ui-draggable-dragging').length !== 0) {
+      callCallback();
       return;
     }
 
@@ -547,11 +607,13 @@ var projects = module.exports = {
         const newSources = {source, html, animations};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
+          callCallback();
           return;
         }
 
         this.save(newSources, () => {
           hasProjectChanged = false;
+          callCallback();
         });
       });
     });
@@ -609,7 +671,6 @@ var projects = module.exports = {
       executeCallback(callback);
       return;
     }
-    var destChannel = current.id;
     // TODO: Copy animation assets to new channel
     executeCallback(callback);
   },
@@ -626,8 +687,7 @@ var projects = module.exports = {
       }
     }
     function redirectToRemix() {
-      const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
-      const url = `${projects.getPathName('remix')}${suffix}`;
+      const url = `${projects.getPathName('remix')}`;
       location.href = url;
     }
     // If the user is the owner, save before remixing on the server.
@@ -638,8 +698,7 @@ var projects = module.exports = {
     }
   },
   createNew() {
-    const suffix = projects.useFirebaseForNewProject() ? '?useFirebase=1' : '';
-    const url = `${projects.appToProjectUrl()}/new${suffix}`;
+    const url = `${projects.appToProjectUrl()}/new`;
     projects.save(function () {
       location.href = url;
     });
@@ -894,9 +953,24 @@ function parsePath() {
     };
   }
 
+  // projects can optionally be embedded without making their source available.
+  // to keep people from just twiddling the url to get to the regular project page,
+  // we encode the channel id using a simple cipher. This is not meant to be secure
+  // in any way, just meant to make it slightly less trivial than changing the url
+  // to get to the project source. The channel id gets encoded when generating the
+  // embed url. Since a lot of our javascript depends on having the decoded channel
+  // id, we do that here when parsing the page's path.
+  let channelId = tokens[PathPart.CHANNEL_ID];
+  if (location.search.indexOf('nosource') >= 0) {
+    channelId = channelId
+      .split('')
+      .map(char => ALPHABET[CIPHER.indexOf(char)] || char)
+      .join('');
+  }
+
   return {
     appName: tokens[PathPart.APP],
-    channelId: tokens[PathPart.CHANNEL_ID],
+    channelId,
     action: tokens[PathPart.ACTION]
   };
 }

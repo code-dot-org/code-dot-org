@@ -39,107 +39,17 @@ class DslTest < ActiveSupport::TestCase
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
-      student_of_admin_required: false,
       professional_learning_course: nil,
-      pd: false,
+      hideable_stages: false,
       peer_reviews_to_complete: nil
     }
 
-    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {
+    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stage' => {
         'Stage1' => 'Stage1',
         'Stage2' => 'Stage2'
-    }}}}}}
+    }}}}}}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
-  end
-
-  test 'test Script DSL admin_required as boolean' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      admin_required true
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: true,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      pd: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL admin_required as string' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      admin_required 'true'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: true,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      pd: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL student_of_admin_required as boolean' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      student_of_admin_required true
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      student_of_admin_required: true,
-      professional_learning_course: nil,
-      pd: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL student_of_admin_required as string' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
-      student_of_admin_required 'true'
-    DSL
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-
-    expected = {
-      id: nil,
-      stages: [],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      student_of_admin_required: true,
-      professional_learning_course: nil,
-      pd: false,
-      peer_reviews_to_complete: nil
-    }
-
-    assert_equal expected, output
   end
 
   test 'test Script DSL with level variants' do
@@ -169,127 +79,7 @@ level 'Level 3'
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
-      pd: false,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil
-    }
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL with selectable level variants' do
-    input_dsl = "
-stage 'Stage1'
-level 'Level 1'
-variants
-  prompt 'Which level would you like to try?'
-
-  level 'Level 2a',
-    buttontext: 'Challenge',
-    imageurl: 'https://studio.code.org/blah/maze-2-challenge.png',
-    description: 'This is a hard level'
-
-  level 'Level 2b',
-    buttontext: 'Super Challenge',
-    imageurl: 'https://studio.code.org/blah/maze-2-super.png',
-    description: 'This is a very hard level'
-endvariants
-level 'Level 3'
-"
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: 'Stage1',
-          scriptlevels: [
-            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-            {
-              stage: 'Stage1',
-              levels: [{name: 'Level 2a'}, {name: 'Level 2b'}],
-              properties: {
-                prompt: 'Which level would you like to try?',
-                'Level 2a' => {
-                  buttontext: 'Challenge',
-                  imageurl: 'https://studio.code.org/blah/maze-2-challenge.png',
-                  description: 'This is a hard level'
-                },
-                'Level 2b' => {
-                  buttontext: 'Super Challenge',
-                  imageurl: 'https://studio.code.org/blah/maze-2-super.png',
-                  description: 'This is a very hard level'
-                }
-              }
-            },
-            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      pd: false,
-      student_of_admin_required: false,
-      professional_learning_course: nil,
-      peer_reviews_to_complete: nil
-    }
-
-    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
-    assert_equal expected, output
-  end
-
-  test 'test Script DSL with selectable level variants and some missing options' do
-    input_dsl = "
-stage 'Stage1'
-level 'Level 1'
-variants
-  prompt 'Which level would you like to try?'
-
-  level 'Level 2a',
-    buttontext: 'Challenge',
-    imageurl: 'https://studio.code.org/blah/maze-2-challenge.png'
-
-  level 'Level 2b',
-    buttontext: 'Super Challenge',
-    description: 'This is a very hard level'
-endvariants
-level 'Level 3'
-"
-    expected = {
-      id: nil,
-      stages: [
-        {
-          stage: 'Stage1',
-          scriptlevels: [
-            {stage: 'Stage1', levels: [{name: 'Level 1'}]},
-            {
-              stage: 'Stage1',
-              levels: [{name: 'Level 2a'}, {name: 'Level 2b'}],
-              properties: {
-                prompt: 'Which level would you like to try?',
-                'Level 2a' => {
-                  buttontext: 'Challenge',
-                  imageurl: 'https://studio.code.org/blah/maze-2-challenge.png'
-                },
-                'Level 2b' => {
-                  buttontext: 'Super Challenge',
-                  description: 'This is a very hard level'
-                }
-              }
-            },
-            {stage: 'Stage1', levels: [{name: 'Level 3'}]}
-          ]
-        }
-      ],
-      hidden: true,
-      wrapup_video: nil,
-      login_required: false,
-      admin_required: false,
-      pd: false,
-      student_of_admin_required: false,
+      hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -404,9 +194,7 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
-      pd: false,
-      student_of_admin_required: false,
+      hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
@@ -443,14 +231,25 @@ DSL
       hidden: true,
       wrapup_video: nil,
       login_required: false,
-      admin_required: false,
-      pd: false,
-      student_of_admin_required: false,
+      hideable_stages: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
     }
 
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'can set hideable_stages' do
+    input_dsl = <<DSL
+hideable_stages 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:hideable_stages]
   end
 end

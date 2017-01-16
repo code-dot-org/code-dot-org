@@ -222,12 +222,13 @@
         text: "これは私たちの新しい「カウンター」ループです。アクションが何度も繰り返し実行され、アクションを毎回少しずつ変更を行うことができます。"
       3:
         image: notes/stage11_3.jpg
-        text: |
+        text: |+
           この例では、私たちの「カウンター」ループは「50から90までを10
           ずつ計算機で数える」といいます、その中で、私たちは私たちの「正方形を描く」ブロックを持っています。「長さ」スポットのなかの「可変」セクションから「カウンター」ブロックをドラッグしなさい。
+
       4:
         image: notes/stage11_4.jpg
-        text: |
+        text: |-
           つまり、私たちのアーティストは50ピクセルの辺を持つ正方形を描くという事です。そして更に10を加えて60ピクセルのへんを持つ正方形を描きます。そしてその後90ピクセルになるまで10
           ずつ加えて、正方形を作っていきます。そうすると私たちは50, 60, 70, 80, そして90の正方形が出来上がります。
     parameters:
@@ -236,8 +237,9 @@
         text: "こんにちは、私は ジャネッテです。私は Zynga のエンジニアです。"
       2:
         image: notes/stage15_2.jpg
-        text: |
+        text: |+
           もし私たちがたくさんの三角形を描画したい、長さが違うサイズにしたかったらどうしますか？
+
       3:
         image: notes/stage15_3.jpg
         text: "手ですべてのコードを書くことができる、または私たちはパラメーターを持つ関数を使用できます。"
@@ -246,7 +248,7 @@
         text: "これを行うに、「三角形を描く」関数の定義の上の青い星をクリックすます。それから、Inputブロックの中にあるInput nameをドラッグしてください。"
       5:
         image: notes/stage15_5.jpg
-        text: |
+        text: |-
           その時、もし"x"とあるスポットの中に「長さ」を記述をし、"Enter"キーを押すことで、あなた用の長さ入力の関数が作成できます。
 
 
@@ -254,21 +256,22 @@
           それが言うところのスポットで「長さ」を記述する場合、"x"と"Enter キーを押します"、長さの入力関数を作成します。
       6:
         image: notes/stage15_6.jpg
-        text: |
+        text: |-
           それから星をクリックしてください。次に変数カテゴリの上をクリックします、そして
           あなたの関数定義の「前へ進む」ブロックの中に「長さ」ブロックをドラッグします。そして
           古い数字ブロックをドラッグして消します。
       7:
         image: notes/stage15_7.jpg
-        text: |
+        text: |+
           パラメーターを持つ関数を使用するには、関数カテゴリをクリックし、「長さ」関数と一緒に「三角形を描く」をドラッグで引き出します。
+
       8:
         image: notes/stage15_8.jpg
         text: "次に、異なる寸法の三角形を描くには、違う数字を入力する事で数学ブロックを使う事ができます。"
     hoc_wrapup:
       1:
         image: notes/hoc6_1.jpg
-        text: |
+        text: |-
           おめでとうございます ！最後のパズルを解決したという事は、たった今、あなたが、どんなロボットにも分岐点のない迷路や、どんなに長いのトンネルでも、それがゾンビだろうと、鳥だろうと火星無人探知機だろうと、もしくは自動運転車だろうと、進む道を見つける方法を導くコードを書き上げました。
 
 
@@ -276,7 +279,7 @@
           とだけ言うことができるあらゆるロボット迷路の非分岐または任意の長さのトンネルを介しての方法を検索する方法も、自車の運転や火星ローバー鳥ゾンビかどうかのコードを書いた。
       2:
         image: notes/hoc6_2.jpg
-        text: |
+        text: |-
           あなたが用いた基本概念は全てのプログラミングやこれからトライするであろうアプリの中心あります。私たちは「繰り返しループ」、「まで繰り返す」、「ifステートメント」そして「if
            elseステートメント」について学びました。
       3:
@@ -388,7 +391,7 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: |
+        text: |-
           今、私たちはすべてのゲームプログラマーが毎日使う何かについてを教わる予定です。
           それらは「イベント」と呼ばれます。イベントは何かが起こった時、それをあなたのプログラムに教えてくれます。何かが起こった時、アクションが実行されます。
       2:
@@ -625,19 +628,19 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: |
+        text: |-
           スマイリーは顔を下げたが、たった一人の人はどうやってそこへ行けるか知っている。
           さあこのプログラムをスタートしよう。
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: |
+        text: |-
           プログラムは機械で実行することができるコードを符号化しているアルゴリズムです。
           ほとんどの人はプログラムはコンピュータのために私たちが書く何かだと考えています。
           プログラムは他の場面でも役に立つ素晴らしいものです。あなたは自分でゲームを作ることが出来るし、そのプログラムはあなたのためにロボットがする何かにもなります。
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: |
+        text: |-
           エレミヤといいます。こんにちは！私は 7 歳です。
           私はお母さんのコンピューターで遊ぶことが大好きです。もちろんいつも最初に許可をとりますよ。
           「お母さん、コンピューターを使っていいでしょ？ねっ！」って。
@@ -649,7 +652,7 @@
         text: "昨日、私は家の近くの動物園を訪れたの。私は赤ちゃんのシマウマをみたよ。私は写真を撮って縞模様の色を変えて、帽子を追加して、それを私の風変わりな動物コレクションに追加したの。すごいでしょ。そして、私はとっても遠くの場所へ行ったの。私はケニアを訪れたわ。その国はアフリカにあるの。そこにはたくさんのシマウマがいるのよ。"
       4:
         image: notes/C1_going_places_safely_4.png
-        text: |
+        text: |-
           時々インターネットでおばあちゃんのような他の地域に住んでいる知っている人と話します。
           こんにちは。おばあちゃん！彼女は私にクッキーを焼いていて、私の誕生日に送ってくれるの。
           「おいしいよ。インターネットは smellorama！のようね。」私はインターネットで他の人（知らない人）とはなすこともできるけど、いとこのように私の知っている人とだけ話すわ。
@@ -2669,8 +2672,7 @@
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: "何かを永遠に繰り返さなくてはいけない状況を想像できますか？コンピューターは繰り返しの命令を実行することが得意なので、それを人間がやる必要はなさそうです。"
       2:
         image: notes/gumball_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
@@ -2752,8 +2754,7 @@
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: "何かを永遠に繰り返さなくてはいけない状況を想像できますか？コンピューターは繰り返しの命令を実行することが得意なので、それを人間がやる必要はなさそうです。"
       2:
         image: notes/iceage_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
@@ -2765,3 +2766,82 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: "こんにちは、Minecraft のリード クリエイティブ デザイナーの Jens です。これから 1 時間、あなたの Minecraft
+          を作ってもらいます。これは Minecraft のようですが、世界は停止しています。羊は動いていませんし、ニワトリはタマゴを生みません。ゾンビは動かずにじっとしています。あなたがコードを追加して
+          Minecraft の世界を動かしましょう。"
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: 人々の考え方と行動を学びます。'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: "ゲームの画面は大きく 3 つにわかれています。1) 左には Minecraft のゲームがあります。今は世界が停止しています。これをコードで直しましょう。"
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) 真ん中はツールボックスです。各ブロックはニワトリ、羊、他の Minecraft の生き物たちが理解できるコマンドです。
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) 右側は作業スペースです。ここでプログラムを作ります。
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: "何をすべきかを忘れたら、上にあるレベルの説明を見ましょう。"
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: "まず始めに、ニワトリのプログラムを作ります。「前進」コマンドを作業スペースにドラッグしましょう。「実行」を押すと、ニワトリが一歩前に進みます。さらに進ませるために、「前進」ブロックの下に「前進」ブロックをもう
+          1 つドラッグします。するとブロックが強調表示されます。その状態でドロップすると 2 つのブロックがくっつきます。そして「実行」を押すと、ニワトリが
+          2 歩進みます。"
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: "ブロックを削除するには、重なっている場所からツールボックスまでドラッグします。"
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: "「実行」を押した後でも、「リセット」ボタンを押せば、いつでもゲームを元に戻してやり直せます。さあ、今度はあなたの番です。自分だけの Minecraft
+          を作りましょう。お楽しみください!"
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: "こんにちは、Lisa です。Minecraft のソフトウェア デベロッパーです。ゲーム内の動物や敵を担当しました。担当した動物の 1
+          つはヤマネコです。ヤマネコに魚をあげて手なずけて、自分のペットにする部分を担当しました。"
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: "人間は、何度も何度も同じことをくり返していると、飽きてしまいます。でも、コンピューターのいいところは、同じことを何百万回あるいは何十億回連続でくり返しても、飽きないところです。このくり返しはループと呼ばれ、Minecraft
+          のあらゆる生き物に使われています。"
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: "先ほどは、ニワトリを画面の端まで動かしたのに、ニワトリは止まってしまいました。Minecraft では、ニワトリはずっと動き続けています。ツールボックスにある「恒久的に実行」のループを使って、あなたのニワトリもずっと動かしてみましょう。ループを使えば時間を節約できるので、自分の
+          Minecraft を作る時に、他のことができるようになります。"
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: "このレベルではスティーブかアレックスを選択します。キーボードの矢印キーを押して上、下、左、右に動かします。これでレベル内を自由に動けます。生き物を使うには近くまで歩いていって、その方を向いてスペースキーを押します。"
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: "タッチ画面なら上、下、左、右にスワイプして動かしましょう。自分の前にあるアイテムを使うには、画面をタップしましょう。"
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: "使うと何が起きるのでしょうか?Minecraft では、羊を刈るとウールを落とし、牛は叩くと逃げていき、クリーパーは近づくと爆発します。このような反応が起こるのは、イベントが存在するからです。イベントはプログラムに命令を聞かせたり、何かが起こるまで待たせます。そして何かが起こると、アクションを行います。"
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: "ここまでは、1 つのイベントだけを使いました。「出現した時」に入れたコードが実行されるのは、生き物が出現した時か、ゲーム開始時です。この先のレベルでは、新たなイベント
+          スロットが登場します。「触れられた時」は生き物が触られると実行され、「使用された時」は生き物を使用した時に実行されます。太陽が出てきた時にゾンビを消したいなら、「日中になった時」のスロットに入れましょう。"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: "マインクラフトでは、スポーンとは生き物が出現する事を意味します。このレベルでは、太陽が沈んだらゾンビをスポーンさせましょう。「夜になった時」のブロックを使うと良いですよ。"
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: "夜になったらゾンビを出現(スポーン)させたいので、「ゾンビを出現させる」のブロックを「夜になった時」のブロックに追加します。スポーンするとすぐに、ゾンビたちは「出現した時」のイベント
+          スロットに入れたコードを実行します。ゾンビで遊びましょう!"
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: "おめでとうございます!コンピューター サイエンスのコマンドを学んで、Minecraft の世界を動かせるようになりました。これからは、あなたが開発者です。すべてのコマンドと生き物をアンロックしました。何が起きるかはあなた次第です。"
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: "ゲームが完成したら、シェアを選択してリンクを友達とシェアしたり、自分のゲームを自分のスマホで遊びましょう。お楽しみください!あなたが作った
+          Minecraft をプレイするのを楽しみにしています。"

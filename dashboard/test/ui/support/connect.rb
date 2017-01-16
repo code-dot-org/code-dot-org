@@ -34,10 +34,10 @@ def saucelabs_browser
   end
 
   capabilities[:javascript_enabled] = 'true'
-  circle_run_identifier = ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
-  capabilities[:tunnelIdentifier] = circle_run_identifier if circle_run_identifier
+  capabilities[:tunnelIdentifier] = CDO.circle_run_identifier if CDO.circle_run_identifier
   capabilities[:name] = ENV['TEST_RUN_NAME']
-  capabilities[:build] = circle_run_identifier || ENV['BUILD']
+  capabilities[:build] = CDO.circle_run_identifier || ENV['BUILD']
+  capabilities[:idleTimeout] = 180
 
   puts "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
 
@@ -45,10 +45,21 @@ def saucelabs_browser
   Time.now.to_i.tap do |start_time|
     retries = 0
     begin
+      http_client = Selenium::WebDriver::Remote::Http::Persistent.new
+
+      # Longer overall timeout, because iOS takes more time. This must be set before initializing Selenium::WebDriver.
+      http_client.timeout = 5.minutes
+
       browser = Selenium::WebDriver.for(:remote,
         url: url,
         desired_capabilities: capabilities,
-        http_client: Selenium::WebDriver::Remote::Http::Persistent.new.tap{|c| c.timeout = 5 * 60}) # iOS takes more time
+        http_client: http_client
+      )
+
+      # Shorter idle_timeout to avoid "too many connection resets" error
+      # and generally increases stability, reduces re-runs.
+      # https://docs.omniref.com/ruby/gems/net-http-persistent/2.9.4/symbols/Net::HTTP::Persistent::Error#line=108
+      http_client.send(:http).idle_timeout = 3
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
       puts 'Failed to get browser, retrying...'
@@ -65,10 +76,6 @@ def saucelabs_browser
     max_width, max_height = browser.execute_script("return [window.screen.availWidth, window.screen.availHeight];")
     browser.manage.window.resize_to(max_width, max_height)
   end
-
-  # let's allow much longer timeouts when searching for an element
-  browser.manage.timeouts.implicit_wait = 2 * 60
-  browser.send(:bridge).setScriptTimeout(1 * 60 * 1000)
 
   browser
 end

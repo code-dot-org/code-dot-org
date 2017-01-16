@@ -1,6 +1,6 @@
 / Show the correct answer to authorized teachers
 - if current_user.try(:should_see_inline_answer?, @script_level)
-  #markdown.teacher
+  #markdown.teacher.hide-as-student
     %h3= t('teacher.answer')
     .content
       .column

@@ -6,29 +6,33 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Jak vyučovat jednu Hodinu kódu v mimoškolní aktivitě
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 2) Zvolte si výukový kurz:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Všechny výukové kurzy Hodiny kódu:**
 
   * Vyžadují minimální čas na přípravu pro organizátory
   * Řídí se samy a umožňují žákům postupovat svým vlastním tempem a podle úrovně jejich dovedností
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## 3) Propagujte vaši Hodinu kódu
 
 Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
 
 ## 4) Plánuj potřeby technologie - počítače nejsou povinné
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. Ale **nepotřebujete** počítač pro každé dítě a Hodinu Kódu můžete provozovat i bez počítače.
 
-**Plan Ahead!** Do the following before your event starts:
+**Plánujte dopředu!** Udělejte následující kroky než akce započne:
 
   * Vyzkoušejte si výukové kurzy na počítačích nebo zařízeních. Ujistěte se, že fungují správně na prohlížečích se zvukem a videem.
   * Poskytněte sluchátka pro třídu, nebo požádejte studenty, aby si přinesli své vlastní, když kurz pracuje nejlépe se zvukem.
@@ -62,7 +66,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 **Přímí účastnci k aktivitě**
 
-  * Napište na tabuli odkaz na výukový kurz. Najděte odkaz v seznamu na [informace pro vybraný výukový kurz](<%= resolve_url('https://code.org/learn') %>) pod počtem účastníků.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +76,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 **Co udělat, když někdo skončí dříve?**
 
-  * Povzbuďte účastníky si zkusit jinou Hodinu kód činnosti na [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Nebo požádat ty, kteří se skončili dřívěji, aby pomohli ostatním, co mají potíže.
 
 [col-33]
@@ -116,11 +120,10 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 ## Jiné zdroje Hodiny kódu pro pedagogy:
 
-  * Používejte tuto [šablonu plánu lekce ](/files/AfterschoolEducatorLessonPlanOutline.docx) k organizování Hodiny kódu.
-  * Zkontrolujte si [nejlepší praxi organizátorů](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) z minulých Hodin kódu. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Zhlédněte záznam nášeho webináře [Návod pro kouče Hodiny kódu](https://youtu.be/EJeMeSW2-Mw).
   * [Navštivte live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) s naším zakladatelem, Hadi Partovi, abyste připravili Hodinu kódu.
-  * Navštivte [fórum Hodinu kódu, ](http://forum.code.org/c/plc/hour-of-code) abyste získali rady, náhled a podporu od jiných organizátorů. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Zkontrolujte si [FAQ Hodiny kódu ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Co přijde po Hodině kódu?
@@ -129,3 +132,5 @@ Hodina kódu je pouze první krok, na cestě k poučení o tom, jak technologie 
 
   * Povzbuďte studenty v pokračování [učit se online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Nvštivte](<%= resolve_url('https://code.org/professional-development-workshops') %>) jednodenní workshop, abyste získali instrukce od zkušeného moderátora informatiky. (Pouze USA pedagogové)
+
+<%= view :signup_button %>

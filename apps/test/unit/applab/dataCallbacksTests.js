@@ -1,24 +1,19 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
+import {injectErrorHandler} from '@cdo/apps/javascriptMode';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 var testUtils = require('../../util/testUtils');
 testUtils.setExternalGlobals();
 
 var Applab = require('@cdo/apps/applab/applab');
 var applabCommands = require('@cdo/apps/applab/commands');
-var errorHandler = require('@cdo/apps/errorHandler');
 var AppStorage = require('@cdo/apps/applab/appStorage');
-
-// used in design mode
-window.Applab = Object.assign({}, window.Applab, {
-  appWidth: 320,
-  appHeight: 480,
-  storage: AppStorage
-});
 
 
 describe('createRecord callbacks', function () {
   var xhr;
   var lastRequest;
+  let originalWindowApplab;
 
   // Intercept all XHR requests, storing the last one
   before(function () {
@@ -26,11 +21,24 @@ describe('createRecord callbacks', function () {
     xhr.onCreate = function (req) {
       lastRequest = req;
     };
+    originalWindowApplab = window.Applab;
+    window.Applab = {
+      // used in design mode
+      appWidth: 320,
+      appHeight: 480,
+      storage: AppStorage,
+
+      // used in error reporting when no onError provided
+      JSInterpreter: {
+        getNearestUserCodeLine: () => 0
+      },
+    };
   });
 
   after(function () {
     lastRequest = null;
     xhr.restore();
+    window.Applab = originalWindowApplab;
   });
 
   it('calls onSuccess for 200', function () {
@@ -78,15 +86,19 @@ describe('createRecord callbacks', function () {
 
   it('logs an error on 403 if no onError provided', function () {
     var myRecord = { name: 'Alice' };
+
+    var applabLogger = sinon.spy();
+    injectErrorHandler(new JavaScriptModeErrorHandler(
+      () => window.Applab.JSInterpreter,
+      {log: applabLogger}
+    ));
+
     applabCommands.createRecord({
       table: 'mytable',
       record: myRecord,
       onSuccess: function () {
       }
     });
-
-    var applabLogger = sinon.spy(Applab.log);
-    errorHandler.setLogMethod(applabLogger);
 
     lastRequest.respond(403, {}, 'A table may have at most 1000 rows');
 

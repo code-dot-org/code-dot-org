@@ -1,9 +1,9 @@
 # The Apps Package
 
-The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://code.google.com/p/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://code.google.com/p/blockly/w/list).
+The **Apps Package** contains most of our client-side JavaScript, particularly the source code for the [Blockly](https://developers.google.com/blockly/) based 20 hour curriculum, Hour of Code, and our Droplet-based levels (including App Lab). Information about Blockly can be found in the [wiki](https://github.com/google/blockly/wiki).
 
-Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://code.google.com/p/blockly/wiki/Credits#Engineers)
-and a small army of [translators](https://code.google.com/p/blockly/wiki/Credits#Translators).
+Blockly is a web-based, graphical programming editor. Users can drag blocks together to build an application. No typing required. Credit goes to these awesome [developers](https://github.com/google/blockly/graphs/contributors)
+and a small army of translators.
 
 - [Quick Start](#quick-start)
 - [Contributing](#contributing)
@@ -17,10 +17,10 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli
+npm install -g grunt-cli yarn@0.16.1
 
 # Perform first full build
-npm install
+yarn
 npm run build
 ```
 
@@ -229,12 +229,10 @@ more information on how to use the `storybook` api.
 
 A static version of the styleguide is hosted at https://code-dot-org.github.io/cdo-styleguide/
 
-#### Full build with blockly-core changes
+#### Full build with blockly changes
 
-1. Check out [blockly-core](https://github.com/code-dot-org/blockly-core/) as a sibling directory to blockly.
-1. `./build_with_core.sh debug`
-  * The `debug` flag builds debug versions of both blockly-core and blockly, suitable for debugging
-1. `grunt dev`
+1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
+1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
 
 ### Localization
 
@@ -264,9 +262,13 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 
 ### Style Guide
 
-- In general follow Google's javascript style [guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
+- In general follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
 - `npm run lint` should report 0 warnings or errors.
 - See our [project style guide](../STYLEGUIDE.md) for details.
+
+## Other Docs
+
+- [Apps Build System](./docs/build.md)

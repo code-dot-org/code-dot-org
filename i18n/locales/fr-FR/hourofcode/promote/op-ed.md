@@ -4,41 +4,45 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### Vous trouverez ci-dessous un exemple de tribune libre favorable à la semaine de l'éducation des Sciences informatiques. Ce document peut être utilisé par une région, des législateurs, des chefs d'entreprise etc.
 
   
 
 
-Allez dans [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) pour trouver des informations sur l'informatique.
+Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to find state specific information about computer science.
 
-**Titre : Informatique... Où sont les emplois ?**
+**Title: Computing…Where the Jobs Are**
 
-**Par [NOM DU SIGNATAIRE] et [ENVISAGEZ DE CO-SIGNER LE TEXTE AVEC UN EDUCATEUR, PRINCIPAL OU LEADER D'OPINION]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Les ordinateurs sont partout. Ils sont dans nos poches. Sur nos murs. Ils sont dans nos voitures. Ils sont devenus un élément essentiel de notre infrastructure, des réseaux électriques aux feux de circulation jusque dans les coulisses des marchés financiers. Tous ces ordinateurs ont une chose en commun. Ils sont dépendant des logiciels pour leur dire ce qu'ils doivent faire.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Mais, qui va va créer ces logiciels ?
+But who exactly is going to write this software?
 
-Si on prend en compte la rapidité avec laquelle notre monde se transforme grâce à la technologie, vous vous dites surement que le nombre d'étudiants en informatique dans l'enseignement secondaire doit avoir atteint un niveau record. Vous feriez erreur. En fait, moins d'étudiants étudient l'informatique, et encore moins d'écoles l'enseignent depuis une dizaine d'années.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-À l'heure où la demande pour des programmeurs qualifiés n'a jamais été aussi élevée, nous avons de moins en moins d'informaticiens. Même en période de chômage accru, parmi les milliers d'emplois proposés par le secteur de l'informatique, nombre d'entre eux à **[Insérer région/ville]**, sont vacants car nous n'avons pas suffisamment de personnes avec les compétences requises.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Pourquoi ? Comment pouvons-nous résoudre cette situation ?
+Why is this? And how can we address it?
 
-Le problème commence dans nos collèges et lycées. Neuf écoles sur dix n'offrent pas de cours de programmation informatique. Dans **[NOM De L'ACADEMIE]** l'an dernier, seuls **[NUMBER]** étudiants ont pris des cours d'informatique, soit **[%]** de tous les étudiants de l'académie. A ce jour, nous ne faisons pas suffisamment pour préparer ou encourager nos étudiants à poursuivre dans ces carrières stratégiques et fortement rémunératrices.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-De nombreuses grandes innovations informatiques ont été inventées ici dans ce pays, mais nous courons le risque de perdre notre leadership si nous ne réagissons pas maintenant.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Nous devons effectuer quelques changements.
+We need to make some changes.
 
-**[FACULTATIF POUR LES ÉTATS/ORGANISMES OÙ CELA S'APPLIQUE]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Un changement positif serait d'offrir des cours d'informatiques qui s'intègrerait aux diplômes de mathématique ou de sciences proposés dans nos lycées. En **[Insérer la région]**, les cours d'informatique sont proposés en option. Compte tenu des exigences académiques, les étudiants ne peuvent se permettre de prendre des cours d'informatique optionnels. Et effectuer ce changement pourrait avoir un grand impact. Dans les pays où les cours d'informatique font partis du cursus d'obtention des diplômes, on note que les élèves sont cinquante pour cent plus nombreux. Aux Etats-Unis, le taux de participation des minorités défavorisées est beaucoup plus élevé au sein qu'au sein des états qui proposent l'informatique en option.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Nous devrions également travailler avec les jeunes élèves pour éveiller leur intérêt pour l'informatique et le code. Nos enfants ne devraient pas se contenter de savoir utiliser des applications et des jeux vidéo – ils devraient aussi apprendre à les créer. Les enfants peuvent apprendre les bases du code dès le CE1.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Nous devons recruter plus d'enseignants en sciences informatiques et encourager le perfectionnement professionnel au sein de leur spécialité. Aujourd'hui, de nombreuses ressources en ligne peuvent aider les enseignants et rester à jour concernant les dernières évolutions technologies pour leurs élèves.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Selon l'organisme américain, Bureau of Labor Statistics, d'ici à 2020, il y aura 9,2 millions d'emplois dans les domaines du STEM (Science, Technologie, Ingénierie et mathématiques). La moitié de ces emplois — 4,6 millions — sera dans le secteur de l'informatique ou des technologies de l'information. L'informatique étant le fondement des connaissances du XXIe siècle. Si nos enfants n'ont pas la possibilité d'acquérir les compétences nécessaires, qui prendra ces emplois ?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Cette semaine, <%= campaign_date('full') %>, est la semaine d'éducation des sciences informatiques. Dans les écoles de **[REGION/ACADEMIE]**, nos étudiants participeront à la campagne nationale Une Heure de Code. Notre objectif est de démystifier le sujet de l'informatique et nous l'espérons aiguiser l'appétit des élèves pour en apprendre plus. Je me joindrai à eux, et vous invite à participer également. Tout le monde devrait apprendre à coder. Visitez https://hourofcode.com/<%= @country %> pour en savoir plus et vous lancer. Soutenez nos initiatives pour introduire l'informatique dans nos écoles à **[REGION/ACADEMIE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+
+<%= view :signup_button %>

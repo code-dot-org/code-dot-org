@@ -6,12 +6,14 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Promote the Hour of Code
+# 推廣「一小時的程式設計課程」
 
-## Hosting an Hour of Code? [See the how-to guide](<%= resolve_url('/how-to') %>)
+## 舉辦一場「一小時的程式設計課程」活動？<a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
@@ -25,7 +27,7 @@ nav: promote_nav
 
 ## 在社群網絡媒體張貼訊息
 
-[![圖片](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -33,9 +35,9 @@ nav: promote_nav
 
 ## Use the Hour of Code logo to spread the word
 
-[![圖片](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[下載高畫質版本](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
@@ -49,10 +51,10 @@ nav: promote_nav
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## 印下這些貼紙並給予你的學生
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![圖片](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -62,7 +64,7 @@ nav: promote_nav
 
 ## 邀請您的學校、校長或朋友進行註冊：
 
-Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. 好消息是我們正在改變此狀況。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. 好消息是我們正在改變此狀況。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
@@ -78,33 +80,33 @@ Get started at http://hourofcode.com/<%= @country %>
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
+電腦到處都有，正在改變地球上的任何產業，但只有不到一半的學校有教電腦科學。 Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
-我邀請您參加我們的開幕大會，來看孩子們在 [DATE]這一天開始寫程式的活動。
+I'm writing to invite you to attend our kickoff assembly, and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. 請加入我們的行列。
+The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Please join us.
 
-**聯絡人：** [您的名字],[職稱], [電話]
+**Contact:** [YOUR NAME], [TITLE], cell: (212) 555-5555
 
-**時間：** [您的活動日期和時間]
+**When:** [DATE and TIME of your event]
 
-**地點：** [地址和方向]
+**Where:** [ADDRESS and DIRECTIONS]
 
-保持聯繫、隨時候教。
+I look forward to being in touch.
 
 <a id="parents"></a>
 
 ## 告訴家長關於您學校的活動：
 
-親愛的家長，
+親愛的家長們，
 
-我們生活在一個被科技包圍的世界。 And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+我們生活在一個被科技環繞的世界。 And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
@@ -114,9 +116,9 @@ This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Sincerely,
+誠摯地邀請您，
 
-Your principal
+您們的校長
 
 <a id="politicians"></a>
 
@@ -126,7 +128,7 @@ Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
 Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for *every* industry today. Yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
 
@@ -135,3 +137,5 @@ I'm writing to invite you to take part in our Hour of Code event and speak at ou
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
 Sincerely, [NAME], [TITLE]
+
+<%= view :signup_button %>

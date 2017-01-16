@@ -11,6 +11,60 @@ module.exports = {
   levelId: "ec_simple",
   tests: [
     {
+      description: "Data button hidden when hideViewDataButton is specified",
+      editCode: true,
+      useFirebase: true,
+      hideViewDataButton: true,
+
+      runBeforeClick: function (assert) {
+        assert.equal($("#codeModeButton").is(':visible'), true, 'code mode button is visible');
+        assert.equal($("#designModeButton").is(':visible'), true, 'design mode button is visible');
+        assert.equal($("#dataModeButton").is(':visible'), false, 'data mode button is hidden');
+
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
+      description: "version history button works in data mode",
+      editCode: true,
+      useFirebase: true,
+
+      runBeforeClick: function (assert) {
+        $("#dataModeButton").click();
+        assert.equal($('#dataOverview').is(':visible'), true, 'dataOverview is visible');
+        assert.equal($('#data-mode-versions-header').is(':visible'), true,
+          'version history button is visible');
+
+        $('#data-mode-versions-header').click();
+        assert.equal($('.dialog-title:visible').text(), "Version History",
+          'version history dialog is visible');
+
+        Applab.onPuzzleComplete();
+      },
+      customValidator: function (assert) {
+        // No errors in output console
+        var debugOutput = document.getElementById('debug-output');
+        assert.equal(debugOutput.textContent, '');
+        return true;
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      },
+    },
+
+    {
       description: "Data Browser shows records and key value pairs",
       editCode: true,
       useFirebase: true,
@@ -99,40 +153,48 @@ module.exports = {
             assert.equal(column1NameInput.is(':visible'), true, 'column1 name input is visible');
             ReactTestUtils.Simulate.change(column1NameInput[0], { target: { value: 'firstname' } });
             ReactTestUtils.Simulate.keyUp(column1NameInput[0], enterKeyEvent);
-            assert.equal(column1NameInput.is(':visible'), false, 'column1 name input is hidden');
-            assert.equal(dataTable.find('th > div:contains(firstname)').is(':visible'), true, 'column1 renamed to firstname');
-
-            // add new column
-            ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
             setTimeout(() => {
-              const column2NameInput = dataTable.find('th > input[value="column2"]');
-              assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
-              ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
-              ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
-              assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
+              assert.equal(column1NameInput.is(':visible'), false, 'column1 name input is hidden');
+              assert.equal(dataTable.find('th > div:contains(firstname)').is(':visible'), true, 'column1 renamed to firstname');
 
-              // add new row
-              const addRow = $('#dataTable').find('tr:contains(Add Row)');
-              ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'bob' } });
-              ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '8' } });
-              ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+              // add new column
+              ReactTestUtils.Simulate.click($('#addColumnButton')[0]);
               setTimeout(() => {
-                const dataRow1 = $('#dataTable').find('tr:contains(Edit)');
-                assert.equal(dataRow1.find('td')[0].innerHTML, '1', 'id cell value');
-                assert.equal(dataRow1.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
-                assert.equal(dataRow1.find('td')[2].innerHTML, '8', 'age cell value');
-
-                // add another row
-                ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'charlie' } });
-                ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '9' } });
-                ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                let tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                assert.equal(tableNames.join(','), 'id,firstname,column2', 'column order correct before column2 renamed');
+                const column2NameInput = dataTable.find('th > input[value="column2"]');
+                assert.equal(column2NameInput.is(':visible'), true, 'column2 name input is visible');
+                ReactTestUtils.Simulate.change(column2NameInput[0], { target: { value: 'age' } });
+                ReactTestUtils.Simulate.keyUp(column2NameInput[0], enterKeyEvent);
                 setTimeout(() => {
-                  const dataRow2 = $('#dataTable').find('tr:contains(Edit)');
-                  assert.equal(dataRow2.find('td')[0].innerHTML, '1', 'id cell value');
-                  assert.equal(dataRow2.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
-                  assert.equal(dataRow2.find('td')[2].innerHTML, '8', 'age cell value');
+                  assert.equal(dataTable.find('th > div:contains(age)').is(':visible'), true, 'column1 renamed to age');
+                  tableNames = dataTable.find('th .test-tableNameDiv').get().map(div => div.innerHTML);
+                  assert.equal(tableNames.join(','), 'id,firstname,age', 'column order correct after column2 renamed');
 
-                  Applab.onPuzzleComplete();
+                  // add new row
+                  const addRow = $('#dataTable').find('tr:contains(Add Row)');
+                  ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'bob' } });
+                  ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '8' } });
+                  ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                  setTimeout(() => {
+                    const dataRow1 = $('#dataTable').find('tr:contains(Edit)');
+                    assert.equal(dataRow1.find('td')[0].innerHTML, '1', 'id cell value');
+                    assert.equal(dataRow1.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
+                    assert.equal(dataRow1.find('td')[2].innerHTML, '8', 'age cell value');
+
+                    // add another row
+                    ReactTestUtils.Simulate.change(addRow.find('input')[0], { target: { value: 'charlie' } });
+                    ReactTestUtils.Simulate.change(addRow.find('input')[1], { target: { value: '9' } });
+                    ReactTestUtils.Simulate.keyUp(addRow.find('input')[1], enterKeyEvent);
+                    setTimeout(() => {
+                      const dataRow2 = $('#dataTable').find('tr:contains(Edit)');
+                      assert.equal(dataRow2.find('td')[0].innerHTML, '1', 'id cell value');
+                      assert.equal(dataRow2.find('td')[1].innerHTML, '"bob"', 'firstname cell value');
+                      assert.equal(dataRow2.find('td')[2].innerHTML, '8', 'age cell value');
+
+                      Applab.onPuzzleComplete();
+                    }, 100);
+                  }, 100);
                 }, 100);
               }, 100);
             }, 100);

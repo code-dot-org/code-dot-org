@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-08T18:56:55.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "## Data Visualization 101: How to design charts and graphs\r\n\r\nIn lesson 10, students evaluate a curated set of visualizations based on how effective they are at clearly and accurately communicating what they're representing. After they've done this evaluation for themselves, they explore this resource, which formally introduces the names of the different types of charts they've been seeing and goes into detail about what types of data each chart can represent most appropriately, as well as best practices for designing each type of chart.\r\n\r\n",
+    "link_title": "Data Visualization 101: How to design charts and graphs",
+    "url": "http://content.visage.co/hs-fs/hub/424038/file-2094950163-pdf"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</ExternalLink>

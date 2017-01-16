@@ -1,4 +1,5 @@
-- data = level.properties
+-# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
+- data = brakeman_no_warn(level.properties)
 - app = 'text_match'
 
 .text-match{id: "level_#{level.id}"}
@@ -20,11 +21,11 @@
 - if standalone || @script_level
   :javascript
 
-    window.levelGroup.levels[#{level.id}] = new TextMatch(
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new TextMatch(
       #{level.id},
       "level_#{level.id}",
       "#{app}",
       #{standalone},
       #{data['answers'] || []},
       #{last_attempt.to_json}
-    );
+    ));

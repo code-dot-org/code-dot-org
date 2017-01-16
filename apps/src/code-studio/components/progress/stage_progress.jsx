@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import { stageProgressShape } from './types';
 import ProgressDot from './progress_dot.jsx';
-import color from '../../../color';
+import color from "../../../util/color";
 
 const styles = {
   courseOverviewContainer: {

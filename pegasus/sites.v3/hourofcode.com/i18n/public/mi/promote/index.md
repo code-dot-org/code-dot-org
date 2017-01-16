@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -13,26 +15,28 @@ nav: promote_nav
     twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode'
 %>
 
-# How to get involved
+# Te whai wāhitanga
 
-## 1. Spread the word
+## 1. Kawea te kupu
 
-Tell your friends about the **#HourOfCode**!
+Tēnā kawea te kōrero mō **#HourOfCode** ki ō hoa!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Ask your whole school to offer an Hour of Code
+## 2. Tēnā tono atu ki tō kura kia riro mā te kura katoa tētahi takunetanga Hour of Code e hāpai
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Tukuna tēnei īmēra](<%= resolve_url('/promote/resources#sample-emails') %>) ki tō tumuaki me te whakatakoto i te taki ki mua i ngā akomanga katoa kia hikina e rātou, kia waitohu rātou.
 
-## 3. Ask your employer to get involved
+## 3. Pōhiritia tō rangatira mahi
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
+[Tukuna tēnei īmēra](<%= resolve_url('/promote/resources#sample-emails') %>) ki tō pāhi, ki te kaiurungi rānei o tō pakihi.
 
-## 4. Promote Hour of Code in your community
+## 4. Whakatairangatia te Hour of Code i tō hapori
 
-[Recruit a local group](<%= resolve_url('/promote/resources#sample-emails') %>)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](<%= resolve_url('/promote/resources') %>) for your own event.
+[Kimihia he rōpū i tō hapoti](<%= resolve_url('/promote/resources#sample-emails') %>) - karapu tāpae tama/hine, whakapono, whare wānanga, kaumātua, uniana, ka mutu ō hoa. Ehara i te mea me noho ki tētahi kura ki te ako i ētahi pūkenga hou. Whakamahia ēnei [pānui whakaahua, haki, tukupiri, ataata, aha atu rānei](<%= resolve_url('/promote/resources') %>) mō tāu takunetanga.
 
-## 5. Ask a local elected official to support the Hour of Code
+## 5. Pōhiritia te kaitōrangapū ā-rohe ki te tautoko i te Hour of Code
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Tukuna tēnei īmēra](<%= resolve_url('/promote/resources#sample-emails') %>) ki ngā kaitōrangapū, ki te kaunihera, ki te pōari o te kura rānei ki te pōhiri i a rātou ki tō kura mō te Hour of Code. Mā tēnei ka tautoko i ngā mahi pūtaiao rorohiko i tō takiwā haere ake nei.
+
+<%= view :signup_button %>

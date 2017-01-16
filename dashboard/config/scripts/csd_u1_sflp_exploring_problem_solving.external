@@ -1,0 +1,9 @@
+name 'CSD-U1-SFLP Exploring Problem Solving'
+css 'unplugged'
+markdown <<MARKDOWN
+# Overview
+
+In this lesson you'll apply the problem solving process to a variety of problems.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

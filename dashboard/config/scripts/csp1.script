@@ -1,23 +1,19 @@
-title 'CS Principles Unit 1 - The Internet'
-description 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.'
-description_short "The Internet"
-login_required 'true'
-hidden 'false'
+hidden false
+login_required true
+hideable_stages true
 
-stage 'CS Principles Pre-survey', lockable: true
+stage 'CS Principles Pre-survey', lockable: true
 assessment 'CSP pre-assessment survey'
 
-stage "Personal Innovations"
-#named_level 'CSP Pre-survey'
+stage 'Personal Innovations'
 level 'U1L1 Student Lesson Introduction'
 named_level 'Computer Science is Changing Everything'
-# level 'U1L1 - FR computer science word association'
 
-stage "Sending Binary Messages"
+stage 'Sending Binary Messages'
 level 'v2 U1L2 Student Lesson Introduction'
 assessment 'U1L2 Multiple Choice Assessment Question'
 assessment 'U1L2 Free response assessment question'
-assessment  'U1L3 Free response reflection question'
+assessment 'U1L3 Free response reflection question'
 assessment 'U1L3 Free Response'
 
 stage 'Sending Binary Messages with the Internet Simulator'
@@ -48,7 +44,6 @@ assessment 'U1L8 Multiple Choice'
 
 stage 'Encoding and Sending Formatted Text'
 level 'v2 U1L8 Student Lesson Introduction'
-#level 'U1L10 NetSim numbers with decimal'
 named_level 'Internet Simulator: Sending Text'
 assessment 'U1L10 Assessment 1'
 assessment 'U1L10 Assessment 2'
@@ -58,8 +53,7 @@ assessment 'U1L11 Assessment 2'
 assessment 'U1L11 Reflection Free Response'
 assessment 'U1L11 Collaboration Reflection'
 
-stage 'Unit 1 Chapter 1 Assessment', lockable:true
-#level 'csp_unit_assessment_overview'
+stage 'Unit 1 Chapter 1 Assessment', lockable: true
 assessment 'CSP Unit 1 Ch1 Cumulative Assessment MC Group'
 
 stage 'The Internet'
@@ -100,11 +94,11 @@ assessment 'U2L3 Assessment'
 
 stage 'The Need for DNS'
 level 'v2 U1L12 Student Lesson Introduction'
-named_level 'Internet Simulator: DNS' 
-named_level 'The Internet: IP Addresses & DNS' 
+named_level 'Internet Simulator: DNS'
+named_level 'The Internet: IP Addresses & DNS'
 assessment 'U2L09 Assessment1'
 assessment 'U2L09 Assessment2'
-assessment 'U2L09 Free Response Wrap Up' 
+assessment 'U2L09 Free Response Wrap Up'
 assessment 'U2L10 Assessment1'
 
 stage 'HTTP and Abstraction'
@@ -117,6 +111,5 @@ assessment 'U2L11 Free Response'
 stage 'Practice PT - The Internet and Society'
 level 'v2 U1L14 Student Lesson Introduction'
 
-stage 'Unit 1 Chapter 2 Assessment', lockable:true
-#level 'csp_unit_assessment_overview'
+stage 'Unit 1 Chapter 2 Assessment', lockable: true
 assessment 'CSP Unit 1 Ch2 Cumulative Assessment MC Group'

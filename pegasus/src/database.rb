@@ -7,10 +7,18 @@ class Tutorials
     @contents = DB[@table].all
   end
 
+  # Returns an array of the tutorials.  Includes launch_url for each.
+  def contents(host_with_port)
+    @contents.each do |tutorial|
+      tutorial[:launch_url] = launch_url_for(tutorial[:code], host_with_port)
+    end
+  end
+
   def launch_url_for(code, domain)
     return @contents.find {|row| row[:code] == code}[:url] if @table == :beyond_tutorials
 
     api_domain = domain.gsub('csedweek.org', 'code.org')
+    api_domain = api_domain.gsub('hourofcode.com', 'code.org')
     api_domain = api_domain.gsub('ar.code.org', 'code.org')
     api_domain = api_domain.gsub('br.code.org', 'code.org')
     api_domain = api_domain.gsub('ro.code.org', 'code.org')
@@ -18,7 +26,7 @@ class Tutorials
     api_domain = api_domain.gsub('tr.code.org', 'code.org')
     api_domain = api_domain.gsub('uk.code.org', 'code.org')
     api_domain = api_domain.gsub('za.code.org', 'code.org')
-    "http://#{api_domain}/api/hour/begin/#{code}"
+    "http://#{api_domain}/api/hour/begin_learn/#{code}"
   end
 
   def find_with_tag(tag)
@@ -97,6 +105,6 @@ class Form2 < OpenStruct
 
   def self.from_row(row)
     return nil unless row
-    self.new row
+    new row
   end
 end

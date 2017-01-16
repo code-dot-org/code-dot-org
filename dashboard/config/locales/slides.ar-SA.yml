@@ -525,7 +525,7 @@
           معا.
       5:
         image: notes/playlab_intro_5.png
-        text: |
+        text: |-
           في اللغز الأول, ممثلنا هو البطريق وسوف نجعله يقول "مرحباً" عبر سحب القطعة البرمجية للنطق, و ربطها في قطعة عند التشغيل, و كتابة "مرحباً" بداخلها.
           يمكننا أيضاً جعل البطريق يتحرك عبر سحب القطعة البرمجية تحرك لليمين و تحرك لليسار.
           حالما تحصل على قطعك البرمجية في الأمكنة, أضغط على زر التشغيل لترى ما قد قمت ببرمجته.
@@ -537,7 +537,7 @@
     playlab_events:
       1:
         image: notes/playlab_events_1.png
-        text: |
+        text: |-
           الأن, سوف نقوم بتعلم شيئاً يستخدمه جميع مبرمجي الالعاب يومياً.
           ويسمونه بالأحداث.
           الحدث يخبر برنامجك بالاستماع عندما يحدث شيئاً معيناً. وعند حدوث ذلك الشيء, سوف يقوم الحدث باتخاذ فعل.
@@ -547,7 +547,7 @@
           على الشاشة."
       3:
         image: notes/playlab_events_3.png
-        text: |
+        text: |-
           هنا, سوف نقوم بإنشاء روبوت فضائي يقوم بتحية أهل الأرض عندما يقوم اللاعب بالضغط عليه.
           سوف نستخدم القطعة البرمجية "عند الضغط" و ارفاق القطعة البرمجية "إنطق" لها. عندما يضغط اللاعب على الروبوت الفضائي, كل شيء مرفق بحدث القطعة البرمجية "عند الضغط" سوف يقوم بالتنفيذ. ماذا سيقول المخلوق الفضائي الخاص بك ؟
       4:
@@ -567,7 +567,7 @@
           إلى الأبد".
       3:
         image: notes/playlab_repeat_forever_3.png
-        text: |
+        text: |-
           في اللغز التالي, هدفنا هو مساعدة دورية حرس الحدود لهذه المملكة, يساراً ويميناً بشكل متكرر.
           تَعلَّم كيف تعمل الأوامر المتكررة, والتي سوف توفر عليك الكثير من الوقت لاحقاً عندما تريد إنشاء لعبتك الخاصة.
     C1_artist_intro:
@@ -648,21 +648,19 @@
           أفضل و أكثر متعة لك. المثابرة هو أسم اللعبة. ابقى معها, سوف تحب ذلك."
       2:
         image: notes/C1_building_foundation_2.jpg
-        text: This lesson is called building a foundation. In this lesson, we'll work
-          on a task that is meant to be really difficult. You will figure out how
-          to make a structure at least as tall as one of these cups and it's got to
-          be strong enough to hold the weight of a book.
+        text: |-
+          يسمى هذا الدرس بناء مؤسسة. في هذا الدرس, سوف نعمل في مهمة التي تعتبر صعبة حقاً.
+          سوف تعرف كيفية صنع منشأة لها على الأقل نفس طول إحدى هذه المكعبات و يجب أن تكون قوية كفاية لتتحمل وزن الكتاب.
       3:
         image: notes/C1_building_foundation_3.jpg
-        text: There might be times that our creation doesn't work out. There might
-          be times that we get frusrated and want to give up. There might be a lot
-          of those moments. But if we keep on trying, give it our best shot over and
-          over again, then we're sure to get it before long.
+        text: "قد نمر بأوقات الأشياء التي صنعناها لا تعمل. و قد نمر بأوقات نصبح فيها
+          محبطين و نريد الإستسلام. قد نمر بكثير من هذه اللحظات. و لكن إذا استمرينا
+          بالمحاولة, و اعطينا أفضل ما لدينا مرة بعد مرة, عندها سنكون متأكدين أننا
+          سنحقق ما نريد قريباً."
       4:
         image: notes/C1_building_foundation_4.jpg
-        text: Persistence is all about hanging in there when you really want to give
-          up. If you want to create something new and different, there's going to
-          be a lot of failures along the way.
+        text: "المثابرة لا تعني سوى الصمود عندما ترغب بالإستسلام، إذا كنت تريد صنع
+          شيء جديد ومختلف فلا بد أن تواجه العديد من الإخفاقات في الطريق."
       5:
         image: notes/C1_building_foundation_5.jpg
         text: The trick to persistence is choosing to keep on going and learn from
@@ -2995,7 +2993,7 @@
       1:
         image: notes/gumball_repeat_1.JPG
         text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
-          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة."
       2:
         image: notes/gumball_repeat_2.JPG
         text: "يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.
@@ -3074,7 +3072,7 @@
       1:
         image: notes/iceage_repeat_1.JPG
         text: "هل لك أن تتخيل لو اردت تكريرأحد الأوامر مرةً بعد مرة و للأبد؟ \nنأمل
-          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة.\n"
+          أن لا يضطر أحد لذلك حيث أن أجهزة الحاسوب تقوم بهذا و بسهولة."
       2:
         image: notes/iceage_repeat_2.JPG
         text: "يسمى هذا بأمرالتكرار للأبد. وأي شيء يربط به يتكرر باستمرار في اللعبة.
@@ -3085,3 +3083,121 @@
         text: "في هذا اللغز القادم، هدفنا هو مساعدة الشخصية بالقيام بحركة مستمرة.
           عندما تتعلم كيفية القيام بأوامر التكرار سيوفر لك ذلك طن من الوقت عند بناء
           اللعبة خاصتك."
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
+          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
+          but the world has stopped. The sheep aren't moving, the chickens aren't
+          laying eggs, and zombies are just standing still. It's up to you to add
+          the code to make the Minecraft world work.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: how people think and behave.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: You'll see your screen is split into three main parts. 1) On the left
+          is the Minecraft game. Right now the world is frozen but we're going to
+          fix that with code.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) This middle area is the toolbox. Each of these blocks is a command
+          that chickens, sheep, and other Minecraft creatures can understand.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) The space on the right is called the workspace and this is where
+          we'll build our program.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back to the toolbox.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: After you've hit "Run" you can always hit the "Reset" button to reset
+          the game and start over. Now, it's your turn to make your very own version
+          of Minecraft. Have fun!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
+          of the animals and enemies in the game. One of the animals that I worked
+          on is the ocelot. I worked on the part where you can feed an ocelot a fish
+          to tame it into your own cat.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

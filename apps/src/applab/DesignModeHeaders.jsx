@@ -1,13 +1,17 @@
-var React = require('react');
-var applabMsg = require('@cdo/applab/locale');
-var msg = require('@cdo/locale');
-var FontAwesome = require('../templates/FontAwesome');
+import React from 'react';
+import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
+import FontAwesome from '../templates/FontAwesome';
+import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 
-module.exports = React.createClass({
+const DesignModeHeaders = React.createClass({
   propTypes: {
     handleManageAssets: React.PropTypes.func.isRequired,
+    handleVersionHistory: React.PropTypes.func.isRequired,
     onToggleToolbox: React.PropTypes.func.isRequired,
-    isToolboxVisible: React.PropTypes.bool.isRequired
+    isToolboxVisible: React.PropTypes.bool.isRequired,
+    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
   },
 
   handleManageAssets: function () {
@@ -56,25 +60,42 @@ module.exports = React.createClass({
       </span>
     );
 
+    const isRtl = this.props.localeDirection === 'rtl';
+    const hasFocus = !this.props.isRunning;
+
     return (
-      <div id="design-headers">
-        <div id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
+      <PaneHeader
+        id="design-headers"
+        dir={this.props.localeDirection}
+        hasFocus={hasFocus}
+        style={{color: 'white'}}
+      >
+        <PaneSection id="design-toolbox-header" className="workspace-header" style={styles.toolboxHeader}>
           {manageAssetsIcon}
           <span>{applabMsg.designToolboxHeader()}</span>
           <span className="workspace-header-clickable" onClick={this.onToggleToolbox}>&nbsp;{msg.hideToolbox()}</span>
-        </div>
-        <div
+        </PaneSection>
+        <PaneSection
           className="workspace-header"
           onClick={this.onToggleToolbox}
           style={styles.showToolboxHeader}
         >
           <span className="workspace-header-clickable">{msg.showToolbox()}</span>
           {manageAssetsIcon}
-        </div>
-        <div id="design-workspace-header" className="workspace-header">
+        </PaneSection>
+        <PaneButton
+          id="design-mode-versions-header"
+          iconClass="fa fa-clock-o"
+          label={msg.showVersionsHeader()}
+          headerHasFocus={hasFocus}
+          isRtl={isRtl}
+          onClick={this.props.handleVersionHistory}
+        />
+        <PaneSection id="design-workspace-header" className="workspace-header">
           <span>{applabMsg.designWorkspaceHeader()}</span>
-        </div>
-      </div>
+        </PaneSection>
+      </PaneHeader>
     );
   }
 });
+export default DesignModeHeaders;

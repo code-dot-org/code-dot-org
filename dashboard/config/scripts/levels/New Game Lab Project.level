@@ -24,6 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "show_debug_watch": "true",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "false",
@@ -32,7 +33,14 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "start_blocks": "function draw() {\r\n  \r\n}\r\n",
-    "show_d_pad": "true"
+    "show_d_pad": "true",
+    "encrypted_examples": "HCakTOMiMfBfQY6wOu61rcioW6ZnEyp0NWwMynZmTHviLEZIz4AWFEivI06r\n24cc\n",
+    "instructions_important": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

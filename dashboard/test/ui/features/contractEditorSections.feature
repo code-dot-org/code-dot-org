@@ -3,10 +3,9 @@
 Feature: Contract Editor section configuration and manipulation
 
 Background:
-  Given I am on "http://learn.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  Then I wait to see a dialog titled "Puzzle 4 of 4"
-  And I close the dialog
+  And I wait for the page to fully load
   And I close the React alert
   Then element "#runButton" is visible
   And I open the blockly category with ID "7"

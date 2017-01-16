@@ -4,10 +4,10 @@ class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
   setup do
-    @turtle_data = {:game_id => 23, :name => "__bob4", :level_num => "custom", :skin => "artist", :instructions => "sdfdfs", :type => 'Artist'}
-    @custom_turtle_data = {:solution_level_source_id => 4, :user_id => 1}
-    @maze_data = {:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze'}
-    @custom_maze_data = @maze_data.merge(:user_id => 1)
+    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
+    @custom_turtle_data = {solution_level_source_id: 4, user_id: 1}
+    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
+    @custom_maze_data = @maze_data.merge(user_id: 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -15,7 +15,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze')
+    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -26,13 +26,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "reads and converts data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.load_maze(csv, 2)
     assert_equal [[0, 1], [1, 2]], maze
   end
 
   test "parses maze data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.parse_maze(Maze.load_maze(csv, 2).to_json)
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
@@ -258,7 +258,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze, :published => true)
+    maze = create(:maze, published: true)
     assert maze
   end
 
@@ -331,6 +331,36 @@ EOS
     CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
 
     level = Applab.create(name: 'applab_with_example')
+    level.examples = ['xxxxxx', 'yyyyyy']
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # this property is encrypted, not plaintext
+    assert_nil level.properties['examples']
+    assert level.properties['encrypted_examples']
+
+    # take out nils and empty strings
+    level.examples = ['xxxxxx', nil, "", 'yyyyyy', ""]
+
+    # go through a save/load
+    level.save!
+    level = level.reload
+
+    assert_equal ['xxxxxx', 'yyyyyy'], level.examples
+
+    # does not crash if decryption is busted
+    CDO.stubs(:properties_encryption_key).returns(nil)
+    assert_equal nil, level.examples
+  end
+
+  test 'gamelab examples' do
+    CDO.stubs(:properties_encryption_key).returns('thisisafakekeyfortesting')
+
+    level = Gamelab.create(name: 'gamelab_with_example')
     level.examples = ['xxxxxx', 'yyyyyy']
 
     # go through a save/load

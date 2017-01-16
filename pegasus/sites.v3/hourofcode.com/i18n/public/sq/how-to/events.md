@@ -1,12 +1,12 @@
 ---
-
 title: <%= hoc_s(:title_how_to_events) %>
 layout: wide
 nav: how_to_nav
-
 ---
 
-# Si të organizosh ngjarjen e Orës së Kodimit
+<%= view :signup_button %>
+
+# Si të organizosh Orën e Kodimit
 
 ## 1) Përgatitu për eventin tënd
 
@@ -34,23 +34,25 @@ nav: how_to_nav
 
 ## Shembull i Planit të Event-it
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Event:** Nisja e Asamblesë për Javën Edukative në Shkenca Kompjuterike në të gjithë shkollat
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Datë:** 5 Dhjetor (fillimi i Javës Edukative të Shkencave Kompjuterike)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Koha:** Gjatë ditës së shkollës. Mesdita preferohet për eventin. Afërsisht 1 orë.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Vendi:** Salla e mbledhjeve (p.sh teatri, palestra, kafeneja)   
   
 
 
 ## Fillimi i shfaqjes
 
-| Koha                   | Veprimet                                                                                                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 paradite | Filloje me një nga [ videot tona inspiruese](<%= resolve_url('/promote/resources#videos') %>)                                                                   |
-| 10:05 - 10:15 paradite | Drejtori jep një hyrje duke mbikqyrë rëndësinë e Shkencave Kompjuterike. Përdor këtp [ statistika dhe infografiqe](<%= resolve_url('/promote/stats') %>)        |
-| 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në çdo ditë të jetë së tyre. |
-| 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                              |
-| 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet e shkëputura dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                |
-| 11:00 - 11:05 paradite | Mësuesit që ndihmojnë në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                  |
+| Koha                   | Veprimet                                                                                                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 paradite | Filloje me një nga [ videot tona inspiruese](<%= resolve_url('/promote/resources#videos') %>)                                                                     |
+| 10:05 - 10:15 paradite | Drejtori jep një hyrje duke theksuar rëndësinë e Shkencave Kompjuterike. Përdor këto [ statistika dhe grafikë informues](<%= resolve_url('/promote/stats') %>)    |
+| 10:15 - 10:30 paradite | Të ftuar special që do flasin për njohuritë e tyre dhe se si teknologjia dhe shkencat kompjuterike luajnë një rol të rëndësishëm në jetën e tyre të përditshme. |
+| 10:30 - 10:40 paradite | Studentët bëjnë një demonstrim të Orës së Kodimit për shkollën. Argëtim- kanë mësuar drejtorin, politikan ose studentë të tjerë.                                |
+| 10:40 - 11:00 paradite | Studentët demonstrojnë një aktivitet dhe se si shkenca kompjuterike mund të mësohet pa përdorimin e kompjuterave.                                               |
+| 11:00 - 11:05 paradite | Mësuesit që ndihmuan në sjelljen e eventit në rrethin shkollor japin vërejtjet përmbyllëse.                                                                     |
+
+<%= view :signup_button %>

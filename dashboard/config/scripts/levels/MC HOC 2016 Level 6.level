@@ -1,0 +1,109 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2016-10-08T00:26:04.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"gravel\",\"gravel\",\"water\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"planksOak\",\"planksOak\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"grass\",\"water\",\"dirt\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"water\",\"water\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"stone\",\"\",\"\",\"\",\"treeBirch\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"treeOak\",\"\",\"\"]",
+    "player_start_position": "[5, 6]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "is_daytime": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // player is next to block of type logOak\r\n      return verificationAPI.isEntityDied(\"zombie\", 3) && verificationAPI.getRepeatCommandExecutedCount(\"moveToward\") >= 1;\r\n}",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "player_start_direction": "2",
+    "is_event_level": "true",
+    "day_night_cycle_start": "3",
+    "day_night_cycle_time": "25",
+    "instructions": "Now you make the zombies. Use the `spawn` block to make 3 zombies when night falls. Get them to move towards you. Survive until morning.",
+    "timeout_verification_function": "function(verificationAPI) {\r\n      return verificationAPI.getCommandExecutedCount(\"spawn\",\"zombie\") >= 3 && verificationAPI.getRepeatCommandExecutedCount(\"moveToward\") >= 1 && verificationAPI.getEntityCount(\"zombie\") === 0;\r\n}\r\n",
+    "level_verification_timeout": "35000",
+    "callout_json": "[]",
+    "use_player": "true",
+    "use_score": "false",
+    "failure_message_override": "Use the `spawn zombie` command under `when night` to spawn at least three zombies. Then, add `move a step toward player` to their `when spawned` event with a loop to help them chase you. If they’re too fast, add a `wait` command to slow them down.",
+    "instructions_important": "true",
+    "video_key": "mc_2016_spawn",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "Puzzle 6: \r\nNighttime is boring with no zombies. Get the Zombies spawning at night, and get them to chase you.\r\n\r\nSolution:              \r\n             Run\r\n§  When Night Falls\r\nRepeat(5)\r\nSpawn Zombie\r\n\r\nZombies\r\nWhen spawned\r\nRepeat Forever\r\nMove Toward Player\r\nWhen touched\r\nAttack\r\nWhen clicked\r\nDie\r\nWhen Day\r\nDie\r\n\r\n§  When Day?\r\nWhen Night\r\n\r\nTeaches: More loops: Repeat with a parameter and using that vs. repeat forever",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_whenNight" deletable="false"/>
+        <block type="craft_zombieSpawnedTouchedClickedDay" deletable="false" x="15px" y="140px">
+          <statement name="WHEN_TOUCHED">
+            <block type="craft_wait">
+              <title name="TYPE">2.0</title>
+              <next>
+                <block type="craft_attack"/>
+              </next>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_flashEntity">
+              <next>
+                <block type="craft_destroyEntity"/>
+              </next>
+            </block>
+          </statement>
+          <statement name="WHEN_DAY">
+            <block type="craft_destroyEntity"/>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">zombie</title>
+          <title name="DIRECTION">up</title>
+        </block>
+        <block type="craft_forever"/>
+        <block type="craft_moveForward"/>
+        <block type="craft_moveToward">
+          <title name="TYPE">Player</title>
+        </block>
+        <block type="craft_entityTurn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_wait">
+          <title name="TYPE">0.4</title>
+        </block>
+        <block type="craft_destroyEntity"/>
+        <block type="craft_flashEntity"/>
+        <block type="craft_playSound">
+          <title name="TYPE">zombieBrains</title>
+        </block>
+        <block type="craft_drop">
+          <title name="TYPE">dirt</title>
+        </block>
+        <block type="craft_attack"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Craft>

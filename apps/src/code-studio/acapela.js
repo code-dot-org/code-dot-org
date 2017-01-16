@@ -13,7 +13,7 @@ module.exports = {
           break;
       }
 
-      $.getJSON("http://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
+      $.getJSON("https://vaas.acapela-group.com/Services/UrlMaker?jsoncallback=?", {
         cl_login: config.login,
         cl_app: config.app,
         cl_pwd: config.pwd,
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   populateVoicesList(config) {
-    $.getJSON("http://vaas.acapela-group.com/Services/Voices.json?jsoncallback=?", {
+    $.getJSON("https://vaas.acapela-group.com/Services/Voices.json?jsoncallback=?", {
       cl_login: config.login,
       cl_app: config.app,
       fields_selection: "language_desc;speaker",

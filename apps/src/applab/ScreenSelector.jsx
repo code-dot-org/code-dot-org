@@ -1,14 +1,12 @@
 /** @file Dropdown for selecting design mode screens */
-/* global Applab */
-import experiments from '../experiments';
-var React = require('react');
-var Radium = require('radium');
-var color = require('../color');
-var commonStyles = require('../commonStyles');
-var constants = require('./constants');
-var connect = require('react-redux').connect;
-var elementUtils = require('./designElements/elementUtils');
-var screens = require('./redux/screens');
+import React from 'react';
+import Radium from 'radium';
+import color from "../util/color";
+import commonStyles from '../commonStyles';
+import * as constants from './constants';
+import {connect} from 'react-redux';
+import * as elementUtils from './designElements/elementUtils';
+import * as screens from './redux/screens';
 
 var styles = {
   dropdown: {
@@ -35,6 +33,7 @@ var ScreenSelector = React.createClass({
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     onScreenChange: React.PropTypes.func.isRequired,
     onImport: React.PropTypes.func.isRequired,
+    isRunning: React.PropTypes.bool.isRequired,
 
     // passed explicitly
     screenIds: React.PropTypes.array.isRequired,
@@ -81,23 +80,24 @@ var ScreenSelector = React.createClass({
         ]}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
-        disabled={Applab.isRunning()}
+        disabled={this.props.isRunning}
       >
         {options}
-        {experiments.isEnabled('applab-import') &&
-         canAddScreen &&
+        {canAddScreen &&
          <option>{constants.IMPORT_SCREEN}</option>}
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
       </select>
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
+
+export default connect(function propsFromStore(state) {
   return {
     currentScreenId: state.screens.currentScreenId,
     interfaceMode: state.interfaceMode,
     hasDesignMode: state.pageConstants.hasDesignMode,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: state.runState.isRunning,
   };
 }, function propsFromDispatch(dispatch) {
   return {
@@ -110,4 +110,4 @@ module.exports = connect(function propsFromStore(state) {
   };
 })(Radium(ScreenSelector));
 
-module.exports.styles = styles;
+export {styles};

@@ -6,21 +6,23 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your company
+<%= view :signup_button %>
 
-## Inspire students and volunteer for the Hour of Code
+# Com portar la hora de codi a la seva empresa
 
-**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
+## Inspirar els alumnes i ser voluntaris de l'Hora del Codi
 
-  * [Sign up](<%= resolve_url('https://code.org/volunteer') %>) to volunteer.
-  * For more instructions on connecting your employees with classrooms, consult our [guide for corporate partners](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
+**Code.org ofereix als empleats l'oportunitat de [connectar](<%= resolve_url('https://code.org/volunteer') %>) amb aules locals durant l'Hora del Codi per compartir la seva experiència en el camp de la tecnologia i inspirar els estudiants a estudiar informàtica.**
 
-## Additional ways companies can support the Hour of Code:
+  * [Inscrigui's](<%= resolve_url('https://code.org/volunteer') %>) com a voluntari.
+  * Per obtenir més instruccions sobre com connectar els seus treballadors amb les aules, consulteu la nostra [Guia d'empreses col·laboradores](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
 
-  * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
-  * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [See this email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
-  * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+## Altres formes de col·laborar:
+
+  * Utilitzar el nostre [joc d'eines de màrqueting](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) per crear una cronologia de les comunicacions i compartir contingut promocional.
+  * Demanar al seu CEO que enviï un correu electrònic a tota l'empresa destacant la importància de la informàtica i animant els empleats a difondre la llavor. [Vegi aquest e-mail](<%= resolve_url('/promote/resources#sample-emails') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
+  * Aculli un esdeveniment de l'Hora del Codi per una aula local, per fer una hora de codi a les oficines de la seva empresa. Veure l'exemple d'esdeveniment de sota.
 
 ## How to host an Hour of Code event
 
@@ -32,16 +34,16 @@ nav: how_to_nav
 ## 2) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Choose a tutorial:
 
-We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Tots els tutorials d'Hora de Codi:**
 
   * Require minimal prep-time
   * Are self-guided - allowing participants to work at their own pace and skill-level
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 4) Plan your technology needs - computers are optional
+## 4) Planifiqui quin material necessita. Els ordinadors són opcionals
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
@@ -71,24 +73,24 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   * If you are a tech company, demo fun, innovative products your company is working on.
   * If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
   * Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-  * See tips for getting girls interested in computer science [here](<%= resolve_url('https://code.org/girls') %>).
+  * Vegi alguns consells per aconseguir que les nenes s'interessin més per la informàtica [aquí](<%= resolve_url('https://code.org/girls') %>).
 
-## 6) Code!
+## 6) A programar!
 
 **Direct participants to the activity**
 
-  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('https://code.org/learn') %>) under the number of participants.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
 
-  * “I don’t know. Let’s figure this out together.”
-  * “Technology doesn’t always work out the way we want.”
-  * “Learning to program is like learning a new language; you won’t be fluent right away.”
+  * "No ho sé. Esbrinem-ho junts."
+  * "La tecnologia no sempre funciona com volem."
+  * Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida!
 
 **What to do if someone finishes early?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
@@ -107,12 +109,12 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
   &nbsp;
 </p>
 
-## 7) Celebrate
+## 7) Celebri-ho!
 
   * [Print certificates](<%= resolve_url('https://code.org/certificates') %>) for participants.
   * [Print "I did an Hour of Code!"](<%= resolve_url('/promote/resources#stickers') %>) stickers.
   * [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-  * Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  * Comparteixi fotos i vídeos del seu esdeveniment de l'Hora del Codi a les xarxes socials utilitzant les etiquetes #HourOfCode i @codeorg per poder destacar el seu èxit!
 
 [col-33]
 
@@ -138,4 +140,6 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## Què ve després de l'Hora del Codi?
 
-L'Hora del Codi és només el primer pas en un viatge per aprendre més sobre com funciona la tecnologia i com crear aplicacions i programari. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

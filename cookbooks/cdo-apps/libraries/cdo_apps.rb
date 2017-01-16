@@ -20,20 +20,15 @@ module CdoApps
       user user
       group user
       action :nothing
-      notifies :run, "execute[build-#{app_name}]", :immediately
     end
 
-    execute "build-#{app_name}" do
-      command "bundle exec rake build:#{app_name}"
-      cwd root
-      environment env.merge(node['cdo-apps']['bundle_env'])
-      user user
-      group user
-      action :nothing
+    # Bootstrap `setup_db` on a new system.
+    # Runs only once on initial install.
+    file "#{app_name}_setup" do
+      path "#{Chef::Config[:file_cache_path]}/#{app_name}_setup"
+      notifies :run, "execute[setup-#{app_name}]", :immediately
+      only_if { node['cdo-apps']['local_mysql'] || node['cdo-apps']['daemon'] }
     end
-
-    # Builds the app.
-    setup_cmd = "execute[#{node['cdo-apps']['local_mysql'] ? "setup-#{app_name}" : "build-#{app_name}"}]"
 
     template init_script do
       source 'unicorn.sh.erb'
@@ -46,12 +41,7 @@ module CdoApps
         user: user,
         env: node.chef_environment,
         bundle_env: node['cdo-apps']['bundle_env']
-      notifies :restart, "service[#{app_name}]", :delayed
-
-      # Bootstrap the first cdo-apps Rakefile build on a new system.
-      # Runs only on initial install because `rake build` is managed by the CI script after bootstrapping.
-      # TODO move this run-once notification somewhere more appropriate
-      notifies :run, setup_cmd, :immediately
+      notifies :reload, "service[#{app_name}]", :delayed
     end
 
     log_dir = File.join app_root, 'log'
@@ -87,10 +77,10 @@ module CdoApps
       action [:enable, :start]
 
       # Restart when Ruby is upgraded
-      subscribes :restart, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
+      subscribes :reload, "apt_package[ruby#{node['cdo-ruby']['version']}]", :delayed if node['cdo-ruby']
 
       # Restart when gem bundle is updated
-      subscribes :restart, 'execute[bundle-install]', :delayed
+      subscribes :reload, 'execute[bundle-install]', :delayed
 
       # Ensure globals.yml is up-to-date before (re)starting service.
       notifies :create, 'template[globals]', :before
@@ -101,31 +91,7 @@ module CdoApps
     file "#{app_name}_listeners" do
       path "#{Chef::Config[:file_cache_path]}/#{app_name}_listeners"
       content lazy { "#{node['cdo-secrets']["#{app_name}_sock"]}:#{node['cdo-secrets']["#{app_name}_port"]}" }
-      notifies :restart, "service[#{app_name}]", :immediately
-    end
-  end
-
-  def setup_build(package)
-    include_recipe 'cdo-nodejs'
-    user = node[:user]
-    home = node[:home]
-    root = File.join home, node.chef_environment
-
-    utf8 = 'en_US.UTF-8'
-    env = {
-      'LC_ALL' => utf8,
-      'LANGUAGE' => utf8,
-      'LANG' => utf8,
-      'RAILS_ENV' => node.chef_environment
-    }
-    execute "build:#{package}" do
-      command "bundle exec rake build:#{package}"
-      cwd root
-      environment env.merge(node['cdo-apps']['bundle_env'])
-      user user
-      group user
-      not_if { File.directory?("#{root}/#{package}/build") || File.directory?("#{root}/#{package}/build-output")}
-      action :run
+      notifies :reload, "service[#{app_name}]", :immediately
     end
   end
 end

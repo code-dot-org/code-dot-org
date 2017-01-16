@@ -1,18 +1,18 @@
 module Pd
   class WorkshopDashboardController < ApplicationController
     before_action :authenticate_user!
-
     def index
-      @permission =
-        if current_user.admin?
-          :admin
-        elsif current_user.workshop_organizer?
-          :workshop_organizer
-        elsif current_user.facilitator?
-          :facilitator
-        else
-          nil
-        end
+      @permission = nil
+
+      if current_user.admin?
+        @permission = :admin
+      else
+        permission_list = []
+        permission_list << :workshop_organizer if current_user.workshop_organizer?
+        permission_list << :facilitator if current_user.facilitator?
+        permission_list << :plp if ProfessionalLearningPartner.where(contact: current_user).exists?
+        @permission = permission_list unless permission_list.empty?
+      end
 
       unless @permission
         render_404

@@ -24,8 +24,6 @@ var studioApp = require('../StudioApp').singleton;
 var jsnums = require('./js-numbers/js-numbers.js');
 var commonMsg = require('@cdo/locale');
 var calcMsg = require('./locale');
-var skins = require('../skins');
-var levels = require('./levels');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
 var CalcVisualizationColumn = require('./CalcVisualizationColumn');
@@ -40,7 +38,6 @@ var EquationSet = require('./equationSet');
 var Equation = require('./equation');
 var Token = require('./token');
 var InputIterator = require('./inputIterator');
-var experiments = require('../experiments');
 
 var TestResults = studioApp.TestResults;
 var ResultType = studioApp.ResultType;
@@ -148,8 +145,6 @@ Calc.init = function (config) {
   config.skin.smallStaticAvatar = null;
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
-
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
@@ -682,7 +677,6 @@ Calc.execute = function () {
   var reportData = {
     app: 'calc',
     level: level.id,
-    builder: level.builder,
     result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),
@@ -846,7 +840,6 @@ Calc.checkExamples_ = function () {
  * animating evaluation.
  */
 function displayComplexUserExpressions() {
-  var result;
   clearSvgExpression('userExpression');
 
   // Clone userSet, as we might make small changes to them (i.e. if we need to
@@ -900,7 +893,6 @@ function displayNonComputeEquations_(userSet, targetSet) {
     !targetSet.computesSingleVariable();
 
   if (targetSet.computesSingleVariable() && appState.failedInput !== null) {
-    var userConstants = userSet.getConstants();
     var targetConstants = targetSet.getConstants();
     // replace constants with failed inputs in the user set.
     targetConstants.forEach(function (targetEquation, index) {

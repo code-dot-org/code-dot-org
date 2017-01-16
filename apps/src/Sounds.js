@@ -4,7 +4,6 @@
  * Interface for a sound registry and playback mechanism
  * @interface AudioPlayer
  */
-function AudioPlayer() {}
 
 /**
  * Register a sound to a given ID
@@ -287,6 +286,17 @@ Sounds.prototype.isPlayingURL = function (url) {
     return sound.isPlaying();
   }
   return false;
+};
+
+/**
+ * Stop all playing sounds immediately.
+ */
+Sounds.prototype.stopAllAudio = function () {
+  for (let soundId in this.soundsById) {
+    if (this.soundsById[soundId].isPlaying()) {
+      this.soundsById[soundId].stop();
+    }
+  }
 };
 
 Sounds.prototype.stopLoopingAudio = function (soundId) {

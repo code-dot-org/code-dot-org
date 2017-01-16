@@ -10,7 +10,7 @@ video_player: true
 
 ### Quick Links
 
-[General CSP Forum](http://forum.code.org/c/csp) | [Post-AP Discussion Forum](http://forum.code.org/c/csp-post-ap) | [CSP Post-AP Material in Code Studio](https://studio.code.org/s/cspunit6)  | [Writing Team](team) 
+[General CS Principles Forum](http://forum.code.org/c/csp) | [Post-AP Discussion Forum](http://forum.code.org/c/csp-post-ap) | [CS Principles Post-AP Material in Code Studio](https://studio.code.org/s/cspunit6)  | [Writing Team](team) 
 
 
 

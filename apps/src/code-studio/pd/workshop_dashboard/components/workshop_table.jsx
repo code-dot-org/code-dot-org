@@ -4,36 +4,23 @@
 
 import _, {orderBy} from 'lodash';
 import React from 'react';
-import {Button} from 'react-bootstrap';
 import {Table, sort} from 'reactabular';
-import color from '../../../../color';
+import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import { workshopShape } from '../types.js';
 
 const WorkshopTable = React.createClass({
   propTypes: {
-    workshops: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired,
-        sessions: React.PropTypes.array.isRequired,
-        location_name: React.PropTypes.string.isRequired,
-        workshop_type: React.PropTypes.string.isRequired,
-        course: React.PropTypes.string.isRequired,
-        enrolled_teacher_count: React.PropTypes.number.isRequired,
-        capacity: React.PropTypes.number.isRequired,
-        facilitators: React.PropTypes.array.isRequired,
-        organizer: React.PropTypes.shape({
-          name: React.PropTypes.string.isRequired,
-          email: React.PropTypes.string.isRequired
-        }).isRequired
-      })
-    ),
+    workshops: React.PropTypes.arrayOf(workshopShape),
     canEdit: React.PropTypes.bool,
     onDelete: React.PropTypes.func,
     showSignupUrl: React.PropTypes.bool,
-    showOrganizer: React.PropTypes.bool
+    showOrganizer: React.PropTypes.bool,
+    surveyBaseUrl: React.PropTypes.string,
+    tableId: React.PropTypes.string
   },
 
   getDefaultProps() {
@@ -107,6 +94,7 @@ const WorkshopTable = React.createClass({
         viewUrl={`/workshops/${workshopId}`}
         editUrl={this.props.canEdit ? `/workshops/${workshopId}/edit` : null}
         onDelete={this.props.onDelete}
+        surveyUrl={this.props.surveyBaseUrl ? `${this.props.surveyBaseUrl}/${workshopId}` : null}
       />
     );
   },
@@ -123,6 +111,7 @@ const WorkshopTable = React.createClass({
       this.getSortingColumns,
       this.onSort,
       {
+        container: {whiteSpace: 'nowrap'},
         default: {color: color.light_gray}
       }
     );
@@ -218,6 +207,7 @@ const WorkshopTable = React.createClass({
 
     return (
       <Table.Provider
+        id={this.props.tableId}
         className="table table-striped table-condensed"
         columns={columns}
       >

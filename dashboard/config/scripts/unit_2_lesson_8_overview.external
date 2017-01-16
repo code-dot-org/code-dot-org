@@ -1,0 +1,24 @@
+name 'Unit 2 Lesson 8 Overview'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# The Internet - Web Development: Lesson 8 - Styling Elements with CSS
+
+## Background
+
+This lesson continues to introduce CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their About Me page.
+
+# New Code
+
+*  `background-color: value;`
+*  `float: value;`
+*  `margin: value;`
+*  `width: value;`
+*  `height: value;`
+*  `border-style: value;`
+*  `border-width: value;`
+*  `border-color: value;`
+
+# Resources
+
+* [Web Development Practices](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/) - Project Guide ([PDF](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1bFhWctVaSVdGyJScUoUxlACdztqJ-vdhpvgWws0-itA/export?format=doc))
+MARKDOWN

@@ -95,6 +95,16 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def list_files_versions
+    get "/v3/#{@endpoint}-version/#{@channel_id}"
+    JSON.parse(last_response.body)
+  end
+
+  def restore_files_version(version_id)
+    put "/v3/#{@endpoint}-version/#{@channel_id}?version=#{version_id}"
+    JSON.parse(last_response.body)
+  end
+
   def channel_policy_violation
     get "/v3/channels/#{@channel_id}/privacy-profanity"
     last_response.body

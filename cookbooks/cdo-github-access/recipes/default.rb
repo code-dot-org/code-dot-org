@@ -3,6 +3,11 @@
 # Recipe:: default
 #
 
+apt_repository 'git-core' do
+  uri          'ppa:git-core/ppa'
+  distribution 'trusty'
+end
+
 apt_package 'git'
 
 cookbook_file "/home/#{node[:current_user]}/.gitconfig" do

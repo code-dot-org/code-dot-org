@@ -1,13 +1,11 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import * as elementUtils from './elementUtils';
 
 // Prefix used to generate default group ids
 var GROUP_ID_PREFIX = 'radio_group';
@@ -174,7 +172,7 @@ function getUnusedGroupId() {
   return GROUP_ID_PREFIX + i;
 }
 
-module.exports = {
+export default {
   PropertyTab: RadioButtonProperties,
   EventTab: RadioButtonEvents,
 

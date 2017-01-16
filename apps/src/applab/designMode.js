@@ -3,20 +3,22 @@ import $ from 'jquery';
 import 'jquery-ui'; // for $.fn.resizable();
 import React from 'react';
 import ReactDOM from 'react-dom';
-var DesignWorkspace = require('./DesignWorkspace');
-var assetPrefix = require('../assetManagement/assetPrefix');
-var elementLibrary = require('./designElements/library');
-var elementUtils = require('./designElements/elementUtils');
-var studioApp = require('../StudioApp').singleton;
-var KeyCodes = require('../constants').KeyCodes;
-var applabConstants = require('./constants');
-var designMode = module.exports;
-var sanitizeHtml = require('./sanitizeHtml');
-var utils = require('../utils');
-var gridUtils = require('./gridUtils');
-var logToCloud = require('../logToCloud');
-var actions = require('./actions');
-var screens = require('./redux/screens');
+import DesignWorkspace from './DesignWorkspace';
+import * as assetPrefix from '../assetManagement/assetPrefix';
+import elementLibrary from './designElements/library';
+import * as elementUtils from './designElements/elementUtils';
+import {singleton as studioApp} from '../StudioApp';
+import {KeyCodes} from '../constants';
+import * as applabConstants from './constants';
+import sanitizeHtml from './sanitizeHtml';
+import * as utils from '../utils';
+import * as gridUtils from './gridUtils';
+import logToCloud from '../logToCloud';
+import * as actions from './actions';
+import * as screens from './redux/screens';
+
+var designMode = {};
+export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
@@ -280,7 +282,7 @@ designMode.updateProperty = function (element, name, value) {
         backgroundImage.onload = fitImage;
       }
       break;
-    case 'screen-image':
+    case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
       // We stretch the image to fit the element
@@ -288,10 +290,18 @@ designMode.updateProperty = function (element, name, value) {
       var height = parseInt(element.style.height, 10);
       element.style.backgroundSize = width + 'px ' + height + 'px';
 
-      var url = ICON_PREFIX_REGEX.test(value) ? assetPrefix.renderIconToString(value, element) : assetPrefix.fixPath(value);
+      let url;
+      if (ICON_PREFIX_REGEX.test(value)) {
+        url = assetPrefix.renderIconToString(value, element);
+      } else {
+        const screenImage = new Image();
+        screenImage.src = assetPrefix.fixPath(value);
+        url = screenImage.src;
+      }
       element.style.backgroundImage = 'url(' + url + ')';
 
       break;
+    }
     case 'picture':
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
@@ -428,6 +438,68 @@ designMode.updateProperty = function (element, name, value) {
 
   if (!handled) {
     throw "unknown property name " + name;
+  }
+};
+
+/**
+ * Reads property 'name' of html element 'element'.
+ * @param {Element} element The html element to read the property from. The element could
+ *   have been created in design mode or code mode.
+ * @param {string} name The internal name of the property to read. This is not always
+ *   the name of an html attribute or css style. Valid names are different for each
+ *   element as defined in PROP_INFO in setPropertyDropdown.js.
+ * @returns {*}
+ */
+designMode.readProperty = function (element, name) {
+  switch (name) {
+    case 'left':
+      // Ignore 'px' suffix
+      return parseFloat(element.style.left);
+    case 'top':
+      return parseFloat(element.style.top);
+    case 'width':
+      return parseFloat(element.getAttribute('width'));
+    case 'height':
+      return parseFloat(element.getAttribute('height'));
+    case 'style-width':
+      return parseFloat(element.style.width);
+    case 'style-height':
+      return parseFloat(element.style.height);
+    case 'text':
+      return utils.escapeText(element.innerHTML);
+    case 'textColor':
+      return element.style.color;
+    case 'backgroundColor':
+      return element.style.backgroundColor;
+    case 'fontSize':
+      return parseFloat(element.style.fontSize);
+    case 'textAlign':
+      return element.style.textAlign;
+    case 'image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'screen-image':
+      return element.getAttribute('data-canonical-image-url');
+    case 'picture':
+      return element.getAttribute('data-canonical-image-url');
+    case 'hidden':
+      return $(element).hasClass('design-mode-hidden');
+    case 'checked':
+      // element.checked represents the current state, the attribute represents
+      // the serialized state
+      return !!element.checked;
+    case 'options':
+      return $(element).children().map((i, child) => child.text).get();
+    case 'groupId':
+      return element.getAttribute('name');
+    case 'placeholder':
+      return element.getAttribute('placeholder');
+    case 'readonly':
+      return element.getAttribute('contenteditable') !== 'true';
+    default:
+      // The property was not found in the list of properties which apply to all elements.
+      // Check to see if the element-specific handler knows how to read the property,
+      // which will raise an error if the property or handler is not found.
+      return elementLibrary.typeSpecificPropertyRead(element, name);
   }
 };
 
@@ -639,7 +711,7 @@ designMode.parseFromLevelHtml = function (rootEl, allowDragging, prefix) {
   }
 
   var reportUnsafeHtml = getUnsafeHtmlReporter(rootEl.id);
-  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml));
+  var levelDom = $.parseHTML(sanitizeHtml(Applab.levelHtml, reportUnsafeHtml, true));
   var children = $(levelDom).children();
   children.each(function () { designMode.parseScreenFromLevelHtml(this, allowDragging, prefix); });
   children.appendTo(rootEl);
@@ -721,17 +793,16 @@ function makeDraggable(jqueryElements) {
         ui.size.height = dimensions.height;
 
         // Set original element properties to update values in Property tab
+        if (elm.is("canvas")) {
+          // for canvas we need to set width/height attributes directly as these
+          // control canvas size rather than style.width/style.height
+          elm.attr('width', dimensions.width + "px");
+          elm.attr('height', dimensions.height + "px");
+        }
+        // set style.width/style.height regardless, as this is used to size our
+        // background image
         elm.outerWidth(dimensions.width);
         elm.outerHeight(dimensions.height);
-
-        var element = elm[0];
-        // canvas uses width/height. other elements use style.width/style.height
-        var widthProperty = 'style-width';
-        var heightProperty = 'style-height';
-        if (element.hasAttribute('width') || element.hasAttribute('height')) {
-          widthProperty = 'width';
-          heightProperty = 'height';
-        }
 
         // Re-render design work space for this element
         designMode.renderDesignWorkspace(elm[0]);
@@ -769,7 +840,7 @@ function makeDraggable(jqueryElements) {
         });
 
         // Dim the element if it's dragged out of bounds
-        if (!isMouseInBounds(newLeft, newTop)) {
+        if (!isMouseEventInBounds(event)) {
           elm.addClass("toDelete");
         } else {
           elm.removeClass("toDelete");
@@ -785,7 +856,7 @@ function makeDraggable(jqueryElements) {
         // there's no need to transform ui.position coordinates again here.
 
         // Check the drop location to determine whether we delete this element
-        if (!isMouseInBounds(ui.position.left, ui.position.top)) {
+        if (!isMouseEventInBounds(event)) {
 
           // It's dropped out of bounds, animate and delete
           ui.helper.hide( "drop", { direction: "down" }, ANIMATION_LENGTH_MS, function () {
@@ -793,10 +864,6 @@ function makeDraggable(jqueryElements) {
           });
 
         } else {
-
-          // Otherwise, make sure that the element is contained within the app space
-          moveElementIntoBounds(elm);
-
           // Render design work space for this element
           designMode.renderDesignWorkspace(elm[0]);
         }
@@ -850,15 +917,15 @@ function enforceContainment(left, top, width, height) {
 }
 
 /**
- * Checks if a position (relative to app space) is within the app space bounds
- * @param {number} x
- * @param {number} y
- * @returns {boolean} True if (x, y) is within the app space. False otherwise.
+ * Tests whether the coordinates of the mouse event are inside designModeViz,
+ * taking into account any scaling transforms that may be applied to designModeViz.
+ * @param {jQuery.Event} mouseEvent
+ * @returns {boolean}
  */
-function isMouseInBounds(x, y) {
-  var container = $('#designModeViz');
+function isMouseEventInBounds(mouseEvent) {
+  const container = $('#designModeViz');
 
-  return gridUtils.isMouseInBounds(x, y, container.outerWidth(), container.outerHeight());
+  return gridUtils.isMouseEventInBounds(mouseEvent, container);
 }
 
 /**
@@ -1114,7 +1181,9 @@ designMode.renderDesignWorkspace = function (element) {
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleManageAssets: dashboard.assets.showAssetManager,
-    isDimmed: Applab.running
+    handleVersionHistory: Applab.handleVersionHistory,
+    isDimmed: Applab.running,
+    store: studioApp.reduxStore,
   };
   ReactDOM.render(React.createElement(DesignWorkspace, props), designWorkspace);
 };
@@ -1126,7 +1195,7 @@ designMode.renderDesignWorkspace = function (element) {
  */
 designMode.addScreenIfNecessary = function (html) {
   var reportUnsafeHtml = getUnsafeHtmlReporter('levelHtml');
-  html = sanitizeHtml(html, reportUnsafeHtml);
+  html = sanitizeHtml(html, reportUnsafeHtml, true);
   var rootDiv = $(html);
   if (rootDiv.children().length === 0 ||
       rootDiv.children().eq(0).hasClass('screen')) {

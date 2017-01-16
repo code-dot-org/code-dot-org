@@ -93,7 +93,8 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'creating a duplicate enrollment renders duplicate view' do
     params = enrollment_test_params.merge({
-      name: @existing_enrollment.name,
+      first_name: @existing_enrollment.first_name,
+      last_name: @existing_enrollment.last_name,
       email: @existing_enrollment.email,
       confirmation_email: @existing_enrollment.email,
     })
@@ -103,7 +104,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'creating an enrollment with email match from organizer renders own view' do
     params = enrollment_test_params.merge({
-      name: @organizer.name,
+      full_name: @organizer.name,
       email: @organizer.email,
       confirmation_email: @organizer.email,
     })
@@ -113,7 +114,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'creating an enrollment with email match from facilitator renders own view' do
     params = enrollment_test_params.merge({
-      name: @facilitator.name,
+      full_name: @facilitator.name,
       email: @facilitator.email,
       confirmation_email: @facilitator.email,
     })
@@ -137,7 +138,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'creating an enrollment with errors renders new view' do
     params = enrollment_test_params.merge({
-      name: '',
+      first_name: '',
       confirmation_email: nil
     })
     post :create, workshop_id: @workshop.id, pd_enrollment: params, school_info: school_info_params
@@ -245,7 +246,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     @workshop.start!
     teacher = create :teacher
     sign_in teacher
-    create :pd_enrollment, name: teacher.name, email: teacher.email
+    create :pd_enrollment, full_name: teacher.name, email: teacher.email
 
     assert_creates(Follower) do
       post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
@@ -267,9 +268,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       post :confirm_join, section_code: @workshop.section.code, pd_enrollment: enrollment_test_params(teacher), school_info: school_info_params
     end
     enrollment = Pd::Enrollment.last
+    first_name, last_name = teacher.name.split(' ', 2)
     assert_equal teacher.id, enrollment.user_id
     assert_equal teacher.email, enrollment.email
-    assert_equal teacher.name, enrollment.name
+    assert_equal first_name, enrollment.first_name
+    assert_equal last_name, enrollment.last_name
     assert_redirected_to '/'
     assert_equal "You've registered for #{@workshop.section.name}.", flash[:notice]
   end
@@ -340,14 +343,16 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   def enrollment_test_params(teacher = nil)
     if teacher
-      name = teacher.name
+      first_name, last_name = teacher.name.split(' ', 2)
       email = teacher.email
     else
-      name = "teacher#{SecureRandom.hex(4)}"
-      email = "#{name}@example.net"
+      first_name = "Teacher#{SecureRandom.hex(4)}"
+      last_name = 'Codeberg'
+      email = "#{first_name}@example.net".downcase
     end
     {
-      name: name,
+      first_name: first_name,
+      last_name: last_name,
       email: email,
       email_confirmation: email,
       school: 'test enrollment school'

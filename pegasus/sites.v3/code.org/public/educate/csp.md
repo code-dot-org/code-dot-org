@@ -6,11 +6,17 @@ video_player: true
 
 # Computer Science Principles #
 
+## <a name="what"></a>Apply for Professional Learning
+
+Applications for the 2017-18 CS Principles Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+
+[<button>Apply now!</button>](/educate/professional-learning/cs-principles)
+
 ## <a name="whatis"></a>What is CS Principles?
 
 [col-50]
 
-In fall 2016, the College Board will launch its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+In fall 2016, the College Board launched its newest AP&reg; course, AP Computer Science Principles. The course introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
 
 For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.org/APCSP).
 
@@ -30,9 +36,9 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ## Code.org's AP CS Principles Curriculum
 
-<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge"> Starting in the 2016-17 school year Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles (AP CSP). This endorsement affirms that all components of Code.org CSP’s offerings are aligned to the AP Curriculum Framework standards and the AP CSP assessment. Using an endorsed provider affords schools access to resources including an AP CSP syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CSP.
+<img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the College Board as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach AP CS Principles.
 
- * [Code.org 2016-17 AP CSP Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
+ * [Code.org 2016-17 AP CS Principles Endorsed Syllabus ID #1648108v1](/files/CSPSyllabusApril2016.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://docs.google.com/document/export?format=pdf&id=12VOTkJv9R_Db-YDvNjNYkhZ5nnAw8eqFkmwscM8W16M)
 
  [<button>View Curriculum</button>](#lessons)
@@ -111,17 +117,12 @@ Several documents describe the overarching themes and direction of the course.
 
 - [One-pager](/files/programs/CSP_1-pager_final.pdf)
 - **New** [2016 AP Endorsed Syllabus and Overview](/files/CSPSyllabusApril2016.pdf)
-- [Professional Development Overview](/files/CSPPDoverview.pdf)
+- [Professional Development Overview](/educate/professional-learning/cs-principles)
 - [Course Materials List](#materials)
 
 ## <a name="lessons"></a>Lessons
 
-
-### Archive of the full '15-'16 version of the curriculum
-*All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary). Learn more about the updates [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ).*
-
-### Lessons
-*In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall.*
+*In response to feedback from our 2015-2016 pilot teachers, we are reordering, condensing, and clarifying lesson content. Units 1 - 3 have already been revised per pilot feedback and Units 4 - 6 will be revised in the fall. Learn more about the updates [here](https://docs.google.com/document/export?format=pdf&id=1ElvZenQSCigqBXKEHnXYRruck7umCJd699aippGCfLQ). All of the '15-'16 units are still available to use from the [2015-2016 version of the course](/educate/csp/archive/summary).*
 
 All lessons are available at [curriculum.code.org/csp](https://curriculum.code.org/csp)
 
@@ -130,18 +131,19 @@ All lessons are available at [curriculum.code.org/csp](https://curriculum.code.o
 |  [![Internet Simulator](csp/images/thumb_netsim.png "Unit 1")](https://curriculum.code.org/csp/unit1) [Unit 1](https://curriculum.code.org/csp/unit1)  | **The Internet (Last updated: May 2016)** This unit begins exploring the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. In the second half of the unit, students solve problems similar ones that had to be solved to build the real Internet. Students design their own versions of protocols, each one layered on the previous one, in a process that mimics the layered sets of protocols on the real Internet. Topics include: the digital representation of numbers and text, Internet Protocol, DNS, and TCP/IP. |
 |   [![binary magic](csp/images/thumb_binaryMagic.png "Unit 2")](https://curriculum.code.org/csp/unit2) [Unit 2](https://curriculum.code.org/csp/unit2)   | **Digital Information (Last updated: May 2016)** This unit further explores the ways that digital information is encoded, represented and manipulated. In this unit students will look at and generate data, clean it, manipulate it, and create and use visualizations to identify patterns and trends.|
 |  [![App Lab](csp/images/thumb_applab.png "Unit 3")](https://curriculum.code.org/csp/unit3) [Unit 3](https://curriculum.code.org/csp/unit3) | **Algorithms and Programming (Last updated: June 2016)** This unit introduces students to programming in the JavaScript language and creating small applications (apps) that live on the web. This introduction places a heavy emphasis on understanding general principles of computer programming and revealing those things that are universally applicable to any programming language.|
-|  [![Graph](csp/images/thumb_graph.png "Unit 4")](https://curriculum.code.org/csp/unit4v1) [Unit 4](https://curriculum.code.org/csp/unit4v1)| **Big Data and Privacy (Last updated: January 2016)** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.|
-| [![App](csp/images/thumb_app.png "Unit 5")](https://curriculum.code.org/csp/unit5v1) [Unit 5](https://curriculum.code.org/csp/unit5v1)| **Building Apps (Last updated: January 2016)** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab.|
+|  [![Graph](csp/images/thumb_graph.png "Unit 4")](https://curriculum.code.org/csp/unit4) [Unit 4](https://curriculum.code.org/csp/unit4)| **Big Data and Privacy (Last updated: October 2016)** The data rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. In many ways this unit acts as a unit on current events. It is highly likely that there will be something related to big data, privacy and security going on in the news at any point in time. The major goals of the unit are 1) for students to develop a well­rounded and balanced view about data in the world around them and both the positive and negative effects of it and 2) to understand the basics of how and why modern encryption works.|
+| [![App](csp/images/thumb_app.png "Unit 5")](https://curriculum.code.org/csp/unit5) [Unit 5](https://curriculum.code.org/csp/unit5)| **Building Apps (Last updated: December 2016)** This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event­-driven apps. The unit assumes that students have learned the concepts and skills from Unit 3, namely: writing and using functions, using simple repeat loops, being able to read documentation, collaborating, and using the Code Studio environment with App Lab. |
 |  [![survey](csp/images/thumb_survey.png "Unit 6")](https://curriculum.code.org/csp/unit6v1) [Unit 6](https://curriculum.code.org/csp/unit6v1) | **Create and Explore PT (Last updated: January 2016)** Class time devoted to preparation and execution of the AP® Performance Tasks: Explore and Create. |
 
-### Chat about CSP in the CSP forum
-We have forums for educators to discuss and trade ideas about CSP and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CSP there are two forums that are most useful:
+### Chat about CS Principles in the forum
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum.  Code.org forums are used for all of our courses K-12 and can be found at [forum.code.org](http://forum.code.org).  For CS Principles there are two forums that are most useful:
 
-* [General CSP forum](http://forum.code.org/c/csp)
+* [General CS Principles forum](http://forum.code.org/c/csp)
 * [Unit 1 Lesson-Specific Forums](http://forum.code.org/c/csp1)
 * [Unit 2 Lesson-Specific Forums](http://forum.code.org/c/csp2)
 * [Unit 3 Lesson-Specific Forums](http://forum.code.org/c/csp3)
-* Forums for Unit 4 and 5 will be re-released when we update those units. View the '15-'16 forums for [Unit 4](http://forum.code.org/c/csp-unit4) and [Unit 5](http://forum.code.org/c/csp-unit5)
+* [Unit 4 Lesson-Specific Forums](http://forum.code.org/c/csp4)
+* [Unit 5 Lesson-Specific Forums](http://forum.code.org/c/csp5)
 
 ## Frequently Asked Questions
 
@@ -158,16 +160,16 @@ Many lessons have handouts that are designed to guide students through activitie
 
 The following items are called for in lessons, but alternatives are offered below:
 
-- (Unit 3, Lesson 1) a handful of legos per 2-3 students. alternatives: post-it notes, contstruction paper
-- (Unit 3, Lesson 2 - 3) playing cards (1 deck per 6 students). alternatives: write numbers of post-it notes. 
-- (Unit 4, Lesson 8) clear dixie cups with beans. alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc) 
+- (Unit 3, Lesson 1) A handful of legos per 2-3 students. Alternatives: post-it notes, contstruction paper
+- (Unit 3, Lesson 2 - 3) Playing cards (1 deck per 6 students). Alternatives: write numbers of post-it notes. 
+- (Unit 4, Lesson 8) Clear dixie cups with beans. Alternatives: Any clear container (ziplock bag, empty water bottle, etc) with any small item (beads, raisins, coffee beans, etc) 
 
 The following supplies are completely optional but will be useful to have on hand for various lessons:
 
-- graph paper
-- chart paper 
-- markers
-- post it notes
+- Graph paper
+- Chart paper 
+- Markers
+- Post-it notes
 
 #### How can I access answer keys? 
 Any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href = "https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.
@@ -175,7 +177,7 @@ Any teacher can apply for Code Studio access to protected teacher-only materials
 <br />
 
 #### How can I communicate with other teachers who are using the curriculum? 
-Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CSP discussion as well as unit- and lesson-specific threads.
+Check out our forum at <a href ="forum.code.org" target=_blank>http://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.
 
 <br />
 
@@ -185,13 +187,13 @@ For the '16-'17 school year, we are revising the '15-'16 version of the curricul
 <br />
 #### Can I give feedback on the lessons?
 
-Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CSP forum.
+Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.
 
 <br />
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSP course will be available in select partner districts starting in Summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
+In-person professional development for the Code.org CS Principles course will be available in select partner districts starting in Summer 2015. After one year of piloting and refining the PD program we will make all of our PD agendas, schedules, and other materials available to the public. This includes all of our online and in-person PD programs.
 
 <br />
 

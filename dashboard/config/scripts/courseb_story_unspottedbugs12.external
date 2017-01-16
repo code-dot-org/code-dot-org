@@ -1,0 +1,15 @@
+name 'courseB_story_unspottedBugs12'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+<h3>
+“Now that you know where it is, SPOT THE BUG!<br/>
+Give it a name and say it out loud. As soon as you do, magic happens.”</h3>
+
+![](https://images.code.org/ce21e14c025792b54a9691236c956491-image-1476000602514.png)
+
+<h3>"The bug has been spotted!"</h3>
+
+
+MARKDOWN

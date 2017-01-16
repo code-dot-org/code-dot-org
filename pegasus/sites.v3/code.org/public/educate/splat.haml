@@ -17,24 +17,23 @@
 - elsif requested_path.eql? "/educate/teacher-led"
   - redirect "/educate/curriculum/teacher-led"  
 - elsif requested_path.include? "/educate/plc"
-  - if requested_path.include? "plp"
-    - path = requested_path.gsub("plc", "professional-learning-partner")
-    - new_path = path.gsub(/plp-|plp/, "")
-    - redirect new_path
-  - else
-    - path = requested_path.gsub("plc", "professional-learning")
-    - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
-    - redirect new_path
+  - path = requested_path.gsub("plc", "professional-learning")
+  - new_path = path.gsub("algebra", "cs-in-algebra").gsub("science", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+  - redirect new_path
 - elsif requested_path.eql? "/educate/facilitator"
   - redirect "/educate/professional-learning/facilitator"
 - elsif requested_path.include? "/educate/facilitator"
-  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("csa", "cs-in-algebra").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles")
+  - path = requested_path.gsub("csf", "cs-fundamentals").gsub("csa", "cs-in-algebra").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
   - new_path = path.gsub("/educate/facilitator-", "/educate/professional-learning/") + "-facilitator"
   - redirect new_path
 - elsif requested_path.eql? "/educate/k5-affiliates"
   - redirect "/educate/professional-learning/cs-fundamentals-facilitator"
 - elsif requested_path.eql? "/educate/k5-affiliates-directory"
   - redirect "/educate/professional-learning/cs-fundamentals-directory"  
+- elsif requested_path.include? "/educate/professional-learning-partner/playbook"
+  - redirect "/educate/regional-partner/playbook"
+- elsif requested_path.include? "/educate/professional-learning-partner"
+  - redirect "/educate/regional-partner"
 - elsif requested_path.eql? "/educate/events"
   - redirect "/educate/professional-learning/events"
 - elsif requested_path.eql? "/educate/k5/k5officehours"

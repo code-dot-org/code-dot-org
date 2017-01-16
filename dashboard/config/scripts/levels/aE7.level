@@ -14,7 +14,7 @@
     "free_play": "false",
     "instructions": "If you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?",
     "embed": "false",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nHow about some streamers?\r\n<br/><br/>\r\nIf you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?\r\n</div>\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nHow about some streamers?\r\n<br/><br/>\r\nIf you create another loop like this one, but turn left instead of right, what happens? \r\n\r\nCan you repeat all of that to draw this wave?\r\n</div>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -31,7 +31,8 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Draw the bottom half of a circle and then the top half of a circle to make one segment.\",\r\n  \"hint_id\": \"aE7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need 4 segments to complete this puzzle.\",\r\n  \"hint_id\": \"aE7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]"
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Draw the bottom half of a circle and then the top half of a circle to make one segment.\",\r\n  \"hint_id\": \"aE7_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need 4 segments to complete this puzzle.\",\r\n  \"hint_id\": \"aE7_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

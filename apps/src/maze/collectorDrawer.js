@@ -1,4 +1,4 @@
-import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
+import Drawer from './drawer';
 
 /**
  * Extends Drawer to draw collectibles for Collector

@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-19T15:54:14.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Classes on Recipe Page\r\n\r\nIn the next few levels, as a little more practice with style, you will style some of the elements on your recipe page in order to give the appearance of a notecard. You will want to make the background of the ingredients list and the directions lists look like notecards.\r\n\r\n# Do This\r\n\r\n* In the recipe page add the ordered list for directions to the \"notecard\" class\r\n* In the recipe page add the unordered list for the ingredients to the \"notecard\" class\r\n* Add a style rule for the notecard class but don't put anything in it. You will start working on it on the next level.",
+    "project_template_level_name": "CSDU2 Portfolio Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

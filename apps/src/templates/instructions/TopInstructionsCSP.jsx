@@ -4,20 +4,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-var actions = require('../../applab/actions');
+import processMarkdown from 'marked';
+import renderer from "../../util/StylelessRenderer";
+import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 var instructions = require('../../redux/instructions');
-var color = require('../../color');
+var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 var commonStyles = require('../../commonStyles');
 
-var processMarkdown = require('marked');
-
-var ProtectedStatefulDiv = require('../ProtectedStatefulDiv');
 var Instructions = require('./Instructions');
 var CollapserIcon = require('./CollapserIcon');
 var HeightResizer = require('./HeightResizer');
-var constants = require('../../constants');
 var msg = require('@cdo/locale');
+import ContainedLevel from '../ContainedLevel';
 
 var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -32,6 +31,12 @@ var styles = {
     top: 0,
     right: 0,
     // left handled by media queries for .editor-column
+  },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
   },
   header: {
     height: HEADER_HEIGHT,
@@ -54,9 +59,6 @@ var styles = {
   embedView: {
     height: undefined,
     bottom: 0
-  },
-  containedLevelContainer: {
-    minHeight: 200,
   }
 };
 
@@ -72,6 +74,7 @@ var TopInstructions = React.createClass({
     maxHeight: React.PropTypes.number.isRequired,
     markdown: React.PropTypes.string,
     collapsed: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: React.PropTypes.func.isRequired,
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
@@ -129,9 +132,7 @@ var TopInstructions = React.createClass({
    * @returns {number}
    */
   adjustMaxNeededHeight() {
-    const contentContainer = this.props.hasContainedLevels ?
-        this.refs.containedLevelContainer : this.refs.instructions;
-    const maxNeededHeight = $(ReactDOM.findDOMNode(contentContainer)).outerHeight(true) +
+    const maxNeededHeight = $(ReactDOM.findDOMNode(this.refs.instructions)).outerHeight(true) +
       HEADER_HEIGHT + RESIZER_HEIGHT;
 
     this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
@@ -160,6 +161,7 @@ var TopInstructions = React.createClass({
       {
         height: this.props.height - RESIZER_HEIGHT
       },
+      this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && Object.assign({}, styles.embedView, {
         left: this.props.embedViewLeftOffset
       })
@@ -180,19 +182,19 @@ var TopInstructions = React.createClass({
         </div>
         <div style={[this.props.collapsed && commonStyles.hidden]}>
           <div style={styles.body}>
-            {this.props.hasContainedLevels &&
-              <ProtectedStatefulDiv
-                id="containedLevelContainer"
-                ref="containedLevelContainer"
-                style={styles.containedLevelContainer}
-              />}
+            {this.props.hasContainedLevels && <ContainedLevel ref="instructions"/>}
             {!this.props.hasContainedLevels &&
-              <Instructions
-                ref="instructions"
-                renderedMarkdown={processMarkdown(this.props.markdown)}
-                onResize={this.adjustMaxNeededHeight}
-                inTopPane
-              />}
+              <div ref="instructions">
+                <Instructions
+                  ref="instructions"
+                  renderedMarkdown={processMarkdown(this.props.markdown,
+                      { renderer })}
+                  onResize={this.adjustMaxNeededHeight}
+                  inTopPane
+                />
+                <TeacherOnlyMarkdown/>
+              </div>
+            }
           </div>
           {!this.props.isEmbedView &&
             <HeightResizer
@@ -216,6 +218,7 @@ module.exports = connect(function propsFromStore(state) {
     maxHeight: Math.min(state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight),
     markdown: state.instructions.longInstructions,
+    noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed
   };
 }, function propsFromDispatch(dispatch) {

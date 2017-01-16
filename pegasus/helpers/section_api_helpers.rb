@@ -11,8 +11,8 @@ class DashboardStudent
   # Returns all users who are followers of the user with ID user_id.
   def self.fetch_user_students(user_id)
     Dashboard.db[:users].
-      join(:followers, :student_user_id => :users__id).
-      join(Sequel.as(:users, :users_students), :id => :followers__student_user_id).
+      join(:followers, student_user_id: :users__id).
+      join(Sequel.as(:users, :users_students), id: :followers__student_user_id).
       where(followers__user_id: user_id, followers__deleted_at: nil).
       where(users_students__deleted_at: nil).
       select(*fields).
@@ -42,14 +42,11 @@ class DashboardStudent
     row
   end
 
-  def self.fetch_if_allowed(id_or_ids, dashboard_user_id)
-    if id_or_ids.is_a?(Array)
-      # TODO: This should actually send a where id in (,,,) type query.
-      return id_or_ids.map {|id| fetch_if_allowed(id, dashboard_user_id)}
-    end
-
-    id = id_or_ids
-
+  # @param ids [Integer] the ID to fetch.
+  # @param dashboard_user_id [Integer] the ID of the user doing the fetching.
+  # @returns [Hash | nil] a hash (representing the requested user) or nil (if
+  #   the requested user does not exist or is accessible by dashboard_user_id).
+  def self.fetch_if_allowed(id, dashboard_user_id)
     user = Dashboard::User.get(dashboard_user_id)
     return unless user && (user.followed_by?(id) || user.admin?)
 
@@ -63,11 +60,46 @@ class DashboardStudent
       server(:default).
       first
 
-    if row.nil?
-      return
-    end
+    return if row.nil?
 
     row.merge(age: birthday_to_age(row[:birthday]))
+  end
+
+  # @param ids [Array[Integer]] the IDs to fetch.
+  # @param dashboard_user_id [Integer] the ID of the user doing the fetching.
+  # @returns [Array[Hash | nil]] an array, one entry per requested ID, with each
+  #   entry being a hash (representing the requested user) or nil (if the
+  #   requested user does not exist or is accessible by dashboard_user_id).
+  def self.fetch_if_allowed_array(ids, dashboard_user_id)
+    user = Dashboard::User.get(dashboard_user_id)
+    return ids.map {|_id| nil} unless user
+
+    allowed_ids = user.admin? ? ids : user.get_followed_bys(ids)
+    allowed_rows = Dashboard.db[:users].
+      where(users__id: allowed_ids, users__deleted_at: nil).
+      left_outer_join(:secret_pictures, id: :secret_picture_id).
+      select(*fields,
+        :secret_pictures__name___secret_picture_name,
+        :secret_pictures__path___secret_picture_path
+      )
+
+    # Convert allowed_rows from an array of hashes (each representing a user)
+    # to a hash of hashes (keys of user_id, values representing a user).
+    allowed_rows = {}.tap do |allowed_rows_hash|
+      allowed_rows.each do |allowed_row|
+        allowed_rows_hash[allowed_row[:id]] = allowed_row
+      end
+    end
+
+    # Add user age to the hash.
+    ids.map do |id|
+      if allowed_rows.key? id
+        allowed_rows[id][:age] = birthday_to_age(allowed_rows[id][:birthday])
+      end
+    end
+
+    # Return an array of hashes.
+    allowed_rows.values
   end
 
   def self.update_if_allowed(params, dashboard_user_id)
@@ -184,7 +216,8 @@ class DashboardSection
   @@course_cache = {}
   def self.valid_courses(user_id = nil)
     # some users can see all courses, even those marked hidden
-    course_cache_key = (user_id && Dashboard.hidden_script_access?(user_id)) ? "all" : "valid"
+    course_cache_key = I18n.locale.to_s +
+      ((user_id && Dashboard.hidden_script_access?(user_id)) ? "-all" : "-valid")
 
     # only do this query once because in prod we only change courses
     # when deploying (technically this isn't true since we are in
@@ -195,11 +228,6 @@ class DashboardSection
     return {} unless (Dashboard.db[:scripts].count rescue nil)
 
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
-
-    # Cache the courses names in English for all users. After the
-    # facilitator summit (2016-5-23) we should change the cache to be
-    # per-language.
-    course_locale = 'en-US'
 
     # cache result if we have to actually run the query
     @@course_cache[course_cache_key] =
@@ -212,16 +240,26 @@ class DashboardSection
           first_category = ScriptConstants.categories(course[:name])[0] || 'other'
           position = ScriptConstants.position_in_category(name, first_category)
           category_priority = ScriptConstants.category_priority(first_category)
-          name = I18n.t("#{name}_name", default: name, locale: course_locale)
+          name = I18n.t("#{name}_name", default: name)
           name += " *" if course[:hidden]
           {
             id: course[:id],
             name: name,
-            category: I18n.t("#{first_category}_category_name", default: first_category, locale: course_locale),
+            script_name: course[:name],
+            category: I18n.t("#{first_category}_category_name", default: first_category),
             position: position,
             category_priority: category_priority
           }
         end
+  end
+
+  # Gets a list of valid courses in which progress tracking has been disabled via
+  # the gatekeeper key postMilestone.
+  def self.progress_disabled_courses(user_id = nil)
+    disabled_courses = valid_courses(user_id).select do |course|
+      !Gatekeeper.allows('postMilestone', where: {script_name: course[:script_name]}, default: true)
+    end
+    disabled_courses.map{|course| course[:id]}
   end
 
   def self.valid_course_id?(course_id)
@@ -291,24 +329,24 @@ class DashboardSection
     # get all the students passwords when we get the list of sections).
 
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       where(sections__id: id, sections__deleted_at: nil).
       select(*fields).
       first
 
-    section = self.new(row)
+    section = new(row)
     return section if section.member?(user_id) || Dashboard.admin?(user_id)
     nil
   end
 
   def self.fetch_if_teacher(id, user_id)
     return nil unless row = Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__id: id, sections__deleted_at: nil).
       first
 
-    section = self.new(row)
+    section = new(row)
     return section if section.teacher?(user_id) || Dashboard.admin?(user_id)
     nil
   end
@@ -317,10 +355,10 @@ class DashboardSection
     return if user_id.nil?
 
     Dashboard.db[:sections].
-      join(:users, :id => :user_id).
+      join(:users, id: :user_id).
       select(*fields).
       where(sections__user_id: user_id, sections__deleted_at: nil).
-      map{|row| self.new(row).to_owner_hash}
+      map{|row| new(row).to_owner_hash}
   end
 
   def self.fetch_student_sections(student_id)
@@ -328,11 +366,11 @@ class DashboardSection
 
     Dashboard.db[:sections].
       select(*fields).
-      join(:followers, :section_id => :id).
-      join(:users, :id => :student_user_id).
+      join(:followers, section_id: :id).
+      join(:users, id: :student_user_id).
       where(student_user_id: student_id).
       where(sections__deleted_at: nil, followers__deleted_at: nil).
-      map{|row| self.new(row).to_member_hash}
+      map{|row| new(row).to_member_hash}
   end
 
   def add_student(student)
@@ -398,7 +436,7 @@ class DashboardSection
     @teachers ||= [{
       id: @row[:teacher_id],
       location: "/v2/users/#{@row[:teacher_id]}",
-                   }]
+    }]
   end
 
   def course
@@ -418,13 +456,13 @@ class DashboardSection
 
   def to_member_hash
     {
-        id: @row[:id],
-        location: "/v2/sections/#{@row[:id]}",
-        name: @row[:name],
-        login_type: @row[:login_type],
-        grade: @row[:grade],
-        code: @row[:code],
-        stage_extras: @row[:stage_extras],
+      id: @row[:id],
+      location: "/v2/sections/#{@row[:id]}",
+      name: @row[:name],
+      login_type: @row[:login_type],
+      grade: @row[:grade],
+      code: @row[:code],
+      stage_extras: @row[:stage_extras],
     }
   end
 

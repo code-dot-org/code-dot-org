@@ -1,8 +1,5 @@
-title 'Computer Science in Algebra PD'
-description "Online study to prepare for your next in-person PD"
-description_short "Online study to prepare for your next in-person PD"
-login_required 'true'
-pd 'true'
+professional_learning_course 'CS in Algebra Legacy'
+login_required true
 
 stage 'Updates - Tweaks and Polish'
 level 'PDAlg Updates Tweaks'

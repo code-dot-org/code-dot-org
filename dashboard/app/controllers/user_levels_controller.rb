@@ -16,6 +16,13 @@ class UserLevelsController < ApplicationController
     end
   end
 
+  def destroy
+    # depend on authorization methods to ensure that the only person that can
+    # delete a student's progress is their teacher
+    @user_level.delete
+    head :no_content
+  end
+
   private
 
   def set_user_level

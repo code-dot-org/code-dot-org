@@ -19,41 +19,51 @@ module AWS
 
     DOMAIN = ENV['DOMAIN'] || 'cdn-code.org'
 
-    # Use [DOMAIN] wildcard SSL certificate for ELB and CloudFront, if available.
-    IAM_METADATA = Aws::IAM::Client.new.get_server_certificate(server_certificate_name: DOMAIN).
-      server_certificate.server_certificate_metadata rescue nil
-
-    IAM_CERTIFICATE_ID = IAM_METADATA && IAM_METADATA.server_certificate_id
-
-    # Lookup ACM certificate for ELB and CloudFront SSL, if IAM-based certificate is not available.
+    # Lookup ACM certificate for ELB and CloudFront SSL.
     ACM_REGION = 'us-east-1'
-    CERTIFICATE_ARN = IAM_METADATA ? IAM_METADATA.arn :
-      Aws::ACM::Client.new(region: ACM_REGION).
+    CERTIFICATE_ARN = Aws::ACM::Client.new(region: ACM_REGION).
       list_certificates(certificate_statuses: ['ISSUED']).
       certificate_summary_list.
       find { |cert| cert.domain_name == "*.#{DOMAIN}" }.
       certificate_arn
 
-    BRANCH = ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
-
     # A stack name can contain only alphanumeric characters (case sensitive) and hyphens.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-using-console-create-stack-parameters.html
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
-    STACK_NAME = (ENV['STACK_NAME'] || "#{rack_env}-#{BRANCH}").gsub(STACK_NAME_INVALID_REGEX, '-')
 
-    # Fully qualified domain name
-    FQDN = "#{STACK_NAME}.#{DOMAIN}".downcase
     SSH_KEY_NAME = 'server_access_key'
-    IMAGE_ID = 'ami-df0607b5' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
     INSTANCE_TYPE = ENV['INSTANCE_TYPE'] || 't2.large'
     SSH_IP = '0.0.0.0/0'
     S3_BUCKET = 'cdo-dist'
-    CDN_ENABLED = !!ENV['CDN_ENABLED']
 
     STACK_ERROR_LINES = 250
     LOG_NAME = '/var/log/bootstrap.log'
 
     class << self
+      def branch
+        ENV['branch'] || (rack_env?(:adhoc) ? RakeUtils.git_branch : rack_env)
+      end
+
+      def stack_name
+        (ENV['STACK_NAME'] || CDO.stack_name || "#{rack_env}#{rack_env != branch && "-#{branch}"}").gsub(STACK_NAME_INVALID_REGEX, '-')
+      end
+
+      # CNAME to use for this stack.
+      # Suffix env-named stacks with "_cfn" during migration.
+      def cname
+        stack_name == rack_env.to_s ? "#{stack_name}-cfn" : stack_name
+      end
+
+      # Fully qualified domain name
+      def fqdn
+        "#{cname}.#{DOMAIN}".downcase
+      end
+
+      def studio_fqdn
+        "#{cname}-studio.#{DOMAIN}".downcase
+      end
+
       # Validates that the template is valid CloudFormation syntax.
       # Does not check validity of the resource properties, just the base syntax.
       # First prints the JSON-formatted template, then either raises an error (if invalid)
@@ -66,16 +76,18 @@ module AWS
         CDO.log.info "Parameters: #{parameters(template).join("\n")}"
 
         if stack_exists?
-          CDO.log.info 'Listing changes to existing stack:'
+          CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
           change_set_id = cfn.create_change_set(stack_options(template).merge(
-            change_set_name: "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}"
+            change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
           )).id
 
           begin
-            begin
+            change_set = {changes: []}
+            loop do
               sleep 1
               change_set = cfn.describe_change_set(change_set_name: change_set_id)
-            end while %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+              break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+            end
             change_set.changes.each do |change|
               c = change.resource_change
               str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
@@ -98,7 +110,7 @@ module AWS
           {template_body: template}
         elsif template.length < 460800
           CDO.log.warn 'Uploading template to S3...'
-          key = AWS::S3.upload_to_bucket(TEMP_BUCKET, "#{STACK_NAME}-#{Digest::MD5.hexdigest(template)}-cfn.json", template, no_random: true)
+          key = AWS::S3.upload_to_bucket(TEMP_BUCKET, "#{stack_name}-#{Digest::MD5.hexdigest(template)}-cfn.json", template, no_random: true)
           {template_url: "https://s3.amazonaws.com/#{TEMP_BUCKET}/#{key}"}
         else
           raise 'Template is too large'
@@ -126,7 +138,7 @@ module AWS
 
       def stack_options(template)
         {
-          stack_name: STACK_NAME,
+          stack_name: stack_name,
           capabilities: ['CAPABILITY_IAM'],
           parameters: parameters(template)
         }.merge(string_or_url(template))
@@ -135,11 +147,20 @@ module AWS
       def create_or_update
         template = json_template
         action = stack_exists? ? :update : :create
-        CDO.log.info "#{action} stack: #{STACK_NAME}..."
+        CDO.log.info "#{action} stack: #{stack_name}..."
         start_time = Time.now
         options = stack_options(template)
         options[:on_failure] = 'DO_NOTHING' if action == :create
-        updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
+        begin
+          updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          if e.message == 'No updates are to be performed.'
+            CDO.log.info e.message
+            return
+          else
+            raise e
+          end
+        end
         wait_for_stack(action, start_time)
         CDO.log.info 'Outputs:'
         cfn.describe_stacks(stack_name: updated_stack_id).stacks.first.outputs.each do |output|
@@ -149,12 +170,12 @@ module AWS
 
       def delete
         if stack_exists?
-          CDO.log.info "Shutting down #{STACK_NAME}..."
+          CDO.log.info "Shutting down #{stack_name}..."
           start_time = Time.now
-          cfn.delete_stack(stack_name: STACK_NAME)
+          cfn.delete_stack(stack_name: stack_name)
           wait_for_stack(:delete, start_time)
         else
-          CDO.log.warn "Stack #{STACK_NAME} does not exist."
+          CDO.log.warn "Stack #{stack_name} does not exist."
         end
       end
 
@@ -170,15 +191,15 @@ module AWS
 
       # Only way to determine whether a given stack exists using the Ruby API.
       def stack_exists?
-        !!cfn.describe_stacks(stack_name: STACK_NAME)
+        !!cfn.describe_stacks(stack_name: stack_name)
       rescue Aws::CloudFormation::Errors::ValidationError => e
-        raise e unless e.message == "Stack with id #{STACK_NAME} does not exist"
+        raise e unless e.message == "Stack with id #{stack_name} does not exist"
         false
       end
 
       def update_certs
         Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.bundle_exec './update_certs', FQDN
+          RakeUtils.bundle_exec './update_certs', fqdn
         end
       end
 
@@ -191,7 +212,7 @@ module AWS
                                            credentials: Aws::Credentials.new(CDO.aws_access_key, CDO.aws_secret_key))
               client.put_object(
                 bucket: S3_BUCKET,
-                key: "chef/#{BRANCH}.tar.gz",
+                key: "chef/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
@@ -202,7 +223,7 @@ module AWS
       def update_bootstrap_script
         Aws::S3::Client.new.put_object(
           bucket: S3_BUCKET,
-          key: "chef/bootstrap-#{STACK_NAME}.sh",
+          key: "chef/bootstrap-#{stack_name}.sh",
           body: File.read(aws_dir('chef-bootstrap.sh'))
         )
       end
@@ -210,7 +231,7 @@ module AWS
       # Prints the latest output from a CloudWatch Logs log stream, if present.
       def tail_log(quiet: false)
         log_config = {
-          log_group_name: STACK_NAME,
+          log_group_name: stack_name,
           log_stream_name: LOG_NAME
         }
         log_config[:next_token] = @@log_token unless @@log_token.nil?
@@ -233,7 +254,7 @@ module AWS
 
       def wait_for_stack(action, start_time)
         CDO.log.info "Stack #{action} requested, waiting for provisioning to complete..."
-        stack_id = STACK_NAME
+        stack_id = stack_name
         begin
           @@event_timestamp = start_time
           @@log_token = nil
@@ -241,7 +262,7 @@ module AWS
           stack_id = cfn.describe_stacks(stack_name: stack_id).stacks.first.stack_id
           cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: stack_id) do |w|
             w.delay = 10 # seconds
-            w.max_attempts = 360 # = 1 hour
+            w.max_attempts = 540 # = 1.5 hours
             w.before_wait do
               tail_events(stack_id)
               tail_log
@@ -253,11 +274,10 @@ module AWS
         rescue Aws::Waiters::Errors::FailureStateError
           tail_events(stack_id)
           tail_log
-          CDO.log.info "\nError on #{action}."
           if action == :create
             CDO.log.info 'Stack will remain in its half-created state for debugging. To delete, run `rake adhoc:stop`.'
           end
-          return
+          raise "\nError on #{action}."
         end
         CDO.log.info "\nStack #{action} complete."
         CDO.log.info "Don't forget to clean up AWS resources by running `rake adhoc:stop` after you're done testing your instance!" if action == :create
@@ -271,19 +291,20 @@ module AWS
         @@local_variables = OpenStruct.new(
           dry_run: dry_run,
           local_mode: !!CDO.chef_local_mode,
-          stack_name: STACK_NAME,
+          stack_name: stack_name,
           ssh_key_name: SSH_KEY_NAME,
           image_id: IMAGE_ID,
           instance_type: INSTANCE_TYPE,
-          branch: BRANCH,
+          branch: branch,
           region: CDO.aws_region,
           environment: rack_env,
           ssh_ip: SSH_IP,
-          iam_certificate_id: IAM_CERTIFICATE_ID,
           certificate_arn: CERTIFICATE_ARN,
-          cdn_enabled: CDN_ENABLED,
+          cdn_enabled: !!ENV['CDN_ENABLED'],
           domain: DOMAIN,
-          subdomain: FQDN,
+          subdomain: fqdn,
+          studio_subdomain: studio_fqdn,
+          cname: cname,
           availability_zone: availability_zones.first,
           availability_zones: availability_zones,
           azs: azs,

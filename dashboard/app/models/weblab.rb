@@ -20,11 +20,14 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Weblab < Level
   serialized_attrs %w(
+    project_template_level_name
     start_sources
+    teacher_markdown
   )
 
   def self.create_from_level_builder(params, level_params)

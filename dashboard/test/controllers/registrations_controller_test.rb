@@ -252,12 +252,13 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update under 13 student with client side hashed email" do
-    student = create :student, birthday: '1981/03/24'
+    student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
     post :update, user: {age: '9',
                          email: '',
                          hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
+                         current_password: 'whatev' # need this to change email
                         }
 
     assert_redirected_to '/'
@@ -279,6 +280,16 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_equal '', assigns(:user).email
     assert_equal Digest::MD5.hexdigest('hashed@email.com'), assigns(:user).hashed_email
+  end
+
+  test 'update rejects unwanted parameters' do
+    user = create :user, name: 'non-admin'
+    sign_in user
+    post :update, user: { name: 'admin', admin: true }
+
+    user.reload
+    assert_equal 'admin', user.name
+    refute user.admin
   end
 
   test "sign up with devise.user_attributes in session" do
@@ -339,5 +350,177 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select '.alert', 0
+  end
+
+  # The next several tests explore profile changes for users with or without
+  # passwords.  Examples of users without passwords are users that authenticate
+  # via oauth (a third-party account), or students with a picture password.
+
+  test "editing password of student-without-password is not allowed" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    refute can_edit_password_without_password student_without_password
+    refute can_edit_password_with_password student_without_password, 'wrongpassword'
+    refute can_edit_password_with_password student_without_password, ''
+  end
+
+  test "editing password of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_password_without_password student_with_password
+    refute can_edit_password_with_password student_with_password, 'wrongpassword'
+    assert can_edit_password_with_password student_with_password, 'oldpassword'
+  end
+
+  test "editing password of teacher-without-password is not allowed" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    refute can_edit_password_without_password teacher_without_password
+    refute can_edit_password_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_password_with_password teacher_without_password, ''
+  end
+
+  test "editing password of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_password_without_password teacher_with_password
+    refute can_edit_password_with_password teacher_with_password, 'wrongpassword'
+    assert can_edit_password_with_password teacher_with_password, 'oldpassword'
+  end
+
+  test "editing email of student-without-password is not allowed" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    refute can_edit_email_without_password student_without_password
+    refute can_edit_email_with_password student_without_password, 'wrongpassword'
+    refute can_edit_email_with_password student_without_password, ''
+  end
+
+  test "editing email of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_email_without_password student_with_password
+    refute can_edit_email_with_password student_with_password, 'wrongpassword'
+    assert can_edit_email_with_password student_with_password, 'oldpassword'
+  end
+
+  test "editing email of teacher-without-password is not allowed" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    refute can_edit_email_without_password teacher_without_password
+    refute can_edit_email_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_email_with_password teacher_without_password, ''
+  end
+
+  test "editing email of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_email_without_password teacher_with_password
+    refute can_edit_email_with_password teacher_with_password, 'wrongpassword'
+    assert can_edit_email_with_password teacher_with_password, 'oldpassword'
+  end
+
+  test "editing hashed_email of student-without-password is not allowed" do
+    student_without_password = create :student
+    student_without_password.update_attribute(:encrypted_password, '')
+    assert student_without_password.encrypted_password.blank?
+
+    refute can_edit_hashed_email_without_password student_without_password
+    refute can_edit_hashed_email_with_password student_without_password, 'wrongpassword'
+    refute can_edit_hashed_email_with_password student_without_password, ''
+  end
+
+  test "editing hashed_email of student-with-password requires current password" do
+    student_with_password = create :student, password: 'oldpassword'
+    refute can_edit_hashed_email_without_password student_with_password
+    refute can_edit_hashed_email_with_password student_with_password, 'wrongpassword'
+    assert can_edit_hashed_email_with_password student_with_password, 'oldpassword'
+  end
+
+  test "editing hashed_email of teacher-without-password is not allowed" do
+    teacher_without_password = create :teacher
+    teacher_without_password.update_attribute(:encrypted_password, '')
+    assert teacher_without_password.encrypted_password.blank?
+
+    refute can_edit_hashed_email_without_password teacher_without_password
+    refute can_edit_hashed_email_with_password teacher_without_password, 'wrongpassword'
+    refute can_edit_hashed_email_with_password teacher_without_password, ''
+  end
+
+  test "editing hashed_email of teacher-with-password requires current password" do
+    teacher_with_password = create :teacher, password: 'oldpassword'
+    refute can_edit_hashed_email_without_password teacher_with_password
+    refute can_edit_hashed_email_with_password teacher_with_password, 'wrongpassword'
+    # Can't even do this, because cleartext email is required for teachers
+    refute can_edit_hashed_email_with_password teacher_with_password, 'oldpassword'
+  end
+
+  def can_edit_password_without_password(user)
+    new_password = 'newpassword'
+
+    sign_in user
+    post :update, user: {password: new_password,
+                         password_confirmation: new_password}
+
+    user = user.reload
+    user.valid_password? new_password
+  end
+
+  def can_edit_password_with_password(user, current_password)
+    new_password = 'newpassword'
+
+    sign_in user
+    post :update, user: {password: new_password,
+                         password_confirmation: new_password,
+                         current_password: current_password}
+
+    user = user.reload
+    user.valid_password? new_password
+  end
+
+  def can_edit_email_without_password(user)
+    new_email = 'new@example.com'
+
+    sign_in user
+    post :update, user: {email: new_email}
+
+    user = user.reload
+    user.email == new_email || user.hashed_email == User.hash_email(new_email)
+  end
+
+  def can_edit_email_with_password(user, current_password)
+    new_email = 'new@example.com'
+
+    sign_in user
+    post :update, user: {email: new_email,
+                         current_password: current_password}
+
+    user = user.reload
+    user.email == new_email || user.hashed_email == User.hash_email(new_email)
+  end
+
+  def can_edit_hashed_email_without_password(user)
+    new_hashed_email = '729980b94e1439aeed40122476b0f695'
+
+    sign_in user
+    post :update, user: {hashed_email: new_hashed_email}
+
+    user = user.reload
+    user.hashed_email == new_hashed_email
+  end
+
+  def can_edit_hashed_email_with_password(user, current_password)
+    new_hashed_email = '729980b94e1439aeed40122476b0f695'
+
+    sign_in user
+    post :update, user: {hashed_email: new_hashed_email,
+                         current_password: current_password}
+
+    user = user.reload
+    user.hashed_email == new_hashed_email
   end
 end

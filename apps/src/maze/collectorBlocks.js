@@ -3,14 +3,30 @@ var codegen = require('../codegen');
 var blockUtils = require('../block_utils');
 
 exports.install = function (blockly, blockInstallOptions) {
+  var skin = blockInstallOptions.skin;
+  var isK1 = blockInstallOptions.isK1;
+
   var generator = blockly.Generator.get('JavaScript');
   blockly.JavaScript = generator;
 
-  // Block for collecting collectibles
+  // Block for collecting collectibles. Comes in both regular and K1
+  // versions
   blockUtils.generateSimpleBlock(blockly, generator, {
     name: 'collector_collect',
     helpUrl: '',
-    title: msg.collect(),
+    title: isK1 ? msg.get() : msg.collect(),
+    titleImage: isK1 ? skin.goal : undefined,
+    tooltip: msg.collectorCollectTooltip(),
+    functionName: 'Maze.dig'
+  });
+
+  // simplified collector block. For when you want a K1 block in a
+  // non-K1 level.
+  blockUtils.generateSimpleBlock(blockly, generator, {
+    name: 'collector_collect_simplified',
+    helpUrl: '',
+    title: msg.get(),
+    titleImage: skin.goal,
     tooltip: msg.collectorCollectTooltip(),
     functionName: 'Maze.dig'
   });

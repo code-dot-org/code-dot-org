@@ -6,27 +6,31 @@ nav: how_to_nav
 
 ---
 
-# How to teach one Hour of Code in after-school
+<%= view :signup_button %>
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+# آور-آف-کوڈ اسکول کے بعد کیسے سیکھائیں
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+## ١) اس ویڈیو کو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## ٢) ٹیٹوریئل منتخب کریں:
+
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
   * آرگنائزرز کے لیے تیاری کا کم از کم درکار وقت
-  * یہ سیلف-گائیڈڈ ہیں – جو کہ بچوں (کڈز) کو انکی اپنی رفتار اور اسکل-لیول کے مطابق کام کرنے کا موقع دیتا ہے۔
+  * یہ سیلف-گائیڈڈ ہیں – جو کہ بچوں کو انکی اپنی رفتار اور مہارت کے مطابق کام کرنے کا موقع دیتا ہیں
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
-## 3) Promote your Hour of Code
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-Promote your Hour of Code [with these tools](<%= resolve_url('/promote') %>) and encourage others to host their own events.
+## ٣) اپنے آور-آف-کوڈ کو پروموٹ کریں
 
-## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
+اپنے آور-آف-کوڈ کو [ان ٹولز کے ساتھ](<%= resolve_url('/promote') %>) فروغ دیں اور دوسروں کو اپنی تقریبات ہوسٹ کرنے پر حوصلہ افزائی کریں.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+## 4) اپنی ٹیکنالوجی کی ضروریات کو پلان کریں – کمپیوٹرز آپشنل ہیں
+
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
@@ -62,7 +66,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +76,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-  * شرکاء کی حوصلہ افزائی کریں کہ وہ آور-آف-کوڈ میں کسی دوسری ایکٹیویٹی پر بھی ٹرائی کریں [<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * یا، جنہوں نے پہلے ہی ختم کر لیا ہے تو ان سے کہیں کہ وہ اُن دیگر کی مدد کریں جن کو مشکل پیش آ رہی ہے۔
 
 [col-33]
@@ -116,11 +120,10 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## آور-آف-کوڈ کے دیگر ذرائع (ریسورسز) برائے ایجوکیٹرز:
 
-  * اپنے آور-آف-کوڈ کو آرگنائز کرنے کے لیے اس [ٹیمپلیٹ لیسن پلان](/files/AfterschoolEducatorLessonPlanOutline.docx) کو استعمال کریں۔
-  * گزشتہ آور-آف-کوڈ کے آرگنائزرز کے [بہترین طریقوں](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) کو دیکھیں۔ 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * دیگر آرگنائزرز سے مشاورت، بصیرت اور معاونت حاصل کرنے کے لیے [آور-آف-کوڈ فورم](http://forum.code.org/c/plc/hour-of-code) پر وزٹ کریں <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * [آور-آف-کوڈ FAQ ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)کا جائزہ لیں۔ <% end %>
 
 ## آور-آف-کوڈ کے بعد کیا آتا ہے؟
@@ -129,3 +132,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

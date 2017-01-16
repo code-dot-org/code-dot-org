@@ -769,40 +769,39 @@
           the smiley face goal.
       2:
         image: notes/C1_moveitmoveit_unplugged_2.png
-        text: But the smiley is face down and only one person knows how to get there.
-          Let's get this program started.
+        text: Mutta hymynaama on surullinen ja vain yksi henkilö tietää miten sinne
+          pääsee. Aloitetaan tämä ohjelma.
       3:
         image: notes/C1_moveitmoveit_unplugged_3.png
-        text: A program is an algorithm that has been coded into something that can
-          be run by a machine. Most of us think of a program as something that we
-          write for a computer. Programs are really good for that but they're also
-          helpful in other places. You can make your own game or even program a robot
-          to do things for you.
+        text: Ohjelma on algoritmi, joka on koodattu joksikin, joka voidaan suorittaa
+          laitteella. Useimmat meistä ajattelee että ohjelmat kirjoitetaan tietokoneille.
+          Ohjelmat ovat todella hyviä siihenkin, mutta ne ovat myös hyödyllisiä muissakin
+          paikoissa. Voit tehdä oman pelin tai jopa robootin tekemään asioita sinulle.
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Nimeni on Jeremia. Moikka! Olen seitsemän vuotta vanha. Rakastan pelata
+          äiti tietokoneella, mutta joudun aina kysymään lupaa ensin. "Äiti, saanko
+          pelata tietokoneella? Kyllä saat, rakas!"
       2:
         image: notes/C1_going_places_safely_2.png
-        text: I love my mom's computer because I can go on the internet. The internet
-          is kind of like your neighborhood. You can visit cool places, you can talk
-          to family and friends and you can learn lots of new things.
+        text: Rakastan äitini tietokonetta koska voin mennä nettiin. Netti on tavallaan
+          niin kuin naapurustosi. Voit käydä katsomassa siistejä paikkoja, voit puhua
+          perheelle ja kavereille ja voit oppia paljon uusia juttuja.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Eilen kävin eläintarhassa, joka on lähellä kotiini. Näin vauva seepran.
+          Otin siitä kuvan ja vaihdoin sen raitojen värin, sitten lisäsin sille hatun
+          ja tallensin sen minun kokoelmaan hauskoista eläimistä. Mahtavaa! Myöhemmin
+          menin paikkaan kauas pois. Kävin Keniassa. Se on maa Afrikassa. Paljon seeproja
+          asuu siellä.
       4:
         image: notes/C1_going_places_safely_4.png
-        text: Sometimes on the internet I talk to peeople I know, like my grandma
-          who lives in another state. Hi grandma! She's making me cookies that she'll
-          send me for my birthday. "Yummy, I wish the internet had smellorama!" I
-          can talk to different people on the internet, like my cousin but I only
-          talk to people I know.
+        text: Joskus netissä juttelen ihmisten kanssa jotka tunnen, esimerkiksi mummini
+          joka asuu toisessa kaupungissa. Hei mummi! Hän tekee minulle keksejä jotka
+          hän lähettää minulle syntymäpäivänäni. "Nam, haluaisin että netin välityksellä
+          pystyisi lähettää tuoksuja!" Puhun eri ihmisille netissä, niin kuin serkulleni,
+          mutta puhun vain ihmisille joita tunnen.
       5:
         image: notes/C1_going_places_safely_5.png
         text: What I like most on the interent is that I get to play fun games. Score!
@@ -2656,7 +2655,7 @@
           kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_congrats_4.JPG
-        text: |
+        text: |-
           [opiskelijat kertovat]
           "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
           "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
@@ -2782,7 +2781,7 @@
           kymmentätuhatta sikaa voitat pelin."
       4:
         image: notes/starwars_blocks_congrats_4.JPG
-        text: |
+        text: |-
           [opiskelijat kertovat]
           "Me tehtiin peli, jossa ei voi hävitä ja kaikki minkä saa tapettua antaa pisteitä."
           "Minun ohjelmassani vaihdoin näppäinten suunnat niin että kun painaa ylös, hahmo liikkuukin alas ja kun painaa oikealle hahmo meneekin vasemmalle. Se on tosi haastava!"
@@ -3096,3 +3095,121 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
+          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
+          but the world has stopped. The sheep aren't moving, the chickens aren't
+          laying eggs, and zombies are just standing still. It's up to you to add
+          the code to make the Minecraft world work.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m
+          really interested in is how people think and interact with technology and
+          so this job is the perfect job for me to put together the computer engineering
+          with the psychology: how people think and behave.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: You'll see your screen is split into three main parts. 1) On the left
+          is the Minecraft game. Right now the world is frozen but we're going to
+          fix that with code.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) This middle area is the toolbox. Each of these blocks is a command
+          that chickens, sheep, and other Minecraft creatures can understand.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) The space on the right is called the workspace and this is where
+          we'll build our program.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: If you forget what to do, the instructions for each level are at the
+          top.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back to the toolbox.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: After you've hit "Run" you can always hit the "Reset" button to reset
+          the game and start over. Now, it's your turn to make your very own version
+          of Minecraft. Have fun!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Hi, I'm Lisa. I'm a software developer on Minecraft and I work on some
+          of the animals and enemies in the game. One of the animals that I worked
+          on is the ocelot. I worked on the part where you can feed an ocelot a fish
+          to tame it into your own cat.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulations! You've learned to use computer science commands to
+          bring the Minecraft world to life. You are the developer now. You've unlocked
+          all the commands and all the creatures. You choose what happens.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

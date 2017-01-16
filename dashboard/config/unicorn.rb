@@ -18,3 +18,6 @@ after_fork do |_server, _worker|
   Gatekeeper.after_fork
   DCDO.after_fork
 end
+
+require 'cdo/unicorn'
+before_fork $unicorn_upgrade

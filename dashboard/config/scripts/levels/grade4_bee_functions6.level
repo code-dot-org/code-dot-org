@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Now write the function to collect nectar from the three flowers.",
+    "instructions": "Now write the function to collect nectar from the flowers.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -31,7 +31,8 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Edit the function so that it solves the puzzle without having to change the main program.\",\"hint_id\":\"grade4_bee_functions6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c13234808ee1de49bfd6d6b901e590fa/grade4_bee_functions6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Your function should make the bee: \\n- turn\\n- move forward\\n- collect all of the nectar\\n- turn around\\n- move back to the main path\\n- turn back to the direction that the bee started from\",\"hint_id\":\"grade4_bee_functions6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15d37752eff9a504cd996a40812e8ed9/grade4_bee_functions6.mp3\"}]",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -44,19 +45,19 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_move" deletable="false">
+            <block type="maze_move" movable="false">
               <title name="DIR">moveForward</title>
               <next>
-                <block type="procedures_callnoreturn" deletable="false">
+                <block type="procedures_callnoreturn" deletable="false" movable="false">
                   <mutation name="move and get 4"/>
                   <next>
-                    <block type="maze_move" deletable="false">
+                    <block type="maze_move">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="controls_repeat" deletable="false">
+                        <block type="controls_repeat" limit="2">
                           <title name="TIMES">2</title>
                           <statement name="DO">
-                            <block type="maze_move" deletable="false">
+                            <block type="maze_move">
                               <title name="DIR">moveForward</title>
                               <next>
                                 <block type="procedures_callnoreturn" deletable="false">
@@ -85,10 +86,10 @@
         <block type="maze_move">
           <title name="DIR">moveForward</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" limit="2">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="maze_turn">
+        <block type="maze_turn" limit="2">
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_nectar" limit="1"/>
@@ -102,11 +103,7 @@
       </xml>
     </toolbox_blocks>
     <recommended_blocks>
-      <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="move and get 4"/>
-        </block>
-      </xml>
+      <xml/>
     </recommended_blocks>
     <solution_blocks>
       <xml>

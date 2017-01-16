@@ -1,22 +1,21 @@
-/* globals dashboard, trackEvent, Dialog, appOptions */
+/* globals dashboard, appOptions */
 
 import $ from 'jquery';
-var React = require('react');
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
-
-var clientState = require('./clientState');
-var popupWindow = require('./popup-window');
-var ShareDialog = require('./components/ShareDialog');
-var progress = require('./progress');
-var Dialog = require('./dialog');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
+import popupWindow from './popup-window';
+import ShareDialog from './components/ShareDialog';
+import progress from './progress';
+import Dialog from './dialog';
+import {Provider} from 'react-redux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
  */
 
 // Namespace for manipulating the header DOM.
-var header = module.exports = {};
+var header = {};
 
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.
@@ -24,7 +23,11 @@ var header = module.exports = {};
 const PUZZLE_PAGE_NONE = -1;
 
 /**
- * @param stageData{{
+ * @param {object} scriptData
+ * @param {boolean} scriptData.disablePostMilestone
+ * @param {boolean} scriptData.isHocScript
+ * @param {string} scriptData.name
+ * @param {object} stageData{{
  *   script_id: number,
  *   script_name: number,
  *   script_stages: id,
@@ -38,10 +41,18 @@ const PUZZLE_PAGE_NONE = -1;
  *     kind: string
  *   }>
  * }}
+ * @param {object} progressData
+ * @param {string} currentLevelId
+ * @param {number} puzzlePage
+ * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ *   user, null otherwise
  */
-header.build = function (stageData, progressData, currentLevelId, scriptName, puzzlePage) {
+header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn) {
+  scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
+
+  const scriptName = scriptData.name;
 
   if (stageData.finishLink) {
     $('.header_finished_link').show().append($('<a>').attr('href', stageData.finishLink).text(stageData.finishText));
@@ -57,7 +68,7 @@ header.build = function (stageData, progressData, currentLevelId, scriptName, pu
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(stageData, progressData, scriptName, currentLevelId, saveAnswersBeforeNavigation);
+  progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
 
   $('.level_free_play').qtip({
     content: {
@@ -154,20 +165,24 @@ function shareProject() {
     const pageConstants = studioApp.reduxStore.getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
 
-    var dialog = React.createElement(ShareDialog, {
-      i18n: i18n,
-      icon: appOptions.skin.staticAvatar,
-      shareUrl: shareUrl,
-      isAbusive: dashboard.project.exceedsAbuseThreshold(),
-      channelId: dashboard.project.getCurrentId(),
-      appType,
-      onClickPopup: popupWindow,
-      // TODO: Can I not proliferate the use of global references to Applab somehow?
-      onClickExport: window.Applab && window.Applab.canExportApp() ?
-      window.Applab.exportApp : null,
-      canShareSocial,
-    });
-    ReactDOM.render(dialog, dialogDom);
+    ReactDOM.render(
+      <Provider store={studioApp.reduxStore}>
+        <ShareDialog
+          i18n={i18n}
+          icon={appOptions.skin.staticAvatar}
+          shareUrl={shareUrl}
+          isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          channelId={dashboard.project.getCurrentId()}
+          appType={appType}
+          onClickPopup={popupWindow}
+          // TODO: Can I not proliferate the use of global references to Applab somehow?
+          onClickExport={window.Applab && window.Applab.canExportApp() ?
+                         window.Applab.exportApp : null}
+          canShareSocial={canShareSocial}
+        />
+      </Provider>,
+      dialogDom
+    );
   });
 }
 
@@ -252,8 +267,8 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
-  // TODO: Remove this (and the related style) when Game Lab is no longer in beta.
-  if ('gamelab' === appOptions.app) {
+  // TODO: Remove this (and the related style) when Game Lab and/or Web Lab are no longer in beta.
+  if ('gamelab' === appOptions.app || 'weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 
@@ -336,3 +351,5 @@ header.updateTimestamp = function () {
     $('.project_updated_at').text("Not saved"); // TODO i18n
   }
 };
+
+export default header;

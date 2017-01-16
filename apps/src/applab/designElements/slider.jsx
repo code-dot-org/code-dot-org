@@ -1,12 +1,11 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import * as elementUtils from './elementUtils';
 
 var SliderProperties = React.createClass({
   propTypes: {
@@ -132,7 +131,7 @@ var SliderEvents = React.createClass({
   }
 });
 
-module.exports = {
+export default {
   PropertyTab: SliderProperties,
   EventTab: SliderEvents,
 
@@ -169,5 +168,20 @@ module.exports = {
         return false;
     }
     return true;
+  },
+
+  readProperty: function (element, name) {
+    switch (name) {
+      case 'defaultValue':
+        return element.defaultValue;
+      case 'min':
+        return element.min;
+      case 'max':
+        return element.max;
+      case 'step':
+        return element.step;
+      default:
+        throw `unknown property name ${name}`;
+    }
   }
 };

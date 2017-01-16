@@ -20,11 +20,11 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Applab < Blockly
   before_save :update_json_fields
-  before_save :fix_examples
 
   serialized_attrs %w(
     free_play
@@ -36,15 +36,17 @@ class Applab < Blockly
     hide_design_mode
     beginner_mode
     start_html
-    encrypted_examples
     submittable
     log_conditions
     data_tables
     data_properties
     hide_view_data_button
+    show_debug_watch
+    watchers_prepopulated
     fail_on_lint_errors
     debugger_disabled
     makerlab_enabled
+    teacher_markdown
   )
 
   # List of possible skins, the first is used as a default.
@@ -74,8 +76,8 @@ class Applab < Blockly
   end
 
   def update_palette
-    if self.code_functions.present? && self.code_functions.is_a?(String)
-      self.code_functions = JSON.parse(self.code_functions)
+    if code_functions.present? && code_functions.is_a?(String)
+      self.code_functions = JSON.parse(code_functions)
     end
     true
   rescue JSON::ParserError => e
@@ -84,9 +86,9 @@ class Applab < Blockly
   end
 
   def parse_json_property_field(property_field)
-    value = self.properties[property_field]
+    value = properties[property_field]
     if value.present? && value.is_a?(String)
-      self.properties[property_field] = JSON.parse value
+      properties[property_field] = JSON.parse value
     end
     true
   rescue JSON::ParserError => e
@@ -123,12 +125,14 @@ class Applab < Blockly
         "getImageURL": null,
         "setImageURL": null,
         "playSound": null,
+        "stopSound": null,
         "showElement": null,
         "hideElement": null,
         "deleteElement": null,
         "setPosition": null,
         "setSize": null,
         "setProperty": null,
+        "getProperty": null,
         "write": null,
         "getXPosition": null,
         "getYPosition": null,
@@ -254,11 +258,5 @@ class Applab < Blockly
         "comment": null
       }
     JSON
-  end
-
-  def fix_examples
-    # remove nil and empty strings from examples
-    return if examples.nil?
-    self.examples = examples.select(&:present?)
   end
 end

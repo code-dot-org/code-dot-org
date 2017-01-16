@@ -48,7 +48,6 @@
 
     .content-text {
       float: left;
-      max-height: 100px;
       overflow: hidden;
       padding-left: 10px;
       line-height: 20px;
@@ -65,7 +64,7 @@
     .announce-learn-more {
       position: relative;
       float: right;
-      margin-top: 75px;
+      margin-top: 100px;
     }
     .announce-learn-more .primary {
       background-color: $cyan;

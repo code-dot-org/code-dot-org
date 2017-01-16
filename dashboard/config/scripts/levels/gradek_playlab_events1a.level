@@ -48,8 +48,9 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
+        <block type="when_run"/>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
         </block>
       </xml>
     </start_blocks>
@@ -89,8 +90,8 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">0</title>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
           <next>
             <block type="studio_move">
               <title name="SPRITE">5</title>

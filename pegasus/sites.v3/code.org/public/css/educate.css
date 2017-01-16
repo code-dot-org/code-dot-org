@@ -14,7 +14,8 @@
 .educate-box {
   position: absolute;
   min-height: 255px;
-  color: white; 
+  width: 305px;
+  color: white;
   padding: 20px;
   border-radius: 5px;
 }
@@ -23,7 +24,7 @@
   margin-top: 0px;
   margin-bottom: 10px;
   font-size: 28px;
-  color: white; 
+  color: white;
 }
 
 .educate-p {

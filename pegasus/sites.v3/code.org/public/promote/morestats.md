@@ -30,6 +30,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * Seeing our impact: A [record year](http://blog.code.org/post/91961669383/ap-computer-science) for computer science (2013-2014)
 * The Hour of Code [reached](http://blog.code.org/post/70175643054/stats) 15 million users in 7 days (2014)
 * [15,000](http://blog.code.org/post/128786388333/15000-new-computer-science-teachers) new computer science teachers (2015)
+* [Progress](http://blog.code.org/post/155208947459/happy-new-year-from-codeorg) made in computer science education (2016)
 
 
 
@@ -40,7 +41,8 @@ We are interested in seeing what's happening in computer science education inter
 
 ## Outside resources
 
-- [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education"
+- A [report](http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf) by the Education Commission of the States provides details on computer science in high school graduation requirements.  
+- [Landscape of K-12 Computer Science Education in the U.S.](http://csedu.gallup.com/home.aspx): A series of reports  from Gallup, commissioned by Google, including "Images of Computer Science: Perceptions Among Students, Parents and Educators in the U.S." and "Searching for Computer Science: Access and Barriers in U.S. K-12 Education."
 - Low-income or underrepresented minority students are [less likely](http://changetheequation.org/blog/new-data-bridging-computer-science-access-gap-0) than other demographic groups to attend a school that offers computer science. 
 - [Half of the highest paying jobs](https://heatst.com/biz/half-of-the-highest-paying-jobs-in-america-now-require-you-to-know-how-to-code/) in America require you to know how to code. More information can be found in [the report](http://burning-glass.com/research/coding-skills/) by Burning Glass.
 - 91% of open software jobs are [outside Silicon Valley](http://www.inc.com/salvador-rodriguez/act-software-developers-map.html). 

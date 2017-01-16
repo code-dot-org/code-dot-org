@@ -6,7 +6,9 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# Como levar a Hora do Código para a escola da sua região
 
 ## Faça com que todas as escolas participem e todos os alunos possam aprender!
 
@@ -22,7 +24,9 @@ nav: how_to_nav
 
 ## O que vem depois da Hora do Código?
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicações de software. Para continuar essa jornada:
+A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos de software. Para continuar essa jornada:
 
   * Incentive os alunos a continuar a [aprender on-line](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Assista](<%= resolve_url('https://code.org/professional-development-workshops') %>) a uma oficina presencial, de um dia, para receber instruções de uma pessoa com experiência em ciência da computação. (Somente para educadores dos EUA)
+
+<%= view :signup_button %>

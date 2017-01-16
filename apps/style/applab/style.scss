@@ -245,12 +245,6 @@ div#visualizationResizeBar {
   }
 }
 
-body.embedded_iframe {
-  #visualizationColumn.wireframeShare {
-    padding: 0px;
-  }
-}
-
 #visualizationColumn.chromelessShare {
   #playSpaceHeader, #gameButtons {
     display: none;
@@ -469,6 +463,13 @@ body.embedded_iframe {
   display: inline-flex;
 }
 
+.flex {
+  /* PhantomJS 2.1.3 requires this vendor-specific prefix, which
+   * Radium 0.18.1 does not automatically apply. */
+  display: -webkit-flex;
+  display: flex;
+}
+
 // TODO(dave): move these styles into DesignToolboxElement
 // once we are done experimenting with them.
 .design-element-image {
@@ -482,8 +483,10 @@ body.embedded_iframe {
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
 
-img#turtleImage {
+#divApplab img#turtleImage {
+  // scss-lint:disable all
   position: absolute;
   height: 24px;
+  width: 24px;
   margin: 0px;
 }

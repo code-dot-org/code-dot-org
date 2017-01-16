@@ -167,7 +167,8 @@
     "start_blocks": "// make sure dynamically generated elements appear on\r\n// a different screen from design mode elements\r\nsetScreen(\"screen2\");\r\n\r\nbutton(\"buttonid\", \"button text\");\r\ntextInput(\"inputid\", \"input text\");\r\ntextLabel(\"labelid\", \"label text\");\r\ndropdown(\"dropdownid\", \"option1\", \"option2\", \"option3\");\r\ncheckbox(\"checkboxid\", false);\r\nradioButton(\"radioid\", false, \"group\");\r\n",
     "lock_zero_param_functions": "false",
     "execute_palette_apis_only": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": ""

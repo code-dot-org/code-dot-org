@@ -1,7 +1,6 @@
 ---
 title: Star Wars
 theme: responsive
-video_player: true
 social:
   "twitter:card": photo
   "twitter:site": "@codeorg"
@@ -18,6 +17,7 @@ social:
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
+video_player: true
 ---
 
 %link{href: "/css/starwars.css", rel: "stylesheet"}
@@ -49,6 +49,10 @@ social:
 
 %div{style: "clear:both"}
 
+%h2.sw-header2
+  = I18n.t(:no_internet)
+  %a{href: CDO.studio_url("/download/starwars")}= I18n.t(:download_offline)
+
 .starwars-videos{style: "clear: both;"}
   %h2.sw-header2= I18n.t(:watch_inspirational_videos)
   =view :inspirational_videos
@@ -60,10 +64,6 @@ social:
 %h2.sw-header2
   = I18n.t(:speak_another_language)
   %a{href: "/translate/starwars"}= I18n.t(:help_translate)
-
-%h2.sw-header2
-  = I18n.t(:no_internet)
-  %a{href: CDO.studio_url("/download/starwars")}= I18n.t(:download_offline)
 
 = view 'mobilecheck.js'
 

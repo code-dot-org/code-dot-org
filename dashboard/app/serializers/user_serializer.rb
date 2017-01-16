@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id                         :integer          not null, primary key
+#  studio_person_id           :integer
 #  email                      :string(255)      default(""), not null
 #  encrypted_password         :string(255)      default("")
 #  reset_password_token       :string(255)
@@ -56,6 +57,7 @@
 #
 # Indexes
 #
+#  index_users_on_birthday                               (birthday)
 #  index_users_on_confirmation_token_and_deleted_at      (confirmation_token,deleted_at) UNIQUE
 #  index_users_on_email_and_deleted_at                   (email,deleted_at)
 #  index_users_on_hashed_email_and_deleted_at            (hashed_email,deleted_at)
@@ -65,6 +67,7 @@
 #  index_users_on_prize_id_and_deleted_at                (prize_id,deleted_at) UNIQUE
 #  index_users_on_provider_and_uid_and_deleted_at        (provider,uid,deleted_at) UNIQUE
 #  index_users_on_reset_password_token_and_deleted_at    (reset_password_token,deleted_at) UNIQUE
+#  index_users_on_studio_person_id                       (studio_person_id)
 #  index_users_on_teacher_bonus_prize_id_and_deleted_at  (teacher_bonus_prize_id,deleted_at) UNIQUE
 #  index_users_on_teacher_prize_id_and_deleted_at        (teacher_prize_id,deleted_at) UNIQUE
 #  index_users_on_unconfirmed_email_and_deleted_at       (unconfirmed_email,deleted_at)
@@ -72,7 +75,7 @@
 #
 
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :ops_first_name, :ops_last_name, :district, :ops_school, :ops_gender
+  attributes :id, :email, :ops_first_name, :ops_last_name, :district, :ops_school, :ops_gender, :races
   def district
     DistrictSerializer.new(object.district).attributes if object
   end

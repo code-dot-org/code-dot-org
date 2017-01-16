@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Script to generate a puzzle completion rate spreadsheet from Google Analytics API.
-if ARGV.length < 1 || ARGV.length > 2
+if ARGV.empty? || ARGV.length > 2
   abort 'Usage: ga_completion_rates start_date [end_date]'
 end
 

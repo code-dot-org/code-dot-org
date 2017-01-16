@@ -18,19 +18,6 @@
 = link_to hoc_students_served_path do
   Students Served
 
-%h3 Fun-O-Meter
-= link_to funometer_path do
-  Overview
-%br
-= link_to funometer_by_script_path(:script_id => 1) do
-  By Script (ex: 20-Hour)
-%br
-= link_to funometer_by_stage_path(:stage_id => 372) do
-  By Stage (ex: Course 2, Stage 13, Bee: Conditionals)
-%br
-= link_to funometer_by_script_level_path(:script_id => 1, :level_id => 1) do
-  By Level (ex: 20-Hour, Stage 2, Puzzle 1)
-
 %h3 Miscellaneous
 = link_to admin_stats_path do
   Code Studio Stats
@@ -39,16 +26,6 @@
   Diversity Survey
 %br
 
-%h3 Retention
-= link_to retention_path do
-  By Script
-%br
-= link_to retention_stages_path do
-  By Stage
-
 %h3 Search
 = link_to find_students_path do
   For Users
-%br
-= link_to search_for_teachers_path do
-  For Teachers

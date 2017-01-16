@@ -1,6 +1,3 @@
-title 'Artist'
-description_short "Draw cool pictures and designs with the Artist!"
-description "Draw cool pictures and designs with the Artist!"
 hidden 'false'
 
 stage 'Artist'

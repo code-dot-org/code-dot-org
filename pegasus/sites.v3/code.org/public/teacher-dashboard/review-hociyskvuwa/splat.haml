@@ -2,7 +2,7 @@
 title: Review Hour of Code special events
 ---
 -dont_cache
-- authentication_required!
+-authentication_required!
 -forbidden! unless dashboard_user[:user_type] == 'teacher'
 
 :css
@@ -38,9 +38,12 @@ title: Review Hour of Code special events
 -results = []
 -events = []
 
--DB[:forms].where(kind:'HocSignup2015', review:nil).each do |i|
-  -if i[:processed_data]
-    -results << JSON.parse(i[:data]).merge(secret: i[:secret]).merge(JSON.parse(i[:processed_data]))
+-#
+  TODO(asher): Given that are we are grabbing all non-reviewed HocSignup2016, we
+  should restrict the fields we are grabbing to only those necessary for performance.
+-DB[:forms].where(kind: 'HocSignup2016', review: nil).each do |form|
+  -if form[:processed_data]
+    -results << JSON.parse(form[:data]).merge(secret: form[:secret]).merge(JSON.parse(form[:processed_data]))
 
 -if country == 'us' && state_code
   -results.each do |result|
@@ -64,7 +67,6 @@ title: Review Hour of Code special events
     %tr
       %th Name
       %th Organization
-      %th Location
       %th Details
       %th &nbsp;
 
@@ -72,7 +74,6 @@ title: Review Hour of Code special events
       %tr
         %td= event['name_s']
         %td= event['organization_name_s']
-        %td= event['event_location_s']
         %td= event['special_event_details_s']
         %td{style: "white-space: nowrap;"}
           %span{class: "event-secret", style: "display: none;"}= event[:secret]
@@ -97,7 +98,7 @@ title: Review Hour of Code special events
 
   function submitReview(secret, review, row) {
     $.ajax({
-      url: "/v2/forms/HocSignup2015/" + secret + "/review",
+      url: "/v2/forms/HocSignup2016/" + secret + "/review",
       type: "post",
       contentType: "application/json; charset=utf-8",
       data: JSON.stringify( { review: review } )

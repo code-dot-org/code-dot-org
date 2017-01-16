@@ -4,7 +4,9 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to organize an Hour of Code event
+<%= view :signup_button %>
+
+# "Кодтау Сағатын" қалай ұйымдастырып өткізуге болады?
 
 ## 1) Prepare for your event
 
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30 - 10:40 am | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician or other students.                        |
 | 10:40 - 11:00 am | Students demo an unplugged activity and how computer science can be taught without using computers.                                             |
 | 11:00 - 11:05 am | Teacher who helped bring school-wide event gives closing remarks.                                                                               |
+
+<%= view :signup_button %>

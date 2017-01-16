@@ -8,6 +8,7 @@ var _ = require('lodash');
 var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
+var checkEntryPoints = require('./script/checkEntryPoints');
 
 module.exports = function (grunt) {
   // Decorate grunt to record and report build durations.
@@ -45,18 +46,18 @@ module.exports = function (grunt) {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'maze',
-    'turtle',
-    'bounce',
-    'flappy',
-    'studio',
-    'jigsaw',
-    'calc',
     'applab',
-    'eval',
-    'netsim',
+    'bounce',
+    'calc',
     'craft',
+    'eval',
+    'flappy',
     'gamelab',
+    'jigsaw',
+    'maze',
+    'netsim',
+    'studio',
+    'turtle',
     'weblab'
   ];
 
@@ -165,16 +166,27 @@ module.exports = function (grunt) {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
+        // Pull p5.js and p5.play.js into the package from our fork of the
+        // p5.play repo at https://github.com/code-dot-org/p5.play
         {
           expand: true,
-          cwd: 'lib/p5play',
-          src: ['*.js'],
+          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          src: ['p5.js'],
           dest: 'build/package/js/p5play/'
         },
         {
           expand: true,
-          cwd: piskelRoot,
-          src: '**',
+          cwd: './node_modules/@code-dot-org/p5.play/lib',
+          src: ['p5.play.js'],
+          dest: 'build/package/js/p5play/'
+        },
+        {
+          expand: true,
+          // For some reason, if we provide piskel root as an absolute path here,
+          // our dest ends up with an empty set of directories matching the path
+          // If we provide it as a relative path, that does not happen
+          cwd: './' + path.relative(process.cwd(), piskelRoot),
+          src: ['**'],
           dest: 'build/package/js/piskel/'
         },
         {
@@ -186,12 +198,8 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/droplet',
-          src: ['droplet-full' + dotMinIfNotDev + '.js'],
+          src: ['droplet-full*.js'],
           dest: 'build/package/js/droplet/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
@@ -202,32 +210,20 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/tooltipster',
-          src: ['jquery.tooltipster' + dotMinIfNotDev + '.js'],
+          src: ['*.js'],
           dest: 'build/package/js/tooltipster/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
           cwd: 'lib/marked',
-          src: ['marked' + dotMinIfNotDev + '.js'],
+          src: ['marked*.js'],
           dest: 'build/package/js/marked/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
           cwd: 'lib/phaser',
-          src: ['phaser' + dotMinIfNotDev + '.js'],
+          src: ['*.js'],
           dest: 'build/package/js/phaser/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
@@ -238,15 +234,8 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'lib/fileupload',
-          src: [
-            'jquery.fileupload' + dotMinIfNotDev + '.js',
-            'jquery.iframe-transport' + dotMinIfNotDev + '.js'
-          ],
+          src: ['*.js'],
           dest: 'build/package/js/fileupload/',
-          rename: function (src, dest) {
-            // dest name should be the same, whether or not minified
-            return src + dest.replace(/\.min.js$/, '.js');
-          }
         },
         {
           expand: true,
@@ -344,11 +333,6 @@ module.exports = function (grunt) {
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
-    codeStudio: {
-      files: [
-        {src: ['test/code-studio-tests.js'], watched: false},
-      ],
-    },
     all: {
       files: [
         {src: ['test/index.js'], watched: false},
@@ -365,144 +349,126 @@ module.exports = function (grunt) {
   };
 
 
-  var bundles = [
-    {
-      uniqueName: 'apps',
-      entries: _.fromPairs(appsToBuild.map(function (app) {
-        return [app, './src/' + app + '/main.js'];
-      }).concat(appsToBuild.indexOf('applab') === -1 ? [] :
-        [['applab-api', './src/applab/api-entry.js']]
-      )),
-      commonFile: 'common'
-    },
+  var appsEntries = _.fromPairs(appsToBuild.map(function (app) {
+    return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
+  }));
+  var codeStudioEntries = {
+    'code-studio':                  './src/sites/studio/pages/code-studio.js',
+    'levelbuilder':                 './src/sites/studio/pages/levelbuilder.js',
+    'levelbuilder_applab':          './src/sites/studio/pages/levelbuilder_applab.js',
+    'levelbuilder_edit_script':     './src/sites/studio/pages/levelbuilder_edit_script.js',
+    'levelbuilder_gamelab':         './src/sites/studio/pages/levelbuilder_gamelab.js',
+    'levelbuilder_markdown':        './src/sites/studio/pages/levelbuilder_markdown.js',
+    'levelbuilder_studio':          './src/sites/studio/pages/levelbuilder_studio.js',
+    'levels/contract_match':        './src/sites/studio/pages/levels/contract_match.jsx',
+    'levels/dashboardDialogHelper': './src/sites/studio/pages/levels/dashboardDialogHelper.js',
+    'levels/external':              './src/sites/studio/pages/levels/external.js',
+    'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
+    'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
+    'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
+    'levels/widget':                './src/sites/studio/pages/levels/widget.js',
+    'schoolInfo':                   './src/sites/studio/pages/schoolInfo.js',
+    'signup':                       './src/sites/studio/pages/signup.js',
+    'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    'makerlab/setupPage':           './src/sites/studio/pages/setupMakerlab.js',
+    'scriptOverview':               './src/sites/studio/pages/scriptOverview.js'
+  };
 
-    {
-      uniqueName: 'codeStudio',
-      entries: {
-        'code-studio': './src/code-studio/code-studio.js',
-        'levelbuilder': './src/code-studio/levelbuilder.js',
-        'levelbuilder_markdown': './src/code-studio/levelbuilder_markdown.js',
-        'levelbuilder_studio': './src/code-studio/levelbuilder_studio.js',
-        'levelbuilder_gamelab': './src/code-studio/levelbuilder_gamelab.js',
-        'levelbuilder_applab': './src/code-studio/levelbuilder_applab.js',
-        'makerlab/setupPage': './src/code-studio/makerlab/setupPage.js',
-        'districtDropdown': './src/code-studio/districtDropdown.js',
-        'signup': './src/code-studio/signup.js',
-        'termsInterstitial': './src/code-studio/termsInterstitial.js',
-        'levels/contract_match': './src/code-studio/levels/contract_match.jsx',
-        'levels/widget': './src/code-studio/levels/widget.js',
-        'levels/external': './src/code-studio/levels/external.js',
-        // put these entry points in arrays so that they can be required elsewhere
-        // https://github.com/webpack/webpack/issues/300
-        'levels/multi': ['./src/code-studio/levels/multi.js'],
-        'levels/textMatch': ['./src/code-studio/levels/textMatch.js'],
-        'levels/levelGroup': './src/code-studio/levels/levelGroup.js',
-        'levels/dialogHelper': './src/code-studio/levels/dialogHelper.js',
-        'initApp/initApp': './src/code-studio/initApp/initApp.js'
-      },
-      commonFile: 'code-studio-common',
-      provides: ['marked', 'react', 'react-dom', 'radium']
-    },
-
-    {
-      uniqueName: 'plc',
-      entries: {
-        plc: './src/code-studio/plc/plc.js'
-      },
-      provides: ['marked']
-    },
+  var otherEntries = {
+    plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    {
-      uniqueName: 'embedVideo',
-      entries: {
-        embedVideo: './src/code-studio/embedVideo.js'
-      },
-      provides: ['jquery']
-    },
+    embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
-    // in a bundle to minimize the amound of stuff we need when loading blocks
+    // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
-    {
-      uniqueName: 'embedBlocks',
-      entries: {
-        embedBlocks: './src/code-studio/embedBlocks.js'
-      },
-      provides: ['react', 'react-dom', 'radium']
-    },
+    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
-    {
-      uniqueName: 'makerlabDependencies',
-      entries: {
-        makerlab: './src/code-studio/makerlab/makerlabDependencies.js'
-      },
-      provides: ['johnny-five', 'playground-io', 'chrome-serialport']
-    },
+    // tutorialExplorer for code.org/learn 2016 edition.
+    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    {
-      uniqueName: 'pd',
-      entries: {
-        pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx'
-      }
-    },
+    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
 
-    {
-      uniqueName: 'publicKeyCryptography',
-      entries: {
-        publicKeyCryptography: './src/publicKeyCryptography/main.js'
-      },
-      provides: ['react', 'react-dom', 'radium']
-    },
+    pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
-    {
-      uniqueName: 'brambleHost',
-      entries: {
-        brambleHost: './src/weblab/brambleHost.js'
-      },
-    }
-  ];
+    'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
+
+    publicKeyCryptography: './src/publicKeyCryptography/main.js',
+
+    brambleHost: './src/weblab/brambleHost.js',
+
+    'applab-api': './src/applab/api-entry.js',
+  };
 
   // Create a config for each of our bundles
-  function createConfigs(bundles, options) {
+  function createConfig(options) {
     var minify = options.minify;
     var watch = options.watch;
 
-    return bundles.map(function (bundle) {
-      var uniqueName = bundle.uniqueName;
-      var entries = bundle.entries;
-      var commonFile = bundle.commonFile;
-      var provides = bundle.provides;
-
-      return webpackConfig.create({
-        uniqueName: bundle.uniqueName,
-        output: path.resolve(__dirname, OUTPUT_DIR),
-        entries: entries,
-        commonFile: commonFile,
-        provides: provides,
-        minify: minify,
-        watch: watch,
-        piskelDevMode: PISKEL_DEVELOPMENT_MODE
-      });
+    return webpackConfig.create({
+      output: path.resolve(__dirname, OUTPUT_DIR),
+      entries: _.mapValues(
+        _.extend(
+          {},
+          appsEntries,
+          codeStudioEntries,
+          otherEntries
+        ),
+        function (val) {
+          return ['./src/util/idempotent-babel-polyfill'].concat(val);
+        }
+      ),
+      externals: [
+        {
+          'jquery': 'var $',
+        }
+      ],
+      plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'common',
+          chunks: _.keys(appsEntries),
+          minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'code-studio-common',
+          chunks: _.keys(codeStudioEntries).concat(['common']),
+          minChunks: 2
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'essential',
+          minChunks: 2,
+          chunks: [
+            'plc',
+            'pd',
+            'code-studio-common',
+          ]
+        }),
+      ],
+      minify: minify,
+      watch: watch,
+      watchNotify: grunt.option('watch-notify'),
+      piskelDevMode: PISKEL_DEVELOPMENT_MODE
     });
   }
 
   config.webpack = {
-    build: createConfigs(bundles, {
+    build: createConfig({
       minify: false,
       watch: false,
     }),
 
-    uglify: createConfigs(bundles, {
+    uglify: createConfig({
       minify: true,
       watch: false
     }),
 
-    watch: createConfigs(bundles, {
+    watch: createConfig({
       minify: false,
       watch: true
     })
@@ -628,7 +594,7 @@ module.exports = function (grunt) {
   grunt.registerTask('locales', function () {
     var current = path.resolve('build/locale/current');
     mkdirp.sync(current);
-    appsToBuild.concat('common').map(function (item) {
+    appsToBuild.concat('common', 'tutorialExplorer').map(function (item) {
       var localeType = (item === 'common' ? 'locale' : 'appLocale');
       var localeString = '/*' + item + '*/ ' +
         'module.exports = window.blockly.' + localeType + ';';
@@ -646,6 +612,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
+    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'newer:copy:src',
@@ -655,17 +622,39 @@ module.exports = function (grunt) {
     'ejs'
   ]);
 
+  grunt.registerTask('check-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build, {verbose: true})
+      .then(stats => done());
+  });
+
+  grunt.registerTask('lint-entry-points', function () {
+    const done = this.async();
+    checkEntryPoints(config.webpack.build)
+      .then(stats => {
+        console.log(
+          [
+            chalk.green(`[${stats.passed} passed]`),
+            stats.silenced && chalk.yellow(`[${stats.silenced} silenced]`),
+            stats.failed && chalk.red(`[${stats.failed} failed]`),
+          ].filter(f=>f).join(' ')
+        );
+        if (stats.failed > 0) {
+          grunt.warn(
+            `${stats.failed} entry points do not conform to naming conventions.\n` +
+            `Run grunt check-entry-points for details.\n`
+          );
+        }
+        done();
+      });
+  });
+
   grunt.registerTask('compile-firebase-rules', function () {
-    try {
-      child_process.execSync('ls `npm bin`/firebase-bolt');
-    } catch (e) {
-      console.log(chalk.yellow("'firebase-bolt' not found. running 'npm install'..."));
-      try {
-        child_process.execSync('which npm');
-      } catch (e) {
-        throw new Error("'firebase-bolt' not found and 'npm' not installed.");
-      }
-      child_process.execSync('npm install');
+    if (process.env.RACK_ENV === 'production') {
+      throw new Error(
+        "Cannot compile firebase security rules on production.\n" +
+        "Instead, upload security rules from the apps package which was downloaded from s3."
+      );
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync('`npm bin`/firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json');
@@ -680,17 +669,20 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'prebuild',
-    'webpack:build'
-  ].concat([
+    envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
     'notify:js-build',
     // Skip minification in development environment.
-    envConstants.DEV ? 'noop' : 'webpack:uglify',
-    // Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
-    'postbuild'
-  ]));
+    'postbuild',
+  ]);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
+
+  grunt.registerTask('preconcat', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'newer:copy:static',
+  ]);
 
   grunt.registerTask('dev', [
     'prebuild',
@@ -707,25 +699,14 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('integrationTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:integration'
   ]);
 
-  grunt.registerTask('codeStudioTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
-    'concat',
-    'karma:codeStudio'
-  ]);
-
+  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
   grunt.registerTask('test', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'newer:copy:static',
+    'preconcat',
     'concat',
     'karma:all'
   ]);

@@ -1,5 +1,6 @@
 var React = require('react');
 var assetsApi = require('@cdo/apps/clientApi').assets;
+var filesApi = require('@cdo/apps/clientApi').files;
 import AssetThumbnail from './AssetThumbnail';
 
 /**
@@ -10,6 +11,7 @@ var AssetRow = React.createClass({
     name: React.PropTypes.string.isRequired,
     type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: React.PropTypes.number,
+    useFilesApi: React.PropTypes.bool.isRequired,
     onChoose: React.PropTypes.func,
     onDelete: React.PropTypes.func.isRequired
   },
@@ -42,11 +44,11 @@ var AssetRow = React.createClass({
   handleDelete: function () {
     this.setState({action: 'deleting', actionText: ''});
 
-    // TODO: Use Dave's client api when it's finished.
-    assetsApi.ajax('DELETE', this.props.name, this.props.onDelete, function () {
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    api.deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({action: 'confirming delete',
           actionText: 'Error deleting file.'});
-    }.bind(this));
+    });
   },
 
   render: function () {
@@ -61,7 +63,8 @@ var AssetRow = React.createClass({
 
     switch (this.state.action) {
       case 'normal':
-        var src = assetsApi.basePath(this.props.name);
+        var api = this.props.useFilesApi ? filesApi : assetsApi;
+        var src = api.basePath(this.props.name);
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
@@ -108,7 +111,11 @@ var AssetRow = React.createClass({
     return (
       <tr className="assetRow" onDoubleClick={this.props.onChoose}>
         <td width="80">
-          <AssetThumbnail type={this.props.type} name={this.props.name}/>
+          <AssetThumbnail
+            type={this.props.type}
+            name={this.props.name}
+            useFilesApi={this.props.useFilesApi}
+          />
         </td>
         <td>{this.props.name}</td>
         {actions}

@@ -39,4 +39,11 @@ class SurveyResult < ActiveRecord::Base
 
   serialized_attrs ALL_ATTRS
   belongs_to :user
+
+  KINDS = [
+    DIVERSITY_2016 = 'Diversity2016'.freeze,
+    NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
+    NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze
+  ].freeze
+  validates :kind, inclusion: {in: KINDS}, allow_nil: false
 end

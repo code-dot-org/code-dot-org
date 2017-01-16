@@ -1,0 +1,17 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:30:12.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Separate Content and Style\r\n\r\nSoon you will get to apply your new brand style rules to your website. Before you do that, though, let's investigate how to style a multi-page website.\r\n\r\nAs already mentioned, from this point forward we will be using external style sheets instead of styling inside the HTML file because this keeps all the styling for the website in one place.  However, in order to do this you are going to have to pay extra close attention as you remove your old styling. Even though you want consistent style on your website, you will have exceptions to the style rules in certain cases. Exceptions to the style rules might include the note card styling, which you worked on in the last lesson. We would not want every list to have the note card styling, just those specific ones on the recipe page.\r\n\r\nYou will never want to have duplicate rules for the same selector. So there should not be two stylings with `p` as the selector. Instead you need to leverage the ability to make classes in order to have multiple styles for `<p>` elements. \r\n\r\nTo practice this, we have a website with an external style sheet that also still has styling. You will need to figure out how to keep the unique elements of the individual web pages while getting a more consistent style across the pages.\r\n\r\nUnique Elements You Want to Keep:\r\n\r\n\t1.\tThe styling of the `<img>` elements on one page should be different than the other\r\n\t2.\tFor the `<h1>` headers, on one page we want to style them and on the other we don't.\r\n￼\r\n# Do This\r\n\r\n* Put the image on the home page in the \"home-image\" class\r\n* Find the old style rule for images on the home page (width: 600px) and change the selector so it will style the \"home-image\" class instead\r\n* Put all the images on the technology page in the \"tech-images\" class\r\n* Find the old style rule for images on the technology page (width: 100px) and change the selector so it will style the \"tech-images\" class instead\r\n* Find the h1 element on the technology page and put it in the class \"page-header\"\r\n* Change the secltor for the style rule for h1 elements to be just a style rule for the page-header class\r\n* Copy the three new style rules you created into your style.css file.\r\n* Delete the `<style>` element and its contents from both pages.",
+    "project_template_level_name": "CSDU2 - Multi Page ESS Styling Template",
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

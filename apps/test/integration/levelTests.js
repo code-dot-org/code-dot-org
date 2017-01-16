@@ -11,10 +11,12 @@
 
 import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 let $ = window.$ = window.jQuery = require('jquery');
 require('jquery-ui');
 var tickWrapper = require('./util/tickWrapper');
-import { getDatabase } from '@cdo/apps/applab/firebaseUtils';
+import { getDatabase } from '@cdo/apps/storage/firebaseUtils';
+import stageLock from '@cdo/apps/code-studio/stageLockRedux';
 
 var wrappedEventListener = require('./util/wrappedEventListener');
 var testCollectionUtils = require('./util/testCollectionUtils');
@@ -99,8 +101,6 @@ describe('Level tests', function () {
     .then(function () { return loadSource('/base/lib/droplet/droplet-full.js'); })
     .then(function () { return loadSource('/base/lib/tooltipster/jquery.tooltipster.js'); })
     .then(function () { return loadSource('/base/lib/phaser/phaser.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.js'); })
-    .then(function () { return loadSource('/base/lib/p5play/p5.play.js'); })
     .then(function () {
       assert(window.droplet, 'droplet in global namespace');
       done();
@@ -108,6 +108,10 @@ describe('Level tests', function () {
   });
 
   beforeEach(function () {
+    // Recreate our redux store so that we have a fresh copy
+    stubRedux();
+    registerReducers({stageLock});
+
     tickInterval = window.setInterval(function () {
       if (clock) {
         clock.tick(100); // fake 1000 ms for every real 1ms
@@ -131,11 +135,8 @@ describe('Level tests', function () {
       var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
-      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true});
+      Object.defineProperty(Studio, 'Globals', {value: {}, writable: true, configurable: true});
     }
-
-    // Recreate our redux store so that we have a fresh copy
-    studioApp.createReduxStore_();
 
     if (window.Applab) {
       var elementLibrary = require('@cdo/apps/applab/designElements/library');
@@ -154,6 +155,7 @@ describe('Level tests', function () {
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
   afterEach(function () {
+    restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;

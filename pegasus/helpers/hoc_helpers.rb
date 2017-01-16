@@ -42,10 +42,11 @@ end
 def create_session_row(row, weight: 1.0)
   retries = 3
 
-  begin
+  loop do
     row[:session] = create_session_id(weight)
     row[:id] = DB[:hoc_activity].insert(row)
-  end while row[:id] == 0 && (retries -= 1) > 0
+    break unless row[:id] == 0 && (retries -= 1) > 0
+  end
 
   raise "Couldn't create a unique session row." if row[:id] == 0
   set_hour_of_code_cookie_for_row(row)
@@ -146,13 +147,29 @@ end
 
 def launch_tutorial(tutorial, params={})
   unless settings.read_only || unsampled_session?
-    create_session_row_unless_unsampled(
+    row = create_session_row_unless_unsampled(
       referer: request.referer_site_with_port,
       tutorial: tutorial[:code],
       company: params[:company],
       started_at: DateTime.now,
       started_ip: request.ip,
     )
+  end
+
+  # TODO: (elijah) this pathway (formerly used by /api/hour/begin_learn)
+  # is currently unused. Either reenable the pathway in a more-scalable
+  # way or remove this block.
+  if params[:track_learn] && !settings.read_only
+    learn_weight = DCDO.get('hoc_learn_activity_sample_weight', 1).to_i
+    if learn_weight > 0 && Kernel.rand < (1.0 / learn_weight)
+      DB[:hoc_learn_activity].insert(
+        referer: request.referer_site_with_port,
+        weight: learn_weight,
+        hoc_activity_id: row && row[:id],
+        tutorial: tutorial[:code],
+        created_at: DateTime.now,
+      )
+    end
   end
 
   dont_cache

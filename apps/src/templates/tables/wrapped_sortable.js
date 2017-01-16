@@ -9,6 +9,7 @@ import FontAwesome from '../FontAwesome';
  * @param {function(): object[]} getSortingColumns
  * @param {function(number): object} onSort
  * @param {object} styles - optional styles to apply to the sort icons, in states {default, sortAsc, sortDesc}
+ *                          and the container div {container}
  * @returns {function(string, object): object} a new cell transform function
  * @see http://reactabular.js.org/#/column-definition/transforms
  * @see https://github.com/reactabular/reactabular/blob/master/packages/reactabular-sort/src/sort.js
@@ -32,7 +33,7 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
       ...newProps,
       style: Object.assign({}, {cursor: 'pointer'}),
       children: (
-        <span>
+        <span style={styles.container}>
           {sortIcon}
           {label}
         </span>

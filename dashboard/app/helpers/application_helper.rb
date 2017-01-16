@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
@@ -57,7 +58,7 @@ module ApplicationHelper
     # For definitions of the result values, see /app/src/constants.js.
     user_level = user_levels.
         select {|ul| ul.try(:best_result) && ul.best_result != 0}.
-        max_by &:best_result ||
+        max_by(&:best_result) ||
         user_levels.first
     result = user_level.try(:best_result)
 
@@ -148,6 +149,7 @@ module ApplicationHelper
 
   def meta_image_url(opts = {})
     app = opts[:level_source].try(:level).try(:game).try(:app) || opts[:level].try(:game).try(:app)
+    skin = opts[:level].try(:properties).try(:[], "skin")
 
     # playlab/studio and artist/turtle can have images
     if opts[:level_source].try(:level_source_image)
@@ -159,8 +161,14 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::BOUNCE, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB].include? app
       asset_url "#{app}_sharing_drawing.png"
+    elsif app == Game::BOUNCE
+      if ["basketball", "sports"].include? skin
+        asset_url "#{skin}_sharing_drawing.png"
+      else
+        asset_url "bounce_sharing_drawing.png"
+      end
     else
       asset_url 'sharing_drawing.png'
     end
@@ -202,7 +210,7 @@ module ApplicationHelper
   end
 
   def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs
+    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
     asset_path(path)
   end
 
@@ -233,6 +241,12 @@ module ApplicationHelper
       failure[:type] = share_failure.type
       failure[:contents] = share_failure.content unless share_failure.type == ShareFiltering::FailureType::PROFANITY
     end
+  end
+
+  # Wrapper function used to inhibit Brakeman (security static code analysis) warnings. To inhibit a false positive warning,
+  # wrap the code in question in this function.
+  def brakeman_no_warn(obj)
+    obj
   end
 
   private

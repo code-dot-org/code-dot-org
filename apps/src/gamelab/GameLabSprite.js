@@ -43,6 +43,10 @@ module.exports.createSprite = function (x, y, width, height) {
   s._verticalStretch = 1;
 
   s.setAnimation = function (animationName) {
+    if (animationName === s.getAnimationLabel()) {
+      return;
+    }
+
     var animation = p5Inst.projectAnimations[animationName];
     if (typeof animation === 'undefined') {
       throw new Error('Unable to find an animation named "' + animationName +
@@ -82,17 +86,7 @@ module.exports.createSprite = function (x, y, width, height) {
    * @private
    * For game lab, don't update the animation sizes because all frames are the same size.
    */
-  s._syncAnimationSizes = function (animations, currentAnimation) {
-    //has an animation but the collider is still default
-    //the animation wasn't loaded. if the animation is not a 1x1 image
-    //it means it just finished loading
-    if (this.colliderType === 'default' && animations[currentAnimation].getWidth() !== 1 &&
-      animations[currentAnimation].getHeight() !== 1) {
-      this.collider = this.getBoundingBox();
-      this.colliderType = 'image';
-      //quadTree.insert(this);
-    }
-  };
+  s._syncAnimationSizes = function (animations, currentAnimation) {};
 
   Object.defineProperty(s, 'frameDelay', {
     enumerable: true,
@@ -168,8 +162,9 @@ module.exports.createSprite = function (x, y, width, height) {
 
   s.shapeColor = this.color(127, 127, 127);
 
-  s.AABBops = AABBops.bind(s, this);
-  s.createGroupState = function (type, target, callback, modifyPosition=true) {
+  s._collideWith = _collideWith.bind(s, this);
+  s._collideWithOne = _collideWithOne.bind(s, this);
+  s.createGroupState = function (type, target, callback) {
     if (target instanceof Array) {
       // Colliding with a group.
       var state = jsInterpreter.getCurrentState();
@@ -179,11 +174,11 @@ module.exports.createSprite = function (x, y, width, height) {
       }
       if (state.__i < target.size()) {
         if (!state.__subState) {
-          // Before we call AABBops (another stateful function), hang a __subState
+          // Before we call _collideWith (another stateful function), hang a __subState
           // off of state, so it can use that instead to track its state:
           state.__subState = { doneExec: true };
         }
-        var didTouch = this.AABBops(type, target[state.__i], callback, modifyPosition);
+        var didTouch = this._collideWith(type, target[state.__i], callback);
         if (state.__subState.doneExec) {
           state.__didCollide = didTouch || state.__didCollide;
           delete state.__subState;
@@ -195,7 +190,7 @@ module.exports.createSprite = function (x, y, width, height) {
         return state.__didCollide;
       }
     } else {
-      return this.AABBops(type, target, callback, modifyPosition);
+      return this._collideWith(type, target, callback);
     }
   };
 
@@ -209,7 +204,7 @@ module.exports.createSprite = function (x, y, width, height) {
    * @method
    */
   s.isTouching = function (target) {
-    return this.createGroupState('collide', target, undefined, false);
+    return this.createGroupState('overlap', target);
   };
 
   // Overriding overlap, collide, displace, bounce, to work with our group states.
@@ -232,12 +227,29 @@ module.exports.createSprite = function (x, y, width, height) {
   s.depth = this.allSprites.maxDepth()+1;
   this.allSprites.add(s);
 
+  /**
+   * Plays/resumes the sprite's current animation.
+   * If the animation is currently playing this has no effect.
+   * If the animation has stopped at its last frame, this will start it over
+   * at the beginning.
+   */
+  s.play = function () {
+   // Normally this just sets the 'playing' flag without changing the animation
+   // frame, which will cause the animation to continue on the next update().
+   // If the animation is non-looping and is stopped at the last frame
+   // we also rewind the animation to the beginning.
+    if (!s.animation.looping && s.animation.getFrame() === s.animation.images.length - 1) {
+      s.animation.rewind();
+    }
+    s.animation.play();
+  };
+
   return s;
 };
 
 /* eslint-disable */
 /*
- * Override Sprite.AABBops so it can be called as a stateful nativeFunc by the
+ * Override Sprite._collideWith so it can be called as a stateful nativeFunc by the
  * interpreter. This enables the native method to be called multiple times so
  * that it can go asynchronous every time it wants to execute a callback back
  * into interpreter code. The interpreter state object is retrieved by calling
@@ -252,316 +264,201 @@ module.exports.createSprite = function (x, y, width, height) {
 
 /*
  * Copied code from p5play from Sprite() with targeted modifications that
- * use the additional state parameter and use modifyPosition to determine
- * whether to modify the sprite's velocity and position.
+ * use the additional state parameter to be compatible with the interpreter.
  */
-var AABBops = function (p5Inst, type, target, callback, modifyPosition=true) {
-
-  // These 3 are utility p5 functions that don't depend on p5 instance state in
-  // order to work properly, so we'll go ahead and make them easy to
-  // access without needing to bind them to a p5 instance.
-  var abs = p5.prototype.abs;
-  var round = p5.prototype.round;
-  var quadTree = p5Inst.quadTree;
-
-  var createVector = p5Inst.createVector.bind(p5Inst);
-  var AABB = p5Inst.AABB.bind(p5Inst);
-
-  // These 2 are not bound as they are used for instanceof checks:
+var _collideWith = function (p5Inst, type, target, callback) {
+  // Grab reference to p5.Sprite for instanceof check
   var Sprite = p5Inst.Sprite;
-  var CircleCollider = p5Inst.CircleCollider;
 
+  // Stateful - get state and decide whether we're starting or resuming.
   var state = jsInterpreter.getCurrentState();
   if (state.__subState) {
     // If we're being called by another stateful function that hung a __subState
     // off of state, use that instead:
     state = state.__subState;
   }
-  var result = false;
   if (typeof state.__i === 'undefined') {
-    state.__i = 0;
-
+    // We've never called this before - start from the beginning.
     this.touching.left = false;
     this.touching.right = false;
     this.touching.top = false;
     this.touching.bottom = false;
 
-    //if single sprite turn into array anyway
+    state.__i = 0;
+    state.__result = false;
     state.__others = [];
 
-    if(target instanceof Sprite)
+    if (target instanceof Sprite) {
       state.__others.push(target);
-    else if(target instanceof Array)
-    {
-      if(quadTree !== undefined && quadTree.active)
-        state.__others = quadTree.retrieveFromGroup( this, target);
+    } else if (target instanceof Array) {
+      if (p5Inst.quadTree !== undefined && p5Inst.quadTree.active) {
+        state.__others = p5Inst.quadTree.retrieveFromGroup(this, target);
+      }
 
-      if(state.__others.length === 0)
+      // If the quadtree is disabled -or- no sprites in this group are in the
+      // quadtree yet (because their default colliders haven't been created)
+      // we should just check all of them.
+      if (state.__others.length === 0) {
         state.__others = target;
-
+      }
+    } else {
+      throw('Error: overlap can only be checked between sprites or groups');
     }
-    else
-      throw new Error('Error: overlap can only be checked between sprites or groups');
-
   } else {
     state.__i++;
   }
+
+  // Second half of this method: Check collision with _next_ Sprite in
+  // state.__others and call callback if overlap happened.
   if (state.__i < state.__others.length) {
-    var i = state.__i;
-
-    if(this !== state.__others[i] && !this.removed) //you can check collisions within the same group but not on itself
-    {
-      var displacement;
-      var other = state.__others[i];
-
-      if(this.collider === undefined)
-        this.setDefaultCollider();
-
-      if(other.collider === undefined)
-        other.setDefaultCollider();
-
-      /*
-      if(this.colliderType=="default" && animations[currentAnimation]!=null)
-      {
-        print("busted");
-        return false;
-      }*/
-      if(typeof this.collider !== undefined && typeof other.collider !== undefined)
-      {
-      if(type === 'overlap')  {
-          var over;
-
-          //if the other is a circle I calculate the displacement from here
-          if(this.collider instanceof CircleCollider)
-              over = other.collider.overlap(this.collider);
-          else
-              over = this.collider.overlap(other.collider);
-
-          if(over)
-          {
-
-            result = true;
-
-            if(typeof callback === 'function')
-              callback.call(this, this, other);
-          }
-        }
-      else if(type === 'collide' || type === 'bounce' || type === 'bounceOff')
-        {
-          displacement = createVector(0, 0);
-
-          var otherImmovable = other.immovable || type === 'bounceOff';
-
-          //if the sum of the speed is more than the collider i may
-          //have a tunnelling problem
-          var tunnelX = abs(this.velocity.x-other.velocity.x) >= other.collider.extents.x/2 && round(this.deltaX - this.velocity.x) === 0;
-
-          var tunnelY = abs(this.velocity.y-other.velocity.y) >= other.collider.size().y/2 && round(this.deltaY - this.velocity.y) === 0;
-
-
-          if(tunnelX || tunnelY)
-          {
-            //instead of using the colliders I use the bounding box
-            //around the previous position and current position
-            //this is regardless of the collider type
-
-            //the center is the average of the coll centers
-            var c = createVector(
-              (this.position.x+this.previousPosition.x)/2,
-              (this.position.y+this.previousPosition.y)/2);
-
-            //the extents are the distance between the coll centers
-            //plus the extents of both
-            var e = createVector(
-              abs(this.position.x -this.previousPosition.x) + this.collider.extents.x,
-              abs(this.position.y -this.previousPosition.y) + this.collider.extents.y);
-
-            /*
-             * NOTE: this param not needed on AABB() call as we're calling
-             * through the bound constructor, which prepends the first arg.
-             */
-            var bbox = new AABB(c, e, this.collider.offset);
-
-            //bbox.draw();
-
-            if(bbox.overlap(other.collider))
-            {
-              if(tunnelX) {
-
-                //entering from the right
-                if(this.velocity.x < 0)
-                  displacement.x = other.collider.right() - this.collider.left() + 1;
-                else if(this.velocity.x > 0 )
-                  displacement.x = other.collider.left() - this.collider.right() -1;
-                }
-
-              if(tunnelY) {
-                //from top
-                if(this.velocity.y > 0)
-                  displacement.y = other.collider.top() - this.collider.bottom() - 1;
-                else if(this.velocity.y < 0 )
-                  displacement.y = other.collider.bottom() - this.collider.top() + 1;
-
-                }
-
-            }//end overlap
-
-          }
-          else //non tunnel overlap
-          {
-
-            //if the other is a circle I calculate the displacement from here
-            //and reverse it
-            if(this.collider instanceof CircleCollider)
-              {
-              displacement = other.collider.collide(this.collider).mult(-1);
-              }
-            else
-              displacement = this.collider.collide(other.collider);
-
-          }
-
-          if(displacement.x !== 0 || displacement.y !== 0 )
-          {
-            var newVelX1, newVelY1, newVelX2, newVelY2;
-
-            if(!this.immovable && modifyPosition)
-            {
-              this.position.add(displacement);
-              this.previousPosition = createVector(this.position.x, this.position.y);
-              this.newPosition = createVector(this.position.x, this.position.y);
-            }
-
-            if(displacement.x > 0)
-              this.touching.left = true;
-            if(displacement.x < 0)
-              this.touching.right = true;
-            if(displacement.y < 0)
-              this.touching.bottom = true;
-            if(displacement.y > 0)
-              this.touching.top = true;
-
-            if(type === 'bounce' || type === 'bounceOff')
-            {
-              if (this.collider instanceof CircleCollider && other.collider instanceof CircleCollider) {
-                var dx1 = p5.Vector.sub(this.position, other.position);
-                var dx2 = p5.Vector.sub(other.position, this.position);
-                var magnitude = dx1.magSq();
-                var totalMass = this.mass + other.mass;
-                var m1 = 0, m2 = 0;
-                if (this.immovable) {
-                  m2 = 2;
-                } else if (otherImmovable) {
-                  m1 = 2;
-                } else {
-                  m1 = 2 * other.mass / totalMass;
-                  m2 = 2 * this.mass / totalMass;
-                }
-
-                if (modifyPosition) {
-                  var newVel1 = dx1.mult(m1 * p5.Vector.sub(this.velocity, other.velocity).dot(dx1) / magnitude);
-                  var newVel2 = dx2.mult(m2 * p5.Vector.sub(other.velocity, this.velocity).dot(dx2) / magnitude);
-                  this.velocity.sub(newVel1.mult(this.restitution));
-                  other.velocity.sub(newVel2.mult(other.restitution));
-                }
-              } else {
-                if(otherImmovable)
-                {
-                  newVelX1 = -this.velocity.x+other.velocity.x;
-                  newVelY1 = -this.velocity.y+other.velocity.y;
-                }
-                else
-                {
-                  newVelX1 = (this.velocity.x * (this.mass - other.mass) + (2 * other.mass * other.velocity.x)) / (this.mass + other.mass);
-                  newVelY1 = (this.velocity.y * (this.mass - other.mass) + (2 * other.mass * other.velocity.y)) / (this.mass + other.mass);
-                  newVelX2 = (other.velocity.x * (other.mass - this.mass) + (2 * this.mass * this.velocity.x)) / (this.mass + other.mass);
-                  newVelY2 = (other.velocity.y * (other.mass - this.mass) + (2 * this.mass * this.velocity.y)) / (this.mass + other.mass);
-                }
-
-                //var bothCircles = (this.collider instanceof CircleCollider &&
-                //                   other.collider  instanceof CircleCollider);
-
-                //if(this.touching.left || this.touching.right || this.collider instanceof CircleCollider)
-
-                //print(displacement);
-
-                if(abs(displacement.x)>abs(displacement.y))
-                {
-
-
-                  if(!this.immovable && modifyPosition)
-                  {
-                    this.velocity.x = newVelX1*this.restitution;
-
-                  }
-
-                  if(!otherImmovable && modifyPosition)
-                    other.velocity.x = newVelX2*other.restitution;
-
-                }
-                //if(this.touching.top || this.touching.bottom || this.collider instanceof CircleCollider)
-                if(abs(displacement.x)<abs(displacement.y))
-                {
-
-                  if(!this.immovable && modifyPosition)
-                    this.velocity.y = newVelY1*this.restitution;
-
-                  if(!otherImmovable && modifyPosition)
-                    other.velocity.y = newVelY2*other.restitution;
-                }
-              }
-            }
-            //else if(type === "collide")
-              //this.velocity = createVector(0,0);
-
-            if(callback !== undefined && typeof callback === 'function')
-              callback.call(this, this, other);
-
-            result = true;
-          }
-
-
-
-        }
-        else if(type === 'displace') {
-
-          //if the other is a circle I calculate the displacement from here
-          //and reverse it
-          if(this.collider instanceof CircleCollider)
-            displacement = other.collider.collide(this.collider).mult(-1);
-          else
-            displacement = this.collider.collide(other.collider);
-
-
-          if(displacement.x !== 0 || displacement.y !== 0 )
-          {
-            other.position.sub(displacement);
-
-            if(displacement.x > 0)
-              this.touching.left = true;
-            if(displacement.x < 0)
-              this.touching.right = true;
-            if(displacement.y < 0)
-              this.touching.bottom = true;
-            if(displacement.y > 0)
-              this.touching.top = true;
-
-            if(callback !== undefined && typeof callback === "function")
-              callback.call(this, this, other);
-
-            result = true;
-          }
-        }
-      }//end collider exists
-    }
+    state.__result = this._collideWithOne(type, state.__others[state.__i], callback) || state.__result;
     // Not done, unless we're on the last item in __others:
     state.doneExec = state.__i >= (state.__others.length - 1);
   } else {
     state.doneExec = true;
   }
-
-  return result;
+  return state.__result;
 };
+
+/**
+ * Helper collision method for colliding this sprite with one other sprite.
+ *
+ * Has the side effect of setting this.touching properties to TRUE if collisions
+ * occur.
+ *
+ * This is copied from p5.play's Sprite class and has special modifcations
+ * to change the behavior of certain collision types and add a new collision type.
+ *
+ * @private
+ * @param {p5} p5Inst
+ * @param {string} type - 'overlap', 'displace', 'collide' or 'bounce'
+ *        +Code.org-specific modifictions:
+ *        'bounceOff' is 'bounce' but with other treated as immovable.
+ *        'collide' gets treated like 'bounce' when the other is immovable
+ *            and using a restitution coefficient of zero.
+ * @param {Sprite} other
+ * @param {function} callback - if collision occurred
+ * @return {boolean} true if a collision occurred
+ */
+function _collideWithOne(p5Inst, type, other, callback) {
+  // Never collide with self
+  if (other === this) {
+    return false;
+  }
+
+  if (this.collider === undefined) {
+    this.setDefaultCollider();
+  }
+
+  if (other.collider === undefined) {
+    other.setDefaultCollider();
+  }
+
+  if (!this.collider || !other.collider) {
+    // We were unable to create a collider for one of the sprites.
+    // This usually means its animation is not available yet; it will be soon.
+    // Don't collide for now.
+    return false;
+  }
+
+  // Actually compute the overlap of the two colliders
+  var displacement = this._findDisplacement(other);
+  if (displacement.x === 0 && displacement.y === 0) {
+    // These sprites are not overlapping.
+    return false;
+  }
+
+  if (displacement.x > 0)
+    this.touching.left = true;
+  if (displacement.x < 0)
+    this.touching.right = true;
+  if (displacement.y < 0)
+    this.touching.bottom = true;
+  if (displacement.y > 0)
+    this.touching.top = true;
+
+  // Apply displacement out of collision
+  if (type === 'displace' && !other.immovable) {
+    other.position.sub(displacement);
+  } else if ((type === 'collide' || type === 'bounce' || type === 'bounceOff') && !this.immovable) {
+    this.position.add(displacement);
+    this.previousPosition = p5Inst.createVector(this.position.x, this.position.y);
+    this.newPosition = p5Inst.createVector(this.position.x, this.position.y);
+    this.collider.updateFromSprite(this);
+  }
+
+  // Code.org Customizations:
+  // Create special behaviors for certain collision types by temporarily
+  // overriding type and sprite properties.
+  // See another block near the end of this method that puts them back.
+  var originalType = type;
+  var originalThisImmovable = this.immovable;
+  var originalOtherImmovable = other.immovable;
+  var originalOtherRestitution = other.restitution;
+  if (originalType === 'collide') {
+    type = 'bounce';
+    other.immovable = true;
+    other.restitution = 0;
+  } else if (originalType === 'bounceOff') {
+    type = 'bounce';
+    other.immovable = true;
+  }
+
+  // If this is a 'bounce' collision, determine the new velocities for each sprite
+  if (type === 'bounce') {
+    // We are concerned only with velocities parallel to the collision normal,
+    // so project our sprite velocities onto that normal (captured in the
+    // displacement vector) and use these throughout the calculation
+    var thisInitialVelocity = p5.Vector.project(this.velocity, displacement);
+    var otherInitialVelocity = p5.Vector.project(other.velocity, displacement);
+
+    // We only care about relative mass values, so if one of the sprites
+    // is considered 'immovable' treat the _other_ sprite's mass as zero
+    // to get the correct results.
+    var thisMass = this.mass;
+    var otherMass = other.mass;
+    if (this.immovable) {
+      thisMass = 1;
+      otherMass = 0;
+    } else if (other.immovable) {
+      thisMass = 0;
+      otherMass = 1;
+    }
+
+    var combinedMass = thisMass + otherMass;
+    var coefficientOfRestitution = this.restitution * other.restitution;
+    var initialMomentum = p5.Vector.add(
+      p5.Vector.mult(thisInitialVelocity, thisMass),
+      p5.Vector.mult(otherInitialVelocity, otherMass)
+    );
+    var thisFinalVelocity = p5.Vector.sub(otherInitialVelocity, thisInitialVelocity)
+      .mult(otherMass * coefficientOfRestitution)
+      .add(initialMomentum)
+      .div(combinedMass);
+    var otherFinalVelocity = p5.Vector.sub(thisInitialVelocity, otherInitialVelocity)
+      .mult(thisMass * coefficientOfRestitution)
+      .add(initialMomentum)
+      .div(combinedMass);
+    // Remove velocity before and apply velocity after to both members.
+    this.velocity.sub(thisInitialVelocity).add(thisFinalVelocity);
+    other.velocity.sub(otherInitialVelocity).add(otherFinalVelocity);
+  }
+
+  // Code.org Customizations:
+  // Restore sprite properties now that velocity changes have been made.
+  // See another block before velocity changes that sets these up.
+  type = originalType;
+  this.immovable = originalThisImmovable;
+  other.immovable = originalOtherImmovable;
+  other.restitution = originalOtherRestitution;
+
+  // Finally, for all collision types call the callback and record
+  // that collision occurred.
+  if (typeof callback === 'function') {
+    callback.call(this, this, other);
+  }
+  return true;
+}
 
 /* eslint-enable */
 
@@ -575,7 +472,8 @@ const ALIASED_PROPERTIES = {
   'position.y': 'y',
   'velocity.x': 'velocityX',
   'velocity.y': 'velocityY',
-  'life': 'lifetime'
+  'life': 'lifetime',
+  "restitution": 'bounciness'
 };
 
 /**
@@ -608,7 +506,6 @@ const ALIASED_METHODS = {
   'animation.changeFrame': 'setFrame',
   'animation.nextFrame': 'nextFrame',
   'animation.previousFrame': 'previousFrame',
-  'animation.play': 'play',
   'animation.stop': 'pause'
 };
 

@@ -3,6 +3,8 @@ require 'cdo/regexp'
 require src_dir 'database'
 
 class FormError < ArgumentError
+  attr_reader :errors
+
   def self.detect_errors(data)
     errors = {}
     data.each_pair do |key, value|
@@ -16,10 +18,6 @@ class FormError < ArgumentError
     @errors = errors
 
     Pegasus.logger.warn "FormError[#{@kind}]: #{@errors.to_json}"
-  end
-
-  def errors
-    @errors
   end
 end
 

@@ -1,0 +1,9 @@
+name 'Stop: Validator'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Stop
+
+Once you reach this level stop and wait for instructions from your teacher. 
+
+While you are waiting you can take out your Web Development Practice packet and fill out the table on page 3.
+MARKDOWN

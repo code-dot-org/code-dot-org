@@ -6,9 +6,9 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we need to get the soil ready to plant. Find the bug and help the artist prepare the ground. ",
+    "instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
     "x": "25",
-    "y": "325",
+    "y": "350",
     "start_direction": "90",
     "is_k1": "true",
     "skip_instructions_popup": "false",
@@ -33,6 +33,8 @@
     "discard_background": "false",
     "authored_hints": "[]",
     "ideal": "4",
+    "instructions_important": "false",
+    "images": "[{\"filename\": \"https://images.code.org/a8c00b231638051d589b377e8f791dc0-image-1478557046677.png\", \"position\": [0,0]}]",
     "contained_level_names": null
   },
   "published": true,
@@ -97,40 +99,5 @@
         </block>
       </xml>
     </solution_blocks>
-    <predraw_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="draw_colour_simple">
-              <title name="COLOUR">#228b22</title>
-              <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="3-10">3</title>
-                  <statement name="DO">
-                    <block type="simple_jump_right"/>
-                  </statement>
-                  <next>
-                    <block type="controls_repeat_simplified_dropdown">
-                      <title name="TIMES" config="3-10">6</title>
-                      <statement name="DO">
-                        <block type="simple_jump_up"/>
-                      </statement>
-                      <next>
-                        <block type="controls_repeat_simplified_dropdown">
-                          <title name="TIMES" config="3-10">7</title>
-                          <statement name="DO">
-                            <block type="simple_move_down"/>
-                          </statement>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </xml>
-    </predraw_blocks>
   </blocks>
 </Artist>

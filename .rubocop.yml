@@ -24,6 +24,9 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
 Style/FirstParameterIndentation:
   EnforcedStyle: consistent
 
@@ -70,6 +73,9 @@ Style/IdenticalConditionalBranches:
   Enabled: false
 
 Style/IfInsideElse:
+  Enabled: false
+
+Style/NumericPredicate:
   Enabled: false
 
 Style/RedundantReturn:

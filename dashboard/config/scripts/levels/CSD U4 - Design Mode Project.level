@@ -141,7 +141,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Mocking Up Your App\r\n\r\nNow that you have some practice laying out elements in App Lab you can start working on mocking your own app. With your group divvy up the screens so that everyone is working on a different screen. Because you'll be dividing the work up you'll want to do some planning ahead of time to deicde on a common look and feel for your pages. For example, you'll want to agree on things such as:\r\n\r\n* Where do navigation buttons go?\r\n* What colors will you use for backgrounds, text, and buttons\r\n* What's the general style and layout?\r\n\r\n# Do This\r\n\r\n* Decide on a _namespace_ for your page, this will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together\r\n\t* For example, if you are making the home page, you might use \"home_\" as your namespace - leading to ids such as:\r\n    \t* \"home_title\"\r\n        * \"home_loginButton\"\r\n        * \"home_logo\"\r\n* Use the built in elements to lay out your app screen\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Share your design regularly with your team mates to ensure consistent style",
+    "markdown_instructions": "# Mocking Up Your App\r\n\r\nNow that you have some practice laying out elements in App Lab you can start working on mocking your own app. With your group divvy up the screens so that everyone is working on a different screen. Because you'll be dividing the work up you'll want to do some planning ahead of time to deicde on a common look and feel for your pages. For example, you'll want to agree on things such as:\r\n\r\n* Where do navigation buttons go?\r\n* What colors will you use for backgrounds, text, and buttons\r\n* What's the general style and layout?\r\n\r\n# Do This\r\n\r\n* Decide on a _namespace_ for your page, this will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together\r\n\t* For example, if you are making the home page, you might use \"home_\" as your namespace - leading to ids such as:\r\n    \t* \"home_title\"\r\n        * \"home_loginButton\"\r\n        * \"home_logo\"\r\n* Use the built-in elements to lay out your app screen\r\n* For any components of your app that can't be recreated with the built in elements you can either:\r\n\t* Redesign to utilize built in elements\r\n    * Find an image to use in place of your element\r\n    * Draw the element using your preferred image editor\r\n* Share your design regularly with your teammates to ensure consistent style",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -171,6 +171,8 @@
     "hide_view_data_button": "true",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

@@ -10,7 +10,7 @@ Dashboard::Application.routes.draw do
 
   resource :pairing, only: [:show, :update]
 
-  resources :user_levels, only: [:update]
+  resources :user_levels, only: [:update, :destroy]
 
   get '/download/:product', to: 'hoc_download#index'
 
@@ -43,6 +43,8 @@ Dashboard::Application.routes.draw do
 
   # XHR proxying
   get 'xhr', to: 'xhr_proxy#get', format: false
+
+  get 'redirected_url', to: 'redirect_proxy#get', format: false
 
   resources :sections, only: [:show] do
     member do
@@ -80,7 +82,7 @@ Dashboard::Application.routes.draw do
   get 'discourse/sso' => 'discourse_sso#sso'
   post '/auth/lti', to: 'lti_provider#sso'
 
-  root :to => "home#index"
+  root to: "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   namespace :home do
@@ -138,15 +140,14 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
+    get 'hidden_stages', to: 'script_levels#hidden'
+    post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    # /s/xxx/level/yyy
-    resources :script_levels, as: :levels, only: [:show], path: "/level", format: false
-
-    # /s/xxx/puzzle/yyy
-    get 'puzzle/:chapter', to: 'script_levels#show', as: 'puzzle', format: false
+    get 'instructions', to: 'scripts#instructions'
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
+      get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -157,6 +158,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/lockable/yyy/puzzle/zzz
     resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+      get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
@@ -191,9 +193,9 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
-  post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
-  post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
-  post '/milestone/:user_id/:script_level_id/:level_id', :to => 'activities#milestone', :as => 'milestone_script_level'
+  post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
+  post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
@@ -209,40 +211,34 @@ Dashboard::Application.routes.draw do
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
-  get '/admin/retention', to: 'admin_reports#retention', as: 'retention'
-  get '/admin/retention/stages', to: 'admin_reports#retention_stages', as: 'retention_stages'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
   get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
 
-  # Fun-O-Meter dashboards.
-  get '/admin/funometer', to: 'admin_funometer#funometer', as: 'funometer'
-  get '/admin/funometer/script/:script_id', to: 'admin_funometer#funometer_by_script', as: 'funometer_by_script'
-  get '/admin/funometer/stage/:stage_id', to: 'admin_funometer#funometer_by_stage', as: 'funometer_by_stage'
-  get '/admin/funometer/script/:script_id/level/:level_id', to: 'admin_funometer#funometer_by_script_level', as: 'funometer_by_script_level'
-
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
+  post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
 
   # internal engineering dashboards
-  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
-  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
-  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
+  get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
 
+  get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
+  post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
   get '/admin/assume_identity', to: 'admin_users#assume_identity_form', as: 'assume_identity_form'
   post '/admin/assume_identity', to: 'admin_users#assume_identity', as: 'assume_identity'
   get '/admin/confirm_email', to: 'admin_users#confirm_email_form', as: 'confirm_email_form'
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
-  get '/admin/styleguide', :to => redirect('/styleguide/')
+  get '/admin/styleguide', to: redirect('/styleguide/')
 
-  get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
-  post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
-  post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+  get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
+  post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
+  post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
@@ -250,10 +246,10 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-  post '/report_abuse', :to => 'report_abuse#report_abuse'
-  get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+  post '/report_abuse', to: 'report_abuse#report_abuse'
+  get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', to: redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -311,15 +307,27 @@ Dashboard::Application.routes.draw do
         member do # See http://guides.rubyonrails.org/routing.html#adding-more-restful-actions
           post :start
           post :end
+          get  :summary
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy]
-        get :attendance, action: 'show', controller: 'workshop_attendance'
-        patch :attendance, action: 'update', controller: 'workshop_attendance'
+
+        get :attendance, action: 'index', controller: 'workshop_attendance'
+        get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
+        put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+        put 'attendance/:session_id/enrollment/:enrollment_id', action: 'create_by_enrollment', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
+
+        get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
-      resources :district_report, only: :index
-      resources :workshop_organizer_report, only: :index
-      resources :teacher_progress_report, only: :index
+      resources :workshop_summary_report, only: :index
+      resources :teacher_attendance_report, only: :index
       resources :course_facilitators, only: :index
+      get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
+
+      get :teacher_applications, to: 'teacher_applications#index'
+      post :teacher_applications, to: 'teacher_applications#create'
     end
   end
 
@@ -334,6 +342,10 @@ Dashboard::Application.routes.draw do
     get 'workshop_dashboard/*path', to: 'workshop_dashboard#index'
     get 'workshop_dashboard', to: 'workshop_dashboard#index'
 
+    get 'teacher_application', to: 'teacher_application#new'
+    get 'teacher_application/international_teachers', to: 'teacher_application#international_teachers'
+    get 'teacher_application/thanks', to: 'teacher_application#thanks'
+
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
@@ -341,12 +353,6 @@ Dashboard::Application.routes.draw do
     get 'workshops/join/:section_code', action: 'join_section', controller: 'workshop_enrollment'
     post 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
     patch 'workshops/join/:section_code', action: 'confirm_join', controller: 'workshop_enrollment'
-
-    # This is a developer aid that allows previewing rendered mail views with fixed test data.
-    # The route is restricted so it only exists in development mode.
-    if Rails.env.development?
-      mount Pd::MailPreviewController => 'mail_preview'
-    end
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -387,6 +393,8 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'school-districts/:state', to: 'school_districts#index', defaults: { format: 'json' }
+      get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: { format: 'json' }
+      get 'regional-partners/:school_district_id/:course', to: 'regional_partners#index', defaults: { format: 'json' }
 
       # Routes used by UI test status pages
       get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: { format: 'json' }
@@ -395,4 +403,6 @@ Dashboard::Application.routes.draw do
   end
 
   get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: { format: 'json' }
+  get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: { format: 'json' }
 end

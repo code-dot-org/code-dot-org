@@ -4,39 +4,46 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
-# Sample press release for elected officials
+<%= view :signup_button %>
 
-For Immediate Release  
-[**DATE**]  
-Contact: [**CONTACT INFORMATION**]  
+# Лауазымды тұлғалар үшін баспасөз хабарламасының үлгісі
+
+Жедел Баспасөз Хабарламасы үшін  
+[**КҮНІ**  
+Байланыс: [**БАЙЛАНЫС АҚПАРАТЫ**]  
   
 
 
-**
+** 
 
 <center>
-  GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME][PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS]</strong><br /> Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week
+  ГУБЕРНАТОР/СЕНАТОР/ЖИЫННЫҢМҮШЕСІ/РЕСМИӨКІЛ/ӘКІМ/ КЕҢЕСМҮШЕСІ [АТЫН ЕНГІЗІҢІҢ][КОДТАУ САҒАТЫНА ЖЕРГІЛІКТІ СТУДЕНТТЕРМЕНЕН ҚАТЫСТЫ]</strong><br /> Қоғамның күші, компьютер ғылымының маңызыдығын басқа адамдарға жеткізу үшін бірігіп, Информатика Аптасына қатысты
 </center>
 
   
   
 </p> 
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders and local families today for [**NAME OF EVENT**] to participate in the Hour of Code as part of Computer Science Education Week . [INSERT NAME] and community members were among tens of millions of people around the world to take part in the largest learning event in history.
+**КҮНІ** - [**АТЫН ЕНГІЗІҢІЗ**] НЕГІЗГІ ЖӘНЕ ЖАЛПЫ ҰСТАЗДАР КЕҢЕСІНІҢ МҮШЕЛЕРІ ҚОСЫЛДЫ [**МЕКТЕПТІҢ АТЫН ЕНГІЗІҢІЗ**], ЖЕТЕКШІ БИЗНЕСМЕНДЕР ЖӘНЕ ЖЕРГІЛІКТІ ЖАНҰЯЛАР БҮГІН ОСЫ ШАРА ҮШІН [**ШАРАНЫҢ АТЫ**] Кодтау Сағатына, Информатика Аптасының бөлімі ретінде қатысты. [АТЫН ЕНГІЗІҢІЗ] және тарихтағы ең үлкен білім алу шарасына бүкіл әлемнен шамамен он миллион адамға жеткен ұйымның мүшелер қатысты.
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to expose its students to computer science. More than 700 students from all grades did at least one Hour of Code. And a dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.”
+[**ШАРА ТУРАЛЫ ТОЛЫҒЫРАҚ АҚПАРАТ ЕНГІЗІҢІЗ, СИПАТТАЛАТЫН ЖӘНЕ ЕСЕПТЕЛЕТІН ТІЛДІ ҚОЛДАНЫҢЫЗ. Мысал үшін:**]  
+"Даниэльс Ран бастауыш мектебі, мектепішілік Кодтау Сағаты шарасын, оқушылардың қызуғышылығын арттыру үшін өткізді. Барлық сыныптардан 700-ден астам оқушы кем дегенде бір Кодтау Сағатын жасады. Бірлестіктегі жүздеген ата-аналар мен еріктілер бұл күнді ұйымдастыруға көмектесті және балаларды жинап, не себепті компьютер ғылымдары біздің өмірімізде соншалықты маңызды екенін, оларға көрсетті
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education.
+[**КОНТЕКСТ ҮШІН ҚАЖЕТ ҚОРДА БАР ҮЛГІ ТЕКСТ:**  
+Компьютерлер барлық жерде, бірақ 10 жыл бұрынға қарағанда, аздаған мектептер информатиканы үйретуде. Қыздар мен түсті студенттер дұрыс көрсетілмеген. Жақсы хабар - біз мұны жақсы жаққа қарай өзгертудеміз. Кодтау Сағаты, барлық студенттерге жоғарғы сапалы информатикадағы білімге жол ашады.
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo! and Disney. President Obama, Shakira and Ashton Kutcher all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement.
+Әлемнің 100 миллионнан астам студенті Кодтау Сағатын қазірдің өзінде пайдаланып көрді. Кодтау Сағатының арқасында Google, MSN, Yahoo сайттарының бастапқы бетінде информатика туралы мәлімет болды! және Disney. Президент Обама, Шакира және Эштон Катчер - барлығы Кодтау Сағатын видеолармен бастады. 100-ден аса серіктестер осы қозғалысты бірге қолдады.
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.”
+Студенттердің информатикаға деген қызығушылығын арттырып, олардың сұранысын толғымен қамтамассыз етуіміз қажет. "Әрбір студент 21-ғасырдың ең жақсы мансаптарына қол жеткізу үшін информатиканы үйренуге лайық."
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**]
+[**Өзіңіздің шараңыз немесе ұйымыңыз туралы көбірек ақпарат қосыңыз**]
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
+[**Басқа бір мекемеден немесе шараға қатысқаннан жазба енгізу**]
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+[**ШАРА/БАҒДАРЛАМА/Т. Б.**] туралы көбірек ақпарат алу үшін, [**ВЕБСАЙТ ҚОСЫҢЫЗ**]-ты көріңіз немесе осында [**БАЙЛАНЫС АҚПАРАТЫН ҚОСЫҢЫЗ**] хабарласыңыз
+
+  
+  
+
+
+<%= view :signup_button %>

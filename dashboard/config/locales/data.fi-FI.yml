@@ -101,7 +101,7 @@
         turtle_1_2: 'Nyt piirrä neliö. HUOM: käytä lempiväriäsi valitsemalla "aseta
           väri" -lohko.'
         turtle_1_3: Tee neliö käyttäen vain kolme lohkoa.
-        turtle_1_4: |
+        turtle_1_4: |-
           Piirrä kolmio, jonka sivut ovat kaikki eri värisiä. Käytä "satunnainen väri" -toimintoa valitsemaan kunkin sivun väri.
           Vihje: sinun täytyy keksiä, kuinka paljon kääntyä ja valita oikea luku "käänny"-lohkoon.
         turtle_1_5: Harjoituksen vuoksi voisit nyt piirtää kirjekuoren käyttäen kolmiota
@@ -300,6 +300,52 @@
         maze_3_3: Miten pääsisin possun luo? Varmistathan, etten törmää TNT-laatikoihin!
         maze_3_4: Argh! Kirjoita minulle ohjelma, jolla pääsen TNT-laatikoiden ohi
           possun luo.
+        bounce_1_basketball: Liitä lohko "kun nuoli vasemmalle" -lohkoon ja paina
+          "Suorita". Liikuta kättä käyttäen vasenta nuolta, kohteen saavuttamiseksi.
+        bounce_2_basketball: Liitä lohko "kun nuoli oikealle"- ja "kun nuoli vasemmalle"
+          -lohkoon. Liikuta kättä saavuttaaksesi molemmat kohteet.
+        bounce_5_basketball: Olemme lähettämässä pallon alas kohti kättä. Liitä "kun
+          pallo osuu käteen" lohkoon toinen lohko, varmistaaksesi että pallo osuu
+          lippuun.
+        bounce_6_basketball: Nyt lippu on yläreunassa. Sinun tulee liittää lohkot
+          kumpaankin "kun pallo osuu" lohkoon, jotta pystyt ratkaisemaan tämän tehtävän.
+        bounce_7_basketball: Liitä toimintolohko kuhunkin "kun" lohkoon. Pomputa palloa,
+          kunnes se osuu maaliin.
+        bounce_10_basketball: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää
+          piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa
+          käden" lohkoihin saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä
+          pystyt keräämään, ennen kuin vastustajasi saa kaksi pistettä.
+        bounce_11_basketball: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun
+          tulee lisätä uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan.
+          Kokeile myös vaihtaa taustaa tai sekä käden ja pallon nopeutta ja katso
+          kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi
+          pistettä!
+        bounce_12_basketball: Luo oma Koripallo-pelisi. Voit muuttaa kaikkia sääntöjä.
+          Kun olet valmis, napsauta Valmis antaaksesi ystäviesi kokeilla peliäsi heidän
+          puhelimissaan.
+        bounce_1_sports: Mene lipulle! Liitä lohko "kun nuoli vasemmalle" -lohkoon
+          ja paina "Suorita" liikuttaaksesi pelaajan lipulle.
+        bounce_2_sports: Nyt on kaksi lippua! Lisää lohko "kun vasen nuoli"- ja "kun
+          oikea nuoli" -lohkoihin saadaksesi pelaajan liikkumaan kahteen suuntaan.
+        bounce_5_sports: Jääkiekko kiekko aikoo lentää alas kohti pelaaja! Liittää
+          lohko "kun pallo osuu pelaaja" -lohkoon osuaksesi lippuun.
+        bounce_6_sports: Nyt lippu on yläreunassa. Sinun tulee liittää lohkot kumpaankin
+          "kun pallo osuu" lohkoon, jotta pystyt ratkaisemaan tämän tehtävän.
+        bounce_7_sports: Liitä toimintolohko kuhunkin "kun" lohkoon. Pomputa palloa,
+          kunnes se osuu maaliin.
+        bounce_10_sports: Yläreunassa on nyt maali. Liitä "lisää piste" ja "lisää
+          piste vastustajalle" lohkot "kun pallo osuu maaliin" ja "kun pallo ohittaa
+          käden" lohkoihin saadaksesi aikaan pelin. Kokeile, kuinka monta pistettä
+          pystyt keräämään, ennen kuin vastustajasi saa kaksi pistettä!
+        bounce_11_sports: Voit nyt lisätä lohkoja "suoritettaessa" lohkoon. Sinun
+          tulee lisätä uusi "laukaise uusi pallo" lohko useampaan, kuin yhteen paikkaan.
+          Kokeile myös vaihtaa taustaa tai sekä käden ja pallon nopeutta ja katso
+          kuinka monta pistettä pystyt keräämään ennen kuin vastustajasi saa kaksi
+          pistettä!
+        bounce_12_sports: 'Luo oma peli! Olet vastuussa täällä: Voi muokata kaikkia
+          sääntöjä, sekoita ja yhdistä urheilulaijeja, ole luova! Kun olet valmis,
+          napsauta Valmis ja voit jakaa pelisi niin, että kaverisikin voivat pelata
+          sitä omilla puhelimillaan.'
         bounce_1: Liitä lohko "kun nuoli vasemmalle" -lohkoon ja paina Suorita. Liikuta
           mailaa käyttäen vasenta nuolta, kunnes se osuu lippuun.
         bounce_2: Liitä lohko "kun nuoli oikealle" -lohkoon ja paina Suorita. Liikuta
@@ -676,6 +722,11 @@
         infinity_playlab_intro: Pelilabra - Johdanto
         infinity_playlab_events: Pelilabra - Tapahtumia
         infinity_playlab_repeat_forever: Pelilabra - Ikuinen Toisto
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -686,6 +737,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -753,6 +807,11 @@
         iceage_intro: Ice Age Koodaustunti - Esittely
         iceage_events: Ice Age Koodaustunti - Tapahtumat
         iceage_repeat: Ice Age Koodaustunti - Toistolausekkeet
+        mc_2016_intro: Minecraft Hour of Code - Introduction
+        mc_2016_loops: Minecraft Hour of Code - Loops
+        mc_2016_events: Minecraft Hour of Code - Events
+        mc_2016_spawn: Minecraft Hour of Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - Congratulations
     callout:
       text:
         drag_blocks: Vedä "liiku"-lohko ja napsauta se kiinni toisen lohkon alalaitaan

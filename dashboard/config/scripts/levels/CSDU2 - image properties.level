@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-17T23:47:36.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Image Properties\r\n\r\nImages elements also have properties that can change their style.\r\n\r\n## Size\r\nOne of the image properties is size. You can control size of an image using the `width` and `height` properties. The size is determined by the number of pixels tall and wide an image is. Pixels is abbreviated to `px`.  For example to make all the images 100 pixels wide you would use:\r\n\r\n<pre>\r\nimg {\r\n\twidth: 100px;\r\n}\r\n</pre>\r\n\r\nAlthough you can control both width and height it is best practice to only set either width and height since setting both can distort the image.\r\n\r\n\r\n\r\n## Borders\r\nBorders are a common property for many elements including images. Borders consist of three properties: `border-style`, `border-width` and `border-color`.\r\n\r\n<pre>\r\nimg {\r\n      border-style: dashed;\r\n      border-width: 5px;\r\n      border-color: blue;\r\n}\r\n</pre>\r\n\r\nFor more information about borders go to <a href=\"http://www.w3schools.com/css/css_border.asp\"> W3 Schools - Border Properties</a>.\r\n\r\n# Do This\r\n\r\n* Add a rule to style img elements\r\n* Use the rule to set the width of all images to 200 pixels\r\n* Add borders to all images. Be creative and try different border styles and colors.",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

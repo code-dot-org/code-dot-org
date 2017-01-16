@@ -18,7 +18,7 @@ class CertificateImageTest < Minitest::Test
   end
 
   def test_course_templates
-    assert_equal 'MC_Hour_Of_Code_Certificate.jpg', certificate_template_for('mc')
+    assert_equal 'MC_Hour_Of_Code_Certificate.png', certificate_template_for('mc')
     assert_equal '20hours_certificate.jpg', certificate_template_for('20-hour')
     assert_equal '20hours_certificate.jpg', certificate_template_for('20-hour')
     assert_equal 'hour_of_code_certificate.jpg', certificate_template_for('frozen')
@@ -40,7 +40,7 @@ class CertificateImageTest < Minitest::Test
 
   def test_image_generation
     mc_certificate_image = create_course_certificate_image('Robot Tester', 'mc')
-    assert_image mc_certificate_image, 1754, 1235, 'JPEG'
+    assert_image mc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image = create_course_certificate_image('Robot Tester', 'flappy')
     assert_image hoc_certificate_image, 1754, 1235, 'JPEG'
     unspecified_course_image = create_course_certificate_image('Robot Tester', nil)

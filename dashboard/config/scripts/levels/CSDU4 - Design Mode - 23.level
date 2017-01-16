@@ -38,7 +38,8 @@
     "start_html": "<div xmlns=\"http://www.w3.org/1999/xhtml\" id=\"designModeViz\" class=\"appModern\" style=\"width: 320px; height: 450px;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"gamePlayScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 25px; overflow: hidden; word-wrap: break-word; color: rgb(0, 173, 188); max-width: 320px; width: 250px; height: 125px; position: absolute; left: 30px; top: 80px;\" id=\"countDisplayLabel\">click an arrow</label>\r\n    <button id=\"upButton\" style=\"padding: 0px; margin: 0px; height: 100px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 215px; background-image: url(https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\" data-canonical-image-url=\"https://images.code.org/1d7b0f843677ac68a8ad46b58bdc052a-image-1446046094428.jpg\"/>\r\n    <button id=\"downButton\" data-canonical-image-url=\"https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg\" style=\"padding: 0px; margin: 0px; width: 75px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 175px; top: 220px; height: 100px; background-image: url(https://images.code.org/f1955f27e2cec1d2b35d98888d299ec5-image-1446046090004.jpg); background-color: rgb(255, 255, 255); background-size: 75px 100px;\"/>\r\n  </div>\r\n</div>",
     "execute_palette_apis_only": "false",
     "lock_zero_param_functions": "false",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

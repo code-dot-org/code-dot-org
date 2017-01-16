@@ -22,7 +22,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "markdown_instructions": "# How Do Events Work?\r\nEvent-driven apps are made up of elements that can trigger events (such as buttons) and pieces of code called **event handlers**. Event handlers are commands that \"watch\" for certain events to occur in your program, and then run some function when an event occurs.\r\n\r\n<img src=\"https://images.code.org/96abf7d54a0be221a8b8eda80c696bf4-image-1444142010683.png\" style=\"float: right; width: 250px\">The `onEvent(id, type, callback)` command creates an **event handler** in your app. The three parameters are:\r\n* **id** - the ID of the element in the app you want to \"watch\", one that might trigger an event\r\n* **type** - the type of event to \"watch\" for (e.g. a click, a key press, a mousemove, etc.)\r\n* **callback** - a **callback function** is only different from a normal function in that you don't call it directly from your code. Instead it gets *called by the system at the time the specified event occurs*. You put the code into this function just like you would any other, and it will run when the event occurs.\r\n\r\nOnce created, the event handler will always \"watch\" that element as long as it exists. \r\n\r\n# Do This\r\n\r\nThe toolbox has a new block called `setText` which allows you to change the text of an element on the screen. You're going to modify the button event handler so that it changes the title text when clicked.\r\n\r\n* Drag out a `setText` block to the _inside_ of the `onEvent` callback function (where the `console.log` block currently is)\r\n* From the block's dropdown, select \"titleLabel\" (the id of the element you want to change)\r\n* In the block's second input, replace \"text\" with a new title for the app\r\n* Run your program and click the button to see it work",
+    "markdown_instructions": "# How Do Events Work?\r\nEvent-driven apps are made up of elements that can trigger events (such as buttons) and pieces of code called **event handlers**. Event handlers are commands that \"watch\" for certain events to occur in your program, and then run some function when an event occurs.\r\n\r\nWhen you first create an event handler from Design Mode, puts a `console.log()` block inside to help you test the event, but you can put just about any code you want inside the event hander.\r\n\r\n# Do This\r\n\r\nThe toolbox has a new block called `setText` which allows you to change the text of an element on the screen. You're going to modify the button event handler so that it changes the title text when clicked.\r\n\r\n* Drag out a `setText()` block to the _inside_ of the `onEvent()` callback function (where the `console.log()` block currently is)\r\n* From the block's dropdown, select \"titleLabel\" (the id of the element you want to change)\r\n* In the block's second input, replace \"text\" with a new title for the app\r\n* Run your program and click the button to see it work",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "show_turtle_before_run": "false",
@@ -59,6 +59,8 @@
       "console.log": null,
       "comment": null
     },
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

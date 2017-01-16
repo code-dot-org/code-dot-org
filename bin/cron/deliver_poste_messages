@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'retryable'
 require 'cdo/poste'
 require 'cdo/hip_chat'
 require 'base64'
@@ -10,6 +11,11 @@ require src_dir 'abort_email_error'
 BATCH_SIZE = 6000
 MAX_THREAD_COUNT = 30
 MIN_MESSAGES_PER_THREAD = 50
+
+# Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
+CONNECTION_ATTEMPTS = 5
+RETRYABLE_ERROR_TYPES = [Net::SMTPServerBusy, Net::SMTPAuthenticationError].freeze
+RETRYABLE_ERROR_MESSAGE_MATCH = /(Too many connections, try again later)|(Temporary authentication failure)/
 
 SMTP_OPTIONS = {
   address: CDO.poste_smtp_server,
@@ -243,9 +249,15 @@ class Deliverer
   end
 
   def smtp_connect
-    Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
-      smtp.enable_starttls if @params[:enable_starttls_auto]
-      smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
+    Retryable.retryable(
+      tries: CONNECTION_ATTEMPTS,
+      on: RETRYABLE_ERROR_TYPES,
+      matching: RETRYABLE_ERROR_MESSAGE_MATCH
+    ) do
+      Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
+        smtp.enable_starttls if @params[:enable_starttls_auto]
+        smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
+      end
     end
   end
 end

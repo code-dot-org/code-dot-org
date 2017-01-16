@@ -1,0 +1,53 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-10-24T20:16:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "contained_level_names": [
+      "CSDU4 Screens Predict Multi"
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "start_blocks": "onEvent(\"button1\", \"click\", function(event) {\r\n  setScreen(\"screen2\");\r\n});\r\nonEvent(\"button3\", \"click\", function(event) {\r\n  setScreen(\"screen3\");\r\n});\r\nonEvent(\"button4\", \"click\", function(event) {\r\n  setScreen(\"screen4\");\r\n});\r\nonEvent(\"button5\", \"click\", function(event) {\r\n  setScreen(\"screen1\");\r\n});\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 35px; position: absolute; left: 0px; top: 35px; text-align: center;\" id=\"label1\">My Great App </label><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 75px; width: 200px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 110px;\">About</button><button id=\"button3\" style=\"padding: 0px; margin: 0px; height: 75px; width: 200px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 195px;\">Use It</button><button id=\"button4\" style=\"padding: 0px; margin: 0px; height: 75px; width: 200px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 280px;\">Contact Us</button></div><div class=\"screen\" tabindex=\"1\" id=\"screen2\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 35px; position: absolute; top: 35px; left: 0px; font-size: 30px; text-align: center;\" id=\"label2\">Contact Us</label><img data-canonical-image-url=\"icon://fa-users\" id=\"image1\" style=\"height: 100px; width: 100px; position: absolute; left: 105px; top: 155px; margin: 0px;\"><button id=\"button5\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 120px; top: 380px;\">Home</button></div><div class=\"screen\" tabindex=\"1\" id=\"screen3\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 35px; position: absolute; left: 0px; top: 35px; text-align: center;\" id=\"label3\">About</label><button id=\"button6\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 120px; top: 380px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;); background-size: contain; background-position: 50% 50%; background-repeat: no-repeat;\" data-canonical-image-url=\"\">Back</button><img data-canonical-image-url=\"icon://fa-flask\" id=\"image2\" style=\"height: 100px; width: 100px; position: absolute; left: 110px; top: 140px; margin: 0px;\"></div><div class=\"screen\" tabindex=\"1\" id=\"screen4\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 35px; position: absolute; left: 0px; top: 35px; text-align: center;\" id=\"label4\" class=\"\">Use It</label><button id=\"button7\" style=\"padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 120px; top: 380px;\">Back</button><img data-canonical-image-url=\"icon://fa-magic\" id=\"image3\" style=\"height: 100px; width: 100px; position: absolute; left: 110px; top: 145px; margin: 0px;\"></div></div>",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

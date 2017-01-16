@@ -1,14 +1,20 @@
-/* globals dashboard  */
+/* global appOptions */
 
 import $ from 'jquery';
 import debounce from 'lodash/debounce';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore } from './redux';
 import clientState from './clientState';
 import ScriptTeacherPanel from './components/progress/ScriptTeacherPanel';
-import { setSections, fullyLockedStageMapping } from './stageLockRedux';
+import SectionSelector from './components/progress/SectionSelector';
+import ViewAsToggle from './components/progress/ViewAsToggle';
+import TeacherContentToggle from './components/TeacherContentToggle';
+import { fullyLockedStageMapping, ViewType, setViewType } from './stageLockRedux';
+import { setSections, selectSection } from './sectionsRedux';
+import { getHiddenStages } from './hiddenStageRedux';
 import commonMsg from '@cdo/locale';
 
 function resizeScrollable() {
@@ -32,19 +38,30 @@ export function onReady() {
   });
 
   $('#unsubmit').click(function (ev) {
-    $.post($(ev.target).attr('data-user-level-url'), {
-      "_method": 'PUT',
+    $.ajax({
+      url: $(ev.target).attr('data-user-level-url'),
+      method: 'PUT',
       user_level: {
         best_result: 1,
         submitted: false
       }
-    }, function (data) {
+    }).done(data => {
       // Let's just refresh so that the dots are correct, etc.
       location.reload();
-    });
+    }).fail(err => console.error(err));
   });
 
-  setStageLockedText();
+  $("#clear-response").click(ev => {
+    $.ajax({
+      url: $(ev.target).attr('data-user-level-url'),
+      method: 'DELETE'
+    }).done(data => {
+      // Refresh, so that we no longer have the students response loaded
+      location.reload();
+    }).fail(err => console.error(err));
+  });
+
+  renderIntoLessonTeacherPanel();
 }
 
 /**
@@ -63,6 +80,10 @@ function queryLockStatus(store, scriptId) {
       }
     ).done(data => {
       store.dispatch(setSections(data));
+      const query = queryString.parse(location.search);
+      if (query.section_id) {
+        store.dispatch(selectSection(query.section_id));
+      }
       resolve();
     });
   });
@@ -86,27 +107,96 @@ export function renderTeacherPanel(store, scriptId) {
 }
 
 /**
- * On puzzle page, update text in teacher panel (which is not a React component)
- * stating whether this stage is locked for all students or not.
+ * On a lesson/puzzle page, the teacher panel is not a react component. However,
+ * we still have some elements of it that we want to be React/redux backed.
+ * Handle those here.
  */
-function setStageLockedText() {
-  const element = $('#stage-locked-text');
-  if (element.length === 0) {
-    return;
+function renderIntoLessonTeacherPanel() {
+  const teacherPanelViewAs = document.getElementById('teacher-panel-viewas');
+  const stageLockedText = document.getElementById('stage-locked-text');
+  const teacherPanelSections = document.getElementById('teacher-panel-sections');
+
+  if (teacherPanelViewAs) {
+    renderViewAsToggle(teacherPanelViewAs);
   }
 
   const store = getStore();
   const scriptId = store.getState().progress.stages[0].script_id;
+
+  renderContentToggle();
+
+  // We depend on having information gathered from querying lockStatus to render
+  // these
   queryLockStatus(store, scriptId).then(() => {
-    const state = store.getState();
+    if (teacherPanelSections) {
+      renderTeacherPanelSections(teacherPanelSections);
+    }
 
-    const { currentStageId } = state.progress;
-    const fullyLocked = fullyLockedStageMapping(state.stageLock);
+    if (stageLockedText) {
+      const state = store.getState();
 
-    if (fullyLocked[currentStageId]) {
-      element.text(commonMsg.stageLocked());
-    } else {
-      element.text(commonMsg.stageNotFullyLocked());
+      const { currentStageId } = state.progress;
+      const { selectedSectionId } = state.sections;
+      const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
+
+      if (fullyLocked[currentStageId]) {
+        $(stageLockedText).text(commonMsg.stageLocked());
+      } else {
+        $(stageLockedText).text(commonMsg.stageNotFullyLocked());
+      }
     }
   });
+}
+
+function renderViewAsToggle(element) {
+  const store = getStore();
+
+  // Start viewing as teacher
+  const query = queryString.parse(location.search);
+  const viewAs = query.viewAs || ViewType.Teacher;
+  store.dispatch(setViewType(viewAs));
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <ViewAsToggle/>
+    </Provider>,
+    element
+  );
+}
+
+function renderTeacherPanelSections(element) {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <SectionSelector reloadOnChange={true}/>
+    </Provider>,
+    element
+  );
+}
+
+/**
+ * We may need to toggle to a locked/hidden stage message when viewing as student
+ * Render a content toggle component that does this for us.
+ */
+function renderContentToggle() {
+  if (typeof(window.appOptions) === 'undefined') {
+    // This can happen if student hasn't attempted level
+    return;
+  }
+  // We can remove this element once we get rid of the experiment
+  $("#try-it-yourself").hide();
+
+  const levelContent = $('#level-body');
+  const element = $('<div/>').css('height', '100%').insertAfter(levelContent)[0];
+  const store = getStore();
+
+  const { scriptName } = store.getState().progress;
+
+  store.dispatch(getHiddenStages(scriptName));
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <TeacherContentToggle isBlocklyOrDroplet={!!appOptions.app}/>
+    </Provider>,
+    element
+  );
 }

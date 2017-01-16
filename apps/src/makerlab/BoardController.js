@@ -4,6 +4,9 @@
 /* global Promise */
 
 try {
+  // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
+  process.hrtime = require('browser-process-hrtime');
+
   var five = require('johnny-five');
   var ChromeSerialPort = require('chrome-serialport');
   var PlaygroundIO = require('playground-io');
@@ -113,6 +116,14 @@ export default class BoardController {
       CapTouch: PlaygroundIO.CapTouch,
       Tap: PlaygroundIO.Tap,
       Accelerometer: five.Accelerometer,
+      Animation: five.Animation,
+      /**
+       * @link https://en.wikipedia.org/wiki/Three_Laws_of_Robotics
+       * 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+       * 2. A robot must obey orders given it by human beings except where such orders would conflict with the First Law.
+       * 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.
+       */
+      Servo: five.Servo,
       TouchSensor: TouchSensor
     };
 
