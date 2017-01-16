@@ -132,7 +132,7 @@ namespace :build do
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
   tasks << :restart_process_queues if CDO.daemon
-  task :all => tasks
+  task all: tasks
 end
 
 desc 'Builds everything.'

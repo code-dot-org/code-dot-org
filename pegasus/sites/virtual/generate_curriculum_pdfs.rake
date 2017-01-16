@@ -50,4 +50,4 @@ all_outfiles = []
   all_outfiles << fetchfile_for_pdf
 end
 
-task :default => all_outfiles
+task default: all_outfiles
