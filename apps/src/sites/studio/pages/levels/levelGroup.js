@@ -6,6 +6,7 @@ import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
+import { TestResults } from '@cdo/apps/constants';
 
 window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
@@ -42,9 +43,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       const subLevel = codeStudioLevels.getLevel(subLevelId);
       var subLevelResult = subLevel.getResult(true);
       var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
-      var result = subLevelResult.result;
-      var testResult = subLevelResult.testResult ? subLevelResult.testResult : (result ? 100 : 0);
-      var submitted = subLevelResult.submitted || false;
 
       window.dashboard.reporting.sendReport({
         program: response,
@@ -53,10 +51,9 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
         app: subLevel.getAppName(),
         allowMultipleSends: true,
         level: subLevelId,
-        result: subLevelResult,
-        pass: subLevelResult,
-        testResult: testResult,
-        submitted: submitted,
+        result: true,
+        testResult: TestResults.UNVALIDATED_SUBLEVEL,
+        submitted: subLevelResult.submitted || false,
         onComplete: handleSublevelComplete
       });
     }

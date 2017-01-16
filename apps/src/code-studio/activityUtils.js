@@ -43,7 +43,7 @@ export const activityCssClass = result => {
     return LevelStatus.locked;
   }
   if (result >= TestResults.MINIMUM_OPTIMAL_RESULT ||
-      result === TestResults.CONTAINED_LEVEL_ATTEMPT) {
+      result === TestResults.UNVALIDATED_SUBLEVEL) {
     return LevelStatus.perfect;
   }
   if (result >= TestResults.MINIMUM_PASS_RESULT) {

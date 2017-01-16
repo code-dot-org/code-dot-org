@@ -58,7 +58,7 @@ exports.TestResults = {
 
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
-  CONTAINED_LEVEL_ATTEMPT: -49,       // For contained levels, we only care about if they've attempted or not.
+  UNVALIDATED_SUBLEVEL: -49,          // Either a member of a LevelGroup or a contained level, for which the result has not been validated
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.

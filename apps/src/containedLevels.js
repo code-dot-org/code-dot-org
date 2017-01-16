@@ -25,7 +25,7 @@ export function getContainedLevelResultInfo() {
     // know as the client if the submission was correct or not, as we're often
     // not provided correct answers (i.e. in multis).
     result: true,
-    testResult: TestResults.CONTAINED_LEVEL_ATTEMPT,
+    testResult: TestResults.UNVALIDATED_SUBLEVEL,
     program: containedResult.result.response,
     feedback: containedResult.feedback,
     submitted: false
