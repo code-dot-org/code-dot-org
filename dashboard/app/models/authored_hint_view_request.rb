@@ -41,8 +41,8 @@ class AuthoredHintViewRequest < ActiveRecord::Base
   belongs_to :script
   belongs_to :level
 
-  validates :script, :presence => true
-  validates :level, :presence => true
+  validates :script, presence: true
+  validates :level, presence: true
 
   def self.enabled?(script = nil)
     if script
