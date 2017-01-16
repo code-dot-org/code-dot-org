@@ -338,7 +338,9 @@ class Level < ActiveRecord::Base
   def contained_levels
     names = properties["contained_level_names"]
     return [] unless names.present?
-    Level.where(name: properties["contained_level_names"])
+    properties["contained_level_names"].map do |contained_level_name|
+      Script.cache_find_level(contained_level_name)
+    end
   end
 
   private
