@@ -47,12 +47,28 @@ class UserPermission < ActiveRecord::Base
   before_destroy :log_permission_delete
 
   def log_permission_save
-    HipChat.log "Updating UserPermission: user ID: #{self.user.id}, email: #{self.user.email}, permission: #{self.permission}",
+    # In particular, we do not log for adhoc or test environments.
+    return unless [:staging, :levelbuilder, :production].include? rack_env
+
+    HipChat.message 'infra-security',
+      'Updating UserPermission: '\
+        "environment: #{rack_env}, "\
+        "user ID: #{self.user.id}, "\
+        "email: #{self.user.email}, "\
+        "permission: #{self.permission}",
       color: 'yellow'
   end
 
   def log_permission_delete
-    HipChat.log "Deleting UserPermission: user ID: #{self.user.id}, email: #{self.user.email}, permission: #{self.permission}",
+    # In particular, we do not log for adhoc or test environments.
+    return unless [:staging, :levelbuilder, :production].include? rack_env
+
+    HipChat.log 'infra-security',
+      'Deleting UserPermission: '\
+        "environment: #{rack_env}, "\
+        "user ID: #{self.user.id}, "\
+        "email: #{self.user.email}, "\
+        "permission: #{self.permission}",
       color: 'yellow'
   end
 end
