@@ -1,15 +1,12 @@
-var utils = require('../utils');
+import * as utils from '../utils';
+import {ICON_PREFIX, ICON_PREFIX_REGEX} from '../assetManagement/assetPrefix';
 
-module.exports = {
-  FOOTER_HEIGHT: 30,
-  APP_WIDTH: 320,
-  APP_HEIGHT: 480,
-  DESIGN_ELEMENT_ID_PREFIX: 'design_',
-  ICON_PREFIX: 'icon://',
-  ICON_PREFIX_REGEX: new RegExp('^icon://'),
-  NEW_SCREEN: "New screen...",
-  ApplabInterfaceMode: utils.makeEnum('CODE', 'DESIGN', 'DATA'),
-  DataView: utils.makeEnum('OVERVIEW', 'PROPERTIES', 'TABLE'),
-  ANIMATION_LENGTH_MS: 200,
-  IMPORT_SCREEN: "Import screen...",
-};
+export {ICON_PREFIX, ICON_PREFIX_REGEX};
+export const FOOTER_HEIGHT = 30;
+export const APP_WIDTH = 320;
+export const APP_HEIGHT = 480;
+export const DESIGN_ELEMENT_ID_PREFIX = 'design_';
+export const NEW_SCREEN = "New screen...";
+export const ApplabInterfaceMode = utils.makeEnum('CODE', 'DESIGN', 'DATA');
+export const ANIMATION_LENGTH_MS = 200;
+export const IMPORT_SCREEN = "Import screen...";

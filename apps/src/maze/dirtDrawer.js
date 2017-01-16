@@ -1,4 +1,4 @@
-import Drawer, { SQUARE_SIZE, SVG_NS } from './drawer';
+import Drawer, { SQUARE_SIZE } from './drawer';
 
 // The number line is [-inf, min, min+1, ... no zero ..., max-1, max, +inf]
 const DIRT_MAX = 10;

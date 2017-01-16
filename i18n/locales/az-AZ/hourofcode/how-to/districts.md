@@ -4,9 +4,11 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
 
-## Get every school participating, every student learning!
+# Kod Saatını bütün rayon təhsil müəssisələrinə necə gətirə bilərsiniz
+
+## Hər məktəb iştirak etsin, hər şagird öyrənsin!
 
   1. **Recruit local schools.** Share [this email](%= resolve_url('/promote/resources#sample-emails') %) and [teacher how to guide](%= resolve_url('/how-to') %), or include a [short blurb](%= resolve_url('/promote/stats') %) in newsletters/district communications.
 
@@ -16,7 +18,7 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
   4. **Promote on your district’s homepage.** Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code](%= resolve_url('/') %).
 
-  5. **Host a district Hour of Code event.** See our [event how to guide](%= resolve_url('/how-to/events') %) for a sample run of show, media outreach kit and other supports.
+  5. **Rayon Kod Saatı tədbiri keçirin.** Tədbir proqramı nümunəsi, xəbər yaymaq üçün hazır sənədlər və digər köməkçi materiallar üçün [tədbir təlimatı](%= resolve_url('/how-to/events') %)mıza baxın.
 
 ## Kod Saatından sonra nə gəlir?
 
@@ -24,3 +26,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

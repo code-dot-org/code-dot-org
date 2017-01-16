@@ -9,13 +9,13 @@ var connect = require('react-redux').connect;
 var i18n = require('@cdo/locale');
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+import {ConnectedWatchers} from './watchers/Watchers';
 var PaneHeader = require('./PaneHeader');
 var PaneSection = PaneHeader.PaneSection;
 var PaneButton = PaneHeader.PaneButton;
-var experiments = require('../experiments');
 var SpeedSlider = require('./SpeedSlider');
 import {setStepSpeed} from '../redux/runState';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 var styles = {
   debugAreaHeader: {
@@ -39,6 +39,19 @@ var styles = {
     position: 'absolute',
     top: 0,
     left: 8,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: 'white'
+    }
+  },
+  showDebugWatchIcon: {
+    position: 'absolute',
+    top: 0,
+    right: '6px',
+    width: '18px',
     margin: 0,
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
@@ -114,99 +127,125 @@ var DebugButtons = function () {
 };
 
 /**
- * A watch window for our debugger.
- */
-var DebugWatch = function (props) {
-  var classes = 'debug-watch';
-  if (!props.debugButtons) {
-    classes += 'no-commands';
-  }
-  return (
-    <div id="debug-watch" className={classes}/>
-  );
-};
-DebugWatch.propTypes = {
-  debugButtons: React.PropTypes.bool,
-};
-
-/**
  * The parent JsDebugger component.
  */
-var JsDebugger = function (props) {
-  var hasFocus = props.isDebuggerPaused;
+var UnconnectedJsDebugger = React.createClass({
+  propTypes: {
+    debugButtons: React.PropTypes.bool.isRequired,
+    debugConsole: React.PropTypes.bool.isRequired,
+    debugWatch: React.PropTypes.bool.isRequired,
+    debugSlider: React.PropTypes.bool.isRequired,
+    isDebuggerPaused: React.PropTypes.bool.isRequired,
+    stepSpeed: React.PropTypes.number.isRequired,
+    setStepSpeed: React.PropTypes.func.isRequired,
+    style: React.PropTypes.object,
+  },
 
-  var sliderStyle = {
-    marginLeft: props.debugButtons ? 5 : 45,
-    marginRight: 5
-  };
+  getInitialState() {
+    return {
+      watchersHidden: false
+    };
+  },
 
-  return (
-    <div id="debug-area">
-      <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
-      <PaneHeader
-        id="debug-area-header"
-        hasFocus={hasFocus}
-        style={styles.debugAreaHeader}
-      >
-        <span
-          style={styles.noUserSelect}
-          className="header-text"
+  render() {
+    var hasFocus = this.props.isDebuggerPaused;
+
+    var sliderStyle = {
+      marginLeft: this.props.debugButtons ? 5 : 45,
+      marginRight: 5
+    };
+
+    const showWatchPane = this.props.debugWatch && !this.state.watchersHidden;
+    return (
+      <div id="debug-area" style={this.props.style || {}}>
+        <div id="debugResizeBar" className="fa fa-ellipsis-h"></div>
+        <PaneHeader
+          id="debug-area-header"
+          hasFocus={hasFocus}
+          style={styles.debugAreaHeader}
         >
-          {i18n.debugConsoleHeader()}
-        </span>
-        <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
-        {props.debugButtons &&
-        <PaneSection id="debug-commands-header">
-          <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"></i>
-          <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"></i>
           <span
             style={styles.noUserSelect}
             className="header-text"
           >
-            {i18n.debugCommandsHeaderWhenOpen()}
+            {i18n.debugConsoleHeader()}
           </span>
-        </PaneSection>
-        }
-        {props.debugWatch &&
-        <PaneSection id="debug-watch-header">
-          <span
-            style={styles.noUserSelect}
-            className="header-text"
+          <i id="show-hide-debug-icon" className="fa fa-chevron-circle-down" style={styles.showHideIcon}/>
+          {this.props.debugButtons &&
+          <PaneSection id="debug-commands-header">
+            <i id="running-spinner" style={commonStyles.hidden} className="fa fa-spinner fa-spin"/>
+            <i id="paused-icon" style={commonStyles.hidden} className="fa fa-pause"/>
+            <span
+              style={styles.noUserSelect}
+              className="header-text"
+            >
+              {i18n.debugCommandsHeaderWhenOpen()}
+            </span>
+          </PaneSection>
+          }
+          {this.props.debugWatch &&
+          <PaneSection
+            id="debug-watch-header"
+            onClick={() => {
+              // call JsDebuggerUi.js logic to reset resizer-overridden styles
+              // (remove once JsDebuggerUi.js resize logic migrated to React)
+              if (!this.state.watchersHidden) {
+                const resetResizeEvent = document.createEvent('Event');
+                resetResizeEvent.initEvent('resetWatchersResizableElements', true, true);
+                document.dispatchEvent(resetResizeEvent);
+              }
+
+              this.setState({watchersHidden: !this.state.watchersHidden});
+            }}
+            style={this.state.watchersHidden ? {
+              borderLeft: 'none',
+              textAlign: 'right',
+              marginRight: '30px'
+            } : {}}
           >
-            {i18n.debugWatchHeader()}
-          </span>
-        </PaneSection>
-        }
-        <PaneButton
-          id="clear-console-header"
-          iconClass="fa fa-eraser"
-          label="Clear"
-          headerHasFocus={hasFocus}
-          isRtl={false}
-        />
-        <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={props.stepSpeed} lineWidth={130} onChange={props.setStepSpeed}/>
-      </PaneHeader>
-      {props.debugButtons && <DebugButtons/>}
-      {props.debugConsole && <DebugConsole debugButtons={props.debugButtons} debugWatch={props.debugWatch}/>}
-      {props.debugWatch && <DebugWatch debugButtons={props.debugButtons}/>}
-    </div>
-  );
-};
+            <i
+              id="hide-toolbox-icon"
+              style={styles.showDebugWatchIcon}
+              className={"fa " + (this.state.watchersHidden ? "fa-chevron-circle-left" : "fa-chevron-circle-right")}
+            />
+            <span
+              style={styles.noUserSelect}
+              className="header-text"
+            >
+              {this.state.watchersHidden ? 'Show Watch' : i18n.debugWatchHeader()}
+            </span>
+          </PaneSection>
+          }
+          <PaneButton
+            id="clear-console-header"
+            iconClass="fa fa-eraser"
+            label="Clear"
+            headerHasFocus={hasFocus}
+            isRtl={false}
+          />
+          {this.props.debugSlider && <SpeedSlider style={sliderStyle} hasFocus={hasFocus} value={this.props.stepSpeed} lineWidth={130} onChange={this.props.setStepSpeed}/>}
+        </PaneHeader>
+        {this.props.debugButtons && <DebugButtons/>}
+        {this.props.debugConsole && <DebugConsole debugButtons={this.props.debugButtons} debugWatch={showWatchPane}/>}
+        <div style={{display: showWatchPane ? 'initial' : 'none'}}>
+          <ProtectedStatefulDiv>
+            <div id="watchersResizeBar"></div>
+          </ProtectedStatefulDiv>
+        </div>
+        {showWatchPane && <ConnectedWatchers debugButtons={this.props.debugButtons}/>}
+      </div>
+    );
+  }
+});
 
-JsDebugger.propTypes = {
-  debugButtons: React.PropTypes.bool.isRequired,
-  debugConsole: React.PropTypes.bool.isRequired,
-  debugWatch: React.PropTypes.bool.isRequired,
-  isDebuggerPaused: React.PropTypes.bool.isRequired,
-  stepSpeed: React.PropTypes.number.isRequired,
-  setStepSpeed: React.PropTypes.func.isRequired
-};
+export {UnconnectedJsDebugger};
 
-module.exports = connect(function propsFromStore(state) {
+export default connect(function propsFromStore(state) {
   return {
     debugButtons: state.pageConstants.showDebugButtons,
     debugConsole: state.pageConstants.showDebugConsole,
     debugWatch: state.pageConstants.showDebugWatch,
+    debugSlider: state.pageConstants.showDebugSlider,
     isDebuggerPaused: state.runState.isDebuggerPaused,
     stepSpeed: state.runState.stepSpeed
   };
@@ -216,4 +255,5 @@ module.exports = connect(function propsFromStore(state) {
       dispatch(setStepSpeed(stepSpeed));
     }
   };
-})(JsDebugger);
+})(UnconnectedJsDebugger);
+

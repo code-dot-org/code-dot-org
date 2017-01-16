@@ -16,8 +16,9 @@
         video: Unplug2
       Unplug3:
         title: "グラフ用紙のプログラミング"
-        desc: |
+        desc: |+
           1 つで別の絵を描くことをプログラミングで行うということによって、生徒達はプログラミングがどんなものか本当に理解し始めます。授業では、目の前にある画像を再現するのに、お互いグラフ用紙に色の正方形をつくる指示をすることで始められます。もし時間があれば、生徒自らが作り出した画像でレッスンを締めくくるのことができます。
+
         pdfs:
         - unplug3
         video: Unplug3
@@ -162,7 +163,7 @@
           using pieces of paper.
         video: C3_internet
       Crowdsourcing:
-        title: Crowdsourcing
+        title: "クラウドソーシング"
         desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
@@ -198,7 +199,7 @@
           we’re going to learn how to use loops with extra structure built right in.
         video: C4_unplugged_forloops
       SongwritingWithParameters:
-        title: Songwriting With Parameters
+        title: "パラメーターで作詞作曲"
         desc: 'One of the most magnificent structures in the computer science world
           is the function.  Functions (sometimes called procedures) are mini programs
           that you can use over and over inside of your bigger program. This lesson

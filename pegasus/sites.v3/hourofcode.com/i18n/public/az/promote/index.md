@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -23,9 +25,9 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Məktəbinizdən "Kod Saatı" təşkil etməsini istəyin
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
-## 3. Ask your employer to get involved
+## 3. İşlədiyiniz təşkilatın iştirak etməyini istəyin
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your manager or company's CEO.
 
@@ -36,3 +38,5 @@ Tell your friends about the **#HourOfCode**!
 ## 5. Yerli vəzifəli bir şəxsdən Kod Saatını dəstəkləməsini xahiş edin
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+<%= view :signup_button %>

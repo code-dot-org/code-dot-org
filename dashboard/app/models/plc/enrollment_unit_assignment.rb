@@ -30,7 +30,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     COMPLETED = 'completed'
   ]
 
-  after_create :enroll_user_in_required_modules
+  after_save :enroll_user_in_required_modules
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
 

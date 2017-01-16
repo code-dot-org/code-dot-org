@@ -1,17 +1,17 @@
 Feature: The video fallback player works as expected
 
 Background:
-  Given I am on "http://learn.code.org/reset_session"
+  Given I am on "http://studio.code.org/reset_session"
 
 Scenario: Fallback player
-  Given I am on "http://learn.code.org/flappy/1?force_youtube_fallback"
+  Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
   When I rotate to landscape
   And I wait to see "#x-close"
   Then I see ".video-js"
 
 @chrome
 Scenario: Flash fallback player gets injected in Chrome (assuming Flash is available)
-  Given I am on "http://learn.code.org/flappy/1?force_youtube_fallback"
+  Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
   When I rotate to landscape
   And I wait to see "#x-close"
   Then I see ".video-js"
@@ -22,7 +22,7 @@ Scenario: Flash fallback player gets injected in Chrome (assuming Flash is avail
 @no_ie
 @no_mobile
 Scenario: Normal player
-  Given I am on "http://learn.code.org/flappy/1"
+  Given I am on "http://studio.code.org/flappy/1"
   And I wait to see "#x-close"
   When I rotate to landscape
   Then I see "#video"

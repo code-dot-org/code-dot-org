@@ -1,9 +1,7 @@
-/* global Dialog, appOptions, CDOSounds */
 import $ from 'jquery';
+import { registerGetResult, onAnswerChanged } from './codeStudioLevels';
 
-window.levelGroup = window.levelGroup || {levels: {}};
-
-var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
+var Multi = function (levelId, id, app, standalone, numAnswers, answers, answersFeedback, lastAttemptString, containedMode) {
 
   // The dashboard levelId.
   this.levelId = levelId;
@@ -43,10 +41,7 @@ var Multi = window.Multi = function (levelId, id, app, standalone, numAnswers, a
 
   this.submitAllowed = true;
 
-  $(document).ready($.proxy(function () {
-    this.ready();
-  }, this));
-
+  $(document).ready(() => this.ready());
 };
 
 
@@ -64,9 +59,7 @@ Multi.prototype.choiceClicked = function (button) {
 
   this.clickItem(index);
 
-  if (window.levelGroup && window.levelGroup.answerChangedFn) {
-    window.levelGroup.answerChangedFn(this.levelId, true);
-  }
+  onAnswerChanged(this.levelId, true);
 };
 
 
@@ -157,9 +150,9 @@ Multi.prototype.ready = function () {
   this.enableButton(false);
 
   // If we are relying on the containing page's submission buttons/dialog, then
-  // we need to provide a window.getResult function.
+  // we need to provide a getResult function.
   if (this.standalone) {
-    window.getResult = $.proxy(this.getResult, this);
+    registerGetResult(this.getResult.bind(this));
   }
 
   // Pre-select previously submitted response if available.
@@ -215,11 +208,11 @@ Multi.prototype.getResult = function (dontAllowSubmit) {
   }
 
   return {
-    "response": answer,
-    "result": result,
-    "errorType": errorType,
-    "submitted": submitted,
-    "valid": valid
+    response: answer,
+    result: result,
+    errorType: errorType,
+    submitted: submitted,
+    valid: valid
   };
 };
 
@@ -249,20 +242,31 @@ Multi.prototype.submitButtonClick = function () {
   // already crossed out, then mark it as answered wrong.
   if (this.numAnswers === 1 &&
       this.crossedAnswers.indexOf(this.lastSelectionIndex) === -1 &&
-      ! this.validateAnswers()) {
+      !this.validateAnswers()) {
     $("#" + this.id + " #checked_" + this.lastSelectionIndex).hide();
     $("#" + this.id + " #cross_" + this.lastSelectionIndex).show();
     this.crossedAnswers.unshift(this.lastSelectionIndex);
   }
 };
 
+/**
+ * @returns {boolean} True if this Multi has been provided with answers, and the
+ *   selected answer(s) are the correct one(s).
+ */
 Multi.prototype.validateAnswers = function () {
+  if (!this.answers) {
+    return false;
+  }
+
   if (this.selectedAnswers.length === this.numAnswers) {
     for (var i = 0; i < this.numAnswers; i++) {
-      if (! this.answers[this.selectedAnswers[i]]) {
+      if (!this.answers[this.selectedAnswers[i]]) {
         return false;
       }
     }
     return true;
   }
+  return false;
 };
+
+export default Multi;

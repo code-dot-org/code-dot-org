@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-var library = require('./designElements/library');
+import library from './designElements/library';
 
-module.exports = React.createClass({
+export default React.createClass({
   propTypes: {
     imageUrl: React.PropTypes.string.isRequired,
     desc: React.PropTypes.string.isRequired,

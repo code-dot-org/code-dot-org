@@ -24,8 +24,6 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var evalMsg = require('./locale');
-var skins = require('../skins');
-var levels = require('./levels');
 var codegen = require('../codegen');
 var api = require('./api');
 var Provider = require('react-redux').Provider;
@@ -36,18 +34,13 @@ var blockUtils = require('../block_utils');
 var CustomEvalError = require('./evalError');
 var EvalText = require('./evalText');
 var utils = require('../utils');
-var experiments = require('../experiments');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
 
-// Loading these modules extends SVGElement and puts canvg in the global
-// namespace
-var canvg = require('canvg');
+import canvg from 'canvg';
 // tests don't have svgelement
-if (typeof SVGElement !== 'undefined') {
-  require('../canvg/svg_todataurl');
-}
+import '../util/svgelement-polyfill';
 
 var level;
 var skin;
@@ -83,8 +76,6 @@ Eval.init = function (config) {
   config.skin.smallStaticAvatar = null;
   config.skin.failureAvatar = null;
   config.skin.winAvatar = null;
-
-  config.showInstructionsInTopPane = experiments.isEnabled('topInstructionsCSF');
 
   config.loadAudio = function () {
     studioApp.loadAudio(skin.winSound, 'win');
@@ -481,7 +472,6 @@ Eval.execute = function () {
   var reportData = {
     app: 'eval',
     level: level.id,
-    builder: level.builder,
     result: Eval.result,
     testResult: Eval.testResults,
     program: encodeURIComponent(textBlocks),

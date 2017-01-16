@@ -124,7 +124,7 @@ const Pairing = React.createClass({
 
   renderPairingSelector() {
     return (
-      <div>
+      <div style={{maxHeight: window.innerHeight * 0.8 - 100, overflowY: 'auto'}}>
         <p className="dialog_title">Pair programming</p>
         <h1>Choose partners:</h1>
         <br/>

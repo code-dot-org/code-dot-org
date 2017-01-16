@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'digest'
+require 'securerandom'
 require 'aws-sdk'
 require_relative '../../../cookbooks/cdo-varnish/libraries/http_cache'
 require_relative '../../../cookbooks/cdo-varnish/libraries/helpers'
@@ -90,6 +91,36 @@ module AWS
       CLOUDFRONT_ALIAS_CACHE
     end
 
+    def self.invalidate_caches
+      puts 'Creating CloudFront cache invalidations...'
+      cloudfront = Aws::CloudFront::Client.new(logger: Logger.new(dashboard_dir('log/cloudfront.log')),
+                                               log_level: :debug,
+                                               http_wire_trace: true)
+      invalidations = CONFIG.keys.map do |app|
+        hostname = CDO.method("#{app}_hostname").call
+        id = get_distribution_id_with_retry(cloudfront, hostname)
+        invalidation = cloudfront.create_invalidation({
+          distribution_id: id,
+          invalidation_batch: {
+            paths: {
+              quantity: 1,
+              items: ['/*'],
+            },
+            caller_reference: SecureRandom.hex,
+          },
+        }).invalidation.id
+        [app, id, invalidation]
+      end
+      puts 'Invalidations created.'
+      invalidations.map do |app, id, invalidation|
+        cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
+          waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
+          waiter.before_wait { |_| puts "Waiting for #{app} cache invalidation.." }
+        end
+        puts "#{app} cache invalidated!"
+      end
+    end
+
     # Creates or updates the CloudFront distribution based on the current configuration.
     # Calls to this method should be idempotent, however CloudFront distribution updates can take ~15 minutes to finish.
     #
@@ -132,6 +163,7 @@ module AWS
 
       ids.map do |app, id|
         cloudfront.wait_until(:distribution_deployed, id: id) do |waiter|
+          waiter.max_attempts = 60 # wait up to an hour for CloudFront distribution to deploy
           waiter.before_wait { |_| puts "Waiting for #{app} distribution to deploy.." }
         end
         puts "#{app} distribution deployed!"
@@ -182,8 +214,6 @@ module AWS
       server_certificate_id = ssl_cert && Aws::IAM::Client.new.
         get_server_certificate(server_certificate_name: ssl_cert).
         server_certificate.server_certificate_metadata.server_certificate_id
-      # accepts sni-only, vip
-      ssl_support_method = (app == :hourofcode) ? 'sni-only' : 'vip'
       {
         aliases: {
           quantity: cloudfront[:aliases].length, # required
@@ -252,7 +282,7 @@ module AWS
           certificate: server_certificate_id,
           iam_certificate_id: server_certificate_id,
           certificate_source: 'iam',
-          ssl_support_method: ssl_support_method,
+          ssl_support_method: 'sni-only', # accepts sni-only, vip
           minimum_protocol_version: 'TLSv1' # accepts SSLv3, TLSv1
         } : {
           cloud_front_default_certificate: true,
@@ -264,7 +294,8 @@ module AWS
             quantity: 0 # required
           },
         },
-        web_acl_id: ''
+        web_acl_id: '',
+        http_version: 'http2'
       }.tap do |cf|
         cf[:caller_reference] = reference || Digest::MD5.hexdigest(Marshal.dump(config)) # required
       end
@@ -310,7 +341,8 @@ module AWS
           {
             Id: 'cdo',
             CustomOriginConfig: {
-              OriginProtocolPolicy: 'match-viewer'
+              OriginProtocolPolicy: 'match-viewer',
+              OriginSSLProtocols: %w(TLSv1.2 TLSv1.1)
             },
             DomainName: origin,
             OriginPath: '',
@@ -334,6 +366,7 @@ module AWS
           CloudFrontDefaultCertificate: true,
           MinimumProtocolVersion: 'TLSv1' # accepts SSLv3, TLSv1
         },
+        HttpVersion: 'http2'
       }.to_json
     end
 
@@ -368,6 +401,9 @@ module AWS
             quantity: headers.length, # required
             items: headers.empty? ? nil : headers,
           },
+          query_string_cache_keys: {
+            quantity: 0
+          },
         },
         trusted_signers: {# required
           enabled: false, # required
@@ -386,7 +422,7 @@ module AWS
         smooth_streaming: false,
         default_ttl: 0,
         max_ttl: 31_536_000, # =1 year
-        compress: s3, # Serve gzip-compressed assets on s3 origins
+        compress: true, # Serve gzip-compressed assets
       }
       behavior[:path_pattern] = path if path
       behavior
@@ -411,7 +447,7 @@ module AWS
       {
         AllowedMethods: ALLOWED_METHODS,
         CachedMethods: CACHED_METHODS,
-        Compress: s3,
+        Compress: true,
         DefaultTTL: 0,
         ForwardedValues: {
           Cookies: cookie_config,

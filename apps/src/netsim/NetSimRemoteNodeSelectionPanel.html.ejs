@@ -261,6 +261,16 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         writeNodeRow(row, row.status, buttonType, row.classAttr);
       });
 
+      if (lobbyRows.length === 0) {
+        writeEmptyRow(i18n.lobbyIsEmpty());
+      }
+
+      writeEndTbody();
+      writeEndTable();
+    %>
+    </div>
+
+    <%
       var buttons = [];
 
       if (controller.canAddRouter()) {
@@ -289,15 +299,13 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
       }
 
       if (buttons.length > 0) {
-        writeEmptyRow(buttons.join(' '));
-      } else if (lobbyRows.length === 0) {
-        writeEmptyRow(i18n.lobbyIsEmpty());
+        %>
+          <div class="netsim-lobby-buttons">
+            <%- buttons.join(' ') %>
+          </div>
+        <%
       }
-
-      writeEndTbody();
-      writeEndTable();
     %>
-    </div>
 
     <% if (controller.isUserAlone()) { %>
     <div class="lobby-hint">

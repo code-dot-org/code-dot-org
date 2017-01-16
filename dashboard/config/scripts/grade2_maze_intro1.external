@@ -1,0 +1,11 @@
+name 'grade2_maze_intro1'
+title 'title'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+![](https://images.code.org/7a82e58c3472eb39dd29b7ca76463212-image-1475093256478.png)
+
+Welcome to the pet shop!  This year, we are going to teach our pets lots of things, like sequence, loops, and events!
+
+
+MARKDOWN

@@ -1,4 +1,4 @@
-"zh":
+"zh-CN":
   devise:
     confirmations:
       confirmed: "你的电子邮件地址已验证成功。"
@@ -58,7 +58,7 @@
     invitations:
       send_instructions: "一封邀请电子邮件已经发送至%{email}。"
       invitation_token_invalid: "提供的邀请令牌无效！"
-      updated: |2
+      updated: |2-
 
         您的密码已经设置成功。您现在已经在登录状态了。
       no_invitations_remaining: "没有剩余的邀请"

@@ -40,16 +40,18 @@ const ToggleGroup = React.createClass({
     // Remove falsy children to make sure first and last buttons are rounded properly.
     const children = React.Children.toArray(this.props.children).filter(child => !!child);
     return children.map((child, index) => {
+      const isSelected = child.props.value === this.props.selected;
       return (
         <ToggleButton
           id={child.props.id}
+          className={child.props.className}
           key={child.key}
-          active={child.props.value === this.props.selected}
+          active={isSelected}
           first={index === 0}
           last={index === children.length - 1}
           activeColor={this.props.activeColor}
           title={child.props.title}
-          onClick={this.setSelected.bind(this, child.props.value)}
+          onClick={isSelected ? undefined : this.setSelected.bind(this, child.props.value)}
         >
           {child.props.children}
         </ToggleButton>

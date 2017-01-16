@@ -7,7 +7,7 @@ $node_name = 'default'
 # Keep these hostname helper methods in sync with deployment.rb.
 # TODO Find a better way to reuse existing application configuration in Chef config helpers.
 def canonical_hostname(domain)
-  return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
+  return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?($node_name)
   return domain if $node_env == 'production'
 
   # our HTTPS wildcard certificate only supports *.code.org
@@ -110,11 +110,9 @@ def process_vary(behavior, _)
   behavior[:headers].each do |header|
     out << set_vary(header, 'beresp')
   end
-  case behavior[:cookies]
-  when 'all'
+  if behavior[:cookies] == 'all'
     out << set_vary('Cookie', 'beresp')
-  when 'none'
-  else
+  elsif behavior[:cookies] != 'none'
     behavior[:cookies].each do |cookie|
       out << set_vary("X-COOKIE-#{cookie}", 'beresp')
     end

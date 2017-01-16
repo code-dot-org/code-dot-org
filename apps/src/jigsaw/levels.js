@@ -103,6 +103,7 @@ module.exports = {
     instructionsIcon: 'smiley',
     aniGifURL: '/script_assets/k_1_images/instruction_gifs/drag-drop.gif',
     isK1: true,
+    instructionsImportant: true,
     image: {
       name: 'smiley',
       width: 200,

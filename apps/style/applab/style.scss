@@ -245,12 +245,6 @@ div#visualizationResizeBar {
   }
 }
 
-body.embedded_iframe {
-  #visualizationColumn.wireframeShare {
-    padding: 0px;
-  }
-}
-
 #visualizationColumn.chromelessShare {
   #playSpaceHeader, #gameButtons {
     display: none;
@@ -489,8 +483,10 @@ body.embedded_iframe {
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue); /* Standard syntax */
 }
 
-img#turtleImage {
+#divApplab img#turtleImage {
+  // scss-lint:disable all
   position: absolute;
   height: 24px;
+  width: 24px;
   margin: 0px;
 }

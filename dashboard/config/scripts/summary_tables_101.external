@@ -1,0 +1,36 @@
+name 'Summary Tables 101'
+
+markdown <<MARKDOWN
+# Summary Tables 101
+
+
+A summary, or pivot, table typically represents an aggregation data (groupings of items) along with computations that are performed on that aggregation of data. Making a summary table is often considered an advanced technique. Once you get used to it, however, it’s an extremely powerful computational tool that is available in most spreadsheet software. The purpose of introducing summary tables in unit 2 is to acquaint students with using this feature of spreadsheeting tools as yet another way to spot trends in data. They are often used to sort, count, or average rows of data so they can be better understood by the viewer.  What’s more, creating summary tables is a direct tie to the CSP Framework essential knowledge statement: 
+
+> 3.1.3C: Summaries of data analyzed computationally can be effective in communicating insight and knowledge gained from digitally represented information.
+
+
+## An Example
+
+The following example is pulled from the Wikipedia article about pivot tables. <a href="https://en.wikipedia.org/wiki/Pivot_table" target=_blank>Read the full article here <i class="fa fa-external-link-square"/></a>
+
+
+<div style="margin-left:15px"> <h2><i class="fa fa-quote-left" aria-hidden="true"></i></h2></div> <div style="float:right; margin-left:25px">For typical data entry and storage, data usually appear in flat tables, meaning that they consist of only columns and rows, as in the following example showing data on shirt types:
+<br><br>
+<img src="https://images.code.org/3e96229637bbacb7976ef6c1274c1fdc-image-1477890127195.png" style="margin-left:25%">
+<br><br>
+While tables such as these can contain many data items, it can be difficult to get summarized information from them. A pivot table can help quickly summarize the data and highlight the desired information. The usage of a pivot table is extremely broad and depends on the situation. The first question to ask is, "What am I seeking?" In the example here, let us ask, "How many Units did we sell in each Region for every Ship Date?":
+<br><br>
+<img src="https://images.code.org/c31434c432e909f1f976a02a0379736b-image-1477890114233.PNG" style="margin-left:25%">
+<br><br>
+A pivot table usually consists of row, column and data (or fact) fields. In this case, the column is Ship Date, the row is Region and the datum we would like to see is (sum of) Units. These fields allow several kinds of aggregations, including: sum, average, standard deviation, count, etc. In this case, the total number of units shipped is displayed here using a sum aggregation.<div style="float:right; margin-right:15px">
+<h2><i class="fa fa-quote-right" aria-hidden="true"></i></h2></div>
+<br><br>
+</div> 
+
+
+## Try one of your own
+
+To try out pivot tables yourself, follow along with <a href = "http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/" target=_blank> this <i class="fa fa-external-link-square"/></a> tutorial.
+
+
+MARKDOWN

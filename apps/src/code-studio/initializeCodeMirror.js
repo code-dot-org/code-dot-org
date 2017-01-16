@@ -3,16 +3,23 @@
  */
 /* global inlineAttach */
 import $ from 'jquery';
-var CodeMirror = require('codemirror');
-require("codemirror/mode/markdown/markdown");
-require("codemirror/addon/edit/closetag");
-require("codemirror/addon/edit/matchtags");
-require("codemirror/addon/edit/matchbrackets");
-require("codemirror/addon/edit/trailingspace");
-require("codemirror/addon/fold/xml-fold");
-require("codemirror/mode/xml/xml");
-require("codemirror/mode/javascript/javascript");
-require("./vendor/codemirror.inline-attach");
+import CodeMirror from 'codemirror';
+import CodeMirrorSpellChecker from 'codemirror-spell-checker';
+import 'codemirror/mode/markdown/markdown';
+import 'codemirror/addon/edit/closetag';
+import 'codemirror/addon/edit/matchtags';
+import 'codemirror/addon/edit/matchbrackets';
+import 'codemirror/addon/edit/trailingspace';
+import 'codemirror/addon/mode/overlay';
+import 'codemirror/addon/fold/xml-fold';
+import 'codemirror/mode/xml/xml';
+import 'codemirror/mode/javascript/javascript';
+import './vendor/codemirror.inline-attach';
+import marked from 'marked';
+
+CodeMirrorSpellChecker({
+  codeMirrorInstance: CodeMirror,
+});
 
 /**
  * initializeCodeMirror replaces a textarea on the page with a full-featured
@@ -24,6 +31,8 @@ require("./vendor/codemirror.inline-attach");
  *        this editor.
  */
 module.exports = function (target, mode, callback, attachments) {
+  let updatePreview;
+
   // Code mirror parses html using xml mode
   var htmlMode = false;
   if (mode === 'html') {
@@ -32,8 +41,36 @@ module.exports = function (target, mode, callback, attachments) {
   }
 
   var node = target.nodeType ? target : document.getElementById(target);
+
+  var backdrop = undefined;
+  if (mode === 'markdown') {
+    backdrop = mode;
+    mode = 'spell-checker';
+
+    // In markdown mode, look for a preview element (found by just appending
+    // _preview to the target id), if it exists extend our callback to update
+    // the preview element with the markdown contents
+    const previewElement = $(`#${node.id}_preview`);
+    if (previewElement.length > 0) {
+      const originalCallback = callback;
+      updatePreview = editor => {
+        previewElement.html(marked(editor.getValue()));
+        previewElement.children('details').details();
+      };
+
+      callback = (editor, ...rest) => {
+        updatePreview(editor);
+        if (originalCallback) {
+          originalCallback(editor, ...rest);
+        }
+      };
+
+    }
+  }
+
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,
+    backdrop: backdrop,
     htmlMode: htmlMode,
     viewportMargin: Infinity,
     matchTags: {bothTags: true},
@@ -44,8 +81,10 @@ module.exports = function (target, mode, callback, attachments) {
   if (callback) {
     editor.on('change', callback);
   }
+  if (updatePreview) {
+     updatePreview(editor);
+  }
   if (attachments) {
-
     // default options are for markdown mode
     var attachOptions = {
       uploadUrl: '/level_assets/upload',

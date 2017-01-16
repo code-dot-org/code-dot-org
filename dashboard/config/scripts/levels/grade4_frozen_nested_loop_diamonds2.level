@@ -23,7 +23,7 @@
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.\r\n\r\n<h4>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/8ac71bed65fe0a472a6cc7629e8fdac9-image-1442593741401.png)\r\n</details>\r\n</h4>",
+    "markdown_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

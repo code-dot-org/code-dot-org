@@ -7,18 +7,13 @@
 
 import React from 'react';
 import moment from 'moment';
-import _ from 'lodash';
 import {
-  Row,
-  Col,
-  Button,
-  FormGroup,
   FormControl,
   InputGroup,
-  HelpBlock,
   Dropdown,
   MenuItem
 } from 'react-bootstrap';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
 const styles = {
@@ -41,6 +36,7 @@ const styles = {
     fontFamily: '"Gotham 4r"'
   },
   readOnlyInput: {
+    fontFamily: '"Gotham 4r"',
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none'
@@ -79,7 +75,32 @@ const TimeSelect = React.createClass({
     this.props.onChange(time);
   },
 
+  renderInput() {
+    return (
+      <InputGroup>
+        <FormControl
+          type="text"
+          value={this.props.value || ''}
+          placeholder="hh:mm"
+          onChange={this.handleChange}
+          onBlur={this.handleBlur}
+          style={this.props.readOnly ? styles.readOnlyInput : styles.input}
+          disabled={this.props.readOnly}
+        />
+        {!this.props.readOnly && (
+          <InputGroup.Addon>
+            <FontAwesome icon="clock-o"/>
+          </InputGroup.Addon>
+        )}
+      </InputGroup>
+    );
+  },
+
   render() {
+    if (this.props.readOnly) {
+      return this.renderInput();
+    }
+
     const times = [];
     const minTime = moment(this.props.minTime, TIME_FORMAT);
     const maxTime = moment(this.props.maxTime, TIME_FORMAT);
@@ -108,7 +129,6 @@ const TimeSelect = React.createClass({
     return (
       <Dropdown
         id={this.props.id}
-        disabled={!!this.props.readOnly}
         style={styles.dropdown}
       >
         <Dropdown.Toggle
@@ -116,20 +136,7 @@ const TimeSelect = React.createClass({
           useAnchor={true}
           style={styles.toggle}
         >
-          <InputGroup>
-            <FormControl
-              type="text"
-              value={this.props.value || ''}
-              placeholder="hh:mm"
-              onChange={this.handleChange}
-              onBlur={this.handleBlur}
-              style={_.merge(styles.input, (this.props.readOnly && styles.readOnlyInput))}
-              disabled={this.props.readOnly}
-            />
-            <InputGroup.Addon>
-              {!this.props.readOnly && <i className="fa fa-clock-o" />}
-            </InputGroup.Addon>
-          </InputGroup>
+          {this.renderInput()}
         </Dropdown.Toggle>
         <Dropdown.Menu style={styles.menu}>
           {menuItems}

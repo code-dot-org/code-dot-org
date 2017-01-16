@@ -1,17 +1,17 @@
-/* global trackEvent, Blockly, ace:true, droplet, dashboard, addToHome */
+/* global trackEvent, Blockly, droplet, dashboard, addToHome */
 
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 var aceMode = require('./acemode/mode-javascript_codeorg');
-var color = require('./color');
+var color = require("./util/color");
 var parseXmlElement = require('./xml').parseElement;
 var utils = require('./utils');
 var dropletUtils = require('./dropletUtils');
 var _ = require('lodash');
 var dom = require('./dom');
 var constants = require('./constants.js');
-var experiments = require('./experiments');
+var experiments = require("./util/experiments");
 var KeyCodes = constants.KeyCodes;
 var msg = require('@cdo/locale');
 var blockUtils = require('./block_utils');
@@ -24,33 +24,30 @@ var codegen = require('./codegen');
 var puzzleRatingUtils = require('./puzzleRatingUtils');
 var logToCloud = require('./logToCloud');
 var AuthoredHints = require('./authoredHints');
-var Instructions = require('./templates/instructions/Instructions');
 var DialogButtons = require('./templates/DialogButtons');
-var WireframeSendToPhone = require('./templates/WireframeSendToPhone');
+import WireframeButtons from './templates/WireframeButtons';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 var assetsApi = require('./clientApi').assets;
-var assetPrefix = require('./assetManagement/assetPrefix');
+import * as assetPrefix from './assetManagement/assetPrefix';
 var annotationList = require('./acemode/annotationList');
-var processMarkdown = require('marked');
 var shareWarnings = require('./shareWarnings');
 import { setPageConstants } from './redux/pageConstants';
+import { lockContainedLevelAnswers } from './code-studio/levels/codeStudioLevels';
+import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 
-var redux = require('./redux');
+import { getStore, registerReducers } from './redux';
 import { Provider } from 'react-redux';
 import {
-  substituteInstructionImages,
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
 import {
-  openDialog as openInstructionsDialog,
   closeDialog as closeInstructionsDialog
 } from './redux/instructionsDialog';
 import { setIsRunning } from './redux/runState';
 var commonReducers = require('./redux/commonReducers');
-var combineReducers = require('redux').combineReducers;
 
 var copyrightStrings;
 
@@ -212,12 +209,6 @@ function StudioApp() {
    */
   this.wireframeShare = false;
 
-  /**
-   * Redux store that will be created during configureRedux, based on a common
-   * set of reducers and a set of reducers (potentially) supplied by the app
-   */
-  this.reduxStore = null;
-
   this.onAttempt = undefined;
   this.onContinue = undefined;
   this.onResetPressed = undefined;
@@ -230,11 +221,7 @@ function StudioApp() {
 
   this.MIN_WORKSPACE_HEIGHT = undefined;
 }
-// TODO: once code-studio and apps share common modules in the same bundle,
-// get rid of this window nonsense.
-module.exports = window.StudioApp = window.StudioApp || {
-  singleton: new StudioApp()
-};
+Object.defineProperty(StudioApp.prototype, 'reduxStore', { get: getStore });
 
 /**
  * Configure StudioApp options
@@ -283,8 +270,7 @@ StudioApp.prototype.configureRedux = function (reducers) {
  * runs).
  */
 StudioApp.prototype.createReduxStore_ = function () {
-  var combined = combineReducers(_.assign({}, commonReducers, this.reducers_));
-  this.reduxStore = redux.createStore(combined);
+  registerReducers(_.assign({}, commonReducers, this.reducers_));
 
   if (experiments.isEnabled('reduxGlobalStore')) {
     // Expose our store globally, to make debugging easier
@@ -296,7 +282,9 @@ StudioApp.prototype.createReduxStore_ = function () {
  * @param {AppOptionsConfig}
  */
 StudioApp.prototype.hasInstructionsToShow = function (config) {
-  return !!(config.level.instructions || config.level.aniGifURL);
+  return !!(config.level.instructions ||
+      config.level.markdownInstructions ||
+      config.level.aniGifURL);
 };
 
 /**
@@ -306,7 +294,7 @@ function showWarnings(config) {
   shareWarnings.checkSharedAppWarnings({
     channelId: config.channel,
     isSignedIn: config.isSignedIn,
-    is13Plus: config.is13Plus,
+    isOwner: dashboard.project.isOwner(),
     hasDataAPIs: config.shareWarningInfo.hasDataAPIs,
     onWarningsComplete: config.shareWarningInfo.onWarningsComplete,
     onTooYoung: config.shareWarningInfo.onTooYoung,
@@ -321,6 +309,8 @@ StudioApp.prototype.init = function (config) {
   if (!config) {
     config = {};
   }
+
+  this.hasContainedLevels = config.hasContainedLevels;
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -342,8 +332,8 @@ StudioApp.prototype.init = function (config) {
   ReactDOM.render(
     <Provider store={this.reduxStore}>
       <InstructionsDialogWrapper
-        showInstructionsDialog={(autoClose, showHints) => {
-            this.showInstructionsDialog_(config.level, autoClose, showHints);
+        showInstructionsDialog={(autoClose) => {
+            this.showInstructionsDialog_(config.level, autoClose);
           }}
       />
     </Provider>,
@@ -354,9 +344,9 @@ StudioApp.prototype.init = function (config) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
-    assetsApi.ajax('GET', '', function (xhr) {
-      dashboard.assets.listStore.reset(JSON.parse(xhr.responseText));
-    }, function () {
+    assetsApi.getFiles(result => {
+      dashboard.assets.listStore.reset(result.files);
+    }, xhr => {
       // Unable to load asset list
     });
   }
@@ -443,18 +433,7 @@ StudioApp.prototype.init = function (config) {
   }
 
   if (config.showInstructionsWrapper) {
-    config.showInstructionsWrapper(function () {
-      if (config.showInstructionsInTopPane) {
-        return;
-      }
-      var shouldAutoClose = !!config.level.aniGifURL;
-      this.reduxStore.dispatch(openInstructionsDialog({
-        autoClose: shouldAutoClose,
-        showHints: false,
-        aniGifOnly: false,
-        hintsOnly: false
-      }));
-    }.bind(this));
+    config.showInstructionsWrapper(() => {});
   }
 
   // In embed mode, the display scales down when the width of the
@@ -481,7 +460,7 @@ StudioApp.prototype.init = function (config) {
       }
     };
     // Depends on ResizeSensor.js
-    var ResizeSensor = require('./ResizeSensor');
+    var ResizeSensor = require("./third-party/ResizeSensor");
     ResizeSensor(document.getElementById('visualizationColumn'), resize);
   }
 
@@ -494,8 +473,6 @@ StudioApp.prototype.init = function (config) {
   if (config.loadAudio) {
     config.loadAudio();
   }
-
-  this.configureHints_(config);
 
   if (this.editCode) {
     this.handleEditCode_(config);
@@ -516,16 +493,16 @@ StudioApp.prototype.init = function (config) {
   // so it can decide whether or not to show a warning.
   this.startIFrameEmbeddedApp = this.startIFrameEmbeddedApp.bind(this, config);
 
-  if (this.share && config.shareWarningInfo) {
-    if (!config.level.iframeEmbed) {
-      // shared apps that are embedded in an iframe handle warnings in
-      // startIFrameEmbeddedApp since they don't become "active" until the user
-      // clicks on them.
-      showWarnings(config);
-    }
+  // config.shareWarningInfo is set on a per app basis (in applab and gamelab)
+  // shared apps that are embedded in an iframe handle warnings in
+  // startIFrameEmbeddedApp since they don't become "active" until the user
+  // clicks on them.
+  if (config.shareWarningInfo && !config.level.iframeEmbed) {
+    showWarnings(config);
   }
 
-  if (!!config.level.projectTemplateLevelName) {
+  if (!!config.level.projectTemplateLevelName && !config.level.isK1 &&
+      !config.readonlyWorkspace) {
     this.displayWorkspaceAlert('warning', <div>{msg.projectWarning()}</div>);
   }
 
@@ -612,81 +589,29 @@ StudioApp.prototype.init = function (config) {
   }
 };
 
+StudioApp.prototype.getVersionHistoryHandler = function (config) {
+  return () => {
+    var contentDiv = document.createElement('div');
+    var dialog = this.createModalDialog({
+      Dialog: this.Dialog,
+      contentDiv: contentDiv,
+      defaultBtnSelector: 'again-button',
+      id: 'showVersionsModal'
+    });
+    ReactDOM.render(React.createElement(VersionHistory, {
+      handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
+      useFilesApi: !!config.useFilesApi
+    }), contentDiv);
+
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.initVersionHistoryUI = function (config) {
   // Bind listener to 'Version History' button
   var versionsHeader = document.getElementById('versions-header');
   if (versionsHeader) {
-    dom.addClickTouchEvent(versionsHeader, (function () {
-      var codeDiv = document.createElement('div');
-      var dialog = this.createModalDialog({
-        Dialog: this.Dialog,
-        contentDiv: codeDiv,
-        defaultBtnSelector: 'again-button',
-        id: 'showVersionsModal'
-      });
-      ReactDOM.render(React.createElement(VersionHistory, {
-        handleClearPuzzle: this.handleClearPuzzle.bind(this, config)
-      }), codeDiv);
-
-      dialog.show();
-    }).bind(this));
-  }
-};
-
-StudioApp.prototype.getFirstContainedLevelResult_ = function () {
-  var results = this.getContainedLevelResults();
-  if (results.length !== 1) {
-    throw "Exactly one contained level result is currently required.";
-  }
-  return results[0];
-};
-
-StudioApp.prototype.hasValidContainedLevelResult_ = function () {
-  var firstResult = this.getFirstContainedLevelResult_();
-  return firstResult.result.valid;
-};
-
-/**
- * @param {!AppOptionsConfig} config
- */
- StudioApp.prototype.notifyInitialRenderComplete = function (config) {
-  if (config.hasContainedLevels && config.containedLevelOps) {
-    this.lockContainedLevelAnswers = config.containedLevelOps.lockAnswers;
-    this.getContainedLevelResults = config.containedLevelOps.getResults;
-
-    $('#containedLevel0').appendTo($('#containedLevelContainer'));
-
-    if (this.hasValidContainedLevelResult_()) {
-      // We already have an answer, don't allow it to be changed, but allow Run
-      // to be pressed so the code can be run again.
-      this.lockContainedLevelAnswers();
-    } else {
-      // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
-
-      config.containedLevelOps.registerAnswerChangedFn(levelId => {
-        $('#runButton').prop('disabled', !this.hasValidContainedLevelResult_());
-      });
-    }
-  }
-};
-
-StudioApp.prototype.getContainedLevelResultsInfo = function () {
-  if (this.getContainedLevelResults) {
-    var firstResult = this.getFirstContainedLevelResult_();
-    var containedResult = firstResult.result;
-    var testResults = utils.valueOr(firstResult.testResult,
-        containedResult.result ? this.TestResults.ALL_PASS :
-          this.TestResults.GENERIC_FAIL);
-    return {
-      app: firstResult.app,
-      level: firstResult.id,
-      callback: firstResult.callback,
-      result: containedResult.result,
-      testResults: testResults,
-      program: containedResult.response,
-      feedback: firstResult.feedback
-    };
+    dom.addClickTouchEvent(versionsHeader, this.getVersionHistoryHandler(config));
   }
 };
 
@@ -697,20 +622,6 @@ StudioApp.prototype.startIFrameEmbeddedApp = function (config, onTooYoung) {
   } else {
     this.runButtonClick();
   }
-};
-
-/**
- * If we have hints, add a click handler to them and add the lightbulb above the
- * icon. Depends on the existence of DOM elements with particular ids, which
- * might be located below the playspace or in the top pane.
- */
-StudioApp.prototype.configureHints_ = function (config) {
-  if (!this.hasInstructionsToShow(config)) {
-    return;
-  }
-
-  var promptIcon = document.getElementById('prompt-icon');
-  this.authoredHintsController_.display(promptIcon);
 };
 
 /**
@@ -880,6 +791,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
 
   var reactProps = {
     i18nDropdown: '',
+    privacyPolicyInBase: false,
     copyrightInBase: false,
     copyrightStrings: copyrightStrings,
     baseMoreMenuString: window.dashboard.i18n.t('footer.built_on_code_studio'),
@@ -923,8 +835,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     phoneFooter: true
   };
 
-  ReactDOM.render(React.createElement(window.dashboard.SmallFooter, reactProps),
-    footerDiv);
+  ReactDOM.render(<SmallFooter {...reactProps}/>, footerDiv);
 };
 
 /**
@@ -967,8 +878,8 @@ StudioApp.prototype.toggleRunReset = function (button) {
 
   this.reduxStore.dispatch(setIsRunning(!showRun));
 
-  if (this.lockContainedLevelAnswers) {
-    this.lockContainedLevelAnswers();
+  if (this.hasContainedLevels) {
+    lockContainedLevelAnswers();
   }
 
   var run = document.getElementById('runButton');
@@ -1196,12 +1107,10 @@ StudioApp.prototype.onReportComplete = function (response) {
  * instead be called when the state of our redux store changes.
  * @param {object} level
  * @param {boolean} autoClose - closes instructions after 32s if true
- * @param {boolean} showHints
  */
-StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHints) {
+StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = this.reduxStore.getState();
   const isMarkdownMode = !!reduxState.instructions.longInstructions;
-  const instructionsInTopPane = reduxState.pageConstants.instructionsInTopPane;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -1248,22 +1157,10 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
   }
 
   var hideFn = _.bind(function () {
-    // Momentarily flash the instruction block white then back to regular.
-    if (!instructionsInTopPane) {
-      $(endTargetSelector).css({"background-color":"rgba(255,255,255,1)"})
-        .delay(500)
-        .animate({"background-color":"rgba(0,0,0,0)"},1000);
-    }
     // Set focus to ace editor when instructions close:
     if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
-
-    // Fire a custom event on the document so that other code can respond
-    // to instructions being closed.
-    var event = document.createEvent('Event');
-    event.initEvent('instructionsHidden', true, true);
-    document.dispatchEvent(event);
 
     // update redux
     this.reduxStore.dispatch(closeInstructionsDialog());
@@ -1280,15 +1177,12 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
     header: headerElement
   });
 
-  const authoredHints = showHints ?
-    this.authoredHintsController_.getHintsDisplay() : undefined;
-
   // Now that our elements are guaranteed to be in the DOM, we can
   // render in our react components
   $(this.instructionsDialog.div).on('show.bs.modal', () => {
     ReactDOM.render(
       <Provider store={this.reduxStore}>
-        <DialogInstructions authoredHints={authoredHints}/>
+        <DialogInstructions />
       </Provider>,
       instructionsReactContainer);
   });
@@ -1309,12 +1203,6 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose, showHi
   }
 
   this.instructionsDialog.show({hideOptions: hideOptions});
-
-  // Fire a custom event on the document so that other code can respond
-  // to instructions being shown.
-  var event = document.createEvent('Event');
-  event.initEvent('instructionsShown', true, true);
-  document.dispatchEvent(event);
 };
 
 /**
@@ -1603,6 +1491,8 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = this.TestResults.EDIT_BLOCKS;
   }
 
+  this.onFeedback(options);
+
   if (this.shouldDisplayFeedbackDialog(options)) {
     // let feedback handle creating the dialog
     this.feedback_.displayFeedback(options, this.requiredBlocks_,
@@ -1610,7 +1500,7 @@ StudioApp.prototype.displayFeedback = function (options) {
       this.maxRecommendedBlocksToFlag_);
   } else {
     // update the block hints lightbulb
-    const missingBlockHints = this.feedback_.getMissingBlockHints(this.recommendedBlocks_, options.level.isK1);
+    const missingBlockHints = this.feedback_.getMissingBlockHints(this.requiredBlocks_.concat(this.recommendedBlocks_), options.level.isK1);
     this.displayMissingBlockHints(missingBlockHints);
 
     // communicate the feedback message to the top instructions via
@@ -1628,10 +1518,10 @@ StudioApp.prototype.displayFeedback = function (options) {
  *     of this.TestResults).false
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
-  // If instructions in top pane are enabled and we show instructions
-  // when collapsed, we only use dialogs for success feedback.
+  // If we show instructions when collapsed, we only use dialogs for
+  // success feedback.
   const constants = this.reduxStore.getState().pageConstants;
-  if (constants.instructionsInTopPane && !constants.noInstructionsWhenCollapsed) {
+  if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(options.feedbackType);
   }
   return true;
@@ -1686,23 +1576,6 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 * {function} onComplete Function to be called upon completion.
 */
 StudioApp.prototype.report = function (options) {
-
-  if (options.containedLevelResultsInfo) {
-    // If we have contained level results, just submit those directly and return
-    this.onAttempt({
-      callback: options.containedLevelResultsInfo.callback,
-      app: options.containedLevelResultsInfo.app,
-      level: options.containedLevelResultsInfo.level,
-      serverLevelId: options.containedLevelResultsInfo.level,
-      result: options.containedLevelResultsInfo.result,
-      testResult: options.containedLevelResultsInfo.testResults,
-      submitted: options.submitted,
-      program: options.containedLevelResultsInfo.program,
-      onComplete: options.onComplete
-    });
-    this.enableShowLinesCount = false;
-    return;
-  }
 
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
@@ -1866,6 +1739,11 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
+
+  if (config.ignoreLastAttempt) {
+    config.level.lastAttempt = '';
+  }
+
   this.startBlocks_ = config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
@@ -1877,7 +1755,8 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   // enableShowCode defaults to true if not defined
   this.enableShowCode = (config.enableShowCode !== false);
-  this.enableShowLinesCount = (config.enableShowLinesCount !== false);
+  this.enableShowLinesCount = (config.enableShowLinesCount !== false &&
+    !config.hasContainedLevels);
 
   // If the level has no ideal block count, don't show a block count. If it does
   // have an ideal, show block count unless explicitly configured not to.
@@ -1890,6 +1769,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   // Store configuration.
   this.onAttempt = config.onAttempt || function () {};
   this.onContinue = config.onContinue || function () {};
+  this.onFeedback = config.onFeedback || function () {};
   this.onInitialize = config.onInitialize ?
                         config.onInitialize.bind(config) : function () {};
   this.onResetPressed = config.onResetPressed || function () {};
@@ -2029,12 +1909,30 @@ StudioApp.prototype.handleHideSource_ = function (options) {
       } else {
         $(vizColumn).addClass('wireframeShare');
 
+        // Set the document to use flex.
+        document.body.className += ' WireframeButtons_container';
+
+        // Create an empty div on the left for padding
         var div = document.createElement('div');
+        div.className = 'WireframeButtons_containerLeft';
+        document.body.insertBefore(div, document.body.firstChild);
+
+        // Add 'withWireframeButtons' class to top level div that wraps app.
+        // This will add necessary styles.
+        div = document.getElementsByClassName('wrapper')[0];
+        if (div) {
+          div.className = 'wrapper withWireframeButtons';
+        }
+
+        // Create div for buttons on the right
+        div = document.createElement('div');
+        div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(React.createElement(WireframeSendToPhone, {
+          ReactDOM.render(React.createElement(WireframeButtons, {
             channelId: dashboard.project.getCurrentId(),
-            appType: dashboard.project.getStandaloneApp()
+            appType: dashboard.project.getStandaloneApp(),
+            isLegacyShare: options.isLegacyShare,
           }), div);
         }
       }
@@ -2090,11 +1988,11 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     return;
   }
 
-  var displayMessage, examplePrograms, messageElement, onChange, startingText;
-
   // Ensure global ace variable is the same as window.ace
   // (important because they can be different in our test environment)
+  /* eslint-disable */
   ace = window.ace;
+  /* eslint-enable */
 
   // Remove onRecordEvent from palette and autocomplete, unless Firebase is enabled.
   // We didn't have access to window.dashboard.project.useFirebase() when dropletConfig
@@ -2743,7 +2641,6 @@ StudioApp.prototype.createCoordinateGridBackground = function (options) {
   var increment = options.increment;
 
   var CANVAS_HEIGHT = 400;
-  var CANVAS_WIDTH = 400;
 
   var svg = document.getElementById(svgName);
 
@@ -2925,7 +2822,7 @@ StudioApp.prototype.forLoopHasDuplicatedNestedVariables_ = function (block) {
 /**
  * Polishes the generated code string before displaying it to the user. If the
  * app provided a polishCodeHook function, it will be called.
- * @returns {string} code string that may/may not have been modified
+ * @returns {string} code string that may/may not have been modified.
  */
 StudioApp.prototype.polishGeneratedCodeString = function (code) {
   if (this.polishCodeHook) {
@@ -2945,8 +2842,8 @@ StudioApp.prototype.polishGeneratedCodeString = function (code) {
 StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign({
-    acapelaInstructionsSrc: config.acapelaInstructionsSrc,
-    acapelaMarkdownInstructionsSrc: config.acapelaMarkdownInstructionsSrc,
+    ttsInstructionsUrl: level.ttsInstructionsUrl,
+    ttsMarkdownInstructionsUrl: level.ttsMarkdownInstructionsUrl,
     skinId: config.skinId,
     showNextHint: this.showNextHint.bind(this),
     localeDirection: this.localeDirection(),
@@ -2957,18 +2854,19 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isEmbedView: !!config.embed,
     isShareView: !!config.share,
     pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
-    instructionsInTopPane: !!config.showInstructionsInTopPane,
     noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
     hasContainedLevels: config.hasContainedLevels,
-    versionHistoryInInstructionsHeader: config.versionHistoryInInstructionsHeader,
     puzzleNumber: level.puzzle_number,
     stageTotal: level.stage_total,
     noVisualization: false,
+    visualizationInWorkspace: false,
     smallStaticAvatar: config.skin.smallStaticAvatar,
+    failureAvatar: config.skin.failureAvatar,
     aniGifURL: config.level.aniGifURL,
     inputOutputTable: config.level.inputOutputTable,
     is13Plus: config.is13Plus,
     isSignedIn: config.isSignedIn,
+    isK1: config.level.isK1,
   }, appSpecificConstants);
 
   this.reduxStore.dispatch(setPageConstants(combined));
@@ -2976,3 +2874,26 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
   const instructionsConstants = determineInstructionsConstants(config);
   this.reduxStore.dispatch(setInstructionsConstants(instructionsConstants));
 };
+
+StudioApp.prototype.showRateLimitAlert = function () {
+  // only show the alert once per session
+  if (this.hasSeenRateLimitAlert_) {
+    return false;
+  }
+  this.hasSeenRateLimitAlert_ = true;
+
+  var alert = <div>{msg.dataLimitAlert()}</div>;
+  if (this.share) {
+    this.displayPlayspaceAlert("error", alert);
+  } else {
+    this.displayWorkspaceAlert("error", alert);
+  }
+
+  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
+    isEditing: window.dashboard.project.isEditing(),
+    isOwner: window.dashboard.project.isOwner(),
+    share: !!this.share,
+  });
+};
+
+export const singleton = new StudioApp();

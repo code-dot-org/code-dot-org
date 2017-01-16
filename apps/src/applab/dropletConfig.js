@@ -1,23 +1,24 @@
 /* global dashboard */
 import $ from 'jquery';
-var api = require('./api');
-var dontMarshalApi = require('./dontMarshalApi');
-var consoleApi = require('../consoleApi');
-var getAssetDropdown = require('../assetManagement/getAssetDropdown');
-var ChartApi = require('./ChartApi');
-var elementUtils = require('./designElements/elementUtils');
-var setPropertyDropdown = require('./setPropertyDropdown').setPropertyDropdown;
-
-const studioApp = require('../StudioApp').singleton;
-
-var applabConstants = require('./constants');
+import * as api from './api';
+import * as dontMarshalApi from './dontMarshalApi';
+import consoleApi from '../consoleApi';
+import * as audioApi from '@cdo/apps/lib/util/audioApi';
+import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import ChartApi from './ChartApi';
+import * as elementUtils from './designElements/elementUtils';
+import {setPropertyDropdown} from './setPropertyDropdown';
+import {singleton as studioApp} from '../StudioApp';
+import * as applabConstants from './constants';
 
 var DEFAULT_WIDTH = "320";
 var DEFAULT_HEIGHT = (480 - applabConstants.FOOTER_HEIGHT).toString();
 
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter, null, !studioApp.reduxStore.getState().pageConstants.is13Plus);
+  dashboard.assets.showAssetManager(callback, typeFilter, null, {
+    showUnderageWarning: !studioApp.reduxStore.getState().pageConstants.is13Plus
+  });
 }
 
 var COLOR_LIGHT_GREEN = '#D3E965';
@@ -30,6 +31,11 @@ var stringMethodPrefix = '[string].';
 var arrayMethodPrefix = '[list].';
 
 var stringBlockPrefix = 'str.';
+
+// Configure the audio API for App Lab
+audioApi.injectExecuteCmd(function () {
+  Applab.executeCmd.apply(Applab, arguments);
+});
 
 /**
  * Generate a list of screen ids for our setScreen dropdown
@@ -61,7 +67,7 @@ var ID_DROPDOWN_PARAM_0 = {
 
 // NOTE : format of blocks detailed at top of apps/src/dropletUtils.js
 
-module.exports.blocks = [
+export var blocks = [
   {func: 'onEvent', parent: api, category: 'UI controls', paletteParams: ['id','type','callback'], params: ['"id"', '"click"', "function(event) {\n  \n}"], dropdown: { 0: idDropdownWithSelector(), 1: ['"click"', '"change"', '"keyup"', '"keydown"', '"keypress"', '"mousemove"', '"mousedown"', '"mouseup"', '"mouseover"', '"mouseout"', '"input"'] } },
   {func: 'button', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
   {func: 'textInput', parent: api, category: 'UI controls', paletteParams: ['id','text'], params: ['"id"', '"text"'] },
@@ -78,13 +84,15 @@ module.exports.blocks = [
   {func: 'image', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
   {func: 'getImageURL', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: { 0: idDropdownWithSelector("img") }, type: 'value' },
   {func: 'setImageURL', parent: api, category: 'UI controls', paletteParams: ['id','url'], params: ['"id"', '"https://code.org/images/logo.png"'], dropdown: { 0: idDropdownWithSelector("img"), 1: function () { return getAssetDropdown('image'); } }, 'assetTooltip': { 1: chooseAsset.bind(null, 'image') } },
-  {func: 'playSound', parent: api, category: 'UI controls', paletteParams: ['url'], params: ['"https://studio.code.org/blockly/media/example.mp3"'], dropdown: { 0: function () { return getAssetDropdown('audio'); } }, 'assetTooltip': { 0: chooseAsset.bind(null, 'audio') } },
+  {...audioApi.dropletConfig.playSound, category: 'UI controls'},
+  {...audioApi.dropletConfig.stopSound, category: 'UI controls'},
   {func: 'showElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'hideElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'deleteElement', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setPosition', parent: api, category: 'UI controls', paramButtons: { minArgs: 3, maxArgs: 5 }, paletteParams: ['id','x','y','width','height'], params: ['"id"', "0", "0", "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setSize', parent: api, category: 'UI controls', paletteParams: ['id','width','height'], params: ['"id"', "100", "100"], dropdown: ID_DROPDOWN_PARAM_0 },
   {func: 'setProperty', parent: api, category: 'UI controls', paletteParams: ['id','property','value'], params: ['"id"', '"width"', "100"], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() } },
+  {func: 'getProperty', parent: api, category: 'UI controls', paletteParams: ['id','property'], params: ['"id"', '"width"'], dropdown: { 0: idDropdownWithSelector(), 1: setPropertyDropdown() }, type: 'value' },
   {func: 'write', parent: api, category: 'UI controls', paletteParams: ['text'], params: ['"text"'] },
   {func: 'getXPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
   {func: 'getYPosition', parent: api, category: 'UI controls', paletteParams: ['id'], params: ['"id"'], dropdown: ID_DROPDOWN_PARAM_0, type: 'value' },
@@ -174,11 +182,11 @@ module.exports.blocks = [
   {func: 'innerHTML', parent: api, category: 'Advanced', params: ['"id"', '"html"'] },
   {func: 'setParent', parent: api, category: 'Advanced', params: ['"id"', '"parentId"'] },
   {func: 'setStyle', parent: api, category: 'Advanced', params: ['"id"', '"color:red;"'] },
-  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value' },
-  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"]},
+  {func: 'getAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"'], type: 'value', noAutocomplete: true },
+  {func: 'setAttribute', parent: api, category: 'Advanced', params: ['"id"', '"scrollHeight"', "200"], noAutocomplete: true},
 ];
 
-module.exports.categories = {
+export var categories = {
   'UI controls': {
     id: 'uicontrols',
     color: 'yellow',
@@ -215,10 +223,10 @@ module.exports.categories = {
  * Set the showExamplesLink config value so that the droplet tooltips will show
  * an 'Examples' link that opens documentation in a lightbox:
  */
-module.exports.showExamplesLink = true;
+export var showExamplesLink = true;
 
 /*
  * Set the showParamDropdowns config value so that ace autocomplete dropdowns
  * will appear for each parameter based on the dropdown properties above:
  */
-module.exports.showParamDropdowns = true;
+export var showParamDropdowns = true;

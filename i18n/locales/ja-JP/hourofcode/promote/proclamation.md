@@ -4,10 +4,12 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 ### 以下はコンピューターサイエンス週間の支援のためのコンピュータサイエンスの目的に関係する例です。州議員、国会議員の方々に利用してもらうことを意図しています。
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] - CSEdWeek（コンピュータサイエンス教育週間）が注目しているのはコンピュータサイエンスが果たす重要な役割です。それは、コンピュータサイエンスが私たちの社会を変え、どのようにイノベーションを可能にし、経済的な機会を作り出すことができるかです。
+[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
 [HOUSE OR SENATE RESOLUTION ###]
 
@@ -15,38 +17,40 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
-コンピュータサイエンスは産業を変え、新しい市場を作り出し、全ての科学分野における革新を後押しし、そしてすでに確立された経済分野の生産性を高めます。
+Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
 
-コンピュータサイエンスは私たちの情報技術産業を支えており、世界中の経済に大きな貢献をしています。
+Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-コンピュータサイエンスの分野は、新しい時代の科学における基礎になります。
+Whereas the field of computer science is a foundational science for the digital age;
 
-情報技術は、イノベーションの開発や研究を通して景気回復を助ける重要な役割をしています。
+Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
 Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-学生に高いレベルのコンピュータサイエンスの活動に参加するチャンスを提供する事で、学生は生活を通して使う事ができるクリティカルシンキングのスキルを学ぶ機会を得られます。
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-全ての生徒には、能力のある先生、技術、そして初等・中等教育における年齢に適したカリキュラムを用いて、コンピュータサイエンスの教育をうける資格があります。
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-コンピュータサイエンスの教育には解決すべき課題があります。例えば、高校の卒業要件にコンピュータサイエンスの授業を含める事、そしてコンピュータサイエンスの先生のために専門教育を提供する事です。
+Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
 
-コンピュータサイエンス教育週間の間に Hour of Code に参加すれば、学生達のコンピュータサイエンスへの理解はより明確になり、また学生達がさらにコンピュータサイエンスの勉強をしたいと思うきっかけになります。
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-コンピュータサイエンスの分野における、女性や過小評価されているマイノリティを公平に扱わない問題を、解決するひつようがあります。
+Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
 
-Grace Murray Hopperは女性として初期に活躍したコンピュータサイエンスエンジニアの一人です。彼女は新しいコンピュータ言語を開発し、多くの先進的なコンピュータサイエンスの基礎となるシステムを開発した開拓者です。
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-現在、<%= campaign_date('start-long') %>の週間は、Grace Hopperの誕生日を記念し「コンピュータサイエンス教育週間」と呼ばれています。
+Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it
 
 Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 
-(1) コンピュータサイエンス教育週間 （<%= campaign_date('full') %>）を支援をします。
+(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
 
-(2) 学校、教育者、保護者および政策立案者に、Hour of Code への参加を可能にすることで、コンピュータサイエンス教育週間に参加する事を奨励します。
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(3) 学校、先生、研究者、大学、ビジネスリーダーそして政策立案者に、 全ての教育レベルにおける持続可能なコンピュータサイエンスの学習体験を提供するため、最先端の専門教育を受けるのための方法を確認することを推奨し、また全ての学生がコンピュータサイエンスの概念に触れる事を奨励します。
+(3) encourages schools, teachers, researchers, universities, business leaders and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(4) コンピュータサイエンスの授業が、数学や科学の卒業単位の一部として換算されるための障壁を取り除くことを政策立案者に奨励します。
+(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
-(5) 女性とマイノリティがコンピュータサイエンスを学ぶ機会を増やすことを、推奨します。
+(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

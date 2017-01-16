@@ -80,7 +80,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
       student_levels = @script.script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
+        user_levels = script_level.level_ids.map do |id|
+          contained_levels = Script.cache_find_level(id).contained_levels
+          if contained_levels.any?
+            level_map[contained_levels.first.id]
+          else
+            level_map[id]
+          end
+        end.compact
         level_class = best_activity_css_class user_levels
         paired = (paired_user_level_ids & user_levels).any?
         level_class << ' paired' if paired
@@ -180,8 +187,7 @@ class ApiController < ApplicationController
         }
       end
       response[:disableSocialShare] = current_user.under_13?
-      response[:disablePostMilestone] =
-        !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
+      response[:isHoc] = script.hoc?
 
       recent_driver = UserLevel.most_recent_driver(script, level, current_user)
       if recent_driver
@@ -202,22 +208,22 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
+    text_response_levels = @script.text_response_levels
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt_for_any(script_level.levels)
+      text_response_levels.map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
+          stage: level_hash[:script_level].stage.localized_title,
+          puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: @section.id, user_id: student.id)
         }
       end.compact
     end.flatten
@@ -349,8 +355,11 @@ class ApiController < ApplicationController
     authorize! :read, @section
   end
 
+  # NOTE: This method assumes load_section has been previously called.
   def load_script
-    @script = Script.get_from_cache(params[:script_id]) if params[:script_id].present?
-    @script ||= @section.script || Script.twenty_hour_script
+    script_id = params[:script_id] if params[:script_id].present?
+    script_id ||= @section.script.id if @section.script
+    @script = Script.get_from_cache(script_id) if script_id
+    @script ||= Script.twenty_hour_script
   end
 end

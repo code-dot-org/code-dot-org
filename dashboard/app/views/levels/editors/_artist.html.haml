@@ -33,7 +33,15 @@
 .field
   = f.label :images, 'Image field in JSON array format, e.g.:'
   %div
-    %pre{:style => '-webkit-user-select: text'}= "[\n  {\"filename\": \"https://images.code.org/cat.png\", \"position\": [16, 170]},\n  {\"filename\": \"https://images.code.org/lion.png\", \"position\": [15, 250]},\n  {\"filename\": \"https://images.code.org/elephant.png\", \"position\": [127, 220]},\n  {\"filename\": \"https://images.code.org/cow.png\", \"position\": [255, 250]}\n]"
+    %pre{:style => '-webkit-user-select: text'}
+      = preserve do
+        :escaped
+          [
+            {"filename": "https://images.code.org/cat.png", "position": [16, 170]},
+            {"filename": "https://images.code.org/lion.png", "position": [15, 250]},
+            {"filename": "https://images.code.org/elephant.png", "position": [127, 220]},
+            {"filename": "https://images.code.org/cow.png", "position": [255, 250]}
+          ]
     %p Paste or drag images into this field to upload them, similar to adding images to Markdown Instructions.
   = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
   :javascript

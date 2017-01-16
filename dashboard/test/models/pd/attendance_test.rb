@@ -48,17 +48,6 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal [@teacher1, @teacher2], teachers
   end
 
-  test 'for_district' do
-    attendances = Pd::Attendance.for_district(@district)
-    assert_equal 3, attendances.count
-  end
-
-  test 'distinct teachers from district' do
-    teachers = Pd::Attendance.for_district(@district).distinct_teachers
-    assert_equal 2, teachers.count
-    assert_equal [@teacher1, @unrelated_teacher], teachers
-  end
-
   test 'unique constraint on pd_session_id and teacher_id prevents duplicates' do
     attendance = create :pd_attendance
     dupe = attendance.dup
@@ -75,5 +64,29 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert attendance.reload.deleted?
     refute Pd::Attendance.exists? attendance.attributes
     assert Pd::Attendance.with_deleted.exists? attendance.attributes
+  end
+
+  test 'teacher or enrollment must be present' do
+    attendance = build :pd_attendance, teacher: nil, enrollment: nil
+    refute attendance.valid?
+    assert_equal ['Teacher or enrollment must be present.'], attendance.errors.full_messages
+
+    attendance.teacher = create :teacher
+    assert attendance.valid?
+
+    attendance.teacher = nil
+    attendance.enrollment = create :pd_enrollment
+    assert attendance.valid?
+  end
+
+  test 'enrollment is populated on save' do
+    teacher = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id
+    attendance = build :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
+
+    assert_nil attendance.enrollment
+    assert attendance.save
+    assert_not_nil attendance.reload.enrollment
+    assert_equal enrollment.id, attendance.enrollment.id
   end
 end

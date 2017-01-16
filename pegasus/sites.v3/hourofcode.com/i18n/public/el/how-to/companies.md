@@ -6,11 +6,13 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Εμπνεύστε μαθητές και εθελοντές για την Ώρα του Κώδικα
 
-**Το Code.org προσφέρει στους εργαζόμενους των εταιρειών της ευκαιρία να [συνδεθούν](<%= resolve_url('https://code.org/volunteer') %>) με τοπικές σχολικές αίθουσες που κάνουν την Ώρα του Κώδικα για να μοιραστούν την επαγγελματική τεχνολογική εμπειρία τους και να εμπνεύσουν τους μαθητές να σπουδάσουν την επιστήμη των υπολογιστών.**
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [Εγγραφή](<%= resolve_url('https://code.org/volunteer') %>) εθελοντών.
   * Για περισσότερες πληροφορίες σχετικά με τη σύνδεση των εργαζομένων σας με τις σχολικές τάξεις, συμβουλευθείτε τον [οδηγό για εταιρικούς συνεργάτες](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>) μας.
@@ -19,7 +21,7 @@ nav: how_to_nav
 
   * Χρησιμοποιήστε το [κουτί εργαλείων μάρκετινγκ](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) για να δημιουργήσετε ένα χρονοδιάγραμμα επικοινωνιών και να μοιραστείτε διαφημιστικό περιεχόμενο.
   * Ζητήστε από τον Διευθύνοντα Σύμβουλο να στείλει ηλεκτρονικό μήνυμα σε όλη την εταιρεία που να τονίζει τη σημασία της επιστήμης των υπολογιστών και να ενθαρρύνει στου εργαζόμενους να το διαδώσουν. [Δείτε αυτό το email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Φιλοξενήστε μία Happy Hour της Ώρας του Κώδικα με συναδέλφους για να δοκιμάστε τα [μαθήματα](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Φιλοξενήστε κάποια εκδήλωση για την Ώρα του Κώδικα για μια τοπική σχολική τάξη μαθητών ή για έναν μη κερδοσκοπικό οργανισμό στα γραφεία της εταιρείας σας. Δείτε τον σχετικό οδηγό παρακάτω.
 
 ## Πώς να φιλοξενήσετε μια εκδήλωση για την Ώρα του Κώδικα
@@ -32,14 +34,14 @@ nav: how_to_nav
 ## 2) Δες το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Επέλεξε ένα φροντιστήριο:
 
-Θα φιλοξενούμε μια ποικιλία από [διασκεδαστικά, ωριαία μαθήματα](<%= resolve_url('https://code.org/learn') %>) για τους συμμετέχοντες όλων των ηλικιών, που έχουν δημιουργηθεί από μια ποικιλία εταίρων. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Όλοι οι εκπαιδευτικοί οδηγοί για την Ώρα του Κώδικα:**
 
   * Απαιτούν ελάχιστη προετοιμασία χρόνου
   * Είναι αυτο-καθοδηγούμενα- επιτρέποντας στους μαθητές να δουλεύουν με τον δικό τους ρυθμό και σύμφωνα με τις ικανότητές τους
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Σχεδίασε τις τεχνολογικές σου ανάγκες - οι υπολογιστές είναι προαιρετικοί
 
@@ -77,7 +79,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Κατευθύνετε τους συμμετέχοντες σε αυτήν την δραστηριότητα**
 
-  * Γράψτε το σύνδεσμο σε ένα πίνακα. Βρείτε το σύνδεσμο που [περιλαμβάνεται στις](<%= resolve_url('https://code.org/learn') %>) πληροφορίες για το επιλεγμένο μάθημα κάτω από τον αριθμό των συμμετεχόντων.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +90,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Τι να κάνετε εάν κάποιος τελειώσει νωρίτερα;**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
@@ -138,4 +140,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## Τι γίνεται μετά την Ώρα του Κώδικα;
 
-Στην ώρα του κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι για να μάθετε περισσότερα σχετικά με το πώς λειτουργεί η τεχνολογία και πώς να δημιουργήσετε εφαρμογές λογισμικού. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

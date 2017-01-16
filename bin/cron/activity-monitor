@@ -113,7 +113,7 @@ class Monitor
 
   def self.collate(params)
     collater = Collater.new
-    self.new(params).each_row do |level, tag, browser, locale|
+    new(params).each_row do |level, tag, browser, locale|
       collater.insert level, tag, browser, locale
     end
     collater
@@ -205,7 +205,7 @@ def main
         level_url = "http://studio.code.org/s/#{sl.script.id}/level/#{sl.id}"
       end
       log_string += %[ <a href="#{browserstack_url(i[:browser], level_url) || level_url}">✈ Repro It</a>]
-      HipChat.notify('ActivityMonitor', log_string, color: 'yellow', notify: 1)
+      HipChat.message 'ActivityMonitor', log_string, color: 'yellow', notify: 1
     end
   end
 end

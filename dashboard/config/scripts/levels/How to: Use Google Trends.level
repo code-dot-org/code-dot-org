@@ -1,0 +1,15 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2016-10-08T17:29:37.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "## How to Use Google Trends\r\n\r\nIn lesson 8, students will use Google Trends as a tool to visualize the relationship between historical google search data. If you're not familiar with Google Trends, check out the following How-to guide that details how to explore trends using the tool! ",
+    "link_title": "Google Trends Support",
+    "url": "https://support.google.com/trends/?hl=en#topic=4365530"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</ExternalLink>

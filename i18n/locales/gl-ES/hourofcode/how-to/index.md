@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Como ensinar unha Hora do Código
 
 Join the movement and introduce a group of students to their first hour of computer science with these steps:
@@ -11,19 +13,19 @@ Join the movement and introduce a group of students to their first hour of compu
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial for your hour:
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('https://code.org/learn') %) for students of all ages, created by a variety of partners.
+We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for students of all ages, created by a variety of partners.
 
-**[Titoriais autoexplicativos da Hora do Código:](%= resolve_url("https://code.org/learn") %)**
+**[Student-guided Hour of Code tutorials:](%= resolve_url('/learn') %)**
 
   * Requiren dun tempo de preparación mínimo por parte dos mestres
   * Son titoriais guiados, o que permite os estudantes traballaren ao seu propio ritmo e segundo as súas habilidades
 
-**[Titoriais para profesores da Hora do Código:](%= resolve_url("https://code.org/educate/teacher-led") %)**
+**[Teacher-guided Hour of Code tutorials:](%= resolve_url('https://code.org/educate/teacher-led') %)**
 
   * Son plans de clase que esixen algunha preparación máis avanzada do profesor
   * Son clasificados por nivel *e* por disciplina (por exemplo, matemáticas, inglés, etc)
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 3) Promote your Hour of Code
 
@@ -53,7 +55,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
   * O vídeo orixinal de lanzamento da Code.org, coa participación de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (hai versións de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * O [vídeo de lanzamento da Hora de Código de 2013](https://www.youtube.com/watch?v=FC5FbmsH4fw), ou o <% if @country == 'uk' %> [vídeo da Hora de Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [vídeo da Hora do Código de 2015](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
   * [O vídeo do presidente Obama convidando a todos os alumnos a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY)
-  * Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+  * Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
@@ -69,7 +71,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **Direct students to the activity**
 
-  * Escriba a ligazón para o titorial no encerado. Atope a ligazón presentada na [ información do titorial seleccionado](%= resolve_url('https://code.org/learn') %) que está baixo o número de participantes.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
 
 [col-33]
 
@@ -87,7 +89,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **What to do if a student finishes early?**
 
-  * Os estudantes poden ver tódolos titoriais e probar outra actividade da Hora do Código en [<%= resolve_url('code.org/learn') %>](%= resolve_url('https://code.org/learn') %)
+  * Students can see all tutorials and try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %)
   * Ou pídalle aos estudantes que rematen cedo que axuden aos compañeiros que estean a ter problemas coa actividade.
 
 [col-33]
@@ -138,3 +140,5 @@ A Hora do Código é só o primeiro paso dunha viaxe para aprender máis sobre c
 
   * Anime os alunos a continuar a [aprender on-line](%= resolve_url('https://code.org/learn/beyond') %).
   * [Asista](%= resolve_url('https://code.org/professional-development-workshops') %) a uha clase presencial, de un día, para recibir instrucións de unha persoa con experiencia en informática. (Sómente para educadores dos EUA)
+
+<%= view :signup_button %>

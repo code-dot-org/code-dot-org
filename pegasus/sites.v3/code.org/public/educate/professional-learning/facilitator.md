@@ -5,32 +5,25 @@ nav: educate_nav
 
 # Become a Code.org Facilitator
 
-**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
+Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers in a format that's fun and accessible.
 
-Code.org is looking to partner with individuals interested in developing facilitation capacity in computer science education to deliver high-quality professional development to teachers to teach computer science in a format that's fun and accessible.
 
-The ideal facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through past teaching experience. Experience mentoring teachers and managing/hosting professional development workshops a plus. <br/>
+The ideal facilitator is an enthusiastic supporter of computer science education, possesses a connection to Code.org’s equity-focused mission and has a strong background in the curriculum area, preferably through teaching experience. Experience mentoring teachers and managing/hosting professional development workshops is a plus. The facilitator program is designed to be supplemental to a classroom teacher’s full-time teaching load, or a full-time teacher leadership role such as a coach or a teacher mentor.<br/>
 
 ## What is Code.org's Facilitator Development Program?
 
-Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum.
+Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum.<br/>
 
-Accepted participants will attend an all expense paid trip to Code.org's Facilitator Summit. Date and location of 2017 Summit to be determined. During the Summit, Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria who live in a region where Code.org has Professional Learning or District Partners will be prioritized for acceptance.** Please see individual program details for more information.
-
-The Summit is designed to be a fabulous experience to welcome you to the extended Code.org family.
+Code.org will provide instruction to prepare facilitators to deliver professional development to teachers on the Code.org curriculum. **Applicants who meet the facilitator criteria and live in a region where Code.org has a [Professional Learning Partner](/educate/professional-learning-partner/partners) will be prioritized for acceptance.** Please see individual program details for more information.
 
 ## Learn more
-All focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason has its own unique selection criteria, requirements, commitments and benefits.
+In 2017-2018, Code.org will prepare facilitators in two areas. The focus areas share a basic framework and approach, drawn from adult learning theory and best practices for facilitation, that ensures participants are well prepared to lead high-quality training. However, each focus area’s training curriculum is designed for the specific needs of the teachers and students impacted by the program, and for that reason each has its own unique selection criteria, requirements, commitments and benefits.<br/>
 
-- [Computer Science Principles Facilitator Development](/educate/facilitator-csp) (High School)
-- [Exploring Computer Science Facilitator Development](/educate/facilitator-ecs) (High School)
-- [Computer Science in Algebra Facilitator Development](/educate/facilitator-csa) (Middle School)
-- [Computer Science in Science Facilitator Development](/educate/facilitator-css) (Middle School)
-- [Computer Science Fundamentals Facilitator Development](/educate/k5-affiliates) (Elementary School)
+- [Computer Science Principles Facilitator Development (Grades 9 to 12)](/educate/facilitator-csp)
+- [Computer Science Discoveries Facilitator Development (Grades 7 to 9)](/educate/professional-learning/cs-discoveries-facilitator)
 
-Please carefully review the criteria, requirements and commitments for the curriculum focus area of your choice before applying. 
+*Note: We are not currently accepting applications for Computer Science Fundamentals (K-5). Complete this [interest form](https://goo.gl/forms/yMONgd2bd73tI6UD3) to be notified when the application opens.*
 
-**For updates on the 2017 application period please complete this [interest form](https://docs.google.com/a/code.org/forms/d/1C2oECZ04B1406j4x_7sKcRHGdPLmxILVFm463M5MigU/viewform). This program is currently only operated in the US.**
-
-If you have additional questions regarding the Facilitator program or application contact [facilitators@code.org](facilitators@code.org).
-
+Please carefully review the requirements and commitments for the curriculum focus area of your choice before applying.<br/>
+ 
+**Priority 1 deadline is January 9th, 2017.** At that time we will begin reviewing applications on a rolling basis. The application for the 2017-2018 Facilitator Development Program will close on February 1, 2017. *This program is currently only operated in the US.*<br/>

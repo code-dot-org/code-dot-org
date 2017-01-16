@@ -20,7 +20,7 @@ module DCDOLoader
     if value.is_a?(Array) && value[0].is_a?(Hash) && value[0].key?("rule")
       raise "Did you accidentally apply a gatekeeper config to dcdo?"
     end
-    Oj.dump(value, :mode => :strict)
+    Oj.dump(value, mode: :strict)
   end
 
   # Takes in a yaml string and converts it to a list of
@@ -32,7 +32,7 @@ module DCDOLoader
     commands = []
 
     yaml.each do |k, v|
-      self.validate_setting(k, v)
+      validate_setting(k, v)
       commands << [k, v]
     end
     commands
@@ -50,7 +50,7 @@ module DCDOLoader
   # @param filepath [String]
   def self.load(filepath)
     yaml = File.open(filepath, 'r').read
-    commands = self.yaml_to_commands(yaml)
-    self.apply_commands(commands)
+    commands = yaml_to_commands(yaml)
+    apply_commands(commands)
   end
 end

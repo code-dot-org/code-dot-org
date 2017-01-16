@@ -1,11 +1,15 @@
 /* global $, d3, Dialog, confirm, options, dashboard */
 // options is appOptions.level, from the level parameters themselves
 
-var messages = {
-  'Sample Message (easy)': "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg.",
-  //'Sample Message (hard)': "Rh nrpzh jvvn txmgk czmh R'n musbh hs jmk Jbljzrlv jzv'j zvxv, ksb tml hmev mcmk R'n m zsh mrx umwwssl, R tsbwf ps hs jimtv Crhz hzv mrx, wrev R fsl'h tmxv umuk uk hzv cmk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zvxv tsnv umf lvcj hmwerlp hzrj mlf hzmh Kvmz, prav nv mww ksb psh, fsl'h zswf umte Kvmz, cvww R jzsbwf ixsumuwk cmxl ksb R'ww uv ybjh orlv Kvmz, ls soovljv hs ksb fsl'h cmjhv ksbx hrnv Zvxv'j czk Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs Zmiik, uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl Wsav rj hss zmiik hs uxrlp nv fscl Tml'h lshzrlp, uxrlp nv fscl R jmrf Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev m xssn crhzsbh m xsso Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev zmiirlvjj rj hzv hxbhz Uvtmbjv R'n zmiik Twmi mwslp ro ksb elsc czmh zmiirlvjj rj hs ksb Uvtmbjv R'n zmiik Twmi mwslp ro ksb ovvw wrev hzmh'j czmh ksb cmllm fs"
-  'Sample Message (hard)': "Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly. Udevkvym krva pk p jvakpycg un dulmrbi yvygki-kou svbbvuy svbga va py lkkgdbi vyavmyvnvcpyk bvkkbg eblg mdggy qbpygk oruag pqg-jgacgyjgj bvng nudsa pdg au pspzvymbi qdvsvkvwg krpk krgi akvbb krvyt jvmvkpb opkcrga pdg p qdgkki ygpk vjgp. Krva qbpygk rpa - ud dpkrgd rpj - p qduebgs, orvcr opa krva: suak un krg qguqbg uy vk ogdg lyrpqqi nud qdgkki slcr un krg kvsg. Spyi aublkvuya ogdg almmgakgj nud krva qduebgs, elk suak un krgag ogdg bpdmgbi cuycgdygj ovkr krg suwgsgyka un aspbb mdggy qvgcga un qpqgd, orvcr va ujj egcplag uy krg orubg vk opay'k krg aspbb mdggy qvgcga un qpqgd krpk ogdg lyrpqqi. Pyj au krg qduebgs dgspvygj; buka un krg qguqbg ogdg sgpy, pyj suak un krgs ogdg svagdpebg, gwgy krg uyga ovkr jvmvkpb opkcrga. Spyi ogdg vycdgpavymbi un krg uqvyvuy krpk krgi'j pbb spjg p evm svakptg vy cusvym juoy ndus krg kdgga vy krg nvdak qbpcg. Pyj ausg apvj krpk gwgy krg kdgga rpj eggy p epj suwg, pyj krpk yu uyg arulbj gwgd rpwg bgnk krg ucgpya. Pyj krgy, uyg Krldajpi, ygpdbi kou krulapyj igpda pnkgd uyg spy rpj eggy ypvbgj ku p kdgg nud apivym ruo mdgpk vk oulbj eg ku eg yvcg ku qguqbg nud p crpymg, uyg mvdb avkkvym uy rgd uoy vy p aspbb cpng vy Dvctspyaoudkr aljjgybi dgpbvzgj orpk vk opa krpk rpj eggy muvym oduym pbb krva kvsg, pyj arg nvypbbi tygo ruo krg oudbj culbj eg spjg p muuj pyj rpqqi qbpcg. Krva kvsg vk opa dvmrk, vk oulbj oudt, pyj yu uyg oulbj rpwg ku mgk ypvbgj ku pyikrvym. Apjbi, ruogwgd, egnudg arg culbj mgk ku p qruyg ku kgbb pyiuyg peulk vk, p kgddvebi aklqvj cpkpakduqrg ucclddgj, pyj krg vjgp opa buak nudgwgd. Krva va yuk rgd akudi. Elk vk va krg akudi un krpk kgddvebg aklqvj cpkpakduqrg pyj ausg un vka cuyagxlgycga. Vk va pbau krg akudi un p euut, p euut cpbbgj Krg Rvkcr Rvtgd'a Mlvjg ku krg Mpbpfi - yuk py Gpdkr euut, ygwgd qlebvargj uy Gpdkr, pyj lykvb krg kgddvebg cpkpakduqrg ucclddgj, ygwgd aggy ud rgpdj un ei pyi Gpdkrspy. Ygwgdkrgbgaa, p orubbi dgspdtpebg euut."
-};
+var DEFAULT_TEXTS = [
+  {
+    title: 'Sample Message (easy)',
+    message: "Srryvat zl jnl guebhtu gur qnexarff. Thvqrq ol n orngvat urneg. V pna'g gryy jurer gur wbhearl jvyy raq. Ohg V xabj jurer gb fgneg. Gurl gryy zr V'z gbb lbhat gb haqrefgnaq. Gurl fnl V'z pnhtug hc va n qernz. Jryy yvsr jvyy cnff zr ol vs V qba'g bcra hc zl rlrf. Jryy gung'f svar ol zr. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg. V gevrq pneelvat gur jrvtug bs gur jbeyq. Ohg V bayl unir gjb unaqf. Ubcr V trg gur punapr gb geniry gur jbeyq. Ohg V qba'g unir nal cynaf. Jvfu gung V pbhyq fgnl sberire guvf lbhat. Abg nsenvq gb pybfr zl rlrf. Yvsr'f n tnzr znqr sbe rirelbar. Naq ybir vf gur cevmr. Fb jnxr zr hc jura vg'f nyy bire Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys Naq V qvqa'g xabj V jnf ybfg. Fb jnxr zr hc jura vg'f nyy bire. Jura V'z jvfre naq V'z byqre. Nyy guvf gvzr V jnf svaqvat zlfrys. Naq V qvqa'g xabj V jnf ybfg."
+  }, {
+    title: 'Sample Message (hard)',
+    message: "Npd ulk vy krg lycrpdkgj epctopkgda un krg lynparvuypebg gyj un krg ogakgdy aqvdpb pds un krg Mpbpfi bvga p aspbb lydgmpdjgj igbbuo aly. Udevkvym krva pk p jvakpycg un dulmrbi yvygki-kou svbbvuy svbga va py lkkgdbi vyavmyvnvcpyk bvkkbg eblg mdggy qbpygk oruag pqg-jgacgyjgj bvng nudsa pdg au pspzvymbi qdvsvkvwg krpk krgi akvbb krvyt jvmvkpb opkcrga pdg p qdgkki ygpk vjgp. Krva qbpygk rpa - ud dpkrgd rpj - p qduebgs, orvcr opa krva: suak un krg qguqbg uy vk ogdg lyrpqqi nud qdgkki slcr un krg kvsg. Spyi aublkvuya ogdg almmgakgj nud krva qduebgs, elk suak un krgag ogdg bpdmgbi cuycgdygj ovkr krg suwgsgyka un aspbb mdggy qvgcga un qpqgd, orvcr va ujj egcplag uy krg orubg vk opay'k krg aspbb mdggy qvgcga un qpqgd krpk ogdg lyrpqqi. Pyj au krg qduebgs dgspvygj; buka un krg qguqbg ogdg sgpy, pyj suak un krgs ogdg svagdpebg, gwgy krg uyga ovkr jvmvkpb opkcrga. Spyi ogdg vycdgpavymbi un krg uqvyvuy krpk krgi'j pbb spjg p evm svakptg vy cusvym juoy ndus krg kdgga vy krg nvdak qbpcg. Pyj ausg apvj krpk gwgy krg kdgga rpj eggy p epj suwg, pyj krpk yu uyg arulbj gwgd rpwg bgnk krg ucgpya. Pyj krgy, uyg Krldajpi, ygpdbi kou krulapyj igpda pnkgd uyg spy rpj eggy ypvbgj ku p kdgg nud apivym ruo mdgpk vk oulbj eg ku eg yvcg ku qguqbg nud p crpymg, uyg mvdb avkkvym uy rgd uoy vy p aspbb cpng vy Dvctspyaoudkr aljjgybi dgpbvzgj orpk vk opa krpk rpj eggy muvym oduym pbb krva kvsg, pyj arg nvypbbi tygo ruo krg oudbj culbj eg spjg p muuj pyj rpqqi qbpcg. Krva kvsg vk opa dvmrk, vk oulbj oudt, pyj yu uyg oulbj rpwg ku mgk ypvbgj ku pyikrvym. Apjbi, ruogwgd, egnudg arg culbj mgk ku p qruyg ku kgbb pyiuyg peulk vk, p kgddvebi aklqvj cpkpakduqrg ucclddgj, pyj krg vjgp opa buak nudgwgd. Krva va yuk rgd akudi. Elk vk va krg akudi un krpk kgddvebg aklqvj cpkpakduqrg pyj ausg un vka cuyagxlgycga. Vk va pbau krg akudi un p euut, p euut cpbbgj Krg Rvkcr Rvtgd'a Mlvjg ku krg Mpbpfi - yuk py Gpdkr euut, ygwgd qlebvargj uy Gpdkr, pyj lykvb krg kgddvebg cpkpakduqrg ucclddgj, ygwgd aggy ud rgpdj un ei pyi Gpdkrspy. Ygwgdkrgbgaa, p orubbi dgspdtpebg euut."
+  }
+];
 
 var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var LETTERS = ALPHABET.split('');
@@ -82,6 +86,9 @@ var BarGraph = function (options) {
     middle: 100,
     left: 40
   };
+
+  this.isCaesarCipher = options.cipher === 'caesar';
+  this.isSubstitutionCipher = options.cipher === 'substitution';
 
   /** @type {D3.selection} */
   this.container = d3.select(options.chart_container.get(0));
@@ -165,6 +172,13 @@ var BarGraph = function (options) {
   if (this.message) {
     this.setMessage(this.message);
   }
+
+  if (this.isCaesarCipher) {
+    this.assignAllSubstitutions();
+    $('.nav-tabs a[href="#random"]').hide();
+  } else if (this.isSubstitutionCipher) {
+    $('.nav-tabs a[href="#random"]').tab('show');
+  }
 };
 
 /**
@@ -175,7 +189,6 @@ var BarGraph = function (options) {
  * @returns {number} comparator
  */
 BarGraph.alphabeticSort = function (a, b) {
-  //return LETTERS.indexOf(a.letter) - LETTERS.indexOf(b.letter);
   return (a.letter.charCodeAt() - b.letter.charCodeAt());
 };
 
@@ -338,10 +351,9 @@ BarGraph.prototype.getReverseSubstitutionMap = function (override) {
  */
 BarGraph.prototype.processSubstitutions = function () {
 
-  /* this version preserves punctuation and special characters from the
-   * input in the output. If we want to strip them:
-   * var input = this.text_input.val().replace(/[^A-Za-z]/g, " ");
-   */
+  // this version preserves punctuation and special characters from the
+  // input in the output. If we want to strip them:
+  // var input = this.text_input.val().replace(/[^A-Za-z]/g, " ");
 
   var substMap = this.getSubstitutionMap();
 
@@ -608,9 +620,9 @@ BarGraph.prototype.createDragBehavior = function () {
       // swap the carried letter and the target letter, and lock the
       // carried letter into place
       substitution_data_swapped = this.substitution_data.map(function (d, index, substitution_data) {
-        if (index == i) {
+        if (index === i) {
           return substitution_data[j];
-        } else if (index == j) {
+        } else if (index === j) {
           return substitution_data[i];
         } else {
           return d;
@@ -662,11 +674,13 @@ BarGraph.prototype.refreshDragBehavior = function () {
  */
 BarGraph.prototype.buildSVG = function () {
 
-  this.svg.append('g')
-    .append('text')
-    .text("Letter Frequencies")
-    .attr("dy", "1em")
-    .style("font-size", "17.5px");
+  if (!this.isCaesarCipher) {
+    this.svg.append('g')
+      .append('text')
+      .text("Letter Frequencies")
+      .attr("dy", "1em")
+      .style("font-size", "17.5px");
+  }
 
   var legend = this.svg.selectAll(".legend")
     .data([{
@@ -747,31 +761,33 @@ BarGraph.prototype.buildSVG = function () {
       return d.substitution.letter;
     });
 
-  this.graph.append("g")
-    .attr("class", "y top axis")
-    .call(this.yTopAxis)
-    .append("text")
-    .attr({
-      "transform": "rotate(-90)",
-      "y": 6,
-      "dy": ".71em",
-      "class": "graphlabel"
-    })
-    .text("Frequency");
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "y top axis")
+      .call(this.yTopAxis)
+      .append("text")
+      .attr({
+        "transform": "rotate(-90)",
+        "y": 6,
+        "dy": ".71em",
+        "class": "graphlabel"
+      })
+      .text("Frequency");
 
-  this.graph.append("g")
-    .attr("class", "y bottom axis")
-    .attr("transform", "translate(0," + (this.getHeight() + 90) + ")")
-    .call(this.yBottomAxis)
-    .append("text")
-    .style("text-anchor", "start")
-    .attr({
-      "transform": "rotate(-90) translate(-" + this.getHeight() + ",0)",
-      "y": 6,
-      "dy": ".71em",
-      "class": "graphlabel"
-    })
-    .text("Frequency");
+    this.graph.append("g")
+      .attr("class", "y bottom axis")
+      .attr("transform", "translate(0," + (this.getHeight() + 90) + ")")
+      .call(this.yBottomAxis)
+      .append("text")
+      .style("text-anchor", "start")
+      .attr({
+        "transform": "rotate(-90) translate(-" + this.getHeight() + ",0)",
+        "y": 6,
+        "dy": ".71em",
+        "class": "graphlabel"
+      })
+      .text("Frequency");
+  }
 
   this.graph.select(".x.axis")
     .append("text")
@@ -793,15 +809,17 @@ BarGraph.prototype.buildSVG = function () {
     })
     .text("Maps to:");
 
-  this.graph.append("g")
-    .attr("class", "topbars")
-    .selectAll(".letter")
-    .data(this.getZippedData())
-    .enter().append("g")
-    .attr("class", "letter")
-    .attr("transform", function (d) {
-      return "translate(" + this.substitutionLetterScale(d.substitution.letter) + "," + this.getHeight() + ") scale(1, -1)";
-    }.bind(this));
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "topbars")
+      .selectAll(".letter")
+      .data(this.getZippedData())
+      .enter().append("g")
+      .attr("class", "letter")
+      .attr("transform", function (d) {
+        return "translate(" + this.substitutionLetterScale(d.substitution.letter) + "," + this.getHeight() + ") scale(1, -1)";
+      }.bind(this));
+  }
 
   this.getTopBars().selectAll("rect")
     .data(function (d) {
@@ -816,15 +834,17 @@ BarGraph.prototype.buildSVG = function () {
       return this.frequencyTopScale(i);
     }.bind(this));
 
-  this.graph.append("g")
-    .attr("class", "bottombars")
-    .selectAll(".letter")
-    .data(this.message_data)
-    .enter().append("g")
-    .attr("class", "letter")
-    .attr("transform", function (d) {
-      return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight() + 90) + ")";
-    }.bind(this));
+  if (!this.isCaesarCipher) {
+    this.graph.append("g")
+      .attr("class", "bottombars")
+      .selectAll(".letter")
+      .data(this.message_data)
+      .enter().append("g")
+      .attr("class", "letter")
+      .attr("transform", function (d) {
+        return "translate(" + this.englishLetterScale(d.letter) + "," + (this.getHeight() + 90) + ")";
+      }.bind(this));
+  }
 
   this.getBottomBars().selectAll("rect")
     .data(function (d) {
@@ -880,7 +900,7 @@ BarGraph.prototype.shift = function (shift_amount) {
     var every_sorted = this.substitution_data.every(function (d, i, a) {
       var j = (i + 1) % a.length;
       var dist = Math.abs(LETTERS.indexOf(a[i].letter) - LETTERS.indexOf(a[j].letter));
-      return d.locked && (dist == 1 || dist == 25);
+      return d.locked && (dist === 1 || dist === 25);
     });
 
     if (!every_sorted) {
@@ -1044,17 +1064,8 @@ BarGraph.prototype.resizeBottomBars = function (data) {
   this.getBottomBars().selectAll("rect")
     .data(function (d, i) {
       var letter = this.englishLetterScale.domain()[i];
-
-      if (substMap[letter]) {
-        return [{
-          frequency: 0
-        }];
-      } else {
-        return [{
-          frequency: ENGLISH[letter]
-        }];
-      }
-
+      var frequency = substMap[letter] ? 0 : ENGLISH[letter];
+      return [{ frequency: frequency }];
     }.bind(this))
     .attr("height", function (d) {
       return this.getHeight() - this.yTopScale(d.frequency);
@@ -1062,8 +1073,15 @@ BarGraph.prototype.resizeBottomBars = function (data) {
 };
 
 $(document).ready(function () {
+
+  var texts = JSON.parse(options.texts || "[]");
+  if (texts.length < 1) {
+    texts = DEFAULT_TEXTS;
+  }
+
   var bg = new BarGraph({
-    message: "Hello, I'm some text!",
+    message: texts[0].message,
+    cipher: options.cipher,
     text_output: $("#output"),
     chart_container: $("#d3chart")
   });
@@ -1071,19 +1089,19 @@ $(document).ready(function () {
 
   var messageSelect = $("#messages");
 
-  function addMessageOption(id, text) {
+  function addMessageOption(title) {
     var option = document.createElement("option");
-    option.value = id;
-    option.text = (text) ? text.substring(0, 24) + " ..." : id;
+    option.value = title;
+    option.text = (title.length > 24) ? title.substring(0, 24) + " ..." : title;
     messageSelect.append(option);
   }
 
-  Object.keys(messages).forEach(function (id) {
-    addMessageOption(id);
+  texts.forEach(function (text) {
+    addMessageOption(text.title);
   });
 
   messageSelect.change(function () {
-    var message = messages[this.selectedOptions[0].value];
+    var message = texts[this.selectedIndex].message;
     bg.setMessage(message);
   });
 
@@ -1101,10 +1119,12 @@ $(document).ready(function () {
 
     dialog_div.find('#continue-button').click(function () {
       var text = dialog_div.find("textarea").val();
-      var id = Object.keys(messages).length + 1;
-      messages[id] = text;
+      texts.push({
+        title: 'Custom: ' + text,
+        message: text
+      });
 
-      addMessageOption(id, 'Custom: ' + text);
+      addMessageOption(text);
       bg.setMessage(text);
       dialog.hide();
     });

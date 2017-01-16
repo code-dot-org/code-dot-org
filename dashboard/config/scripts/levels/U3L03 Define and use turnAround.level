@@ -106,6 +106,15 @@
       },
       {
         "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. Clever. You can use this knowledge later, but for now, try to stick to the constraints of this problem."
+      },
+      {
+        "entries": [
           "turnAround"
         ],
         "matchType": "exact",
@@ -114,27 +123,26 @@
       },
       {
         "entries": [
-          "turnAround",
           "turnLeft",
           "turnLeft"
         ],
-        "matchType": "exact",
+        "matchType": "inexact",
         "minTimes": 1,
-        "message": "The turnAround function should be calling turnLeft two times."
+        "message": "In order to turn around you need to turnLeft twice."
       },
       {
         "entries": [
           "turnAround",
-          "turnLeft",
-          "turnLeft",
           "moveForward"
         ],
-        "matchType": "exact",
+        "matchType": "inexact",
         "minTimes": 1,
-        "message": "It's not quite right yet.  Did you move forward immediately after turning around?"
+        "message": "Did you move forward after turning around?"
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

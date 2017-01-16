@@ -1,0 +1,52 @@
+Creeper
+	Facing Down:
+		Still Frame:	000
+		Look Left:	000-003 pause, reverse	
+		Look Right:	006-010 pause, reverse
+		Look Down:	018-021 pause, reverse
+		Look Up:	012-016 pause, reverse
+		Walk:		024-035
+		Attack:		036-039
+		Explode:	036-050
+		Take Damage:	051-056
+		Die:		057-063
+		Bump:		256-263
+
+	Facing Right:
+		Still Frame:	064
+		Look Left:	064-067 pause, reverse	
+		Look Right:	070-073 pause, reverse
+		Look Down:	082-085 pause, reverse
+		Look Up:	076-089 pause, reverse
+		Walk:		088-099
+		Attack:		100-103
+		Explode:	100-114
+		Take Damage:	115-120
+		Die:		121-127
+		Bump:		264-271
+
+	Facing Up:
+		Still Frame:	128
+		Look Left:	128-131 pause, reverse	
+		Look Right:	134-137 pause, reverse
+		Look Down:	146-149 pause, reverse
+		Look Up:	140-143 pause, reverse
+		Walk:		152-163
+		Attack:		164-167
+		Explode:	164-178
+		Take Damage:	179-184
+		Die:		185-191
+		Bump:		272-279
+
+	Facing Left:
+		Still Frame:	192
+		Look Left:	192-195 pause, reverse	
+		Look Right:	198-201 pause, reverse
+		Look Down:	210-213 pause, reverse
+		Look Up:	204-207 pause, reverse
+		Walk:		216-227
+		Attack:		228-231
+		Explode:	228-242
+		Take Damage:	243-248
+		Die:		249-255
+		Bump:		280-287

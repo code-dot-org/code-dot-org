@@ -116,7 +116,7 @@ class Documents < Sinatra::Base
 
     @dirs = []
 
-    if ['hourofcode.com', 'translate.hourofcode.com'].include?(request.site)
+    if request.site == 'hourofcode.com'
       @dirs << [File.join(request.site, 'i18n')]
     end
 
@@ -408,6 +408,7 @@ class Documents < Sinatra::Base
       end
       raise e
     rescue => e
+      Honeybadger.context({path: path, e: e})
       raise "Error rendering #{path}: #{e}"
     end
 

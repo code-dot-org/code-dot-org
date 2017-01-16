@@ -1,14 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import {connect} from 'react-redux';
-var utils = require('../../utils');
-var styleConstants = require('../../styleConstants');
 var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
 var TopInstructions = require('./TopInstructions');
 var instructions = require('../../redux/instructions');
-
-var HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 /**
  * A component representing the right side of the screen in our app. In particular
@@ -20,7 +15,6 @@ var RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 var InstructionsWithWorkspace = React.createClass({
   propTypes: {
     // props provided via connect
-    showInstructions: React.PropTypes.bool.isRequired,
     instructionsHeight: React.PropTypes.number.isRequired,
 
     setInstructionsMaxHeightAvailable: React.PropTypes.func.isRequired,
@@ -99,7 +93,7 @@ var InstructionsWithWorkspace = React.createClass({
   render() {
     return (
       <span>
-        {this.props.showInstructions && <TopInstructions/>}
+        <TopInstructions/>
         <CodeWorkspaceContainer
           ref="codeWorkspaceContainer"
           topMargin={this.props.instructionsHeight}
@@ -113,7 +107,6 @@ var InstructionsWithWorkspace = React.createClass({
 
 module.exports = connect(function propsFromStore(state) {
   return {
-    showInstructions: state.pageConstants.instructionsInTopPane,
     instructionsHeight: state.instructions.renderedHeight
   };
 }, function propsFromDispatch(dispatch) {

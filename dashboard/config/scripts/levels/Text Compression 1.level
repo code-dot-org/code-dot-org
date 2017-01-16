@@ -7,10 +7,14 @@
   "properties": {
     "href": "text-compression/text-compression.html",
     "video_key": "csp_textcompression_new",
-    "markdown_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
-    "instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.",
+    "markdown_instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.\r\n\r\n<img src=\"http://code.org/api/hour/begin_text_compression.png\">",
+    "instructions": "Look for patterns (repeated words or phrases) in the text. Enter the patterns you see into the dictionary on the right. As you type entries into the dictionary, the symbol for the entry is inserted into the text in place of the pattern.\r\n\r\n",
     "skip_dialog": true,
-    "poems": null
+    "instructions_important": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
   }
 }]]></config>
 </TextCompression>

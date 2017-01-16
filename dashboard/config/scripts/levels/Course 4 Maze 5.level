@@ -25,9 +25,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "step_speed": "3"
+    "step_speed": "3",
+    "never_autoplay_video": "false",
+    "instructions_important": "false",
+    "contained_level_names": null
   },
-  "published": false,
+  "published": true,
+  "notes": "",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 5
@@ -70,23 +74,20 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="controls_repeat">
-              <title name="TIMES">4</title>
+              <title name="TIMES">3</title>
               <statement name="DO">
-                <block type="maze_moveForward"/>
-              </statement>
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
                   <next>
-                    <block type="controls_repeat">
-                      <title name="TIMES">5</title>
-                      <statement name="DO">
-                        <block type="maze_moveForward"/>
-                      </statement>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
                     </block>
                   </next>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>

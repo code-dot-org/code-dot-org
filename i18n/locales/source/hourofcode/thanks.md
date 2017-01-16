@@ -53,6 +53,8 @@ You just joined the Hour of Code movement. Tell your friends with **#HourOfCode*
 ## 7. Plan your Hour of Code
 Choose an Hour of Code activity and [review this how-to guide](<%= resolve_url('/how-to') %>).
 
+## 8. Go beyond an Hour of Code
+Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>
 

@@ -22,7 +22,8 @@ const WorkshopEnrollment = React.createClass({
   propTypes: {
     enrollments: React.PropTypes.arrayOf(
       React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
+        first_name: React.PropTypes.string.isRequired,
+        last_name: React.PropTypes.string.isRequired,
         email: React.PropTypes.string.isRequired,
         district_name: React.PropTypes.string,
         school: React.PropTypes.string.isRequired,
@@ -31,6 +32,7 @@ const WorkshopEnrollment = React.createClass({
       })
     ).isRequired,
     workshopId: React.PropTypes.string.isRequired,
+    accountRequiredForAttendance: React.PropTypes.bool.isRequired,
     onDelete: React.PropTypes.func.isRequired
   },
 
@@ -45,7 +47,8 @@ const WorkshopEnrollment = React.createClass({
       pendingDelete: {
         id: event.currentTarget.dataset.id,
         email: event.currentTarget.dataset.email,
-        name: event.currentTarget.dataset.name
+        first_name: event.currentTarget.dataset.first_name,
+        last_name: event.currentTarget.dataset.last_name
       }
     });
   },
@@ -87,7 +90,8 @@ const WorkshopEnrollment = React.createClass({
             style={styles.clickTarget}
             onClick={this.handleClickDelete}
             data-id={enrollment.id}
-            data-name={enrollment.name}
+            data-first_name={enrollment.first_name}
+            data-last_name={enrollment.last_name}
             data-email={enrollment.email}
           >
             <i className="fa fa-minus" />
@@ -99,20 +103,22 @@ const WorkshopEnrollment = React.createClass({
         <tr key={i}>
           {deleteCell}
           <td>{i + 1}</td>
-          <td>{enrollment.name}</td>
+          <td>{enrollment.first_name}</td>
+          <td>{enrollment.last_name}</td>
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
-          <td>{enrollment.in_section ? 'Yes' : 'No'}</td>
+          {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
+          {this.props.accountRequiredForAttendance && <td>{enrollment.in_section ? 'Yes' : 'No'}</td>}
         </tr>
       );
     });
 
     let confirmationDialog = null;
-    if (!!this.state.pendingDelete) {
+    const pendingDelete = this.state.pendingDelete;
+    if (!!pendingDelete) {
       const bodyText = "Are you sure you want to delete the enrollment for " +
-        `${this.state.pendingDelete.name} (${this.state.pendingDelete.email})?`;
+        `${pendingDelete.first_name} ${pendingDelete.last_name} (${pendingDelete.email})?`;
 
       confirmationDialog = (
         <ConfirmationDialog
@@ -132,12 +138,13 @@ const WorkshopEnrollment = React.createClass({
         <tr>
           <th style={styles.th} />
           <th style={styles.th}>#</th>
-          <th style={styles.th}>Name</th>
+          <th style={styles.th}>First Name</th>
+          <th style={styles.th}>Last Name</th>
           <th style={styles.th}>Email</th>
           <th style={styles.th}>District</th>
           <th style={styles.th}>School</th>
-          <th style={styles.th}>Code Studio Account?</th>
-          <th style={styles.th}>Joined Section?</th>
+          {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
+          {this.props.accountRequiredForAttendance && <th style={styles.th}>Joined Section?</th>}
         </tr>
         </thead>
         <tbody>

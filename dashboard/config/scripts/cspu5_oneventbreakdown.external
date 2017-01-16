@@ -1,0 +1,59 @@
+name 'CSPU5_onEventBreakdown'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+
+<hr>
+<hr>
+<hr>
+
+
+# Breaking Down onEvent
+
+Let's take a closer look at the `onEvent` block.  It is the foundation of everything we do in App Lab so it's important to get to know it and some of the terms involved.
+
+When you use `onEvent` you are setting up your app to respond to certain events that are triggered on certain UI elements.  When the designated event occurs App Lab calls a function that executes whatever code you want.  `onEvent` wraps all this setup into one command that has several parts.
+
+Below is the *generic* form of the `onEvent` block that you see in the toolbox. While there are several different methods or ways to do event-handling in JavaScript, App Lab's `onEvent` block is a type of event-handling function called an **Event Listener**.  
+
+
+<img src="https://images.code.org/cd3dff1d1796f5cc8b2d3afae7848fbb-image-1476799533363.png" style="display: block; margin: auto;">
+
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 100%;">1. id</span>
+The ID of the UI element you want App Lab to "watch" for some event to occur.  This will be the UI element your code responds to.</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 100%;">2. type</span>
+The <em>type of event</em> you want App Lab to "listen" for on the given UI element (e.g. "click", "mouseover", etc.).</p>
+
+<p><span style="font-weight: bold; color: #00adbc; font-size: 100%;">3. callback</span>
+Callback is an odd term.  It's short for the phrase <em><b>"callback function"</b></em>. When you setup an event listener, App Lab needs to know how to "call back" to your code. It's like saying <em>Hey, App Lab, go off and listen for a <strong>click</strong> to happen on <strong>button1</strong> and when it does, <strong>call me back at this function</strong></em>.</p>
+<p>
+A callback function is only different from a normal function in that you don't call it directly from your code. Instead a callback function is <strong>called by the system</strong> at the time the specified event occurs. Callback functions are a common pattern in a lot of event-driven programming.</p>
+
+</div>
+
+<br>
+<hr>
+<img src="https://images.code.org/33764c00b694246718cde89f0788d148-image-1476802107361.png" style="width: 350px; float: right">
+When you drag the `onEvent` block into the workspace it fills in the parameters with some *default* values.  These values adhere to the syntax rules of the language -- notice that that the specific *id* and event *type* are **specified inside quotation marks**.  
+
+But you need to change these values to make `onEvent` do what you want.  Most of your effort will be spent thinking about the code that you write into the callback function definition.  Here is an example with some simple values filled in.
+<br><br>
+![](https://images.code.org/45a2b2a582135cdda197f5162400e6d9-image-1476806436158.png)
+
+<br><hr>
+<div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+<p>It's worth noting that you <em>could</em> flip the workspace into text mode and type all of this out too.  <b>The code is the exact same</b> whether you are in block mode or text mode. </p><p>For something like the <code>onEvent</code> block which has a lot of syntax it's probably easier to stick with block mode.  The added convenience of being able to select the UI id and event types you need from a pulldown list is nice too.  There are times when typing code in text is much more convenient but this isn't one of them.</p></div>
+<br><br>
+![](https://images.code.org/4210851ae92c53c05b578ef9dd556b0e-image-1476804918954.png)
+
+<hr>
+
+On the next page you'll re-create this simple app.  Come back to this page for reference if you need to.
+
+
+MARKDOWN

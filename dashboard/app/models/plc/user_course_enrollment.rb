@@ -26,12 +26,12 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
 
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
-  after_create :create_enrollment_unit_assignments
+  after_save :create_enrollment_unit_assignments
 
   def self.enroll_users(user_emails, course_id)
     course = Plc::Course.find(course_id)
     enrolled_users = []
-    nonexistant_users = []
+    nonexistent_users = []
     nonteacher_users = []
     other_failure_users = []
     other_failure_errors = []
@@ -40,7 +40,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       user = User.find_by_email_or_hashed_email(email)
 
       if user.nil?
-        nonexistant_users << email
+        nonexistent_users << email
       elsif !user.teacher?
         nonteacher_users << email
       else
@@ -54,7 +54,7 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
       end
     end
 
-    return enrolled_users, nonexistant_users, nonteacher_users, other_failure_users, other_failure_errors
+    return enrolled_users, nonexistent_users, nonteacher_users, other_failure_users, other_failure_errors
   end
 
   def create_enrollment_unit_assignments

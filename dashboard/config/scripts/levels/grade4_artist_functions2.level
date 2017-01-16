@@ -17,7 +17,7 @@
     "slider_speed": "0.7",
     "video_key": "C3_artist_functions",
     "embed": "false",
-    "markdown_instructions": "Functions let you define new blocks! \r\n\r\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \r\n\r\nThe squares are 75 pixels apart.\r\n\r\n\r\n<br/>\r\n<h5>\r\n<details>\r\n<summary>Help me with angles</summary>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)\r\n</details>\r\n</h5>",
+    "markdown_instructions": "Functions let you define new blocks! \r\n\r\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \r\n\r\nThe squares are 75 pixels apart.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,7 +33,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\r\n  \"hint_id\": \"2-3_Artist_Functions_2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your program should:\\n- Use function\\n- Move forward 100 + 75 pixels\\n- Use function\",\"hint_id\":\"2-3_Artist_Functions_2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a7f470d79f423a1dcac8b8c8920c402e/grade4_artist_functions2.mp3\"}]",
     "discard_background": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"grade4_artist_funcions2_1\",\r\n  \"callout_text\": \"When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?\",\r\n  \"element_id\": \"start\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
@@ -82,12 +82,8 @@
           <title name="DIR">moveForward</title>
           <title name="VALUE">100</title>
         </block>
-        <block type="draw_turn_by_constant">
+        <block type="draw_turn_by_constant" limit="1">
           <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-        </block>
-        <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
           <title name="VALUE">90</title>
         </block>
         <block type="jump_by_constant">

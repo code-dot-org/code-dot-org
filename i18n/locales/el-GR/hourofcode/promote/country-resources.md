@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -56,21 +58,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
-
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
@@ -100,7 +87,7 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 2) Σχεδίασε τις ανάγκες σου σε υλικό - οι υπολογιστές είναι προαιρετικοί
 
-Η καλύτερη εμπειρία της Ώρας του Κώδικα θα είναι με υπολογιστές συνδεδεμένους στο διαδίκτυο. Όμως δεν χρειάζεστε έναν υπολογιστή για κάθε συμμετέχοντα κι επιπλέον μπορείτε ακόμη να πραγματοποιήσετε την Ώρα του Κώδικα χωρίς καν υπολογιστή.
+The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
 
   * **Δοκίμασε τους οδηγους στους υπολογιστές ή τις συσκευές των μαθητών.** Βεβαιώσου ότι δουλεύουν σωστά (με ήχο και βίντεο).
   * **Κάνε προεπισκόπηση της σελίδας των συγχαρητηρίων** για να δεις τι θα βλέπουν οι μαθητές όταν τελειώνουν. 
@@ -113,13 +100,13 @@ We’ll host a variety of fun, hour-long tutorials, created by a variety of part
 
 ## 4) Ενέπνευσε τους μαθητές - Δείξε τους ένα βίντεο
 
-Στην έναρξη της εκδήλωσης δείξε στο μαθητές ένα βίντεο έμπνευσης. Παραδείγματα:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Ο πρόεδρος Ομπάμα καλεί όλους του μαθητές να μάθουν την Επιστήμη της Πληροφορικής](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Ενθουσίασε του μαθητές σου - κάνε μια μικρή εισαγωγή**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

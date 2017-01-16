@@ -1,4 +1,4 @@
-/* global dashboard, Dialog, YT, YTConfig, trackEvent */
+/* global Dialog, YT, trackEvent */
 
 import $ from 'jquery';
 var videojs = require('video.js');
@@ -25,7 +25,7 @@ function onVideoEnded() {
 var currentVideoOptions;
 function onYouTubeIframeAPIReady() {
   // requires there be an iframe#video present on the page
-  var player = new YT.Player('video', {
+  new YT.Player('video', {
     events: {
       'onStateChange': function (state) {
         if (state.data === YT.PlayerState.ENDED) {

@@ -6,7 +6,7 @@ require 'active_support/core_ext/object/blank'
 @all_emails = Set.new
 
 def dedupe(contacts)
-  contacts.except! *@all_emails
+  contacts.except!(*@all_emails)
   @all_emails.merge contacts.keys
   contacts
 end

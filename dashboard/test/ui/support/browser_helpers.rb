@@ -45,8 +45,11 @@ module BrowserHelpers
   end
 
   def element_has_css(selector, property, expected_value)
-    value = @browser.execute_script("return $(\"#{selector}\").css(\"#{property}\");")
-    expect(value).to eq(expected_value)
+    expect(element_css_value(selector, property)).to eq(expected_value)
+  end
+
+  def element_css_value(selector, property)
+    @browser.execute_script("return $(\"#{selector}\").css(\"#{property}\");")
   end
 
   def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)
@@ -56,11 +59,11 @@ module BrowserHelpers
   end
 
   def wait
-    Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+    Selenium::WebDriver::Wait.new(timeout: 60 * 2)
   end
 
   def short_wait
-    Selenium::WebDriver::Wait.new(:timeout => 5)
+    Selenium::WebDriver::Wait.new(timeout: 5)
   end
 end
 

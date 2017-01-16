@@ -7,13 +7,13 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,2,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,4,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,0,0,3,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig! You can only use one move forward block this time",
+    "instructions": "Get me to the pig! Solve this puzzle by creating a loop!",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "3",
-    "markdown_instructions": "Get me to the pig! You can only use one `move forward` block this time",
+    "markdown_instructions": "Get me to the pig! Solve this puzzle by creating a loop!",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -27,6 +27,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
+    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This puzzle is very similar to the last one.\",\r\n  \"hint_id\": \"hint1\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Use a `repeat 5 times` block to create the loop.\",\r\n  \"hint_id\": \"hint2\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Place a `move forward` block inside the `repeat block`.\",\r\n  \"hint_id\": \"hint3\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

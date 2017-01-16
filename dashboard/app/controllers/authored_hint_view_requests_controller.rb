@@ -18,9 +18,9 @@ class AuthoredHintViewRequestsController < ApplicationController
     objects = AuthoredHintViewRequest.create(hints)
     all_valid = objects.all?(&:valid?)
 
-    pairings.each do |paired_user|
+    pairing_user_ids.each do |paired_user_id|
       # Ignore errors here.
-      AuthoredHintViewRequest.create(hints.map{ |hint| hint.merge(user: paired_user) })
+      AuthoredHintViewRequest.create(hints.map{ |hint| hint.merge(user_id: paired_user_id) })
     end
 
     status_code = all_valid ? :created : :bad_request

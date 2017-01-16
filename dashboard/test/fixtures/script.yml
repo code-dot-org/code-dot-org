@@ -78,6 +78,16 @@ mc:
   user_id:
   login_required: false
   properties: '{}'
+minecraft:
+  id: 71
+  name: minecraft
+  created_at: 2015-10-16 22:39:24.000000000 Z
+  updated_at: 2015-10-16 22:39:24.000000000 Z
+  wrapup_video_id:
+  hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
 frozen:
   id: 61
   name: frozen
@@ -137,7 +147,7 @@ algebraPD:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"CS in Algebra Support"}'
 flappy:
   id: 6
   name: flappy
@@ -267,7 +277,7 @@ ECSPD:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"ECS Support"}'
 ECSPD-NexTech:
   id: 14
   name: ECSPD-NexTech
@@ -277,7 +287,7 @@ ECSPD-NexTech:
   hidden: true
   user_id:
   login_required: true
-  properties: '{"pd":true}'
+  properties: '{"professional_learning_course":"ECS Support"}'
 allthethings:
   id: 45
   name: allthethings

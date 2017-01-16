@@ -6,41 +6,45 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ### По-долу е извадка от примерно планиране в подкрепа на CSEW и нейните цели, които биха могли да бъдат използвани от областта, местните законодатели, бизнес лидери и др.
 
   
 
 
-Отидете на [ <%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>), за да намерите конкретна информация за компютърните науки.
+Go to [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to find state specific information about computer science.
 
-**Заглавие: Компютинг... Когато работните места са**
+**Title: Computing…Where the Jobs Are**
 
-**От [NAME] и [В СЪАВТОРСТВО с учител, началник или бизнес лидер]**
+**By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Компютрите са навсякъде. Те са в нашите джобове. Те са на стената. Те са в нашите автомобили. Те са критична част от нашата инфраструктура, от електрическите мрежи за светофари и вътрешната работа на нашите финансови пазари. И всички тези компютри имат нещо общо. Те зависят от софтуер, за да им каже какво да правят.
+Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
-Но кой точно пише този софтуер?
+But who exactly is going to write this software?
 
-Като се има предвид колко бързо нашия свят се трансформира от технологиите, може да се очаква броят на учениците, които учат компютърни науки днес да е високо. Но не е така. В действителност, по-малко ученици учат компютърни науки и по-малко училища ги преподават, отколкото преди десетилетие.
+Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
 
-В момент, когато търсенето на квалифицирани програмисти никога не е било по-високо, ние създаваме по-малко компютърни специалисти. Дори в това време на висока безработица хиляди работни места, много от тях тук, в **[Вмъкване щат/град]**, са незаети поради липса на достатъчно хора с правилни умения.
+At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for a lack of enough individuals with the right skill sets.
 
-Защо е така? И как да го променим?
+Why is this? And how can we address it?
 
-Проблемът започва в нашите средни и висши училища. Девет от всеки десет от нашите училища не предлагат курсове по компютърно програмиране. В **[УЧИЛИЩЕН район]** миналата година, само **[NUMBER]** колежани на ниво AP държаха изпит по компютърни науки, само **[%]** от всички студенти, които са издържали AP в нашият щат. Просто не правим достатъчно, за да подготвим или да окуражим курсистите ни да преследват тези високо платени, жизненоважни кариери.
+The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Почти всички големи компютърни нововъведения са били измислени тук, в тази страна, но ние сме изложени на риск от загуба на ръководната роля, ако не направим нещо сега.
+Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-Ние трябва да направим някои промени.
+We need to make some changes.
 
-**[НЕЗАДЪЛЖИТЕЛНО ЗА ЩАТИ, КЪДЕТО ТОВА Е ПРИЛОЖЕНО]**
+**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 
-Една положителна промяна е да се позволи изучаването на компютърни науки и да се изискват при завършване на математика или наука във висшите училища. В **[Посочете щата]** курсовете по компютърни науки са избираеми. Предвид академичните изисквания, учениците могат да си позволят да избират курсове по компютърни науки. И тази промяна може да има голямо влияние. В щати, където курсовете по компютърни науки се броят към изискванията за дипломиране на петдесет процента е по-високо участието на малцинствата от щатите, в които третират компютърните науки като избираеми.
+One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
 
-Ние трябва да работим с ученици в ранна възраст, за да предизвикаме техния интерес към компютърните науки и кодирането. Нашите деца не трябва да просто да знаят как да използват приложения и играят на видео игрите, трябва да знаят как да ги създават. Децата могат да научат основите на кодирането още от втори клас най-рано.
+We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
 
-Ние трябва да наемем повече преподаватели по компютърни науки и насърчаваме професионалното развитие в тяхната сфера. Днес има много онлайн ресурси, които могат да помогнат на учителите за поддръжка на актуална информация за най-новите технологии в училище.
+We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
 
-Според статистиката на бюрото на труда до 2020 г. ще има 9,2 милиона работни места в области от STEM. Половината от тези работни места-4,6 милиона — ще бъдат свързани с изчислителната техника или информационни технологии. И компютърните науки дават фундаментални знания за 21-ви век. Кой ще попълни тези работни места, ако на нашите деца не се дава възможност да получат умения?
+According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
 
-Тази седмица, <%= campaign_date('full') %>, е Cs образователна седмица. В училищата в **[STATE]** нашите ученици ще се участват в национален час на кодирането, и ще видят, че компютърните науки не са страшни и дано запалим техния интерес да продължат да учат още. Аз ще се присъединя към тях, и ви каня да се присъедините и вие. Всеки трябва да се научи как се пише код. Посетете https://hourofcode.com/ <%= @country %> за да научите повече и започнете. И подкрепете усилията ни да представим компютърните науки в повече училища в **[STATE]**.
+This week, <%= campaign_date('full') %>, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/<%= @country %> to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+
+<%= view :signup_button %>

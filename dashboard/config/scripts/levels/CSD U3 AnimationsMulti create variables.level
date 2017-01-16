@@ -1,0 +1,14 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2016-10-05T19:35:53.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "gamelab",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Gamelab>

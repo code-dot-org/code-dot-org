@@ -41,7 +41,7 @@
   "heightParameter":"높이",
   "hideTurtle":"예술가 숨기기",
   "jump":"점프",
-  "jumpTo":"~로 이동",
+  "jumpTo":"이동",
   "jumpBackward":"뒤로 점프:",
   "jumpForward":"앞으로 점프:",
   "jumpTooltip":"아무것도 그리지 않고, 원하는 위치로 바로 이동시킵니다.",

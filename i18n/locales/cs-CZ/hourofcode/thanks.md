@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # Děkujeme, že jste nabízíte hostování akce Hodina kódu!
 
-Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. Co můžete udělat dále?
+Dáváte šanci všem studentům po celém světě se zúčastnit Hodiny kódu, která může *změnit zbytek jejich života*, during <%= campaign_date('full') %>. Ozveme se ohledně nových návodů a jiných zajímavých novinek. Co můžete udělat dále?
 
 ## 1. Povídejte o tom
 
@@ -45,5 +45,9 @@ Právě jste se připojili do akce Hodina kódu. Povězte to přátelům hashtag
 ## 7. Naplánujte svojí Hodinu kódu
 
 Vyberte aktivitu Hodiny kódu a [ prohlédněte si tento how-to průvodce](%= resolve_url('/how-to') %).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

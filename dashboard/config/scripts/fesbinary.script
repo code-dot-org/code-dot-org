@@ -1,0 +1,31 @@
+login_required true
+hideable_stages true
+
+stage 'Binary Images'
+level 'BinaryImages'
+level 'grade5_pixelation'
+
+stage 'Binary Artist Puzzles'
+level 'grade5_artist_binary5'
+level 'grade5_artist_binary4'
+level 'grade5_artist_binary8'
+level 'grade5_artist_binary9'
+level 'grade5_artist_binary11'
+
+stage 'RGB Color'
+named_level 'Additive Color (Simulation)'
+named_level '3-Bit Pixel Simulator'
+level 'mike3bit'
+level 'mike3bitbird'
+level 'mike3bitmario'
+level 'mike3bitfreeplay'
+
+stage 'Processing with Bits'
+level 'Unit 1 Lesson 6 Overview'
+level 'CSD U1 - PixFilter 1x1 intro'
+level 'CSD U1 - PixFilter Filter Intro'
+level 'CSD U1 - PixFilter Mushroom'
+level 'CSD U1 - PixFilter Filter Revisit'
+level 'CSD U1 - PixFilter Mario'
+level 'CSD U1 - PixFilter UnFilter'
+level 'CSD U1 - PixFilter FreePlay'

@@ -1,0 +1,43 @@
+name 'PLC- check your progress'
+markdown <<MARKDOWN
+# Getting Started > How to Check your Progress
+
+## How do I navigate my Online PD? How do I check my progress?
+
+Your Online PD course lives in Code Studio, your online learning platform (see image 1). To get to this page, click on the orange button in the top right corner. Select Code Studio from the dropdown. Select your online PD course - that brings you to your progress page (see image 2). Pay attention to the name of the course you are completing!
+
+## I don't recognize these new icons.  What do they mean?
+
+Code Studio is integrating 3 icon types to make finding content easier.  For text, the icon is a page. For video, a camera. And if the level requires a user response, you’ll see the original bubble.  
+
+**Here’s what we changed:** Icons now represent what’s in the level: Now, you’ll see different icons for the many different resources in these levels (text, videos, and puzzles) Bubbles still turn **green**, and resource levels turn gray: When you review a text or video resource then hit “ continue ” that level’s icon will turn gray instead of green. For user-response puzzles, the bubble icon will still turn green. You’ll know you completed your online module when all page and camera icons are gray, and all bubbles are green. All icon types must be completed in order to get credit for finishing the stage.
+
+<img src="https://lh6.googleusercontent.com/81A_6VYvF0VushE1mJCizQv6626YfHtU2Zl7cHOCt93HBg8jxdCH85wTqDrudLT9Im0_J9YbFFJF8eHmLGf79mOQfx2sKcxJg13wlLuoVzzhB_Ghai0Qj-ZC9M4-TQH9TS0FQwdn"/>
+&rarr;
+<img src="https://lh5.googleusercontent.com/xnUvE700WMNu89SmObPkRi2yFXr3FvS0DelMVzwRTb4lbxlnBis9e_IfqgEzDz1EJA3trD-UfOXRFACC9gb1P_0yQ4GfiIR_nKh55OJiX4NdkwgFGP9XIJSzTmRA6tWWlnqRJf51"/>
+
+## Accessing and Navigating through the resources
+
+*Image 1: Accessing Online Support in Code studio*
+
+![Image 1](https://images.code.org/d0c5aae473b67533a2873a05d2b0363f-image-1474393314789.33.04 PM.png)
+
+*Image 2: Course overview page in Code Studio*
+
+![Image 2](https://images.code.org/be9f1191197844ede2c647d1c0621545-image-1474393429999.43.21 PM.png)
+
+*Image 3: Unit overview page when you first access it (prior to looking at any resources)*
+
+![Image 3](https://images.code.org/f287216001e85842a3dbbf480e9e1e1b-image-1474393612248.45.45 PM.png)
+
+*Image 4: Unit overivew page after looking at all resources and completing the challenge*
+
+![Image 4:](https://images.code.org/4f3fd1a49ccc364845f578f296ccb179-image-1474393623647.46.34 PM.png)
+
+
+## Completing your online PD
+
+In order to get credit for completing this online PD, you'll need to complete the challenge. Practically speaking, this means you'll need to enter in a response on every level that has a bubble icon. 
+
+
+MARKDOWN

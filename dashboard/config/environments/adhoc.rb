@@ -52,4 +52,8 @@ Dashboard::Application.configure do
   config.pretty_sharedjs = false
 
   config.lograge.enabled = true
+
+  # Show mail previews (rails/mailers).
+  # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
+  config.action_mailer.show_previews = true
 end

@@ -16,7 +16,7 @@ Over 30 million people of all ages have learned an Hour of Code. Join Us. Then, 
 
 
 ## Make a donation to support Computer Science Education Week
-Computer Science Education Week 2014 is organized by [Code.org](http://code.org), a public 501c3, with support from the general public. We've been overwhelmed by small and large acts of generosity from [individuals and companies](http://code.org/about/donors) who support our vision. All donations made during Computer Science Education Week will be used to recoup the costs of organizing the week, and any additional donations will be saved for future weeks.
+Computer Science Education Week is organized by [Code.org](http://code.org), a public 501c3, with support from the general public. We've been overwhelmed by small and large acts of generosity from [individuals and companies](http://code.org/about/donors) who support our vision. All donations made during Computer Science Education Week will be used to recoup the costs of organizing the week, and any additional donations will be saved for future weeks.
 
 [<button>Donate</button>](http://code.org/donate)
 

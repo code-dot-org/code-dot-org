@@ -1,23 +1,23 @@
 ---
-  title: <%= hoc_s(:title_signup_thanks) %>
-  layout: wide
-  nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
 
-  social:
-    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-    "og:image:width": 1440
-    "og:image:height": 900
-    "og:url": "http://<%=request.host%>"
+social:
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
 
-    "twitter:card": player
-    "twitter:site": "@codeorg"
-    "twitter:url": "http://<%=request.host%>"
-    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -28,7 +28,7 @@
 
 # Obrigado por se inscrever para sediar a Hora do Código!
 
-Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. O que você pode fazer agora?
+Você está possibilitando que alunos de todo o mundo aprendam uma Hora do Código que pode *mudar suas vidas*, no período de <%= campaign_date('full') %>. Entraremos em contato para falar de novos tutoriais e outras atualizações interessantes. O que você pode fazer agora?
 
 ## 1. Divulgue
 
@@ -59,5 +59,9 @@ Você acabou de se juntar ao movimento da Hora do Código. Conte ao seus amigos 
 ## 7. Planeje sua Hora do Código
 
 Escolha uma atividade da Hora do Código e [veja esse guia prático](<%= resolve_url('/how-to') %>).
+
+## 8. Vá além da Hora do Código
+
+Pronto para ir além de uma hora? Confira [nossos cursos completos e recursos para professores](<%= resolve_url('https://code.org/teach')%>) incluindo oportunidades de aprendizagem profissional para professores de ensino fundamental, médio e superior.
 
 <%= view 'popup_window.js' %>

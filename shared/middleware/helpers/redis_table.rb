@@ -50,7 +50,7 @@ class RedisTable
     new_id = next_id
     value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
-    publish_change({:action => 'insert', :id => new_id})
+    publish_change({action: 'insert', id: new_id})
     value
   end
 
@@ -133,7 +133,7 @@ class RedisTable
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
     hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])
     @props.set(row_key(id), hash.to_json)
-    publish_change({:action => 'update', :id => id})
+    publish_change({action: 'update', id: id})
     hash
   end
 
@@ -144,7 +144,7 @@ class RedisTable
     ids = [ids] unless ids.is_a?(Array)
     deleted = @props.delete(ids.map {|id| row_key(id)})
     if deleted
-      publish_change({:action => 'delete', :ids => ids})
+      publish_change({action: 'delete', ids: ids})
     end
     deleted
   end
@@ -152,7 +152,7 @@ class RedisTable
   # Deletes all the tables and rows in a shard.
   def self.reset_shard(shard_id, redis, pub_sub)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub.publish(shard_id, 'all_tables', {:action => 'reset_shard'}) if pub_sub
+    pub_sub.publish(shard_id, 'all_tables', {action: 'reset_shard'}) if pub_sub
   end
 
   private
@@ -169,9 +169,12 @@ class RedisTable
   # Given a row key, return the name of the RedisTable that it belongs to.
   # @param [String] row_key
   # @return [String] the RedisTable name.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.table_from_row_key(key)
     key.split('_')[0]
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def table_from_row_key(key)
     self.class.table_from_row_key(key)
@@ -180,9 +183,12 @@ class RedisTable
   # Given a row key, return the id of the row that it corresponds to.
   # @param [String] key
   # @return [Integer] the row id.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.id_from_row_key(key)
     key.split('_')[1].to_i
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def id_from_row_key(key)
     self.class.id_from_row_key(key)
@@ -209,9 +215,12 @@ class RedisTable
   # @param [String] value The JSON-encoded value.
   # @return [Hash] The row, or null if no such row exists.
   # @private
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.make_row(value)
     value.nil? ? nil : JSON.parse(value)
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def make_row(value)
     self.class.make_row(value)
@@ -238,9 +247,12 @@ class RedisTable
 
   # Return true if k is special internal key (e.g. the row id key) that should
   # not be returned to callers.
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
   def self.internal_key?(k)
     k.end_with?(ROW_ID_SUFFIX)
   end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
   def internal_key?(k)
     self.class.internal_key?(k)

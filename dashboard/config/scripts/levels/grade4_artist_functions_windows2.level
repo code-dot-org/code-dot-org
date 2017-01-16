@@ -30,8 +30,10 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
-    "markdown_instructions": "<style>\r\n.hint{\r\n\tpadding: 15px 15px 15px 40px; \r\n    background-color:#eeeeee; \r\n    border-radius:10px;\r\n}\r\n.hintInner{\r\n\tpadding: 15px 15px 15px 15px; \r\n    background-color:#FFFFFF; \r\n    border-radius:10px;\r\n}\r\n\r\nimg{\r\n\tborder-radius: 10px;\r\n    mix-blend-mode: multiply;\r\n}\r\n\r\n</style>\r\n\r\nLet's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\r\n\r\n\r\n<br/>\r\n\r\n\r\n\r\nTry solving this puzzle by defining a new `function`, then calling it five times. You can solve this without adding any new loops!",
-    "instructions": "Can you figure out how to add these windows? Watch out for the door!",
+    "markdown_instructions": "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \r\n\r\n<img src=\"https://images.code.org/57c016bcafe697e6ddb196e0f13c9ef9-image-1468602046641.gif\" width=\"450px\"/>\r\n<br/> \r\n\r\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\r\n\r\n- The top windows are 50 pixels away from each other.  \r\n- The bottom windows are 100 pixels below the top set.",
+    "instructions": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\r\n\r\n- The top windows are 50 pixels away from each other.  \r\n- The bottom windows are 100 pixels below the top set.",
+    "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating your function first then adding in windows one at a time.\",\"hint_id\":\"grade4_artist_functions_windows2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/26bf872a67250ca2710bd6b27c45e245/grade4_artist_functions_windows2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.\",\"hint_id\":\"grade4_artist_functions_windows2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/999c42bca90cb4404e0d8e70b1724536/grade4_artist_functions_windows2.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
@@ -108,42 +110,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">draw a house</title>
-          <statement name="STACK">
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
-              <statement name="DO">
-                <block type="controls_repeat">
-                  <title name="TIMES">4</title>
-                  <statement name="DO">
-                    <block type="draw_move_by_constant">
-                      <title name="DIR">moveForward</title>
-                      <title name="VALUE">25</title>
-                      <next>
-                        <block type="draw_turn_by_constant">
-                          <title name="DIR">turnRight</title>
-                          <title name="VALUE">90</title>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="draw_turn_by_constant">
-                      <title name="DIR">turnRight</title>
-                      <title name="VALUE">90</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </recommended_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">

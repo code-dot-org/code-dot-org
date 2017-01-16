@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <%
     facebook = {:u=>"http://#{request.host}/us"}
 
@@ -23,7 +25,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## 2. Zatražite da cijela škola sudjeluje u Satu Kodiranja
 
-[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up. <% if @country == 'us' %> One lucky school in *every* U.S. state (and Washington D.C.) will win $10,000 worth of technology. <% end %>
+[Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Zamolite svog poslodavca da sudjeluje
 
@@ -36,3 +38,5 @@ Tell your friends about the **#HourOfCode**!
 ## 5. Zamolite mjesnog dužnosnika da podrži Sat Kodiranja
 
 [Send this email](<%= resolve_url('/promote/resources#sample-emails') %>) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+
+<%= view :signup_button %>

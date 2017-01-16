@@ -4,6 +4,14 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
+Hour of Code este condus de catre comitetul Hour of code si Computer Science Education Week.
+
+[Comitetul consultativ](%= resolve_url('/advisory-committee') %) este format din reprezentanţi ai K-12, mediul academic, non-profit, pentru-profit şi organizaţii internaţionale. Acest comitet ghideaza strategia pentru campania Hour of Code.
+
+[Comitetul de revizuire](%= resolve_url('/review-committee') %) este format din 15 cadre didactice peste gradele K-12 care evaluează şi recomanda activităţi folosind rubrica de Comitetul consultativ. Aceste cadre didactice revizuieste tutoriale şi planuri de lecţie transmise de sute de parteneri, evaluarea activităţilor educative ca valoare, capacitatea de a capta cursanţi şi potenţial pentru diverse stipuri de studenţi.
+
+Munca şi dedicarea ambelor comitete au contribuit la succesul Hour of Code şi la viziunea sa de a oferi o introducere în informatică pentru fiecare student.
+
 <% if @country == 'la' %>
 
 # Parteneri din America Latină
@@ -14,7 +22,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ac' %>
 
-# Africa Partners
+# Partenerii din Africa
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
 
@@ -30,7 +38,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'cn' %>
 
-# China Partners
+# Partenerii din China
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
 
@@ -38,7 +46,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'fr' %>
 
-# France Partners
+# Partenerii din Franta
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
 
@@ -54,7 +62,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'ie' %>
 
-# Ireland Partners
+# Partenerii din Irlanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
 
@@ -62,7 +70,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'in' %>
 
-# India Partners
+# Parteneri din India
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
 
@@ -78,7 +86,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'nl' %>
 
-# Netherlands Partners
+# Partenerii din Olanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
 
@@ -86,7 +94,7 @@ title: <%= hoc_s(:title_partners) %>
 
 <% if @country == 'nz' %>
 
-# New Zealand Partners
+# Partenerii din Noua Zeelanda
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
 
@@ -141,3 +149,5 @@ title: <%= hoc_s(:title_partners) %>
 # Alți parteneri
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+
+<%= view :signup_button %>

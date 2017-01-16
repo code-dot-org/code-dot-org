@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-10-12T17:57:35.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "skin": "applab",
+    "edit_code": true,
+    "embed": "false",
+    "instructions": "Use nested if statements to make the scoring different for the different game levels. (Click to see full instructions)",
+    "markdown_instructions": "# Nested *if* Statements\r\n\r\n<img src=\"https://images.code.org/1774efb17571d3370662e34b705dde47-image-1446485939643.37.11 PM.png\" style=\"width: 150px; float: right\">\r\n\r\n**Let's change the scoring of the game to match the difficulty level.** \r\n\r\nNew scoring rules:\r\n* _Easy: +10 points right answer / -1 point for wrong answer_\r\n* _Hard: +1 point right answer / -1 point for wrong answer_\r\n\r\nHow do we check _both_ the difficulty level and if the user's guess was correct? **We can actually put `if` statements inside of other `if` statements!** So we first want to check what the difficulty level is and then check if the user was right or wrong to determine the score.\r\n\r\n** Note: ** The flowchart below outlines the logic you are trying to implement.\r\n\r\n# Do This:\r\n\r\n* Move a copy of the score `if` statement inside of the difficulty levels. Be careful with indenting. All of the `if` statements for score need to be inside of the difficulty `if` statement (i.e. indented 1 level more than the difficulty `if` statement)\r\n\r\n<img src=\"https://images.code.org/2125a027997aeca75d18b8423058063d-image-1446485524945.gif\" style=\"width: 350px\">\r\n\r\n\r\n* Edit the `if` statements to give the correct scores\r\n\t* Easy level (+10 right, -1 wrong)\r\n    * Hard level (+1 right, -1 wrong)\r\n\r\n<img src=\"https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png\" style=\"width: 100%\">\r\n<a href=\"https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png\" target=\"_blank\">Open diagram in a new tab</a>",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "project_template_level_name": "U3 - Dice - Template",
+    "droplet_tooltips_disabled": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "true",
+    "lock_zero_param_functions": "false",
+    "encrypted_examples": "iqpuwu2PmG0ilTcqGArbfPl77/+Xcx9C4HoRWocITFXtUIXT421ew7bOym3O\nzqmI\n",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Applab>

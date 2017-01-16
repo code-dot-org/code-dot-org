@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {addBlankAnimation, addAnimation, addLibraryAnimation} from '../animationListModule';
 import { makeEnum } from '../../utils';
 import { animations as animationsApi } from '../../clientApi';
+import gamelabMsg from '@cdo/gamelab/locale';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -121,6 +122,8 @@ export function handleUploadComplete(result) {
         // TODO (bbuchanan): Implement after integrating Piskel
       }
       dispatch(hide());
+    }, () => {
+      dispatch(handleUploadError(gamelabMsg.animationPicker_failedToParseImage()));
     });
   };
 }
@@ -129,18 +132,20 @@ export function handleUploadComplete(result) {
  * Asynchronously loads an image file as an Image, then derives appropriate
  * animation metadata from that Image and returns the metadata to a callback.
  * @param {!string} sourceUrl - Where to find the image.
- * @param {!function} callback
+ * @param {!function} onComplete
+ * @param {!function} onError
  */
-function loadImageMetadata(sourceUrl, callback) {
+function loadImageMetadata(sourceUrl, onComplete, onError) {
   let image  = new Image();
   image.addEventListener('load', function () {
-    callback({
+    onComplete({
       sourceSize: {x: image.width, y: image.height},
       frameSize: {x: image.width, y: image.height},
       frameCount: 1,
       frameDelay: 4
     });
   });
+  image.addEventListener('error', onError);
   image.src = sourceUrl;
 }
 

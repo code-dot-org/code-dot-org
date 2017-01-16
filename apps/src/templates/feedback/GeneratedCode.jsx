@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 var React = require('react');
-var msg = require('@cdo/locale');
 
 var GeneratedCode = React.createClass({
 

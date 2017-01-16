@@ -4,10 +4,10 @@
   'yes': Ya
   'no': Tidak
   select_language: Silahkan pilih bahasa Anda
-  upgrade_ie_message: Code.org will soon remove support for Internet Explorer 8, 9,
-    and 10. Please upgrade to a modern browser.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message: Code.org akan menghapus dukungan terhadap Internet Explorer
+    8, 9, dan 10. Silakan perbaruhi browser anda.
+  upgrade_ie_message_csedweek: CSEdWeek.org akan menghapus dukungan terhadap Internet
+    Explorer 8, 9, dan 10. Silakan perbaruhi browser anda.
   upgrade_ie_link: Pelajari lebih banyak
   en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
@@ -39,6 +39,9 @@
   og_title: Setiap anak berhak atas kesempatan
   og_description: Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk
     belajar ilmu komputer. Ini mengubah segalanya.
+  csedweek_og_title: Minggu pendidikan ilmu komputer
+  csedweek_og_description: The Hour of Code is a global movement reaching tens of
+    millions of students of all ages in 180+ countries and over 45 languages.
   hoc2014_heading: Bergabung dengan <a href="http://hourofcode.com">Hour of Code</a>
     <br/> 8-14 Desember 2014 <br/>
   hoc2014_students: Siswa
@@ -183,10 +186,10 @@
   third_party_pricing: Harga
   third_party_cost_free: Gratis untuk siswa dan guru
   third_party_cost_5permonth: "$5/ bulan per kelas"
-  third_party_cost_299: "$2.99/download"
-  third_party_cost_free_399: Free to try, $399/classroom
-  third_party_cost_free_2: Free to try, $2/student
-  third_party_cost_free_10: Free to try, $9.99/month
+  third_party_cost_299: "$2.99/unduh"
+  third_party_cost_free_399: Gratis untuk mencoba, $399/kelas
+  third_party_cost_free_2: Gratis untuk mencoba, $2/mahasiswa
+  third_party_cost_free_10: Gratis untuk mencoba, $9,99/bulan
   third_party_desc_5_4to8: Approximately 5 lessons, geared toward grades 4-8
   third_party_desc_10to12_kto3: Approximately 10-12 lessons, geared toward grades
     K-3
@@ -251,10 +254,12 @@
   continue_learning_header: Lanjutkan pelajaran setelah Satu Jam
   continue_learning_body: Ada banyak pilihan.  Anda dapat belajar online, di sekolah/kursus,
     atau ketika liburan sekolah.
+  learn_code_studio: Try Code Studio courses
   learn_next_level: Lanjut ke tingkat berikutnya
   learn_online: Coba kursus online lain
   learn_classes: Cari kelas kursus
-  hoc_is_here: "#HourOfCode ada di sini – coba lihat! @codeorg"
+  learn_back_to_minecraft: Terus belajar dengan Minecraft
+  hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
@@ -264,6 +269,8 @@
   twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
     Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
     untuk mempelajari lebih lanjut.
+  twitter_cs_foundational: Computer science is foundational for every student to learn.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Belajar Kode selama satu Jam
   beyond_hoc: Setelah Satu Jam
   what_gender: Apa jenis kelamin Anda?
@@ -304,44 +311,44 @@
   studiobar_shop_body: Pecahkan stereotip. Pakailah logo kami dengan bangga.
   homepage_hero_text_malala: "&ldquo;Saya menantang anak-anak di setiap negara untuk
     belajar mengkode selama satu jam.&rdquo; Malala, pemenang Hadiah Nobel Perdamaian"
-  homepage_hero_text_susan: |
+  homepage_hero_text_susan: |-
     &ldquo;Jika Anda bisa mengubah teknologi,
     Anda bisa mengubah dunia.&rdquo;
     Susan, Direktur Utam YouTube
-  homepage_hero_text_fistbump: |
+  homepage_hero_text_fistbump: |-
     &ldquo;Jangan hanya memainkan ponselmu, programkanlah..&rdquo;
     Presiden AS, Barack Obama
-  homepage_hero_text_sheryl: |
+  homepage_hero_text_sheryl: |-
     &ldquo;Anak cucu kita&mdash; termasuk yang perempuan &mdash;
     memerlukan kesempatan untuk belajar ilmu komputer..&rdquo;
     Sheryl, Ketua Pegawai Operasi Facebook
-  homepage_hero_text_satya: |
+  homepage_hero_text_satya: |-
     &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
     Satya, Direktur Utama Microsoft
-  homepage_hero_text_bosh: |
+  homepage_hero_text_bosh: |-
     &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
     Chris Bosh
-  homepage_hero_text_student1: |
+  homepage_hero_text_student1: |-
     &ldquo;Keterampilan ini telah mengubah masa depan saya.
     Bukan untuk mempersaksikan, itu hanya mengungkapkan kesenangan.&rdquo;
     Luna, kelas 7
-  homepage_hero_text_student2: |
+  homepage_hero_text_student2: |-
     &ldquo;Saya telah pernah, pernah melihat anak-anak saya begitu gembira tentang pembelajaran.&rdquo;
     Michael, guru
-  homepage_hero_text_student3: |
+  homepage_hero_text_student3: |-
     &ldquo;Ilmu komputer adalah bidang Anda tidak bisa
     tahu apakah Anda suka atau tidak sebelum Anda mencobanya.&rdquo;
     Jackson, kelas 6
-  homepage_hero_text_student4: |
+  homepage_hero_text_student4: |-
     &ldquo;Anda bisa melakukan apa-apa pikiran Anda ingin lakukan dengan pemrograman.&rdquo;
     Maya, grade 2
   homepage_hero_text_student5: "&ldquo;Ilmu komputer bukan untuk orang lain. Ini adalah
-    untuk Anda, di sini, sekarang.&rdquo; \nGeraldo, guru\n"
-  homepage_hero_text_teacher1: |
+    untuk Anda, di sini, sekarang.&rdquo; \nGeraldo, guru"
+  homepage_hero_text_teacher1: |-
     &ldquo;Coding memicu kreativitas, inspirasi dan inovasi &mdash;
     yang semuanya penting dalam setiap karir.&rdquo;
     Floresa, guru
-  homepage_hero_text_teacher2: |
+  homepage_hero_text_teacher2: |-
     &ldquo;Program ini mendapat 100% dari murid-murid saya terlibat, terlibat dan berpartisipasi.&rdquo;
     Adam, guru
   homepage_hero_text_stat_loc: "#loc baris kode ditulis oleh para pelajar"
@@ -362,6 +369,7 @@
   homepage_action_text_volunteers: Teknis relawan yang diinginkan
   homepage_action_text_codevideo: Tonton videonya
   homepage_action_text_teachervideo: Tonton videonya
+  homepage_action_text_watchvideo: Tonton videonya
   homepage_action_text_girlvideo: Inspirasi seorang gadis
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
@@ -383,7 +391,7 @@
   homepage_banner_congress_link: Add your support
   homepage_banner_emailprivacy: We’re making an important change to how we support
     student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy_link: Baca selengkapnya
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Pelajari lebih banyak
   homepage_slot_text_title_hoc: Jam kode
@@ -411,7 +419,7 @@
   homepage_slot_text_link_stats: Lihat statistiknya
   homepage_slot_text_link_buy: Terlibat
   homepage_slot_text_link_donate: Membuat sumbangan
-  homepage_slot_text_link_shop: T-shirts, hats, & more
+  homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
   homepage_header_codestudio: Code Studio kreasi siswa
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
@@ -455,8 +463,10 @@
   class_submission_level_college: Perguruan tinggi
   class_submission_level_vocational: Kejuruan
   class_submission_languages_other: Bahasa Lainnya
-  inspirational_videos_more: Selebihnya <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">video
-    inspiratif</a> oleh para role model dan selebriti
+  videos_more: More <a href='%{inspiring_videos_playlist}'>inspirational videos</a>
+    featuring role models and celebrities
+  careers_page_more: More <a href='%{careers_url}' target='_blank'>inspirational videos</a>
+    featuring professionals in technology fields
   playlab_choose_theme: Pilih laboratorium bermain-mu
   playlab_classic_title: Klasik
   playlab_gumball_title: Dunia Gumball yang menakjubkan
@@ -480,12 +490,77 @@
   mc_gradelevel: Usia 6 Keatas
   mc_platformtext: Browser modern, smartphone, tablet
   mc_specs: Berbagai bahasa | Situs pencarian | Ages 6-106
+  minecraft_designer: Minecraft Designer
+  minecraft_adventurer: Minecraft Adventurer
+  minecraft_tutorials: Minecraft Hour of Code Tutorials
+  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_designer_description: Program animals and enemies in your own version
+    of Minecraft.
+  minecraft_designer_button: Mulai
+  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_button: Mulai
+  minecraft_no_internet: Tidak ada koneksi Internet?
+  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
   minecraft_subtitle: Minecraft Hour of Code
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
+  sports_page_title: Sports Hour of Code
+  sports_og_title: Hour of Code Sports Tutorials
+  sports_og_description: Choose between making a basketball game or mix and match
+    across sports.
+  sports_title: Code your own sports game
+  sports_watch_video: Tonton videonya
+  sports_video_title: Push yourself. Anybody can learn.
+  sports_select_theme: Select your tutorial theme
+  sports_basketball_title: Make a basketball game
+  sports_all_sports_title: Mix and match across sports
+  sports_featured_athletes: See featured athletes
+  sports_athletes_title: Featured athletes
+  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+    Real Madrid
+  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
+  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+    Sparks
+  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
+  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
+    Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
+    New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
+    FC Barcelona and Brazil National Team
+  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
+  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
+    National Team
+  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
+    Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
+    Dallas Mavericks
+  watch_inspirational_videos: Sebelum Anda memulai, lihat salah satu video inspiratif
+    ini
+  video_title_cs_is_everything: Computer Science is Changing Everything
+  video_title_inspire_girl: Inspirasi seorang gadis
+  video_title_cs_intro: Computer Science intro
+  video_title_schools_dont_teach: What Most Schools Don't Teach
+  video_title_obama: President Obama pada Ilmu Komputer
+  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
+  video_title_anybody_can_learn: Siapa pun bisa belajar
+  video_title_draymond_green: Hour of Code with Draymond Green
+  video_title_russell_okung: Hour of Code with Russell Okung
+  video_title_real_madrid: Hour of Code with Real Madrid
+  video_title_marco_belinelli: Hour of Code with Marco Belinelli
+  video_title_chris_bosh: Chris Bosh on Computer Science
+  video_1min: 1 menit
+  video_2min: 2 menit
+  video_5min: 5 min
+  speak_another_language: Berbicara bahasa lain?
+  help_translate: Bantuk kami menerjemahkan.
+  no_internet: Tidak ada koneksi Internet?
   download_offline: Download the offline version.
   are_you_teacher: Apakah anda seorang guru?
   review_lesson_plan: Review the lesson plan and other teacher resources.
@@ -619,8 +694,6 @@
     kursus ini
   dashboard_landing_educator_blog: Baca lebih lanjut berita dan bahan-bahan di blog
     pendidikan kami
-  dashboard_landing_smart_hints: Harap membantu kami untuk menambah petunjuk bermanfaat
-    untuk tutorial Code.org
   dashboard_landing_video_player: Coba pemutar video baru kami di sekolah anda
   dashboard_landing_progress_title: Perkembangan kelas utama
   dashboard_landing_progress_biggest: Ini adalah perkembangan untuk kelompok yang
@@ -639,7 +712,7 @@
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
   dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_teacher_forum: Bergabung dengan komunitas belajar profesional.
   dashboard_hoc_courses: The Hour of Code untuk segala usia
   dashboard_hoc_courses_desc: Coba salah satu tutorial pendek 1 jam  ini dengan siswa
     Anda!
@@ -692,20 +765,20 @@
   dashboard_action_remove_confirm: Hapus?
   dashboard_action_done: Selesai
   dashboard_action_required: diperlukan
-  dashboard_action_print_certificates: Print certificates
-  dashboard_assessments_view: 'View assessments in:'
+  dashboard_action_print_certificates: Cetak Sertifikat
+  dashboard_assessments_view: 'Lihat penilaian di:'
   dashboard_assessments_none: No assessments
   dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
     course, we have assessment questions available as part of Code Studio to help
     your students prepare for the AP test. To use these assessments, first assign
     the assessment to your class and then pick it from the drop down above and you'll
     see your students' answers here.
-  dashboard_assessments_summaries: Summaries
+  dashboard_assessments_summaries: Ringkasan penilaian
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_percent: Persen
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: Semua
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Beranda guru
   dashboard_navigation_section_student_progress: Akun dan perkembangan siswa
@@ -716,13 +789,13 @@
   dashboard_navigation_section_speakers: Ilmu Komputer <br/> Pembicara Tamu
   dashboard_navigation_all_sections: Akun dan perkembangan siswa
   dashboard_navigation_view_progress: Perkembangan
-  dashboard_navigation_view_text_responses: Lihat Balasan Teks
+  dashboard_navigation_view_text_responses: Respon Teks
   dashboard_navigation_view_assessments: Penilaian
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_assessments_surveys: Penilaian/survei
   dashboard_navigation_add_students: Tambahkan murid
   dashboard_navigation_manage_students: Kelola murid
   dashboard_navigation_lesson_plans_resources: Rencana pelajaran dan sumber daya
-  dashboard_navigation_view_stats: Lihat Statistik
+  dashboard_navigation_view_stats: Statistik
   dashboard_navigation_section: 'Bagian: %{section_name}'
   dashboard_navigation_student: 'Murid: %{student_name}'
   dashboard_progress_not_started: belum dimulai
@@ -778,6 +851,18 @@
   dashboard_sections_no_move: No, I want to move student(s) to be in the new section
     only.
   dashboard_sections_move_students: Move Students
+  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
+    in this course during the week of December 3-7, due to the unprecedented level
+    of traffic our site will receive for the Hour of Code.  You may still assign the
+    course and give all students certificates for participating.  (Most teachers <a
+    href="http://www.code.org/certificates">print these in advance</a>.)<br/><br/>We
+    are thrilled by the number of teachers and students participating and we're sorry
+    we won't be able to save everything.  If your class wants to go further, you can
+    go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
+     Our teacher dashboard will let you track your student's progress every other
+    week of the year.
+  dashboard_sections_assign_activity: Menetapkan kursus
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
   dashboard_error_other_section: If you're moving students between your own sections,
@@ -918,17 +1003,46 @@
     to teach these concepts as standalone tools in any computer science course.
   dashboard_announce_learn_more_button: Pelajari lebih banyak
   dashboard_announce_try_now_button: Coba sekarang
+  dashboard_announce_host_an_hour_button: Host an Hour
+  dashboard_announce_watch_video_button: Watch video
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Tambahkan nama Anda
+  dashboard_announce_go_beyond_button: Go beyond
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
+  dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
+    will start teaching computer science during the Hour of Code this December 5-11.
+    We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+    target='_blank'>Register your Hour of Code event</a> and let another teacher know
+    that anyone can start teaching computer science.
+  dashboard_announce_mc_launch: One of our most popular tutorials now has a sequel!
+    The all-new Minecraft Hour of Code Designer lets students make the rules of the
+    Minecraft world. They can create a totally unique Minecraft experience, and then
+    share it with friends or play it on their phones. Do it with your class for the
+    Hour of Code.
+  dashboard_announce_hoc_scaling_progress: Please note that we are not saving student
+    progress in this course from December 3 - 11 due to the level of traffic our site
+    receives for the Hour of Code during this time.  You can still view student progress
+    from before December 3.  We will go back to saving progress as usual after this
+    week.
+  dashboard_announce_how_code_studio: You don't need any experience to start teaching
+    computer science in your classroom. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;everything you need, all at no cost. Wondering where to get started?
+    Download <a href='%{video_download_url}'>this video</a>!
+  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
+    concepts with your students every week. Code.org offers curriculum, lesson plans,
+    high quality professional learning programs, and tons of great tools for all grade
+    levels&mdash;and it's all free. :) You don't need any experience to start teaching
+    computer science in your classroom. <b>Find the next step that's right for your
+    classroom.</b>
   code_hoc_coming: Hour of Code hadir disini - 8-14 Desember!
   code_sign_up: Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer
-  host_an_hour: Host an hour
+  host_an_hour: Sekitar satu jam
   learn_banner_title: Join us for the Hour of Code
   learn_banner_desc: The Hour of Code is a global movement reaching over 100 million
     students in more than 180 countries. Anyone, anywhere can organize an Hour of
@@ -1065,9 +1179,15 @@
   cspunit4_name: 'Unit 4: Data'
   cspunit5_name: 'Unit 5: Explore and Create PT'
   cspunit6_name: CS Principles Unit 6
+  csd1_name: 'Unit 1: Computers and Logic'
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd4_name: 'Unit 4: The Design Process'
   csp1_name: 'Unit 1: The Internet'
   csp2_name: 'Unit 2: Digital Information'
   csp3_name: 'Unit 3: Algorithms and Programming'
+  csp4_name: 'Unit 4: Big Data and Privacy'
+  csp5_name: 'Unit 5: Building Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1086,13 +1206,21 @@
   iceage_name: Zaman Es
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Blocks)
+  hoc-impact-study_name: Classic Maze with Survey
+  flappy-impact-study_name: Flappy Code with Survey
+  hoc-encryption_name: Simple Encryption
+  text-compression_name: kompresi Teks
   math_category_name: Matematika
   hoc_category_name: Jam kode
   csf_category_name: CS Fundamentals
+  csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: CS Principles Practice Test
+  research_studies_category_name: Research Studies
   applab_name: Laboratorium Aplikasi
+  basketball_name: Make a basketball game
+  sports_name: Code your own sports game
   applab_gradelevel: Usia 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it
@@ -1423,7 +1551,7 @@
     internet)? Download tutorial Blockly yang merupakan pendahulu dari tutorial Code.org
     - ukuran 3MB ZIP file tunggal dapat dimuat ke komputer atau digunakan dari memory
     stick
-  thinkersmith2_longdescription: |2
+  thinkersmith2_longdescription: |2-
 
     Siswa belajar tentang merepresentasikan dan menyimpan surat-surat dalam bentuk biner, sebagai fungsi on dan off( nyala dan padam). Pada akhir materi ini, diharapkan kelas dapat mengkodekan (menyandikan) inisial mereka sendiri untuk mereka bawa pulang ke rumah.
   kodableunplugged_longdescription: Dirancang untuk digunakan dengan kertas biasa,
@@ -1781,7 +1909,7 @@
     di browser Anda, kemudian langsung melihat pratinjau pekerjaan Anda.  Host dan
     Share proyek Anda yang telah selesai dengan satu kali klik. Sangat sempurna untuk
     pemula dan juga untuk ahli.
-  codecombat_beyond_longdescription: |2
+  codecombat_beyond_longdescription: |2-
 
     Bermain sebagai Wizard menggunakan kode (mantra) untuk mengontrol pahlawan Anda, menavigasi labirin,  mengalahkan raksasa, menipu musuh dan menyelamatkan sekutu ! Belajar JavaScript dalam permainan web HTML 5  untuk pemula yang telah selesai.
   codea_beyond_longdescription: Kode untuk iPad memungkinkan Anda membuat game dan

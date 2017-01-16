@@ -11,9 +11,9 @@ class Array
     columns = nil
 
     CSV.open(path, 'wb') do |results|
-      columns = self.first.keys
+      columns = first.keys
       results << columns
-      self.each do |row|
+      each do |row|
         results << columns.map{|column| row[column]}
       end
     end

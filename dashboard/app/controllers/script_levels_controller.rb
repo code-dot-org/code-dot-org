@@ -64,9 +64,9 @@ class ScriptLevelsController < ApplicationController
     configure_caching(@script)
     load_script_level
 
-    if stage_hidden?(current_user, @script_level)
+    if stage_hidden_for_user?(@script_level, current_user)
       view_options(full_width: true)
-      render 'levels/hidden_stage'
+      render 'levels/_hidden_stage'
       return
     end
 
@@ -91,7 +91,8 @@ class ScriptLevelsController < ApplicationController
     return if performed?
     load_section
 
-    return if redirect_under_13_without_tos_teacher(@script_level.level)
+    @level = select_level
+    return if redirect_under_13_without_tos_teacher(@level)
 
     present_level
   end
@@ -100,7 +101,7 @@ class ScriptLevelsController < ApplicationController
   def hidden
     authorize! :read, ScriptLevel
 
-    stage_ids = get_hidden_stage_ids(current_user, params[:script_id])
+    stage_ids = get_hidden_stage_ids(params[:script_id])
 
     render json: stage_ids
   end
@@ -125,6 +126,23 @@ class ScriptLevelsController < ApplicationController
     end
 
     render json: []
+  end
+
+  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # build lesson plans
+  def summary_for_lesson_plans
+    require_levelbuilder_mode
+    authorize! :read, ScriptLevel
+
+    script = Script.get_from_cache(params[:script_id])
+
+    if params[:stage_position]
+      stage = script.stages.select{|s| !s.lockable? && s.relative_position == params[:stage_position].to_i }.first
+    else
+      stage = script.stages.select{|s| s.lockable? && s.relative_position == params[:lockable_stage_position].to_i }.first
+    end
+
+    render json: stage.summary_for_lesson_plans
   end
 
   private
@@ -269,7 +287,6 @@ class ScriptLevelsController < ApplicationController
 
   def present_level
     # All database look-ups should have already been cached by Script::script_cache_from_db
-    @level = select_level
     @game = @level.game
     @stage = @script_level.stage
 
@@ -286,7 +303,7 @@ class ScriptLevelsController < ApplicationController
       @total_level_count = @level.levels.length
     end
 
-    if @level.try(:peer_reviewable)
+    if @level.try(:peer_reviewable?)
       @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
     end
 
@@ -316,54 +333,64 @@ class ScriptLevelsController < ApplicationController
     render 'levels/show', formats: [:html]
   end
 
-  # Returns a set of sections for the current user, and a filter set of which of
-  # those sections use the given script_id. For teachers, looks at sections they
-  # teacher, for students it's sections they are in.
-  def user_sections(script_id)
-    if current_user.try(:teacher?)
-      sections = current_user.sections.select{|s| s.deleted_at.nil?}
-    elsif current_user.try(:student?)
-      sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
-    end
+  def stage_hidden_for_user?(script_level, user)
+    return false if !user || user.try(:teacher?)
 
-    if sections.nil? || sections.empty?
-      return [[], []]
-    end
-
-    script_sections = sections.select{|s| s.script.try(:name) == script_id}
-    [sections, script_sections]
-  end
-
-  def stage_hidden?(current_user, script_level)
-    sections, script_sections = user_sections(script_level.script.id)
+    sections = user.sections_as_student.select{|s| s.deleted_at.nil?}
     return false if sections.empty?
 
-    if script_sections.empty?
-      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to
-      sections.all?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
-    else
-      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+    script_sections = sections.select{|s| s.script.try(:id) == script_level.script.id}
+
+    if !script_sections.empty?
+      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
       # hides the stage
-      script_sections.any?{|s| !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: s.id).nil? }
+      script_sections.all?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
+    else
+      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # hide it
+      sections.any?{|s| ScriptLevelsController.stage_hidden_for_section?(script_level, s.id) }
     end
   end
 
-  def get_hidden_stage_ids(current_user, script_id)
-    sections, script_sections = user_sections(script_id)
+  # TODO(asher): Remove the need for the rubocop disable.
+  # rubocop:disable Lint/IneffectiveAccessModifier
+  def self.stage_hidden_for_section?(script_level, section_id)
+    return false if script_level.nil? || section_id.nil?
+    !SectionHiddenStage.find_by(stage_id: script_level.stage.id, section_id: section_id).nil?
+  end
+  # rubocop:enable Lint/IneffectiveAccessModifier
 
+  def get_hidden_stage_ids(script_name)
+    return [] unless current_user
+
+    # If we're a teacher, we want to go through each of our sections and return
+    # a mapping from section id to hidden stages in that section
+    if current_user.try(:teacher?)
+      sections = current_user.sections.select{|s| s.deleted_at.nil?}
+      hidden_by_section = {}
+      sections.each do |section|
+        hidden_by_section[section.id] = section.section_hidden_stages.map(&:stage_id)
+      end
+      return hidden_by_section
+    end
+
+    # if we're a student, we want to look through each of the sections in which
+    # we're a member, and use those to figure out which stages should be hidden
+    # for us
+    sections = current_user.sections_as_student.select{|s| s.deleted_at.nil?}
     return [] if sections.empty?
+    script_sections = sections.select{|s| s.script.try(:name) == script_name}
 
-    if script_sections.empty?
-      # if we have no sections matching this script id, we consider a stage hidden only if it is hidden in every one
-      # of the sections the student belongs to
-      all_ids = sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
+    if !script_sections.empty?
+      # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
+      # of the sections the student belongs to that match this script id
+      all_ids = script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id)
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
-      counts.select{|_, val| val == sections.length}.keys
+      counts.select{|_, val| val == script_sections.length}.keys
     else
-      # if we have one or more sections matching this script id, we consider a stage hidden if any of those sections
+      # if we have no sections matching this script id, we consider a stage hidden if any of those sections
       # hides the stage
-      script_sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
+      sections.map(&:section_hidden_stages).flatten.map(&:stage_id).uniq
     end
   end
 

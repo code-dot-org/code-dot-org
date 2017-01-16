@@ -6,7 +6,9 @@ nav: how_to_nav
 
 ---
 
-# How to bring the Hour of Code to your entire community.
+<%= view :signup_button %>
+
+# Hvordan innføre Kodetimen i ditt lokalsamfunn.
 
 [col-33]
 
@@ -18,15 +20,15 @@ nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## Få hver skole til å delta, hver elev til å lære!
 
-  1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
+  1. **Les vårt info-ark**om hvorfor informatikkutdanning er viktig, og om hvordan du kan bidra ved å støtte Kodetimen. [Les info-arket her.](/files/hoc-one-pager-public-officials-2016.pdf)
 
-  2. **Recruit local schools and districts.** Use [this email](<%= resolve_url('/promote/resources#sample-emails') %>) or [this blurb](<%= resolve_url('/promote/stats') %>) as a starting point, and take a look at this [how-to](<%= resolve_url('/how-to') %>) for schools and districts.
+  2. **Rekrutter lokale skoler og kommunen.** Bruk[denne eposten](<%= resolve_url('/promote/resources#sample-emails') %>)eller[denne reklameteksten](<%= resolve_url('/promote/stats') %>)som utgangspunkt, og ta en titt på denne [veiledningen](<%= resolve_url('/how-to') %>)for skoler og kommuner.
 
-  3. **Host an Hour of Code event.** See our [event how-to guide](<%= resolve_url('/how-to/events') %>) for a sample run of show, media outreach kit and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+  3. **Arranger et kodetimearrangement.** Se vår [arrangementsveiledning](<%= resolve_url('/how-to/events') %>)for hvordan arrangere, hvordan skaffe mediadekning, og andre planleggingsressurser. Å være vertskap for et arrangement er en flott måte å fremme Kodetimen på, og øke deltagelsen.
 
-  4. **Attend an event during Computer Science Education Week (<%= campaign_date('short') %>).** [Find classrooms and schools](<%= resolve_url('/events') %>) participating in your district, city or state.
+  4. **Delta på et arrangement i utdanningsuka for informatikk (< % = campaign_date('short') %>).** [Finn klasser og skoler](<%= resolve_url('/events') %>) delta i distriktet, byen eller kommunen.
 
   5. **Issue a proclamation or resolution.** See this [sample resolution](<%= resolve_url('resources/proclamation') %>) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
 
@@ -42,3 +44,5 @@ nav: how_to_nav
   8. **Issue a press release.** [Use this sample](<%= resolve_url('/promote/official-press-release') %>) as a guide.
 
   9. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](<%= resolve_url('https://code.org/promote') %>) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+
+<%= view :signup_button %>

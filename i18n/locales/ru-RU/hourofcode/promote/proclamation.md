@@ -4,14 +4,16 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+<%= view :signup_button %>
+
+### Ниже приведен пример разрешения поддержку Недели Компьютерные науки, образования и ее цели, которые могут быть использованы государственными и местными законодателями.
 
   
 [HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
 
 [HOUSE OR SENATE RESOLUTION ###]
 
-[DATE]
+[ДАТА]
 
 Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
 
@@ -50,3 +52,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

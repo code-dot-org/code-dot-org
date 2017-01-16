@@ -6,12 +6,12 @@ video_player: true
 social:
   "og:title": "<%= I18n.t(:og_title) %>"
   "og:description": "<%= I18n.t(:og_description)%>"
-  "og:image": "https://code.org/images/code-video-thumbnail.jpg"
-  "og:image:width": "1440"
-  "og:image:height": "810"
-  "og:video:url": "http://youtube.com/v/nKIu9yen5nc"
-  "og:video:secure_url": "https://youtube.com/v/nKIu9yen5nc"
-  "og:video:type": "application/x-shockwave-flash"
+  "og:image": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
+  "og:image:width": '1920'
+  "og:image:height": '1080'
+  "og:video:url": "<%= 'http://youtube.com/v/ip051U7Rvds' %>"
+  "og:video:secure_url": "<%= 'https://youtube.com/v/ip051U7Rvds' %>"
+  "og:video:type": "video/mp4"
   "og:video:width": "640"
   "og:video:height": "360"
   "twitter:card": player
@@ -19,7 +19,7 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
-  "twitter:image:src": "https://code.org/images/code-video-thumbnail.jpg"
+  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/athletes-thumbnail.jpg' %>"
 ---
 
 %link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
@@ -29,10 +29,8 @@ social:
 -# The homepage gsheet may specify "en" or "not en" for many row types.
 - languageFilter = request.language == "en" ? "en" : "not en"
 
-- page_mode = PageMode.get(request)
-
 #homepage.supreme-container
-  = view :homepage_hero, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_hero, languageFilter: languageFilter
 
   #petitionexpand{style: "display: none"}
     %script{:src=>"/js/jquery.placeholder.js"}
@@ -43,7 +41,7 @@ social:
     .container_responsive
       #user_hero
 
-  = view :homepage_sections, languageFilter: languageFilter, page_mode: page_mode
+  = view :homepage_sections, languageFilter: languageFilter
 
   = view :homepage_gallery
   = view :donor_slider
@@ -53,12 +51,11 @@ social:
 
 :javascript
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $("#petitionexpand").css({display: "block", opacity: 0});
-  }
+  });
 
   $(document).ready(function() {
     $.ajax({
@@ -78,4 +75,3 @@ social:
       }
     });
   });
-

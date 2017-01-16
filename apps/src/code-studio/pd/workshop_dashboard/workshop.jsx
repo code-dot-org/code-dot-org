@@ -22,6 +22,7 @@ import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from './components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
+import Spinner from './components/spinner';
 
 const styles = {
   linkButton: {
@@ -89,7 +90,8 @@ const Workshop = React.createClass({
           'section_id',
           'section_code',
           'sessions',
-          'state'
+          'state',
+          'account_required_for_attendance?'
         ])
       });
     });
@@ -188,14 +190,14 @@ const Workshop = React.createClass({
     });
   },
 
-  getAttendanceUrl(index) {
-    return `/workshops/${this.props.params.workshopId}/attendance/${index}`;
+  getAttendanceUrl(sessionId) {
+    return `/workshops/${this.props.params.workshopId}/attendance/${sessionId}`;
   },
 
   handleTakeAttendanceClick(event) {
     event.preventDefault();
-    const index = event.currentTarget.dataset.index;
-    this.context.router.push(this.getAttendanceUrl(index));
+    const sessionId = event.currentTarget.dataset.session_id;
+    this.context.router.push(this.getAttendanceUrl(sessionId));
   },
 
   handleEditClick() {
@@ -282,37 +284,51 @@ const Workshop = React.createClass({
         );
         break;
       case 'In Progress': {
-        const joinUrl = location.origin + "/join/" + this.state.workshop.section_code;
-        const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
-        contents = (
-          <div>
-            <p>
-              On the day of the workshop, ask workshop attendees to follow the steps:
-            </p>
-            <h4>Step 1: Sign into Code Studio</h4>
-            <p>
-              Tell teachers to sign into their Code Studio accounts. If they do not already have an
-              account tell them to create one by going to{' '}
-              <a href={location.origin} target="_blank">
-                {location.origin}
-              </a>
-            </p>
-            <h4>Step 2: Go to the workshop URL</h4>
-            <p>
-              After teachers have signed into their Code Studio accounts, ask them to type this
-              URL ({joinLink}) into their browsers.
-              They will be taken to code.org and see a green box at the top that reads: “You’ve joined…”.
-              This will allow you to view their Code Studio progress for different professional development courses.
-            </p>
-            <p>
-              You can also{' '}
-              <a href={this.getSectionUrl()} target="_blank">
-                view this section in your Teacher Dashboard
-              </a>{' '}
-              to make sure everyone has joined.
-            </p>
-          </div>
-        );
+        if (this.state.workshop['account_required_for_attendance?']) {
+          const joinUrl = `${location.origin}/join/${this.state.workshop.section_code}`;
+          const joinLink = (<a href={joinUrl} target="_blank">{joinUrl}</a>);
+          contents = (
+            <div>
+              <p>
+                On the day of the workshop, ask workshop attendees to follow the steps:
+              </p>
+              <h4>Step 1: Sign into Code Studio</h4>
+              <p>
+                Tell teachers to sign into their Code Studio accounts. If they do not already have an
+                account tell them to create one by going to{' '}
+                <a href={location.origin} target="_blank">
+                  {location.origin}
+                </a>
+              </p>
+              <h4>Step 2: Go to the workshop URL</h4>
+              <p>
+                After teachers have signed into their Code Studio accounts, ask them to type this
+                URL ({joinLink}) into their browsers.
+                They will be taken to code.org and see a green box at the top that reads: “You’ve joined…”.
+                This will allow you to view their Code Studio progress for different professional development courses.
+              </p>
+              <p>
+                You can also{' '}
+                <a href={this.getSectionUrl()} target="_blank">
+                  view this section in your Teacher Dashboard
+                </a>{' '}
+                to make sure everyone has joined.
+              </p>
+            </div>
+          );
+        } else { // account not required
+          const signupUrl = `${location.origin}/pd/workshops/${this.props.params.workshopId}/enroll`;
+          contents = (
+            <div>
+              <p>
+                On the day of the workshop, ask workshop attendees to register if they haven't already:
+              </p>
+              <p>
+                <a href={signupUrl} target="_blank">{signupUrl}</a>
+              </p>
+            </div>
+          );
+        }
         break;
       }
       default:
@@ -361,13 +377,13 @@ const Workshop = React.createClass({
       </div>
     );
 
-    const attendanceButtons = this.state.workshop.sessions.map((session, i) => {
+    const attendanceButtons = this.state.workshop.sessions.map(session => {
       const date = moment.utc(session.start).format(DATE_FORMAT);
       return (
         <Button
-          key={i}
-          data-index={i}
-          href={this.context.router.createHref(this.getAttendanceUrl(i))}
+          key={session.id}
+          data-session_id={session.id}
+          href={this.context.router.createHref(this.getAttendanceUrl(session.id))}
           onClick={this.handleTakeAttendanceClick}
         >
           {date}
@@ -410,12 +426,12 @@ const Workshop = React.createClass({
           This will generate a report to Code.org as well as email teachers
           a survey regarding the workshop.
         </p>
-        <Button onClick={this.handleEndWorkshopClick}>End Workshop</Button>
+        <Button onClick={this.handleEndWorkshopClick}>End Workshop and Send Survey</Button>
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
           onCancel={this.handleEndWorkshopCancel}
-          headerText="End Workshop"
+          headerText="End Workshop and Send Survey"
           bodyText="Are you sure? Once ended, the workshop cannot be restarted."
         />
       </div>
@@ -496,13 +512,14 @@ const Workshop = React.createClass({
 
     let contents = null;
     if (this.state.loadingEnrollments) {
-      contents = this.renderSpinner();
+      contents = <Spinner/>;
     } else {
       contents = (
         <WorkshopEnrollment
           workshopId={this.props.params.workshopId}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
+          accountRequiredForAttendance={this.state.workshop['account_required_for_attendance?']}
         />
       );
     }
@@ -522,13 +539,9 @@ const Workshop = React.createClass({
     );
   },
 
-  renderSpinner() {
-    return <i className="fa fa-spinner fa-pulse fa-3x" />;
-  },
-
   render() {
     if (this.state.loadingWorkshop) {
-      return this.renderSpinner();
+      return <Spinner/>;
     }
     return (
       <Grid>

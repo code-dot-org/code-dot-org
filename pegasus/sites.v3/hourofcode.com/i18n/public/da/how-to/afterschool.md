@@ -6,19 +6,23 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to teach one Hour of Code in after-school
 
 ## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 2) Choose a tutorial:
 
-We provide a variety of [fun, hour-long tutorials](<%= resolve_url('https://code.org/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We provide a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Alle Hour of Code øvelser:**
 
   * Kræver minimal forberedelsestid for arrangører
   * Er selvforklarende og giver eleverne mulighed for at arbejde i deres eget tempo og færdighedsniveau
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
+
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3) Promote your Hour of Code
 
@@ -62,7 +66,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Led deltagere til aktiviteten**
 
-  * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](<%= resolve_url('https://code.org/learn') %>) under antallet af deltagere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:**
 
@@ -72,7 +76,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Hvad gør jeg hvis nogen bliver hurtigt færdige?**
 
-  * Opmuntre til at prøve en ny Hour of Code aktivitet.[<%= resolve_url('code.org/learn') %>](<%= resolve_url('https://code.org/learn') %>)
+  * Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](<%= resolve_url('/learn') %>)
   * Eller, beder dem hjælpe dem der måtte have svært ved det.
 
 [col-33]
@@ -116,11 +120,10 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 ## Flere Hour of Code materialer til undervisere:
 
-  * Brug denne [skabelon](/files/AfterschoolEducatorLessonPlanOutline.docx) til at planlægge din Hour of Code.
-  * Tjek [tips og tricks](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) fra andre Hour of Code arrangører. 
+  * Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers. 
   * Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
   * [Attend a live Q&A](http://www.eventbrite.com/e/ask-your-final-questions-and-prepare-for-the-2015-hour-of-code-with-codeorg-founder-hadi-partovi-tickets-17987437911) with our founder, Hadi Partovi to prepare for the Hour of Code.
-  * Besøg [Hour of Code forummet](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og støtte fra andre arrangører. <% if @country == 'us' %>
+  * Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
   * Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
 
 ## Hvad er næste skridt efter Hour of Code?
@@ -129,3 +132,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
   * [Attend](<%= resolve_url('https://code.org/professional-development-workshops') %>) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

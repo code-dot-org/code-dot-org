@@ -1,20 +1,16 @@
-function processVolunteerUnsubscribeResponse(data)
-{
-  $('h1').hide();
+function processVolunteerUnsubscribeResponse(data) {
   $('form').hide();
   $('#unsubscribe-volunteer-thanks').show();
 }
 
-function processVolunteerUnsubscribeError(data)
-{
+function processVolunteerUnsubscribeError(data) {
   $('#error-message').text('An error occurred. Please try again or contact us if you continue to receive this error.').show();
   $('body').scrollTop(0);
   $('#btn-submit').removeAttr('disabled');
   $('#btn-submit').removeClass('button_disabled').addClass('button_enabled');
 }
 
-function unsubscribeVolunteerList()
-{
+function unsubscribeVolunteerList() {
   $('#btn-submit').attr('disabled','disabled');
   $('#btn-submit').removeClass('button_enabled').addClass('button_disabled');
 
@@ -22,7 +18,7 @@ function unsubscribeVolunteerList()
   var formResults = $('#unsubscribe-volunteer-form').serializeArray();
 
   var data = {};
-  $(formResults).each(function(index, obj){
+  $(formResults).each(function (index, obj) {
     data[obj.name] = obj.value;
   });
 

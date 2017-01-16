@@ -82,10 +82,13 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
     begin
       s3_object = @s3.get_object(bucket: @bucket, key: key, if_modified_since: if_modified_since, version_id: version)
-      {status: 'FOUND', body: s3_object.body, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
+      {status: 'FOUND', body: s3_object.body, version_id: s3_object.version_id, last_modified: s3_object.last_modified, metadata: s3_object.metadata}
     rescue Aws::S3::Errors::NotModified
       {status: 'NOT_MODIFIED'}
     rescue Aws::S3::Errors::NoSuchKey
+      {status: 'NOT_FOUND'}
+    rescue Aws::S3::Errors::InvalidArgument
+      # Can happen when passed an invalid S3 version id
       {status: 'NOT_FOUND'}
     end
   end
@@ -105,19 +108,27 @@ class BucketHelper
     dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
 
     src_prefix = s3_path src_owner_id, src_channel_id
-    @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
+    result = @s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
-      if !options[:filenames] || options[:filenames].include?(filename)
+      if (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
         mime_type = Sinatra::Base.mime_type(File.extname(filename))
         category = mime_type.split('/').first  # e.g. 'image' or 'audio'
 
         src = "#{@bucket}/#{src_prefix}#{filename}"
         dest = s3_path dest_owner_id, dest_channel_id, filename
-        @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+        response = @s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
 
-        {filename: filename, category: category, size: fileinfo.size}
+        {filename: filename, category: category, size: fileinfo.size, versionId: response.version_id}
       end
     end
+    result.compact
+  end
+
+  def restore_file_version(encrypted_channel_id, filename, version)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, channel_id, filename
+
+    @s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}?versionId=#{version}"), key: key, metadata_directive: 'REPLACE')
   end
 
   def replace_abuse_score(encrypted_channel_id, filename, abuse_score)
@@ -145,17 +156,23 @@ class BucketHelper
   # @param [String] encrypted_channel_id - App-identifying token
   # @param [String] filename - Destination name for new object
   # @param [String] source_filename - Name of object to be copied
-  # @param [Hash] S3 response from copy operation
-  def copy(encrypted_channel_id, filename, source_filename)
+  # @param [String] version - Version of destination object to replace
+  # @return [Hash] S3 response from copy operation
+  def copy(encrypted_channel_id, filename, source_filename, version = nil)
     owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, channel_id, filename
     copy_source = @bucket + '/' + s3_path(owner_id, channel_id, source_filename)
-    @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
+    response = @s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
 
     # TODO: (bbuchanan) Handle abuse_score metadata for animations.
     # When copying an object, should also copy its abuse_score metadata.
     # https://www.pivotaltracker.com/story/show/117949241
+
+    # Delete the old version, if doing an in-place replace
+    @s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
+
+    response
   end
 
   def delete(encrypted_channel_id, filename)
@@ -163,6 +180,13 @@ class BucketHelper
     key = s3_path owner_id, channel_id, filename
 
     @s3.delete_object(bucket: @bucket, key: key)
+  end
+
+  def delete_multiple(encrypted_channel_id, filenames)
+    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
+    objects = filenames.map { |filename| { key: s3_path(owner_id, channel_id, filename) } }
+
+    @s3.delete_objects(bucket: @bucket, delete: { objects: objects, quiet: true})
   end
 
   def list_versions(encrypted_channel_id, filename)

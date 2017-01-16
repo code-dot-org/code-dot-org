@@ -31,6 +31,9 @@ var DialogButtons = React.createClass({
       },
       lightbulb: {
         margin: '-9px 0px -9px -5px'
+      },
+      hintButton: {
+        marginRight: 10
       }
     };
 
@@ -84,7 +87,7 @@ var DialogButtons = React.createClass({
       } else {
         if (this.props.shouldPromptForHint) {
           hintButton = (
-            <Button type="default" id="hint-request-button">
+            <Button type="default" id="hint-request-button" style={style.hintButton}>
               <Lightbulb size={32} style={style.lightbulb}/>
               {msg.hintRequest()}
             </Button>
@@ -138,65 +141,3 @@ var DialogButtons = React.createClass({
 });
 
 module.exports = DialogButtons;
-
-if (BUILD_STYLEGUIDE) {
-  DialogButtons.styleGuideExamples = storybook => {
-    storybook
-      .deprecatedStoriesOf(
-        'DialogButtons',
-        module,
-        {
-          reason: "The component had way too many properties",
-          replacement: "Button",
-        })
-      .addStoryTable([
-        {
-          name: 'ok',
-          story: () => <DialogButtons ok={true}/>
-        }, {
-          name: 'cancelText',
-          story: () => <DialogButtons cancelText="Custom Cancel Text"/>,
-        }, {
-          name: 'confirmText',
-          story: () => <DialogButtons confirmText="Custom Confirm Text"/>,
-        }, {
-          name: 'previousLevel',
-          story: () => <DialogButtons previousLevel={true}/>,
-        }, {
-          name: 'nextLevel',
-          story: () => <DialogButtons nextLevel={true} continueText="Custom Continue Text"/>,
-        }, {
-          name: 'tryAgain',
-          story: () => <DialogButtons tryAgain="Custom Try Again Text"/>,
-        }, {
-          name: 'tryAgain with hint',
-          story: () => <DialogButtons shouldPromptForHint={true} tryAgain="Custom Try Again Text"/>,
-        }, {
-          name: 'K1 customizations',
-          description: 'To use k1 customization, you must pass an assetUrl function.',
-          story: () => (
-            <DialogButtons
-              isK1={true}
-              tryAgain="Custom Try Again"
-              nextLevel={true}
-              continueText="Custom Continue"
-              assetUrl={url => '/blockly/'+url}
-            />
-          ),
-        }, {
-          name: 'K1 freePlay',
-          description: 'To use k1 customization, you must pass an assetUrl function.',
-          story: () => (
-            <DialogButtons
-              isK1={true}
-              freePlay={true}
-              tryAgain="Custom Try Again"
-              nextLevel={true}
-              continueText="Custom Continue"
-              assetUrl={url => '/blockly/'+url}
-            />
-          ),
-        }
-      ]);
-  };
-}

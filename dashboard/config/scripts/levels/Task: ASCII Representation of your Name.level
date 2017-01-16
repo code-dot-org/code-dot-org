@@ -1,0 +1,18 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-09-19T00:57:12.000Z",
+  "level_num": "custom",
+  "user_id": 37,
+  "properties": {
+    "markdown_instructions": "# TASK: Write your name in ASCII\r\n\r\nUse the ASCII Table below to write your name in the decimal and binary representations: \r\n<br><br>\r\n\r\n![](https://images.code.org/8dc285b920911bdfb8c53db74db5c272-image-1474246518064.54.59 PM.png)\r\n\r\n<br><br>\r\nThe full ASCII table can be found <a href=\"https://upload.wikimedia.org/wikipedia/commons/d/dd/ASCII-Table.svg\" target=_blank> here</a>.\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</FreeResponse>

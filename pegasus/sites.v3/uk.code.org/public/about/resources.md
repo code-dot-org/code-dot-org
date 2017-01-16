@@ -4,7 +4,7 @@ nav: about_nav
 tagline: Year of Code
 social:
   'og:title' : 'The UK Hour of Code is here'
-  'og:description' : "For every UK student and classroom: learn how fun coding is in just one hour December 8 - 14."
+  'og:description' : "For every UK student and classroom: learn how fun coding is in just one hour."
   'og:image' : "http://<%=request.host%>/images/code-video-thumbnail.jpg"
   "og:image:width": 1705
   "og:image:height": 949
@@ -21,7 +21,7 @@ Below you will find resources to learn and teach computer science to your studen
 
 ## Teach an Hour of Code to your students
 
-Join us to make history. We want our nation to try an introduction to computer science for one hour during December 8-14. Try our [tutorials here.](/learn/)
+Join us to make history. We want our nation to try an introduction to computer science for one hour during Computer Science Education Week this December. Try our [tutorials here.](/learn/)
 
 
 ## Inspire your students about the world of technology
@@ -43,7 +43,7 @@ Easily arrange for entrepreneurs and founders of successful, growing businesses 
 
 ## Access resources and lesson plans for the computing curriculum in England
 
-You can find the new computing curriculum [here] (https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study)
+You can find the new computing curriculum [here](https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study)
 
 [resources-item]
 
@@ -164,11 +164,28 @@ Encourage students to code at the weekend. Hosted by volunteers, Coderdojos teac
 
 [resources-item]
 
-<div class="resources-logo"><a href=" http://makethingsdostuff.co.uk/"><IMG src="/images/makethingsdostuff.jpeg" /></a></div>
+<div class="resources-logo"><a href="http://makethingsdostuff.co.uk"><IMG src="/images/makethingsdostuff.jpeg" /></a></div>
 
 Giving you the best advice, help and projects for making, mashing, remixing and coding lovely digital things.
 
 [/resources-item]
+
+[resources-item]
+
+<div class="resources-logo"><a href="https://groklearning.com/hoc-2016/activity/virtual-pet-blockly/"><IMG src="/images/groklearning_blockly.jpg" /></a></div>
+
+Get started with the BBC micro:bit. Use friendly blocks to make a virtual pet that you can feed and play with! No micro:bit required.
+
+[/resources-item]
+
+[resources-item]
+
+<div class="resources-logo"><a href="https://groklearning.com/hoc-2016/activity/virtual-pet"><IMG src="/images/groklearning_python.jpg" /></a></div>
+
+Get started with the BBC micro:bit. Use the Python programming language to make a pet that you can feed and play with! No micro:bit required.
+
+[/resources-item]
+
 
 ## Learn more yourself
 

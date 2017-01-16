@@ -1,0 +1,46 @@
+name 'U5L08 - Student Intro If statements'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 5: Lesson 8 - If Statements Unplugged
+
+## Background
+
+We take a whole lesson to learn about `if` statements, what they are, the terminology around them, and what they have to do with “Selection” in programs. We trace simple robot programs on paper to develop a sense of how to read and reason about code with `if` statements in it.
+
+## Lesson
+
+* Introduction to `if` statements with the AP pseduocode
+* A worked example with `if` statements and the "robot"
+* "Will it Crash?" Activity
+
+## Vocabulary
+
+* **`if` Statement** - The common programming structure that implements "conditional statements".
+* **Conditionals** - Another term for `if` statements -- statements that only run under certain conditions.
+* **Selection** - A generic term for a type of programming statement (usually an if-statement) that uses a Boolean condition to determine, or select, whether or not to run a certain block of statements.
+
+## Resources
+
+*In order of usage:*
+
+* Resource - **Breakdown - If-statements explained** (embeded in code studio, next page)
+* Resource - **Annotated Pseudocode: if-statements and Robot** (embeded in code studio, next pages)
+* Activity Guide - **[Will it Crash?](https://docs.google.com/document/d/1wuC7wypejOSs9A8VfyECNNWuAJbSbzN4EHSrHi-sxxc)**
+
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+[answer-key]
+
+**Key:** [KEY: Will it Crash?](https://docs.google.com/document/d/13M6_FrPzu1cT5LoeUPE2Ua7FmWA4k2D9JBwZ29CWqYY)
+
+[/answer-key]
+
+
+MARKDOWN

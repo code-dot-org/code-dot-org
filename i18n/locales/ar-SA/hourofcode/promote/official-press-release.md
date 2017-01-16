@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_press_release) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Sample press release for elected officials
 
 For Immediate Release  
@@ -40,3 +42,9 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**]
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+
+  
+  
+
+
+<%= view :signup_button %>

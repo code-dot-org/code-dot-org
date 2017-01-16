@@ -1300,9 +1300,9 @@
       5:
         image: notes/C2_maze_intro_5.png
         text: Se desideri eliminare un blocco, basta rimuoverlo dalla sequenza di
-          blocchi e trascinarlo nel cestino. Dopo che hai premuto "Esegui", puoi sempre
-          cliccare su "Ricomincia" per far tornare l'uccellino al punto di partenza.
-          Ora andiamo a prendere quei maialini!
+          blocchi e trascinarlo nel cestino. Dopo che hai cliccato su "Esegui", puoi
+          sempre cliccare su "Ricomincia" per far tornare l'uccellino al punto di
+          partenza. Ora andiamo a prendere quei maialini!
     C2_paper_airplanes:
       1:
         image: notes/C2_paper_airplanes_1.png
@@ -1552,7 +1552,7 @@
     C3_bounce:
       1:
         image: notes/C3_bounce_1.png
-        text: |
+        text: |-
           Crea la tua versione del Ping-Pong! Puoi anche condividerla con i tuoi amici! Che emozione!
 
           https://studio.code.org/s/course3/stage/15/puzzle/10???
@@ -2101,9 +2101,9 @@
       5:
         image: notes/C4_intro_5.png
         text: Se desideri eliminare un blocco, basta rimuoverlo dalla sequenza di
-          blocchi e trascinarlo nel cestino. Dopo che hai premuto "Esegui", puoi sempre
-          cliccare su "Ricomincia" per far tornare l'uccellino al punto di partenza.
-          Ora andiamo a prendere quei maialini!
+          blocchi e trascinarlo nel cestino. Dopo che hai cliccato su "Esegui", puoi
+          sempre cliccare su "Ricomincia" per far tornare l'uccellino al punto di
+          partenza. Ora andiamo a prendere quei maialini!
     C4_math_artist:
       1:
         image: notes/C4_math_artist_1.png
@@ -2177,7 +2177,7 @@
           in un altro, devi solo capire come farlo.
       4:
         image: notes/C4_unplugged_binary_4.png
-        text: |
+        text: |-
           Immagina di mettere una griglia su un panda. Per ogni quadrato di questa griglia, decideremo se sia più nero o più bianco. Una volta presa la decisione, lo coloreremo di conseguenza.
           A questo punto, ogni quadrato della griglia sarà per forza tutto nero o tutto bianco.
           Ai quadrati neri assegneremo lo zero, a quelli bianchi l'altra cifra binaria. Dunque ci ritroveremo davanti nient'altro che un mucchio di "uno" e di "zero".
@@ -2216,7 +2216,7 @@
           di previsione computerizzati, esiste una cosa che chiamiamo \"la griglia\".
           Ogni punto di questa griglia ha una sua latitudine e longitudine. Dobbiamo
           quindi calcolare la fisica, cercando di scoprire la velocità del vento,
-          la temperatura, la pressione, insomma questo genere di cose.\n"
+          la temperatura, la pressione, insomma questo genere di cose."
       5:
         image: notes/C4_unplugged_forloops_5.png
         text: Dal momento che queste griglie sono molto grandi e dobbiamo analizzare
@@ -2243,7 +2243,7 @@
     C4_unplugged_parameters:
       1:
         image: notes/C4_unplugged_parameters_1.png
-        text: |
+        text: |-
           Questa lezione si chiama "Comporre canzoni coi parametri". Adesso ci mettiamo a scrivere qualche canzone. A volte il coro è un pochino diverso ogni volta che lo si canta. Ti ricordi "Nella Vecchia Fattoria"? Il coro è un pochino diverso per ogni animale che lo fa. "C'è la mucca, muu, mucca, muuu, ia-ia-ooooh".
           Quella piccola differenza in ogni coro può essere spiegata utilizzando qualcosa che chiameremo "parametri".
       2:
@@ -2255,14 +2255,14 @@
           programma per computer.
       3:
         image: notes/C4_unplugged_parameters_3.png
-        text: |
+        text: |-
           Il disco di gelato alla vaniglia sarà anche lo stesso per ogni Sundae, ma quando chiedi ai tuoi amici quali guarnizioni perferiscono, otterrai sicuramente risposte diverse.
           Ecco, la guarnizione è come se fosse una funzione, mentre il tipo di guarnizione è il parametro.
           Funzioni e parametri lavorano insieme per creare grandiosi programmi per computer (e grandiosi Sundae, naturalmente).
     C4_unplugged_variables:
       1:
         image: notes/C4_unplugged_variables_1.png
-        text: |
+        text: |-
           Questa lezione si chiama "Variabili in busta chiusa". Impareremo come costruire una frase anche se ci mancano alcune informazioni. Molti di noi sanno cosa significa compilare un modulo;facciamo qualcosa di simile,ad esempio,quando scriviamo il nostro nome prima dei compiti.
           Può capitare che all'interno di un modulo ci siano diversi spazi da riempire. Così,prima di ogni spazio,c'è una dicitura,per aiutarci a capire che in un determinato spazio va inserita una determinata informazione.
       2:
@@ -2437,7 +2437,7 @@
           seguirle passo per passo per arrivare al risultato desiderato.
       2:
         image: notes/tutorial_puzzle_challenge_2.png
-        text: |
+        text: |-
           Posso cambiare il numero dei pixel o la lunghezza della linea usando questo menù a tendina.
           Quanto era lunga? Non ricordo.....
           Se hai bisogno di rivedere le istruzioni, le trovi sotto il bottone "Esegui". In questo caso ho utilizzato il blocco "Vai avanti" e sceglierò 100 pixels. Posso cancellare un blocco trascinandolo nella cassetta degli attrezzi oppure nel cestino dei rifiuti. Adesso lo rimetto a posto.
@@ -2458,7 +2458,7 @@
           e i gradi.
       5:
         image: notes/tutorial_puzzle_challenge_5.png
-        text: |
+        text: |-
           Se accidentalmente dovessi cancellare il codice iniziale, puoi premere "Ripristina" ed iniziare da capo. Adesso trascinerò questo blocco numerico all'interno delle diverse aree di pixel.
           Scegli 100 per i pixel, 45 per i gradi e di nuovo 100 per i pixel. Grandioso! Ecco l'ape del Code Studio.
           Devo far posare l'ape su ogni fiore per ottenere del nettare.
@@ -2506,7 +2506,7 @@
           personalizzata, utilizzando cioè le tue iniziali. \nE' un'attività molto
           divertente e ti fornisce uno strumento importante, poiché il linguaggio
           binario è qualcosa che a prima vista può sembrare molto tecnico, ma una
-          volta compreso sarà come parlare una specie di linguaggio segreto.\n"
+          volta compreso sarà come parlare una specie di linguaggio segreto."
     unplug2:
       1:
         image: notes/unplug2_1.png
@@ -2542,7 +2542,7 @@
     unplug3:
       1:
         image: notes/unplug3_1.png
-        text: |
+        text: |-
           L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
           Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
@@ -2555,7 +2555,7 @@
     unplug4:
       1:
         image: notes/unplug4_1.png
-        text: |
+        text: |-
           L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
           Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
@@ -2568,7 +2568,7 @@
     unplug5:
       1:
         image: notes/unplug5_1.png
-        text: |
+        text: |-
           L'utilizzo della carta millimetrata ci aiuta a spiegare cosa significhi scrivere del codice, chiedendo alla gente di ricreare un determinato disegno utilizzando soltanto frecce e scarabocchi.
           Ad una persona verrà consegnato un piccolo disegno su carta millimetrata. Attraverso l'uso di particolari frecce, questa persona dovrà cercare di spiegare come ricreare il disegno ricevuto.
       2:
@@ -2597,17 +2597,17 @@
     unplug7:
       1:
         image: notes/unplug7_1.png
-        text: |
+        text: |-
           Hai presente quando leggi il testo di una canzone? Ad un certo punto ci sono le parole che vanno cantate in coro. Quando il coro si ripresenta più avanti nella canzone, le parole non vengono riscritte; viene semplicemente scritto "coro", che rimanda alle parole scritte in precedenza.
           Questo era solo un esempio per spiegare cosa sia una "funzione".
       2:
         image: notes/unplug7_2.png
-        text: |
+        text: |-
           In questa lezione, definiremo il coro all'inizio della nostra canzone. Andremo quindi avanti a cantare e quando giungeremo alla parola "coro", i nostri occhi torneranno in cima al testo e canteremo rileggendo quelle stesse frasi.
           Questo esempio è un'ottima introduzione per capire cosa un programma stia facendo quando definisce e richiama una funzione.
       3:
         image: notes/unplug7_3.png
-        text: |
+        text: |-
           Usiamo canzoni tradizionali come "Nella Vecchia Fattoria", per spiegare come un coro possa ripresentarsi più volte all'interno di una canzone e come, a volte, questo coro possa cambiare.
           In una canzone come "Nella Vecchia Fattoria", dove alcune parole cambiano, è possibile inserire l'idea di "parametri". Passare attraverso determinate parole al fine di fornire informazioni in più alla tua funzione. Dopo esservi assicurati che tutti abbiano capito, potete prendere una qualunque delle vostre canzoni tradizionali e scomporla allo stesso modo. Cercate di lavorarci sopra insieme.
     unplug8:
@@ -2620,7 +2620,7 @@
           loro storie, spiegando contemporaneamente il concetto di astrazione.'
       2:
         image: notes/unplug8_2.png
-        text: |
+        text: |-
           Gira tutto intorno alle funzioni e su come ottenerle. Proprio come "Nella Vecchia Fattoria", dove esiste una struttura fissa che è il coro, ma dove ogni volta questo coro viene cantato in maniera diversa.
           Si tratta quindi di astrarre, immaginando che il coro sia uno spazio bianco da riempire in maniera diversa di volta in volta. Può capitare che a dover essere cambiate siano soltanto tre parole; in questo caso sarebbe utile impiegare tre parametri.
       3:
@@ -3406,3 +3406,125 @@
           a fare un lavoro in continuazione. Imparare come funzionano i comandi di
           ripetizione ti farà risparmiare un sacco di tempo più tardi quando costruirai
           il tuo gioco.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Ciao, mi chiamo Jens e sono il capo progettista creativo di Minecraft.
+          Nella prossima ora svilupperai la tua versione di Minecraft. All'inizio
+          il tempo sembra essersi fermato in Minecraft. Le pecore non si muovono,
+          le galline non depongono uova e gli zombie sono immobili. Devi scrivere
+          tu il codice che mette in moto il mondo di Minecraft.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Mi chiamo Melissa e sono una studiosa dell''interazione con l''utente
+          a Minecraft. Quello che mi interessa davvero è come la gente pensa e interagisce
+          con la tecnologia e quindi questo lavoro è il lavoro perfetto per me perché
+          unisce l''informatica e la psicologia: come pensano e si comportano le persone.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: La schermata è suddivisa in tre aree principali. 1) Sulla sinistra abbiamo
+          lo scenario di gioco di Minecraft. All'inizio è tutto immobile, ma presto
+          lo animeremo con il codice.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) La zona centrale è la "cassetta degli attrezzi". Ciascun blocco corrisponde
+          a un comando che i polli, le pecore e le altre creature di Minecraft possono
+          comprendere.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Lo spazio sulla destra è la tua area di lavoro ("workspace") ed è
+          il posto in cui costruisci il tuo programma.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Se non ricordi cosa fare, le istruzioni per ogni esercizio sono mostrate
+          in alto.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: Per iniziare, programmiamo il comportamento di un pollo. Trascina il
+          blocco "vai avanti" nell'area di lavoro. Quando clicchi su "Esegui", il
+          pollo avanza di un passo. Per fargli fare un altro passo, trascina un altro
+          blocco "vai avanti" sotto il primo finché il suo bordo non viene evidenziato.
+          Se adesso lo rilasci, i due blocchi si uniscono. Cliccando di nuovo "Esegui",
+          il pollo avanza di due passi.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Se vuoi cancellare un blocco, basta rimuoverlo dalla tua area di lavoro
+          e rimetterlo nella cassetta degli attrezzi.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: Dopo aver cliccato su "Esegui" puoi sempre cliccare su "Ricomincia"
+          per interrompere il gioco e ripartire da capo. Ora tocca a te creare la
+          tua versione di Minecraft. Buon divertimento!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Ciao, sono Lisa. Sono una programmatrice di Minecraft e nel gioco mi
+          occupo del comportamento di alcuni animali e nemici. Uno degli animali su
+          cui ho lavorato è il gattopardo. Ho realizzato la scena in cui offri un
+          pesce al gattopardo per addomesticarlo.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: Noi umani ci annoiamo a ripetere le stesse azioni più e più volte. Ma
+          il bello dei computer è che possono ripetere le stesse operazioni milioni
+          o persino miliardi di volte senza mai stancarsi. Queste ripetizioni si chiamano
+          "cicli" e ogni creatura di Minecraft ne fa uso.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Prima abbiamo fatto muovere un pollo sullo schermo, ma dopo un po’ si
+          è fermato. In Minecraft i polli si spostano continuamente. Usiamo il ciclo
+          "ripeti per sempre" in modo che anche i nostri polli non si fermino mai.
+          I cicli ti fanno risparmiare parecchio tempo e sono un alleato prezioso
+          per creare la tua versione di Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: Nel prossimo esercizio puoi scegliere se controllare Steve o Alex. Premi
+          i tasti di direzione sulla tastiera per muoverti in su, in giù, a sinistra
+          e a destra. Ora puoi spostarti dove vuoi all’interno dello scenario di gioco.
+          Per usare una creatura, avvicinati, girati verso di essa e premi la barra
+          spaziatrice.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: Se utilizzi un <i>touchscreen</i>, puoi muoverti scorrendo verso l’alto,
+          il basso, a sinistra e a destra. Quindi tocca lo schermo per utilizzare
+          l’oggetto che hai di fronte.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: Cosa succede quando usi una creatura? In Minecraft, le pecore producono
+          lana quando le tosi, le mucche scappano se le colpisci e i Creeper esplodono
+          quando ti avvicini. Queste reazioni sono rese possibili dai cosiddetti "gestori
+          di eventi". I gestori di eventi sono blocchi che permettono al programma
+          di attendere e riconoscere determinate circostanze, "gli eventi". Se gli
+          eventi si verificano, i gestori di evento attivano delle azioni.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: Per ora abbiamo utilizzato un solo gestore di evento. Il codice che
+          inserisci nel gestore di evento "quando viene creato" viene eseguito quando
+          la tua creatura viene creata oppure all’avvio del gioco. Nei prossimi livelli
+          disporrai di altri blocchi per gestire eventi. Per esempio "quando viene
+          toccato", il cui codice viene eseguito quando tocchi la creatura, o "quando
+          viene usato", che viene eseguito quando la usi. Se invece vuoi che il tuo
+          zombie scompaia al sorgere del sole, inseriscilo nel blocco "di giorno"
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: Nei giochi, "creare" significa inserire qualcosa nello scenario del
+          gioco. In questo livello creeremo degli zombi al calare del sole. A questo
+          scopo ci servirà il blocco "di notte".
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Visto che gli zombie devono comparire di notte, inseriamo il blocco
+          "crea zombie" nel blocco "di notte". Appena viene creato, ciascuno zombie
+          eseguirà il codice che hai inserito nel gestore di evento "quando viene
+          creato". Buon divertimento con gli zombie!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Congratulazioni! Hai imparato a utilizzare la programmazione per dare
+          vita a nuovi mondi di Minecraft. Ora sei tu lo sviluppatore. Hai a disposizione
+          tutti i comandi e le creature. Ora sei tu a stabilire cosa accadrà.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: Quando hai completato il tuo gioco, clicca su "Termina" per ottenere
+          un link per condividerlo con gli amici o provare il tuo gioco su smartphone.
+          Buon divertimento! Non vedo l’ora di giocare la tua versione di Minecraft.

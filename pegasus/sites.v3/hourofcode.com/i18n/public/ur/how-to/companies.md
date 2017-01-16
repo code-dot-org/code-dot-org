@@ -6,6 +6,8 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -19,7 +21,7 @@ nav: how_to_nav
 
   * Use our [marketing toolkit](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) to create a communications timeline and share promotional content.
   * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [ یہ ای-میل دیکھیں](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## آور-آف-کوڈ کا ایک ایونٹ کیسے ھوسٹ کریں۔
@@ -32,18 +34,18 @@ nav: how_to_nav
 ## 2) یہ ھاؤ-ٹو ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) ٹیٹوریئل منتخب کریں:
 
-ہم جملہ اقسام کے [ تفریحی، طویل دورانیہ کے ٹیٹوریئلز](<%= resolve_url('https://code.org/learn') %>) ھوسٹ کرتے ہیں جو تمام عمر کے شرکاء کے لیے اور کئی طرح کے پارٹنرز کے بنائے ہوئے ہوسکتے ہیں۔ [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **آور-آف-کوڈ کے تمام ٹیٹوریئلز**
 
   * تیاری کے لیے کم از کم درکار وقت
   * یہ سیلف-گائیڈڈ ہوتے ہیں جو شرکاء (پارٹیسیپنٹس) کو ان کی اپنی رفتار اور صلاحیت کے درجہ کے مطابق کام کرنے کا موقع دیتے ہیں۔
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) اپنی ٹیکنالوجی کی ضروریات کا پلان کریں – کمپیوٹرز آپشنل ہیں
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
@@ -77,7 +79,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-  * ایک ٹیٹوریئل تحریر کریں۔ اپنے [منتخب کردہ ٹیٹوریئل کے لیے انفارمیشن فہرست](<%= resolve_url('https://code.org/learn') %>) کا لنک تلاش کریں جو کہ پارٹیسیپنٹس کی تعداد کے تحت ہے۔
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +90,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 **اگر کوئی اسے قبل از وقت ختم کر لے تو؟**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
@@ -138,4 +140,6 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ## آور-آف-کوڈ کے بعد کیا آتا ہے؟
 
-ٹیکانالوجی کیسے کام کرتی ہے اور سوفٹ ویئر ایپلیکیشنز کیسے بنائی جاتی ہیں، یہ سب جاننے کے لیے آور-آف-کوڈ اس سفر کا صرف پہلا قدم ہے۔ To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

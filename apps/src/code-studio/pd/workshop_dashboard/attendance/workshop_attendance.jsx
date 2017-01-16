@@ -5,17 +5,16 @@
  */
 
 import $ from 'jquery';
-import _ from 'lodash';
 import React from 'react';
 import SessionTime from '../components/session_time';
+import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
+import color from '@cdo/apps/util/color';
 import {
   Row,
   Col,
   ButtonToolbar,
   Button,
-  OverlayTrigger,
-  Tooltip,
   Tabs,
   Tab
 } from 'react-bootstrap';
@@ -30,6 +29,11 @@ const styles = {
       cursor: 'pointer',
       backgroundColor: '#f5f5f5' // Light gray
     }
+  },
+  saveStatus: {
+    error: {
+      color: color.red
+    }
   }
 };
 
@@ -41,18 +45,20 @@ const WorkshopAttendance = React.createClass({
   propTypes: {
     params: React.PropTypes.shape({
       workshopId: React.PropTypes.string.isRequired,
-      sessionIndex: React.PropTypes.string
+      sessionId: React.PropTypes.string
     }).isRequired
   },
 
   getInitialState() {
     return {
-      loading: true,
+      loadingSummary: true,
       workshopState: undefined,
-      sessionAttendances: undefined,
+      sectionCode: undefined,
+      sessions: undefined,
       adminOverride: false,
-      saving: false,
-      isModified: false
+      numPendingSaves: 0,
+      lastSaveFailed: false,
+      accountRequiredForAttendance: true
     };
   },
 
@@ -65,96 +71,76 @@ const WorkshopAttendance = React.createClass({
   },
 
   componentDidMount() {
-    // Response format:
-    // [
-    //   state: _workshop state_,
-    //   session: {id. start, end},
-    //   attendances: [{name, email, enrolled, user_id, in_section, attended}]
-    // ]
-    this.loadRequest = $.ajax({
+    this.loadSummary();
+  },
+
+  loadSummary() {
+    this.loadSummaryRequest = $.ajax({
       method: "GET",
-      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`,
+      url: `/api/v1/pd/workshops/${this.props.params.workshopId}/summary`,
       dataType: "json"
     }).done(data => {
+      // No session Id, or an invalid session Id in the Url? Redirect to the first one.
+      if (!this.activeSessionId() || !data.sessions.find(s => s.id === this.activeSessionId())) {
+        this.updateUrlWithSession(data.sessions[0].id);
+      }
       this.setState({
-        loading: false,
+        loadingSummary: false,
         workshopState: data.state,
-        sessionAttendances: data.session_attendances
+        sectionCode: data.section_code,
+        sessions: data.sessions,
+        accountRequiredForAttendance: data['account_required_for_attendance?']
       });
     });
   },
 
   componentWillUnmount() {
-    if (this.loadRequest) {
-      this.loadRequest.abort();
+    if (this.loadSummaryRequest) {
+      this.loadSummaryRequest.abort();
     }
     if (this.saveRequest) {
       this.saveRequest.abort();
     }
   },
 
-  handleNavSelect(sessionIndex) {
-    this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionIndex}`);
+  updateUrlWithSession(sessionId) {
+    this.context.router.replace(`/workshops/${this.props.params.workshopId}/attendance/${sessionId}`);
+  },
+
+  handleNavSelect(sessionId) {
+    this.updateUrlWithSession(sessionId);
   },
 
   handleBackClick() {
     this.context.router.push(`/workshops/${this.props.params.workshopId}`);
   },
 
-  handleSaveClick() {
-    this.setState({saving: true});
-    const url = `/api/v1/pd/workshops/${this.props.params.workshopId}/attendance`;
-    const data = this.prepareDataForApi();
-    this.saveRequest = $.ajax({
-      method: 'PATCH',
-      url: url ,
-      dataType: 'json',
-      contentType: 'application/json',
-      data: JSON.stringify({pd_workshop: data})
-    }).done(() => {
-      this.setState({
-        saving: false,
-        isModified: false
-      });
-    });
-  },
-
   handleDownloadCsvClick() {
     window.open(`/api/v1/pd/workshops/${this.props.params.workshopId}/attendance.csv`);
   },
 
-  prepareDataForApi() {
-    // Convert to {session_attendances: [session_id, attendances: [user_id or email]]}
-    return {
-      session_attendances: this.state.sessionAttendances.map(sessionAttendance => {
-        return {
-          session_id: sessionAttendance.session.id,
-          attendances: sessionAttendance.attendance.filter(attendance => {
-            return attendance.attended;
-          }).map(attendance => {
-            if (attendance.user_id) {
-              return {id: attendance.user_id};
-            }
-            // For admin-override mode, the user may not have an account so use email.
-            // In that case, an account will be created in the backend, invited by the admin.
-            return {email: attendance.email};
-          })
-        };
-      })
-    };
+  // returns workshopId from the router params, in number form
+  workshopId() {
+    return parseInt(this.props.params.workshopId, 10);
   },
 
-  handleAttendanceChange(i, value) {
-    const clonedAttendances = _.cloneDeep(this.state.sessionAttendances);
-    clonedAttendances[this.activeSessionIndex()].attendance[i].attended = value;
+  // returns the active sessionId from the router params, in number form (or null if non specified).
+  activeSessionId() {
+    return this.props.params.sessionId ? parseInt(this.props.params.sessionId, 10) : null;
+  },
+
+  handleSaving() {
+    const numPendingSaves = this.state.numPendingSaves + 1;
+    this.setState({numPendingSaves});
+  },
+
+  handleSaved(value) {
+    const lastSaveFailed = !!value.error;
+    const numPendingSaves = this.state.numPendingSaves - 1;
     this.setState({
-      sessionAttendances: clonedAttendances,
-      isModified: true
+      numPendingSaves,
+      lastSaveFailed
     });
-  },
-
-  activeSessionIndex() {
-    return parseInt(this.props.params.sessionIndex, 10) || 0;
   },
 
   handleAdminOverrideClick() {
@@ -162,7 +148,7 @@ const WorkshopAttendance = React.createClass({
   },
 
   renderAdminControls() {
-    if (!this.isAdmin()) {
+    if (!this.state.accountRequiredForAttendance || !this.isAdmin()) {
       return null;
     }
     const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
@@ -184,25 +170,11 @@ const WorkshopAttendance = React.createClass({
   },
 
   render() {
-    if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+    if (this.state.loadingSummary) {
+      return <Spinner/>;
     }
 
     const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin();
-    const sessionTabs = this.state.sessionAttendances.map((sessionAttendance, i) => {
-      const session = sessionAttendance.session;
-      return (
-        <Tab key={i} eventKey={i} title={<SessionTime session={session}/>}>
-          <SessionAttendance
-            sessionId={session.id}
-            attendance={sessionAttendance.attendance}
-            adminOverride={this.state.adminOverride}
-            onChange={this.handleAttendanceChange}
-            isReadOnly={isReadOnly}
-          />
-        </Tab>
-      );
-    });
 
     let intro = null;
     if (isReadOnly) {
@@ -218,6 +190,27 @@ const WorkshopAttendance = React.createClass({
           Note this will not be reflected in the payment report if it's already gone out.
         </p>
       );
+    } else if (this.state.sectionCode) {
+      const joinUrl = this.state.accountRequiredForAttendance ?
+        `${location.origin}/join/${this.state.sectionCode}` :
+        `${location.origin}/pd/workshops/${this.workshopId()}/enroll`;
+      intro = (
+        <p>
+          Remember to have your participants go to this address before taking attendance:
+          <br/>
+          <a href={joinUrl} target="_blank">{joinUrl}</a>
+        </p>
+      );
+    }
+
+    const saveStatus = {};
+    if (this.state.lastSaveFailed) {
+      saveStatus.text = "Unable to save changes. Please try again.";
+      saveStatus.style = styles.saveStatus.error;
+    } else if (this.state.numPendingSaves > 0) {
+      saveStatus.text = "Saving...";
+    } else {
+      saveStatus.text = "All changes have been saved.";
     }
 
     return (
@@ -227,22 +220,31 @@ const WorkshopAttendance = React.createClass({
         </h1>
         {intro}
         {isReadOnly ? null : this.renderAdminControls()}
-        <Tabs activeKey={this.activeSessionIndex()} onSelect={this.handleNavSelect} id="attendance-tabs">
-          {sessionTabs}
+        <p style={saveStatus.style} >
+          {saveStatus.text}
+        </p>
+        <Tabs activeKey={this.activeSessionId()} onSelect={this.handleNavSelect} id="attendance-tabs">
+          {this.state.sessions.map((session) =>
+            <Tab
+              key={session.id}
+              eventKey={session.id}
+              title={<SessionTime session={session}/>}
+            />
+          )}
         </Tabs>
-        <br />
+        <SessionAttendance
+          workshopId={this.workshopId()}
+          sessionId={this.activeSessionId()}
+          adminOverride={this.state.adminOverride}
+          isReadOnly={isReadOnly}
+          onSaving={this.handleSaving}
+          onSaved={this.handleSaved}
+          accountRequiredForAttendance={this.state.accountRequiredForAttendance}
+        />
         <Row>
           <Col sm={10}>
             <ButtonToolbar>
               <Button
-                disabled={!this.state.isModified && !this.state.saving}
-                bsStyle="primary"
-                onClick={this.handleSaveClick}
-              >
-                Save
-              </Button>
-              <Button
-                disabled={this.state.isModified}
                 onClick={this.handleDownloadCsvClick}
               >
                 Download CSV

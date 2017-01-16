@@ -6,11 +6,13 @@ nav: how_to_nav
 
 ---
 
+<%= view :signup_button %>
+
 # Jak přivést Hodinu kódu do vaší společnosti
 
 ## Inspirujte studenty a nabídněte se pro Hodinu kódu
 
-**Code.org nabízí zaměstnancům šanci k [připojení](<%= resolve_url('https://code.org/volunteer') %>) s lokálními třídami dělající Hodinu kódu, aby mohli sdílet svoje kariérní zkušenosti a inspirovali studenty k studování informatiky.**
+**Code.org offers company employees the opportunity to [connect](<%= resolve_url('https://code.org/volunteer') %>) with local classrooms doing the Hour of Code to share their tech career experience and inspire students to study computer science.**
 
   * [Připojte se](<%= resolve_url('https://code.org/volunteer') %>) jako dobrovolník.
   * Pro více instrukcí, o připojování vašich zaměstnancům s třídami, konzultujte s naším [ průvodcem pro korporační partnery](<%= localized_file('/files/HourOfCodeGuideForCorporatePartners.pdf') %>).
@@ -19,7 +21,7 @@ nav: how_to_nav
 
   * Použijte náš [marketingový nástroj ](<%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %>) k vytvoření komunikační časové osy a sdílení propagačního obsahu.
   * Zeptejte se svého výkonného ředitele, jestli by nemohl poslat celofiremní email, zdůrazňující důležitost informatiky a podporující zaměstnance k šíření. [Viz tento email](<%= resolve_url('/promote/resources#sample-emails') %>).
-  * Hostujte šťastnou hodinu Hodiny kódu s vašimi spolupracovníky, aby mohli vyzkoušet [cvičení](<%= resolve_url('https://code.org/learn') %>).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](<%= resolve_url('/learn') %>).
   * Hostujte událost Hodiny kódu pro lokální třídy studentů nebo pro neziskové partnery, ať udělají Hodinu kódu ve kancelářích vaší firmy. Podívejte se na událost how-to průvodce níže.
 
 ## Jak uspořádat událost Hodiny kódu
@@ -32,20 +34,20 @@ nav: how_to_nav
 ## 2) Prohlédni si toto video s návodem <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) Zvol si výukový kurz:
 
-Budeme hostovat řadu [zábavných jednohodinových výukových kurzů ](<%= resolve_url('https://code.org/learn') %>) pro účastníky všech věkových kategorií řadou různých partnerů. [Try them out!](<%= resolve_url("https://code.org/learn") %>)
+We’ll host a variety of [fun, hour-long tutorials](<%= resolve_url('/learn') %>) for participants of all ages, created by a variety of partners. [Try them out!](<%= resolve_url('/learn') %>)
 
 **Všechny výukové kurzy Hodiny kódu:**
 
   * Vyžadují minimální čas na přípravu
   * Řídí se samy, což umožňuje žákům samostatně postupovat vlastním tempem, podle jejich úrovně dovednosti
 
-[![](/images/fit-700/tutorials.png)](<%= resolve_url('https://code.org/learn') %>)
+[![](/images/fit-700/tutorials.png)](<%= resolve_url('/learn') %>)
 
 ## 4) Plánuj potřeby technologie - počítače nejsou povinné
 
 The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
-**Plan Ahead!** Do the following before your event starts:
+**Plánujte dopředu!** Udělejte následující kroky než akce započne:
 
   * Test tutorials on computers or devices. Make sure they work properly on browsers with sound and video.
   * Provide headphones, or ask participants to bring their own, if the tutorial you choose works best with sound.
@@ -77,7 +79,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 **Přímí účastnci k aktivitě**
 
-  * Napište na tabuli odkaz na výukový kurz. Najděte odkaz v seznamu na [informace pro vybraný výukový kurz](<%= resolve_url('https://code.org/learn') %>) pod počtem účastníků.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](<%= resolve_url('/learn') %>) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -88,7 +90,7 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 **Co udělat, když někdo skončí dříve?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
@@ -138,4 +140,6 @@ Začni s Hodinou kódu, abys inspirovali účastníky a diskusí o tom, jak info
 
 ## Co přijde po Hodině kódu?
 
-Hodina kódu je jen prvním krokem k poznání, jak fungují technologie a jak vytvářet software. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](<%= resolve_url('https://code.org/learn/beyond') %>).
+
+<%= view :signup_button %>

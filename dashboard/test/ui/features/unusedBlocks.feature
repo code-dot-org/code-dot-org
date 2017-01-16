@@ -2,22 +2,20 @@ Feature: Unused Blocks
 
 @eyes
 Scenario: Solve a level with unused blocks
-  Given I am on "http://learn.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true&enableExperiments=unusedBlocks"
+  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#x-close"
-  And I close the dialog
+  And I wait for the page to fully load
 
   When I open my eyes to test "Unused Blocks"
 
   # Drag a block into the middle of the workspace
-  When I drag block "1" to offset "200, 400"
+  When I drag block "1" to offset "200, 200"
 
   Then I see no difference for "unattached block before running"
 
   # Run and retry
   When I press "runButton"
-  And I wait to see "#again-button"
-  And I press "again-button"
+  And I wait to see ".uitest-topInstructions-inline-feedback"
   And I wait to see ".blocklyHelp"
 
   # Block should now have an "unused code" container

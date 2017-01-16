@@ -104,6 +104,11 @@ tutorial_puzzle_challenge			_l68chtl1co	http://videos.code.org/2014/tutorial-puz
 infinity_playlab_intro			vQGOfhsb76o	http://videos.code.org/2015/infinityplaylab/infinity-playlab-intro.mp4
 infinity_playlab_events			HcljJx_0Elw	http://videos.code.org/2015/infinityplaylab/infinity-playlab-events.mp4
 infinity_playlab_repeat_forever			Ldj1-kEa9nA	http://videos.code.org/2015/infinityplaylab/infinity-playlab-repeat-forever.mp4
+csd_gamelab_draw_1			PXn9gKiKKFo	https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_1.mp4
+csd_gamelab_draw_2			QLabeWhw_O0	https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_2.mp4
+csd_gamelab_drawloop			G6QJeuHhqCM	https://videos.code.org/cs-discoveries/gamelab/gamelab_drawloop.mp4
+csd_gamelab_sprites_1			aUHzpGt9nso	https://videos.code.org/cs-discoveries/gamelab/gamelab_sprites.mp4
+csd_gamelab_sprites_2			G666sFzAg5g	https://videos.code.org/cs-discoveries/gamelab/gamelab_animating_sprites.mp4
 csp_applab_objects			ZunUF_WGMb4	https://videos.code.org/2015/csp/applab/intro-to-objects.mp4
 csp_applab_databases_1			d8ByCh-BouQ	https://videos.code.org/2015/csp/applab/databases_intro_1_create.mp4
 csp_applab_databases_2			RZlHfbtO2C4	https://videos.code.org/2015/csp/applab/databases_intro_2_dataviewer.mp4
@@ -114,6 +119,9 @@ csp_applab_lists_3			rWSsVSMGXXY	https://videos.code.org/2015/csp/applab/lists_i
 csp_applab_lists_4			H__zi1BiXJM	https://videos.code.org/2015/csp/applab/lists_intro_4.mp4
 csp_applab_conditionals_1			y3rCKJNOwpA	https://videos.code.org/2015/csp/applab/conditionals_1.mp4
 csp_applab_conditionals_2			UDi7xgIIW8E	https://videos.code.org/2015/csp/applab/conditionals_2.mp4
+csp_applab_conditionals_2A			0oG3Wck2fRU	https://videos.code.org/2015/csp/applab/conditionals_2A.mp4
+csp_applab_conditionals_2B			ZIL_3YRD14s	https://videos.code.org/2015/csp/applab/conditionals_2B.mp4
+csp_applab_conditionals_2C			aFssCTE5hs8	https://videos.code.org/2015/csp/applab/conditionals_2C.mp4
 csp_applab_conditionals_3			kyFdniI-ZZs	https://videos.code.org/2015/csp/applab/conditionals_3.mp4
 csp_applab_design			-EoTeD4mSNU	https://videos.code.org/2015/csp/applab/design.mp4
 csp_applab_variables_1			G41G_PEWFjE	https://videos.code.org/2015/csp/applab/variables_1.mp4
@@ -131,7 +139,7 @@ csp_concept_internet_ip_dns			5o8CwafCxnU	http://videos.code.org/2015/csp/concep
 csp_concept_internet_packets_reliability			AYdF7b3nMto	http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4
 csp_concept_internet_wires_cables_wifi			ZhEf7e4kopM	http://videos.code.org/2015/csp/concept_internet_wires_cables_wifi.mp4
 csp_concept_rgb			15aqFQQVBWU	http://videos.code.org/2015/csp/concept_rgb.mp4
-csp_cs_is_changing_everything			1x54GqfL3UY	https://videos.code.org/2015/csp/cs_is_changing_everything.mp4
+csp_cs_is_changing_everything			QvyTEx1wyOY	https://videos.code.org/2015/csp/cs_is_changing_everything.mp4
 csp_pixelation_color_1			763E3_Z6Hng	http://videos.code.org/2015/csp/pixelation_color_1.mp4
 csp_pixelation_color_2			xK9z51Tin4E	http://videos.code.org/2015/csp/pixelation_color_2.mp4
 csp_pixelation_color_3			Xhqz3ffGm74	http://videos.code.org/2015/csp/pixelation_color_3.mp4
@@ -180,3 +188,8 @@ gumball_repeat			Dm8AL84e11w	http://videos.code.org/gumball/gumball-repeat.mp4
 iceage_intro			ap_5Ft3KocU	http://videos.code.org/iceage/iceage-intro.mp4
 iceage_events			7o6ABVPc2Wg	http://videos.code.org/iceage/iceage-events.mp4
 iceage_repeat			TMyUA9Julzg	http://videos.code.org/iceage/iceage-repeat.mp4
+mc_2016_intro			Fzwa6Pm03Zk	http://videos.code.org/minecraft/2016-introduction.mp4
+mc_2016_loops			sLYfDCl9JWA	http://videos.code.org/minecraft/2016-loops.mp4
+mc_2016_events			4eL3v0-FMkA	http://videos.code.org/minecraft/2016-events.mp4
+mc_2016_spawn			2N02R1LUyKI	http://videos.code.org/minecraft/2016-spawning.mp4
+mc_2016_congrats			xn2dCH1uAVI	http://videos.code.org/minecraft/2016-congratulations.mp4

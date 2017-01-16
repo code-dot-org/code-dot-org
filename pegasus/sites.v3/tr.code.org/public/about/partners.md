@@ -28,6 +28,9 @@ social:
           <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
             <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.microsoft.com/tr-tr/" target="_blank"><img style="max-width: 100%" src="/images/Microsoft.png"></a>
           </div>
+		  <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+            <a style="display: table-cell; vertical-align: middle; text-align: center;" href="http://www.ge.com/tr/" target="_blank"><img style="max-width: 100%" src="/images/GE.png"></a>
+          </div>
         </div>
         <div class="col-sm-3 col span_3">
           <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
@@ -35,6 +38,9 @@ social:
           </div>
           <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
             <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.oracle.com/tr/index.html" target="_blank"><img style="max-width: 100%" src="/images/Oracle-Academy.png"></a>
+          </div>
+		  <div class="logo_column text-align-center" style="display: table; height: 160px; width: 100%;">
+            <a style="display: table-cell; vertical-align: middle; text-align: center;" href="https://www.ibm.com/tr-tr/" target="_blank"><img style="max-width: 100%" src="/images/IBM.jpg"></a>
           </div>
         </div>
         <div class="col-sm-3 col span_3">

@@ -46,6 +46,7 @@ def load_configuration
     'build_dashboard'             => true,
     'build_pegasus'               => true,
     'build_code_studio'           => false,
+    'chef_local_mode'             => rack_env == :adhoc,
     'dcdo_table_name'             => "dcdo_#{rack_env}",
     'dashboard_db_name'           => "dashboard_#{rack_env}",
     'dashboard_devise_pepper'     => 'not a pepper!',
@@ -69,7 +70,8 @@ def load_configuration
     'newrelic_logging'            => rack_env == :production,
     'netsim_max_routers'          => 20,
     'netsim_shard_expiry_seconds' => 7200,
-    'npm_use_sudo'                => ((rack_env != :development) && OS.linux?),
+    # npm_use_sudo now controls whether to run yarn under sudo, which should be never. Remove this variable in the future.
+    'npm_use_sudo'                => false,
     'partners'                    => %w(ar br italia ro sg tr uk za),
     'pdf_port_collate'            => 8081,
     'pdf_port_markdown'           => 8081,
@@ -92,7 +94,7 @@ def load_configuration
     'dynamo_properties_table'     => "#{rack_env}_properties",
     'dynamo_table_metadata_table' => "#{rack_env}_table_metadata",
     'throttle_data_apis'          => [:staging, :adhoc, :test, :production].include?(rack_env),
-    'firebase_name'               => nil,
+    'firebase_name'               => rack_env == :development ? 'cdo-v3-dev' : nil,
     'firebase_secret'             => nil,
     'firebase_max_channel_writes_per_15_sec' => 300,
     'firebase_max_channel_writes_per_60_sec' => 600,
@@ -105,7 +107,9 @@ def load_configuration
     'max_table_writes_per_sec'    => 40,
     'max_property_reads_per_sec'  => 40,
     'max_property_writes_per_sec' => 40,
-    'lint'                        => rack_env == :adhoc || rack_env == :staging || rack_env == :development,
+    'lint'                        => [:staging, :development].include?(rack_env),
+    'files_s3_bucket'             => 'cdo-v3-files',
+    'files_s3_directory'          => rack_env == :production ? 'files' : "files_#{rack_env}",
     'animations_s3_bucket'        => 'cdo-v3-animations',
     'animations_s3_directory'     => rack_env == :production ? 'animations' : "animations_#{rack_env}",
     'assets_s3_bucket'            => 'cdo-v3-assets',
@@ -116,6 +120,8 @@ def load_configuration
     'pusher_app_id'               => 'fake_app_id',
     'pusher_application_key'      => 'fake_application_key',
     'pusher_application_secret'   => 'fake_application_secret',
+    'stub_school_data'            => [:adhoc, :development, :test].include?(rack_env),
+    'stack_name'                  => rack_env == :production ? 'autoscale-prod' : rack_env.to_s,
     'videos_s3_bucket'            => 'videos.code.org',
     'videos_url'                  => '//videos.code.org'
   }.tap do |config|
@@ -164,14 +170,14 @@ class CDOImpl < OpenStruct
     return CDO.override_dashboard if CDO.override_dashboard && domain == 'studio.code.org'
     return CDO.override_pegasus if CDO.override_pegasus && domain == 'code.org'
 
-    return "#{self.name}.#{domain}" if ['console', 'hoc-levels'].include?(self.name)
+    return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
     return domain if rack_env?(:production)
 
     # our HTTPS wildcard certificate only supports *.code.org
     # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
     sep = (domain.include?('.code.org')) ? '-' : '.'
     return "localhost#{sep}#{domain}" if rack_env?(:development)
-    return "translate#{sep}#{domain}" if self.name == 'crowdin'
+    return "translate#{sep}#{domain}" if name == 'crowdin'
     "#{rack_env}#{sep}#{domain}"
   end
 
@@ -187,9 +193,22 @@ class CDOImpl < OpenStruct
     canonical_hostname('hourofcode.com')
   end
 
+  def circle_run_identifier
+    ENV['CIRCLE_BUILD_NUM'] ? "CIRCLE-BUILD-#{ENV['CIRCLE_BUILD_NUM']}-#{ENV['CIRCLE_NODE_INDEX']}" : nil
+  end
+
+  # provide a unique path for firebase channels data for development and circleci,
+  # to avoid conflicts in channel ids.
+  def firebase_channel_id_suffix
+    return "-#{circle_run_identifier}" if ENV['CI']
+    return "-DEVELOPMENT-#{ENV['USER']}" if CDO.firebase_name == 'cdo-v3-dev'
+    ''
+  end
+
   def site_url(domain, path = '', scheme = '')
     host = canonical_hostname(domain)
-    if rack_env?(:development) && !CDO.https_development
+    if (rack_env?(:development) && !CDO.https_development) ||
+        (ENV['CI'] && host.include?('localhost'))
       port = ['studio.code.org'].include?(domain) ? CDO.dashboard_port : CDO.pegasus_port
       host += ":#{port}"
     end
@@ -294,14 +313,14 @@ class CDOImpl < OpenStruct
     DelegateWithDefault.new(self, default_value)
   end
 
-  # When running on Chef Server, use Search via knife CLI to fetch a dynamic list of app-server front-ends,
+  # When running on Chef Server, use EC2 API to fetch a dynamic list of app-server front-ends,
   # appending to the static list already provided by configuration files.
   def app_servers
-    return super unless CDO.chef_managed && rack_env?(:production)
+    return super unless CDO.chef_managed
     require 'aws-sdk'
     servers = Aws::EC2::Client.new.describe_instances(filters: [
-        { name: 'tag:aws:cloudformation:stack-name', values: ['autoscale-prod'] },
-        { name: 'tag:aws:cloudformation:logical-id', values: ['WebServer'] },
+        { name: 'tag:aws:cloudformation:stack-name', values: [CDO.stack_name]},
+        { name: 'tag:aws:cloudformation:logical-id', values: ['Frontends'] },
         { name: 'instance-state-name', values: ['running']}
     ]).reservations.map(&:instances).flatten.map{|i| ["fe-#{i.instance_id}", i.private_dns_name] }.to_h
     servers.merge(super)
@@ -337,6 +356,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def tools_dir(*dirs)
+  deploy_dir('tools', *dirs)
+end
+
 def cookbooks_dir(*dirs)
   deploy_dir('cookbooks', *dirs)
 end
@@ -353,6 +376,6 @@ def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
 
-def code_studio_dir(*dirs)
-  deploy_dir('code-studio', *dirs)
+def lib_dir(*dirs)
+  deploy_dir('lib', *dirs)
 end

@@ -33,8 +33,6 @@ class ScriptLevel < ActiveRecord::Base
   has_many :callouts, inverse_of: :script_level
   has_one :plc_task, class_name: 'Plc::Task', inverse_of: :script_level, dependent: :destroy
 
-  NEXT = 'next'
-
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
     super
@@ -66,12 +64,21 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def active?(level)
+    properties_hash = JSON.parse(properties)
+    !properties_hash[level.name] || properties_hash[level.name]['active'] != false
+  end
+
   def has_another_level_to_go_to?
     if script.professional_learning_course?
       !end_of_stage?
     else
       next_progression_level
     end
+  end
+
+  def final_level?
+    !has_another_level_to_go_to?
   end
 
   def next_level_or_redirect_path_for_user(user)
@@ -136,7 +143,7 @@ class ScriptLevel < ActiveRecord::Base
 
   def long_assessment?
     return false unless assessment
-    level.properties["pages"] ? level.properties["pages"].length > 1 : false
+    !!level.properties["pages"]
   end
 
   def anonymous?
@@ -166,6 +173,10 @@ class ScriptLevel < ActiveRecord::Base
     stage.script_levels.to_a.size
   end
 
+  def path
+    build_script_level_path(self)
+  end
+
   def summarize
     if level.unplugged?
       kind = 'unplugged'
@@ -185,6 +196,7 @@ class ScriptLevel < ActiveRecord::Base
 
     summary = {
         ids: ids,
+        activeId: oldest_active_level.id,
         position: position,
         kind: kind,
         icon: level.icon,
@@ -193,6 +205,14 @@ class ScriptLevel < ActiveRecord::Base
     }
 
     summary[:name] = level.name if kind == 'named_level'
+
+    if Rails.application.config.levelbuilder_mode
+      summary[:key] = level.key
+      summary[:skin] = level.try(:skin)
+      summary[:videoKey] = level.video_key
+      summary[:concepts] = level.summarize_concepts
+      summary[:conceptDifficulty] = level.summarize_concept_difficulty
+    end
 
     # Add a previous pointer if it's not the obvious (level-1)
     if previous_level

@@ -1,8 +1,13 @@
 import Walls from './walls';
-import {imageDataFromURI} from '../imageUtils';
+import {imageDataFromURI, URIFromImageData} from '../imageUtils';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
+const WALL_COLOR = {
+  R: 127,
+  G: 127,
+  B: 127,
+};
 
 export default class CollisionMaskWalls extends Walls {
   constructor(level, skin, drawDebugRect, drawDebugOverlay, width, height, onload) {
@@ -15,8 +20,10 @@ export default class CollisionMaskWalls extends Walls {
     this.wallMaps = {};
     Promise.all(Object.keys(skin.wallMaps).map(mapName => {
       return imageDataFromURI(skin.wallMaps[mapName].srcUrl).then(imageData => {
+        const wallMap = this.wallMapFromImageData(imageData.data);
         this.wallMaps[mapName] = {
-          wallMap: this.wallMapFromImageData(imageData),
+          wallMap: wallMap,
+          overlayURI: this.wallOverlayURI(imageData, wallMap),
           srcUrl: skin.wallMaps[mapName].srcUrl
         };
       });
@@ -100,4 +107,36 @@ export default class CollisionMaskWalls extends Walls {
     return arr;
   }
 
+  /**
+   * Construct an image data URI from the wallData that shows the walls in a
+   * solid color.
+   */
+  wallOverlayURI(imageData, wallMap, color = WALL_COLOR) {
+    const data = imageData.data;
+    for (let y = 0; y < this.height; y++) {
+      for (let x = 0; x < this.width; x += BITS_PER_BYTE) {
+        const currentByte = wallMap[(y * this.bytesPerRow) + (x / BITS_PER_BYTE)];
+        for (let k = 0; k < BITS_PER_BYTE; k++) {
+          const map = 1 << k;
+          const imageDataIndex = ((y * this.width) + x + k) * BYTES_PER_PIXEL;
+          if (currentByte & map) {
+            // Wall pixel, set color
+            data[imageDataIndex + 0] = color.R;
+            data[imageDataIndex + 1] = color.G;
+            data[imageDataIndex + 2] = color.B;
+            data[imageDataIndex + 3] = 255;
+          } else {
+            // Background pixel, set transparent
+            data[imageDataIndex + 3] = 0;
+          }
+        }
+      }
+    }
+    return URIFromImageData(imageData);
+  }
+
+  getWallOverlayURI() {
+    const wallData = this.wallMaps[this.wallMapRequested];
+    return wallData ? wallData.overlayURI : null;
+  }
 }

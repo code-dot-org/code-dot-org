@@ -9,6 +9,16 @@ class AdminUsersControllerTest < ActionController::TestCase
     @unconfirmed = create(:teacher, username: 'unconfirmed', confirmed_at: nil, email: 'unconfirmed@email.xx')
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
     @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx', deleted_at: '2016-01-01 12:00:00')
+    @malformed = create :teacher, email: 'malformed@example.com'
+    @malformed.update_column(:email, '')  # Bypasses validation!
+  end
+
+  generate_admin_only_tests_for :account_repair_form
+
+  test 'account_repair repairs account' do
+    sign_in @admin
+    post :account_repair, {email: 'malformed@example.com'}
+    assert_equal 'malformed@example.com', @malformed.reload.email
   end
 
   generate_admin_only_tests_for :assume_identity_form

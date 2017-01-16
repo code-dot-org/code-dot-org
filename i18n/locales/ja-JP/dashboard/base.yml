@@ -1,143 +1,146 @@
 ja:
   errors:
     messages:
-      not_saved: 次の間違い（エラー）を正しく直してください。
-      too_young: このコンテンツには年齢制限があるため、対象年齢に達していない生徒には使用できません。
-      teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
+      not_saved: '次の間違い（エラー）を正しく直してください。'
+      too_young: 'このコンテンツには年齢制限があるため、対象年齢に達していない生徒には使用できません。'
+      teacher_must_accept_terms: 'このコンテンツは、年齢制限があり、若い学生は使用できません。このコンテンツにあなたがアクセスする為には、最新の利用規約を受け入れるように、あなたの先生に頼んで下さい。先生は、コード スタジオにログインし、コード スタジオ ホームページの上部にある「更新利用規約をレビューする」ボタンをクリックして、これを行うことができます。'
+      pair_programmer: 'あなたは今、このコンテンツへのアクセスが出来ない学生とペア プログラミングをしています。このコンテンツにアクセスするには、ペア プログラミングを止めて、もう一度やり直してください。'
   activerecord:
     errors:
       messages:
-        blank: が必要です
+        blank: "が必要です"
     attributes:
       user:
-        name: 表示名
-        email: Eメール
-        username: ユーザー名
-        password: パスワード
-        password_confirmation: パスワードの確認
-        current_password: 現在のパスワード
-        locale: 言語
-        age: 年齢
-        gender: 性別
-        edit_header: アカウント詳細を編集する
+        name: '表示名'
+        email: 'Eメール'
+        username: 'ユーザー名'
+        password: 'パスワード'
+        password_confirmation: 'パスワードの確認'
+        current_password: '現在のパスワード'
+        locale: '言語'
+        age: '年齢'
+        gender: '性別'
+        edit_header: 'アカウント詳細を編集する'
         error:
           future: 現在までの日付にする
-  hello: 世界の皆さん、こんにちは
-  welcome_back: 'Welcome Back, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  hello: "世界の皆さん、こんにちは"
+  welcome_back: "Welcome Back, %{name}"
+  your_professional_learning_plan: "専門的な学習計画"
+  see_your_learning_plan: "学習計画を参照してください。"
   submit: 送信
   unsubmit: 取り消す
   previous_page: 前のページ
   next_page: 次のページ
-  next_resource: Next resource
+  next_resource: 次のリソース
   done_with_module: Done with this Learning Module
-  cancel: キャンセル
-  okay: オッケー
-  heading_x_of_y: '%{heading} (%{y} ページ中 %{x} ページ目)'
+  cancel: "キャンセル"
+  okay: "オッケー"
+  heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
   add_teacher_form:
     code:
-      label: 先生を追加：
-      placeholder: セクション ・ コード (ABCDEF)
-      instructions: '先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。'
-    submit: 先生を追加
+      label: '先生を追加：'
+      placeholder: "セクション ・ コード (ABCDEF)"
+      instructions: "先生によって与えられたコードを入力してください。\"ABCDEF\"のような 6 文字のコードです。"
+    submit: '先生を追加'
   add_hint_form:
-    placeholder: ここにあなたのヒントを入力してください
-    submit: ヒントを追加する
-  appname: Code.org
-  stage: ステージ
-  stage_number: 'ステージ %{number}'
-  puzzle: パズル
-  trophies: トロフィー
-  courses: コース
-  unplugged_activity: コンピューターを使わない活動
-  of: の
-  more: 詳細
-  less: 隠す
-  beta: ベータ版
-  try_hoc: 'ここをクリックしてHour of Codeを試す >>'
-  try_k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
-  k8intro: コンピュータサイエンスコース （15-25 時間）の入門編
-  already_started: 'すでに開始しましたか？ここで再開する >>'
+    placeholder: 'ここにあなたのヒントを入力してください'
+    submit: 'ヒントを追加する'
+  appname: "Code.org"
+  stage: "ステージ"
+  stage_number: "ステージ %{number}"
+  puzzle: "パズル"
+  trophies: "トロフィー"
+  courses: 'コース'
+  unplugged_activity: 'コンピューターを使わない活動'
+  of: "の"
+  more: "詳細"
+  less: "隠す"
+  beta: "ベータ版"
+  try_hoc: "ここをクリックしてHour of Codeを試す >>"
+  try_k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
+  k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
+  already_started: "すでに開始しましたか？ここで再開する >>"
   demos: 管理者： 全部のデモ
-  continue: 次へ
-  prize: 受賞
-  more_info: もっと見る
+  continue: '次へ'
+  prize: '受賞'
+  more_info: 'もっと見る'
   auth:
     sign_in_with: '%{provider} を使用してサインインする'
-    signed_in: サインイン！
+    signed_in: 'サインイン！'
     signed_out: '<a href="%{url}"> Code.org</a> からサインアウトしました'
     sign_out_of: '%{provider}を使ってサインインしたので、 <a href="%{url}"> ここをクリックして</a> %{provider}からサインアウトする'
-    already_signedup: もうサインアップしましたか？
-    notyet_signedup: まだサインアップしていないですか？
-    google_oauth2: Google アカウント
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft アカウント
-    forgot_password: パスワードをお忘れですか？
-    need_confirmation: 確認Eメールが届かない
-    need_unlock: ロック解除用のEメールが届いていない
+    already_signedup: 'もうサインアップしましたか？'
+    notyet_signedup: "まだサインアップしていないですか？"
+    google_oauth2: 'Google アカウント'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    windowslive: 'Microsoft アカウント'
+    forgot_password: 'パスワードをお忘れですか？'
+    need_confirmation: "確認Eメールが届かない"
+    need_unlock: "ロック解除用のEメールが届いていない"
   signup_form:
     student_count: '%{count} 人の生徒がサインアップ済みです。'
     teacher_count: '%{count} 人の教師がサインアップ済みです。'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    teacher_educator_guide: 教育者のガイドを参照する
-    title: Sign up for Code.org
-    school_name: 学校名 （オプション）
-    school_address: 学校の住所（オプション）
-    address_placeholder: 住所、市、県、郵便番号
-    gender: 性別 （オプション）
-    birthday: 誕生日 (オプション)
-    age: 年齢
-    user_type: あなたは先生ですか？生徒ですか？
-    submit: 入会
-    teacher: あなたは先生ですか？
-    valid_username: 利用可能 ！
-    invalid_username: ユーザー名は 5 文字以上である必要があります。
-    taken_username: ユーザー名は既に使用されています
-    valid_password: 有効なパスワード ！
-    invalid_password: 'パスワードを%d文字以上で入力'
-    mismatch_password: 入力した 2 つのパスワードが一致しません
+    overview: 'あなたの進捗状況を追跡したり、あなたの教室を管理するには、アカウントにサインアップします。アカウント無しでも<a href="/">様々なステージとパズルを参照できます</a>が、あなたの進捗状況とプロジェクトを保存するにはサインアップが必要です。'
+    hoc_already_signed_up_heading: '直ぐに始める'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    teacher_educator_guide: '教育者のガイドを参照する'
+    title: "Code.org にサインアップします"
+    school_name: '学校名 （オプション）'
+    school_address: '学校の住所（オプション）'
+    address_placeholder: '住所、市、県、郵便番号'
+    gender: '性別 （オプション）'
+    birthday: '誕生日 (オプション)'
+    age: '年齢'
+    user_type: 'あなたは先生ですか？生徒ですか？'
+    submit: '入会'
+    teacher: 'あなたは先生ですか？'
+    valid_username: "利用可能 ！"
+    invalid_username: "ユーザー名は 5 文字以上である必要があります。"
+    taken_username: "ユーザー名は既に使用されています"
+    valid_password: "有効なパスワード ！"
+    invalid_password: "パスワードを%d文字以上で入力"
+    mismatch_password: "入力した 2 つのパスワードが一致しません"
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
-    additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
-    user_type_label: Account Type
-    user_type_teacher: 先生
-    user_type_student: 生徒
-    field_is_required: が必要です
-    accept_terms: You must agree to create an account
+    additional_information: "サインアップを続けるために、私たちはさらにいくつかの情報が必要です。"
+    user_type_label: "Account Type"
+    user_type_teacher: "先生"
+    user_type_student: "生徒"
+    field_is_required: "が必要です"
+    accept_terms: "You must agree to create an account"
   signin_form:
-    title: すでにアカウントをお持ちですか？サインイン
-    login: Eメール
-    password: パスワード
-    remember: ログイン情報を保存する
-    submit: ログイン
+    title: 'すでにアカウントをお持ちですか？サインイン'
+    login: 'Eメール'
+    password: 'パスワード'
+    remember: 'ログイン情報を保存する'
+    submit: 'ログイン'
   signin:
-    try_heading: 登録せずにコーディングに挑戦してみたいですか？
-    try_hoc: 最初に 1 時間分のHour of Codeを試す
-    try_20hours: 20 時間分のコンピュータサイエンス入門編を試す
+    try_heading: '登録せずにコーディングに挑戦してみたいですか？'
+    try_hoc: '最初に 1 時間分のHour of Codeを試す'
+    try_20hours: '20 時間分のコンピュータサイエンス入門編を試す'
   signinsection:
     welcome: '%{section_name} へようこそ！'
-    name: 名前を選ぶ
-    picture: あなたの秘密の画像を見つけてください
-    words: あなたの秘密の言葉を入力してください
-    login: ログイン
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    name: '名前を選ぶ'
+    picture: 'あなたの秘密の画像を見つけてください'
+    words: 'あなたの秘密の言葉を入力してください'
+    login: 'ログイン'
+    invalid_login: 'ログインに失敗（しっぱい）しました。もう一度（いちど）入力（にゅうりょく）してください。'
+    pair_programming: 'I have a partner at my computer'
   password:
     reset_form:
-      title: パスワードをお忘れですか？
+      title: 'パスワードをお忘れですか？'
       instructions: "Enter your email address below and we'll send you password reset instructions."
-      email: Eメールアドレス
-      submit: 送信
+      email: 'Eメールアドレス'
+      submit: '送信'
     change_form:
-      title: パスワードを変更
-      new_password: 新しいパスワード
-      confirm_password: 新しいパスワードを確認
-      submit: パスワードを変更
+      title: 'パスワードを変更'
+      new_password: '新しいパスワード'
+      confirm_password: '新しいパスワードを確認'
+      submit: 'パスワードを変更'
   welcome_email:
-    subject: 私のクラス (Code.org) に参加
+    subject: '私のクラス (Code.org) に参加'
     body: |
       下のリンクを使ってコンピュータサイエンスのチュートリアルにサインアップしてください（Code.org から、私とあなたの「先生」として） 。
       
@@ -147,66 +150,66 @@ ja:
       
       %{name}
   follower:
-    invite_sent: 招待状を送信しました
+    invite_sent: '招待状を送信しました'
     added_teacher: '%{name} あなたの先生として追加'
-    registered: ' %{section_name}を登録'
+    registered: " %{section_name}を登録"
     error:
-      signed_in: 続行する前にサインアウトしてください
+      signed_in: '続行する前にサインアウトしてください'
       username_not_found: 'ユーザー名 %{username} が見つかりません'
       username_in_use: '%{username} は既に取られています、別を選択してください'
       no_teacher: "'%{teacher_email_or_code}'を使用してサインインした人を見つけられませんでした。ここでサインアップして、もう一度追加してください"
       section_not_found: "'%{section_code}' というセクションはありません"
-      blank_code: セクションのコードを入力してください
-      cant_join_own_section: 申し訳ありません。あなたはログインすることができません。
+      blank_code: "セクションのコードを入力してください"
+      cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
     mail:
       invite_student:
-        subject: '%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}'
+        subject: "%{teacher_name} のクラスを Code.org で参加 ！%{teacher_name}"
       student_disassociated:
         subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
   reports:
     error:
-      access_denied: 統計情報へのアクセス権がありません
+      access_denied: "統計情報へのアクセス権がありません"
   redeem_prizes:
-    title: '交換賞品： %{name}'
+    title: 交換賞品： %{name}
     provider: 'プロバイダ:'
     code: 'コード:'
-    redeem_header: 交換するには。
-    donorschoose_register: DonorsChoose.orgに教師として登録
-    donorschoose_project: プロジェクトを投稿
-    donorschoose_how_to: あなたのコードを使用する方法
-    success: あなたの賞金は獲得できました。下のコードを参照する
-    error: あなたの賞金は償還できませんでした、もう一度やり直す
-    error_us_only: 賞金提供をされるのは米国内のユーザーのみに限られています
-    error_not_earned: あなたはまだこの賞を獲得していません。
-    error_already_redeemed: あなたの賞金は既に換金されています
-    no_prizes_available: 申し訳ありませんが、ただ今賞品がありません
-    teacher_info_required: 先生の賞品は学校の名前と住所の情報が必要です。
-    teacher_email_required: 先生の賞品には、確認済みのEメール アドレスが必要です
+    redeem_header: '交換するには。'
+    donorschoose_register: 'DonorsChoose.orgに教師として登録'
+    donorschoose_project: 'プロジェクトを投稿'
+    donorschoose_how_to: 'あなたのコードを使用する方法'
+    success: 'あなたの賞金は獲得できました。下のコードを参照する'
+    error: 'あなたの賞金は償還できませんでした、もう一度やり直す'
+    error_us_only: '賞金提供をされるのは米国内のユーザーのみに限られています'
+    error_not_earned: 'あなたはまだこの賞を獲得していません。'
+    error_already_redeemed: 'あなたの賞金は既に換金されています'
+    no_prizes_available: "申し訳ありませんが、ただ今賞品がありません"
+    teacher_info_required: "先生の賞品は学校の名前と住所の情報が必要です。"
+    teacher_email_required: "先生の賞品には、確認済みのEメール アドレスが必要です"
     confirm:
-      title: 確認してください
-      "no": いいえ
-      "yes": はい
+      title: '確認してください'
+      'no': 'いいえ'
+      'yes': 'はい'
       msg: '%{prize_name} 賞金を本当に請求してもいいですか？'
       msg_student: '注: 賞品は、 1 つの種類のみを選択できます'
-      msg_publicschool: 米国公立学校の教師であることを証明してください
-      msg_visit_website: ウェブサイトに行く
+      msg_publicschool: '米国公立学校の教師であることを証明してください'
+      msg_visit_website: 'ウェブサイトに行く'
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: Dropbox の容量 10 GB
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: '$10 iTunes Gift Card'
+      donors_choose: 'DonorsChoose.org $750 credit'
+      donors_choose_bonus: 'DonorsChoose.org $250 credit'
+      dropbox: 'Dropbox の容量 10 GB'
+      valve: 'Portal 2 (PC or Mac game download)'
+      ea_bejeweled: 'Bejeweled 3 (PC game download)'
+      ea_fifa: 'FIFA Soccer 13 (PC game download)'
+      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
+      ea_pvz: 'Plants vs. Zombies (PC game download)'
+      skype: '$10 Skype credit'
     msg:
-      choose: 賞品を選択
+      choose: '賞品を選択'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 賞を獲得しました！(米国の学生のみ）
-      not_earned_title: チュートリアルを終了し、賞品を貰いましょう(米国の学生のみ)
-      not_earned: 'コンピュータサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。商品はなくなり次第終了いたします'
+      earned: '賞を獲得しました！(米国の学生のみ）'
+      not_earned_title: 'チュートリアルを終了し、賞品を貰いましょう(米国の学生のみ)'
+      not_earned: コンピュータサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。商品はなくなり次第終了いたします
       teacher:
         earned: '15人 以上の学生が % {num_trophies} 個すべてのトロフィーを獲得しました。教師賞を授与します！（米国の教師のみ）'
         not_earned_title: '(アメリカの教師のみ) クラスを教えて、最大 1000 ドルの<a target="_blank"href="http://DonorsChoose.org">DonorsChoose.org</a>クレジットを獲得'
@@ -217,379 +220,407 @@ ja:
           not_earned: '% {Num_trophies} のすべてのトロフィーを獲得したあなたの学生の少なくとも 7 が場合女の子は、あなたの報酬は追加 $250 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。'
   crud:
     new_model: '新しい%{model}'
-    show: 表示
-    edit: 編集
+    show: '表示'
+    edit: '編集'
     edit_model: '%{model} を編集'
-    update: 更新のプログラム
-    destroy: 破壊
-    back: 戻る
-    confirm: 間違いありませんか？
+    update: '更新のプログラム'
+    destroy: '破壊'
+    back: '戻る'
+    confirm: '間違いありませんか？'
     created: '%{model} はエラーなく、作成されました'
     updated: '%{model} はエラーなく更新しました'
     destroyed: '%{model}は正常に削除されました'
     access_denied: 'この %{model} へのアクセスは不要です'
   nav:
     header:
-      finished_hoc: Hour of Codeを終了
-      sign_in_to_save: 進捗状況を保存するためにサインインする
+      finished_hoc: "Hour of Codeを終了"
+      sign_in_to_save: '進捗状況を保存するためにサインインする'
       free_play:
-        playlab: アプリを作る
-        artist: 絵を描く
-        calculate: Calculate something
-        applab: アプリを作る
+        playlab: 'アプリを作る'
+        artist: '絵を描く'
+        calculate: 'Calculate something'
+        applab: 'アプリを作る'
     user:
-      classroom: 先生用ホームページ
-      district_dashboard: 地区のダッシュ ボード
+      classroom: '先生用ホームページ'
+      district_dashboard: '地区のダッシュ ボード'
       label: 'こんにちは  %{username}'
-      stats: コード・スタジオ
-      settings: 私のアカウント
-      prizes: 賞品
-      logout: サインアウト
-      signin: ログイン
-      signup: Create an account
-      already_registered: 既にアカウントをお持ちですか?
-      pair_programming: ペアプログラミング
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      stats: 'コード・スタジオ'
+      settings: '私のアカウント'
+      prizes: '賞品'
+      logout: 'サインアウト'
+      signin: 'ログイン'
+      signup: 'アカウントの作成（さくせい）'
+      already_registered: '既にアカウントをお持ちですか?'
+      pair_programming: 'ペアプログラミング'
+      team: 'チーム'
+      driver: 'Driver'
+      navigator: 'Navigator'
     popup:
-      progress_for_user: '%{name} の進捗状況'
-      progress: あなたの進捗状況
+      progress_for_user: "%{name} の進捗状況"
+      progress: 'あなたの進捗状況'
       lines: 'コードの行の合計:  %{lines}'
-      close: 閉じる
-      mastery: アイデア
-      puzzle_map: ステージ
+      close: '閉じる'
+      mastery: 'アイデア'
+      puzzle_map: 'ステージ'
       prizes: '%{total_trophies}　トロフィーをあつめて、賞品を獲得しよう ！'
       prize_earned: 'すべての%{total_trophies}トロフィーを集めました。賞を獲得！'
-      prize_us_only: (米国の学生のみ）
-      prizes_link: 情報をもっと見る
+      prize_us_only: '(米国の学生のみ）'
+      prizes_link: '情報をもっと見る'
   teacher:
     answer: 答え
     for_teachers_only: 先生のみ
     title:
-      one: あなたの先生：
+      one: 'あなたの先生：'
       other: 'あなたの先生:'
-    remove: （先生を削除します)
+    remove: '（先生を削除します)'
     confirm:
-      remove: この教師を削除してもよろしいですか。
+      remove: 'この教師を削除してもよろしいですか。'
     students:
-      dashboard: 先生用のダッシュボードへ
-    user_not_found: 先生が見つかりませんでした。
+      dashboard: '先生用のダッシュボードへ'
+    user_not_found: '先生が見つかりませんでした。'
     student_teacher_disassociated: 'あなたの先生として %{teacher_name} を削除しました。'
     panel:
-      answer_viewer: Teacher Panel
-      student: 生徒
-      viewing_solution: 回答を表示
-      try_it_yourself: 試しにやってみてください。
-      section: セクション
-      example: 解答例
+      answer_viewer: '教員用パネル'
+      student: '生徒'
+      viewing_solution: '回答を表示'
+      try_it_yourself: '試しにやってみてください。'
+      section: 'セクション'
+      example: '解答例'
       example_with_number: '解答例 %{solution_number}'
       submitted_on: '提出日時:'
-      unsubmit: 取り消す
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
+      unsubmit: '取り消す'
+      worked_with: 'Worked With'
+      update_lock_settings: 'Update lock settings here.'
+      clear_response: 'Clear response'
   user:
-    email_confirm_needed: Eメール アドレスが確認されていません
+    email_confirm_needed: 'Eメール アドレスが確認されていません'
     email_confirm_needed_required: 'あなたのメール アドレス %{email} はまだ確認されていません。'
-    email_confirm_wrong_email: メールアドレスをご確認ください
-    email_resend_confirm: 確認手順の再送信
-    new_password_hint: （変更したくない場合は空白のままにしてください）
-    current_password_hint: (変更を確認するためにあなたの現在のパスワードが必要です)
-    delete: アカウントを削除します。
-    delete_text: 下のボタンをクリックすると、あなたのアカウントが削除されます。
+    email_confirm_wrong_email: 'メールアドレスをご確認ください'
+    email_resend_confirm: '確認手順の再送信'
+    new_password_hint: "（変更したくない場合は空白のままにしてください）"
+    current_password_hint: '(変更を確認するためにあなたの現在のパスワードが必要です)'
+    delete: 'アカウントを削除します。'
+    delete_text: "下のボタンをクリックすると、あなたのアカウントが削除されます。"
     delete_text_teacher_note: '注意: あなたのアカウントを消してもあなたの生徒のアカウントは消えません。'
-    delete_confirm: このアカウントを削除しますか？
+    delete_confirm: 'このアカウントを削除しますか？'
+    deleted_user: 'deleted user'
   user_level:
-    completed: 完了
-    tried: 試してみました
+    completed: '完了'
+    tried: '試してみました'
   home:
-    title: コード・スタジオ
-    description: Code Studio は Code.org によって作成されたオンラインホームコースです。
-    lines_of_code: '生徒が書いた行数：%{lines_count}'
-    lines_of_code_linebreak: '%{lines_count} 行のコードが<br/> %{students_count} 万人の学生によって書かれました。'
-    all_courses: コース1、2、3の概要
-    lesson_plans: 授業計画
-    signin_message: '既に登録されていますか？% {リンク}'
-    student_reg_link: 学生のサインアップ
-    teacher_reg_link: 教師のサインアップ（登録）
-    signin_directions: |
-      アカウントを使って進捗を確認します<br/>
-      先生はクラス全体の進捗を確認できます。
+    title: "コード・スタジオ"
+    description: 'Code Studio は Code.org によって作成されたオンラインホームコースです。'
+    lines_of_code: "生徒が書いた行数：%{lines_count}"
+    lines_of_code_linebreak: "%{lines_count} 行のコードが<br/> %{students_count} 万人の学生によって書かれました。"
+    all_courses: "コース1、2、3の概要"
+    lesson_plans: "授業計画"
+    signin_message: "既に登録されていますか？% {リンク}"
+    student_reg_link: '学生のサインアップ'
+    teacher_reg_link: '教師のサインアップ（登録）'
+    signin_directions: "アカウントを使って進捗を確認します<br/>\n先生はクラス全体の進捗を確認できます。"
     teacher_dashboard: 進捗状況をダッシュ ボードで参照する
-    teacher_student_count_one: 'あなたには %{count} 人の生徒がいます'
-    teacher_student_count: 'あなたには %{count} 人の生徒がいます'
-    teacher_averages: '平均であなたの学生は %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています'
-    teacher_print_certificates: このコースを終了した生徒の証明書を印刷する
+    teacher_student_count_one: あなたには %{count} 人の生徒がいます
+    teacher_student_count: あなたには %{count} 人の生徒がいます
+    teacher_averages: 平均であなたの学生は %{trophy_max}のうち%{trophy_average}　"コンセプト習得"のトロフィーを獲得しています
+    teacher_print_certificates: 'このコースを終了した生徒の証明書を印刷する'
     teacher_read_blog: ニュースと更新（教師用ブログ）を読む
     classroom: あなたの教室
     student_progress: 進捗状況
     student_stats: '%{trophy_max}このうち%{trophy_count} の"コンセプト"習得のトロフィーを獲得しました'
-    student_left_off: 再開する
-    student_finished: 'すべてのチュートリアルを完了したら、 別のクラス %{online_link} または %{local_school_link} を選んでください'
+    student_left_off: '再開する'
+    student_finished: すべてのチュートリアルを完了したら、 別のクラス %{online_link} または %{local_school_link} を選んでください
     local_school: 近隣の学校
     online: オンライン
     see_details: 詳細はこちら
     view_course: コースを確認
     prize_info: '参加者への賞品 (米国公立校のみ): 上限で $1,000 '
-    tryfirst: または、まずは最初に試して、後でサインアップできます
-    trynow: 今すぐ試す
-    add_hint_help: Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。
-    20hour_overview: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-    test_videos_help: 新しいビデオプレイヤーをテストする。
-    try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
-    use_as_teacher: このサイトを教師として使用
-    heading_hoc2014: '<h2>Hour of Code</h2> <h1>全年齢対象</h1>'
-    heading_elementary: '<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>'
-    heading_apps: '<h2>お楽しみ</h2><h1>みんなの</h1>'
-    heading_tools: 次のステップへの準備はできましたか? JavaScript ツール （高校生向け）
-    heading_legacy: '<h1>全年齢対象のコース</h1>'
+    tryfirst: 'または、まずは最初に試して、後でサインアップできます'
+    trynow: '今すぐ試す'
+    add_hint_help: 'Code.org のチュートリアルに、気の利いたヒントを充実させるため、ご協力をお願いします。'
+    20hour_overview: 'この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。'
+    test_videos_help: '新しいビデオプレイヤーをテストする。'
+    try_beta_courses: 'New! K-5生徒用のベータコースを試してみましょう'
+    use_as_teacher: 'このサイトを教師として使用'
+    heading_hoc2014: "<h2>Hour of Code</h2> <h1>全年齢対象</h1>"
+    heading_elementary: "<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>"
+    heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
+    heading_tools: "次のステップへの準備はできましたか? JavaScript ツール （高校生向け）"
+    heading_legacy: "<h1>全年齢対象のコース</h1>"
     your_gallery: ギャラリー
-    no_primary_course: コード スタジオ でコースを見る
-    choose_next_course: Code Studio コースを以下のリストから一つ試す
-    print_certificate: 証書を印刷
-    announcement_title: Announcements
-    announcement_message_fall2016_features: |-
-      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: もっと詳しく知る
-    announcement_try_now_button: 今すぐ試す
+    no_primary_course: "コード スタジオ でコースを見る"
+    choose_next_course: "Code Studio コースを以下のリストから一つ試す"
+    print_certificate: "証書を印刷"
+    announcement_title: "お知らせ"
+    announcement_message_fall2016_features: "私たちはひと夏をかけて、あなたのフィードバックを新機能に追加しました。今では、生徒が1 つのデバイスを使ってペア プログラミングをしている場合でも、<a href=\"%{pp_url}\" target=\"_blank\">それぞれの学生の進捗状況を追跡</a>できます。CS 原則コースから <a href=\"%{csp_widgets_url}\" target=\"_blank\">最高のインタラクティブなツール</a> を <i>すべて</i> の教室で使用できます。さらに生徒たちは、作業画面に <a href=\"%{unused_code_url}\" target=\"_blank\">未使用のプログラムを保持</a> することで、もっと実験がしやすくなりました！すべての新機能をチェックして、ご意見をお寄せください。"
+    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
+    announcement_learn_more_button: "もっと詳しく知る"
+    announcement_try_now_button: "今すぐ試す"
+    announcement_host_an_hour_button: "Host an Hour"
+    announcement_watch_video_button: "ビデオを見る"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: "Add your name"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
+    section_code_not_entered: "Please provide current_section_code."
+    section_code_cant_be_current_section: "The current section cannot be the same as the new section."
+    current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
+    students_not_yours: "You cannot move students from a section that does not belong to you."
+    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
+    student_ids_not_entered: "学生番号を入力してください。"
+    student_not_found: "One or more students could not be found."
+    all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
+    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
   share:
-    title: コード スタジオで学ぶ
-    description: 誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。
-    try_hour_of_code: アワーオブコードを試してみよう！
+    title: "コード スタジオで学ぶ"
+    description: "誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。"
+    try_hour_of_code: 'アワーオブコードを試してみよう！'
   gender:
-    male: 男性
-    female: 女性
-    none: 答えたくない
+    male: '男性'
+    female: '女性'
+    none: '答えたくない'
   user_type:
-    student: 生徒
-    teacher: 先生
+    student: '生徒'
+    teacher: '先生'
   footer:
     thank_you: '私たちの <a href="https://code.org/about/donors"> ドナー</a>、<a href="https://code.org/about/partners"> パートナー</a>、 <a href="https://code.org/about/team"> チーム</a>、ビデオ キャスト、<a href="https://code.org/about/advisors"> アドバイザー</a> にコード スタジオのサポートを感謝しています。'
-    help_from_html: このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。
-    help_from_html_old: Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。
+    help_from_html: 'このチュートリアルの作成には Google, Microsoft, Facebook, Twitter のエンジニアが協力しています。'
+    help_from_html_old: 'Google・Microsoft・Facebook・Twitterのエンジニアがこのチュートリアルを作るのを手伝いました。'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org は <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> ライセンスのp5.play を使用しています｡'
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: 'Powered by Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
-    copyright: 著作権
-    more: それ以上
-    feedback: フィードバックする
-    translate: あなたの言語の翻訳にご協力ください
-    support: サポート
-    support_url: http://support.code.org
-    tos_short: 利用規約
-    tos: 利用規約
-    privacy: プライバシー ポリシー
-    secure: 保護されたバージョン
-    report_abuse: 不正を報告
-    built_on_code_studio: コードスタジオに構築された
-    make_my_own_app: 自分のアプリを作る
-    how_it_works: 動作の説明
-    try_hour_of_code: アワーオブコードを試してみよう！
+    copyright: '著作権'
+    more: '表示'
+    feedback: 'フィードバックする'
+    translate: 'あなたの言語の翻訳にご協力ください'
+    support: 'サポート'
+    support_url: 'http://support.code.org'
+    tos_short: '利用規約'
+    tos: '利用規約'
+    privacy: 'プライバシー ポリシー'
+    secure: '保護されたバージョン'
+    report_abuse: '不正を報告'
+    built_on_code_studio: 'コードスタジオに構築された'
+    make_my_own_app: '自分のアプリを作る'
+    how_it_works: '動作の説明'
+    try_hour_of_code: 'アワーオブコードを試してみよう！'
   reference_area:
-    title: 助けが必要ですか？
-    subtitle: ビデオやヒントを見る
-    teacher: 解答を参照する
-    auth_error: 解答を見る権限がありません
-    submit: 制作者の居住地を変更する
-    direction: 最初の方向 (度)
+    title: '助けが必要ですか？'
+    subtitle: 'ビデオやヒントを見る'
+    teacher: '解答を参照する'
+    auth_error: '解答を見る権限がありません'
+    submit: '制作者の居住地を変更する'
+    direction: '最初の方向 (度)'
   video:
-    tab: 動画
-    notes: 動画の代わりにノートを見る
-    notes_coming_soon: このビデオのノートがもうすぐ公開されます
-    autoplay_option: 動画の自動再生
-    download: ビデオのダウンロード
+    tab: '動画'
+    notes: '動画の代わりにノートを見る'
+    notes_coming_soon: 'このビデオのノートがもうすぐ公開されます'
+    autoplay_option: '動画の自動再生'
+    download: 'ビデオのダウンロード'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: もっと詳しく知る
-  slow_loading: 通常よりも長くかかっている...
-  try_reloading: ページを再読み込みする
-  next_stage: 完成 ！次のステージへ
-  download_pdf: オープン レッスン ・ プラン
-  lesson_plan: 学習計画
-  view_lesson_plan: レッスン・プランを見る
-  pdf_download: PDF をダウンロード
-  download_coming_soon: 間もなく、ダウンロードできる教材が利用できるようになります。
-  video_coming_soon: 間もなく、ビデオを視聴できるようになります。
-  not_started: 学生は、まだこのレベルを行っていません。
+      link: "もっと詳しく知る"
+  slow_loading: '通常よりも長くかかっている...'
+  try_reloading: 'ページを再読み込みする'
+  next_stage: '完成 ！次のステージへ'
+  download_pdf: 'オープン レッスン ・ プラン'
+  lesson_plan: '学習計画'
+  view_lesson_plan: 'レッスン・プランを見る'
+  pdf_download: 'PDF をダウンロード'
+  download_coming_soon: '間もなく、ダウンロードできる教材が利用できるようになります。'
+  video_coming_soon: '間もなく、ビデオを視聴できるようになります。'
+  not_started: '学生は、まだこのレベルを行っていません。'
   share_code:
-    title: 「実行」をクリックして私のプログラムが動くところを見てください
-    bounce_og_title: 私が作った Bounce Game を試してみてください
-    flappy_og_title: わたしのFlappyゲームをみてください！
-    studio_og_title: 私が作った Play Lab のアプリを試してみてください
-    check_out_what_i_made: 私の作品を試してみてください
-    og_description: Code.org でコード（プログラム）を書きました
-    phone_number_not_allowed: 電話番号が書かれているようです。テキストを変更してください。
-    address_not_allowed: 住所が書かれているようです。テキストを変更してください。
-    email_not_allowed: メールアドレスが書かれているようです。テキストを変更してください。
-    profanity_not_allowed: 不適切な言葉が書かれているようです。テキストを変更してください。
+    title: "「実行」をクリックして私のプログラムが動くところを見てください"
+    bounce_og_title: "私が作った Bounce Game を試してみてください"
+    flappy_og_title: "わたしのFlappyゲームをみてください！"
+    studio_og_title: "私が作った Play Lab のアプリを試してみてください"
+    check_out_what_i_made: "私の作品を試してみてください"
+    og_description: "Code.org でコード（プログラム）を書きました"
+    phone_number_not_allowed: "電話番号が書かれているようです。テキストを変更してください。"
+    address_not_allowed: "住所が書かれているようです。テキストを変更してください。"
+    email_not_allowed: "メールアドレスが書かれているようです。テキストを変更してください。"
+    profanity_not_allowed: "不適切な言葉が書かれているようです。テキストを変更してください。"
   builder:
-    created: 新しいスクリプトを作成しました
-    destroyed: スクリプトを破棄しました
-    manage: ビルドレベル
-    view: 表示
-    back: スクリプトに戻る
-    success: ブロックの編集に成功しました。
+    created: "新しいスクリプトを作成しました"
+    destroyed: "スクリプトを破棄しました"
+    manage: "ビルドレベル"
+    view: "表示"
+    back: "スクリプトに戻る"
+    success: "ブロックの編集に成功しました。"
     level:
-      create: 新しいレベルを作成
-      current: 現在のレベル
-      unused: 未使用のレベル
+      create: "新しいレベルを作成"
+      current: "現在のレベル"
+      unused: "未使用のレベル"
   upsell:
     applab:
-      title: アプリ ラボ
-      body: アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。
-      body_short: アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。
-      audience: 13才以上対象
-      cta: Learn how
+      title: 'アプリ ラボ'
+      body: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
+      body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
+      audience: '13才以上対象'
+      cta: 'もっと知（し）る'
     hoc:
-      title: 古典的な迷路
-      body: コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます
+      title: '古典的な迷路'
+      body: 'コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます'
     flappy:
-      title: Flappy Code
-      body: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
+      title: 'Flappy Code'
+      body: '10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す'
     20-hour:
-      title: 上級コース
-      body: この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。
-      body_short: コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。
+      title: '上級コース'
+      body: 'この20時間コースではコンピューターサイエンスの核となる部分やプログラミングの概念について紹介します。このコースは等級K-8用の授業に使われることを考慮して設計されました。しかし、ご安心ください全年齢を対象としており、楽しくプログラミングを学ぶことができます。'
+      body_short: 'コース 2 から 4 の高速コースでは、コンピュータ サイエンスの基礎を学びます。'
     hoc2014:
-      try_new_tutorial: 動作試験中の新しい Hour of Code チュートリアルをお試しください。
-      try_frozen: 「アナと雪の女王」から、アナとエルザとアーティスト
+      try_new_tutorial: '動作試験中の新しい Hour of Code チュートリアルをお試しください。'
+      try_frozen: '「アナと雪の女王」から、アナとエルザとアーティスト'
     gallery:
-      title: ギャラリー
-      body: ユーザーが作成したアプリやアーティストの画像のギャラリーを見る
+      title: "ギャラリー"
+      body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
     frozen:
-      title: アナと雪の女王
+      title: "アナと雪の女王"
     starwars:
-      title: スター・ウォーズ
+      title: "スター・ウォーズ"
     infinity:
-      title: インフィニティ プレイ ラボ
-      body: Use Play Lab to create a story or game starring Disney Infinity characters.
+      title: "インフィニティ プレイ ラボ"
+      body: "Use Play Lab to create a story or game starring Disney Infinity characters."
     minecraft:
-      title: マインクラフト
-      body: プログラムを通して、Minecraftの世界を探検しましょう。
+      title: "マインクラフト"
+      body: "プログラムを通して、Minecraftの世界を探検しましょう。"
+    minecraft2016:
+      title: "マインクラフト"
+      body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
     unplugged:
-      title: Unplugged Lessons
-      audience: 6歳以上対象
+      title: "Unplugged Lessons"
+      audience: "6歳以上対象"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
-    students_drew_these_with_code: これらの作品は、生徒たちがコードを使って描きました！
-    students_made_these_with_code: これらの作品は、生徒たちがコードを使って創りました！
-    picture_count: 'コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。'
-    activity_count: 'コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。'
-    want_to_make_your_own: 自分でも創ってみたいですか？
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
-    more: 'つづきを読む &rarr;'
-    caption_by_name_age: '作成者： %{name} ( %{age} 歳)'
-    caption_time_ago: '%{time_ago} 前'
-    header: ギャラリー
-    header_playlab: プレイラボ
-    header_artist: アーティスト
-    report_abuse: 不正を報告
+    students_drew_these_with_code: "これらの作品は、生徒たちがコードを使って描きました！"
+    students_made_these_with_code: "これらの作品は、生徒たちがコードを使って創りました！"
+    picture_count: "コンピュータ・プログラムを用いて生徒たちが描いた絵は、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれの絵をクリックすると、その絵を描くプログラムを見ることができます。"
+    activity_count: "コンピュータ・プログラムを用いて生徒たちが作ったアプリは、これまでの <b>%{days}</b> 日間に <b>%{count}</b> 作品です。それぞれのスクリーンショットをクリックすると、そのアプリのプログラムを見ることができます。"
+    want_to_make_your_own: "自分でも創ってみたいですか？"
+    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
+    more: "つづきを読む &rarr;"
+    caption_by_name_age: "作成者： %{name} ( %{age} 歳)"
+    caption_time_ago: "%{time_ago} 前"
+    header: "ギャラリー"
+    header_playlab: "プレイラボ"
+    header_artist: "アーティスト"
+    report_abuse: "不正を報告"
   landing:
     prerelease: "このコースはまだ<span class='betatext'>ベータ版</span>です。今後改善と変更が行われる可能性があります。"
     prerelease_hoc2014: "このチュートリアルは<span class='betatext'>ベータ版</span>です。フィードバックによって改善と変更が行われることが想定されます。"
-    report_bug: バグを報告
-    support: 説明を見る
-    support_url: //support.code.org
-    help_resources: ヘルプとリソース
+    report_bug: "バグを報告"
+    support: "説明を見る"
+    support_url: "//support.code.org"
+    help_resources: "ヘルプとリソース"
   multi:
-    wrong_title: 不正解
-    wrong_body: 不正解です。やりなおしてみてください。
-    correct_title: 正解
-    correct_body: 正解です。
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "不正解"
+    wrong_body: "不正解です。やりなおしてみてください。"
+    correct_title: "正解"
+    correct_body: "正解です。"
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: ありがとうございます
-    wrong_body: 回答していただきありがとうございました。
-    correct_title: ありがとうございます
-    correct_body: 回答していただきありがとうございました。
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "ありがとうございます"
+    wrong_body: "回答していただきありがとうございました。"
+    correct_title: "ありがとうございます"
+    correct_body: "回答していただきありがとうございました。"
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: ありがとうございます
-    wrong_body: 回答していただきありがとうございました。
-    correct_title: ありがとうございます
-    correct_body: 回答していただきありがとうございました。
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    wrong_title: "ありがとうございます"
+    wrong_body: "回答していただきありがとうございました。"
+    correct_title: "ありがとうございます"
+    correct_body: "回答していただきありがとうございました。"
+    hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
   level_group-submittable:
-    wrong_title: ありがとうございます
-    wrong_body: 回答していただきありがとうございました。
-    correct_title: ありがとうございます
-    correct_body: 回答していただきありがとうございました。
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: 評価を提出します。
-    submit-incomplete-body: |
-      いくつかの質問が回答されてないままになっています。このままでよろしいですか?
-      ※投稿したあとで評価の再編集はできません。
-    submit-complete-title: 評価を提出します。
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    wrong_title: "ありがとうございます"
+    wrong_body: "回答していただきありがとうございました。"
+    correct_title: "ありがとうございます"
+    correct_body: "回答していただきありがとうございました。"
+    unsubmit-title: "Unsubmit your assessment"
+    unsubmit-body: "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?"
+    submit-incomplete-title: "評価を提出します。"
+    submit-incomplete-body: "いくつかの質問が回答されてないままになっています。このままでよろしいですか?\n※投稿したあとで評価の再編集はできません。"
+    submit-complete-title: "評価を提出します。"
+    submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
-    wrong_title: うまく解決できていません。
-    wrong_body: うまく解決できていません。もう一度やってみてください。
-    correct_title: 正解
-    correct_body: 正解です。
+    wrong_title: "うまく解決できていません。"
+    wrong_body: "うまく解決できていません。もう一度やってみてください。"
+    correct_title: "正解"
+    correct_body: "正解です。"
   contract_match:
-    wrong_title: 不正解
-    badname: あなたの契約は、間違った名前が使われています。
-    badname_case: 関数名は大文字小文字を区別します。登録名の大文字小文字をご確認ください。
-    badrange: あなたの契約に間違った設定があります。
-    baddomainsize: あなたの契約のドメインの項目数が間違っています。
-    baddomainname: ひとつかそれ以上のドメイン項目で間違った名前が設定されています。
-    baddomaintype: ひとつかそれ以上のドメイン項目で間違った設定が行われているか、順番が間違っています。
+    wrong_title: "不正解"
+    badname: "あなたの契約は、間違った名前が使われています。"
+    badname_case: "関数名は大文字小文字を区別します。登録名の大文字小文字をご確認ください。"
+    badrange: "あなたの契約に間違った設定があります。"
+    baddomainsize: "あなたの契約のドメインの項目数が間違っています。"
+    baddomainname: "ひとつかそれ以上のドメイン項目で間違った名前が設定されています。"
+    baddomaintype: "ひとつかそれ以上のドメイン項目で間違った設定が行われているか、順番が間違っています。"
   text_match:
-    placeholder: ここに答えを入力
-    open_response_title: ありがとう
-    open_response_body: ご回答ありがとうございます。
-    correct_title: 正解
-    correct_body: 正解です。
+    placeholder: "ここに答えを入力"
+    open_response_title: "ありがとう"
+    open_response_body: "ご回答ありがとうございます。"
+    correct_title: "正解"
+    correct_body: "正解です。"
   dialog:
-    ok: OK
-    startover_title: 本当に最初からやり直してもよいですか？
-    startover_body: パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。
-    startover_ok: 最初（さいしょ）からやり直（なお）す。
-    startover_cancel: キャンセル
+    ok: "OK"
+    startover_title: "本当に最初からやり直してもよいですか？"
+    startover_body: "パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。"
+    startover_ok: "最初（さいしょ）からやり直（なお）す。"
+    startover_cancel: "キャンセル"
   time:
-    hour: 1 時間
-    day: 日
-    week: 週
+    hour: '1 時間'
+    day: '日'
+    week: '週'
   age_interstitial:
     age: 年齢
     header: アカウント情報の更新
-    message: ユーザーにより良い体験をしてもらうために、プライバシー保護を強化しながら現在も更新中です。そのため、こちらからみなさんの年齢データの入力にご協力ください。cord.org は決して第三者に情報を販売、共有、貸与はいたしません。
+    message: "ユーザーにより良い体験をしてもらうために、プライバシー保護を強化しながら現在も更新中です。そのため、こちらからみなさんの年齢データの入力にご協力ください。cord.org は決して第三者に情報を販売、共有、貸与はいたしません。"
     sign_out: '年齢を公表しくない場合は、<a href="%{url}"> サインアウト</a> してください。'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    title: "Updated Terms of Service and Privacy Policy"
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
-    tos: 利用規約
-    privacy: プライバシー ポリシー
-    privacy_notice: Privacy Notice
+    tos: "利用規約"
+    privacy: "プライバシー ポリシー"
+    privacy_notice: "プライバシーについて"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
-    print: 印刷
-    later: Later
+    accept: "同意する"
+    print: "印刷"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    review_terms: "Review updated terms"
+  race_interstitial:
+    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    message: "Please tell us your race (check all that apply)"
+    races:
+      - 
+        white: 白人
+      - 
+        black: Black or African American
+      - 
+        hispanic: Hispanic or Latino
+      - 
+        asian: Asian
+      - 
+        hawaiian: Native Hawaiian or other Pacific Islander
+      - 
+        american_indian: American Indian/Alaska Native
+      - 
+        other: その他
+      - 
+        opt_out: Prefer not to say
+    submit: "送信"
+    decline: "閉じる"
   zendesk_too_young_message: 'ご迷惑致しますが、若い方はこのサポートサイトのログインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をログインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。'
   progress:
     not_started: 未実施
@@ -600,133 +631,202 @@ ja:
     assessment: 評価
     submitted: 投稿しました。
   studio:
-    courses_working_on: 試行中のコース
-    completed_courses: 完了したコース
-    all_courses: すべてのコース
+    courses_working_on: "試行中のコース"
+    completed_courses: "完了したコース"
+    all_courses: "すべてのコース"
   project:
-    projects: プロジェクト
-    create: プロジェクトを作る
-    create_a_project: 新しいプロジェクトを作る
-    new: 新しく作る
-    rename: 名前を変更
-    save: 保存
-    delete: 削除
-    exit: コースに戻る
-    my_projects: マイプロジェクト
-    share: 共有
+    projects: "プロジェクト"
+    create: "プロジェクトを作る"
+    create_a_project: '新しいプロジェクトを作る'
+    new: "新しく作る"
+    rename: "名前を変更"
+    save: "保存"
+    delete: "削除"
+    exit: "コースに戻る"
+    my_projects: "マイプロジェクト"
+    share: "共有"
     share_title: プロジェクトを共有
-    share_copy_link: 'リンクをコピー:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
-    embed: Embed
-    advanced_share: Show advanced options
-    close: 閉じる
-    more: それ以上
-    name: 名前
-    updated: 更新された
-    project_type: プロジェクトの種類
-    help_text: '下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。'
-    need_help: スタートするのをお手伝いしましょうか？
-    really_delete: 削除しますか？
-    delete_yes: はい
-    delete_no: ちがいます
-    saved: 保存されました
-    not_saved: 保存されていません
-    cancel: キャンセル
+    share_copy_link: "リンクをコピー:"
+    share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
+    embed: "Embed"
+    advanced_share: "Show advanced options"
+    close: "閉じる"
+    more: "表示"
+    name: "名前"
+    updated: "更新された"
+    project_type: "プロジェクトの種類"
+    help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
+    need_help: "スタートするのをお手伝いしましょうか？"
+    really_delete: '削除しますか？'
+    delete_yes: 'はい'
+    delete_no: 'ちがいます'
+    saved: "保存されました"
+    not_saved: "保存されていません"
+    cancel: 'キャンセル'
     delete_confirm_title: このプロジェクトを本当に削除してもよろしいですか？
-    delete_confirm_text: プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。
-    view_all: マイプロジェクトを見る
-    remix: リミックス
-    click_to_remix: '"Remix" をクリックしてあなただけのバージョンを作成しましょう'
-    edit_project: プロジェクトを編集します
+    delete_confirm_text: "プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。"
+    view_all: 'マイプロジェクトを見る'
+    remix: 'リミックス'
+    click_to_remix: "\"Remix\" をクリックしてあなただけのバージョンを作成しましょう"
+    edit_project: 'プロジェクトを編集します'
     abuse:
       tos: "このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。"
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "これがエラーであると思うなら、 <a href='https://code.org/contact'> こちらからお問い合わせ</a>ください。"
-      go_to_code_studio: コードスタジオに行く
+      go_to_code_studio: 'コードスタジオに行く'
       report_abuse_form:
-        intro: 不快なコンテンツ、脅迫、ネット上のいじめ、嫌がらせ、またはコードスタジオで構築されたアプリで作成した自身のコンテンツに対する著作権侵害が発生した場合には、以下のフォームへ記入してください。報告された内容については、その内容を真剣に受け止め、調査および適切な処置をとります。
+        intro: '不快なコンテンツ、脅迫、ネット上のいじめ、嫌がらせ、またはコードスタジオで構築されたアプリで作成した自身のコンテンツに対する著作権侵害が発生した場合には、以下のフォームへ記入してください。報告された内容については、その内容を真剣に受け止め、調査および適切な処置をとります。'
         validation:
-          email: メール アドレスを入力してください
-          age: 年齢を指定してください
-          abuse_type: このコンテンツがどのように利用規約に違反しているか回答してください
-          abuse_detail: 報告している内容について詳しく説明してください
-        abusive_url: 報告されたコンテンツのURL
+          email: 'メール アドレスを入力してください'
+          age: '年齢を指定してください'
+          abuse_type: 'このコンテンツがどのように利用規約に違反しているか回答してください'
+          abuse_detail: '報告している内容について詳しく説明してください'
+        abusive_url: '報告されたコンテンツのURL'
         abuse_type:
           question: 'このコンテンツは、%{link_start}利用規約%{link_end}に対し、どのように違反していますか？'
-          harassment: 脅迫、ネット上のいじめ、嫌がらせ
-          offensive: 不快なコンテンツ
-          infringement: 著作権侵害
-          other: その他
-        detail: 報告の対象となるコンテンツについて、できるかぎり多くの詳細を提供してください。
+          harassment: '脅迫、ネット上のいじめ、嫌がらせ'
+          offensive: '不快なコンテンツ'
+          infringement: '著作権侵害'
+          other: 'その他'
+        detail: '報告の対象となるコンテンツについて、できるかぎり多くの詳細を提供してください。'
         acknowledge: 'この情報を送信することにより、報告された内容は %{link_start_privacy}個人情報保護方針%{link_end} および %{link_start_tos}利用規約%{link_end}に基づき、処理されることに同意したとみなされます。'
   peer_review:
     accepted:
-      name: Accepted
+      name: 'Accepted'
       description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
-      name: Rejected
+      name: 'Rejected'
       description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
+      name: 'Escalated'
+      description: 'I would like an instructor to review this submission'
+    instructor_feedback: 'Instructor Feedback'
+    peer_feedback: 'Peer Feedback'
+    outdated: 'This feedback was added for a previously submitted version'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
   components:
     icon_library:
-      search_placeholder_text: アイコンの検索..
-      no_icons_found: アイコンが見つかりませんでした。
+      search_placeholder_text: 'アイコンの検索..'
+      no_icons_found: 'アイコンが見つかりませんでした。'
     playzone:
-      artist_description: アーティストでかっこいい絵やデザインを描きましょう！
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
-      playlab_description: プレイラボでお話やゲームを作りましょう！
-      playlab_title: New App
+      artist_description: 'アーティストでかっこいい絵やデザインを描きましょう！'
+      artist_title: 'New Drawing'
+      continue_button: 'Go on to the next Stage'
+      playlab_description: 'プレイラボでお話やゲームを作りましょう！'
+      playlab_title: 'New App'
       primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      projects_description: 'Revisit one of your existing projects.'
+      projects_title: 'プロジェクトを開始する'
+      secondary_header: 'Ask your teacher what to do next'
   flex_category:
-    required: 概要
-    content: Content
-    practice: Teaching Practices
-    peer_review: Peer Review
+    required: '概要'
+    content: 'Content'
+    practice: 'Teaching Practices'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_text: This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    title: 'Hour of Code downloads'
+    capsule_title: 'Do you have Internet?'
     capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
+    instructions_headline: 'No Internet?'
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: 'Minecraft Hour Of Code'
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
-    windows: Windows
-    mac: Mac OS X
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   plc:
     preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: Go to unit overview
+  return_course_overview: 'Go to unit overview'
+  pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'

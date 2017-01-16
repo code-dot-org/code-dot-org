@@ -16,7 +16,7 @@ module SerializedProperties
   def assign_attributes(new_attributes)
     init_properties
     attributes = new_attributes.stringify_keys
-    new_properties = attributes.delete('properties').try(:stringify_keys!)
+    new_properties = attributes.delete('properties').try(:stringify_keys)
 
     super(attributes)
     # If the properties hash is explicitly assigned then merge its keys with existing properties
@@ -30,10 +30,10 @@ module SerializedProperties
   end
 
   def property_changed?(key)
-    changes = self.changed_attributes['properties']
+    changes = changed_attributes['properties']
     return false if changes.nil?
 
-    changes[key] != self.properties[key]
+    changes[key] != properties[key]
   end
 
   module ClassMethods
@@ -48,7 +48,7 @@ module SerializedProperties
     end
 
     def serialized_attrs(*args)
-      (serialized_properties[self.to_s] ||= []).concat args
+      (serialized_properties[to_s] ||= []).concat args
     end
 
     def permitted_params
@@ -79,7 +79,7 @@ module SerializedProperties
       end
 
       define_method("#{cleartext_property_name}?") do
-        !!JSONValue.value(self.send(cleartext_property_name))
+        !!JSONValue.value(send(cleartext_property_name))
       end
     end
 

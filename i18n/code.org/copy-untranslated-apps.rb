@@ -28,6 +28,7 @@ locales = {
   'Georgian' => 'ka-GE',
   'German' => 'de-DE',
   'Greek' => 'el-GR',
+  'Hawaiian' => 'haw-HI',
   'Hebrew' => 'he-IL',
   'Hindi' => 'hi-IN',
   'Hungarian' => 'hu-HU',
@@ -36,6 +37,7 @@ locales = {
   'Irish' => 'ga-IE',
   'Italian' => 'it-IT',
   'Japanese' => 'ja-JP',
+  'Kazakh' => 'kk-KZ',
   'Khmer' => 'km-KH',
   'Korean' => 'ko-KR',
   'Kurdish' => 'ku-IQ',
@@ -44,9 +46,10 @@ locales = {
   'Macedonian (FYROM)' => 'mk-MK',
   'Malay' => 'ms-MY',
   'Maltese' => 'mt-MT',
+  'Maori' => 'mi-NZ',
   'Marathi' => 'mr-IN',
   'Nepali' => 'ne-NP',
-  'Northern Sami' => 'se',
+  'Northern Sami' => 'se-FI',
   'Norwegian' => 'no-NO',
   'Norwegian Nynorsk' => 'nn-NO',
   'Pashto' => 'ps-AF',
@@ -57,24 +60,31 @@ locales = {
   'Romanian' => 'ro-RO',
   'Russian' => 'ru-RU',
   'Serbian (Cyrillic)' => 'sr-SP',
+  'Sinhala' => 'si-LK',
   'Slovak' => 'sk-SK',
   'Slovenian' => 'sl-SI',
   'Spanish' => 'es-ES',
+  'Spanish, Argentina' => 'es-AR',
   'Spanish, Mexico' => 'es-MX',
   'Swedish' => 'sv-SE',
+  'Tajik' => 'tg-TJ',
   'Tamil' => 'ta-IN',
   'Thai' => 'th-TH',
   'Turkish' => 'tr-TR',
   'Ukrainian' => 'uk-UA',
   'Urdu (Pakistan)' => 'ur-PK',
-  'Vietnamese' => 'vi-VN'
+  'Uzbek' => 'uz-UZ',
+  'Vietnamese' => 'vi-VN',
+  'Zulu' => 'zu-ZA'
 }
 
 untranslated_apps = %w(
   applab
   calc
   eval
+  gamelab
   netsim
+  weblab
 )
 
 locales.each_value do |locale|

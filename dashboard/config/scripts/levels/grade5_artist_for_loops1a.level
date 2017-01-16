@@ -22,7 +22,7 @@
     "embed": "false",
     "use_contract_editor": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!\r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
+    "markdown_instructions": "Try using a `for loop`to create this triangular design. Don't worry that the numbers are different than the last puzzle. As long as you turn by the right number of degrees, the artist will make the correct shape!\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

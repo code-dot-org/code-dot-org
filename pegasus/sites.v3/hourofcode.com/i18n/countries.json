@@ -351,6 +351,17 @@
     "campaign_date_short": "3-7 de oct",
     "campaign_date_full": "3-7 de octubre"
   },
+  "lk": {
+    "full_name": "Sri Lanka",
+    "default_language": "si",
+    "partner_page": "code.org",
+    "campaign_date_year": "2016",
+    "campaign_date_full_year": "දෙසැම්බර් 5-11, 2016",
+    "campaign_date_start_short": "දෙසැ. 5",
+    "campaign_date_start_long": "දෙසැම්බර් 5",
+    "campaign_date_short": "දෙසැ. 5-11",
+    "campaign_date_full": "දෙසැම්බර් 5-11"
+  },
   "lv": {
     "full_name": "Latvia",
     "default_language": "lv",
@@ -537,6 +548,17 @@
     "campaign_date_start_long": "December 5",
     "campaign_date_short": "Dec. 5-11",
     "campaign_date_full": "December 5-11"
+  },
+  "se": {
+    "full_name": "Sweden",
+    "default_language": "sv",
+    "partner_page": "code.org",
+    "campaign_date_year": "2016",
+    "campaign_date_full_year": "5-11 december 2016",
+    "campaign_date_start_short": "5:e December",
+    "campaign_date_start_long": "5 december",
+    "campaign_date_short": "5-11 december",
+    "campaign_date_full": "5-11 december"
   },
   "tr": {
     "full_name": "Turkey",

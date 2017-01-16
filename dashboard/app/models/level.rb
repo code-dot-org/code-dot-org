@@ -20,14 +20,15 @@
 # Indexes
 #
 #  index_levels_on_game_id  (game_id)
+#  index_levels_on_name     (name)
 #
 
 class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
-  belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
+  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
+  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
@@ -40,6 +41,7 @@ class Level < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> { where.not(user_id: nil) }
 
   after_save :write_custom_level_file
+  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -55,6 +57,7 @@ class Level < ActiveRecord::Base
     instructions
     markdown_instructions
     authored_hints
+    instructions_important
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -86,6 +89,24 @@ class Level < ActiveRecord::Base
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
     @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
+  end
+
+  def self.key_list
+    @@all_level_keys ||= Level.all.map{ |l| [l.id, l.key] }.to_h
+    @@all_level_keys
+  end
+
+  def update_key_list
+    @@all_level_keys ||= nil
+    @@all_level_keys[id] = key if @@all_level_keys
+  end
+
+  def summarize_concepts
+    concepts.pluck(:name).map{ |c| "'#{c}'" }.join(', ')
+  end
+
+  def summarize_concept_difficulty
+    (level_concept_difficulty.try(:serializable_hash) || {}).to_json
   end
 
   def complete_toolbox(type)
@@ -144,8 +165,8 @@ class Level < ActiveRecord::Base
 
   def available_callouts(script_level)
     if custom?
-      unless self.callout_json.blank?
-        return JSON.parse(self.callout_json).map do |callout_definition|
+      unless callout_json.blank?
+        return JSON.parse(callout_json).map do |callout_definition|
           Callout.new(
             element_id: callout_definition['element_id'],
             localization_key: callout_definition['localization_key'],
@@ -176,22 +197,22 @@ class Level < ActiveRecord::Base
 
   def should_write_custom_level_file?
     changed = changed? || (level_concept_difficulty && level_concept_difficulty.changed?)
-    changed && write_to_file? && self.published
+    changed && write_to_file? && published
   end
 
   def write_custom_level_file
     if should_write_custom_level_file?
       file_path = LevelLoader.level_file_path(name)
-      File.write(file_path, self.to_xml)
+      File.write(file_path, to_xml)
       file_path
     end
   end
 
   def to_xml(options = {})
     builder = Nokogiri::XML::Builder.new do |xml|
-      xml.send(self.type) do
+      xml.send(type) do
         xml.config do
-          hash = self.serializable_hash(:include => :level_concept_difficulty).deep_dup
+          hash = serializable_hash(include: :level_concept_difficulty).deep_dup
           config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
@@ -236,10 +257,9 @@ class Level < ActiveRecord::Base
   # level types with ILS: ["Craft", "Studio", "Karel", "Eval", "Maze", "Calc", "Blockly", "StudioEC", "Artist"]
 
   def self.where_we_want_to_calculate_ideal_level_source
-    self.
-      where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-      where('ideal_level_source_id is null').
-      to_a.reject {|level| level.try(:free_play)}
+    where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
+    where('ideal_level_source_id is null').
+    to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
@@ -248,7 +268,7 @@ class Level < ActiveRecord::Base
       includes(:activities).
       max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
-    self.update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
+    update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
 
   def self.find_by_key(key)
@@ -257,7 +277,7 @@ class Level < ActiveRecord::Base
     # blockly levels.js. for example, from hourofcode.script:
     # level 'blockly:Maze:2_14'
     # level 'scrat 16'
-    self.find_by(key_to_params(key))
+    find_by(key_to_params(key))
   end
 
   def self.key_to_params(key)
@@ -273,13 +293,13 @@ class Level < ActiveRecord::Base
   # be passed to the client, typically to save and load user progress
   # on that level.
   def channel_backed?
-    return false if self.try(:is_project_level)
+    return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    self.project_template_level || self.game == Game.applab || self.game == Game.gamelab || self.game == Game.weblab || self.game == Game.pixelation || free_response_upload
+    project_template_level || game == Game.applab || game == Game.gamelab || game == Game.weblab || game == Game.pixelation || free_response_upload
   end
 
   def key
-    if level_num == 'custom'
+    if level_num == 'custom' || level_num.nil?
       name
     else
       ["blockly", game.name, level_num].join(':')
@@ -290,7 +310,7 @@ class Level < ActiveRecord::Base
   # across multiple levels, using a single level name as the
   # storage key for that user.
   def project_template_level
-    return nil if self.try(:project_template_level_name).nil?
+    return nil if try(:project_template_level_name).nil?
     Level.find_by_key(project_template_level_name)
   end
 
@@ -318,7 +338,9 @@ class Level < ActiveRecord::Base
   def contained_levels
     names = properties["contained_level_names"]
     return [] unless names.present?
-    Level.where(name: properties["contained_level_names"])
+    properties["contained_level_names"].map do |contained_level_name|
+      Script.cache_find_level(contained_level_name)
+    end
   end
 
   private

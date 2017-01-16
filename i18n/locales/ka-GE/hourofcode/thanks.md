@@ -14,7 +14,7 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 # მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
 
-თქვენ მოსწავლეებს მთელს მსოფლიოში აძლევთ კოდის საათში ჩართვის შესაძლებლობას, რაც *მათ ცხოვრებას შეცვლის*, <%= campaign_date('full') %> განმავლობაში. We'll be in touch about new tutorials and other exciting updates. რისი გაკეთება შეგიძლიათ ახლა?
+თქვენ მოსწავლეებს მთელს მსოფლიოში აძლევთ კოდის საათში ჩართვის შესაძლებლობას, რაც *მათ ცხოვრებას შეცვლის*, <%= campaign_date('full') %> განმავლობაში. ახალი ტუტორიალებისა და სხვა საინტერესო სიახლეების შესახებ ყოველთვის შეგატყობინებთ. რისი გაკეთება შეგიძლიათ ახლა?
 
 ## 1. გაავრცელეთ ხმა
 
@@ -45,5 +45,9 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 ## 7. დაგეგმეთ თქვენი კოდის ერთი საათი
 
 აირჩიეთ კოდის ერთი საათის აქტივობა და [გადახედეთ ამ სახელმძღვანელოს](%= resolve_url('/how-to') %).
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

@@ -1,0 +1,22 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2016-10-24T10:54:30.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "A careless binary coder typed in ONE extra 0 or 1 somewhere within this image's data. The extra bit that is causing Mario to glitch out! \r\n\r\nDelete the extra bit to restore Mario back to normal!",
+    "markdown_instructions": "# 3-Bit Color\r\n \r\n**Challenge:** \r\n\r\nA careless binary coder typed in ONE extra 0 or 1 somewhere within this image's data. The extra bit that is causing Mario to glitch out! \r\n\r\nDelete the extra bit to restore Mario back to normal!\r\n\r\n![](https://images.code.org/8b7c17ba204a1a4d33e1bd6de7f01d76-image-1477306657312.54.57 AM.png)",
+    "version": "3",
+    "data": "000100000001000000000011 111 111 111 111 111 100 100 100 100 100 111 111 111 111 111 111 111 111 111 111 100 100 100 100 100 100 100 100 100 111 111 111 111 111 111 111 000 000 000 110 110 000 110 111 111 111 111 111 111 111 111 000 110 000 110 110 110 000 110 110 110 111 111 111 111 111 111 000 110 000 000 110 110 110 000 110 110 110 111 111 111 111 111 000 000 110 110 110 110 000 000 000 000 111 111 111 111 111 111 111 111 110 110 110 110 110 110 110 111 111 111 111 111 111 111 111 001 001 100 001 001 001 111 111 111 111 0111 111 111 111 111 001 001 001 100 001 001 100 001 001 001 111 111 111 111 111 001 001 001 001 100 001 001 100 001 001 001 001 111 111 111 111 110 110 001 001 100 100 100 100 001 001 110 110 111 111 111 111 110 110 110 100 110 100 100 110 100 110 110 110 111 111 111 111 110 110 100 100 100 100 100 100 100 100 110 110 111 111 111 111 111 111 100 100 100 111 111 100 100 100 111 111 111 111 111 111 111 000 000 000 111 111 111 111 000 000 000 111 111 111 111 111 000 000 000 000 111 111 111 111 000 000 000 000 111 111",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

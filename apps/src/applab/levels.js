@@ -1,6 +1,6 @@
-var msg = require('@cdo/applab/locale');
-var utils = require('../utils');
-var blockUtils = require('../block_utils');
+import msg from '@cdo/applab/locale';
+import * as utils from '../utils';
+import blockUtils from '../block_utils';
 var tb = blockUtils.createToolbox;
 var blockOfType = blockUtils.blockOfType;
 var createCategory = blockUtils.createCategory;
@@ -8,7 +8,8 @@ var createCategory = blockUtils.createCategory;
 /*
  * Configuration for all levels.
  */
-var levels = module.exports = {};
+var levels = {};
+export default levels;
 
 levels.simple = {
   'requiredBlocks': [
@@ -56,12 +57,14 @@ levels.custom = {
     "getImageURL": null,
     "setImageURL": null,
     "playSound": null,
+    "stopSound": null,
     "showElement": null,
     "hideElement": null,
     "deleteElement": null,
     "setPosition": null,
     "setSize": null,
     "setProperty": null,
+    "getProperty": null,
     "write": null,
     "getXPosition": null,
     "getYPosition": null,

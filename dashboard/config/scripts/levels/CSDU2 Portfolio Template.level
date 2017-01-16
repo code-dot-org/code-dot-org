@@ -5,11 +5,12 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Adding Your Images\r\n\r\nWith images and attribution information in hand, it's time to spruce up your new page.\r\n\r\n# Do This\r\n\r\nUpload your images to Web Lab and, using `<img>` tags, add them where you'd like them to go. For each image:\r\n\r\n* Add a descriptive `alt` attribute\r\n* Add attribution underneath the image, including\r\n\t* Name or screenname of author (if available)\r\n    * Title of image (if available)\r\n    * Link to original site (you can make the whole attribution text a link)\r\n    * License image was published under either in text (eg CC-BY) or using a badge from the [Creative Commons website](https://creativecommons.org/about/downloads/).\r\n\r\nFor example\r\n\r\n![Sad Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longhaired_Dachshund_portrait.jpg/629px-Longhaired_Dachshund_portrait.jpg)\r\n\r\n[Longhaired Dachshund portrait by Flickr user Soggydan](https://commons.wikimedia.org/wiki/File:Longhaired_Dachshund_portrait.jpg) ![CC-BY](https://licensebuttons.net/l/by/3.0/88x31.png)",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \" <h1>A Thing that I Care About</h1> \\n \"\r\n    }\r\n  ]\r\n}",
-    "project_template_level_name": "CSDU2 IP Project Template"
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n   <head>\\n\\n   </head>\\n\\n   <body>\\n\\n   </body>\\n\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"chocolate-ice-cream.jpg\",\r\n      \"url\": \"https://images.code.org/a14aff2919bdc0a31c734a03975c14f1-image-1477533091165.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"vanilla-ice-cream.jpg\",\r\n      \"url\": \"https://images.code.org/3ced7f45d8a4f72225a92d70b5708059-image-1477533091165.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"puppy.jpeg\",\r\n      \"url\": \"https://images.code.org/c9515cb4d6ed88b8fd5bb8335bb7574d-image-1477533091164.jpeg\"\r\n    },\r\n    {\r\n      \"name\": \"kitty.jpeg\",\r\n      \"url\": \"https://images.code.org/7fd7316939dc1f08c29c45b6d531543a-image-1477533091166.jpeg\"\r\n    },\r\n    {\r\n      \"name\": \"movie.jpg\",\r\n      \"url\": \"https://images.code.org/f62c59c4bc5821c862a5b9b34982d92b-image-1477533091166.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"books.jpg\",\r\n      \"url\": \"https://images.code.org/5962b7c68b9640fc9da7e432e9e48038-image-1477533091166.jpg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

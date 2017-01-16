@@ -4,25 +4,27 @@ title: How to help
 
 # How to Help
 
-## Make a generous donation
-We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
+## Help us spread the word
+Follow us [on Facebook](http://facebook.com/Code.org) or [on Twitter](http://twitter.com/codeorg) and re-share our posts.  Or stay in touch with our [quarterly email updates](http://eepurl.com/wL0XL).
 
-[<button>Please consider a donation</button>](/donate)
+Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
+
+[<button>Add your support</button>](/promote)
 
 ## Ask your school to teach computer science
 Encourage local elementary schools to teach our [elementary curriculum](/k5) or recruit teachers to attend a [one-day workshop](/professional-development-workshops)- at no cost. Or [partner with Code.org](/educate/districts) to bring permanent courses into middle and high schools.
  
 [<button>Sample letter</button>](/promote/letter)&nbsp;&nbsp; [<button>See options for schools</button>](/educate)
 
-## Advocate for computer science locally
-Petition your state to allow computer science to count towards math or science high school graduation credits. And promote computer science in your area with these [stats, quotes and videos](/promote).
+## Host an Hour of Code - at work, in your community, or local school
+Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Add your support</button>](/promote)
+[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)&nbsp;&nbsp; [<button>Volunteer in a classroom</button>](/volunteer)
 
-## Translate our tutorials
-Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
+## Want to inspire students? Offer help to local teachers
+Volunteer to teach our [Code Studio courses](http://studio.code.org) to local students with [this guide](/volunteer/guide). And sign up to hear about volunteer opportunities near you.
 
-[<button>Translate tutorials</button>](/translate)
+[<button>Learn more</button>](/volunteer)
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too. 
@@ -34,21 +36,23 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 
 [<button>Shop</button>](/shop)
 
-## Host an Hour of Code - at work, in your community, or local school
-Millions of people of all ages have learned an [Hour of Code](http://code.org/learn), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Start today</button>](https://code.org/learn)
+## Make a generous donation
+We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
 
----
-<a name="engineer"></a>
-# Are you a software engineer? Help spread computer science
+[<button>Please consider a donation</button>](/donate)
 
-## Offer help to local teachers
-If you're a software engineer, there are many opportunities to get involved locally. Volunteer to teach our [Code Studio courses](http://studio.code.org) to local students with [this guide](/volunteer/guide). And sign up to hear about volunteer opportunities near you.
+## Translate our tutorials
+Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
 
-[<button>Learn more</button>](/volunteer)
+[<button>Translate tutorials</button>](/translate)
 
-### Or become a volunteer teacher yourself with one of these organizations:
+## Teach an online course to your child, or in any classroom
+Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
+
+[<button>Learn more</button>](https://studio.code.org)
+
+## Are you a software engineer? Volunteer with one of these organizations
 
 [col-33]
 
@@ -66,7 +70,3 @@ If you're a software engineer, there are many opportunities to get involved loca
 
 <div style="clear: both;"></div>
 
-## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](https://studio.code.org) enables students to learn the basic concepts of computer science as early as kindergarten. Try [Play Lab](/playlab), a tool developed for elementary students to create games and stories. Or try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
-
-[<button>Learn more</button>](https://studio.code.org)

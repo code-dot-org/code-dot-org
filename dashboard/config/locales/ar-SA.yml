@@ -2,15 +2,14 @@
   errors:
     messages:
       not_saved: "الرجاء تصحيح الأخطاء التالية:"
-      too_young: "هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً"
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: "هذا المحتوى يخضع لقيود سن وغير متاح للطلاب الأصغر سناً."
+      teacher_must_accept_terms: هذا المحتو يخضع لقيود العمر في ولا يتوفر للطلاب الأصغر
+        سنا. اسأل المعلم الخاص بك لقبول "شروط الخدمة" المستحدثة لتمنحك الوصول إلى
+        هذا المحتوى. يستطيع المعلم الخاص بك القيام بذلك بتسجيل الدخول إلى "استوديو
+        التعليمات البرمجية" والنقر فوق الزر "تحديث مراجعة شروط" بالقرب من أعلى الصفحة
+        الرئيسية "ستوديو التعليمات البرمجية".
+      pair_programmer: "أنت الآن توصل البرمجة مع طالب الذي ليس لديه حق الوصول إلى
+        هذا المحتوى. للوصول إلى هذا المحتوى، أوقف برمجة التوصيل وحاول مرة أخرى."
   activerecord:
     errors:
       messages:
@@ -90,11 +89,25 @@
   signup_form:
     student_count: "عدد الطلاب المسجلين حالياً هو %{count}."
     teacher_count: "عدد المعلّمين المسجلين حالياً هو %{count}."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: قم بالتسجيل للحصول على حساب لتتبع التقدم المحرز الخاص بك أو إدارة الفصول
+      الدراسية الخاصة بك. <a href="/"> يمكنك استعراض مختلف مراحل والالغاز</a> دون
+      حساب، ولكنك ستحتاج للتسجيل لحفظ التقدم والمشاريع الخاصة بك.
+    hoc_already_signed_up_heading: "أبدأ بدون تسجيل الدخول"
+    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
+      and your students do not need to sign in to Code Studio to participate in this
+      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
+      for your classroom and share the link with them.<br/><br/>If you enjoyed the
+      Hour of Code and want to go further, you can set up a password and create a
+      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
+      courses</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "راجع دليل المعلم"
-    title: Sign up for Code.org
+    title: "الاشتراك في Code.org"
     school_name: "اسم المدرسة (اختياري)"
     school_address: "عنوان المدرسة (اختياري)"
     address_placeholder: "العنوان، المدينة، الدولة، الرمز البريدي"
@@ -110,19 +123,20 @@
     valid_password: "كلمة المرور متاحة!"
     invalid_password: "كلمة المرور يجب ان تكون على الاقل 6 احرف"
     mismatch_password: "كلمة المرور التي ادخلتها غير متطابقة"
-    student_terms: "أنا أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a>
-      Code.org. إذا كنت أنا دون 13 سنة من العمر، فأنا أؤكد من خلال تقديم هذا النموذج
-      بأنه لدي الإذن من أولياء الأمر أو الوصي القانوني لاستخدام خدمات Code.org.<br/>لا
-      يتم تخزين البريد الإلكتروني للمستخدمين دون سن 13 عام بطريقة تسمح لنا الاتصال
-      بهم."
-    teacher_terms: "أوافق على الالتزام بـ<a href='http://code.org/tos'>شروط خدمة</a>
-      Code.org."
+    student_terms: "أوافق على الالتزام <a href='http://code.org/tos'> شروط الخدمة</a>
+      Code.org. إذا كنت دون سن 13 عاماً، اؤكد بتقديم هذه الاستمارة بان أحد والدي أو
+      وأي امري اذن باستخدام الخدمات Code.org. <br/> <br/> لا يتم تخزين عناوين البريد
+      الإلكتروني في شكل يسمح لنا بالاتصال بالطلاب. سوف يتلقى الطلاب ابدأ رسائل البريد
+      الإلكتروني من Code.org باستثناء استرداد كلمة المرور. الاطلاع على <a href='http://code.org/privacy'>
+      سياسة الخصوصية</a> لمزيد من المعلومات."
+    teacher_terms: "أوافق على الالتزام بشروط الخدمة Code.org. لمزيد من المعلومات حول
+      الخصوصية، راجع لدينا <a href='http://code.org/privacy'> سياسة الخصوصية</a>."
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
     user_type_label: "نوع الحساب"
     user_type_teacher: "المدرس"
     user_type_student: "طالب"
     field_is_required: "مطلوب"
-    accept_terms: You must agree to create an account
+    accept_terms: "يجب عليك الموافقة على إنشاء حساب"
   signin_form:
     title: "هل لديك حساب؟ قم بتسجيل الدخول"
     login: "البريد الإلكتروني"
@@ -144,8 +158,8 @@
   password:
     reset_form:
       title: "نسيت كلمة المرور؟"
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: "قم بإدخال عنوان بريدك الإلكتروني أدناه وسيتم إرسال إرشادات لإعادة
+        تعيين كلمة المرور."
       email: "البريد الإلكتروني"
       submit: "تسجيل"
     change_form:
@@ -284,12 +298,12 @@
       prizes: "الجوائز"
       logout: "تسجيل الخروج"
       signin: "تسجيل الدخول"
-      signup: "تسجيل"
+      signup: "إنشاء حساب"
       already_registered: "هل قمت بالتسجيل من قبل؟"
       pair_programming: "البرمجة الزوجية"
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      team: "فريق"
+      driver: "سائق"
+      navigator: "مستكشف"
     popup:
       progress_for_user: "تقدم %{name}"
       progress: "إنجازاتك"
@@ -315,7 +329,7 @@
     user_not_found: "لا يمكن العثور على المعلم."
     student_teacher_disassociated: "لقد قمت بإزالة %{teacher_name} كالمعلم الخاص بك."
     panel:
-      answer_viewer: "عارض الأجوبة"
+      answer_viewer: "لوحة المعلم"
       student: "طالب"
       viewing_solution: "عرض الحلول"
       try_it_yourself: "جربها بنفسك"
@@ -324,8 +338,9 @@
       example_with_number: "مثال الحل %{solution_number}"
       submitted_on: "تم تقديمه في:"
       unsubmit: "عدم تقديم"
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
+      worked_with: "عملت مع"
+      update_lock_settings: "حدث قفل الاعدادات هنا."
+      clear_response: "أستجابة واضحة"
   user:
     email_confirm_needed: "لم يتم تأكيد عنوان البريد الإلكتروني:"
     email_confirm_needed_required: "لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:"
@@ -338,6 +353,7 @@
     delete_text_teacher_note: "يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف
       حسابات طلابك."
     delete_confirm: "هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟"
+    deleted_user: deleted user
   user_level:
     completed: "أكمل"
     tried: "حاول"
@@ -408,14 +424,38 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "اعرف المزيد"
     announcement_try_now_button: "جرب الآن"
+    announcement_host_an_hour_button: "أستضافة لساعة"
+    announcement_watch_video_button: "مشاهدة الفديو"
     announcement_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة
       الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك.
       هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات
       الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم
       الكمبيوتر."
     announcement_petition_button: "أضف أسمك"
+    announcement_go_beyond_button: Go beyond
     announcement_all: Keep up to date with new features and updates on our teacher
       blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
+    announcement_hoc_launch: Thousands of educators in more than 180 countries will
+      start teaching computer science during the Hour of Code this December 5-11.
+      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
+      target='_blank'>Register your Hour of Code event</a> and let another teacher
+      know that anyone can start teaching computer science.
+    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
+      all-new Minecraft Hour of Code Designer lets students make the rules of the
+      Minecraft world. They can create a totally unique Minecraft experience, and
+      then share it with friends or play it on their phones. Do it with your class
+      for the Hour of Code.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال
       كود قسم مختلف."
@@ -426,7 +466,7 @@
       أدخل كود قسم مختلف."
     students_not_yours: "لا يمكنك نقل طلاب من قسم لا يتنمي إليك."
     stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
+    student_ids_not_entered: "الرجاء تقديم معرفات_الطالب."
     student_not_found: "لا يمكن إيجاد الطالب أو مجموعة الطلاب."
     all_students_must_be_in_current_section: "يجب على جميع الطلاب أن تلتحق بقسمك في
       الوقت الحالي."
@@ -578,6 +618,9 @@
     minecraft:
       title: Minecraft
       body: "استكشف عالم Minecraft عن طريق الكود."
+    minecraft2016:
+      title: Minecraft
+      body: "برمج الحيوانات وغيرها من مخلوقات ماينكرافت في الإصدار الخاص بك من ماينكرافت."
     unplugged:
       title: "درس غير موصول"
       audience: "العمر 4+"
@@ -585,8 +628,8 @@
         Now you can teach the fundamentals of computer science, whether you have computers
         in your classroom or not! Try using these lessons as a stand-alone course
         or as complementary lessons for any computer science course.
-      body_short: If you don't have computers, try these unplugged lessons in your
-        classroom.
+      body_short: "إذا لم يكن لديك أجهزة حاسب، حاول هذه الدروس الغير متصلة بالشبكة
+        في الفصول الدراسية الخاصة بك."
   gallery:
     students_drew_these_with_code: "قام الطلبة برسم هؤلاء باستخدام البرمجة (الكود)!"
     students_made_these_with_code: "قام الطلبة بصنع هؤلاء باستخدام البرمجة (الكود)!"
@@ -648,11 +691,10 @@
     unsubmit-body: Unsubmitting your assessment will reset the submitted time and
       date.  Are you sure?
     submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: You left some questions incomplete.  You cannot edit your
-      assessment after submitting it.  Are you sure?
+    submit-incomplete-body: "تركت بعض الأسئلة غير مكتملة.  لا يمكنك تحرير مشروعكم
+      بعد تقديمه.  هل أنت متأكد؟"
     submit-complete-title: Submit your assessment
-    submit-complete-body: You cannot edit your assessment after submitting it.  Are
-      you sure?
+    submit-complete-body: "لا يمكنك تعديل مشروعك بعد تقديمه، هل تريد بالفعل تقديمه؟"
   match:
     wrong_title: "الحل غير صحيح"
     wrong_body: "الحل الذي قمت بإدخاله غير صحيح.  الرجاء المحاولة مرة أخرى!"
@@ -692,33 +734,45 @@
       بإعارة أو بيع أو مشاركة هذه المعلومات مع أي طرف آخر."
     sign_out: إذا كنت لا ترغب بالإدلاء بعمرك، يمكنك <a href="%{url}"> تسجيل الخروج</a>.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: "تحديث شروط الخدمة وسياسة الخصوصية"
+    intro_desc: 'قمنا بتحديث لدينا شروط الخدمة وسياسة الخصوصية، كما هو موضح أدناه.
+      فهذه التغييرات اعتبارا من 24 أغسطس 2016.  أكبر تغيير: أننا سوف <i>لم نعد نخزن
+      عناوين البريد الإلكتروني لحسابات الطلاب في "استوديو البرمجية".</i> هذا فرق كبير
+      بالنسبة لنا، ونحن نأمل أن يضع معياراً جديداً لخصوصية الطالب في التعليم والتكنولوجيا.
+      لقد أرسلنا لك ملخص للتغييرات الأخرى عبر البريد الإلكتروني.'
+    intro_instructions: سوف تحتاج إلى قبول هذه الشروط الجديدة للطلاب تحت سن ال 13
+      في الفصول الدراسية الخاصة بك للوصول الكامل إلى جميع أحدث الميزات في "الاستوديو
+      التعليمات البرمجية".  عند تسجيل حساب لطالب دون سن 13، سيتم مطالبتك بتأكيد أن
+      المدرسة الخاصة بك بموافقة الوالدين لجمع المعلومات الشخصية للطالب لاستخدام والاستفادة
+      من المدرسة، بما في ذلك البرامج التعليمية مثل Studio التعليمات البرمجية.
     tos: "شروط الخدمة"
     privacy: "سياسة الخصوصية"
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: "ملاحظة: سياسة الخصوصية"
+    accept_label: أوافق على <a href="%{tos_url}" target="_blank"> شروط الخدمة</a>
+      و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
+    accept: "اوافق"
     print: "طباعة"
-    later: Later
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
       Please read these carefully before accepting them. Note that our tools teaching
       JavaScript may be unavailable to your students before explicitly accepting the
       updated terms.
-    review_terms: Review updated terms
+    review_terms: "راجع سياسة الخصوصية المستحدثة"
+  race_interstitial:
+    title: 'Optional: Help us track our progress toward improving diversity in computer
+      science'
+    message: Please tell us your race (check all that apply)
+    races:
+    - white: "أبيض"
+    - black: "أسود أو أمريكي من أصل أفريقي"
+    - hispanic: Hispanic or Latino
+    - asian: "آسيوي"
+    - hawaiian: Native Hawaiian or other Pacific Islander
+    - american_indian: American Indian/Alaska Native
+    - other: "أخرى"
+    - opt_out: Prefer not to say
+    submit: "تسجيل"
+    decline: "إغلاق"
   zendesk_too_young_message: عذراً، لا يمكن للمستخدمين الصغار تسجيل الدخول إلى موقع
     دعمنا، يمكنك تصفح <a href="http://support.code.org">صفحة الدعم</a> دون تسجيل الدخول
     أو الطلب من والديك أو معلمك التواصل معنا نيابة عنك.
@@ -747,11 +801,11 @@
     share: "المشاركة"
     share_title: "شارك مشاريعك"
     share_copy_link: "إنسخ الرابط:"
-    share_embed_description: You can paste the embed code into an HTML page to display
-      the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
-    embed: Embed
+    share_embed_description: "يمكنك لصق تضمين رمز في صفحة HTML لعرض المشروع على صفحة
+      ويب."
+    share_u13_warning: "اسأل المعلم الخاص بك قبل مشاركة. فقط تستطيع المشاركة مع الآخرين
+      في المدرسة الخاصة بك."
+    embed: "تضمين"
     advanced_share: "إظهار الخيارات المتقدمة"
     close: "إغلاق"
     more: "المزيد"
@@ -777,8 +831,8 @@
     abuse:
       tos: "هذا المشروع قد تم الإبلاغ عنه بانتهاكه Code.org، <a href='http://code.org/tos'>
         شروط الخدمة</a>، ولا يمكن مشاركته مع الآخرين."
-      policy_violation: This project contains information that cannot be shared with
-        others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "هذا المشروع يحتوي على معلومات لا يمكن مشاركتها مع الآخرين.
+        الرجاء الاتصال بمالك التطبيق لإصلاح محتويات على التطبيق."
       contact_us: "إذا كنت تعتقد أن هذا خطأ، الرجاء <a href='https://code.org/contact'>
         مراسلتنا.</a>"
       go_to_code_studio: "الذهاب الي Code Studio"
@@ -806,16 +860,15 @@
           الاستخدام%{link_end}"
   peer_review:
     accepted:
-      name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
+      name: "مقبول"
+      description: "<strong>نعم</strong>، هذا الإرسال <strong>يلبي</strong> المتطلبات"
     rejected:
       name: "مرفوض"
       description: "<strong>No</strong>, this submission <strong>does not meet</strong>
         the requirements"
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
+      name: "تم تصعيدها"
+      description: "أود أن يقوم مدرب بمراجعة هذا الإرسال"
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
@@ -834,11 +887,11 @@
       no_icons_found: "لم يتم العثور على ايقونات"
     playzone:
       artist_description: "ارسم صور رائعة و صمم مع الرسام !"
-      artist_title: New Drawing
+      artist_title: "رسم جديد"
       continue_button: "انتقل إلى المرحلة التالية"
       playlab_description: "أنشئ قصة أو إصنع لعبة مع مختبر اللعب !"
-      playlab_title: New App
-      primary_header: Congratulations! You finished %{stageName}!
+      playlab_title: "التطبيق الجديد "
+      primary_header: "مبروك لقد اكملت المرحلة%{stageName}!"
       projects_description: Revisit one of your existing projects.
       projects_title: "قم بفتح مشروع"
       secondary_header: "اسأل المعلم الخاص بك ماذا تفعل المقبل"
@@ -868,12 +921,52 @@
       ملاحظة: سوف لا يكون للطلاب القدره على تسجيل الدخول إلى "استوديو التعليمات البرمجية"
       أو حفظ التقدم، أو طباعة الشهادات. يمكن للمعلمين طباعة الشهادات قبل الموعد المحدد
       <a href="%{url}"> هنا</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: "ساعة البرمجة ماين كرافت"
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
-    starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+    starwars_javascript_name: "حرب النجوم: بناء مجرة باستعمال البرمجة (جافا سكريبت)"
     download_message: Download %{app_name} for offline use (136MB)
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: "نظام تشغيل ماك"
   plc:
@@ -895,3 +988,51 @@
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
   return_course_overview: Go to unit overview
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

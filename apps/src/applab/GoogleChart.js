@@ -20,7 +20,7 @@ require('../utils'); // Provides Function.prototype.inherits
  * @param {Element} targetDiv
  * @constructor
  */
-var GoogleChart = module.exports = function (targetDiv) {
+export default function GoogleChart(targetDiv) {
   // Define this late so we can overwrite it in tests.
   if (!GoogleChart.lib) {
     GoogleChart.lib = google;
@@ -38,7 +38,7 @@ var GoogleChart = module.exports = function (targetDiv) {
    * @type {Error[]}
    */
   this.warnings = [];
-};
+}
 
 /**
  * Loads the required libraries for this particular chart type.

@@ -175,18 +175,6 @@ img.video_thumbnail {
   padding-top: 15px;
   min-height: 70px;
   position: relative;
-
-  #progresswarning {
-    position: absolute;
-    font-size: 10px;
-    top: -1px;
-    left: 97px;
-
-    .learnmore {
-      font-family: 'Gotham 7r', sans-serif;
-      font-weight: normal;
-    }
-  }
 }
 
 .header {
@@ -1075,11 +1063,14 @@ input.header_input {
   color: $purple;
   font-family: $gotham-bold;
   font-weight: normal;
+  padding-right: 25px;
 }
 
 html[dir=rtl] .qtip-content {
   direction: rtl;
   text-align: right;
+  padding-right: 9px;
+  padding-left: 25px;
 }
 
 .qtip-default {
@@ -1433,7 +1424,7 @@ a.download-video {
     display: table-cell;
     vertical-align: middle;
   }
-  .terms-checkbox {
+  .terms-checkbox, .race-checkbox {
     margin: 0 5px 2px 0;
   }
   .right {
@@ -1779,6 +1770,10 @@ a.download-video {
 .external, .free-response {
   max-width: 970px;
   margin: auto;
+
+  &.left-aligned {
+    margin-left: 0;
+  }
 }
 
 .free-response .response {
@@ -1938,6 +1933,12 @@ $information-desktop: "only screen and (min-width: 1024px)";
     &.lock-answers {
       pointer-events: none;
       color: $light_gray;
+    }
+  }
+
+  &.contained {
+    h1 {
+      text-align: left;
     }
   }
 
@@ -2526,4 +2527,8 @@ $width: 400px;
   z-index: 100;
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
+}
+
+#level-body {
+  height: 100%;
 }

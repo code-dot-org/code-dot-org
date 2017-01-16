@@ -11,6 +11,7 @@ require 'properties_api'
 require 'tables_api'
 require 'shared_resources'
 require 'net_sim_api'
+require 'animation_library_api'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
@@ -34,6 +35,10 @@ module Dashboard
         HttpCache.config(rack_env)[:dashboard]
 
       Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
+
+      # Autoload mailer previews in development mode so changes are picked up without restarting the server.
+      # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
+      config.autoload_paths << Rails.root.join('test/mailers/previews')
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
@@ -53,7 +58,8 @@ module Dashboard
     config.middleware.insert_after PropertiesApi, TablesApi
     config.middleware.insert_after TablesApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
-    if CDO.dashboard_enable_pegasus
+    config.middleware.insert_after NetSimApi, AnimationLibraryApi
+    if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
       require 'pegasus_sites'
       config.middleware.insert_after VarnishEnvironment, PegasusSites
     end

@@ -1,0 +1,11 @@
+name 'CSD U3 SFLP Velocity'
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+# Programming - Interactive Games and Animations: Lesson 11 - Velocity
+
+## Background
+
+Learn new ways to control the movement of your sprite as you see how "higher level" blocks can be used to hide away commonly used code. You'll start building a game that you'll complete in the next lesson.
+MARKDOWN

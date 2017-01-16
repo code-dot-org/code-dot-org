@@ -1,0 +1,10 @@
+name 'HOC post-survey 2016 levelgroup'
+title 'Anonymous Post-survey: Hour of Code'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'HOC post-survey 2016 q2'
+level 'HOC post-survey 2016 q3'
+level 'HOC post-survey 2016 q4'
+level 'HOC post-survey 2016 q5'

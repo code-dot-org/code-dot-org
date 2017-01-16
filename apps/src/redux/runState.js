@@ -6,11 +6,14 @@ import _ from 'lodash';
 const SET_IS_RUNNING = 'runState/SET_IS_RUNNING';
 const SET_IS_DEBUGGER_PAUSED = 'runState/SET_IS_DEBUGGER_PAUSED';
 const SET_STEP_SPEED = 'runState/SET_STEP_SPEED';
+const SET_AWAITING_CONTAINED_RESPONSE = 'runState/SET_AWAITING_CONTAINED_RESPONSE';
 
 const initialState = {
   isRunning: false,
   isDebuggerPaused: false,
-  stepSpeed: 1
+  stepSpeed: 1,
+  // true when waiting for user to provide an answer to a contained level
+  awaitingContainedResponse: false
 };
 
 /**
@@ -37,6 +40,15 @@ export default function reducer(state, action) {
     return _.assign({}, state, {
       stepSpeed: action.stepSpeed
     });
+  }
+
+  if (action.type === SET_AWAITING_CONTAINED_RESPONSE) {
+    if (state.awaitingContainedResponse !== action.awaitingContainedResponse) {
+      return {
+        ...state,
+        awaitingContainedResponse: action.awaitingContainedResponse
+      };
+    }
   }
 
   return state;
@@ -66,4 +78,9 @@ export const setIsDebuggerPaused = isDebuggerPaused => ({
 export const setStepSpeed = stepSpeed => ({
   type: SET_STEP_SPEED,
   stepSpeed
+});
+
+export const setAwaitingContainedResponse = awaitingContainedResponse => ({
+  type: SET_AWAITING_CONTAINED_RESPONSE,
+  awaitingContainedResponse
 });

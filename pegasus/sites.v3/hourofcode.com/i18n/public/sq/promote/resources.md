@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
@@ -25,7 +27,7 @@ nav: promote_nav
 
 ## Postojini në mediat sociale
 
-[![Foto](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Foto](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![Foto](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <%= view :social_posters %>
 
@@ -33,26 +35,26 @@ nav: promote_nav
 
 ## Përdorni logon e Orës së Kodimit për të përhapur fjalë
 
-[![Foto](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
+[![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](<%= localized_image('/images/hour-of-code-logo.png') %>)
 
 [Shkarkoni versionin hi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
+**"Ora e Kodimit" është markë tregtare. Ne nuk duam të parandalojmë këtë përdorim, por ne duam të sigurohemi se përshtatet brenda disa kufijve:**
 
-  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-  2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+  1. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mire: "Merr pjese ne Oren e Kodimit™ ne ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp".
+  2. Përdorni një "TM"si indeks të sipërm në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit.
   3. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim:
     
     *"Ora e Kodimit" është një nismë në shkallë vendi nga Java Edukative e Shkencave Kompjuterike[csedweek.org] dhe Code.org [code.org] për të futur miliona studentë për një orë në shkencën kompjuterike dhe programimin kompjuterik. "*
 
-  4. No use of "Hour of Code" in app names.
+  4. Nuk ka përdorimi të "Orës së Kodimit" në emrat e aplikacioneve.
 
 <a id="stickers"></a>
 
 ## Printoni këto stiksat për t'ja dhënë studentëve të tu
 
 (Stickers are 1" diameter, 63 per sheet)  
-[![Foto](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
@@ -62,13 +64,13 @@ nav: promote_nav
 
 ## Ftoni shkollat, punëdhënësit apo miqtë tuaj të regjistrohen:
 
-Computers are everywhere, changing every industry on the planet. But only one in four schools teach computer science. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Kompjuterat janë kudo, duke ndryshuar çdo industri në planet. Por më pak se gjysmat e shkollave shpjegojnë shkencën kompjuterike. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. Nëse keni degjuar për Orën e Kodimit më përpara, ju mund ta dini që ka bërë histori. Më shumë se 100 milion studenta e kanë provuar Orën e Kodimit.
 
-Me Orën e Kodimit, shkenca kompjuterike ka qënë faqe kryesore e Google, MSN, Yahoo! dhe Disney-it. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Nëpërmjet Orës së Kodimit, shkenca kompjuterike ka qenë në faqen kryesore të Google, MSN, Yahoo! dhe Disney-it. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Çdo dyqan apple në botë ka zhvilluar një orë kodimi. Presidenti Obama shkruajti rreshtin e tij të parë të kodit gjatë fushatës.
 
-This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+Këtë vit, le ta bëjmë më të madhe. Po ju kërkoj që të bashkoheni me Orën e Kodimit 2016. Ju lutem përfshihuni në një event Ore Kodimi gjatë Javës së Edukmit të Shkencave Kompjuterike, <%= campaign_date('full') %>.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Përhapeni fjalën. Organizo eventin. Gjeni një shkollë në afërsi për t'u regjistruar në këtë event ose provojeni vet Orën e Kodimit. Gjithësecili nga ne mund të përfitojë nga këto mësime elementare.
 
 Fillo te http://hourofcode.com/<%= @country %>
 
@@ -76,17 +78,17 @@ Fillo te http://hourofcode.com/<%= @country %>
 
 ## Ftoni mediat të bëhen pjesë e eventit tuaj:
 
-**Subjekti:** Shkolla vendore i bashkohet synimit për të familjarizuar 100 milion studentë me shkencat kompjuterike
+**Subjekti:** Shkolla lokale i bashkohet synimit për të prezantuar studentët me shkencat kompjuterike
 
-Computers are everywhere, changing every industry on the planet, but only one in four schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë.
+Kompjuterat janë kudo, duke ndryshuar çdo industri në planet, por më pak se gjysma e shkollave shpjegojnë shkencat kompjuterike. Vajzat dhe minoritetet janë shumë pak të përfaqësuara në klasat e shkencave kompjuterike dhe në industrinë e teknologjisë. Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë.
 
-Me Orën e Kodimit, shkenca kompjuterike ka qënë faqe kryesore e Google, MSN, Yahoo! dhe Disney-it. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+Nëpërmjet Orës së Kodimit, shkenca kompjuterike ka qenë në faqen kryesore të Google, MSN, Yahoo! dhe Disney-it. Mbi 100 partnerë morën pjesë për ta përkrahur këtë lëvizje. Çdo dyqan apple në botë ka zhvilluar një orë kodimi. Presidenti Obama shkruajti rreshtin e tij të parë të kodit gjatë fushatës.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
+Kjo është arsyeja pse secili nga [X numër] nxënësit në [EMRI I SHKOLLES] po bëhen pjesë e eventit më të madhe të të nxënurit në histori: Ora e Kodimit, nga data 5 deri më 11 dhjetor<%= campaign_date('full') %>).
 
-Po ju shkruaj për t'iu ftuar të bëheni pjesë e takimit lançues si dhe të ndiqni fëmijët teksa marrin pjesë në aktivitetin tonë më [DATA].
+Po ju shkruaj për t'iu ftuar të bëheni pjesë e takimit lançues si dhe të ndiqni fëmijët teksa marrin pjesë në aktivitetin tonë më [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st century success. Të lutem bashkohu edhe ti.
+Ora e Kodimit, e organizuar nga organizata jofitimprurëse Code.org dhe me më shumë se 100 organizata të tjera, është dëshmi se gjenerata e sotme e nxënësve janë gati t'i mësojnë aftësitë kryesore për suksesin e shekullit 21. Të lutem bashkohu edhe ti.
 
 **Kontakti:** [YOUR NAME], [TITLE], tel: (212) 555-5555
 
@@ -102,36 +104,38 @@ Shpresojmë të jemi në kontakt.
 
 Të dashur prindër,
 
-Jetojmë në një botë të rrethuar nga teknologjia. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Jetojmë në një botë të rrethuar nga teknologjia. Dhe ne e dimë se çfarëdo fushe që të zgjedhin nxënësit tanë kur të rriten, aftësia e tyre për të pasur sukses do të varet gjithnjë e më shumë në të kuptuarit se si funksionon teknologjia.
 
-But only a tiny fraction of us are learning **how** technology works. Only 1 in every four schools teach computer science.
+Por vetëm një pjesë e vogël prej nesh janë mësuar **se si punon** teknologjia. Më pak se gjysma e të gjitha shkollave shpjegojnë shkencën kompjuterike.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+Kjo është arsyeja se pse e gjithë shkolla jonë po i bashkohet nismës së mësimit më të madhe në histori: Ora e Kodimit, gjatë Javës së Mësimit të Shkencave Kompjuterike (<%= campaign_date('full') %>). Më shumë se 100 milion student në të gjithë botën kanë provuar Orën e Kodimit.
 
-Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Ora e Kodimit nënkupton që [EMRI I SHKOLLËS] është gati për të shpjeguar bazat themelore të aftësive të shekullit 21. Duke sjellë aktivitete mbi programimin për nxënësit tuaj, ne synojmë të bëjmë Orën e Kodimit një event madhështor. Ju inkurajojme të bëheni vullnetar, të kontaktoni mediat lokale, të shpërndani lajmin në kanalet e mediave sociale dhe të konsideroni organizimin e një eventi tjetër Ora e Kodimit në komunitetin tuaj.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Ky është një rast për të ndryshuar të ardhmen e edukimit në [VENDI/QYTETI EMRI].
 
-See http://hourofcode.com/<%= @country %> for details, and help spread the word.
+Shihni http://hourofcode.com/<%= @country %> për detaje, ndihmo në përhapjen e fjalës.
 
-Sincerely,
+Sinqerisht,
 
-Your principal
+Drejtori juaj
 
 <a id="politicians"></a>
 
 ## Ftoni një politikan në eventin e shkollës suaj:
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+I dashur [Kryetar komune/Guvernator/Përfaqësues/Senator MBIEMRI]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+A e dini se informatika është #1 burimi i të ardhurave në Sh.B.A.? Janë më shumë se 500,000 punë në informatikë në të gjithv vendin, por vitin e fundit vetëm 42,969 studentë u diplomuan në shkenca kompjuterike.
 
-Computer science is foundational for *every* industry today. Yet 75% of schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Shkenca Kompjuterike është themelore për *çdo *industri sot. Megjithatë në shumicën e shkollave nuk mësohet. Në [EMRI I SHKOLLËS], ne po pvrpiqemi ta ndryshojmë atë.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+Kjo është arsyeja se pse e gjithë shkolla jonë po i bashkohet nismës së mësimit më të madhe në histori: Ora e Kodimit, gjatë Javës së Mësimit të Shkencave Kompjuterike (<%= campaign_date('full') %>). Më shumë se 100 milion student në të gjithë botën kanë provuar Orën e Kodimit.
 
-I'm writing to invite you to take part in our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Po ju drejtohem me ftesën për të marrë pjesë ne eventin tonë Ora e Kodimit dhe të i drejtoheni me një fjalim këtij takimi të parë. Kjo do të mbahet më [DATA, KOHA, VENDI] dhe do të përcjellë mesazh të fuqishëm se [emri i Shtetit apo Qytetit] është gati t'ju mësojë nxënësve tanë shkathtësitë kritike të shekullit 21. Dëshirojmë të ju sigurojmë që nxënësit tanë janë në frontin e parë për zhvillimin teknologjik të së ardhmes e jo vetëm e konsumojnë atë.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Ju lutem të kontaktoni në [NUMRI I TELEFONIT APO ADRESA E EMAILIT]. Në pritje të përgjigjes tuaj.
 
-Sincerely, [NAME], [TITLE]
+Sinqërisht, [NAME], [TITLE]
+
+<%= view :signup_button %>

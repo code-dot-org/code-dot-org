@@ -4,7 +4,9 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your entire community.
+<%= view :signup_button %>
+
+# "Кодтау Сағатын" өзіңіздің қоғам-қауымыңызға қалай таратуға болады?
 
 [col-33]
 
@@ -16,7 +18,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
   &nbsp;
 </p>
 
-## Get every school participating, every student learning!
+## Барлық мектептер белсенділік танытсын, барлық оқушылар үйренсін!
 
   1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
 
@@ -40,3 +42,5 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
   8. **Issue a press release.** [Use this sample](%= resolve_url('/promote/official-press-release') %) as a guide.
 
   9. **Connect locally.** Visit [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/promote') %) to learn more about computer science education in your state. Sign the petition there and you’ll get updates from Code.org on their local, state and federal advocacy efforts.
+
+<%= view :signup_button %>

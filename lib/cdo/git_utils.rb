@@ -36,16 +36,8 @@ module GitUtils
     staged_changes.concat(unstaged_changes).uniq
   end
 
-  def self.circle_commit_contains?(string)
-    circle_commit_message.include?(string)
-  end
-
   def self.current_branch
     `git rev-parse --abbrev-ref HEAD`.strip
-  end
-
-  def self.circle_commit_message
-    `git log --format=%B -n 1 $CIRCLE_SHA1`.strip
   end
 
   def self.get_latest_commit_merged_branch

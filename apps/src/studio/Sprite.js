@@ -3,11 +3,9 @@ import Item from './Item';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
 import { valueOr } from '../utils';
-import studioMsg from './locale';
 
 const Direction = constants.Direction;
 const Emotions = constants.Emotions;
-const NextTurn = constants.NextTurn;
 
 /**
  * A Sprite is a type of Item.

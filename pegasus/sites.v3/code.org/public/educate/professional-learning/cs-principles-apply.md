@@ -1,28 +1,26 @@
 ---
-title: Find CS Principles near you
+title: CS Principles Professional Learning Program Application
 nav: plc_csp_nav
 ---
-# Find the Computer Science Principles program near you
-We welcome teachers to sign up for the Computer Science Principles (CS Principles) professional learning program, an intensive program for high school educators who are interested in teaching the CS Principles course. This program is designed to prepare educators to provide high quality instruction, based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms.
+
+# Let’s get started!
+
+<img src="/images/code-group.jpg" width="100%"/>
+
+We’re excited you’re interested in joining the 2017-18 Professional Learning Program for CS Principles! 
+
+**Step 1:** Review the overview of <a href="/educate/csp" target=_blank>CS Principles and the Code.org Professional Learning Program</a> to make sure the course and the program are the right fit for you and your school. 
+
+**Step 2:** Check with your principal to make sure you will be teaching this course during the 2017-18 school year.
+
+**Step 3:** Set aside approximately 15 minutes to complete the application.
+
+Note: To apply, you'll need to login or create a Code Studio account if you don't already have one. You'll be prompted to do this once you click "Start your application!" If you need any help, please check <a href="/educate/professional-learning/cs-principles-faqs.pdf" target=_blank>these FAQ's</a>, or email us at teacher@code.org.
+
+[<button>Start your application!</button>](https://studio.code.org/pd/teacher_application)
 
 
-## Where is CS Principles offered?
-
-The CS Principles professional learning program is open to teachers in partner districts who are interested in teaching the course. Search for your district below and click on the pin to find out how to apply! If you live in Alabama, Georgia, Idaho, Indiana, Utah, or Virginia, your district is covered by a statewide partnership. Click on the icon in your state to apply.
 
 
-<br/> 
-<br/>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=z3jxShb6X1IM.klJV05y9xdi4" width="640" height="480"></iframe>
 
-## Teach in a partner district?
 
-We're so excited that you're interested in applying for our Professional Learning Program! We are at capacity for the 16-17 school year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
-
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)
-
-## Don't teach in a partner district?
-
-We will open the CSP Professional Learning Program to teachers from non-partner districts if there is space available.  We are at capacity for the 16-17 school year, but [fill out our interest form](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform) to find out when next year's application is live.
-
-[<button>Sign up to learn more</button>](https://docs.google.com/forms/d/e/1FAIpQLSfVCyUp-CCLC1DA3bF1u1bpg3eqjWTD3IPQTBSzc9EV5hplCA/viewform)

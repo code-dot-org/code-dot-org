@@ -47,7 +47,7 @@ Fundador, Code.org
 
 <hr/>
 <small>
-Estás recibiendo este correo electrónico porque usted se registro para la Hora de Código, apoyado por más de 200 socios y organizado por Code.org. Code.org es una 501c3 sin fines de lucro. Nuestra dirección es 1301 5th Ave, Suite 1225, Seattle, WA, 98101. ¿No quieres estos correos? [Darse de baja](<%= unsubscribe_link %>).
+Estás recibiendo este correo electrónico porque usted se registro para la Hora de Código, apoyado por más de 200 socios y organizado por Code.org. Code.org es una 501c3 sin fines de lucro. Nuestra dirección es 1501 4th Avenue, Suite 900, Seattle, WA 98101. ¿No quieres estos correos? [Darse de baja](<%= unsubscribe_link %>).
 </small>
 
 <% elsif inPortuguese %>
@@ -80,7 +80,7 @@ Fundador da Code.org
 
 <hr/>
 <small>
-Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Não quer receber esses e-mails? [Cancele sua assinatura](<%= unsubscribe_link %>).
+Você está recebendo este e-mail porque você se cadastrou na Hora do Código, apoiada por mais de 200 parceiros e organizada pela Code.org. A Code.org é uma organização sem fins lucrativos. Nosso endereço é: 1501 4th Avenue, Suite 900, Seattle, WA 98101. Não quer receber esses e-mails? [Cancele sua assinatura](<%= unsubscribe_link %>).
 </small>
 
 <% else %>
@@ -113,7 +113,7 @@ Founder, Code.org
 
 <hr/>
 <small>
-You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101. Don't want these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101. Don't want these emails? [Unsubscribe](<%= unsubscribe_link %>).
 </small>
 
 <% end %>

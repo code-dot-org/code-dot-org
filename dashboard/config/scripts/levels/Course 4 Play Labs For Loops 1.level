@@ -38,7 +38,9 @@
     "markdown_instructions": "Let's make the dog speak every number from 1 to 100. Use a `for` loop and the counter block to speak the counter variable each time the loop is run.",
     "never_autoplay_video": "false",
     "wall_map_collisions": "false",
-    "block_moving_into_walls": "false"
+    "block_moving_into_walls": "false",
+    "instructions_important": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

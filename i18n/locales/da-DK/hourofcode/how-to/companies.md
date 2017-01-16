@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # How to bring the Hour of Code to your company
 
 ## Inspire students and volunteer for the Hour of Code
@@ -17,7 +19,7 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 
   * Brug vores [markedsføringsværktøjskasse](%= localized_file('/files/HourOfCodeInternalMarketingToolkit.pdf') %) til at lave en kommunikationstidsplan og dele reklameindhold.
   * Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word. [Se denne email](%= resolve_url('/promote/resources#sample-emails') %).
-  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('https://code.org/learn') %).
+  * Host an Hour of Code Happy Hour with coworkers to try the [tutorials](%= resolve_url('/learn') %).
   * Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 ## Sådan er du vært for et Hour of Code-arrangement
@@ -30,14 +32,14 @@ title: <%= hoc_s(:title_how_to_companies) %> layout: wide nav: how_to_nav
 ## 2) Se denne øvelses video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 ## 3) vælge en øvelse:
 
-Vi holder en bred vifte af [sjove, timelange øvelser](%= resolve_url('https://code.org/learn') %) for elever i alle aldre, som er lavet af en lang række forskellige partnere. [Try them out!](%= resolve_url("https://code.org/learn") %)
+We’ll host a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
 **Alle Hour of Code øvelser:**
 
   * Kræver minimal forberedelsestid
   * Er selvstyrende - lader deltagere arbejde i deres eget tempo og på et passende færdighedsniveau
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('https://code.org/learn') %)
+[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
 
 ## 4) Planlæg hvad du har brug for af udstyr - computere er valgfri
 
@@ -75,7 +77,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Led deltagere til aktiviteten**
 
-  * Skriv øvelseslinket på et whiteboard. Find linket listet på [information omkring din valgte øvelse](%= resolve_url('https://code.org/learn') %) under antallet af deltagere.
+  * Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
   * For younger students, load the tutorial page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -86,7 +88,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 **Hvad gør jeg hvis nogen bliver hurtigt færdige?**
 
-  * They can try another Hour of Code activity at code.org/learn
+  * They can try another Hour of Code activity at hourofcode.com/learn
   * Or, ask them to help a friend who are having trouble with the activity.
 
 [col-33]
@@ -136,4 +138,6 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 
 ## Hvad er næste skridt efter Hour of Code?
 
-Hour of Code er blot det første skridt på en lang rejse for at lære mere om, hvordan teknologi fungerer, og hvordan du kan lave dine egne programmer. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey, [encourage your participants to learn online](%= resolve_url('https://code.org/learn/beyond') %).
+
+<%= view :signup_button %>

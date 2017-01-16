@@ -4,7 +4,9 @@ title: <%= hoc_s(:title_how_to_districts) %> layout: wide nav: how_to_nav
 
 * * *
 
-# How to bring the Hour of Code to your entire school district
+<%= view :signup_button %>
+
+# 如何把「一小時的程式設計課程」介紹給你的學區
 
 ## 讓每個學校參予，每個學生學習！
 
@@ -24,3 +26,5 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 
   * Encourage students to continue to [learn online](%= resolve_url('https://code.org/learn/beyond') %).
   * [Attend](%= resolve_url('https://code.org/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+
+<%= view :signup_button %>

@@ -1,0 +1,211 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'net/http'
+require 'net/http/responses'
+require_relative('../../dashboard/config/environment')
+require 'cdo/properties'
+
+# Global variable for Pardot API key. This can become invalid and need to be refreshed
+# and replaced midstream.
+$pardot_api_key = nil
+
+# Exception to throw to ourselves if Pardot API key is invalid (which probably means it needs to be
+# re-authed)
+class InvalidApiKeyException < Exception
+end
+
+# URL for Pardot login
+PARDOT_AUTHENTICATION_URL = "https://pi.pardot.com/api/login/version/3"
+# URL for prospect batch creation
+PARDOT_BATCH_CREATE_URL = "https://pi.pardot.com/api/prospect/version/4/do/batchCreate"
+# URL for prospect single creation
+PARDOT_CREATE_PROSPECT_URL = "https://pi.pardot.com/api/prospect/version/4/do/create/email"
+
+# Max # of prospects allowed in one batch
+MAX_PROSPECT_BATCH_SIZE = 25
+# Empirically determined safe max URL length for batch operations
+URL_LENGTH_SEND_THRESHOLD = 6200
+
+# Map of database fields to Pardot field names
+MYSQL_TO_PARDOT_MAP = {
+    email: { field: 'email', multi: false },
+    name: { field: 'first_name', multi: false },
+    street_address: { field: 'address_one', multi: false },
+    city: { field: 'city', multi: false },
+    state: { field: 'state', multi: false },
+    postal_code: { field: 'zip', multi: false },
+    country: { field: 'country', multi: false },
+    district_name: { field: 'District', multi: false },
+    district_city: { field: 'District_City', multi: false },
+    district_state: { field: 'District_State', multi: false },
+    school_name: { field: 'School', multi: false },
+    roles: { field: 'Roles', multi: true },
+    courses_facilitated: { field: 'Facilitator_Type', multi: true },
+    professional_learning_enrolled: { field: 'Professional_Learning_Enrolled', multi: true },
+    professional_learning_attended: { field: 'Professional_Learning_Attended', multi: true },
+    hoc_organizer_years: { field: 'Hour_of_Code_Organizer', multi: true },
+    grades_taught: { field: 'Grades_Taught', multi: true },
+    ages_taught: { field: 'Ages_Taught', multi: true }
+}.freeze
+
+def log(s)
+  puts s           # emit to stdout
+  CDO.log.info s   # emit to log file
+end
+
+# Log into Pardot and request an API key. The API key is valid for (up to) one hour, after which
+# it will become invalid and we will need to request a new one.
+def request_pardot_api_key
+  uri = URI.parse(PARDOT_AUTHENTICATION_URL)
+
+  log "Requesting new API key"
+  response = Net::HTTP.post_form(uri,
+                      {email: CDO.pardot_username,
+                      password: CDO.pardot_password,
+                      user_key: CDO.pardot_user_key})
+
+  raise "Pardot authentication request failed with HTTP " + response.code if response.code != "200"
+
+  xml = Nokogiri::XML(response.body, &:noblanks)
+
+  raise "Pardot authentication request did not return parsable XML" if xml.nil?
+
+  status = xml.xpath('/rsp/@stat').text
+  raise "Pardot authentication response did not include status" if status.nil?
+  raise "Pardot authentication response failed with status " + status + " " + xml.to_s if status != "ok"
+
+  api_key = xml.xpath('/rsp/api_key').text
+  raise "Pardot authentication response did not include api_key" if api_key.nil?
+
+  $pardot_api_key = api_key
+end
+
+# create a single prospect
+def create_prospect(prospect)
+  url = "#{PARDOT_CREATE_PROSPECT_URL}/#{prospect[:email]}"
+
+  post_with_auth_retry(url)
+end
+
+# Create a batch of prospects
+def submit_create_batch(prospects)
+  # Build the URL containing prospect data. (Prospect data is sent as a JSON blob in a
+  # query parameter)
+  url = build_create_batch_prospects_url(prospects)
+
+  # Post the data
+  post_with_auth_retry(url)
+
+  # build array of the emails we just created in Pardot
+  prospect_emails = prospects.collect{ |x| x["email"] }.to_a
+  # store them in our DB as created in Pardot so we don't double-create them.
+  PEGASUS_DB[:contact_rollups].where("email in ?", prospect_emails).update("pardot_sync_at=NOW()")
+end
+
+# Build the URL to batch create prospects in Pardot. The prospect data is a JSON blob in the
+# query param.
+def build_create_batch_prospects_url(prospects)
+  prospects_payload_json_encoded = URI.encode({ prospects: prospects }.to_json)
+  # We also need to encode plus signs in email addresses, otherwise Pardot rejects them as invalid.
+  # URI.encode does not encode plus signs, as they are valid characters in the base of a URL.
+  # (Although they are NOT valid in the query string, which is where this data is going.)
+  prospects_payload_json_encoded = prospects_payload_json_encoded.gsub("+", "%2B")
+
+  "#{PARDOT_BATCH_CREATE_URL}?prospects=#{prospects_payload_json_encoded}"
+end
+
+def post_with_auth_retry(url)
+  # do the post to Pardot
+  post_request(url)
+rescue InvalidApiKeyException
+  # If we fail with an invalid key, that probably means our API key has expired. Try one time
+  # to request a new API key and try the post again. If that fails, that is a fatal error.
+  request_pardot_api_key
+  post_request(url)
+end
+
+# Make an API request
+def post_request(url)
+  request_pardot_api_key if $pardot_api_key.nil?
+  # add the API key and user key parameters to the URL
+  auth_url = append_auth_params_to_url(url)
+  uri = URI(auth_url)
+  response = Net::HTTP.post_form(uri, {})
+
+  log "Response: " + response.to_s
+
+  xml = Nokogiri::XML(response.body, &:noblanks)
+  raise "Pardot create user response did not return parsable XML" if xml.nil?
+
+  error_details = xml.xpath('/rsp/err').text
+  raise InvalidApiKeyException if error_details.include? "Invalid API key or user key"
+
+  status = xml.xpath('/rsp/@stat').text
+  raise "Pardot create user response did not include status" if status.nil?
+
+  raise "Pardot create user response failed with status " + status + " " + xml.to_s if status != "ok"
+end
+
+def append_auth_params_to_url(url)
+  "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
+end
+
+def main
+  return unless only_one_running?(__FILE__)
+  prospects = []
+
+  # query the contact rolliups
+  PEGASUS_DB[:contact_rollups].where("roles like '%Teacher%' AND pardot_sync_at IS NULL").each do |contact_rollup|
+    # Pardot explicitly considers invalid any email addresses that end with a period in the base
+    # (before the @). We have at least one of these, which appears to be a typo.
+    next if contact_rollup[:email].include? ".@"
+
+    # Map database field names and data to Pardot fields
+    prospect = {}
+    MYSQL_TO_PARDOT_MAP.each do |mysql_key, pardot_info|
+      db_value = contact_rollup[mysql_key]
+      if db_value.present?
+        if pardot_info[:multi]
+          # For multi data fields (multiselect,etc.), we set value names as [fieldname]_0, [fieldname]_1, etc
+          values = db_value.split(",")
+          values.each do |value, index|
+            prospect["#{pardot_info[:field]}_#{index}"] = value
+          end
+        else
+          # for single data fields, just set [fieldname] = value
+          prospect[pardot_info[:field]] = db_value
+        end
+      end
+    end
+    # special case: if contact has opted out, set the two different Pardot flavors of opted out
+    # to true. Also, only ever set this to true, otherwise set no value; never set it back
+    # to false. Pardot is the authority on opt-out data, so never reset any opt-out setting it has stored.
+    if contact_rollup[:opted_out]
+      prospect[:opted_out] = true
+      prospect[:is_do_not_email] = true
+    end
+
+    # set a custom field to mark in Pardot that this contact was imported from Code Studio
+    prospect[:Imported_from_Code_Studio] = "true"
+    # add this prosect to the batch
+    prospects << prospect
+
+    # As a sniff test, build the URL that would result from our current prospect list
+    # so we can see how long it is
+    url = build_create_batch_prospects_url(prospects)
+
+    # If the URL is longer than an empirically determined maximum safe length, or if
+    # we have hit our max # of prospects allowed by Pardot in one batch API call, go ahead
+    # and submit the batch
+    if url.length > URL_LENGTH_SEND_THRESHOLD || prospects.size == MAX_PROSPECT_BATCH_SIZE
+      submit_create_batch prospects
+      prospects = []
+    end
+  end
+
+  # submit any batch remainder
+  submit_create_batch prospects unless prospects.empty?
+end
+
+main

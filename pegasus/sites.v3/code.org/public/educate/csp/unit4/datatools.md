@@ -3,9 +3,9 @@ title: CSP Data Tools
 video_player: true
 ---
 
-# CSP - Data Tools
+# CS Principles - Data Tools
 
-Unit 4 of the CSP curriculum incorporates data tools to teach students about data collection and visuzalization. The following table provides resources which provide additional support for different tools.
+Unit 4 of the CS Principles curriculum incorporates data tools to teach students about data collection and visuzalization. The following table provides resources which provide additional support for different tools.
 
 * For general help on **Microsoft Excel**, visit <a href="https://support.office.com/en-us/excel" target="_blank">this support page</a>.
 * For general help on **Google Sheets**, visit <a href="https://support.google.com/docs/?hl=en#topic=2811806" target="_blank">this support page</a>.

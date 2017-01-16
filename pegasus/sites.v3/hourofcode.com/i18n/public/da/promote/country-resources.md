@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Recursos
@@ -58,21 +60,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
-
 <% elsif @country == 'pk' %>
 
 اگر آپ کا تعلق پاکستان کےایسے کیمبرج اسکول سے ہے، جہاں دسمبر کے مہینے میں امتحانات لئے جاتے ہیں، تو آپ اپنے اسکول میں آور آف کوڈ کا انقعاد نومبر ٢٣ تا ٢٩ کے دوران بھی کر سکتے ہیں۔ آپ کا شمار دنیا کی سب سے بڑی تعلیمی تقریب میں حصّہ لینے والوں میں ہی کیا جائے گا۔
@@ -115,13 +102,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Inspirere eleverne - vis dem først en video
 
-Vis eleverne en inspirerende video i begyndelsen af Hour of Code timen. For eksempel:
+Show students an inspirational video to kick off the Hour of Code. Examples:
 
   * Den oprindelige Code.org indlednings video med Bill Gates, Mark Zuckerberg og NBA stjernen Chris Bosh (der er [1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutters](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 minutters](https://www.youtube.com/watch?v=dU1xS07N-FA) versioner)
   * The [Hour of Code 2013 launch video](https://www.youtube.com/watch?v=FC5FbmsH4fw), or the [Hour of Code 2014 video](https://www.youtube.com/watch?v=96B5-JGA9EQ)
   * [Præsident Obama opfordrer alle elever til at lære at programmere](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Opmuntre dine elever - giv dem en kort introduktion**
+**Get your students excited - give them a short intro**
 
 <% else %>
 

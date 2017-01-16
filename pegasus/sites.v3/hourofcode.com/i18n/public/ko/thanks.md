@@ -1,23 +1,23 @@
 ---
-  title: <%= hoc_s(:title_signup_thanks) %>
-  layout: wide
-  nav: how_to_nav
+title: <%= hoc_s(:title_signup_thanks) %>
+layout: wide
+nav: how_to_nav
 
-  social:
-    "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-    "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-    "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-    "og:image:width": 1440
-    "og:image:height": 900
-    "og:url": "http://<%=request.host%>"
+social:
+  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
+  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
+  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:image:width": 1440
+  "og:image:height": 900
+  "og:url": "http://<%=request.host%>"
 
-    "twitter:card": player
-    "twitter:site": "@codeorg"
-    "twitter:url": "http://<%=request.host%>"
-    "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-    "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-    "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  ---
+  "twitter:card": player
+  "twitter:site": "@codeorg"
+  "twitter:url": "http://<%=request.host%>"
+  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
+  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
+  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+---
 
 <%
     facebook = {:u=>"http://#{request.host}/us"}
@@ -28,7 +28,7 @@
 
 # Hour of Code! 행사를 운영하는데 가입해 주셔서 감사합니다.
 
-여러분들은 전세계의 학생들에게 Hour of Code를 배워보도록 함으로서 *학생들의 인생을 바꿀 수도 있는 것입니다*, 다음 기간 동안에 <%= campaign_date('full') %>. We'll be in touch about new tutorials and other exciting updates. 지금 여러분들에게 필요한 것은?
+여러분들은 전세계의 학생들에게 Hour of Code를 배워보도록 함으로서 *학생들의 인생을 바꿀 수도 있는 것입니다*, 다음 기간 동안에 <%= campaign_date('full') %>. 우리는 계속해서 새로운 튜토리얼 들과 다른 흥미로운 것을 업데이트할 것입니다. 지금 여러분들에게 필요한 것은?
 
 ## 1. 널리 알려주세요.
 
@@ -59,5 +59,9 @@
 ## 7. Hour of Code 를 계획하세요.
 
 Hour of Code 활동을 선택한 후, 이 [how-to 가이드를](<%= resolve_url('/how-to') %>) 살펴보세요..
+
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](<%= resolve_url('https://code.org/teach')%>) including professional learning opportunities for elementary, middle and high school teachers.
 
 <%= view 'popup_window.js' %>

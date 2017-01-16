@@ -1,39 +1,33 @@
-%table
-  %tr
-    %td(style='vertical-align: top;')
-      = form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
-        - if @script && @script.errors.any?
-          #error_explanation
-            %h2
-              = pluralize(@script.errors.count, 'error')
-              prohibited this script from being saved:
-            %ul
-              - @script.errors.full_messages.each do |msg|
-                %li= msg
-        .field
-          = f.label :name
-          = f.text_field :name
-        .script_text
-          - rows = @script_file ? @script_file.lines.count + 10 : 5
-          = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
-        .actions
-          = f.submit
-    %td
-      %h4 Levels by name:
+= form_for(@script || :script, @script ? {} : {url: scripts_path}) do |f|
+  - if @script && @script.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@script.errors.count, 'error')
+        prohibited this script from being saved:
       %ul
-        - Naturally.sort_by(Level.where.not(user_id: nil), :name).each do |level|
-          %li.level_name
-            = "'#{level.name}'"
-            = link_to edit_level_path(level) do
-              %i.fa.fa-pencil-square-o
-    %td
-      %h4 Most recently updated levels:
-      %ul
-        - Level.where.not(user_id: nil).order('updated_at desc').each do |level|
-          %li.level_name
-            = "'#{level.name}'"
-            = link_to edit_level_path(level) do
-              %i.fa.fa-pencil-square-o
+        - @script.errors.full_messages.each do |msg|
+          %li= msg
+  - if @script.nil? || @script.new_record?
+    .field
+      = f.label :name
+      = f.text_field :name
+  - else
+    = f.hidden_field :name
+  .edit_container
+  - scriptData = {script: @script ? @script.summarize : {},
+                  i18n: @script ? @script.summarize_i18n : {},
+                  beta: params[:beta].present?,
+                  levelKeyList: Level.key_list}
+  %script{src: minifiable_asset_path('js/levelbuilder_edit_script.js'),
+          data: {levelBuilderEditScript: scriptData.to_json}}
+
+  - if !params[:beta].present?
+    = link_to 'Try the beta Script Editor (will reload the page without saving)', beta: true
+    .script_text
+      - rows = @script_file ? @script_file.lines.count + 10 : 5
+      = text_area_tag('script_text', @script_file || "stage 'new stage'\n", rows: rows, style: 'width: 700px;')
+
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes
 
 - if @show_all_instructions
   - @script.stages.each do |stage|

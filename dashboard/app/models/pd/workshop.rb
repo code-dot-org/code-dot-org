@@ -45,6 +45,17 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN = 'Admin'
   ]
 
+  COURSE_NAMES_MAP = {
+    COURSE_CSF => 'CS Fundamentals',
+    COURSE_CSP => 'CS Principles',
+    COURSE_ECS => 'Exploring Computer Science',
+    COURSE_CS_IN_A => 'CS in Algebra',
+    COURSE_CS_IN_S => 'CS in Science',
+    COURSE_CSD => 'CS Discoveries',
+    COURSE_COUNSELOR => 'Counselor',
+    COURSE_ADMIN => 'Administrator'
+  }
+
   STATES = [
     STATE_NOT_STARTED = 'Not Started',
     STATE_IN_PROGRESS = 'In Progress',
@@ -70,6 +81,7 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
     ],
     COURSE_CSP => [
+      SUBJECT_CSP_SUMMER_WORKSHOP = 'Summer Workshop',
       SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1',
       SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2',
       SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3',
@@ -89,6 +101,30 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_ADMIN => 'admin_workshop'
   }.freeze
   SECTION_TYPES = SECTION_TYPE_MAP.values.freeze
+
+  # Time constrains for payment, per subject.
+  # Each subject has the following constraints:
+  # min_days: the minimum # of days a teacher must attend in order to be counted at all.
+  # max_days: the maximum # of days the workshop can be recognized for.
+  # max_hours: the maximum # of hours the workshop can be recognized for.
+  TIME_CONSTRAINTS_BY_SUBJECT = {
+    SUBJECT_ECS_PHASE_2 => {min_days: 3, max_days: 5, max_hours: 30},
+    SUBJECT_ECS_UNIT_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_5 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_UNIT_6 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_A_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_2 => {min_days: 2, max_days: 3, max_hours: 18},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
+    SUBJECT_CSP_SUMMER_WORKSHOP => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
+  }
 
   validates_inclusion_of :workshop_type, in: TYPES
   validates_inclusion_of :course, in: COURSES
@@ -124,7 +160,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def section_type
-    SECTION_TYPE_MAP[self.course]
+    SECTION_TYPE_MAP[course]
   end
 
   def self.organized_by(organizer)
@@ -160,57 +196,24 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
-  def friendly_name
-    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
-    course_subject = subject ? "#{course} #{subject}" : course
-
-    # Limit the friendly name to 255 chars so it can be used as Section.name (which is itself limited) in #start!
-    "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
-  end
-
-  # Puts workshop in 'In Progress' state, creates a section and returns the section.
-  def start!
-    return unless self.started_at.nil?
-    raise 'Workshop must have at least one session to start.' if self.sessions.empty?
-
-    self.started_at = Time.zone.now
-    self.section = Section.create!(
-      name: friendly_name,
-      user_id: self.organizer_id,
-      section_type: self.section_type
-    )
-    self.save!
-    self.section
-  end
-
-  def end!
-    return unless self.ended_at.nil?
-    self.ended_at = Time.zone.now
-    self.save!
-  end
-
-  def state
-    case
-      when self.started_at.nil?
-        STATE_NOT_STARTED
-      when self.ended_at.nil?
-        STATE_IN_PROGRESS
-      else
-        STATE_ENDED
-    end
-  end
-
-  def year
-    return nil if sessions.empty?
-    sessions.order(:start).first.start.strftime('%Y')
-  end
-
+  # Filters by scheduled start date (date of first session)
   def self.start_on_or_before(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) <= ?)', date)
   end
 
+  # Filters by scheduled start date (date of first session)
   def self.start_on_or_after(date)
     joins(:sessions).group(:pd_workshop_id).having('(DATE(MIN(start)) >= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_before(date)
+    where('(DATE(ended_at) <= ?)', date)
+  end
+
+  # Filters by date the workshop actually ended, regardless of scheduled session times.
+  def self.end_on_or_after(date)
+    where('(DATE(ended_at) >= ?)', date)
   end
 
   def self.start_in_days(days)
@@ -221,12 +224,80 @@ class Pd::Workshop < ActiveRecord::Base
     Pd::Workshop.joins(:sessions).group(:pd_workshop_id).having("(DATE(MAX(end)) = ?)", Date.today + days.days)
   end
 
+  def course_name
+    COURSE_NAMES_MAP[course]
+  end
+
+  def friendly_name
+    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
+    course_subject = subject ? "#{course} #{subject}" : course
+
+    # Limit the friendly name to 255 chars so it can be used as Section.name (which is itself limited) in #start!
+    "#{course_subject} workshop on #{start_time} at #{location_name}"[0...255]
+  end
+
+  # Puts workshop in 'In Progress' state, creates a section and returns the section.
+  # If the workshop has already been started, it will return the existing section.
+  def start!
+    return section unless started_at.nil?
+    raise 'Workshop must have at least one session to start.' if sessions.empty?
+
+    self.started_at = Time.zone.now
+    self.section = Section.create!(
+      name: friendly_name,
+      user_id: organizer_id,
+      section_type: section_type
+    )
+    save!
+    section
+  end
+
+  # Ends the workshop, or no-op if it's already ended.
+  # The return value is undefined.
+  def end!
+    return unless ended_at.nil?
+    self.ended_at = Time.zone.now
+    save!
+  end
+
+  def state
+    return STATE_NOT_STARTED if started_at.nil?
+    return STATE_IN_PROGRESS if ended_at.nil?
+    STATE_ENDED
+  end
+
+  def year
+    return nil if sessions.empty?
+    sessions.order(:start).first.start.strftime('%Y')
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
     start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+        begin
+          email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment)
+          email.deliver_now
+        rescue => e
+          errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+        end
+      end
+      workshop.facilitators.each do |facilitator|
+        begin
+          Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
+        rescue => e
+          errors << "facilitator #{facilitator.id} - #{e.message}"
+        end
+      end
+      begin
+        Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
+      rescue => e
+        errors << "organizer workshop #{workshop.id} - #{e.message}"
       end
     end
+
+    raise "Failed to send #{days} day workshop reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_automated_emails
@@ -243,21 +314,26 @@ class Pd::Workshop < ActiveRecord::Base
     workshop.update!(processed_at: Time.zone.now)
   end
 
-  def send_exit_surveys
-    # Update enrollments with resolved users.
-    self.enrollments.each do |enrollment|
-      # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-      enrollment.update!(user: enrollment.resolve_user, skip_school_validation: true) unless enrollment.user
+  # Updates enrollments with resolved users.
+  def resolve_enrolled_users
+    enrollments.each do |enrollment|
+      enrollment.update!(user: enrollment.resolve_user) unless enrollment.user
     end
+  end
+
+  def send_exit_surveys
+    resolve_enrolled_users
 
     # Send the emails
-    self.enrollments.reload.each do |enrollment|
-      next unless enrollment.user
+    enrollments.each do |enrollment|
+      if account_required_for_attendance?
+        next unless enrollment.user
 
-      # Make sure user joined the section
-      next unless section.students.exists?(enrollment.user.id)
+        # Make sure user joined the section
+        next unless section.students.exists?(enrollment.user.id)
+      end
 
-      Pd::WorkshopMailer.exit_survey(self, enrollment.user, enrollment).deliver_now
+      enrollment.send_exit_survey
     end
   end
 
@@ -270,5 +346,41 @@ class Pd::Workshop < ActiveRecord::Base
       longitude: result.longitude,
       formatted_address: result.formatted_address
     }.to_json
+  end
+
+  # Min number of days a teacher must attend for it to count.
+  # @return [Integer]
+  def min_attendance_days
+    constraints = TIME_CONSTRAINTS_BY_SUBJECT[subject]
+    if constraints
+      constraints[:min_days]
+    else
+      1
+    end
+  end
+
+  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
+  # @return [Integer] number of payment days, after applying constraints
+  def effective_num_days
+    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_days]}
+    [sessions.count, max_days].compact.min
+  end
+
+  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of payment hours, after applying constraints
+  def effective_num_hours
+    actual_hours = sessions.map(&:hours).reduce(&:+)
+    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try{|constraints| constraints[:max_hours]}
+    [actual_hours, max_hours].compact.min
+  end
+
+  # @return [ProfessionalLearningPartner] plp associated with the workshop organizer, if any.
+  def professional_learning_partner
+    ProfessionalLearningPartner.find_by_contact_id organizer.id
+  end
+
+  # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
+  def account_required_for_attendance?
+    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
   end
 end

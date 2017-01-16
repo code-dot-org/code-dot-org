@@ -59,7 +59,8 @@
     "markdown_instructions": "# Play Sound With Keys\r\n\r\nYou may have noticed from the last couple of levels that the value of `event.key` is just a string which is the name of the key. As a result we can check which key was pressed with a simple conditional statement.  For example to check for the press of the **\"a\"** key we could write `if (event.key == \"a\")`.\r\n\r\n# Do This:\r\nThe **starter code provided** plays the sound whenever ANY key is pressed.\r\n\r\n* Use `console.log` to **find out the value of `event.key` when the up arrow is pressed.**\r\n\r\n* **Add an `if` statement** so the sound only plays when the when the **up arrow** is pressed.",
     "instructions": "Change the code so the sound will only play when the up arrow is pressed. (Click to see full instructions)",
     "encrypted_examples": "jCj8yap7qFx+bpyASKmF2HPzbsAE9MR5b9W0c8uPrlEFpvwNo2tIFqsbua4W\nzg7x\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1,3 +1,5 @@
+require 'digest/md5'
+
 # The controller for seaching for and surfacing of internal admin data.
 class AdminSearchController < ApplicationController
   before_action :authenticate_user!
@@ -15,7 +17,8 @@ class AdminSearchController < ApplicationController
         users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
       end
       if params[:studentEmailFilter].present?
-        users = users.where("email LIKE ?", "%#{params[:studentEmailFilter]}%")
+        hashed_email = Digest::MD5.hexdigest(params[:studentEmailFilter])
+        users = users.where(hashed_email: hashed_email)
       end
       if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
         teachers = User.
@@ -51,52 +54,14 @@ class AdminSearchController < ApplicationController
     end
   end
 
-  def search_for_teachers
-    SeamlessDatabasePool.use_persistent_read_connection do
-      teachers = User.where(user_type: 'teacher')
-
-      # If requested, filter...
-      if params[:emailFilter].present?
-        teachers = teachers.where("email LIKE ?", "%#{params[:emailFilter]}%")
-      end
-      if params[:addressFilter].present?
-        teachers = teachers.
-          where("full_address LIKE ?", "%#{params[:addressFilter]}%")
-      end
-      # TODO(asher): Improve PD filtering.
-      if params[:pd] == "pd"
-        teachers = teachers.
-          joins("INNER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          distinct
-      elsif params[:pd] == "nopd"
-        teachers = teachers.
-          joins("LEFT OUTER JOIN workshop_attendance ON users.id = workshop_attendance.teacher_id").
-          where("workshop_attendance.teacher_id IS NULL").
-          distinct
-      end
-      if params[:unsubscribe].present?
-        teachers = teachers.
-          joins("LEFT OUTER JOIN #{CDO.pegasus_db_name}.contacts ON users.email = #{CDO.pegasus_db_name}.contacts.email COLLATE utf8_unicode_ci").
-          where("#{CDO.pegasus_db_name}.contacts.email IS NULL OR #{CDO.pegasus_db_name}.contacts.unsubscribed_at IS NULL").
-          distinct
-      end
-
-      # TODO(asher): Determine whether we should be doing an inner join or a left
-      # outer join.
-      teachers = teachers.joins(:followers).group('followers.user_id')
-
-      # Prune the set of fields to those that will be displayed.
-      @headers = ['ID', 'Name', 'Email', 'Address', 'Num Students']
-      @teachers = teachers.page(params[:page]).per(MAX_PAGE_SIZE).
-        select(:id, :name, :email, :full_address, 'COUNT(followers.id) AS num_students')
-
-      # Remove newlines from the full_address field, replacing them with spaces.
-      @teachers.each do |teacher|
-        if teacher[3].present?
-          teacher[3].tr!("\r", ' ')
-          teacher[3].tr!("\n", ' ')
-        end
-      end
+  def undelete_section
+    section = Section.find_by_code params[:section_code]
+    if section && section.deleted_at
+      section.update!(deleted_at: nil)
+      flash[:alert] = "Section (CODE: #{params[:section_code]}) undeleted!"
+    else
+      flash[:alert] = "Section (CODE: #{params[:section_code]}) not found or undeleted."
     end
+    redirect_to :lookup_section
   end
 end

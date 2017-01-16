@@ -1,15 +1,14 @@
 import $ from 'jquery';
-var React = require('react');
-var PropertyRow = require('./PropertyRow');
-var BooleanPropertyRow = require('./BooleanPropertyRow');
-var ColorPickerPropertyRow = require('./ColorPickerPropertyRow');
-var ZOrderRow = require('./ZOrderRow');
-var EventHeaderRow = require('./EventHeaderRow');
-var EventRow = require('./EventRow');
-var EnumPropertyRow = require('./EnumPropertyRow');
-var applabConstants = require('../constants');
-
-var elementUtils = require('./elementUtils');
+import React from 'react';
+import PropertyRow from './PropertyRow';
+import BooleanPropertyRow from './BooleanPropertyRow';
+import ColorPickerPropertyRow from './ColorPickerPropertyRow';
+import ZOrderRow from './ZOrderRow';
+import EventHeaderRow from './EventHeaderRow';
+import EventRow from './EventRow';
+import EnumPropertyRow from './EnumPropertyRow';
+import * as applabConstants from '../constants';
+import * as elementUtils from './elementUtils';
 
 var LabelProperties = React.createClass({
   propTypes: {
@@ -146,7 +145,7 @@ var LabelEvents = React.createClass({
   }
 });
 
-module.exports = {
+export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
 

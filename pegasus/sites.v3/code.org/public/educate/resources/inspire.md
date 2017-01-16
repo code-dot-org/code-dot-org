@@ -52,6 +52,15 @@ Share these inspiring stories about students and teachers who are changing the f
 [![image](/images/fit-260/ashton-poster.png)](/files/ashton-poster.pdf)
 [![image](/images/fit-260/obama-poster.png)](/files/obama-poster.pdf)
 
+</br> 
+</br>
+
+[![image](/images/careers/poster_thumbnail_maddy_maxey.jpg)](/files/careers/maddy-maxey.pdf)
+[![image](/images/careers/poster_thumbnail_nidhi_erin.jpg)](/files/careers/nidhi-and-erin.pdf)
+
+[![image](/images/careers/poster_thumbnail_rory_kieran.jpg)](/files/careers/rory-and-kieran.pdf)
+[![image](/images/careers/poster_thumbnail_javier_aguera.jpg)](/files/careers/javier-aguera.pdf)
+
 
 ## 5. Grow participation by women
 

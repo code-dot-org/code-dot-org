@@ -7,21 +7,6 @@ namespace :seed do
     Video.setup
   end
 
-  STANFORD_HINTS_FILE = 'config/stanford-hints-bestPath1.tsv'
-  STANFORD_HINTS_IMPORTED = 'config/scripts/.hints_imported'
-  file STANFORD_HINTS_IMPORTED => [STANFORD_HINTS_FILE, :environment] do
-    LevelSourceHint.transaction do
-      source_name = LevelSourceHint::STANFORD
-      LevelSourceHint.where(source: source_name).delete_all
-      CSV.read(STANFORD_HINTS_FILE, { col_sep: "\t" }).each do |row|
-        LevelSourceHint.create!(
-          level_source_id: row[0], hint: row[1],
-          status: 'experiment', source: source_name)
-      end
-    end
-    touch STANFORD_HINTS_IMPORTED
-  end
-
   task concepts: :environment do
     Concept.setup
   end
@@ -112,10 +97,70 @@ namespace :seed do
   end
 
   task school_districts: :environment do
+    # use a much smaller dataset in environments that reseed data frequently.
+    school_districts_tsv = CDO.stub_school_data ? 'test/fixtures/school_districts.tsv' : 'config/school_districts.tsv'
+    expected_count = `wc -l #{school_districts_tsv}`.to_i - 1
+    raise "#{school_districts_tsv} contains no data" unless expected_count > 0
+
     SchoolDistrict.transaction do
-      # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
-      # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
-      SchoolDistrict.find_or_create_all_from_tsv!('config/school_districts.tsv')
+      # It takes approximately 30 seconds to seed config/school_districts.tsv.
+      # Skip seeding if the data is already present. Note that this logic may need
+      # to be updated once we incorporate data from future survey years.
+      if SchoolDistrict.count < expected_count
+        # Since other models (e.g. Pd::Enrollment) have a foreign key dependency
+        # on SchoolDistrict, don't reset_db first.  (Callout, above, does that.)
+        puts "seeding school districts (#{expected_count} rows)"
+        SchoolDistrict.find_or_create_all_from_tsv(school_districts_tsv)
+      end
+    end
+  end
+
+  task schools: :environment do
+    # use a much smaller dataset in environments that reseed data frequently.
+    schools_tsv = CDO.stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
+    expected_count = `wc -l #{schools_tsv}`.to_i - 1
+    raise "#{schools_tsv} contains no data" unless expected_count > 0
+
+    School.transaction do
+      # It takes approximately 4 minutes to seed config/schools.tsv.
+      # Skip seeding if the data is already present. Note that this logic may need
+      # to be updated once we incorporate data from future survey years.
+      if School.count < expected_count
+        # Since other models will have a foreign key dependency
+        # on School, don't reset_db first.  (Callout, above, does that.)
+        puts "seeding schools (#{expected_count} rows)"
+        School.find_or_create_all_from_tsv(schools_tsv)
+      end
+    end
+  end
+
+  task regional_partners: :environment do
+    RegionalPartner.transaction do
+      RegionalPartner.find_or_create_all_from_tsv('config/regional_partners.tsv')
+    end
+  end
+
+  task regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(false)
+  end
+
+  task force_regional_partners_school_districts: :environment do
+    seed_regional_partners_school_districts(true)
+  end
+
+  def seed_regional_partners_school_districts(force)
+    # use a much smaller dataset in environments that reseed data frequently.
+    mapping_tsv = CDO.stub_school_data ?
+        'test/fixtures/regional_partners_school_districts.tsv' :
+        'config/regional_partners_school_districts.tsv'
+
+    expected_count = `grep -v 'NO PARTNER' #{mapping_tsv} | wc -l`.to_i - 1
+    raise "#{mapping_tsv} contains no data" unless expected_count > 0
+    RegionalPartnersSchoolDistrict.transaction do
+      if (RegionalPartnersSchoolDistrict.count < expected_count) || force
+        # This step can take up to 1 minute to complete when not using stubbed data.
+        RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv(mapping_tsv)
+      end
     end
   end
 
@@ -135,7 +180,7 @@ namespace :seed do
         {name: 'DonorsChoose.org $250', description_token: 'donors_choose_bonus', url: 'http://www.donorschoose.org/', image_name: 'donorschoose_card.jpg'},
         {name: 'Skype', description_token: 'skype', url: 'http://www.skype.com/', image_name: 'skype_card.jpg'}
       ].each_with_index do |pp, id|
-        PrizeProvider.create!(pp.merge!({:id => id + 1}))
+        PrizeProvider.create!(pp.merge!({id: id + 1}))
       end
     end
   end
@@ -257,10 +302,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :prize_providers, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, STANFORD_HINTS_IMPORTED, :secret_words, :secret_pictures]
+  task incremental: [:videos, :concepts, :scripts_incremental, :prize_providers, :callouts, :school_districts, :schools, :regional_partners, :regional_partners_school_districts, :secret_words, :secret_pictures]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures]
+  task test: [:videos, :games, :concepts, :prize_providers, :secret_words, :secret_pictures, :school_districts, :schools, :regional_partners, :regional_partners_school_districts]
 end

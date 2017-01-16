@@ -1,0 +1,23 @@
+#race-modal.modal{'data-backdrop' => 'static', 'data-keyboard' => 'false', style: 'display: none;'}
+  .modal-dialog
+    .modal-content.no-modal-icon
+      %h2.custom-h2= t('race_interstitial.title')
+
+      %h3= t('race_interstitial.message')
+      .left.full-width
+        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+          .form-group
+            - t('race_interstitial.races').map do |entry|
+              - entry.map do |race, race_i8n|
+                = f.label "races_#{race}" do
+                  = f.check_box "races", {class: 'race-checkbox', multiple: true}, race, nil
+                  = race_i8n
+            = f.label 'closed_dialog', {id: 'closed-dialog-label'} do
+              = f.check_box "races", {class: 'race-checkbox', multiple: true}, 'closed_dialog', nil
+          .form-group
+            = f.submit t('race_interstitial.submit'), id: 'race-submit', class: 'btn primary-button disabled-button', disabled: true
+            .right.clear
+              %a#later-link.dismiss-link{href: '#'}= t('race_interstitial.decline')
+          = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+
+%script{src: minifiable_asset_path('js/raceInterstitial.js')}

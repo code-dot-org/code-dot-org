@@ -2,143 +2,145 @@ gl:
   errors:
     messages:
       not_saved: 'Por favor, corrixe os seguintes erros:'
-      too_young: This content has age restrictions in place and is not available for younger students.
+      too_young: 'This content has age restrictions in place and is not available for younger students.'
       teacher_must_accept_terms: 'This content has age restrictions in place and is not available for younger students. Ask your teacher to accept the updated Terms of Service to give you access to this content. Your teacher can do this by logging into Code Studio and clicking the "Review updated terms" button near the top of the Code Studio homepage.'
-      pair_programmer: You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.
+      pair_programmer: 'You are currently pair programming with a student who does not have access to this content. To access this content, stop pair programming and try again.'
   activerecord:
     errors:
       messages:
-        blank: é obrigatorio
+        blank: "é obrigatorio"
     attributes:
       user:
-        name: Nome a mostrar
-        email: E-mail
-        username: Nome de usuario
-        password: Contrasinal
-        password_confirmation: Confirmación do contrasinal
-        current_password: Contrasinal actual
-        locale: Idioma
-        age: Idade
-        gender: Xénero
-        edit_header: Editar os Detalles da Conta
+        name: 'Nome a mostrar'
+        email: 'E-mail'
+        username: 'Nome de usuario'
+        password: 'Contrasinal'
+        password_confirmation: 'Confirmación do contrasinal'
+        current_password: 'Contrasinal actual'
+        locale: 'Idioma'
+        age: 'Idade'
+        gender: 'Xénero'
+        edit_header: 'Editar os Detalles da Conta'
         error:
           future: non pode estar no futuro
-  hello: Olá mundo
-  welcome_back: 'Ola outra vez, %{name}'
-  your_professional_learning_plan: Your Professional Learning Plan
-  see_your_learning_plan: See your learning plan
+  hello: "Olá mundo"
+  welcome_back: "Ola outra vez, %{name}"
+  your_professional_learning_plan: "Your Professional Learning Plan"
+  see_your_learning_plan: "See your learning plan"
   submit: Enviar
   unsubmit: Cancelar envío
   previous_page: Previous page
   next_page: Next page
   next_resource: Next resource
   done_with_module: Done with this Learning Module
-  cancel: Cancelar
-  okay: De acordo
-  heading_x_of_y: '%{heading} (page %{x} of %{y})'
+  cancel: "Cancelar"
+  okay: "De acordo"
+  heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
       label: 'Agrega un profesor:'
-      placeholder: Código da sección (ABCDEF)
-      instructions: |-
-        Please enter the code shared with you by your teacher. It's a 6 letter code like "ABCDEF".
-    submit: Agregar profesor
+      placeholder: "Código da sección (ABCDEF)"
+      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+    submit: 'Agregar profesor'
   add_hint_form:
-    placeholder: Por favor, dixite a súa pista aquí
-    submit: Agregar pista
-  appname: Code.org
-  stage: Etapa
-  stage_number: '%{number}.ª Etapa'
-  puzzle: Quebracabeza
-  trophies: Trofeos
-  courses: Cursos
-  unplugged_activity: Actividade off-line
-  of: de
-  more: MÁIS
-  less: MENOS
-  beta: beta
-  try_hoc: 'Experimenta a Hora de Código, clica aquí >> '
-  try_k8intro: Experimenta o noso curso de Introdución á Informática para o Ensino Básico (15-25 horas)
-  k8intro: Curso de Introdución á Informática para Ensino Básico (15-25 horas)
-  already_started: 'Xa comezou? Continúe aquí >> '
+    placeholder: 'Por favor, dixite a súa pista aquí'
+    submit: 'Agregar pista'
+  appname: "Code.org"
+  stage: "Etapa"
+  stage_number: "%{number}.ª Etapa"
+  puzzle: "Quebracabeza"
+  trophies: "Trofeos"
+  courses: 'Cursos'
+  unplugged_activity: 'Actividade off-line'
+  of: "de"
+  more: "MÁIS"
+  less: "MENOS"
+  beta: "beta"
+  try_hoc: "Experimenta a Hora de Código, clica aquí >> "
+  try_k8intro: "Experimenta o noso curso de Introdución á Informática para o Ensino Básico (15-25 horas)"
+  k8intro: "Curso de Introdución á Informática para Ensino Básico (15-25 horas)"
+  already_started: "Xa comezou? Continúe aquí >> "
   demos: 'Administrador: Todas as Demostracións'
-  continue: Continuar
-  prize: premio
-  more_info: Máis información
+  continue: 'Continuar'
+  prize: 'premio'
+  more_info: 'Máis información'
   auth:
     sign_in_with: 'Entre con %{provider}'
-    signed_in: Sesión iniciada!
+    signed_in: 'Sesión iniciada!'
     signed_out: 'Vostede saiu da <a href="%{url}">Code.org</a>.'
     sign_out_of: 'Vostede usou %{provider} para entrar. <a href="%{url}">Clique aquí</a> para saír de %{provider}.'
-    already_signedup: Xa estás rexistrado?
-    notyet_signedup: Aínda non creaches unha conta?
-    google_oauth2: Conta do Google
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Conta da Microsoft
-    forgot_password: Esqueceu o seu contrasinal?
-    need_confirmation: Non recebeu as instrucións de confirmación?
-    need_unlock: Non recibiches as instrucións de desbloqueo?
+    already_signedup: 'Xa estás rexistrado?'
+    notyet_signedup: "Aínda non creaches unha conta?"
+    google_oauth2: 'Conta do Google'
+    twitter: 'Twitter'
+    facebook: 'Facebook'
+    windowslive: 'Conta da Microsoft'
+    forgot_password: 'Esqueceu o seu contrasinal?'
+    need_confirmation: "Non recebeu as instrucións de confirmación?"
+    need_unlock: "Non recibiches as instrucións de desbloqueo?"
   signup_form:
     student_count: '%{count} alumnos xa crearon unha conta.'
     teacher_count: '%{count} profesores xa crearon unha conta.'
     overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    teacher_educator_guide: Consultar a guía do profesor
-    title: Sign up for Code.org
-    school_name: Nome da escola (opcional)
-    school_address: Enderezo da escola (opcional)
-    address_placeholder: Enderezo, cidade e código postal
-    gender: Xénero (opcional)
-    birthday: Aniversário (opcional)
-    age: Idade
-    user_type: Alumno ou profesor?
-    submit: Crear conta
-    teacher: É un profesor?
-    valid_username: Dispoñíbel!
-    invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
-    taken_username: O nome de usuario xa existe
-    valid_password: Contrasinal válido!
-    invalid_password: 'O contrasinal  ten que ter, polo menos, 6 caracteres'
-    mismatch_password: Os dous contrasinais que metiches non se corresponden
+    hoc_already_signed_up_heading: 'Get started without logging in'
+    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    teacher_educator_guide: 'Consultar a guía do profesor'
+    title: "Sign up for Code.org"
+    school_name: 'Nome da escola (opcional)'
+    school_address: 'Enderezo da escola (opcional)'
+    address_placeholder: 'Enderezo, cidade e código postal'
+    gender: 'Xénero (opcional)'
+    birthday: 'Aniversário (opcional)'
+    age: 'Idade'
+    user_type: 'Alumno ou profesor?'
+    submit: 'Crear conta'
+    teacher: 'É un profesor?'
+    valid_username: "Dispoñíbel!"
+    invalid_username: "O nome de usuario ten que ter, polo menos, 5 caracteres"
+    taken_username: "O nome de usuario xa existe"
+    valid_password: "Contrasinal válido!"
+    invalid_password: "O contrasinal  ten que ter, polo menos, 6 caracteres"
+    mismatch_password: "Os dous contrasinais que metiches non se corresponden"
     student_terms: "I agree to be bound by the Code.org <a href='http://code.org/tos'>terms of service</a>. If I am under 13 years of age, I confirm by submitting this form that I have my parent or legal guardian's permission to use the Code.org services.<br/><br/>Email addresses are not stored in a form that allows us to contact students. Students will never recieve emails from Code.org except for password recovery. See our <a href='http://code.org/privacy'>privacy policy</a> for more information."
     teacher_terms: "I agree to be bound by the Code.org terms of service. For more information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>."
-    additional_information: Necesitamos máis informacións para continuarmos o proceso de creacción da conta.
-    user_type_label: Account Type
-    user_type_teacher: Profesor
-    user_type_student: Estudante
-    field_is_required: é obrigatorio
-    accept_terms: You must agree to create an account
+    additional_information: "Necesitamos máis informacións para continuarmos o proceso de creacción da conta."
+    user_type_label: "Account Type"
+    user_type_teacher: "Profesor"
+    user_type_student: "Estudante"
+    field_is_required: "é obrigatorio"
+    accept_terms: "You must agree to create an account"
   signin_form:
-    title: Xa ten conta? Inicie a sesión
-    login: E-mail
-    password: Contrasinal
-    remember: Lembrarme
-    submit: Iniciar Sesión
+    title: 'Xa ten conta? Inicie a sesión'
+    login: 'E-mail'
+    password: 'Contrasinal'
+    remember: 'Lembrarme'
+    submit: 'Iniciar Sesión'
   signin:
-    try_heading: Gostaría de programar sen se rexistrar?
-    try_hoc: Primeiro, probe a Hora do Código
-    try_20hours: Probe a introdución á Informática en 20 horas
+    try_heading: 'Gostaría de programar sen se rexistrar?'
+    try_hoc: 'Primeiro, probe a Hora do Código'
+    try_20hours: 'Probe a introdución á Informática en 20 horas'
   signinsection:
     welcome: 'Benvido a %{section_name}'
-    name: Escolla o seu nome
-    picture: Agora atope a súa foto secreta
-    words: Agora dixite as súas palabras secretas
-    login: Iniciar Sesión
-    invalid_login: Invalid login, please try again
-    pair_programming: I have a partner at my computer
+    name: 'Escolla o seu nome'
+    picture: 'Agora atope a súa foto secreta'
+    words: 'Agora dixite as súas palabras secretas'
+    login: 'Iniciar Sesión'
+    invalid_login: 'Invalid login, please try again'
+    pair_programming: 'I have a partner at my computer'
   password:
     reset_form:
-      title: Esqueceu o seu contrasinal?
+      title: 'Esqueceu o seu contrasinal?'
       instructions: "Enter your email address below and we'll send you password reset instructions."
-      email: Enderezo de email
-      submit: Enviar
+      email: 'Enderezo de email'
+      submit: 'Enviar'
     change_form:
-      title: Cambiar contrasinal
-      new_password: Novo contrasinal
-      confirm_password: Confirmar novo contrasinal
-      submit: Cambiar o meu contrasinal
+      title: 'Cambiar contrasinal'
+      new_password: 'Novo contrasinal'
+      confirm_password: 'Confirmar novo contrasinal'
+      submit: 'Cambiar o meu contrasinal'
   welcome_email:
-    subject: Unirme á miña clase (na Code.org)
+    subject: 'Unirme á miña clase (na Code.org)'
     body: |
       Clica na seguinte ligazón para te inscribires nos titoriais de informática na Code.org (comigo como o teu "profesor"):
       
@@ -148,65 +150,65 @@ gl:
       
       %{name}
   follower:
-    invite_sent: Convite enviado
+    invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi agregado como o teu profesor'
-    registered: 'Registrouse para %{section_name}.'
+    registered: "Registrouse para %{section_name}."
     error:
-      signed_in: Antes de proseguires, pecha a sesión
+      signed_in: 'Antes de proseguires, pecha a sesión'
       username_not_found: 'Nome de usuario %{username} non atopado'
       username_in_use: '%{username} xa existe, por favor escolle outro'
       no_teacher: "Non foi posíbel encontrar ninguén que teña entrado con '%{teacher_email_or_code}'. Por favor, pídelles para se rexistaren aquí e tente agregalos novamente"
       section_not_found: "Non foi posíbel atopar unha sección co código '%{section_code}'."
-      blank_code: Insira un código de sección
-      cant_join_own_section: Non podes entrar na túa propria sección.
+      blank_code: "Insira un código de sección"
+      cant_join_own_section: "Non podes entrar na túa propria sección."
     mail:
       invite_student:
-        subject: 'Xúntate a unha aula con %{teacher_name} en Code.org!'
+        subject: "Xúntate a unha aula con %{teacher_name} en Code.org!"
       student_disassociated:
         subject: 'Notificación de Code.org: %{student_name} deixou de ser o seu alumno.'
   reports:
     error:
-      access_denied: Non ten acceso ás estatísticas desta persoa
+      access_denied: "Non ten acceso ás estatísticas desta persoa"
   redeem_prizes:
     title: 'Recoller premios: %{name}'
     provider: 'Fornecedor:'
     code: 'Código:'
     redeem_header: 'Para recibir:'
-    donorschoose_register: Rexístrese como profesor no DonorsChoose.org
-    donorschoose_project: Publicar un proxecto
-    donorschoose_how_to: Como usar o código
-    success: O teu premio foi recollido con éxito, ve o código abaixo.
-    error: O teu premio non pode ser recollido, por favor tenta novamente.
-    error_us_only: O premio ofrecido só é válido para o usuarios dos Estados Unidos.
-    error_not_earned: Aínda non gañou este premio.
-    error_already_redeemed: O seu premio xa foi reivindicado.
-    no_prizes_available: Infelizmente non temos premios disponíbeis neste momento.
-    teacher_info_required: 'Os premios dos profesores requiren cubrir o nome e o enderezo da escola:'
-    teacher_email_required: 'Os premios dos profesores requiren a confirmación do enderezo de email:'
+    donorschoose_register: 'Rexístrese como profesor no DonorsChoose.org'
+    donorschoose_project: 'Publicar un proxecto'
+    donorschoose_how_to: 'Como usar o código'
+    success: 'O teu premio foi recollido con éxito, ve o código abaixo.'
+    error: 'O teu premio non pode ser recollido, por favor tenta novamente.'
+    error_us_only: 'O premio ofrecido só é válido para o usuarios dos Estados Unidos.'
+    error_not_earned: 'Aínda non gañou este premio.'
+    error_already_redeemed: 'O seu premio xa foi reivindicado.'
+    no_prizes_available: "Infelizmente non temos premios disponíbeis neste momento."
+    teacher_info_required: "Os premios dos profesores requiren cubrir o nome e o enderezo da escola:"
+    teacher_email_required: "Os premios dos profesores requiren a confirmación do enderezo de email:"
     confirm:
-      title: Confirma por favor
-      "no": Non
-      "yes": Si
+      title: 'Confirma por favor'
+      'no': 'Non'
+      'yes': 'Si'
       msg: 'Tes a certeza de que pretendes reclamar o premio %{prize_name}?'
       msg_student: 'Nota: Só podes escoller un tipo de premio.'
-      msg_publicschool: Confirme que é un profesor de unha escola pública dos E.U.A.
-      msg_visit_website: Visitar o sitio Web
+      msg_publicschool: 'Confirme que é un profesor de unha escola pública dos E.U.A.'
+      msg_visit_website: 'Visitar o sitio Web'
     providers:
-      apple_itunes: $10 iTunes Gift Card
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10GB de espazo no Dropbox
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: $10 Skype credit
+      apple_itunes: '$10 iTunes Gift Card'
+      donors_choose: 'DonorsChoose.org $750 credit'
+      donors_choose_bonus: 'DonorsChoose.org $250 credit'
+      dropbox: '10GB de espazo no Dropbox'
+      valve: 'Portal 2 (PC or Mac game download)'
+      ea_bejeweled: 'Bejeweled 3 (PC game download)'
+      ea_fifa: 'FIFA Soccer 13 (PC game download)'
+      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
+      ea_pvz: 'Plants vs. Zombies (PC game download)'
+      skype: '$10 Skype credit'
     msg:
       choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: Gañaches un premio! (só para alumnos dos USA)
-      not_earned_title: Termine o titorial e gañe recompensas (só para alumnos dos EUA)
+      earned: 'Gañaches un premio! (só para alumnos dos USA)'
+      not_earned_title: 'Termine o titorial e gañe recompensas (só para alumnos dos EUA)'
       not_earned: 'Aprenda todos os conceptos da Informática , gañe os %{num_trophies} trofeos e premios reais. Pode escoller entre 10GB de armacenamento gratuíto na Dropbox, 10$ US en crédito Skype, e descarregar xogos gratuitamente. Nota: oferta válida só para alumnos dos E.U.A. até ao límite de existencias.'
       teacher:
         earned: '15 ou mais alumnos reciberán todos os %{num_trophies} trofeos. Por este motivo, gañou un premio de profesor! (só para profesores dos E.U.A.)'
@@ -218,375 +220,407 @@ gl:
           not_earned: 'Se polo menos 7 dos seus alumnos que gañasen todos os %{num_trophies} trofeos fosen meniñas, terá un premio adicional de $250 en créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Os créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> só poden ser utilizados polos profesores de escolas públicas dos E.U.A.'
   crud:
     new_model: 'Novo %{model}'
-    show: Mostrar
-    edit: Editar
+    show: 'Mostrar'
+    edit: 'Editar'
     edit_model: 'Editar %{model}'
-    update: Actualizar
-    destroy: Destruír
-    back: Voltar
-    confirm: Tes a certeza?
+    update: 'Actualizar'
+    destroy: 'Destruír'
+    back: 'Voltar'
+    confirm: 'Tes a certeza?'
     created: '%{model} foi creado con éxito.'
     updated: '%{model} foi actualizado con éxito.'
     destroyed: '%{model} foi eliminado con éxito.'
     access_denied: 'Vostede non ten acesso a este %{model}.'
   nav:
     header:
-      finished_hoc: Terminei a miña Hora de Código
-      sign_in_to_save: Inicia sesión para gardares o teu progreso
+      finished_hoc: "Terminei a miña Hora de Código"
+      sign_in_to_save: 'Inicia sesión para gardares o teu progreso'
       free_play:
-        playlab: Desenvolver unha aplicación
-        artist: Debuxar algunha cousa
-        calculate: Calculate something
-        applab: Desenvolver unha aplicación
+        playlab: 'Desenvolver unha aplicación'
+        artist: 'Debuxar algunha cousa'
+        calculate: 'Calculate something'
+        applab: 'Desenvolver unha aplicación'
     user:
-      classroom: Páxina inicial do profesor
-      district_dashboard: Panel do distrito
+      classroom: 'Páxina inicial do profesor'
+      district_dashboard: 'Panel do distrito'
       label: 'Olá, %{username}'
-      stats: Code Studio
-      settings: A miña conta
-      prizes: Premios
-      logout: Pechar sesión
-      signin: Iniciar Sesión
-      signup: Create an account
-      already_registered: Xa creaches unha conta?
-      pair_programming: Programación por parellas
-      team: Team
-      driver: Driver
-      navigator: Navigator
+      stats: 'Code Studio'
+      settings: 'A miña conta'
+      prizes: 'Premios'
+      logout: 'Pechar sesión'
+      signin: 'Iniciar Sesión'
+      signup: 'Create an account'
+      already_registered: 'Xa creaches unha conta?'
+      pair_programming: 'Programación por parellas'
+      team: 'Team'
+      driver: 'Driver'
+      navigator: 'Navigator'
     popup:
       progress_for_user: "progreso de %{name}'s"
-      progress: O teu progreso
+      progress: 'O teu progreso'
       lines: 'Total de liñas de código: %{lines}'
-      close: PECHAR
-      mastery: Conceptos
-      puzzle_map: Etapas
+      close: 'PECHAR'
+      mastery: 'Conceptos'
+      puzzle_map: 'Etapas'
       prizes: 'Recolle todos os %{total_trophies} trofeos e gaña premios!'
       prize_earned: 'Recollidos todos os %{total_trophies} trofeos. Gañaches premio!'
-      prize_us_only: (Só para estudantes dos E.U.A.)
-      prizes_link: máis información
+      prize_us_only: '(Só para estudantes dos E.U.A.)'
+      prizes_link: 'máis información'
   teacher:
     answer: Resposta
     for_teachers_only: Só para Profesores
     title:
       one: 'O seu profesor:'
       other: 'Os teus profesores:'
-    remove: (remover profesor)
+    remove: '(remover profesor)'
     confirm:
-      remove: Tes a certeza de que pretendes remover este profesor?
+      remove: 'Tes a certeza de que pretendes remover este profesor?'
     students:
-      dashboard: Ir ao panel de control do profesor
-    user_not_found: Non se pode atopar o profesor.
+      dashboard: 'Ir ao panel de control do profesor'
+    user_not_found: 'Non se pode atopar o profesor.'
     student_teacher_disassociated: 'Eliminaches como profesor teu a %{teacher_name}.'
     panel:
-      answer_viewer: Teacher Panel
-      student: Estudante
-      viewing_solution: Visualizar solución
-      try_it_yourself: Tente vostede mesmo
-      section: Sección
-      example: Solución exemplo
+      answer_viewer: 'Teacher Panel'
+      student: 'Estudante'
+      viewing_solution: 'Visualizar solución'
+      try_it_yourself: 'Tente vostede mesmo'
+      section: 'Sección'
+      example: 'Solución exemplo'
       example_with_number: 'Solución exemplo %{solution_number}'
       submitted_on: 'Enviado o %{date}'
-      unsubmit: Cancelar envío
-      worked_with: Worked With
-      update_lock_settings: Update lock settings here.
+      unsubmit: 'Cancelar envío'
+      worked_with: 'Worked With'
+      update_lock_settings: 'Update lock settings here.'
+      clear_response: 'Clear response'
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
-    email_confirm_wrong_email: (Enderezo de e-mail errado?)
-    email_resend_confirm: Reenviar instrucións de confirmación
-    new_password_hint: (deixe en branco se non quixese facer alteración)
-    current_password_hint: (necesitamos o seu contrasinal actual para confirmar os seus cambios)
-    delete: Eliminar a súa conta
-    delete_text: Clicando no botón de abaixo, vostede vai eliminar a súa conta.
+    email_confirm_wrong_email: '(Enderezo de e-mail errado?)'
+    email_resend_confirm: 'Reenviar instrucións de confirmación'
+    new_password_hint: "(deixe en branco se non quixese facer alteración)"
+    current_password_hint: '(necesitamos o seu contrasinal actual para confirmar os seus cambios)'
+    delete: 'Eliminar a súa conta'
+    delete_text: "Clicando no botón de abaixo, vostede vai eliminar a súa conta."
     delete_text_teacher_note: 'Lémbrese: a eliminación da súa conta non vai eliminar as contas dos seus alumnos.'
-    delete_confirm: Ten certeza de que desexa eliminar a súa conta?
+    delete_confirm: 'Ten certeza de que desexa eliminar a súa conta?'
+    deleted_user: 'deleted user'
   user_level:
-    completed: Concluído
-    tried: Probado
+    completed: 'Concluído'
+    tried: 'Probado'
   home:
-    title: Code Studio
-    description: No Code Studio podes atopar os cursos online da Code.org
-    lines_of_code: '%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS'
-    lines_of_code_linebreak: '%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count} MILLÓNS DE ALUMNOS'
-    all_courses: Visión xeral dos cursos 1, 2 e 3
-    lesson_plans: Plan de estudo
-    signin_message: 'Xa estás rexistrado? %{link}'
-    student_reg_link: Crear conta de alumno
-    teacher_reg_link: Crear conta de profesor
+    title: "Code Studio"
+    description: 'No Code Studio podes atopar os cursos online da Code.org'
+    lines_of_code: "%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS"
+    lines_of_code_linebreak: "%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count} MILLÓNS DE ALUMNOS"
+    all_courses: "Visión xeral dos cursos 1, 2 e 3"
+    lesson_plans: "Plan de estudo"
+    signin_message: "Xa estás rexistrado? %{link}"
+    student_reg_link: 'Crear conta de alumno'
+    teacher_reg_link: 'Crear conta de profesor'
     signin_directions: 'Crea unha conta para poder seguir o progreso.<br/> E os Profesores, poden seguir o progreso do grupo enteiro.'
     teacher_dashboard: Consulte o panel de control do progreso
-    teacher_student_count_one: 'Ten %{count} alumnos.'
-    teacher_student_count: 'Ten %{count} alumnos.'
-    teacher_averages: 'De media os seus alumnos gañaron %{trophy_average} de %{trophy_max} trofeos "Mestría de Conceptos".'
-    teacher_print_certificates: Imprima certificados para os alumnos que terminaron este curso
+    teacher_student_count_one: Ten %{count} alumnos.
+    teacher_student_count: Ten %{count} alumnos.
+    teacher_averages: De media os seus alumnos gañaron %{trophy_average} de %{trophy_max} trofeos "Mestría de Conceptos".
+    teacher_print_certificates: 'Imprima certificados para os alumnos que terminaron este curso'
     teacher_read_blog: Lea sobre noticias e actualizacións nos materiais dispoñíbeis no noso Blog do Profesor
     classroom: A súa clase
     student_progress: O teu progreso de aprendizaxe
-    student_stats: 'Gañaches %{trophy_count} de %{trophy_max} trofeos "Mestría de Conceptos".'
+    student_stats: Gañaches %{trophy_count} de %{trophy_max} trofeos "Mestría de Conceptos".
     student_left_off: 'Onde paraches:'
-    student_finished: 'Vostede completou todos os titoriais, escolla outra clase en %{online_link} ou %{local_school_link}'
+    student_finished: Vostede completou todos os titoriais, escolla outra clase en %{online_link} ou %{local_school_link}
     local_school: escola local
     online: online
     see_details: Ver detalles
     view_course: Ver curso
     prize_info: 'Premios de participación (somente para profesores de escolas públicas dos EUA.): até $1.000 en premios para clase.'
     tryfirst: 'Ou podes probar primeiro e crear unha conta máis tarde:'
-    trynow: Proba agora
-    add_hint_help: Axúdenos a aumentar pistas útiles nos titoriais da Code.org
-    20hour_overview: Este curso de 20 horas presenta o núcleo da informática e conceptos de programación. O curso é proxectado para uso en clases para os graos de primaria, pero é divertido de aprender en todas as idades.
-    test_videos_help: Probe o noso novo reprodutor de vídeo na súa escola
-    try_beta_courses: Novo! Coñeza os nosos cursos experimentais para alumnos do pré ao 5º ano
-    use_as_teacher: Use este sitio Web como profesor
-    heading_hoc2014: '<h2>A Hora de Código para</h2><h1>Todas as idades</h1>'
-    heading_elementary: '<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas as idades)</h1>'
-    heading_apps: '<h2>Diversión para</h2><h1>todos</h1>'
-    heading_tools: '<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>'
-    heading_legacy: '<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>'
+    trynow: 'Proba agora'
+    add_hint_help: 'Axúdenos a aumentar pistas útiles nos titoriais da Code.org'
+    20hour_overview: 'Este curso de 20 horas presenta o núcleo da informática e conceptos de programación. O curso é proxectado para uso en clases para os graos de primaria, pero é divertido de aprender en todas as idades.'
+    test_videos_help: 'Probe o noso novo reprodutor de vídeo na súa escola'
+    try_beta_courses: 'Novo! Coñeza os nosos cursos experimentais para alumnos do pré ao 5º ano'
+    use_as_teacher: 'Use este sitio Web como profesor'
+    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
+    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas as idades)</h1>"
+    heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
+    heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
-    no_primary_course: Faga un curso no Code Studio
-    choose_next_course: Experimenta un dos seguintes cursos do Code Studio
-    print_certificate: Imprimir certificado
-    announcement_title: Anuncios
-    announcement_message_fall2016_features: |-
-      We spent the summer turning your feedback into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think.
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!
-    announcement_learn_more_button: Aprende máis
-    announcement_try_now_button: Proba agora
+    no_primary_course: "Faga un curso no Code Studio"
+    choose_next_course: "Experimenta un dos seguintes cursos do Code Studio"
+    print_certificate: "Imprimir certificado"
+    announcement_title: "Anuncios"
+    announcement_message_fall2016_features: "We spent the summer turning your feedback into new features. Now, you can <a href=\"%{pp_url}\" target=\"_blank\">track multiple students' progress</a> even if they're pair programming on one device. You can use <a href=\"%{csp_widgets_url}\" target=\"_blank\">the best interactive tools</a> from our CS Principles course in <i>any</i> classroom. And your students can <a href=\"%{unused_code_url}\" target=\"_blank\">keep unused code</a> in their workspace to encourage experimentation! Check out all our new features and let us know what you think."
+    announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
+    announcement_learn_more_button: "Aprende máis"
+    announcement_try_now_button: "Proba agora"
+    announcement_host_an_hour_button: "Host an Hour"
+    announcement_watch_video_button: "Watch video"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
-    announcement_petition_button: Add your name
+    announcement_petition_button: "Add your name"
+    announcement_go_beyond_button: "Go beyond"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
+    announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
+    announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
+    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
   move_students:
-    new_section_dne: 'Sorry, but section %{new_section_code} does not exist. Please enter a different section code.'
-    section_code_not_entered: Please provide current_section_code.
-    section_code_cant_be_current_section: The current section cannot be the same as the new section.
-    current_section_dne: 'Sorry, but section %{current_section_code} does not exist. Please enter a different section code.'
-    students_not_yours: You cannot move students from a section that does not belong to you.
-    stay_enrolled_not_entered: Please provide stay_enrolled_in_current_section.
-    student_ids_not_entered: Please provide student_ids.
-    student_not_found: One or more students could not be found.
-    all_students_must_be_in_current_section: All the students must currently be enrolled in your section.
-    already_enrolled_in_new_section: You cannot move these students because this teacher already has them in another section.
+    new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
+    section_code_not_entered: "Please provide current_section_code."
+    section_code_cant_be_current_section: "The current section cannot be the same as the new section."
+    current_section_dne: "Sorry, but section %{current_section_code} does not exist. Please enter a different section code."
+    students_not_yours: "You cannot move students from a section that does not belong to you."
+    stay_enrolled_not_entered: "Please provide stay_enrolled_in_current_section."
+    student_ids_not_entered: "Please provide student_ids."
+    student_not_found: "One or more students could not be found."
+    all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
+    already_enrolled_in_new_section: "You cannot move these students because this teacher already has them in another section."
   share:
-    title: Aprende no Code Studio
-    description: Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños con código.
-    try_hour_of_code: Proba unha hora do Código!
+    title: "Aprende no Code Studio"
+    description: "Todos poden aprender a programar. Constrúe xogos, aplicacións e deseños con código."
+    try_hour_of_code: 'Proba unha hora do Código!'
   gender:
-    male: Masculino
-    female: Feminino
-    none: Prefiro non responder
+    male: 'Masculino'
+    female: 'Feminino'
+    none: 'Prefiro non responder'
   user_type:
-    student: Estudante
-    teacher: Profesor
+    student: 'Estudante'
+    teacher: 'Profesor'
   footer:
     thank_you: 'Agradecemos aos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, á <a href="https://code.org/about/team">noso equipo</a>, aos produtores dos vídeos e aos <a href="https://code.org/about/advisors">profesores</a> polo apoio na creacción do Code Studio.'
-    help_from_html: Enxeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear este titorial.
-    help_from_html_old: Engeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear estes materiais.
+    help_from_html: 'Enxeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear este titorial.'
+    help_from_html_old: 'Engeñeiros da Google, Microsoft, Facebook e Twitter axudaron a crear estes materiais.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os dereitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Todos os dereitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. Todos os dereitos reservados. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Todos os dereitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os dereitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os dereitos reservados. The Amazing World of Gumball é marca rexistrada e &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
-    powered_by_aws: Sostido por Amazon Web Services
+    powered_by_aws: 'Sostido por Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; son marcas rexistradas da Code.org.'
-    copyright: Dereitos de Autor
-    more: Máis
-    feedback: Enviar comentarios
-    translate: Axúdanos a traducir ao teu idioma
-    support: Soporte
-    support_url: http://support.code.org
-    tos_short: Termos
-    tos: Termos de Servizo
-    privacy: Política de Privacidade
-    secure: Versión Segura
-    report_abuse: Reportar abuso
-    built_on_code_studio: Creado no Code Studio
-    make_my_own_app: Facer a miña propia aplicación
-    how_it_works: Como funciona
-    try_hour_of_code: Proba unha hora do Código!
+    copyright: 'Dereitos de Autor'
+    more: 'Máis'
+    feedback: 'Enviar comentarios'
+    translate: 'Axúdanos a traducir ao teu idioma'
+    support: 'Soporte'
+    support_url: 'http://support.code.org'
+    tos_short: 'Termos'
+    tos: 'Termos de Servizo'
+    privacy: 'Política de Privacidade'
+    secure: 'Versión Segura'
+    report_abuse: 'Reportar abuso'
+    built_on_code_studio: 'Creado no Code Studio'
+    make_my_own_app: 'Facer a miña propia aplicación'
+    how_it_works: 'Como funciona'
+    try_hour_of_code: 'Proba unha hora do Código!'
   reference_area:
-    title: Necesitas axuda?
-    subtitle: Ve estes vídeos e suxestións
-    teacher: Ver a solución
-    auth_error: Vostede non está autorizado a ver a solución.
-    submit: Actualize a Localización do Artista
-    direction: Dirección de inicio (en graos)
+    title: 'Necesitas axuda?'
+    subtitle: 'Ve estes vídeos e suxestións'
+    teacher: 'Ver a solución'
+    auth_error: 'Vostede non está autorizado a ver a solución.'
+    submit: 'Actualize a Localización do Artista'
+    direction: 'Dirección de inicio (en graos)'
   video:
     tab: 'Vídeo:'
-    notes: Non hai vídeo? Mostrar notas.
-    notes_coming_soon: As notas deste vídeo estarán dispoñíbeis en breve.
-    autoplay_option: visualización automatica de vídeos
-    download: Baixar Vídeo
+    notes: 'Non hai vídeo? Mostrar notas.'
+    notes_coming_soon: 'As notas deste vídeo estarán dispoñíbeis en breve.'
+    autoplay_option: 'visualización automatica de vídeos'
+    download: 'Baixar Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
-      link: Aprende máis
-  slow_loading: Isto está a demorar máis do habitual...
-  try_reloading: Tente recarregar a páxina
-  next_stage: Xa está! Continúa para a próxima etapa
-  download_pdf: Abrir a planificación da lección
-  lesson_plan: Planificación da lección
-  view_lesson_plan: Ver a planificación da lección
-  pdf_download: Baixar PDF
-  download_coming_soon: Actividade disponíbel para baixar en breve.
-  video_coming_soon: Vídeo en breve!
-  not_started: O alumno aínda non practicou este nivel.
+      link: "Aprende máis"
+  slow_loading: 'Isto está a demorar máis do habitual...'
+  try_reloading: 'Tente recarregar a páxina'
+  next_stage: 'Xa está! Continúa para a próxima etapa'
+  download_pdf: 'Abrir a planificación da lección'
+  lesson_plan: 'Planificación da lección'
+  view_lesson_plan: 'Ver a planificación da lección'
+  pdf_download: 'Baixar PDF'
+  download_coming_soon: 'Actividade disponíbel para baixar en breve.'
+  video_coming_soon: 'Vídeo en breve!'
+  not_started: 'O alumno aínda non practicou este nivel.'
   share_code:
     title: "Clique en 'Executar' para ver o meu programa en acción"
-    bounce_og_title: Vexa o meu xogo de Ping-pong
-    flappy_og_title: Bota unha ollada ao meu xogo Flappy
-    studio_og_title: Bota unha ollada á miña aplicación Play Lab
-    check_out_what_i_made: Vexa o que eu fixen
-    og_description: Eu mesmo escribín o código coa Code.org
-    phone_number_not_allowed: Parece que hai un número de teléfone. Tente alterar o texto.
-    address_not_allowed: Parece que hai un enderezo. Tente alterar o texto.
-    email_not_allowed: Parece que hai un e-mail. Tente alterar o texto.
-    profanity_not_allowed: Parece que hai palabras inadecuadas. Tente alterar o texto.
+    bounce_og_title: "Vexa o meu xogo de Ping-pong"
+    flappy_og_title: "Bota unha ollada ao meu xogo Flappy"
+    studio_og_title: "Bota unha ollada á miña aplicación Play Lab"
+    check_out_what_i_made: "Vexa o que eu fixen"
+    og_description: "Eu mesmo escribín o código coa Code.org"
+    phone_number_not_allowed: "Parece que hai un número de teléfone. Tente alterar o texto."
+    address_not_allowed: "Parece que hai un enderezo. Tente alterar o texto."
+    email_not_allowed: "Parece que hai un e-mail. Tente alterar o texto."
+    profanity_not_allowed: "Parece que hai palabras inadecuadas. Tente alterar o texto."
   builder:
-    created: Vostede creou un novo script.
-    destroyed: Vostede destruiu un script.
-    manage: Crear niveis
-    view: Ver
-    back: Voltar para os scripts
-    success: Vostede editou os bloques con éxito.
+    created: "Vostede creou un novo script."
+    destroyed: "Vostede destruiu un script."
+    manage: "Crear niveis"
+    view: "Ver"
+    back: "Voltar para os scripts"
+    success: "Vostede editou os bloques con éxito."
     level:
-      create: Crear novo nivel
-      current: Niveis actuais
-      unused: Niveis non utilizados
+      create: "Crear novo nivel"
+      current: "Niveis actuais"
+      unused: "Niveis non utilizados"
   upsell:
     applab:
-      title: Laboratorio de aplicacións
-      body: App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      body_short: Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
-      audience: Ages 13+
-      cta: Learn how
+      title: 'Laboratorio de aplicacións'
+      body: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
+      body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
+      audience: 'Ages 13+'
+      cta: 'Learn how'
     hoc:
-      title: Labirinto clásico
-      body: Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.
+      title: 'Labirinto clásico'
+      body: 'Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.'
     flappy:
-      title: Código do Flappy bird
-      body: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!
+      title: 'Código do Flappy bird'
+      body: 'Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!'
     20-hour:
-      title: Curso acelerado
-      body: Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!
-      body_short: Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!'
+      body_short: 'Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.'
     hoc2014:
-      try_new_tutorial: Experimente o noso novo titorial da Hora do Código na versión beta
-      try_frozen: O Artista con Anna e Elsa, do filme Frozen
+      try_new_tutorial: 'Experimente o noso novo titorial da Hora do Código na versión beta'
+      try_frozen: 'O Artista con Anna e Elsa, do filme Frozen'
     gallery:
-      title: Galería
-      body: Vexa unha galería de aplicacións e imaxes artísticas creadas polos nosos usuarios
+      title: "Galería"
+      body: "Vexa unha galería de aplicacións e imaxes artísticas creadas polos nosos usuarios"
     frozen:
-      title: Frozen
+      title: "Frozen"
     starwars:
-      title: Star Wars
+      title: "Star Wars"
     infinity:
-      title: Laboratorio infinito
-      body: Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity.
+      title: "Laboratorio infinito"
+      body: "Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity."
     minecraft:
-      title: Minecraft
-      body: Explora un mundo Minecraft através do código.
+      title: "Minecraft"
+      body: "Explora un mundo Minecraft através do código."
+    minecraft2016:
+      title: "Minecraft"
+      body: "Program animals and other Minecraft creatures in your own version of Minecraft."
     unplugged:
-      title: Unplugged Lessons
-      audience: Ages 4+
+      title: "Unplugged Lessons"
+      audience: "Ages 4+"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
   gallery:
-    students_drew_these_with_code: Os alumnos crearon isto con programación!
-    students_made_these_with_code: Os alumnos crearon isto con programación!
-    picture_count: 'Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b> imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes para ver cada programa em execución.'
-    activity_count: 'Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b> aplicacións e figuras escribindo os seus proprios programas de computador. Clique nas figuras e capturas de pantalla para ver cada programa en funcionamento.'
-    want_to_make_your_own: Queres crear o teu propio programa?
-    how_to_save: 'On the last level of these tutorials, click "Finish" and "Save" to save your work to the gallery.'
-    more: 'Máis &rarr;'
-    caption_by_name_age: 'feito por %{name}, anos %{age}'
-    caption_time_ago: 'hai %{time_ago}'
-    header: Galería
-    header_playlab: Laboratorio de xogos
-    header_artist: Artista
-    report_abuse: Reportar abuso
+    students_drew_these_with_code: "Os alumnos crearon isto con programación!"
+    students_made_these_with_code: "Os alumnos crearon isto con programación!"
+    picture_count: "Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b> imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes para ver cada programa em execución."
+    activity_count: "Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b> aplicacións e figuras escribindo os seus proprios programas de computador. Clique nas figuras e capturas de pantalla para ver cada programa en funcionamento."
+    want_to_make_your_own: "Queres crear o teu propio programa?"
+    how_to_save: "On the last level of these tutorials, click \"Finish\" and \"Save\" to save your work to the gallery."
+    more: "Máis &rarr;"
+    caption_by_name_age: "feito por %{name}, anos %{age}"
+    caption_time_ago: "hai %{time_ago}"
+    header: "Galería"
+    header_playlab: "Laboratorio de xogos"
+    header_artist: "Artista"
+    report_abuse: "Reportar abuso"
   landing:
     prerelease: "Este curso está na súa versión <span class='betatext'>beta</span>. Isto significa que esta non é a versión final do curso, e está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
     prerelease_hoc2014: "Este titorial está na versión <span class='betatext'>beta</span>. Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras."
-    report_bug: Comunicar erro
-    support: Obter axuda
-    support_url: //support.code.org
-    help_resources: Help and Resources
+    report_bug: "Comunicar erro"
+    support: "Obter axuda"
+    support_url: "//support.code.org"
+    help_resources: "Help and Resources"
   multi:
-    wrong_title: Resposta incorrecta
-    wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
-    correct_title: Certo
-    correct_body: A túa resposta é correcta.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "Resposta incorrecta"
+    wrong_body: "A resposta que vostede tecleou non é correcta. Tente novamente!"
+    correct_title: "Certo"
+    correct_body: "A túa resposta é correcta."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   multi-submittable:
-    wrong_title: Graciñas
-    wrong_body: Thank you for submitting an answer.
-    correct_title: Graciñas
-    correct_body: Thank you for submitting an answer.
-    toofew_title: Too few answers.
-    toofew_body: Please select two answers before submitting.
+    wrong_title: "Graciñas"
+    wrong_body: "Thank you for submitting an answer."
+    correct_title: "Graciñas"
+    correct_body: "Thank you for submitting an answer."
+    toofew_title: "Too few answers."
+    toofew_body: "Please select two answers before submitting."
   level_group:
-    wrong_title: Graciñas
-    wrong_body: Thank you for submitting answers.
-    correct_title: Graciñas
-    correct_body: Thank you for submitting answers.
-    hide_survey_last_answer: 'This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey.'
+    wrong_title: "Graciñas"
+    wrong_body: "Thank you for submitting answers."
+    correct_title: "Graciñas"
+    correct_body: "Thank you for submitting answers."
+    hide_survey_last_answer: "This survey is anonymous.  Please visit the teacher dashboard for aggregate results.  Note that results are only visible if at least five students submitted the survey."
   level_group-submittable:
-    wrong_title: Graciñas
-    wrong_body: Thank you for submitting answers.
-    correct_title: Graciñas
-    correct_body: Thank you for submitting answers.
-    unsubmit-title: Unsubmit your assessment
-    unsubmit-body: 'Unsubmitting your assessment will reset the submitted time and date.  Are you sure?'
-    submit-incomplete-title: Submit your assessment
-    submit-incomplete-body: 'You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?'
-    submit-complete-title: Submit your assessment
-    submit-complete-body: 'You cannot edit your assessment after submitting it.  Are you sure?'
+    wrong_title: "Graciñas"
+    wrong_body: "Thank you for submitting answers."
+    correct_title: "Graciñas"
+    correct_body: "Thank you for submitting answers."
+    unsubmit-title: "Unsubmit your assessment"
+    unsubmit-body: "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?"
+    submit-incomplete-title: "Submit your assessment"
+    submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
+    submit-complete-title: "Submit your assessment"
+    submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
-    wrong_title: Solución incorrecta
-    wrong_body: A súa solución non é correcta. Tente novamente!
-    correct_title: Certo
-    correct_body: A túa resposta é correcta.
+    wrong_title: "Solución incorrecta"
+    wrong_body: "A súa solución non é correcta. Tente novamente!"
+    correct_title: "Certo"
+    correct_body: "A túa resposta é correcta."
   contract_match:
-    wrong_title: Resposta incorrecta
-    badname: O teu contrato ten o nome errado.
-    badname_case: Os nomes das funcións diferencian letras maiúsculas de minúsculas. Tente alterar o uso de maiúsculas e minúsculas no nome do seu contrato.
-    badrange: O teu contrato ten a imaxe errada.
-    baddomainsize: O seu contrato non ten o número correcto de elementos no dominio.
-    baddomainname: Un ou máis dos seus elementos de dominio teñen o nome errado.
-    baddomaintype: Un ou máis dos seus elementos de domínio teñen o tipo errado, ou están en orde errónea.
+    wrong_title: "Resposta incorrecta"
+    badname: "O teu contrato ten o nome errado."
+    badname_case: "Os nomes das funcións diferencian letras maiúsculas de minúsculas. Tente alterar o uso de maiúsculas e minúsculas no nome do seu contrato."
+    badrange: "O teu contrato ten a imaxe errada."
+    baddomainsize: "O seu contrato non ten o número correcto de elementos no dominio."
+    baddomainname: "Un ou máis dos seus elementos de dominio teñen o nome errado."
+    baddomaintype: "Un ou máis dos seus elementos de domínio teñen o tipo errado, ou están en orde errónea."
   text_match:
-    placeholder: Insira a súa resposta aquí
-    open_response_title: Graciñas
-    open_response_body: Graciñas por responderes!
-    correct_title: Certo
-    correct_body: A túa resposta é correcta.
+    placeholder: "Insira a súa resposta aquí"
+    open_response_title: "Graciñas"
+    open_response_body: "Graciñas por responderes!"
+    correct_title: "Certo"
+    correct_body: "A túa resposta é correcta."
   dialog:
-    ok: OK
-    startover_title: Estás seguro de que queres empezar de novo?
-    startover_body: Esta acción vai reiniciar o teu puzzle ao estado inicial e reiniciar todos os datos que agregaches ou alteraches.
-    startover_ok: Empezar de novo
-    startover_cancel: Cancelar
+    ok: "OK"
+    startover_title: "Estás seguro de que queres empezar de novo?"
+    startover_body: "Esta acción vai reiniciar o teu puzzle ao estado inicial e reiniciar todos os datos que agregaches ou alteraches."
+    startover_ok: "Empezar de novo"
+    startover_cancel: "Cancelar"
   time:
-    hour: 1 hora
-    day: día
-    week: semana
+    hour: '1 hora'
+    day: 'día'
+    week: 'semana'
   age_interstitial:
     age: A súa idade
     header: Actualización de informacións da conta
-    message: 'Estamos actualizando nosa experiencia para que vostede teña proteccións de privacidade aínda máis fortes. Para iso, precisamos que os usunrios nos informem da súa idade.<br/>Como sempre, a code.org nunca vai alugar, vender ou compartir esta información con terceiros.'
+    message: "Estamos actualizando nosa experiencia para que vostede teña proteccións de privacidade aínda máis fortes. Para iso, precisamos que os usunrios nos informem da súa idade.<br/>Como sempre, a code.org nunca vai alugar, vender ou compartir esta información con terceiros."
     sign_out: 'Se vostede non quere informar a súa idade, vostede pode <a href="%{url}">saír</a>.'
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
+    title: "Updated Terms of Service and Privacy Policy"
+    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We''ve sent you a summary of the other changes via email.'
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
-    tos: Termos de Servizo
-    privacy: Política de Privacidade
-    privacy_notice: Privacy Notice
+    tos: "Termos de Servizo"
+    privacy: "Política de Privacidade"
+    privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: Accept
-    print: Imprimir
-    later: Later
+    accept: "Accept"
+    print: "Imprimir"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: Review updated terms
+    review_terms: "Review updated terms"
+  race_interstitial:
+    title: 'Optional: Help us track our progress toward improving diversity in computer science'
+    message: "Please tell us your race (check all that apply)"
+    races:
+      - 
+        white: White
+      - 
+        black: Black or African American
+      - 
+        hispanic: Hispanic or Latino
+      - 
+        asian: Asian
+      - 
+        hawaiian: Native Hawaiian or other Pacific Islander
+      - 
+        american_indian: American Indian/Alaska Native
+      - 
+        other: Outros
+      - 
+        opt_out: Prefer not to say
+    submit: "Enviar"
+    decline: "Pechar"
   zendesk_too_young_message: 'Pedimos desculpa, pero os usuarios máis novos non poden crear unha conta no noso sitio Web. Podes acceder a <a href="http://support.code.org">support.code.org</a> sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren en contacto connosco.'
   progress:
     not_started: non iniciado
@@ -597,133 +631,202 @@ gl:
     assessment: avaliación
     submitted: submitted
   studio:
-    courses_working_on: Cursos que vostede está a facer
-    completed_courses: Cursos concluídos
-    all_courses: Todos os cursos
+    courses_working_on: "Cursos que vostede está a facer"
+    completed_courses: "Cursos concluídos"
+    all_courses: "Todos os cursos"
   project:
-    projects: Proxectos
-    create: Crear proxecto
+    projects: "Proxectos"
+    create: "Crear proxecto"
     create_a_project: 'Crea un proxecto novo:'
-    new: Crear novo
-    rename: Renomear
-    save: Salvar
-    delete: Eliminar
-    exit: Voltar ao curso
-    my_projects: Os meus proxectos
-    share: Compartir
+    new: "Crear novo"
+    rename: "Renomear"
+    save: "Salvar"
+    delete: "Eliminar"
+    exit: "Voltar ao curso"
+    my_projects: "Os meus proxectos"
+    share: "Compartir"
     share_title: Comparte o teu proxecto
-    share_copy_link: 'Copia a ligazón:'
-    share_embed_description: You can paste the embed code into an HTML page to display the project on a webpage.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in your school.
-    embed: Embed
-    advanced_share: Show advanced options
-    close: Pechar
-    more: Máis
-    name: Nome
-    updated: Última actualización
-    project_type: Tipo de proxecto
-    help_text: 'Clica en <strong>Desenvolver unha aplicación</strong> ou <strong>Desenhar algunha cousa</strong> para entrares nun novo Laboratorio de xogos ou faceres un Proxecto de artista!<br/>Podes voltar a traballar nos teus proxectos cando quixeres.'
-    need_help: Precisas de axuda para comezares?
-    really_delete: Eliminar?
-    delete_yes: Si
-    delete_no: Non
-    saved: Gardado na Galería!
-    not_saved: Non gardado
-    cancel: Cancelar
+    share_copy_link: "Copia a ligazón:"
+    share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."
+    share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
+    embed: "Embed"
+    advanced_share: "Show advanced options"
+    close: "Pechar"
+    more: "Máis"
+    name: "Nome"
+    updated: "Última actualización"
+    project_type: "Tipo de proxecto"
+    help_text: "Clica en <strong>Desenvolver unha aplicación</strong> ou <strong>Desenhar algunha cousa</strong> para entrares nun novo Laboratorio de xogos ou faceres un Proxecto de artista!<br/>Podes voltar a traballar nos teus proxectos cando quixeres."
+    need_help: "Precisas de axuda para comezares?"
+    really_delete: 'Eliminar?'
+    delete_yes: 'Si'
+    delete_no: 'Non'
+    saved: "Gardado na Galería!"
+    not_saved: "Non gardado"
+    cancel: 'Cancelar'
     delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
-    delete_confirm_text: Ao eliminares este proxecto estás a removelo permanentemente de “Os meus proxectos”. Os usuarios con quen compartiches a ligazón para este proxecto deixarán de poder velo.
-    view_all: Ver os meus proxectos
-    remix: Remix
-    click_to_remix: 'Clique em "Remix" para facer a súa propia versión!'
-    edit_project: Editar proxecto
+    delete_confirm_text: "Ao eliminares este proxecto estás a removelo permanentemente de “Os meus proxectos”. Os usuarios con quen compartiches a ligazón para este proxecto deixarán de poder velo."
+    view_all: 'Ver os meus proxectos'
+    remix: 'Remix'
+    click_to_remix: "Clique em \"Remix\" para facer a súa propia versión!"
+    edit_project: 'Editar proxecto'
     abuse:
       tos: "Este proxecto foi reportado por violar os <a href='http://code.org/tos'>Termos de Servizo</a> da Code.org e non pode ser compartido."
-      policy_violation: This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app.
+      policy_violation: "This project contains information that cannot be shared with others. Please contact the app owner to fix the contents of their app."
       contact_us: "Se pensa que isto é un erro, <a href='https://code.org/contact'>contáctenos</a> se fai o favor."
       go_to_code_studio: 'Ir ao "Code Studio"'
       report_abuse_form:
-        intro: No caso de que teña atopado contidos ofensivos, ameazas, cyberbullying, acoso ou violación de dereitos de autor relativamente a contidos seus durante a utilización de aplicacións desenvolvidas no Code Studio, por favor cubra o formulario de abaixo. Trataremos a queixa de forma seria, investigar e tomar as accións necesarias.
+        intro: 'No caso de que teña atopado contidos ofensivos, ameazas, cyberbullying, acoso ou violación de dereitos de autor relativamente a contidos seus durante a utilización de aplicacións desenvolvidas no Code Studio, por favor cubra o formulario de abaixo. Trataremos a queixa de forma seria, investigar e tomar as accións necesarias.'
         validation:
-          email: Por favor indique um enderezo de email
-          age: Por favor indique a idade
-          abuse_type: Por favor indique de que forma este contido viola os Termos de Utilización
-          abuse_detail: Por favor forneza detalles sobre o contido ao cal se refire
-        abusive_url: URL do contido denunciado
+          email: 'Por favor indique um enderezo de email'
+          age: 'Por favor indique a idade'
+          abuse_type: 'Por favor indique de que forma este contido viola os Termos de Utilización'
+          abuse_detail: 'Por favor forneza detalles sobre o contido ao cal se refire'
+        abusive_url: 'URL do contido denunciado'
         abuse_type:
           question: 'De que forma este contido viola os %{link_start}Termos de Utilización%{link_end}?'
-          harassment: Ameazas, cyberbullying, acoso
-          offensive: Contido ofensivo
-          infringement: Violación de dereitos de autor
-          other: Outros
-        detail: Por favor forneza todos os detalles sobre o contido que está a reportar.
+          harassment: 'Ameazas, cyberbullying, acoso'
+          offensive: 'Contido ofensivo'
+          infringement: 'Violación de dereitos de autor'
+          other: 'Outros'
+        detail: 'Por favor forneza todos os detalles sobre o contido que está a reportar.'
         acknowledge: 'Ao enviar esta información, acepta que esta será tratada de acordo cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end} e dos %{link_start_tos}Termos de Utilización%{link_end}'
   peer_review:
     accepted:
-      name: Accepted
+      name: 'Accepted'
       description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
     rejected:
-      name: Rejected
+      name: 'Rejected'
       description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
-      name: Escalated
-      description: I would like an instructor to review this submission
-    instructor_feedback: Instructor Feedback
-    peer_feedback: Peer Feedback
-    outdated: This feedback was added for a previously submitted version
-    review_in_progress: Ready to review
-    link_to_submitted_review: Link to submitted review
-    reviews_unavailable: Reviews unavailable at this time
+      name: 'Escalated'
+      description: 'I would like an instructor to review this submission'
+    instructor_feedback: 'Instructor Feedback'
+    peer_feedback: 'Peer Feedback'
+    outdated: 'This feedback was added for a previously submitted version'
+    review_in_progress: 'Ready to review'
+    link_to_submitted_review: 'Link to submitted review'
+    reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
-    must_be_enrolled: You must be enrolled in this course to review peers
-    no_reviews_at_this_moment_notice: There are no peer reviews available at this moment, please check back soon
-    review_submitted: Your peer review was submitted
-    review_new_submission: Review a new submission
+    must_be_enrolled: 'You must be enrolled in this course to review peers'
+    no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
+    review_submitted: 'Your peer review was submitted'
+    review_new_submission: 'Review a new submission'
   components:
     icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
+      search_placeholder_text: 'Search for an icon...'
+      no_icons_found: 'Non se atoparon iconas'
     playzone:
-      artist_description: Debuxa imaxes estupendas e deseños co Artista!
-      artist_title: New Drawing
-      continue_button: Go on to the next Stage
-      playlab_description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
-      playlab_title: New App
+      artist_description: 'Debuxa imaxes estupendas e deseños co Artista!'
+      artist_title: 'New Drawing'
+      continue_button: 'Go on to the next Stage'
+      playlab_description: 'Crea unha historia ou fai un xogo con Laboratorio de Xogos!'
+      playlab_title: 'New App'
       primary_header: 'Congratulations! You finished %{stageName}!'
-      projects_description: Revisit one of your existing projects.
-      projects_title: Open a project
-      secondary_header: Ask your teacher what to do next
+      projects_description: 'Revisit one of your existing projects.'
+      projects_title: 'Open a project'
+      secondary_header: 'Ask your teacher what to do next'
   flex_category:
-    required: Visión xeral
-    content: Content
-    practice: Teaching Practices
-    peer_review: Peer Review
+    required: 'Visión xeral'
+    content: 'Content'
+    practice: 'Teaching Practices'
+    peer_review: 'Peer Review'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
-    disclaimer_text: "This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available."
+    disclaimer_text: This site may have privacy policies that differ from Code.org's. We have selected these third party resources because we think they will be useful to you. While we are not directly responsible for the content of this website, please <a href='%{support_url}'>contact support</a> if you find the content objectionable, or if the linked site is no longer available.
   hoc_download:
-    title: Hour of Code downloads
-    capsule_title: Do you have Internet?
+    title: 'Hour of Code downloads'
+    capsule_title: 'Do you have Internet?'
     capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
-    instructions_headline: No Internet?
+    instructions_headline: 'No Internet?'
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
-    minecraft_name: Minecraft Hour Of Code
+    minecraft_name: 'Minecraft Hour Of Code'
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
     download_message: 'Download %{app_name} for offline use (136MB)'
-    download_in_english: 'Download in English:'
-    download_in_spanish: 'Download in Spanish:'
-    windows: Windows
-    mac: Mac OS X
+    download_in_Albanian: 'Download in Albanian:'
+    download_in_Arabic: 'Download in Arabic:'
+    download_in_Azerbaijani: 'Download in Azerbaijani:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Download in Bosnian:'
+    download_in_Bulgarian: 'Download in Bulgarian:'
+    download_in_Catalan: 'Download in Catalan:'
+    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
+    download_in_Chinese: 'Download in Chinese:'
+    download_in_Croatian: 'Download in Croatian:'
+    download_in_Czech: 'Download in Czech:'
+    download_in_Danish: 'Download in Danish:'
+    download_in_Dutch: 'Download in Dutch:'
+    download_in_English: 'Download in English:'
+    download_in_Finnish: 'Download in Finnish:'
+    download_in_French: 'Download in French:'
+    download_in_German: 'Download in German:'
+    download_in_Greek: 'Download in Greek:'
+    download_in_Hebrew: 'Download in Hebrew:'
+    download_in_Hungarian: 'Download in Hungarian:'
+    download_in_Icelandic: 'Download in Icelandic:'
+    download_in_Indonesian: 'Download in Indonesian:'
+    download_in_Irish: 'Download in Irish:'
+    download_in_Italian: 'Download in Italian:'
+    download_in_Japanese: 'Download in Japanese:'
+    download_in_Korean: 'Download in Korean:'
+    download_in_Latvian: 'Download in Latvian:'
+    download_in_Lithuanian: 'Download in Lithuanian:'
+    download_in_Norwegian: 'Download in Norwegian:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Download in Russian:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: 'Download in Spanish:'
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Download in Turkish:'
+    download_in_Ukrainian: 'Download in Ukrainian:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
+    windows: 'Windows (64-bit)'
+    mac: 'Mac OS X'
   plc:
     preview_assignments:
-      content_focus_header: Content Focus Area
-      practice_focus_header: Practice Focus Area
-      content_focus_strong: Based on your self-assessment answers, we chose one content focus area for you.
-      practice_focus_strong: Based on your self-assessment answers, we chose one teaching practice focus area for you.
-      choose_different_focus_area: You can choose a different focus area if you think that it would help you better prepare to teach.
-      other_focus_areas_available: No matter what focus area you choose, all other resources will still be available for reference.
-      confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.
+      content_focus_header: 'Content Focus Area'
+      practice_focus_header: 'Practice Focus Area'
+      content_focus_strong: 'Based on your self-assessment answers, we chose one content focus area for you.'
+      practice_focus_strong: 'Based on your self-assessment answers, we chose one teaching practice focus area for you.'
+      choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
+      other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
+      confirm_focus_areas: 'Confirm Focus Areas'
+  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
-  return_course_overview: Go to unit overview
+  return_course_overview: 'Go to unit overview'
+  pd:
+    survey:
+      number_teachers: 'Number of attending teachers'
+      response_count: 'Number of survey responses'
+      facilitator_effectiveness: 'Facilitator Effectiveness (out of 5)'
+      teacher_engagement: 'Teacher Engagement (out of 5)'
+      overall_success: 'Overall Success Score (out of 6)'
+      how_much_learned_s: 'Overall, how much have you learned from your workshop about computer science?'
+      how_motivating_s: 'During your workshop, how motivating were the activities that this program had you do?'
+      how_clearly_presented_s: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?'
+      how_interesting_s: 'How interesting did your facilitator make what you learned in the workshop?'
+      how_often_given_feedback_s: 'How often did your facilitator give you feedback that helped you learn?'
+      how_comfortable_asking_questions_s: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?'
+      how_often_taught_new_things_s: "How often did your facilitator teach you things that you didn't know before taking this workshop?"
+      how_much_participated_s: 'During your workshop, how much did you participate?'
+      how_often_talk_about_ideas_outside_s: 'When you are not in Code.org workshops how often do you talk about the ideas from the workshops?'
+      how_often_lost_track_of_time_s: 'How often did you get so focused on Code.org workshop activities that you lost track of time?'
+      how_excited_before_s: 'Before the workshop, how excited were you about going to your Code.org workshop?'
+      overall_how_interested_s: 'Overall, how interested were you in the Code.org in-person workshop?'
+      more_prepared_than_before_s: 'I feel more prepared to teach the material covered in this workshop than before I came.'
+      know_where_to_go_for_help_s: 'I know where to go if I need help preparing to teach this material.'
+      suitable_for_my_experience_s: 'This professional development was suitable for my level of experience with teaching CS.'
+      would_recommend_s: 'I would recommend this professional development to others.'
+      part_of_community_s: 'I feel like I am a part of a community of teachers.'
+      things_facilitator_did_well_s: 'What were two things your facilitator(s) did well?'
+      things_facilitator_could_improve_s: 'What were two things your facilitator(s) could do better?'
+      things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
+      things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
+      anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'

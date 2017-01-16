@@ -1,0 +1,16 @@
+name 'Lesson 1.9 Overview'
+markdown <<MARKDOWN
+## Lesson 9: The Need for Addressing
+<img src="https://images.code.org/24f752d513262a3450cc90d57c4cb04d-image-1474226174000.png" style="float:right; margin-left:30px; width:200px">
+
+Group Problem Solving | Internet Simulator | Unplugged
+
+In this lesson, students explore more deeply how communication between multiple computers can work over the Internet. They do this by playing a simplified game of Battleship, in which the first game is played unplugged, in their table groups, and the second game is played using the Internet Simulator, so that multiple students can connect to each other and see each other’s messages. Students must devise a messaging protocol that makes it clear who is sending the message and who the intended recipient is.
+
+
+<h2>
+<a href= "https://curriculum.code.org/csp/unit1/9" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+</h2>
+
+<br><br>
+MARKDOWN

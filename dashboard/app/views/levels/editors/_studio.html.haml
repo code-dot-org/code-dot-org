@@ -1,5 +1,5 @@
 - content_for(:head) do
-  = javascript_include_tag 'js/levelbuilder_studio'
+  %script{src: minifiable_asset_path('js/levelbuilder_studio.js')}
 .field
   = f.label :first_sprite_index, 'First sprite index'
   %p Integer representing which sprite to use for the first character. Default is 0.

@@ -38,7 +38,11 @@ social:
 
     #tools-section.section.clear
       %h2 Tools to help you advocate locally
-      = view :promote_tools, state:nil
+      = view :promote_tools, state:nil, section_name: 'local_tools'
+
+    #resources-section.section.clear
+      %h2 Policy development resources
+      = view :promote_tools, state:nil, section_name: 'policy_resources'
 
   - if state == "thanks"
     #interactive-map.section.clear
@@ -88,12 +92,11 @@ social:
 
 :javascript
   var petition;
-  $(document).ready()
-  {
+  $(document).ready(function() {
     petition = new Petition();
     if (document.referrer.indexOf(location.host) !== -1) {
       $("#thank-you-box").show();
       $("#petition-section").hide();
     }
-  }
+  });
 

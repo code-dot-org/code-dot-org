@@ -2,16 +2,17 @@
   errors:
     messages:
       not_saved: 'Lütfen aşağıdaki hataları düzeltiniz:'
-      too_young: Bu içerik yaş sınırlamasına tabîdir ve daha genç öğrenciler için
-        uygun değildir
-      teacher_must_accept_terms: This content has age restrictions in place and is
-        not available for younger students. Ask your teacher to accept the updated
-        Terms of Service to give you access to this content. Your teacher can do this
-        by logging into Code Studio and clicking the "Review updated terms" button
-        near the top of the Code Studio homepage.
-      pair_programmer: You are currently pair programming with a student who does
-        not have access to this content. To access this content, stop pair programming
-        and try again.
+      too_young: Bu içerik yaş sınırlamasına tabîdir ve genç öğrenciler için uygun
+        değildir.
+      teacher_must_accept_terms: Bu içerik yaş sınırlamasına tabîdir ve genç öğrenciler
+        için uygun değildir. Bu içerik yaş sınırlaması vardır ve daha genç öğrenciler
+        için kullanılamaz. Bu içeriğe girmek için öğretmeninizden Hizmet ve Gizlilik
+        politikasını kabul etmesini söyleyin. Öğretmeniniz Code Studio'ya girip sonrasında
+        anasayfanın başında bulunan "Yenilenen Hizmet ve Gizlilik politikasını göster"
+        butonuna basarak gerçekleştirebilir.
+      pair_programmer: "Şu anda bu içeriğe erişemeyen bir öğrenci ile eşli programlama
+        yapıyorsun. Bu içeriğe erişmek için eşli programlamayı durdurun ve tekrar
+        deneyin."
   activerecord:
     errors:
       messages:
@@ -91,11 +92,24 @@
   signup_form:
     student_count: "%{count}öğrenciler çoktan giriş yaptı."
     teacher_count: "%{count}öğrenciler zaten giriş yaptı."
-    overview: Sign up for an account to track your progress or manage your classroom.
-      <a href="/">You can browse the various stages and puzzles</a> without an account,
-      but you will need to sign up to save your progress and projects.
+    overview: İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın.
+      <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi
+      ve projelerinizi saklamak için giriş yapmak gerekecektir.
+    hoc_already_signed_up_heading: Giriş yaparak başla
+    hoc_already_signed_up_content: Kodlama Saatinde öğretmek için kaydoldunuz! Siz
+      ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak
+      için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla
+      paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup
+      Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha
+      uzun </a> kurslara kaydedebilirsiniz.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: Eğitim rehberine bakın
-    title: Sign up for Code.org
+    title: Code.org için kayıt ol
     school_name: Okul Adı (isteğe bağlı)
     school_address: Okul Adresi (isteğe bağlı)
     address_placeholder: adres, şehir, eyalet, posta kodu
@@ -111,19 +125,23 @@
     valid_password: Geçerli parola!
     invalid_password: Parola en az 6 karakter olmalıdır
     mismatch_password: Girdiğiniz iki parola aynı değil
-    student_terms: Code.org <a href='http://code.org/tos'>hizmet şartlarını</a> kabul
-      ediyorum. Eğer 13 yaşın altında isem, bu formu doldurarak ebeveynimin veya yasal
-      vasimin izni ile Code.org hizmetlerini kullandığımı onaylarım.<br/> 13 yaşın
-      altındaki kullanıcılar için, iletişimde kullanılan e-posta adresleri saklanmıyor.
-    teacher_terms: Code.org <a href='http://code.org/tos'>hizmet koşullarına</a> bağlı
-      olduğumu kabul ediyorum.
+    student_terms: Code.org <a href='http://code.org/tos'> hizmet şartları</a> bağlı
+      olmayı kabul edersiniz. Eğer ben 13 yaşın altındaiseniz ebeveyn veya yasal veline
+      Code.org Hizmetleri kullanma iznine sahip bu formu gönderermesine izin veriyorsun.
+      <br/> <br/> E-posta adresleri bizim öğrenciler için izin veren  form içinde
+      depolanır. Öğrenciler  şifre kurtarma dışında Code.org e-postalar almassınız.
+      Bizim <a href='http://code.org/privacy'> Gizlilik Politikası</a> daha fazla
+      bilgi için bkz:.
+    teacher_terms: Code.org sitesinin Hizmet ve Gizlilik politikalarını kabul ediyorum.
+      Daha fazla bilgi için, <a href='http://code.org/privacy'> Hizmet ve Gizlilik
+      politikamıza göz atın</a>.
     additional_information: Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç
       duymaktayız.
     user_type_label: Hesap Türü
     user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
     field_is_required: gerekli
-    accept_terms: You must agree to create an account
+    accept_terms: Hesap oluşturmak için zorunlu olarak kabul etmelisiniz
   signin_form:
     title: Zaten bir hesabınız var mı? Oturum Aç
     login: E-posta
@@ -145,8 +163,8 @@
   password:
     reset_form:
       title: "Şifrenizi mi unuttunuz?"
-      instructions: Enter your email address below and we'll send you password reset
-        instructions.
+      instructions: E-mail adresinizi aşağıya yazın bu sayede size parola sıfırlama
+        yönergeleri göndeririz.
       email: E-posta adresi
       submit: Gönder
     change_form:
@@ -173,7 +191,7 @@
         Lütfen şurayı imzalayın isteyin ve sonra onları yeniden eklemeyi deneyin
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
-      cant_join_own_section: Malesef, kendi bölgenizde katılamazsınız.
+      cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
     mail:
       invite_student:
         subject: Code.org'ta %{teacher_name} ile bir sınıfa katıl!
@@ -287,7 +305,7 @@
       prizes: "Ödüller"
       logout: "Çıkış Yap"
       signin: Giriş Yap
-      signup: Kaydol
+      signup: Hesap oluştur
       already_registered: Zaten hesabınız var mı?
       pair_programming: Eşli Programlama
       team: Takım
@@ -318,7 +336,7 @@
     user_not_found: "Öğretmen bulunamadı."
     student_teacher_disassociated: "Öğretmenin %{teacher_name} olmayacak şekilde çıkartıldı."
     panel:
-      answer_viewer: cevap gözlemleyicisi
+      answer_viewer: "Öğretmen Paneli"
       student: "öğrenci"
       viewing_solution: "Çözüme Bak"
       try_it_yourself: kendini dene
@@ -328,7 +346,8 @@
       submitted_on: "%{date} tarihinde gönderildi"
       unsubmit: Gönderme
       worked_with: "İle çalıştı"
-      update_lock_settings: Update lock settings here.
+      update_lock_settings: Kilit ayarlarını burada değiştirin.
+      clear_response: Net yanıt
   user:
     email_confirm_needed: 'Eposta adresiniz teyit edilmedi:'
     email_confirm_needed_required: 'E-posta adresin %{email} doğrulanmadı:'
@@ -341,6 +360,7 @@
     delete_text_teacher_note: 'Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin
       hesaplarını silmez.'
     delete_confirm: Hesabınızı silmek istediğinize emin misiniz?
+    deleted_user: deleted user
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -399,28 +419,53 @@
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
     announcement_title: Bildirimler
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
+    announcement_message_fall2016_features: Görüşlerinize göre yeni özellikleri geliştirerek
+      yazı geçirdik. Şimdi, bir aygıtta programlama yapan birden fazla kişinin ilerlemesini
+      izleyebilirsiniz. <a href="%{pp_url}" target="_blank"> <i>Herhangi bir</i> sınıfta
+      <a href="%{csp_widgets_url}" target="_blank"> en iyi interaktif araçları</a>
+      bizim CS ilkeleri kursundan kullanabilirsiniz. Ve öğrencileri denemeye teşvik
+      etmek için kendi çalışma alanındaki <a href="%{unused_code_url}" target="_blank">
+      kullanılmayan kodları tutmalarını sağladık</a>! bizim yeni özellikleri kontrol
+      edinve bize ne düşündüğünüzü bildirin.
     announcement_csp_widgets_message: "İnternetin nasıl çalıştığını öğretmek ve   Şifrelemenin
       veriyi nasıl güvenli tuttuğunu gibi kavramları öğretmek için eğlenceli bir yöntem
       mi bakıyorsun? Bilgisayar bilimi prensiplerinden en eğlenceli olanlarını laldık
       ve kendibaşına kullanılabilen bileşenler oluşturduk!"
     announcement_learn_more_button: Daha fazlasını öğren
     announcement_try_now_button: "Şimdi dene"
+    announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
+    announcement_watch_video_button: Videoyu izle
     announcement_petition: "Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
       bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
       izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
       gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
       için bir açık mektup verdi."
     announcement_petition_button: Adınızı Ekleyin
+    announcement_go_beyond_button: Go beyond
     announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
       takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
+    announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
+      ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
+      organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a
+      href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
+      başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
+      öğretmeye başlayabileceğini söyleyin.
+    announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
+      Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
+      oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
+      paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
+      sınıfınla birlikte yap.
+    announcement_how_code_studio: You don't need any experience to start teaching
+      computer science in your classroom. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;everything you need, all at no cost. Wondering where to get
+      started? Download <a href='%{video_download_url}'>this video</a>!
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin."
@@ -572,7 +617,7 @@
     frozen:
       title: Donmuş
     starwars:
-      title: Star Wars
+      title: Yıldız Savaşları
     infinity:
       title: Sınırsız oyun laboratuarı
       body: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play
@@ -580,9 +625,13 @@
     minecraft:
       title: Minecraft
       body: Kod aracılığıyla Minecraft dünyasını keşfedin.
+    minecraft2016:
+      title: Minecraft
+      body: Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sendeki sürümde
+        programla.
     unplugged:
       title: Bağımsız dersler
-      audience: 6 yaş ve üzeri
+      audience: 4 yaş ve üzeri
       body: Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda
         bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz.
         Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka
@@ -694,33 +743,46 @@
     sign_out: Eğer yaşınızı girmek istemiyorsanız <a href="%{url}">buraya tıklayarak</a>
       çıkış yapabilirsiniz.
   terms_interstitial:
-    title: Updated Terms of Service and Privacy Policy
-    intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
-      The changes are effective as of August 24, 2016.  The biggest change: we will
-      <i>no longer store email addresses for student accounts on Code Studio.</i>
-      This is a big deal for us, and we hope it sets a new standard for student privacy
-      in education technology. We''ve sent you a summary of the other changes via
-      email.'
-    intro_instructions: You'll need to accept these new terms for students under the
-      age of 13 in your classroom to have full access to all the latest features in
-      Code Studio.  When registering an account for a student under 13, you will be
-      asked to confirm that your school has parental consent for the collection of
-      the student’s personal information for the use and benefit of the school, including
-      educational programs such as Code Studio.
+    title: Güncellenen Hizmet ve Gizlilik Politikası şartları
+    intro_desc: 'Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler
+      24 Ağustos 2016''dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code
+      Studio''daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim
+      için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine
+      yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak
+      gönderdik.'
+    intro_instructions: Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın
+      altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük
+      bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel
+      bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere
+      okul parası için ebeveyn izni olduğundan emin olun istenecektir.
     tos: "Şartlar"
     privacy: Gizlilik Politikası
-    privacy_notice: Privacy Notice
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
-    accept: Accept
+    privacy_notice: Gizlilik Politikası
+    accept_label: Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet
+      şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a>
+      kabul ediyorum
+    accept: Kabul et
     print: Yazdır
-    later: Later
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
-    review_terms: Review updated terms
+    reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
+      <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi.
+      Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği
+      güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
+    review_terms: Güncellenen Hizmet ve Gizlilik politikasını göster
+  race_interstitial:
+    title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki
+      ilerlememizi izlememize yardımcı olun'
+    message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
+    races:
+    - white: Beyaz
+    - black: Siyahi veya Afrika kökenli Amerikalı
+    - hispanic: "İspanyol veya Latin"
+    - asian: Asyalı
+    - hawaiian: Yerel Hawaii veya diğer Pasifik Adalı
+    - american_indian: Amerikalı Kızılderili / Alaska Yerlisi
+    - other: Diğer
+    - opt_out: Söylememek istemiyorum
+    submit: Gönder
+    decline: Kapat
   zendesk_too_young_message: Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar.
     <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan
     kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.
@@ -761,7 +823,7 @@
     updated: Güncellendi
     project_type: Proje türü
     help_text: "Uygulama oluştur'a tıklayın veya Yeni bir oyun labaratuvarı veya sanatçı
-      projesi çizin. \nGeri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz.\n"
+      projesi çizin. \nGeri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz."
     need_help: Başlarken yardıma mı ihtiyacınız var?
     really_delete: Silinsin mi?
     delete_yes: Evet
@@ -849,7 +911,7 @@
     peer_review: Eş gözden geçirme
   external_links:
     disclaimer: Yasal uyarı
-    leaving_domain: 'Code.org tarafından işletilen site değil. '
+    leaving_domain: Code.org tarafından işletilen site değil.
     disclaimer_text: "<strong>Yasal uyarı: Code.org tarafından işletilen bir site
       değil.</strong> Bu sitenin Code.org'dan farklı gizlilik ilkeleri olabilir. <br/>
       <br/> Onlar sizin için yararlı olacağını düşündüğümüz için seçtik. Biz doğrudan
@@ -870,8 +932,48 @@
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
       (Blocks)'
     download_message: "Çevrimdışı kullanım  için %{app_name} (136 MB) indir"
-    download_in_english: "İngilizce olarak indir:"
-    download_in_spanish: "İspanyolca olarak indir:"
+    download_in_Albanian: 'Arnavutça indir:'
+    download_in_Arabic: 'Arapça indir:'
+    download_in_Azerbaijani: 'Azerice indir:'
+    download_in_Basque: 'Download in Basque:'
+    download_in_Bosnian: 'Boşnakça indir:'
+    download_in_Bulgarian: 'Bulgaristanca indir:'
+    download_in_Catalan: 'Katalanca indir:'
+    download_in_Chinese-Taiwan: 'Tayvan Çincesi indir:'
+    download_in_Chinese: "Çince indir:"
+    download_in_Croatian: 'Hırvatça indir:'
+    download_in_Czech: "Çekce indir:"
+    download_in_Danish: 'Danimarkaca indir:'
+    download_in_Dutch: 'Almanca indir:'
+    download_in_English: "İngilizce indir:"
+    download_in_Finnish: 'Fince indir:'
+    download_in_French: Fransızca indir
+    download_in_German: 'Almanca indir:'
+    download_in_Greek: 'Yunanca indir:'
+    download_in_Hebrew: "İbranice indir:"
+    download_in_Hungarian: 'Macarca indir:'
+    download_in_Icelandic: "İzlandaca indir:"
+    download_in_Indonesian: 'Endonezyaca indir:'
+    download_in_Irish: "İrlandaca indir:"
+    download_in_Italian: "İtalyanca indir:"
+    download_in_Japanese: 'Japonca indir:'
+    download_in_Korean: 'Korece indir:'
+    download_in_Latvian: 'Litvanyaca indir:'
+    download_in_Lithuanian: 'Litvanyaca indir:'
+    download_in_Norwegian: 'Norveççe indir:'
+    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
+    download_in_Polish: 'Download in Polish:'
+    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
+    download_in_Portuguese: 'Download in Portuguese:'
+    download_in_Romanian: 'Download in Romanian:'
+    download_in_Russian: 'Rusça indir:'
+    download_in_Serbian: 'Download in Serbian:'
+    download_in_Slovenian: 'Download in Slovenian:'
+    download_in_Spanish: "İspanyolca indir:"
+    download_in_Swedish: 'Download in Swedish:'
+    download_in_Turkish: 'Türkçe indir:'
+    download_in_Ukrainian: 'Ukraynaca indir:'
+    download_in_Vietnamese: 'Download in Vietnamese:'
     windows: Windows
     mac: Mac OS X
   plc:
@@ -887,9 +989,57 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  locked_stage: Bu sahnenin içeriği görünmemektedir çünkü bu sahne şu anda kilitlidir.
+    Öğretmeniniz bu sahneyi size çalışmak veya yanıtlarınızı gözden geçirmek için
+    zamanında açacaktır.
+  hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi
+    derste olman gerektiğini sor."
+  return_course_overview: "Ünite genel bakışına git"
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

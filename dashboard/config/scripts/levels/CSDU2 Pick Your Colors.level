@@ -1,0 +1,20 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-03T18:45:15.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Pick Your Colors\r\n\r\nAnother component of creating your brand is picking the colors for your brand. These should be colors that stand out but also look good together. You want your users to enjoy looking at your page. You will want to keep your set of colors small so that the combination is memorable. A set of 4 main colors or less for your page will be a good place to start. Different shades of those colors can be used as well.\r\n\r\n# Do This\r\n\r\n* Go to the <a href=\"http://paletton.com/\"> Paletton </a> website.\r\n* Decide how many primary colors you want for your brand.\r\n* Set the number of primary colors useing these buttons <img src=\"https://images.code.org/669d2fe15825ea753f804ebb690aab95-image-1475594935612.28.22 AM.png\" style=\"width:150px\">. The number of dots shows the number of primary colors.\r\n* Play with dragging around the dots to find the primary colors you like. The one that takes up the biggest box on the right will be your primary color.\r\n\r\n<img src=\"https://images.code.org/b5811cea1acf1bf281ab73661db4b7cb-image-1475595405528.gif\" style=\"width:400px\">\r\n\r\n* Once you have picked your colors click <img src=\"https://images.code.org/3d30144dbe0cadc9bd083f1967e66b20-image-1475595929655.44.22 AM.png\" style=\"width:100px\"> which is below the color boxes on the right.\r\n\r\n* A list like the one below will show up click on **\"as Text\"** below the Color List header.\r\n\r\n<img src=\"https://images.code.org/d39c3112948cd860148f2228f5b1c45a-image-1475595929655.44.43 AM.png\" style=\"width:150px\">\r\n\r\n* A page that looks like the one below will open. **Copy the text from this page into the box below.** This will give you the RGB values for the colors as well as hex codes which you may want on the next level.\r\n\r\n<img src=\"https://images.code.org/731d2612a1ccb47a4db8085abe910266-image-1475596945480.02.14 PM.png\" style=\"width:400px\">",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

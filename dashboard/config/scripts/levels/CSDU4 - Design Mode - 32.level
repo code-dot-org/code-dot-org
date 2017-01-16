@@ -51,7 +51,8 @@
     "start_blocks": "onEvent(\"screen1\", \"keypress\", function(event){\r\n console.log('key is: '+event.key); \r\n});",
     "instructions": "Try out the keyup and keydown events to see how they are different from keypress. (Click to see full instructions)",
     "encrypted_examples": "KyM18f6JZFaKgbBF8lSIu8ySp1rjH3P7mLMfVHl0FF6wcQfpQnFZAeDnZ8S7\nGwK3\n",
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

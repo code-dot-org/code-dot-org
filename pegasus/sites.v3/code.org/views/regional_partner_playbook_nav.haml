@@ -1,0 +1,26 @@
+#about_nav
+  %span.about_list
+    -current_url = request.path_info
+    -{'PLAYBOOK HOME'=>'/educate/regional-partner/playbook',
+      'Communications and Branding'=>'/educate/regional-partner/playbook/communications',
+      'Community Building'=>'/educate/regional-partner/playbook/community',
+      'Counselor and Administrator PD'=>'/educate/regional-partner/playbook/administrator',
+      'Curriculum Guides'=>'/educate/regional-partner/playbook/curriculum',
+      'Facilitator Support'=>'/educate/regional-partner/playbook/facilitator-support',
+      'Fundraising Resources'=>'/educate/regional-partner/playbook/funding',
+      'Ordering Supplies'=>'/educate/regional-partner/playbook/ordering-supplies',
+      'Partner Directory'=>'/educate/regional-partner/playbook/directory',
+      'Payment Information'=>'/educate/regional-partner/playbook/payments',
+      'Reporting and Evaluations'=>'/educate/regional-partner/playbook/reporting-and-evaluations',
+      'Teacher and District Recruitment'=>'/educate/regional-partner/playbook/teacher-recruitment',
+      'Teacher Support'=>'/educate/regional-partner/playbook/teacher-support',
+      'Timeline'=>'/educate/regional-partner/playbook/timeline',
+       'Training Materials'=>'/educate/regional-partner/playbook/training-materials',
+      'Workshop Dashboard'=>'/educate/regional-partner/playbook/workshop-dashboard',
+      'Workshop Planning'=>'/educate/regional-partner/playbook/workshop-planning',
+      'FAQ'=>'/educate/regional-partner/playbook/faq'}.each_pair do |label,url|
+      - if current_url == url
+        %span.about_list_item_selected= label
+      -else
+        %a.about_list_item{:href=>url}= label
+      %hr.narrow_hr

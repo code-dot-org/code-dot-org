@@ -17,7 +17,7 @@
     "slider_speed": "0.4",
     "video_key": "C3_artist_intro",
     "embed": "false",
-    "markdown_instructions": "Help me finish drawing my box. (Each line is 300 pixels long) \r\n\r\n<h5>**More on Angles**</h5>\r\n![](https://images.code.org/dede4ee3f1698a385a3a8e404d5758b4-image-1439254128944.gif)\r\n![](https://images.code.org/c24a3fdc9e5e31b4e943f749a18b7996-image-1439254361981.png)",
+    "markdown_instructions": "Help me finish drawing my box. (Each line is 300 pixels long) \r\n\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -35,6 +35,7 @@
     "never_autoplay_video": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)\",\r\n  \"hint_id\": \"4-5_Artist_1_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "discard_background": "false",
+    "instructions_important": "true",
     "contained_level_names": null
   },
   "published": true,

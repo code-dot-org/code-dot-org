@@ -1,0 +1,107 @@
+name 'How "if-else-if" Works'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# How if-else-if Works
+
+<img src="https://images.code.org/106e53acf8cd901e0a754e408658ec9f-image-1479743802624.png" style="float: right">
+
+Not all conditions you want to check have only two possible outcomes. However a computer can only check *one true/false condition at a time*.
+
+* You add an `else-if` clause to an *if* statement when you have another condition you want to check.
+* When you hit the `+` on the tail of an *else* clause it will add an *else if* into the statement.
+* You can add as many `else-if`s as you want.
+* Each condition in an *if-else-if* is **checked in order from top to bottom** and the final *else* clause is executed if *all* the previous conditions evaluated to false.
+
+<div style="clear: both"> </div>
+
+## A Worked Example
+
+Here is an example that is similar to the one presented in the video.  We've added an extra condition to illustrate how if-else-if statements work.
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">1.</span>
+Ask the user to enter their age and save it in a variable.<br>
+
+<img src="https://images.code.org/a288ac11e535da5b2ddab62d2f8fcb5d-image-1479741790389.png"  style="float: right">
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">2.</span>
+*First* check to see if the age is 17 or over. If it is they can see an R-rated movie.<br>
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">3.</span>
+If we reach this condition it means that the previous condition was *false*.  So now let's check if the age is 13 or over and display a message.<br>
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">4.</span>
+To reach this statement means that, so far, the previous conditions we've checked have come up *false*.  So now let's check if the age is 5 or over and display a message.<br>
+
+<div style="clear: both; column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">5.</span>
+If we reach the final <em>else</em> clause it means all the previous conditions came up <em>false</em>. So this is what gets displayed.</p>
+<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="color: #00adbc; font-weight: bold; font-size: 120%">6.</span>
+Execution picks up on the first line after the <code>if-else-if</code> block. This "thank you" message at the end will display no matter what.</p>
+<p>
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">7.</span>
+<strong>NOTE:</strong> because there is a final <em>else</em> clause you are <strong>guaranteeing that exactly one of these statements will execute</strong>.  It is possible to write a chain of <em>else-if</em> conditions without a final else, in which case it's possible that the whole structure will be skipped.
+</p>
+</div>
+
+## What Can Go Wrong?
+
+When writing *if-else-if* there are two common mistakes and thus two things to pay attention to:
+
+### **The order of the conditions matters!** 
+
+* An *if-else-if* will to execute the code for the *first* condition that comes up `true` -- *all other conditions will be ignored*.
+* An *if-else-if* statement is like saying, "FIRST check *this* condition, THEN check *this* one, THEN check *this* one and so on.
+
+The **common mistake** is to accidentally have a condition early in the sequence that makes the other statements *impossible* to reach. For example, if you changed the order of the conditions in our movie ratings example:
+
+<img src="https://images.code.org/2952af1f6bd8af82ea85a0b2e4558e89-image-1479741538437.png" style="float: right">
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">1.</span>
+This condition is true for any age over 4, so this *console.log* will execute right away, and the rest of the statements will be ignored.  <br>
+
+<span style="color: #00adbc; font-weight: bold; font-size: 120%">2.</span>
+Notice that *it's impossible for either of these two conditions to even be reached*.  We can't check if the age is over 13 because it would have been caught by the first condition.
+
+The **misconception** that leads to this mistake is to think that the *if-else-if* statement is considered in its entirety before execution - it's not. The conditions are checked sequentially, from top-to-bottom just like everything else.
+
+### **Without a final *else* clause it's possible that the whole structure can be skipped**
+
+Just like an *if* statement without an else is skipped over if the condition is false, an *if-else-if* without a final else clause is *skipped over entirely if none of the conditions is true*. 
+
+<img src="https://images.code.org/7af905634f9ed0d4ea371f909c8b426d-image-1479742511200.png" style="float: right">
+
+Here is a generic example - forgetting what the code inside the *if* statements is supposed to do, just consider the *if-else-if* structure here.
+
+**What happens if `val` is 0?** (or anything that's not 1, 2, 3, or 4?)
+
+**Answer:** nothing.  If `val` is 0 then each of the conditions will be checked in order, and since none of them is true, nothing will be executed.
+
+This might seem obvious here, but the most common way this happens is that in your program you *think* that `val` can only be 1, 2, 3, or 4, but something happens to make it be some other value you weren't expecting. It's particularly hard to catch because there are no syntax errors here, nothing will crash due to an illegal operation.  It will *fail silently*.
+
+A way to protect yourself is to add a final else clause - even if you think it can't be reached - that prints a statement to yourself like "uh oh!".
+
+
+## Else-if is Convenient but Not Required (for AP)
+
+It’s worth noting that *if-else-if* doesn’t provide you with any new capabilities that you didn’t have before with plain old *if-else* statements.  You can create *any* if-else-if structure by **nesting if-statements.**
+
+Here is our movie ratings example with nested if-else statements - it functions *exactly the same* as if they were *else-if* statements as we described above.
+
+<img src="https://images.code.org/abf73f4e9b7ed0e769b16dbc6b951a0b-image-1479739671254.png" style="display: block; margin: auto;">
+
+<div style="clear: both; column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+It’s so common to want to check multiple conditions that JavaScript (and most languages) have some notion of <em>else-if</em> built into the language. For example, if you wanted to check a set of 10 conditions, you wouldn't want to nest 10 <em>if-else</em> statements within each other.  Nesting many statements can take up a lot of space with all the indenting. What you get with the <em>if-else-if</em> is basically a more nicely formatted, easier-to-read block of statements than its more primitive nested version.
+</div>
+<br>
+
+### NOTE: The AP Pseudocode DOES NOT Have else-if
+
+It's also important to note that the **AP pseudocode DOES NOT have else-if** as a construct.  
+
+So on the AP exam if some problem requires checking multiple conditions you'll see it as nested *if-else* statements.
+MARKDOWN

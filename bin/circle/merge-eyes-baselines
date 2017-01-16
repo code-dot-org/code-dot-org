@@ -3,6 +3,8 @@
 require_relative '../../lib/cdo/git_utils'
 require_relative '../../lib/cdo/eyes_utils'
 
+# Temporarily disable all eyes branch merging
+exit(0)
 # Temporarily disable eyes branch merging on non-main-pipeline branches
 exit(0) unless ['staging', 'test', 'production'].include?(GitUtils.current_branch)
 exit(0) unless ['staging', 'test', 'production'].include?(GitUtils.get_latest_commit_merged_branch)

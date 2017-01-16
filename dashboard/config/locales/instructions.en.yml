@@ -1411,9 +1411,12 @@ en:
         is?"
       Course 4 Artist For Loops 9_instruction: "Can you make a spiral? Move forward
         from 1 to 75 pixels, increasing by 1 pixel each time."
-      Course 4 Artist For Loops Challenge_instruction: "Can you figure out how to
-        use all of the things you've learned to create this image?\r\n\r\nNeed a
-        hint? Click here."
+      Course 4 Artist For Loops Challenge_instruction: "**Challenge:** Can you figure
+        out how to use all of the things you've learned to create this image of polygons,
+        all with 40 pixel sides?"
+      Course 4 Artist For Loops Challenge_a_instruction: "Can you figure out how
+        to use all of the things you've learned to create this image?\r\n\r\nNeed
+        a hint? Click here."
       Course 4 Artist For Loops inspire_instruction: "Free-Play Inspiration: You've
         now learned everything you need to know to make a pattern like this! If this
         picture inspires you, try to make something similar. Otherwise, create something
@@ -1886,8 +1889,8 @@ en:
       Course 4 Playlab For Loops 5b_instruction: "Adjust the interval on these `for`
         loops so that the two characters end in the exact same place."
       Course 4 Playlab For Loops 6b_instruction: "Edit this `for` loop to create
-        a game that's fun for you to play!\r\n\r\nPress \"Run\" and click Madame
-        Unicorn four times to win. "
+        a game that's fun for you to play! \r\nPress \"Run\" and click Madame Unicorn
+        as many times as you can.  Can you beat our score of 24? "
       Course 4 SCF 1_instruction: "Use the suggested functions to draw four rows
         of hexagons. Notice how our even numbered rows are shifted to the right?"
       Course 4 SCF 1a_instruction: "Can you figure out how to collect all of this
@@ -2000,6 +2003,354 @@ en:
         and the speed of Waddles, and then move him with the arrows until you score?"
       course3_playlab_stage17_7_instruction: "Create your own story. When you're
         done, click Finish to let friends try your story on their phones."
+      course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
+        hard to understand these days!"
+      course_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech
+        by changing the value of the variables in just two places! \r\n"
+      course_playlab_variables3_instruction: "Now, decode Pirate Pegleg's speech
+        by changing the value of the variables in just two places! \r\n"
+      courseA_maze_seq1_instruction: "Play with these blocks to see if you can get
+        me to the pig!"
+      courseA_maze_seq2_instruction: "A bug! Fix the code to get me to the pig."
+      courseB_playlab_events2_instruction: "Have Daisy the Dragon say something when
+        you click \"Run\"."
+      courseB_playlab_events3_instruction: "Use an event to make Daisy the Dragon
+        switch to a random mood when you click on her."
+      courseB_playlab_events4_instruction: "Knight time!  Add an event so that the
+        knight moves toward the dragon when the left arrow is clicked."
+      courseB_playlab_events5_instruction: "Now add an event so that the knight runs
+        away from the dragon when you press the right arrow."
+      courseB_playlab_events6_instruction: "Help your knight get all of the flags!\r\n\r\nTo
+        do this, you'll need to add events to help the knight move up and down."
+      courseB_playlab_events7_instruction: "Make this game fun by setting the knight
+        to vanish when he runs into the dragon!  Play a sound when they collide to
+        make it feel more real."
+      courseB_playlab_events8_instruction: "Use your imagination. What can you do
+        to make this game more fun?"
+      courseB_playlab_eventsFP_instruction: "Use your imagination. What can you do
+        to make this game more fun?"
+      courseB_playlab_eventsToolbox_instruction: "Finish by playing a sound and making
+        the knight vanish when he runs into the dragon!"
+      courseC_artist_prog1_instruction: "Play with the blocks in the toolbox to see
+        what they do!"
+      courseC_artist_prog2_instruction: "Drag blocks onto the screen to have the
+        artist draw over the grey lines in the picture. (Each line is 100 pixels long)"
+      courseC_artist_prog3_instruction: "Each side of the inner square is 100 pixels
+        and all of the angles are 90 degrees."
+      courseC_artist_prog4_instruction: "Finish Starla's rocket so she can chase
+        her pet."
+      courseC_artist_prog5_instruction: "Finish this tag by drawing a rectangle around
+        the outside.\r\n(The long sides are 200 pixels each and the short sides are
+        each 100 pixels)"
+      courseC_artist_prog6_instruction: "Draw this diamond with 200 pixel sides."
+      courseC_artist_prog7_instruction: "**Challenge:** This tag is a special one!  Can
+        you figure out how to draw the outline?"
+      courseC_artist_prog8_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
+        side is 150 pixels)"
+      courseC_collector_prog1_instruction: "Play around with the blocks to see if
+        you can help Laurel collect some gold."
+      courseC_collector_prog2_instruction: "Move Laurel to the gold, then use `collect`
+        to pick it up."
+      courseC_collector_prog3_instruction: "Order these blocks to collect the coins
+        and solve the puzzle."
+      courseC_collector_prog4_instruction: "Put these blocks in order to collect
+        all of the gold and solve the puzzle."
+      courseC_collector_prog5_instruction: "These blocks are in the wrong order.
+        Can you fix them?"
+      courseC_collector_prog6_instruction: "Reorder the blocks to collect all of
+        the treasure."
+      courseC_collector_prog7_instruction: "Use blocks from the toolbox to collect
+        all of the treasure."
+      courseC_collector_prog8_instruction: "*\"Keep up the good work! Help me collect
+        all of the coins.\"*"
+      courseC_collector_prog9_instruction: "*\"Let's get all of the coins!\"*"
+      courseC_collector_progA_instruction: "Help Laurel collect all of the treasure."
+      courseC_collector_progB_instruction: "Collect as many coins as you can to finish
+        the stage!"
+      courseC_harvester_loops1_instruction: "Use loops to pick all of the pumpkins."
+      courseC_harvester_loops10_instruction: "Collect all of the corn and all of
+        the pumpkins."
+      courseC_harvester_loops11_instruction: "Collect all of the corn and all of
+        the pumpkins."
+      courseC_harvester_loops2_instruction: "Can you combine two different loops
+        to move toward the pumpkins, then collect them all?"
+      courseC_harvester_loops3_instruction: "Collect all of the pumpkins."
+      courseC_harvester_loops4_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops5_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops6_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops7_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_harvester_loops8_instruction: "**Challenge:** Collect all of the corn
+        and all of the pumpkins."
+      courseC_harvester_loops9_instruction: "Collect all of the corn and all of the
+        pumpkins."
+      courseC_maze_debugging1_instruction: "Fix the code to help get Skrat get to
+        the acorn."
+      courseC_maze_debugging10_instruction: "Debug this level by rearranging and
+        changing blocks to get me to the pig!"
+      courseC_maze_debugging2_instruction: "Use your debugging skills to get Skrat
+        to the acorn."
+      courseC_maze_debugging3_instruction: "Remove blocks to get Skrat to the acorn!"
+      courseC_maze_debugging4_instruction: "Someone has their directions mixed up!
+        Can you help?"
+      courseC_maze_debugging5_instruction: "Debug this level by rearranging and changing
+        blocks."
+      courseC_maze_debugging6_instruction: "Figure out what is wrong and get Skrat
+        to the acorn."
+      courseC_maze_debugging7_instruction: "**Challenge:** Debug this level by rearranging,
+        adding, and deleting blocks."
+      courseC_maze_debugging8_instruction: "Debug this level to get Skrat to the
+        acorn."
+      courseC_maze_debugging9_instruction: "Debug this level to get Skrat to the
+        acorn."
+      courseC_maze_loops1_instruction: "Can you get the bird to the pig using 5 of
+        the same kind of blocks?"
+      courseC_maze_loops10_instruction: "You are doing great! Keep it up!"
+      courseC_maze_loops11_instruction: "You are almost there! This time, choose
+        any path you like!"
+      courseC_maze_loops2_instruction: "Can you get the bird to the pig by creating
+        a loop that uses only one `move forward` block inside of a `repeat`?"
+      courseC_maze_loops3_instruction: "Solve this puzzle by creating a loop!"
+      courseC_maze_loops4_instruction: "In this puzzle, two `repeat` loops will help
+        you get the bird to the pig with the fewest number of blocks!"
+      courseC_maze_loops5_instruction: "*\"Get me to the pig as quickly as possible!\"*"
+      courseC_maze_loops6_instruction: "Loops even work with more than one block
+        inside!  Can you loop this sequence?"
+      courseC_maze_loops7_instruction: "Use what you learned in other puzzles!"
+      courseC_maze_loops8_instruction: "Challenge: Combine ideas from the last few
+        puzzles to complete this level."
+      courseC_maze_loops9_instruction: "You are doing great! Keep it up!"
+      courseC_maze_programming1_instruction: "For this puzzle, drag all of the blocks
+        together and click \"Run\" to watch it go!"
+      courseC_maze_programming2_instruction: "Drag an extra `move forward` block
+        out of the toolbox to finish your code."
+      courseC_maze_programming3_instruction: "There is one extra block that is going
+        to cause the bird to crash. Throw it away by dragging it back to the toolbox."
+      courseC_maze_programming4_instruction: "Avoid TNT or feathers will fly!"
+      courseC_maze_programming5_instruction: "Avoid the TNT."
+      courseC_maze_programming6_instruction: "\"Keep calm and help me find the bad
+        pig. Otherwise I might get angry!\""
+      courseC_maze_programming7_instruction: "**Challenge:** This code has a lot
+        of bugs. You'll need to remove some blocks and add others."
+      courseC_maze_programming8_instruction: "*\"Keep calm and help me find the bad
+        pig.\"*"
+      courseC_maze_programming9_instruction: "*\"Now, help me sneak up on the pig
+        any way you want to!\"*"
+      courseC_PlayLab_events1_instruction: "Make Jorge the Dog (actor 1) say \"Hi
+        there.\""
+      courseC_PlayLab_events2_instruction: "Can you make Jorge (actor 1) say something,
+        then have Olive the Cat (actor 2) say something afterward?"
+      courseC_PlayLab_events3_instruction: "Can you write a program to make Jorge
+        (actor 1) move toward Olive the Cat?"
+      courseC_PlayLab_events4_instruction: "Can you write a program that makes Jorge
+        (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge
+        reaches her?"
+      courseC_PlayLab_events5_instruction: "Can you write a program to make Octavia
+        say \"What's new?\" when she is clicked?"
+      courseC_PlayLab_events6_instruction: "Now, write a program to make Waddles
+        move around using the up / down / left / right keys to hit all of the targets!"
+      courseC_PlayLab_events7_instruction: "The `repeat forever` block allows you
+        to run code over and over forever.  Use this block to move Chomp the Dino
+        (actor 2) up and down by 400 pixels forever."
+      courseC_PlayLab_events8_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"
+        and play a \"hit\" sound if he runs into Chomp? \r\nWhen you're done, play
+        the game to make that happen."
+      courseC_PlayLab_events9_instruction: "Can you add a block to score a point
+        when Waddles (actor1) runs into Octavia (actor 3)? \r\nPlay the game and move
+        Waddles with the arrows until you score!"
+      courseC_PlayLab_eventsA_instruction: "Add blocks to the `when run` event to
+        change the background scene and the speed of Waddles.\r\n\r\nPlay the game
+        and move Waddles with the arrows until you score."
+      courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
+        done, click \"Finish\" to share with friends."
+      courseC_puppy_loops10_instruction: "You are doing great! Keep it up!"
+      courseC_puppy_loops11_instruction: "You are almost there! This time, choose
+        any path you like!"
+      courseC_puppy_loops8_instruction: "Challenge: Combine ideas from the last few
+        puzzles to complete this level."
+      courseC_puppy_loops8courseC_maze_loops8_instruction: "Challenge: Combine ideas
+        from the last few puzzles to complete this level."
+      courseC_puppy_loops9_instruction: "You are doing great! Keep it up!"
+      courseD_artist_nestedLoops1_instruction: "Draw a triangle to kickstart this
+        stage.  \r\n(Each side is 100 pixels long and you'll need to turn 120 degrees
+        for each exterior angle.)"
+      courseD_artist_nestedLoops10_instruction: "Take the triangles from before,
+        but this time only make 7 of them, and lay them out in a row."
+      courseD_artist_nestedLoops1a_instruction: "Now loop the triangle 6 times. \r\nAfter
+        each triangle, you'll need to turn 60 degrees before drawing the next."
+      courseD_artist_nestedLoops2_instruction: "Now loop the triangle 6 times. \r\nAfter
+        each triangle, you'll need to turn 60 degrees before drawing the next."
+      courseD_artist_nestedLoops3_instruction: "Use what you've learned to draw
+        the last row of windows for this building.\r\n\r\nThe windows are 20 pixels
+        long and 20 pixels apart."
+      courseD_artist_nestedLoops4_instruction: "Great!  Do the same thing with these
+        circles.\r\n"
+      courseD_artist_nestedLoops5_instruction: "What happens if you also turn 90
+        degrees between circles?"
+      courseD_artist_nestedLoops6_instruction: "Edit blocks within your existing
+        code to make this image."
+      courseD_artist_nestedLoops7_instruction: "Use what you've learned to make
+        this drawing.\r\n"
+      courseD_artist_nestedLoops8_instruction: "Using what you have learned in the
+        last couple of puzzles, build this image from the beginning."
+      courseD_artist_nestedLoops9_instruction: "**Challenge:** Can you figure out
+        how to make a picture like this?"
+      courseD_artist_nestedLoopsFP_instruction: "Now it's your turn.  Take the skills
+        you have learned and make something that you love!"
+      courseD_artist_nestedLoopsPre1_instruction: "Create a triangle to kickstart
+        this stage."
+      courseD_bee_nestedLoops1_instruction: "Help the bee collect all of the nectar."
+      courseD_bee_nestedLoops2_instruction: "Help the bee collect all of the nectar
+        using as few blocks as possible."
+      courseD_bee_nestedLoops3_instruction: "Collect all of the nectar from each
+        flower."
+      courseD_bee_nestedLoops5_instruction: "Collect all of the nectar from each
+        flower and make honey at the honeycomb. "
+      courseD_bee_nestedLoops6_instruction: "Make all of the nectar."
+      courseD_maze_until1_instruction: "Get the angry bird to the pig."
+      courseD_maze_until10_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until2_instruction: "Now, use the `repeat until` loop to do the
+        same thing without specifying how many times to move forward and turn."
+      courseD_maze_until3_instruction: "Get the bird to the pig."
+      courseD_maze_until4_instruction: "Can you get the zombie to the sunflower using
+        only the blocks that are available?"
+      courseD_maze_until5_instruction: "Use the `if` block to help the zombie decide
+        when to turn, then get the zombie to the sunflower."
+      courseD_maze_until6_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until7_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until8_instruction: "Help the zombie get to the sunflower."
+      courseD_maze_until9_instruction: "**Challenge:** Avoid the chompers and help
+        the zombie get to the sunflower."
+      courseE_artist_concept1_instruction: "Recreate this image. "
+      courseE_artist_concept4_instruction: "Recreate this drawing using 13 blocks
+        or fewer."
+      courseE_farmer_concept1_instruction: "Can you write a program that fills these
+        holes until the ground is even?"
+      courseE_farmer_concept2_instruction: "Collect all of the pumpkins."
+      courseE_farmer_concept3_instruction: "Fill in the hole at the end of each of
+        these paths."
+      courseE_farmer_concept4_instruction: "Now let's go one level deeper! We've
+        nested that whole block of code into another loop, but you need to get the
+        artist back in place to draw the next line. Which of these code blocks can
+        you place at the end of the outermost loop to draw the whole grid?"
+      courseE_farmer_functions1_instruction: "Help the farmer get to the pumpkin
+        and pick it."
+      courseE_farmer_functions10_instruction: "No one knows what these sprouts will
+        become.  Use `if` statements to write the code to check and harvest each one.   "
+      courseE_farmer_functions10b_instruction: "Figure out which function to use
+        and which one to delete, then solve this puzzle!"
+      courseE_farmer_functions1a_instruction: "Now help the farmer pick the corn,
+        lettuce, **and** pumpkin."
+      courseE_farmer_functions2_instruction: "Now, there will be a different number
+        of pumpkins each time you run the program.   \r\n\r\nUse the `while` block
+        to pick only as many pumpkins as you need."
+      courseE_farmer_functions2a_instruction: "We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier."
+      courseE_farmer_functions2aALT_instruction: "We're going to check lots of squares
+        for crops in the next few puzzles.  Let's move everything into a function
+        to make it easier."
+      courseE_farmer_functions2b_instruction: "Help the farmer pick the corn, lettuce,
+        and pumpkin."
+      courseE_farmer_functions3_instruction: "What happens when the paths to the
+        pumpkins are all different lengths?   \r\n\r\nGet them all with as few blocks
+        as possible."
+      courseE_farmer_functions3b_instruction: "Now help the farmer pick the corn,
+        lettuce, **and** pumpkin."
+      courseE_farmer_functions3c_instruction: "Which set of blocks helps the farmer
+        check for produce and pick it when it is available? Drag that code into a
+        function, then call your function from inside the `while path ahead` loops
+        (after the `move forward` block)."
+      courseE_farmer_functions4_instruction: "Great!  Now you have code that will
+        work to get pumpkins from any size path.\r\n\r\nLet's drag that code into
+        a function so we can use it in lots of ways...but first use it to solve this
+        puzzle again."
+      courseE_farmer_functions4b_instruction: "Use your new function to solve this
+        puzzle."
+      courseE_farmer_functions5_instruction: "How can you change your program to
+        get this function to work for each of these paths?"
+      courseE_farmer_functions5a_instruction: "How can you change your program to
+        get this function to work for each of these paths?"
+      courseE_farmer_functions5b_instruction: "The crops are now growing in clusters.  Add
+        some new `while` loops to your function to make sure you get all of the produce."
+      courseE_farmer_functions5c_instruction: "Your function will come in handy here."
+      courseE_farmer_functions6_instruction: "*\"Lettuce try something new!\"*\r\n\r\nHere's
+        some code to collect all of the lettuce.  Move it into a function so we can
+        use it later."
+      courseE_farmer_functions6b_instruction: "Pick all of the produce."
+      courseE_farmer_functions6c_instruction: "What do you need to add this program
+        to collect all of the produce?"
+      courseE_farmer_functions7_instruction: "Use your functions to solve this puzzle."
+      courseE_farmer_functions7b_instruction: "Make a second function that lets the
+        farmer get all of the produce down a path, then brings her back to where she
+        began."
+      courseE_farmer_functions8_instruction: "**Challenge:**  Solve this puzzle with
+        as few blocks as possible."
+      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the
+        pumpkin and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions9_instruction: "Use conditionals to simplify your program."
+      courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
+        a card - try adding some other fun features!"
+      courseE_video_createFunctions_instruction: "We don't have a video for creating
+        functions, yet. This is a placeholder."
+      courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.  Try
+        editing the variable in other ways.  "
+      courseF_artist_variables_2_instruction: "Now use another loop to draw three
+        of those triangles right next to each other.   \r\nYou can nest the code from
+        your last puzzle inside.\r\n"
+      courseF_artist_variables_5_instruction: "Add another set of loops at the end
+        of your code to add three more triangles. This time, move forward and up!"
+      courseF_artist_variables_6_instruction: "OOPS! We actually need the triangles
+        to be 60 pixels wide, with 60 pixel jumps.  \r\nAren't you glad you're using
+        a variable?"
+      courseF_artist_variables_9_instruction: "See what happens when you repeat the
+        code from the last puzzle 30 times instead of only 3!\r\n\r\nFeel free to
+        make your lines any color or pattern for some extra zest."
+      courseF_artist_variables_FP_instruction: "**Freeplay:** Take what you've learned
+        and make your own drawing. \r\n\r\nHow can you use variables with squares,
+        pentagons, or hexagons?"
+      coursef_explore_CYOA_Witch_instruction: "You can do whatever you want in play
+        lab! Here's an example of story in play lab."
+      coursef_explore_playlab2_instruction: "You can do whatever you want in play
+        lab! Here's an example of story in play lab."
+      coursef_explore_playlab_cat_game_instruction: "You can do whatever you want
+        in play lab! Here's an example of game you can make."
+      courseF_playlab_variables0_instruction: "This is Pirate Pegleg.  He's awfully
+        hard to understand these days!"
+      courseF_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
+        hard to understand these days!"
+      courseF_playlab_variables1a_instruction: "Variables can be used to store text
+        that you want to use later.  Have Kiki, the soccer player,  scream \"Goal!\"
+        by assigning that text to the `shout` variable."
+      courseF_playlab_variables2_instruction: "Now, decode Pirate Pegleg's speech
+        by changing the value of the variables in just two places! \r\n"
+      courseF_playlab_variables2a_instruction: "Now, decode Pirate Pegleg's speech
+        by changing the value of the variables in just two places! \r\n"
+      courseF_playlab_variables2b_instruction: "Insert the variable `color` into
+        the middle of a sentence by putting it into the empty slot in the `join` block."
+      courseF_playlab_variables3_instruction: "The `ask` block will automatically
+        store whatever the user answers into the variable of your choice."
+      courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with
+        Brian by using the variable `A1` in all of the places where age `12` should
+        be used. "
+      courseF_playlab_variables4_instruction: "Can you find the correct variable
+        in the toolbox to fill in the slot?"
+      courseF_playlab_variables4b_instruction: "Put the variables in the correct
+        places to create this conversation."
+      courseF_playlab_variables5_instruction: "Can you find the correct variable
+        in the toolbox to fill in the slot?"
+      courseF_playlab_variables5b_instruction: "Put all of the variables in the correct
+        place so that Pegleg's story makes sense."
+      courseF_playlab_variables6b_instruction: "We have provided some starter questions
+        and variables for you. Join them together and put them in the title screen
+        to make a fun story."
+      courseF_playlab_variables7b_instruction: "Create some questions and weave the
+        answers together into your very own story."
+      courseF_playlab_variables8b_instruction: "Use what you've learned to create
+        an improv scene between the actors."
       Crack a Caesar Cipher_instruction: "Instructions"
       Crack Random Substitution_instruction: "Instructions"
       CSD Hackathon Pt 1_instruction: "(Click to see full instructions)"
@@ -2181,6 +2532,8 @@ en:
         error within the program. (Click to see full instructions)"
       CSDU4 - Design Mode - 8_instruction: "Move the button to the middle of the
         screen. (Click to see full instructions)"
+      CSDU4 nameAgeTemplate_instruction: "Add an Text Input box for the name and
+        age. (Click to see full instructions)"
       CSP Data Unit - Counting Multiple Things_instruction: "If you can count one
         thing you can count multiple things\r\n\r\nFind out how many people like something
         other than dogs and cats\r\n\r\nCount dogs\r\nCount cats\r\nCount total\r\nDo
@@ -2200,6 +2553,604 @@ en:
       CSP U4 - Objects - createObject_instruction: "Create an object with at least
         5 values including at least one string and one number. (Click to see full
         instructions) "
+      CSPU5 Add a 2nd Screen_instruction: "Make a 2 screen app with a black screen
+        and a white screen. (Click to see detailed instructions)"
+      CSPU5 Add full screen image to bg of chaser game_instruction: "Recreate the
+        game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen.
+        (Click to see full instructions.)"
+      CSPU5 Add game over screen_instruction: "Recreate the game from the \"Chaser
+        Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)"
+      CSPU5 Add onEvent from Design Mode_instruction: "Add an event handler for the
+        button using the \"Insert and show\" link in the Design Mode Events tab. (Click
+        to see full instructions)."
+      CSPU5 Add Screens to Chaser Game_instruction: "Recreate the game from the \"Chaser
+        Game\" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)"
+      CSPU5 Add welcome screen to chaser game_instruction: "Recreate the game from
+        the \"Chaser Game\" with a Welcome Screen and Game Over Screen. (Click to
+        see full instructions.)"
+      CSPU5 Adding Screens Template_instruction: "Make a 2 screen app with a black
+        screen and a white screen. (Click to see detailed instructions)"
+      CSPU5 Debugging Overlapping Objects and Screen Events_instruction: "Recreate
+        the \"Chaser Game\" from the last lesson using Design Mode. (Click to see
+        full instructions.)"
+      CSPU5 First Time Console.log_instruction: "Add a 3 console.log messages and
+        test them out. (Click to see full instructions.)"
+      CSPU5 Layering and Deleting in Design Mode_instruction: "Fix the layout of
+        the bullseye game. (Click to see full instructions)"
+      CSPU5 Project - Multi Screen App_instruction: "Create your multi-screen app.
+        (Click to see full instructions.)"
+      CSPU5 Use Console.log to update IDs_instruction: "Update the ID names and `console.log`
+        messages to match the correct button. (Click to see full instructions.)"
+      CSPU5 Use setScreen for first time_instruction: "Make a 2 screen app which
+        can switch back and forth between a black screen and a white screen using
+        buttons. (Click to see detailed instructions.)"
+      CSPU5_addDescriptiveIDsToTurtleDriver_instruction: "Improve the button by choosing
+        a descriptive and meaningful ID. (Click to see full instructions)"
+      CSPU5_AddImage_andMakeChaserGame_instruction: "Introducing the setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked."
+      CSPU5_AddImageToChaserGame_instruction: "Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked."
+      CSPU5_AddLabelToChaserGame_instruction: "Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked."
+      CSPU5_basic if - check driving age_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
+      CSPU5_basic if - DIY secret number_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
+      CSPU5_basic if - voting examle_instruction: "Use console.log to print out the
+        different boolean expressions below to see what information they return. (Click
+        to see full instructions)"
+      CSPU5_basic if-else - driving age_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
+      CSPU5_clickerGame_v1_template_instruction: "Create your own \"Chaser App\".
+        (Click to see full instructions)"
+      CSPU5_Debugging predict unexpected behavior - two onEvents to one ID_instruction: "Predict
+        what will happen. Once you've made a prediction, run the code to see what
+        happens. (Click to see full instructions)"
+      CSPU5_FinalizeChaserGame_instruction: "Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked."
+      CSPU5_moveTurtleOnButtonClick_instruction: "Add an event handler to the button
+        to move the turtle forward. (Click to see full instructions)"
+      CSPU5_playWithEventTypes_instruction: "Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)"
+      CSPU5_Project - Multi Screen App_instruction: "Create your multi-screen app.
+        (Click to see full instructions.)"
+      CSPU5_setPosition to fixed location_instruction: "Introducing the setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked."
+      CSPU5_turtleDriver_add2ndButton_instruction: "Debug the program by verifying
+        your IDs are being referenced properly. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - appendItem_instruction: "Create an array of odd numbers
+        1-11 by using appendItem. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - assignment_instruction: "Use indexes to change the values
+        in this array from 1 to 0. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - assignment2_instruction: "Calculate the sum of three values
+        stored in an array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - assignment3_instruction: "Increase the value of each value
+        in the randomly generated array by 1. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - createFirstArray_instruction: "Create an array of the even
+        numbers from 0 to 10 and display its contents with console.log. (Click to
+        see full instructions)"
+      CSPU5_U3 - Arrays - Demo App_instruction: "Use the \"My Favorite Things\" app.
+        How might this app be making use of an array? (Click to see full instructions)"
+      CSPU5_U3 - Arrays - expressionsAsIndexes_instruction: "Write a program that
+        displays a randomly chosen color from the array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings addItem_instruction: "Write code that allows
+        a user to add their own favorite things to the list. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings bounds_instruction: "Add if statements to your
+        event handlers that prevent the global index from going out of bounds. (Click
+        to see full instructions)"
+      CSPU5_U3 - Arrays - favThings Counting Variable_instruction: "Create a global
+        variable for the current index and use it to display the first item in the
+        array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings createArray_instruction: "Create an array of
+        words describing your favorite things. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings firstOutput_instruction: "Use setText to display
+        the first item in the array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings giveIDs_instruction: "Give your UI elements descriptive
+        and meaningful IDs. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings keepPlaying_instruction: "Make any other improvements
+        you want! (Click to see full instructions)"
+      CSPU5_U3 - Arrays - favThings Next_instruction: "Write code that allows the
+        user to move forward through your list by clicking the \"Next\" button. (Click
+        to see full instructions)"
+      CSPU5_U3 - Arrays - favThings Prev_instruction: "Write code that allows the
+        user to move backward through your list by clicking the \"Last\" button. (Click
+        to see full instructions)"
+      CSPU5_U3 - Arrays - indexPractice_instruction: "Write the contents of the array
+        to the screen in numerical order. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - insertingItems_instruction: "Insert items into an array
+        to form a complete sentence. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - insertionErrors_instruction: "Run each command that references
+        indexes that are out of bounds and observe the results. (Click to see full
+        instructions)"
+      CSPU5_U3 - Arrays - introIndex_instruction: "Display the first and last element
+        in the array. Display the number 5 from the array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - length_instruction: "Use list.length to determine the length
+        of each array. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - lengthMinus1_instruction: "Use list.length - 1 to log the
+        last item in the array to the console. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - remove_instruction: "Remove items from an array to form
+        a complete sentence. (Click to see full instructions)"
+      CSPU5_U3 - Arrays - stringsInArrays_instruction: "Write a sentence word by
+        word by adding strings to an array. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - 200dots_instruction: "Add a loop to your program that draws
+        200 dots on your canvas. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - appendToArray_instruction: "Create an array to store each
+        event parameter. Append each event parameter to this array within your event
+        handler. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - changeToMouseMove_instruction: "Change your program so
+        that dots are drawn at the location of the mouse as the user moves the mouse
+        on the canvas. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - clickToAdd_instruction: "Change your program so that dots
+        are added to the canvas when the user clicks on it. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - delete_instruction: "Create a button that deletes the drawing
+        by clearing the canvas and removing all stored values. (Click to see full
+        instructions)"
+      CSPU5_U3 - Canvas - draw at click point_instruction: "Change your program so
+        that dots are drawn at the location of the mouse click. (Click to see full
+        instructions)"
+      CSPU5_U3 - Canvas - freePlay_instruction: "Extend the functionality of one
+        of the effects, or create an entirely new one of your own. (Click to see full
+        instructions)"
+      CSPU5_U3 - Canvas - introCanvas_instruction: "Add a canvas to your app and
+        set it to be the active canvas. Then add a large dot to your canvas. (Click
+        to see full instructions)"
+      CSPU5_U3 - Canvas - movementFunction fix Orig_instruction: "Modify the \"Original\"
+        button event handler so that it takes the movement of the mouse into account.
+        (Click to see full instructions)"
+      CSPU5_U3 - Canvas - movementFunction_instruction: "Write a function that takes
+        the movement of the mouse as input and generates a line width as output. (Click
+        to see full instructions)"
+      CSPU5_U3 - Canvas - One Dot sprayPaint_instruction: "Write code that redraws
+        your image using a dot whose x and y locations use offsetX and offsetY with
+        a small random value added. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - redrawOriginal_instruction: "Write a function that processes
+        your array, redrawing the dots as they originally appeared. (Click to see
+        full instructions)"
+      CSPU5_U3 - Canvas - redrawRandom_instruction: "Set up a button and event handler
+        for the random function. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - redrawRandom2_instruction: "Write a function that processes
+        your array, redrawing every dot with a random size. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - shiftKey_instruction: "Add an if statement to your event
+        handler so dots are only drawn when the shift key is pressed. (Click to see
+        full instructions)"
+      CSPU5_U3 - Canvas - sketch_instruction: "Write code that redraws your image
+        using a sketch effect. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - sprayPaint_instruction: "Update the spray paint code so
+        that it redraws your image using multiple random dots instead of using a nested
+        for loop. (Click to see full instructions)"
+      CSPU5_U3 - Canvas - transparentDots_instruction: "Change the colors of your
+        dots so they have a fully transparent stroke and partially transparent fill.
+        (Click to see full instructions)"
+      CSPU5_U3 - Canvas - usingOffsetXY_instruction: "Add a console.log command inside
+        the function of your event handler. Use it to display the event parameter.
+        Click on the screen to see the contents of the event parameter (Click to see
+        full instructions)"
+      CSPU5_U3 - Conditional Basics - 6_instruction: "Add a setText after the if
+        statement to \"Nope. Guess again.\" (Click to see full instructions)"
+      CSPU5_U3 - Conditionals - Combine AND OR and NOT_instruction: "Write an if
+        statement that uses AND and OR to display \"Time to go to school!\" if it's
+        not the weekend and the user is under 18. (Click to see full instructions.)"
+      CSPU5_U3 - Conditionals - Combine AND OR Simple_instruction: "Write an if statement
+        that uses AND and OR to display \"Sleep in!\" if it's the weekend and the
+        user is a teenager. (Click to see full instructions."
+      CSPU5_U3 - Conditionals - Simple AND_instruction: "Write an if statement that
+        uses AND to display \"You are a teenager.\" if the user enters an age between
+        13 and 19. (Click to see full instructions)"
+      CSPU5_U3 - Conditionals - Simple OR_instruction: "Write an if statement that
+        uses OR to display \"It's the weekend!\" if the user enters a weekend day
+        at the prompt. (Click to see full instructions)"
+      CSPU5_U3 - Design Mode - Console Log_instruction: "Update the ID names and
+        `console.log` messages to match the correct button. (Click to see full instructions.)"
+      CSPU5_U3 - Design Mode - Layers and Delete_instruction: "Fix the layout of
+        the bullseye game. (Click to see full instructions)"
+      CSPU5_U3 - Design Mode - Multi Screens 2_instruction: "Make a 2 screen app
+        which can switch back and forth between a black screen and a white screen
+        using buttons. (Click to see detailed instructions.)"
+      CSPU5_U3 - Design Mode - Multi Screens_instruction: "Make a 2 screen app with
+        a black screen and a white screen. (Click to see detailed instructions)"
+      CSPU5_U3 - Design Mode - WTF Console Log_instruction: "Add a 3 console.log
+        messages and test them out. (Click to see full instructions.)"
+      CSPU5_U3 - Design Mode -Recreate Beyond Buttons_instruction: "Recreate the
+        game from the \"Chaser Game\" with a Welcome Screen and Game Over Screen.
+        (Click to see full instructions.)"
+      CSPU5_U3 - Design Mode 1_instruction: "Add a large red button to your screen
+        using Design Mode. (Click for full instructions.)"
+      CSPU5_U3 - Dice - Dropdown and Score_instruction: "Add guess and score to the
+        Dice Game (Click to see full instructions)"
+      CSPU5_U3 - Dice - Dropdown with Strings_instruction: "Add a dropdown for difficulty
+        level that prints the difficulty level in the console. (Click to see full
+        instructions)"
+      CSPU5_U3 - Dice - If_instruction: "Show different die images for the random
+        number generated. (Click to see full instructions)"
+      CSPU5_U3 - Dice - Nested_instruction: "Use nested if statements to make the
+        scoring different for the different game levels. (Click to see full instructions)"
+      CSPU5_U3 - High Low - Debug_instruction: "Debug the order of the conditionals
+        so that it will actually tell the user when their guess is close. (Click to
+        see full instructions)"
+      CSPU5_U3 - High Low - Dropdown_instruction: "Add a dropdown for their guess
+        instead of promptNum (Click to see full instructions)"
+      CSPU5_U3 - High Low - Else if_instruction: "Add an else-if statement in order
+        to tell the user if their guess is high or low instead of just wrong. (Click
+        to see full instructions)"
+      CSPU5_U3 - High Low - Else_instruction: "Add an else statement so that the
+        program will tell the user when they are right and when they are wrong. (Click
+        to see full instructions)\r\n"
+      CSPU5_U3 - High Low - If_instruction: "Add code to the if statement that indicates
+        the user guessed the secret number. (Click to see full instructions)"
+      CSPU5_U3 - Keys - Add Image URLs_instruction: "Add image URLs to your array.
+        Replace the text area with an image and setText with setImageURL. Then test
+        your app! (Click to see full instructions)"
+      CSPU5_U3 - Keys - Buttons and Keys_instruction: "Have the program respond the
+        same way for both clicking images on the screen and hitting the up and down
+        keys on the keyboard. (Click to see full instructions)"
+      CSPU5_U3 - Keys - Demo App_instruction: "Play with the image scroller. Press
+        the left and right arrows to progress through the images."
+      CSPU5_U3 - Keys - Final Image Scroller_instruction: "Update the image scroller
+        to respond to buttons and key presses. (Click to see full instructions)"
+      CSPU5_U3 - Keys - Functions_instruction: "Write doUpArrow and doDownArrow functions
+        and call the functions instead of duplicating the code. (Click to see full
+        instructions)"
+      CSPU5_U3 - Keys - Key Up and Down_instruction: "Try out the keyup and keydown
+        events to see how they are different from keypress. (Click to see full instructions)"
+      CSPU5_U3 - Keys - Multiple Keys_instruction: "Play a different sound when the
+        down arrow is pressed. (Click to see full instructions)"
+      CSPU5_U3 - Loops -  Complex Condition_instruction: "Change the boolean expression
+        for the while loop so that it will stop when both dice are greater than or
+        equal to 5. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 1_instruction: "Change the condition for the while loop
+        to check if the variable num is less than 90. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 10_instruction: "Write a program that simulates the rolling
+        of two dice. Roll the dice repeatedly until the sum of the dice is either
+        7 or 11."
+      CSPU5_U3 - Loops - 11_instruction: "Fix the condition so that it keeps rolling
+        the die as long as the value is not a 2 or a 3 instead of rolling infinitely.
+        (Click to see full instructions)"
+      CSPU5_U3 - Loops - 12_instruction: "Change the code so that it prints the string
+        \"Hi\" 5 times. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 14_instruction: "Change the loop condition to prevent the
+        infinite loop and stop counting once the count is past 30. (Click to see full
+        instructions)"
+      CSPU5_U3 - Loops - 15_instruction: "Count the number of times the sum of the
+        dice is 12. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 2_instruction: "Try creating an infinite loop using !=,
+        > and <. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 3_instruction: "Change the if statement to a while loop
+        so the program will run until it rolls a 6. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 4_instruction: " Use the Debug Commands to make a list of
+        all the values rolled before a 6. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 5_instruction: "Add code inside the while loop which will
+        update the variable num so that the condition will eventually become false.
+        (Click to see full instructions)"
+      CSPU5_U3 - Loops - 6_instruction: "Fix the problem so the loop will run at
+        least once. Change the initial value of num to a dummy value such as -1. (Click
+        to see full instructions)"
+      CSPU5_U3 - Loops - 7_instruction: "Without adding any lines of code, reorder
+        the code so that it prints all the values of num. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 8_instruction: "Debug which number is not getting printed
+        and add a write statement to display that value. (Click to see full instructions)"
+      CSPU5_U3 - Loops - 9_instruction: " Modify the condition so that it keeps rolling
+        as long as both are less than 3. (Click to see full instructions)"
+      CSPU5_U3 - Loops - minus = operator_instruction: "Update the code to use the
+        -= operator to count from 30 down to 0 by 3's. (Click to see full instructions)"
+      CSPU5_U3 - Loops - Minus Minus_instruction: "Change the code to count down
+        from 10 to 1. (Click to see full instructions)"
+      CSPU5_U3 - Loops - plus and minus = operator_instruction: "Update the code
+        to use the += operator. (Click to see full instructions)"
+      CSPU5_U3 - Loops - Plus Plus_instruction: "Change the code to use count++ instead
+        of count = count + 1.  (Click to see full instructions)"
+      CSPU5_U3 - Loops - Typing in Console_instruction: "Use console to check the
+        ending value of num. (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Add 5_instruction: "Add 5 to all the values in
+        an array (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Counting Times_instruction: "Count the number
+        of times 5 appears in an array. (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Divid by 2_instruction: "Divide every value in
+        the array by 2. (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Find Min_instruction: "Complete the findMinVal
+        function to find and display the smallest value in an array  (Click to see
+        full instructions)"
+      CSPU5_U3 - Loops And Arrays - General Search Param_instruction: "Add a second
+        parameter to the search function for the value to search for.  (Click to see
+        full instructions)"
+      CSPU5_U3 - Loops And Arrays - Intro For Loop_instruction: "Add a for loop with
+        a console.log inside and test out the 3 pieces of the for loop. (Click to
+        see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Linear Search_instruction: "Visit every element
+        in the array and display \"true\" if the value is a 5, and \"false\" otherwise.
+        (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Loop Array If_instruction: "Use an if statement
+        to only display the values in the array that are greater than 5. (Click to
+        see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Make it a Function - add list parameter_instruction: "Create
+        a function that takes a list parameter and prints if the list contains a 5.
+        (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Make it a Function_instruction: "Move the code
+        that searches the list for a 5 into a function called \"search\". (Click to
+        see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Print Array_instruction: "Use a for loop to print
+        out all the values in an array. (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Printing Single True_instruction: "Process the
+        array and display a single \"true\" if the array contains a 5 or a single
+        \"false\" if it does not.  (Click to see full instructions)"
+      CSPU5_U3 - Loops And Arrays - Search with Boolean Var_instruction: "Make a
+        boolean variable to use as a flag to keep track of whether there is a 5 in
+        the array. (Click to see full instructions)"
+      CSPU5_U3 - Movie Bot - Multiple If Sequences_instruction: "Add another set
+        of if, else if, and else statements inside the question if statement to check
+        for keywords for movie ratings (G, PG, PG-13, and R). (Click to see full instructions)"
+      CSPU5_U3 - Movie Bot - Nested Motivation_instruction: "Add a separate set of
+        if statements to check for a \"?\" in the input. (Click to see full instructions)"
+      CSPU5_U3 - Movie Bot - toLowerCase_instruction: "Use the toLowerCase command
+        to change all user input into lowercase letters after they enter it. (Click
+        to see full instructions)"
+      CSPU5_U3 - Movie Bot - When Multiple If Statements_instruction: "Add an if
+        and else-if statement that checks for please and thank you. (Click to see
+        full instructions)"
+      CSPU5_U3 - Practice Create Performance Task_instruction: "Design and implement
+        your practice Create Performance Task. (Click to see full instructions)"
+      CSPU5_U3 - Return Values - constrainTurtle_instruction: "Use constrain in this
+        simple app to keep the turtle from driving off the screen.  (Click to see
+        full instructions)"
+      CSPU5_U3 - Return Values - debuggingConstrain_instruction: "Correct the error
+        in constrain so that it returns the appropriate value.  (Click to see full
+        instructions)"
+      CSPU5_U3 - Return Values - debuggingMaxVal_instruction: "Correct the error
+        in maxVal so that it correctly reports the maximum value.  (Click to see full
+        instructions)"
+      CSPU5_U3 - Return Values - useMinVal_instruction: "Call minVal within the console.log
+        statement to calculate the minimum of two values.  (Click to see full instructions)"
+      CSPU5_U3 - Return Values - wrapTurtle_instruction: "Write wrap in this simple
+        app to let the turtle \"wrap\" to the other side of the screen when it goes
+        off.  (Click to see full instructions)"
+      CSPU5_U3 - Return Values - writeMaxVal_instruction: "Write the function maxVal
+        and then use it within the console.log statement to calculate the maximum
+        of two values.  (Click to see full instructions)"
+      CSPU5_U3 - Simulation - 1_instruction: "Use a while loop to \"flip a coin 10
+        times\" and write the values to the screen. (Click to see full instructions)"
+      CSPU5_U3 - Simulation - 2.1_instruction: "Change your looping condition so
+        the simulation runs until there are 5 heads flipped. (Click to see full instructions)"
+      CSPU5_U3 - Simulation - 2.5_instruction: "Run your simulation to get the full
+        10,000 heads! How long did it take? (Click to see full instructions)"
+      CSPU5_U3 - Simulation - 2_instruction: "Keep track of how many heads (1's)
+        your program generates and print the results to the screen. (Click to see
+        full instructions)"
+      CSPU5_U3 - Simulation - 3_instruction: "Add functionality that counts how many
+        heads in a row are flipped. (Click to see full instructions)\r\n"
+      CSPU5_U3 - Simulation - 4_instruction: "Update your while loop's condition
+        so the the coin flips until there are three heads in a row. (Click to see
+        full instructions)"
+      CSPU5_U3 - Simulation - 5_instruction: "Change your while loop to run until
+        you get a streak of 12 heads. How many flips did it take? (Click to see full
+        instructions)"
+      CSPU5_U3 - Simulation - 6_instruction: "Keep adding to your simulation. What
+        do you want to explore next? (Click to see full instructions)"
+      CSPU5_U3 - User Input - Save getText To Variable_instruction: "Save the age
+        and name of the user in variables (Click to see full instructions)"
+      CSPU5_U3 - Variables - Set to Expression with Other Variables_instruction: "Write
+        an expression that calculates the player's total score and stores it in the
+        totalScore variable. The calculation is: the player's points times lives
+        divided by the total time. (click to see full instructions)"
+      CSPU5_U3 - Variables - Set to Expression_instruction: "Test out the new expressions.
+        (Click to see full instructions)"
+      CSPU5_U3 Digital Assistant Design_instruction: "Pick a topic for your Digital
+        Assistant and create the basic layout with a text input and text area. (Click
+        to show full instructions)"
+      CSPU5_U3 Digital Assistant Set Text_instruction: "Have your digital assistant
+        repeat back what the user types and include a canned response. (Click to see
+        full instructions)"
+      CSPU5_U3 Digital Assistant Target_instruction: "Try out a demo of the Digital
+        Assistant!"
+      CSPU5_U3 full clicker demo_instruction: "Clicker game - Try it out!"
+      CSPU5_U3- Variables - Create And Assign_instruction: "On one line add a variable
+        called \"lives\" and assign it the value 3. Print it to the console. (Click
+        to see full instructions)"
+      CSPU5_U3- Variables - Text Mode_instruction: "1. Switch to text mode and type
+        instructions; 2. drag blocks out into text mode; 3. experiment with code completion"
+      CSPU5_U3-Design Mode-ID and Event Handler_instruction: "Add an event handler
+        for the button using the \"Insert and show\" link in the Design Mode Events
+        tab. (Click to see full instructions)."
+      CSPU5_U3-Design Mode-Image_instruction: "Recreate the \"Chaser Game\" from
+        the last lesson using Design Mode. (Click to see full instructions.)"
+      CSPU5_U313 drag Two Buttons_instruction: "Run a program with two buttons that
+        have the same id to see the warning message in the console. Change the ids
+        to make the program run without getting a warning message."
+      CSPU5_U313 Two Buttons with Ids_instruction: "Predict what will happen. Once
+        you've made a prediction, run the code to see what happens. (Click to see
+        full instructions)"
+      CSPU5_U3L13 - Debug Id Problem_instruction: "Improve the button by choosing
+        a descriptive and meaningful ID. (Click to see full instructions)"
+      CSPU5_U3L13 - Debugging 1_instruction: "Debug the program by verifying your
+        IDs are being referenced properly. (Click to see full instructions)"
+      CSPU5_U3L13 - Debugging 2_instruction: "Debug the program by properly ordering
+        your button commands and event handlers. (Click to see full instructions)"
+      CSPU5_U3L13 - Debugging 3_instruction: "Debug the program by fixing the logical
+        error within the program. (Click to see full instructions)"
+      CSPU5_U3L13 - Debugging IDs case sensitive_instruction: "Debug the program
+        by verifying your IDs are being referenced properly. (Click to see full instructions)"
+      CSPU5_U3L13 - Project_instruction: "Create your multi-screen app. (Click to
+        see full instructions.)"
+      CSPU5_U3L13 - Turtle Driver Project_instruction: "Create a \"turtle driver\"
+        that includes buttons to move the turtle forward and turn it left and right.
+        (Click to see full instructions)"
+      CSPU5_U3L13 - Turtle move with button_instruction: "Add a button that moves
+        the turtle when clicked.  (Click to see full instructions)"
+      CSPU5_U3L13 eventsDetails_instruction: "Add an event handler to the button
+        to move the turtle forward. (Click to see full instructions)"
+      CSPU5_U3L14 - Assigning Random Value_instruction: "Write a program that simulates
+        the rolling of two dice and reports their individual values as well as the
+        sum. (click to see full instructions)"
+      CSPU5_U3L14 - concatenate simple_instruction: "Modify the write statement on
+        line 3 to combine text and variables together to make the app display a single
+        line of text that shows the player's lives and score. (click to see full
+        instructions)"
+      CSPU5_U3L14 - Mini Calculator embed_instruction: "You will be prompted for
+        two numbers, one right after the other.  See what happens.  Enter different
+        numbers until you get the idea."
+      CSPU5_U3L14 - moving memory challenge1_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - moving memory challenge2_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - moving memory challenge3_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - moving memory challenge4_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - moving memory challenge5_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - moving memory challenge6_instruction: "Using only the variables
+        provided, assignment (=) and arithmetic (+ - * /) re-assign the values to
+        make the console.log statement display the correct value(s).  (Click to see
+        full instructions)"
+      CSPU5_U3L14 - User Input Division calculator_instruction: "Write a program
+        that acts as a simple calculator. (click to see full instructions)"
+      CSPU5_U3L14 - Variable ReAssignment pt2_instruction: "Trace the code and predict
+        what you think will be printed to the console. Then add a console.log statement
+        at the end of the program to see the last value of someNum to see if your
+        full prediction is correct. (click to see full Instructions)"
+      CSPU5_U3L15 - add code to make count down work_instruction: "Write code to
+        make the down arrow work as expected. (Click to see full instructions)"
+      CSPU5_U3L15 - Add reset button to UpDown app_instruction: "Add code so that
+        clicking the start over button will reset the game and send you back to the
+        main screen. (Click to see full instructions)"
+      CSPU5_U3L15 - count upDown bug forget to set text_instruction: "Find the bug
+        in the program and fix it. (Click to see full instructions)"
+      CSPU5_U3L15 - count upDown bug logic error wrong update_instruction: "Find
+        the bug in the program and fix it. (Click to see full instructions)"
+      CSPU5_U3L15 - count upDown bug var not created globally_instruction: "Find
+        the bug in the program and fix it. (Click to see full instructions)"
+      CSPU5_U3L15 - Debug forget to update var on reset in UpDown app_instruction: "Run
+        the app, and click the up or down button until you get to the gameOverScreen.
+        Click 'Start Over' and try the app again. Find and fix the issue in the
+        code. (Click to see full instructions)"
+      CSPU5_U3L15 - Debug if never triggers in UpDown app_instruction: "Run the app
+        and use the up and down arrows to try to hit the gameOverScreen. You can't!
+        Find and fix the issue in the code. (Click to see full instructions)"
+      CSPU5_U3L15 - Debugging Simple If-statements =v==_instruction: "Run the app,
+        and click the up button. Then restart and run it again, and click the down
+        button. Find and fix the issue in the code. (Click to see full instructions)"
+      CSPU5_U3L15 - DEMO up down count practice app_instruction: "Try out the demo
+        app (Click to see full instructions)"
+      CSPU5_U3L15 - global var example count up_instruction: "Look at the code for
+        this app and see how the code works to update the count variable when the
+        up arrow is clicked. (Click to see full instructions)."
+      CSPU5_U3L15 - mini clicker update score_instruction: "Add code to update the
+        score when the apple is clicked. (Click to see full instructions)"
+      CSPU5_U3L15 - practice with setText_instruction: "Use setText to complete the
+        click event handler for the down arrow. (Click to see full instructions)"
+      CSPU5_U3L15 - Simple If-statements in UpDown App_instruction: "Add an if statement
+        so that the app changes screens when the count reaches -5. (Click to see full
+        instructions)"
+      CSPU5_U3L15 - variable scoping problem debugging_instruction: "See if you can
+        figure out why the code is no longer working. (Click to see full instructions)"
+      CSPU5_U3L15 click add lives_instruction: "Add lives to the clicker game that
+        decrement by 1 when the background image is clicked (Click to see full instructions)"
+      CSPU5_U3L15 full clicker app_instruction: "Complete your clicker game! (Click
+        to see full instructions)"
+      CSPU5_U3L16 - challenge say hi app_instruction: "Write a greeting to the user
+        when they hit 'enter' in the text input, using the 'change' event. (Click
+        to see full instructions)"
+      CSPU5_U3L16 - chaserApp_instruction: "Create your own \"Chaser Game.\" (Click
+        to see full instructions)"
+      CSPU5_U3L16 - chooseImages_instruction: "Replace the image in your application
+        with one of your own. (Click to see full instructions)"
+      CSPU5_U3L16 - doubleQuotes_instruction: "Save a string inside a variable and
+        log it to the console. (Click to see full instructions)"
+      CSPU5_U3L16 - intro getText_instruction: "Add an event handler to the Submit
+        button so that when the button is clicked it will display the name entered
+        in the text box to the console.  Use getText to get the value out of the text
+        box. (Click to see full instructions)"
+      CSPU5_U3L16 - introSetPosition_instruction: "Move the buttons to the bottom
+        of the screen. (Click to see full instructions)"
+      CSPU5_U3L16 - introStrings_instruction: "Save a string inside a variable and
+        log it to the console. (Click to see full instructions)"
+      CSPU5_U3L16 - newEventTypes_instruction: "Experiment with different event types
+        and select the one that you think is best. (Click to see full instructions)"
+      CSPU5_U3L16 - outputWithTextArea_instruction: "Output a message to the 'textArea'
+        (Click to see full instructions)"
+      CSPU5_U3L16 - setPosition to fixed location_instruction: "Introducing the setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked."
+      CSPU5_U3L16 - setPosition to move button_instruction: "Introducing the setPosition
+        command! Replace the moveTo in the button-click event handler to use setPosition
+        to move the button itself to a random location when it's clicked."
+      CSPU5_U3L16 - singleSetPosition_instruction: "Move the button to the middle
+        of the screen. (Click to see full instructions)"
+      CSPU5_U3L16 - text labels_instruction: "Use the textLabel command to replace
+        the button in your program with a text label. (Click to see full instructions)"
+      CSPU5_U3L16 - textInput getText write_instruction: "Add an Text Input box for
+        the name and age. (Click to see full instructions)"
+      CSPU5_U3L16 - toUpper_instruction: "Make the name of the user appear in uppercase
+        (Click to see full instructions)"
+      CSPU5_U3L16 - use images_instruction: "Use the image command to replace the
+        text label in your program with an image. (Click to see full instructions)"
+      CSPU5_U3L16 Mad Lib Clear Input_instruction: "Clear the user's previous text
+        when the Play Again button is clicked (Click to see full instructions) "
+      CSPU5_U3L16 Mad Lib Demo_instruction: "Mad Libs Demo - Try it out!"
+      CSPU5_U3L16 Mad Lib getText_instruction: "Before setting the text area with
+        your Mad Libs outline, get the user's text and incorporate their responses.
+        (Click to see full instructions) "
+      CSPU5_U3L16 Mad Lib setText_instruction: "When the Next button is clicked,
+        set the text area to have the main outline of your How-to Mad Libs (without
+        the user's input). (Click to see full instructions) "
+      CSPU5_U3L16 Mad Lib Student Setup_instruction: "Back to Mad Libs: To get started,
+        set up the two screens for your Mad Libs app (Click to show full instructions)"
+      CSPU5_U3L16 Mad Lib toUpper_instruction: "Apply the toUpperCase and toLowerCase
+        string functions to the user's text. (Click to see full instructions) "
+      CSPU5_U3L18 comparison operators_instruction: "Use console.log to print out
+        the different boolean expressions below to see what information they return.
+        (Click to see full instructions)"
+      CSPU5_U3L19 - fix the var name syntax error v2_instruction: "Fix the error
+        and get it to print the value of both variables (Click to see full instructions)"
+      CSPU5_U3L19 - test reassignment of two vars_instruction: "Predict the value
+        of a and b. Add console.log statements to find out the actual value of a and
+        b. (Click for full instructions)"
+      CSPU5_U3L19 - three basic ops of variables_instruction: "Add another variable
+        called \"lives\" and set the value to 3. Print the value of the variable to
+        the console. (Click to see full instructions)"
+      CSPU5_U3L19 - variable reassignment challenge pt2_instruction: "Make a prediction
+        about the ending values of a, b, and c. Then use console.log to check your
+        understanding (Click to see full instructions)"
+      CSPU5_U3L19 - write var and string with same name v2_instruction: "Fix the
+        code so that the values of both variables print to the console. (Click to
+        see full instructions)"
+      CSPU5_U3L23 Chatbot Conditionals 1_instruction: "Add if, else if, and else
+        statements to detect the movie genres Comedy, Romance, Action, and Horror.
+        (Click to see full instructions)"
+      CSPU5_U3L24 Chatbot Basic Conditionals_instruction: "Check out the project
+        description for instructions. (Click to see full instructions.)"
+      CSPU5_U3L24 introIncludes_instruction: "Practice using the includes command.
+        (Click to see full instructions)"
+      CSPU5_U3L24 Nested Conditionals 1_instruction: "Change all of the boolean expressions
+        to use includes instead of ==. (Click to see full instructions)"
+      CSPU5_U3L24 Nested Conditionals 2_instruction: "Nest your movie genre if statements
+        inside the if statements to check for a ? in the input. "
+      CSPU5_U3L25 - drag out key event_instruction: "Set up an event handler to respond
+        to keypress events, and display event.key in the console. Hit keys on the
+        keyboard to see what happens. (Click to see full instructions)"
+      CSPU5_U3L25 - play sound when up key_instruction: "Change the code so the sound
+        will only play when the up arrow is pressed. (Click to see full instructions)"
+      CSPU5_U3L26 AND operator_instruction: "Update the genre and rating if statements
+        to give only one movie suggestion at a time. (Click to see full instructions)"
+      CSPU5_U3L26 OR operator_instruction: "Update the if statement to use an OR
+        to check for a \"?\" as well as who, what, where, when, why, how in the user
+        input. (Click to see full instructions)"
       drawings!_instruction: "Draw the equilateral triangle - all the sides are the
         same!"
       ECSPD Binary Odometer_instruction: "This is another resource you could use
@@ -2399,16 +3350,19 @@ en:
         I don't know how many shovelfuls of dirt it needs.  Can you write a program
         that fills it until the ground is even?  Hint:  Try using the while loop this
         time."
+      Farmer for TTS testing_instruction: "Wow, I found a really deep hole! I don't
+        know how many shovelfuls of dirt it needs.  Can you write a program that fills
+        it until the ground is even?  Hint:  Try using the while loop this time."
+      Finalize Your Chaser Game v.1_instruction: "Introducing the setPosition command!
+        Replace the moveTo in the button-click event handler to use setPosition to
+        move the button itself to a random location when it's clicked."
       Food Fight!_instruction: "We've added one last function for you. \r\n\r\nUse
         an \"if\" statement to program your game to call the \"level_up\" function
         only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
         example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3
         to move to the next puzzle. "
-      Food Fight_instruction: "We've added one last function for you. \r\n\r\nUse
-        an \"if\" statement to program your game to call the \"level_up\" function
-        only when \"player_score\" becomes greater than a certain number.\r\n\r\nFor
-        example: \"player_score\" > 6\r\n\r\nPlay the game, and make it to level 3
-        to move to the next puzzle. "
+      Food Fight_instruction: "You can make whatever you want in play lab! This is
+        an example of a game you can make in play lab."
       Frequency Analysis_instruction: "Test"
       frozen circle function in circle_instruction: "Now let's create 20 overlapping
         circles, turning 18 degrees between each circle."
@@ -2440,8 +3394,8 @@ en:
       frozen line_instruction: "Hi! I'm Elsa of Arendelle. Help me create a single
         line."
       frozen perpendicular_instruction: "Now let's see if we can create two lines
-        that are at a 90 degree angle to each other. You will need to use the “Turn”
-        block as well as the “Move” block."
+        that are at a 90 degree angle to each other. You will need to use the \"Turn\"
+        block as well as the \"Move\" block."
       frozen snowflake branch_instruction: "Try using the ”Create a snowflake branch”
         block to create three branches, which starts to look like a snowflake."
       frozen snowflake full_instruction: "Now let's repeat it 8 times to make a
@@ -2469,7 +3423,7 @@ en:
       grade1_adventurer_loops10_instruction: "Help me get all of the gold from this
         cave."
       grade1_adventurer_loops2_instruction: "How can Laurel collect all five piles
-        of gold using only one `move forward` block?"
+        of gold using only one `E -->` block?"
       grade1_adventurer_loops3_instruction: "Can you fix Laurel's path to get all
         of this gold?"
       grade1_adventurer_loops4_instruction: "Add to the code from the last puzzle
@@ -2477,8 +3431,8 @@ en:
       grade1_adventurer_loops5_instruction: "What should you add to this code to
         get all of the gold?"
       grade1_adventurer_loops6_instruction: "Write the code to get all of this gold."
-      grade1_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
-        the way down these stairs!  Write the code to help me get it all."
+      grade1_adventurer_loops7_challenge_instruction: "**Challenge: ** The gold goes
+        all the way down these stairs!  Write the code to help me get it all."
       grade1_adventurer_loops8_challenge_instruction: "Challenge: Try this staircase
         now! It has an extra spike at the end you'll have to climb."
       grade1_adventurer_loops9_instruction: "Help me get the gold from this deep
@@ -2492,7 +3446,7 @@ en:
       grade1_artist_loops2_instruction: "Help the artist draw a line 7 times to make
         a garden wall."
       grade1_artist_loops3_instruction: "Now we need to get the soil ready to plant.
-        Find the bug and help the artist prepare the ground. "
+        Find the bugs in the code and help the artist prepare the ground. "
       grade1_artist_loops4_instruction: "Time to fix the stairs!  Repeat this pattern
         five times so the artist can reach the top of the bushes."
       grade1_artist_loops5_instruction: "Behind the bushes there is a beautiful vine
@@ -2505,16 +3459,15 @@ en:
         around the garden."
       grade1_artist_loops7b_instruction: "Time to head home. Can you fix this ladder
         to help the artist get down?"
-      grade1_artist_loops8_instruction: "Let's take the short way over the pond.
-        Can you help the artist stay on the stones?"
+      grade1_artist_loops8_instruction: "Let's take the short way home, over the
+        pond. Can you help the artist stay on the stones?"
       grade1_artist_loops9_instruction: "I still need a story for this puzzle"
       grade1_artist_loopsFP_instruction: "Use what you have learned to draw a picture
         of what you think the artist saw when he got home."
       grade1_maze_sequence1_instruction: "A bug! Fix the code to get me to the pig."
       grade1_maze_sequence10_instruction: "Move me around the TNT to get to the pig."
       grade1_maze_sequence2_instruction: "Fix the code to get me to the pig!"
-      grade1_maze_sequence3_instruction: "Can you add 2 blocks to get the bird to
-        the pig."
+      grade1_maze_sequence3_instruction: "Add 2 blocks to get the bird to the pig."
       grade1_maze_sequence4_instruction: "Now try this puzzle from the start!"
       grade1_maze_sequence5_instruction: "Move one way, then another to get me to
         the pig!"
@@ -2567,65 +3520,140 @@ en:
         the bird do!"
       grade1_video_frustrationRainbow_instruction: "This video describes the rainbow
         of frustration and introduces persistence."
-      grade2_CaringForNewPet_0_instruction: "Can you help me catch the naughty pig?
-        Add a move forward block to this code, then press \"Run\"."
-      grade2_CaringForNewPet_1_instruction: "Can you help me catch the naughty pig?
-        Stack a couple of `move forward` blocks below the `when run` block and press
-        \"Run\". "
+      grade2_CaringForNewPet_0_instruction: "For this puzzle, drag all of the blocks
+        together and click \"Run\" to watch it go!"
+      grade2_CaringForNewPet_1_instruction: "Drag an extra `move forward` block out
+        of the toolbox to finish your code."
       grade2_CaringForNewPet_10_instruction: "Get me to the pig!"
-      grade2_CaringForNewPet_11_instruction: "Keep calm and help me find the bad
-        pig. Otherwise I might get angry!"
-      grade2_CaringForNewPet_2_instruction: "This pig is ruffling my feathers. Help
-        me get to him!"
-      grade2_CaringForNewPet_3_instruction: "Trace the path and lead me to the silly
-        pig. Avoid TNT or feathers will fly!"
-      grade2_CaringForNewPet_3D_instruction: "Fix this code to get me to the pig!"
-      grade2_CaringForNewPet_4_instruction: "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
+      grade2_CaringForNewPet_11_instruction: "\"Keep calm and help me find the bad
+        pig.\""
+      grade2_CaringForNewPet_2_instruction: "\"This pig is ruffling my feathers.\"\r\n\r\nThere
+        is one extra block that is going to cause the bird to crash. Throw it away
+        by dragging it back to the toolbox."
+      grade2_CaringForNewPet_2courseC_maze_programming3_instruction: "There is one
+        extra block that is going to cause the bird to crash. Throw it away by dragging
+        it back to the toolbox."
+      grade2_CaringForNewPet_3_instruction: "\"Trace the path and lead me to the
+        silly pig. Avoid TNT or feathers will fly!\""
+      grade2_CaringForNewPet_3D_instruction: "\"Follow this path to get me to the
+        pig!\""
+      grade2_CaringForNewPet_4_instruction: "\"Keep calm and help me find the bad
+        pig. Otherwise I might get angry!\""
       grade2_CaringForNewPet_5_instruction: "Get me to the pig!"
       grade2_CaringForNewPet_6_instruction: "Challenge: Guide me to the green evilness!
         (Watch out for TNT)"
-      grade2_CaringForNewPet_7D_instruction: "This code has a lot of bugs, you'll
-        need to both remove and add blocks to get me to the pig."
-      grade2_MakeDogTag_1_instruction: "Hi, I'm an artist. You can write code to
-        make me draw almost anything. Use a few blocks to make me draw over the grey
-        lines in the picture. (Each line is 100 pixels long)"
+      grade2_CaringForNewPet_7D_instruction: "Challenge: This code has a lot of bugs.
+        You'll need to remove blocks and add blocks."
+      grade2_collector_10_instruction: "You're almost done! Collect as many coins
+        as you can to finish the stage!"
+      grade2_collector_2_instruction: "Move Laurel to the gold, then use `collect`
+        to pick it up."
+      grade2_collector_3_instruction: "Put these blocks in order to collect all of
+        the gold and solve the puzzle."
+      grade2_collector_4_instruction: "Sequence matters! The blocks you need are
+        already in the workspace, but not connected.  Order these blocks to solve
+        the puzzle."
+      grade2_collector_5_instruction: "These blocks are in the wrong order. Can you
+        fix them?"
+      grade2_collector_6_instruction: "Reorder the blocks to collect all of the treasure."
+      grade2_collector_7_instruction: "Challenge puzzle! Use blocks from the toolbox
+        to collect all of the treasure."
+      grade2_collector_8_instruction: "\"Keep up the good work! Help me collect all
+        of the coins.\""
+      grade2_collector_9_instruction: "*\"Let's get all of the coins!\"*"
+      grade2_collector_9a_instruction: "**Challenge:** Grab all of the coins."
+      grade2_collector_A_instruction: "Help Laurel collect all of the treasure."
+      grade2_collector_pre1_instruction: "\"Hi, I'm Laurel. Today I'm searching
+        for treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see
+        if you can help Laurel collect some gold."
+      grade2_MakeDogTag_1_instruction: "Drag blocks onto the screen to have the artist
+        draw over the grey lines in the picture. (Each line is 100 pixels long)"
       grade2_MakeDogTag_10_instruction: "Now, draw anything you like!"
-      grade2_MakeDogTag_2_instruction: "This house has a half-finished wall. Each
-        side is 100, but the half-finished wall is only 50. Complete the wall. "
-      grade2_MakeDogTag_3_instruction: "Help me complete the house for this cat."
-      grade2_MakeDogTag_4_instruction: "This house needs a roof! Draw the triangle.  Hint:
-        all three sides are the same length."
-      grade2_MakeDogTag_5_instruction: "Complete the rooms for each of the animals
-        by splitting the rectangle into 2 equal-sized squares. The rectangle is 200
-        pixels wide and 100 pixels tall. There are many different ways to solve this
-        puzzle, so have some fun!"
-      grade2_MakeDogTag_6_instruction: "Free-play! Draw anything you'd like."
-      grade2_MakeDogTag_7_instruction: "Give the stop sign a border by making an
-        octagon with 100 pixels sides. \r\n\r\n"
+      grade2_MakeDogTag_2_instruction: "This spaceship needs a window!\r\n\r\nEach
+        side of the inner square is 100 pixels and all of the angles are 90 degrees."
+      grade2_MakeDogTag_3_instruction: "\"Oh no!  Starla's pet alien just flew away!
+        Let's help the spacewoman!\"\r\n\r\nFinish Starla's rocket so she can chase
+        her pet."
+      grade2_MakeDogTag_4_instruction: "Finish this tag by drawing a rectangle around
+        the outside.\r\n(The long sides are 200 pixels each and the short sides are
+        each 100 pixels)"
+      grade2_MakeDogTag_5_instruction: "\"Now a tag for Belle!\"\r\n\r\nDraw this
+        diamond with 200 pixel sides."
+      grade2_MakeDogTag_6_instruction: "Challenge: This tag is a special one!  Can
+        you figure out how to draw the outline?"
+      grade2_MakeDogTag_7_instruction: "One more tag.  This is a triangle for Pi.\r\n(Each
+        side is 150 pixels)"
       grade2_MakeDogTag_8_instruction: "Now let's connect a bunch of V's together
         in a loop."
       grade2_MakeDogTag_9_instruction: "Rebuild the code from the last puzzle, but
         this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24
         times instead of 8."
-      grade2_maze_debuggingFP_instruction: "Now, help me sneak up on the pig any
-        way you want to!"
+      grade2_MakeDogTag_BFP_instruction: "\"Hi, I'm an artist. You can write code
+        to make me draw almost anything.\"\r\n\r\nPlay with the blocks in the toolbox
+        to see what they do!"
+      grade2_MakeDogTag_FP_instruction: "Freeplay: What shape will you make the tag
+        for your pet?"
+      grade2_maze_debuggingFP_instruction: "\"Now, help me sneak up on the pig any
+        way you want to!\""
       grade2_maze_debuggingPre_instruction: "Play with these blocks to see what they
         make the bird do!"
+      grade2_maze_intro10_instruction: "Solve this puzzle."
+      grade2_maze_intro2_instruction: "Welcome to Code Studio! Here you will learn
+        to use blocks to build programs. Press `Run` to run a program now!"
+      grade2_maze_intro3_instruction: "The `workspace` is where you will create all
+        of your programs. Can you guess what this program does? Press the “Run” button
+        to find out."
+      grade2_maze_intro4_instruction: "Drag a block from the toolbox into the workspace.
+        Connect it to the other blocks."
+      grade2_maze_intro6_instruction: "That’s it!  Now we’re ready to try to solve
+        a few puzzles. "
+      grade2_maze_intro7_instruction: "This time, try something a bit more challenging."
+      grade2_maze_intro8_instruction: "This is a challenge puzzle.  It is meant to
+        be hard and will probably take you a couple of tries to solve.  If you don’t
+        solve it after several tries, don’t worry!  It will be in the Play Zone at
+        the end of the stage and you can try it again when you’ve had more practice."
+      grade2_maze_intro9_instruction: "Solve this puzzle."
+      grade2_playlab_project_1_instruction: "Now, write a program to make Waddles
+        move around using the up / down / left /right keys to hit all of the targets!"
+      grade2_playlab_project_2_instruction: "The `repeat forever` block allows you
+        to run code over and over forever. Can you attach blocks to move Chomp the
+        Dino (actor 2) up and down forever?"
+      grade2_playlab_project_3_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"
+        and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen you're done,
+        play the game to make that happen."
+      grade2_playlab_project_4_instruction: "Can you add a block to score a point
+        when Waddles runs into Octavia (actor 3)? \r\nPlay the game and move Waddles
+        with the arrows until you score!"
+      grade2_playlab_project_5_instruction: "Add blocks to the `when run` event to
+        change the background and the speed of Waddles.\r\n\r\nPlay the game and move
+        Waddles with the arrows until you score."
+      grade2_playlab_project_6_instruction: "Create your own story. When you're
+        done, click \"Finish\" to share with friends."
+      grade2_puppy_loops2_instruction: "Can you get to the pig by creating a loop
+        that uses only one `move forward` block inside of a `repeat`?"
+      grade2_puppy_loops3_instruction: "\"Get me to the pig!\"\r\n\r\n Solve this
+        puzzle by creating a loop!"
+      grade2_puppy_loops4_instruction: "In this puzzle, two `repeat` loops will help
+        you get to the pig with the fewest number of blocks!"
+      grade2_puppy_loops5_instruction: "\"Get me to the pig as quickly as possible!\""
+      grade2_puppy_loops6_instruction: "\"This pig is ruffling my feathers!\"\r\n\r\nLoops
+        even work with more than one block inside!  Can you loop this sequence?"
+      grade2_puppy_loops7_instruction: "\"Get me to the pig!\"\r\n\r\nUse what you
+        learned in other puzzles!"
       grade2_PuppyLoops_1_instruction: "Can you get me to the pig using 5 of the
         same kind of blocks?"
       grade2_PuppyLoops_10_instruction: "My teacher says that I should finish what
         I start!\r\n\r\nHelp me finish my pinwheel. Can you figure out what's wrong?"
       grade2_PuppyLoops_2_instruction: "Can you get to the pig by creating a loop
         that uses only one `move forward` block inside of a `repeat`?"
-      grade2_PuppyLoops_3_instruction: "Get me to the pig! You can only use one move
-        forward block this time"
+      grade2_PuppyLoops_3_instruction: "Get me to the pig! Solve this puzzle by creating
+        a loop!"
       grade2_PuppyLoops_4_instruction: "In this puzzle, two `repeat` loops will help
         you get to the pig with the fewest number of blocks!"
       grade2_PuppyLoops_5_instruction: "Can you figure out the fastest way to get
         me to the pig?"
       grade2_PuppyLoops_6_instruction: "Loops even work with more than one block
-        inside!  Can you loop this sequence to get the zombie to the sunflower?"
+        inside!  Can you loop this sequence to get me to the pig?"
       grade2_PuppyLoops_7_instruction: "Use what you learned to get me to the sunflower!"
       grade2_PuppyLoops_8_instruction: "This code for the cat's whiskers is wrong.
         \r\n\r\nFix this code to draw whiskers that are all the same length."
@@ -2644,47 +3672,40 @@ en:
       grade3_AboutMyRobot_TeacherIDo_instruction: "Run this puzzle and click on the
         robot to see what happens!"
       grade3_bee_conditionals_new1a_instruction: "Help the bee collect all of the
-        nectar. You can only collect nectar from flowers, but you can check any space
-        to see if there is a flower."
+        nectar. \r\n\r\nYou can only collect nectar from flowers, but you can check
+        any space to see if there is a flower."
       grade3_bee_conditionals_new1b_instruction: "Help the bee collect all of the
         nectar. You can only collect nectar from flowers, but you can check any space
         to see if there is a flower."
-      grade3_bee_conditionals_new2_instruction: "Can you help the bee collect the
-        nectar from the flowers? You can only collect nectar from flowers, but you
-        can check any space to see if there is a flower."
-      grade3_bee_conditionals_new2a_instruction: "Now we know that every flower has
-        exactly one nectar. Use the blocks provided to check each space and only get
-        nectar when there's a flower. "
+      grade3_bee_conditionals_new2_instruction: "Collect all of the nectar using
+        as few blocks as possible"
+      grade3_bee_conditionals_new2a_instruction: "Get all of the nectar using as
+        few blocks as possible."
       grade3_bee_conditionals_new2b_instruction: "Collect all of the nectar. You
         can only collect nectar from flowers, but you can check any space to see if
         there is a flower."
       grade3_bee_conditionals_new3a_instruction: "Collect all of the nectar or make
         all the honey. You can only collect nectar from flowers and make honey from
         honeycombs. Check any space to see if there is a flower or honeycomb."
-      grade3_bee_conditionals_new3b_instruction: "Uh oh! The bee is not sure if he
-        should collect nectar or make honey. Can you help him out?"
+      grade3_bee_conditionals_new3b_instruction: "Collect all of the nectar and make
+        all of the honey."
       grade3_bee_conditionals_new3c_instruction: "Help the bee collect all of the
         nectar and make all of the honey! Hint: Try using one loop inside of another
         loop."
       grade3_bee_Conditionals_new4_instruction: "Now try checking all of these flowers
         with \"if\" blocks to see if there is any nectar available."
-      grade3_bee_conditionals_quantum1_instruction: "This cloud is blocking my view!
-        Check to see if there's a flower under the cloud, and only get nectar if
-        there's a flower. Be careful, it can change!"
-      grade3_bee_conditionals_quantum2_instruction: "More clouds! \r\n\r\nCheck underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r\n\r\nRemember:
-        Not all clouds hide the same thing!"
-      grade3_bee_conditionals_quantum3_instruction: "Now I just want to make honey.
-        Some of these clouds might have honeycombs under them. The way we've been
-        going about things won't work here. Be sure to check if a honeycomb is hiding
-        behind each cloud!"
-      grade3_bee_conditionals_quantum4_instruction: "Sometimes this cloud covers
-        a flower, and sometimes it covers a honeycomb! Use the if/else block to collect
-        nectar if it is a flower, else to make honey (because it is a honeycomb)."
-      grade3_bee_conditionals_quantum5_instruction: "There will be either a flower
-        or a honeycomb under each of those clouds!\r\n\r\nUse the `if/else` block
-        to collect nectar if there is a flower.\r\nOtherwise, make honey (because
-        there is a honeycomb)."
+      grade3_bee_conditionals_quantum1_instruction: "Check to see if there's a flower
+        under the cloud. If there's a flower, get nectar."
+      grade3_bee_conditionals_quantum2_instruction: "Check underneath every cloud
+        to see if it is hiding a flower before you get nectar.  \r\n"
+      grade3_bee_conditionals_quantum3_instruction: "Some of these clouds might have
+        honeycombs under them.  Be sure to check if a honeycomb is hiding behind each
+        cloud!"
+      grade3_bee_conditionals_quantum4_instruction: "Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb."
+      grade3_bee_conditionals_quantum5_instruction: "Use the `if/else` block to collect
+        nectar if there is a flower.\r\nOtherwise, make honey (because there is a
+        honeycomb)."
       grade3_Conditionals_1 BAD_instruction: "Use a loop to collect all of the nectar."
       grade3_Conditionals_1_instruction: "I'm a hungry bee! \r\nHelp me collect
         all of the nectar from the flowers using the fewest number of blocks."
@@ -2760,25 +3781,12 @@ en:
         there is a honeycomb)."
       grade3_Debugging_1_instruction: "These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar."
-      grade3_Debugging_10_instruction: "This puzzle is making me loopy! \r\nFix the
-        error(s) to collect all of the nectar and make all of the honey."
-      grade3_Debugging_11_instruction: "Assessment:  Now it's time to show what
-        you know!\r\n\r\nFix the error(s) to collect all of the nectar and make all
-        of the honey."
-      grade3_Debugging_2_instruction: "These blocks are really bugging me!\r\n\r\nFix
-        the error(s) to collect all of the nectar."
-      grade3_Debugging_3_instruction: "Ooh, this one stings!\r\n\r\nFix the error(s)
-        to collect all of the nectar."
-      grade3_Debugging_4_instruction: "These blocks are really bugging me. Fix the
-        error(s) to collect all of the nectar and make all of the honey."
       grade3_Debugging_5_instruction: "That flower looks tasty! \r\n\r\nFix the error(s)
         to collect all of the nectar.  You can now use both run and step."
       grade3_Debugging_6_instruction: "What a sweet challenge!\r\n\r\nFix the error(s)
         to collect all of the nectar."
       grade3_Debugging_7_instruction: "Fix the error(s) to collect all of the nectar
         and make all of the honey."
-      grade3_Debugging_8_instruction: "So many beautiful flowers!\r\n\r\nFix the
-        error(s) to collect all of the nectar."
       grade3_Debugging_9_instruction: "\"Bee\" patient with this one!\r\n\r\nYou
         will need to fix a couple of things in this program to collect all of the
         nectar and make all of the honey."
@@ -2811,15 +3819,15 @@ en:
         nectar from each of the flowers using the fewest blocks possible."
       grade3_maze_Loop1_instruction: "Assessment:  Get me to the sunflower using
         only 5 blocks! "
-      grade3_maze_loops1_instruction: "Assessment:  Get me to the sunflower using
-        only 5 blocks! "
-      grade3_maze_loops2_instruction: "Get me to the sunflower using the fewest blocks
-        possible!  \r\n\r\nTry using one `repeat` loop inside of another to cut down
-        on the amount of code you need."
-      grade3_maze_loops3_instruction: "Let's take this to another level! \r\nUse
-        loops to get me to the sunflower with the fewest loops possible."
-      grade3_maze_loops4_instruction: "Get me to the sunflower using the fewest number
-        of blocks possible!"
+      grade3_maze_loops1_instruction: "Get the zombie to the sunflower."
+      grade3_maze_loops2_instruction: "Get the zombie to the sunflower using the
+        fewest blocks possible!  "
+      grade3_maze_loops2a_instruction: "Get the zombie to the sunflower using the
+        fewest number of blocks possible."
+      grade3_maze_loops3_instruction: "Get the zombie to the sunflower using only
+        the blocks available."
+      grade3_maze_loops4_instruction: "Get the zombe to the sunflower using the fewest
+        number of blocks possible!"
       grade3_maze_loops5_instruction: "Get me to the sunflower using the fewest blocks
         possible!"
       grade3_maze_nestedLoops1_instruction: "Can you get me to the pig using 5 of
@@ -2861,36 +3869,41 @@ en:
         level (could hide entire function so that students just work with point scoring)"
       grade3_playLab_buildGame_final2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
-      grade3_robotFarmer_ConditionalsIntro_1_instruction: "Hi, I'm a farmer. I need
-        your help to flatten the field on my farm so it's ready for planting. Move
-        me to the pile of dirt and use the \"remove\" block to remove it."
+      grade3_robotFarmer_ConditionalsIntro4_instruction: "Help the farmer remove
+        this entire pile using a `while` loop."
+      grade3_robotFarmer_ConditionalsIntro_1_instruction: "*\"Hi, I'm a farmer.
+        I need your help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove
+        to the pile of dirt and use the `remove` block to remove it."
       grade3_robotFarmer_ConditionalsIntro_10_instruction: "I'm working late, so
         it's dark out, and I can't tell how large the piles are. Now I don't have
         all the options I used to have on the while block. Move me along the field,
         and if there is a pile, remove it"
+      grade3_robotFarmer_ConditionalsIntro_10a_instruction: "Flatten all of these
+        piles using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_11_instruction: "It's still dark outside.
         Move me along the field. If there is a pile, remove it, and if there is a
         hole, fill it in. Hint: use the dropdown menu of options on the \"if\" block."
-      grade3_robotFarmer_ConditionalsIntro_2_instruction: "Next, move me to the hole
-        and fill it with TWO shovelfuls of dirt, using the \"fill\" block."
-      grade3_robotFarmer_ConditionalsIntro_3_instruction: "Move me to the pile of
-        dirt and tell me how many shovelfuls to remove using as few blocks as possible."
-      grade3_robotFarmer_ConditionalsIntro_4_instruction: "Can you help me remove
-        all four piles of dirt? Hint: use a repeat block if you can."
-      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me fill in all these
-        holes with 5 shovelfuls of dirt. Hint: you can put a \"repeat\" block inside
-        the \"while\" block."
+      grade3_robotFarmer_ConditionalsIntro_11a_instruction: "Flatten all of these
+        piles using as few blocks as possible. "
+      grade3_robotFarmer_ConditionalsIntro_2_instruction: "Next, move to the hole
+        and fill it with six shovelfuls of dirt, using the `fill` block."
+      grade3_robotFarmer_ConditionalsIntro_3_instruction: "*\"Move to the pile of
+        dirt and tell me how many shovelfuls to remove using as few blocks as possible.\"*"
+      grade3_robotFarmer_ConditionalsIntro_4_instruction: "*\"I don't know how much
+        dirt is in this pile!\"*\r\n\r\nHelp the farmer remove this entire pile using
+        a `while` loop."
+      grade3_robotFarmer_ConditionalsIntro_5_instruction: "Help me remove all of
+        this dirt. "
       grade3_robotFarmer_ConditionalsIntro_6_instruction: "Remove all the piles of
         dirt, using as few blocks as possible. The new options in the dropdown menu
         on the \"while\" block tell me if I'm standing on a pile or a hole."
-      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Wow, I found a really
-        deep hole! I don't know how many shovelfuls of dirt it needs. Can you write
-        a program that fills it until the ground is even?"
-      grade3_robotFarmer_ConditionalsIntro_8_instruction: "Help me fill in the hole
-        at the end of the field, using as few blocks as possible."
-      grade3_robotFarmer_ConditionalsIntro_9_instruction: "Make me remove all these
-        piles of dirt. Try to use as few blocks as possible. Hint: try using a \"while\"
-        block."
+      grade3_robotFarmer_ConditionalsIntro_7_instruction: "Look at all of those holes!  Each
+        one needs a different amount of dirt.   \r\n\r\nYou can use the `while` loop
+        to easily fill them all!"
+      grade3_robotFarmer_ConditionalsIntro_8_instruction: "Fill in the hole at the
+        end of each of these paths."
+      grade3_robotFarmer_ConditionalsIntro_9_instruction: "**Challenge:** Fill all
+        of these holes using as few blocks as possible. "
       grade3_robotFarmer_ConditionalsIntro_TeacherIDo1_instruction: "Help me fill
         in all these holes with 5 shovelfuls of dirt. Hint: you can put a \"repeat\"
         block inside the \"while\" block."
@@ -2898,48 +3911,24 @@ en:
         late, so it's dark out, and I can't tell how large the piles are. Now I
         don't have all the options I used to have on the while block. Move me along
         the field, and if there is a pile, remove it"
-      grade3_RunningFarm_1_instruction: "(Notes for Review) Since the last stage
-        taught the 'repeat until' block, the purpose of this is most likely to teach
-        the 'repeat while' block. In the context of the levels already created,
-        I think using the 'repeat' and 'if' blocks could be possible,  (ex. if
-        the crops weren't spread as evenly on the field so the farmer would have
-        to test for wheat present before collecting it). A Repeat While block would
-        be more applicable if there were multiple wheat/potatoes in each square, which
-        might be a possible change.\r\n\r\nGrant Notes: for the coins, 1=0 and 2=1
-        (I couldn't get the coins to show up with a value of 0). The wheat should
-        grow at random intervals. For the graphic, think about the Minecraft way of
-        growing wheat (green, has multiple heights showing growth, then yellow for
-        ripe)."
-      grade3_RunningFarm_10_instruction: "This is another debugging to make sure
-        the students understand the difference between the IF block and While loop.
-        Start off all crops as ripe with at least 1 item, with growth after Run."
-      grade3_RunningFarm_2_instruction: "NOTES: have wheat and potatoes interspersed
-        throughout the row. Potatoes should be fully grown, with some randomly showing
-        more than 1 potato per spot. This is different from the previous puzzle because
-        students will have to use the drop down menu on the IF block to select potatoes
-        instead of harvesting wheat.\r\n\r\n"
-      grade3_RunningFarm_3_instruction: "This will look essentially the same as the
-        previous puzzle. There should be two crops randomly planted in the row. Each
-        plant should start at a random growth stage and grow when the user runs their
-        algorithm. Students are using the while loop and hopefully understand that
-        it's better at picking all the crops of one type."
-      grade3_RunningFarm_4_instruction: "Since students started this course using
-        events, we wanted to include them into this culminating stage. We will only
-        use them in a few stages then move on. This puzzle should randomly populate
-        the entire column with wheat and potatoes. The puzzle should also start with
-        the following event blocks: up arrow, down arrow, and space bar. Attached
-        to the space bar should be a collect block."
-      grade3_RunningFarm_5_instruction: "This puzzle should randomly populate the
-        entire row with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, and space bar. Can we check
-        to make sure students are using while loop?"
-      grade3_RunningFarm_6_instruction: "This puzzle should randomly populate the
-        entire field with wheat and potatoes. The puzzle should also start with the
-        following event blocks: up arrow, down arrow, left arrow, right arrow, and
-        space bar. Can we check to make sure students are using while loop?"
-      grade3_RunningFarm_7_instruction: "Have wheat and potatoes planted randomly
-        at various growth stages. I just wanted a quick debugging puzzles in here
-        to transition away from events"
+      grade3_RunningFarm_1_instruction: "Use conditionals to make sure that you pick
+        all of the corn, but don't disturb the stalks where nothing is growing yet."
+      grade3_RunningFarm_10_instruction: "Collect all of the corn and lettuce, then
+        pick the pumpkin."
+      grade3_RunningFarm_11a_instruction: "Collect all of the corn and lettuce, then
+        pick the pumpkin."
+      grade3_RunningFarm_2_instruction: "Help the farmer collect both corn and lettuce
+        from the field."
+      grade3_RunningFarm_3_instruction: "*\"Corn, lettuce, AND pumpkins! Help me
+        harvest them all.\"*"
+      grade3_RunningFarm_4_instruction: "Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch."
+      grade3_RunningFarm_5_instruction: "This field has clusters of corn, lettuce,
+        and pumpkins all growing together.  Can you collect them all?"
+      grade3_RunningFarm_6_instruction: "Can you figure out how to pick the pumpkin?  Make
+        sure to collect all of the corn along the way!"
+      grade3_RunningFarm_7_instruction: "**Challenge:** Collect all of the corn and
+        lettuce, then pick the pumpkin."
       grade3_RunningFarm_8_instruction: "Have wheat and potatoes planted randomly
         at various growth stages. Now we introduce multiple while loops (stacked)
         nested inside a loop. The two while loops in the solution represent different
@@ -2983,13 +3972,19 @@ en:
         the functions you used in this stage or try this new function that will automatically
         give your image a beautiful background color! This creation will be saved
         to your Projects dashboard so that you can easily edit it any time!"
-      grade4_artist_functions1_instruction: "\"Me zombie artist. Me love drawing!\"  \r\n\r\nHelp
-        the zombie draw glasses using squares with sides of 100 pixels.  \r\n\r\nThe
-        bridge between the glasses is 75 pixels long."
+      grade4_artist_functions1_instruction: "Help the zombie draw glasses using squares
+        with sides of 100 pixels.  \r\nThe bridge between the glasses is 75 pixels
+        long."
       grade4_artist_functions2_instruction: "Functions let you define new blocks!
         \r\n\r\nWe've moved the blocks needed for drawing a square into a function
         called `draw a square`. This time, use the `draw a square` function to create
         the glasses. \r\n\r\nThe squares are 75 pixels apart."
+      grade4_artist_functions2a_instruction: "Create this image using only the blocks
+        provided."
+      grade4_artist_functions3a_instruction: "Create this image using only the blocks
+        provided."
+      grade4_artist_functions3b_instruction: "This time, use lines of 8 hexagons
+        with 25 pixel sides."
       grade4_artist_functions_challenge_instruction: "Use the suggested functions
         to draw four rows of hexagons. Notice how our even numbered rows are shifted
         to the right?"
@@ -3001,24 +3996,26 @@ en:
         will automatically give your image a beautiful background color! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!"
-      grade4_artist_functions_stars0_instruction: "We will come back to functions
-        shortly. Let's take a break to practice making this star. You can make this
-        drawing by adding a turn and a repeat block."
+      grade4_artist_functions_stars0_instruction: "You can make this drawing by adding
+        a repeat block."
       grade4_artist_functions_stars1_instruction: "Now that you can draw a star,
         try drawing four stars!"
-      grade4_artist_functions_stars2_instruction: "When is drawing three stars harder
-        than drawing four? When you also have to jump over the moon!"
+      grade4_artist_functions_stars2_instruction: "Draw only those three stars to
+        finish this puzzle."
       grade4_artist_functions_stars3_instruction: "That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**."
-      grade4_artist_functions_windows0_instruction: "You are doing great! Do you
-        remember when you used nested loops to draw a pinwheel shape out of triangles?
-        Let's try using that same algorithm to make a window!"
+      grade4_artist_functions_windows0_instruction: "Make this window by drawing
+        a square, then turning 90 degrees before drawing another, and so on."
       grade4_artist_functions_windows1_instruction: "If you can draw one window,
         you can draw three! Try using your choice of a nested loop or a function here.
         Don't forget the jump block!"
-      grade4_artist_functions_windows2_instruction: "Can you figure out how to add
-        these windows? Watch out for the door!"
+      grade4_artist_functions_windows2_instruction: "Try solving this puzzle by creating
+        `draw a window` and calling it five times. Watch out for the door!\r\n\r\n-
+        The top windows are 50 pixels away from each other.  \r\n- The bottom windows
+        are 100 pixels below the top set."
+      grade4_artist_functionsChallenge0_instruction: "**Challenge:** Create as many
+        functions as you think you need to make this drawing of 50 pixel squares."
       grade4_artist_nested_loop_circles1_instruction: "Assessment: Use a nested loop
         to complete the design."
       grade4_artist_nested_loop_flags1_instruction: "Loop the given code to create
@@ -3084,8 +4081,8 @@ en:
         only collect nectar from flowers, but you can check any space to see if there
         is a flower."
       grade4_bee_conditionals_new1a_instruction: "Help the bee make all of the honey.
-        You can only make honey at a honey comb, but you can check any space to see
-        if there is a honey comb."
+        You can only make honey at a honeycomb, but you can check any space to see
+        if there is a honeycomb."
       grade4_bee_conditionals_new2_instruction: "Can you help the bee collect the
         nectar from the flowers? You can only collect nectar from flowers, but you
         can check any space to see if there is a flower."
@@ -3120,50 +4117,45 @@ en:
       grade4_bee_functions_instruction: "Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole."
       grade4_bee_functions1_instruction: "Collect all the nectar from each flower."
-      grade4_bee_functions10_instruction: "Assessment: Use the given function to
-        collect nectar from each flower."
-      grade4_bee_functions11_instruction: "Assessment: Create a function to turn,
-        move forward and make 3 honey, then return the bee to where it started and
-        turn back."
+      grade4_bee_functions10_instruction: "Create a function to collect all of the
+        nectar from each flower."
+      grade4_bee_functions11_instruction: "Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back."
       grade4_bee_functions2_instruction: "Functions are blocks of code that perform
         a task. Use the \"get 2 nectar\" function to collect the nectar from each
         flower."
-      grade4_bee_functions3_instruction: "Functions are blocks of code that perform
-        a task.  \r\n\r\nUse the `get 5` function to get 5 nectars at a time."
-      grade4_bee_functions4_instruction: "The `move and get nectar` function turns
-        the bee, collects nectar, and then returns the bee to where it started.  \r\n\r\nUse
-        the function to collect all of the nectar."
+      grade4_bee_functions3_instruction: "Build the `get 5` function to use in this
+        puzzle."
+      grade4_bee_functions4_instruction: "Use the `move and get nectar` function
+        to collect all of the nectar."
       grade4_bee_functions5_instruction: "This puzzle will be deleted!"
       grade4_bee_functions6_instruction: "Now write the function to collect nectar
-        from the three flowers."
+        from the flowers."
       grade4_bee_functions7_instruction: "Create a function and call it to collect
         nectar at each flower and make honey at each honeycomb."
       grade4_bee_functions8_instruction: "Create your own function that goes down
         a path, gets nectar, makes honey, and then returns the bee to the top of the
         path. Then collect all the nectar and make all the honey!"
-      grade4_bee_functions9_instruction: "Red flowers can have an unknown amount
-        of nectar each time you run the puzzle.   \r\n\r\nCreate a function that collects
-        all of the nectar from each flower."
+      grade4_bee_functions9_instruction: "Create a function that collects all of
+        the nectar from each flower."
       grade4_bee_nestedLoops0_instruction: "Use a loop to collect all of the nectar."
-      grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower.
-        Use a nested loop. "
-      grade4_bee_nestedLoops2_instruction: "Can you determine the missing blocks?"
-      grade4_bee_nestedLoops2a_instruction: "Can you create a nested loop to collect
-        all of the nectar?"
+      grade4_bee_nestedLoops1_instruction: "Collect all of the nectar from each flower."
+      grade4_bee_nestedLoops2_instruction: "**Challenge:** Figure out how to get
+        all of the nectar using only the blocks available."
+      grade4_bee_nestedLoops2a_instruction: "Collect all of the nectar using  as
+        few blocks as possible."
       grade4_bee_nestedLoops3_instruction: "Collect all of the nectar by creating
         a nested loop."
       grade4_bee_nestedLoops4_instruction: "Collect all of the nectar from each flower
-        and make honey at the honeycomb. \r\n\r\nUse a nested loop. "
-      grade4_bee_nestedLoops5_instruction: "Challenge time!\r\n\r\nCollect all of
-        the nectar from each flower and make honey at each honeycomb. \r\n\r\nHint:
-        You will need 4 repeat blocks!"
+        and make honey at the honeycomb. "
       grade4_bee_nestedLoops_assess_instruction: "**Assessment:** Collect all of
         the nectar and make all of the honey using loops.\r\n\r\nHint: There are several
         possible solutions!"
       grade4_designProcess_vid_instruction: "Prepare to build a project within some
         given parameters."
-      grade4_farmer_functions1_instruction: "Have we met before? I'm the farmer!
-        Please help me remove this pile and fill this hole."
+      grade4_farmer_functions1_instruction: "*\"Have we met before? I'm the farmer!\"*\r\n\r\nHelp
+        the farmer get to the pumpkins and pick them."
       grade4_farmer_functions2_instruction: "Take the code you just wrote it and
         use it to define a new function. Call the function twice to complete the puzzle."
       grade4_farmer_functions3_instruction: "Try using a couple of repeat blocks
@@ -3251,8 +4243,8 @@ en:
       grade4_scaffolded_project1_instruction: "It is amazing how much you have learned!
         Let's put them together to make a game, step by step."
       grade4_scaffolded_project2_instruction: "Now let's get things moving! Use
-        these event handlers and actions to make your hero move.\r\n\r\nWe've added
-        these blocks to your tool box to help you.\r\n"
+        event handlers and actions to make your hero move.\r\n\r\nWe've added these
+        blocks to your tool box to help you.\r\n"
       grade4_scaffolded_project3_instruction: "Now that your game has a hero, it's
         time to start adding other actors and assigning them behaviors. \r\n\r\nAdd
         two or more additional actors to your game and make them move. Do you want
@@ -3301,8 +4293,9 @@ en:
       grade5_artist_binary9_instruction: "Here's a higher resolution canvas to draw
         on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to get
         creative with the bits?"
-      grade5_artist_for_loops1_instruction: "Use a repeat block to draw this triangle
-        that is 50 pixels wide."
+      grade5_artist_for_loops1_instruction: "Use a `for` loop to draw this triangle
+        that is 50 pixels wide. If you count from 1 to 3 by 1s, you can use this just
+        like a `repeat` loop."
       grade5_artist_for_loops10_instruction: "Can you figure out how to use all of
         the things you've learned to create this image?\r\n\r\nNeed a hint? Click
         here."
@@ -3310,18 +4303,15 @@ en:
         triangular design. Don't worry that the numbers are different than the last
         puzzle. As long as you turn by the right number of degrees, the artist will
         make the correct shape!"
-      grade5_artist_for_loops1b_instruction: "*Free Play:* Experiment with the `for
-        loop` and the `counter` variable."
-      grade5_artist_for_loops2_instruction: "I've put the code for drawing a triangle
-        inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look
-        at the code before you hit \"Run\"."
-      grade5_artist_for_loops3_instruction: "Use the last puzzle as a reference to
-        complete this one.  The smallest triangle has 20 pixel sides, the largest
-        has 200 pixel sides, and each triangle is 20 pixels larger than the last.
-        "
-      grade5_artist_for_loops4_instruction: "How would you modify what you've learned
-        to draw these squares? They start at 15 pixels long, the largest is 300 pixels
-        long, and each square is 15 pixels larger than the last. "
+      grade5_artist_for_loops1b_instruction: "Experiment with the `for` loop and
+        play with the `counter` variable."
+      grade5_artist_for_loops2_instruction: "Use a `repeat` inside of a `for` loop
+        to create this stack of triangles that goes from 50 pixels to 100 pixels."
+      grade5_artist_for_loops3_instruction: "These triangles go from 20 pixel sides
+        to 200 pixel sides, and each triangle is 20 pixels larger than the last. "
+      grade5_artist_for_loops4_instruction: "These squares start at 15 pixels long,
+        the largest is 300 pixels long, and each square is 15 pixels larger than the
+        last. "
       grade5_artist_for_loops5_instruction: "Just one little change to the code from
         the last image can create this drawing. Can you figure out what that change
         is?\r\n\r\nHint:  You need to remove something!"
@@ -3331,6 +4321,11 @@ en:
         square spiral."
       grade5_artist_for_loops7_instruction: "Make three small changes to the code
         from the last level to get this!"
+      grade5_artist_for_loops7a_instruction: "Take the angle down to 72 degrees to
+        get a spiraled pentagon."
+      grade5_artist_for_loops7b_instruction: "Use the counter inside the `set alpha`
+        block to get this faded center.\r\n(This hexagon pattern was made using a
+        60 degree turn.)"
       grade5_artist_for_loops8_instruction: "Remember back in a previous stage when
         we used a variable to control the number of sides in a shape? We are going
         to do the same thing with the `counter` variable now. This pattern starts
@@ -3345,9 +4340,8 @@ en:
         now learned everything you need to know to make a pattern like this! If this
         picture inspires you, try to make something similar. Otherwise, create something
         all your own.\r\n\r\nNeed a hint? Click here."
-      grade5_artist_for_loopsfreeplay12_instruction: "Free Play: Try making some
-        drawings of your own using \"for loops\". We've added a few useful variables
-        for you as well."
+      grade5_artist_for_loopsfreeplay12_instruction: "Free Play: Try using the `counter`
+        variable with other drawing elements to make magical images like this one."
       grade5_artist_freeplay_instruction: "Create your own project! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!"
@@ -3355,36 +4349,50 @@ en:
         now learned everything you need to know to make a pattern like this! If this
         picture inspires you, try to make something similar. Otherwise, create something
         all your own.\r\n \r\nWant to know how our inspiration pattern was made? "
-      grade5_artist_functionparameters11_instruction: "Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
+      grade5_artist_functionparameters11_instruction: "Freeplay: Below there are
+        functions you've written, and more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!"
       grade5_artist_functionparameters7_instruction: "This image is similar to the
         last. Can you use a `for` loop with your function to make this design?"
-      grade5_artist_functionparameters8_instruction: "Let's edit this \"draw a polygon\"
-        function. It already has a \"sides\" parameter. Now, let's add a \"length\"
-        parameter. \r\nThe perimeter of each shape is 200 pixels long. Do you remember
-        the equation to make shapes the same size when they have a different number
-        of sides?"
-      grade5_artist_functionparameters9_instruction: "Edit \"draw a spiral edge\"
-        to use \"length\" and \"sides\" parameters, then recreate these shapes."
-      grade5_artist_functionparameters_6_instruction: "Can you complete this drawing?
-        The sides of all the shapes are 100 pixels long."
+      grade5_artist_functionparameters8_instruction: "The triangle has 21 pixel sides,
+        and the sides in each following shape are 7 pixels longer than the last.  Use
+        the `multiplication` block to make this all happen with just one function
+        call. Be sure to jump 100 pixels between polygons."
+      grade5_artist_functionparameters9_instruction: "Challenge: Edit `draw a spiral
+        edge` to use `length` and `sides` parameters, then recreate these shapes."
+      grade5_artist_functionparameters9a_instruction: "Finish off the `draw a spiral
+        edge` function to also ask for a minimum length for the center of the spiral."
+      grade5_artist_functionparameters9b_instruction: "Can you figure out how to
+        make this drawing using the function that you just created?"
+      grade5_artist_functionparameters_6_instruction: "Edit this function to add
+        a parameter for the number of sides in your polygon.\r\n\r\nThe sides of all
+        the shapes are 100 pixels long."
       grade5_artist_parameters_squares1_instruction: "Click \"edit\" to fill in the
         function definition of \"draw a square\" and add a parameter. It should take
         a length parameter, just like the triangle. This time, draw 3 squares: 25,
         50 and 75 pixels in length, each 100 pixels apart."
-      grade5_artist_parameters_squares2_instruction: "Now try creating the function
-        from scratch! Create a function called 'draw a square' and use it to outline
-        these four boxes. Make sure to add a parameter for 'length'!"
+      grade5_artist_parameters_squares1a_instruction: "This program looks okay from
+        here, but something isn't working right. See if you can figure out how to
+        edit the function 'draw a square' to find the bug."
+      grade5_artist_parameters_squares2_instruction: "Create a function called 'draw
+        a square' and use it to outline these four boxes. Make sure to add a parameter
+        for 'length'! Starting from the upper right, the box widths are 50, 100,
+        150, and 200."
+      grade5_artist_parameters_squares2a_instruction: "Edit the function to accept
+        a parameter called `length`."
       grade5_artist_parameters_stars1_instruction: "That last one is tough if you
         only use loops. Let's try drawing the same picture using this new 'function'
         that will help to **draw a star**."
       grade5_artist_parameters_triangles1_instruction: "This program looks okay from
         here, but something isn't working right. See if you can figure out how to
-        edit the function 'draw a triangle' to find the bug."
+        edit the function 'draw a square' to find the bug."
       grade5_artist_parameters_triangles1a_instruction: "Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
         how to edit the function 'draw a triangle' to find the bugs."
+      grade5_artist_parameters_triangles1aa_instruction: "Click \"edit\" to fill
+        in the function definition of \"draw a triangle\" and add a parameter. It
+        should take a length parameter, just like the triangle. This time, draw 3
+        triangles: 25, 50 and 75 pixels in length, each 100 pixels apart."
       grade5_artist_parameters_triangles2_instruction: "This drawing can be easily
         created using a new type of function that includes a parameter. The sides
         of each triangle are 25 pixels larger than the last.  The first triangle has
@@ -3452,8 +4460,6 @@ en:
         Can you use the sides variable (along with the math block) to turn the right
         amount regardless of how many sides there are in the polygon?\r\n\r\nClick
         here to go back to the hint!"
-      grade5_artist_variables_triangles1_instruction: "Let's draw an equilateral
-        triangle. \r\n\r\nIt has to be exactly 100 pixels long on each side."
       grade5_artist_variables_triangles2_instruction: "Instead of using \"move forward
         by 150,\" the \"move\" block is now referencing a variable called \"length.\"
         Can you set \"length\" to 150 to draw this new triangle?"
@@ -3462,57 +4468,24 @@ en:
         pixel triangles. "
       grade5_bee_for_loops1_instruction: "Use a loop to collect the nectar from each
         flower."
-      grade5_bee_for_loops10_instruction: "If your loop is counting down, the increment
-        is subtracted from your counter variable each loop. What should your increment
-        be to collect 15, then 12, then 9, 6, 3 nectar?"
-      grade5_bee_for_loops11_instruction: "Ready for a challenge?  Take what you've
-        learned about loops and try to solve this problem. Remember: You may have
-        to run through solutions multiple times before you figure out all of the steps."
+      grade5_bee_for_loops10_instruction: "What should your increment be to collect
+        15, then 12, then 9, 6, 3 nectar?"
+      grade5_bee_for_loops11_instruction: "**Challenge:** Take what you've learned
+        about `for` loops and try to solve this problem. "
       grade5_bee_for_loops2_instruction: "Add the code necessary to make sure the
         bee collects all the nectar. Look at how much code you need for this puzzle!
         (We'll learn a simpler way in the next puzzle.)"
-      grade5_bee_for_loops3_instruction: "Ah, the \"for loop\" makes this much easier!
-        All the code you need is here, take a look at how it is put together then
-        click \"Run\" to see how it works. "
-      grade5_bee_for_loops4_instruction: "Replace the ??? in the \"for loop\" with
-        the largest amount of nectar the bee has to collect. "
-      grade5_bee_for_loops5_instruction: "Now we need to move forward \"counter\"
-        times, then get nectar \"counter\" times.  Can you use two \"repeat\" loops
-        to solve this challenge?"
+      grade5_bee_for_loops3_instruction: "Try this puzzle using the `for` loop with
+        `counter` variable and see how much shorter your code becomes."
+      grade5_bee_for_loops4_instruction: "Help the bee collect all of the nectar."
       grade5_bee_for_loops6_instruction: "You can also use a \"for loop\" to count
         down. Try gathering this nectar by counting down from 5 to 1 by 1."
-      grade5_bee_for_loops7_instruction: "The last number in your for loop is called
-        the \"increment\". Each time the loop is run, the counter variable changes
-        by the value of the increment. Try collecting these flowers using an increment
+      grade5_bee_for_loops7_instruction: "Try collecting these flowers using an increment
         of 2."
       grade5_bee_for_loops8_instruction: "You've got this! What should your increment
         be to collect 3, 6, 9, 12, 15 nectar?"
-      grade5_bee_for_loops9_instruction: "Now, let's combine the \"counter\" variable
-        with a math block! How can you use the \"counter\" variable to navigate this
-        garden with the fewest number of blocks possible? What do you need to do to
-        collect 3, 6, 9, 12, 15 nectar this time? The secret is in the \"counter\"
-        variable!\r\n\r\nRemember: If your loop is counting up, the increment is added
-        to your \"counter\" variable each time through."
-      grade5_bee_parameters_new1_instruction: "Help the bee collect all of the nectar.
-        You can only collect nectar from flowers, but you can check any space to see
-        if there is a flower."
-      grade5_bee_parameters_new2_instruction: "Let's take that last program you
-        wrote and turn it into a function. Then, call the function to collect the
-        nectar when needed. This may seem like a strange step now, but it will be
-        really helpful soon!"
-      grade5_bee_parameters_new3_instruction: "Time to put the function to the test!
-        Let's see if it makes it any easier to collect these three rows of nectar."
-      grade5_bee_parameters_new4_instruction: "How is your function holding up? We
-        may need to make some adjustments here. Can you add a 'length' parameter
-        to the function so that it will still work if the row is a different length?"
-      grade5_bee_parameters_new5_instruction: "Challenge Level! You are doing great
-        so far! Let's use this parametric function to collect a lot of nectar."
-      grade5_bee_parameters_new6_instruction: "You can make your program much shorter
-        and more efficient when you notice new patterns. Try using some other blocks
-        to make a short and simple solution!"
-      grade5_bee_parameters_new7_instruction: "Something looks a little different.
-        Can you modify your function to account for all this honey that needs to be
-        made?"
+      grade5_bee_for_loops9_instruction: "Use the `counter` variable to navigate
+        this garden with the fewest number of blocks possible."
       grade5_bee_parameters_new8_instruction: "That's a great function you've created!
         You are officially on your own now. Collect all the nectar. Make all the honey."
       grade5_bee_parameters_new9_instruction: "Bonus Challenge! If you are feeling
@@ -3521,8 +4494,7 @@ en:
         and a turn. Try it all on your own, or view the hints to build it step-by-step.
         Great job with this stage!"
       grade5_pixelation_instruction: "Encode an image of anything you like using
-        binary. Remember that the binary language will be represented with '0' and
-        '1' only."
+        binary. The binary language will be represented with '0' and '1' only."
       grade5_playlab_freeplay_instruction: "It's free play time! Have fun with all
         the blocks in your tool box. "
       grade5_playlab_parameters_points1_instruction: "Here's the same game but most
@@ -3614,7 +4586,7 @@ en:
       gradek_adventurer_loops10_instruction: "Help me get all of the gold from this
         cave."
       gradek_adventurer_loops2_instruction: "How can Laurel collect all five piles
-        of gold using only one --> block?"
+        of gold using only one `[E-->]` block?"
       gradek_adventurer_loops3_instruction: "Can you fix Laurel's path to get all
         of this gold?"
       gradek_adventurer_loops4_instruction: "Use what you learned to get all of the
@@ -3625,30 +4597,30 @@ en:
         get all of the gold?"
       gradek_adventurer_loops6_instruction: "Write the code to get all of this gold."
       gradek_adventurer_loops7_instruction: "Write the code to get all of this gold."
-      gradek_adventurer_loops7_challenge_instruction: "Challenge: The gold goes all
-        the way up these stairs!  Write the code to help me get it all."
-      gradek_adventurer_loops8_instruction: "Help me get the gold from this deep
-        valley."
+      gradek_adventurer_loops7_challenge_instruction: "**Challenge:** The gold goes
+        all the way up these stairs!  Write the code to help me get it all."
+      gradek_adventurer_loops8_instruction: "Help me get all of the gold from this
+        deep valley."
       gradek_adventurer_loops9_instruction: "Help me get all of the gold from this
         cave."
       gradek_adventurer_loopsFP_instruction: "Eureka!  Collect as much gold as you
         can!"
-      gradek_adventurer_loopsPre_instruction: "This is Laurel the Adventurer!  Can
-        you move her around and get gold?"
+      gradek_adventurer_loopsPre_instruction: "This is Laurel the Adventurer.  Mover
+        her around and get as much gold as you can!"
       gradek_artist_loops1_instruction: "Help the artist draw this line two times
         forward."
       gradek_artist_loops2_instruction: "Our artist is trying to draw a line five
         times, but can't get it right.  Can you help?"
       gradek_artist_loops3_instruction: "Now, use a `repeat` loop to draw this line
         five times!"
-      gradek_artist_loops4_instruction: "Draw a line eight steps long. This will
+      gradek_artist_loops4_instruction: "Draw a line seven steps long. This will
         become our horizon."
       gradek_artist_loops5_instruction: "Let's put a nice hill in the back."
       gradek_artist_loops6_instruction: "Use the `repeat` loop to add waves to the
         water."
       gradek_artist_loops7_instruction: "We need a ladder up to the boat."
-      gradek_artist_loops8_instruction: "Challenge: The stairs are broken.  Help
-        me fix them."
+      gradek_artist_loops8_instruction: "Challenge: The stairs down to the dock are
+        broken.  Help me fix them."
       gradek_artist_loops9_instruction: "Time to head back to land. Help me put down
         stones so I don't fall in!"
       gradek_artist_loopsA_instruction: "Help me build steps to watch the ship sail
@@ -3661,33 +4633,48 @@ en:
         button is clicked."
       gradek_playlab_events1a_instruction: "Add a block so that when you click the
         \"up\" button, Olive the Cat walks up."
+      gradek_playlab_events1c_instruction: "Jorge the Dog wants to say \"Hi there.\"  Can
+        you help him?"
       gradek_playlab_events2_instruction: "Edit the code so that when the second
         bird is clicked, your program plays a sound!"
       gradek_playlab_events2a_instruction: "Add a block so that when you click \"down\"
         Olive the Cat walks down."
+      gradek_playlab_events2c_instruction: "Help Jorge the Dog get moving by connecting
+        the `move left` block to the `when left` event block that is already in the
+        workspace."
       gradek_playlab_events3_instruction: "When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?"
       gradek_playlab_events3a_instruction: "When the third bird is clicked, the background
         should change to a city. Can you add code to make this happen?"
       gradek_playlab_events3b_instruction: "Add a button so that Olive the Cat moves
         right when you click the \"right\" button."
+      gradek_playlab_events3c_instruction: "Now, get Jorge to move right when the
+        `right` button is clicked."
       gradek_playlab_events4_instruction: "Add code to make something happen when
         the fourth bird is clicked. Be creative!"
       gradek_playlab_events4a_instruction: "Add a block so that Olive the Cat moves
         left when you click the \"left\" button."
+      gradek_playlab_events4c_instruction: "Add events to have Jorge move up and
+        down when the `up` and `down` buttons are pressed."
       gradek_playlab_events5_instruction: "About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot."
       gradek_playlab_events5a_instruction: "About My Robot Project! Write code so
         that clicking on each bird shows a new fact about your robot."
-      gradek_playlab_eventsA_instruction: "Now, have the actor change to a random
-        size AND have it play a random sound when you click the center button."
+      gradek_playlab_events5c_instruction: "Make this more interesting by changing
+        the background and playing a random sound when Jorge is clicked."
+      gradek_playlab_eventsA_instruction: "Now, have the cat change to a random size
+        AND have it play a random sound when you click the center button."
       gradek_playlab_eventsFP_instruction: "Add anything you want to this game.  Can
-        you make Olive the Cat disappear when you click on her?"
+        you make the dinosaur disappear when Jorge runs into him?"
       gradek_playlab_eventsPre_instruction: "This is a Play Lab level.  Move blocks
         to the workspace and see what happens!"
       gradeK_sequence_4_instruction: "Try this one yourself from the beginning."
+      group test_instruction: "Make a game"
       Guess The Number_instruction: "Build whatever you want. This is an example
         of a number-guessing game!"
+      Harvester Test_instruction: "It's harvest time! But I forgot what crop I planted
+        at which tile. Please help me harvest all my crops, no matter how they were
+        originally planted!"
       Harvesting_instruction: "Uh oh, I lost my map and can't remember what I planted.
         Every sprout could grow up to be corn, beans, or pumpkins. Can you write some
         code to pick all the crops, no matter what they are?"
@@ -3932,7 +4919,7 @@ en:
       kikiTesta_instruction: "Our adventurer wants to collect coins.  But she can
         only use 4 blocks to get them.\r\n\r\nCan you help her grab as many as she
         can using just 4 blocks?"
-      kikiTesting_instruction: ".\r\n .\r\n.\r\n.\r\n.\r\n.\r\n\r\n.\r\n\r\n"
+      kikiTesting_instruction: "See all angles of Stevie and Jorge"
       KTest1_instruction: "Can you make me move South once more to get to the pig?"
       KTest2_instruction: "Trace the path and lead me to the silly pig. Avoid TNT
         or the feathers will fly!"
@@ -3997,6 +4984,53 @@ en:
         for a topping we don't carry."
       Luigi's Pizza 4_instruction: "Free Play: What can you do to make Luigi's cost
         function even more useful?"
+      MC HOC 2016 Level 1_instruction: "This sheep is coded to 'drop wool' when
+        it is 'used.' Use the arrows to walk to the sheep, and press the space bar
+        or tap the game space to 'use' it. Collect the wool to win!"
+      MC HOC 2016 Level 10_instruction: "It's time to make your own Minecraft! Spawn
+        creatures and then make them do whatever you want. Have fun!"
+      MC HOC 2016 Level 2-2_instruction: "The chicken is frozen. Place `move` and
+        `turn` blocks in the `when spawned` slot to get it to move."
+      MC HOC 2016 Level 2_instruction: "This chicken has forgotten how to move! Get
+        it moving around by putting “Move Forward” and “Turn” commands in the “When
+        Spawned” slot. "
+      MC HOC 2016 Level 3_instruction: "Great, the chicken moved! But then she stopped.
+        In games, chickens walk forever. Use a `forever do` loop to keep these chickens
+        moving.\r\n"
+      MC HOC 2016 Level 4_instruction: "Now the chickens look weird moving the same
+        way. Games use random moves to make things look real. Make the chickens `turn
+        random`."
+      MC HOC 2016 Level 5_instruction: "These cows are lost! Lead them to the grass
+        with the `move a step toward` block in a `forever do` loop."
+      MC HOC 2016 Level 6_instruction: "Now you make the zombies. Use the `spawn`
+        block to make 3 zombies when night falls. Get them to move towards you. Survive
+        until morning."
+      MC HOC 2016 Level 7_instruction: "Now let’s combine what you've learned and
+        create a new mob! Make a cow, lead it to the pasture, and get it to give you
+        milk."
+      MC HOC 2016 Level 8_instruction: "The path to your sheep is blocked by a stone
+        wall. Luckily there is a Creeper here. Creepers explode after you touch them.
+        Get the Creeper to explode the wall so you can reach your sheep!"
+      MC HOC 2016 Level 9_instruction: "Zombies are attacking the village! Code the
+        Iron Golem to fight them with you. Defeat all the Zombies to save the village!\r\n"
+      MC HOC 2016 Nerop_instruction: "Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue."
+      MC HOC 2016 New Drop_instruction: "In Minecraft, sheep drop wool. Place the
+        `drop` block in `when used`, then walk over and use the sheep to drop an item."
+      MC HOC 2016 New pn_instruction: "Now let's explore our world! Use the arrows
+        to walk around and press the space bar or tap the game space to 'use' items.
+        Try getting inside the house by using the door to continue."
+      MC HOC 2016 New Spawn_instruction: "Now you can fill the world with what you
+        want! Place`spawn` blocks under `when run` to spawn things when the game starts."
+      MC HOC 2016 New Walk_instruction: "Let's explore our world! Move with the
+        arrows, and press the space bar or tap the game board to use items. Use the
+        door to get inside the house."
+      MC HOC 2016 SCORE LEVEL_instruction: "Some games let you keep score. Play tag
+        with these Iron Golems and use the `add 1 to score` block to give yourself
+        a point when you tag them. Reach five points to win!"
+      MC HOC 2016 Village Test_instruction: "Oh no! Zombies have trapped you inside!
+        Code the Iron Golem to chase and attack the zombies!"
       Middle School Hackathon Pt 1_instruction: "(Click to see full instructions)"
       Middle School Hackathon Pt 2_instruction: "(Click to see full instructions)"
       Mike Pair Programming_instruction: "Here are the instructions"
@@ -4006,6 +5040,17 @@ en:
       Mike Test Bee Conditionals 2_instruction: "Collect all of the nectar. You can
         only collect nectar from flowers, but you can check any space to see if there
         is a flower."
+      mike3bit_instruction: "We start you with the 4x2 image Maddie was creating,
+        but we've left out the last few pixels. Finish off the image by figuring
+        out which colors are missing and encoding them."
+      mike3bitbird_instruction: "Here's an example of an image made with 3-bit color.
+        Try changing it to understand how it works. If you want to reset the image,
+        press \"Start Over\"."
+      mike3bitfreeplay_instruction: "Make something awesome and share it with your
+        classmates! You can copy and paste the value of a pixel to use it repeatedly."
+      mike3bitmario_instruction: "A careless binary coder typed in ONE extra 0 or
+        1 somewhere within this image's data. The extra bit that is causing Mario
+        to glitch out! \r\n\r\nDelete the extra bit to restore Mario back to normal!"
       MikeAssessment1_instruction: "Now do it right!"
       MikeStar_instruction: "Draw this."
       MikeStarHard_instruction: "Draw this."
@@ -4193,7 +5238,7 @@ en:
       NEW Course 4 Artist Params 15_instruction: "Freeplay: Here are the functions
         you've written, and some more for you to play with. Draw something awesome!
         Play with the pen width to see how different your drawings look!"
-      NEW Course 4 Artist Params 2_instruction: "Create a `draw a triangle` function
+      NEW Course 4 Artist Params 2_instruction: "Create a `draw triangle` function
         from scratch that makes a triangle with  50 pixel sides."
       NEW Course 4 Artist Params 3_instruction: "Now let's use the function to draw
         5 triangles in a row. Each triangle is 30 pixels apart.\r\n"
@@ -4491,6 +5536,7 @@ en:
         familiar from the real world. This requires persistence and planning!"
       Planning Farmer_instruction: "What a strange field of goodies! I wonder if
         there's a pattern here..."
+      Planter Test_instruction: "Help me plant my fields!"
       Play Lab Rocket 1_instruction: "A rocket blasts off, traveling at 15 meters
         per second... press \"Run\" to see how this word problem looks as an animation."
       Play Lab Rocket 2_instruction: "We've started the Design Recipe for rocket-height
@@ -4534,6 +5580,10 @@ en:
         and to the left of the turtle's starting position. Click to see full instructions."
       Poorva-test_instruction: "Here are regular instructions for a level. There
         is nothing fancy going on here."
+      Practice Create Performance Task_instruction: "Design and implement your practice
+        Create Performance Task. (Click to see full instructions)"
+      Project - Your Own Multi Screen App_instruction: "Create your multi-screen
+        app. (Click to see full instructions.)"
       Prompt Test_instruction: "Build whatever you want. This is an example of a
         number-guessing game!"
       PS copy 2-3 Bee Conditionals 5_instruction: "Be careful not to collect nectar
@@ -4703,7 +5753,7 @@ en:
       Text Compression 1_instruction: "Look for patterns (repeated words or phrases)
         in the text. Enter the patterns you see into the dictionary on the right.
         As you type entries into the dictionary, the symbol for the entry is inserted
-        into the text in place of the pattern."
+        into the text in place of the pattern.\r\n\r\n"
       The Vigenere Cipher Widget_instruction: "Instructions"
       The Vigenere Cipher_instruction: "Instructions"
       Total Artist Clone Me_instruction: "Freeplay: Here are the functions you've
@@ -5392,7 +6442,7 @@ en:
         image of both squares, this time using parameters. (Click to see full instructions)"
       U3L08 - Enchantment Under the Sea_instruction: "You have been provided with
         starter code for an “Under the Sea” scene which includes three functions,
-        one each for the starfish, sea grass, and fish. Create versions of these functions
+        one each for the starfish, seagrass, and fish. Create versions of these functions
         which accept parameters to allow you to add more variation to your scene.  The
         student worksheet provides more details and guidance."
       U3L08 - fish_instruction: "Add a parameter to drawFish that changes the size
@@ -5402,8 +6452,8 @@ en:
       U3L08 - individualCode_instruction: "Create the functions you were assigned
         as part of your digital scene. (Click to see full instructions)"
       U3L08 - introUnderTheSea_instruction: "Add an extra fish, starfish, and piece
-        of sea grass to the image. Look at, but don't change, the functions that
-        create them. (Click to see full instructions)"
+        of seagrass to the image. Look at, but don't change, the functions that create
+        them. (Click to see full instructions)"
       U3L08 - multiParamFish_instruction: "Add three parameters to your drawFish
         function to accept red, green and blue values to make your fish different
         colors. (Click to see full instructions)"
@@ -5417,9 +6467,9 @@ en:
         the size of the piece of seagrass drawn. (Click to see full instructions)"
       U3L08 - squareTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"
-      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of sea
-        grass to the image. Look at, but don't change, the functions that create
-        them. (Click to see full instructions)"
+      U3L08 - starFish_instruction: "Add an extra fish, starfish, and piece of seagrass
+        to the image. Look at, but don't change, the functions that create them.
+        (Click to see full instructions)"
       U3L08 - triangleTwoParams_instruction: "Call drawSquare() to complete the drawing
         of two squares. (Click to see full instructions)"
       U3L1 - Simulation - Template_instruction: "Use a while loop to \"flip 10 coins\"
@@ -6026,6 +7076,9 @@ en:
         in the array\r\n\r\n"
       U4L15 Read Data 4_instruction: "\r\nUse a random record from the list of records
         to display your sentence."
+      U5 if-else-if movie example_instruction: "Add an else-if statement in order
+        to tell the user if their guess is high or low instead of just wrong. (Click
+        to see full instructions)"
       U6 - Final Project - Project Level_instruction: "Build your final project here.
         (Click to see full instructions)"
       U6 - updateRecord - Callback Success Parameter_instruction: "Add an if-else

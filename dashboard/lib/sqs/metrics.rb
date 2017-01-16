@@ -26,13 +26,11 @@ module SQS
 
   # A thread safe counter.
   class Counter
+    attr_reader :value
+
     def initialize
       @lock = Mutex.new
       reset
-    end
-
-    def value
-      @value
     end
 
     def increment(added_value)

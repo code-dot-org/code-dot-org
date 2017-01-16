@@ -6,6 +6,8 @@ nav: promote_nav
 
 ---
 
+<%= view :signup_button %>
+
 ### Mai jos este o rezoluţie de proba de susţinere a Saptamanii Mondiale a Educatiei si Stiintei calculatorului şi obiectivele sale, care ar putea fi utilizate de stat şi legiuitorii locali.
 
   
@@ -15,31 +17,31 @@ nav: promote_nav
 
 [DATA]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Întrucât tehnologia este o parte integrantă a culturii şi se transformă in functie de modul în care oamenii interacţionează cu fiecare şi de lumea din jurul lor;
 
 Întrucât stiinta computerului si programarea transforma industria, creeaza noi domenii de comert, conduce inovaţia în toate domeniile ştiinţei, şi susţine productivitatea în sectorul economic stabilit;
 
-Chiar daca acest câmpul de stiinta calculatorului stă la baza sectorului tehnologiei informaţiilor economiei noastre, care este o contribuţie considerabilă la datele economice ale Statelor Unite;
+Chiar daca acest câmpu de stiinta calculatorului stă la baza sectorului tehnologiei informaţiilor economiei noastre, care este o contribuţie considerabilă la datele economice ale Statelor Unite;
 
 Întrucât câmpul de informatică este o stiinta fundamentala pentru era digitală;
 
 Întrucât sectorul tehnologiei informaţiilor este poziţionat unic pentru a ajuta redresării economice prin cercetare şi dezvoltare de noi inovaţii;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Întrucât perspectivele pentru locurile de muncă in domeniul it sunt luminoase cu peste 500.000 de posturi de calcul deschise in intreaga tara;
 
 Întrucât furnizarea sansei elevilor de a participa la activităţi de inalta clasa privind stiinta calculatorului si programare ii expune la oportunităţile bogate pe care domeniul le oferă şi la abilităţile de gândire critică, care le va servi toată viaţa;
 
 Întrucât toţi studenţii merită o pregătire temeinică în stiinta calculatorului si programare, inclusiv accesul la cadrele didactice calificate, tehnologie, şi curriculum adecvat vârstei necesare pentru a invata informatica la nivelul primar şi secundar de educaţie;
 
-Intrucat stiinta caclculatorului si programarea are provocarea de a se adresa, inclusiv claselor ce trebuie sa aiba cerinte de absolvire si sa ofere dezvoltarea profesorilor;
+Intrucat stiinta calculatorului si programarea are provocarea de a se adresa, inclusiv claselor ce trebuie sa aiba cerinte de absolvire si sa ofere dezvoltarea profesorilor;
 
 Întrucât participarea la un eveniment Hour of Code din timpul Saptamanii Educatiei poate servi la demitizarea domeniului şi poate sa încurajeze mai mulţi studenţi să aibă acces la studii suplimentare de stiinta computerului;
 
 Întrucât câmpul de informatică are bariere semnificative de capital, inclusiv atragerea participarii mai multor fete şi a minorităţilor slab reprezentate la toate nivelurile;
 
-Întrucât Grace Murray Hopper, una dintre primele femei în domeniul IT, a realizat noi limbaje de programare şi standardele pentru sisteme de calcul, care a pus bazele pentru multe progrese în informatică; şi
+Întrucât Grace Murray Hopper, una dintre primele femei în domeniul It, a realizat noi limbaje de programare şi standardele pentru sisteme de calcul, care a pus bazele pentru multe progrese în informatică; şi
 
-Întrucât săptămâna <%= campaign_date('start-long') %>, în onoarea zilei de nastere a lui Grace Hopper, este desemnata ca "Saptamana educatiei in tehnologia computerelor si programare
+Întrucât săptămâna <%= campaign_date('start-long') %>, în onoarea zilei de nastere a lui Grace Hopper, este desemnata ca "Saptamana educatiei in tehnologia computerelor si programare"
 
 Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 
@@ -52,3 +54,5 @@ Rezolvat, ca [casa sau Senatului, stat, JUDEŢ, oraş sau şcoală bord]--
 (4) încurajează factorii de decizie politică să elimine barierele care împiedică clasele de informatica sa fie considerate egale cu cele de matematica sau ştiinţă in ceea ce priveste cerinţele de absolvire;
 
 (5) încurajează oportunităţi, inclusiv prin programele existente, pentru femei şi minorităţile slab reprezentate înstiinta calculatorului si programare.
+
+<%= view :signup_button %>

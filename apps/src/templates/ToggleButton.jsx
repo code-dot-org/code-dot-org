@@ -6,12 +6,13 @@ import styles from './ToggleButtonStyles';
 const ToggleButton = React.createClass({
   propTypes: {
     id: React.PropTypes.string,
+    className: React.PropTypes.string,
     active: React.PropTypes.bool.isRequired,
     first: React.PropTypes.bool,
     last: React.PropTypes.bool,
     activeColor: React.PropTypes.string,
     title: React.PropTypes.string,
-    onClick: React.PropTypes.func.isRequired,
+    onClick: React.PropTypes.func,
     children: React.PropTypes.node,
   },
 
@@ -20,7 +21,7 @@ const ToggleButton = React.createClass({
       <button
         id={this.props.id}
         style={this.getStyle()}
-        className="no-outline"
+        className={"no-outline " + (this.props.className || "")}
         title={this.props.title}
         onClick={this.props.onClick}
       >

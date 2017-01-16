@@ -25,7 +25,7 @@ class MilestoneParser
   cattr_accessor :log_debug
 
   def debug(msg)
-    puts msg if self.log_debug
+    puts msg if log_debug
   end
 
   def self.count
@@ -33,7 +33,7 @@ class MilestoneParser
     cache_file = MILESTONE_CACHE_V2
     FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
     cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
-    parser = self.new(cache, AWS::S3.create_client)
+    parser = new(cache, AWS::S3.create_client)
     parser.count.tap{|_| IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 
@@ -50,7 +50,18 @@ class MilestoneParser
     start_time = Time.now
     debug 'Fetching milestone logs..'
 
-    hosts = s3_client.list_objects(bucket: 'cdo-logs', prefix: 'hosts/', delimiter: '/').data.common_prefixes.map(&:prefix)
+    hosts = []
+    continuation_token = nil
+    loop do
+      objects = s3_client.list_objects_v2(
+        bucket: 'cdo-logs',
+        prefix: 'hosts/',
+        delimiter: '/',
+        continuation_token: continuation_token
+      ).data
+      hosts.concat objects.common_prefixes.map(&:prefix)
+      break unless (continuation_token = objects.next_continuation_token)
+    end
     hosts.select! do |prefix|
       match = prefix.match /^hosts\/(?<host>[^\/]+)\//
       match && !(Regexp.union(IGNORE_HOSTS).match match[:host])
@@ -122,5 +133,6 @@ class MilestoneParser
     {'count' => 0, 'error' => e.message}
   end
 
-  def stub_fetch(key, path, bytes); end
+  def stub_fetch(key, path, bytes)
+  end
 end

@@ -30,6 +30,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::Workshop::COURSE_ECS => 'https://studio.code.org/s/ecspd1'
   }
 
+  after_action :save_timestamp
+
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
@@ -39,8 +41,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
-      to: email_address(@enrollment.name, @enrollment.email),
+      subject: teacher_enrollment_subject(@workshop),
+      to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -62,7 +64,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.name, @enrollment.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -82,26 +84,82 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Your upcoming Code.org workshop and next steps',
-      to: email_address(@enrollment.name, @enrollment.email),
+      subject: teacher_enrollment_subject(@workshop),
+      to: email_address(@enrollment.full_name, @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
-  def exit_survey(workshop, teacher, enrollment)
-    # In case the workshop is reprocessed, do not send duplicate exit surveys.
-    if enrollment.survey_sent_at
-      CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{enrollment.id}"
-      return
-    end
-    # Skip school validation to allow legacy enrollments (from before those fields were required) to update.
-    enrollment.update!(survey_sent_at: Time.zone.now, skip_school_validation: true)
-
+  def facilitator_enrollment_reminder(user, workshop)
+    @user = user
     @workshop = workshop
-    @teacher = teacher
-    @enrollment = enrollment
-    @is_first_workshop = Pd::Workshop.attended_by(teacher).in_state(Pd::Workshop::STATE_ENDED).count == 1
+    @cancel_url = '#'
 
-    @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: teacher_enrollment_subject(@workshop),
+         to: email_address(@user.name, @user.email),
+         reply_to: email_address(@user.name, @user.email)
+  end
+
+  def organizer_enrollment_reminder(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: teacher_enrollment_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def detail_change_notification(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
+
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: detail_change_notification_subject(@workshop),
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def facilitator_detail_change_notification(user, workshop)
+    @user = user
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@user.name, @user.email),
+         reply_to: email_address(@user.name, @user.email)
+  end
+
+  def organizer_detail_change_notification(workshop)
+    @workshop = workshop
+    @cancel_url = '#'
+
+    mail content_type: 'text/html',
+         from: from_teacher,
+         subject: detail_change_notification_subject(@workshop),
+         to: email_address(@workshop.organizer.name, @workshop.organizer.email),
+         reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  # Exit survey email
+  # @param enrollment [Pd::Enrollment]
+  def exit_survey(enrollment)
+    @workshop = enrollment.workshop
+    @teacher = enrollment.user
+    @enrollment = enrollment
+
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? @workshop.course
+      @survey_url = CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{enrollment.code}", 'https:'
+    else
+      @survey_url = CDO.code_org_url "/pd-workshop-survey/#{enrollment.code}", 'https:'
+    end
+
     @dash_code = CDO.pd_workshop_exit_survey_dash_code
 
     content_type = 'text/html'
@@ -111,17 +169,22 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
 
     mail content_type: content_type,
-      from: from_hadi,
+      from: from_survey,
       subject: 'How was your Code.org workshop?',
-      to: email_address(@enrollment.name || @teacher.name, @teacher.email)
+      to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
   private
 
+  def save_timestamp
+    return unless @enrollment && @enrollment.persisted?
+    Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
+  end
+
   def generate_csf_certificate
     image = create_certificate_image2(
       dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @teacher.name || @teacher.email,
+      @enrollment.full_name,
       y: 444,
       height: 100,
     )
@@ -143,13 +206,29 @@ class Pd::WorkshopMailer < ActionMailer::Base
     email_address('Code.org', 'noreply@code.org')
   end
 
-  def from_hadi
-    email_address('Hadi Partovi', 'hadi_partovi@code.org')
+  def from_survey
+    email_address('Code.org', 'survey@code.org')
   end
 
   def get_details_partial(course, subject)
     return 'csf' if course == Pd::Workshop::COURSE_CSF
     return DETAILS_PARTIALS[course][subject] if DETAILS_PARTIALS[course] && DETAILS_PARTIALS[course][subject]
     nil
+  end
+
+  def teacher_enrollment_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Your upcoming #{workshop.course_name} workshop"
+    else
+      'Your upcoming Code.org workshop and next steps'
+    end
+  end
+
+  def detail_change_notification_subject(workshop)
+    if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
+      "Details for your upcoming #{workshop.course_name} workshop have changed"
+    else
+      'Details for your upcoming Code.org workshop have changed'
+    end
   end
 end

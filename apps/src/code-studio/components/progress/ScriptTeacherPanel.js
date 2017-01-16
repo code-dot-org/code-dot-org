@@ -2,19 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { ViewType, setViewType, fullyLockedStageMapping } from '../../stageLockRedux';
+import { ViewType, fullyLockedStageMapping } from '../../stageLockRedux';
 import commonMsg from '@cdo/locale';
 
 const styles = {
-  viewAs: {
-    fontSize: 16,
-    margin: 10
-  },
-  toggleGroup: {
-    margin: 10
-  },
   text: {
     margin: 10
   },
@@ -29,62 +22,38 @@ const styles = {
   }
 };
 
-const ViewAsToggle = ({viewAs, setViewType}) => (
-  <div className="non-scrollable-wrapper">
-    <div style={styles.viewAs}>
-      {commonMsg.viewPageAs()}
-    </div>
-    <div style={styles.toggleGroup}>
-      <ToggleGroup
-        selected={viewAs}
-        onChange={setViewType}
-      >
-        <button value={ViewType.Student}>{commonMsg.student()}</button>
-        <button value={ViewType.Teacher}>{commonMsg.teacher()}</button>
-      </ToggleGroup>
-    </div>
-  </div>
-);
-ViewAsToggle.propTypes = {
-  viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-  setViewType: React.PropTypes.func.isRequired,
-};
-
 const ScriptTeacherPanel = React.createClass({
   propTypes: {
     viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    sections: React.PropTypes.objectOf(
-      React.PropTypes.shape({
-        section_name: React.PropTypes.string.isRequired
-      })
-    ).isRequired,
-    sectionsLoaded: React.PropTypes.bool.isRequired,
+    hasSections: React.PropTypes.bool.isRequired,
+    sectionsAreLoaded: React.PropTypes.bool.isRequired,
     scriptHasLockableStages: React.PropTypes.bool.isRequired,
-    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    setViewType: React.PropTypes.func.isRequired,
+    scriptHasHideableStages: React.PropTypes.bool.isRequired,
+    unlockedStageNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
   render() {
     const {
       viewAs,
-      sections,
-      sectionsLoaded,
-      setViewType,
+      hasSections,
+      sectionsAreLoaded,
       scriptHasLockableStages,
+      scriptHasHideableStages,
       unlockedStageNames
     } = this.props;
-    const hasSections = Object.keys(sections).length > 0;
+
     return (
       <TeacherPanel>
         <h3>{commonMsg.teacherPanel()}</h3>
         <div className="content">
-          <ViewAsToggle viewAs={viewAs} setViewType={setViewType}/>
-          {!sectionsLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
-          {scriptHasLockableStages && hasSections && <SectionSelector/>}
-          {scriptHasLockableStages && hasSections && this.props.viewAs === ViewType.Teacher &&
+          <ViewAsToggle/>
+          {!sectionsAreLoaded && <div style={styles.text}>{commonMsg.loading()}</div>}
+          {hasSections && (scriptHasLockableStages || scriptHasHideableStages) &&
+            <SectionSelector/>}
+          {hasSections && scriptHasLockableStages && viewAs === ViewType.Teacher &&
             <div>
               <div style={styles.text}>
-                {commonMsg.selectSection()}
+                {commonMsg.selectSectionInstructions()}
               </div>
               {unlockedStageNames.length > 0 &&
                 <div>
@@ -111,12 +80,13 @@ const ScriptTeacherPanel = React.createClass({
 });
 
 export default connect((state, ownProps) => {
-  const { viewAs, sections, selectedSection, sectionsLoaded, lockableAuthorized } = state.stageLock;
-  const currentSection = sections[selectedSection];
-  const stages = currentSection ? currentSection.stages : {};
+  const { viewAs, stagesBySectionId, lockableAuthorized } = state.stageLock;
+  const { sectionsAreLoaded, selectedSectionId, sectionIds } = state.sections;
+  const currentSection = stagesBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(state.stageLock);
-  const unlockedStageIds = Object.keys(stages).filter(stageId => !fullyLocked[stageId]);
+  const fullyLocked = fullyLockedStageMapping(state.stageLock.stagesBySectionId[selectedSectionId]);
+  const unlockedStageIds = Object.keys(currentSection || {})
+    .filter(stageId => !fullyLocked[stageId]);
 
   let stageNames = {};
   state.progress.stages.forEach(stage => {
@@ -129,13 +99,10 @@ export default connect((state, ownProps) => {
 
   return {
     viewAs,
-    sections,
-    sectionsLoaded,
+    hasSections: sectionIds.length > 0,
+    sectionsAreLoaded,
     scriptHasLockableStages,
+    scriptHasHideableStages: state.hiddenStage.get('initialized'),
     unlockedStageNames: unlockedStageIds.map(id => stageNames[id])
   };
-}, dispatch => ({
-  setViewType(viewAs) {
-    dispatch(setViewType(viewAs));
-  }
-}))(ScriptTeacherPanel);
+})(ScriptTeacherPanel);

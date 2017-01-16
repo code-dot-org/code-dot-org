@@ -11,8 +11,8 @@ After a brief online refresher with booleans students are introduced to some boo
 
 # Vocab
 * **Boolean** - A value of either TRUE or FALSE
-* **Conditionals** - Statements that only run under certain conditions.
-* **Expression** - Any valid unit of code that resolves to a value.
+* **Conditionals** - Statements that only run under certain conditions
+* **Expression** - Any valid unit of code that resolves to a value
 
 # Commands 
 
@@ -24,7 +24,7 @@ After a brief online refresher with booleans students are introduced to some boo
 ### Input : 
 |Command| Meaning| Example | Documentation |
 |---|---| --- | --- |
-|keyDown("key")|Returns boolean value for if the key is presed down|`if(keyDown("up"){}`  | link |
+|keyDown("key")|Returns boolean value for if the key is presed down|`if(keyDown("up")){}`  | link |
 
 # Resources
 

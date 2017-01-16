@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-18T01:34:03.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Priority of CSS Rules\r\n\r\nOn the last level you moved all the style rules to one style.css file that is linked to both web pages on the website. You may have noticed that the way some of the styling of the elements on the two pages changed. Over the next couple levels you will be working to fix this.\r\n\r\n## Multiple Rules for One Element\r\n\r\nBy copying the style rules from two different pages into one style sheet we created a couple cases where we have two style rules for one element. Style rules are applied from top to bottom so when there are multiple style-rules for the same properties of one element the one closer to the bottom is the one that will appear.\r\n\r\nFor example if you had the following style rules.\r\n\r\n<pre>\r\np{\r\n  background-color: blue;\r\n}\r\np{\r\n  background-color: red;\r\n}\r\n</pre>\r\n\r\nThe pargraph elements would have a red background.\r\n\r\nTo fix this issue the best thing to do is have one rule for each type of element.\r\n\r\n# Do This\r\n\r\n* There are two style rules for `<div>` elements. They are both the same. Delete one of them.\r\n* There are two style rules for `<body>` elements. They are **different** but both just control the `background-color` decide which of the two you would like to keep and get rid of the other one.\r\n* Leave the duplicate `<img>` element style rules for now we will deal with them on the next level.",
+    "project_template_level_name": "CSDU2 - Multi Page ESS Styling Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

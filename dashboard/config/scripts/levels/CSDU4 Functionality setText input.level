@@ -1,0 +1,65 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2016-11-01T20:44:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "embed": "false",
+    "markdown_instructions": "# Pre-fill Input Fields with setText\r\n\r\nYou've set the text of labels, and you've set the text of buttons, but did you know you can also use `setText()` to pre-fill text input fields?\r\n\r\n# Do This\r\n\r\nThis app has four buttons, each of which should fill the \"nameInput\" field with a given name. For each button:\r\n\r\n* Add an `onEvent` block to run when the button is clicked\r\n* In the button's event handler, set the text of \"nameInput\" to the appropriate name\r\n\r\nWhen you've gotten all four buttons to work, add another button that will fill the input field with your name.",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "code_functions": {
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "setText": null,
+      "setScreen": null,
+      "console.log": null,
+      "comment": null
+    },
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "text_mode_at_start": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 46px; height: 19px; position: absolute; left: 30px; top: 90px;\" id=\"nameLabel\">Name</label><input id=\"nameInput\" style=\"margin: 0px; width: 200px; height: 30px; color: rgb(0, 0, 0); position: absolute; left: 90px; top: 85px;\"><button id=\"johnButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 270px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 190px;\">My Name is John</button><button id=\"victorButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 270px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 230px;\">My Name is Victor</button><button id=\"juneButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 270px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 270px;\">My Name is June</button><button id=\"vivianaButton\" style=\"padding: 0px; margin: 0px; height: 30px; width: 270px; font-size: 14px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 310px;\">My Name is Viviana</button></div></div>",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "show_debug_watch": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

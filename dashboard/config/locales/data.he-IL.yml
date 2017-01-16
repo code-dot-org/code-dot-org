@@ -270,6 +270,49 @@
         maze_3_2: "כתוב לי תוכנה כדי שאוכל להגיע עד לחזיר."
         maze_3_3: "איך אני אגיע לחזיר? תזהר שאני לא יתקל בTNT!"
         maze_3_4: "אוף! כתוב לי תוכנה שעוזרת לי לעבור מסביב לTNT ולהגיע לחזיר."
+        bounce_1_basketball: Attach a block to the "when left arrow" block and press
+          "Run". Move the hand using the left arrow to reach the finish target.
+        bounce_2_basketball: Attach a block to the "when right arrow" and "when left
+          arrow" blocks. Move the hand to reach both finish targets.
+        bounce_5_basketball: We're going to send a ball flying down towards the hand.
+          Attach a block to the "when ball hits hand" block to ensure the ball reaches
+          the flag.
+        bounce_6_basketball: Now the flag is on the top. You need to attach blocks
+          to both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_basketball: Attach blocks to each of the "when" blocks. Bounce the
+          ball until it hits the flag.
+        bounce_10_basketball: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice.
+        bounce_11_basketball: You can now attach blocks to the "when run" block. You
+          have to attach the new "throw new ball" block in more than one place. Also,
+          try changing the scene or the speed of the hand and the ball and see how
+          many points you can score before your opponent scores twice!
+        bounce_12_basketball: Create your own Basketball game. You can change all
+          the rules. When you're done, click Finish to let friends try your game on
+          their phones.
+        bounce_1_sports: Get to the flag! Attach a block to the "when left arrow"
+          block and press "Run" to move the player to the flag.
+        bounce_2_sports: There are two flags now! Attach a block to the "when left
+          arrow" and "when right arrow" blocks to make your player move in two directions.
+        bounce_5_sports: The hockey puck is going to fly down toward the player! Attach
+          a block to the "when ball hits player" block to hit the flag.
+        bounce_6_sports: Now the flag is on the top. You need to attach blocks to
+          both of the "when ball hits" blocks to solve this puzzle.
+        bounce_7_sports: Attach blocks to each of the "when" blocks. Bounce the ball
+          until it hits the flag.
+        bounce_10_sports: Now there is a goal at the top! Attach the "score point"
+          and "score opponent point" blocks to the "when ball in goal" and "when ball
+          misses hand" blocks to make a game. See how many points you can score before
+          your opponent scores twice!
+        bounce_11_sports: You can now attach blocks to the "when run" block. You have
+          to attach the new "throw new ball" block in more than one place. Also, try
+          changing the scene or the speed of the hand and the ball and see how many
+          points you can score before your opponent scores twice!
+        bounce_12_sports: 'Create your own game! You''re in charge here: you can change
+          all the rules, mix and match sports, get creative! When you''re done, click
+          Finish to let friends try your game on their phones.'
         bounce_1: צרף בלוק לבלוק "כאשר לוחצים על החץ שמאלה" ולאחר מכן לחץ על "הפעל".
           הזז את המשוט בעזרת החץ שמאלה כדי להגיע ליעד.
         bounce_2: צרף בלוק לבלוק "כאשר לוחצים על החץ ימינה" ול-"כאשר לוחצים על החץ
@@ -297,48 +340,45 @@
           their phones.
         Custom_builder: גרור בלוקים מתיבת הכלים אל סביבת העבודה כדי לצייר שלב שאתה
           רוצה ליצור. לחץ "הרץ" כשאתה מוכן.
-        flappy_1: צרפו בלוק לבלוק "כאשר לוחצים" ולאחר מכן לחץ על "הפעל". לחץ או הקש
+        flappy_1: הוסיפו בלוק לבלוק "בזמן קליק" ולאחר מכן לחץ על "הרץ". לחץ או הקש
           על המסך כדי להעביר את פלאפי אל המטרה.
-        flappy_2: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע בקרקע". התוכנית
-          שבניתם זקוקה ל-"סוף משחק" כאשר פלאפי מתרסק.
-        flappy_3: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_4: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_5: Let's add a scoreboard, and count points when Flappy makes it past
-          obstacles. Add to the "when pass an obstacle" block, and then score a point
-          by flying Flappy through the first set of pipes.
-        flappy_6: See if you can still score a point after making Flappy flap either
-          a smaller or larger amount.
-        flappy_7: Next, try changing the scene by attaching another block to the "when
-          run" block.
-        flappy_8: You can set visuals anytime, not just when the game starts. Try
-          setting a RANDOM scene when other events happen, for example, when passing
-          an obstacle.
-        flappy_9: To mix things up, when hitting an obstacle or the ground, instead
-          of ending the game try setting the score back to 0.
+        flappy_2: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע באדמה". התוכנית
+          שבניתם זקוקה לבלוק "סיים המשחק" כאשר פלאפי מתרסק.
+        flappy_3: הבלוק "התחל ריצה" מאפשר להריץ קוד בתחילת המשחק. נסה להגדיר את המהירות
+          ונסה לעוף לכיוון המטרה.
+        flappy_4: פלאפי יעוף דרך המכשולים אלא אם תכתוב קוד שיגרום לו להתרסק. הוסף
+          בלוק לבלוק "כאשר פוגע במכשול". הקוד שלך צריך ל-'סיים המשחק' כאשר פלאפי מתרסק
+          לתוך סט הצינורות הראשונים.
+        flappy_5: בואו נוסיף לוח תוצאות ונספור נקודות כאשר פלאפי עובר מכשול. הוסף
+          לבלוק "כאשר עובר מכשול", ואז נוסיף נקודה כאשר פלאפי עף דרך את הסט הראשון
+          של הצינורות.
+        flappy_6: "ראו אם תוכלו עדיין לקבל נקודה אחרי שתגרמו לפלאפי לנפנף בכמות קטנה
+          או גדולה יותר."
+        flappy_7: עכשיו, נסה לשנות את הרקע על-ידי הוספת בלוק אחר לבלוק "התחל ריצה".
+        flappy_8: "באפשרותך להגדיר נראות בכל עת, לא רק כאשר המשחק מתחיל. נסה להגדיר
+          רקע אקראי כאשר קורים אירועים אחרים, לדוגמה, כאשר עוברים מכשול."
+        flappy_9: "כדי לסבך דברים, כאשר פוגעים במכשול, במקום לסיים את המשחק נסה לשנות
+          את התוצאה חזרה ל-0."
         flappy_11: צרו משחק "פלאפי" משלכם. אתם יכולים לשנות את הדמויות ואת כל החוקים,
           אפילו את כוח המשיכה. כשתסיימו, הקליקו על "סיים" כדי לאפשר לחברים שלכם לנסות
           את המשחק שבניתם על המכשירים הניידים שלהם.
         flappy_k1_1: "לשחק Flappy"
-        flappy_k1_2: צרפו בלוק לבלוק "כאשר לוחצים" ולאחר מכן לחץ על "הפעל". לחץ או
+        flappy_k1_2: הוסיפו בלוק לבלוק "בזמן קליק" ולאחר מכן לחץ על "הרץ". לחץ או
           הקש על המסך כדי להעביר את פלאפי אל המטרה.
-        flappy_k1_3: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע בקרקע". התוכנית
-          שבניתם זקוקה ל-"סוף משחק" כאשר פלאפי מתרסק.
-        flappy_k1_4: The "when run" block allows you to run code when your game starts.  Try
-          setting the level speed and flapping to the target.
-        flappy_k1_5: Flappy will fly through obstacles unless you write code to make
-          him crash. Attach a block to the "when hit an obstacle" block. Your code
-          needs to 'END GAME' when Flappy crashes into the first set of pipes.
-        flappy_k1_6: Let's add a scoreboard, and count points when Flappy makes it
-          past obstacles. Add to the "when pass an obstacle" block, and then score
-          a point by flying Flappy through the first set of pipes.
-        flappy_k1_7: See if you can score multiple points for making it past an obstacle
-        flappy_k1_8: Next, try changing the scene by attaching another block to the
-          "when run" block.
-        flappy_k1_9: Try changing the player by attaching a "set player" block to
-          the "when run" block.
+        flappy_k1_3: כעת הוספנו את הקרקע. צרפו בלוק לבלוק ה-"כאשר פוגע באדמה". התוכנית
+          שבניתם זקוקה לבלוק "סיים המשחק" כאשר פלאפי מתרסק.
+        flappy_k1_4: הבלוק "התחל ריצה" מאפשר להריץ קוד בתחילת המשחק. נסה להגדיר את
+          המהירות ונסה לעוף לכיוון המטרה.
+        flappy_k1_5: פלאפי יעוף דרך המכשולים אלא אם תכתוב קוד שיגרום לו להתרסק. הוסף
+          בלוק לבלוק "כאשר פוגע במכשול". הקוד שלך צריך ל-'סיים המשחק' כאשר פלאפי מתרסק
+          לתוך סט הצינורות הראשונים.
+        flappy_k1_6: בואו נוסיף לוח תוצאות ונספור נקודות כאשר פלאפי עובר מכשול. הוסף
+          לבלוק "כאשר עובר מכשול", ואז נוסיף נקודה כאשר פלאפי עף דרך את הסט הראשון
+          של הצינורות.
+        flappy_k1_7: "תראו אם תוכלו לקבל מספר נקודות כאשר עוברים מכשול"
+        flappy_k1_8: עכשיו, נסה לשנות את הרקע על-ידי הוספת בלוק אחר לבלוק "התחל ריצה".
+        flappy_k1_9: תנסו לשנות את השחקן על-ידי הוספת בלוק "קבע שחקן" לבלוק "התחל
+          ריצה".
         jigsaw_1: "לחץ על הבלוק"
         jigsaw_2: "גרור את הבלוק אל המטרה"
         jigsaw_3: "ארגן את הבלוקים כדי ליצור תמונה"
@@ -402,9 +442,9 @@
           of the penguin, and then move him with the arrows until you score?
         studio_c3_game_7: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-        studio_playlab_1: Penguin wants to say "hello" - can you help him?
-        studio_playlab_2: Cave Boy (actor 1) and Cave Girl (actor 2) would like to
-          say "hello" to each other. Can you help them by using the "say" block twice?
+        studio_playlab_1: פינגווין רוצה לומר "שלום" - יכולים לעזור לו?
+        studio_playlab_2: ילד המערות (שחקן 1) וילדת המערות (שחקן 2) רוצים לומר "שלום"
+          אחד לשניה. יכולים לעזור להם על-ידי שימוש פעמיים בבלוק "אומר"?
         studio_playlab_3: Can you help Tennis Girl get to the flag?
         studio_playlab_4: Can you help Tennis Boy (actor 1) get to Tennis Girl (actor
           2) and play a sound when he gets there?
@@ -528,7 +568,7 @@
         maze_intro: "מבוא למבוך"
         artist_intro: "מבוא לאמן"
         farmer_intro: "מבוא חקלאים"
-        flappy_intro: Flappy Intro
+        flappy_intro: "מבוא למשחק פלאפי"
         loop_times: "בלוק חזור שוב מספר פעמים"
         loop_until: "בלוק חזור שוב עד"
         if: בלוק "אם"
@@ -630,6 +670,11 @@
         infinity_playlab_intro: Play Lab - Introduction
         infinity_playlab_events: Play Lab - Events
         infinity_playlab_repeat_forever: Play Lab - Repeat Forever
+        csd_gamelab_draw_1: Drawing in Game Lab - Part 1
+        csd_gamelab_draw_2: Drawing in Game Lab - Part 2
+        csd_gamelab_drawloop: Introduction to the Draw Loop
+        csd_gamelab_sprites_1: Introduction to Sprites
+        csd_gamelab_sprites_2: Animating Sprites
         csp_applab_objects: Introduction to Objects
         csp_applab_databases_1: Introduction to Databases - Part 1
         csp_applab_databases_2: Introduction to Databases - Part 2
@@ -640,6 +685,9 @@
         csp_applab_lists_4: Introduction to Lists - Part 4
         csp_applab_conditionals_1: Introduction to Conditionals - Part 1
         csp_applab_conditionals_2: Introduction to Conditionals - Part 2
+        csp_applab_conditionals_2A: Introduction to Conditionals - Part 2a
+        csp_applab_conditionals_2B: Introduction to Conditionals - Part 2b
+        csp_applab_conditionals_2C: Introduction to Conditionals - Part 2c
         csp_applab_conditionals_3: Introduction to Conditionals - Part 3
         csp_applab_design: Introduction to Design Mode
         csp_applab_variables_1: Introduction to Variables - Part 1
@@ -707,6 +755,11 @@
         iceage_intro: Ice Age Hour of Code - Introduction
         iceage_events: Ice Age Hour of Code - Events
         iceage_repeat: Ice Age Hour of Code - Repeat statements
+        mc_2016_intro: Minecraft Hour of Code - Introduction
+        mc_2016_loops: Minecraft Hour of Code - Loops
+        mc_2016_events: Minecraft Hour of Code - Events
+        mc_2016_spawn: Minecraft Hour of Code - Spawn
+        mc_2016_congrats: Minecraft Hour of Code - Congratulations
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

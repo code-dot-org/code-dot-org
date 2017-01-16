@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2016-10-20T17:38:37.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "markdown_instructions": "# Setting Velocity\r\n\r\nThis program creates two sprites, one that's standing still in the middle of the screen and the other that moves towards it. Notice the one important line of code in this program\r\n\r\n\tif(sprite1.isTouching(sprite2)){\r\n\t\tsprite2.velocityX = sprite1.velocityX;\r\n    }\r\n\r\n# Predict\r\n\r\nWhat do you think will happen when the two sprites touch? Write your answer and reasonings in the space below. Then run the code to see for yourself.\r\n\r\n",
+    "instructions_important": "false",
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

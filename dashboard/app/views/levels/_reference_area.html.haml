@@ -1,6 +1,6 @@
 #reference_area.reference_area
   - if can_view_solution?
-    .solution_link
+    .solution_link.hide-as-student
       = link_to t('reference_area.teacher'), build_script_level_path(@script_level, solution: true)
 
   - related_videos = @level.related_videos

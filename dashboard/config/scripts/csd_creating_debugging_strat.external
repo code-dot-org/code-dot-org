@@ -1,0 +1,7 @@
+name 'CSD Creating Debugging Strat'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Debugging Strategies
+
+Debugging is a problem solving process. Using the Bug Bashing table in your Personal Web Development Practice packet, identify at least three of the bugs you encountered and describe how you were able to solve it. You can continue adding to this table as you encounter and fix bugs in the future.
+MARKDOWN

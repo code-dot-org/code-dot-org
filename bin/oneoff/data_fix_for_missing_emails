@@ -39,7 +39,7 @@ File.foreach('/tmp/teacher_emails.csv').with_index do |line, line_num|
     # As we know the email address to be associated with a teacher, we upgrade
     # the account to a teacher account, populating the plaintext email address.
     puts "UPDATING: #{user.id} (#{email})..."
-    user.update(user_type: User::TYPE_TEACHER, email: email)
+    user.update!(user_type: User::TYPE_TEACHER, email: email)
   rescue Exception => e
     # Since exceptions may happen naturally, we simply log the relevant
     # information to the console and give the executing user a chance to abort

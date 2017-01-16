@@ -46,4 +46,8 @@ Xa te uniches ao movemento da Hora do Código. Dillo os teus amigos con **#HourO
 
 Escolla unha actividade da Hora do Código e [vexa esta guía práctica](%= resolve_url('/how-to') %).
 
+## 8. Go beyond an Hour of Code
+
+Ready to go beyond an hour? Check out [our full courses and teacher resources](%= resolve_url('https://code.org/teach')%) including professional learning opportunities for elementary, middle and high school teachers.
+
 <%= view 'popup_window.js' %>

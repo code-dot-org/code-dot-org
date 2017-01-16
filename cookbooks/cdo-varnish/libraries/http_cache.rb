@@ -10,13 +10,23 @@ class HttpCache
   LANGUAGE_COOKIES = %w(language_ pm)
 
   # A map from script name to script level URL pattern.
-  CACHED_SCRIPTS_MAP = {
-      # We specify the "special case" routes here; standard routes are handled by the loop below.
-      'hourofcode' => '/hoc/*'
-  }
-  %w(starwars starwarsblocks mc frozen gumball).each do |script_name|
-    CACHED_SCRIPTS_MAP[script_name] = "/s/#{script_name}/stage/1/puzzle/*"
-  end
+  CACHED_SCRIPTS_MAP = %w(
+    starwars
+    starwarsblocks
+    mc
+    frozen
+    gumball
+    minecraft
+    sports
+    basketball
+  ).map do |script_name|
+    # Most scripts use the default route pattern.
+    [script_name, "/s/#{script_name}/stage/*"]
+  end.to_h.merge(
+    # Add the "special case" routes here.
+    'hourofcode' => '/hoc/*',
+    'flappy' => '/flappy/*'
+  ).freeze
 
   def self.cached_scripts
     CACHED_SCRIPTS_MAP.keys
@@ -55,7 +65,7 @@ class HttpCache
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/* ),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /assets/* /fonts/*),
             headers: [],
             cookies: 'none'
           },
@@ -90,9 +100,10 @@ class HttpCache
               /
               /learn*
               /congrats
-              /mc
+              /minecraft
               /starwars
               /playlab
+              /athletes
             ),
             headers: LANGUAGE_HEADER,
             cookies: LANGUAGE_COOKIES,
@@ -118,6 +129,7 @@ class HttpCache
             path: %w(
               /v3/assets/*
               /v3/animations/*
+              /v3/files/*
             ),
             headers: LANGUAGE_HEADER,
             cookies: whitelisted_cookies

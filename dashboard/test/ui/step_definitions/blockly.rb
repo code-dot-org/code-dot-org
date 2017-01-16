@@ -67,6 +67,11 @@ Then /^block "([^"]*)" is((?:n't| not)?) at ((?:blockly )?)location "([^"]*)"$/ 
   end
 end
 
+Then /^I scroll the ([a-zA-Z]*) blockspace to the top$/ do |workspace_type|
+  block_space_name = workspace_type + 'BlockSpace'
+  @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, 0)")
+end
+
 Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   block_space_name = workspace_type + 'BlockSpace'
   scrollable_height = get_scrollable_height(block_space_name)
@@ -104,16 +109,18 @@ end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
-  @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should eq @actual_parent_item
+  # check for block id without relying on selenium element equality.
+  actual_parent_id = @actual_parent_item.attribute('block-id')
+  actual_parent_id.should eql get_block_id(parent)
 end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   @child_item = @browser.find_element(:css, "g[block-id='#{get_block_id(child)}']")
-  @parent_item = @browser.find_element(:css, "g[block-id='#{get_block_id(parent)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
-  @parent_item.should_not eq @actual_parent_item
+  # check for block id without relying on selenium element equality.
+  actual_parent_id = @actual_parent_item.attribute('block-id')
+  actual_parent_id.should_not eql get_block_id(parent)
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do

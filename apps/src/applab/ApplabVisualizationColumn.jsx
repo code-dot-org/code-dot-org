@@ -1,18 +1,19 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
-import IFrameEmbedOverlay from './IFrameEmbedOverlay';
-import * as color from '../color';
-
-var React = require('react');
-var Radium = require('radium');
-var Visualization = require('./Visualization');
-var CompletionButton = require('./CompletionButton');
-var PlaySpaceHeader = require('./PlaySpaceHeader');
-var PhoneFrame = require('./PhoneFrame');
-var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
+import * as color from "../util/color";
+import * as applabConstants from './constants';
+import React from 'react';
+import Radium from 'radium';
+import Visualization from './Visualization';
+import CompletionButton from './CompletionButton';
+import PlaySpaceHeader from './PlaySpaceHeader';
+import PhoneFrame from './PhoneFrame';
+import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-var connect = require('react-redux').connect;
-var classNames = require('classnames');
+import {connect} from 'react-redux';
+import classNames from 'classnames';
+import i18n from '@cdo/locale';
+import * as dom from '../dom';
 
 var styles = {
   completion: {
@@ -33,42 +34,36 @@ var styles = {
   },
   resetButton: {
     display: 'inline-block',
-    width: 42,
-    minWidth: 0,
     backgroundColor: color.dark_charcoal,
     borderColor: color.dark_charcoal,
-    padding: 7,
-    height: 42,
     marginLeft: 5,
     position: 'relative',
     left: 2,
     bottom: 2,
   },
-  resetButtonImage: {
-    marginLeft: 2,
-    marginTop: -2,
-  },
+  containedInstructions: {
+    marginTop: 10
+  }
 };
 
 /**
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-var ApplabVisualizationColumn = React.createClass({
+const ApplabVisualizationColumn = React.createClass({
   propTypes: {
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
-    instructionsInTopPane: React.PropTypes.bool.isRequired,
     visualizationHasPadding: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
     isResponsive: React.PropTypes.bool.isRequired,
     nonResponsiveWidth: React.PropTypes.number.isRequired,
     isRunning: React.PropTypes.bool.isRequired,
     hideSource: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.string.isRequired,
     playspacePhoneFrame: React.PropTypes.bool,
     isIframeEmbed: React.PropTypes.bool.isRequired,
     pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
     isPaused: React.PropTypes.bool,
+    awaitingContainedResponse: React.PropTypes.bool.isRequired,
 
     // non redux backed
     isEditingProject: React.PropTypes.bool.isRequired,
@@ -79,7 +74,13 @@ var ApplabVisualizationColumn = React.createClass({
   render: function () {
     let visualization = [
       <Visualization key="1"/>,
-      this.props.isIframeEmbed && !this.props.isRunning && <IFrameEmbedOverlay key="2"/>
+      (this.props.isIframeEmbed &&
+       !this.props.isRunning &&
+       <IFrameEmbedOverlay
+         key="2"
+         appWidth={applabConstants.APP_WIDTH}
+         appHeight={applabConstants.APP_HEIGHT}
+       />)
     ];
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
@@ -91,16 +92,25 @@ var ApplabVisualizationColumn = React.createClass({
           showSelector={!this.props.isRunning}
           isPaused={this.props.isPaused}
           screenIds={this.props.screenIds}
+          runButtonDisabled={this.props.awaitingContainedResponse}
           onScreenCreate={this.props.onScreenCreate}
         >
           {visualization}
         </PhoneFrame>
       );
     }
+    const chromelessShare = dom.isMobile() && !dom.isIPad();
     const visualizationColumnClassNames = classNames({
       with_padding: this.props.visualizationHasPadding,
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
+
+      // the below replicates some logic in StudioApp.handleHideSource_ which
+      // imperatively changes the css classes depending on various share
+      // parameters. This logic really shouldn't live in StudioApp, so I don't
+      // feel too bad about copying it here, where it should really live...
+      chromelessShare: chromelessShare && this.props.isShareView,
+      wireframeShare: !chromelessShare && this.props.isShareView,
     });
 
     return (
@@ -120,9 +130,8 @@ var ApplabVisualizationColumn = React.createClass({
         {this.props.isIframeEmbed &&
           <div style={styles.resetButtonWrapper}>
             <ResetButton
-              hideText={true}
+              hideText
               style={styles.resetButton}
-              imageStyle={styles.resetButtonImage}
             />
           </div>
         }
@@ -137,15 +146,20 @@ var ApplabVisualizationColumn = React.createClass({
             <CompletionButton/>
           </div>
         </GameButtons>
-        <BelowVisualization instructionsInTopPane={this.props.instructionsInTopPane}/>
+        {this.props.awaitingContainedResponse && (
+          <div style={styles.containedInstructions}>
+            {i18n.predictionInstructions()}
+          </div>
+        )}
+        <BelowVisualization />
       </div>
     );
   }
 });
-module.exports = connect(function propsFromStore(state) {
+
+export default connect(function propsFromStore(state) {
   return {
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    instructionsInTopPane: state.pageConstants.instructionsInTopPane,
     visualizationHasPadding: state.pageConstants.visualizationHasPadding,
     isShareView: state.pageConstants.isShareView,
     isResponsive: isResponsiveFromState(state),
@@ -153,8 +167,8 @@ module.exports = connect(function propsFromStore(state) {
     isIframeEmbed: state.pageConstants.isIframeEmbed,
     hideSource: state.pageConstants.hideSource,
     isRunning: state.runState.isRunning,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
-    interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };

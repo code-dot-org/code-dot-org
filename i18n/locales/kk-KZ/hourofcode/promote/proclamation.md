@@ -4,20 +4,22 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 * * *
 
-### Below is a sample resolution supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+<%= view :signup_button %>
+
+### Төменірек Информатика Аптасына арналған рұқсаттың мысалы және мемлекеттік, жергілікті заң шығарушылар қолдана алатын мақсаттар келтірілген.
 
   
-[HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Информатика Апталығы информатиканың дамуында өте маңызды рөл атқаратындықтан, ал информатика жалпы біздің қоғамды өзгертуде ықпалы мол болғандықтан және информатика инновацияны енгізумен қатар, экономикалық мүмкіндіктерді жүзеге асыратындықтан;
 
 [HOUSE OR SENATE RESOLUTION ###]
 
 [DATE]
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Компьютер технологиялары қазіргі заманның бөлінбейтін бөлшегі болғандықтан, сонымен қатар адамдарың бір-бірімен және әлеммен қатынасын түбегейлі өзгертетіп жатқанын назарға ала отырып;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Информатика өнеркәсіпті жоғары деңгейге көтереді, сауданың жаңа салаларын дүниеге әкеледі, ғылымның барлық салаларында инновациялық шешімге тірек болады және құрылған экономикалық секторлардың өнімділігін арттыруда демеу беретіндіктен;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+АҚШ-тың экономикасаның өнімділігіне зор үлесін қосатын, біздің экономикадағы секторда, ақпарат технологияларының негізінде информатика саласы жатқандықтан;
 
 Whereas the field of computer science is a foundational science for the digital age;
 
@@ -50,3 +52,5 @@ Resolved, That the [HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD] --
 (4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+
+<%= view :signup_button %>

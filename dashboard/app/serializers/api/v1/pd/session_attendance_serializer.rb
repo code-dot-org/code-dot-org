@@ -6,37 +6,20 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
   end
 
   # Serialize attendance for this session to an array of
-  # {name, email, enrolled, user_id, in_section, attended}
+  # {name, email, user_id, in_section, attended}
   def attendance
-    {}.tap do |participants|
-      # Start with enrollments.
-      object.workshop.enrollments.each do |enrollee|
-        user = enrollee.resolve_user
-        participants[enrollee.email.downcase] = {
-          name: enrollee.name,
-          email: enrollee.email,
-          enrolled: true,
-          user_id: id_or_nil(user),
-          in_section: in_section?(user),
-          attended: attended?(user)
-        }
-      end
-
-      # Next, check for teachers in the section who aren't enrolled.
-      if object.workshop.section
-        object.workshop.section.students.all.each do |section_student|
-          next if participants.include? section_student.email.downcase
-          participants[section_student.email.downcase] = {
-            name: section_student.name,
-            email: section_student.email,
-            enrolled: false,
-            user_id: section_student.id,
-            in_section: true,
-            attended: attended?(section_student)
-          }
-        end
-      end
-    end.values
+    object.workshop.enrollments.map do |enrollment|
+      enrollment.user = enrollment.resolve_user
+      {
+        first_name: enrollment.first_name,
+        last_name: enrollment.last_name,
+        email: enrollment.email,
+        enrollment_id: enrollment.id,
+        user_id: id_or_nil(enrollment.user),
+        in_section: in_section?(enrollment.user),
+        attended: attended?(enrollment)
+      }
+    end
   end
 
   def id_or_nil(user)
@@ -51,8 +34,9 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
     object.workshop.section.students.where(id: user.id).exists?
   end
 
-  def attended?(user)
-    return false unless user
-    object.attendances.where(teacher_id: user.id).exists?
+  def attended?(enrollment)
+    return true if enrollment && object.attendances.where(pd_enrollment_id: enrollment.id).exists?
+    return true if enrollment.user && object.attendances.where(teacher_id: enrollment.user.id).exists?
+    false
   end
 end

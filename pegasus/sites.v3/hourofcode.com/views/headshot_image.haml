@@ -1,0 +1,7 @@
+#headshot_image
+  .avatar_container
+    - if file_path.nil_or_empty?
+      %img.gray_circle
+      %i.fa.fa-user.user_icon
+    - else
+      %img.avatar_image{:src=>"/images/fill-200x200/#{file_path}"}

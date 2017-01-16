@@ -33,7 +33,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, name: teacher.name, email: teacher.email
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:pd_workshop)
@@ -94,20 +94,43 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'Workshop must have at least one session to start.', e.message
   end
 
-  test 'start stop' do
+  test 'start end' do
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
 
-    @workshop.start!
+    returned_section = @workshop.start!
+    assert returned_section
     @workshop.reload
     assert_equal 'In Progress', @workshop.state
     assert @workshop.section
+    assert_equal returned_section, @workshop.section
     assert @workshop.section.workshop_section?
     assert_equal @workshop.section_type, @workshop.section.section_type
 
     @workshop.end!
     @workshop.reload
     assert_equal 'Ended', @workshop.state
+  end
+
+  test 'start is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    returned_section = @workshop.start!
+    assert returned_section
+    started_at = @workshop.reload.started_at
+
+    returned_section_2 = @workshop.start!
+    assert returned_section_2
+    assert_equal returned_section, returned_section_2
+    assert_equal started_at, @workshop.reload.started_at
+  end
+
+  test 'end is idempotent' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+    ended_at = @workshop.reload.ended_at
+    @workshop.end!
+    assert_equal ended_at, @workshop.reload.ended_at
   end
 
   test 'sessions must start on separate days' do
@@ -191,29 +214,44 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'Unexpected workshop state'
   end
 
+  test 'account_required_for_attendance?' do
+    normal_workshop = create :pd_ended_workshop
+    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
+    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+
+    assert normal_workshop.account_required_for_attendance?
+    refute counselor_workshop.account_required_for_attendance?
+    refute admin_workshop.account_required_for_attendance?
+  end
+
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
     workshop = create :pd_ended_workshop
 
     create :pd_workshop_participant, workshop: workshop, enrolled: true
-    Pd::WorkshopMailer.expects(:exit_survey).never
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
 
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR, num_sessions: 1
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey)
     workshop.send_exit_surveys
   end
 
   test 'send_exit_surveys teachers in the section get emails' do
     workshop = create :pd_ended_workshop
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true)
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
-    teachers = [
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true),
-      create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true),
-    ]
+    assert workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
 
-    mock_mail = stub(deliver_now: nil)
-    teachers.each do |teacher|
-      Pd::WorkshopMailer.expects(:exit_survey).with(
-        workshop, teacher, instance_of(Pd::Enrollment)
-      ).returns(mock_mail)
-    end
     workshop.send_exit_surveys
   end
 
@@ -262,10 +300,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.friendly_name.length == 255
   end
 
-  test 'date filters' do
+  test 'start date filters' do
     pivot_date = Date.today
     workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
-    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date)]
+    # Start in the middle of the day. Since the filter is by date, this should be included in all the queries.
+    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
     workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
     # on or before
@@ -279,6 +318,129 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # combined
     assert_equal [workshop_pivot.id],
       Pd::Workshop.start_on_or_after(pivot_date).start_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'end date filters' do
+    pivot_date = Date.today
+    workshop_before = create :pd_workshop, ended_at: pivot_date - 1.week
+    # End in the middle of the day. Since the filter is by date, this should be included in all the queries.
+    workshop_pivot = create :pd_workshop, ended_at: pivot_date + 8.hours
+    workshop_after = create :pd_workshop, ended_at: pivot_date + 1.week
+
+    # on or before
+    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+      Pd::Workshop.end_on_or_before(pivot_date).pluck(:id).sort
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+      Pd::Workshop.end_on_or_after(pivot_date).pluck(:id).sort
+
+    # combined
+    assert_equal [workshop_pivot.id],
+      Pd::Workshop.end_on_or_after(pivot_date).end_on_or_before(pivot_date).pluck(:id)
+  end
+
+  test 'time constraints' do
+    # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
+    workshop_2_3_18 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_ECS,
+      subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
+      num_sessions: 2
+    assert_equal 2, workshop_2_3_18.min_attendance_days
+    assert_equal 2, workshop_2_3_18.effective_num_days
+    assert_equal 12, workshop_2_3_18.effective_num_hours
+
+    # Add 2 more sessions for a total of 4. It should cap at 3 days / 18 hours
+    workshop_2_3_18.sessions << [create(:pd_session), create(:pd_session)]
+    assert_equal 3, workshop_2_3_18.effective_num_days
+    assert_equal 18, workshop_2_3_18.effective_num_hours
+
+    # No entry: min 1, max unlimited
+    workshop_no_constraint = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, num_sessions: 2
+    assert_equal 1, workshop_no_constraint.min_attendance_days
+    assert_equal 2, workshop_no_constraint.effective_num_days
+    assert_equal 12, workshop_no_constraint.effective_num_hours
+  end
+
+  test 'plp' do
+    assert_nil @workshop.professional_learning_partner
+
+    # Now create a plp associated with the organizer
+    plp = create :professional_learning_partner, contact: @organizer
+
+    assert @workshop.professional_learning_partner
+    assert_equal plp, @workshop.professional_learning_partner
+  end
+
+  test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
+    3.times do
+      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
+    end
+    2.times do
+      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
+    end
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
+
+    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    3.times{create :pd_enrollment, workshop: workshop}
+    Pd::Workshop.expects(:start_in_days).returns([workshop])
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+    end
+    assert e.message.include? 'Failed to send 1 day workshop reminders:'
+    assert e.message.include? 'teacher enrollment'
+    assert e.message.include? 'bad email'
+  end
+
+  test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email')
+    3.times do
+      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
+    end
+    2.times do
+      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
+    end
+
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
+
+    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    3.times{create :pd_enrollment, workshop: workshop}
+    Pd::Workshop.expects(:start_in_days).returns([workshop])
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+    end
+    assert e.message.include? 'Failed to send 1 day workshop reminders:'
+    assert e.message.include? 'organizer workshop'
+    assert e.message.include? 'bad email'
+  end
+
+  test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil)
+    3.times do
+      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
+    end
+    2.times do
+      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
+    end
+
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
+
+    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    3.times{create :pd_enrollment, workshop: workshop}
+    Pd::Workshop.expects(:start_in_days).returns([workshop])
+
+    e = assert_raises RuntimeError do
+      Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+    end
+    assert e.message.include? 'Failed to send 1 day workshop reminders:'
+    assert e.message.include? 'facilitator'
+    assert e.message.include? 'bad email'
   end
 
   private

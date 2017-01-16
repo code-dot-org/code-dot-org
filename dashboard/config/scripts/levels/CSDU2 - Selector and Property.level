@@ -1,0 +1,16 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2016-09-23T14:09:33.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# CSS Style Rules\r\n\r\nStyle rules consists of two main parts: the selector and the property. All style rules go inside the `<style>` element.\r\n\r\n# Selector\r\nThe selectors can be any part of the web page you want to style. One way you can identify parts of the web page is using the names of the element. Selecting an element will make all elements of that type have the given styling. The selector name for HTML elements is the name of the tag with the brackets removed. In the below example the selector is `h1` and it will style all the h1 tags with the properties inside the `{ }`.\r\n\r\n# Property\r\nThe property describes which style component of the selected element to change. There are lots of different style properties you can change about your web page. Not all properties can be used for all elements.\r\n\r\nThe first property we will use is the `color` property. The **`color` property sets the color of text** and works for any text elements including paragraphs, lists and headers. There are tons of colors you can choose. Luckily Web Lab pops up a list as you type. You can also look at the full list of colors at <a href=\"http://www.w3schools.com/cssref/css_colors.asp\">W3 Schools - CSS Colors</a>.\r\n\r\nExample:\r\n\r\nThe below style will make all the h1 headers on the page have blue text.\r\n\r\n<pre>\r\n  &lt;style&gt;\r\n    h1{\r\n      color:blue;\r\n    }\r\n  &lt;/style&gt;\r\n</pre>\r\n\r\n# Do This\r\n\r\n* Add a style rule for h1 headers so the text is green.\r\n* Add another rule that defines the color of h3 headers. Pick any color you would like.",
+    "project_template_level_name": "CSDU2 - Guinness Template"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

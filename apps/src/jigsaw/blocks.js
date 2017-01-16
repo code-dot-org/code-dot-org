@@ -4,8 +4,6 @@
  * Copyright 2013 Code.org
  *
  */
-var msg = require('./locale');
-var dom = require('../dom');
 var levels = require('./levels');
 
 var patternCache = {
@@ -64,9 +62,6 @@ var patternCache = {
 
 };
 
-var patterns = [];
-var createdPatterns = {};
-
 /**
  * Add an svg pattern for the given image. If document is not yet fully loaded,
  * it will add the pattern to a list for later.
@@ -115,30 +110,6 @@ var addPattern = function (id, imagePath, width, height, offsetX, offsetY) {
     patternCache.markCreated(patternInfo);
   }
   return id;
-};
-
-/**
- * Search the workspace for a block of the given type
- *
- * @param {string} type The type of the block to search for
- */
-var blockOfType = function (type) {
-  var blocks = Blockly.mainBlockSpace.getAllBlocks();
-  for (var i = 0; i < blocks.length; i++) {
-    if (blocks[i].type === type) {
-      return blocks[i];
-    }
-  }
-  return null;
-};
-
-/**
- * Get the width of the block of the given type
- *
- * @param {string} type The type of the block to search for
- */
-var blockWidth = function (type) {
-  return blockOfType(type).getHeightWidth().width;
 };
 
 function addQueuedWhenReady() {

@@ -6,7 +6,7 @@ litmus_tracking_id: 'sfgaovfs'
 
 ## Thank you for signing your name to support computer science!
 
-[<button>Like us on Facebook](https://facebook/Code.org)[<button>Follow us on Twitter](https://twitter.com/codeorg)
+[<button>Like us on Facebook](https://facebook.com/Codeorg)[<button>Follow us on Twitter](https://twitter.com/codeorg)
 
 #### Help the world learn how to code:
 
@@ -20,7 +20,7 @@ Be part of the biggest computer science education movement in U.S. history. [Joi
 
 <% if ['educator'].include? role_s %>
 
-## 3) [Host an Hour of Code](https://hourofcode.com) during Computer Science Education Week, Dec 5-11.
+## 3) [Host an Hour of Code](https://hourofcode.com) during Computer Science Education Week
 
 Help students worldwide learn their first Hour of Code, to show that anyone can learn the basics. Help us celebrate this year's Computer Science Education Week by leading your students through one Hour of Code!
 
@@ -28,7 +28,7 @@ Help students worldwide learn their first Hour of Code, to show that anyone can 
 
 ## 3) [Host an Hour of Code](https://hourofcode.com) at work, in your community, or local school
 
-During this year's Computer Science Education Week, Dec. 5-11, help students worldwide learn their first Hour of Code. Organize an Hour of Code event at your office, a local school, or anywhere in your community. Or [try it yourself](https://code.org/learn).
+During this year's Computer Science Education Week in December, help students worldwide learn their first Hour of Code. Organize an Hour of Code event at your office, a local school, or anywhere in your community. Or [try it yourself](https://code.org/learn).
 
 <% end %>
 
@@ -61,7 +61,7 @@ Founder, Code.org
 
 <hr>
 
-<small>You’re receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a>. Code.org is a 501c3 non-profit. Our address is 1301 5th Ave, Suite 1225, Seattle, WA, 98101.</small> <br />
+<small>You’re receiving this email because you signed the petition on <a href="https://Code.org/">Code.org</a>. Code.org is a 501c3 non-profit. Our address is 1501 4th Avenue, Suite 900, Seattle, WA 98101.</small> <br />
 <small><strong>Don't like these emails? [Unsubscribe here](<%= unsubscribe_link %>).</strong></small>
 
 

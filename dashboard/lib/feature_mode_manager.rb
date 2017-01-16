@@ -22,6 +22,7 @@ class FeatureModeManager
   # broken down into gatekeeper_general_settings (which apply to all tutorials) and
   # gatekeeper_hoc_tutorial_settings (which apply to high-scale HOC tutorials only).
   MODE_SETTINGS_MAP = {
+    # 'green'
     normal: {
         gatekeeper_general_settings: {
           puzzle_rating: true,
@@ -36,10 +37,12 @@ class FeatureModeManager
         },
         dcdo_settings: {
           hoc_activity_sample_weight: 1,
+          hoc_learn_activity_sample_weight: 1,
           public_proxy_max_age: 3.minutes.to_i,
           public_max_age: 6.minutes.to_i,
         }
     },
+    # 'yellow'
     scale: {
       gatekeeper_general_settings: {
         puzzle_rating: false,
@@ -54,10 +57,12 @@ class FeatureModeManager
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
+        hoc_learn_activity_sample_weight: 50,
         public_proxy_max_age: 4.hours.to_i,
         public_max_age: 8.hours.to_i,
       }
     },
+    # 'red'
     emergency: {
       gatekeeper_general_settings: {
         puzzle_rating: false,
@@ -72,6 +77,7 @@ class FeatureModeManager
       },
       dcdo_settings: {
         hoc_activity_sample_weight: 10,
+        hoc_learn_activity_sample_weight: 0,
         public_proxy_max_age: 24.hours.to_i,
         public_max_age: 48.hours.to_i,
       }

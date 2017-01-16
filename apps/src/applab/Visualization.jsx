@@ -3,10 +3,10 @@ import {connect} from 'react-redux';
 import React from 'react';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
-import color from '../color';
+import color from "../util/color";
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 import {VISUALIZATION_DIV_ID, isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import applabConstants from './constants';
+import * as applabConstants from './constants';
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 
@@ -95,7 +95,7 @@ var Visualization = React.createClass({
   }
 });
 
-module.exports = connect(state => ({
+export default connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,
   isShareView: state.pageConstants.isShareView,
   isRunning: state.runState.isRunning,

@@ -63,7 +63,6 @@
     </toolbox_blocks>
     <recommended_blocks>
       <xml>
-        <block type="maze_moveNorth"/>
         <block type="maze_moveWest"/>
       </xml>
     </recommended_blocks>

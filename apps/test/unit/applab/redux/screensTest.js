@@ -1,5 +1,4 @@
 import {expect} from '../../../util/configuredChai';
-import 'babel-polyfill';
 import sinon from 'sinon';
 
 import {
@@ -7,7 +6,7 @@ import {
   channels as channelsApi,
   assets as assetsApi,
 } from '@cdo/apps/clientApi';
-import {createStore} from '@cdo/apps/redux';
+import {createStore} from '../../../util/redux';
 import screensReducer, {
   toggleImportScreen,
   changeScreen,
@@ -55,13 +54,20 @@ describe("Applab Screens Reducer", function () {
   });
 
   describe("the fetchProject action", () => {
+    let xhr;
+    let lastRequest;
 
     beforeEach(() => {
+      xhr = sinon.useFakeXMLHttpRequest();
+      xhr.onCreate = req => {
+        lastRequest = req;
+      };
+
       sinon.stub(sourcesApi, 'ajax');
       sinon.stub(sourcesApi, 'withProjectId').returnsThis();
       sinon.stub(channelsApi, 'ajax');
       sinon.stub(channelsApi, 'withProjectId').returnsThis();
-      sinon.stub(assetsApi, 'ajax');
+      sinon.stub(assetsApi, 'getFiles');
       sinon.stub(assetsApi, 'withProjectId').returnsThis();
     });
 
@@ -70,13 +76,17 @@ describe("Applab Screens Reducer", function () {
       sourcesApi.withProjectId.restore();
       channelsApi.ajax.restore();
       channelsApi.withProjectId.restore();
-      assetsApi.ajax.restore();
+      assetsApi.getFiles.restore();
       assetsApi.withProjectId.restore();
+
+      xhr.restore();
     });
 
     describe("when given an invalid url", () => {
       it("will set the errorFetchingProject state", () => {
         store.dispatch(fetchProject('invalid url'));
+        lastRequest.respond(404);
+
         var state = store.getState();
         expect(state.importProject.isFetchingProject).to.be.false;
         expect(state.importProject.errorFetchingProject).to.be.true;
@@ -84,7 +94,6 @@ describe("Applab Screens Reducer", function () {
     });
 
     describe("when given a valid url", () => {
-
       beforeEach(() => {
         store.dispatch(fetchProject('http://studio.code.org:3000/projects/applab/GmBgH7e811sZP7-5bALAxQ/edit'));
       });
@@ -110,8 +119,8 @@ describe("Applab Screens Reducer", function () {
         beforeEach(() => {
           [, , sourcesSuccess, sourcesFail] = sourcesApi.ajax.firstCall.args;
           [, , channelsSuccess, channelsFail] = channelsApi.ajax.firstCall.args;
-          [, , existingAssetsSuccess, existingAssetsFail] = assetsApi.ajax.firstCall.args;
-          [, , assetsSuccess, assetsFail] = assetsApi.ajax.secondCall.args;
+          [existingAssetsSuccess, existingAssetsFail] = assetsApi.getFiles.firstCall.args;
+          [assetsSuccess, assetsFail] = assetsApi.getFiles.secondCall.args;
         });
 
         describe("and sources fail", () => {
@@ -132,8 +141,8 @@ describe("Applab Screens Reducer", function () {
           beforeEach(() => {
             channelsSuccess({response: '"bar"'});
             sourcesSuccess({response: '"foo"'});
-            assetsSuccess({response: '[]'});
-            existingAssetsSuccess({response: '[]'});
+            assetsSuccess({files: []});
+            existingAssetsSuccess({files: []});
           });
           it("will set isFetchingProject=false and fetchedProject=the fetched results", () => {
             expect(store.getState().importProject.isFetchingProject).to.be.false;
@@ -175,6 +184,7 @@ describe("Applab Screens Reducer", function () {
     });
 
     it('will call importScreensAndAssets', () => {
+      store.dispatch(importIntoProject('some-project', [], []));
       expect(importFuncs.importScreensAndAssets).to.have.been.called;
     });
 

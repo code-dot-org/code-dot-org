@@ -10,3 +10,6 @@
 .field
   = f.label :fast_get_nectar_animation, "Fast get nectar animation"
   = boolean_check_box f, :fast_get_nectar_animation
+.field
+  = f.label :min_collected, 'Minimum to Collect (collector only)'
+  = f.number_field :min_collected, :value => @level.min_collected

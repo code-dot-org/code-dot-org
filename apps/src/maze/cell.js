@@ -1,6 +1,3 @@
-import tiles from './tiles';
-const SquareType = tiles.SquareType;
-
 class Cell {
   constructor(tileType, value, range) {
 

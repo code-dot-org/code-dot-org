@@ -11,9 +11,11 @@
 .tmputils
 .idea/
 crowdin.yaml
+npm-debug.log
 /.dropbox.cache
 /.gdrive_session
 /.ruby-version
+/apps/.babel-cache
 /apps/build
 /apps/build-times.log
 /apps/build-times-to-upload.log
@@ -21,13 +23,15 @@ crowdin.yaml
 /apps/newrelic_agent.log
 /apps/node_modules/
 /apps/npm-debug.log
-/apps/src/color.js
+/apps/src/util/color.js
 /apps/src/styleConstants.js
 /apps/test/entry-tests.js
+/apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
 /aws/.shared-built
 /aws/.shared-commit-built
+/bin/cron/log
 /build-started
 /coverage
 /crontab
@@ -49,3 +53,5 @@ crowdin.yaml
 /rebuild-shared
 /rebuild-code-studio
 /shared/js/node_modules/
+/tools/scripts/brokenLinkChecker/node_modules/
+

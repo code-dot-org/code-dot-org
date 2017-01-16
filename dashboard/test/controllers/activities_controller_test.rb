@@ -385,16 +385,17 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone should save to gallery when passing an impressive level" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: false)
+      async_activity_writes: false
+    )
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with aysnc writes" do
     _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes: true)
+      async_activity_writes: true
+    )
   end
 
-  def  _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(
-      async_activity_writes:)
+  def _test_logged_in_milestone_should_save_gallery_when_passing_an_impressive_level(async_activity_writes:)
     Gatekeeper.set('async_activity_writes', value: async_activity_writes)
 
     # do all the logging
@@ -415,10 +416,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
-    # csoreated gallery activity and activity for user
+    # created gallery activity and activity for user
     assert_equal @user, Activity.last.user
     assert_equal @user, GalleryActivity.last.user
     assert_equal Activity.last, GalleryActivity.last.activity
+    assert_equal UserLevel.last.id, GalleryActivity.last.user_level_id
+    assert_equal LevelSource.last.id,  GalleryActivity.last.level_source_id
   end
 
   test "logged in milestone should save to gallery when passing an impressive level with a jpg image" do
@@ -853,7 +856,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
@@ -880,7 +883,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
@@ -1039,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    (1..3).each { |n| create(:level, :name => "Level #{n}", :game => game) }
+    (1..3).each { |n| create(:level, name: "Level #{n}", game: game) }
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"

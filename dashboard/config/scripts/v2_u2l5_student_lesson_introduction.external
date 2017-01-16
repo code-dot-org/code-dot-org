@@ -1,27 +1,38 @@
 name 'v2 U2L5 Student Lesson Introduction'
-title 'Lossy Compression and File Formats'
-description 'description here'
-css 'unplugged'
-skip_dialog 'true'
-markdown <<MARKDOWN
-# Unit 2: Lesson 5 - Lossy Compression and File Formats
-
-## Background
-
-File formats such as JPEG or WAV or MP3 are encoding schemes for organizing and saving the bits that represent images, sounds, or other data. Sometimes all of the bits in data need to be saved, and sometimes they don’t. 
-
-## Vocabulary
-
-* **Lossless:** A compression scheme in which every bit of the original data can be recovered from the compressed file.
-* **Lossy:** A compression scheme in which “useless” or less-than-totally-necessary information is thrown out in order to reduce the size of the data. The eliminated data is unrecoverable.
-
-## Lesson
-
-* Jigsaw Rapid Research on file formats
-* Share your findings
-
-## Resources
-
-* <a href='https://docs.google.com/document/d/1h2pWa-RBS3ZbBg7Z_zfjeh2XqMK8xvRTTefSqz7vchI/edit?usp=sharing' target='_blank' class='print_link'>File Formats Rapid Research</a> - Worksheet (<a href='https://docs.google.com/document/d/1h2pWa-RBS3ZbBg7Z_zfjeh2XqMK8xvRTTefSqz7vchI/export?format=pdf' class='print_link'>download</a>)
-* <a href='https://studio.code.org/p/applab#hxXJIEGg2yza_Q7t9W04xg' target='_blank' class='print_link'>Lossy Text Compression App</a> - App Lab
-MARKDOWN
+encrypted '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
+NJ3rwo3YUgpK
+'

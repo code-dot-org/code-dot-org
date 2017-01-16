@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
+import Spinner from '../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import {
@@ -38,8 +39,10 @@ const styles = {
   }
 };
 
+// Default to today, 9am-5pm.
 const placeholderSession = {
   placeholderId: '_0',
+  date: moment().format(DATE_FORMAT),
   startTime: '9:00am',
   endTime: '5:00pm'
 };
@@ -60,7 +63,8 @@ const WorkshopForm = React.createClass({
       course: React.PropTypes.string.isRequired,
       subject: React.PropTypes.string,
       notes: React.PropTypes.string,
-      sessions: React.PropTypes.array.isRequired
+      sessions: React.PropTypes.array.isRequired,
+      enrolled_teacher_count: React.PropTypes.number.isRequired
     }),
     onSaved: React.PropTypes.func,
     readOnly: React.PropTypes.bool,
@@ -213,12 +217,15 @@ const WorkshopForm = React.createClass({
 
   handleSessionsChange(sessions, removedSession) {
     sessions = _.cloneDeep(sessions);
-    sessions.sessionsModified = true;
     const destroyedSessions = [];
     if (removedSession && removedSession.id) {
       destroyedSessions.push(removedSession);
     }
-    this.setState({sessions, destroyedSessions});
+    this.setState({
+      sessionsModified: true,
+      sessions,
+      destroyedSessions
+    });
   },
   handleFacilitatorsChange(facilitators) {
     this.setState({facilitators: facilitators});
@@ -237,7 +244,7 @@ const WorkshopForm = React.createClass({
           value={this.state.course || ''}
           name="course"
           onChange={this.handleCourseChange}
-          style={this.props.readOnly && styles.readOnlyInput}
+          style={this.getInputStyle()}
           disabled={this.props.readOnly}
         >
           {placeHolder}
@@ -261,7 +268,7 @@ const WorkshopForm = React.createClass({
           value={this.state.workshop_type || ''}
           name="workshop_type"
           onChange={this.handleFieldChange}
-          style={this.props.readOnly && styles.readOnlyInput}
+          style={this.getInputStyle()}
           disabled={this.props.readOnly}
         >
           {placeHolder}
@@ -302,6 +309,10 @@ const WorkshopForm = React.createClass({
     }
   },
 
+  getInputStyle() {
+    return this.props.readOnly && styles.readOnlyInput;
+  },
+
   handleErrorClick(i) {
     const errors = _.cloneDeep(this.state.errors);
     errors.splice(i,1);
@@ -326,14 +337,15 @@ const WorkshopForm = React.createClass({
   },
 
   shouldConfirmSave() {
-    if (!this.props.workshop) {
+    const workshop = this.props.workshop;
+    if (!workshop || workshop.enrolled_teacher_count === 0) {
       return false;
     }
     return (
       this.state.sessionsModified ||
-      this.state.location_name !== this.props.workshop.location_name ||
-      this.state.location_address !== this.props.workshop.location_address ||
-      this.state.notes !== this.props.workshop.notes
+      this.state.location_name !== workshop.location_name ||
+      this.state.location_address !== workshop.location_address ||
+      this.state.notes !== workshop.notes
     );
   },
 
@@ -384,7 +396,7 @@ const WorkshopForm = React.createClass({
   },
 
   save(notify = false) {
-    const data = {
+    const workshop_data = {
       facilitators: this.prepareFacilitatorsForApi(this.state.facilitators),
       location_name: this.state.location_name,
       location_address: this.state.location_address,
@@ -393,13 +405,11 @@ const WorkshopForm = React.createClass({
       course: this.state.course,
       subject: this.state.subject,
       notes: this.state.notes,
-      sessions_attributes: this.prepareSessionsForApi(this.state.sessions, this.state.destroyedSessions),
-      notify: notify
+      sessions_attributes: this.prepareSessionsForApi(this.state.sessions, this.state.destroyedSessions)
     };
 
     let method, url;
     if (this.props.workshop) {
-      data.id = this.props.workshop.id;
       method = 'PATCH';
       url = '/api/v1/pd/workshops/' + this.props.workshop.id;
     } else {
@@ -412,7 +422,7 @@ const WorkshopForm = React.createClass({
       url: url,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify({pd_workshop: data})
+      data: JSON.stringify({pd_workshop: workshop_data, notify})
     }).done(data => {
       if (this.props.onSaved) {
         this.props.onSaved(data);
@@ -430,6 +440,10 @@ const WorkshopForm = React.createClass({
   handleCancelClick() {
     // discard changes.
     this.context.router.goBack();
+  },
+
+  shouldShowFacilitators() {
+    return !['Counselor', 'Admin'].includes(this.state.course);
   },
 
   renderFormButtons() {
@@ -469,7 +483,7 @@ const WorkshopForm = React.createClass({
 
   render() {
     if (this.state.loading) {
-      return <i className="fa fa-spinner fa-pulse fa-3x" />;
+      return <Spinner/>;
     }
     return this.renderForm();
   },
@@ -551,7 +565,7 @@ const WorkshopForm = React.createClass({
                   name="location_name"
                   onChange={this.handleFieldChange}
                   maxLength={255}
-                  style={this.props.readOnly && styles.readOnlyInput}
+                  style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
                 <HelpBlock>{validation.help.location_name}</HelpBlock>
@@ -569,7 +583,7 @@ const WorkshopForm = React.createClass({
                   name="location_address"
                   onChange={this.handleFieldChange}
                   maxLength={255}
-                  style={this.props.readOnly && styles.readOnlyInput}
+                  style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
                 <HelpBlock>{validation.help.location_address}</HelpBlock>
@@ -586,7 +600,7 @@ const WorkshopForm = React.createClass({
                   name="capacity"
                   onChange={this.handleFieldChange}
                   maxLength={4}
-                  style={this.props.readOnly && styles.readOnlyInput}
+                  style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
@@ -615,19 +629,23 @@ const WorkshopForm = React.createClass({
                   onChange={this.handleFieldChange}
                   maxLength={65535}
                   rows={Math.max(5, this.state.notes.split("\n").length + 1)}
-                  style={this.props.readOnly && styles.readOnlyInput}
+                  style={this.getInputStyle()}
                   disabled={this.props.readOnly}
                 />
               </FormGroup>
             </Col>
           </Row>
-          <FacilitatorListFormPart
-            availableFacilitators={this.state.availableFacilitators}
-            facilitators={this.state.facilitators}
-            course={this.state.course}
-            onChange={this.handleFacilitatorsChange}
-            readOnly={this.props.readOnly}
-          />
+          {
+            this.shouldShowFacilitators() && (
+              <FacilitatorListFormPart
+                availableFacilitators={this.state.availableFacilitators}
+                facilitators={this.state.facilitators}
+                course={this.state.course}
+                onChange={this.handleFacilitatorsChange}
+                readOnly={this.props.readOnly}
+              />
+            )
+          }
           {this.renderFormButtons()}
           {this.props.children}
         </form>

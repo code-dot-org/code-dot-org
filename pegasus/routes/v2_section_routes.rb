@@ -71,7 +71,9 @@ post '/v2/sections/:id/students' do |id|
   forbidden! unless section = DashboardSection.fetch_if_teacher(id, dashboard_user_id)
   added_students = section.add_students(payload)
   content_type :json
-  JSON.pretty_generate(DashboardStudent.fetch_if_allowed(added_students, dashboard_user_id))
+  JSON.pretty_generate(
+    DashboardStudent.fetch_if_allowed_array(added_students, dashboard_user_id)
+  )
 end
 
 delete '/v2/sections/:id/students/:student_id' do |id, student_id|

@@ -1,0 +1,9 @@
+name 'csp_ap_intro'
+
+markdown <<MARKDOWN
+The following anonymous survey questions are intended to help Code.org better understand the plans and needs of CS Principles students related to the Advanced Placement exam. Since this is a survey, there are no right or wrong answers! Please answer as best you can given your current plans.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In addition to better understanding what your students' plans are for the AP exam, we would also like to know more about your own experience and thoughts. Please take a minute and <a href= "https://docs.google.com/forms/d/e/1FAIpQLScJEG7VECLLciKKaXPd7rtN4LCbWrbHAqTLvqdvNXcpjS2qYQ/viewform" target=_blank>answer this brief, 9 question survey</a> so we can know how to better support you as we get closer to the AP exam. 
+MARKDOWN

@@ -1,6 +1,3 @@
-title 'Minecraft Hour of Code'
-description_short "Explore a Minecraft world through code"
-description "Use blocks of code to take Steve or Alex on an adventure through this Minecraft world"
 hidden 'false'
 
 stage 'Hour of Code 2015'

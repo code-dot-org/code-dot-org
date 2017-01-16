@@ -60,7 +60,7 @@ namespace :install do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task :all => tasks
+  task all: tasks
 end
 desc 'Install all OS dependencies.'
-task :install => ['install:all']
+task install: ['install:all']

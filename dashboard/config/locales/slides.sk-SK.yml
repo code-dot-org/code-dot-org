@@ -225,7 +225,7 @@
           checking if there's somewhere to turn.
       4:
         image: notes/hoc5_4.jpg
-        text: Now, get those zombies where they belong!
+        text: Teraz pošli týchto zombie tam, kde patria!
     if_else_scrat:
       1:
         image: notes/saloni_ifelse_scrat1.jpg
@@ -245,7 +245,7 @@
           "repeat" blocks.
       4:
         image: notes/saloni_ifelse_scrat4.jpg
-        text: Now let's help Scrat the squirrel get that acorn!
+        text: Teraz pomôž veveričke Scrat získať žaluď!
     function:
       1:
         image: notes/stage13_1.jpg
@@ -271,7 +271,7 @@
     loop_while:
       1:
         image: notes/stage9_5.jpg
-        text: 'Hi, I''m Makinde! Let''s learn about the "while block." '
+        text: 'Ahoj, volám sa Makinde! Poďme sa naučiť niečo o bloku "zatiaľ čo." '
       2:
         image: notes/stage9_6.jpg
         text: The "while block" will do whatever you put inside it AS LONG AS the
@@ -283,8 +283,8 @@
     loop_for:
       1:
         image: notes/stage11_1.jpg
-        text: Hi, I'm Trina, and I work for Pixar. I've worked on a bunch of movies,
-          including Shrek.
+        text: Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som
+          na množstve filmov, vrátane Šreka.
       2:
         image: notes/stage11_2.jpg
         text: This is our new "counter" loop. It will perform actions over and over
@@ -303,7 +303,7 @@
     parameters:
       1:
         image: notes/stage15_1.jpg
-        text: Hi, I'm Janete, and I'm an engineer at Zynga.
+        text: Ahoj, volám sa Janete, a som inžinierkou v spoločnosti Zynga.
       2:
         image: notes/stage15_2.jpg
         text: What if we want to draw a bunch of triangles and have their lengths
@@ -367,8 +367,8 @@
           code to join Anna and Elsa as they explore the magic and beauty of ice.
       2:
         image: notes/frozen1_2.jpg
-        text: You'll create snowflakes and patterns as you ice skate and make a winter
-          wonderland that you can then share with your friends.
+        text: Korčuľovaním po ľade stvoríš snehové vločky i vzory a vytvoríš tak zimnú
+          krajinu zázrakov, ktorú potom môžeš zdieľať so svojimi priateľmi.
       3:
         image: notes/frozen1_3.jpg
         text: In the next hour, you're going to learn the basics of how to code. Traditional
@@ -387,8 +387,8 @@
           written right below the surface.
       6:
         image: notes/frozen1_6.jpg
-        text: This middle area is the toolbox, and each of these blocks is an action
-          that Elsa and Anna can do.
+        text: Táto prostredná oblasť sa nazýva panel nástrojov, a každý z týchto blokov
+          predstavuje určitú akciu, ktorú môže Elsa a Anna vykonať.
       7:
         image: notes/frozen1_7.jpg
         text: The white space on the right is called the workspace, and this is where
@@ -409,16 +409,16 @@
           this is a 120 degree turn.
       10:
         image: notes/frozen1_10.jpg
-        text: Remember, you can change the number of pixels and degrees by clicking
-          the arrows next to them.
+        text: Zapamätaj si, že môžeš meniť počet pixelov a stupňov klikaním na šípky
+          vedľa nich.
     frozen_loops:
       1:
         image: notes/frozen2_1.jpg
-        text: Hi, I’m Paola! Computers are really good at repeating actions. You can
-          count to 10, 20, or 100. But a computer can count to a billion or a trillion.
-          It won't get bored and it will only take a few seconds. Whether it's counting,
-          or drawing, or anything--computers can repeat things hundreds or even billions
-          of times.
+        text: Ahoj, volám sa Paola! Počítače sú skutočne dobré v opakovaní akcií.
+          Ty dokážeš napočítať do 10, 20, alebo do 100. Lenže počítač dokáže počítať
+          do miliardy, alebo do triliónu. Nezačne sa nudiť, a bude mu to trvať len
+          zopár sekúnd. Či už je to počítanie, kreslenie, alebo čokoľvek iné -- počítače
+          dokážu opakovať veci stovky, alebo dokonca miliardy krát.
       2:
         image: notes/frozen2_2.jpg
         text: In programming, we call this a loop. A loop is how you repeat your code
@@ -426,8 +426,8 @@
           a square with the "Repeat" block.
       3:
         image: notes/frozen2_3.jpg
-        text: Any blocks of code you put inside the "Repeat" block will be repeated
-          in sequence, as many times as you want.
+        text: Akýkoľvek blok kódu, ktorý vložíš do bloku "Opakuj", sa bude opakovať
+          v sekvencii toľkokrát, koľko budeš chcieť.
       4:
         image: notes/frozen2_4.jpg
         text: To draw a square, you can use the "Move Forward" and "Turn Right" block
@@ -437,13 +437,13 @@
           Right" block inside a "Repeat" block.
       5:
         image: notes/frozen2_5.jpg
-        text: Remember, you can change the number in the "Repeat" block to anything,
-          and it will repeat what's inside the block that many times.
+        text: Pamätaj si, že môžeš akokoľvek meniť čísla v bloku "Opakovať", a že
+          to čo je v bloku zapísané sa bude toľko krát opakovať.
     frozen_functions:
       1:
         image: notes/frozen3_1.jpg
-        text: Hi, I’m Chris Bosh. I’m a professional basketball player, and I coded
-          in college.
+        text: Ahoj, volám sa Chris Bosh. Som profesionálnym hráčom basketbalu, a kódujem
+          na škole.
       2:
         image: notes/frozen3_2.jpg
         text: One of the most important concepts in computer science is how to define
@@ -518,8 +518,8 @@
           for when something happens. When that thing happens, it performs an action.
       2:
         image: notes/playlab_events_2.png
-        text: Some examples of events are listening for a mouse click, an arrow button,
-          or a tap on the screen.
+        text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
+          tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
       3:
         image: notes/playlab_events_3.png
         text: Here, we're going to make the space bot greet the earthlings when a
@@ -535,12 +535,12 @@
     playlab_repeat_forever:
       1:
         image: notes/playlab_repeat_forever_1.png
-        text: This is the "repeat forever" block. Anything inside this block will
-          happen forever in the game.
+        text: Toto je blok "neustále opakovať". Čokoľvek bude vo vnútri tohto bloku
+          sa bude v hre neustále opakovať.
       2:
         image: notes/playlab_repeat_forever_2.png
-        text: If we want an actor to do something repeatedly, without the player having
-          to do anything, we'll put those blocks inside the "repeat forever" block.
+        text: Ak má postava niečo opakovane vykonávať, bez akéhokoľvek zásahu hráča,
+          budeme vkladať tieto bloky do vnútra bloku "neustále opakovať".
       3:
         image: notes/playlab_repeat_forever_3.png
         text: In this next puzzle, our goal is to help the wizard patrol the boundaries
@@ -594,8 +594,8 @@
           events, like the push of a button or the click of a mouse.
       2:
         image: notes/C1_bigevent_unplugged_2.png
-        text: For this lesson, you'll be controlled with a paper remote control. It's
-          just like a real-live video game.
+        text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
+          niečo ako reálna-živá video hra.
       3:
         image: notes/C1_bigevent_unplugged_3.png
         text: An event is an action  that causes something to happen. It's like when
@@ -780,9 +780,9 @@
     C1_going_places_safely:
       1:
         image: notes/C1_going_places_safely_1.png
-        text: My name is Jeremiah. Hi! I am seven years old. I love playing on my
-          mom's computer but I always get permission first. "Mom, can I go on the
-          computer? Sure honey!"
+        text: Moje meno je Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom
+          počítači, ale najprv musím dostať povolenie. "Mami, môžem ísť na počítač?
+          Iste zlatko!"
       2:
         image: notes/C1_going_places_safely_2.png
         text: I love my mom's computer because I can go on the internet. The internet
@@ -790,11 +790,11 @@
           to family and friends and you can learn lots of new things.
       3:
         image: notes/C1_going_places_safely_3.png
-        text: Yesterday, I visited a zoo that's near my house. I saw a baby zebra.
-          I took her picture and changed the color of her stripes, then added a hat
-          and added it to my collection of wacky animals. Awesome! Later, I went to
-          a place far far away. I visited Kenya. That's a country in Africa. Lots
-          of zebras live there.
+        text: Včera som navštívil zoologickú záhradu, je blízko môjho domu. Videl
+          som tam žriebätko zebry. Odfotil som si ho, zmenil som mu farbu pruhov,
+          pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné!
+          Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina
+          v Afrike. Žije tu mnoho zebier.
       4:
         image: notes/C1_going_places_safely_4.png
         text: Sometimes on the internet I talk to peeople I know, like my grandma
@@ -1055,13 +1055,12 @@
           goes through each block step by step.
       3:
         image: notes/C2_artist_debugging_3.png
-        text: Oh, there's the problem! The cat's whiskers are 75 pixels long, not
-          25.
+        text: Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25.
     C2_bee_debugging:
       1:
         image: notes/C2_bee_debugging_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
+          Keď ladíš kód, identifikuješ a odstraňuješ chyby.
       2:
         image: notes/C2_bee_debugging_2.png
         text: Here we're given a few blocks already in our workplace. We're going
@@ -1376,8 +1375,8 @@
     C3_debugging_bee:
       1:
         image: notes/C3_debugging_bee_1.png
-        text: Have you ever heard of debugging a program? This is the way you figure
-          out what's not working. When you debug code, you identify and remove errors.
+        text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
+          Keď ladíš kód, identifikuješ a odstraňuješ chyby.
       2:
         image: notes/C3_debugging_bee_2.png
         text: Here we're given a few blocks already in our workplace. We're going
@@ -2512,8 +2511,8 @@
           that BB-8 can understand.
       6:
         image: notes/starwars_intro_6.JPG
-        text: The white space on the right is called the workspace and this is where
-          we are going to build our program.
+        text: Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme
+          vytvárať náš program.
       7:
         image: notes/starwars_intro_7.JPG
         text: If I drag the moveLeft(); block to our workspace and press run, what
@@ -2591,10 +2590,9 @@
           starring R2-D2 and C3PO.
       3:
         image: notes/starwars_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
+          hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
+          počúval, alebo čakal na to kým sa niečo udeje, potom vykonajú nejakú akciu.'
       4:
         image: notes/starwars_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
@@ -2727,10 +2725,9 @@
           starring R2-D2 and C3PO.
       3:
         image: notes/starwars_blocks_events_3.JPG
-        text: 'To make a game, we need to learn about something that game programmers
-          use every day: they''re called events. Events tell your program to listen
-          or wait for when something happens and then when it does, it performs an
-          action.'
+        text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
+          hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
+          počúval, alebo čakal na to kým sa niečo udeje, potom vykonajú nejakú akciu.'
       4:
         image: notes/starwars_blocks_events_4.JPG
         text: Some examples of events are listening for a mouse click, an arrow button
@@ -2749,7 +2746,7 @@
           react to button press events that move him around the screen.
       7:
         image: notes/starwars_blocks_events_7.JPG
-        text: Step by step, your game is getting more interactive.
+        text: Krok po kroku, sa tvoja hra stáva viac interaktívnou.
     starwars_blocks_congrats:
       1:
         image: notes/starwars_blocks_congrats_1.JPG
@@ -2942,9 +2939,9 @@
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Ak by si chcel vytvoriť svoju vlastnú hru, je to skutočne jednoduché.
+          Všetko čo potrebuješ je vedieť zopár základov programovania a môžeš začať
+          hrať hru ktorú si si vytvoril.
       2:
         image: notes/gumball_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -3010,8 +3007,9 @@
     gumball_repeat:
       1:
         image: notes/gumball_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Ak by si musel niečo opakovať donekonečna, dokážeš si to predstaviť?
+          Dúfajme, že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne
+          dobré.
       2:
         image: notes/gumball_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
@@ -3026,9 +3024,9 @@
     iceage_intro:
       1:
         image: notes/iceage_intro_1.JPG
-        text: If you'd like to make your own game, it's really easy. All you need
-          are just a few basics of programming and you can start playing a game that
-          you created.
+        text: Ak by si chcel vytvoriť svoju vlastnú hru, je to skutočne jednoduché.
+          Všetko čo potrebuješ je vedieť zopár základov programovania a môžeš začať
+          hrať hru ktorú si si vytvoril.
       2:
         image: notes/iceage_intro_2.JPG
         text: Do you have a favorite video game? We're going to take one step toward
@@ -3094,8 +3092,9 @@
     iceage_repeat:
       1:
         image: notes/iceage_repeat_1.JPG
-        text: Can you imagine if you had to repeat something forever and ever? Hopefully
-          you never have to because computers are really good at repeating things.
+        text: Ak by si musel niečo opakovať donekonečna, dokážeš si to predstaviť?
+          Dúfajme, že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne
+          dobré.
       2:
         image: notes/iceage_repeat_2.JPG
         text: This is the repeat forever block. Anything inside this block will happen
@@ -3107,3 +3106,119 @@
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      1:
+        image: notes/mc_2016_intro_1.jpg
+        text: Ahoj, moje meno je Jens a som hlavný kreatívny dizajnér Minecraftu.
+          V ďalšej hodine budete vytvárať vašu vlastnú Minecraft hru. Toto vyzerá
+          ako Minecraft ale svet sa zastavil. Ovca sa nehýbe, kurčatá nekladú vajcia
+          a zombie iba stále stoja. Je na vás aby ste pridali kód, ktorý spraví Minecraft
+          svet funkčným.
+      2:
+        image: notes/mc_2016_intro_2.jpg
+        text: 'Moje meno je Melissa a som objavujúci používateľ Minecraftu. To, o
+          čo sa naozaj zaujímam je ako ľudia myslia a pracujú s technológiami a táto
+          práca je perfektná práca pre mňa na spojenie dokopy počítačového strojárstva
+          s psychológiou: ako ľudia myslia a správajú sa.'
+      3:
+        image: notes/mc_2016_intro_3.jpg
+        text: Uvidíte vašu obrazovku, ktorá je rozdelená na tri hlavné časti. 1) Naľavo
+          je hra Minecraft. Práve teraz je svet zamrznutý ale ideme ho opraviť kódom.
+      4:
+        image: notes/mc_2016_intro_4.jpg
+        text: 2) Táto stredná časť je panel nástrojov. Každý z týchto blokov je príkaz,
+          ktorým kurčatá, ovce a ďalšie Minecraft stvorenia môžu rozumieť.
+      5:
+        image: notes/mc_2016_intro_5.jpg
+        text: 3) Priestor napravo sa nazýva pracovný priestor a je to miesto, kde
+          budeme budovať náš program.
+      6:
+        image: notes/mc_2016_intro_6.jpg
+        text: Ak zabudnete, čo máte robiť, inštrukcie pre každý level sú navrchu.
+      7:
+        image: notes/mc_2016_intro_7.jpg
+        text: To start off, we're going to program a chicken. Let's drag the "move
+          forward" command to the workspace. When I hit "Run" the chicken moves forward
+          one step. To go further, I'll drag another "move forward" block underneath
+          the first "move forward" block until the highlight appears. Then I'll drop
+          it and the two blocks snap together. If I hit "Run" again, the chicken walks
+          two steps.
+      8:
+        image: notes/mc_2016_intro_8.jpg
+        text: Ak niekedy chcete odstrániť block, tak ho iba odstráňte zo zásobníka
+          a presuňte ho späť do panela nástrojov.
+      9:
+        image: notes/mc_2016_intro_9.jpg
+        text: After you've hit "Run" you can always hit the "Reset" button to reset
+          the game and start over. Now, it's your turn to make your very own version
+          of Minecraft. Have fun!
+    mc_2016_loops:
+      1:
+        image: notes/mc_2016_loops_1.jpg
+        text: Ahoj, ja som Lisa. Som softvérový vývojár na Minecrafte a pracujem na
+          niektorých zvieratách a nepriateľoch v hre. Jedno zo zvierat, na ktorých
+          som robila je ocelot. Robila som na časti, kde môžte nakŕmiť ocelota rybou
+          na skrotenie vašej vlastnej mačky.
+      2:
+        image: notes/mc_2016_loops_2.jpg
+        text: As humans, we get really bored if we have to do the same thing over
+          and over and over again. But the cool thing about computers is that they
+          can do the same thing millions or even billions of times in a row without
+          getting bored. This repetition is called a loop and every creature in Minecraft
+          uses loops.
+      3:
+        image: notes/mc_2016_loops_3.jpg
+        text: Earlier, we got a chicken to move across the screen but then she stopped.
+          In Minecraft, the chickens wander around forever and ever. Let's use a "forever
+          do" loop from our toolbox to keep our chickens moving around forever too.
+          The power of loops will save you tons of time and open up all kinds of neat
+          options as you build your own version of Minecraft.
+    mc_2016_events:
+      1:
+        image: notes/mc_2016_events_1.jpg
+        text: On this next level, you can pick to be either Steve or Alex. Press the
+          arrow buttons on your keyboard to move up, down, left, and right. Now you
+          can move around a level wherever you want. To use a creature, just walk
+          towards it, turn to face it, and press the spacebar.
+      2:
+        image: notes/mc_2016_events_2.jpg
+        text: If you're using a touch screen, swipe up, down, left, and right to move
+          around. Then tap the game to use the item in front of you.
+      3:
+        image: notes/mc_2016_events_3.jpg
+        text: But what happens when you use it? In Minecraft, sheep drop wool when
+          you shear them, cows run away when you hit them, and creepers explode when
+          you get near them. These reactions happen thanks to something called events.
+          Events tell your program to listen or wait for when something happens. And
+          when it does, perform an action.
+      4:
+        image: notes/mc_2016_events_4.jpg
+        text: So far, you've used one event. Code you put in the "when spawned" slot
+          runs when your creature is created or when the game starts. Over the next
+          few levels you'll have new slots for events such as "when touched" that
+          runs when you touch the creature, or "when used" for when you use the creature.
+          Or, if you want your zombie to disappear when the sun comes up, put that
+          in the "when day" slot
+    mc_2016_spawn:
+      1:
+        image: notes/mc_2016_spawn_1.jpg
+        text: In games, spawn means the same thing as create. In this level, let's
+          make zombies spawn when the sun goes down. To do this, we'll use the "when
+          night" block.
+      2:
+        image: notes/mc_2016_spawn_2.jpg
+        text: Since we want the zombies to spawn at night we'll add the "spawn zombie"
+          block under the "when night" block. As soon as they're spawned, each zombie
+          will run the code that you put in their "when spawned" event slot. Have
+          fun spawning zombies!
+    mc_2016_congrats:
+      1:
+        image: notes/mc_2016_congrats_1.jpg
+        text: Gratulujeme! Naučili ste sa používať príkazy počítačovej vedy na prinesenie
+          života do Minecraft svetu. Teraz ste vývojárom. Odomkli ste všetky príkazy
+          a všetky stvorenia. Môžete si vybrať, čo sa stane.
+      2:
+        image: notes/mc_2016_congrats_2.jpg
+        text: When you're done making your game, choose share to get a link that you
+          can share with your friends or to play your game on your phone. Have fun!
+          I'm looking forward to playing your version of Minecraft.

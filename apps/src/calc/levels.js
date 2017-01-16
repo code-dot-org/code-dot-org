@@ -1,4 +1,3 @@
-var msg = require('./locale');
 var blockUtils = require('../block_utils');
 
 /**

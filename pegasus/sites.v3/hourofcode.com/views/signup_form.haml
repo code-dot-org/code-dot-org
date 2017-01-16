@@ -1,3 +1,5 @@
+- signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
+
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
   %form{:id=>"hoc-signup-form", role: "form", onsubmit: "event.preventDefault();"}
@@ -39,17 +41,8 @@
           %input#hoc-entire-school-flag{name: "entire_school_flag_b", type: "checkbox", value: "1"}/
           =hoc_s(:signup_event_entire_school_label)
 
-    - if @country == 'us'
-      .form-group
-        .checkbox
-          %label
-            %input#hoc-send-posters-flag{name: "send_posters_flag_b", type: "checkbox", value: "1"}/
-            =hoc_s(:signup_send_posters_flag_label)
-
-      .form-group{style: "display: none;"}
-        %label.control-label{for: "hoc-send-posters-address"}= hoc_s(:signup_send_posters_address_label)
-        %div
-          %textarea#hoc-send-posters-address.form-control{name: "send_posters_address_s", placeholder: hoc_s(:signup_send_posters_address_placeholder), style: "height: 5em;"}
+    -# Hide the posters checkbox when # of requests hits our quota.
+    -# Show the posters checkbox again when signup form opens for next Hour of Code.
 
     .form-group
       .checkbox
@@ -70,8 +63,9 @@
 
     %input{name:'hoc_country_s', type:'hidden', value:@country}
     %input{name:'hoc_company_s', type:'hidden', value:@company}
-    %p.multiple-event-warning
+    %p.footnote
       = hoc_s(:signup_multiple_event_warning)
+      %strong= hoc_s(:signup_registration_deadline)
     .form-group.submit-btn
       %div
         %button{type: "submit"}= hoc_s(:signup_submit_label)
@@ -95,13 +89,6 @@
         $('#hoc-special-event-details').closest('.form-group').slideUp();
       }
     });
-    $('#hoc-send-posters-flag').change(function() {
-      if($(this).is(':checked')) {
-        $('#hoc-send-posters-address').closest('.form-group').slideDown();
-      } else {
-        $('#hoc-send-posters-address').closest('.form-group').slideUp();
-      }
-    });
     $('#hoc-event-type').change(function() {
       if($(this).val() == 'in_school') {
         $('#hoc-entire-school-flag').closest('.form-group').show();
@@ -118,7 +105,7 @@
 
   function signupFormError(data)
   {
-    $('#error_message').html('<p>#{hoc_s(:signup_submit_error_message)}</p>').show();
+    $('#error_message').html("<p>#{signup_submit_error_message}</p>").show();
     $("#signup_submit").removeAttr('disabled');
   }
 

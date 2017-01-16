@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "We are going to walk you through a process that shows you the benefit of thinking about programming tasks in terms of writing functions.\r\n\r\n* We are going to write a program that draws the figure shown at right which sort of looks like a jagged diamond shape. <img src=\"https://images.code.org/53679cc10ff90b6120184d93ad012797-image-1441770558200.png\" align='right'>\r\n\r\n* If you look at this image you might recognize elements that repeat: this is a 4-sided figure, and each side is made up of some zig-zag steps.\r\n\r\n* We're going to break the programming down into useable parts and then use those parts as building blocks to make this more complex drawing.\r\n\r\n* First let's **define** a function that can do one of these zig-zag steps.  We've started you out with a definition of `right()` that you can use...\r\n\r\n# Do This:\r\n\r\n**Define** a function named `function drawStep()` which makes the turtle move forward and left as shown. NOTE: at the end the turtle should be facing the same direction it started.\r\n\r\n![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)",
+    "markdown_instructions": "We are going to walk you through a process that shows you the benefit of thinking about programming tasks in terms of writing functions.\r\n\r\n* Over the next 3 levels we are going to write a program that draws the figure shown at right which sort of looks like a jagged diamond shape. <img src=\"https://images.code.org/53679cc10ff90b6120184d93ad012797-image-1441770558200.png\" align='right'>\r\n\r\n* If you look at this image you might recognize elements that repeat: this is a 4-sided figure, and each side is made up of some zig-zag steps.\r\n\r\n* We're going to break the programming down into useable parts and then use those parts as building blocks to make this more complex drawing.\r\n\r\n* First let's **define** a function that *draws just one of these zig-zag steps.*  We've started you out with a definition of `right()` that you can use...\r\n\r\n# Do This:\r\n\r\n**Define** a function named `function drawStep()` which makes the turtle move forward and left as shown. NOTE: at the end the turtle should be facing the same direction it started.\r\n\r\n![](https://images.code.org/4fa605353695afa0cd01ec01a1e2c709-image-1441772033658.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -66,9 +66,7 @@
     "encrypted_examples": "zkDI0HDKHo5c8J74y03IKljJJN88FpvWCVjolNR18sIy18c5dx0tu25snUyX\nRtR7\n",
     "lock_zero_param_functions": "true",
     "execute_palette_apis_only": "true",
-    "contained_level_names": [
-      "Draw Diamond"
-    ],
+    "contained_level_names": null,
     "log_conditions": [
       {
         "entries": [
@@ -108,6 +106,15 @@
       },
       {
         "entries": [
+          "turnRight:1"
+        ],
+        "matchType": "exact",
+        "minTimes": 0,
+        "maxTimes": 0,
+        "message": "You seem to have found the turnRight function. You can use this knowledge later, but for now, try to stick to the constraints of this problem and just write a function named \"right\"."
+      },
+      {
+        "entries": [
           "drawStep"
         ],
         "matchType": "exact",
@@ -124,21 +131,16 @@
       },
       {
         "entries": [
-          "drawStep",
-          "moveForward",
-          "turnLeft",
-          "moveForward",
-          "right",
-          "turnLeft",
-          "turnLeft",
-          "turnLeft"
+          "moveForward"
         ],
         "matchType": "exact",
-        "minTimes": 1,
-        "message": "Hmmm something's not right. Your code should be calling drawStep() and the turtle should move exactly as shown in the diagram, no more no less.  We'll produce the other parts of the program in upcoming levels."
+        "minTimes": 2,
+        "message": "You should be moving forward at least twice as part of drawStep."
       }
     ],
-    "fail_on_lint_errors": "false"
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false"
   },
   "published": true,
   "notes": "",

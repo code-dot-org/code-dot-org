@@ -20,7 +20,7 @@ module UserHelpers
     return prefix if queryable.where(username: prefix).limit(1).empty?
 
     # Throw darts to find an appropriate suffix, using it if we hit bullseye.
-    (0..1).each do |exponent|
+    (0..2).each do |exponent|
       min_index = 10**exponent
       max_index = 10**(exponent + 1) - 1
       3.times do |_i|

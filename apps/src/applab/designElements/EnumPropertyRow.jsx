@@ -1,5 +1,5 @@
-var React = require('react');
-var rowStyle = require('./rowStyle');
+import React from 'react';
+import * as rowStyle from './rowStyle';
 
 var EnumPropertyRow = React.createClass({
   propTypes: {
@@ -39,4 +39,4 @@ var EnumPropertyRow = React.createClass({
   }
 });
 
-module.exports = EnumPropertyRow;
+export default EnumPropertyRow;

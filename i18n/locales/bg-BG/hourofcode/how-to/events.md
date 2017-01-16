@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 * * *
 
+<%= view :signup_button %>
+
 # Как да организирате Hour of Code събитие
 
 ## 1) подготовка за Вашето събитие
@@ -32,13 +34,13 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 
 ## План за примерно събитие
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**Събитие:** Седмица на компютърните науки и образованието в Училище Старт на събранието
 
-**Date:** Dec 5th (start of Computer Science Education Week)
+**Дата:** 5-ти декември (началото на седмицата на компютърните науки и образованието)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**Време:** По време на учебния ден. Средата на сутринта е за предпочитане за събитието. Около 1 час.
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)   
+**Местоположение:** Училищна зала (театър, фитнес зала, кафене)   
   
 
 
@@ -52,3 +54,5 @@ title: <%= hoc_s(:title_how_to_events) %> layout: wide nav: how_to_nav
 | 10:30 - 10:40 | Учениците правят часът на кодирането в училище. Забавен обрат-накарайте ги да обучат директора, политик или други ученици.             |
 | 10:40 - 11:00 | Учениците демонстрират ънплъгд дейност и как може да се преподават компютърни науки без използване на компютри.                        |
 | 11:00 - 11:05 | Учителят, който организира събитието в училище казва заключителни думи.                                                                |
+
+<%= view :signup_button %>

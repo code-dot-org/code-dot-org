@@ -1,0 +1,26 @@
+name 'CSPU5_predict_onEvent_withWrongID'
+title 'title'
+question 'Question'
+wrong 'The code WILL run. When the button is clicked the turtle will move forward.'
+wrong 'The code WILL run. But will crash as soon as the button is clicked.'
+right 'The code will NOT run. It will halt with an error saying that it cannot find an element with the id "id"'
+wrong 'The code will NOT run. When you click the button nothing will happen.'
+
+markdown <<MARKDOWN
+# Prediction Time!
+Try to predict what will happen when you hit the run button!
+
+**Hint:** there is a problem with this program.  Can you find the bug?
+
+## Predict - Observe - Reflect
+
+Remember:
+
+* Before you can hit run you must first select one of the answers below.  After you select an answer, hit RUN.
+* **Investigate First!** use the possible answers below as **hints and clues** for things to investigate before selecting your answer.
+* **TIP:** to see the id of an element on the screen, hover over it with your mouse (see image at right).
+* This **is not a test** and **you are not expected to know** the answer. 
+* The only requirement is that you make a guess!
+
+
+MARKDOWN

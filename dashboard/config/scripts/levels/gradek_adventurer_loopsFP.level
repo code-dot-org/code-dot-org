@@ -27,6 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Eureka!  Collect as much gold as you can!",
+    "instructions_important": "false",
     "contained_level_names": null
   },
   "published": true,
@@ -46,6 +47,7 @@
         <block type="maze_moveWest"/>
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth"/>
+        <block type="collector_collect"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-10">???</title>
         </block>

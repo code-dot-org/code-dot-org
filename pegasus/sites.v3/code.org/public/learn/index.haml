@@ -1,24 +1,138 @@
 ---
 title: Learn
-theme: responsive
+theme: responsive_wide
+layout: wide
 social:
-  "og:description": "Anyone can learn the basic concepts of Computer Science. Choose an intro activity to start learning."
-  "og:image": "http://code.org/images/fit-520/codehoc3.jpg"
-  "og:image:width": 520
-  "og:image:height": 391
+  "twitter:card": photo
+  "twitter:site": "@codeorg"
+  "twitter:url": "https://<%=request.host%>/learn"
+  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
+  "twitter:title": "Hour of Code"
+  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
+  "og:title": "Hour of Code"
+  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
+  "og:image" : "https://code.org/images/learn/og-learn-student.png"
+  "og:image:width": "853"
+  "og:image:height": "447"
   "og:video": ""
   "og:video:width": ""
   "og:video:height": ""
   "og:video:type": ""
 ---
+:css
+  .noFocusButton:focus {
+    outline: 0;
+  }
 
-%link{type: "text/css", href: "/css/learn_tabs.css", rel: "stylesheet"}
-%link{type: "text/css", href: "/shared/css/course-blocks.css", rel: "stylesheet"}
-%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
-%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
+  .banner {
+    color: white;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .banner a {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Gotham 5r', sans-serif;
+  }
+  .bannerHeading {
+    font-family: 'Gotham 5r', sans-serif;
+    font-size: 56px;
+    line-height: 56px;
+    padding: 20px 0px 20px 0px;
+  }
+  .bannerBeyond {
+    padding-top: 15px;
+  }
+  .bannerTeachers {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    opacity: 0;
+  }
+  .bannerTeacherIcon {
+    height: 26px;
+    padding-right: 5px;
+    vertical-align: top;
+  }
+  #studentImage {
+    height: 278px;
+  }
 
-= view 'mobilecheck.js'
+#fullwidth{style: "background-color: #2799a4; overflow: hidden"}
+  #desktop-header.desktop-feature
+    = view :header, variant: "desktop"
+  #mobile-header.mobile-feature
+    - if request.site == 'csedweek.org'
+      = view :mobile_header_responsive
+    - else
+      = view :header, variant: "mobile"
 
-= view :learn_teacher_banner
-= view :learn_code_studio
-= view :learn_carousels, variation:'learn'
+  .banner.container_responsive
+    .col-50
+      .bannerHeading= hoc_s(:learn_banner_heading)
+      = hoc_s(:learn_banner_blurb)
+      .bannerBeyond
+        = hoc_s(:learn_banner_beyond)
+      .bannerTeachers
+        %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
+        = hoc_s(:learn_banner_teachers)
+    #studentImage.col-50.tablet-feature
+
+-# Not ideal but we can pull the undigested files from /blockly.
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: CDO.studio_url("/blockly/js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: CDO.studio_url("/blockly/js/tutorialExplorer.js")}
+
+- tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
+
+- tutorials_contents.each do |tutorial|
+  - tutorial[:contact] = nil
+  - prefix = "tutorial_#{tutorial[:short_code]}_"
+  - tutorial[:name]                                 = hoc_s(prefix + "name")
+  - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
+  - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
+  - tutorial[:language]                             = hoc_s(prefix + "language")
+  - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
+  - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
+  - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
+  - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
+
+#tutorials
+
+:javascript
+
+  $(document).ready(function() {
+    // Send through some values that the JavaScript will need.
+    var tutorialExplorerManager = new window.TutorialExplorerManager({
+      tutorials: #{tutorials_contents.to_json},
+      locale: "#{request.locale}",
+      roboticsButtonUrl: "/learn/robotics",
+      showSortBy: true,
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+    });
+    tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
+
+    // Pick a random student image (1-2 inclusive) and fade it in.
+    var studentImageIndex = Math.floor(Math.random() * 2) + 1;
+    var studentImage = '/images/learn/student' + studentImageIndex + '.png';
+
+    var img = $('<img>');
+    img.attr('src', studentImage);
+    img.attr('style', 'opacity: 0');
+    img.appendTo('#studentImage');
+    img.on('load', function() {
+      img.fadeTo('normal', 1);
+    });
+
+    // Set up beyond hyperlink.
+    $("#learn_banner_beyond").attr({href: "https://hourofcode.com/beyond", target: "_blank"});
+
+    // Set up teacher hyperlinks.
+    $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
+    });
+    $("#teacher_banner_howto").attr({href: "https://hourofcode.com/how-to", target: "_blank"}).click(function() {
+      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
+    });
+    $(".bannerTeachers").fadeTo('slow', 1);
+  });

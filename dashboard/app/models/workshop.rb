@@ -39,7 +39,7 @@ class Workshop < ActiveRecord::Base
   has_many :workshop_cohorts, inverse_of: :workshop, dependent: :destroy
   has_many :cohorts, through: :workshop_cohorts
   has_many :districts, through: :cohorts
-  has_many :district_contacts, through: :districts, :source => :contact
+  has_many :district_contacts, through: :districts, source: :contact
   accepts_nested_attributes_for :workshop_cohorts, allow_destroy: true
 
   # A Workshop has at least one Facilitator(s)
@@ -61,11 +61,11 @@ class Workshop < ActiveRecord::Base
   end
 
   def phase_info
-    WorkshopConstants::PHASES[self.phase.to_i]
+    WorkshopConstants::PHASES[phase.to_i]
   end
 
   def program_type_info
-    WorkshopConstants::PROGRAM_TYPES[self.program_type.to_i]
+    WorkshopConstants::PROGRAM_TYPES[program_type.to_i]
   end
 
   def exit_survey_url

@@ -1,0 +1,184 @@
+---
+title: "Workshop Survey for Counselors and Administrators"
+---
+:ruby
+  dont_cache
+  enrollment_code = request.splat_path_info[1..-1]
+  enrollment = DASHBOARD_DB[:pd_enrollments].where(code: enrollment_code).first
+  pass unless enrollment
+
+  workshop = DASHBOARD_DB[:pd_workshops].where(id: enrollment[:pd_workshop_id]).first
+  pass unless workshop
+
+  teacher_id = enrollment[:user_id]
+  teacher = DASHBOARD_DB[:users].where(id: teacher_id).first
+  name = teacher.nil? ? enrollment[:name] : teacher[:name]
+  email = teacher.nil? ? enrollment[:email] : teacher[:email]
+
+  plp = DASHBOARD_DB[:professional_learning_partners].where(contact_id: workshop[:organizer_id]).first
+
+  # Have they taken this particular survey?
+  previous_response = DB[:forms].where(kind: 'PdWorkshopSurveyCounselorAdmin', source_id: enrollment[:id]).first
+
+  course = workshop[:course]
+  pass unless ['Counselor', 'Admin'].include? course
+  # We can't access workshop.course_name here, but follow the same pattern anyway for consistency.
+  course_name = course == 'Admin' ? 'Administrator' : 'Counselor'
+
+  def local_view(name, options = {})
+    options[:form] = PdWorkshopSurveyCounselorAdmin
+    view "pd_workshop_survey/#{name.to_s}", options
+  end
+
+:javascript
+  window.pdWorkshopSurvey = {
+    enrollmentCode: "#{enrollment_code}"
+  };
+
+%script{type: "text/javascript", src: "/js/sifter.min.js"}
+%script{type: "text/javascript", src: "/js/microplugin.min.js"}
+%script{type: "text/javascript", src: "/js/selectize.min.js"}
+%script{type: "text/javascript", src: "/js/selectize-fast-click.js"}
+%script{type: "text/javascript", src: "/js/pd-workshop-survey-counselor-admin.js"}
+%link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
+
+- if previous_response
+  %h1 Thank you
+  %h3 You have already completed this survey.
+
+- else
+
+  %form#pd-workshop-survey-form{role: 'form'}
+    %input{name: 'user_id_i', type: 'hidden', value: teacher_id}
+    %input{name: 'email_s', type: 'hidden', value: email}
+    %input{name: 'name_s', type: 'hidden', value: name}
+
+    %input{name: 'enrollment_id_i', type:'hidden', value: enrollment[:id]}
+    %input{name: 'workshop_id_i', type: 'hidden', value: workshop[:id]}
+    %input{name: 'plp_b', type: 'hidden', value: plp.nil? ? '0' : '1'}
+
+    %h1
+      Satisfaction Survey for Code.org's
+      = course_name
+      Professional Development Workshop
+
+    #error-message{style: 'display: none'}
+
+    .main-section
+      .form-group
+        = local_view :multi_select,
+          name: 'how_heard_ss[]',
+          label: 'How did you hear about this workshop? (select all that apply)'
+      .form-group{id: 'how-heard-other-wrapper', style: 'display: none;'}
+        %label.control-label{for: 'how-heard-other'}<
+          %em{style: 'font-weight: normal;'} Other source?
+        %div
+          %input.form-control{name: 'how_heard_other_s', placeholder: 'Other', type: 'text'}
+
+      .form-group
+        = local_view :single_select,
+          name: 'received_clear_communication_s',
+          label: 'I received clear communication about when and where the workshop would take place.'
+
+      .form-group
+        %label.control-label{for: 'venue_feedback_s'}
+          Do you have feedback about the venue and the way logistics were run for this workshop?
+          Please be specific and provide suggestions for improvement.
+        %textarea.form-control{name: 'venue_feedback_s', rows: 4, type: 'text'}
+
+      :ruby
+        agree_scale_questions = [{
+          name: 'facilitators_came_prepared_s',
+          label: 'The facilitator(s) came prepared to lead the workshop.'
+        }, {
+          name: 'facilitators_were_responsive_s',
+          label: 'The facilitator(s) was(were) responsive to my questions and concerns.'
+        }, {
+          name: 'facilitators_kept_attention_s',
+          label: 'The facilitator(s) kept my attention for the entire time.'
+        }, {
+          name: 'understand_why_important_s',
+          label: 'I understand why it is important to offer CS education.'
+        }, {
+          name: 'changed_my_opinion_s',
+          label: 'This professional development has changed my opinion about the value of computer science.'
+        }]
+
+      = local_view :agree_scale_select_table, items: agree_scale_questions
+
+      .form-group
+        :ruby
+          how_interested_before_label = %q(
+            On a scale from 1-6, with 1 being not at all interested and 6 being extremely interested,
+            how interested were you in participating in this PD session prior to arriving?
+          )
+        = local_view :single_select,
+          name: 'how_interested_before_s',
+          label: how_interested_before_label
+
+      .form-group
+        = local_view :single_select,
+          name: 'pacing_s',
+          label: 'The pacing for this workshop was…'
+
+      .form-group
+        = local_view :single_select,
+          name: 'attendee_type_s',
+          label: 'I am an:'
+
+    :ruby
+      admin_agree_scale_questions = [{
+        name: 'have_pathway_strategies_s',
+        label: 'I have new strategies and ideas for building a CS pathway or programs at my school.'
+      }, {
+        name: 'have_visibility_strategies_s',
+        label: 'I have new strategies and ideas for increasing the visibility of the CS program at my school.'
+      }, {
+        name: 'will_ensure_diversity_s',
+        label: 'I will work to ensure that the diversity of my school’s CS classes mirrors the diversity of my school.'
+      }]
+
+      counselor_agree_scale_questions =[{
+        name: 'equipped_with_strategies_s',
+        label: 'I am equipped with strategies to recruit students from diverse backgrounds.',
+      }]
+
+      all_agree_scale_questions = [{
+        name: 'understand_curricular_offerings_s',
+        label: 'I feel that I understand Code.org curricular offerings well enough to explain them to stakeholders in my district.',
+      }, {
+        name: 'understand_professional_experiences_s',
+        label: 'I feel that I understand Code.org professional learning experiences well enough to explain them to teachers in my district.',
+      }]
+
+    .admin-section{style: 'display: none;'}
+      = local_view :agree_scale_select_table, items: admin_agree_scale_questions + all_agree_scale_questions
+
+    .counselor-section{style: 'display: none;'}
+      = local_view :agree_scale_select_table, items: counselor_agree_scale_questions + all_agree_scale_questions
+
+    .main-section
+      .form-group
+      = local_view :multi_select,
+        name: 'interested_in_offering_ss[]',
+        label: 'I’m interested in offering the following programs at my school site/district next year (check all that apply):',
+        required: false
+
+      .form-group
+        %label.control-label{for: 'things_facilitator_did_well_s'}
+          What were two things your facilitator(s) did well?
+          (Please name and comment on them separately if you had more than one)
+        %textarea.form-control{name: 'things_facilitator_did_well_s', rows: 4, type: 'text'}
+
+      .form-group
+        %label.control-label{for: 'things_facilitator_could_improve_s'}
+          What were two things your facilitator(s) could do better?
+          (Please name and comment on them separately if you had more than one)
+        %textarea.form-control{name: 'things_facilitator_could_improve_s', rows: 4, type: 'text'}
+
+      .form-group.submit-btn
+        %button#btn-submit.btn.btn-primary{type: "submit"} Submit
+
+  #thanks{style: 'display: none;'}
+    %h1 Thank you for your submission
+

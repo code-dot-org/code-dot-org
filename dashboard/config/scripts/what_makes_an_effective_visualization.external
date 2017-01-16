@@ -1,0 +1,36 @@
+name 'What Makes an Effective Visualization?'
+markdown <<MARKDOWN
+# What Makes an Effective Visualization?
+
+Data visualization is a powerful tool, but often the work done to make something look pretty results in a mudding of the information that’s being conveyed.  According to David McCandless, a world renowned data visualization artist, there are four elements that must be balanced in order to make a good visualization: `information`, `story`, `goal`, and `visual form`. 
+
+![](https://images.code.org/0f2e72f044a2a620ab3ea8bbc13becdb-image-1477851597436.png)
+
+*[Source](http://www.informationisbeautiful.net/visualizations/what-makes-a-good-data-visualization/)*
+
+
+## An Example of Effective vs Ineffective Visualizations
+
+Below are two visualizations of the same data:
+
+<br><br>
+
+|  Visualization A  	| Visualization B  		|
+|---|---|
+|![](https://images.code.org/3c1888fbc4c5449d9953b7df9ce57abc-image-1459795416684.jpg)|![](https://images.code.org/1ed74a79620ac3aefb4b109346a4aa93-image-1454535732671.jpg)|
+|*[Source](http://www.fastcodesign.com/3029318/design-crime/the-worst-infographic-of-2014-so-far)*   | *[Source](http://www.fastcodesign.com/3029318/design-crime/the-worst-infographic-of-2014-so-far)*  |
+
+<br><br>
+
+In both of these visualizations, the information, story, and goal are the same; both are being used to demonstrate that the change in population of the United States over time. These images differ because of the visual form.  The visual form of “A” is definitely more eye-catching.  It has brighter colors, larger text and numbers, and masks the graph with the united states to show that there is a direct relationship between the numbers and the country as a whole.  However, it to suggest other information that isn’t actually contained in the data.  Similar to the “where to grow” map found on the back of a package of seeds, this map looks to indicate not only the breakdown of the population by race and ethnicity, but also where they live.  This image seems to indicate that southern portions of the country appear to be white, while Asian people only live on the tip of Washington state and Maine. What’s more, because of the shape of the US, it appears Asian populations dropped to zero between the 1960s and the 2060s. 
+
+
+Using some form of visual form and metaphor is a useful strategy in developing an effective visualization, but that cannot come at the cost of creating false implications for the viewer.  This is a key takeaway for the students, and something they should notice with many of the ‘good’ and ‘bad’ visualizations found in Lesson 10.  Visualization “B” is not a perfect visualization either.  It does not catch the viewer’s eye, and the visual form is somewhat mundane.  Given the two options however, visualization B clearly convey the intended information and is the superior or the two options. 
+
+## Check out More Visualizations
+
+To see some beautiful visualizations and their stories, check out the link below:
+<a href = “http://www.informationisbeautifulawards.com/showcase?award=2016&pcategory=short-list&type=awards/” target=_blank>Information is Beautiful Awards 2016 <i class="fa fa-external-link-square"/></a> 
+
+
+MARKDOWN

@@ -93,6 +93,20 @@
       управлять своим классом. <a href="/"> Вы можете просматривать различные задачи
       и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов
       вы должны будете зарегистрироваться.
+    hoc_already_signed_up_heading: "Начало работы без входа в систему"
+    hoc_already_signed_up_content: Вы зарегистрированы для прохождения Часа Кода!
+      Вы и ваши учащиеся не должны входить в Студию Кода для участия в этом мероприятии.
+      Чтобы начать работу, <a href="https://code.org/learn"> выберите задние</a> для
+      вашего класса и поделитесь с ним ссылкой. <br/> <br/> Если вам понравился Час
+      Кода и вы хотите идти дальше, то вы можете установить пароль и создать учетную
+      запись в Студии Кода, чтобы регистрировать учащихся в одном из наших <a href="https://code.org/educate">
+      развёрнутых курсов</a>.
+    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
+      To sign in to Code Studio, you’ll need to set up a password for your account.
+      This will let you save your progress and manage your classroom. You’ll be able
+      to assign courses to students and track their progress. <a href="%{studio_url}">You
+      can also continue to browse the various stages and puzzles</a> without creating
+      an account.
     teacher_educator_guide: "Смотрите руководство для учителя"
     title: "Зарегистрироваться на Code.org"
     school_name: "Название школы (не обязательно)"
@@ -344,6 +358,7 @@
       unsubmit: "Не отправлять"
       worked_with: "Работал с"
       update_lock_settings: "Обновите настройки блокировки здесь."
+      clear_response: "Очистить ответ"
   user:
     email_confirm_needed: "Адрес электронной почты не был подтвержден:"
     email_confirm_needed_required: "Адрес вашей электронной почты %{email} не был
@@ -357,6 +372,7 @@
     delete_text_teacher_note: "Обратите внимание: удаление вашей учетной записи не
       удалит учетные записи ваших учеников."
     delete_confirm: "Вы действительно хотите удалить свою учетную запись?"
+    deleted_user: deleted user
   user_level:
     completed: "Завершено"
     tried: "Пытался"
@@ -430,6 +446,8 @@
       curriculum and released standalone widgets you can use at any time!
     announcement_learn_more_button: "Узнать больше"
     announcement_try_now_button: "Попробуйте сейчас"
+    announcement_host_an_hour_button: "Хозяин часов"
+    announcement_watch_video_button: "Смотреть видео"
     announcement_petition: "Как учитель вы лидер движения, чтобы дать каждому студенту
       в каждой школе возможность для изучения компьютерных наук. Теперь пришло время,
       чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28
@@ -437,8 +455,29 @@
       в открытом письме к Конгрессу США финансировать K-12 образовательную программу
       компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
+    announcement_go_beyond_button: Go beyond
     announcement_all: "Будьте в курсе новых функций и обновлений нашего блога учителей.
       <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
+    announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут
+      урок информатики с помощью Часа Кода 5-11 декабря. Мы рассчитываем на вас, чтобы
+      помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}'
+      target='_blank'> зарегистрируйте ваш Час Кода</a> и поделитесь с другими учителями,
+      что бы любой жалеющий мог начать преподавание информатики."
+    announcement_mc_launch: "Один из самых популярных учебников теперь имеет продолжение!
+      Все новые Minecraft Час Кода Дизайнер позволяет студентам создать правила мира
+      Minecraft. Они могут создать совершенно уникальный опыт Minecraft, а затем поделиться
+      им с друзьями или играть на своих телефонах. Делайте это с классом в Час Кода."
+    announcement_how_code_studio: "Вам не нужен опыт для начала преподавания информатики
+      в вашем классе. Code.org предлагает учебные курсы, планы уроков, высококачественные
+      программы профессионального обучения и большой набор отличных инструментов под
+      любыхеспособностей &mdash; все, что нужно, все бесплатно. Хотите знать, как
+      начать? Скачайте <a href='%{video_download_url}'> это видео</a>!"
+    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
+      concepts with your students every week. Code.org offers curriculum, lesson plans,
+      high quality professional learning programs, and tons of great tools for all
+      grade levels&mdash;and it's all free. :) You don't need any experience to start
+      teaching computer science in your classroom. <b>Find the next step that's right
+      for your classroom.</b>
   move_students:
     new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста,
       введите другой код группы."
@@ -611,6 +650,10 @@
     minecraft:
       title: Minecraft
       body: "Изучайте мир Minecraft через программный код."
+    minecraft2016:
+      title: Minecraft
+      body: "Создай свой мир Minecraft. Запрограммируй поведение животных и существ
+        своего мира: куриц, овец, криперов, зомби и других."
     unplugged:
       title: "Уроки без компьютера"
       audience: "Возраст 6+"
@@ -749,13 +792,27 @@
       конфиденциальности</a>
     accept: "Принять"
     print: "Печать"
-    later: "Позже"
     reminder_desc: Мы обновили наши <a href="%{tos_url}" target="_blank">Условия обслуживания</a>
       и <a href="%{privacy_url}" target="_blank"> Политику конфиденциальности</a>.
       Пожалуйста, прочитайте их внимательно, прежде чем принимать их. Обратите внимание,
       что наши инструменты преподавания JavaScript могут быть недоступны для ваших
       студентов, если не принять обновленные условия.
     review_terms: "Просмотр обновленных условий"
+  race_interstitial:
+    title: "Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения
+      разнообразия в области компьютерных наук"
+    message: "Пожалуйста, укажите вашу расу (необходимое пометить)"
+    races:
+    - white: "Белый"
+    - black: "Черный или Афроамериканец"
+    - hispanic: "Испанец или Латиноамериканец"
+    - asian: "Азиат"
+    - hawaiian: "Коренной житель Гавайских островов или других островов Тихого океана"
+    - american_indian: "Американский Индеец / Коренной Житель Аляски"
+    - other: "Другое"
+    - opt_out: "Предпочитаю не отвечать"
+    submit: "Отправить"
+    decline: "Закрыть"
   zendesk_too_young_message: Извините, но пользователи твоего возраста не могут авторизоваться
     на нашем сайте поддержки. Вы можете зайти на страницу <a href="http://support.code.org">support.code.org</a>
     без авторизации или попросить своих родителей или учителя связаться с нами за
@@ -916,8 +973,48 @@
     starwars_blocks_name: "Звездные войны: Создание галактики с помощью кода (блоки)"
     starwars_javascript_name: "Звездные войны: Создание галактики с помощью кода (JavaScript)"
     download_message: "Загрузить %{app_name} для использования оффлайн (136MB)"
-    download_in_english: "Скачать на английском языке:"
-    download_in_spanish: "Скачать на испанском языке:"
+    download_in_Albanian: "Скачать на албанском:"
+    download_in_Arabic: "Скачать на арабском:"
+    download_in_Azerbaijani: "Скачать на азербайджанском:"
+    download_in_Basque: "Скачать на баскском:"
+    download_in_Bosnian: "Скачать на боснийском:"
+    download_in_Bulgarian: "Скачать на болгарском:"
+    download_in_Catalan: "Скачать на каталанском:"
+    download_in_Chinese-Taiwan: "Скачать на Китайском (Тайвань):"
+    download_in_Chinese: "Скачать на китайском:"
+    download_in_Croatian: "Скачать на хорватском:"
+    download_in_Czech: "Скачать на Чешском:"
+    download_in_Danish: "Скачать на датском:"
+    download_in_Dutch: "Скачать на Голландском:"
+    download_in_English: "Скачать на английском:"
+    download_in_Finnish: "Скачать на финском:"
+    download_in_French: "Скачать на французском:"
+    download_in_German: "Скачать на немецком:"
+    download_in_Greek: "Скачать на греческом:"
+    download_in_Hebrew: "Скачать на иврите:"
+    download_in_Hungarian: "Скачать на венгерском:"
+    download_in_Icelandic: "Скачать на исландском:"
+    download_in_Indonesian: "Скачать на индонезийском:"
+    download_in_Irish: "Скачать на Ирландском:"
+    download_in_Italian: "Скачать на итальянском:"
+    download_in_Japanese: "Скачать на японском:"
+    download_in_Korean: "Скачать на корейском:"
+    download_in_Latvian: "Скачать на латышском:"
+    download_in_Lithuanian: "Скачать на литовском:"
+    download_in_Norwegian: "Скачать на норвежском:"
+    download_in_Norwegian-Nynorsk: "Скачать на норвежском (Нюнорск):"
+    download_in_Polish: "Скачать на польском:"
+    download_in_Portuguese-Brazil: "Скачать на Португальском (Бразилия):"
+    download_in_Portuguese: "Скачать на португальском:"
+    download_in_Romanian: "Скачать на румынском:"
+    download_in_Russian: "Скачать на русском:"
+    download_in_Serbian: "Скачать на сербском:"
+    download_in_Slovenian: "Скачайте на словенском:"
+    download_in_Spanish: "Скачать на испанском:"
+    download_in_Swedish: "Скачать на Шведском:"
+    download_in_Turkish: "Скачать на турецком:"
+    download_in_Ukrainian: "Скачать на украинском:"
+    download_in_Vietnamese: "Скачать на вьетнамском:"
     windows: Windows
     mac: Mac OS X
   plc:
@@ -936,6 +1033,54 @@
   locked_stage: "Содержимое этого этапа скрыто, потому что он в настоящее время заблокирован.
     Ваш учитель может разблокировать этот этап, когда придет время для работы на нем
     или для просмотра ваших ответов."
-  hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
-    which lesson you should be on.
-  return_course_overview: Go to unit overview
+  hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него
+    на каком уроке вы должны быть."
+  return_course_overview: "Перейти к обзору темы"
+  pd:
+    survey:
+      number_teachers: Number of attending teachers
+      response_count: Number of survey responses
+      facilitator_effectiveness: Facilitator Effectiveness (out of 5)
+      teacher_engagement: Teacher Engagement (out of 5)
+      overall_success: Overall Success Score (out of 6)
+      how_much_learned_s: Overall, how much have you learned from your workshop about
+        computer science?
+      how_motivating_s: During your workshop, how motivating were the activities that
+        this program had you do?
+      how_clearly_presented_s: For this workshop, how clearly did your facilitator
+        present the information that you needed to learn?
+      how_interesting_s: How interesting did your facilitator make what you learned
+        in the workshop?
+      how_often_given_feedback_s: How often did your facilitator give you feedback
+        that helped you learn?
+      how_comfortable_asking_questions_s: How comfortable were you asking your facilitator
+        questions about what you were learning in his or her workshop?
+      how_often_taught_new_things_s: How often did your facilitator teach you things
+        that you didn't know before taking this workshop?
+      how_much_participated_s: During your workshop, how much did you participate?
+      how_often_talk_about_ideas_outside_s: When you are not in Code.org workshops
+        how often do you talk about the ideas from the workshops?
+      how_often_lost_track_of_time_s: How often did you get so focused on Code.org
+        workshop activities that you lost track of time?
+      how_excited_before_s: Before the workshop, how excited were you about going
+        to your Code.org workshop?
+      overall_how_interested_s: Overall, how interested were you in the Code.org in-person
+        workshop?
+      more_prepared_than_before_s: I feel more prepared to teach the material covered
+        in this workshop than before I came.
+      know_where_to_go_for_help_s: I know where to go if I need help preparing to
+        teach this material.
+      suitable_for_my_experience_s: This professional development was suitable for
+        my level of experience with teaching CS.
+      would_recommend_s: I would recommend this professional development to others.
+      part_of_community_s: I feel like I am a part of a community of teachers.
+      things_facilitator_did_well_s: What were two things your facilitator(s) did
+        well?
+      things_facilitator_could_improve_s: What were two things your facilitator(s)
+        could do better?
+      things_you_liked_s: What were the two things you liked most about the activities
+        you did in this workshop and why?
+      things_you_would_change_s: What are the two things you would change about the
+        activities you did in this workshop?
+      anything_else_s: Is there anything else you’d like to tell us about your experience
+        at this workshop?

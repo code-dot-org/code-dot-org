@@ -15,6 +15,7 @@ function debug(msg) {
  * External track representation, used to define track info in skins.js.
  *
  * @property {string} name - corresponds to music filenames
+ * @property {string} group - "group" for this music
  * @property {number} volume - on a 0..1 scale
  * @property {boolean} hasOgg - whether a .ogg version of the file should also
  *           available in addition to the .mp3
@@ -125,7 +126,8 @@ function buildTrackData(trackDefinitions, assetUrl) {
       assetUrls: assetUrls,
       volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
-      isLoaded: false
+      isLoaded: false,
+      group: trackDef.group
     };
   });
 }
@@ -182,6 +184,13 @@ MusicController.prototype.play = function (trackName) {
     debug('not done loading, playing after load');
     this.playOnLoad_ = track.name;
   }
+};
+
+/**
+ * Sets the current group of music to play.
+ */
+MusicController.prototype.setGroup = function (group) {
+  this.currentGroup_ = group;
 };
 
 /**
@@ -258,6 +267,9 @@ MusicController.prototype.getTrackByName_ = function (name) {
  * @private
  */
 MusicController.prototype.getRandomTrack_ = function () {
-  var trackIndex = Math.floor(Math.random() * this.trackList_.length);
-  return this.trackList_[trackIndex];
+  const groupTracks = this.trackList_.filter(t => {
+    return !this.currentGroup_ || t.group === this.currentGroup_;
+  });
+  const trackIndex = Math.floor(Math.random() * groupTracks.length);
+  return groupTracks[trackIndex];
 };

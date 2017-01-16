@@ -140,7 +140,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = channel_policy_violation?(id)
-    {:has_violation => value }.to_json
+    {has_violation: value }.to_json
   end
 
   #
@@ -154,7 +154,7 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = StorageApps.new(storage_id('user')).get_abuse(id)
-    {:abuse_score => value }.to_json
+    {abuse_score: value }.to_json
   end
 
   #
@@ -167,22 +167,23 @@ class ChannelsApi < Sinatra::Base
     content_type :json
 
     value = StorageApps.new(storage_id('user')).increment_abuse(id)
-    {:abuse_score => value }.to_json
+    {abuse_score: value }.to_json
   end
 
   #
   # DELETE /v3/channels/<channel-id>/abuse
   #
-  # Clear an abuse score. Admin only.
+  # Clear an abuse score. Requires reset_abuse permission
   #
   delete %r{/v3/channels/([^/]+)/abuse$} do |id|
-    not_authorized unless admin?
+    # UserPermission::RESET_ABUSE
+    not_authorized unless has_permission?('reset_abuse')
 
     dont_cache
     content_type :json
 
     value = StorageApps.new(storage_id('user')).reset_abuse(id)
-    {:abuse_score => value }.to_json
+    {abuse_score: value }.to_json
   end
   post %r{/v3/channels/([^/]+)/abuse/delete$} do |_id|
     call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => File.dirname(request.path_info)))

@@ -1,11 +1,12 @@
-var React = require('react');
-var applabMsg = require('@cdo/applab/locale');
-var DesignModeBox = require('./DesignModeBox');
-var DesignModeHeaders = require('./DesignModeHeaders');
+import React from 'react';
+import DesignModeBox from './DesignModeBox';
+import DesignModeHeaders from './DesignModeHeaders';
+import {connect} from 'react-redux';
 
-module.exports = React.createClass({
+const DesignWorkspace = React.createClass({
   propTypes: {
     handleManageAssets: React.PropTypes.func.isRequired,
+    handleVersionHistory: React.PropTypes.func.isRequired,
     handleDragStart: React.PropTypes.func,
     element: React.PropTypes.instanceOf(HTMLElement),
     elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
@@ -15,7 +16,11 @@ module.exports = React.createClass({
     onDuplicate: React.PropTypes.func.isRequired,
     onDelete: React.PropTypes.func.isRequired,
     onInsertEvent: React.PropTypes.func.isRequired,
-    isDimmed: React.PropTypes.bool.isRequired
+    isDimmed: React.PropTypes.bool.isRequired,
+
+    // provided by redux
+    isRunning: React.PropTypes.bool.isRequired,
+    localeDirection: React.PropTypes.oneOf(['rtl', 'ltr']).isRequired,
   },
 
   getInitialState: function () {
@@ -34,8 +39,11 @@ module.exports = React.createClass({
     return (<div id="designWorkspaceWrapper">
       <DesignModeHeaders
         handleManageAssets={this.props.handleManageAssets}
+        handleVersionHistory={this.props.handleVersionHistory}
         onToggleToolbox={this.onToggleToolbox}
         isToolboxVisible={this.state.isToolboxVisible}
+        localeDirection={this.props.localeDirection}
+        isRunning={this.props.isRunning}
       />
       <DesignModeBox
         handleDragStart={this.props.handleDragStart}
@@ -53,3 +61,7 @@ module.exports = React.createClass({
     </div>);
   }
 });
+export default connect(state => ({
+  localeDirection: state.pageConstants.localeDirection,
+  isRunning: !!state.runState.isRunning,
+}))(DesignWorkspace);

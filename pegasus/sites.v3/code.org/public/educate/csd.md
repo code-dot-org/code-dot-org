@@ -1,12 +1,20 @@
 ---
 title: CS Discoveries
 nav: educate_nav
+video_player: true
 ---
 
 # Our newest course: CS Discoveries #
 
+## <a name="what"></a>Apply for Professional Learning
+
+Applications for the 2017-18 CS Discoveries Professional Learning Program are now open! We are accepting applications until March 17, 2017, so apply now if you're ready to get started. 
+
+[<button>Apply now!</button>](/educate/professional-learning/cs-discoveries)
+
 ## <a name="what"></a>What is CS Discoveries?
-CS Discoveries is our newest curriculum-in-development - an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.
+
+CS Discoveries is an introductory Computer Science course that empowers students to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. The course will be piloted in Spring 2017, with full rollout Summer 2017.
 
 <img src="/images/fit-500/csd/ms.jpg" height="280px" style="float:right; margin:20px 0px 0px 0px;">
 
@@ -56,6 +64,9 @@ CS Discoveries will be designed primarily for students in grades 7-9, so it can 
 <hr/>
 
 ## <a name="content"></a>Course Overview
+
+[**Printable course overview PDF**](https://code.org/files/programs/CSD_1-pager_final.pdf)
+
 Computer Science encompasses far more than just coding, and CS Discoveries will provide students with opportunities to explore the many facets of CS, both in terms of how they are personally relevant as well as how they impact society.
 
 ### Semester 1: CS Discoveries: Exploration and Expression
@@ -96,7 +107,7 @@ Where the first semester centers on the immediately observable and personally ap
 
 <h4> Unit 4 - Problem Solving: The Design Process </h4>
 
-By following the design process and working with structured group roles, student groups will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, students will then develop and interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
+With the Problem Solving Process as a basis, students will start to look at how user-centered design places _others_ first in approaching the solution to a problem, whether through design of a physical object or a software application. Through several small projects, students will experience an iterative design and testing process that will then be applied to a multi-week group project. In this final project, student teams will identify an audience, investigate their needs, and develop a concept and paper wireframe for an app to serve that audience. With concept and wireframe in hand, teams will then develop an interactive prototype of their apps that they can use to test with actual users, taking feedback to drive further development.
 
 </div>
 
@@ -120,11 +131,34 @@ By exploring innovative computing devices from a variety of fields, students wil
 
 ## <a name="involved"></a>Get Involved
 
-<div style="float:left; padding:0px; width:100%">
+<div style="float:left; padding:25px; width:33%">
+
+<h4>Try out and give feedback on drafted lessons</h4>
+
+We post lesson drafts as soon as they're ready, and are eager to have teachers try them in classrooms and provide feedback. Because the whole course is not finished, this is a good option if you have an existing CS or tech ed class and would like to pick up a few lessons or a unit and integrate it into your existing curriculum.
+<br><br>
+
+<a href="#lessons"> <button>View drafted lesson plans</button> </a>
+
+</div>
+
+<div style="float:left; padding:25px; width:33%">
+
+<h4>Apply now for professional learning!</h4>
+
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries! This intensive program is designed to prepare educators to provide high quality instruction based on the CS Discoveries curriculum, tools and approach to students in their classrooms. 
+
+<br><br>
+
+<a href="/educate/professional-learning/cs-discoveries"><button>Apply now!</button></a>
+
+</div>
+
+<div style="float:left; padding:25px; width:33%">
 
 <h4> Stay up to date on our progress </h4>
 
-Want to know when we've posted lesson drafts and have tools that are ready to experiment with? Sign up for our monthly status emails, which will contain the latest news and links to beta lesson plans, tools, and videos for CS Discoveries. Even if you're not an official pilot teacher, we'd love to hear your feedback as an early adopter.
+Want to know when we've posted new lesson drafts and have tools that are ready to experiment with? Sign up for our monthly emails, which contain the latest news and links to beta lesson plans, tools, videos, and other important updates for the CS Discoveries project.
 
 <br><br>
 
@@ -132,6 +166,19 @@ Want to know when we've posted lesson drafts and have tools that are ready to ex
 
 </div>
 
+<div style="clear:both"></div>
+
+
+## <a name="lessons"></a>Lesson Drafts
+We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
+
+
+|                   Unit                   | Lesson Plans                             | Code Studio                              |
+| :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
+| **Unit 1 - Problem Solving: Computers and Logic** | [Lesson plans](https://curriculum.code.org/csd/unit1) | [Code Studio](https://studio.code.org/s/csd1) |
+| **Unit 2 - The Internet: Web Development** | [Lesson plans](https://curriculum.code.org/csd/unit2) | [Code Studio](https://studio.code.org/s/csd2) |
+| **Unit 3 - Programming: Interactive Games and Animations** | [Lesson plans](https://curriculum.code.org/csd/unit3) | [Code Studio](https://studio.code.org/s/csd3) |
+| **Unit 4 - Problem Solving: The Design Process** | [Lesson plans](https://curriculum.code.org/csd/unit4) | [Code Studio](https://studio.code.org/s/csd4) |
 
 
 
@@ -142,38 +189,15 @@ Want to know when we've posted lesson drafts and have tools that are ready to ex
 
 ### <a name="relationship"></a>What is the relationship between CS Discoveries and Exploring Computer Science?
 
-This course is deeply inspired by the philosophy of Exploring CS, based on our years of experience teaching ECS, scaling it to hundreds of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches the same core concepts as ECS, along with the same _**inquiry-based philosophy**_ and the same _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels. Because of a shared philosophy and similar learning sequence, we believe and expect that CS Discoveries can be a natural successor to ECS for schools or teachers who love the ECS philosophy while looking to gain some of the benefits mentioned below.
+The CS Discoveries course is deeply inspired by the philosophy of ECS, based on our experience teaching ECS, scaling it to thousands of classrooms nationwide, and evaluation of feedback from the teachers. This course teaches similar core concepts as ECS, and has a shared _**inquiry-based philosophy**_ and _**teacher-learner-observer PD model**_. It also shares the same emphasis on _**equity**_ which has pervaded Code.org's curriculum in other grade levels.
 
-### <a name="transition"></a>Why is Code.org transitioning to a new course from ECS?
-
-ECS is a great, well-established introductory computing course. We've helped hundreds of teachers introduce it in their classrooms, and we continue to support it and the hundreds of teachers currently teaching the course in our partner districts. We've also collected feedback from teachers and evaluation of our programs. Below are our reasons to make a new course:
-
-- We're making a curriculum pathway from K through 12. To date, we’ve offered districts, teachers and students various entry points into computer science that weren’t specifically *designed* as a pathway for students from Kindergarten through graduation. This new course will complete our K-12 pathway, building on experiences from our elementary [CS Fundamentals](/educate/k5) course and preparing students for [CS Principles](/educate/csp), while providing appropriate support for students without prior CS experience.  
-- The cost of the LEGO Mindstorms platform inhibits many teachers and schools from teaching the ECS robotics unit. We want to offer a physical computing unit that is affordable to all schools, to advance our goals of *equity* and access.
-- With millions of students learning drag-and-drop block based programming in grades K-5, many are entering middle and high school ready to transition into a full text-based language. We want to support these students while simultaneously keeping the benefits of drag-and-drop. This is uniquely possible within our [App Lab](/applab) programming environment, which allows students to switch back and forth seamlessly between blocks and text, allowing a classroom to work in different modalities while using the same tool and the same curriculum.
-- Our middle schools are requesting introductory computer science curriculum similar in scope to ECS, but designed for grades 7 - 8. ECS is designed as a high school course, and although some groups have adapted it to use in middle school, we want to create a course that is designed intentionally with this grade band in mind.
+[Learn more](/educate/csd/ecs_and_csd) about Code.org's transition to CS Discoveries from Exploring Computer Science. 
 
 
 ### <a name="timeline"></a>What is the timeline for CS Discoveries?
 
-For the 2016-17 school year we'll continue the professional development support we do for ECS across all of our partner districts.  We will pilot the new course materials during the spring of 2016-17 with schools that are eager to try new materials. 
-
-For 2017-18 and beyond, we'll continue supporting ECS in our existing schools while rolling out the new CS Discoveries course to new schools.
-
-### <a name="teach-ecs"></a>Can I keep teaching ECS?
-
-Of course! If schools prefer to continue using the ECS v5 curriculum, we will continue distributing it to them. If they want to use the latest version of ECS, they may also choose to ask the ECS team for it.
-
-### I was trained on ECS, can I transition to CS Discoveries?
-
-For existing ECS teachers who want to try the new curriculum, we’ll also offer a short transitional PD to help familiarize them to the new content. The core pedagogy surrounding equity and inquiry as well as the high level conceptual material should be very familiar to ECS teachers. You will also be welcome to integrate parts of CS Discoveries into your current ECS course at your own pace and as you see fit.
-
-
-### <a name="name"></a>Why the name CS Discoveries?
-
-This course is independently authored, yet deeply inspired by the underlying philosophy, core concepts, and exploratory nature of ECS. This course should feel familiar to those who have taught ECS, but better aligned to our cohesive K-12 pathway integrating the pedagogy, teacher supports, and tools for which Code.org has become known. We initially chose the name “CS Explorations” to pay homage to ECS, because it was important to us to be clear where our inspiration has come from.
-
-Due to feedback that "CS Explorations" would create confusion among educators, we are using the name "CS Discoveries", which suggests the exploratory nature of a survey course, and fits  between our [CS Fundamentals](/k5) and [CS Principles](/csp) courses as part of a full K-12 pathway, while avoiding any confusion with ECS.  We will still clarify upfront in the curriculum that this work is inspired by ECS, without reflecting that inspiration in the title.
+We will pilot the new course materials during the spring of 2016-17 with a group of 45 teachers across the US. The course will roll out formally in Summer 2017. Check back to
+this website frequently as we release drafted lesson plans!
 
 <!--
 #### Can I pilot the new course?
@@ -184,6 +208,8 @@ As lessons are completed we will also be publishing them on the website we invit
 
 #### How/Where can I get professional development for this course?
 
-In-person professional development for the Code.org CSE course will be available for partner districts starting in Summer 2017.
+We are now accepting applications for the 2017-18 Professional Learning Program for CS Discoveries!
+
+<a href="/educate/professional-learning/cs-discoveries-apply"><button>Apply now!</button></a>
 
 -->

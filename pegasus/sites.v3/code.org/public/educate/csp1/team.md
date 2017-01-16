@@ -6,10 +6,10 @@ nav: educate_nav
 ## Code.org CS Principles Team
 
 ### Code.org Staff
-* Baker Franke - K-12 Curriculum Manager, CSP Lead Author
-* Brook Osborne - HS Program Manager, CSP Professional Development
+* Baker Franke - K-12 Curriculum Manager, CS Princples Lead Author
+* Brook Osborne - HS Program Manager, CS Principles Professional Development
 
-#### CSP Authors 2014-15
+#### CS Principles Authors 2014-15
 * Matt Bauer - Illinois Institute of Technology
 * Madeline Burton - DC Public Schools
 * Trent Maverick - Education Consultant
@@ -25,7 +25,7 @@ nav: educate_nav
 * Brenda Remess - Mather High School
 * GT Wrobel - The Latin School of Chicago
 
-#### CSP Authors 2013-14 (initial manuscript)
+#### CS Principles Authors 2013-14 (initial manuscript)
 * Jake Baskin
 * Rebecca Dovi
 * Baker Franke

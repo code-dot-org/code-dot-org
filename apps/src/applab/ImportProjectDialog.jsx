@@ -1,9 +1,8 @@
 import React from 'react';
-import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import Dialog, {Body, Buttons, Confirm, Footer} from '../templates/Dialog';
-import color from '../color';
+import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
+import color from "../util/color";
 import {fetchProject, toggleImportScreen} from './redux/screens';
 
 const styles = {
@@ -97,40 +96,3 @@ export default connect(
     },
   })
 )(ImportProjectDialog);
-
-
-if (BUILD_STYLEGUIDE) {
-  ImportProjectDialog.styleGuideExamples = storybook => {
-    storybook
-      .storiesOf('ImportProjectDialog', module)
-      .addStoryTable([
-        {
-          name: 'On open',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              onImport={storybook.action("onImport")}
-            />
-          )
-        }, {
-          name: 'While fetching',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              isFetching
-              onImport={storybook.action("onImport")}
-            />
-          )
-        }, {
-          name: 'Error Fetching',
-          story: () => (
-            <ImportProjectDialog
-              hideBackdrop
-              error
-              onImport={storybook.action("onImport")}
-            />
-          )
-        },
-      ]);
-  };
-}

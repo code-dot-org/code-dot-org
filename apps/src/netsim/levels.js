@@ -4,12 +4,8 @@
  */
 
 var NetSimConstants = require('./NetSimConstants');
-var Packet = require('./Packet');
-var BITS_PER_NIBBLE = NetSimConstants.BITS_PER_NIBBLE;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 var DnsMode = NetSimConstants.DnsMode;
-var EncodingType = NetSimConstants.EncodingType;
-var NetSimTabType = NetSimConstants.NetSimTabType;
 
 /**
  * A level configuration that can be used by NetSim

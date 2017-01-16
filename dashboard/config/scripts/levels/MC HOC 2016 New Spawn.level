@@ -1,0 +1,367 @@
+<Craft>
+  <config><![CDATA[{
+  "game_id": 49,
+  "created_at": "2016-10-28T23:02:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "craft",
+    "ground_plane": "[\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"stone\",\"dirt\",\"dirt\",\"stone\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"stone\",\"dirt\",\"dirt\",\"stone\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\"]",
+    "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
+    "action_plane": "[\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"\",\"\",\"\",\"\",\"grass\",\"grass\",\"grass\"]",
+    "player_start_position": "[4, 8]",
+    "grid_width": "10",
+    "grid_height": "10",
+    "is_daytime": "true",
+    "verification_function": "function (verificationAPI) {\r\n      // sheep is spawned and end of the movement\r\n      return (verificationAPI.getEntityCount(\"all\") >= 1 && !verificationAPI.isEntityTypeRunning(\"all\")) || verificationAPI.isEntityDied('zombie') || verificationAPI.isEntityDied('creeper');\r\n}",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "player_start_direction": "0",
+    "instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts.",
+    "is_event_level": "true",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "20000",
+    "timeout_verification_function": "function (verificationAPI) {\r\n  // sheep is spawned\r\n  return (verificationAPI.getEntityCount(\"all\") >= 1) || verificationAPI.isEntityDied('zombie') || verificationAPI.isEntityDied('creeper');\r\n}",
+    "callout_json": "[]",
+    "failure_message_override": "Place `spawn sheep` under `when run`.",
+    "use_player": "true",
+    "use_score": "false",
+    "instructions_important": "true",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "UPDATE:\r\n\r\nThis level teaches Spawning an Entity",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="craft_whenRun" deletable="false" movable="false"/>
+        <block type="craft_sheep" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveToward" uservisible="false">
+              <title name="TYPE">Player</title>
+              <next>
+                <block type="craft_wait" uservisible="false">
+                  <title name="TYPE">0.4</title>
+                  <next>
+                    <block type="craft_moveAway" uservisible="false">
+                      <title name="TYPE">Player</title>
+                      <next>
+                        <block type="craft_moveToward" uservisible="false">
+                          <title name="TYPE">Player</title>
+                          <next>
+                            <block type="craft_entityTurn" uservisible="false">
+                              <title name="DIR">right</title>
+                              <next>
+                                <block type="craft_entityTurn">
+                                  <title name="DIR">right</title>
+                                  <next>
+                                    <block type="craft_wait">
+                                      <title name="TYPE">1.0</title>
+                                      <next>
+                                        <block type="craft_playSound">
+                                          <title name="TYPE">sheepBaa</title>
+                                          <next>
+                                            <block type="craft_drop">
+                                              <title name="TYPE">wool</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_zombie" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_entityTurn">
+              <title name="DIR">random</title>
+              <next>
+                <block type="craft_entityTurn">
+                  <title name="DIR">random</title>
+                  <next>
+                    <block type="craft_entityTurn">
+                      <title name="DIR">random</title>
+                      <next>
+                        <block type="craft_entityTurn">
+                          <title name="DIR">random</title>
+                          <next>
+                            <block type="craft_playSound">
+                              <title name="TYPE">zombieHurt</title>
+                              <next>
+                                <block type="craft_entityTurn">
+                                  <title name="DIR">random</title>
+                                  <next>
+                                    <block type="craft_entityTurn">
+                                      <title name="DIR">random</title>
+                                      <next>
+                                        <block type="craft_destroyEntity"/>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_ironGolem" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveForward" uservisible="false">
+              <next>
+                <block type="craft_moveForward" uservisible="false">
+                  <next>
+                    <block type="craft_attack" uservisible="false">
+                      <next>
+                        <block type="craft_entityTurn" uservisible="false">
+                          <title name="DIR">left</title>
+                          <next>
+                            <block type="craft_moveForward" uservisible="false">
+                              <next>
+                                <block type="craft_moveForward" uservisible="false">
+                                  <next>
+                                    <block type="craft_attack" uservisible="false">
+                                      <next>
+                                        <block type="craft_entityTurn" uservisible="false">
+                                          <title name="DIR">left</title>
+                                          <next>
+                                            <block type="craft_moveForward" uservisible="false">
+                                              <next>
+                                                <block type="craft_moveForward" uservisible="false">
+                                                  <next>
+                                                    <block type="craft_attack" uservisible="false"/>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_chicken" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveToward" uservisible="false">
+              <title name="TYPE">Player</title>
+              <next>
+                <block type="craft_moveToward" uservisible="false">
+                  <title name="TYPE">Player</title>
+                  <next>
+                    <block type="craft_drop" uservisible="false">
+                      <title name="TYPE">egg</title>
+                      <next>
+                        <block type="craft_moveToward" uservisible="false">
+                          <title name="TYPE">Player</title>
+                          <next>
+                            <block type="craft_moveToward" uservisible="false">
+                              <title name="TYPE">Player</title>
+                              <next>
+                                <block type="craft_drop" uservisible="false">
+                                  <title name="TYPE">egg</title>
+                                  <next>
+                                    <block type="craft_moveAway">
+                                      <title name="TYPE">Player</title>
+                                      <next>
+                                        <block type="craft_moveAway">
+                                          <title name="TYPE">Player</title>
+                                          <next>
+                                            <block type="craft_wait">
+                                              <title name="TYPE">1.0</title>
+                                              <next>
+                                                <block type="craft_playSound">
+                                                  <title name="TYPE">chickenHurt</title>
+                                                  <next>
+                                                    <block type="craft_drop">
+                                                      <title name="TYPE">diamond</title>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_cow" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_wait" uservisible="false">
+              <title name="TYPE">random</title>
+              <next>
+                <block type="craft_moveForward" uservisible="false">
+                  <next>
+                    <block type="craft_entityTurn" uservisible="false">
+                      <title name="DIR">left</title>
+                      <next>
+                        <block type="craft_moveForward" uservisible="false">
+                          <next>
+                            <block type="craft_entityTurn" uservisible="false">
+                              <title name="DIR">left</title>
+                              <next>
+                                <block type="craft_moveForward" uservisible="false">
+                                  <next>
+                                    <block type="craft_entityTurn" uservisible="false">
+                                      <title name="DIR">left</title>
+                                      <next>
+                                        <block type="craft_moveForward" uservisible="false">
+                                          <next>
+                                            <block type="craft_entityTurn" uservisible="false">
+                                              <title name="DIR">left</title>
+                                              <next>
+                                                <block type="craft_playSound" uservisible="false">
+                                                  <title name="TYPE">cowMooLong</title>
+                                                  <next>
+                                                    <block type="craft_drop" uservisible="false">
+                                                      <title name="TYPE">milk</title>
+                                                      <next>
+                                                        <block type="craft_moveAway" uservisible="false">
+                                                          <title name="TYPE">Player</title>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="craft_creeper" uservisible="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_moveAway" uservisible="false">
+              <title name="TYPE">Player</title>
+              <next>
+                <block type="craft_moveAway" uservisible="false">
+                  <title name="TYPE">Player</title>
+                  <next>
+                    <block type="craft_moveAway" uservisible="false">
+                      <title name="TYPE">Player</title>
+                      <next>
+                        <block type="craft_moveAway" uservisible="false">
+                          <title name="TYPE">Player</title>
+                          <next>
+                            <block type="craft_playSound" uservisible="false">
+                              <title name="TYPE">creeperHiss</title>
+                              <next>
+                                <block type="craft_flashEntity" uservisible="false">
+                                  <next>
+                                    <block type="craft_explodeEntity" uservisible="false"/>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="craft_spawnEntity">
+          <title name="TYPE">sheep</title>
+          <title name="DIRECTION">middle</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+</xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" movable="false" deletable="false"/>
+        <block type="craft_sheep">
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <title name="TYPE">wool</title>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Craft>

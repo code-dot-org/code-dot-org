@@ -111,8 +111,8 @@
           "drawSide"
         ],
         "matchType": "exact",
-        "minTimes": 1,
-        "message": "You need to define \"function drawSide()\" and make a call it. Did you spell and capitalize it the same way as the instructions? Did you call it?"
+        "minTimes": 4,
+        "message": "You need to define \"function drawSide()\" and calling it 4 times - once to draw each side of the diamond. Did you spell and capitalize it the same way as the instructions? Did you call it 4 times?"
       },
       {
         "entries": [
@@ -141,20 +141,16 @@
       },
       {
         "entries": [
-          "drawDiamond",
-          "drawSide",
-          "drawStep",
-          "drawSide",
-          "drawSide",
-          "drawSide"
+          "moveForward"
         ],
-        "matchType": "inexact",
-        "minTimes": 1,
-        "maxTimes": 1,
-        "message": "Hmmm something's not right. Your code should be calling drawDiamond() once, which should trigger at least 4 calls to drawSide(), and drawSide should be making 3 calls to drawStep() and so on. Check to make sure you've followed the instructions, defined all the necessary functions and called them properly. "
+        "matchType": "exact",
+        "minTimes": 28,
+        "message": "It seems like you're not moving forward enough times to draw the figure. There should be at least 28 line segments - 4 sides of 7. "
       }
     ],
     "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "makerlab_enabled": "false",
     "contained_level_names": null
   },
   "published": true,

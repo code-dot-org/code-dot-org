@@ -4,6 +4,8 @@ title: <%= hoc_s(:title_country_resources) %> layout: wide nav: promote_nav
 
 * * *
 
+<%= view :signup_button %>
+
 <% if @country == 'la' %>
 
 # Resurse
@@ -55,21 +57,6 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 <
 
 p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
-
-<% elsif @country == 'nz' %>
-
-  
-  
- <iframe width="560" height="315" src="https://www.youtube.com/embed/VjFQeG97a9E" frameborder="0" allowfullscreen></iframe>
-<
-
-p>[**Time to code is now (1 min)**](https://www.youtube.com/watch?v=VjFQeG97a9E)
-
-  
-  
-
-
-<img style="float:left;" src="/images/fit-250/mayor_christchurch.jpg" />
 
 <% elsif @country == 'pk' %>
 
