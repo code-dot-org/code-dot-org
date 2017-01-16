@@ -623,8 +623,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an *lab app.
   def lab_user_id
-    channel_id = "1337" # Stub value, until storage for channel_id's is available.
-    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
+    plaintext_id = "#{@view_options[:channel]}:#{user_or_session_id}"
+    Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,

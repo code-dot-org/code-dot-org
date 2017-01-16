@@ -12,10 +12,12 @@ class HomeController < ApplicationController
     if params[:i18npath]
       redirect_to "/#{params[:i18npath]}"
     elsif params[:return_to]
-      redirect_to params[:return_to].to_s
+      redirect_to URI.parse(params[:return_to].to_s).path
     else
       redirect_to '/'
     end
+  rescue URI::InvalidURIError
+    redirect_to '/'
   end
 
   def home_insert

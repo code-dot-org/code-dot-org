@@ -5,12 +5,6 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import * as codeStudioLevels from '../code-studio/levels/codeStudioLevels';
 import { setAwaitingContainedResponse } from '../redux/runState';
 
-const styles = {
-  main: {
-    minHeight: 200,
-  }
-};
-
 const ContainedLevel = React.createClass({
   propTypes: {
     setAwaitingContainedResponse: React.PropTypes.func.isRequired
@@ -48,9 +42,7 @@ const ContainedLevel = React.createClass({
 
   render() {
     return (
-      <ProtectedStatefulDiv
-        style={styles.main}
-      />
+      <ProtectedStatefulDiv />
     );
   }
 });

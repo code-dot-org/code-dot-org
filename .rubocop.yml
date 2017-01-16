@@ -24,6 +24,9 @@ Style/EmptyElse:
 Style/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
 
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
 Style/FirstParameterIndentation:
   EnforcedStyle: consistent
 

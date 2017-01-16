@@ -42,18 +42,20 @@ To make a donation by check, wire-transfer, or stock-transfer, [contact us](/con
 
 We use donations to work towards these main objectives:
 
-- **Bringing computer science to schools** - through district partnerships, teacher training and free, online courses.
-- **Modernizing curriculum** - developing fun, engaging tutorials and coursework for all levels.
-- **Changing state policies** - computer science doesn't count as math or science in most states. We're changing that.
-- **Increasing diversity** - encouraging women and students of color, who are sorely underrepresented in computer science.
-- **Raising awareness** - we're making it known: it should be a national imperative to get more students to code.
+- **Bringing computer science to schools** - through district and regional partnerships, teacher professional learning workshops, and free online courses.
+- **Developing curriculum** - creating fun, engaging tutorials and coursework for a K-12 pathway.
+- **Changing state policies** - computer science isn't yet a core academic subject in most states. We're changing that.
+- **Increasing diversity** - encouraging women and underrepresented minorities to engage in computer science.
+- **Raising awareness** - we're making it known: it should be a national imperative to get more students to learn computer science.
 
 Please see our [latest progress against these objectives](/about).
 
 Each dollar you give is enough to help one child learn an introductory computer science class. To maintain our nonprofit status, we need small donations to add up to 1/3 of our funding. Every dollar counts.
 
 
-Our donors include Microsoft, Google, Ballmer Family Giving, Omidyar Network and more. [See full list](/about/donors)
+Our donors include Microsoft, Facebook, Omidyar Network, the Infosys Foundation, Google, Ballmer Family Giving, and more. [See full list](/about/donors)
+
+Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our team further to better understand our programs and to explore options for investing in our work.
 
 <hr/>
 <a id="creditcard"></a>

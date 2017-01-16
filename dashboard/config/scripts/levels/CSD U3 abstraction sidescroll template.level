@@ -39,6 +39,8 @@
       "line": null,
       "rect": null,
       "text": null,
+      "textSize": null,
+      "textFont": null,
       "comment_Drawing": null,
       "var sprite = createSprite": null,
       "visible": null,
@@ -61,7 +63,9 @@
       "greaterThanOrEqualOperator": null,
       "lessThanOperator": null,
       "lessThanOrEqualOperator": null,
-      "comment_Math": null
+      "comment_Math": null,
+      "playSound": null,
+      "isTouching": null
     },
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -79,10 +83,7 @@
     "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -1496,7 +1496,6 @@ Artist.prototype.checkAnswer = function () {
     var reportData = {
       app: 'turtle',
       level: level.id,
-      builder: level.builder,
       result: levelComplete,
       testResult: this.testResults,
       program: encodeURIComponent(program),

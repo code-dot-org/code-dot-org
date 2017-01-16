@@ -1,0 +1,26 @@
+name 'U5 - Create PT review - Student Introduction'
+title 'title'
+css 'unplugged'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 6: Lesson 2 - Create PT Prep - Reviewing the Task
+
+## Background
+
+Review the Create PT performance task, scoring guidelines, and sample tasks.
+
+## Lesson
+
+* Review the Practice PTs.
+* Review the Create Performance Task.
+* Review Create PT scoring Guidelines and Sample Tasks
+
+## Resources
+
+* Performance Task: <a href="https://drive.google.com/open?id=0B78N8p4zhHFgWHRQVE9PeEs5WmM" target="_blank">Create Performance Task</a>
+* Rubric: Create Performance Task Rubric
+* Guidelines: <a href="https://drive.google.com/open?id=1GMztP_ZInx-bNLZFZM-8iRkSIe1TOoZVtXjMKdQJrSA" target="_blank">Create PT - Guidelines Before Starting</a>
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
