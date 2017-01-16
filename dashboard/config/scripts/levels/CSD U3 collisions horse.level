@@ -57,13 +57,11 @@
     "start_blocks": "var horse = createSprite(200, 150);\r\nhorse.setAnimation(\"horse\");\r\n\r\n\r\nvar rainbow = createSprite(400, 370);\r\nrainbow.setAnimation(\"rainbow\");\r\nrainbow.velocityX = -5;\r\nrainbow.velocityY = -5;\r\nrainbow.rotateToDirection = true;\r\n\r\n\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n\r\n  drawSprites();\r\n}\r\n\r\n",
     "palette_category_at_start": "sprites",
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "start_in_animation_tab": "false"
+    "start_in_animation_tab": "false",
+    "encrypted_examples": "zYD0J5k11KP2a4tlydOrmCxiLKWNqhGRno/9dric58Jbk5APpSADQTSnWaJu\nLRKK\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

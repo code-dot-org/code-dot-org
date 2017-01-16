@@ -2,15 +2,14 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
   include Api::CsvDownload
   load_and_authorize_resource :workshop, class: 'Pd::Workshop'
 
-  load_resource :session, class: 'Pd::Session', through: :workshop,
-    only: [:show, :create, :destroy]
+  load_resource :session, class: 'Pd::Session', through: :workshop, except: :index
 
   before_action :authorize_manage_attendance!, only: [:create, :destroy]
   def authorize_manage_attendance!
     authorize! :manage_attendance, @workshop
   end
 
-  before_action :require_section, only: [:create, :destroy]
+  before_action :require_section, except: [:index, :show]
   def require_section
     msg = 'Section required. Workshop must be started in order to manage attendance.'
     raise ActionController::RoutingError.new(msg) unless @workshop.try(:section)
@@ -53,15 +52,19 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     # renders a 404 (not found)
     raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher
 
-    # Idempotent: Find existing, restore deleted, or create a new attendance row.
-    attendance_params = {session: @session, teacher: teacher}
-    attendance = nil
-    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
-      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
-      Pd::Attendance.create!(attendance_params)
-    end
-    attendance.restore if attendance.deleted?
+    create_attendance session: @session, teacher: teacher
+    head :no_content
+  end
 
+  # PUT /api/v1/pd/workshops/1/attendance/:session_id/enrollment/:enrollment_id
+  def create_by_enrollment
+    # renders a 404 (not found)
+    raise ActiveRecord::RecordNotFound.new('account required. Use create action') if @workshop.account_required_for_attendance?
+
+    enrollment_id = params[:enrollment_id]
+    enrollment = @workshop.enrollments.find(enrollment_id)
+
+    create_attendance session: @session, enrollment: enrollment
     head :no_content
   end
 
@@ -72,5 +75,27 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
     attendance.destroy! if attendance
 
     head :no_content
+  end
+
+  # DELETE /api/v1/pd/workshops/1/attendance/:session_id/enrollment/:enrollment_id
+  def destroy_by_enrollment
+    enrollment_id = params[:enrollment_id]
+    enrollment = @workshop.enrollments.find(enrollment_id)
+    attendance = Pd::Attendance.find_by(session: @session, enrollment: enrollment)
+    attendance.destroy! if attendance
+
+    head :no_content
+  end
+
+  private
+
+  def create_attendance(attendance_params)
+    # Idempotent: Find existing, restore deleted, or create a new attendance row.
+    attendance = nil
+    Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      attendance = Pd::Attendance.with_deleted.find_by(attendance_params) ||
+        Pd::Attendance.create!(attendance_params)
+    end
+    attendance.restore if attendance.deleted?
   end
 end

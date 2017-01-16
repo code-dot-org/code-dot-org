@@ -120,7 +120,6 @@ export function setupApp(appOptions) {
         report.callback = appOptions.report.callback;
         trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
       }
-      report.scriptName = appOptions.scriptName;
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
       trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
@@ -415,7 +414,7 @@ window.apps = {
 };
 
 let APP_OPTIONS;
-function setAppOptions(appOptions) {
+export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
   window.appOptions = appOptions;

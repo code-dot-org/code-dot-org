@@ -677,7 +677,6 @@ Calc.execute = function () {
   var reportData = {
     app: 'calc',
     level: level.id,
-    builder: level.builder,
     result: appState.result === ResultType.SUCCESS,
     testResult: appState.testResults,
     program: encodeURIComponent(textBlocks),

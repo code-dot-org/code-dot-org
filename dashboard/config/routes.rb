@@ -217,7 +217,6 @@ Dashboard::Application.routes.draw do
 
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
@@ -316,6 +315,8 @@ Dashboard::Application.routes.draw do
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
         put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
         delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+        put 'attendance/:session_id/enrollment/:enrollment_id', action: 'create_by_enrollment', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
