@@ -49,6 +49,11 @@ import {
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -3043,7 +3048,8 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function () {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay && !Studio.preExecutionFailure) {
+  } else if (studioApp.hasContainedLevels ||
+      (level.freePlay && !Studio.preExecutionFailure)) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -3073,6 +3079,13 @@ Studio.onPuzzleComplete = function () {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });
+  }
+
+  if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    postContainedLevelAttempt(studioApp);
+    runAfterPostContainedLevel(
+        () => Studio.onReportComplete(getContainedLevelResultInfo().feedback));
+    return;
   }
 
   var program;
