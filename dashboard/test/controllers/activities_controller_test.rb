@@ -856,7 +856,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
@@ -883,7 +883,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
@@ -1042,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    (1..3).each { |n| create(:level, :name => "Level #{n}", :game => game) }
+    (1..3).each { |n| create(:level, name: "Level #{n}", game: game) }
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"
