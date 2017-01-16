@@ -27,7 +27,8 @@ const SessionAttendance = React.createClass({
     adminOverride: React.PropTypes.bool,
     isReadOnly: React.PropTypes.bool,
     onSaving: React.PropTypes.func.isRequired,
-    onSaved: React.PropTypes.func.isRequired
+    onSaved: React.PropTypes.func.isRequired,
+    accountRequiredForAttendance: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -142,6 +143,7 @@ const SessionAttendance = React.createClass({
           isReadOnly={this.props.isReadOnly}
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
+          accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         />
       );
     });
@@ -164,8 +166,8 @@ const SessionAttendance = React.createClass({
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
-              <th>Code Studio Account</th>
-              <th>Joined Section</th>
+              {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
+              {this.props.accountRequiredForAttendance && <th>Joined Section</th>}
               <th>Attended</th>
             </tr>
             </thead>
