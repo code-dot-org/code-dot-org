@@ -1,22 +1,24 @@
+hidden false
 login_required true
+hideable_stages true
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools'
-level 'U5 - PT Prep - Digital Portfolio and tech setup'
+named_level 'U6 AP Performance Task Tech Setup - Student Links'
 
 stage 'Create PT Prep - Reviewing the Task'
-level 'U5 - Create PT review - Student Introduction'
+named_level 'U6 Create PT Review - Student Links'
 
 stage 'Create PT Prep - Making a Plan'
-level 'U5 - Create PT Prep - Student Introduction'
+named_level 'U6 Create PT - Make a Plan - Student Links'
 
 stage 'Create PT - Complete the Task'
-level 'U5 - Create PT - Student Introduction'
+named_level 'U6 Create PT - Complete the Task - Student Links'
 
 stage 'Explore PT Prep - Reviewing the Task'
-level 'U5 - Explore PT Review - Student Introduction'
+named_level 'U6 Explore PT Review - Student Links'
 
 stage 'Explore PT - Making a Plan'
-level 'U5 - Explore PT Prep - Student Introduction'
+named_level 'U6 Explore PT - Make a Plan - Student Links'
 
 stage 'Explore PT - Complete the Task'
-level 'U5 - Explore PT - Student Introduction'
+named_level 'U6 Explore PT - Complete the Task - Student Links'
