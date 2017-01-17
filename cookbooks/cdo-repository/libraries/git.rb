@@ -36,7 +36,7 @@ module CDO
       def fetch_updates
         setup_remote_tracking_branches(@new_resource.remote, @new_resource.repository)
         update_fetch_refs
-        run_opts = run_options(:cwd => @new_resource.destination)
+        run_opts = run_options(cwd: @new_resource.destination)
         # PATCH: support shallow fetch.
         converge_by("fetch updates for #{@new_resource.remote}") do
           shell_out!("git fetch #{@new_resource.remote}#{" --depth #{@new_resource.depth}" if @new_resource.depth}", run_opts)
@@ -54,7 +54,7 @@ module CDO
       end
 
       def current_branch
-        shell_out!('git rev-parse --abbrev-ref HEAD', run_options(:cwd => @new_resource.destination)).stdout
+        shell_out!('git rev-parse --abbrev-ref HEAD', run_options(cwd: @new_resource.destination)).stdout
       end
 
       # PATCH: Expand the remote.origin.fetch config to include the specified branch if needed.

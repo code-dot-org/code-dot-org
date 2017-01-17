@@ -17,8 +17,8 @@ unless ENV['USE_REAL_SQS'] == 'true'
   require 'fake_sqs/test_integration'
   Aws.config.update(
     region: 'us-east-1',
-    :access_key_id     => "access key id",
-    :secret_access_key => "secret access key"
+    access_key_id: "access key id",
+    secret_access_key: "secret access key"
   )
   $fake_sqs_service = FakeSQS::TestIntegration.new(
     database: ':memory:',

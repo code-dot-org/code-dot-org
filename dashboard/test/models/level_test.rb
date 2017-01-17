@@ -4,10 +4,10 @@ class LevelTest < ActiveSupport::TestCase
   include ActionDispatch::TestProcess
 
   setup do
-    @turtle_data = {:game_id => 23, :name => "__bob4", :level_num => "custom", :skin => "artist", :instructions => "sdfdfs", :type => 'Artist'}
-    @custom_turtle_data = {:solution_level_source_id => 4, :user_id => 1}
-    @maze_data = {:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze'}
-    @custom_maze_data = @maze_data.merge(:user_id => 1)
+    @turtle_data = {game_id: 23, name: "__bob4", level_num: "custom", skin: "artist", instructions: "sdfdfs", type: 'Artist'}
+    @custom_turtle_data = {solution_level_source_id: 4, user_id: 1}
+    @maze_data = {game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze'}
+    @custom_maze_data = @maze_data.merge(user_id: 1)
     @custom_level = Level.create(@custom_maze_data.dup)
     @level = Level.create(@maze_data.dup)
 
@@ -15,7 +15,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'create level' do
-    Level.create(:game_id => 25, :name => "__bob4", :level_num => "custom", :skin => "birds", :instructions => "sdfdfs", :type => 'Maze')
+    Level.create(game_id: 25, name: "__bob4", level_num: "custom", skin: "birds", instructions: "sdfdfs", type: 'Maze')
   end
 
   test "throws argument error on bad data" do
@@ -26,13 +26,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "reads and converts data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.load_maze(csv, 2)
     assert_equal [[0, 1], [1, 2]], maze
   end
 
   test "parses maze data" do
-    csv = stub(:read => [['0', '1'], ['1', '2']])
+    csv = stub(read: [['0', '1'], ['1', '2']])
     maze = Maze.parse_maze(Maze.load_maze(csv, 2).to_json)
     assert_equal({'maze' => [[0, 1], [1, 2]].to_json}, maze)
   end
@@ -258,7 +258,7 @@ EOS
   end
 
   def create_maze
-    maze = create(:maze, :published => true)
+    maze = create(:maze, published: true)
     assert maze
   end
 

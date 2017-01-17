@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Stage 16 Puzzle 6](https://levelbuilder-studio.code.org/s/CSDU3-Draft/stage/16/puzzle/6) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
+    "markdown_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Stage 17 Puzzle 7](/s/csd3/stage/17/puzzle/7) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,7 +38,10 @@
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

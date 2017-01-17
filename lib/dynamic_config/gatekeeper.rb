@@ -86,7 +86,7 @@ class GatekeeperBase
   # @param where [Hash]
   # returns [String]
   def where_key(where)
-    Oj.dump(stringify_keys(where).sort, :mode => :strict)
+    Oj.dump(stringify_keys(where).sort, mode: :strict)
   end
 
   # Clear all stored settings
