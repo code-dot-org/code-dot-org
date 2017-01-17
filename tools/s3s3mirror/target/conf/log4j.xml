@@ -26,9 +26,8 @@
 
     <!-- Root Logger -->
     <root>
-        <priority value="info" />
+        <priority value="WARN" />
         <appender-ref ref="console" />
-        <appender-ref ref="file" />
     </root>
 
 </log4j:configuration>
