@@ -83,7 +83,7 @@ module Dashboard
     #   of the user encapsulated by this class.
     def get_followed_bys(other_user_ids)
       Dashboard.db[:followers].
-        join(:users, :id => :followers__student_user_id).
+        join(:users, id: :followers__student_user_id).
         where(followers__student_user_id: other_user_ids).
         where(followers__user_id: id).
         where(users__deleted_at: nil, followers__deleted_at: nil).
@@ -95,7 +95,7 @@ module Dashboard
     #   encapsulated by this class.
     def followed_by?(other_user_id)
       Dashboard.db[:followers].
-        join(:users, :id => :followers__student_user_id).
+        join(:users, id: :followers__student_user_id).
         where(followers__student_user_id: other_user_id).
         where(followers__user_id: id).
         where(users__deleted_at: nil, followers__deleted_at: nil).

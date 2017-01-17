@@ -37,7 +37,7 @@ class PasswordsController < Devise::PasswordsController
   def show_reset_url_if_admin
     return unless current_user.try(:admin?)
     if raw_token = resource.try(:raw_token)
-      url = edit_password_url(resource, :reset_password_token => raw_token)
+      url = edit_password_url(resource, reset_password_token: raw_token)
       flash[:notice] = "Reset password link sent to user. You may also send this link directly: <a href='#{url}'>#{url}</a>".html_safe
     end
   end

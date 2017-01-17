@@ -59,11 +59,11 @@ module BrowserHelpers
   end
 
   def wait
-    Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+    Selenium::WebDriver::Wait.new(timeout: 60 * 2)
   end
 
   def short_wait
-    Selenium::WebDriver::Wait.new(:timeout => 5)
+    Selenium::WebDriver::Wait.new(timeout: 5)
   end
 end
 

@@ -87,7 +87,7 @@ function validateReport(report) {
         }
         break;
       case 'fallbackResponse':
-        if (['free_response', 'multi', 'level_group', 'text_match',
+        if (['free_response', 'multi', 'level_group', 'text_match', 'match',
             'contract_match', 'odometer', 'text_compression', 'pixelation',
             'external'].includes(report.app)) {
           // In this case, we end up with json for an object. It seems likely

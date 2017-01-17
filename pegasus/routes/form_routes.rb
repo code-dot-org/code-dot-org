@@ -14,7 +14,7 @@ post '/forms/:kind' do |kind|
   halt 403 if settings.read_only
   begin
     content_type :json
-    cache_control :private, :must_revalidate, :max_age => 0
+    cache_control :private, :must_revalidate, max_age: 0
     form = insert_form(kind, params)
     JSON.load(form[:data]).merge(secret: form[:secret]).to_json
   rescue FormError => e
@@ -47,7 +47,7 @@ post "/forms/:kind/:secret" do |kind, secret|
   halt 403 if settings.read_only
   begin
     content_type :json
-    cache_control :private, :must_revalidate, :max_age => 0
+    cache_control :private, :must_revalidate, max_age: 0
     forbidden! unless form = update_form(kind, secret, params)
     form[:data]
   rescue FormError => e
