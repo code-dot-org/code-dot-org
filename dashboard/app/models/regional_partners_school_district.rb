@@ -4,6 +4,8 @@
 #
 #  regional_partner_id :integer          not null, primary key
 #  school_district_id  :integer          not null, primary key
+#  course              :string(255)
+#  workshop_info       :string(255)
 #
 # Indexes
 #
