@@ -9,14 +9,15 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
   # {name, email, user_id, in_section, attended}
   def attendance
     object.workshop.enrollments.map do |enrollment|
-      user = enrollment.resolve_user
+      enrollment.user = enrollment.resolve_user
       {
         first_name: enrollment.first_name,
         last_name: enrollment.last_name,
         email: enrollment.email,
-        user_id: id_or_nil(user),
-        in_section: in_section?(user),
-        attended: attended?(user)
+        enrollment_id: enrollment.id,
+        user_id: id_or_nil(enrollment.user),
+        in_section: in_section?(enrollment.user),
+        attended: attended?(enrollment)
       }
     end
   end
@@ -33,8 +34,9 @@ class Api::V1::Pd::SessionAttendanceSerializer < ActiveModel::Serializer
     object.workshop.section.students.where(id: user.id).exists?
   end
 
-  def attended?(user)
-    return false unless user
-    object.attendances.where(teacher_id: user.id).exists?
+  def attended?(enrollment)
+    return true if enrollment && object.attendances.where(pd_enrollment_id: enrollment.id).exists?
+    return true if enrollment.user && object.attendances.where(teacher_id: enrollment.user.id).exists?
+    false
   end
 end

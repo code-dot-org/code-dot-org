@@ -214,6 +214,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'Unexpected workshop state'
   end
 
+  test 'account_required_for_attendance?' do
+    normal_workshop = create :pd_ended_workshop
+    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
+    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+
+    assert normal_workshop.account_required_for_attendance?
+    refute counselor_workshop.account_required_for_attendance?
+    refute admin_workshop.account_required_for_attendance?
+  end
+
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
     workshop = create :pd_ended_workshop
 
@@ -223,11 +233,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR, num_sessions: 1
+
+    enrollment = create :pd_enrollment, workshop: workshop
+    create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
+
+    refute workshop.account_required_for_attendance?
+    Pd::Enrollment.any_instance.expects(:send_exit_survey)
+    workshop.send_exit_surveys
+  end
+
   test 'send_exit_surveys teachers in the section get emails' do
     workshop = create :pd_ended_workshop
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
+    assert workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
 
     workshop.send_exit_surveys

@@ -1,5 +1,5 @@
 require 'webmock/minitest'
-WebMock.disable_net_connect!(:allow_localhost => true)
+WebMock.disable_net_connect!(allow_localhost: true)
 require_relative '../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 

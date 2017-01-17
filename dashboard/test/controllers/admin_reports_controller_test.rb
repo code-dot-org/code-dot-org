@@ -19,10 +19,10 @@ class AdminReportsControllerTest < ActionController::TestCase
     @script_level2 = create(:script_level, script: @script, stage: @stage2, position: 2)
 
     @teacher = create(:teacher)
-    @teacher_section = create(:section, :user => @teacher)
+    @teacher_section = create(:section, user: @teacher)
 
     @student = create(:user)
-    @follower = Follower.create(:section => @teacher_section, :user => @teacher, :student_user => @student)
+    @follower = Follower.create(section: @teacher_section, user: @teacher, student_user: @student)
   end
 
   generate_admin_only_tests_for :admin_progress

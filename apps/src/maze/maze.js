@@ -45,6 +45,11 @@ import Scrat from './scrat';
 import Farmer from './farmer';
 import Harvester from './harvester';
 import Planter from './planter';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -970,15 +975,23 @@ Maze.execute = function (stepMode) {
 
   Maze.waitingForReport = true;
 
-  // Report result to server.
-  studioApp.report({
-    app: 'maze',
-    level: level.id,
-    result: Maze.result === ResultType.SUCCESS,
-    testResult: Maze.testResults,
-    program: encodeURIComponent(program),
-    onComplete: Maze.onReportComplete
-  });
+  if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    // Contained levels post progress in a special way, and always pass
+    postContainedLevelAttempt(studioApp);
+    Maze.response = getContainedLevelResultInfo().feedback;
+    Maze.testResults = TestResults.ALL_PASS;
+    runAfterPostContainedLevel(Maze.onReportComplete);
+  } else {
+    // Report result to server.
+    studioApp.report({
+      app: 'maze',
+      level: level.id,
+      result: Maze.result === ResultType.SUCCESS,
+      testResult: Maze.testResults,
+      program: encodeURIComponent(program),
+      onComplete: Maze.onReportComplete
+    });
+  }
 
   // Maze. now contains a transcript of all the user's actions.
   // Reset the maze and animate the transcript.
