@@ -1,4 +1,5 @@
-name 'U5 - Explore PT Review - Student Introduction'
+name 'U6 Explore PT Review - Student Links'
+css 'unplugged'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
@@ -30,9 +31,24 @@ Review the Explore PT, its scoring guidelines, and some sample tasks
   * [Sample D](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233027.html)
   * [Sample E](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233028.html)
   
+  *Scoring Commentary*
+  
+  *  For Sample A - [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/high-explore-sample-commentary.pdf)
+  * For Samples C,D [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/medium-explore-sample-commentary.pdf)
+  * For Sample E [Commentary](https://secure-media.collegeboard.org/digitalServices/pdf/ap/low-explore-sample-commentary.pdf)
+  * [Explore PT Q&A](https://secure-media.collegeboard.org/digitalServices/pdf/ap/explore-student-performance_q-and-a.pdf)
+  
 **Other Resources**
 
 * [Explore PT - Guidelines before Starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+**Warning:**
+
+We have ***included links on this student page to the the scoring commentary** for the sample tasks. If you you want students to try applying the scoring guidelines to tasks without knowing ahead of time you’ll have to invoke some kind of honor system or strategy to have them hold off looking.
 MARKDOWN

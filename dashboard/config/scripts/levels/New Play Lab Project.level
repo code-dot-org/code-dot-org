@@ -222,6 +222,10 @@
               </block>
             </value>
           </block>
+          <block type="studio_ask">
+            <title name="TEXT"/>
+            <title name="VAR">answer</title>
+          </block>
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">
               <block type="text">
@@ -238,6 +242,7 @@
             <title name="TITLE">type title here</title>
             <title name="TEXT">type text here</title>
           </block>
+          <block type="text_join_simple" inline="false" inputcount="2"/>
           <block type="studio_setSpriteEmotion">
             <title name="SPRITE">0</title>
             <title name="VALUE">0</title>
@@ -389,14 +394,7 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
-        <category name="Input">
-          <block type="studio_ask">
-            <title name="TEXT"/>
-            <title name="VAR">i</title>
-          </block>
-        </category>
+        <category name="Variables" custom="VARIABLE"/>
         <category name="Games/Score">
           <block type="studio_showTitleScreenParams" inline="false">
             <value name="TITLE">

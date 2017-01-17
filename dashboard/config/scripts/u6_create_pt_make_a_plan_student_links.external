@@ -1,7 +1,6 @@
-name 'U5 - Create PT Prep - Student Introduction'
-title 'title'
-description 'description here'
+name 'U6 Create PT - Make a Plan - Student Links'
 css 'unplugged'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Unit 6: Lesson 3 - Create PT Prep - Making a Plan
 
@@ -30,16 +29,16 @@ Make a plan to prioritize what you will do and when in order to complete the Cre
 * [Create Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjT2hOUTFCY3hVVWs) - Task Description
 * [Scoring Guidelines - Create Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMlZCRzFfZUNNVzQ)
 
-  *Create PT Samples:*
-  
-  * [Sample A](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232630.html)
-  * [Sample B](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232631.html)
-  * [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232632.html)
+  *Create PT Samples:* [Sample A](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232630.html) | [Sample B](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232631.html) | [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232632.html)
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page.  (If you are viewing this from within the lesson plan click **Student Overview** to see the student view of the page).
 
+Please note: the Review and Planning documents are **new resources** for this lesson.
+
+We've included links to college board documents from the previous lesson for reference so they don't have to go back and forth.
 MARKDOWN
