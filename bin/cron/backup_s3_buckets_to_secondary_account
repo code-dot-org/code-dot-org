@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 
-Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
-require 'cdo/hip_chat'
+require 'cdo/cron_helper'
+require 'cdo/only_one'
+
+TASK_NAME = 'Backup S3 To Secondary Account'
+DEBUG_OUTPUT = false
 
 BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'
 S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/"
@@ -58,26 +61,35 @@ BUCKETS_TO_BACKUP = [
   'videos.code.org' # 714, 30gb
 ]
 
+def debug_puts(text)
+  puts text if DEBUG_OUTPUT
+end
+
 def main
-  return unless only_one_running?(__FILE__)
+  unless only_one_running?(__FILE__)
+    CronHelper.report_cron_daily_result TASK_NAME, false
+    HipChat.log 'S3 backup task failed, previous task is still running!', color: 'red', notify: 1
+    return
+  end
   start_time = Time.now
-  puts "Beginning S3 backup sync at #{Time.now}"
+  debug_puts "Beginning S3 backup sync at #{Time.now}"
   HipChat.log("Beginning S3 backup sync at #{Time.now}")
 
   # s3s3mirror does not function properly if you're not in its root directory
   Dir.chdir(S3S3MIRROR_DIR)
   BUCKETS_TO_BACKUP.each do |bucket_name|
-    puts "Backing up #{bucket_name}"
-    puts "Running command: #{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/"
+    debug_puts "Backing up #{bucket_name}"
+    debug_puts "Running command: #{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/"
     # -C marks this as a cross-account copy
     result = `#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/`
-    puts result
+    debug_puts result
   end
 
-  puts 'S3 backup sync complete'
+  debug_puts 'S3 backup sync complete'
   end_time = Time.now
-  puts "Time elapsed: #{end_time - start_time}"
+  debug_puts "Time elapsed: #{end_time - start_time}"
   HipChat.log("S3 backup sync complete at #{Time.now}")
+  CronHelper.report_cron_daily_result TASK_NAME, true
 end
 
 main
