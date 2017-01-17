@@ -1,7 +1,8 @@
-name 'U5 - Explore PT Prep - Student Introduction'
+name 'U6 Explore PT - Make a Plan - Student Links'
+css 'unplugged'
 title 'title'
 description 'description here'
-css 'unplugged'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Unit 6: Lesson 6 - Explore PT Prep - Making a Plan
 
@@ -44,5 +45,9 @@ Make a plan to prioritize what you will do and when in order to complete the Exp
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
 
+Please note: the Review and Planning documents are **new resources** for this lesson.
+
+We’ve included links to college board documents from the previous lesson for reference so they don’t have to go back and forth.
 MARKDOWN

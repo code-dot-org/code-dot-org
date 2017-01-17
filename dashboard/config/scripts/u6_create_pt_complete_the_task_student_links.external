@@ -1,9 +1,9 @@
-name 'U5 - Create PT - Student Introduction'
+name 'U6 Create PT - Complete the Task - Student Links'
 title 'title'
 description 'description here'
-css 'unplugged'
+href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 5: Lesson 04 - Create PT - Complete the Task
+# Unit 6: Lesson 04 - Create PT - Complete the Task
 
 ## Background
 
@@ -47,5 +47,11 @@ Best of luck!
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+Students can find all the links they need on this page. (If you are viewing this from within the lesson plan click Student Overview to see the student view of the page).
+
+Almost all of the links here are for **student reference, to use while completing the task**.
+
+The only new document here is the "Guidelines for completing the task" which are mostly reminders about the requirements and how students are allowed to interact with each other and the teacher.
+
 
 MARKDOWN
