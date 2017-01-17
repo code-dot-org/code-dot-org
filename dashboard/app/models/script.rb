@@ -292,7 +292,40 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     return get_without_cache(id) unless should_cache?
 
-    script_cache[id.to_s] || get_without_cache(id)
+    self.script_cache.fetch(id.to_s) do
+      # Populate cache on miss.
+      self.script_cache[id.to_s] = get_without_cache(id)
+    end
+  end
+
+  def text_response_levels
+    return @text_response_levels if Script.should_cache? && @text_response_levels
+    @text_response_levels = text_response_levels_without_cache
+  end
+
+  def text_response_levels_without_cache
+    text_response_levels = []
+    script_levels.map do |script_level|
+      script_level.levels.map do |level|
+        unless level.contained_levels.empty?
+          text_response_levels << {
+            script_level: script_level,
+            levels: [level.contained_levels.first]
+          }
+        end
+      end
+    end
+
+    text_response_levels.concat(script_levels.includes(:levels).
+        where('levels.type' => [TextMatch, FreeResponse]).
+        map do |script_level|
+          {
+            script_level: script_level,
+            levels: script_level.levels
+          }
+        end)
+
+    text_response_levels
   end
 
   def to_param

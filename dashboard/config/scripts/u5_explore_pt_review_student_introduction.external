@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Unit 5: Lesson 5 - Explore PT Prep - Reviewing the Task
+# Unit 6: Lesson 5 - Explore PT Prep - Reviewing the Task
 
 ## Background
 
@@ -17,9 +17,22 @@ Review the Explore PT, its scoring guidelines, and some sample tasks
 
 ## Resources
 
-* Performance Task: <a href="https://drive.google.com/open?id=0B2UNlnU_5Vg4eWlNN1dKNnRCTG8" target="_blank">Explore Performance Task</a>
-* Rubric: Explore Performance Task Rubric
-* Guidelines: <a href="https://drive.google.com/open?id=1wsWVtKYVrhX4FYBAm6oxhMaMep_qQ1LKa-PrdbHNS6A" target="_blank">Explore PT - Guidlines Before Starting</a>
+**College Board Documents**
+
+* [Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjLUtreXQ0a3FrWlE) - Task Description
+* [Scoring Guidelines - Explore Performance Task](https://drive.google.com/open?id=0B2QFqkDgv9LjMDlta0QzUy04NVE)
+
+  *Explore PT Samples:*
+  
+  * [Sample A ](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232659.html)
+  * Sample B (Removed by College Board)
+  * [Sample C](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/232661.html)
+  * [Sample D](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233027.html)
+  * [Sample E](http://apcentral.collegeboard.com/apc/public/exam/computer_science_principles/233028.html)
+  
+**Other Resources**
+
+* [Explore PT - Guidelines before Starting](https://docs.google.com/document/d/1uzylD9CNW0M6EnS3B4X3YcU9ArSNcLsO80m97lWLQ0s/edit)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

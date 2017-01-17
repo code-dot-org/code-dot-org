@@ -109,11 +109,11 @@ class ActivitiesController < ApplicationController
 
     if solved
       slog(
-        :tag => 'activity_finish',
-        :script_level_id => @script_level.try(:id),
-        :level_id => @level.id,
-        :user_agent => request.user_agent,
-        :locale => locale
+        tag: 'activity_finish',
+        script_level_id: @script_level.try(:id),
+        level_id: @level.id,
+        user_agent: request.user_agent,
+        locale: locale
       )
     end
 

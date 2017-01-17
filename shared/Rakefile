@@ -4,4 +4,4 @@ Dir.glob(shared_dir('rake/*.rake')) do |path|
   load path
 end
 
-task :default => :test
+task default: :test

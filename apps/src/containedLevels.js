@@ -74,7 +74,7 @@ export function runAfterPostContainedLevel(fn) {
   if (postState === PostState.None) {
     throw new Error('Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt');
   }
-  if (PostState.Finished) {
+  if (postState === PostState.Finished) {
     fn();
     return;
   }
