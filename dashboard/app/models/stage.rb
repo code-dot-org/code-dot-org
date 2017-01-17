@@ -95,8 +95,7 @@ class Stage < ActiveRecord::Base
           title: localized_title,
           flex_category: localized_category,
           lockable: !!lockable,
-          # Ensures we get the cached ScriptLevels, vs hitting the db
-          levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+          levels: cached_script_levels.map(&:summarize),
       }
 
       # Use to_a here so that we get access to the cached script_levels.
@@ -187,5 +186,10 @@ class Stage < ActiveRecord::Base
         readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
       }
     end
+  end
+
+  # Ensures we get the cached ScriptLevels, vs hitting the db.
+  def cached_script_levels
+    script_levels.map{|sl| Script.cache_find_script_level(sl.id)}
   end
 end
