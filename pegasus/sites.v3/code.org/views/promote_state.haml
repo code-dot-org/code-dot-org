@@ -21,6 +21,10 @@
       =format_integer_with_commas(data[:cs_graduates_i])
     computer science graduates
 
+%p.fact
+  %a{href: 'http://bit.ly/9policiesrubric', style: 'color: white; cursor: pointer;', target: '_blank'}
+    Policy Environment (rubric):
+
 %div.fact{style: "margin-left: 20px;"}
   - if data[:pd_funding_s] == "No"
     %i.fa.fa-times-circle
@@ -93,9 +97,6 @@
 -if data[:text_t]
   %p
     =data[:text_t]
-%p{style: "margin-left: 21px;"}
-  %a{style: "color:white;", onclick: "return adjustScroll('tools-section')"}
-    Take action
 
   -if data[:action_text_s] && data[:action_url_s]
     %a{href: data[:action_url_s], target: '_blank'}
