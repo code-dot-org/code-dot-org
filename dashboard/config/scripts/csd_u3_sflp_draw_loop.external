@@ -24,7 +24,7 @@ Moving from simple static images you will learn to use randomly generated number
 |background()|Covers the whole display with one color| `background("white")` | link |
 |GameLab.frameRate|Controls speed of draw loop|`GameLab.frameRate = 20`| link |
 |line(x1, y1, x2, y2)|Draws line|`line(100, 150, 200, 300)`| link |
-|randomNumber(min, min)|Returns a random number between min and max|`randomNumber(10,15)`| link |
+|randomNumber(min, max)|Returns a random number between min and max|`randomNumber(10,15)`| link |
 
 ### Console:
 |Command| Meaning| Example |  Documentation |
