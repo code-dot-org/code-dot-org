@@ -287,7 +287,7 @@ class Applab < Blockly
         "start": null,
         "getAveragedValue": null,
         "toggleSwitch.isOpen": null,
-        "onBoardEvent": null,
+        "onBoardEvent": null
       }
     JSON
   end
