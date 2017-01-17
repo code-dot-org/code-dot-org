@@ -75,13 +75,13 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     level = {
-      :name => name,
-      :stage_flex_category => @stage_flex_category,
-      :stage_lockable => @stage_lockable,
-      :skin => @skin,
-      :concepts => @concepts.join(','),
-      :level_concept_difficulty => @level_concept_difficulty || {},
-      :video_key => @video_key_for_next_level
+      name: name,
+      stage_flex_category: @stage_flex_category,
+      stage_lockable: @stage_lockable,
+      skin: @skin,
+      concepts: @concepts.join(','),
+      level_concept_difficulty: @level_concept_difficulty || {},
+      video_key: @video_key_for_next_level
     }.merge(properties).select{|_, v| v.present? }
     @video_key_for_next_level = nil
     if @current_scriptlevel
@@ -94,14 +94,14 @@ class ScriptDSL < BaseDSL
       end
     else
       @scriptlevels << {
-        :stage => @stage,
-        :levels => [level]
+        stage: @stage,
+        levels: [level]
       }
     end
   end
 
   def variants
-    @current_scriptlevel = { :levels => [], :properties => {}, :stage => @stage}
+    @current_scriptlevel = { levels: [], properties: {}, stage: @stage}
   end
 
   def endvariants
@@ -127,9 +127,9 @@ class ScriptDSL < BaseDSL
 
     # Legacy script IDs
     legacy_script_ids = {
-      :'20-hour' => 1,
-      :'Hour of Code' => 2,
-      :'edit-code' => 3,
+      '20-hour': 1,
+      'Hour of Code': 2,
+      'edit-code': 3,
       events: 4,
       flappy: 6,
       jigsaw: 7,

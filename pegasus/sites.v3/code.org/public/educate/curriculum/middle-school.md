@@ -27,8 +27,8 @@ Computer Science Discoveries is a full-year introductory computer science survey
 * **Unit 2:** The Internet: Web Development
 * **Unit 3:** Programming: Interactive Games & Animations
 * **Unit 4:** Problem Solving: The Design Process
-* **Unit 2:** The Internet: Data and Society
-* **Unit 3:** Programming: The Internet of Things
+* **Unit 5:** The Internet: Data and Society
+* **Unit 6:** Programming: The Internet of Things
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 

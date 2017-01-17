@@ -346,7 +346,7 @@ class AdminReportsController < ApplicationController
         end
         csv
       end,
-      :type => 'text/csv')
+      type: 'text/csv')
   end
 
   def level_answers_csv
@@ -360,6 +360,6 @@ class AdminReportsController < ApplicationController
         end
         csv
       end,
-      :type => 'text/csv')
+      type: 'text/csv')
   end
 end

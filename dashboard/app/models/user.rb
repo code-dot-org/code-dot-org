@@ -151,7 +151,7 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
-  belongs_to :invited_by, :polymorphic => true
+  belongs_to :invited_by, polymorphic: true
 
   # TODO: I think we actually want to do this.
   # You can be associated with districts through cohorts
@@ -1009,7 +1009,7 @@ class User < ActiveRecord::Base
     end
 
     # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
       PeerReview.create_for_submission(user_level, level_source_id)
     end
 
