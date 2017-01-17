@@ -85,14 +85,12 @@ if (envConstants.COVERAGE) {
   ];
 }
 
-var devtool = function () {
-  return process.env.CHEAP ?
+var devtool = process.env.CHEAP ?
     'cheap-inline-source-map' :
     'inline-source-map';
-};
 
 var storybookConfig = _.extend({}, baseConfig, {
-  devtool: devtool(),
+  devtool: devtool,
   externals: {
     "johnny-five": "var JohnnyFive",
     "playground-io": "var PlaygroundIO",
@@ -113,7 +111,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: devtool(),
+  devtool: devtool,
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
@@ -178,7 +176,7 @@ function create(options) {
       publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: !process.env.CI && options.minify ?  'source-map' : devtool(),
+    devtool: !process.env.CI && options.minify ?  'source-map' : devtool,
     entry: entries,
     externals: externals,
     plugins: [
