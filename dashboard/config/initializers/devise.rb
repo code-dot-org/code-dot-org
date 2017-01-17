@@ -279,7 +279,7 @@ Devise.setup do |config|
     client_options: {site: 'https://graph.facebook.com/v2.6',
                      authorize_url: "https://www.facebook.com/v2.6/dialog/oauth"}
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret
-  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, :scope => 'wl.basic wl.emails'
+  config.omniauth :windowslive, CDO.dashboard_windowslive_key, CDO.dashboard_windowslive_secret, scope: 'wl.basic wl.emails'
 
   # for clever (and only clever) we ignore state because clever
   # initiates the oauth flow (instead of us as we do with facebook

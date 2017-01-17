@@ -56,7 +56,7 @@ class LevelSourcesController < ApplicationController
   def generate_image
     authorize! :read, @level_source
 
-    expires_in 10.hours, :public => true # cache
+    expires_in 10.hours, public: true # cache
 
     if @game.app == Game::ARTIST
       redirect_to @level_source.level_source_image.s3_framed_url
@@ -68,7 +68,7 @@ class LevelSourcesController < ApplicationController
   def original_image
     authorize! :read, @level_source
 
-    expires_in 10.hours, :public => true # cache
+    expires_in 10.hours, public: true # cache
 
     redirect_to @level_source.level_source_image.s3_url
   end

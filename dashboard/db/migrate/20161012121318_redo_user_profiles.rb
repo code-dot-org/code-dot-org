@@ -1,6 +1,6 @@
 class RedoUserProfiles < ActiveRecord::Migration[5.0]
   def change
-    create_table :user_profiles, :force => true do |t|
+    create_table :user_profiles, force: true do |t|
       t.belongs_to :user, {null: false}
       t.timestamps
       # The user ID of the user who last (manually) set any of the values for

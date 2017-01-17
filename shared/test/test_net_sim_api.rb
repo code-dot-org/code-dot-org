@@ -813,8 +813,8 @@ class NetSimApiTest < Minitest::Test
 
   def create_wire(from_node_id, to_node_id)
     wire_record = {
-      :localNodeID => from_node_id,
-      :remoteNodeID => to_node_id
+      localNodeID: from_node_id,
+      remoteNodeID: to_node_id
     }
     create_record wire_record, TABLE_NAMES[:wire]
   end

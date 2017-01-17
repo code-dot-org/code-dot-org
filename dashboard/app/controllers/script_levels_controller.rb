@@ -299,7 +299,7 @@ class ScriptLevelsController < ApplicationController
       @total_level_count = @level.levels.length
     end
 
-    if @level.try(:peer_reviewable)
+    if @level.try(:peer_reviewable?)
       @peer_reviews = PeerReview.where(level: @level, submitter: current_user).where.not(status: nil)
     end
 

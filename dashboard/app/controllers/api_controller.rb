@@ -80,7 +80,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(@script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.keys)
       student_levels = @script.script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map{|id| level_map[id]}.compact
+        user_levels = script_level.level_ids.map do |id|
+          contained_levels = Script.cache_find_level(id).contained_levels
+          if contained_levels.any?
+            level_map[contained_levels.first.id]
+          else
+            level_map[id]
+          end
+        end.compact
         level_class = best_activity_css_class user_levels
         paired = (paired_user_level_ids & user_levels).any?
         level_class << ' paired' if paired
@@ -201,22 +208,22 @@ class ApiController < ApplicationController
     load_section
     load_script
 
-    text_response_script_levels = @script.script_levels.includes(:levels).where('levels.type' => [TextMatch, FreeResponse])
+    text_response_levels = @script.text_response_levels
 
     data = @section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_script_levels.map do |script_level|
-        last_attempt = student.last_attempt_for_any(script_level.levels)
+      text_response_levels.map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
         {
           student: student_hash,
-          stage: script_level.stage.localized_title,
-          puzzle: script_level.position,
+          stage: level_hash[:script_level].stage.localized_title,
+          puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: @section.id, user_id: student.id)
         }
       end.compact
     end.flatten
