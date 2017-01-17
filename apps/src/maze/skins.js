@@ -59,6 +59,7 @@ var CONFIGS = {
     obstacleIdle: 'obstacle.png',
 
     goal: 'gold.png',
+    corners: 'corners.png',
 
     look: '#000',
     transparentTileEnding: true,
