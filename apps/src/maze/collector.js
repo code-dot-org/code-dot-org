@@ -192,4 +192,56 @@ export default class Collector extends Subtype {
   getEmptyTile() {
     return 'null0';
   }
+
+  /**
+   * @override
+   */
+  drawTile(svg, tileSheetLocation, row, col, tileId) {
+    super.drawTile(svg, tileSheetLocation, row, col, tileId);
+    this.drawCorners(svg, row, col, tileId);
+  }
+
+  drawCorners(svg, row, col, tileId) {
+    const corners = [
+      [-1, -1],
+      [-1, 1],
+      [1, -1],
+      [1, 1]
+    ];
+
+    const SVG_NS = 'http://www.w3.org/2000/svg';
+    const SQUARE_SIZE = 50;
+
+    let pegmanElement = document.getElementsByClassName('pegman-location')[0];
+
+    if (!this.isWallOrOutOfBounds_(col, row)) {
+      corners.forEach((corner, i) => {
+        if (!this.isWallOrOutOfBounds_(col + corner[0], row) &&
+            !this.isWallOrOutOfBounds_(col, row + corner[1]) &&
+            this.isWallOrOutOfBounds_(col + corner[0], row + corner[1])) {
+          const tileClip = document.createElementNS(SVG_NS, 'clipPath');
+          tileClip.setAttribute('id', `tileCorner${i}ClipPath${tileId}`);
+          const tileClipRect = document.createElementNS(SVG_NS, 'rect');
+          tileClipRect.setAttribute('width', SQUARE_SIZE / 2);
+          tileClipRect.setAttribute('height', SQUARE_SIZE / 2);
+
+          tileClipRect.setAttribute('x', col * SQUARE_SIZE + (corner[0] + 1) * SQUARE_SIZE / 4);
+          tileClipRect.setAttribute('y', row * SQUARE_SIZE + (corner[1] + 1) * SQUARE_SIZE / 4);
+          tileClip.appendChild(tileClipRect);
+          svg.appendChild(tileClip);
+
+          // Create image.
+          let img = document.createElementNS(SVG_NS, 'image');
+          img.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', this.skin_.corners);
+          img.setAttribute('height', SQUARE_SIZE);
+          img.setAttribute('width', SQUARE_SIZE);
+          img.setAttribute('x', SQUARE_SIZE * col);
+          img.setAttribute('y', SQUARE_SIZE * row);
+          img.setAttribute('id', `tileCorner${i}${tileId}`);
+          img.setAttribute('clip-path', 'url(#' + `tileCorner${i}ClipPath${tileId}` + ')');
+          svg.insertBefore(img, pegmanElement);
+        }
+      });
+    }
+  }
 }
