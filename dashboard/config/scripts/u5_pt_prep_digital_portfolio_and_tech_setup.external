@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ## Background
 
-You need to setup your AP Digital Portfolio to officially submit your performance tasks and to sign up for the exam.
+You need to setup your AP Digital Portfolio to officially submit your performance tasks and to sign up for the exam. There are also several tools you should be familiar with in order to create the necessary PDF documents and Video screen captures that you need to submit.
 
 ## Lesson
 
@@ -16,14 +16,40 @@ You need to setup your AP Digital Portfolio to officially submit your performanc
 
 ## Resources
 
-* AP Student Guidelines for setting up digital portfolio
-* Screencast-o-matic
+
+* [AP Student Guide for setting up digital portfolio](https://secure-media.collegeboard.org/digitalServices/pdf/ap/computer-science-principles-digital-portfolio-student-guide.pdf)
+* [AP Digital Portfolio Web Site](https://digitalportfolio.collegeboard.org/)
+
+## Tools
+
+How to make a PDF
+
+* "Print to PDF" - simplist option if available...
+    * In any application go to File->Print and see if there is an option to "Save As PDF...." or "Print to PDF..."
+    
+* Otherwise see the AP Student Guide for setting up digital portfolio (link above)
+
+For making PDF of program code:
+
+* [Github Gist](https://gist.github.com/)
+* [CodePrint](https://bakerfranke.github.io/codePrint/) - with this option you don't need to make and then edit a PDF, just compose everything right here.
+
+For doing screen capture video:
+
+* online/web [Screencast-o-matic](https://screencast-o-matic.com/)
+* Windows/Mac download [Jing from Techsmith](https://www.techsmith.com/jing.html)
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+
+Students can find all the links they need for "tech stuff" on this page.
+
+The most important, by far, is the AP Digital Portfolio website and student guide.  The AP digital portfolio outlines all of the things students need to do.  It serves as a de-facto checklist.
+
+
 <!--
 #### Full Course Assessment
 

@@ -292,7 +292,10 @@ class Script < ActiveRecord::Base
   def self.get_from_cache(id)
     return get_without_cache(id) unless should_cache?
 
-    script_cache[id.to_s] || get_without_cache(id)
+    self.script_cache.fetch(id.to_s) do
+      # Populate cache on miss.
+      self.script_cache[id.to_s] = get_without_cache(id)
+    end
   end
 
   def text_response_levels
