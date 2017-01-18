@@ -91,7 +91,8 @@ class RegistrationsController < Devise::RegistrationsController
       :user_type,
       :school,
       :full_address,
-      :terms_of_service_version
+      :terms_of_service_version,
+      races: []
     )
   end
 end

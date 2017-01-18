@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Čestitamo, programirao si stvaranje droida Miševa. Možeš prijeći na iduću igru ili pokušati ponovno doći do 20 droida Miševa. Olakšaj si tako što ćeš ih napraviti više droida odjednom! (Kada držiš pritisnutom tipku sa strelicom tada se krećeš brže.)",
   "failedChangeSettingTimeout": "Uhvati tri pobunjenička pilota kako bi mogao/la nastaviti.",
   "failedChangeSettingSettings": "Ovu igru možeš igrati na svoj vlastiti način. Kako bi je prošao trebaš promijeniti svog droida i podesiti mu brzinu.",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",
