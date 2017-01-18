@@ -50,8 +50,8 @@ Given /^I am on "([^"]*)"$/ do |url|
   refute_bad_gateway
   refute_site_unreachable
   install_js_error_recorder
-  puts "url: #{url}"
-  puts "current: #{@browser.current_url}"
+  # puts "url: #{url}"
+  # puts "current: #{@browser.current_url}"
 end
 
 def install_js_error_recorder
