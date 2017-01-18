@@ -8,6 +8,73 @@ window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers = require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
 import { TestResults } from '@cdo/apps/constants';
 
+// Replaces emoji in a string with a blank character.
+// (In fact, it's replacing all supplementary, i.e. non-BMP, characters.)
+// Returns the updated string.
+//
+// More information:
+//   http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-utf8mb4.html
+//     describes the database's inability to store supplementary characters, which
+//     are those outside of the BMP (Basic Multilingual Plane).
+//   https://mathiasbynens.be/notes/javascript-encoding
+//     describes how characters outside the BMP can only be encoded in UTF-16
+//     using a surrogate pair, which is what we use to detect such characters.
+//
+function replaceEmoji(source) {
+  const blankCharacter = "\u25A1";
+
+  // Build the range for the supplementary pair in a way that works with Babel
+  // (which currently handles \u encoding in a string incorrectly).
+  var range =
+    '[' + String.fromCharCode(0xD800) + '-' + String.fromCharCode(0xDBFF) + '][' +
+          String.fromCharCode(0xDC00) + '-' + String.fromCharCode(0xDFFF) + ']';
+
+  return source.replace(new RegExp(range, 'g'), blankCharacter);
+}
+
+/**
+ * @param {function} completion Function that gets called after handling all sublevels
+ * @param {numer|string} id of the sublevel being changed
+ */
+export function submitSublevelResults(completion, subLevelIdChanged) {
+  const levelIds = codeStudioLevels.getLevelIds();
+  var sendReportCompleteCount = 0;
+  var subLevelCount = levelIds.length;
+  if (subLevelCount === 0) {
+    return completion();
+  }
+  function handleSublevelComplete() {
+    sendReportCompleteCount++;
+    if (sendReportCompleteCount === subLevelCount) {
+      completion();
+    }
+  }
+  for (var subLevelId of levelIds) {
+    if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
+      // Only one sublevel changed and this is not the one, so skip the post and
+      // call the completion function immediately
+      handleSublevelComplete();
+      continue;
+    }
+    const subLevel = codeStudioLevels.getLevel(subLevelId);
+    var subLevelResult = subLevel.getResult(true);
+    var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
+
+    window.dashboard.reporting.sendReport({
+      program: response,
+      fallbackResponse: appOptions.dialog.fallbackResponse,
+      callback: appOptions.dialog.sublevelCallback + subLevelId,
+      app: subLevel.getAppName(),
+      allowMultipleSends: true,
+      level: subLevelId,
+      result: true,
+      testResult: TestResults.UNVALIDATED_SUBLEVEL,
+      submitted: subLevelResult.submitted || false,
+      onComplete: handleSublevelComplete
+    });
+  }
+}
+
 window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
 
   // Whenever an embedded level notifies us that the user has made a change,
@@ -19,45 +86,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
   // and save for that reason.
 
   codeStudioLevels.registerGetResult(getAggregatedResults);
-
-  function submitSublevelResults(completion, subLevelIdChanged) {
-    const levelIds = codeStudioLevels.getLevelIds();
-    var sendReportCompleteCount = 0;
-    var subLevelCount = levelIds.length;
-    if (subLevelCount === 0) {
-      return completion();
-    }
-    function handleSublevelComplete() {
-      sendReportCompleteCount++;
-      if (sendReportCompleteCount === subLevelCount) {
-        completion();
-      }
-    }
-    for (var subLevelId of levelIds) {
-      if (typeof subLevelIdChanged !== 'undefined' && subLevelIdChanged !== parseInt(subLevelId)) {
-        // Only one sublevel changed and this is not the one, so skip the post and
-        // call the completion function immediately
-        handleSublevelComplete();
-        continue;
-      }
-      const subLevel = codeStudioLevels.getLevel(subLevelId);
-      var subLevelResult = subLevel.getResult(true);
-      var response = encodeURIComponent(replaceEmoji(subLevelResult.response.toString()));
-
-      window.dashboard.reporting.sendReport({
-        program: response,
-        fallbackResponse: appOptions.dialog.fallbackResponse,
-        callback: appOptions.dialog.sublevelCallback + subLevelId,
-        app: subLevel.getAppName(),
-        allowMultipleSends: true,
-        level: subLevelId,
-        result: true,
-        testResult: TestResults.UNVALIDATED_SUBLEVEL,
-        submitted: subLevelResult.submitted || false,
-        onComplete: handleSublevelComplete
-      });
-    }
-  }
 
   var throttledSaveAnswers = throttle(
     subLevelId => {
@@ -142,30 +170,6 @@ window.initLevelGroup = function (levelCount, currentPage, lastAttempt) {
       const afterSave = () => changePage(targetPage);
       submitSublevelResults(() => saveAnswers(afterSave));
     }
-  }
-
-  // Replaces emoji in a string with a blank character.
-  // (In fact, it's replacing all supplementary, i.e. non-BMP, characters.)
-  // Returns the updated string.
-  //
-  // More information:
-  //   http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-utf8mb4.html
-  //     describes the database's inability to store supplementary characters, which
-  //     are those outside of the BMP (Basic Multilingual Plane).
-  //   https://mathiasbynens.be/notes/javascript-encoding
-  //     describes how characters outside the BMP can only be encoded in UTF-16
-  //     using a surrogate pair, which is what we use to detect such characters.
-  //
-  function replaceEmoji(source) {
-    const blankCharacter = "\u25A1";
-
-    // Build the range for the supplementary pair in a way that works with Babel
-    // (which currently handles \u encoding in a string incorrectly).
-    var range =
-      '[' + String.fromCharCode(0xD800) + '-' + String.fromCharCode(0xDBFF) + '][' +
-            String.fromCharCode(0xDC00) + '-' + String.fromCharCode(0xDFFF) + ']';
-
-    return source.replace(new RegExp(range, 'g'), blankCharacter);
   }
 
   $(".nextPageButton").click(function (event) {
