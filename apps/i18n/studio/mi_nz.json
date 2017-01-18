@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Koia kei a koe! Kua whakauru koe i te waehere hei hanga i nga Droid Kiore. Kei a koe te tikanga, kia neke ki te kēmu whai ake, kia hoki anō kia whiwhi koe i ngā Droid Kiore 20. Kia ngāwari ake te mahi, hangaia te maha. (Kia tere ake te neke, pēhia kia mau tonu ngā pātuhi neke i te papapātuhi, mata rānei.)",
   "failedChangeSettingTimeout": "Tikina kia toru ngā Rebel Pilots kia kōkiri ki mua.",
   "failedChangeSettingSettings": "Whakamaua tō kēmu kia tīna. Kia tutuki tēnei wahanga, me huri te droid, tautuhia hoki te tere.",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",
