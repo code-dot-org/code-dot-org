@@ -46,6 +46,7 @@
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
     "instructions_important": "false",
+    "timeout_failure_tick": "400",
     "contained_level_names": null
   },
   "published": true,

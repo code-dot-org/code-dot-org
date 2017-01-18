@@ -411,6 +411,38 @@ class Studio < Grid
       </block>
     </value>
   </block>
+  <block type="studio_ifActorHasEmotionElse" />
+  <block type="studio_ifActorHasEmotionElseParams">
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorPositionElse" />
+  <block type="studio_ifActorPositionElseParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsVisibleElse" />
+  <block type="studio_ifActorIsVisibleElseParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
+  <block type="studio_ifActorIsSpriteElse" />
+  <block type="studio_ifActorIsSpriteElseParams" >
+    <value name="SPRITE">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+  </block>
 </category>
 <category name="Math">
   <block type="math_number" />

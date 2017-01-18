@@ -29,12 +29,12 @@ SeamlessDatabasePool.use_persistent_read_connection do
     headers = nil
     data = users.map do |user|
       row = {
-        :ID => user.id,
-        :'Ops First Name' => user.ops_first_name,
-        :'Ops Last Name' => user.ops_last_name,
-        :Email => user.email,
-        :District => user.district.try(:name) || 'None',
-        :School => user.ops_school || 'None'
+        ID: user.id,
+        'Ops First Name': user.ops_first_name,
+        'Ops Last Name': user.ops_last_name,
+        Email: user.email,
+        District: user.district.try(:name) || 'None',
+        School: user.ops_school || 'None'
       }
       row[:'Script Percent Complete'] = percent_complete_total(script, user).
         to_s

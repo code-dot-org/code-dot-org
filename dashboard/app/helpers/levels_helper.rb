@@ -330,7 +330,7 @@ module LevelsHelper
     level_options.merge! @level.properties.camelize_keys
 
     unless current_user && (current_user.teachers.any? ||
-        (@level.try(:peer_reviewable) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
+        (@level.try(:peer_reviewable?) && current_user.teacher? && Plc::UserCourseEnrollment.exists?(user: current_user)))
       # only students with teachers or teachers enrolled in PLC submitting for a peer reviewable level
       level_options['submittable'] = false
     end
@@ -502,12 +502,12 @@ module LevelsHelper
     # TODO(brent): These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-        :thank_you => URI.escape(I18n.t('footer.thank_you')),
-        :help_from_html => I18n.t('footer.help_from_html'),
-        :art_from_html => URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-        :code_from_html => URI.escape(I18n.t('footer.code_from_html')),
-        :powered_by_aws => I18n.t('footer.powered_by_aws'),
-        :trademark => URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+        thank_you: URI.escape(I18n.t('footer.thank_you')),
+        help_from_html: I18n.t('footer.help_from_html'),
+        art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+        code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+        powered_by_aws: I18n.t('footer.powered_by_aws'),
+        trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
     }
   end
 
@@ -623,8 +623,8 @@ module LevelsHelper
 
   # Unique, consistent ID for a user of an *lab app.
   def lab_user_id
-    channel_id = "1337" # Stub value, until storage for channel_id's is available.
-    Digest::SHA1.base64digest("#{channel_id}:#{user_or_session_id}").tr('=', '')
+    plaintext_id = "#{@view_options[:channel]}:#{user_or_session_id}"
+    Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
   # Assign a firebase authentication token based on the firebase secret,
@@ -638,8 +638,8 @@ module LevelsHelper
     return nil unless CDO.firebase_secret
 
     payload = {
-      :uid => user_or_session_id,
-      :is_dashboard_user => !!current_user
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user
     }
     options = {}
     # Provides additional debugging information to the browser when
@@ -663,13 +663,13 @@ module LevelsHelper
 
     if current_user && current_user.under_13? && current_user.terms_version.nil?
       error_message = current_user.teachers.any? ? I18n.t("errors.messages.teacher_must_accept_terms") : I18n.t("errors.messages.too_young")
-      redirect_to '/', :flash => { :alert => error_message }
+      redirect_to '/', flash: { alert: error_message }
       return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', :flash => { :alert => I18n.t("errors.messages.pair_programmer") }
+        redirect_to '/', flash: { alert: I18n.t("errors.messages.pair_programmer") }
         return true
       end
     end

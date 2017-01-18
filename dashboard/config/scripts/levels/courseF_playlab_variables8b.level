@@ -33,7 +33,7 @@
     ],
     "generate_function_pass_blocks": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Use what you've learned to create an improv scene between the actors.\r\n\r\nImprov -> A scene that actors make up on stage using information from the audience.",
+    "markdown_instructions": "Use what you've learned to create an improv scene between the actors.\r\n\r\n**Improv:** *A scene that actors make up on stage using information from the audience.*",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

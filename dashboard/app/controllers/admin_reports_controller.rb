@@ -1,4 +1,5 @@
 require 'cdo/env'
+require 'cdo/properties'
 
 # The controller for reports of internal admin-only data.
 class AdminReportsController < ApplicationController
@@ -199,20 +200,35 @@ class AdminReportsController < ApplicationController
   end
 
   def pd_progress
+    script_id_or_name = params[:script] || 'K5PD'
+    begin
+      script = Script.get_from_cache(script_id_or_name)
+    rescue ActiveRecord::RecordNotFound
+      render(
+        layout: 'application',
+        text: "Script #{script_id_or_name} not found.",
+        status: 404
+      ) && return
+    end
+
     SeamlessDatabasePool.use_persistent_read_connection do
-      script = Script.find_by!(name: params[:script] || 'K5PD').cached
-      require 'cdo/properties'
       locals_options = Properties.get("pd_progress_#{script.id}")
       if locals_options
         render locals: locals_options.symbolize_keys
       else
-        render layout: 'application', text: "PD progress data not found for #{script.name}", status: 404
+        sanitized_script_name = ActionController::Base.helpers.sanitize(
+          script.name
+        )
+        render(
+          layout: 'application',
+          text: "PD progress data not found for #{sanitized_script_name}.",
+          status: 404
+        )
       end
     end
   end
 
   def admin_progress
-    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
       stats = Properties.get(:admin_progress)
       if stats.present?
@@ -229,7 +245,6 @@ class AdminReportsController < ApplicationController
   end
 
   def admin_stats
-    require 'cdo/properties'
     SeamlessDatabasePool.use_persistent_read_connection do
       @stats = Properties.get('admin_stats')
     end
@@ -331,7 +346,7 @@ class AdminReportsController < ApplicationController
         end
         csv
       end,
-      :type => 'text/csv')
+      type: 'text/csv')
   end
 
   def level_answers_csv
@@ -345,6 +360,6 @@ class AdminReportsController < ApplicationController
         end
         csv
       end,
-      :type => 'text/csv')
+      type: 'text/csv')
   end
 end

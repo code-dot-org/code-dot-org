@@ -13,7 +13,7 @@ class RemoveHintAccessFromUsers < ActiveRecord::Migration[4.2]
   # anyone having the hint_access UserPermission, and remove the hint_access
   # UserPermissions.
   def down
-    add_column :users, :hint_access, :boolean, :after => :prize_teacher_id
+    add_column :users, :hint_access, :boolean, after: :prize_teacher_id
 
     UserPermission.where(permission: UserPermission::HINT_ACCESS).each do |user_permission|
       # Note that we intentionally bypass validation as not all User objects

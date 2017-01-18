@@ -79,7 +79,7 @@ module.exports = function (app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
   }
 
-  addReadyListener(function () {
+  function onReady() {
     if (options.readonly) {
       if (app.initReadonly) {
         app.initReadonly(options);
@@ -92,5 +92,13 @@ module.exports = function (app, levels, options) {
         options.onInitialize();
       }
     }
-  });
+  }
+  // exported apps can and need to be setup synchronously
+  // since the student code executes immediately at page load
+  // time.
+  if (options.isExported) {
+    onReady();
+  } else {
+    addReadyListener(onReady);
+  }
 };

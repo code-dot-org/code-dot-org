@@ -3,7 +3,7 @@ require 'cdo/share_filtering'
 
 class ShareFilteringTest < Minitest::Test
   def setup
-    Geocoder.configure(:lookup => :test)
+    Geocoder.configure(lookup: :test)
     Geocoder::Lookup::Test.add_stub(
       '1600 Pennsylvania Ave NW, Washington, DC 20500',
       [{types: 'street_address'}]

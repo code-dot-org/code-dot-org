@@ -109,11 +109,11 @@ class NetSimApiTest < Minitest::Test
     NetSimApi.override_redis_for_test(test_redis)
 
     # All operations go to master node
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
-    master.expect :hincrby, 1, [String, String, Fixnum]
+    master.expect :hincrby, 1, [String, String, Integer]
     master.expect :multi, []
 
     create_record([{name: 'alice', age: 7, male: false}])
@@ -813,8 +813,8 @@ class NetSimApiTest < Minitest::Test
 
   def create_wire(from_node_id, to_node_id)
     wire_record = {
-      :localNodeID => from_node_id,
-      :remoteNodeID => to_node_id
+      localNodeID: from_node_id,
+      remoteNodeID: to_node_id
     }
     create_record wire_record, TABLE_NAMES[:wire]
   end

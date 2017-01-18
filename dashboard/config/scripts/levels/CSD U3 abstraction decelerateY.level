@@ -35,7 +35,8 @@
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
-      "comment_Math": null
+      "comment_Math": null,
+      "ifBlock": null
     },
     "show_d_pad": "true",
     "edit_code": true,
@@ -72,6 +73,7 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "show_debug_watch": "false",
+    "encrypted_examples": "PCNh0HGpQpogwKqFu/Cin+jd6XAhF1m/RbYkMp8684C2+H9Ag56HWaOsJ/Dh\n1+Q3\n",
     "contained_level_names": null
   },
   "published": true,

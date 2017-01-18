@@ -81,10 +81,10 @@ module Ops
           :program_type,
           :script_id,
           :cutoff_date,
-          :district_ids => [],
-          :district_names => [],
-          :teachers => Ops::TEACHER_PERMITTED_ATTRIBUTES,
-          :cohorts_districts_attributes => [:cohort_id, :district_id, :max_teachers, :_destroy, :id]
+          district_ids: [],
+          district_names: [],
+          teachers: Ops::TEACHER_PERMITTED_ATTRIBUTES,
+          cohorts_districts_attributes: [:cohort_id, :district_id, :max_teachers, :_destroy, :id]
         )
       elsif current_user.try(:district_contact?)
         # district contacts can only edit teachers

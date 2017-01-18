@@ -32,6 +32,7 @@ const WorkshopEnrollment = React.createClass({
       })
     ).isRequired,
     workshopId: React.PropTypes.string.isRequired,
+    accountRequiredForAttendance: React.PropTypes.bool.isRequired,
     onDelete: React.PropTypes.func.isRequired
   },
 
@@ -107,8 +108,8 @@ const WorkshopEnrollment = React.createClass({
           <td>{enrollment.email}</td>
           <td>{enrollment.district_name}</td>
           <td>{enrollment.school}</td>
-          <td>{enrollment.user_id ? 'Yes' : 'No'}</td>
-          <td>{enrollment.in_section ? 'Yes' : 'No'}</td>
+          {this.props.accountRequiredForAttendance && <td>{enrollment.user_id ? 'Yes' : 'No'}</td>}
+          {this.props.accountRequiredForAttendance && <td>{enrollment.in_section ? 'Yes' : 'No'}</td>}
         </tr>
       );
     });
@@ -142,8 +143,8 @@ const WorkshopEnrollment = React.createClass({
           <th style={styles.th}>Email</th>
           <th style={styles.th}>District</th>
           <th style={styles.th}>School</th>
-          <th style={styles.th}>Code Studio Account?</th>
-          <th style={styles.th}>Joined Section?</th>
+          {this.props.accountRequiredForAttendance && <th style={styles.th}>Code Studio Account?</th>}
+          {this.props.accountRequiredForAttendance && <th style={styles.th}>Joined Section?</th>}
         </tr>
         </thead>
         <tbody>

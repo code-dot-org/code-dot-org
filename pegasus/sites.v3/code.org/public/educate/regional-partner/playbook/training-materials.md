@@ -133,5 +133,17 @@ November 2016:
 - K-12 CS Framework [Video](http://videos.code.org/plp/k12-cs-framework.mp4)
 - K-12 CS Framework Slides Coming Soon!
 
+December 2016:
+
+- Teacher Application Process Overview [Video](https://videos.code.org/teacher/Teacher+Application+Process.mp4)
+- Teacher Application Process Overview [Slides](https://docs.google.com/presentation/d/1DC5Unjuy7p5K50MIJai5s-jnhexYFlIUZKkAGNqLLp4/edit?usp=sharing)
+
+January 2017:                                            
+
+- How to Review Teacher Applications [Video](https://videos.code.org/teacher/Teacher+Application+Review+Process.mp4)
+- How to Review Teacher Applications [Slides](https://docs.google.com/presentation/d/11bDnl_ekOspmJ4cVhShvoRQ3k0GVq0DeSWpRPx56CJg/edit?usp=sharing)
+- CSP Teacher Application Process for Local Workshops [Video](http://videos.code.org/cs-principles/CSP-teacher-application-process-for-local-workshops.mp4)
+- CSP Teacher Application Process for Local Workshops [Slides](https://docs.google.com/presentation/d/1SHF7pfrJmFt53Cp6GRpvw6VIo93x4euT-InYWYfe8Q4/edit?usp=sharing)
+
 [**Back to the top**](#top)
 <br/>
