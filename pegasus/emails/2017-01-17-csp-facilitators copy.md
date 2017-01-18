@@ -15,12 +15,11 @@ If accepted, you commit to:
 
 * An **8-day intensive workshop in summer 2017** to prepare for academic year facilitation
 * Leading **four 1-day** in-person workshops in your region
-* Completing **deeper learning activities** that will help you achieve curriculum mastery
+* Completing **deeper learning activities** that will help facilitators achieve curriculum mastery
 * Working closely with a Code.org Regional Partner to **deliver professional learning**
-* Attending a **Local Leads Training** in spring 2018 to prepare you to lead a 5-day local workshop
-* Leading a **5-day local workshop** in summer 2018 for new teachers implementing CS Principles in 2018-2019
+* Attend a Local Leads Training in spring 2018 to prepare facilitators to **lead a 5-day local workshop** for new teachers implementing CS Principles in 2018-2019
 
-**[Learn more and apply](https://code.org/educate/professional-learning/facilitator) by February 1st.**
+[**Learn More and Apply**](https://code.org/educate/professional-learning/facilitator)
 
 I look forward to reading your application! If you have any questions about the Facilitator Development Program, visit [code.org/facilitator](https://code.org/educate/professional-learning/facilitator) or email facilitators@code.org. 
 

@@ -5,11 +5,11 @@ subject: "Become a Code.org facilitator in <%= state_s %>"
 
 <%= name_s %>,
 
-You were one of the first <%= state_s %> educators to use the Code.org Computer Science Principles (CS Principles) curriculum. Here's your chance to go a step further and impact even more students. Help us train the next generation of educators with this exciting, game-changing curriculum! 
+You are one of the first <%= state_s %> educators to use the Code.org Computer Science Discoveries (CS Discoveries) curriculum. Here's your chance to go a step further and impact even more students. Help us train the next generation of educators with this exciting, game-changing curriculum! 
 
-This summer, we're training <%= state_s %> teachers in our CS Principles curriculum, and we're looking for highly-qualified, flexible, and knowledgeable facilitators who can develop and support these teachers throughout the 2017-18 school year. 
+This summer, we're training <%= state_s %> teachers in our CS Discoveries curriculum, and we're looking for highly-qualified, flexible, and knowledgeable facilitators who can develop and support these teachers throughout the 2017-18 school year. 
 
-**That’s why [we’ve opened applications](https://code.org/educate/professional-learning/facilitator) for the CS Principles Facilitator Development Program.** Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum. The application period closes on **February 1st**.
+**That’s why [we’ve opened applications](https://code.org/educate/professional-learning/facilitator) for the CS Discoveries Facilitator Development Program.** Code.org's Facilitator Development Program is a highly-selective professional learning program designed to prepare and support facilitators to deliver high-quality professional development on Code.org's curriculum. The application period closes on **February 1st**.
 
 If accepted, you commit to: 
 
@@ -18,7 +18,7 @@ If accepted, you commit to:
 * Completing **deeper learning activities** that will help you achieve curriculum mastery
 * Working closely with a Code.org Regional Partner to **deliver professional learning**
 * Attending a **Local Leads Training** in spring 2018 to prepare you to lead a 5-day local workshop
-* Leading a **5-day local workshop** in summer 2018 for new teachers implementing CS Principles in 2018-2019
+* Leading a **5-day local workshop** in summer 2018 for new teachers implementing CS Discoveries in 2018-2019
 
 **[Learn more and apply](https://code.org/educate/professional-learning/facilitator) by February 1st.**
 
@@ -34,7 +34,7 @@ Facilitator Development Program Manager, Code.org
 <hr>
 
 <small>
-  You’re receiving this email because you have a Computer Science Principles section on <a href="https://studio.code.org">Code Studio</a>. Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101.</small>
+  You’re receiving this email because you have a Computer Science Discoveries section on <a href="https://studio.code.org">Code Studio</a>. Code.org is a 501c3 non-profit located at 1501 Fourth Avenue, Suite 900, Seattle, WA, 98101.</small>
   <br />
   <strong>Don't want these emails? <a href="<%= unsubscribe_link %>">Unsubscribe</a>.</strong>
 </small>
