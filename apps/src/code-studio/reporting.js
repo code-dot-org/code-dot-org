@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
+import { TestResults } from '@cdo/apps/constants';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -74,12 +75,16 @@ function validateReport(report) {
     }
 
     const inLevelGroup = report.allowMultipleSends === true;
+    const isContainedLevel = report.testResult === TestResults.CONTAINED_LEVEL_RESULT;
 
     const value = report[key];
     switch (key) {
       case 'program':
         if (report.app === 'match') {
           validateType('program', value, 'array');
+        } else if (report.app === 'multi' && isContainedLevel) {
+          // TODO - other contained levels
+          validateType('program', value, 'number');
         } else if (report.app === 'multi' && !inLevelGroup) {
           validateType('program', value, 'array');
         } else {
@@ -87,9 +92,9 @@ function validateReport(report) {
         }
         break;
       case 'fallbackResponse':
-        if (['free_response', 'multi', 'level_group', 'text_match', 'match',
-            'contract_match', 'odometer', 'text_compression', 'pixelation',
-            'external'].includes(report.app)) {
+        if (!isContainedLevel && ['free_response', 'multi', 'level_group',
+            'text_match', 'match', 'contract_match', 'odometer',
+            'text_compression', 'pixelation', 'external'].includes(report.app)) {
           // In this case, we end up with json for an object. It seems likely
           // that we could/should just pass around the object instead.
           validateType('fallbackResponse', value, 'string');
@@ -108,7 +113,7 @@ function validateReport(report) {
         break;
       case 'level':
         if (value !== null) {
-          if (report.app === 'level_group') {
+          if (report.app === 'level_group' || isContainedLevel) {
             // LevelGroups appear to report level as the position of this level
             // within the script, which seems wrong.
             validateType('level', value, 'number');
@@ -169,6 +174,11 @@ function validateReport(report) {
         break;
       case 'containedLevelResultsInfo':
         validateType('containedLevelResultsInfo', value, 'object');
+        break;
+      case 'feedback':
+        if (value) {
+          validateType('feedback', value, 'string');
+        }
         break;
       default:
         // Eventually we'd probably prefer to throw here, but I don't have enough

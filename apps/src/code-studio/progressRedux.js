@@ -4,11 +4,11 @@
 import _ from 'lodash';
 import { makeEnum } from '../utils';
 import {
-  LOCKED_RESULT,
   LevelStatus,
   mergeActivityResult,
   activityCssClass
 } from './activityUtils';
+import { TestResults } from '@cdo/apps/constants';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -81,7 +81,7 @@ export default function reducer(state = initialState, action) {
         ...stage,
         levels: stage.levels.map((level, index) => {
           const lockedStage = stage.lockable &&
-            level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT);
+            level.ids.every(id => newLevelProgress[id] === TestResults.LOCKED_RESULT);
 
           const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
           return {
