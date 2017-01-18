@@ -218,6 +218,7 @@ module LevelsHelper
   # appropriate to the level being rendered.
   def render_app_dependencies
     use_droplet = app_options[:droplet]
+    use_makerlab = @level.is_a?(Applab) && @level.makerlab_enabled
     use_netsim = @level.game == Game.netsim
     use_applab = @level.game == Game.applab
     use_gamelab = @level.game == Game.gamelab
@@ -235,6 +236,7 @@ module LevelsHelper
                use_gamelab: use_gamelab,
                use_weblab: use_weblab,
                use_phaser: use_phaser,
+               use_makerlab: use_makerlab,
                hide_source: hide_source,
                static_asset_base_path: app_options[:baseUrl]
            }

@@ -17,7 +17,7 @@ var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
-import {queryParams, hasQueryParam} from '../utils';
+var queryParams = require('../utils').queryParams;
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -70,7 +70,6 @@ var isEditing = false;
 var currentSources = {
   source: null,
   html: null,
-  makerAPIsEnabled: false,
   animations: null
 };
 
@@ -85,15 +84,12 @@ function packSources() {
  * Populate our current sources API object based off of given data
  * @param {string} data.source
  * @param {string} data.html
- * @param {SerializedAnimationList} data.animations
- * @param {boolean} data.makerAPIsEnabled
  */
 function unpackSources(data) {
   currentSources = {
     source: data.source,
     html: data.html,
-    animations: data.animations,
-    makerAPIsEnabled: data.makerAPIsEnabled
+    animations: data.animations
   };
 }
 
@@ -187,14 +183,6 @@ var projects = module.exports = {
       return;
     }
     return current.useFirebase;
-  },
-
-  /**
-   * Whether this project's source has Maker APIs enabled.
-   * @returns {boolean}
-   */
-  useMakerAPIs() {
-    return currentSources.makerAPIsEnabled;
   },
 
   /**
@@ -382,8 +370,6 @@ var projects = module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
-   * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
-   * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -394,11 +380,6 @@ var projects = module.exports = {
     if (this.isProjectLevel() || current) {
       if (currentSources.html) {
         sourceHandler.setInitialLevelHtml(currentSources.html);
-      }
-
-      setMakerAPIsStatusFromQueryParams();
-      if (currentSources.makerAPIsEnabled) {
-        sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
       if (currentSources.animations) {
@@ -469,7 +450,7 @@ var projects = module.exports = {
   getStandaloneApp() {
     switch (appOptions.app) {
       case 'applab':
-        return 'applab';
+        return appOptions.level.makerlabEnabled ? 'makerlab' : 'applab';
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
@@ -536,8 +517,7 @@ var projects = module.exports = {
         this.sourceHandler.getLevelSource().then(response => {
           const source = response;
           const html = this.sourceHandler.getLevelHtml();
-          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-          this.save({source, html, animations, makerAPIsEnabled}, callback, forceNewVersion);
+          this.save({source, html, animations}, callback, forceNewVersion);
         });
       });
       return;
@@ -624,8 +604,7 @@ var projects = module.exports = {
       this.sourceHandler.getLevelSource().then(response => {
         const source = response;
         const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const newSources = {source, html, animations, makerAPIsEnabled};
+        const newSources = {source, html, animations};
         if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
           hasProjectChanged = false;
           callCallback();
@@ -881,19 +860,6 @@ function fetchAbuseScoreAndPrivacyViolations(callback) {
   Promise.all(deferredCallsToMake).then(function () {
     callback();
   });
-}
-
-/**
- * Temporarily allow for setting Maker APIs enabled / disabled via URL parameters.
- */
-function setMakerAPIsStatusFromQueryParams() {
-  if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = true;
-  }
-
-  if (hasQueryParam('disableMaker')) {
-    currentSources.makerAPIsEnabled = false;
-  }
 }
 
 /**
