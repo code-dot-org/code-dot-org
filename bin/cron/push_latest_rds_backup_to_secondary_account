@@ -4,6 +4,9 @@ Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
 require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
 require 'cdo/hip_chat'
+require 'cdo/cron_helper'
+
+TASK_NAME = 'Backup RDS Snapshot To Secondary Account'
 
 # Get the AWS account ID for a set of credentials
 # @param credentials [SharedCredentials] the AWS credentials
@@ -132,14 +135,18 @@ def main
       })
       wait_for_snapshot_copy(backed_up_snapshot)
       HipChat.developers "Completed cross account RDS backup: #{latest_snapshot.snapshot_id}"
+      CronHelper.report_cron_daily_result TASK_NAME, true
     rescue Aws::RDS::Errors::DBSnapshotAlreadyExists
       HipChat.developers "RDS snapshot backup error: #{latest_snapshot.snapshot_id} already backed up"
+      CronHelper.report_cron_daily_result TASK_NAME, false
     end
   ensure
     # Clean up the temporary snapshot
     puts "Deleting temporary backup snapshot #{copied_snapshot.snapshot_id}"
     copied_snapshot.delete
   end
+rescue # catch-all to report any failure
+  CronHelper.report_cron_daily_result TASK_NAME, false
 end
 
 main
