@@ -18,6 +18,9 @@ exports.ResultType = {
  * Enumeration of test results.
  * EMPTY_BLOCK_FAIL and EMPTY_FUNCTION_BLOCK_FAIL can only occur if
  * StudioApp.checkForEmptyBlocks_ is true.
+ * A number of these results are enumerated on the dashboard side in
+ * activity_constants.rb, and it's important that these two files are kept in
+ * sync.
  * NOTE: We store the results for user attempts in our db, so changing these
  * values would necessitate a migration
  */
@@ -44,7 +47,6 @@ exports.TestResults = {
   QUESTION_MARKS_IN_NUMBER_FIELD: 17, // Block has ??? instead of a value.
   EMPTY_FUNCTIONAL_BLOCK: 18,         // There's a functional block with an open input
   EXAMPLE_FAILED: 19,                 // One of our examples didn't match the definition
-  MINIMUM_PASS_RESULT: 20,
 
   // start using negative values, since we consider >= 20 to be "solved"
   NESTED_FOR_SAME_VARIABLE: -2,       // We have nested for loops each using the same counter variable
@@ -58,7 +60,14 @@ exports.TestResults = {
 
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50,           // Progress was saved without submitting for review, or was unsubmitted.
-  UNVALIDATED_SUBLEVEL: -49,          // Either a member of a LevelGroup or a contained level, for which the result has not been validated
+  UNVALIDATED_SUBLEVEL: -51,          // Either a member of a LevelGroup or a contained level, for which the result has not been validated
+
+  // Numbers below 20 are generally considered some form of failure (though this isn't
+  // entirely true now that we have results like UNSUBMITTED_ATTEMPT/UNVALIDATED_SUBLEVEL
+  // that are not strictly success or failure). Numbers >= 20 generally indicate some
+  // form of success (although again there are values like REVIEW_REJECTED_RESULT that
+  // don't seem to quite meet that restriction.
+  MINIMUM_PASS_RESULT: 20,
 
   // The level was solved in a non-optimal way.  User may advance or retry.
   TOO_MANY_BLOCKS_FAIL: 20,               // More than the ideal number of blocks were used.

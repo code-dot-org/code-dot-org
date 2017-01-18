@@ -72,7 +72,7 @@ module ApplicationHelper
       'submitted'
     elsif result.nil? || result == 0
       'not_tried'
-    elsif result >= Activity::FREE_PLAY_RESULT || result == Activity::CONTAINED_LEVEL_ATTEMPT
+    elsif result >= Activity::FREE_PLAY_RESULT || result == Activity::UNVALIDATED_SUBLEVEL
       'perfect'
     elsif result >= Activity::MINIMUM_PASS_RESULT
       'passed'
