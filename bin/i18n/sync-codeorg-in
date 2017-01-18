@@ -10,9 +10,11 @@ require 'fileutils'
 require 'yaml'
 require 'tempfile'
 
+require_relative 'utils'
+
 def pull_in_files_for_translation
   localize_instructions
-  exec "bin/i18n-codeorg/in.sh"
+  run_bash_script "bin/i18n-codeorg/in.sh"
 end
 
 def find_instruction(f)
