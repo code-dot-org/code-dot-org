@@ -11,11 +11,8 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import { getStore } from './redux';
 import { authorizeLockable, setViewType, ViewType } from './stageLockRedux';
 import { getHiddenStages } from './hiddenStageRedux';
-import {
-  SUBMITTED_RESULT,
-  LOCKED_RESULT,
-  LevelStatus,
-} from './activityUtils';
+import { LevelStatus } from './activityUtils';
+import { TestResults } from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
@@ -86,7 +83,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   }, currentLevelId, saveAnswersBeforeNavigation);
 
   store.dispatch(mergeProgress(_.mapValues(progressData.levels,
-    level => level.submitted ? SUBMITTED_RESULT : level.result)));
+    level => level.submitted ? TestResults.SUBMITTED_RESULT : level.result)));
 
   // Provied a function that can be called later to merge in progress now saved on the client.
   progress.refreshStageProgress = function () {
@@ -180,10 +177,10 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
     if (data.levels) {
       const levelProgress = _.mapValues(data.levels, level => {
         if (level.status === LevelStatus.locked) {
-          return LOCKED_RESULT;
+          return TestResults.LOCKED_RESULT;
         }
         if (level.submitted || level.readonly_answers) {
-          return SUBMITTED_RESULT;
+          return TestResults.SUBMITTED_RESULT;
         }
 
         return level.result;
