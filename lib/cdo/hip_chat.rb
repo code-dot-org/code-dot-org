@@ -37,6 +37,8 @@ class HipChat
   end
 
   def self.message(room, message, options={})
+    post_to_hipchat(room, message, options)
+
     channel = "\##{Slack::CHANNEL_MAP[room] || room}"
     Slack.message slackify(message.to_s), channel: channel, username: @@name, color: options[:color]
   end
