@@ -315,14 +315,6 @@ var drawMap = function () {
     backgroundLayer.appendChild(tile);
   }
 
-  var wallOverlay = document.createElementNS(SVG_NS, 'image');
-  wallOverlay.setAttribute('id', 'wallOverlay');
-  wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
-  wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
-  wallOverlay.setAttribute('x', 0);
-  wallOverlay.setAttribute('y', 0);
-  backgroundLayer.appendChild(wallOverlay);
-
   if (level.coordinateGridBackground) {
     studioApp.createCoordinateGridBackground({
       svg: 'backgroundLayer',
@@ -3405,6 +3397,15 @@ Studio.drawMapTiles = function (svg) {
   var overlayURI = Studio.walls.getWallOverlayURI();
   if (overlayURI) {
     var wallOverlay = document.getElementById('wallOverlay');
+    if (!wallOverlay) {
+      wallOverlay = document.createElementNS(SVG_NS, 'image');
+      wallOverlay.setAttribute('id', 'wallOverlay');
+      wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
+      wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
+      wallOverlay.setAttribute('x', 0);
+      wallOverlay.setAttribute('y', 0);
+      backgroundLayer.appendChild(wallOverlay);
+    }
     wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
   }
 
