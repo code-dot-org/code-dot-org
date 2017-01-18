@@ -162,6 +162,7 @@
   "dropletBlock_whenTouchTauntaun_description": "This function executes when the droid touches Tauntaun characters.",
   "dropletBlock_whenTouchProbot_description": "This function executes when the droid touches Probot characters.",
   "dropletBlock_whenUp_description": "This function executes when the up button is pressed.",
+  "elseCode": "else",
   "emotion": "mood",
   "endGameWin": "end game as a win",
   "endGameLose": "end game as a loss",

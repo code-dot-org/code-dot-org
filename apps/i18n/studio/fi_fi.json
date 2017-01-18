@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Onnittelut! Lisäsit koodia luodaksesi hiiridroideja. Nyt voit siirtyä seuraavaan tehtävään tai kokeilla napata uudet 20 hiiridroidia. Voit helpottaa tehtävää lisäämällä niitä enemmän. (Pidä nuolinäppäimiä tai ruudun nappeja pohjassa liikuaksesi nopeammin.)",
   "failedChangeSettingTimeout": "Nappaa kolme Kapinallispilottia siirtyäksesi eteenpäin.",
   "failedChangeSettingSettings": "Tee oma peli. Läpäistäksesi tehtävän, sinun täytyy muuttaa sekä droidiasi että sen nopeutta.",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",
