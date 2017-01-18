@@ -28,7 +28,10 @@ Our focus is primarily on K-12 learning, which is where the diversity problem be
 
 But more importantly, computer science is now a foundational science for all 21st century careers, making access in K-12 to this knowledge an equity issue the country must address.
 
-Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. Below are examples of some of the specific tactics we use address diversity issues:
+## Diversity of students in our courses
+<center><img src="/images/infographics/fit-800/diversity-courses.png"/></center>
+
+Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Below are examples of some of the specific tactics we use address diversity issues:
 
 
 ## Curriculum materials, professional development designed to recruit and retain women and underrepresented students of color
