@@ -5,6 +5,7 @@ require_relative '../../dashboard/config/environment'
 require 'aws-sdk'
 require 'cdo/hip_chat'
 require 'cdo/cron_helper'
+require 'cdo/only_one'
 
 TASK_NAME = 'Backup RDS Snapshot To Secondary Account'
 
@@ -111,6 +112,11 @@ end
 # which requires setting appropriate secrets in our Chef config (which will come through via crontab.erb)
 def main
   HipChat.developers 'Beginning cross-account RDS backup'
+  unless only_one_running?(__FILE__)
+    CronHelper.report_cron_daily_result TASK_NAME, false
+    HipChat.log 'Cross-account RDS backup failed, previous task is still running!', color: 'red', notify: 1
+    return
+  end
   credentials_primary = Aws::SharedCredentials.new(profile_name: 'default')
   rds_primary = Aws::RDS::Resource.new(credentials: credentials_primary)
   credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
