@@ -745,6 +745,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '#codeApp', 0
   end
 
+  test 'includes makerlab javascript dependencies when makerlab level' do
+    sign_in @teacher
+
+    level = create :makerlab
+    script_level = create :script_level, levels: [level]
+
+    get :show, script_id: script_level.script, stage_position: script_level.stage, id: script_level.position, user_id: @teacher.id
+
+    assert_select 'script[src*=makerlab]'
+  end
+
+  test 'excludes makerlab javascript dependencies when applab level' do
+    sign_in @teacher
+
+    level = create :applab
+    script_level = create :script_level, levels: [level]
+
+    get :show, script_id: script_level.script, stage_position: script_level.stage, id: script_level.position, user_id: @teacher.id
+
+    assert_select 'script[src*=makerlab]', false
+  end
+
   test 'shows expanded teacher panel when student is chosen' do
     sign_in @teacher
 

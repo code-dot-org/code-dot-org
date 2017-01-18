@@ -187,39 +187,7 @@ levels.custom = {
     "callMyFunction": null,
     "callMyFunction_n": null,
     "return": null,
-    "comment": null,
-
-    // Maker
-    "pinMode": null,
-    "digitalWrite": null,
-    "digitalRead": null,
-    "analogWrite": null,
-    "analogRead": null,
-
-    // Circuit Playground
-    "on": null,
-    "off": null,
-    "toggle": null,
-    "blink": null,
-    "stop": null,
-    "color": null,
-    "intensity": null,
-    "led.on": null,
-    "led.off": null,
-    "buzzer.frequency": null,
-    "buzzer.note": null,
-    "buzzer.off": null,
-    "accelerometer.getOrientation": null,
-    "accelerometer.start": null,
-    "accelerometer.getAcceleration": null,
-    "isPressed": null,
-    "holdtime": null,
-    "value": null,
-    "setScale": null,
-    "start": null,
-    "getAveragedValue": null,
-    "toggleSwitch.isOpen": null,
-    "onBoardEvent": null
+    "comment": null
   },
 
   // "randomNumber_max": null, // DEPRECATED

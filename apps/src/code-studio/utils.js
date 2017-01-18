@@ -10,14 +10,6 @@ export function resetWindowLocation() {
   windowLocation = window.location;
 }
 
-export function hasQueryParam(name) {
-  const parsedParams = queryParams();
-
-  // can't call hasOwnProperty directly due to bug in query-string:
-  // https://github.com/sindresorhus/query-string/issues/50
-  return Object.prototype.hasOwnProperty.call(parsedParams, name);
-}
-
 /**
  * Gets the URL querystring params.
  * @param name {string=} Optionally pull a specific param.

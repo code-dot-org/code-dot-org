@@ -393,6 +393,8 @@ module.exports = function (grunt) {
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
+    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
+
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',

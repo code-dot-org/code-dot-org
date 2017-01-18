@@ -92,6 +92,9 @@ var devtool = process.env.CHEAP ?
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
   externals: {
+    "johnny-five": "var JohnnyFive",
+    "playground-io": "var PlaygroundIO",
+    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
   },
   plugins: [
@@ -120,6 +123,9 @@ var karmaConfig = _.extend({}, baseConfig, {
     }),
   }),
   externals: {
+    "johnny-five": "var JohnnyFive",
+    "playground-io": "var PlaygroundIO",
+    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
 
     // The below are necessary for enzyme to work.
