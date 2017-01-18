@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+
+require 'open-uri'
+require 'json'
+require_relative '../../dashboard/config/environment'
+require 'cdo/hip_chat'
+require 'cdo/only_one'
+
+# This watchdog script verifies that the following list of tasks have all reported
+# success to the #cron-daily Slack room at least once over the past day.
+# If any have not, a message is sent to the #infrastructure room each time this script runs.
+
+# This script assumes #cron-daily contains less than 100 messages per day
+
+TASKS_TO_VERIFY = [
+    'Backup S3 To Secondary Account',
+    'Backup RDS Snapshot To Secondary Account'
+].freeze
+
+SLACK_TOKEN = CDO.slack_token.freeze
+DEVELOPERS_CHANNEL_ID = CDO.developers_channel_id.freeze
+CRON_REPORT_CHANNEL = 'cron-daily'.freeze
+LOOKBACK_SECONDS = 60 * 60 * 26 # Look back a little more than 1 day
+
+parsed_channels = JSON.parse(open("https://slack.com/api/channels.list?token=#{SLACK_TOKEN}").read)
+CHANNEL_ID = parsed_channels['channels'].find {|x| x['name'] == CRON_REPORT_CHANNEL}['id'].freeze
+
+def list_contains_task_success(list, taskname)
+  success_message = "#{taskname} : success"
+  list.include? success_message
+end
+
+def complain_about(task)
+  HipChat.message 'infrastructure', "<!here|here> Daily cron task '#{task}' has not reported success in the past day, please investigate!", color: 'red'
+end
+
+def main
+  channel_history = JSON.parse(open("https://slack.com/api/channels.history?token=#{SLACK_TOKEN}&channel=#{CHANNEL_ID}").read)
+
+  # Do a bunch of digging to pull out the relevant information from the response from Slack
+  messages = channel_history['messages']
+  useful_fields = messages.map { |x| {ts: x['ts'], attachments: x['attachments']} }
+  with_attachments = useful_fields.select { |x| !x[:attachments].nil? }
+  current_timestamp = Time.now.to_i
+  time_filtered = with_attachments.select { |x| current_timestamp - x[:ts].to_f < LOOKBACK_SECONDS}
+  texts = time_filtered.map { |x| x[:attachments][0]['text'] }
+
+  TASKS_TO_VERIFY.each do |task|
+    unless list_contains_task_success(texts, task)
+      complain_about task
+    end
+  end
+end
+
+main if only_one_running?(__FILE__)
