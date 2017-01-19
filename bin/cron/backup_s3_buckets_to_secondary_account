@@ -12,23 +12,42 @@ BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'.freeze
 S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/".freeze
 S3S3MIRROR_COMMAND = 's3s3mirror.sh'.freeze
 
+BUCKETS_TO_SKIP = [
+  'cdo-art', # 120M elements, 7.1tb, seems to be safe to skip
+  'cdo-dist', # 170k, 31gb, unnecessary
+  'cdo-dynamo-backup', # 81k, 15gb
+  'cdo-logs', # 20M, 12tb, skip!
+  'cucumber-logs', # 1.5M, 80gb
+  'pd-workshop-surveys',
+].freeze
+
 BUCKETS_TO_BACKUP = [
+  'amis-for-475661607190-in-us-east-1-wsc4j6no',
+  'aws-athena-query-results-475661607190-us-east-1',
+  'aws-logs-475661607190-us-east-1',
+  'cdo-ami',
+  'cdo-j5-test',
+  'cdo-mc-test',
+  'codedotorg',
+  'computinginthecore.com',
+  'computinginthecore.net',
+  'computinginthecore.org',
+  'downloads.computinginthecore.org',
+  'www.computinginthecore.com',
+  'www.computinginthecore.net',
+  'www.computinginthecore.org',
   'audio.code.org',
   'cdo-animation-library',
-  # 'cdo-art', # 120M elements, 7.1tb, seems to be safe to skip
   'cdo-backups',
   'cdo-build-logs',
   'cdo-build-package',
   'cdo-circle-utils',
   'cdo-curriculum',
-  # 'cdo-dist', # 170k, 31gb, unnecessary
-  # 'cdo-dynamo-backup', # 81k, 15gb
   'cdo-email-images',
   'cdo-error',
   'cdo-fetch', # 10k, 9gb
   'cdo-form-uploads', # 10k, 1.2gb
   'cdo-lib',
-  # 'cdo-logs', # 20M, 12tb, skip!
   'cdo-map-reduce',
   'cdo-offline-2',
   'cdo-offline-hoc',
@@ -46,7 +65,6 @@ BUCKETS_TO_BACKUP = [
   'cdo-videos',
   'cf-templates-p9nfb0gyyrpf-us-east-1',
   'codepipeline-us-east-1-418960518203',
-  # 'cucumber-logs', # 1.5M, 80gb
   'deprecated-data',
   'dms-cwnluin4utwebpwk33pew5qnem',
   'downloads.code.org',
@@ -55,11 +73,33 @@ BUCKETS_TO_BACKUP = [
   'images.code.org',
   'learn.dev-code',
   'offline-apps',
-  # 'pd-workshop-surveys',
   'redshift-tableau', # 25k, 65gb
   'tableau-connector',
   'videos.code.org' # 714, 30gb
 ].freeze
+
+LIST_BUCKETS_COMMAND = 'aws s3 ls | awk \'{ print $3 }\''
+def verify_bucket_list
+  buckets_output = `#{LIST_BUCKETS_COMMAND}`
+  buckets = buckets_output.split("\n").sort
+  all_mentioned_buckets = (BUCKETS_TO_BACKUP + BUCKETS_TO_SKIP).sort
+  mentioned_not_found = all_mentioned_buckets - buckets
+  found_not_mentioned = buckets - all_mentioned_buckets
+  unless mentioned_not_found.empty?
+    message = "S3 buckets were listed in backup_buckets_to_secondary_account, but not found on account:\n"
+    mentioned_not_found.each do |bucket|
+      message += bucket + "\n"
+    end
+    HipChat.log message, color: 'red'
+  end
+  unless found_not_mentioned.empty?
+    message = "S3 buckets were found in account that are not listed in backup_buckets_to_secondary_account:\n"
+    found_not_mentioned.each do |bucket|
+      message += bucket + "\n"
+    end
+    HipChat.log message, color: 'red'
+  end
+end
 
 def debug_puts(text)
   puts text if DEBUG_OUTPUT
@@ -71,6 +111,9 @@ def main
     HipChat.log 'S3 backup task failed, previous task is still running!', color: 'red', notify: 1
     return
   end
+
+  verify_bucket_list
+
   start_time = Time.now
   debug_puts "Beginning S3 backup sync at #{Time.now}"
   HipChat.log("Beginning S3 backup sync at #{Time.now}")
