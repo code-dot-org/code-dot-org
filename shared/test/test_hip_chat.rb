@@ -24,7 +24,7 @@ class HipchatTest < Minitest::Test
   # Verify correct behavior in the simple success case.
   def test_post_to_hipchat
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(
-      :body => 'OK'
+      body: 'OK'
     )
 
     HipChat.post_to_hipchat('fake_room', 'my_message1')
@@ -40,9 +40,9 @@ class HipchatTest < Minitest::Test
   # Verify that we retry with exponential backoff on a HipChat failure.
   def test_post_to_hipchat_with_failures
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(
-      {:status => ['500', 'Server Error']},
-      {:status => ['500', 'Server Error']},
-      {:body => 'OK'}
+      {status: ['500', 'Server Error']},
+      {status: ['500', 'Server Error']},
+      {body: 'OK'}
     )
 
     HipChat.post_to_hipchat('fake_room', 'my_message2')
@@ -75,7 +75,7 @@ class HipchatTest < Minitest::Test
   # Verify that we give up if there are too many HipChat failures.
   def test_post_to_hipchat_with_repeated_failure
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(
-      {:status => ['500', 'Server Error']}
+      {status: ['500', 'Server Error']}
     )
 
     CDO.log.info 'Expecting following HipChat post to fail:'
@@ -91,7 +91,7 @@ class HipchatTest < Minitest::Test
   # Verify correct behavior when hip chat logging is disabled.
   def test_disable_hip_chat_logging
     stub_request(:post, 'http://api.hipchat.com/v1/rooms/message').to_return(
-      {:status => ['500', 'Server Error']}
+      {status: ['500', 'Server Error']}
     )
 
     CDO.hip_chat_logging = false

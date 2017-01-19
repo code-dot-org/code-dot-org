@@ -4,11 +4,11 @@ class CalloutTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::Stream
 
   setup do
-    @level = create(:level, :blockly, :level_num => 'level1_2_3')
-    @script = create(:script, :id => 333)
-    @script2 = create(:script, :id => 321)
-    @script_level = create(:script_level, :script => @script, :levels => [@level])
-    @script_level2 = create(:script_level, :script => @script2, :levels => [@level])
+    @level = create(:level, :blockly, level_num: 'level1_2_3')
+    @script = create(:script, id: 333)
+    @script2 = create(:script, id: 321)
+    @script_level = create(:script_level, script: @script, levels: [@level])
+    @script_level2 = create(:script_level, script: @script2, levels: [@level])
     @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')
   end
 

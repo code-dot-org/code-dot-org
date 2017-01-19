@@ -31,8 +31,8 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 - **Advocacy and Government Affairs**
 	- [Director of State Government Affairs](#govaffairs)
-- **Outreach**
-	- [Regional Manager, Southwest](#outreach)
+- **Professional Learning**
+	- [Program Coordinator](#coord)
 - **Internships**
  	- [Curriculum Team Intern](#edintern)
 
@@ -86,54 +86,36 @@ Additionally, the ideal candidate has:
 
 - Passion for our mission of #CSForAll
 - Bachelor’s degree required; Master’s degree desired
-- 5-8+ years of experience in government relations/advocacy/policy development in education, preferably at the state level
+- 5-8+ years of experience in government relations/advocacy/policy development in education (required, preferably at the state level)
 - Experience in developing K-12 computer science education policy (nice to have, but not required) 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="outreach"href="#outreach">Regional Manager, Southwest (California preferred)</a>
+## <a name="coord"href="#coord">Program Manager (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is looking for a Regional Manager to support Code.org’s education efforts through the development, implementation, and maintenance of Code.org’s partnership model with [Regional Partners](https://code.org/educate/regional-partner). This position is highly focused on developing relationships and building sustainability of Computer Science in California and throughout the southwest.
+Code.org is looking for a Program Coordinator to join Code.org’s Professional Learning & Community team. Our PLC team is responsible for the success of Code.org professional development across the U.S. This role will work collaboratively with a team of program managers and coordinators. 
 
-Responsibilities of the position include:
+This is a full time, exempt position based in our Seattle office. Duties of this role are focused on providing support to program managers, which includes: 
 
-- Outreach
-	- Recruit Regional Partners to partner with Code.org and school districts to teach Computer Science in K-12 schools.
-	- Present Code.org partnership model
-	- Track partnership status
-- Manage and support implementation for all partners in region at K-12 grade levels
-	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
-	- Implement partnership model
-	- Assist regional partners in district, school, and teacher recruitment/selection/retention
-	- Troubleshoot regional partnership issues
-	- Work with Professional Learning & Community team to coordinate regional professional learning workshops for teachers
-- Market and support the program in the region
-- Represent Code.org and present the partnership model at conferences and other venues, as needed
-
-
-Ability and willingness to travel up to 25% of the time is required.
+- Utilizing our customer service system to respond to professional development questions from teachers in a timely manner
+- Drafting communications to stakeholders, responding to requests for information, preparing materials for training workshops, distributing materials externally
+- Updating and managing event attendee lists and tracking numbers and teacher activity across programs
+- Coordinating event logistics (dates, location, travel, accommodations, catering); acting as primary logistics point-of-contact
+- Attending and participating in meetings and recording notes/follow-up items, as appropriate
+- Special projects (perform research, prepare documentation, develop templates, etc.)
 
 **Experience and Qualifications:**
 
-The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
+We are looking for a self-starter, skilled in successfully delivering projects, able to multi-task cheerfully, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Proficiency with Google Apps (Docs, Sheets, Slides, Forms) or the ability to learn these and other new applications quickly is required. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
 
-- Demonstrated ability to pitch the Code.org educational model to potential partners
-- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle
-- Advanced organizational and problem solving skills
-- Understanding of and passion for equity in computer science and K-12 education
+The ideal candidate has the following qualifications:
 
-Additional desired strengths include:
-
-- Experience working with school districts in a project implementation capacity
-- Recent computer science teaching experience in a K-12 school setting
-- Strong existing connections to the computer science community 
-
-Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+- Has a bachelors degree (Computer Science background/experience not required)
+- Ability and willingness to travel up to 20% time 
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
-
 
 ## <a name="edintern"href="#edintern">Curriculum Team Intern (Seattle, WA)</a>
 

@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 FactoryGirl.allow_class_lookup = false
 FactoryGirl.define do
   factory :section_hidden_stage do
@@ -682,7 +683,12 @@ FactoryGirl.define do
 
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
-    teacher {create :teacher}
+    association :teacher
+  end
+
+  factory :pd_attendance_no_account, class: 'Pd::Attendance' do
+    association :session, factory: :pd_session
+    association :enrollment, factory: :pd_enrollment
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
@@ -731,3 +737,4 @@ FactoryGirl.define do
     association :school_district
   end
 end
+# rubocop:enable Metrics/BlockLength

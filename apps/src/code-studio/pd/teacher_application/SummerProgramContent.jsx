@@ -67,7 +67,7 @@ export default React.createClass({
             groupName="committedToSummer"
             answers={['Yes', 'No']}
             includeOther
-            onChange={this.radioButtonListChange}
+            onChange={this.props.onChange}
             selectedItems={this.props.formData.committedToSummer}
             required
             errorText={this.props.errorData.committedToSummer}
@@ -107,7 +107,7 @@ export default React.createClass({
                 groupName="ableToAttendAssignedSummerWorkshop"
                 answers={['Yes', 'No']}
                 includeOther
-                onChange={this.radioButtonListChange}
+                onChange={this.props.onChange}
                 selectedItems={this.props.formData.ableToAttendAssignedSummerWorkshop}
                 required
                 errorText={this.props.errorData.ableToAttendAssignedSummerWorkshop}
@@ -123,7 +123,7 @@ export default React.createClass({
                   a space for you in a different location."
                 groupName="fallbackSummerWorkshops"
                 answers={Object.keys(groupTwoOrGroupOneCsdWorkshops)}
-                onChange={this.checkListChange}
+                onChange={this.props.onChange}
                 selectedItems={this.props.formData.fallbackSummerWorkshops}
                 required
                 errorText={this.props.errorData.fallbackSummerWorkshops}

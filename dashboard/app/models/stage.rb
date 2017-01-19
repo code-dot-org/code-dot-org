@@ -95,24 +95,22 @@ class Stage < ActiveRecord::Base
           title: localized_title,
           flex_category: localized_category,
           lockable: !!lockable,
-          # Ensures we get the cached ScriptLevels, vs hitting the db
-          levels: script.script_levels.to_a.select{|sl| sl.stage_id == id}.map(&:summarize),
+          levels: cached_script_levels.map(&:summarize),
       }
 
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a multi-page assessment, in which
-      # case we'll receive extra puzzle pages to be added to the existing summary.
+      # The last level in a stage might be a long assessment, so add extra information
+      # related to that.  This might include information for additional pages if it
+      # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
         last_level_summary = stage_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        unless extra_levels.empty?
-          stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-          last_level_summary[:url] << "/page/1"
-        end
+        stage_data[:levels] += extra_levels
+        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
+        last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels
@@ -187,5 +185,10 @@ class Stage < ActiveRecord::Base
         readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
       }
     end
+  end
+
+  # Ensures we get the cached ScriptLevels, vs hitting the db.
+  def cached_script_levels
+    script_levels.map{|sl| Script.cache_find_script_level(sl.id)}
   end
 end

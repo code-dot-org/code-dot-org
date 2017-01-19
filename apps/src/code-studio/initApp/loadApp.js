@@ -71,8 +71,11 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    // Always mark the workspace as readonly when we have contained levels:
-    appOptions.readonlyWorkspace = true;
+    if (!appOptions.level.edit_blocks) {
+      // Always mark the workspace as readonly when we have contained levels,
+      // unless editing:
+      appOptions.readonlyWorkspace = true;
+    }
   }
 
   // Sets up default options and initializes blockly
@@ -100,7 +103,7 @@ export function setupApp(appOptions) {
         return;
       }
       // or unless the program is actually the result for a contained level
-      if (!appOptions.hasContainedLevels) {
+      if (!appOptions.hasContainedLevels || appOptions.level.edit_blocks) {
         if (appOptions.channel && !appOptions.level.edit_blocks) {
           // Don't send the levelSource or image to Dashboard for channel-backed levels,
           // unless we are actually editing blocks and not really completing a level
@@ -117,7 +120,6 @@ export function setupApp(appOptions) {
         report.callback = appOptions.report.callback;
         trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
       }
-      report.scriptName = appOptions.scriptName;
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
       trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
@@ -412,7 +414,7 @@ window.apps = {
 };
 
 let APP_OPTIONS;
-function setAppOptions(appOptions) {
+export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
   window.appOptions = appOptions;

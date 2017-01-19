@@ -1,10 +1,12 @@
 import { assert } from 'chai';
 import { TestResults } from '@cdo/apps/constants';
 import { LevelStatus } from '@cdo/apps/code-studio/activityUtils';
+import _ from 'lodash';
 
 import reducer, {
   initProgress,
   mergeProgress,
+  mergePeerReviewProgress,
   disablePostMilestone,
   setUserSignedIn,
   setIsHocScript,
@@ -163,7 +165,7 @@ describe('progressReduxTest', () => {
         339: TestResults.ALL_PASS,
         // stage 2 level 3 is incomplete
         341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
-      }, undefined);
+      });
       const nextState = reducer(initializedState, action);
 
       assert.deepEqual(nextState.levelProgress, {
@@ -324,7 +326,8 @@ describe('progressReduxTest', () => {
       currentLevelId: undefined,
       professionalLearningCourse: true,
       saveAnswersBeforeNavigation: false,
-      stages: [stageData[1], peerReviewStage],
+      stages: stageData,
+      peerReviewStage: peerReviewStage,
       scriptName: 'alltheplcthings'
     };
 
@@ -336,6 +339,7 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.professionalLearningCourse, true);
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(nextState.stages, intialOverviewProgressWithPeerReview.stages);
+      assert.deepEqual(nextState.peerReviewStage, peerReviewStage);
       assert.equal(nextState.scriptName, 'alltheplcthings');
       assert.equal(nextState.currentStageId, undefined);
     });
@@ -347,12 +351,13 @@ describe('progressReduxTest', () => {
         levelProgress: {
           341: TestResults.MISSING_RECOMMENDED_BLOCK_UNFINISHED
         },
-        stages: [stageData[1], peerReviewStage]
+        stages: [stageData[1]],
+        peerReviewStage: peerReviewStage
       };
       assert.equal(state.stages[0].levels[2].ids[0], 341);
       state.stages[0].levels[2].status = LevelStatus.attempted;
 
-      assert.deepEqual(state.stages[1].levels[0], {
+      assert.deepEqual(peerReviewStage.levels[0], {
         ids: [0],
         kind: "peer_review",
         title: "",
@@ -362,9 +367,7 @@ describe('progressReduxTest', () => {
         locked: true
       });
 
-      // Right now peer reviews use mergeProgress. Ultimately, I think they should
-      // have their own action.
-      const action = mergeProgress({}, [{
+      const action = mergePeerReviewProgress([{
         id: 13,
         locked: false,
         name: 'Ready to review',
@@ -377,25 +380,23 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(nextState.levelProgress, state.levelProgress,
         'no change to levelProgress');
-      const peerReviewLevels = nextState.stages[1].levels;
-      assert.equal(peerReviewLevels.length, state.stages[1].levels.length,
+      const peerReviewLevels = nextState.peerReviewStage.levels;
+      assert.equal(peerReviewLevels.length, state.peerReviewStage.levels.length,
         'same number of peer review levels in stage');
 
-      // compare changed stage
-      // TODO: This is the same as the earlier assert, but now fails. This implies
-      // we're mutating state in this reducer, which is a no-no. This should be
-      // fixed
-      // assert.deepEqual(state.stages[1].levels[0], {
-      //   ids: [0],
-      //   kind: "peer_review",
-      //   title: "",
-      //   url: "",
-      //   name: "Reviews unavailable at this time",
-      //   icon: "fa-lock",
-      //   locked: true
-      // });
+      // First assert about previous state, to make sure that we didn't mutate it
+      assert.deepEqual(state.peerReviewStage.levels[0], {
+        ids: [0],
+        kind: "peer_review",
+        title: "",
+        url: "",
+        name: "Reviews unavailable at this time",
+        icon: "fa-lock",
+        locked: true
+      });
 
-      assert.deepEqual(nextState.stages[1].levels[0], {
+      // Now assert for our new state
+      assert.deepEqual(nextState.peerReviewStage.levels[0], {
         // TODO: Seems strange to have both an id and ids. Can we make this better?
         id: 13,
         ids: [0],

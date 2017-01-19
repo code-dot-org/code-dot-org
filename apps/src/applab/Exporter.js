@@ -1,14 +1,153 @@
 /* global dashboard */
 import $ from 'jquery';
-
+import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
 import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/exportProject.html.ejs';
 import exportProjectReadmeEjs from '../templates/exportProjectReadme.md.ejs';
 import logToCloud from '../logToCloud';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+
+// This whitelist determines which appOptions properties
+// will get exported with the applab app, appearing in the
+// final applab.js file. It's a recursive whitelist, so
+// each key/value pair is the name of a property and either
+// a boolean indicating whether or not that property should
+// be included or another whitelist for subproperties at that
+// location.
+const APP_OPTIONS_WHITELIST = {
+  "levelGameName": true,
+  "skinId": true,
+  "baseUrl": true,
+  "app": true,
+  "droplet": true,
+  "pretty": true,
+  "level": {
+    "skin": true,
+    "editCode": true,
+    "embed": true,
+    "isK1": false,
+    "isProjectLevel": true,
+    "skipInstructionsPopup": true,
+    "disableParamEditing": true,
+    "disableVariableEditing": true,
+    "useModalFunctionEditor": true,
+    "useContractEditor": true,
+    "contractHighlight": true,
+    "contractCollapse": true,
+    "examplesHighlight": true,
+    "examplesCollapse": true,
+    "definitionHighlight": true,
+    "definitionCollapse": true,
+    "freePlay": true,
+    "appWidth": true,
+    "appHeight": true,
+    "sliderSpeed": true,
+    "calloutJson": true,
+    "disableExamples": true,
+    "showTurtleBeforeRun": true,
+    "autocompletePaletteApisOnly": true,
+    "textModeAtStart": true,
+    "designModeAtStart": true,
+    "hideDesignMode": true,
+    "beginnerMode": true,
+    "levelId": true,
+    "puzzle_number": true,
+    "stage_total": true,
+    "iframeEmbed": true,
+    "lastAttempt": true,
+    "submittable": true
+  },
+  "showUnusedBlocks": true,
+  "fullWidth": true,
+  "noHeader": true,
+  "noFooter": true,
+  "smallFooter": true,
+  "codeStudioLogo": true,
+  "hasI18n": true,
+  "callouts": true,
+  "channel": true,
+  "readonlyWorkspace": true,
+  "isLegacyShare": true,
+  "postMilestone": true,
+  "postFinalMilestone": true,
+  "puzzleRatingsUrl": false,
+  "authoredHintViewRequestsUrl": false,
+  "serverLevelId": false,
+  "gameDisplayName": true,
+  "publicCaching": true,
+  "is13Plus": true,
+  "hasContainedLevels": true,
+  "hideSource": true,
+  "share": true,
+  "labUserId": false,
+  "firebaseName": false,
+  "firebaseAuthToken": false,
+  "firebaseChannelIdSuffix": false,
+  "isSignedIn": true,
+  "pinWorkspaceToBottom": true,
+  "hasVerticalScrollbars": true,
+  "showExampleTestButtons": true,
+  "rackEnv": false,
+  "report": {
+    "fallback_response": true,
+    "callback": true,
+    "sublevelCallback": true,
+  },
+  "sendToPhone": true,
+  "send_to_phone_url": true,
+  "copyrightStrings": {
+    "thank_you": true,
+    "help_from_html": true,
+    "art_from_html": true,
+    "code_from_html": true,
+    "powered_by_aws": true,
+    "trademark": true,
+  },
+  "teacherMarkdown": false,
+  "dialog": {
+    "skipSound": true,
+    "preTitle": true,
+    "fallbackResponse": true,
+    "callback": true,
+    "sublevelCallback": true,
+    "app": true,
+    "level": true,
+    "shouldShowDialog": true,
+  },
+  "locale": true,
+};
+
+// this configuration forces certain values to show up
+// in the appOptions config. These values will be assigned
+// regardless of whether or not they are in the whitelist
+const APP_OPTIONS_OVERRIDES = {
+  readonlyWorkspace: true,
+};
+
+export function getAppOptionsFile() {
+  function getAppOptionsAtPath(whitelist, sourceOptions) {
+    if (!whitelist || !sourceOptions) {
+      return null;
+    }
+    return _.reduce(whitelist, (memo, value, key) => {
+      if (value === true) {
+        memo[key] = sourceOptions[key];
+      } else if (typeof value === 'object' && typeof sourceOptions[key] === 'object') {
+        memo[key] = getAppOptionsAtPath(value, sourceOptions[key]);
+      }
+      return memo;
+    }, {});
+  }
+  const options = getAppOptionsAtPath(APP_OPTIONS_WHITELIST, getAppOptions());
+  _.merge(options, APP_OPTIONS_OVERRIDES);
+  return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
+}
+
 
 /**
  * Extracts a CSS file from the given HTML dom node by traversing each node and
@@ -94,10 +233,10 @@ export default {
         zipPath: appName + '/applab_locale.js'
       }, {
         url: '/blockly/js/applab-api.js' + cacheBust,
-        zipPath: appName + '/applab-api.js'
+        zipPath: appName + '/applab/applab-api.js'
       }, {
         url: '/blockly/css/applab.css' + cacheBust,
-        zipPath: appName + '/applab.css'
+        zipPath: appName + '/applab/applab.css'
       },
     ].concat(dashboard.assets.listStore.list().map(function (asset) {
       return {
@@ -129,9 +268,9 @@ export default {
       return download(assetToDownload.url, assetToDownload.dataType || 'text');
     })).then(
       function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
-        zip.file(appName + "/applab-api.js",
-                 [commonLocale, applabLocale, applabApi].join('\n'));
-        zip.file(appName + "/applab.css", applabCSS);
+        zip.file(appName + "/applab/applab-api.js",
+                 [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+        zip.file(appName + "/applab/applab.css", applabCSS);
 
         Array.from(arguments).slice(4).forEach(function ([data], index) {
           zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});

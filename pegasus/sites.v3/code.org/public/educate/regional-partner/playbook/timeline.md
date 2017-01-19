@@ -29,6 +29,7 @@ table {width: 100%;}
 | January 24, 2017<br/> 10:00 am - 11:00 am PT<br/> | Guest Speaker Series: Ten80 Education<br/> Click [here](https://code.zoom.us/j/776875785) to join the Zoom Meeting. (Optional) |
 | January 27, 2017 | Code.org notifies Cycle #1 applicants of decisions |
 | January 30, 2017 - February 10, 2017 | Teacher Appplication Review Cycle #2 |
+| January 31, 2017<br/> 10:00 am - 11:00 am PT<br/> | Guest Speaker Series: TEALS<br/> Click [here](https://code.zoom.us/j/182454845) to join the Zoom Meeting. (Optional) |
 
 
 ## February Areas of Focus

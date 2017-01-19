@@ -133,5 +133,6 @@ class MilestoneParser
     {'count' => 0, 'error' => e.message}
   end
 
-  def stub_fetch(key, path, bytes); end
+  def stub_fetch(key, path, bytes)
+  end
 end

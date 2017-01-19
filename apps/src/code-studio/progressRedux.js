@@ -13,6 +13,7 @@ import {
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
+const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
@@ -33,6 +34,7 @@ const initialState = {
   levelProgress: {},
   focusAreaPositions: [],
   stages: null,
+  peerReviewStage: null,
   peerReviewsPerformed: [],
   showTeacherInfo: false,
   signInState: SignInState.Unknown,
@@ -45,58 +47,78 @@ const initialState = {
  */
 export default function reducer(state = initialState, action) {
   if (action.type === INIT_PROGRESS) {
+    let stages = action.stages;
     // Re-initializing with full set of stages shouldn't blow away currentStageId
     const currentStageId = state.currentStageId ||
-      (action.stages.length === 1 ? action.stages[0].id : undefined);
+      (stages.length === 1 ? stages[0].id : undefined);
     // extract fields we care about from action
-    return Object.assign({}, state, {
+    return {
+      ...state,
       currentLevelId: action.currentLevelId,
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
-      stages: action.stages.map(stage => _.omit(stage, 'hidden')),
+      stages: stages.map(stage => _.omit(stage, 'hidden')),
+      peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId
-    });
+    };
   }
 
   if (action.type === MERGE_PROGRESS) {
-    // TODO: _.mergeWith after upgrading to Lodash 4+
     let newLevelProgress = {};
-    const combinedLevels = Object.keys(Object.assign({}, state.levelProgress, action.levelProgress));
+    const combinedLevels = Object.keys({
+      ...state.levelProgress,
+      ...action.levelProgress
+    });
     combinedLevels.forEach(key => {
       newLevelProgress[key] = mergeActivityResult(state.levelProgress[key], action.levelProgress[key]);
     });
 
-    return Object.assign({}, state, {
+    return {
+      ...state,
       levelProgress: newLevelProgress,
-      stages: state.stages.map(stage => Object.assign({}, stage, {levels: stage.levels.map((level, index) => {
-        if (stage.lockable && level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT)) {
-          return Object.assign({}, level, { status: LevelStatus.locked });
-        }
+      stages: state.stages.map(stage => ({
+        ...stage,
+        levels: stage.levels.map((level, index) => {
+          const lockedStage = stage.lockable &&
+            level.ids.every(id => newLevelProgress[id] === LOCKED_RESULT);
 
-        const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
-        if (action.peerReviewsPerformed && stage.flex_category === 'Peer Review') {
-          Object.assign(level, action.peerReviewsPerformed[index]);
-        }
+          const id = level.uid || bestResultLevelId(level.ids, newLevelProgress);
+          return {
+            ...level,
+            status: lockedStage ? LevelStatus.locked : activityCssClass(newLevelProgress[id])
+          };
+        })
+      }))
+    };
+  }
 
-        return Object.assign({}, level, level.kind !== 'peer_review' && {
-          status: activityCssClass(newLevelProgress[id])
-        });
-      })}))
-    });
+  if (action.type === MERGE_PEER_REVIEW_PROGRESS) {
+    return {
+      ...state,
+      peerReviewStage: {
+        ...state.peerReviewStage,
+        levels: state.peerReviewStage.levels.map((level, index) => ({
+          ...level,
+          ...action.peerReviewsPerformed[index]
+        }))
+      }
+    };
   }
 
   if (action.type === UPDATE_FOCUS_AREAS) {
-    return Object.assign({}, state, {
+    return {
+      ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
       focusAreaPositions: action.focusAreaPositions
-    });
+    };
   }
 
   if (action.type === SHOW_TEACHER_INFO) {
-    return Object.assign({}, state, {
+    return {
+      ...state,
       showTeacherInfo: true
-    });
+    };
   }
 
   if (action.type === DISABLE_POST_MILESTONE) {
@@ -106,7 +128,6 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  // TODO (brent) - write tests for new reducers
   if (action.type === SET_USER_SIGNED_IN) {
     return {
       ...state,
@@ -159,18 +180,23 @@ function bestResultLevelId(levelIds, progressData) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, scriptName}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  peerReviewStage,
   scriptName
 });
 
-export const mergeProgress = (levelProgress, peerReviewsPerformed) => ({
+export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,
-  levelProgress,
+  levelProgress
+});
+
+export const mergePeerReviewProgress = peerReviewsPerformed => ({
+  type: MERGE_PEER_REVIEW_PROGRESS,
   peerReviewsPerformed
 });
 
