@@ -204,7 +204,9 @@ class ScriptLevel < ActiveRecord::Base
         url: build_script_level_url(self)
     }
 
-    summary[:name] = level.name if kind == 'named_level'
+    if kind == 'named_level'
+      summary[:name] = level.display_name || level.name
+    end
 
     if Rails.application.config.levelbuilder_mode
       summary[:key] = level.key
