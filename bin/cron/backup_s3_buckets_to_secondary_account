@@ -5,12 +5,12 @@ require 'aws-sdk'
 require 'cdo/cron_helper'
 require 'cdo/only_one'
 
-TASK_NAME = 'Backup S3 To Secondary Account'
+TASK_NAME = 'Backup S3 To Secondary Account'.freeze
 DEBUG_OUTPUT = false
 
-BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'
-S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/"
-S3S3MIRROR_COMMAND = 's3s3mirror.sh'
+BACKUP_BUCKET_ROOT = 'cdo-secondary-backup'.freeze
+S3S3MIRROR_DIR = "/home/ubuntu/#{Rails.env}/tools/s3s3mirror/".freeze
+S3S3MIRROR_COMMAND = 's3s3mirror.sh'.freeze
 
 BUCKETS_TO_BACKUP = [
   'audio.code.org',
@@ -59,7 +59,7 @@ BUCKETS_TO_BACKUP = [
   'redshift-tableau', # 25k, 65gb
   'tableau-connector',
   'videos.code.org' # 714, 30gb
-]
+].freeze
 
 def debug_puts(text)
   puts text if DEBUG_OUTPUT
