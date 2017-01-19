@@ -57,70 +57,12 @@ class HipChat
       gsub(/<br\/?>/, "\n")
   end
 
-  # If CDO.hip_chat_logging is true, post message to hipchat with
-  # exponential backoff, retrying at most `max_retries` times.
-  # Otherwise log to CDO.log.
-  #
-  # Implementation notes: The synchronous post with exponential
-  # backoff is done on a newly spawned thread to avoid blocking the
-  # main Ruby thread.  This is OK for current usage because we log to
-  # Hipchat infrequently.
   def self.post_to_hipchat(room, message, options={})
     unless CDO.hip_chat_logging
       # Output to standard log if HipChat isn't configured
       CDO.log.info(message.to_s)
       return
     end
-
-    if options[:wrap_with_tag]
-      message = "<#{options[:wrap_with_tag]}>#{message}</#{options[:wrap_with_tag]}>"
-    end
-
-    # Make the initial request synchronously.
-    begin
-      succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
-    rescue  # Handle timeouts and other exceptions gracefully.
-      succeeded = false
-    end
-    return if succeeded
-
-    # If that failed, back off exponentially and retry, working
-    # on a thread to avoid stalling the main thread.
-    @@current_retry_thread_for_test = Thread.new do
-      backoff = @@initial_backoff
-      retries = 1
-      while !succeeded && retries <= MAX_RETRIES
-        @@total_backoff_for_test += backoff
-        @@retries_for_test += 1
-        sleep(backoff)
-        retries += 1
-        backoff *= 2  # Exponentially back off.
-        succeeded = post_hipchat_form(room, message, options).is_a?(Net::HTTPSuccess)
-      end
-
-      unless succeeded
-        CDO.log.info("#{room}: #{message}")
-        CDO.log.info('^^^ Unable to post message to HipChat due to repeated errors')
-      end
-    end
-  end
-
-  def self.post_hipchat_form(room, message, options)
-    body = message.to_s
-    if body.length > MAX_MESSAGE_SIZE
-      # trim to 10000 chars, including some space for our truncation prefix
-      body = TRUNCATION_PREFIX + body.slice(-MAX_MESSAGE_SIZE + TRUNCATION_PREFIX.length, MAX_MESSAGE_SIZE)
-    end
-    uri = URI.parse('http://api.hipchat.com/v1/rooms/message')
-    Net::HTTP.post_form(
-      uri,
-      {color: 'gray'}.merge(options).merge({
-        from: @@name,
-        auth_token: @@auth_token,
-        room_id: room.to_s,
-        message: body
-      })
-    )
   end
 
   # Wait the current HipChat request to succeeed (possibly including retries).
