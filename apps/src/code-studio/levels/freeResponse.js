@@ -1,4 +1,5 @@
 import { TestResults } from '../../constants';
+import { onAnswerChanged } from './codeStudioLevels';
 
 export default class FreeResponse {
   constructor(levelId) {
@@ -7,10 +8,10 @@ export default class FreeResponse {
     $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
       textarea.blur(function () {
-        window.dashboard.codeStudioLevels.onAnswerChanged(levelId, true);
+        onAnswerChanged(levelId, true);
       });
       textarea.on('input', null, null, function () {
-        window.dashboard.codeStudioLevels.onAnswerChanged(levelId, false);
+        onAnswerChanged(levelId, false);
       });
     });
   }
@@ -34,6 +35,6 @@ export default class FreeResponse {
   }
 
   getCurrentAnswerFeedback() {
-    // Not implemented
+    // Not used by free response
   }
 }
