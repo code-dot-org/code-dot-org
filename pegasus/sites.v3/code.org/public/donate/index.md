@@ -8,7 +8,7 @@ require_https: true
 <img src="/images/fit-800/donate-wide.jpg" alt="Kids at computers"/>
 
 <br/>
-[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL)&nbsp; [<button>Donate by Amazon</button>](https://code.org/donate/amazon)
+[<button>Donate by credit card</button>](#creditcard) &nbsp;  [<button>Donate by PayPal</button>](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HV8WDN6DRDVDL) &nbsp;  [<button>Donate by Amazon</button>](/donate/amazon)
 
 
 <br/>
