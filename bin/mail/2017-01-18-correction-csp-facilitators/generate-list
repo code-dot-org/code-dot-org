@@ -15,7 +15,7 @@ CURRENT_FACILITATORS_FILE = 'current_facilitators.csv'.freeze
 def generate_csp_list
   # All US teachers that are teaching CSP (via a section assigned a CSP script)
   # for which we have a state.
-  dashboard_query = '
+  dashboard_query_csp = '
     SELECT users.name, users.email, user_geos.state
     FROM users
     INNER JOIN user_geos
@@ -34,7 +34,7 @@ def generate_csp_list
 
   results = {}
 
-  DASHBOARD_REPORTING_DB_READONLY.fetch(dashboard_query).each do |row|
+  DASHBOARD_REPORTING_DB_READONLY.fetch(dashboard_query_csp).each do |row|
     email = row[:email]
     next if UNSUBSCRIBERS.include? email
     results[email] = {
@@ -43,6 +43,27 @@ def generate_csp_list
       state_s: row[:state],
       email: email
     }
+  end
+
+  # Remove the overlap between CSP and CSD teachers.
+  dashboard_query_csd = '
+    SELECT users.name, users.email, user_geos.state
+    FROM users
+    INNER JOIN user_geos
+      ON user_geos.user_id = users.id
+    INNER JOIN sections
+      ON sections.user_id = users.id
+    WHERE users.user_type = "teacher"
+      AND users.email <> ""
+      AND user_geos.country = "United States"
+      AND user_geos.state IS NOT NULL
+      AND sections.script_id IN (181, 187, 169, 189)
+    GROUP BY users.email
+  '
+
+  DASHBOARD_REPORTING_DB_READONLY.fetch(dashboard_query_csd).each do |row|
+    email = row[:email]
+    results.delete(email)
   end
 
   results
