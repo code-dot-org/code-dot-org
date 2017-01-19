@@ -14,7 +14,7 @@ require 'tempfile'
 require_relative 'utils'
 
 def pull_in_files_for_translation
-  localize_instructions
+  localize_level_content
   run_bash_script "bin/i18n-codeorg/in.sh"
 end
 
@@ -38,9 +38,14 @@ def reformat_quotes
   end
 end
 
-# Pull in instructions for levelbuilder levels from .level files
-# and save them to instructions.en.yml to be translated
-def localize_instructions
+# Pull in various fields for levelbuilder levels from .level files and
+# save them to [field_name].en.yml files to be translated. Fields included:
+#   instructions
+#   markdown instructions
+#   failure message override
+#   authored hints
+#   callouts
+def localize_level_content
   level_instructions = Hash.new
   level_markdown_instructions = Hash.new
   level_failure_message_overrides = Hash.new
