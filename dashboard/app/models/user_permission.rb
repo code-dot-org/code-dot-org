@@ -13,6 +13,8 @@
 #  index_user_permissions_on_user_id_and_permission  (user_id,permission) UNIQUE
 #
 
+require 'cdo/hip_chat'
+
 class UserPermission < ActiveRecord::Base
   belongs_to :user
 
@@ -40,4 +42,33 @@ class UserPermission < ActiveRecord::Base
   ].freeze
 
   validates_inclusion_of :permission, in: VALID_PERMISSIONS
+
+  after_save :log_permission_save
+  before_destroy :log_permission_delete
+
+  def log_permission_save
+    # In particular, we do not log for adhoc or test environments.
+    return unless [:staging, :levelbuilder, :production].include? rack_env
+
+    HipChat.message 'infra-security',
+      'Updating UserPermission: '\
+        "environment: #{rack_env}, "\
+        "user ID: #{self.user.id}, "\
+        "email: #{self.user.email}, "\
+        "permission: #{self.permission}",
+      color: 'yellow'
+  end
+
+  def log_permission_delete
+    # In particular, we do not log for adhoc or test environments.
+    return unless [:staging, :levelbuilder, :production].include? rack_env
+
+    HipChat.log 'infra-security',
+      'Deleting UserPermission: '\
+        "environment: #{rack_env}, "\
+        "user ID: #{self.user.id}, "\
+        "email: #{self.user.email}, "\
+        "permission: #{self.permission}",
+      color: 'yellow'
+  end
 end

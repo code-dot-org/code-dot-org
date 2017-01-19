@@ -93,6 +93,11 @@ function unpackSources(data) {
   };
 }
 
+/**
+ * Used by getProjectUrl() to extract the project URL.
+ */
+const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
+
 var projects = module.exports = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
@@ -114,6 +119,46 @@ var projects = module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * This method is used so that it can be mocked for unit tests.
+   */
+  getUrl() {
+    return location.href;
+  },
+
+  /**
+   * @param [fragment] optional url fragment to append to the end of the project URL.
+   * @returns the absolute url to the root of this project without a trailing slash.
+   *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK. Hash strings
+   *     are removed, but query strings are retained. If provided, fragment will be
+   *     added to the end of the URL, before the query string.
+   */
+  getProjectUrl(fragment = '') {
+    const match = this.getUrl().match(PROJECT_URL_PATTERN);
+    let url;
+    if (match) {
+      url = match[1];
+    } else {
+      url = this.getUrl(); // i give up. Let's try this?
+    }
+    var hashIndex = url.indexOf('#');
+    if (hashIndex !== -1) {
+      url = url.substring(0, hashIndex);
+    }
+    var queryString = '';
+    var queryIndex = url.indexOf('?');
+    if (queryIndex !== -1) {
+      queryString = url.substring(queryIndex);
+      url = url.substring(0, queryIndex);
+    }
+    if (fragment.startsWith('/')) {
+      while (url.endsWith('/')) {
+        url = url.substring(0, url.length - 1);
+      }
+    }
+    return url + fragment + queryString;
   },
 
   getCurrentTimestamp() {

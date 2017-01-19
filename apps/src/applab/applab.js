@@ -58,6 +58,7 @@ import {
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+var project = require('@cdo/apps/code-studio/initApp/project');
 
 var ResultType = studioApp.ResultType;
 var TestResults = studioApp.TestResults;
@@ -351,37 +352,27 @@ function shouldRenderFooter() {
   return studioApp.share;
 }
 
-const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
-/**
- * @returns the absolute url to the root of this project without a trailing slash.
- *     For example: http://studio.code.org/projects/applab/GobB13Dy-g0oK
- */
-function getProjectUrl() {
-  const match = location.href.match(PROJECT_URL_PATTERN);
-  if (match) {
-    return match[1];
-  }
-  return location.href; // i give up. Let's try this?
-}
-
 function renderFooterInSharedGame() {
-  var divApplab = document.getElementById('divApplab');
-  var footerDiv = document.createElement('div');
+  const divApplab = document.getElementById('divApplab');
+  const footerDiv = document.createElement('div');
   footerDiv.setAttribute('id', 'footerDiv');
   divApplab.parentNode.insertBefore(footerDiv, divApplab.nextSibling);
-  var menuItems = [
+
+  const isIframeEmbed = studioApp.reduxStore.getState().pageConstants.isIframeEmbed;
+
+  const menuItems = [
     {
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
     },
-    !dom.isMobile() && {
+    isIframeEmbed && !dom.isMobile() && {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
     },
-    window.location.search.indexOf('nosource') < 0 && {
+    isIframeEmbed && window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
-      link: getProjectUrl() + '/view',
+      link: project.getProjectUrl('/view'),
       newWindow: true,
     },
     {
@@ -591,7 +582,10 @@ Applab.init = function (config) {
     vizAppWidth = Applab.appWidth;
   }
 
-  adjustAppSizeStyles(document.getElementById(config.containerId));
+  const containerEl = document.getElementById(config.containerId);
+  if (containerEl) {
+    adjustAppSizeStyles(containerEl);
+  }
 
   var showDebugButtons = (!config.hideSource && !config.level.debuggerDisabled);
   var breakpointsEnabled = !config.level.debuggerDisabled;
@@ -621,7 +615,10 @@ Applab.init = function (config) {
       return Applab.hasDataStoreAPIs(Applab.getCode());
     },
     onWarningsComplete: function () {
-      window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      if (config.share) {
+        // If this is a share page, autostart the app after warnings closed.
+        window.setTimeout(Applab.runButtonClick.bind(studioApp), 0);
+      }
     }
   };
 
@@ -717,8 +714,14 @@ Applab.init = function (config) {
   // to starting code by levelbuilders will be shown.
   config.ignoreLastAttempt = config.embed;
 
-  Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-  Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  if (level.dataTables) {
+    Applab.storage.populateTable(level.dataTables, false); // overwrite = false
+  }
+  if (level.dataProperties) {
+    Applab.storage.populateKeyValue(level.dataProperties, false); // overwrite = false
+  }
+
+  Applab.handleVersionHistory = studioApp.getVersionHistoryHandler(config);
 
   var onMount = function () {
     studioApp.init(config);
@@ -882,7 +885,8 @@ Applab.render = function () {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: window.dashboard && window.dashboard.project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
-    onScreenCreate: designMode.createScreen
+    onScreenCreate: designMode.createScreen,
+    handleVersionHistory: Applab.handleVersionHistory
   });
   ReactDOM.render(
     <Provider store={studioApp.reduxStore}>
@@ -953,6 +957,16 @@ Applab.toggleDivApplab = function (isVisible) {
 };
 
 /**
+ * reset and initialize the state of the turtle object
+ */
+Applab.resetTurtle = function () {
+  Applab.turtle = {};
+  Applab.turtle.heading = 0;
+  Applab.turtle.x = Applab.appWidth / 2;
+  Applab.turtle.y = Applab.appHeight / 2;
+};
+
+/**
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
@@ -962,10 +976,7 @@ Applab.reset = function () {
   // Reset configurable variables
   Applab.message = null;
   delete Applab.activeCanvas;
-  Applab.turtle = {};
-  Applab.turtle.heading = 0;
-  Applab.turtle.x = Applab.appWidth / 2;
-  Applab.turtle.y = Applab.appHeight / 2;
+  Applab.resetTurtle();
   apiTimeoutList.clearTimeouts();
   apiTimeoutList.clearIntervals();
 
@@ -1391,8 +1402,7 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
-  const containedLevelResultsInfo = studioApp.hasContainedLevels &&
-    getContainedLevelResultInfo();
+  const containedLevelResultsInfo = studioApp.hasContainedLevels ? getContainedLevelResultInfo() : null;
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)

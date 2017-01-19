@@ -2240,10 +2240,19 @@ en:
       U5 - Create PT Prep - Student Introduction:
         description here: description here
         title: title
+      U5 - Create PT review - Student Introduction:
+        description here: description here
+        title: title
       U5 - Explore PT - Student Introduction:
         description here: description here
         title: title
       U5 - Explore PT Prep - Student Introduction:
+        description here: description here
+        title: title
+      U5 - Explore PT Review - Student Introduction:
+        description here: description here
+        title: title
+      U5 - PT Prep - Digital Portfolio and tech setup:
         description here: description here
         title: title
       U5 color sleuth check correct:
@@ -2268,6 +2277,25 @@ en:
         description here: description here
         title: title
       U6 - updateRecord - Student Introduction:
+        description here: description here
+        title: title
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Make a Plan - Student Links: {}
+      U6 Create PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT Review - Student Links:
         description here: description here
         title: title
       Understanding Communication Protocols: {}
@@ -6875,6 +6903,7 @@ en:
         Before I decide, I would like to have a better sense of how well I will do: Before I decide, I would like to have a better sense of how well I will do
         Before I decide, I would like to know more about the AP exam and what it involves: Before I decide, I would like to know more about the AP exam and what it involves
         I was unaware I had the option.: I was unaware I had the option.
+        I'd like to, but am concerned about the costs: I'd like to, but am concerned about the costs
         No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
         Yes, definitely.: Yes, definitely.
       cspu3_assess1_callfunction:

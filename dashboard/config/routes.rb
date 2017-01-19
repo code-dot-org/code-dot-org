@@ -82,7 +82,7 @@ Dashboard::Application.routes.draw do
   get 'discourse/sso' => 'discourse_sso#sso'
   post '/auth/lti', to: 'lti_provider#sso'
 
-  root :to => "home#index"
+  root to: "home#index"
   get '/home_insert', to: 'home#home_insert'
   get '/health_check', to: 'home#health_check'
   namespace :home do
@@ -193,9 +193,9 @@ Dashboard::Application.routes.draw do
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
-  post '/milestone/:user_id/level/:level_id', :to => 'activities#milestone', :as => 'milestone_level'
-  post '/milestone/:user_id/:script_level_id', :to => 'activities#milestone', :as => 'milestone'
-  post '/milestone/:user_id/:script_level_id/:level_id', :to => 'activities#milestone', :as => 'milestone_script_level'
+  post '/milestone/:user_id/level/:level_id', to: 'activities#milestone', as: 'milestone_level'
+  post '/milestone/:user_id/:script_level_id', to: 'activities#milestone', as: 'milestone'
+  post '/milestone/:user_id/:script_level_id/:level_id', to: 'activities#milestone', as: 'milestone_script_level'
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
@@ -217,15 +217,14 @@ Dashboard::Application.routes.draw do
 
   # internal search tools
   get '/admin/find_students', to: 'admin_search#find_students', as: 'find_students'
-  get '/admin/search_for_teachers', to: 'admin_search#search_for_teachers', as: 'search_for_teachers'
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
 
   # internal engineering dashboards
-  get '/admin/dynamic_config', :to => 'dynamic_config#show', as: 'dynamic_config_state'
-  get '/admin/feature_mode', :to => 'feature_mode#show', as: 'feature_mode'
-  post '/admin/feature_mode', :to => 'feature_mode#update', as: 'feature_mode_update'
+  get '/admin/dynamic_config', to: 'dynamic_config#show', as: 'dynamic_config_state'
+  get '/admin/feature_mode', to: 'feature_mode#show', as: 'feature_mode'
+  post '/admin/feature_mode', to: 'feature_mode#update', as: 'feature_mode_update'
 
   get '/admin/account_repair', to: 'admin_users#account_repair_form', as: 'account_repair_form'
   post '/admin/account_repair', to: 'admin_users#account_repair', as: 'account_repair'
@@ -235,11 +234,11 @@ Dashboard::Application.routes.draw do
   post '/admin/confirm_email', to: 'admin_users#confirm_email', as: 'confirm_email'
   post '/admin/undelete_user', to: 'admin_users#undelete_user', as: 'undelete_user'
 
-  get '/admin/styleguide', :to => redirect('/styleguide/')
+  get '/admin/styleguide', to: redirect('/styleguide/')
 
-  get '/admin/gatekeeper', :to => 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
-  post '/admin/gatekeeper/delete', :to => 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
-  post '/admin/gatekeeper/set', :to => 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+  get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
+  post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
+  post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
   get '/redeemprizes', to: 'reports#prizes', as: 'my_prizes'
 
@@ -247,10 +246,10 @@ Dashboard::Application.routes.draw do
 
   resources :zendesk_session, only: [:index]
 
-  post '/report_abuse', :to => 'report_abuse#report_abuse'
-  get '/report_abuse', :to => 'report_abuse#report_abuse_form'
+  post '/report_abuse', to: 'report_abuse#report_abuse'
+  get '/report_abuse', to: 'report_abuse#report_abuse_form'
 
-  get '/too_young', :to => redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
+  get '/too_young', to: redirect { |_p, req| req.flash[:alert] = I18n.t("errors.messages.too_young"); '/' }
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
@@ -316,6 +315,8 @@ Dashboard::Application.routes.draw do
         get 'attendance/:session_id', action: 'show', controller: 'workshop_attendance'
         put 'attendance/:session_id/user/:user_id', action: 'create', controller: 'workshop_attendance'
         delete 'attendance/:session_id/user/:user_id', action: 'destroy', controller: 'workshop_attendance'
+        put 'attendance/:session_id/enrollment/:enrollment_id', action: 'create_by_enrollment', controller: 'workshop_attendance'
+        delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'

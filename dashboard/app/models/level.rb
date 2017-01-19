@@ -27,8 +27,8 @@ class Level < ActiveRecord::Base
   belongs_to :game
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
-  belongs_to :solution_level_source, :class_name => "LevelSource" # TODO: Do we even use this?
-  belongs_to :ideal_level_source, :class_name => "LevelSource" # "see the solution" link uses this
+  belongs_to :solution_level_source, class_name: "LevelSource" # TODO: Do we even use this?
+  belongs_to :ideal_level_source, class_name: "LevelSource" # "see the solution" link uses this
   belongs_to :user
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
@@ -58,6 +58,7 @@ class Level < ActiveRecord::Base
     markdown_instructions
     authored_hints
     instructions_important
+    display_name
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -212,7 +213,7 @@ class Level < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.send(type) do
         xml.config do
-          hash = serializable_hash(:include => :level_concept_difficulty).deep_dup
+          hash = serializable_hash(include: :level_concept_difficulty).deep_dup
           config_attributes = filter_level_attributes(hash)
           xml.cdata(JSON.pretty_generate(config_attributes.as_json))
         end
@@ -338,7 +339,9 @@ class Level < ActiveRecord::Base
   def contained_levels
     names = properties["contained_level_names"]
     return [] unless names.present?
-    Level.where(name: properties["contained_level_names"])
+    properties["contained_level_names"].map do |contained_level_name|
+      Script.cache_find_level(contained_level_name)
+    end
   end
 
   private

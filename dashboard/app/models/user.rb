@@ -151,7 +151,7 @@ class User < ActiveRecord::Base
   has_many :districts_users, class_name: 'DistrictsUsers'
   has_many :districts, through: :districts_users
 
-  belongs_to :invited_by, :polymorphic => true
+  belongs_to :invited_by, polymorphic: true
 
   # TODO: I think we actually want to do this.
   # You can be associated with districts through cohorts
@@ -955,17 +955,25 @@ class User < ActiveRecord::Base
         where(user_id: user_id, level_id: level_id, script_id: script_id).
         first_or_create!
 
-      new_level_completed = true if !user_level.passing? &&
-        Activity.passing?(new_result)
-      new_csf_level_perfected = true if !user_level.perfect? &&
+      if !user_level.passing? && Activity.passing?(new_result)
+        new_level_completed = true
+      end
+      if !user_level.perfect? &&
         new_result == 100 &&
-        Script.get_from_cache(script_id).csf? &&
+        ([
+          ScriptConstants::TWENTY_HOUR_NAME,
+          ScriptConstants::COURSE2_NAME,
+          ScriptConstants::COURSE3_NAME,
+          ScriptConstants::COURSE4_NAME
+        ].include? Script.get_from_cache(script_id).name) &&
         HintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty? &&
         AuthoredHintViewRequest.
           where(user_id: user_id, script_id: script_id, level_id: level_id).
           empty?
+        new_csf_level_perfected = true
+      end
 
       # Update user_level with the new attempt.
       user_level.attempts += 1 unless user_level.best?
@@ -1001,7 +1009,7 @@ class User < ActiveRecord::Base
     end
 
     # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable)
+    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
       PeerReview.create_for_submission(user_level, level_source_id)
     end
 

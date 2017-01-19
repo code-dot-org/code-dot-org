@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "ยินดีด้วย คุณเพิ่มโค้ดเพื่อให้ Mouse Droid ปรากฏขึ้นมาได้สำเร็จแล้ว คุณสามารถไปเล่นด่านถัดไปหรือลองเล่นด่านนี้อีกครั้งแล้วจับ Mouse Droid ให้ได้ครบทั้ง 20 ตัว ลองทำให้ด่านนี้ง่ายขึ้นด้วยการเพิ่มจำนวนของ Mouse Droid ที่ปรากฎขึ้นมาอีกสิ! (กดปุ่มลูกศรบนคีย์บอร์ด (หรือบนหน้าจอ) ค้างเอาไว้เพื่อให้เดินได้เร็วขึ้น)",
   "failedChangeSettingTimeout": "ไปหา Rebel Pilot ทั้ง 3 คนเพื่อผ่านด่านนี้",
   "failedChangeSettingSettings": "สร้างเกมนี้ในรูปแบบของคุณเอง การผ่านด่านนี้ คุณต้องปรับเปลี่ยนหุ่นยนต์และตั้งความเร็วให้มัน",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",

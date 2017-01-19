@@ -1,0 +1,15 @@
+{
+  "name": "codedotorg-broken-link-checker",
+  "version": "1.0.0",
+  "description": "Checks for broken links on code.org",
+  "main": "brokenLinkChecker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "broken-link-checker": "^0.7.4",
+    "yamljs": "^0.2.8"
+  }
+}
