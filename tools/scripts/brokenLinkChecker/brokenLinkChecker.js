@@ -4,12 +4,13 @@ const blc = require('broken-link-checker');
 const https = require('https');
 const url = require('url');
 const YAML = require('yamljs');
+const path = require("path");
 
 const whitelist = require('./whitelist.json').ignore;
 
 const slackUrl =
   "https://hooks.slack.com/services/" +
-  YAML.load('../../../globals.yml')['slack_endpoint'];
+  YAML.load(path.join(__dirname, '..', '..', '..', 'globals.yml'))['slack_endpoint'];
 
 let totalLinkCount = 0;
 let totalPageCount = 0;
