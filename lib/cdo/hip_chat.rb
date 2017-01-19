@@ -4,31 +4,15 @@ require 'uri'
 require 'cdo/slack'
 
 class HipChat
-  # Initial backoff in seconds for Hipchat retries.
-  # Immutable except for test.
-  @@initial_backoff = 1.0
-
-  @@auth_token = CDO.hipchat_secret
   @@name = CDO.name[0..14]
 
-  # The number of exponential backoff retries.
-  @@retries_for_test = 0
-
-  # The total time spent waiting in exponential backoff retries.
-  @@total_backoff_for_test = 0.0
-
-  # Used to track the most recent exponential backoff thread for tests.
-  @@current_retry_thread_for_test = nil
-
-  # Maximum times to retry on test failure
-  MAX_RETRIES = 3
-
   TRUNCATION_PREFIX = '[TRUNCATED]'
-  MAX_MESSAGE_SIZE = 10000
+  MAX_MESSAGE_SIZE = 10_000
 
   def self.developers(message, options={})
-    # temporarily redirect developer logging to 'Server operations'.
-    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat logging strategy.
+    # Temporarily redirect developer logging to 'Server operations'.
+    # TODO(dave): rename or split HipChat.developers once we settle on a HipChat
+    # logging strategy.
     message('server operations', message, options)
   end
 
@@ -65,39 +49,11 @@ class HipChat
     end
   end
 
-  # Wait the current HipChat request to succeeed (possibly including retries).
-  def self.await_retries_for_test
-    @@current_retry_thread_for_test.join if @@current_retry_thread_for_test
-  end
-
-  # Returns the number of HipChat POST retries, for testing only.
-  def self.retries_for_test
-    @@retries_for_test
-  end
-
-  # Returns the total time spent waiting in exponential backoff retries,
-  # for testing only.
-  def self.total_backoff_for_test
-    @@total_backoff_for_test
-  end
-
-  # Resets the number of HipChat POST retries, for testing only.
-  def self.reset_test_statistics
-    @@retries_for_test = 0
-    @@total_backoff_for_test = 0.0
-  end
-
-  # Set the initial exponential backoff interval, for testing only.
-  def self.set_backoff_for_test(backoff)
-    @@initial_backoff = backoff
-  end
-
   def self.wrap(name)
     start_time = Time.now
     HipChat.log "Running #{name}..."
     yield if block_given?
     HipChat.log "#{name} succeeded in #{RakeUtils.format_duration(Time.now - start_time)}"
-
   rescue => e
     # notify developers room and our own room
     "<b>#{name}</b> failed in #{RakeUtils.format_duration(Time.now - start_time)}".tap do |message|
