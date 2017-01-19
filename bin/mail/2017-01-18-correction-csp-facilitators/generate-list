@@ -61,10 +61,13 @@ def generate_csp_list
     GROUP BY users.email
   '
 
+  start_count = results.size
   DASHBOARD_REPORTING_DB_READONLY.fetch(dashboard_query_csd).each do |row|
     email = row[:email]
     results.delete(email)
   end
+  end_count = results.size
+  puts "TRUNCATED #{start_count - end_count} VIA CSP and CSD overlap."
 
   results
 end
@@ -74,14 +77,13 @@ end
 def truncate_csp_list(csp_list)
   [ALREADY_APPLIED_FILE, CURRENT_FACILITATORS_FILE].each do |file|
     start_count = csp_list.size
-
     CSV.foreach(file) do |row|
-      csp_list.delete(row['email'].downcase)
+      normalized_email = row['email'] ? row['email'].downcase : nil
+      csp_list.delete(normalized_email)
     end
-
     end_count = csp_list.size
 
-    puts "TRUNCATED #{end_count - start_count} VIA #{file}."
+    puts "TRUNCATED #{start_count - end_count} VIA #{file}."
   end
 end
 
