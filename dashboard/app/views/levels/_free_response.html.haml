@@ -6,37 +6,7 @@
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
-    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, {
-      getResult: function () {
-        var response = $('#level_#{level.id}').val();
-        return {
-          response: response,
-          valid: response.length > 0,
-          result: true,
-          testResult: #{ActivityConstants::FREE_PLAY_RESULT}
-        };
-      },
-      getAppName: function () {
-        return "free_response";
-      },
-      lockAnswers: function () {
-        $("textarea#level_#{level.id}.response").prop('disabled', true);
-      },
-      getCurrentAnswerFeedback: function () {
-        // Not implemented
-      },
-      levelId: #{level.id}
-    });
-
-    $(document).ready(function() {
-      var textarea = $("textarea#level_#{level.id}.response");
-      textarea.blur(function () {
-        window.dashboard.codeStudioLevels.onAnswerChanged(#{level.id}, true);
-      });
-      textarea.on("input", null, null, function () {
-        window.dashboard.codeStudioLevels.onAnswerChanged(#{level.id}, false);
-      });
-    });
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}));
 
 - else # Otherwise we need to provide a `getResult` function.
   :javascript
