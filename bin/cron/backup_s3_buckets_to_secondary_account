@@ -81,8 +81,8 @@ BUCKETS_TO_BACKUP = [
 LIST_BUCKETS_COMMAND = 'aws s3 ls | awk \'{ print $3 }\''
 def verify_bucket_list
   buckets_output = `#{LIST_BUCKETS_COMMAND}`
-  buckets = buckets_output.split("\n").sort
-  all_mentioned_buckets = (BUCKETS_TO_BACKUP + BUCKETS_TO_SKIP).sort
+  buckets = buckets_output.split("\n")
+  all_mentioned_buckets = (BUCKETS_TO_BACKUP + BUCKETS_TO_SKIP)
   mentioned_not_found = all_mentioned_buckets - buckets
   found_not_mentioned = buckets - all_mentioned_buckets
   unless mentioned_not_found.empty?
