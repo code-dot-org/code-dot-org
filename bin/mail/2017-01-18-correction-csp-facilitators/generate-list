@@ -76,7 +76,7 @@ def truncate_csp_list(csp_list)
     start_count = csp_list.size
 
     CSV.foreach(file) do |row|
-      csp_list.delete(row['email'])
+      csp_list.delete(row['email'].downcase)
     end
 
     end_count = csp_list.size
