@@ -5,8 +5,8 @@ require_relative '../mailing-common/mailing-list-utils'
 # filtered to ONLY @schools.nyc.gov, @strongschools.nyc emails (previously those were excluded).
 
 # Use reporting DBs
-PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_writer, CDO.pegasus_reporting_db_reader
-DASHBOARD_REPORTING_DB = sequel_connect CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader
+PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
+DASHBOARD_REPORTING_DB = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
 
 # 3 categories:
 CATEGORIES = [
@@ -29,7 +29,7 @@ def create_temp_teachers_table
     CREATE TEMPORARY TABLE IF NOT EXISTS
       temp_teachers (INDEX(email))
     AS (
-      SELECT id, email COLLATE utf8_general_ci AS email
+      SELECT email COLLATE utf8_general_ci AS email
       FROM dashboard_production.users
       WHERE user_type = 'teacher'
     );
