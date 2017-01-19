@@ -20,8 +20,7 @@ export function setExternalGlobals() {
       hasPrivacyProfanityViolation: function () { return false; },
       getCurrentId: function () { return 'fake_id'; },
       isEditing: function () { return true; },
-      useFirebase: function () { return false; },
-      useMakerAPIs: function () { return false; }
+      useFirebase: function () { return false; }
     },
     assets: {
       showAssetManager: function () {},

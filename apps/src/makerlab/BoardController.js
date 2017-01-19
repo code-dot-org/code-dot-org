@@ -3,12 +3,20 @@
  */
 /* global Promise */
 
-// Polyfill node's process.hrtime for the browser, gets used by johnny-five.
-process.hrtime = require('browser-process-hrtime');
+try {
+  // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
+  process.hrtime = require('browser-process-hrtime');
 
-import five from 'johnny-five';
-import ChromeSerialPort from 'chrome-serialport';
-import PlaygroundIO from 'playground-io';
+  var five = require('johnny-five');
+  var ChromeSerialPort = require('chrome-serialport');
+  var PlaygroundIO = require('playground-io');
+} catch (e) {
+  /**
+   * These packages should currently only be downloaded and available on
+   * /p/makerlab levels, not vanilla App Lab ones, so we ignore any require
+   * failures here.
+   */
+}
 
 import _ from 'lodash';
 import {initializeCircuitPlaygroundComponents, TouchSensor} from './PlaygroundComponents';
