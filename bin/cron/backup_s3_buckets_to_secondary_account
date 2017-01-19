@@ -122,9 +122,10 @@ def main
   Dir.chdir(S3S3MIRROR_DIR)
   BUCKETS_TO_BACKUP.each do |bucket_name|
     debug_puts "Backing up #{bucket_name}"
-    debug_puts "Running command: #{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/"
     # -C marks this as a cross-account copy
-    result = `#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/`
+    backup_command = "#{S3S3MIRROR_DIR}#{S3S3MIRROR_COMMAND} -C #{bucket_name} #{BACKUP_BUCKET_ROOT}/#{bucket_name}/"
+    debug_puts "Running command: #{backup_command}"
+    result = `#{backup_command}`
     debug_puts result
   end
 
