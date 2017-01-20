@@ -1,8 +1,16 @@
 #!/usr/bin/env ruby
 require_relative '../mailing-common/mailing-list-utils'
 
-query = 'kind_s:user && role_s:teacher'
-results = query_subscribed_contacts(q: query)
-puts "#{results.count} teachers"
+DASHBOARD_REPORTING_DB = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
 
+query = 'SELECT email FROM users WHERE user_type = "teacher" AND email <> "" AND deleted_at IS NULL'
+
+results = {}
+DASHBOARD_REPORTING_DB.fetch(query).each do |row|
+  email = row[:email]
+  next if UNSUBSCRIBERS.include? email
+  results[email] = {email: email, name: row[:name]}
+end
+
+puts "#{results.size} teachers"
 export_contacts_to_csv results, 'teachers.csv'
