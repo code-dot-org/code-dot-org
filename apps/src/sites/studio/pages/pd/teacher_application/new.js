@@ -56,6 +56,7 @@ let redrawApplicationFunction = function (event) {
         <TeacherApplication
           regionalPartnerGroup={regionalPartnerGroup}
           regionalPartnerName={regionalPartnerName}
+          workshopDates={workshopDates}
           schoolDistrictData={schoolDistrictData}
           districtErrorMessageHandler={districtErrorMessageHandler}
         />,
