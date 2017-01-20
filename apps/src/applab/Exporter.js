@@ -196,6 +196,12 @@ function extractCSSFromHTML(el) {
           }
         }
         child.removeAttribute('style');
+        if (child.tagName.toLowerCase() === 'input') {
+          // make sure all input tags have a type attribute specified
+          if (!child.getAttribute('type')) {
+            child.setAttribute('type', 'text');
+          }
+        }
         if (styleDiff.length > 0) {
           css.push(selectorPrefix + '#' + child.id + ' {');
           css = css.concat(styleDiff);
