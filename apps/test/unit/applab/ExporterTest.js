@@ -7,6 +7,21 @@ import {setAppOptions, getAppOptions} from '@cdo/apps/code-studio/initApp/loadAp
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 testUtils.setExternalGlobals();
 
+const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
+const APPLAB_LOCALE_JS_CONTENT = 'applab_locale.js content';
+const APPLAB_API_JS_CONTENT = 'applab-api.js content';
+const APPLAB_CSS_CONTENT = `
+.some-css-rule {
+  background-image: url("/blockly/media/foo.png");
+}
+#some-other-rule {
+  background-image: url('/blockly/media/bar.jpg');
+}
+a.third-rule {
+  background-image: url(/blockly/media/third.jpg);
+}
+`;
+
 describe('The Exporter,', function () {
   var server, listStub;
 
@@ -14,19 +29,19 @@ describe('The Exporter,', function () {
     server = sinon.fakeServerWithClock.create();
     server.respondWith(
       /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
-      'common_locale.js content'
+      COMMON_LOCALE_JS_CONTENT
     );
     server.respondWith(
       /\/blockly\/js\/en_us\/applab_locale\.js\?__cb__=\d+/,
-      'applab_locale.js content'
+      APPLAB_LOCALE_JS_CONTENT
     );
     server.respondWith(
       /\/blockly\/js\/applab-api\.js\?__cb__=\d+/,
-      'applab-api.js content'
+      APPLAB_API_JS_CONTENT
     );
     server.respondWith(
       /\/blockly\/css\/applab\.css\?__cb__=\d+/,
-      'applab.css content'
+      APPLAB_CSS_CONTENT
     );
 
     assetPrefix.init({channel: 'some-channel-id', assetPathPrefix: '/v3/assets/'});
@@ -40,6 +55,10 @@ describe('The Exporter,', function () {
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
     server.respondWith('/v3/assets/some-channel-id/zoo.mp3', 'zoo.mp3 content');
+
+    server.respondWith('/blockly/media/foo.png', 'blockly foo.png content');
+    server.respondWith('/blockly/media/bar.jpg', 'blockly bar.jpg content');
+    server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     setAppOptions({
       "levelGameName":"Applab",
@@ -180,6 +199,7 @@ describe('The Exporter,', function () {
   describe("when exporting,", function () {
     var zipFiles = {};
     beforeEach(function (done) {
+      server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
         'console.log("hello");\nplaySound("zoo.mp3");',
@@ -192,7 +212,6 @@ describe('The Exporter,', function () {
           </div>
         </div>`
       );
-      server.respond();
 
       zipPromise.then(function (zip) {
         var relativePaths = [];
@@ -216,17 +235,40 @@ describe('The Exporter,', function () {
     });
 
     describe("will produce a zip file, which", function () {
+      it("should contain a bunch of files", () => {
+        assert.deepEqual(Object.keys(zipFiles), [
+          'my-app/',
+          'my-app/README.md',
+          'my-app/index.html',
+          'my-app/style.css',
+          'my-app/code.js',
+          'my-app/applab/',
+          'my-app/applab/applab-api.js',
+          'my-app/applab/applab.css',
+          'my-app/assets/',
+          'my-app/assets/foo.png',
+          'my-app/assets/bar.png',
+          'my-app/assets/zoo.mp3',
+          'my-app/applab/assets/',
+          'my-app/applab/assets/blockly/',
+          'my-app/applab/assets/blockly/media/',
+          'my-app/applab/assets/blockly/media/foo.png',
+          'my-app/applab/assets/blockly/media/bar.jpg',
+          'my-app/applab/assets/blockly/media/third.jpg',
+        ]);
+      });
+
       it("should contain an applab-api.js file", function () {
         assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab/applab-api.js'],
-          `${getAppOptionsFile()}\ncommon_locale.js content\napplab_locale.js content\napplab-api.js content`
+          `${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
       it("should contain an applab.css file", function () {
         assert.property(zipFiles, 'my-app/applab/applab.css');
-        assert.equal(zipFiles['my-app/applab/applab.css'], 'applab.css content');
+        assert.equal(zipFiles['my-app/applab/applab.css'], APPLAB_CSS_CONTENT);
       });
 
       it("should contain an index.html file", function () {
@@ -284,8 +326,8 @@ describe('The Exporter,', function () {
   });
 
   function runExportedApp(code, html, done) {
+    server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
-    server.respond();
 
     const relativePaths = [];
     return zipPromise.then(zip => {
