@@ -5,7 +5,7 @@ class AdminHocControllerTest < ActionController::TestCase
 
   setup do
     # Stub the DB[:forms] table (used by :event_signups).
-    DB.stubs(:[]).returns(stub(:where => stub(:group => stub(:group_and_count => stub(:order => stub(:all => []))))))
+    DB.stubs(:[]).returns(stub(where: stub(group: stub(group_and_count: stub(order: stub(all: []))))))
     # Stub the Properties table (used by :students_served).
     Properties.stubs(:get).returns(nil)
 

@@ -1,4 +1,4 @@
-task :pseudolocalize => :environment do
+task pseudolocalize: :environment do
   def pseudolocalize_string(s)
     #TODO: Something smarter
     "!!-#{s}-!!"

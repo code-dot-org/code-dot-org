@@ -36,7 +36,6 @@ import codegen from '../codegen';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
-import experiments from '../util/experiments';
 import paramLists from './paramLists.js';
 import sharedConstants from '../constants';
 import studioCell from './cell';
@@ -49,6 +48,11 @@ import {
   injectErrorHandler
 } from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -309,16 +313,6 @@ var drawMap = function () {
     tile.setAttribute('x', 0);
     tile.setAttribute('y', 0);
     backgroundLayer.appendChild(tile);
-  }
-
-  if (experiments.isEnabled('playlabWallColor')) {
-    var wallOverlay = document.createElementNS(SVG_NS, 'image');
-    wallOverlay.setAttribute('id', 'wallOverlay');
-    wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
-    wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
-    wallOverlay.setAttribute('x', 0);
-    wallOverlay.setAttribute('y', 0);
-    backgroundLayer.appendChild(wallOverlay);
   }
 
   if (level.coordinateGridBackground) {
@@ -3043,7 +3037,8 @@ Studio.encodedFeedbackImage = '';
 Studio.onPuzzleComplete = function () {
   if (Studio.executionError) {
     Studio.result = ResultType.ERROR;
-  } else if (level.freePlay && !Studio.preExecutionFailure) {
+  } else if (studioApp.hasContainedLevels ||
+      (level.freePlay && !Studio.preExecutionFailure)) {
     Studio.result = ResultType.SUCCESS;
   }
 
@@ -3073,6 +3068,13 @@ Studio.onPuzzleComplete = function () {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });
+  }
+
+  if (studioApp.hasContainedLevels && !level.edit_blocks) {
+    postContainedLevelAttempt(studioApp);
+    runAfterPostContainedLevel(
+        () => Studio.onReportComplete(getContainedLevelResultInfo().feedback));
+    return;
   }
 
   var program;
@@ -3392,12 +3394,19 @@ Studio.drawMapTiles = function (svg) {
 
   var backgroundLayer = document.getElementById('backgroundLayer');
 
-  if (experiments.isEnabled('playlabWallColor')) {
-    var overlayURI = Studio.walls.getWallOverlayURI();
-    if (overlayURI) {
-      var wallOverlay = document.getElementById('wallOverlay');
-      wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
+  var overlayURI = Studio.walls.getWallOverlayURI();
+  if (overlayURI) {
+    var wallOverlay = document.getElementById('wallOverlay');
+    if (!wallOverlay) {
+      wallOverlay = document.createElementNS(SVG_NS, 'image');
+      wallOverlay.setAttribute('id', 'wallOverlay');
+      wallOverlay.setAttribute('height', Studio.MAZE_HEIGHT);
+      wallOverlay.setAttribute('width', Studio.MAZE_WIDTH);
+      wallOverlay.setAttribute('x', 0);
+      wallOverlay.setAttribute('y', 0);
+      backgroundLayer.appendChild(wallOverlay);
     }
+    wallOverlay.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', overlayURI);
   }
 
 

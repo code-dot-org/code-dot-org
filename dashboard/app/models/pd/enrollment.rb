@@ -98,8 +98,6 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def send_exit_survey
-    return unless user
-
     # In case the workshop is reprocessed, do not send duplicate exit surveys.
     if survey_sent_at
       CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"

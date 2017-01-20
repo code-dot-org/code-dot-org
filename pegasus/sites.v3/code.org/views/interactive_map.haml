@@ -5,21 +5,28 @@
 %div#infobox.greybox
   %p.info
     Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+  %ul
+    %li
+      Only
+      %strong
+        =credit_count
+      states allow students to count computer science courses toward high school graduation.
+  
+    %li
+      There are currently
+      %strong
+        = format_integer_with_commas(jobs_nationwide)
+      open computing jobs nationwide.
+  
+    %li
+      Last year, only
+      %strong
+        = format_integer_with_commas(grads_nationwide)
+      computer science students graduated into the workforce.
   %p.info
-    Only
-    %strong
-      =credit_count
-    states allow students to count computer science courses toward high school graduation.
-  %p.info
-    There are currently
-    %strong
-      = format_integer_with_commas(jobs_nationwide)
-    open computing jobs nationwide.
-  %p.info
-    Last year, only
-    %strong
-      = format_integer_with_commas(grads_nationwide)
-    computer science students graduated into the workforce.
+    See a
+    = succeed "." do
+      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', style: 'color: white; cursor: pointer; text-decoration: underline', target: '_blank'} summary of state efforts
 
 :javascript
   var webServiceLocation = "/promote/state/";

@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Myší Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Myších Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
   "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",

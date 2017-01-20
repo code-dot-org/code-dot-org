@@ -4,17 +4,17 @@ class PeerReviewTest < ActiveSupport::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    level = FreeResponse.find_or_create_by!(
+    @level = FreeResponse.find_or_create_by!(
       game: Game.free_response,
       name: 'FreeResponseTest',
       level_num: 'custom',
       user_id: 0
     )
-    level.submittable = true
-    level.peer_reviewable = true
-    level.save!
+    @level.submittable = true
+    @level.peer_reviewable = 'true'
+    @level.save!
 
-    @script_level = create :script_level, levels: [level]
+    @script_level = create :script_level, levels: [@level]
     @script = @script_level.script
     @user = create :user
   end
@@ -35,6 +35,17 @@ class PeerReviewTest < ActiveSupport::TestCase
     level_source = create :level_source, data: 'My submitted answer'
 
     assert_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
+      track_progress level_source.id
+    end
+  end
+
+  test 'submitting a non peer reviewable level should not create Peer Review objects' do
+    @level.peer_reviewable = 'false'
+    @level.save
+
+    level_source = create :level_source, data: 'My submitted answer'
+
+    assert_no_difference('PeerReview.count', PeerReview::REVIEWS_PER_SUBMISSION) do
       track_progress level_source.id
     end
   end

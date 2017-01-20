@@ -73,7 +73,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Maze'}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Maze'}, game_id: game.id, program: @program, maze_source: maze, size: 8
     end
 
     assert assigns(:level)
@@ -86,7 +86,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :step_mode => 1, :type => 'Maze'}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", step_mode: 1, type: 'Maze'}, game_id: game.id, program: @program, maze_source: maze, size: 8
     end
 
     assert assigns(:level)
@@ -98,7 +98,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :step_mode => 1, :type => 'Maze', :is_k1 => true}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", step_mode: 1, type: 'Maze', is_k1: true}, game_id: game.id, program: @program, maze_source: maze, size: 8
     end
 
     assert assigns(:level)
@@ -134,7 +134,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_no_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Maze'}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Maze'}, game_id: game.id, program: @program, maze_source: maze, size: 8
     end
 
     assert_response :not_acceptable
@@ -145,7 +145,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Karel'}, :game_id => game.id, :program => @program, :maze_source => karel, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Karel'}, game_id: game.id, program: @program, maze_source: karel, size: 8
     end
 
     assert assigns(:level)
@@ -160,7 +160,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("CustomMaze")
 
     assert_no_difference('Level.count') do
-      post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Karel'}, :game_id => game.id, :program => @program, :maze_source => karel, :size => 8
+      post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Karel'}, game_id: game.id, program: @program, maze_source: karel, size: 8
     end
 
     assert_response :not_acceptable
@@ -169,7 +169,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should create artist level" do
     game = Game.find_by_name("Custom")
     assert_difference('Level.count') do
-      post :create, :level => { :name => "NewCustomLevel", :type => 'Artist' }, :game_id => game.id, :program => @program
+      post :create, level: { name: "NewCustomLevel", type: 'Artist' }, game_id: game.id, program: @program
     end
 
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
@@ -178,7 +178,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should create studio level" do
     game = Game.find_by_name("CustomStudio")
     assert_difference('Level.count') do
-      post :create, :level => { :name => "NewCustomLevel", :type => 'Studio' }, :game_id => game.id, :program => @program
+      post :create, level: { name: "NewCustomLevel", type: 'Studio' }, game_id: game.id, program: @program
     end
 
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
@@ -190,7 +190,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     level_name = 'TestCustomLevel'
     begin
-      post :create, :level => { :name => level_name, :type => 'Artist', :published => true }, :game_id => Game.find_by_name("Custom").id, :program => @program
+      post :create, level: { name: level_name, type: 'Artist', published: true }, game_id: Game.find_by_name("Custom").id, program: @program
       level = Level.find_by(name: level_name)
       file_path = LevelLoader.level_file_path(level.name)
       assert_equal true, file_path && File.exist?(file_path)
@@ -205,13 +205,13 @@ class LevelsControllerTest < ActionController::TestCase
   test "should not create invalid artist level" do
     game = Game.find_by_name("Custom")
     assert_no_difference('Level.count') do
-      post :create, :level => { :name => '', :type => 'Artist' }, :game_id => game.id, :program => @program
+      post :create, level: { name: '', type: 'Artist' }, game_id: game.id, program: @program
     end
     assert_response :not_acceptable
   end
 
   test "should update blocks" do
-    post :update_blocks, :level_id => @level.id, :game_id => @level.game.id, :type => 'toolbox_blocks', :program => @program
+    post :update_blocks, level_id: @level.id, game_id: @level.game.id, type: 'toolbox_blocks', program: @program
     assert_response :success
     level = assigns(:level)
     assert_equal level.properties[:toolbox_blocks.to_s], @program
@@ -220,7 +220,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should not update blocks if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
-      post :update_blocks, :level_id => @level.id, :game_id => @level.game.id, :type => 'toolbox_blocks', :program => @program
+      post :update_blocks, level_id: @level.id, game_id: @level.game.id, type: 'toolbox_blocks', program: @program
       assert_response :forbidden
     end
   end
@@ -230,7 +230,7 @@ class LevelsControllerTest < ActionController::TestCase
     can_edit = Ability.new(@levelbuilder).can? :edit, level
     assert_equal false, can_edit
 
-    post :update_blocks, :level_id => level.id, :game_id => level.game.id, :type => 'toolbox_blocks', :program => @program
+    post :update_blocks, level_id: level.id, game_id: level.game.id, type: 'toolbox_blocks', program: @program
     assert_response :forbidden
   end
 
@@ -238,7 +238,7 @@ class LevelsControllerTest < ActionController::TestCase
     [@not_admin, @admin].each do |user|
       sign_in user
       assert_no_difference('Level.count') do
-        post :create, :name => "NewCustomLevel", :program => @program
+        post :create, name: "NewCustomLevel", program: @program
       end
 
       assert_response :forbidden
@@ -249,7 +249,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should not modify level if not in levelbuilder mode" do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    post :create, :name => "NewCustomLevel", :program => @program
+    post :create, name: "NewCustomLevel", program: @program
     assert_response :forbidden
   end
 
@@ -336,7 +336,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Maze'}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+    post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Maze'}, game_id: game.id, program: @program, maze_source: maze, size: 8
     assert_equal Maze.skins.first, assigns(:level).skin
   end
 
@@ -344,7 +344,7 @@ class LevelsControllerTest < ActionController::TestCase
     maze = fixture_file_upload("maze_level.csv", "r")
     game = Game.find_by_name("CustomMaze")
 
-    post :create, :level => {:skin => Maze.skins.last, :name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Maze'}, :game_id => game.id, :program => @program, :maze_source => maze, :size => 8
+    post :create, level: {skin: Maze.skins.last, name: "NewCustomLevel", instructions: "Some Instructions", type: 'Maze'}, game_id: game.id, program: @program, maze_source: maze, size: 8
     assert_equal Maze.skins.last, assigns(:level).skin
   end
 
@@ -358,19 +358,19 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should populate artist start direction with current value" do
-    level = create(:artist, :start_direction => 180)
+    level = create(:artist, start_direction: 180)
     get :edit, id: level, game_id: level.game
     assert_select "#level_start_direction[value='180']"
   end
 
   test "should populate maze start direction with current value" do
-    level = create(:maze, :start_direction => 2)
+    level = create(:maze, start_direction: 2)
     get :edit, id: level, game_id: level.game
     assert_select "#level_start_direction option[value='2'][selected='selected']"
   end
 
   test "should populate level skin with current value" do
-    level = create(:maze, :skin => 'pvz')
+    level = create(:maze, skin: 'pvz')
     get :edit, id: level, game_id: level.game
     assert_select "#level_skin option[value='pvz'][selected='selected']"
   end
@@ -382,15 +382,15 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should update maze data properly" do
     game = Game.find_by_name("CustomMaze")
-    post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Maze'},
-      :game_id => game.id, :maze_source => fixture_file_upload("maze_level.csv", "r"), :size => 8
+    post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Maze'},
+      game_id: game.id, maze_source: fixture_file_upload("maze_level.csv", "r"), size: 8
 
     my_level = Level.where(name: 'NewCustomLevel').first
     maze_json = JSON.parse(my_level.maze)
     maze_json[0][0] = '2'
     maze_json[2][0] = 3
 
-    patch :update, :level => {:maze_data => maze_json.to_json}, id: my_level, game_id: game.id
+    patch :update, level: {maze_data: maze_json.to_json}, id: my_level, game_id: game.id
 
     new_maze = JSON.parse(Level.where(name: 'NewCustomLevel').first.maze)
     maze_json[0][0] = 2
@@ -409,10 +409,10 @@ class LevelsControllerTest < ActionController::TestCase
       [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
       [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
     ]
-    post :create, :level => {:name => "NewCustomLevel", :instructions => "Some Instructions", :type => 'Karel'}, :game_id => game.id, :size => 8
+    post :create, level: {name: "NewCustomLevel", instructions: "Some Instructions", type: 'Karel'}, game_id: game.id, size: 8
     my_level = Level.find_by(name: 'NewCustomLevel')
 
-    patch :update, :level => {:maze_data => maze_array.to_json}, id: my_level, game_id: game.id
+    patch :update, level: {maze_data: maze_array.to_json}, id: my_level, game_id: game.id
     new_maze = Level.find_by(name: 'NewCustomLevel').serialized_maze
     assert_equal maze_array.to_json, new_maze
   end

@@ -7,9 +7,11 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'cdo/languages'
 require 'fileutils'
 
+require 'utils'
+
 def push_out_translated_files
   rename_from_crowdin_name_to_locale
-  puts `sh bin/i18n-codeorg/out.sh`
+  run_bash_script "bin/i18n-codeorg/out.sh"
   copy_untranslated_apps
   cleanup_portuguese_codes
   rebuild_blockly_js_files
@@ -59,7 +61,7 @@ def cleanup_portuguese_codes
 end
 
 def rebuild_blockly_js_files
-  puts `sh apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
+  run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps'){
     puts `yarn build`
   }

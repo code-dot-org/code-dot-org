@@ -10,6 +10,6 @@ class CreatePuzzleRatings < ActiveRecord::Migration[4.2]
     end
 
     add_index :puzzle_ratings, [:script_id, :level_id]
-    add_index :puzzle_ratings, [:user_id, :script_id, :level_id], :unique => true
+    add_index :puzzle_ratings, [:user_id, :script_id, :level_id], unique: true
   end
 end
