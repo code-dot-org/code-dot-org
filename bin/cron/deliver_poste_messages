@@ -8,7 +8,7 @@ require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
 
-BATCH_SIZE = 500000
+BATCH_SIZE = 500_000
 MAX_THREAD_COUNT = 50
 MIN_MESSAGES_PER_THREAD = 50
 
