@@ -64,8 +64,8 @@ Dashboard::Application.configure do
   config.skip_script_preload = true
 
   # disable this for developers by default, it won't make much sense because we have our own db
-  CDO.disable_s3_image_uploads = true
-#  CDO.disable_s3_image_uploads = false
+  #CDO.disable_s3_image_uploads = true
+  CDO.disable_s3_image_uploads = false
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug
