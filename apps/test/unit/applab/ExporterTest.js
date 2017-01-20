@@ -180,7 +180,7 @@ describe('The Exporter,', function () {
         'console.log("hello");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
-            <input type="text" id="nameInput"/>
+            <input id="nameInput"/>
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
           </div>
         </div>`
@@ -205,7 +205,7 @@ describe('The Exporter,', function () {
         'console.log("hello");\nplaySound("zoo.mp3");',
         `<div>
           <div class="screen" tabindex="1" id="screen1">
-            <input type="text" id="nameInput"/>
+            <input id="nameInput"/>
             <img src="/v3/assets/some-channel-id/foo.png"/>
             <button id="iconButton" data-canonical-image-url="icon://fa-hand-peace-o">
             <button id="clickMeButton" style="background-color: red;">Click Me!</button>
@@ -271,20 +271,36 @@ describe('The Exporter,', function () {
         assert.equal(zipFiles['my-app/applab/applab.css'], APPLAB_CSS_CONTENT);
       });
 
-      it("should contain an index.html file", function () {
-        assert.property(zipFiles, 'my-app/index.html');
-        var el = document.createElement('html');
-        el.innerHTML = zipFiles['my-app/index.html'];
-        assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
-        assert.equal(
-          el.querySelector("#divApplab").innerText.trim(),
-          'Click Me!',
-          "#divApplab inner text"
-        );
-        assert.isNull(
-          el.querySelector("#clickMeButton").getAttribute('style'),
-          'style attributes should be removed'
-        );
+      describe('the index.html file', () => {
+        let el;
+        beforeEach(() => {
+          el = document.createElement('html');
+          el.innerHTML = zipFiles['my-app/index.html'];
+        });
+
+        it("should have a #divApplab element", () => {
+          assert.isNotNull(el.querySelector("#divApplab"), "no #divApplab element");
+          assert.equal(
+            el.querySelector("#divApplab").innerText.trim(),
+            'Click Me!',
+            "#divApplab inner text"
+          );
+        });
+
+        it("should have removed all style attributes from the elements", () => {
+          assert.isNull(
+            el.querySelector("#clickMeButton").getAttribute('style'),
+            'style attributes should be removed'
+          );
+        });
+
+        it("should have added type attributes to all input elements", () => {
+          assert.equal(
+            el.querySelector("input[type='text']").id,
+            'nameInput'
+          );
+        });
+
       });
 
       it("should contain a style.css file", function () {
@@ -379,6 +395,7 @@ describe('The Exporter,', function () {
         done
       );
     });
+
   });
 
 });
