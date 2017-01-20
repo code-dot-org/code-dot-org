@@ -36,6 +36,9 @@ export function setExternalGlobals() {
           return [];
         },
       },
+    },
+    reporting: {
+      sendReport: () => {}
     }
   });
   window.marked = function (str) {

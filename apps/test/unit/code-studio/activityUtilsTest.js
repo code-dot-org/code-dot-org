@@ -1,4 +1,5 @@
 var assert = require('assert');
+import { TestResults } from '@cdo/apps/constants';
 
 import { activityCssClass, mergeActivityResult } from '@cdo/apps/code-studio/activityUtils';
 
@@ -19,12 +20,13 @@ describe("mergeActivityResult", function () {
 describe('activityCssClass', function () {
   it ('returns the correct activity CSS class', function () {
     assert.strictEqual(activityCssClass(null), 'not_tried');
-    assert.strictEqual(activityCssClass(0), 'not_tried');
-    assert.strictEqual(activityCssClass(-5), 'attempted');
-    assert.strictEqual(activityCssClass(19), 'attempted');
-    assert.strictEqual(activityCssClass(20), 'passed');
+    assert.strictEqual(activityCssClass(TestResults.GENERIC_FAIL), 'not_tried');
+    assert.strictEqual(activityCssClass(TestResults.EXTRA_FUNCTION_FAIL), 'attempted');
+    assert.strictEqual(activityCssClass(TestResults.EXAMPLE_FAILED), 'attempted');
+    assert.strictEqual(activityCssClass(TestResults.MINIMUM_PASS_RESULT), 'passed');
     assert.strictEqual(activityCssClass(29), 'passed');
-    assert.strictEqual(activityCssClass(30), 'perfect');
+    assert.strictEqual(activityCssClass(TestResults.FREE_PLAY), 'perfect');
     assert.strictEqual(activityCssClass(101), 'perfect');
+    assert.strictEqual(activityCssClass(TestResults.UNVALIDATED_SUBLEVEL), 'perfect');
   });
 });

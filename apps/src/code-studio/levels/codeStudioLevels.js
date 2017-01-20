@@ -5,6 +5,15 @@ let answerChangedFn = null;
 
 let levelGroup = {};
 
+// Debug only export used for tests
+export function reset() {
+  if (process.env.NODE_ENV === 'development') {
+    levelGroup = {};
+    registeredGetResult = null;
+    answerChangedFn = null;
+  }
+}
+
 /**
  * At a minimum, our get result function should return an object with a response
  * and a result. This function is used by level types that don't need to return

@@ -118,13 +118,7 @@ function validateReport(report) {
         }
         break;
       case 'result':
-        if (inLevelGroup) {
-          // A multi in an assessment seems to send an object here instead of a
-          // boolean (which may well be a bug).
-          validateType('result', value, 'object');
-        } else {
-          validateType('result', value, 'boolean');
-        }
+        validateType('result', value, 'boolean');
         break;
       case 'pass':
         if (inLevelGroup) {

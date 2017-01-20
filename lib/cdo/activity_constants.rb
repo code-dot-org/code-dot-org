@@ -6,6 +6,7 @@ module ActivityConstants
   # UserLevel.best_result (UserLevel is an aggregate of Activity)
 
   UNSUBMITTED_RESULT = -50
+  UNVALIDATED_SUBLEVEL = -51
 
   MINIMUM_FINISHED_RESULT = 10
   MINIMUM_PASS_RESULT = 20
