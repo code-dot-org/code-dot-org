@@ -370,7 +370,7 @@ function renderFooterInSharedGame() {
       text: applabMsg.makeMyOwnApp(),
       link: '/projects/applab/new',
     },
-    isIframeEmbed && window.location.search.indexOf('nosource') < 0 && {
+    window.location.search.indexOf('nosource') < 0 && {
       text: commonMsg.openWorkspace(),
       link: project.getProjectUrl('/view'),
       newWindow: true,
