@@ -46,8 +46,8 @@
     "markdown_instructions": "Wow, this game is hard to win!\r\n\r\nLet's customize this game to make it more fun.  This challenge has three parts:\r\n<hr/>\r\n\r\n1)  Slow the ninja down before you set him to chase the pirate.  \r\n\r\n2)  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  \r\n\r\n3)  We don't want the pirate to stay in the \"safe zone\" too long! Add code to the `if` statement above so that if the pirate is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line.",
     "instructions": "1)  Slow the ninja down before you set him to chase the pirate.  \r\n\r\n2)  If the pirate is greater than 225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  \r\n\r\n3)  If the pirate is in the safe zone, wait one second, then deduct a point as long as he stays beneath the octopus line.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.\",\"hint_id\":\"courseD_playLab_cond6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/324e93ba7713300fb2a1979b31f88abb/courseD_playLab_cond6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.\",\"hint_id\":\"courseD_playLab_cond6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a42552de052b3fb2acb1c19dbacd69a7/courseD_playLab_cond6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.\",\"hint_id\":\"courseD_playLab_cond6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb18494aee7b0fe5386f20c4a73fe993/courseD_playLab_cond6.mp3\"}]",
-    "contained_level_names": null,
-    "project_template_level_name": "courseD_playLab_condTemplate"
+    "project_template_level_name": "courseD_playLab_condTemplate",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
@@ -316,19 +316,8 @@
                 </block>
               </statement>
               <next>
-                <block type="studio_ifActorHasEmotion">
-                  <title name="SPRITE">1</title>
-                  <title name="EMOTION">2</title>
-                  <statement name="DO">
-                    <block type="studio_changeScore">
-                      <title name="VALUE">-1</title>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="studio_changeScore">
-                      <title name="VALUE">1</title>
-                    </block>
-                  </next>
+                <block type="studio_changeScore">
+                  <title name="VALUE">1</title>
                 </block>
               </next>
             </block>

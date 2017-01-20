@@ -1402,8 +1402,7 @@ Applab.onPuzzleComplete = function (submit) {
   }
 
   var program;
-  const containedLevelResultsInfo = studioApp.hasContainedLevels &&
-    getContainedLevelResultInfo();
+  const containedLevelResultsInfo = studioApp.hasContainedLevels ? getContainedLevelResultInfo() : null;
   if (containedLevelResultsInfo) {
     // Keep our this.testResults as always passing so the feedback dialog
     // shows Continue (the proper results will be reported to the service)

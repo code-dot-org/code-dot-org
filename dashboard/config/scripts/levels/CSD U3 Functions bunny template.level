@@ -25,6 +25,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "code_functions": {
+      "background": null,
       "fill": null,
       "noFill": null,
       "stroke": null,
@@ -34,6 +35,9 @@
       "line": null,
       "point": null,
       "rect": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "randomNumber_min_max": null,
       "ifBlock": null,
       "ifElseBlock": null,
       "text": null,
@@ -46,6 +50,8 @@
       "velocityX": null,
       "velocityY": null,
       "isTouching": null,
+      "debug": null,
+      "setCollider": null,
       "x": null,
       "y": null,
       "setAnimation": null

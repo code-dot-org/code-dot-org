@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# Create your Variables\r\n\r\nFirst, you'll need to create all of your variables and put them in the variables area of your code.\r\n* Show me the block\r\n* Show me the area in the code\r\n\r\nDon't forget, each variable needs a label (name) and a starting value.  You can change the value of the variable later in your code.",
+    "markdown_instructions": "# Create your Variables\r\n\r\nFirst, you'll need to create all of your variables and put them in the variables area of your code.\r\n* [Show me the block](#triggercallout=callout1)\r\n* [Show me the area in the code](#triggercallout=callout2)\r\n\r\nDon't forget, each variable needs a label (name) and a starting value.  You can change the value of the variable later in your code.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -38,6 +38,7 @@
     "pause_animations_by_default": "false",
     "instructions_important": "false",
     "show_debug_watch": "true",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_S18_L3_C1\",\r\n  \"callout_text\": \"This block creates a new variable.\",\r\n  \"element_id\": \".droplet-hover-div[data-block=\\\"declareAssign_x\\\"]\",\r\n  \"on\": \"callout1\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"variables\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }, \r\n {\r\n  \"localization_key\": \"CSD_U3_L18_S3_C2\",\r\n  \"callout_text\": \"Variables area\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"callout2\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// Create your variables here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null
   },
   "published": true,

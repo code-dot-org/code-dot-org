@@ -21,6 +21,14 @@ namespace :build do
     end
   end
 
+  desc 'Builds broken link checker.'
+  task :tools do
+    Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
+      HipChat.log 'Installing <b>broken link checker</b> dependencies...'
+      RakeUtils.npm_install
+    end
+  end
+
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   task dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -122,8 +130,9 @@ namespace :build do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
+  tasks << :tools if rack_env?(:staging)
   tasks << :restart_process_queues if CDO.daemon
-  task :all => tasks
+  task all: tasks
 end
 
 desc 'Builds everything.'

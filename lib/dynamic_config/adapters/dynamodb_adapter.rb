@@ -37,7 +37,7 @@ class DynamoDBAdapter
       table_name: @table_name,
       item: {
         'data-key' => key,
-        'data-value' => Oj.dump(value, :mode => :strict)
+        'data-value' => Oj.dump(value, mode: :strict)
       }
     })
   end

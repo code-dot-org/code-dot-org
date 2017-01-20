@@ -285,21 +285,21 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "short name" do
-    assert_equal 'Laurel', create(:user, :name => 'Laurel Fan').short_name # first name last name
-    assert_equal 'Winnie', create(:user, :name => 'Winnie the Pooh').short_name # middle name
-    assert_equal "D'Andre", create(:user, :name => "D'Andre Means").short_name # punctuation ok
-    assert_equal '樊瑞', create(:user, :name => '樊瑞').short_name # ok, this isn't actually right but ok for now
-    assert_equal 'Laurel', create(:user, :name => 'Laurel').short_name # just one name
-    assert_equal 'some', create(:user, :name => '  some whitespace in front  ').short_name # whitespace in front
+    assert_equal 'Laurel', create(:user, name: 'Laurel Fan').short_name # first name last name
+    assert_equal 'Winnie', create(:user, name: 'Winnie the Pooh').short_name # middle name
+    assert_equal "D'Andre", create(:user, name: "D'Andre Means").short_name # punctuation ok
+    assert_equal '樊瑞', create(:user, name: '樊瑞').short_name # ok, this isn't actually right but ok for now
+    assert_equal 'Laurel', create(:user, name: 'Laurel').short_name # just one name
+    assert_equal 'some', create(:user, name: '  some whitespace in front  ').short_name # whitespace in front
   end
 
   test "initial" do
-    assert_equal 'L', create(:user, :name => 'Laurel Fan').initial # first name last name
-    assert_equal 'W', create(:user, :name => 'Winnie the Pooh').initial # middle name
-    assert_equal "D", create(:user, :name => "D'Andre Means").initial # punctuation ok
-    assert_equal '樊', create(:user, :name => '樊瑞').initial # ok, this isn't actually right but ok for now
-    assert_equal 'L', create(:user, :name => 'Laurel').initial # just one name
-    assert_equal 'S', create(:user, :name => '  some whitespace in front  ').initial # whitespace in front
+    assert_equal 'L', create(:user, name: 'Laurel Fan').initial # first name last name
+    assert_equal 'W', create(:user, name: 'Winnie the Pooh').initial # middle name
+    assert_equal "D", create(:user, name: "D'Andre Means").initial # punctuation ok
+    assert_equal '樊', create(:user, name: '樊瑞').initial # ok, this isn't actually right but ok for now
+    assert_equal 'L', create(:user, name: 'Laurel').initial # just one name
+    assert_equal 'S', create(:user, name: '  some whitespace in front  ').initial # whitespace in front
   end
 
   test "find_for_authentication with nonsense" do
@@ -1461,7 +1461,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def mock_geocoder_result(result)
-    mock_us_object = OpenStruct.new(:country_code => result)
+    mock_us_object = OpenStruct.new(country_code: result)
     Geocoder.stubs(:search).returns([mock_us_object])
   end
 
