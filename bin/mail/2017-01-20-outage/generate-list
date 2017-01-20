@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative '../mailing-common/mailing-list-utils'
+
+query = 'kind_s:user && role_s:teacher'
+results = query_subscribed_contacts(q: query)
+puts "#{results.count} teachers"
+
+export_contacts_to_csv results, 'teachers.csv'
