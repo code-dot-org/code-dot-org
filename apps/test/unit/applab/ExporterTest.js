@@ -396,6 +396,14 @@ describe('The Exporter,', function () {
       );
     });
 
+    it("should allow you to play a sound", (done) => {
+      runExportedApp(
+        `playSound("https://studio.code.org/blockly/media/example.mp3", false);`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done
+      );
+    });
+
   });
 
 });
