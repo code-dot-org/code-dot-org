@@ -5,7 +5,7 @@ require_relative '../mailing-common/mailing-list-utils'
 
 PEGASUS_REPORTING_DB = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
 
-outage_message_id = DB[:poste_messages].where(name: '2017-01-20-outage').first[:id]
+outage_message_id = PEGASUS_REPORTING_DB[:poste_messages].where(name: '2017-01-20-outage').first[:id]
 query = "
   SELECT contacts.name, contacts.email
   FROM poste_deliveries
