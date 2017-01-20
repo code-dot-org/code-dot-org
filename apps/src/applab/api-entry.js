@@ -16,6 +16,7 @@ import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
+import {executors} from '../lib/util/audioApi';
 window.CDOSounds = new Sounds();
 
 const noop = function () {};
@@ -41,11 +42,13 @@ getStore().dispatch(setIsRunning(true));
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
 // not overwrite.
-for (let key in api) {
-  if (!window[key]) {
-    window[key] = api[key];
+[api, executors].forEach(funcs => {
+  for (let key in funcs) {
+    if (!window[key]) {
+      window[key] = funcs[key];
+    }
   }
-}
+});
 
 // disable appStorage
 for (let key in appStorage) {
