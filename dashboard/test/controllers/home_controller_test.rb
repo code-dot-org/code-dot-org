@@ -72,6 +72,7 @@ class HomeControllerTest < ActionController::TestCase
     @user = create(:user)
     5.times do
       create :gallery_activity,
+        level_source: create(:level_source, level_source_image: create(:level_source_image)),
         user: @user,
         autosaved: true
     end
