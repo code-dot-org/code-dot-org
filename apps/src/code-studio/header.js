@@ -208,7 +208,7 @@ header.showMinimalProjectHeader = function () {
 
   $('.project_info')
       .append(projectName)
-      .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')));
+      .append($('<div class="project_remix header_button">').text(dashboard.i18n.t('project.remix')));
   $('.project_remix').click(remixProject);
 };
 
