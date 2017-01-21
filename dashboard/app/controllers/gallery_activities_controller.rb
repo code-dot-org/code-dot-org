@@ -63,7 +63,7 @@ class GalleryActivitiesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def gallery_activity_params
     params[:gallery_activity][:user_id] ||= current_user.id if params[:gallery_activity] && current_user
-    params.require(:gallery_activity).permit(:activity_id, :user_id)
+    params.require(:gallery_activity).permit(:activity_id, :level_source_id, :user_id)
   end
 
   def gallery_activities_for_app(app)
