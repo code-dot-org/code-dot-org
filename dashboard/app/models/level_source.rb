@@ -68,7 +68,7 @@ class LevelSource < ActiveRecord::Base
       data: data,
       md5: Digest::MD5.hexdigest(data)
     ).first_or_create
-    
+
     level_source.id
   end
 
