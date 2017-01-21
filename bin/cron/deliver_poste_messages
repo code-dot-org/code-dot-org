@@ -8,8 +8,8 @@ require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
 
-BATCH_SIZE = 6000
-MAX_THREAD_COUNT = 30
+BATCH_SIZE = 500_000
+MAX_THREAD_COUNT = 50
 MIN_MESSAGES_PER_THREAD = 50
 
 # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
