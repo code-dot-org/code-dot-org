@@ -35,7 +35,7 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"Thanks to variables, you only need to change one number at the top to make this work.\",\r\n  \"hint_id\": \"courseF_artist_variables_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Thanks to variables, you only need to change one number at the top to make this work.\",\"hint_id\":\"courseF_artist_variables_6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2f458664d987959ac656138ed6ae3a9/courseF_artist_variables_6.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,

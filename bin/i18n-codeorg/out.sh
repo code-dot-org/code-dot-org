@@ -18,7 +18,7 @@ for locale in $locales; do
   en_dir=i18n/locales/source/dashboard
 
   # Special case the un-prefixed Yaml file.
-  if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+  if [ "$locale" = 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
     ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/base.yml $orig_dir/$locale.yml
   else
     ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/base.yml $loc_dir/base.yml $orig_dir/$locale.yml
@@ -28,7 +28,7 @@ for locale in $locales; do
   # Merge in all the other Yaml files.
   for file in $(find $loc_dir -name '*.yml' -and -not -name 'base.yml'); do
     relname=${file#$loc_dir}
-    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+    if [ "$locale" = 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
       ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $file $orig_dir${relname%.yml}.${locale}.yml
     else
       ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir$relname $file $orig_dir${relname%.yml}.${locale}.yml
@@ -46,7 +46,7 @@ for locale in $locales; do
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
     relname=${file#$loc_dir}
-    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+    if [ "$locale" = 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
       ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "json" $file $orig_dir${relname%.json}/${js_locale}.json
     else
       ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir${relname%.json}/${js_locale}.json
@@ -63,7 +63,7 @@ for locale in $locales; do
   # Copy JSON files.
   for file in $(find $loc_dir -name '*.json'); do
     relname=${file#$loc_dir}
-    if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+    if [ "$locale" = 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
       ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "json" $file $orig_dir$relname
     else
       ruby ./bin/i18n-codeorg/lib/merge-translation.rb "json" $en_dir$relname $file $orig_dir$relname
@@ -77,7 +77,7 @@ for locale in $locales; do
   en_dir=i18n/locales/source/pegasus
 
   # Merge YML file.
-  if [ $locale == 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
+  if [ "$locale" = 'hy-AM' ]; then # Armenian accepts English translations, does not need fallback
     ruby ./bin/i18n-codeorg/lib/export-without-merge.rb "yml" $loc_dir/mobile.yml $orig_dir/$locale.yml
   else
     ruby ./bin/i18n-codeorg/lib/merge-translation.rb "yml" $en_dir/mobile.yml $loc_dir/mobile.yml $orig_dir/$locale.yml
