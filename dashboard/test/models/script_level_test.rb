@@ -77,6 +77,18 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, summary[:title]
   end
 
+  test 'named level summarize' do
+    sl = create(:script_level)
+    sl.update(named_level: true)
+
+    summary = sl.summarize
+    assert_equal sl.level.name, summary[:name]
+
+    sl.level.display_name = 'Test Display Name Override'
+    summary = sl.summarize
+    assert_equal 'Test Display Name Override', summary[:name]
+  end
+
   test 'calling next_level when next level is unplugged skips the level for script without stages' do
     last_20h_maze_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '2_19'}, script_id: 1)
     first_20h_artist_1_level = ScriptLevel.joins(:levels).find_by(levels: {level_num: '1_1'}, script_id: 1)

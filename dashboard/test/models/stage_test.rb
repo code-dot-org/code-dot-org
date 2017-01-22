@@ -44,6 +44,17 @@ class StageTest < ActiveSupport::TestCase
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
+  test "summary for single page long assessment" do
+    script = create :script
+    properties = {pages: [{levels: ['level_free_response', 'level_multi_unsubmitted']}]}
+    level1 = create :level_group, name: 'level1', title: 'title1', submittable: true, properties: properties
+    stage = create :stage, name: 'stage1', script: script, lockable: true
+    create :script_level, script: script, levels: [level1], assessment: true, stage: stage
+
+    # Ensure that a single page long assessment has a uid that ends with "_0".
+    assert_equal stage.summarize[:levels].first[:uid], "#{stage.summarize[:levels].first[:ids].first}_0"
+  end
+
   def create_swapped_lockable_stage
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true

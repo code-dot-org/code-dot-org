@@ -60,6 +60,7 @@ window.Dialog = require('@cdo/apps/code-studio/dialog');
 // would get preloaded. In webpack, they're only loaded as needed. We were
 // depending on these two modules being loaded when code-studio-common was
 // included, so force that load here.
+window.FreeResponse = require('@cdo/apps/code-studio/levels/freeResponse');
 window.Multi = require('@cdo/apps/code-studio/levels/multi');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 

@@ -1,0 +1,1001 @@
+---
+en:
+  data:
+    callouts:
+      courseF_artist_variables_2_callout: {}
+      Big Game Collision 4_callout:
+        Big Game Collision 4: Complete the collide? function so that it checks whether
+          the distance between a given pair of coordinates is close enough for them
+          to be touching.
+      grade2_collector_8_callout: {}
+      grade4_playLab_proj_example1_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+      courseC_collector_prog8_callout: {}
+      grade3_playLab_buildGame_1_callout:
+        Playlab_cond_1_1: Think of this block as the computer's way of rolling a die,
+          and you get to decide how many sides the die has.
+      gradek_playlab_events5c_callout:
+        gradek_playlab_events5c_1: This let's you choose a "random" sound, which means
+          that you don't know what you are going to get until you hear it!
+      Infinity_move_right_callout:
+        Infinity_move_right_runbutton: Add move block here
+      CSD U3 abstraction parabola_callout:
+        CSD_U3_L11_S13_C1: Add your block here.
+      Course 4 Bee Params 3_callout: {}
+      CSD U3 abstraction jumper template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      Course 4 Artist Vars 3_callout:
+        place_variable: Drag your variable inside this block
+      courseE_artist_functions2_callout:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      grade4_playLab_proj_example2_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      Course 4 Bee For Loops 1_callout:
+        get_nectar: Use the new "get nectar" block.
+      CSD U3 abstraction velocityY control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      grade4_frozen_nested_loop_rectangle1_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      New App Lab Project_callout: {}
+      courseC_collector_prog7_callout:
+        courseC_collector_prog7_1: You can take more blocks from the toolbox if you
+          need them!
+      courseF_playlab_variables2_callout:
+        course_playlab_variables2_1: This is how you set the value of your variable.  Change
+          the text connected to this block to change what is being held in your variable.
+      Ryan - 4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      aE3_callout:
+        aE3_1: Only a handful of these available
+      grade2_MakeDogTag_BFP_callout: {}
+      CSD U3 Sprites intro sprites_callout: {}
+      frozen circle function with parameter_callout:
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+      grade5_artist_variables_pentagons12_callout:
+        set_length: Use this block to set "length" to the correct value.
+      frozen cross rotate_callout:
+        replace_questions_degree: Use the drop-down to replace "???" with a number
+      Counting_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      courseF_artist_variables_8_callout: {}
+      sample10a_callout: {}
+      Eval Strings Images 3_callout:
+        Eval Strings Images 3: Use this style block and select "outline"
+      4-5 Bee Conditionals - FC Test_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      MC HOC 2016 New pn_callout: {}
+      Calc Vars 1.1_callout:
+        Calc Vars 1.1_age: What number should you multiply to calculate age in days?
+      Mike Playlab Project_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      CSD U3 abstraction horse2_callout:
+        CSD_U3_L11_S15_C1: Set your sprite's velocityY here
+      CSD U3 abstraction setSpeed accelerate_callout:
+        CSD_U3_L11_S14_C1: Add your code here.
+      grade5_artist_variables_freeplay10_callout:
+        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
+          coding area wider.
+      grade2_collector_9_callout: {}
+      grade2_maze_intro5_callout:
+        grade2_maze_intro5_callout1: This area also works as a garbage can. If there
+          is a block in your workspace that you don’t need, simply drag it back here
+          to toss it away.
+      NEW Course 4 Artist Params 2_callout:
+        create_function: 
+        name_function: 
+        write_draw_triangle_function: 
+      CSD U3 - conditionals - transition 2_callout: {}
+      grade4_artist_functions_stars3_callout:
+        grade4_artist_functions_stars3_1: Drag this block into your program. Every
+          time you use this block, all of the commands in the function will be executed!
+      courseE_farmer_functions4b_callout: {}
+      Course 4 Artist Vars 2_callout:
+        set_length: Use this block to set "length" to the correct value.
+      4-5 Bee Conditionals 2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      sample9a_callout:
+        sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab
+          does not have "turn" or "move forward". Also, the goals are not flexible
+          (size or sprites).
+      grade3_Conditionals_3_callout:
+        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
+          know until you run the code!
+      CSD U3 abstraction velocityX if-statements_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      Course 4 Artist Functions challenge_callout:
+        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks
+          and put them behind categories to keep things tidy.  Click here to find
+          all of the blocks that you need.
+      course_playlab_variables2_callout:
+        course_playlab_variables2_1: This is how you set the value of your variable.  Change
+          the text connected to this block to change what is being held in your variable.
+      grade5_playlab_variables6ask_callout: {}
+      grade4_artist_functions_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      NEW Course 4 Artist Functions 5_callout:
+        edit_function: Click here to edit your function.
+        function_editor_draw_square: This is your function definition. These blocks
+          run everytime you use the "draw a square" block
+      Rocket Height Course A_callout:
+        pass_function: This start(function) block lets you pass your function (not
+          the value your function returns with some input) into the rocket animation
+          library. The animation you see on screen is actually using your function
+          to move the rocket!
+      courseE_farmer_functions2aALT_callout:
+        courseE_farmer_functions2a_2: This code might not look exactly like what you
+          wrote, but it will get the job done!
+      Course 4 Playlab For Loops 4b_callout:
+        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a
+          different name for each character?  That's so each `for` loop can control
+          its own counter.
+      AppLab_test02_callout: {}
+      Poorva copy U3L2 Using Simple Commands_callout: {}
+      Play Lab Rocket 3_callout:
+        Play Lab Rocket 3 1: Update the purpose statement before moving on to the
+          examples and definition.
+      grade4_artist_functions1_callout:
+        grade4_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      grade5_playlab_variables_jump1_callout:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      CSD U3 Random Intro_callout: {}
+      Big Game Collision 1_callout: {}
+      PDAlg Design Recipe Delete_callout: {}
+      Code Studio Puzzle Challenge 6 - Bee_callout:
+        Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash
+          can to delete them
+      Course 4 Playlab For Loops 5b_callout: {}
+      Play Lab Rocket Free Play_callout: {}
+      CSD U3 Direction Animations_callout: {}
+      Course 4 SCV 6_callout:
+        Course_4_SCV_6: This block allows you to customize your color to almost anything
+          you want to see!  Play around with the numbers to see what happens!
+      grade5_bee_for_loops6_callout: {}
+      Calc Circles of Eval .2_callout:
+        calc_question_marks: Select the right number from this dropdown
+      grade5_artist_for_loops1b_callout:
+        grade5_artist_for_loops1b_1: The toolbox has been changed into "category"
+          mode to make more room for your code.  Now, `for` loops live in here.
+      courseE_farmer_functions6b_callout: {}
+      CSD U3 - conditionals - first conditional 2_callout: {}
+      frozen square snowflake_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      courseF_artist_variables_5_callout: {}
+      grade2_collector_10_callout: {}
+      grade3_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      aE4_callout:
+        aE3_1: Only a handful of these available
+      CSD U3 abstraction looping_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      Code Studio Puzzle Challenge 1 - Artist_callout: {}
+      grade5_playlab_variables10_callout: {}
+      grade2_maze_intro9_callout: {}
+      Big Game Player 2_callout: {}
+      grade5_playlab_variables6_callout: {}
+      courseC_maze_loops2_callout:
+        courseC_maze_loops2_1: You only have one of these blocks available in this
+          puzzle.
+      courseE_artist_functions8_callout:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      grade5_artist_variables_triangles1_callout:
+        grade5_artist_variables_triangles1_1: Notice that blocks now have a new way
+          to enter numbers. These `math` blocks can be pulled out and moved around!
+      frozen square iterative_callout:
+        frozen_create_square: Attach more blocks here to create a square
+      CSD U3 collisions pinball2_callout:
+        CSD_U3_L14_S16_C1: Sprite interactions go in this function.
+      Big Game Booleans 2_callout:
+        Big Game Booleans 2: Open this drawer to edit the safe-left? function
+      grade1_artist_loops2_callout:
+        grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
+          will you use it?
+      grade4_review_artist1_callout: {}
+      frozen snowflake branch_callout:
+        frozen_snowflake_branch: Use the "create a snowflake branch" block
+      aE2_callout:
+        aE2_1: Still only two of these and two turns
+      grade2_CaringForNewPet_3D_callout: {}
+      CSD U3 - complex - compound conditionals_callout: {}
+      sample5_callout:
+        sample5_1: There will be two of these for this puzzle
+      Big Game Vars 2 (copy 1)_callout:
+        big_game_title: Edit this variable to change the title of your game
+      4-5 Artist Patterns Free Play_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      Big Game Booleans 1_callout: {}
+      Course 4 Artist 4_callout:
+        repeat_full_circle: Enter in the number of times the zombie has to move to
+          make a full circle
+      Course 4 Bee 1_callout:
+        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or
+          make honey
+      grade2_CaringForNewPet_2_callout:
+        grade2_CaringForNewPet_2_1: Throw this extra block away so it doesn't cause
+          problems.
+        grade2_CaringForNewPet_2_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      CSD U3 UP_ARROW_callout: {}
+      Geometric Pattern_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      CSD U3 abstraction velocityX_callout:
+        CSD_U3_L11_S4_C1: Add your block here.
+      U3 Variables gray square_callout: {}
+      Eval Strings Images 7_callout: {}
+      Course 4 Artist For Loops 4_callout:
+        place_counter_variable: Drag your counter variable inside this block
+      gradek_playlab_events1c_callout: {}
+      Infinity_move_directions_callout:
+        Infinity_move_directions_callout: Which block will make Baymax move up when
+          the up arrow is pressed?
+        Infinity_move_directions_callout_arrow: Use these arrows to steer
+      grade4_frozen_square_loop3_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      Harvester_callout: {}
+      Course 4 Artist Functions 8_callout:
+        edit_function: Click here to edit your function.
+      CSD U3 Else_callout: {}
+      Course 4 Play Lab Params 2_callout:
+        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
+          it uses the height parameter.
+      MC HOC 2016 New Spawn_callout: {}
+      CSD U3 Boolean Predict_callout: {}
+      Big Game Player 1_callout: {}
+      grade2_collector_9a_callout: {}
+      Eval Define Funcs 2_callout:
+        Eval Define Funcs 2 triangle: Change the triangle's style here
+      grade4_frozen_square_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      grade4_frozen_functions3_callout:
+        frozen_circle_function_with_parameter_circle: Use the "create a circle" block
+          and change the size.
+      2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
+          know until you run the code!
+      Underground Iron_callout:
+        craft_what_is_iron: Mine this iron!
+      Overworld House Frame Chosen_callout:
+        craft_callout_preplaced_house: This code will start building your house. Can
+          you finish it?
+      courseC_collector_prog9_callout: {}
+      CSD U3 - images - first sprite with image_callout: {}
+      aE1_callout:
+        aE1_1: There will only be two of these and two turns
+      MC HOC 2016 Nerop_callout: {}
+      frozen diamond_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      artistLoopsK2_callout:
+        artistLoopsK2_1: This number tells you how many of these blocks you can use
+          in this puzzle.
+      CSD U3 collisions try blocks_callout:
+        CSD_U3_L13_S6_C1: Change this block.
+      sample2_callout:
+        sample2_1: Notice that there is only one 'move forward' block available in
+          this toolbox.
+      sample8_callout:
+        sample8_1: We won't force nested loops, but hope that they take this opportunity
+          to discover them on their own.  If they don't, it won't affect the rest
+          of the stage.
+      CSD U3 Random Choice_callout: {}
+      Eval Design Recipe 3_callout:
+        eval_design_recipe_3: This is your function definition. This code runs every
+          time you use the 'wide-rect' function
+      Course 4 Artist Functions 5 OLD_callout:
+        house_hint: It's ok if the picture doesn't look like a house yet. We will
+          fix it in the next puzzle.
+      grade2_MakeDogTag_1_callout: {}
+      grade4_frozen_nested_loop_diamonds1_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      frozen line_callout:
+        run: Hit "Run" to try your program!
+        move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
+          Run" block to make Elsa move forward
+      courseE_farmer_functions8b_callout: {}
+      sample6_callout:
+        sample6_1: One less of these than needed to do the puzzle with just one set
+          of loops.
+      courseF_artist_variables_6_callout:
+        courseF_artist_variables_6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      CSD U3 Variables make a big square_callout: {}
+      MC HOC 2016 New Drop_callout: {}
+      NEW Course 4 Artist Functions 3_callout:
+        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
+          that it creates a square.
+      Luigi's Pizza 2 (copy 1)_callout:
+        luigi's pizza 2: Edit this function to add your own toppings
+      NEW Course 4 Artist Functions 7_callout:
+        edit_function: Click here to edit your function.
+      CSD U3 - conditionals - transition_callout: {}
+      CSD U3 abstraction rotation_callout:
+        CSD_U3_L11_S4_C1: Use the rotationSpeed block here
+      CSD U3 platform background1_callout:
+        CSD_U3_L16_S3_C1: the function that draws the background
+        CSD_U3_L16_S3_C2: the code that calls the function
+        CSD_U3_L16_S3_C3: Change this function.
+      grade2_collector_A_callout: {}
+      Eval Strings Images 1_callout:
+        purple_image_block: Purple colored blocks output Image values
+      Course 4 Bee 3_callout:
+        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower
+          and makes honey if it's not a flower
+      Course 4 Bee Params 4_callout: {}
+      CSD U3 abstraction jumping_callout:
+        CSD_U3_L13_S8_C1: Set the velocity here
+      courseC_maze_programming1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseE_farmer_functions1a_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      Course 4 Play Lab Vars 6_callout: {}
+      U3 - Simple Drawing - X and Y values_callout: {}
+      NEW Course 4 Artist Functions 8_callout:
+        edit_function: Click here to edit your function.
+      U3 - Simple Drawing - text_callout: {}
+      CSD U3 abstraction horse_callout:
+        CSD_U3_L11_S13_C1: Set your sprite's velocityX and velocityY here
+        CSD_U3_L11_S13_C2: Change your sprite's velocityY here.
+      grade5_artist_functionparameters_6_callout:
+        grade5_artist_functionparameters_6_1: To complete your polygon, make sure
+          you are always turning by 360 ÷ `sides` degrees.
+      grade2_CaringForNewPet_2courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      CSD U3 - complex - mouse move_callout: {}
+      Calc Vars 2.1_callout:
+        Calc Vars 2.1_num_months: Drop the number of months in a year here
+      Course 4 Artist Functions 4_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      CSD U3 abstraction rotation accelerate_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+        CSD_U3_L11_S5_C2: Add your code here.
+      courseC_maze_programming4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      CSD U3 Boolean Modify_callout: {}
+      courseC_maze_programming7_callout:
+        courseC_maze_programming7_1: This is your first challenge puzzle! These are
+          meant to be hard and may take several tries.
+      sample9_callout:
+        sample9_1: This should be something other than artist, but it's here to connect
+          the previous levels to freeplay
+      Eval Define Funcs Test_callout:
+        Eval Define Funcs 3: Make our function use the radius parameter instead of
+          always having a radius of 50.
+      U3 - Simple Drawing - regular polygon_callout: {}
+      testing code callout_callout:
+        testing_code_callout: This makes the sprite move!
+      Rock Paper Scissors_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      aE3alternateB_callout:
+        aE3_1: Only a handful of these available
+      CSD U3 game backgrounds_callout:
+        CSD_U3_S18_L4_C1: This block calls your function.
+        CSD_U3_L18_S4_C2: Functions area
+      Course 4 Play Labs For Loops 5_callout:
+        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back
+          together to solve this puzzle?
+      grade5_artist_variables_pentagons1_callout:
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+      artistLoopsK2gradek_artist_loops3_callout:
+        artistLoopsK2_1: This number tells you how many of these blocks you can use
+          in this puzzle.
+      CSD U3 abstraction accelerateY_callout:
+        CSD_U3_L11_S7_C1: Add your code here.
+      CSD U3 abstraction dragonfly OLD_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      Course 4 Artist Vars 8_callout:
+        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the
+          coding area wider.
+      Big Game Vars 3 (copy 1)_callout:
+        big_game_bg: Edit this variable to change the background image of your game
+      CSD U3 - complex - key up and down_callout: {}
+      NEW Course 4 Artist Params 10_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      grade5_bee_parameters_new3_callout:
+        grade5_bee_parameters_new3_1: This same function can be used when checking
+          for empty spaces as well as clouds.
+      grade4_frozen_nested_loop_diamonds3_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      grade2_maze_intro2_callout:
+        grade2_maze_intro2_callout1: This is the run button. Press this button to
+          run your program.
+      frozen square loop_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      Infinity_move_collide_callout:
+        Infinity_move_collide_callout: Play a sound when this event occurs.
+      CSD U3 abstraction jump_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+        CSD_U3_L11_S17_C2: Send the frog back down here
+      drawings!_callout: {}
+      grade3_ConditionalsElse_2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      Course 4 Artist Params 2_callout:
+        length_parameter: Can you update this function so it uses the "length" parameter?
+      CSD U3 Keypress Boolean_callout: {}
+      courseD_artist_functions2_callout:
+        courseD_artist_functions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      Course 4 Artist Vars 9_callout:
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+      courseE_farmer_functions2a_callout:
+        courseE_farmer_functions2a_2: This code might not look exactly like what you
+          wrote, but it will get the job done!
+      Course 4 Artist Params 4_callout:
+        create_function: Click here to open the "Functions" flyout, then click the
+          "Create a Function" button.
+      Test Play Lab Project With Walls_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      CSD U3 Keypress Watchers_callout: {}
+      grade2_collector_7_callout:
+        grade2_collector_7_1: You can take more blocks from the toolbox if you need
+          them!
+      grade2_CaringForNewPet_7D_callout:
+        grade2_CaringForNewPet_7D: This is your first challenge puzzle! These are
+          meant to be harder and may take several tries.
+      CSD U3 abstraction horse3_callout:
+        CSD_U3_L11_S16_C1: Use the counter pattern to make the horse fall here.
+        CSD_U3_L11_S16_C2: Stop the horse from falling here.
+      courseF_playlab_variables2a_callout: {}
+      MSM Defining Vars 2_callout:
+        MSM Defining Vars 2_callout1: Click "edit" to open the function editor to
+          update the function
+        MSM Defining Vars 2_callout2: Define the triangle here
+      CSD U3 abstraction sidescroll_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      Course 4 Artist Vars 10_callout:
+        set_sides: Use this block to set "sides" to the number needed to complete
+          the puzzle.
+      CSD U3 - complex - nested conditional_callout: {}
+      Geometric Sun_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      courseF_artist_variables_4_callout: {}
+      U3 - Simple Drawing - Ellipse and No Fill_callout: {}
+      courseF_artist_variables_10_callout: {}
+      gradek_playlab_events3c_callout: {}
+      CSDU4 - Design Mode - 3_callout: {}
+      Sam the Butterfly 3_callout:
+        Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right
+          side
+      grade5_playlab_variables11_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+      U3L2_TurtleSquare_right_callout: {}
+      grade5_artist_parameters_squares1_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      MC HOC 2016 Level 6_callout: {}
+      frozen perpendicular_callout:
+        turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
+          determines how much Elsa turns
+      courseC_collector_progA_callout: {}
+      PS copy 2-3 Bee Conditionals 5_callout:
+        Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
+          know until you run the code!
+      Ryan - Bee Conditionals_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      Code Studio Puzzle Challenge Var - Artist_callout: {}
+      gradek_artist_loops7_callout:
+        gradek_artist_loops7_1: Did you know that you can draw back over a line whenever
+          you need to?
+      U3 - Simple Drawing - Rectangle_callout: {}
+      grade5_playlab_variables1ask_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      grade2_maze_intro8_callout: {}
+      grade5_bee_for_loops4_callout: {}
+      CSD U3 Property Conditional Multi_callout: {}
+      courseE_farmer_functions2b_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      Course 4 Play Lab Params 3_callout:
+        edit_function: Click here to edit your function.
+      sample4_callout:
+        sample4_1: This will be an adventurer collecting coins, not a farmer digging.
+      grade4_playlab_test_callout: {}
+      Modular Arithmetic_callout: {}
+      grade2_CaringForNewPet_0_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      Eval Booleans 2_callout:
+        Eval Booleans 2 1: Select a number that will make this expression evaluate
+          to true
+      NEW Course 4 Artist Params 9_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      U3L2 Using Simple Commands (no tooltips)_callout: {}
+      Play Lab Rocket 2_callout:
+        pass_function: This start(function) block lets you pass your function (not
+          the value your function returns with some input) into the rocket animation
+          library. The animation you see on screen is actually using your function
+          to move the rocket!
+        play lab rocket 2: Define your rocket-height function here
+      gradek_adventurer_loops2_callout:
+        gradek_adventurer_loops2_1: This number tells you how many of these blocks
+          you can use in this puzzle.
+      NEW Course 4 Bee For Loops 5_callout:
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+      courseC_maze_programming3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
+      CSD U3 abstraction velocityY_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      Eval Cond 1_callout:
+        Eval Cond 1 1: Click edit to change the value of this variable
+      courseF_artist_variables_6a_callout:
+        courseF_artist_variables_6_1: Variables can be helpful when you have to change
+          a lot of copies of the same number.
+      NEW Course 4 Artist Functions 10_callout: {}
+      Calc Vars 1_callout:
+        Calc Vars 1_edit_option: Click on edit to change the value of this variable
+      courseF_artist_variables_9_callout: {}
+      grade5_artist_variables_octagons13_callout: {}
+      CSD U3 abstraction accelerateX_callout:
+        CSD_U3_L11_S6_C1: Add your code here.
+      2-3 Artist Debugging 1_callout:
+        2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can
+          drag the slider left to watch your program run more carefully.
+      CSPU5_U3L16 - setPosition to move button_callout:
+        randNumReminder: Use this as the the value for the x and y coordinates in
+          setPosition.  Just drag it into the parameter you want.
+      courseC_maze_programming2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      grade4_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      U3L2_Turtle3by3Grid_callout: {}
+      courseC_collector_progB_callout: {}
+      Sam the Butterfly 5_callout: {}
+      Eval Design Recipe .1_callout:
+        edit_function: Click here to edit your function.
+      grade2_maze_intro7_callout: {}
+      Course 4 Play Lab Vars 9_callout:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      Overworld Move to Sheep_callout:
+        craft_run_button_callout: Hit "Run" to try your program
+        craft_drag_block_callout: Drag a "move forward" block and snap it below the
+          other block
+      U3L2 Using Simple Commands_callout: {}
+      Course 4 Play Lab Params 6_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+      Course 4 Playlab For Loop Freeplay_callout: {}
+      WhileAdventure_callout:
+        sample1_1: This will be an adventurer collecting coins, not a farmer digging.
+      courseE_farmer_functions9b_callout: {}
+      grade5_bee_for_loops3_callout:
+        grade5_bee_for_loops3_1: The `for` loop is so large, that the toolbox has
+          to change into category mode.  You will find the new `for` loop in here!
+      aE3alternate_callout:
+        aE3_1: Only a handful of these available
+      U3 - Simple Drawing - Stroke and Stroke Weight_callout: {}
+      CSPU5_U3L16 - setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click
+          the arrows to get rid of the width and height parameters.
+      Course 4 Maze 1_callout:
+        Course 4 Maze 1_callout1: Hit "Run" to try your program
+        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other
+          blocks in the workspace
+      grade2_maze_intro4_callout:
+        grade2_maze_intro4_callout1: This is the toolbox area, to add a block to your
+          program, drag it from here into the workspace.
+      CSD U3 abstraction dragonfly (OLD)_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      Eval Strings Images 5_callout:
+        Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
+      CSD U3 abstraction change velocityY_callout:
+        CSD_U3_L11_S6_C1: Add your block here.
+      courseF_artist_variables_7_callout: {}
+      Calc Design Recipe 1_callout:
+        calc design recipe 1: Open the Functions drawer and click the "Create a Function"
+          button
+      MC HOC 2016 New Walk_callout:
+        MC_HOC_2016_New_Walk_callout2: Hit "Run" to start moving.
+      aE6_callout:
+        aE6_1: Only 1 move forward and 1 turn block
+      Code Studio Puzzle Challenge 5 - Bee_callout:
+        Code Studio Puzzle Challenge 5 - Bee_callout1: 3. Press "Run" to execute your
+          code
+        Code Studio Puzzle Challenge 5 - Bee_callout2: 2. Connect blocks to the "When
+          Run" block
+        Code Studio Puzzle Challenge 5 - Bee_callout3: 1. Drag blocks from the toolbox
+      PDAlg 17-20 Luigi Extension Puzzle_callout: {}
+      CSD U3 Conditional Project_callout: {}
+      Big Game Booleans 3_callout: {}
+      grade5_artist_variables_triangles2_callout:
+        set_length: Use this block to set "length" to the correct value.
+      Calc Circles of Eval 3_callout:
+        Calc Circles of Eval 3_callout1: Replace the ???'s with the correct number
+          to complete this puzzle
+      MC HOC 2016 Level 1_callout: {}
+      kikiTesta_callout:
+        sample1_1: This will be an adventurer collecting coins, not a farmer digging.
+      Luigi's Pizza 1_callout:
+        luigi's pizza 1: Try ordering a pepperoni pizza
+      CSD U3 collisions isTouching intro_callout:
+        CSD_U3_L12_S2_C1: Add your block here.
+      U3 - Simple Drawing - Rectangle Width and Height_callout: {}
+      courseE_farmer_functions3c_callout: {}
+      Big Game Collision 2_callout: {}
+      Luigi's Pizza 3_callout: {}
+      grade5_artist_parameters_triangles1aa_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      NEW Course 4 Artist Vars 6_callout:
+        place_length_variable: Drag the length variable here to replace the question
+          marks
+      Big Game Animation 4_callout: {}
+      grade5_playlab_variables_freeplay_callout:
+        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories!
+          Click on a label to see the pieces inside.
+      courseE_farmer_functions5c_callout: {}
+      U3 - Simple Drawing - Order of Blocks_callout: {}
+      Overworld Place Wall_callout:
+        craft_inside_repeat: Repeat actions by placing blocks in here
+      CSD U3 abstraction velocityX control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      Infinity_repeat_callout:
+        Infinity_repeat_callout: Place Move blocks inside here
+      courseF_playlab_variables4_callout: {}
+      grade5_bee_parameters_new4_callout:
+        grade5_bee_parameters_new4_1: Press the "edit" button to add a parameter to
+          this function.
+      grade4_artist_parameters_squares1_callout:
+        edit_add_parameter: Click edit to add a parameter in your function
+        add_and_drag_parameter: Write in the name of your parameter here, click add,
+          and then drag it into your function definition
+      grade2_maze_intro6_callout: {}
+      Eval Define Funcs 4_callout:
+        Eval Define Funcs 4: Go to the Functions drawer to "Create a Function"
+        Eval Define Funcs 4B: Click "Add" to add a domain radius, of type Number
+        Eval Define Funcs 4C: Set the range to Image
+      grade5_artist_freeplay_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      U3 - Sprites - Intro Sprites_callout: {}
+      MC HOC 2016 Level 2-2_callout:
+        craft2_run_button_callout: When you are ready, hit "Run" to try your program.
+      grade5_playlab_variables1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      CSD U3 platform platform1_callout:
+        CSD_U3_S17_L8_C1: This block creates a new sprite.
+      CSD U3 collisions scoreboard_callout:
+        CSD_U3_L12_S8_C1: These blocks display the score.
+        CSD_U3_L12_S8_C2: The blocks that determine whether the bunny has caught the
+          carrot go here.
+      NEW Course 4 Bee For Loops 4_callout:
+        bee_for_loop: Enter the largest number of nectar you want the bee to collect
+          here
+      CSD U3 abstraction tumbleweed_callout:
+        CSD_U3_L11_S17_C1: Look at this if statement
+      courseC_artist_prog1_callout: {}
+      Big Game Vars 4 (copy 1)_callout: {}
+      CSD U3 Compound Nested Challenge_callout: {}
+      sample3_callout:
+        sample3_1: This is also only one available
+      frozen freeplay_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      courseF_artist_variables_3_callout:
+        courseF_artist_variables_3_a: Use this to set the value of the variable `length`
+      Course 4 Artist Vars 12_callout:
+        set_length: Use this block to set "length" to the correct value.
+      CSD U3 - conditionals - first conditional_callout: {}
+      CSD U3 platform scoreboard_callout:
+        CSD_U3_L17_S7_C1: Score is printed here.
+      Big Game Animation 1 (copy 1)_callout: {}
+      CSD U3 abstraction rotation control_callout:
+        CSD_U3_L11_S5_C1: Look at this code.
+      Big Game Vars 3_callout:
+        big_game_bg: Click "edit" to change the background image of your game
+      grade5_artist_parameters_stars1_callout:
+        grade4_artist_functions_stars3_1: Drag this block into your program. Every
+          time you use this block, all of the commands in the function will be executed!
+      Big Game Vars 1_callout:
+        big_game_finish: Click the finish button when you're ready to move to the
+          next level.
+      Code Studio Puzzle Challenge 12 - Artist_callout:
+        Code Studio Puzzle Challenge 12 - Artist_callout1: Click "Clear Puzzle" to
+          return to the original code.
+      courseE_farmer_functions10b_callout: {}
+      Eval Strings Images 2_callout:
+        string_block_color: Try typing in a color as a String here
+      grade4_frozen_freeplay_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      gradek_playlab_events2c_callout: {}
+      Luigi's Pizza 1 (copy 1)_callout:
+        luigi's pizza 1: Try ordering a pepperoni pizza
+      grade2_maze_intro3_callout:
+        grade2_maze_intro3_callout1: This is the workspace where you will create all
+          of your programs. Can you guess what this program does?  Press the “Run”
+          button to find out.
+      course_playlab_variables3_callout:
+        course_playlab_variables3_1: This is how you set the value of your variable.
+      MSM Defining Vars 3_callout:
+        MSM Defining Vars 3: Click here to find your variables
+      Pizza on a Plate_callout:
+        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
+          into categories.  Click on these words to see where everything went!
+      U3 Variables flower example_callout: {}
+      CSD U3 Variables make a square_callout: {}
+      New Play Lab Project_callout:
+        New Play Lab Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace add them to your program
+        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      frozen square loop 3x_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      Ninjacat Demo No Animate_callout:
+        Ninjacat Demo B: Click `Run` to try out the game
+      Big Game Collision 3_callout:
+        Big Game Collision 3: Fix this 'distance' function to make your collision
+          detection work. You can use the existing 'line-length' function to calculate
+          the distance from px to cx, and from py to cy.
+      grade4_frozen_square_loop2_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      Eval Strings Images .1_callout:
+        type_string: 'Drag this string into the evaluate block in the workspace. '
+      Big Game Booleans 5_callout: {}
+      CSD U3 platform variable1_callout:
+        callout: This block creates a variable.
+      grade2_CaringForNewPet_3_callout:
+        grade2_CaringForNewPet_3_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      CSD U3 abstraction sidescroll intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      U3 - Simple Drawing - Fill_callout: {}
+      Course 4 Artist Vars 1_callout:
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+      Big Game Animation 2_callout:
+        Big Game Animation 2_callout1: Edit this function to animate the target
+        Big Game Animation 2_callout2: Delete this block and complete the definition
+      Course 4 Artist Vars 13_callout: {}
+      CSD U3 abstraction sidescroll template_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      courseE_artist_functions1_callout:
+        courseD_artist_functions1_1: Let's start by using this block to help create
+          the first square.
+      grade5_artist_variables_square7_callout:
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+      CSD U3 Property Conditional_callout: {}
+      courseC_maze_programming5_callout: {}
+      CSD U3 abstraction jumper intro_callout:
+        CSD_U3_L11_S17_C1: Set the sprite's starting position here.
+        CSD_U3_L11_S17_C2: Set the hay bale's velocity here
+        CSD_U3_L11_S17_C3: Add your if statement here.
+      Course 4 Maze 4_callout:
+        repeat: Put blocks inside the loop to repeat commands
+      courseE_farmer_functions7b_callout: {}
+      aEfreeplay_callout:
+        aEfreeplay_1: Note that starting the artist in the middle can be awkward.  We're
+          looking at adding actions that can move the artist to absolute positions.
+      CSD U3 collisions getSpeed_callout:
+        CSD_U3_L11_S2_C1: Add your code for the compass here.
+        CSD_U3_L11_S2_C2: Change the code to display speed here.
+      grade4_frozen_square_loop1_callout:
+        replace_questions: Use the drop-down to replace "???" with a number
+      TestLab_callout: {}
+      CSD U3 Direction Arrows_callout: {}
+      courseD_playLab_condFP_callout:
+        courseD_playLab_condFP_1: we have organized the blocks into categories to
+          give you more code to play with!  Click here to see where everything went.
+      Big Game Booleans 4_callout:
+        Big Game Booleans 3: Edit the onscreen? function to check both safe-left?
+          and safe-right?
+      CSD U3 Random Min Max_callout: {}
+      courseE_farmer_functions3b_callout:
+        courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
+          you run the program.
+      Course 4 Play Lab Vars 1_callout:
+        arrows_move_actor: Use the arrows to move the actor
+      Luigi's Pizza 2_callout:
+        luigi_pizza_2: Edit this function to add your own toppings
+      PDAlg 13-16 Sam Extension Puzzle_callout: {}
+      Course 4 Artist Vars 6_callout:
+        degrees_per_side: Divide 360 by the number of sides to get the size of each
+          angle in degrees.
+      grade2_puppy_loops2_callout:
+        grade2_puppy_loops2_callout1: You only have one of these blocks available
+          in this puzzle.
+      Big Game Collision 1 (copy 1)_callout: {}
+      Course 4 Bee For Loops 6_callout:
+        actions_category: The tool box got a new look! The "Actions" blocks are in
+          here now.
+      frozen cross_callout:
+        repeat_blocks_1: "(1) Use this block and put it around the grey blocks in
+          the workspace"
+        repeat_blocks_2: (2) Move the "Repeat" block here, and place the gray blocks
+          inside
+      CSD U3 - complex - mouse down_callout: {}
+      grade1_maze_sequence6_callout:
+        grade1_maze_sequence6_1: These grey blocks are made of stone!  That means
+          that they can't be trashed.
+      grade4_artist_functions2_callout:
+        grade4_artist_funcions2_1: When this green block runs, all of the code in
+          the function will run. What should the artist do after drawing the first
+          square?
+      Big Game Animation 1_callout: {}
+      Course 4 Artist 7_callout:
+        repeat_blocks: Use the "Repeat" block and wrap it around the blocks in the
+          workspace
+      U5 ColorSleuth Template_callout: {}
+      aE5_callout:
+        aE3_1: Only a handful of these available
+      2-3 Artist 1 new_callout: {}
+      CSD U3 If Else_callout: {}
+      gradek_artist_loops3_callout:
+        artistLoopsK2_1: This number tells you how many of these blocks you can use
+          in this puzzle.
+      sample1_callout:
+        sample1_1: This will be an adventurer collecting coins, not a farmer digging.
+      grade5_artist_parameters_triangles1_callout:
+        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
+          code inside the function.
+      grade5_artist_functionparameters8_callout:
+        grade5_artist_functionparameters8_1: You will find the polygon function in
+          here.
+      Course 4 Bee Params 2_callout:
+        edit_get_nectar: Use this button to edit the function and change the direction
+          the Bee will turn to get the nectar.
+      grade4_bee_conditionals_quantum2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      U3 - Simple Drawing - No Fill_callout: {}
+      Big Game Vars 4_callout: {}
+      grade5_artist_parameters_squares1a_callout:
+        grade5_artist_parameters_triangles1_1: Click the "edit" button to change the
+          code inside the function.
+      grade5_bee_parameters_new1_callout:
+        grade5_bee_parameters_new1_a: You can find `if` statements in here.
+      courseC_artist_prog2_callout: {}
+      Course 4 Play Lab Params 5_callout: {}
+      Eval Define Funcs 3_callout:
+        Eval Define Funcs 3: Make our function use the radius parameter instead of
+          always having a radius of 50.
+      U3L05_draw3x3GridEfficiently_callout: {}
+      courseD_artist_functions8_callout:
+        courseD_artist_functions8_1: Your blocks to create functions have been moved
+          under this label in the toolbox.
+      PDAlg Big Game Remix_callout: {}
+      courseE_farmer_functions5b_callout: {}
+      U3L05_3x3GridEfficiencyChallenge_callout: {}
+      Ninjacat Demo B_callout:
+        Ninjacat Demo B: Click `Run` to try out the game
+      allthethings_U3 - Simple Drawing - Rectangle Width and Height_callout: {}
+      courseF_artist_variables_FP_callout: {}
+      grade5_artist_for_loops4_callout: {}
+      CSD U3 game variables_callout:
+        CSD_U3_S18_L3_C1: This block creates a new variable.
+        CSD_U3_L18_S3_C2: Variables area
+      gradek_playlab_events4c_callout: {}
+      courseF_playlab_variables5_callout: {}
+      courseF_playlab_variables3_callout: {}
+      CSD U3 abstraction velocityY 2_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      New Artist Project_callout:
+        New Artist Project_callout1: Click the categories to see the blocks in your
+          toolbox! Drag blocks to the workspace to add them to your program
+        New Artist Project_callout2: Hit "Run" to save and run your program
+        sign_in_to_save_project: Want to access your project later? Sign in to save
+          this project to your account!
+      grade3_playLab_buildGame_2_callout:
+        Playlab_cond_2_1: 'This block is your way to tell the computer to remember
+          your value: when you use the block labeled `j`, the program will give you
+          the number you generate here at the top. '
+      Overworld Chop Trees_callout:
+        craft_callout_preplaced: We've put some blocks here to get you started
+      Applab test_callout: {}
+      Course 4 Playlab For Loops 6b_callout: {}
+      CSD U3 Compound Nested Examples_callout: {}
+      Play Lab Rocket 2B_callout:
+        pass_function: This black block lets you pass your function (not the value
+          your function returns with some input) into the rocket animation library.
+          The animation you see on screen is actually using your function to move
+          the rocket!
+      WebLab PS test - 1-12_callout:
+        version_history_button: Check out version history
+      CSD U3 Variables TEMPLATE square_callout: {}
+      courseD_bee_conditionals2_callout:
+        4_5_Bee_Conditionals_2_1: Remember, check to see if EVERY cloud has a FLOWER.
+          You don't have to check for honeycombs at all.
+      courseE_farmer_functions6c_callout: {}
+      grade2_CaringForNewPet_1_callout:
+        grade2_CaringForNewPet_1_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      CSD U3 Simple Drawing - Animation 2_callout: {}
+      Underground Avoiding Lava_callout:
+        craft_callout_moveforward: This code will check for lava, can you add a command
+          to move forward?
+      CSPU5_setPosition to fixed location_callout:
+        firstTimeSetPosition: Drag this inside the event handler function. Then click
+          the arrows to get rid of the width and height parameters.
+      CSD U3 abstraction circle_callout:
+        CSD_U3_L12_S7_C1: Look at this line.
+      Big Game Vars 2_callout:
+        Big Game Vars 2_callout1: Click "edit" to change the title of your game
+        Big Game Vars 2_callout2: Change the value of the title variable here
+      Luigi's Pizza 3 (copy 1)_callout: {}
+      Big Game Animation 2 (copy 1)_callout:
+        Big Game Animation 2: Edit this function to animate the target
+      Big Game Final_callout: {}
+      Calc Circles of Eval .1_callout:
+        Calc Circles of Eval .1: This is the evaluation block. Click on the drop down
+          box to change the number
+      U3 - Simple Drawing - Oval_callout: {}
+      Big Game Animation 3_callout:
+        Big Game Animation 3_callout1: Edit this function to animate the danger
+        Big Game Animation 3_callout2: Delete this block and complete the definition
+      Luigi's Pizza 4_callout: {}
+      Eval Strings Images .2_callout: {}
+      Course 4 Bee Params 4 - Two WhenRun_callout:
+        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called
+          setting a "flag". This flag can signal our function with the direction that
+          our bee needs to go.
+      CSD U3 abstraction change velocityX_callout:
+        CSD_U3_L11_S5_C1: Add your block here.
+      U3 Variables make a square_callout: {}
+      PDAlg Big Game History_callout: {}
+      CSD U3 abstraction change velocityXY_callout:
+        CSD_U3_L12_S4_C1: The velocity is updated here.
+      frozen diamond snowflake_callout:
+        frozen_diamond_repeat: Use the repeat block to create this shape.
+      New Maker Lab Project_callout: {}
+      grade2_maze_intro10_callout: {}
+      CSD U3 collisions types_callout:
+        CSD_U3_L13_S6_C1: Add your code here.

@@ -55,7 +55,7 @@ Compares two values - numbers, strings, or other booleans - and returns *true*  
 * `(2+1) == 3` returns *true*  -- because the arithmetic expression evaluates to 3.
 * `x == 7` returns *true*  -- when the variable x has the value 7.
 
-<sup>1.</sup> While it is a useful feature that == will coerce a string into a number, it is considered **TRICKY** since string "3" is not the same as the integer 3 underneath the hood.  There are circumstances when you would consider these not equal.   There is a "strict" equality operator - the "tripple equal" `===` which makes sure that the both the type of data and value are equal.  So ` "3" === 3 ` is false.
+<sup>1.</sup> While it is a useful feature that == will coerce a string into a number, it is considered **TRICKY** since string "3" is not the same as the integer 3 underneath the hood.  There are circumstances when you would consider these not equal.   There is a "strict" equality operator - the "triple equal" `===` which makes sure that the both the type of data and value are equal.  So ` "3" === 3 ` is false.
 
 <div style="clear:both"> </div>
 <hr>

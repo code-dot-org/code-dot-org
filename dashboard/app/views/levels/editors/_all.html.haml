@@ -6,6 +6,10 @@
 
 - unless @level.is_a? DSLDefined
   .field
+    = f.label :display_name
+    %p Optionally override how this level is displayed on the Course Overview page.
+    = f.text_field :display_name, placeholder: '(defaults to Name)'
+  .field
     = f.label 'notes'
     %p
       Notes for yourself or other Levelbuilders. Viewable here and here alone.
