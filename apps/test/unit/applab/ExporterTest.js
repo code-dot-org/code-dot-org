@@ -1,10 +1,11 @@
-/* global Promise dashboard */
+/* global dashboard */
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions, getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
+import {blocks} from '@cdo/apps/applab/dropletConfig';
 testUtils.setExternalGlobals();
 
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
@@ -339,6 +340,12 @@ describe('The Exporter,', function () {
 
     });
 
+  });
+
+  describe("globally exposed functions", () => {
+    beforeEach(() => {
+      require('../../../build/package/js/applab-api.js');
+    });
   });
 
   function runExportedApp(code, html, done) {
