@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+# This script replaces instances of "flappy_whenRunButtonClick" within
+# level_sources.data with "when_run". Doing so obsoletes the method
+# LevelSource#replace_old_when_run_blocks.
+
+require_relative '../../dashboard/config/environment'
+
+data_file = ARGV[0]
+
+row_number = 0
+
+begin
+  CSV.foreach(data_file) do |row|
+    level_source_id = row[0]
+    level_source = LevelSource.find_by_id(level_source_id)
+    level_source.update!(
+      data: level_source.data.gsub('flappy_whenRunButtonClick', 'when_run')
+    )
+
+    row_number += 1
+  end
+rescue Exception => e
+  puts "EXCEPTION: #{row_number}..."
+  raise e
+end
