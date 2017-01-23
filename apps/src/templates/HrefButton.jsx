@@ -1,6 +1,8 @@
 /**
  * This component is a button that navigates to a particular URL when clicked.
- * Ideally in the longterm, it would share more with our Button.jsx component
+ * It shares some styles with Button.jsx. Longterm, these might be able to be
+ * merged. One significant difference here is that we use a form/input to
+ * navigate. This apparently makes it easier to screen readers to deal with.
  */
 
 import React from 'react';
@@ -25,7 +27,6 @@ const styles = {
   }
 };
 
-// TODO - write a story file
 const HrefButton = ({href, text, type, style}) => (
   <form
     style={{...styles.form, ...style}}
