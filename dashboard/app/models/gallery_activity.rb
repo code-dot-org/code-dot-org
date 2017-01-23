@@ -30,8 +30,13 @@ class GalleryActivity < ActiveRecord::Base
   before_save :set_app
 
   def set_app
-    return unless activity
-    self.app = activity.try(:level).try(:game).try(:app)
+    if user_level
+      self.app = user_level.level.try(:game).try(:app)
+      return
+    end
+    if level_source
+      self.app = level_source.try(:level).try(:game).try(:app)
+    end
   end
 
   def self.pseudocount
