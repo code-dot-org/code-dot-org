@@ -49,14 +49,15 @@ let redrawApplicationFunction = function (event) {
       method: "GET",
       url: `/api/v1/regional-partners/${schoolDistrictData['school-district']}/${selectedCourse}.json`
     }).done(data => {
-      const regionalPartnerGroup = data ? data['group'] : undefined;
-      const regionalPartnerName = data ? data['name'] : undefined;
+      const regionalPartnerGroup = data ? data['regional_partner']['group'] : undefined;
+      const regionalPartnerName = data ? data['regional_partner']['name'] : undefined;
+      const workshopDays = data ? data['workshop_days'] : undefined;
 
       ReactDOM.render(
         <TeacherApplication
           regionalPartnerGroup={regionalPartnerGroup}
           regionalPartnerName={regionalPartnerName}
-          workshopDates={workshopDates}
+          workshopDates={workshopDays}
           schoolDistrictData={schoolDistrictData}
           districtErrorMessageHandler={districtErrorMessageHandler}
         />,
