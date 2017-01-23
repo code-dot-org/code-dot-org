@@ -7,7 +7,7 @@ class Slack
     yellow: 'warning',
     red: 'danger',
     purple: '#7665a0'
-  }
+  }.freeze
 
   CHANNEL_MAP = {
     'developers' => 'general',
@@ -15,8 +15,10 @@ class Slack
     'staging' => 'infra-staging',
     'test' => 'infra-test',
     'production' => 'infra-production'
-  }
+  }.freeze
 
+  # @param text [String] The text to post in Slack.
+  # @return [Boolean] Whether the text was posted to Slack successfully.
   def self.message(text, params={})
     return false unless CDO.slack_endpoint
 
@@ -38,9 +40,10 @@ class Slack
 
     url = URI.parse("https://hooks.slack.com/services/#{CDO.slack_endpoint}")
     begin
-      response = Net::HTTP.post_form(url, {
-        payload: payload.to_json
-      })
+      response = Net::HTTP.post_form(
+        url,
+        {payload: payload.to_json}
+      )
 
       response.code.to_s == '200'
     rescue
