@@ -23,6 +23,9 @@ const styles = {
  */
 const CourseProgress = React.createClass({
   propTypes: {
+    onOverviewPage: React.PropTypes.bool.isRequired,
+
+    // redux provided
     scriptName: React.PropTypes.string.isRequired,
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
@@ -49,17 +52,21 @@ const CourseProgress = React.createClass({
 
     return (
       <div>
-        <HrefButton
-          href={`/s/${scriptName}/next.next`}
-          text="Try Now"
-          type="primary"
-        />
-        <HrefButton
-          href="//support.code.org"
-          text="Get Help"
-          type="default"
-          style={{marginLeft: 10}}
-        />
+        {this.props.onOverviewPage &&
+          <HrefButton
+            href={`/s/${scriptName}/next.next`}
+            text="Try Now"
+            type="primary"
+          />
+        }
+        {this.props.onOverviewPage &&
+          <HrefButton
+            href="//support.code.org"
+            text="Get Help"
+            type="default"
+            style={{marginLeft: 10}}
+          />
+        }
         <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
             <div key={group}>
