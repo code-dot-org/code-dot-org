@@ -7,6 +7,7 @@ import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
 import HrefButton from '@cdo/apps/templates/HrefButton';
 import color from "../../../util/color";
+import i18n from '@cdo/locale';
 
 const styles = {
   flexHeader: {
@@ -26,6 +27,7 @@ const CourseProgress = React.createClass({
     onOverviewPage: React.PropTypes.bool.isRequired,
 
     // redux provided
+    perLevelProgress: React.PropTypes.object.isRequired,
     scriptName: React.PropTypes.string.isRequired,
     professionalLearningCourse: React.PropTypes.bool,
     focusAreaPositions: React.PropTypes.arrayOf(React.PropTypes.number),
@@ -50,21 +52,24 @@ const CourseProgress = React.createClass({
 
     let count = 1;
 
+    const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
+
     return (
       <div>
         {this.props.onOverviewPage &&
           <HrefButton
             href={`/s/${scriptName}/next.next`}
-            text="Try Now"
+            text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
             type="primary"
+            style={{marginBottom: 10}}
           />
         }
         {this.props.onOverviewPage &&
           <HrefButton
             href="//support.code.org"
-            text="Get Help"
+            text={i18n.getHelp()}
             type="default"
-            style={{marginLeft: 10}}
+            style={{marginLeft: 10, marginBottom: 10}}
           />
         }
         <div className="user-stats-block">
@@ -96,6 +101,7 @@ const CourseProgress = React.createClass({
 });
 
 export default connect(state => ({
+  perLevelProgress: state.progress.levelProgress,
   scriptName: state.progress.scriptName,
   professionalLearningCourse: state.progress.professionalLearningCourse,
   focusAreaPositions: state.progress.focusAreaPositions,
