@@ -27,10 +27,8 @@ class AdminReportsControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
-  generate_admin_only_tests_for :all_usage
   generate_admin_only_tests_for :debug
   generate_admin_only_tests_for :directory
-  generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :level_answers
 
   test 'should get admin progress page' do

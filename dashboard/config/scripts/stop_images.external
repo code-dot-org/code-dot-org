@@ -17,7 +17,7 @@ In order to tell the browser which file to use, extra information, called an att
 
 In addition to have the src attribute, image elements also have the alt attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight.
 
-An <img> tag is an example of a void element because it starts and closes in one tag. To mark this we put the / which usually goes in the close tag at the end of the image tag.
+An `<img>` tag is an example of a void element because it starts and closes in one tag. To mark this we put the / which usually goes in the close tag at the end of the image tag.
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
