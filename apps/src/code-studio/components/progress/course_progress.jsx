@@ -5,8 +5,7 @@ import _ from 'lodash';
 
 import { stageShape } from './types';
 import CourseProgressRow from './course_progress_row.jsx';
-import TryNowButton from './TryNowButton';
-import GetHelpButton from './GetHelpButton';
+import HrefButton from '@cdo/apps/templates/HrefButton';
 import color from "../../../util/color";
 
 const styles = {
@@ -50,8 +49,17 @@ const CourseProgress = React.createClass({
 
     return (
       <div>
-        <TryNowButton scriptName={scriptName}/>
-        <GetHelpButton style={{marginLeft: 10}}/>
+        <HrefButton
+          href={`/s/${scriptName}/next.next`}
+          text="Try Now"
+          type="primary"
+        />
+        <HrefButton
+          href="//support.code.org"
+          text="Get Help"
+          type="default"
+          style={{marginLeft: 10}}
+        />
         <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
             <div key={group}>
