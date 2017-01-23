@@ -250,13 +250,6 @@ class AdminReportsController < ApplicationController
     end
   end
 
-  def all_usage
-    SeamlessDatabasePool.use_persistent_read_connection do
-      @recent_activities = Activity.all.order('id desc').includes([:user, :level_source, {level: :game}]).limit(50)
-      render 'usage', formats: [:html]
-    end
-  end
-
   # Use callbacks to share common setup or constraints between actions.
   def set_script
     @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
