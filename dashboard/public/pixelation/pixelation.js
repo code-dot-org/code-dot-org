@@ -1,4 +1,6 @@
 /* global $ appOptions dashboard options */
+// This file does not pass eslint.
+/* eslint-disable */
 
 /**
  * Pixelation widget for visualizing image encoding.
@@ -72,6 +74,10 @@ function initProjects() {
   if (appOptions.channel) {
     window.apps.setupProjectsExternal();
     var sourceHandler = {
+      setMakerAPIsEnabled: function (_) {},
+      getMakerAPIsEnabled: function () {
+        return false;
+      },
       setInitialLevelHtml: function (levelHtml) {},
       getLevelHtml: function () {
         return '';
