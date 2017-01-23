@@ -83,7 +83,6 @@ function validateReport(report) {
         if (report.app === 'match') {
           validateType('program', value, 'array');
         } else if (report.app === 'multi' && isContainedLevel) {
-          // TODO - other contained levels
           validateType('program', value, 'number');
         } else if (report.app === 'multi' && !inLevelGroup) {
           validateType('program', value, 'array');
