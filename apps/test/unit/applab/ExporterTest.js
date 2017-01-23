@@ -1,10 +1,11 @@
-/* global Promise dashboard */
+/* global dashboard */
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions, getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
+import {blocks} from '@cdo/apps/applab/dropletConfig';
 testUtils.setExternalGlobals();
 
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
@@ -341,6 +342,12 @@ describe('The Exporter,', function () {
 
   });
 
+  describe("globally exposed functions", () => {
+    beforeEach(() => {
+      require('../../../build/package/js/applab-api.js');
+    });
+  });
+
   function runExportedApp(code, html, done) {
     server.respondImmediately = true;
     let zipPromise = Exporter.exportAppToZip('my-app', code, html);
@@ -391,6 +398,14 @@ describe('The Exporter,', function () {
     it("should allow you to use turtle operations", (done) => {
       runExportedApp(
         `moveForward(25);`,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        done
+      );
+    });
+
+    it("should allow you to play a sound", (done) => {
+      runExportedApp(
+        `playSound("https://studio.code.org/blockly/media/example.mp3", false);`,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         done
       );
