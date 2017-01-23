@@ -777,11 +777,11 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       var dropdown;
       if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
-        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
+        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
       } else {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
-        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown.setValue(this.VALUES[1][1]); // default to top-left
       }
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
@@ -799,6 +799,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.setSpritePositionTooltip());
     }
   };
+
+  blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
+  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
 
   generator.studio_setSpritePosition = function () {
     return generateSetterCode({

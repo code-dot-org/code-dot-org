@@ -8,7 +8,6 @@ window.React = require('react');
 window.Applab = require('./applab');
 import {injectErrorHandler} from '../javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import * as api from './api';
 import appStorage from './appStorage';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';
@@ -16,6 +15,7 @@ import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 import {getAppOptions, setAppOptions, setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
+import {getExportedGlobals} from './export';
 window.CDOSounds = new Sounds();
 
 const noop = function () {};
@@ -41,9 +41,10 @@ getStore().dispatch(setIsRunning(true));
 // Expose api functions globally, unless they already exist
 // in which case they are probably browser apis that we should
 // not overwrite.
-for (let key in api) {
+const globalApi = getExportedGlobals();
+for (let key in globalApi) {
   if (!window[key]) {
-    window[key] = api[key];
+    window[key] = globalApi[key];
   }
 }
 
