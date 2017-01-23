@@ -376,6 +376,7 @@ module.exports = function (grunt) {
   };
 
   var otherEntries = {
+    'layouts/application': './src/sites/studio/pages/layouts/application.js',
     plc: './src/sites/studio/pages/plc.js',
 
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
@@ -424,7 +425,7 @@ module.exports = function (grunt) {
       ),
       externals: [
         {
-          'jquery': 'var $',
+          jquery: 'var $',
         }
       ],
       plugins: [
@@ -442,6 +443,7 @@ module.exports = function (grunt) {
           name: 'essential',
           minChunks: 2,
           chunks: [
+            'layouts/application',
             'plc',
             'pd',
             'code-studio-common',
