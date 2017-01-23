@@ -8,7 +8,7 @@ import { BUTTON_TYPES } from './Button';
 
 const styles = {
   form: {
-    marginBottom: 5,
+    marginBottom: 0,
     display: 'inline-block'
   },
   input: {
