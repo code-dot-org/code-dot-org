@@ -817,6 +817,15 @@ Maze.prepareForExecution = function () {
   Maze.response = null;
 };
 
+Maze.isPreAnimationFailure = function (testResult) {
+  return testResult === TestResults.QUESTION_MARKS_IN_NUMBER_FIELD ||
+    testResult === TestResults.EMPTY_FUNCTIONAL_BLOCK ||
+    testResult === TestResults.EXTRA_TOP_BLOCKS_FAIL ||
+    testResult === TestResults.EXAMPLE_FAILED ||
+    testResult === TestResults.EMPTY_BLOCK_FAIL ||
+    testResult === TestResults.EMPTY_FUNCTION_NAME;
+};
+
 /**
  * Execute the user's code.  Heaven help us...
  */
@@ -854,7 +863,8 @@ Maze.execute = function (stepMode) {
   try {
     // don't bother running code if we're just editting required blocks. all
     // we care about is the contents of report.
-    var runCode = !level.edit_blocks;
+    var initialTestResults = studioApp.getTestResults(false);
+    var runCode = !Maze.isPreAnimationFailure(initialTestResults) && !level.edit_blocks;
 
     if (runCode) {
       if (Maze.map.hasMultiplePossibleGrids()) {
