@@ -26,16 +26,12 @@ class GalleryActivity < ActiveRecord::Base
   belongs_to :user
   belongs_to :activity
   belongs_to :level_source
-  belongs_to :user_level
 
   before_save :set_app
 
   def set_app
-    if user_level
-      self.app = user_level.level.try(:game).try(:app)
-    elsif level_source
-      self.app = level_source.try(:level).try(:game).try(:app)
-    end
+    return unless activity
+    self.app = activity.try(:level).try(:game).try(:app)
   end
 
   def self.pseudocount
