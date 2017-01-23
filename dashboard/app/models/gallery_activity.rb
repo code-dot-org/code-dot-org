@@ -33,9 +33,7 @@ class GalleryActivity < ActiveRecord::Base
   def set_app
     if user_level
       self.app = user_level.level.try(:game).try(:app)
-      return
-    end
-    if level_source
+    elsif level_source
       self.app = level_source.try(:level).try(:game).try(:app)
     end
   end
