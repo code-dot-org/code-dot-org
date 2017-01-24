@@ -29,7 +29,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStagesInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
@@ -52,7 +52,7 @@ export const TeacherContentToggle = Radium(React.createClass({
   render() {
     const {
       viewAs,
-      scriptAllowsHiddenStages,
+      hiddenStagesInitialized,
       sectionsAreLoaded,
       isLockedStage,
       isHiddenStage,
@@ -74,7 +74,7 @@ export const TeacherContentToggle = Radium(React.createClass({
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
       // locked stages, so that we don't flash content before hiding it
-      if (!scriptAllowsHiddenStages || !sectionsAreLoaded || hasOverlayFrame) {
+      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
 
@@ -122,7 +122,7 @@ export default connect(state => {
   return {
     viewAs,
     sectionsAreLoaded: state.sections.sectionsAreLoaded,
-    scriptAllowsHiddenStages: state.hiddenStage.get('hideableAllowed'),
+    hiddenStagesInitialized: state.hiddenStage.get('initialized'),
     isHiddenStage,
     isLockedStage
   };

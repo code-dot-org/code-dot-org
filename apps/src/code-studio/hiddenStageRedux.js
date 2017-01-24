@@ -11,6 +11,7 @@ export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
 const STUDENT_SECTION_ID = 'STUDENT';
 
 const initialState = Immutable.fromJS({
+  initialized: false,
   hideableAllowed: false,
   // mapping of section id to hidden stages for that section
   // Teachers will potentially have a number of section ids. For students we
@@ -35,7 +36,7 @@ export default function reducer(state = initialState, action) {
         state.get('bySection').size > 1) {
       throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
     }
-    return nextState;
+    return nextState.set('initialized', true);
   }
 
   if (action.type === ALLOW_HIDEABLE) {
