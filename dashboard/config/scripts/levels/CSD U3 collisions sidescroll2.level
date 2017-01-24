@@ -82,10 +82,7 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

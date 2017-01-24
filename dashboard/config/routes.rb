@@ -199,9 +199,6 @@ Dashboard::Application.routes.draw do
 
   get '/admin', to: 'admin_reports#directory', as: 'admin_directory'
 
-  # one-off internal reports
-  get '/admin/temp/diversity_survey', to: 'admin_reports#diversity_survey', as: 'diversity_survey'
-
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
   get '/admin/hoc/event_signups', to: 'admin_hoc#event_signups', as: 'hoc_event_signups'
@@ -212,7 +209,6 @@ Dashboard::Application.routes.draw do
   get '/admin/pd_progress(/:script)', to: 'admin_reports#pd_progress', as: 'pd_progress'
   get '/admin/progress', to: 'admin_reports#admin_progress', as: 'admin_progress'
   get '/admin/stats', to: 'admin_reports#admin_stats', as: 'admin_stats'
-  get '/admin/usage', to: 'admin_reports#all_usage', as: 'all_usage'
   get '/admin/debug', to: 'admin_reports#debug'
 
   # internal search tools

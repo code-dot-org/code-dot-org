@@ -24,7 +24,6 @@ Each of our Regional Partners is listed below in alphabetical order by organizat
 - **[Kentucky](#ky)**<br/>
 - **[Maine](#me)**</br/>
 - **[Maryland](#md)**<br/>
-- **[Massachusetts](#ma)**</br/>
 - **[Michigan](#mi)**<br/>
 - **[Montana](#mt)**</br/>
 - **[Nevada](#nv)**</br/>
@@ -573,23 +572,6 @@ tchappelear@ccboe.com
 [**Back to the top**](#top)
 <br/>
 ________________
-<a id="ma"></a>
-
-## Massachussetts
-### [MassCAN](http://masscan.edc.org/)<br/>
-Massachussetts
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/>
-James Stanton<Br/>
-JStanton@edc.org<Br/>
-
-[**Back to the top**](#top)
-<br/>
-________________
 <a id="mi"></a>
 
 ## Michigan
@@ -690,21 +672,6 @@ CS Discoveries<br/>
 **Contact Information**<br/>
 Jen Noborikawa<br/>
 jen@weare.ci
-
-<br/>
-
-### [WNY STEM Hub](http://wnystem.org/)<br/>
-Western New York<br/>
-
-**Programs**<br/>
-CS Principles<br/>
-CS Discoveries<br/>
-
-**Contact Information**<br/>
-Dr. Michelle Kavanaugh<br/>
-michelle.kavanaugh@wnystem.org
-
-<br/>
 
 [**Back to the top**](#top)
 <br/>

@@ -261,6 +261,8 @@ FactoryGirl.define do
   factory :gallery_activity do
     user
     activity { create(:activity, level_source: create(:level_source, :with_image)) }
+    level_source { activity.level_source }
+    user_level { create(:user_level, level: activity.level) }
   end
 
   factory :script do
@@ -340,7 +342,7 @@ FactoryGirl.define do
   factory :activity do
     level
     user
-    level_source
+    level_source { create :level_source, level: level }
   end
 
   factory :concept do
