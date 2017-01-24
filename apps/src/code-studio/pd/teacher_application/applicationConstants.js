@@ -10,7 +10,7 @@ const group1CspWorkshops = {
   'A+ College Ready': 'June 26 - 30, 2017',
   'Grand Canyon University & Science Foundation Arizona': 'July 10 - 14, 2017',
   'Riverside County Office of Education': 'June 19 - 23, 2017',
-  '9 Dots Community Learning Center': 'June 26 - 30, 2017',
+  '9 Dots Community Learning Center': 'June 19 - 23, 2017',
   'Alameda County Office of Education': 'July 31 - August 4, 2017',
   'Contra Costa County Office of Education': '',
   'Broward County Public Schools': 'June 12 - 16, 2017',
