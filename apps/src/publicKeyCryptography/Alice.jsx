@@ -103,7 +103,7 @@ const Alice = React.createClass({
       <CollapsiblePanel title="Alice">
         <NumberedSteps>
           <Step>
-            Enter <KeywordPublicModulus/>:
+            Set a <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}

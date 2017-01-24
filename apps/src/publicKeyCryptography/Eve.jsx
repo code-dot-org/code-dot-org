@@ -132,7 +132,7 @@ const Eve = React.createClass({
       <CollapsiblePanel title="Eve">
         <NumberedSteps>
           <Step>
-            Set a <KeywordPublicModulus/>:
+            Enter <KeywordPublicModulus/>:
             <PublicModulusDropdown
               value={publicModulus}
               onChange={this.onPublicModulusChange}
