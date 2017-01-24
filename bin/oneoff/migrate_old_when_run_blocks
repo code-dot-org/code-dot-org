@@ -20,6 +20,7 @@
 #
 # to the query caused it to become prohibitively long (longer than four hours).
 
+require 'digest/md5'
 require_relative '../../dashboard/config/environment'
 
 DATA_FILE = ARGV[0].freeze
@@ -40,8 +41,10 @@ begin
 
     next unless level_source.data.include? OLD_WHEN_RUN
 
+    new_data = level_source.data.gsub(OLD_WHEN_RUN, NEW_WHEN_RUN)
     level_source.update!(
-      data: level_source.data.gsub(OLD_WHEN_RUN, NEW_WHEN_RUN)
+      data: new_data,
+      md5: Digest::MD5.hexdigest(new_data)
     )
 
     rows_fixed += 1
