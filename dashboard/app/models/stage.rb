@@ -102,16 +102,15 @@ class Stage < ActiveRecord::Base
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
 
-      # The last level in a stage might be a multi-page assessment, in which
-      # case we'll receive extra puzzle pages to be added to the existing summary.
+      # The last level in a stage might be a long assessment, so add extra information
+      # related to that.  This might include information for additional pages if it
+      # happens to be a multi-page long assessment.
       if last_script_level.long_assessment?
         last_level_summary = stage_data[:levels].last
         extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        unless extra_levels.empty?
-          stage_data[:levels] += extra_levels
-          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-          last_level_summary[:url] << "/page/1"
-        end
+        stage_data[:levels] += extra_levels
+        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
+        last_level_summary[:url] << "/page/1"
       end
 
       # Don't want lesson plans for lockable levels

@@ -1,4 +1,5 @@
 var React = require('react');
+import i18n from '@cdo/locale';
 
 var project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -83,7 +84,7 @@ let WireframeButtons = React.createClass({
           {this.renderNewProjectButton()}
           <span style={{display: 'inline-block'}}>
             <a className={this.getSendToPhoneButtonClass()} onClick={this.handleClickSendToPhone}>
-              <i className="fa fa-mobile"/> Send to phone
+              <i className="fa fa-mobile"/> {i18n.sendToPhone()}
             </a>
           </span>
           <br />
@@ -97,7 +98,7 @@ let WireframeButtons = React.createClass({
       return (
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={project.getProjectUrl('/view')}>
-              <i className="fa fa-code"/> View code
+              <i className="fa fa-code"/> {i18n.viewCode()}
             </a>
           </span>
       );
@@ -116,7 +117,7 @@ let WireframeButtons = React.createClass({
       return (
           <span style={{display: 'inline-block'}}>
             <a className="WireframeButtons_button" href={url}>
-              <i className="fa fa-pencil-square-o"/> Make my own
+              <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
             </a>
           </span>
       );
