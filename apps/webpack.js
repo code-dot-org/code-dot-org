@@ -36,11 +36,6 @@ var baseConfig = {
         ],
         loader: "url-loader?limit=1024",
       },
-      {
-        test: /\.jsx?$/,
-        loader: 'react-hot',
-        include: [path.resolve(__dirname, 'src')]
-      }
     ],
     preLoaders: [
       {
@@ -62,6 +57,14 @@ var baseConfig = {
     ],
   },
 };
+
+if (envConstants.HOT) {
+  baseConfig.module.loaders.push({
+    test: /\.jsx?$/,
+    loader: 'react-hot',
+    include: [path.resolve(__dirname, 'src')]
+  });
+}
 
 // modify baseConfig's preLoaders if looking for code coverage info
 if (envConstants.COVERAGE) {
