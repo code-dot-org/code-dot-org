@@ -94,6 +94,7 @@ class CsvToSqlTable
       '_dt' => {type: 'datetime'},
       '_f' => {type: 'float'},
       '_i' => {type: 'integer'},
+      '_bi' => {type: 'bigint'},
       '_s' => {type: 'varchar(255)'},
       '_ss' => {type: 'varchar(255)'},
       '_t' => {type: 'text'},
