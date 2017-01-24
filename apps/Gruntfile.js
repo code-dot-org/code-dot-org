@@ -487,6 +487,10 @@ module.exports = function (grunt) {
       inline: true,
       port: 3001,
       host: '0.0.0.0',
+      watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+      },
     }
   };
 
@@ -571,7 +575,7 @@ module.exports = function (grunt) {
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack-dev-server:watch'],
+      tasks: ['watch', envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'],
       options: {
         logConcurrentOutput: true
       }
@@ -703,13 +707,8 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
-    'webpack-dev-server:watch',
-//    'concurrent:watch',
+    'concurrent:watch',
     'postbuild',
-  ]);
-
-  grunt.registerTask('dev-server', [
-    'webpack-dev-server:watch',
   ]);
 
   grunt.registerTask('unitTest', [
