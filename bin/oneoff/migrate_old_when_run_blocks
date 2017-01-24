@@ -44,7 +44,7 @@ begin
       data: level_source.data.gsub(OLD_WHEN_RUN, NEW_WHEN_RUN)
     )
 
-    rows_fixed
+    rows_fixed += 1
   end
 rescue Exception => e
   puts "EXCEPTION: #{rows_processed}..."
