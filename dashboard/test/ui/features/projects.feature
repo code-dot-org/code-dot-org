@@ -45,7 +45,7 @@ Scenario: Applab Flow
   Then I should see title "Code Ninja - App Lab"
   And element "#codeWorkspace" is hidden
   And I make all links open in the current tab
-  And I press a button with xpath "//a[text() = ' View code']"
+  And I click selector "a:contains('View code')"
 
   # We'll originally go to /view, then get pushStated to /edit
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "pushState"
@@ -59,7 +59,7 @@ Scenario: Applab Flow
   And element "#codeWorkspace" is hidden
   And I should see title "Code Ninja - App Lab"
   And I make all links open in the current tab
-  And I press a button with xpath "//a[text() = ' View code']"
+  And I click selector "a:contains('View code')"
 
   # Don't actually get redirect this time (stay on /view)
   And I get redirected to "/projects/applab/([^\/]*?)/view" via "nothing"
@@ -112,7 +112,7 @@ Scenario: Gamelab Flow
   Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
-  And I press a button with xpath "//a[text() = ' View code']"
+  And I click selector "a:contains('View code')"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "pushState"
   And I wait to see "#codeWorkspace"
   And I should see title "Code Ninja II: Uncaught Exception - Game Lab"
@@ -138,7 +138,7 @@ Scenario: Gamelab Flow
   Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
-  And I press a button with xpath "//a[text() = ' View code']"
+  And I click selector "a:contains('View code')"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
   And I should see title "Code Ninja II: Uncaught Exception - Game Lab"

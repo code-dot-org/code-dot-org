@@ -842,6 +842,7 @@
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, engadiches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Droides Rato. Trata de facelo máis fácil agregando máis! (Preme e mantén premidas as teclas do teu teclado (ou pantalla) para moverte máis lixeiro.)",
   "failedChangeSettingTimeout": "Consegue tres pilotos rebeldes para continuar.",
   "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
+  "elseCode": "else",
   "getActorHasEmotionAngry": "is in an angry mood",
   "getActorHasEmotionHappy": "is in a happy mood",
   "getActorHasEmotionNormal": "is in a normal mood",
