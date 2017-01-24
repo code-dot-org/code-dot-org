@@ -117,6 +117,7 @@ module Dashboard
       levels/*
       jquery.handsontable.full.css
       jquery.handsontable.full.js
+      video-js/*.css
     )
     config.autoload_paths << Rails.root.join('lib')
 
