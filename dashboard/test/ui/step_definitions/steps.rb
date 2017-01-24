@@ -45,26 +45,12 @@ def color_for_status(status)
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
+  check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
   @browser.navigate.to url
   refute_bad_gateway
   refute_site_unreachable
   install_js_error_recorder
-end
-
-def install_js_error_recorder
-  @browser.execute_script(<<-JS
-  // Wrap existing window onerror handler with a script error recorder.
-  var windowOnError = window.onerror;
-  window.onerror = function (msg) {
-    window.detectedJSErrors = window.detectedJSErrors || [];
-    window.detectedJSErrors.push(msg);
-    if (windowOnError) {
-      return windowOnError.apply(this, arguments);
-    }
-  };
-  JS
-  )
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|

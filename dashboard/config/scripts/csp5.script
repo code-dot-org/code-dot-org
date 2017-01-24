@@ -333,3 +333,6 @@ assessment 'CSP Unit 5 Cumulative Assessment 4 MC'
 stage 'Practice PT: Create'
 named_level 'Unit 5 Lesson 18 Introduction'
 named_level 'Practice Create Performance Task'
+
+stage 'Unit 5 Assessment 5 - AP Pseudocode Practice Questions', lockable: true
+assessment 'CSP Cumulative Assess A'

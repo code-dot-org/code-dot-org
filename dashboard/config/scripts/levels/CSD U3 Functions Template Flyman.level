@@ -45,6 +45,10 @@
       "velocityY": null,
       "x": null,
       "y": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "lessThanOperator": null,
       "setAnimation": null
     },
     "droplet_tooltips_disabled": "false",
@@ -61,7 +65,11 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ],
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",
