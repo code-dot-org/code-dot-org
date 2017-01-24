@@ -78,6 +78,7 @@ if (envConstants.COVERAGE) {
       loader: "babel",
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     }, {
       test: /\.jsx?$/,
@@ -88,6 +89,7 @@ if (envConstants.COVERAGE) {
       ],
       query: {
         cacheDirectory: true,
+        compact: false,
       }
     },
   ];
