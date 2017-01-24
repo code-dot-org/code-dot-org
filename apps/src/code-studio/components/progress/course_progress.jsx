@@ -56,7 +56,7 @@ const CourseProgress = React.createClass({
 
     return (
       <div>
-        {this.props.onOverviewPage &&
+        {this.props.onOverviewPage && !this.props.professionalLearningCourse &&
           <HrefButton
             href={`/s/${scriptName}/next.next`}
             text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
@@ -64,7 +64,7 @@ const CourseProgress = React.createClass({
             style={{marginBottom: 10}}
           />
         }
-        {this.props.onOverviewPage &&
+        {this.props.onOverviewPage && !this.props.professionalLearningCourse &&
           <HrefButton
             href="//support.code.org"
             text={i18n.getHelp()}
