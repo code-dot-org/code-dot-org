@@ -35,6 +35,11 @@ var baseConfig = {
           path.resolve(__dirname, 'static'),
         ],
         loader: "url-loader?limit=1024",
+      },
+      {
+        test: /\.jsx?$/,
+        loader: 'react-hot',
+        include: [path.resolve(__dirname, 'src')]
       }
     ],
     preLoaders: [
@@ -167,7 +172,7 @@ function create(options) {
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
-      publicPath: '/blockly/js/',
+      publicPath: '/assets/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
     devtool: !process.env.CI && options.minify ?  'source-map' : devtool,
