@@ -195,7 +195,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <CourseProgress />
+      <CourseProgress onOverviewPage={onOverviewPage}/>
     </Provider>,
     mountPoint
   );
