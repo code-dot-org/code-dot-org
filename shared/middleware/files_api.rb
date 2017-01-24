@@ -116,6 +116,10 @@ class FilesApi < Sinatra::Base
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
     NewRelic::Agent.ignore_enduser rescue nil
 
+    # Serve all files with Content-Disposition set to attachment so browsers will not render potential HTML content inline
+    # User-generated content can contain script that we don't want to host as authentic web content from our domain
+    response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+
     buckets = get_bucket_impl(endpoint).new
     set_object_cache_duration buckets.cache_duration_seconds
 

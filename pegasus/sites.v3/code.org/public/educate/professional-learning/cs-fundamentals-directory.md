@@ -4,6 +4,11 @@ nav: educate_nav
 ---
 <a name="top"></a>
 # Find a Computer Science Fundamentals Facilitator
+
+Our expert facilitators and professional learning partners are an extension of the Code.org team. This amazing team of experts are responsible for preparing the computer science teachers of tomorrow.
+
+<img src="/images/AllFacilitators.jpg" width="100%;" >
+<br/><br/>
 Below is a list of all Computer Science Fundamentals Facilitators. To find and sign up for a workshop they are hosting, visit our [professional development workshops page](http://code.org/professional-development-workshops).
 
 [col-25]

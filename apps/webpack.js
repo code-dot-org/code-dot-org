@@ -85,12 +85,13 @@ if (envConstants.COVERAGE) {
   ];
 }
 
+var devtool = process.env.CHEAP ?
+    'cheap-inline-source-map' :
+    'inline-source-map';
+
 var storybookConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: devtool,
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
   },
   plugins: [
@@ -107,7 +108,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: 'inline-source-map',
+  devtool: devtool,
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(__dirname, 'test', 'util', 'locale-do-not-import.js'),
@@ -119,9 +120,6 @@ var karmaConfig = _.extend({}, baseConfig, {
     }),
   }),
   externals: {
-    "johnny-five": "var JohnnyFive",
-    "playground-io": "var PlaygroundIO",
-    "chrome-serialport": "var ChromeSerialport",
     "blockly": "this Blockly",
 
     // The below are necessary for enzyme to work.
@@ -172,7 +170,7 @@ function create(options) {
       publicPath: '/blockly/js/',
       filename: "[name]." + (minify ? "min." : "") + "js",
     },
-    devtool: !process.env.CI && options.minify ? 'source-map' : 'inline-source-map',
+    devtool: !process.env.CI && options.minify ?  'source-map' : devtool,
     entry: entries,
     externals: externals,
     plugins: [

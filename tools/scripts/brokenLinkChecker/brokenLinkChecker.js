@@ -3,10 +3,14 @@
 const blc = require('broken-link-checker');
 const https = require('https');
 const url = require('url');
+const YAML = require('yamljs');
+const path = require("path");
 
 const whitelist = require('./whitelist.json').ignore;
 
-const slackUrl = "https://hooks.slack.com/services/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";
+const slackUrl =
+  "https://hooks.slack.com/services/" +
+  YAML.load(path.join(__dirname, '..', '..', '..', 'globals.yml'))['slack_endpoint'];
 
 let totalLinkCount = 0;
 let totalPageCount = 0;
@@ -20,13 +24,7 @@ let whitedlistedLinkCount = 0;
  * "www.testdomain.com/test/first" will match.
  */
 function stringContainsWhitelistedString(s) {
-  for (let i = 0; i < whitelist.length; i++) {
-    if (s.includes(whitelist[i])) {
-      return true;
-    }
-  }
-
-  return false;
+  return whitelist.some(w => s.includes(w));
 }
 
 function logTextToSlack(text) {
