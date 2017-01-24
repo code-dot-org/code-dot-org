@@ -11,13 +11,6 @@
       - if Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
         #breadcrumb
         -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
-    - else
-      #trynow
-        = button_to t('home.trynow'), script_next_path(@script, 'next'), method: 'get', class: 'btn btn-primary biggerbutton'
-        %p
-          = link_to t('landing.support'), t('landing.support_url')
-          %br/
-
     #heading
       %h1
         = image_tag(@script.logo_image, class: 'logo') if @script.logo_image
