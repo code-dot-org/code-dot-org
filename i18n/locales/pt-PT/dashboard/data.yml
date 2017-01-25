@@ -37,6 +37,7 @@ pt:
         'NetSim': 'Simulador de internet'
         'Custom': 'Artista'
         'CustomStudio': 'Laboratório'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronze'
@@ -489,11 +490,11 @@ pt:
         'iceage_intro': 'Hora do Código com A Era do Gelo - Introdução'
         'iceage_events': 'Hora do Código com A Era do Gelo - Eventos'
         'iceage_repeat': 'Hora do Código com A Era do Gelo - Instruções de repetição'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': 'Hora de Código Minecraft - Introdução'
+        'mc_2016_loops': 'Minecraft Hora de Código - Loops (Ciclos)'
+        'mc_2016_events': 'Minecraft Hora de Código - Eventos'
+        'mc_2016_spawn': 'Minecraft Hora de Código - Spawn (Gerar)'
+        'mc_2016_congrats': 'Minecraft Hora de Código - Parabéns'
     callout:
       text:
         drag_blocks: 'Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco'

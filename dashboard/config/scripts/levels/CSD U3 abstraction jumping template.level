@@ -41,6 +41,10 @@
       "velocityX": null,
       "velocityY": null,
       "comment_Sprites": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
+      "comment_Variables": null,
       "addOperator": null,
       "subtractOperator": null,
       "multiplyOperator": null,
@@ -86,7 +90,10 @@
     "all_animations_single_frame": "false",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",

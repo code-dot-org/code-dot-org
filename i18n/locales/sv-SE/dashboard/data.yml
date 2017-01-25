@@ -37,6 +37,7 @@ sv:
         'NetSim': 'Internet Simulator'
         'Custom': 'Konstnären'
         'CustomStudio': 'Spel-labb'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brons'

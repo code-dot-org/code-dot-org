@@ -37,6 +37,7 @@ eu:
         'NetSim': 'Internet simulagailua'
         'Custom': 'Artista'
         'CustomStudio': 'Jokoen Laborategia'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brontzea'

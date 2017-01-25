@@ -37,6 +37,7 @@ fi:
         'NetSim': 'Internet simulaattori'
         'Custom': 'Taiteilija'
         'CustomStudio': 'Pelilabra'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Pronssi'

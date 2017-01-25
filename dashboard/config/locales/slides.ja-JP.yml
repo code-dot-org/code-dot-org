@@ -427,10 +427,7 @@
     C1_bee_level_intro:
       1:
         image: notes/C1_bee_level_intro_1.png
-        text: Aren't bees super cool? In this next set of puzzles, your goal is to
-          help the bee get to the flowers and get nectar from the flowers and fly
-          over to the honeycomb to make honey. You'll need to use the "get nectar"
-          and the "make honey" blocks for this exercise.
+        text: "みつばちってかっこいいでしょ？つぎのパズルでは、みちばちが花（から）みつをとって、巣（す）ではちみつをつくるようにうごかしてみて。クリアするには「つくる」と「取得（しゅとく）」のブロックをつかってね。"
       2:
         image: notes/C1_bee_level_intro_2.png
         text: 'Every flower has a different number of nectars: 1, 2, 3, or more. We
@@ -1998,10 +1995,7 @@
     infinity_playlab_intro:
       1:
         image: notes/infinity_playlab_intro_1.png
-        text: So what grade are you in? Second. Tenth grade. First grade. I was in
-          eighth grade when I learned to program. I got my first computer when I was
-          in sixth grade. What gets me excited is being able to fix people's problems.
-          You can express yourself, you can build things from an idea.
+        text: "いま何年生？２年生？高校生？1年生？わたしがプログラミングをはじめたのは中学生でした。6年生のときにパソコンをかってもらって、みんなのもんだいをなおすことができることに、こうふんしました。アイディアからじっさいにものをつくることができるんです。"
       2:
         image: notes/infinity_playlab_intro_2.png
         text: Computer science is the basis for a lot of the things that college students
@@ -2628,8 +2622,7 @@
           below.
       5:
         image: notes/gumball_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: "まんなかはツールボックスとなっていて、それぞれのブロックがめいれいするためのコードとなります。"
       6:
         image: notes/gumball_intro_6.JPG
         text: "右のワークスペースでプログラムを組みます。"
@@ -2710,8 +2703,7 @@
           below.
       5:
         image: notes/iceage_intro_5.JPG
-        text: This middle area is the tool box and each of these blocks is a piece
-          of code.
+        text: "まんなかはツールボックスとなっていて、それぞれのブロックがめいれいするためのコードとなります。"
       6:
         image: notes/iceage_intro_6.JPG
         text: "右のワークスペースでプログラムを組みます。"

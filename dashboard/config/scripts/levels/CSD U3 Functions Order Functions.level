@@ -51,11 +51,11 @@
       "callMyFunction": null
     },
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
     "encrypted_examples": "XyS2g3B/I2cRugv1cAV+w/Jt0k4FJbBDcgEjou/pNMDKwG1dFUGPm/UwTWow\nOQvB\n",
     "instructions_important": "false",
     "show_debug_watch": "false",
-    "start_in_animation_tab": "false"
+    "start_in_animation_tab": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

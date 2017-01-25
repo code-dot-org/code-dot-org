@@ -332,6 +332,7 @@
             Calc: Calculează
             Eval: Evaluează
             Studio: Studiou
+          description_audience: "[șir gol]"
         flappy:
           title: Codul Flappy
           description: Vrei să programezi propriul joc în mai puţin de 10 minute?
@@ -339,6 +340,7 @@
           description_short: Creeaza propriul joc Flappy in mai putin de 10 minute!
           stage:
             Flappy Code: Codul Flappy
+          description_audience: "[șir gol]"
         jigsaw:
           title: Puzzle
           description: "[șir gol]"
@@ -1658,6 +1660,10 @@
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice
+              AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment
+              5 - AP Pseudocode Practice Questions
           description_audience: "[șir gol]"
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1669,6 +1675,15 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the
+              Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your
+              AP Digital Portfolio and Other Tools
           description_audience: "[șir gol]"
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2762,7 +2777,7 @@
         sports:
           stage:
             Sports: Sporturi
-          title: Sporturi
+          title: Prorgramează propriul joc sportiv
           description_audience: "[șir gol]"
           description_short: Amesteca si potriveste sporturile
           description: Amesteca si potriveste sporturile
@@ -2887,3 +2902,14 @@
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Bine ai venit!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Revizuire
+          title: 'CS in Science: Part 5'
+          description_audience: "[șir gol]"
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

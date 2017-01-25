@@ -96,14 +96,14 @@
     overview: Iscriviti per un account tenere traccia dei progressi o gestire la tua
       classe. <a href="/"> Puoi sfogliare le varie fasi e puzzle</a> senza un account,
       ma dovrai iscriverti per salvare i tuoi progressi e progetti.
-    hoc_already_signed_up_heading: Get started without logging in
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
+    hoc_already_signed_up_heading: Iniziare senza effettuare il login
+    hoc_already_signed_up_content: Ti sei iscritto per insegnare un'ora di codice!
+      Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare
+      a questo evento. Per iniziare, <a href="%{learn_url}">scegli un tutorial</a>
+      per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l'ora
+      di codice e vuoi approfondire, puoi scegliere una password e creare un account
+      Code Studio qui sotto per iscrivere i tuoi studenti in uno dei nostri <a href="%{educate_url}">corsi
+      più estesi</a>.
     hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
       To sign in to Code Studio, you’ll need to set up a password for your account.
       This will let you save your progress and manage your classroom. You’ll be able
@@ -374,6 +374,9 @@
       gli account dei tuoi studenti.
     delete_confirm: Sei sicuro di voler eliminare il tuo account?
     deleted_user: deleted user
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Completato
     tried: Provato
@@ -960,6 +963,9 @@
     content: Contenuto
     practice: Pratiche d'insegnante
     peer_review: Valutazioni dei parigrado
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che

@@ -84,7 +84,7 @@ pt-BR:
     overview: 'Cadastre-se para ter uma conta e acompanhar seu progresso ou gerenciar sua sala de aula. <a href="/">Você pode explorar diversas fases e desafios</a> sem uma conta, mas precisará fazer login para salvar seu progresso e seus projetos.'
     hoc_already_signed_up_heading: 'Começar sem fazer login'
     hoc_already_signed_up_content: 'Você se registrou para ensinar uma Hora de Código! Você e seus alunos não precisam entrar no Code Studio para participar deste evento. Para começar, <a href="https://code.org/learn">escolha um tutorial</a> para sua sala de aula e compartilhe o link com eles.<br/><br/>Se você gostou da Hora do Código e quer ir além, você pode definir uma senha e criar uma conta no Code Studio abaixo para inscrever seus alunos em qualquer dos nossos <a href="https://code.org/educate">cursos de longa duração</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Obrigado pela hospedagem de uma hora de código. Para se inscrever no estúdio de código, você precisará configurar uma senha para sua conta. Isto permitirá que você salvar seu progresso e gerir a sua sala de aula. Você será capaz de atribuir cursos para alunos e acompanhar seu progresso. <a href="%{studio_url}"> você pode também continuar a procurar as várias fases e quebra-cabeças</a> sem criar uma conta.'
     teacher_educator_guide: 'Consultar o guia do professor'
     title: "Cadastre-se na Code.org"
     school_name: 'Nome da escola (opcional)'
@@ -303,7 +303,9 @@ pt-BR:
     delete_text: "Clicando no botão abaixo, você vai excluir sua conta."
     delete_text_teacher_note: 'Lembre-se: a exclusão da sua conta não vai excluir as contas dos seus alunos.'
     delete_confirm: 'Tem certeza de que deseja excluir sua conta?'
-    deleted_user: 'deleted user'
+    deleted_user: 'usuário removido'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Concluído'
     tried: 'Provado'
@@ -359,12 +361,12 @@ pt-BR:
     announcement_watch_video_button: "Ver vídeo"
     announcement_petition: "Como professor, você está abrindo as portas de um movimento que dará a cada aluno de todas as escolas a oportunidade de aprender ciência da computação. Agora chegou a hora de seus representantes ouvirem o que você tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao Ensino médio."
     announcement_petition_button: "Adicione seu nome"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "Ir além"
     announcement_all: "Fique por dentro dos novos recursos e atualizações em nosso blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas novidades.</a>"
     announcement_hoc_launch: "Milhares de professores em mais de 180 países começarão a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro. Estamos contando com você para nos ajudar a atingir mais alunos do que nunca. <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a> e avise outro professor que ele também pode começar a ensinar ciência da computação."
     announcement_mc_launch: "Um de nossos tutoriais mais populares ganhou uma sequência! O novo Designer para a Hora do Código Minecraft permite que os alunos façam as regras do mundo Minecraft. Eles podem criar uma experiência completamente única de Minecraft e compartilhar com seus amigos ou jogar em seus aparelhos. Faça isso com sua turma na Hora do Código."
     announcement_how_code_studio: "Você não precisa ter experiência para começar a ensinar ciência da computação em sua sala de aula. Code.org oferece currículo, planos de aula, programas de aprendizagem profissionais de alta qualidade e uma enorme quantidade de ferramentas excelentes para todos os níveis escolares&mdash;tudo de que você precisa sem custo algum. Querendo saber por onde começar? Baixe <a href='%{video_download_url}'>este vídeo</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_go_beyond: "Ir além de uma hora de código e explorar conceitos de ciência do computador com seus alunos a cada semana. Code.org oferece currículo, planos de aula. programas de aprendizagem profissional de alta qualidade e toneladas de ótimas ferramentas para todos os níveis da classe&mdash;e isso é totalmente de graça. :) Você não precisa de nenhuma experiencia para começar a ensinar ciência da computação em sua sala de aula. <b>Encontre o próximo passo que é certo para sua sala de aula.</b>"
   move_students:
     new_section_dne: "A seção %{new_section_code} não existe. Insira outro código de seção."
     section_code_not_entered: "Forneça o current_section_code."
@@ -731,6 +733,9 @@ pt-BR:
     content: 'Conteúdo'
     practice: 'Práticas de ensino'
     peer_review: 'Revisão em grupo'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.

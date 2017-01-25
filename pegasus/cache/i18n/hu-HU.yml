@@ -498,12 +498,12 @@
   sports_og_title: Hour of Code Sports Tutorials
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
-  sports_title: Code your own sports game
+  sports_title: Kódold le a saját sportjátékodat
   sports_watch_video: Nézd meg a videót
   sports_video_title: Push yourself. Anybody can learn.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Make a basketball game
-  sports_all_sports_title: Mix and match across sports
+  sports_all_sports_title: Kombinálj össze különböző sportágakat
   sports_featured_athletes: See featured athletes
   sports_athletes_title: Featured athletes
   sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
@@ -985,14 +985,14 @@
   dashboard_announce_learn_more_button: Tudj meg többet
   dashboard_announce_try_now_button: Próbálja ki most
   dashboard_announce_host_an_hour_button: Host an Hour
-  dashboard_announce_watch_video_button: Watch video
+  dashboard_announce_watch_video_button: Nézd meg a videót
   dashboard_announce_petition: As a teacher, you're leading the way in a movement
     to give every student in every school the opportunity to learn computer science.
     Now, it's time to let your representatives hear from you. This week, education
     leaders, 28 governors, and CEOs of America's largest companies joined together
     in an open letter asking U.S. Congress to fund K-12 computer science education.
   dashboard_announce_petition_button: Add meg a nevedet
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Menj tovább
   dashboard_announce_all: Keep up to date with new features and updates on our teacher
     blog. <a href='%{teacher_blog_url}'>See past announcements.</a>
   dashboard_announce_hoc_launch: Thousands of educators in more than 180 countries
@@ -1169,6 +1169,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
@@ -1201,7 +1202,7 @@
   research_studies_category_name: Research Studies
   applab_name: App Lab
   basketball_name: Make a basketball game
-  sports_name: Code your own sports game
+  sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
   applab_shortdescription_congrats: App Lab is a programming environment where you
     can make simple apps. Design an app, code with blocks or JavaScript to make it

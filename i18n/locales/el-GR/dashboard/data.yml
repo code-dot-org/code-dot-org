@@ -37,6 +37,7 @@ el:
         'NetSim': 'Προσομοιωτής Διαδικτύου'
         'Custom': 'Καλλιτέχνης'
         'CustomStudio': 'Εργαστήριο Παιχνιδιού'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Χάλκινο'
