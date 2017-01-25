@@ -56,22 +56,22 @@ const PublicKeyCryptographyWidget = React.createClass({
 
   setPublicModulus(publicModulus) {
     // Anyone can set the public modulus.  Inform everyone.
-    this.alice.setPublicModulus(publicModulus);
-    this.bob.setPublicModulus(publicModulus);
-    this.eve.setPublicModulus(publicModulus);
+    this.alice && this.alice.setPublicModulus(publicModulus);
+    this.bob && this.bob.setPublicModulus(publicModulus);
+    this.eve && this.eve.setPublicModulus(publicModulus);
     this.setState({publicModulus});
   },
 
   setPublicKey(publicKey) {
     // Only Alice can set the public key.  Inform Bob and Eve.
-    this.bob.setPublicKey(publicKey);
-    this.eve.setPublicKey(publicKey);
+    this.bob && this.bob.setPublicKey(publicKey);
+    this.eve && this.eve.setPublicKey(publicKey);
   },
 
   setPublicNumber(publicNumber) {
     // Only Bob can set the public number.  Inform Alice and Eve.
-    this.alice.setPublicNumber(publicNumber);
-    this.eve.setPublicNumber(publicNumber);
+    this.alice && this.alice.setPublicNumber(publicNumber);
+    this.eve && this.eve.setPublicNumber(publicNumber);
   },
 
   runModuloClock(dividend, onStep, onComplete) {
@@ -84,9 +84,9 @@ const PublicKeyCryptographyWidget = React.createClass({
   },
 
   onStartOverClick() {
-    this.alice.startOver();
-    this.bob.startOver();
-    this.eve.startOver();
+    this.alice && this.alice.startOver();
+    this.bob && this.bob.startOver();
+    this.eve && this.eve.startOver();
     this.setState({publicModulus: null});
   },
 
