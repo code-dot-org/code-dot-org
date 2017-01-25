@@ -82,7 +82,7 @@ const PublicKeyCryptographyWidget = React.createClass({
     this.setState({publicModulus: null});
   },
 
-  renderCharacterView() {
+  renderSelectedCharacterView() {
     if (ALICE_VIEW === this.state.selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
@@ -188,7 +188,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         <WidgetContinueButton/>
         <StartOverButton onClick={this.onStartOverClick}/>
         <div style={{clear: 'both', marginTop: 10}}>
-          {this.renderCharacterView()}
+          {this.renderSelectedCharacterView()}
         </div>
       </div>);
   }
