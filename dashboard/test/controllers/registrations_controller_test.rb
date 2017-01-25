@@ -156,7 +156,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       user_type: 'teacher'}
 
     assert_does_not_create(User) do
-      post :create, user: teacher_params
+      post :create, params: {user: teacher_params}
     end
 
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
