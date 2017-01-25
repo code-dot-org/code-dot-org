@@ -6,7 +6,7 @@ import $ from 'jquery';
 import Immutable from 'immutable';
 
 export const UPDATE_HIDDEN_STAGE = 'hiddenStage/UPDATE_HIDDEN_STAGE';
-export const ALLOW_HIDEABLE = 'hiddenStage/ALLOW_HIDEABLE';
+export const SET_INITIALIZED = 'hiddenStage/SET_INITIALIZED';
 
 const STUDENT_SECTION_ID = 'STUDENT';
 
@@ -36,11 +36,14 @@ export default function reducer(state = initialState, action) {
         state.get('bySection').size > 1) {
       throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
     }
-    return nextState.set('initialized', true);
+    return nextState;
   }
 
-  if (action.type === ALLOW_HIDEABLE) {
-    return state.set('hideableAllowed', true);
+  if (action.type === SET_INITIALIZED) {
+    return state.merge({
+      initialized: true,
+      hideableAllowed: action.hideableAllowed
+    });
   }
 
   return state;
@@ -77,9 +80,10 @@ export function toggleHidden(scriptName, sectionId, stageId, hidden) {
   };
 }
 
-export function allowHideable() {
+function setInitialized(hideableAllowed) {
   return {
-    type: ALLOW_HIDEABLE
+    type: SET_INITIALIZED,
+    hideableAllowed
   };
 }
 
@@ -111,9 +115,7 @@ export function getHiddenStages(scriptName, canHideStages) {
           dispatch(updateHiddenStage(sectionId, stageId, true));
         });
       });
-      if (canHideStages) {
-        dispatch(allowHideable());
-      }
+      dispatch(setInitialized(!!canHideStages));
     }).fail(err => {
       console.error(err);
     });
