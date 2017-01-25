@@ -37,6 +37,7 @@
         NetSim: "เครื่องจำลองอินเตอร์เน็ต"
         Custom: "ศิลปิน"
         CustomStudio: Play Lab
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "ทองแดง"

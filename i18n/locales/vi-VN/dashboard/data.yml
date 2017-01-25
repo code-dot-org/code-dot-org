@@ -37,6 +37,7 @@ vi:
         'NetSim': 'bộ mô phỏng internet'
         'Custom': 'Họa sĩ'
         'CustomStudio': 'Phòng trò chơi'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Đồng'

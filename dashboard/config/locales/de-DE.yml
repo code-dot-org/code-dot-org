@@ -5,13 +5,14 @@
       too_young: Dieser Inhalt ist altersbeschränkt und für jüngere Schüler nicht
         verfügbar.
       teacher_must_accept_terms: Dieser Inhalt ist altersbeschränkt und für jüngere
-        Schüler nicht verfügbar. Frage deinen Lehrer die neuen Teilnahmebedingungen
-        zu akzeptieren damit du Zugriff auf diesen Inhalt bekommst. Dein Lehrer kann
-        das im Code Studio tun indem er auf den Knopf "Neue Teilnahmebedingungen prüfen"
-        oben im Code Studio drückt.
+        Schüler nicht verfügbar. Bitte deinen Lehrer die neuen Teilnahmebedingungen
+        zu akzeptieren, damit du Zugriff darauf erhältst. Dein Lehrer muss sich dazu
+        ins 'Code Studio' einloggen und dort ganz oben in der Code Studio-Seite den
+        Knopf "Neue Teilnahmebedingungen prüfen" klicken.
       pair_programmer: Sie befinden sich im Moment in einer Programmierübung mit einem
         Schüler, der keinen Zugang zu diesen Inhalten hat. Beenden sie die Programmierübung
-        und versuchen Sie dann nochmal, auf diesen Inhalt zuzugreifen.
+        in dieser Gruppe und versuchen Sie dann nochmal alleine, auf diesen Inhalt
+        zuzugreifen.
   activerecord:
     errors:
       messages:
@@ -90,26 +91,27 @@
   signup_form:
     student_count: "%{count} Schüler haben sich bereits angemeldet."
     teacher_count: "%{count} Lehrer haben sich bereits angemeldet."
-    overview: Erstellen Sie eine Benutzerkennung um Ihre Fortschritte nachzuvollziehen
-      und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Aufgaben</a> können
-      sie auch ohne Benutzerkennung ansehen, aber zum Speichern Ihrer Projekte und
-      Fortschritte brauchen Sie eine Benutzerkennung.
+    overview: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte nachzuvollziehen
+      und Ihre Klasse zu verwalten. <a href="/">Die verschiedenen Sfugen</a> können
+      sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und Fortschritte
+      jedoch benötigen Sie ein Benutzerkonto.
     hoc_already_signed_up_heading: Starte ohne dich einzuloggen
-    hoc_already_signed_up_content: You are signed up to teach an Hour of Code! You
-      and your students do not need to sign in to Code Studio to participate in this
-      event. To get started, <a href="https://code.org/learn">choose a tutorial</a>
-      for your classroom and share the link with them.<br/><br/>If you enjoyed the
-      Hour of Code and want to go further, you can set up a password and create a
-      Code Studio account below to enroll your students in any of our <a href="https://code.org/educate">longer
-      courses</a>.
-    hoc_already_signed_up_content_post_hoc: Thank you for hosting an Hour of Code.
-      To sign in to Code Studio, you’ll need to set up a password for your account.
-      This will let you save your progress and manage your classroom. You’ll be able
-      to assign courses to students and track their progress. <a href="%{studio_url}">You
-      can also continue to browse the various stages and puzzles</a> without creating
-      an account.
+    hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code'
+      zu unterrichten. \n<br/> <br/>\nUm an diesem Event teilzunehmen, müssen weder
+      Sie, noch Ihre Schülerinnen und Schüler bei Code Studio einloggen. Um zu beginnen,
+      <a href=\"%{learn_url}\"> wählen Sie eine Unterrichtseinheit</a> für Ihre Klasse
+      und teilen Sie mit Ihren Schülern den Link. <br/> <br/> Falls Sie die 'Hour
+      of Code' genossen haben und weiter damit arbeiten möchten, können Sie unten
+      für Ihr 'Code Studio'-Konto ein Passwort festlegen und Ihre Schüler in jedem
+      unserer <a href=\"%{educate_url}\"> längeren Kurse</a> einschreiben."
+    hoc_already_signed_up_content_post_hoc: Vielen Dank, dass Sie einen 'Hour of Code'
+      Anlass begleiten. Um sich im Code-Studio anzumelden, müssen Sie ein Passwort
+      für Ihr Konto einrichten. So können Sie Ihren Fortschritt speichern und Ihre
+      Klasse verwalten. Sie werden damit Ihren Schülerinnen und Schülern Kurse zuweisen
+      und ihren Fortschritt verfolgen. Sie können aber auch ohne Login <a href="%{studio_url}">
+      die Stufen und Aufgaben ansehen</a>.
     teacher_educator_guide: Siehe Lehrer-Handbuch
-    title: Melden Sie sich bei Code.org an
+    title: Anmelden bei Code.org
     school_name: Name der Schule (optional)
     school_address: Adresse der Schule (optional)
     address_placeholder: Adresse, Ort, Bundesland, PLZ
@@ -126,15 +128,15 @@
     invalid_password: Das Passwort muss mindestens 6 Zeichen lang sein
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
     student_terms: Ich stimme den <a href='http://code.org/tos'>Nutzungsbedingungen</a>
-      des Code.org Service zu. Wenn ich unter 13 Jahren alt bin, dann bestätige ich
+      des Code.org Service zu. Falls ich unter 13 Jahren alt bin, dann bestätige ich
       hiermit das ich die Erlaubnis meiner Erziehungsberechtigten habe, die Code.org
-      Dienste zu benutzen.<br/><br/>E-Mail Adressen werden von uns nicht gespeichert,
-      um mit Schülern Kontakt aufzunehmen. Schüler werden niemals E-Mails von Code.org
-      erhalten. Eine Ausnahme bilden E-Mails, die zur Wiederherstellung der Zugangsdaten
-      dienen. Weiteres regelt unser <a href='http://code.org/privacy'>Kodex zum Umgang
-      mit vertraulichen Daten</a>.
+      Dienste zu benutzen.<br/><br/>E-Mail Adressen werden von uns nicht in einer
+      Art und Weise gespeichert, die es uns erlaubt mit Schülern Kontakt aufzunehmen.
+      Schüler werden von Code.org niemals E-Mails erhalten. Eine Ausnahme bilden E-Mails,
+      die zur Wiederherstellung der Zugangsdaten dienen. Weiteres regelt unser <a
+      href='http://code.org/privacy'>Datenschutz-Bestimmungen</a>.
     teacher_terms: Ich stimme den Nutzungsbedingungen von Code.org zu. Für mehr Informationen
-      bzgl. Datenschutz, siehe unsere <a href='http://code.org/privacy'>Datenschutzbedingungen</a>.
+      bzgl. Datenschutz, siehe unsere <a href='http://code.org/privacy'>Datenschutz-Bestimmungen</a>.
     additional_information: Wir benötigen noch ein paar weitere Informationen, um
       mit deiner Anmeldung fortzufahren.
     user_type_label: Kontentyp
@@ -372,7 +374,10 @@
     delete_text_teacher_note: 'Bitte bemerke: Das Löschen Ihres Accounts löscht nicht
       die Accounts Ihrer Schüler.'
     delete_confirm: Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?
-    deleted_user: deleted user
+    deleted_user: Benutzer entfernen
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Abgeschlossen
     tried: Versucht
@@ -448,7 +453,7 @@
     announcement_learn_more_button: Mehr erfahren
     announcement_try_now_button: Probiere es jetzt aus
     announcement_host_an_hour_button: Veranstalten Sie eine Stunde
-    announcement_watch_video_button: Schaue ein video
+    announcement_watch_video_button: Video anschauen
     announcement_petition: Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder
       Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es
       an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten
@@ -456,7 +461,7 @@
       ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung
       von "K-12 computer science education" zu erbitten.
     announcement_petition_button: Fügen Sie Ihren Namen ein
-    announcement_go_beyond_button: Go beyond
+    announcement_go_beyond_button: Noch weiter gehen
     announcement_all: Informieren Sie sich über neue Funktionen und Aktualisierungen
       in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene
       Meldungen anzeigen.</a>
@@ -465,22 +470,22 @@
       auf Ihre Hilfe, mehr Studierende als je zuvor zu erreichen. <a href='%{signup_url}'
       target='_blank'> Registrieren Sie Ihre Hour-of-Code- Veranstaltung</a> und sagen
       Sie Ihren Lehrerkollegen, dass jeder Informatik lehren kann.
-    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
-      all-new Minecraft Hour of Code Designer lets students make the rules of the
-      Minecraft world. They can create a totally unique Minecraft experience, and
-      then share it with friends or play it on their phones. Do it with your class
-      for the Hour of Code.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
-    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
-      concepts with your students every week. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;and it's all free. :) You don't need any experience to start
-      teaching computer science in your classroom. <b>Find the next step that's right
-      for your classroom.</b>
+    announcement_mc_launch: Eines unserer beliebtesten Tutorials hat jetzt eine Fortsetzung!
+      Im neuen "Minecraft Hour of Code"-Designer können Schülerinnen und Schüler die
+      Regeln der Minecraft Welt nachbauen. Sie können eine Regeln in Minecraft erstellen,
+      und diese Programme mit Freunden teile oder auf ihren Handys spielen. Versuchen
+      Sie das mit Ihrer Klasse als Erlebnis in der 'Hour of Code'.
+    announcement_how_code_studio: Sie brauchen keine Vorkenntnisse, um in Klasse mit
+      Code.org Informatik zu unterrichten. Code.org bietet Unterrichtspläne, professionelle
+      Lernprogramme und tonnenweise gute Tools für alle Schulstufen an &mdash; alles
+      was Sie benötigen, alles unentgeltlich. Frage Sie sich, wo Sie beginnen sollen?
+      <a href='%{video_download_url}'> Dieses Video</a> herunterladen!
+    announcement_go_beyond: Lassen Sie Hour of Code hinter sich und erkunden Sie mit
+      Ihren Schülern jede Woche Konzepte der Informatik. Code.org bietet Ihnen einen
+      Lehrplan, vorgefertigte Unterrichtsstunden, hoch qualitative und professionelle
+      Lernporgramme und jede Menge großartige Werkzeuge für jede Klassenstufe - und
+      es ist kostenlos. :) Um Informatik in Ihren Klassenzimmer zu lehren, brauchen
+      Sie keine Erfahrung. Finden Sie den nächsten richtigen Schritt für Ihr Klassenzimmer
   move_students:
     new_section_dne: Entschuldigung, aber die Sektion %{new_section_code} existiert
       nicht. Bitte geben Sie einen anderen Sektionscode ein.
@@ -559,7 +564,7 @@
     title: Brauchst du Hilfe?
     subtitle: Schau dir diese Videos und Hinweise an
     teacher: Lösung sehen
-    auth_error: Du bist nicht berechtigt, die Lösung zu sehen.
+    auth_error: Du bist nicht berechtigt, die Lösung zu einzusehen.
     submit: Position des Künstler aktualisieren
     direction: Startrichtung (in Grad)
   video:
@@ -657,7 +662,8 @@
       body: Erkunde eine Minecraft-Welt mit Hilfe von Code.
     minecraft2016:
       title: Minecraft
-      body: Program animals and other Minecraft creatures in your own version of Minecraft.
+      body: Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von
+        Hühnern, Schafen, Creepern, Zombies und mehr.
     unplugged:
       title: Offline Lektionen
       audience: Alter 4+
@@ -792,19 +798,21 @@
     tos: AGBs
     privacy: Datenschutzerklärung
     privacy_notice: Hinweis zur Privatsphäre
-    accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label: Ich stimme den aktualisierten <a href="%{tos_url}" target="_blank">Nutzungsbedingungen</a>
+      und der aktualisierten <a href="%{privacy_url}" target="_blank">Datenschutzerklärung</a>
+      zu
     accept: Akzeptieren
     print: Drucken
-    reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
-      of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.
-      Please read these carefully before accepting them. Note that our tools teaching
-      JavaScript may be unavailable to your students before explicitly accepting the
-      updated terms.
+    reminder_desc: Wir haben unsere <a href="%{tos_url}" target="_blank">Allgemeinen
+      Geschäftsbedingungen</a> und <a href="%{privacy_url}" target="_blank">Datenschutzerklärung</a>
+      aktualisiert. Bitte lesen Sie diese sorgfältig durch, bevor Sie sie akzeptieren.
+      Beachten Sie bitte, dass unsere Werkzeuge zum Lehren von JavaScript möglicherweise
+      nicht für Ihre Studenten zur Verfügung stehen, bevor Sie die aktualisierten
+      Bedingungen nicht explizit akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
   race_interstitial:
-    title: 'Optional: Help us track our progress toward improving diversity in computer
-      science'
+    title: 'Optional: Helfen Sie uns, unsere Fortschritte zur Verbesserung der Vielfalt
+      in der Informatik zu besser verfolgen'
     message: Please tell us your race (check all that apply)
     races:
     - white: Weiß
@@ -848,8 +856,8 @@
     share_copy_link: 'Kopiere den Link:'
     share_embed_description: Sie können den embed code in eine HTML Seite einfügen,
       um das Projekt auf einer anderen Webseite darzustellen.
-    share_u13_warning: Ask your teacher before sharing. Only share with others in
-      your school.
+    share_u13_warning: Fragen erst Deinen Lehrer, bevor du deine fertigen Programmier-Projekte
+      für andere freigibst. Gib sie nur für Personen in deiner Schule frei.
     embed: Einbetten
     advanced_share: Erweiterte Optionen anzeigen
     close: Schließen
@@ -936,8 +944,8 @@
     review_new_submission: Review a new submission
   components:
     icon_library:
-      search_placeholder_text: Suche für ein Symbol...
-      no_icons_found: Keine Symbole gefunden
+      search_placeholder_text: Suche nach einem Icon-Symbol...
+      no_icons_found: Keine Icon-Symbole gefunden
     playzone:
       artist_description: Zeichne coole Bilder und Designs mit dem Künstler!
       artist_title: Neue Zeichnung
@@ -953,6 +961,9 @@
     content: Inhalt
     practice: Lehrer Übungen
     peer_review: Peer Review
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: |-
@@ -979,41 +990,41 @@
     starwars_blocks_name: 'Star Wars: Aufbau einer Galaxis mit Code (Blöcke)'
     starwars_javascript_name: 'Star Wars: Aufbau einer Galaxis mit Code (JavaScript)'
     download_message: "%{app_name} zur Offline-Nutzung (136MB) herunterladen"
-    download_in_Albanian: 'Download in Albanian:'
-    download_in_Arabic: 'Download in Arabic:'
-    download_in_Azerbaijani: 'Download in Azerbaijani:'
-    download_in_Basque: 'Download in Basque:'
-    download_in_Bosnian: 'Download in Bosnian:'
-    download_in_Bulgarian: 'Download in Bulgarian:'
-    download_in_Catalan: 'Download in Catalan:'
-    download_in_Chinese-Taiwan: 'Download in Chinese-Taiwan:'
-    download_in_Chinese: 'Download in Chinese:'
-    download_in_Croatian: 'Download in Croatian:'
-    download_in_Czech: 'Download in Czech:'
-    download_in_Danish: 'Download in Danish:'
-    download_in_Dutch: 'Download in Dutch:'
-    download_in_English: 'Download in English:'
-    download_in_Finnish: 'Download in Finnish:'
-    download_in_French: 'Download in French:'
-    download_in_German: 'Download in German:'
-    download_in_Greek: 'Download in Greek:'
-    download_in_Hebrew: 'Download in Hebrew:'
-    download_in_Hungarian: 'Download in Hungarian:'
-    download_in_Icelandic: 'Download in Icelandic:'
-    download_in_Indonesian: 'Download in Indonesian:'
-    download_in_Irish: 'Download in Irish:'
-    download_in_Italian: 'Download in Italian:'
-    download_in_Japanese: 'Download in Japanese:'
-    download_in_Korean: 'Download in Korean:'
-    download_in_Latvian: 'Download in Latvian:'
-    download_in_Lithuanian: 'Download in Lithuanian:'
-    download_in_Norwegian: 'Download in Norwegian:'
-    download_in_Norwegian-Nynorsk: 'Download in Norwegian-Nynorsk:'
-    download_in_Polish: 'Download in Polish:'
-    download_in_Portuguese-Brazil: 'Download in Portuguese-Brazil:'
-    download_in_Portuguese: 'Download in Portuguese:'
-    download_in_Romanian: 'Download in Romanian:'
-    download_in_Russian: 'Download in Russian:'
+    download_in_Albanian: 'Download auf Albanisch:'
+    download_in_Arabic: 'Download auf Arabisch:'
+    download_in_Azerbaijani: 'Download in Aserbaidschan:'
+    download_in_Basque: 'Download in Baskisch:'
+    download_in_Bosnian: 'Download auf Bosnisch:'
+    download_in_Bulgarian: 'Download auf Bulgarisch:'
+    download_in_Catalan: 'Download auf Katalanisch:'
+    download_in_Chinese-Taiwan: 'Download in Chinesisch-Taiwan:'
+    download_in_Chinese: 'Download auf Chinesisch:'
+    download_in_Croatian: 'Download in Kroatisch:'
+    download_in_Czech: 'Download in Tschechisch:'
+    download_in_Danish: 'Download auf Dänisch:'
+    download_in_Dutch: 'Download auf Holländisch:'
+    download_in_English: 'Download in englischer Sprache:'
+    download_in_Finnish: 'Download auf Finnisch:'
+    download_in_French: 'Download auf Französisch:'
+    download_in_German: 'Download auf Deutsch:'
+    download_in_Greek: 'Download auf Griechisch:'
+    download_in_Hebrew: 'Download auf Hebräisch:'
+    download_in_Hungarian: 'Download auf Ungarisch:'
+    download_in_Icelandic: 'Download auf Isländisch:'
+    download_in_Indonesian: 'Download auf Indonesisch:'
+    download_in_Irish: 'Download auf Irisch:'
+    download_in_Italian: 'Download in Italienisch:'
+    download_in_Japanese: 'Download auf Japanisch:'
+    download_in_Korean: 'Download auf Koreanisch:'
+    download_in_Latvian: 'Download in Lettisch:'
+    download_in_Lithuanian: 'Download auf Litauisch:'
+    download_in_Norwegian: 'Download auf Norwegisch:'
+    download_in_Norwegian-Nynorsk: 'Download auf Norwegisch Nynorsk:'
+    download_in_Polish: 'Download auf Polnisch:'
+    download_in_Portuguese-Brazil: 'Download in Portugiesisch-Brasilien:'
+    download_in_Portuguese: 'Download in Portugiesisch:'
+    download_in_Romanian: 'Download auf Rumänisch:'
+    download_in_Russian: 'Download in Russisch:'
     download_in_Serbian: 'Download in Serbian:'
     download_in_Slovenian: 'Download in Slovenian:'
     download_in_Spanish: 'Download in Spanish:'
@@ -1036,9 +1047,9 @@
       other_focus_areas_available: No matter what focus area you choose, all other
         resources will still be available for reference.
       confirm_focus_areas: Confirm Focus Areas
-  locked_stage: The contents of this stage are not visible because this stage is currently
-    locked. Your teacher can unlock this stage when it is time to work on it or review
-    your answers.
+  locked_stage: Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch
+    gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran
+    zu arbeiten oder um deine Antworten zu überprüfen.
   hidden_stage: Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei
     welcher Lektion Du sein solltest!
   return_course_overview: Gehe zur Übersicht

@@ -153,7 +153,7 @@ de:
             Binary: Binärdatei
             For Loops: '"Zähle mit"-Schleifen'
             Functions and Functions with Parameters: Funktionen und Funktionen mit Parametern
-            Intro: Einleitung
+            Intro: Einführung
             Variables: Variablen
           description_audience: ''
         algebra:
@@ -289,12 +289,14 @@ de:
             Calc: Rechne
             Eval: Ausführen
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Flappy Code
           description: Schreibe dein eigenes Spiel in weniger als 10 Minuten! Probiere unsere Flappy-Code-Anleitung!
           description_short: Schreibe dein eigenes Flappy-Spiel in weniger als 10 Minuten!
           stage:
             Flappy Code: Flappy Code
+          description_audience: ''
         jigsaw:
           title: Puzzle
           description: Probiere unsere Puzzle Anleitung aus
@@ -321,14 +323,14 @@ de:
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzle
+            Puzzles: Aufgabe
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzle
+            Puzzles: Aufgabe
           description_audience: ''
         cspunit1:
           title: "(old) CS Principles Unit 1 - Digital Information"
@@ -1484,9 +1486,11 @@ de:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ de:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2198,10 +2209,10 @@ de:
         basketball:
           stage:
             Bounce: Bounce
-          title: Choose your team and make a basketball game
+          title: Wähle Dein Team und spiele eine Runde Basketball
           description_audience: ''
-          description_short: Choose your team and make a basketball game
-          description: Choose your team and make a basketball game
+          description_short: Wähle Dein Team und spiele eine Runde Basketball
+          description: Wähle Dein Team und spiele eine Runde Basketball
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2302,7 +2313,7 @@ de:
             Minecraft Hour of Code Designer: 'Mincecraft-Designer: Stunde des Codes'
           title: 'Mincecraft-Designer: Stunde des Codes'
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
+          description_short: Baue dein eigene Minecraft-Version. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
           description: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
         flappy-impact-study:
           stage:
@@ -2474,10 +2485,10 @@ de:
         sports:
           stage:
             Sports: Sports
-          title: Code your own sports game
+          title: Programmiere Dein eigenes Sport-Spiel
           description_audience: ''
-          description_short: Mix and match across sports
-          description: Mix and match across sports
+          description_short: Kombiniere Elemente unterschiedlicher Sportarten
+          description: Kombiniere Elemente unterschiedlicher Sportarten
         2016_sciencePD-phase2b:
           stage:
             Welcome!: Willkommen!
@@ -2593,3 +2604,14 @@ de:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Willkommen!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Zusammenfassung
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

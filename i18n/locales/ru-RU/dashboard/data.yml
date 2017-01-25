@@ -37,6 +37,7 @@ ru:
         'NetSim': 'Интернет-симулятор'
         'Custom': 'Художник'
         'CustomStudio': 'Лаборатория игр'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Бронзовый'
