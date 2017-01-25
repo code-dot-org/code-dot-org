@@ -260,7 +260,7 @@ class ActionController::TestCase
       assert signed_in_user_id, 'No signed in user'
       assert_equal user.id, signed_in_user_id
     else
-      assert_equal nil, signed_in_user_id, "Expected no signed in user"
+      assert_nil signed_in_user_id, "Expected no signed in user"
     end
   end
 

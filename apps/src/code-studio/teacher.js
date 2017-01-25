@@ -191,7 +191,7 @@ function renderContentToggle() {
 
   const { scriptName } = store.getState().progress;
 
-  store.dispatch(getHiddenStages(scriptName, false));
+  store.dispatch(getHiddenStages(scriptName));
 
   ReactDOM.render(
     <Provider store={getStore()}>

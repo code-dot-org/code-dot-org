@@ -72,10 +72,10 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "project_template_level_name": "CSD U3 abstraction jumping template",
-    "contained_level_names": null,
     "encrypted_examples": "ixouJY+RGDAtSgaTrnnPMQSr2MI82F6lXgKnffyn9PQW7ixfR9eDr2aPtX6E\nsZZMmWCL8i9lSthQDm7ZFdXxcg==\n",
     "instructions_important": "false",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

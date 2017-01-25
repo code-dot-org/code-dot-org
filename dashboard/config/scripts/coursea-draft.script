@@ -19,7 +19,7 @@ level 'courseB_story_unspottedBugs17'
 level 'courseB_story_unspottedBugs18'
 
 stage 'Persistence & Frustration: Stevie and the Marbles'
-level 'StevieMarbles'
+level 'courseA_external_dojo'
 
 stage 'Real-life Algorithms: Plant a Seed'
 level 'PlantASeed'
