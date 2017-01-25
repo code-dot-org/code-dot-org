@@ -27,7 +27,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       age: '13',
                       user_type: 'student'}
 
-    post :create, user: student_params
+    post :create, params: {user: student_params}
 
     assert_redirected_to '/'
 
@@ -45,7 +45,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         user_type: 'student'}
 
       assert_creates(User) do
-        post :create, user: student_params
+        post :create, params: {user: student_params}
       end
 
       assert_redirected_to '/'
@@ -71,7 +71,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                         user_type: 'student'}
 
       assert_creates(User) do
-        post :create, user: student_params
+        post :create, params: {user: student_params}
       end
 
       assert_redirected_to '/'
@@ -95,7 +95,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       user_type: 'student'}
 
     assert_does_not_create(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
 
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
@@ -110,7 +110,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       user_type: 'student'}
 
     assert_does_not_create(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
 
     assert_equal ["Display Name is invalid"], assigns(:user).errors.full_messages
@@ -128,7 +128,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
 
     assert_equal ["Email is invalid"], assigns(:user).errors.full_messages
@@ -143,7 +143,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       user_type: 'student'}
 
     assert_creates(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
   end
 
@@ -170,7 +170,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       age: '10'}
 
     assert_does_not_create(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
 
     assert_equal ["Email is required"], assigns(:user).errors.full_messages
@@ -185,7 +185,7 @@ class RegistrationsControllerTest < ActionController::TestCase
                       age: '10'}
 
     assert_does_not_create(User) do
-      post :create, user: student_params
+      post :create, params: {user: student_params}
     end
 
     assert_equal ["Email has already been taken"], assigns(:user).errors.full_messages
@@ -197,7 +197,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in student
 
     assert_does_not_create(User) do
-      post :update, user: {name: panda_panda}
+      post :update, params: {user: {name: panda_panda}}
     end
     assert_response :success # which actually means an error...
     assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
@@ -213,7 +213,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     User.expects(:find_by_email_or_hashed_email).never
 
     assert_does_not_create(User) do
-      post :update, user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
+      post :update, params: {
+        user: {email: "#{panda_panda}@panda.xx", current_password: '00secret'}
+      }
     end
 
     assert_response :success # which actually means an error...
@@ -227,7 +229,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, format: :js, user: {age: 9}
+      post :update, params: {format: :js, user: {age: 9}}
       assert_response :no_content
 
       assert_equal Date.today - 9.years, assigns(:user).birthday
@@ -243,7 +245,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       sign_in student
 
-      post :update, format: :js, user: {age: {"Pr" => nil}}
+      post :update, params: {format: :js, user: {age: {"Pr" => nil}}}
       assert_response :no_content
 
       # did not change
@@ -255,11 +257,14 @@ class RegistrationsControllerTest < ActionController::TestCase
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    post :update, user: {age: '9',
-                         email: '',
-                         hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
-                         current_password: 'whatev' # need this to change email
-                        }
+    post :update, params: {
+      user: {
+        age: '9',
+        email: '',
+        hashed_email: Digest::MD5.hexdigest('hidden@email.com'),
+        current_password: 'whatev' # need this to change email
+      }
+    }
 
     assert_redirected_to '/'
 
@@ -271,10 +276,13 @@ class RegistrationsControllerTest < ActionController::TestCase
     student = create :student, birthday: '1981/03/24', password: 'whatev'
     sign_in student
 
-    post :update, user: {age: '19',
-                         email: 'hashed@email.com',
-                         current_password: 'whatev' # need this to change email
-                        }
+    post :update, params: {
+      user: {
+        age: '19',
+        email: 'hashed@email.com',
+        current_password: 'whatev' # need this to change email
+      }
+    }
 
     assert_redirected_to '/'
 
@@ -285,7 +293,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   test 'update rejects unwanted parameters' do
     user = create :user, name: 'non-admin'
     sign_in user
-    post :update, user: { name: 'admin', admin: true }
+    post :update, params: {user: { name: 'admin', admin: true }}
 
     user.reload
     assert_equal 'admin', user.name
@@ -463,8 +471,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_password = 'newpassword'
 
     sign_in user
-    post :update, user: {password: new_password,
-                         password_confirmation: new_password}
+    post :update, params: {
+      user: {
+        password: new_password,
+        password_confirmation: new_password
+      }
+    }
 
     user = user.reload
     user.valid_password? new_password
@@ -474,9 +486,13 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_password = 'newpassword'
 
     sign_in user
-    post :update, user: {password: new_password,
-                         password_confirmation: new_password,
-                         current_password: current_password}
+    post :update, params: {
+      user: {
+        password: new_password,
+        password_confirmation: new_password,
+        current_password: current_password
+      }
+    }
 
     user = user.reload
     user.valid_password? new_password
@@ -486,7 +502,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_email = 'new@example.com'
 
     sign_in user
-    post :update, user: {email: new_email}
+    post :update, params: {user: {email: new_email}}
 
     user = user.reload
     user.email == new_email || user.hashed_email == User.hash_email(new_email)
@@ -496,8 +512,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_email = 'new@example.com'
 
     sign_in user
-    post :update, user: {email: new_email,
-                         current_password: current_password}
+    post :update, params: {
+      user: {email: new_email, current_password: current_password}
+    }
 
     user = user.reload
     user.email == new_email || user.hashed_email == User.hash_email(new_email)
@@ -507,7 +524,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    post :update, user: {hashed_email: new_hashed_email}
+    post :update, params: {user: {hashed_email: new_hashed_email}}
 
     user = user.reload
     user.hashed_email == new_hashed_email
@@ -517,8 +534,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     new_hashed_email = '729980b94e1439aeed40122476b0f695'
 
     sign_in user
-    post :update, user: {hashed_email: new_hashed_email,
-                         current_password: current_password}
+    post :update, params: {
+      user: {hashed_email: new_hashed_email, current_password: current_password}
+    }
 
     user = user.reload
     user.hashed_email == new_hashed_email
