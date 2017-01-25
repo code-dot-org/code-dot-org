@@ -101,6 +101,29 @@ describe('hiddenStage reducer tests', () => {
     });
   });
 
+  it('sets initialized to true if even we have no hidden stages', () => {
+    const state = store.getState().hiddenStage;
+    assert.deepEqual(state.toJS(), {
+      initialized: false,
+      hideableAllowed: false,
+      bySection: {}
+    });
+
+    const action = getHiddenStages('scriptName', true);
+    store.dispatch(action);
+
+    lastRequest.respond(200, { "Content-Type": "application/json" },
+      JSON.stringify({})
+    );
+
+    const nextState = store.getState().hiddenStage;
+    assert.deepEqual(nextState.toJS(), {
+      initialized: true,
+      hideableAllowed: true,
+      bySection: {}
+    });
+  });
+
   it('can toggle hidden state', () => {
     const state = store.getState().hiddenStage;
     assert.deepEqual(state.toJS(), {
@@ -116,7 +139,7 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: true,
+      initialized: false,
       hideableAllowed: false,
       bySection: {
         10: {
@@ -130,7 +153,7 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: true,
+      initialized: false,
       hideableAllowed: false,
       bySection: {
         10: {
@@ -147,7 +170,7 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: true,
+      initialized: false,
       hideableAllowed: false,
       bySection: {
         10: {
@@ -164,7 +187,7 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: true,
+      initialized: false,
       hideableAllowed: false,
       bySection: {
         10: {
