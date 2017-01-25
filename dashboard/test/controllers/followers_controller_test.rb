@@ -141,7 +141,7 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal 'A name', assigns(:user).name
     assert_equal 'F', assigns(:user).gender
     assert_equal Time.zone.now.to_date - 13.years, assigns(:user).birthday
-    assert_equal nil, assigns(:user).provider
+    assert_nil assigns(:user).provider
     assert_equal User::TYPE_STUDENT, assigns(:user).user_type
   end
 
@@ -165,7 +165,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 13.years, assigns(:user).birthday
-      assert_equal nil, assigns(:user).provider
+      assert_nil assigns(:user).provider
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
     end
   end
@@ -190,7 +190,7 @@ class FollowersControllerTest < ActionController::TestCase
       assert_equal 'A name', assigns(:user).name
       assert_equal 'F', assigns(:user).gender
       assert_equal Date.today - 11.years, assigns(:user).birthday
-      assert_equal nil, assigns(:user).provider
+      assert_nil assigns(:user).provider
       assert_equal '', assigns(:user).email
       assert_equal Digest::MD5.hexdigest('studentx@school.edu'), assigns(:user).hashed_email
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
