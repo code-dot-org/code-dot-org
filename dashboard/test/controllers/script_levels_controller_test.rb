@@ -774,7 +774,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden', 0
 
     assert_equal @section, assigns(:section)
-    assert_equal nil, assigns(:user)
+    assert_nil assigns(:user)
   end
 
   test 'shows collapsed teacher panel when student not chosen, chooses section when teacher has one section' do
@@ -785,7 +785,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_select '.teacher-panel.hidden'
 
     assert_equal @section, assigns(:section)
-    assert_equal nil, assigns(:user)
+    assert_nil assigns(:user)
   end
 
   test 'shows collapsed teacher panel when student not chosen, does not choose section when teacher has multiple sections' do
@@ -797,8 +797,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_select '.teacher-panel.hidden'
 
-    assert_equal nil, assigns(:section)
-    assert_equal nil, assigns(:user)
+    assert_nil assigns(:section)
+    assert_nil assigns(:user)
   end
 
   test 'teacher tray is not visible for pd and plc scripts' do
