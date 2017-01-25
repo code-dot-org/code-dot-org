@@ -123,6 +123,10 @@
           <title name="SPRITE">1</title>
           <title name="EMOTION">1</title>
         </block>
+        <block type="studio_ifActorHasEmotionElse">
+          <title name="SPRITE">1</title>
+          <title name="EMOTION">1</title>
+        </block>
         <block type="controls_if" inline="false">
           <value name="IF0">
             <block type="logic_compare" inline="true">
@@ -139,6 +143,16 @@
           </value>
         </block>
         <block type="studio_ifActorPosition" inline="true">
+          <title name="SPRITE">0</title>
+          <title name="POSITION">y</title>
+          <title name="OPERATOR">GT</title>
+          <value name="COMPARED_VALUE">
+            <block type="math_number">
+              <title name="NUM">255</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_ifActorPositionElse" inline="true">
           <title name="SPRITE">0</title>
           <title name="POSITION">y</title>
           <title name="OPERATOR">GT</title>
@@ -243,7 +257,7 @@
             <block type="studio_wait">
               <title name="VALUE">1000</title>
               <next>
-                <block type="studio_ifActorPosition" inline="true">
+                <block type="studio_ifActorPositionElse" inline="true">
                   <title name="SPRITE">0</title>
                   <title name="POSITION">y</title>
                   <title name="OPERATOR">GT</title>
@@ -267,28 +281,16 @@
                       </next>
                     </block>
                   </statement>
-                  <next>
-                    <block type="studio_ifActorPosition" inline="true">
-                      <title name="SPRITE">0</title>
-                      <title name="POSITION">y</title>
-                      <title name="OPERATOR">LTE</title>
-                      <value name="COMPARED_VALUE">
+                  <statement name="ELSE">
+                    <block type="studio_setSpritesChase" inline="true">
+                      <title name="VALUE">"ninja"</title>
+                      <value name="SPRITE">
                         <block type="math_number">
-                          <title name="NUM">225</title>
+                          <title name="NUM">1</title>
                         </block>
                       </value>
-                      <statement name="DO">
-                        <block type="studio_setSpritesChase" inline="true">
-                          <title name="VALUE">"ninja"</title>
-                          <value name="SPRITE">
-                            <block type="math_number">
-                              <title name="NUM">1</title>
-                            </block>
-                          </value>
-                        </block>
-                      </statement>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </next>
             </block>
@@ -307,19 +309,24 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
           <next>
-            <block type="studio_ifActorHasEmotion">
+            <block type="studio_ifActorHasEmotionElse">
               <title name="SPRITE">1</title>
               <title name="EMOTION">1</title>
               <statement name="DO">
                 <block type="studio_changeScore">
                   <title name="VALUE">1</title>
+                  <next>
+                    <block type="studio_changeScore">
+                      <title name="VALUE">1</title>
+                    </block>
+                  </next>
                 </block>
               </statement>
-              <next>
+              <statement name="ELSE">
                 <block type="studio_changeScore">
                   <title name="VALUE">1</title>
                 </block>
-              </next>
+              </statement>
             </block>
           </next>
         </block>
