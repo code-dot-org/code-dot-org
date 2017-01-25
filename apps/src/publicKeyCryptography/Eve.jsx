@@ -2,7 +2,7 @@
 import React from 'react';
 import color from "../util/color";
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps, {Step} from './NumberedSteps';
+import NumberedSteps, {Step, Heading} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
 import ValidatorField from './ValidatorField';
@@ -130,6 +130,7 @@ const Eve = React.createClass({
     } = this.state;
     return (
       <CollapsiblePanel title="Eve">
+        <Heading text="Eavesdrop!"/>
         <NumberedSteps>
           <Step>
             Enter <KeywordPublicModulus/>:
@@ -148,6 +149,19 @@ const Eve = React.createClass({
               color={COLORS.publicKey}
             />
           </Step>
+          <Step requires={[publicModulus].every(Number.isInteger)}>
+            Enter Bob's <KeywordPublicNumber/>:
+            <IntegerTextbox
+              value={publicNumber}
+              onChange={this.setPublicNumber}
+              disabled={disabled}
+              color={COLORS.publicNumber}
+            />
+          </Step>
+        </NumberedSteps>
+
+        <Heading text="Try to Crack it!"/>
+        <NumberedSteps start="4">
           <Step requires={[publicModulus, publicKey].every(Number.isInteger)}>
             Crack Alice's <KeywordPrivateKey/>:
             <PrivateKeyDropdown
@@ -179,15 +193,6 @@ const Eve = React.createClass({
                 </tr>
               </tbody>
             </table>
-          </Step>
-          <Step requires={[publicModulus].every(Number.isInteger)}>
-            Enter Bob's <KeywordPublicNumber/>:
-            <IntegerTextbox
-              value={publicNumber}
-              onChange={this.setPublicNumber}
-              disabled={disabled}
-              color={COLORS.publicNumber}
-            />
           </Step>
           <Step requires={[publicModulus, publicKey, publicNumber].every(Number.isInteger)}>
             Crack Bob's <KeywordSecretNumber/>:

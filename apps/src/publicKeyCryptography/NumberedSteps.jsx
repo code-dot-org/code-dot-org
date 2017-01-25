@@ -13,6 +13,15 @@ const style = {
   },
   subStep: {
     fontWeight: 'normal'
+  },
+  heading: {
+    fontSize: 'larger',
+    fontWeight: 'bold',
+    marginTop: 10
+  },
+  subheading: {
+    fontStyle: 'italic',
+    marignBottom: 10
   }
 };
 
@@ -75,3 +84,23 @@ export function SubStep({text}) {
 SubStep.propTypes = {
   text: React.PropTypes.string.isRequired
 };
+
+export function Heading({text}) {
+  return (
+    <div style={style.heading}>
+      {text}
+    </div>
+  );
+}
+Heading.propTypes = {
+  text: React.PropTypes.string.isRequired
+};
+
+export function Subheading({text}) {
+  return (
+    <div style={style.subheading}>
+      {text}
+    </div>
+  );
+}
+Subheading.propTypes = {...Heading.propTypes};
