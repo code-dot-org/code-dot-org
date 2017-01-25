@@ -1,11 +1,11 @@
 /** @file Static instructions for the Alice character in the crypto widget */
 import React from 'react';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, SubStep} from './NumberedSteps';
 
 export default function AliceInstructions() {
   return (
-    <CollapsiblePanel title="Alice's instructions">
+    <CharacterPanel title="Alice's instructions">
       <NumberedSteps>
         <Step>
           <b>Choose a public modulus</b>
@@ -33,6 +33,6 @@ export default function AliceInstructions() {
           </ul>
         </Step>
       </NumberedSteps>
-    </CollapsiblePanel>
+    </CharacterPanel>
   );
 }

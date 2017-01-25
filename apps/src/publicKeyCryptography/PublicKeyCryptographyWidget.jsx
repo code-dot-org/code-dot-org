@@ -1,7 +1,7 @@
 /** @file Root component for Public Key Cryptography widget */
 import React from 'react';
 import i18n from '@cdo/locale';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import EqualColumns from './EqualColumns';
 import Alice from './Alice';
 import AliceInstructions from './AliceInstructions';
@@ -96,7 +96,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <AliceInstructions/>
           {this.renderAliceControls()}
-          {this.renderModuloClockColumn()}
+          {this.renderModuloClockPanel()}
         </EqualColumns>
       );
     } else if (EVE_VIEW === this.state.selectedCharacter) {
@@ -104,7 +104,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <EveInstructions/>
           {this.renderEveControls()}
-          {this.renderModuloClockColumn()}
+          {this.renderModuloClockPanel()}
         </EqualColumns>
       );
     } else if (BOB_VIEW === this.state.selectedCharacter) {
@@ -112,7 +112,7 @@ const PublicKeyCryptographyWidget = React.createClass({
         <EqualColumns intercolumnarDistance={20}>
           <BobInstructions/>
           {this.renderBobControls()}
-          {this.renderModuloClockColumn()}
+          {this.renderModuloClockPanel()}
         </EqualColumns>
       );
     } else if (ALL_VIEW === this.state.selectedCharacter) {
@@ -169,11 +169,11 @@ const PublicKeyCryptographyWidget = React.createClass({
     );
   },
 
-  renderModuloClockColumn() {
+  renderModuloClockPanel() {
     return (
-      <CollapsiblePanel title="Modulo clock">
+      <CharacterPanel title="Modulo clock">
         {this.renderModuloClock()}
-      </CollapsiblePanel>
+      </CharacterPanel>
     );
   },
 
