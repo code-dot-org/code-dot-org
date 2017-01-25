@@ -1,4 +1,4 @@
-RegionalPartner	LEAID
+RegionalPartner	LEAID	course	workshop_days
 NO PARTNER	6300004
 NO PARTNER	6300007
 NO PARTNER	6300023
@@ -3081,7 +3081,8 @@ Orlando Science Center	1200270
 Florida State College Jacksonville	1200300
 Broward County Public Schools	1200330
 Florida State College Jacksonville	1200360
-Academy for CS Education - Florida International University	1200390
+Academy for CS Education - Florida International University	1200390	csp
+Broward County Public Schools	1200390	csd
 Orlando Science Center	1200420
 Florida State College Jacksonville	1200450
 Florida State College Jacksonville	1200480
@@ -3112,7 +3113,8 @@ Florida State College Jacksonville	1201200
 Orlando Science Center	1201230
 Orlando Science Center	1201260
 Broward County Public Schools	1201290
-Academy for CS Education - Florida International University	1201320
+Academy for CS Education - Florida International University	1201320	csp
+Broward County Public Schools	1201320	csd
 Florida State College Jacksonville	1201350
 Florida State College Jacksonville	1201380
 Orlando Science Center	1201410
@@ -11605,33 +11607,33 @@ Code/Interactive	3600068
 Code/Interactive	3600070
 Code/Interactive	3600071
 Code/Interactive	3600073
-Code/Interactive	3600076
-Code/Interactive	3600077
-Code/Interactive	3600078
-Code/Interactive	3600079
+Code/Interactive	3600076		July 10 - 14, 2017
+Code/Interactive	3600077		July 10 - 14, 2017
+Code/Interactive	3600078		July 10 - 14, 2017
+Code/Interactive	3600079		July 10 - 14, 2017
 Code/Interactive	3600080
-Code/Interactive	3600081
+Code/Interactive	3600081		July 10 - 14, 2017
 Code/Interactive	3600082
-Code/Interactive	3600083
-Code/Interactive	3600084
-Code/Interactive	3600085
-Code/Interactive	3600086
-Code/Interactive	3600087
-Code/Interactive	3600088
+Code/Interactive	3600083		July 10 - 14, 2017
+Code/Interactive	3600084		July 10 - 14, 2017
+Code/Interactive	3600085		July 10 - 14, 2017
+Code/Interactive	3600086		July 10 - 14, 2017
+Code/Interactive	3600087		July 10 - 14, 2017
+Code/Interactive	3600088		July 10 - 14, 2017
 Code/Interactive	3600089
-Code/Interactive	3600090
-Code/Interactive	3600091
-Code/Interactive	3600092
-Code/Interactive	3600094
-Code/Interactive	3600095
-Code/Interactive	3600096
-Code/Interactive	3600097
-Code/Interactive	3600098
-Code/Interactive	3600099
-Code/Interactive	3600100
-Code/Interactive	3600101
-Code/Interactive	3600102
-Code/Interactive	3600103
+Code/Interactive	3600090		July 10 - 14, 2017
+Code/Interactive	3600091		July 10 - 14, 2017
+Code/Interactive	3600092		July 10 - 14, 2017
+Code/Interactive	3600094		July 10 - 14, 2017
+Code/Interactive	3600095		July 10 - 14, 2017
+Code/Interactive	3600096		July 10 - 14, 2017
+Code/Interactive	3600097		July 10 - 14, 2017
+Code/Interactive	3600098		July 10 - 14, 2017
+Code/Interactive	3600099		July 10 - 14, 2017
+Code/Interactive	3600100		July 10 - 14, 2017
+Code/Interactive	3600101		July 10 - 14, 2017
+Code/Interactive	3600102		July 10 - 14, 2017
+Code/Interactive	3600103		July 10 - 14, 2017
 Code/Interactive	3600104
 Code/Interactive	3600105
 Code/Interactive	3600106
@@ -11646,11 +11648,11 @@ Code/Interactive	3600114
 Code/Interactive	3600115
 Code/Interactive	3600116
 Code/Interactive	3600118
-Code/Interactive	3600119
-Code/Interactive	3600120
-Code/Interactive	3600121
-Code/Interactive	3600122
-Code/Interactive	3600123
+Code/Interactive	3600119		July 10 - 14, 2017
+Code/Interactive	3600120		July 10 - 14, 2017
+Code/Interactive	3600121		July 10 - 14, 2017
+Code/Interactive	3600122		July 10 - 14, 2017
+Code/Interactive	3600123		July 10 - 14, 2017
 Code/Interactive	3600124
 Code/Interactive	3600125
 Code/Interactive	3600126
@@ -11676,9 +11678,9 @@ Code/Interactive	3600147
 Code/Interactive	3600148
 Code/Interactive	3600149
 Code/Interactive	3600150
-Code/Interactive	3600151
-Code/Interactive	3600152
-Code/Interactive	3600153
+Code/Interactive	3600151		July 10 - 14, 2017
+Code/Interactive	3600152		July 10 - 14, 2017
+Code/Interactive	3600153		July 10 - 14, 2017
 Code/Interactive	3600154
 Code/Interactive	3600155
 Code/Interactive	3600157
