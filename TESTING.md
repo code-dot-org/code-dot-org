@@ -77,7 +77,7 @@ See [the apps readme](./apps/README.md) for more details.
 ### Dashboard Tests
 `cd dashboard && rake test` will run all of our dashboard Ruby tests. This can take about 15 minutes to run.
 
-If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV=test rake db:reset db:migrate seed:all` to recreate the db.
+If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, you can try running `RAILS_ENV=test rake db:reset db:setup_or_migrate seed:all seed:secret_words` to recreate the db.
 
 If you just want to run a single file of tests, you can run
 `bundle exec ruby -Itest ./path/to/your/test.rb`
@@ -94,7 +94,7 @@ Or you can just use this shortcut (after you've installed chromedriver):
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~10 seconds to run.
 
-If you get a database complaint like missing pegasus_test table, try running `RAILS_ENV=test bundle exec rake install:pegasus`
+If you get a database complaint like missing pegasus_test table, try running `RAILS_ENV=test bundle exec rake db:ensure_created` and `RAILS_ENV=test bundle exec rake db:reset`.
 
 ###Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.

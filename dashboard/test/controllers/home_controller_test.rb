@@ -23,7 +23,7 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "studio.code.org"
 
-    get :set_locale, :return_to => "/blahblah", :locale => "es-ES"
+    get :set_locale, return_to: "/blahblah", locale: "es-ES"
 
     assert_equal "es-ES", cookies[:language_]
 
@@ -37,20 +37,20 @@ class HomeControllerTest < ActionController::TestCase
 
     request.host = "studio.code.org"
 
-    get :set_locale, :return_to => ["blah"], :locale => "es-ES"
+    get :set_locale, return_to: ["blah"], locale: "es-ES"
 
     assert_redirected_to 'http://studio.code.org/'
   end
 
   test "return_to should not redirect off-site" do
     request.host = "studio.code.org"
-    get :set_locale, :return_to => "http://blah.com/blerg", :locale => "es-ES"
+    get :set_locale, return_to: "http://blah.com/blerg", locale: "es-ES"
     assert_redirected_to 'http://studio.code.org/blerg'
   end
 
   test "if return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
-    get :set_locale, :return_to => nil, :locale => "es-ES"
+    get :set_locale, return_to: nil, locale: "es-ES"
     assert_redirected_to ''
   end
 
@@ -72,6 +72,7 @@ class HomeControllerTest < ActionController::TestCase
     @user = create(:user)
     5.times do
       create :gallery_activity,
+        level_source: create(:level_source, level_source_image: create(:level_source_image)),
         user: @user,
         autosaved: true
     end

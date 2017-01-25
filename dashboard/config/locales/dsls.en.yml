@@ -2279,6 +2279,25 @@ en:
       U6 - updateRecord - Student Introduction:
         description here: description here
         title: title
+      U6 AP Performance Task Tech Setup - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Create PT - Make a Plan - Student Links: {}
+      U6 Create PT Review - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Complete the Task - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT - Make a Plan - Student Links:
+        description here: description here
+        title: title
+      U6 Explore PT Review - Student Links:
+        description here: description here
+        title: title
       Understanding Communication Protocols: {}
       Understanding the Human Machine Language: {}
       Unit 1 Lesson 1 Overview: {}
@@ -2511,6 +2530,9 @@ en:
         description here: description here
         title: title
       csp_ap_intro: {}
+      csp_unit5_finalassessment_overview:
+        description here: description here
+        title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
@@ -6835,6 +6857,10 @@ en:
         right answer: right answer
         title: title
         wrong answer: wrong answer
+      Unit 5 final assessment understand and continue:
+        I am NOT planning to take the AP exam this year: I am NOT planning to take the AP exam this year
+        I am planning to take the AP exam this year: I am planning to take the AP exam this year
+        I am still not sure if I am going to take the exam: I am still not sure if I am going to take the exam
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.

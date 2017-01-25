@@ -289,12 +289,14 @@ he:
             Calc: Calc
             Eval: Eval
             Studio: Studio
+          description_audience: ''
         flappy:
           title: קוד מתנופף
           description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
           description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
           stage:
             Flappy Code: קוד מתנופף
+          description_audience: ''
         jigsaw:
           title: פאזל
           description: Try our Jigsaw tutorial
@@ -1484,9 +1486,11 @@ he:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ he:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2593,3 +2604,14 @@ he:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: ברוכים הבאים!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: אריזה
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

@@ -135,7 +135,7 @@
       10:
         image: notes/flappy10.jpg
         text: In the final puzzle you'll be able to create your own game and share
-          it with your friends. Have fun!
+          it with your friends. रमाईलो गर्नुहोस्!
     loop_times:
       1:
         image: notes/hoc2_1.jpg
@@ -948,7 +948,7 @@
         image: notes/C1_zuck_repeat_loop_5.png
         text: One more thing is you can put as many commands as you want inside the
           repeat block. So in this example, you're telling it to move forward and
-          turn left, which it'll do five times. Have fun!
+          turn left, which it'll do five times. रमाईलो गर्नुहोस्!
     C2_artist_intro:
       1:
         image: notes/C2_artist_intro_1.png
@@ -2658,7 +2658,7 @@
       5:
         image: notes/starwars_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
     starwars_blocks_intro:
       1:
         image: notes/starwars_blocks_intro_1.JPG
@@ -2783,7 +2783,7 @@
       5:
         image: notes/starwars_blocks_congrats_5.JPG
         text: When you're done making your game, choose share to get a link you can
-          share with friends or play your game on your phone. Have fun!
+          share with friends or play your game on your phone. रमाईलो गर्नुहोस्!
     mc_intro:
       1:
         image: notes/mc_intro_1.JPG
@@ -2929,7 +2929,7 @@
       4:
         image: notes/mc_congrats_share_4.JPG
         text: When you're done making your creation, choose share to get a link to
-          share with your friends. Have fun!
+          share with your friends. रमाईलो गर्नुहोस्!
     mc_congrats_no_share:
       1:
         image: notes/mc_congrats_no_share_1.JPG
@@ -2947,7 +2947,7 @@
           a house out of wool!"
       4:
         image: notes/mc_congrats_no_share_4.JPG
-        text: Now you can build whatever you want. Have fun!
+        text: Now you can build whatever you want. रमाईलो गर्नुहोस्!
     gumball_intro:
       1:
         image: notes/gumball_intro_1.JPG
@@ -3163,7 +3163,7 @@
         image: notes/mc_2016_intro_9.jpg
         text: After you've hit "Run" you can always hit the "Reset" button to reset
           the game and start over. Now, it's your turn to make your very own version
-          of Minecraft. Have fun!
+          of Minecraft. रमाईलो गर्नुहोस्!
     mc_2016_loops:
       1:
         image: notes/mc_2016_loops_1.jpg
@@ -3232,5 +3232,5 @@
       2:
         image: notes/mc_2016_congrats_2.jpg
         text: When you're done making your game, choose share to get a link that you
-          can share with your friends or to play your game on your phone. Have fun!
+          can share with your friends or to play your game on your phone. रमाईलो गर्नुहोस्!
           I'm looking forward to playing your version of Minecraft.

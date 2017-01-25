@@ -50,7 +50,7 @@ class RedisTable
     new_id = next_id
     value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
-    publish_change({:action => 'insert', :id => new_id})
+    publish_change({action: 'insert', id: new_id})
     value
   end
 
@@ -133,7 +133,7 @@ class RedisTable
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
     hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])
     @props.set(row_key(id), hash.to_json)
-    publish_change({:action => 'update', :id => id})
+    publish_change({action: 'update', id: id})
     hash
   end
 
@@ -144,7 +144,7 @@ class RedisTable
     ids = [ids] unless ids.is_a?(Array)
     deleted = @props.delete(ids.map {|id| row_key(id)})
     if deleted
-      publish_change({:action => 'delete', :ids => ids})
+      publish_change({action: 'delete', ids: ids})
     end
     deleted
   end
@@ -152,7 +152,7 @@ class RedisTable
   # Deletes all the tables and rows in a shard.
   def self.reset_shard(shard_id, redis, pub_sub)
     RedisPropertyBag.new(redis, shard_id).delete_all
-    pub_sub.publish(shard_id, 'all_tables', {:action => 'reset_shard'}) if pub_sub
+    pub_sub.publish(shard_id, 'all_tables', {action: 'reset_shard'}) if pub_sub
   end
 
   private

@@ -37,6 +37,7 @@
         NetSim: "Интернет симулатор"
         Custom: "Художник"
         CustomStudio: "Театрална лаборатория"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "Бронз"

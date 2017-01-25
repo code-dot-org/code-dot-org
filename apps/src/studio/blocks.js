@@ -777,11 +777,11 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       var dropdown;
       if (allowSpritesOutsidePlayspace) {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES_EXTENDED);
-        dropdown.setValue(POSITION_VALUES_EXTENDED[4][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(this.VALUES_EXTENDED);
+        dropdown.setValue(this.VALUES_EXTENDED[4][1]); // default to top-left
       } else {
-        dropdown = new blockly.FieldDropdown(POSITION_VALUES);
-        dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
+        dropdown = new blockly.FieldDropdown(this.VALUES);
+        dropdown.setValue(this.VALUES[1][1]); // default to top-left
       }
       this.setHSV(184, 1.00, 0.74);
       if (spriteCount > 1) {
@@ -799,6 +799,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTooltip(msg.setSpritePositionTooltip());
     }
   };
+
+  blockly.Blocks.studio_setSpritePosition.VALUES = POSITION_VALUES;
+  blockly.Blocks.studio_setSpritePosition.VALUES_EXTENDED = POSITION_VALUES_EXTENDED;
 
   generator.studio_setSpritePosition = function () {
     return generateSetterCode({
@@ -2874,6 +2877,8 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
   function addRegularAndParamsVersions(name, initFunc, generatorFunc) {
     let regular = `studio_${name}`;
     let params = `studio_${name}Params`;
+    let regularElse = `studio_${name}Else`;
+    let paramsElse = `studio_${name}ElseParams`;
 
     Blockly.Blocks[regular] = {
       init: function () {
@@ -2887,11 +2892,29 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
       }
     };
 
+    Blockly.Blocks[regularElse] = {
+      init: function () {
+        initFunc.call(this, true, true);
+      }
+    };
+
+    Blockly.Blocks[paramsElse] = {
+      init: function () {
+        initFunc.call(this, false, true);
+      }
+    };
+
     generator[regular] = function () {
       return generatorFunc.call(this, true);
     };
     generator[params] = function () {
       return generatorFunc.call(this, false);
+    };
+    generator[regularElse] = function () {
+      return generatorFunc.call(this, true, true);
+    };
+    generator[paramsElse] = function () {
+      return generatorFunc.call(this, false, true);
     };
   }
 
@@ -2910,7 +2933,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
   ];
 
-  addRegularAndParamsVersions('ifActorHasEmotion', function (actorSelectDropdown) {
+  addRegularAndParamsVersions('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
@@ -2932,16 +2955,26 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.appendStatementInput('DO');
 
+    if (includeElseStatement) {
+      this.appendStatementInput('ELSE')
+          .appendTitle(msg.elseCode());
+    }
+
     this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setInputsInline(true);
-  }, function (actorSelectDropdown) {
-    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+  }, function (actorSelectDropdown, includeElseStatement) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') || 0 : getSpriteIndex(this);
     let emotion = this.getTitleValue('EMOTION');
     let branch = generator.statementToCode(this, 'DO');
     let callback = `function (emotion) {\n  if (emotion === ${emotion}) {\n  ${branch}  }\n}`;
+
+    if (includeElseStatement) {
+      let elseBranch = generator.statementToCode(this, 'ELSE');
+      callback = `function (emotion) {\n  if (emotion === ${emotion}) {\n  ${branch}  } else {\n ${elseBranch} }\n}`;
+    }
 
     return `Studio.getSpriteEmotion('block_id_${this.id}', ${sprite}, ${callback});`;
   });
@@ -2952,7 +2985,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorYPosition(), 'y'],
   ];
 
-  addRegularAndParamsVersions('ifActorPosition', function (actorSelectDropdown) {
+  addRegularAndParamsVersions('ifActorPosition', function (actorSelectDropdown, includeElseStatement) {
     const OPERATORS = Blockly.RTL ? [
       ['=', 'EQ'],
       ['\u2260', 'NEQ'],
@@ -2992,12 +3025,17 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.appendStatementInput('DO');
 
+    if (includeElseStatement) {
+      this.appendStatementInput('ELSE')
+          .appendTitle(msg.elseCode());
+    }
+
     this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setInputsInline(true);
-  }, function (actorSelectDropdown) {
+  }, function (actorSelectDropdown, includeElseStatement) {
     const OPERATORS = {
       EQ: '==',
       NEQ: '!=',
@@ -3006,7 +3044,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
       GT: '>',
       GTE: '>='
     };
-    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') || 0 : getSpriteIndex(this);
     let position = this.getTitleValue('POSITION');
     let operator = this.getTitleValue('OPERATOR');
     let order = (operator === 'EQ' || operator === 'NEQ') ?
@@ -3015,6 +3053,11 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     let branch = generator.statementToCode(this, 'DO');
     let comparison = `${position} ${OPERATORS[operator]} ${comparedValue}`;
     let callback = `function (x, y) {\n  if (${comparison}) {\n  ${branch}  }\n}`;
+
+    if (includeElseStatement) {
+      let elseBranch = generator.statementToCode(this, 'ELSE');
+      callback = `function (x, y) {\n  if (${comparison}) {\n  ${branch}  } else {\n ${elseBranch} }\n}`;
+    }
 
     return `Studio.getSpriteXY('block_id_${this.id}', ${sprite}, ${callback});`;
   });
@@ -3025,7 +3068,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorVisible(), 'true']
   ];
 
-  addRegularAndParamsVersions('ifActorIsVisible', function (actorSelectDropdown) {
+  addRegularAndParamsVersions('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
@@ -3040,16 +3083,26 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.appendStatementInput('DO');
 
+    if (includeElseStatement) {
+      this.appendStatementInput('ELSE')
+          .appendTitle(msg.elseCode());
+    }
+
     this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setInputsInline(true);
-  }, function (actorSelectDropdown) {
-    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+  }, function (actorSelectDropdown, includeElseStatement) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') || 0 : getSpriteIndex(this);
     let visibility = this.getTitleValue('VISIBILITY');
     let branch = generator.statementToCode(this, 'DO');
     let callback = `function (visibility) {\n  if (visibility === ${visibility}) {\n  ${branch}  }\n}`;
+
+    if (includeElseStatement) {
+      let elseBranch = generator.statementToCode(this, 'ELSE');
+      callback = `function (visibility) {\n  if (visibility === ${visibility}) {\n  ${branch}  } else {\n ${elseBranch} }\n}`;
+    }
 
     return `Studio.getSpriteVisibility('block_id_${this.id}', ${sprite}, ${callback});`;
   });
@@ -3062,7 +3115,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     return [msg.isSet() + ' ' + choice[0], choice[1]];
   });
 
-  addRegularAndParamsVersions('ifActorIsSprite', function (actorSelectDropdown) {
+  addRegularAndParamsVersions('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
@@ -3077,16 +3130,26 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
     this.appendStatementInput('DO');
 
+    if (includeElseStatement) {
+      this.appendStatementInput('ELSE')
+          .appendTitle(msg.elseCode());
+    }
+
     this.setTooltip(Blockly.Msg.CONTROLS_IF_IF_TOOLTIP);
 
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setInputsInline(true);
-  }, function (actorSelectDropdown) {
-    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') : getSpriteIndex(this);
+  }, function (actorSelectDropdown, includeElseStatement) {
+    let sprite = actorSelectDropdown ? this.getTitleValue('SPRITE') || 0 : getSpriteIndex(this);
     let value = this.getTitleValue('VALUE');
     let branch = generator.statementToCode(this, 'DO');
     let callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  }\n}`;
+
+    if (includeElseStatement) {
+      let elseBranch = generator.statementToCode(this, 'ELSE');
+      callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  } else {\n ${elseBranch} }\n}`;
+    }
 
     return `Studio.getSpriteValue('block_id_${this.id}', ${sprite}, ${callback});`;
   });

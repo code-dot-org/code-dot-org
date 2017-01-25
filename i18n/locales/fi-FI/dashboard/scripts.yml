@@ -289,12 +289,14 @@ fi:
             Calc: Calc
             Eval: Eval
             Studio: Studio
+          description_audience: ''
         flappy:
           title: Flappy Code
           description: Haluatko kirjoittaa oman pelin alle 10 minuutissa? Kokeile Flappy Code -oppituntia!
           description_short: Luo oma Flappy-pelisi alle kymmenessä minuutissa!
           stage:
             Flappy Code: Flappy Code
+          description_audience: ''
         jigsaw:
           title: Palapeli
           description: Kokeile "Palapeli"-aloitusohjettamme
@@ -1484,9 +1486,11 @@ fi:
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment 5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
-          title: CSP Unit 6 - Performance Tasks
+          title: CSP Unit 6 - AP Performance Tasks
           description: This unit covers the preparation and completion of the Create and Explore Performance Tasks.
           description_short: Lessons guide students to prepare for and complete the AP Performance Tasks.
           stage:
@@ -1494,6 +1498,13 @@ fi:
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2299,8 +2310,8 @@ fi:
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: Koodaustunti Minecraft Suunnittelija
+          title: Koodaustunti Minecraft Suunnittelija
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
           description: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -2593,3 +2604,14 @@ fi:
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: Tervetuloa!
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: Yhteenveto
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

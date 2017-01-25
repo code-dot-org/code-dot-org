@@ -37,6 +37,7 @@ hu:
         'NetSim': 'Internet szimulátor'
         'Custom': 'Művész'
         'CustomStudio': 'Játéklabor'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronz'

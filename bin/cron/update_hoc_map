@@ -47,19 +47,19 @@ end
 file.close
 
 client = Google::APIClient.new(
-  :application_name => 'HOC map update',
-  :application_version => '1.0.0'
+  application_name: 'HOC map update',
+  application_version: '1.0.0'
 )
 key = Google::APIClient::KeyUtils.load_from_pkcs12(
   Base64.strict_decode64(CDO.hoc_map_api_key),
   CDO.hoc_map_api_secret
 )
 client.authorization = Signet::OAuth2::Client.new(
-  :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
-  :audience => 'https://accounts.google.com/o/oauth2/token',
-  :scope => 'https://www.googleapis.com/auth/fusiontables',
-  :issuer => CDO.hoc_map_service_account_email,
-  :signing_key => key
+  token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
+  audience: 'https://accounts.google.com/o/oauth2/token',
+  scope: 'https://www.googleapis.com/auth/fusiontables',
+  issuer: CDO.hoc_map_service_account_email,
+  signing_key: key
 )
 client.authorization.fetch_access_token!
 

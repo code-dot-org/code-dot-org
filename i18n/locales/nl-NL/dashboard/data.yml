@@ -37,6 +37,7 @@ nl:
         'NetSim': 'Internet Simulator'
         'Custom': 'Kunstenaar'
         'CustomStudio': 'Speel Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brons'

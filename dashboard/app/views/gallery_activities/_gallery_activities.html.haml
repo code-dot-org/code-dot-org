@@ -3,14 +3,14 @@
 %br{clear: :all}
 
 - gallery_activities.each do |gallery_activity|
-  - next unless gallery_activity.try(:activity).try(:level_source).try(:level_source_image)
+  - next unless gallery_activity.try(:level_source).try(:level_source_image)
   %div.gallery_activity
-    - activity = gallery_activity.activity
-    - level_source = activity.level_source
+    - level_source = gallery_activity.level_source
+    - user = gallery_activity.user
     = link_to image_tag(level_source.level_source_image.s3_url), level_source
-    - if activity.user && activity.user.initial && activity.user.age
+    - if user && user.initial && user.age
       %div.caption
-        =t('gallery.caption_by_name_age', name: activity.user.initial, age: activity.user.age)
+        =t('gallery.caption_by_name_age', name: user.initial, age: user.age)
     %div.caption
-      =t('gallery.caption_time_ago', time_ago: time_ago_in_words(activity.created_at))
+      =t('gallery.caption_time_ago', time_ago: time_ago_in_words(level_source.created_at))
 %br{clear: :all}

@@ -45,7 +45,7 @@ const boardEventDropdownGenerator = function (editor) {
   return COMPONENT_EVENTS[firstParam].map(wrapInQuotes);
 };
 
-module.exports.blocks = [
+export const blocks = [
   /**
    * Generic Johnny-Five / Firmata blocks
    */
@@ -107,7 +107,7 @@ module.exports.blocks = [
   {func: 'toggleSwitch.isOpen', category: CIRCUIT_CATEGORY, type: 'readonlyproperty' },
 ];
 
-module.exports.categories = {
+export const categories = {
   [MAKERLAB_CATEGORY]: {
     color: 'cyan',
     rgb: COLOR_CYAN,

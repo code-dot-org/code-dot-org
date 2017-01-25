@@ -52,9 +52,9 @@ class TwilioSmsTest < ActionDispatch::IntegrationTest
     @client = Twilio::REST::Client.new ACCOUNT_SID, AUTH_TOKEN
     test_body = "Test: #{SecureRandom.urlsafe_base64}."
     @client.messages.create(
-      :messaging_service_sid => MESSAGING_SERVICE,
-      :to => SMS_TEST_TO,
-      :body => test_body
+      messaging_service_sid: MESSAGING_SERVICE,
+      to: SMS_TEST_TO,
+      body: test_body
     )
 
     # Wait for test_forward number to receive the auto-forwarded response

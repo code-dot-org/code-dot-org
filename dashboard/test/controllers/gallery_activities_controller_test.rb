@@ -4,17 +4,20 @@ require 'test_helper'
 class GalleryActivitiesControllerTest < ActionController::TestCase
   setup do
     @user = create(:user)
+    @level_source = create(:level_source, level_source_image: create(:level_source_image))
     @activity = create(:activity, user: @user,
                        level: create(:level, game: Game.find_by_app(Game::ARTIST)),
-                       level_source: create(:level_source, level_source_image: create(:level_source_image)))
-    @gallery_activity = create(:gallery_activity, user: @user, activity: @activity, autosaved: false)
+                       level_source: @level_source)
+    @gallery_activity = create(:gallery_activity, user: @user, level_source: @level_source, activity: @activity, autosaved: false)
 
+    @playlab_level_source = create(:level_source, level_source_image: create(:level_source_image))
     @playlab_activity = create(:activity, user: @user,
                                level: create(:level, game: Game.find_by_app(Game::PLAYLAB)),
-                               level_source: create(:level_source, level_source_image: create(:level_source_image)))
-    @playlab_gallery_activity = create(:gallery_activity, user: @user, activity: @playlab_activity, autosaved: false)
+                               level_source: @playlab_level_source)
+    @playlab_gallery_activity = create(:gallery_activity, user: @user, level_source: @playlab_level_source, activity: @playlab_activity, autosaved: false)
 
-    @new_activity = create(:activity, user: @user, level: create(:level, game: Game.find_by_app(Game::PLAYLAB)))
+    @new_level = create(:level, game: Game.find_by_app(Game::PLAYLAB))
+    @new_activity = create(:activity, user: @user, level: @new_level)
 
     @autosaved_gallery_activity = create(:gallery_activity, user: @user, autosaved: true)
   end
@@ -97,7 +100,8 @@ class GalleryActivitiesControllerTest < ActionController::TestCase
     sign_in @user
 
     assert_difference('GalleryActivity.count') do
-      post :create, gallery_activity: { activity_id: @new_activity.id }, format: :json
+      level_source = create(:level_source, level: @new_level)
+      post :create, gallery_activity: { level_source_id: level_source.id, activity_id: @new_activity.id }, format: :json
     end
 
     assert_equal @user, assigns(:gallery_activity).user

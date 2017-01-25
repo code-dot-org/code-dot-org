@@ -83,7 +83,7 @@ ga:
     teacher_count: 'Tá %{count} múinteoir cláraithe cheana.'
     overview: 'Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a> a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do dhul chun cinn a shábháil.'
     hoc_already_signed_up_heading: 'Tosú gan logáil isteach'
-    hoc_already_signed_up_content: 'Chláraigh tú chun Uair Chódála a mhúineadh! Ní gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh san ócáid seo. Ar dtús, <a href="https://code.org/learn">roghnaigh cúrsa teagaisc</a> don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon cheann de na <a href="https://code.org/educate">cúrsaí níos faide</a> atá againn.'
+    hoc_already_signed_up_content: 'Chláraigh tú chun Uair Chódála a mhúineadh! Ní gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a> don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Féach an lámhleabhar do mhúinteoirí'
     title: "Cláraigh le Code.org"
@@ -303,7 +303,9 @@ ga:
     delete_text: "Cliceáil an cnaipe thíos chun do chuntas a scriosadh."
     delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais do chuid daltaí.'
     delete_confirm: 'An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?'
-    deleted_user: 'deleted user'
+    deleted_user: 'úsáideoir scriosta'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Críochnaithe'
     tried: 'Iarracht déanta'
@@ -359,7 +361,7 @@ ga:
     announcement_watch_video_button: "Féach ar an bhfíseán"
     announcement_petition: "Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim. Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo, tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú."
     announcement_petition_button: "Cuir d'ainm leis"
-    announcement_go_beyond_button: "Go beyond"
+    announcement_go_beyond_button: "An chéad chéim eile"
     announcement_all: "Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach ar fhógraí roimhe seo.</a>"
     announcement_hoc_launch: "Tosóidh na mílte múinteoir i níos mó ná 180 tír ar fud an domhain ag múineadh na ríomheolaíochta mar chuid den Uair Chódála idir an 5ú lá agus an 11ú lá de mhí na Nollag. Táimid ag brath ort chun cabhrú linn níos mó daltaí ná riamh a shroicheadh. <a href='%{signup_url}' target='_blank'>Cláraigh d'ócáid féin don Uair Chódála</a> agus cuir in iúl do mhúinteoir eile gur féidir le héinne an ríomheolaíocht a mhúineadh."
     announcement_mc_launch: "Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála, is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!"
@@ -731,6 +733,9 @@ ga:
     content: 'Ábhar'
     practice: 'Cleachtais Mhúinteoireachta'
     peer_review: 'Athbhreithniú Comhghleacaithe'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.

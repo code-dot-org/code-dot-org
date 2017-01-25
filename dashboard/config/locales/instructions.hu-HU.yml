@@ -1145,6 +1145,9 @@
         Freeplay: Here are the functions you've written,
         and some more for you to play with. Draw something awesome! Play with the
         pen width to see how different your drawings look!
+      brendan hackathon level_instruction: |-
+        these are the instructions for my level.  you
+        should do this level and have a good time.
       Building a Foundation Assessment_instruction: |-
         Build a three level pyramid,
         there are no other directions, so just play with the pieces until you get
@@ -1338,6 +1341,9 @@
         We can also set variables by using other variables.
         Let's say you have a brother who is two years younger than you - can you
         set a new variable "brother-age" using your "age" variable?
+      Choose Your Own Adventure_instruction: |-
+        You can do whatever you want in play
+        lab! Here's an example of choose your own adventure story in play lab.
       Code Studio Puzzle Challenge 1 - Artist_instruction: "Draw the line. It is\n200
         pixels long. "
       Code Studio Puzzle Challenge 1 Artist1_instruction: "Draw the line. It is 200\npixels
@@ -1774,12 +1780,11 @@
         Használd az előző feladványban szerzett tudásod, és hozd létre ezt a hatszöget a "sides" (oldalak) változó használatával.\r
         \r
         Nézd meg, hogy melyik egyetlen értéket kell megváltoztatnod ahhoz, hogy háromszöget, négyszöget, ötszöget vagy nyolcszöget rajzolj.
-      Course 4 Artist Vars 8_instruction: |-
-        Free Play: Experiment with the number
-        of sides this shape has. Can you change the algorithm so that the overall
-        size of the shape stays the same, no matter how many sides it has? Hint: If
-        you divide your starting length by the number of sides, the length of each
-        side will get shorter as the number of sides gets higher.
+      Course 4 Artist Vars 8_instruction: 'Szabad játék: kísérletezz az alakzat oldalszámával.
+        Tudod úgy módosítani az algoritmust, hogy az alakzat teljes mérete ugyanannyi
+        maradjon függetlenül az oldalainak számától? Tipp: Ha elosztod a kezdeti hosszot
+        az oldalak számával, az oldalak egyre rövidebbek lesznek, ahogy az oldalak
+        száma nő.'
       Course 4 Artist Vars 9_instruction: |-
         Modify this algorithm so it uses the "sides"
         variable instead of a fixed number to draw a triangle. Don't forget to use
@@ -1787,10 +1792,9 @@
       Course 4 Bee 1_instruction: 'A méh nem tudja megmondani, hogy ez egy virág vagy
         egy méhsejt. Először ellenőrizd, hogy vajon virág vagy méhsejt, és csak akkor
         gyűjts nektárt, ha ez egy virág. '
-      Course 4 Bee 2_instruction: |-
-        Use the "if/else" block to check each object
-        to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise,
-        make one honey!
+      Course 4 Bee 2_instruction: Használd a "ha/különben" blokkot, és ellenőrizd,
+        hogy egy virágnál vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts
+        egy nektárt, különben pedig készíts mézet!
       Course 4 Bee 3_instruction: Az ismeretlen objektum vagy virág vagy lép. Használd
         a ha/különben blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts
         mézet (mert ez egy lép).
@@ -1835,49 +1839,43 @@
         to control how far to move horizontally.
       Course 4 Bee For Loops 8_instruction: A ciklus változójával tudod szabályozni
         a mozgást és a nektár gyűjtést?
-      Course 4 Bee For Loops 9_instruction: |-
-        The last number in your for loop is
-        called the "increment,"  and each time the loop is run the counter variable
-        changes by the increment. Try collecting these flowers using an increment
-        of 2.
-      Course 4 Bee Loops 5 NEW_instruction: |-
-        Here are three flowers. Can you find
-        the pattern of instructions that you need to repeat 3 times to collect the
-        nectar with the fewest number of blocks?
-      Course 4 Bee Loops 5a NEW_instruction: |-
-        Now, use loops to help the bee collect
-        all the nectar on it's way to the honeycomb with as few blocks as possible.  When
-        you get there, don't forget to make honey!
+      Course 4 Bee For Loops 9_instruction: A for ciklusban lévő utolsó számot lépésköznek
+        hívják. A ciklus számlálójának értéke minden ismétléskor ezzel a lépésközzel
+        módosul. Próbáld meg összegyűjteni ezeket a virágokat 2 lépésközt használva.
+      Course 4 Bee Loops 5 NEW_instruction: Itt van három virág. Megtalálod a megfelelő
+        utasításmintát, amelyet háromszor ismételve begyűjtheted a nektárt úgy, hogy
+        minél kevesebb blokkot használsz?
+      Course 4 Bee Loops 5a NEW_instruction: Most használj ciklust, hogy a méh begyűjtse
+        az összes nektárt a léphez vezető úton. Használj olyan kevés blokkot, amennyit
+        csak lehetséges. Amikor odaérsz, ne felejts el mézet készíteni!
       Course 4 Bee Params 1_instruction: Használd a "gyűjts 3 nektárt" függvényt,
         amelynek hatására elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek
         a kiindulási pontra. Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával,
         amellyel az összes nektárt összegyűjtjük.
       Course 4 Bee Params 2_instruction: Módosítsd a "gyűjts 3 nektárt" függvényt,
         hogy a virágokhoz bal helyett jobbra forduljak.
-      Course 4 Bee Params 3 (copy 1)_instruction: |-
-        Now there are flowers on both
-        sides! Maybe you can use a parameter so that the same function works for flowers
-        on either side. I've added a parameter called "direction" to the function.
-        If the "direction" parameter equals 0 I should turn left, if it's 1 I should
-        turn right.
-      Course 4 Bee Params 3_instruction: "Now there are flowers on both sides! We've\nadded
-        variables called \"left\" and \"right\" for you to use, and added a\nparameter
-        called \"direction\" to \"get 3 nectar\". Edit \"get 3 nectar\"\nso that the
-        bee turns the correct direction when the variables \"left\" or\n\"right\"
-        are passed into the function.  "
-      Course 4 Bee Params 4 (copy 1)_instruction: |-
-        Try using your new function to
-        collect all of the flowers. Remember, 0 = left and 1 = right.
-      Course 4 Bee Params 4 - Two WhenRun_instruction: |-
-        Try using your new function
-        to collect all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 3 (copy 1)_instruction: Most már mindkét oldalon vannak
+        virágok. Talán egy paraméter segít, hogy ugyanazt a függvényt használd mindkét
+        oldalon. Hozzáadtam egy "direction" (irány) nevű paramétert a függvényhez.
+        Ha a "direction" 0, akkor balra forduljon, ha a "direction" 1, akkor jobbra
+        forduljon.
+      Course 4 Bee Params 3_instruction: 'Most már mindkét oldalon vannak virágok.
+        Hozzáadtunk két változót, "bal" és "jobb", és hozzáadtunk egy "direction"
+        (irány) nevű paramétert a "get 3 nectar" függvényhez. Szerkeszd a "get 3 nectar"
+        függvényt, úgy, hogy a méh a megfelelő irányba nézzen, amikor a "left" (bal),
+        illetve "right" (jobb) változót adjuk át a függvénynek.  '
+      Course 4 Bee Params 4 (copy 1)_instruction: Próbáld az új függvényt használni
+        az összes virág összegyűjtésére. Emlékezz, 0 = bal és 1 = jobb.
+      Course 4 Bee Params 4 - Two WhenRun_instruction: Próbáld az új függvényt használni
+        az összes virág nektárjának összegyűjtésére. Ne felejtsd el használni a bal
+        és jobb változókat.
       Course 4 Bee Params 4 backup_instruction: Nem lenne szép, ha mindezt a sok nektárt
         egyetlen függvénnyel össze tudnánk gyűjteni? Az új "nektár" függvényhez adj
         egy új paramétert, amely az összegyűjtendő nektár mennyiségét szabályozza.
         Lehet, hogy a függvényt is át szeretnéd majd nevezni!
-      Course 4 Bee Params 4_instruction: |-
-        Try using your new function to collect
-        nectar from all of the flowers. Remember to use the left and right variables.
+      Course 4 Bee Params 4_instruction: Próbáld az új függvényt használni az összes
+        virág nektárjának összegyűjtésére. Ne felejtsd el használni a bal és jobb
+        változókat.
       Course 4 Bee Params 5_instruction: Kezdjük az alapoktól - el tudod készíteni
         az új "gyűjts 5 nektárt" függvényt egy irány paraméterrel?
       Course 4 Bee Params 6 (copy 1)_instruction: Próbáld használni az új függvényt
@@ -1909,32 +1907,26 @@
         módosítanád a függvényt, hogy vagy nektárt gyűjtsön, vagy mézet készítsen?
       Course 4 Bee Params Ex_instruction: Próbáld használni az új függvényt a nektár
         összegyűjtéséhez.
-      Course 4 Binary 1_instruction: |-
-        Here's a function that takes a binary string
-        of 1's and 0's and instructs the farmer to turn on the go from left to right,
-        top to bottom, turning on the squares where the number has a zero. Run the
-        code provided to see how the farmers uses binary to draw an image.
+      Course 4 Binary 1_instruction: Ez egy olyan függvény, amely egy egyesekből és
+        nullákból álló bináris szöveget kap, és a művésszel megrajzoltatja balról
+        jobbra, felülről lefelé a táblát úgy, hogy felkapcsolja a négyzeteket, ahol
+        a szám 0. Futtasd a kódot, és nézd meg, hogyan rajzolja meg a művész a mintát
+        a bináris sorozatot használva.
       Course 4 Binary 2_instruction: |-
         What binary string could you loop 8 times to
         draw this image? Hint: the number "1" fills a hole.
-      Course 4 Binary 3_instruction: |-
-        Can you draw this pattern by looping a single
-        binary string?
-      Course 4 Binary 5 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 5_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 6 (copy 1)_instruction: |-
-        Which binary string, repeated 10 times,
-        will draw this image?
-      Course 4 Binary 6_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
-      Course 4 Binary 7_instruction: |-
-        Which binary string, repeated 10 times, will
-        draw this image?
+      Course 4 Binary 3_instruction: Meg tudod rajzolni ezt a mintát egyetlen bináris
+        szöveg ismétlésével?
+      Course 4 Binary 5 (copy 1)_instruction: Melyik bináris számsorozatot kell 10-szer
+        ismételnünk ennek a képnek a megrajzolásához?
+      Course 4 Binary 5_instruction: Melyik bináris számsorozatot kell 10-szer ismételnünk
+        ennek a képnek a megrajzolásához?
+      Course 4 Binary 6 (copy 1)_instruction: Melyik bináris számsorozatot kell 10-szer
+        ismételnünk ennek a képnek a megrajzolásához?
+      Course 4 Binary 6_instruction: Melyik bináris számsorozatot kell 10-szer ismételnünk
+        ennek a képnek a megrajzolásához?
+      Course 4 Binary 7_instruction: Melyik bináris számsorozatot kell 10-szer ismételnünk
+        ennek a képnek a megrajzolásához?
       Course 4 Binary 8_instruction: |-
         You can complete the most of this image by
         looping a 5 bit binary number - then you'll need one more 4 bit number to
@@ -1945,94 +1937,83 @@
       Course 4 EC 2b_instruction: Nincsenek szabályok. Nincsenek tippek. Csak a kihívás!
       Course 4 EC 2c_instruction: Nincsenek szabályok. Nincsenek tippek. Csak a kihívás!
       Course 4 EC 2d_instruction: Nincsenek szabályok. Nincsenek tippek. Csak a kihívás!
-      Course 4 EC 3_instruction: "Use what you learned in the previous level to draw\nan
-        image like this. Note: The code becomes more simple if you incorporate\nparameters. "
-      Course 4 EC 3a_instruction: |-
-        Extreme Challenge: No rules. No clues. Just the
-        challenge!
+      Course 4 EC 3_instruction: 'Használd a korábbi szinteken tanultakat egy ilyen
+        kép megrajzolásához. Tipp: A kód egyszerűbb paraméterek használatával. '
+      Course 4 EC 3a_instruction: 'Extrém kihívás: Nincsenek szabályok. Nincsenek
+        tippek. Csak a kihívás!'
       Course 4 Maze 1_instruction: Juttasd el az angry bird-öt a malachoz!
       Course 4 Maze 2_instruction: Kerüld el a TNT-t!
-      Course 4 Maze 3_instruction: 'Program the angry bird to get to the pig. '
-      Course 4 Maze 4_instruction: |-
-        Try the "repeat" block to use fewer blocks
-        when solving this puzzle...
+      Course 4 Maze 3_instruction: 'Programozd be a dühös madarat, hogy eljusson a
+        malacig. '
+      Course 4 Maze 4_instruction: Próbáld ki az "ismételd" blokkot, és használj kevesebb
+        blokkot a feladvány megoldásához...
       Course 4 Maze 5_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb
         blokk felhasználásával?
       Course 4 Maze 6_instruction: Meg tudod oldani ezt a feladványt a lehető legkevesebb
         blokk felhasználásával?
-      Course 4 Play Lab For Loops 2_instruction: |-
-        This time, let's try counting
-        the odd numbers from 1 to 100.
+      Course 4 Play Lab For Loops 2_instruction: Most próbáljuk meg összeadni a páratlan
+        számokat 1-től 100-ig.
       Course 4 Play Lab Params 1_instruction: Ezt a függvényt "ugrás"-nak hívják,
         és hatására a főszereplőd 100 pixelt átugrik. Használd az "ugrás" függvényt
         az összes zászló begyűjtéséhez.
-      Course 4 Play Lab Params 10_instruction: "We've added one last function for\nyou.
-        \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
-        to the next puzzle. "
+      Course 4 Play Lab Params 10_instruction: "Létrehoztunk számodra még egy utolsó
+        függvényt.\\r\n\\r\nHasználd a \"Ha\" utasítást a \"szintlépés\" (level up)
+        függvény meghívására, amikor a játékos pontszáma (player_score) nagyobb lesz
+        egy adott számnál.\\r\n\\r\nPéldául: \"player_score\" > 6\\r\n\\r\nIndítsd
+        el a játékot, és juss el a harmadik szintre a következő feladványra ugráshoz. "
       Course 4 Play Lab Params 2_instruction: |
-        Now we've got flags that are too
-        high for our current jump! Let's use both the "up" and "down" arrows
-        so that we can have multiple jump heights.  \r
+        Most már vannak olyan zászlók is, amik túl magasan vannak a jelenlegi ugrási képességünkhöz képest! Használjuk a "fel" és "le" nyilakat, hogy többféle ugrási magasságot érhessünk el.\r
         \r
-        We need to add a parameter
-        to our jump function called "height".  The up arrow should cause the dog
-        to jump 200 pixels and the down arrow should make it jump only 100 pixels.
-      Course 4 Play Lab Params 3_instruction: "We have added another parameter to\nthe
-        jump function so that we can use it with other actors. Each actor is represented\nby
-        a number, starting from one. Edit the \"jump\" function so that it uses\nthe
-        \"actor\" parameter to make the correct character jump. "
+        Hozzá kell adnunk egy paramétert a "jump" (ugrás) függvényünkhöz. Legyen a neve "height" (magasság). A fel nyíl lenyomására a kutya ugorjon 200 pixelt, míg a le nyíl lenyomására csak 100 pixelt.
+      Course 4 Play Lab Params 3_instruction: 'Hozzáadtunk még egy paramétert a jump
+        (ugrás) függvényhez, hogy több szereplő esetén is használni tudjuk. Minden
+        szereplőt egy számmal jelölünk eggyel kezdődően. Szerkeszd a "jump" (ugrás)
+        függvényt, hogy használja az "actor" (szereplő) paramétert is, hogy a megfelelő
+        szereplő ugorjon fel. '
       Course 4 Play Lab Params 4_instruction: |-
         Itt van egy `patrol` nevű függvény.
         \r
         \r
         Szerkeszd a `patrol`függvényt úgy, hogy a macska 400 pixelt fel, majd 400 pixelt lefele menjen.
-      Course 4 Play Lab Params 5_instruction: |-
-        Edit the the "patrol" function to
-        add an "actor" parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
-      Course 4 Play Lab Params 6_instruction: |-
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      Course 4 Play Lab Params 5_instruction: Szerkeszd a "patrol" (járőröz) függvényt
+        úgy, hogy minden képernyőn megjelenő szereplőre alkalmazni tudjuk. Ne felejts,
+        hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      Course 4 Play Lab Params 6_instruction: Adj hozzá még egy változót a "patrol"
+        (Járőrözés) függvényhez. A neve legyen "speed" (sebesség). Használd a sebesség
+        beállítása blokkot az új "speed" (sebesség) paraméterrel, és segíts a Pingvinnek
+        elérni mindkét zászlót, mielőtt a többi szereplő akárcsak egyet is elérne.
       Course 4 Play Lab Params 7_instruction: |-
-        Let's have some fun! Look at the
-        code provided to see if you can figure out what each block does.  \r
-        When
-        you're done, use the arrow keys to control Dog and collect all of the flags.\r
-        NOTE:
-        You don't need to make any changes to the program
-      Course 4 Play Lab Params 8_instruction: |-
-        Use the `when actor touches` block
-        to send Dog back to the top-left ONLY if Dog touches any of the other actors.
-      Course 4 Play Lab Params 9_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
-        function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith pie,
-        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
-      Course 4 Play Lab Vars 1_instruction: |-
-        This time you don't have to write any
-        code, just hit "Run" to play the game! In this game, you're the dog who
-        is trying to collect more flags than the cat. Use the down arrow to control
-        the dog. Press "Finish" when you're done playing.
-      Course 4 Play Lab Vars 2_instruction: |-
-        The race in that last puzzle wasn't
-        very fair! Change the `dog_speed` variable to make sure you can collect more
-        flags than Cat. The first to collect 10 flags wins!
-      Course 4 Play Lab Vars 3_instruction: |-
-        Use the left and right arrows to move,
-        and the up arrow to jump. See if you can collect all of the flags.
-      Course 4 Play Lab Vars 4_instruction: |-
-        Now we're using a variable called "height"
-        to control how high the dog can jump. Update the "height" variable so that
-        the dog can jump high enough to reach all the flags.
-      Course 4 Play Lab Vars 5_instruction: "Let's build a game! First we'll need\na
-        score. Rebuild the code that you saw in the last level to set the score\nto
-        10. "
+        Szórakozzunk kicsit! Nézd meg az általunk megírt kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r
+        Amikor végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be az összes zászlót.\r
+        Megjegyzés: Nem kell semmit sem változtatnod a programban
+      Course 4 Play Lab Params 8_instruction: Használd az "amikor a szereplő megérinti"
+        blokkot, és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a
+        Kutya megérint más szereplőket.
+      Course 4 Play Lab Params 9_instruction: "Itt van egy játékunk egy korábbi pályáról,
+        de most a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\\r\n\\r\nSzerkeszd
+        a függvényt, hogy egy új, `points` (pontok) nevű paramétert adhassunk a `player_score`
+        mellé.\n\\r\n\\r\nA `player_score` változó növekedjen minden alkalommal, amikor
+        a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska eltalálja
+        a Kutyát egy szendviccsel.\\r\n\\r\nMegjegyzés: Amikor végeztél, kattints
+        a \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a 6 pontot,
+        továbblépsz a következő feladványra. "
+      Course 4 Play Lab Vars 1_instruction: Most nem kell írnod semmilyen kódot, csak
+        kattints a "Futtatás" gombra, és játssz a játékkal! Ebben a játékban te vagy
+        a kutya, aki több zászlót próbál gyűjteni, mint a macska. Használd a le nyílbillentyűt
+        a kutya irányítására. Kattints a "Kész" gombra, amikor végeztél a játékkal.
+      Course 4 Play Lab Vars 2_instruction: Az előző feladvány versenye nem volt igazán
+        fair. Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több
+        zászlót szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
+      Course 4 Play Lab Vars 3_instruction: Használd a bal és jobb nyílbillentyűket
+        a mozgáshoz, és a felfele nyilat az ugráshoz. Vajon össze tudod gyűjteni az
+        összes zászlót?
+      Course 4 Play Lab Vars 4_instruction: 'Most egy olyan változót használunk, amellyel
+        a kutya ugrásának magasságát lehet beállítani. A változó neve: "height" (magasság).
+        Módosítsd a "height" (magasság) változó értékét úgy, hogy a kutya elég magasra
+        tudjon ugrani az összes zászló megszerzéséhez.'
+      Course 4 Play Lab Vars 5_instruction: 'Készítsünk egy játékot! Először is kell
+        egy pontszám. Építsd újra úgy az előző feladványban szereplő kódot, hogy a
+        pontszám értéke 10 legyen. '
       Course 4 Play Lab Vars 6 (copy 1)_instruction: |-
         Cool, now we've got our score
         variable, but how are we going to make it useful? How about adding to your
@@ -2041,19 +2022,14 @@
         fireballs hit the cat. You can increment the score by setting score = score
         + 1. Get your score up to 10 (going one at a time!) to pass the level.
       Course 4 Play Lab Vars 6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Használd a jobb nyílbillentyűt pite dobásához.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
-      Course 4 Play Lab Vars 7_instruction: |-
-        Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
-        Cat (actor 2), you should lose a point. Start with 10 points so it's not
-        too hard. Let your score drop down from 10 to 0 to pass the level.
+        Hogyan pontozzunk a játékban? Adjunk 1-et a "points" (pontszám) változóhoz minden alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az "amikor a 2. szereplő bármit érint" blokkot a pontszám változásának kiváltására. Növeld a változó értékét a "points = points + 1 " értékadással. Érj el 10 pontot (egyesével!) a szint megoldásához.
+      Course 4 Play Lab Vars 7_instruction: Szép, most tegyük kissé nehezebbé a játékot.
+        Amikor a Kutyát (szereplő 1) eltalálja egy Macskától (szereplő 2) érkező szendvics,
+        veszítsen el egy pontot. Kezdőértéknek állíts be 10 pontot, hogy ne legyen
+        túl nehéz a játék. A következő feladványra lépéshez érd el, hogy a pontszámod
+        10-ről 0-ra csökkenjen.
       Course 4 Play Lab Vars 8 (copy 1)_instruction: |-
         Alright, one last thing for
         this game - let's set it up so the player can win (or lose). Use a forever
@@ -2067,33 +2043,24 @@
         less than 0, make the player (the Dog) vanish. Click "Finish" when the game
         works like you'd like it to.
       Course 4 Play Lab Vars 9_instruction: |-
-        Free Play time! Here are all of the
-        variables we've played with so far in this stage, as well as a few more in
-        case you want them. \r
+        Szabad játék! Itt van minden olyan változó, amellyel a pályákon eddig találkoztál, és még egy pár, ha esetleg szeretnéd használni őket.\r
         \r
-        Notice that there are now so many blocks in our
-        toolbox that they need to be organized!  Here, we've put each piece into
-        an appropriate category.  Take some time to explore everything that is available.
-        When you're done browsing, make a game or story using repeats, variables,
-        and events.  \r
+        Figyeld meg, hogy most már olyan sok blokk van az eszköztárunkban, hogy rendszerezésre volt szükség! Mindegyiket elhelyeztük egy megfelelő kategóriába. Szánj egy kis időt az összes felfedezésére. Miután végeztél a böngészéssel, készíts egy olyan játékot, amely felhasznál ismétléseket, változókat és eseményeket is. \r
         \r
-        Hint: scroll down to see all the commands in the workspace.
+        Tipp: görgess lefelé, hogy lásd a munkaterület minden parancsát.
       Course 4 Play Lab Vars_instruction: |-
         Alright, one last thing for this game
         - let's set it up so the player can win (or lose). Use a forever loop to
         check the value of score - if score is ever greater that 20, make the emeny
         vanish. If the score is every less than 0, make the player vanish.
-      Course 4 Play Labs For Loops 1_instruction: |-
-        Let's make the dog speak every
-        number from 1 to 100. Use a `for` loop and the counter block to speak the
-        counter variable each time the loop is run.
-      Course 4 Play Labs For Loops 2_instruction: |-
-        This time, help Olive the Cat
-        count only the odd numbers from 1 to 101.
-      Course 4 Play Labs For Loops 3_instruction: |-
-        If we count by larger numbers,
-        we count even higher in the same amount of time. Try making Pirate Pegleg
-        count from 10 up to 1000, adding 10 at a time.
+      Course 4 Play Labs For Loops 1_instruction: Mondassuk ki a kutyával az összes
+        számot 1-től 100-ig. Használj egy `számold` (for) ciklust és a counter (számláló)
+        blokkot, és mondasd ki a változó aktuális értékét minden cikluslépésben.
+      Course 4 Play Labs For Loops 2_instruction: Ezúttal segíts Olíviának, a Macskának
+        összeadni csak a páratlan számokat 1-től 101-ig.
+      Course 4 Play Labs For Loops 3_instruction: Ha nagyobb lépésközzel haladunk,
+        akkor nagyobb számokig juthatunk el ugyanannyi idő alatt. Próbáld meg beállítani,
+        hogy Pirate Pegleg 10-től 1000-ig számoljon 10-es lépésközzel.
       Course 4 Play Labs For Loops 4_instruction: |-
         Changing the increment can be
         helpful, but we're still counting linearly (each number is the same distance
@@ -2166,51 +2133,40 @@
         "increment" by 1 and start again.\r
         3) If The Wizard does not get clicked
         at least 10 times, the game is over.
-      Course 4 Playlab For Loop Freeplay_instruction: |-
-        Freeplay: Use everything you've
-        learned so far to make a game that includes a `for` loop!
+      Course 4 Playlab For Loop Freeplay_instruction: 'Szabad játék: Használj mindent,
+        amit eddig tanultál, és készíts egy olyan játékot, amiben van `for` (számold)
+        ciklus is!'
       Course 4 Playlab For Loops 4b_instruction: |-
-        Now, these two characters are going
-        to race!  \r
+        Most ez a két karakter versenyezni fog!\r
         \r
-        Each of them will move `counter` steps at a time, but their
-        counters will have different values because of the `for` loops.  \r
+        Mindegyik karakter `counter` (számláló) lépést fog megtenni egyszerre, de a számlálóikban különböző értékek lesznek a `for` (számold) ciklus miatt.\r
         \r
-        Can
-        you change the increment in one of the loops so that the race is a tie?
-      Course 4 Playlab For Loops 5b_instruction: |-
-        Adjust the interval on these `for`
-        loops so that the two characters end in the exact same place.
+        Tudod úgy módosítani az egyik ciklus lépésközét, hogy a verseny döntetlen legyen?
+      Course 4 Playlab For Loops 5b_instruction: Módosítsd a `számold` (for) ciklusok
+        lépésközét úgy, hogy a két karakter ugyanazon a helyen álljon meg.
       Course 4 Playlab For Loops 6b_instruction: "Módosítsd ezt a `számold` ciklust,
         és készíts egy érdekes játékot!\\r\nKattints a \"Futtatás\" gombra, és kattints
         Madame Unicornra ahányszor csak szeretnél.\nMeg tudod dönteni a 24-es pontrekordot? "
-      Course 4 SCF 1_instruction: |-
-        Use the suggested functions to draw four rows
-        of hexagons. Notice how our even numbered rows are shifted to the right?
-      Course 4 SCF 1a_instruction: |-
-        Can you figure out how to collect all of this
-        nectar with the fewest blocks possible?
-      Course 4 SCF 1b_instruction: |-
-        Can you figure out how to collect all of this
-        honey with the fewest blocks possible?
-      Course 4 SCF 2_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
+      Course 4 SCF 1_instruction: Használd a javasolt függvényeket négy sor hatszög
+        rajzolásához. Észrevetted, hogy a páros sorok el vannak tolva eggyel jobbra?
+      Course 4 SCF 1a_instruction: Rá tudsz jönni, hogyan szedheted össze az összes
+        nektárt a lehető legkevesebb blokk felhasználásával?
+      Course 4 SCF 1b_instruction: Rá tudsz jönni, hogyan szedheted össze az összes
+        mézet a lehető legkevesebb blokk felhasználásával?
+      Course 4 SCF 2_instruction: 'Használd a korábbi szinteken tanultakat egy ilyen
+        kép megrajzolásához. Tipp: A kód egyszerűbb paraméterek használatával. '
       Course 4 SCF 3 Fail 1_instruction: Ki tudod találni hogyan...
       Course 4 SCF 3 Fail 2_instruction: Ki tudod találni hogyan...
-      Course 4 SCF 3_instruction: "Use what you learned in the previous level to\ndraw
-        an image like this. Note: The code becomes more simple if you incorporate\nparameters. "
-      Course 4 SCFL 1_instruction: |-
-        Solve this puzzle using the fewest number of
-        blocks possible.
-      Course 4 SCFL 1a_instruction: |-
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 1b_instruction: |-
-        Can you get Skrat to his acorn using as few
-        blocks as possible?
-      Course 4 SCFL 2_instruction: |-
-        Solve this puzzle using the fewest number of
-        blocks possible.
+      Course 4 SCF 3_instruction: 'Használd a korábbi szinteken tanultakat egy ilyen
+        kép megrajzolásához. Tipp: A kód egyszerűbb paraméterek használatával. '
+      Course 4 SCFL 1_instruction: Oldd meg ezt a feladványt a lehető legkevesebb
+        blokk felhasználásával.
+      Course 4 SCFL 1a_instruction: El tudod juttatni Motkányt a makkjához a lehető
+        legkevesebb blokk felhasználásával?
+      Course 4 SCFL 1b_instruction: El tudod juttatni Motkányt a makkjához a lehető
+        legkevesebb blokk felhasználásával?
+      Course 4 SCFL 2_instruction: Oldd meg ezt a feladványt a lehető legkevesebb
+        blokk felhasználásával.
       Course 4 SCFL 3_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
       Course 4 SCFL 4_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
       Course 4 SCFL 5_instruction: Ki tudod találni hogyan lehet elkészíteni a rajzot?
@@ -2222,22 +2178,16 @@
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
         by y pixels (using positive and negative numbers).
-      Course 4 SCV 1_instruction: Click here to view the instructions again.
-      Course 4 SCV 2_instruction: Click here to view the instructions again.
+      Course 4 SCV 1_instruction: Kattints ide az utasítások újbóli megtekintéséhez.
+      Course 4 SCV 2_instruction: Kattints ide az utasítások újbóli megtekintéséhez.
       Course 4 SCV 3_instruction: |-
-        Now for a game of tag!  Tag Cat to get 2 points.
-        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
-        But be careful,
-        when Cat and Penguin tag each other, they take points away.\r
+        Fogócskázzunk! Kapd el a Macskát 2 pontért. Kapd el a Pingvint 3 pontért. Szerezz pontosan 10 pontot a nyeréshez!\r
+        De légy óvatos! Amikor a Macska és a Pingvin elkapják egymást, pontokat vesztesz.\r
         \r
-        Add the
-        blocks necessary to make this game work the way it's been explained.  How
-        will you get Dog to move in all directions using the arrow keys?  How will
-        you add points when Dog tags Cat or Penguin?  How will you subtract points
-        when Cat and Penguin touch?
+        Add hozzá a szükséges blokkokat a játék leírás szerinti működéséhez. Hogyan mozgathatod a Kutyát a nyílbillentyűkkel minden irányba? Hogyan kaphat pontot a Kutya, amikor elkapja a Macskát vagy a Pingvint? Hogyan vonhatsz le pontot, amikor a Macska és a Pingvin megérintik egymást?
       Course 4 SCV 4_instruction: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
       Course 4 SCV 5_instruction: Oldd meg ezt a feladványt a legkevesebb blokk felhasználásával!
-      Course 4 SCV 6_instruction: Click here to view the instructions again.
+      Course 4 SCV 6_instruction: Kattints ide az utasítások újbóli megtekintéséhez.
       Course 4 SCVP 1_instruction: |-
         Create a function with parameters that allows
         the artist to jump backward and forward by x pixels, and also up and down
@@ -2272,10 +2222,9 @@
       course2_playlab_stage17_3_instruction: |-
         Can you write a program to make Jorge
         (actor 1) move toward Olive the Cat?
-      course2_playlab_stage17_4_instruction: |-
-        Can you write a program that makes
-        Jorge (actor 1) move to Olive the Cat, and have Olive say "Hello" when Jorge
-        reaches her?
+      course2_playlab_stage17_4_instruction: Tudsz készíteni egy olyan programot,
+        amely Jorge-t (szereplő 1) Olíviához, a Macskához mozgatja, majd Olívia azt
+        mondja, hogy "Hello", amikor Jorge odaér hozzá?
       course2_playlab_stage17_5_instruction: |-
         Can you write a program to make Octavia
         say "Hi" when she is clicked?
@@ -2305,10 +2254,8 @@
       course3_playlab_stage16_3_instruction: |-
         Can you write a program to make this
         dog move to the cat?
-      course3_playlab_stage16_4_instruction: |-
-        Can you write a program that makes
-        the dog move to the cat, and have the cat say "hello" when the dog reaches
-        him?
+      course3_playlab_stage16_4_instruction: Tudsz írni egy programot, amiben a kutya,
+        a macska felé megy, és amikor a kutya odaér hozzá, a macska azt mondja "hello"?
       course3_playlab_stage16_5_instruction: |-
         Can you add a block to make the octopus
         happy?
@@ -2325,10 +2272,9 @@
         The "repeat forever" block allows
         you to run code continuously. Can you attach blocks to move this dinosaur
         up and down repeatedly?
-      course3_playlab_stage17_4_instruction: |-
-        Can you have Waddles say "Ouch!"
-        and play a "hit" sound if he runs into the dinosaur, and then move him with
-        the arrows to make that happen?
+      course3_playlab_stage17_4_instruction: Meg tudod csinálni, hogy a Waddles azt
+        mondja, "Au!" (Ouch!), és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak?
+        Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
       course3_playlab_stage17_5_instruction: |-
         Can you add a block to score a point
         when Waddles runs into the octopus, and then move him with the arrows until
@@ -2589,6 +2535,62 @@
         Challenge: Combine ideas
         from the last few puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseD_artist_binary1_instruction: |-
+        Use the blocks below to have the artist
+        draw "01010101" in binary in the first row.
+      courseD_artist_binary2_instruction: |-
+        Run this code to see how the artist uses
+        binary to draw this pattern.
+      courseD_artist_binary3_instruction: |-
+        Which of the binary strings below could
+        you loop 8 times to draw this image?
+      courseD_artist_binary4_instruction: |-
+        Can you draw this pattern by looping just
+        three binary digits (0s and 1s)?
+      courseD_artist_binary5_instruction: |-
+        Each binary string below represents one
+        row of this picture. \r
+        \r
+        Can you rearrange them so it draws a smiley face
+        instead of a frown?
+      courseD_artist_binary6_instruction: Melyik 6 jegyből álló bináris számsorozatot
+        kell 11 alkalommal ismételned ennek a képnek a megrajzolásához?
+      courseD_artist_binary7_instruction: Mi az a legrövidebb bináris karakterlánc,
+        ami ha megismételed, kirajzolja ezt a képet?
+      courseD_artist_binary8_instruction: Finish the code to create this drawing.
+      courseD_artist_binaryFP_instruction: |-
+        Here's a higher resolution canvas to
+        draw on - 16 pixels by 16 pixels!\r
+        \r
+        See what happens when we start to
+        get creative with the bits!
+      courseD_artist_functions10_instruction: |-
+        This time, use lines of 8 hexagons
+        with 25 pixel sides.
+      courseD_artist_functions2_instruction: |
+        This time, use the `draw a square`
+        function to create the glasses. \r
+      courseD_artist_functions3_instruction: |-
+        You can make this drawing by adding
+        a repeat block.
+      courseD_artist_functions4_instruction: |-
+        Now that you can draw a star, try drawing
+        four stars!
+      courseD_artist_functions5_instruction: |-
+        Draw only those three stars to finish
+        this puzzle.
+      courseD_artist_functions6_instruction: |-
+        Make this window by drawing a square,
+        then turning 90 degrees before drawing another, and so on.
+      courseD_artist_functions7_instruction: |-
+        Try solving this puzzle by creating
+        `draw a window` and calling it five times. Watch out for the door!
+      courseD_artist_functions8_instruction: |-
+        Challenge: Create as many functions
+        as you think you need to make this drawing of 50 pixel squares.
+      courseD_artist_functions9_instruction: |-
+        Create this image using only the blocks
+        provided.
       courseD_artist_nestedLoops1_instruction: |-
         Draw a triangle to kickstart this
         stage.  \r
@@ -2602,15 +2604,14 @@
         After
         each triangle, you'll need to turn 60 degrees before drawing the next.
       courseD_artist_nestedLoops2_instruction: |-
-        Now loop the triangle 6 times. \r
-        After
-        each triangle, you'll need to turn 60 degrees before drawing the next.
+        This time, complete the puzzle with
+        the fewest number of blocks possible.
       courseD_artist_nestedLoops3_instruction: |-
-        Use what you've learned to draw
+        Use your new skills to quickly draw
         the last row of windows for this building.\r
         \r
-        The windows are 20 pixels
-        long and 20 pixels apart.
+        The windows are 20 pixel
+        squares, each 20 pixels apart.
       courseD_artist_nestedLoops4_instruction: |
         Great!  Do the same thing with these
         circles.\r
@@ -2635,16 +2636,178 @@
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
+      courseD_bee_conditionals1_instruction: |-
+        Check to see if there's a flower under
+        the cloud. If there's a flower, get nectar.
+      courseD_bee_conditionals10_instruction: |-
+        Collect all of the nectar and make
+        all of the honey.
+      courseD_bee_conditionals2_instruction: |
+        Check underneath every cloud to see
+        if it is hiding a flower before you get nectar.  \r
+      courseD_bee_conditionals3_instruction: |-
+        Help the bee collect all of the nectar.
+        \r
+        \r
+        You can only collect nectar from flowers, but you can check any space
+        to see if there is a flower.
+      courseD_bee_conditionals4_instruction: |-
+        Get all of the nectar using as few
+        blocks as possible.
+      courseD_bee_conditionals5_instruction: |-
+        Collect all of the nectar using as
+        few blocks as possible
+      courseD_bee_conditionals6_instruction: |-
+        Some of these clouds might have honeycombs
+        under them.  Be sure to check if a honeycomb is hiding behind each cloud!
+      courseD_bee_conditionals7_instruction: |-
+        Use the `if/else` block to collect
+        nectar at flowers and make honey at honeycomb.
+      courseD_bee_conditionals8_instruction: |-
+        Collect nectar if there is a flower.\r
+        Otherwise,
+        make honey (because there is a honeycomb).
+      courseD_bee_conditionals9_instruction: |-
+        Collect all of the nectar or make all
+        the honey.
+      courseD_bee_debugging1_instruction: |-
+        Fix the error(s) to collect all of the
+        nectar.
+      courseD_bee_debugging2_instruction: |-
+        Fix the error(s) to collect all of the
+        nectar.
+      courseD_bee_debugging3_instruction: |-
+        Fix the error(s) to collect all of the
+        nectar and make all of the honey.
+      courseD_bee_debugging4_instruction: Fix the error(s) to make all of the honey.
+      courseD_bee_debugging5_instruction: |-
+        Challenge: All of the commands that you
+        need are already here...now use your debugging skills to figure out how to
+        solve this puzzle.
+      courseD_bee_debugging6_instruction: |-
+        Challenge:  Fix the errors to collect
+        all of the nectar and make all of the honey.
+      courseD_bee_debugging9_instruction: |-
+        Help the bee fix the code to get all the
+        nectar.
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_instruction: |-
-        Help the bee collect all of the nectar
-        using as few blocks as possible.
+        This time, help the bee collect all
+        of the nectar using as few blocks as possible.
       courseD_bee_nestedLoops3_instruction: |-
         Collect all of the nectar from each
         flower.
       courseD_bee_nestedLoops5_instruction: "Collect all of the nectar from each\nflower
         and make honey at the honeycomb. "
       courseD_bee_nestedLoops6_instruction: Make all of the nectar.
+      courseD_bee_nestedLoops7_instruction: |-
+        Challenge: Figure out how to get all
+        of the nectar using only the blocks available.
+      courseD_bee_nestedLoops8_instruction: "Collect all of the nectar from each\nflower
+        and make honey at the honeycomb. "
+      courseD_bee_nestedLoops9_instruction: Make all of the honey.
+      courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
+      courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
+      courseD_debugging_3_instruction: Ezek a blokkok igazán bogarasak. Javítsd ki
+        a kódot, hogy összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
+      courseD_debugging_4_instruction: Fix the error(s) to make all of the honey.
+      courseD_debugging_5_instruction: |-
+        Challenge: All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle.
+      courseD_debugging_6_instruction: |-
+        Challenge:  Fix the errors to collect all
+        of the nectar and make all of the honey.
+      courseD_farmer_conditionals1_instruction: |-
+        Move to the pile of dirt and use
+        the `remove` block to remove it.
+      courseD_farmer_conditionals10_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
+      courseD_farmer_conditionals2_instruction: |-
+        Move to the hole and fill it with
+        six shovelfuls of dirt, using the `fill` block.
+      courseD_farmer_conditionals3_instruction: |-
+        Use as few blocks as possible to
+        solve this puzzle.
+      courseD_farmer_conditionals4_instruction: |-
+        Help the farmer remove this entire
+        pile using a `while` loop.
+      courseD_farmer_conditionals5_instruction: |
+        Help me remove all of this dirt.
+      courseD_farmer_conditionals6_instruction: |-
+        Use the `while` loop to easily fill
+        all of the holes.
+      courseD_farmer_conditionals7_instruction: |-
+        Fill in the hole at the end of each
+        of these paths.
+      courseD_farmer_conditionals8_instruction: "Challenge: Fill all of these holes\nusing
+        as few blocks as possible. "
+      courseD_farmer_conditionals9_instruction: "Flatten all of these piles using\nas
+        few blocks as possible. "
+      courseD_farmer_condLoops1_instruction: |-
+        Use conditionals to make sure that
+        you pick all of the corn, but don't disturb the stalks where nothing is growing
+        yet.
+      courseD_farmer_condLoops2_instruction: |-
+        Help the farmer collect both corn and
+        lettuce from the field.
+      courseD_farmer_condLoops3_instruction: |-
+        *"Corn, lettuce, AND pumpkins! Help
+        me harvest them all."*
+      courseD_farmer_condLoops4_instruction: |-
+        Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch.
+      courseD_farmer_condLoops5_instruction: |-
+        This field has clusters of corn, lettuce,
+        and pumpkins all growing together.  Can you collect them all?
+      courseD_farmer_condLoops6_instruction: |-
+        Can you figure out how to pick the
+        pumpkin?  Make sure to collect all of the corn along the way!
+      courseD_farmer_condLoops7_instruction: |-
+        Challenge: Collect all of the corn
+        and lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops8_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
+      courseD_farmer_condLoops9_instruction: |-
+        Collect all of the corn and lettuce,
+        then pick the pumpkin.
+      courseD_farmer_while1_instruction: |-
+        Move to the pile of dirt and use the `remove`
+        block to remove it.
+      courseD_farmer_while10_instruction: "Flatten all of these piles using as few\nblocks
+        as possible. "
+      courseD_farmer_while2_instruction: |-
+        Move to the hole and fill it with six shovelfuls
+        of dirt, using the `fill` block.
+      courseD_farmer_while3_instruction: |-
+        Use as few blocks as possible to solve
+        this puzzle.
+      courseD_farmer_while4_instruction: |-
+        Help the farmer remove this entire pile
+        using a `while` loop.
+      courseD_farmer_while5_instruction: 'Help me remove all of this dirt. '
+      courseD_farmer_while6_instruction: |-
+        Use the `while` loop to easily fill all
+        of the holes.
+      courseD_farmer_while7_instruction: |-
+        Fill in the hole at the end of each of
+        these paths.
+      courseD_farmer_while8_instruction: "Challenge: Fill all of these holes using\nas
+        few blocks as possible. "
+      courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
+        as possible. "
+      courseD_maze_nestedLoops3_instruction: |-
+        Get the zombie to the sunflower using
+        the fewest number of blocks possible.
+      courseD_maze_nestedLoops4_instruction: "Get the zombie to the sunflower using\nthe
+        fewest blocks possible!  "
+      courseD_maze_nestedLoops5_instruction: |-
+        Get the zombe to the sunflower using
+        the fewest number of blocks possible!
+      courseD_maze_nestedLoops6_instruction: |-
+        Get the zombie to the sunflower using
+        only the blocks available.
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until2_instruction: |-
@@ -2663,10 +2826,120 @@
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
+      courseD_playLab_cond1_instruction: |-
+        Get Pegleg to the dragon to solve this
+        puzzle.
+      courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
+        to the dragon. "
+      courseD_playLab_cond3_instruction: |-
+        1) Make the dragon change between random
+        emotions every second.  \r
+        2) Make it so when Pegleg gets to the dragon,
+        he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond4_instruction: |-
+        Add some code so that the ninja (actor
+        3) starts chasing Pegleg as soon as the game begins.  End the game as a loss
+        if the ninja catches him.
+      courseD_playLab_cond5_instruction: |-
+        Add a `repeat forever` loop that continuously
+        checks if the score is greater than 5, then ends the game as a win when it
+        is.
+      courseD_playLab_cond6_instruction: |-
+        1)  Slow the ninja down before you set
+        him to chase the pirate.  \r
+        \r
+        2)  If the pirate is greater than 225 pixels
+        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**
+        the pirate.  \r
+        \r
+        3)  If the pirate is in the safe zone, wait one second,
+        then deduct a point as long as he stays beneath the octopus line.
+      courseD_playLab_cond6cloneForTest_instruction: Testing
+      courseD_playLab_condFP_instruction: |-
+        Now, build your own game to show off to
+        your friends!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
         or fewer.
+      courseE_artist_functions1_instruction: |-
+        Help the zombie draw glasses using
+        squares with sides of 100 pixels.  \r
+        The bridge between the glasses is 75
+        pixels long.
+      courseE_artist_functions10_instruction: |-
+        This time, use lines of 8 hexagons
+        with 25 pixel sides.
+      courseE_artist_functions2_instruction: |
+        This time, use the `draw a square`
+        function to create the glasses. \r
+      courseE_artist_functions3_instruction: |-
+        You can make this drawing by adding
+        a repeat block.
+      courseE_artist_functions4_instruction: |-
+        Now that you can draw a star, try drawing
+        four stars!
+      courseE_artist_functions5_instruction: |-
+        Draw only those three stars to finish
+        this puzzle.
+      courseE_artist_functions6_instruction: |-
+        Make this window by drawing a square,
+        then turning 90 degrees before drawing another, and so on.
+      courseE_artist_functions7_instruction: |-
+        Try solving this puzzle by creating
+        `draw a window` and calling it five times. Watch out for the door!
+      courseE_artist_functions8_instruction: |-
+        Challenge: Create as many functions
+        as you think you need to make this drawing of 50 pixel squares.
+      courseE_artist_functions9_instruction: |-
+        Create this image using only the blocks
+        provided.
+      courseE_bee_concept1_instruction: Gyűjtsd össze az összes nektárt az összes
+        virágról! Használj egymásba ágyazott ciklusokat!
+      courseE_bee_concept2_instruction: |-
+        Help the bee make all of the honey. You
+        can only make honey at a honeycomb, but you can check any space to see if
+        there is a honeycomb.
+      courseE_bee_concept3_instruction: |-
+        Collect all of the nectar using  as few
+        blocks as possible.
+      courseE_bee_concept4_instruction: |-
+        Uh oh! The bee is not sure if he should
+        collect nectar or make honey. Can you help him out?
+      courseE_bee_concept5_instruction: |-
+        Help the bee collect the nectar from the
+        flowers?
+      courseE_bee_functions1_instruction: Gyűjtsd össze az összes virág összes nektárját!
+      courseE_bee_functions10_instruction: |-
+        Solve this function by creating a function
+        to turn, move forward and make all of the honey, then return the bee to where
+        it started and turn back.
+      courseE_bee_functions2_instruction: |-
+        Use the `get 2 nectar` function to collect
+        the nectar from each flower.
+      courseE_bee_functions3_instruction: A függvények olyan kódot tartalmazó blokkok,
+        amelyek elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
+        5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
+        a számlálóra is.
+      courseE_bee_functions4_instruction: A "menj és gyűjts nektárt" függvény hatására
+        a méh elfordul, nektárt gyűjt, majd visszatér a kiindulási pontra. Használd
+        a függvényt, hogy az összes nektárt összegyűjtsd.
+      courseE_bee_functions5_instruction: |-
+        Now write the function to collect nectar
+        from the flowers.
+      courseE_bee_functions6_instruction: |-
+        Create a function and call it to collect
+        nectar at each flower and make honey at each honeycomb.
+      courseE_bee_functions7_instruction: |-
+        Create your own function that goes down
+        a path, gets nectar, makes honey, and then returns the bee to the top of the
+        path. Collect all the nectar and make all the honey!
+      courseE_bee_functions8_instruction: |-
+        Create a function that collects all of
+        the nectar from each flower.
+      courseE_bee_functions9_instruction: |-
+        Create a function to collect all of the
+        nectar from each flower.
       courseE_farmer_concept1_instruction: |-
         Can you write a program that fills these
         holes until the ground is even?
@@ -2764,9 +3037,88 @@
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
+      courseE_playLab_scaffold1_instruction: |-
+        Choose a background and map, and pick
+        an actor to be your game's hero.
+      courseE_playLab_scaffold2_instruction: |
+        Use event handlers and actions to make
+        your hero move.\r
+      courseE_playLab_scaffold3_instruction: |-
+        Add two or more additional actors to
+        your game and make them move.
+      courseE_playLab_scaffold4_instruction: |-
+        Find some interesting ways to change
+        the score in your game.
+      courseE_playLab_scaffold5_instruction: |-
+        Now spend some time making sure the
+        game works the way you want. Try including a way to win or lose your game.
+      courseE_playLab_scaffold6_instruction: |-
+        You've finished! Now you can play
+        your game or share it with your friends and classmates!
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseF_artist_for1_instruction: |-
+        Experiment with the `for` loop and play with
+        the `counter` variable.
+      courseF_artist_for10_instruction: |-
+        Free Play: Try using the `counter` variable
+        with other drawing elements to make magical images like this one.
+      courseF_artist_for2_instruction: |-
+        Create this stack of triangles that goes
+        from 50 pixel to 100 pixel sides.
+      courseF_artist_for3_instruction: "These triangles go from 20 pixel sides to\n200
+        pixel sides, and each triangle is 20 pixels larger than the last. "
+      courseF_artist_for4_instruction: |
+        These squares start at 15 pixels long. The
+        largest is 300 pixels long, and each square is 15 pixels larger than the last.
+      courseF_artist_for5_instruction: |-
+        Just one little change to the code from the
+        last image can create this drawing. Can you figure out what that change is?
+      courseF_artist_for6_instruction: |-
+        Try using some of the code from the last
+        level, but turning 89 degrees to create this twisted square spiral.
+      courseF_artist_for7_instruction: |-
+        Make three small changes to the code from
+        the last level to get this!
+      courseF_artist_for8_instruction: |-
+        Take the angle down to 72 degrees to get
+        a spiraled pentagon.
+      courseF_artist_for9_instruction: |-
+        Use the counter inside the `set alpha` block
+        to get this faded center.
+      courseF_artist_variables1_instruction: |-
+        Let's draw an equilateral triangle
+        that is exactly 50 pixels long on each side.
+      courseF_artist_variables10_instruction: "Here's your code from the last puzzle.
+        \ Try\nediting the variable in other ways.  "
+      courseF_artist_variables2_instruction: "Now draw three of those triangles right\nnext
+        to each other.   "
+      courseF_artist_variables3_instruction: |-
+        Move the length of 50 into a variable
+        so we can use it in the next few puzzles.
+      courseF_artist_variables4_instruction: |-
+        Now, use the `length` variable to have
+        the artist jump forward and down by `length` pixels between triangles.
+      courseF_artist_variables5_instruction: |-
+        Add another set of loops at the end
+        of your code to add three more triangles. This time, move forward and up!
+      courseF_artist_variables6_instruction: "Now make the triangles to be 60 pixels\nwide,
+        with 60 pixel jumps.  "
+      courseF_artist_variables6a_instruction: |-
+        Build this design where the squares
+        have 80 pixel sides and the artist jumps 80 pixels over and down between each
+        one.
+      courseF_artist_variables7_instruction: |
+        Draw a triangle with 150 pixels sides.
+      courseF_artist_variables8_instruction: |-
+        Rebuild the triangle code from the
+        last puzzle, but this time use the `set length to` block to reset the `length`
+        variable to `length`+10 at the end of each loop iteration.
+      courseF_artist_variables9_instruction: |-
+        See what happens when you repeat the
+        code from the last puzzle 30 times instead of only 3!  Feel free to make your
+        lines any color or pattern for some extra zest.
       courseF_artist_variables_10_instruction: "Here's your code from the last puzzle.
         \ Try\nediting the variable in other ways.  "
       courseF_artist_variables_2_instruction: |
@@ -2782,6 +3134,10 @@
         to be 60 pixels wide, with 60 pixel jumps.  \r
         Aren't you glad you're using
         a variable?
+      courseF_artist_variables_6a_instruction: |-
+        Build this design where the squares
+        have 80 pixel sides and the artist jumps 80 pixels over and down between each
+        one.
       courseF_artist_variables_9_instruction: |-
         See what happens when you repeat the
         code from the last puzzle 30 times instead of only 3!\r
@@ -2794,9 +3150,41 @@
         \r
         How can you use variables with squares,
         pentagons, or hexagons?
+      courseF_artist_variablesFP_instruction: "**Freeplay:** Take what you've learned\nand
+        make your own drawing. "
+      courseF_bee_for1_instruction: |-
+        Collect the nectar from each flower using the
+        fewest blocks possible.
+      courseF_bee_for10_instruction: "**Challenge:** Take what you've learned about\n`for`
+        loops and try to solve this problem. "
+      courseF_bee_for11_instruction: |-
+        What should your increment be to collect 15,
+        then 12, then 9, 6, 3 nectar?
+      courseF_bee_for2_instruction: |
+        Write the code to help the bee collect all of
+        the nectar.\r
+      courseF_bee_for3_instruction: |-
+        Try this puzzle using the `for` loop and the
+        `counter` variable to see how much shorter your code becomes.
+      courseF_bee_for4_instruction: Help the bee collect all of the nectar.
+      courseF_bee_for5_instruction: |-
+        Use the `counter` variable twice to solve this
+        puzzle.
+      courseF_bee_for6_instruction: |-
+        Try gathering this nectar by counting down from
+        5 to 1 by 1.
+      courseF_bee_for7_instruction: |-
+        Try collecting these flowers using an increment
+        of 2.
+      courseF_bee_for8_instruction: |-
+        You've got this! What should your increment
+        be to collect 3, 6, 9, 12, 15 nectar?
+      courseF_bee_for9_instruction: |-
+        Use the `counter` variable to navigate this
+        garden with the fewest number of blocks possible.
       coursef_explore_CYOA_Witch_instruction: |-
         You can do whatever you want in play
-        lab! Here's an example of story in play lab.
+        lab! Here's an example of choose your own adventure story in play lab.
       coursef_explore_playlab2_instruction: |-
         You can do whatever you want in play
         lab! Here's an example of story in play lab.
@@ -4313,6 +4701,9 @@
       Geometric Pattern_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
+      Geometric Sun_instruction: |-
+        Project Idea: Create a pattern using geometric
+        ideas like shapes. This requires persistence and planning!
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
@@ -5224,9 +5615,8 @@
         Today, we're going to try
         out a different, more powerful function editor. See if you can figure out
         how to edit the function 'draw a triangle' to find the bugs.
-      grade4_artist_parameters_triangles2_instruction: |-
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
+      grade4_artist_parameters_triangles2_instruction: Észreveszel valamilyen különbséget
+        ezekben a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
       grade4_artist_parameters_triangles2b_instruction: |-
         Can you complete this drawing?
         The sides of each triangle are 25 pixels larger than the last.  The first
@@ -5442,14 +5832,9 @@
         Take a look at this project.  Do
         you see how it was made?
       grade4_playlab_test_instruction: |-
-        Use the right arrow to throw pie.\r
+        Használd a jobb nyílbillentyűt pite dobásához.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Hogyan pontozzunk a játékban? Adjunk 1-et a "points" (pontszám) változóhoz minden alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az "amikor a 2. szereplő bármit érint" blokkot a pontszám változásának kiváltására. Növeld a változó értékét a "points = points + 1 " értékadással. Érj el 10 pontot (egyesével!) a szint megoldásához.
       grade4_playlab_test2_instruction: |-
         Here's a function called `jump` that causes
         your main character to jump up 100 pixels. Run the program and use the jump
@@ -5610,10 +5995,10 @@
         Create your own project! This creation
         will be saved to your Projects dashboard so that you can easily edit it any
         time!
-      grade5_artist_functionparameters10_instruction: "Free Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
+      grade5_artist_functionparameters10_instruction: "Szabad játék ihlet: Mindent
+        megtanultál ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked,
+        akkor rajzolj egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\r\n\\r\nSzeretnéd
+        tudni, hogyan készült az ihletül szolgáló minta? "
       grade5_artist_functionparameters11_instruction: |-
         Freeplay: Below there are
         functions you've written, and more for you to play with. Draw something awesome!
@@ -5677,9 +6062,8 @@
         created using a new type of function that includes a parameter. The sides
         of each triangle are 25 pixels larger than the last.  The first triangle has
         25 pixel sides. Replace the '???' with the correct values to draw the picture.
-      grade5_artist_parameters_triangles2a_instruction: |-
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
+      grade5_artist_parameters_triangles2a_instruction: Észreveszel valamilyen különbséget
+        ezekben a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
       grade5_artist_parameters_triangles3_instruction: |-
         The code for this triangle
         function is broken.\r
@@ -5839,25 +6223,20 @@
         any code, just hit "Run" to play the game! In this game, you're the dog
         who is trying to collect more flags than the cat. Use the down arrow to control
         the dog. Press "Finish" when you're done playing.
-      grade5_playlab_variables10_instruction: |-
-        Edit the the "patrol" function to
-        add an "actor" parameter, so that we can call it for each of the actors
-        on the screen. Remember, the actors correspond to numbers 1, 2, and 3.
-      grade5_playlab_variables11_instruction: |-
-        Add another parameter called "speed"
-        to the "patrol" function. Try using a "set speed" block with the new "speed"
-        parameter to help Penguin get both flags before the other sprites even get
-        one.
+      grade5_playlab_variables10_instruction: Szerkeszd a "patrol" (járőröz) függvényt
+        úgy, hogy minden képernyőn megjelenő szereplőre alkalmazni tudjuk. Ne felejts,
+        hogy a szereplőket az 1, 2 és 3 számok jelölik.
+      grade5_playlab_variables11_instruction: Adj hozzá még egy változót a "patrol"
+        (Járőrözés) függvényhez. A neve legyen "speed" (sebesség). Használd a sebesség
+        beállítása blokkot az új "speed" (sebesség) paraméterrel, és segíts a Pingvinnek
+        elérni mindkét zászlót, mielőtt a többi szereplő akárcsak egyet is elérne.
       grade5_playlab_variables12_instruction: |-
-        Let's have some fun! Look at the
-        code provided to see if you can figure out what each block does.  \r
-        When
-        you're done, use the arrow keys to control Dog and collect all of the flags.\r
-        NOTE:
-        You don't need to make any changes to the program
-      grade5_playlab_variables13_instruction: |-
-        Use the `when actor touches` block
-        to send Dog back to the top-left ONLY if Dog touches any of the other actors.
+        Szórakozzunk kicsit! Nézd meg az általunk megírt kódot, és próbáld meg kitalálni, hogy mit csinálnak a blokkok. \r
+        Amikor végeztél, használd a nyílbillentyűket a Kutya irányítására, és gyűjtsd be az összes zászlót.\r
+        Megjegyzés: Nem kell semmit sem változtatnod a programban
+      grade5_playlab_variables13_instruction: Használd az "amikor a szereplő megérinti"
+        blokkot, és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a
+        Kutya megérint más szereplőket.
       grade5_playlab_variables14_instruction: "It's free play time! Have fun with\nall
         the blocks in your tool box. "
       grade5_playlab_variables1ask_instruction: |-
@@ -5868,13 +6247,13 @@
         \r
         Pay attention to how
         this program is written!
-      grade5_playlab_variables2_instruction: |-
-        The race in that last puzzle wasn't
-        very fair! Change the `dog_speed` variable to make sure you can collect more
-        flags than Cat. The first to collect 10 flags wins!
-      grade5_playlab_variables3_instruction: |-
-        Use the left and right arrows to move,
-        and the up arrow to jump. See if you can collect all of the flags.
+      grade5_playlab_variables2_instruction: Az előző feladvány versenye nem volt
+        igazán fair. Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan
+        több zászlót szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10
+        zászlót!
+      grade5_playlab_variables3_instruction: Használd a bal és jobb nyílbillentyűket
+        a mozgáshoz, és a felfele nyilat az ugráshoz. Vajon össze tudod gyűjteni az
+        összes zászlót?
       grade5_playlab_variables4_instruction: |-
         Now we're using a variable called
         "height" to control how high the dog can jump. Update the "height" variable
@@ -5887,37 +6266,33 @@
         build a game! First we'll need a score. Try setting the 'points' variable
         to give yourself 10 free points!
       grade5_playlab_variables6_instruction: |-
-        Use the right arrow to throw pie.\r
+        Használd a jobb nyílbillentyűt pite dobásához.\r
         \r
-        In
-        our game, how should we score points? Add 1 to your "points" variable each
-        time Dog hits Cat with a piece of pie. Use the "when actor 2 touches anything"
-        event to trigger an update to your score. You can increment your variable
-        by setting "points = points + 1." Get your score up to 10 (going one at
-        a time!) to pass the level.
+        Hogyan pontozzunk a játékban? Adjunk 1-et a "points" (pontszám) változóhoz minden alkalommal, amikor a Kutya eltalálja a Macskát egy pitével. Használd az "amikor a 2. szereplő bármit érint" blokkot a pontszám változásának kiváltására. Növeld a változó értékét a "points = points + 1 " értékadással. Érj el 10 pontot (egyesével!) a szint megoldásához.
       grade5_playlab_variables6ask_instruction: |-
         This time, you need 100 points to
         win!  Don't worry though, you can choose how many points you earn each time
         you score a hit!\r
         Try adding the `ask` block and changing the number 1 out
         for the variable `value`.
-      grade5_playlab_variables7_instruction: |-
-        Nice, now let's make sure this game
-        isn't too easy to play. Any time Dog (actor 1) gets hit by a sandwich from
-        Cat (actor 2), you should lose a point. Start with 10 points so it's not
-        too hard. Let your score drop down from 10 to 0 to pass the level.
-      grade5_playlab_variables71_instruction: "Here's our game from an earlier stage,\nbut
-        most of the code is hidden. There’s a new function `score_points.`\\r\n\\r\nEdit\nthe
-        function so that a new parameter called `points` can be added to `player_score`.\n\\r\n\\r\nThe
-        variable `player_score` should increase each time Dog tags Cat\nwith pie,
-        and decrease each time that Cat tags Dog with a sandwich.\\r\n\\r\nNote:\nWhen
-        you're done, click \"Run\" to play.  When Dog scores 6 points, you will\nmove
-        on to the next puzzle. "
-      grade5_playlab_variables81_instruction: "We've added one last function for\nyou.
-        \\r\n\\r\nUse an \"if\" statement to program your game to call the \"level_up\"\nfunction
-        only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
-        \"player_score\" > 6\\r\n\\r\nPlay the game, and make it to level 3\nto move
-        to the next puzzle. "
+      grade5_playlab_variables7_instruction: Szép, most tegyük kissé nehezebbé a játékot.
+        Amikor a Kutyát (szereplő 1) eltalálja egy Macskától (szereplő 2) érkező szendvics,
+        veszítsen el egy pontot. Kezdőértéknek állíts be 10 pontot, hogy ne legyen
+        túl nehéz a játék. A következő feladványra lépéshez érd el, hogy a pontszámod
+        10-ről 0-ra csökkenjen.
+      grade5_playlab_variables71_instruction: "Itt van egy játékunk egy korábbi pályáról,
+        de most a kód nagy része rejtett. Van egy új függvényünk: `score_points.`\\r\n\\r\nSzerkeszd
+        a függvényt, hogy egy új, `points` (pontok) nevű paramétert adhassunk a `player_score`
+        mellé.\n\\r\n\\r\nA `player_score` változó növekedjen minden alkalommal, amikor
+        a Kutya eltalálja a Macskát egy pitével, és csökkenjen, amikor a Macska eltalálja
+        a Kutyát egy szendviccsel.\\r\n\\r\nMegjegyzés: Amikor végeztél, kattints
+        a \"Futtatás\" gombra a játék indításához. Amikor a Kutya eléri a 6 pontot,
+        továbblépsz a következő feladványra. "
+      grade5_playlab_variables81_instruction: "Létrehoztunk számodra még egy utolsó
+        függvényt.\\r\n\\r\nHasználd a \"Ha\" utasítást a \"szintlépés\" (level up)
+        függvény meghívására, amikor a játékos pontszáma (player_score) nagyobb lesz
+        egy adott számnál.\\r\n\\r\nPéldául: \"player_score\" > 6\\r\n\\r\nIndítsd
+        el a játékot, és juss el a harmadik szintre a következő feladványra ugráshoz. "
       grade5_playlab_variables9_instruction: |-
         Itt van egy `patrol` nevű függvény.
         \r
@@ -6729,39 +7104,32 @@
       New Artist Project_instruction: |-
         Draw something awesome! Your code is saved
         as a project that you can return to at any time.
-      NEW Course 4 Artist Functions 1_instruction: |-
-        Can you draw a square that is
-        100 pixels in length, using a repeat loop?
+      NEW Course 4 Artist Functions 1_instruction: Tudsz rajzolni egy 100 képpont
+        oldalhosszú négyzetet ciklus használatával?
       NEW Course 4 Artist Functions 10.1_instruction: |-
         Use the functions from the
         previous puzzles to draw this pattern.
       NEW Course 4 Artist Functions 10_instruction: |-
         Click "edit" to fill out the
         blocks in the function definition to make a 40 pixel square.
-      NEW Course 4 Artist Functions 11_instruction: |-
-        Now we want to create a new
-        function called `draw a line of squares` that draws six squares all in a row.  Can
-        you build this function using this `draw a square 20` function that we created
-        for you?
-      NEW Course 4 Artist Functions 12_instruction: |-
-        Use the `draw a line of squares`
-        function from the last puzzle to draw this pattern.
-      NEW Course 4 Artist Functions 13_instruction: "Can you draw a star shape using\nthe
-        `draw a line of squares` function?  "
+      NEW Course 4 Artist Functions 11_instruction: Most szeretnénk létrehozni egy
+        új, "draw a line of squares" (rajzolj egy sor négyzetet) nevű függvényt, amely
+        6 négyzetet rajzol egy sorba.  Fel tudod használni az általunk készített `draw
+        a square 20`függvényt a függvényed létrehozására?
+      NEW Course 4 Artist Functions 12_instruction: Használd az előző feladvány `draw
+        a line of squares` függvényét az alábbi minta megrajzolásához.
+      NEW Course 4 Artist Functions 13_instruction: 'Tudsz rajzolni egy csillag alakot
+        a `draw a line of squares` függvény használatával?  '
       NEW Course 4 Artist Functions 14_instruction: 'Szabad játék! '
       NEW Course 4 Artist Functions 2_instruction: |-
-        Can you draw 3 squares 20 pixels
-        apart from one another? Each square is 100 pixels in size.
+        Tudsz rajzolni 3 négyzetet egymástól 20 képpontra?
+        Mindegyik négyzet 100 képpont oldalhosszúságú.
       NEW Course 4 Artist Functions 3_instruction: |-
-        Here is a new type of Block.
-        It is called a `function` block. Click "edit" then fill it with the code
-        for drawing a square with 100 pixel sides. \r
+        Itt van egy új blokktípus. Ezt úgy hívják, hogy `függvény` blokk. Kattints a "szerkeszt" gombra, és töltsd ki olyan kóddal, ami egy 100 képpont oldalhosszúságú négyzetet rajzol.\r
         \r
-        When you're done editing
-        the function, click "Close" to go back to your program.
-      NEW Course 4 Artist Functions 4_instruction: |-
-        Use the `draw a square` function
-        to draw this pattern.
+        Amikor végeztél a függvény szerkesztésével, kattints a "Bezár" gombra a programhoz való visszatéréshez.
+      NEW Course 4 Artist Functions 4_instruction: Használd a `draw a square` (rajzolj
+        egy négyzetet) függvény a minta elkészítéséhez.
       NEW Course 4 Artist Functions 5_instruction: |-
         How did the "draw a square"
         block know what commands to run? Click on "edit" in the "draw a square"
@@ -6771,82 +7139,69 @@
       NEW Course 4 Artist Functions 6_instruction: |
         Using the "draw a square" function
         block, can you draw this picture? Hint: each square is 20 pixels apart.\r
-      NEW Course 4 Artist Functions 7_instruction: "Are you getting the hang of how\nto
-        use function blocks? Let's modify this square so that it is 200 pixels\nin
-        size. Click on \"edit\" to enter the `draw a square` function editor. Remember\nto
-        click on \"Close\" to get out of the function editor. "
-      NEW Course 4 Artist Functions 8_instruction: |-
-        We have created a new function
-        for you called "draw a triangle".  Can you edit the function definition
-        to draw a triangle with 100 pixel sides?
-      NEW Course 4 Artist Functions 9_instruction: |-
-        Can you solve this by adding
-        only one block?
+      NEW Course 4 Artist Functions 7_instruction: "Kezdesz ráérezni, hogyan kell
+        használni a függvény blokkokat?\nMódosítsuk most ezt a négyzetet úgy, hogy
+        200 képpont hosszúak legyenek az oldalai.\nKattints a \"szerkeszt\" gombra,
+        és változtasd meg a méretet a \"rajzolj négyzetet\" (draw a square) függvényben.\nNe
+        felejts el a \"Bezár\" gombra kattintani a szerkesztőből való kilépéshez. "
+      NEW Course 4 Artist Functions 8_instruction: Készítettünk egy új, "rajzolj egy
+        háromszöget" (draw a triange) nevű függvényt. Tudod úgy módosítani a függvény
+        megadását, hogy egy 100 képpont oldalú háromszöget rajzoljon?
+      NEW Course 4 Artist Functions 9_instruction: Meg tudod ezt oldani egyetlen blokk
+        hozzáadásával?
       NEW Course 4 Artist Functions inspire_instruction: Kattints ide az inspiráló
         kép megtekintéséhez.
       New Course 4 Artist Functions Level 4_instruction: Használd a a "rajzolj négyzetet"
         függvényt ennek a mintának a kirajzolásához!
-      NEW Course 4 Artist Params 1_instruction: |-
-        Let's define this function to draw
-        a square with 50 pixel sides. Click "edit" to get started.
-      NEW Course 4 Artist Params 10_instruction: "Create a `draw a hexagon` function\nblock
-        with a length parameter. This hexagon has sides that are 100 pixels\nin length. "
-      NEW Course 4 Artist Params 11_instruction: |-
-        Can you figure out how to draw
-        this shape? Edit the function to use the "sides" parameter.
+      NEW Course 4 Artist Params 1_instruction: Adjuk meg úgy a függvényt, hogy 50
+        képpont oldalhosszúságú négyzetet rajzoljon. Kattints a "szerkeszt" gombra
+        a kezdéshez.
+      NEW Course 4 Artist Params 10_instruction: 'Készíts egy `draw a hexagon` nevű
+        függvényt, amelynek van egy hosszúság paramétere. A hatszög oldalai 100 képpont
+        hosszúak legyenek. '
+      NEW Course 4 Artist Params 11_instruction: Rá tudsz jönni, hogyan kell megrajzolni
+        ezt az alakzatot? Szerkeszd a függvényt, és használd a "sides" (oldalak) paramétert.
       NEW Course 4 Artist Params 12_instruction: |-
         Be tudod fejezni a rajzot?
         Minden alakzat oldala 100 pixel hosszú.
-      NEW Course 4 Artist Params 12a_instruction: |-
-        This image is similar to the last.
-        Can you use a `for` loop with your function to make this design?
+      NEW Course 4 Artist Params 12a_instruction: Ez a kép hasonlít az előzőre. Tudod
+        együtt használni a `számold` (for) ciklust a függvényeddel az ábra elkészítéséhez?
       NEW Course 4 Artist Params 13_instruction: |-
-        Let's edit this "draw a polygon"
-        function. It already has a "sides" parameter. Now, let's add a "length"
-        parameter. \r
-        The perimeter of each shape is 200 pixels long. Do you remember
-        the equation to make shapes the same size when they have a different number
-        of sides?
-      NEW Course 4 Artist Params 14_instruction: |-
-        Edit "draw a spiral edge" to
-        use "length" and "sides" parameters, then recreate these shapes.
+        Szerkesszük ezt a "draw a polygon" (rajzolj egy sokszöget) függvényt. Már van egy "sides" (oldalak) paramétere. Most adjunk hozzá egy "length" (hossz) paramétert.\r
+        Minden alakzat kerülete 200 képpont. Emlékszel, hogyan kell ugyanolyan méretű alakzatokat készíteni, amelyeknek különböző az oldalszáma?
+      NEW Course 4 Artist Params 14_instruction: Szerkeszd a "draw a spiral edge"
+        (rajzolj egy spirált) függvényt, hogy a "length" (hossz) és "sides" (oldalak)
+        paraméterekkel meg tudd rajzolni ezeket az alakzatokat.
       NEW Course 4 Artist Params 15_instruction: |-
-        Freeplay: Here are the functions
-        you've written, and some more for you to play with. Draw something awesome!
-        Play with the pen width to see how different your drawings look!
+        Szabad játék: Itt vannak az általad írt függvények, és még néhány másik, amikkel játszhatsz. Rajzolj valami nagyszerűt!
+        Játssz a tollvastagsággal, és nézd meg, hogyan néznek ki a különböző rajzok!
       NEW Course 4 Artist Params 2_instruction: |-
         Create a `draw triangle` function
         from scratch that makes a triangle with  50 pixel sides.
       NEW Course 4 Artist Params 3_instruction: |
-        Now let's use the function to draw
-        5 triangles in a row. Each triangle is 30 pixels apart.\r
-      NEW Course 4 Artist Params 4_instruction: |-
-        Do you notice anything different
-        about these function blocks? Click “Run” to see what happens.
-      NEW Course 4 Artist Params 5_instruction: "Replace the `???` in the `length`\nparameter
-        input block. The pentagon has 100 pixel sides. "
-      NEW Course 4 Artist Params 6_instruction: |-
-        Fill in the "length" parameter
-        to draw these shapes by replacing the "???" with the right numbers. The
-        square and triangle have 100 pixels sides while each side of the hexagon is
-        75 pixels long.
-      NEW Course 4 Artist Params 7_instruction: |-
-        Can you complete this drawing? The
-        sides of each triangle are 25 pixels larger than the last.  The first triangle
-        has 25 pixel sides.
-      NEW Course 4 Artist Params 8_instruction: |-
-        The code for this triangle function
-        is broken. Can you edit the function to fix it, and then make triangles of
-        length 25, 50, and 75?
-      NEW Course 4 Artist Params 9_instruction: |-
-        Click "edit" to fill in the function
-        definition of "draw a square" and add a parameter. It should take a length
-        parameter, just like the triangle. This time, draw 3 squares: 25, 50 and 75
-        pixels in length, each 100 pixels apart.
-      NEW Course 4 Artist Params inspire_instruction: "Free Play Inspiration: You've\nnow
-        learned everything you need to know to make a pattern like this! If this\npicture
-        inspires you, try to make something similar. Otherwise, create something\nall
-        your own.\\r\n \\r\nWant to know how our inspiration pattern was made? "
+        Most használjuk a függvényt, és rajzoljunk 3 háromszöget egy sorba. A háromszögek egymástól 30 képpontra vannak.\r
+      NEW Course 4 Artist Params 4_instruction: Észreveszel valamilyen különbséget
+        ezekben a függvényekben? Kattints a "Futtatás" gombra, és nézd meg, mi történik.
+      NEW Course 4 Artist Params 5_instruction: 'Helyettesítsd a `???` jeleket a `length`
+        (hossz) paraméter bemeneti blokkban. Az ötszög oldalai 100 képpont hosszúak. '
+      NEW Course 4 Artist Params 6_instruction: Töltsd ki a "length" (hossz) paramétert
+        a megfelelő értékekkel a "???" jelek helyén, és rajzold meg ezeket az alakzatokat.
+        A négyzet és a háromszög oldalai 100 képpontosak, míg a hatszög oldalai 75
+        képpont hosszúak.
+      NEW Course 4 Artist Params 7_instruction: Be tudod fejezni ezt a rajzot? A háromszögek
+        oldalai mindig 25 képponttal hosszabbak, mint az előző. Az első háromszög
+        oldalai 25 képpont hosszúak.
+      NEW Course 4 Artist Params 8_instruction: Az itt található háromszög függvény
+        kódja rossz. Meg tudod javítani a függvény kódját, majd tudsz rajzolni 25,
+        50 és 75 képpont oldalhosszúságú háromszögeket?
+      NEW Course 4 Artist Params 9_instruction: 'Kattints a "szerkeszt" gombra, majd
+        adj hozzá a "rajzolj egy négyzetet" függvényhez egy paramétert. Legyen egy
+        hossz paramétere, mint a háromszögnek. Ezúttal három négyzetet rajzolj: 25,
+        50 és 75 képpont oldalhosszal, és egymástól 100 képpont távolságra.'
+      NEW Course 4 Artist Params inspire_instruction: "Szabad játék ihlet: Mindent
+        megtanultál ahhoz, hogy egy ilyen mintát rajzolj. Ha ez ihletet ad neked,
+        akkor rajzolj egy hasonlót. Vagy készíthetsz bármilyen más ábrát.\\r\n\\r\nSzeretnéd
+        tudni, hogyan készült az ihletül szolgáló minta? "
       NEW Course 4 Artist Vars 1.5_instruction: "Take a look at the code, can you\nsee
         how the \"set length\" block and \"length\" block works together? Click\non
         \"Run\" to see it in action. "
@@ -6862,35 +7217,29 @@
         let's try it again this time let's make this cool design with with 60 pixel
         hexagon's.
       NEW Course 4 Artist Vars 4_instruction: |-
-        Let's try it again! \r
+        Próbáljuk meg újra!\r
         \r
-        Can you
-        set the `length` variable to 60 to make this cool design with hexagons?
+        Be tudod állítani a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz mintát?
       NEW Course 4 Artist Vars 6_instruction: |-
-        Draw this pattern of pentagons with
-        100 pixel sides by setting the right value for `length` and dropping the `length`
-        variable into all of the the correct places. \r
+        Rajzold meg ezt a 100 képpont oldalhosszúságú ötszögekből álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő helyekre elhelyezed a `hossz` változót.\r
         \r
-        See how you only have
-        to set the value for `length` once, and the code uses the right value everywhere?
+        Látod, hogy csak egyszer kell beállítanod a `hossz` változó értékét, és mindenhol a helyes értéket használja a kód?
       NEW Course 4 Bee For Loops 1_instruction: Használj ciklust, hogy minden virágról
         összegyűjtsd a nektárt.
       NEW Course 4 Bee For Loops 10_instruction: |-
         Use your for loop "counter" variable
         to control how far to move horizontally.
-      NEW Course 4 Bee For Loops 10a_instruction: |-
-        Ready for a challenge?  Take what
-        you've learned about loops and try to solve this problem. Remember: You may
-        have to run through solutions multiple times before you figure out all of
-        the steps.
+      NEW Course 4 Bee For Loops 10a_instruction: 'Készen állsz egy kihívásra? Használd
+        fel a ciklusokról tanultakat a feladvány megoldásához. Ne felejtsd: Szükség
+        lehet többször végigfutni a megoldásokon, amíg rájössz az összes lépésre.'
       NEW Course 4 Bee For Loops 11_instruction: Fel tudod használni a ciklus változót,
         hogy szabályozd a mozgást és a nektár gyűjtést?
       NEW Course 4 Bee For Loops 2_instruction: "Állítsd össze a kódot, ami az összes
         nektár összegyűjtéséhez szükséges! Figyeld meg, milyen hosszú kód kell ehhez
         a feladványhoz! (A következő feladványban tanulunk erre egy egyszerűbb módszert.)"
-      NEW Course 4 Bee For Loops 3_instruction: "Ah, the \"for loop\" makes this\nmuch
-        easier! All the code you need is here, take a look at how it is put together\nthen
-        click \"Run\" to see how it works. "
+      NEW Course 4 Bee For Loops 3_instruction: 'Uh, A "számold (for) ciklus" sokkal
+        egyszerűbbé teszi ezt! Minden szükséges kód itt van. Figyeld meg, hogyan kell
+        összerakni, majd kattints a "Futtatás" gombra, és nézd meg, hogyan működik. '
       NEW Course 4 Bee For Loops 4 4_instruction: 'Tudsz segíteni a méhnek összegyűjteni
         a maradék mézet ennek a for ciklusnak a használatával? '
       NEW Course 4 Bee For Loops 4_instruction: 'Cseréld ki a for ciklusban a ???
@@ -6899,11 +7248,10 @@
         Segíts a méhnek összegyűjteni a maradék nektárt.
       NEW Course 4 Bee For Loops 5_instruction: A for ciklust lefelé számlálásra is
         használhatod. Próbáld összegyűjteni a nektárt 5-től 1-ig lefelé számlálva.
-      NEW Course 4 Bee For Loops 6_instruction: |-
-        The last number in your for loop
-        is called the "increment". Each time the loop is run, the counter variable
-        changes by the value of the increment. Try collecting these flowers using
-        an increment of 2.
+      NEW Course 4 Bee For Loops 6_instruction: A for ciklusban lévő utolsó számot
+        lépésköznek hívják. A ciklus számlálójának értéke minden ismétléskor a lépésköz
+        értékével módosul. Próbáld meg összegyűjteni ezeket a virágokat 2 lépésközt
+        használva.
       NEW Course 4 Bee For Loops 7_instruction: Kezdesz belejönni a for ciklusok használatába?
         Ez a feladvány hasonlít az előzőhöz, de 2,4,6,8,10 nektárt kell gyűjteni.
         Készen van a kód, csak a számláló ciklusok számait kell módosítani. Gyűjtsük
@@ -6927,8 +7275,8 @@
       NEW Course 4 Play Labs For Loops 7a_instruction: |-
         Using what you learned so
         far, can you have Dinosaur take a step forward every time Penguin counts?
-      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: "It's Free Play\ntime,
-        have fun with all the blocks in your tool box. "
+      NEW Course 4 Play Labs For Loops 8 Free Play_instruction: 'Szabad játék! Csinálj
+        bármit a rendelkezésre álló blokkokkal. '
       NEW Course 4 Play Labs For Loops 8a_instruction: "Challenge: How would you\nuse
         the \"for loop\" to get every actor to go around and say their actor number,\nthen
         vanish from the screen? "
@@ -7243,6 +7591,9 @@
       Practice Create Performance Task_instruction: |-
         Design and implement your practice
         Create Performance Task. (Click to see full instructions)
+      Project - Make Your Own Clicker Game_instruction: |-
+        Complete your clicker game!
+        (Click to see full instructions)
       Project - Your Own Multi Screen App_instruction: |-
         Create your multi-screen
         app. (Click to see full instructions.)

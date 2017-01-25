@@ -3,7 +3,7 @@ ru:
     messages:
       not_saved: 'Исправьте следующие ошибки:'
       too_young: 'Этот урок имеет возрастные ограничения и не подходит для учеников младшего возраста.'
-      teacher_must_accept_terms: 'Этот урок имеет возрастные ограничения и не подходит для учеников младшего возраста. Попросите вашего учителя принять обновленные Условия Обслуживания, чтобы дать вам доступ к этому содержимому. Ваш учитель может сделать это, войдя в Code Studio и нажав кнопку «Просмотр обновленных условий» в верхней части главной страницы Code Studio.'
+      teacher_must_accept_terms: 'Этот урок имеет возрастные ограничения и не подходит для учеников младшего возраста. Попросите вашего учителя принять обновленные Условия Обслуживания, чтобы дать вам доступ к этому содержимому. Ваш учитель может сделать это, войдя в Code Studio и нажав кнопку «Просмотр обновленных условий» в верхней части главной страницы Студии Кода.'
       pair_programmer: 'Сейчас вы работаете в паре со студентом, у которого нет доступа к этому материалу. Остановите парную работу и попробуйте снова.'
   activerecord:
     errors:
@@ -81,10 +81,10 @@ ru:
   signup_form:
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
-    overview: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. <a href="/"> Вы можете просматривать различные задачи и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов вы должны будете зарегистрироваться.'
-    hoc_already_signed_up_heading: 'Начало работы без входа в систему'
-    hoc_already_signed_up_content: 'Вы зарегистрированы для прохождения Часа Кода! Вы и ваши учащиеся не должны входить в Студию Кода для участия в этом мероприятии. Чтобы начать работу, <a href="https://code.org/learn"> выберите задние</a> для вашего класса и поделитесь с ним ссылкой. <br/> <br/> Если вам понравился Час Кода и вы хотите идти дальше, то вы можете установить пароль и создать учетную запись в Студии Кода, чтобы регистрировать учащихся в одном из наших <a href="https://code.org/educate"> развёрнутых курсов</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
+    overview: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. <a href="/"> Вы можете просматривать различные задачи и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов вы должны зарегистрироваться.'
+    hoc_already_signed_up_heading: 'Начало работы без регистрации'
+    hoc_already_signed_up_content: 'Вы зарегистрировались для преподавания Часа Кода! Вам и вашим ученикам необязательно заходить в Студию Кода для участия в этом мероприятии. Чтобы начать работу,<a href="%{learn_url}">выберите задние</a> для вашего класса и поделитесь ссылкой с ними. <br/> <br/> Если вам понравился Час Кода, то вы можете установить пароль и создать учетную запись в Студии Кода для регистрации ваших учеников в одном из наших <a href="%{educate_url}">курсов</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Спасибо за организацию Часа Кода. Чтобы войти в Студию Кода, вам потребуется создать пароль для Вашей учетной записи. Это позволит вам сохранить ваш прогресс и управление классом. Вы сможете назначить курсы для учеников и следить за их успеваемостью. <a href="%{studio_url}">Вы также можете просмотреть различные уровни и головоломки</a> без создания учетной записи.'
     teacher_educator_guide: 'Смотрите руководство для учителя'
     title: "Зарегистрироваться на Code.org"
     school_name: 'Название школы (не обязательно)'
@@ -103,7 +103,7 @@ ru:
     invalid_password: "Пароль должен содержать не менее 6 символов"
     mismatch_password: "Введенные пароли не совпадают"
     student_terms: "Я согласен с <a href='http://code.org/tos'>условиями предоставления услуг</a> Code.org. Если я моложе 13 лет, я подтверждаю, отправляя эту форму, что у меня есть разрешение от моего родителя или законного опекуна на использование услуг Code.org. <br/> <br/> Адреса электронной почты не сохраняются в той форме, которая позволила бы нам связываться со студентами. Студенты никогда не будут получать письма от Code.org, за исключением случаев восстановления пароля. Смотрите нашу <a href='http://code.org/privacy'>политику конфиденциальности</a> для получения дополнительной информации."
-    teacher_terms: "Я согласен с условиями предоставления услуг Code.org. За дополнительными сведения о конфиденциальности обратитесь к нашей <a href='http://code.org/privacy'>политике конфиденциальности</a>."
+    teacher_terms: "Я согласен с условиями предоставления услуг Code.org. За дополнительными сведения о конфиденциальности обратитесь к нашим <a href='http://code.org/privacy'>правилам конфиденциальности</a>."
     additional_information: "Чтобы продолжить регистрацию, нам нужна дополнительная информация."
     user_type_label: "Тип Учётной Записи"
     user_type_teacher: "Учитель"
@@ -131,7 +131,7 @@ ru:
   password:
     reset_form:
       title: 'Забыли Ваш пароль?'
-      instructions: "Введите ниже свой адрес электронной почты, и мы вышлем вам инструкцию по сбросу пароля."
+      instructions: "Введите ниже свой адрес электронной почты, и мы вышлем вам инструкцию по замене пароля."
       email: 'Адрес электронной почты'
       submit: 'Отправить'
     change_form:
@@ -303,7 +303,9 @@ ru:
     delete_text: "Нажатие на кнопку ниже удалит вашу учетную запись."
     delete_text_teacher_note: 'Обратите внимание: удаление вашей учетной записи не удалит учетные записи ваших учеников.'
     delete_confirm: 'Вы действительно хотите удалить свою учетную запись?'
-    deleted_user: 'deleted user'
+    deleted_user: 'пользователь удален'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'Завершено'
     tried: 'Пытался'
@@ -355,18 +357,18 @@ ru:
     announcement_csp_widgets_message: "Looking for some fun ways to teach your class how the Internet works, how cryptography keeps data secure, and other concepts? We’ve taken the best interactive tools from our Computer Science Principles curriculum and released standalone widgets you can use at any time!"
     announcement_learn_more_button: "Узнать больше"
     announcement_try_now_button: "Попробуйте сейчас"
-    announcement_host_an_hour_button: "Хозяин часов"
-    announcement_watch_video_button: "Смотреть видео"
+    announcement_host_an_hour_button: "Организовать Час"
+    announcement_watch_video_button: "Посмотреть видео"
     announcement_petition: "Как учитель вы лидер движения, чтобы дать каждому студенту в каждой школе возможность для изучения компьютерных наук. Теперь пришло время, чтобы ваши представители услышали вас. На этой неделе лидеры образования, 28 губернаторов и а также руководители крупнейших компаний Америки объединились в открытом письме к Конгрессу США финансировать K-12 образовательную программу компьютерной науки."
     announcement_petition_button: "Добавьте ваше имя"
-    announcement_go_beyond_button: "Go beyond"
-    announcement_all: "Будьте в курсе новых функций и обновлений нашего блога учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые уведомления.</a>"
-    announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут урок информатики с помощью Часа Кода 5-11 декабря. Мы рассчитываем на вас, чтобы помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}' target='_blank'> зарегистрируйте ваш Час Кода</a> и поделитесь с другими учителями, что бы любой жалеющий мог начать преподавание информатики."
-    announcement_mc_launch: "Один из самых популярных учебников теперь имеет продолжение! Все новые Minecraft Час Кода Дизайнер позволяет студентам создать правила мира Minecraft. Они могут создать совершенно уникальный опыт Minecraft, а затем поделиться им с друзьями или играть на своих телефонах. Делайте это с классом в Час Кода."
+    announcement_go_beyond_button: "Выйти за пределы"
+    announcement_all: "Будьте в курсе новых возможностей, читая наш блог учителей. <a href='%{teacher_blog_url}' target='_blank'>Просмотреть прошлые объявления.</a>"
+    announcement_hoc_launch: "Тысячи преподавателей в более чем 180 странах проведут урок информатики с помощью Часа Кода с 5 по 11 декабря. Мы рассчитываем на вас, чтобы помочь нам привлечь больше учащихся, чем когда-либо прежде. <a href='%{signup_url}' target='_blank'>Зарегистрируйте Ваш Час Кода</a> и покажите своим примеров, что любой желающий учитель может начать преподавать информатику."
+    announcement_mc_launch: "Один из самых популярных учебников теперь имеет продолжение! Новый Редактор для Часа Кода Minecraft позволяет студентам создать правила мира Minecraft. Они могут создать совершенно уникальную игру, а затем поделиться ею с друзьями или играть в эту игру на своих телефонах. Занимайтесь этим во время Часа Кода."
     announcement_how_code_studio: "Вам не нужен опыт для начала преподавания информатики в вашем классе. Code.org предлагает учебные курсы, планы уроков, высококачественные программы профессионального обучения и большой набор отличных инструментов под любыхеспособностей &mdash; все, что нужно, все бесплатно. Хотите знать, как начать? Скачайте <a href='%{video_download_url}'> это видео</a>!"
-    announcement_go_beyond: "Go beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;and it's all free. :) You don't need any experience to start teaching computer science in your classroom. <b>Find the next step that's right for your classroom.</b>"
+    announcement_go_beyond: "Пойти дальше учиться на Час Кода и изучить понятия информатики с каждым учащимся неделю. Code.org предлагает учебный план, планы уроков, высокое качество профессиональных образовательных программ, а также множество отличных инструментов на все классы&mdash;и это все бесплатно. :) Вам не нужно никакого опыта, чтобы начать преподавать информатику в своем классе. <b>Найти следующий шаг, который подходит для вашего класса.</b>"
   move_students:
-    new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста, введите другой код группы."
+    new_section_dne: "Извините, но группа %{new_section_code} не существует. Пожалуйста, введите код другой группы."
     section_code_not_entered: "Просьба представить current_section_code."
     section_code_cant_be_current_section: "Текущий раздел не может быть таким же, как и новый раздел."
     current_section_dne: "Извините, но группа %{current_section_code} не существует. Пожалуйста, введите код другогой группы."
@@ -391,8 +393,8 @@ ru:
     thank_you: 'Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников наших видеозаписей, а также наших <a href="https://code.org/about/advisors"> консультантов по вопросам образования</a> за поддержку в создании студии кода.'
     help_from_html: 'Мы хотим особенно поблагодарить инженеров компаний Google, Microsoft, Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.'
     help_from_html_old: 'При создании данных материалов нам помогали инженеры из компаний Google, Microsoft, Facebook и Twitter.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола (The Amazing World of Gumball) является товарным знаком и &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола (The Amazing World of Gumball) является товарным знаком и &copy; 2015 г., Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является товарным знаком и &copy; %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола является товарным знаком и &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org использует p5.play, который лицензируется на условиях <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Создано с помощью Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час кода&reg; являются товарными знаками Code.org.'
@@ -495,7 +497,7 @@ ru:
       body: "Изучайте мир Minecraft через программный код."
     minecraft2016:
       title: "Minecraft"
-      body: "Создай свой мир Minecraft. Запрограммируй поведение животных и существ своего мира: куриц, овец, криперов, зомби и других."
+      body: "Запрограммируй поведение животных и существ своего мира Minecraft."
     unplugged:
       title: "Уроки без компьютера"
       audience: "Возраст 6+"
@@ -588,7 +590,7 @@ ru:
     message: "Мы продолжаем совершенствовать приобретенный опыт для еще более надежной защиты вашей личной информации. Для этого нужно, чтобы пользователи ввели здесь свой возраст.<br/>Как обычно, code.org обязуется не сдавать в аренду, не продавать и не сообщать эту информацию третьим лицам."
     sign_out: 'Если вы не хотите указывать свой возраст, вы можете <a href="%{url}"> выйти из системы</a>.'
   terms_interstitial:
-    title: "Обновленные Условия предоставления услуг и Политика конфиденциальности"
+    title: "Обновленные Условия предоставления услуг и условия конфиденциальности"
     intro_desc: 'Мы обновили наши Условия предоставления услуг и Политику конфиденциальности, как показано ниже. Изменения вступают в силу с 24 августа 2016 года.  Самое большое отличие: мы <i>больше не будем хранить адреса электронной почты для учетных записей студентов на Code Studio.</i> Это важно для нас, и мы надеемся тем самым установить новый стандарт конфиденциальности в технологии обучения. Мы отправили вам список остальных изменений по электронной почте.'
     intro_instructions: "Вам нужно принять эти новые условия для студентов младше 13 лет в вашем классе, чтобы иметь полный доступ ко всем новым функциям в Code Studio.  При регистрации учетной записи студента младше 13 лет, вам будет предложено подтвердить, что ваша школа имеет согласие родителей на сбор личной информации студентов для использования на благо школы, включая образовательные программы, такие как Code Studio."
     tos: "Условия предоставления услуг"
@@ -601,7 +603,7 @@ ru:
     review_terms: "Просмотр обновленных условий"
   race_interstitial:
     title: 'Дополнительно: Помогите нам отслеживать наш прогресс в направлении улучшения разнообразия в области компьютерных наук'
-    message: "Пожалуйста, укажите вашу расу (необходимое пометить)"
+    message: "Пожалуйста, укажите вашу расу (отметьте всё, что подходит)"
     races:
       - 
         white: Белый
@@ -697,7 +699,7 @@ ru:
       description: '<strong>Да</strong>, это решение <strong>соответствует</strong> требованиям'
     rejected:
       name: 'Отклонено'
-      description: '<strong>Нет</strong>, это представление <strong>не соответствует</strong> требованиям'
+      description: '<strong>Нет</strong>, это решение <strong>не соответствует</strong> требованиям'
     escalated:
       name: 'Эскалация'
       description: 'Я бы хотел, чтобы инструктор проверил это решение'
@@ -731,6 +733,9 @@ ru:
     content: 'Содержимое'
     practice: 'Практика учителя'
     peer_review: 'Рецензирование'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Отказ от ответственности
     leaving_domain: Сейчас вы переходите на сайт, который не управляется Code.org.
@@ -767,7 +772,7 @@ ru:
     download_in_Hungarian: 'Скачать на венгерском:'
     download_in_Icelandic: 'Скачать на исландском:'
     download_in_Indonesian: 'Скачать на индонезийском:'
-    download_in_Irish: 'Скачать на Ирландском:'
+    download_in_Irish: 'Скачать на ирландском:'
     download_in_Italian: 'Скачать на итальянском:'
     download_in_Japanese: 'Скачать на японском:'
     download_in_Korean: 'Скачать на корейском:'
@@ -776,18 +781,18 @@ ru:
     download_in_Norwegian: 'Скачать на норвежском:'
     download_in_Norwegian-Nynorsk: 'Скачать на норвежском (Нюнорск):'
     download_in_Polish: 'Скачать на польском:'
-    download_in_Portuguese-Brazil: 'Скачать на Португальском (Бразилия):'
+    download_in_Portuguese-Brazil: 'Скачать на португальском (Бразилия):'
     download_in_Portuguese: 'Скачать на португальском:'
     download_in_Romanian: 'Скачать на румынском:'
     download_in_Russian: 'Скачать на русском:'
     download_in_Serbian: 'Скачать на сербском:'
     download_in_Slovenian: 'Скачайте на словенском:'
     download_in_Spanish: 'Скачать на испанском:'
-    download_in_Swedish: 'Скачать на Шведском:'
+    download_in_Swedish: 'Скачать на шведском:'
     download_in_Turkish: 'Скачать на турецком:'
     download_in_Ukrainian: 'Скачать на украинском:'
     download_in_Vietnamese: 'Скачать на вьетнамском:'
-    windows: 'Windows'
+    windows: 'Windows (64-разрядная версия)'
     mac: 'Mac OS X'
   plc:
     preview_assignments:
@@ -798,7 +803,7 @@ ru:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  locked_stage: 'Содержимое этого этапа скрыто, потому что он в настоящее время заблокирован. Ваш учитель может разблокировать этот этап, когда придет время для работы на нем или для просмотра ваших ответов.'
+  locked_stage: 'Содержимое этого этапа скрыто, потому что он в настоящее время заблокирован. Ваш учитель может разблокировать этот этап, когда придет время для работы на ним или для просмотра ваших ответов.'
   hidden_stage: "Ваш учитель не ожидал увидеть вас здесь. Пожалуйста, спросите у него на каком уроке вы должны быть."
   return_course_overview: 'Перейти к обзору темы'
   pd:

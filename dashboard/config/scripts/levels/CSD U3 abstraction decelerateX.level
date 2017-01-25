@@ -73,10 +73,10 @@
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "contained_level_names": null,
-    "encrypted_examples": "dnPVkP5+BTmV45TypLV8QuaUJ5Bs3lHGglXqDZazwPYKRfmmnuba5forX+Yu\nXlsL\n",
+    "encrypted_examples": "6e+kTn5BYIYcTz4lyYQG7D0EGxZiZVDauUnXayr1y5pNxwnbm20PEYsB6gqW\nWUBo73d/IiHqKyl3oAubnuxEQg==\n",
     "instructions_important": "false",
-    "show_debug_watch": "false"
+    "show_debug_watch": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

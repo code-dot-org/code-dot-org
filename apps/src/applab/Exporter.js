@@ -196,6 +196,12 @@ function extractCSSFromHTML(el) {
           }
         }
         child.removeAttribute('style');
+        if (child.tagName.toLowerCase() === 'input') {
+          // make sure all input tags have a type attribute specified
+          if (!child.getAttribute('type')) {
+            child.setAttribute('type', 'text');
+          }
+        }
         if (styleDiff.length > 0) {
           css.push(selectorPrefix + '#' + child.id + ' {');
           css = css.concat(styleDiff);
@@ -263,29 +269,60 @@ export default {
     zip.file(appName + "/style.css", rewriteAssetUrls(css));
     zip.file(appName + "/code.js", rewriteAssetUrls(code));
 
-    var deferred = $.Deferred();
-    $.when(...assetsToDownload.map(function (assetToDownload) {
-      return download(assetToDownload.url, assetToDownload.dataType || 'text');
-    })).then(
-      function ([commonLocale], [applabLocale], [applabApi], [applabCSS]) {
-        zip.file(appName + "/applab/applab-api.js",
-                 [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
-        zip.file(appName + "/applab/applab.css", applabCSS);
+    return new Promise((resolve, reject) => {
+      $.when(...assetsToDownload.map(
+        (assetToDownload) => download(assetToDownload.url, assetToDownload.dataType || 'text')
+      )).then(
+        ([commonLocale], [applabLocale], [applabApi], [applabCSS], ...rest) => {
+          zip.file(appName + "/applab/applab-api.js",
+                   [getAppOptionsFile(), commonLocale, applabLocale, applabApi].join('\n'));
+          zip.file(appName + "/applab/applab.css", applabCSS);
+          rest.forEach(([data], index) => {
+            zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
+          });
 
-        Array.from(arguments).slice(4).forEach(function ([data], index) {
-          zip.file(assetsToDownload[index + 4].zipPath, data, {binary: true});
-        });
-        return deferred.resolve(zip);
-      },
-      function () {
-        logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
-          app: 'applab'
-        }, 1/100);
-        deferred.reject(new Error("failed to fetch assets"));
-      }
-    );
+          const cssAssetsToDownload = (applabCSS.match(/url\(['"]?\/[^)]+['"]?\)/ig) || [])
+            .map(
+              urlRef => {
+                const matches = urlRef.match(/url\(['"]?(\/[^'")]+)['"]?\)/i);
+                if (matches) {
+                  return matches[1];
+                }
+              }
+            )
+            .filter(url => !!url)
+            .map(
+              url => ({
+                url,
+                rootRelativePath: 'applab/assets' + url,
+                zipPath: appName + '/applab/assets' + url,
+              })
+            );
 
-    return deferred.promise();
+          $.when(
+            ...cssAssetsToDownload.map(
+              assetToDownload => download(assetToDownload.url, 'binary')
+            )
+          ).then(
+            (...assetResponses) => {
+              assetResponses.forEach(([data], index) => {
+                zip.file(cssAssetsToDownload[index].zipPath, data, {binary: true});
+              });
+              return resolve(zip);
+            },
+            () => {
+              return reject(new Error("failed to fetch css assets"));
+            }
+          );
+        },
+        () => {
+          logToCloud.addPageAction(logToCloud.PageAction.staticResourceFetchError, {
+            app: 'applab'
+          }, 1/100);
+          reject(new Error("failed to fetch assets"));
+        }
+      );
+    });
   },
 
   exportApp(appName, code, levelHtml) {

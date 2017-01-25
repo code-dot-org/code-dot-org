@@ -37,6 +37,7 @@ zh-CN:
         'NetSim': '互联网模拟器'
         'Custom': '小艺术家'
         'CustomStudio': '游戏实验室'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': '铜牌'

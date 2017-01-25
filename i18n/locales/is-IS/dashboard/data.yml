@@ -37,6 +37,7 @@ is:
         'NetSim': 'Internet hermir'
         'Custom': 'Listamaður'
         'CustomStudio': 'Leikjasmiðja'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Brons'

@@ -393,8 +393,6 @@ module.exports = function (grunt) {
     // tutorialExplorer for code.org/learn 2016 edition.
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 
-    makerlab: './src/code-studio/makerlab/makerlabDependencies.js',
-
     pd: './src/code-studio/pd/workshop_dashboard/workshop_dashboard.jsx',
 
     'pd/teacher_application/new': './src/sites/studio/pages/pd/teacher_application/new.js',
@@ -474,6 +472,28 @@ module.exports = function (grunt) {
       minify: false,
       watch: true
     })
+  };
+
+  config['webpack-dev-server'] = {
+    watch: {
+      webpack: createConfig({
+        minify: false,
+        watch: false
+      }),
+      keepAlive: true,
+      proxy: {
+        '**': 'http://localhost:3000',
+      },
+      publicPath: '/assets/js/',
+      hot: true,
+      inline: true,
+      port: 3001,
+      host: '0.0.0.0',
+      watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+      },
+    }
   };
 
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
@@ -557,7 +577,7 @@ module.exports = function (grunt) {
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack:watch'],
+      tasks: ['watch', envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'],
       options: {
         logConcurrentOutput: true
       }

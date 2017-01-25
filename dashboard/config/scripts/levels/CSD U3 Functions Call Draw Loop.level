@@ -45,6 +45,9 @@
       "velocityY": null,
       "x": null,
       "y": null,
+      "declareAssign_x": null,
+      "declareNoAssign_x": null,
+      "assign_x": null,
       "setAnimation": null
     },
     "droplet_tooltips_disabled": "false",
@@ -61,7 +64,9 @@
     "instructions_important": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "98TQoiB/FYSBd/uGDj7Hs/K/HzNUfLw3sZ2rBaeQjTesO/XWhwderA+B1xcu\nFDP7\n",
+    "show_debug_watch": "false"
   },
   "published": true,
   "notes": "",

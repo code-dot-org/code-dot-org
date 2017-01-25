@@ -37,6 +37,7 @@ da:
         'NetSim': 'Internet Simulator'
         'Custom': 'Kunstner'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronze'

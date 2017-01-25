@@ -1,16 +1,14 @@
 class Api::V1::RegionalPartnersController < ApplicationController
   # GET /api/v1/regional-partner/<school_district_id>/<course>
-  BROWARD_OVERRIDDEN_DISTRICTS_FOR_CSD = ['1200390', '1201320']
-
   def index
     school_district = SchoolDistrict.find(params[:school_district_id])
 
-    regional_partner = school_district.regional_partner
+    if params[:course] == 'unselected'
+      render json: school_district.regional_partners_school_districts.first, include: :regional_partner
+    else
+      regional_partner_mapping = school_district.regional_partners_school_districts.find_by(course: params[:course]) || school_district.regional_partners_school_districts.find_by(course: nil)
 
-    if BROWARD_OVERRIDDEN_DISTRICTS_FOR_CSD.include?(params[:school_district_id]) && params[:course] == 'csd'
-      regional_partner = RegionalPartner.find_by(name: 'Broward County Public Schools')
+      render json: regional_partner_mapping, include: :regional_partner
     end
-
-    render json: regional_partner
   end
 end

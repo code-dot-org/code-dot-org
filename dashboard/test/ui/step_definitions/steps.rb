@@ -45,6 +45,7 @@ def color_for_status(status)
 end
 
 Given /^I am on "([^"]*)"$/ do |url|
+  check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
   @browser.navigate.to url
   refute_bad_gateway
@@ -52,23 +53,8 @@ Given /^I am on "([^"]*)"$/ do |url|
   install_js_error_recorder
 end
 
-def install_js_error_recorder
-  @browser.execute_script(<<-JS
-  // Wrap existing window onerror handler with a script error recorder.
-  var windowOnError = window.onerror;
-  window.onerror = function (msg) {
-    window.detectedJSErrors = window.detectedJSErrors || [];
-    window.detectedJSErrors.push(msg);
-    if (windowOnError) {
-      return windowOnError.apply(this, arguments);
-    }
-  };
-  JS
-  )
-end
-
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
-  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_with_timeout.until { @browser.find_element(selection_criteria) }
 end
 
@@ -124,7 +110,7 @@ When /^I reset the puzzle to the starting version$/ do
 end
 
 Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
-  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   @browser.find_element(selection_criteria)
 end
 
@@ -154,7 +140,7 @@ When /^I wait until element "([^"]*)" is in the DOM$/ do |selector|
 end
 
 Then /^I wait until element "([.#])([^"]*)" is gone$/ do |selector_symbol, name|
-  selection_criteria = selector_symbol == '#' ? {:id => name} : {:class => name}
+  selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_with_timeout.until { @browser.find_elements(selection_criteria).empty? }
 end
 
@@ -218,7 +204,7 @@ end
 
 When /^I press "([^"]*)"$/ do |button|
   wait_with_short_timeout.until {
-    @button = @browser.find_element(:id => button)
+    @button = @browser.find_element(id: button)
   }
   @button.click
 end
@@ -1008,7 +994,7 @@ Then /^my query params match "(.*)"$/ do |matcher|
 end
 
 Then /^I wait to see element with ID "(.*)"$/ do |element_id_to_seek|
-  wait_with_short_timeout.until { @browser.find_element(:id => element_id_to_seek) }
+  wait_with_short_timeout.until { @browser.find_element(id: element_id_to_seek) }
 end
 
 Then /^I get redirected to "(.*)" via "(.*)"$/ do |new_path, redirect_source|
@@ -1024,7 +1010,7 @@ end
 
 last_shared_url = nil
 Then /^I navigate to the share URL$/ do
-  wait_with_short_timeout.until { @button = @browser.find_element(:id => 'sharing-input') }
+  wait_with_short_timeout.until { @button = @browser.find_element(id: 'sharing-input') }
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
   @browser.navigate.to last_shared_url
   wait_for_jquery
