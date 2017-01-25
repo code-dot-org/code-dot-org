@@ -887,7 +887,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       end
     end
 
-    assert_equal nil, assigns(:level_source_image)
+    assert_nil assigns(:level_source_image)
   end
 
   test 'sharing program with swear word returns error' do

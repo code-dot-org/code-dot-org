@@ -1046,7 +1046,7 @@
     o Congresso dos EUA financie o ensino da ciência da computação da pré-escola ao
     Ensino médio.
   dashboard_announce_petition_button: Adicione seu nome
-  dashboard_announce_go_beyond_button: Go beyond
+  dashboard_announce_go_beyond_button: Ir além
   dashboard_announce_all: Fique por dentro dos novos recursos e atualizações em nosso
     blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as últimas
     novidades.</a>
@@ -1071,12 +1071,13 @@
     enorme quantidade de ferramentas excelentes para todos os níveis escolares&mdash;tudo
     de que você precisa sem custo algum. Querendo saber por onde começar? Baixe <a
     href='%{video_download_url}'>este vídeo</a>!
-  dashboard_announce_go_beyond: Go beyond an Hour of Code and explore computer science
-    concepts with your students every week. Code.org offers curriculum, lesson plans,
-    high quality professional learning programs, and tons of great tools for all grade
-    levels&mdash;and it's all free. :) You don't need any experience to start teaching
-    computer science in your classroom. <b>Find the next step that's right for your
-    classroom.</b>
+  dashboard_announce_go_beyond: Ir além de uma hora de código e explorar conceitos
+    de ciência do computador com seus alunos a cada semana. Code.org oferece currículo,
+    planos de aula. programas de aprendizagem profissional de alta qualidade e toneladas
+    de ótimas ferramentas para todos os níveis da classe&mdash;e isso é totalmente
+    de graça. :) Você não precisa de nenhuma experiencia para começar a ensinar ciência
+    da computação em sua sala de aula. <b>Encontre o próximo passo que é certo para
+    sua sala de aula.</b>
   code_hoc_coming: 'A Hora do Código chegou: de 8 a 14 de dezembro!'
   code_sign_up: Inscreva-se para participar durante a Semana da Educação em Ciência
     da Computação
@@ -1226,6 +1227,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: Teste completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste, parte 1 - 25 questões
   cspexam2-AKwgAh1ac5_name: Teste, parte 2 - 25 questões

@@ -2191,9 +2191,9 @@ en:
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers': 'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers'
           description_audience: ''
         csp1-support:
-          title: CSP Unit 1 Online Support
-          description_short: TeacherSupports for CSP unit 1
-          description: This is a set of online supports of CSP teachers preparing to teach Unit 1.
+          title: Unit 1 Online Professional Learning Course
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 1.
           stage:
             Unit 1 Overview: Unit 1 Overview
             'Lessons 2 - 3: Binary Messages': 'Lessons 2 - 3: Binary Messages'
@@ -2277,10 +2277,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 2 Online Support
+          title: Unit 2 Online Professional Learning Course
           description_audience: ''
-          description_short: Teacher Supports for CSP Unit 2
-          description: 'This is a set of online supports of CSP teachers preparing to teach Unit 2. '
+          description_short: Teacher Professional Learning Course for CSP Unit 2
+          description: 'This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 2. '
         csd4:
           stage:
             Analysis of Design: Analysis of Design
@@ -2537,10 +2537,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             AP Preparation and Support: AP Preparation and Support
-          title: CSP Unit 3 Online Support
+          title: Unit 3 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 3
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 3.
         csdgraveyard:
           stage:
             new stage: new stage
@@ -2563,10 +2563,10 @@ en:
             Discovery Learning: Discovery Learning
             Measuring Student Learning: Measuring Student Learning
             Unit 4 Overview: Unit 4 Overview
-          title: CSP Unit 4 Online Support
+          title: Unit 4 Online Professional Learning Course
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 4
+          description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 4.
         sciencepd4:
           stage:
             Welcome!: Welcome!
@@ -2617,3 +2617,15 @@ en:
           description_audience: ''
           description_short: 'Phase 3: Prepare for semester 2 workshop'
           description: 'Phase 3: Prepare for semester 2 workshop'
+        csp5-support:
+          stage: {}
+          title: Unit 5 Online Professional Learning Course
+          description_audience: ''
+          description_short: Teacher Professional Learning Course for CSP Unit 1
+          description: 'COMING SOON: In mid-February, this page will host the CSP Unit 5 Professional Learning Course. '
+        csp6-support:
+          stage: {}
+          title: Unit 6 Online Professional Learning Course
+          description_audience: ''
+          description_short: ''
+          description: 'COMING SOON: In mid-February, this page will host a set of resources for teachers preparing for the AP exam'
