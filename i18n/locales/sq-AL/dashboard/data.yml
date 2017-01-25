@@ -37,6 +37,7 @@ sq:
         'NetSim': 'Imitues Interneti'
         'Custom': 'Artisti'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronx'

@@ -302,15 +302,17 @@
           description_short: "이벤트"
           stage:
             Bounce: "바운스"
-            Calc: Calc
-            Eval: Eval
-            Studio: Studio
+            Calc: "계산"
+            Eval: "평가"
+            Studio: "스튜디오"
+          description_audience: ''
         flappy:
           title: "플래피 코드"
           description: 10분 이내에 자신만의 게임을 만들어보고 싶은가요? 플래피 코드 튜토리얼을 시도해 보세요.
           description_short: 10분 보다 적은 시간에 자신만의 플래피 게임을 만들어보세요!
           stage:
             Flappy Code: "플래피 코드"
+          description_audience: ''
         jigsaw:
           title: "직소퍼즐"
           description: "그림 맞추기 튜토리얼을 해보세요."
@@ -337,14 +339,14 @@
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "퍼즐"
           description_audience: ''
         Tutorial Video - Code Studio Puzzle Challenge:
           title: Tutorial - Code Studio Puzzle Challenge
           description: Try out these fun coding puzzles. Do your best!
           description_short: Challenge yourself!
           stage:
-            Puzzles: Puzzles
+            Puzzles: "퍼즐"
           description_audience: ''
         cspunit1:
           title: CSP Unit 1
@@ -730,7 +732,7 @@
             Rich long assessment: Rich long assessment
             Sample PLC Assessment: Sample PLC Assessment
             Star wars: Star wars
-            Studio: Studio
+            Studio: "스튜디오"
             Swapped Levels: Swapped Levels
             Text Compression: Text Compression
             TextMatch: TextMatch
@@ -1615,6 +1617,10 @@
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice
+              AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment
+              5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1626,6 +1632,15 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the
+              Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your
+              AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2398,10 +2413,10 @@
         basketball:
           stage:
             Bounce: "바운스"
-          title: Basketball
+          title: "팀을 선택하고 농구경기를 하세요"
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: "팀을 선택하고 농구경기를 하세요"
+          description: "팀을 선택하고 농구경기를 하세요"
         sample-csp5:
           stage:
             Controlling Memory with Variables: Controlling Memory with Variables
@@ -2509,8 +2524,7 @@
             Minecraft Hour of Code Designer: Minecraft Hour of Code 디자이너
           title: Minecraft Hour of Code 디자이너
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
+          description_short: "자신만의 마인크래프트에서 동물들과, 또 다른 마인크래프트 생명체를 프로그램 해보세요."
           description: Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요.
         flappy-impact-study:
           stage:
@@ -2708,10 +2722,10 @@
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: "당신만의 스포츠게임을 코딩하세요"
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: "스포츠 전반 조합하기"
+          description: "스포츠 전반 조합하기"
         2016_sciencePD-phase2b:
           stage:
             Welcome!: "환영합니다!"
@@ -2833,3 +2847,14 @@
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: "환영합니다!"
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: "마무리"
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

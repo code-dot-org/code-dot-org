@@ -83,7 +83,7 @@ ar:
     teacher_count: 'عدد المعلّمين المسجلين حالياً هو %{count}.'
     overview: 'قم بالتسجيل للحصول على حساب لتتبع التقدم المحرز الخاص بك أو إدارة الفصول الدراسية الخاصة بك. <a href="/"> يمكنك استعراض مختلف مراحل والالغاز</a> دون حساب، ولكنك ستحتاج للتسجيل لحفظ التقدم والمشاريع الخاصة بك.'
     hoc_already_signed_up_heading: 'أبدأ بدون تسجيل الدخول'
-    hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
+    hoc_already_signed_up_content: 'لقد انضممت لتعليم ساعة من البرمجة! لا تحتاج لا أنت ولا تلاميذك الدخول استوديو البرمجة لتشاركوا في هذا الحدث. للشروع في العمل، <a href="%{learn_url}">اختر درسا تعليميا</a> لقسمك وشارك رابطة معهم.<br/><br/>إذا استمتعب بساعة البرمجة وأردت أن تذهب أبعد ذلك، يمكنك أن تحدد كلمة مرور وتنشأ حساب استوديو البرمجة في الأسفل ليندرج كل تلاميذك في أي من <a href="%{educate_url}">الدروس الأطول</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'راجع دليل المعلم'
     title: "الاشتراك في Code.org"
@@ -304,7 +304,9 @@ ar:
     delete_text: "النقر على الزر أدناه سيؤدي إلى حذف الحساب الخاص بك."
     delete_text_teacher_note: يرجى ملاحظة أن حذف الحساب الخاص بك لن يؤدي إلى حذف حسابات طلابك.
     delete_confirm: 'هل أنت متأكد من أنك تريد حذف الحساب الخاص بك؟'
-    deleted_user: 'deleted user'
+    deleted_user: 'عضو محذوف'
+    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
+    no_password_because_sponsored: 'See your teacher to manage your password.'
   user_level:
     completed: 'أكمل'
     tried: 'حاول'
@@ -361,7 +363,7 @@ ar:
     announcement_petition: "كمدرس، وأنت تقود الطريق في حركة لإعطاء كل طالب في كل مدرسة الفرصة للتعلم علوم الكمبيوتر. الآن، حان الوقت للسماح لممثليكم بالإستماع منك. هذا الأسبوع، انضم زعماء التعليم و28 محافظا، والمديرين التنفيذيين لأكبر الشركات الأمريكية معا في رسالة مفتوحة تطلب من الكونجرس الأمريكي لتمويل K-12 لتعليم علوم الكمبيوتر."
     announcement_petition_button: "أضف أسمك"
     announcement_go_beyond_button: "Go beyond"
-    announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
+    announcement_all: "ابق على اطلاع على المزايا الجديدة والتحديثات عبر مدونتنا للأساتذة. <a href='%{teacher_blog_url}' target='_blank'>اطلع على المنشورات السابقة.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
     announcement_how_code_studio: "You don't need any experience to start teaching computer science in your classroom. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels&mdash;everything you need, all at no cost. Wondering where to get started? Download <a href='%{video_download_url}'>this video</a>!"
@@ -732,6 +734,9 @@ ar:
     content: 'محتوى'
     practice: 'تمارين معلم الرياضيات'
     peer_review: 'Peer Review'
+    ramp_up: 'Ramp-Up'
+    end_of_course_project: 'End of Course Project'
+    optional_stages: 'Optional Stages'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.

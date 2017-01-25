@@ -383,7 +383,7 @@
   starwars_blocks_specs: "Många språk | Moderna webbläsare, smartphones, pekplattor | Åldrarna 6-106"
   starwars_platform_text: "Moderna webbläsare, smartphones, surfplattor"
   mc_name: "Minecraft-kodtimmen"
-  mc_longdescription: "Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld."
+  mc_longdescription: "Använd kodblock för att ta Steve eller Alex på ett äventyr genom den här Minecraft-världen."
   mc_shortdescription: "Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld."
   mc_gradelevel: "Ålder 6+"
   mc_platformtext: "Moderna webbläsare, smartphones, surfplattor"
@@ -748,7 +748,7 @@
   dashboard_announce_learn_more_button: "Lär dig mer"
   dashboard_announce_try_now_button: "Prova nu"
   dashboard_announce_host_an_hour_button: "Var värd för en Hour of Code"
-  dashboard_announce_watch_video_button: "Watch video"
+  dashboard_announce_watch_video_button: "Titta på film"
   dashboard_announce_petition: "Som lärare är du en del av en rörelse som syftar till att ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap."
   dashboard_announce_petition_button: "Ange ditt namn"
   dashboard_announce_go_beyond_button: "Go beyond"
@@ -885,6 +885,7 @@
   csp3_name: 'Unit 3: Algorithms and Programming'
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
+  csp6_name: 'Unit 6: AP Performance Tasks'
   cspassessment_name: "Full Test - 50 questions"
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions

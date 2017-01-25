@@ -225,10 +225,10 @@ fr:
     parameters:
       1:
         image: 'notes/stage15_1.jpg'
-        text: "Salut, je m'appelle Janete, et je suis ingénieure chez Zynga."
+        text: "Salut, je m'appelle Janete, et je suis ingénieur chez Zynga."
       2:
         image: 'notes/stage15_2.jpg'
-        text: "Que faire si nous voulons dessiner un paquet de triangles de sorte que leurs côtés soient de tailles différentes ?"
+        text: "Que faudrait-il faire pour dessiner un ensemble de triangles de différentes tailles ?"
       3:
         image: 'notes/stage15_3.jpg'
         text: "Nous pouvons écrire tout ce code à la main, ou bien utiliser une fonction accompagnée de paramètres."
