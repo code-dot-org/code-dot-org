@@ -1,6 +1,5 @@
 /** @file Root component for Public Key Cryptography widget */
 import React from 'react';
-import i18n from '@cdo/locale';
 import CharacterPanel from './CharacterPanel';
 import EqualColumns from './EqualColumns';
 import Alice from './Alice';
@@ -11,9 +10,9 @@ import Bob from './Bob';
 import BobInstructions from './BobInstructions';
 import ModuloClock from './ModuloClock';
 import color from '../util/color';
-import Dialog from '../templates/Dialog';
 import FontAwesome from '../templates/FontAwesome';
 import WidgetContinueButton from '../templates/WidgetContinueButton';
+import StartOverButton from './StartOverButton';
 import ToggleGroup from '../templates/ToggleGroup';
 
 // Magic strings for view modes
@@ -229,46 +228,3 @@ const characterSelectTextStyle = {
   verticalAlign: 'baseline',
   marginRight: 8
 };
-
-const StartOverButton = React.createClass({
-  propTypes: {
-    onClick: React.PropTypes.func.isRequired
-  },
-
-  getInitialState() {
-    return {confirming: false};
-  },
-
-  confirm() {
-    this.setState({confirming: true});
-  },
-
-  onConfirm() {
-    this.props.onClick();
-    this.setState({confirming: false});
-  },
-
-  onCancel() {
-    this.setState({confirming: false});
-  },
-
-  render() {
-    return (
-      <span>
-        <button
-          className="btn btn-info pull-right"
-          onClick={this.confirm}
-        >
-          {i18n.clearPuzzle()}
-        </button>
-        <Dialog
-          isOpen={this.state.confirming}
-          uncloseable
-          title={i18n.clearPuzzle()}
-          body={i18n.clearPuzzleConfirmHeader()}
-          onConfirm={this.onConfirm}
-          onCancel={this.onCancel}
-        />
-      </span>);
-  }
-});
