@@ -22,7 +22,7 @@ const group1CspWorkshops = {
   'Nextech': 'July 18 - 22, 2017',
   'The Council of Educational Administrative and Supervisory Organizations of Maryland (CEASOM)': 'August 7 - 11, 2017',
   'Southern Nevada Regional Professional Development Program': 'June 12 - 16, 2017',
-  'Code/Interactive': 'July 10 - 14, 2017',
+  'Code/Interactive': 'August 14 - 18, 2017',
   'The Friday Institute': 'July 10 - 14, 2017',
   'Battelle Education': 'July 24 - 28, 2017',
   'Rice University': 'June 26 - 30, 2017',
