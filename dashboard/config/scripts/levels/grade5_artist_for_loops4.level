@@ -33,7 +33,7 @@
     "disable_examples": "false",
     "examples_required": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"**What is the smallest number you will need?  \\nWhat is the largest number?  \\nHow big is the increase each time?**\\n\\nThose are the questions you need to ask to fill in the blanks of the `for` loop.\",\r\n  \"hint_id\": \"Course_4_Artist_For_Loops_4_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**What is the smallest number you will need?  \\nWhat is the largest number?  \\nHow big is the increase each time?**\\n\\nThose are the questions you need to ask to fill in the blanks of the `for` loop.\",\"hint_id\":\"Course_4_Artist_For_Loops_4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aca7cb7b7ac3a315dd7225fc88faf739/grade5_artist_for_loops4.mp3\"}]",
     "discard_background": "false",
     "contained_level_names": null
   },
