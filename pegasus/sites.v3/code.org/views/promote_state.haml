@@ -22,8 +22,9 @@
     computer science graduates
 
 %p.fact
-  %a{href: 'http://bit.ly/9policiesrubric', style: 'color: white; cursor: pointer;', target: '_blank'}
-    Policy Environment (rubric):
+  = precede "Policy Environment (" do
+    = succeed "):" do
+      %a{href: 'http://bit.ly/9policiesrubric', style: 'color: white; cursor: pointer;', target: '_blank'} rubric
 
 %div.fact{style: "margin-left: 20px;"}
   - if data[:pd_funding_s] == "No"
