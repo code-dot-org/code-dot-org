@@ -14,7 +14,6 @@
 #  deleted_at   :datetime
 #  stage_extras :boolean          default(FALSE), not null
 #  section_type :string(255)
-#  user_id      :integer
 #
 # Indexes
 #
