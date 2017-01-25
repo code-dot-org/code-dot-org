@@ -1,7 +1,7 @@
 import React from 'react';
 import color from "@cdo/apps/util/color";
 
-const DOT_SIZE = 30;
+export const DOT_SIZE = 30;
 
 // TODO - not sure I like these being keyed by these strings.
 // TODO - share with progress_dot?
@@ -42,9 +42,7 @@ const bubbleColors = {
 
 const styles = {
   main: {
-    // TODO - no Gotham in storybook (use motserrat as a fallack). better approach
-    // or way of doing this?
-    fontFamily: 'Gotham-Medium,Montserrat',
+    fontFamily: '"Gotham 4r", sans-serif',
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,
@@ -55,6 +53,9 @@ const styles = {
     letterSpacing: -0.11,
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
+    display: 'inline-block',
+    marginLeft: 3,
+    marginRight: 3,
   }
 };
 
@@ -79,5 +80,8 @@ const ProgressBubble = React.createClass({
     );
   }
 });
+
+ProgressBubble.size = DOT_SIZE + 2 * styles.main.borderWidth +
+  styles.main.marginLeft + styles.main.marginRight;
 
 export default ProgressBubble;
