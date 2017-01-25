@@ -1,11 +1,11 @@
 /** @file Static instructions for the Eve character in the crypto widget */
 import React from 'react';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, SubStep, Heading, Subheading} from './NumberedSteps';
 
 export default function EveInstructions() {
   return (
-    <CollapsiblePanel title="Eve's instructions">
+    <CharacterPanel title="Eve's instructions">
       <Heading text="Eavesdrop!"/>
       <Subheading text="Listen for and collect the numbers that Alice and Bob announce in public"/>
       <NumberedSteps>
@@ -44,6 +44,6 @@ export default function EveInstructions() {
           </ul>
         </Step>
       </NumberedSteps>
-    </CollapsiblePanel>
+    </CharacterPanel>
   );
 }

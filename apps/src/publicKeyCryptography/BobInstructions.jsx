@@ -1,11 +1,11 @@
 /** @file Static instructions for the Bob character in the crypto widget */
 import React from 'react';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, SubStep} from './NumberedSteps';
 
 export default function BobInstructions() {
   return (
-    <CollapsiblePanel title="Bob's instructions">
+    <CharacterPanel title="Bob's instructions">
       <NumberedSteps>
         <Step>
           <b>Wait for Alice to announce the public modulus</b>
@@ -33,6 +33,6 @@ export default function BobInstructions() {
           </ul>
         </Step>
       </NumberedSteps>
-    </CollapsiblePanel>
+    </CharacterPanel>
   );
 }

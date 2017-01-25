@@ -1,7 +1,7 @@
 /** @file The Eve character from the cryptography widget */
 import React from 'react';
 import color from "../util/color";
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, Heading} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
@@ -129,7 +129,7 @@ const Eve = React.createClass({
       secretNumberEquationResult
     } = this.state;
     return (
-      <CollapsiblePanel title="Eve">
+      <CharacterPanel title="Eve">
         <Heading text="Eavesdrop!"/>
         <NumberedSteps>
           <Step>
@@ -228,7 +228,7 @@ const Eve = React.createClass({
             </table>
           </Step>
         </NumberedSteps>
-      </CollapsiblePanel>);
+      </CharacterPanel>);
   }
 });
 export default Eve;

@@ -1,6 +1,6 @@
 /** @file The Bob character panel from the crypto widget */
 import React from 'react';
-import CollapsiblePanel from './CollapsiblePanel';
+import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
 import IntegerTextbox from './IntegerTextbox';
@@ -87,7 +87,7 @@ const Bob = React.createClass({
       publicNumber
     } = this.state;
     return (
-      <CollapsiblePanel title="Bob">
+      <CharacterPanel title="Bob">
         <NumberedSteps>
           <Step>
             Enter <KeywordPublicModulus/>:
@@ -140,7 +140,7 @@ const Bob = React.createClass({
             </div>
           </Step>
         </NumberedSteps>
-      </CollapsiblePanel>);
+      </CharacterPanel>);
   }
 });
 export default Bob;
