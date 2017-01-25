@@ -12,7 +12,6 @@ const STUDENT_SECTION_ID = 'STUDENT';
 
 const initialState = Immutable.fromJS({
   initialized: false,
-  hideableAllowed: false,
   // mapping of section id to hidden stages for that section
   // Teachers will potentially have a number of section ids. For students we
   // use a sectionId of STUDENT_SECTION_ID, which represents the hidden state
@@ -36,11 +35,11 @@ export default function reducer(state = initialState, action) {
         state.get('bySection').size > 1) {
       throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
     }
-    return nextState.set('initialized', true);
+    return nextState;
   }
 
   if (action.type === ALLOW_HIDEABLE) {
-    return state.set('hideableAllowed', true);
+    return state.set('initialized', true);
   }
 
   return state;
@@ -83,14 +82,8 @@ export function allowHideable() {
   };
 }
 
-/**
- * Query server for hidden stage ids, and (potentially) toggle whether or not we
- * are able to mark stages as hideable.
- * @param {string} scriptName
- * @param {boolean} canHideStages If true, inform redux that we're able to toggle
- *   whether or not stages are hidden.
- */
-export function getHiddenStages(scriptName, canHideStages) {
+
+export function getHiddenStages(scriptName) {
   return dispatch => {
     $.ajax({
       type: 'GET',
@@ -111,9 +104,7 @@ export function getHiddenStages(scriptName, canHideStages) {
           dispatch(updateHiddenStage(sectionId, stageId, true));
         });
       });
-      if (canHideStages) {
-        dispatch(allowHideable());
-      }
+      dispatch(allowHideable());
     }).fail(err => {
       console.error(err);
     });
