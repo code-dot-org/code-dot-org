@@ -1,7 +1,7 @@
 /** @file Static instructions for the Eve character in the crypto widget */
 import React from 'react';
 import CollapsiblePanel from './CollapsiblePanel';
-import NumberedSteps, {Step, SubStep} from './NumberedSteps';
+import NumberedSteps, {Step, SubStep, Heading, Subheading} from './NumberedSteps';
 
 export default function EveInstructions() {
   return (
@@ -47,31 +47,3 @@ export default function EveInstructions() {
     </CollapsiblePanel>
   );
 }
-
-const style = {
-  header: {
-    fontSize: 'larger',
-    fontWeight: 'bold',
-    marginTop: 10
-  },
-  subheader: {
-    fontStyle: 'italic',
-    marignBottom: 10
-  }
-};
-
-const Heading = ({text}) => (
-  <div style={style.header}>
-    {text}
-  </div>
-);
-Heading.propTypes = {
-  text: React.PropTypes.string.isRequired
-};
-
-const Subheading = ({text}) => (
-  <div style={style.subheader}>
-    {text}
-  </div>
-);
-Subheading.propTypes = {...Heading.propTypes};
