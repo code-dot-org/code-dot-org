@@ -78,6 +78,13 @@ namespace :build do
 
       # Skip asset precompile in development where `config.assets.digest = false`.
       unless rack_env?(:development)
+        # Skip cleaning assets in production, to be extra sure we don't break anything.
+        # Do clean assets in staging and test, to hopefully expose any bugs where we
+        # depend on outdated assets.
+        unless rack_env?(:production)
+          HipChat.log 'Cleaning <b>dashboard</b> assets...'
+          RakeUtils.rake 'assets:clean'
+        end
         HipChat.log 'Precompiling <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:precompile'
       end
