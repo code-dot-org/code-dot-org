@@ -19,10 +19,6 @@ describe('hiddenStage reducer tests', () => {
   let store;
   let reducerSpy;
 
-  before(() => {
-    experiments.setEnabled('hiddenStages', true);
-  });
-
   // Intercept all XHR requests, storing the last one
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
@@ -48,10 +44,11 @@ describe('hiddenStage reducer tests', () => {
     const state = store.getState().hiddenStage;
     assert.deepEqual(state.toJS(), {
       initialized: false,
+      hideableAllowed: false,
       bySection: {}
     });
 
-    const action = getHiddenStages('scriptName');
+    const action = getHiddenStages('scriptName', true);
     store.dispatch(action);
 
     lastRequest.respond(200, { "Content-Type": "application/json" },
@@ -60,6 +57,7 @@ describe('hiddenStage reducer tests', () => {
     const nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
+      hideableAllowed: true,
       bySection: {
         STUDENT: {
           123: true,
@@ -73,10 +71,11 @@ describe('hiddenStage reducer tests', () => {
     const state = store.getState().hiddenStage;
     assert.deepEqual(state.toJS(), {
       initialized: false,
+      hideableAllowed: false,
       bySection: {}
     });
 
-    const action = getHiddenStages('scriptName');
+    const action = getHiddenStages('scriptName', true);
     store.dispatch(action);
 
     lastRequest.respond(200, { "Content-Type": "application/json" },
@@ -89,6 +88,7 @@ describe('hiddenStage reducer tests', () => {
     const nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
       initialized: true,
+      hideableAllowed: true,
       bySection: {
         10: {
           123: true,
@@ -105,6 +105,7 @@ describe('hiddenStage reducer tests', () => {
     const state = store.getState().hiddenStage;
     assert.deepEqual(state.toJS(), {
       initialized: false,
+      hideableAllowed: false,
       bySection: {}
     });
 
@@ -115,7 +116,8 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: false,
+      initialized: true,
+      hideableAllowed: false,
       bySection: {
         10: {
           123: true
@@ -128,7 +130,8 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: false,
+      initialized: true,
+      hideableAllowed: false,
       bySection: {
         10: {
           123: true
@@ -144,7 +147,8 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: false,
+      initialized: true,
+      hideableAllowed: false,
       bySection: {
         10: {
           123: false
@@ -160,7 +164,8 @@ describe('hiddenStage reducer tests', () => {
     store.dispatch(action);
     nextState = store.getState().hiddenStage;
     assert.deepEqual(nextState.toJS(), {
-      initialized: false,
+      initialized: true,
+      hideableAllowed: false,
       bySection: {
         10: {
           123: false,
