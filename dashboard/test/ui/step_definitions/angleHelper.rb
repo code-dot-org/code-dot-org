@@ -33,6 +33,10 @@ Then(/^the angle dropdown is at "(\d*)"$/) do |val|
 end
 
 Then(/^the Angle Helper circle is at coordinates \((\d*),(\d*)\)$/) do |x, y|
-  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx'))")).to eq(x.to_i)
-  expect(@browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy'))")).to eq(y.to_i)
+  # use a short timeout to accomodate the smoothing animation on the
+  # angle helper circle
+  wait_with_short_timeout.until {
+    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cx')) === #{x};")
+    @browser.execute_script("return parseInt($('.blocklyWidgetDiv circle').attr('cy')) === #{y};")
+  }
 end
