@@ -2,7 +2,6 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/properties'
 
 # Connection to read from reporting database.
 PEGASUS_REPORTING_DB_READER = sequel_connect(CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader)
