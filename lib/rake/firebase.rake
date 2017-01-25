@@ -66,11 +66,11 @@ namespace :firebase do
   end
 
   desc 'Compile and upload firebase rules.'
-  task :rules => [:compile_rules, :upload_rules]
+  task rules: [:compile_rules, :upload_rules]
 
-  task :all => [:compile_rules, :upload_rules, :set_config]
+  task all: [:compile_rules, :upload_rules, :set_config]
   task ci: [:upload_rules, :set_config, :clear_test_channels]
 end
 
 desc 'Compile and upload firebase rules, and set firebase config.'
-task :firebase => ['firebase:all']
+task firebase: ['firebase:all']

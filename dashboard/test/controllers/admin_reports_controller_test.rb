@@ -19,18 +19,16 @@ class AdminReportsControllerTest < ActionController::TestCase
     @script_level2 = create(:script_level, script: @script, stage: @stage2, position: 2)
 
     @teacher = create(:teacher)
-    @teacher_section = create(:section, :user => @teacher)
+    @teacher_section = create(:section, user: @teacher)
 
     @student = create(:user)
-    @follower = Follower.create(:section => @teacher_section, :user => @teacher, :student_user => @student)
+    @follower = Follower.create(section: @teacher_section, user: @teacher, student_user: @student)
   end
 
   generate_admin_only_tests_for :admin_progress
   generate_admin_only_tests_for :admin_stats
-  generate_admin_only_tests_for :all_usage
   generate_admin_only_tests_for :debug
   generate_admin_only_tests_for :directory
-  generate_admin_only_tests_for :diversity_survey
   generate_admin_only_tests_for :level_answers
 
   test 'should get admin progress page' do

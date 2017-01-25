@@ -58,12 +58,38 @@ module BrowserHelpers
         "$(\"#{from_selector}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
+  def install_js_error_recorder
+    @browser.execute_script(<<-JS
+      // Wrap existing window onerror handler with a script error recorder.
+      var windowOnError = window.onerror;
+      window.onerror = function (msg) {
+        window.detectedJSErrors = window.detectedJSErrors || [];
+        window.detectedJSErrors.push(msg);
+        if (windowOnError) {
+          return windowOnError.apply(this, arguments);
+        }
+      };
+    JS
+    )
+  end
+
+  def check_window_for_js_errors(check_reason_description)
+    unless @browser.nil?
+      js_errors = @browser.execute_script('return window.detectedJSErrors;')
+      if js_errors
+        puts "DEBUG: [#{check_reason_description}] JS errors: #{CGI.escapeHTML js_errors.join(' | ')}"
+      else
+        puts "DEBUG: [#{check_reason_description}] No JS errors found on current page."
+      end
+    end
+  end
+
   def wait
-    Selenium::WebDriver::Wait.new(:timeout => 60 * 2)
+    Selenium::WebDriver::Wait.new(timeout: 60 * 2)
   end
 
   def short_wait
-    Selenium::WebDriver::Wait.new(:timeout => 5)
+    Selenium::WebDriver::Wait.new(timeout: 5)
   end
 end
 

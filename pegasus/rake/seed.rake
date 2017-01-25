@@ -94,6 +94,7 @@ class CsvToSqlTable
       '_dt' => {type: 'datetime'},
       '_f' => {type: 'float'},
       '_i' => {type: 'integer'},
+      '_bi' => {type: 'bigint'},
       '_s' => {type: 'varchar(255)'},
       '_ss' => {type: 'varchar(255)'},
       '_t' => {type: 'text'},
@@ -268,11 +269,11 @@ namespace :seed do
     end
   end
 
-  task :migrate => imports.keys.map{|i| stub_path(i)} do
+  task migrate: imports.keys.map{|i| stub_path(i)} do
     Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import}
   end
 
-  task :reset => imports.keys do
+  task reset: imports.keys do
     Dir.glob(pegasus_dir('data/*.csv')){|i| CsvToSqlTable.new(i).import!}
   end
 
@@ -280,7 +281,7 @@ namespace :seed do
     Dir.glob(pegasus_dir('data/*.gsheet')){|i| GSheetToCsv.new(i).import}
   end
 
-  task :sync => [:sync_v3, sync_tasks, :migrate].flatten do
+  task sync: [:sync_v3, sync_tasks, :migrate].flatten do
   end
 
   task :help do

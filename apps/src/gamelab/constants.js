@@ -32,6 +32,8 @@ module.exports.AnimationCategories = {
 	'category_vehicles': 'Vehicles',
 	'category_characters': 'Characters',
 	'category_environment': 'Environment',
+	'category_food': 'Food',
+	'category_tools': 'Tools',
 	'category_gameplay': 'Game play',
 	'category_obstacles': 'Obstacles',
 	'category_all': 'All'

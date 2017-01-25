@@ -577,7 +577,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -612,7 +612,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -640,7 +640,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -670,7 +670,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -700,7 +700,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expected_response = build_expected_response(
       level_source: "http://test.host/c/#{assigns(:level_source).id}",
-      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}")
+      save_to_gallery_url: "/gallery?gallery_activity%5Bactivity_id%5D=#{assigns(:activity).id}&gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -856,7 +856,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource, LevelSourceImage) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
@@ -883,11 +883,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel, GalleryActivity, LevelSourceImage) do
-        post :milestone, @milestone_params.merge(user_id: 0, :save_to_gallery => 'true', image: Base64.encode64(@good_image))
+        post :milestone, @milestone_params.merge(user_id: 0, save_to_gallery: 'true', image: Base64.encode64(@good_image))
       end
     end
 
-    assert_equal nil, assigns(:level_source_image)
+    assert_nil assigns(:level_source_image)
   end
 
   test 'sharing program with swear word returns error' do
@@ -1042,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'milestone changes to next stage in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
-    (1..3).each { |n| create(:level, :name => "Level #{n}", :game => game) }
+    (1..3).each { |n| create(:level, name: "Level #{n}", game: game) }
     script_dsl = ScriptDSL.parse(
       "stage 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; stage 'Milestone Stage 2'; level 'Level 3'",
       "a filename"

@@ -371,6 +371,16 @@ window.apps = {
   // Define blockly/droplet-specific callbacks for projects to access
   // level source, HTML and headers.
   sourceHandler: {
+    /**
+     * NOTE: when adding a new method here, ensure that all other sourceHandlers
+     * (e.g. in pixelation.js) have that same method defined.
+     */
+    setMakerAPIsEnabled: function (enableMakerAPIs) {
+      getAppOptions().level.makerlabEnabled = enableMakerAPIs;
+    },
+    getMakerAPIsEnabled: function () {
+      return getAppOptions().level.makerlabEnabled;
+    },
     setInitialLevelHtml: function (levelHtml) {
       getAppOptions().level.levelHtml = levelHtml;
     },

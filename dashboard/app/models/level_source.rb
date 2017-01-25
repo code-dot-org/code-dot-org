@@ -24,7 +24,7 @@ class LevelSource < ActiveRecord::Base
 
   has_many :activities
 
-  validates_length_of :data, :maximum => 20000
+  validates_length_of :data, maximum: 20000
   validates :data, no_utf8mb4: true
 
   # This string used to sometimes appear in program XML.
@@ -61,23 +61,23 @@ class LevelSource < ActiveRecord::Base
 
   # Get the id of the LevelSource with the standardized version of self.data.
   def get_standardized_id
-    if standardized?
-      id
-    else
-      data = self.data.gsub(XMLNS_STRING, '')
-      LevelSource.where(level_id: level_id,
-                        data: data,
-                        md5: Digest::MD5.hexdigest(data)).first_or_create.id
-    end
+    return id if standardized?
+    data = self.data.gsub(XMLNS_STRING, '')
+    level_source = LevelSource.where(
+      level_id: level_id,
+      data: data,
+      md5: Digest::MD5.hexdigest(data)
+    ).first_or_create
+
+    level_source.id
   end
 
   # Old flappy levels used a different block type as their when run. Migrate
   # these as we try to access them
   def replace_old_when_run_blocks
-    if level.game.name == 'Flappy' && data.include?('flappy_whenRunButtonClick')
-      self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
-      self.md5 = Digest::MD5.hexdigest(data)
-      save!
-    end
+    return unless level.game.name == 'Flappy' && data.include?('flappy_whenRunButtonClick')
+    self.data = data.gsub('flappy_whenRunButtonClick', 'when_run')
+    self.md5 = Digest::MD5.hexdigest(data)
+    save!
   end
 end
