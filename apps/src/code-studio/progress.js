@@ -133,7 +133,7 @@ progress.renderCourseProgress = function (scriptData, currentLevelId) {
   var mountPoint = document.createElement('div');
 
   if (scriptData.hideable_stages) {
-    store.dispatch(getHiddenStages(scriptData.name));
+    store.dispatch(getHiddenStages(scriptData.name, true));
   }
 
   $.ajax(
