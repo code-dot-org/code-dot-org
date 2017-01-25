@@ -27,20 +27,26 @@ DATA_FILE = ARGV[0].freeze
 OLD_WHEN_RUN = 'flappy_whenRunButtonClick'.freeze
 NEW_WHEN_RUN = 'when_run'.freeze
 
-rows_processed = 0
+puts "READING CSV FILE #{DATA_FILE}..."
+
+level_source_ids = []
+CSV.foreach(DATA_FILE) do |row|
+  level_source_ids << row[0].to_i
+end
+
+puts "DONE READING CSV (#{level_source_ids.size} rows)."
+
+puts "UPDATING DB (#{1 + level_source_ids / 1_000} slices)..."
+
+slice_number = 0
 rows_fixed = 0
-
-begin
-  CSV.foreach(DATA_FILE) do |row|
-    rows_processed += 1
-    puts "PROCESSED #{rows_processed}..." if rows_processed % 10_000 == 0
-    puts "  FIXED #{rows_fixed}..." if rows_fixed % 100 == 1
-
-    level_source_id = row[0]
-    level_source = LevelSource.find_by_id(level_source_id)
-
-    next unless level_source.data.include? OLD_WHEN_RUN
-
+level_source_ids.each_slice(1_000) do |slice_ids|
+  puts "PROCESSING SLICE #{slice_number}... (ALREADY FIXED: #{rows_fixed})..."
+  LevelSource.
+    where(id: slice_ids).
+    where("data LIKE '%flappy_whenRunButtonClick%'").
+    each do |level_source|
+    # Migrate the data from the old block to the new block.
     new_data = level_source.data.gsub(OLD_WHEN_RUN, NEW_WHEN_RUN)
     level_source.update!(
       data: new_data,
@@ -49,7 +55,8 @@ begin
 
     rows_fixed += 1
   end
-rescue Exception => e
-  puts "EXCEPTION: #{rows_processed}..."
-  raise e
+
+  slice_number += 1
 end
+
+puts "DONE UPDATING DB (#{rows_fixed} updated)."
