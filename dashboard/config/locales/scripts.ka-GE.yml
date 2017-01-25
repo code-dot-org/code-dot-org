@@ -39,7 +39,7 @@
             ან ისტორიებს, რომელთა გაზიარება შეეძლებათ. რეკომენდებულია 2-5 კლასებისთვის."
           description_short: "კურსი 2 შექმნილია მოსწავლეებისთვის, რომელთაც უკვე შეუძლიათ
             კითხვა."
-          description_audience: "ასაკი 6-18"
+          description_audience: "ასაკი: 6+ (უნდა შეეძლოს კითხვა)"
           stage:
             'Artist: Debugging': "მხატვარი: ბაგების გამოსწორება"
             'Artist: Loops': "მხატვარი: ციკლები"
@@ -335,6 +335,7 @@
             Calc: "კალკულატორი"
             Eval: "შეფასება"
             Studio: "სტუდია"
+          description_audience: ''
         flappy:
           title: Flappy კოდი
           description: გინდათ, თქვენი საკუთარი თამაში დაწეროთ 10 წუთში? ნახეთ ჩვენი
@@ -342,6 +343,7 @@
           description_short: "დაწერეთ თქვენი Flappy თამაში 10 წუთზე ნაკლებში!"
           stage:
             Flappy Code: Flappy კოდი
+          description_audience: ''
         jigsaw:
           title: "ფაზლი"
           description: "სცადეთ ჩვენი პაზლის ტუტორიალი"
@@ -1170,7 +1172,7 @@
             Reading Records: Reading Records
             Search Terms: "ძებნის წესები"
             Unique IDs, Delete and Update Records: Unique IDs, Delete and Update Records
-            Using Data in the Real World: "მონაცემთა გამოუენება რეალურ ცხოვრებაში"
+            Using Data in the Real World: "მონაცემთა გამოყენება რეალურ ცხოვრებაში"
             Web Requests and APIs: Web Requests and APIs
             What Data Can Tell Us: "რას გვეუბნებიან მონაცემები"
             Why Make Apps?: Why Make Apps?
@@ -1672,6 +1674,10 @@
             'Building an App: Clicker Game': 'Building an App: Clicker Game'
             'Building an App: Image Scroller': 'Building an App: Image Scroller'
             'Building an App: Canvas Painter': 'Building an App: Canvas Painter'
+            Unit 5 Assessment 5 - Practice AP questions: Unit 5 Assessment 5 - Practice
+              AP questions
+            Unit 5 Assessment 5 - AP Pseudocode Practice Questions: Unit 5 Assessment
+              5 - AP Pseudocode Practice Questions
           description_audience: ''
         csp6:
           title: CS Principles Unit 6 - Performance Tasks
@@ -1683,6 +1689,15 @@
             Create PT Prep: Create PT Prep
             Explore PT: Explore PT
             Explore PT Prep: Explore PT Prep
+            Create PT Prep - Reviewing the Task: Create PT Prep - Reviewing the Task
+            Create PT Prep - Making a Plan: Create PT Prep - Making a Plan
+            Create PT - Complete the Task: Create PT - Complete the Task
+            Explore PT Prep - Reviewing the Task: Explore PT Prep - Reviewing the
+              Task
+            Explore PT - Making a Plan: Explore PT - Making a Plan
+            Explore PT - Complete the Task: Explore PT - Complete the Task
+            Tech Setup - Your AP Digital Portfolio and Other Tools: Tech Setup - Your
+              AP Digital Portfolio and Other Tools
           description_audience: ''
         CSDU3-Draft:
           title: " TEMP CSD Unit 3 - Interactive Games and Animations"
@@ -2462,10 +2477,10 @@
         basketball:
           stage:
             Bounce: Bounce
-          title: Basketball
+          title: "აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში"
           description_audience: ''
-          description_short: Code your own basketball game
-          description: ''
+          description_short: "აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში"
+          description: "აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში"
         sample-csp5:
           stage:
             Controlling Memory with Variables: "მეხსიერების გაკონტროლება ცვლადებით"
@@ -2570,13 +2585,13 @@
           description: ''
         minecraft:
           stage:
-            Minecraft Hour of Code Designer: Minecraft Hour of Code Designer
-          title: Minecraft Hour of Code Designer
+            Minecraft Hour of Code Designer: "მაინკრაფტის კოდის ერთი საათი: დიზაინერი"
+          title: "მაინკრაფტის კოდის ერთი საათი: დიზაინერი"
           description_audience: ''
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
+          description_short: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის
+            საკუთარ სამყაროში."
+          description: "დააპროგრამე ცხოველები და სხვა ქმნილებები მაინკრაფტის საკუთარ
+            სამყაროში."
         flappy-impact-study:
           stage:
             Pre Hour of Code Survey: Pre Hour of Code Survey
@@ -2778,10 +2793,10 @@
         sports:
           stage:
             Sports: Sports
-          title: Sports
+          title: "შექმენით საკუთარი სპორტული თამაში"
           description_audience: ''
-          description_short: Code your own sport
-          description: ''
+          description_short: "შეაერთეთ სხვადასხვა სპორტული თამაშები"
+          description: "შეაერთეთ სხვადასხვა სპორტული თამაშები"
         2016_sciencePD-phase2b:
           stage:
             Welcome!: "კეთილი იყოს თქვენი მობრძანება!"
@@ -2903,3 +2918,14 @@
           description_audience: ''
           description_short: ''
           description: Testing for Mr. Harvey's class
+        sciencepd5:
+          stage:
+            Welcome!: "კეთილი იყოს თქვენი მობრძანება!"
+            Earth Science Challenges: Earth Science Challenges
+            Life Science Challenges: Life Science Challenges
+            Physical Science Challenges: Physical Science Challenges
+            Wrap-Up: "შეჯამება"
+          title: 'CS in Science: Part 5'
+          description_audience: ''
+          description_short: 'Phase 3: Prepare for semester 2 workshop'
+          description: 'Phase 3: Prepare for semester 2 workshop'

@@ -37,6 +37,7 @@ pt-BR:
         'NetSim': 'Simulador de internet'
         'Custom': 'Artista'
         'CustomStudio': 'Laboratório'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'Bronze'

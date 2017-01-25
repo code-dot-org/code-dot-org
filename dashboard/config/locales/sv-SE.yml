@@ -353,7 +353,10 @@
     delete_text_teacher_note: 'Observera: genom att ta bort ditt konto tas inte elevernas
       konton bort.'
     delete_confirm: "Är du säker du vill ta bort ditt konto?"
-    deleted_user: deleted user
+    deleted_user: borttagen användare
+    no_password_because_oauth: No password because you sign in with a third-party
+      provider.
+    no_password_because_sponsored: See your teacher to manage your password.
   user_level:
     completed: Avklarade
     tried: Försökte
@@ -427,7 +430,7 @@
     announcement_learn_more_button: Lär dig mer
     announcement_try_now_button: Prova nu
     announcement_host_an_hour_button: Var värd för en Hour of Code
-    announcement_watch_video_button: Watch video
+    announcement_watch_video_button: Titta på film
     announcement_petition: Som lärare är du en del av en rörelse som syftar till att
       ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap.
     announcement_petition_button: Ange ditt namn
@@ -914,6 +917,9 @@
     content: Innehåll
     practice: Undervisningsmetoder
     peer_review: Din recension
+    ramp_up: Ramp-Up
+    end_of_course_project: End of Course Project
+    optional_stages: Optional Stages
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

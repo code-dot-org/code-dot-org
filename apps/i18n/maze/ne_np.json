@@ -1,5 +1,5 @@
 {
-  "at": "at",
+  "at": "मा",
   "atFlower": "at flower",
   "atHoneycomb": "at honeycomb",
   "avoidCowAndRemove": "avoid the cow and remove 1",
@@ -12,7 +12,7 @@
   "collectorCollectedNotEnough": "Keep coding! You need to collect at least {goal, plural, one {1 item} other {# items}}.",
   "collectorCollectedTooMany": "That space doesn't have enough items for me to collect.",
   "collectorTooManyBlocks": "You can only use {blockLimit} blocks. Take a look at your code and try again!",
-  "continue": "Continue",
+  "continue": "जारी राख्नुहोस्",
   "corn": "corn",
   "cornTooltip": "Harvest some corn",
   "didNotCollectAllCrops": "Make sure you don't leave any crops behind!",
@@ -70,7 +70,7 @@
   "nectarRemaining": "nectar",
   "nectarTooltip": "Get nectar from a flower",
   "nextLevel": "Congratulations! You have completed this puzzle.",
-  "no": "No",
+  "no": "होइन",
   "noPathAhead": "path is blocked",
   "noPathLeft": "no path to the left",
   "noPathRight": "no path to the right",
@@ -111,6 +111,6 @@
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
   "word": "Find the word",
   "wrongCropError": "I can't harvest that crop from here.",
-  "yes": "Yes",
+  "yes": "हो",
   "youSpelled": "You spelled"
 }

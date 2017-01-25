@@ -37,6 +37,7 @@
         NetSim: "インターネット シミュレータ"
         Custom: "アーティスト"
         CustomStudio: "プレイラボ"
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: "銅"
@@ -362,13 +363,12 @@
         maze_wordsearch_k_2: SOUTHになるように、私を動かしてください。
         maze_wordsearch_k_3: WESTになるように、私を動かしてください。
         maze_wordsearch_k_4: NORTHになるように、私を動かしてください。
-        maze_wordsearch_k_6: Move me East and then South to spell the word JUMP
-        maze_wordsearch_k_9: Move me one way, then another to spell the word CODE
-        maze_wordsearch_k_13: Move me one way, then another to spell the word DEBUG
-        maze_wordsearch_k_15: Move me one way, then another to spell the word ABOVE
-        maze_wordsearch_k_16: Move me one way, then another to spell the word BELOW
-        maze_wordsearch_k_20: This is a test! Move me one way, then another to spell
-          the word STORY
+        maze_wordsearch_k_6: "わたしを東(ひがし) と南（みなみ) にうごかして、JUMPとかいてください。"
+        maze_wordsearch_k_9: "わたしをうごかして、CODEのスペリングをかいてください。"
+        maze_wordsearch_k_13: "わたしをうごかして、DEBUGとかいてください。"
+        maze_wordsearch_k_15: "わたしをうごかして、ABOVEとかいてください。"
+        maze_wordsearch_k_16: "わたしをうごかして、BELOWとかいてください。"
+        maze_wordsearch_k_20: "これはテストです。わたしをうごかして、STORYとかいてください。"
         applab_ec_simple: Create your app by using the blocks in the toolbox.
         turtle_ec_1_2: 'Now, draw a square. NOTE: use your favorite color by picking
           it in the new "penColor" block.'

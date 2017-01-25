@@ -1,7 +1,7 @@
 {
   "ACTUAL":"அழைப்பு",
   "ADD":"சேர்",
-  "ADD_COMMENT":"கருத்துரையைச் சேர்",
+  "ADD_COMMENT":"கருத்து தெரிவி",
   "ADD_PARAMETER":"அளவுருவைச் சேர்",
   "CANCEL":"ரத்து செய்",
   "CHANGE_VALUE_TITLE":"மதிப்பை மாற்று:",
@@ -66,7 +66,7 @@
   "CONTROLS_WHILEUNTIL_OPERATOR_WHILE":"ஆக இருக்கும்போது திரும்பச்செய்",
   "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL":"மதிப்பு தவறாக இருக்கும்பொழுது சில கட்டளைகளை இயக்கு.",
   "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE":"மதிப்பு மெய்யாக இருக்கும்பொழுது சில கட்டளைகளை இயக்கு.",
-  "DEFINE_HEADER_DEFINITION":"வரையறை",
+  "DEFINE_HEADER_DEFINITION":"விளக்கம்",
   "DEFINE_FUNCTION_DEFINE":"விளக்கு",
   "DEFINE_FUNCTION_FOR_EXAMPLE":"கீழ்க்காணும் இயக்கியை விளக்கிவிட்டு மீண்டும் முயல்க.",
   "DELETE":"Delete",

@@ -37,6 +37,7 @@ ko:
         'NetSim': '인터넷 시뮬레이터'
         'Custom': '화가'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': '동'
@@ -113,10 +114,10 @@ ko:
         'turtle_2_4': "자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로 수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요."
         'turtle_2_5': "50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. \"사각형 그리기\" 함수 블럭을 5 번 사용면 됩니다."
         'turtle_2_6': "이번에는 사각형들을 그리기 위해서 카운터를 사용해 봅시다. 한 변의 길이가 카운터와 같은 사각형들을 그려야 합니다. \"카운터\" 블럭을 사용하세요. 힌트: 변수 분류에 들어있습니다."
-        'turtle_2_7': "이제, 달팽이 나선을 그려봅시다. 하지만 블럭이 실행되지 않도록 되어있습니다. \"카운터\" 블럭을 사용해서 달팽이 나선을 그려 보세요. 반복 분류 안에는 \"카운트 : \" 블럭이 있고, 변수 분류에는 변수 \"카운터\" 가 있습니다."
+        'turtle_2_7': "여기 나선형을 그리는 프로그램이 있습니다. 하지만 블럭을 사용할 수 없어서 동작하지 않습니다. 동일한 모양의 나선형을 그리기 위해 \"for\" (반복) 와 \"counter\" (변수) 블럭을 사용해서 새로운 프로그램을 만들어보세요"
         'turtle_2_7_5': "이번에는 \"눈사람 그리기\" 함수가 있습니다.(함수 분류에 있음) 크기가 250, 100 인 눈사람 2개를 만들어 보세요."
         'turtle_2_8': "이번에는 잘 생각해야 합니다. \"눈사람 그리기\" 함수와, 동작 분류에 있는 \"앞으로 점프\" 블럭을 사용하세요. 3 개의 눈사람을 서로 다른 색으로 100 픽셀 만큼씩 띄워 그려보세요."
-        'turtle_2_9': "\"카운트 : \" 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은 60 픽셀 씩 떨어져 있어야 합니다.'\nturtle_2_10: \"이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서 랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
+        'turtle_2_9': "\"for\" 반복문을 사용해서 높이가 110, 100, 90, 80 그리고 70 인 눈사람을 그려보세요. 눈사람은 60픽셀씩 떨어져 있어야 합니다"
         'turtle_2_10': "이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서 랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
         'maze_karel_2_1': "밭에 있는 모든 흙더미와 구덩이를 없앨 수 있게 도와 주세요. \"반복\" 블럭을 활용하면 블럭을 여러 번 사용할 필요가 없습니다. 힌트: 반복 블럭 안에 다른 반복 블럭을 넣을 수 있습니다."
         'maze_karel_2_2': "\"메우기 5번\"이라는 블럭을 새로 만들어 \"함수\" 분류에 넣어 두었습니다. 그걸 이용해서 구덩이를 메울 수 있게 도와주세요."
@@ -157,22 +158,22 @@ ko:
         'maze_3_2': "초록 돼지를 잡을 수 있도록, 프로그램을 만들어줘."
         'maze_3_3': "어떻게 해야 초록 돼지를 잡을 수 있지? TNT 폭탄이 있는 곳으로는 갈 수 없어!"
         'maze_3_4': "아~~~! TNT 폭탄을 피해서 초록 돼지를 잡을 수 있게 해 줘."
-        'bounce_1_basketball': "Attach a block to the \"when left arrow\" block and press \"Run\". Move the hand using the left arrow to reach the finish target."
-        'bounce_2_basketball': "Attach a block to the \"when right arrow\" and \"when left arrow\" blocks. Move the hand to reach both finish targets."
-        'bounce_5_basketball': "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag."
-        'bounce_6_basketball': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_basketball': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-        'bounce_10_basketball': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice."
-        'bounce_11_basketball': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_basketball': "Create your own Basketball game. You can change all the rules. When you're done, click Finish to let friends try your game on their phones."
-        'bounce_1_sports': "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
-        'bounce_2_sports': "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
-        'bounce_5_sports': "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
-        'bounce_6_sports': "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
-        'bounce_7_sports': "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
-        'bounce_10_sports': "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
-        'bounce_11_sports': "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
-        'bounce_12_sports': "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
+        'bounce_1_basketball': "블럭을 \"when left arrow\" 블럭에 연결하고 \"Run\" 을 눌러보세요. 목표물에 도착할때까지 왼쪽방향키로 손을 움직여보세요."
+        'bounce_2_basketball': "블럭을 \"when right arrow\" 와 \"when left arrow\" 블럭에 연결하세요. 양쪽의 목표물에 도착할때까지 손을 움직여보세요."
+        'bounce_5_basketball': "공을 손을 향에 날려보낼 겁니다. 공이 깃발에 도달하는지 확인하기 위해 블럭을 \"when ball hits hand\" 블럭에 연결합니다."
+        'bounce_6_basketball': "이제 깃발이 가장 위에 있습니다. 퍼즐을 풀기위해 블럭들을 양쪽의 \"when ball hits\" 블럭에 연결해야 합니다."
+        'bounce_7_basketball': "블럭들을 각각의 \"when\" 블럭에 연결하세요. 깃발에 때릴 때까지 공을 튕기세요"
+        'bounce_10_basketball': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요."
+        'bounce_11_basketball': "이제 블럭을 \"when run\" 블럭에 연결할 수 있습니다. 새로운 \"throw new ball\" 블럭을 한군데 이상 연결해야 합니다. 그리고 손의 속도와 배경을 변경해보고, 상대방이 점수를 두번 내기 전에 몇점을 낼 수 있는지 알아보세요"
+        'bounce_12_basketball': "자신만의 농구게임을 만드세요. 모든 규칙을 변경할 수 있습니다. 설정이 완료 되면, 당신의 친구들이 게임을 시작할 수 있도록 Finish 버튼을 클릭하세요"
+        'bounce_1_sports': "깃발로 획득하세요! 플레이어를 깃발로 이동하기 위해 블럭을 \"when left arrow\" 블럭에 연결하고 \"Run\" 을 누르세요"
+        'bounce_2_sports': "두개의 깃발이 있습니다. 플레이어가 양방향으로 움직일 수 있도록 블럭을 \"when left arrow\" 와 \"when right arrow\" 블럭에 연결하세요."
+        'bounce_5_sports': "하키퍽이 플레이어를 향해 날아갑니다. 깃발을 때리기 위해 블럭을 \"when ball hits player\" 블럭에 연결하세요."
+        'bounce_6_sports': "이제 깃발이 가장 위에 있습니다. 퍼즐을 풀기위해 블럭들을 양쪽의 \"when ball hits\" 블럭에 연결해야 합니다."
+        'bounce_7_sports': "블럭들을 각각의 \"when\" 블럭에 연결하세요. 깃발에 때릴 때까지 공을 튕기세요"
+        'bounce_10_sports': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요!"
+        'bounce_11_sports': "이제 블럭을 \"when run\" 블럭에 연결할 수 있습니다. 새로운 \"throw new ball\" 블럭을 한군데 이상 연결해야 합니다. 그리고 손의 속도와 배경을 변경해보고, 상대방이 점수를 두번 내기 전에 몇점을 낼 수 있는지 알아보세요"
+        'bounce_12_sports': "자신만의 게임을 만들어보세요! 당신은 이 게임의 주인: 당신은 모든 규칙을 만들 수 있고, 스포츠들을 창조적으로 조합할 수 있습니다. 완료되면 Finish 버튼을 클릭해서 당신의 친구들이 게임을 시작할수 있도록 하세요."
         'bounce_1': "\"왼쪽 방향키가 눌렸을 때\" 블럭에 다른 블럭을 붙인 후, \"실행하기\"를 눌러 보세요. 왼쪽 방향키를 사용해 목표 지점까지 이동시켜 보세요."
         'bounce_2': "\"오른쪽 방향키가 눌렸을 때\", \"왼쪽 방향키가 눌렸을 때\" 블럭에 다른 블럭을 붙인 후, 양쪽의 목표 지점까지 이동시켜 보세요."
         'bounce_3': "\"위쪽 방향키가 눌렸을 때\" 을 비슷하게 사용해 보세요. 위쪽 목표 지점까지 이동시켜 보세요."
@@ -180,7 +181,7 @@ ko:
         'bounce_5': "공을 아래로 내려보낼 것입니다. \"라켓에 닿으면\" 블럭을 붙여 공이 목표지점에 도착하게 만들어 보세요."
         'bounce_6': "이번 목표지점은 가장 위쪽 입니다. \"공이 부딪치면\"블럭을 사용해 퍼즐을 해결해 보세요."
         'bounce_7': "\"~할 때\" 블럭에 블럭들을 붙여보세요. 목표 지점에 닿을 때까지 공이 튀기도록 해보세요. "
-        'bounce_10': "이번 목표지점은 위쪽입니다. \"내 점수 올리기\", \"상대 점수 올리기\" 블럭을 붙여, \"공이 들어갔을 때\", \"공이 들어가지 않았을 떼\" 블럭으로 게임을 만들어 보세요. 상대방 점수가 내 점수의 2배가 안되도록 점수를 얻어보세요."
+        'bounce_10': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요!"
         'bounce_11': "\"프로그램을 실행하면\" 블럭에 다른 블럭들을 붙일 수 있습니다. 새로운 \"새 공 만들기\" 블럭을 한 군데 이상 붙여야 합니다. 그리고 배경도 바꾸어 보고, 상대방 케릭터의 점수가 2배가 되지 않도록 케릭터의 스피드를 바꿔 보세요."
         'bounce_12': "바운스 게임을 직접 만들어보세요. 화면에 보이는 것들과 규칙을 마음대로 바꿀 수 있습니다. 게임을 완성하면 만든 게임을 친구들이 스마트폰에서 직접해 볼 수 있도록 마침을 누르세요."
         'Custom_builder': "왼쪽의 도구 블럭 상자에서 오른쪽의 코딩창으로 블럭들을 끌어와서 원하는 레벨을 만드세요. 모두 준비가 되면 \"실행하기\"를 누르면 됩니다."
@@ -489,11 +490,11 @@ ko:
         'iceage_intro': '아이스 에이지 Hour of Code - 소개'
         'iceage_events': '아이스 에이지 Hour of Code - 이벤트'
         'iceage_repeat': '아이스 에이지 Hour of Code - 반복문'
-        'mc_2016_intro': 'Minecraft Hour of Code - Introduction'
-        'mc_2016_loops': 'Minecraft Hour of Code - Loops'
-        'mc_2016_events': 'Minecraft Hour of Code - Events'
-        'mc_2016_spawn': 'Minecraft Hour of Code - Spawn'
-        'mc_2016_congrats': 'Minecraft Hour of Code - Congratulations'
+        'mc_2016_intro': '마인크래프트 Hour of Code - 소개'
+        'mc_2016_loops': '마인크래프트 Hour of Code - 반복'
+        'mc_2016_events': '마인크래프트 Hour of Code - 이벤트'
+        'mc_2016_spawn': '마인크래프트 Hour of Code - 생성'
+        'mc_2016_congrats': '마인크래프트 Hour of Code - 축하합니다'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

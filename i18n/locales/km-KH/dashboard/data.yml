@@ -37,6 +37,7 @@ km:
         'NetSim': 'Internet Simulator'
         'Custom': 'Artist'
         'CustomStudio': 'Play Lab'
+        'Gamelab': 'Game Lab'
     trophy:
       name:
         'Bronze': 'សំរឹទ្ធ'
