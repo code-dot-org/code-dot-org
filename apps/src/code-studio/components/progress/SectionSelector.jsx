@@ -88,6 +88,8 @@ const SectionSelector = React.createClass({
   }
 });
 
+export const UnconnectedSectionSelector = SectionSelector;
+
 export default connect(state => ({
   selectedSectionId: state.sections.selectedSectionId,
   sections: state.sections.sectionIds.map(id => ({
