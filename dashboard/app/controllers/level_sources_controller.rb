@@ -41,10 +41,8 @@ class LevelSourcesController < ApplicationController
   def update
     if @level_source.update(level_source_params)
       if level_source_params[:hidden]
-        # delete all gallery activities
-        @level_source.gallery_activities.each do |gallery_activity|
-          GalleryActivity.destroy(gallery_activity.id) # the query with joins gives me read only records...
-        end
+        # Delete all gallery activities.
+        GalleryActivity.where(level_source_id: @level_source.id).each(&:destroy)
       end
 
       redirect_to @level_source, notice: I18n.t('crud.updated', model: LevelSource.model_name.human)

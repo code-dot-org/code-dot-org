@@ -46,15 +46,6 @@ class LevelSource < ActiveRecord::Base
     end
   end
 
-  # we can't just use an association :through the activities
-  # association because of the way the indexes on activities work (we
-  # need to add level_id to the query)
-  def gallery_activities
-    GalleryActivity.
-      joins('inner join activities on activities.id = gallery_activities.activity_id').
-      where('activities.level_id' => level_id, 'activities.level_source_id' => id)
-  end
-
   def standardized?
     !data.include? XMLNS_STRING
   end
