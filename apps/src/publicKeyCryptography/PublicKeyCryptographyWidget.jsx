@@ -10,7 +10,9 @@ import EveInstructions from './EveInstructions';
 import Bob from './Bob';
 import BobInstructions from './BobInstructions';
 import ModuloClock from './ModuloClock';
+import color from '../util/color';
 import Dialog from '../templates/Dialog';
+import FontAwesome from '../templates/FontAwesome';
 import WidgetContinueButton from '../templates/WidgetContinueButton';
 import ToggleGroup from '../templates/ToggleGroup';
 
@@ -29,6 +31,12 @@ const style = {
     fontSize: 16,
     marginTop: 10,
     marginBottom: 10
+  },
+  noCharacterSelected: {
+    textAlign: 'center',
+    padding: 30,
+    fontSize: 'x-large',
+    color: color.light_gray
   }
 };
 
@@ -120,8 +128,8 @@ const PublicKeyCryptographyWidget = React.createClass({
       );
     }
     return (
-      <div style={{textAlign: 'center'}}>
-        Select a character.
+      <div style={style.noCharacterSelected}>
+        <FontAwesome icon="arrow-left"/> Pick a character.
       </div>
     );
   },
@@ -205,10 +213,10 @@ const CharacterSelect = props => (
       selected={props.selectedCharacter}
       onChange={props.onChange}
     >
-      <button value={ALICE_VIEW}>Alice</button>
-      <button value={EVE_VIEW}>Eve</button>
-      <button value={BOB_VIEW}>Bob</button>
-      <button value={ALL_VIEW}>All</button>
+      <button value={ALICE_VIEW}><FontAwesome icon="user"/> Alice</button>
+      <button value={EVE_VIEW}><FontAwesome icon="user-secret"/> Eve</button>
+      <button value={BOB_VIEW}><FontAwesome icon="user"/> Bob</button>
+      <button value={ALL_VIEW}><FontAwesome icon="users"/> All</button>
     </ToggleGroup>
   </span>
 );
