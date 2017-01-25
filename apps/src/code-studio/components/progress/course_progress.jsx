@@ -8,8 +8,10 @@ import CourseProgressRow from './course_progress_row.jsx';
 import HrefButton from '@cdo/apps/templates/HrefButton';
 import SectionSelector from './SectionSelector';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import color from "../../../util/color";
+import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
+import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 
 const styles = {
   flexHeader: {
@@ -63,6 +65,8 @@ const CourseProgress = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
+    const progressRedesign = experiments.isEnabled('progressRedesign');
+
     return (
       <div>
         {this.props.onOverviewPage && !this.props.professionalLearningCourse &&
@@ -86,7 +90,9 @@ const CourseProgress = React.createClass({
             <SectionSelector/>
           </span>
         }
-        <div className="user-stats-block">
+        {progressRedesign && <ProgressTable/>}
+
+        {!progressRedesign && <div className="user-stats-block">
           {_.map(groups, (stages, group) =>
             <div key={group}>
               <h4
@@ -109,6 +115,7 @@ const CourseProgress = React.createClass({
             </div>
           )}
         </div>
+        }
       </div>
     );
   }
