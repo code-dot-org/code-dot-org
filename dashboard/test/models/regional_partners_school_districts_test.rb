@@ -9,18 +9,18 @@ class RegionalPartnersSchoolDistrictTest < ActiveSupport::TestCase
     RegionalPartnersSchoolDistrict.find_or_create_all_from_tsv('test/fixtures/regional_partners_school_districts.tsv')
 
     district = SchoolDistrict.find(100002)
-    partner = district.regional_partner
+    partner = district.regional_partners.first
     assert_not_nil partner
     assert_equal partner.name, 'A+ College Ready'
     assert_equal partner.group, 1
 
-    district = SchoolDistrict.find(200001)
-    partner = district.regional_partner
+    # rubocop:disable Style/NumericLiterals
+    district = SchoolDistrict.find(4800014)
+    partner = district.regional_partners.first
     assert_nil partner
 
-    # rubocop:disable Style/NumericLiterals
     district = SchoolDistrict.find(4800004)
-    partner = district.regional_partner
+    partner = district.regional_partners.first
     assert_not_nil partner
     assert_equal partner.name, 'Center for STEM Education, The University of Texas at Austin'
     assert_equal partner.group, 2

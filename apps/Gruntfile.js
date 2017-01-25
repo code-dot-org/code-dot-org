@@ -472,6 +472,28 @@ module.exports = function (grunt) {
     })
   };
 
+  config['webpack-dev-server'] = {
+    watch: {
+      webpack: createConfig({
+        minify: false,
+        watch: false
+      }),
+      keepAlive: true,
+      proxy: {
+        '**': 'http://localhost:3000',
+      },
+      publicPath: '/assets/js/',
+      hot: true,
+      inline: true,
+      port: 3001,
+      host: '0.0.0.0',
+      watchOptions: {
+        aggregateTimeout: 1000,
+        poll: 1000
+      },
+    }
+  };
+
   var ext = envConstants.DEV ? 'uncompressed' : 'compressed';
   config.concat = {
     vendor: {
@@ -553,7 +575,7 @@ module.exports = function (grunt) {
   config.concurrent = {
     // run our two watch tasks concurrently so that they dont block each other
     watch: {
-      tasks: ['watch', 'webpack:watch'],
+      tasks: ['watch', envConstants.HOT ? 'webpack-dev-server:watch' : 'webpack:watch'],
       options: {
         logConcurrentOutput: true
       }

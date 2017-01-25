@@ -696,7 +696,7 @@ class ApiControllerTest < ActionController::TestCase
     user_level_data2 = {user_id: @student_2.id, level_id: level.id, script_id: script.id}
 
     # unlock a user_level that does not yet exist
-    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
@@ -711,7 +711,7 @@ class ApiControllerTest < ActionController::TestCase
 
     # view_anwers for a user_level that does not yet exist
     user_level.delete
-    assert_equal nil, UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
@@ -726,8 +726,8 @@ class ApiControllerTest < ActionController::TestCase
 
     # multiple updates at once
     user_level.delete
-    assert_equal nil, UserLevel.find_by(user_level_data)
-    assert_equal nil, UserLevel.find_by(user_level_data2)
+    assert_nil UserLevel.find_by(user_level_data)
+    assert_nil UserLevel.find_by(user_level_data2)
     updates = [{
       user_level_data: user_level_data,
       locked: false,
@@ -767,7 +767,7 @@ class ApiControllerTest < ActionController::TestCase
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
-    assert_equal nil, user_level.unlocked_at
+    assert_nil user_level.unlocked_at
 
     # update from editable to readonly_answers
     user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: false)
@@ -795,7 +795,7 @@ class ApiControllerTest < ActionController::TestCase
     user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
-    assert_equal nil, user_level.unlocked_at
+    assert_nil user_level.unlocked_at
 
     # update from readonly_answers to editable
     user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)

@@ -42,20 +42,22 @@ let redrawApplicationFunction = function (event) {
   };
 
   if (schoolDistrictData['school-district'] && !schoolDistrictData['school-district-other']) {
-    const selectedCourseButton = document.querySelector('input[name="courseSelection"]:checked');
+    const selectedCourseButton = document.querySelector('input[name="selectedCourse"]:checked');
     const selectedCourse = selectedCourseButton ? selectedCourseButton.value : 'unselected';
 
     $.ajax({
       method: "GET",
       url: `/api/v1/regional-partners/${schoolDistrictData['school-district']}/${selectedCourse}.json`
     }).done(data => {
-      const regionalPartnerGroup = data ? data['group'] : undefined;
-      const regionalPartnerName = data ? data['name'] : undefined;
+      const regionalPartnerGroup = data ? data['regional_partner']['group'] : undefined;
+      const regionalPartnerName = data ? data['regional_partner']['name'] : undefined;
+      const workshopDays = data ? data['workshop_days'] : undefined;
 
       ReactDOM.render(
         <TeacherApplication
           regionalPartnerGroup={regionalPartnerGroup}
           regionalPartnerName={regionalPartnerName}
+          workshopDays={workshopDays ? `${regionalPartnerName}: ${workshopDays}` : workshopDays}
           schoolDistrictData={schoolDistrictData}
           districtErrorMessageHandler={districtErrorMessageHandler}
         />,

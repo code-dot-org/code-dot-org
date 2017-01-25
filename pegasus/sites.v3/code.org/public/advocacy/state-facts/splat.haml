@@ -76,6 +76,10 @@ theme: pdf
         which is significantly higher than the average salary in the state
         = surround "($", ")." do
           = format_integer_with_commas(state_info[:avg_sal_all_i])
+        The existing open jobs alone represent 
+        = precede "$" do
+          = format_integer_with_commas(state_info[:sal_x_jobs_bi]) 
+        in annual salaries.
       %li
         = state_info[:state_name_s]
         had only
