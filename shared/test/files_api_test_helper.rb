@@ -40,6 +40,12 @@ class FilesApiTestHelper
     last_response.body
   end
 
+  def get_root_object(filename, body = '', headers = {})
+    # Intended for calling files exposed at the root from codeprojects.org
+    get "/#{@channel_id}/#{filename}", body, headers
+    last_response.body
+  end
+
   def put_object(filename, body = '', headers = {})
     put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
