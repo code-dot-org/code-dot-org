@@ -25,11 +25,9 @@ const style = {
   root: {
     fontFamily: `"Gotham 4r", sans-serif`
   },
-  hyperlinksList: {
-    fontFamily: `"Gotham 4r", sans-serif`,
-    fontSize: 16,
-    marginTop: 10,
-    marginBottom: 10
+  characterViewWrapper: {
+    clear: 'both',
+    marginTop: 10
   },
   noCharacterSelected: {
     textAlign: 'center',
@@ -89,8 +87,8 @@ const PublicKeyCryptographyWidget = React.createClass({
     this.setState({publicModulus: null});
   },
 
-  renderSelectedCharacterView() {
-    if (ALICE_VIEW === this.state.selectedCharacter) {
+  renderCharacterView(selectedCharacter) {
+    if (ALICE_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
           <AliceInstructions/>
@@ -98,7 +96,7 @@ const PublicKeyCryptographyWidget = React.createClass({
           {this.renderModuloClockPanel()}
         </EqualColumns>
       );
-    } else if (EVE_VIEW === this.state.selectedCharacter) {
+    } else if (EVE_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
           <EveInstructions/>
@@ -106,7 +104,7 @@ const PublicKeyCryptographyWidget = React.createClass({
           {this.renderModuloClockPanel()}
         </EqualColumns>
       );
-    } else if (BOB_VIEW === this.state.selectedCharacter) {
+    } else if (BOB_VIEW === selectedCharacter) {
       return (
         <EqualColumns intercolumnarDistance={20}>
           <BobInstructions/>
@@ -114,7 +112,7 @@ const PublicKeyCryptographyWidget = React.createClass({
           {this.renderModuloClockPanel()}
         </EqualColumns>
       );
-    } else if (ALL_VIEW === this.state.selectedCharacter) {
+    } else if (ALL_VIEW === selectedCharacter) {
       return (
         <span>
           <EqualColumns intercolumnarDistance={20}>
@@ -186,16 +184,17 @@ const PublicKeyCryptographyWidget = React.createClass({
   },
 
   render() {
+    const {selectedCharacter} = this.state;
     return (
       <div style={style.root}>
         <CharacterSelect
-          selectedCharacter={this.state.selectedCharacter}
+          selectedCharacter={selectedCharacter}
           onChange={this.setSelectedCharacter}
         />
-        <WidgetContinueButton/>
-        <StartOverButton onClick={this.onStartOverClick}/>
-        <div style={{clear: 'both', marginTop: 10}}>
-          {this.renderSelectedCharacterView()}
+        {selectedCharacter && <WidgetContinueButton/>}
+        {selectedCharacter && <StartOverButton onClick={this.onStartOverClick}/>}
+        <div style={style.characterViewWrapper}>
+          {this.renderCharacterView(selectedCharacter)}
         </div>
       </div>);
   }
