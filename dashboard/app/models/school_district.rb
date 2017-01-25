@@ -18,8 +18,8 @@
 class SchoolDistrict < ActiveRecord::Base
   include Seeded
 
-  has_one :regional_partners_school_district
-  has_one :regional_partner, through: :regional_partners_school_district
+  has_many :regional_partners_school_districts
+  has_many :regional_partners, through: :regional_partners_school_districts
 
   # The listing of all US school districts comes from http://nces.ed.gov/ccd/pubagency.asp
   # and is then exported into a tab-separated file.
