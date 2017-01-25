@@ -10,6 +10,9 @@ const style = {
     // see https://facebook.github.io/react/tips/style-props-value-px.html
     lineHeight: `${LINE_HEIGHT}px`,
     paddingBottom: 8
+  },
+  subStep: {
+    fontWeight: 'normal'
   }
 };
 
@@ -49,4 +52,18 @@ Step.propTypes = {
 };
 Step.defaultProps = {
   index: 0
+};
+
+/**
+ * A styled list item for use within a step.
+ */
+export function SubStep({text}) {
+  return (
+    <li style={style.subStep}>
+      {text}
+    </li>
+  );
+}
+SubStep.propTypes = {
+  text: React.PropTypes.string.isRequired
 };
